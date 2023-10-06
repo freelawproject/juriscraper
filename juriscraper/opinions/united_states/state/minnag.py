@@ -19,10 +19,10 @@ class Site(OpinionSite):
         self.opinions = []
         self.should_have_results = True
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
-        html = super()._download(request_dict)
+        html = await super()._download(request_dict)
         self._extract_case_data_from_html(html)
         return html
 

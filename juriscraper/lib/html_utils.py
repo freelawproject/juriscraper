@@ -5,9 +5,9 @@ from typing import Optional
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
+from httpx import Response
 from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
-from requests import Response
 
 from juriscraper.lib.string_utils import clean_string
 

@@ -1,22 +1,20 @@
-import requests
+import httpx
 from lxml.html import fromstring
 
 from juriscraper.lib.log_tools import make_default_logger
 
-requests.packages.urllib3.disable_warnings(
-    requests.packages.urllib3.exceptions.InsecureRequestWarning
-)
-
 logger = make_default_logger()
 
 
-class LASCSession(requests.Session):
+class LASCSession(httpx.AsyncClient):
     """
-    A requests.Session object with special tooling to handle the Los Angeles
+    A httpx.AsyncClient object with special tooling to handle the Los Angeles
     Superior Court Media Access portal.
     """
 
-    def __init__(self, username=None, password=None):
+    def __init__(
+        self, username=None, password=None, user_agent="Juriscraper", **kwargs
+    ):
         """
         Instantiate a new LASC HTTP Session with some Juriscraper defaults.
         This method requires credentials from the media access portal.
@@ -25,7 +23,7 @@ class LASCSession(requests.Session):
         :param password: MAP password
         :return: A LASCSession object
         """
-        super().__init__()
+        super().__init__(**kwargs)
 
         self.html = None
 
@@ -53,34 +51,35 @@ class LASCSession(requests.Session):
             "password": password,
             "request_type": "RESPONSE",
         }
+        self.user_agent = user_agent
         self.headers = {
             "Origin": ms_base_url,
-            "User-Agent": "Juriscraper",
+            "User-Agent": self.user_agent,
         }
 
-    def get(self, url, auto_login=False, **kwargs):
-        """Overrides request.Session.get with session retry logic.
+    async def get(self, url, auto_login=False, **kwargs):
+        """Overrides httpx.AsyncClient.get with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: requests.Response
+        :return: httpx.Response
         """
         kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
 
-        return super().get(url, **kwargs)
+        return await super().get(url, **kwargs)
 
-    def post(self, url, auto_login=False, **kwargs):
-        """Overrides request.Session.post with session retry logic.
+    async def post(self, url, auto_login=False, **kwargs):
+        """Overrides httpx.AsyncClient.post with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: requests.Response
+        :return: httpx.Response
         """
         kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
 
-        return super().post(url, **kwargs)
+        return await super().post(url, **kwargs)
 
     @staticmethod
     def _parse_new_html_for_keys(r):
@@ -89,7 +88,7 @@ class LASCSession(requests.Session):
         This method parses the HTML after the first login page and identifies
         the parameter values required for the next step.
 
-        :param r: A request.Response object
+        :param r: A httpx.Response object
         :return: A dict containing the needed keys
         """
         html = fromstring(r.text)
@@ -103,7 +102,7 @@ class LASCSession(requests.Session):
     def _check_login(r):
         """Check that the login succeeded
 
-        :param r: A request.Response object
+        :param r: A httpx.Response object
         :return: None
         :raises LASCLoginException
         """
@@ -121,7 +120,7 @@ class LASCSession(requests.Session):
     def _update_header_token(self, r):
         self.headers["X-CSRF-TOKEN"] = r.text.split("csrf")[1].split('"')[2]
 
-    def login(self):
+    async def login(self):
         """Log into the LASC Media Access Portal
         The process is tricky, requiring two GET requests, each of which
         returns HTML or JSON that is parsed for values to send in a subsequent
@@ -326,20 +325,20 @@ class LASCSession(requests.Session):
         """
 
         logger.info("Logging into MAP has begun")
-        r = self.get(self.login_url)
+        r = await self.get(self.login_url)
         self._update_header_token(r)
 
         # Call part one of Microsoft login API
-        r = self.post(self.api_url1, data=self.login_data)
+        r = await self.post(self.api_url1, data=self.login_data)
         self._check_login(r)
 
         # Call part two of Microsoft login API - Redirect
-        r = self.get(self.api_url2)
+        r = await self.get(self.api_url2)
 
         # Finalize login with post into LA MAP site
         parsed_keys = self._parse_new_html_for_keys(r)
 
-        self.post(self.signin_url, data=parsed_keys)
+        await self.post(self.signin_url, data=parsed_keys)
 
         logger.info("Successfully Logged into MAP")
 

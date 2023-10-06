@@ -78,7 +78,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    def query(self, pacer_case_id):
+    async def query(self, pacer_case_id):
         """Use a district court's PACER mobile query function with a known case id
 
         At the top of every district PACER court, there's a button that says,
@@ -121,7 +121,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
             pacer_case_id,
             self.court_id,
         )
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?search=caseInfo&caseid=={pacer_case_id}"
         )
         self.parse()

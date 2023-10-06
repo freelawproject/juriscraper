@@ -20,10 +20,10 @@ class Site(OpinionSite):
         self.url = "https://www.iowacourts.gov/iowa-courts/supreme-court/supreme-court-opinions/"
         self.should_have_results = True
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
-        html = super()._download(request_dict)
+        html = await super()._download(request_dict)
         self.extract_cases(html)
         if self.test_mode_enabled() or self.archive:
             return html
@@ -54,13 +54,13 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         return [case["docket"] for case in self.cases]
 
-    def _download_backwards(self, _):
+    async def _download_backwards(self, _):
         """Walk over all "Archive" links on Archive page,
         extract cases dictionaries, and add to self.cases
         """
         self.archive = True
         self.url = f"{self.url}opinions-archive/"
-        landing_page_html = self._download()
+        landing_page_html = await self._download()
         path = '//div[@class="main-content-wrapper"]//a[contains(./text(), "Opinions Archive")]/@href'
         for archive_page_url in landing_page_html.xpath(path):
             logger.info(f"Back scraping archive page: {archive_page_url}")

@@ -52,7 +52,7 @@ class FreeOpinionReport(BaseReport):
                 f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
             )
 
-    def query(self, start, end, sort="date_filed", day_span=7):
+    async def query(self, start, end, sort="date_filed", day_span=7):
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
@@ -87,7 +87,7 @@ class FreeOpinionReport(BaseReport):
             )
 
             # Get the first page, grab the nonce, and submit using that.
-            response = self.session.get(self.url)
+            response = await self.session.get(self.url)
             nonce = get_nonce_from_form(response)
             logger.info("Got nonce of %s", nonce)
 
@@ -98,7 +98,9 @@ class FreeOpinionReport(BaseReport):
                 "Key1": self._normalize_sort_param(sort),
                 "all_case_ids": "0",
             }
-            response = self.session.post(f"{self.url}?{nonce}", data=data)
+            response = await self.session.post(
+                f"{self.url}?{nonce}", data=data
+            )
             responses.append(response)
             responses_with_params.append(
                 {
@@ -125,7 +127,9 @@ class FreeOpinionReport(BaseReport):
             set_response_encoding(response)
             text = clean_html(response.text)
             tree = get_html_parsed_text(text)
-            tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
+            tree.rewrite_links(
+                fix_links_in_lxml_tree, base_href=str(response.url)
+            )
             self.trees.append(tree)
 
     def _parse_text(self, text):

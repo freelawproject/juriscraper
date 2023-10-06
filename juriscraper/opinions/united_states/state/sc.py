@@ -92,7 +92,7 @@ class Site(OpinionSiteLinear):
             self.back_scrape_iterable
         )
 
-    def _download_backwards(self, date_obj: date) -> None:
+    async def _download_backwards(self, date_obj: date) -> None:
         """Downloads an older page, and parses it
 
         Opinions from terms older than 2012-06 are in HTML
@@ -110,7 +110,7 @@ class Site(OpinionSiteLinear):
 
         self.url = self.make_url_from_date(date_obj)
         logger.info("Backscraping URL: %s", self.url)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_url_from_date(self, date_obj: date) -> str:

@@ -14,6 +14,6 @@ class Site(me.Site):
         self.court_id = self.__module__
         self.back_scrape_iterable = [2020, 2019, 2018, 2017]
 
-    def _download_backwards(self, year):
+    async def _download_backwards(self, year):
         self.url = f"https://www.courts.maine.gov/courts/sjc/lawcourt/{year}/index.html"
-        self.html = self._download()
+        self.html = await self._download()

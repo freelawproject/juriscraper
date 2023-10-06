@@ -7,7 +7,7 @@ from html import unescape
 from typing import Optional, Union
 
 import feedparser
-from requests import Session
+from httpx import AsyncClient, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -133,11 +133,12 @@ class PacerRssFeed(DocketReport):
 
     CACHE_ATTRS = ["data"]
 
-    def __init__(self, court_id):
+    def __init__(self, court_id, **kwargs):
         super().__init__(court_id)
         self._clear_caches()
         self._data = None
-        self.session = Session()
+        kwargs.setdefault("http2", True)
+        self.session = AsyncClient(**kwargs)
         self.is_valid = True
         self.is_appellate = False
         if self.court_id[-1].isdigit() or self.court_id in [
@@ -151,9 +152,9 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
-    def __del__(self):
+    async def __aexit__(self):
         if self.session:
-            self.session.close()
+            await self.session.aclose()
 
     @property
     def url(self):
@@ -175,10 +176,10 @@ class PacerRssFeed(DocketReport):
         else:
             return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
-    def query(self):
+    async def query(self):
         """Query the RSS feed for a given court ID
 
-        Note that we use requests here, and so we forgo some of the
+        Note that we use httpx here, and so we forgo some of the
         useful features that feedparser offers around the Etags and
         Last-Modified headers. This is fine for now because no PACER
         site seems to support these headers, but eventually we'll
@@ -196,8 +197,8 @@ class PacerRssFeed(DocketReport):
         # outages cause us grief. Too short and slow courts don't get done.
         # Previously, this value has been (60, 300), then 5. Hopefully the
         # below is a reasonable middle ground.
-        timeout = (5, 20)
-        self.response = self.session.get(self.url, timeout=timeout)
+        timeout = Timeout(5, read=20)
+        self.response = await self.session.get(self.url, timeout=timeout)
 
     def parse(self):
         self._clear_caches()

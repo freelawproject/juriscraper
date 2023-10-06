@@ -47,9 +47,8 @@ dependencies = [
   "lxml>=5.2",
   "nh3",
   "python-dateutil>=2.8.2",
-  "requests>=2.20.0",
+  "httpx[http2]>=0.28.1",
   "selenium>=4.9.1",
-  "tldextract",
 ]
 
 [dependency-groups]
@@ -59,9 +58,7 @@ dev = [
   "pytest",
   "mypy>=1.19.0",
   "types-python-dateutil>=2.9.0.20251115",
-  "types-requests>=2.32.4.20250913",
   "types-lxml>=2025.11.25",
-  "responses>=0.25.8",
 ]
 
 [tool.setuptools]

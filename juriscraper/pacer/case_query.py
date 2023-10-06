@@ -228,7 +228,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    def query(self, pacer_case_id):
+    async def query(self, pacer_case_id):
         """Use a district court's PACER query function with a known case ID
 
         At the top of every district PACER court, there's a button that says,
@@ -298,7 +298,9 @@ class CaseQuery(BaseDocketReport, BaseReport):
             pacer_case_id,
             self.court_id,
         )
-        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
+        self.response = await self.session.post(
+            f"{self.url}?1-L_1_0-1", data=params
+        )
         self.parse()
 
     @property

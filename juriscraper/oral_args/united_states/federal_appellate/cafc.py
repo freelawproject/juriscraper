@@ -72,7 +72,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, d: date) -> None:
+    async def _download_backwards(self, d: date) -> None:
         """Download a months' worth of oral arguments.
 
         :param d: Date to download arguments starting from
@@ -80,7 +80,7 @@ class Site(OralArgumentSiteLinear):
         """
         self.start_date, self.end_date = d
         logger.info("Backscraping for range %s %s", *d)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def _set_parameters(self) -> None:

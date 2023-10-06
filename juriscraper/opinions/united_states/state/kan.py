@@ -37,7 +37,7 @@ class Site(OpinionSiteLinearWebDriven):
             self.webdriver.get(self.url)
             self.html = fromstring(self.webdriver.page_source)
         else:
-            with open(self.url) as f:
+            with open(self.mock_url) as f:
                 self.html = fromstring(f.read())
 
         links = self.html.xpath(self.link_xp)

@@ -16,7 +16,7 @@ class Site(utahctapp.Site):
         super().__init__(*args, **kwargs)
         self.back_scrape_iterable = list(range(2012, date.today().year))
 
-    def _download_backwards(self, year: str) -> None:
+    async def _download_backwards(self, year: str) -> None:
         """Download the page for each year in the backscrape_iterable.
 
         :param year: The year to download
@@ -26,5 +26,5 @@ class Site(utahctapp.Site):
         self.url = (
             f"https://www.utcourts.gov/opinions/appopin/index-{year}.{ending}"
         )
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

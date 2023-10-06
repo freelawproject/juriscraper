@@ -3,7 +3,7 @@ from datetime import date, datetime, timedelta
 from urllib.parse import urlencode, urljoin
 
 from dateutil import parser
-from requests.exceptions import ChunkedEncodingError
+from httpx import DecodingError
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
@@ -38,14 +38,14 @@ class Site(OpinionSiteLinear):
         self.start_date = self.end_date - timedelta(days=30)
         self.is_citation_visible = True
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
         # if we just ignore those encoding errors we can live with it
         if request_dict is None:
             request_dict = {}
         try:
-            return super()._download(request_dict)
-        except ChunkedEncodingError:
+            return await super()._download(request_dict)
+        except DecodingError:
             return None
 
     def _process_html(self) -> None:
