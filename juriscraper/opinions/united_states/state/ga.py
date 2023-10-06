@@ -66,10 +66,10 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, year) -> None:
+    async def _download_backwards(self, year) -> None:
         self.url = self._get_url(year)
         logger.info(f"Backscraping for year {year}: {self.url}")
-        self.html = self._download()
+        self.html = await self._download()
 
         # Setting status is important because it prevents the download
         # function from being run a second time by the parse method.

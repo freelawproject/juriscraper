@@ -40,8 +40,8 @@ class Site(OpinionSite):
             yield startat
             startat += incr
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
+    async def _download(self, request_dict={}):
+        html = await super()._download(request_dict)
         self._extract_case_data_from_html(html)
         return html
 
@@ -88,11 +88,11 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return [case["status"] for case in self.cases]
 
-    def _download_backwards(self, startat):
+    async def _download_backwards(self, startat):
         base_url = (
             "http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d"
             % (startat,)
         )
         date_range = list(range(datetime.today().year, 1997 - 1, -1))
         self.url = f"{base_url}&DB={'&DB='.join([str(n) for n in date_range])}"
-        self.html = self._download()
+        self.html = await self._download()

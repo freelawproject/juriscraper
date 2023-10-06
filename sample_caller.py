@@ -1,3 +1,4 @@
+import asyncio
 import json
 import logging
 import os
@@ -11,7 +12,7 @@ from datetime import datetime
 from optparse import OptionParser
 from urllib import parse
 
-import requests
+import httpx
 
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
@@ -46,7 +47,7 @@ def log_dict(dic: dict) -> None:
         logger.debug('    %s: "%s"', k, v)
 
 
-def extract_doc_content(
+async def extract_doc_content(
     data, extract_from_text: bool, site, doctor_host: str, filename: str
 ):
     """Extracts document's content using a local doctor host
@@ -71,15 +72,16 @@ def extract_doc_content(
 
     # Get the file type from the document's raw content
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
-    extension_response = requests.post(
-        extension_url, files={"file": ("filename", data)}, timeout=30
-    )
-    extension_response.raise_for_status()
-    extension = extension_response.text
+    async with httpx.AsyncClient() as client:
+        extension_response = await client.post(
+            extension_url, files={"file": ("filename", data)}, timeout=30
+        )
+        extension_response.raise_for_status()
+        extension = extension_response.text
 
-    files = {"file": (f"something.{extension}", data)}
-    url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    extraction__response = requests.post(url, files=files, timeout=120)
+        files = {"file": (f"something.{extension}", data)}
+        url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
+        extraction__response = await client.post(url, files=files, timeout=120)
     extraction__response.raise_for_status()
     extracted_content = extraction__response.json()["content"]
 
@@ -106,7 +108,9 @@ def extract_doc_content(
     return extracted_content, metadata_dict
 
 
-def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
+async def scrape_court(
+    site, binaries=False, extract_content=False, doctor_host=""
+):
     """Calls the requested court(s), gets its binary content, and
     extracts the content if possible. See --extract-content option
 
@@ -139,7 +143,13 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
             # session. However, we can't send a request with both a
             # custom ssl_context and `verify = False`
             has_cipher = hasattr(site, "cipher")
-            s = site.request["session"] if has_cipher else requests.session()
+            s = (
+                site.request["session"]
+                if has_cipher
+                else httpx.AsyncClient(
+                    verify=has_cipher,  # WA has a certificate we don't understand
+                )
+            )
 
             if site.needs_special_headers:
                 headers = site.request["headers"]
@@ -148,9 +158,8 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
 
             # Note that we do a GET even if site.method is POST. This is
             # deliberate.
-            r = s.get(
+            r = await s.get(
                 download_url,
-                verify=has_cipher,  # WA has a certificate we don't understand
                 headers=headers,
                 cookies=site.cookies,
                 timeout=300,
@@ -188,7 +197,7 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
         # cleanup_content is called before the extraction task in CL
         # so it is only useful for cleaning HTML files
         data = site.cleanup_content(data)
-        data, metadata_from_text = extract_doc_content(
+        data, metadata_from_text = await extract_doc_content(
             data, extract_content, site, doctor_host, filename
         )
         logger.log(
@@ -256,7 +265,7 @@ def save_response(site):
     webbrowser.open(f"file://{filename}")
 
 
-def main():
+async def main():
     global die_now
 
     # this line is used for handling SIGTERM (CTRL+4), so things can die safely
@@ -433,9 +442,11 @@ def main():
             else:
                 sites = [mod.Site(**site_kwargs)]
 
-            for site in sites:
-                site.parse()
-                scrape_court(site, binaries, extract_content, doctor_host)
+            async for site in sites:
+                await site.parse()
+                await scrape_court(
+                    site, binaries, extract_content, doctor_host
+                )
 
     logger.debug("The scraper has stopped.")
 
@@ -443,4 +454,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

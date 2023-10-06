@@ -165,7 +165,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    async def _download_backwards(self, dates: Tuple[date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple
@@ -173,5 +173,5 @@ class Site(OpinionSiteLinear):
         """
         logger.info("Backscraping for range %s %s", *dates)
         self.set_url(*dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

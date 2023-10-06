@@ -2,7 +2,7 @@ import re
 from datetime import date, datetime
 from typing import Dict, Optional, Union
 
-import requests
+import httpx
 import tldextract
 from dateutil import parser
 from dateutil.tz import gettz
@@ -432,9 +432,13 @@ def get_doc_id_prefix_from_court_id(court_id):
     return cid_to_prefix_map[court_id]
 
 
-def get_pacer_court_info():
-    r = requests.get("https://court-version-scraper.fly.dev/courts.json")
-    return r.json()
+async def get_pacer_court_info(**kwargs):
+    kwargs.setdefault("http2", True)
+    async with httpx.AsyncClient(**kwargs) as client:
+        r = await client.get(
+            "https://court-version-scraper.fly.dev/courts.json"
+        )
+        return r.json()
 
 
 def get_courts_from_json(j):

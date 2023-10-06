@@ -174,14 +174,14 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return self.my_precedential_statuses
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         """Build year URL and scrape
 
         :param year: year to scrape
         :return None
         """
         self.url = self.base_url.format(self.court, year)
-        self.html = self._download()
+        self.html = await self._download()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed

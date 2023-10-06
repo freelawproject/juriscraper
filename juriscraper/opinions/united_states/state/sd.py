@@ -72,7 +72,7 @@ class Site(OpinionSiteLinear):
             self.get_next_page()
             self._process_html()
 
-    def get_next_page(self) -> None:
+    async def get_next_page(self) -> None:
         """Gets next page"""
         view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
         event_validation = self.html.xpath(
@@ -85,9 +85,9 @@ class Site(OpinionSiteLinear):
             "__EVENTVALIDATION": event_validation,
         }
         self.parameters = data
-        self.html = super()._download()
+        self.html = await super()._download()
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         """Get input year's page
 
         We need to GET the homepage first to load hidden inputs
@@ -100,7 +100,7 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = True
 
         self.method = "GET"
-        self.html = super()._download()
+        self.html = await super()._download()
         view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
         event_validation = self.html.xpath(
             "//input[@id='__EVENTVALIDATION']/@value"
@@ -116,7 +116,7 @@ class Site(OpinionSiteLinear):
         }
         self.parameters = data
         self.method = "POST"
-        self.html = super()._download()
+        self.html = await super()._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: Dict) -> None:

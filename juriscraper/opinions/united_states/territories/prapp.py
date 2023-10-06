@@ -19,20 +19,20 @@ class Site(OpinionSiteLinear):
         self.url = f"https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/"
         self.status = "Published"
 
-    def _download(self, request_dict={}):
+    async def _download(self, request_dict={}):
         """Download websites
 
         :param request_dict: Empty dict
         :return: HTML object
         """
         if self.test_mode_enabled():
-            return super()._download()
+            return await super()._download()
         if not self.html:
-            self.html = super()._download()
+            self.html = await super()._download()
         self.url = self.html.xpath(
             ".//ul[1]/li/a[contains(@href, 'decisiones-finales-del-tribunal-de-apelaciones/decisiones-del-tribunal-de-apelaciones')]/../.."
         )[0].xpath(".//a/@href")[-1]
-        return super()._download()
+        return await super()._download()
 
     def _process_html(self):
         for row in self.html.xpath(".//table/tbody/tr"):
