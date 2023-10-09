@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.55 - 2023-10-09**
+
+Features:
+
+- N/A
+
+Changes:
+
+- Fix Mass/MassAppCt
+
+## Past
+
 **2.5.54 - 2023-10-06**
 
 Features:
@@ -26,8 +38,6 @@ Changes:
 
 - Add missing ca prefix mappings
 - Handle cadc/cavc docid prefix collision
-
-## Past
 
 **2.5.53 - 2023-09-23**
 
