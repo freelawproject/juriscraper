@@ -33,6 +33,8 @@ class Site(OpinionSiteLinear):
         for file in self.html.xpath(".//a/@href[contains(.,'pdf')]/.."):
             content = file.text_content()
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", content)
+            if not m:
+                continue
             name, docket, _, date = m.groups()
             if self.court_identifier not in docket:
                 continue
