@@ -421,8 +421,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
                 party[field] = value
             else:
-                s = "".join(tostring(e, encoding="unicode") for e in element)
-                unparsed.append(s)
+                unparsed.append(element.text_content())
 
         if unparsed:
             party["unparsed"] = unparsed
