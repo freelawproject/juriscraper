@@ -2,12 +2,11 @@ import json
 import pprint
 import re
 import sys
-
+from collections import OrderedDict
 
 from ..lib.html_utils import strip_bad_html_tags_insecure
 from ..lib.log_tools import make_default_logger
 from ..lib.string_utils import convert_date_string
-
 from .appellate_docket import AppellateDocketReport
 
 logger = make_default_logger()
@@ -256,7 +255,7 @@ class ACMSDocketReport(AppellateDocketReport):
         party_rows = tree.xpath(".//tr")
         parties = []
         for row in party_rows:
-            party = {}
+            party = OrderedDict()
 
             (party_left, attorneys_block) = row.xpath(".//td")
 

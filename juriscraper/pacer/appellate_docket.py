@@ -1,6 +1,7 @@
 import pprint
 import re
 import sys
+from collections import OrderedDict
 
 from lxml.html import tostring
 
@@ -435,7 +436,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         For ACMS, it is wrapped within a <div> that the caller iterates over.
         """
 
-        attorney = {}
+        attorney = OrderedDict()
         # Performance note: _br_split() unparses and reparses
         # the element, just as redelimit_p() does in parties(). So
         # it's a bit wasteful to use both.
