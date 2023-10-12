@@ -36,6 +36,9 @@ class BaseDocketReport:
     little class as a mixin with the common components.
     """
 
+    # A date is one or more characters that are members of the class
+    # of endashes (U+2014), digits, ASCII dashes (U+002D), emdashes
+    # (U+2013), and ASCII slashes.
     DATE_REGEX = r"[—\d\-–/]+"
 
     date_entered_regex = re.compile(r"Entered:\s+(%s)" % DATE_REGEX)
