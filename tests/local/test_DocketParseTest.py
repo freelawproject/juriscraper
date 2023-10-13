@@ -145,7 +145,6 @@ class DocketAnonymizeTest(unittest.TestCase):
         report._parse_text(text)
         anon_text = report.get_anonymized_text()
         self.assertNotIn("LOGIN REMOVED", anon_text)
-        print(anon_text)
 
     def test_anonymize_district(self) -> None:
         path = os.path.join(
