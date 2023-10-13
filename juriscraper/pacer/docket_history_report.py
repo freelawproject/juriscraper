@@ -18,20 +18,23 @@ from .utils import (
 
 logger = make_default_logger()
 
-date_regex = r"[—\d\-–/]*"
-
 
 class DocketHistoryReport(DocketReport):
     assigned_to_regex = r"(.*),\s+presiding"
     referred_to_regex = r"(.*),\s+referral"
-    date_filed_regex = re.compile(r"[fF]iled:\s+(%s)" % date_regex)
+    date_filed_regex = re.compile(
+        r"[fF]iled:\s+(%s)" % DocketReport.DATE_REGEX
+    )
     date_last_filing_regex = re.compile(
-        r"last\s+filing:\s+(%s)" % date_regex, flags=re.IGNORECASE
+        r"last\s+filing:\s+(%s)" % DocketReport.DATE_REGEX,
+        flags=re.IGNORECASE,
     )
     date_filed_and_entered_regex = re.compile(
-        r"& Entered:\s+(%s)" % date_regex
+        r"& Entered:\s+(%s)" % DocketReport.DATE_REGEX
     )
-    date_entered_regex = re.compile(r"[eE]ntered:\s+(%s)" % date_regex)
+    date_entered_regex = re.compile(
+        r"[eE]ntered:\s+(%s)" % DocketReport.DATE_REGEX
+    )
 
     PATH = "cgi-bin/HistDocQry.pl"
 

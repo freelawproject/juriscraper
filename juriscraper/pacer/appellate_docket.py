@@ -23,8 +23,6 @@ from .utils import (
 
 logger = make_default_logger()
 
-date_regex = r"[—\d\-–/]+"
-
 
 class AppellateDocketReport(BaseDocketReport, BaseReport):
     """Parse appellate dockets.
@@ -39,7 +37,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
     )
-    date_entered_regex = re.compile(r"Entered:\s+(%s)" % date_regex)
 
     CACHE_ATTRS = ["metadata", "docket_entries"]
 

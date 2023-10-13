@@ -26,8 +26,6 @@ from .utils import (
 
 logger = make_default_logger()
 
-date_regex = r"[—\d\-–/]+"
-
 
 class BaseDocketReport:
     """A small class to hold functions common to the InternetArchive report
@@ -38,8 +36,14 @@ class BaseDocketReport:
     little class as a mixin with the common components.
     """
 
+    # A date is one or more characters that are members of the class
+    # of endashes (U+2014), digits, ASCII dashes (U+002D), emdashes
+    # (U+2013), and ASCII slashes.
+    DATE_REGEX = r"[—\d\-–/]+"
+
+    date_entered_regex = re.compile(r"Entered:\s+(%s)" % DATE_REGEX)
     date_terminated_regex = re.compile(
-        r"[tT]erminated:\s+(%s)" % date_regex, flags=re.IGNORECASE
+        r"[tT]erminated:\s+(%s)" % DATE_REGEX, flags=re.IGNORECASE
     )
     docket_number_dist_regex = re.compile(
         r"(?<!\d)((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
@@ -299,14 +303,16 @@ class DocketReport(BaseDocketReport, BaseReport):
         in_re_regex,
         in_the_matter_regex,
     ]
-    date_filed_regex = re.compile(r"Date [fF]iled:\s+(%s)" % date_regex)
-    date_converted_regex = re.compile(
-        r"Date [Cc]onverted:\s+(%s)" % date_regex
+    date_filed_regex = re.compile(
+        r"Date [fF]iled:\s+(%s)" % BaseDocketReport.DATE_REGEX
     )
-    date_entered_regex = re.compile(r"Entered:\s+(%s)" % date_regex)
+    date_converted_regex = re.compile(
+        r"Date [Cc]onverted:\s+(%s)" % BaseDocketReport.DATE_REGEX
+    )
     # Be careful this does not match "Joint debtor discharged" field.
     date_discharged_regex = re.compile(
-        r"(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)" % date_regex
+        r"(?:Date|Debtor)\s+[Dd]ischarged:\s+(%s)"
+        % BaseDocketReport.DATE_REGEX
     )
     assigned_to_regex = r"Assigned to:\s+(.*)"
     referred_to_regex = r"Referred to:\s+(.*)"
