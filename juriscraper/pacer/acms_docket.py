@@ -263,7 +263,11 @@ class ACMSDocketReport(AppellateDocketReport):
 
             attorneys = []
             for attorney in attorneys_block:
-                attorneys.append(self._parse_attorney(attorney))
+                _ = self._parse_attorney(attorney)
+                # Sometimes there are empty padding lines, e.g.:
+                #   <div><p>&nbsp;</p></div>
+                # Ignore them.
+                attorneys.append(_) if _ else None
 
             party["attorneys"] = attorneys
 
