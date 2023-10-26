@@ -47,7 +47,7 @@ class Site(colo.Site):
                 self.find_element_by_id("next").click()
                 self.html = fromstring(self.webdriver.page_source)
 
-            pattern = r"(2022COA\d+)\n(.*?)\n(Division \w+)"
+            pattern = fr"({self.year}COA\d+)\n(.*?)\n(Division \w+)"
             urls_to_add = []
             for pg in self.html.xpath(".//div[@class='page']"):
                 if not pg.xpath(".//span[@role='link']/span/@aria-owns"):
