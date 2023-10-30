@@ -321,12 +321,13 @@ class ACMSDocketReport(AppellateDocketReport):
             de = {}
             de["document_number"] = row["entryNumber"]
 
-            # Return HTML
-            de["description"] = row["docketEntryText"]
+            # Return HTML, currently unused.
+            de["description_html"] = row["docketEntryText"]
 
-            # Convert to text for date parsing
+            # Convert to plain text
             tree = strip_bad_html_tags_insecure(row["docketEntryText"])
             docket_text = tree.text_content()
+            de["description"] = docket_text
 
             # "...[Entered: 09/27/2023 03:30 PM]"
             # "...[Entered: 10/05/2023 03:56 PM] [Edited: 10/06/2023 10:51 AM]"
