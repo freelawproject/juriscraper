@@ -68,8 +68,11 @@ class ACMSDocketReport(AppellateDocketReport):
         # districtCourtName: "San Francisco Northern California"
         # districtCourtName: "Los Angeles Central California"
         if caseDetails["court"]:
-            ogc_info["name"] = caseDetails["court"]["name"]
-            ogc_info["identifier"] = caseDetails["court"]["identifier"]
+            court = caseDetails["court"]
+            if "name" in court:
+                ogc_info["name"] = court["name"]
+            if "identifier" in court:
+                ogc_info["identifier"] = court["identifier"]
         if caseDetails["districtCourtName"]:
             ogc_info["name"] = caseDetails["districtCourtName"]
 
