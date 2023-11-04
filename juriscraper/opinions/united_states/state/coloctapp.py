@@ -48,21 +48,21 @@ class Site(colo.Site):
                 self.find_element_by_id("next").click()
                 self.html = fromstring(self.webdriver.page_source)
 
-            #pattern = fr"({self.year}COA\d+)\n(.*?)\n(Division \w+)" #self.year fails tests in 2023
-            #pattern = fr"(2022COA\d+|{self.year}COA\d+)\n(.*?)\n(Division \w+)" #hybrid regex satisfies 2022 test examples
-            pattern = r"(202\d{1}COA\d+)\n(.*?)\n(Division \w+)" #regex generalized for this decade (passes tests)
-            #pattern = r"(20\d{2}COA\d+)\n(.*?)\n(Division \w+)" #regex generalized for 21st century (passes tests)
-            '''
+            # pattern = fr"({self.year}COA\d+)\n(.*?)\n(Division \w+)" #self.year fails tests in 2023
+            # pattern = fr"(2022COA\d+|{self.year}COA\d+)\n(.*?)\n(Division \w+)" #hybrid regex satisfies 2022 test examples
+            pattern = r"(202\d{1}COA\d+)\n(.*?)\n(Division \w+)"  # regex generalized for this decade (passes tests)
+            # pattern = r"(20\d{2}COA\d+)\n(.*?)\n(Division \w+)" #regex generalized for 21st century (passes tests)
+            """
             TODO revisit the regex pattern if the state scraper test examples are ever updated.
             A more rigorous test would check 2023 examples, or maybe even examples from different years.
             Potential edgecase: self.year == 2024, but the scraper is getting cases from 2023.
             I've suggested a few regex patterns, but decided on one generalized for this decade 2020-2029.
             The narrow scope limits unintended consequences while still being good for cases until 2029.
             It also lets us fix the scraper without changing the 2022 test examples.
-            This is kind of a hack because the tests no longer certify the 2023 data, 
+            This is kind of a hack because the tests no longer certify the 2023 data,
             so we are relying on the courts to maintain 2022 formatting.
                 -honeykjoule
-            '''
+            """
             urls_to_add = []
             for pg in self.html.xpath(".//div[@class='page']"):
                 if not pg.xpath(".//span[@role='link']/span/@aria-owns"):
