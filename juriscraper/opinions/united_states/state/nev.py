@@ -26,10 +26,6 @@ class Site(OpinionSiteLinear):
         )
 
     def _process_html(self):
-        # if self.test_mode_enabled():
-        #     import json
-        #     self.html = json.load(open(self.url))
-
         for case in self.html:
             self.cases.append(
                 {
