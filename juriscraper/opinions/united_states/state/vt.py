@@ -11,53 +11,42 @@ If there are errors with the site, you can contact:
 She's very responsive.
 """
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.back_scrape_iterable = list(range(1, self.get_backscrape_max()))
-        self.element_path_format = "//article[@class='views-row media-document']/div[@class='views-field views-field-field-document%s']"
-        self.url = (
-            "https://www.vermontjudiciary.org/opinions-decisions?f[0]=document_type%3A94&f[1]=court_division_opinions_library_%3A"
-            + self.get_division_id()
-        )
-        self.backscrape_page_base_url = f"{self.url}&page="
+        self.division = 7
+        self.status = "Published"
+        self.url = f"https://www.vermontjudiciary.org/opinions-decisions?f%5B0%5D=court_division_opinions_library_%3A{self.division}"  # supreme
 
-    def get_backscrape_max(self):
-        return 7
-
-    def get_division_id(self):
-        return "7"
-
-    def _get_download_urls(self):
-        path_base = self.element_path_format % ""
-        path = f"{path_base}//@href"
-        return self.html.xpath(path)
-
-    def _get_case_names(self):
-        path = self.element_path_format % ""
-        return [e.text_content().strip() for e in self.html.xpath(path)]
-
-    def _get_case_dates(self):
-        path = self.element_path_format % "-expiration"
-        return [
-            convert_date_string(e.text_content())
-            for e in self.html.xpath(path)
-        ]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_docket_numbers(self):
-        path = self.element_path_format % "-number"
-        return [e.text_content().strip() for e in self.html.xpath(path)]
-
-    def _download_backwards(self, page_number):
-        logger.info("PROCESSING PAGE: %d" % (page_number + 1))
-        self.url = self.backscrape_page_base_url + str(page_number)
-        self.html = self._download()
+    def _process_html(self):
+        for case in self.html.xpath(".//article"):
+            name_url_span = case.xpath(
+                ".//div[contains(@class, 'views-field-name')]"
+            )[0]
+            date = (
+                case.xpath(
+                    ".//div[contains(@class, 'views-field-field-document-expiration')]"
+                )[0]
+                .text_content()
+                .strip()
+            )
+            docket = (
+                case.xpath(
+                    ".//div[contains(@class, 'views-field-field-document-number')]"
+                )[0]
+                .text_content()
+                .strip()
+            )
+            self.cases.append(
+                {
+                    "url": name_url_span.xpath(".//a/@href")[0],
+                    "name": name_url_span.text_content(),
+                    "date": date,
+                    "docket": docket,
+                }
+            )
+            print(self.cases)

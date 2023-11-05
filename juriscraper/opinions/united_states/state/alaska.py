@@ -6,11 +6,14 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    # juriscraper in the user agent crashes it - it appears to be just straight up blocked.
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://appellate-records.courts.alaska.gov/CMSPublic/Home/Opinions?isCOA=False"
         self.status = "Published"
+        self.request["headers"]["user-agent"] = "Free Law Project"
 
     def _process_html(self):
         for table in self.html.xpath("//table"):

@@ -15,32 +15,8 @@ History:
     link. Multiple case names are concatenated, and docket numbers are
     concatenated with ',' delimiter
     - 2021-12-29: Updated for new web site, by flooie and satsuki-chan
-Notes:
-    To filer documents per year, the API expects the key number for the year
-    in parameter:
-    - 'tag': for years 2019 to date
-        * 2021: tag=1206    * 2020: tag=1366    * 2019: tag=1416
-    - 'subcategory': for years 2009 to 2018
-        * 2018: subcategory=1601    * 2017: subcategory=1596
-        * 2016: subcategory=1591    * 2015: subcategory=1586
-        * 2014: subcategory=1581    * 2013: subcategory=1576
-        * 2012: subcategory=1571    * 2011: subcategory=1566
-        * 2010: subcategory=1561    * 2009: subcategory=1556
-    Only one parameter can have a key number; using both with a value in the
-    same request (even with a valid key) returns zero documents.
-    Using none, returns all documents (regardless of the publication year)
-    found with the other parameters values.
-    For this scraper, filtering documents per year is not necesary.
-    Examples:
-        - https://www.courts.nh.gov/content/api/documents?text=&category=+undefined&purpose=1331+undefined&tag=+&subcategory=1556&sort=field_date_posted|desc&page=3&size=10
-        - https://www.courts.nh.gov/content/api/documents?text=&category=+undefined&purpose=1331+undefined&tag=1366+&subcategory=&sort=field_date_posted|desc&page=1&size=25
 """
 
-import re
-
-from lxml.html import fromstring
-
-from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -48,45 +24,38 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # Parameters are included in the URL because this court's API only
-        # allows GET requests. Current architecture for scrapers only includes
-        # parameters in requests with the POST method
-        self.url = "https://www.courts.nh.gov/content/api/documents?sort=field_date_posted%7Cdesc&page=1&size=30&purpose=1331"
+        self.url = "https://www.courts.nh.gov/content/api/documents?sort=field_date_posted%7Cdesc&page=1&size=60&purpose=1331"
         self.status = "Published"
+
+    def _download(self):
+        if self.test_mode_enabled():
+            import json
+
+            return json.load(open(self.url))
+        return (
+            self.request["session"]
+            .get(
+                self.url,
+                headers=self.request["headers"],
+                verify=self.request["verify"],
+                timeout=60,
+            )
+            .json()
+        )
 
     def _process_html(self) -> None:
         for case in self.html["data"]:
-            content = fromstring(case["documentContent"])
-            urls = content.xpath(
-                ".//div[@class='document__detail__title']//a/@href"
-            )
-            if not urls:
-                logger.info(f"Opinion without URL to file: {case}")
+            url = case["fields"]["field_document_file"]["0"]["fields"]["uri"][
+                0
+            ].split("//")[1]
+            if "," not in case["title"]:
                 continue
-
-            date = case["documentPosted"]
-            if not date:
-                logger.info(f"Opinion without date: {case}")
-                continue
-
-            # In juvenile cases - the case name contains the docket number
-            # So we use a negative lookbehind to ignore docket numbers after
-            # the word juvenile.
-            regex = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?"
-            dockets = re.findall(regex, case["documentName"])
-            docket = ", ".join([docket[0] for docket in dockets])
-
-            # Get name by removing docket number from document text
-            rgx = r"(?<!JUVENILE )((\b)(\w+-)?[\d]{2,4}-\d+)\/?,? &? ?(and)? ?"
-            name = re.sub(rgx, "", case["documentName"])
-            # Strip out the bad pattern with slashes between adjoined docket numbers
-            name = re.sub(r"^\d+\/", "", name)
-
+            docket, name = case["title"].split(",", 1)
             self.cases.append(
                 {
-                    "name": name,
-                    "docket": docket,
-                    "date": date,
-                    "url": urls[0],
+                    "name": name.strip(),
+                    "docket": docket.strip(),
+                    "date": case["fields"]["field_date_posted"][0],
+                    "url": f"https://www.courts.nh.gov/sites/g/files/ehbemt471/files/{url}",
                 }
             )
