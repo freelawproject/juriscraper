@@ -52,8 +52,12 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.method = "POST"
         if not self.test_mode_enabled():
-            self._update_parameters()
-            self.html = super()._download()
+            if (
+                self.url
+                == "https://www.kscourts.org/Cases-Decisions/Decisions"
+            ):
+                self._update_parameters()
+                self.html = super()._download()
         for row in self.html.xpath(".//tr"):
             date_filed, docket_number, case_name, court, status = row.xpath(
                 ".//td/a/text()"
