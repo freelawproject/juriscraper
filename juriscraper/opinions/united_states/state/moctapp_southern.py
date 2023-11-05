@@ -11,12 +11,13 @@ class Site(mo.Site):
     def _download(self, request_dict={}):
         # I have to do something to open up the page - but only for the southern
         # district of this verison of the court.
-        data = '{"sort_date_facets_by_value":true,"content_sample_length":300,"name":"default","path":"search","paging_states":[],"query_context":{"query_id":"1699132997921","prev_query_id":"1699132997873"},"user_context":{"referer":"https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions%20Southern&date=all&year=2023#all","locale":"en","service_id":"https://www.courts.mo.gov/search/apps/scripts/../../api/v2/","utc_time_zone_differential_in_seconds":-14400,"service_url":"https://www.courts.mo.gov/search/apps/scripts/../../api/v2/search"}}'
-        self.request["session"].post(
-            "https://www.courts.mo.gov/search/api/v2/search", data=data
-        )
-        self.method = "GET"
-        self.request["session"].get(self.url)
+        if not self.test_mode_enabled():
+            data = '{"sort_date_facets_by_value":true,"content_sample_length":300,"name":"default","path":"search","paging_states":[],"query_context":{"query_id":"1699132997921","prev_query_id":"1699132997873"},"user_context":{"referer":"https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions%20Southern&date=all&year=2023#all","locale":"en","service_id":"https://www.courts.mo.gov/search/apps/scripts/../../api/v2/","utc_time_zone_differential_in_seconds":-14400,"service_url":"https://www.courts.mo.gov/search/apps/scripts/../../api/v2/search"}}'
+            self.request["session"].post(
+                "https://www.courts.mo.gov/search/api/v2/search", data=data
+            )
+            self.method = "GET"
+            self.request["session"].get(self.url)
         return super()._download(request_dict)
 
     def _process_html(self):

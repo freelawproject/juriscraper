@@ -16,15 +16,12 @@ class Site(OpinionSiteLinear):
         self.court = "Supreme"
         self.url = self.build_url()
         self.status = "Published"
-        print(self.url)
 
     def build_url(self):
         year = date.today().year
         return f"https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions%20{self.court}&date=all&year={year}#all"
 
     def _process_html(self):
-        # import lxml
-        # print(lxml.html.tostring(self.html).decode())
         for row in self.html.xpath("//div[@class='margin-bottom-15']"):
             date = row.xpath(".//input")[0].value
             for opinion in row.xpath(".//div[@class='list-group-item-text']"):

@@ -49,4 +49,3 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                 }
             )
-            print(self.cases)

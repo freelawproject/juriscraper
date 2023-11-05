@@ -59,5 +59,4 @@ class Site(OpinionSite):
 
     def _download_backwards(self, year):
         self.url = self.url_base + str(year)
-        print(self.url)
         self.html = self._download()

@@ -27,4 +27,3 @@ class Site(OpinionSiteLinear):
                     "date": date,
                 }
             )
-            print(self.cases[-1])
