@@ -11,8 +11,6 @@ from .utils import get_docketxml_url, get_pdf_url, is_pdf
 
 logger = make_default_logger()
 
-date_regex = r"[—\d\-–/]+"
-
 
 class InternetArchive(BaseDocketReport):
     """A simple tool for working with the XML and PDFs on the Internet Archive
