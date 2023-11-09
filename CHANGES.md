@@ -16,6 +16,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.57 - 2023-11-09**
+
+Features:
+
+- Add support for parsing ACMS Docket reports.
+
+Changes:
+
+- Abstract out date regexes into a new class attribute named DATE_REGEX.
+- Update deprecated key in setup.cfg file.
+- Refactor the message in the SlownessException to limit the precision to the right of the decimal point to three digits.
+- Refactor the regex pattern in the scraper for Colorado Appeals Court
+
+## Past
+
 **2.5.56 - 2023-10-09**
 
 Features:
@@ -25,8 +40,6 @@ Features:
 Changes:
 
 - Fix Mass/MassAppCt
-
-## Past
 
 **2.5.54 - 2023-10-06**
 
