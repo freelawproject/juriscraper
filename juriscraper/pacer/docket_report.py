@@ -86,6 +86,14 @@ class BaseDocketReport:
         for party in parties:
             for atty in party.get("attorneys", []):
                 if not atty["contact"]:
+                    # This scenario should not happen, and we lack a test for it, and it's
+                    # not clear how to write one or why this code is here; it was added in
+                    # a97ebf61c3cafa7589d3f9ddc0c65be23131f019.
+                    # We are not generally invoked with an attorney
+                    # dict that both contains a `contact` key and that
+                    # key has no value. If we're invoked with an empty
+                    # attorney dict, then this will throw a
+                    # ValueError.
                     continue
 
                 if re.search(r"see\s+above", atty["contact"], re.I):
