@@ -5,9 +5,5 @@ class Site(washctapp_p.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.courtLevel = "C"
-        self.pubStatus = "UNP"
-        self._set_parameters()
-
-    def _get_precedential_statuses(self):
-        return ["Unpublished"] * len(self.case_names)
+        self.url = f"https://www.courts.wa.gov/opinions/index.cfm?fa=opinions.byYear&fileYear={self.year}&crtLevel=C&pubStatus=UNP"
+        self.status = "Unpublished"

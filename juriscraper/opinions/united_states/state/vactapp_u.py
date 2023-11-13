@@ -1,16 +1,27 @@
-from juriscraper.opinions.united_states.state import va
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(va.Site):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.courts.state.va.us/wpcau.htm"
         self.court_id = self.__module__
+        self.url = "https://www.vacourts.gov/wpcau.htm"
+        self.status = "Unpublished"
 
-    def _get_download_urls(self):
-        path = "//p[./a[contains(./@href, '.pdf')]]/a[1]/@href"
-        urls = [url for url in self.html.xpath(path) if url.endswith(".pdf")]
-        return urls
-
-    def _get_precedential_statuses(self):
-        return ["Unpublished"] * len(self.case_names)
+    def _process_html(self):
+        for row in self.html.xpath("//p"):
+            links = row.xpath(".//a")
+            name = row.xpath(".//b/text()")
+            if not name:
+                continue
+            date, disposition, *_ = row.text_content().splitlines()
+            date = date.split(name[0])[1]
+            self.cases.append(
+                {
+                    "name": name[0].strip(),
+                    "docket": links[0].get("href").split("/")[-1][:-4],
+                    "url": links[0].get("href"),
+                    "disposition": disposition,
+                    "date": date.strip(),
+                }
+            )

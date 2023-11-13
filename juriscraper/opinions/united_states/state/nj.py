@@ -1,126 +1,37 @@
-import datetime
-
-from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
-    """This court provides a json endpoint!
-    How fun. Their single json endpoint dumps
-    all of the cases into the following groupings:
-        - Supreme
-        - Published_Appellate
-        - Unpublished_Appellate
-        - Published_tax
-        - Unpublished_Tax
-        - Unpublished_Trial
-
-    Human web interface: http://www.judiciary.state.nj.us/attorneys/opinions.html#Supreme
-    """
-
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.base_url = "http://www.judiciary.state.nj.us/attorneys/assets"
-        self.servername = "http://www.judiciary.state.nj.us"
-        self.url = f"{self.base_url}/js/objects/opinions/op2017.json"
-        self.case_types = ["Supreme"]
+        self.url = "https://www.njcourts.gov/attorneys/opinions/supreme"
+        self.status = "Published"
 
-    def tweak_response_object(self):
-        """Court is irresponsibly not returning valid json content
-        type header, so we force it here. As a result, the self.html
-        object will be a dict of the parsed json data.
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
+
+        :return: None
         """
-        self.request["response"].headers["content-type"] = "application/json"
-
-    def _get_download_urls(self):
-        urls = []
-        for type in self.case_types:
-            for opinion in self.html[type]:
-                # They don't have uniform keys across all data, which is... odd
-                if "DocumentURL" in opinion:
-                    url = f"{self.servername}{opinion['DocumentURL']}"
-                else:
-                    url = self.get_absolute_opinion_path(
-                        opinion["Document"], type
-                    )
-                urls.append(url)
-        return urls
-
-    def _get_case_names(self):
-        names = []
-        for type in self.case_types:
-            names.extend([case["Title"] for case in self.html[type]])
-        return names
-
-    def _get_case_dates(self):
-        dates = []
-        for type in self.case_types:
-            dates.extend(
-                [
-                    convert_date_string(case["PublishDate"])
-                    for case in self.html[type]
-                ]
-            )
-        return dates
-
-    def _get_precedential_statuses(self):
-        statuses = []
-        for type in self.case_types:
-            status = (
-                "Unpublished"
-                if type.startswith("Unpublished")
-                else "Published"
-            )
-            statuses.extend([status] * len(self.html[type]))
-        return statuses
-
-    def _get_docket_numbers(self):
-        dockets = []
-        for type in self.case_types:
-            dockets.extend([case["OpinionID"] for case in self.html[type]])
-        return dockets
-
-    def get_absolute_opinion_path(self, suffix, type):
-        """Determine the absolute path given the file suffix in the
-        json object and the opinion type.  This is necessary because
-        the course does not return standardized data objects.
-        """
-        type_parts = type.lower().split("_")
-        type_parts_length = len(type_parts)
-        if type_parts_length == 1:
-            status = False
-            type = type_parts[0].lower()
-        elif type_parts_length == 2:
-            status = type_parts[0].lower()
-            type = type_parts[1].lower()
-        else:
-            raise InsanityException(
-                f'Unrecognized type "{type}", this should never happen'
-            )
-        if not suffix.startswith(type):
-            if status:
-                suffix = f"{type}/{status}/{suffix}"
+        for row in self.html.xpath("//div[@class='card-body']"):
+            url = row.xpath(".//a[@class='text-underline-hover']/@href")[0]
+            name = row.xpath(".//a[@class='text-underline-hover']/text()")[0]
+            if "njtax" in self.court_id:
+                pass
             else:
-                suffix = f"{type}/{suffix}"
-        return f"{self.base_url}/opinions/{suffix}"
-
-    def _post_parse(self):
-        """This will remove the cases without a future case date"""
-        to_be_removed = [
-            index
-            for index, case_date in enumerate(self.case_dates)
-            if case_date > datetime.date.today()
-        ]
-        for attr in self._all_attrs:
-            item = getattr(self, attr)
-            if item is not None:
-                new_item = self.remove_elements(item, to_be_removed)
-                self.__setattr__(attr, new_item)
-
-    @staticmethod
-    def remove_elements(list_, indexes_to_be_removed):
-        return [
-            i for j, i in enumerate(list_) if j not in indexes_to_be_removed
-        ]
+                name, other = name.split("(", 1)
+            docket = row.xpath(
+                ".//div[@class='badge badge-default rounded-0 one-line-truncate me-1 mt-1']/text()"
+            )[0]
+            date = row.xpath(
+                ".//div[@class='col-lg-12 small text-muted mt-2']/text()"
+            )[0]
+            self.cases.append(
+                {
+                    "date": date,
+                    "docket": docket,
+                    "name": titlecase(name.strip()),
+                    "url": url,
+                }
+            )

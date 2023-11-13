@@ -6,54 +6,50 @@
 # Reviewer: mlr
 # Date: 2014-07-05
 
-import re
-from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from datetime import datetime
+
+from lxml import html
+
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.elements = []
-        self.base_path = False
-        self.year = date.today().year
-        self.regex = r"([^,]+), (\d{2}.\d{2}.\d{4}), (.*)"
-        self.url = (
-            "http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1"
-            % self.year
+        year = datetime.today().year
+        self.url = f"https://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year={year}&level=1"
+        self.status = "Published"
+
+    def _process_html(self):
+        for row in self.html.xpath("//div/p['@class=document']")[::-1]:
+            if "OK" not in row.text_content():
+                continue
+            if "EMAIL" in row.text_content():
+                continue
+            if "P.3d" in row.text_content():
+                citation1, citation2, date, name = row.text_content().split(
+                    ",", 3
+                )
+                citation = f"{citation1} {citation2}"
+            else:
+                citation, date, name = row.text_content().split(",", 2)
+
+            self.cases.append(
+                {
+                    "date": date,
+                    "name": name,
+                    "docket": citation,
+                    "url": row.xpath(".//a")[0].get("href"),
+                    "citation": citation,
+                }
+            )
+
+    @staticmethod
+    def cleanup_content(content):
+        tree = html.fromstring(content)
+        core_element = tree.xpath("//*[@id='oscn-content']")[0]
+        return html.tostring(
+            core_element, pretty_print=True, encoding="unicode"
         )
-
-    def set_base_path(self):
-        # All test files should be edited to use year value of 2018
-        year = 2018 if self.test_mode_enabled() else self.year
-        self.base_path = "//a[contains(./text(), '%d')]" % year
-
-    def _download(self, request_dict={}):
-        self.set_base_path()
-        html = super()._download(request_dict)
-        self.elements = html.xpath(self.base_path)
-        return html
-
-    def _get_download_urls(self):
-        path = f"{self.base_path}/@href"
-        return self.html.xpath(path)
-
-    def _get_case_dates(self):
-        return [self._return_substring(e, 2) for e in self.elements]
-
-    def _get_case_names(self):
-        return [self._return_substring(e, 3) for e in self.elements]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_citations(self):
-        return [self._return_substring(e, 1) for e in self.elements]
-
-    def _return_substring(self, element, group):
-        text = element.text_content()
-        substring = re.search(self.regex, text).group(group)
-        return substring if group != 2 else convert_date_string(substring)

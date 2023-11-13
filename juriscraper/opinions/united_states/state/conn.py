@@ -10,6 +10,7 @@ History:
     - 2016-07-21, arderyp: fixed to handle altered site format
     - 2017-01-10, arderyp: restructured to handle new format use case that includes opinions without dates and flagged for 'future' publication
     - 2022-02-02, satsuki-chan: Fixed docket and name separator, changed super class to OpinionSiteLinear
+    - 2023-11-04, flooie: Fix scraper
 """
 
 import re
@@ -26,35 +27,27 @@ class Site(OpinionSiteLinear):
         self.year = date.today().strftime("%y")
         self.url = f"http://www.jud.ct.gov/external/supapp/archiveAROsup{self.year}.htm"
         self.status = "Published"
-        self.cases = []
-        self.docket_regex = r"SC\d+"
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
-        date = None
-        for row in self.html.xpath(
-            r"//*[re:match(text(), '.*\d{1,2}/\d{1,2}/\d{2,4}')] | //table[@id='AutoNumber1']//li",
-            namespaces={"re": "http://exslt.org/regular-expressions"},
-        ):
-            dates = re.findall(r"\d{1,2}/\d{1,2}/\d{2,4}", row.text_content())
-            if dates:
-                date = dates[0]
+        for row in self.html.xpath("//ul/preceding-sibling::p"):
+            if "Published in the Law Journal" not in row.text_content():
                 continue
-            if not date:
-                continue
-            link_node = row.xpath(".//a")[0]
-            link_text = link_node.text_content().strip()
-            name = normalize_dashes(row.text_content().replace(link_text, ""))
-            name = re.sub(r" - ", "", name).strip()
-            dockets = ", ".join(re.findall(self.docket_regex, link_text))
-            self.cases.append(
-                {
-                    "date": date,
-                    "url": link_node.attrib["href"],
-                    "docket": dockets,
-                    "name": name,
-                }
-            )
+            date = row.text_content().split(" ")[-1][:-1]
+            for document in row.xpath("following-sibling::ul[1]/li"):
+                output_string = re.sub(
+                    r"\s{2,}", " ", document.text_content()
+                ).strip()
+                name = output_string.split("-")[-1].strip()
+                docket = document.xpath(".//a")[0].text_content().split()[0]
+                self.cases.append(
+                    {
+                        "date": date,
+                        "url": document.xpath(".//a")[0].get("href"),
+                        "docket": docket,
+                        "name": name,
+                    }
+                )

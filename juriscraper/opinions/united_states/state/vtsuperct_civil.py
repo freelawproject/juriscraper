@@ -8,8 +8,8 @@ from . import vt
 
 
 class Site(vt.Site):
-    def get_backscrape_max(self):
-        return 37
-
-    def get_division_id(self):
-        return "1"
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.court_id = self.__module__
+        self.division = 1
+        self.url = f"https://www.vermontjudiciary.org/opinions-decisions?f%5B0%5D=court_division_opinions_library_%3A{self.division}"  # supreme

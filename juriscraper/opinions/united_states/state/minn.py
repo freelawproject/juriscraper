@@ -6,89 +6,78 @@
 # Date: 2014-07-03
 # Contact:  Liz Reppe (Liz.Reppe@courts.state.mn.us), Jay Achenbach (jay.achenbach@state.mn.us)
 import re
-from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+# Need to contact the court, but they have a captcha on the pages that make this
+# a rather unqiue scraper. I found that if i first go to the a differnet
+# state website - even if the captcha triggers on that url i can still access the
+# search query.
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # Get 500 most recent results for the year.  This number could be reduced after the
-        # initial run of this fixed code.  We need ot start with a big number though to
-        # capture the cases we've missed over the past few weeks.
-        self.url = "http://mn.gov/law-library-stat/search/opinions/?v:state=root%7Croot-0-500&query=date:{year}".format(
-            year=date.today().year
-        )
-        self.court_filters = ["/supct/"]
-        self.cases = []
+        self.parameters = {
+            "v:sources": "mn-law-library-opinions",
+            "query": f" (url:/archive/supct) ",
+            "sortby": "date",
+        }
+        self.url = "http://minnesota.gov/"
+        self.search_url = "https://mn.gov/law-library/search/#"
+        self.headers = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-Dest": "document",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Sec-Fetch-Mode": "navigate",
+            "Host": "mn.gov",
+            "User-Agent": "Juriscraper/3.0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+            "Referer": "https://mn.gov/law-library/search/?v%3Asources=mn-law-library-opinions&query=+%28url%3A%2Farchive%2Fsupct%29+&citation=&qt=&sortby=&docket=&case=&v=&p=&start-date=&end-date=",
+            # 'Accept-Encoding': 'gzip, deflate, br',
+            "Connection": "keep-alive",
+        }
+        self.status = "Published"
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self._extract_case_data_from_html(html)
-        return html
-
-    def _extract_case_data_from_html(self, html):
-        """Build list of data dictionaries, one dictionary per case.
-
-        Sometimes the XML is malformed, usually because of a missing docket number,
-        which throws the traditional data list matching off.  Its easier and cleaner
-        to extract all the data at once, and simply skip over records that do not
-        present a docket number.
+    def _request_url_get(self, url):
+        """Execute GET request and assign appropriate request dictionary
+        values
         """
-        for document in html.xpath("//document"):
-            docket = document.xpath('content[@name="docket"]/text()')
-            if docket:
-                docket = docket[0]
-                title = document.xpath('content[@name="dc.title"]/text()')[0]
-                name = self._parse_name_from_title(title)
-                url = document.xpath("@url")[0]
-                if any(s in url for s in self.court_filters):
-                    # Only append cases that are in the right jurisdiction.
-                    self.cases.append(
-                        {
-                            "name": name,
-                            "url": self._file_path_to_url(
-                                document.xpath("@url")[0]
-                            ),
-                            "date": convert_date_string(
-                                document.xpath('content[@name="date"]/text()')[
-                                    0
-                                ]
-                            ),
-                            "status": self._parse_status_from_title(title),
-                            "docket": docket,
-                        }
-                    )
-
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
-
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
-
-    def _file_path_to_url(self, path):
-        return path.replace(
-            "file:///web/prod/static/lawlib/live",
-            "http://mn.gov/law-library-stat",
+        self.request["session"].get(self.url, headers=self.headers, timeout=30)
+        self.request["response"] = self.request["session"].get(
+            self.search_url,
+            params=self.parameters,
+            headers=self.headers,
+            timeout=30,
         )
 
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
 
-    def _get_precedential_statuses(self):
-        return [case["status"] for case in self.cases]
+        :return: None
+        """
+        for case in self.html.xpath("//div[@class='searchresult']"):
+            url = case.xpath(".//a/@href")[0]
+            name = case.xpath(".//a/text()")[0]
+            m = re.match(r"(.*)\. A2[23]", name)
+            if m:
+                name = m.groups()[0]
 
-    def _parse_name_from_title(self, title):
-        name_regex = re.compile(
-            r"(?P<name>.+)\s(?:A(?:DM)?\d\d-\d{1,4})", re.I
-        )
-        return name_regex.search(title).group("name")
-
-    def _parse_status_from_title(self, title):
-        return "Unpublished" if "unpublished" in title.lower() else "Published"
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+            summary = case.xpath(
+                ".//div[@class='searchresult_snippet']/text()"
+            )[0]
+            raw_date = case.xpath(".//div[@class='searchresult_date']")[
+                -1
+            ].text_content()
+            date = re.sub(r"\s+", " ", raw_date).split(":")[1].strip()
+            docket = url.split("/")[-1].split("-")[0][2:]
+            self.cases.append(
+                {
+                    "date": date,
+                    "name": name,
+                    "url": f"http:{url}",
+                    "summary": summary,
+                    "docket": docket,
+                }
+            )

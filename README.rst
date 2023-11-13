@@ -224,14 +224,14 @@ follows:
     site.parse()
 
     # Print out the object
-    print str(site)
+    print(str(site))
 
     # Print it out as JSON
-    print site.to_json()
+    print(site.to_json())
 
     # Iterate over the item
     for opinion in site:
-        print opinion
+        print(opinion)
 
 That will print out all the current meta data for a site, including
 links to the objects you wish to download (typically opinions or oral
@@ -264,7 +264,7 @@ if they're not known before starting the scraper. For example:
         # Create a Site instance, then get the contents
         site = mod.Site()
         site.parse()
-        print str(site)
+        print(str(site))
 
 This can be useful if you wish to create a command line scraper that
 iterates over all courts of a certain jurisdiction that is provided by a
