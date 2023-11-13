@@ -71,7 +71,7 @@ class Site(OpinionSiteLinear):
                 -1
             ].text_content()
             date = re.sub(r"\s+", " ", raw_date).split(":")[1].strip()
-            docket = url.split("/")[-1].split("-")[0]
+            docket = url.split("/")[-1].split("-")[0][2:]
             self.cases.append(
                 {
                     "date": date,
