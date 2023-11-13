@@ -5,6 +5,7 @@ Court Short Name: Colo. Ct. App.
 History:
     - 2022-01-31: Updated by William E. Palin
     - 2023-01-05: Updated by William E. Palin
+    - 2023-11-04: Updated by Honey K. Joule
 """
 
 
@@ -47,7 +48,7 @@ class Site(colo.Site):
                 self.find_element_by_id("next").click()
                 self.html = fromstring(self.webdriver.page_source)
 
-            pattern = r"(2022COA\d+)\n(.*?)\n(Division \w+)"
+            pattern = r"(202\d{1}COA\d+)\n(.*?)\n(Division \w+)"
             urls_to_add = []
             for pg in self.html.xpath(".//div[@class='page']"):
                 if not pg.xpath(".//span[@role='link']/span/@aria-owns"):
