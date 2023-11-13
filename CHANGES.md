@@ -16,6 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.58 - 2023-11-13**
+
+Features:
+
+
+Changes:
+
+- Fix 40 or so scrapers -- all state scrapers
+
+## Past
+
 **2.5.57 - 2023-11-09**
 
 Features:
@@ -29,7 +40,6 @@ Changes:
 - Refactor the message in the SlownessException to limit the precision to the right of the decimal point to three digits.
 - Refactor the regex pattern in the scraper for Colorado Appeals Court
 
-## Past
 
 **2.5.56 - 2023-10-09**
 
