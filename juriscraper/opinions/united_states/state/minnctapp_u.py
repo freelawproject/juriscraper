@@ -1,4 +1,4 @@
-# Scraper for Minnesota Court of Appeals Published Opinions
+# Scraper for Minnesota Court of Appeals Unpublished Opinions
 # CourtID: minnctapp_u
 # Court Short Name: Minn Ct App
 # Author: mlr
