@@ -11,6 +11,7 @@ class Site(OpinionSiteLinear):
         self.url = (
             "https://www.courts.state.hi.us/opinions_and_orders/opinions"
         )
+        self.court_id = self.__module__
         self.court_code = "S.Ct"
         self.status = "Published"
 
