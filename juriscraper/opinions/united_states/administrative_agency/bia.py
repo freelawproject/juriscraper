@@ -19,61 +19,12 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/eoir/ag-bia-decisions"
-        self.article = None
         self.volume = 0
         self.urls = None
-
-    def _process_elements(self, elements) -> Dict[str, Any]:
-        """Process the element grouping.
-
-        There is no easy way to parse our the content. Unfortunately, the DOJ
-        admins randomly nest elements and not others. The only consistency
-        is that they content is always split between HR tags.  So we iterate
-        over the elements in order until we find an HR tag and then process
-        the content.  Rinse Wash Repeat.
-
-        Additionally, the only date we have is the year of the decision.
-
-        :param elements: The elements between <hr> tags.
-        :return: Case data
-        """
-        case = {}
-        bold_text = elements[0].xpath(".//strong[1]/.. | .//b[1]/..")
-        if not bold_text:
-            return {}
-        intro_text = (
-            elements[0].xpath(".//strong[1]/.. | .//b[1]/..")[0].text_content()
-        )
-        intro_text = intro_text.replace(";", ",")
-        name, cite = intro_text.split(",", 1)
-        # Unfortunately there are no accessible file dates without PDF parsing
-        # So we generate a date and mark it as date_filed_is_approximate = True
-        # This is unset to false after it is extracted from the PDF on CL side.
-        case["date_filed_is_approximate"] = True
-        years = re.findall(r"\d{4}", cite)
-        if not years:
-            return {}
-        case["date"] = f"{years[-1]}-07-01"
-        case["status"] = "Published"
-        case["citation"] = cite
-        case["name"] = name
-        case["url"] = elements[0].xpath(".//a")[0].get("href")
-        case["docket"] = elements[0].xpath(".//a")[0].text_content()
-
-        # Iterate over the P tags that hold the summaries, sometimes
-        summary = []
-        for element in elements:
-            if element.tag == "p":
-                summary.append(element.text_content())
-        case["summary"] = "\n".join(summary).strip()
-        return case
+        self.status = "Published"
 
     def _process_html(self):
         if not self.test_mode_enabled():
-            # Sort the URLS by volume to enable the backscraper
-            # We reverse sort the links by volume and choose the first one
-            # unless we are in a backscraper and then we choose what loop
-            # we are in.
             if not self.urls:
                 urls = self.html.xpath(
                     ".//table[1]/tbody/tr/td/a[contains(., 'Volume')]"
@@ -84,30 +35,35 @@ class Site(OpinionSiteLinear):
 
                 self.urls = sorted(urls, key=get_text, reverse=True)
             self.url = self.urls[self.volume].get("href")
-            # Download the new page of decisions
             self.html = super()._download()
-
-        # Get the article which will contain all of our content.
-        article = self.html.xpath(".//article")[0]
-        # get the last element in the article
-        # this ends the process_elements method on the final call because no
-        # hr tag is present on the last decision
-
-        last = list(article.iter())[-1]
-        # Iterate over every tag in the article to separate out the cases.
-        elements = []
-        for element in article.iter():
-            elements.append(element)
-            # Process the data when the HR tag is found or the last element.
-            # this loop lets us generate all of the elements and thus all
-            # the data that we are looking for.  The DOJ has random and weird
-            # HTML that sometimes nests and sometimes doesnt nest elements of
-            # an opinion.
-            if element.tag == "hr" or element == last:
-                case = self._process_elements(elements)
-                if case:
-                    self.cases.append(case)
-                elements, case = [], {}
+        table = self.html.xpath(".//table")[0]
+        for row in table.xpath(".//strong"):
+            name = row.text_content().strip().strip(",")
+            row_text = row.xpath("..")[0].text_content()
+            if "BIA" not in row_text:
+                continue
+            if not name:
+                continue
+            citation, year = row_text.split(name)[1].split("(")
+            cells = row.xpath("..")[0].xpath(
+                "following-sibling::td[position() <= 2]"
+            )
+            if not cells:
+                continue
+            url = cells[0].xpath(".//a/@href")
+            docket = cells[0].xpath(".//a")[0].text_content()
+            if not url:
+                continue
+            self.cases.append(
+                {
+                    "name": name,
+                    "citation": citation,
+                    "url": url[0],
+                    "docket": docket,
+                    "date": year.split()[1],
+                    "date_filed_is_approximate": True,
+                }
+            )
 
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Can we extract the date filed from the text?
