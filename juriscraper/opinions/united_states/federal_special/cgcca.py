@@ -24,7 +24,7 @@ class Site(OpinionSiteLinear):
         self.citation_regex = (
             r"(?P<MJ>\(?\d{2} M\.J\. \d+\)?)|(?P<WL>\(?\d{4} (WL|Wl) \d+\)?)"
         )
-        self.url = "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/smdsort15701/publicationdate/smdorder15701/desc/"
+        self.url = "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
 
     def _process_html(self) -> None:
         """Process the HTML
