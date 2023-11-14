@@ -29,6 +29,7 @@ class Site(OpinionSiteLinear):
                 {
                     "url": html.tostring(item.xpath("link")[0], method="text")
                     .decode()
+                    .replace("\\n", "")
                     .strip(),
                     "name": item.xpath(".//title/text()")[0],
                     "date": formatted_date,
