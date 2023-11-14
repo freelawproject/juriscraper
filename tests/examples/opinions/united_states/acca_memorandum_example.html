@@ -1,411 +1,1004 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-<meta name="robots" content="noindex" />
-<meta http-equiv="Expires" content="0"> <meta http-equiv="Cache-Control" content="must-revalidate">
-<meta http-equiv="Cache-Control" content="no-cache">
-<meta http-equiv="PRAGMA" content="NO-CACHE">
-<meta http-equiv="X-UA-Compatible" content ="IE=EmulateIE9">
-<link rel="stylesheet" TYPE="text/css" href="/sites/help.nsf/ccFooter.css">
-<link rel="stylesheet" TYPE="text/css" href="https://www.jagcnet.army.mil/85257546006DF36B/$GlobalApp.css">
-<link rel="stylesheet" TYPE="text/css" href="https://www.jagcnet.army.mil/85257546006DF36B/calendar-blue.css">
-<link rel="stylesheet" TYPE="text/css" href="https://www.jagcnet.army.mil/85257546006DF36B/OpinionDigests.css">
-<script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/jquery-1.12.4.js"></script>
-<script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/js/xmlVw.js"></script>
-<script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/calendar.js"></script>
-<script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/calendar-en.js"></script>
-<script language="JavaScript" type="text/javascript" src="https://www.jagcnet.army.mil/85257546006DF36B/AjaxCall.js"></script>
-<title>ACCA - Opinions: Memorandum Opinions by Date</title>
-<script language="JavaScript" type="text/javascript">
-<!--
-document._domino_target = "_self";
-function _doClick(v, o, t) {
-  var returnValue = false;
-  var url="/__85257546006df36b.nsf/MODD?OpenView&Click=" + v;
-  if (o.href != null) {
-    o.href = url;
-    returnValue = true;
-  } else {
-    if (t == null)
-      t = document._domino_target;
-    window.open(url, t);
-  }
-  return returnValue;
+<html><head>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ACCA Appellate Library
+    </title>
+    <script src="/ACCALibrary/js/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="/ACCALibrary/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ACCALibrary/css/all.min.css">
+    <link rel="stylesheet" href="/ACCALibrary/css/site.css">
+    <link rel="stylesheet" href="/ACCALibrary/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" type="text/css" href="/ACCALibrary/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+
+
+<script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","version":"","require":[],"description":"This is your new file, start writing code","matches":["*://*/*"],"excludes":[],"namespace":"","noframes":false,"filename":"stuff.js","resources":"","icon":"","grant":[],"exclude-match":[],"name":"stuff"},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.4.3","scriptMetaStr":"// ==UserScript==\n// @name        stuff\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "stuff.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                if (window.location.hostname.indexOf("chaturbate") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+        history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
 }
-// -->
-</script>
+if (window.location.hostname.indexOf("livejas") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+        history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
 
-<script language="JavaScript" type="text/javascript">
-<!--
-function searchCatalog(searchOrder) {	doc=document.forms[0];	vwnm = doc.ViewName.value	var ageIndex=-1	var catIndex=-1	var countIndex=-1	age=""	query=""	categories=""	categorytext=""	FTSearch="";	ageIndex=-1;	if (doc.Search.value!=="") {		FTSearch=escape(doc.Search.value);		query=FTSearch		self.location.href= vwnm + "?SearchView&Query=("+query+")&SearchOrder="+searchOrder+"&SearchWV=TRUE&SearchThesaurus=FALSE&SearchFuzzy=True&Start=0&Count=50&SearchMax=0&vw="+vwnm;	}}function handleKey(btnid) {	var pressedKey = window.event.keyCode;	var objBtn;		if (pressedKey == 13)	{		window.event.returnValue=false;			objBtn = document.getElementById(btnid);		if (objBtn) objBtn.click();		return false;	}	else return true;}function newDoc() {	 	var path = document.getElementById("DbPath").value;	 	var view = document.getElementById("ViewName").value;		var url = path + "/frmOpinion?OpenForm&vw="+view + "&fm=opsu";		window.open(url, '_self');		window.focus();}function closeForm() {	var path = document.getElementById("DbPath").value;	var view = document.getElementById("ViewName").value;	var url =  path+"/"+view+"?OpenView&Count=-1&vw="+view;	window.open(url, '_self');}
+if (window.location.hostname.indexOf("sex") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $(".ad-block").remove();
+        $(".ad-footer").remove();
+        $(".ad-small").remove();
+        $(".ad-label").remove();
+        $(".ad-iframe-wrap").remove();
+    };
+    document.head.appendChild(script);
+}
 
-// -->
-</script>
-</head>
-<body text="#000000" bgcolor="#FFFFFF">
+if (window.location.hostname.indexOf("chaturbate") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+//         history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
 
-<form action=""><input name='HTTPS' type='hidden' value='ON'>
-<input name='Server_Name' type='hidden' value='www.jagcnet.army.mil'>
-<input name='URL' type='hidden' value='https://www.jagcnet.army.mil/85257546006df36b/modd?openview'>
-<input name='DbReplicaID' type='hidden' value='85257546006DF36B'>
-<input name='DbPath' type='hidden' value='https://www.jagcnet.army.mil/85257546006DF36B'>
-<input name='DbSitePath' type='hidden' value='https://www.jagcnet.army.mil/Sites/ACCA.nsf'>
-<input name='DbFullPath' type='hidden' value='https://www.jagcnet.army.mil/Apps/ACCAOpinions/ACCAOpinions.nsf'>
-<input name='docUNID' type='hidden' value='A766A537BE536AA085258441006FDB6B'>
-<input name='UserRoles' type='hidden' value='$$WebClient¥[Opinions]'>
-<input name='CurUserCanonical' type='hidden' value='Anonymous'>
-<input name='CurUserCommon' type='hidden' value='Anonymous'>
-<input name='IsNewDoc' type='hidden' value='1'>
-<input name='IsDocBeingEdited' type='hidden' value='0'>
-<input name='ViewName' type='hidden' value=''>
-<input name='FormName' type='hidden' value=''>
-<input name='InstructionsDocID' type='hidden' value='2F474CBA782D27FF852583BB005E5E9F'>
-<input name='InstructionsFileName' type='hidden' value='Instructions_to_install_DOD_PKI_Certificate.pdf'>
-<input name='DoDFlag' type='hidden' value='Y'>
-<div id='divTop'>
-<table class='bannerTable'><tr>
-<td style="width:20%;" align="center"  rowspan=2><img src="/Apps/ACCAOpinions/ACCAOpinions.nsf/accablue.jpg" style="vertical-align:bottom" height="75" width="75"></td>
-<td id='bannerTitle' style="width:45%;padding:0px;font-size:25px;font-weight:bold; color: #ffffff;" align=center rowspan=2></td>
-<td style="width:30%;text-align:right;padding:12px;"><a class='welcomeMsg' href='//jagcnet.pub.pentagon.mil/85257546006DF36B/MODD?OpenView&vw=MODD&Count=-1' target='_top'>Login</a></td>
-</tr>
-</table></div><br>
+if (window.location.hostname.indexOf("getsex.xxx") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+//         history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
+
+if (window.location.hostname.indexOf("movies") > -1) {
+    var script = document.createElement('script');
+
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+
+
+    script.onload = function () {
+        loaditup();
+        keypress();
+        $("#bottom-blocks").remove();
+    };
+    document.head.appendChild(script);
+}
+
+
+function keypress(){
+
+
+//     alert($("a"))
+
+    $("a").each(function(e) {
+        $(this).on("mouseover", function(e) {
+            $(this).css('background','red');
+            $(this).addClass("activeX")
+//             $(this).find("span").addClass("activeS")
+//             $(this).data( "foo", "bar" );
+//             $(this).addClass('active');
+        })
+        $(this).on("mouseout", function(e) {
+            $(this).css('background','white');
+//             $(this).data( "foo", "out" );
+            $(this).removeClass("activeX")
+
+        })
+
+
+    })
+
+
+    $(window).on("keypress", function(e) {
+        if (e.originalEvent.key == "o") {
+
+//             alert("O pressed")
+//             alert($(".active").attr("href"))
+//             var j = $( "a" ).find( "a" ).css( "background-color", "red" );
+//             $("[data=]")
+//             var hh = $.parseHTML( j )
+            console.log($(".activeX"))
+//             alert($('.activeX').length)
+            if ($('.activeX').length == 1) {
+                var h = $('.activeX').attr('href')
+//                 alert(h)
+                var hh = h.replace("//", "https://")
+//                 alert(hh)
+                var html = httpGet(hh)
+//             console.log(html)
+//                 alert(html.split("<source src=\"")[1].split("\"")[0])
+                var link = html.split("<source src=\"")[1].split("\"")[0]
+//                 alert(link)
+
+                var video = $('<video />', {
+                    loop: "loop",
+                    autoplay:"autoplay",
+                    playsinline:"playsinline",
+                    webkitplaysinline:"webkitplaysinline",
+                    src: link,
+                    class: 'thumb-image-container__video',
+                    eid1: "1",
+                    controls: true
+                });
+                video.css("height", "500px");
+                video.css("z-index", 999);
+
+                $('.activeX').parent().parent().parent().parent().replaceWith(video);
+
+
+
+//                 var hhh = $.parseHTML( html )
+//                 alert($(hhh).filter("#thisPlayer"))
+//                 var x = $(hhh).filter("source[type='video/mp4']").attr("src")
+//                 alert(x)
+//                 alert(hhh)
+//                 var href = $(html).filter('link[href*="m3u8"]')
+
+            }
+//                 $.get( hh, function( data ) {
+// //                       $( ".result" ).html( data );
+//                       alert( "Load was performed." );
+//                     });
+//             }
+
+//             var hh = $(".active")[0].attr('href')
+//             alert(hh)
+//             console.log()
+//             link = $($($("video").parent())[0]).attr('href')
+//             var html = httpGet(link)
+//             console.log(html)
+//             var hh = $.parseHTML( html )
+        }
+    });
+}
+
+function loaditup(){
+
+    $(window).on("dblclick", function(){
+        window.stop()
+        var x = $("source[type='video/mp4']").attr("src")
+        var video = $('<video />', {
+                    id: 'video',
+                    src: x,
+                    type: 'video/mp4',
+                    controls: true,
+                    width: "90vw",
+                });
+
+        $(".film-main-row").replaceWith(video);
+
+    })
+
+    $(window).scroll(function(){
+//     $(window).on("dblclick", function(){
+
+
+        console.log("SCROLLING")
+        $("#ldvideocontainer").remove();
+        $(".film-item:not(#showpop)").remove();
+        $("#player-container").remove();
+        $("iframe").remove();
+//         $("img").remove();
+
+        $('.role-pop').removeClass('role-pop')
+        $(".ad").remove()
+
+        $(".traffic-stars").remove()
+
+        $(".adsbyexoclick").remove();
+        $(".exo-ipp").remove();
+        $(".exo_wrapper").remove()
+        $(".exo_notransition").remove();
+        $(".film-th-wrapper > script").remove()
+        $(".film-container > script").remove()
+        $("#blue-banner").remove()
+        if ($(".film-main-row").length > 0) {
+        $(".film-aside-ads").replaceWith( "<h2>New heading</h2>" );
+
+        }
+
+    });
+
+}
+                //# sourceURL=stuff.js
+            })();
+        })();
+    </script><script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","version":"","require":[],"description":"This is your new file, start writing code","matches":["*://*/*"],"excludes":[],"namespace":"","noframes":false,"filename":"NewScript-tg7d1qs9.user.js","resources":"","icon":"","grant":[],"name":"NewScript-tg7d1qs9","exclude-match":[]},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.4.3","scriptMetaStr":"// ==UserScript==\n// @name        NewScript-tg7d1qs9\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "NewScript-tg7d1qs9.user.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                const spans = document.getElementsByTagName('span');
+    for (let span of spans) {
+        if (span.innerText === 'Ad') {
+            span.style.backgroundColor = 'blue';
+        }
+    }
+                //# sourceURL=NewScript-tg7d1qs9.user.js
+            })();
+        })();
+    </script><style>/*
+.thumb-list {
+    position: block !important;
+}
+
+div {
+    position: block !important;
+}
+
+.thumb-list--margin {
+    background-color: yellow;
+    position: block !important;
+}
+
+.index-videos .thumb-list {
+    flex-wrap: none !important;
+} */
+
+.modal {
+      display: none; /* Hide the modal by default */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }</style></head>
+<body>
+
+<div class="no-print navbar navbar-expand-lg navbar-dark bg-dark bg-jag" style="height:5rem">
+    <div>
+        <img src="/ACCALibrary/images/ArmyLogo.png" style="height:80px;">
+    </div>
+    <div>
+        <a class="navbar-brand" href="/ACCALibrary">US ARMY</a>
+        <div>
+            ACCA APPELLATE LIBRARY
+        </div>
+    </div>
+    <div class="flex-grow-1 ml-4 mr-4" style="margin-bottom:-40px;">
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="pl-4 navbar-nav mr-auto" style="display:none">
+            </ul>
+
+        </div>
+    </div>
+    <div>
+
+        <div id="spinner" class="spinner-border text-light float-right" role="status" style="display:none">
+            <span class="sr-only">Loading...</span>
+        </div>
+
+    </div>
+    <div class="ml-auto text-white">
+    </div>
+    <div class="pl-4">
+                <a class="text-white" href="https://www.jagcnetpub.army.mil/ACCALibrary/login?ReturnUrl=/ACCALibrary/cases/opinions/MO">Login</a>
+    </div>
+
+</div>
+
+    <div class="outer">
+
+<div class="left-nav">
+
+<div id="left-nav-container">
+    <div class="alert-dark p-2 "><i class="fas fa-balance-scale mr-2"></i> CASES</div>
+    <div class="left-nav-link  pl-4 bg-white">
+        <div class="">
+            <a href="/ACCALibrary/cases">All Cases</a>
+        </div>
+    </div>
+    <div class="left-nav-link  pl-4 bg-white">
+        <div class="">
+            <a href="/ACCALibrary/cases?categoryKey=pending">Pending Cases</a>
+        </div>
+    </div>
+    <div class="alert-dark p-2 "><i class="far fa-calendar-alt mr-2"></i> HEARING CALENDAR</div>
+    <div class="left-nav-link pl-4 bg-white">
+        <div class="">
+            <a href="/ACCALibrary/cases/upcominghearings">Upcoming Hearings</a>
+        </div>
+    </div>
+    <div class="left-nav-link pl-4  bg-white">
+        <div class="">
+            <a href="/ACCALibrary/cases/PastHearings">Past Hearings</a>
+        </div>
+    </div>
+    <div class="alert-dark p-2 "><i class="fas fa-gavel"></i> OPINIONS</div>
+        <div class="left-nav-link pl-4 bg-white">
+            <div class="active">
+                <a href="/ACCALibrary/cases/opinions/MO">Memorandum Opinion</a>
+            </div>
+        </div>
+        <div class="left-nav-link pl-4 bg-white">
+            <div class="">
+                <a href="/ACCALibrary/cases/opinions/OC">Opinion of the Court</a>
+            </div>
+        </div>
+        <div class="left-nav-link pl-4 bg-white">
+            <div class="">
+                <a href="/ACCALibrary/cases/opinions/SF">Short Form Affirmance</a>
+            </div>
+        </div>
+        <div class="left-nav-link pl-4 bg-white">
+            <div class="">
+                <a href="/ACCALibrary/cases/opinions/SD">Summary Disposition</a>
+            </div>
+        </div>
+
+</div>
+
+
+</div>
+<div class="right-panel">
+    <div class="content-container" id="contentContainer">
+        <div id="recordListContainer">
+            <div id="Opinions_listViewOuterContainer">
+    <div id="Opinions_Modal_inline">
+
+    </div>
+    <div id="Opinions_listViewDataContainer">
+
+<div class="viewContainer" data-current-page-info="{&quot;context&quot;:null,&quot;ViewKey&quot;:&quot;Opinions&quot;,&quot;CategoryKey&quot;:&quot;MO&quot;,&quot;Page&quot;:1,&quot;TotalRecords&quot;:2327,&quot;PageSize&quot;:25,&quot;SortColumn&quot;:&quot;OpinionDate&quot;,&quot;DefaultSortColumn&quot;:&quot;OpinionDate&quot;,&quot;UpdateBrowserState&quot;:false,&quot;FieldFilters&quot;:[],&quot;ExtSearchFilters&quot;:[],&quot;SelectedIds&quot;:[],&quot;ControllerName&quot;:null,&quot;DisplayCriteria&quot;:&quot;&quot;,&quot;TogglePreview&quot;:false,&quot;SortOrder&quot;:&quot;desc&quot;,&quot;SearchString&quot;:&quot;&quot;,&quot;Totalpages&quot;:94,&quot;NextPageNumber&quot;:2,&quot;PreviousPageNumber&quot;:1}" data-view-key="Opinions" data-controller-name="Cases" data-action-name="Opinions" data-record-route="cases/opinion/file" data-unique-column-value-path="/Cases/GetUniqueValues" data-partial-url-path="/Cases/Opinions" data-export-url-path="Cases/Export" data-details-url-path="Cases/Details" data-new-url-path="Cases/New" data-edit-url-path="Cases/Edit" data-save-url-path="Cases/Save" data-outer-container-id="Opinions_listViewOuterContainer" data-list-data-container-id="Opinions_listViewDataContainer" data-allow-preview="False">
+
+        <div class="row bg-light border-bottom p-2" style="margin-left:0px;margin-right:0px;">
+            <div class="col-9">
+                <h5 class="text-secondary">OPINIONS - MEMORANDUM OPINION</h5>
+                    <div>
+                        <div class="text-danger">Memorandum Opinions issued by the Court do not serve as precedent</div>
+                    </div>
+            </div>
+            <div class="col-3 text-right">
+                    <a href="/ACCALibrary/rss/opinions" class="btn btn-sm btn-outline-danger pull-right">
+                        <i class="fas fa-rss-square mr-2"></i>RSS Feed
+                    </a>
+            </div>
+        </div>
+
+
+
+        <div class="card-body">
+
+            <div class="row bg-light border" style="margin-left:0px;margin-right:0px;padding-top:5px">
+                <div class="col-md-4">
+                    <span class="text-secondary">1 - 25 of 2327</span>
+                    <div class="btn-group" style="margin-left:10px;margin-top:3px;">
+                        <a data-page-number="1" onclick="navigateView(this)" class="btn btn-outline-dark btn-sm disabled tt" title="" data-original-title="Previous Page">
+                            <i class="fa fa-chevron-left" style="margin-right:5px;margin-top:5px;"></i>
+                        </a>
+                        <a data-page-number="2" onclick="navigateView(this)" class="btn btn-outline-dark btn-sm  tt" title="" style="border-left-width:0px" data-original-title="Next Page">
+                            <i class="fa fa-chevron-right pull-right" style="margin-top:5px;margin-left:5px !important;margin-right:0px"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="padding-bottom:4px;">
+                        <div class="input-group">
+
+                            <input id="SearchString" name="SearchString" value="" placeholder="Search" class="form-control" onkeypress="searchView(event)">
+
+                        </div>
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+
+
+            </div>
+
+
+            <div id="Opinions_ResizeContainer" style="">
+
+
+
+                <table class="table table-bordered table-sm list-view-table">
+                    <colgroup>
+                            <col style="width:60%">
+                            <col style="width:15%">
+                            <col style="width:25%">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                                <th style="">
+                                            <a data-field-name="Subject" class="text-muted">
+                                                Subject
+                                            </a>
+
+
+                                </th>
+                                <th style="">
+                                            <a data-field-name="CaseNumber" class="text-muted" href="javascript:void(0)" onclick="sortView(this)">
+                                                Case Number
+                                                <i class="fa fa-sort"></i>
+                                            </a>
+
+
+                                </th>
+                                <th style="border-bottom-color:black">
+                                            <a data-field-name="OpinionDate" class="text-dark" href="javascript:void(0)" onclick="sortView(this)">
+                                                Opinion Date
+                                                <i class="fa fa-sort-down"></i>
+                                            </a>
+
+
+                                </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr data-id="965">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/965">
+
+                                                    United States v. Specialist ETHAN KIBLER
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/d9a8d721-1f41-44a8-8b2f-4f9c4e6f9252">20220245</a>
+                                        </td>
+                                        <td>
+                                            10/31/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="961">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/961">
+
+                                                    United States v. Specialist KALEB BAYLOR
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/d78dc817-d250-435d-86d1-877566771dd0">20210576</a>
+                                        </td>
+                                        <td>
+                                            10/30/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="962">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/962">
+
+                                                    United States v. SSG JONATHAN MARIN
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/da20e4f0-e99f-4e2b-9905-947e7c0a30d6">20210375</a>
+                                        </td>
+                                        <td>
+                                            10/30/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="944">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/944">
+
+                                                    United States v. Private First Class DAVID S. PARLER
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/717a33c9-6d09-4bdf-87a3-77f69c903f08">20220135</a>
+                                        </td>
+                                        <td>
+                                            10/12/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="934">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/934">
+
+                                                    United States v. Private E2 LUKE A. WATKINS
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/8e521a45-4c31-4ae5-b424-196f0dcd6150">20210638</a>
+                                        </td>
+                                        <td>
+                                            09/27/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="916">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/916">
+
+                                                    United States v. Private First Class JOHN K. JARLEGO
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/861af050-7a43-4c77-9475-fad4f3f8e2f9">20210389</a>
+                                        </td>
+                                        <td>
+                                            09/11/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="915">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/915">
+
+                                                    United States v. Sergeant LAVARIA K. JEFFERSON
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/2f8e0084-378e-4d9a-be23-dcf3f6b0c915">20220448</a>
+                                        </td>
+                                        <td>
+                                            09/06/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="911">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/911">
+
+                                                    United States v. Private First Class LUIS A. MORALES-SANCHEZ
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/5e353f8a-decd-480f-8184-ea0c957a038f">20210286</a>
+                                        </td>
+                                        <td>
+                                            08/31/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="901">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/901">
+
+                                                    United States v. Specialist ANTHONY ALLRED
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/63980731-8f41-4e0e-93fa-235eb53702ea">20220141</a>
+                                        </td>
+                                        <td>
+                                            08/25/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="884">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/884">
+
+                                                    United States v. Chief Warrant Officer Three JASON J. GERANEN
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/ba24d3b8-4c8e-4531-bb66-f5871a40103f">20210306</a>
+                                        </td>
+                                        <td>
+                                            08/01/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="883">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/883">
+
+                                                    United States v. Specialist MICHAEL J. KORNICKEY
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/16e6b553-a483-4600-88f9-ad795eac8f0f">20210636</a>
+                                        </td>
+                                        <td>
+                                            07/31/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="853">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/853">
+
+                                                    United States v. Lieutenant Colonel ROBERT M. BABA
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/74ab5934-8001-4f69-9083-03b5ea2f21af">20210199</a>
+                                        </td>
+                                        <td>
+                                            06/22/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="836">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/836">
+
+                                                    United States v. Private First Class MICHAEL A. ERUAGA
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/7e337fbf-ec6d-4421-a049-f53b3bc94eab">20220643</a>
+                                        </td>
+                                        <td>
+                                            05/31/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="828">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/828">
+
+                                                    United States v. Private First Class PHILIP D. SOLA
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/42179d1b-24f2-4f44-8527-a46e8d14535b">20210322</a>
+                                        </td>
+                                        <td>
+                                            05/12/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="827">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/827">
+
+                                                    United States v. Staff Sergeant ISAC D. MENDOZA
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/6adba85d-95c6-4989-9d25-2bd354bb237f">20210647</a>
+                                        </td>
+                                        <td>
+                                            05/08/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="823">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/823">
+
+                                                    United States v. Master Sergeant JOHN LONG
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/7403757e-2b99-4d95-9a0d-e61c713b3c8d">20150160</a>
+                                        </td>
+                                        <td>
+                                            04/28/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="811">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/811">
+
+                                                    United States v. Sergeant RENSO F. VASQUEZ
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/d863e24a-5d0c-427d-9be7-079ea8bb8429">20210359</a>
+                                        </td>
+                                        <td>
+                                            04/06/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="801">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/801">
+
+                                                    United States v. Corporal SHJON M. KERN
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/3bf83fde-e413-4b5e-b78c-1b69652dd41d">20210302</a>
+                                        </td>
+                                        <td>
+                                            03/29/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="793">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/793">
+
+                                                    United States v. Private First Class MICHAEL A. ERUAGA
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/7e337fbf-ec6d-4421-a049-f53b3bc94eab">20220643</a>
+                                        </td>
+                                        <td>
+                                            03/15/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="786">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/786">
+
+                                                    United States v. First Lieutenant KRISTIAN R. PFEFFER (II)
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/afcc8b3c-b38c-45e2-8fe0-979c894eff41">20210263</a>
+                                        </td>
+                                        <td>
+                                            03/08/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="775">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/775">
+
+                                                    United States v. ERICK OLIVARES
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/1f35dcaa-42fa-4223-9bf8-0bc02a08e869">20210125</a>
+                                        </td>
+                                        <td>
+                                            02/24/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="781">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/781">
+
+                                                    United States v. Sergeant ANTONI FRINKLEY
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/6d4bf142-d556-4753-8d78-54993947d9f9">20210176</a>
+                                        </td>
+                                        <td>
+                                            02/24/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="767">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/767">
+
+                                                    United States v. Specialist LAROY D. FILMORE
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/6c925816-0eea-4db2-af0c-5f8f91c4647a">20210334</a>
+                                        </td>
+                                        <td>
+                                            02/14/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="761">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/761">
+
+                                                    United States v. Staff Sergeant Nicholas A. Shaw
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/8fc70a33-68e2-4eee-a43a-5836c22e0dbe">20230003</a>
+                                        </td>
+                                        <td>
+                                            02/06/2023
+                                        </td>
+
+                            </tr>
+                            <tr data-id="760">
+                                        <td>
+                                                <a href="/ACCALibrary/cases/opinion/file/760">
+
+                                                    United States v. Staff Sergeant KVIEN GLOVERSTUKES
+                                                </a>
+
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="../../cases/c2e737bf-ee24-47e9-baf0-712a9328f3fe">20220597</a>
+                                        </td>
+                                        <td>
+                                            02/01/2023
+                                        </td>
+
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+                <div class="row " style="margin-left:0px;margin-right:0px">
+                    <div class="col-md-8">
+
+                    </div>
+                    <div class="col-md-4 text-right" style="padding-left:0px;padding-right:0px;">
+                        <div class="btn-group pull-right">
+                            <a data-page-number="1" onclick="navigateView(this)" class="btn btn-outline-dark btn-sm disabled tt" title="" data-original-title="Previous Page">
+                                <i class="fa fa-chevron-left" style="margin-right:10px !important;"></i>Prev
+                            </a>
+                            <a data-page-number="2" onclick="navigateView(this)" class="btn btn-outline-dark btn-sm  tt" title="" style="border-left-width:0px" data-original-title="Next Page">
+                                Next <i class="fa fa-chevron-right pull-right" style="margin-left:10px !important;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+
+    <div id="filterValueContainer" class="dropdown-content">
+    </div>
+</div>
+
+
+
+
+
+    </div>
+
+    <div id="Opinions_PreviewContainer">
+    </div>
+
+</div>
+
+<div class="modal fade" id="Opinions_Modal" tabindex="-1" backdrop="static" role="dialog" aria-labelledby="popup model" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content" id="Opinions_Body">
+
+        </div>
+    </div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMQw0QHs29Ln4Jx57VYBO2BCihitbyQdBcm0uhSscxFxkbj75O2qUi4usVNGZWQWjRGj0EgRNEnFE_076E1k7OC9xyg1B7EjRIBOpGxpIuLmAY_FE4p7Sqmu_N5iQsX67G6FdzrjJrH_mnM0vQ3VIk">
 <script>
-$( document ).ready(function() {
-	var vwnm = document.forms[0].ViewName.value;
-	var isSearchForm = 0;
-	var isEditor = 0;
-	var ahref = "";
-	var result = "";
-	var classnm = "";
-	switch (vwnm) {
-    		case "MOD":
-			result = "Memorandum Opinions by Name";
-			classnm = "LNme";
-			break;
-		case "MODD":
-			result = "Memorandum Opinions by Date";
-			classnm = "DtOpn";
-			break;
-		case "OD":
-			result = "Opinions of the Court by Name";
-			classnm = "LNme";
-			break;
-		case "ODD":
-			result = "Opinions of the Court by Date";
-			classnm = "DtOpn";
-			break;
-		case "SD":
-			result = "Summary Disposition by Name";
-			classnm = "LNme";
-			break;
-		case "SDD":
-			result = "Summary Disposition by Date";
-			classnm = "DtOpn";
-			break;
-		case "showOD":
-			result = "Opinion Digest";
-			break;
-		case "DelMOD":
-			result = "Deleted Memorandum Opinions";
-			break;
-		case "DelOD":
-			result = "Deleted Opinions of the Court";
-			break;
-		case "DelSD":
-			result = "Deleted Summary Disposition";
-			break;
-		case "AllDelOpns":
-			result = "All Deleted Opinions";
-	}
-	$("#bannerTitle").html(result);
-	if( vwnm != "AllDelOpns" && vwnm != "DelMOD" && vwnm != "DelOD" && vwnm != "DelSD") {
-		$('#viewbttnbar').css("display","block");
-		$('#viewsrchfnd').css("display","block");
-		$('#viewsrchsctn').css("display","block");
-	}
-	if( isSearchForm == 1 ) {
-		$('tr.domino-view-colhead').each(function(){
-	  		$(this).children('th').eq(0).remove();
-		});
-		$('tr.domino-viewentry').each(function(){
-		  	$(this).children('td').eq(0).remove();
-		});
-		if (result != "") {
-			var btntxt = "Return to the " + result + " main view.";
-			$("#ResetOne").attr("title",btntxt );
-			$("#ResetTwo").attr("title",btntxt );
-		}
-	}
-	if (isEditor == 1) {
-		classnm = classnm + "1";
-	} else {
-		classnm = classnm + "2";
-	}
-	$('.'+classnm).each(function(i){
-		$(this).remove();
-	});
-	$('#tblViewBody').css("display","block");
-});
+    window.addEventListener('popstate', function (event) {
+        updateListViewOnPopState(event.state);
+    });
 </script>
-<br />
-	<div align="center">
-<table border="0" cellspacing="0" cellpadding="0">
-<tr valign="top"><td width="865"><div id='viewbttnbar' style='display:none;'>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr valign="top"><td width="86"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt="" /></td><td width="749" rowspan="2"><div  id='attlink' style= 'margin:0px;'>
-	<p><font color ="black">In order to subscribe to this feed you must install DoD Certificates</font><br><a href=https://www.jagcnet.army.mil/85257546006DF36B/2F474CBA782D27FF852583BB005E5E9F/$File/Instructions_to_install_DOD_PKI_Certificate.pdf target="_blank"><font color ="#0073C9"> <b>Click here for instructions to install DoD Certificates</a> </p>
-</div></td></tr>
 
-<tr valign="top"><td width="86"><a id="RssFeed" href="/Apps/RSS/rss.nsf/rss?openagent&uid=7309A572863BA4E1852583A8005E2997"><img class="RssFd" border="0" src="/Apps/ACCAOpinions/ACCAOpinions.nsf/RSS.png?OpenImageResource" alt="Click here"/></a></td></tr>
-</table>
-<br><br>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr valign="top"><td width="173"></td><td width="173"></td><td width="173"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt="" /></td><td width="345" colspan="2"><div id='idIndecator' style='display:none;'>Searching - One moment please...  <img src='/Apps/ACCAOpinions/ACCAOpinions.nsf/indicator.gif'></div></td></tr>
-</table>
-</div><br></td></tr>
 
-<tr valign="top"><td class="labelCell" width="865"><div id='viewsrchfnd' style='display:none;'></div></td></tr>
+        </div>
+    </div>
+</div>
 
-<tr valign="top"><td class="labelCell" width="865"><div id='viewsrchsctn' style='display:none;'>
-<p>Enter your desired search term: <input type="text" name="Search" style="width: 350px;" onkeypress="return handleKey('btnFindOpinion')">
-<input type="button" onclick="showHideIndicator(&quot;block&quot;);searchCatalog(&quot;4&quot;)" value="Find Opinion" id="btnFindOpinion" style="background-color:#F7F7F7; width:100px" /></p>
-</div></td></tr>
 
-<tr valign="top"><td class="dataCell" width="865"><br><div id='tblViewBody' style='display:none;'><br />
 
-<table class="domino-view" border="0" cellpadding="2" cellspacing="0">
-<tr class="domino-view-colhead"><th nowrap="nowrap" align="left"><b><font size="4"><span class="DtOpn1">Date</span></font></b></th><th nowrap="nowrap" align="left"><b><font size="4"><span class="DtOpn2">Date</span></font></b></th><th nowrap="nowrap" align="left"><b>Opinion</b></th></tr>
+    </div>
 
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/11/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/8CC66306C99EC77C85258438006A4670?EditDocument&vw=MODD">07/11/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/8CC66306C99EC77C85258438006A4670/$FILE/mo-alcorn, wj.pdf">ARMY MISC 20190313 - United States v. Private First Class WYATT J. ALCORN</a></td></tr>
+<div class="footer bg-dark">
+    <div class="border-bottom  pt-2 pb-2">
+        <div class="container-fluid">
+            <div class="justify-content-md-between ">
+                <ul class="list-unstyled m-0 text-center">
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://www.jagcnet.army.mil/help" target="_blank">Service Desk</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://www.army.mil/armyequityandinclusion#org-accessibility" target="_blank">Accessibility</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="http://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx" target="_blank">Section 508</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://www.jagcnet.army.mil/Sites/JAGC.nsf/footerTrigger.xsp?open&amp;lkup=COPYRIGHT&amp;&amp;" target="_blank">Copyright</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://dodcio.defense.gov/DoD-Web-Policy/" target="_blank">DoD IbC Policy</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://www.jagcnet.army.mil/Sites/JAGC.nsf/footerTrigger.xsp?open&amp;lkup=FOIA&amp;&amp;" target="_blank">FOIA</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="http://www.asamra.army.mil/nofear.html" target="_blank">No Fear Act</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://osc.gov/Pages/WhatWeDo.aspx" target="_blank">OSC</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://www.jagcnet.army.mil/Sites/JAGC.nsf/footerTrigger.xsp?open&amp;lkup=PRIVACY&amp;&amp;" target="_blank">Privacy Policy</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="http://www.jagcnet.army.mil/ReleaseNotes" target="_blank">Release Notes</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="https://www.jagcnet.army.mil/Sites/JAGC.nsf/footerTrigger.xsp?open&amp;lkup=TERMS&amp;&amp;" target="_blank">Terms</a></li>
+                            <li class="d-inline pr-1 pb-1 ml-4"><a class="text-white " href="http://www.usa.gov/" target="_blank">USA.gov</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center py-2 space-1 JAGCNetApp-footer-bottom">
+        <div>The security accreditation level of this site is UNCLASSIFIED//FOUO and below.</div><div>Do not process, store, or transmit information classified above the accreditation level of this system.</div>
+    </div>
 
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/03/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/FFED2B9367C74A33852584320043A93F?EditDocument&vw=MODD">07/03/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/FFED2B9367C74A33852584320043A93F/$FILE/mo-moore, at.pdf">ARMY MISC 20180692 - United States v. Private E1 ANTONIO T. MOORE</a></td></tr>
 
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/03/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B2034CEC96CBE4708525843200436187?EditDocument&vw=MODD">07/03/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B2034CEC96CBE4708525843200436187/$FILE/mo-williams, tr.pdf">ARMY 20160231 - United States v. Staff Sergeant THERON R. WILLIAMS</a></td></tr>
+</div>
 
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/28/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/37842DEDA1DA2D4785258432004B01F4?EditDocument&vw=MODD">06/28/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/37842DEDA1DA2D4785258432004B01F4/$FILE/mo-whitman, aj.pdf">ARMY 20170550 - United States v. Sergeant AARON J. WHITMAN</a></td></tr>
+    <script>
+        var baseUrl = "/ACCALibrary";
+    </script>
 
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/27/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6437642E6AE13E1685258432004B109F?EditDocument&vw=MODD">06/27/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6437642E6AE13E1685258432004B109F/$FILE/mo-hollenbeck, bk.pdf">ARMY 20170237 - United States v. Specialist BRIAN K. HOLLENBECK</a></td></tr>
+    <script src="/ACCALibrary/js/bootstrap.bundle.min.js"></script>
+    <script src="/ACCALibrary/js/common.js"></script>
+    <script src="/ACCALibrary/js/mainSite.js"></script>
+    <script src="/ACCALibrary/js/listView.js"></script>
+    <script type="text/javascript" src="/ACCALibrary/lib/moment.js/moment.min.js"></script>
+    <script type="text/javascript" src="/ACCALibrary/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/ACCALibrary/js/bootstrap-multiselect.js"></script>
 
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/21/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D578A4601487F1B585258432004B2462?EditDocument&vw=MODD">06/21/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D578A4601487F1B585258432004B2462/$FILE/mo-majstorovic, ca.pdf">ARMY 20180045 - United States v. Private E2 CHANDLER A. MAJSTOROVIC</a></td></tr>
 
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/10/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/82263A65C051029585258417004FA886?EditDocument&vw=MODD">06/10/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/82263A65C051029585258417004FA886/$FILE/mo-clark, nl.pdf">ARMY 20170023 - United States v. Sergeant NORMAN L. CLARK, SR.</a></td></tr>
 
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/11/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B01BA78B6639ACDB852583DD004B9C7C?EditDocument&vw=MODD">04/11/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B01BA78B6639ACDB852583DD004B9C7C/$FILE/mo-mannan, re.pdf">ARMY 20170096 - United States v. Private First Class RYAN E. MANNAN</a></td></tr>
 
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/03/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F0DEBA4D78847845852583D60055DB8E?EditDocument&vw=MODD">04/03/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F0DEBA4D78847845852583D60055DB8E/$FILE/mo-solomon, tl.pdf">ARMY 20160456 - United States v. Sergeant TERRACE L. SOLOMON</a></td></tr>
 
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/01/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/ACAE523CE0B0444B852583D20043DA47?EditDocument&vw=MODD">04/01/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/ACAE523CE0B0444B852583D20043DA47/$FILE/mo-mcaninch, ds (cc).pdf">ARMY 20170091 - United States v. Specialist DRAKE S. MCANINCH</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/28/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B043532D422C8419852583D20043F217?EditDocument&vw=MODD">03/28/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B043532D422C8419852583D20043F217/$FILE/mo-guinn, mj.pdf">ARMY 20170500 - United States v. Staff Sergeant MICHAEL J. GUINN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/28/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6713E47ED8FAA19B852583CF005F70D7?EditDocument&vw=MODD">03/28/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6713E47ED8FAA19B852583CF005F70D7/$FILE/mo-carter, gr.pdf">ARMY 20160770 - United States v. Private First Class GERALD R. CARTER, JR.</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/22/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4638A0B48108707D852583C900592DB0?EditDocument&vw=MODD">03/22/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4638A0B48108707D852583C900592DB0/$FILE/mo-marcum, ns.pdf">ARMY 20150500 - United States v. Specialist NICHOLAS S. MARCUM</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/21/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6EE7DDE1B3E89CCA852583C900591A86?EditDocument&vw=MODD">03/21/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6EE7DDE1B3E89CCA852583C900591A86/$FILE/mo-guy, wc.pdf">ARMY 20180292 - United States v. Specialist WILLIAM C. GUY</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/20/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/51F9F771E8D60B96852583C800448911?EditDocument&vw=MODD">03/20/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/51F9F771E8D60B96852583C800448911/$FILE/mo-berger, cs.pdf">ARMY 20170232 - United States v. Captain CHRISTOPHER S. BERGER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/08/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D34FBA1EA3896789852583BB0062631C?EditDocument&vw=MODD">03/08/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D34FBA1EA3896789852583BB0062631C/$FILE/mo-white, jd.pdf">ARMY 20170147 - United States v. Specialist JOSHUA D. WHITE</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/05/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/518B5C526A602A6B852583B60056AFA1?EditDocument&vw=MODD">03/05/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/518B5C526A602A6B852583B60056AFA1/$FILE/mo-barrett, rf.pdf">ARMY 20170354 - United States v. Captain RYAN F. BARRETT</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/05/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/2B6210A5433CA01E852583B600569B34?EditDocument&vw=MODD">03/05/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/2B6210A5433CA01E852583B600569B34/$FILE/mo-steele, ad (cc).pdf">ARMY 20170303 - United States v. Master Sergeant ANDREW D. STEELE</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/26/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/9E880FDC564B2BFB852583AF006C424C?EditDocument&vw=MODD">02/26/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/9E880FDC564B2BFB852583AF006C424C/$FILE/mo-czaiczynski, dc.pdf">ARMY 20170309 - United States v. Private E1 DALTON C. CZAICZYNSKI</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/26/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6CAAED93A713A536852583AF006C8BFE?EditDocument&vw=MODD">02/26/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6CAAED93A713A536852583AF006C8BFE/$FILE/mo-hernandezaviles, h.pdf">ARMY 20170131 - United States v. First Lieutenant HECTOR HERNANDEZAVILES</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/26/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/645DF5BA08C703CE852583AF006C5753?EditDocument&vw=MODD">02/26/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/645DF5BA08C703CE852583AF006C5753/$FILE/mo-pacheco, cg.pdf">ARMY 20170177 - United States v. Sergeant First Class CHRISTOPHER G. PACHECO</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/14/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C28A6799D1434B54852583A600603A2E?EditDocument&vw=MODD">02/14/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C28A6799D1434B54852583A600603A2E/$FILE/mo-brunetta, fl.pdf">ARMY 20160697 - United States v. Specialist FRANCIS L. BRUNETTA</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/13/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/27C4C0F18F77E8E9852583A600602AF5?EditDocument&vw=MODD">02/13/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/27C4C0F18F77E8E9852583A600602AF5/$FILE/mo-bowhall, aw.pdf">ARMY 20170357 - United States v. Specialist ANDREW W. BOWHALL</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/08/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F01B14C92D480F1F8525839E00760834?EditDocument&vw=MODD">02/08/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F01B14C92D480F1F8525839E00760834/$FILE/mo-burris, ej.pdf">ARMY 20150047 - United States v. Major ERIK J. BURRIS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/05/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/77DEFAED3CAAB1F58525839E0075F86A?EditDocument&vw=MODD">02/05/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/77DEFAED3CAAB1F58525839E0075F86A/$FILE/mo-furgerson, sj.pdf">ARMY 20170239 - United States v. Sergeant STEVEN J. FURGERSON</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/31/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D50B04196BB9AD8985258398004F1B14?EditDocument&vw=MODD">01/31/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D50B04196BB9AD8985258398004F1B14/$FILE/mo-tillman, mk.pdf">ARMY 20160449 - United States v. Specialist MIKEL K.W. TILLMAN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/31/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/ACCC0913C50FAD7C85258398004F43A0?EditDocument&vw=MODD">01/31/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/ACCC0913C50FAD7C85258398004F43A0/$FILE/mo-hernandez, t(cc).pdf">ARMY 20160558 - United States v. Sergeant TRAVIS HERNANDEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/31/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/165C4C30AD8362E285258398004F2E9B?EditDocument&vw=MODD">01/31/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/165C4C30AD8362E285258398004F2E9B/$FILE/mo-rodriguez, jt.pdf">ARMY 20160787 - United States v. Specialist JORDAN T. RODRIGUEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/25/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/DF8E51BC6E0E0E9685258390004E089F?EditDocument&vw=MODD">01/25/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/DF8E51BC6E0E0E9685258390004E089F/$FILE/mo-lovett, ll.pdf">ARMY 20170674 - United States v. Specialist LONNIE L. LOVETT</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/25/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7EFD173EA7B0D02985258390004DF69B?EditDocument&vw=MODD">01/25/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7EFD173EA7B0D02985258390004DF69B/$FILE/mo-deason, bl.pdf">ARMY 20150674 - United States v. Specialist BRANDON L. DEASON</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/23/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/376DDEEB4BD1F3B68525838C00783C8A?EditDocument&vw=MODD">01/23/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/376DDEEB4BD1F3B68525838C00783C8A/$FILE/mo-rodriguezcortes, hl.pdf">ARMY 20170521 - United States v. Specialist HECTOR L. RODRIGUEZCORTES</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/17/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/BF008986CC12A1418525838A00766401?EditDocument&vw=MODD">01/17/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/BF008986CC12A1418525838A00766401/$FILE/mo-hilliard, ra.pdf">ARMY 20170377 - United States v. Sergeant First Class RONDELL A. HILLIARD</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/10/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C6605819D55B8F0485258383005C0737?EditDocument&vw=MODD">01/10/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C6605819D55B8F0485258383005C0737/$FILE/mo-myer, aj.pdf">ARMY 20160490 - United States v. Captain ADAM J. MYER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/07/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A94627F76A8C0D2F8525837D004805ED?EditDocument&vw=MODD">01/07/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A94627F76A8C0D2F8525837D004805ED/$FILE/mo-beer, kw.pdf">ARMY 20160659 - United States v. Captain KEVIN W. BEER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">01/07/2019</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/666EC06596768AB08525837D0047A027?EditDocument&vw=MODD">01/07/2019</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/666EC06596768AB08525837D0047A027/$FILE/mo-reyes, ma.pdf">ARMY 20170198 - United States v. Staff Sergeant MATTHEW A. REYES</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">12/28/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/AFDCA1097E0BCE06852583760054BC23?EditDocument&vw=MODD">12/28/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/AFDCA1097E0BCE06852583760054BC23/$FILE/mo-jessie, ls (cc).pdf">ARMY 20160187 - United States v. Chief Warrant Officer Two LAMONT S. JESSIE</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">12/27/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B527FBA13EBF087185258374004FF2DA?EditDocument&vw=MODD">12/27/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B527FBA13EBF087185258374004FF2DA/$FILE/mo-lara, fc.pdf">ARMY 20170025 - United States v. FRANCISCO C. LARA</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">12/21/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A226C580FB8A15B385258374004FBEE4?EditDocument&vw=MODD">12/21/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A226C580FB8A15B385258374004FBEE4/$FILE/mo-dela pena, dm.pdf">ARMY 20170534 - United States v. Private First Class DESTRO M. DELA PENA</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">12/07/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A82E43648E44A7C58525835F005EE822?EditDocument&vw=MODD">12/07/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A82E43648E44A7C58525835F005EE822/$FILE/mo-burris, ej.pdf">ARMY 20150047 - United States v. Major ERIK J. BURRIS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">12/04/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B58CBF7D4F6521008525835F005EF821?EditDocument&vw=MODD">12/04/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B58CBF7D4F6521008525835F005EF821/$FILE/mo-collins, wa.pdf">ARMY 20170032 - United States v. Private E1 WILLIAM A. COLLINS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">11/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F8BD0E37FDFD935485258358006A9E52?EditDocument&vw=MODD">11/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F8BD0E37FDFD935485258358006A9E52/$FILE/mo-camacho, rm (cc).pdf">ARMY 20140495 - United States v. Captain RICHARD M. CAMACHO</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">11/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/741D6425B5EC9EE5852583580059B0DF?EditDocument&vw=MODD">11/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/741D6425B5EC9EE5852583580059B0DF/$FILE/mo-turner, mr.pdf">ARMY 20160131 - United States v. Specialist MALCOLM R. TURNER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">11/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B86F9B08F903E0AD8525835400465EB0?EditDocument&vw=MODD">11/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B86F9B08F903E0AD8525835400465EB0/$FILE/mo-moynihan, wp.pdf">ARMY 20130855 - United States v. Specialist WILLIAM P. MOYNIHAN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">11/16/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/29A6087C0E57A5C78525834C0067577F?EditDocument&vw=MODD">11/16/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/29A6087C0E57A5C78525834C0067577F/$FILE/mo-fernandez, vj.pdf">ARMY 20160688 - United States v. Specialist VICTOR J. FERNANDEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/80A39A9B815A95AB8525833800491B69?EditDocument&vw=MODD">10/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/80A39A9B815A95AB8525833800491B69/$FILE/mo-scott, ja.pdf">ARMY 20170242 - United States v. Major JASON A. SCOTT</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/EE73129C8B33D0D2852583360054F640?EditDocument&vw=MODD">10/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/EE73129C8B33D0D2852583360054F640/$FILE/mo-long, jt.pdf">ARMY 20150160 - United States v. Master Sergeant JOHN T. LONG</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/DB2B2937B563EF698525833600549D76?EditDocument&vw=MODD">10/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/DB2B2937B563EF698525833600549D76/$FILE/mo-muscat, lp.pdf">ARMY 20160534 - United States v. Staff Sergeant LAWRENCE P. MUSCAT</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/2B99E6076A6E25058525833600581820?EditDocument&vw=MODD">10/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/2B99E6076A6E25058525833600581820/$FILE/mo-beer, kw.pdf">ARMY 20160659 - United States v. Captain KEVIN W. BEER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/23/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C9BDC9D6B425630E8525833600558292?EditDocument&vw=MODD">10/23/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C9BDC9D6B425630E8525833600558292/$FILE/mo-avila, di.pdf">ARMY 20160200 - United States v. Private E2 DANIEL I. AVILA</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/22/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/36308417012526538525833000472726?EditDocument&vw=MODD">10/22/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/36308417012526538525833000472726/$FILE/mo-walker, cl.pdf">ARMY 20160239 - United States v. Specialist CHASTIN L. WALKER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/16/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/5287B4715B11F25E8525832E004B8136?EditDocument&vw=MODD">10/16/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/5287B4715B11F25E8525832E004B8136/$FILE/mo-taylor, tk (cc).pdf">ARMY 20160744 - United States v. Specialist TERENCE K. TAYLOR, JR.</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/12/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/15B877C162DD4B7D852583280050056E?EditDocument&vw=MODD">10/12/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/15B877C162DD4B7D852583280050056E/$FILE/mo-macario, mb (cc).pdf">ARMY 20160760 - United States v. Private E2 VINCENT MATTHEW B. MACARIO</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/05/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C660076F08F23BA18525832100490718?EditDocument&vw=MODD">10/05/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C660076F08F23BA18525832100490718/$FILE/mo-wall, cn (cc).pdf">ARMY 20160235 - United States v. Specialist COREY N. WALL</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">10/02/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/5D346F8FC4E9714C8525831B005132B8?EditDocument&vw=MODD">10/02/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/5D346F8FC4E9714C8525831B005132B8/$FILE/mo-atkinson, rl.pdf">ARMY 20160634 - United States v. Sergeant ROBERT L. ATKINSON, JR.</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/28/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/E6858F2755CF162E8525831A0043D0D4?EditDocument&vw=MODD">09/28/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/E6858F2755CF162E8525831A0043D0D4/$FILE/mo-ramirez, rj.pdf">ARMY 20160599 - United States v. Staff Sergeant ROGER J. RAMIREZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/28/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7DA717D79B81D95F8525831A0043E8C2?EditDocument&vw=MODD">09/28/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7DA717D79B81D95F8525831A0043E8C2/$FILE/mo-smith, bj.pdf">ARMY 20160049 - United States v. Sergeant First Class BILLY J. SMITH JR.</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/DF25D164EDBC1DC885258315005C0B02?EditDocument&vw=MODD">09/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/DF25D164EDBC1DC885258315005C0B02/$FILE/mo-keller, ad.pdf">ARMY 20150619 - United States v. Sergeant First Class AARON D. KELLER</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/25/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/158360D914BE181685258315005CC27A?EditDocument&vw=MODD">09/25/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/158360D914BE181685258315005CC27A/$FILE/mo-mchugh, dr.pdf">ARMY 20160647 - United States v. Sergeant DAVID R. MCHUGH</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/19/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/EC300B93D852B1288525830D005C33EC?EditDocument&vw=MODD">09/19/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/EC300B93D852B1288525830D005C33EC/$FILE/mo-pafford, ca.pdf">ARMY 20170057 - United States v. Sergeant CHRISTOPHER A. PAFFORD</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/17/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B587D0FDACAEEED18525830D00442569?EditDocument&vw=MODD">09/17/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B587D0FDACAEEED18525830D00442569/$FILE/mo-navarette, jn.pdf">ARMY 20160786 - United States v. Specialist JEREMY N. NAVARETTE</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">09/14/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/46D483F5F31755E18525830D0044367C?EditDocument&vw=MODD">09/14/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/46D483F5F31755E18525830D0044367C/$FILE/mo-norris, jk (cc).pdf">ARMY 20160262 - United States v. Captain JACK K. NORRIS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6ECF438E85A967EB852582FA004DA16A?EditDocument&vw=MODD">08/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6ECF438E85A967EB852582FA004DA16A/$FILE/mo-velez-pagan, oa.pdf">ARMY 20160209 - United States v. Master Sergeant OMAR A. VELEZ-PAGAN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/24/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7B9A6BB530858013852582F600464034?EditDocument&vw=MODD">08/24/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7B9A6BB530858013852582F600464034/$FILE/mo-straker, l.pdf">ARMY 20160476 - United States v. Sergeant LEROY STRAKER, JR.</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/24/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/71D829382984465B852582F600462EB1?EditDocument&vw=MODD">08/24/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/71D829382984465B852582F600462EB1/$FILE/mo-gonzalez, ab.pdf">ARMY 20170118 - United States v. Private First Class ABELARDO GONZALEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/22/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/54D32BEE97E4149A852582F600465428?EditDocument&vw=MODD">08/22/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/54D32BEE97E4149A852582F600465428/$FILE/mo-simpkins, bb.pdf">ARMY 20160263 - United States v. Captain BRADY B. SIMPKINS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/16/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A4C3A6E2B6B491A7852582EF0048D278?EditDocument&vw=MODD">08/16/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A4C3A6E2B6B491A7852582EF0048D278/$FILE/mo-davis, ne.pdf">ARMY 20160069 - United States v. Private E2 NICHOLAS E. DAVIS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/14/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7F530E0AF0769B20852582EA0046CF64?EditDocument&vw=MODD">08/14/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/7F530E0AF0769B20852582EA0046CF64/$FILE/mo-allen, ne.pdf">ARMY MISC 20180285 - United States v. Private First Class NATHANIEL E. ALLEN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/10/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/24AE3831FD97DC81852582E80049E6A6?EditDocument&vw=MODD">08/10/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/24AE3831FD97DC81852582E80049E6A6/$FILE/mo-hernandez, oa.pdf">ARMY 20160217 - United States v. Private E2 OMAR A. HERNANDEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/10/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/1A52F3996CDC5ABC852582E80049D1D5?EditDocument&vw=MODD">08/10/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/1A52F3996CDC5ABC852582E80049D1D5/$FILE/mo-quill, lr.pdf">ARMY 20160454 - United States v. Sergeant LOUIS R. QUILL</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">08/07/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D6A04A94CA1AA6B7852582E300493207?EditDocument&vw=MODD">08/07/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D6A04A94CA1AA6B7852582E300493207/$FILE/mo-meredith, ch.pdf">ARMY 20170178 - United States v. Specialist CHRISTOPHER H. MEREDITH</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/19/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4D571593DE40D5CE852582D4004AA250?EditDocument&vw=MODD">07/19/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4D571593DE40D5CE852582D4004AA250/$FILE/mo-tovarchavez, j.pdf">ARMY 20150250 - United States v. Specialist JUVENTINO TOVARCHAVEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/13/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/0290789F0F9E39AD852582CF004F0EE3?EditDocument&vw=MODD">07/13/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/0290789F0F9E39AD852582CF004F0EE3/$FILE/mo-black, de.pdf">ARMY 20170140 - United States v. Sergeant First Class DAVID E. BLACK</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/03/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/381B5086F3D2E189852582C20065F6CE?EditDocument&vw=MODD">07/03/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/381B5086F3D2E189852582C20065F6CE/$FILE/mo-gonzalez, a.pdf">ARMY 20160363 - United States v. Private E1 ADRIAN GONZALEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">07/02/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/1E63484BC5A87B85852582BF005001F1?EditDocument&vw=MODD">07/02/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/1E63484BC5A87B85852582BF005001F1/$FILE/mo-laughrey, jc.pdf">ARMY 20160146 - United States v. Colonel JAMES C. LAUGHREY</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/29/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C2C308E109E24A57852582BF004F39AF?EditDocument&vw=MODD">06/29/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/C2C308E109E24A57852582BF004F39AF/$FILE/mo-jesko, ad.pdf">ARMY 20160439 - United States v. Sergeant First Class AARON D. JESKO</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/28/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6EC2C8161F880052852582BF004EAC35?EditDocument&vw=MODD">06/28/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/6EC2C8161F880052852582BF004EAC35/$FILE/mo-gibbs, cr.pdf">ARMY 20110998 - United States v. Staff Sergeant CALVIN R. GIBBS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/22/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B66EA97EF386035B852582B8005A57E9?EditDocument&vw=MODD">06/22/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B66EA97EF386035B852582B8005A57E9/$FILE/mo-wilson, vd.pdf">ARMY 20160342 - United States v. Private E1 VICTOR D. WILSON</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/22/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/811385789E90EFD8852582B8005BCD11?EditDocument&vw=MODD">06/22/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/811385789E90EFD8852582B8005BCD11/$FILE/mo-morgan, se.pdf">ARMY 20160573 - United States v. Staff Sergeant SCOTT E. MORGAN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/22/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/72D5B19440F0AF47852582B80059EE4A?EditDocument&vw=MODD">06/22/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/72D5B19440F0AF47852582B80059EE4A/$FILE/mo-lopez, mi.pdf">ARMY 20140973 - United States v. Sergeant MARIO I. LOPEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">06/07/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/8E83A4F7ED7A8FCE852582A6006446B0?EditDocument&vw=MODD">06/07/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/8E83A4F7ED7A8FCE852582A6006446B0/$FILE/mo-roberts, cb.pdf">ARMY 20150023 - United States v. Chief Warrant Officer Three CASEY B. ROBERTS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">05/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D68E71F02C83EF758525829E004E9A62?EditDocument&vw=MODD">05/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D68E71F02C83EF758525829E004E9A62/$FILE/mo-frost, nl.pdf">ARMY 20160171 - United States v. Specialist NICHOLAS L. FROST</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">05/25/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/3DF17A965F90DD458525829C0046773C?EditDocument&vw=MODD">05/25/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/3DF17A965F90DD458525829C0046773C/$FILE/mo-hopkins, je.pdf">ARMY 20140913 - United States v. Sergeant First Class JAMES E. HOPKINS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">05/24/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B7379ABEE654ED6585258298003F052A?EditDocument&vw=MODD">05/24/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B7379ABEE654ED6585258298003F052A/$FILE/mo-hurley, c.pdf">ARMY 20160122 - United States v. Private First Class CORNELL HURLEY JR.</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">05/17/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F8136954085D3A4A852582900053F934?EditDocument&vw=MODD">05/17/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/F8136954085D3A4A852582900053F934/$FILE/mo-McDonald, c.pdf">ARMY 20160339 - United States v. Private First Class CEDRIC L. MCDONALD</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/34BEC3CFD650FEAD852582810061DA63?EditDocument&vw=MODD">04/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/34BEC3CFD650FEAD852582810061DA63/$FILE/mo-henning, a.pdf">ARMY 20160572 - United States v. Major ANTIWAN HENNING</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/27/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/E065C9E6C4C705358525827F004FC65B?EditDocument&vw=MODD">04/27/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/E065C9E6C4C705358525827F004FC65B/$FILE/mo-peterkin, ll.pdf">ARMY 20160278 - United States v. Staff Sergeant LONNIE L. PETERKIN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4F316E5D6FA155708525827C005AB0F8?EditDocument&vw=MODD">04/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4F316E5D6FA155708525827C005AB0F8/$FILE/mo-perrigin, jr.pdf">ARMY 20160183 - United States v. Staff Sergeant JIMMY R. PERRIGIN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/26/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/24B28C11D63D6A0C8525827C005AA3C5?EditDocument&vw=MODD">04/26/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/24B28C11D63D6A0C8525827C005AA3C5/$FILE/mo-paulino, mj.pdf">ARMY 20160388 - United States v. Sergeant MICHAEL J. PAULINO</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/18/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4EB8F0B5C33027C18525827300690B47?EditDocument&vw=MODD">04/18/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/4EB8F0B5C33027C18525827300690B47/$FILE/mo-morris, cs.pdf">ARMY MISC 20180088 - United States v. Sergeant COLBY S. MORRIS</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/17/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/3C883D16549740A385258273006936AF?EditDocument&vw=MODD">04/17/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/3C883D16549740A385258273006936AF/$FILE/mo-johnson, mn.pdf">ARMY 20160245 - United States v. Staff Sergeant MAURICE N. JOHNSON</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/12/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B711B7A19DEEA3918525826E00633E22?EditDocument&vw=MODD">04/12/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B711B7A19DEEA3918525826E00633E22/$FILE/mo-kohlbek, ja.pdf">ARMY 20160427 - United States v. Specialist JASON A. KOHLBEK</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">04/09/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/FD8CA6770733902D8525826C006B93D1?EditDocument&vw=MODD">04/09/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/FD8CA6770733902D8525826C006B93D1/$FILE/mo-stout, nr.pdf">ARMY 20120592 - United States v. Staff Sergeant NORMAN R. STOUT</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/30/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/0E8DB873AAD6AFF585258263004857AB?EditDocument&vw=MODD">03/30/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/0E8DB873AAD6AFF585258263004857AB/$FILE/mo-sinclair, ja.pdf">ARMY 20160267 - United States v. Sergeant First Class JEFFERY A. SINCLAIR</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/27/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/AAACE9E6CA0684EC8525825F0044C8AE?EditDocument&vw=MODD">03/27/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/AAACE9E6CA0684EC8525825F0044C8AE/$FILE/mo-nicola, h.pdf">ARMY 20150781 - United States v. Staff Sergeant HECTOR NICOLA</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/27/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A06D6D5DDFFC50F88525825E005F1BB4?EditDocument&vw=MODD">03/27/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/A06D6D5DDFFC50F88525825E005F1BB4/$FILE/mo-mcginn, sc.pdf">ARMY 20150726 - United States v. Specialist STEPHEN C. MCGINN</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">03/01/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B5EDFA5E2574886885258247004B6F72?EditDocument&vw=MODD">03/01/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/B5EDFA5E2574886885258247004B6F72/$FILE/mo-gonzalez-gomez, ca.pdf">ARMY 20121100 - United States v. Private E1 CARLOS A. GONZALEZ-GOMEZ</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/28/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/2E63026A8217118D85258247004B21A9?EditDocument&vw=MODD">02/28/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/2E63026A8217118D85258247004B21A9/$FILE/mo-oghreikanone, ut.pdf">ARMY 20150447 - United States v. Captain UVO T. OGHREIKANONE</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/28/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/01FCDFE0661452FF852582480059C4A1?EditDocument&vw=MODD">02/28/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/01FCDFE0661452FF852582480059C4A1/$FILE/mo-eugene, jg (cc).pdf">ARMY 20160438 - United States v. Private First Class JEFFREY G. EUGENE</a></td></tr>
-
-<tr valign="top" class="domino-viewentry"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/27/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D44E1E37C0BA2F8185258247004B0F03?EditDocument&vw=MODD">02/27/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/D44E1E37C0BA2F8185258247004B0F03/$FILE/mo-wood, cw.pdf">ARMY 20160364 - United States v. Specialist CHARLES W. WOOD</a></td></tr>
-
-<tr valign="top" class="domino-viewentry" bgcolor="#EFEFEF"><td nowrap="nowrap"><span class="DtOpn1" style="width:100px;">02/27/2018</span></td><td nowrap="nowrap"><a class="DtOpn2" title="View Opinion Set-Up" style="width:100px;" target=_self href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/19714E91C2985A6685258247004AD7F5?EditDocument&vw=MODD">02/27/2018</a></td><td nowrap="nowrap"><a class= "td_frmOpinion"; style="width:750px;" title="Click to view the Opinion.  Right Click on the mouse and click 'Open in a new tab'  to view the Opinion in a second tab." target=_new href="/Apps/ACCAOpinions/ACCAOpinions.nsf/MODD/19714E91C2985A6685258247004AD7F5/$FILE/mo-hill, bc.pdf">ARMY 20130331 - United States v. Private E1 BENJAMIN C. HILL</a></td></tr>
-</table>
-</div></td></tr>
-</table>
-</div><br>
-<br>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr valign="top"><td width="100%" valign="middle"><div align="center"><img src="/Apps/ACCAOpinions/ACCAOpinions.nsf/line.png?OpenImageResource" width="901" height="13" /></div></td></tr>
-</table>
-<div id="ccFooter"></div>
-<script>
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("ccFooter").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","/sites/help.nsf/get.xsp/footer?lkup=footer&relLkup=ACCAOpinionsReleaseNotes&target=_blank&xpage=Helpviewer.xsp&ext%3D",true);
-xmlhttp.send();
-</script>
-<p></p>
-</form>
-</body>
-</html>
+</body></html>
