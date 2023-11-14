@@ -16,7 +16,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.guamsupremecourt.com/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
+        self.url = "https://guamcourts.org/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
         self._year = date.today().year
         self.parameters = {"Year": str(self._year)}
         self.method = "POST"
@@ -58,6 +58,7 @@ class Site(OpinionSiteLinear):
                     "url": table.xpath(".//a/@href")[0],
                 }
             )
+            print(self.cases[-1])
 
     def _download_backwards(self, year):
         self._year = year

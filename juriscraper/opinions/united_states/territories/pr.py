@@ -23,19 +23,20 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         for row in self.html.xpath(".//table/tbody/tr/td/a/@href/../../.."):
-            cells = row.xpath(".//td")
-            citation = cells[0].text_content()
-            url = cells[0].xpath(".//a/@href")[0]
-            date_obj = parse(cells[4].text_content(), languages=["es"])
+            cells = row.xpath("following-sibling::tr[position() <= 5]")
+            citation = row.text_content()
+            url = row.xpath(".//a/@href")[0]
+            date_str = cells[3].text_content().strip().split("\n")[1]
+            date_obj = parse(date_str, languages=["es"])
             if not date_obj:
                 # This is to handle the junk on the website in one row
                 continue
             self.cases.append(
                 {
-                    "name": cells[3].text_content(),
+                    "name": cells[1].text_content().strip().split("\n")[1],
                     "url": url,
-                    "citation": citation,
-                    "docket": cells[2].text_content(),
+                    "citation": citation.strip(),
+                    "docket": cells[0].text_content().strip().split("\n")[1],
                     "date": str(date_obj.date()),
                 }
             )
