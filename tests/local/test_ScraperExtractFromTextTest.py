@@ -97,7 +97,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "#30018-a-MES"}},
             ),
         ],
-        "juriscraper.opinions.united_states.territories.nmi": [
+        "juriscraper.opinions.united_states.territories.nmariana": [
             (
                 """#E-FILED\nCNMI SUPREME COURT\nE-filed: Apr 18 2022 06:53AM\nClerk Review: Apr 18 2022 06:54AM Filing ID: 67483376\nCase No.: 2021-SCC-0017-CIV\nJudy Aldan""",
                 {"Docket": {"docket_number": "2021-SCC-0017-CIV"}},
