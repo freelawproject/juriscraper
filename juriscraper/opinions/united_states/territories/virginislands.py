@@ -1,5 +1,5 @@
 """Scraper for Supreme Court of Virgin Islands
-CourtID: vi
+CourtID: virginislands
 Court Short Name: Virgin Islands
 Author: William Edward Palin
 History:
