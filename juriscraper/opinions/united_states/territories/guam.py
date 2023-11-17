@@ -58,7 +58,6 @@ class Site(OpinionSiteLinear):
                     "url": table.xpath(".//a/@href")[0],
                 }
             )
-            print(self.cases[-1])
 
     def _download_backwards(self, year):
         self._year = year
