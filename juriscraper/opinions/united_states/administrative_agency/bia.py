@@ -60,7 +60,7 @@ class Site(OpinionSiteLinear):
                     "citation": citation,
                     "url": url[0],
                     "docket": docket,
-                    "date": year.split()[1],
+                    "date": f"{year.split()[1]}-07-01",
                     "date_filed_is_approximate": True,
                 }
             )
