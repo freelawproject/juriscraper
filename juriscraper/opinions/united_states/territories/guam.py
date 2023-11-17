@@ -16,7 +16,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.guamsupremecourt.com/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
+        self.url = "https://guamcourts.org/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
         self._year = date.today().year
         self.parameters = {"Year": str(self._year)}
         self.method = "POST"

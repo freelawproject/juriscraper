@@ -8,14 +8,12 @@ History:
     2016-03-17: Website and phone are dead. Scraper disabled in __init__.py.
 """
 
-import re
 from datetime import datetime
 
-from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -23,82 +21,17 @@ class Site(OpinionSite):
             "http://www.asbca.mil/Decisions/decisions%d.html"
             % datetime.today().year
         )
-        self.columns = None
-        self.back_scrape_iterable = list(range(2013, 2000 - 1, -1))
+        self.status = "Published"
 
-    # Fix broken month names and funky whitespace usage.
-    def _clean_text(self, text):
-        text = super()._clean_text(text)
-        text = text.replace("&#160;", " ").replace("&nbsp;", " ")
-        text = text.replace("Januray", "January")
-        text = text.replace("Februrary", "February")
-        text = re.sub(re.compile(r"[\s]+", flags=re.MULTILINE), " ", text)
-        return text
-
-    def parse_column_names(self):
-        # Lookup column names and save them for later
-        self.columns = dict()
-        path = "//table/tr[1]/td"
-        i = 1
-        for column in self.html.xpath(path):
-            colname = clean_if_py3("".join(column.itertext())).strip()
-            self.columns[colname] = i
-            i += 1
-        return self.columns
-
-    def _get_case_dates(self):
-        self.parse_column_names()
-        path = "//table/tr[td/a]/td[%d]/text()" % (
-            self.columns["Decision Date"]
-        )
-        return [
-            self._get_date_object_from_string(date_string)
-            for date_string in self.html.xpath(path)
-        ]
-
-    def _get_date_object_from_string(self, date_string):
-        date_string = (
-            clean_if_py3(date_string)
-            .strip()
-            .replace(" ,", ", ")
-            .replace("2104", "2014")
-        )
-        return convert_date_string(date_string)
-
-    def _get_case_names(self):
-        path = "//table/tr/td/a[1]"
-        case_names = [
-            clean_if_py3("".join(txt.itertext()).strip())
-            for txt in self.html.xpath(path)
-        ]
-        return case_names
-
-    def _get_download_urls(self):
-        path = "//table/tr/td/a[1]/@href"
-        return [clean_if_py3(href).strip() for href in self.html.xpath(path)]
-
-    def _get_judges(self):
-        path = "//table/tr[td/a]/td[%d]/text()" % (self.columns["Judge"],)
-        return [clean_if_py3(txt).strip() for txt in self.html.xpath(path)]
-
-    def _get_docket_numbers(self):
-        if "ASBCA Number" not in self.columns:
-            return None
-        path = "//table/tr[td/a]/td[%d]/text()" % self.columns["ASBCA Number"]
-        return [
-            f"ASBCA No. {clean_if_py3(txt).strip()}"
-            for txt in self.html.xpath(path)
-        ]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_dates)
-
-    def _download_backwards(self, year):
-        self.url = "http://www.asbca.mil/Decisions/decisions%d.html" % year
-        if year == 2010:
-            self.url = "http://www.asbca.mil/Decisions/decisions.html"
-        self.html = self._download()
-
-    def _get_case_name_shorts(self):
-        # We don't (yet) support short case names for administrative bodies.
-        return None
+    def _process_html(self):
+        for row in self.html.xpath(".//tr")[1:]:
+            col1, col2, col3, col4 = row.xpath(".//td")
+            date = col1.text_content().strip()
+            if not col2.text_content().strip():
+                continue
+            name = col3.text_content().strip()
+            docket = col2.text_content().strip()
+            url = col3.xpath(".//a/@href")[0]
+            self.cases.append(
+                {"date": date, "name": name, "url": url, "docket": docket}
+            )

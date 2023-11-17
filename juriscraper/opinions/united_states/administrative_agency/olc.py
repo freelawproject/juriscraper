@@ -23,15 +23,13 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     def _process_html(self):
-        for row in self.html.xpath(
-            ".//tr[contains(@class , 'even')] | .//tr[contains(@class , 'odd')]"
-        ):
-            date = get_row_column_text(row, 1)
-            if "Date of Issuance" in date:
-                date = date.split("\n")[-1].strip()
-            name = get_row_column_text(row, 2)
-            url = get_row_column_links(row, 2)
-            summary = get_row_column_text(row, 3)
+        for row in self.html.xpath(".//article"):
+            name = row.xpath(".//h2")[0].text_content().strip()
+            url = row.xpath(".//a/@href")[0]
+            date = row.xpath(".//time")[0].text_content()
+            if not name:
+                continue
+            summary = row.xpath(".//p")[0].text_content()
             self.cases.append(
                 {
                     "date": date,

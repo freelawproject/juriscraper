@@ -3,5 +3,5 @@ __all__ = [
     "nmi",
     "pr",
     "prapp",
-    "vi",
+    "virginislands",
 ]
