@@ -54,7 +54,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def _get_download_urls(self) -> list[str]:
+    def _get_download_urls(self):
         """Get download urls
 
         :return: List URLs
