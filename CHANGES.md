@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.59 - 2023-11-18**
+
+Features:
+
+
+Changes:
+
+- Fix Most remaining downed scrapers
+- Fix mismatched court_ids
+
+## Past
+
 **2.5.58 - 2023-11-13**
 
 Features:
@@ -24,8 +36,6 @@ Features:
 Changes:
 
 - Fix 40 or so scrapers -- all state scrapers
-
-## Past
 
 **2.5.57 - 2023-11-09**
 
