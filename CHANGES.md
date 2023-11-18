@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.60 - 2023-11-18**
+
+Features:
+
+- Add Oregon Court of Appeals
+
+Changes:
+
+- Fix Oregon Supreme Court
+
+## Past
+
 **2.5.59 - 2023-11-18**
 
 Features:
@@ -25,8 +37,6 @@ Changes:
 
 - Fix Most remaining downed scrapers
 - Fix mismatched court_ids
-
-## Past
 
 **2.5.58 - 2023-11-13**
 
