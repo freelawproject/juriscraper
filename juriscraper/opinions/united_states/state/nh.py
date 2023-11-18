@@ -24,7 +24,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.courts.nh.gov/content/api/documents?sort=field_date_posted%7Cdesc&page=1&size=60&purpose=1331"
+        self.url = "https://www.courts.nh.gov/content/api/documents?iterate_nodes=true&q=%40field_document_subcategory%7C%3D%7C2256%40field_document_purpose%7C%3D%7C1331&sort=field_date_posted%7Cdesc%7CALLOW_NULLS&filter_mode=exclusive&page=1&size=25"
         self.status = "Published"
 
     def _download(self):
