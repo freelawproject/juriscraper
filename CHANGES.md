@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.63 - 2023-11-18**
+
+Features:
+
+
+Changes:
+
+- Fix Scotus Slip Opinions
+
+
+## Past
+
 **2.5.62 - 2023-11-18**
 
 Features:
@@ -25,8 +37,6 @@ Changes:
 
 - Fix NH Supreme Court
 
-
-## Past
 
 **2.5.60 - 2023-11-18**
 
