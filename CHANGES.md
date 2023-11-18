@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.61 - 2023-11-18**
+
+Features:
+
+
+Changes:
+
+- Fix NH Supreme Court
+
+
+## Past
+
 **2.5.60 - 2023-11-18**
 
 Features:
@@ -26,7 +38,6 @@ Changes:
 
 - Fix Oregon Supreme Court
 
-## Past
 
 **2.5.59 - 2023-11-18**
 
