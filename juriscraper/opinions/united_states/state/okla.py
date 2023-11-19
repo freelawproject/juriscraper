@@ -48,8 +48,9 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def cleanup_content(content):
+        print(content)
         tree = html.fromstring(content)
         core_element = tree.xpath("//*[@id='oscn-content']")[0]
         return html.tostring(
             core_element, pretty_print=True, encoding="unicode"
-        )
+        ).encode("utf-8")
