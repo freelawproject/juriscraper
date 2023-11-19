@@ -22,14 +22,27 @@ from juriscraper.opinions.united_states.state import okla
 class Site(okla.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        d = date.today()
-        self.url = "http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1".format(
-            year=d.year
-        )
+        year = date.today().year
+        self.url = f"http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1"
         self.court_id = self.__module__
+        self.status = "Unpublished"
 
-    def _get_precedential_statuses(self):
-        return ["Unpublished"] * len(self.case_names)
+    def _process_html(self):
+        for row in self.html.xpath("//div/p['@class=document']")[::-1]:
+            if "OK" not in row.text_content():
+                continue
+            if "EMAIL" in row.text_content():
+                continue
+            citation, date, name = row.text_content().split(",", 2)
+            self.cases.append(
+                {
+                    "date": date,
+                    "name": name,
+                    "docket": "",
+                    "url": row.xpath(".//a")[0].get("href"),
+                    "citation": citation,
+                }
+            )
 
     @staticmethod
     def cleanup_content(content):
@@ -39,4 +52,4 @@ class Site(okla.Site):
         )[0]
         return html.tostring(
             core_element, pretty_print=True, encoding="unicode"
-        )
+        ).encode("utf-8")
