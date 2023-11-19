@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.64 - 2023-11-19**
+
+Features:
+
+-
+
+Changes:
+
+- Fix alabama to remove selenium
+
+## Past
+
 **2.5.63 - 2023-11-18**
 
 Features:
@@ -24,9 +36,6 @@ Features:
 Changes:
 
 - Fix Scotus Slip Opinions
-
-
-## Past
 
 **2.5.62 - 2023-11-18**
 
