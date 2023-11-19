@@ -11,10 +11,10 @@ History:
 
 import json
 
-from juriscraper.OpinionSiteLinearWebDriven import OpinionSiteLinearWebDriven
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinearWebDriven):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
