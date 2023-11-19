@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.66 - 2023-11-19**
+
+Features:
+
+- Fix Oklahoma Scrapers
+
+Changes:
+
+-
+
+## Past
+
 **2.5.65 - 2023-11-19**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Remove selenium from Colorado scrapers
-
-## Past
 
 **2.5.64 - 2023-11-19**
 
