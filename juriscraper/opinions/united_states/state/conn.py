@@ -16,7 +16,6 @@ History:
 import re
 from datetime import date
 
-from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
