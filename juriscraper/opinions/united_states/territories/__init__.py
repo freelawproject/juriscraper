@@ -1,7 +1,7 @@
 __all__ = [
     "guam",
     "nmariana",
-    "pr",
+    "prsupreme",
     "prapp",
     "virginislands",
 ]
