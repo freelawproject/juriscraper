@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.67 - 2023-11-20**
+
+Features:
+
+- Fix Connecticut Court of Appeals
+
+Changes:
+
+-
+
+## Past
+
 **2.5.66 - 2023-11-19**
 
 Features:
@@ -25,9 +37,6 @@ Features:
 Changes:
 
 -
-
-## Past
-
 **2.5.65 - 2023-11-19**
 
 Features:
