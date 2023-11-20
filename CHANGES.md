@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.68 - 2023-11-20**
+
+Features:
+
+- Fix Okla AG content cleanup
+
+Changes:
+
+-
+
+## Past
+
 **2.5.67 - 2023-11-20**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 -
-
-## Past
 
 **2.5.66 - 2023-11-19**
 
