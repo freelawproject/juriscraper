@@ -26,7 +26,10 @@ class Site(OpinionSiteLinear):
         for item in self.html.xpath(path):
             docket = item.xpath("./text()")[0]
             url = item.xpath("./@href")[0]
-            name = item.xpath("./following::td[1]/*/text()")[0]
+            names = item.xpath("./following::td[1]/*/text()")
+            if not names:
+                continue
+            name = names[0]
             # Expected: "Opinion Filed: 10/13/2021"
             date_string = item.xpath("./following::td[2]/text()")[0].strip()
             date = clean_if_py3(date_string).rsplit(":", 1)[1].strip()
