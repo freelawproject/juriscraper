@@ -6,7 +6,7 @@ __all__ = [
     "ag",
     "armfor",
     "cavc",
-    "uscgcoca.py",
+    "uscgcoca",
     "cit",
     "nmcca",
     "tax",
