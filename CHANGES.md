@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.70 - 2023-11-21**
+
+Features:
+
+-
+
+Changes:
+
+- Fix LA Supreme
+
+## Past
+
 **2.5.69 - 2023-11-21**
 
 Features:
@@ -29,8 +41,6 @@ Changes:
 
 - Shrink VA to be faster
 - Fix Conn App Ct date handler
-
-## Past
 
 **2.5.68 - 2023-11-20**
 
