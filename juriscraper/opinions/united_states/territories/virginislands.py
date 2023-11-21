@@ -21,12 +21,12 @@ class Site(OpinionSiteLinear):
         )
         self.status = "Published"
         today = date.today()
-        if self.test_mode_enabled():
-            self.last_month = datetime(2022, 12, 25).date()
-        else:
-            self.last_month = today - timedelta(days=60)
+        self.previous_date = today - timedelta(days=60)
 
     def _process_html(self):
+        if self.test_mode_enabled():
+            self.previous_date = datetime(2023, 9, 21).date()
+
         for s in self.html.xpath(".//tr/td/.."):
             cells = s.xpath(".//td")
             if not cells[0].text_content():
@@ -38,7 +38,7 @@ class Site(OpinionSiteLinear):
             date_object = convert_date_string(date)
             docket = cells[2].text_content()
             citation = cells[4].text_content()
-            if date_object < self.last_month:
+            if date_object < self.previous_date:
                 continue
             u = s.xpath(".//td/a/@href")[0]
             url = urllib.parse.quote(u, safe="/:")
@@ -52,3 +52,4 @@ class Site(OpinionSiteLinear):
                     "url": url,
                 }
             )
+            print(self.cases)

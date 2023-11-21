@@ -28,7 +28,7 @@ class Site(OpinionSiteLinear):
         """
         for date_section in self.html.xpath("//ul"):
             b = date_section[0].xpath(".//preceding::b[1]")[0]
-            date = b.text_content().strip().split()[-1][:-1]
+            date = b.text_content().strip().split("of")[-1].strip()[:-1]
             for li in date_section.xpath(".//li"):
                 link = li.xpath(".//a")[0]
                 link_text = link.text_content()
