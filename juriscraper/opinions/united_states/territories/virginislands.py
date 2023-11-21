@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         today = date.today()
         if self.test_mode_enabled():
-            self.last_month = datetime(2022, 12, 25).date()
+            self.last_month = datetime(2023, 9, 20).date()
         else:
             self.last_month = today - timedelta(days=60)
 
