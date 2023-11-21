@@ -25,7 +25,30 @@ class ACMSAttachmentPage(BaseReport):
         :param text: A unicode object
         :return: None
         """
-        self._acms_json = json.loads(text)
+        self._acms_json = {}
+        try:
+            attachment_json = json.loads(text)
+            self.check_validity(attachment_json)
+            if self.is_valid:
+                self._acms_json = attachment_json
+        except json.JSONDecodeError:
+            self.is_valid = False
+
+    def check_validity(self, parsed_json: dict) -> None:
+        """Place sanity checks here to make sure that the returned json is
+        valid and not an error page or some other kind of problem.
+
+        Set self.is_valid flag to True or False
+        """
+        if not all(
+            [
+                x in parsed_json
+                for x in ["caseDetails", "docketEntry", "docketEntryDocuments"]
+            ]
+        ):
+            self.is_valid = False
+            return
+        self.is_valid = True
 
     @property
     def data(self) -> Dict:
@@ -44,6 +67,9 @@ class ACMSAttachmentPage(BaseReport):
                 - pacer_doc_id: The pacer doc id for the attachment (a str).
                 - acms_document_guid: The GUID of the document in ACMS.
         """
+        if not self.is_valid:
+            return {}
+
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]
         result = {
