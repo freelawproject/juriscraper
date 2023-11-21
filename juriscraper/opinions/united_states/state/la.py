@@ -58,7 +58,7 @@ class Site(OpinionSiteLinear):
                         "judge": self._get_judge_above_anchor(anchor),
                         "name": titlecase(parts[1]),
                         "summary": " ".join(summary_lines).replace(text, ""),
-                        "url": anchor.get("href"),
+                        "url": f"http://www.lasc.org{anchor.get('href')}",
                     }
                 )
 
