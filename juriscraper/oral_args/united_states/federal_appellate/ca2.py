@@ -33,6 +33,9 @@ class Site(OralArgumentSiteLinear):
         }
 
     def _download(self, request_dict={}):
+        if self.test_mode_enabled():
+            self.html = super()._download()
+            return self.html
         r = self.request["session"].post(self.url, params=self.parameters)
         return html.fromstring(r.content)
 
