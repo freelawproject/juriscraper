@@ -16,6 +16,22 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.69 - 2023-11-21**
+
+Features:
+
+- Fix VI Tests
+- Puerto Rico and Coast Guard court ids to match CL
+- Fix Arizona App Dist 2
+- Fix CA2 OA scraper
+
+Changes:
+
+- Shrink VA to be faster
+- Fix Conn App Ct date handler
+
+## Past
+
 **2.5.68 - 2023-11-20**
 
 Features:
@@ -25,8 +41,6 @@ Features:
 Changes:
 
 -
-
-## Past
 
 **2.5.67 - 2023-11-20**
 
