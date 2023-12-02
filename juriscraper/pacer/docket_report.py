@@ -1200,8 +1200,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         # Detect if the report was generated with "View multiple documents"
         # option enabled.
         view_multiple_documents = False
-        view_selected_btn = self.tree.xpath("//input[@value='View Selected']")
-        if view_selected_btn:
+        view_multi_docs = self.tree.xpath("//form[@name='view_multi_docs']")
+        if view_multi_docs:
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
