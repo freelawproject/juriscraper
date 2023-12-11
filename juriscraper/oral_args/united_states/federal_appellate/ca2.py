@@ -19,7 +19,7 @@ class Site(OralArgumentSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.ca2.uscourts.gov/decisions"
+        self.url = "https://ww3.ca2.uscourts.gov/decisions"
         self.method = "POST"
         self.base_xpath = '//tr[contains(.//a/@href, "mp3")]'
         self.parameters = {
