@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.71 - 2023-12-11**
+
+Features:
+
+-
+
+Changes:
+
+- Fix avoid populating case's date_filed with the entry date_filed from emails
+
+## Past
+
 **2.5.70 - 2023-11-21**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix LA Supreme
-
-## Past
 
 **2.5.69 - 2023-11-21**
 
