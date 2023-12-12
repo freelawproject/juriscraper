@@ -167,6 +167,8 @@ __all__ = [
     "va",
     "vactapp_u",
     "vactapp_p",
+    "visuper_p",
+    "visuper_u",
     "vt",
     "vt_criminal",
     "vtsuperct_civil",
