@@ -11,7 +11,6 @@ class Site(OpinionSiteLinear):
         self.url = (
             "https://superior.vicourts.org/court_opinions/published_opinions"
         )
-        self.request["verify"] = False
         self.status = "Published"
 
     def _process_html(self):
