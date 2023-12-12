@@ -13,7 +13,6 @@ class Site(OpinionSiteLinear):
         )
         self.request["verify"] = False
         self.status = "Published"
-        self.court = "Superior Court"
 
     def _process_html(self):
         for row in self.html.xpath(".//tbody//tr"):
@@ -28,7 +27,6 @@ class Site(OpinionSiteLinear):
             url = row.xpath(".//td/a")[0].get("href")
             self.cases.append(
                 {
-                    "status": self.status,
                     "date": date_filed,
                     "docket": docket_number,
                     "name": case_name,

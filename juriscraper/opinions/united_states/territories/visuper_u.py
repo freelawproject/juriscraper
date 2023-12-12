@@ -1,7 +1,7 @@
 # Scraper for Superior Court of the Virgin Islands (unpublished)
 # CourtID: visuper_u
 
-from juriscraper.opinions.united_states.state import visuper_p
+from juriscraper.opinions.united_states.territories import visuper_p
 
 
 class Site(visuper_p.Site):
@@ -12,4 +12,3 @@ class Site(visuper_p.Site):
             "https://superior.vicourts.org/court_opinions/unpublished_opinions"
         )
         self.status = "Unpublished"
-        self.court = "Superior Court"
