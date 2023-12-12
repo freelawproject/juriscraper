@@ -44,10 +44,11 @@ class Site(OralArgumentSiteLinear):
                 continue  # skip bad data
             docket = row.xpath(".//a/nobr/text()")[0]
             name, date = row.xpath(".//td/text()")
+            url = self._build_url(link)
             if docket == "GMT20230614-175136_Recording":
                 continue  # skip bad data
             self.cases.append(
-                {"docket": docket, "url": link, "name": name, "date": date}
+                {"docket": docket, "url": url, "name": name, "date": date}
             )
 
     def _download(self, request_dict={}):
@@ -58,6 +59,13 @@ class Site(OralArgumentSiteLinear):
             return super()._download()
         r = self.request["session"].post(self.url, params=self.parameters)
         return html.fromstring(r.content)
+
+    def _build_url(self, link):
+        if self.backscraper:
+            url = link
+        else:
+            url = f"{self.base_url}{link}"
+        return url
 
     def _download_backwards(self, d):
         self.backscraper = True
