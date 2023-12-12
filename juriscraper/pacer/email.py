@@ -383,7 +383,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             docket = {
                 "case_name": self._get_case_name_plain(),
                 "docket_number": docket_number,
-                "date_filed": self._get_date_filed(),
+                "date_filed": None,
                 "docket_entries": self._get_docket_entries(),
             }
             dockets.append(docket)
@@ -406,7 +406,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 docket = {
                     "case_name": self._get_case_name(docket_table),
                     "docket_number": docket_number,
-                    "date_filed": self._get_date_filed(),
+                    "date_filed": None,
                     "docket_entries": self._get_docket_entries(docket_table),
                 }
                 dockets.append(docket)
