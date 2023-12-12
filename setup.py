@@ -5,7 +5,7 @@ import unittest
 from setuptools import find_packages, setup
 from setuptools.command.install import install
 
-VERSION = "2.5.71"
+VERSION = "2.5.72"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
