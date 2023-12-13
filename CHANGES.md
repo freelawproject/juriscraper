@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.73 - 2023-12-13**
+
+Features:
+
+- Add NevApp
+
+Changes:
+
+- Fix Nevada Supreme and Colorado Ct App
+
+## Past
+
 **2.5.72 - 2023-12-12**
 
 Features:
@@ -25,8 +37,6 @@ Features:
 Changes:
 
 - Fix CA2 Oral Arguments Scraper
-
-## Past
 
 **2.5.71 - 2023-12-11**
 
