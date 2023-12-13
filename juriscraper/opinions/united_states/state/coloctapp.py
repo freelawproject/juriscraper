@@ -35,7 +35,12 @@ class Site(colo.Site):
                 continue
             if not self.status:
                 continue
-            docket, name = row.text_content().split(" ", 1)
+            pattern = re.compile(r"\b[0-9A-Z& ]{5,}\b")
+            matches = re.findall(pattern, row.text_content())
+            if not matches:
+                continue
+            docket = matches[0].strip()
+            name = row.text_content().replace(docket, "").strip()
             self.cases.append(
                 {
                     "name": name,

@@ -95,6 +95,7 @@ __all__ = [
     "nebctapp",
     "nd",
     "nev",
+    "nevapp",
     "nh",
     "nm",
     "nmctapp",

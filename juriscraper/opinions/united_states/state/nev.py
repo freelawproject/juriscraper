@@ -1,3 +1,11 @@
+"""Scraper for Nevada Supreme Court
+CourtID: nev
+
+History:
+    - 2023-12-13: Updated by William E. Palin
+"""
+
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -27,6 +35,8 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         for case in self.html:
+            if "COA" in case["caseNumber"]:
+                continue
             self.cases.append(
                 {
                     "name": case["caseTitle"],
