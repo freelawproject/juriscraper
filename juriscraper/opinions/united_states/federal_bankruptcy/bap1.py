@@ -4,10 +4,11 @@ CourtID: bap1
 Court Short Name: 1st Cir. BAP
 """
 
+from lxml.html import HtmlElement
+
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.AbstractSite import logger
-from lxml.html import HtmlElement
 
 
 class Site(OpinionSiteLinear):
