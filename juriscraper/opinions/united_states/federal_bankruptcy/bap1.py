@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from typing import Dict
 
 from lxml.html import HtmlElement
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
