@@ -3,13 +3,13 @@ Scraper for the United States Bankruptcy Appellate Panel for the First Circuit
 CourtID: bap1
 Court Short Name: 1st Cir. BAP
 """
-from typing import Dict
 from datetime import datetime, timedelta
+from typing import Dict
 
 from lxml.html import HtmlElement
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
