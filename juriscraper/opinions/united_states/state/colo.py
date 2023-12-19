@@ -4,9 +4,6 @@ Court Short Name: Colo.
 Author: Philip Ardery
 Reviewer: mlr
 Date created: 2016-06-03
-Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/staff
-         they usually fix issues without responding to the emails directly. You can
-         also try submitting the form here: http://www.cobar.org/contact
 History:
     - 2022-01-31: Updated by William E. Palin
     - 2023-01-05: Updated by WEP
@@ -25,9 +22,19 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.six_months_ago = date.today() - timedelta(180)
         self.status = "Published"
         self.url = f"https://www.courts.state.co.us/Courts/Supreme_Court/Proceedings/Index.cfm"
+
+    def set_min_date(self):
+        """Set minimum date to add opinions
+
+        :return: Date 6 months back
+        """
+        if self.test_mode_enabled():
+            today = datetime.date(2023, 11, 19)
+            return today - timedelta(180)
+        else:
+            return date.today() - timedelta(180)
 
     def match_regex(self, str):
         """Match date regex patterns
@@ -79,7 +86,7 @@ class Site(OpinionSiteLinear):
                 date, date_filed_is_approximate = self.extract_dates(
                     row, partial_date
                 )
-                if date < self.six_months_ago:
+                if date < self.set_min_date():
                     continue
                 self.cases.append(
                     {
