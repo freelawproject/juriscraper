@@ -12,10 +12,10 @@ History:
 import datetime
 import re
 
-from juriscraper.opinions.united_states.state import colo
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(colo.Site):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
