@@ -103,6 +103,18 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "2021-SCC-0017-CIV"}},
             ),
         ],
+        "juriscraper.opinions.united_states.state.colo": [
+            (
+                """       The Supreme Court of the State of Colorado 2 East 14th Avenue • Denver, Colorado 80203                                  2023 CO 63 Supreme Court Case No. 23SA300""",
+                {
+                    "Citation": {
+                        "volume": "2023",
+                        "reporter": "CO",
+                        "page": "63",
+                    }
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.federal_special.cavc": [
             (
                 """           UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\n                                             NO. 22-3306\n\n                               GEORGE D. PREWITT, JR., PETITIONER,\n\n                                                  V.\n\n                                     DENIS MCDONOUGH,\n                         SECRETARY OF VETERANS AFFAIRS, RESPONDENT.\n\n                       Before""",

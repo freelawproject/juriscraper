@@ -407,7 +407,7 @@ class AbstractSite:
         tree.make_links_absolute(url)
         return tree
 
-    def _download_backwards(self):
+    def _download_backwards(self, d):
         # methods for downloading the entire Site
         pass
 
