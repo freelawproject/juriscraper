@@ -13,6 +13,7 @@ History:
 import datetime
 import re
 from datetime import date, timedelta
+from typing import Any, Dict
 
 from dateutil import parser
 
@@ -98,7 +99,7 @@ class Site(OpinionSiteLinear):
         date_filed = match[-1][0] if match else ""
         return date_filed
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, any]:
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Extract Citation from text
 
         :param scraped_text: Text of scraped content
