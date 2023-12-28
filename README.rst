@@ -85,7 +85,7 @@ the local installation, you can download Selenium FireFox Geckodriver::
     # un-tar/zip your download
     sudo mv geckodriver /usr/local/bin
 
-If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox-debug>`__, you can
+If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox>`__, you can
 configure it with the following variables:
 
 ``WEBDRIVER_CONN``: Use this to set the connection string to your remote
@@ -135,10 +135,10 @@ For scrapers to be merged:
    `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
    major Pylint problems or Intellij inspection issues.
 
--  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating into your editor  <https://black.readthedocs.io/en/stable/editor_integration.html/>`__.
+-  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating into your editor  <https://black.readthedocs.io/en/stable/integrations/editors.html>`__.
 
 - This project is configured to use git pre-commit hooks managed by the
-  Python program `pre-commit` ([website](https://pre-commit.com/)). Pre-
+  Python program `pre-commit <https://pre-commit.com/>`__. Pre-
   commit checks let us easily ensure that the code is properly formatted with
   black before it can even be commited. If you install the dev dependencies in
   `requirements-dev.txt`, you should then be able to run `$ pre-commit install`
