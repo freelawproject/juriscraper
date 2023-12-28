@@ -47,15 +47,14 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = range(29)[::-1]
 
     def _download(self, request_dict: Optional[Dict] = None) -> HtmlElement:
-        """
-        Gets the source's HTML
-
-        :param request_dict: unused in this scraper
-        :return: HtmlElement object
+        """Gets the source's HTML
 
         For a normal periodic scraper, get the last page where
         most recent opinions are
         Backscraper will iterate over all available pages
+
+        :param request_dict: unused in this scraper
+        :return: HTML object from the downloaded page
         """
         if self.base_url == self.url:
             self.html = super()._download()
@@ -64,16 +63,19 @@ class Site(OpinionSiteLinear):
         return super()._download()
 
     def _download_backwards(self, page_number: int) -> None:
-        """
-        Method used by backscraper to download historical records
+        """Method used by backscraper to download historical records
 
         :param page_number: an element of self.back_scrape_iterable
+        :return: None
         """
         self.url = f"{self.base_url}?page={page_number}"
 
     def _process_html(self) -> None:
-        """
+        """Parses a page's HTML into opinion dictionaries
+
         Most recent opinions are on the last rows of the table
+
+        :return: None
         """
         for row in self.html.xpath("//tr[td]")[::-1]:
             docket_string = self.get_text_by_xpath(row, "td[1]")
@@ -108,11 +110,12 @@ class Site(OpinionSiteLinear):
     ) -> str:
         """Completes docket number with lower court abbreviation
 
-        :param partial_docket_number
-        :return: full docket number
-
         For each unique lower court in the opinions available on the source,
         a linked opinion PDF was opened and the abbrevation extracted
+
+        :param partial_docket_number: The partial docket string
+        :param lower_court: The lower court abbreviation
+        :return: The full docket number
         """
         lower_court_abbreviation = self.lower_court_to_abbreviation.get(
             lower_court, ""
@@ -124,11 +127,11 @@ class Site(OpinionSiteLinear):
     def get_status_from_docket_string(docket_string: str) -> str:
         """Extracts status implicit in partial docket number
 
+        Examples of opinion names: 02-084P1.01A, 00-094P1, 21-021P
+
         :param docket_string
         :raises SkipRowError: when the docket refers to an order
         :return: status in `[Published, Unpublished, Unknown]`
-
-        Examples of opinion names: 02-084P1.01A, 00-094P1, 21-021P
         """
         if "P" in docket_string:
             status = "Published"
