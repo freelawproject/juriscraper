@@ -2,6 +2,10 @@
 Scraper for the United States Bankruptcy Appellate Panel for the First Circuit
 CourtID: bap1
 Court Short Name: 1st Cir. BAP
+Court Contact: ca01_BAP@ca1.uscourts.gov, (617) 748-9650
+Author: Gianfranco Rossi
+History:
+ - 2023-12-28, grossir: created
 """
 import calendar
 import re
@@ -14,7 +18,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    # See issue #828 for mapper extraction reference
     lower_court_to_abbreviation = {
         "USBC - District of New Hampshire": "NH",
         "USBC - District of Massachusetts (Worcester)": "MW",
@@ -32,17 +35,28 @@ class Site(OpinionSiteLinear):
         "Bankruptcy Court - Ponce Puerto Rico": "PR",
         "Bankruptcy Court of NH, Concord": "NH",
     }
+    # See issue #828 for mapper extraction reference
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.base_url = self.url = "https://www.bap1.uscourts.gov/bapopn"
         self.court_id = self.__module__
 
-        # There are 29 pages as of development in Dec 2023 (source indexes from 0)
+        # There are 29 historical pages as of development in Dec 2023
+        # source indexes from 0
         self.back_scrape_iterable = range(29)[::-1]
 
     def _download(self, request_dict: Optional[Dict] = None) -> HtmlElement:
-        # For a normal periodic scraper, get the last page where most recent opinions are
+        """
+        Gets the source's HTML
+
+        :param request_dict: unused in this scraper
+        :return: HtmlElement object
+
+        For a normal periodic scraper, get the last page where
+        most recent opinions are
+        Backscraper will iterate over all available pages
+        """
         if self.base_url == self.url:
             self.html = super()._download()
             self.url = self.html.xpath("//li/a/@href")[-1]
@@ -50,74 +64,101 @@ class Site(OpinionSiteLinear):
         return super()._download()
 
     def _download_backwards(self, page_number: int) -> None:
+        """
+        Method used by backscraper to download historical records
+
+        :param page_number: an element of self.back_scrape_iterable
+        """
         self.url = f"{self.base_url}?page={page_number}"
 
     def _process_html(self) -> None:
-        # Most recent opinions are on the last rows of the table
+        """
+        Most recent opinions are on the last rows of the table
+        """
         for row in self.html.xpath("//tr[td]")[::-1]:
-            opinion_number = row.xpath("td[1]")[0].text_content().strip()
+            docket_string = self.get_text_by_xpath(row, "td[1]")
 
             try:
-                status = self.get_status_from_opinion_number(opinion_number)
+                status = self.get_status_from_docket_string(docket_string)
             except SkipRowError:
                 continue
 
-            lower_court = row.xpath("td[4]/span")[0].text_content().strip()
-            docket_number = row.xpath("td[2]")[0].text_content().strip()
+            partial_docket_number = self.get_text_by_xpath(row, "td[2]")
+            date_placeholder = self.get_text_by_xpath(row, "td[3]")
+            lower_court = self.get_text_by_xpath(row, "td[4]/span")
+            name = row.xpath("td[4]")[0].text.strip()
 
-            case = {
-                "status": status,
-                "url": row.xpath("td[1]/a/@href")[0],  # opinion url
-                "docket": self.build_full_docket_number(
-                    docket_number, lower_court
-                ),
-                # Pub Date
-                "date": row.xpath("td[3]")[0].text_content().strip(),
-                # short title
-                "name": row.xpath("td[4]")[0].text.strip(),
-                # district
-                "lower_court": lower_court,
-            }
+            docket = self.build_full_docket_number(
+                partial_docket_number, lower_court
+            )
 
-            self.cases.append(case)
+            self.cases.append(
+                {
+                    "status": status,
+                    "url": row.xpath("td[1]/a/@href")[0],
+                    "docket": docket,
+                    "date": date_placeholder,
+                    "name": name,
+                    "lower_court": lower_court,
+                }
+            )
 
     def build_full_docket_number(
-        self, docket_number: str, lower_court: str
+        self, partial_docket_number: str, lower_court: str
     ) -> str:
-        """
-        Full docket number has the lower court abbreviation in it
+        """Completes docket number with lower court abbreviation
+
+        :param partial_docket_number
+        :return: full docket number
+
         For each unique lower court in the opinions available on the source,
-        the linked opinion PDF was opened and the abbrevation extracted
+        a linked opinion PDF was opened and the abbrevation extracted
         """
         lower_court_abbreviation = self.lower_court_to_abbreviation.get(
             lower_court, ""
         )
 
-        return f"BAP No. {lower_court_abbreviation} {docket_number}"
+        return f"BAP No. {lower_court_abbreviation} {partial_docket_number}"
 
     @staticmethod
-    def get_status_from_opinion_number(opinion_number: str) -> str:
-        """
+    def get_status_from_docket_string(docket_string: str) -> str:
+        """Extracts status implicit in partial docket number
+
+        :param docket_string
+        :raises SkipRowError: when the docket refers to an order
+        :return: status in `[Published, Unpublished, Unknown]`
+
         Examples of opinion names: 02-084P1.01A, 00-094P1, 21-021P
         """
-        if "P" in opinion_number:
+        if "P" in docket_string:
             status = "Published"
-        elif "U" in opinion_number:
+        elif "U" in docket_string:
             status = "Unpublished"
-        elif "O" in opinion_number:
+        elif "O" in docket_string:
             raise SkipRowError(
-                f"Skipping row {opinion_number} because it is an order"
+                f"Skipping row {docket_string} because it is an order"
             )
         else:
             status = "Unknown"
 
         return status
 
+    @staticmethod
+    def get_text_by_xpath(html_element: HtmlElement, xpath: str) -> str:
+        """Extracts first text content from html element located by xpath
+
+        :param html_element: anchor element for xpath selection
+        :param xpath: xpath string
+        :return: stripped text content
+        """
+        return html_element.xpath(xpath)[0].text_content().strip()
+
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Extract Date Filed from text
 
         :param scraped_text: Text of scraped content
-        :return: date filed
+        :return: Dict in the format expected by courtlistener,
+                    containing date_filed
         """
         months = "|".join(calendar.month_name[1:])
         date_pattern = re.compile(rf"({months})\s+\d{{1,2}}\s?,?\s+\d{{4}}")
