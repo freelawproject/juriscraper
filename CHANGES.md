@@ -16,7 +16,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.5.75 - 2023-12-28**
+**2.5.76 - 2023-12-28**
 
 Features:
 
@@ -26,6 +26,16 @@ Changes:
 
 
 ## Past
+
+**2.5.75 - 2023-12-28**
+
+Features:
+
+-
+
+Changes:
+
+- Fix BAP1 and update test for it
 
 **2.5.74 - 2023-12-13**
 
