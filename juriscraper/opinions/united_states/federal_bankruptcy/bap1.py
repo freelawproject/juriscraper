@@ -3,15 +3,18 @@ Scraper for the United States Bankruptcy Appellate Panel for the First Circuit
 CourtID: bap1
 Court Short Name: 1st Cir. BAP
 """
-from datetime import datetime, timedelta
-from typing import Dict
+import calendar
+import re
+from typing import Any, Dict, Optional
 
 from lxml.html import HtmlElement
+
+from juriscraper.lib.exceptions import SkipRowError
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    # See issue #828 on Github for extraction reference
+    # See issue #828 for mapper extraction reference
     lower_court_to_abbreviation = {
         "USBC - District of New Hampshire": "NH",
         "USBC - District of Massachusetts (Worcester)": "MW",
@@ -35,18 +38,29 @@ class Site(OpinionSiteLinear):
         self.base_url = self.url = "https://www.bap1.uscourts.gov/bapopn"
         self.court_id = self.__module__
 
-        self.set_date_filter_parameters()
-
         # There are 29 pages as of development in Dec 2023 (source indexes from 0)
-        self.back_scrape_iterable = range(29)
+        self.back_scrape_iterable = range(29)[::-1]
 
-    def _download(self, request_dict: Dict = {}) -> HtmlElement:
-        return super()._download(self.parameters)
+    def _download(self, request_dict: Optional[Dict] = None) -> HtmlElement:
+        # For a normal periodic scraper, get the last page where most recent opinions are
+        if self.base_url == self.url:
+            self.html = super()._download()
+            self.url = self.html.xpath("//li/a/@href")[-1]
+
+        return super()._download()
+
+    def _download_backwards(self, page_number: int) -> None:
+        self.url = f"{self.base_url}?page={page_number}"
 
     def _process_html(self) -> None:
-        for row in self.html.xpath("//tr[td]"):
-            opinion_name = row.xpath("td[1]")[0].text_content().strip()
-            status = self.get_status_from_opinion_name(opinion_name)
+        # Most recent opinions are on the last rows of the table
+        for row in self.html.xpath("//tr[td]")[::-1]:
+            opinion_number = row.xpath("td[1]")[0].text_content().strip()
+
+            try:
+                status = self.get_status_from_opinion_number(opinion_number)
+            except SkipRowError:
+                continue
 
             lower_court = row.xpath("td[4]/span")[0].text_content().strip()
             docket_number = row.xpath("td[2]")[0].text_content().strip()
@@ -67,36 +81,6 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
-    def set_date_filter_parameters(self):
-        """
-        Limit search to get fresh data and avoid overloading the court server
-        Default: last month
-        """
-        date_filter_end = datetime.today()
-        date_filter_start = date_filter_end - timedelta(30)
-        self.parameters = {
-            "params": {
-                "opn": "",
-                "field_opn_short_title_value": "",
-                "field_opn_issdate_value[min][date]": date_filter_start.strftime(
-                    "%m/%d/%Y"
-                ),
-                "field_opn_issdate_value[max][date]": date_filter_end.strftime(
-                    "%m/%d/%Y"
-                ),
-            }
-        }
-
-    def _download_backwards(self, page_number: int) -> None:
-        self.parameters = {}  # delete date filters used in normal scraper
-        self.url = (
-            f"{self.base_url}?page={page_number}"
-            if page_number > 0
-            else self.base_url
-        )
-        self.html = self._download()
-        self._process_html()
-
     def build_full_docket_number(
         self, docket_number: str, lower_court: str
     ) -> str:
@@ -112,12 +96,39 @@ class Site(OpinionSiteLinear):
         return f"BAP No. {lower_court_abbreviation} {docket_number}"
 
     @staticmethod
-    def get_status_from_opinion_name(opinion_name: str) -> str:
-        if opinion_name.endswith("U"):
-            status = "Unpublished"
-        elif opinion_name.endswith("P"):
+    def get_status_from_opinion_number(opinion_number: str) -> str:
+        """
+        Examples of opinion names: 02-084P1.01A, 00-094P1, 21-021P
+        """
+        if "P" in opinion_number:
             status = "Published"
+        elif "U" in opinion_number:
+            status = "Unpublished"
+        elif "O" in opinion_number:
+            raise SkipRowError(
+                f"Skipping row {opinion_number} because it is an order"
+            )
         else:
             status = "Unknown"
 
         return status
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Extract Date Filed from text
+
+        :param scraped_text: Text of scraped content
+        :return: date filed
+        """
+        months = "|".join(calendar.month_name[1:])
+        date_pattern = re.compile(rf"({months})\s+\d{{1,2}}\s?,?\s+\d{{4}}")
+        match = re.search(date_pattern, scraped_text)
+        date_extracted = match.group(0) if match else ""
+        date_filed = re.sub(r"\s+", " ", date_extracted).strip()
+
+        metadata = {
+            "OpinionCluster": {
+                "date_filed": date_filed,
+            },
+        }
+
+        return metadata
