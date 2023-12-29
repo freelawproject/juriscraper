@@ -76,6 +76,7 @@ __all__ = [
     # should be re-written to scrape CourtListener's API instead of the
     # court's website.
     # "me",
+    "mesuperct",
     "mich",
     "michctapp",
     "minn",
