@@ -182,14 +182,12 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Opinion": {"author_str": "Thomas D. Buchanan"},
                 },
             ),
-            
             (
                 # https://www.nycourts.gov/reporter/pdfs/2023/2023_32445.pdf
                 """Rothman v Puretz\n2023 NY Slip Op 32445(U)\nJuly 18, 2023\nSupreme Court, Monroe County\nDocket Number: Index No. E2023001856\nJudge: J. Scott Odorisi\nCases posted with a "30000" identifier, i""",
                 {
                     "Docket": {"docket_number": "Index No. E2023001856"},
                     "Opinion": {"author_str": "J. Scott Odorisi"},
-
                 },
             ),
             (
@@ -347,7 +345,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "page": "1211(A)",
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nydistrict": [
             (

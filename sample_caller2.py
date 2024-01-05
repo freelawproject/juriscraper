@@ -219,15 +219,15 @@ def main():
             )
             try:
                 all_cases = []
-                
+
                 if backscrape:
                     for site in site_yielder(
                         mod.Site().back_scrape_iterable, mod
                     ):
                         site.parse()
                         all_cases.extend(site.cases)
-                        
-                        scrape_court(site, binaries)                                        
+
+                        scrape_court(site, binaries)
                 else:
                     site = mod.Site()
                     v_print(
@@ -238,16 +238,16 @@ def main():
                         v_print(3, "Selenium will be used.")
                     site.parse()
                     all_cases.extend(site.cases)
-                    
+
                     results[current_court]["scrape"] = scrape_court(
                         site, binaries
                     )
-                
-                buba = 1+1
-                                    
-                # import json                     
+
+                buba = 1 + 1
+
+                # import json
                 # with open('/tmp/nymisc_all_cases.json', 'w')as f:
-                #     json.dump(all_cases, f, indent=4)    
+                #     json.dump(all_cases, f, indent=4)
 
             except Exception:
                 results[current_court][
