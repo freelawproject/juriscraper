@@ -16,11 +16,14 @@ from lxml.html import fromstring as html_fromstring
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_html5_parsed_text
+from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.string_utils import harmonize, clean_string
 
 
 class Site(OpinionSiteLinear):
     court_regex: str  # to be defined on inheriting classes
+    base_url = "https://nycourts.gov/reporter/slipidx/miscolo.shtml"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -40,14 +43,12 @@ class Site(OpinionSiteLinear):
         :param target_date: used to extract month and year for backscraping
         :returns str: formatted url
         """
-        base_url = "https://nycourts.gov/reporter/slipidx/miscolo.shtml"
-
         if not target_date:
-            return base_url
+            return self.base_url
 
         end = f"_{target_date.year}_{target_date.strftime('%B')}.shtml"
 
-        return base_url.replace(".shtml", end)
+        return self.base_url.replace(".shtml", end)
 
     def is_court_of_interest(self, court: str) -> bool:
         """'Other Courts' of NY Reporter consists of 10 different
@@ -57,7 +58,7 @@ class Site(OpinionSiteLinear):
 
         For example
         "Civ Ct City NY, Queens County" and "Civ Ct City NY, NY County"
-        belong to nycciv family
+        belong to nycivct family
 
         :param court: court name
         :return: true if court name matches
@@ -74,7 +75,7 @@ class Site(OpinionSiteLinear):
             court = row.xpath("td[2]")[0].text_content()
 
             if not self.is_court_of_interest(court):
-                logger.debug(f"Skipping {court}")
+                logger.debug("Skipping %s", court)
                 continue
 
             url = row.xpath("td[1]/a/@href")[0]
@@ -94,14 +95,14 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_docket_numbers(self) -> List[None]:
+    def _get_docket_numbers(self) -> List[str]:
         """Overriding from OpinionSiteLinear, since docket numbers are
         not in the HTML and they are required
 
         We will get them on the extract_from_text stage on courtlistener
-        :return: list of None values
+        :return: list of empty strings values
         """
-        return [None for _ in self.cases]
+        return ["" for _ in self.cases]
 
     def _download_backwards(self, target_date: date) -> None:
         """Method used by backscraper to download historical records
@@ -136,9 +137,12 @@ class Site(OpinionSiteLinear):
         metadata = {}
 
         if docket_number:
-            metadata["Docket"] = {"docket_number": docket_number.strip()}
+            clean_docket_number = clean_string(docket_number.strip())
+            metadata["Docket"] = {
+                "docket_number": harmonize(clean_docket_number)
+            }
         if judge:
-            metadata["Opinion"] = {"author_str": judge.strip()}
+            metadata["Opinion"] = {"author_str": judge}
         if citation:
             metadata["Citation"] = citation
 
@@ -198,6 +202,11 @@ class Site(OpinionSiteLinear):
             match = re.search(r"Judge:\s?(?P<judge>.+)", scraped_text)
             if match:
                 judge = match.group("judge")
+        
+        judge = normalize_judge_string(clean_string(judge))[0]
+        
+        if judge.endswith(' J.'):
+            judge = judge.replace(' J.', '')
 
         return judge
 

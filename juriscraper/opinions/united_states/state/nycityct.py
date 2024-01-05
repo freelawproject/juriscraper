@@ -1,7 +1,7 @@
-from juriscraper.opinions.united_states.state import nymisc
+from juriscraper.opinions.united_states.state import nytrial
 
 
-class Site(nymisc.Site):
+class Site(nytrial.Site):
     court_regex = r"City Ct"
     # Most start with the regex, but there are special cases
     # such as 'Utica City Ct' in Dec 2023
