@@ -30,6 +30,7 @@ class OpinionSite(AbstractSite):
             "parallel_citations",
             "summaries",
             "case_name_shorts",
+            "child_courts",
         ]
         self._req_attrs = [
             "case_dates",
@@ -108,6 +109,9 @@ class OpinionSite(AbstractSite):
     def _get_summaries(self):
         return None
 
+    def _get_child_courts(self):
+        return None
+    
     def extract_from_text(self, scraped_text):
         """Pass scraped text into function and return data as a dictionary
 
