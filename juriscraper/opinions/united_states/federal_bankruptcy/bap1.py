@@ -14,6 +14,7 @@ from typing import Any, Dict, Optional
 from lxml.html import HtmlElement
 
 from juriscraper.lib.exceptions import SkipRowError
+from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -161,7 +162,7 @@ class Site(OpinionSiteLinear):
 
         :param scraped_text: Text of scraped content
         :return: Dict in the format expected by courtlistener,
-                    containing date_filed
+                 containing date_filed
         """
         months = "|".join(calendar.month_name[1:])
         date_pattern = re.compile(rf"({months})\s+\d{{1,2}}\s?,?\s+\d{{4}}")
@@ -171,8 +172,7 @@ class Site(OpinionSiteLinear):
 
         metadata = {
             "OpinionCluster": {
-                "date_filed": date_filed,
+                "date_filed": convert_date_string(date_filed),
             },
         }
-
         return metadata
