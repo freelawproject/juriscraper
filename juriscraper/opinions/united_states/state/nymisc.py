@@ -41,9 +41,6 @@ class Site(OpinionSiteLinear):
         :returns str: formatted url
         """
         base_url = "https://nycourts.gov/reporter/slipidx/miscolo.shtml"
-        base_url = (
-            "https://nycourts.gov/reporter/slipidx/miscolo_2023_December.shtml"
-        )
 
         if not target_date:
             return base_url
@@ -77,7 +74,7 @@ class Site(OpinionSiteLinear):
             court = row.xpath("td[2]")[0].text_content()
 
             if not self.is_court_of_interest(court):
-                logger.debug("Skipping %s" % court)
+                logger.debug(f"Skipping {court}")
                 continue
 
             url = row.xpath("td[1]/a/@href")[0]

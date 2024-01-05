@@ -111,7 +111,7 @@ class OpinionSite(AbstractSite):
 
     def _get_child_courts(self):
         return None
-    
+
     def extract_from_text(self, scraped_text):
         """Pass scraped text into function and return data as a dictionary
 
