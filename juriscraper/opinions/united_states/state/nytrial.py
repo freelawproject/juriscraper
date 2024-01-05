@@ -17,8 +17,8 @@ from lxml.html import fromstring as html_fromstring
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.string_utils import harmonize, clean_string
 
 
 class Site(OpinionSiteLinear):
@@ -202,11 +202,11 @@ class Site(OpinionSiteLinear):
             match = re.search(r"Judge:\s?(?P<judge>.+)", scraped_text)
             if match:
                 judge = match.group("judge")
-        
+
         judge = normalize_judge_string(clean_string(judge))[0]
-        
-        if judge.endswith(' J.'):
-            judge = judge.replace(' J.', '')
+
+        if judge.endswith(" J."):
+            judge = judge.replace(" J.", "")
 
         return judge
 
