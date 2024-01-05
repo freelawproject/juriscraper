@@ -2,4 +2,4 @@ from juriscraper.opinions.united_states.state import nymisc
 
 
 class Site(nymisc.Site):
-    court_regex = r"^Just "
+    court_regex = r"Just Ct"
