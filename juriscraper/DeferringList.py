@@ -1,3 +1,6 @@
+import asyncio
+import inspect
+
 from juriscraper.AbstractSite import logger
 
 
@@ -42,7 +45,13 @@ class DeferringList:
             logger.info(
                 f"Getting deferred value from seed: {self._data[item]}"
             )
-            new_val = self._fetching_function(self._data[item])
+            if inspect.isawaitable(self._fetching_function):
+                loop = asyncio.get_event_loop()
+                new_val = loop.run_until_complete(
+                    self._fetching_function(self._data[item])
+                )
+            else:
+                new_val = self._fetching_function(self._data[item])
             self._data[item] = new_val
             self._fetched_items[item] = True
             return new_val

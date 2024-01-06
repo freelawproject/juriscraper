@@ -1,8 +1,8 @@
 import json
 import re
+from urllib.parse import unquote
 
-import requests
-from requests.packages.urllib3 import exceptions
+import httpx
 
 from ..lib.exceptions import PacerLoginException
 from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
@@ -10,8 +10,6 @@ from ..lib.log_tools import make_default_logger
 from ..pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
-
-requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 
 def check_if_logged_in_page(content: bytes) -> bool:
@@ -87,9 +85,15 @@ def check_if_logged_in_page(content: bytes) -> bool:
     return False
 
 
-class PacerSession(requests.Session):
+class UNQUOTED_URL(httpx.URL):
+    @property
+    def raw_path(self) -> bytes:
+        return unquote(super().raw_path.decode("ascii")).encode("ascii")
+
+
+class PacerSession(httpx.AsyncClient):
     """
-    Extension of requests.Session to handle PACER oddities making it easier
+    Extension of httpx.AsyncClient to handle PACER oddities making it easier
     for folks to just POST data to PACER endpoints/apis.
 
     Also includes utilities for logging into PACER and re-logging in when
@@ -99,17 +103,26 @@ class PacerSession(requests.Session):
     LOGIN_URL = "https://pacer.login.uscourts.gov/services/cso-auth"
 
     def __init__(
-        self, cookies=None, username=None, password=None, client_code=None
+        self,
+        cookies=None,
+        username=None,
+        password=None,
+        client_code=None,
+        user_agent="Juriscraper",
+        **kwargs,
     ):
         """
         Instantiate a new PACER API Session with some Juriscraper defaults
-        :param cookies: an optional RequestsCookieJar object with cookies for the session
+        :param cookies: an optional httpx.Cookies object with cookies for the session
         :param username: a PACER account username
         :param password: a PACER account password
         :param client_code: an optional PACER client code for the session
         """
-        super().__init__()
-        self.headers["User-Agent"] = "Juriscraper"
+        kwargs.setdefault("http2", True)
+        kwargs.setdefault("follow_redirects", True)
+        super().__init__(**kwargs)
+        self.user_agent = user_agent
+        self.headers["User-Agent"] = self.user_agent
         self.headers["Referer"] = "https://external"  # For CVE-001-FLP.
         self.verify = False
 
@@ -125,16 +138,16 @@ class PacerSession(requests.Session):
         self.client_code = client_code
         self.additional_request_done = False
 
-    def get(self, url, auto_login=True, **kwargs):
-        """Overrides request.Session.get with session retry logic.
+    async def get(self, url, auto_login=True, **kwargs):
+        """Overrides httpx.AsyncClient.get with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: requests.Response
+        :return: httpx.Response
         """
         kwargs.setdefault("timeout", 300)
 
-        r = super().get(url, **kwargs)
+        r = await super().get(url, **kwargs)
 
         if b"This user has no access privileges defined." in r.content:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
@@ -144,19 +157,52 @@ class PacerSession(requests.Session):
             # The solution when this error shows up is to simply re-run the get
             # request, so that's what we do here. PACER needs some frustrating
             # and inelegant hacks sometimes.
-            r = super().get(url, **kwargs)
+            r = await super().get(url, **kwargs)
         if auto_login:
-            updated = self._login_again(r)
+            updated = await self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                r = super().get(url, **kwargs)
+                r = await super().get(url, **kwargs)
                 # Do an additional check of the content returned.
-                self._login_again(r)
+                await self._login_again(r)
         return r
 
-    def post(self, url, data=None, json=None, auto_login=True, **kwargs):
+    async def get_unquoted(self, url, auto_login=True, **kwargs):
+        """Overrides httpx.AsyncClient.get with session retry logic.
+
+        :param url: url string to GET
+        :param auto_login: Whether the auto-login procedure should happen.
+        :return: httpx.Response
         """
-        Overrides requests.Session.post with PACER-specific fun.
+        kwargs.setdefault("timeout", 300)
+
+        request = self.build_request("GET", url=url, **kwargs)
+        request.url = UNQUOTED_URL(url)
+        r = await super().send(request)
+
+        if b"This user has no access privileges defined." in r.content:
+            # This is a strange error that we began seeing in CM/ECF 6.3.1 at
+            # ILND. You can currently reproduce it by logging in on the central
+            # login page, selecting "Court Links" as your destination, and then
+            # loading: https://ecf.ilnd.uscourts.gov/cgi-bin/WrtOpRpt.pl
+            # The solution when this error shows up is to simply re-run the get
+            # request, so that's what we do here. PACER needs some frustrating
+            # and inelegant hacks sometimes.
+            r = await super().get(url, **kwargs)
+        if auto_login:
+            updated = await self._login_again(r)
+            if updated:
+                # Re-do the request with the new session.
+                request = self.build_request("GET", url=url, **kwargs)
+                request.url = UNQUOTED_URL(url)
+                r = await super().send(request)
+                # Do an additional check of the content returned.
+                await self._login_again(r)
+        return r
+
+    async def post(self, url, data=None, json=None, auto_login=True, **kwargs):
+        """
+        Overrides httpx.AsyncClient.post with PACER-specific fun.
 
         Will automatically convert data dict into proper multi-part form data
         and pass to the files parameter instead.
@@ -169,7 +215,7 @@ class PacerSession(requests.Session):
         :param json: json object to post
         :param auto_login: Whether the auto-login procedure should happen.
         :param kwargs: assorted keyword arguments
-        :return: requests.Response
+        :return: httpx.Response
         """
         kwargs.setdefault("timeout", 300)
 
@@ -179,24 +225,24 @@ class PacerSession(requests.Session):
         else:
             kwargs.update({"data": data, "json": json})
 
-        r = super().post(url, **kwargs)
+        r = await super().post(url, **kwargs)
         if auto_login:
-            updated = self._login_again(r)
+            updated = await self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super().post(url, **kwargs)
+                return await super().post(url, **kwargs)
         return r
 
-    def head(self, url, **kwargs):
+    async def head(self, url, **kwargs):
         """
-        Overrides request.Session.head with a default timeout parameter.
+        Overrides httpx.AsyncClient.head with a default timeout parameter.
 
         :param url: url string upon which to do a HEAD request
         :param kwargs: assorted keyword arguments
-        :return: requests.Response
+        :return: httpx.Response
         """
         kwargs.setdefault("timeout", 300)
-        return super().head(url, **kwargs)
+        return await super().head(url, **kwargs)
 
     @staticmethod
     def _prepare_multipart_form_data(data):
@@ -226,7 +272,7 @@ class PacerSession(requests.Session):
                id="j_id1:javax.faces.ViewState:0"
                value="some-long-value-here">
 
-        :param r: A request.Response object
+        :param r: A httpx.Response object
         :return The value of the "value" attribute of the ViewState input
         element.
         """
@@ -262,7 +308,7 @@ class PacerSession(requests.Session):
         xpath = "//update[@id='j_id1:javax.faces.ViewState:0']/text()"
         return tree.xpath(xpath)[0]
 
-    def login(self, url=None):
+    async def login(self, url=None):
         """Attempt to log into the PACER site.
         The first step is to get an authentication token using a PACER
         username and password.
@@ -295,19 +341,18 @@ class PacerSession(requests.Session):
         if self.client_code:
             data["clientCode"] = self.client_code
 
-        login_post_r = super().post(
+        login_post_r = await super().post(
             url,
             headers={
-                "User-Agent": "Juriscraper",
-                "Content-type": "application/json",
+                "User-Agent": self.user_agent,
                 "Accept": "application/json",
             },
             timeout=60,
-            data=json.dumps(data),
+            json=data,
         )
 
-        if login_post_r.status_code != requests.codes.ok:
-            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason}'"
+        if login_post_r.status_code != httpx.codes.OK:
+            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason_phrase}'"
             logger.warning(message)
             raise PacerLoginException(message)
 
@@ -332,8 +377,7 @@ class PacerSession(requests.Session):
                 "Did not get NextGenCSO cookie when attempting PACER login."
             )
         # Set up cookie with 'nextGenCSO' token (128-byte string of characters)
-        session_cookies = requests.cookies.RequestsCookieJar()
-        session_cookies.set(
+        self.cookies.set(
             "NextGenCSO",
             response_json.get("nextGenCSO"),
             domain=".uscourts.gov",
@@ -341,7 +385,7 @@ class PacerSession(requests.Session):
         )
         # Support "CurrentGen" servers as well. This can be remoevd if they're
         # ever all upgraded to NextGen.
-        session_cookies.set(
+        self.cookies.set(
             "PacerSession",
             response_json.get("nextGenCSO"),
             domain=".uscourts.gov",
@@ -350,22 +394,21 @@ class PacerSession(requests.Session):
         # If optional client code information is included,
         # 'PacerClientCode' cookie should be set
         if self.client_code:
-            session_cookies.set(
+            self.cookies.set(
                 "PacerClientCode",
                 self.client_code,
                 domain=".uscourts.gov",
                 path="/",
             )
-        self.cookies = session_cookies
         logger.info("New PACER session established.")
 
-    def _do_additional_request(self, r: requests.Response) -> bool:
+    def _do_additional_request(self, r: httpx.Response) -> bool:
         """Check if we should do an additional request to PACER, sometimes
         PACER returns the login page even though cookies are still valid.
         Do an additional GET request if we haven't done it previously.
         See https://github.com/freelawproject/courtlistener/issues/2160.
 
-        :param r: The requests Response object.
+        :param r: The httpx Response object.
         :return: True if an additional request should be done, otherwise False.
         """
         if r.request.method == "GET" and self.additional_request_done is False:
@@ -373,7 +416,7 @@ class PacerSession(requests.Session):
             return True
         return False
 
-    def _login_again(self, r):
+    async def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
         expired.
 
@@ -396,7 +439,7 @@ class PacerSession(requests.Session):
             logger.info(
                 "Invalid/expired PACER session. Establishing new session."
             )
-            self.login()
+            await self.login()
             return True
         else:
             if self._do_additional_request(r):

@@ -1,6 +1,6 @@
 import os
 
-from requests import HTTPError
+from httpx import HTTPError
 
 
 def build_module_list(court_id):

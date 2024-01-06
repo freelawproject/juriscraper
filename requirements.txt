@@ -9,6 +9,6 @@ geonamescache==1.6.0
 html5lib
 lxml~=4.9
 python-dateutil==2.8.2
-requests>=2.20.0
+httpx[http2]>=0.26.0
 selenium>=4.9.1
 tldextract

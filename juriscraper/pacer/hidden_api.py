@@ -23,7 +23,7 @@ class PossibleCaseNumberApi(BaseReport):
 
     PATH = "cgi-bin/possible_case_numbers.pl"
 
-    def query(self, docket_number):
+    async def query(self, docket_number):
         """Query the "possible case numbers" endpoint and return the results.
 
         :param docket_number: A string representing a docket number
@@ -36,7 +36,7 @@ class PossibleCaseNumberApi(BaseReport):
         logger.info(
             f"Querying the possible case number endpoint at URL: {url}"
         )
-        self.response = self.session.get(url)
+        self.response = await self.session.get(url)
         self.parse()
 
     def _parse_text(self, text):
@@ -203,7 +203,9 @@ class ShowCaseDocApi(BaseReport):
         ), "This API is not available at bankruptcy courts."
         super().__init__(court_id, pacer_session)
 
-    def query(self, pacer_case_id, document_number, attachment_number=""):
+    async def query(
+        self, pacer_case_id, document_number, attachment_number=""
+    ):
         """Query the show_case_doc endpoint and return the normalized doc1
         number.
 
@@ -228,7 +230,7 @@ class ShowCaseDocApi(BaseReport):
         )
         logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
         # Only do a head request, else we get text content we don't need.
-        self.response = self.session.head(url, allow_redirects=True)
+        self.response = await self.session.head(url, follow_redirects=True)
         self.parse()
 
     def _parse_text(self, text):
@@ -238,7 +240,7 @@ class ShowCaseDocApi(BaseReport):
     @property
     def data(self):
         """Get the URL out of the response object."""
-        url = self.response.url
+        url = str(self.response.url)
         if "doc1" in url:
             return get_pacer_doc_id_from_doc1_url(url)
         else:

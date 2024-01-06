@@ -3,7 +3,7 @@ import json
 from datetime import date, datetime
 
 import certifi
-import requests
+import httpx
 
 from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
 from juriscraper.lib.exceptions import InsanityException
@@ -33,7 +33,7 @@ class AbstractSite:
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self, cnt=None):
+    def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
 
         # Computed metadata
@@ -44,10 +44,12 @@ class AbstractSite:
         self.downloader_executed = False
         self.cookies = {}
         self.cnt = cnt or CaseNameTweaker()
+        self.user_agent = user_agent
+        kwargs.setdefault("http2", True)
         self.request = {
             "verify": certifi.where(),
-            "session": requests.session(),
-            "headers": {"User-Agent": "Juriscraper"},
+            "session": httpx.AsyncClient(**kwargs),
+            "headers": {"User-Agent": self.user_agent},
             # Disable CDN caching on sites like SCOTUS (ahem)
             "cache-control": "no-cache, no-store, max-age=1",
             "parameters": {},
@@ -65,8 +67,8 @@ class AbstractSite:
         self._req_attrs = []
         self._all_attrs = []
 
-    def __del__(self):
-        self.close_session()
+    async def __aexit__(self):
+        await self.close_session()
 
     def __str__(self):
         out = []
@@ -84,9 +86,9 @@ class AbstractSite:
     def __len__(self):
         return len(self.case_names)
 
-    def close_session(self):
+    async def close_session(self):
         if self.request["session"]:
-            self.request["session"].close()
+            await self.request["session"].aclose()
 
     def _make_item(self, i):
         """Using i, convert a single item into a dict. This is effectively a
@@ -344,12 +346,12 @@ class AbstractSite:
             del parameters["verify"]
         self.request["parameters"] = parameters
 
-    def _request_url_get(self, url):
+    async def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
         values
         """
         self.request["url"] = url
-        self.request["response"] = self.request["session"].get(
+        self.request["response"] = await self.request["session"].get(
             url,
             headers=self.request["headers"],
             verify=self.request["verify"],
@@ -357,10 +359,10 @@ class AbstractSite:
             **self.request["parameters"],
         )
 
-    def _request_url_post(self, url):
+    async def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
-        self.request["response"] = self.request["session"].post(
+        self.request["response"] = await self.request["session"].post(
             url,
             headers=self.request["headers"],
             verify=self.request["verify"],

@@ -4,8 +4,6 @@
 import re
 from datetime import date, datetime
 
-import requests
-
 from juriscraper.DeferringList import DeferringList
 from juriscraper.opinions.united_states.state import nd
 
@@ -19,19 +17,19 @@ class Site(nd.Site):
             today.strftime("%b%Y")
         )
 
-    def _get_download_urls(self):
+    async def _get_download_urls(self):
         """We use a fetcher and a DeferringList object and a HEAD request
         to test whether the wpd exists for a case"""
 
-        def fetcher(html_link):
+        async def fetcher(html_link):
             if self.test_mode_enabled():
                 return html_link  # Can't fetch remote during tests
             case_number = re.search(r"(\d+)", html_link).group(0)
             wpd_link = f"http://www.ndcourts.gov/wp/{case_number}.wpd"
-            r = requests.head(
+            r = await self.request["session"].head(
                 wpd_link,
-                allow_redirects=False,
-                headers={"User-Agent": "Juriscraper"},
+                follow_redirects=False,
+                headers={"User-Agent": self.user_agent},
             )
             if r.status_code == 200:
                 return wpd_link

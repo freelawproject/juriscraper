@@ -2,10 +2,15 @@ import os
 import sys
 import warnings
 
-from requests.exceptions import ConnectionError
-from requests.models import Request, Response
+from httpx import Request, RequestError, Response
 
 from .exceptions import SlownessException
+
+try:
+    # Use charset-normalizer for performance to detect the character encoding.
+    import charset_normalizer as chardet
+except ImportError:
+    import chardet
 
 WARN_SLOW_SCRAPERS = "CI" in os.environ
 
@@ -36,22 +41,25 @@ class MockRequest(Request):
         self.request = self
 
     def get(self):
-        r = Response()
         try:
             with open(self.url, mode="rb") as stream:
-                r._content = stream.read()
+                content = stream.read()
+                r = Response(
+                    status_code=200,
+                    request=self.request,
+                    default_encoding=chardet.detect(content)["encoding"],
+                )
+                r._content = content
                 #: Integer Code of responded HTTP Status.
-                r.status_code = 200
                 if self.url.endswith("json"):
                     r.headers["content-type"] = "application/json"
         except OSError as e:
-            r.status_code = 404
-            raise ConnectionError(e)
+            raise RequestError(e)
 
-        r._content_consumed = True
+        r.is_stream_consumed = True
 
         #: Final URL location of Response.
-        r.url = self.url
+        r.request.url = self.url
 
         # Return the response.
         return r

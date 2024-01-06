@@ -4,11 +4,11 @@ import sys
 from urllib.parse import urlsplit, urlunsplit
 
 import lxml
+from httpx import Response
 from lxml import etree, html
 from lxml.etree import XMLSyntaxError
 from lxml.html import HtmlElement, fromstring, html5parser, tostring
 from lxml.html.clean import Cleaner
-from requests import Response
 
 try:
     # Use charset-normalizer for performance to detect the character encoding.

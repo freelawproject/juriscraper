@@ -2,7 +2,6 @@ import time
 from datetime import date
 
 import certifi
-import requests
 from lxml import html
 
 from juriscraper.AbstractSite import logger
@@ -38,14 +37,14 @@ class Site(OpinionSite):
                 html_trees.extend(html_next_trees)
         return html_trees
 
-    def _get_case_html_page(self, html_trees, html_l, request_dict):
+    async def _get_case_html_page(self, html_trees, html_l, request_dict):
         """Gets each of the individual case pages"""
-        s = requests.session()
+        s = self.request["session"]
         for case_url in html_l.xpath(self.case_xpath):
             logger.info(f"  Getting sub-page at: {case_url}")
-            r = s.get(
+            r = await s.get(
                 case_url,
-                headers={"User-Agent": "Juriscraper"},
+                headers={"User-Agent": self.user_agent},
                 verify=certifi.where(),
                 timeout=60,
                 **request_dict,

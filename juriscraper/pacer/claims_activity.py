@@ -367,7 +367,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             data = {label: force_unicode(value)}
         return data
 
-    def query(
+    async def query(
         self,
         pacer_case_id: str,
         docket_number: str,
@@ -429,7 +429,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         else:
             post_param = "1-L_1_0-1"
 
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?{post_param}", data=params
         )
         self.parse()
