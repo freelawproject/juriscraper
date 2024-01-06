@@ -146,14 +146,14 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
-        "juriscraper.opinions.united_states.state.nysupct_commercial":[
+        "juriscraper.opinions.united_states.state.nysupct_commercial": [
             (
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5">\n<tbody><tr>\n<td align="center"><b>1125 Morris Ave. Realty LLC v Title Issues Agency\nLLC</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51345(U) [81 Misc 3d 1215(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on December 12, 2023</td>\n</tr>\n<tr>\n<td align="center">Supreme Court, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Gomez, J.</td>\n</tr>\n<tr>\n<td align="center"><font color="#FF0000">Published by <a href="https://www.courts.state.ny.us/reporter/">New York State Law Reporting\nBureau</a> pursuant to Judiciary Law § 431.</font></td>\n</tr>\n<tr>\n<td align="center"><font color="#FF0000">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</font></td></tr>\n</tbody></table><br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tbody><tr><td><br><div align="center"><b><font size="+1">1125 Morris\nAvenue Realty LLC, Plaintiff(s),\n\n<br><br>against<br><br>Title Issues Agency LLC, MARTIN E. KOFMAN,\nSTEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE,"\n"ABC CORPORATION," AND "XYZ CORPORATION,"\nDefendant(s).</font></b></div><br><br>\n\n</td></tr></tbody></table><br><br>Index No. 809156/23E\n<br><br>""",
                 {
-                    "Docket": {"docket_number": "809156/23E"},
+                    "Docket": {"docket_number": "Index No. 809156/23E"},
                     "Opinion": {"author_str": "Gomez"},
                     "Citation": {
-                        "volume": "81" ,
+                        "volume": "81",
                         "reporter": "Misc 3d",
                         "page": "1215(A)",
                     },
@@ -238,7 +238,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_23397.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>City of New York v "Doe"</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23397</td>\n</tr>\n<tr>\n<td align="center">Decided on December 18, 2023</td>\n</tr>\n<tr>\n<td align="center">Civil Court Of The City Of New York, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Zellan, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 18, 2023\n<br><div align="center">Civil Court of the City of New York, Bronx County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>City \n\tof New York, Petitioner(s),\n\n<br><br>against<br><br>"John" "Doe"; "Jane" "Doe"; "John" "Doe"; "Jane" "Doe", Respondent(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. LT-300755-22/BX\n<br><br>\n<br>""",
                 {
-                    "Docket": {"docket_number": "LT-300755-22/BX"},
+                    "Docket": {"docket_number": "Index No. LT-300755-22/BX"},
                     "Opinion": {"author_str": "Zellan"},
                 },
             ),
@@ -246,7 +246,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_51315.htm
                 """n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>201 E. 164th St. Assoc., LLC v Calderon</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51315(U) [81 Misc 3d 1211(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on December 4, 2023</td>\n</tr>\n<tr>\n<td align="center">Civil Court Of The City Of New York, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Ibrahim, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on December 4, 2023\n<br><div align="center">Civil Court of the City of New York, Bronx County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>201 East 164th\nStreet Associates, LLC, Petitioner,\n\n<br><br>against<br><br>Pastora Calderon &amp; ROSA IDALIA\nABDELNOUR, Respondents, \n     <br>"JOHN DOE" &amp; "JANE DOE" A/K/A DUNIA GOMEZ\nRespondents-Undertenants.</b></div><br><br>\n\n</td></tr></table><br><br>Index No. 11523/2020\n""",
                 {
-                    "Docket": {"docket_number": "11523/2020"},
+                    "Docket": {"docket_number": "Index No. 11523/2020"},
                     "Opinion": {"author_str": "Ibrahim"},
                     "Citation": {
                         "volume": "81",
@@ -261,8 +261,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_50144.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Matter of Pia Jeong Yoon</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 50144(U) [78 Misc 3d 1203(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on February 28, 2023</td>\n</tr>\n<tr>\n<td align="center">Surrogate\'s Court, Queens County</td>\n</tr>\n<tr>\n<td align="center">Kelly, S.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on February 28, 2023\n<br><div align="center">Surrogate\'s Court, Queens County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Probate\nProceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, \n     <br>a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON,\nDeceased.\n</b></div><br><br>\n</td></tr></table><br><br>File No. 2021-31/C\n<br><br>\n<br>Petitioner\'s Attorney: J. John Kim. Esq""",
                 {
-                    "Docket": {"docket_number": "2021-31/C"},
-                    "Opinion": {"author_str": "Kelly S."},
+                    "Docket": {"docket_number": "File No. 2021-31/C"},
+                    "Opinion": {"author_str": "Kelly"},
                     "Citation": {
                         "volume": "78",
                         "reporter": "Misc 3d",
@@ -297,7 +297,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.nycourts.gov/reporter/3dseries/2022/2022_50020.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Matter of Michelle B. v Thomas Y.</b></td>\n</tr>\n<tr>\n<td align="center">2022 NY Slip Op 50020(U) [73 Misc 3d 1238(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on January 11, 2022</td>\n</tr>\n<tr>\n<td align="center">Family Court, Kings County</td>\n</tr>\n<tr>\n<td align="center">Vargas, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau\npursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on January 11, 2022\n<br><div align="center">Family Court, Kings County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>In the Matter of a\nProceeding for Support Under Article 4 of the Family Court Act Michelle B., Petitioner,\n\n<br><br>against<br><br>Thomas Y., Respondent.</b></div><br><br>\n\n</td></tr></table><br><br>Docket No. F-30317/2004/19F\n<br><br>\n<br><br>The mother was""",
                 {
-                    "Docket": {"docket_number": "F-30317/2004/19F"},
+                    "Docket": {"docket_number": "Docket No. F-30317/2004/19F"},
                     "Opinion": {"author_str": "Vargas"},
                     "Citation": {
                         "volume": "73",
@@ -348,7 +348,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_50204.htm
                 """<div>\n\nMartinaj v State of New York (2023 NY Slip Op 50204(U))\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Martinaj v State of New York</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 50204(U) [78 Misc 3d 1211(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on March 2, 2023</td>\n</tr>\n<tr>\n<td align="center">Court Of Claims</td>\n</tr>\n<tr>\n<td align="center">Vargas, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on March 2, 2023\n<br><div align="center">Court of Claims</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Bernardo\nMartinaj, Claimant,\n\n<br><br>against<br><br>State of New York, Defendant.</b></div><br><br>\n\n</td></tr></table><br><br>Claim No. 136323-A\n<br><br>\n<br>For Claimant:<br>Bernardo Martinaj, Pro se<br><br>For Defendant:<br>Hon. Letitia James, Attorney General of the State of New York<br>By:""",
                 {
-                    "Docket": {"docket_number": "136323-A"},
+                    "Docket": {"docket_number": "Claim No. 136323-A"},
                     "Opinion": {"author_str": "Vargas"},
                     "Citation": {
                         "volume": "78",
@@ -363,7 +363,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51308.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Sims v Regis</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51308(U) [81 Misc 3d 1210(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on November 30, 2023</td>\n</tr>\n<tr>\n<td align="center">District Court Of Nassau County, Second District</td>\n</tr>\n<tr>\n<td align="center">Montesano, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on November 30, 2023\n<br><div align="center">District Court of Nassau County, Second District</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Alistair Sims,\nClaimant,\n\n<br><br>against<br><br>Lance Frantz Regis A/K/A LANCE REGIS A/K/A\nLANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ\nA/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ,\nDefendant(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. SC-000830-23/NA \n<br><br>\n<br>Alistair Sims;""",
                 {
-                    "Docket": {"docket_number": "SC-000830-23/NA"},
+                    "Docket": {"docket_number": "Index No. SC-000830-23/NA"},
                     "Opinion": {"author_str": "Montesano"},
                     "Citation": {
                         "volume": "81",
@@ -378,7 +378,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51421.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>People v Brennan</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51421(U)</td>\n</tr>\n<tr>\n<td align="center">Decided on December 22, 2023</td>\n</tr>\n<tr>\n<td align="center">Justice Court Of The Village Of Piermont, Rockland County</td>\n</tr>\n<tr>\n<td align="center">Ruby, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be published in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on December 22, 2023\n<br><div align="center">Justice Court of the Village of Piermont, Rockland County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>People of the State of New York, Plaintiff,\n\n<br><br>against<br><br>Matthew Brennan, Defendant.</b></div><br><br>\n\n</td></tr></table><br><br>Case No. 23-050020\n<br""",
                 {
-                    "Docket": {"docket_number": "23-050020"},
+                    "Docket": {"docket_number": "Case No. 23-050020"},
                     "Opinion": {"author_str": "Ruby"},
                 },
             )
@@ -388,7 +388,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://nycourts.gov/reporter/3dseries/2023/2023_23374.htm
                 """<div>\n\nPotentia Mgt. Group, LLC v D.W. (2023 NY Slip Op 23374)\n\n\n\n\n[*1]\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Potentia Mgt. Group, LLC v D.W.</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23374</td>\n</tr>\n<tr>\n<td align="center">Decided on December 1, 2023</td>\n</tr>\n<tr>\n<td align="center">Utica City Court</td>\n</tr>\n<tr>\n<td align="center">Giruzzi, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 1, 2023\n<br><div align="center">Utica City Court</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Potentia Management Group, LLC\n\n<br><br>against<br><br>D.W.</b></div><br><br>\n\n</td></tr></table><br><br>Docket No. CV-00357-23\n<br><br>\n<br><br>Ralph W. Fusco, Esq., for the Plaintiff<br><br""",
                 {
-                    "Docket": {"docket_number": "CV-00357-23"},
+                    "Docket": {"docket_number": "Docket No. CV-00357-23"},
                     "Opinion": {"author_str": "Giruzzi"},
                 },
             ),

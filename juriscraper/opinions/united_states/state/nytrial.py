@@ -5,7 +5,6 @@ Author: Gianfranco Rossi
 History:
  - 2024-01-05, grossir: created
 """
-import calendar
 import re
 from datetime import date
 from typing import Any, Dict, List, Optional
@@ -17,8 +16,8 @@ from lxml.html import fromstring as html_fromstring
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.string_utils import harmonize, clean_string
 
 
 class Site(OpinionSiteLinear):
@@ -71,8 +70,11 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath("//table[caption]//tr[position()>1]"):
-            court = row.xpath("td[2]")[0].text_content()
+        row_xpath = "//table[caption]//tr[position()>1 and td]"
+        for row in self.html.xpath(row_xpath):
+            court = re.sub(
+                r"\s+", " ", row.xpath("td[2]")[0].text_content()
+            ).strip(", ")
 
             if not self.is_court_of_interest(court):
                 logger.debug("Skipping %s", court)
@@ -130,14 +132,14 @@ class Site(OpinionSiteLinear):
         :return: Dictionary where each key is a courtlistener Django Model name
                 and each value is dictionary of model's fields
         """
-        docket_number = self.get_docket_number_from_text(scraped_text)
-        judge = self.get_judge_from_text(scraped_text)
-        citation = self.get_citation_from_text(scraped_text)
+        docket_number = self.get_docket_number(scraped_text)
+        judge = self.get_judge(scraped_text)
+        citation = self.get_citation(scraped_text)
 
         metadata = {}
 
         if docket_number:
-            clean_docket_number = clean_string(docket_number.strip())
+            clean_docket_number = clean_string(docket_number)
             metadata["Docket"] = {
                 "docket_number": harmonize(clean_docket_number)
             }
@@ -148,7 +150,7 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
-    def get_docket_number_from_text(self, scraped_text: str) -> str:
+    def get_docket_number(self, scraped_text: str) -> str:
         """Get docket number
         Sometimes it is explicit in a table at the beginning of the document
         with the heading 'Docket Number'
@@ -162,82 +164,44 @@ class Site(OpinionSiteLinear):
         :param scraped_text: scraped text
         :return: docket number if it exists
         """
-        match = re.search(r"Docket Number:(?P<docket>.+)", scraped_text)
-        if match:
-            return match.group("docket")
+        if "<table" in scraped_text:
+            html = html_fromstring(scraped_text)
+            docket_xpath = "//table[@width='75%']/following-sibling::text()"
+            element = html.xpath(docket_xpath)
+            docket = element[0] if element else ""
+        else:
+            docket_regex = r"Docket Number:(?P<docket>.+)"
+            match = re.search(docket_regex, scraped_text[:500])
+            docket = match.group("docket") if match else ""
 
-        regex = r"(Docket|Index|File|Claim|Case)\s(Number|No)\s?(\.|:)?\s(?P<docket>.+)"
-        match = re.search(regex, scraped_text[:2000])
-        if match:
-            return match.group("docket")
+        return docket.strip()
 
-        # If we reach this stage, the docket number is after the document
-        # heading table, but shouldn't be to deep into the document
+    def get_judge(self, scraped_text: str) -> str:
+        """Get judge from PDF or HTML text
 
-        # There are some purely numeric docket numbers, but strings with
-        # symbols or letters are prioritized
-
-        regex_special = r"[-/A-Z]"
-        matches = sorted(
-            re.finditer(r"[A-Z0-9-/]{5,}", scraped_text[500:2000]),
-            key=lambda x: len(re.findall(regex_special, x.group())),
-        )
-
-        if not matches:
-            return ""
-
-        return matches[-1].group()
-
-    def get_judge_from_text(self, scraped_text: str) -> str:
-        """
-        Extraction strategy may take advantage of HTML structure
-        If that doesn't work, search over free text
+        We delete a trailing ", J." or ", S." after judge's last names,
+        which appear in HTML tables. This are honorifics
+        For "S.": https://www.nycourts.gov/reporter/3dseries/2023/2023_50144.htm
 
         :param scraped_text: string from HTML or PDF
         :return: judge name
         """
-        judge = self.get_judge_from_html(scraped_text)
-
-        if not judge:
+        if "<table" in scraped_text:
+            html = html_fromstring(scraped_text)
+            td = html.xpath(
+                '//td[contains(text(), ", J.") or contains(text(), ", S.")]'
+            )
+            judge = td[0].text_content() if td else ""
+        else:
             match = re.search(r"Judge:\s?(?P<judge>.+)", scraped_text)
-            if match:
-                judge = match.group("judge")
-        
+            judge = match.group("judge") if match else ""
+
         judge = normalize_judge_string(clean_string(judge))[0]
-        
-        if judge.endswith(' J.'):
-            judge = judge.replace(' J.', '')
+        judge = re.sub(r" [JS]\.$", "", judge)
 
-        return judge
+        return judge.strip()
 
-    def get_judge_from_html(self, scraped_text: str) -> str:
-        """HTML files have a table where the judge is in the
-        3rd or 4th row. Content is checked in case the order of the table
-        is not as expected
-
-        3rd row: https://nycourts.gov/reporter/3dseries/2023/2023_23374.htm
-        4th row: https://nycourts.gov/reporter/3dseries/2023/2023_23374.htm
-
-        :param scraped_text: scraped text
-        :return: Judge if found, or empty string
-        """
-        if "<table" not in scraped_text:
-            return ""
-
-        html = html_fromstring(scraped_text)
-
-        months = "|".join(calendar.month_name[1:])
-        negative_regex = rf"Court|Ct|Published|Decided|Slip|{months}"
-
-        for index in range(2, 5):
-            candidate = html.xpath("//td")[index].text_content()
-
-            if not re.search(negative_regex, candidate):
-                return candidate.strip()
-
-        return ""
-
-    def get_citation_from_text(self, scraped_text: str) -> Dict[str, str]:
+    def get_citation(self, scraped_text: str) -> Dict[str, str]:
         """Extracts volume, reporter and page of citation that
         has the following shape [81 Misc 3d 1211(A)]
 
