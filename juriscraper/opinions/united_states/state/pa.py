@@ -5,6 +5,7 @@ Court Short Name: pa
 """
 import re
 
+from juriscraper.lib.html_utils import get_xml_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -24,13 +25,20 @@ class Site(OpinionSiteLinear):
         )
         self.cases = []
 
+    def _make_html_tree(self, text):
+        return get_xml_parsed_text(text)
+
     def _process_html(self):
         for item in self.html.xpath(self.base):
-            creator = item.xpath("./creator/text()")[0]
-            pubdate = item.xpath("./pubdate/text()")[0]
+            creator = item.xpath(
+                "./dc:creator/text()", namespaces=self.html.nsmap
+            )[0]
+            pubdate = item.xpath("./pubDate/text()")[0]
             title = item.xpath("./title/text()")[0]
             search = self.regex.search(title)
-            url = item.xpath("./link/@href")[0]
+            url = item.xpath("./atom:link/@href", namespaces=self.html.nsmap)[
+                0
+            ]
             if search:
                 name = search.group(1)
                 docket = search.group(2)

@@ -51,7 +51,8 @@ def get_html5_parsed_text(text: str) -> HtmlElement:
     :param text: The html of the document
     :return: an lxml.HtmlElement object
     """
-    parsed = html5parser.document_fromstring(text)
+    parser = html5parser.HTMLParser(namespaceHTMLElements=False)
+    parsed = html5parser.document_fromstring(text, parser=parser)
     return fromstring(tostring(parsed, encoding="unicode"))
 
 
