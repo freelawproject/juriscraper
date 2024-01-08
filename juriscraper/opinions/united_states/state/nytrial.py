@@ -150,9 +150,9 @@ class Site(OpinionSiteLinear):
         if cite_match:
             metadata["Citation"] = cite_match.groupdict("")
         if full_case:
-            metadata["OpinionCluster"] = {
-                "case_name_full": harmonize(full_case)
-            }
+            full_case = harmonize(full_case)
+            metadata["Docket"]["case_name_full"] = full_case
+            metadata["OpinionCluster"] = {"case_name_full": full_case}
 
         return metadata
 
