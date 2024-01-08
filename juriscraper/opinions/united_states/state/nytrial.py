@@ -121,7 +121,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: pdf or html string contents
         :return: dict where keys match courtlistener model objects
         """
-        pattern = r"Judge:\s?(.+)|([\w\s.,]+), [JS]\.\s"
+        pattern = r"Judge:\s?(.+)|([\w .,]+), [JS]\.\s"
         judge = self.match(scraped_text, pattern)
 
         pattern = r"</table><br><br\s?/?>\s?(.*)\r?\n|Docket Number:\s?(.+)"
@@ -150,9 +150,9 @@ class Site(OpinionSiteLinear):
         if cite_match:
             metadata["Citation"] = cite_match.groupdict("")
         if full_case:
-            metadata["OpinionCluster"] = {
-                "case_name_full": harmonize(full_case)
-            }
+            full_case = harmonize(full_case)
+            metadata["Docket"]["case_name_full"] = full_case
+            metadata["OpinionCluster"] = {"case_name_full": full_case}
 
         return metadata
 
