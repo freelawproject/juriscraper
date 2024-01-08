@@ -127,7 +127,7 @@ class Site(OpinionSiteLinear):
         pattern = r"</table><br><br\s?/?>\s?(.*)\r?\n|Docket Number:\s?(.+)"
         docket_number = self.match(scraped_text, pattern)
 
-        pattern = r"\[(?P<volume>\d+) (?P<reporter>Misc [23]d) (?P<page>.+)\]"
+        pattern = r"\[(?P<volume>\d+) (?P<reporter>Misc 3d) (?P<page>.+)\]"
         cite_match = re.search(pattern, scraped_text[:2000])
 
         # Only for .htm links
