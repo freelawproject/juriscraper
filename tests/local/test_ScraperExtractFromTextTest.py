@@ -157,6 +157,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "reporter": "Misc 3d",
                         "page": "1215(A)",
                     },
+                    "OpinionCluster": {
+                        "case_name_full": '1125 Morris Avenue Realty LLC, Plaintiff(s), against Title Issues Agency LLC, MARTIN E. KOFMAN, STEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE," "ABC CORPORATION," AND "XYZ CORPORATION," Defendant(s).'
+                    },
                 },
             )
         ],
@@ -230,6 +233,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "reporter": "Misc 3d",
                         "page": "1213(A)",
                     },
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York, against J.S., Adolescent Offender."
+                    },
                 },
             ),
         ],
@@ -240,6 +246,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {"docket_number": "Index No. LT-300755-22/BX"},
                     "Opinion": {"author_str": "Zellan"},
+                    "OpinionCluster": {
+                        "case_name_full": 'City of New York, Petitioner(s), against "John" "Doe" "Jane" "Doe" "John" "Doe" "Jane" "Doe", Respondent(s).'
+                    },
                 },
             ),
             (
@@ -248,6 +257,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {"docket_number": "Index No. 11523/2020"},
                     "Opinion": {"author_str": "Ibrahim"},
+                    "OpinionCluster": {
+                        "case_name_full": '201 East 164th Street Associates, LLC, against Pastora Calderon & ROSA IDALIA ABDELNOUR, "JOHN DOE" & "JANE DOE" A/K/A DUNIA GOMEZ Respondents-Undertenants.'
+                    },
                     "Citation": {
                         "volume": "81",
                         "reporter": "Misc 3d",
@@ -267,6 +279,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "78",
                         "reporter": "Misc 3d",
                         "page": "1203(A)",
+                    },
+                    "OpinionCluster": {
+                        "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON"
                     },
                 },
             ),
@@ -291,6 +306,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "reporter": "Misc 3d",
                         "page": "1210(A)",
                     },
+                    "OpinionCluster": {
+                        "case_name_full": "In the Matter of a Proceeding Under Article 6 of the Family Court Act Robyn C., against William M. J. (Deceased) and EVA JANE P."
+                    },
                 },
             ),
             (
@@ -303,6 +321,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "73",
                         "reporter": "Misc 3d",
                         "page": "1238(A)",
+                    },
+                    "OpinionCluster": {
+                        "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y."
                     },
                 },
             ),
@@ -319,6 +340,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "reporter": "Misc 3d",
                         "page": "1215(A)",
                     },
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York against Amela Hot"
+                    },
                 },
             ),
             (
@@ -331,6 +355,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "59",
                         "reporter": "Misc 3d",
                         "page": "1211(A)",
+                    },
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York, against James Smith"
                     },
                 },
             ),
@@ -350,6 +377,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {"docket_number": "Claim No. 136323-A"},
                     "Opinion": {"author_str": "Vargas"},
+                    "OpinionCluster": {
+                        "case_name_full": "Bernardo Martinaj, against State of New York"
+                    },
                     "Citation": {
                         "volume": "78",
                         "reporter": "Misc 3d",
@@ -370,6 +400,9 @@ class ScraperExtractFromText(unittest.TestCase):
                         "reporter": "Misc 3d",
                         "page": "1210(A)",
                     },
+                    "OpinionCluster": {
+                        "case_name_full": "Alistair Sims, against Lance Frantz Regis A/K/A LANCE REGIS A/K/A LANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ A/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ, Defendant(s)."
+                    },
                 },
             )
         ],
@@ -380,6 +413,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {"docket_number": "Case No. 23-050020"},
                     "Opinion": {"author_str": "Ruby"},
+                    "OpinionCluster": {
+                        "case_name_full": "People of the State of New York, against Matthew Brennan"
+                    },
                 },
             )
         ],
@@ -390,6 +426,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {"docket_number": "Docket No. CV-00357-23"},
                     "Opinion": {"author_str": "Giruzzi"},
+                    "OpinionCluster": {
+                        "case_name_full": "Potentia Management Group, LLC against D.W."
+                    },
                 },
             ),
         ],
