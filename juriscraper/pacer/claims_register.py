@@ -84,7 +84,9 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
         # Each cell in the header table has a value like:
         # <td><b>Judge:</b>  Barbara J. Houser</td>
-        cells = self.tree.xpath("//center/p/table[1]//td[text()]")
+        cells = self.tree.xpath(
+            "//center/p/following-sibling::table[1]//td[text()]"
+        )
         for cell in cells:
             label_node = cell.xpath("./b")[0]
             data.update(

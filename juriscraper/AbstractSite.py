@@ -394,9 +394,10 @@ class AbstractSite:
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
-                html_tree.rewrite_links(
-                    fix_links_in_lxml_tree, base_href=self.request["url"]
-                )
+                if hasattr(html_tree, "rewrite_links"):
+                    html_tree.rewrite_links(
+                        fix_links_in_lxml_tree, base_href=self.request["url"]
+                    )
                 return html_tree
 
     def _get_html_tree_by_url(self, url, parameters={}):
