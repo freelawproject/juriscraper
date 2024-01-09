@@ -16,6 +16,22 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.78 - 2024-01-08**
+
+Features:
+
+- Add ten new NY Trial Courts
+- Add Maine Superior Court
+
+Changes:
+
+- Add child_courts attribute
+- Fix VI chore
+- Update python dep.
+
+
+## Past
+
 **2.5.76 - 2023-12-28**
 
 Features:
@@ -23,9 +39,6 @@ Features:
 - Add Bankruptcy Appellate Panel 1st Circuit
 
 Changes:
-
-
-## Past
 
 **2.5.75 - 2023-12-28**
 

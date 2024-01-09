@@ -52,4 +52,3 @@ class Site(OpinionSiteLinear):
                     "url": url,
                 }
             )
-            print(self.cases)
