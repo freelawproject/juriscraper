@@ -16,7 +16,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.5.77 - 2024-01-08**
+**2.5.78 - 2024-01-08**
 
 Features:
 
