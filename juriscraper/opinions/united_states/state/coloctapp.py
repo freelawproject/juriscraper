@@ -24,6 +24,8 @@ class Site(OpinionSiteLinear):
         self.status = None
 
     def _process_html(self):
+        if self.test_mode_enabled():
+            self.year = "2023"
         date = self.html.xpath("//div/p/a/text()")[0]
         for row in self.html.xpath("//p"):
             modified_string = re.sub(r"\s", "", row.text_content())
