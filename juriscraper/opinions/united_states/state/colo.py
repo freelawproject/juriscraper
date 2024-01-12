@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
-        self.url = f"https://www.courts.state.co.us/Courts/Supreme_Court/Proceedings/Index.cfm"
+        self.url = "https://www.courts.state.co.us/Courts/Supreme_Court/Proceedings/Index.cfm"
 
     def _process_html(self):
         """"""
@@ -113,6 +113,7 @@ class Site(OpinionSiteLinear):
                     "volume": vol,
                     "reporter": reporter,
                     "page": page,
+                    "type": 8,  # NEUTRAL in courtlistener Citation model
                 },
             }
         return {}
