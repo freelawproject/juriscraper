@@ -149,6 +149,7 @@ class Site(OpinionSiteLinear):
             }
         if cite_match:
             metadata["Citation"] = cite_match.groupdict("")
+            metadata["Citation"]["type"] = 2  # 'State' type in courtlistener
         if full_case:
             full_case = harmonize(full_case)
             metadata["Docket"]["case_name_full"] = full_case
