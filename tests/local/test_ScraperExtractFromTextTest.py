@@ -160,6 +160,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "81",
                         "reporter": "Misc 3d",
                         "page": "1215(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": '1125 Morris Avenue Realty LLC, Plaintiff(s), against Title Issues Agency LLC, MARTIN E. KOFMAN, STEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE," "ABC CORPORATION," AND "XYZ CORPORATION," Defendant(s).'
@@ -239,6 +240,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "66",
                         "reporter": "Misc 3d",
                         "page": "1213(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York, against J.S., Adolescent Offender."
@@ -277,6 +279,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "81",
                         "reporter": "Misc 3d",
                         "page": "1211(A)",
+                        "type": 2,
                     },
                 },
             ),
@@ -295,6 +298,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "78",
                         "reporter": "Misc 3d",
                         "page": "1203(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON"
@@ -324,6 +328,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "66",
                         "reporter": "Misc 3d",
                         "page": "1210(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "In the Matter of a Proceeding Under Article 6 of the Family Court Act Robyn C., against William M. J. (Deceased) and EVA JANE P."
@@ -343,6 +348,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "73",
                         "reporter": "Misc 3d",
                         "page": "1238(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y."
@@ -364,6 +370,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "58",
                         "reporter": "Misc 3d",
                         "page": "1215(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York against Amela Hot"
@@ -383,6 +390,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "59",
                         "reporter": "Misc 3d",
                         "page": "1211(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York, against James Smith"
@@ -415,6 +423,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "78",
                         "reporter": "Misc 3d",
                         "page": "1211(A)",
+                        "type": 2,
                     },
                 },
             ),
@@ -433,6 +442,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "81",
                         "reporter": "Misc 3d",
                         "page": "1210(A)",
+                        "type": 2,
                     },
                     "OpinionCluster": {
                         "case_name_full": "Alistair Sims, against Lance Frantz Regis A/K/A LANCE REGIS A/K/A LANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ A/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ, Defendant(s)."
