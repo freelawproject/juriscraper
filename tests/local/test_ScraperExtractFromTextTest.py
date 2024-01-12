@@ -106,6 +106,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "volume": "2023",
                         "reporter": "CO",
                         "page": "63",
+                        "type": 8,
                     }
                 },
             ),
