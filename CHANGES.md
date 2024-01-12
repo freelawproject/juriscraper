@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.81 - 2024-01-12**
+
+Features:
+
+Changes:
+
+- Fix colo / Nytrial courts
+
+## Past
+
 **2.5.80 - 2024-01-10**
 
 Features:
@@ -23,10 +33,7 @@ Features:
 Changes:
 
 - Fix compatibility with newer lxml
-- replace lxml sanitier with nh3
-
-
-## Past
+- Replace lxml sanitier with nh3
 
 **2.5.78 - 2024-01-08**
 
