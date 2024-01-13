@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.82 - 2024-01-12**
+
+Features:
+
+Changes:
+
+- Fix CADC
+
+## Past
+
 **2.5.81 - 2024-01-12**
 
 Features:
@@ -23,8 +33,6 @@ Features:
 Changes:
 
 - Fix colo / Nytrial courts
-
-## Past
 
 **2.5.80 - 2024-01-10**
 
