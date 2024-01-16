@@ -464,6 +464,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 case_url = self._get_case_anchor(current_node)
 
         if description is not None:
+            # "doc" value for document_number will cause an error on
+            # DocketEntry queries. See issue #799
+            if document_number and document_number == "doc":
+                document_number = None
+
             entries = [
                 {
                     "date_filed": self._get_date_filed(),
