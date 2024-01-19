@@ -5,6 +5,8 @@ from typing import Dict, List, Optional, TypedDict, Union
 
 from lxml.html import HtmlElement
 
+from juriscraper.AbstractSite import logger
+
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
@@ -66,23 +68,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         # Emails with attached images should be ignored.
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
+
         base = {
             "court_id": self.court_id,
         }
+        parsed = {
+            "appellate": self._is_appellate(),
+            "dockets": self._get_dockets(),
+        }
         if self.content_type == "text/plain":
-            parsed = {
-                "appellate": self._is_appellate(),
-                "contains_attachments": self._contains_attachments_plain(),
-                "dockets": self._get_dockets(),
-                "email_recipients": self._get_email_recipients_plain(),
-            }
+            parsed["contains_attachments"] = self._contains_attachments_plain()
+            parsed["email_recipients"] = self._get_email_recipients_plain()
         else:
-            parsed = {
-                "appellate": self._is_appellate(),
-                "contains_attachments": self._contains_attachments(),
-                "dockets": self._get_dockets(),
-                "email_recipients": self._get_email_recipients(),
-            }
+            parsed["contains_attachments"] = self._contains_attachments()
+            parsed["email_recipients"] = self._get_email_recipients()
         return {**base, **parsed}
 
     def _is_appellate(self) -> bool:
@@ -380,6 +379,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         dockets = []
         if self.content_type == "text/plain":
             docket_number = self._get_docket_number_plain()
+            # Cache the docket number for its later use.
+            self.docket_numbers.append(docket_number)
+
             docket = {
                 "case_name": self._get_case_name_plain(),
                 "docket_number": docket_number,
@@ -387,8 +389,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "docket_entries": self._get_docket_entries(),
             }
             dockets.append(docket)
-            # Cache the docket number for its later use.
-            self.docket_numbers.append(docket_number)
         else:
             dockets_table = self.tree.xpath(
                 "//table[contains(., 'Case Name:')]"
@@ -521,13 +521,22 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if len(self.docket_numbers) > 1:
             # Since we don't have examples for bankruptcy multi docket NEF.
             # No short_description parsing support yet.
+            logger.error(
+                "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
+                self.court_id,
+                extra={
+                    "fingerprint": [
+                        f"{self.court_id}-not-parsing-multi-docket-short-description"
+                    ]
+                },
+            )
             return ""
 
         short_description = ""
         docket_number = self.docket_numbers[0]
         case_name = self.case_names[0]
 
-        if self.court_id == "cacb" or self.court_id == "ctb":
+        if self.court_id in ["cacb", "ctb", "cob"]:
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
             # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
@@ -565,6 +574,17 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
             short_description = subject.split(case_name)[-1]
+
+        else:
+            logger.error(
+                "Short description has no parsing for bankruptcy court '%s'",
+                self.court_id,
+                extra={
+                    "fingerprint": [
+                        f"{self.court_id}-not-parsing-short-description"
+                    ]
+                },
+            )
 
         return short_description
 
