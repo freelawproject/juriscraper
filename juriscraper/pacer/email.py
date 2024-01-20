@@ -435,7 +435,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             description = self._get_description_plain()
             if description is not None:
                 email_body = self.tree.text_content()
-                regex = r"view the document:[\r\n]+([^\r\n]+)"
+                regex = r"view the document:[\r\n\s]+([^\r\n]+)"
                 url = re.findall(regex, email_body)
                 if url:
                     document_url = url[0]
