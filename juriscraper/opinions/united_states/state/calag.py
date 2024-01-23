@@ -5,6 +5,7 @@ Court Short Name: California Attorney General
 
 import datetime
 
+from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -19,6 +20,16 @@ class Site(OpinionSite):
         self.back_scrape_iterable = list(range(1985, self.year + 1))
         self.rows_path = '//tbody/tr[contains(./td[1]//a/@href, ".pdf")]'
         self.cell_path = f"{self.rows_path}/td[%d]"
+        self._mount_ssl_adapter()
+
+    def _mount_ssl_adapter(self):
+        """Configures and mounts an SSL adapter to a given session
+
+        :return: None
+        """
+        self.request["session"].mount(
+            "https://", SSLAdapter(ciphers="ECDHE-RSA-AES128-GCM-SHA256")
+        )
 
     def _get_case_names(self):
         """No case names available"""

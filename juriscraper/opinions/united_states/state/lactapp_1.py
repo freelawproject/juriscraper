@@ -8,11 +8,13 @@ History:
 
 import math
 import re
+import ssl
 
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
+from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -30,6 +32,16 @@ class Site(OpinionSiteLinear):
         # (Unpublished cases have "Not Designated For Publication" on
         # the cover page.)
         self.status = "Unknown"
+        self._mount_ssl_adapter()
+
+    def _mount_ssl_adapter(self):
+        """Configures and mounts an SSL adapter to a given session
+
+        :return: None
+        """
+        self.request["session"].mount(
+            "https://", SSLAdapter(ciphers="AES128-SHA")
+        )
 
     def _process_html(self):
         for row in self.html.cssselect("#opinion_contentTable tbody tr"):

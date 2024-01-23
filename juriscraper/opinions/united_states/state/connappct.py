@@ -10,6 +10,7 @@ History:
 
 from datetime import date
 
+from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -20,6 +21,16 @@ class Site(OpinionSiteLinear):
         self.year = date.today().strftime("%y")
         self.url = f"http://www.jud.ct.gov/external/supapp/archiveAROap{self.year}.htm"
         self.status = "Published"
+        self._mount_ssl_adapter()
+
+    def _mount_ssl_adapter(self):
+        """Configures and mounts an SSL adapter to a given session
+
+        :return: None
+        """
+        self.request["session"].mount(
+            "https://", SSLAdapter(ciphers="AES256-SHA256")
+        )
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
