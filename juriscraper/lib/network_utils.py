@@ -1,27 +1,26 @@
 import random
+import ssl
 import time
 
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.poolmanager import PoolManager
+from urllib3.util.ssl_ import create_urllib3_context
 
 from juriscraper.AbstractSite import logger
 
 
 class SSLAdapter(HTTPAdapter):
-    """An HTTPS Transport Adapter that uses an arbitrary SSL version."""
-
-    def __init__(self, ssl_version=None, **kwargs):
-        self.ssl_version = ssl_version
-
+    def __init__(
+        self, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers=None, **kwargs
+    ):
+        self.ssl_version = ssl_version or ssl.PROTOCOL_TLS
+        self.ssl_context = create_urllib3_context(
+            ssl_version=self.ssl_version, ciphers=ciphers
+        )
         super().__init__(**kwargs)
 
-    def init_poolmanager(self, connections, maxsize, block=False):
-        self.poolmanager = PoolManager(
-            num_pools=connections,
-            maxsize=maxsize,
-            block=block,
-            ssl_version=self.ssl_version,
-        )
+    def init_poolmanager(self, *args, **kwargs):
+        kwargs["ssl_context"] = self.ssl_context
+        return super().init_poolmanager(*args, **kwargs)
 
 
 def add_delay(delay=0, deviation=0):
