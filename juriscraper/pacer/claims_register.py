@@ -69,6 +69,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             "date_filed": "date_filed",
             "debtor_dismissed": "date_debtor_dismissed",
             "judge": "assigned_to_str",
+            "honorable_judge": "assigned_to_str",  # see ilnb.html test
+            "chief_judge": "assigned_to_str",  # see pamb.html test
             "office": "office",
             "trustee": "trustee_str",
             "last_date_to_file_claims": "date_last_to_file_claims",
@@ -85,7 +87,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         # Each cell in the header table has a value like:
         # <td><b>Judge:</b>  Barbara J. Houser</td>
         cells = self.tree.xpath(
-            "//center/p/following-sibling::table[1]//td[text()]"
+            "//center/p/following-sibling::table[1]//td[text() and b]"
         )
         for cell in cells:
             label_node = cell.xpath("./b")[0]
