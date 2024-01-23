@@ -269,7 +269,7 @@ class BaseDocketReport:
         #     label = label.decode("utf-8")
 
         label = (
-            label.strip()
+            re.sub(r"[\s\n]+", " ", label.strip())
             .lower()
             .replace(" ", "_")
             .replace("\xa0", "_")  # Non-breaking space
