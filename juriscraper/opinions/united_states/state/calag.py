@@ -19,6 +19,8 @@ class Site(OpinionSite):
         self.back_scrape_iterable = list(range(1985, self.year + 1))
         self.rows_path = '//tbody/tr[contains(./td[1]//a/@href, ".pdf")]'
         self.cell_path = f"{self.rows_path}/td[%d]"
+        self.cipher = "ECDHE-RSA-AES128-GCM-SHA256"
+        self.set_custom_adapter(self.cipher)
 
     def _get_case_names(self):
         """No case names available"""
