@@ -21,14 +21,6 @@ class Site(OpinionSite):
             )
         ]
 
-    # def _get_adapter_instance(self):
-    #     """Unfortunately this court doesn't support modern crypto, so you have
-    #     to manually downgrade the crypto it uses.
-    #
-    #     See: http://stackoverflow.com/questions/14102416/
-    #     """
-    #     return SSLAdapter(ssl_version=ssl.PROTOCOL_TLSv1)
-
     def _get_case_names(self):
         return [
             e
