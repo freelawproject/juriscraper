@@ -15,7 +15,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
-        self.year = 2023
         self.url = f"https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]={self.year}"
         self.back_scrape_iterable = list(range(1985, self.year + 1))
         self.cipher = "ECDHE-RSA-AES128-GCM-SHA256"
