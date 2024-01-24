@@ -31,6 +31,7 @@ class OpinionSite(AbstractSite):
             "summaries",
             "case_name_shorts",
             "child_courts",
+            "opinion_types",
         ]
         self._req_attrs = [
             "case_dates",
@@ -110,6 +111,9 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_child_courts(self):
+        return None
+
+    def _get_opinion_types(self):
         return None
 
     def extract_from_text(self, scraped_text):
