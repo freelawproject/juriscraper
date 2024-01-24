@@ -13,8 +13,13 @@ class Site(OpinionSiteLinear):
         )
         self.status = "Published"
 
-    def _process_html(self):
-        for row in self.html.xpath(".//tbody//tr"):
+    def _process_html(self) -> None:
+        """Parse HTML into case objects
+
+        :return: None
+        """
+        row_xpath = ".//tbody//tr[.//a[text() and not(@title='Summary')]]"
+        for row in self.html.xpath(row_xpath):
             (
                 case_name,
                 date_filed,
