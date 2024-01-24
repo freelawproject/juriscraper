@@ -30,6 +30,8 @@ class Site(OpinionSiteLinear):
         # (Unpublished cases have "Not Designated For Publication" on
         # the cover page.)
         self.status = "Unknown"
+        self.cipher = "AES128-SHA"
+        self.set_custom_adapter(self.cipher)
 
     def _process_html(self):
         for row in self.html.cssselect("#opinion_contentTable tbody tr"):
