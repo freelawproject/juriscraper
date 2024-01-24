@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                     "date": row.xpath(".//td/span/text()")[0].strip(),
                     "name": f"California Attorney General Opinion {docket}",
-                    "summaries": self.build_summaries(row),
+                    "summary": self.build_summaries(row),
                 }
             )
 
