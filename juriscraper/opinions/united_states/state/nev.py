@@ -23,7 +23,12 @@ class Site(OpinionSiteLinear):
         self.search = "https://caseinfo.nvsupremecourt.us/public/caseSearch.do"
         self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
         self.status = "Published"
-        self.now = datetime.now()
+
+    def set_now(self):
+        if self.test_mode_enabled():
+            self.now = datetime.fromisoformat("2023-11-02T00:00:00")
+        else:
+            self.now = datetime.now()
 
     def correct_court(self, case):
         if "COA" not in case["caseNumber"]:
@@ -31,6 +36,7 @@ class Site(OpinionSiteLinear):
 
     def _download(self, **kwargs):
         """"""
+        self.set_now()
         if self.test_mode_enabled():
             return json.load(open(self.url))
         return (
