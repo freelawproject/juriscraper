@@ -15,15 +15,23 @@ class Site(OpinionSiteLinear):
         self.court_code = "S.Ct"
         self.status = "Published"
 
-    def _process_html(self):
+    def _process_html(self) -> None:
+        """Parse HTML into case objects
+
+        :return: None
+        """
         for row in self.html.xpath("//tr[@class='row-']"):
             date, court, docket, name, lower_court, citation = row.xpath(
                 ".//td"
             )
-            name = name.text_content().split("(")[0]
             court = court.text_content()
             if court != self.court_code:
                 continue
+
+            if not docket.xpath(".//a"):
+                continue
+
+            name = name.text_content().split("(")[0]
             self.cases.append(
                 {
                     "date": date.text_content(),
