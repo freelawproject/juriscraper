@@ -32,11 +32,11 @@ class Site(OpinionSiteLinear):
         return f"QUESTIONS: {questions} CONCLUSIONS: {conclusions}"
 
     def _process_html(self) -> None:
-        """Process California AG page
+        """Process California AG HTML
 
-        :return: Nothing
+        :return: none
         """
-        for row in self.html.xpath("//table/tbody/tr"):
+        for row in self.html.xpath("//table/tbody/tr[.//a]"):
             docket = row.xpath(".//a//strong/text()")[0].strip()
             self.cases.append(
                 {
@@ -50,10 +50,9 @@ class Site(OpinionSiteLinear):
             )
 
     def _download_backwards(self, year: str) -> None:
-        """Backscraper
+        """Download backwards
 
         :param year: The year to scrape
         :return: None
         """
         self.url = f"https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]={year}"
-        self.html = self._download()
