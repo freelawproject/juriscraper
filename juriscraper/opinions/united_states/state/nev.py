@@ -6,6 +6,12 @@ History:
 """
 
 
+import json
+from datetime import datetime
+
+from lxml.html import fromstring
+
+from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -14,14 +20,19 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://publicaccess.nvsupremecourt.us/WebSupplementalAPI/api/AdvanceOpinions"
+        self.search = "https://caseinfo.nvsupremecourt.us/public/caseSearch.do"
+        self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
         self.status = "Published"
+        self.now = datetime.now()
 
-    def _download(self):
+    def correct_court(self, case):
+        if "COA" not in case["caseNumber"]:
+            return True
+
+    def _download(self, **kwargs):
+        """"""
         if self.test_mode_enabled():
-            import json
-
             return json.load(open(self.url))
-
         return (
             self.request["session"]
             .get(
@@ -35,13 +46,48 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         for case in self.html:
-            if "COA" in case["caseNumber"]:
+            if not self.correct_court(case):
                 continue
+
+            if (self.now - datetime.fromisoformat(case["date"])).days > 30:
+                # Stop at 30 days
+                break
             self.cases.append(
                 {
                     "name": case["caseTitle"],
                     "docket": case["caseNumber"],
                     "date": case["date"],
-                    "url": case["docurl"],
+                    "url": "placeholder",
                 }
             )
+
+    def fetch_document_link(self, csNumber: str):
+        """"""
+        data = {
+            "action": "",
+            "csNumber": csNumber,
+            "shortTitle": "",
+            "exclude": "off",
+            "startRow": "1",
+            "displayRows": "50",
+            "orderBy": "CsNumber",
+            "orderDir": "DESC",
+            "href": "/public/caseView.do",
+            "submitValue": "Search",
+        }
+        content = self.request["session"].post(self.search, data=data).text
+        slug = fromstring(content).xpath(self.xp)[0]
+        return f"https://caseinfo.nvsupremecourt.us{slug}"
+
+    def _get_download_urls(self):
+        """Get download urls
+
+        :return: List URLs
+        """
+
+        def fetcher(case):
+            if self.test_mode_enabled():
+                return case["url"]
+            return self.fetch_document_link(case["docket"])
+
+        return DeferringList(seed=self.cases, fetcher=fetcher)
