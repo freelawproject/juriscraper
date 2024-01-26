@@ -44,7 +44,13 @@ class Site(OpinionSiteLinear):
         )
 
     def filter_cases(self):
-        """"""
+        """Filter JSON to last two opinions without dupes
+
+        Consolidated cases get listed multiple times so we want to remove
+        those as well to avoid duplication issues
+
+        :return: List of cases to download
+        """
         cases = []
         for case in self.html:
             advances = [case["advanceNumber"] for case in cases]
