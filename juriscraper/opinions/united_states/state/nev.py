@@ -63,7 +63,7 @@ class Site(OpinionSiteLinear):
         """
         for case in self.filter_cases():
             vol = int(case["date"].split("-")[0]) - 1884
-            citation = f"{vol} Nev. Advance Opinion {case['advanceNumber']}"
+            citation = f"{vol} Nev., Advance Opinion {case['advanceNumber']}"
             self.cases.append(
                 {
                     "citation": citation,
