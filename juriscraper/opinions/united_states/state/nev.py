@@ -7,8 +7,6 @@ History:
 
 
 import json
-from datetime import datetime
-from typing import Dict
 
 from lxml.html import fromstring
 
@@ -24,29 +22,7 @@ class Site(OpinionSiteLinear):
         self.search = "https://caseinfo.nvsupremecourt.us/public/caseSearch.do"
         self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
         self.status = "Published"
-
-    def set_now(self) -> None:
-        """Define the now variable
-
-        Use hard coded value for tests
-
-        :return: None
-        """
-        if self.test_mode_enabled():
-            self.now = datetime.fromisoformat("2023-11-02T00:00:00")
-        else:
-            self.now = datetime.now()
-
-    def correct_court(self, case: Dict) -> bool:
-        """Filter out cases based on court
-
-        Check the case number to see if its a COA case or not
-
-        :param case: the case information
-        :return: if it is a COA case or not
-        """
-        if "COA" not in case["caseNumber"]:
-            return True
+        self.court_code = "10001"
 
     def _download(self, **kwargs):
         """Download the JSON to parse
@@ -54,7 +30,6 @@ class Site(OpinionSiteLinear):
         :param kwargs:
         :return: None
         """
-        self.set_now()
         if self.test_mode_enabled():
             return json.load(open(self.url))
         return (
@@ -68,16 +43,30 @@ class Site(OpinionSiteLinear):
             .json()
         )
 
-    def _process_html(self):
+    def filter_cases(self):
+        """"""
+        cases = []
         for case in self.html:
-            if not self.correct_court(case):
+            advances = [case["advanceNumber"] for case in cases]
+            if (
+                "COA" in case["caseNumber"]
+                or case["advanceNumber"] in advances
+            ):
                 continue
+            cases.append(case)
+        return cases[:20]
 
-            if (self.now - datetime.fromisoformat(case["date"])).days > 30:
-                # Stop at 30 days
-                break
+    def _process_html(self):
+        """Process Nevada Case Opinions
+
+        :return: None
+        """
+        for case in self.filter_cases():
+            vol = int(case["date"].split("-")[0]) - 1884
+            citation = f"{vol} Nev. Advance Opinion {case['advanceNumber']}"
             self.cases.append(
                 {
+                    "citation": citation,
                     "name": case["caseTitle"],
                     "docket": case["caseNumber"],
                     "date": case["date"],
@@ -99,6 +88,7 @@ class Site(OpinionSiteLinear):
             "csNumber": csNumber,
             "shortTitle": "",
             "exclude": "off",
+            "courtID": self.court_code,
             "startRow": "1",
             "displayRows": "50",
             "orderBy": "CsNumber",
