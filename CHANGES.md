@@ -16,6 +16,30 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.84 - 2024-01-26**
+
+Features:
+
+Changes:
+
+- Update Nevada/Nev App (again)
+
+## Past
+
+**2.5.83 - 2024-01-25**
+
+Features:
+
+Changes:
+
+- Fix Hawaii App
+- Nevada/Nev App
+- VI Superior
+- Cal AG
+- LA Ct APP
+- Updates the SSL Adapter
+- Various RECAP Pacer Fixes
+
 **2.5.82 - 2024-01-12**
 
 Features:
@@ -23,8 +47,6 @@ Features:
 Changes:
 
 - Fix CADC
-
-## Past
 
 **2.5.81 - 2024-01-12**
 
