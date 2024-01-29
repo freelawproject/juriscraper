@@ -14,7 +14,6 @@ from typing import Optional
 from dateutil import parser
 from dateutil.parser import ParserError
 
-from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -40,35 +39,29 @@ class Site(OpinionSiteLinear):
         Some docket numbers are a consolidation of other dockets
         For example: "CVA12-018 (consolidated with CVA12-030)"
         Deleting the date and citation from the free text allows us
-        to catch these dockets name
+        to catch these names
 
         :return: None
         """
+        middle_of_the_year = f"{self._year}/07/13"
+
         row_xpath = '//a[@id="Opinion"]/following-sibling::table'
         for table in self.html.xpath(row_xpath):
             text = table.xpath(".//td/text()")[0]
 
-            date = self.find_date(text)
-            if not date:
-                logger.error(
-                    "Could not find date for record in guam scraper Year: %s",
-                    self._year,
-                )
-                continue
-
             # Seen formats: 2021-Guam 3, 2021 Guam 29, 2020 Guam15,
             # Edge cases which will be left empty: "Guam 7", "014 Guam 31"
+            citation = ""
             citation_match = re.search(r"\d{4}[\s-]*Guam[\s-]*\d{1,2}", text)
             if citation_match:
                 text = text.replace(citation_match.group(0), " ")
                 citation = citation_match.group(0)
-            else:
-                citation = ""
 
+            row_date = self.find_date(text)
             name = table.xpath(".//a/text()")[0]
-            docket = (
-                text.replace(date, "").replace(" filed ", "").strip(" .,\r\n")
-            )
+            docket = text.replace(row_date, "") if row_date else text
+            docket = docket.replace(" filed ", "").strip(" .,\r\n")
+
             # If the docket is not in the free text, sometimes it is at the end
             # of the case name. Sometimes, it does not exist
             if not docket:
@@ -81,7 +74,8 @@ class Site(OpinionSiteLinear):
                     "url": table.xpath(".//a/@href")[0],
                     "name": name,
                     "docket": docket,
-                    "date": date,
+                    "date": row_date or middle_of_the_year,
+                    "date_filed_is_approximate": row_date is None,
                     "citation": citation,
                 }
             )
