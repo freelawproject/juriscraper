@@ -308,27 +308,29 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             f"Can't get docket entry description, court: {self.court_id}"
         )
 
-    def _get_description_plain(self):
+    def _get_description_plain(self) -> str:
         """Gets the docket text for plain email
 
+        :raises: Exception if description can't be parsed
         :returns: Cleaned docket text
         """
         email_body = self.tree.text_content()
-        regex = r"^.*?Docket Text:(.*?)electronically mailed to:"
-        find_description = re.findall(regex, email_body, re.DOTALL)
+        regex = r"^.*?Docket Text:(?P<descr>.*?)(The following document|electronically mailed to:)"
+        find_description = re.search(regex, email_body, re.DOTALL)
+
         description = ""
         if find_description:
-            splitlines = find_description[0].splitlines()
-            for index_line in range(len(splitlines)):
-                if "Notice has been" not in splitlines[index_line]:
-                    # Build description line by line
-                    description = f"{description} {splitlines[index_line]}"
-                else:
-                    # Stop looking for description lines
+            for line in find_description.group("descr").splitlines():
+                if "Notice has been" in line:
                     break
-        description = clean_string(description)
+
+                # Build description line by line
+                description += f" {line}"
+            description = clean_string(description)
+
         if description:
             return description
+
         raise Exception(
             f"Can't get docket entry description for court: {self.court_id}"
         )
@@ -351,20 +353,17 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :returns: True if it contains otherwise False.
         """
-
         mail_body = self.tree.text_content()
         regex = r"^.*?The following document\(s\) are associated with this transaction:(.*?)$"
-
         find_attachments = re.findall(regex, mail_body, re.DOTALL)
+
         associated_documents = 0
         if find_attachments:
-            splitlines = find_attachments[0].splitlines()
-            for index_line in range(len(splitlines)):
-                if "Document description:" in splitlines[index_line]:
-                    associated_documents = +1
-        if associated_documents <= 1:
-            return False
-        return True
+            for line in find_attachments[0].splitlines():
+                if "Document description:" in line:
+                    associated_documents += 1
+
+        return associated_documents > 1
 
     def _get_dockets(self) -> DocketType:
         """Get all the dockets mentioned in the notification.
