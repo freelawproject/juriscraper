@@ -23,69 +23,63 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = date.today().strftime("%y")
-        self.url = (
-            f"http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm"
-        )
+        self.year = date.today().strftime("%y")
+        self.url = f"http://www.jud.ct.gov/external/supapp/archiveAROsup{self.year}.htm"
         self.status = "Published"
         self.cipher = "AES256-SHA256"
         self.set_custom_adapter(self.cipher)
 
     @staticmethod
-    def find_docket_numbers(text: str) -> str:
-        """Find docket numbers in row
+    def find_published_date(date_str: str) -> str:
+        """Extract published date
 
-        :param text: the row text
-        :return: return docket numbers
+        :param date_str: The row text
+        :return: The date string
         """
-        matches = re.findall(r"SC\d+", text)
-        return ", ".join(matches)
-
-    @staticmethod
-    def remove_excess_whitespace(text: str) -> str:
-        return re.sub(r"\s+", " ", text)
-
-    @staticmethod
-    def find_published_date(row):
-        closest_published = row.xpath(
-            "preceding::*[contains(., 'Published')][1]"
-        )
-        date_str = closest_published[0].text_content()
         m = re.search(
-            r"(\b\d{1,2}/\d{1,2}/\d{4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)",
+            r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)",
             date_str,
         )
         return m.groups()[0] if m.groups()[0] else m.groups()[1]
+
+    def extract_dockets_and_name(self, row) -> [str, str]:
+        """Extract the docket and case name from each row
+
+        :param row: Row to process
+        :return: Docket(s) and Case Name
+        """
+        text = " ".join(row.xpath("ancestor::li[1]//text()"))
+        clean_text = re.sub(r"[\n\r\t\s]+", " ", text)
+        m = re.match(
+            r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? - (?P<case_name>.*)",
+            clean_text,
+        )
+        if not m:
+            # Handle bad inputs
+            m = re.match(
+                r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? (?P<case_name>.*)",
+                clean_text,
+            )
+        op_type = m.group("op_type")
+        name = m.group("case_name")
+        if op_type:
+            name = f"{name} ({op_type.strip()})"
+        return m.group("dockets"), name
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
-        pdf_xpath = "//table[@id='AutoNumber1']//a[contains(@href, '.pdf')]"
-        for row in self.html.xpath(pdf_xpath):
-            url = row.get("href")
-            link_text = row.text_content().strip()
-            full_row_text = row.getparent().text_content().strip()
-            if link_text == full_row_text:
-                # Fix for atypical bug found in an older year
-                full_row_text = (
-                    row.getparent().getparent().text_content().strip()
-                )
-            docket_with_type_opt = self.remove_excess_whitespace(link_text)
-            name = (
-                self.remove_excess_whitespace(full_row_text)
-                .replace(docket_with_type_opt, "")
-                .strip("- ")
-            )
-            date = self.find_published_date(row)
-            dockets = self.find_docket_numbers(docket_with_type_opt)
-
+        for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
+            pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
+            date = self.find_published_date(pub[0])
+            dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
                 {
-                    "date": date,
-                    "url": url,
-                    "docket": dockets,
+                    "url": row.get("href"),
                     "name": name,
+                    "docket": dockets,
+                    "date": date,
                 }
             )
