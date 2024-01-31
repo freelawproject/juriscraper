@@ -354,12 +354,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: True if it contains otherwise False.
         """
         mail_body = self.tree.text_content()
-        regex = r"^.*?The following document\(s\) are associated with this transaction:(.*?)$"
-        find_attachments = re.findall(regex, mail_body, re.DOTALL)
+        regex = r"^.*?The following document\(s\) are associated with this transaction:(?P<attachments>.*?)(electronically mailed to:|$)"
+        find_attachments = re.search(regex, mail_body, re.DOTALL)
 
         associated_documents = 0
         if find_attachments:
-            for line in find_attachments[0].splitlines():
+            for line in find_attachments.group('attachments').splitlines():
                 if "Document description:" in line:
                     associated_documents += 1
 
