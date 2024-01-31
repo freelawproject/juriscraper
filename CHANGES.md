@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.86 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Maryland Supreme and lower courts
+
+## Past
+
 **2.5.85 - 2024-01-30**
 
 Features:
@@ -24,9 +34,7 @@ Changes:
 
 - Fix Connecticut and Connecticut Court of Appeals
 
-## Past
-
-**2.5.85 - 2024-01-26**
+**2.5.84 - 2024-01-26**
 
 Features:
 
