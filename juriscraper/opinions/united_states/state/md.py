@@ -20,6 +20,7 @@ class Site(OpinionSite):
             current_year=date.today().year
         )
         self.court_id = self.__module__
+        self.disable_certificate_verification()
 
     def _get_download_urls(self):
         path = "//table//tr/td[1]//@href[contains(.,'pdf')]"
