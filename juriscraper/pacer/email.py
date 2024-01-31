@@ -359,7 +359,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         associated_documents = 0
         if find_attachments:
-            for line in find_attachments.group('attachments').splitlines():
+            for line in find_attachments.group("attachments").splitlines():
                 if "Document description:" in line:
                     associated_documents += 1
 
