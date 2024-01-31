@@ -15,6 +15,7 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     clean_string,
@@ -112,6 +113,14 @@ class AbstractSite:
          site scrapers should be removed when no longer necessary.
         """
         self.request["verify"] = False
+
+    def set_custom_adapter(self, cipher: str):
+        """Set Custom SSL/TLS Adapter for out of date court systems
+
+        :param cipher: The court required cipher
+        :return: None
+        """
+        self.request["session"].mount("https://", SSLAdapter(ciphers=cipher))
 
     def test_mode_enabled(self):
         return self.method == "LOCAL"

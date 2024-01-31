@@ -4,19 +4,25 @@ CourtID: nevapp
 History:
     - 2023-12-13: Created by William E. Palin
 """
+
 from juriscraper.opinions.united_states.state import nev
 
 
 class Site(nev.Site):
-    def _process_html(self):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.court_id = self.__module__
+        self.court_code = "10002"
+
+    def filter_cases(self):
+        """"""
+        cases = []
         for case in self.html:
-            if "COA" not in case["caseNumber"]:
+            advances = [case["advanceNumber"] for case in cases]
+            if (
+                "COA" not in case["caseNumber"]
+                or case["advanceNumber"] in advances
+            ):
                 continue
-            self.cases.append(
-                {
-                    "name": case["caseTitle"],
-                    "docket": case["caseNumber"],
-                    "date": case["date"],
-                    "url": case["docurl"],
-                }
-            )
+            cases.append(case)
+        return cases[:20]
