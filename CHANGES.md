@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.90 - 2024-02-01**
+
+Features:
+
+Changes:
+
+- Fix Colo Ct App
+
+## Past
+
 **2.5.89 - 2024-01-31**
 
 Features:
@@ -23,8 +33,6 @@ Features:
 Changes:
 
 - Fix Armed Forces Scraper
-
-## Past
 
 **2.5.88 - 2024-01-31**
 
