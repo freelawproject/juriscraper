@@ -31,7 +31,9 @@ class Site(OpinionSiteLinear):
         if self.test_mode_enabled():
             self.year = "2023"
 
-        date_xpath = "//span[text()='Future Case Announcements']/following-sibling::p"
+        date_xpath = (
+            "//span[text()='Future Case Announcements']/following-sibling::p"
+        )
         date = self.html.xpath(date_xpath)[0].text_content()
 
         for row in self.html.xpath("//p"):
