@@ -16,6 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.88 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Guam
+- Fix Fla Dist Court
+
+## Past
+
 **2.5.87 - 2024-01-31**
 
 Features:
@@ -23,8 +34,6 @@ Features:
 Changes:
 
 - Fix PA Superior Court
-
-## Past
 
 **2.5.86 - 2024-01-31**
 
