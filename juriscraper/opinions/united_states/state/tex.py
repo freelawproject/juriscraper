@@ -26,6 +26,10 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    rows_xpath = (
+        "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -66,18 +70,17 @@ class Site(OpinionSiteLinear):
             "}"
         )
 
-        # The parameters required to filter in Texas
         self.parameters = {
-            "ctl00$ContentPlaceHolder1$SearchType": "rbSearchByDocument",
+            "ctl00$ContentPlaceHolder1$SearchType": "rbSearchByDocument",  # "Document Search" radio button
             "ctl00$ContentPlaceHolder1$dtDocumentFrom": str(last_month),
             "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": last_month_str,
             "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": date_param,
             "ctl00$ContentPlaceHolder1$dtDocumentTo": str(today),
             "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": today_str,
-            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
+            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",  # "Opinion" checkbox
             "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
             "__VIEWSTATE": view_state,
-            f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",
+            f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",  # Court checkbox
         }
 
     def _process_html(self) -> None:
@@ -90,13 +93,13 @@ class Site(OpinionSiteLinear):
             self._set_parameters(view_state)
             self.html = super()._download()
 
-        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
+        for row in self.html.xpath(self.rows_xpath):
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
             self.cases.append(
                 {
-                    "date": row.xpath(f".//td[2]")[0].text_content(),
-                    "docket": row.xpath(f".//td[5]")[0].text_content().strip(),
+                    "date": row.xpath("td[2]")[0].text_content(),
+                    "docket": row.xpath("td[5]")[0].text_content().strip(),
                     "url": row.xpath(".//a")[1].get("href"),
                 }
             )
@@ -104,7 +107,7 @@ class Site(OpinionSiteLinear):
     def _get_case_names(self) -> DeferringList:
         """Get case names using a deferring list."""
         seeds = []
-        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
+        for row in self.html.xpath(self.rows_xpath):
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
             seeds.append(row.xpath(".//a")[2].get("href"))
