@@ -34,6 +34,7 @@ class Site(OpinionSiteLinear):
             MONTHLY, dtstart=self.first_opinion_date, until=date(2023, 12, 30)
         )
         self.back_scrape_iterable = [i.date() for i in date_keys]
+        self.expected_content_types = ["application/pdf", "text/html"]
 
     def build_url(self, target_date: Optional[date] = None) -> str:
         """URL as is loads most recent month page
