@@ -542,7 +542,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["njb", "dcb", "vaeb","paeb"]:
+        elif self.court_id in ["njb", "dcb", "vaeb", "paeb"]:
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
             # Out: Determination of Adjournment Request
             short_description = subject.split(docket_number)[-1]
@@ -550,8 +550,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove CH after docket and BK after short description for dcb
             regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
             short_description = re.sub(regex, "", short_description)
-            short_description = short_description.rsplit("-", 1)[0]            
-        elif self.court_id  == "nysb":
+            short_description = short_description.rsplit("-", 1)[0]
+        elif self.court_id == "nysb":
             # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
             # Out: Affidavit
             short_description = subject.split(case_name)[0]
