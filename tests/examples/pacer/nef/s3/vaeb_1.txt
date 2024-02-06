@@ -1,0 +1,130 @@
+Return-Path: <live_ecf@vaeb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id dmqt97lgfc7eu5tu4090otni6na6b0gedsc8nd81
+ for c@recap.email;
+ Fri, 02 Feb 2024 05:25:29 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of vaeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=live_ecf@vaeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of vaeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=live_ecf@vaeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=vaeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIdysvdkM5TEdaRlBKUnFObkN2MEZUbGZzM2Nad1lBVzRmd0kwQXcvckl1T25uV3lNR21vYnRLZFA3b0tEWGRmMzRUV2FxUk1zMnBYVVRvM1RpTmoyaFd2ZjhJVDZEczVSakhpSGhOY3RzbXhjanhBSjJ0aFk4M0pQZjl5ajVXZWlOeW44RnF3OGFJd3VWdlc3ejNBU0ZmUm4xQU45TXpHVG1acU1rbE9lZGRrYW9RN2EyZTRvSEFsVXNrclZWclR0NmN4VkU4WE12a2VFZU5NTGduc2dSVy9IN3lUdk51RzByUm51Y244RUx5UmZBWFJkbUlsUTJxTU1xa1NEQnpjOXpZTzNKRlB2OU92UWFhQ1cweUN3c1p0SVBiYi9HVWNRQzNMbDhPa0xKTVE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=G2ZOPs7mc4GAXgafzFhAjrzqau4UgITz1m9CkiJbscl12As7ttqKymNjuWEnYNV6hCKbawyoZ4fCMeoRAy5VomhZFYm49xm91dcVhKlH9tzxOv3jlJ+j5+6UukxuViryldHJr1mir/vAqYnClpmfhWalgTKRHRyWS97nd3Q6LAk=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706851529; v=1; bh=tk5TSRqVZL5aHklIZOSFCyGIWGE5P9Z6DaENB8HGV4I=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.40
+Received: from vaebdb.vaeb.gtwy.dcn ([156.119.191.40])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 02 Feb 2024 00:25:28 -0500
+Received: from vaebdb.vaeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by vaebdb.vaeb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 4125OOO4128637;
+        Fri, 2 Feb 2024 00:24:57 -0500
+Received: (from ecf_web@localhost)
+        by vaebdb.vaeb.gtwy.dcn (8.14.4/8.14.4/Submit) id 4125NlNC126083;
+        Fri, 2 Feb 2024 00:23:47 -0500
+Date: Fri, 2 Feb 2024 00:23:47 -0500
+X-Authentication-Warning: vaebdb.vaeb.gtwy.dcn: ecf_web set sender to live_ecf@vaeb.uscourts.gov using -f
+MIME-Version:1.0
+From:live_ecf@vaeb.uscourts.gov
+To:Courtmail@vaeb.uscourts.gov
+Message-Id:<40573088@vaeb.uscourts.gov>
+Subject:Tanese Renee Newton-Love 23-31747-KLP Ch 13  Notice of Dismissal - CerDocTyp
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Virginia</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Admin entered on 02/02/2024  at 00:20 AM EST and filed on 02/01/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Tanese Renee Newton-Love                          </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.vaeb.uscourts.gov/cgi-bin/DktRpt.pl?752725>23-31747-KLP</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.vaeb.uscourts.gov/doc1/188040985133?pdf_header=&magic_num=49963627&de_seq_num=101&caseid=752725'>33</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Notice of Dismissal (Re: related document(s)[32] Order on Motion to Dismiss Case by Trustee (Batch)) (Admin.)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Imaged Certificate of Notice
+<BR><STRONG>Original filename:</STRONG>P72331747VAN0150094.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP VAEBStamp_ID=875559604 [Date=2/2/2024] [FileNumber=40572492-0] [5e1098c1773080ccd0396aeb2c4a1656fea377eb4276143dc7760dbd62661d37d764ec31e4897c2525195b9d3f7518eaa6aa933a8ffe1d910daa424dbc4efd1b]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-31747-KLP Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of FirstName LastName</span>
+<br>example@domain.com,  example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of FirstName LastName</span>
+<br>example@domain.com,  example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Santander Consumer USA Inc.</span>
+<br>example@domain.com
+<BR>
+<BR><span class="personName">JFirstName LastName on behalf of Creditor   XXX, LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">Gerard R. Vetter</span>
+<br>USTPRegion04.RH.ECF@usdoj.gov
+<BR>
+<BR><span class="personName">FirstName LastName</span>
+<br>example@domain.com,  example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of FirstName LastName</span>
+<br>example@domain.com,  example@domain.com
+<BR>
+
+<BR>
+<B>
+23-31747-KLP Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Atlas Acquisitions LLC</span>
+<BR>492C Cedar Lane, Ste 442 
+<BR>Teaneck, NJ 07666
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

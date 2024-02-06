@@ -1,0 +1,120 @@
+Return-Path: <ecf_dcb@dcb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id qeihvdi4sjibug8fnhbarm8jfieiphc880gr5301
+ for example@domain.com;
+ Thu, 01 Feb 2024 21:15:29 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of dcb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ecf_dcb@dcb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of dcb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ecf_dcb@dcb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=dcb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFUklMM0xUUUNKbmthcXVCZnM3Qk0rSWZ0bXBjVmxsQmVzTWhjVWlESThzSEhjWXlyUUpjKytoQmxaVWhZdGJMQVlpMzJpWFNEdVpXQittcFgwOC9OaFNMSEpQOXBxSGl5S2wzbkJsRm1qMVhwOFJHeHcyckJ5S2Q5dGhDQTFZZHdVQ0dldXRYaFQ3TU8rRlFHRkZlNUZqeit6QnJHTzI4VHB5U1lySlYyTkZxQWlhbGhNZVQxNnh0WVM3Ky9ac0prQlNscy9ZMlNrM0JhWkdhSHJNdjVPbnB3RW5RajRndEtCVTVnV2xkVUhKVWdheUZaci9UbGNvcjRkZkZQeWdvZ0V1Y0xITzRaUzBVUjk2UW1Edk1qWVRwSjJWUmVueXlRUEhhN1FFSzVtR3c9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=OoHr3CMz78YBMWx5FNZGJ6iYNvxV8vj9+R//KOgpmwWEwpzRh6zhI7JQT/cAriCffdJN/LUjmd91uDqFBiFq1GZRkoYXCHNjajpZ5UG5VxRcEH2EBzWRFLwLVxNb5JgSO1kMSXl+HYgHtxjUtjL8cMpJHgvTSEgfPrEYbYdgTy4=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706822130; v=1; bh=5B9UPv+HsO8o5ByrK5/3gZ81Q0yGpBqdUo5nYk2F1v0=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.113
+Received: from dcbdb.dcb.gtwy.dcn ([156.119.190.113])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 16:15:29 -0500
+Received: from dcbdb.dcb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by dcbdb.dcb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 411LEibh102749;
+        Thu, 1 Feb 2024 16:14:44 -0500
+Received: (from ecf_web@localhost)
+        by dcbdb.dcb.gtwy.dcn (8.14.7/8.14.4/Submit) id 411LE4Gf102139;
+        Thu, 1 Feb 2024 16:14:04 -0500
+Date: Thu, 1 Feb 2024 16:14:04 -0500
+X-Authentication-Warning: dcbdb.dcb.gtwy.dcn: ecf_web set sender to ecf_dcb@dcb.uscourts.gov using -f
+MIME-Version:1.0
+From:ecf_dcb@dcb.uscourts.gov
+To:courtmail@dcb.uscourts.gov
+Message-Id:<2731273@dcb.uscourts.gov>
+Subject:23-00285-ELG CH11 Hearing Held (BK) - Avamere NPS Stables LLC
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>United States Bankruptcy Court for the District of Columbia</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Mathewes, Aimee entered on 2/1/2024 at 4:14 PM EST and filed on 1/31/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Avamere NPS Stables LLC                           </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.dcb.uscourts.gov/cgi-bin/DktRpt.pl?49635>23-00285-ELG</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+56
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Minute Entry RE: Hearing Held (BK) (RE: related document(s)[49] Motion to Approve)  Appearances: FirstName LastName, FirstName LastName, FirstName LastName. Motion Granted, Order to be Submitted. Hearing on Approval of Disclosure Statement and Confirmation of Plan Set for 3/13/2024 at 1:00 PM. (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-00285-ELG Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Kristen S. Eustis on behalf of U.S. Trustee   U. S. Trustee for Region Four</span>
+<br>Kristen.S.Eustis@usdoj.gov,  Robert.W.Ours@usdoj.gov
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor In Possession   Avamere NPS Stables LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">Sara Kathryn  Mayson on behalf of U.S. Trustee   U. S. Trustee for Region Four</span>
+<br>sara.kathryn.mayson@usdoj.gov,  Robert.W.Ours@usdoj.gov
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor In Possession   Avamere NPS Stables LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">  U. S. Trustee for Region Four</span>
+<br>USTPRegion04.DC.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   WCP Fund I LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;c@recap.email
+<BR>
+
+<BR>
+<B>
+23-00285-ELG Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

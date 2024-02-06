@@ -1,0 +1,158 @@
+Return-Path: <cmecf@ianb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 1tmqk3g6ndpmjqadf44bqog0eub2fjnqlckbn181
+ for c@recap.email;
+ Thu, 01 Feb 2024 23:27:01 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ianb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf@ianb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ianb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf@ianb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ianb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIVFF4TnN1d2F0djZjRHl1aW1yK1dKVlpZaVR0WVpyMEZycC92a1ZlTGN0V1pkRlpKREFYdDZRdmh0akt1NDIvdklDa2crZWxZUkdUOFRlMzdMOHJIT0s0d3lLcS9OWDNqSS9hQVN1WkY0Q2l1QkM5TFFVRTQxc0FyZklKMlQ5OWZWd3JKNEMyQU9rTXFaWjl2VEtxTmJHWk1yZ0ZxR1o2bGsrRE82czBBeUJsUEhqeGt4U1lieUVmOTdrbmxEWEFNYVZ6VVBXN1lPdGVsbjhxdU0rbHBhMTU5OGQ5MkxMN3RnSlh3K2pockZsWElmcjNRT1ZBLzVBT1htMGxwWmE3MkFWYWxXaUxFRmd1bnlmdkh6MVJ5V2FDV1FYUXVPbGxkNTNENkg3U0NORlE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Qppdb3D73icpIXvE6NyDjUdpHje8yYVJsTj8+uTqi4mybZEFK9iTKrZjRVp6S8RchG5oK2FEO8GPcM3I7HijQsDRstfdujlNdd/iO3meCnS/TWg32w51DMz83EdjugxCWk72gM86n6JXi2Y+bLAOT6zZwa5jLFaYnyKImZu+N+k=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706830022; v=1; bh=gEzNZ6L3Hw1Ba5D1lLWDBu4bj17bUlN3Wxp94ShZhnc=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.193.116
+Received: from ianbdb-rep.ianb.gtwy.dcn ([156.119.193.116])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 18:27:00 -0500
+Received: from ianbdb-rep.ianb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by ianbdb-rep.ianb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 411NQDxf102231;
+        Thu, 1 Feb 2024 17:26:24 -0600
+Received: (from ecf_web@localhost)
+        by ianbdb-rep.ianb.gtwy.dcn (8.14.7/8.14.4/Submit) id 411NQ61V101387;
+        Thu, 1 Feb 2024 17:26:06 -0600
+Date: Thu, 1 Feb 2024 17:26:06 -0600
+X-Authentication-Warning: ianbdb-rep.ianb.gtwy.dcn: ecf_web set sender to cmecf@ianb.uscourts.gov using -f
+MIME-Version:1.0
+From:cmecf@ianb.uscourts.gov
+To:courtmail@ianb.uscourts.gov
+Message-Id:<4477685@ianb.uscourts.gov>
+Subject:23-00623 Motion for Relief From Stay (Fee)
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>United States Bankruptcy Court</strong></p>
+
+<p align=center><strong>Northern District of Iowa</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from FirstName LastName entered on 2/1/2024 at 5:25 PM CST and filed on 2/1/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Mercy Hospital, Iowa City, Iowa                   </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ianb.uscourts.gov/cgi-bin/DktRpt.pl?108151>23-00623</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ianb.uscourts.gov/doc1/07404369078?pdf_header=&magic_num=82978176&de_seq_num=2927&caseid=108151'>701</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Motion for Relief from Stay <i>and for Order Authorizing and Directing the Distribution of Proceeds from the Sale of the Debtors' Assets</i>. Fee Amount $199. Filed by    Corporation     (Attachments: # (1) Proposed Order  # (2)  Ex. A - Account Statement # (3)  Ex. B - Exposure Statement # (4)  Ex. C - Credit App.(Redacted)) (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>2024 02 01 Mercy - Motion for Order Directing Sale Proceeds Allocation.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=993675052 [Date=2/1/2024] [FileNumber=4477683-0] 
+<BR><TAB>[55d576de494ba53085658d2a68c569ed36b3f818236bb4a9a71ee55092fc50c20590a
+<BR><TAB>8e8bc9d32b918bc0b928706d4a5ef194753d20afc1f96c91d7e2334e193]]
+<BR>
+<STRONG>Document description:</STRONG>Proposed Order 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\2024 02 01 Mercy - Proposed Order Granting Motion for Sale Proceeds Allocation.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=993675052 [Date=2/1/2024] [FileNumber=4477683-1] 
+<BR><TAB>[3771ba384e880c379613e4dd02c04fae7478bf5338a1e77bee43e9bf622de63526890
+<BR><TAB>50acc17ed9be31da74374a3c4107120d051da72c2d2d969be8c43198035]]
+<BR>
+<STRONG>Document description:</STRONG> Ex. A - Account Statement
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Ex A Mercy Statement.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=993675052 [Date=2/1/2024] [FileNumber=4477683-2] 
+<BR><TAB>[a832f8eb7d5a660b3abc6898d4f938da7c379ffbb56d435ada1c95d68c17744cebd0f
+<BR><TAB>216b2e8b98e9ae0cf122dff936e373eeb9cbe86397afa3f46cb5a15814b]]
+<BR>
+<STRONG>Document description:</STRONG> Ex. B - Exposure Statement
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Ex B Copy of Med Surg Mercy Exposure.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=993675052 [Date=2/1/2024] [FileNumber=4477683-3] 
+<BR><TAB>[46348447392c941e3e940dba24deb26996adaabfbb36cfc91d7d68210ce365242e372
+<BR><TAB>65bfe8ec04282c34d10a27e0b13ec91852d598540ed94047e2582ae50e9]]
+<BR>
+<STRONG>Document description:</STRONG> Ex. C - Credit App.(Redacted)
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Ex C Specialty Mercy Credit App UCC_Redacted1.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=993675052 [Date=2/1/2024] [FileNumber=4477683-4] 
+<BR><TAB>[df3e41da02575f58cc68f67e3a9dcc3af68c3eef00255d838d0acb7c3c334be8e6972
+<BR><TAB>2ba0c9df5aae9053e0844e4189624eee301fa709ee62f797f76ce2b7f51]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-00623 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   UnitedHealth Group</span>
+<br>example@domain.com,  example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   LiquidAgents Healthcare, LLC</span>
+<br>example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Interested Party   State University of Iowa</span>
+<br>example@domain.com,  example@domain.com
+<BR>
+
+<BR>
+<B>
+23-00623 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  CompanyMedical Staffing</span>
+<BR>c/o FirstName LastName
+<BR>Becker LLC 
+<BR>Livingston, NJ 07039
+<BR>
+<BR><span class="personName">  Altera Digital Health, Inc.</span>
+<BR>c/o FirstName LastName, Corporate Counsel 
+<BR>Chicago, IL 60654
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

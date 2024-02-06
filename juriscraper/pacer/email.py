@@ -516,10 +516,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param subject: The email subject string.
         :return: The parsed short description.
         """
-
         if len(self.docket_numbers) > 1:
-            # Since we don't have examples for bankruptcy multi docket NEF.
-            # No short_description parsing support yet.
+            # We haven't implemented short_description parsing for bankruptcy multi docket NEF.
+            # See paeb_3.txt for a test of multi docket NEF
             logger.error(
                 "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
                 self.court_id,
@@ -535,7 +534,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         docket_number = self.docket_numbers[0]
         case_name = self.case_names[0]
 
-        if self.court_id in ["cacb", "ctb", "cob"]:
+        if self.court_id in ["cacb", "ctb", "cob", "ianb"]:
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
             # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
@@ -543,17 +542,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-
-        elif self.court_id == "njb":
+        elif self.court_id in ["njb", "dcb", "vaeb", "paeb"]:
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
             # Out: Determination of Adjournment Request
             short_description = subject.split(docket_number)[-1]
-            short_description = short_description.rsplit("-", 1)[0]
-
             # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
+            # Remove CH after docket and BK after short description for dcb
+            regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
             short_description = re.sub(regex, "", short_description)
-
+            short_description = short_description.rsplit("-", 1)[0]
         elif self.court_id == "nysb":
             # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
             # Out: Affidavit
@@ -568,12 +565,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-
-        elif self.court_id == "pawb":
+        elif self.court_id in ["pawb", "ndb"]:
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
             short_description = subject.split(case_name)[-1]
-
         else:
             logger.error(
                 "Short description has no parsing for bankruptcy court '%s'",
