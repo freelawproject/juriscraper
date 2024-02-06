@@ -1,0 +1,118 @@
+Return-Path: <BKECF_LiveDB@paeb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id gp1i24vfmj6jirm7m83kqnrsf6c2jgpkpmt2i5o1
+ for c@recap.email;
+ Thu, 01 Feb 2024 15:15:07 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=paeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFVkNDUEdVMTNTYStZbE1DK3Jrc0U1eVZMT2VSRVVDTDV6SVVlQjhDdDgyN1BTcTV4Z21RMXdITWk5MjZuSkI2bDVwcVdURlFMQ3dGaGZhaXg3YmQ4aWZlTVF3Q1FjQ3psOENhSzBUcDFHTEVXUHROd3BEaUEzTG55c2NsYjRwUjlEUW1KM2FORHAzcjFLNW0yNUswaWJxT0hDSDdwdVpIanRKdjFzOTE0b201Tlgxd2FZMkhLemtKaU56a0YvNFV4U2FhRThLYlExd1VmM1FtNU4wZXN5aWJacldkTjA3K003Smo1L0V6WEtZT0t1Smc1c29yTms3aERiYVhwdE1GaWFlVDRmSVA4TWdNT1k2VGFMOUlxV0hkMDc1Y2drRzJ2aUpxVlllTzJFRG1Gc1UwcktzdU5VUmJiS0lBbTZCdUU9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=hbcJD9rF6sLPIqO8YB1dSEmbhetxTl+RTX82YBtS79ktszWPnWsfNpTNWZE8BSBE6zqhBImudIn//xP/nk+QJj2zLBWFb+c1NY9kd+HYfh/xbfgf6j7P+IGC1MD2d6WjUGs4j6Cta6eraeBPuIgipSBFGlvaY4JSYi8wc4Dsmos=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706800508; v=1; bh=VKaG7T1hC8/0kuo/yDOb+Z/OIOh71910ZoGVZf2jG7s=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.80
+Received: from paebdb.paeb.gtwy.dcn ([156.119.190.80])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 10:15:06 -0500
+Received: from paebdb.paeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 411FEE0v117057;
+        Thu, 1 Feb 2024 10:14:30 -0500
+Received: (from ecf_web@localhost)
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 411FDqKk115530;
+        Thu, 1 Feb 2024 10:13:52 -0500
+Date: Thu, 1 Feb 2024 10:13:52 -0500
+X-Authentication-Warning: paebdb.paeb.gtwy.dcn: ecf_web set sender to BKECF_LiveDB@paeb.uscourts.gov using -f
+MIME-Version:1.0
+From:BKECF_LiveDB@paeb.uscourts.gov
+To:Courtmail@paeb.uscourts.gov
+Message-Id:<31788748@paeb.uscourts.gov>
+Subject:Ch-13 23-11723-pmm CHAP - Hearing Continued (Bk Other) - Alexander Michael
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Roman, Sara entered on 02/01/2024  at 10:13 AM  EST and filed on 02/01/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Alexander Michael Brader-Sims</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?508646>23-11723-pmm</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+36
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Hearing Continued on Confirmation. Hearing scheduled 03/14/2024 at 10:00 AM  at Zoom. For Zoom link, see the current Hearing Calendar for the Judge on the Court website.   (Roman, Sara)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-11723-pmm Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Debtor A M S</span>
+<br>example@domain.com,  example@domain.com;c@recap.email;example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   x Financial Services</span>
+<br>example@domain.com,  example@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   XXXX Financial Services</span>
+<br>example@domain.com,  example@domain.com
+<BR>
+<BR><span class="personName">  United States Trustee</span>
+<br>example@domain.com
+<BR>
+<BR><span class="personName">SCOTT F. WATERMAN [Chapter 13]</span>
+<br>example@domain.com
+<BR>
+
+<BR>
+<B>
+23-11723-pmm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Wilmington Savings Fund Society, FSB, d/b/a Ch Trust, not in its individual capacity, but solely as indenture trustee of Citigroup Mortgage Loan Trust 2015-RP2</span>
+<BR>c/o FirstName LastName, LLC 
+<BR>Bankruptcy Department
+<BR>1544 Old Alabama Rd
+<BR>Roswell, GA 30076
+<BR>
+
+<BR>
+<B>
+
+</B>
