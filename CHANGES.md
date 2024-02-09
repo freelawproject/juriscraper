@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.92 - 2024-02-09**
+
+Features:
+
+Changes:
+
+- Update Nev/NevApp scrapers
+
+## Past
+
 **2.5.91 - 2024-02-09**
 
 Features:
@@ -25,8 +35,6 @@ Features:
 Changes:
 
 - Fixes for pacer.email, pacer.utils
-
-## Past
 
 **2.5.90 - 2024-02-01**
 
