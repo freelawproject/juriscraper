@@ -25,6 +25,7 @@ class Site(OpinionSite):
         self.url = "http://www.masscases.com/land_date.html"
         self.court_id = self.__module__
         self.year = None
+        self.expected_content_types = ["text/html"]
 
     def _get_download_urls(self) -> List[str]:
         links = self.html.xpath(

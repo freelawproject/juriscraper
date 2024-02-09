@@ -58,7 +58,19 @@ def scrape_court(site, binaries=False):
                             f"{cookie_dict['name']}={cookie_dict['value']}",
                         )
                     )
-                data = opener.open(download_url).read()
+                r = opener.open(download_url)
+                expected_content_types = site.expected_content_types
+                response_type = r.headers.get("Content-Type", "").lower()
+                # test for expected content type response
+                if (
+                    expected_content_types
+                    and response_type not in expected_content_types
+                ):
+                    exceptions["DownloadingError"].append(download_url)
+                    v_print(3, f"DownloadingError: {download_url}")
+                    v_print(3, traceback.format_exc())
+                data = r.read()
+
                 # test for empty files (thank you CA1)
                 if len(data) == 0:
                     exceptions["EmptyFileError"].append(download_url)
