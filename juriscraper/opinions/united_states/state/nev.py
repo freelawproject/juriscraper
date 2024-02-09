@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
             ):
                 continue
             cases.append(case)
-        return cases[:10]
+        return cases[:20]
 
     def _process_html(self):
         """Process Nevada Case Opinions
