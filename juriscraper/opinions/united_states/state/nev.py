@@ -23,6 +23,10 @@ class Site(OpinionSiteLinear):
         self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
         self.status = "Published"
         self.court_code = "10001"
+        self.headers = {
+            "Referer": "https://nvcourts.gov/",
+            "XApiKey": "080d4202-61b2-46c5-ad66-f479bf40be11",
+        }
 
     def _download(self, **kwargs):
         """Download the JSON to parse
@@ -36,9 +40,7 @@ class Site(OpinionSiteLinear):
             self.request["session"]
             .get(
                 self.url,
-                headers=self.request["headers"],
-                verify=self.request["verify"],
-                timeout=60,
+                headers=self.headers,
             )
             .json()
         )
