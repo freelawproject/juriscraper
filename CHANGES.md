@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.91 - 2024-02-09**
+
+Features:
+
+- Add expected_content_types to OpinionSite and OralArgSite
+
+Changes:
+
+- Fixes for pacer.email, pacer.utils
+
+## Past
+
 **2.5.90 - 2024-02-01**
 
 Features:
@@ -23,8 +35,6 @@ Features:
 Changes:
 
 - Fix Colo Ct App
-
-## Past
 
 **2.5.89 - 2024-01-31**
 
