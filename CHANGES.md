@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.5.93 - 2024-02-09**
+
+Features:
+
+Changes:
+
+- Update fladistctapp
+
+## Past
+
 **2.5.92 - 2024-02-09**
 
 Features:
@@ -23,8 +33,6 @@ Features:
 Changes:
 
 - Update Nev/NevApp scrapers
-
-## Past
 
 **2.5.91 - 2024-02-09**
 
