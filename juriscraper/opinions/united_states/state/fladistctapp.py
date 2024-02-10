@@ -4,6 +4,7 @@
 
 from datetime import datetime, timedelta
 
+from juriscraper.lib.exceptions import SkipRowError
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -44,6 +45,18 @@ class Site(OpinionSiteLinear):
             ]
         )
 
+    def parse_url(self, link):
+        """Parse URL from link cell
+
+        :param link: The html cell to parse
+        :return: URL
+        """
+        try:
+            url = link.xpath(".//a")[0].get("href")
+            return url
+        except IndexError:
+            raise SkipRowError(f"Skipping row because document URL missing")
+
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
         Paginates if necessary
@@ -62,12 +75,16 @@ class Site(OpinionSiteLinear):
                 note,
                 date_filed,
             ) = row.xpath(".//td")
+            try:
+                url = self.parse_url(link)
+            except SkipRowError:
+                continue
             self.cases.append(
                 {
                     "name": name.text_content().strip(),
                     "date": date_filed.text_content().strip(),
                     "disposition": disposition.text_content().strip(),
-                    "url": link.xpath(".//a")[0].get("href"),
+                    "url": url,
                     "status": "Published",
                     "docket": docket.text_content().strip(),
                 }
