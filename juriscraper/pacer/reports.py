@@ -382,7 +382,10 @@ class BaseReport:
         return sealed in r.content
 
     def is_entry_sealed(
-        self, pacer_case_id, pacer_doc_id, pacer_magic_num=None
+        self,
+        pacer_case_id: str,
+        pacer_doc_id: str,
+        pacer_magic_num: Optional[str] = None,
     ):
         """Check if a docket entry is sealed without trying to actually download
         it.
