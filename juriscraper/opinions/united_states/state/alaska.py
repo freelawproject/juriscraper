@@ -13,9 +13,9 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://appellate-records.courts.alaska.gov/CMSPublic/Home/Opinions?isCOA=False"
         self.status = "Published"
-        self.request["headers"][
-            "user-agent"
-        ] = "Free Law Project"  # juriscraper in the user agent crashes it - it appears to be just straight up blocked.
+        # juriscraper in the user agent crashes it
+        # it appears to be just straight up blocked.
+        self.request["headers"]["user-agent"] = "Free Law Project"
 
     def _download(self, request_dict={}):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
         except ChunkedEncodingError:
             return None
 
-    def _process_html(self):
+    def _process_html(self) -> None:
         if not self.html:
             return
         for table in self.html.xpath("//table"):
@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
                             "date": date,
                             "docket": get_row_column_text(row, 3),
                             "name": get_row_column_text(row, 4),
-                            "citation": get_row_column_text(row, 2),
+                            "citation": get_row_column_text(row, 5),
                             "url": url,
                         }
                     )
