@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 Features:
 
 - The GET method of the PacerSession class now supports custom timeouts for flexible request management.
+- Adds a method to check if a district court docket entry is sealed..
 
 Changes:
 
