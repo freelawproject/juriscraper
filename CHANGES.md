@@ -12,6 +12,12 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- N/A
+
+## Current
+
+**2.5.95 - 2024-02-14**
+
 Features:
 
 - The GET method of the PacerSession class now supports custom timeouts for flexible request management.
@@ -21,7 +27,7 @@ Changes:
 
 - Update the DownloadConfirmationPage class to reduce the read timeout of the GET request within the query method.
 
-## Current
+## Past
 
 **2.5.94 - 2024-02-13**
 
@@ -31,8 +37,6 @@ Changes:
 
 - Update minnag
 - Update alaska/app
-
-## Past
 
 **2.5.93 - 2024-02-09**
 
