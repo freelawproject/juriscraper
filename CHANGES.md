@@ -12,7 +12,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
- - N/A
+Features:
+
+- The GET method of the PacerSession class now supports custom timeouts for flexible request management.
+
+Changes:
+
+- Update the DownloadConfirmationPage class to reduce the read timeout of the GET request within the query method.
 
 ## Current
 
