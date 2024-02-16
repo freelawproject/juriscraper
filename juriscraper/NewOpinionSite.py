@@ -1,6 +1,6 @@
 from datetime import datetime
 from functools import cmp_to_key
-from typing import Callable
+from typing import Callable, Dict
 
 from jsonschema import Draft7Validator, FormatChecker
 
@@ -19,22 +19,18 @@ del opinion_site
 
 
 class NewOpinionSite(AbstractSite):
-    short_to_full_key = {
-        "citation": "citations",
-        "name": "case_names",
-        "docket": "docket_numbers",
-        "date": "case_dates",
-        "url": "download_urls",
-        "judge": "judges",
-        "lower_court": "lower_courts",
-    }
-    default_fields = {
-        "date_filed_is_approximate": False,
-        "blocked_statuses": False,
-    }
-
-    def __init__(self, cnt=None):
-        super().__init__()
+    """
+    Inherits from AbstractSite to access methods which have to do
+    with downloading and processing data from sources
+    
+    Overrides methods which have to do with transforming 
+    (converting and cleaning data). The main entry point to this is
+    `parse`
+    
+    Keeps interface compatible
+    """
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.cases = []
 
         self.validator = Draft7Validator(
@@ -92,13 +88,7 @@ class NewOpinionSite(AbstractSite):
             self.get_deferred_values(case)
 
         return self
-
-    def fill_default_values(self, case) -> None:
-        """Required fields"""
-        for key, default_value in self.default_fields.items():
-            if case.get(key) is None:
-                case[key] = default_value
-
+    
     def get_deferred_values(self, case) -> None:
         """Use this function to consume deferred values
         Deferred values are functions that wait until execution to perform
@@ -139,9 +129,10 @@ class NewOpinionSite(AbstractSite):
         case.update(update_values)
 
     @staticmethod
-    def sort_by_attributes(case, other_case) -> int:
+    def sort_by_attributes(case: Dict, other_case: Dict) -> int:
         """Replaces AbstractSite._date_sort
         Keeping the order of attributes as OpinionSite ensures we have the same order of cases
+        Order is important because a hash is calculated from ordered case names
         """
         for attr in opinion_site_ordered_attributes:
             value = case.get(attr)
