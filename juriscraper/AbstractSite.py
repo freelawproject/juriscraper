@@ -34,7 +34,7 @@ class AbstractSite:
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self, cnt=None):
+    def __init__(self, cnt=None, **kwargs):
         super().__init__()
 
         # Computed metadata
