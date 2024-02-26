@@ -15,4 +15,5 @@ __all__ = [
     "uscfc_vaccine",
     "uscfc_vaccine_u",
     "fisc",
+    "fiscr",
 ]
