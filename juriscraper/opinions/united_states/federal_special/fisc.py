@@ -52,7 +52,7 @@ class Site(OpinionSiteLinear):
 
     def skip_record(self, docket: str, filename: str) -> bool:
         """Check if a record belongs to 'FISCR'
-        
+
         :param docket: docket number
         :param filename: opinion title
 
