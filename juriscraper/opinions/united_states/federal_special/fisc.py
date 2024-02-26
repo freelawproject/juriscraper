@@ -4,8 +4,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    court = "FISC"
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -30,14 +28,12 @@ class Site(OpinionSiteLinear):
             if self.skip_record(docket, filename):
                 continue
 
-            # Name is not available neither in search results or in docket page
-            name = f"Untitled {self.court} Opinion related to docket {docket}"
             url = row.xpath(".//a/@href")[-1]
             self.cases.append(
                 {
                     "date": date_filed.split(",")[-1],
                     "docket": docket,
-                    "name": name,
+                    "name": filing_name,
                     "url": url,
                 }
             )
@@ -52,7 +48,7 @@ class Site(OpinionSiteLinear):
 
     def skip_record(self, docket: str, filename: str) -> bool:
         """Check if a record belongs to 'FISCR'
-        
+
         :param docket: docket number
         :param filename: opinion title
 
