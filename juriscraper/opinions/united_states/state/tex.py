@@ -22,19 +22,16 @@ from typing import Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
+from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    rows_xpath = (
-        "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
-    )
     param_date_format = "%-m/%-d/%Y"
     first_opinion_date = datetime(2002, 1, 24, 0, 0, 0)
-    next_page_xpath = (
-        "//input[@title='Next Page' and not(@onclick='return false;')]"
-    )
+    # Interval for default scrape and backscrape iterable generation
+    days_interval = 15
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -44,9 +41,12 @@ class Site(OpinionSiteLinear):
         self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.make_backscrape_iterable(kwargs)
         self.next_page = None
+        self.current_page = 1
         # Default scrape range if not doing a backscrape
         self.end_date = date.today()
-        self.start_date = self.end_date - timedelta(days=30)
+        self.start_date = self.end_date - timedelta(days=self.days_interval)
+        self.is_first_request = True
+        self.seeds = []
 
     def _set_parameters(self) -> None:
         """Set ASPX post parameters
@@ -95,17 +95,12 @@ class Site(OpinionSiteLinear):
             }
         )
 
-        # "Next page" arrow button has a name
+        # "Next page" arrow button has a name like
         # "ctl00$ContentPlaceHolder1$grdDocuments$ctl00$ctl02$ctl00$ctl18"
         # Couldn't get pagination working when using the numbered page anchors,
         # whose id goes into __EVENTTARGET
         if self.next_page:
             self.parameters[self.next_page[0].xpath("@name")[0]] = ""
-            self.parameters["__EVENTTARGET"] = ""
-            self.parameters["__SCROLLPOSITIONX"] = "0"
-            self.parameters["__SCROLLPOSITIONY"] = "345"
-            self.parameters["__EVENTARGUMENT"] = ""
-            self.parameters["__LASTFOCUS"] = ""
 
     def _process_html(self) -> None:
         """Process HTML and paginates if needed
@@ -118,9 +113,11 @@ class Site(OpinionSiteLinear):
             self._set_parameters()
             self.html = super()._download()
 
-        for row in self.html.xpath(self.rows_xpath):
+        rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
+        for row in self.html.xpath(rows_xpath):
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
+            self.seeds.append(row.xpath(".//a")[2].get("href"))
             self.cases.append(
                 {
                     "date": row.xpath("td[2]")[0].text_content(),
@@ -129,17 +126,17 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-        self.next_page = self.html.xpath(self.next_page_xpath)
+        next_page_xpath = (
+            "//input[@title='Next Page' and not(@onclick='return false;')]"
+        )
+        self.next_page = self.html.xpath(next_page_xpath)
         if self.next_page and not self.test_mode_enabled():
+            self.current_page += 1
+            logger.info(f"Paginating to page {self.current_page}")
             self._process_html()
 
     def _get_case_names(self) -> DeferringList:
         """Get case names using a deferring list."""
-        seeds = []
-        for row in self.html.xpath(self.rows_xpath):
-            # In texas we also have to ping the case page to get the name
-            # this is unfortunately part of the process.
-            seeds.append(row.xpath(".//a")[2].get("href"))
 
         def get_name(link: str) -> Optional[str]:
             """Abstract out the case name from the case page."""
@@ -167,7 +164,7 @@ class Site(OpinionSiteLinear):
                 logger.warning(f"No title or defendant found for {self.url}")
                 return None
 
-        return DeferringList(seed=seeds, fetcher=get_name)
+        return DeferringList(seed=self.seeds, fetcher=get_name)
 
     def make_backscrape_iterable(self, kwargs: Dict) -> None:
         """Checks if backscrape start and end arguments have been passed
@@ -185,9 +182,11 @@ class Site(OpinionSiteLinear):
         if end:
             end = datetime.strptime(end, "%m/%d/%Y")
         else:
-            end = datetime.now() - timedelta(days=30)
+            end = datetime.now() - timedelta(days=self.days_interval)
 
-        self.back_scrape_iterable = [(start, end)]
+        self.back_scrape_iterable = make_date_range_tuples(
+            start, end, self.days_interval
+        )
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Overrides present scraper start_date and end_date
@@ -195,8 +194,14 @@ class Site(OpinionSiteLinear):
         :param dates: (start_date, end_date) tuple
         :return None
         """
-        self.start_date = dates[0].date()
-        self.end_date = dates[1].date()
+        start, end = dates
+        self.start_date = (
+            start.date() if not isinstance(start, date) else start
+        )
+        self.end_date = end.date() if not isinstance(end, date) else end
+        logger.info(
+            "Backscraping for range %s %s", self.start_date, self.end_date
+        )
 
     @staticmethod
     def make_date_param(date_obj: date, date_str: str) -> str:
