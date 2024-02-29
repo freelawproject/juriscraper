@@ -11,6 +11,8 @@ class OpinionSite(AbstractSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.expected_content_types = ["application/pdf"]
+
         # Order of attributes is important as it affects the order of parsing.
         # Some methods rely on others having already been run.
         self._opt_attrs = [

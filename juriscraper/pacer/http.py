@@ -132,7 +132,8 @@ class PacerSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        kwargs.setdefault("timeout", 300)
+        if "timeout" not in kwargs:
+            kwargs.setdefault("timeout", 300)
 
         r = super().get(url, **kwargs)
 

@@ -12,6 +12,9 @@ class Site(OralArgumentSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/media/"
+        self.expected_content_types = [
+            "application/octet-stream; charset=UTF-8"
+        ]
 
     def _process_html(self):
         path = "//table[@id='search-results-table']//tr"

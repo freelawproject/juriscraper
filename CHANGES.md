@@ -12,9 +12,106 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
- - N/A
+- N/A
 
 ## Current
+
+**2.5.95 - 2024-02-14**
+
+Features:
+
+- The GET method of the PacerSession class now supports custom timeouts for flexible request management.
+- Adds a method to check if a district court docket entry is sealed..
+
+Changes:
+
+- Update the DownloadConfirmationPage class to reduce the read timeout of the GET request within the query method.
+
+## Past
+
+**2.5.94 - 2024-02-13**
+
+Features:
+
+Changes:
+
+- Update minnag
+- Update alaska/app
+
+**2.5.93 - 2024-02-09**
+
+Features:
+
+Changes:
+
+- Update fladistctapp
+
+**2.5.92 - 2024-02-09**
+
+Features:
+
+Changes:
+
+- Update Nev/NevApp scrapers
+
+**2.5.91 - 2024-02-09**
+
+Features:
+
+- Add expected_content_types to OpinionSite and OralArgSite
+
+Changes:
+
+- Fixes for pacer.email, pacer.utils
+
+**2.5.90 - 2024-02-01**
+
+Features:
+
+Changes:
+
+- Fix Colo Ct App
+
+**2.5.89 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Armed Forces Scraper
+
+**2.5.88 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Guam
+- Fix Fla Dist Court
+
+**2.5.87 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix PA Superior Court
+
+**2.5.86 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Maryland Supreme and lower courts
+
+**2.5.85 - 2024-01-30**
+
+Features:
+
+Changes:
+
+- Fix Connecticut and Connecticut Court of Appeals
 
 **2.5.84 - 2024-01-26**
 
@@ -23,8 +120,6 @@ Features:
 Changes:
 
 - Update Nevada/Nev App (again)
-
-## Past
 
 **2.5.83 - 2024-01-25**
 

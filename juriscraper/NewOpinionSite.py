@@ -22,13 +22,14 @@ class NewOpinionSite(AbstractSite):
     """
     Inherits from AbstractSite to access methods which have to do
     with downloading and processing data from sources
-    
-    Overrides methods which have to do with transforming 
+
+    Overrides methods which have to do with transforming
     (converting and cleaning data). The main entry point to this is
     `parse`
-    
+
     Keeps interface compatible
     """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.cases = []
@@ -38,8 +39,7 @@ class NewOpinionSite(AbstractSite):
         )
 
     def __iter__(self):
-        for case in self.cases:
-            yield case
+        yield from self.cases
 
     def __getitem__(self, index: int):
         return self.cases[index]
@@ -88,7 +88,7 @@ class NewOpinionSite(AbstractSite):
             self.get_deferred_values(case)
 
         return self
-    
+
     def get_deferred_values(self, case) -> None:
         """Use this function to consume deferred values
         Deferred values are functions that wait until execution to perform
@@ -178,3 +178,6 @@ class NewOpinionSite(AbstractSite):
             clean_case[clean_key] = value
 
         return clean_case
+
+    def make_nested_object(self):
+        return {"Docket": {"OpinionCluster": {"Opinions": []}}}

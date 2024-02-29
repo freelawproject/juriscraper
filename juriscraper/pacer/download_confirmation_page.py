@@ -45,7 +45,7 @@ class DownloadConfirmationPage(BaseReport):
             url = make_doc1_url(self.court_id, pacer_doc_id, True)
 
         logger.info("Querying the confirmation page endpoint at URL: %s", url)
-        self.response = self.session.get(url)
+        self.response = self.session.get(url, timeout=60)
         if is_pdf(self.response):
             # Sometimes the PDF document is returned without showing the
             # download confirmation page, not a valid page to parse.

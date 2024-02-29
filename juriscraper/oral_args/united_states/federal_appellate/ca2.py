@@ -24,6 +24,7 @@ class Site(OralArgumentSiteLinear):
         self.base_url = "http://www.ca2.uscourts.gov"
         self.url = f"{self.base_url}/decisions"
         self.method = "POST"
+        self.expected_content_types = ["audio/mpeg3"]
         self.base_xpath = '//tr[contains(.//a/@href, "mp3")]'
         self.parameters = {
             "IW_SORT": "-DATE",

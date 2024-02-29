@@ -26,27 +26,60 @@ class Site(OpinionSiteLinear):
         self.year = date.today().strftime("%y")
         self.url = f"http://www.jud.ct.gov/external/supapp/archiveAROsup{self.year}.htm"
         self.status = "Published"
+        self.cipher = "AES256-SHA256"
+        self.set_custom_adapter(self.cipher)
+
+    @staticmethod
+    def find_published_date(date_str: str) -> str:
+        """Extract published date
+
+        :param date_str: The row text
+        :return: The date string
+        """
+        m = re.search(
+            r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)",
+            date_str,
+        )
+        return m.groups()[0] if m.groups()[0] else m.groups()[1]
+
+    def extract_dockets_and_name(self, row) -> [str, str]:
+        """Extract the docket and case name from each row
+
+        :param row: Row to process
+        :return: Docket(s) and Case Name
+        """
+        text = " ".join(row.xpath("ancestor::li[1]//text()"))
+        clean_text = re.sub(r"[\n\r\t\s]+", " ", text)
+        m = re.match(
+            r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? - (?P<case_name>.*)",
+            clean_text,
+        )
+        if not m:
+            # Handle bad inputs
+            m = re.match(
+                r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? (?P<case_name>.*)",
+                clean_text,
+            )
+        op_type = m.group("op_type")
+        name = m.group("case_name")
+        if op_type:
+            name = f"{name} ({op_type.strip()})"
+        return m.group("dockets"), name
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
-        for row in self.html.xpath("//ul/preceding-sibling::p"):
-            if "Published in the Law Journal" not in row.text_content():
-                continue
-            date = row.text_content().split(" ")[-1][:-1]
-            for document in row.xpath("following-sibling::ul[1]/li"):
-                output_string = re.sub(
-                    r"\s{2,}", " ", document.text_content()
-                ).strip()
-                name = output_string.split("-")[-1].strip()
-                docket = document.xpath(".//a")[0].text_content().split()[0]
-                self.cases.append(
-                    {
-                        "date": date,
-                        "url": document.xpath(".//a")[0].get("href"),
-                        "docket": docket,
-                        "name": name,
-                    }
-                )
+        for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
+            pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
+            date = self.find_published_date(pub[0])
+            dockets, name = self.extract_dockets_and_name(row)
+            self.cases.append(
+                {
+                    "url": row.get("href"),
+                    "name": name,
+                    "docket": dockets,
+                    "date": date,
+                }
+            )

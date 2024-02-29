@@ -30,9 +30,9 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         for item in self.html.xpath(self.base):
-            creator = item.xpath(
+            judges = item.xpath(
                 "./dc:creator/text()", namespaces=self.html.nsmap
-            )[0]
+            )
             pubdate = item.xpath("./pubDate/text()")[0]
             title = item.xpath("./title/text()")[0]
             search = self.regex.search(title)
@@ -50,7 +50,7 @@ class Site(OpinionSiteLinear):
                     "name": name,
                     "date": convert_date_string(pubdate),
                     "docket": docket,
-                    "judge": creator,
+                    "judge": judges[0] if judges else "",
                     "url": url,
                 }
             )

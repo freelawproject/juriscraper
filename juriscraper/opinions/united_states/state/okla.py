@@ -21,6 +21,7 @@ class Site(OpinionSiteLinear):
         year = datetime.today().year
         self.url = f"https://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year={year}&level=1"
         self.status = "Published"
+        self.expected_content_types = ["text/html"]
 
     def _process_html(self):
         for row in self.html.xpath("//div/p['@class=document']")[::-1]:
@@ -48,7 +49,6 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def cleanup_content(content):
-        print(content)
         tree = html.fromstring(content)
         core_element = tree.xpath("//*[@id='oscn-content']")[0]
         return html.tostring(

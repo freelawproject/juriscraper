@@ -1,5 +1,5 @@
 """
-The schemas correspond to Courtlistener's Django models, which mirror 
+The schemas correspond to Courtlistener's Django models, which mirror
 the DB models. These schemas should be updated when the CL models are updated
 
 We keep the comments on the fields to a minimal. For further documentation
@@ -138,11 +138,28 @@ docket = {
         "source": {"enum": [2]},
         "court": {"type": "string"},
         "appeal_from_str": {"type": "string"},
+        "appeal_from": {"type": "string"},
+        "assigned_to_str": {"type": "string"},
+        "referred_to_str": {"type": "string"},
+        "panel_str": {"type": "string"},
+        "date_filed": {"type": "string", "format": "date-time"},
+        "date_terminated": {"type": "string", "format": "date-time"},
+        "date_last_filing": {"type": "string", "format": "date-time"},
+        "case_name": {"type": "string"},
+        "case_name_short": {"type": "string"},
+        "case_name_full": {"type": "string"},
+        "docket_number": {"type": "string"},
+        "cause": {"type": "string"},
+        "jury_demand": {"type": "string"},
+        "appellate_fee_status": {"type": "string"},
+        "date_blocked": {"type": "string", "format": "date-time"},
+        "blocked": {"type": "boolean"},
+        "originating_court_information": originating_court_information,
     },
-    "assigned_to_str": {"type": "string"},
-    "referred_to_str": {"type": "string"},
-    "panel_str": {"type": "string"},
-    "required": [],
+    "required": [
+        "docket_number",
+        "case_name"
+    ],
 }
 
 

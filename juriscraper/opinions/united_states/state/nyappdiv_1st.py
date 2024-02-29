@@ -26,6 +26,7 @@ class Site(OpinionSite):
         self.row_base_path = '//tr[contains(./td[1]/a/@href, "3d")]'
         self.division = 1
         self.url = self.build_url()
+        self.expected_content_types = ["application/pdf", "text/html"]
 
     def _get_case_names(self):
         path = f"{self.row_base_path}/td[1]"

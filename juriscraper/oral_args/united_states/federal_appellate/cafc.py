@@ -20,6 +20,7 @@ class Site(OralArgumentSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.expected_content_types = ["audio/mpeg3"]
         self.url = "https://cafc.uscourts.gov/home/oral-argument/listen-to-oral-arguments/"
         self.back_scrape_iterable = [
             i.date()
