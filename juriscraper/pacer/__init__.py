@@ -1,3 +1,4 @@
+from .acms_attachment_page import ACMSAttachmentPage
 from .acms_docket import ACMSDocketReport
 from .appellate_attachment_page import AppellateAttachmentPage
 from .appellate_docket import AppellateDocketReport
@@ -19,6 +20,7 @@ from .mobile_query import MobileQuery
 from .rss_feeds import PacerRssFeed
 
 __all__ = [
+    ACMSAttachmentPage,
     ACMSDocketReport,
     AppellateDocketReport,
     AttachmentPage,
