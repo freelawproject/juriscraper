@@ -13,3 +13,6 @@ python-dateutil>=2.8.2
 requests>=2.20.0
 selenium>=4.9.1
 tldextract
+jsonschema==4.21.1
+jsonschema-specifications==2023.12.1
+referencing==0.32.1

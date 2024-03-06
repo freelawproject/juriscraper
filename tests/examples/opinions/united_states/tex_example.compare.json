@@ -1,142 +1,80 @@
 [
   {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2457&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0617",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Petition for Review/Cause under Rule 53.1",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=fa4dc02f-9219-47ae-af9e-610967e3cec2&coa=cossup&DT=OPINION&MediaID=04d9e9c5-bfc2-422d-bca4-d76dce234526",
+            "author_str": "Young",
+            "joined_by_str": "Hecht;Blacklock",
+            "type": "030concurrence"
+          },
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=259a3c9c-4bcf-4166-9ea2-09bd11b30d10&coa=cossup&DT=OPINION&MediaID=5cf04feb-fcf5-40b0-a67e-ad8ebefd3efc",
+            "author_str": "Lehrmann",
+            "joined_by_str": "Busby;Young",
+            "type": "030concurrence"
+          },
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=b103a5e9-a915-468e-a207-ef1735308744&coa=cossup&DT=OPINION&MediaID=3ff7a9e4-24f7-44c6-9069-30f038d3b875"
+          }
+        ],
+        "date_filed": "2024-03-01",
+        "judges": "Hecht;Blacklock;Young;Busby;Young;Lehrmann",
+        "disposition": "Court of appeals' judgment affirmed",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "Eve Lynn Baker v. Terry Lee Bizzle",
+        "case_name_short": ""
+      },
+      "case_name": "Eve Lynn Baker v. Terry Lee Bizzle",
+      "appeal_from_str": "2nd Court of Appeals",
+      "appeal_from_id": "texapp",
+      "OriginatingCourtInformation": {
+        "docket_number": "02-20-00075-CV",
+        "assigned_to_str": "E. Lee Gabriel",
+        "date_judgment": "2022-01-13"
+      },
+      "docket_number": "22-0242",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   },
   {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2456&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0804",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2450&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0957",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2449&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0957",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2448&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-1039",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2446&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-0846",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2445&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0804",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2440&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0957",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2437&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0483",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2433&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0617",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2432&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-1039",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2425&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0617",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2422&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-0804",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-03",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=2417&Index=***sc%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-0846",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Petition for Review/Cause under Tex. R. App. P. 59.1",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=094a8ad8-7205-4041-8b63-2fab9687e5c9&coa=cossup&DT=OPINION&MediaID=7ea5e635-2f83-4650-a5f4-4182c2a8bbec",
+            "per_curiam": true
+          }
+        ],
+        "date_filed": "2024-03-01",
+        "disposition": "Court of Appeals' judgment reversed and remanded to Court of Appeals",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "In THE INTEREST OF C.E., a CHILD v. the State of Texas",
+        "case_name_short": ""
+      },
+      "case_name": "In THE INTEREST OF C.E., a CHILD v. the State of Texas",
+      "appeal_from_str": "2nd Court of Appeals",
+      "appeal_from_id": "texapp",
+      "OriginatingCourtInformation": {
+        "docket_number": "02-22-00285-CV",
+        "assigned_to_str": "D. Michael Wallach",
+        "date_judgment": "2023-01-12"
+      },
+      "docket_number": "23-0180",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   }
 ]

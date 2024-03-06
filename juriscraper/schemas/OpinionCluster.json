@@ -1,0 +1,131 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://courtlistener.com/schemas/OpinionCluster.json",
+    "title": "OpinionCluster",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "judges": {
+            "type": "string"
+        },
+        "date_filed": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "date_filed_is_approximate": {
+            "type": "boolean"
+        },
+        "case_name_short": {
+            "type": "string"
+        },
+        "case_name": {
+            "type": "string"
+        },
+        "case_name_full": {
+            "type": "string"
+        },
+        "scdb_votes_minority": {
+            "type": "integer"
+        },
+        "scdb_votes_majority": {
+            "type": "integer"
+        },
+        "scdb_id": {
+            "type": "string"
+        },
+        "attorneys": {
+            "type": "string"
+        },
+        "procedural_history": {
+            "type": "string"
+        },
+        "nature_of_suit": {
+            "type": "string"
+        },
+        "disposition": {
+            "type": "string"
+        },
+        "posture": {
+            "type": "string"
+        },
+        "syllabus": {
+            "type": "string"
+        },
+        "headnotes": {
+            "type": "string"
+        },
+        "summary": {
+            "type": "string"
+        },
+        "history": {
+            "type": "string"
+        },
+        "other_dates": {
+            "type": "string"
+        },
+        "cross_reference": {
+            "type": "string"
+        },
+        "correction": {
+            "type": "string"
+        },
+        "date_blocked": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "blocked": {
+            "type": "boolean"
+        },
+        "arguments": {
+            "type": "string"
+        },
+        "headmatter": {
+            "type": "string"
+        },
+        "precedential_status": {
+            "enum": [
+                "Published",
+                "Unpublished",
+                "Errata",
+                "Separate",
+                "In-chambers",
+                "Relating-to",
+                "Unknown"
+            ]
+        },
+        "source": {
+            "enum": [
+                "C"
+            ]
+        },
+        "Opinions": {
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://courtlistener.com/schemas/Opinion.json"
+                }
+            ]
+        },
+        "Citations": {
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://courtlistener.com/schemas/Citation.json"
+                }
+            ]
+        },
+        "citation_strings": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "date_filed",
+        "date_filed_is_approximate",
+        "case_name",
+        "precedential_status",
+        "Opinions"
+    ]
+}

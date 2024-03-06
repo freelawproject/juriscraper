@@ -42,61 +42,67 @@ def scrape_court(site, binaries=False):
     exceptions = defaultdict(list)
     for item in site:
         # First turn the download urls into a utf-8 byte string
-        item_download_urls = item["download_urls"].encode("utf-8")
-        # Percent encode URLs (this is a Python wart)
-        download_url = parse.quote(
-            item_download_urls, safe="%/:=&?~#+!$,;'@()*[]"
-        )
+        if getattr(site, "is_cluster_site", False):
+            item_download_urls = [
+                op["download_url"]
+                for op in item["Docket"]["OpinionCluster"]["Opinions"]
+            ]
+        else:
+            item_download_urls = [item["download_urls"].encode("utf-8")]
 
-        if binaries:
-            try:
-                opener = request.build_opener()
-                for cookie_dict in site.cookies:
-                    opener.addheaders.append(
-                        (
-                            "Cookie",
-                            f"{cookie_dict['name']}={cookie_dict['value']}",
+        for url in item_download_urls:
+            # Percent encode URLs (this is a Python wart)
+            download_url = parse.quote(url, safe="%/:=&?~#+!$,;'@()*[]")
+
+            if binaries:
+                try:
+                    opener = request.build_opener()
+                    for cookie_dict in site.cookies:
+                        opener.addheaders.append(
+                            (
+                                "Cookie",
+                                f"{cookie_dict['name']}={cookie_dict['value']}",
+                            )
                         )
-                    )
-                r = opener.open(download_url)
-                expected_content_types = site.expected_content_types
-                response_type = r.headers.get("Content-Type", "").lower()
-                # test for expected content type response
-                if (
-                    expected_content_types
-                    and response_type not in expected_content_types
-                ):
+                    r = opener.open(download_url)
+                    expected_content_types = site.expected_content_types
+                    response_type = r.headers.get("Content-Type", "").lower()
+                    # test for expected content type response
+                    if (
+                        expected_content_types
+                        and response_type not in expected_content_types
+                    ):
+                        exceptions["DownloadingError"].append(download_url)
+                        v_print(3, f"DownloadingError: {download_url}")
+                        v_print(3, traceback.format_exc())
+                    data = r.read()
+
+                    # test for empty files (thank you CA1)
+                    if len(data) == 0:
+                        exceptions["EmptyFileError"].append(download_url)
+                        v_print(3, f"EmptyFileError: {download_url}")
+                        v_print(3, traceback.format_exc())
+                        continue
+                except Exception:
                     exceptions["DownloadingError"].append(download_url)
                     v_print(3, f"DownloadingError: {download_url}")
                     v_print(3, traceback.format_exc())
-                data = r.read()
-
-                # test for empty files (thank you CA1)
-                if len(data) == 0:
-                    exceptions["EmptyFileError"].append(download_url)
-                    v_print(3, f"EmptyFileError: {download_url}")
-                    v_print(3, traceback.format_exc())
                     continue
-            except Exception:
-                exceptions["DownloadingError"].append(download_url)
-                v_print(3, f"DownloadingError: {download_url}")
-                v_print(3, traceback.format_exc())
-                continue
 
-            # Extract the data using e.g. antiword, pdftotext, etc., then
-            # clean it up.
-            data = extract_doc_content(data)
-            data = site.cleanup_content(data)
+                # Extract the data using e.g. antiword, pdftotext, etc., then
+                # clean it up.
+                data = extract_doc_content(data)
+                data = site.cleanup_content(data)
 
-        # Normally, you'd do your save routines here...
-        v_print(1, "\nAdding new item:")
-        for k, v in item.items():
-            if isinstance(v, str):
-                value = trunc(v, 200, ellipsis="...")
-                v_print(1, f'    {k}: "{value}"')
-            else:
-                # Dates and such...
-                v_print(1, f"    {k}: {v}")
+            # Normally, you'd do your save routines here...
+            v_print(1, "\nAdding new item:")
+            for k, v in item.items():
+                if isinstance(v, str):
+                    value = trunc(v, 200, ellipsis="...")
+                    v_print(1, f'    {k}: "{value}"')
+                else:
+                    # Dates and such...
+                    v_print(1, f"    {k}: {v}")
 
     v_print(3, f"\n{site.court_id}: Successfully crawled {len(site)} items.")
     return {"count": len(site), "exceptions": exceptions}

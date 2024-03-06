@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://courtlistener.com/schemas/Opinion.json",
+    "title": "Opinion",
+    "description":"",
+    "type": "object",
+    "properties": {
+        "author_str": {"type": "string"},
+        "per_curiam": {"type": "boolean"},
+        "joined_by_str": {"type": "string"},
+        "page_count": {"type": "integer"},
+        "download_url": {"type": "string"},
+        "type": {
+            "enum": [
+                "010combined",
+                "015unamimous",
+                "020lead",
+                "025plurality",
+                "030concurrence",
+                "035concurrenceinpart",
+                "040dissent",
+                "050addendum",
+                "060remittitur",
+                "070rehearing",
+                "080onthemerits",
+                "090onmotiontostrike"
+            ]
+        }
+    },
+    "required": ["download_url"]
+}

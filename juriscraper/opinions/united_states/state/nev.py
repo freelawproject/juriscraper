@@ -7,20 +7,20 @@ History:
 
 
 import json
-import re
-from functools import partial
 
 from lxml.html import fromstring
 
-from juriscraper.NewOpinionSite import NewOpinionSite
+from juriscraper.DeferringList import DeferringList
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(NewOpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://publicaccess.nvsupremecourt.us/WebSupplementalAPI/api/AdvanceOpinions"
         self.search = "https://caseinfo.nvsupremecourt.us/public/caseSearch.do"
+        self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
         self.status = "Published"
         self.court_code = "10001"
         self.headers = {
@@ -72,23 +72,17 @@ class Site(NewOpinionSite):
         for case in self.filter_cases():
             vol = int(case["date"].split("-")[0]) - 1884
             citation = f"{vol} Nev., Advance Opinion {case['advanceNumber']}"
-            deferred_scraper = partial(
-                self.scrape_case_page, csNumber=case["caseNumber"]
-            )
-
             self.cases.append(
                 {
                     "citation": citation,
                     "name": case["caseTitle"],
                     "docket": case["caseNumber"],
                     "date": case["date"],
-                    "url": deferred_scraper,
-                    "judge": deferred_scraper,
-                    "lower_court": deferred_scraper,
+                    "url": "placeholder",
                 }
             )
 
-    def scrape_case_page(self, csNumber: str):
+    def fetch_document_link(self, csNumber: str):
         """Fetch document url
 
         Using case number - make a request to return the case page and
@@ -111,19 +105,18 @@ class Site(NewOpinionSite):
             "submitValue": "Search",
         }
         content = self.request["session"].post(self.search, data=data).text
-        html = fromstring(content)
-        opinion_xpath = "//tr[td[contains(text(), 'Opinion')]]"
-        opinion_row = html.xpath(opinion_xpath)[-1]
-        slug = opinion_row.xpath("td/a/@href")[0]
+        slug = fromstring(content).xpath(self.xp)[-1]
+        return f"https://caseinfo.nvsupremecourt.us{slug}"
 
-        lower_court_xpath = "//td[text()='Lower Court Case(s):']//following-sibling::td[1]/text()"
+    def _get_download_urls(self):
+        """Get download urls
 
-        author_str = opinion_row.xpath("td[3]/text()")[0]
-        author_match = re.search(r"Author:(?P<judge>[\s\w,]+).", author_str)
-        judge = author_match.group("judge") if author_match else ""
+        :return: List URLs
+        """
 
-        return {
-            "url": f"https://caseinfo.nvsupremecourt.us{slug}",
-            "lower_court": html.xpath(lower_court_xpath)[0],
-            "judge": judge,
-        }
+        def fetcher(case):
+            if self.test_mode_enabled():
+                return case["url"]
+            return self.fetch_document_link(case["docket"])
+
+        return DeferringList(seed=self.cases, fetcher=fetcher)

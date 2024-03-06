@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://courtlistener.com/schemas/Docket.json",
+    "title": "Docket",
+    "description": "A Courtlistener Docket object. The schemas correspond to Courtlistener's Django models, which mirror the DB models. These schemas should be updated when the CL models are updated. We keep the comments on the fields to a minimal. For further documentation check CL models.py files.",
+    "type": "object",
+    "properties": {
+        "source": {
+            "enum": [
+                2
+            ]
+        },
+        "court": {
+            "type": "string"
+        },
+        "appeal_from_str": {
+            "type": "string"
+        },
+        "appeal_from_id": {
+            "type": "string",
+            "description": "Court ID in Courtlistener, which is a lowercase abbreviation of the court name"
+        },
+        "assigned_to_str": {
+            "type": "string"
+        },
+        "referred_to_str": {
+            "type": "string"
+        },
+        "panel_str": {
+            "type": "string"
+        },
+        "date_filed": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "date_terminated": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "date_last_filing": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "case_name": {
+            "type": "string"
+        },
+        "case_name_short": {
+            "type": "string"
+        },
+        "case_name_full": {
+            "type": "string"
+        },
+        "docket_number": {
+            "type": "string"
+        },
+        "cause": {
+            "type": "string"
+        },
+        "jury_demand": {
+            "type": "string"
+        },
+        "appellate_fee_status": {
+            "type": "string"
+        },
+        "date_blocked": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "blocked": {
+            "type": "boolean"
+        },
+        "OriginatingCourtInformation": {
+            "$ref": "https://courtlistener.com/schemas/OriginatingCourtInformation.json"
+        },
+        "OpinionCluster": {
+            "$ref": "https://courtlistener.com/schemas/OpinionCluster.json"
+        }
+    },
+    "required": [
+        "docket_number",
+        "case_name",
+        "OpinionCluster"
+    ]
+}
