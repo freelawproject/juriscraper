@@ -1,0 +1,1041 @@
+<!DOCTYPE html />
+<html lang="en">
+
+<head id="ctl00_Head1">
+    <title>
+        Case Detail
+    </title>
+</head>
+
+<body>
+    <div class="container-fluid" id="content">
+
+        <div class="row-fluid">
+            <!--Start:main page content-->
+            <div class="span2 no-print">
+                <nav class="panel panel-phone no-print">
+                    <div class="panel-heading-no-collapse">Case Information<i class="icon-caret-right pull-right"></i>
+                    </div>
+                    <ul class="nav nav-list">
+                        <li><a href="https://search.txcourts.gov/CaseSearch.aspx?coa=coscca&amp;s=c">Case Search</a>
+                        </li>
+                        <li><a href="https://search.txcourts.gov/CaseSearch.aspx?coa=coscca&amp;s=d&amp;d=1">Document
+                                Search</a></li>
+                        <li><a href="https://www.txcourts.gov/cca/practice-before-the-court/case-submission-schedules/">Case
+                                Submission Schedules</a></li>
+                        <li><a href="https://casemail.txcourts.gov/?coa=coa15">Case Mail</a></li>
+                        <li><a href="https://search.txcourts.gov/DocketSrch.aspx?coa=coscca">Hand Down List (Orders,
+                                Opinions &amp; Statements)</a></li>
+                    </ul>
+                </nav>
+
+
+                <nav id="ctl00_adminLinks" class="panel panel-phone no-print">
+                    <div class="panel-heading-no-collapse">
+                        Administration
+                        <i class="icon-caret-right pull-right"></i>
+                    </div>
+                    <ul class="nav nav-list">
+                        <li>
+
+                        </li>
+
+                        <li>
+                            <a id="ctl00_lnkLogin" href="/login.aspx?coa=coscca">Log In</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="span10" id="MainContent">
+
+                <form name="aspnetForm" method="post" action="./Case.aspx?cn=PD-0984-19&amp;coa=coscca" id="aspnetForm">
+                    <div>
+                        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+                        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+                        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                            value="/wEPDwUJNjQyNzQxMzA1ZBgbBTxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cyRjdGwwMCRjdGwxMiRncmlkRG9jdW1lbnQPPCsADAEIZmQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDA0JGdyaWREb2N1bWVudA88KwAMAQgCAWQFK2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkQ2FsZW5kYXIkY3RsMDAPFCsAAxQrAAJkFwMFBl8hRFNJQwIBBQhfIVBDb3VudGQFC18hSXRlbUNvdW50AgEWAh4DX3NlFgIeAl9jZmRkBShjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZFBhcnR5JGN0bDAwDxQrAAMUKwACZBcDBQZfIURTSUMCAgUIXyFQQ291bnRkBQtfIUl0ZW1Db3VudAICFgIfABYCHwFmZGQFKWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwDxQrAAMUKwACZBcDBQZfIURTSUMCDgUIXyFQQ291bnRkBQtfIUl0ZW1Db3VudAIOFgIfABYCHwFmZGQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDIyJGdyaWREb2N1bWVudA88KwAMAQgCAWQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDE2JGdyaWREb2N1bWVudA88KwAMAQgCAWQFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYEBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEJyaWVmcwUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkQ2FsZW5kYXIFImN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkUGFydHkFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDE0JGdyaWREb2N1bWVudA88KwAMAQgCAWQFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzDxQrAAJkFwIFC0VkaXRJbmRleGVzFgAFD1NlbGVjdGVkSW5kZXhlcxYAZAUiY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRQYXJ0eQ8UKwACZBcCBQtFZGl0SW5kZXhlcxYABQ9TZWxlY3RlZEluZGV4ZXMWAGQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDI0JGdyaWREb2N1bWVudA88KwAMAQgCAWQFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkQ2FsZW5kYXIPFCsAAmQXAgULRWRpdEluZGV4ZXMWAAUPU2VsZWN0ZWRJbmRleGVzFgBkBTxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cyRjdGwwMCRjdGwwOCRncmlkRG9jdW1lbnQPPCsADAEIZmQFIWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRmlsZQ8UKwACZBcAZAUpY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRCcmllZnMkY3RsMDAPFCsAAxQrAAJkFwMFBl8hRFNJQwIDBQhfIVBDb3VudGQFC18hSXRlbUNvdW50AgMWAh8AFgQfAQIBHgEwFgQeA19mbgUJRXZlbnREYXRlHgNfc28LKXVUZWxlcmlrLldlYi5VSS5HcmlkU29ydE9yZGVyLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDIwLjIuNTEyLjQ1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQCZGQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDI2JGdyaWREb2N1bWVudA88KwAMAQgCAWQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDE4JGdyaWREb2N1bWVudA88KwAMAQgCAWQFPWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkQnJpZWZzJGN0bDAwJGN0bDA0JGdyaWRCcmllZkRvY3MPPCsADAEIAgFkBT1jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEJyaWVmcyRjdGwwMCRjdGwwNiRncmlkQnJpZWZEb2NzDzwrAAwBCAIBZAU8Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMkY3RsMDAkY3RsMTAkZ3JpZERvY3VtZW50DzwrAAwBCAIBZAU8Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMkY3RsMDAkY3RsMjgkZ3JpZERvY3VtZW50DzwrAAwBCAIBZAUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRCcmllZnMPFCsAAmQXAgULRWRpdEluZGV4ZXMWAAUPU2VsZWN0ZWRJbmRleGVzFgBkBTxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cyRjdGwwMCRjdGwyMCRncmlkRG9jdW1lbnQPPCsADAEIZmQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDMwJGdyaWREb2N1bWVudA88KwAMAQhmZAU9Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRCcmllZnMkY3RsMDAkY3RsMDgkZ3JpZEJyaWVmRG9jcw88KwAMAQgCAWQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDA2JGdyaWREb2N1bWVudA88KwAMAQgCAWR6GB7gxvveWkCTATKLTgcELl1KyDidugeJOSpbdwhzBg==" />
+                    </div>
+
+                    <div>
+
+                        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C606338E" />
+                        <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+                        <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+                        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                            value="/wEdAAjDHrv1Z0i+toEtWGZTiXpKZCuzTStWOJug5EWzeFvksdqT7UyShhLKSHHyRuhW23S+fiS3BNeTUA91HGVscNi+6OJgDE5x64zIHmBvtwcY8pwUwgA1eBLZJvU1n6iV6/K789lBdn/dEbxQHx7wweZLq6/wfhi1DfkF55Yn57hDk/POYnpQj482ra/9ZSfPzW0pVC4g/Af87tYJD39LrIuq" />
+                    </div>
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        Sys.WebForms.PageRequestManager._initialize('ctl00$scriptManager', 'aspnetForm', [], [], [], 90, 'ctl00');
+                        //]]>
+                    </script>
+
+
+                    <div id="main-panel-content">
+                        <div id="main-content-head" class="panel-heading">
+                            Case:
+                            PD-0984-19
+                            &nbsp;&nbsp;&nbsp;
+                        </div>
+                        <div id="main-content" class="panel-content">
+                            <div id="printfriendly" class="row-fluid no-print">
+                                <div class="span2" style="float: left;">
+                                    <strong><a
+                                            href="https://search.txcourts.gov/Case.aspx?cn=PD-0984-19&coa=coscca&p=1"><i
+                                                class="fa fa-print"></i>
+                                            Print-Friendly</a> </strong>
+
+                                </div>
+                                <div id="linkCaseMail" class="span3">
+                                    <strong><a
+                                            href='https://casemail.txcourts.gov/CaseAdd.aspx?coa=coscca&FullCaseNumber=PD-0984-19&cID=COSCCA'>
+                                            <i class="fa fa-envelope-o"></i>&nbsp;Add to CaseMail</a></strong>
+                                </div>
+                            </div>
+
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="panelTextSelection">
+                                        <div class="panel-content">
+                                            <div id="case" class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Case:
+                                                    </label>
+                                                </div>
+                                                <div class="span10" style="float: left;">
+                                                    <div>
+                                                        <strong>
+                                                            PD-0984-19
+                                                        </strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Date Filed:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    <div>
+                                                        09/19/2019
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Case Type:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    PDR Case Type
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Style:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    MCGUIRE, SEAN MICHAEL&nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        v.:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="Div3">
+                                        <div class="panel-heading panel-heading-content">
+                                            Appellate Briefs
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_pnlBriefs">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdBriefs"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <!-- 2020.2.512.45 -->
+                                                    <table class="rgMasterTable rgClipCells" rules="rows" border="1"
+                                                        id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader rgSorted"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdBriefs_ctl00&#39;), &#39;EventDate&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl00&#39;,&#39;&#39;)">Date</a>&nbsp;<input
+                                                                        type="submit"
+                                                                        name="ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl01"
+                                                                        value=" " title="Sorted desc"
+                                                                        class="rgSortDesc" /></th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdBriefs_ctl00&#39;), &#39;EventType&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl02&#39;,&#39;&#39;)">Event
+                                                                        Type</a></th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdBriefs_ctl00&#39;), &#39;Description&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl03&#39;,&#39;&#39;)">Description</a>
+                                                                </th>
+                                                                <th scope="col" class="rgHeader">Document</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00__0"
+                                                                style="border-width:0px;border-style:None;">
+                                                                <td class="rgSorted">02/11/2020</td>
+                                                                <td style="width:80px;">BRIEF FILED</td>
+                                                                <td style="width:80px;">Appellee</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            border="0"
+                                                                            id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00_ctl04_gridBriefDocs"
+                                                                            style="width:160px;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="width:75px;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=fd1e5ab0-60cf-40fe-8803-237a6ce13352&amp;coa=coscca&amp;DT=BRIEF&amp;MediaID=da6aca95-2057-495b-b481-57f8c14df046"
+                                                                                        target="_blank"> [ PDF/232 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;width:75px;white-space:nowrap;">
+                                                                                    Brief </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="width:75px;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=b3fcffea-5dd5-40ee-a6ab-dcac3db9d849&amp;coa=coscca&amp;DT=BRIEF FILED&amp;MediaID=d26736a6-bd88-4260-b971-3a3848cc0702"
+                                                                                        target="_blank"> [ PDF/107 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;width:75px;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00__1"
+                                                                style="background-color:WhiteSmoke;border-width:0px;border-style:None;">
+                                                                <td class="rgSorted">01/10/2020</td>
+                                                                <td style="width:80px;">BRIEF FILED</td>
+                                                                <td style="width:80px;">State Prosecuting Attorney</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            border="0"
+                                                                            id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00_ctl06_gridBriefDocs"
+                                                                            style="width:160px;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="width:75px;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=8c47b975-9b1a-448e-913e-7951367fe89b&amp;coa=coscca&amp;DT=BRIEF&amp;MediaID=7f11c19a-77ee-41b2-b7c0-fd6a70e8fb03"
+                                                                                        target="_blank"> [ PDF/245 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;width:75px;white-space:nowrap;">
+                                                                                    Brief </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="width:75px;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=b973866c-7094-4ce5-b410-e1789e32b6ff&amp;coa=coscca&amp;DT=BRIEF FILED&amp;MediaID=adcd557a-96bf-48b5-8a2e-9b86f4dbc857"
+                                                                                        target="_blank"> [ PDF/108 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;width:75px;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00__2"
+                                                                style="border-width:0px;border-style:None;">
+                                                                <td class="rgSorted">10/08/2019</td>
+                                                                <td style="width:80px;">RESPONSE FILED</td>
+                                                                <td style="width:80px;">Appellee</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            border="0"
+                                                                            id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00_ctl08_gridBriefDocs"
+                                                                            style="width:160px;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="width:75px;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=470ed378-11c6-4006-a681-9953a4b852fe&amp;coa=coscca&amp;DT=BRIEF&amp;MediaID=dec06c3a-331b-4bc9-a879-2cc0b1c6a146"
+                                                                                        target="_blank"> [ PDF/199 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;width:75px;white-space:nowrap;">
+                                                                                    Response </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="width:75px;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=b648ff37-c014-44f1-a093-6832e9ed66fe&amp;coa=coscca&amp;DT=RESPONSE FILED&amp;MediaID=3087e4cd-f01c-404c-9b63-e3e5e2039fa2"
+                                                                                        target="_blank"> [ PDF/109 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;width:75px;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdBriefs_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdBriefs_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdBriefs_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="Div4">
+                                        <div class="panel-heading panel-heading-content">
+                                            Case Events
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_pnlEvents">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdEvents"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <table class="rgMasterTable rgClipCells" rules="rows" border="1"
+                                                        id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdEvents_ctl00&#39;), &#39;EventDate&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdEvents$ctl00$ctl02$ctl00$ctl00&#39;,&#39;&#39;)">Date</a>
+                                                                </th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdEvents_ctl00&#39;), &#39;EventType&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdEvents$ctl00$ctl02$ctl00$ctl01&#39;,&#39;&#39;)">Event
+                                                                        Type</a></th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdEvents_ctl00&#39;), &#39;Disposition&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdEvents$ctl00$ctl02$ctl00$ctl03&#39;,&#39;&#39;)">Disposition</a>
+                                                                </th>
+                                                                <th scope="col" class="rgHeader">Document</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__0">
+                                                                <td style="width:35px;">02/21/2024</td>
+                                                                <td style="width:60px;">OPINION ISSD</td>
+                                                                <td>Reversed COA & Trial Court;Remanded to Trial Court
+                                                                </td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl04_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=59f22e02-f84c-4e02-8a87-75fcd0b752af&amp;coa=coscca&amp;DT=OPINION&amp;MediaID=091f82d1-999f-4a6a-a384-a321fc4ccdef"
+                                                                                        target="_blank"> [ PDF/336 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Original</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=e2a2e6f0-25bc-4277-9964-08765111e68e&amp;coa=coscca&amp;DT=OPINION ISSD&amp;MediaID=b128226c-df6a-424f-ac28-f98072ce1eb4"
+                                                                                        target="_blank"> [ PDF/101 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__1"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">02/21/2024</td>
+                                                                <td style="width:60px;">OPINION ISSD</td>
+                                                                <td>Reversed COA & Trial Court;Remanded to Trial Court
+                                                                </td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl06_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=540d7572-1ae5-4555-9f90-b1e718dee379&amp;coa=coscca&amp;DT=OPINION&amp;MediaID=0436c2a7-58e9-46d7-baee-966f2b03fc0d"
+                                                                                        target="_blank"> [ PDF/248 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Concurring</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=e2a2e6f0-25bc-4277-9964-08765111e68e&amp;coa=coscca&amp;DT=OPINION ISSD&amp;MediaID=b128226c-df6a-424f-ac28-f98072ce1eb4"
+                                                                                        target="_blank"> [ PDF/101 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__2">
+                                                                <td style="width:35px;">04/08/2020</td>
+                                                                <td style="width:60px;">SUBMITTED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__3"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">03/25/2020</td>
+                                                                <td style="width:60px;">FOR NON ARGT CASES</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl10_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=fc542c2f-e315-40ef-a30d-c6494f868546&amp;coa=coscca&amp;DT=SUBMIS NOTICE&amp;MediaID=6b6e2ba4-1be5-419d-81d0-fd3ea719fbb8"
+                                                                                        target="_blank"> [ PDF/133 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__4">
+                                                                <td style="width:35px;">03/25/2020</td>
+                                                                <td style="width:60px;">SET FOR SUBMIS</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__5"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">02/11/2020</td>
+                                                                <td style="width:60px;">BRIEF FILED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl14_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=fd1e5ab0-60cf-40fe-8803-237a6ce13352&amp;coa=coscca&amp;DT=BRIEF&amp;MediaID=da6aca95-2057-495b-b481-57f8c14df046"
+                                                                                        target="_blank"> [ PDF/232 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    BRIEF </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=b3fcffea-5dd5-40ee-a6ab-dcac3db9d849&amp;coa=coscca&amp;DT=BRIEF FILED&amp;MediaID=d26736a6-bd88-4260-b971-3a3848cc0702"
+                                                                                        target="_blank"> [ PDF/107 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__6">
+                                                                <td style="width:35px;">01/13/2020</td>
+                                                                <td style="width:60px;">MISC DOCUMENT FOR A PDR</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl16_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=89fb1630-f035-423e-afbf-f15da754c87f&amp;coa=coscca&amp;DT=LETTER&amp;MediaID=c0b8c0eb-1841-4138-a1b5-0e90e05ced8c"
+                                                                                        target="_blank"> [ PDF/231 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    DOCUMENT </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__7"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">01/10/2020</td>
+                                                                <td style="width:60px;">BRIEF FILED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl18_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=8c47b975-9b1a-448e-913e-7951367fe89b&amp;coa=coscca&amp;DT=BRIEF&amp;MediaID=7f11c19a-77ee-41b2-b7c0-fd6a70e8fb03"
+                                                                                        target="_blank"> [ PDF/245 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    BRIEF </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=b973866c-7094-4ce5-b410-e1789e32b6ff&amp;coa=coscca&amp;DT=BRIEF FILED&amp;MediaID=adcd557a-96bf-48b5-8a2e-9b86f4dbc857"
+                                                                                        target="_blank"> [ PDF/108 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__8">
+                                                                <td style="width:35px;">12/11/2019</td>
+                                                                <td style="width:60px;">PDR GRANTED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__9"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">12/11/2019</td>
+                                                                <td style="width:60px;">PDR DISP</td>
+                                                                <td>Granted</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl22_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=26b33171-880d-436f-bd84-b416c06687e7&amp;coa=coscca&amp;DT=PDR DISP&amp;MediaID=e83820e0-ee82-48ca-ac88-f41676eb4e4b"
+                                                                                        target="_blank"> [ PDF/116 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__10">
+                                                                <td style="width:35px;">10/08/2019</td>
+                                                                <td style="width:60px;">RESPONSE FILED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl24_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=470ed378-11c6-4006-a681-9953a4b852fe&amp;coa=coscca&amp;DT=BRIEF&amp;MediaID=dec06c3a-331b-4bc9-a879-2cc0b1c6a146"
+                                                                                        target="_blank"> [ PDF/199 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    RESPONSE </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=b648ff37-c014-44f1-a093-6832e9ed66fe&amp;coa=coscca&amp;DT=RESPONSE FILED&amp;MediaID=3087e4cd-f01c-404c-9b63-e3e5e2039fa2"
+                                                                                        target="_blank"> [ PDF/109 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__11"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">09/24/2019</td>
+                                                                <td style="width:60px;">MISC DOCUMENT FOR A PDR</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl26_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=eae04b0b-0c48-425e-8e55-878fbe761adf&amp;coa=coscca&amp;DT=LETTER&amp;MediaID=0553aeba-2a85-4acd-bc8b-8a7e8daaf69c"
+                                                                                        target="_blank"> [ PDF/99 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    DOCUMENT </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__12">
+                                                                <td style="width:35px;">09/19/2019</td>
+                                                                <td style="width:60px;">PDR FILED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl28_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=43f5c02c-91e8-411b-ae17-4d693bd034f2&amp;coa=coscca&amp;DT=PETITION&amp;MediaID=162362b5-b0c2-48d9-9441-aca680c5d9f1"
+                                                                                        target="_blank"> [ PDF/437 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    PETITION </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=2823b77e-2b0b-46ca-bb06-ada8b040dbc0&amp;coa=coscca&amp;DT=PDR FILED&amp;MediaID=62302b1f-7726-438c-9199-f9ab207dcd5c"
+                                                                                        target="_blank"> [ PDF/111 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__13"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">09/19/2019</td>
+                                                                <td style="width:60px;">COA RECORD RECEIVED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdEvents_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdEvents_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdEvents_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="panel" id="Div5">
+                                        <div class="panel-heading panel-heading-content">
+                                            Calendars
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_Panel2">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdCalendar"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <table class="rgMasterTable rgClipCells" border="0"
+                                                        id="ctl00_ContentPlaceHolder1_grdCalendar_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader">Set Date</th>
+                                                                <th scope="col" class="rgHeader">Calendar Type</th>
+                                                                <th scope="col" class="rgHeader">Reason Set</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdCalendar_ctl00__0">
+                                                                <td>03/18/2024</td>
+                                                                <td>MANDATE</td>
+                                                                <td>MANDATE DUE</td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdCalendar_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdCalendar_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdCalendar_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="Div6">
+                                        <div class="panel-heading panel-heading-content">
+                                            Parties
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_Panel1">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdParty"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <table class="rgMasterTable rgClipCells" border="0"
+                                                        id="ctl00_ContentPlaceHolder1_grdParty_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader">Party</th>
+                                                                <th scope="col" class="rgHeader">PartyType</th>
+                                                                <th scope="col" class="rgHeader">Representative</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdParty_ctl00__0">
+                                                                <td>MCGUIRE, SEAN MICHAEL</td>
+                                                                <td>Appellee</td>
+                                                                <td>Kristen Jernigan <br /></td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdParty_ctl00__1"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td>STATE OF TEXAS</td>
+                                                                <td>State</td>
+                                                                <td>Stacey M. Soule <br /></td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdParty_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdParty_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdParty_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: none">
+                                <div class="span12">
+                                    <div class="panel" id="Div7">
+                                        <div class="panel-heading panel-heading-content">
+                                            Case Documents, Opinions, Notices:
+                                        </div>
+                                        <div class="panel-content">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ctl00_ContentPlaceHolder1_divCOAInfo" class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel">
+                                        <div class="panel-heading panel-heading-content">
+                                            Court of Appeals Information:
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_pnlCOA">
+
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            COA Case
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+
+                                                        <div id="ctl00_ContentPlaceHolder1_div1">
+                                                            <a href="Case.aspx?cn=01-18-00146-CR">01-18-00146-CR</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Disposition
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        Affirmed&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Opinion Cite
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        08-29-19&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            COA District
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        1st Court of Appeals&nbsp;
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block;">
+                                <div class="span12">
+                                    <div id="ctl00_ContentPlaceHolder1_pnlTrialCourt2">
+
+                                        <div class="panel" id="panelTrialCourtInfo">
+                                            <div class="panel-heading panel-heading-content">
+                                                Trial Court Information
+                                            </div>
+                                            <div class="panel-content">
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Court
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        268th District Court&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            County
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        Fort Bend&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Court Judge
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Court Case
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        10-DCR-055898&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Reporter
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

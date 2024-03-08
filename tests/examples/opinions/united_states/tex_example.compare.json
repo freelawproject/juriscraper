@@ -17,7 +17,8 @@
             "type": "030concurrence"
           },
           {
-            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=b103a5e9-a915-468e-a207-ef1735308744&coa=cossup&DT=OPINION&MediaID=3ff7a9e4-24f7-44c6-9069-30f038d3b875"
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=b103a5e9-a915-468e-a207-ef1735308744&coa=cossup&DT=OPINION&MediaID=3ff7a9e4-24f7-44c6-9069-30f038d3b875",
+            "type": "010combined"
           }
         ],
         "date_filed": "2024-03-01",
@@ -51,7 +52,8 @@
         "Opinions": [
           {
             "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=094a8ad8-7205-4041-8b63-2fab9687e5c9&coa=cossup&DT=OPINION&MediaID=7ea5e635-2f83-4650-a5f4-4182c2a8bbec",
-            "per_curiam": true
+            "per_curiam": true,
+            "type": "010combined"
           }
         ],
         "date_filed": "2024-03-01",

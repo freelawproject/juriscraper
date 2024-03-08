@@ -15,11 +15,12 @@
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 #  - 2021-12-28: Updated by flooie to remove selenium.
-
+#  - 2023-03-08: Updated by grossir to collect more data
 import re
 from datetime import date, timedelta
 from typing import Dict, List
 
+from dateutil import parser
 from lxml import html as lxmlHTML
 
 from juriscraper.AbstractSite import logger
@@ -132,7 +133,9 @@ class Site(NewOpinionSite):
                     judges.append(op.get("author_str"))
                     dispositions.append(op.pop("disposition", ""))
                 parsed["oc.judges"] = list(filter(bool, judges))
-                parsed["oc.disposition"] = sorted(dispositions, key=len)[-1]
+                parsed["oc.disposition"] = self.get_cluster_disposition(
+                    dispositions
+                )
 
             self.cases.append(parsed)
 
@@ -224,8 +227,14 @@ class Site(NewOpinionSite):
             data[key] = val.strip()
 
         if "COA" in table_id:
-            if data.get("citation") and "," in data["citation"]:
-                _, data["date_judgment"] = data.pop("citation").split(",")
+            citation = data.pop("citation", "")
+            if "," in citation:
+                _, data["date_judgment"] = citation.split(",")
+            elif "-" in citation or "/" in citation:
+                try:
+                    data["date_judgement"] = parser.parse(citation).date()
+                except parser.ParserError:
+                    pass
 
         return data
 
@@ -273,10 +282,10 @@ class Site(NewOpinionSite):
         opinion_xpath = "//div[div[contains(text(), 'Case Events')]]//tr[td[contains(text(), 'pinion issu')]]"
         for opinion in html.xpath(opinion_xpath):
             op = {}
-            link_xpath = opinion.xpath(".//td//a/@href")
-            if not link_xpath:
+            link = opinion.xpath(".//td//a/@href")
+            if not link:
                 continue
-            op["download_url"] = link_xpath[0]
+            op["download_url"] = link[0]
             op["disposition"] = opinion.xpath(".//td[3]/text()")[0]
 
             # Remarks may contain Per Curiam flag. Does not exist in texcrim
@@ -301,13 +310,25 @@ class Site(NewOpinionSite):
             if "concur" in op_type:
                 op["type"] = "030concurrence"
             elif "diss" in op_type:
-                op_type = "040dissent"
+                op["type"] = "040dissent"
             else:
-                op_type = "010combined"
+                op["type"] = "010combined"
 
             opinions.append(op)
 
         return opinions
+
+    def get_cluster_disposition(self, dispositions: List) -> str:
+        """Get oc.disposition from each opinion's disposition value
+
+        In tex, disposition ir is usually the longest string.
+        On texcrimapp, disposition is the same for all opinions
+        In texapp_*, disposition is found on the 'main' opinion
+
+        :param dispositions: disposition strings
+        :return: dispositon of the cluster
+        """
+        return sorted(dispositions, key=len)[-1]
 
     def get_by_label_from_case_page(self, html: lxmlHTML, label: str) -> str:
         """Selects from first / main table of case page
