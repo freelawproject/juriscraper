@@ -1,112 +1,65 @@
 [
   {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=2153&Index=***coa01%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-12-00215-CV",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Mandamus",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=f181b579-b431-4c2f-a2a2-87fc282e342e&coa=coa01&DT=Opinion&MediaID=82d84765-20e6-4cee-9a32-ec951e5dca36",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-02-22",
+        "disposition": "Deny petition for writ of mandamus",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "In Re Julian Fernandez v. the State of Texas",
+        "case_name_short": ""
+      },
+      "case_name": "In Re Julian Fernandez v. the State of Texas",
+      "appeal_from_str": "Co Crim Ct at Law No 13",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "County Cr Court @ 13",
+        "docket_number": "2355952"
+      },
+      "docket_number": "01-24-00076-CR",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   },
   {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=2151&Index=***coa01%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-14-00116-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=2150&Index=***coa01%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-13-01027-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14492&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-14-00533-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14491&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-12-00971-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14490&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-13-00933-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14489&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-13-00581-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14488&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-14-00369-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14487&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-13-00631-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14486&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-10-01153-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-07-08",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14485&Index=***coa01%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "01-13-00674-CV",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Termination of parental rights or conservatorship - accelerated",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=0e464b10-bd33-4e32-af94-c2c6a99a09bd&coa=coa01&DT=Opinion&MediaID=d33e7fcc-fbc6-4a20-8e9a-7a58d2a75721",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-02-27",
+        "disposition": "Affirm TC judgment",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "In the Interest of K.B., Child v. Department of Family and Protective Services",
+        "case_name_short": ""
+      },
+      "case_name": "In the Interest of K.B., Child v. Department of Family and Protective Services",
+      "appeal_from_str": "314th District Court",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "314th Court",
+        "docket_number": "2021-004499J",
+        "court_reporter": "Court Reporter 314th District Court"
+      },
+      "docket_number": "01-23-00658-CV",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   }
 ]
