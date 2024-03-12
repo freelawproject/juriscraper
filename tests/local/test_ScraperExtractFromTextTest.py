@@ -3,6 +3,7 @@ import unittest
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.NewOpinionSite import NewOpinionSite
 
 
 class ScraperExtractFromText(unittest.TestCase):
@@ -510,7 +511,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 f"{package}.{module}", globals(), locals(), [module]
             )
             site = mod.Site()
-            if mod.Site.extract_from_text == OpinionSite.extract_from_text:
+            if mod.Site.extract_from_text in [OpinionSite.extract_from_text, NewOpinionSite.extract_from_text]:
                 # Method is not overridden, so skip it.
                 continue
             self.assertIn(
