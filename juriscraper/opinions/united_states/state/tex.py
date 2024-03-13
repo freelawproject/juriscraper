@@ -232,7 +232,7 @@ class Site(NewOpinionSite):
                 _, data["date_judgment"] = citation.split(",")
             elif "-" in citation or "/" in citation:
                 try:
-                    data["date_judgement"] = parser.parse(citation).date()
+                    data["date_judgment"] = parser.parse(citation).date()
                 except parser.ParserError:
                     pass
 
