@@ -2,13 +2,37 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://courtlistener.com/schemas/Citation.json",
     "title": "Citation",
-    "description":"",
+    "description": "",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
-        "volume": {"type": "integer"},
-        "reporter": {"type": "string"},
-        "page": {"type": "string"},
-        "type": {"enum": [1, 2, 3, 4, 5, 6, 7, 8],  "description":"1 - Federal; 2 - State; 3 - State Regional; 4 - Specialty; 5 - Scotus Early; 6 - Lexis; 7 - West; 8 - Neutral"}
+        "volume": {
+            "type": "integer"
+        },
+        "reporter": {
+            "type": "string"
+        },
+        "page": {
+            "type": "string"
+        },
+        "type": {
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "description": "1 - Federal; 2 - State; 3 - State Regional; 4 - Specialty; 5 - Scotus Early; 6 - Lexis; 7 - West; 8 - Neutral"
+        }
     },
-    "required": ["volume", "reporter", "page", "type"]
+    "required": [
+        "volume",
+        "reporter",
+        "page",
+        "type"
+    ]
 }

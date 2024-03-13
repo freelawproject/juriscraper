@@ -2,18 +2,45 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://courtlistener.com/schemas/OriginatingCourtInformation.json",
     "title": "OriginatingCourtInformation",
-    "description":"",
+    "description": "Has a one to one relationship to Docket",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
-        "docket_number": {"type": "string"},
-        "assigned_to_str": {"type": "string"},
-        "ordering_judge_str": {"type": "string"},
-        "court_reporter": {"type": "string"},
-        "date_disposed": {"type": "string", "format": "date-time"},
-        "date_filed": {"type": "string", "format": "date-time"},
-        "date_judgment": {"type": "string", "format": "date-time"},
-        "date_judgment_eod": {"type": "string", "format": "date-time"},
-        "date_filed_noa": {"type": "string", "format": "date-time"},
-        "date_received_coa": {"type": "string", "format": "date-time"}
+        "docket_number": {
+            "type": "string"
+        },
+        "assigned_to_str": {
+            "type": "string"
+        },
+        "ordering_judge_str": {
+            "type": "string"
+        },
+        "court_reporter": {
+            "type": "string"
+        },
+        "date_disposed": {
+            "type": "string",
+            "format": "date"
+        },
+        "date_filed": {
+            "type": "string",
+            "format": "date"
+        },
+        "date_judgment": {
+            "type": "string",
+            "format": "date"
+        },
+        "date_judgment_eod": {
+            "type": "string",
+            "format": "date"
+        },
+        "date_filed_noa": {
+            "type": "string",
+            "format": "date"
+        },
+        "date_received_coa": {
+            "type": "string",
+            "format": "date"
+        }
     }
 }

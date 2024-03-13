@@ -4,6 +4,7 @@
     "title": "Docket",
     "description": "A Courtlistener Docket object. The schemas correspond to Courtlistener's Django models, which mirror the DB models. These schemas should be updated when the CL models are updated. We keep the comments on the fields to a minimal. For further documentation check CL models.py files.",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "source": {
             "enum": [
@@ -31,15 +32,15 @@
         },
         "date_filed": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "date_terminated": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "date_last_filing": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "case_name": {
             "type": "string"
@@ -64,16 +65,16 @@
         },
         "date_blocked": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "blocked": {
             "type": "boolean"
         },
         "OriginatingCourtInformation": {
-            "$ref": "https://courtlistener.com/schemas/OriginatingCourtInformation.json"
+            "$ref": "https://courtlistener.com/schemas/OriginatingCourtInformation.json#"
         },
         "OpinionCluster": {
-            "$ref": "https://courtlistener.com/schemas/OpinionCluster.json"
+            "$ref": "https://courtlistener.com/schemas/OpinionCluster.json#"
         }
     },
     "required": [

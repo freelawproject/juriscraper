@@ -1,8 +1,8 @@
 from datetime import date, datetime
 from functools import cmp_to_key
-from typing import Callable, Dict, List, Union
+from typing import Dict, List, Union
 
-from juriscraper.AbstractSite import AbstractSite, logger
+from juriscraper.AbstractSite import AbstractSite
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
@@ -10,7 +10,7 @@ from juriscraper.lib.string_utils import (
     convert_date_string,
     harmonize,
 )
-from juriscraper.schemas.schema_utils import SchemaValidator
+from juriscraper.schemas.schema_validator import SchemaValidator
 
 
 class NewOpinionSite(AbstractSite):
@@ -82,7 +82,7 @@ class NewOpinionSite(AbstractSite):
     def __iter__(self):
         yield from self.cases
 
-    def __getitem__(self, index: int):
+    def __getitem__(self, index: int) -> Dict:
         return self.cases[index]
 
     def __len__(self) -> int:
@@ -157,11 +157,13 @@ class NewOpinionSite(AbstractSite):
 
         return cl_obj
 
-    def recast_dates(self, clean_case: Dict):
-        """Courtlistener expects Python date objects, which is not
-        a valid JSON format for the validator
+    def recast_dates(self, clean_case: Dict) -> None:
+        """Converts datetime strings into Python `datetime.date` objects
 
-        This is a temporary method until a custom TypeChecker is written
+        See `clean_value` docstring on dates for why we have to recast the dates
+
+        :param clean_case: validated object
+        :return: None, modifies objects in place
         """
         obj_x_date_fields = [
             (
@@ -197,13 +199,19 @@ class NewOpinionSite(AbstractSite):
 
     def clean_value(
         self, key: str, value: Union[Dict, List, str]
-    ) -> Union[Dict, List, str]:
+    ) -> Union[Dict, List, str, None]:
         """Clean values recursively
+
+        About dates:
+        Courtlistener expects Python `datetime.date` objects, which has no direct support
+        in JSON. At most, the validator supports `{"type": "string", "format": "date"}`
+        where the string format follows RFC 3339. So, we cast dates into strings, and will
+        recast them later after validation is passed
 
         :param key: field name, used to apply special cleaning functions
         :param value: dict, list or string
 
-        :return: preserves the input type of `value`
+        :return: cleaned value, with same input type
         """
         if isinstance(value, dict):
             return {k: self.clean_value(k, v) for k, v in value.items()}
@@ -285,48 +293,10 @@ class NewOpinionSite(AbstractSite):
             ):
                 op["joined_by_str"] = ";".join(op["joined_by_str"])
 
-    def get_deferred_values(self, case) -> None:
-        """Use this function to consume deferred values
-        Deferred values are functions that wait until execution to perform
-        the requests, usually after duplication has been checked by the caller
-
-        If a single deferring_function scrapes multiple fields, it is better to
-        repeat it in every field, for clarity
-
-        For example:
-
-        ```
-        # Use functools.partial to pass an argument to a function
-        # without calling it
-
-        docket_number = "2023-23"
-        deferred_function = partial(self.scrape_detail,
-                                    docket_number=docket_number)
-
-        self.cases.append({
-            "case_dates": date(2024, 01, 01),
-            "judge": deferred_function,
-            "citation": deferred_function,
-            "lower_court": some_other_function,
-        })
-        ```
-        """
-        update_values = {}
-        seen_callables = set()
-
-        for value in case.values():
-            if isinstance(value, Callable) and value not in seen_callables:
-                deferred_dict = value()
-                # deferred_dict = self.clean_case(deferred_dict)
-                logger.info("Got deferred values %s", str(deferred_dict))
-                update_values.update(deferred_dict)
-                seen_callables.add(value)
-
-        case.update(update_values)
-
     @staticmethod
     def sort_by_attributes(case: Dict, other_case: Dict) -> int:
-        """Replaces AbstractSite._date_sort. Passes as `key` argument to base `sort`
+        """Function passed as `key` argument to base `sort`
+        Replaces AbstractSite._date_sort
 
         Keeping the order of attributes as OpinionSite ensures we have the same order of cases
         Order is important because a hash is calculated from ordered case names
@@ -367,10 +337,11 @@ class NewOpinionSite(AbstractSite):
 
         return 0
 
-    def extract_from_text(self, scraped_text):
-        """Pass scraped text into function and return data as a dictionary
+    def extract_from_text(self, scraped_text: str) -> Dict:
+        """Parses Courtlistener's objects out of the download
+        opinion document content
 
-        :param opinion_text: Text of scraped content
-        :return: dictionary of information
+        :param scraped_text: May be HTML or plain_text
+        :return: Dict in the format expected by Courtlistener
         """
         return {}

@@ -4,13 +4,14 @@
     "title": "OpinionCluster",
     "description": "",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "judges": {
             "type": "string"
         },
         "date_filed": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "date_filed_is_approximate": {
             "type": "boolean"
@@ -71,7 +72,7 @@
         },
         "date_blocked": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "blocked": {
             "type": "boolean"
@@ -100,22 +101,25 @@
         },
         "Opinions": {
             "type": "array",
+            "minItems": 1,
             "items": [
                 {
-                    "$ref": "https://courtlistener.com/schemas/Opinion.json"
+                    "$ref": "https://courtlistener.com/schemas/Opinion.json#"
                 }
             ]
         },
         "Citations": {
             "type": "array",
+            "minItems": 1,
             "items": [
                 {
-                    "$ref": "https://courtlistener.com/schemas/Citation.json"
+                    "$ref": "https://courtlistener.com/schemas/Citation.json#"
                 }
             ]
         },
         "citation_strings": {
             "type": "array",
+            "minItems": 1,
             "items": {
                 "type": "string"
             }
