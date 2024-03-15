@@ -15,7 +15,7 @@ class Site(OpinionSiteLinear):
         self.method = "POST"
         self.number_of_dates_to_process = 5
         self.pages = {}
-        self.parameters = {"crt": self.get_court_parameter()}
+        self.parameters = {"court": self.get_court_parameter()}
         self.status = "Published"
         self.url = f"{self.domain}/appellatecourts/docket/gethddates.php"
 
