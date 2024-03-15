@@ -209,3 +209,6 @@ tests/fixtures/cassettes/
 # Swap files
 *.swp
 *~
+
+# Ignoring devcontainer folder from vscode
+.devcontainer
