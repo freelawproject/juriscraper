@@ -1,0 +1,709 @@
+<!DOCTYPE html />
+<html lang="en">
+
+<head id="ctl00_Head1">
+    <title>
+        Case Detail
+    </title>
+</head>
+
+<body>
+    <div class="container-fluid" id="content">
+        <div class="row-fluid">
+            <!--Start:main page content-->
+            <div class="span2 no-print">
+                <nav class="panel panel-phone no-print">
+                    <div class="panel-heading-no-collapse">Case Information<i class="icon-caret-right pull-right"></i>
+                    </div>
+                </nav>
+
+
+                <nav id="ctl00_adminLinks" class="panel panel-phone no-print">
+                    <div class="panel-heading-no-collapse">
+                        Administration
+                        <i class="icon-caret-right pull-right"></i>
+                    </div>
+                    <ul class="nav nav-list">
+                        <li>
+
+                        </li>
+
+                        <li>
+                            <a id="ctl00_lnkLogin" href="/login.aspx?coa=coscca">Log In</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="span10" id="MainContent">
+
+                <form name="aspnetForm" method="post" action="./Case.aspx?cn=WR-95%2c406-01&amp;coa=coscca"
+                    id="aspnetForm">
+                    <div>
+                        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+                        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+                        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                            value="/wEPDwUJNjQyNzQxMzA1ZBgUBSljdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEJyaWVmcyRjdGwwMA8UKwADFCsAAmQXAwUGXyFEU0lDZgUIXyFQQ291bnRkBQtfIUl0ZW1Db3VudGYWAh4DX3NlFgQeAl9jAgEeATAWBB4DX2ZuBQlFdmVudERhdGUeA19zbwspdVRlbGVyaWsuV2ViLlVJLkdyaWRTb3J0T3JkZXIsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMjAuMi41MTIuNDUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAJkZAUpY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMkY3RsMDAPFCsAAxQrAAJkFwMFBl8hRFNJQwIKBQhfIVBDb3VudGQFC18hSXRlbUNvdW50AgoWAh8AFgIfAWZkZAUlY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRDYWxlbmRhcg8UKwACZBcCBQtFZGl0SW5kZXhlcxYABQ9TZWxlY3RlZEluZGV4ZXMWAGQFKGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkUGFydHkkY3RsMDAPFCsAAxQrAAJkFwMFBl8hRFNJQwIBBQhfIVBDb3VudGQFC18hSXRlbUNvdW50AgEWAh8AFgIfAWZkZAU8Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMkY3RsMDAkY3RsMDYkZ3JpZERvY3VtZW50DzwrAAwBCAIBZAUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMPFCsAAmQXAgULRWRpdEluZGV4ZXMWAAUPU2VsZWN0ZWRJbmRleGVzFgBkBTxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cyRjdGwwMCRjdGwyMCRncmlkRG9jdW1lbnQPPCsADAEIZmQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDE2JGdyaWREb2N1bWVudA88KwAMAQgCAWQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDEwJGdyaWREb2N1bWVudA88KwAMAQhmZAUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRCcmllZnMPFCsAAmQXAgULRWRpdEluZGV4ZXMWAAUPU2VsZWN0ZWRJbmRleGVzFgBkBTxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cyRjdGwwMCRjdGwwOCRncmlkRG9jdW1lbnQPPCsADAEIZmQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDA0JGdyaWREb2N1bWVudA88KwAMAQhmZAUiY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRQYXJ0eQ8UKwACZBcCBQtFZGl0SW5kZXhlcxYABQ9TZWxlY3RlZEluZGV4ZXMWAGQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDE4JGdyaWREb2N1bWVudA88KwAMAQgCAWQFPGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkRXZlbnRzJGN0bDAwJGN0bDE0JGdyaWREb2N1bWVudA88KwAMAQhmZAU8Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRFdmVudHMkY3RsMDAkY3RsMjIkZ3JpZERvY3VtZW50DzwrAAwBCAIBZAUhY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRGaWxlDxQrAAJkFwBkBTxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cyRjdGwwMCRjdGwxMiRncmlkRG9jdW1lbnQPPCsADAEIZmQFK2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkQ2FsZW5kYXIkY3RsMDAPFCsAAxQrAAJkFwMFBl8hRFNJQwIBBQhfIVBDb3VudGQFC18hSXRlbUNvdW50AgEWAh8AFgIfAWZkZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZ3JkQnJpZWZzBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGdyZEV2ZW50cwUlY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRDYWxlbmRhcgUiY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRncmRQYXJ0ebU9fpIu2l3n7bc8VsjmA/THBc8F97cQEliTbNEmHMIw" />
+                    </div>
+
+
+                    <div>
+
+                        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C606338E" />
+                        <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+                        <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+                        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                            value="/wEdAAjueRKtk6g/GYoeXqsvaSguZCuzTStWOJug5EWzeFvksdqT7UyShhLKSHHyRuhW23S+fiS3BNeTUA91HGVscNi+6OJgDE5x64zIHmBvtwcY8pwUwgA1eBLZJvU1n6iV6/K789lBdn/dEbxQHx7wweZLq6/wfhi1DfkF55Yn57hDk9rXLzHogkQ4PYl+gJmtl89j883DXh3ppzASZhMyPGkC" />
+                    </div>
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        Sys.WebForms.PageRequestManager._initialize('ctl00$scriptManager', 'aspnetForm', [], [], [], 90, 'ctl00');
+                        //]]>
+                    </script>
+
+
+                    <div id="main-panel-content">
+                        <div id="main-content-head" class="panel-heading">
+                            Case:
+                            WR-95,406-01
+                            &nbsp;&nbsp;&nbsp;
+                        </div>
+                        <div id="main-content" class="panel-content">
+                            <div id="printfriendly" class="row-fluid no-print">
+                                <div class="span2" style="float: left;">
+                                    <strong><a
+                                            href="https://search.txcourts.gov/Case.aspx?cn=WR-95,406-01&coa=coscca&p=1"><i
+                                                class="fa fa-print"></i>
+                                            Print-Friendly</a> </strong>
+
+                                </div>
+                                <div id="linkCaseMail" class="span3">
+                                    <strong><a
+                                            href='https://casemail.txcourts.gov/CaseAdd.aspx?coa=coscca&FullCaseNumber=WR-95,406-01&cID=COSCCA'>
+                                            <i class="fa fa-envelope-o"></i>&nbsp;Add to CaseMail</a></strong>
+                                </div>
+                            </div>
+
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="panelTextSelection">
+                                        <div class="panel-content">
+                                            <div id="case" class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Case:
+                                                    </label>
+                                                </div>
+                                                <div class="span10" style="float: left;">
+                                                    <div>
+                                                        <strong>
+                                                            WR-95,406-01
+                                                        </strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Date Filed:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    <div>
+                                                        01/12/2024
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Case Type:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    11.07 HC
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        Style:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    KIRKLAND, JOSEPH &nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span2">
+                                                    <label class="form1">
+                                                        v.:
+                                                    </label>
+                                                </div>
+                                                <div class="span10">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="Div3">
+                                        <div class="panel-heading panel-heading-content">
+                                            Appellate Briefs
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_pnlBriefs">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdBriefs"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <!-- 2020.2.512.45 -->
+                                                    <table class="rgMasterTable rgClipCells" rules="rows" border="1"
+                                                        id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader rgSorted"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdBriefs_ctl00&#39;), &#39;EventDate&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl00&#39;,&#39;&#39;)">Date</a>&nbsp;<input
+                                                                        type="submit"
+                                                                        name="ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl01"
+                                                                        value=" " title="Sorted desc"
+                                                                        class="rgSortDesc" /></th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdBriefs_ctl00&#39;), &#39;EventType&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl02&#39;,&#39;&#39;)">Event
+                                                                        Type</a></th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdBriefs_ctl00&#39;), &#39;Description&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdBriefs$ctl00$ctl02$ctl00$ctl03&#39;,&#39;&#39;)">Description</a>
+                                                                </th>
+                                                                <th scope="col" class="rgHeader">Document</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgNoRecords">
+                                                                <td colspan="4" style="text-align:left;">
+                                                                    <div><b>No briefs.</b></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdBriefs_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdBriefs_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdBriefs_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="Div4">
+                                        <div class="panel-heading panel-heading-content">
+                                            Case Events
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_pnlEvents">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdEvents"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <table class="rgMasterTable rgClipCells" rules="rows" border="1"
+                                                        id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdEvents_ctl00&#39;), &#39;EventDate&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdEvents$ctl00$ctl02$ctl00$ctl00&#39;,&#39;&#39;)">Date</a>
+                                                                </th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdEvents_ctl00&#39;), &#39;EventType&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdEvents$ctl00$ctl02$ctl00$ctl01&#39;,&#39;&#39;)">Event
+                                                                        Type</a></th>
+                                                                <th scope="col" class="rgHeader"><a
+                                                                        onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_grdEvents_ctl00&#39;), &#39;Disposition&#39;); return false;"
+                                                                        title="Click here to sort"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdEvents$ctl00$ctl02$ctl00$ctl03&#39;,&#39;&#39;)">Disposition</a>
+                                                                </th>
+                                                                <th scope="col" class="rgHeader">Document</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__0">
+                                                                <td style="width:35px;">03/05/2024</td>
+                                                                <td style="width:60px;">NOTICE RETURNED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__1"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">02/28/2024</td>
+                                                                <td style="width:60px;">OPINION ISSD</td>
+                                                                <td>HC Relief granted</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl06_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=c1ee0a83-1ef5-425d-948a-e184a63c648d&amp;coa=coscca&amp;DT=OPINION&amp;MediaID=4d6ae38d-1f44-402a-b40e-4b9d47acce66"
+                                                                                        target="_blank"> [ PDF/220 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Original</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__2">
+                                                                <td style="width:35px;">02/28/2024</td>
+                                                                <td style="width:60px;">SUBMITTED FILE AND SET WRIT</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__3"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">02/28/2024</td>
+                                                                <td style="width:60px;">SET FOR SUBMIS</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__4">
+                                                                <td style="width:35px;">02/28/2024</td>
+                                                                <td style="width:60px;">WRIT FILED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__5"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">02/28/2024</td>
+                                                                <td style="width:60px;">ACTION TAKEN</td>
+                                                                <td>File and set</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__6">
+                                                                <td style="width:35px;">02/09/2024</td>
+                                                                <td style="width:60px;">SUPP RECD</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl16_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=65c5b96d-02ed-49a8-b161-cd5bdb3bf0bb&amp;coa=coscca&amp;DT=SUPP RECD&amp;MediaID=e93a937c-e565-4654-8cee-9536156605a8"
+                                                                                        target="_blank"> [ PDF/104 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__7"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">02/07/2024</td>
+                                                                <td style="width:60px;">ORDER ISSUED</td>
+                                                                <td>HC remanded TC - evidentiary hearing or affidavits
+                                                                </td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl18_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=8b463d6a-6e38-4f89-9994-14cabb49b697&amp;coa=coscca&amp;DT=ORDER&amp;MediaID=3019d44e-81ca-4177-bf11-2b04c611b8f9"
+                                                                                        target="_blank"> [ PDF/230 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Order</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__8">
+                                                                <td style="width:35px;">01/12/2024</td>
+                                                                <td style="width:60px;">ADDRESS VERIFICATION-CLERK'S
+                                                                    OFFICE</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="rgAltRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdEvents_ctl00__9"
+                                                                style="background-color:WhiteSmoke;">
+                                                                <td style="width:35px;">01/12/2024</td>
+                                                                <td style="width:60px;">WRIT RECEIVED</td>
+                                                                <td>&nbsp;</td>
+                                                                <td align="left" style="width:160px;">
+                                                                    <div>
+                                                                        <table class="docGrid" cellspacing="0"
+                                                                            rules="all" border="1"
+                                                                            id="ctl00_ContentPlaceHolder1_grdEvents_ctl00_ctl22_gridDocument"
+                                                                            style="width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-style:None;white-space:nowrap;">
+                                                                                    <a href="SearchMedia.aspx?MediaVersionID=a0ed40d7-5226-4895-84d9-f9eee7cda636&amp;coa=coscca&amp;DT=WRIT RECEIVED&amp;MediaID=46b65213-6cf0-4e4a-ad80-85937bd6c931"
+                                                                                        target="_blank"> [ PDF/101 KB ]
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="docLink" align="left"
+                                                                                    style="border-width:1px;border-style:Solid;white-space:nowrap;">
+                                                                                    Notice</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdEvents_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdEvents_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdEvents_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="panel" id="Div5">
+                                        <div class="panel-heading panel-heading-content">
+                                            Calendars
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_Panel2">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdCalendar"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <table class="rgMasterTable rgClipCells" border="0"
+                                                        id="ctl00_ContentPlaceHolder1_grdCalendar_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader">Set Date</th>
+                                                                <th scope="col" class="rgHeader">Calendar Type</th>
+                                                                <th scope="col" class="rgHeader">Reason Set</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdCalendar_ctl00__0">
+                                                                <td>03/25/2024</td>
+                                                                <td>MANDATE</td>
+                                                                <td>MANDATE DUE</td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdCalendar_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdCalendar_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdCalendar_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel" id="Div6">
+                                        <div class="panel-heading panel-heading-content">
+                                            Parties
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_Panel1">
+
+                                                <div id="ctl00_ContentPlaceHolder1_grdParty"
+                                                    class="RadGrid RadGrid_Default">
+
+                                                    <table class="rgMasterTable rgClipCells" border="0"
+                                                        id="ctl00_ContentPlaceHolder1_grdParty_ctl00"
+                                                        style="width:100%;table-layout:fixed;empty-cells:show;">
+                                                        <colgroup>
+                                                            <col />
+                                                            <col />
+                                                            <col />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="rgHeader">Party</th>
+                                                                <th scope="col" class="rgHeader">PartyType</th>
+                                                                <th scope="col" class="rgHeader">Representative</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rgRow"
+                                                                id="ctl00_ContentPlaceHolder1_grdParty_ctl00__0">
+                                                                <td>KIRKLAND, JOSEPH </td>
+                                                                <td>Applicant</td>
+                                                                <td>&nbsp;</td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                    <div id="ctl00_ContentPlaceHolder1_grdParty_SharedCalendarContainer"
+                                                        style="display:none;">
+
+                                                    </div><input id="ctl00_ContentPlaceHolder1_grdParty_ClientState"
+                                                        name="ctl00_ContentPlaceHolder1_grdParty_ClientState"
+                                                        type="hidden" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: none">
+                                <div class="span12">
+                                    <div class="panel" id="Div7">
+                                        <div class="panel-heading panel-heading-content">
+                                            Case Documents, Opinions, Notices:
+                                        </div>
+                                        <div class="panel-content">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ctl00_ContentPlaceHolder1_divCOAInfo" class="row-fluid" style="display: block">
+                                <div class="span12">
+                                    <div class="panel">
+                                        <div class="panel-heading panel-heading-content">
+                                            Court of Appeals Information:
+                                        </div>
+                                        <div class="panel-content">
+                                            <div id="ctl00_ContentPlaceHolder1_pnlCOA">
+
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            COA Case
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Disposition
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Opinion Cite
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            COA District
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="display: block;">
+                                <div class="span12">
+                                    <div id="ctl00_ContentPlaceHolder1_pnlTrialCourt2">
+
+                                        <div class="panel" id="panelTrialCourtInfo">
+                                            <div class="panel-heading panel-heading-content">
+                                                Trial Court Information
+                                            </div>
+                                            <div class="panel-content">
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Court
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        485TH DISTRICT COURT&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            County
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        Tarrant&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Court Judge
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Court Case
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        C-485-W012385-1724597-A&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <div class="span2">
+                                                        <label class="form1">
+                                                            Reporter
+                                                        </label>
+                                                    </div>
+                                                    <div class="span4">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

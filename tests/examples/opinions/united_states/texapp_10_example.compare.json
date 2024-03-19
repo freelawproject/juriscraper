@@ -1,102 +1,102 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7045&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-12-00179-CV",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Real Property",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=ebebfa77-e9a1-4cf8-bb0c-949c3a7e5c9b&coa=coa10&DT=Opinion&MediaID=fc63048e-aac0-4d23-915f-9612e9b8b56f",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-02-16",
+        "disposition": "Aff/Rev & Remanded to App Ct",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "Fort Worth & Western Railroad Company v. Nathan D. Albert and Chisholm Trail Redi-Mix, LLC",
+        "case_name_short": ""
+      },
+      "case_name": "Fort Worth & Western Railroad Company v. Nathan D. Albert and Chisholm Trail Redi-Mix, LLC",
+      "appeal_from_str": "18th District Court",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "Kenneth C. Curry",
+        "docket_number": "DC-C201600307",
+        "court_reporter": "Robin S. Howe"
+      },
+      "docket_number": "10-18-00219-CV",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7040&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-12-00308-CR",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Evading Arrest",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=48b90aa3-c8fa-4f0d-bc69-a15600ce7a2d&coa=coa10&DT=Opinion&MediaID=27d9a514-f1f8-4bd8-8193-315e3ed3f311",
+            "type": "040dissent"
+          },
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=3b480ec6-987e-4679-9016-149cbec3de63&coa=coa10&DT=Opinion&MediaID=ad4a1d9e-20c0-499d-9ac7-2dabc401f124",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-02-29",
+        "disposition": "Modified/Reformed and Affirmed",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "Hollis Lane Willingham v. the State of Texas",
+        "case_name_short": ""
+      },
+      "case_name": "Hollis Lane Willingham v. the State of Texas",
+      "appeal_from_str": "369th District Court",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "Charles Michael Davis",
+        "docket_number": "19-0032CR",
+        "court_reporter": "Nancy K. Adams"
+      },
+      "docket_number": "10-21-00158-CR",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7039&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-13-00136-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7038&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-13-00127-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7025&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-13-00131-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7022&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-13-00153-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7020&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-13-00390-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7006&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-12-00287-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6983&Index=***coa10%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-13-00275-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=142&Index=***coa10%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "10-14-00162-CV",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Miscellaneous/Other Criminal including Misdemeanor or Felony",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=27f7bbd8-6204-4734-b6d9-3eae1973bbc6&coa=coa10&DT=Opinion&MediaID=7a64ebd4-b434-457a-8c3b-b1d9712b3111",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-03-04",
+        "disposition": "Dismissed",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "James Gambrell v. the State of Texas",
+        "case_name_short": ""
+      },
+      "case_name": "James Gambrell v. the State of Texas",
+      "appeal_from_str": "12th District Court",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "David W. Moorman",
+        "docket_number": "30096",
+        "court_reporter": "Jacqueline A. Mills"
+      },
+      "docket_number": "10-23-00176-CR",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   }
 ]
