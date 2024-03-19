@@ -41,6 +41,10 @@ def scrape_court(site, binaries=False):
     """
     exceptions = defaultdict(list)
     for item in site:
+        # On the Courtlistener caller, executing a download_url deferred request
+        # would happen after checking the case_name hash duplicate
+        item = site.get_deferred_values("download_url", item)
+
         # First turn the download urls into a utf-8 byte string
         if getattr(site, "is_cluster_site", False):
             item_download_urls = [
@@ -93,6 +97,8 @@ def scrape_court(site, binaries=False):
                 # clean it up.
                 data = extract_doc_content(data)
                 data = site.cleanup_content(data)
+
+            item = site.get_deferred_values("other_values", item)
 
             # Normally, you'd do your save routines here...
             v_print(1, "\nAdding new item:")

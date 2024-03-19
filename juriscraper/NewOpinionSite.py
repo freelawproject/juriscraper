@@ -1,8 +1,9 @@
+from copy import deepcopy
 from datetime import date, datetime
 from functools import cmp_to_key
 from typing import Dict, List, Union
 
-from juriscraper.AbstractSite import AbstractSite
+from juriscraper.AbstractSite import AbstractSite, logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
@@ -45,6 +46,8 @@ class NewOpinionSite(AbstractSite):
 
     expected_content_types = ["application/pdf", "Application/pdf"]
     is_cluster_site = True
+    has_deferred_fields = False
+    placeholder_url = "https://courtlistener.com/placeholder_opinion_url"
 
     # `judges` and `joined_by_str` refer to multiple judges
     # if we pass a "symbol"-separated string of multiple judges
@@ -98,14 +101,22 @@ class NewOpinionSite(AbstractSite):
 
         clean_cases = []
         for case in self.cases:
-            clean_case = self.build_nested_object(case)
-            self.fill_default_and_required_values(clean_case)
-            self.schema_validator.validate(clean_case.get("Docket"))
-            self.recast_dates(clean_case)
+            clean_case = self.clean_case(case)
+
+            # Simulate getting deferred secondary page for example tests
+            if self.test_mode_enabled():
+                clean_case = self.get_deferred_values(
+                    "download_url", clean_case
+                )
+                clean_case = self.get_deferred_values(
+                    "other_values", clean_case
+                )
+                clean_case.pop("original")
+
             clean_cases.append(clean_case)
 
         self.cases = clean_cases
-        self.cases.sort(key=cmp_to_key(self.sort_by_attributes))
+        self.cases.sort(key=cmp_to_key(self.sort_by_attributes), reverse=True)
 
         # Ordering is important for hash
         # Hash will be used by caller to skip downloading binary content if page has
@@ -114,6 +125,22 @@ class NewOpinionSite(AbstractSite):
         self._make_hash()
 
         return self
+
+    def clean_case(self, case: Dict) -> Dict:
+        """Clean and validate a scraped object.
+        Keep the original for updating in case deferred values will be got
+
+        :param case: scraped object
+        :return: cleaned case
+        """
+        original_case = deepcopy(case)
+        clean_case = self.build_nested_object(case)
+        self.fill_default_and_required_values(clean_case)
+        self.schema_validator.validate(clean_case.get("Docket"))
+        self.recast_dates(clean_case)
+        clean_case["original"] = original_case
+
+        return clean_case
 
     def build_nested_object(self, case: Dict) -> Dict:
         """Build nested object expected by CL and defined on JSON Schemas
@@ -132,7 +159,9 @@ class NewOpinionSite(AbstractSite):
 
         for k, v in case.items():
             clean_value = self.clean_value(k, v)
-            if not clean_value:
+            if not clean_value or (
+                isinstance(clean_value, list) and not any(clean_value)
+            ):
                 continue
 
             if "." in k:
@@ -151,8 +180,11 @@ class NewOpinionSite(AbstractSite):
                 )
                 cl_obj["Docket"]["OpinionCluster"]["Opinions"] = ops
             else:
-                raise NotImplementedError(
-                    f"Unsupported complex object with key '{k}' {v}"
+                # We may expect extra data to build the deferred requests here
+                logger.warning(
+                    "Unsupported object when building nested object with key: '%s'. value: '%s'",
+                    k,
+                    v,
                 )
 
         return cl_obj
@@ -293,6 +325,76 @@ class NewOpinionSite(AbstractSite):
             ):
                 op["joined_by_str"] = ";".join(op["joined_by_str"])
 
+            # Case for deferred download_url which is required by the validator
+            if not op.get("download_url") and self.has_deferred_fields:
+                op["download_url"] = self.placeholder_url
+
+    def extract_from_text(self, scraped_text: str) -> Dict:
+        """Parses Courtlistener's objects out of the download
+        opinion document content
+
+        :param scraped_text: May be HTML or plain_text
+        :return: Dict in the format expected by Courtlistener
+        """
+        return {}
+
+    def get_deferred_values(self, key: str, case: Dict) -> Dict:
+        """Get deferred values by `key` for a given case
+        Possible keys: download_url, other_values
+
+        We can defer getting some values from secondary pages to
+        scrape the source more gently. If the site/object is duplicated,
+        we won't execute the network requests
+
+        We have 2 duplication checks:
+        - site.hash: the hash of the ordered case_names, done after scraping a site's page
+        - documents content hash: done after getting the download_url
+
+        So:
+        - `case_name` should never deferred, since it is used to compute the site hash
+        - `download_url` should wait until it's time to check it, in case
+            the site hash says we already have the data
+        - other values can wait after checking binary content hash
+        - deferred content should be get on a case by case basis, in case scrape
+            is aborted by consecutive duplicates
+
+        :param key: "download_url" or "other_values"
+        :return: case (maybe the same, maybe changed)
+        """
+        scraped_case = case["original"]
+        if key == "download_url":
+            updated = self.get_deferred_download_url(scraped_case)
+        elif key == "other_values":
+            updated = self.get_other_deferred_values(scraped_case)
+
+        logger.info(
+            "Getting deferred values `%s` for case %s", key, str(scraped_case)
+        )
+
+        # Only clean again if the functions actually changed anything
+        if updated:
+            return self.clean_case(scraped_case)
+
+        return case
+
+    def get_deferred_download_url(self, case: Dict) -> bool:
+        """Get the Opinion download_url from a secondary page, and possibly other values
+        To be implemented by a specific site
+
+        :param case: original scraped data, to be modified in place
+        :return: True if object was modified
+        """
+        return False
+
+    def get_other_deferred_values(self, case: Dict) -> bool:
+        """Get other values of interest from a secondary page
+        To be implemented by the specific site
+
+        :param case: original scraped data, to be modified in place
+        :return: True if object was modified
+        """
+        return False
+
     @staticmethod
     def sort_by_attributes(case: Dict, other_case: Dict) -> int:
         """Function passed as `key` argument to base `sort`
@@ -336,12 +438,3 @@ class NewOpinionSite(AbstractSite):
                 return -1
 
         return 0
-
-    def extract_from_text(self, scraped_text: str) -> Dict:
-        """Parses Courtlistener's objects out of the download
-        opinion document content
-
-        :param scraped_text: May be HTML or plain_text
-        :return: Dict in the format expected by Courtlistener
-        """
-        return {}
