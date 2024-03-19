@@ -37,7 +37,9 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self) -> None:
         if not self.html:
-            logger.info("HTML was not downloaded from source page. Should retry")
+            logger.info(
+                "HTML was not downloaded from source page. Should retry"
+            )
             return
         for table in self.html.xpath("//table"):
             adate = table.xpath("./preceding-sibling::h5")[0].text_content()
