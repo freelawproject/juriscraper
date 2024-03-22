@@ -40,9 +40,22 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def _get_docket(self, match: re.match) -> str:
+        """Get docket_number from a regex match
+
+        This is overriden in `illappct`
+
+        :param match: a regex match object
+        :return: docket_number
+        """
         return match.group("docket")
 
     def _get_status(self, citation: str) -> str:
+        """Deduct status from the citation string
+
+        :param citation: citation string
+
+        :return: status Published or Unpublished
+        """
         if "-U" in citation:
             return "Unpublished"
         return "Published"
@@ -64,7 +77,7 @@ class Site(OpinionSiteLinear):
 
             name = get_row_column_text(row, 1)
             citation = get_row_column_text(row, 2)
-            adate = get_row_column_text(row, 3)
+            date_filed = get_row_column_text(row, 3)
             match = re.search(self.docket_re, citation)
             try:
                 url = get_row_column_links(row, 1)
@@ -75,6 +88,9 @@ class Site(OpinionSiteLinear):
                 )
                 continue
 
+            # For illappct: From 2010 to the past, most rows have no
+            # citation string. We would have to implement extract_from_text
+            # to get it. However, document formats are different
             if not match:
                 logger.warning("Opinion '%s' has no docket.", citation)
                 continue
@@ -84,7 +100,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(
                 {
-                    "date": adate,
+                    "date": date_filed,
                     "name": name,
                     "citation": citation,
                     "url": url,
@@ -159,7 +175,7 @@ class Site(OpinionSiteLinear):
         }
 
         # if this is the first time loading the Custom Date Range filters
-        # we need to do 2 requests. Otherwise, one is enough.
+        # we need to do 2 requests. Otherwise, 1 is enough.
         # Due to the `site_yielder` used when backscraping, each backscrape
         # iterable seed uses a new scraper object, so we can't reuse viewstates
         for _ in range(2):
