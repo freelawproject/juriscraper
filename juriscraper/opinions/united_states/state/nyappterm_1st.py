@@ -3,13 +3,20 @@
 # Court Short Name: NY
 
 import re
-from datetime import date, timedelta
-from typing import Any, Dict
+from datetime import date, datetime, timedelta
+from typing import Any, Dict, Optional, Tuple
 
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    first_opinion_date = date(2003, 9, 25)
+
+    # If more than 500 results are found, no results will be shown
+    days_interval = 30
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court = "Appellate Term, 1st Dept"
@@ -17,17 +24,35 @@ class Site(OpinionSiteLinear):
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
         self._set_parameters()
         self.expected_content_types = ["application/pdf", "text/html"]
+        self.make_backscrape_iterable(kwargs)
 
-    def _set_parameters(self) -> None:
-        """Set the parameters for the POST request."""
+    def _set_parameters(
+        self,
+        start_date: Optional[date] = None,
+        end_date: Optional[date] = None,
+    ) -> None:
+        """Set the parameters for the POST request.
+
+        If no start or end dates are given, scrape last month.
+        This is the default behaviour for the present time scraper
+
+        :param start_date:
+        :param end_date:
+
+        :return: None
+        """
         self.method = "POST"
-        today = date.today()
+
+        if not end_date:
+            start_date = date.today()
+            end_date = start_date - timedelta(days=30)
+
         self.parameters = {
             "rbOpinionMotion": "opinion",
             "Pty": "",
             "and_or": "and",
-            "dtStartDate": (today - timedelta(days=30)).strftime("%m/%d/%Y"),
-            "dtEndDate": today.strftime("%m/%d/%Y"),
+            "dtStartDate": start_date.strftime("%m/%d/%Y"),
+            "dtEndDate": end_date.strftime("%m/%d/%Y"),
             "court": self.court,
             "docket": "",
             "judge": "",
@@ -83,3 +108,39 @@ class Site(OpinionSiteLinear):
             },
         }
         return metadata
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Make custom date range request
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        self._set_parameters(*dates)
+        self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
+
+        :param kwargs: passed when initializing the scraper, may or
+            may not contain backscrape controlling arguments
+
+        :return None
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        if start:
+            start = datetime.strptime(start, "%m/%d/%Y")
+        else:
+            start = self.first_opinion_date
+        if end:
+            end = datetime.strptime(end, "%m/%d/%Y")
+        else:
+            end = datetime.now()
+
+        self.back_scrape_iterable = make_date_range_tuples(
+            start, end, self.days_interval
+        )
