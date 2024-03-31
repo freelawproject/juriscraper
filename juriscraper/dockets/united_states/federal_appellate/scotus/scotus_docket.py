@@ -15,9 +15,11 @@ Case number (#): Two increasing ranges of integers.
     'IFP' (in forma pauperis) a.k.a pauper cases number 5001 and up each term
 """
 
-# from concurrent.futures import ThreadPoolExecutor, as_completed
+import json
 from math import sqrt
+import re
 from time import sleep
+from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import ConnectionError
@@ -121,3 +123,416 @@ def linear_download(
 
     _ss = sorted(list(stale_set), key=utils.docket_priority)
     logger.debug(f"Stale dockets: {_ss}")
+
+
+judgment_regex = re.compile(r"^Judgment", flags=re.IGNORECASE)
+simple_petition_regex = re.compile(
+    r"((?<=Petition\s)|(?<=Case\s))(DENIED|DISMISSED)", flags=re.IGNORECASE
+)
+affirmed_regex = re.compile(r"Adjudged to be AFFIRMED")
+closed_regex = re.compile(r"Case considered closed")
+removed_regex = re.compile(r"Case removed from Docket")
+cert_dismissed_regex = re.compile(r"Writ of Certiorari Dismissed")
+
+# use this only after splitting entry text on '.'
+wildcard_petition_regex = re.compile(
+    r"((?<=Petition\s)|(?<=Case\s)).*(DENIED|DISMISSED)", flags=re.IGNORECASE
+)
+
+
+denied_regex = re.compile(
+    r"(?<=Application )(?:\(\w{4,8}\)\s)?.*DENIED"
+    r"|(?<=Motion )(?:\(\w{4,8}\)\s)?.*DENIED",
+    flags=re.IGNORECASE,
+)
+ifp_dismissed_regex = re.compile(
+    r"Motion of petitioner for leave to proceed in forma pauperis denied, "
+    r"and petition for writ of (mandamus|certiorari to the).*dismissed."
+)
+
+
+# TODO: text value cleaning, harmonizing from lib.string_utils
+class SCOTUSDocketReport:
+    """Parser for SCOTUS JSON dockets.
+    Modeled on juriscraper.pacer.appellate_docket.AppellateDocketReport.
+    """
+
+    meta_mapping = {
+        "docket_number": "CaseNumber",
+        "capital_case": "bCapitalCase",
+        "question_presented": "QPLink",  # URL
+        "related_cases": "RelatedCaseNumber",  # list type
+        "linked_cases": "Links",  # str 'Linked with YY-NNNNN'
+        "fee_status": "sJsonCaseType",
+        "date_filed": "DocketedDate",
+        "petitioner": "PetitionerTitle",
+        "respondent": "RespondentTitle",
+        "lower_court": "LowerCourt",
+        "lower_court_case_numbers": "LowerCourtCaseNumbers",  # list type?
+        "lower_court_decision_date": "LowerCourtDecision",
+        "lower_court_rehearing_denied_date": "LowerCourtRehearingDenied",
+    }
+    entries_mapping = {
+        "date_filed": "Date",
+        "description": "Text",
+        "document_title": "Description",
+        "url": "DocumentUrl",
+    }
+
+    base_url = "https://www.supremecourt.gov/RSS/Cases/JSON/{}.json"
+
+    # exclude docket boilerplate entries e.g. 'Proof of Service'
+    exclude_entries_pattern = r"Main Document" r"|Proof of Service"
+    exclude_entries_regex = re.compile(exclude_entries_pattern)
+    petitioner_regex = re.compile(r".+(?=, Petitioner|Applicant)")
+
+    def __init__(self, docket: dict, **kwargs):
+        """Takes the decoded JSON object for a single SCOTUS docket."""
+        self._docket = docket
+        self._kwargs = kwargs
+        self.court_id = self.__module__
+        self._docket_number = None
+        self._url = utils.docket_number_regex.search(docket["CaseNumber"])
+        self._metadata = None
+        self._docket_entries = None
+        self._attorneys = None
+        self._dispositions = []
+
+    @classmethod
+    def from_response(cls, response: requests.Response, **kwargs):
+        """Instantiate with values taken from `response`."""
+        return cls.__init__(response.json(), **kwargs)
+
+    @classmethod
+    def from_text(cls, json_text: str, **kwargs):
+        """Instantiate with dict from a JSON-encoded string."""
+        return cls.__init__(json.loads(json_text), **kwargs)
+
+    @property
+    def docket_number(self):
+        if self._docket_number is None:
+            dn = self._docket["CaseNumber"].rstrip()
+            self._docket_number = utils.docket_num_strict_regex.search(
+                dn
+            ).group(0)
+        return self._docket_number
+
+    def _get_petitioner(self):
+        """Strip ', Petitioner' from the title as this is implicit."""
+        _petitioner = self._docket["PetitionerTitle"]
+        if psearch := self.petitioner_regex.search(_petitioner):
+            _petitioner = psearch.group(0)
+        return _petitioner
+
+    def _get_case_name(self):
+        """Petitioner v. Respondent"""
+        return f'{self._get_petitioner()} v. {self._docket["RespondentTitle"]}'
+
+    def _get_lower_court_cases(self):
+        """These are presented as a string representation of a tuple, but not
+        correctly formatted for serializing. Use regex."""
+        if (casenums := self._docket["LowerCourtCaseNumbers"]) == "":
+            return None
+        else:
+            return casenums.strip("()").replace(" ", "").split(",")
+
+    def _get_related_cases(self):
+        """These are presented as a list."""
+        # cases_str =
+        if (related := self._docket["RelatedCaseNumber"]) != []:
+            return related
+        else:
+            return None
+
+    @property
+    def url(self):
+        url_template = "https://www.supremecourt.gov/RSS/Cases/JSON/{}.json"
+        return url_template.format(self.docket_number)
+
+    def query(self, docket_number, since_timestamp, *args, **kwargs):
+        """Query supremecourt.gov and set self.response with the response."""
+        raise NotImplementedError(".query() must be overridden")
+        # url = self.base_url.format(docket_number)
+        # response = download_client(url, since_timestamp=since_timestamp)
+        # validated_response = response_handler(response)
+
+        # if is_stale_docket(validated_response):
+        #     pass
+        # elif is_docket(validated_response):
+        #     self._docket = validated_response.json()
+
+    def parse(self):
+        """Parse the JSON data provided in a requests.response object. In most cases, you won't need to call this since it will be automatically called by self.query, if needed.
+
+        :return: None
+        """
+        self._parse_text(self._docket)
+
+    def _parse_text(self, *args):
+        """A method intended to clean up HTML source.
+
+        This is being preserved in case it is needed for adapting the JSON parser to a caller that expects the `BaseReport` interface.
+
+        :return: None
+        """
+        raise NotImplementedError("This class does not parse HTML text.")
+
+    def _get_questions_presented(self):
+        """Download 'Questions Presented' PDF. Missing from some dockets, for
+        example, motions or applications for extension of time.
+        """
+        qp = None
+
+        if pdfpath := self._docket.get("QPLink"):
+            base = "https://www.supremecourt.gov/"
+            url = urljoin(base, pdfpath)
+            r = requests.get(url)
+            r.raise_for_status()
+            if r.headers.get("content-type") == "application/pdf":
+                msg = (
+                    "Got PDF binary data for 'Questions Presented' "
+                    f"in {self.docket_number}"
+                )
+                logger.info(msg)
+                qp = r
+        return qp
+
+    def _parse_filing_links(
+        self, links: list, keep_boilerplate: bool = True
+    ) -> list:
+        """Return the main documents from a docket entry with links by excluding
+        ancillary documents e.g. 'Proof of Service' and 'Certificate of Word Count'.
+
+        :param links: List of docket entries
+        """
+        filings = []
+        for row in links:
+            match = utils.filing_url_regex.search(row["DocumentUrl"])
+            record = {
+                "entry_number": match.group("entrynum"),
+                "document_title": row["Description"],
+                "url": row["DocumentUrl"],
+                "document_timestamp": utils.parse_filing_timestamp(
+                    match.group("timestamp")
+                ),
+            }
+            if not keep_boilerplate and self.exclude_entries_regex.search(
+                row["Description"]
+            ):
+                continue
+            filings.append(record)
+        return filings
+
+    @property
+    def metadata(self) -> dict:
+        if self._metadata is None:
+            data = {
+                "petitioner": "PetitionerTitle",
+                "respondent": "RespondentTitle",
+                "appeal_from": "LowerCourt",
+                "question_presented": "QPLink",
+                "related_cases": "RelatedCaseNumber",
+                "linked_cases": "Links",  # str 'Linked with YY-NNNNN'
+                "fee_status": "sJsonCaseType",
+                "date_filed": "DocketedDate",
+                "lower_court": "LowerCourt",
+                "lower_court_case_numbers": "LowerCourtCaseNumbers",  # list type?
+                "lower_court_decision_date": "LowerCourtDecision",
+                "lower_court_rehearing_denied_date": "LowerCourtRehearingDenied",
+                "capital_case": "bCapitalCase",
+            }
+            self._metadata = {
+                "court_id": self.court_id,
+                "docket_number": self.docket_number,
+                "case_name": self._get_case_name(),
+            }
+            self._metadata |= {k: self._docket.get(v) for k, v in data.items()}
+        return self._metadata
+
+    def _original_entries(self) -> list:
+        """The original docket entries from the docket JSON."""
+        return self._docket["ProceedingsandOrder"]
+
+    def _entry_count(self) -> int:
+        """The number of docket entries as originally presented on supremecourt.gov.
+        This may differ from the number of entries as parsed elsewhere in this class.
+        """
+        return len(self._docket["ProceedingsandOrder"])
+
+    @property
+    def docket_entries(self) -> list:
+        """Return docket entries as a list of dict records. Where an entry contains multiple attachments, merge entry and attachment metadata."""
+        if self._docket_entries is None:
+            docket_entry_rows = self._docket["ProceedingsandOrder"]
+
+            docket_entries = []
+            for row in docket_entry_rows:
+                de = {
+                    "date_filed": utils.makedate(row["Date"]).date(),
+                    "docket_number": self.docket_number,
+                    "description": row["Text"],
+                }
+
+                if links := row.get("Links"):
+                    filing_list = self._parse_filing_links(links)
+                    for filing in filing_list:
+                        docket_entries.append(de | filing)
+                else:
+                    docket_entries.append(de)
+
+            self._docket_entries = docket_entries
+        return self._docket_entries
+
+    # TODO: sometimes dispositions are subject to rehearing; abandon this?
+    @property
+    def disposition(self):
+        """Find any case disposition in docket entries."""
+        if self._dispositions == []:
+
+            def mkdt(entry):
+                """Return a datetime.date object from the entry's date field."""
+                return utils.makedate(entry["Date"]).date()
+
+            for entry in self._original_entries():
+                desc = entry["Text"]
+                # Judgment issued
+                if judgment_regex.search(desc) or affirmed_regex.search(desc):
+                    self._dispositions.append(("DECIDED", mkdt(entry)))
+                    continue
+                # Petition denied or dismissed
+                elif _disposition := simple_petition_regex.search(desc):
+                    self._dispositions.append(
+                        (_disposition.group(2).upper(), mkdt(entry))
+                    )
+                    continue
+                elif closed_regex.search(desc):
+                    self._dispositions.append(("CLOSED", mkdt(entry)))
+                    continue
+                elif removed_regex.search(desc):
+                    self._dispositions.append(("REMOVED", mkdt(entry)))
+                    continue
+                elif cert_dismissed_regex.search(desc):
+                    self._dispositions.append(("DISMISSED", mkdt(entry)))
+                    continue
+                elif _related := self._get_related_cases():
+                    # could be Vided (i.e. combined)
+                    for row in _related:
+                        if isinstance(row, dict):
+                            if "Vide" in row["RelatedType"]:
+                                self._dispositions.append(
+                                    ("VIDED", mkdt(entry))
+                                )
+                                break
+
+                # now try splitting field on period before pattern matching
+                for s in desc.split("."):
+                    sentence = s.strip()
+                    if sentence == "":
+                        continue
+                    elif judgment_regex.search(
+                        sentence
+                    ) or affirmed_regex.search(sentence):
+                        self._dispositions.append(("DECIDED", mkdt(entry)))
+                        break
+                    elif _disposition := wildcard_petition_regex.search(
+                        sentence
+                    ):
+                        self._dispositions.append(
+                            (_disposition.group(2).upper(), mkdt(entry))
+                        )
+                        break
+
+                # elif ifp_dismissed_regex.search(desc):
+                #     self._dispositions.append(
+                #         ("DISMISSED", utils.makedate(entry["Date"]).date())
+                #     )
+                # elif denied_regex.search(desc):
+                #     self._dispositions.append(
+                #         ("DENIED", utils.makedate(entry["Date"]).date())
+                #     )
+                # elif dismissed_regex.search(desc):
+                #     self._dispositions.append(
+                #         ("DISMISSED", utils.makedate(entry["Date"]).date())
+                #     )
+        try:
+            return self._dispositions[-1]
+        except IndexError:
+            return None
+
+    @staticmethod
+    def _parse_attorney(row, affiliation) -> dict:
+        """Parse an attorney entry."""
+        record = {
+            "affiliation": affiliation,
+            "party": row["PartyName"],
+            "counsel_of_record": row["IsCounselofRecord"],
+            "name": row["Attorney"],
+            "firm": row["Title"],
+            "prisoner_id": row["PrisonerId"],
+            "contact": {
+                "email": row["Email"],
+                "phone": row["Phone"],
+                "address": row["Address"],
+                "city": row["City"],
+                "state": row["State"],
+                "zipcode": row["Zip"],
+            },
+        }
+        return record
+
+    def _parse_petitioner_attorneys(self) -> list:
+        """Parse attorney(s) for Petitioner."""
+        records = []
+        for row in self._docket["Petitioner"]:
+            row["docket_number"] = self._docket_number
+            records.append(self._parse_attorney(row, "Petitioner"))
+        return records
+
+    def _parse_respondent_attorneys(self) -> list:
+        """Parse attorney(s) for Respondent."""
+        records = []
+        if self._docket.get("Respondent"):
+            for row in self._docket["Respondent"]:
+                row["docket_number"] = self._docket_number
+                records.append(self._parse_attorney(row, "Respondent"))
+        return records
+
+    def _parse_other_attorneys(self) -> list:
+        """Parse attorney(s) representing other parties, if any."""
+        records = []
+        if self._docket.get("Other"):
+            for row in self._docket["Other"]:
+                row["docket_number"] = self._docket_number
+                records.append(self._parse_attorney(row, "Other"))
+        return records
+
+    def _parse_attorneys(self):
+        """Parse all attorneys for this docket."""
+        all_attorneys = (
+            self._parse_petitioner_attorneys(),
+            self._parse_respondent_attorneys(),
+            self._parse_other_attorneys(),
+        )
+        return [r for party in all_attorneys for r in party]
+
+    @property
+    def parties(self) -> list:
+        """Modeled on juriscraper.pacer.docket_report.DocketReport."""
+        petitioner = {
+            "name": self._get_petitioner(),
+            "type": "Petitioner",
+            "attorneys": self._parse_petitioner_attorneys(),
+        }
+        respondent = {
+            "name": self._docket["RespondentTitle"],
+            "type": "Respondent",
+            "attorneys": self._parse_respondent_attorneys(),
+        }
+        return [petitioner, respondent]
+
+    @property
+    def attorneys(self) -> list:
+        """List of all attorneys associated with this docket."""
+        if self._attorneys is None:
+            self._attorneys = self._parse_attorneys()
+        return self._attorneys
