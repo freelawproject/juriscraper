@@ -3,12 +3,14 @@
 import datetime
 import unittest
 
-from juriscraper.lib.test_utils import MockResponse
+from juriscraper.dockets.united_states.federal_appellate.scotus import clients
 from juriscraper.dockets.united_states.federal_appellate.scotus import (
-    clients,
-    scotus_docket,
     docket_search as ds,
 )
+from juriscraper.dockets.united_states.federal_appellate.scotus import (
+    scotus_docket,
+)
+from juriscraper.lib.test_utils import MockResponse
 
 
 class YAMockResponse(MockResponse):
@@ -134,7 +136,7 @@ class ScotusOrdersDownloadTest(unittest.TestCase):
         self.assertNotEqual(instance.order_meta, [])
         self.assertIsNotNone(instance._pdf_cache)
         self.assertTrue(tuple(instance._pdf_cache)[0].content[:4] == b"%PDF")
-        self.assertEqual(instance._docket_numbers, set(["23-411"]))
+        self.assertEqual(instance._docket_numbers, {"23-411"})
         self.assertEqual(instance.docket_numbers(), ["23-411"])
 
 

@@ -1,18 +1,18 @@
 """Download clients for supremecourt.gov"""
 
-from random import random, choices
 import re
+from random import choices, random
 
+import requests
 from lxml import html
 from lxml.etree import ParserError
-import requests
 from requests.exceptions import ConnectionError
 from urllib3.exceptions import NameResolutionError
 
-from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.exceptions import AccessDeniedError
-from . import utils
+from juriscraper.lib.log_tools import make_default_logger
 
+from . import utils
 
 logger = make_default_logger()
 
@@ -128,9 +128,9 @@ def _access_denied_test(text: str) -> bool:
 def is_access_denied_page(response: requests.Response) -> bool:
     """Take an HTML string from a `Response.text` and test for
     `Access Denied`."""
-    ct, cl = [
+    ct, cl = (
         response.headers.get(f) for f in ("content-type", "content-length")
-    ]
+    )
     if ct and cl:
         if ct.startswith("text/html") and int(cl) > 0:
             return _access_denied_test(response.text)
@@ -156,9 +156,9 @@ def is_not_found_page(response: requests.Response) -> bool:
     """Take an HTML string from a `Response.text` and test for
     `ERROR: File or directory not found.`.
     """
-    ct, cl = [
+    ct, cl = (
         response.headers.get(f) for f in ("content-type", "content-length")
-    ]
+    )
     if ct and cl:
         if ct.startswith("text/html") and int(cl) > 0:
             return _not_found_test(response.text)

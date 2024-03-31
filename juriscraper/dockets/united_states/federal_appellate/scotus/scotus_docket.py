@@ -16,26 +16,26 @@ Case number (#): Two increasing ranges of integers.
 """
 
 import json
-from math import sqrt
 import re
+from math import sqrt
 from time import sleep
 from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import ConnectionError
 
-from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.exceptions import AccessDeniedError
+from juriscraper.lib.log_tools import make_default_logger
+
+from . import utils
 from .clients import (
     download_client,
-    response_handler,
-    jitter,
     is_docket,
     is_not_found_page,
     is_stale_content,
+    jitter,
+    response_handler,
 )
-from . import utils
-
 
 logger = make_default_logger()
 

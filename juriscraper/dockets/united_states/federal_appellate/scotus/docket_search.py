@@ -3,9 +3,9 @@
 > Paper remains the official form of filing at the Supreme Court.
 <https://www.supremecourt.gov/filingandrules/electronicfiling.aspx>
 
-Perhaps because of this second-millennium record keeping practice, there is no 
-publicly-available digital central index of Supreme Court cases. If SCOTUS docket 
-information is not obtained by attempting to query docket numbers in sequence, 
+Perhaps because of this second-millennium record keeping practice, there is no
+publicly-available digital central index of Supreme Court cases. If SCOTUS docket
+information is not obtained by attempting to query docket numbers in sequence,
 one of the Court's information sources needs to be consulted.
 
 In descending order of relevance to scraping, these are:
@@ -15,54 +15,54 @@ In descending order of relevance to scraping, these are:
 [Journal of the SCOTUS](https://www.supremecourt.gov/orders/journal.aspx)
 
 **Orders of the Court**
-* PDFs listing docket numbers of cases for which there has been an action. 
-> Regularly scheduled lists of orders are issued on each Monday that the Court 
-sits, but 'miscellaneous' orders may be issued in individual cases at any time. 
-Scheduled order lists are posted on this Website on the day of their issuance, 
+* PDFs listing docket numbers of cases for which there has been an action.
+> Regularly scheduled lists of orders are issued on each Monday that the Court
+sits, but 'miscellaneous' orders may be issued in individual cases at any time.
+Scheduled order lists are posted on this Website on the day of their issuance,
 while miscellaneous orders are posted on the day of issuance or the next day."
 
 **Docket Search**
-* Full-text search portal that attempts to match the input string to any text 
+* Full-text search portal that attempts to match the input string to any text
 in any docket.
 * Returns URLs of the HTML rendering for dockets. From these, docket numbers can
 be parsed and substituted into the URL pattern for dockets' JSON rendering.
-* Passing date strings formatted like docket entry dates (e.g. 'Feb 29, 2024') 
-will with high probability return a link to a docket with an entry(s) matching 
+* Passing date strings formatted like docket entry dates (e.g. 'Feb 29, 2024')
+will with high probability return a link to a docket with an entry(s) matching
 the input string.
-* There appears to be a limit of 500 search results. Because some of the results 
-will be for matches in the text of a docket entry rather than the entry date 
+* There appears to be a limit of 500 search results. Because some of the results
+will be for matches in the text of a docket entry rather than the entry date
 itself, it is possible that some search results will not be exhaustive.
 
 **Journal of the Supreme Court**
 * The exhaustive -- but not at all timely -- PDFs containing all docket numbers.
-> The Journal of the Supreme Court of the United States contains the official 
-minutes of the Court. It is published chronologically for each day the Court 
-issues orders or opinions or holds oral argument. The Journal reflects the 
-disposition of each case, names the court whose judgment is under review, lists 
+> The Journal of the Supreme Court of the United States contains the official
+minutes of the Court. It is published chronologically for each day the Court
+issues orders or opinions or holds oral argument. The Journal reflects the
+disposition of each case, names the court whose judgment is under review, lists
 the cases argued that day and the attorneys who presented oral argument[].
 """
+import re
 from datetime import date, timedelta
 from io import BytesIO
-
 from random import shuffle
-import re
 from time import sleep
 
 import fitz  # the package name of the `pymupdf` library
-from lxml import html
 import requests
+from lxml import html
 
 from juriscraper.lib.log_tools import make_default_logger
+
+from . import utils
 from .clients import (
+    HEADERS,
     download_client,
-    response_handler,
     is_not_found_page,
     is_stale_content,
     jitter,
-    HEADERS,
     random_ua,
+    response_handler,
 )
-from . import utils
 
 logger = make_default_logger()
 
@@ -203,7 +203,7 @@ class SCOTUSOrders:
                 continue
             else:
                 container["order_date"] = date(
-                    int("20" + _yy), int(_mm), int(_dd)
+                    int(f"20{_yy}"), int(_mm), int(_dd)
                 )
                 container["order_type"] = listype
                 container["url"] = url
@@ -256,9 +256,7 @@ class SCOTUSOrders:
         pdf_string = "\n".join([pg.get_text() for pg in _pdf])
         matches = utils.orders_docket_regex.findall(pdf_string)
         # clean up dash characters so only U+002D is used
-        docket_set = set(
-            [utils.dash_regex.sub("\u002d", dn) for dn in matches]
-        )
+        docket_set = {utils.dash_regex.sub("\u002d", dn) for dn in matches}
         return docket_set
 
     def _term_constraints(self, *, earliest: str, latest: str) -> dict:
@@ -537,9 +535,9 @@ class DocketFullTextSearch:
         _search_string = self.search_string  # .replace(" ", "+")
 
         payload = self.post_template | hidden_payload
-        payload["ctl00$ctl00$MainEditable$mainContent$txtQuery"] = (
-            _search_string
-        )
+        payload[
+            "ctl00$ctl00$MainEditable$mainContent$txtQuery"
+        ] = _search_string
 
         try:
             _response = self.session.post(self.SEARCH_URL, data=payload)
@@ -588,9 +586,9 @@ class DocketFullTextSearch:
         # now update POST payload
         payload.update(hidden_payload)
         payload.update(payload_updates)
-        payload["ctl00$ctl00$MainEditable$mainContent$txtQuery"] = (
-            self.search_string
-        )
+        payload[
+            "ctl00$ctl00$MainEditable$mainContent$txtQuery"
+        ] = self.search_string
         # extract __VIEWSTATE value from non-HTML text
         if vs_match := self.viewstate_regex.search(
             self.query_responses[-1].text

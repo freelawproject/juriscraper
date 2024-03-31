@@ -4,10 +4,10 @@ import datetime
 import os
 import unittest
 
-from juriscraper.lib.test_utils import MockResponse
 from juriscraper.dockets.united_states.federal_appellate.scotus import (
     docket_search as ds,
 )
+from juriscraper.lib.test_utils import MockResponse
 from tests import TESTS_ROOT_EXAMPLES_SCOTUS
 
 
@@ -36,7 +36,6 @@ class ScotusOrdersTest(unittest.TestCase):
     """Test the SCOTUS Orders of the Court manager and parser."""
 
     def setUp(self):
-
         with open(
             os.path.join(
                 TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_orders_home.html"
@@ -164,13 +163,11 @@ class ScotusDocketFullTextSearchTest(unittest.TestCase):
     """Test the SCOTUS Docket Search manager and parser."""
 
     def setUp(self):
-
         with open(
             os.path.join(
                 TESTS_ROOT_EXAMPLES_SCOTUS,
                 "scotus_docket_search_home.aspx",
             ),
-            "r",
         ) as _f:
             self.homepage = _f.read()
 
@@ -179,7 +176,6 @@ class ScotusDocketFullTextSearchTest(unittest.TestCase):
                 TESTS_ROOT_EXAMPLES_SCOTUS,
                 "scotus_docket_search_results_page1.aspx",
             ),
-            "r",
         ) as _f:
             self.page1 = _f.read()
 
@@ -188,7 +184,6 @@ class ScotusDocketFullTextSearchTest(unittest.TestCase):
                 TESTS_ROOT_EXAMPLES_SCOTUS,
                 "scotus_docket_search_results_page2.aspx",
             ),
-            "r",
         ) as _f:
             self.page2 = _f.read()
 

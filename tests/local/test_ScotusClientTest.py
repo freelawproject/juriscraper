@@ -3,8 +3,8 @@
 import os
 import unittest
 
-from juriscraper.lib.test_utils import MockResponse
 from juriscraper.dockets.united_states.federal_appellate.scotus import clients
+from juriscraper.lib.test_utils import MockResponse
 from tests import TESTS_ROOT_EXAMPLES_SCOTUS
 
 
@@ -33,7 +33,6 @@ class ScotusClientTest(unittest.TestCase):
     """Test the download client shared by SCOTUS modules."""
 
     def setUp(self):
-
         with open(
             os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_23-175.json"),
             "rb",

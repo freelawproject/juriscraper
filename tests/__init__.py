@@ -18,5 +18,6 @@ TESTS_ROOT_EXAMPLES_SCOTUS = os.path.join(
     "scotus",
 )
 
+
 def test_local():
     return unittest.TestLoader().discover("./tests/local")
