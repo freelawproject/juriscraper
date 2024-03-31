@@ -10,7 +10,13 @@ TESTS_ROOT = os.path.realpath(os.path.join(JURISCRAPER_ROOT, "../tests"))
 TESTS_ROOT_EXAMPLES = os.path.join(TESTS_ROOT, "examples")
 TESTS_ROOT_EXAMPLES_PACER = os.path.join(TESTS_ROOT_EXAMPLES, "pacer")
 TESTS_ROOT_EXAMPLES_LASC = os.path.join(TESTS_ROOT_EXAMPLES, "lasc")
-
+TESTS_ROOT_EXAMPLES_SCOTUS = os.path.join(
+    TESTS_ROOT_EXAMPLES,
+    "dockets",
+    "united_states",
+    "federal_appellate",
+    "scotus",
+)
 
 def test_local():
     return unittest.TestLoader().discover("./tests/local")
