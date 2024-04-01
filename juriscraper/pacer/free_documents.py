@@ -12,7 +12,7 @@ from ..lib.html_utils import (
     set_response_encoding,
 )
 from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, harmonize
+from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from ..pacer.utils import (
     get_nonce_from_form,
     get_pacer_case_id_from_nonce_url,
@@ -348,18 +348,20 @@ class FreeOpinionRow(BaseDocketReport):
             cell = self.element.xpath("./td[2]")[0]
         s = cell.text_content().strip()
         if not s:
-            return harmonize(self.last_good_row.case_name)
+            return clean_string(harmonize(self.last_good_row.case_name))
 
         if self._column_count == 4 or self.court_id in ["areb", "arwb"]:
             # See note in docket number
             try:
-                return harmonize(s.split(" ", 1)[1])
+                return clean_string(harmonize(s.split(" ", 1)[1]))
             except IndexError:
                 # No case name, but a docket number is provided.
                 return "Case name unknown"
         else:
             try:
-                return harmonize(cell.xpath(".//b")[0].text_content())
+                return clean_string(
+                    harmonize(cell.xpath(".//b")[0].text_content())
+                )
             except IndexError:
                 logger.warning(
                     "Unable to get case name for %s in %s.",
