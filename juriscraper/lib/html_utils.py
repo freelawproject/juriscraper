@@ -6,9 +6,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 import nh3
 from lxml import etree, html
-from lxml.etree import XMLSyntaxError
 from lxml.html import HtmlElement, fromstring, tostring
-from lxml.html.clean import Cleaner
 from requests import Response
 
 try:
@@ -120,20 +118,6 @@ def get_row_column_links(row, cell_num):
     :return: string
     """
     return row.xpath(".//td[%d]//a/@href" % cell_num)[0]
-
-
-def get_clean_body_content(content, remove_extra_tags=[]):
-    """Parse out the body from an html string, clean it up, and send it along."""
-    remove_tags = ["a", "body", "font", "noscript"]
-    remove_tags.extend(remove_extra_tags)
-    cleaner = Cleaner(style=True, remove_tags=remove_tags)
-    try:
-        return cleaner.clean_html(content)
-    except XMLSyntaxError:
-        return (
-            "Unable to extract the content from this file. Please try "
-            "reading the original."
-        )
 
 
 def strip_bad_html_tags_insecure(
