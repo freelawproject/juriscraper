@@ -7,7 +7,6 @@ import unittest
 import jsondate3 as json
 
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
-from juriscraper.pacer.free_documents import FreeOpinionReport
 
 
 class PacerParseTestCase(unittest.TestCase):
@@ -47,7 +46,6 @@ class PacerParseTestCase(unittest.TestCase):
             except AttributeError:
                 # Some reports don't have this method.
                 pass
-
             data = report.data
             if not os.path.exists(json_path):
                 with open(json_path, "w") as f:
