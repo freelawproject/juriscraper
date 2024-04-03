@@ -48,11 +48,6 @@ class PacerParseTestCase(unittest.TestCase):
                 # Some reports don't have this method.
                 pass
 
-            if test_class == FreeOpinionReport:
-                # Set testing = True to enable FreeOpinionReport to return a
-                # dictionary containing the parsing data.
-                report.testing = True
-
             data = report.data
             if not os.path.exists(json_path):
                 with open(json_path, "w") as f:

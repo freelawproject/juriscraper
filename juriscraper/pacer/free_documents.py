@@ -32,7 +32,6 @@ class FreeOpinionReport(BaseReport):
     VALID_SORT_PARAMS = ("date_filed", "case_number")
 
     def __init__(self, court_id, pacer_session=None):
-        self.testing = False
         self.responses = []
         self.trees = []
         super().__init__(court_id, pacer_session)
@@ -152,10 +151,7 @@ class FreeOpinionReport(BaseReport):
                     row = FreeOpinionRow(row, results[-1], self.court_id)
                 else:
                     row = FreeOpinionRow(row, {}, self.court_id)
-                if self.testing:
-                    results.append(row.metadata)
-                else:
-                    results.append(row)
+                results.append(row.data)
         logger.info(
             "Parsed %s results from written opinions report at %s",
             len(results),
@@ -216,46 +212,38 @@ class FreeOpinionRow(BaseDocketReport):
         self._column_count = self._get_column_count()
         self._sort_order = self._detect_sort_order()
 
-        # Parsed data
-        results = self.get_pacer_case_id_and_pacer_seq_no()
-        self.pacer_case_id, self.pacer_seq_no = results[0], results[1]
-        self.docket_number = self._parse_docket_number_strs(
-            [self.get_docket_number()]
-        )
-        self.case_name = self.get_case_name()
-        self.date_filed = self.get_date_filed()
-        self.pacer_doc_id = self.get_pacer_doc_id()
-        self.document_number = self.get_document_number()
-        self.description = self.get_description()
-        self.nature_of_suit = self.get_nos()
-        self.cause = self.get_cause()
-
     def __str__(self):
-        return "<FreeOpinionRow in {}>\n{}".format(
-            self.court_id,
-            {
-                "pacer_case_id": self.pacer_case_id,
-                "docket_number": self.docket_number,
-                "case_name": self.case_name,
-                "date_filed": self.date_filed,
-                "pacer_doc_id": self.pacer_doc_id,
-                "document_number": self.document_number,
-            },
-        )
+        return f"<FreeOpinionRow in {self.court_id}>\n{self.data}"
 
     @property
     def metadata(self):
+        if self._metadata is not None:
+            return self._metadata
+
+        results = self.get_pacer_case_id_and_pacer_seq_no()
         data = {
-            "pacer_case_id": self.pacer_case_id,
-            "docket_number": self.docket_number,
-            "case_name": self.case_name,
-            "date_filed": self.date_filed,
-            "pacer_doc_id": self.pacer_doc_id,
-            "document_number": self.document_number,
-            "description": self.description,
-            "nature_of_suit": self.nature_of_suit,
-            "cause": self.cause,
+            "court_id": self.court_id,
+            "pacer_case_id": results[0],
+            "pacer_seq_no": results[1],
+            "docket_number": self._parse_docket_number_strs(
+                [self.get_docket_number()]
+            ),
+            "case_name": self.get_case_name(),
+            "date_filed": self.get_date_filed(),
+            "pacer_doc_id": self.get_pacer_doc_id(),
+            "document_number": self.get_document_number(),
+            "description": self.get_description(),
+            "nature_of_suit": self.get_nos(),
+            "cause": self.get_cause(),
         }
+
+        self._metadata = data
+        return data
+
+    @property
+    def data(self):
+        """Get all the data back from this endpoint."""
+        data = self.metadata.copy()
         return data
 
     def _get_column_count(self):
