@@ -211,6 +211,9 @@ class FreeOpinionRow(BaseDocketReport):
         self.court_id = court_id
         self._column_count = self._get_column_count()
         self._sort_order = self._detect_sort_order()
+        self.docket_number = self._parse_docket_number_strs(
+            [self.get_docket_number()]
+        )
 
     def __str__(self):
         return f"<FreeOpinionRow in {self.court_id}>\n{self.data}"
@@ -225,9 +228,7 @@ class FreeOpinionRow(BaseDocketReport):
             "court_id": self.court_id,
             "pacer_case_id": results[0],
             "pacer_seq_no": results[1],
-            "docket_number": self._parse_docket_number_strs(
-                [self.get_docket_number()]
-            ),
+            "docket_number": self.docket_number,
             "case_name": self.get_case_name(),
             "date_filed": self.get_date_filed(),
             "pacer_doc_id": self.get_pacer_doc_id(),
@@ -303,7 +304,7 @@ class FreeOpinionRow(BaseDocketReport):
                     "and case_name."
                 )
                 last_row = self.last_good_row
-                return last_row.pacer_case_id, last_row.pacer_seq_no
+                return last_row["pacer_case_id"], last_row["pacer_seq_no"]
         elif self._sort_order == "date_filed":
             href = self.element.xpath("./td[2]//@href")[0]
         return get_pacer_case_id_from_nonce_url(href), None
@@ -316,7 +317,7 @@ class FreeOpinionRow(BaseDocketReport):
                 cell = self.element.xpath("./td[2]//a")[0]
         except IndexError:
             # No content in the cell.
-            return self.last_good_row.docket_number
+            return self.last_good_row["docket_number"]
         else:
             s = cell.text_content().strip()
 
@@ -336,7 +337,7 @@ class FreeOpinionRow(BaseDocketReport):
             cell = self.element.xpath("./td[2]")[0]
         s = cell.text_content().strip()
         if not s:
-            return clean_string(harmonize(self.last_good_row.case_name))
+            return clean_string(harmonize(self.last_good_row["case_name"]))
 
         if self._column_count == 4 or self.court_id in ["areb", "arwb"]:
             # See note in docket number
@@ -366,7 +367,7 @@ class FreeOpinionRow(BaseDocketReport):
         s = self.element.xpath(path)[0]
         if not s.strip() and self._sort_order == "date_filed":
             # Empty cell, return the previous value.
-            return self.last_good_row.date_filed
+            return self.last_good_row["date_filed"]
         else:
             return convert_date_string(s)
 
