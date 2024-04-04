@@ -26,7 +26,7 @@ Changes:
 
 - Breaking change has been made to the FreeOpinionReport its 'data' property now
  returns a dictionary containing the FreeOpinionRow fields, instead of returning
- a Python object with their properties. This change aligns the method of 
+ a Python object with their properties. This change aligns the method of
  returning 'data' in this report with that of other reports.
 - Fixes to texag, tex
 
