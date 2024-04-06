@@ -16,6 +16,22 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.0 - 2024-04-03**
+
+Features:
+
+- Added scrapers for fisa and fiscr courts
+
+Changes:
+
+- Breaking change has been made to the FreeOpinionReport its 'data' property now
+ returns a dictionary containing the FreeOpinionRow fields, instead of returning
+ a Python object with their properties. This change aligns the method of
+ returning 'data' in this report with that of other reports.
+- Fixes to texag, tex
+
+## Past
+
 **2.5.95 - 2024-02-14**
 
 Features:
@@ -26,8 +42,6 @@ Features:
 Changes:
 
 - Update the DownloadConfirmationPage class to reduce the read timeout of the GET request within the query method.
-
-## Past
 
 **2.5.94 - 2024-02-13**
 
