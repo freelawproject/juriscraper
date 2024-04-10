@@ -13,6 +13,7 @@ If there are errors with this site, you can contact:
 
 She's super responsive.
 """
+from typing import Any
 
 from juriscraper.opinions.united_states.state import pa
 
@@ -28,3 +29,28 @@ class Site(pa.Site):
             "[not(contains(title/text(), 'Reargument Table'))]"
             "[not(contains(title/text(), 'Order Amending Rules'))]"
         )
+
+    def _get_precedential_statuses(self):
+        return ["Unknown"] * len(self.cases)
+
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+        """Can we extract the status from the text?
+
+        The opinions contain OPINION at the start and don't contain NOT REPORTED
+        meanwhile orders in the mix should just be labeled unpublished
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        if "OPINION NOT REPORTED" in scraped_text[:500]:
+            status = "Unpublished"
+        elif "OPINION" in scraped_text[:500]:
+            status = "Published"
+        else:
+            status = "Unknown"
+        metadata = {
+            "OpinionCluster": {
+                "precedential_status": status,
+            },
+        }
+        return metadata
