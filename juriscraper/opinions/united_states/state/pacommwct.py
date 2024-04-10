@@ -13,7 +13,7 @@ If there are errors with this site, you can contact:
 
 She's super responsive.
 """
-from typing import Any
+from typing import Any, Dict
 
 from juriscraper.opinions.united_states.state import pa
 
@@ -33,7 +33,7 @@ class Site(pa.Site):
     def _get_precedential_statuses(self):
         return ["Unknown"] * len(self.cases)
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Can we extract the status from the text?
 
         The opinions contain OPINION at the start and don't contain NOT REPORTED
