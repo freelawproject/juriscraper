@@ -483,6 +483,20 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.pacommwct": [
+            (
+                """IN THE COMMONWEALTH COURT OF PENNSYLVANIA\n Glenny Torres, : Petitioner : : \nBoard), \n: Respondent : \nv. \n: No. 1398 C.D. 2022 \n: Submitted: December 4, 2023 Amazon.com Services LLC : \n(Workers’ Compensation Appeal :\nBEFORE: HONORABLE ANNE E. COVEY, Judge HONORABLE STACY WALLACE, Judge\nHONORABLE MARY HANNAH LEAVITT, Senior Judge\nOPINION\nBY JUDGE WALLACE FILED: April 9, 2024\nGlenny Torres (Claimant) petitions for our review of the Workers’ Compensation Appeal Board’s (Board) November 16, 2022 order (Board’s Order), which partially modified Workers’ Compensation Judge (WCJ) Wayne Fegley’s (WCJ Fegley) order granting Claimant’s request for attorney’s fees pursuant to Section 440 of the Workers’ Compensation Act (the Act).1 After careful review, we reverse, in part, the Board’s Order, and remand to the Board with instructions to vacate the portion of WCJ Fegley’s order awarding attorney’s fees for an unreasonable contest and remand to the WCJ.\n""",
+                {
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
+            ),
+            (
+                """IN THE COMMONWEALTH COURT OF PENNSYLVANIA\nDeborah R. Malloy and Edward C. : Malloy, : Appellants : : v. : : Nicole Aileen Feigenbaum, Barry C. : Dozor, and Geoffrey Moulton :\nOPINION NOT REPORTED \nMEMORANDUM OPINION PER CURIAM""",
+                {
+                    "OpinionCluster": {"precedential_status": "Unpublished"},
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
