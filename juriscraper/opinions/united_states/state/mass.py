@@ -23,11 +23,16 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    """
+    Backscraper is implemented on `united_states_backscrapers.state.mass.py`
+    """
+
+    court_identifier = "SJC"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.mass.gov/service-details/new-opinions"
         self.court_id = self.__module__
-        self.court_identifier = "SJC"
 
     def _process_html(self):
         for file in self.html.xpath(".//a/@href[contains(.,'pdf')]/.."):
@@ -41,12 +46,12 @@ class Site(OpinionSiteLinear):
             url = file.get("href")
             parts = url.split("/")[-4:-1]
             parts = [int(d) for d in parts]
-            date = datetime(year=parts[0], month=parts[1], day=parts[2]).date()
+            date = datetime(parts[0], parts[1], parts[2])
             self.cases.append(
                 {
                     "name": name,
                     "status": "Published",
-                    "date": str(date),
+                    "date": date.strftime("%m/%d/%Y"),
                     "docket": docket,
                     "url": url,
                 }
