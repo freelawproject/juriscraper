@@ -83,7 +83,7 @@ class Site(OpinionSiteLinear):
         """
         status = "Unknown"
         text = html.fromstring(scraped_html.text).xpath("string(.)")
-        text = re.sub("\s+", " ", text)
+        text = re.sub(r"\s+", " ", text)
 
         if "NOT PUBLISHED" in scraped_html.upper():
             status = "Unpublished"
