@@ -15,4 +15,4 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
         path_root = os.path.join(
             TESTS_ROOT_EXAMPLES_PACER, "appellate_attachment_pages", "acms"
         )
-        self.parse_files(path_root, "*.acms_json", ACMSAttachmentPage)
+        self.parse_files(path_root, "*.compare.json", ACMSAttachmentPage)
