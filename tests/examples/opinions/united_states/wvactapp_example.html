@@ -1,697 +1,1430 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/MainTemplate.dwt" codeOutsideHTMLIsLocked="false" --><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width">
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Fall 2022 Opinion List - Intermediate Court of Appeals of West Virginia</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="page description" -->
-<meta name="description" content="All decisions filed in the current term of the Intermediate Court of Appeals of West Virginia. The new integrated decision list combines all of the decisions issued during a court term, identified using case type and decision type codes.">
-<!-- InstanceEndEditable -->
-<link href="../css/main.css" rel="stylesheet" type="text/css" media="screen">
-<link href="../css/print.css" rel="stylesheet" type="text/css" media="print">
-<!--[if lt IE 9]>
-<link href="../css/mainIE.css" rel="stylesheet" meida="screen" />
-<link href="../../css/mainIE.css" rel="stylesheet" meida="screen" />
-<![endif]-->
-<script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
-<script type="text/javascript" src="../js/func-lib.js"></script>
-<link rel="apple-touch-icon" href="../images/app-icon.png">
-<link rel="shortcut icon" href="../images/favicon.ico">
-<script type="text/javascript">
-	$(document).ready(function() {
-		//create the select dropdown for the mobile main nav
-        $("<select class='dropDown' />").appendTo("#main-navigation");
-		$("<option />", {
-        	"selected": "selected",
-         	"value"   : "",
-         	"text"    : "Main Navigation"
-      	}).appendTo("#main-navigation select");
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-		$("#main-navigation > ul > li > a, #main-navigation > ul > li > ul > li > a").each(function() {
-       		var el = $(this);
-       			$("<option />", {
-           		"value"   : el.attr("href"),
-           		"text"    : el.text()
-       		}).appendTo("#main-navigation select");
-      	});
-		//set the default selected option
-		$("#main-navigation select").change(function() {
-        	window.location = $(this).find("option:selected").val();
-      	});
-		//create the select dropdown for the mobile tertiary nav
-		$("<select />").appendTo("#tertiary-menu");
-		$("<option />", {
-        	"selected": "selected",
-         	"value"   : "",
-         	"text"    : "Interior Pages"
-      	}).appendTo("#tertiary-menu select");
-		$("#tertiary-menu > ul > li > a").each(function() {
-       		var el = $(this);
-       			$("<option />", {
-           		"value"   : el.attr("href"),
-           		"text"    : el.text()
-       		}).appendTo("#tertiary-menu select");
-      	});
-		//set the default selected option
-		$("#tertiary-menu select").change(function() {
-        	window.location = $(this).find("option:selected").val();
-      	});
-		//add class to mobile main nav when mobile tertiary nav exsits
-		$('#tertiary-menu ul li').each(function(){
-			if($('#tertiary-menu ul > li').hasClass('firstChild')){
-				$('select').addClass('links');
-			}
-			else {
-				$('select').addClass('nolinks');
-			}
-		});
-		//add classes to mobile main nav options for styling purposes
-		$('.dropDown option:eq(1), .dropDown option:eq(11), .dropDown option:eq(18), .dropDown option:eq(24), .dropDown option:eq(31)').addClass('bold');
-
-	});
-</script>
-<!-- www.Cludo.com search start CSS -->
-<link rel="stylesheet" href="http://fontawesome.io/../assets/font-awesome/css/font-awesome.css">
-<link href="http://customer.cludo.com/css/265/1754/cludo-search.min.css" type="text/css" rel="stylesheet">
-
-<style type="text/css">
-  .cludo-wrapper-menu { padding:7px 0px 7px 13px; background:#262b35; }
-  #cludo-search-form .search_autocomplete { display:none; }
-
-  @media screen and (max-width:765px){
-  #cludo-search-results .cludo-banner ul.countySearchContact li:first-child { border-right:none; }
-  .cludo-wrapper-menu { float:left; }
-  }
-
-  @media screen and (max-width:999px){
-  .cludo-wrapper-menu .cludo-header { display:none; }
-  }
-</style>
-<!-- InstanceBeginEditable name="head" -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-<script src="../js/thickbox/thickbox.js"></script>
-<link href="../js/thickbox/thickbox.css" rel="stylesheet" type="text/css" media="screen">
-<script type="text/javascript" src="../js/jquery.tools.min.js"></script>
-<script type="text/javascript" src="../js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="../js/FixedHeader.js"></script>
-<script type="text/javascript" src="../js/columnFilter.js"></script>
-<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
-<link href="../js/chosen/chosen.css" rel="stylesheet" type="text/css" media="screen">
-<script type="text/javascript">
-	$(document).ready(function() {
-
-		$('#opinions').dataTable({
-			"sPaginationType": "full_numbers",
-			"bAutoWidth": true,
-			"aaSorting": [[0,'desc']],
-			"aoColumns": [
-				{"asSorting": ["desc", "asc"] },
-				{"asSorting": [null], "bSearchable": true },
-				null,
-				null,
-				null
-			],
-			"oLanguage": {
-				"sZeroRecords": "There are no current term decisions available",
-				"sSearch": "List Search:",
-				"sInfoFiltered": "(_MAX_ total opinions)",
-				"sInfo": "_START_ to _END_ of _TOTAL_ opinions",
-				"sInfoEmpty": "0 to 0 of 0 opinions"
-			},
-			"iDisplayLength": -1,
-			"aLengthMenu": [[-1, 10, 25, 50, 100], ["All", 10, 25, 50, 100]],
-			"sDom": '<"top"ifl>rt<"bottom"ip>'
-		}).columnFilter({
-			sPlaceHolder: 'head:before',
-			aoColumns: [null, null, null, null, {type: 'select'}]
-		});
-
-		$(".select_filter").chosen({no_results_text: "No results match"}).before('<div class="narrowText"><p>Are you looking for all cases with a specific decision type?</p></div>');
-
-		//var oTable = $('#opinions').dataTable();
-		//new FixedHeader(oTable);
-
-		$('#opinions tbody tr').each(function() {
-        	var sTitle = '';
-            var nTds = $(this).find('td');
-            var sDescription = nTds.eq(3).text();
-
-            switch(sDescription){
-            	case "CR-F":
-					sTitle  = 'Felony (non-Death Penalty)';
-					break;
-                case "CR-M":
-					sTitle = 'Misdemeanor';
-					break;
-                case "CR-O":
-                	sTitle = 'Criminal-Other';
-                    break;
-				case "TCR":
-					sTitle = 'Tort, Contract, and Real Property';
-					break;
-				case "PR":
-					sTitle = 'Probate';
-					break;
-				case "FAM":
-					sTitle = 'Family';
-					break;
-				case "JUV":
-					sTitle = 'Juvenile';
-					break;
-				case "CIV-O":
-					sTitle = 'Civil-Other';
-					break;
-				case "WC":
-					sTitle = 'Workers Compensation';
-					break;
-				case "TAX":
-					sTitle = 'Revenue (Tax)';
-					break;
-				case "ADM":
-					sTitle = 'Administrative Agency-Other';
-					break;
-				case "MISC":
-					sTitle = 'Appeal by Right-Other';
-					break;
-				case "OJ-H":
-					sTitle = 'Habeas Corpus';
-					break;
-				case "OJ-M":
-					sTitle = 'Writ Application-Other';
-					break;
-				case "OJ-P":
-					sTitle = 'Writ Application-Other';
-					break;
-				case "L-ADM":
-					sTitle = 'Bar Admission';
-					break;
-				case "L-DISC":
-					sTitle = 'Bar Discipline/Eligibility'
-					break;
-				case "L-DISC-O":
-					sTitle = 'Bar/Judiciary Proceeding-Other';
-					break;
-				case "J-DISC":
-					sTitle = 'Bar/Judiciary Proceeding-Other';
-					break;
-				case "CERQ":
-					sTitle = 'Certified Question';
-					break;
-				case "OJ-O":
-					sTitle = 'Original Proceeding/Appellate Matter-Other';
-					break;
-				case "POST":
-					sTitle = 'Post-Conviction Appeal';
-					break;
-                default:
-                	sTitle = 'Please review our integrated decision list information.';
-                    break;
-             }
-             nTds.eq(3).attr('title', sTitle );
-        });
-
-		$("#opinions tbody td[title]").tooltip({
-			effect: 'slide',
-			offset: [27, 0]
-		});
-
-		$('a[href$=".pdf"]').click(function() {
-			var pdf=jQuery(this).attr('href');
-        	ga('send', 'event', 'Spring 2021 Opinions', 'download', pdf);
-    	});
-
-	});
-</script>
-<style type="text/css">
-#TB_title {
-	background:#f7f7ef url(../images/calendar/dateFieldBGSm.jpg) repeat-x bottom;
-	overflow:hidden;
-	min-height:35px;
-}
-#TB_ajaxWindowTitle {
-	font-size:16px;
-	font-weight:bold;
-	color:#3f4c5b;
-	padding-top:11px;
-}
-#TB_closeAjaxWindow {
-	position:absolute;
-	top:0px;
-	right:0px;
-	text-indent:-9999px;
-	font-size:0px;
-	margin:0px;
-	padding:0px;
-}
-#TB_closeAjaxWindow #TB_closeWindowButton {
-	background:url(../images/clearSearchBtn.png) no-repeat;
-	text-indent:-9999px;
-	height:29px;
-	width:29px;
-	position:relative;
-	float:right;
-	margin:5px 5px 0px 0px;
-	padding:0px;
-}
-.chosen-container {
-	width:150px !important;
-}
-.chzn-drop {
-	width:148px !important;
-}
-.chzn-search input[type="text"] {
-	width:112px !important;
-}
-</style>
-<!-- InstanceEndEditable -->
-<!-- InstanceParam name="TertiaryMenu" type="boolean" value="true" -->
-<!-- InstanceParam name="SubContentContainer" type="boolean" value="false" -->
-<!-- InstanceParam name="BodyClass" type="text" value="supreme-court" -->
-
-<!--Google Analytics Code-->
-<script type="text/javascript">
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-25329062-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<!-- InstanceParam name="openHeaderArea" type="boolean" value="true" -->
+<head>
+	<meta charset="utf-8" />
+	<title>Intermediate Court of Appeals - Opinions - Prior Terms | West Virginia Judiciary</title>
 </head>
 
-<body class="supreme-court">
+<body class="layout-two-sidebars has-featured-top page-node-5051 path-node node--type-page">
 
-<div id="printLogo"><img src="../images/printLogo.jpg" alt="West Virginia Supreme Court of Appeals"></div>
-
-<ul id="accessLinks" class="noPrint">
-  <li class="firstChild"><a href="#main-navigation">Skip to main menu</a></li>
-  <li><a href="#main-content">Skip to main content</a></li>
-</ul>
- <!-- InstanceBeginEditable name="openHeaderEditableArea" -->
-<!-- Opinion Table Help -->
-<link rel="stylesheet" href="file:///N|/test/html5Redux/fonts/stylesheet.css">
-<style type="text/css">
-	.caseloadNotice { margin:0px auto; padding:0px; width:200px; height:200px; overflow:hidden; border:1px solid #8e1717; border-bottom:2px solid #8e1717; border-radius:50% 50%; -webkit-border-radius:50% 50%;
-	background: -moz-linear-gradient(top, #e4effc 0%, #c5d9f1 100%);
-	background: -webkit-linear-gradient(top, #e4effc 0%,#c5d9f1 100%);
-	background: linear-gradient(to bottom, #e4effc 0%,#c5d9f1 100%);
-	box-shadow:inset 0 0 0 3px #ffffff; -webkit-box-shadow:inset 0 0 0 3px #ffffff; float:right; }
-	.caseloadNotice a { background:none; text-decoration:none; display:block; width:200px; height:200px; }
-	.caseloadNotice a:hover { text-decoration:none; }
-	.caseloadNotice a:hover h1 { color:#4a5f82 }
-	.caseloadNotice h1 { font-size:18px; border-bottom:2px solid #8394a8; border-top:1px solid #8394a8; margin:25px auto 0px auto; padding:10px 0px 10px 0px; text-align:center; color:#263143; display:block; background:#c3c3c3; box-shadow: 0 0 1px 0 #1d2632; -webkit-box-shadow: 0 0 1px 0 #1d2632; text-shadow: 1px 1px 1px #FFFFFF; }
-	.caseloadNotice p { font-size:11px; color:#222a34 !important; margin:5px auto 0px auto; padding:0px; text-align:center; }
-	.caseloadNotice h6 { margin:20px 0px 0px 0px; padding:10px 0px 10px 0px; display:block; border:none; text-align:center; background:#ffffff; }
-</style>
-<div id="tableHelp" class="noPrint">
-  <div id="tableHelpContent" style="display: none;">
-    <h6>Opinion List Quick Tip</h6>
-    <img src="../images/opinionTableHelp/exampleImg.png" width="390" height="100" alt="Opinion Table Exmample Photo">
-    <ul>
-      <li class="firstChild"><span class="tableHelpLetter">A</span><span class="tableHelpDesc">Each column of the list can be sorted by clicking the header of that column.</span></li>
-      <li><span class="tableHelpLetter">B</span><span class="tableHelpDesc">The list-wide active text search or "List Search" allows the viewer to quickly search for specific information by typing a single word or multiple words, seperated by a space.</span></li>
-      <li><span class="tableHelpLetter">C</span><span class="tableHelpDesc">A drop down menu allows the user to change the humber of list items currently showing on the page.</span></li>
-    </ul>
-    <p>For more detailed help on the new features of the Opinion List, download the overview by <a href="../siteOverViewTakeHome.pdf" target="_blank">clicking here.</a></p>
-  </div>
-  <div id="tableHelpBtn"><span class="helpClosed">Open Help</span></div>
-</div>
-<!-- InstanceEndEditable -->
-<div id="main-header">
-  <h1 class="noPrint"><a href="../index.html">West Virginia Judiciary</a></h1>
-  <p class="navigation noPrint"><a href="../index.html">Home</a> | <a href="../contact.html">Contact</a> | <a href="../jobs.html">Employment</a> | <a href="../sitemap.html">Sitemap</a></p>
-  <h2 class="page-title"><!-- InstanceBeginEditable name="PageTitle" -->Opinions and Memorandum Decisions of the <br>Intermediate Court of Appeals<!-- InstanceEndEditable --></h2>
-  <div id="tertiary-menu">
-
-    <ul class="sub-menu">
-      <!-- InstanceBeginRepeat name="TertiaryMenuItems" --><!-- InstanceBeginRepeatEntry -->
-      <!-- InstanceBeginEditable name="TertiaryMenuItem" -->
-      <li class="firstChild"><a href="opinion-information.html">Information &amp; Search</a></li>
-      <li><a href="integrated-decisions-list-explained.html">About the Decision List</a></li>
-      <!-- InstanceEndEditable -->      <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
-    </ul>
-      <select class="links"><option value="">Interior Pages</option><option value="opinion-information.html">Information &amp; Search</option><option value="integrated-decisions-list-explained.html">About the Decision List</option></select></div>
-</div>
-<div id="main-body">
-  <div id="main-navigation">
-
-    <!-- ------------------ -->
-    <!-- Cludo search start -->
-    <!-- ------------------ -->
-    <div class="cludo-wrapper-menu">
-    	<div class="cludo-header">Search</div>
-        <div id="cludo-search-form" role="search">
-        	<label for="cludo-search-form-input">Search the site</label>
-            <input name="searchrequest" id="cludo-search-form-input" class="noLineHeight" type="search" placeholder="Search" value="" title="Site Search" autocomplete="off" aria-autocomplete="list" aria-hashpop="true">
-            <button type="button" title="Search">
-            	<i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-        </div>
-    </div>
-    <!-- ------------------ -->
-    <!-- Cludo search end -->
-    <!-- ------------------ -->
-
-    <h2 class="noPrint">Main Menu</h2>
-    <ul class="menu noPrint">
-      <li id="public-resources" class="firstChild"><a href="../public-resources/index.html">Public Resources</a>
-        <ul>
-          <li class="firstChild"><a href="../public-resources/court-information-by-county.html">Court Information by County</a></li>
-          <li><a href="../legal-community/court-forms.html">Court Forms</a></li>
-          <li><a href="../public-resources/press-page.html">News &amp; Publications</a></li>
-          <li><a href="../public-resources/jury-information.html">Jury Information</a></li>
-          <li><a href="../public-resources/law-library/law-library-home.html">Law Library</a></li>
-          <li><a href="../public-resources/student-resources/index.html">Student Resources</a></li>
-          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li>
-          <li><a href="../public-resources/guardians-mental-hygiene-index.html">Mental Hygiene &amp; Guardians</a></li>
-          <li><a href="../public-resources/child-abuse-neglect.html">Child Abuse and Neglect</a></li>
-          <li><a href="../public-resources/accessibility-information.html">Accessibility Information</a></li>
-        </ul>
-      </li>
-      <li id="supreme-court"><a href="index.html">Appellate Courts</a>
-        <ul>
-          <li class="firstChild"><a href="index.html">Supreme Court of Appeals</a></li>
-          <li><a href="justices-staff.html">Justices &amp; Staff</a></li>
-          <li><a href="calendar-docket.html">Calendar &amp; Docket</a></li>
-          <li><a href="opinions.html" class="current">Opinions</a></li>
-		  <li><a href="clerk/clerks-office.html">Clerk's Office</a></li>
-          <li><a href="office-of-counsel.html">Office of Counsel</a></li>
-          <li><a href="workers-comp.html">Workers' Compensation Counsel</a></li>
-		  <li><a href="../intermediate-court/intermediate-court.html">Intermediate Court of Appeals (ICA)</a></li>
-		  <li><a href="../intermediate-court/judges-staff.html">ICA Judges &amp; Staff</a></li>
-          <li><a href="../intermediate-court/calendar-docket.html">ICA Calendar &amp; Docket</a></li>
-          <li><a href="../intermediate-court/opinions.html" class="current">ICA Opinions</a></li>
-          <!--<li><a href="../intermediate-court/clerk/clerks-office.html">ICA Clerk's Office</a></li>
-          <li><a href="../intermediate-court/office-of-counsel.html">ICA Office of Counsel</a></li>-->
-
-        </ul>
-      </li>
-      <li id="lower-courts"><a href="../lower-courts/index.html">Lower Courts</a>
-        <ul>
-          <li class="firstChild"><a href="../lower-courts/circuit-courts.html">Circuit Courts</a></li>
-          <li><a href="../lower-courts/family-courts.html">Family Courts</a></li>
-          <li><a href="../lower-courts/magistrate-courts.html">Magistrate Courts</a></li>
-          <li><a href="../lower-courts/treatment-courts.html">Treatment Courts</a></li>
-          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li>
-          <li><a href="../lower-courts/business-court-division/index.html">Business Court Division</a></li>
-          <li><a href="../lower-courts/statistics.html">Statistics</a></li>
-    	</ul>
-      </li>
-      <li id="legal-community"><a href="../legal-community/index.html">Legal Community</a>
-        <ul>
-    	  <li class="firstChild"><a href="../legal-community/court-rules.html">Court Rules</a></li>
-          <li><a href="../e-file/index.html">E-Filing</a></li>
-          <li><a href="../legal-community/board-of-law-examiners.html">Bar Admissions</a></li>
-          <li><a href="http://www.wvodc.org/" target="_blank">Lawyer Disciplinary Board</a></li>
-          <li><a href="../legal-community/judicial-investigaion.html">Judicial Investigation</a></li>
-          <li><a href="http://www.wvbar.org/" target="_blank">West Virginia State Bar</a></li>
-          <li><a href="https://wvjlap.org/" target="_blank">Judicial &amp; Lawyer Assistance Program</a></li>
-        </ul>
-      </li>
-      <li id="court-administration"><a href="../court-administration/index.html">Court Administration</a>
-        <ul>
-          <li class="firstChild"><a href="../court-administration/administrative-office.html">Administrative Office</a></li>
-          <li><a href="../court-administration/judiciary-policies.html">Judiciary Policies</a></li>
-          <li><a href="../court-administration/security-closures.html">Court Security and Closures</a></li>
-          <!--<li><a href="../court-administration/court-services.html">Court Services</a></li>-->
-          <li><a href="../court-administration/probation/probation-services.html">Probation Services</a></li>
-          <li><a href="../court-administration/access-to-justice.html">Access to Justice</a></li>
-          <li><a href="../court-administration/juvenlie-justice-commission/History.html">Juvenile Justice Commission</a></li>
-    	</ul>
-      </li>
-      <li><a href="../viewing-pdf-files.html">Viewing PDF Files</a></li>
-    </ul>
-  <select class="dropDown links"><option value="">Main Navigation</option><option value="../public-resources/index.html" class="bold">Public Resources</option><option value="../public-resources/court-information-by-county.html">Court Information by County</option><option value="../legal-community/court-forms.html">Court Forms</option><option value="../public-resources/press-page.html">News &amp; Publications</option><option value="../public-resources/jury-information.html">Jury Information</option><option value="../public-resources/law-library/law-library-home.html">Law Library</option><option value="../public-resources/student-resources/index.html">Student Resources</option><option value="../public-resources/domestic/domestic-violence.html">Domestic Violence</option><option value="../public-resources/guardians-mental-hygiene-index.html">Mental Hygiene &amp; Guardians</option><option value="../public-resources/child-abuse-neglect.html">Child Abuse and Neglect</option><option value="../public-resources/accessibility-information.html" class="bold">Accessibility Information</option><option value="index.html">Appellate Courts</option><option value="index.html">Supreme Court of Appeals</option><option value="justices-staff.html">Justices &amp; Staff</option><option value="calendar-docket.html">Calendar &amp; Docket</option><option value="opinions.html">Opinions</option><option value="clerk/clerks-office.html">Clerk's Office</option><option value="office-of-counsel.html" class="bold">Office of Counsel</option><option value="workers-comp.html">Workers' Compensation Counsel</option><option value="../intermediate-court/intermediate-court.html">Intermediate Court of Appeals (ICA)</option><option value="../intermediate-court/judges-staff.html">ICA Judges &amp; Staff</option><option value="../intermediate-court/calendar-docket.html">ICA Calendar &amp; Docket</option><option value="../intermediate-court/opinions.html">ICA Opinions</option><option value="../lower-courts/index.html" class="bold">Lower Courts</option><option value="../lower-courts/circuit-courts.html">Circuit Courts</option><option value="../lower-courts/family-courts.html">Family Courts</option><option value="../lower-courts/magistrate-courts.html">Magistrate Courts</option><option value="../lower-courts/treatment-courts.html">Treatment Courts</option><option value="../lower-courts/mlp/overview.html">Mass Litigation Panel</option><option value="../lower-courts/business-court-division/index.html">Business Court Division</option><option value="../lower-courts/statistics.html" class="bold">Statistics</option><option value="../legal-community/index.html">Legal Community</option><option value="../legal-community/court-rules.html">Court Rules</option><option value="../e-file/index.html">E-Filing</option><option value="../legal-community/board-of-law-examiners.html">Bar Admissions</option><option value="http://www.wvodc.org/">Lawyer Disciplinary Board</option><option value="../legal-community/judicial-investigaion.html">Judicial Investigation</option><option value="http://www.wvbar.org/">West Virginia State Bar</option><option value="https://wvjlap.org/">Judicial &amp; Lawyer Assistance Program</option><option value="../court-administration/index.html">Court Administration</option><option value="../court-administration/administrative-office.html">Administrative Office</option><option value="../court-administration/judiciary-policies.html">Judiciary Policies</option><option value="../court-administration/security-closures.html">Court Security and Closures</option><option value="../court-administration/probation/probation-services.html">Probation Services</option><option value="../court-administration/access-to-justice.html">Access to Justice</option><option value="../court-administration/juvenlie-justice-commission/History.html">Juvenile Justice Commission</option><option value="../viewing-pdf-files.html">Viewing PDF Files</option></select></div>
-  <div id="main-content"><!-- InstanceBeginEditable name="MainContent" -->
-    <h3>Fall 2022 Opinion List</h3>
-   <!-- <div class="notice caseloadNotice"> <a href="clerk/statistics/15-16QuickFacts.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'Report Clerk Link', 'click', '2016 Caseload Report']);">
-      <h1>2016 Quick<br />
-        Reference Facts</h1>
-      <p>full report to follow</p>
-      <h6>Click Here</h6>
-      </a> </div>-->
-    <p>Links to all decisions filed in the current term of court are listed in the table below. <strong>Are you looking for an opinion list from a prior term of court?</strong> If so, please <a href="opinion-information.html">visit the Information &amp; Search page</a>. Opinions from the September 1991 term of court to the present day are available online.</p>
-    <p>The new integrated decision list combines all of the decisions issued during a court term, identified using case type and decision type codes. To re-sort the list quickly, click any of the column headers (except case number). For more information about using the decision list and for an explanation of the codes, review the page: <a href="integrated-decision-list-explained.html">About the Decision List</a>. </p>
-	  <p>When the page loads, the Date Filed column is sorted descending.</p>
-    <div class="quickTip">
-      <p><strong>QUICK TIP:</strong> For more help on using the opinion table, click the <span class="openHelp"><img class="helpBtnContent" src="../images/opinionTableHelp/blueQuestion.png" width="22" height="22" alt="Open Opinion Table Help"></span> to the right on the page.</p>
-    </div>
-    <div id="caption">Current Term of Court Opinions and Memorandum Decisions
-	  </div>
-    <div id="opinions_wrapper" class="dataTables_wrapper" role="grid"><div class="top"><div class="dataTables_info" id="opinions_info">1 to 27 of 27 opinions</div><div class="dataTables_filter" id="opinions_filter"><label>List Search: <input type="text" aria-controls="opinions"></label></div><div id="opinions_length" class="dataTables_length"><label>Show <select size="1" name="opinions_length" aria-controls="opinions"><option value="-1">All</option><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><table border="0" cellpadding="0" cellspacing="0" class="display dataTable" id="opinions" aria-describedby="opinions_info" style="width: 625px;">
-    <caption>Current Term of Court Opinions and Memorandum Decisions</caption>
-    <thead>
-      <tr class="searchRow OpinionsSelect" role="row"><th colspan="5" rowspan="1"><span class="filterColumn filter_select"><div class="narrowText"><p>Are you looking for all cases with a specific decision type?</p></div><select class="search_init select_filter" style="display: none;"><option value="" class="search_init">Decision Type</option><option value="MD">MD</option><option value="SEP">SEP</option><option value="SO">SO</option></select><div class="chosen-container chosen-container-single" style="width: 105px;" title=""><a class="chosen-single" tabindex="-1"><span>Decision Type</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div></span></th></tr>
-      <tr role="row"><th width="19%" class="sorting_desc" role="columnheader" tabindex="0" aria-controls="opinions" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date Filed: activate to sort column ascending" style="width: 103px;">Date Filed</th><th class="noSort sorting_disabled" width="13%" role="columnheader" tabindex="0" aria-controls="opinions" rowspan="1" colspan="1" aria-label="Case No.: activate to sort column descending" style="width: 64px;">Case No.</th><th width="42%" class="sorting" role="columnheader" tabindex="0" aria-controls="opinions" rowspan="1" colspan="1" aria-label="Case Name: activate to sort column ascending" style="width: 246px;">Case Name</th><th width="13%" class="sorting" role="columnheader" tabindex="0" aria-controls="opinions" rowspan="1" colspan="1" aria-label="Case Type: activate to sort column ascending" style="width: 64px;">Case Type</th><th width="13%" class="sorting" role="columnheader" tabindex="0" aria-controls="opinions" rowspan="1" colspan="1" aria-label="Decision Type: activate to sort column ascending" style="width: 64px;">Decision Type</th></tr>
-    </thead>
-
-  <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd">
-			<td class="firstChild  sorting_1">12/9/2022</td>
-			<td class=" ">22-ICA-10</td>
-			<td class=" "><a href="docs/Fall2022/22-ICA-10-Scarr.pdf">David Duff, II v. Kanawha County Commission</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">SO</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">12/2/2022</td>
-			<td class=" ">22-ICA-57</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-57 md.pdf">SWVA, Inc. v. Brandon M. Caudill</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-172</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-172 md.pdf">Andrew C. v. Hillary C.</a></td>
-			<td class=" ">FAM</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-104</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-104 md.pdf">Newport Trading Co., Inc. v. Larry R. Hicks</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-88</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-88 md.pdf">Randy D. Bohall v. Murray American Energy, Inc.</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-86</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-86 md.pdf">Michael L. Dean v. Arch Coal, Inc.</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-84</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-84 md.pdf">David E. Honaker v. Justice Family Group, LLC</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-73</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-73 md.pdf">Vinson Clagg v. Service Wire Company</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-55</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-55 md.pdf">James E. Stover v. West Virginia Division of Highways</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-51</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-51 md.pdf">Dewayne Roberts v. Daniel Watson Masonry, LLC</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-37</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-37 md.pdf">Linda A. Watson v. Homer Laughlin China Company</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-32</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-32 md.pdf">George E. Keaton v. Beckley Garbage Disposal</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-29</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-29 md.pdf">Rob Juszczak Construction v. John Juszczak</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-8</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-8 md.pdf">John Juszczak v. Rob Juszczak Construction</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-2</td>
-			<td class=" "><a href="docs/Fall2022/22-ICA-0002-sep-Scarr.pdf">Amanda C. v. Christopher P.</a> (Judge Scarr concurring.)</td>
-			<td class=" ">FAM</td>
-			<td class=" ">SEP</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/18/2022</td>
-			<td class=" ">22-ICA-2</td>
-			<td class=" "><a href="docs/Fall2022/22-ICA-0002-greear-p.pdf">Amanda C. v. Christopher P.</a></td>
-			<td class=" ">FAM</td>
-			<td class=" ">SO</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-35</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-35 md.pdf">Breanna Sargent v. On The Rocks, LLC</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-33</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-33 md.pdf">Murray American Energy, Inc. v. Sean Stapel</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-31</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-31 md.pdf">Beckley Appalachian Regional Healthcare v. Barry Levin</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-21</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-21 md.pdf">Bayer Corporation v. Charles Virden, Decendent, Mary Kay Virden, Dependent</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-20</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-20 md.pdf">Charlene D. Fleshman, aka Charlene D. Christy v. James A. Fleshman</a></td>
-			<td class=" ">FAM</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-17</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-17 md.pdf">Richard Heath v. Alliance Coal LLC</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-16</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-16 md.pdf">Christopher Adams v. United Parcel Service, Inc.</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-14</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-14 md.pdf">Kirk Trucking Co, Inc. v. Joseph S. Maynard</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-12</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-12 md.pdf">Dallas Hankins v. Sprouting Farms Corp.</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="even">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-11</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-11 md.pdf">Murray American Energy, Inc. v. Sean Stapel</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr><tr class="odd">
-			<td class="firstChild  sorting_1">11/15/2022</td>
-			<td class=" ">22-ICA-9</td>
-			<td class=" "><a href="memo-decisions/Fall2022/22-ICA-9 md.pdf">Anthony Cosby v. Capitol Beverage Company</a></td>
-			<td class=" ">WC</td>
-			<td class=" ">MD</td>
-		</tr></tbody></table><div class="bottom"><div class="dataTables_info">1 to 27 of 27 opinions</div><div class="dataTables_paginate paging_full_numbers" id="opinions_paginate"><a tabindex="0" class="first paginate_button paginate_button_disabled" id="opinions_first">First</a><a tabindex="0" class="previous paginate_button paginate_button_disabled" id="opinions_previous">Previous</a><span></span><a tabindex="0" class="next paginate_button paginate_button_disabled" id="opinions_next">Next</a><a tabindex="0" class="last paginate_button paginate_button_disabled" id="opinions_last">Last</a></div></div></div>
-  <!-- InstanceEndEditable --></div>
-  </div>
-<div id="main-footer" class="noPrint">
-  <p class="contact-info">&nbsp;<br>&nbsp;<br>&nbsp;</p>
-
-  <ul id="additionalNav">
-  	<li class="redesign firstChild"><a href="about-this-redesign.html">About this Redesign</a></li>
-    <li class="twitter"><a href="http://www.twitter.com/wvcourts" target="_blank">Twitter</a></li>
-  </ul>
-
-  <ul id="additionalNav2">
-	<li class="youtube firstChild">
-		<a href="https://www.youtube.com/c/wvsupremecourt" target="_blank">
-			<img src="http://www.courtswv.gov/test/html5Redux/img/socialMedia/youtube30x30White.png" width="30" height="30" alt="YouTube">
-		</a>
-	</li>
-
-    <li class="twitter">
-		<a href="http://www.twitter.com/wvcourts" target="_blank">
-			<img src="http://www.courtswv.gov/test/html5Redux/img/socialMedia/twitter30x30White.png" width="30" height="30" alt="Twitter @wvcourts">
-		</a>
-	</li>
-
-	<li class="facebook">
-		<a href="https://www.facebook.com/wvjudiciary" target="_blank">
-			<img src="http://www.courtswv.gov/test/html5Redux/img/socialMedia/facebook30x30White.png" width="30" height="30" alt="Facebook">
-		</a>
-	</li>
-
-	<li class="smugMug">
-		<a href="https://wvcourts.smugmug.com/" target="_blank">
-			<img src="http://www.courtswv.gov/test/html5Redux/img/socialMedia/smugmug30x30White.png" width="30" height="30" alt="SmugMug">
-		</a>
-	</li>
-
-	<li class="instagram">
-		<a href="https://www.instagram.com/wvcourts/" target="_blank">
-			<img src="http://www.courtswv.gov/test/html5Redux/img/socialMedia/instagram30x30White.png" width="30" height="30" alt="Instagram @wvcourts">
-		</a>
-	</li>
-
-    <li class="flickr">
-		<a href="http://www.flickr.com/photos/courtswv" target="_blank">
-			<img src="http://www.courtswv.gov/test/html5Redux/img/socialMedia/flickr30x30white.png" width="30" height="30" alt="Flickr">
-		</a>
-	</li>
-  </ul>
-
-  <ul class="navigation">
-    <li class="firstChild"><a href="../contact.html">Contact Information</a></li>
-    <li><a href="../terms-of-use.html">Terms of Use</a></li>
-    <li><a href="http://www.wv.gov/Pages/default.aspx" target="_blank">State of WV Main Page</a></li>
-  </ul>
-  <p class="terms">The West Virginia Judicial System is an Equal Opportunity Employer committed to providing equal access and unbiased, non-discriminatory treatment to all.<br>
-    2022 West Virginia Court System - Supreme Court of Appeals. All Rights Reserved.</p>
-</div>
-
-		<!-- www.Cludo.com Search body init script start -->
-        <script type="text/javascript" src="http://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
-        <script>
-            var CludoSearch;
-            (function () {
-                var cludoSettings = {
-                    customerId: 265,
-                    engineId: 1754,
-                    searchUrl: "http://www.courtswv.gov/searchPageResults.html",
-                    searchInputs: ["cludo-search-form","cludo-search-content-form","cludo-search-mobile-form"],
-                    initSearchBoxText: "",
-                    language: "en",
-					loading: "<img src='http://customer.cludo.com/img/loading.gif' alt='Loading Search Results' class='loading' role='progressbar' />",
-                    endlessScroll: {stopAfterPage:3, resultsPerPage:15, bottomOffset: 700},
-                    richAutocomplete: true
-                };
-                CludoSearch= new Cludo(cludoSettings);
-                CludoSearch.init();
-            })();
-        </script>
-        <!-- www.Cludo.com Search body init script start -->
+	<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+		<div id="page-wrapper">
+			<div id="page">
+				<div class="highlighted">
+					<aside class="section clearfix" role="complementary">
+						<section class="region region-highlighted">
+							<div id="block-alert"
+								class="block block-block-content block-block-content92650469-30c7-4977-b282-7abf72aac1ff">
 
 
-<!-- InstanceEnd -->
-</body></html>
+								<div class="content">
+
+									<div
+										class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+										<div id="alert">
+											<p>Courthouse delays and closings will be posted as we receive them. Click
+												<a href="/public-resources/news-publications/court-closures">here</a>
+												for details.
+											</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</section>
+
+					</aside>
+				</div>
+				<div id="main-wrapper" class="layout-main-wrapper clearfix">
+					<div id="main" class="container">
+						<div class="row row-offcanvas row-offcanvas-left clearfix">
+							<main class="main-content col" id="content" role="main">
+								<section class="section">
+									<a id="main-content" tabindex="-1"></a>
+									<section class="region region-content">
+										<div data-drupal-messages-fallback class="hidden"></div>
+										<div id="block-wvcourts-content"
+											class="block block-system block-system-main-block">
+
+
+											<div class="content">
+
+
+												<article class="node node--type-page node--view-mode-full clearfix">
+													<header>
+
+
+													</header>
+													<div class="node__content clearfix">
+
+														<div
+															class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+															<h3 class="text-align-center">INTERMEDIATE COURT OF
+																APPEALS<br />PRIOR TERM/YEAR OPINIONS</h3>
+															<hr />
+														</div>
+
+
+
+													</div>
+												</article>
+
+											</div>
+										</div>
+										<div class="views-element-container block block-views block-views-blockopinions-ica-fall-2022-block-1"
+											id="block-wvcourts-views-block-opinions-ica-fall-2022-block-1">
+
+
+											<div class="content">
+												<div>
+													<div
+														class="view view-opinions-ica-fall-2022 view-id-opinions_ica_fall_2022 view-display-id-block_1 js-view-dom-id-17a2a7b462fa9cb5d8708d77c92a6150b0163277ef213ae44997381cf2231c8e">
+
+
+														<div class="view-header">
+															<h5>Total Opinions: 387</h5>
+														</div>
+														<div class="view-filters">
+
+															<form class="views-exposed-form"
+																data-drupal-selector="views-exposed-form-opinions-ica-fall-2022-block-1"
+																action="/appellate-courts/intermediate-court-of-appeals/opinions/prior-terms"
+																method="get"
+																id="views-exposed-form-opinions-ica-fall-2022-block-1"
+																accept-charset="UTF-8">
+																<div class="d-flex flex-wrap">
+
+
+
+
+
+
+																	<div
+																		class="js-form-item js-form-type-select form-type-select js-form-item-field-ica-opinion-term-value form-item-field-ica-opinion-term-value mb-3">
+																		<label
+																			for="edit-field-ica-opinion-term-value">Term</label>
+
+																		<select
+																			data-drupal-selector="edit-field-ica-opinion-term-value"
+																			id="edit-field-ica-opinion-term-value"
+																			name="field_ica_opinion_term_value"
+																			class="form-select">
+																			<option value="All" selected="selected">-
+																				Any -</option>
+																			<option value="January (Spring)">January
+																				(Spring)</option>
+																			<option value="September (Fall)">September
+																				(Fall)</option>
+																		</select>
+																	</div>
+
+
+
+
+
+
+																	<div
+																		class="js-form-item js-form-type-select form-type-select js-form-item-field-ica-opinion-year-value form-item-field-ica-opinion-year-value mb-3">
+																		<label
+																			for="edit-field-ica-opinion-year-value">Year</label>
+
+																		<select
+																			data-drupal-selector="edit-field-ica-opinion-year-value"
+																			id="edit-field-ica-opinion-year-value"
+																			name="field_ica_opinion_year_value"
+																			class="form-select">
+																			<option value="All" selected="selected">-
+																				Any -</option>
+																			<option value="2024">2024</option>
+																			<option value="2023">2023</option>
+																			<option value="2022">2022</option>
+																		</select>
+																	</div>
+
+
+
+
+
+
+																	<div
+																		class="js-form-item js-form-type-select form-type-select js-form-item-field-case-type-value form-item-field-case-type-value mb-3">
+																		<label for="edit-field-case-type-value">Case
+																			Type</label>
+
+																		<select
+																			data-drupal-selector="edit-field-case-type-value"
+																			id="edit-field-case-type-value"
+																			name="field_case_type_value"
+																			class="form-select">
+																			<option value="All" selected="selected">-
+																				Any -</option>
+																			<option value="ADM">ADM</option>
+																			<option value="CERQ">CERQ</option>
+																			<option value="CIV-O">CIV-O</option>
+																			<option value="CR-F">CR-F</option>
+																			<option value="CR-M">CR-M</option>
+																			<option value="CR-O">CR-O</option>
+																			<option value="FAM">FAM</option>
+																			<option value="J-DISC">J-DISC</option>
+																			<option value="JUV">JUV</option>
+																			<option value="L-ADM">L-ADM</option>
+																			<option value="L-DISC">L-DISC</option>
+																			<option value="MISC">MISC</option>
+																			<option value="OJ-H">OJ-H</option>
+																			<option value="OJ-M">OJ-M</option>
+																			<option value="OJ-O">OJ-O</option>
+																			<option value="OJ-P">OJ-P</option>
+																			<option value="POST">POST</option>
+																			<option value="PR">PR</option>
+																			<option value="TAX">TAX</option>
+																			<option value="TCR">TCR</option>
+																			<option value="WC">WC</option>
+																		</select>
+																	</div>
+
+
+
+
+
+
+																	<div
+																		class="js-form-item js-form-type-select form-type-select js-form-item-field-decision-type-value form-item-field-decision-type-value mb-3">
+																		<label
+																			for="edit-field-decision-type-value">Decision
+																			Type</label>
+
+																		<select
+																			data-drupal-selector="edit-field-decision-type-value"
+																			id="edit-field-decision-type-value"
+																			name="field_decision_type_value"
+																			class="form-select">
+																			<option value="All" selected="selected">-
+																				Any -</option>
+																			<option value="MD">MD</option>
+																			<option value="SO">SO</option>
+																			<option value="SEP">SEP</option>
+																		</select>
+																	</div>
+
+
+
+
+
+
+																	<div
+																		class="js-form-item js-form-type-textfield form-type-textfield js-form-item-combine form-item-combine mb-3">
+																		<label for="edit-combine"> Search</label>
+																		<input data-drupal-selector="edit-combine"
+																			type="text" id="edit-combine" name="combine"
+																			value="" size="30" maxlength="128"
+																			class="form-control" />
+
+																	</div>
+																	<div data-drupal-selector="edit-actions"
+																		class="form-actions js-form-wrapper form-wrapper mb-3"
+																		id="edit-actions"><button
+																			data-drupal-selector="edit-submit-opinions-ica-fall-2022"
+																			type="submit"
+																			id="edit-submit-opinions-ica-fall-2022"
+																			value="  Search"
+																			class="button js-form-submit form-submit btn btn-primary">
+																			Search</button>
+																	</div>
+
+																</div>
+
+															</form>
+
+														</div>
+
+														<div class="view-content row">
+															<div class="table-responsive col">
+																<table data-toggle="table"
+																	class="table-striped table views-table views-view-table cols-5"
+																	data-pagination="true" data-page-size="10"
+																	data-pagination-pre-text="Previous"
+																	data-pagination-next-text="Next">
+																	<thead class=''>
+																		<tr>
+																			<th id="view-field-date-table-column"
+																				data-field="field_date"
+																				class="views-field views-field-field-date"
+																				scope="col">Date Filed</th>
+																			<th id="view-title-table-column"
+																				data-field="title"
+																				class="views-field views-field-title"
+																				scope="col">Case No</th>
+																			<th id="view-field-ica-opinion-case-name-table-column"
+																				data-field="field_ica_opinion_case_name"
+																				class="views-field views-field-field-ica-opinion-case-name"
+																				scope="col">Case Name</th>
+																			<th id="view-field-case-type-table-column"
+																				data-field="field_case_type"
+																				class="views-field views-field-field-case-type"
+																				scope="col">Case Type</th>
+																			<th id="view-field-decision-type-table-column"
+																				data-field="field_decision_type"
+																				class="views-field views-field-field-decision-type"
+																				scope="col">Decision Type</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				01/12/2024 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-162 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2024-01/23-ICA-162_MD.pdf">
+																					<p>Richard Kevin Jackson v. Janet
+																						Lee Jackson</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				FAM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				12/15/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-235 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-12/22-ICA-235_MD.pdf">
+																					<p>Richard B. Timmis v. Charles P.
+																						Andrew</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				PR </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				12/08/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-74 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-12/22-ICA-74_so.pdf">
+																					<p>DD Oil Company v. State of West
+																						Virginia, ex rel., Harold D.
+																						Ward, Cabinet Secretary, West
+																						Virginia Department of
+																						Environmental Protection</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				SO </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				12/08/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-74 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-12/22-ICA-74%20Separate%20Opinion.pdf">
+																					<p>DD Oil Company v. State of West
+																						Virginia, ex rel., Harold D.
+																						Ward, Cabinet Secretary, West
+																						Virginia Department of
+																						Environmental Protection, (Judge
+																						Lorensen dissenting.)</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				SEP </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				12/08/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-208 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-12/22-ICA-208%20Opinion.pdf">
+																					<p>Ford Motor Company v. Angel Ellen
+																						Tyler, as Administrator of the
+																						Estate of Kristen Bumgardner</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				TCR </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				SO </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				11/29/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-243 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-11/22-ICA-243-sep-greear.pdf">
+																					<p>Jay Folse v. G. Russell Rollyson,
+																						Jr. and John McCuskey, Jr.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				CIV-O </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				SEP </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				11/16/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-327 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-11/22-ICA-327.pdf">
+																					<p>Abigail Shoemaker, Mary
+																						Shoemaker, and Chris Shoemaker
+																						v. Tazewell County Public
+																						Schools and Kimberly Benson</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				TCR </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				SO </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				11/16/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-243 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-11/22-ICA-243.pdf">
+																					<p>Jay Folse v. G. Russell Rollyson,
+																						Jr. and John McCuskey, Jr.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				CIV-O </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				SO </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				11/16/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-301 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-11/22-ICA-301md.pdf">
+																					<p>Andrea Dale Dye v. Farmers &amp;
+																						Mechanics Mutual Insurance
+																						Company of West Virginia</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				TCR </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				11/16/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-150 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-11/22-ICA-150%20md.pdf">
+																					<p>Nicholas A. Ghaphery, D.O., as
+																						Personal Representative of the
+																						Estate of Austin Ghaphery v.
+																						Wheeling Treatment Center, LLC
+																						and John Schultz, M.D.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				TCR </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-56 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-56.pdf">
+																					<p>Brenda G. Blevins v. Community
+																						Hospital Association</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-6 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-6.pdf">
+																					<p>Elmer Hurley v. Chubby's Logging
+																					</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-60 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-60.pdf">
+																					<p>Matthew B. v. Kimberly W.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				FAM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-61 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-61.pdf">
+																					<p>Jennifer Belcher v. West Virginia
+																						Parkways Authority</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-62 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-62.pdf">
+																					<p>Heidi Y. v. Jordan C.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				FAM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-73 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-73.pdf">
+																					<p>Evan C. v. Ali C.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				FAM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-78 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-78.pdf">
+																					<p>Katherine C. v. A.A. Moore C.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				FAM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-8 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-8.pdf">
+																					<p>West Virginia Department of
+																						Health and Human Resources
+																						Bureau for Child Support
+																						Enforcement v. Shawn O.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				FAM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-209 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-209.pdf">
+																					<p>Kevin Davis v. Wayne County Board
+																						of Education</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-133 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-133-revised.pdf">
+																					<p>Nicholas Community Action
+																						Partnership, Inc. v. Maggie
+																						Jarrett</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-113 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-113.pdf">
+																					<p>Jared Smith v. Arcelormittal</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-102 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-102.pdf">
+																					<p>Onnie Watson v. Schenker
+																						Logistics</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-331 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-331.pdf">
+																					<p>John J. Delsignore v. Timberline
+																						Logging Enterprises, LLC</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-322 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-322-corrected.pdf">
+																					<p>Evans Construction Company v.
+																						Anthony Schau</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-197 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-197.pdf">
+																					<p>West Virginia Department of
+																						Transportation Division of
+																						Highways v. Amanda Nicole Justus
+																					</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-195 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-195.pdf">
+																					<p>Clinton T. Drainer v. Division of
+																						Highways</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-175 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-175.pdf">
+																					<p>Mark M. Samaan, M.D. v. West
+																						Virginia Board of Medicine</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-131 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-131_0.pdf">
+																					<p>WorkForce West Virginia v. Sara
+																						Jonese and Pocahontas County
+																						Board of Education</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-125 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-125.pdf">
+																					<p>WorkForce West Virginia v.
+																						Beverly Kirker</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-110 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/22-ICA-110.pdf">
+																					<p>WorkForce West Virginia v.
+																						Christina Gaddy</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				ADM </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-120 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-120.pdf">
+																					<p>Gordon Martin v. Food Lion, Inc.
+																					</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-126 23-ICA-139 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-126-23-ICA-139.pdf">
+																					<p>Glen Trader v. ACNR Resources,
+																						Inc.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-129 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-129.pdf">
+																					<p>Wolf Run Mining, LLC v. Darden
+																						Woodford</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-119 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-119.pdf">
+																					<p>Ryan Marstiller v. Masters of
+																						Disasters, LLC</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-136 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-136.pdf">
+																					<p>Rhino Energy, LLC v. Kenneth Cole
+																					</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-14 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-14.pdf">
+																					<p>Caitlin R. Workman v. ACNR
+																						Resources, Inc.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-152 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-152.pdf">
+																					<p>ROC Service Company, LC v.
+																						Antonio Smith</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-153 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-153.pdf">
+																					<p>Alvin J. Cook, Jr. v. Cecil I.
+																						Walker Machinery Co.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-156 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-156.pdf">
+																					<p>Virginia Smith, Dependent of
+																						Walter F. Smith (Deceased) v.
+																						Pine Ridge and The Insurance
+																						Commissioner of West Virginia in
+																						its capacity as administrator of
+																						The Self-insured Employer
+																						Security Risk Pool</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-161 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-161.pdf">
+																					<p>Stephen Saunders v. ACNR
+																						Resources, Inc.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-163 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-163.pdf">
+																					<p>Blackhawk Mining, LLC v. Joseph
+																						Browning</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-177 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-177.pdf">
+																					<p>Jeanette Wood, Dependent of John
+																						D. Wood (Deceased) v. Pine Ridge
+																						Coal Company, LLC and West
+																						Virginia Offices of the
+																						Insurance Commissioner, in its
+																						capacity as administrator of the
+																						Guaranty Risk Pool</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-186 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-186.pdf">
+																					<p>Quinn Transportation, LLC v.
+																						Daniel T. Park</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-188 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-188.pdf">
+																					<p>Emma Harris, Dependent of Carl
+																						Harris (Deceased) v. Pine Ridge
+																						and The Insurance Commissioner
+																						of West Virginia in its capacity
+																						as administrator of the
+																						Self-Insured Employer Security
+																						Risk Pool</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				09/05/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				23-ICA-197 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-09/23-ICA-197.pdf">
+																					<p>Gayla Adkins v. Brightspring
+																						Healthcare Services</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				04/10/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-40 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-07/22-ICA-40%20md.pdf">
+																					<p>In re: H.A., a protected person
+																					</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				CIV-O </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				04/10/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-317 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-07/22-ICA-317%20md.pdf">
+																					<p>Wiseman Construction Company,
+																						Inc. v. Kevin C. Hodge</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				04/10/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-312 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-07/22-ICA-312%20md.pdf">
+																					<p>Coronado Group, LLC v. Marshal L.
+																						Lytton, Jr.</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				04/10/2023 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-230 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-07/22-ICA-230%20md.pdf">
+																					<p>Samuel J. Cox v. Raleigh County
+																						Board of Education</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																		<tr>
+																			<td headers="view-field-date-table-column"
+																				class="views-field views-field-field-date">
+																				11/15/2022 </td>
+																			<td headers="view-title-table-column"
+																				class="views-field views-field-title">
+																				22-ICA-31 </td>
+																			<td headers="view-field-ica-opinion-case-name-table-column"
+																				class="views-field views-field-field-ica-opinion-case-name">
+																				<a
+																					href="/sites/default/pubfilesmnt/2023-07/22-ICA-31%20md.pdf">
+																					<p>Beckley Appalachian Regional
+																						Healthcare v. Barry Levin</p>
+																				</a>
+																			</td>
+																			<td headers="view-field-case-type-table-column"
+																				class="views-field views-field-field-case-type">
+																				WC </td>
+																			<td headers="view-field-decision-type-table-column"
+																				class="views-field views-field-field-decision-type">
+																				MD </td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+									</section>
+
+								</section>
+							</main>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -11,6 +11,8 @@ class OpinionSite(AbstractSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.expected_content_types = ["application/pdf"]
+
         # Order of attributes is important as it affects the order of parsing.
         # Some methods rely on others having already been run.
         self._opt_attrs = [
@@ -30,6 +32,7 @@ class OpinionSite(AbstractSite):
             "parallel_citations",
             "summaries",
             "case_name_shorts",
+            "child_courts",
         ]
         self._req_attrs = [
             "case_dates",
@@ -106,6 +109,9 @@ class OpinionSite(AbstractSite):
         )
 
     def _get_summaries(self):
+        return None
+
+    def _get_child_courts(self):
         return None
 
     def extract_from_text(self, scraped_text):

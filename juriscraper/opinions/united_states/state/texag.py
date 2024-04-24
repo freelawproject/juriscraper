@@ -15,13 +15,14 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://texasattorneygeneral.gov/opinions"
+        self.expected_content_types = ["application/pdf"]
 
     def _process_html(self):
         cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")
         for case in cases:
             docket = case.xpath(".//h4")[0].text_content().strip()
             summary = case.xpath(".//p")[0].text_content().strip()
-            url = case.xpath(".//h4/a/@href")[0]
+            url = case.xpath(".//a[contains(@href, '.pdf')]/@href")[0]
             name = f"Untitled Texas Attorney General Opinion: {docket}"
             date = case.xpath(
                 ".//div[@class='sidebar-ag-opinion-casedate']/text()"

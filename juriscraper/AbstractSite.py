@@ -15,6 +15,7 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     clean_string,
@@ -33,7 +34,7 @@ class AbstractSite:
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self, cnt=None):
+    def __init__(self, cnt=None, **kwargs):
         super().__init__()
 
         # Computed metadata
@@ -112,6 +113,14 @@ class AbstractSite:
          site scrapers should be removed when no longer necessary.
         """
         self.request["verify"] = False
+
+    def set_custom_adapter(self, cipher: str):
+        """Set Custom SSL/TLS Adapter for out of date court systems
+
+        :param cipher: The court required cipher
+        :return: None
+        """
+        self.request["session"].mount("https://", SSLAdapter(ciphers=cipher))
 
     def test_mode_enabled(self):
         return self.method == "LOCAL"
@@ -394,9 +403,10 @@ class AbstractSite:
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
-                html_tree.rewrite_links(
-                    fix_links_in_lxml_tree, base_href=self.request["url"]
-                )
+                if hasattr(html_tree, "rewrite_links"):
+                    html_tree.rewrite_links(
+                        fix_links_in_lxml_tree, base_href=self.request["url"]
+                    )
                 return html_tree
 
     def _get_html_tree_by_url(self, url, parameters={}):
@@ -407,7 +417,7 @@ class AbstractSite:
         tree.make_links_absolute(url)
         return tree
 
-    def _download_backwards(self):
+    def _download_backwards(self, d):
         # methods for downloading the entire Site
         pass
 

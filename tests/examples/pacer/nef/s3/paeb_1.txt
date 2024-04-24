@@ -1,0 +1,116 @@
+Return-Path: <BKECF_LiveDB@paeb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id gr7j927cksekb3r57t82qqn7n9duk1n7767ho8g1
+ for c@recap.email;
+ Thu, 01 Feb 2024 05:36:06 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=paeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFUVVUWEU0ZTk2K2hpL3F0RXBuNGlPSW5SUGdKRmdHZlNQMmJPeTVmaWZjVVdKWTlDTXBRRENCc29qczhvckV1NXpsVU9qNlpnMWlaV0pybDJBYk1nT3U1RllBS3I2Sk92T1NqYzM2OTZhNThzY2tLa2plM0YrZlNUT2ZJVmFDQi9aU1VoUnhSQTFoTVJqcFpPbWJHSjl0WEY1YUdzcUlVU1dxYXZpa2VrZXhyT0ljSjFEdjg2RjFPeUxUbHFSUGpZdlRBRnVnbGpPVkxYV0ZEelE1R1JuQXBDQ2Q5NXZMcVE0Z0RzZEE3WVdUTUh5ZFlVYUNsOTEzOWNNM3RwTUtOa2V3ejEvZGNDRkp1cFVSSTRBaTFmMU4zUENzSkdmckJjRTlKUCtxUmg0Y0RWbm5iOWM3WERCdjBndG16WG1sbHc9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=qCWaR494cPqH6G7VWrbwbjCnWeFEUog6BmGIS3VWy6lGUaFen2UO3xmubql28IQfKNpVk+e7d6VKuHTPSVnN77+jx8N3l4K2Xf9a4RtsJgMhHBlQPbxtM7dSxB8oOg9MA4zMEghnzaqeslAeBo3FuWxZucYv1eLmBg4fhVocE2Q=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706765767; v=1; bh=/cgupJQnS9lMXPGcmG71IvLQH9pHc4nrz3/NUCuQ7OE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.80
+Received: from paebdb.paeb.gtwy.dcn ([156.119.190.80])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 00:36:06 -0500
+Received: from paebdb.paeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4115ZDu4021851;
+        Thu, 1 Feb 2024 00:35:24 -0500
+Received: (from ecf_web@localhost)
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4115YrRU019823;
+        Thu, 1 Feb 2024 00:34:53 -0500
+Date: Thu, 1 Feb 2024 00:34:53 -0500
+X-Authentication-Warning: paebdb.paeb.gtwy.dcn: ecf_web set sender to BKECF_LiveDB@paeb.uscourts.gov using -f
+MIME-Version:1.0
+From:BKECF_LiveDB@paeb.uscourts.gov
+To:Courtmail@paeb.uscourts.gov
+Message-Id:<31788189@paeb.uscourts.gov>
+Subject:Ch-7 23-13129-amc BNC Certificate of Mailing - Financial Management Course Certificate - FirstName LastName
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Admin entered on 02/01/2024  at 00:34 AM EST and filed on 01/31/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Br Cun</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?510078>23-13129-amc</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.paeb.uscourts.gov/doc1/152032522337?pdf_header=&magic_num=26909320&de_seq_num=47&caseid=510078'>15</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+BNC Certificate of Mailing - Financial Management Course Certificate. Number of Notices Mailed: (related document(s) (Related Doc [13])). No. of Notices: 1. Notice Date 01/31/2024. (Admin.)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Imaged Certificate of Notice
+<BR><STRONG>Original filename:</STRONG>P223131292110042.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1008166204 [Date=2/1/2024] [FileNumber=31788077-0] [a2c0fc1682ead43f8689775d728ce63f2576f2f20aab77085a0c40952e821c6f266d3d3a65357d4a9d7addee8f09035d5bf17001fe3b7da85dbcfa2d95a65e59]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-13129-amc Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">MICHAEL A. CIBIK on behalf of Debtor Brittany  Cunningham</span>
+<br>example@domain.com,  example@domain.com;c@recap.email;example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">CHRISTINE C. SHUBERT</span>
+<br>example@domain.com,  example@domain.com
+<BR>
+<BR><span class="personName">  United States Trustee</span>
+<br>USTPRegion03.PH.ECF@usdoj.gov
+<BR>
+
+<BR>
+<B>
+23-13129-amc Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

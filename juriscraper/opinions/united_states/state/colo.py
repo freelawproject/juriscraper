@@ -4,17 +4,16 @@ Court Short Name: Colo.
 Author: Philip Ardery
 Reviewer: mlr
 Date created: 2016-06-03
-Contact: Email "Internet and Technology" staff listed at http://www.cobar.org/staff
-         they usually fix issues without responding to the emails directly. You can
-         also try submitting the form here: http://www.cobar.org/contact
 History:
     - 2022-01-31: Updated by William E. Palin
     - 2023-01-05: Updated by WEP
     - 2023-11-19: Drop Selenium by WEP
+    - 2023-12-20: Updated with citations, judges and summaries, Palin
 """
 import datetime
 import re
 from datetime import date, timedelta
+from typing import Any, Dict
 
 from dateutil import parser
 
@@ -25,68 +24,96 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.six_months_ago = date.today() - timedelta(180)
         self.status = "Published"
-        self.url = f"https://www.courts.state.co.us/Courts/Supreme_Court/Proceedings/Index.cfm"
-
-    def match_regex(self, str):
-        """Match date regex patterns
-
-        :param str: Date Str
-        :return: Date object or none
-        """
-        date_match = re.search(
-            r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}\b|\b\d{1,2}/\d{1,2}/\d{2,4}\b",
-            str,
-        )
-        if date_match:
-            return parser.parse(date_match.group(0)).date()
-        return None
-
-    def extract_dates(self, row, partial_date):
-        """Extract out one of the many date patterns
-
-        :param row: Row to process
-        :param partial_date: Partial date string
-        :return: Date object and approximate boolean
-        """
-        raw_dates = row.xpath(
-            "following-sibling::div/p/a/following-sibling::text()"
-        )
-        raw_date_str = " ".join(raw_dates)
-        date = self.match_regex(raw_date_str)
-        if date:
-            return date, False
-        raw_date_str = row.xpath("following-sibling::div/p/a/text()")[0]
-        date = self.match_regex(raw_date_str)
-        if date:
-            return date, False
-        date_object = datetime.datetime.strptime(partial_date, "%b %Y").date()
-        return date_object, True
+        self.url = "https://www.courts.state.co.us/Courts/Supreme_Court/Proceedings/Index.cfm"
 
     def _process_html(self):
-        for row in self.html.xpath("//div[@id='Dispositions']/*"):
-            if row.tag == "a":
-                docket, name = (
-                    row.xpath("following-sibling::text()")[0]
-                    .strip()
-                    .split(" ", 1)
-                )
-                if "\xa0\xa0" not in name:
-                    continue
-                name, partial_date = name.split("\xa0\xa0")
-                url = row.xpath("following-sibling::div/p/a/@href")[-1]
-                date, date_filed_is_approximate = self.extract_dates(
-                    row, partial_date
-                )
-                if date < self.six_months_ago:
-                    continue
-                self.cases.append(
-                    {
-                        "date": str(date),
-                        "name": name,
-                        "docket": docket,
-                        "url": url,
-                        "date_filed_is_approximate": date_filed_is_approximate,
-                    }
-                )
+        """"""
+        for row in self.html.xpath("//div[@id='Dispositions']/a"):
+            case_id = row.attrib["onclick"].split("'")[1]
+            div = row.xpath(f"//div[@id='Case_{case_id}']")[0]
+            if not div.xpath(".//a/text()"):
+                # This is set to avoid data decades back
+                continue
+            document_type = div.xpath(".//a/text()")[0]
+            if "Opinion" not in document_type:
+                # Only collect opinions and not orders
+                continue
+            summary = (
+                row.xpath(f"//div[@id='Case_{case_id}']")[0]
+                .text_content()
+                .strip()
+            )
+            url = div.xpath(".//a/@href")[0]
+            title = row.xpath("following-sibling::text()")[0].strip()
+            docket, name = title.split(" ", 1)
+            name, _ = name.split("  ")
+            if "(Honorable" in name:
+                name, judge = name.split("(")
+                name = name.strip()
+                judges = judge.strip(")").strip().replace("Honorable", "")
+            else:
+                judges = ""
+            date_filed = self.find_date(summary)
+            if parser.parse(date_filed).date() < self.set_min_date():
+                # Only collect back 6 months
+                break
+            if "https://www.courts.state.co.us/" not in url:
+                url = f"https://www.courts.state.co.us/{url}"
+            self.cases.append(
+                {
+                    "summary": summary,
+                    "date": date_filed,
+                    "name": name,
+                    "docket": docket.strip(","),
+                    "url": url,
+                    "judge": judges,
+                }
+            )
+
+    def set_min_date(self):
+        """Set minimum date to add opinions
+
+        :return: Date 6 months back
+        """
+        if self.test_mode_enabled():
+            today = datetime.date(2023, 11, 19)
+            return today - timedelta(180)
+        else:
+            return date.today() - timedelta(180)
+
+    def find_date(self, summary) -> str:
+        """Find date filed
+
+        Normally it follows a typical pattern but not always
+
+        :param summary: Use summary text to find date filed
+        :return: date as string
+        """
+        if "Opinion issued" in summary:
+            return summary.split("Opinion issued")[1]
+        date_pattern = re.compile(
+            r"((January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})\s?,?\s+(\d{4}))"
+        )
+        match = re.findall(date_pattern, summary)
+        date_filed = match[-1][0] if match else ""
+        return date_filed
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Extract Citation from text
+
+        :param scraped_text: Text of scraped content
+        :return: date filed
+        """
+        m = re.findall(r"(20\d{2})\s(CO)\s(\d+A?)", scraped_text)
+        if m:
+            vol, reporter, page = m[0]
+            return {
+                "Citation": {
+                    "volume": vol,
+                    "reporter": reporter,
+                    "page": page,
+                    "type": 8,  # NEUTRAL in courtlistener Citation model
+                },
+            }
+        return {}

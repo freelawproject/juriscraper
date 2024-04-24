@@ -11,6 +11,8 @@ class OralArgumentSite(AbstractSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.expected_content_types = ["audio/mpeg"]
+
         self._opt_attrs = [
             "docket_numbers",
             "judges",

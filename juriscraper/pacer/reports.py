@@ -380,3 +380,17 @@ class BaseReport:
         )
         sealed = "You do not have permission to view this document."
         return sealed in r.content
+
+    def is_entry_sealed(
+        self,
+        pacer_case_id: str,
+        pacer_doc_id: str,
+        pacer_magic_num: Optional[str] = None,
+    ):
+        """Check if a docket entry is sealed without trying to actually download
+        it.
+        """
+        r, url = self._query_pdf_download(
+            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
+        )
+        return b"could not retrieve dktentry for dlsid" in r.content

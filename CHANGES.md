@@ -12,9 +12,229 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
- - N/A
+- N/A
 
 ## Current
+
+**2.6.0 - 2024-04-03**
+
+Features:
+
+- Added scrapers for fisa and fiscr courts
+
+Changes:
+
+- Breaking change has been made to the FreeOpinionReport its 'data' property now
+ returns a dictionary containing the FreeOpinionRow fields, instead of returning
+ a Python object with their properties. This change aligns the method of
+ returning 'data' in this report with that of other reports.
+- Fixes to texag, tex
+
+## Past
+
+**2.5.95 - 2024-02-14**
+
+Features:
+
+- The GET method of the PacerSession class now supports custom timeouts for flexible request management.
+- Adds a method to check if a district court docket entry is sealed..
+
+Changes:
+
+- Update the DownloadConfirmationPage class to reduce the read timeout of the GET request within the query method.
+
+**2.5.94 - 2024-02-13**
+
+Features:
+
+Changes:
+
+- Update minnag
+- Update alaska/app
+
+**2.5.93 - 2024-02-09**
+
+Features:
+
+Changes:
+
+- Update fladistctapp
+
+**2.5.92 - 2024-02-09**
+
+Features:
+
+Changes:
+
+- Update Nev/NevApp scrapers
+
+**2.5.91 - 2024-02-09**
+
+Features:
+
+- Add expected_content_types to OpinionSite and OralArgSite
+
+Changes:
+
+- Fixes for pacer.email, pacer.utils
+
+**2.5.90 - 2024-02-01**
+
+Features:
+
+Changes:
+
+- Fix Colo Ct App
+
+**2.5.89 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Armed Forces Scraper
+
+**2.5.88 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Guam
+- Fix Fla Dist Court
+
+**2.5.87 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix PA Superior Court
+
+**2.5.86 - 2024-01-31**
+
+Features:
+
+Changes:
+
+- Fix Maryland Supreme and lower courts
+
+**2.5.85 - 2024-01-30**
+
+Features:
+
+Changes:
+
+- Fix Connecticut and Connecticut Court of Appeals
+
+**2.5.84 - 2024-01-26**
+
+Features:
+
+Changes:
+
+- Update Nevada/Nev App (again)
+
+**2.5.83 - 2024-01-25**
+
+Features:
+
+Changes:
+
+- Fix Hawaii App
+- Nevada/Nev App
+- VI Superior
+- Cal AG
+- LA Ct APP
+- Updates the SSL Adapter
+- Various RECAP Pacer Fixes
+
+**2.5.82 - 2024-01-12**
+
+Features:
+
+Changes:
+
+- Fix CADC
+
+**2.5.81 - 2024-01-12**
+
+Features:
+
+Changes:
+
+- Fix colo / Nytrial courts
+
+**2.5.80 - 2024-01-10**
+
+Features:
+
+Changes:
+
+- Fix compatibility with newer lxml
+- Replace lxml sanitier with nh3
+
+**2.5.78 - 2024-01-08**
+
+Features:
+
+- Add ten new NY Trial Courts
+- Add Maine Superior Court
+
+Changes:
+
+- Add child_courts attribute
+- Fix VI chore
+- Update python dep.
+
+**2.5.76 - 2023-12-28**
+
+Features:
+
+- Add Bankruptcy Appellate Panel 1st Circuit
+
+Changes:
+
+**2.5.75 - 2023-12-28**
+
+Features:
+
+-
+
+Changes:
+
+- Fix BAP1 and update test for it
+
+**2.5.74 - 2023-12-13**
+
+Features:
+
+- Add NevApp
+
+Changes:
+
+- Fix Nevada Supreme and Colorado Ct App
+
+
+**2.5.72 - 2023-12-12**
+
+Features:
+
+- Add VI Superior Court scraper
+
+Changes:
+
+- Fix CA2 Oral Arguments Scraper
+
+**2.5.71 - 2023-12-11**
+
+Features:
+
+-
+
+Changes:
+
+- Fix avoid populating case's date_filed with the entry date_filed from emails
 
 **2.5.70 - 2023-11-21**
 
@@ -25,8 +245,6 @@ Features:
 Changes:
 
 - Fix LA Supreme
-
-## Past
 
 **2.5.69 - 2023-11-21**
 

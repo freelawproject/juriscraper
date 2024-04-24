@@ -58,7 +58,19 @@ def scrape_court(site, binaries=False):
                             f"{cookie_dict['name']}={cookie_dict['value']}",
                         )
                     )
-                data = opener.open(download_url).read()
+                r = opener.open(download_url)
+                expected_content_types = site.expected_content_types
+                response_type = r.headers.get("Content-Type", "").lower()
+                # test for expected content type response
+                if (
+                    expected_content_types
+                    and response_type not in expected_content_types
+                ):
+                    exceptions["DownloadingError"].append(download_url)
+                    v_print(3, f"DownloadingError: {download_url}")
+                    v_print(3, traceback.format_exc())
+                data = r.read()
+
                 # test for empty files (thank you CA1)
                 if len(data) == 0:
                     exceptions["EmptyFileError"].append(download_url)
@@ -162,6 +174,16 @@ def main():
         help="Download the historical corpus using the _download_backwards method.",
     )
     parser.add_option(
+        "--backscrape-start",
+        dest="backscrape_start",
+        help="Starting value for backscraper iterable creation",
+    )
+    parser.add_option(
+        "--backscrape-end",
+        dest="backscrape_end",
+        help="End value for backscraper iterable creation",
+    )
+    parser.add_option(
         "-r",
         "--report",
         action="store_true",
@@ -175,6 +197,8 @@ def main():
     binaries = options.binaries
     court_id = options.court_id
     backscrape = options.backscrape
+    backscrape_start = options.backscrape_start
+    backscrape_end = options.backscrape_end
     generate_report = options.report
 
     # Set up the print function
@@ -220,7 +244,11 @@ def main():
             try:
                 if backscrape:
                     for site in site_yielder(
-                        mod.Site().back_scrape_iterable, mod
+                        mod.Site(
+                            backscrape_start=backscrape_start,
+                            backscrape_end=backscrape_end,
+                        ).back_scrape_iterable,
+                        mod,
                     ):
                         site.parse()
                         scrape_court(site, binaries)

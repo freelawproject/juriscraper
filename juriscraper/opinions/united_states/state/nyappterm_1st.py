@@ -16,6 +16,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
         self._set_parameters()
+        self.expected_content_types = ["application/pdf", "text/html"]
 
     def _set_parameters(self) -> None:
         """Set the parameters for the POST request."""
