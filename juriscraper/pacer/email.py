@@ -542,7 +542,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["njb", "dcb", "vaeb", "paeb"]:
+        elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb"]:
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
             # Out: Determination of Adjournment Request
             short_description = subject.split(docket_number)[-1]
@@ -565,10 +565,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb"]:
+        elif self.court_id in ["pawb", "ndb", "deb"]:
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
-            short_description = subject.split(case_name)[-1]
+            if case_name in subject:
+                # See deb_2.txt for need of this check
+                short_description = subject.split(case_name)[-1]
         else:
             logger.error(
                 "Short description has no parsing for bankruptcy court '%s'",
