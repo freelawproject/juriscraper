@@ -1,0 +1,156 @@
+Return-Path: <live_ecf@vaeb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id c62lqqr8ig237droah1jtjatnheupihtmfs6ml81
+ for jkrumbein@recap.email;
+ Wed, 14 Feb 2024 20:08:58 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of vaeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=live_ecf@vaeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of vaeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=live_ecf@vaeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=vaeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFZ3lta1djUWVDSUl3ZklOcGM2MG5pZ2kvRDRPby8vRi9PSTR1alNWd3czOVg2NEtKbkNINFpHVWVsUXZmNEwwWEgyN0JMWVFSQ1pJZzFkcVo5RUMyRnI0SVhuMWQzTFZlcDc0amdBdEloTm5aVUZmVWFwd2xvSWVZT0lwTGFPSFhPVTdBenRuRDdrSzc1OHpaeDZaWnBtWGdFcE9sY2hPQ1RvOWtLWEJwVFovZ1QyZWJYMUl2SFlYUXh0OU42MzI4N080bGp1Q0RudXcwcFlobFdOdEtaZGt6V1RhMTZXbHlKTWxnRGpMSlQrT0tqUFZNYXFwcHBGeVY1QTFkWFpaV0lSdzlrOFNKNG1Ed29hVWRTK2JCeUJMWmZ2TU8zQ1U5TGVNS2RUdzlGNVE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=pxZ5jrjRJBA7AcipwZpFw1HmdS8MvGM3hE817qlu9b9pS9mZo0aorjbUIuAu4EF2rFmzl3w8Jz9M666+A6lf/d4GfrBVtdgsLqjaX9RLZAVLbKOzE2ENkbhN4nmCP7E8plctIEC6EM6VE4een6ao2kDgYBubDrGe9OltZdht2JQ=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1707941339; v=1; bh=oLoyiF0PtCvgI58/qFW5M47NjW/yaTj4Hj4cIHaB8zU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.40
+Received: from vaebdb.vaeb.gtwy.dcn ([156.119.191.40])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 14 Feb 2024 15:08:58 -0500
+Received: from vaebdb.vaeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by vaebdb.vaeb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 41EK8ojf043104;
+	Wed, 14 Feb 2024 15:08:51 -0500
+Received: (from ecf_web@localhost)
+	by vaebdb.vaeb.gtwy.dcn (8.14.4/8.14.4/Submit) id 41EK8hbO042922;
+	Wed, 14 Feb 2024 15:08:43 -0500
+Date: Wed, 14 Feb 2024 15:08:43 -0500
+X-Authentication-Warning: vaebdb.vaeb.gtwy.dcn: ecf_web set sender to live_ecf@vaeb.uscourts.gov using -f
+MIME-Version:1.0
+From:live_ecf@vaeb.uscourts.gov
+To:Courtmail@vaeb.uscourts.gov
+Message-Id:<40613316@vaeb.uscourts.gov>
+Subject:24-03003-KLP Denice Boley Brown 19-36611-KLP Ch 7  Complaint
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Virginia</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Jason Meyer Krumbein entered on 2/14/2024 at 3:08 PM EST and filed on 2/14/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Brown v. Navient Private Loan Trust et al                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.vaeb.uscourts.gov/cgi-bin/DktRpt.pl?760059>24-03003-KLP</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.vaeb.uscourts.gov/doc1/188041027679?pdf_header=&magic_num=94615080&de_seq_num=3&caseid=760059'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Patricia Denice Boley Brown                       </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.vaeb.uscourts.gov/cgi-bin/DktRpt.pl?717142>19-36611-KLP</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 04/27/2020</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.vaeb.uscourts.gov/doc1/188041027681?pdf_header=&magic_num=86193886&de_seq_num=49&caseid=717142'>18</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-03003. Complaint against    Navient Private Loan Trust,   National Collegiate Student Loan Trust 2004-2,   National Collegiate Student Loan Trust 2005-3,   National Collegiate Student Loan Trust 2006-3  (Fee Amount of $350 is Exempt )   filed by   Patricia  Brown.   (Attachments: # (1) Adversary Proceeding Cover Sheet) Nature of Suit: (63 (Dischargeability - 523(a)(8), student loan)), (91 (Declaratory judgment)) Associated Bankruptcy Case Number: 3:19-bk-36611 (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>01-0-Adversary Complaint - Private Loans.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP VAEBStamp_ID=875559604 [Date=2/14/2024] [FileNumber=40613311-0]
+<BR><TAB> [013971a1d2836b52bebd8126bf291bdc5a36180e6433861a781cdd2f450b25343ba3
+<BR><TAB>b75db038f93451b54bd3d50bd379e51368682b563cbdad06e8ca71d5b604]]
+<BR>
+<STRONG>Document description:</STRONG>Adversary Proceeding Cover Sheet 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\01-1-AP Cover complete.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP VAEBStamp_ID=875559604 [Date=2/14/2024] [FileNumber=40613311-1]
+<BR><TAB> [15af2c854141ed6c1a51b115b4867ba46214736fc81d15bc391f396f184bc1ee6b0f
+<BR><TAB>907d9ed890011a75c20ac19ce39b9874070b3a243dd32294c46edb694fdf]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>01-0-Adversary Complaint - Private Loans.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP VAEBStamp_ID=875559604 [Date=2/14/2024] [FileNumber=40613312-0]
+<BR><TAB> [af705fcc05e891867a99c2ac61c23c6425c2c5bde7957a32a074e66f23c14b16fec0
+<BR><TAB>e8172ad7945ea7c08c7c62a7b25f7e41801aae7d368eac16f8a274ae124e]]
+<BR>
+<STRONG>Document description:</STRONG>Adversary Proceeding Cover Sheet 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\01-1-AP Cover complete.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP VAEBStamp_ID=875559604 [Date=2/14/2024] [FileNumber=40613312-1]
+<BR><TAB> [b7443a0afaefc6544cfbbe3b7d61e99e41b6581ba0844259e63c39e2511f2761228b
+<BR><TAB>601159a2116e6932d05e0d038df45331bac32913166769b79dfc479e6cd0]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-03003-KLP Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff FirstName LastName</span>
+<br>xx@zz.com,  xx@yahoo.com;yy@zz.com;user@recap.email
+<BR>
+
+<BR>
+<B>
+24-03003-KLP Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  National Collegiate Student Loan Trust 2004-2</span>
+<BR>c/o Wilmington Trust Company Reg Agnt
+<BR>2222 N Market Avenue
+<BR>Wilmington, DE 111111
+
+
+<BR><B>
+19-36611-KLP Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName</span>
+<br>USTPRegion04.RH.ECF@usdoj.gov
+<BR>
+
+<BR>
+<B>
+19-36611-KLP Notice will not be electronically mailed to:
+</B>

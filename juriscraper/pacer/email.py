@@ -513,76 +513,83 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         This function supports parsing the short description for courts with
         known examples.
 
+        Most NEFs have a single docket, so the loop will be ran once
+        However, the filtering is important when dealing with multi docket NEFs
+        (have only seen NEFs with 2 dockets), because the short_description
+        parsing may produce false positives when splitting
+
+        Multi docket NEFs examples: paeb_3.txt, vaeb_2.txt, njb_3.txt,
+        ndb_2.txt, mdb_4.txt
+
         :param subject: The email subject string.
         :return: The parsed short description.
         """
-        if len(self.docket_numbers) > 1:
-            # We haven't implemented short_description parsing for bankruptcy multi docket NEF.
-            # See paeb_3.txt for a test of multi docket NEF
-            logger.error(
-                "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
-                self.court_id,
-                extra={
-                    "fingerprint": [
-                        f"{self.court_id}-not-parsing-multi-docket-short-description"
-                    ]
-                },
-            )
-            return ""
+        candidates = []
+        for docket_number, case_name in zip(
+            self.docket_numbers, self.case_names
+        ):
+            short_description = ""
 
-        short_description = ""
-        docket_number = self.docket_numbers[0]
-        case_name = self.case_names[0]
+            if self.court_id in ["cacb", "ctb", "cob", "ianb"]:
+                # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
+                # Out: Request for courtesy Notice of Electronic Filing (NEF)
+                short_description = subject.split(docket_number)[-1]
 
-        if self.court_id in ["cacb", "ctb", "cob", "ianb"]:
-            # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
-            # Out: Request for courtesy Notice of Electronic Filing (NEF)
-            short_description = subject.split(docket_number)[-1]
+                # Remove docket number traces "-AAA"
+                regex = r"^-.*?\s"
+                short_description = re.sub(regex, "", short_description)
+            elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb"]:
+                # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
+                # Out: Determination of Adjournment Request
+                short_description = subject.split(docket_number)[-1]
+                # Remove docket number traces "-AAA"
+                # Remove CH after docket and BK after short description for dcb
+                regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
+                short_description = re.sub(regex, "", short_description)
+                short_description = short_description.rsplit("-", 1)[0]
+            elif self.court_id == "nysb":
+                # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
+                # Out: Affidavit
+                if case_name not in subject:
+                    continue
 
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb"]:
-            # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
-            # Out: Determination of Adjournment Request
-            short_description = subject.split(docket_number)[-1]
-            # Remove docket number traces "-AAA"
-            # Remove CH after docket and BK after short description for dcb
-            regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
-            short_description = re.sub(regex, "", short_description)
-            short_description = short_description.rsplit("-", 1)[0]
-        elif self.court_id == "nysb":
-            # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
-            # Out: Affidavit
-            short_description = subject.split(case_name)[0]
-            short_description = short_description.replace("Re:", "")
-            short_description = short_description.split(docket_number)[-1]
+                short_description = subject.split(case_name)[0]
+                short_description = short_description.replace("Re:", "")
+                short_description = short_description.split(docket_number)[-1]
 
-            # Remove strings starting with "Ch" followed by a number
-            regex = r"\bCh\d+\b"
-            short_description = re.sub(regex, "", short_description)
+                # Remove strings starting with "Ch" followed by a number
+                regex = r"\bCh\d+\b"
+                short_description = re.sub(regex, "", short_description)
 
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb", "deb"]:
-            # In: Ch-7 22-20823-GLT U LOCK INC Reply
-            # Out: Reply
-            if case_name in subject:
-                # See deb_2.txt for need of this check
+                # Remove docket number traces "-AAA"
+                regex = r"^-.*?\s"
+                short_description = re.sub(regex, "", short_description)
+            elif self.court_id in ["pawb", "ndb", "deb"]:
+                # In: Ch-7 22-20823-GLT U LOCK INC Reply
+                # Out: Reply
+                if case_name not in subject:
+                    continue
                 short_description = subject.split(case_name)[-1]
-        else:
-            logger.error(
-                "Short description has no parsing for bankruptcy court '%s'",
-                self.court_id,
-                extra={
-                    "fingerprint": [
-                        f"{self.court_id}-not-parsing-short-description"
-                    ]
-                },
-            )
+            else:
+                logger.error(
+                    "Short description has no parsing for bankruptcy court '%s'",
+                    self.court_id,
+                    extra={
+                        "fingerprint": [
+                            f"{self.court_id}-not-parsing-short-description"
+                        ]
+                    },
+                )
+                break
 
-        return short_description
+            candidates.append(short_description)
+
+        if len(candidates) == 1:
+            return candidates[0]
+
+        # Keep the shortest description that is not the empty string
+        filtered = sorted(filter(lambda x: x, candidates), key=len)
+        return filtered[0] if filtered else ""
 
     def _parse_appellate_short_description(self, subject: str) -> str:
         """Parse the short description of an appellate entry from the subject

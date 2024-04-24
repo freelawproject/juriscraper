@@ -1,0 +1,196 @@
+Return-Path: <ecf@ndb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ujd13be89spc73pdu7p7l5pej1sshtcmj1rebmo1
+ for verstandiglaw@recap.email;
+ Fri, 16 Feb 2024 16:02:58 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ndb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf@ndb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ndb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf@ndb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ndb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHK2l3MUUyZzNuaVJKSXFNRit4UlFJRXFhZTFHK20yY1drMkRhTXBLclBPYkgxZXhoNGhZbU9YM1NsNW9sRkJ1c2N4YnpTUkIzeGlsOVl6UUZXTHZXdCtGbDNWN0MzR3B2cGlJVTRubk9hemFhN3RZQWFWdWNaTkw4Tjcrc2NiQXRsK3ZDSnhzYVFXRUtER3lReXA0NFVMVTV2L09nVXZMMW5LdGR2YlQ2VmhKVVYzcEJIVEV3TXN0Rk9sL0srK2ZuMDRCQmVWbGhIN2FWc1VEZld0U0d3RHd4WE94cFJDdm5aQlAxZExzdmhhclF1bVR3cTB0QklzaEUxMU5vb1dZNlN3SUlxd1JIbnlZM1A1aUlzWGU4ZkxBejhmcUk5bnBzVGwveEY3ckZzOUE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=NVzXWy3iViKbjLOLb7sKV2/1CtQJq/fk62EEKthFwuoMWSN2t9AYEUSEYZAeynS0ReTkuTA8iIhRd+iO8tXo860kQ3j5bba1KxkbkiAhG7sy1tyz2FsP/zVRidpb740DAQLgl6XV/DHU5phrH9jTnCNQ9d2Ub/SMq43UEP9SsCk=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1708099379; v=1; bh=AaYsimbgtERySf5RNUdP9eOBfN2GsHm1T4+QAE/JC8M=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.193.242
+Received: from ndbdb-rep.ndb.gtwy.dcn ([156.119.193.242])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 16 Feb 2024 11:02:58 -0500
+Received: from ndbdb-rep.ndb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ndbdb-rep.ndb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 41GG2CmI070867;
+	Fri, 16 Feb 2024 10:02:13 -0600
+Received: (from ecf_web@localhost)
+	by ndbdb-rep.ndb.gtwy.dcn (8.14.7/8.14.4/Submit) id 41GG235g070766;
+	Fri, 16 Feb 2024 10:02:03 -0600
+Date: Fri, 16 Feb 2024 10:02:03 -0600
+X-Authentication-Warning: ndbdb-rep.ndb.gtwy.dcn: ecf_web set sender to ecf@ndb.uscourts.gov using -f
+MIME-Version:1.0
+From:ecf@ndb.uscourts.gov
+To:nate_olson@ndb.uscourts.gov
+Message-Id:<1606045@ndb.uscourts.gov>
+Subject:23-07017 23-30352 Drain Services Inc. Close Adversary Case
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of North Dakota</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from vck, Court entered on 2/16/2024 at 10:02 AM CST and filed on 2/16/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Drain Services Inc. v. Houdyshell et al                                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ndb.uscourts.gov/cgi-bin/DktRpt.pl?45339>23-07017</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 02/16/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Drain Services Inc.                               </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ndb.uscourts.gov/cgi-bin/DktRpt.pl?45216>23-30352</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case 3:23-ap-7017 Closed. (Plaintiff's Motion for Summary Judgment [Doc 4] is MOOT. Adversary Case Dismissed pursuant to Fed. R. Bankr. P. 7041).     (vck, Court)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-07017 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Maurice  VerStandig on behalf of Plaintiff   Drain Services Inc.</span>
+<br>mac@mbvesq.com,  mac@dakotabankruptcy.com;verstandig.mauricer104982@notify.bestcase.com;verstandiglaw@recap.email
+<BR>
+
+<BR>
+<B>
+23-07017 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Michael  Houdyshell</span>
+<BR>South Dakota Department of Revenue
+<BR>445 E Capitol Avenue 
+<BR>Pierre, SD 57501
+<BR>
+<BR><span class="personName">  The State of South Dakota</span>
+<BR>c/o Kristi Noem, Governor
+<BR>500 East Capitol Avenue 
+<BR>Pierre, SD 57501
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
+
+
+
+
+<BR><B>
+23-30352 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">John William Baker on behalf of Creditor John W. Baker, Atty  U.S. Small Business Administration</span>
+<br>john.baker@sba.gov
+<BR>
+<BR><span class="personName">Michael  Gust on behalf of Creditor   Meckler Marketing Consulting, LLC</span>
+<br>mlgfilings@andersonbottrell.com,  jernst@abstlaw.net
+<BR>
+<BR><span class="personName">Thomas  Kapusta</span>
+<br>tkapusta@aol.com
+<BR>
+<BR><span class="personName">Thomas  Kapusta on behalf of Trustee Thomas  Kapusta</span>
+<br>tkapusta@aol.com
+<BR>
+<BR><span class="personName">Tracy A. Kennedy on behalf of Creditor   Choice Financial Group</span>
+<br>tracykennedy@northdakotalaw.net,  brendadipersio@northdakotalaw.net
+<BR>
+<BR><span class="personName">Robert B. Raschke</span>
+<br>USTPRegion12.SX.ECF@usdoj.gov
+<BR>
+<BR><span class="personName">Kent  Rockstad on behalf of Creditor   USA/IRS</span>
+<br>Kent.Rockstad@usdoj.gov,  Margo.Kern@usdoj.gov;Amber.Ripplinger@usdoj.gov;usand.bankruptcyeast@usdoj.gov;CaseView.ECF@usdoj.gov
+<BR>
+<BR><span class="personName">Kent  Rockstad on behalf of Creditor   USA/SBA</span>
+<br>Kent.Rockstad@usdoj.gov,  Margo.Kern@usdoj.gov;Amber.Ripplinger@usdoj.gov;usand.bankruptcyeast@usdoj.gov;CaseView.ECF@usdoj.gov
+<BR>
+<BR><span class="personName">Kent  Rockstad on behalf of Creditor   USA/SBA/IRS</span>
+<br>Kent.Rockstad@usdoj.gov,  Margo.Kern@usdoj.gov;Amber.Ripplinger@usdoj.gov;usand.bankruptcyeast@usdoj.gov;CaseView.ECF@usdoj.gov
+<BR>
+<BR><span class="personName">John D. Schroeder on behalf of Creditor   Choice Financial Group</span>
+<br>jschroeder@northdakotalaw.net,  karensyrstad@northdakotalaw.net
+<BR>
+<BR><span class="personName">Caren W. Stanley on behalf of Creditor Tony  Hamilton</span>
+<br>cstanley@vogellaw.com,  jnona@vogellaw.com;sthompson@vogellaw.com;kjohnson@vogellaw.com
+<BR>
+<BR><span class="personName">Maurice  VerStandig on behalf of Debtor   Drain Services Inc.</span>
+<br>mac@mbvesq.com,  mac@dakotabankruptcy.com;verstandig.mauricer104982@notify.bestcase.com;verstandiglaw@recap.email
+<BR>
+<BR><span class="personName">Maurice  VerStandig on behalf of Plaintiff   Drain Services Inc.</span>
+<br>mac@mbvesq.com,  mac@dakotabankruptcy.com;verstandig.mauricer104982@notify.bestcase.com;verstandiglaw@recap.email
+<BR>
+<BR><span class="personName">Sarah J. Wencil on behalf of U.S. Trustee Robert B. Raschke</span>
+<br>sarah.j.wencil@usdoj.gov
+<BR>
+
+<BR>
+<B>
+23-30352 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
