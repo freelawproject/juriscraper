@@ -11,7 +11,3 @@ class Site(cal.Site):
         self.court_id = self.__module__
         self.court_code = "A"
         self.division = "1st App. Dist."
-        self.url = self.build_url()
-
-    def _get_divisions(self):
-        return [self.division] * len(self.case_names)
