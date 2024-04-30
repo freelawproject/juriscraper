@@ -1,0 +1,109 @@
+Return-Path: <BKECF_LiveDB@nyeb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ohnvclip2ql2om1u95hd1l2dfme2vb1jdcgr5301
+ for user@recap.email;
+ Tue, 23 Apr 2024 19:00:01 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nyeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=BKECF_LiveDB@nyeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nyeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=BKECF_LiveDB@nyeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=nyeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGWkpBNFhHRE0zcVV3bFB0RXMxdzRPVCtrSDR3SXIyU3ptZlNMcWtibkNLMGtWdGZhdThpZ2FFeEJMdERJVC9CdENCRGQrWHNlS09tWjBwSEZoUEgxZkRJT0V4aHlEWEMwd0h5alJybWk0QkxROGJzL2FReVFCbHJPMExNZkVBZkxqbnNUWUY3M2E1ZWtvY2VyQ3JZay8xVnNSaVJyd0N4aGFhYTQ5a20wZnlHZ1dkRXZaKzNlVHNsOUdaWG00S2s4VGFXbWU4Q3hrbU05cmRyRmYzV1Y3dWJRTzZEVFBvck5YRm5JbXlEYXRoczl4NCtLNXNxeWQ1bUxHMjZkYWZ5WXpnOXNvQ3V1TWNRMmx4R1o0WFp1Y0c4RzYvMTJrQU15U2kxN3ZIVlp0MU9MVEZsQWZIei9wVDlpOW9WVHhnM0E9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=fNyP2duitQzTAIXMhEZQptaUZkdRFMF9obUAcN5CruMhzXEnziBB73bkT2TM70LywwfmuEvjfjQQssmfTgBAa8c2iyylfxDl9VpjQgMMrBRQQcuqxwtGzllLLYMcQWRZJx4ub4ijKkGefxiPNb2wMOfpAGPwbBVUu/HMeiJYltw=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713898802; v=1; bh=K94Vr+ssv9gcJX0A76jSbxvhS4v6i281MjQthFGX4JQ=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.219
+Received: from nyebdb.nyeb.gtwy.dcn ([156.119.191.219])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 23 Apr 2024 15:00:00 -0400
+Received: from nyebdb.nyeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nyebdb.nyeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43NIxGNZ095084;
+	Tue, 23 Apr 2024 14:59:16 -0400
+Received: (from ecf_web@localhost)
+	by nyebdb.nyeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43NIwwuF093495;
+	Tue, 23 Apr 2024 14:58:58 -0400
+Date: Tue, 23 Apr 2024 14:58:58 -0400
+MIME-Version:1.0
+From:BKECF_LiveDB@nyeb.uscourts.gov
+To:noreply@ao.uscourts.gov
+Message-Id:<26486878@nyeb.uscourts.gov>
+Subject:1-23-01071-nhl Hearing Settled/Withdrawn/Marked Off Without Hearing (Case Owned BK)
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of New York</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from agh entered on 04/23/2024  at 2:58 PM  EDT and filed on 04/23/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>L. v. Rivera                                            </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nyeb.uscourts.gov/cgi-bin/DktRpt.pl?509127>1-23-01071-nhl</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Marked Off; Entered correctly in the main case. (related document(s): [15] Motion for Relief From Stay filed by Rutledge Apartments LLC) (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1-23-01071-nhl Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Rutledge Apartments LLC</span>
+<br>xx@HWRPC.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff K.  L.</span>
+<br>xx@domain.com,  user@recap.email
+<BR>
+
+<BR>
+<B>
+1-23-01071-nhl Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName</span>
+<BR>88-11 Address Blvd, Apt. 22
+<BR>Town, NY 11111
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
