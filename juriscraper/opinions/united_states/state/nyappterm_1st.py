@@ -44,8 +44,8 @@ class Site(OpinionSiteLinear):
         self.method = "POST"
 
         if not end_date:
-            start_date = date.today()
-            end_date = start_date - timedelta(days=30)
+            end_date = date.today()
+            start_date = end_date - timedelta(days=30)
 
         self.parameters = {
             "rbOpinionMotion": "opinion",
