@@ -32,14 +32,14 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         for row in self.html.xpath(".//article"):
             name = row.xpath(".//h2")[0].text_content().strip()
-            url = row.xpath(".//a/@href")[0]
-            date = row.xpath(".//time")[0].text_content()
             if not name:
                 continue
+            url = row.xpath(".//a/@href")[0]
+            date_filed = row.xpath(".//time")[0].text_content()
             summary = row.xpath(".//p")[0].text_content()
             self.cases.append(
                 {
-                    "date": date,
+                    "date": date_filed,
                     "name": name,
                     "url": url,
                     "summary": summary,
