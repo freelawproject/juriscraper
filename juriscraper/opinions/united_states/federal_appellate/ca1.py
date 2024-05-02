@@ -24,12 +24,6 @@ class Site(OpinionSiteLinear):
             title = row.xpath("td[2]/a/text()")[0]
             url = row.xpath("td[2]/a/@href")[0]
             status = self.get_status_from_opinion_title(title)
-            if status == "Errata":
-                logger.info(
-                    "Skipping Errata file. title: %s URL: %s", title, url
-                )
-                continue
-
             docket = row.xpath("td[3]/a/text()")[0]
             date_filed = row.xpath("td[1]/span/text()")[0]
             name = row.xpath("td[4]/text()")[0]
