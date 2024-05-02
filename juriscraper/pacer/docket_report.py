@@ -933,10 +933,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             path = "./following-sibling::* | ./following-sibling::text()"
             for prev, node, nxt in previous_and_next(atty_node.xpath(path)):
                 # noinspection PyProtectedMember
-                if isinstance(
-                    node,
-                    (etree._ElementStringResult, etree._ElementUnicodeResult),
-                ):
+                if isinstance(node, etree._ElementUnicodeResult):
                     clean_atty = "%s\n" % " ".join(
                         n.strip() for n in node.split()
                     )

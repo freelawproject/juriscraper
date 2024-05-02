@@ -1,0 +1,100 @@
+Return-Path: <BKECF_LiveDB@mdb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 2tv22b5fcb7g0quqg84c5p176jameqvfeklrh1g1
+ for user@recap.email;
+ Thu, 28 Mar 2024 04:26:51 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=mdb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHZkhhdnpYY0NHYXI0RWFzVnk1TGdFQTJVZ1M3MEZnaVMyTEZSMGs0V2R0N2hKZU14TVdqZEM2SE53enJOMFo2a3J1Tmw3dWRMYnNUVlRsMElwNnZ4bUlwaXZRalEzWEFrbC82SUgvQjRUZkZ1Q21yTTh3aU9sbXJXK2YzTDdOT0szNGY3d3ppUUdhNzF4NzVjL3ovQjAwOG54N2xlUEdIS2F0bjkvMEtMdkY2RDJDRVU4YkFiRE80N0I0WS9KTHM3aG5WYTZNc20rcFlWQmVJZ2xUcmFxaDcyYm5EWW9VYXNNNDBSQWNZc0g0dFdydjR2UVdkSHhqcm5oU2dCQkFJRmJwRDlINnY0dnAvVnpmY01qQlJhUmQ1SmZEc2NwQnAwNU80M2pjWmV4bWc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=G+CAYhZMWS3a4KwkOzxmaW3kOkXrI/xn2ia07Gh0b34Y0BLuBOrHY2OhYD0yKtouthogW0XEowq0eAlcmqpvjowKHpiNT1Yu0iuKAFlr7+58QfTsdAtGMM8Zyz9wuEKkn+nFbPB58ljJlMaZimhEvgQciBsTOiBcdi254xm1k84=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1711600012; v=1; bh=t2WyDf+yBRTmg1IJKl7V9rj6G5VAp67j9Yhe7UmM/HE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.184
+Received: from mdbdb.mdb.gtwy.dcn ([156.119.190.184])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 28 Mar 2024 00:26:51 -0400
+Received: from mdbdb.mdb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 42S4Psal097523;
+	Thu, 28 Mar 2024 00:26:18 -0400
+Received: (from ecf_web@localhost)
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.4/Submit) id 42S4PaBS096602;
+	Thu, 28 Mar 2024 00:25:36 -0400
+Date: Thu, 28 Mar 2024 00:25:36 -0400
+MIME-Version:1.0
+From:BKECF_LiveDB@mdb.uscourts.gov
+To:courtmail@mdb.uscourts.gov
+Message-Id:<47679670@mdb.uscourts.gov>
+Subject:24-11929 BNC Certificate of Mailing - PDF Document - CH11 - Aligned Development LLC
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Maryland</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Admin entered on 03/28/2024  at 00:23 AM EDT and filed on 03/27/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Aligned Development LLC</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?782151>24-11929</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.mdb.uscourts.gov/doc1/092051619029?pdf_header=&magic_num=44278661&de_seq_num=160&caseid=782151'>37</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+BNC Certificate of Mailing - PDF Document. (related document(s)[35] Order Dissolving Show Cause Order). No. of Notices: 1. Notice Date 03/27/2024. (Admin.)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Imaged Certificate of Notice
+<BR><STRONG>Original filename:</STRONG>P02411929pdfparty0150.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1013806484 [Date=3/28/2024] [FileNumber=47679287-0] [97850691e041c77126a3840387ce0edb446824f6994f23f6e0035713c5a4edee6c5878cdcdd0fe732e4687b1de60585e8fe428620278735bdf395b80226b11e3]]
+<BR>
+
+</table>
+</div>
+
+<BR><B>
+24-11929 Notice will be electronically mailed to:
+</B>
+
+<BR>
+<BR><span class="personName">  US Trustee - Greenbelt</span> USTPRegion04.GB.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">FirstName LastName</span>
+<br>b@dcbankruptcy.com,
+<br>aa@notify.bestcase.com,
+<br>user@recap.email
+<BR>
+
+<BR>
+<B>
+24-11929 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+<BR>Debtor(s): Company LLC
+<BR><span class="personName">For Internal Use Only</span>
+<BR>,  
+<BR>
+
