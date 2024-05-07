@@ -1,9 +1,12 @@
 import json
 import pprint
 import sys
+import unicodedata
 from typing import Dict
 
+from ..lib.html_utils import strip_bad_html_tags_insecure
 from ..lib.log_tools import make_default_logger
+from ..lib.string_utils import convert_date_string
 from .reports import BaseReport
 
 logger = make_default_logger()
@@ -72,10 +75,16 @@ class ACMSAttachmentPage(BaseReport):
 
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]
+        de_text = strip_bad_html_tags_insecure(docket_entry["docketEntryText"])
         result = {
             "pacer_doc_id": docket_entry["docketEntryId"],
             "pacer_case_id": case_details["caseId"],
             "entry_number": docket_entry["entryNumber"],
+            "description": unicodedata.normalize(
+                "NFKD", de_text.text_content()
+            ),
+            "date_filed": convert_date_string(docket_entry["createdOn"]),
+            "date_end": convert_date_string(docket_entry["endDate"]),
             "attachments": [],
         }
 
@@ -87,6 +96,10 @@ class ACMSAttachmentPage(BaseReport):
                     "page_count": row["billablePages"],
                     "pacer_doc_id": docket_entry["docketEntryId"],
                     "acms_document_guid": row["docketDocumentDetailsId"],
+                    "cost": row["cost"],
+                    "date_filed": convert_date_string(row["createdOn"]),
+                    "permission": row["documentPermission"],
+                    "file_size": row["fileSize"],
                 }
             )
 
