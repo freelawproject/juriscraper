@@ -46,7 +46,6 @@ class Site(OpinionSiteLinear):
 
         :return: status string
         """
-        status = ""
         if "U" in title:
             status = "Unpublished"
         elif "P" in title:
