@@ -49,57 +49,26 @@ class Site(OpinionSiteLinear):
             )
 
             for url in row.xpath("td[3]/a/@href"):
-                doc_number, nature_of_suit = self.get_values_from_url(url)
+                doc_number = self.get_docket_document_number_from_url(url)
                 self.cases.append(
                     {
                         "name": case_name,
                         "date": str(date_filed),
                         "url": url,
                         "docket": docket,
-                        "docket_document_numbers": doc_number,
-                        "nature_of_suit": nature_of_suit,
+                        "docket_document_number": doc_number,
                         "judge": judge,
                     }
                 )
 
-    def get_values_from_url(self, url: str) -> Tuple[str, str]:
-        """Get docket document number and nature_of_suit values from URL
+    def get_docket_document_number_from_url(self, url: str) -> Tuple[str, str]:
+        """Get docket document number from the opinion URL
 
         :param url:
-        :return:  docket document number and nature_of_suit
+        :return:  docket document number
         """
         # In 2012 (and perhaps elsewhere) they have a few weird urls.
         match = self.docket_document_number_regex.search(url)
-        if match:
-            doc_number = match.group(6)
-        else:
-            doc_number = url
+        doc_number = match.group(6) if match else url
 
-        nature_of_suit_match = re.search(self.nature_of_suit_regex, url)
-        # In 2012 (and perhaps elsewhere) they have a few weird urls.
-        if not nature_of_suit_match:
-            nature_of_suit = "Unknown"
-        else:
-            nature_code = nature_of_suit_match.group(3)
-            if nature_code == "cv":
-                nature_of_suit = "Civil"
-            elif nature_code == "cr":
-                nature_of_suit = "Criminal"
-            # This is a tough call. Magistrate Cases are typically also
-            # Criminal or Civil cases, and their docket_number field will
-            # reflect this, but they do classify these separately under
-            # these 'mj' and 'mc' codes and the first page of these
-            #  documents will often refer to them as 'Magistrate Case
-            # ####-####' so, we will too.
-            elif nature_code == "mj" or "mc":
-                nature_of_suit = "Magistrate Case"
-            else:
-                nature_of_suit = "Unknown"
-
-        return doc_number, nature_of_suit
-
-    def _get_docket_document_numbers(self):
-        return [case["docket_document_numbers"] for case in self.cases]
-
-    def _get_nature_of_suit(self):
-        return [case["nature_of_suit"] for case in self.cases]
+        return doc_number
