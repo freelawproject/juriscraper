@@ -37,6 +37,36 @@ class ACMSAttachmentPage(BaseReport):
         except json.JSONDecodeError:
             self.is_valid = False
 
+    def _clean_attachment_description(self, text: str) -> str:
+        """
+        This function extracts the description from a string with a specific
+        format.
+
+        Based on our analysis of ACMS examples, a valid attachment entry
+        description string has the following structure:
+            - Docket number, entry number, and attachment number (separated
+              by hyphens)
+            - A description of the entry
+            - The description followed by a period (".") and the file format
+              (e.g., ".pdf", ".txt")
+
+        Args:
+            text: The string containing the information.
+
+        Returns:
+            The extracted description as a string.
+        """
+        # Split the string on delimiters
+        parts = text.split(" - ")
+
+        # Validates if the string follows the expected format for ACMS
+        # attachment entries.
+        if len(parts) != 3:
+            return text
+
+        # Extract description before format extension
+        return parts[-1].split(".")[0]
+
     def check_validity(self, parsed_json: dict) -> None:
         """Place sanity checks here to make sure that the returned json is
         valid and not an error page or some other kind of problem.
@@ -92,7 +122,9 @@ class ACMSAttachmentPage(BaseReport):
             result["attachments"].append(
                 {
                     "attachment_number": int(row["documentNumber"]),
-                    "description": row["name"],
+                    "description": self._clean_attachment_description(
+                        row["name"]
+                    ),
                     "page_count": row["billablePages"],
                     "pacer_doc_id": docket_entry["docketEntryId"],
                     "acms_document_guid": row["docketDocumentDetailsId"],
