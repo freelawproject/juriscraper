@@ -9,6 +9,38 @@ class OpinionSiteLinear(OpinionSite):
     case you can simply extend this class and implement _process_html().
     """
 
+    # This class tries to simplify OpinionSiteLinear. Instead of using full
+    # attribute names, we use shorthands. The keys must be properly named
+    # for the getters to work, so this `valid_keys` will be used in an
+    # extended check_sanity method
+    valid_keys = {
+        "name",
+        "url",
+        "date",
+        "date_filed_is_approximate",
+        "status",
+        "docket",
+        "judge",
+        "citation",
+        "parallel_citation",
+        "summary",
+        "lower_court",
+        "child_court",
+        "adversary_number",
+        "division",
+        "disposition",
+        "cause",
+        "docket_attachment_number",
+        "docket_document_number",
+        "nature_of_suit",
+        "lower_court_number",
+        "lower_court_judge",
+        "author",
+        "per_curiam",
+        "type",
+        "joined_by",
+    }
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.cases = []
@@ -103,3 +135,29 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_adversary_numbers(self):
         return self._get_optional_field_by_id("adversary_number")
+
+    def _get_authors(self):
+        return self._get_optional_field_by_id("author")
+
+    def _get_per_curiam(self):
+        return self._get_optional_field_by_id("per_curiam")
+
+    def _get_joined_by(self):
+        return self._get_optional_field_by_id("joined_by")
+
+    def _get_types(self):
+        return self._get_optional_field_by_id("type")
+
+    def _check_sanity(self):
+        super()._check_sanity()
+        # Check that all returned keys have the proper name to be used in a getter
+        for case in self.cases:
+            if isinstance(case, str):
+                # happens with mich example files
+                continue
+
+            for key in case.keys():
+                if key not in self.valid_keys:
+                    raise KeyError(
+                        f"Invalid key '{key}' for case dictionary {self.__module__}"
+                    )

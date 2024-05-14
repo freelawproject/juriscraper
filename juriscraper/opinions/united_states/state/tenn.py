@@ -47,7 +47,7 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "name": name,
                     "docket": rows[1],
-                    "judges": rows[2].split(": ")[1],
+                    "judge": rows[2].split(": ")[1],
                     "summary": rows[-1],
                 }
             )
