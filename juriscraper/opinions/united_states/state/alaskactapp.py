@@ -1,4 +1,4 @@
-from . import alaska
+from juriscraper.opinions.united_states.state import alaska
 
 
 class Site(alaska.Site):

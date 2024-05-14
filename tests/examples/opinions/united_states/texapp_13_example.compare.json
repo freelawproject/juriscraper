@@ -1,52 +1,66 @@
 [
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14596&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00334-CV",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Assault",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=3d14aad3-f15d-4bfc-bcd3-0e0988d6a915&coa=coa13&DT=Opinion&MediaID=231f7f74-14af-4c99-9d5d-ae72468b502f",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-03-07",
+        "disposition": "Dismissed",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "Genevie Nicole Lopez v. the State of Texas",
+        "case_name_short": ""
+      },
+      "case_name": "Genevie Nicole Lopez v. the State of Texas",
+      "appeal_from_str": "187th District Court",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "Stephanie Boyd",
+        "docket_number": "2023CR5150",
+        "court_reporter": "Diana Guerrero"
+      },
+      "docket_number": "13-23-00506-CR",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   },
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14574&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00342-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14524&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00357-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14442&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00342-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14427&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00357-CR",
-    "case_name_shorts": ""
+    "Docket": {
+      "OpinionCluster": {
+        "nature_of_suit": "Miscellaneous/other civil",
+        "Opinions": [
+          {
+            "download_url": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=57afc55f-3370-4bab-be89-9354f1664fc8&coa=coa13&DT=Opinion&MediaID=c78cbab5-4027-49f8-8e35-c40cfe93d736",
+            "type": "010combined"
+          }
+        ],
+        "date_filed": "2024-03-07",
+        "disposition": "Affirmed",
+        "source": "C",
+        "date_filed_is_approximate": false,
+        "blocked": false,
+        "precedential_status": "Published",
+        "case_name": "Larry Mark Polsky v. Spring Mart Entertainment, LLC D/B/A Dog House Pub & Grub",
+        "case_name_short": ""
+      },
+      "case_name": "Larry Mark Polsky v. Spring Mart Entertainment, LLC D/B/A Dog House Pub & Grub",
+      "appeal_from_str": "County Court at Law No. 1",
+      "OriginatingCourtInformation": {
+        "assigned_to_str": "Arturo McDonald",
+        "docket_number": "2020-CCL-00391",
+        "court_reporter": "Irene Salazar"
+      },
+      "docket_number": "13-22-00287-CV",
+      "source": 2,
+      "blocked": false,
+      "case_name_short": ""
+    }
   }
 ]
