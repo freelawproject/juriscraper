@@ -355,7 +355,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         "Incomplete request. Please try your query again by choosing the "
         "Query or Reports option",
         "To accept charges shown below, click on the 'View Report' button",
-        "This case was administratively closed",
+        "\\*\\*\\* This case was administratively closed.\\*\\*\\*",
         "The start date must be less than or equal to the end date",
         "The starting document number must be less than or equal to the "
         "ending document number",
@@ -933,10 +933,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             path = "./following-sibling::* | ./following-sibling::text()"
             for prev, node, nxt in previous_and_next(atty_node.xpath(path)):
                 # noinspection PyProtectedMember
-                if isinstance(
-                    node,
-                    (etree._ElementStringResult, etree._ElementUnicodeResult),
-                ):
+                if isinstance(node, etree._ElementUnicodeResult):
                     clean_atty = "%s\n" % " ".join(
                         n.strip() for n in node.split()
                     )
