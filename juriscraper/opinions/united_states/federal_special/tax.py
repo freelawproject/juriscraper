@@ -5,6 +5,7 @@
 # Neutral Citation Format (Memorandum opinions): T.C. Memo 2012-1
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 import json
+import time
 from datetime import date, datetime, timedelta
 from typing import Tuple
 
@@ -16,7 +17,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1986, 5, 1)
-    days_interval = 30
+    days_interval = 10
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -150,3 +151,9 @@ class Site(OpinionSiteLinear):
             len(self.json),
         )
         self._process_html()
+
+        # Using time.sleep to prevent rate limiting
+        # {'message': 'you are only allowed 15 requests in a 60 second window time', 'type': 'ip-limiter'}
+        if len(self.json) > 0:
+            logger.info("Sleeping for 61 seconds to prevent rate limit")
+            time.sleep(61)
