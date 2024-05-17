@@ -1,0 +1,230 @@
+Return-Path: <BKECF_LiveDB@mdb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id tvr8cmd9glin7g8s0gfcju6u82gh6jldfnknkh01
+ for verstandiglaw@recap.email;
+ Fri, 12 Apr 2024 11:54:29 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=mdb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHNlNLMHdLOWdEQVl1ZXY5STRta0R5L3hBamxPaDlqU1lZWGFYTFMxdTgvalV4ejJqRGsvcWhKa2VuaFJPcFMxTlBTeVNpbS92WHVvdHI3QjVxbktJUkhVNk94OGlOcHU3RTFpM3ZsTUo4SWR6M1EyZTAvV3F1a2pvYWROWWV1amp2V2RVSmpxMDNzOGx6RzRVZXRTZklCWU9UaWRnMmxzVFJZOFpiVWpka2phNUtPUkR4VEY1a1VxR2UvNGI3ZzEzRDZ5eU43SDljditDNjIrdHhtK3cvdHlMNlNCMW9ydm1Cb2FtenYzS24yVm54OGVLaTNSaWpoMXNiUUx3OVByRG5xanYwZzNYdFREeTJUbStlbHJtVnYvb1RhVnMxTWdjd0JXS3JmTUxUZ1E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=thfOIpkg+zV1/SfRm/8+sBA8V0Nbik6/aA8DhYqfuh/v/SJE1J3n8UuxAr3QYxOurc1Bua/siY1TqYtPLzzBwGNKVkDHGxPLPjn5Pi7jDwOCHZ0gzyqM1Dk/dOG3CHGMgyYXjuOhiSwvUcmCfGVO5CP+wTA9MGZPq2Av8oUuIv4=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1712922870; v=1; bh=c7XJTtLirHg9vWlC0Lln35MsR997FuDWTLo/SKxqK1g=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.184
+Received: from mdbdb.mdb.gtwy.dcn ([156.119.190.184])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 12 Apr 2024 07:54:29 -0400
+Received: from mdbdb.mdb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43CBsNVW088703;
+	Fri, 12 Apr 2024 07:54:26 -0400
+Received: (from ecf_web@localhost)
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43CBrnZ6087512;
+	Fri, 12 Apr 2024 07:53:49 -0400
+Date: Fri, 12 Apr 2024 07:53:49 -0400
+MIME-Version:1.0
+From:BKECF_LiveDB@mdb.uscourts.gov
+To:courtmail@mdb.uscourts.gov
+Message-Id:<47737079@mdb.uscourts.gov>
+Subject:24-00085 Complaint - AP - US Trustee - Greenbelt, 11 v. Martin
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Maryland</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Lisa Yonka Stevens entered on 4/12/2024 at 7:53 AM EDT and filed on 4/12/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>US Trustee - Greenbelt, 11 v. Martin                                            </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?783305>24-00085</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.mdb.uscourts.gov/doc1/092051683160?pdf_header=&magic_num=64349679&de_seq_num=3&caseid=783305'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Charles Martin                                    </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?751901>20-18680</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.mdb.uscourts.gov/doc1/092051683161?pdf_header=&magic_num=64874230&de_seq_num=1995&caseid=751901'>524</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-00085. (41 (Objection / revocation of discharge - 727(c),(d),(e))) Complaint by  Lisa Yonka Stevens   on behalf of    US Trustee - Greenbelt 11 against  Charles  Martin.  The filing fee is EXEMPT - Filed on behalf of the United States.   (Stevens, Lisa)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Martin Complaint to Deny Discharge 041224.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1013806484 [Date=4/12/2024] [FileNumber=47737074-
+<BR><TAB>0] [812d2c794e2984a344eaf4b6778347c8ea21f02aaa1ca5a63e96810a03529b1e90
+<BR><TAB>81e550675966f7dd74d19aca3ef661e39cfdaac3c4e61625159b38fdcbc392]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Martin Complaint to Deny Discharge 041224.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1013806484 [Date=4/12/2024] [FileNumber=47737075-
+<BR><TAB>0] [40ec41ecc8b6cd320194fb464cf5f2442dd93fda196e89b1b1c72e20908d026e4d
+<BR><TAB>a7a9e68a45d8c2af91382a7e8a4fbd4b0db3d22dd68519899e15c265a38809]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-00085 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Lisa Yonka Stevens</span> lisa.y.stevens@usdoj.gov
+<BR>
+<BR><span class="personName">  US Trustee - Greenbelt</span> USTPRegion04.GB.ECF@USDOJ.GOV
+<BR>
+
+<BR>
+<B>
+24-00085 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Charles  Martin</span>
+<BR>5803 Lowery  Lane 
+<BR>Upper Marlboro, MD 20772
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
+
+
+
+
+<BR><B>
+20-18680 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Glenna Elizabeth Barner</span> Glenna.Barner@maryland.gov
+<BR>
+<BR><span class="personName">Leah Christina Freedman</span> bankruptcy@bww-law.com,
+<br>  leah.freedman@bww-law.com
+<BR>
+<BR><span class="personName">Marie Louise Hagen</span> mlh@mlhagenlaw.com
+<BR>
+<BR><span class="personName">Keith R. Havens</span> Keith.R.Havens@HavensLawFirm.com,
+<br>  Madeline.Reed@HavensLawFirm.com
+<BR>
+<BR><span class="personName">James M. Hoffman</span> jhoffman@offitkurman.com,
+<br>  mmargulies@offitkurman.com
+<BR>
+<BR><span class="personName">Nicole C. Kenworthy</span> bdept@mrrlaw.net
+<BR>
+<BR><span class="personName">Lynn A. Kohen</span> lynn.a.kohen@usdoj.gov
+<BR>
+<BR><span class="personName">Darren Michael Margolis</span> dmargolis@lawdmpa.com
+<BR>
+<BR><span class="personName">Shannon Jacob Posner</span> sjposner@posner-law.com
+<BR>
+<BR><span class="personName">L. Jeanette Rice</span> Jeanette.Rice@usdoj.gov,
+<br>  USTPRegion04.GB.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">Cheryl E. Rose</span> trusteerose@aol.com,
+<br>  crose@ecf.axosfs.com
+<BR>
+<BR><span class="personName">Roger Charles Simmons</span> rsimmons@gordonsimmons.com,
+<br>  dwise@gordonsimmons.com,
+<br>jdziubla@gordonsimmons.com
+<BR>
+<BR><span class="personName">Lisa Yonka Stevens</span> lisa.y.stevens@usdoj.gov
+<BR>
+<BR><span class="personName">William Scott Tinney</span> scott@cohenandformanlaw.com
+<BR>
+<BR><span class="personName">  US Trustee - Greenbelt</span> USTPRegion04.GB.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">Maurice Belmont VerStandig</span> mac@mbvesq.com,
+<br>  lisa@mbvesq.com,
+<br>mahlon@dcbankruptcy.com,
+<br>mac@dcbankruptcy.com,
+<br>verstandig.mauricer104982@notify.bestcase.com,
+<br>verstandiglaw@recap.email
+<BR>
+<BR><span class="personName">Brett  Weiss</span> brett@bankruptcylawmaryland.com,
+<br>  brettecf@gmail.com,
+<br>TheWeissLawGroup@jubileebk.net,
+<br>chetan@BankruptcyLawMaryland.com,
+<br>kbanks@bankruptcylawmaryland.com
+<BR>
+
+<BR>
+<B>
+20-18680 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>Debtor(s): Charles Martin; Charles M. Martin; Sir Charles Martin
+<BR><span class="personName">James H. Brandon</span>
+<BR>16905 Germantown Road 
+<BR>Germantown, MD 20874
+<BR>
+<BR><span class="personName">Charles  Martin</span>
+<BR>5803 Lowery Lane 
+<BR>Upper Marlboro, MD 20772
+<BR>
+<BR><span class="personName">  United States Marshals Service</span>
+<BR>Attention: Mathew Silverman, Chief 
+<BR>6500 Cherrywood Lane
+<BR>Greenbelt, MD 20770
+<BR>
+<BR><span class="personName">Andrew A. Werner, Jr.</span>
+<BR>REMAX Realty Group
+<BR>6 Montgomery Village Ave., 
+<BR>Suite 200
+<BR>Gaithersburg, MD 20879
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
