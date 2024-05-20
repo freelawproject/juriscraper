@@ -16,6 +16,25 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.1 - 2024-05-15**
+
+Features:
+
+- Added dynamic backscrapers for these scrapers and their inheriting classes
+  - afcca
+  - olc
+  - bap10
+  - fla
+  - nyappterm
+  - ill
+
+- pacer.email: Added short description parsing for `deb` and `mdb`
+
+Changes:
+- Updated `cal` and `calctapp_*` to OpinionSiteLinear
+
+## Past
+
 **2.6.0 - 2024-04-03**
 
 Features:
