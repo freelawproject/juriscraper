@@ -16,6 +16,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.2 - 2024-05-20**
+
+Features:
+
+- Added parser for ACMS attachment pages
+- Added dynamic backscraper for `tax`
+
+Changes:
+
+- PACER: fix error string false positives
+- pacer.email: support multidocket NEF short description parsing for `njb`
+
+
+## Past
+
 **2.6.1 - 2024-05-15**
 
 Features:
@@ -32,8 +47,6 @@ Features:
 
 Changes:
 - Updated `cal` and `calctapp_*` to OpinionSiteLinear
-
-## Past
 
 **2.6.0 - 2024-04-03**
 
