@@ -575,12 +575,21 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb", "deb"]:
+        elif self.court_id in ["pawb", "ndb", "deb", "pamb"]:
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
             if case_name in subject:
-                # See deb_2.txt for need of this check
                 short_description = subject.split(case_name)[-1]
+            elif case_name[:18] in subject:
+                # See deb_2.txt, pamb_1 and pamb_3 for examples
+                short_description = subject.split(case_name[:18])[-1]
+            elif (
+                " and " in case_name and case_name.split(" and ")[0] in subject
+            ):
+                # See pamb_2.txt
+                short_description = subject.split(case_name.split(" and ")[0])[
+                    -1
+                ]
         else:
             logger.error(
                 "Short description has no parsing for bankruptcy court '%s'",
