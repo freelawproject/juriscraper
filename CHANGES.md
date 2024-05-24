@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.3 - 2024-05-24**
+
+Changes:
+
+- PACER: Refactor login logic for PACER sessions.
+- pacer.email: Added short description parsing for `pamb`
+
+
+## Past
+
 **2.6.2 - 2024-05-20**
 
 Features:
@@ -27,9 +37,6 @@ Changes:
 
 - PACER: fix error string false positives
 - pacer.email: support multidocket NEF short description parsing for `njb`
-
-
-## Past
 
 **2.6.1 - 2024-05-15**
 
