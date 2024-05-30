@@ -17,6 +17,7 @@ from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import make_date_range_tuples
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -63,7 +64,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "url": name_url_span.xpath(".//a/@href")[0],
-                    "name": name_url_span.text_content(),
+                    "name": titlecase(name_url_span.text_content()),
                     "date": date_filed,
                     "docket": docket,
                 }
