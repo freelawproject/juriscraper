@@ -350,23 +350,23 @@ class DocketReport(BaseDocketReport, BaseReport):
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
         "The report may take a long time to run because this case has many "
         "docket entries",
-        "The page ID does not exist. Please enter a valid page ID number. ",
-        "There are no documents in this case.",
-        "Incomplete request. Please try your query again by choosing the "
+        "The page ID does not exist\\. Please enter a valid page ID number\\. ",
+        "There are no documents in this case\\.",
+        "Incomplete request\\. Please try your query again by choosing the "
         "Query or Reports option",
         "To accept charges shown below, click on the 'View Report' button",
-        "This case was administratively closed",
+        "\\*\\*\\* This case was administratively closed\\.\\*\\*\\*",
         "The start date must be less than or equal to the end date",
         "The starting document number must be less than or equal to the "
         "ending document number",
-        "Case not found.",
+        "Case not found\\.",
         "Either you do not have permission to view the document, or the "
-        "document does not exist in the case.",
+        "document does not exist in the case\\.",
         "Format: text",
-        "Server timeout waiting for the HTTP request from the client.",
+        "Server timeout waiting for the HTTP request from the client\\.",
         "The case type was.*but it must be",
         "This case is in the process of being opened, please check back later "
-        "for additional information.",
+        "for additional information\\.",
         "Submission already made, please wait for response from server",
     ]
 
