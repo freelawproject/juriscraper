@@ -20,7 +20,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
-        for row in self.html.xpath("//tr[position() > 1]"):
+        for row in self.html.xpath("//tr[not(th)]"):
             title = row.xpath("td[2]/a/text()")[0]
             url = row.xpath("td[2]/a/@href")[0]
             status = self.get_status_from_opinion_title(title)
