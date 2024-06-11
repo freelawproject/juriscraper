@@ -483,6 +483,20 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.nd": [
+            (
+                # https://www.ndcourts.gov/supreme-court/opinions/118403
+                """IN THE SUPREME COURTSTATE OF NORTH DAKOTA\\n2023 ND 157\\nIn the Interest of A.B., a child\\nLeslie Johnson, L.B.S.W., Cass\\nCounty Human Service Zone, Petitioner and Appellee\\nv.\\nA.B., a child, Respondent\\nand\\nJ.S., mother, Respondent and Appellant\\nNo. 20230197\\nIn the Interest of A.C., minor child""",
+                {
+                    "Citation": {
+                        "volume": "2023",
+                        "reporter": "ND",
+                        "page": "157",
+                        "type": 8,
+                    },
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
