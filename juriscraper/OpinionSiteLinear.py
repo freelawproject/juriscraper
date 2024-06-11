@@ -71,35 +71,8 @@ class OpinionSiteLinear(OpinionSite):
     def _get_summaries(self):
         return self._get_optional_field_by_id("summary")
 
-    def _get_child_courts(self):
-        return self._get_optional_field_by_id("child_court")
-
     def _get_lower_courts(self):
         return self._get_optional_field_by_id("lower_court")
 
-    def _get_lower_court_judges(self):
-        return self._get_optional_field_by_id("lower_court_judge")
-
-    def _get_lower_court_numbers(self):
-        return self._get_optional_field_by_id("lower_court_number")
-
-    def _get_nature_of_suit(self):
-        return self._get_optional_field_by_id("nature_of_suit")
-
-    def _get_docket_document_numbers(self):
-        return self._get_optional_field_by_id("docket_document_number")
-
-    def _get_causes(self):
-        return self._get_optional_field_by_id("cause")
-
-    def _get_dispositions(self):
-        return self._get_optional_field_by_id("disposition")
-
-    def _get_divisions(self):
-        return self._get_optional_field_by_id("division")
-
-    def _get_docket_attachment_numbers(self):
-        return self._get_optional_field_by_id("docket_attachment_number")
-
-    def _get_adversary_numbers(self):
-        return self._get_optional_field_by_id("adversary_number")
+    def _get_child_courts(self):
+        return self._get_optional_field_by_id("child_court")
