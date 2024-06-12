@@ -150,7 +150,8 @@ class OpinionSiteLinear(OpinionSite):
 
     def _check_sanity(self):
         super()._check_sanity()
-        # Check that all returned keys have the proper name to be used in a getter
+        # Check that all returned keys have the proper name to be used
+        # in an Opinion / AbstractSite getter
         for case in self.cases:
             if isinstance(case, str):
                 # happens with mich example files
