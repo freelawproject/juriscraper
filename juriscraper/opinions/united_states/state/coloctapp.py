@@ -63,3 +63,10 @@ class Site(OpinionSiteLinear):
                     "url": f"https://www.courts.state.co.us/Courts/Court_of_Appeals/Opinion/{self.year}/{docket}-PD.pdf",
                 }
             )
+
+    def _download_backwards(self, _) -> None:
+        """Not implemented
+
+        coloctapp backscraper will require parsing PDFs
+        """
+        pass
