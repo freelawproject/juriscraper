@@ -16,6 +16,26 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.4 - 2024-06-11**
+
+Changes:
+
+- Add dynamic backscrapers for:
+  - tex
+  - nmcca
+  - wyo
+  - vtsuperct
+  - alaska
+
+- Fixed wrong xpath selectors and updated to OpinionSiteLinear
+  - dcd
+  - nd
+  - ca1
+
+- Solved bug with python3.12 tests in Github Actions
+
+## Past
+
 **2.6.3 - 2024-05-24**
 
 Changes:
@@ -23,8 +43,6 @@ Changes:
 - PACER: Refactor login logic for PACER sessions.
 - pacer.email: Added short description parsing for `pamb`
 
-
-## Past
 
 **2.6.2 - 2024-05-20**
 
