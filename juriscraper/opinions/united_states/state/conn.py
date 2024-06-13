@@ -15,17 +15,25 @@ History:
 
 import re
 from datetime import date
+from typing import Tuple
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    court_abbv = "sup"
+    start_year = 2000
+    base_url = "http://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.year = date.today().strftime("%y")
-        self.url = f"http://www.jud.ct.gov/external/supapp/archiveAROsup{self.year}.htm"
         self.status = "Published"
+
+        self.current_year = int(date.today().strftime("%Y"))
+        self.url = self.make_url(self.current_year)
+        self.make_backscrape_iterable(kwargs)
+
         self.cipher = "AES256-SHA256"
         self.set_custom_adapter(self.cipher)
 
@@ -42,7 +50,7 @@ class Site(OpinionSiteLinear):
         )
         return m.groups()[0] if m.groups()[0] else m.groups()[1]
 
-    def extract_dockets_and_name(self, row) -> [str, str]:
+    def extract_dockets_and_name(self, row) -> Tuple[str, str]:
         """Extract the docket and case name from each row
 
         :param row: Row to process
@@ -73,13 +81,48 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
             pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
-            date = self.find_published_date(pub[0])
+            date_filed = self.find_published_date(pub[0])
             dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
                 {
                     "url": row.get("href"),
                     "name": name,
                     "docket": dockets,
-                    "date": date,
+                    "date": date_filed,
                 }
             )
+
+    def make_url(self, year: int) -> str:
+        """Makes URL using year input
+        Data available since 2000, so (year % 2000) will work fine
+
+        :param year: full year integer
+        :return: url
+        """
+        year_str = str(year % 2000).zfill(2)
+        return self.base_url.format(self.court_abbv, year_str)
+
+    def _download_backwards(self, year: int) -> None:
+        """Build URL with year input and scrape
+
+        :param year: year to scrape
+        :return None
+        """
+        self.url = self.make_url(year)
+        self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
+        :param kwargs: passed when initializing the scraper, may or
+            may not contain backscrape controlling arguments
+        :return None
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        start = int(start) if start else self.start_year
+        end = int(end) + 1 if end else self.current_year
+
+        self.back_scrape_iterable = range(start, end)
