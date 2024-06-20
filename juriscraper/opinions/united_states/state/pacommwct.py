@@ -14,17 +14,21 @@ If there are errors with this site, you can contact:
 She's super responsive.
 """
 
-from juriscraper.opinions.united_states.state import pa
+import re
+from datetime import datetime
+from urllib.parse import urlencode
+
+from juriscraper.opinions.united_states.state import pasuperct
 
 
-class Site(pa.Site):
+class Site(pasuperct.Site):
+    court = "Commonwealth"
+    days_interval = 30
+    first_opinion_date = datetime(1998, 8, 17)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.pacourts.us/Rss/Opinions/Commonwealth/"
-        self.set_regex(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")
-        self.base = (
-            "//item[not(contains(title/text(), 'Judgment List'))]"
-            "[not(contains(title/text(), 'Reargument Table'))]"
-            "[not(contains(title/text(), 'Order Amending Rules'))]"
-        )
+        self.regex = re.compile(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")
+        self.params["postTypes"] = "complete,mo,opc,pn,sjo"
+        self.url = f"{self.base_url}{urlencode(self.params)}"
