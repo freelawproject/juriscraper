@@ -20,7 +20,8 @@ class Site(OpinionSiteLinear):
             if "njtax" in self.court_id:
                 pass
             else:
-                name, other = name.split("(", 1)
+                if len(name.split("(", 1)) > 1: 
+                    name, other = name.split("(", 1)
             docket = row.xpath(
                 ".//div[@class='badge badge-default rounded-0 one-line-truncate me-1 mt-1']/text()"
             )[0]
