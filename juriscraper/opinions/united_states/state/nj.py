@@ -20,7 +20,9 @@ class Site(OpinionSiteLinear):
             if "njtax" in self.court_id:
                 pass
             else:
-                name, other = name.split("(", 1)
+                name, _, _ = name.partition(
+                    "("
+                )  # Partition will split the string at the first '('
             docket = row.xpath(
                 ".//div[@class='badge badge-default rounded-0 one-line-truncate me-1 mt-1']/text()"
             )[0]
