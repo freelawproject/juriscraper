@@ -25,9 +25,19 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.mass.gov/service-details/new-opinions"
+        self.url = "https://www.mass.gov/info-details/new-opinions"
         self.court_id = self.__module__
         self.court_identifier = "SJC"
+        self.headers = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-Mode": "navigate",
+            "Host": "www.mass.gov",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Sec-Fetch-Dest": "document",
+            "Connection": "keep-alive",
+        }
 
     def _process_html(self):
         for file in self.html.xpath(".//a/@href[contains(.,'pdf')]/.."):
