@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.5 - 2024-07-02**
+
+Changes:
+
+- Fixes for
+  - Mass
+  - RI
+  - NJ
+  - BIA
+  - CalAG
+
+## Past
+
 **2.6.4 - 2024-06-11**
 
 Changes:
@@ -34,7 +47,6 @@ Changes:
 
 - Solved bug with python3.12 tests in Github Actions
 
-## Past
 
 **2.6.3 - 2024-05-24**
 
