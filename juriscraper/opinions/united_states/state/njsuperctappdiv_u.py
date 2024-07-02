@@ -5,7 +5,7 @@ class Site(nj.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = (
+        self.base_url = self.url = (
             "https://www.njcourts.gov/attorneys/opinions/unpublished-appellate"
         )
         self.status = "Unpublished"
