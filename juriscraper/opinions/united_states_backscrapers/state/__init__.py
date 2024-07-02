@@ -6,6 +6,8 @@ __all__ = [
     "idahoctapp_civil",
     "idahoctapp_criminal",
     "idahoctapp_u",
+    "mass",
+    "massappct",
     "me_2013",
     "nd",
     "sd",
