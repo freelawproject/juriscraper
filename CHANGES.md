@@ -16,6 +16,63 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.4 - 2024-06-11**
+
+Changes:
+
+- Add dynamic backscrapers for:
+  - tex
+  - nmcca
+  - wyo
+  - vtsuperct
+  - alaska
+
+- Fixed wrong xpath selectors and updated to OpinionSiteLinear
+  - dcd
+  - nd
+  - ca1
+
+- Solved bug with python3.12 tests in Github Actions
+
+## Past
+
+**2.6.3 - 2024-05-24**
+
+Changes:
+
+- PACER: Refactor login logic for PACER sessions.
+- pacer.email: Added short description parsing for `pamb`
+
+
+**2.6.2 - 2024-05-20**
+
+Features:
+
+- Added parser for ACMS attachment pages
+- Added dynamic backscraper for `tax`
+
+Changes:
+
+- PACER: fix error string false positives
+- pacer.email: support multidocket NEF short description parsing for `njb`
+
+**2.6.1 - 2024-05-15**
+
+Features:
+
+- Added dynamic backscrapers for these scrapers and their inheriting classes
+  - afcca
+  - olc
+  - bap10
+  - fla
+  - nyappterm
+  - ill
+
+- pacer.email: Added short description parsing for `deb` and `mdb`
+
+Changes:
+- Updated `cal` and `calctapp_*` to OpinionSiteLinear
+
 **2.6.0 - 2024-04-03**
 
 Features:

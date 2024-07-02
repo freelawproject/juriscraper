@@ -9,7 +9,6 @@ History:
     2021-12-17: Updated by flooie for OpinionSiteLinear
 """
 
-
 import re
 from typing import List
 

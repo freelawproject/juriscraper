@@ -10,6 +10,7 @@ History:
                great, but now it's terribly frustrating.
  - 2021-12-28: Remove selenium by flooie
 """
+
 from datetime import date
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear

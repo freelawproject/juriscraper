@@ -38,10 +38,12 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath("//table/tbody/tr[.//a]"):
             docket = row.xpath(".//a//strong/text()")[0].strip()
+            # Citation may not exist (yet?)
+            citation = row.xpath(".//strong/em/text()")
             self.cases.append(
                 {
                     "url": row.xpath(".//a/@href")[0],
-                    "citation": row.xpath(".//strong/em/text()")[0],
+                    "citation": citation[0] if citation else "",
                     "docket": docket,
                     "date": row.xpath(".//td/span/text()")[0].strip(),
                     "name": f"California Attorney General Opinion {docket}",

@@ -6,7 +6,6 @@ Author: Andrei Chelaru
 Date created: 06/27/2014
 """
 
-
 from datetime import date
 
 from juriscraper.opinions.united_states.state import md
