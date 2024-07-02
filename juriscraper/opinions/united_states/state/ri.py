@@ -9,6 +9,7 @@ History:
     Date created: 2013-08-10 by Brian W. Carver
     2022-05-02: Updated by William E. Palin, to use JSON responses
 """
+
 from urllib.parse import quote
 
 from lxml import html
