@@ -41,7 +41,7 @@ class Site(OpinionSiteLinear):
                     .split("\t")[0]
                     .split()[0],
                     "url": docket.xpath(".//a")[0].get("href"),
-                    "lower_courts": lower_court.text_content(),
+                    "lower_court": lower_court.text_content(),
                     "citation": citation.text_content(),
                 }
             )

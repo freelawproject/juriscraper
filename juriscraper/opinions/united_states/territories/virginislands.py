@@ -49,7 +49,7 @@ class Site(OpinionSiteLinear):
                     "date": date,
                     "docket": docket,
                     "citation": citation,
-                    "judges": judges,
+                    "judge": judges,
                     "url": url,
                 }
             )
