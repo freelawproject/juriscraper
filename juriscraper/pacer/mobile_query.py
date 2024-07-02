@@ -2,6 +2,7 @@
 
 This provides the total number of docket entries, which is useful for alerts
 """
+
 import pprint
 import sys
 

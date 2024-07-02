@@ -3,6 +3,7 @@ Scraper for Pennsylvania Supreme Court
 CourtID: pa
 Court Short Name: pa
 """
+
 import re
 
 from juriscraper.lib.html_utils import get_xml_parsed_text

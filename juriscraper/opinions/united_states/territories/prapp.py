@@ -5,6 +5,7 @@ Scraper for the Decisiones del Tribunal Apelaciones
 CourtID: prapp
 Court Short Name: Puerto Rico Court of Apelaciones
 """
+
 from dateparser import parse
 
 from juriscraper.lib.string_utils import titlecase

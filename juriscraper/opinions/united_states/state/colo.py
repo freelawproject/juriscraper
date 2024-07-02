@@ -10,6 +10,7 @@ History:
     - 2023-11-19: Drop Selenium by WEP
     - 2023-12-20: Updated with citations, judges and summaries, Palin
 """
+
 import datetime
 import re
 from datetime import date, timedelta
