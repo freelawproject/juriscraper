@@ -5,6 +5,7 @@ Author: William Edward Palin
 History:
   2023-01-21: Created by William Palin
 """
+
 import urllib.parse
 from datetime import date, datetime, timedelta
 

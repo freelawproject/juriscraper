@@ -5,6 +5,7 @@ Court Short Name: UT Ct. App.
 History:
  2021-12-16  Created by William Palin
 """
+
 from datetime import date
 
 from juriscraper.opinions.united_states.state import utahctapp
