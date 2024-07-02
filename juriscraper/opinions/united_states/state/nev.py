@@ -5,7 +5,6 @@ History:
     - 2023-12-13: Updated by William E. Palin
 """
 
-
 import json
 
 from lxml.html import fromstring

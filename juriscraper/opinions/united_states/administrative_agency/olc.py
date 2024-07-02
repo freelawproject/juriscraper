@@ -7,6 +7,7 @@ Type:
 History:
     2022-01-14: Created by William E. Palin
 """
+
 from datetime import date, datetime
 from typing import Tuple
 from urllib.parse import urlencode

@@ -7,6 +7,7 @@ Author: Gianfranco Rossi
 History:
  - 2023-12-28, grossir: created
 """
+
 import calendar
 import re
 from typing import Any, Dict, Optional

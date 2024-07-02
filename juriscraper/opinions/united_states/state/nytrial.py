@@ -5,6 +5,7 @@ Author: Gianfranco Rossi
 History:
  - 2024-01-05, grossir: created
 """
+
 import re
 from datetime import date
 from itertools import chain

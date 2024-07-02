@@ -6,6 +6,7 @@ returns a menu of options as a result.
 
 In the cases, we look up search results by name, date, etc.
 """
+
 import pprint
 import sys
 

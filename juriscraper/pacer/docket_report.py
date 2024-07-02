@@ -1351,7 +1351,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             # Any value works in this parameter, but it cannot be blank.
             # Normally this would have a value like '3:12-cv-3879', but that's
             # not even necessary.
-            "case_num": " "
+            "case_num": " ",
             # These fields seem to be unnecessary/unused.
             # 'view_comb_doc_text': '',
             # 'PreResetField': '',
