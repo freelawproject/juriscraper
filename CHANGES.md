@@ -16,6 +16,15 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.6 - 2024-07-02**
+
+Features:
+
+- Implemented backscraper for nj, njtaxct_u, njtaxct_p, njsuperctappdiv_p, njsuperctappdiv_u
+
+
+## Past
+
 **2.6.5 - 2024-07-02**
 
 Changes:
@@ -27,7 +36,6 @@ Changes:
   - BIA
   - CalAG
 
-## Past
 
 **2.6.4 - 2024-06-11**
 
