@@ -5,6 +5,7 @@ Author: William Edward Palin
 History:
   2023-01-21: Created by William Palin
 """
+
 import re
 from datetime import date
 from typing import Any, Dict

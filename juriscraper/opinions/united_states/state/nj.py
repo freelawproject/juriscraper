@@ -16,22 +16,28 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath("//div[@class='card-body']"):
             url = row.xpath(".//a[@class='text-underline-hover']/@href")[0]
-            name = row.xpath(".//a[@class='text-underline-hover']/text()")[0]
-            if "njtax" in self.court_id:
-                pass
-            else:
-                name, other = name.split("(", 1)
-            docket = row.xpath(
-                ".//div[@class='badge badge-default rounded-0 one-line-truncate me-1 mt-1']/text()"
+
+            name_content = row.xpath(
+                ".//a[@class='text-underline-hover']/text()"
             )[0]
+            name_str, _, _ = name_content.partition("(")
+
+            docket = row.xpath('.//*[contains(@class, "mt-1")]/text()')[
+                0
+            ].strip()
             date = row.xpath(
                 ".//div[@class='col-lg-12 small text-muted mt-2']/text()"
             )[0]
-            self.cases.append(
-                {
-                    "date": date,
-                    "docket": docket,
-                    "name": titlecase(name.strip()),
-                    "url": url,
-                }
-            )
+
+            case = {
+                "date": date,
+                "docket": docket,
+                "name": titlecase(name_str.strip()),
+                "url": url,
+            }
+
+            if self.status == "Published":
+                summary = row.xpath(".//div[@class='modal-body']/p/text()")
+                case["summary"] = "\n".join(summary)
+
+            self.cases.append(case)

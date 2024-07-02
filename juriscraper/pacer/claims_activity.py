@@ -281,13 +281,13 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
                 claim_att["claim_id"] = self.get_pacer_claim_id_from_claim_url(
                     document_url
                 )
-                claim_att[
-                    "claim_number"
-                ] = self.get_claim_number_from_claim_url(document_url)
+                claim_att["claim_number"] = (
+                    self.get_claim_number_from_claim_url(document_url)
+                )
                 claim_att["short_description"] = anchor.text_content()
-                claim_att[
-                    "claim_doc_seq"
-                ] = self.get_claim_doc_seq_from_claim_url(document_url)
+                claim_att["claim_doc_seq"] = (
+                    self.get_claim_doc_seq_from_claim_url(document_url)
+                )
 
                 attachments.append(claim_att)
 

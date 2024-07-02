@@ -4,7 +4,6 @@ CourtID: tenn
 Court Short Name: Tenn.
 """
 
-
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 

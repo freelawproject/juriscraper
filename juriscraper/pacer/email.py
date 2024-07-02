@@ -485,18 +485,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
                     document_url
                 )
-                entries[0][
-                    "pacer_magic_num"
-                ] = get_pacer_magic_num_from_doc1_url(
-                    document_url, self.appellate
+                entries[0]["pacer_magic_num"] = (
+                    get_pacer_magic_num_from_doc1_url(
+                        document_url, self.appellate
+                    )
                 )
                 if not self._is_appellate():
-                    entries[0][
-                        "pacer_case_id"
-                    ] = get_pacer_case_id_from_doc1_url(document_url)
-                    entries[0][
-                        "pacer_seq_no"
-                    ] = get_pacer_seq_no_from_doc1_url(document_url)
+                    entries[0]["pacer_case_id"] = (
+                        get_pacer_case_id_from_doc1_url(document_url)
+                    )
+                    entries[0]["pacer_seq_no"] = (
+                        get_pacer_seq_no_from_doc1_url(document_url)
+                    )
 
             # Fallback on the Case URL to get the pacer_case_id.
             if not entries[0]["pacer_case_id"] and case_url:

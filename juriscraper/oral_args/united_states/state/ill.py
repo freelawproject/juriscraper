@@ -7,6 +7,7 @@ History:
 * 2016-06-22: Created by Rebecca Fordon
 * 2022-05-18: Updated by William E. Palin
 """
+
 from datetime import timedelta
 
 from dateutil.utils import today
