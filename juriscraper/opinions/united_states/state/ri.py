@@ -75,10 +75,13 @@ class Site(OpinionSiteLinear):
             "ResultTables"
         ][0]["ResultRows"]
         for row in rows:
+            # Summary can be None - which breaks CL so set it to empty string
+            summary = row.get("RIJCaseSummaryOWSMTXT", "")
+            summary = summary if summary else ""
             self.cases.append(
                 {
                     "url": quote(row["Path"], safe="://&"),
-                    "summary": row.get("RIJCaseSummaryOWSMTXT", ""),
+                    "summary": summary,
                     "docket": row["RIJLongNumberOWSMTXT"],
                     "name": row["RIJLongTitleOWSMTXT"],
                     "date": row["RIJDateOWSDATE"].split(" ")[0],
