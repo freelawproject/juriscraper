@@ -78,7 +78,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "url": quote(row["Path"], safe="://&"),
-                    "summary": row["RIJCaseSummaryOWSMTXT"],
+                    "summary": row.get("RIJCaseSummaryOWSMTXT", ""),
                     "docket": row["RIJLongNumberOWSMTXT"],
                     "name": row["RIJLongTitleOWSMTXT"],
                     "date": row["RIJDateOWSDATE"].split(" ")[0],
