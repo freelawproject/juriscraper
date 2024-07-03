@@ -16,13 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.6.6 - 2024-07-02**
+**2.6.8 - 2024-07-03**
+
+Features:
+
+- Fix for RI
+
+## Past
+
+**2.6.7 - 2024-07-03**
 
 Features:
 
 - Minor fixes for MA and RI
-
-## Past
 
 **2.6.6 - 2024-07-02**
 
