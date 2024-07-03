@@ -20,10 +20,15 @@ Releases are also tagged in git, if that's helpful.
 
 Features:
 
-- Implemented backscraper for nj, njtaxct_u, njtaxct_p, njsuperctappdiv_p, njsuperctappdiv_u
-
+- Minor fixes for MA and RI
 
 ## Past
+
+**2.6.6 - 2024-07-02**
+
+Features:
+
+- Implemented backscraper for nj, njtaxct_u, njtaxct_p, njsuperctappdiv_p, njsuperctappdiv_u
 
 **2.6.5 - 2024-07-02**
 
