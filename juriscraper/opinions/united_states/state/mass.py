@@ -50,6 +50,14 @@ class Site(OpinionSiteLinear):
             name, docket, _, date = m.groups()
             if self.court_identifier not in docket:
                 continue
+            if date == None:
+                # Likely a new case opinion - check the header text above it
+                if row.xpath(".//../../h3/text()"):
+                    header_text = row.xpath(".//../../h3/text()")[0]
+                    date = header_text.split("Decisions:")[1].strip()
+                if not date:
+                    # if no date is found skip it
+                    continue
             self.cases.append(
                 {
                     "name": name,
