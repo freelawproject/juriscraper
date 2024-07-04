@@ -92,7 +92,7 @@ class FreeOpinionReport(BaseReport):
                 "all_case_ids": "0",
             }
             response = self.session.post(f"{self.url}?{nonce}", data=data)
-            responses.append(response)
+            responses.append({"response": response, "start": _start, "_end": _end, "court_id": self.court_id})
 
         self.responses = responses
         self.parse()
@@ -104,7 +104,8 @@ class FreeOpinionReport(BaseReport):
         # Reset self.trees before each run or successive runs will add more and
         # more rows.
         self.trees = []
-        for response in self.responses:
+        for item in self.responses:
+            response = item.get("response")
             response.raise_for_status()
             set_response_encoding(response)
             text = clean_html(response.text)
