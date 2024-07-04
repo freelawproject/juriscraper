@@ -1,0 +1,104 @@
+Return-Path: <BKECF_LiveDB@txnb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 66c90ggpa2ctk68fkmusavugq0opqgsj19ecvs81
+ for user@recap.email;
+ Tue, 25 Jun 2024 20:34:37 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of txnb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@txnb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of txnb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@txnb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=txnb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFITld2N2VDQlhmV2ZmbGRjYXp6UzZvRlZsOEdtL2l4U2JoaVNmdUhLY3oyS0NORVhldGFKQjRWM0ZrekN4RlBwRkNyQjg3UGNYcXdtMkxLS1hHU3RDQXYxRE5sLzM5b2ZaZjZnZmhwRXQ5NUFldmh3QmFxNEl1OVowVWJHSkljZ0Q3OFRRTDlId3B0RWkrVzRBamJIWnFqUW1SbDB6NTBjMWxBMXR6aWNmOVg0SXErWU9QdUI1bXJkZ0sxN2p5dGgrSFVmbzFpMVJ3UTVudElqTEtoNnBLVVdTRlQ3ZVROL1I4ZmxaYnhDa0djMTNGaVZkODdsbVVtTGJnM3NhM0hSbFNTS0NsUDViazA4M2YrMmpRTlNteDRIQm1WeHhYakpjWjBoMU0rNlBOb1dYYjl6eTJuWktzUHBEOGtjZ3VrTXM9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=u6lZ4Y7PgGS1WbluqdrMQIgK7ClV3d1rHJfEwt00PYXl0XM12zRORUgTmKETVZS4L1ys7vDYe3bgEXodDa5ZCZlaZthcAjbjTOR2Hy1XPWgjWlJ2Suoa2bqalarrYNgfTieVY0rq4YD4OyNqgYZCOZFbV9vVatXrSI1nznj2boY=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1719347678; v=1; bh=YzVknDjl8Ab2VTsMxTZlfI1yebWDP77FAk5rBohRaU4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.48
+Received: from txnbdb.txnb.gtwy.dcn ([156.119.56.48])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 25 Jun 2024 16:34:36 -0400
+Received: from txnbdb.txnb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by txnbdb.txnb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 45PKXnb5060677;
+	Tue, 25 Jun 2024 15:33:50 -0500
+Received: (from ecf_web@localhost)
+	by txnbdb.txnb.gtwy.dcn (8.14.7/8.14.4/Submit) id 45PKXJLI059075;
+	Tue, 25 Jun 2024 15:33:19 -0500
+Date: Tue, 25 Jun 2024 15:33:19 -0500
+X-Authentication-Warning: txnbdb.txnb.gtwy.dcn: ecf_web set sender to BKECF_LiveDB@txnb.uscourts.gov using -f
+MIME-Version:1.0
+From:BKECF_LiveDB@txnb.uscourts.gov
+To:Courtmail@txnb.uscourts.gov
+Message-Id:<50348129@txnb.uscourts.gov>
+Subject:24-03028-swe Clerk's correspondence
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Northern District of Texas</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 6/25/2024 at 3:33 PM CDT and filed on 6/25/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>AREYA HOLDER AURZADA, CHAPTER 7 TRUSTEE FOR THE BA v. FUNDERZ.NET, LLC                                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.txnb.uscourts.gov/cgi-bin/DktRpt.pl?515854>24-03028-swe</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.txnb.uscourts.gov/doc1/1760?pdf_header=&magic_num=97272925&de_seq_num=57&caseid=515854'>14</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Clerk's correspondence requesting  Stipulation from attorney for plaintiff.  (RE: related document(s)[13]  INCORRECT ENTRY. WRONG EVENT CODE USED. Trustee's Notice <i>of Stipulation Regarding Response Deadlines</i> filed by Plaintiff AREYA HOLDER AURZADA, CHAPTER 7 TRUSTEE FOR THE BANKRUPTCY ESTATE OF DENNIS JAMES ROGERS II (RE: related document(s)[5] Motion to dismiss adversary proceeding filed by Defendant FUNDERZ.NET, LLC). (LastName, FirstName) Modified on 6/25/2024 .)  Responses due by 7/2/2024.   (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-03028-swe Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Defendant   company.net, LLC</span>
+<br>user@xxa.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff  FirstName LastName, CHAPTER 7 TRUSTEE FOR THE BANKRUPTCY ESTATE OF FirstName LastName II</span>
+<br>user2@lawfirm.com,  user@lawfirm.com
+<BR>
+
+<BR>
+<B>
+24-03028-swe Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Defendant company.net, LLC</span>
+<BR>FirstName LastName LLP
+<BR>333 Some Avenue, Suite 999
+<BR>Miami, FL 1111
+<BR>
+
