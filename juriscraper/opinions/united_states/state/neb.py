@@ -11,33 +11,29 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     def _process_html(self):
-        path = {
-            "group": '//div[contains(@class, "view-grouping")]',
-            "date": './/span[contains(@class, "date-display-single")]',
-            "row": ".//tbody/tr",
-        }
-        for group in self.html.xpath(path["group"]):
-            date_element = group.xpath(path["date"])
-            if not date_element:
+        for table in self.html.xpath(".//table"):
+            date_tags = table.xpath("preceding::time[1]/text()")
+            if not date_tags:
+                print("NO DATE TAGS")
                 continue
-            date = date_element[0].text_content()
-            for row in group.xpath(path["row"]):
-                url = row.xpath(".//td[3]//a/@href")
-
-                # skip rows without url in third cell
-                if not url:
+            for row in table.xpath(".//tr"):
+                cells = row.xpath(".//td")
+                # make sure its a valid row - and not the ending of the table
+                if len(cells) != 3 or cells[0].xpath(".//text()") is None:
                     continue
 
-                docket = row.xpath(".//td[1]")[0].text_content().strip()
-                if docket == "A-XX-XXXX":
-                    continue
+                docket = cells[0].xpath(".//text()")[0].strip()
+                citation = cells[1].xpath(".//text()")[0].strip()
+                url = cells[2].xpath(".//a")[0].get("href")
+                name = cells[2].xpath(".//a/text()")[0].strip()
+                date = date_tags[0]
 
                 self.cases.append(
                     {
                         "date": date,
                         "docket": docket,
-                        "name": row.xpath(".//td[3]")[0].text_content(),
-                        "citation": row.xpath(".//td[2]")[0].text_content(),
-                        "url": url[0],
+                        "name": name,
+                        "citation": citation,
+                        "url": url,
                     }
                 )
