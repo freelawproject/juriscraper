@@ -4,6 +4,7 @@ Court Short Name: NY
 History:
  - 2024-01-05, grossir: modified to use nytrial template
 """
+
 from datetime import date
 
 from juriscraper.opinions.united_states.state import nytrial
