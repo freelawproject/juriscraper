@@ -34,6 +34,6 @@ class Site(OpinionSiteLinear):
                 "docket": docket,
             }
             if self.division:
-                case["divisions"] = self.division
+                case["division"] = self.division
 
             self.cases.append(case)

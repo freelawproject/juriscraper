@@ -27,7 +27,7 @@ class Site(OpinionSiteLinear):
                     "name": case_name.text_content(),
                     "url": docket.xpath(".//a/@href")[0],
                     "date": date.text_content().strip(),
-                    "cite": cite,
+                    "citation": cite,
                     "docket": docket.text_content().split()[0],
                 }
             )
