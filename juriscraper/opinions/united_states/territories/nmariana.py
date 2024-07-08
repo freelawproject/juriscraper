@@ -60,8 +60,8 @@ class Site(OpinionSiteLinear):
                     "name": cells[0].text_content(),
                     "citation": cells[1].text_content(),
                     "date": cells[2].text_content(),
-                    "judge": self._cleanup_judge_names(judge_text),
                     "author": self._fetch_author(judge_text),
+                    "judge": self._fetch_author(judge_text),
                     "url": s.xpath(".//td/a/@href")[0],
                     "docket": "",
                 }
