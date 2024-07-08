@@ -66,7 +66,7 @@ from . import utils
 
 logger = make_default_logger()
 
-order_url_date_regex = re.compile(r"(\d{2})(\d{2})(\d{2})(zr|zor)")
+order_url_date_regex = re.compile(r"(\d{2})(\d{2})(\d{2})\.?(zr|zor)")
 fedrules_regex = re.compile(r"(?<=\/)(?<=\/)fr\w\w\d\d")
 
 
@@ -95,6 +95,8 @@ class SCOTUSOrders:
         *,
         session: requests.Session = None,
         cache_pdfs: bool = True,
+        delay: float = 0.2,  # between Order PDF downloads
+        retries: int = 3,  # given HTTPError
         **kwargs,
     ):
         """Will instantiate a Session if none is passed."""
@@ -102,6 +104,8 @@ class SCOTUSOrders:
         self._session = session
         self.homepage_response = None
         self.cache_pdfs = cache_pdfs
+        self.delay = delay
+        self.retries = retries
         self.order_meta = None
         self._pdf_cache = set()
         self._docket_numbers = set()
@@ -232,14 +236,22 @@ class SCOTUSOrders:
             "Sec-GPC": "1",
         }
 
-        response = download_client(
-            url=url,
-            since_timestamp=since_timestamp,
-            headers=pdf_headers,
-            **kwargs,
-        )
-        # allow caller to handle status code 304 responses
-        return response_handler(response)
+        for i in range(self.retries):
+            response = download_client(
+                url=url,
+                since_timestamp=since_timestamp,
+                headers=pdf_headers,
+                **kwargs,
+            )
+            # allow caller to handle status code 304 responses
+
+            try:
+                result = response_handler(response)
+            except requests.exceptions.HTTPError as he:
+                logger.debug(f"Retry {i + 1} because {repr(he)}")
+                sleep((i * self.delay) + jitter)
+            else:
+                return result
 
     @staticmethod
     def order_pdf_parser(pdf: bytes) -> set:
@@ -309,7 +321,6 @@ class SCOTUSOrders:
         earliest: date,
         latest: date,
         include_misc: bool,
-        delay: float = 0.1,
         **kwargs,
     ) -> None:
         """Find available Orders published for a given court term, extract their
@@ -400,7 +411,7 @@ class SCOTUSOrders:
                     logger.info(
                         f'Scraped {len(docket_numbers)} dockets from {meta_record["order_date"]} {meta_record["order_type"]}'
                     )
-            sleep(delay + jitter(delay))
+            sleep(self.delay + jitter(self.delay))
 
 
 class DocketFullTextSearch:
