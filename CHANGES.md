@@ -16,6 +16,38 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.8 - 2024-07-03**
+
+Features:
+
+- Fix for RI
+
+## Past
+
+**2.6.7 - 2024-07-03**
+
+Features:
+
+- Minor fixes for MA and RI
+
+**2.6.6 - 2024-07-02**
+
+Features:
+
+- Implemented backscraper for nj, njtaxct_u, njtaxct_p, njsuperctappdiv_p, njsuperctappdiv_u
+
+**2.6.5 - 2024-07-02**
+
+Changes:
+
+- Fixes for
+  - Mass
+  - RI
+  - NJ
+  - BIA
+  - CalAG
+
+
 **2.6.4 - 2024-06-11**
 
 Changes:
@@ -34,7 +66,6 @@ Changes:
 
 - Solved bug with python3.12 tests in Github Actions
 
-## Past
 
 **2.6.3 - 2024-05-24**
 

@@ -15,9 +15,7 @@ History:
  - 2023-01-28, William Palin: Updated scraper
 """
 
-import datetime
 import re
-from datetime import datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -31,27 +29,46 @@ class Site(OpinionSiteLinear):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.mass.gov/service-details/new-opinions"
+        self.url = "https://www.mass.gov/info-details/new-opinions"
         self.court_id = self.__module__
+        self.court_identifier = "SJC"
+        # This self.headers is used because the court blocks all non browser
+        # style user-agents.
+        self.headers = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-Mode": "navigate",
+            "Host": "www.mass.gov",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Sec-Fetch-Dest": "document",
+            "Connection": "keep-alive",
+        }
+        self.request["headers"] = self.headers
 
     def _process_html(self):
-        for file in self.html.xpath(".//a/@href[contains(.,'pdf')]/.."):
-            content = file.text_content()
+        for row in self.html.xpath(".//a/@href[contains(.,'download')]/.."):
+            url = row.get("href")
+            content = row.text_content()
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", content)
             if not m:
                 continue
             name, docket, _, date = m.groups()
             if self.court_identifier not in docket:
                 continue
-            url = file.get("href")
-            parts = url.split("/")[-4:-1]
-            parts = [int(d) for d in parts]
-            date = datetime(parts[0], parts[1], parts[2])
+            if date == None:
+                # Likely a new case opinion - check the header text above it
+                if row.xpath(".//../../h3/text()"):
+                    header_text = row.xpath(".//../../h3/text()")[0]
+                    date = header_text.split("Decisions:")[1].strip()
+                if not date:
+                    # if no date is found skip it
+                    continue
             self.cases.append(
                 {
                     "name": name,
                     "status": "Published",
-                    "date": date.strftime("%m/%d/%Y"),
+                    "date": date,
                     "docket": docket,
                     "url": url,
                 }
