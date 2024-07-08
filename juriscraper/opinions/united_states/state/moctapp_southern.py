@@ -36,8 +36,8 @@ class Site(mo.Site):
                         "docket": docket[:-1],
                         "url": url,
                         "date": date,
-                        "dispostion": vote.split(".")[0].strip(),
-                        "judge": author,
-                        "judges": vote.split(".", 1)[1].strip(),
+                        "disposition": vote.split(".")[0].strip(),
+                        "author": author,
+                        "judge": vote.split(".", 1)[1].strip(),
                     }
                 )
