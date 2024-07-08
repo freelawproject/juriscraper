@@ -47,14 +47,14 @@ class Site(OpinionSiteLinear):
                 continue
             date = date_tags[0]
 
-            for row in table.xpath(".//tr/td/.."):
+            for row in table.xpath(".//tr[td]"):
                 c1, c2, c3 = row.xpath(".//td")
-                docket = c1.xpath(".//span/text()")[0].strip()
+                docket = c1.xpath(".//text()")[0].strip()
                 if "A-XX-XXXX" in docket:
                     continue
-                citation = c2.xpath(".//span/text()")[0].strip()
+                citation = c2.xpath(".//text()")[0].strip()
                 name = c3.xpath(".//a/text()")[0].strip()
-                url = c3.xpath(".//span/a")[0].get("href")
+                url = c3.xpath(".//a")[0].get("href")
                 # This URL location is used for unpublished opinions
                 if "/sites/default/files" in url:
                     status = "Unpublished"
