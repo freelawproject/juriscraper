@@ -11,7 +11,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1931, 2, 26)
     court_identifier = "SJC"
-    # This mapper is incomplete
+    # This mapper is missing older volumes
     backscrape_date_range_mapper = [
         {
             "start": datetime(2016, 7, 25),
@@ -52,25 +52,33 @@ class Site(OpinionSiteLinear):
         :return None
         """
         for row in self.html.xpath("//tr[td/a]"):
-            _, date_filed_str, name = row.xpath("td/text()")
+            _, date_filed_str, *name = row.xpath("td/text()")
+            # Edge case where date is a range "December 8, 2000 - January 3, 2001"
+            date_filed_str = date_filed_str.partition(" - ")[0]
             date_filed = parser.parse(date_filed_str)
-            if (
+
+            if not (
                 self.start_date
                 and self.start_date <= date_filed
                 and date_filed <= self.end_date
             ):
-                cite = row.xpath(".//a/text()")[0]
-                url = row.xpath(".//a/@href")[0]
-                self.cases.append(
-                    {
-                        "citation": cite,
-                        "date": date_filed_str,
-                        "name": name,
-                        "url": url,
-                        "docket": "",
-                        "status": "Published",
-                    }
-                )
+                continue
+
+            # Consolidated cases, for example 432 Mass. 489
+            # on year 2000
+            name = "; ".join(name).strip()
+            cite = row.xpath(".//a/text()")[0]
+            url = row.xpath(".//a/@href")[0]
+            self.cases.append(
+                {
+                    "citation": cite,
+                    "date": date_filed_str,
+                    "name": name,
+                    "url": url,
+                    "docket": "",
+                    "status": "Published",
+                }
+            )
 
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Extracts docket number from downloaded opinion HTML
