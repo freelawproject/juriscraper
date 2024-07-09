@@ -18,7 +18,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = str(date.today().year)[-2:]
+        year = date.today().strftime("%Y")[-2:]
         self.url = f"https://www.cnmilaw.org/spm{year}.php#gsc.tab=0"
         self.status = "Published"
 
@@ -60,8 +60,8 @@ class Site(OpinionSiteLinear):
                     "name": cells[0].text_content(),
                     "citation": cells[1].text_content(),
                     "date": cells[2].text_content(),
+                    "judge": ", ".join(self._cleanup_judge_names(judge_text)),
                     "author": self._fetch_author(judge_text),
-                    "judge": self._fetch_author(judge_text),
                     "url": s.xpath(".//td/a/@href")[0],
                     "docket": "",
                 }
