@@ -65,7 +65,7 @@ class Site(OpinionSite):
             url_opinion = False
             for link in cell.xpath(path_link):
                 text = link.text_content().strip()
-                url = link.attrib["href"]
+                url = link.attrib["href"].replace("http://", "https://")
                 urls.append(url)
                 if "Opinion" in text:
                     url_opinion = url
