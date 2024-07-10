@@ -4,6 +4,7 @@ from juriscraper.opinions.united_states_backscrapers.state import mass
 
 
 class Site(mass.Site):
+    docket_number_regex = r"\d{2}-\w-\d{1,4}"
     backscrape_date_range_mapper = [
         {
             "start": datetime(2021, 7, 9),
@@ -20,7 +21,3 @@ class Site(mass.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-
-    def extract_from_text(self, scraped_text: str) -> dict:
-        """Check comment on backscraper parent class"""
-        return {}

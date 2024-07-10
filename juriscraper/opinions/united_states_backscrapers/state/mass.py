@@ -4,13 +4,15 @@ from datetime import date, datetime
 from typing import Any, Dict, Tuple
 
 from dateutil import parser
+from lxml.html import fromstring
 
+from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1931, 2, 26)
-    court_identifier = "SJC"
+    docket_number_regex = r"SJC-\d+"
     # This mapper is missing older volumes
     backscrape_date_range_mapper = [
         {
@@ -39,12 +41,15 @@ class Site(OpinionSiteLinear):
             "url": "http://masscases.com/275-299.html",
         },
     ]
+    # on the cl_scrape_opinions command in Courtlistener,
+    # a headers variable is required for mass
+    headers = {}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
+        self.expected_content_types = ["text/html"]
 
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
@@ -85,16 +90,38 @@ class Site(OpinionSiteLinear):
 
         Possible on SJC. since `Records And Briefs` section cites
             docket entries and each is labeled with the docket number
-        Even when that sections does not exist, the docket number is available.
+        Even when that sections does not exist, the docket number is available
+        in the headnotes section
         For example: http://masscases.com/cases/sjc/493/493mass1019.html
 
         The format on App Ct opinions is different
         """
-        if not self.is_backscrape:
-            return {}
-        match = re.search(rf"{self.court_identifier}-\d+", scraped_text[:2000])
+        match = re.search(self.docket_number_regex, scraped_text[:2000])
         docket = match.group(0) if match else ""
-        return {"Docket": {"docket_number": docket}}
+
+        headnotes, summary = "", ""
+        html = fromstring(scraped_text)
+        headnote_section = html.xpath("//section[@class='headnote']")
+        synopsis_section = html.xpath("//section[@class='synopsis']")
+
+        if headnote_section:
+            # First line of the headnote might be the docket number
+            headnotes = clean_string(
+                headnote_section.xpath("string()")[0].replace(docket, "")
+            )
+        if synopsis_section:
+            summary = "\n".join(
+                [
+                    clean_string(p.xpath("string()"))
+                    # avoid page numbers
+                    for p in synopsis_section.xpath(".//p[not(@class)]")
+                ]
+            )
+
+        return {
+            "Docket": {"docket_number": docket},
+            "OpinionCluster": {"headnotes": headnotes, "summary": summary},
+        }
 
     def _download_backwards(
         self, dates_and_url: Tuple[date, date, str]
@@ -105,7 +132,6 @@ class Site(OpinionSiteLinear):
             for filtering opinions of interest by date
         :return None
         """
-        self.is_backscrape = True
         self.start_date, self.end_date, self.url = dates_and_url
         self.html = self._download()
         self._process_html()
