@@ -15,12 +15,14 @@ Case number (#): Two increasing ranges of integers.
     'IFP' (in forma pauperis) a.k.a pauper cases number 5001 and up each term
 """
 
+from io import BytesIO
 import json
 from math import sqrt
 import re
 from time import sleep
 from urllib.parse import urljoin
 
+import fitz  # the package name of the `pymupdf` library
 import requests
 from requests.exceptions import ConnectionError
 
@@ -134,6 +136,8 @@ closed_regex = re.compile(r"Case considered closed")
 removed_regex = re.compile(r"Case removed from Docket")
 cert_dismissed_regex = re.compile(r"Writ of Certiorari Dismissed")
 
+distributed_regex = re.compile(r"(?<=DISTRIBUTED)(?:.*?)([0-9/]+)", flags=re.I)
+
 # use this only after splitting entry text on '.'
 wildcard_petition_regex = re.compile(
     r"((?<=Petition\s)|(?<=Case\s)).*(DENIED|DISMISSED)", flags=re.IGNORECASE
@@ -143,6 +147,21 @@ wildcard_petition_regex = re.compile(
 denied_regex = re.compile(
     r"(?<=Application )(?:\(\w{4,8}\)\s)?.*DENIED"
     r"|(?<=Motion )(?:\(\w{4,8}\)\s)?.*DENIED",
+    flags=re.IGNORECASE,
+)
+granted_regex = re.compile(
+    r"(?<=Application )(?:\(\w{4,8}\)\s)?.*GRANTED"
+    r"|(?<=Motion )(?:\(\w{4,8}\)\s)?.*GRANTED",
+    flags=re.IGNORECASE,
+)
+completed_regex = re.compile(
+    r"(?<=Application )(?:\(\w{4,8}\)\s)?.*COMPLETED"
+    r"|(?<=Motion )(?:\(\w{4,8}\)\s)?.*COMPLETED",
+    flags=re.IGNORECASE,
+)
+withdrawn_regex = re.compile(
+    r"(?<=Application )(?:\(\w{4,8}\)\s)?.*WITHDRAWN"
+    r"|(?<=Motion )(?:\(\w{4,8}\)\s)?.*WITHDRAWN",
     flags=re.IGNORECASE,
 )
 ifp_dismissed_regex = re.compile(
@@ -197,6 +216,7 @@ class SCOTUSDocketReport:
         self._docket_entries = None
         self._attorneys = None
         self._dispositions = []
+        self._distributions = []
 
     @classmethod
     def from_response(cls, response: requests.Response, **kwargs):
@@ -226,7 +246,7 @@ class SCOTUSDocketReport:
 
     def _get_case_name(self):
         """Petitioner v. Respondent"""
-        return f'{self._get_petitioner()} v. {self._docket["RespondentTitle"]}'
+        return f'{self._get_petitioner()} v. {self._docket.get("RespondentTitle")}'
 
     def _get_lower_court_cases(self):
         """These are presented as a string representation of a tuple, but not
@@ -334,7 +354,6 @@ class SCOTUSDocketReport:
                 "related_cases": "RelatedCaseNumber",
                 "linked_cases": "Links",  # str 'Linked with YY-NNNNN'
                 "fee_status": "sJsonCaseType",
-                "date_filed": "DocketedDate",
                 "lower_court": "LowerCourt",
                 "lower_court_case_numbers": "LowerCourtCaseNumbers",  # list type?
                 "lower_court_decision_date": "LowerCourtDecision",
@@ -345,6 +364,7 @@ class SCOTUSDocketReport:
                 "court_id": self.court_id,
                 "docket_number": self.docket_number,
                 "case_name": self._get_case_name(),
+                "date_filed": self._get_docketed_date(),
             }
             self._metadata |= {k: self._docket.get(v) for k, v in data.items()}
         return self._metadata
@@ -383,9 +403,31 @@ class SCOTUSDocketReport:
             self._docket_entries = docket_entries
         return self._docket_entries
 
+    def _get_docketed_date(self):
+        """If this field is missing, substitute the date of the first docket entry."""
+        if (_docketed := self._docket.get("DocketedDate")) == "":
+            # fall back on first docket entry
+            return self.docket_entries[0].get("date_filed")
+        else:
+            return utils.makedate(_docketed).date()
+
+    def _application_disposition(self, entry):
+        """Search for dispositions specific to Applications: either
+        'denied' or 'granted'."""
+        if denied_regex.search(entry):
+            return "DENIED"
+        elif granted_regex.search(entry):
+            return "GRANTED"
+        elif completed_regex.search(entry):
+            return "COMPLETED"
+        elif withdrawn_regex.search(entry):
+            return "WITHDRAWN"
+        else:
+            return None
+
     # TODO: sometimes dispositions are subject to rehearing; abandon this?
     @property
-    def disposition(self):
+    def disposition(self) -> list:
         """Find any case disposition in docket entries."""
         if self._dispositions == []:
 
@@ -393,8 +435,16 @@ class SCOTUSDocketReport:
                 """Return a datetime.date object from the entry's date field."""
                 return utils.makedate(entry["Date"]).date()
 
+            _docket_type = self.docket_number[2]
+
             for entry in self._original_entries():
                 desc = entry["Text"]
+
+                if _docket_type in {"A", "M"}:
+                    if _disposition := self._application_disposition(desc):
+                        self._dispositions.append((_disposition, mkdt(entry)))
+                        continue
+
                 # Judgment issued
                 if judgment_regex.search(desc) or affirmed_regex.search(desc):
                     self._dispositions.append(("DECIDED", mkdt(entry)))
@@ -458,6 +508,28 @@ class SCOTUSDocketReport:
             return self._dispositions[-1]
         except IndexError:
             return None
+
+    @property
+    def distributions(self) -> list:
+        """Find date(s) where case was distributed for conference."""
+        if self._distributions == []:
+
+            def distributed_date(desc):
+                """Return a datetime.date object from the entry's date field."""
+                if match := distributed_regex.search(desc):
+                    dstring = match.group(1)
+                    return utils.makedate(dstring, dayfirst=False).date()
+                else:
+                    return
+
+            for entry in self._original_entries():
+                desc = entry["Text"]
+                if dt := distributed_date(desc=desc):
+                    self._distributions.append(dt)
+
+            self._distributions.sort()
+
+        return self._distributions
 
     @staticmethod
     def _parse_attorney(row, affiliation) -> dict:
@@ -536,3 +608,65 @@ class SCOTUSDocketReport:
         if self._attorneys is None:
             self._attorneys = self._parse_attorneys()
         return self._attorneys
+
+    @staticmethod
+    def docket_pdf_download(
+        url: str,
+        retries: int = 3,
+        delay: float = 0.5,
+        **kwargs,
+    ) -> requests.Response:
+        """Download an Orders PDF.
+
+        Note: kwargs passed to session.get().
+        """
+        pdf_headers = {
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;q=0.9,"
+                "image/avif,image/webp,*/*;q=0.8"
+            ),
+            "Host": "www.supremecourt.gov",
+            "Pragma": "no-cache",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-User": "same-origin",
+            "Sec-GPC": "1",
+        }
+
+        for i in range(retries):
+            response = download_client(
+                url=url,
+                headers=pdf_headers,
+                **kwargs,
+            )
+            # allow caller to handle status code 304 responses
+
+            try:
+                result = response_handler(response)
+            except requests.exceptions.HTTPError as he:
+                logger.debug(f"Retry {i + 1} because {repr(he)}")
+                sleep((i * delay) + jitter(delay))
+            else:
+                return result
+
+    @staticmethod
+    def docket_pdf_parser(pdf: bytes) -> set:
+        """Extract docket numbers from an Orders PDF. In-memory objects are passed to
+        the 'stream' argument."""
+        if isinstance(pdf, BytesIO):
+            open_kwds = dict(stream=pdf)
+        elif isinstance(pdf, bytes):
+            open_kwds = dict(stream=BytesIO(pdf))
+        else:
+            open_kwds = dict(filename=pdf)
+
+        _pdf = fitz.open(**open_kwds)
+        text_pages = [pg.get_text() for pg in _pdf]
+        # pdf_string = "\n".join()
+        # matches = utils.orders_docket_regex.findall(pdf_string)
+        # # clean up dash characters so only U+002D is used
+        # docket_set = set(
+        #     [utils.dash_regex.sub("\u002d", dn) for dn in matches]
+        # )
+        return text_pages

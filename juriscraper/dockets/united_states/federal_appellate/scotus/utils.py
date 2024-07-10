@@ -68,7 +68,7 @@ def padocket(x) -> str:
         )
         return str(yyyy)[2:4] + docket_type + ("0000" + str(case_num))[-5:]
     elif isinstance(x, str):
-        assert docket_number_regex.search(x)
+        assert docket_number_regex.search(x), f"{x} not a docket number"
         return x[:3] + ("0000" + str(int(x[3:])))[-5:]
 
 
@@ -178,7 +178,6 @@ def make_hash(b: bytes) -> str:
     trusted.
     """
     return sha1(b, usedforsecurity=False).hexdigest()
-
 
 def chunker(iterable, chunksize=100):
     """Break a large iterable into a generator of smaller chunks.
