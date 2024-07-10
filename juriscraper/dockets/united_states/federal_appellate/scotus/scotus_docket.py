@@ -137,6 +137,13 @@ removed_regex = re.compile(r"Case removed from Docket")
 cert_dismissed_regex = re.compile(r"Writ of Certiorari Dismissed")
 
 distributed_regex = re.compile(r"(?<=DISTRIBUTED)(?:.*?)([0-9/]+)", flags=re.I)
+amicus_regex = re.compile(
+    (
+        r"(?<=Brief amicus curiae of )(.*?)( in support of neither party)?\s?"
+        r"(?=[fF]iled|(Corrected version submitted)|submitted)"
+    ),
+    flags=re.I,
+)
 
 # use this only after splitting entry text on '.'
 wildcard_petition_regex = re.compile(
@@ -217,6 +224,7 @@ class SCOTUSDocketReport:
         self._attorneys = None
         self._dispositions = []
         self._distributions = []
+        self._amici = set()
 
     @classmethod
     def from_response(cls, response: requests.Response, **kwargs):
@@ -402,6 +410,31 @@ class SCOTUSDocketReport:
 
             self._docket_entries = docket_entries
         return self._docket_entries
+
+    def _amicus_entries(self) -> list:
+        """Subset of docket entries containing amicus curiæ briefs."""
+        entries = []
+
+        for e in self.docket_entries:
+            # only take the briefing document; skip boilerplate docs
+            if (
+                amicus_regex.search(e["description"])
+                and "not accepted for filing" not in e["description"]
+                and e["document_title"] in {"Main Document", "Other"}
+            ):
+                entries.append(e)
+        return entries
+
+    @property
+    def amici(self) -> set:
+        """List the amici curiae who file briefs in this docket."""
+        if self._amici == set():
+
+            for e in self._amicus_entries():
+                match = amicus_regex.search(e["description"])
+                self._amici.add(match.group(1))
+
+        return set(sorted(self._amici))
 
     def _get_docketed_date(self):
         """If this field is missing, substitute the date of the first docket entry."""
