@@ -92,7 +92,8 @@ class FreeOpinionReport(BaseReport):
                 "all_case_ids": "0",
             }
             response = self.session.post(f"{self.url}?{nonce}", data=data)
-            responses.append({"response": response, "start": _start, "end": _end, "court_id": self.court_id})
+            responses.append({"response": response, "start": _start, "end": _end,
+                              "court_id": self.court_id})
 
         self.responses = responses
         self.parse()
