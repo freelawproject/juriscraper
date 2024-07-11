@@ -16,6 +16,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.10 - 2024-07-11**
+
+Features:
+  - Fixes colo scraper expected_content_type
+
+## Past
+
 **2.6.9 - 2024-07-10**
 
 Features:
@@ -31,8 +38,6 @@ Features:
   - Pacer Email TXNB
 - Adds
   - ColoCtApp Dynamic backscraper
-
-## Past
 
 **2.6.8 - 2024-07-03**
 
