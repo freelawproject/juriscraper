@@ -8,6 +8,7 @@ History:
     2014-09-02: Bug fix by Jon Andersen - recognize "(NFP)" in case name
     2014-09-03: Moved to backscrapers
 """
+
 import time
 from datetime import date
 
