@@ -21,6 +21,12 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    """
+    Backscraper is implemented on `united_states_backscrapers.state.mass.py`
+    """
+
+    court_identifier = "SJC"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.mass.gov/info-details/new-opinions"
