@@ -27,9 +27,11 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         return [
-            "Published"
-            if "Published" in row["documentDescription"]
-            else "Unpublished"
+            (
+                "Published"
+                if "Published" in row["documentDescription"]
+                else "Unpublished"
+            )
             for row in self.html
         ]
 
