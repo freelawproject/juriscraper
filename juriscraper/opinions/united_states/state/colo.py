@@ -12,12 +12,9 @@ History:
     - 2024-07-04: Update to new site, grossir
 """
 
-import re
 from datetime import date, datetime
-from typing import Any, Dict, Tuple
+from typing import Tuple
 from urllib.parse import urlencode
-
-from lxml import html
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import make_date_range_tuples
@@ -62,6 +59,7 @@ class Site(OpinionSiteLinear):
                 "X-Webapp-Seed": "9887408",
             }
         )
+        self.expected_content_types = ["text/html"]
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
