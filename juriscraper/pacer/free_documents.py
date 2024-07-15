@@ -34,6 +34,7 @@ class FreeOpinionReport(BaseReport):
 
     def __init__(self, court_id, pacer_session=None):
         self.responses = []
+        self.responses_with_params = []
         self.trees = []
         super().__init__(court_id, pacer_session)
 
@@ -66,6 +67,7 @@ class FreeOpinionReport(BaseReport):
 
         dates = make_date_range_tuples(start, end, gap=day_span)
         responses = []
+        responses_with_params = []
         for _start, _end in dates:
             _start = _start.strftime("%m/%d/%Y")
             _end = _end.strftime("%m/%d/%Y")
@@ -92,10 +94,11 @@ class FreeOpinionReport(BaseReport):
                 "all_case_ids": "0",
             }
             response = self.session.post(f"{self.url}?{nonce}", data=data)
-            responses.append({"response": response, "start": _start, "end": _end,
-                              "court_id": self.court_id})
+            responses.append(response)
+            responses_with_params.append({"response": response, "start": _start, "end": _end, "court_id": self.court_id})
 
         self.responses = responses
+        self.responses_with_params = responses_with_params
         self.parse()
 
     def parse(self):
@@ -105,8 +108,7 @@ class FreeOpinionReport(BaseReport):
         # Reset self.trees before each run or successive runs will add more and
         # more rows.
         self.trees = []
-        for item in self.responses:
-            response = item.get("response")
+        for response in self.responses:
             response.raise_for_status()
             set_response_encoding(response)
             text = clean_html(response.text)
