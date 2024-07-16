@@ -4,6 +4,7 @@ Court Short Name: MO
 Author: Ben Cassedy
 Date created: 04/27/2014
 """
+
 from datetime import date
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -38,8 +39,8 @@ class Site(OpinionSiteLinear):
                         "docket": docket[:-1],
                         "url": url,
                         "date": date,
-                        "dispostion": vote.split(".")[0].strip(),
-                        "judge": author,
-                        "judges": vote.split(".", 1)[1].strip(),
+                        "disposition": vote.split(".")[0].strip(),
+                        "author": author,
+                        "judge": vote.split(".", 1)[1].strip(),
                     }
                 )

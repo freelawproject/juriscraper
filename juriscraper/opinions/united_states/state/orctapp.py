@@ -7,7 +7,6 @@ History:
     - 2023-11-18: Created
 """
 
-
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
