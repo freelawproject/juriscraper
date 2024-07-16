@@ -1,0 +1,107 @@
+Return-Path: <ecf_mail@nhb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id oib6vl71gp8m14jnarbscvk1biuh2a87unknkh01
+ for user@recap.email;
+ Mon, 15 Jul 2024 19:36:54 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nhb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ecf_mail@nhb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nhb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=ecf_mail@nhb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=nhb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIOUpFR1hFY2hUVHlLYWdhTUh5ajc1dEhPSUI3Tnh2TlZkR1RSZ2lTc3ZDSmJDTXpneHJQUWpXQ1k2b0N3MXRlMlJHYStoY3ltaVBnM0RQKzFEaDNiUGlObHVVNlorR2RWQm55dkZqZFRwVUpoQlJtY0p1Z1F2WkozcitYY1g1dUp6OFhLdFFUdzhUNzViMkwrOGZ3WG5QY2RhdXIvRHRXUFdKRWdoYW9UN0JNRE9DNE9TbHEyVjB3dFF3TDlOeVowdHVFVExydENmMzRwNmpjWkN2WG1WZ2lHQVRPUGtyRlRqSU1MWnBra3Q4OFlyTEVGZ0xQZDdPMmtNRjBUV1F5eWNCNk5pYkxQZFROSmVBYVlxWTZOenhnc3RKeFc5NnVZaThrY2xvUHZFT0E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=z8NiVi7meTZa3S9xWJR30O5D9b5pnNLDZed6H/SDNBPdk7/Rt9Ekc7i0aZZbICgPWSYHPRpnvv126U4t5ltahjNMVoDZNgjQlI8GbjMDZe57WoaFJ/YcY81vNKxX9AcaZK6x2UAevpYzg7KUtKY7e7FVQ9d+HC2OttEAfrZEJ1M=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1721072215; v=1; bh=irsOVo9gYcfgp8l1YprBuQ/xgshCQcorC2tXFzchBt4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.55
+Received: from nhbdb.nhb.gtwy.dcn ([156.119.190.55])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 15 Jul 2024 15:36:54 -0400
+Received: from nhbdb.nhb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nhbdb.nhb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 46FJa8Pv042509
+	for <user@recap.email>; Mon, 15 Jul 2024 15:36:10 -0400
+Received: (from ecf_web@localhost)
+	by nhbdb.nhb.gtwy.dcn (8.14.7/8.14.4/Submit) id 46FJZW9x041355;
+	Mon, 15 Jul 2024 15:35:32 -0400
+Date: Mon, 15 Jul 2024 15:35:32 -0400
+MIME-Version:1.0
+From:ecf_mail@nhb.uscourts.gov
+To:user@recap.email
+Message-Id:<6625450@nhb.uscourts.gov>
+Subject:21-10245-BAH Chapter 13 Mykle Lepene  Affidavit of Compliance with Discharge Requirements
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Hampshire Live Database</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Sumski, Lawrence entered on 7/15/2024 at 3:35 PM EDT and filed on 7/15/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Mykle Lepene                                      </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nhb.uscourts.gov/cgi-bin/DktRpt.pl?117776>21-10245-BAH</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nhb.uscourts.gov/doc1/11606636485?pdf_header=&magic_num=10004684&de_seq_num=302&caseid=117776'>87</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Affidavit of Compliance with Discharge Requirements pursuant to Section 1328.  (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+<BR><STRONG>Case Number: 21-10245-BAH</STRONG>
+<BR><STRONG>Document description:</STRONG> 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\21-10245 xPleading AFFIDAVIT re Discharge of Debtor.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=7/15/2024] [FileNumber=6625433-0]
+<BR><TAB> [23845912d719a3e9f8b9bd699c6f8bbee251bcaba2f812a4f43747c6a442d367cdaa
+<BR><TAB>ab007f3a5efc6b972d526811f5885f383c3c6c597560f4df46d240cc4407]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+21-10245-BAH Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName M. LastName on behalf of Creditor Eliza Conley-Lepene</span>
+<br>attorney@lawfirm.com,  attoreny@lawfirm.com;user@recap.email
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor Mykle  Lepene</span>
+<br>name@lawfirm.org,  name0@lawfirm.org;name1@lawfirm.org;name2@lawfirm.org;name3@lawfirm.org
+<BR>
+
+<BR>
+<B>
+21-10245-BAH Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
