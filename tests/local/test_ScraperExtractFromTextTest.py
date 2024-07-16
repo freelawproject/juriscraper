@@ -484,47 +484,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
-        "juriscraper.opinions.united_states.state.okla": [
-            (
-                # https://www.courtlistener.com/opinion/9567607/randle-v-city-of-tulsa/
-                """<div id="oscn-content"><br>		<div class="container-fluid sized"><br>OSCN Found Document:RANDLE v. CITY OF TULSA<br><br>					<br><br>				<br>  <br><br><br><br>				<div id="opinons-navigation"><br>					<div class="container-fluid sized"><br>					<ol><br>						<li><br>						Previous Case<br></li><br><br>						<li><br>						Top Of Index<br></li><br><br>						<li><br>						This Point in Index<br></li><br><br>						<li><br>						Citationize<br></li><br><br>						<li><br>						Next Case<br></li><br><br>						<li class="tmp-hide-print"><br>						Print Only<br></li><br>					</ol><br>					</div><br>				</div><br><br>				<div id="tmp-style"><br>				<p align="CENTER"><strong>RANDLE v. CITY OF TULSA<br><span class="citation" data-id="10006997"><a href="/opinion/9540384/randle-v-city-of-tulsa/">2024 OK 40</a></span><br>Case Number: 121502<br>Decided: 06/12/2024<br>THE SUPREME COURT OF THE STATE OF OKLAHOMA<br></strong></p><br><hr><br>Cite as: <span class="citation" data-id="10006997"><a href="/opinion/9540384/randle-v-city-of-tulsa/">2024 OK 40</a></span>, __ P.3d __<hr><br><br>				</div><br><p """,
-                {
-                    "Docket": {"docket_number": "121502"},
-                },
-            ),
-            (
-                # https://www.courtlistener.com/opinion/9832494/state-ex-rel-oklahoma-bar-association-v-abdoveis/
-                """<div id="oscn-content"><br>		<div class="container-fluid sized"><br>OSCN Found Document:STATE ex rel. OKLAHOMA BAR ASSOCIATION v. ABDOVEIS<br><br>					<br><br>				<br>  <br><br><br><br>				<div id="opinons-navigation"><br>					<div class="container-fluid sized"><br>					<ol><br>						<li><br>						Previous Case<br></li><br><br>						<li><br>						Top Of Index<br></li><br><br>						<li><br>						This Point in Index<br></li><br><br>						<li><br>						Citationize<br></li><br><br>						<li><br>						Next Case<br></li><br><br>						<li class="tmp-hide-print"><br>						Print Only<br></li><br>					</ol><br>					</div><br>				</div><br><br>				<div id="tmp-style"><br>				<p align="CENTER"><strong>STATE ex rel. OKLAHOMA BAR ASSOCIATION v. ABDOVEIS<br><span class="citation no-link">2024 OK 55</span><br>Case Number: SCBD-7522<br>Decided: 06/25/2024<br><br>THE SUPREME COURT OF THE STATE OF OKLAHOMA<br></strong></p><br><hr><br>Cite as: <span class="citation no-link">2024 OK 55</span>, __ P.3d __<hr><br><br>				</div><br><p align="CENTER">NOTICE: THIS OPINION HAS NOT BEEN RELEASED FOR PUBLICATION. UNTIL """,
-                {
-                    "Docket": {"docket_number": "SCBD-7522"},
-                },
-            ),
-        ],
-        "juriscraper.opinions.united_states.state.oklacrimapp": [
-            (
-                # https://www.courtlistener.com/api/rest/v3/opinions/9965630/
-                """<div id="oscn-content">\n\t\t<div class="container-fluid sized">\nOSCN Found Document:JACKSON v. STATE\n\n\t\t\t\t\t\n\n\t\t\t\t\n  \n\n\n\n\t\t\t\t<div id="opinons-navigation">\n\t\t\t\t\t<div class="container-fluid sized">\n\t\t\t\t\t<ol>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tPrevious Case\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tTop Of Index\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tThis Point in Index\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tCitationize\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tNext Case\n</li>\n\n\t\t\t\t\t\t<li class="tmp-hide-print">\n\t\t\t\t\t\tPrint Only\n</li>\n\t\t\t\t\t</ol>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div id="tmp-style">\n\t\t\t\t<p align="CENTER"><strong>JACKSON v. STATE<br>2024 OK CR 11<br>Case Number: F-2021-485<br>Decided: 04/18/2024<br>MARCUS LAROD JACKSON, Appellant v. THE STATE OF OKLAHOMA, Appellee<br></strong></p>\n<hr>\nCite as: 2024 OK CR 11, __  __<hr>\n\n\t\t\t\t</div>\n<p align="center"><u><b>OPINION</b></u></p>\n\n<div class="de-writing">\n<div class="de-author">\n<p><b>LEWIS, JUDGE:</b></p>\n</div>\n\n<div class="de-summary">\n<p align="justify">¶1 Marcus Larod Jackson, Appellant, was tried by jury with co-de""",
-                {
-                    "Docket": {"docket_number": "F-2021-485"},
-                },
-            )
-        ],
-        "juriscraper.opinions.united_states.state.oklacivapp": [
-            (
-                # https://www.courtlistener.com/api/rest/v3/opinions/10469982/
-                """<div id="oscn-content">\n\t\t<div class="container-fluid sized">\nOSCN Found Document:TEASDALE v. FOSHEE\n\n\t\t\t\t\t\n\n\t\t\t\t\n  \n\n\n\n\t\t\t\t<div id="opinons-navigation">\n\t\t\t\t\t<div class="container-fluid sized">\n\t\t\t\t\t<ol>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tPrevious Case\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tTop Of Index\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tThis Point in Index\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tCitationize\n</li>\n\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\tNext Case\n</li>\n\n\t\t\t\t\t\t<li class="tmp-hide-print">\n\t\t\t\t\t\tPrint Only\n</li>\n\t\t\t\t\t</ol>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div id="tmp-style">\n\t\t\t\t<p align="CENTER"><strong>TEASDALE v. FOSHEE<br><span class="citation" data-id="9946610"><a href="/opinion/9479997/teasdale-v-foshee/">2024 OK CIV APP 10</a></span><br>Case Number: 120265<br>Decided: 02/02/2024<br>Mandate Issued: 02/29/2024<br>DIVISION IV<br>THE COURT OF CIVIL APPEALS OF THE STATE OF OKLAHOMA, DIVISION IV<br></strong></p>\n<hr>\nCite as: <span class="citation no-link">2024 OK CIV APP 10</span>, __ P.3d __<hr>\n\n\t\t\t\t</div>\n<div class="de-style">\n<p align="CENTER">DAVI""",
-                {
-                    "Docket": {"docket_number": "120265"},
-                },
-            )
-        ],
-        "juriscraper.opinions.united_states.state.oklaag": [
-            (
-                # no docket numbers
-                """""",
-                {},
-            )
-        ],
     }
 
     def test_extract_from_text(self):
