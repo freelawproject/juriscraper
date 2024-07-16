@@ -575,7 +575,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb", "deb", "pamb"]:
+        elif self.court_id in ["pawb", "ndb", "deb", "pamb", "nhb"]:
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
             if case_name in subject:
@@ -590,6 +590,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 short_description = subject.split(case_name.split(" and ")[0])[
                     -1
                 ]
+        elif self.court_id in [
+            "tnmb",
+        ]:
+            # In: Docket Order - Continue Hearing (Auto) Ch 13 Jeffery Wayne Lovell and Tiffany Nicole Lovell 1:24-bk-01377
+            # Out: Docket Order - Continue Hearing (Auto) Ch 13
+            if case_name in subject:
+                short_description = subject.split(case_name)[0]
         else:
             logger.error(
                 "Short description has no parsing for bankruptcy court '%s'",
