@@ -8,8 +8,9 @@ from . import vt
 
 
 class Site(vt.Site):
+    division = 1
+    days_interval = 100
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.division = 1
-        self.url = f"https://www.vermontjudiciary.org/opinions-decisions?f%5B0%5D=court_division_opinions_library_%3A{self.division}"  # supreme

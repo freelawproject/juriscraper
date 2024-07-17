@@ -7,7 +7,6 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-
 from lxml import html
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
