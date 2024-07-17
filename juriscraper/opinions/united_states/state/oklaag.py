@@ -5,33 +5,24 @@
 # Reviewer: mlr
 # Date: 2014-07-05
 
-from datetime import date
-
-from lxml import html
+from datetime import datetime
 
 from juriscraper.opinions.united_states.state import okla
 
-## WARNING: THIS SCRAPER IS FAILING:
-## This scraper is succeeding in development, but
-## is failing in production.  We are not exactly
-## sure why, and suspect that the hosting court
-## site may be blocking our production IP and/or
-## throttling/manipulating requests from production.
-
 
 class Site(okla.Site):
+    # Inherit cleanup_content from Okla
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        year = date.today().year
-        self.url = f"http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1"
         self.court_id = self.__module__
-        self.status = "Unpublished"
+        year = datetime.today().year
+        self.url = f"https://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year={year}&level=1"
+        self.status = "Published"
+        self.expected_content_types = ["text/html"]
 
     def _process_html(self):
         for row in self.html.xpath("//div/p['@class=document']")[::-1]:
-            if "OK" not in row.text_content():
-                continue
-            if "EMAIL" in row.text_content():
+            if "OK" not in row.text_content() or "EMAIL" in row.text_content():
                 continue
             citation, date, name = row.text_content().split(",", 2)
             self.cases.append(
@@ -43,11 +34,3 @@ class Site(okla.Site):
                     "citation": citation,
                 }
             )
-
-    @staticmethod
-    def cleanup_content(content):
-        tree = html.fromstring(content)
-        core_element = tree.xpath('//div[@id="oscn-content"]/div')[0]
-        return html.tostring(
-            core_element, pretty_print=True, encoding="unicode"
-        ).encode("utf-8")
