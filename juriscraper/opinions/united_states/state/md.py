@@ -13,7 +13,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    base_url = "http://www.mdcourts.gov/cgi-bin/indexlist.pl?court={}&year={}&order=bydate&submit=Submit"
+    base_url = "https://www.mdcourts.gov/cgi-bin/indexlist.pl?court={}&year={}&order=bydate&submit=Submit"
     court = "coa"
     start_year = 1995
     current_year = date.today().year
@@ -36,11 +36,17 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//table//tr[td and not (.//h2)]"):
             url = row.xpath("td//a[contains(@href,'pdf')]/@href")[0]
             docket = row.xpath("td[1]//text()")[0]
-            date_filed = row.xpath("td[3]/font/text()")[0].split()[-1]
+            date_filed, _, other_date = row.xpath("td[3]/font/text()")[
+                0
+            ].partition(" ")
             name = row.xpath("td[5]/font/text()")[0].split("(")[0].strip()
 
+            per_curiam = False
             judge = row.xpath("td[4]/font/text()")[0].split("()")[0].strip()
             if judge in self.no_judge_strings:
+                # Other strings in self.no_judge_strings point to
+                # Per Curiam opinions
+                per_curiam = judge != "Order"
                 judge = ""
 
             cite = row.xpath("td[2]/font/text()")[0].strip()
@@ -55,6 +61,8 @@ class Site(OpinionSiteLinear):
                     "date": date_filed,
                     "docket": docket,
                     "citation": cite,
+                    "per_curiam": per_curiam,
+                    "other_date": other_date.strip(),
                 }
             )
 

@@ -37,6 +37,7 @@ class OpinionSite(AbstractSite):
             "joined_by",
             "per_curiam",
             "types",
+            "other_dates",
         ]
         self._req_attrs = [
             "case_dates",
@@ -128,6 +129,9 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_per_curiam(self):
+        return None
+
+    def _get_other_dates(self):
         return None
 
     def extract_from_text(self, scraped_text):
