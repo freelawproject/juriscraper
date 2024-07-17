@@ -98,19 +98,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "2021-SCC-0017-CIV"}},
             ),
         ],
-        "juriscraper.opinions.united_states.state.colo": [
-            (
-                """       The Supreme Court of the State of Colorado 2 East 14th Avenue • Denver, Colorado 80203                                  2023 CO 63 Supreme Court Case No. 23SA300""",
-                {
-                    "Citation": {
-                        "volume": "2023",
-                        "reporter": "CO",
-                        "page": "63",
-                        "type": 8,
-                    }
-                },
-            ),
-        ],
         "juriscraper.opinions.united_states.federal_special.cavc": [
             (
                 """           UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS\n\n                                             NO. 22-3306\n\n                               GEORGE D. PREWITT, JR., PETITIONER,\n\n                                                  V.\n\n                                     DENIS MCDONOUGH,\n                         SECRETARY OF VETERANS AFFAIRS, RESPONDENT.\n\n                       Before""",
@@ -482,6 +469,20 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                 },
             ),
+        ],
+        "juriscraper.opinions.united_states.state.nd": [
+            (
+                # https://www.ndcourts.gov/supreme-court/opinions/118403
+                """IN THE SUPREME COURTSTATE OF NORTH DAKOTA\\n2023 ND 157\\nIn the Interest of A.B., a child\\nLeslie Johnson, L.B.S.W., Cass\\nCounty Human Service Zone, Petitioner and Appellee\\nv.\\nA.B., a child, Respondent\\nand\\nJ.S., mother, Respondent and Appellant\\nNo. 20230197\\nIn the Interest of A.C., minor child""",
+                {
+                    "Citation": {
+                        "volume": "2023",
+                        "reporter": "ND",
+                        "page": "157",
+                        "type": 8,
+                    },
+                },
+            )
         ],
     }
 

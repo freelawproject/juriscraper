@@ -9,6 +9,7 @@ History:
  - Updated by William E. Palin, 2022-05-17
  - Updated by William E. Palin, 2023-01-26
 """
+
 from datetime import date, timedelta
 
 from dateutil.rrule import MONTHLY, rrule
@@ -47,12 +48,18 @@ class Site(OralArgumentSiteLinear):
 
         :return:None
         """
+        wdt_nonce = self.html.xpath(
+            ".//input[@id='wdtNonceFrontendServerSide_8']/@value"
+        )
+        today = date.today().strftime("%m/%d/%Y")
+        earlier = (date.today() - timedelta(days=30)).strftime("%m/%d/%Y")
         self.parameters = {
             "draw": "4",
             "columns[0][data]": "0",
             "columns[0][name]": "Arg_Date",
             "columns[0][searchable]": "true",
             "columns[0][orderable]": "true",
+            "columns[0][search][value]": f"{earlier}|{today}",
             "columns[0][search][regex]": "false",
             "columns[1][data]": "1",
             "columns[1][name]": "Appeal_Number",
@@ -72,16 +79,9 @@ class Site(OralArgumentSiteLinear):
             "length": "1000",
             "search[value]": "",
             "search[regex]": "false",
-            "wdtNonce": self.html.xpath(
-                ".//input[@id='wdtNonceFrontendEdit_8']/@value"
-            ),
+            "wdtNonce": wdt_nonce,
             "sRangeSeparator": "|",
         }
-        self.today = date.today().strftime("%m/%d/%Y")
-        self.earlier = (date.today() - timedelta(days=30)).strftime("%m/%d/%Y")
-        self.parameters[
-            "columns[0][search][value]"
-        ] = f"{self.earlier}|{self.today}"
 
     def _fetch_json(self):
         """Update parameters and fetch json
@@ -124,8 +124,8 @@ class Site(OralArgumentSiteLinear):
         :return: None
         """
         self.end = (d + timedelta(days=31)).strftime("%m/%d/%Y")
-        self.parameters[
-            "columns[0][search][value]"
-        ] = f'{d.strftime("%m/%d/%Y")}|{self.end}'
+        self.parameters["columns[0][search][value]"] = (
+            f'{d.strftime("%m/%d/%Y")}|{self.end}'
+        )
         self.html = self._download()
         self._process_html()

@@ -485,18 +485,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
                     document_url
                 )
-                entries[0][
-                    "pacer_magic_num"
-                ] = get_pacer_magic_num_from_doc1_url(
-                    document_url, self.appellate
+                entries[0]["pacer_magic_num"] = (
+                    get_pacer_magic_num_from_doc1_url(
+                        document_url, self.appellate
+                    )
                 )
                 if not self._is_appellate():
-                    entries[0][
-                        "pacer_case_id"
-                    ] = get_pacer_case_id_from_doc1_url(document_url)
-                    entries[0][
-                        "pacer_seq_no"
-                    ] = get_pacer_seq_no_from_doc1_url(document_url)
+                    entries[0]["pacer_case_id"] = (
+                        get_pacer_case_id_from_doc1_url(document_url)
+                    )
+                    entries[0]["pacer_seq_no"] = (
+                        get_pacer_seq_no_from_doc1_url(document_url)
+                    )
 
             # Fallback on the Case URL to get the pacer_case_id.
             if not entries[0]["pacer_case_id"] and case_url:
@@ -516,9 +516,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param subject: The email subject string.
         :return: The parsed short description.
         """
-        if len(self.docket_numbers) > 1:
-            # We haven't implemented short_description parsing for bankruptcy multi docket NEF.
-            # See paeb_3.txt for a test of multi docket NEF
+
+        # See paeb_3.txt for a test of multi docket NEF
+        # So far, we have only seen 2-docket NEF
+        is_multidocket = len(self.docket_numbers) == 2
+        if len(self.docket_numbers) > 1 and self.court_id != "njb":
             logger.error(
                 "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
                 self.court_id,
@@ -534,7 +536,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         docket_number = self.docket_numbers[0]
         case_name = self.case_names[0]
 
-        if self.court_id in ["cacb", "ctb", "cob", "ianb"]:
+        if is_multidocket:
+            # Docket number / case name from one or both of the 2 cases
+            # may be used in the subject string
+            if self.docket_numbers[1] in subject:
+                docket_number = self.docket_numbers[1]
+            if self.case_names[1] in subject:
+                case_name = self.case_names[1]
+
+        if self.court_id in ["cacb", "ctb", "cob", "ianb", "nyeb", "txnb"]:
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
             # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
@@ -542,7 +552,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["njb", "dcb", "vaeb", "paeb"]:
+        elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb"]:
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
             # Out: Determination of Adjournment Request
             short_description = subject.split(docket_number)[-1]
@@ -565,10 +575,28 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb"]:
+        elif self.court_id in ["pawb", "ndb", "deb", "pamb", "nhb"]:
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
-            short_description = subject.split(case_name)[-1]
+            if case_name in subject:
+                short_description = subject.split(case_name)[-1]
+            elif case_name[:18] in subject:
+                # See deb_2.txt, pamb_1 and pamb_3 for examples
+                short_description = subject.split(case_name[:18])[-1]
+            elif (
+                " and " in case_name and case_name.split(" and ")[0] in subject
+            ):
+                # See pamb_2.txt
+                short_description = subject.split(case_name.split(" and ")[0])[
+                    -1
+                ]
+        elif self.court_id in [
+            "tnmb",
+        ]:
+            # In: Docket Order - Continue Hearing (Auto) Ch 13 Jeffery Wayne Lovell and Tiffany Nicole Lovell 1:24-bk-01377
+            # Out: Docket Order - Continue Hearing (Auto) Ch 13
+            if case_name in subject:
+                short_description = subject.split(case_name)[0]
         else:
             logger.error(
                 "Short description has no parsing for bankruptcy court '%s'",

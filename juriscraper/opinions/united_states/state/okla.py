@@ -7,8 +7,6 @@
 # Date: 2014-07-05
 
 
-from datetime import datetime
-
 from lxml import html
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -18,32 +16,30 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = datetime.today().year
-        self.url = f"https://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year={year}&level=1"
+        self.url = "https://www.oscn.net/decisions/ok/30"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
 
     def _process_html(self):
-        for row in self.html.xpath("//div/p['@class=document']")[::-1]:
-            if "OK" not in row.text_content():
-                continue
-            if "EMAIL" in row.text_content():
-                continue
-            if "P.3d" in row.text_content():
-                citation1, citation2, date, name = row.text_content().split(
-                    ",", 3
-                )
-                citation = f"{citation1} {citation2}"
-            else:
-                citation, date, name = row.text_content().split(",", 2)
+        for row in self.html.xpath(".//li[@class='decision']"):
+            name, citation = row.xpath(".//a/text()")
+            url = row.xpath(".//a/@href")[0]
+            date_filed_raw = row.xpath(".//span[@class='decidedDate']/text()")[
+                0
+            ].strip()
+            docket_number_raw = row.xpath(
+                ".//span[@class='caseNumber']/text()"
+            )[0].strip()
+            summary = row.xpath(".//p[@class='summaryParagraph']/text()")[0]
 
             self.cases.append(
                 {
-                    "date": date,
+                    "date": date_filed_raw.split()[1],
                     "name": name,
-                    "docket": citation,
-                    "url": row.xpath(".//a")[0].get("href"),
+                    "docket": docket_number_raw.split()[1],
                     "citation": citation,
+                    "url": url,
+                    "summary": summary.strip(),
                 }
             )
 

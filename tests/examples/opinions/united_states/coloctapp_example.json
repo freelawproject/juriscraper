@@ -1,0 +1,459 @@
+{
+    "provider": "content-api",
+    "count": 64838,
+    "results": [
+        {
+            "id": 1035297640,
+            "type": "document",
+            "properties": [
+                {
+                    "property": {
+                        "id": "k06opofdgweyj",
+                        "label": "Court"
+                    },
+                    "values": [
+                        "Colorado Court of Appeals"
+                    ]
+                },
+                {
+                    "property": {
+                        "id": "p08",
+                        "label": "Date"
+                    },
+                    "values": [
+                        "May 16, 2024"
+                    ]
+                }
+            ],
+            "title": "People ex rel. T.C.",
+            "country": {
+                "id": "US",
+                "label": "Estados Unidos"
+            },
+            "detail_json": {
+                "parent": {
+                    "id": 1695584,
+                    "type": null,
+                    "parent": {
+                        "id": 14024,
+                        "type": "source",
+                        "title": "Colorado",
+                        "public_url": "http://case-law.vlex.com/source/14024",
+                        "copyright": null,
+                        "title.en": "CO",
+                        "meta": null,
+                        "frontpage_image": null,
+                        "frontpage_image_highres": null,
+                        "jurisdiction_id": "US",
+                        "unpublished_source": false
+                    },
+                    "title": "Colorado Court of Appeals",
+                    "subtitle": null,
+                    "alternative_key": "desc1_14024_02",
+                    "public_url": "https://case-law.vlex.com/source/14024/chapter/colorado-court-of-appeals-1695584",
+                    "meta": {
+                        "children": "/v1/chapters/1695584/children.json"
+                    },
+                    "client_url": "/search/jurisdiction:US+content_type:2+source:14024+emisor_1:02/*"
+                },
+                "id": 1035297640,
+                "type": "document",
+                "published_at": "2024-05-18",
+                "slug": "people-ex-rel-t",
+                "title": "People ex rel. T.C.",
+                "counters": {
+                    "cited_in": {
+                        "negative": 0,
+                        "positive": 0,
+                        "neutral": 0,
+                        "total": 0
+                    },
+                    "cited_authorities": 0,
+                    "versions": false,
+                    "amendments": 0
+                },
+                "is_consolidated_text": false,
+                "history_and_versions": null,
+                "expressions": [
+                    {
+                        "vid": 1035297640,
+                        "label": "Document",
+                        "citedAs": null,
+                        "contentAvailable": true,
+                        "isAuthorized": true,
+                        "tabConfig": {
+                            "title": "Tab",
+                            "type": "tab"
+                        },
+                        "type": null,
+                        "kindOf": []
+                    }
+                ],
+                "followable": false,
+                "reliable_lang": "en",
+                "public_url": "https://colorado.vlex.io/vid/people-ex-rel-t-1035297640",
+                "doc_date": "2024-05-16",
+                "country": {
+                    "id": "US",
+                    "language": "EN",
+                    "name": "United States"
+                },
+                "translatable": true,
+                "iceberg_record_info": {
+                    "iceberg_record_id": "r06sdmzibb44y0",
+                    "iceberg_record_owner": "ICBG",
+                    "iceberg_organization_id": "oupqvi"
+                },
+                "children": [],
+                "formats": [
+                    {
+                        "mime_type": "application/pdf",
+                        "show_inline": false,
+                        "url": "pdf/1035297640",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    },
+                    {
+                        "mime_type": "application/docx",
+                        "url": "docx/1035297640",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    }
+                ],
+                "has_plain_text": true,
+                "properties": [
+                    {
+                        "property": {
+                            "id": "p06oq53ny752l",
+                            "label": "Docket Number"
+                        },
+                        "values": [
+                            "23CA1539"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "p06qozl99eoi12p",
+                            "label": "Decision Date"
+                        },
+                        "values": [
+                            "16 May 2024"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06p7opb445qoof",
+                            "label": "Parties"
+                        },
+                        "values": [
+                            "The People of the State of Colorado, Appellee, In the Interest of T.C., Jr., a Child, and Concerning L.N.P. and T.C., Appellants."
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06opofdgweyj",
+                            "label": "Court"
+                        },
+                        "values": [
+                            "Colorado Court of Appeals"
+                        ]
+                    }
+                ],
+                "library": {
+                    "id": 14,
+                    "title": "Case Law",
+                    "public_url": "http://case-law.vlex.com",
+                    "type": "library",
+                    "video_library": false,
+                    "library_type": {
+                        "id": 2,
+                        "content_type": "Jurisprudencia"
+                    },
+                    "meta": {
+                        "children": "/v1/libraries/14/children.json"
+                    },
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    }
+                },
+                "abstract_is_analysis": false,
+                "abstract": null,
+                "meta": {
+                    "vincent": "/v1/vincent/vid_analysis/1035297640"
+                },
+                "source": {
+                    "id": 14024,
+                    "type": "source",
+                    "title": "Colorado",
+                    "public_url": "http://case-law.vlex.com/source/14024",
+                    "copyright": null,
+                    "title.en": "CO",
+                    "meta": null,
+                    "frontpage_image": null,
+                    "frontpage_image_highres": null,
+                    "jurisdiction_id": "US",
+                    "unpublished_source": false,
+                    "search_scope": "jurisdiction:US+content_type:2+source:14024",
+                    "isbn": null,
+                    "peer_reviewed": null,
+                    "description": null,
+                    "warning": null,
+                    "full_coverage_from": null,
+                    "source_description": null,
+                    "first_record_at": "1864-01-01",
+                    "last_record_at": "2024-07-01",
+                    "content_type": "Jurisprudencia",
+                    "video_source": false,
+                    "date": "2020-11-12",
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    },
+                    "language": "en",
+                    "alternate_languages": [],
+                    "publisher": null
+                }
+            }
+        },
+        {
+            "id": 1035272272,
+            "type": "document",
+            "properties": [
+                {
+                    "property": {
+                        "id": "k06opofdgweyj",
+                        "label": "Court"
+                    },
+                    "values": [
+                        "Colorado Court of Appeals"
+                    ]
+                },
+                {
+                    "property": {
+                        "id": "p08",
+                        "label": "Date"
+                    },
+                    "values": [
+                        "May 16, 2024"
+                    ]
+                },
+                {
+                    "property": {
+                        "id": "pCitations",
+                        "label": "Citations"
+                    },
+                    "values": [
+                        {
+                            "value": "2024 COA 54"
+                        }
+                    ]
+                }
+            ],
+            "title": "Ortiz v. Progressive Direct Ins. Co.",
+            "country": {
+                "id": "US",
+                "label": "Estados Unidos"
+            },
+            "detail_json": {
+                "parent": {
+                    "id": 1695584,
+                    "type": null,
+                    "parent": {
+                        "id": 14024,
+                        "type": "source",
+                        "title": "Colorado",
+                        "public_url": "http://case-law.vlex.com/source/14024",
+                        "copyright": null,
+                        "title.en": "CO",
+                        "meta": null,
+                        "frontpage_image": null,
+                        "frontpage_image_highres": null,
+                        "jurisdiction_id": "US",
+                        "unpublished_source": false
+                    },
+                    "title": "Colorado Court of Appeals",
+                    "subtitle": null,
+                    "alternative_key": "desc1_14024_02",
+                    "public_url": "https://case-law.vlex.com/source/14024/chapter/colorado-court-of-appeals-1695584",
+                    "meta": {
+                        "children": "/v1/chapters/1695584/children.json"
+                    },
+                    "client_url": "/search/jurisdiction:US+content_type:2+source:14024+emisor_1:02/*"
+                },
+                "id": 1035272272,
+                "type": "document",
+                "published_at": "2024-05-17",
+                "slug": "ortiz-v-progressive-direct",
+                "title": "Ortiz v. Progressive Direct Ins. Co.",
+                "counters": {
+                    "cited_in": {
+                        "negative": 0,
+                        "positive": 0,
+                        "neutral": 0,
+                        "total": 0
+                    },
+                    "cited_authorities": 8,
+                    "versions": false,
+                    "amendments": 0
+                },
+                "is_consolidated_text": false,
+                "history_and_versions": null,
+                "expressions": [
+                    {
+                        "vid": 1035272272,
+                        "label": "Document",
+                        "citedAs": null,
+                        "contentAvailable": true,
+                        "isAuthorized": true,
+                        "tabConfig": {
+                            "title": "Tab",
+                            "type": "tab"
+                        },
+                        "type": null,
+                        "kindOf": []
+                    }
+                ],
+                "followable": false,
+                "reliable_lang": "en",
+                "public_url": "https://colorado.vlex.io/vid/ortiz-v-progressive-direct-1035272272",
+                "doc_date": "2024-05-16",
+                "country": {
+                    "id": "US",
+                    "language": "EN",
+                    "name": "United States"
+                },
+                "translatable": true,
+                "iceberg_record_info": {
+                    "iceberg_record_id": "r06sdmzox9ni90f",
+                    "iceberg_record_owner": "ICBG",
+                    "iceberg_organization_id": "oupqvi"
+                },
+                "children": [],
+                "formats": [
+                    {
+                        "mime_type": "application/pdf",
+                        "show_inline": false,
+                        "url": "pdf/1035272272",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    },
+                    {
+                        "mime_type": "application/docx",
+                        "url": "docx/1035272272",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    }
+                ],
+                "has_plain_text": true,
+                "properties": [
+                    {
+                        "property": {
+                            "id": "p06oq53ny752l",
+                            "label": "Docket Number"
+                        },
+                        "values": [
+                            "23CA0292"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "p06qozl99eoi12p",
+                            "label": "Decision Date"
+                        },
+                        "values": [
+                            "16 May 2024"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "p06opolc4wf8y",
+                            "label": "Citation"
+                        },
+                        "values": [
+                            "2024 COA 54"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06p7opb445qoof",
+                            "label": "Parties"
+                        },
+                        "values": [
+                            "Andrew Ortiz, Plaintiff-Appellee, v. Progressive Direct Insurance Company, Defendant-Appellant."
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06opofdgweyj",
+                            "label": "Court"
+                        },
+                        "values": [
+                            "Colorado Court of Appeals"
+                        ]
+                    }
+                ],
+                "library": {
+                    "id": 14,
+                    "title": "Case Law",
+                    "public_url": "http://case-law.vlex.com",
+                    "type": "library",
+                    "video_library": false,
+                    "library_type": {
+                        "id": 2,
+                        "content_type": "Jurisprudencia"
+                    },
+                    "meta": {
+                        "children": "/v1/libraries/14/children.json"
+                    },
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    }
+                },
+                "abstract_is_analysis": false,
+                "abstract": null,
+                "meta": {
+                    "citations": "/vid/ortiz-v-progressive-direct-1035272272/citations.json?include=case_hist&type=link",
+                    "vincent": "/v1/vincent/vid_analysis/1035272272"
+                },
+                "source": {
+                    "id": 14024,
+                    "type": "source",
+                    "title": "Colorado",
+                    "public_url": "http://case-law.vlex.com/source/14024",
+                    "copyright": null,
+                    "title.en": "CO",
+                    "meta": null,
+                    "frontpage_image": null,
+                    "frontpage_image_highres": null,
+                    "jurisdiction_id": "US",
+                    "unpublished_source": false,
+                    "search_scope": "jurisdiction:US+content_type:2+source:14024",
+                    "isbn": null,
+                    "peer_reviewed": null,
+                    "description": null,
+                    "warning": null,
+                    "full_coverage_from": null,
+                    "source_description": null,
+                    "first_record_at": "1864-01-01",
+                    "last_record_at": "2024-07-01",
+                    "content_type": "Jurisprudencia",
+                    "video_source": false,
+                    "date": "2020-11-12",
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    },
+                    "language": "en",
+                    "alternate_languages": [],
+                    "publisher": null
+                }
+            }
+        }
+    ]
+}

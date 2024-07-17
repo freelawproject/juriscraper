@@ -6,6 +6,7 @@ History:
   2021-12-18: Created by flooie
   2023-01-12: Fixed requests.exceptions.InvalidURL error by grossir
 """
+
 from urllib.parse import urljoin
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
