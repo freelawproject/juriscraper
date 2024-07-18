@@ -39,6 +39,7 @@ class OpinionSiteLinear(OpinionSite):
         "per_curiam",
         "type",
         "joined_by",
+        "other_date",
     }
 
     def __init__(self, *args, **kwargs):
@@ -147,6 +148,10 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_types(self):
         return self._get_optional_field_by_id("type")
+
+    def _get_other_dates(self):
+        """Goes into OpinionCluster.other_dates, type: string"""
+        return self._get_optional_field_by_id("other_date")
 
     def _check_sanity(self):
         super()._check_sanity()
