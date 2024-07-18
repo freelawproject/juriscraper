@@ -21,23 +21,30 @@ from typing import Dict, Optional, Tuple
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.date_utils import make_date_range_tuples
+from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     # Home: https://appellatepublic.kycourts.net/login
+    first_opinion_date = datetime(1982, 2, 18).date()
+    days_interval = 10  # page size of 25
+
     api_court = "Kentucky Supreme Court"
     api_url = (
         "https://appellatepublic.kycourts.net/api/api/v1/opinions/search?"
     )
     docket_entry_url = "https://appellatepublic.kycourts.net/api/api/v1/publicaccessdocuments?filter=parentCategory%3Ddocketentries%2CparentID%3D{}"
     pdf_url = "https://appellatepublic.kycourts.net/api/api/v1/publicaccessdocuments/{}/download"
-    first_opinion_date = datetime(1982, 2, 18)
 
     # Examples: "BY JUDGE EASTON", "BY CHIEF JUSTICE VANMETER AFFIRMING",
     # "BY JUDGE A. JONES"
     judge_regex = r"BY(\sCHIEF)?\s(JUDGE|JUSTICE)\s(?P<judge>(\w\.\s)?\w+)"
+
+    # Examples: "2022-CA-1454, 1456, 1457"
+    docket_regex = r"\d{4}-(CA|SC)-\d{4}(,\s?\d{4})*"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -58,6 +65,7 @@ class Site(OpinionSiteLinear):
             end = datetime.now()
             start = end - timedelta(30)
 
+        logger.info("Date range %s %s", start, end)
         params = {
             "queryString": "true",
             "searchFields[0].operation": ">=",
@@ -80,14 +88,31 @@ class Site(OpinionSiteLinear):
         result_json = self.html
 
         for result in result_json["resultItems"]:
+            case_name = ""
             row = result["rowMap"]
-            docket_number = row["caseHeader.caseNumber"]
             date_filed = row["filedDate"]
             disposition = row["docketEntryDescription"]
+            docket_number = row["caseHeader.caseNumber"]
+
+            # On "PUBLIC OPINIONS IN CONFIDENTIAL CASES", docket numbers
+            # and case names are not as expected
+            # "2024 CA ADMIN - NON-CONFIDENTIAL OPINION - 002"
+            # The proper docket number may be found on the disposition string
+            if not re.search(self.docket_regex, docket_number) and (
+                docket_match := re.search(self.docket_regex, disposition)
+            ):
+                docket_number = docket_match.group(0)
+                # Delete docket numbers from disposition
+                disposition = re.sub(self.docket_regex, "", disposition)
+                if "\n" in disposition:
+                    disposition, case_name = disposition.split("\n", 1)
 
             judge = ""
             if judge_match := re.search(self.judge_regex, disposition):
-                judge = judge_match.group("judge")
+                judge = normalize_judge_string(judge_match.group("judge"))[0]
+                # Drop from the disposition everything after "BY JUDGE..."
+                # May contain the case name
+                disposition = re.split(self.judge_regex, disposition)[0]
 
             if self.test_mode_enabled():
                 # detail request has been manually nested in the test file
@@ -96,7 +121,8 @@ class Site(OpinionSiteLinear):
                 detail_url = self.docket_entry_url.format(row["docketEntryID"])
                 doc_json = self.get_json(detail_url)
 
-            case_name = doc_json[0]["caseHeader"].get("shortTitle")
+            if not case_name:
+                case_name = doc_json[0]["caseHeader"].get("shortTitle")
             doc_id = doc_json[0].get("documentID")
             doc_text = doc_json[0]["documentText"][0]
 
@@ -147,7 +173,9 @@ class Site(OpinionSiteLinear):
         else:
             end = datetime.now()
 
-        self.back_scrape_iterable = [(start, end)]
+        self.back_scrape_iterable = make_date_range_tuples(
+            start, end, self.days_interval
+        )
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Set date range from backscraping args and scrape
@@ -156,6 +184,5 @@ class Site(OpinionSiteLinear):
         :return None
         """
         self.set_url(*dates)
-        logger.info("Backscraping for range %s %s", *dates)
         self.html = self._download()
         self._process_html()

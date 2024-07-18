@@ -6,9 +6,9 @@
     "precedential_statuses": "Published",
     "blocked_statuses": false,
     "date_filed_is_approximate": false,
-    "dispositions": "OPINION AFFIRMING BY JUDGE MCNEILL",
+    "dispositions": "OPINION AFFIRMING",
     "docket_numbers": "2023-CA-0458",
-    "judges": "MCNEILL",
+    "judges": "McNeill",
     "case_name_shorts": ""
   },
   {
@@ -18,9 +18,9 @@
     "precedential_statuses": "Unpublished",
     "blocked_statuses": false,
     "date_filed_is_approximate": false,
-    "dispositions": "OPINION REVERSING AND REMANDING BY JUDGE KAREM",
+    "dispositions": "OPINION REVERSING AND REMANDING",
     "docket_numbers": "2022-CA-1460",
-    "judges": "KAREM",
+    "judges": "Karem",
     "case_name_shorts": ""
   },
   {
@@ -30,9 +30,21 @@
     "precedential_statuses": "Unpublished",
     "blocked_statuses": false,
     "date_filed_is_approximate": false,
-    "dispositions": "OPINION AND ORDER DISMISSING BY JUDGE CALDWELL",
+    "dispositions": "OPINION AND ORDER DISMISSING",
     "docket_numbers": "2023-CA-0192",
-    "judges": "CALDWELL",
+    "judges": "Caldwell",
     "case_name_shorts": ""
+  },
+  {
+    "case_dates": "2024-03-01",
+    "case_names": "D.L.R. v. Commonwealth of Kentucky, Cabinet for Health and Family Services",
+    "download_urls": "https://appellatepublic.kycourts.net/api/api/v1/publicaccessdocuments/f44d5375edc553446b47172d7471590704018499b5b62ea1eb3c7a4bc76aff16/download",
+    "precedential_statuses": "Unpublished",
+    "blocked_statuses": false,
+    "date_filed_is_approximate": false,
+    "dispositions": "OPINION AFFIRMING",
+    "docket_numbers": "2022-CA-1454, 1456, 1457",
+    "judges": "Taylor",
+    "case_name_shorts": "D.L.R."
   }
 ]
