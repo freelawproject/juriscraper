@@ -1,0 +1,142 @@
+Return-Path: <BKECF_LiveDB@nyeb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ukp6udd6stkf21qq0ol0lugfkl2fet7jb6egsc01
+ for user@recap.email;
+ Tue, 23 Apr 2024 18:51:46 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nyeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@nyeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nyeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@nyeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=nyeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFZGVYdk9WQmQ1YTJQUjk5WndDd2lteFBCUjFNVWtuWnR4eTdmTXBkRmdqUDBPY0xXMWJZbysrTDcxd3JtQXl4TmVMT2liMTdxeWE2a1NvbkwvV2lIblpCWHo2TjF3SExONUZpZC9nVC8rTGJEczdVMjRNVGhuREVQcUdsdkJSc2FkZjhYdEdNWmJDTTUwUVpwZG4xMG9PYmJGK3hwcHlFUU4rRVVqVW42MnVWUkdkbzRGUU5xdTJoQ0pKT1Npd05FRGsyOFAveU96d3dPMXNBTS80SE1NZVBKMUwzNUlBQWh6cVJUdnZOYWhIaUwrTGp2WVlNRTVMM0ZIY2NGUmg3bjlaYXVZcXRaMkNFUGxwbm9pb3JUWkN4aDI0WG9OMStKbHNCWTdwelNtN29xRHplY0k5VWVIQlJ5YVZ1Q0hVS2s9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=mFTfRPscyYCI3G6uDn5/UXrVNQ6N2U4vMItLB4ulc7VN7q7XrbeeU2sg45UYfckRT4M2oC9u9G2uSZxDJsJAu3pkvN49b/81Seqln9IlVxfhztqDLSwzd/p9RdIg7UDy1gj8R1664MgeEvSO3BydOY2dPpRYKYHLlefYqkfOWYU=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713898306; v=1; bh=SrDvHJXfKWBqdzz3XwD/cHo7/YtEBygFgs7VDOYudh8=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.219
+Received: from nyebdb.nyeb.gtwy.dcn ([156.119.191.219])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 23 Apr 2024 14:51:45 -0400
+Received: from nyebdb.nyeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nyebdb.nyeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43NIp1Gf070496;
+	Tue, 23 Apr 2024 14:51:01 -0400
+Received: (from ecf_web@localhost)
+	by nyebdb.nyeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43NIos25069599;
+	Tue, 23 Apr 2024 14:50:54 -0400
+Date: Tue, 23 Apr 2024 14:50:54 -0400
+MIME-Version:1.0
+From:BKECF_LiveDB@nyeb.uscourts.gov
+To:noreply@ao.uscourts.gov
+Message-Id:<26486814@nyeb.uscourts.gov>
+Subject:1-23-42603-nhl Motion for Relief From Stay
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of New York</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Randi Beth Gilbert entered on 4/23/2024 at 2:50 PM EDT and filed on 4/23/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Joel Rivera and Rutledge Apartments LLC                           </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nyeb.uscourts.gov/cgi-bin/DktRpt.pl?508217>1-23-42603-nhl</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nyeb.uscourts.gov/doc1/122029188017?pdf_header=&magic_num=25017521&de_seq_num=65&caseid=508217'>18</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Amended  Motion for Relief from Stay <i></i>     Fee Amount $199. Filed by  FirstName LastName   on behalf of    Rutledge Apartments LLC. Hearing scheduled for 5/15/2024 at 10:00 AM (check with court for location).  (Attachments: # (1)  amended motion Randi Gilbet # (2)  declaration # (3) Exhibit A # (4) Exhibit B # (5) Exhibit C # (6) Exhibit D) (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>nomamended riv.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-0
+<BR><TAB>] [81eb87c74442c60c36bdc355f44f8b86c61df34ad680a3801f0045111408ef61444
+<BR><TAB>78f530d637a021c8e3eb2b7eb44f2fa366d772402541708da4cc7ae5caa31]]
+<BR>
+<STRONG>Document description:</STRONG> amended motion FirstName LastName
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\amend RG Rivera.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-1
+<BR><TAB>] [3f1049408dc7fc850808aa173cbec22df7ab88c0224401b4d3ca970552d42e8cd58
+<BR><TAB>48668acbda74d1ba471f2016322c9df95ee4912d842e42d3296b9adfdc064]]
+<BR>
+<STRONG>Document description:</STRONG> declaration
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Declaration in Supportriv.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-2
+<BR><TAB>] [178852c481ca8c18809e0699c01d4cb923095ad44d9a0786d7ca6c021628509e246
+<BR><TAB>551039b2598d9f8d91a169638a8ba28a11edcbeb31fee8b1594d02902ebbd]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit A
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit A - Leaseriv.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-3
+<BR><TAB>] [8d9545fbc191f4a5d6757037e4a9cdb22e75dd568004b46410507ca05b93fc2561c
+<BR><TAB>6ddfd3f19ad4fcf0b941086296b56e459bb2b68526ce8c9f22e1c2d72d13e]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit B
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit B - Petitionriv.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-4
+<BR><TAB>] [097940fdd977c5bfbfdabe42babf69be727c769bd5a22accdb893d300150d4fc010
+<BR><TAB>d9b22584274d37d7398bea75a8ba00459eb2f6590db696ccbe47856d477db]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit C
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit C - Rent Breakdownriv.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-5
+<BR><TAB>] [2ee9cfcaa84b80aabd62ea79cab8a12482cbfe39bebea958cb822b51f11cb473c1e
+<BR><TAB>7f80e92ab4a890133ed0c215405ca57f7c5bf5824d0d669f5328ada6238f3]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit D
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit D - Order proposed.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=979333796 [Date=4/23/2024] [FileNumber=26486812-6
+<BR><TAB>] [128c49daa79403286f3f78446658808b105123b66f6a7dfa0f0c7ef7f6733648fd1
+<BR><TAB>3485c60d6123761857eea54ae97d0be1c179eabe7f3aa698711e7fec9233e]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1-23-42603-nhl Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff K.  L.</span>
+<br>xx@domain.com,  user@recap.email
+<BR>

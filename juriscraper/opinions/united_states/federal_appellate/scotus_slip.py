@@ -2,7 +2,6 @@
 Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
-
 from datetime import date
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear

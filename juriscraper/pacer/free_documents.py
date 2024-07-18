@@ -1,6 +1,7 @@
 """Classes for querying PACER's Written Opinion Report (WrtOpRpt.pl),
 which is free.
 """
+
 import pprint
 import sys
 

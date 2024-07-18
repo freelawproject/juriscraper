@@ -244,9 +244,11 @@ class PacerRssFeed(DocketReport):
 
         data = {
             "court_id": self.court_id,
-            "pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link)
-            if not self.is_appellate
-            else None,
+            "pacer_case_id": (
+                get_pacer_case_id_from_nonce_url(entry.link)
+                if not self.is_appellate
+                else None
+            ),
             "docket_number": self._get_docket_number(entry.title),
             "case_name": self._get_case_name(entry.title),
             # Filing date is not available. Also the case for free opinions.
