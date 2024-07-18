@@ -51,13 +51,11 @@ class Site(OpinionSiteLinear):
                 row.xpath(".//button[@onclick]/@onclick")[0].split("'")[1],
             )
             case = dict(zip(self.ordered_fields, values[:5]))
-            case["summary"] = summary
-            case["url"] = url
+            case.update({"summary": summary, "url": url, "per_curiam": False})
 
-            # There is a per_curiam field on the CL Opinion model,
-            # but we don't process it if sent by the scraper
-            if "Per Curiam" in case["judge"]:
+            if "per curiam" in case["judge"].lower():
                 case["judge"] = ""
+                case["per_curiam"] = True
 
             self.cases.append(case)
 
