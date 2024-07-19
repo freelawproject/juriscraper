@@ -9,7 +9,7 @@ from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import make_date_range_tuples
-from juriscraper.lib.string_utils import normalize_dashes
+from juriscraper.lib.string_utils import normalize_dashes, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date_filed,
                     "docket": "",
-                    "name": name,
+                    "name": titlecase(name),
                     "citation": cite,
                     "url": url,
                     "status": "Published",
