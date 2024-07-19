@@ -1,0 +1,1078 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="content-type" content="txt/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+        <link rel="Stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles/newBootStrap2.css" />
+    
+   
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   
+        <!--[if lt IE 9]>
+          <script src="/js/html5shiv.js"></script>
+          <script src="/js/respond.min.js"></script>
+        <![endif]-->
+
+        <!--[if lt IE 8]>
+          <link rel="stylesheet" type="text/css" href="css/bootstrap-ie7.css">
+        <![endif]-->
+    
+	<meta name="title" content="Supreme Court of the United States Home" />
+	<meta name="created" content='7/13/2017 10:37:11 AM' />
+	<meta name="revised" content='2/2/2024 10:02:46 AM' />
+	<meta name="msvalidate.01" content="424B89E9A1F140B486A187CB4D2E2740" />
+	<meta name="keywords" content="Supreme Court of the United States, Supreme Court, Supreme Court of US, Supremecourt, United State Supreme Court, US Supreme Court, U.S. Supreme Court, Court, Docket, Dockets, Opinion, Opininons, Oral Arguments, Justitces, Court Rules, Bar, Merits, Briefs, Order, Orders" />
+	<link href="styles/radlistbox.css" rel="stylesheet" type="text/css" />
+	<link href="styles/slideshow1.css" rel="stylesheet" type="text/css" />
+	<link href="styles/Calendar.Web21.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles/lightbox.css" media="screen"/>
+    <script src="script/lightbox-2.6.min.js" type="text/javascript"></script>
+    <link href="styles/video-js.css" rel="stylesheet" />
+    <script src="script/video.js"></script>
+    	<style type="text/css">
+        a#vlb {display:none}
+		.SplitDay {background-image: url('images/CalDate/day3.gif'); margin: 0 !important; border: none; width: 35.44px;}
+        .SplitDay2 {background-image: url('images/CalDate/day5.gif'); margin: 0 !important; border: none;}
+        .SplitdaySelected {background-image: url('images/CalDate/day4.gif')}
+ 		.customprintbutton {background: url('images/printbar2.gif') !important;	}
+	    .customprintbutton:hover {background: url('images/printbar2.gif') 0 -26px !important;}
+		.panelTitle {text-align: center; display: block; font-size: 16px; font-weight:bold;}
+	    .listline {padding: 10px 0;vertical-align: top;}
+	    .listbutton {display:block;border-radius: 5px;padding: 4px 3px 2px 3px;color: white;width: 26px;float: left;margin-right: 4px;margin-bottom: 4px;text-align: center;}
+	    .docketbutton {background-color: #7ca640;}
+        .transcriptbutton {background-color: #3578b3;}
+        .transcriptpendingbutton {background-color: #a1c3de;}
+        .opinionbutton {background-color: #d9be64;}
+        .audiobutton {background-color: #25aae1;}
+	    .buttoncolumn {display: block;float: left;width: 150px;}
+	    .casenamecolumn {display: block;}
+	    .buttonrow, casenamerow, casedetail {display: block;width: 100%;float:left;padding: 5px 0 5px 0;}
+	    .casenamerow {font-weight: bold;color: #999;font-size: 14pt;}
+	    .soday {font-weight: bold;font-size: 14pt;}
+	    .spotlightimgbox {margin-left: auto;margin-right: auto;max-width: 670px;}
+	    .spotlightimgtext {margin-top: 5px;padding-left: 5px;font-size: 10pt;}
+	    .legend a {display: block;float:left;padding-bottom: 20px;color: #000;}
+        .legend a:hover {text-decoration: none;}
+	    .arglistbox {display: block;border: thin solid #999;border-radius: 10px;padding: 10px;margin-bottom: 10px;}
+	    .argcalComments {display:block;width: 100%;font-style: italic;font-size: smaller;text-align: center;}
+        .quick-icon{max-height: 36px; max-width:36px;display:block;margin: 0px auto;}
+	    #TodayAtCourt {background-color: white;padding: 20px;border-radius: 15px;border: thin solid #000;margin-bottom: 20px;}
+	    #TodayAtCourt ul li {padding-bottom: 15px;}
+	    #radcal .rcRow .rcSelected {background-color: rgba(217, 190, 100, 0.5);}
+	    .promoblock {
+              height: auto !important;
+	    }
+
+	    @media (max-width: 560px) { #TodayAtCourt ul li { margin-left: -30px; } }
+ 
+	</style>
+    <style type="text/css">.header-image { background: url('images/banners/HomePage1.jpg') no-repeat center center local;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;}</style>
+	 
+		<script type="text/javascript">
+	 
+			function OnClientShow(radWindow) {
+			    var TitleBar = radWindow.GetTitlebar();
+			    radWindow.title = "temp1"
+				var parent = TitleBar.parentNode;
+				var oUL = parent.getElementsByTagName('UL')[0];
+				if (!(oUL.firstChild.id == "customprintbuttonID")) // Check if the element is already added
+				{
+					// If not - create and add the custom button
+					oUL.style.width = "192px";
+					var oLI = document.createElement("LI");
+					oLI.id = "customprintbuttonID"
+					var A = document.createElement("A");
+					oLI.appendChild(A);
+					A.className = "customprintbutton";
+					A.href = "javascript:void(0)";
+					A.title = "Print Content";
+					radID = radWindow._name
+					A.onmousedown = printWin;
+					oUL.insertBefore(oLI, oUL.firstChild);
+					//this is required so that RadWindow can display its titlebar properly after being modified
+					radWindow._updateTitleWidth();
+
+				}
+			}
+
+			function OnClientShow2(radWindow) {
+			    var TitleBar = radWindow.GetTitlebar();
+			    radWindow.title = "temp1"
+			    var parent = TitleBar.parentNode;
+			    var oUL = parent.getElementsByTagName('UL')[0];
+			}
+
+			function printWin(e) {
+				var oManager = GetRadWindowManager();
+				var oWnd = oManager.GetWindowByName(radID);
+				var content = oWnd.GetContentFrame().contentWindow;
+				var printDocument = content.document;
+				if (document.all) {
+					printDocument.execCommand("Print");
+				}
+				else {
+					content.print();
+				}
+				//Cancel event!
+				if (!e) e = window.event;
+				radID = null;
+				return $telerik.cancelRawEvent(e);
+			}
+
+			function OpenRadWindow(url) {
+			    radopen(url, "DisplayWindow");
+         
+			}
+
+			function OpenRadWindow2(url) {
+			    radopen(url, "DisplayWindow2");
+			}
+
+			function OpenRadWindow3(url) {
+			    radopen(url, "DisplayWindow3");
+			}
+
+
+			function DateClick(sender, args) {
+			    if(args.get_renderDay().IsSelected)
+			    args.set_cancel(true);
+			}
+		</script>
+	
+<link href="/WebResource.axd?d=AvBWCtbpLXYjyyNienFv2AP4BqK-TzyR3MjpZLzth7Dy-EKWPOT8AsFIVDb565SZVzQWElvCCra4WWPGZhOJ4hUGI3O0BIkgn3xJJtAP8nzgI-4ENi8KIlTRMEB1y36mNQx9ypEvrDUklWxF-WgKhA2&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=6d0ORl_GDQ8il0vfaye5YfLYYl9sEUhWsDW3PjsrKt6p3crKKdRWffnOoiOrLmUC5hA_15Q0_d7xySUJtj9S_vwmsAf6CXNLz83CEEPIFY7Rw0amkRwuhK7pRF27O59Er7uEl8jflEAujnsv7qvJJA2&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=VdPoLqp1pEU6N0-IfFplZCUX0kq-KWC5tHDI0kFljmDfMnXIiELqrfX9sWcVICEU-5Qm4QosiFrtdK7B92pDreXUYG07YFeFMx2CLKPYhEeM8ww8t-odY1b2R7ujRJPh8mdEdcfKQ5jTo7GVN9PB_A2&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=I2KMDU4OojcY5XW9Fb-hAbxpzcZLF251lyK3gs4-p850S_46qR-dpVRaAMFW-zFTXzZtUFhJJZJCfU_fecRqHmL-Gz4fKPIaCjPK9fTU2xpV9DDfA3T87x9akcpP0j9hiHMUJ6QPx6pViClDgMQJ_w2&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=gZI-YTWhiIXO9Qn8XQrp5nbbKGNUH3IvreACGcPmVVc80pcV1Av049gQoUHGeM6dh2SYq7FTMtRGpYu5TLf0oCgjalfYv4T6KOhgST_bVQpwhQRDjkQqdY12TMaNbOlsfR3J9J_6Ns7nrTegdiyVcfoBFhnCrYOX06HDXK6N2Y41&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=QKX1AO1vX8ebWKfbb4eOTKEEKz4-7lyi6HiEtKJuBgm0OYiQfAkGex2gzWYCtjnN0-xF-qrObJvX8r0CRQXj3kPb2d0euCEKB2NMTSn0LxzW9m249ZfnNB-tWAcZzlLM0&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=abSXP-RgNuAsfhlSYpnpbLwgAe9DSJw3Vzsn2CpQpwOU2MRkvGDCK_9hLO13v_oe7LiJtn5txOrrwQpLiSUwQm_2QnHZuxc31rHZ9Qq9VOklel8SCpiJklEMCeo6rrU9XjCWwite-xCbY4FYNrrsvw2&amp;t=638324063990000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><title>
+	Home - Supreme Court of the United States
+</title>
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"true","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-919c7b1f-f099-4926-beb6-7c0b9dd931bb","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"true","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="T5V7Y-Q8M8U-BKDFY-XWX7C-XPH3U",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"T5V7Y-Q8M8U-BKDFY-XWX7C-XPH3U";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="true"=="true"?1:0,t="",a="jforx5ixhyxkyzpggqya-f-4a0712bbf-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"36","ak.cp":"81816","ak.ai":parseInt("165722",10),"ak.ol":"0","ak.cr":12,"ak.ipv":4,"ak.proto":"h2","ak.rid":"9db5d166","ak.r":47696,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"73.93.27.0","ak.cport":61885,"ak.gh":"23.62.45.172","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1709585456","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==HMGOiS21m1GSIcJ32mI01UaEP0S/Sfp7JhkXNhKfaKhnd2wR9kAyQF8XDtfApJnEtMnlGI9yXDuyKvTDBeAUHlu1BguScjZRkG813F1derQYbS1n1nMtZaXai12X64MQR1rWuQ+ECAzz6bKs/lKTGRvDhPDiOSpCpcJs/RWGQEcQIcARQ1BsUI55tQb8QSuFzUlROva8u+NcfGPcL3PeGkgHhPyqylRGVY/p/SJFrqYjj0HBX46stQU6IoAIpZ1lLtqrvrUO12TuQrqnJ1voOb0QIChqu1VeCZJeQcvAdHUPdxGTxeWOpi72PHqfmtLR0/mD4pJe+/yL4Bf6AdddYUzp2sZM4IoDZqURyP4oSi2io4uOcL2yxP0hSPzXq4cHOnWiiFygkFJBZzGYxceS9ismwLuTbRC1qZL2MYFEHfU=","ak.pv":"144","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<form method="post" action="./default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_cmdSearch')" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZGVbOm9V68oIIktI_W7Deic6ylHZhBcO0DPfFNaFgt6K56r_Ei_L1R3fS8qPL3MKAQ2&amp;t=638369024483918269" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1Mz6ZxijnNM9P9Qe9uddzuQox2IiojG5k5o-qBJoG7Dte7hbvoCbRBuRPeHeZyRwpX5LxES8-RopBt8-Md8MvNAZC1XK3f6rj17R5SQNmwNnKj_Fve60SE18feZoCEb2Yw2&amp;t=50632777" type="text/javascript"></script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3ac0e9b7a1-cd1d-4383-90a1-c6f3a823ff40%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2023.3.1010.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a366ce917-c5cd-4c60-b5c7-0560a9bf3282%3a16e4e7cd%3aed16cbdc%3af7645509%3a33715776%3a59462f1%3aa51ee93e%3a88144a7a%3a24ee1bba%3ac128760b%3a19620875%3a874f8ea2%3af46195d3%3acda80b3%3ab2e06756%3a92fe8ea0%3afa31b949%3a4877f69a%3a490a9d4e%3abd8f85e4" type="text/javascript"></script>
+<script src="/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYsa30HvStoJLmW0EUzyYHJhRhK8cvVYfDS9nHruKQgTxhM0JzZn77-vUVCXyHe4QLg2&amp;t=638369024483918269" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="36IYLSCOIytc+yX+Wh5iGjmm3vJO/vo0bIvQ63zl/jfIHK/mtAtrR3GRZqzzspq2INW6erlaLA3HGQOIKANjPstQWTVz/dm/TbAAUC6RcOYcVUQPUHLciMDRmyaw2990hJ9wKCJUxXpPV/JTTHPqhUzeP1ra3zL3r1Nl5OOKXV3HOEmqCKf8i2HQ/vNqt+se" />
+</div>
+    <div class="noindex">
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'aspnetForm', ['tctl00$MainEditable$ctl00$MainEditable$RadAjaxPanel1Panel',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    </div>
+
+    <div class="container-fluid" style="background-color: #222f37;">
+        <div class="container">
+            <div class="noindex">
+                <div class="row bannerStyle">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <a id="ctl00_hypSealLink" href="./"><img id="ctl00_imgSeal" class="SCUSSeal img-responsive" src="images/scous_seal.png" alt="Supreme Court of the United States" /></a>
+                    </div>
+                    <div id="searchbox" class="col-md-6 col-sm-6 col-xs-12" style="font-size: 9pt; padding: 20px 0 20px 0;">
+                        <div id="ctl00_pnlSearch">
+	
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td>
+                                        <div class="input-group" style="padding: 15px 20px 0 0;">
+                                            <input name="ctl00$txtSearch" type="text" id="ctl00_txtSearch" class="form-control input-lg" placeholder="Search Site for..." />
+                                            <span class="input-group-btn">
+                                                <a id="ctl00_cmdSearch" title="Search" class="btn btn-default input-lg" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cmdSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><i class="fa fa-search"  style="font-size: 18pt; line-height: 24pt; vertical-align: middle;"></i></a>
+                                            </span>
+                                        </div>
+                                        <a id="ctl00_hypSearchHelp" href="search_help.aspx" style="font-size:small; color: #d9be65;">SEARCH TIPS</a>
+                                            <span id="ctl00_RegularExpressionValidator2" style="display:inline-block;color:Red;height:20px;visibility:hidden;">Search term too short </span>
+                                            <span id="ctl00_SearchVal" style="display:inline-block;color:Red;height:20px;visibility:hidden;">Invalid text in search term. Try again</span>
+                                            <input name="ctl00$txbhidden" type="text" id="ctl00_txbhidden" style="visibility: hidden; display: none;" />
+                                    </td>
+                                    <td nowrap style="line-height: 200%;">
+                                        <a id="ctl00_SearchCenter" href="search_center.aspx" style="font-size:small; color: #d9be65;">ADVANCED SEARCH</a><br />
+                                        <a id="ctl00_SearchDocket" NavigateUrl="~/docket/docket.aspx" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SearchDocket&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="font-size:small; color: #d9be65;">DOCKET SEARCH</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+</div>
+                    </div>
+                    <div class="text-right" style="margin-right:20px;">
+        
+                        
+                        <div id="searchboxheader" style="padding: 20px;">
+                            <a style="color: #fff;" onclick="toggleSearchshow(); return false;" title="Search"><i class="fa fa-search" style="font-size: 18pt;"></i> Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="navbg">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                    <!-- menu starts here -->
+                    
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> 
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a id="ctl00_wucNewMenu1_HyperLink5" class="dropdown-toggle" href="opinions/opinions.aspx">OPINIONS</a>
+                        <ul class="dropdown-menu">
+                            <li><a id="ctl00_wucNewMenu1_HyperLink30" href="opinions/slipopinion/23">Opinions of the Court</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink31" href="opinions/relatingtoorders/23">Opinions Relating to Orders</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink32" href="opinions/in-chambers.aspx">In-Chambers Opinions</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink35" href="opinions/USReports.aspx">U. S. Reports</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink37" href="opinions/urls_cited.aspx">Online Sources Cited in Opinions</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink36" href="media/media.aspx">Media Files Cited in Opinions</a></li>
+
+                            <li><a id="ctl00_wucNewMenu1_HyperLink34" href="opinions/casefinder.aspx">Case Citation Finder</a></li>
+                        </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="ctl00_wucNewMenu1_HyperLink69" class="dropdown-toggle" href="filingandrules/">FILING & RULES</a>
+                    <ul class="dropdown-menu">
+                        <li><a id="ctl00_wucNewMenu1_HyperLink44" href="filingandrules/electronicfiling.aspx">Electronic Filing</a></li>
+                        <li><a id="ctl00_wucNewMenu1_HyperLink3" href="filingandrules/rules_guidance.aspx">Rules and Guidance</a></li>
+                        <li><a id="ctl00_wucNewMenu1_HyperLink2" href="filingandrules/supremecourtbar.aspx">Supreme Court Bar</a>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="ctl00_wucNewMenu1_hl" class="dropdown-toggle" href="oral_arguments/oral_arguments.aspx">ORAL ARGUMENTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a id="ctl00_wucNewMenu1_HyperLink13" href="oral_arguments/argument_transcript.aspx">Argument Transcripts</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink14" href="oral_arguments/argument_audio.aspx">Argument Audio</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink6" href="oral_arguments/calendarsandlists.aspx">Calendars and Lists</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink8" href="oral_arguments/courtroomseating.aspx">Courtroom Seating</a></li>
+                        </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="ctl00_wucNewMenu1_HyperLink41" class="dropdown-toggle" href="case_documents.aspx">CASE DOCUMENTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a id="ctl00_wucNewMenu1_hypdocket" href="docket/docket.aspx">Docket Search</a></li>
+                            <li><a id="ctl00_wucNewMenu1_hypOrdersOfCourt" href="orders/ordersofthecourt/23">Orders of the Court</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink67" href="orders/ordersbycircuit.aspx">Orders by Circuit</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink68" href="orders/grantednotedlists.aspx">Granted/Noted Cases List</a></li>
+                            <li><a id="ctl00_wucNewMenu1_HyperLink39" href="orders/journal.aspx">Journal</a></li>
+                            
+                        </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="ctl00_wucNewMenu1_hypCourtInfo" class="dropdown-toggle" href="publicinfo/publicinfo.aspx">NEWS MEDIA</a>
+                    <ul class="dropdown-menu">
+                        <li><a id="ctl00_wucNewMenu1_HyperlinkServices" href="publicinfo/PIOServices.pdf" target="_blank">Services for News Media</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink57" href="publicinfo/press/pressreleases.aspx">Press Releases</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink58" href="publicinfo/media/mediaadvisories.aspx">Media Advisories</a></li>                
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink61" href="publicinfo/press/presscredentials.aspx">Press Credentials</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink59" href="publicinfo/speeches/speeches.aspx">Speeches</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink62" href="publicinfo/reportersguide.pdf" target="_blank">A Reporter's Guide to Applications</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink60" href="publicinfo/year-end/year-endreports.aspx">Chief Justice's Year-End Reports on the Federal Judiciary</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="ctl00_wucNewMenu1_hypAboutCourt" class="dropdown-toggle" href="about/about.aspx">ABOUT THE COURT</a>
+                    <ul class="dropdown-menu">
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink4" href="about/justices.aspx">Justices</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink10" href="about/courtatwork.aspx">Supreme Court at Work</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink1" href="about/code-of-conduct-for-justices.aspx">Code of Conduct for Justices</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink7" href="about/historyandtraditions.aspx">History and Traditions</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink49" href="about/courtbuilding.aspx">The Supreme Court Building</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink9" href="visiting/visiting.aspx">Visiting the Court</a></li>
+                        <li><a id="ctl00_wucNewMenu1_HypActivities" href="visiting/activities.aspx">Activities for Students & Families</a></li>
+                        <li><a id="ctl00_wucNewMenu1_HypExhibitions" href="visiting/exhibition.aspx">Exhibitions</a></li>
+                        <li><a id="ctl00_wucNewMenu1_hypbuildingregulation" href="about/buildingregulations.aspx">Building Regulations</a></li>
+                        <li><a id="ctl00_wucNewMenu1_Hyperlink45" href="about/faq.aspx">Frequently Asked Questions</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+                    <!-- menu ends here -->
+            </div>
+        </nav> 
+    </div>
+    
+    <header class="header-image">
+        <div class="headline">
+            <div id="ctl00_Slideshow_radeditBanner2">
+	<!-- 2023.3.1010.45 --><!--<div style="display:block; padding: 0px 0px 400px 0px;">-->
+
+<div style="display:block; padding: 0px 0px 400px 0px;">
+
+</div>
+
+</div>
+            <div id="ctl00_Slideshow_radeditBanner">
+	<!-- Do NOT Change first Div -->
+<div class="promoblock">
+
+</div>
+</div>
+		</div>
+    </header>
+    <!-- Quick Menu -->
+    <div style="padding: 5px 0 5px 0; box-shadow: 0px 10px 10px #888888; position: relative;" >
+		<div class="container">
+			<div class="center-block" style="align-content: center; text-align: center;">
+				<div class="col-md-2 col-xs-12"><h3 style="font-weight: bold; color: #9c2426; padding: 10px;">Quick Links</h3></div>
+				
+                <div class="col-md-2 col-xs-6" style="padding: 15px;"><a href="filingandrules/electronicfiling.aspx"><i class="fa fa-folder-open" style="font-size: 25pt;"></i><br /> Electronic Filing</a></div>
+                <div class="col-md-2 col-xs-6" style="padding: 15px;"><a href="visiting/visiting.aspx"><i class="fa fa-institution" style="font-size: 25pt;"></i><br /> Visit<br /> &nbsp;</a></div>
+				<div class="col-md-2 col-xs-6" style="padding: 15px;"><a href="fellows/"><i class="fa fa-graduation-cap" style="font-size: 25pt;"></i><br /> Fellows Program</a></div>
+				<div class="col-md-2 col-xs-6" style="padding: 15px;"><a href="contact/contactus.aspx"><i class="fa fa-edit" style="font-size: 25pt;"></i><br /> Contact Us</a></div>
+                <div class="col-md-2 col-xs-12" style="padding: 15px 30px;"><a href="oral_arguments/live.aspx"><div style="display:block; align-content: center; text-align: center;"><img class="quick-icon" src="images/live_icon.png" alt="Live Audio" /><div>Live Audio</div></div> </a></div>
+			</div>
+		</div>
+	</div>
+    <!-- Quick Menu Ends -->
+    
+    <div id="ctl00_Slideshow_RadEditorNews">
+	<!-- 
+<p>&nbsp;</p> -->
+</div>
+
+
+    
+
+		<div style="box-shadow: 0px 10px 10px #888888; background-color: #E6E2D9;padding: 50px 0 20px 0;">
+        <br />
+			<div class="container">
+		        <div class="RadAjaxPanel" id="ctl00_MainEditable_ctl00_MainEditable_RadAjaxPanel1Panel">
+	<div id="ctl00_MainEditable_RadAjaxPanel1">
+		
+				    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+                        <!-- Court Info from PIO -->
+					    <div id="TodayAtCourt">
+                            <h4><span id="ctl00_MainEditable_lblToday">Today at the Court - Monday, Mar 4, 2024</span></h4><hr />
+						    <div id="ctl00_MainEditable_RadEditToday">
+			<ul>
+    <li><span style="font-size: 12pt;"></span>The Supreme Court Building is&nbsp;<a href="https://www.supremecourt.gov/visiting/visiting.aspx" title="Link to visiting the court.">open to the public</a>&nbsp;from 9 a.m. to 3 p.m.</li>
+    <li><span style="font-size: 12pt;">The Court will release an&nbsp;<a href="https://www.supremecourt.gov/orders/ordersofthecourt">order list</a>&nbsp;at 9:30 a.m.</span></li>
+    <li><span style="font-size: 12pt;">&nbsp;</span>The Court may announce <a href="https://www.supremecourt.gov/opinions/slipopinion/23">opinions</a> on the homepage beginning at 10 a.m. The Court will not take the Bench.</li>
+    <li>
+    <p><a href="https://www.supremecourt.gov/visiting/courtroomlectures.aspx#Calendar" title="Link to tour schedule." style="font-size: 12pt; background-color: #ffffff;">Courtroom Lectures</a><span style="font-size: 12pt;"> available within the next 30 days.</span></p>
+    </li>
+</ul>
+		</div>
+					    </div>
+   
+                        <!-- Court Info Ends -->
+				    </div>
+				    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 sm-gutter">
+                        <div class="col-xs-12 nopadding">
+                            <div id="radcal" class="col-sm-6 col-xs-12" style="min-width: 255px; margin-left: auto; margin-right: auto; padding-bottom: 20px;">
+								<div id="ctl00_MainEditable_Cal_wrapper">
+			<table id="ctl00_MainEditable_Cal" cellspacing="0" class="RadCalendar RadCalendar_Web21" style="width:250px;height:180px;color:Black;border-color:#ececec;">
+				<caption>
+					<span style='display:none;'>Calendar</span>
+				</caption><thead>
+					<tr>
+						<td class="rcTitlebar rcNoNav"><table cellspacing="0">
+							<caption>
+								<span style='display:none;'>Title and navigation</span>
+							</caption><thead>
+								<tr style="display:none;">
+									<th scope="col">Title and navigation</th>
+								</tr>
+							</thead><tbody>
+	<tr>
+		<td><a id="ctl00_MainEditable_Cal_FNP" class="t-button rcFastPrev" title="&lt;&lt;" href="#">&lt;&lt;</a></td><td><a id="ctl00_MainEditable_Cal_NP" class="t-button rcPrev" title="&lt;" href="#">&lt;</a></td><td id="ctl00_MainEditable_Cal_Title" class="rcTitle">March 2024</td><td><a id="ctl00_MainEditable_Cal_NN" class="t-button rcNext" title=">" href="#">&gt;</a></td><td><a id="ctl00_MainEditable_Cal_FNN" class="t-button rcFastNext" title=">>" href="#">&lt;&lt;</a></td>
+	</tr>
+</tbody>
+						</table></td>
+					</tr>
+				</thead><tbody>
+	<tr>
+		<td class="rcMain"><table id="ctl00_MainEditable_Cal_Top" class="rcMainTable" cellspacing="0" style="height:180px;width:250px;">
+	<caption>
+		<span style='display:none;'>March 2024</span>
+	</caption><thead>
+		<tr class="rcWeek">
+			<th id="ctl00_MainEditable_Cal_Top_cs_0" title="Sunday" class="HeaderClass" scope="col">S</th><th id="ctl00_MainEditable_Cal_Top_cs_1" title="Monday" class="HeaderClass" scope="col">M</th><th id="ctl00_MainEditable_Cal_Top_cs_2" title="Tuesday" class="HeaderClass" scope="col">T</th><th id="ctl00_MainEditable_Cal_Top_cs_3" title="Wednesday" class="HeaderClass" scope="col">W</th><th id="ctl00_MainEditable_Cal_Top_cs_4" title="Thursday" class="HeaderClass" scope="col">T</th><th id="ctl00_MainEditable_Cal_Top_cs_5" title="Friday" class="HeaderClass" scope="col">F</th><th id="ctl00_MainEditable_Cal_Top_cs_6" title="Saturday" class="HeaderClass" scope="col">S</th>
+		</tr>
+	</thead><tbody>
+		<tr class="rcRow">
+			<td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td title="Conference Day" style="background-color:Green;"><a href="#">1</a></td><td class="rcWeekend" title="Saturday, March 02, 2024"><a href="#">2</a></td>
+		</tr><tr class="rcRow">
+			<td class="rcWeekend" title="Sunday, March 03, 2024"><a href="#">3</a></td><td class="rcSelected" title="Order List Issuance Day" style="background-color:#7ED6FB;border-style:Solid;"><a href="#">4</a></td><td title="Tuesday, March 05, 2024"><a href="#">5</a></td><td title="Wednesday, March 06, 2024"><a href="#">6</a></td><td title="Thursday, March 07, 2024"><a href="#">7</a></td><td title="Friday, March 08, 2024"><a href="#">8</a></td><td class="rcWeekend" title="Saturday, March 09, 2024"><a href="#">9</a></td>
+		</tr><tr class="rcRow">
+			<td class="rcWeekend" title="Sunday, March 10, 2024"><a href="#">10</a></td><td title="Monday, March 11, 2024"><a href="#">11</a></td><td title="Tuesday, March 12, 2024"><a href="#">12</a></td><td title="Wednesday, March 13, 2024"><a href="#">13</a></td><td title="Thursday, March 14, 2024"><a href="#">14</a></td><td class="SplitDay SplitDay" title="Conference/Non-argument Day"><div class="radTemplateDay_Web21" >
+												<div style="background-image: url('images/calDate/sp15.gif'); background-repeat: no-repeat;">
+													&nbsp;</div>
+											</div></td><td class="rcWeekend" title="Saturday, March 16, 2024"><a href="#">16</a></td>
+		</tr><tr class="rcRow">
+			<td class="rcWeekend" title="Sunday, March 17, 2024"><a href="#">17</a></td><td title="Argument Day" style="background-color:Red;"><a href="#">18</a></td><td title="Argument Day" style="background-color:Red;"><a href="#">19</a></td><td title="Argument Day" style="background-color:Red;"><a href="#">20</a></td><td title="Thursday, March 21, 2024"><a href="#">21</a></td><td title="Conference Day" style="background-color:Green;"><a href="#">22</a></td><td class="rcWeekend" title="Saturday, March 23, 2024"><a href="#">23</a></td>
+		</tr><tr class="rcRow">
+			<td class="rcWeekend" title="Sunday, March 24, 2024"><a href="#">24</a></td><td title="Argument Day" style="background-color:Red;"><a href="#">25</a></td><td title="Argument Day" style="background-color:Red;"><a href="#">26</a></td><td title="Argument Day" style="background-color:Red;"><a href="#">27</a></td><td title="Conference Day" style="background-color:Green;"><a href="#">28</a></td><td title="Friday, March 29, 2024"><a href="#">29</a></td><td class="rcWeekend" title="Saturday, March 30, 2024"><a href="#">30</a></td>
+		</tr><tr class="rcRow">
+			<td class="rcWeekend" title="Sunday, March 31, 2024"><a href="#">31</a></td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td><td class="rcOtherMonth">&#160;</td>
+		</tr>
+	</tbody>
+</table></td>
+	</tr>
+</tbody>
+			</table><input type="hidden" name="ctl00_MainEditable_Cal_SD" id="ctl00_MainEditable_Cal_SD" value="[[2024,3,4]]" /><input type="hidden" name="ctl00_MainEditable_Cal_AD" id="ctl00_MainEditable_Cal_AD" value="[[2009,9,1],[2025,9,30],[2024,3,4]]" />
+		</div>
+
+							</div>
+
+
+                            <div class="col-sm-6 col-xs-12" style="padding-left: 10px;">
+                            <span><a href="legendkeyinfo.aspx" style="font-size: 13pt;">Calendar Info/Key</a></span><br /><br />
+                            <div class="legend">
+							<div id="ctl00_MainEditable_pnlLegend" style="height:112px;width:200px;">
+			
+                                        
+								<a id="legendArg" href="legendkeyinfo.aspx#ArgumentDay">
+                                    <span style="display: block; background-color: Red; width: 20px; float: left;">&nbsp;</span>
+									<span style="display: block; float: left;">&nbsp; Argument Days</span>
+								</a>
+                                <br />
+								<!-- span style="display: block; background-color: #6666FF; width: 20px; float: left;">&nbsp;</span -->
+								<a id="legendNon" href="legendkeyinfo.aspx#Non-argumentDay">
+                                    <span style="display: block; background-color: #2269B5; width: 20px; float: left;">&nbsp;</span>
+									<span style="display: block; float: left;">&nbsp; Non-argument Days </span>
+								</a>
+                                <br />
+								<a id="legendConf" href="legendkeyinfo.aspx#ConferenceDays">
+                                    <span style="display: block; background-color: Green; width: 20px; float: left;">&nbsp;</span>
+									<span style="display: block; float: left;">&nbsp; Conference Days</span>
+								</a>
+                                                                <br />
+								<a id="legendOpinion" href="#">
+                                    
+								</a>
+                                <a id="legendOrder" href="#">
+                                    <span style="display: block; background-color: #25aae1; width: 20px; float: left;">&nbsp;</span>
+									<span style="display: block; float: left;">&nbsp; Order List Issuance Days</span>
+								</a>
+                                <br />
+								<a id="legendSplit" href="legendkeyinfo.aspx#Non-argumentDay">
+                                    
+                                    <div style="float: left; width: 20px;">
+
+									    <span style="display: block;"><img src="images/calDate/day2.gif" alt="Conference/Non-argument" height="20" width="20" /></span>
+                                    </div>
+									<span style="display: block; float: left;  vertical-align: top;">&nbsp; Conference / <br />&nbsp; Non-argument Day</span>
+									
+ 								</a>
+                                <a id="legendconfOpinion" href="legendkeyinfo.aspx#ConferenceDays">
+                                    
+								 </a>
+								 <a id="legendConfArg" href="legendkeyinfo.aspx#ConferenceDays">
+                                    
+ 								</a>
+                                <br />
+          						<a id="legendHol" href="legendkeyinfo.aspx#Holiday">
+                                    <span style="display: block; width: 20px; float: left;"><img src="images/calDate/day.gif" alt="Holiday" /></span>
+									<span style="display: block; float: left; padding-top:3px; height:20px;">&nbsp; Holiday</span>
+                                </a>
+								<br />
+							
+		</div>
+                            <div id="ctl00_MainEditable_RadToolTip1" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+                                <span>The Court convenes for a session in the Courtroom at 10 a.m. The session may begin with the announcement of opinions - decisions 
+                                    in argued cases - followed by the swearing in of new members to the Bar of the Supreme Court. Unless otherwise noted, the Court generally 
+                                    hears two, one-hour oral arguments, with attorneys for each side of a case given 30 minutes to make a presentation to the Court and answer 
+                                    questions posed by the Justices. These sessions are open to the public.</span>
+	                        <input id="ctl00_MainEditable_RadToolTip1_ClientState" name="ctl00_MainEditable_RadToolTip1_ClientState" type="hidden" />
+		</div>
+                                <div id="ctl00_MainEditable_RadToolTip2" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+                                <span>The Court convenes for a session in the Courtroom at 10 a.m. The session begins with the announcement of opinions - decisions in argued 
+                                    cases - followed by the swearing in of new members to the Bar of the Supreme Court. These sessions, which typically last 15-30 minutes, are 
+                                    open to the public.</span>
+	                        <input id="ctl00_MainEditable_RadToolTip2_ClientState" name="ctl00_MainEditable_RadToolTip2_ClientState" type="hidden" />
+		</div>
+                            <div id="ctl00_MainEditable_RadToolTip3" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+                                <span>The Justices meet in a private conference to discuss cases argued earlier that week. The Justices also discuss and vote on petitions for 
+                                    review. The building is open to the public but the Justices do not take the Bench.</span>
+	                        <input id="ctl00_MainEditable_RadToolTip3_ClientState" name="ctl00_MainEditable_RadToolTip3_ClientState" type="hidden" />
+		</div>
+                            <div id="ctl00_MainEditable_RadToolTip4" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+                                <span>The Court convenes for a session in the Courtroom at 10 a.m. The session begins with the announcement of opinions - decisions in argued 
+                                    cases - followed by the swearing in of new members to the Bar of the Supreme Court. These sessions, which typically last 15-30 minutes, are 
+                                    open to the public.</span><br />
+                                <span>The Justices meet in a private conference to discuss cases argued earlier that week. The Justices also discuss and vote on petitions for 
+                                    review. The building is open to the public but the Justices do not take the Bench.</span>
+	                        <input id="ctl00_MainEditable_RadToolTip4_ClientState" name="ctl00_MainEditable_RadToolTip4_ClientState" type="hidden" />
+		</div>
+                            <div id="ctl00_MainEditable_RadToolTip5" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+                                <span>The Court is closed on federal holidays. For questions on how the holiday impacts case filings, contact the Clerk's Office.</span>
+	                        <input id="ctl00_MainEditable_RadToolTip5_ClientState" name="ctl00_MainEditable_RadToolTip5_ClientState" type="hidden" />
+		</div>
+                            <div id="ctl00_MainEditable_RadToolTip6" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+
+                                <span>Opinion Issuance Days</span>
+	                        <input id="ctl00_MainEditable_RadToolTip6_ClientState" name="ctl00_MainEditable_RadToolTip6_ClientState" type="hidden" />
+		</div>
+                                <div id="ctl00_MainEditable_RadToolTip8" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+                                <span>Order List Issuance Days</span>
+	                        <input id="ctl00_MainEditable_RadToolTip8_ClientState" name="ctl00_MainEditable_RadToolTip8_ClientState" type="hidden" />
+		</div>
+                                <div id="ctl00_MainEditable_RadToolTip7" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+
+                                    <span>Conference/Opinion Issuance Days</span>
+							<input id="ctl00_MainEditable_RadToolTip7_ClientState" name="ctl00_MainEditable_RadToolTip7_ClientState" type="hidden" />
+		</div>
+							<div id="ctl00_MainEditable_RadToolTip9" style="background-color:#00CC00;border-width:1pt;border-style:Solid;font-size:10pt;display:none;position:absolute;">
+			
+
+									<span>Conference/Argument Days</span>
+						<input id="ctl00_MainEditable_RadToolTip9_ClientState" name="ctl00_MainEditable_RadToolTip9_ClientState" type="hidden" />
+		</div>
+                            </div>
+
+                            </div>
+                        </div>
+					    <p>&nbsp;</p>
+					    <span id="ctl00_MainEditable_lblCases" class="menu1title1"></span>
+					    <br />
+                        
+					    <div id="ctl00_MainEditable_RadWindowManager1" style="font-family:Arial;font-size:9px;display:none;">
+			<div id="ctl00_MainEditable_DisplayWindow" style="display:none;">
+				<div id="ctl00_MainEditable_DisplayWindow_C" style="display:none;">
+
+				</div><input id="ctl00_MainEditable_DisplayWindow_ClientState" name="ctl00_MainEditable_DisplayWindow_ClientState" type="hidden" />
+			</div><div id="ctl00_MainEditable_DisplayWindow2" style="display:none;">
+				<div id="ctl00_MainEditable_DisplayWindow2_C" style="display:none;">
+
+				</div><input id="ctl00_MainEditable_DisplayWindow2_ClientState" name="ctl00_MainEditable_DisplayWindow2_ClientState" type="hidden" />
+			</div><div id="ctl00_MainEditable_DisplayWindow3" style="display:none;">
+				<div id="ctl00_MainEditable_DisplayWindow3_C" style="display:none;">
+
+				</div><input id="ctl00_MainEditable_DisplayWindow3_ClientState" name="ctl00_MainEditable_DisplayWindow3_ClientState" type="hidden" />
+			</div><div id="ctl00_MainEditable_RadWindowManager1_alerttemplate" style="display:none;">
+        <div class="rwDialogPopup radalert">
+            <div class="rwDialogText">
+            {1}
+            </div>
+
+            <div>
+                <a  onclick="$find('{0}').close(true);"
+                class="rwPopupButton" href="javascript:void(0);">
+                    <span class="rwOuterSpan">
+                        <span class="rwInnerSpan">##LOC[OK]##</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        </div><div id="ctl00_MainEditable_RadWindowManager1_prompttemplate" style="display:none;">
+         <div class="rwDialogPopup radprompt">
+                <div class="rwDialogText">
+                {1}
+                </div>
+                <div>
+                    <script type="text/javascript">
+                    function RadWindowprompt_detectenter(id, ev, input)
+                    {
+                        if (!ev) ev = window.event;
+                        if (ev.keyCode == 13)
+                        {
+                            var but = input.parentNode.parentNode.getElementsByTagName("A")[0];
+                            if (but)
+                            {
+                                if (but.click) but.click();
+                                else if (but.onclick)
+                                {
+                                    but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);
+                                }
+                            }
+                           return false;
+                        }
+                        else return true;
+                    }
+                    </script>
+                    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+                </div>
+                <div>
+                    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"
+                        class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+                    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+                </div>
+            </div>
+        </div><div id="ctl00_MainEditable_RadWindowManager1_confirmtemplate" style="display:none;">
+        <div class="rwDialogPopup radconfirm">
+            <div class="rwDialogText">
+            {1}
+            </div>
+            <div>
+                <a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+                <a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+            </div>
+        </div>
+        </div><input id="ctl00_MainEditable_RadWindowManager1_ClientState" name="ctl00_MainEditable_RadWindowManager1_ClientState" type="hidden" />
+		</div>
+
+                    </div>
+				
+	</div>
+</div>
+			</div>
+		</div>
+
+        <div id="ctl00_MainEditable_pnlRecentDecisions">
+	
+            <div style="padding: 20px 0 20px 0; box-shadow: 0px 10px 10px #888888; position: relative;" >
+		        <div class="container">
+                    <br />
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+					    <div style="background-color: white; margin-left: auto; margin-right: auto; margin-top: 80px;">
+					      <img src="images/courtroom_sm.jpg" alt="" class="img-responsive" style="padding: 20px;border: thin solid #888888;" />
+					    </div>
+				    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                        
+                                <h3 style="font-weight: bold; color: #9c2426;">Recent Decisions</h3>
+                                <h4 style="font-weight: bold; margin-top: -5px;"><span id="ctl00_MainEditable_rptRecentDecisions_ctl00_lblDayOf"></span></h4>
+                                <br />
+                            
+                                <div id="opinionsbyday">
+                                <span id="ctl00_MainEditable_rptRecentDecisions_ctl01_lblDecisionDate" class="soday">March 04, 2024</span>
+                                
+                                
+                                        <div class="buttonrow">
+                                            <a href="opinions/23pdf/23-719_19m2.pdf" target="_blank"><span class="listbutton opinionbutton"><i class="fa fa-gavel" style="font-size: 13pt;" title="Opinions"></i></span></a>&nbsp;
+
+                                           <a href='#' OnClick="OpenRadWindow('docket/docketfiles/HTML/public/23-719.html'); return false;"><span class="listbutton docketbutton"><i class="fa fa-list" style="font-size: 13pt;" title="Docket"></i></span></a>&nbsp;
+                                           <a href='#' OnClick="OpenRadWindow2('docket/docketfiles/HTML/qp/23-00719qp.pdf'); return false;"><span class="listbutton docketbutton"><i class="fa fa-question" style="font-size: 13pt;" title="Questions Presented"></i></span></a>&nbsp;
+                                            &nbsp;
+                                            &nbsp;
+                                        </div>
+                                        <div class="casenamerow">
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl01_rptRecentDecisionDay_ctl00_lblRecentCaseName">Trump v. Anderson (23-719)</span>
+                                             (<i>Per Curiam</i>)
+                                            
+                                        </div>
+                                        <div class="casedetail">
+                                            
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl01_rptRecentDecisionDay_ctl00_lblRecentCaseDetail">Because the Constitution makes Congress, rather than the States, responsible for enforcing Section 3 of the Fourteenth Amendment against federal officeholders and candidates, the Colorado Supreme Court erred in ordering former President Trump excluded from the 2024 Presidential primary ballot.</span>
+                                        </div>
+                                        <br />
+                                    
+                                </div>
+                                <br /><br />
+                            
+                                <div id="opinionsbyday">
+                                <span id="ctl00_MainEditable_rptRecentDecisions_ctl02_lblDecisionDate" class="soday">February 21, 2024</span>
+                                
+                                
+                                        <div class="buttonrow">
+                                            <a href="opinions/23pdf/22-721_kjfl.pdf" target="_blank"><span class="listbutton opinionbutton"><i class="fa fa-gavel" style="font-size: 13pt;" title="Opinions"></i></span></a>&nbsp;
+
+                                           <a href='#' OnClick="OpenRadWindow('docket/docketfiles/HTML/public/22-721.html'); return false;"><span class="listbutton docketbutton"><i class="fa fa-list" style="font-size: 13pt;" title="Docket"></i></span></a>&nbsp;
+                                           <a href='#' OnClick="OpenRadWindow2('docket/docketfiles/HTML/qp/22-00721qp.pdf'); return false;"><span class="listbutton docketbutton"><i class="fa fa-question" style="font-size: 13pt;" title="Questions Presented"></i></span></a>&nbsp;
+                                            &nbsp;
+                                            &nbsp;
+                                        </div>
+                                        <div class="casenamerow">
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl02_rptRecentDecisionDay_ctl00_lblRecentCaseName">McElrath v. Georgia (22-721)</span>
+                                            
+                                            
+                                        </div>
+                                        <div class="casedetail">
+                                            
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl02_rptRecentDecisionDay_ctl00_lblRecentCaseDetail">The jury’s verdict that the defendant was not guilty by reason of insanity of malice murder constituted an acquittal for double jeopardy purposes notwithstanding any inconsistency with the jury’s other verdicts.</span>
+                                        </div>
+                                        <br />
+                                    
+                                        <div class="buttonrow">
+                                            <a href="opinions/23pdf/22-500_7k47.pdf" target="_blank"><span class="listbutton opinionbutton"><i class="fa fa-gavel" style="font-size: 13pt;" title="Opinions"></i></span></a>&nbsp;
+
+                                           <a href='#' OnClick="OpenRadWindow('docket/docketfiles/HTML/public/22-500.html'); return false;"><span class="listbutton docketbutton"><i class="fa fa-list" style="font-size: 13pt;" title="Docket"></i></span></a>&nbsp;
+                                           <a href='#' OnClick="OpenRadWindow2('docket/docketfiles/HTML/qp/22-00500qp.pdf'); return false;"><span class="listbutton docketbutton"><i class="fa fa-question" style="font-size: 13pt;" title="Questions Presented"></i></span></a>&nbsp;
+                                            &nbsp;
+                                            &nbsp;
+                                        </div>
+                                        <div class="casenamerow">
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl02_rptRecentDecisionDay_ctl01_lblRecentCaseName">Great Lakes Ins. SE v. Raiders Retreat Realty Co. (22-500)</span>
+                                            
+                                            
+                                        </div>
+                                        <div class="casedetail">
+                                            
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl02_rptRecentDecisionDay_ctl01_lblRecentCaseDetail">Choice-of-law provisions in maritime contracts are presumptively enforceable under federal maritime law, with narrow exceptions not applicable in this case.</span>
+                                        </div>
+                                        <br />
+                                    
+                                </div>
+                                <br /><br />
+                            
+                                <div id="opinionsbyday">
+                                <span id="ctl00_MainEditable_rptRecentDecisions_ctl03_lblDecisionDate" class="soday">February 08, 2024</span>
+                                
+                                
+                                        <div class="buttonrow">
+                                            <a href="opinions/23pdf/22-846_2co3.pdf" target="_blank"><span class="listbutton opinionbutton"><i class="fa fa-gavel" style="font-size: 13pt;" title="Opinions"></i></span></a>&nbsp;
+
+                                           <a href='#' OnClick="OpenRadWindow('docket/docketfiles/HTML/public/22-846.html'); return false;"><span class="listbutton docketbutton"><i class="fa fa-list" style="font-size: 13pt;" title="Docket"></i></span></a>&nbsp;
+                                           <a href='#' OnClick="OpenRadWindow2('docket/docketfiles/HTML/qp/22-00846qp.pdf'); return false;"><span class="listbutton docketbutton"><i class="fa fa-question" style="font-size: 13pt;" title="Questions Presented"></i></span></a>&nbsp;
+                                            &nbsp;
+                                            &nbsp;
+                                        </div>
+                                        <div class="casenamerow">
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl03_rptRecentDecisionDay_ctl00_lblRecentCaseName">Department of Agriculture Rural Development Rural Housing Service v. Kirtz (22-846)</span>
+                                            
+                                            
+                                        </div>
+                                        <div class="casedetail">
+                                            
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl03_rptRecentDecisionDay_ctl00_lblRecentCaseDetail">A consumer may sue a federal agency under 15 U. S. C. §§1681n and 1681o for defying the terms of the Fair Credit Reporting Act.</span>
+                                        </div>
+                                        <br />
+                                    
+                                        <div class="buttonrow">
+                                            <a href="opinions/23pdf/22-660_7648.pdf" target="_blank"><span class="listbutton opinionbutton"><i class="fa fa-gavel" style="font-size: 13pt;" title="Opinions"></i></span></a>&nbsp;
+
+                                           <a href='#' OnClick="OpenRadWindow('docket/docketfiles/HTML/public/22-660.html'); return false;"><span class="listbutton docketbutton"><i class="fa fa-list" style="font-size: 13pt;" title="Docket"></i></span></a>&nbsp;
+                                           <a href='#' OnClick="OpenRadWindow2('docket/docketfiles/HTML/qp/22-00660qp.pdf'); return false;"><span class="listbutton docketbutton"><i class="fa fa-question" style="font-size: 13pt;" title="Questions Presented"></i></span></a>&nbsp;
+                                            &nbsp;
+                                            &nbsp;
+                                        </div>
+                                        <div class="casenamerow">
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl03_rptRecentDecisionDay_ctl01_lblRecentCaseName">Murray v. UBS Securities, LLC (22-660)</span>
+                                            
+                                            
+                                        </div>
+                                        <div class="casedetail">
+                                            
+                                            <span id="ctl00_MainEditable_rptRecentDecisions_ctl03_rptRecentDecisionDay_ctl01_lblRecentCaseDetail">A whistleblower seeking to invoke the protections of the Sarbanes-Oxley Act—18 U. S. C. §1514A(a)—must prove that their protected activity was a contributing factor in the employer’s unfavorable personnel action, but need not prove that the employer acted with “retaliatory intent.”</span>
+                                        </div>
+                                        <br />
+                                    
+                                </div>
+                                <br /><br />
+                            
+                        <span style="font-size: 13pt;"><a id="ctl00_MainEditable_hypMoreOpinions" href="opinions/slipopinions.aspx">More Opinions...</a></span>
+                    </div>
+			    </div>
+		    </div>
+        
+</div>
+
+        <div id="ctl00_MainEditable_pnlDidYouKnow">
+	
+            <div style="box-shadow: 0px 10px 10px #888888; background-color: #d3d5d7;padding: 50px 0 20px 0;" >
+		        <div class="container">
+                    <br />
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 col-lg-push-5 col-md-push-6">
+    <h3 style="font-weight: bold; color: #9c2426;">Did You Know...</h3>
+    <h4 style="font-weight: bold; margin-top: -5px;">A &ldquo;New&rdquo; Portrait for a 230th Birthday!</h4>
+    <br />
+    <p>March 5th marks the 230th birthday of Justice Robert C. Grier, who served on the Court from 1846 to 1870. Born in Cumberland County, Pennsylvania, in 1794, Grier attended Dickinson College and practiced law privately until 1833, when he was appointed to the District Court of Allegheny County. In 1846, President James K. Polk appointed him to the Supreme Court. In 2023, descendants of Justice Grier donated this posthumous portrait, shared here for the first&nbsp;time.</p>
+    <p>&nbsp;</p>
+</div>
+<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 col-lg-pull-7 col-md-pull-6">
+    <div class="spotlightimgbox">
+        <div class="image-set">
+            <a href="didyouknow/images/2023-21.jpg" data-lightbox="spotlight" title="Bust-length portrait of Associate Justice Robert C. Grier by Robert David Gauley, 1919."><img src="didyouknow/images/2023-21-sm.jpg" alt="Bust-length portrait of Associate Justice Robert C. Grier by Robert David Gauley, 1919." class="img-responsive" /></a>
+        </div>
+        <div class="spotlightimgtext">
+            Bust-length portrait of Associate Justice Robert C. Grier <br />by Robert David Gauley, 1919.
+            <br /><span style="font-style:italic">Collection of the Supreme Court of the United States</span>
+        </div>
+        <br /><br />
+    </div>
+</div>
+
+			    </div>
+		    </div>
+        
+</div>
+        
+
+
+    <div class="footer2 noindex">
+        
+<div class="container">
+    <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
+        <div class="col-sm-4 col-xs-12">
+                    <a id="ctl00_wucFooterNav_HyperLink5" class="landing" href="opinions/opinions.aspx" style="display:inline-block;height:18px;">Opinions</a>
+                        <ul class="footernavlist">
+                            <li><a id="ctl00_wucFooterNav_HyperLink30" href="opinions/slipopinion/23">Opinions of the Court</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink31" href="opinions/relatingtoorders/23">Opinions Relating to Orders</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink32" href="opinions/in-chambers.aspx">In-Chambers Opinions</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink35" href="opinions/USReports.aspx">U. S. Reports</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink37" href="opinions/urls_cited.aspx">Online Sources Cited in Opinions</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink36" href="media/media.aspx">Media Files Cited in Opinions</a></li>
+
+                            <li><a id="ctl00_wucFooterNav_HyperLink34" href="opinions/casefinder.aspx">Case Citation Finder</a></li>
+                        </ul>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <a id="ctl00_wucFooterNav_HyperLink69" class="landing" href="filingandrules/" style="display:inline-block;height:18px;">Filing & Rules</a>
+                    <ul class="footernavlist">
+                        <li><a id="ctl00_wucFooterNav_HyperLink44f" href="filingandrules/electronicfiling.aspx">Electronic Filing</a></li>
+                        <li><a id="ctl00_wucFooterNav_HyperLink3" href="filingandrules/rules_guidance.aspx">Rules and Guidance</a></li>
+                        <li><a id="ctl00_wucFooterNav_HyperLink2" href="filingandrules/supremecourtbar.aspx">Supreme Court Bar</a>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <a id="ctl00_wucFooterNav_hl" class="landing" href="oral_arguments/oral_arguments.aspx" style="display:inline-block;height:18px;">Oral Arguments</a>
+                        <ul class="footernavlist">
+                            <li><a id="ctl00_wucFooterNav_HyperLink13" href="oral_arguments/argument_transcript.aspx">Argument Transcripts</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink14" href="oral_arguments/argument_audio.aspx">Argument Audio</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink6" href="oral_arguments/calendarsandlists.aspx">Calendars and Lists</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink8" href="oral_arguments/courtroomseating.aspx">Courtroom Seating</a></li>
+                        </ul>
+                </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
+                <div class="col-sm-4 col-xs-12">
+                    <a id="ctl00_wucFooterNav_HyperLink41" class="landing" href="case_documents.aspx" style="display:inline-block;height:18px;">Case Documents</a>
+                        <ul class="footernavlist">
+                            <li><a id="ctl00_wucFooterNav_hypdocket" href="docket/docket.aspx">Docket Search</a></li>
+                            <li><a id="ctl00_wucFooterNav_hypOrdersOfCourt" href="orders/ordersofthecourt/23">Orders of the Court</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink67" href="orders/ordersbycircuit.aspx">Orders by Circuit</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink68" href="orders/grantednotedlists.aspx">Granted/Noted Cases List</a></li>
+                            <li><a id="ctl00_wucFooterNav_HyperLink39" href="orders/journal.aspx">Journal</a></li>
+                            
+                        </ul>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <a id="ctl00_wucFooterNav_hypCourtInfo" class="landing" href="publicinfo/publicinfo.aspx" style="display:inline-block;height:18px;">News Media</a>
+                    <ul class="footernavlist">
+                        <li><a id="ctl00_wucFooterNav_HyperlinkServicesft" href="publicinfo/PIOServices.pdf" target="_blank">Services for News Media</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink57" href="publicinfo/press/pressreleases.aspx">Press Releases</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink58" href="publicinfo/media/mediaadvisories.aspx">Media Advisories</a></li>                
+                        <li><a id="ctl00_wucFooterNav_Hyperlink61" href="publicinfo/press/presscredentials.aspx">Press Credentials</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink59" href="publicinfo/speeches/speeches.aspx">Speeches</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink62" href="publicinfo/reportersguide.pdf" target="_blank">A Reporter's Guide to Applications (PDF)</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink60" href="publicinfo/year-end/year-endreports.aspx">Chief Justice's Year-End Reports on the Federal Judiciary</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <a id="ctl00_wucFooterNav_hypAboutCourt" class="landing" href="about/about.aspx" style="display:inline-block;height:18px;">About the Court</a>
+                    <ul class="footernavlist">
+                        <li><a id="ctl00_wucFooterNav_Hyperlink4" href="about/justices.aspx">Justices</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink10" href="about/courtatwork.aspx">Supreme Court at Work</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink1" href="about/code-of-conduct-for-justices.aspx">Code of Conduct for Justices</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink7" href="about/historyandtraditions.aspx">History and Traditions</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink49" href="about/courtbuilding.aspx">The Supreme Court Building</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink9" href="visiting/visiting.aspx">Visiting the Court</a></li>
+                        <li><a id="ctl00_wucFooterNav_HypActivitiesFt" href="visiting/activities.aspx">Activities for Students & Families</a></li>
+                        <li><a id="ctl00_wucFooterNav_HyperexhibitionsFt" href="visiting/exhibition.aspx">Exhibitions</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink50" href="about/buildingregulations.aspx">Building Regulations</a></li>
+                        <li><a id="ctl00_wucFooterNav_Hyperlink45" href="about/faq.aspx">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+    </div>
+</div>
+    </div>
+
+    <div class="footer3 noindex">
+       <div class="container">
+            <span><a id="ctl00_HypContactUs" href="contact/contactus.aspx">Contact Us</a></span>
+            <span class="pipespacer">|</span>
+           <span><a id="ctl00_HyperLink1" href="sitemap.aspx">Site Map</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_hypHelp" href="help.aspx">Help</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_HypFellows" href="fellows/">Fellows Program</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_HypJobs" href="jobs/jobs.aspx">Jobs</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_HypLinks" href="links/links.aspx">Links</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_HypWebPolicy" href="policies/web_policies_and_notices.aspx">Website Policies and Notices</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_HypPrivacy" href="policies/privacy_notice.aspx">Privacy Policy</a></span>
+            <span class="pipespacer">|</span>
+            <span><a id="ctl00_hypUSA" href="redirect.aspx?federal=y&amp;newURL=www.usa.gov">USA.GOV</a></span>
+        </div>
+    </div>
+    <div class="footer4">
+       <div class="container" >
+           <span class="footerbold">SUPREME COURT OF THE UNITED STATES</span>
+           <span class="dotspacer"><i class="fa fa-circle" style="font-size: 3pt;"></i></span>
+           <span>1 First Street, NE</span>
+           <span class="dotspacer"><i class="fa fa-circle" style="font-size: 3pt;"></i></span>
+           <span>Washington, DC 20543</span>
+       </div>
+        <button onclick="goToTop(); return false;" id="gototop" title="Got To Top" style="display: none;"><i class="fa fa-chevron-circle-up"></i></button>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_RegularExpressionValidator2"), document.getElementById("ctl00_SearchVal"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_RegularExpressionValidator2 = document.all ? document.all["ctl00_RegularExpressionValidator2"] : document.getElementById("ctl00_RegularExpressionValidator2");
+ctl00_RegularExpressionValidator2.controltovalidate = "ctl00_txtSearch";
+ctl00_RegularExpressionValidator2.errormessage = "Search term too short ";
+ctl00_RegularExpressionValidator2.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_RegularExpressionValidator2.validationexpression = "^[\\s\\S]{3,}$";
+var ctl00_SearchVal = document.all ? document.all["ctl00_SearchVal"] : document.getElementById("ctl00_SearchVal");
+ctl00_SearchVal.controltovalidate = "ctl00_txtSearch";
+ctl00_SearchVal.errormessage = "Invalid text in search term. Try again";
+ctl00_SearchVal.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_SearchVal.validationexpression = "[\\w\\s-/\"\'() /*@.]*";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl00_RadScriptManager1_TSM');
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        WebForm_AutoFocus('cmdsearch');
+document.getElementById('ctl00_RegularExpressionValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_RegularExpressionValidator2'));
+}
+
+document.getElementById('ctl00_SearchVal').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_SearchVal'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadCalendar, {"_DayRenderChangedDays":{"2024_3_15":["","SplitDay SplitDay"]},"_FormatInfoArray":[["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],["January","February","March","April","May","June","July","August","September","October","November","December",""],["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"dddd, MMMM d, yyyy h:mm:ss tt","dddd, MMMM d, yyyy","h:mm:ss tt","MMMM d","ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","M/d/yyyy","h:mm tt","yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","MMMM yyyy","AM","PM","/",":",0],"_ViewRepeatableDays":{},"_ViewsHash":{"ctl00_MainEditable_Cal_Top" : [[2024,3,1], 1]},"_calendarWeekRule":0,"_culture":"en-US","_enableKeyboardNavigation":false,"_enableViewSelector":false,"_firstDayOfWeek":7,"_postBackCall":"__doPostBack(\u0027ctl00$MainEditable$Cal\u0027,\u0027@@\u0027)","_rangeSelectionMode":0,"autoPostBack":true,"calendarEnableMonthYearFastNavigation":false,"clientStateFieldID":"ctl00_MainEditable_Cal_ClientState","enableMultiSelect":false,"enabled":true,"monthYearNavigationSettings":["Today","OK","Cancel","Date is out of range.","False","True","300","1","300","1","False"],"showOtherMonthsDays":false,"skin":"Web21","specialDaysArray":[[,[2024,3,1],1,0,0,0,64,0,"Conference Day",{"SpecialDayStyle_2024_3_1": ["background-color:Green;", ""]}],[,[2024,3,4],1,0,0,0,64,0,"Order List Issuance Day",{"SpecialDayStyle_2024_3_4": ["background-color:#25AAE1;", ""]}],["SplitDay15",[2024,3,15],1,0,0,0,64,0,"Conference/Non-argument Day",{"SpecialDayStyle_2024_3_15": ["", "SplitDay"]}],[,[2024,3,18],1,0,0,0,64,0,"Argument Day",{"SpecialDayStyle_2024_3_18": ["background-color:Red;", ""]}],[,[2024,3,19],1,0,0,0,64,0,"Argument Day",{"SpecialDayStyle_2024_3_19": ["background-color:Red;", ""]}],[,[2024,3,20],1,0,0,0,64,0,"Argument Day",{"SpecialDayStyle_2024_3_20": ["background-color:Red;", ""]}],[,[2024,3,22],1,0,0,0,64,0,"Conference Day",{"SpecialDayStyle_2024_3_22": ["background-color:Green;", ""]}],[,[2024,3,25],1,0,0,0,64,0,"Argument Day",{"SpecialDayStyle_2024_3_25": ["background-color:Red;", ""]}],[,[2024,3,26],1,0,0,0,64,0,"Argument Day",{"SpecialDayStyle_2024_3_26": ["background-color:Red;", ""]}],[,[2024,3,27],1,0,0,0,64,0,"Argument Day",{"SpecialDayStyle_2024_3_27": ["background-color:Red;", ""]}],[,[2024,3,28],1,0,0,0,64,0,"Conference Day",{"SpecialDayStyle_2024_3_28": ["background-color:Green;", ""]}]],"stylesHash":{"DayStyle": ["", ""],"CalendarTableStyle": ["", "rcMainTable"],"OtherMonthDayStyle": ["", "rcOtherMonth"],"TitleStyle": ["", ""],"SelectedDayStyle": ["background-color:#7ED6FB;border-style:Solid;", "rcSelected"],"SelectorStyle": ["", "HeaderClass"],"DisabledDayStyle": ["", "rcDisabled"],"OutOfRangeDayStyle": ["", "rcOutOfRange"],"WeekendDayStyle": ["", "rcWeekend"],"DayOverStyle": ["", "rcHover"],"FastNavigationStyle": ["", "RadCalendarMonthView RadCalendarMonthView_Web21"],"ViewSelectorStyle": ["", "rcViewSel"]},"useColumnHeadersAsSelectors":false}, {"dateClick":DateClick}, null, $get("ctl00_MainEditable_Cal"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip1_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendArg","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip2_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendNon","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip3_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendConf","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip3"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip4_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendSplit","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip4"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip5_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendHol","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip5"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip6_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendOpinion","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip6"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip8_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendOrder","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip8"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip7_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendconfOpinion","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip7"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"animation":2,"clientStateFieldID":"ctl00_MainEditable_RadToolTip9_ClientState","formID":"aspnetForm","position":12,"relativeTo":1,"skin":"Default","targetControlID":"legendConfArg","width":"390px"}, null, null, $get("ctl00_MainEditable_RadToolTip9"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":4,"clientStateFieldID":"ctl00_MainEditable_DisplayWindow_ClientState","formID":"aspnetForm","height":"580px","iconUrl":"","left":"200px","maxHeight":"580px","maxWidth":"800px","minHeight":"460px","minWidth":"680px","minimizeIconUrl":"","modal":true,"name":"DisplayWindow","reloadOnShow":true,"skin":"Default","title":"Docket","top":"100px","visibleStatusbar":false,"width":"800px"}, {"show":OnClientShow}, null, $get("ctl00_MainEditable_DisplayWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":4,"clientStateFieldID":"ctl00_MainEditable_DisplayWindow2_ClientState","formID":"aspnetForm","height":"580px","iconUrl":"","left":"200px","maxHeight":"580px","maxWidth":"800px","minHeight":"460px","minWidth":"680px","minimizeIconUrl":"","modal":true,"name":"DisplayWindow2","reloadOnShow":true,"skin":"Default","title":"QP","top":"100px","visibleStatusbar":false,"width":"800px"}, null, null, $get("ctl00_MainEditable_DisplayWindow2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":4,"clientStateFieldID":"ctl00_MainEditable_DisplayWindow3_ClientState","formID":"aspnetForm","height":"460px","iconUrl":"","left":"200px","maxHeight":"580px","maxWidth":"800px","minHeight":"460px","minWidth":"680px","minimizeIconUrl":"","modal":true,"name":"DisplayWindow3","reloadOnShow":true,"skin":"Default","title":"Live Oral Argument Audio","top":"100px","visibleStatusbar":false,"width":"680px"}, {"show":OnClientShow2}, null, $get("ctl00_MainEditable_DisplayWindow3"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"clientStateFieldID":"ctl00_MainEditable_RadWindowManager1_ClientState","formID":"aspnetForm","iconUrl":"","left":"200px","maxHeight":"580px","maxWidth":"800px","minHeight":"460px","minWidth":"680px","minimizeIconUrl":"","name":"RadWindowManager1","skin":"Default","top":"100px","visibleStatusbar":false,"windowControls":"['ctl00_MainEditable_DisplayWindow','ctl00_MainEditable_DisplayWindow2','ctl00_MainEditable_DisplayWindow3']"}, null, {"child":"ctl00_MainEditable_DisplayWindow"}, $get("ctl00_MainEditable_RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxPanel, {"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"enableAJAX":true,"enableHistory":false,"links":[],"loadingPanelID":"","styles":[],"uniqueID":"ctl00$MainEditable$RadAjaxPanel1"}, null, null, $get("ctl00_MainEditable_RadAjaxPanel1"));
+});
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                var vTop = $(window).scrollTop();
+                if (vTop > 100) {
+                    document.getElementById("gototop").style.display = "block";
+                } else {
+                    document.getElementById("gototop").style.display = "none";
+                }
+            }
+
+            function goToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        
+            function toggleSearchshow() {
+                var query = $("#searchbox");
+                var isVisible = query.is(":visible");
+
+                if (isVisible === true) {
+                    $("#searchbox").css("display", "none");
+                } else {
+                    $("#searchbox").css("display", "block");
+                }
+            }
+    </script>
+</body>
+</html>
