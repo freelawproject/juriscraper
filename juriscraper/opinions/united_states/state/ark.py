@@ -19,6 +19,7 @@ class Site(OpinionSiteLinear):
     cite_regex = re.compile(r"\d{2,4} Ark\. \d+", re.IGNORECASE)
     first_opinion_date = datetime(1979, 9, 3)
     days_interval = 7
+    not_a_opinion_regex = r"SYLLABUS|(NO (COURT OF APPEALS )?OPINION)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -41,15 +42,20 @@ class Site(OpinionSiteLinear):
             )
 
         for item in rows:
+            per_curiam = False
+
             name = item.xpath(".//a/text()")[0]
             url = item.xpath(".//a/@href")[1]
-            if "SYLLABUS" in name.upper():
-                logger.info("Skipping %s %s, it's a Syllabus", name, url)
+            if re.search(self.not_a_opinion_regex, name.upper()):
+                logger.info("Skipping %s %s, invalid document", name, url)
                 continue
 
             cite = item.xpath(".//*[@class='citation']/text()")
             if cite:
                 cite = cite[0]
+
+            if metadata := item.xpath(".//*[@class='subMetadata']/span[2]"):
+                per_curiam = metadata[0].text_content().strip() == "Per Curiam"
 
             date_filed = item.xpath(".//*[@class='publicationDate']/text()")[0]
             self.cases.append(
@@ -60,6 +66,7 @@ class Site(OpinionSiteLinear):
                     "citation": cite,
                     "url": url,
                     "status": "Published",
+                    "per_curiam": per_curiam,
                 }
             )
 
@@ -100,13 +107,9 @@ class Site(OpinionSiteLinear):
         """
         normalized_content = normalize_dashes(scraped_text)
         match = re.findall(r"No\. (\w+-\d+-\d+)", normalized_content)
-        docket_number = match[0] if match else ""
-        metadata = {
-            "OpinionCluster": {
-                "docket_number": docket_number,
-            },
-        }
-        return metadata
+        if match:
+            return {"OpinionCluster": {"docket_number": match[0]}}
+        return {}
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Make custom date range request
