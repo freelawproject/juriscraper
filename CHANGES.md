@@ -16,6 +16,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.12 - 2024-07-22**
+
+Features:
+  - Update free opinion report to store the params used for each request
+
+## Past
+
 **2.6.11 - 2024-07-22**
 
 Fixes:
@@ -29,8 +36,6 @@ Features:
   - md backscraper
   - OpinionSiteLinear now supports returning "other_dates" key
   - New scraper for ky and kyctapp
-
-## Past
 
 **2.6.10 - 2024-07-11**
 
