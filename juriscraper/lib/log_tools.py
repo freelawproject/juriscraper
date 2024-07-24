@@ -20,7 +20,7 @@ def make_default_logger(file_path=LOG_FILENAME):
 
     :return: a logger object
     """
-    logger = logging.getLogger("Logger")
+    logger = logging.getLogger(__name__)
     if not len(logger.handlers):
         logger.setLevel(logging.DEBUG)
         # Create a handler and attach it to the logger
