@@ -1,7 +1,7 @@
 import re
 from datetime import date, datetime, timedelta
 from typing import Optional, Tuple
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -58,8 +58,10 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date.text,
                     "name": caption.text,
-                    "url": "https://www.wicourts.gov"
-                    + link.xpath("./input")[0].name,
+                    "url": urljoin(
+                        "https://www.wicourts.gov",
+                        link.xpath("./input")[0].name,
+                    ),
                     "docket": docket.text,
                 }
             )
@@ -74,14 +76,7 @@ class Site(OpinionSiteLinear):
         match = re.search(self.cite_regex, first_line)
 
         if match:
-            return {
-                "Citation": {
-                    "volume": match.group("volume"),
-                    "reporter": match.group("reporter"),
-                    "page": match.group("page"),
-                    "type": 8,  # NEUTRAL in CL Citation model
-                },
-            }
+            return {"Citation": {**match.groupdict(), "type": 8}}
         return {}
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:

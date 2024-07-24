@@ -1,3 +1,5 @@
+from urllib.parse import urljoin
+
 from lxml import etree
 
 from juriscraper.opinions.united_states.state import wis
@@ -24,9 +26,11 @@ class Site(wis.Site):
         :param caption: The case name field
         :return:Status
         """
-        notes = caption.xpath("./strong/text()")
-        if notes and "publication" in notes[0]:
+        full_string = caption.text_content()
+        if "publication" in full_string.lower():
             status = "Published"
+        elif "errata" in full_string.lower():
+            status = "Errata"
         else:
             status = "Unpublished"
         return status
@@ -34,12 +38,18 @@ class Site(wis.Site):
     def _process_html(self):
         for row in self.html.xpath(".//table/tbody/tr"):
             date, docket, caption, district, county, link = row.xpath("./td")
+            if caption.text == None:
+                case_name = caption.text_content().replace("Errata: ", "")
+            else:
+                case_name = caption.text
             self.cases.append(
                 {
                     "date": date.text,
-                    "name": caption.text,
-                    "url": "https://www.wicourts.gov"
-                    + link.xpath("./input")[0].name,
+                    "name": case_name,
+                    "url": urljoin(
+                        "https://www.wicourts.gov",
+                        link.xpath("./input")[0].name,
+                    ),
                     "docket": docket.text,
                     "status": self.set_status(caption),
                 }
