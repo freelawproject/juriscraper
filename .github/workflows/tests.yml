@@ -23,9 +23,7 @@ jobs:
         pip install -r requirements.txt
         pip install -r requirements-dev.txt
     - name: Run tests
-      run: |
-        python setup.py test
-        python setup.py testnetwork
+      run: pytest
 
 # Cancel the current workflow (tests) for pull requests (head_ref) only. See:
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-a-fallback-value
