@@ -40,7 +40,7 @@ class Site(wis.Site):
         for row in self.html.xpath(".//table/tbody/tr"):
             date, docket, caption, district, county, link = row.xpath("./td")
             strong_text = caption.xpath(".//strong/text()")
-            lower_court = (f"Wisconsin Circuit Court, {county.text} County",)
+            lower_court = f"Wisconsin Circuit Court, {county.text} County"
             if strong_text:
                 notes = strong_text[0]
                 if (
