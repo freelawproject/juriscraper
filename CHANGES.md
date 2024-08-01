@@ -16,12 +16,22 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.13 - 2024-08-01**
+
+Features:
+  - Adds the de_seq_num to the download method.
+
+Fixes:
+  - Adds headers attribute to the massappct_u scraper.
+  - Updates the URL for the oklaag scraper.
+  - Updates the setup.py configuration to address deprecated setuptools options and improves test management using pytest.
+
+## Past
+
 **2.6.12 - 2024-07-22**
 
 Features:
   - Update free opinion report to store the params used for each request
-
-## Past
 
 **2.6.11 - 2024-07-22**
 
