@@ -3,9 +3,11 @@
 # Date created: 2019-02-28
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
 import re
+from datetime import date, datetime
 from typing import Tuple
 from urllib.parse import urljoin
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -19,12 +21,14 @@ class Site(OpinionSiteLinear):
         "nature_of_suit",
         "judge",
     ]
+    first_opinion_date = datetime(1955, 10, 25).date()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ndcourts.gov/supreme-court/opinions?topic=&author=&searchQuery=&trialJudge=&pageSize=100&sortOrder=1"
         self.status = "Published"
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Most values are inside a <p>: whitespace and
@@ -132,3 +136,76 @@ class Site(OpinionSiteLinear):
             )
 
         return metadata
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Make custom date range request
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        start, end = dates
+        date_fmt = "%m/%d/%Y"
+        # last page is 118 (August 2024)
+        first_page, last_page = 2, 130
+        base_url = self.url
+        cases = []
+
+        for page in range(first_page, last_page):
+            self.cases = []  # reset results container
+            self.url = f"{base_url}&page={page}"
+            self.html = self._download()
+            self._process_html()
+
+            # results are ordered by desceding date
+            earliest = datetime.strptime(
+                self.cases[-1]["date"], date_fmt
+            ).date()
+            latest = datetime.strptime(self.cases[0]["date"], date_fmt).date()
+            logger.info(
+                "Results page has date range %s to %s", earliest, latest
+            )
+
+            # no intersection between date ranges
+            if max(earliest, start) >= min(latest, end):
+                # if earliest date from results is earlier than
+                # the start date, no need to iterate any further
+                if earliest < start:
+                    logger.info(
+                        "Finishing backscrape: earliest results date is %s earlier than start %s",
+                        earliest,
+                        start,
+                    )
+                    break
+                continue
+
+            # if there is an intersection, test every case and
+            # collect the matching cases
+            for case in self.cases:
+                case_date = datetime.strptime(case["date"], date_fmt).date()
+                if case_date < end and case_date > start:
+                    cases.append(case)
+
+        self.cases = cases
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
+
+        :param kwargs: passed when initializing the scraper, may or
+            may not contain backscrape controlling arguments
+        :return None
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        if start:
+            start = datetime.strptime(start, "%m/%d/%Y").date()
+        else:
+            start = self.first_opinion_date
+        if end:
+            end = datetime.strptime(end, "%m/%d/%Y").date()
+        else:
+            end = datetime.now().date()
+
+        logger.info("Backscraping for cases between %s and %s", start, end)
+        self.back_scrape_iterable = [(start, end)]
