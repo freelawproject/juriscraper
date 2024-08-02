@@ -87,6 +87,10 @@ def scrape_court(site, binaries=False):
             # clean it up.
             data = extract_doc_content(data)
             data = site.cleanup_content(data)
+            v_print(
+                3,
+                f"Showing extracted document data (500 chars):\n {data[:500]}",
+            )
 
         # Normally, you'd do your save routines here...
         v_print(1, "\nAdding new item:")
