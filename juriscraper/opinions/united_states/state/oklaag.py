@@ -16,7 +16,7 @@ class Site(okla.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         year = datetime.today().year
-        self.url = f"https://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year={year}&level=1"
+        self.url = f"https://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
 

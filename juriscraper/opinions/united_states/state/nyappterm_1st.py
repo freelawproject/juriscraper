@@ -8,6 +8,7 @@ from typing import Any, Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import make_date_range_tuples
+from juriscraper.opinions.united_states.state.ny import set_api_token_header
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -25,6 +26,7 @@ class Site(OpinionSiteLinear):
         self._set_parameters()
         self.expected_content_types = ["application/pdf", "text/html"]
         self.make_backscrape_iterable(kwargs)
+        set_api_token_header(self)
 
     def _set_parameters(
         self,
