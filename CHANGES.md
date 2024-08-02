@@ -16,12 +16,42 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.13 - 2024-08-01**
+
+Features:
+  - Adds the de_seq_num to the download method.
+
+Fixes:
+  - Adds headers attribute to the massappct_u scraper.
+  - Updates the URL for the oklaag scraper.
+  - Updates the setup.py configuration to address deprecated setuptools options and improves test management using pytest.
+
+## Past
+
+**2.6.12 - 2024-07-22**
+
+Features:
+  - Update free opinion report to store the params used for each request
+
+**2.6.11 - 2024-07-22**
+
+Fixes:
+  - Oklahoma opinion scrapers
+  - CAFC oral argument scraper
+  - ASBCA opinion scrapers
+  - renamed logger from "Logger" to "juriscraper.lib.log_tools", which follows hierarchical naming convention
+
+Features:
+  - RECAP email: Support short_description parsing for tnmb and nhb
+  - md backscraper
+  - OpinionSiteLinear now supports returning "other_dates" key
+  - New scraper for ky and kyctapp
+
 **2.6.10 - 2024-07-11**
 
 Features:
   - Fixes colo scraper expected_content_type
 
-## Past
 
 **2.6.9 - 2024-07-10**
 

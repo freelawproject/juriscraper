@@ -1,11 +1,10 @@
 import codecs
 import os
-import unittest
 
 from setuptools import find_packages, setup
 from setuptools.command.install import install
 
-VERSION = "2.6.10"
+VERSION = "2.6.13"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -18,7 +17,7 @@ with open(reqs_path) as reqs_file:
 
 def read(*parts):
     """
-    Build an absolute path from *parts* and and return the contents of the
+    Build an absolute path from *parts* and return the contents of the
     resulting file.  Assume UTF-8 encoding.
     """
     with codecs.open(os.path.join(HERE, *parts), "rb", "utf-8") as f:
@@ -31,10 +30,11 @@ class TestNetwork(install):
     description = "run isolated tests that hit the network"
 
     def run(self):
-        loader = unittest.defaultTestLoader
-        runner = unittest.TextTestRunner(verbosity=2)
-        tests = loader.discover("./tests/network")
-        runner.run(tests)
+        import pytest
+
+        errno = pytest.main(["-v", "./tests/network"])
+        if errno:
+            raise SystemExit(errno)
 
 
 setup(
@@ -69,7 +69,15 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=reqs,
-    tests_require=["jsondate3-aware"],
+    extras_require={
+        "dev": [
+            "pytest",
+        ],
+        "test": [
+            "jsondate3-aware",
+            "pytest",
+        ],
+    },
     include_package_data=True,
     test_suite="tests.test_local",
     cmdclass={
