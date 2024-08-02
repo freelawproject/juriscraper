@@ -17,6 +17,7 @@ from lxml.html import fromstring
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import harmonize
+from juriscraper.opinions.united_states.state.ny import set_api_token_header
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -36,6 +37,7 @@ class Site(OpinionSiteLinear):
         )
         self.back_scrape_iterable = [i.date() for i in date_keys]
         self.expected_content_types = ["application/pdf", "text/html"]
+        set_api_token_header(self)
 
     def build_url(self, target_date: Optional[date] = None) -> str:
         """URL as is loads most recent month page
