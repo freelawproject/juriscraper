@@ -25,6 +25,13 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.expected_content_types = ["text"]
 
+        # the site we scrape does not require custom headers
+        # However, `massappct_u`` is treated as `massappct` in
+        # Courtlistener, which does requires a self.headers attribute
+        # Passing extra headers besides User-Agent will break
+        # document download
+        self.headers = {"User-Agent": "Courtlistener"}
+
     def make_url(self) -> str:
         """Build the urls to query
 
