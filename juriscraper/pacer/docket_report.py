@@ -2,10 +2,11 @@ import copy
 import pprint
 import re
 import sys
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from dateutil.tz import gettz
 from lxml import etree
+from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
 from ..lib.judge_parsers import normalize_judge_string
@@ -157,7 +158,17 @@ class BaseDocketReport:
         else:
             return s
 
-    def _parse_docket_number_strs(self, potential_docket_numbers):
+    @staticmethod
+    def _parse_dn_components(potential_docket_number) -> Dict[str, str | None]:
+        regex = r"(?:(?P<federal_dn_office_code>\d):\d{2}-(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-\d{5}|(?:\d{2}-\d{5}))(?:-(?P<federal_dn_judge_initials_assigned>[a-zA-Z_]{1,5}))?(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?(?:-(?P<federal_defendant_number>\d))?"
+        match = re.search(regex, potential_docket_number)
+        if match:
+            return match.groupdict()
+        return {}
+
+    def _parse_docket_number_strs(
+        self, potential_docket_numbers: list[_ElementUnicodeResult]
+    ) -> tuple[str | None, Dict[str, str]]:
         """Parse docket numbers from a list of potential ones
 
         :param potential_docket_numbers: Potential docket number unicode
@@ -166,6 +177,7 @@ class BaseDocketReport:
         :return: The correct docket number
         :rtype: unicode
         """
+
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -179,7 +191,17 @@ class BaseDocketReport:
             for s in potential_docket_numbers:
                 match = regex.search(s)
                 if match:
-                    return match.group(1)
+                    docket_number_components = self._parse_dn_components(s)
+                    return match.group(1), docket_number_components
+
+        default_dn_components = {
+            "federal_defendant_number": None,
+            "federal_dn_case_type": None,
+            "federal_dn_judge_initials_assigned": None,
+            "federal_dn_judge_initials_referred": None,
+            "federal_dn_office_code": None,
+        }
+        return None, default_dn_components
 
     def get_datetime_from_tree(self, path, cast_to_date=False):
         """Parse a datetime from the XML located at node.
@@ -450,9 +472,10 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._metadata
 
         self._set_metadata_values()
+        docket_number_parsing = self._parse_docket_number()
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_docket_number(),
+            "docket_number": docket_number_parsing[0],
             "case_name": self._get_case_name(),
             "date_filed": self._get_value(
                 self.date_filed_regex, self.metadata_values, cast_to_date=True
@@ -488,6 +511,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             ),
             "ordered_by": self._get_docket_entries_order(),
         }
+        # Include the docket_number components.
+        data.update(docket_number_parsing[1])
 
         data = clean_court_object(data)
         self._metadata = data
@@ -1538,7 +1563,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self):
+    def _parse_docket_number(self):
         if self.is_bankruptcy:
             docket_number_path = "//center//font"
         else:
