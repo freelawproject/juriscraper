@@ -202,7 +202,7 @@ class BaseDocketReport:
         return self._return_default_dn_components()
 
     def _parse_docket_number_strs(
-        self, potential_docket_numbers: list[_ElementUnicodeResult]
+        self, potential_docket_numbers: List[_ElementUnicodeResult]
     ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
