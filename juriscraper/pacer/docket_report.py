@@ -192,7 +192,7 @@ class BaseDocketReport:
             r"|"  # OR
             r"(?:\d{2}-\d{5})"  # Alternative format for bankruptcy: two digits, hyphen, five digits
             r")"
-            r"(?:-(?P<federal_dn_judge_initials_assigned>[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters or underscores
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A
             r"(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?"  # Optional: another set of judge initials
             r"(?:-(?P<federal_defendant_number>\d))?"  # Optional: hyphen followed by a single digit
         )

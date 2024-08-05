@@ -501,6 +501,26 @@ class DocketNumberParseTest(unittest.TestCase):
                     "federal_dn_office_code": "3",
                 },
             ),
+            (
+                "4:20-mj-00061-N/A",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mj",
+                    "federal_dn_judge_initials_assigned": "N/A",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "4",
+                },
+            ),
+            (
+                "4:20-cv-00061-CKJ-PSOT",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "CKJ",
+                    "federal_dn_judge_initials_referred": "PSOT",
+                    "federal_dn_office_code": "4",
+                },
+            ),
         ]
 
         for test in test_cases:
