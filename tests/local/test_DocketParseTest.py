@@ -521,6 +521,36 @@ class DocketNumberParseTest(unittest.TestCase):
                     "federal_dn_office_code": "4",
                 },
             ),
+            (
+                "1:15-mc-00105-P1",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mc",
+                    "federal_dn_judge_initials_assigned": "P1",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:17-cr-00350-KBF-27",
+                {
+                    "federal_defendant_number": "27",
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "KBF",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:08-cv-00398-GWC-TCS-LMG",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "GWC",
+                    "federal_dn_judge_initials_referred": "TCS",
+                    "federal_dn_office_code": "1",
+                },
+            ),
         ]
 
         for test in test_cases:
@@ -554,6 +584,56 @@ class DocketNumberParseTest(unittest.TestCase):
                     "federal_dn_judge_initials_assigned": "LMK",
                     "federal_dn_judge_initials_referred": None,
                     "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "15-32065-bjh11",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "bjh",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "09-80591-JAC7",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "JAC",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "04-45661-rfn13",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "rfn",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "10-01083-8-RDD",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "RDD",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "8",
+                },
+            ),
+            (
+                "10-12431-1-rel",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "rel",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
                 },
             ),
         ]

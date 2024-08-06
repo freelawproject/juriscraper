@@ -185,20 +185,57 @@ class BaseDocketReport:
         """
         regex = (
             r"(?:"
-            r"(?P<federal_dn_office_code>\d):"  # Single digit office code
-            r"\d{2}-"  # Two digits followed by a hyphen
-            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"  # Case type: 1-5 alphanumeric chars or '~gr'
-            r"\d{5}"  # Five digits
+            r"\d{2}-\d{5}-"  # Alternative format for bankruptcy: 10-01083-8-RDD
+            r"(?P<alternative_federal_dn_office_code>\d)-"
+            r"(?P<alternative_federal_dn_judge_initials_assigned>[a-zA-Z]{2,4})"
             r"|"  # OR
-            r"(?:\d{2}-\d{5})"  # Alternative format for bankruptcy: two digits, hyphen, five digits
+            r"(?:"  # District and bankruptcy format: 3:20-cr-00070-TKW-MAL-1
+            r"(?P<federal_dn_office_code>\d):"
+            r"\d{2}-"
+            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
+            r"\d{5}"
+            r"|"
+            r"(?:\d{2}-\d{5})"  # Alternative format for bankruptcy: 02-00017-LMK
             r")"
-            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
             r"(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?"  # Optional: another set of judge initials
-            r"(?:-(?P<federal_defendant_number>\d))?"  # Optional: hyphen followed by a single digit
+            r"(?:-(?P<federal_defendant_number>\d{1,3}))?"  # Optional: hyphen followed by up to 3 digits
+            r")"
         )
         match = re.search(regex, potential_docket_number)
         if match:
-            return match.groupdict()
+            # Clean up parsed components. Assign alternative_federal_dn_office_code
+            # and alternative_federal_dn_judge_initials_assigned to federal_dn_office_code and
+            # federal_dn_judge_initials_assigned if they match.
+            parsed_components = match.groupdict()
+            if parsed_components.get("alternative_federal_dn_office_code"):
+                parsed_components["federal_dn_office_code"] = (
+                    parsed_components["alternative_federal_dn_office_code"]
+                )
+                parsed_components["federal_dn_judge_initials_assigned"] = (
+                    parsed_components[
+                        "alternative_federal_dn_judge_initials_assigned"
+                    ]
+                )
+
+            return {
+                "federal_dn_office_code": parsed_components.get(
+                    "federal_dn_office_code"
+                ),
+                "federal_dn_case_type": parsed_components.get(
+                    "federal_dn_case_type"
+                ),
+                "federal_dn_judge_initials_assigned": parsed_components.get(
+                    "federal_dn_judge_initials_assigned"
+                ),
+                "federal_dn_judge_initials_referred": parsed_components.get(
+                    "federal_dn_judge_initials_referred"
+                ),
+                "federal_defendant_number": parsed_components.get(
+                    "federal_defendant_number"
+                ),
+            }
+
         return self._return_default_dn_components()
 
     def _parse_docket_number_strs(
