@@ -51,7 +51,7 @@ class ScraperExtractFromText(unittest.TestCase):
             # Some opinions don't have dockets because Arkansas publishes important announcements.
             (
                 """Cite as 2022 Ark. 14\nSUPREME COURT OF ARKANSAS Opinion Delivered: January 27, 2022""",
-                {"OpinionCluster": {"docket_number": ""}},
+                {},
             ),
         ],
         "juriscraper.opinions.united_states.state.arkctapp": [
