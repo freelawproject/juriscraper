@@ -18,7 +18,7 @@ class Site(OpinionSiteLinear):
     court = "Supreme"
     base_url = "https://www.pacourts.us/api/opinion?"
     document_url = "https://www.pacourts.us/assets/opinions/{}/out/{}"
-    days_interval = 50
+    days_interval = 20
     api_dt_format = "%Y-%m-%dT00:00:00-05:00"
     first_opinion_date = datetime(1998, 4, 27)
 
@@ -33,12 +33,8 @@ class Site(OpinionSiteLinear):
         self.params = {
             "startDate": start.strftime(self.api_dt_format),
             "endDate": now.strftime(self.api_dt_format),
-            "courtType": self.court.upper(),
-            "boardDocketNumber": "undefined",
-            "courtDocketNumber": "undefined",
-            "keywords": "undefined",
-            "postTypes": "cd,co,do,mo,oaj",
-            "publicationType": "undefined",
+            "courtType": self.court,
+            "postTypes": "cd,cds,co,cs,dedc,do,ds,mo,oaj,pco,rv,sd",
             "sortDirection": "-1",
         }
         self.url = f"{self.base_url}{urlencode(self.params)}"
@@ -60,8 +56,12 @@ class Site(OpinionSiteLinear):
 
             for op in cluster["Postings"]:
                 author_str = op["Author"]["AuthorName"]
+                per_curiam = False
+                if author_str.lower() == "per curiam":
+                    author_str = ""
+                    per_curiam = True
+
                 url = self.document_url.format(self.court, op["FileName"])
-                op_type = op["PostType"]["PostingTypeId"]
                 status = self.get_status(op)
                 self.cases.append(
                     {
@@ -71,6 +71,7 @@ class Site(OpinionSiteLinear):
                         "url": url,
                         "judge": author_str,
                         "status": status,
+                        "per_curiam": per_curiam,
                     }
                 )
 
