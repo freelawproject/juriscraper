@@ -19,7 +19,7 @@ from typing import Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
+from dateutil.parser import parse
 
 class Site(OpinionSiteLinear):
     court_abbv = "sup"
@@ -81,14 +81,13 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
+            date_filed_is_approximate = False
             pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
             if not pub:
-                # Seen on most recent opinions, which have a header like
+                # May happen on most recent opinions, which have a header like
                 # "Publication in the Connecticut Law Journal To Be Determined"
-                logger.warning(
-                    "No publication date for %s", row.text_content()
-                )
-                continue
+                date_filed = f"01/07/{self.current_year}"
+                date_filed_is_approximate = True
 
             date_filed = self.find_published_date(pub[0])
             dockets, name = self.extract_dockets_and_name(row)
@@ -98,6 +97,7 @@ class Site(OpinionSiteLinear):
                     "name": name,
                     "docket": dockets,
                     "date": date_filed,
+                    "date_filed_is_approximate": date_filed_is_approximate,
                 }
             )
 
@@ -111,6 +111,22 @@ class Site(OpinionSiteLinear):
         year_str = str(year % 2000).zfill(2)
         return self.base_url.format(self.court_abbv, year_str)
 
+    def extract_from_text(self, scraped_text: str):
+        """
+        Date may not exist on secondary opinions, like Dissenting
+        """
+        metadata = {}
+        
+        regex_date = r"officially\sreleased\s(?P<date>[JFMASOND]\w+\s\d{1,2},\s\d{4})"
+        if date_match := re.search(regex_date, scraped_text):
+            try:
+                date_filed = parse(date_match.group('date')).date()
+                metadata["OpinionCluster"] = {"date_filed": date_filed, "date_filed_is_approximate": False}
+            except ValueError:
+                pass
+            
+        return super().extract_from_text(scraped_text)
+    
     def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
