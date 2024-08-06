@@ -17,6 +17,7 @@ import re
 from datetime import date
 from typing import Tuple
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -81,6 +82,14 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
             pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
+            if not pub:
+                # Seen on most recent opinions, which have a header like
+                # "Publication in the Connecticut Law Journal To Be Determined"
+                logger.warning(
+                    "No publication date for %s", row.text_content()
+                )
+                continue
+
             date_filed = self.find_published_date(pub[0])
             dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
@@ -108,6 +117,7 @@ class Site(OpinionSiteLinear):
         :param year: year to scrape
         :return None
         """
+        logger.info("Backscraping for year %s", year)
         self.url = self.make_url(year)
         self.html = self._download()
         self._process_html()
