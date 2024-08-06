@@ -37,6 +37,11 @@ class Site(OpinionSiteLinear):
         Citation used to be available, now must be got from inside
         the document's text
         """
+        # Consolidated cases return the same document once per each base docket
+        # This may cause the scrape to abort prematurely due to number of
+        # consecutive duplicates
+        seen_urls = set()
+
         for row in self.html.xpath('//table//div[@class="row"]'):
             raw_values = list(map(str.strip, row.xpath("./div/p[1]/text()")))
             values = []
@@ -55,6 +60,16 @@ class Site(OpinionSiteLinear):
                 self.base_url,
                 row.xpath(".//button[@onclick]/@onclick")[0].split("'")[1],
             )
+            if url in seen_urls:
+                logger.info(
+                    "Skipping %s %s, we already have a case with url %s",
+                    raw_values[0],
+                    raw_values[1],
+                    url,
+                )
+                continue
+            seen_urls.add(url)
+
             case = dict(zip(self.ordered_fields, values[:5]))
             case.update({"summary": summary, "url": url, "per_curiam": False})
 
