@@ -16,6 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.14 - 2024-08-07**
+
+Features:
+  - Add special site headers attribute.
+  - NY Api changes
+
+Fixes:
+  - ND (with dynamic backscraper)
+  - PA
+  - Ark
+
+## Past
+
 **2.6.13 - 2024-08-01**
 
 Features:
@@ -25,8 +38,6 @@ Fixes:
   - Adds headers attribute to the massappct_u scraper.
   - Updates the URL for the oklaag scraper.
   - Updates the setup.py configuration to address deprecated setuptools options and improves test management using pytest.
-
-## Past
 
 **2.6.12 - 2024-07-22**
 
