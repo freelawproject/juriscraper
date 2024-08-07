@@ -183,13 +183,26 @@ class BaseDocketReport:
         :return: A dictionary with parsed components of the docket number.
         If the docket_number is not valid returns default None values.
         """
-        regex = (
+
+        regex_district = (
+            r"(?:"  # District format: 3:20-cr-00070-TKW-MAL-1
+            r"(?P<federal_dn_office_code>\d):"
+            r"\d{2}-"
+            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
+            r"\d{5}"
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
+            r"(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?"  # Optional: another set of judge initials
+            r"(?:-(?P<federal_defendant_number>\d{1,3}))?"  # Optional: hyphen followed by up to 3 digits
+            r")"
+        )
+
+        regex_bankruptcy = (
             r"(?:"
             r"\d{2}-\d{5}-"  # Alternative format for bankruptcy: 10-01083-8-RDD
             r"(?P<alternative_federal_dn_office_code>\d)-"
             r"(?P<alternative_federal_dn_judge_initials_assigned>[a-zA-Z]{2,4})"
             r"|"  # OR
-            r"(?:"  # District and bankruptcy format: 3:20-cr-00070-TKW-MAL-1
+            r"(?:"  # Bankruptcy format: 3:20-cr-00070-TKW
             r"(?P<federal_dn_office_code>\d):"
             r"\d{2}-"
             r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
@@ -198,11 +211,13 @@ class BaseDocketReport:
             r"(?:\d{2}-\d{5})"  # Alternative format for bankruptcy: 02-00017-LMK
             r")"
             r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
-            r"(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?"  # Optional: another set of judge initials
-            r"(?:-(?P<federal_defendant_number>\d{1,3}))?"  # Optional: hyphen followed by up to 3 digits
             r")"
         )
-        match = re.search(regex, potential_docket_number)
+
+        match = re.search(regex_district, potential_docket_number)
+        if self.is_bankruptcy:
+            match = re.search(regex_bankruptcy, potential_docket_number)
+
         if match:
             # Clean up parsed components. Assign alternative_federal_dn_office_code
             # and alternative_federal_dn_judge_initials_assigned to federal_dn_office_code and

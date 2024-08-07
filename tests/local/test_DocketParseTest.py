@@ -636,6 +636,16 @@ class DocketNumberParseTest(unittest.TestCase):
                     "federal_dn_office_code": "1",
                 },
             ),
+            (
+                "13-07422-RLM-7A",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "RLM",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
         ]
 
         for test in test_cases:
