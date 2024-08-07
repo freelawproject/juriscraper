@@ -16,7 +16,6 @@ from datetime import date, datetime
 from typing import Tuple
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
@@ -128,31 +127,6 @@ class Site(OpinionSiteLinear):
         logger.info("Backscraping for range %s %s", *dates)
         self.get_target_page(dates)
         self._process_html()
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
-
-        :param kwargs: passed when initializing the scraper, may or
-        may not contain backscrape controlling arguments
-
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
-        else:
-            end = datetime.now()
-
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, self.days_interval
-        )
 
     def get_target_page(self, dates: Tuple[date]) -> None:
         """Makes requests until target page is loaded
