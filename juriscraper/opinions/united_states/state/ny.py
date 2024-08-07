@@ -38,10 +38,8 @@ def set_api_token_header(scraper_site: OpinionSite) -> None:
         )
         return
 
-    scraper_site.request["headers"]["X-Api-Token"] = api_token
-    # This headers attribute will be used on the Courtlistener caller
-    # to get the binary_content
-    scraper_site.headers = {**scraper_site.request["headers"]}
+    scraper_site.request["headers"]["X-APIKEY"] = api_token
+    scraper_site.needs_special_headers = True
 
 
 class Site(OpinionSite):
