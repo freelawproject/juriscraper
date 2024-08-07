@@ -16,6 +16,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.15 - 2024-08-07**
+
+Features:
+  - Added support for parsing PACER bankruptcy and district docket number components.
+
+## Past
+
 **2.6.14 - 2024-08-07**
 
 Features:
@@ -26,8 +33,6 @@ Fixes:
   - ND (with dynamic backscraper)
   - PA
   - Ark
-
-## Past
 
 **2.6.13 - 2024-08-01**
 
