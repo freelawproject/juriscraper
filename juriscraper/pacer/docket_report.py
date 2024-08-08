@@ -2,10 +2,11 @@ import copy
 import pprint
 import re
 import sys
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple, Union
 
 from dateutil.tz import gettz
 from lxml import etree
+from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
 from ..lib.judge_parsers import normalize_judge_string
@@ -157,15 +158,117 @@ class BaseDocketReport:
         else:
             return s
 
-    def _parse_docket_number_strs(self, potential_docket_numbers):
-        """Parse docket numbers from a list of potential ones
+    @staticmethod
+    def _return_default_dn_components() -> Dict[str, Union[str, None]]:
+        """Return a dictionary with default values for the docket_number
+        components to return on non-valid docket_numbers.
+
+        :return: A dictionary containing the docket_number components with None
+        values.
+        """
+        return {
+            "federal_defendant_number": None,
+            "federal_dn_case_type": None,
+            "federal_dn_judge_initials_assigned": None,
+            "federal_dn_judge_initials_referred": None,
+            "federal_dn_office_code": None,
+        }
+
+    def _parse_dn_components(
+        self, potential_docket_number
+    ) -> Dict[str, Union[str, None]]:
+        """Parse the potential docket number into its components.
+
+        :param potential_docket_number: The docket number string to be parsed.
+        :return: A dictionary with parsed components of the docket number.
+        If the docket_number is not valid returns default None values.
+        """
+
+        regex_district = (
+            r"(?:"  # District format: 3:20-cr-00070-TKW-MAL-1
+            r"(?P<federal_dn_office_code>\d):"
+            r"\d{2}-"
+            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
+            r"\d{5}"
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
+            r"(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?"  # Optional: another set of judge initials
+            r"(?:-(?P<federal_defendant_number>\d{1,3}))?"  # Optional: hyphen followed by up to 3 digits
+            r")"
+        )
+
+        regex_bankruptcy = (
+            r"(?:"
+            r"\d{2}-\d{5}-"  # Alternative format for bankruptcy: 10-01083-8-RDD
+            r"(?P<alternative_federal_dn_office_code>\d)-"
+            r"(?P<alternative_federal_dn_judge_initials_assigned>[a-zA-Z]{2,4})"
+            r"|"  # OR
+            r"(?:"  # Bankruptcy format: 3:20-cr-00070-TKW
+            r"(?P<federal_dn_office_code>\d):"
+            r"\d{2}-"
+            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
+            r"\d{5}"
+            r"|"
+            r"(?:\d{2}-\d{5})"  # Alternative format for bankruptcy: 02-00017-LMK
+            r")"
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
+            r")"
+        )
+
+        match = re.search(regex_district, potential_docket_number)
+        if self.is_bankruptcy:
+            match = re.search(regex_bankruptcy, potential_docket_number)
+
+        if match:
+            # Clean up parsed components. Assign alternative_federal_dn_office_code
+            # and alternative_federal_dn_judge_initials_assigned to federal_dn_office_code and
+            # federal_dn_judge_initials_assigned if they match.
+            parsed_components = match.groupdict()
+            if parsed_components.get("alternative_federal_dn_office_code"):
+                parsed_components["federal_dn_office_code"] = (
+                    parsed_components["alternative_federal_dn_office_code"]
+                )
+                parsed_components["federal_dn_judge_initials_assigned"] = (
+                    parsed_components[
+                        "alternative_federal_dn_judge_initials_assigned"
+                    ]
+                )
+
+            return {
+                "federal_dn_office_code": parsed_components.get(
+                    "federal_dn_office_code"
+                ),
+                "federal_dn_case_type": parsed_components.get(
+                    "federal_dn_case_type"
+                ),
+                "federal_dn_judge_initials_assigned": parsed_components.get(
+                    "federal_dn_judge_initials_assigned"
+                ),
+                "federal_dn_judge_initials_referred": parsed_components.get(
+                    "federal_dn_judge_initials_referred"
+                ),
+                "federal_defendant_number": parsed_components.get(
+                    "federal_defendant_number"
+                ),
+            }
+
+        return self._return_default_dn_components()
+
+    def _parse_docket_number_strs(
+        self, potential_docket_numbers: List[_ElementUnicodeResult]
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Parse docket numbers from a list of potential ones. Also parse
+        the docket number components.
 
         :param potential_docket_numbers: Potential docket number unicode
         objects
         :type potential_docket_numbers: list
-        :return: The correct docket number
-        :rtype: unicode
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
+        :rtype: Tuple
         """
+
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -179,7 +282,10 @@ class BaseDocketReport:
             for s in potential_docket_numbers:
                 match = regex.search(s)
                 if match:
-                    return match.group(1)
+                    docket_number_components = self._parse_dn_components(s)
+                    return match.group(1), docket_number_components
+
+        return None, self._return_default_dn_components()
 
     def get_datetime_from_tree(self, path, cast_to_date=False):
         """Parse a datetime from the XML located at node.
@@ -450,9 +556,10 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._metadata
 
         self._set_metadata_values()
+        docket_number, docket_number_components = self._parse_docket_number()
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_docket_number(),
+            "docket_number": docket_number,
             "case_name": self._get_case_name(),
             "date_filed": self._get_value(
                 self.date_filed_regex, self.metadata_values, cast_to_date=True
@@ -488,6 +595,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             ),
             "ordered_by": self._get_docket_entries_order(),
         }
+        # Include the docket_number components.
+        data.update(docket_number_components)
 
         data = clean_court_object(data)
         self._metadata = data
@@ -1538,7 +1647,16 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self):
+    def _parse_docket_number(
+        self,
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Parse a valid docket number and its components.
+
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
+        """
         if self.is_bankruptcy:
             docket_number_path = "//center//font"
         else:
