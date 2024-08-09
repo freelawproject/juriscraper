@@ -4,7 +4,9 @@ import sys
 import traceback
 from collections import defaultdict
 from optparse import OptionParser
-from urllib import parse, request
+from urllib import parse
+
+import requests
 
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.string_utils import trunc
@@ -50,26 +52,51 @@ def scrape_court(site, binaries=False):
 
         if binaries:
             try:
-                opener = request.build_opener()
-                for cookie_dict in site.cookies:
-                    opener.addheaders.append(
-                        (
-                            "Cookie",
-                            f"{cookie_dict['name']}={cookie_dict['value']}",
-                        )
+                # some sites require a custom ssl_context, contained in the Site's
+                # session. However, we can't send a request with both a
+                # custom ssl_context and `verify = False`
+                has_cipher = hasattr(site, "cipher")
+                s = (
+                    site.request["session"]
+                    if has_cipher
+                    else requests.session()
+                )
+
+                if site.needs_special_headers:
+                    headers = site.request["headers"]
+                else:
+                    headers = {"User-Agent": "CourtListener"}
+
+                # Note that we do a GET even if site.method is POST. This is
+                # deliberate.
+                r = s.get(
+                    download_url,
+                    verify=has_cipher,  # WA has a certificate we don't understand
+                    headers=headers,
+                    cookies=site.cookies,
+                    timeout=300,
+                )
+
+                # test for expected content type (thanks mont for nil)
+                if site.expected_content_types:
+                    # Clean up content types like "application/pdf;charset=utf-8"
+                    # and 'application/octet-stream; charset=UTF-8'
+                    content_type = (
+                        r.headers.get("Content-Type")
+                        .lower()
+                        .split(";")[0]
+                        .strip()
                     )
-                r = opener.open(download_url)
-                expected_content_types = site.expected_content_types
-                response_type = r.headers.get("Content-Type", "").lower()
-                # test for expected content type response
-                if (
-                    expected_content_types
-                    and response_type not in expected_content_types
-                ):
-                    exceptions["DownloadingError"].append(download_url)
-                    v_print(3, f"DownloadingError: {download_url}")
-                    v_print(3, traceback.format_exc())
-                data = r.read()
+                    m = any(
+                        content_type in mime.lower()
+                        for mime in site.expected_content_types
+                    )
+                    if not m:
+                        exceptions["DownloadingError"].append(download_url)
+                        v_print(3, f"DownloadingError: {download_url}")
+                        v_print(3, traceback.format_exc())
+
+                data = r.content
 
                 # test for empty files (thank you CA1)
                 if len(data) == 0:

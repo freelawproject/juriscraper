@@ -62,6 +62,11 @@ class AbstractSite:
             "url": None,
         }
 
+        # Some courts will block Juriscraper or Courtlistener's user-agent
+        # or may need special headers. This flag let's the caller know it
+        # should use the modified `self.request["headers"]`
+        self.needs_special_headers = False
+
         # Sub-classed metadata
         self.court_id = None
         self.url = None
