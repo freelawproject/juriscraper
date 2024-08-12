@@ -59,8 +59,19 @@ class Site(OpinionSiteLinear):
         """
         self.html = self._download({"params": self.params})
 
+        # This warning is useful for backscraping
+        results_number = self.html.xpath(
+            "//div[@class='searchresult_number']/text()"
+        )[0]
+        results_number = results_number.split(" of ")[-1].strip()
+        if int(results_number) > 10:
+            logger.warning(
+                "Page has a size 10, and there are %s results for this query",
+                results_number,
+            )
+
         for case in self.html.xpath("//div[@class='searchresult']"):
-            name = case.xpath(".//a/text()")[0]
+            name = re.sub(r"\s+", " ", case.xpath(".//a/text()")[0])
             name_match = re.search(r"(?P<name>.+)\. A\d{2}-\d+", name)
             if name_match:
                 name = name_match.group("name")
@@ -86,6 +97,17 @@ class Site(OpinionSiteLinear):
                 -1
             ].text_content()
             date_filed = re.sub(r"\s+", " ", raw_date).split(":")[1].strip()
+
+            # Backscrapers may find citations, since they are attached some
+            # months after the initial release of an opinion
+            citation = ""
+            if cite_element := case.xpath(
+                ".//div[b[contains(text(), 'Citation:')]]"
+            ):
+                citation = (
+                    cite_element[0].text_content().split(":", 1)[-1].strip()
+                )
+
             url = case.xpath(".//a/@href")[0]
             docket = url.split("/")[-1].split("-")[0][2:]
             self.cases.append(
@@ -96,6 +118,7 @@ class Site(OpinionSiteLinear):
                     "disposition": disposition,
                     "summary": summary,
                     "docket": docket,
+                    "citation": citation,
                 }
             )
 
