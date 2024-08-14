@@ -9,19 +9,18 @@
 # 2024-08-09: update and implement backscraper, grossir
 
 import re
-from datetime import date, datetime
+from datetime import date
 from typing import Tuple
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     court_query = "supct"
     days_interval = 7
-    first_opinion_date = date(2000, 1, 1)
+    first_opinion_date = date(1998, 1, 1)
     needs_special_headers = True
 
     def __init__(self, *args, **kwargs):
@@ -62,13 +61,14 @@ class Site(OpinionSiteLinear):
         # This warning is useful for backscraping
         results_number = self.html.xpath(
             "//div[@class='searchresult_number']/text()"
-        )[0]
-        results_number = results_number.split(" of ")[-1].strip()
-        if int(results_number) > 10:
-            logger.warning(
-                "Page has a size 10, and there are %s results for this query",
-                results_number,
-            )
+        )
+        if results_number:
+            results_number = results_number[0].split(" of ")[-1].strip()
+            if int(results_number) > 10:
+                logger.warning(
+                    "Page has a size 10, and there are %s results for this query",
+                    results_number,
+                )
 
         for case in self.html.xpath("//div[@class='searchresult']"):
             name = re.sub(r"\s+", " ", case.xpath(".//a/text()")[0])
@@ -133,27 +133,3 @@ class Site(OpinionSiteLinear):
             }
         )
         self.params = params
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
-
-        :param kwargs: passed when initializing the scraper, may or
-            may not contain backscrape controlling arguments
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
-        else:
-            end = datetime.now()
-
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, self.days_interval
-        )
