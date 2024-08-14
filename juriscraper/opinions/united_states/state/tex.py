@@ -22,7 +22,6 @@ from typing import Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -165,28 +164,6 @@ class Site(OpinionSiteLinear):
                 return None
 
         return DeferringList(seed=self.seeds, fetcher=get_name)
-
-    def make_backscrape_iterable(self, kwargs: Dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordinly
-
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
-        else:
-            end = datetime.now() - timedelta(days=self.days_interval)
-
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, self.days_interval
-        )
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Overrides present scraper start_date and end_date
