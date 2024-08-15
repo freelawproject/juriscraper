@@ -215,6 +215,12 @@ def main():
         help="End value for backscraper iterable creation",
     )
     parser.add_option(
+        "--days-interval",
+        dest="days_interval",
+        help="Days interval size for each backscrape iterable tuple",
+        type=int,
+    )
+    parser.add_option(
         "-r",
         "--report",
         action="store_true",
@@ -230,6 +236,7 @@ def main():
     backscrape = options.backscrape
     backscrape_start = options.backscrape_start
     backscrape_end = options.backscrape_end
+    days_interval = options.days_interval
     generate_report = options.report
 
     # Set up the print function
@@ -278,6 +285,7 @@ def main():
                         mod.Site(
                             backscrape_start=backscrape_start,
                             backscrape_end=backscrape_end,
+                            days_interval=days_interval,
                         ).back_scrape_iterable,
                         mod,
                     ):

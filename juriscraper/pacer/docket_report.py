@@ -1506,7 +1506,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         # The first ancestor table of the table cell containing "date filed"
         table = self.tree.xpath(
             # Match any td containing Date [fF]iled
-            '//td[.//text()[contains(translate(., "f", "F"), "Date Filed:")]]'
+            '//td[.//text()[contains(translate(., "f", "F"), "Date Filed:") '
+            'or contains(translate(., "d", "D"), "Filed Date:")]]'
             # And find its highest ancestor table that lacks a center tag.
             "/ancestor::table[not(.//center)][last()]"
         )[0]
