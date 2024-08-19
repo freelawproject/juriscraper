@@ -84,15 +84,16 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
-            date_filed_is_approximate = False
             pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
-            if not pub:
+            if pub:
+                date_filed_is_approximate = False
+                date_filed = self.find_published_date(pub[0])
+            else:
                 # May happen on most recent opinions, which have a header like
                 # "Publication in the Connecticut Law Journal To Be Determined"
-                date_filed = f"01/07/{self.current_year}"
+                date_filed = f"{self.current_year}-07-01"
                 date_filed_is_approximate = True
 
-            date_filed = self.find_published_date(pub[0])
             dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
                 {
