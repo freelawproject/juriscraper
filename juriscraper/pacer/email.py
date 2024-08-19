@@ -570,7 +570,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if self.case_names[1] in subject:
                 case_name = self.case_names[1]
 
-        if self.court_id in ["cacb", "ctb", "cob", "ianb", "nyeb", "txnb"]:
+        if self.court_id in [
+            "cacb",
+            "ctb",
+            "cob",
+            "ianb",
+            "nyeb",
+            "txnb",
+            "okeb",
+        ]:
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
             # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
