@@ -16,12 +16,22 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.17 - 2024-08-19**
+
+Fixes:
+  - RECAP:
+    - email: now parses short description for `okeb`
+    - Fixed IndexOutOfRange error in DocketReport::_set_metadata_values method
+  - Scrapers:
+    - fixed `cal` SSL errors
+    - now collecting citations for `minn`
+
+## Past
+
 **2.6.16 - 2024-08-12**
 
 Fixes:
   - Fixed Minnesota and implemented it's backscraper
-
-## Past
 
 **2.6.15 - 2024-08-07**
 
