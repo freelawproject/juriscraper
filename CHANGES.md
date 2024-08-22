@@ -16,6 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.18 - 2024-08-22**
+
+Features:
+  - SCOTUS backscraper
+
+Fixes:
+  - Improvements to bankruptcy docket parsing
+  - Added `njd` regression tests files
+
+## Past
+
 **2.6.17 - 2024-08-19**
 
 Fixes:
@@ -25,8 +36,6 @@ Fixes:
   - Scrapers:
     - fixed `cal` SSL errors
     - now collecting citations for `minn`
-
-## Past
 
 **2.6.16 - 2024-08-12**
 
