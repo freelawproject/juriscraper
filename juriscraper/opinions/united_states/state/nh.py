@@ -147,7 +147,7 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: Dict) -> List[int]:
-        """The API exposes no date filter, so we must query a year 
+        """The API exposes no date filter, so we must query a year
         and then paginate the results.
         """
         start = int(kwargs.get("backscrape_start") or self.start_year)
