@@ -93,7 +93,9 @@ class Site(OpinionSiteLinear):
                         "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/",
                         url,
                     ),
-                    **title_fields,
+                    "name": title_fields["name"],
+                    "docket": title_fields["docket"],
+                    "citation": title_fields["citation"],
                 }
             )
 
