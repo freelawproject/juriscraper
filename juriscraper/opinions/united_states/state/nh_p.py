@@ -1,6 +1,6 @@
 """
 Scraper for New Hampshire Supreme Court
-CourtID: nh
+CourtID: nh_p
 Court Short Name: NH
 Court Contact: webmaster@courts.state.nh.us
 Author: Andrei Chelaru
