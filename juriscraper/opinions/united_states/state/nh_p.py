@@ -41,22 +41,18 @@ class Site(OpinionSiteLinear):
         2017: "@field_document_subcategory|=|1596",
         2016: "@field_document_subcategory|=|1591",
         2015: "@field_document_subcategory|=|1586",
+        2014: "@field_document_subcategory|=|1581",
     }
+    filter_mode = "exclusive"
+    document_type = "opinions"
     # there is data since 2002, but we would need to
     # collect all subcategory or tag values
     start_year = 2015
     end_year = datetime.today().year - 1
 
-    params = {
-        "iterate_nodes": "true",
-        "q": "",
-        "sort": "field_date_posted|desc|ALLOW_NULLS",
-        "filter_mode": "exclusive",
-        "type": "document",
-        "page": "1",
-        "size": "25",
-    }
-    docket_regex = re.compile(r"\d{4}-\d{4}")
+    title_regex = re.compile(
+        r"((?P<citation>\d{4}\sN\.H\.\s\d+)|(?P<docket>\d{4}-\d{1,4}))[\s,]+(?P<name>.*)"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -76,31 +72,28 @@ class Site(OpinionSiteLinear):
                 0
             ].split("//")[1]
 
-            if "," not in case["title"]:
-                logger.info("Skipping case with title %s", case["title"])
-                continue
-
             # "title" format changes since 2024, where a citation string
             # replaces the docket number, and the docket is in another row
-            docket_or_cite, name = case["title"].split(",", 1)
-            if self.docket_regex.search(docket_or_cite):
-                docket = docket_or_cite
-                neutral_citation = ""
-            else:
-                neutral_citation = docket_or_cite
+            title_match = self.title_regex.search(case["title"])
+            if not title_match:
+                logger.warning("Unable to parse title %s", case["title"])
+                continue
+
+            title_fields = title_match.groupdict("")
+            if not title_fields.get("docket"):
                 docket_str = case["fields"]["field_description"][0]["#text"]
-                docket = self.docket_regex.search(docket_str).group(0)
+                title_fields["docket"] = re.search(
+                    r"\d{4}-\d+", docket_str
+                ).group(0)
 
             self.cases.append(
                 {
-                    "name": name.strip(),
-                    "docket": docket.strip(),
                     "date": case["fields"]["field_date_posted"][0],
                     "url": urljoin(
                         "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/",
                         url,
                     ),
-                    "citation": neutral_citation,
+                    **title_fields,
                 }
             )
 
@@ -126,16 +119,22 @@ class Site(OpinionSiteLinear):
 
         :param year: full year integer
         """
-        params = {**self.params}
-        # Will raise a KeyError if there is no proper year key, we will
-        # need to manually correct this next year
-        params["q"] = self.base_filter.format(self.year_to_filter[year])
-
+        params = {
+            "iterate_nodes": "true",
+            # Will raise a KeyError if there is no proper year key, we will
+            # need to manually correct this next year
+            "q": self.base_filter.format(self.year_to_filter[year]),
+            "sort": "field_date_posted|desc|ALLOW_NULLS",
+            "filter_mode": self.filter_mode,
+            "type": "document",
+            "page": "1",
+            "size": "25",
+        }
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.request["headers"] = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
             "Sec-Ch-Ua": '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
-            "Referer": f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/opinions/{year}",
+            "Referer": f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/{self.document_type}/{year}",
             "X-Requested-With": "XMLHttpRequest",
         }
 
