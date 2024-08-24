@@ -220,7 +220,17 @@ class InternetArchive(BaseDocketReport):
             if not de["document_number"].isdigit():
                 # Some courts put weird stuff in this column.
                 continue
-            docket_entries.append(de)
+            if de.get("attachment_number"):
+                try:
+                    last_de = docket_entries[-1]
+                except IndexError:
+                    continue
+                if last_de.get("document_number") == de["document_number"]:
+                    attachments = last_de.get("attachments", [])
+                    attachments.append(de)
+                    last_de["attachments"] = attachments
+            else:
+                docket_entries.append(de)
 
         docket_entries = clean_court_object(docket_entries)
         self._docket_entries = docket_entries
