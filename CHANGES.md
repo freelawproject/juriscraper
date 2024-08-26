@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.19 - 2024-08-26**
+
+Fixes:
+  - `nh` renamed to `nh_p` and working by using special headers
+
+Features:
+  - New scraper: `nh_u`
+  - Handle new bankruptcy attachment page format
+  - Make docket history report parser more robust
+
+## Past
+
 **2.6.18 - 2024-08-22**
 
 Features:
@@ -24,8 +36,6 @@ Features:
 Fixes:
   - Improvements to bankruptcy docket parsing
   - Added `njd` regression tests files
-
-## Past
 
 **2.6.17 - 2024-08-19**
 
