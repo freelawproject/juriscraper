@@ -16,6 +16,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.20 - 2024-08-28**
+
+Fixes:
+  - Changed to nested format for attachments in the InternetArchive report
+
+## Past
+
 **2.6.19 - 2024-08-26**
 
 Fixes:
@@ -25,8 +32,6 @@ Features:
   - New scraper: `nh_u`
   - Handle new bankruptcy attachment page format
   - Make docket history report parser more robust
-
-## Past
 
 **2.6.18 - 2024-08-22**
 
