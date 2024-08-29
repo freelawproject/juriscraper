@@ -1,8 +1,11 @@
+import json
 import os
 import signal
 import sys
 import traceback
+import webbrowser
 from collections import defaultdict
+from datetime import datetime
 from optparse import OptionParser
 from urllib import parse
 
@@ -133,6 +136,34 @@ def scrape_court(site, binaries=False):
     return {"count": len(site), "exceptions": exceptions}
 
 
+def save_response(site):
+    """
+    Save response content and headers into /tmp/
+    """
+    print("Saving response to /tmp/")
+    now_str = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+    court = site.court_id.split(".")[-1]
+    response = site.request["response"]
+
+    with open(f"/tmp/{court}_headers_{now_str}.json", "w") as f:
+        json.dump(dict(response.headers), f, indent=4)
+
+    if isinstance(site.html, dict):
+        filename = f"/tmp/{court}_content_{now_str}.json"
+        with open(filename, "w") as f:
+            json.dump(response.content, f, indent=4)
+    else:
+        filename = f"/tmp/{court}_content_{now_str}.html"
+        with open(filename, "w") as f:
+            f.write(response.text)
+
+    if response.history:
+        print("Response history:", response.history)
+
+    # open the tmp file in the browser
+    webbrowser.open(f"file://{filename}")
+
+
 v_print = None
 
 
@@ -227,6 +258,12 @@ def main():
         default=False,
         help="Generate a report.html with the outcome of running the scrapers",
     )
+    parser.add_option(
+        "--save-responses",
+        action="store_true",
+        default=False,
+        help="Save response headers and returned HTML or JSON",
+    )
 
     (options, args) = parser.parse_args()
 
@@ -238,6 +275,7 @@ def main():
     backscrape_end = options.backscrape_end
     days_interval = options.days_interval
     generate_report = options.report
+    save_responses = options.save_responses
 
     # Set up the print function
     print(f"Verbosity is set to: {options.verbosity}")
@@ -291,6 +329,8 @@ def main():
                     ):
                         site.parse()
                         scrape_court(site, binaries)
+                        if save_responses:
+                            save_response(site)
                 else:
                     site = mod.Site()
                     v_print(
@@ -303,6 +343,8 @@ def main():
                     results[current_court]["scrape"] = scrape_court(
                         site, binaries
                     )
+                    if save_responses:
+                        save_response(site)
             except Exception:
                 results[current_court][
                     "global_failure"
