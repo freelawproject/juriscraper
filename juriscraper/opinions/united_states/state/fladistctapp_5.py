@@ -13,24 +13,9 @@ History:
  - 2016-03-16, arderyp: Updated to return proper absolute pdf url paths, simplify date logic
 """
 
-import re
-
-from lxml import html
-
-from juriscraper.lib.string_utils import (
-    clean_string,
-    convert_date_string,
-    normalize_dashes,
-)
-from juriscraper.OpinionSite import OpinionSite
-
-from . import fladistctapp
+from juriscraper.opinions.united_states.state import fladistctapp_1
 
 
-class Site(fladistctapp.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.number = "fifth"
-        self.base = "https://5dca.flcourts.gov"
-        self.update_url()
+class Site(fladistctapp_1.Site):
+    number = "fifth"
+    court_index = "5"
