@@ -34,6 +34,10 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+        self.needs_special_headers = True
+        self.request["headers"] = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        }
 
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
