@@ -154,7 +154,9 @@ class DocketHistoryReport(DocketReport):
             return self._docket_entries
 
         docket_header = './/th/text()[contains(., "Description")]'
-        docket_entry_rows = self.tree.xpath(f"//table[{docket_header}]//tr")[
+        docket_entry_rows = self.tree.xpath(
+            f"//table[{docket_header}]/tbody/tr"
+        )[
             1:
         ]  # Skip first row
 
@@ -187,9 +189,9 @@ class DocketHistoryReport(DocketReport):
                 )
                 de["description"] = ""
                 docket_entries.append(de)
-            elif len(cells) == 1:
+            elif len(cells) in {1, 2}:
                 # Document long description. Get it, and add it to previous de.
-                desc = force_unicode(cells[0].text_content())
+                desc = force_unicode(cells[-1].text_content())
                 label = "Docket Text: "
                 if desc.startswith(label):
                     desc = desc[len(label) :]

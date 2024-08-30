@@ -16,6 +16,32 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.20 - 2024-08-28**
+
+Fixes:
+  - Changed to nested format for attachments in the InternetArchive report
+
+## Past
+
+**2.6.19 - 2024-08-26**
+
+Fixes:
+  - `nh` renamed to `nh_p` and working by using special headers
+
+Features:
+  - New scraper: `nh_u`
+  - Handle new bankruptcy attachment page format
+  - Make docket history report parser more robust
+
+**2.6.18 - 2024-08-22**
+
+Features:
+  - SCOTUS backscraper
+
+Fixes:
+  - Improvements to bankruptcy docket parsing
+  - Added `njd` regression tests files
+
 **2.6.17 - 2024-08-19**
 
 Fixes:
@@ -25,8 +51,6 @@ Fixes:
   - Scrapers:
     - fixed `cal` SSL errors
     - now collecting citations for `minn`
-
-## Past
 
 **2.6.16 - 2024-08-12**
 
