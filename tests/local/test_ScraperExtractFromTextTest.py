@@ -593,7 +593,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             ),
-        ]
+        ],
     }
 
     def test_extract_from_text(self):
