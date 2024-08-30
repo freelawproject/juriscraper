@@ -125,8 +125,13 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
                 del cells[5]
                 del cells[0]
 
+            docket_number, docket_number_components = (
+                self._parse_docket_number_strs(
+                    [self.get_text_for_cell(cells[0])]
+                )
+            )
             row_data = {
-                "docket_number": self.get_text_for_cell(cells[0]),
+                "docket_number": docket_number,
                 "case_name": clean_string(
                     harmonize(self.get_text_for_cell(cells[1]))
                 ),
@@ -136,6 +141,8 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             }
             href = cells[0].xpath(".//@href")[0]
             row_data["pacer_case_id"] = get_pacer_case_id_from_nonce_url(href)
+            # Include the docket_number components.
+            row_data.update(docket_number_components)
 
             data.append(row_data)
 

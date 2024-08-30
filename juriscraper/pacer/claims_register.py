@@ -1,5 +1,6 @@
 import re
 import urllib.parse
+from typing import Dict, Tuple, Union
 
 from juriscraper.pacer.reports import BaseReport
 
@@ -103,20 +104,28 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
                 self._get_label_value_pair(label_node, True, field_mappings)
             )
 
-        data["docket_number"] = self._clean_docket_number(
+        docket_number, docket_number_components = self._parse_docket_number(
             data.get("docket_number", "")
         )
+        data["docket_number"] = docket_number
+        # Include the docket_number components.
+        data.update(docket_number_components)
 
         data["case_name"] = harmonize(data["case_name"])
         data = clean_court_object(data)
         self._metadata = data
         return data
 
-    def _clean_docket_number(self, docket_number):
-        """Strip the judge initials off docket numbers, and do any other
-        similar cleanup.
+    def _parse_docket_number(
+        self, docket_number
+    ) -> Tuple[str, Dict[str, Union[str, None]]]:
+        """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, the original docket_number and the default docket_number
+        components dict with None values.
         """
         # Uses both b/c sometimes the bankr. cases have a dist-style docket
         # number.
@@ -127,10 +136,13 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         for regex in regexes:
             match = regex.search(docket_number)
             if match:
-                return match.group(1)
+                docket_number_components = self._parse_dn_components(
+                    docket_number
+                )
+                return match.group(1), docket_number_components
 
         # Fail safe
-        return docket_number
+        return docket_number, self._return_default_dn_components()
 
     @property
     def claims(self):

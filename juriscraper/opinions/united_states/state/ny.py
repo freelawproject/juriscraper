@@ -8,12 +8,38 @@ History:
  2016-05-04: Updated by arderyp to handle typos in docket string format
 """
 
+import os
 import re
 from datetime import date
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
+
+
+def set_api_token_header(scraper_site: OpinionSite) -> None:
+    """
+    Puts the NY_API_TOKEN in the X-Api-Token header
+    Creates the Site.headers attribute, copying the
+    scraper_site.request[headers]
+
+    :param scraper_site: a Site Object
+    :returns: None
+    """
+    if scraper_site.test_mode_enabled():
+        return
+
+    api_token = os.environ.get("NY_API_TOKEN")
+    if not api_token:
+        logger.warning(
+            "NY_API_TOKEN environment variable is not set. "
+            "It is required for scraping New York Courts"
+        )
+        return
+
+    scraper_site.request["headers"]["X-APIKEY"] = api_token
+    scraper_site.needs_special_headers = True
 
 
 class Site(OpinionSite):
@@ -31,6 +57,7 @@ class Site(OpinionSite):
             month=today.strftime("%B"),
         )
         self.court_id = self.__module__
+        set_api_token_header(self)
 
     def _make_html_tree(self, text):
         return get_html5_parsed_text(text)

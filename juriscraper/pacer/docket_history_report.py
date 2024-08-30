@@ -1,4 +1,5 @@
 import re
+from typing import Dict, Tuple, Union
 
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
@@ -56,9 +57,10 @@ class DocketHistoryReport(DocketReport):
             return self._metadata
 
         self._set_metadata_values()
+        docket_number, docket_number_components = self._parse_docket_number()
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_docket_number(),
+            "docket_number": docket_number,
             "case_name": self._get_case_name(),
             "date_filed": self._get_value(
                 self.date_filed_regex, self.metadata_values, cast_to_date=True
@@ -81,7 +83,8 @@ class DocketHistoryReport(DocketReport):
             "assigned_to_str": self._get_assigned_judge(),
             "referred_to_str": self._get_judge(self.referred_to_regex),
         }
-
+        # Include the docket_number components.
+        data.update(docket_number_components)
         data = clean_court_object(data)
         self._metadata = data
         return data
@@ -151,7 +154,9 @@ class DocketHistoryReport(DocketReport):
             return self._docket_entries
 
         docket_header = './/th/text()[contains(., "Description")]'
-        docket_entry_rows = self.tree.xpath(f"//table[{docket_header}]//tr")[
+        docket_entry_rows = self.tree.xpath(
+            f"//table[{docket_header}]/tbody/tr"
+        )[
             1:
         ]  # Skip first row
 
@@ -184,9 +189,9 @@ class DocketHistoryReport(DocketReport):
                 )
                 de["description"] = ""
                 docket_entries.append(de)
-            elif len(cells) == 1:
+            elif len(cells) in {1, 2}:
                 # Document long description. Get it, and add it to previous de.
-                desc = force_unicode(cells[0].text_content())
+                desc = force_unicode(cells[-1].text_content())
                 label = "Docket Text: "
                 if desc.startswith(label):
                     desc = desc[len(label) :]
@@ -262,7 +267,17 @@ class DocketHistoryReport(DocketReport):
             case_name = "Unknown Case Title"
         return harmonize(case_name)
 
-    def _get_docket_number(self):
+    def _parse_docket_number(
+        self,
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Parse a valid docket number and its components.
+
+        :param: docket_number: A string docket number to clean.
+        :return :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
+        """
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -278,7 +293,10 @@ class DocketHistoryReport(DocketReport):
             for s in string_nodes:
                 match = regex.search(s)
                 if match:
-                    return match.group(1)
+                    docket_number_components = self._parse_dn_components(s)
+                    return match.group(1), docket_number_components
+
+        return None, self._return_default_dn_components()
 
     def _get_assigned_judge(self):
         if self.is_bankruptcy:

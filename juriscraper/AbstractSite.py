@@ -1,11 +1,16 @@
 import hashlib
 import json
 from datetime import date, datetime
+from typing import Dict, List, Tuple
 
 import certifi
 import requests
 
-from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
+from juriscraper.lib.date_utils import (
+    fix_future_year_typo,
+    json_date_handler,
+    make_date_range_tuples,
+)
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -56,6 +61,11 @@ class AbstractSite:
             "status": None,
             "url": None,
         }
+
+        # Some courts will block Juriscraper or Courtlistener's user-agent
+        # or may need special headers. This flag let's the caller know it
+        # should use the modified `self.request["headers"]`
+        self.needs_special_headers = False
 
         # Sub-classed metadata
         self.court_id = None
@@ -420,6 +430,55 @@ class AbstractSite:
     def _download_backwards(self, d):
         # methods for downloading the entire Site
         pass
+
+    def make_backscrape_iterable(
+        self, kwargs: Dict
+    ) -> List[Tuple[date, date]]:
+        """Creates back_scrape_iterable in the most common variation,
+        a list of tuples containing (start, end) date pairs, each of
+        `days_interval` size
+
+        Uses default attributes of the scrapers as a fallback, if
+        expected keyword arguments are not passed in the kwargs input
+
+        :param kwargs: if the following keys are present, use them
+            backscrape_start: str in "%Y/%m/%d" format ;
+                            Default: self.first_opinion_date
+            backscrape_end: str
+            days_interval: int; Default: self.days_interval
+
+        :return: None; sets self.back_scrape_iterable in place
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+        days_interval = kwargs.get("days_interval")
+
+        if start:
+            start = datetime.strptime(start, "%Y/%m/%d")
+        else:
+            if hasattr(self, "first_opinion_date"):
+                start = self.first_opinion_date
+            else:
+                logger.warning(
+                    "No `backscrape_start` argument passed; and scraper has no `first_opinion_date` default"
+                )
+
+        if end:
+            end = datetime.strptime(end, "%Y/%m/%d")
+        else:
+            end = datetime.now().date()
+
+        if not days_interval:
+            if hasattr(self, "days_interval"):
+                days_interval = self.days_interval
+            else:
+                logger.warning(
+                    "No `days_interval` argument passed; and scraper has no default"
+                )
+
+        self.back_scrape_iterable = make_date_range_tuples(
+            start, end, days_interval
+        )
 
     @staticmethod
     def cleanup_content(content):

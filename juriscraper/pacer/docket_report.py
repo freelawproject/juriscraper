@@ -2,10 +2,11 @@ import copy
 import pprint
 import re
 import sys
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple, Union
 
 from dateutil.tz import gettz
 from lxml import etree
+from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
 from ..lib.judge_parsers import normalize_judge_string
@@ -157,15 +158,117 @@ class BaseDocketReport:
         else:
             return s
 
-    def _parse_docket_number_strs(self, potential_docket_numbers):
-        """Parse docket numbers from a list of potential ones
+    @staticmethod
+    def _return_default_dn_components() -> Dict[str, Union[str, None]]:
+        """Return a dictionary with default values for the docket_number
+        components to return on non-valid docket_numbers.
+
+        :return: A dictionary containing the docket_number components with None
+        values.
+        """
+        return {
+            "federal_defendant_number": None,
+            "federal_dn_case_type": None,
+            "federal_dn_judge_initials_assigned": None,
+            "federal_dn_judge_initials_referred": None,
+            "federal_dn_office_code": None,
+        }
+
+    def _parse_dn_components(
+        self, potential_docket_number
+    ) -> Dict[str, Union[str, None]]:
+        """Parse the potential docket number into its components.
+
+        :param potential_docket_number: The docket number string to be parsed.
+        :return: A dictionary with parsed components of the docket number.
+        If the docket_number is not valid returns default None values.
+        """
+
+        regex_district = (
+            r"(?:"  # District format: 3:20-cr-00070-TKW-MAL-1
+            r"(?P<federal_dn_office_code>\d):"
+            r"\d{2}-"
+            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
+            r"\d{5}"
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
+            r"(?:-(?P<federal_dn_judge_initials_referred>[a-zA-Z_]{1,5}))?"  # Optional: another set of judge initials
+            r"(?:-(?P<federal_defendant_number>\d{1,3}))?"  # Optional: hyphen followed by up to 3 digits
+            r")"
+        )
+
+        regex_bankruptcy = (
+            r"(?:"
+            r"\d{2}-\d{5}-"  # Alternative format for bankruptcy: 10-01083-8-RDD
+            r"(?P<alternative_federal_dn_office_code>\d)-"
+            r"(?P<alternative_federal_dn_judge_initials_assigned>[a-zA-Z]{2,4})"
+            r"|"  # OR
+            r"(?:"  # Bankruptcy format: 3:20-cr-00070-TKW
+            r"(?P<federal_dn_office_code>\d):"
+            r"\d{2}-"
+            r"(?P<federal_dn_case_type>[a-zA-Z0-9]{1,5}|~gr)-"
+            r"\d{5}"
+            r"|"
+            r"(?:\d{2}-\d{5})"  # Alternative format for bankruptcy: 02-00017-LMK
+            r")"
+            r"(?:-(?P<federal_dn_judge_initials_assigned>N\/A|P1|[a-zA-Z_]{1,5}))?"  # Optional: hyphen followed by 1-5 letters/underscores or N/A or P1
+            r")"
+        )
+
+        match = re.search(regex_district, potential_docket_number)
+        if self.is_bankruptcy:
+            match = re.search(regex_bankruptcy, potential_docket_number)
+
+        if match:
+            # Clean up parsed components. Assign alternative_federal_dn_office_code
+            # and alternative_federal_dn_judge_initials_assigned to federal_dn_office_code and
+            # federal_dn_judge_initials_assigned if they match.
+            parsed_components = match.groupdict()
+            if parsed_components.get("alternative_federal_dn_office_code"):
+                parsed_components["federal_dn_office_code"] = (
+                    parsed_components["alternative_federal_dn_office_code"]
+                )
+                parsed_components["federal_dn_judge_initials_assigned"] = (
+                    parsed_components[
+                        "alternative_federal_dn_judge_initials_assigned"
+                    ]
+                )
+
+            return {
+                "federal_dn_office_code": parsed_components.get(
+                    "federal_dn_office_code"
+                ),
+                "federal_dn_case_type": parsed_components.get(
+                    "federal_dn_case_type"
+                ),
+                "federal_dn_judge_initials_assigned": parsed_components.get(
+                    "federal_dn_judge_initials_assigned"
+                ),
+                "federal_dn_judge_initials_referred": parsed_components.get(
+                    "federal_dn_judge_initials_referred"
+                ),
+                "federal_defendant_number": parsed_components.get(
+                    "federal_defendant_number"
+                ),
+            }
+
+        return self._return_default_dn_components()
+
+    def _parse_docket_number_strs(
+        self, potential_docket_numbers: List[_ElementUnicodeResult]
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Parse docket numbers from a list of potential ones. Also parse
+        the docket number components.
 
         :param potential_docket_numbers: Potential docket number unicode
         objects
         :type potential_docket_numbers: list
-        :return: The correct docket number
-        :rtype: unicode
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
+        :rtype: Tuple
         """
+
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -179,7 +282,10 @@ class BaseDocketReport:
             for s in potential_docket_numbers:
                 match = regex.search(s)
                 if match:
-                    return match.group(1)
+                    docket_number_components = self._parse_dn_components(s)
+                    return match.group(1), docket_number_components
+
+        return None, self._return_default_dn_components()
 
     def get_datetime_from_tree(self, path, cast_to_date=False):
         """Parse a datetime from the XML located at node.
@@ -450,9 +556,10 @@ class DocketReport(BaseDocketReport, BaseReport):
             return self._metadata
 
         self._set_metadata_values()
+        docket_number, docket_number_components = self._parse_docket_number()
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_docket_number(),
+            "docket_number": docket_number,
             "case_name": self._get_case_name(),
             "date_filed": self._get_value(
                 self.date_filed_regex, self.metadata_values, cast_to_date=True
@@ -488,6 +595,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             ),
             "ordered_by": self._get_docket_entries_order(),
         }
+        # Include the docket_number components.
+        data.update(docket_number_components)
 
         data = clean_court_object(data)
         self._metadata = data
@@ -1010,8 +1119,6 @@ class DocketReport(BaseDocketReport, BaseReport):
         tallied and include the main document.
         """
         number = int(row.xpath(".//td/text()")[0].strip())
-        if self.is_bankruptcy:
-            return number - 1
         return number
 
     def _get_description_from_tr(self, row):
@@ -1032,6 +1139,43 @@ class DocketReport(BaseDocketReport, BaseReport):
             return ""
         description = description_text_nodes[0].strip()
         return force_unicode(description)
+
+    @staticmethod
+    def _get_de_arr_de_seq_nums_sequence(td):
+        """Get the docket entry row sequence number."""
+        try:
+            input = td.xpath(".//input[@name='arr_de_seq_nums']")[0]
+        except IndexError:
+            return None
+        else:
+            # initial value string "arr_de_seq_nums_2"
+            # "2" is sequence
+            id_path = input.xpath("./@id")
+            id_value = None
+            if id_path:
+                id_value = id_path[0].removeprefix("arr_de_seq_nums_")
+            value = input.xpath("./@value")[0]
+            if id_value is not None and id_value != value:
+                return None
+            return value
+
+    @staticmethod
+    def _get_attachment_id_value_from_tr(tr, idx):
+        """Take a row from the attachment table and return the id value by
+        index.
+        """
+        try:
+            input = tr.xpath(".//input[@name='download_documents']")[0]
+        except IndexError:
+            return None
+        else:
+            # initial value string "arr_de_seq_nums_2_90555"
+            # "90555" is size in bytes "2" is sequence
+            value = input.xpath("./@id")[0].removeprefix("arr_de_seq_nums_")
+            split_value = value.split("_")
+            if len(split_value) != 2:
+                return None
+            return split_value[idx]
 
     @staticmethod
     def _get_input_value_from_tr(tr, idx):
@@ -1088,7 +1232,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
-        file_size_str = DocketReport._get_input_value_from_tr(tr, 1)
+        download_documents = tr.xpath(".//input[@name='download_documents']")
+        if download_documents:
+            file_size_str = DocketReport._get_attachment_id_value_from_tr(
+                tr, 1
+            )
+        else:
+            file_size_str = DocketReport._get_input_value_from_tr(tr, 1)
         if file_size_str is None:
             return None
         file_size = int(file_size_str)
@@ -1118,7 +1268,16 @@ class DocketReport(BaseDocketReport, BaseReport):
         page variant.
         """
         # we get our doc_id suffix "23515655"
-        pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
+        download_documents = row.xpath(".//input[@name='download_documents']")
+        pacer_doc_suffix = None
+        if download_documents:
+            value = download_documents[0].xpath("./@value")
+            if value:
+                pacer_doc_suffix = value[0]
+        else:
+            pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
+        if pacer_doc_suffix is None:
+            return None
         # after inserting prefixes our final doc_id is "035023515655"
         return f"{self.doc_id_prefix}0{pacer_doc_suffix}"
 
@@ -1139,6 +1298,10 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # No onclick on this row.
                 pass
             else:
+                if name == "download_documents":
+                    return DocketReport._get_attachment_id_value_from_tr(
+                        row, 0
+                    )
                 return name.split("_")[2]
 
         return None
@@ -1164,6 +1327,14 @@ class DocketReport(BaseDocketReport, BaseReport):
                 attachment["file_size_bytes"] = file_size_bytes
             result.append(attachment)
         return result
+
+    @staticmethod
+    def _de_matches_attachment(de, attachment):
+        if de["pacer_doc_id"] != attachment["pacer_doc_id"]:
+            return False
+        if de["pacer_seq_no"] != attachment["pacer_seq_no"]:
+            return False
+        return True
 
     @staticmethod
     def _merge_de_with_attachment(de, attachment):
@@ -1234,18 +1405,35 @@ class DocketReport(BaseDocketReport, BaseReport):
                 if view_multiple_documents and len(cells) >= 3:
                     last_de = docket_entries[-1]
                     attachments = self._get_attachments(cells[2])
-                    if attachments[0]["attachment_number"] == 0:
-                        de_attachment = attachments.pop(0)
-                        self._merge_de_with_attachment(last_de, de_attachment)
-                    last_de["attachments"] = attachments
+                    for idx, attachment in enumerate(attachments):
+                        if self._de_matches_attachment(last_de, attachment):
+                            self._merge_de_with_attachment(last_de, attachment)
+                            if (
+                                idx == 0
+                                and attachment["attachment_number"] == 0
+                            ):
+                                attachments.pop(idx)
+                        elif (
+                            last_de["pacer_seq_no"]
+                            != attachment["pacer_seq_no"]
+                        ):
+                            raise ValueError(
+                                f"docket entry seq_no {last_de['pacer_seq_no']} does not "
+                                f"match attachment seq_no {attachment['pacer_seq_no']}"
+                            )
+                    if len(attachments) > 0:
+                        last_de["attachments"] = attachments
                 # Some older dockets have missing dates. Press on.
                 continue
             de["date_filed"] = convert_date_string(date_filed_str)
             de["document_number"] = self._get_document_number(cells[1])
-            results = self._get_pacer_doc_id_and_seq_no(
+            pacer_doc_id, pacer_seq_no = self._get_pacer_doc_id_and_seq_no(
                 cells[1], de["document_number"]
             )
-            de["pacer_doc_id"], de["pacer_seq_no"] = results[0], results[1]
+            de["pacer_doc_id"] = pacer_doc_id
+            if pacer_seq_no is None:
+                pacer_seq_no = self._get_de_arr_de_seq_nums_sequence(row)
+            de["pacer_seq_no"] = pacer_seq_no
             de["description"] = self._get_description(cells)
             de["date_entered"] = self._get_value(
                 self.date_entered_regex, de["description"], cast_to_date=True
@@ -1397,7 +1585,8 @@ class DocketReport(BaseDocketReport, BaseReport):
         # The first ancestor table of the table cell containing "date filed"
         table = self.tree.xpath(
             # Match any td containing Date [fF]iled
-            '//td[.//text()[contains(translate(., "f", "F"), "Date Filed:")]]'
+            '//td[.//text()[contains(translate(., "f", "F"), "Date Filed:") '
+            'or contains(translate(., "d", "D"), "Filed Date:")]]'
             # And find its highest ancestor table that lacks a center tag.
             "/ancestor::table[not(.//center)][last()]"
         )[0]
@@ -1538,7 +1727,16 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self):
+    def _parse_docket_number(
+        self,
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Parse a valid docket number and its components.
+
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
+        """
         if self.is_bankruptcy:
             docket_number_path = "//center//font"
         else:

@@ -1,7 +1,7 @@
 import email
 import re
 from datetime import date
-from typing import Dict, List, Optional, TypedDict, Union
+from typing import Dict, List, Optional, Tuple, TypedDict, Union
 
 from lxml.html import HtmlElement
 
@@ -153,32 +153,48 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.case_names.append(clean_string(case_name))
         return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self, current_node: HtmlElement) -> str:
-        """Gets a docket number from the email text
+    def _parse_docket_number(
+        self, current_node: HtmlElement
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Gets a docket number from the email text and also parse the docket
+        number components.
 
         :param  current_node: The relative lxml.HtmlElement
-        :returns: Docket number, parsed
+        :returns: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
         """
 
         if self._is_appellate():
             path = self._sibling_path("Case Number")
             case_number = self._xpath_text_0(current_node, f"{path}/a")
-            return case_number
+            return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
-        docket_number = self._parse_docket_number_strs(
-            current_node.xpath(f"{path}/a/text()")
+        docket_number, docket_number_components = (
+            self._parse_docket_number_strs(
+                current_node.xpath(f"{path}/a/text()")
+            )
         )
         if not docket_number:
-            docket_number = self._parse_docket_number_strs(
-                current_node.xpath(f"{path}/p/a/text()")
+            docket_number, docket_number_components = (
+                self._parse_docket_number_strs(
+                    current_node.xpath(f"{path}/p/a/text()")
+                )
             )
-        return docket_number
+        return docket_number, docket_number_components
 
-    def _get_docket_number_plain(self) -> str:
-        """Gets a docket number from the plain email text
+    def _parse_docket_number_plain(
+        self,
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Gets a docket number from the plain email text and also parse the
+        docket number components.
 
-        :returns: Docket number, parsed
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
         """
         email_body = self.tree.text_content()
         regex = r"Case Number:(.*)"
@@ -377,7 +393,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         dockets = []
         if self.content_type == "text/plain":
-            docket_number = self._get_docket_number_plain()
+            docket_number, docket_number_components = (
+                self._parse_docket_number_plain()
+            )
+            docket_number = docket_number
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
@@ -387,6 +406,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "date_filed": None,
                 "docket_entries": self._get_docket_entries(),
             }
+            # Include the docket_number components.
+            docket.update(docket_number_components)
             dockets.append(docket)
         else:
             dockets_table = self.tree.xpath(
@@ -399,7 +420,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     f"court: {self.court_id}"
                 )
             for docket_table in dockets_table:
-                docket_number = self._get_docket_number(docket_table)
+                docket_number, docket_number_components = (
+                    self._parse_docket_number(docket_table)
+                )
+                docket_number = docket_number
                 # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
                 docket = {
@@ -408,6 +432,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     "date_filed": None,
                     "docket_entries": self._get_docket_entries(docket_table),
                 }
+                # Include the docket_number components.
+                docket.update(docket_number_components)
                 dockets.append(docket)
 
             if len(dockets) > 1:
@@ -544,7 +570,15 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if self.case_names[1] in subject:
                 case_name = self.case_names[1]
 
-        if self.court_id in ["cacb", "ctb", "cob", "ianb", "nyeb", "txnb"]:
+        if self.court_id in [
+            "cacb",
+            "ctb",
+            "cob",
+            "ianb",
+            "nyeb",
+            "txnb",
+            "okeb",
+        ]:
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
             # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]

@@ -441,6 +441,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         # the element, just as redelimit_p() does in parties(). So
         # it's a bit wasteful to use both.
         attorney_lines = self._br_split(tree)
+        if not attorney_lines:
+            return {}
         # First line is the name
         attorney["name"] = attorney_lines.pop(0)
         if not attorney["name"]:
