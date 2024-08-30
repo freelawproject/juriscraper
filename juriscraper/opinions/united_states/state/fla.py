@@ -3,10 +3,9 @@
 # Court Short Name: fla
 
 from datetime import date, datetime, timedelta
-from typing import Dict, Optional, Tuple
+from typing import Optional, Tuple
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -75,28 +74,3 @@ class Site(OpinionSiteLinear):
         """
         self.set_url(*dates)
         logger.info("Backscraping for range %s %s", *dates)
-
-    def make_backscrape_iterable(self, kwargs: Dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
-
-        :param kwargs: passed when initializing the scraper, may or
-        may not contain backscrape controlling arguments
-
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
-        else:
-            end = datetime.now()
-
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, self.days_interval
-        )

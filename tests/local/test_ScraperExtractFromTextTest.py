@@ -51,7 +51,7 @@ class ScraperExtractFromText(unittest.TestCase):
             # Some opinions don't have dockets because Arkansas publishes important announcements.
             (
                 """Cite as 2022 Ark. 14\nSUPREME COURT OF ARKANSAS Opinion Delivered: January 27, 2022""",
-                {"OpinionCluster": {"docket_number": ""}},
+                {},
             ),
         ],
         "juriscraper.opinions.united_states.state.arkctapp": [
@@ -472,17 +472,36 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nd": [
             (
-                # https://www.ndcourts.gov/supreme-court/opinions/118403
-                """IN THE SUPREME COURTSTATE OF NORTH DAKOTA\\n2023 ND 157\\nIn the Interest of A.B., a child\\nLeslie Johnson, L.B.S.W., Cass\\nCounty Human Service Zone, Petitioner and Appellee\\nv.\\nA.B., a child, Respondent\\nand\\nJ.S., mother, Respondent and Appellant\\nNo. 20230197\\nIn the Interest of A.C., minor child""",
+                # Case without paragraph numbers
+                # https://www.courtlistener.com/api/rest/v3/opinions/10473075/
+                """IN THE SUPREME COURT\n                  STATE OF NORTH DAKOTA\n\n                                2024 ND 143\n\nRonald Wayne Wootan,                                 Petitioner and Appellant\n      v.\nState of North Dakota,                              Respondent and Appellee\n\n                                No. 20240025\n\nAppeal from the District Court of Rolette County, Northeast Judicial District,\nthe Honorable Anthony S. Benson, Judge.\n\nAFFIRMED.\n\nPer Curiam.\n\nKiara C. Kraus-Parr, Grand Forks, ND, for petitioner and appellant.\n\nBrian D. Grosinger, State’s Attorney, Rolla, ND, for respondent and appellee.\n\f                               Wootan v. State\n                                No. 20240025\n\nPer Curiam.\n\n      Ronald Wootan appeals from an order denying his postconviction relief\napplication entered after the district court held an evidentiary hearing on\nremand. See Wootan v. State,""",
                 {
                     "Citation": {
-                        "volume": "2023",
+                        "volume": "2024",
                         "reporter": "ND",
-                        "page": "157",
+                        "page": "143",
                         "type": 8,
                     },
                 },
-            )
+            ),
+            (
+                # Example of a consolidated case
+                # https://www.courtlistener.com/api/rest/v3/opinions/10473085/
+                """IN THE SUPREME COURT\n                        STATE OF NORTH DAKOTA\n\n                                      2024 ND 141\n\nRenae Irene Gerszewski,                                           Petitioner and Appellee\n      v.\nConrad Keith Rostvet,                                          Respondent and Appellant\n\n\n\n                                     No. 20230361\n\n\n\nConrad Keith Rostvet,                                            Petitioner and Appellant\n      v.\nRenae Irene Gerszewski,                                         Respondent and Appellee\n\n\n\n                                     No. 20230362\n\n\n\nConrad Rostvet,                                                  Petitioner and Appellant\n      v.\nWayne Gerszewski,                                               Respondent and Appellee\n\n\n\n                                     No. 20230363\n\n\n\nAppeal from the District Court of Walsh County, Northeast Judicial District, the Honorable\nBarbara L. Whelan, Judge.\n\fAFFIRMED.\n\nOpinion of the Court by Tufte, Justice.\n\nSamuel A. Gereszek, Grand Forks, N.D., for appellees.\n\nTimothy C. Lamb, Grand Forks, N.D., for appellant.\n\f                                 Gerszewski v. Rostvet\n                                Nos. 20230361–20230363\n\nTufte, Justice.\n\n[¶1] Conrad Rostvet appeals from a district court’s order""",
+                {
+                    "Citation": {
+                        "volume": "2024",
+                        "reporter": "ND",
+                        "page": "141",
+                        "type": 8,
+                    },
+                    "OpinionCluster": {"case_name": "Gerszewski v. Rostvet"},
+                    "Docket": {
+                        "case_name": "Gerszewski v. Rostvet",
+                        "docket_number": "Nos. 20230361-20230363",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.wis": [
             (

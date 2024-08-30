@@ -2,8 +2,10 @@
 Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
-from datetime import date
+from datetime import date, datetime
+from typing import Dict, List, Union
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -27,38 +29,39 @@ class Site(OpinionSiteLinear):
         "SS": "Sonia Sotomayor",
         "T": "Clarence Thomas",
     }
+    base_url = "https://www.supremecourt.gov/opinions/slipopinion"
+    first_opinion_date = datetime(2018, 6, 25)
+    days_interval = 365
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.yy = self._get_current_term()
         self.status = "Published"
-        self.url_base = "https://www.supremecourt.gov/opinions"
-        self.precedential = "Published"
-        self.court = "slipopinion"
-        self.url = f"{self.url_base}/{self.court}/{self.yy}"
+        self.url = f"{self.base_url}/{self.get_term()}"
+        self.make_backscrape_iterable(kwargs)
 
     @staticmethod
-    def _get_current_term():
+    def get_term(
+        date_of_interest: Union[date, datetime] = date.today()
+    ) -> int:
         """The URLs for SCOTUS correspond to the term, not the calendar.
 
         The terms kick off on the first Monday of October, so we use October 1st
         as our cut off date.
         """
-        today = date.today()
-        term_cutoff = date(today.year, 10, 1)
-        if today < term_cutoff:
-            # Haven't hit the cutoff, return previous year.
-            return int(today.strftime("%y")) - 1  # y3k bug!
-        else:
-            return today.strftime("%y")
+        term_cutoff = date(date_of_interest.year, 10, 1)
+        if isinstance(date_of_interest, datetime):
+            date_of_interest = date_of_interest.date()
+        year = int(date_of_interest.strftime("%y"))
+        # Return the previous year if we haven't reached the cutoff
+        return year - 1 if date_of_interest < term_cutoff else year
 
     def _process_html(self):
         for row in self.html.xpath("//tr"):
             cells = row.xpath(".//td")
             if len(cells) != 6:
                 continue
-            a, date, docket, link, justice, citation = row.xpath(".//td")
+            _, date, docket, link, justice, citation = row.xpath(".//td")
             if not link.text_content():
                 continue
             self.cases.append(
@@ -71,3 +74,27 @@ class Site(OpinionSiteLinear):
                     "judge": self.justices[justice.text_content()],
                 }
             )
+
+    def make_backscrape_iterable(self, kwargs: Dict) -> List[str]:
+        """Use the default make_backscrape_iterable to parse input
+        and create date objects. Then, use the dates to get the terms
+
+        Note that the HTML slipopinion page exists only since term 17
+
+        :return: a list of URLs
+        """
+        super().make_backscrape_iterable(kwargs)
+        start = self.get_term(self.back_scrape_iterable[0][0])
+        end = self.get_term(self.back_scrape_iterable[-1][1])
+        if start == end:
+            self.back_scrape_iterable = [f"{self.base_url}/{start}"]
+        else:
+            self.back_scrape_iterable = [
+                f"{self.base_url}/{yy}" for yy in range(start, end)
+            ]
+
+    def _download_backwards(self, d: str):
+        self.url = d
+        logger.info("Backscraping %s", self.url)
+        self.html = self._download()
+        self._process_html()

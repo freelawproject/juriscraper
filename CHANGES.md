@@ -16,12 +16,77 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.20 - 2024-08-28**
+
+Fixes:
+  - Changed to nested format for attachments in the InternetArchive report
+
+## Past
+
+**2.6.19 - 2024-08-26**
+
+Fixes:
+  - `nh` renamed to `nh_p` and working by using special headers
+
+Features:
+  - New scraper: `nh_u`
+  - Handle new bankruptcy attachment page format
+  - Make docket history report parser more robust
+
+**2.6.18 - 2024-08-22**
+
+Features:
+  - SCOTUS backscraper
+
+Fixes:
+  - Improvements to bankruptcy docket parsing
+  - Added `njd` regression tests files
+
+**2.6.17 - 2024-08-19**
+
+Fixes:
+  - RECAP:
+    - email: now parses short description for `okeb`
+    - Fixed IndexOutOfRange error in DocketReport::_set_metadata_values method
+  - Scrapers:
+    - fixed `cal` SSL errors
+    - now collecting citations for `minn`
+
+**2.6.16 - 2024-08-12**
+
+Fixes:
+  - Fixed Minnesota and implemented it's backscraper
+
+**2.6.15 - 2024-08-07**
+
+Features:
+  - Added support for parsing PACER bankruptcy and district docket number components.
+
+**2.6.14 - 2024-08-07**
+
+Features:
+  - Add special site headers attribute.
+  - NY Api changes
+
+Fixes:
+  - ND (with dynamic backscraper)
+  - PA
+  - Ark
+
+**2.6.13 - 2024-08-01**
+
+Features:
+  - Adds the de_seq_num to the download method.
+
+Fixes:
+  - Adds headers attribute to the massappct_u scraper.
+  - Updates the URL for the oklaag scraper.
+  - Updates the setup.py configuration to address deprecated setuptools options and improves test management using pytest.
+
 **2.6.12 - 2024-07-22**
 
 Features:
   - Update free opinion report to store the params used for each request
-
-## Past
 
 **2.6.11 - 2024-07-22**
 

@@ -182,3 +182,477 @@ class DocketAnonymizeTest(unittest.TestCase):
         # aren't actually dockets, it isn't there ahead of time. In that case,
         # skip the before test.
         self.assert_anonymized(path, skip_pre_test=True)
+
+
+class DocketNumberParseTest(unittest.TestCase):
+    """Assert docket number components parsing."""
+
+    def test_district_docket_number_components_parsing(self) -> None:
+        report = DocketReport("akd")
+
+        test_cases = [
+            (
+                "1:01-cv-00570-PCH",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "PCH",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "2:20-mc-00021-JES-M_M",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mc",
+                    "federal_dn_judge_initials_assigned": "JES",
+                    "federal_dn_judge_initials_referred": "M_M",
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "2:20-mc-00021-JES-g_g",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mc",
+                    "federal_dn_judge_initials_assigned": "JES",
+                    "federal_dn_judge_initials_referred": "g_g",
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "1:20-cv-00021-GBD-SLC",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "GBD",
+                    "federal_dn_judge_initials_referred": "SLC",
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:20-cr-00033-CJW-MAR",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "CJW",
+                    "federal_dn_judge_initials_referred": "MAR",
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "2:20-sw-00156-tmp",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "sw",
+                    "federal_dn_judge_initials_assigned": "tmp",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "3:20-cr-00061-TMB-MMS",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "TMB",
+                    "federal_dn_judge_initials_referred": "MMS",
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "1:20-mj-00061-N",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mj",
+                    "federal_dn_judge_initials_assigned": "N",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:20-mj-00061-N-1",
+                {
+                    "federal_defendant_number": "1",
+                    "federal_dn_case_type": "mj",
+                    "federal_dn_judge_initials_assigned": "N",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:20-mj-00061-N-2",
+                {
+                    "federal_defendant_number": "2",
+                    "federal_dn_case_type": "mj",
+                    "federal_dn_judge_initials_assigned": "N",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:20-cr-00061-KD",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "KD",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:20-cr-00060-CG-N",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "CG",
+                    "federal_dn_judge_initials_referred": "N",
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "4:20-cv-00059-AW-MJF",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "AW",
+                    "federal_dn_judge_initials_referred": "MJF",
+                    "federal_dn_office_code": "4",
+                },
+            ),
+            (
+                "3:20-cv-00059-MCR-GRJ",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "MCR",
+                    "federal_dn_judge_initials_referred": "GRJ",
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "2:20-mj-00061-MHB",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mj",
+                    "federal_dn_judge_initials_assigned": "MHB",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "1:20-cv-00120-WJM-KMT",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "WJM",
+                    "federal_dn_judge_initials_referred": "KMT",
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "3:20-cv-00021-GFVT-EBA",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "GFVT",
+                    "federal_dn_judge_initials_referred": "EBA",
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "8:20-cr-00006-DOC",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "DOC",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "8",
+                },
+            ),
+            (
+                "2:16-CM-27244-CMR",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "CM",
+                    "federal_dn_judge_initials_assigned": "CMR",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "2:16-PV-27244-CMR",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "PV",
+                    "federal_dn_judge_initials_assigned": "CMR",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "2:16-AL-27244-CMR",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "AL",
+                    "federal_dn_judge_initials_assigned": "CMR",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "2:16-a2-27244-CMR",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "a2",
+                    "federal_dn_judge_initials_assigned": "CMR",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "3:21-~gr-00001",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "~gr",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "3:21-y-00001",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "y",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "1:21-2255-00001",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "2255",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:21-MDL-00001",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "MDL",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:21-adc-00001",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "adc",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:21-crcor-00001",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "crcor",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "2:24-gj-00075-JS-1",
+                {
+                    "federal_defendant_number": "1",
+                    "federal_dn_case_type": "gj",
+                    "federal_dn_judge_initials_assigned": "JS",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "2",
+                },
+            ),
+            (
+                "3:20-cr-00070-TKW-MAL-1",
+                {
+                    "federal_defendant_number": "1",
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "TKW",
+                    "federal_dn_judge_initials_referred": "MAL",
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "3:20-cr-00070-TKW-2",
+                {
+                    "federal_defendant_number": "2",
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "TKW",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "3",
+                },
+            ),
+            (
+                "4:20-mj-00061-N/A",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mj",
+                    "federal_dn_judge_initials_assigned": "N/A",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "4",
+                },
+            ),
+            (
+                "4:20-cv-00061-CKJ-PSOT",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "CKJ",
+                    "federal_dn_judge_initials_referred": "PSOT",
+                    "federal_dn_office_code": "4",
+                },
+            ),
+            (
+                "1:15-mc-00105-P1",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "mc",
+                    "federal_dn_judge_initials_assigned": "P1",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:17-cr-00350-KBF-27",
+                {
+                    "federal_defendant_number": "27",
+                    "federal_dn_case_type": "cr",
+                    "federal_dn_judge_initials_assigned": "KBF",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "1:08-cv-00398-GWC-TCS-LMG",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "cv",
+                    "federal_dn_judge_initials_assigned": "GWC",
+                    "federal_dn_judge_initials_referred": "TCS",
+                    "federal_dn_office_code": "1",
+                },
+            ),
+        ]
+
+        for test in test_cases:
+            with self.subTest("Assert docket_number components", test=test):
+                dn_components = report._parse_dn_components(test[0])
+                self.assertEqual(
+                    dn_components,
+                    test[1],
+                    msg="The docket number components didn't match.",
+                )
+
+    def test_bankruptcy_docket_number_components_parsing(self) -> None:
+        report = DocketReport("akb")
+
+        test_cases = [
+            (
+                "1:24-bk-10757",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": "bk",
+                    "federal_dn_judge_initials_assigned": None,
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "02-00017-LMK",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "LMK",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "15-32065-bjh11",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "bjh",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "09-80591-JAC7",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "JAC",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "04-45661-rfn13",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "rfn",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+            (
+                "10-01083-8-RDD",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "RDD",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "8",
+                },
+            ),
+            (
+                "10-12431-1-rel",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "rel",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": "1",
+                },
+            ),
+            (
+                "13-07422-RLM-7A",
+                {
+                    "federal_defendant_number": None,
+                    "federal_dn_case_type": None,
+                    "federal_dn_judge_initials_assigned": "RLM",
+                    "federal_dn_judge_initials_referred": None,
+                    "federal_dn_office_code": None,
+                },
+            ),
+        ]
+
+        for test in test_cases:
+            with self.subTest("Assert docket_number components", test=test):
+                dn_components = report._parse_dn_components(test[0])
+                self.assertEqual(
+                    dn_components,
+                    test[1],
+                    msg="The docket number components didn't match.",
+                )

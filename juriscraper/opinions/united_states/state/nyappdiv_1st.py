@@ -12,6 +12,7 @@ from dateutil.rrule import MONTHLY, rrule
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.opinions.united_states.state.ny import set_api_token_header
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -27,6 +28,7 @@ class Site(OpinionSite):
         self.division = 1
         self.url = self.build_url()
         self.expected_content_types = ["application/pdf", "text/html"]
+        set_api_token_header(self)
 
     def _get_case_names(self):
         path = f"{self.row_base_path}/td[1]"

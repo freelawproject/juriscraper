@@ -5,74 +5,120 @@ Court Short Name: pa
 """
 
 import re
+from datetime import date, datetime, timedelta
+from typing import Dict, Tuple
+from urllib.parse import urlencode
 
-from juriscraper.lib.html_utils import get_xml_parsed_text
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    court = "Supreme"
+    base_url = "https://www.pacourts.us/api/opinion?"
+    document_url = "https://www.pacourts.us/assets/opinions/{}/out/{}"
+    days_interval = 20
+    api_dt_format = "%Y-%m-%dT00:00:00-05:00"
+    first_opinion_date = datetime(1998, 4, 27)
+    judge_key = "AuthorCode"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.regex = False
-        self.url = "https://www.pacourts.us/Rss/Opinions/Supreme/"
-        self.set_regex(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
-        self.base = (
-            "//item[not(contains(title/text(), 'Judgment List'))]"
-            "[not(contains(title/text(), 'Reargument Table'))]"
-            "[not(contains(title/text(), 'Order Amending Rules'))]"
-            "[contains(title/text(), 'No.')]"
-        )
-        self.cases = []
+        self.regex = re.compile(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
+        self.status = "Published"
 
-    def _make_html_tree(self, text):
-        return get_xml_parsed_text(text)
+        now = datetime.now() + timedelta(days=1)
+        start = now - timedelta(days=7)
+        self.params = {
+            "startDate": start.strftime(self.api_dt_format),
+            "endDate": now.strftime(self.api_dt_format),
+            "courtType": self.court,
+            "postTypes": "cd,cds,co,cs,dedc,do,ds,mo,oaj,pco,rv,sd",
+            "sortDirection": "-1",
+        }
+        self.url = f"{self.base_url}{urlencode(self.params)}"
+        self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
-        for item in self.html.xpath(self.base):
-            judges = item.xpath(
-                "./dc:creator/text()", namespaces=self.html.nsmap
-            )
-            pubdate = item.xpath("./pubDate/text()")[0]
-            title = item.xpath("./title/text()")[0]
-            search = self.regex.search(title)
-            url = item.xpath("./atom:link/@href", namespaces=self.html.nsmap)[
-                0
-            ]
-            if search:
-                name = search.group(1)
-                docket = search.group(2)
-            else:
-                name = title
-                docket = ""
-            self.cases.append(
-                {
-                    "name": name,
-                    "date": convert_date_string(pubdate),
-                    "docket": docket,
-                    "judge": judges[0] if judges else "",
-                    "url": url,
-                }
-            )
+    def _process_html(self) -> None:
+        """Parses data into case dictionaries
 
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
+        Note that pages returned have no pagination
 
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
+        :return: None
+        """
+        json_response = self.html
 
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
+        for cluster in json_response["Items"]:
+            title = cluster["Caption"]
+            disposition_date = cluster["DispositionDate"].split("T")[0]
+            name, docket = self.parse_case_title(title)
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.cases)
+            for op in cluster["Postings"]:
+                per_curiam = False
+                author_str = ""
 
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+                if op["Author"]:
+                    author_str = self.clean_judge(op["Author"][self.judge_key])
+                    if author_str.lower() == "per curiam":
+                        author_str = ""
+                        per_curiam = True
 
-    def _get_judges(self):
-        return [case["judge"] for case in self.cases]
+                url = self.document_url.format(self.court, op["FileName"])
+                status = self.get_status(op)
+                self.cases.append(
+                    {
+                        "date": disposition_date,
+                        "name": name,
+                        "docket": docket,
+                        "url": url,
+                        "judge": author_str,
+                        "status": status,
+                        "per_curiam": per_curiam,
+                    }
+                )
 
-    def set_regex(self, pattern):
-        self.regex = re.compile(pattern)
+    def parse_case_title(self, title: str) -> Tuple[str, str]:
+        """Separates case_name and docket_number from case string
+
+        :param title: string from the source
+
+        :return: A tuple with the case name and docket number
+        """
+        search = self.regex.search(title)
+        if search:
+            name = search.group(1)
+            docket = search.group(2)
+        else:
+            name = title
+            docket = ""
+        return name, docket
+
+    def get_status(self, op: Dict) -> str:
+        """Get status from opinion json.
+        Inheriting classes have status data
+
+        :param op: opinion json
+        :return: parsed status
+        """
+        return self.status
+
+    def clean_judge(self, author_str: str) -> str:
+        """Cleans judge name. `pa` has a different format than
+        `pasuperct` and `pacommwct`
+        """
+        return author_str
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Modify GET querystring for desired date range
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        start, end = dates
+        self.params["startDate"] = start.strftime(self.api_dt_format)
+        self.params["endDate"] = end.strftime(self.api_dt_format)
+        self.url = f"{self.base_url}{urlencode(self.params)}"
+        logger.info("Backscraping for range %s %s", *dates)
+        self.html = self._download()
+        self._process_html()

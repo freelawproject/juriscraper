@@ -16,7 +16,6 @@ from typing import Optional, Tuple
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -35,6 +34,10 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+        self.needs_special_headers = True
+        self.request["headers"] = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        }
 
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
@@ -79,30 +82,6 @@ class Site(OpinionSiteLinear):
         self.set_url(*dates)
         self.html = self._download()
         self._process_html()
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
-
-        :param kwargs: passed when initializing the scraper, may or
-            may not contain backscrape controlling arguments
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
-        else:
-            end = datetime.now()
-
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, self.days_interval
-        )
 
     def set_url(
         self, start: Optional[date] = None, end: Optional[date] = None

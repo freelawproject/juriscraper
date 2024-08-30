@@ -12,7 +12,6 @@ from datetime import date, timedelta
 from urllib.parse import urlencode
 
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.opinions.united_states.state import mass
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -25,12 +24,6 @@ class Site(OpinionSiteLinear):
         self.url = self.make_url()
         self.court_id = self.__module__
         self.expected_content_types = ["text"]
-
-        # `mass` and `massappct` require custom headers for document
-        # downloading in Courtlistener. Due to the way court IDs are
-        # assigned, we need a headers attribute for `massappct_u`
-        # even if it is not strictly needed for downloading docs
-        self.headers = mass.Site().headers
 
     def make_url(self) -> str:
         """Build the urls to query

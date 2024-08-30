@@ -1,0 +1,111 @@
+Return-Path: <CMECF_help@okeb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 6dfttdd0hl6s7d5kktrrtjiok91usl826l1d3ro1
+ for user@recap.email;
+ Fri, 09 Aug 2024 00:48:54 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of okeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=CMECF_help@okeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of okeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=CMECF_help@okeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=okeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFRlFkLy9NRm9mRG1iT0h0MXV1UjVNVXBDUUkvenR2ZDNvWkV1WHdDRmRXTE1CT2NmSktFSm4xbEhYVHVqRDJpbWVraUJadVFqeHZNZXFtUi9RdzZxRGZIVkYwY2xseEppZXp4T0M0c2huNTIrbkZUQlFqVWQzbmNXZDcyWmJ1enpBZnJWYWk1QmZsb1hIRC9hcVZZVWdsbnZ1Nms2NHc3akxvRXU1aG1RRk9iV3RDQnExM09nRkZUZm4vd3N1eWFxL2MwcmpzNHN0dlpwdzhHeCtXOXd5OUs0aWhKY1N5M2p4cFNxdUgyNzZUODVvdTlUeVorN2R0bkJkRGt5bEJPMkJxR3B4eTZhMUxPRjFxekxCbjI2MmtoTlYycnMwY2E3ZnltWmdhb0lKMkE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=G7X0YmaUnZ0OSfEpaMmvipaXBOVY3uQ6BbzMUnGIObk4Z3gnmG61LBrJXY5cZZ6Kwn2x+n8oG7UQBWjt620TpfcVu/ldXguWTwNVZmTAcqoTgKpEBEVt4qWB3x4dORHrmGALcwuymjfgjOjZDeYCXlyZ6CqEXUQ5elYQqA5bqvg=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1723164535; v=1; bh=FvbVUY+qQp/objivN4zH141CjE57LKzrm3LmMnwA8no=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.93
+Received: from okebdb.okeb.gtwy.dcn ([156.119.56.93])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 08 Aug 2024 20:48:53 -0400
+Received: from okebdb.okeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by okebdb.okeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4790m5KK026168;
+	Thu, 8 Aug 2024 19:48:06 -0500
+Received: (from ecf_web@localhost)
+	by okebdb.okeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4790lZ3G025931;
+	Thu, 8 Aug 2024 19:47:35 -0500
+Date: Thu, 8 Aug 2024 19:47:35 -0500
+MIME-Version:1.0
+From:CMECF_help@okeb.uscourts.gov
+To:Courtmail@okeb.uscourts.gov
+Message-Id:<4656734@okeb.uscourts.gov>
+Subject:24-80617 420A Form - Notice of Motion/Hearing Set
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Oklahoma</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from FirstName LastName entered on 8/8/2024 at 7:47 PM CDT and filed on 8/8/2024 
+
+<BR>
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>C M Heavy Machinery, LLC</td></tr>
+<tr><td><strong>Chapter:</strong></td><td>11</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.okeb.uscourts.gov/cgi-bin/DktRpt.pl?89920>24-80617</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.okeb.uscourts.gov/doc1/14404575986?pdf_header=&magic_num=44432589&de_seq_num=37&caseid=89920'>11</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Notice of Motion and Hearing All Parties entitled to receive notice were served by the CM/ECF system.  Filed by  FirstName LastName   on behalf of    C M Heavy Machinery, LLC   (RE: [3] Generic Motion filed by Debtor   C M Heavy Machinery, LLC).  Objections due by 8/22/2024. Hearing scheduled 9/11/2024 at 10:00 AM at Ed Edmondson Courthouse 101 N 5th Muskogee Crtrm 4.  (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-80617 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Great Plains National Bank</span>
+<br>user2@firm.com,  user@firm.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor   C M Heavy Machinery, LLC</span>
+<br>user@domain.com,  user@recap.email
+<BR>
+<BR><span class="personName">Karen Carden Walsh on behalf of U.S. Trustee   Office of the United States Trustee</span>
+<br>karen.walsh@usdoj.gov
+<BR>
+
+<BR>
+<B>
+24-80617 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  No Trustee</span>
+<BR>,  
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

@@ -2,7 +2,12 @@
 import re
 import unittest
 
-from juriscraper.opinions.united_states.state import colo, mass, massappct, nh
+from juriscraper.opinions.united_states.state import (
+    colo,
+    mass,
+    massappct,
+    nh_p,
+)
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
 

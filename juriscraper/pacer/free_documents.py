@@ -223,8 +223,8 @@ class FreeOpinionRow(BaseDocketReport):
         self.court_id = court_id
         self._column_count = self._get_column_count()
         self._sort_order = self._detect_sort_order()
-        self.docket_number = self._parse_docket_number_strs(
-            [self.get_docket_number()]
+        self.docket_number, self.docket_number_dn_components = (
+            self._parse_docket_number_strs([self.get_docket_number()])
         )
 
     def __str__(self):
@@ -249,6 +249,8 @@ class FreeOpinionRow(BaseDocketReport):
             "nature_of_suit": self.get_nos(),
             "cause": self.get_cause(),
         }
+        # Include the docket_number components.
+        data.update(self.docket_number_dn_components)
 
         self._metadata = data
         return data

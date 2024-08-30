@@ -1,0 +1,119 @@
+Return-Path: <CMECF_help@okeb.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id pcl89af36uqccleiqo4p8n529img1ev3runjo0g1
+ for user@recap.email;
+ Fri, 09 Aug 2024 00:39:06 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of okeb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=CMECF_help@okeb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of okeb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=CMECF_help@okeb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=okeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFL2Y5NDZvVGtLV0tFbGE5ZUFZaVd6UkNZSnNKbnkwRHRoVGgrQ283S1VWU3IrbVhud2JtT0NoN3FDODdjOVJxdlpKNDErRUVmMVIwZjNYUnRzNkJIMUI5L0RLVDJlQ1NZT2dMQ1c1U2dFZjdWcnlKOUQ4bnExNmtSUmtPU1MrZHJtOGREM0c3S2p3SXl1cXNIazlVOEVmbE84d0xDMll3SDFlUlpyRjFwdHM0U0dwT09BV2Frd20rN2gyUUsrQVA1OG94RFR6V1h0YWJYUEVUbjlmSTIvUXFaeExHZVo0dXZhSzVacUNXclN6bjBRdGFubzE3YkRrcG1uS0xEcXRjU0xlbGpudUIvRXV2alphWWlRVUFBRXZRMWk1aHBod2dLNHlxZXZveDZXTXc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=jKstKPwBZS7VVbH808Y8Ly5iARAoIZyCcAyCVP4WBKxHR/NqSrtMi+yW2kze9arBtUDwMONEJ0JCzfW/98d4BHSyKVklR93iFxu3RUatO7S+I090ngFtNG1x83immmfv1VOGPgLeRsRVwfu1qKxJbrgPfqX9Y9GEB3qlXug2JoU=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1723163946; v=1; bh=ampORXDSwAeLbRwCo/otGL7fApRGdZn4KcNrWHjuiBM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.93
+Received: from okebdb.okeb.gtwy.dcn ([156.119.56.93])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 08 Aug 2024 20:39:05 -0400
+Received: from okebdb.okeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by okebdb.okeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4790cKxV013301;
+	Thu, 8 Aug 2024 19:38:21 -0500
+Received: (from ecf_web@localhost)
+	by okebdb.okeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4790baxZ012866;
+	Thu, 8 Aug 2024 19:37:36 -0500
+Date: Thu, 8 Aug 2024 19:37:36 -0500
+MIME-Version:1.0
+From:CMECF_help@okeb.uscourts.gov
+To:Courtmail@okeb.uscourts.gov
+Message-Id:<4656731@okeb.uscourts.gov>
+Subject:24-80617 Notice of Appearance by Attorney
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Oklahoma</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from FirstName MiddleName LastName entered on 8/8/2024 at 7:37 PM CDT and filed on 8/8/2024 
+
+<BR>
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>C M Heavy Machinery, LLC</td></tr>
+<tr><td><strong>Chapter:</strong></td><td>11</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.okeb.uscourts.gov/cgi-bin/DktRpt.pl?89920>24-80617</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.okeb.uscourts.gov/doc1/14404575983?pdf_header=&magic_num=57995228&de_seq_num=34&caseid=89920'>10</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Notice of Appearance and Request for Notice <i></i>  Filed by  FirstName MiddleName LastName   on behalf of    Great Plains National Bank.   (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Great Plains_C M_ Entry of Appearance - Carsey.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=8/8/2024] [FileNumber=4656729-0]
+<BR><TAB> [68e09b9025b24c0e9280b3cef067fda7368553f7821566a83fdf16eefb936c8164d3
+<BR><TAB>d619be87d2eafc32c2cb8b42083112562d48e289fe4d53eceee26ea60c8e]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-80617 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Great Plains National Bank</span>
+<br>user2@firm.com,  user@firm.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor   C M Heavy Machinery, LLC</span>
+<br>name@company.com,  user@recap.email
+<BR>
+<BR><span class="personName">Karen Carden Walsh on behalf of U.S. Trustee   Office of the United States Trustee</span>
+<br>karen.walsh@usdoj.gov
+<BR>
+
+<BR>
+<B>
+24-80617 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  No Trustee</span>
+<BR>,  
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
