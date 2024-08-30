@@ -3,6 +3,7 @@ from datetime import date, datetime, timedelta
 from typing import Optional, Tuple
 from urllib.parse import urlencode, urljoin
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -111,6 +112,7 @@ class Site(OpinionSiteLinear):
         :param dates: (start_date, end_date) tuple
         :return None
         """
+        logger.info("Backscraping for range %s %s", *dates)
         self.set_url(*dates)
         self.html = self._download()
         self._process_html()

@@ -2,6 +2,7 @@ from urllib.parse import urljoin
 
 from lxml import etree
 
+from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.state import wis
 
 
@@ -11,8 +12,6 @@ class Site(wis.Site):
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/other/appeals/caopin.jsp"
         self.set_url()
-        self.url = "https://www.wicourts.gov/other/appeals/caopin.jsp?docket_number=&range=Last+month&begin_date=04-01-2024&end_date=04-30-2024&fpb_beg_date=&fpb_end_date=&trial_judge_last=&party_name=&trial_county=&ca_district=&disp_code=&cite_type=&cite_page=&cite_volume=&pdcNo=&sortBy=date&Submit=Search"
-        # # 2024 WI App 36
         self.cite_regex = (
             r"(?P<volume>20\d{2})\s(?P<reporter>WI App)\s(?P<page>\d+)"
         )
@@ -42,6 +41,7 @@ class Site(wis.Site):
             caption_str = caption.text_content()
             lower_court = f"Wisconsin Circuit Court, {county.text} County"
             if "[Decision/Opinion withdrawn" in caption_str:
+                logger.debug("Skipping withdrawn opinion: %s", caption_str)
                 continue
             name = caption_str.split("[")[0].strip().replace("Errata: ", "")
             self.cases.append(
