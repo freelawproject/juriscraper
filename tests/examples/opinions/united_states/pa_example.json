@@ -1,482 +1,156 @@
-[
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "In the Interest of: N.E.M., Appeal of: N.E.M. - No. 9 EAP 2023",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2024-03-21T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "E.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 88531,
-                "AuthorId": "Donohue, Christine",
-                "OpinionId": 80242,
-                "FileName": "J-41B-2023mo - 105874033259675150.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "mo",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Christine Donohue",
-                    "AuthorCode": "Donohue, Christine",
-                    "Selectable": true,
-                    "SortOrder": 1430
+{
+    "Items": [
+        {
+            "Author": null,
+            "BoardDocketNumber": null,
+            "Caption": "Velasquez, L., Aplt v. Miranda, L. - No. 108 MAP 2023",
+            "CourtDocketNumber": null,
+            "CourtType": 3,
+            "DispositionDate": "2024-08-29T00:00:00",
+            "Keywords": null,
+            "UserIdentifier": "M.D. Prothonotary",
+            "UploadDate": "0001-01-01T00:00:00",
+            "PostedToday": true,
+            "Postings": [
+                {
+                    "Id": 89593,
+                    "AuthorId": "Dougherty, Kevin M.",
+                    "OpinionId": 81227,
+                    "FileName": "J-45-2024mo - 106055073279289388.pdf",
+                    "ProcessedDate": "2024-08-29T00:00:00",
+                    "PostingTypeId": "mo",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-29T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 0,
+                        "AuthorName": "Justice Kevin Dougherty",
+                        "AuthorCode": "Dougherty, Kevin M.",
+                        "Selectable": true,
+                        "SortOrder": 1440
+                    },
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "mo",
+                        "PostingTypeId": "Majority Opinion",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
                 },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "mo",
-                    "PostingTypeId": "Majority Opinion",
-                    "SortOrder": null
+                {
+                    "Id": 89594,
+                    "AuthorId": "Wecht, David N.",
+                    "OpinionId": 81227,
+                    "FileName": "J-45-2024cdo - 106055073279289621.pdf",
+                    "ProcessedDate": "2024-08-29T00:00:00",
+                    "PostingTypeId": "cd",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-29T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 0,
+                        "AuthorName": "Justice David Wecht",
+                        "AuthorCode": "Wecht, David N.",
+                        "Selectable": true,
+                        "SortOrder": 1450
+                    },
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "cd",
+                        "PostingTypeId": "Concurring and Dissenting Opinion",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
                 },
-                "PublicationType": null
-            },
-            {
-                "Id": 88533,
-                "AuthorId": "Dougherty, Kevin M.",
-                "OpinionId": 80242,
-                "FileName": "J-41B-2023co - 105874033259675223.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "co",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Kevin Dougherty",
-                    "AuthorCode": "Dougherty, Kevin M.",
-                    "Selectable": true,
-                    "SortOrder": 1440
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "co",
-                    "PostingTypeId": "Concurring Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 80242
-    },
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "In the Interest of: N.E.M., Appeal of: N.E.M. - No. 8 EAP 2023",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2024-03-21T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "E.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 88530,
-                "AuthorId": "Donohue, Christine",
-                "OpinionId": 80241,
-                "FileName": "J-41A-2023mo - 105874013259661115.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "mo",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Christine Donohue",
-                    "AuthorCode": "Donohue, Christine",
-                    "Selectable": true,
-                    "SortOrder": 1430
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "mo",
-                    "PostingTypeId": "Majority Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            },
-            {
-                "Id": 88532,
-                "AuthorId": "Dougherty, Kevin M.",
-                "OpinionId": 80241,
-                "FileName": "J-41A-2023co - 105874013259667181.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "co",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Kevin Dougherty",
-                    "AuthorCode": "Dougherty, Kevin M.",
-                    "Selectable": true,
-                    "SortOrder": 1440
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "co",
-                    "PostingTypeId": "Concurring Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 80241
-    },
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "Commonwealth, Aplt. v. Lehman, R. - No. 41 WAP 2022",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2024-03-21T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "W.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 88525,
-                "AuthorId": "Brobson, P. Kevin",
-                "OpinionId": 80239,
-                "FileName": "J-37-2023mo - 105873800259531607.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "mo",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice P. Kevin Brobson",
-                    "AuthorCode": "Brobson, P. Kevin",
-                    "Selectable": true,
-                    "SortOrder": 1470
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "mo",
-                    "PostingTypeId": "Majority Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            },
-            {
-                "Id": 88526,
-                "AuthorId": "Mundy, Sallie",
-                "OpinionId": 80239,
-                "FileName": "J-37-2023co - 105873800259532800.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "co",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Sallie Mundy",
-                    "AuthorCode": "Mundy, Sallie",
-                    "Selectable": true,
-                    "SortOrder": 1460
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "co",
-                    "PostingTypeId": "Concurring Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            },
-            {
-                "Id": 88528,
-                "AuthorId": "Wecht, David N.",
-                "OpinionId": 80239,
-                "FileName": "J-37-2023do - 105873800259534940.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "do",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice David Wecht",
-                    "AuthorCode": "Wecht, David N.",
-                    "Selectable": true,
-                    "SortOrder": 1450
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "do",
-                    "PostingTypeId": "Dissenting Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 80239
-    },
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "In Re: Trust B of Wells; Apl of: V.M.I. Foundation - No. 5 WAP 2023",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2024-03-21T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "W.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 88524,
-                "AuthorId": "Wecht, David N.",
-                "OpinionId": 80238,
-                "FileName": "J-55-2023mo - 105873791259528118.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "mo",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice David Wecht",
-                    "AuthorCode": "Wecht, David N.",
-                    "Selectable": true,
-                    "SortOrder": 1450
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "mo",
-                    "PostingTypeId": "Majority Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            },
-            {
-                "Id": 88527,
-                "AuthorId": "Mundy, Sallie",
-                "OpinionId": 80238,
-                "FileName": "J-55-2023cdo - 105873791259530198.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "cd",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Sallie Mundy",
-                    "AuthorCode": "Mundy, Sallie",
-                    "Selectable": true,
-                    "SortOrder": 1460
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "cd",
-                    "PostingTypeId": "Concurring and Dissenting Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 80238
-    },
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "In the Int of: T.Q.B., a Minor; Apl of: T.Q.B. - No. 71 MAP 2023",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2024-03-21T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "M.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 88523,
-                "AuthorId": "Mundy, Sallie",
-                "OpinionId": 80237,
-                "FileName": "J-68-2023mo - 105873695259484696.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "mo",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice Sallie Mundy",
-                    "AuthorCode": "Mundy, Sallie",
-                    "Selectable": true,
-                    "SortOrder": 1460
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "mo",
-                    "PostingTypeId": "Majority Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 80237
-    },
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "PSEA, Aplt. v. PSERB, et al. - No. 90 MAP 2022",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2024-03-21T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "M.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 88522,
-                "AuthorId": "Wecht, David N.",
-                "OpinionId": 80236,
-                "FileName": "J-43-2023mo - 105873732259515345.pdf",
-                "ProcessedDate": "2024-03-21T00:00:00",
-                "PostingTypeId": "mo",
-                "PublicationTypeId": null,
-                "RenderedDate": "2024-03-21T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Justice David Wecht",
-                    "AuthorCode": "Wecht, David N.",
-                    "Selectable": true,
-                    "SortOrder": 1450
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "mo",
-                    "PostingTypeId": "Majority Opinion",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 80236
-    },
-    {
-        "Author": null,
-        "BoardDocketNumber": null,
-        "Caption": "Lawrence, T., Aplt. v. Pa. Parole Board - No. 13 EAP 2022",
-        "CourtDocketNumber": null,
-        "CourtType": 3,
-        "DispositionDate": "2022-11-23T00:00:00",
-        "Keywords": null,
-        "UserIdentifier": "E.D. Prothonotary",
-        "UploadDate": "0001-01-01T00:00:00",
-        "PostedToday": false,
-        "Postings": [
-            {
-                "Id": 85682,
-                "AuthorId": "per curiam",
-                "OpinionId": 77673,
-                "FileName": "13EAP2022pco - 105350622204518797.pdf",
-                "ProcessedDate": "2022-11-23T00:00:00",
-                "PostingTypeId": "pco",
-                "PublicationTypeId": null,
-                "RenderedDate": "2022-11-23T00:00:00",
-                "SortOrder": 0,
-                "FileVersion": 1,
-                "Author": {
-                    "Id": 0,
-                    "AuthorName": "Per Curiam",
-                    "AuthorCode": "per curiam",
-                    "Selectable": true,
-                    "SortOrder": 9999
-                },
-                "PostType": {
-                    "Id": 0,
-                    "PostingTypeCode": "pco",
-                    "PostingTypeId": "Per Curiam Order",
-                    "SortOrder": null
-                },
-                "PublicationType": null
-            }
-        ],
-        "CreatedById": null,
-        "DeletedById": null,
-        "UpdatedById": null,
-        "CreatedOn": null,
-        "DeletedOn": null,
-        "UpdatedOn": null,
-        "CreatedBy": null,
-        "DeletedBy": null,
-        "UpdatedBy": null,
-        "Id": 77673
-    }
-]
+                {
+                    "Id": 89595,
+                    "AuthorId": "Brobson, P. Kevin",
+                    "OpinionId": 81227,
+                    "FileName": "J-45-2024do - 106055073279289763.pdf",
+                    "ProcessedDate": "2024-08-29T00:00:00",
+                    "PostingTypeId": "do",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-29T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 0,
+                        "AuthorName": "Justice P. Kevin Brobson",
+                        "AuthorCode": "Brobson, P. Kevin",
+                        "Selectable": true,
+                        "SortOrder": 1470
+                    },
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "do",
+                        "PostingTypeId": "Dissenting Opinion",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
+                }
+            ],
+            "CreatedById": null,
+            "DeletedById": null,
+            "UpdatedById": null,
+            "CreatedOn": null,
+            "DeletedOn": null,
+            "UpdatedOn": null,
+            "CreatedBy": null,
+            "DeletedBy": null,
+            "UpdatedBy": null,
+            "Id": 81227
+        },
+        {
+            "Author": null,
+            "BoardDocketNumber": null,
+            "Caption": "Commonwealth v. Becher, C., Pet. - No. 212 WAL 2024",
+            "CourtDocketNumber": null,
+            "CourtType": 3,
+            "DispositionDate": "2024-08-28T00:00:00",
+            "Keywords": null,
+            "UserIdentifier": "W.D. Prothonotary",
+            "UploadDate": "0001-01-01T00:00:00",
+            "PostedToday": false,
+            "Postings": [
+                {
+                    "Id": 89581,
+                    "AuthorId": "Per Curiam",
+                    "OpinionId": 81215,
+                    "FileName": "212WAL2024 - 106052645279039768.pdf",
+                    "ProcessedDate": "2024-08-28T00:00:00",
+                    "PostingTypeId": "sd",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-28T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": null,
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "sd",
+                        "PostingTypeId": "Summary Disposition",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
+                }
+            ],
+            "CreatedById": null,
+            "DeletedById": null,
+            "UpdatedById": null,
+            "CreatedOn": null,
+            "DeletedOn": null,
+            "UpdatedOn": null,
+            "CreatedBy": null,
+            "DeletedBy": null,
+            "UpdatedBy": null,
+            "Id": 81215
+        }
+    ],
+    "TotalItems": 2,
+    "TotalPages": 1,
+    "PageNumber": 1,
+    "PageSize": 20,
+    "HasPrevious": false,
+    "HasNext": false
+}
