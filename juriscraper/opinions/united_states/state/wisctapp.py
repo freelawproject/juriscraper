@@ -39,11 +39,11 @@ class Site(wis.Site):
     def _process_html(self):
         for row in self.html.xpath(".//table/tbody/tr"):
             date, docket, caption, district, county, link = row.xpath("./td")
-            caption = caption.text_content()
+            caption_str = caption.text_content()
             lower_court = f"Wisconsin Circuit Court, {county.text} County"
-            if "[Decision/Opinion withdrawn" in caption:
+            if "[Decision/Opinion withdrawn" in caption_str:
                 continue
-            name = caption.split("[")[0].strip().replace("Errata: ", "")
+            name = caption_str.split("[")[0].strip().replace("Errata: ", "")
             self.cases.append(
                 {
                     "date": date.text,
