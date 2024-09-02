@@ -151,7 +151,7 @@ def save_response(site):
     if isinstance(site.html, dict):
         filename = f"/tmp/{court}_content_{now_str}.json"
         with open(filename, "w") as f:
-            json.dump(response.content, f, indent=4)
+            json.dump(response.text, f, indent=4)
     else:
         filename = f"/tmp/{court}_content_{now_str}.html"
         with open(filename, "w") as f:
@@ -327,10 +327,18 @@ def main():
                         ).back_scrape_iterable,
                         mod,
                     ):
-                        site.parse()
-                        scrape_court(site, binaries)
-                        if save_responses:
-                            save_response(site)
+
+                        error = None
+                        try:
+                            site.parse()
+                            scrape_court(site, binaries)
+                        except Exception as e:
+                            error = e
+                        finally:
+                            if save_responses:
+                                save_response(site)
+                            if error:
+                                raise error
                 else:
                     site = mod.Site()
                     v_print(
@@ -339,12 +347,20 @@ def main():
                     )
                     if site.uses_selenium:
                         v_print(3, "Selenium will be used.")
-                    site.parse()
-                    results[current_court]["scrape"] = scrape_court(
-                        site, binaries
-                    )
-                    if save_responses:
-                        save_response(site)
+
+                    error = None
+                    try:
+                        site.parse()
+                        results[current_court]["scrape"] = scrape_court(
+                            site, binaries
+                        )
+                    except Exception as e:
+                        error = e
+                    finally:
+                        if save_responses:
+                            save_response(site)
+                        if error:
+                            raise error
             except Exception:
                 results[current_court][
                     "global_failure"
