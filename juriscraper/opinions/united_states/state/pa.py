@@ -20,6 +20,7 @@ class Site(OpinionSiteLinear):
     days_interval = 20
     api_dt_format = "%Y-%m-%dT00:00:00-05:00"
     first_opinion_date = datetime(1998, 4, 27)
+    judge_key = "AuthorCode"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -48,17 +49,20 @@ class Site(OpinionSiteLinear):
         """
         json_response = self.html
 
-        for cluster in json_response:
+        for cluster in json_response["Items"]:
             title = cluster["Caption"]
             disposition_date = cluster["DispositionDate"].split("T")[0]
             name, docket = self.parse_case_title(title)
 
             for op in cluster["Postings"]:
-                author_str = op["Author"]["AuthorName"]
                 per_curiam = False
-                if author_str.lower() == "per curiam":
-                    author_str = ""
-                    per_curiam = True
+                author_str = ""
+
+                if op["Author"]:
+                    author_str = self.clean_judge(op["Author"][self.judge_key])
+                    if author_str.lower() == "per curiam":
+                        author_str = ""
+                        per_curiam = True
 
                 url = self.document_url.format(self.court, op["FileName"])
                 status = self.get_status(op)
@@ -98,6 +102,12 @@ class Site(OpinionSiteLinear):
         :return: parsed status
         """
         return self.status
+
+    def clean_judge(self, author_str: str) -> str:
+        """Cleans judge name. `pa` has a different format than
+        `pasuperct` and `pacommwct`
+        """
+        return author_str
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Modify GET querystring for desired date range
