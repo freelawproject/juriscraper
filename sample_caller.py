@@ -13,6 +13,47 @@ from juriscraper.lib.string_utils import trunc
 from juriscraper.report import generate_scraper_report
 
 die_now = False
+MICROSERVICE_URLS = {
+    # Extractor Endpoints
+    "document-extract": {
+        "url": "{}/extract/doc/text/",
+    },
+    "document-extract-ocr": {
+        "url": "{}/extract/doc/text/",
+    },
+    "recap-extract": {
+        "url": "{}/extract/recap/text/",
+    },
+    # Utils Endpoints
+    "page-count": {
+        "url": "{}/utils/page-count/pdf/",
+    },
+    "audio-duration": {
+        "url": "{}/utils/audio/duration/",
+    },
+    "mime-type": {
+        "url": "{}/utils/mime-type/",
+    },
+    "buffer-extension": {
+        "url": "{}/utils/file/extension/",
+    },
+    "document-number": {
+        "url": "{}/utils/document-number/pdf/",
+    },
+    # Converter Endpoints
+    "generate-thumbnail": {
+        "url": "{}/convert/pdf/thumbnail/",
+    },
+    "images-to-pdf": {
+        "url": "{}/convert/images/pdf/",
+    },
+    "convert-audio": {
+        "url": "{}/convert/audio/mp3/",
+    },
+    "downsize-audio": {
+        "url": "{}/convert/audio/ogg/",
+    },
+}
 
 
 def signal_handler(signal, frame):
@@ -24,12 +65,72 @@ def signal_handler(signal, frame):
     die_now = True
 
 
-def extract_doc_content(data):
-    # Your data extraction routines here. (pdftotext, abiword, etc.)
-    return data
+def print_dict(dic: dict):
+    for k, v in dic.items():
+        if isinstance(v, str):
+            value = trunc(v, 200, ellipsis="...")
+            v_print(1, f'    {k}: "{value}"')
+        else:
+            # Dates and such...
+            v_print(1, f"    {k}: {v}")
 
 
-def scrape_court(site, binaries=False):
+def extract_doc_content(
+    data, extract_from_text: bool, site, doctor_host: str, filename: str
+):
+    """Extracts document's content using a local doctor host
+
+    For complete and integrated testing, run in a Courtlistener
+    docker compose environment
+
+    :param data: the response content
+    :param extract_from_text: if True, extract doc content using doctor
+        if False, return content as is
+    :param site: current site object
+    :param doctor_host: local doctor instance host. calls will fail if
+        the doctor host is not valid
+    :param filename: Name for saving extracted content into a file in tmp
+
+    :return: a tuple with:
+        the extracted content
+        the structured metadata parsed by Site.extract_from_text
+    """
+    if not extract_from_text:
+        return data, {}
+
+    # Get the file type from the document's raw content
+    extension_url = MICROSERVICE_URLS["buffer-extension"]["url"].format(
+        doctor_host
+    )
+    extension_response = requests.post(
+        extension_url, files={"file": ("filename", data)}, timeout=30
+    )
+    extension_response.raise_for_status()
+    extension = extension_response.text
+
+    # For HTML files, the extracted document may have modified tags
+    files = {"file": (f"something.{extension}", data)}
+    url = MICROSERVICE_URLS["document-extract"]["url"].format(doctor_host)
+    extraction__response = requests.post(url, files=files, timeout=120)
+    extraction__response.raise_for_status()
+    extracted_content = extraction__response.json()["content"]
+
+    # The extracted content is embeded for display in Courtlistener
+    # We save it into /tmp/ to have an idea how it would look. You can
+    # inspect it your browser by going into f'file://tmp/{filename}.html'
+    court_id = site.court_id.split(".")[-1]
+    with open(f"/tmp/{court_id}_{filename}.html", "w") as f:
+        print(extension)
+        if extension != ".html":
+            f.write(f"<pre>{extracted_content}</pre>")
+        else:
+            f.write(extracted_content)
+
+    metadata_dict = site.extract_from_text(extracted_content)
+    return extracted_content, metadata_dict
+
+
+def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
     """Calls the requested court(s), gets its content, then throws it away.
 
     Note that this is a very basic caller lacking important functionality, such
@@ -50,84 +151,82 @@ def scrape_court(site, binaries=False):
             item_download_urls, safe="%/:=&?~#+!$,;'@()*[]"
         )
 
-        if binaries:
-            try:
-                # some sites require a custom ssl_context, contained in the Site's
-                # session. However, we can't send a request with both a
-                # custom ssl_context and `verify = False`
-                has_cipher = hasattr(site, "cipher")
-                s = (
-                    site.request["session"]
-                    if has_cipher
-                    else requests.session()
-                )
-
-                if site.needs_special_headers:
-                    headers = site.request["headers"]
-                else:
-                    headers = {"User-Agent": "CourtListener"}
-
-                # Note that we do a GET even if site.method is POST. This is
-                # deliberate.
-                r = s.get(
-                    download_url,
-                    verify=has_cipher,  # WA has a certificate we don't understand
-                    headers=headers,
-                    cookies=site.cookies,
-                    timeout=300,
-                )
-
-                # test for expected content type (thanks mont for nil)
-                if site.expected_content_types:
-                    # Clean up content types like "application/pdf;charset=utf-8"
-                    # and 'application/octet-stream; charset=UTF-8'
-                    content_type = (
-                        r.headers.get("Content-Type")
-                        .lower()
-                        .split(";")[0]
-                        .strip()
-                    )
-                    m = any(
-                        content_type in mime.lower()
-                        for mime in site.expected_content_types
-                    )
-                    if not m:
-                        exceptions["DownloadingError"].append(download_url)
-                        v_print(3, f"DownloadingError: {download_url}")
-                        v_print(3, traceback.format_exc())
-
-                data = r.content
-
-                # test for empty files (thank you CA1)
-                if len(data) == 0:
-                    exceptions["EmptyFileError"].append(download_url)
-                    v_print(3, f"EmptyFileError: {download_url}")
-                    v_print(3, traceback.format_exc())
-                    continue
-            except Exception:
-                exceptions["DownloadingError"].append(download_url)
-                v_print(3, f"DownloadingError: {download_url}")
-                v_print(3, traceback.format_exc())
-                continue
-
-            # Extract the data using e.g. antiword, pdftotext, etc., then
-            # clean it up.
-            data = extract_doc_content(data)
-            data = site.cleanup_content(data)
-            v_print(
-                3,
-                f"Showing extracted document data (500 chars):\n {data[:500]}",
-            )
-
         # Normally, you'd do your save routines here...
         v_print(1, "\nAdding new item:")
-        for k, v in item.items():
-            if isinstance(v, str):
-                value = trunc(v, 200, ellipsis="...")
-                v_print(1, f'    {k}: "{value}"')
+        print_dict(item)
+
+        if not binaries:
+            continue
+
+        try:
+            # some sites require a custom ssl_context, contained in the Site's
+            # session. However, we can't send a request with both a
+            # custom ssl_context and `verify = False`
+            has_cipher = hasattr(site, "cipher")
+            s = site.request["session"] if has_cipher else requests.session()
+
+            if site.needs_special_headers:
+                headers = site.request["headers"]
             else:
-                # Dates and such...
-                v_print(1, f"    {k}: {v}")
+                headers = {"User-Agent": "CourtListener"}
+
+            # Note that we do a GET even if site.method is POST. This is
+            # deliberate.
+            r = s.get(
+                download_url,
+                verify=has_cipher,  # WA has a certificate we don't understand
+                headers=headers,
+                cookies=site.cookies,
+                timeout=300,
+            )
+
+            # test for expected content type (thanks mont for nil)
+            if site.expected_content_types:
+                # Clean up content types like "application/pdf;charset=utf-8"
+                # and 'application/octet-stream; charset=UTF-8'
+                content_type = (
+                    r.headers.get("Content-Type").lower().split(";")[0].strip()
+                )
+                m = any(
+                    content_type in mime.lower()
+                    for mime in site.expected_content_types
+                )
+                if not m:
+                    exceptions["DownloadingError"].append(download_url)
+                    v_print(3, f"DownloadingError: {download_url}")
+                    v_print(3, traceback.format_exc())
+
+            data = r.content
+
+            # test for empty files (thank you CA1)
+            if len(data) == 0:
+                exceptions["EmptyFileError"].append(download_url)
+                v_print(3, f"EmptyFileError: {download_url}")
+                v_print(3, traceback.format_exc())
+                continue
+        except Exception:
+            exceptions["DownloadingError"].append(download_url)
+            v_print(3, f"DownloadingError: {download_url}")
+            v_print(3, traceback.format_exc())
+            continue
+
+        filename = item["case_names"].lower().replace(" ", "_")
+        # cleanup_content is called before the extraction task in CL
+        # so it is only useful for cleaning HTML files
+        data = site.cleanup_content(data)
+        data, metadata_from_text = extract_doc_content(
+            data, extract_content, site, doctor_host, filename
+        )
+        v_print(
+            3,
+            f"Showing extracted document data (500 chars):\n {data[:500]}\n{'='*40}",
+        )
+
+        if metadata_from_text:
+            v_print(3, "Values obtained by Site.extract_from_text:")
+            for object_type, value_dict in metadata_from_text.items():
+                v_print(3, object_type)
+                print_dict(value_dict)
 
     v_print(3, f"\n{site.court_id}: Successfully crawled {len(site)} items.")
     return {"count": len(site), "exceptions": exceptions}
@@ -191,6 +290,29 @@ def main():
         ),
     )
     parser.add_option(
+        "--extract-content",
+        action="store_true",
+        default=False,
+        help=(
+            "Extract document's content using `doctor`. "
+            "Then, execute Site.extract_from_text method. "
+            "If this flag is set to True, it will "
+            "make `binaries` True, too. This requires "
+            "having a running `doctor` instance"
+        ),
+    )
+    parser.add_option(
+        "--doctor-host",
+        default=os.environ.get("JURISCRAPER_DOCTOR_HOST", ""),
+        help=(
+            "Customize `doctor` host. "
+            "Defaults to an environment variable `JURISCRAPER_DOCTOR_HOST`. "
+            "You can get your local host by running "
+            "`python manage.py runserver` on your doctor install"
+        ),
+    )
+
+    parser.add_option(
         "-v",
         "--verbosity",
         action="count",
@@ -231,13 +353,15 @@ def main():
     (options, args) = parser.parse_args()
 
     daemon_mode = options.daemonmode
-    binaries = options.binaries
     court_id = options.court_id
     backscrape = options.backscrape
     backscrape_start = options.backscrape_start
     backscrape_end = options.backscrape_end
     days_interval = options.days_interval
     generate_report = options.report
+    extract_content = options.extract_content
+    binaries = options.binaries or extract_content
+    doctor_host = options.doctor_host
 
     # Set up the print function
     print(f"Verbosity is set to: {options.verbosity}")
@@ -290,7 +414,9 @@ def main():
                         mod,
                     ):
                         site.parse()
-                        scrape_court(site, binaries)
+                        scrape_court(
+                            site, binaries, extract_content, doctor_host
+                        )
                 else:
                     site = mod.Site()
                     v_print(
@@ -301,7 +427,7 @@ def main():
                         v_print(3, "Selenium will be used.")
                     site.parse()
                     results[current_court]["scrape"] = scrape_court(
-                        site, binaries
+                        site, binaries, extract_content, doctor_host
                     )
             except Exception:
                 results[current_court][
