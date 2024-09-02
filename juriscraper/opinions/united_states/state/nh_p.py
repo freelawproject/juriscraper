@@ -51,7 +51,7 @@ class Site(OpinionSiteLinear):
     end_year = datetime.today().year - 1
 
     title_regex = re.compile(
-        r"((?P<citation>\d{4}\sN\.H\.\s\d+)|(?P<docket>\d{4}-\d{1,4}))[\s,]+(?P<name>.*)"
+        r"((?P<citation>\d{4}\sN\.H\.\s\d+)|(?P<docket>(\d{4}-\d{1,4}( and )?)+))[\s,]+(?P<name>.*)"
     )
 
     def __init__(self, *args, **kwargs):
@@ -68,9 +68,23 @@ class Site(OpinionSiteLinear):
         json_response = self.html
 
         for case in json_response["data"]:
-            url = case["fields"]["field_document_file"]["0"]["fields"]["uri"][
-                0
-            ].split("//")[1]
+            fields = case["fields"]
+
+            if fields["field_document_file"]:
+                url_object = fields["field_document_file"]
+            elif fields["field_document"]:
+                # seen on withdrawn opinions. Ex: 2020-0268
+                # Hampstead School Board & a. v. School Administrative Unit No. 5
+                url_object = fields["field_document"][0]["fields"][
+                    "field_document_file"
+                ]
+            else:
+                logger.warning(
+                    "Skipping row '%s' due, can't find document link",
+                    case["title"],
+                )
+                continue
+            url = url_object["0"]["fields"]["uri"][0].split("//")[1]
 
             # "title" format changes since 2024, where a citation string
             # replaces the docket number, and the docket is in another row
@@ -78,17 +92,22 @@ class Site(OpinionSiteLinear):
             if not title_match:
                 logger.warning("Unable to parse title %s", case["title"])
                 continue
-
             title_fields = title_match.groupdict("")
             if not title_fields.get("docket"):
-                docket_str = case["fields"]["field_description"][0]["#text"]
+                docket_str = fields["field_description"][0]["#text"]
                 title_fields["docket"] = re.search(
                     r"\d{4}-\d+", docket_str
                 ).group(0)
 
+            if fields["field_date_filed"]:
+                case_date = fields["field_date_filed"][0]
+            elif fields["field_date_posted"]:
+                # usually this is the only populated field
+                case_date = fields["field_date_posted"][0]
+
             self.cases.append(
                 {
-                    "date": case["fields"]["field_date_posted"][0],
+                    "date": case_date,
                     "url": urljoin(
                         "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/",
                         url,
