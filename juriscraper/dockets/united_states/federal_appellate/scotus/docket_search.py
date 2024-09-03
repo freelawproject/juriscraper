@@ -332,7 +332,7 @@ class SCOTUSOrders:
             intended for debugging use, e.g. to validate free text searches against a
             specific order list.
         """
-        available_terms = set(range(2016, utils.current_term() + 1))
+        available_terms = set(range(2016, utils.current_term() + 2))
         if self.term not in available_terms:
             errmsg = "Only these terms available for scraping: {}"
             logger.error(
