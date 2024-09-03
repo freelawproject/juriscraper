@@ -2,13 +2,9 @@
 # CourtID: flaapp6
 # Court Short Name: flaapp6
 
-from . import fladistctapp
+from juriscraper.opinions.united_states.state import fladistctapp_1
 
 
-class Site(fladistctapp.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.number = "sixth"
-        self.base = "https://6dca.flcourts.gov"
-        self.update_url()
+class Site(fladistctapp_1.Site):
+    number = "sixth"
+    court_index = "6"
