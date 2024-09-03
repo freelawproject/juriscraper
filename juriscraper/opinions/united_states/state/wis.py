@@ -4,7 +4,6 @@ from typing import Optional, Tuple
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -79,32 +78,6 @@ class Site(OpinionSiteLinear):
         if match:
             return {"Citation": {**match.groupdict(), "type": 8}}
         return {}
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Make backscrape itearble
-
-        Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
-
-        :param kwargs: passed when initializing the scraper, may or
-            may not contain backscrape controlling arguments
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
-        else:
-            end = datetime.now()
-
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, self.days_interval
-        )
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Set date range from backscraping args and scrape
