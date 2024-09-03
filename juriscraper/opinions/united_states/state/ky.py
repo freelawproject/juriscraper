@@ -93,6 +93,12 @@ class Site(OpinionSiteLinear):
             disposition = row["docketEntryDescription"]
             docket_number = row["caseHeader.caseNumber"]
 
+            if not row["hasDocuments"]:
+                logger.info(
+                    "Docket %s has no documents, skipping", docket_number
+                )
+                continue
+
             # On "PUBLIC OPINIONS IN CONFIDENTIAL CASES", docket numbers
             # and case names are not as expected
             # "2024 CA ADMIN - NON-CONFIDENTIAL OPINION - 002"
@@ -148,6 +154,7 @@ class Site(OpinionSiteLinear):
         :param url: url
         :return: JSON as dict
         """
+        logger.debug("Getting JSON: '%s'", url)
         self._request_url_get(url)
         self._post_process_response()
         return self._return_response_text_object()
