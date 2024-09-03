@@ -16,7 +16,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.6.22 - 2024-09-03**
+**2.6.23 - 2024-09-03**
 
 Fixes:
   - `wisc/wisc ct app` docket numbers are now unique across districts
