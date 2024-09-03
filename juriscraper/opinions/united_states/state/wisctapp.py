@@ -1,7 +1,5 @@
 from urllib.parse import urljoin
 
-from lxml import etree
-
 from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.state import wis
 
@@ -16,44 +14,58 @@ class Site(wis.Site):
             r"(?P<volume>20\d{2})\s(?P<reporter>WI App)\s(?P<page>\d+)"
         )
 
-    @staticmethod
-    def set_status(caption: etree._Element) -> str:
-        """Set status of opinions
+    def combine_opinions(self, url: str, docket_number: str) -> bool:
+        """Combine duplicate opinions in self.cases
 
-        Published opinions are either identified as marked for publication
-        or if they are older opinions with Final publication date ... etc
+        Wisconsin Court of Appeals generates a row for every docket number
+        for combined cases.  If this is the case and the opinions all
+        point to the same document, combine the docket numbers
 
-        :param caption: The case name field
-        :return:Status
+        :return: True if opinion already in self.cases
         """
-        full_string = caption.text_content()
-        if "publication" in full_string.lower():
-            status = "Published"
-        elif "errata" in full_string.lower():
-            status = "Errata"
-        else:
-            status = "Unpublished"
-        return status
+        for case in self.cases:
+            if case["url"] == url:
+                case["docket"] = f"{case['docket']}, {docket_number}"
+                case["docket"] = ", ".join(sorted(case["docket"].split(", ")))
+                return True
+        return False
 
     def _process_html(self):
+        """Process Wisconsin Ct of Appeals rows
+
+        :return: None
+        """
         for row in self.html.xpath(".//table/tbody/tr"):
             date, docket, caption, district, county, link = row.xpath("./td")
-            caption_str = caption.text_content()
-            lower_court = f"Wisconsin Circuit Court, {county.text} County"
-            if "[Decision/Opinion withdrawn" in caption_str:
-                logger.debug("Skipping withdrawn opinion: %s", caption_str)
+            long_caption = caption.text_content()
+            if "[Decision/Opinion withdrawn" in long_caption:
+                logger.debug("Skipping withdrawn opinion: %s", long_caption)
                 continue
-            name = caption_str.split("[")[0].strip().replace("Errata: ", "")
+
+            captions = caption.xpath(".//text()")
+            if "Errata" in captions[0]:
+                status, name = "Errata", captions[1]
+            elif "Recommended for Publication" in captions[-1]:
+                status, name = "Published", captions[0]
+            else:
+                status, name = "Unpublished", captions[0]
+
+            url = urljoin(
+                "https://www.wicourts.gov", link.xpath("./input")[0].name
+            )
+            docket_number = docket.text
+            if self.combine_opinions(url, docket_number):
+                logger.debug("Duplicate row: %s", name)
+                continue
+            lower_court = f"Wisconsin Circuit Court, {county.text} County"
+
             self.cases.append(
                 {
                     "date": date.text,
-                    "name": name,
-                    "url": urljoin(
-                        "https://www.wicourts.gov",
-                        link.xpath("./input")[0].name,
-                    ),
-                    "docket": docket.text,
-                    "status": self.set_status(caption),
+                    "name": name.strip(),
+                    "url": url,
+                    "docket": docket_number,
+                    "status": status,
                     "lower_court": lower_court,
                 }
             )
