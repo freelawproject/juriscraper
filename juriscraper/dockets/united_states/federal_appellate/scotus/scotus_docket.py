@@ -225,6 +225,7 @@ class SCOTUSDocketReport:
         self._dispositions = []
         self._distributions = []
         self._amici = set()
+        self._argued_date = None
 
     @classmethod
     def from_response(cls, response: requests.Response, **kwargs):
@@ -563,6 +564,15 @@ class SCOTUSDocketReport:
             self._distributions.sort()
 
         return self._distributions
+
+    @property
+    def argued_date(self):
+        """Return oral arguments date."""
+        if self._argued_date is None:
+            for e in self.docket_entries:
+                if e["description"].lstrip().lower()[:6] == "argued":
+                    self._argued_date = e["date_filed"]
+        return self._argued_date
 
     @staticmethod
     def _parse_attorney(row, affiliation) -> dict:
