@@ -594,6 +594,34 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.vt": [
+            (
+                # https://www.courtlistener.com/api/rest/v3/opinions/10566596/
+                """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vtcourts.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                            2024 VT 52\n\n                                          No. 23-AP-226\n\nState of Vermont   """,
+                {
+                    "Citation": {
+                        "volume": "2024",
+                        "reporter": "VT",
+                        "page": "52",
+                        "type": 8,
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vt_criminal": [
+            (
+                # https://www.courtlistener.com/api/rest/v3/clusters/7854285/
+                """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                            2022 VT 35\n\n                                           No. 2021-059\n\nState of Vermont                                                 Supreme Court\n\n                                                                 On Appeal from\n   v.                                                            Superior Court, Chittenden Unit,\n                                                                 Criminal Division\n\nRandy F. Therrien    """,
+                {
+                    "Citation": {
+                        "volume": "2022",
+                        "reporter": "VT",
+                        "page": "35",
+                        "type": 8,
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):

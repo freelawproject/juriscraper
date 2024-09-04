@@ -4,13 +4,16 @@ Court Short Name: VT
 Court Contact: submit form here https://www.vermontjudiciary.org/website-feedback-form
 """
 
-from . import vt
+from juriscraper.opinions.united_states.state import vt
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(vt.Site):
     division = 1
     days_interval = 100
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
+    # Deactivate extract_from_text from parent class
+    # and avoid triggering the example requirement from
+    # tests.local.test_ScraperExtractFromTextTest
+    # Other vtsuperct_* scrapers will inherit from this one
+    # to inherit the same behaviour
+    extract_from_text = OpinionSite.extract_from_text
