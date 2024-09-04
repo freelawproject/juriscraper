@@ -11,6 +11,7 @@ If there are errors with the site, you can contact:
 She's very responsive.
 """
 
+import re
 from datetime import date, datetime
 from typing import Optional, Tuple
 from urllib.parse import urlencode
@@ -112,3 +113,14 @@ class Site(OpinionSiteLinear):
             params["facet_to_date"] = end.strftime("%m/%d/%Y")
 
         self.url = f"{self.base_url}?{urlencode(params)}"
+
+    def extract_from_text(self, scraped_text: str):
+        match = re.search(
+            r"(?P<volume>\d{4}) VT (?P<page>\d+)", scraped_text[:1000]
+        )
+        if match:
+            return {
+                "Citation": {"reporter": "VT", "type": 8, **match.groupdict()}
+            }
+
+        return {}
