@@ -49,10 +49,8 @@ class Site(OpinionSiteLinear):
     # collect all subcategory or tag values
     start_year = 2015
     end_year = datetime.today().year - 1
-
-    title_regex = re.compile(
-        r"((?P<citation>\d{4}\sN\.H\.\s\d+)|(?P<docket>(\d{4}-\d{1,4}( and )?)+))[\s,]+(?P<name>.*)"
-    )
+    cite_regex = re.compile(r"\d{4}\sN\.H\.\s\d+")
+    docket_regex = re.compile(r"(?P<docket>\d{4}-\d{1,4})[\s,]*")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -80,7 +78,7 @@ class Site(OpinionSiteLinear):
                 ]
             else:
                 logger.warning(
-                    "Skipping row '%s' due, can't find document link",
+                    "Skipping row '%s', can't find document link",
                     case["title"],
                 )
                 continue
@@ -88,16 +86,27 @@ class Site(OpinionSiteLinear):
 
             # "title" format changes since 2024, where a citation string
             # replaces the docket number, and the docket is in another row
-            title_match = self.title_regex.search(case["title"])
-            if not title_match:
-                logger.warning("Unable to parse title %s", case["title"])
-                continue
-            title_fields = title_match.groupdict("")
-            if not title_fields.get("docket"):
+            name = case["title"]
+
+            citation = ""
+            cite_match = self.cite_regex.search(case["title"])
+            if cite_match:
+                citation = cite_match.group(0)
+                name = re.sub(self.cite_regex, " ", name)
+
+            docket = ", ".join(
+                [
+                    match.group("docket")
+                    for match in self.docket_regex.finditer(case["title"])
+                ]
+            )
+            if not docket:
                 docket_str = fields["field_description"][0]["#text"]
-                title_fields["docket"] = re.search(
-                    r"\d{4}-\d+", docket_str
-                ).group(0)
+                docket = self.docket_regex.search(docket_str).group(0)
+
+            name = re.sub(self.docket_regex, " ", name)
+            # delete traces of multiple docket numbers
+            name = re.sub(r"^(and|[&,])", "", name.strip()).strip()
 
             if fields["field_date_filed"]:
                 case_date = fields["field_date_filed"][0]
@@ -112,9 +121,9 @@ class Site(OpinionSiteLinear):
                         "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/",
                         url,
                     ),
-                    "name": title_fields["name"],
-                    "docket": title_fields["docket"],
-                    "citation": title_fields["citation"],
+                    "name": name,
+                    "docket": docket,
+                    "citation": citation,
                 }
             )
 
