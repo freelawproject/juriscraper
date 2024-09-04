@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.23 - 2024-09-03**
+
+Fixes:
+  - `wisc/wisc ct app` docket numbers are now unique across districts
+  - `ky` logging for no document rows
+
+
+Features:
+  - implemented dynamic backscraper and extract_from_text for `conn`
+
+## Past
+
 **2.6.21 - 2024-08-30**
 
 Fixes:
@@ -26,8 +38,6 @@ Fixes:
 
 Features:
   - implemented dynamic backscraper and extract_from_text for `conn`
-
-## Past
 
 **2.6.20 - 2024-08-28**
 

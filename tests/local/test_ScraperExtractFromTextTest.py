@@ -503,6 +503,34 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.wis": [
+            (
+                # https://www.wicourts.gov/sc/opinion/DisplayDocument.pdf?content=pdf&seqNo=669658
+                """2023 WI 50\nS C W\nUPREME OURT OF ISCONSIN\nCASE NO.: 2021AP938-CR\nCOMPLETE TITLE: State of Wisconsin,""",
+                {
+                    "Citation": {
+                        "volume": "2023",
+                        "reporter": "WI",
+                        "page": "50",
+                        "type": 8,
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.wisctapp": [
+            (
+                # https://www.wicourts.gov/ca/opinion/DisplayDocument.pdf?content=pdf&seqNo=799325
+                """2024 WI App 36\nCOURT OF APPEALS OF WISCONSIN\nPUBLISHED OPINION""",
+                {
+                    "Citation": {
+                        "volume": "2024",
+                        "reporter": "WI App",
+                        "page": "36",
+                        "type": 8,
+                    },
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.conn": [
             # Example with Syllabus https://www.courtlistener.com/opinion/9505807/markley-v-state-elections-enforcement-commission/
             (
