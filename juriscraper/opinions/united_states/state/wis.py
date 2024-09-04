@@ -1,37 +1,91 @@
-from datetime import date, timedelta
+import re
+from datetime import date, datetime, timedelta
+from typing import Optional, Tuple
+from urllib.parse import urlencode, urljoin
 
-from juriscraper.lib.html_utils import get_table_column_text
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    days_interval = 15
+    first_opinion_date = datetime(1995, 6, 1).date()
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        begin_date = date.strftime(date.today() - timedelta(15), "%m/%d/%Y")
-        end_date = date.strftime(date.today(), "%m/%d/%Y")
-        self.url = (
-            "http://wicourts.gov/supreme/scopin.jsp?"
-            "begin_date=%s&end_date=%s&SortBy=date"
-        ) % (begin_date, end_date)
         self.court_id = self.__module__
-        self.table_id = "scopinion"
-        self.path_base = f"//table[@id='{self.table_id}']"
+        self.base_url = "https://www.wicourts.gov/supreme/scopin.jsp"
+        self.status = "Published"
+        self.set_url()
+        self.cite_regex = (
+            r"(?P<volume>20\d{2})\s(?P<reporter>WI)\s(?P<page>\d+)"
+        )
+        self.make_backscrape_iterable(kwargs)
 
-    def _get_case_names(self):
-        return get_table_column_text(self.html, 3, False, self.table_id)
+    def set_url(
+        self, start: Optional[date] = None, end: Optional[date] = None
+    ) -> None:
+        """Sets URL with appropriate query parameters
 
-    def _get_download_urls(self):
-        path = f"{self.path_base}//td[4]//a[contains(., 'PDF')]/@href"
-        return self.html.xpath(path)
+        :param start: start date
+        :param end: end date
+        :return None
+        """
+        if not start:
+            start = datetime.today() - timedelta(days=15)
+            end = datetime.today()
 
-    def _get_case_dates(self):
-        path = f"{self.path_base}//td[1]"
-        cells = self.html.xpath(path)
-        return [convert_date_string(cell.text_content()) for cell in cells]
+        start = start.strftime("%m-%d-%Y")
+        end = end.strftime("%m-%d-%Y")
 
-    def _get_docket_numbers(self):
-        return get_table_column_text(self.html, 2, False, self.table_id)
+        params = {
+            "range": "None",
+            "begin_date": start,
+            "end_date": end,
+            "sortBy": "date",
+            "Submit": "Search",
+        }
+        self.url = f"{self.base_url}?{urlencode(params)}"
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+    def _process_html(self) -> None:
+        """Process the HTML from wisconsin
+
+        :return: None
+        """
+        for row in self.html.xpath(".//table/tbody/tr"):
+            date, docket, caption, link = row.xpath("./td")
+            self.cases.append(
+                {
+                    "date": date.text,
+                    "name": caption.text,
+                    "url": urljoin(
+                        "https://www.wicourts.gov",
+                        link.xpath("./input")[0].name,
+                    ),
+                    "docket": docket.text,
+                }
+            )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract citation from text
+
+        :param scraped_text: Text of scraped content
+        :return: date filed
+        """
+        first_line = scraped_text[:100].splitlines()[0]
+        match = re.search(self.cite_regex, first_line)
+
+        if match:
+            return {"Citation": {**match.groupdict(), "type": 8}}
+        return {}
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Set date range from backscraping args and scrape
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        self.set_url(*dates)
+        self.html = self._download()
+        self._process_html()
