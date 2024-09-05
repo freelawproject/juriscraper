@@ -4,8 +4,9 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # Date: 2014-07-04
-
+import re
 from datetime import date
+from typing import Any, Dict
 
 from juriscraper.opinions.united_states.state import ny
 
@@ -14,7 +15,7 @@ class Site(ny.Site):
     first_opinion_date = date(2003, 9, 25)
 
     # If more than 500 results are found, no results will be shown
-    days_interval = 90
+    days_interval = 30
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -22,3 +23,6 @@ class Site(ny.Site):
         self.court = "App Div, 1st Dept"
         self._set_parameters()
         self.make_backscrape_iterable(kwargs)
+
+        # disinherit this method from ny
+        self.extract_from_text = lambda scraped_text: {}
