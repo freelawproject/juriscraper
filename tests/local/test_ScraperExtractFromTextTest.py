@@ -659,7 +659,6 @@ class ScraperExtractFromText(unittest.TestCase):
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
-            site = mod.Site()
             if mod.Site.extract_from_text == OpinionSite.extract_from_text:
                 # Method is not overridden, so skip it.
                 continue
