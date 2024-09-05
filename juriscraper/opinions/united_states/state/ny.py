@@ -34,7 +34,7 @@ def set_api_token_header(self) -> None:
     if not api_token:
         logger.warning(
             "NY_API_TOKEN environment variable is not set. "
-            "It is required for scraping New York Courts"
+            f"It is required for scraping New York Court: {self.court_id}"
         )
         return
 

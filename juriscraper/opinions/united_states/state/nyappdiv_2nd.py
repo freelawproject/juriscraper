@@ -4,14 +4,13 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # Date: 2014-07-04
-import re
 from datetime import date
-from typing import Any, Dict
 
-from juriscraper.opinions.united_states.state import ny
+from juriscraper.opinions.united_states.state import nyappdiv_1st
+from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(ny.Site):
+class Site(nyappdiv_1st.Site):
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
 
@@ -20,6 +19,3 @@ class Site(ny.Site):
         self.court_id = self.__module__
         self.court = "App Div, 2d Dept"
         self._set_parameters()
-
-        # disinherit this method from ny
-        self.extract_from_text = lambda scraped_text: {}

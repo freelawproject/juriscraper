@@ -9,5 +9,5 @@ class Site(nyappdiv_1st.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.division = 4
-        self.url = self.build_url()
+        self.court = "App Div, 4th Dept"
+        self._set_parameters()
