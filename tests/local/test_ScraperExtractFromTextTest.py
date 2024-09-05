@@ -622,6 +622,17 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.ny": [
+            (
+                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04236.htm
+                '<BODY bgcolor=#ffffff>\n    <table width="80%" border="1" cellspacing="2" cellpadding="5" align="center" bgcolor="#FFFF80">\n        <tr>\n            <td align="center">\n                <B>Stefanik v Hochul</B>\n            </td>\n        </tr>\n        <tr>\n            <td align="center">2024 NY Slip Op 04236</td>\n        </tr>\n        <tr>\n            <td align="center">Decided on August 20, 2024</td>\n        </tr>\n        <tr>\n            <td align="center">Court of Appeals</td>\n        </tr>\n        <tr>\n            <td align="center">Wilson, Ch. J.</td>\n        </tr>\n\n        <tr>\n            <td align="center">\n                <font color="#FF0000">\n                    Published by \n                    <a href="https://www.courts.state.ny.us/reporter/">New York State Law Reporting Bureau</a>\n                     pursuant to Judiciary Law &sect; 431.\n                </font>\n            </td>\n        </tr>\n        <tr>\n            <td align="center">\n                <font color="#FF0000">This opinion is uncorrected and subject to revision before publication in the Official Reports.</font>\n            </td>\n        </tr>\n    </table>\n    <BR>\n    <BR>\n    <DateLine type="decided" mdy="08202024">Decided on August 20, 2024</DateLine>\n    <div align="center"></div>\n    <br>\n    No. 86 \n\n    <br>\n    <br></BODY>',
+                {
+                    "Docket": {
+                        "docket_number": "No. 86",
+                    },
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):

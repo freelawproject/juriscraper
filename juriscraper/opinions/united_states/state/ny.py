@@ -18,29 +18,31 @@ from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+def set_api_token_header(self) -> None:
+    """
+    Puts the NY_API_TOKEN in the X-Api-Token header
+    Creates the Site.headers attribute, copying the
+    scraper_site.request[headers]
+
+    :param scraper_site: a Site Object
+    :returns: None
+    """
+    if self.test_mode_enabled():
+        return
+
+    api_token = os.environ.get("NY_API_TOKEN")
+    if not api_token:
+        logger.warning(
+            "NY_API_TOKEN environment variable is not set. "
+            "It is required for scraping New York Courts"
+        )
+        return
+
+    self.request["headers"]["X-APIKEY"] = api_token
+    self.needs_special_headers = True
+
+
 class Site(OpinionSiteLinear):
-    def set_api_token_header(self) -> None:
-        """
-        Puts the NY_API_TOKEN in the X-Api-Token header
-        Creates the Site.headers attribute, copying the
-        scraper_site.request[headers]
-
-        :param scraper_site: a Site Object
-        :returns: None
-        """
-        if self.test_mode_enabled():
-            return
-
-        api_token = os.environ.get("NY_API_TOKEN")
-        if not api_token:
-            logger.warning(
-                "NY_API_TOKEN environment variable is not set. "
-                "It is required for scraping New York Courts"
-            )
-            return
-
-        self.request["headers"]["X-APIKEY"] = api_token
-        self.needs_special_headers = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -49,7 +51,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
         self._set_parameters()
         self.expected_content_types = ["application/pdf", "text/html"]
-        self.set_api_token_header()
+        set_api_token_header(self)
         self.status = "Published"
 
     def _set_parameters(
@@ -123,15 +125,14 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-
-        dockets = re.findall(r"^No\.\s+\d+$", scraped_text)
-        dockets = [list(filter(None, x)) for x in dockets]
-        metadata = {
-            "Docket": {
-                "docket_number": dockets[0][0] if dockets else "",
-            },
-        }
-        return metadata
+        dockets = re.search(
+            r"^\s+(?P<docket_number>No\. \d+)\s+$",
+            scraped_text[:2000],
+            re.MULTILINE,
+        )
+        if dockets:
+            return {"Docket": dockets.groupdict()}
+        return {}
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Make custom date range request
