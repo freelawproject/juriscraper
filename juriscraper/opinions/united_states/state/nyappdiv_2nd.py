@@ -4,13 +4,14 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # Date: 2014-07-04
+import re
 from datetime import date
+from typing import Any, Dict
 
-from juriscraper.opinions.united_states.state import nyappdiv_1st
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.opinions.united_states.state import ny
 
 
-class Site(nyappdiv_1st.Site):
+class Site(ny.Site):
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
 
@@ -19,3 +20,18 @@ class Site(nyappdiv_1st.Site):
         self.court_id = self.__module__
         self.court = "App Div, 2d Dept"
         self._set_parameters()
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the docket number from the text?
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        dockets = re.search(
+            r"^\s+(?P<docket_number>^\d{4}-\d+.*)\s?$",
+            scraped_text[:2000],
+            re.MULTILINE,
+        )
+        if dockets:
+            return {"Docket": dockets.groupdict()}
+        return {}

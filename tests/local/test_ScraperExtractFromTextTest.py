@@ -633,6 +633,48 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.nyappdiv_1st": [
+            (
+                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04182.htm
+                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\nDocket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
+                {
+                    "Docket": {
+                        "docket_number": "Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467",
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.nyappdiv_2nd": [
+            (
+                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04118.htm
+                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n2023-03266\n(Index No. 705239/20)\n\n[*1]AWR Group, Inc., respondent,\n",
+                {
+                    "Docket": {
+                        "docket_number": "2023-03266",
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.nyappdiv_3rd": [
+            (
+                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04236.htm
+                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\nPM-154-24\n\n[*1]In the Matter of Att",
+                {
+                    "Docket": {
+                        "docket_number": "PM-154-24",
+                    },
+                },
+            ),
+            (
+                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04171.htm
+                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\nCV-23-1597\n\n",
+                {
+                    "Docket": {
+                        "docket_number": "CV-23-1597",
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):

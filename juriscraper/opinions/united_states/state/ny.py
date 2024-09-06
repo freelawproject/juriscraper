@@ -9,40 +9,19 @@ History:
  2024-09-05: Updated by flooie to deal with block from main website
 """
 
-import os
 import re
 from datetime import date, timedelta
 from typing import Any, Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-def set_api_token_header(self) -> None:
-    """
-    Puts the NY_API_TOKEN in the X-Api-Token header
-    Creates the Site.headers attribute, copying the
-    scraper_site.request[headers]
-
-    :param scraper_site: a Site Object
-    :returns: None
-    """
-    if self.test_mode_enabled():
-        return
-
-    api_token = os.environ.get("NY_API_TOKEN")
-    if not api_token:
-        logger.warning(
-            "NY_API_TOKEN environment variable is not set. "
-            f"It is required for scraping New York Court: {self.court_id}"
-        )
-        return
-
-    self.request["headers"]["X-APIKEY"] = api_token
-    self.needs_special_headers = True
-
-
 class Site(OpinionSiteLinear):
+
+    first_opinion_date = date(2003, 9, 25)
+    days_interval = 30
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
