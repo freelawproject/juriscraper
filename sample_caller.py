@@ -15,12 +15,6 @@ from juriscraper.lib.string_utils import trunc
 from juriscraper.report import generate_scraper_report
 
 logger = make_default_logger()
-# default level will only show that the scrapers are working
-# for more interesting output, use the verbosity arg
-logger.setLevel(logging.INFO)
-# use the easiest to read format
-logger.handlers[0].setFormatter(logging.Formatter("%(message)s"))
-
 die_now = False
 
 # `doctor` urls to be used optionally with --extract-content arg
@@ -188,8 +182,8 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
         data, metadata_from_text = extract_doc_content(
             data, extract_content, site, doctor_host, filename
         )
-        logger.debug(
-            "\nShowing extracted document data (500 chars):\n%s", data[:500]
+        logger.log(
+            5, "\nShowing extracted document data (500 chars):\n%s", data[:500]
         )
 
         if metadata_from_text:
@@ -337,6 +331,7 @@ def main():
     backscrape_end = options.backscrape_end
     days_interval = options.days_interval
     generate_report = options.report
+    binaries = options.binaries
     doctor_host = options.doctor_host
     extract_content = options.extract_content
     verbosity = options.verbosity
@@ -345,10 +340,20 @@ def main():
         binaries = True
         # If we are making the effort of downloading documents
         # we should force the user to actually see the outputs
-        verbosity = 1
+        verbosity = 1 if not verbosity else verbosity
 
-    if verbosity > 0:
+    if verbosity == 0:
+        # default level will only show that the scrapers are working
+        logger.setLevel(logging.INFO)
+    elif verbosity == 1:
         logger.setLevel(logging.DEBUG)
+    elif verbosity > 1:
+        # Lower value than logging.DEBUG, used only to print out
+        # the extracted content first 500 characters
+        logger.setLevel(5)
+
+    # use the easiest to read format
+    logger.handlers[0].setFormatter(logging.Formatter("%(message)s"))
 
     results = {}
 
