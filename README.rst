@@ -324,7 +324,6 @@ Or, to run and drop to the Python debugger if it fails, but you must install `no
 Future Goals
 ============
 -  Support for additional PACER pages and utilities
--  Support opinions from for all intermediate appellate state courts
 -  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
 -  Support opinions from for all federal district courts with non-PACER opinion listings
 -  For every court above where a backscraper is possible, it is implemented.

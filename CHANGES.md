@@ -16,17 +16,23 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.24 - 2024-09-05**
+
+Fixes:
+  - `vt` now collects neutral citations
+  - Fix `ca8` and updated to OpinionSiteLinear
+  - Update README
+
+## Past
+
 **2.6.23 - 2024-09-03**
 
 Fixes:
-  - `wisc/wisc ct app` docket numbers are now unique across districts
-  - `ky` logging for no document rows
-
+  - `wis` now collects neutral citations
+  - `ky` now skips rows with no documents
 
 Features:
-  - implemented dynamic backscraper and extract_from_text for `conn`
-
-## Past
+  - new scraper `wisctapp`
 
 **2.6.21 - 2024-08-30**
 
