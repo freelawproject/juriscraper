@@ -52,7 +52,7 @@ class Site(OpinionSiteLinear):
 
         if not end_date:
             end_date = date.today()
-            start_date = end_date - timedelta(days=30)
+            start_date = end_date - timedelta(days=90)
 
         self.parameters = {
             "rbOpinionMotion": "opinion",
@@ -82,10 +82,7 @@ class Site(OpinionSiteLinear):
             official_citation = " ".join(row.xpath("./td[4]//text()"))
             url = row.xpath(".//a")[0].get("href")
             url = re.findall(r"(http.*htm)", url)[0]
-            if self.court == "Court of Appeals":
-                status = "Published"
-            else:
-                status = "Unpublished" if "(U)" in slip_cite else "Published"
+            status = "Unpublished" if "(U)" in slip_cite else "Published"
             self.cases.append(
                 {
                     "name": row.xpath(".//td")[0].text_content(),
@@ -105,7 +102,7 @@ class Site(OpinionSiteLinear):
         :return: Metadata to be added to the case
         """
         dockets = re.search(
-            r"^<br>(?P<docket_number>No\. \d+)\s+$",
+            r"^<br>(?P<docket_number>No\. \d+(\s+SSM \d+)?)\s?$",
             scraped_text[:2000],
             re.MULTILINE,
         )
