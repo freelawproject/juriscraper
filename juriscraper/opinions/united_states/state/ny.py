@@ -30,6 +30,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
         self._set_parameters()
         self.expected_content_types = ["application/pdf", "text/html"]
+        self.make_backscrape_iterable(kwargs)
         set_api_token_header(self)
         self.status = "Published"
 
@@ -52,7 +53,7 @@ class Site(OpinionSiteLinear):
 
         if not end_date:
             end_date = date.today()
-            start_date = end_date - timedelta(days=90)
+            start_date = end_date - timedelta(days=30)
 
         self.parameters = {
             "rbOpinionMotion": "opinion",
