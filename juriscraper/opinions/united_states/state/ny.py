@@ -32,7 +32,6 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["application/pdf", "text/html"]
         self.make_backscrape_iterable(kwargs)
         set_api_token_header(self)
-        self.status = "Published"
 
     def _set_parameters(
         self,
