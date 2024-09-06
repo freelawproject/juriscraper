@@ -105,7 +105,7 @@ class Site(OpinionSiteLinear):
         :return: Metadata to be added to the case
         """
         dockets = re.search(
-            r"^\s+(?P<docket_number>No\. \d+)\s+$",
+            r"^<br>(?P<docket_number>No\. \d+)\s+$",
             scraped_text[:2000],
             re.MULTILINE,
         )

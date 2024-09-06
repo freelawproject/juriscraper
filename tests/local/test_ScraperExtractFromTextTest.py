@@ -625,7 +625,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.ny": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04236.htm
-                '<BODY bgcolor=#ffffff>\n    <table width="80%" border="1" cellspacing="2" cellpadding="5" align="center" bgcolor="#FFFF80">\n        <tr>\n            <td align="center">\n                <B>Stefanik v Hochul</B>\n            </td>\n        </tr>\n        <tr>\n            <td align="center">2024 NY Slip Op 04236</td>\n        </tr>\n        <tr>\n            <td align="center">Decided on August 20, 2024</td>\n        </tr>\n        <tr>\n            <td align="center">Court of Appeals</td>\n        </tr>\n        <tr>\n            <td align="center">Wilson, Ch. J.</td>\n        </tr>\n\n        <tr>\n            <td align="center">\n                <font color="#FF0000">\n                    Published by \n                    <a href="https://www.courts.state.ny.us/reporter/">New York State Law Reporting Bureau</a>\n                     pursuant to Judiciary Law &sect; 431.\n                </font>\n            </td>\n        </tr>\n        <tr>\n            <td align="center">\n                <font color="#FF0000">This opinion is uncorrected and subject to revision before publication in the Official Reports.</font>\n            </td>\n        </tr>\n    </table>\n    <BR>\n    <BR>\n    <DateLine type="decided" mdy="08202024">Decided on August 20, 2024</DateLine>\n    <div align="center"></div>\n    <br>\n    No. 86 \n\n    <br>\n    <br></BODY>',
+                '<div>\n\nStefanik v Hochul (2024 NY Slip Op 04236)\n\n\n\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Stefanik v Hochul</b></td>\n</tr>\n<tr>\n<td align="center">2024 NY Slip Op 04236</td>\n</tr>\n<tr>\n<td align="center">Decided on August 20, 2024</td>\n</tr>\n<tr>\n<td align="center">Court of Appeals</td>\n</tr>\n<tr>\n<td align="center">Wilson, Ch. J.</td>\n</tr>\n\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the Official Reports.</td>\n</tr>\n</table>\n<br><br>\nDecided on August 20, 2024\n<div align="center"></div>\n<br>No. 86 \n\n<br><br><div align="center"><b>[*1]Elise Stefanik, et al., Appellants,\n<br><br>v<br><br>Kathy Hochul, &amp; c., et al., Respondents.\n</b></div><br><br>\n<br><br>\n<p>Michael Y. Hawrylchak, for appellants.</p>\n<p>Jeffrey W. Lang, for respondents Kathy Hochul et al.</p>\n<p>Nicholas J. Faso, for respondent Peter S. Kosinski.</p>\n<p>Aria C. Branch, for respondents Democratic Congressional Campaign Committee et al.</p>\n<p>Public Interest Legal Foundation, Common Cause New York, Richard Briffault, et al., Center for Election Confidence, Government Justice Center, Inc., amici curiae.</p>\n<br><br>\n\n<br>\n',
                 {
                     "Docket": {
                         "docket_number": "No. 86",
@@ -636,7 +636,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nyappdiv_1st": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04182.htm
-                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\nDocket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
+                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\n<br>Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
                 {
                     "Docket": {
                         "docket_number": "Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467",
@@ -647,7 +647,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nyappdiv_2nd": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04118.htm
-                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n2023-03266\n(Index No. 705239/20)\n\n[*1]AWR Group, Inc., respondent,\n",
+                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n<br>2023-03266\n<br>(Index No. 705239/20)\n\n[*1]AWR Group, Inc., respondent,\n",
                 {
                     "Docket": {
                         "docket_number": "2023-03266",
@@ -658,7 +658,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nyappdiv_3rd": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04236.htm
-                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\nPM-154-24\n\n[*1]In the Matter of Att",
+                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>PM-154-24\n\n[*1]In the Matter of Att",
                 {
                     "Docket": {
                         "docket_number": "PM-154-24",
@@ -667,7 +667,7 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04171.htm
-                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\nCV-23-1597\n\n",
+                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>CV-23-1597\n\n",
                 {
                     "Docket": {
                         "docket_number": "CV-23-1597",

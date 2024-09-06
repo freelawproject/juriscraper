@@ -29,7 +29,7 @@ class Site(ny.Site):
         :return: Metadata to be added to the case
         """
         dockets = re.search(
-            r"^\s+(?P<docket_number>^Docket No.*)\s?$",
+            r"^<br>(?P<docket_number>(Docket|Index|Ind\.|Motion|SCI) No\..* Case No\..*)\s+?$",
             scraped_text[:2000],
             re.MULTILINE,
         )
