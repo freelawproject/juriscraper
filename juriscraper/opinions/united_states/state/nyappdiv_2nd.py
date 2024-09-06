@@ -27,11 +27,12 @@ class Site(ny.Site):
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-        dockets = re.search(
-            r"^<br>(?P<docket_number>\d{4}-\d+)$",
+        dockets = re.findall(
+            r"^<br>\(?(?P<docket_number>\d{4}-\d+)|(Index No\..*)\)$",
             scraped_text[:2000],
             re.MULTILINE,
         )
         if dockets:
-            return {"Docket": dockets.groupdict()}
+            dockets = [x[0] if x[0] else x[1] for x in dockets]
+            return {"Docket": {"docket_number": "; ".join(dockets)}}
         return {}
