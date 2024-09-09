@@ -102,8 +102,10 @@ class Site(OpinionSiteLinear):
             if "percuriam" in pc:
                 case["per_curiam"] = True
             elif author:
-                cleaned_author = normalize_judge_string(author)
-                case["author"] = cleaned_author[0].split(",")[0]
+                cleaned_author = normalize_judge_string(author)[0]
+                if cleaned_author.endswith(" J."):
+                    cleaned_author = cleaned_author[:-3]
+                case["author"] = cleaned_author
             self.cases.append(case)
 
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
