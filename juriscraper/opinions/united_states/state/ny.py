@@ -15,6 +15,7 @@ from typing import Any, Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
+from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -83,17 +84,27 @@ class Site(OpinionSiteLinear):
             url = row.xpath(".//a")[0].get("href")
             url = re.findall(r"(http.*htm)", url)[0]
             status = "Unpublished" if "(U)" in slip_cite else "Published"
-            self.cases.append(
-                {
-                    "name": row.xpath(".//td")[0].text_content(),
-                    "date": row.xpath(".//td")[1].text_content(),
-                    "url": url,
-                    "status": status,
-                    "docket": "",
-                    "citation": official_citation,
-                    "parallel_citation": slip_cite,
-                }
-            )
+            case = {
+                "name": row.xpath(".//td")[0].text_content(),
+                "date": row.xpath(".//td")[1].text_content(),
+                "url": url,
+                "status": status,
+                "docket": "",
+                "citation": official_citation,
+                "parallel_citation": slip_cite,
+                "author": "",
+                "per_curiam": False,
+            }
+            author = row.xpath("./td")[-2].text_content()
+
+            # Beacuse P E R C U R I A M, PER CURIAM, and Per Curiam
+            pc = re.sub(r"\s", "", author.lower())
+            if "percuriam" in pc:
+                case["per_curiam"] = True
+            elif author:
+                cleaned_author = normalize_judge_string(author)
+                case["author"] = cleaned_author[0].split(",")[0]
+            self.cases.append(case)
 
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Can we extract the docket number from the text?
