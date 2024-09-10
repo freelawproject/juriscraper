@@ -16,14 +16,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.25 - 2024-09-10**
+
+Fixes:
+  - `ny` Fixes NY
+  - Updates nyappdiv to inherit ny
+  - fixes tests
+
+## Past
+
 **2.6.24 - 2024-09-05**
 
 Fixes:
   - `vt` now collects neutral citations
   - Fix `ca8` and updated to OpinionSiteLinear
   - Update README
-
-## Past
 
 **2.6.23 - 2024-09-03**
 
