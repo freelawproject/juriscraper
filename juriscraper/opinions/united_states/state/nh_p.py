@@ -84,6 +84,17 @@ class Site(OpinionSiteLinear):
                 continue
             url = url_object["0"]["fields"]["uri"][0].split("//")[1]
 
+            if fields["field_date_filed"]:
+                case_date = fields["field_date_filed"][0]
+            elif fields["field_date_posted"]:
+                # usually this is the only populated field
+                case_date = fields["field_date_posted"][0]
+            else:
+                logger.warning(
+                    "Skipping row '%s'. No date found", case["title"]
+                )
+                continue
+
             # "title" format changes since 2024, where a citation string
             # replaces the docket number, and the docket is in another row
             name = case["title"]
@@ -107,12 +118,6 @@ class Site(OpinionSiteLinear):
             name = re.sub(self.docket_regex, " ", name)
             # delete traces of multiple docket numbers
             name = re.sub(r"^(and|[&,])", "", name.strip()).strip()
-
-            if fields["field_date_filed"]:
-                case_date = fields["field_date_filed"][0]
-            elif fields["field_date_posted"]:
-                # usually this is the only populated field
-                case_date = fields["field_date_posted"][0]
 
             self.cases.append(
                 {
