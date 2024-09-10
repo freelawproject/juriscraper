@@ -6,132 +6,130 @@ History:
  2014-07-04: Created by Andrei Chelaru, reviewed by mlr.
  2015-10-23: Parts rewritten by mlr.
  2016-05-04: Updated by arderyp to handle typos in docket string format
+ 2024-09-05: Updated by flooie to deal with block from main website
 """
 
-import os
 import re
-from datetime import date
+from datetime import date, timedelta
+from typing import Any, Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.html_utils import get_html5_parsed_text
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.auth_utils import set_api_token_header
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-def set_api_token_header(scraper_site: OpinionSite) -> None:
-    """
-    Puts the NY_API_TOKEN in the X-Api-Token header
-    Creates the Site.headers attribute, copying the
-    scraper_site.request[headers]
+class Site(OpinionSiteLinear):
 
-    :param scraper_site: a Site Object
-    :returns: None
-    """
-    if scraper_site.test_mode_enabled():
-        return
-
-    api_token = os.environ.get("NY_API_TOKEN")
-    if not api_token:
-        logger.warning(
-            "NY_API_TOKEN environment variable is not set. "
-            "It is required for scraping New York Courts"
-        )
-        return
-
-    scraper_site.request["headers"]["X-APIKEY"] = api_token
-    scraper_site.needs_special_headers = True
-
-
-class Site(OpinionSite):
-    DOWNLOAD_URL_SUB_PATH = "td[2]//@href[not(contains(., 'DecisionList'))]"
-    FOUR_CELLS_SUB_PATH = "//*[count(td)=3"
+    first_opinion_date = date(2003, 9, 25)
+    days_interval = 30
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        today = date.today()
-        # https://www.nycourts.gov/ctapps/Decisions/2015/Dec15/December15.html
-        self.url = "http://www.nycourts.gov/ctapps/Decisions/{year}/{mon}{yr}/{month}{yr}.html".format(
-            year=today.year,
-            yr=today.strftime("%y"),
-            mon=today.strftime("%b"),
-            month=today.strftime("%B"),
-        )
+        self.court = "Court of Appeals"
         self.court_id = self.__module__
+        self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
+        self._set_parameters()
+        self.expected_content_types = ["application/pdf", "text/html"]
+        self.make_backscrape_iterable(kwargs)
         set_api_token_header(self)
 
-    def _make_html_tree(self, text):
-        return get_html5_parsed_text(text)
+    def _set_parameters(
+        self,
+        start_date: Optional[date] = None,
+        end_date: Optional[date] = None,
+    ) -> None:
+        """Set the parameters for the POST request.
 
-    def _get_case_names(self):
-        path = f"{self.FOUR_CELLS_SUB_PATH} and {self.DOWNLOAD_URL_SUB_PATH}]"
-        case_names = []
-        for element in self.html.xpath(path):
-            case_name_parts = []
-            for t in element.xpath("./td[3]/p/font/text()"):
-                if t.strip():
-                    case_name_parts.append(t)
-            if not case_name_parts:
-                # No hits for first XPath, try another that sometimes works.
-                for t in element.xpath("./td[3]//text()"):
-                    if t.strip():
-                        case_name_parts.append(t)
-            if case_name_parts:
-                case_names.append(", ".join(case_name_parts))
-        return case_names
+        If no start or end dates are given, scrape last month.
+        This is the default behaviour for the present time scraper
 
-    def _get_download_urls(self):
-        return self.html.xpath(
-            f"{self.FOUR_CELLS_SUB_PATH}]/{self.DOWNLOAD_URL_SUB_PATH}"
-        )
+        :param start_date:
+        :param end_date:
 
-    def _get_case_dates(self):
-        case_dates = []
-        case_date = False
-        # Process rows. If it's a date row,
-        # save the date, continue, then add
-        # date for each opinion row below it
-        for row in self.html.xpath("//tr[not(.//table)]"):
-            date_from_row = self.get_date_from_text(row.text_content())
-            if date_from_row:
-                case_date = date_from_row
-                continue
-            elif self._row_contains_opinion(row) and case_date:
-                case_dates.append(case_date)
-        return case_dates
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        for cell in self.html.xpath(f"{self.FOUR_CELLS_SUB_PATH}]/td[1]"):
-            text = cell.text_content()
-            date_from_text = self.get_date_from_text(text)
-            if not date_from_text:
-                if re.search(r"N(o|O|0)\.?,?", text):
-                    docket = self._sanitize_docket_string(text)
-                    docket_numbers.append(docket)
-        return docket_numbers
-
-    def _sanitize_docket_string(self, raw_docket_string):
-        """Handle typos and non-standard docket number strings
-
-        Dockets on this page should be in format of "No. #",
-        but sometimes they forget the period, or use a comma
-        instead.  We want to trip all variations of that out
-        and replace slash delimiters with coma delimiters.
+        :return: None
         """
-        for abbreviation in ["No.", "No ", "No, ", "NO. "]:
-            raw_docket_string = raw_docket_string.replace(abbreviation, "")
-        return ", ".join(raw_docket_string.split(" / "))
+        self.method = "POST"
 
-    def _row_contains_opinion(self, row):
-        p1 = "./td[3]"
-        p2 = f"./{self.DOWNLOAD_URL_SUB_PATH}"
-        return row.xpath(p1) and row.xpath(p2)
+        if not end_date:
+            end_date = date.today()
+            start_date = end_date - timedelta(days=30)
 
-    def get_date_from_text(self, text):
-        try:
-            return convert_date_string(text)
-        except ValueError:
-            return False
+        self.parameters = {
+            "rbOpinionMotion": "opinion",
+            "Pty": "",
+            "and_or": "and",
+            "dtStartDate": start_date.strftime("%m/%d/%Y"),
+            "dtEndDate": end_date.strftime("%m/%d/%Y"),
+            "court": self.court,
+            "docket": "",
+            "judge": "",
+            "slipYear": "",
+            "slipNo": "",
+            "OffVol": "",
+            "Rptr": "",
+            "OffPage": "",
+            "fullText": "",
+            "and_or2": "and",
+            "Order_By": "Party Name",
+            "Submit": "Find",
+            "hidden1": "",
+            "hidden2": "",
+        }
+
+    def _process_html(self):
+        for row in self.html.xpath(".//table")[-1].xpath(".//tr")[1:]:
+            slip_cite = " ".join(row.xpath("./td[5]//text()"))
+            official_citation = " ".join(row.xpath("./td[4]//text()"))
+            url = row.xpath(".//a")[0].get("href")
+            url = re.findall(r"(http.*htm)", url)[0]
+            status = "Unpublished" if "(U)" in slip_cite else "Published"
+            case = {
+                "name": row.xpath(".//td")[0].text_content(),
+                "date": row.xpath(".//td")[1].text_content(),
+                "url": url,
+                "status": status,
+                "docket": "",
+                "citation": official_citation,
+                "parallel_citation": slip_cite,
+                "author": "",
+                "per_curiam": False,
+            }
+            author = row.xpath("./td")[-2].text_content()
+
+            # Because P E R C U R I A M, PER CURIAM, and Per Curiam
+            pc = re.sub(r"\s", "", author.lower())
+            if "percuriam" in pc:
+                case["per_curiam"] = True
+            elif author:
+                cleaned_author = normalize_judge_string(author)[0]
+                if cleaned_author.endswith(" J."):
+                    cleaned_author = cleaned_author[:-3]
+                case["author"] = cleaned_author
+            self.cases.append(case)
+
+    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+        """Can we extract the docket number from the text?
+
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
+        """
+        dockets = re.search(
+            r"^<br>(?P<docket_number>No\. \d+(\s+SSM \d+)?)\s?$",
+            scraped_text[:2000],
+            re.MULTILINE,
+        )
+        if dockets:
+            return {"Docket": dockets.groupdict()}
+        return {}
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Make custom date range request
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        self._set_parameters(*dates)
+        self.html = self._download()
+        self._process_html()
