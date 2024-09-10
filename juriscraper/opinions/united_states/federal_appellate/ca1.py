@@ -17,7 +17,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = self.base_url
         self.make_backscrape_iterable(kwargs)
-        print('First circuit code')
+        print("First circuit code")
 
     def _process_html(self):
 
