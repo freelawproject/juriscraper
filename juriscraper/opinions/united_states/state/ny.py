@@ -97,7 +97,7 @@ class Site(OpinionSiteLinear):
             }
             author = row.xpath("./td")[-2].text_content()
 
-            # Beacuse P E R C U R I A M, PER CURIAM, and Per Curiam
+            # Because P E R C U R I A M, PER CURIAM, and Per Curiam
             pc = re.sub(r"\s", "", author.lower())
             if "percuriam" in pc:
                 case["per_curiam"] = True
