@@ -376,7 +376,7 @@ def clean_string(s):
     )
 
     # Get rid of weird punctuation
-    s = s.replace("*", "").replace("#", "").replace(";", "")
+    s = s.replace("*", "").replace("#", "")
 
     # Strip bad stuff from the end of lines. Python's strip fails here because
     # we don't know the order of the various punctuation items to be stripped.
