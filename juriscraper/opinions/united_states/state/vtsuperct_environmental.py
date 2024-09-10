@@ -4,13 +4,9 @@ Court Short Name: VT
 Court Contact: submit form here https://www.vermontjudiciary.org/website-feedback-form
 """
 
-from . import vt
+from juriscraper.opinions.united_states.state import vtsuperct_civil
 
 
-class Site(vt.Site):
+class Site(vtsuperct_civil.Site):
     division = 3
     days_interval = 90
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__

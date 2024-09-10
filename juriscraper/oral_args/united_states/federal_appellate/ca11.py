@@ -12,14 +12,14 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
+    base_url = "https://www.ca11.uscourts.gov/oral-argument-recordings"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.ca11.uscourts.gov/oral-argument-recordings"
+        self.url = self.base_url
         self.back_scrape_iterable = [i for i in range(0, 52)]
-        self.base_path = (
-            "//tr[contains(@class, 'odd') or " "contains(@class, 'even')]"
-        )
+        self.base_path = "//tr[not(th)]"
 
     def _get_download_urls(self):
         path = f"{self.base_path}//td[5]//@href"
@@ -30,7 +30,7 @@ class Site(OralArgumentSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = f"{self.base_path}//td[3]/span/text()"
+        path = f"{self.base_path}//td[3]/text()"
         return list(map(self._return_case_date, self.html.xpath(path)))
 
     @staticmethod
@@ -59,7 +59,5 @@ class Site(OralArgumentSite):
         ]
 
     def _download_backwards(self, i):
-        self.url = "http://www.ca11.uscourts.gov/oral-argument-recordings?page={i}".format(
-            i=i,
-        )
+        self.url = f"{self.base_url}?page={i}"
         self.html = self._download()

@@ -16,12 +16,39 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.24 - 2024-09-05**
+
+Fixes:
+  - `vt` now collects neutral citations
+  - Fix `ca8` and updated to OpinionSiteLinear
+  - Update README
+
+## Past
+
+**2.6.23 - 2024-09-03**
+
+Fixes:
+  - `wis` now collects neutral citations
+  - `ky` now skips rows with no documents
+
+Features:
+  - new scraper `wisctapp`
+
+**2.6.21 - 2024-08-30**
+
+Fixes:
+  - `fladistctapp` docket numbers are now unique across districts
+  - updated `ca11` html selectors
+  - updated `pa` to new API format
+  - set needs_special_headers to True for `vt`
+
+Features:
+  - implemented dynamic backscraper and extract_from_text for `conn`
+
 **2.6.20 - 2024-08-28**
 
 Fixes:
   - Changed to nested format for attachments in the InternetArchive report
-
-## Past
 
 **2.6.19 - 2024-08-26**
 
