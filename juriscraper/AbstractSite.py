@@ -53,7 +53,8 @@ class AbstractSite(CaseMineCrawl):
         self.back_scrape_iterable = None
         self.downloader_executed = False
         self.cookies = {}
-        self.proxies = {"http": "p.webshare.io:9999",
+        self.proxies = {
+            "http": "p.webshare.io:9999",
             "https": "p.webshare.io:9999",
         }
         self.cnt = cnt or CaseNameTweaker()
