@@ -1,10 +1,15 @@
 from abc import abstractmethod
-from datetime import datetime, date, timedelta
+from datetime import date, datetime, timedelta
 
 from pymongo import MongoClient
 
-from casemine.constants import CRAWL_DATABASE_IP, DATABASE_PORT, DATABASE_NAME, \
-    TEST_COLLECTION, CONFIG_COLLECTION
+from casemine.constants import (
+    CONFIG_COLLECTION,
+    CRAWL_DATABASE_IP,
+    DATABASE_NAME,
+    DATABASE_PORT,
+    TEST_COLLECTION,
+)
 
 
 class CaseMineCrawl:
@@ -15,8 +20,8 @@ class CaseMineCrawl:
 
     def execute_job(self, class_name):
         dbObj = self.get_crawl_config_details(class_name)
-        str(dbObj.get('CrawledTill'))
-        self.crawled_till = dbObj.get('CrawledTill')
+        str(dbObj.get("CrawledTill"))
+        self.crawled_till = dbObj.get("CrawledTill")
         records = self.crawling(self.crawled_till)
         self.set_crawl_config_details(class_name, self.crawled_till)
 
@@ -50,7 +55,8 @@ class CaseMineCrawl:
         # Add retro month ranges to the date ranges
         for retro_month in retro_months:
             retro_end_date = self.end_date + timedelta(
-                days=retro_month * 30)  # Approximate month length
+                days=retro_month * 30
+            )  # Approximate month length
             retro_start_date = retro_end_date - timedelta(days=1)
             date_ranges[retro_start_date] = retro_end_date
 
@@ -67,10 +73,12 @@ class CaseMineCrawl:
 
     @staticmethod
     def get_crawl_config_details(class_name):
-        client = MongoClient('mongodb://'+CRAWL_DATABASE_IP+':'+str(DATABASE_PORT)+'/')
+        client = MongoClient(
+            f"mongodb://{CRAWL_DATABASE_IP}:{str(DATABASE_PORT)}/"
+        )
         db = client[DATABASE_NAME]
         crawl_config_collection = db[CONFIG_COLLECTION]
-        query = {'ClassName': class_name}
+        query = {"ClassName": class_name}
         cursor = crawl_config_collection.find(query)
         document = None
         for doc in cursor:
@@ -80,7 +88,9 @@ class CaseMineCrawl:
 
     @staticmethod
     def set_crawl_config_details(class_name, crawled_till):
-        client = MongoClient("mongodb://"+CRAWL_DATABASE_IP+":"+str(DATABASE_PORT))
+        client = MongoClient(
+            f"mongodb://{CRAWL_DATABASE_IP}:{str(DATABASE_PORT)}"
+        )
         db = client[DATABASE_NAME]
         crawl_config = db[CONFIG_COLLECTION]
 
@@ -94,16 +104,15 @@ class CaseMineCrawl:
 
         if object:
             # Update the document with the new "CrawledTill" value
-            crawl_config.update_one({'_id': object['_id']},
-                {'$set': {'CrawledTill': crawled_till}}
+            crawl_config.update_one(
+                {"_id": object["_id"]},
+                {"$set": {"CrawledTill": crawled_till}},
                 # Replace with the actual value
             )
             # Update the document with the current date for "CrawlingDate"
-            crawl_config.update_one({'_id': object['_id']},
-                {'$set': {'CrawlingDate': datetime.now()}})
+            crawl_config.update_one(
+                {"_id": object["_id"]},
+                {"$set": {"CrawlingDate": datetime.now()}},
+            )
         # Close the MongoDB connection
         client.close()
-
-
-
-

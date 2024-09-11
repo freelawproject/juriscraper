@@ -4,6 +4,8 @@ from datetime import datetime
 import requests
 from bson import ObjectId
 from pymongo import MongoClient
+
+
 class CasemineUtil:
     @staticmethod
     def compare_date(date: str, craw_date: str) -> int:
@@ -16,7 +18,8 @@ class CasemineUtil:
                 date1 = datetime.strptime(date, fmt)
                 date2 = datetime.strptime(craw_date, fmt)
                 return (date1 > date2) - (
-                        date1 < date2)  # 1 if date1 > date2, -1 if date1 < date2, 0 if equal
+                    date1 < date2
+                )  # 1 if date1 > date2, -1 if date1 < date2, 0 if equal
             except ValueError:
                 continue  # Try the next format
         # Log the error if no formats matched
@@ -54,8 +57,8 @@ class CasemineUtil:
 
     # Assume these are defined elsewhere in your code
     file_base_path = "/path/to/base/directory/"
-    client = MongoClient('mongodb://localhost:27017/')
-    db = client['your_database_name']
+    client = MongoClient("mongodb://localhost:27017/")
+    db = client["your_database_name"]
 
     # def get_court_name():
     #     # Implementation of get_court_name function
