@@ -1,9 +1,44 @@
-from juriscraper.opinions.united_states.federal_appellate import ca3_u, ca3_p, \
-    ca1, ca2_p, ca2_u, ca4, ca5, ca6, ca7, ca8, ca9_p, ca10, ca9_u, ca11_u, \
-    ca11_p, cadc, cadc_pi, cafc
-from juriscraper.opinions.united_states.state import mass, la, ky, kan_p, iowa, \
-    ill, idaho_civil, idaho_criminal, hawapp, haw, ga, fla, delch, dc, conn, \
-    colo, cal, ark, ala
+from juriscraper.opinions.united_states.federal_appellate import (
+    ca1,
+    ca2_p,
+    ca2_u,
+    ca3_p,
+    ca3_u,
+    ca4,
+    ca5,
+    ca6,
+    ca7,
+    ca8,
+    ca9_p,
+    ca9_u,
+    ca10,
+    ca11_p,
+    ca11_u,
+    cadc,
+    cadc_pi,
+    cafc,
+)
+from juriscraper.opinions.united_states.state import (
+    ala,
+    ark,
+    cal,
+    colo,
+    conn,
+    dc,
+    delch,
+    fla,
+    ga,
+    haw,
+    hawapp,
+    idaho_civil,
+    idaho_criminal,
+    ill,
+    iowa,
+    kan_p,
+    ky,
+    la,
+    mass,
+)
 from juriscraper.oral_args.united_states.federal_appellate import ca3
 
 # Create a site object

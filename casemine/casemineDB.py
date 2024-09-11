@@ -2,14 +2,26 @@ from datetime import date, datetime
 
 import pymongo
 
-from casemine.constants import CRAWL_DATABASE_IP, DATABASE_NAME, \
-    TEST_COLLECTION
-from juriscraper.opinions.united_states.federal_appellate import scotus_slip, \
-    cafc, ca1
-from juriscraper.opinions.united_states.state import ala, alaska, ariz, ark, \
-    cal, dc
+from casemine.constants import (
+    CRAWL_DATABASE_IP,
+    DATABASE_NAME,
+    TEST_COLLECTION,
+)
+from juriscraper.opinions.united_states.federal_appellate import (
+    ca1,
+    cafc,
+    scotus_slip,
+)
+from juriscraper.opinions.united_states.state import (
+    ala,
+    alaska,
+    ariz,
+    ark,
+    cal,
+    dc,
+)
 
-dbClient = pymongo.MongoClient("mongodb://" + CRAWL_DATABASE_IP + ":27017/")
+dbClient = pymongo.MongoClient(f"mongodb://{CRAWL_DATABASE_IP}:27017/")
 
 db = dbClient.get_database(DATABASE_NAME)
 collection = db.get_collection(TEST_COLLECTION)
@@ -36,14 +48,13 @@ site.parse()
 
 i = 1
 for opinion in site:
-    if(i<=10):
-        opdate = opinion.get('case_dates')
+    if i <= 10:
+        opdate = opinion.get("case_dates")
         new_date = datetime(opdate.year, opdate.month, opdate.day)
-        opinion.__setitem__('case_dates', new_date)
+        opinion.__setitem__("case_dates", new_date)
         collection.insert_one(opinion)
         print(f"{i} | {opinion.get('case_names')}")
-        i=i+1
+        i = i + 1
 
 # for i in site:
 #     print(i)
-
