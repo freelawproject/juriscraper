@@ -6,6 +6,7 @@ from typing import Dict, List, Tuple
 import certifi
 import requests
 
+from casemine.CaseMineCrawl import CaseMineCrawl
 from juriscraper.lib.date_utils import (
     fix_future_year_typo,
     json_date_handler,
@@ -32,12 +33,15 @@ from juriscraper.lib.test_utils import MockRequest
 logger = make_default_logger()
 
 
-class AbstractSite:
+class AbstractSite(CaseMineCrawl):
     """Contains generic methods for scraping data. Should be extended by all
     scrapers.
 
     Should not contain lists that can't be sorted by the _date_sort function.
     """
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        pass
 
     def __init__(self, cnt=None, **kwargs):
         super().__init__()
@@ -49,6 +53,10 @@ class AbstractSite:
         self.back_scrape_iterable = None
         self.downloader_executed = False
         self.cookies = {}
+        self.proxies = {
+            "http": "p.webshare.io:9999",
+            "https": "p.webshare.io:9999",
+        }
         self.cnt = cnt or CaseNameTweaker()
         self.request = {
             "verify": certifi.where(),
@@ -372,6 +380,7 @@ class AbstractSite:
             url,
             headers=self.request["headers"],
             verify=self.request["verify"],
+            proxies=self.proxies,
             timeout=60,
             **self.request["parameters"],
         )
@@ -384,6 +393,7 @@ class AbstractSite:
             headers=self.request["headers"],
             verify=self.request["verify"],
             data=self.parameters,
+            proxies=self.proxies,
             timeout=60,
             **self.request["parameters"],
         )
