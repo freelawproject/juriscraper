@@ -16,14 +16,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.25 - 2024-09-16**
+
+Fixes:
+  - Handle `nh` edge cases
+  - Update `ohioctapp` to return "lower_courts" in order to disambiguate dockets across districts
+  - Update `lib.string_utils.clean_string` to no longer delete semicolons
+
+## Past
+
 **2.6.25 - 2024-09-10**
 
 Fixes:
   - `ny` Fixes NY
   - Updates nyappdiv to inherit ny
   - fixes tests
-
-## Past
 
 **2.6.24 - 2024-09-05**
 
