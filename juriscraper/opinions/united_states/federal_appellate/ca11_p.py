@@ -11,38 +11,28 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
+    title = []
+    dates = []
+    urls = []
+    status = []
+    dockets = []
+    nature = []
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php"
         self.back_scrape_iterable = list(range(20, 10000, 20))
 
     def _get_case_names(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()")
-        ]
+        return self.title
 
     def _get_download_urls(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[1]/a/@href")
-        ]
+        return self.urls
 
     def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath(
-            "//tr[./td[1]/a//text()]/td[5]//text()"
-        ):
-            s = clean_string(date_string)
-            if s == "00-00-0000" and "begin=21160" in self.url:
-                # Bad data found during backscrape.
-                s = "12-13-2006"
-            dates.append(datetime.strptime(clean_string(s), "%m-%d-%Y").date())
-        return dates
+        return self.dates
 
     def _get_docket_numbers(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()")
-        ]
+        return self.dockets
 
     def _get_precedential_statuses(self):
         if "unpub" in self.url:
@@ -51,13 +41,11 @@ class Site(OpinionSite):
             return ["Published"] * len(self.case_names)
 
     def _get_nature_of_suit(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()")
-        ]
+        return self.nature
 
     def _download_backwards(self, n):
         self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={}&num={}&numBegin=1".format(
-            n, n / 20 - 1
+            n, int( n / 20 )
         )
 
         self.html = self._download()
@@ -65,3 +53,57 @@ class Site(OpinionSite):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        num = 1
+        begin = 0
+        numbegin = 1
+        while(True):
+            self.url = 'https://media.ca11.uscourts.gov/opinions/pub/logname.php?begin='+str(begin)+'&num='+str(num)+'&numBegin='+str(numbegin)
+            if not self.downloader_executed:
+                # Run the downloader if it hasn't been run already
+                self.html = self._download()
+
+                # Process the available html (optional)
+                for e in self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()"):
+                    self.title.append(e)
+
+                for e in self.html.xpath("//tr[./td[1]/a//text()]/td[1]/a/@href"):
+                    self.urls.append(e)
+
+                for date_string in self.html.xpath(
+                    "//tr[./td[1]/a//text()]/td[5]//text()"):
+                    s = clean_string(date_string)
+                    if s == "00-00-0000" and "begin=21160" in self.url:
+                        # Bad data found during backscrape.
+                        s = "12-13-2006"
+                    self.dates.append(
+                        datetime.strptime(clean_string(s), "%m-%d-%Y").date())
+
+                for e in self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()"):
+                    self.dockets.append(e)
+
+                for e in self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()"):
+                    self.nature.append(e)
+                self.downloader_executed = False
+                num = num + 1
+                begin = begin + 20
+                if (num == 5):
+                    break
+                if (num == 20):
+                    numbegin = numbegin + 20
+        # Set the attribute to the return value from _get_foo()
+        # e.g., this does self.case_names = _get_case_names()
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            # This needs to be done *after* _clean_attributes() has been run.
+            # The current architecture means this gets run twice. Once when we
+            # iterate over _all_attrs, and again here. It's pretty cheap though.
+            self.case_name_shorts = self._get_case_name_shorts()
+            self._post_parse()
+            self._check_sanity()
+            self._date_sort()
+            self._make_hash()
+        return 0

@@ -120,3 +120,11 @@ class Site(OpinionSiteLinear):
         self.set_url(*dates)
         self.html = self._download()
         self._process_html()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.set_url(start_date, end_date)
+        self.parse()
+        return 0
+
+
+

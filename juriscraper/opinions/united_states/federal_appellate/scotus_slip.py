@@ -5,6 +5,7 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 from datetime import date, datetime
 from typing import Dict, List, Union
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -62,6 +63,11 @@ class Site(OpinionSiteLinear):
             if len(cells) != 6:
                 continue
             _, date, docket, link, justice, citation = row.xpath(".//td")
+            unformated_date = datetime.strptime(date.text,'%m/%d/%y')
+            formatted_date = unformated_date.strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(formatted_date,self.crawled_till)
+            if(res==1):
+                self.crawled_till = formatted_date
             if not link.text_content():
                 continue
             self.cases.append(
@@ -98,3 +104,7 @@ class Site(OpinionSiteLinear):
         logger.info("Backscraping %s", self.url)
         self.html = self._download()
         self._process_html()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0

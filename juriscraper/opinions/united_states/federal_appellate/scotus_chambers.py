@@ -1,3 +1,6 @@
+from time import strftime
+
+from casemine.casemine_util import CasemineUtil
 from juriscraper.opinions.united_states.federal_appellate import scotus_slip
 
 """
@@ -5,7 +8,7 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 
-from datetime import date
+from datetime import date, datetime
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
@@ -141,7 +144,17 @@ class Site(OpinionSite):
         return [case["Name_Url"] for case in self.cases]
 
     def _get_case_dates(self):
-        return [convert_date_string(case["Date"]) for case in self.cases]
+        converted_dates = []
+        # Iterate over each case in self.cases
+        for case in self.cases:
+            # Apply the convert_date_string function to the date and append the result to the list
+            converted_date = convert_date_string(case["Date"])
+            date = converted_date.strftime('%d/%m/%Y')
+            res = CasemineUtil.compare_date(date,self.crawled_till)
+            if(res==1):
+                self.crawled_till = date
+            converted_dates.append(converted_date)
+        return converted_dates
 
     def _get_docket_numbers(self):
         return [case["Docket"] for case in self.cases]
@@ -156,3 +169,7 @@ class Site(OpinionSite):
         self.yy = str(d if d >= 10 else f"0{d}")
         logger.info(f"Running backscraper for year: 20{self.yy}")
         self.html = self._download()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
