@@ -2,7 +2,10 @@
 CourtID:	ca6
 Court Contact:	WebSupport@ca6.uscourts.gov
 """
+from datetime import datetime
+from time import strftime
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -11,7 +14,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.opn.ca6.uscourts.gov/opinions/opinions.php"
+        self.url = "https://www.opn.ca6.uscourts.gov/opinions/opinions.php"
 
     def _get_case_names(self):
         return [
@@ -23,10 +26,19 @@ class Site(OpinionSite):
         return self.get_nth_table_cell_data(1, href=True)
 
     def _get_case_dates(self):
-        return [
-            convert_date_string(date)
-            for date in self.get_nth_table_cell_data(3)
-        ]
+        dates = []
+        # return [
+        #     convert_date_string(date)
+        #     for date in self.get_nth_table_cell_data(3)
+        # ]
+        for date in self.get_nth_table_cell_data(3):
+            dt = convert_date_string(date)
+            dates.append(dt)
+            comp_date = dt.strftime('%d/%m/%Y')
+            res = CasemineUtil.compare_date(comp_date, self.crawled_till)
+            if (res == 1):
+                self.crawled_till = comp_date
+        return dates
 
     def _get_docket_numbers(self):
         return self.get_nth_table_cell_data(2)
@@ -57,3 +69,15 @@ class Site(OpinionSite):
             if data:
                 results.append(data)
         return results
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.method = "POST"
+        date_obj1 = start_date.strftime('%d/%m/%Y')
+        date_obj2 = end_date.strftime('%d/%m/%Y')
+        # edate = str(end_date.day) + "/" + str(end_date.month) + "/" + str(
+        #     end_date.year)
+
+        self.parameters = {"FROMDATE": date_obj1, "TODATE": date_obj2,"puid": "$puid"}
+        self.parse()
+        return 0
+

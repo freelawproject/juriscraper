@@ -47,3 +47,7 @@ class Site(OpinionSite):
     def _get_nature_of_suit(self):
         path = "//item/description/text()[4]"
         return [s for s in self.html.xpath(path)]
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+

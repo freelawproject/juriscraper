@@ -8,21 +8,62 @@ History:
     2016-05-10: Created by Dave Voutila, @voutilad
     2021-01-24: Item's title split fixed to extract opinions name, @satsuki-chan
 """
+import json
+from datetime import datetime
 
 import feedparser
 from lxml.html import fromstring
 
+from lxml import html
+from bs4 import BeautifulSoup
+from socks import method
+
+from casemine.casemine_util import CasemineUtil
+from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    flag = True
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://cafc.uscourts.gov/category/opinion-order/feed/"
         self.court_id = self.__module__
 
-    def _process_html(self) -> None:
+    def _process_html(self):
+        html_string = html.tostring(self.html, pretty_print=True).decode('utf-8')
+        soup = BeautifulSoup(html_string, 'html.parser')
+        content=soup.find('p').text
+        json_content = json.loads(content)
+        data = json_content['data']
+        if(len(data)==0):
+            self.flag = False
+            return
+        for i in range(len(data)):
+            item = data[i]
+            date = item[0]
+            date_obj = datetime.strptime(date, "%m/%d/%Y")
+            # Convert to DD/MM/YYYY format
+            new_date_str = date_obj.strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(new_date_str, self.crawled_till)
+            if (res == 1):
+                self.crawled_till = new_date_str
+            docket = item[1]
+            origin = item[2]
+            type = item[3]
+            name = item[4].replace("</a>","")
+            status = item[5]
+            slug = item[6]
+            self.cases.append({
+                "date": date,
+                "docket": docket,
+                "url": f"https://cafc.uscourts.gov{slug}",
+                "name": name,
+                "status": self._get_status(status.lower()),
+            })
+
+    def _process_html_old(self) -> None:
         """Process the RSS feed.
 
         Iterate over each item in the RSS feed to extract out
@@ -56,3 +97,20 @@ class Site(OpinionSiteLinear):
         else:
             status = "Unknown"
         return status
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.url = 'https://cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=1'
+        self.method = 'POST'
+        sdate = start_date.strftime("%d/%m/%Y").split("/")
+        edate = end_date.strftime("%d/%m/%Y").split("/")
+        start = 0
+        draw=6
+        self.flag=True
+        while(self.flag):
+            self.parameters = {'draw': str(draw), 'columns[0][data]': '0', 'columns[0][name]': 'Release_Date', 'columns[0][searchable]': 'true', 'columns[0][orderable]': 'true', 'columns[0][search][value]': str(sdate[1])+'/'+str(sdate[0])+'/'+str(sdate[2])+'|'+str(edate[1])+'/'+str(edate[0])+'/'+str(edate[2]), 'columns[0][search][regex]': 'false', 'columns[1][data]': '1', 'columns[1][name]': 'Appeal_Number', 'columns[1][searchable]': 'true', 'columns[1][orderable]': 'true', 'columns[1][search][value]': '', 'columns[1][search][regex]': 'false', 'columns[2][data]': '2', 'columns[2][name]': 'Origin', 'columns[2][searchable]': 'true', 'columns[2][orderable]': 'true', 'columns[2][search][value]': '', 'columns[2][search][regex]': 'false', 'columns[3][data]': '3', 'columns[3][name]': 'Document_Type', 'columns[3][searchable]': 'true', 'columns[3][orderable]': 'true', 'columns[3][search][value]': '', 'columns[3][search][regex]': 'false', 'columns[4][data]': '4', 'columns[4][name]': 'Case_Name', 'columns[4][searchable]': 'true', 'columns[4][orderable]': 'true', 'columns[4][search][value]': '', 'columns[4][search][regex]': 'false', 'columns[5][data]': '5', 'columns[5][name]': 'Status', 'columns[5][searchable]': 'true', 'columns[5][orderable]': 'true', 'columns[5][search][value]': '', 'columns[5][search][regex]': 'false', 'columns[6][data]': '6', 'columns[6][name]': 'File_Path', 'columns[6][searchable]': 'false', 'columns[6][orderable]': 'false', 'columns[6][search][value]': '', 'columns[6][search][regex]': 'false', 'order[0][column]': '0', 'order[0][dir]': 'desc', 'start': str(start), 'length': '500', 'search[value]': '', 'search[regex]': 'false', 'wdtNonce': 'c90bf3919e', 'sRangeSeparator': '|'}
+            print(self.parameters)
+            self.parse()
+            start=start+500
+            draw = draw + 1
+            self.downloader_executed = False
+        return 0

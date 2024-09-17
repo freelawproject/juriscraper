@@ -2,7 +2,9 @@
 <br> tags. There is currently a case at the bottom of the page from 2009
 that has incomplete meta data. You can see it in the example document.
 """
+from datetime import datetime
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -33,6 +35,11 @@ class Site(OpinionSite):
             else:
                 date_string = text_string.split(" ")[1]
                 date_string = date_string.strip().strip(",")
+                date_object = datetime.strptime(date_string, '%m/%d/%Y')
+                date_filed = date_object.strftime('%d/%m/%Y')
+                res = CasemineUtil.compare_date(date_filed, self.crawled_till)
+                if (res == 1):
+                    self.crawled_till = date_filed
                 dates.append(convert_date_string(date_string))
         return dates
 
@@ -69,3 +76,7 @@ class Site(OpinionSite):
             else:
                 lower_courts.append(text_string.strip())
         return lower_courts
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
