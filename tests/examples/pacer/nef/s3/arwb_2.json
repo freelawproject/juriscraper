@@ -1,0 +1,43 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "arwb",
+  "dockets": [
+    {
+      "case_name": "Michael Clayton Lowry",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-09-10",
+          "description": "(LastName, FirstName)",
+          "document_number": "76",
+          "document_url": "https://ecf.arwb.uscourts.gov/doc1/0280?pdf_header=&magic_num=35238047&de_seq_num=242&caseid=175500",
+          "pacer_case_id": "175500",
+          "pacer_doc_id": "0280",
+          "pacer_magic_num": "35238047",
+          "pacer_seq_no": "242",
+          "short_description": "Meeting of Creditors - Second Non-Appearance"
+        }
+      ],
+      "docket_number": "1:24-bk-70534",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "bk",
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "1"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "xxx@lawfirm.com",
+        "zz@domain.com",
+        "user@gmail.com",
+        "user@recap.email",
+        "USTPRegion13.LR.ECF@usdoj.gov",
+        "Shari.Sherman@usdoj.gov;jill.p.eschbacher@usdoj.gov;mary.b.mansfield@usdoj.gov;kent.h.johnson@usdoj.gov"
+      ],
+      "name": ""
+    }
+  ]
+}
