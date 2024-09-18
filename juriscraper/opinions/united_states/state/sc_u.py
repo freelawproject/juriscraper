@@ -1,5 +1,6 @@
-from juriscraper.opinions.united_states.state import sc
 from datetime import date
+
+from juriscraper.opinions.united_states.state import sc
 
 
 class Site(sc.Site):
