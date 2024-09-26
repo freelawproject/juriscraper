@@ -9,9 +9,36 @@ History:
     - 2023-11-19: Updated by William E. Palin
 """
 
+from lxml import html
+
 from juriscraper.opinions.united_states.state import colo
 
 
 class Site(colo.Site):
     api_court_code = "14024_02"
     days_interval = 15
+
+    @staticmethod
+    def cleanup_content(content: str) -> str:
+        """Returned HTML needs 2 modifications:
+        - delete style and img tags which hold tokens
+        that make the hash change everytime
+
+        - delete classes which conflict with our bootstrap
+        classes, such as .h2 and .h3
+
+        :param content: html string
+        :return: cleaned up html
+        """
+        tree = html.fromstring(content)
+        remove_xpaths = ["//style", "//img"]
+        for xpath in remove_xpaths:
+            to_remove = tree.xpath(xpath)[0]
+            to_remove.getparent().remove(to_remove)
+
+        for tag in tree.xpath("//*[@class]"):
+            tag.attrib.pop("class")
+
+        return html.tostring(
+            tree, pretty_print=True, encoding="unicode"
+        ).encode("utf-8")
