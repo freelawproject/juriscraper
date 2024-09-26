@@ -17,7 +17,7 @@ class Site(cadc.Site):
 
     def _get_docket_numbers(self):
         return [
-            re.split("Judgment in Case |,", e)[1]
+            re.search(r"\d{2}-\d+", e).group(0)
             for e in self.html.xpath("//item/title/text()")
         ]
 
