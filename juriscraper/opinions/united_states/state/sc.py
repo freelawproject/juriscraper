@@ -87,13 +87,28 @@ class Site(OpinionSiteLinear):
             if ym in seen_year_months:
                 continue
             seen_year_months.add(ym)
-            backscrape_iterable.append(self.make_url_from_date(date_obj))
+            backscrape_iterable.append(date_obj)
 
         self.back_scrape_iterable = backscrape_iterable
 
-    def _download_backwards(self, url: str) -> None:
-        self.url = url
-        logger.info("Backscraping URL: %s", url)
+    def _download_backwards(self, date_obj: date) -> None:
+        """Downloads an older page, and parses it
+
+        Opinions from terms older than 2012-06 are in HTML
+        format, which needs updating the
+        self.expected_content_types attribute.
+
+        Only do it for the backscraper to prevent ingesting
+        bad data in the present day
+
+        :param date_obj: date object to build the URL
+        :return None
+        """
+        if date_obj.year <= 2012:
+            self.expected_content_types.append("text/html")
+
+        self.url = self.make_url_from_date(date_obj)
+        logger.info("Backscraping URL: %s", self.url)
         self.html = self._download()
         self._process_html()
 
