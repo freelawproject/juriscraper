@@ -53,9 +53,13 @@ class AbstractSite:
         self.request = {
             "verify": certifi.where(),
             "session": requests.session(),
-            "headers": {"User-Agent": "Juriscraper"},
-            # Disable CDN caching on sites like SCOTUS (ahem)
-            "cache-control": "no-cache, no-store, max-age=1",
+            "headers": {
+                "User-Agent": "Juriscraper",
+                # Disable CDN caching on sites like SCOTUS (ahem)
+                "Cache-Control": "no-cache, max-age=0, must-revalidate",
+                # backwards compatibility with HTTP/1.0 caches
+                "Pragma": "no-cache",
+            },
             "parameters": {},
             "request": None,
             "status": None,
