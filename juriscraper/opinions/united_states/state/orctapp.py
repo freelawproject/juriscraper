@@ -18,6 +18,3 @@ class Site(oregon_module.Site):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = (
-            "https://www.courts.oregon.gov/publications/coa/Pages/default.aspx"
-        )
