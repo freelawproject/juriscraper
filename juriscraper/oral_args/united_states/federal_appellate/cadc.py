@@ -4,59 +4,56 @@ Court Short Name: cadc
 Author: Andrei Chelaru
 Reviewer: mlr
 Date created: 18 July 2014
+
+Updated: 2024-10-10
 """
 
-from datetime import date, datetime
+import re
+from datetime import date
 
-from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
+    days_interval = 28
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
-        # d = date(month=5, day=1, year=2014)
-        self.url = "http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}".format(
-            yearmo=d.strftime("%Y%m")
+        self.d = date.today()
+        self.url = "https://media.cadc.uscourts.gov/recordings/bydate/{yearmo}".format(
+            yearmo=self.d.strftime("%Y/%m")
         )
-        self.back_scrape_iterable = [
-            "%s%02d" % (year, month)
-            for year in range(2007, d.year + 1)
-            for month in range(1, 13)
-        ]
+        self.parameters = {"verify": False}
+        self.make_backscrape_iterable(kwargs)
 
-    def _download(self, **kwargs):
-        # The certificate on their site has expired.
-        return super()._download(request_dict={"verify": False})
+    def _process_html(self):
+        """"""
+        for row in self.html.xpath(".//div[@class='mt-0 pt-0 pb-3 row']"):
+            ahref = row.xpath(".//div/div/a")
+            url = ahref[0].xpath(".//@href")[0]
+            docket = ahref[0].xpath(".//text()")[0]
+            if "mp3" not in url:
+                logger.info("Audio likely missing")
+                continue
+            cells = row.xpath(".//div[@class='col-sm-9 ml-3 ml-sm-0']/div")
+            self.cases.append(
+                {
+                    "url": url,
+                    "docket": docket,
+                    "name": cells[0].text_content(),
+                    "date": cells[3].text_content(),
+                    "attorney": cells[2].text_content(),
+                    "judges": cells[1].text_content(),
+                }
+            )
 
-    def _get_download_urls(self):
-        path = "id('ViewBody')//div[contains(concat(' ',@class,' '),' row-entry')]//@href"
-        return list(self.html.xpath(path))
-
-    def _get_case_names(self):
-        path = "id('ViewBody')//*[contains(concat(' ',@class,' '),' column-two')]/div[1]/text()"
-        return list(self.html.xpath(path))
-
-    def _get_case_dates(self):
-        path = "id('ViewBody')//date/text()"
-        return list(map(self._return_case_date, self.html.xpath(path)))
-
-    @staticmethod
-    def _return_case_date(e):
-        e = "".join(e.split())
-        return datetime.strptime(e, "%m/%d/%Y").date()
-
-    def _get_docket_numbers(self):
-        path = "id('ViewBody')//*[contains(concat(' ',@class,' '),' row-entry')]//a//text()"
-        return list(self.html.xpath(path))
-
-    def _get_judges(self):
-        path = '//div[span[contains(., "Judges")]]/text()'
-        return [" ".join(s.split()) for s in self.html.xpath(path)]
-
-    def _download_backwards(self, yearmo):
-        self.url = "http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}".format(
-            yearmo=yearmo,
+    def _download_backwards(self, dates: tuple) -> None:
+        logger.info("Backscraping for range %s %s", *dates)
+        self.d, _ = dates
+        self.url = "https://media.cadc.uscourts.gov/recordings/bydate/{yearmo}".format(
+            yearmo=self.d.strftime("%Y/%m")
         )
         self.html = self._download()
+        self._process_html()
