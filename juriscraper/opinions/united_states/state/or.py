@@ -96,7 +96,10 @@ class Site(OpinionSiteLinear):
             if field["key"] == "judge":
                 judge = field["value"]
             elif field["key"] == "type":
-                if field["value"] == "Nonprecedential opinion":
+                if field["value"] in [
+                    "Nonprecedential opinion",
+                    "Unpublished",
+                ]:
                     status = "Unpublished"
                 else:
                     status = "Published"
