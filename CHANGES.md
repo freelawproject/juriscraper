@@ -16,6 +16,15 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.29 - 2024-10-10**
+
+Fixes:
+  - fix `or` and `orctapp` scraper, scraping new endpoint
+  - fix cache control headers in `AbstractSite`
+  - fix `sc` expected content types
+
+## Past
+
 **2.6.28 - 2024-09-27**
 
 Features:
@@ -26,8 +35,6 @@ Fixes:
   - `ca11` update to Oral Argument Site Linear
   - `cadc_u` change docket number getter
   - `sc` implement new site
-
-## Past
 
 **2.6.27 - 2024-09-16**
 
