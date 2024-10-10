@@ -7,4 +7,3 @@ oregon_module = import_module("juriscraper.opinions.united_states.state.or")
 class Site(oregon_module.Site):
     court_code = "p17027coll6"
     days_interval = 120
-    
