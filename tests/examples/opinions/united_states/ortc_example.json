@@ -1,0 +1,1229 @@
+{
+    "totalResults": 19,
+    "browseAllDefaultSortField": "dated",
+    "searchResultsDefaultSortField": "nosort",
+    "sortFields": [
+      {
+        "name": "Relevance",
+        "order": "nosort",
+        "ad": "asc"
+      },
+      {
+        "name": "Title",
+        "order": "title",
+        "ad": "asc"
+      },
+      {
+        "name": "Title",
+        "order": "title",
+        "ad": "desc"
+      },
+      {
+        "name": "Official case name",
+        "order": "subjec",
+        "ad": "asc"
+      },
+      {
+        "name": "Official case name",
+        "order": "subjec",
+        "ad": "desc"
+      },
+      {
+        "name": "Citation",
+        "order": "cita",
+        "ad": "asc"
+      },
+      {
+        "name": "Citation",
+        "order": "cita",
+        "ad": "desc"
+      },
+      {
+        "name": "Date decided",
+        "order": "dated",
+        "ad": "asc"
+      },
+      {
+        "name": "Date decided",
+        "order": "dated",
+        "ad": "desc"
+      }
+    ],
+    "filters": {
+      "collections": [
+        {
+          "name": "Briefs -- Oregon Court of Appeals",
+          "selected": false,
+          "alias": "p17027coll8"
+        },
+        {
+          "name": "Briefs -- Oregon Supreme Court",
+          "selected": false,
+          "alias": "p17027coll7"
+        },
+        {
+          "name": "Decisions & Orders -- Oregon Tax Court",
+          "selected": true,
+          "alias": "p17027coll6"
+        },
+        {
+          "name": "District Attorney Public Records Orders",
+          "selected": false,
+          "alias": "p17027coll4"
+        },
+        {
+          "name": "Opinions -- Oregon Court of Appeals",
+          "selected": false,
+          "alias": "p17027coll5"
+        },
+        {
+          "name": "Opinions -- Oregon Supreme Court",
+          "selected": false,
+          "alias": "p17027coll3"
+        },
+        {
+          "name": "Oregon Attorney General Public Records Orders",
+          "selected": false,
+          "alias": "p17027coll2"
+        },
+        {
+          "name": "Oregon Chief Justice Orders",
+          "selected": false,
+          "alias": "p17027coll10"
+        },
+        {
+          "name": "Oregon Employment Relations Board Final Orders",
+          "selected": false,
+          "alias": "p17027coll9"
+        },
+        {
+          "name": "Oregon Governor Executive Orders",
+          "selected": false,
+          "alias": "p17027coll11"
+        }
+      ]
+    },
+    "facets": {
+      "divisi": [
+        {
+          "title": "magistrate",
+          "count": 15
+        },
+        {
+          "title": "regular",
+          "count": 4
+        }
+      ],
+      "type": [
+        {
+          "title": "unpublished",
+          "count": 19
+        }
+      ],
+      "subjec1": [
+        {
+          "title": "department of revenue",
+          "count": 13
+        },
+        {
+          "title": "curry county assessor",
+          "count": 2
+        },
+        {
+          "title": "david john mednansky",
+          "count": 2
+        },
+        {
+          "title": "deschutes county assessor",
+          "count": 2
+        },
+        {
+          "title": "anthony vasquez",
+          "count": 1
+        },
+        {
+          "title": "broken trail llc",
+          "count": 1
+        },
+        {
+          "title": "cathryn r. hopson",
+          "count": 1
+        },
+        {
+          "title": "christopher s. averett",
+          "count": 1
+        },
+        {
+          "title": "daniel i. reutov",
+          "count": 1
+        },
+        {
+          "title": "donald j. hefflinger",
+          "count": 1
+        },
+        {
+          "title": "douglas county assessor",
+          "count": 1
+        }
+      ],
+      "title": [
+        {
+          "title": "tc 5465, unpublished",
+          "count": 2
+        },
+        {
+          "title": "tc 5413, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc 5458, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 210339n, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 220447g, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 230234r, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 230349n, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 230404r, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 230441g, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 230454r, unpublished",
+          "count": 1
+        },
+        {
+          "title": "tc-md 230459n, unpublished",
+          "count": 1
+        }
+      ]
+    },
+    "fields": {
+      "queries": [
+        {
+          "mode": "exact",
+          "searchTerm": "20240701-20241010",
+          "field": "dated",
+          "connector": "and"
+        }
+      ],
+      "order": "nosort",
+      "direction": "asc"
+    },
+    "items": [
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9751",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9751/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9751",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230459N, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Hopson v. Douglas County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-05"
+          }
+        ],
+        "title": "TC-MD 230459N, Unpublished",
+		"detailJson": {
+			"requestedId": 9751,
+			"id": 9751,
+			"parentId": -1,
+			"collectionAlias": "p17027coll6",
+			"collectionName": "Decisions & Orders -- Oregon Tax Court",
+			"contentType": "application/pdf",
+			"filename": "9752.pdf",
+			"title": "TC_MD_N_Unpublished",
+			"text": "",
+			"pageNumber": null,
+			"imageWidth": 1275,
+			"imageHeight": 1650,
+			"fields": [
+			  {
+				"key": "title",
+				"label": "Title",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC-MD 230459N, Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec",
+				"label": "Official case name",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Hopson v. Douglas County Assessor",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "relispt",
+				"label": "Case number",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC-MD 230459N",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "type",
+				"label": "Type",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "dated",
+				"label": "Date decided",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "2024-09-05",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec1",
+				"label": "Parties",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Cathryn R. Hopson; Douglas County Assessor",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "judge",
+				"label": "Author",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Boomer",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "descri",
+				"label": "Notes",
+				"controlledVocab": false,
+				"searchable": false,
+				"value": "Defendant's motion for summary judgment denied; parties to appear for a case management conference September 24 at 9:00 a.m.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "rights",
+				"label": "Rights",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "No known copyright restrictions.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "identi",
+				"label": "Identifier",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "230459NHopsonOrder.pdf",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "divisi",
+				"label": "Division",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Magistrate",
+				"controlledVocabList": null
+			  }
+			],
+			"fullrsEnabled": false,
+			"hasPrintPDF": false,
+			"thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9751/thumbnail",
+			"imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll6:9751/full/730,/0/default.jpg",
+			"iiifInfoUri": "/iiif/2/p17027coll6:9751/info.json",
+			"downloadUri": "/api/collection/p17027coll6/id/9751/download",
+			"downloadParentUri": null,
+			"url": null,
+			"streamUri": null,
+			"parent": null,
+			"flatCompoundObjects": null
+		  }
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9741",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9741/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9741",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 220447G, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Reutov v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-07-15"
+          }
+        ],
+        "title": "TC-MD 220447G, Unpublished",
+		"detailJson":{
+			"requestedId": 9741,
+			"id": 9741,
+			"parentId": -1,
+			"collectionAlias": "p17027coll6",
+			"collectionName": "Decisions & Orders -- Oregon Tax Court",
+			"contentType": "application/pdf",
+			"filename": "9742.pdf",
+			"title": "TC_MD_G_Unpublished",
+			"text": "",
+			"pageNumber": null,
+			"imageWidth": 1275,
+			"imageHeight": 1650,
+			"fields": [
+			  {
+				"key": "title",
+				"label": "Title",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC-MD 220447G, Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec",
+				"label": "Official case name",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Reutov v. Dept. of Rev.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "relispt",
+				"label": "Case number",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC-MD 220447G",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "type",
+				"label": "Type",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "dated",
+				"label": "Date decided",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "2024-07-15",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec1",
+				"label": "Parties",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Daniel I. Reutov; Department of Revenue",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "judge",
+				"label": "Author",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Lundgren",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "descri",
+				"label": "Notes",
+				"controlledVocab": false,
+				"searchable": false,
+				"value": "Plaintiffs' basis in the boat was $185,000 in 2015 and they are allowed depreciation deductions accordingly; plaintiffs'  basis in the fishing permit was $166,165 in 2016 and they are allowed amortization deductions accordingly; defendant will reduce its adjustment to plaintiffs' 2018 gross income for recaptured prior-year amortization and depreciation consistent with this decision; plaintiffs allowed a per diem deduction for traveling expenses from April 26, 2018 to October 12, 2018; plaintiffs allowed car and truck expenses based on a mileage of 5,930 in 2018; and defendant will reduce its adjustment to plaintiffs' 2018 gross income based on a bank deposit analysis by $3,271.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "rights",
+				"label": "Rights",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "No known copyright restrictions.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "identi",
+				"label": "Identifier",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "220447GReutovDE.pdf",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "divisi",
+				"label": "Division",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Magistrate",
+				"controlledVocabList": null
+			  }
+			],
+			"fullrsEnabled": false,
+			"hasPrintPDF": false,
+			"thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9741/thumbnail",
+			"imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll6:9741/full/730,/0/default.jpg",
+			"iiifInfoUri": "/iiif/2/p17027coll6:9741/info.json",
+			"downloadUri": "/api/collection/p17027coll6/id/9741/download",
+			"downloadParentUri": null,
+			"url": null,
+			"streamUri": null,
+			"parent": null,
+			"flatCompoundObjects": null
+		  }
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9744",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9744/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9744",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 240109N, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Vasquez v. Washington County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-07-25"
+          }
+        ],
+        "title": "TC-MD 240109N, Unpublished",
+		"detailJson":{
+			"requestedId": 9744,
+			"id": 9744,
+			"parentId": -1,
+			"collectionAlias": "p17027coll6",
+			"collectionName": "Decisions & Orders -- Oregon Tax Court",
+			"contentType": "application/pdf",
+			"filename": "9744.pdf",
+			"title": "TC_MD_N_Unpublished",
+			"text": "",
+			"pageNumber": null,
+			"imageWidth": 1275,
+			"imageHeight": 1650,
+			"fields": [
+			  {
+				"key": "title",
+				"label": "Title",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC-MD 240109N, Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec",
+				"label": "Official case name",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Vasquez v. Washington County Assessor",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "relispt",
+				"label": "Case number",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC-MD 240109N",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "type",
+				"label": "Type",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "dated",
+				"label": "Date decided",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "2024-07-25",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec1",
+				"label": "Parties",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Anthony Vasquez; Washington County Assessor",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "judge",
+				"label": "Author",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Boomer",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "descri",
+				"label": "Notes",
+				"controlledVocab": false,
+				"searchable": false,
+				"value": "Defendant's motion to compel granted. Plaintiffs must allow a site inspection within 30 days of the date of order, or case will be dismissed.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "rights",
+				"label": "Rights",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "No known copyright restrictions.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "identi",
+				"label": "Identifier",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "240109NVasquezOR.pdf",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "divisi",
+				"label": "Division",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Magistrate",
+				"controlledVocabList": null
+			  }
+			],
+			"fullrsEnabled": false,
+			"hasPrintPDF": false,
+			"thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9744/thumbnail",
+			"imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll6:9744/full/730,/0/default.jpg",
+			"iiifInfoUri": "/iiif/2/p17027coll6:9744/info.json",
+			"downloadUri": "/api/collection/p17027coll6/id/9744/download",
+			"downloadParentUri": null,
+			"url": null,
+			"streamUri": null,
+			"parent": null,
+			"flatCompoundObjects": null
+		  }
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9745",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9745/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9745",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230472N, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Fisher v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-07-29"
+          }
+        ],
+        "title": "TC-MD 230472N, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9852",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9852/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9852",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 240038G, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Oakway Golf, Inc. v. Lane County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-10-03"
+          }
+        ],
+        "title": "TC-MD 240038G, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9752",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9752/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9752",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 240033G, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Stamm v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-06"
+          }
+        ],
+        "title": "TC-MD 240033G, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9746",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9746/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9746",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230404R, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Cheremnov v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-08-01"
+          }
+        ],
+        "title": "TC-MD 230404R, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9754",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9754/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9754",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 240192G, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Anzellotti v. Deschutes County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-09"
+          }
+        ],
+        "title": "TC-MD 240192G, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9851",
+        "filetype": "cpd",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9851/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/compoundobject/collection/p17027coll6/id/9851",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC 5458, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Mughal v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-27"
+          }
+        ],
+        "title": "TC 5458, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9755",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9755/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9755",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230441G, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Averett v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-10"
+          }
+        ],
+        "title": "TC-MD 230441G, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9747",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9747/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9747",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230454R, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Antonick v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-08-19"
+          }
+        ],
+        "title": "TC-MD 230454R, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9757",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9757/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9757",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230234R, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Murphy v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-18"
+          }
+        ],
+        "title": "TC-MD 230234R, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9816",
+        "filetype": "cpd",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9816/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/compoundobject/collection/p17027coll6/id/9816",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC 5413, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Microsoft Corp. v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-08-29"
+          }
+        ],
+        "title": "TC 5413, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9750",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9750/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9750",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC 5465, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Mednansky v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-07-23"
+          }
+        ],
+        "title": "TC 5465, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9748",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9748/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9748",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC 5465, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Mednansky v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-08-27"
+          }
+        ],
+        "title": "TC 5465, Unpublished",
+		"detailJson":{
+			"requestedId": 9748,
+			"id": 9748,
+			"parentId": -1,
+			"collectionAlias": "p17027coll6",
+			"collectionName": "Decisions & Orders -- Oregon Tax Court",
+			"contentType": "application/pdf",
+			"filename": "9751.pdf",
+			"title": "TC_Unpublished",
+			"text": "",
+			"pageNumber": null,
+			"imageWidth": 1275,
+			"imageHeight": 1650,
+			"fields": [
+			  {
+				"key": "title",
+				"label": "Title",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC 5465, Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec",
+				"label": "Official case name",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Mednansky v. Dept. of Rev.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "relispt",
+				"label": "Case number",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "TC 5465",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "type",
+				"label": "Type",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Unpublished",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "dated",
+				"label": "Date decided",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "2024-08-27",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "subjec1",
+				"label": "Parties",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "David John Mednansky; Department of Revenue; Curry County Assessor",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "judge",
+				"label": "Author",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "Manicke",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "descri",
+				"label": "Notes",
+				"controlledVocab": false,
+				"searchable": false,
+				"value": "Plaintiff's motion and affidavit to disqualify is denied.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "rights",
+				"label": "Rights",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "No known copyright restrictions.",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "identi",
+				"label": "Identifier",
+				"controlledVocab": false,
+				"searchable": true,
+				"value": "MednanskyTC5465OrderDenyingMotiontodisqualifyJudge08272024.pdf",
+				"controlledVocabList": null
+			  },
+			  {
+				"key": "divisi",
+				"label": "Division",
+				"controlledVocab": true,
+				"searchable": true,
+				"value": "Regular",
+				"controlledVocabList": null
+			  }
+			],
+			"fullrsEnabled": false,
+			"hasPrintPDF": false,
+			"thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9748/thumbnail",
+			"imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll6:9748/full/730,/0/default.jpg",
+			"iiifInfoUri": "/iiif/2/p17027coll6:9748/info.json",
+			"downloadUri": "/api/collection/p17027coll6/id/9748/download",
+			"downloadParentUri": null,
+			"url": null,
+			"streamUri": null,
+			"parent": null,
+			"flatCompoundObjects": null
+		  }
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9742",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9742/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9742",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 210339N, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Moore v. Jackson County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-07-24"
+          }
+        ],
+        "title": "TC-MD 210339N, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9753",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9753/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9753",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 240418N, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Broken Trail LLC v. Deschutes County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-06"
+          }
+        ],
+        "title": "TC-MD 240418N, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9817",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9817/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9817",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 230349N, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Haney v. Marion County Assessor"
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-24"
+          }
+        ],
+        "title": "TC-MD 230349N, Unpublished"
+      },
+      {
+        "collectionAlias": "p17027coll6",
+        "index": null,
+        "itemId": "9756",
+        "filetype": "pdf",
+        "thumbnailUri": "/api/singleitem/collection/p17027coll6/id/9756/thumbnail",
+        "thumbnailEnabled": true,
+        "itemLink": "/singleitem/collection/p17027coll6/id/9756",
+        "metadataFields": [
+          {
+            "field": "title",
+            "value": "TC-MD 240450G, Unpublished"
+          },
+          {
+            "field": "subjec",
+            "value": "Hefflinger v. Dept. of Rev."
+          },
+          {
+            "field": "cita",
+            "value": ""
+          },
+          {
+            "field": "dated",
+            "value": "2024-09-16"
+          }
+        ],
+        "title": "TC-MD 240450G, Unpublished"
+      }
+    ],
+    "facetFields": {
+      "divisi": "Division",
+      "type": "Type",
+      "subjec1": "Parties",
+      "title": "Title"
+    },
+    "gridViewEnabled": false
+  }
