@@ -16,3 +16,7 @@ class Site(ca9_p.Site):
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/memoranda/index.xml"
         self.status = "Unpublished"
+
+    def get_class_name(self):
+        return "ca9_u"
+

@@ -14,3 +14,9 @@ class Site(ariz.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=998"
+
+    def get_court_name(self):
+        return "Arizona Court Of Appeals"
+
+    def get_class_name(self):
+        return "arizctapp_div_1"

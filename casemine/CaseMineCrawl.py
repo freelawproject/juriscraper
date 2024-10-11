@@ -1,30 +1,29 @@
 import os
 from abc import abstractmethod
-from datetime import datetime, date, timedelta
+from datetime import datetime, timedelta
 
 import requests
-from bson import ObjectId
 from pymongo import MongoClient
-from typing import Dict, Any
-
-from setuptools import logging
 
 from casemine import constants
-from casemine.DuplicateRecordException import DuplicateRecordException
-from casemine.constants import CRAWL_DATABASE_IP, DATABASE_PORT, DATABASE_NAME, \
-    TEST_COLLECTION, CONFIG_COLLECTION, PDF_DOWNLOAD_PATH
+from casemine.constants import CRAWL_DATABASE_IP, DATABASE_PORT, \
+    MAIN_DATABASE_IP, DATABASE_NAME, CONFIG_COLLECTION
+
 
 class CaseMineCrawl:
 
-    mongo1 = MongoClient(constants.CRAWL_DATABASE_IP, constants.DATABASE_PORT)
-    mongo2 = MongoClient(constants.MAIN_DATABASE_IP, constants.DATABASE_PORT)
+    mongo1 = MongoClient('mongodb://'+CRAWL_DATABASE_IP+':'+str(DATABASE_PORT)+'/')
+    mongo2 = MongoClient('mongodb://'+MAIN_DATABASE_IP+':'+str(DATABASE_PORT)+'/')
 
     # Access databases
     db1 = mongo1[constants.DATABASE_NAME]
 
     # Access collections
-    judgements_collection = db1[constants.TEST_COLLECTION]
+    judgements_collection = db1[constants.MAIN_COLLECTION]
     config_collection = db1[constants.CONFIG_COLLECTION]
+
+    # flag for duplicate
+    flag = False
 
     def __init__(self):
         self.end_date = None
@@ -36,7 +35,6 @@ class CaseMineCrawl:
         str(dbObj.get('CrawledTill'))
         self.crawled_till = dbObj.get('CrawledTill')
         records = self.crawling(self.crawled_till)
-        self.set_crawl_config_details(class_name, self.crawled_till)
 
     def crawling(self, crawled_till) -> int:
         # Initialize the list with retro months
@@ -79,23 +77,6 @@ class CaseMineCrawl:
 
         return count
 
-    @abstractmethod
-    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        pass
-
-    @abstractmethod
-    def get_court_name(self):
-        pass
-
-    @abstractmethod
-    def get_court_type(self):
-        pass
-
-    @abstractmethod
-    def get_class_name(self):
-        pass
-
-
     @staticmethod
     def get_crawl_config_details(class_name):
         client = MongoClient('mongodb://'+CRAWL_DATABASE_IP+':'+str(DATABASE_PORT)+'/')
@@ -114,7 +95,6 @@ class CaseMineCrawl:
         client = MongoClient("mongodb://"+CRAWL_DATABASE_IP+":"+str(DATABASE_PORT))
         db = client[DATABASE_NAME]
         crawl_config = db[CONFIG_COLLECTION]
-
         # Query the collection
         query = {"ClassName": class_name}
         crawl_cursor = crawl_config.find(query)
@@ -135,22 +115,20 @@ class CaseMineCrawl:
         # Close the MongoDB connection
         client.close()
 
-    @staticmethod
     def _process_opinion(self, data) -> bool:
-        flag = False
-        url = str(data.get('url'))
+        self.flag=False
+        url = str(data.get('pdf_url'))
         if url.__eq__(''):
             return False
-        objId = self._save_opinion(data)
-        contentPdf = self._download_pdf(data, objId)
+        objId = self._fetch_duplicate(data)
+        if(self.flag):
+            contentPdf = self.download_pdf(data, objId)
         # flag = saveContent(judId, contentPdf)
-        return flag
+        return self.flag
 
-    @staticmethod
     def _fetch_duplicate(self, data):
         # Create query for duplication
-        query_for_duplication = {"pdfUrl": data.get("pdfUrl"), "docket": data.get("docket"),
-                                    "title": data.get("title")}
+        query_for_duplication = {"pdf_url": data.get("pdf_url"), "docket": data.get("docket"), "title": data.get("title")}
         # Find the document
         duplicate = self.judgements_collection.find_one(query_for_duplication)
         object_id = None
@@ -159,8 +137,9 @@ class CaseMineCrawl:
             self.judgements_collection.insert_one(data)
 
             # Retrieve the document just inserted
-            data = self.judgements_collection.find_one(query_for_duplication)
-            object_id = data.get("_id")  # Get the ObjectId from the document
+            updated_data = self.judgements_collection.find_one(query_for_duplication)
+            object_id = updated_data.get("_id")  # Get the ObjectId from the document
+            self.flag = True
         else:
             # Check if the document already exists and has been processed
             processed = duplicate.get("processed")
@@ -171,24 +150,55 @@ class CaseMineCrawl:
         return object_id
 
     def download_pdf(self, data, objectId):
-        pdf_url = data.__getitem__('url')
+        pdf_url = data.__getitem__('pdf_url')
         year = int(data.__getitem__('year'))
 
-        court_name = self.get_court_name()
+        court_name = data.get('court_name')
+        court_type = data.get('court_type')
+        state_name = data.get('state')
+
+        if str(court_type).__eq__('state'):
+            path = "/synology/PDFs/US/juriscraper/"+court_type+"/"+state_name+"/"+court_name+"/"+str(year)
+        else:
+            path = "/synology/PDFs/US/juriscraper/" + court_type + "/" + court_name + "/" + str(year)
 
         obj_id = str(objectId)
-        download_pdf_path = os.path.join(PDF_DOWNLOAD_PATH, f"{obj_id}.pdf")
+        download_pdf_path = os.path.join(path, f"{obj_id}.pdf")
 
-        os.makedirs(PDF_DOWNLOAD_PATH, exist_ok=True)
+        os.makedirs(path, exist_ok=True)
         try:
-            response = requests.get(pdf_url)
+            response = requests.get(
+                url=pdf_url,
+                headers={"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"},
+                proxies={"http": "p.webshare.io:9999","https": "p.webshare.io:9999"},
+                timeout=120
+            )
             response.raise_for_status()
             with open(download_pdf_path, 'wb') as file:
                 file.write(response.content)
-            self.judgements_collection.update_one({"_id": objectId},
-                                        {"$set": {"processed": 0}})
+            self.judgements_collection.update_one({"_id": objectId},{"$set": {"processed": 0}})
         except requests.RequestException as e:
             print(f"Error while downloading the PDF: {e}")
             self.judgements_collection.update_many({"_id": objectId}, {
                 "$set": {"processed": 2, "content": ""}})
         return download_pdf_path
+
+    @abstractmethod
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        pass
+
+    @abstractmethod
+    def get_court_name(self):
+        pass
+
+    @abstractmethod
+    def get_court_type(self):
+        pass
+
+    @abstractmethod
+    def get_class_name(self):
+        pass
+
+    @abstractmethod
+    def get_state_name(self):
+        pass

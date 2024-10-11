@@ -1,6 +1,6 @@
 import json
 import re
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 from typing import Any, Dict
 
 from dateutil.rrule import DAILY, rrule
@@ -11,35 +11,8 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.govinfo.gov/wssearch/search"
         self.court_id = self.__module__
-        self.td = date.today()
-        today = self.td.strftime("%Y-%m-%d")
-        last_month = (self.td - timedelta(days=31)).strftime("%Y-%m-%d")
-        self.parameters = {
-            "facets": {
-                "accodenav": [
-                    "USCOURTS",
-                ],
-                "governmentauthornav": [
-                    "United States Court of Appeals for the Fourth Circuit",
-                ],
-            },
-            "filterOrder": [
-                "accodenav",
-                "governmentauthornav",
-            ],
-            "facetToExpand": "governmentauthornav",
-            "offset": 0,
-            "pageSize": "100",
-            "sortBy": "2",
-            "query": f"publishdate:range({last_month},{today})",
-            "browseByDate": True,
-            "historical": False,
-        }
-        self.method = "POST"
         self.json = {}
-
         self.interval = 14
         self.back_scrape_iterable = [
             i.date()
@@ -115,3 +88,19 @@ class Site(OpinionSiteLinear):
         end = dt.strftime("%Y-%m-%d")
         self.parameters["query"] = f"publishdate:range({start},{end})"
         self.html = self._download()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.url = "https://www.govinfo.gov/wssearch/search"
+        today = end_date.strftime("%Y-%m-%d")
+        last_month = start_date.strftime("%Y-%m-%d")
+        self.parameters = {"facets": {"accodenav": ["USCOURTS", ],
+            "governmentauthornav": [
+                "United States Court of Appeals for the Fourth Circuit", ], },
+            "filterOrder": ["accodenav", "governmentauthornav", ],
+            "facetToExpand": "governmentauthornav", "offset": 0,
+            "pageSize": "100", "sortBy": "2",
+            "query": f"publishdate:range({last_month},{today})",
+            "browseByDate": True, "historical": False, }
+        self.method = "POST"
+        self.parse()
+        return 0

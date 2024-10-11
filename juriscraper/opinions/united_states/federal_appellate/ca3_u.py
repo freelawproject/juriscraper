@@ -6,3 +6,6 @@ class Site(ca3_p.Site):
         super().__init__(*args, **kwargs)
         self.url = "http://www2.ca3.uscourts.gov/recentop/week/recnonprec.htm"
         self.court_id = self.__module__
+
+    def get_class_name(self):
+        return "ca3_u"

@@ -25,15 +25,7 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath("//item/pubdate/text()"):
-
             date_only = " ".join(date_string.split(" ")[1:4])
-            date_obj = datetime.strptime(date_only, "%d %b %Y")
-
-            # Format the datetime object into the desired format
-            formatted_date = date_obj.strftime("%d/%m/%Y")
-            res = CasemineUtil.compare_date(formatted_date, self.crawled_till)
-            if (res == 1):
-                self.crawled_till = formatted_date
             dates.append(
                 date.fromtimestamp(
                     time.mktime(time.strptime(date_only, "%d %b %Y"))
@@ -42,9 +34,11 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [
-            e.split("|")[0] for e in self.html.xpath("//item/title/text()")
-        ]
+        dockets=[]
+        for e in self.html.xpath("//item/title/text()"):
+            dock=[e.split("|")[0]]
+            dockets.append(dock)
+        return dockets
 
     def _get_precedential_statuses(self):
         return ["Published" for _ in range(0, len(self.case_names))]
@@ -52,3 +46,13 @@ class Site(OpinionSite):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         self.parse()
         return 0
+
+    def get_class_name(self):
+        return "cadc"
+
+    def get_court_name(self):
+        return 'United States Court Of Appeals For The District Of Columbia Circuit'
+
+    def get_court_type(self):
+        return 'Federal'
+

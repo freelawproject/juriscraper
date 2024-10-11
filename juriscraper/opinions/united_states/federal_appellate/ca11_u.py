@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from juriscraper.lib.html_utils import get_html5_parsed_text
 from juriscraper.opinions.united_states.federal_appellate import ca11_p
 
@@ -22,3 +24,6 @@ class Site(ca11_p.Site):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def get_class_name(self):
+        return "ca11_u"

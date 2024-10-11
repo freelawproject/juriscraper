@@ -37,7 +37,6 @@ class Site(OpinionSiteLinear):
             for publicationItem in item["publicationItems"]:
                 if not publicationItem.get("documents", []):
                     continue
-
                 url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
                 docket = publicationItem["caseNumber"]
                 author = publicationItem["groupName"]

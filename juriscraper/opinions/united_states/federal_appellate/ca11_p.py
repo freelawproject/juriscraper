@@ -6,6 +6,7 @@
 
 from datetime import datetime
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -58,8 +59,13 @@ class Site(OpinionSite):
         num = 1
         begin = 0
         numbegin = 1
-        while(True):
-            self.url = 'https://media.ca11.uscourts.gov/opinions/pub/logname.php?begin='+str(begin)+'&num='+str(num)+'&numBegin='+str(numbegin)
+        flag = True
+        while(flag):
+            if(self.get_class_name().__eq__("ca11_p")):
+                self.url = 'https://media.ca11.uscourts.gov/opinions/pub/logname.php?begin='+str(begin)+'&num='+str(num)+'&numBegin='+str(numbegin)
+            else:
+                self.url = 'http://media.ca11.uscourts.gov/opinions/unpub/logname.php?begin='+str(begin)+'&num='+str(num)+'&numBegin='+str(numbegin)
+
             if not self.downloader_executed:
                 # Run the downloader if it hasn't been run already
                 self.html = self._download()
@@ -77,19 +83,25 @@ class Site(OpinionSite):
                     if s == "00-00-0000" and "begin=21160" in self.url:
                         # Bad data found during backscrape.
                         s = "12-13-2006"
-                    self.dates.append(
-                        datetime.strptime(clean_string(s), "%m-%d-%Y").date())
+                    date_obj = datetime.strptime(clean_string(s), "%m-%d-%Y").date()
+                    formatted_date = date_obj.strftime("%d/%m/%Y")
+                    res = CasemineUtil.compare_date(formatted_date,self.crawled_till)
+                    if(res==-1):
+                        flag=False
+
+                    self.dates.append(date_obj)
 
                 for e in self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()"):
-                    self.dockets.append(e)
+                    doc=[e]
+                    self.dockets.append(doc)
 
                 for e in self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()"):
                     self.nature.append(e)
                 self.downloader_executed = False
                 num = num + 1
                 begin = begin + 20
-                if (num == 5):
-                    break
+                # if (num == 5):
+                #     break
                 if (num == 20):
                     numbegin = numbegin + 20
         # Set the attribute to the return value from _get_foo()
@@ -107,3 +119,12 @@ class Site(OpinionSite):
             self._date_sort()
             self._make_hash()
         return 0
+
+    def get_class_name(self):
+        return "ca11_p"
+
+    def get_court_name(self):
+        return 'United States Court Of Appeals For The Eleventh Circuit'
+
+    def get_court_type(self):
+        return 'Federal'

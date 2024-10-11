@@ -67,17 +67,27 @@ class Site(OpinionSite):
         for data in self.html.xpath(path):
             data = clean_if_py3(data).strip()
             if data:
-                results.append(data)
+                if(n==2):
+                    docket=[]
+                    docket.append(data)
+                    results.append(docket)
+                else:
+                    results.append(data)
         return results
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         self.method = "POST"
-        date_obj1 = start_date.strftime('%d/%m/%Y')
-        date_obj2 = end_date.strftime('%d/%m/%Y')
-        # edate = str(end_date.day) + "/" + str(end_date.month) + "/" + str(
-        #     end_date.year)
-
+        date_obj1 = start_date.strftime('%m/%d/%Y')
+        date_obj2 = end_date.strftime('%m/%d/%Y')
         self.parameters = {"FROMDATE": date_obj1, "TODATE": date_obj2,"puid": "$puid"}
         self.parse()
         return 0
 
+    def get_class_name(self):
+        return "ca6"
+
+    def get_court_name(self):
+        return 'United States Court Of Appeals For The Sixth Circuit'
+
+    def get_court_type(self):
+        return 'Federal'

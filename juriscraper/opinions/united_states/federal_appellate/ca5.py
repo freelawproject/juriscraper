@@ -4,6 +4,7 @@
 
 from datetime import datetime
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -23,14 +24,24 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = "//item/description/text()[5]"
-        return [
-            datetime.strptime(date_string, "%m/%d/%Y").date()
-            for date_string in self.html.xpath(path)
-        ]
+        dates=[]
+        for date_string in self.html.xpath(path):
+            date_obj = datetime.strptime(date_string, "%m/%d/%Y").date()
+            formatted_date = date_obj.strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(formatted_date, self.crawled_till)
+            if (res == 1):
+                self.crawled_till = formatted_date
+            dates.append(date_obj)
+        return dates
 
     def _get_docket_numbers(self):
         path = "//item/description/text()[1]"
-        return [s for s in self.html.xpath(path)]
+        dockets=[]
+        for s in self.html.xpath(path):
+            docket=[]
+            docket.append(s)
+            dockets.append(docket)
+        return dockets
 
     def _get_precedential_statuses(self):
         path = "//item/description/text()[3]"
@@ -50,4 +61,14 @@ class Site(OpinionSite):
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         self.parse()
+        return 0
+
+    def get_class_name(self):
+        return "ca5"
+
+    def get_court_name(self):
+        return 'United States Court Of Appeals For The Fifth Circuit'
+
+    def get_court_type(self):
+        return 'Federal'
 

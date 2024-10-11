@@ -2,8 +2,9 @@ import json
 from datetime import date, datetime
 from typing import Tuple
 from urllib.parse import urlencode
-from lxml import etree
+
 from bs4 import BeautifulSoup
+from lxml import etree
 
 from casemine.CaseMineCrawl import CaseMineCrawl
 from casemine.casemine_util import CasemineUtil
@@ -184,25 +185,36 @@ class Site(OpinionSiteLinear):
                     res = CasemineUtil.compare_date(date_obj, self.crawled_till)
                     if(res == 1):
                         self.crawled_till = date_obj
-                    docket = td.__getitem__(2).text
+                    dockets = []
+                    docket = td.__getitem__(2).text.replace("\n","").strip()
+                    dockets.append(docket)
                     self.cases.append(
                         {
                          "name": name.strip(),
                          "url": url,
                          "date": date_filed,
                          "status": status,
-                         "docket": docket,
+                         "docket": dockets,
                          "lower_court": lower_court,
-                         'judge': '',
-                         'citation': '', 'parallel_citation': '',
-                        'summary': '', 'child_court': '',
-                            'adversary_number': '', 'division': '',
-                            'disposition': '', 'cause': '',
-                            'docket_attachment_number': '',
-                            'docket_document_number': '', 'nature_of_suit': '',
-                            'lower_court_number': '', 'lower_court_judge': '',
-                            'author': '', 'per_curiam': '', 'type': '',
-                            'joined_by': '', 'other_date': ''
+                         'judge': [],
+                         'citation': [],
+                         'parallel_citation': [],
+                         'summary': '',
+                         'child_court': '',
+                         'adversary_number': '',
+                         'division': '',
+                         'disposition': '',
+                         'cause': '',
+                         'docket_attachment_number': [],
+                         'docket_document_number': [],
+                         'nature_of_suit': '',
+                         'lower_court_number': '',
+                         'lower_court_judge': [],
+                         'author': '',
+                         'per_curiam': '',
+                         'type': '',
+                         'joined_by': '',
+                         'other_date': ''
                     })
                 i = i + 1
 
@@ -313,10 +325,10 @@ class Site(OpinionSiteLinear):
             self.days_interval)
 
     def get_class_name(self):
-        return "ca1.py"
+        return "ca1"
 
     def get_court_name(self):
         return 'United States Court of Appeals For the First Circuit'
 
     def get_court_type(self):
-        return 'federal_appellate'
+        return 'Federal'

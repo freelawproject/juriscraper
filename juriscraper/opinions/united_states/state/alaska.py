@@ -54,15 +54,16 @@ class Site(OpinionSiteLinear):
                     # skip rows without PDF links in first column
                     try:
                         url = get_row_column_links(row, 1)
+                        url=str(url).replace("'","%27")
                     except IndexError:
                         continue
 
                     self.cases.append(
                         {
                             "date": adate,
-                            "docket": get_row_column_text(row, 3),
+                            "docket": [get_row_column_text(row, 3)],
                             "name": get_row_column_text(row, 4),
-                            "citation": get_row_column_text(row, 5),
+                            "citation": [get_row_column_text(row, 5)],
                             "url": url,
                         }
                     )
@@ -113,3 +114,46 @@ class Site(OpinionSiteLinear):
         """
         parsed_date = parser.parse(date_str).date()
         return self.start_date <= parsed_date and parsed_date <= self.end_date
+
+    def parse(self):
+        if not self.downloader_executed:
+            # Run the downloader if it hasn't been run already
+            self.html = self._download()
+            while(self.html is None):
+                self.html=self._download()
+
+            # Process the available html (optional)
+            self._process_html()
+
+        # Set the attribute to the return value from _get_foo()
+        # e.g., this does self.case_names = _get_case_names()
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            # This needs to be done *after* _clean_attributes() has been run.
+            # The current architecture means this gets run twice. Once when we
+            # iterate over _all_attrs, and again here. It's pretty cheap though.
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return self
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
+
+    def get_court_type(self):
+        return "state"
+
+    def get_court_name(self):
+        return "Supreme Court Of The State Of Alaska"
+
+    def get_class_name(self):
+        return "alaska"
+
+    def get_state_name(self):
+        return "Alaska"
