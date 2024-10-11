@@ -39,3 +39,6 @@ class OralArgumentSiteLinear(OralArgumentSite):
 
     def _get_judges(self):
         return self._get_optional_field_by_id("judge")
+
+    def _get_attorneys(self):
+        return self._get_optional_field_by_id("attorney")
