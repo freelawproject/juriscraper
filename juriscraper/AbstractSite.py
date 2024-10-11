@@ -62,14 +62,14 @@ class AbstractSite(CaseMineCrawl):
         self.downloader_executed = False
         self.cookies = {}
         self.proxies = {
-            "http": "46.175.155.107:8800",
-            "https": "46.175.155.107:8800",
+            "http": "p.webshare.io:9999",
+            "https": "p.webshare.io:9999",
         }
         self.cnt = cnt or CaseNameTweaker()
         self.request = {
             "verify": certifi.where(),
             "session": requests.session(),
-            "headers": {"User-Agent": "Juriscraper"},
+            "headers": {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"},
             # Disable CDN caching on sites like SCOTUS (ahem)
             "cache-control": "no-cache, no-store, max-age=1",
             "parameters": {},

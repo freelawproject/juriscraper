@@ -10,3 +10,9 @@ class Site(alaska.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://appellate-records.courts.alaska.gov/CMSPublic/Home/Opinions?isCOA=True"
+
+    def get_class_name(self):
+        return "alaskactapp"
+
+    def get_court_name(self):
+        return 'Alaska Court of Appeals'

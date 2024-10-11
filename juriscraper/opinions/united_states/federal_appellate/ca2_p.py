@@ -51,6 +51,15 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return self.status
 
+    def get_class_name(self):
+        return 'ca2_p'
+
+    def get_court_name(self):
+        return 'United States Court of Appeals For the Second Circuit'
+
+    def get_court_type(self):
+        return 'Federal'
+
     def _download_backwards(self, d):
         self.url = "http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100&IW_FILTER_DATE_BEFORE={before}&IW_FILTER_DATE_After={after}".format(
             before=(d + timedelta(self.interval)).strftime("%Y%m%d"),
@@ -90,8 +99,6 @@ class Site(OpinionSite):
                 page_link = "https://ww3.ca2.uscourts.gov/" + page_link
                 return page_link
 
-
-
     def parse(self):
         if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
@@ -124,7 +131,9 @@ class Site(OpinionSite):
                 # docket_numbers
                 docket_node = self.html.xpath("//table/td/b/a/nobr")
                 for doc in docket_node:
-                    self.dockets.append(doc.text_content())
+                    cus_doc = []
+                    cus_doc.append(doc.text_content())
+                    self.dockets.append(cus_doc)
 
                 url_node = self.html.xpath("//table/td/b/a/@href")
                 for url in url_node:
@@ -165,4 +174,3 @@ class Site(OpinionSite):
             proxies=self.proxies, timeout=60, **self.request["parameters"])
         self._post_process_response()
         self.html = self._return_response_text_object()
-

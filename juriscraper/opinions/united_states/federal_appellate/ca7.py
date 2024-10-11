@@ -32,6 +32,7 @@ class Site(OpinionSiteLinear):
         for tr in trs:
             td = tr.find_all_next('td')
             case_docket = td[0].text
+            docket= [case_docket]
             title = td[1].text
             case_type = td[2].text
             case_date = td[3].text
@@ -57,7 +58,7 @@ class Site(OpinionSiteLinear):
             # author = item["summary"].split("{")[1].split("}")[0]
             self.cases.append({
                 "url": url,
-                "docket": case_docket,
+                "docket": docket,
                 "date": formatted_date,
                 "name": title,
                 "status": status,
@@ -73,3 +74,12 @@ class Site(OpinionSiteLinear):
         self.url='https://media.ca7.uscourts.gov/cgi-bin/OpinionsWeb/processWebInputExternal.pl?Time=any&startDate='+sdate+'&endDate='+edate+'&Author=any&AuthorName=&Case=any&CaseYear=&CaseNum=&OpsOnly=yesRubmit=RssRecent&RssJudgeName=Sykes&'
         self.parse()
         return 0
+
+    def get_class_name(self):
+        return "ca7"
+
+    def get_court_name(self):
+        return 'United States Court of Appeals For the Seventh Circuit'
+
+    def get_court_type(self):
+        return 'Federal'

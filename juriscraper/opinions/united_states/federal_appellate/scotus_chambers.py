@@ -96,7 +96,8 @@ class Site(OpinionSite):
             case = self.extract_case_data_from_row(row)
             if case:
                 # Below will raise key error is new judge key encountered (new SC judge appointed)
-                case["judge"] = self.justices[case["J."]] if case["J."] else ""
+                jud = self.justices[case["J."]] if case["J."] else ""
+                case["judge"] = [jud]
                 self.cases.append(case)
                 for revision_data in case["revisions"]:
                     revision = case.copy()
@@ -114,7 +115,7 @@ class Site(OpinionSite):
             if cell_index == 0 and not text:
                 break
             label = self.headers[cell_index]
-            if label in ["R-", "Pt."]:
+            if label in ["R-"]:
                 # Ignore some columns that we don't need
                 pass
             elif label == "Revised":
@@ -130,7 +131,12 @@ class Site(OpinionSite):
                     )
             else:
                 # Handle normal data cells
-                case[label] = text
+                if label == "Docket" or label == "Pt." or label == "Citation":
+                    if label == "Pt." or label == "Citation":
+                        label = "citations"
+                    case[label] = [text]
+                else:
+                    case[label] = text
                 href = cell.xpath("./a/@href")
                 if href:
                     case[f"{label}_Url"] = href[0]
@@ -149,15 +155,14 @@ class Site(OpinionSite):
         for case in self.cases:
             # Apply the convert_date_string function to the date and append the result to the list
             converted_date = convert_date_string(case["Date"])
-            date = converted_date.strftime('%d/%m/%Y')
-            res = CasemineUtil.compare_date(date,self.crawled_till)
-            if(res==1):
-                self.crawled_till = date
             converted_dates.append(converted_date)
         return converted_dates
 
     def _get_docket_numbers(self):
         return [case["Docket"] for case in self.cases]
+
+    def _get_citations(self):
+        return [case["citations"] for case in self.cases]
 
     def _get_judges(self):
         return [case["judge"] for case in self.cases]
@@ -173,3 +178,12 @@ class Site(OpinionSite):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         self.parse()
         return 0
+
+    def get_class_name(self):
+        return 'scotus_chambers'
+
+    def get_court_name(self):
+        return 'U.S. Supreme Court'
+
+    def get_court_type(self):
+        return 'Federal'

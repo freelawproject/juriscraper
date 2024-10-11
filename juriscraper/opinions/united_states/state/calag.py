@@ -14,9 +14,6 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.year = datetime.date.today().year
-        self.url = f"https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]={self.year}"
-        self.back_scrape_iterable = list(range(1985, self.year + 1))
         self.cipher = "ECDHE-RSA-AES128-GCM-SHA256"
         self.set_custom_adapter(self.cipher)
         self.status = "Published"
@@ -40,11 +37,12 @@ class Site(OpinionSiteLinear):
             docket = row.xpath(".//a//strong/text()")[0].strip()
             # Citation may not exist (yet?)
             citation = row.xpath(".//strong/em/text()")
+            cit = citation[0] if citation else ""
             self.cases.append(
                 {
                     "url": row.xpath(".//a/@href")[0],
-                    "citation": citation[0] if citation else "",
-                    "docket": docket,
+                    "citation": [cit],
+                    "docket": [docket],
                     "date": row.xpath(".//td/span/text()")[0].strip(),
                     "name": f"California Attorney General Opinion {docket}",
                     "summary": self.build_summaries(row),
@@ -58,3 +56,16 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         self.url = f"https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]={year}"
+
+    def get_court_name(self):
+        return
+
+    def get_class_name(self):
+        return "calag"
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.year = end_date.year
+        self.url = f"https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]={self.year}"
+        self.back_scrape_iterable = list(range(1985, self.year + 1))
+        self.parse()
+        return 0

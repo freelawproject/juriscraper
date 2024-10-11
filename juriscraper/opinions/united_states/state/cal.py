@@ -1,4 +1,5 @@
 import re
+from datetime import datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -32,9 +33,26 @@ class Site(OpinionSiteLinear):
                 "name": case_name,
                 "url": url,
                 "date": date_filed,
-                "docket": docket,
+                "docket": [docket],
             }
             if self.division:
                 case["division"] = self.division
 
             self.cases.append(case)
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
+
+    def get_court_name(self):
+        return "Supreme Court of California"
+
+    def get_state_name(self):
+        return "California"
+
+    def get_class_name(self):
+        return "cal"
+
+    def get_court_type(self):
+        return "state"
+

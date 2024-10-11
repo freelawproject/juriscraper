@@ -52,6 +52,7 @@ class Site(OpinionSiteLinear):
         for tr in trs:
             tds = tr.findAll('td')
             docket = tds[0].text.replace('\n','').strip()
+            dockets=[docket]
             name = tds[1].text.replace('\n','').strip()
             date = tds[2].text.replace('\n','').strip()
             lower_court = tds[3].text.replace('\n','').strip()
@@ -60,7 +61,7 @@ class Site(OpinionSiteLinear):
                                "name": name,
                                "date": date,
                                "status": "Published",
-                               "docket": docket, }
+                               "docket": dockets, }
                               )
 
 
@@ -90,18 +91,14 @@ class Site(OpinionSiteLinear):
                 for tr in trs:
                     tds = tr.findAll('td')
                     docket = tds[0].text.replace('\n', '').strip()
+                    dockets=[docket]
                     name = tds[1].text.replace('\n', '').strip()
                     date = tds[2].text.replace('\n', '').strip()
-                    date_object = datetime.strptime(date, '%m/%d/%Y')
-                    date_filed = date_object.strftime('%d/%m/%Y')
-                    res = CasemineUtil.compare_date(date_filed,self.crawled_till)
-                    if (res == 1):
-                        self.crawled_till = date_filed
                     lower_court = tds[3].text.replace('\n', '').strip()
                     pdf_url = tds[4].find('a').attrs.get('href')
                     self.cases.append(
                         {"url": pdf_url, "name": name, "date": date,
-                         "status": "Published", "docket": docket, "lower_court":lower_court})
+                         "status": "Published", "docket": dockets, "lower_court":lower_court})
                 self.downloader_executed = False
 
             for attr in self._all_attrs:
@@ -124,3 +121,12 @@ class Site(OpinionSiteLinear):
 
             # return self
         return 0
+
+    def get_class_name(self):
+        return "ca10"
+
+    def get_court_name(self):
+        return 'United States Court of Appeals For the Tenth Circuit'
+
+    def get_court_type(self):
+        return 'Federal'

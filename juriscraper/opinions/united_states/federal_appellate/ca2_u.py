@@ -5,6 +5,7 @@ Contact:
   ecfhelpdesk@ca2.uscourts.gov
   Shane_Clouden@ca2.uscourts.gov
 """
+from datetime import datetime
 
 from juriscraper.opinions.united_states.federal_appellate import ca2_p
 
@@ -14,3 +15,7 @@ class Site(ca2_p.Site):
         super().__init__(*args, **kwargs)
         self.url = "http://www.ca2.uscourts.gov/decisions?IW_DATABASE=SUM&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100"
         self.court_id = self.__module__
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0

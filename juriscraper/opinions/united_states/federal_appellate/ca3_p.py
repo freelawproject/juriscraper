@@ -49,7 +49,8 @@ class Site(OpinionSite):
             if not text_string.lower().startswith("filed"):
                 continue
             else:
-                docket_numbers.append(text_string.split(" ")[3])
+                docket= [text_string.split(" ")[3]]
+                docket_numbers.append(docket)
         return docket_numbers
 
     def _get_precedential_statuses(self):
@@ -80,3 +81,14 @@ class Site(OpinionSite):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         self.parse()
         return 0
+
+    def get_court_type(self):
+        return 'Federal'
+
+    def get_court_name(self):
+        return "United States Court Of Appeals For The Third Circuit"
+
+    def get_class_name(self):
+        return "ca3_p"
+
+
