@@ -17,6 +17,7 @@ class OralArgumentSite(AbstractSite):
             "docket_numbers",
             "judges",
             "case_name_shorts",
+            "attorneys",
         ]
         self._req_attrs = [
             "case_dates",
@@ -46,4 +47,7 @@ class OralArgumentSite(AbstractSite):
         return None
 
     def _get_judges(self):
+        return None
+
+    def _get_attorneys(self):
         return None

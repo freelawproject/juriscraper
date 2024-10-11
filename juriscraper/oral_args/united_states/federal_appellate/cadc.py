@@ -4,59 +4,86 @@ Court Short Name: cadc
 Author: Andrei Chelaru
 Reviewer: mlr
 Date created: 18 July 2014
+Updated: 2024-10-10
 """
 
 from datetime import date, datetime
+from urllib.parse import urljoin
 
-from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
+    days_interval = 28  # ensure monthly backscraper ticks
+    first_opinion_date = datetime(2007, 9, 10)
+    base_url = "https://media.cadc.uscourts.gov/recordings/bydate/{}"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        d = date.today()
-        # d = date(month=5, day=1, year=2014)
-        self.url = "http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}".format(
-            yearmo=d.strftime("%Y%m")
-        )
-        self.back_scrape_iterable = [
-            "%s%02d" % (year, month)
-            for year in range(2007, d.year + 1)
-            for month in range(1, 13)
-        ]
+        today = date.today()
+        self.url = self.base_url.format(today.strftime("%Y/%-m"))
+        self.request["verify"] = False
+        self.make_backscrape_iterable(kwargs)
 
-    def _download(self, **kwargs):
-        # The certificate on their site has expired.
-        return super()._download(request_dict={"verify": False})
+    def _process_html(self):
+        anchor_xpath = "a[contains(@href, '/recordings/docs/') and contains(@href, '.mp3')]"
+        for row in self.html.xpath(f"//div[div[div[div[{anchor_xpath}]]]]"):
+            ahref = row.xpath(f".//{anchor_xpath}")
+            url = ahref[0].xpath("@href")[0]
+            docket = ahref[0].xpath("text()")[0]
 
-    def _get_download_urls(self):
-        path = "id('ViewBody')//div[contains(concat(' ',@class,' '),' row-entry')]//@href"
-        return list(self.html.xpath(path))
+            if "mp3" not in url:
+                logger.info("Not a mp3 URL? %s", url)
+                continue
 
-    def _get_case_names(self):
-        path = "id('ViewBody')//*[contains(concat(' ',@class,' '),' column-two')]/div[1]/text()"
-        return list(self.html.xpath(path))
+            cells = row.xpath("div[2]/div")
 
-    def _get_case_dates(self):
-        path = "id('ViewBody')//date/text()"
-        return list(map(self._return_case_date, self.html.xpath(path)))
+            # From: "Judges: Tatel, Griffith, Sentelle"
+            # To: "Tatel; Griffith; Sentelle"
+            judges = (
+                cells[1].text_content().split(": ", 1)[-1].replace(",", ";")
+            )
+            self.cases.append(
+                {
+                    "url": urljoin(self.base_url, url),
+                    "docket": docket,
+                    "name": cells[0].text_content(),
+                    "judge": judges,
+                    "attorney": cells[2].text_content(),
+                    "date": cells[3].text_content(),
+                }
+            )
 
-    @staticmethod
-    def _return_case_date(e):
-        e = "".join(e.split())
-        return datetime.strptime(e, "%m/%d/%Y").date()
-
-    def _get_docket_numbers(self):
-        path = "id('ViewBody')//*[contains(concat(' ',@class,' '),' row-entry')]//a//text()"
-        return list(self.html.xpath(path))
-
-    def _get_judges(self):
-        path = '//div[span[contains(., "Judges")]]/text()'
-        return [" ".join(s.split()) for s in self.html.xpath(path)]
-
-    def _download_backwards(self, yearmo):
-        self.url = "http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}".format(
-            yearmo=yearmo,
-        )
+    def _download_backwards(self, url: str) -> None:
+        logger.info("Backscraping URL '%s'", url)
+        self.url = url
         self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Use base function to generate a range, then pick
+        unique year-month combinations to build the backscrape
+        URLS, and save them to the self.back_scrape_iterable
+
+        Note that this URL will work:
+        "https://media.cadc.uscourts.gov/recordings/bydate/2007/9"
+        but this won't
+        "https://media.cadc.uscourts.gov/recordings/bydate/2007/09"
+
+        That's why the '%-m' formatter is needed
+        """
+        super().make_backscrape_iterable(kwargs)
+        seen_year_months = set()
+        urls = []
+
+        for tupl in self.back_scrape_iterable:
+            for item in tupl:
+                ym = item.strftime("%Y/%-m")
+                if ym in seen_year_months:
+                    continue
+                seen_year_months.add(ym)
+                urls.append(self.base_url.format(ym))
+
+        self.back_scrape_iterable = urls
