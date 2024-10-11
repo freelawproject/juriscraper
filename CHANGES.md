@@ -16,14 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.30 - 2024-10-10**
+
+Fixes:
+  - fix `CADC` oral arguments
+
+## Past
+
 **2.6.29 - 2024-10-10**
 
 Fixes:
   - fix `or` and `orctapp` scraper, scraping new endpoint
   - fix cache control headers in `AbstractSite`
   - fix `sc` expected content types
-
-## Past
 
 **2.6.28 - 2024-09-27**
 
