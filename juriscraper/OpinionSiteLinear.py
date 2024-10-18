@@ -40,6 +40,7 @@ class OpinionSiteLinear(OpinionSite):
         "type",
         "joined_by",
         "other_date",
+        "attorney",
     }
 
     def __init__(self, *args, **kwargs):
@@ -152,6 +153,10 @@ class OpinionSiteLinear(OpinionSite):
     def _get_other_dates(self):
         """Goes into OpinionCluster.other_dates, type: string"""
         return self._get_optional_field_by_id("other_date")
+
+    def _get_attorneys(self):
+        """Goes into OpinionCluster.attorneys, type: string"""
+        return self._get_optional_field_by_id("attorney")
 
     def _check_sanity(self):
         super()._check_sanity()
