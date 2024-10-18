@@ -1,3 +1,4 @@
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -50,8 +51,10 @@ class Site(OpinionSiteLinear):
             for row in table.xpath(".//tr[td]"):
                 c1, c2, c3 = row.xpath(".//td")
                 docket = c1.xpath(".//text()")[0].strip()
-                if "A-XX-XXXX" in docket:
+                if "A-XX-XXXX" in docket or not c3.xpath(".//a"):
+                    logger.info("Skip row %s", row.text_content())
                     continue
+
                 citation = c2.xpath(".//text()")[0].strip()
                 name = c3.xpath(".//a/text()")[0].strip()
                 url = c3.xpath(".//a")[0].get("href")
