@@ -4,6 +4,7 @@ import datetime
 from datetime import date
 from itertools import zip_longest
 from math import ceil
+from typing import Union
 
 from dateutil.parser import parser, parserinfo
 from dateutil.rrule import DAILY, rrule
@@ -150,3 +151,30 @@ def make_date_range_tuples(start, end, gap):
         for d in rrule(DAILY, interval=gap, dtstart=end_start, until=end)
     ]
     return list(zip_longest(start_dates, end_dates, fillvalue=end))
+
+
+def unique_year_month(
+    date_list: list[Union[date, datetime.datetime, tuple[date]]],
+) -> list[Union[date, datetime.datetime]]:
+    """Takes a list of dates or date tuples, and reduces it
+    to date objects with unique year-months pairs
+
+    :param date_list: a list containing dates or tuples of dates
+        default make_backscrape_iterable returns date tuples
+    :return: a list with date objects of unique year-month pairs
+    """
+    unique_list = []
+    seen_year_months = set()
+
+    for obj in date_list:
+        if isinstance(obj, date) or isinstance(obj, datetime.datetime):
+            obj = [obj]
+
+        for date_obj in obj:
+            ym = date_obj.strftime("%Y%m")
+            if ym in seen_year_months:
+                continue
+            seen_year_months.add(ym)
+            unique_list.append(date_obj)
+
+    return unique_list
