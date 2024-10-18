@@ -20,7 +20,11 @@ class Site(colo.Site):
 
     @staticmethod
     def cleanup_content(content: str) -> str:
-        """Returned HTML needs 2 modifications:
+        """Returned HTML may need editing for proper ingestion
+
+        The HTML seems to change constantly, so some of these
+        steps may be outdated (Check juriscraper#1198 and courtlistener#4443)
+
         - delete style and img tags which hold tokens
         that make the hash change everytime
 
@@ -33,8 +37,9 @@ class Site(colo.Site):
         tree = html.fromstring(content)
         remove_xpaths = ["//style", "//img"]
         for xpath in remove_xpaths:
-            to_remove = tree.xpath(xpath)[0]
-            to_remove.getparent().remove(to_remove)
+            if tree.xpath(xpath):
+                to_remove = tree.xpath(xpath)[0]
+                to_remove.getparent().remove(to_remove)
 
         for tag in tree.xpath("//*[@class]"):
             tag.attrib.pop("class")
