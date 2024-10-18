@@ -83,6 +83,10 @@ class Site(OpinionSiteLinear):
                 self._request_url_get(url)
                 detail_json = self.request["response"].json()
 
+            # Reset variables to prevent sticking previous values
+            # when a value is missing
+            docket_number, case_name_full, date_filed = "", "", ""
+
             # Example of parallel citation:
             # https://research.coloradojudicial.gov/vid/907372624
             citation, parallel_citation = "", ""
@@ -90,12 +94,12 @@ class Site(OpinionSiteLinear):
                 label = p["property"]["label"]
                 if label == "Docket Number":
                     docket_number = p["values"][0]
-                if label == "Parties":
+                elif label == "Parties":
                     case_name_full = p["values"][0]
-                if label == "Decision Date":
+                elif label == "Decision Date":
                     # Note that json['published_at'] is not the date_filed
                     date_filed = p["values"][0]
-                if label == "Citation":
+                elif label == "Citation":
                     citation = p["values"][0]
                     if len(p["values"]) > 1:
                         parallel_citation = p["values"][1]
