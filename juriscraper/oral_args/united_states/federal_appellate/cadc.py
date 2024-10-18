@@ -11,6 +11,7 @@ from datetime import date, datetime
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -56,16 +57,8 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, url: str) -> None:
-        logger.info("Backscraping URL '%s'", url)
-        self.url = url
-        self.html = self._download()
-        self._process_html()
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Use base function to generate a range, then pick
-        unique year-month combinations to build the backscrape
-        URLS, and save them to the self.back_scrape_iterable
+    def _download_backwards(self, target_date: date) -> None:
+        """Download historical data
 
         Note that this URL will work:
         "https://media.cadc.uscourts.gov/recordings/bydate/2007/9"
@@ -74,16 +67,17 @@ class Site(OralArgumentSiteLinear):
 
         That's why the '%-m' formatter is needed
         """
+        self.url = self.base_url.format(target_date.strftime("%Y/%-m"))
+        logger.info("Backscraping URL '%s'", self.url)
+        self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Use base function to generate a range, then pick
+        unique year-month combinations to build the backscrape
+        URLS
+        """
         super().make_backscrape_iterable(kwargs)
-        seen_year_months = set()
-        urls = []
-
-        for tupl in self.back_scrape_iterable:
-            for item in tupl:
-                ym = item.strftime("%Y/%-m")
-                if ym in seen_year_months:
-                    continue
-                seen_year_months.add(ym)
-                urls.append(self.base_url.format(ym))
-
-        self.back_scrape_iterable = urls
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )
