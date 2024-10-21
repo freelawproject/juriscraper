@@ -16,6 +16,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.32 - 2024-10-21**
+
+Features:
+  - added `okla` cleanup_content
+
+Fixes:
+  - updated `coloctapp` cleanup_content
+
+## Past
+
 **2.6.31 - 2024-10-21**
 
 Fixes:
@@ -26,8 +36,6 @@ Fixes:
 Features:
   - new scraper `lactapp_5` for Lousiana Court of Appeals, Fifth Circuit
   - now sending a `logger.error` call to Sentry when an scraped date is in the future
-
-## Past
 
 **2.6.30 - 2024-10-10**
 
