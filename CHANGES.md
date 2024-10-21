@@ -16,12 +16,23 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.31 - 2024-10-21**
+
+Fixes:
+  - `neb` now handles rows with no links
+  - `coloctapp` update cleanup_content
+  - fix `la` xpath selector that was skipping some cases
+
+Features:
+  - new scraper `lactapp_5` for Lousiana Court of Appeals, Fifth Circuit
+  - now sending a `logger.error` call to Sentry when an scraped date is in the future
+
+## Past
+
 **2.6.30 - 2024-10-10**
 
 Fixes:
   - fix `CADC` oral arguments
-
-## Past
 
 **2.6.29 - 2024-10-10**
 
