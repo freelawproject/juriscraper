@@ -16,12 +16,36 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.30 - 2024-10-10**
+
+Fixes:
+  - fix `CADC` oral arguments
+
+## Past
+
+**2.6.29 - 2024-10-10**
+
+Fixes:
+  - fix `or` and `orctapp` scraper, scraping new endpoint
+  - fix cache control headers in `AbstractSite`
+  - fix `sc` expected content types
+
+**2.6.28 - 2024-09-27**
+
+Features:
+  - new scraper `sc_u`
+
+Fixes:
+  - handle `illappct` (oral args) rows with no download link
+  - `ca11` update to Oral Argument Site Linear
+  - `cadc_u` change docket number getter
+  - `sc` implement new site
+
 **2.6.27 - 2024-09-16**
 
 Fixes:
   - Fixes `coloctapp`
 
-## Past
 
 
 **2.6.25 - 2024-09-16**

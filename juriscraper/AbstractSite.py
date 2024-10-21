@@ -1,6 +1,6 @@
 import hashlib
 import json
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from typing import Dict, List, Tuple
 
 import certifi
@@ -53,9 +53,13 @@ class AbstractSite:
         self.request = {
             "verify": certifi.where(),
             "session": requests.session(),
-            "headers": {"User-Agent": "Juriscraper"},
-            # Disable CDN caching on sites like SCOTUS (ahem)
-            "cache-control": "no-cache, no-store, max-age=1",
+            "headers": {
+                "User-Agent": "Juriscraper",
+                # Disable CDN caching on sites like SCOTUS (ahem)
+                "Cache-Control": "no-cache, max-age=0, must-revalidate",
+                # backwards compatibility with HTTP/1.0 caches
+                "Pragma": "no-cache",
+            },
             "parameters": {},
             "request": None,
             "status": None,
@@ -253,6 +257,7 @@ class AbstractSite:
                 prior_case_name = name
                 i += 1
 
+        future_date_count = 0
         for index, case_date in enumerate(self.case_dates):
             if not isinstance(case_date, date):
                 raise InsanityException(
@@ -262,24 +267,30 @@ class AbstractSite:
                 )
             # Sanitize case date, fix typo of current year if present
             fixed_date = fix_future_year_typo(case_date)
+            case_name = self.case_names[index]
             if fixed_date != case_date:
                 logger.info(
                     "Date year typo detected. Converting %s to %s "
-                    "for case '%s' in %s"
-                    % (
-                        case_date,
-                        fixed_date,
-                        self.case_names[index],
-                        self.court_id,
-                    )
+                    "for case '%s' in %s",
+                    case_date,
+                    fixed_date,
+                    case_name,
+                    self.court_id,
                 )
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
-            if case_date.year > 2025:
-                raise InsanityException(
-                    "%s: member of case_dates list is from way in the future, "
-                    "with value %s" % (self.court_id, case_date.year)
-                )
+
+            # dates should not be in the future. Tolerate a week
+            if case_date > (date.today() + timedelta(days=7)):
+                future_date_count += 1
+                error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
+                logger.error(error)
+
+                # Interrupt data ingestion if more than 1 record has a bad date
+                if future_date_count > 1:
+                    raise InsanityException(
+                        f"More than 1 case has a date in the future. Last case: {error}"
+                    )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:

@@ -23,6 +23,7 @@ from datetime import date
 from typing import Dict, List, Tuple
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -80,20 +81,28 @@ class Site(OpinionSiteLinear):
         and replace the self.back_scrape_iterable
         """
         super().make_backscrape_iterable(kwargs)
-        backscrape_iterable = []
-        seen_year_months = set()
-        for date_obj, _ in self.back_scrape_iterable:
-            ym = date_obj.strftime("%Y%m")
-            if ym in seen_year_months:
-                continue
-            seen_year_months.add(ym)
-            backscrape_iterable.append(self.make_url_from_date(date_obj))
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )
 
-        self.back_scrape_iterable = backscrape_iterable
+    def _download_backwards(self, date_obj: date) -> None:
+        """Downloads an older page, and parses it
 
-    def _download_backwards(self, url: str) -> None:
-        self.url = url
-        logger.info("Backscraping URL: %s", url)
+        Opinions from terms older than 2012-06 are in HTML
+        format, which needs updating the
+        self.expected_content_types attribute.
+
+        Only do it for the backscraper to prevent ingesting
+        bad data in the present day
+
+        :param date_obj: date object to build the URL
+        :return None
+        """
+        if date_obj.year <= 2012:
+            self.expected_content_types.append("text/html")
+
+        self.url = self.make_url_from_date(date_obj)
+        logger.info("Backscraping URL: %s", self.url)
         self.html = self._download()
         self._process_html()
 
