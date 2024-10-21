@@ -9,6 +9,8 @@ History:
     - 2023-11-19: Updated by William E. Palin
 """
 
+import re
+
 from lxml import html
 
 from juriscraper.opinions.united_states.state import colo
@@ -35,14 +37,22 @@ class Site(colo.Site):
         :return: cleaned up html
         """
         tree = html.fromstring(content)
-        remove_xpaths = ["//style", "//img"]
-        for xpath in remove_xpaths:
-            if tree.xpath(xpath):
-                to_remove = tree.xpath(xpath)[0]
-                to_remove.getparent().remove(to_remove)
+        remove_tags = ["//style", "//img"]
+        remove_attributes = [
+            "//*[@class]",
+            # contains json like data with "ctm" key
+            "//*[@data-data]",
+            # contains coordinate like data
+            "//*[@data-dest-detail]",
+        ]
+        for xpath in remove_tags:
+            for element in tree.xpath(xpath):
+                element.getparent().remove(element)
 
-        for tag in tree.xpath("//*[@class]"):
-            tag.attrib.pop("class")
+        for xpath in remove_attributes:
+            attrib = re.search(r"[\w-]+", xpath).group(0)
+            for element in tree.xpath(xpath):
+                element.attrib.pop(attrib)
 
         return html.tostring(
             tree, pretty_print=True, encoding="unicode"
