@@ -16,12 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.6.35 - 2024-10-22**
+**2.6.36 - 2024-10-22**
 
 Fixes:
   - Fix for `okla` cleanup_content
 
 ## Past
+
+**2.6.35 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
 
 **2.6.34 - 2024-10-22**
 
