@@ -1641,6 +1641,8 @@ class DocketReport(BaseDocketReport, BaseReport):
                 if first_word.isdigit():
                     return first_word
             else:
+                if first_word == "view" and len(words) >= 2:
+                    return re.sub("[\\s\u00A0]", "", words[1])
                 return first_word
         return None
 
