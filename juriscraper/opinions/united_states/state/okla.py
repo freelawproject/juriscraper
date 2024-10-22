@@ -43,10 +43,6 @@ class Site(OpinionSiteLinear):
                     "summary": summary.strip(),
                 }
             )
-            r = self.request["session"].get(url).content
-            u = self.cleanup_content(r)
-            print(u)
-            break
 
     @staticmethod
     def cleanup_content(content):
