@@ -16,6 +16,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.33 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+## Past
+
 **2.6.32 - 2024-10-21**
 
 Features:
@@ -24,7 +31,11 @@ Features:
 Fixes:
   - updated `coloctapp` cleanup_content
 
-## Past
+
+**2.6.33 - 2024-10-21**
+
+Fixes:
+  - Fix for `okla` cleanup_content
 
 **2.6.31 - 2024-10-21**
 
