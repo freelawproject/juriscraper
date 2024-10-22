@@ -48,15 +48,25 @@ class Site(OpinionSiteLinear):
     def cleanup_content(content):
         """Remove non-opinion HTML
 
+        Oklahoma uses ISO-8859-1 formatting which we need to account for
+        so we dont end up with ugly HTML.  Also we should remove a few sections
+        and all of the A tags to avoid hyperlinking to nowhere.
+
         :param content: The scraped HTML
         :return: Cleaner HTML
         """
-        tree = strip_bad_html_tags_insecure(str(content), remove_scripts=True)
-        for removal_class in ["tmp-citationizer", "footer"]:
+        content = content.decode("ISO-8859-1")
+        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+        for removal_class in ["tmp-citationizer", "footer", "published-info"]:
             for element in tree.xpath(f"//div[@class='{removal_class}']"):
                 parent = element.getparent()
                 if parent is not None:
                     parent.remove(element)
+
+        for a_tag in tree.xpath("//a"):
+            span = html.Element("span")
+            span.text = a_tag.text
+            a_tag.getparent().replace(a_tag, span)
 
         opinions_navigation = tree.xpath("//div[@id='opinons-navigation']")
         if opinions_navigation:
@@ -70,6 +80,6 @@ class Site(OpinionSiteLinear):
 
         # Find the core element with id 'oscn-content'
         core_element = tree.xpath("//*[@id='oscn-content']")[0]
-        return html.tostring(
-            core_element, pretty_print=True, encoding="unicode"
-        ).encode("utf-8")
+        html_content = html.tostring(core_element).decode("ISO-8859-1")
+
+        return html_content.strip()
