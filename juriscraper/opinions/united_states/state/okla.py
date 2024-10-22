@@ -43,6 +43,10 @@ class Site(OpinionSiteLinear):
                     "summary": summary.strip(),
                 }
             )
+            r = self.request["session"].get(url).content
+            u = self.cleanup_content(r)
+            print(u)
+            break
 
     @staticmethod
     def cleanup_content(content):
@@ -51,6 +55,9 @@ class Site(OpinionSiteLinear):
         Oklahoma uses ISO-8859-1 formatting which we need to account for
         so we dont end up with ugly HTML.  Also we should remove a few sections
         and all of the A tags to avoid hyperlinking to nowhere.
+
+        Make sure to wrap the content in an HTML tag so it can be properly
+        processed on CL.
 
         :param content: The scraped HTML
         :return: Cleaner HTML
@@ -62,7 +69,7 @@ class Site(OpinionSiteLinear):
                 parent = element.getparent()
                 if parent is not None:
                     parent.remove(element)
-
+        # Remove the a tags so we dont link around to broken places
         for a_tag in tree.xpath("//a"):
             span = html.Element("span")
             span.text = a_tag.text
@@ -80,6 +87,5 @@ class Site(OpinionSiteLinear):
 
         # Find the core element with id 'oscn-content'
         core_element = tree.xpath("//*[@id='oscn-content']")[0]
-        html_content = html.tostring(core_element).decode("ISO-8859-1")
-
-        return html_content.strip()
+        html_content = html.tostring(core_element).decode("ISO-8859-1").strip()
+        return f"<html>{html_content}</html>"
