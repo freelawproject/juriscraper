@@ -51,7 +51,7 @@ class Site(OpinionSiteLinear):
         :param content: The scraped HTML
         :return: Cleaner HTML
         """
-        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+        tree = strip_bad_html_tags_insecure(str(content), remove_scripts=True)
         for removal_class in ["tmp-citationizer", "footer"]:
             for element in tree.xpath(f"//div[@class='{removal_class}']"):
                 parent = element.getparent()
