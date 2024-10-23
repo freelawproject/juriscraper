@@ -4,137 +4,64 @@ Court Short Name: Fed. Cl.
 
 Notes:
     Scraper adapted for new website as of February 20, 2014.
+    2024-10-23, grossir: implemented new site
 """
 
-import datetime
-import re
+import json
 
-from lxml import html
-
-from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import (
-    clean_if_py3,
-    convert_date_string,
-    titlecase,
-)
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/8"
-        self.back_scrape_iterable = list(range(1, 4))
+        self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentOpinionsOfTheCourt.pl"
         self.court_id = self.__module__
-        self.today = datetime.datetime.now()
+        self.is_vaccine = "uscfc_vaccine" in self.court_id
 
-    def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            # Use static 'today' date for consisting test results
-            self.today = convert_date_string("2018/10/17")
-        return super()._download(request_dict)
+    def _process_html(self):
+        """The site returns a page with all opinions for this time period
+        The opinions are inside a <script> tag, as a Javascript constant
+        that will be parsed using json.loads
+        """
+        judges_mapper = {
+            option.get("value"): option.text_content()
+            for option in self.html.xpath("//select[@name='judge']//option")
+        }
+        judges_mapper.pop("UNKNOWN", "")
+        judges_mapper.pop("all", "")
 
-    def _get_case_dates(self):
-        dates = []
-        for item in self.html.xpath('//span[@class="feed-item-date"]'):
-            text = item.text_content().strip()
-            words = text.split()
-            if len(words) == 2:
-                date = convert_date_string(words[1])
-            elif "ago" in text:
-                # The record was added today "X hours and Y min ago"
-                date = self.today
-            else:
-                raise InsanityException(
-                    f"Unrecognized date element string: {text}"
-                )
-            dates.append(date)
-        return dates
-
-    def _get_case_names(self):
-        case_names = []
-        for t in self.html.xpath('//h3[@class="feed-item-title"]//text()'):
-            t = " ".join(clean_if_py3(t).split())  # Normalize whitespace
-            if t.strip():
-                # If there is something other than whitespace...
-                if not isinstance(t, str):
-                    t = str(t, encoding="utf-8")
-
-                if " • " in t:
-                    t = t.split(" • ")[1].strip()
-                t = titlecase(t.lower())
-                case_names.append(t)
-        return case_names
-
-    def _get_download_urls(self):
-        path = '//h3[@class="feed-item-title"]/a/@href'
-        return list(self.html.xpath(path))
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        for t in self.html.xpath('//h3[@class="feed-item-title"]//text()'):
-            t = clean_if_py3(t)
-            if t.strip():
-                # If there is something other than whitespace...
-                if not isinstance(t, str):
-                    t = str(t, encoding="utf-8")
-
-                if " • " in t:
-                    t = t.split(" • ")[0].strip()
-                docket_numbers.append(t)
-        return docket_numbers
-
-    def _get_summaries(self):
-        summaries = []
-        path = '//div[@class="feed-item-body"]'
-        for e in self.html.xpath(path):
-            s = html.tostring(e, method="text", encoding="unicode")
-            s = clean_if_py3(s).split("Keywords:")[0]
-            summaries.append(s)
-
-        return summaries
-
-    def _get_judges(self):
-        path = '//div[@class="feed-item-body"]'
-        judges = []
-        splitters = [
-            "Signed by Chief Judge",
-            "Signed by Judge",
-            "Signed by Chief Special Master",  # Vaccine courts have odd names for judges
-            "Signed by Special Master",
-        ]
-        for e in self.html.xpath(path):
-            t = html.tostring(e, method="text", encoding="unicode")
-            t = clean_if_py3(t).split("Keywords:")[0]
-            for splitter in splitters:
-                judge_parts = t.rsplit(splitter)
-                if len(judge_parts) == 1:
-                    # No splits found...
-                    judge = ""
-                    continue
-                else:
-                    judge = judge_parts[1]
-                    break
-
-            # Often the text looks like: 'Judge Susan G. Braden. (jt1) Copy to parties.' In that case we only
-            # want the name, not the rest.
-            length_of_match = 2
-            m = re.search(
-                r"[a-z]{%s}\." % length_of_match, judge
-            )  # Two lower case letters followed by a period
-            if m:
-                judge = judge[: m.start() + length_of_match]
-            else:
-                judge = ""
-            judge.strip(".")
-            judges.append(judge)
-        return judges
-
-    def _download_backwards(self, page):
-        self.url = (
-            f"http://www.uscfc.uscourts.gov/aggregator/sources/8?page={page}"
+        raw_data = (
+            self.html.xpath("//script")[0]
+            .text_content()
+            .strip()
+            .strip("; ")
+            .split("= ", 1)[1]
         )
-        self.html = self._download()
+
+        for opinion in json.loads(raw_data):
+            docket, name = opinion["title"].split(" &bull; ", 1)
+
+            # Append a "V" as seen in the opinions PDF for the vaccine
+            # claims. This will help disambiguation, in case docket
+            # number collide
+            if self.is_vaccine and not docket.lower().endswith("v"):
+                docket += "V"
+
+            judge = judges_mapper.get(opinion["judge"], "")
+            self.cases.append(
+                {
+                    "url": opinion["link"],
+                    "summary": opinion["text"],
+                    "date": opinion["date"],
+                    "status": (
+                        "Unpublished"
+                        if opinion["criteria"] == "unreported"
+                        else "Published"
+                    ),
+                    "judge": judge,
+                    "name": titlecase(name),
+                    "docket": docket,
+                }
+            )
