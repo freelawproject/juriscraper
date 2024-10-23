@@ -8,12 +8,4 @@ from juriscraper.opinions.united_states.federal_special import uscfc
 class Site(uscfc.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/7"
-        self.court_id = self.__module__
-        self.back_scrape_iterable = [1]
-
-    def _download_backwards(self, page):
-        self.url = (
-            f"http://www.uscfc.uscourts.gov/aggregator/sources/7?page={page}"
-        )
-        self.html = self._download()
+        self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentDecisionsOfTheSpecialMasters.pl"
