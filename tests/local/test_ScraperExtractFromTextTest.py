@@ -675,6 +675,22 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.federal_special.uscfc_vaccine": [
+            (
+                # https://ecf.cofc.uscourts.gov/cgi-bin/show_public_doc?2018vv1562-53-0=   / https://www.courtlistener.com/api/rest/v3/opinions/5119138/
+                "       In the United States Court of Federal Claims\n                          OFFICE OF SPECIAL MASTERS\n\n*********************\nLINDA WIRTSHAFTER,                    *\n                                      *      No. 18-1562V\n                  Petitioner,         *      Special Master Christian J. Moran\n                                      *\nv.                                    *      Filed: September 22, 2021\n                                      *\nSECRETARY OF HEALTH                   *      Attorneys’ fees and costs; remand\nAND HUMAN SERVICES,                   *\n                                      *\n                  Respondent.         *\n*********************\nHoward D. Mishkind, Mishkind Law Firm Co., L.P.A., Beachwood, OH, for\npetitioner;\nRyan D. Pyles, United States Dep’t of Justice, Washington, DC, for respondent.\n\nPUBLISHED DECISION AWARDING ATTORNEYS’ FEES AND COSTS1\n\n      An April 16, 2021 decision found that Linda Wirtshafter was not eligible for\nan award of attorneys’ fees and costs because she did not establish that a\nreasonable basis supported the claim that",
+                {
+                    "OpinionCluster": {
+                        "precedential_status": "Published",
+                    },
+                },
+            ),
+            (
+                # https://www.courtlistener.com/api/rest/v3/opinions/4184749/
+                "                 In the United States Court of Federal Claims\n                                    OFFICE OF SPECIAL MASTERS\n                                            No. 15-1404V\n                                         (not to be published)\n\n*****************************\n                            *\nJEFFREY TREADWAY,           *                                            Special Master Corcoran\n                            *\n                            *\n                Petitioner, *                                            Filed: May 16, 2017\n                            *\n           v.               *                                            Decision; Attorney’s Fees and Costs.\n                            *\n                            *\nSECRETARY OF HEALTH AND     *\nHUMAN SERVICES,             *\n                            *\n                Respondent. *\n                            *\n*****************************\n\nWilliam E. Cochran, Black McLaren, et al., P.C., Memphis, TN, for Petitioner.\n\nAlexis B. Babcock, U. S. Dep’t of Justice, Washington, DC, for Respondent.\n\n                  DECISION GRANTING ATTORNEY’S FEES AND COSTS 1\n\n       On November 11, 2015, Jeffrey Treadway filed a petition seeking compensation under the\nNational Vaccine Injury Compensation Program (the “Vaccine Program”), alleging that he suffers\nfrom Bell’s palsy as a result of his October 10, 2014 receipt of the influenza vaccine.2 The parties\neventually filed a stipulation for damages on February 14, 2017 (ECF No. 24), which I adopted as\nmy dec",
+                {},
+            ),
+        ],
     }
 
     def test_extract_from_text(self):

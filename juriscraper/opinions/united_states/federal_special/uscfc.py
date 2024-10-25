@@ -8,12 +8,16 @@ Notes:
 """
 
 import json
+import re
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    judge_regex = re.compile(r"Signed by[\w\s]+(Master|Judge)(?P<judge>.+?)\(")
+    other_date_regex = re.compile(r"\([Oo]riginally filed:?[\d\s/]+\)")
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentOpinionsOfTheCourt.pl"
@@ -43,25 +47,43 @@ class Site(OpinionSiteLinear):
         for opinion in json.loads(raw_data):
             docket, name = opinion["title"].split(" &bull; ", 1)
 
+            summary = opinion["text"]
+            if judge_match := self.judge_regex.search(summary):
+                judge = judge_match.group("judge").strip(" .()")
+                # Remove: "Signed by ... . Service on parties made"
+                summary = summary[: judge_match.start()].strip(", .()")
+            else:
+                judge = judges_mapper.get(opinion["judge"], "")
+
+            other_date = ""
+            if other_date_match := self.other_date_regex.search(summary):
+                other_date = other_date_match.group(0).strip("() ")
+                summary = re.sub(self.other_date_regex, "", summary)
+
+            if opinion["criteria"] == "unreported":
+                status = "Unpublished"
+            elif opinion["criteria"] == "reported":
+                status = "Published"
+            else:
+                status = "Unknown"
+
+            parsed_case = {
+                "url": opinion["link"],
+                "date": opinion["date"],
+                "other_date": other_date,
+                "status": status,
+                "summary": summary,
+                "judge": judge,
+                "name": titlecase(name),
+                "docket": docket,
+            }
+
             # Append a "V" as seen in the opinions PDF for the vaccine
             # claims. This will help disambiguation, in case docket
-            # number collide
-            if self.is_vaccine and not docket.lower().endswith("v"):
-                docket += "V"
+            # numbers collide
+            if self.is_vaccine:
+                if not docket.lower().endswith("v"):
+                    yy, number = docket.split("-")
+                    parsed_case["docket"] = f"{yy}-{number.zfill(4)}V"
 
-            judge = judges_mapper.get(opinion["judge"], "")
-            self.cases.append(
-                {
-                    "url": opinion["link"],
-                    "summary": opinion["text"],
-                    "date": opinion["date"],
-                    "status": (
-                        "Unpublished"
-                        if opinion["criteria"] == "unreported"
-                        else "Published"
-                    ),
-                    "judge": judge,
-                    "name": titlecase(name),
-                    "docket": docket,
-                }
-            )
+            self.cases.append(parsed_case)
