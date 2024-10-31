@@ -293,6 +293,11 @@ class BaseReport:
             if b"You do not have access to this transcript." in r.content:
                 error = f"Unable to get transcript. {pacer_case_id=}, {url=}"
 
+            if b"No matter of public record" in r.content:
+                error = (
+                    f"No matter of public record has been filed. "
+                    f"{pacer_case_id=}, {url=}"
+                )
             sealed_document_phrases = [
                 b"Sealed Document",
                 b"Under Seal",
