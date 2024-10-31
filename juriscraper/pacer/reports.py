@@ -267,6 +267,13 @@ class BaseReport:
                 )
 
             error = None
+            if b"Cannot locate the case with caseid" in r.content:
+                # Second download attempt failed. log case ID and URL for
+                # debugging
+                error = (
+                    f"Cannot locate the case with caseid: "
+                    f"{pacer_case_id} at {url}"
+                )
             if b"could not retrieve dktentry for dlsid" in r.content:
                 error = (
                     f"Failed to get docket entry in case: "
@@ -292,12 +299,27 @@ class BaseReport:
                 )
             if b"You do not have access to this transcript." in r.content:
                 error = f"Unable to get transcript. {pacer_case_id=}, {url=}"
-            if b"Sealed Document" in r.content or b"Under Seal" in r.content:
+
+            if b"No matter of public record" in r.content:
+                error = (
+                    f"No matter of public record has been filed. "
+                    f"{pacer_case_id=}, {url=}"
+                )
+            sealed_document_phrases = [
+                b"Sealed Document",
+                b"Under Seal",
+                b"Document is Sealed",
+                b"This document is SEALED",
+            ]
+            if any(phrase in r.content for phrase in sealed_document_phrases):
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 # See: https://ecf.cand.uscourts.gov/doc1/035122021132
+                # See: https://ecf.caed.uscourts.gov/doc1/03319001890
                 # Matches against:
-                # "Sealed Document" and
+                # "Sealed Document"
                 # "This document is currently Under Seal and not available..."
+                # "Document is Sealed."
+                # "This document is SEALED"
                 error = f"Document is sealed: {pacer_case_id=} {url=}"
             if (
                 b"This image is not available for viewing by non-court users"
