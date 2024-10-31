@@ -267,6 +267,13 @@ class BaseReport:
                 )
 
             error = None
+            if b"Cannot locate the case with caseid" in r.content:
+                # Second download attempt failed. log case ID and URL for
+                # debugging
+                error = (
+                    f"Cannot locate the case with caseid: "
+                    f"{pacer_case_id} at {url}"
+                )
             if b"could not retrieve dktentry for dlsid" in r.content:
                 error = (
                     f"Failed to get docket entry in case: "
