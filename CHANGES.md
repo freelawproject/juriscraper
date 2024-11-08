@@ -16,12 +16,20 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.38 - 2024-11-08**
+
+- Fixes:
+  - Fix `uscfc` opinion scraper
+
+- Features:
+  - RECAP: add new sealed document phrase
+
+## Past
+
 **2.6.37 - 2024-10-22**
 
 Fixes:
   - Fix for `okla` cleanup_content
-
-## Past
 
 **2.6.35 - 2024-10-22**
 
