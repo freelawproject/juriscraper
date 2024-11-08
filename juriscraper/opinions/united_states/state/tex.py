@@ -1,25 +1,5 @@
-# Scraper for Texas Supreme Court
-# CourtID: tex
-# Court Short Name: TX
-# Court Contacts:
-#  - http://www.txcourts.gov/contact-us/
-#  - Blake Hawthorne <Blake.Hawthorne@txcourts.gov>
-#  - Eddie Murillo <Eddie.Murillo@txcourts.gov>
-#  - Judicial Info <JudInfo@txcourts.gov>
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# History:
-#  - 2014-07-10: Created by Andrei Chelaru
-#  - 2014-11-07: Updated by mlr to account for new website.
-#  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
-#  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
-#  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
-#  - 2021-12-28: Updated by flooie to remove selenium.
-#  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
-
 from datetime import date, datetime, timedelta
 from typing import Dict, Optional, Tuple
-
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
@@ -85,6 +65,7 @@ class Site(OpinionSiteLinear):
                 "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput_ClientState": to_date_param,
                 "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
                 "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",  # "Opinion" checkbox
+                "ctl00$ContentPlaceHolder1$chkListDocTypes$1": "on",  # "Opinion" checkbox
                 f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",  # Court checkbox
                 "ctl00$ContentPlaceHolder1$txtSearchText": "",
                 "ctl00_ContentPlaceHolder1_dtDocumentFrom_ClientState": '{"minDateStr":"1900-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00"}',
@@ -100,30 +81,37 @@ class Site(OpinionSiteLinear):
         # whose id goes into __EVENTTARGET
         if self.next_page:
             self.parameters[self.next_page[0].xpath("@name")[0]] = ""
+            #added
+            # self.parameters["__EVENTTARGET"] = self.next_page[0].get("name")
+            # self.parameters["__EVENTARGUMENT"] = ""
 
     def _process_html(self) -> None:
         """Process HTML and paginates if needed
 
         :return: None
         """
+        print("inside process html")
         if not self.test_mode_enabled():
             # Make our post request to get our data
             self.method = "POST"
             self._set_parameters()
             self.html = super()._download()
 
-        rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
+        # rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
+        rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[contains(@class, 'rgRow') or contains(@class, 'rgAltRow')]"
         for row in self.html.xpath(rows_xpath):
+            print("inside for loop")
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
             self.seeds.append(row.xpath(".//a")[2].get("href"))
             self.cases.append(
                 {
                     "date": row.xpath("td[2]")[0].text_content(),
-                    "docket": row.xpath("td[5]")[0].text_content().strip(),
+                    "docket": [str(row.xpath("td[5]")[0].text_content().strip())],
                     "url": row.xpath(".//a")[1].get("href"),
                 }
             )
+            print(f"inserted value is {self.cases}")
 
         next_page_xpath = (
             "//input[@title='Next Page' and not(@onclick='return false;')]"
@@ -132,6 +120,8 @@ class Site(OpinionSiteLinear):
         if self.next_page and not self.test_mode_enabled():
             self.current_page += 1
             logger.info(f"Paginating to page {self.current_page}")
+            self.parameters[self.next_page[0].xpath("@name")[
+                0]] = ""  # Update parameters with next page context
             self._process_html()
 
     def _get_case_names(self) -> DeferringList:
@@ -179,6 +169,41 @@ class Site(OpinionSiteLinear):
         logger.info(
             "Backscraping for range %s %s", self.start_date, self.end_date
         )
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.start_date = start_date.date()
+        self.end_date = end_date.date()
+
+        if not self.downloader_executed:
+            self.html = self._download()  # Download the HTML
+            self.downloader_executed = True  # Mark downloader as executed
+            self._process_html()
+
+        self.html=self._download()
+        self.seeds = []
+        self.cases = []
+        self.current_page = 1
+        self.next_page = None
+        self.is_first_request = True
+        # Process the HTML and handle pagination
+        print("processing html")
+        self._process_html()
+        self.parse()
+        print(f"length of the cases is {len(self.cases)}")
+        # Return the number of cases found
+        return len(self.cases)
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+         return "Texas"
+
+    def get_class_name(self):
+         return "tex"
+
+    def get_court_name(self):
+         return "Supreme Court of Texas"
 
     @staticmethod
     def make_date_param(date_obj: date, date_str: str) -> str:

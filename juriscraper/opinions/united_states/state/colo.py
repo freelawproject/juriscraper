@@ -12,10 +12,9 @@ History:
     - 2024-07-04: Update to new site, grossir
 """
 
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from typing import Tuple
 from urllib.parse import urlencode
-
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -38,9 +37,9 @@ class Site(OpinionSiteLinear):
             "bypass_rabl": "true",
             "include": "parent,abstract,snippet,properties_with_ids",
             "per_page": "30",  # Server breaks down when per_page=500, returns 503
-            "page": "1",
+            # "page": "1",
             "sort": "date",
-            "include_local_exclusive": "true",
+            "include_local_excluive": "true",
             "cbm": "6.0|361.0|5.0|9.0|4.0|2.0=0.01|400.0|1.0|0.001|1.5|0.2",
             "locale": "en",
             "hide_ct6": "true",
@@ -63,6 +62,7 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self) -> None:
         search_json = self.html
+        print("html is ",search_json)
         logger.info(
             "Number of results %s; %s in page",
             search_json["count"],
@@ -70,6 +70,8 @@ class Site(OpinionSiteLinear):
         )
 
         for result in search_json["results"]:
+            #exract the id from the file
+            case_id = result["id"]
             timestamp = str(datetime.now().timestamp())[:10]
             url = self.detail_url.format(result["id"], timestamp)
 
@@ -83,6 +85,8 @@ class Site(OpinionSiteLinear):
                 self._request_url_get(url)
                 detail_json = self.request["response"].json()
 
+            # pdf_url = f"https://research.coloradojudicial.gov/pdf/{case_id}"
+
             # Example of parallel citation:
             # https://research.coloradojudicial.gov/vid/907372624
             citation, parallel_citation = "", ""
@@ -93,7 +97,6 @@ class Site(OpinionSiteLinear):
                 if label == "Parties":
                     case_name_full = p["values"][0]
                 if label == "Decision Date":
-                    # Note that json['published_at'] is not the date_filed
                     date_filed = p["values"][0]
                 if label == "Citation":
                     citation = p["values"][0]
@@ -102,12 +105,13 @@ class Site(OpinionSiteLinear):
 
             case = {
                 "date": date_filed,
-                "docket": docket_number,
+                "docket": [docket_number],
                 "name": case_name_full,
-                "url": f"{detail_json['public_url']}/content",
+                # "url": f"{detail_json['public_url']}/content",
+                "url" : f"https://research.coloradojudicial.gov/pdf/{case_id}",
                 "status": "Published" if citation else "Unknown",
-                "citation": citation,
-                "parallel_citation": parallel_citation,
+                "citation": [citation],
+                "parallel_citation": [parallel_citation],
             }
 
             self.cases.append(case)
@@ -132,6 +136,51 @@ class Site(OpinionSiteLinear):
                 "t": [timestamp, timestamp],
             }
         )
-        self.url = f"{self.base_url}?{urlencode(params)}"
-        self.html = self._download()
-        self._process_html()
+
+        #pagination logic starts here
+
+        page=1
+        while True:
+            params["page"]=str(page)
+            self.url=f"{self.base_url}?{urlencode(params)}"
+            try:
+                self.html = self._download()  # Attempt to download the page
+                print(f"Loading page {page}")
+
+                search_json = self.html
+
+                if not search_json.get("results"):
+                    logger.info(f"No more data found on page {page}")
+                    break
+
+                self._process_html()
+                page += 1
+
+            except Exception as e:
+                logger.error(f"Error loading page {page}: {e}")
+                print(f"Skipping page {page} due to error: {e}")
+                page += 1
+        logger.info("Finished backscraping for range %s to %s", start, end)
+
+
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        logger.info("Crawling between the dates from %s to %s", start_date , end_date)
+        # self.parse()
+        self._download_backwards((start_date, end_date))
+        self.parse()
+
+        return len(self.cases)
+
+
+    def get_class_name(self):
+        return "colo"
+
+    def get_court_name(self):
+        return "Colorado Supreme Court"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "Colorado"
