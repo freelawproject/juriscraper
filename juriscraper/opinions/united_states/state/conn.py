@@ -14,23 +14,26 @@ History:
 """
 
 import re
-from datetime import date
+from typing import Tuple, Optional
+from datetime import date, datetime
 from typing import Tuple
 
 from dateutil.parser import parse
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import logger, AbstractSite
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+
     court_abbv = "sup"
     start_year = 2000
     base_url = "http://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        print("inside conn")
         self.court_id = self.__module__
         self.status = "Published"
 
@@ -78,28 +81,42 @@ class Site(OpinionSiteLinear):
             name = f"{name} ({op_type.strip()})"
         return m.group("dockets"), name
 
-    def _process_html(self) -> None:
+#edited by hitesh for date range
+    def _process_html(self, start_date: Optional[datetime], end_date: Optional[datetime]) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
+        if isinstance(start_date, datetime):
+            start_date = start_date.date()
+        if isinstance(end_date, datetime):
+            end_date = end_date.date()
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
             pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
             if pub:
                 date_filed_is_approximate = False
-                date_filed = self.find_published_date(pub[0])
+                # date_filed = self.find_published_date(pub[0])
+                date_filed_str = self.find_published_date(pub[0])
+                date_filed = parse(date_filed_str).date()
+
             else:
                 # May happen on most recent opinions, which have a header like
                 # "Publication in the Connecticut Law Journal To Be Determined"
-                date_filed = f"{self.current_year}-07-01"
+                # date_filed = f"{self.current_year}-07-01"
+                date_filed = datetime.strptime(f"{self.current_year}-07-01","%Y-%m-%d").date()
                 date_filed_is_approximate = True
+
+            # # Filter by date range
+            if start_date and end_date:
+                if not (start_date <= date_filed <= end_date):
+                    continue
 
             dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
                 {
                     "url": row.get("href"),
                     "name": name,
-                    "docket": dockets,
+                    "docket": [dockets],
                     "date": date_filed,
                     "date_filed_is_approximate": date_filed_is_approximate,
                 }
@@ -113,6 +130,8 @@ class Site(OpinionSiteLinear):
         :return: url
         """
         year_str = str(year % 2000).zfill(2)
+        print(f"url is {self.base_url.format(self.court_abbv, year_str)}")
+        print(f"court_abbv is {self.court_abbv}")
         return self.base_url.format(self.court_abbv, year_str)
 
     def extract_from_text(self, scraped_text: str):
@@ -220,6 +239,33 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
+    def crawling_range(self, start_date: str, end_date: str) -> int:
+        """Crawl the data between given start and end dates."""
+        print(f"start date and end date is {start_date} , {end_date}")
+
+        for year in range(start_date.year, end_date.year + 1):
+            logger.info(f"Crawling data for year {year}")
+            self.url = self.make_url(year)
+            self.html = self._download()
+
+            # Process HTML and filter opinions by date range
+            self._process_html(start_date, end_date)
+
+        self.parse()
+        return 0
+
+
+    def get_state_name(self):
+        return "Connecticut"
+
+    def get_class_name(self):
+        return "conn"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_court_name(self):
+        return "Supreme Court of Connecticut "
 
 def clean_extracted_text(text: str) -> str:
     """

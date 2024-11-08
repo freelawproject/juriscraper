@@ -6,6 +6,7 @@ History:
     2018-10-13: Retired by Ardery
     2023-01-28: Updated by William E. Palin
 """
+from datetime import datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -37,3 +38,18 @@ class Site(OpinionSiteLinear):
                     "status": "Published",
                 }
             )
+    #
+    # def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+    #     return 0
+    #
+    # def get_court_type(self):
+    #     return "state"
+    #
+    # def get_state_name(self):
+    #     return "Texas"
+    #
+    # def get_class_name(self):
+    #     return "texag"
+    #
+    # def get_court_name(self):
+    #     return ""
