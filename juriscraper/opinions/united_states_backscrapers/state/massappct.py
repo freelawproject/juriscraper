@@ -17,7 +17,3 @@ class Site(mass.Site):
             "url": "http://masscases.com/app75-99.html",
         },
     ]
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__

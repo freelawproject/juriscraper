@@ -6,7 +6,7 @@ from typing import Any, Dict, Tuple
 from dateutil import parser
 from lxml.html import fromstring
 
-from juriscraper.lib.string_utils import clean_string
+from juriscraper.lib.string_utils import clean_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -41,9 +41,6 @@ class Site(OpinionSiteLinear):
             "url": "http://masscases.com/275-299.html",
         },
     ]
-    # on the cl_scrape_opinions command in Courtlistener,
-    # a headers variable is required for mass
-    headers = {}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -78,7 +75,7 @@ class Site(OpinionSiteLinear):
                 {
                     "citation": cite,
                     "date": date_filed_str,
-                    "name": name,
+                    "name": titlecase(name),
                     "url": url,
                     "docket": "",
                     "status": "Published",
@@ -96,32 +93,35 @@ class Site(OpinionSiteLinear):
 
         The format on App Ct opinions is different
         """
-        match = re.search(self.docket_number_regex, scraped_text[:2000])
-        docket = match.group(0) if match else ""
+        metadata = {"OpinionCluster": {}}
+        if match := re.search(self.docket_number_regex, scraped_text[:2000]):
+            docket = match.group(0)
+            metadata["Docket"] = {"docket_number": docket}
 
-        headnotes, summary = "", ""
         html = fromstring(scraped_text)
         headnote_section = html.xpath("//section[@class='headnote']")
         synopsis_section = html.xpath("//section[@class='synopsis']")
 
         if headnote_section:
+            headnotes = clean_string(headnote_section[0].xpath("string()"))
             # First line of the headnote might be the docket number
-            headnotes = clean_string(
-                headnote_section.xpath("string()")[0].replace(docket, "")
-            )
+            if metadata.get("Docket"):
+                headnotes = (
+                    headnotes.replace(docket, "").replace("No. . ", "").strip()
+                )
+            metadata["OpinionCluster"]["headnotes"] = headnotes
+
         if synopsis_section:
             summary = "\n".join(
                 [
                     clean_string(p.xpath("string()"))
                     # avoid page numbers
-                    for p in synopsis_section.xpath(".//p[not(@class)]")
+                    for p in synopsis_section[0].xpath(".//p[not(@class)]")
                 ]
             )
+            metadata["OpinionCluster"]["summary"] = summary
 
-        return {
-            "Docket": {"docket_number": docket},
-            "OpinionCluster": {"headnotes": headnotes, "summary": summary},
-        }
+        return metadata
 
     def _download_backwards(
         self, dates_and_url: Tuple[date, date, str]
@@ -148,11 +148,11 @@ class Site(OpinionSiteLinear):
         now = datetime.now()
 
         if start:
-            start = datetime.strptime(start, "%m/%d/%Y")
+            start = datetime.strptime(start, "%Y/%m/%d")
         else:
             start = self.first_opinion_date
         if end:
-            end = datetime.strptime(end, "%m/%d/%Y")
+            end = datetime.strptime(end, "%Y/%m/%d")
         else:
             end = now
 
