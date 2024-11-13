@@ -36,3 +36,9 @@ class Site(ny.Site):
             dockets = [x[0] if x[0] else x[1] for x in dockets]
             return {"Docket": {"docket_number": "; ".join(dockets)}}
         return {}
+
+    def get_court_name(self):
+        return "Appellate Division of the Supreme Court, New York"
+
+    def get_class_name(self):
+        return "nyappdiv_2nd"

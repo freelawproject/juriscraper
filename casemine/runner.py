@@ -8,9 +8,11 @@ from juriscraper.opinions.united_states.state import calctapp_4th_div1, \
 
 site = calctapp_u.Site()
 
-site.execute_job("calctapp_u")
+site.execute_job("nysupct")
 
-# Iterate over the item
+print(f"Total judgements: {site.cases.__len__()}")
+
+# Iterate over the items
 class_name = site.get_class_name()
 court_name = site.get_court_name()
 court_type = site.get_court_type()
@@ -22,7 +24,7 @@ def check_none(field):
     else:
         return field
 
-
+ctr = 1
 for opinion in site:
     # print(opinion)
     date = opinion.get('case_dates')
@@ -41,9 +43,15 @@ for opinion in site:
 
     docket = opinion.get('docket_numbers')
     if docket is not None:
-        docket = ast.literal_eval(docket)
+        if docket == '':
+            docket = []
+        else:
+            docket = ast.literal_eval(docket)
+    else:
+        docket = []
 
-    parallel_citation = opinion.get('parallel_citation')
+
+    parallel_citation = opinion.get('parallel_citations')
     if parallel_citation is None:
         parallel_citation = []
 
@@ -102,9 +110,10 @@ for opinion in site:
     }
     # print(data)
     flag = site._process_opinion(data)
-    if(flag):
-        print(data)
+    if flag:
+        print(f'{ctr} - {data}')
     else:
         print("\t!!..Duplicate..!!")
+    ctr = ctr + 1
 
 site.set_crawl_config_details(class_name, site.crawled_till)

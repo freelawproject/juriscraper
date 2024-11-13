@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
         self.court_id = self.__module__
-        self.url = "https://appellate-records.courts.alaska.gov/CMSPublic/Home/Opinions?isCOA=False"
+        self.url = "https://appellate-records.courts.al aska.gov/CMSPublic/Home/Opinions?isCOA=False"
         self.status = "Published"
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.

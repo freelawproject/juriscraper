@@ -15,3 +15,9 @@ class Site(ark.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+
+    def get_court_name(self):
+        return 'Arkansas Court of Appeals'
+
+    def get_class_name(self):
+        return 'arkctapp'

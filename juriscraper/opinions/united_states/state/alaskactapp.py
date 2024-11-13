@@ -15,4 +15,4 @@ class Site(alaska.Site):
         return "alaskactapp"
 
     def get_court_name(self):
-        return 'Alaska Court of Appeals'
+        return 'Alaska Courts of Appeal'

@@ -36,3 +36,9 @@ class Site(ny.Site):
         if dockets:
             return {"Docket": dockets.groupdict()}
         return {}
+
+    def get_court_name(self):
+        return "Appellate Division of the Supreme Court, New York"
+
+    def get_class_name(self):
+        return "nyappdiv_1st"

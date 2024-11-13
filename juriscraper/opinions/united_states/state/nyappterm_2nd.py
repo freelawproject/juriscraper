@@ -13,3 +13,9 @@ class Site(nyappterm_1st.Site):
         super().__init__(*args, **kwargs)
         self.court = "Appellate Term, 2d Dept"
         self.parameters.update({"court": self.court})
+
+    def get_court_name(self):
+        return "Supreme Court, Appellate Term, Second Department"
+
+    def get_class_name(self):
+        return 'nyappterm_2nd'
