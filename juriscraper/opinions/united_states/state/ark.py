@@ -57,6 +57,8 @@ class Site(OpinionSiteLinear):
                 per_curiam = metadata[0].text_content().strip() == "Per Curiam"
 
             date_filed = item.xpath(".//*[@class='publicationDate']/text()")[0]
+            if(self.cases.__contains__({"date": date_filed,"docket": [],"name": titlecase(name),"citation": [cite],"url": url,"status": "Published","per_curiam": per_curiam})):
+                return
             self.cases.append(
                 {
                     "date": date_filed,

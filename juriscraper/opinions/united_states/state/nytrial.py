@@ -5,14 +5,19 @@ Author: Gianfranco Rossi
 History:
  - 2024-01-05, grossir: created
 """
-
+import os
 import re
 from datetime import date
 from itertools import chain
 from typing import Any, Dict, List, Optional
 
+import pdfkit
+import requests
+from bs4 import BeautifulSoup
 from dateutil.rrule import MONTHLY, rrule
 from lxml.html import fromstring
+from tldextract.tldextract import update
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -94,7 +99,7 @@ class Site(OpinionSiteLinear):
                     "date": opinion_date,
                     "status": status,
                     "url": url,
-                    "citation": slip_cite,
+                    "citation": [slip_cite],
                     "child_court": court,
                 }
             )
@@ -171,3 +176,70 @@ class Site(OpinionSiteLinear):
         m = re.findall(pattern, scraped_text)
         r = list(filter(None, chain.from_iterable(m)))
         return r[0].strip() if r else ""
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "New York"
+
+    @override
+    def download_pdf(self, data, objectId):
+        pdf_url = str(data.__getitem__('pdf_url'))
+        year = int(data.__getitem__('year'))
+
+        court_name = data.get('court_name')
+        court_type = data.get('court_type')
+        state_name = data.get('state')
+
+        if str(court_type).__eq__('state'):
+            path = "/synology/PDFs/US/juriscraper/"+court_type+"/"+state_name+"/"+court_name+"/"+str(year)
+        else:
+            path = "/synology/PDFs/US/juriscraper/" + court_type + "/" + court_name + "/" + str(year)
+
+        obj_id = str(objectId)
+        download_pdf_path = os.path.join(path, f"{obj_id}.pdf")
+        os.makedirs(path, exist_ok=True)
+        update_query={}
+        try:
+            response = requests.get(url=pdf_url, headers={"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"}, proxies={"http": "p.webshare.io:9999","https": "p.webshare.io:9999"}, timeout=120)
+            response.raise_for_status()
+            if pdf_url.endswith('.html') or pdf_url.endswith('.htm'):
+                # if pdf url contains html then refine it and convert html to pdf and also save modified html
+                soup = BeautifulSoup(response.text, 'html.parser')
+                # print(soup.text)
+                center_divs = soup.find_all('div', align='center')
+                for div in center_divs:
+                    if div and div.find('input',{'value': 'Return to Decision List'}):
+                        div.decompose()
+
+                # Find all anchor tags and remove the href attribute
+                for tag in soup.find_all('a'):
+                    del tag['href']
+
+                # Find all <p> tags and remove the ones that are empty
+                for p in soup.find_all('p'):
+                    if not p.get_text(strip=True):  # Check if the <p> tag is empty or contains only whitespace
+                        p.decompose()  # Remove the <p> tag
+
+                # Print the modified HTML
+                modified_html = soup.prettify()
+                pdfkit.from_string(modified_html, download_pdf_path)
+                update_query.__setitem__("response_html", modified_html)
+            elif pdf_url.endswith(".pdf"):
+                with open(download_pdf_path, 'wb') as file:
+                    file.write(response.content)
+            else:
+                with open(download_pdf_path, 'wb') as file:
+                    file.write(response.content)
+
+            # if pdf has been downloaded successfully mark processed as 0 and update the record
+            update_query.__setitem__("processed", 0)
+            self.judgements_collection.update_one({"_id": objectId}, {"$set": update_query})
+        except Exception as e:
+            # if any error occur during downloading the pdf print the error and mark the record as processed 2
+            print(f"Error while downloading the PDF: {e}")
+            update_query.__setitem__("processed", 2)
+            self.judgements_collection.update_one({"_id": objectId}, {"$set": update_query})
+        return download_pdf_path
+

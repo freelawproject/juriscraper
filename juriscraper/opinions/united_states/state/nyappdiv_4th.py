@@ -16,3 +16,9 @@ class Site(ny.Site):
         self.court_id = self.__module__
         self.court = "App Div, 4th Dept"
         self._set_parameters()
+
+    def get_court_name(self):
+        return "Appellate Division of the Supreme Court, New York"
+
+    def get_class_name(self):
+        return "nyappdiv_4th"
