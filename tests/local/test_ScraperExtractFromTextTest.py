@@ -691,6 +691,18 @@ class ScraperExtractFromText(unittest.TestCase):
                 {},
             ),
         ],
+        "juriscraper.opinions.united_states.state.nyag": [
+            (
+                # https://ag.ny.gov/sites/default/files/opinions/2021-1.pw_.pdf
+                "Home Rule Municipal Law §§ 10(1)(i), 40; Legislative Law § 55; New York Constitution\nArticle IX, sections 2(c), 2(b)(2); Session Laws L. 1982, ch. 719 §§ 1 & 7, Act of Nov. 13, 2013,\nch. 498 §§ 2 & 9\nThe town of Islip need not seek additional special legislation before revising the permitted\nsize of the Central Islip Fire Districts’ proposed fire substation.\nJuly 19, 2021\nInformal Opinion",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2021-07-19",
+                        "date_filed_is_approximate": False,
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
