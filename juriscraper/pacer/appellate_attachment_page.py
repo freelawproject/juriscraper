@@ -7,8 +7,10 @@ from lxml import html
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import force_unicode
-from juriscraper.pacer.utils import get_pacer_doc_id_from_doc1_url, \
-    reverse_sumDocSelected_function
+from juriscraper.pacer.utils import (
+    get_pacer_doc_id_from_doc1_url,
+    reverse_sumDocSelected_function,
+)
 
 from ..lib.log_tools import make_default_logger
 from .reports import BaseReport
@@ -167,7 +169,9 @@ class AppellateAttachmentPage(BaseReport):
             try:
                 onclick = input_el.xpath("./@onclick")
                 if onclick and "sumDocSelected" in onclick[0]:
-                    sum_doc_selected_parts = reverse_sumDocSelected_function(onclick[0])
+                    sum_doc_selected_parts = reverse_sumDocSelected_function(
+                        onclick[0]
+                    )
                     if sum_doc_selected_parts:
                         return sum_doc_selected_parts["page_count"]
             except IndexError:
@@ -188,7 +192,9 @@ class AppellateAttachmentPage(BaseReport):
             try:
                 onclick = input_el.xpath("./@onclick")
                 if onclick and "sumDocSelected" in onclick[0]:
-                    sum_doc_selected_parts = reverse_sumDocSelected_function(onclick[0])
+                    sum_doc_selected_parts = reverse_sumDocSelected_function(
+                        onclick[0]
+                    )
                     if sum_doc_selected_parts:
                         return sum_doc_selected_parts["file_size_bytes"]
             except IndexError:

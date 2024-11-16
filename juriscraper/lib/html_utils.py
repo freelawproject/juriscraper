@@ -29,7 +29,14 @@ ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
 ALLOWED_ATTRIBUTES["div"] = {"class", "id"}
 ALLOWED_ATTRIBUTES["font"] = {"face", "size"}
 ALLOWED_ATTRIBUTES["form"] = {"name", "method", "action"}
-ALLOWED_ATTRIBUTES["input"] = {"class", "id", "name", "value", "type", "onclick"}
+ALLOWED_ATTRIBUTES["input"] = {
+    "class",
+    "id",
+    "name",
+    "value",
+    "type",
+    "onclick",
+}
 ALLOWED_ATTRIBUTES["span"] = {"class"}
 ALLOWED_ATTRIBUTES["table"].update({"border", "class"})
 ALLOWED_ATTRIBUTES["tr"].add("class")
