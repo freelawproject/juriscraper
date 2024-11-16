@@ -7,7 +7,8 @@ from lxml import html
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import force_unicode
-from juriscraper.pacer.utils import get_pacer_doc_id_from_doc1_url
+from juriscraper.pacer.utils import get_pacer_doc_id_from_doc1_url, \
+    reverse_sumDocSelected_function
 
 from ..lib.log_tools import make_default_logger
 from .reports import BaseReport
@@ -97,14 +98,16 @@ class AppellateAttachmentPage(BaseReport):
         }
 
         for row in rows:
-            result["attachments"].append(
-                {
-                    "attachment_number": self._get_attachment_number(row),
-                    "description": self._get_description_from_tr(row),
-                    "page_count": self._get_page_count_from_tr(row),
-                    "pacer_doc_id": self._get_pacer_doc_id(row),
-                }
-            )
+            attachment = {
+                "attachment_number": self._get_attachment_number(row),
+                "description": self._get_description_from_tr(row),
+                "page_count": self._get_page_count_from_tr(row),
+                "pacer_doc_id": self._get_pacer_doc_id(row),
+            }
+            file_size_bytes = self._get_file_size_bytes_from_tr(row)
+            if file_size_bytes is not None:
+                attachment["file_size_bytes"] = file_size_bytes
+            result["attachments"].append(attachment)
         return result
 
     def _get_main_pacer_doc_id(self):
@@ -143,7 +146,10 @@ class AppellateAttachmentPage(BaseReport):
         row_nodes = row.xpath(".//td")
         if not row_nodes:
             return ""
-        description = row_nodes[-2].xpath("text()")
+        desc_idx = -2
+        if len(row_nodes) == 6:
+            desc_idx = -3
+        description = row_nodes[desc_idx].xpath("text()")
         if description:
             return force_unicode(description[0].strip())
         return ""
@@ -156,10 +162,39 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row as an lxml element
         :return: Attachment page count
         """
+        input_els = row.xpath(".//input[@class='selDocCl']")
+        for input_el in input_els:
+            try:
+                onclick = input_el.xpath("./@onclick")
+                if onclick and "sumDocSelected" in onclick[0]:
+                    sum_doc_selected_parts = reverse_sumDocSelected_function(onclick[0])
+                    if sum_doc_selected_parts:
+                        return sum_doc_selected_parts["page_count"]
+            except IndexError:
+                continue
+
         description_text_nodes = row.xpath(".//td/text()")
         if not description_text_nodes:
             return None
         return int(description_text_nodes[-1].strip())
+
+    @staticmethod
+    def _get_file_size_bytes_from_tr(row: html.HtmlElement) -> Optional[int]:
+        """Take a row from the attachment table and return the number of bytes
+        as an int.
+        """
+        input_els = row.xpath(".//input[@class='selDocCl']")
+        for input_el in input_els:
+            try:
+                onclick = input_el.xpath("./@onclick")
+                if onclick and "sumDocSelected" in onclick[0]:
+                    sum_doc_selected_parts = reverse_sumDocSelected_function(onclick[0])
+                    if sum_doc_selected_parts:
+                        return sum_doc_selected_parts["file_size_bytes"]
+            except IndexError:
+                continue
+
+        return None
 
     @staticmethod
     def _get_pacer_doc_id(row: html.HtmlElement) -> Optional[str]:

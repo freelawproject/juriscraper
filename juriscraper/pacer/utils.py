@@ -598,6 +598,34 @@ def reverse_goDLS_function(s):
     return parts
 
 
+def reverse_sumDocSelected_function(s):
+    """Extract the arguments from the sumDocSelected JavaScript function.
+
+    In: sumDocSelected(this,1,13481, 7548050)
+    Out: {
+      'page_count': 1,
+      'file_size_bytes': 13481,
+      'doc_id': 7548050
+    }
+
+    The key names correspond to the form field names in the JavaScript on PACER:
+
+     - page_count: Number of pages in the document.
+     - file_size_bytes: Size of the file in bytes.
+     - doc_id: document ID without court prefix, sometimes called dlsid.
+    """
+    match = re.search(r"sumDocSelected\((.*?)\)", s)
+    args = [arg.strip() for arg in match.group(1).split(',')]
+    if args[0] != "this":
+        return None
+    parts = {
+        "page_count": int(args[1]),
+        "file_size_bytes": int(args[2]),
+        "doc_id": int(args[3]),
+    }
+    return parts
+
+
 def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     """Make a doc1 URL.
 
