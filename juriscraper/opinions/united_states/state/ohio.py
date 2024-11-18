@@ -22,11 +22,12 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_index = 0
         self.year = date.today().year
-        self.url = "https://www.supremecourtofohio.gov/rod/docs/"
+        self.url = f"https://www.supremecourt.ohio.gov/rod/docs/?HideTopicsAndIssuesColumn=False&Sort=&PageSize=50&Source={self.court_index}"
         self.court_id = self.__module__
 
     def _set_parameters(self) -> None:
         """Set the parameters for the search
+
         :return: None
         """
         event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
@@ -45,7 +46,10 @@ class Site(OpinionSiteLinear):
         self.method = "POST"
 
     def _process_html(self) -> None:
-        """Process the HTML and extract the data"""
+        """Process the HTML and extract the data
+
+        :return: None
+        """
         if not self.test_mode_enabled():
             self._set_parameters()
             self.html = self._download()
@@ -57,7 +61,7 @@ class Site(OpinionSiteLinear):
             docket = row.xpath(".//td[2]//text()")[0].strip()
             name = row.xpath(".//a/text()")[0]
             if not docket:
-                logger.info("Skipping row with name '%s'", name)
+                logger.info("Skipping row with name '%s'", name.strip())
                 continue
 
             judge = row.xpath(".//td[4]//text()")[0]
@@ -92,4 +96,10 @@ class Site(OpinionSiteLinear):
                 # docket numbers, which may be repeated across districts
                 case["lower_court"] = f"{citation_or_county} County Court"
 
+            if (
+                f"https://www.supremecourt.ohio.gov/rod/docs/pdf/{self.court_index}/"
+                not in case["url"]
+            ):
+                logger.warning("Wrong appellate page detected.")
+                continue
             self.cases.append(case)
