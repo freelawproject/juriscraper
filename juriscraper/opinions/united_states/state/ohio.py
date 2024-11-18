@@ -97,7 +97,7 @@ class Site(OpinionSiteLinear):
                 case["lower_court"] = f"{citation_or_county} County Court"
 
             if (
-                f"https://www.supremecourt.ohio.gov/rod/docs/pdf/{self.court_index}/{self.year}/"
+                f"https://www.supremecourt.ohio.gov/rod/docs/pdf/{self.court_index}/"
                 not in case["url"]
             ):
                 logger.warning("Wrong appellate page detected.")
