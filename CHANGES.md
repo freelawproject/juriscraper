@@ -16,6 +16,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.39 - 2024-11-18**
+
+- Fixes:
+  - Fix `Kansas, Ohio Ct App's 1-13` opinion scraper
+
+
+## Past
+
 **2.6.38 - 2024-11-08**
 
 - Fixes:
@@ -23,8 +31,6 @@ Releases are also tagged in git, if that's helpful.
 
 - Features:
   - RECAP: add new sealed document phrase
-
-## Past
 
 **2.6.37 - 2024-10-22**
 
