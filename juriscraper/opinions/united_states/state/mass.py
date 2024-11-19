@@ -15,52 +15,60 @@ History:
  - 2023-01-28, William Palin: Updated scraper
 """
 
-import re
+from lxml import etree, html
 
+from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    """
-    Backscraper is implemented on `united_states_backscrapers.state.mass.py`
-    """
-
-    court_identifier = "SJC"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.mass.gov/info-details/new-opinions"
+        self.url = "https://www.socialaw.com/customapi/slips/getopinions"
         self.court_id = self.__module__
-        self.court_identifier = "SJC"
-        self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
-        }
-        self.needs_special_headers = True
+        self.court_name = "Supreme Judicial Court"
+        self.status = "Published"
 
     def _process_html(self):
-        for row in self.html.xpath(".//a/@href[contains(.,'download')]/.."):
-            url = row.get("href")
-            content = row.text_content()
-            m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", content)
-            if not m:
+        """Scrape and process the JSON endpoint
+
+        :return: None
+        """
+        for row in self.html:
+            if row["SectionName"] != self.court_name:
                 continue
-            name, docket, _, date = m.groups()
-            if self.court_identifier not in docket:
-                continue
-            if date == None:
-                # Likely a new case opinion - check the header text above it
-                if row.xpath(".//../../h3/text()"):
-                    header_text = row.xpath(".//../../h3/text()")[0]
-                    date = header_text.split("Decisions:")[1].strip()
-                if not date:
-                    # if no date is found skip it
-                    continue
             self.cases.append(
                 {
-                    "name": name,
-                    "status": "Published",
-                    "date": date,
-                    "docket": docket,
-                    "url": url,
+                    "name": row.get("Parties"),
+                    "judge": (
+                        row["Details"]["Present"]
+                        if "JJ" in row["Details"]["Present"]
+                        else ""
+                    ),
+                    "date": row["Date"],
+                    # "headnotes": row['Details']['Keywords'],
+                    "summary": row["Details"]["ShortOpinion"],
+                    "url": f"https://www.socialaw.com/services/slip-opinions/{row['UrlName']}",
+                    "docket": row["Details"]["Docket"],
                 }
             )
+
+    @staticmethod
+    def cleanup_content(content):
+        """Remove non-opinion HTML
+
+        Cleanup HMTL from Social Law page so we can properly display the content
+
+        :param content: The scraped HTML
+        :return: Cleaner HTML
+        """
+        content = content.decode("utf-8")
+        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+        content = tree.xpath(
+            "//div[@id='contentPlaceholder_ctl00_ctl00_ctl00_detailContainer']"
+        )[0]
+        new_tree = etree.Element("html")
+        body = etree.SubElement(new_tree, "body")
+        body.append(content)
+        return html.tostring(new_tree, pretty_print=True, encoding="unicode")
