@@ -15,9 +15,13 @@ History:
  - 2023-01-28, William Palin: Updated scraper
 """
 
+import re
+from urllib.parse import urljoin
+
 from lxml import etree, html
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -29,6 +33,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.court_name = "Supreme Judicial Court"
         self.status = "Published"
+        self.expected_content_types = ["text/html"]
 
     def _process_html(self):
         """Scrape and process the JSON endpoint
@@ -38,19 +43,26 @@ class Site(OpinionSiteLinear):
         for row in self.html:
             if row["SectionName"] != self.court_name:
                 continue
+
+            url = urljoin(
+                "https://www.socialaw.com/services/slip-opinions/",
+                row["UrlName"],
+            )
+            details = row["Details"]
+            caption = titlecase(row.get("Parties"))
+            caption = re.sub(r"(\[\d{1,2}\])", "", caption)
+
+            judge_str = details.get("Present", "")
+            judge_str = re.sub(r"(\[\d{1,2}\])", "", judge_str)
+            judge_str = re.sub(r"\, JJ\.", "", judge_str)
+
             self.cases.append(
                 {
-                    "name": row.get("Parties"),
-                    "judge": (
-                        row["Details"]["Present"]
-                        if "JJ" in row["Details"]["Present"]
-                        else ""
-                    ),
+                    "name": caption,
+                    "judge": judge_str,
                     "date": row["Date"],
-                    # "headnotes": row['Details']['Keywords'],
-                    "summary": row["Details"]["ShortOpinion"],
-                    "url": f"https://www.socialaw.com/services/slip-opinions/{row['UrlName']}",
-                    "docket": row["Details"]["Docket"],
+                    "url": url,
+                    "docket": details["Docket"],
                 }
             )
 
