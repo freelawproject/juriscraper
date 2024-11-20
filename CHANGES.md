@@ -16,13 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.40 - 2024-11-20**
+
+- Fixes:
+  - Fix `mass` and `massctapp` scrapers, scrape new endpoint
+  - Exclude "Commomwealth" string from short case names
+
+## Past
+
 **2.6.39 - 2024-11-18**
 
 - Fixes:
   - Fix `Kansas, Ohio Ct App's 1-13` opinion scraper
-
-
-## Past
 
 **2.6.38 - 2024-11-08**
 
