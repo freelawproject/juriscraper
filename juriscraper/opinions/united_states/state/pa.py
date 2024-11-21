@@ -17,7 +17,7 @@ class Site(OpinionSiteLinear):
     court = "Supreme"
     base_url = "https://www.pacourts.us/api/opinion?"
     document_url = "https://www.pacourts.us/assets/opinions/{}/out/{}"
-    days_interval = 20
+    days_interval = 1
     api_dt_format = "%Y-%m-%dT00:00:00-05:00"
     first_opinion_date = datetime(1998, 4, 27)
     judge_key = "AuthorCode"
@@ -28,8 +28,8 @@ class Site(OpinionSiteLinear):
         self.regex = re.compile(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.status = "Published"
 
-        now = datetime.now() + timedelta(days=1)
-        start = now - timedelta(days=7)
+        now = datetime.now()
+        start = now - timedelta(days=2)
         self.params = {
             "startDate": start.strftime(self.api_dt_format),
             "endDate": now.strftime(self.api_dt_format),
