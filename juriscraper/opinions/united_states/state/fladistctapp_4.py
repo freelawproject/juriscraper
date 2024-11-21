@@ -8,3 +8,6 @@ from juriscraper.opinions.united_states.state import fladistctapp_1
 class Site(fladistctapp_1.Site):
     number = "fourth"
     court_index = "4"
+
+    def get_class_name(self):
+        return "fladistctapp_4"

@@ -38,6 +38,8 @@ class OpinionSite(AbstractSite):
             "per_curiam",
             "types",
             "other_dates",
+            "html_urls",
+            "response_htmls",
         ]
         self._req_attrs = [
             "case_dates",
@@ -70,6 +72,12 @@ class OpinionSite(AbstractSite):
         raise NotImplementedError("`_get_case_names()` must be implemented.")
 
     def _get_causes(self):
+        return None
+
+    def _get_html_urls(self):
+        return None
+
+    def _get_response_htmls(self):
         return None
 
     def _get_dispositions(self):

@@ -10,3 +10,9 @@ class Site(nm.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+
+    def get_class_name(self):
+        return "nmctapp"
+
+    def get_court_name(self):
+        return "New Mexico Court of Appeals"

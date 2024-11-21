@@ -11,5 +11,11 @@ from juriscraper.opinions.united_states.state import delaware
 class Site(delaware.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://courts.delaware.gov/opinions/List.aspx?ag=Court%20of%20Common%20Pleas"
+        self.court="Court of Common Pleas"
         self.court_id = self.__module__
+
+    def get_class_name(self):
+        return "delctcompl"
+
+    def get_court_name(self):
+        return "Court of Common Pleas"
