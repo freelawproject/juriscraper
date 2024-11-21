@@ -83,4 +83,4 @@ class Site(OpinionSiteLinear):
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
         body.append(content)
-        return html.tostring(new_tree, pretty_print=True, encoding="unicode")
+        return html.tostring(new_tree).decode("utf-8")
