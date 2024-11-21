@@ -21,6 +21,7 @@ class Site(OpinionSiteLinear):
     api_dt_format = "%Y-%m-%dT00:00:00-05:00"
     first_opinion_date = datetime(1998, 4, 27)
     judge_key = "AuthorCode"
+    regional_cite_regex = re.compile(r"\d{1,3} A\.3d \d+")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -50,9 +51,13 @@ class Site(OpinionSiteLinear):
         json_response = self.html
 
         for cluster in json_response["Items"]:
-            title = cluster["Caption"]
             disposition_date = cluster["DispositionDate"].split("T")[0]
+            title = cluster["Caption"]
             name, docket = self.parse_case_title(title)
+            # A.3d cites seem to exist only for pasuperct
+            cite = ""
+            if cite_match := self.regional_cite_regex.search(title):
+                cite = cite_match.group(0)
 
             for op in cluster["Postings"]:
                 per_curiam = False
@@ -75,6 +80,7 @@ class Site(OpinionSiteLinear):
                         "judge": author_str,
                         "status": status,
                         "per_curiam": per_curiam,
+                        "citation": cite,
                     }
                 )
 
