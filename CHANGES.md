@@ -16,12 +16,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.43 - 2024-11-21**
+
+## Past
+
+- Fixes:
+  - Fixes `ky` and `colo`
+
 **2.6.42 - 2024-11-21**
 
 - Fixes:
   - Fix `mass` and `massctapp` cleanup content method
-
-## Past
 
 **2.6.40 - 2024-11-20**
 
