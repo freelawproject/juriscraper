@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
         now = datetime.now()
-        start = now - timedelta(days=2)
+        start = now - timedelta(days=1)
         self.params = {
             "startDate": start.strftime(self.api_dt_format),
             "endDate": now.strftime(self.api_dt_format),
@@ -77,6 +77,14 @@ class Site(OpinionSiteLinear):
                         "per_curiam": per_curiam,
                     }
                 )
+
+        if not self.test_mode_enabled() and json_response.get("HasNext"):
+            next_page = json_response["PageNumber"] + 1
+            logger.info("Paginating to page %s", next_page)
+            self.params["pageNumber"] = next_page
+            self.url = f"{self.base_url}{urlencode(self.params)}"
+            self.html = self._download()
+            self._process_html()
 
     def parse_case_title(self, title: str) -> Tuple[str, str]:
         """Separates case_name and docket_number from case string
