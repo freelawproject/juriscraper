@@ -40,6 +40,8 @@ class OpinionSiteLinear(OpinionSite):
         "type",
         "joined_by",
         "other_date",
+        "html_url",
+        "response_html",
     }
 
     def __init__(self, *args, **kwargs):
@@ -51,6 +53,13 @@ class OpinionSiteLinear(OpinionSite):
         raise Exception(
             "Must implement _process_html() on OpinionSiteLinear child"
         )
+
+    # Added by Deepak kumar - 21/11/2024
+    def _get_html_urls(self):
+        return self._get_optional_field_by_id("html_url")
+
+    def _get_response_htmls(self):
+        return self._get_optional_field_by_id("response_html")
 
     def _get_case_names(self):
         return [case["name"] for case in self.cases]
