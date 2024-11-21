@@ -12,8 +12,8 @@ History:
     - 2024-07-04: Update to new site, grossir
 """
 
-from datetime import date, datetime
-from typing import Tuple
+from datetime import date, datetime, timedelta
+from typing import Optional, Tuple
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.params = {
-            "product_id": "WW",
+            "product_id": "COLORADO",
             "jurisdiction": "US",
             "content_type": "2",
             "court": self.api_court_code,
@@ -40,14 +40,13 @@ class Site(OpinionSiteLinear):
             "per_page": "30",  # Server breaks down when per_page=500, returns 503
             "page": "1",
             "sort": "date",
+            "type": "document",
             "include_local_exclusive": "true",
             "cbm": "6.0|361.0|5.0|9.0|4.0|2.0=0.01|400.0|1.0|0.001|1.5|0.2",
             "locale": "en",
             "hide_ct6": "true",
-            "t": str(datetime.now().timestamp())[:10],
-            "type": "document",
         }
-        self.url = f"{self.base_url}?{urlencode(self.params)}"
+        self.update_url()
 
         # Request won't work without some of these X- headers
         self.request["headers"].update(
@@ -123,6 +122,23 @@ class Site(OpinionSiteLinear):
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
+        self.update_url(dates)
+        self.html = self._download()
+        self._process_html()
+
+    def update_url(self, dates: Optional[Tuple[date]] = None) -> None:
+        """
+        Set URL with date filters and current timestamp.
+        Request with no date filter was returning very old documents
+        instead of the most recent ones
+
+        :param dates: start and end date tuple. If not present,
+            scrape last week
+        """
+        if not dates:
+            today = datetime.now()
+            dates = (today - timedelta(7), today + timedelta(1))
+
         start = dates[0].strftime("%Y-%m-%d")
         end = dates[1].strftime("%Y-%m-%d")
         timestamp = str(datetime.now().timestamp())[:10]
@@ -130,12 +146,7 @@ class Site(OpinionSiteLinear):
         params.update(
             {
                 "date": f"{start}..{end}",
-                # These are duplicated by the frontend too
-                "locale": ["en", "en"],
-                "hide_ct6": ["true", "true"],
-                "t": [timestamp, timestamp],
+                "t": timestamp,
             }
         )
         self.url = f"{self.base_url}?{urlencode(params)}"
-        self.html = self._download()
-        self._process_html()
