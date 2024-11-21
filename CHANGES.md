@@ -16,7 +16,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.6.41 - 2024-11-21**
+**2.6.42 - 2024-11-21**
 
 - Fixes:
   - Fix `mass` and `massctapp` cleanup content method

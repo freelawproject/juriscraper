@@ -4,7 +4,7 @@ import os
 from setuptools import find_packages, setup
 from setuptools.command.install import install
 
-VERSION = "2.6.41"
+VERSION = "2.6.42"
 AUTHOR = "Free Law Project"
 EMAIL = "info@free.law"
 HERE = os.path.abspath(os.path.dirname(__file__))
