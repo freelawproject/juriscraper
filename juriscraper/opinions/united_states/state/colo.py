@@ -26,6 +26,12 @@ class Site(OpinionSiteLinear):
     days_interval = 30
     first_opinion_date = datetime(2010, 1, 1)
     api_court_code = "14024_01"
+    label_to_key = {
+        "Docket Number": "docket",
+        "Parties": "name",
+        "Decision Date": "date",
+        "Citation": "citation",
+    }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -37,7 +43,7 @@ class Site(OpinionSiteLinear):
             "court": self.api_court_code,
             "bypass_rabl": "true",
             "include": "parent,abstract,snippet,properties_with_ids",
-            "per_page": "30",  # Server breaks down when per_page=500, returns 503
+            "per_page": "50",  # Server breaks down when per_page=500, returns 503
             "page": "1",
             "sort": "date",
             "type": "document",
@@ -48,6 +54,7 @@ class Site(OpinionSiteLinear):
         }
         self.update_url()
 
+        # https://www.coloradojudicial.gov/system/files/opinions-2024-11/24SC459.pdf
         # Request won't work without some of these X- headers
         self.request["headers"].update(
             {
@@ -60,6 +67,27 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["text/html"]
         self.make_backscrape_iterable(kwargs)
 
+    def update_case(self, case: dict, detail_json: dict) -> dict:
+        """Update case dictionary with nested properties
+
+        :param case: the case data
+        :param detail_json: The json response
+        :return: The updated case data
+        """
+        for p in detail_json["properties"]:
+            label = p["property"]["label"]
+            values = p["values"]
+            if label in self.label_to_key:
+                key = self.label_to_key[label]
+                if label == "Citation":
+                    case[key] = values[0]
+                    if len(values) > 1:
+                        case["parallel_citation"] = values[1]
+                else:
+                    case[key] = values[0]
+        case["status"] = "Published" if case["citation"] else "Unpublished"
+        return case
+
     def _process_html(self) -> None:
         search_json = self.html
         logger.info(
@@ -69,9 +97,9 @@ class Site(OpinionSiteLinear):
         )
 
         for result in search_json["results"]:
+            case = {"citation": "", "parallel_citation": ""}
             timestamp = str(datetime.now().timestamp())[:10]
             url = self.detail_url.format(result["id"], timestamp)
-
             if self.test_mode_enabled():
                 # we have manually nested detail JSONs to
                 # to be able to have a test file
@@ -82,37 +110,17 @@ class Site(OpinionSiteLinear):
                 self._request_url_get(url)
                 detail_json = self.request["response"].json()
 
-            # Reset variables to prevent sticking previous values
-            # when a value is missing
-            docket_number, case_name_full, date_filed = "", "", ""
+            if (
+                self.court_id
+                == "juriscraper.opinions.united_states.state.colo"
+            ):
+                case["url"] = f"{detail_json['public_url']}/content"
+            else:
+                case["url"] = (
+                    f"https://colorado.vlex.io/pdf_viewer/{result.get('id')}"
+                )
 
-            # Example of parallel citation:
-            # https://research.coloradojudicial.gov/vid/907372624
-            citation, parallel_citation = "", ""
-            for p in detail_json["properties"]:
-                label = p["property"]["label"]
-                if label == "Docket Number":
-                    docket_number = p["values"][0]
-                elif label == "Parties":
-                    case_name_full = p["values"][0]
-                elif label == "Decision Date":
-                    # Note that json['published_at'] is not the date_filed
-                    date_filed = p["values"][0]
-                elif label == "Citation":
-                    citation = p["values"][0]
-                    if len(p["values"]) > 1:
-                        parallel_citation = p["values"][1]
-
-            case = {
-                "date": date_filed,
-                "docket": docket_number,
-                "name": case_name_full,
-                "url": f"{detail_json['public_url']}/content",
-                "status": "Published" if citation else "Unknown",
-                "citation": citation,
-                "parallel_citation": parallel_citation,
-            }
-
+            case = self.update_case(case, detail_json)
             self.cases.append(case)
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
