@@ -7,3 +7,6 @@ class Site(washctapp_p.Site):
         self.court_id = self.__module__
         self.url = f"https://www.courts.wa.gov/opinions/index.cfm?fa=opinions.byYear&fileYear={self.year}&crtLevel=C&pubStatus=UNP"
         self.status = "Unpublished"
+
+    def get_class_name(self):
+        return "washctapp_u"

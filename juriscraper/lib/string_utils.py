@@ -6,6 +6,7 @@ from datetime import timedelta
 import geonamescache
 from dateutil import parser
 
+
 # For use in titlecase
 BIG = (
     "3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|"
@@ -739,6 +740,9 @@ class CaseNameTweaker:
         return cities + counties + states
 
     def make_case_name_short(self, s):
+        if s is None:
+            print("returning null")
+            return ""
         """Creates short case names where obvious ones can easily be made."""
         parts = [part.strip().split() for part in s.split(" v. ")]
         if len(parts) == 1:

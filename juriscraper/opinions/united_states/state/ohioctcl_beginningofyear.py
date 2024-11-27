@@ -9,6 +9,7 @@ from juriscraper.opinions.united_states.state import ohioctcl
 
 
 class Site(ohioctcl.Site):
+    print("inside ohioctcl_beginningofyear")
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -22,3 +23,6 @@ class Site(ohioctcl.Site):
             # This simply aborts the crawler.
             self.status = 200
             self.html = html.fromstring("<html></html>")
+
+    def get_class_name(self):
+         return "ohioctcl_beginningofyear"

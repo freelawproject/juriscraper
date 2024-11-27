@@ -16,6 +16,8 @@ from datetime import date, datetime
 from typing import Optional, Tuple
 from urllib.parse import urlencode
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -42,9 +44,7 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
-
         Source's page size is 25 rows
-
         :return None
         """
         for case in self.html.xpath(".//article"):
@@ -70,43 +70,41 @@ class Site(OpinionSiteLinear):
                     "url": name_url_span.xpath(".//a/@href")[0],
                     "name": titlecase(name_url_span.text_content()),
                     "date": date_filed,
-                    "docket": docket,
+                    "docket": [docket],
                 }
             )
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
-        """Make custom date range request
-        :param dates: (start_date, end_date) tuple
-        :return None
-        """
+        """Download data for a given date range, handling pagination."""
         logger.info("Backscraping for range %s %s", *dates)
-        self.set_url(*dates)
-        self.html = self._download()
-        self._process_html()
+        page = 0
+        total_cases = 0
+        while True:
+            logger.info(f"Fetching page {page} for range {dates}")
+            self.set_url(*dates, page=page)
+            self.html = self._download()
+            cases_before = len(self.cases)
+            self._process_html()
+            cases_after = len(self.cases)
+            if cases_after == cases_before:
+                logger.info("No more cases found. Stopping pagination.")
+                break
+            page += 1
+            total_cases += cases_after - cases_before
+
+        logger.info(f"Total cases scraped: {total_cases}")
 
     def set_url(
-        self, start: Optional[date] = None, end: Optional[date] = None
+        self, start: Optional[date] = None, end: Optional[date] = None,
+        page: int = 0
     ) -> None:
-        """Formats and sets `self.url` with date inputs
-        If no start or end dates are given, scrape without date filter values
-
-        There is a Document Type filter available, with an 'Opinion' value, that
-        can be added to params like this:
-            {"f[1]": "document_type:94"}a
-        However, we are not using it since some documents marked as 'Decisions'
-        also contain opinions. For example:
-        https://www.vermontjudiciary.org/sites/default/files/documents/2020-10-13-57.pdf
-        titled "Opinion and Order on Cross-Motions for Summary Judgment"
-        has 8 pages, most of which are argumentation
-
-        :param start: start date
-        :param end: end date
-        :return None
-        """
         params = {
             "facet_from_date": "",
             "facet_to_date": "",
-            "f[0]": f"court_division_opinions_library_:{self.division}",  # filter by court
+            "f[0]": f"court_division_opinions_library_:{self.division}",
+            # Filter by court
+            "search_api_fulltext": "",
+            "page": page,
         }
         if start:
             params["facet_from_date"] = start.strftime("%m/%d/%Y")
@@ -123,3 +121,31 @@ class Site(OpinionSiteLinear):
             return {"Citation": {"type": 8, **match.groupdict()}}
 
         return {}
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        print(f"{start_date} , {end_date}")
+        self._download_backwards((start_date,end_date))
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "vt"
+
+    def get_state_name(self):
+        return "Vermont"
+
+    def get_court_name(self):
+        return "Supreme Court of Vermont"
