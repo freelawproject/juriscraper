@@ -13,6 +13,9 @@ History:
 
 from datetime import date, datetime, timedelta
 
+from bs4 import BeautifulSoup
+from lxml import etree
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -21,24 +24,19 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.page_number = 1
+        self.max_page_num = -1
         self.court_index = 0
         self.year = date.today().year
-        self.url = "https://www.supremecourtofohio.gov/rod/docs/"
+        self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
         self.court_id = self.__module__
-    def _set_parameters(self) -> None:
-        """Set the parameters for the search
-        :return: None
-        """
+    def _set_parameters(self,start_year,end_year) -> None:
         event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
         view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
         self.parameters = {
-            # "__EVENTARGUMENT": f"Page${page_number}",
             "__VIEWSTATEENCRYPTED": "",
             "ctl00$MainContent$ddlCourt": f"{self.court_index}",
-            "ctl00$MainContent$ddlDecidedYearMin": f"{self.year}",
-            # "ctl00$MainContent$ddlDecidedYearMin": "2024",
-            "ctl00$MainContent$ddlDecidedYearMax": f"{self.year}",
-            # "ctl00$MainContent$ddlDecidedYearMax": "2024",
+            "ctl00$MainContent$ddlDecidedYearMin": str(start_year),
+            "ctl00$MainContent$ddlDecidedYearMax": str(end_year),
             "ctl00$MainContent$ddlCounty": "0",
             "ctl00$MainContent$btnSubmit": "Submit",
             "ctl00$MainContent$ddlRowsPerPage": "50",
@@ -47,12 +45,66 @@ class Site(OpinionSiteLinear):
         }
         self.method = "POST"
 
-    def _process_html(self) -> None:
+    def _set_parameters1(self,start_year,end_year) -> None:
+        event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
+        view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
+        self.parameters = {
+            "__EVENTTARGET": "ctl00$MainContent$gvResults",
+            "__VIEWSTATEENCRYPTED": "",
+            "__EVENTARGUMENT":f"Page${self.page_number}",
+            "ctl00$MainContent$ddlCourt": f"{self.court_index}",
+            "ctl00$MainContent$ddlDecidedYearMin": str(start_year),
+            "ctl00$MainContent$ddlDecidedYearMax": str(end_year),
+            "ctl00$MainContent$ddlCounty": "0",
+            "ctl00$MainContent$ddlRowsPerPage": "50",
+            "__EVENTVALIDATION": event_validation[0].get("value"),
+            "__VIEWSTATE": view_state[0].get("value"),
+        }
+        self.method = "POST"
+
+    def _set_parameters2(self,start_year,end_year) -> None:
+        event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
+        view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
+        self.parameters = {
+            "__EVENTTARGET": "ctl00$MainContent$gvResults",
+            "__VIEWSTATEENCRYPTED": "",
+            "__EVENTARGUMENT":"Page$Last",
+            "ctl00$MainContent$ddlCourt": f"{self.court_index}",
+            "ctl00$MainContent$ddlDecidedYearMin": str(start_year),
+            "ctl00$MainContent$ddlDecidedYearMax": str(end_year),
+            "ctl00$MainContent$ddlCounty": "0",
+            "ctl00$MainContent$ddlRowsPerPage": "50",
+            "__EVENTVALIDATION": event_validation[0].get("value"),
+            "__VIEWSTATE": view_state[0].get("value"),
+        }
+        self.method = "POST"
+
+
+    def _process_html(self,start_date,end_date) -> None:
         """Process the HTML and extract the data"""
         if not self.test_mode_enabled():
             logger.info("test mode is disabled, now setting parameters")
-            self._set_parameters()
+            if self.page_number<=1:
+                self._set_parameters(start_date,end_date)
+            # elif self.page_number == self.max_page_num:
+            #     print(f"calling url for last page now and the current and last page number is {self.page_number} and {self.max_page_num}")
+            #     self._set_parameters2(start_date,end_date)
+            else:
+                self._set_parameters1(start_date,end_date)
             self.html = self._download()
+            soup = BeautifulSoup(etree.tostring(self.html, pretty_print=True).decode("utf-8"), 'html.parser')
+
+            table = soup.find("table", {"id": "MainContent_gvResults"})
+            first_data_row = table.find_all("tr")[
+                1]
+            row_data = [cell.get_text(strip=True) for cell in
+                        first_data_row.find_all("td")]
+            print(f"last page number is {row_data[-1]}")
+            curr_page = row_data[-1]
+            if curr_page != ">>" and int(curr_page) > self.max_page_num :
+                self.max_page_num=int(curr_page)
+            print(etree.tostring(self.html, pretty_print=True).decode("utf-8"))
+
 
         for row in self.html.xpath(
             ".//table[@id='MainContent_gvResults']//tr[not(.//a[contains(@href, 'javascript')])]"
@@ -73,7 +125,7 @@ class Site(OpinionSiteLinear):
             citation_or_county = row.xpath(".//td[5]//text()")[0].strip()
             web_cite = row.xpath(".//td[8]//text()")[0]
             case = {
-                "docket": docket,
+                "docket": [docket],
                 "name": name,
                 "judge": judge,
                 "per_curiam": per_curiam,
@@ -84,28 +136,39 @@ class Site(OpinionSiteLinear):
                 "status": "Published",
             }
 
-            # Looking for lagged citations like: '175 Ohio St.3d 155'
-            # For Supreme Court cases
             if self.court_index == 0:
                 citation = ""
                 if web_cite not in citation_or_county:
                     citation = citation_or_county
                 case["parallel_citation"] = citation
             elif "ohioctapp" in self.court_id:
-                # For ohioctapp cases. This will be important to disambiguate
-                # docket numbers, which may be repeated across districts
                 case["lower_court"] = f"{citation_or_county} County Court"
 
             self.cases.append(case)
 
-    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        """Crawl cases between the given start and end date."""
-        total_results = 0
+    from datetime import datetime
 
-        if not self.downloader_executed:
-            self.html = self._download()
 
-            self._process_html()
+
+    def crawling_range(self, start_date: datetime ,end_date: datetime ) -> int:
+        # start_date = datetime(2023,1,1)
+        while True:
+            if not self.downloader_executed:
+                self.html = self._download()
+                print(self.html)
+
+
+            print(f"current page and total page is {self.page_number} and {self.max_page_num}")
+
+            if(self.page_number == self.max_page_num):
+                print("we can stop now")
+                self._process_html(start_date.year, end_date.year)
+                break
+
+            self._process_html(start_date.year, end_date.year)
+
+            print(f"page number is {self.page_number}")
+            self.page_number += 1
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, f"_get_{attr}")())
@@ -117,7 +180,7 @@ class Site(OpinionSiteLinear):
         self._check_sanity()
         self._date_sort()
         self._make_hash()
-        return total_results
+        return 0
 
     def get_court_type(self):
         return "state"

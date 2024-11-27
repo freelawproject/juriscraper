@@ -9,3 +9,9 @@ class Site(nj.Site):
             "https://www.njcourts.gov/attorneys/opinions/unpublished-appellate"
         )
         self.status = "Unpublished"
+
+    def get_class_name(self):
+        return "njsuperctappdiv_u"
+
+    def get_court_name(self):
+        return "Superior Court, Appellate Division"

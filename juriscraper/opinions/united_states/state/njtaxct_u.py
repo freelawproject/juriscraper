@@ -15,3 +15,9 @@ class Site(nj.Site):
             "https://www.njcourts.gov/attorneys/opinions/unpublished-tax"
         )
         self.status = "Unpublished"
+
+    def get_class_name(self):
+        return "njtaxct_u"
+
+    def get_court_name(self):
+        return "New Jersey Tax Court"

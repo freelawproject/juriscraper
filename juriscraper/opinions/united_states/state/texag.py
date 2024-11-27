@@ -38,7 +38,7 @@ class Site(OpinionSiteLinear):
                     "status": "Published",
                 }
             )
-    #
+
     # def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
     #     return 0
     #

@@ -15,3 +15,9 @@ class Site(tex.Site):
         self.court_id = self.__module__
         self.court_name = "capp_11"
         self.checkbox = 12
+
+    def get_court_name(self):
+        return "Texas Court of Appeals"
+
+    def get_class_name(self):
+        return "texapp_11"

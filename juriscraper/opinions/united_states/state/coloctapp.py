@@ -20,4 +20,4 @@ class Site(colo.Site):
         return "Court of Appeals of Colorado"
 
     def get_class_name(self):
-        return "coloctapp"
+            return "coloctapp"

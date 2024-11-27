@@ -14,3 +14,9 @@ class Site(vt.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+
+    def get_class_name(self):
+        return "vt_criminal"
+
+    def get_court_name(self):
+        return "Supreme Court of Vermont Environmental Division"
