@@ -16,9 +16,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
-**2.6.43 - 2024-11-21**
+**2.6.44 - 2024-11-27**
+
+- Fixes:
+  - Fixes `colo`
 
 ## Past
+
+**2.6.43 - 2024-11-21**
 
 - Fixes:
   - Fixes `ky` and `colo`
