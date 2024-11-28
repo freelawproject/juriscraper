@@ -3,6 +3,60 @@
         {
             "Author": null,
             "BoardDocketNumber": null,
+            "Caption": "B.S.G. v. D.M.C.\nNo.  2000 EDA 2020\n255 A.3d 528",
+            "CourtDocketNumber": null,
+            "CourtType": 2,
+            "DispositionDate": "2021-05-27T00:00:00",
+            "Keywords": null,
+            "UserIdentifier": "The Superior Court Reporter",
+            "UploadDate": "0001-01-01T00:00:00",
+            "PostedToday": false,
+            "Postings": [
+                {
+                    "Id": 59145,
+                    "AuthorId": "27",
+                    "OpinionId": 53314,
+                    "FileName": "J-A07035-21oo.pdf",
+                    "ProcessedDate": "2021-05-27T00:00:00",
+                    "PostingTypeId": "1",
+                    "PublicationTypeId": 2,
+                    "RenderedDate": "0001-01-01T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 27,
+                        "AuthorName": "Stevens, P.J.E.",
+                        "AuthorCode": null,
+                        "Selectable": true,
+                        "SortOrder": 7160
+                    },
+                    "PostType": {
+                        "Id": 1,
+                        "PostingTypeCode": "Opinion",
+                        "PostingTypeId": "1",
+                        "SortOrder": 1
+                    },
+                    "PublicationType": {
+                        "Id": 2,
+                        "Description": "Precedential",
+                        "SortOrder": null
+                    }
+                }
+            ],
+            "CreatedById": null,
+            "DeletedById": null,
+            "UpdatedById": null,
+            "CreatedOn": null,
+            "DeletedOn": null,
+            "UpdatedOn": null,
+            "CreatedBy": null,
+            "DeletedBy": null,
+            "UpdatedBy": null,
+            "Id": 53314
+        },
+        {
+            "Author": null,
+            "BoardDocketNumber": null,
             "Caption": "Com. v. Jackson, W.\r\nNo. 2466 EDA 2022",
             "CourtDocketNumber": null,
             "CourtType": 2,

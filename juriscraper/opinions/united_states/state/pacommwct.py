@@ -19,12 +19,16 @@ from datetime import datetime
 from urllib.parse import urlencode
 
 from juriscraper.opinions.united_states.state import pasuperct
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(pasuperct.Site):
     court = "Commonwealth"
-    days_interval = 30
     first_opinion_date = datetime(1998, 8, 17)
+    # Deactivate extract_from_text from parent class
+    # and avoid triggering the example requirement from
+    # tests.local.test_ScraperExtractFromTextTest
+    extract_from_text = OpinionSite.extract_from_text
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
