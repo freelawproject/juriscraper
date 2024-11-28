@@ -26,3 +26,10 @@ class Site(nh_p.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.status = "Unpublished"
+        self.year_to_filter.update(
+            {
+                2021: "@field_document_subcategory|=|1616",
+                2020: "@field_document_subcategory|=|1611",
+                2019: "@field_document_subcategory|=|1606",
+            }
+        )
