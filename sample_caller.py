@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import signal
@@ -84,9 +85,11 @@ def extract_doc_content(
 
     # The extracted content is embedded for display in Courtlistener.
     # We save it into /tmp/ to have an idea how it would look. You can
-    # inspect it your browser by going into f'file://tmp/{filename}.html'
+    # inspect it your browser by going into f'file://tmp/juriscraper/{filename}.html'
     court_id = site.court_id.split(".")[-1]
-    filename = f"/tmp/{court_id}_{filename}.html"
+    directory = "/tmp/juriscraper/"
+    os.makedirs(directory, exist_ok=True)
+    filename = f"{directory}{court_id}_{filename}.html"
     with open(filename, "w") as f:
         if extension != ".html":
             f.write(f"<pre>{extracted_content}</pre>")
@@ -202,35 +205,38 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
     )
     return {"count": len(site), "exceptions": exceptions}
 
+
 def save_response(site):
     """
     Save response content and headers into /tmp/
     """
-    print("Saving response to /tmp/")
     now_str = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
     court = site.court_id.split(".")[-1]
     response = site.request["response"]
+    directory = "/tmp/juriscraper/"
+    os.makedirs(directory, exist_ok=True)
 
-    with open(f"/tmp/{court}_headers_{now_str}.json", "w") as f:
+    headers_filename = f"{directory}{court}_headers_{now_str}.json"
+    with open(headers_filename, "w") as f:
         json.dump(dict(response.headers), f, indent=4)
+    logger.debug("Saved headers to %s", headers_filename)
 
     if isinstance(site.html, dict):
-        filename = f"/tmp/{court}_content_{now_str}.json"
+        filename = f"{directory}{court}_content_{now_str}.json"
         with open(filename, "w") as f:
             json.dump(response.text, f, indent=4)
     else:
-        filename = f"/tmp/{court}_content_{now_str}.html"
+        filename = f"{directory}{court}_content_{now_str}.html"
         with open(filename, "w") as f:
             f.write(response.text)
 
+    logger.info("Saved response to %s", filename)
+
     if response.history:
-        print("Response history:", response.history)
+        logger.info("Response history: %s", response.history)
 
     # open the tmp file in the browser
     webbrowser.open(f"file://{filename}")
-
-
-v_print = None
 
 
 def main():
@@ -453,10 +459,8 @@ def main():
                     logger.debug(
                         "Sent %s request to: %s", site.method, site.url
                     )
-                    if site.uses_selenium:
-                        v_print(3, "Selenium will be used.")
-
                     error = None
+
                     try:
                         site.parse()
                         results[current_court]["scrape"] = scrape_court(
