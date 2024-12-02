@@ -3667,6 +3667,269 @@
                     }
                 ]
             }
+        },
+        {
+            "title": "2022-0543 and 2022-0546, In re E.R.; In re H.R.",
+            "id": "56801",
+            "list_content": "\u003Cdiv class='document__detail'\u003E\n        \u003Cdiv class='document__detail__icon__container'\u003E \u003Cimg src='https://www.courts.nh.gov/sites/g/files/ehbemt471/files/2019-12/icon-pdf.png' aria-label='PDF Document Icon'/\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__container'\u003E\n        \u003Cdiv class='document__detail__title'\u003E\u003Ch3\u003E\u003Ca href='/sites/g/files/ehbemt471/files/documents/2023-06/2023033er-hr.pdf' \u003E2022-0543 and 2022-0546, In re E.R.; In re H.R.\u003C/a\u003E\u003C/h3\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__description'\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003Cdiv\u003E\u003Cstrong\u003EDocument Format: \u003C/strong\u003EPDF\u003C/div\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003Cdiv\u003E\u003Cstrong\u003EDate: \u003C/strong\u003E06/29/2023\u003C/div\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003C/div\u003E\n        \u003C/div\u003E\n        \u003C/div\u003E",
+            "fields": {
+                "nid": [
+                    "56801"
+                ],
+                "langcode": [
+                    "en"
+                ],
+                "revision_log": null,
+                "title": [
+                    "2022-0543 and 2022-0546, In re E.R.; In re H.R."
+                ],
+                "sticky": [
+                    "0"
+                ],
+                "moderation_state": [
+                    "published"
+                ],
+                "field_date_filed": null,
+                "field_date_posted": [
+                    "2023-06-29"
+                ],
+                "field_date_revised": null,
+                "field_description": null,
+                "field_document": null,
+                "field_document_category": null,
+                "field_document_file": {
+                    "0": {
+                        "id": "92886",
+                        "title": "",
+                        "type": "document",
+                        "fields": {
+                            "fid": [
+                                "92886"
+                            ],
+                            "uuid": [
+                                "a5b0223d-1823-4a9c-bd9b-8a8d0b380d82"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "uid": null,
+                            "filename": [
+                                "2023033er-hr.pdf"
+                            ],
+                            "uri": [
+                                "public://documents/2023-06/2023033er-hr.pdf"
+                            ],
+                            "filemime": [
+                                "application/pdf"
+                            ],
+                            "filesize": [
+                                "82265"
+                            ],
+                            "status": [
+                                "1"
+                            ],
+                            "created": [
+                                "1688043401"
+                            ],
+                            "changed": [
+                                "1688043408"
+                            ]
+                        }
+                    },
+                    "alt": ""
+                },
+                "field_document_number": null,
+                "field_document_purpose": [
+                    {
+                        "id": "1331",
+                        "title": "Supreme Court Opinion",
+                        "type": "document",
+                        "fields": {
+                            "tid": [
+                                "1331"
+                            ],
+                            "uuid": [
+                                "47287b32-61ff-4c43-8729-613ddcbe16df"
+                            ],
+                            "revision_id": [
+                                "1331"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "vid": null,
+                            "revision_created": [
+                                "1626458907"
+                            ],
+                            "revision_user": null,
+                            "revision_log_message": null,
+                            "status": [
+                                "1"
+                            ],
+                            "name": [
+                                "Supreme Court Opinion"
+                            ],
+                            "description": [
+                                {
+                                    "#text": null,
+                                    "#type": "processed_text",
+                                    "#format": null
+                                }
+                            ],
+                            "weight": [
+                                "0"
+                            ],
+                            "parent": null,
+                            "changed": [
+                                "1626458907"
+                            ],
+                            "default_langcode": [
+                                "1"
+                            ],
+                            "revision_default": [
+                                "1"
+                            ],
+                            "revision_translation_affected": [
+                                "1"
+                            ],
+                            "metatag": null,
+                            "path": [
+                                "{\"langcode\":\"en\"}"
+                            ],
+                            "publish_on": null,
+                            "unpublish_on": null
+                        }
+                    }
+                ],
+                "field_document_subcategory": [
+                    {
+                        "id": "2256",
+                        "title": "2023",
+                        "type": "document",
+                        "fields": {
+                            "tid": [
+                                "2256"
+                            ],
+                            "uuid": [
+                                "6eaa7541-a403-4145-81da-358849002014"
+                            ],
+                            "revision_id": [
+                                "2256"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "vid": null,
+                            "revision_created": [
+                                "1672775535"
+                            ],
+                            "revision_user": null,
+                            "revision_log_message": null,
+                            "status": [
+                                "1"
+                            ],
+                            "name": [
+                                "2023"
+                            ],
+                            "description": [
+                                {
+                                    "#text": null,
+                                    "#type": "processed_text",
+                                    "#format": null
+                                }
+                            ],
+                            "weight": [
+                                "0"
+                            ],
+                            "parent": null,
+                            "changed": [
+                                "1672775535"
+                            ],
+                            "default_langcode": [
+                                "1"
+                            ],
+                            "revision_default": [
+                                "1"
+                            ],
+                            "revision_translation_affected": [
+                                "1"
+                            ],
+                            "metatag": null,
+                            "path": [
+                                "{\"langcode\":\"en\"}"
+                            ],
+                            "publish_on": null,
+                            "unpublish_on": null
+                        }
+                    }
+                ],
+                "field_entity_tags": null,
+                "field_judge": null,
+                "field_link_url": null,
+                "field_parties": null,
+                "field_permissions": [
+                    {
+                        "id": "131",
+                        "title": "All Content Contributors",
+                        "type": "document",
+                        "fields": {
+                            "tid": [
+                                "131"
+                            ],
+                            "uuid": [
+                                "b07e8e0a-6aef-44fc-8f1b-88fd74d1128a"
+                            ],
+                            "revision_id": [
+                                "131"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "vid": null,
+                            "revision_created": [
+                                "1564519542"
+                            ],
+                            "revision_user": null,
+                            "revision_log_message": null,
+                            "status": [
+                                "1"
+                            ],
+                            "name": [
+                                "All Content Contributors"
+                            ],
+                            "description": [
+                                {
+                                    "#text": null,
+                                    "#type": "processed_text",
+                                    "#format": null
+                                }
+                            ],
+                            "weight": [
+                                "0"
+                            ],
+                            "parent": null,
+                            "changed": [
+                                "1564519542"
+                            ],
+                            "default_langcode": [
+                                "1"
+                            ],
+                            "revision_default": [
+                                "1"
+                            ],
+                            "revision_translation_affected": [
+                                "1"
+                            ],
+                            "metatag": null,
+                            "path": [
+                                "{\"langcode\":\"en\"}"
+                            ],
+                            "publish_on": null,
+                            "unpublish_on": null
+                        }
+                    }
+                ]
+            }
         }
     ],
     "cache_tags": [

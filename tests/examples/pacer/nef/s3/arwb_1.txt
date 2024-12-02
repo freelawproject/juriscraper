@@ -1,0 +1,118 @@
+Return-Path: <askecf@arwb.uscourts.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4v8lgrdmv68piiljccp6aeg3lt7e7c4j7fmnsg01
+ for user@recap.email;
+ Tue, 10 Sep 2024 17:08:44 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of arwb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=askecf@arwb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of arwb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=askecf@arwb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=arwb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIS29LV3dmTkNVcW9KQWhPNFVHNGYzbWZnQkFSN1JpTUlibmpmd1VydTBYRTNZTlZrSEJtY2ZhT29acHJhcU83MnNWbC9IN0M2OUdkSnhSNWpnbVlxMGpvQ21WNmhiNmVvMUMyMGY2Um5ab3BhZ2JlMzBZcHVnQTA1SjVGYjkrR1E5V3R1YUppeFZScHRwUGtvL3laRlhsUHFiNngxTkJhN3lOUHF5VXNWbWt0RDhka3JlTElmN1QvaVJLUUJKZ3M3ZWNSVWVUTnJJTEhFWjFOOWZnbFJEQStJRXhGbVNxaVlpejljTldPYmlBakp2MkZBV2gxSzZLa1FIZzJMS3NkWWtNK2hGUjhvTXJ3YjJCRW54Vi9tVlBFd2xRaGZDQnlNYXBNRHNlYTdLSEE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=fWBQO9Ze0kGoExUuYzlH8aY/IJOhWwzJwKpJv8e/lsYAje69yo/EAKfj4ejGQjqcSCVSs4dFoN1+fKf+tuPM1I7uggxTsr8epTxON7J/zMVqfKFNbnWJGDj35CwMOMahi2Ey6eu1myYKSLwdr0KJ23Axoev1H6+qQm6DZbhn2/Q=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1725988126; v=1; bh=znyG/qKN2C371M4o5LcqBYXmVl0afQV1KTL84T/xCTw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.112
+Received: from arwbdb.arwb.gtwy.dcn ([156.119.56.112])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 10 Sep 2024 13:08:44 -0400
+Received: from arwbdb.arwb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by arwbdb.arwb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 48AH8hna124224;
+	Tue, 10 Sep 2024 12:08:44 -0500
+Received: (from ecf_web@localhost)
+	by arwbdb.arwb.gtwy.dcn (8.14.7/8.14.4/Submit) id 48AH8git124152;
+	Tue, 10 Sep 2024 12:08:42 -0500
+Date: Tue, 10 Sep 2024 12:08:42 -0500
+MIME-Version:1.0
+From:askecf@arwb.uscourts.gov
+To:Courtmail@arwb.uscourts.gov
+Message-Id:<13822418@arwb.uscourts.gov>
+Subject:Ch-7 1:24-bk-70535 Notice of Appearance; Lowry Farms, Inc.
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Western District of Arkansas</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Hani W. Hashem entered on 9/10/2024 at 12:08 PM CDT and filed on 9/10/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Lowry Farms, Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.arwb.uscourts.gov/cgi-bin/DktRpt.pl?175501>1:24-bk-70535</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.arwb.uscourts.gov/doc1/028014329650?pdf_header=&magic_num=8174049&de_seq_num=146&caseid=175501'>48</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Notice of Appearance and Request for Notice <i></i>  Filed by  FirstName LastName  Interested Party   Company, LLC     (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>NOA_001.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=990647545 [Date=9/10/2024] [FileNumber=13822416-0
+<BR><TAB>] [3d4adc46d0e6a7bc7679cfe61e3f6c5890161b700417e4964f30a1b0e2dfb00efb4
+<BR><TAB>d5cc9004a5b4f27281bb004635f1fc6edbe34a3a33f37a1a5048b6d88480f]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1:24-bk-70535 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Interested Party Company, LLC</span>
+<br>xxx@lawfirm.com,  yyy@lawfirm.com;zzz@lawfirm.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor FirstName LastName, et al.</span>
+<br>person@gmail.com,  user@recap.email
+<BR>
+<BR><span class="personName">  U.S. Trustee (ust)</span>
+<br>USTPRegion13.LR.ECF@usdoj.gov,  Shari.Sherman@usdoj.gov;jill.p.eschbacher@usdoj.gov;mary.b.mansfield@usdoj.gov;kent.h.johnson@usdoj.gov
+<BR>
+
+<BR>
+<B>
+1:24-bk-70535 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

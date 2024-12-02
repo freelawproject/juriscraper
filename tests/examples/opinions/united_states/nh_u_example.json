@@ -4,6 +4,269 @@
     "last_page": 6,
     "data": [
         {
+            "title": "2015-0082, Marissa Rattee v. Andre Bertolino",
+            "id": "38281",
+            "list_content": "\u003Cdiv class='document__detail'\u003E\n        \u003Cdiv class='document__detail__icon__container'\u003E \u003Cimg src='https://www.courts.nh.gov/sites/g/files/ehbemt471/files/2019-12/icon-pdf.png' aria-label='PDF Document Icon'/\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__container'\u003E\n        \u003Cdiv class='document__detail__title'\u003E\u003Ch3\u003E\u003Ca href='/sites/g/files/ehbemt471/files/documents/2021-09/20150082.pdf' \u003E2015-0082, Marissa Rattee v. Andre Bertolino\u003C/a\u003E\u003C/h3\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__description'\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003Cdiv\u003E\u003Cstrong\u003EDocument Format: \u003C/strong\u003EPDF\u003C/div\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003Cdiv\u003E\u003Cstrong\u003EDate Filed: \u003C/strong\u003E05/21/2015\u003C/div\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003C/div\u003E\n        \u003Cdiv class='document__detail__information'\u003E\u003C/div\u003E\n        \u003C/div\u003E\n        \u003C/div\u003E",
+            "fields": {
+                "nid": [
+                    "38281"
+                ],
+                "langcode": [
+                    "en"
+                ],
+                "revision_log": null,
+                "title": [
+                    "2015-0082, Marissa Rattee v. Andre Bertolino"
+                ],
+                "sticky": [
+                    "0"
+                ],
+                "moderation_state": [
+                    "published"
+                ],
+                "field_date_filed": [
+                    "2015-05-21"
+                ],
+                "field_date_posted": null,
+                "field_date_revised": null,
+                "field_description": null,
+                "field_document": null,
+                "field_document_category": null,
+                "field_document_file": {
+                    "0": {
+                        "id": "32111",
+                        "title": "",
+                        "type": "document",
+                        "fields": {
+                            "fid": [
+                                "32111"
+                            ],
+                            "uuid": [
+                                "f34d1826-e1e6-4eb2-9eff-8e346db95997"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "uid": null,
+                            "filename": [
+                                "20150082.pdf"
+                            ],
+                            "uri": [
+                                "public://documents/2021-09/20150082.pdf"
+                            ],
+                            "filemime": [
+                                "application/pdf"
+                            ],
+                            "filesize": [
+                                "63633"
+                            ],
+                            "status": [
+                                "1"
+                            ],
+                            "created": [
+                                "1631281513"
+                            ],
+                            "changed": [
+                                "1631281534"
+                            ]
+                        }
+                    },
+                    "alt": ""
+                },
+                "field_document_number": null,
+                "field_document_purpose": [
+                    {
+                        "id": "1856",
+                        "title": "Supreme Court Case Orders",
+                        "type": "document",
+                        "fields": {
+                            "tid": [
+                                "1856"
+                            ],
+                            "uuid": [
+                                "f4478204-1d08-4251-aa99-f3aee22dc389"
+                            ],
+                            "revision_id": [
+                                "1856"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "vid": null,
+                            "revision_created": [
+                                "1630333706"
+                            ],
+                            "revision_user": null,
+                            "revision_log_message": null,
+                            "status": [
+                                "1"
+                            ],
+                            "name": [
+                                "Supreme Court Case Orders"
+                            ],
+                            "description": [
+                                {
+                                    "#text": null,
+                                    "#type": "processed_text",
+                                    "#format": null
+                                }
+                            ],
+                            "weight": [
+                                "0"
+                            ],
+                            "parent": null,
+                            "changed": [
+                                "1630333706"
+                            ],
+                            "default_langcode": [
+                                "1"
+                            ],
+                            "revision_default": [
+                                "1"
+                            ],
+                            "revision_translation_affected": [
+                                "1"
+                            ],
+                            "metatag": null,
+                            "path": [
+                                "{\"langcode\":\"en\"}"
+                            ],
+                            "publish_on": null,
+                            "unpublish_on": null
+                        }
+                    }
+                ],
+                "field_document_subcategory": [
+                    {
+                        "id": "1586",
+                        "title": "2015",
+                        "type": "document",
+                        "fields": {
+                            "tid": [
+                                "1586"
+                            ],
+                            "uuid": [
+                                "c9daddb8-74e9-48ea-a77b-dc0706e690ba"
+                            ],
+                            "revision_id": [
+                                "1586"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "vid": null,
+                            "revision_created": [
+                                "1628101350"
+                            ],
+                            "revision_user": null,
+                            "revision_log_message": null,
+                            "status": [
+                                "1"
+                            ],
+                            "name": [
+                                "2015"
+                            ],
+                            "description": [
+                                {
+                                    "#text": null,
+                                    "#type": "processed_text",
+                                    "#format": null
+                                }
+                            ],
+                            "weight": [
+                                "0"
+                            ],
+                            "parent": null,
+                            "changed": [
+                                "1628101350"
+                            ],
+                            "default_langcode": [
+                                "1"
+                            ],
+                            "revision_default": [
+                                "1"
+                            ],
+                            "revision_translation_affected": [
+                                "1"
+                            ],
+                            "metatag": null,
+                            "path": [
+                                "{\"langcode\":\"en\"}"
+                            ],
+                            "publish_on": null,
+                            "unpublish_on": null
+                        }
+                    }
+                ],
+                "field_entity_tags": null,
+                "field_judge": null,
+                "field_link_url": null,
+                "field_parties": null,
+                "field_permissions": [
+                    {
+                        "id": "131",
+                        "title": "All Content Contributors",
+                        "type": "document",
+                        "fields": {
+                            "tid": [
+                                "131"
+                            ],
+                            "uuid": [
+                                "b07e8e0a-6aef-44fc-8f1b-88fd74d1128a"
+                            ],
+                            "revision_id": [
+                                "131"
+                            ],
+                            "langcode": [
+                                "en"
+                            ],
+                            "vid": null,
+                            "revision_created": [
+                                "1564519542"
+                            ],
+                            "revision_user": null,
+                            "revision_log_message": null,
+                            "status": [
+                                "1"
+                            ],
+                            "name": [
+                                "All Content Contributors"
+                            ],
+                            "description": [
+                                {
+                                    "#text": null,
+                                    "#type": "processed_text",
+                                    "#format": null
+                                }
+                            ],
+                            "weight": [
+                                "0"
+                            ],
+                            "parent": null,
+                            "changed": [
+                                "1564519542"
+                            ],
+                            "default_langcode": [
+                                "1"
+                            ],
+                            "revision_default": [
+                                "1"
+                            ],
+                            "revision_translation_affected": [
+                                "1"
+                            ],
+                            "metatag": null,
+                            "path": [
+                                "{\"langcode\":\"en\"}"
+                            ],
+                            "publish_on": null,
+                            "unpublish_on": null
+                        }
+                    }
+                ]
+            }
+        },
+        {
             "title": "2023-0040, State of New Hampshire v. Paul J. Howard, Jr.",
             "id": "63426",
             "list_content": "<div class='document__detail'>\n        <div class='document__detail__icon__container'> <img src='https://www.courts.nh.gov/sites/g/files/ehbemt471/files/2019-12/icon-pdf.png' aria-label='PDF Document Icon'/></div>\n        <div class='document__detail__container'>\n        <div class='document__detail__title'><h3><a href='/sites/g/files/ehbemt471/files/documents/2024-08/20230040.pdf' >2023-0040, State of New Hampshire v. Paul J. Howard, Jr.</a></h3></div>\n        <div class='document__detail__description'></div>\n        <div class='document__detail__information'><div><strong>Document Format: </strong>PDF</div></div>\n        <div class='document__detail__information'><div><strong>Date: </strong>08/14/2024</div></div>\n        <div class='document__detail__information'></div>\n        <div class='document__detail__information'></div>\n        </div>\n        </div>",

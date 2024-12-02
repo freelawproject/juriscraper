@@ -9,9 +9,17 @@ History:
     - 2023-11-19: Updated by William E. Palin
 """
 
+import re
+
+from lxml import html
+
 from juriscraper.opinions.united_states.state import colo
 
 
 class Site(colo.Site):
     api_court_code = "14024_02"
     days_interval = 15
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.expected_content_types = ["application/pdf"]

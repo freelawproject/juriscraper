@@ -6,12 +6,10 @@ Reviewer: mlr
 Date created: 28 Aug 2018
 """
 
-from datetime import datetime
-
-from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
     base_url = "https://www.ca11.uscourts.gov/oral-argument-recordings"
 
     def __init__(self, *args, **kwargs):
@@ -19,34 +17,17 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         self.url = self.base_url
         self.back_scrape_iterable = [i for i in range(0, 52)]
-        self.base_path = "//tr[not(th)]"
 
-    def _get_download_urls(self):
-        path = f"{self.base_path}//td[5]//@href"
-        return list(self.html.xpath(path))
-
-    def _get_case_names(self):
-        path = f"{self.base_path}//td[2]/text()"
-        return list(self.html.xpath(path))
-
-    def _get_case_dates(self):
-        path = f"{self.base_path}//td[3]/text()"
-        return list(map(self._return_case_date, self.html.xpath(path)))
-
-    @staticmethod
-    def _return_case_date(s):
-        return datetime.strptime(s.strip(), "%Y-%m-%d").date()
-
-    def _get_docket_numbers(self):
-        path = f"{self.base_path}//td[1]/text()"
-        # normalize docket numbers
-        # get rid of "consolidated with" text
-        # parse docket numbers like docketnum1 & docketnum2
-        # also handle docketnum1\ndocketnum2\ndocketnum3
-        # Return comma joined string like docketnum1, docketnum2
-        return [
-            ", ".join(
-                d.strip()
+    def _process_html(self):
+        for row in self.html.xpath("//tr[not(th)]"):
+            # normalize docket numbers
+            # get rid of "consolidated with" text
+            # parse docket numbers like docketnum1 & docketnum2
+            # also handle docketnum1\ndocketnum2\ndocketnum3
+            # Return comma joined string like docketnum1, docketnum2
+            docket = row.xpath("td[1]/text()")[0]
+            docket = ", ".join(
+                docket.strip()
                 .upper()
                 .replace("&", "\n")
                 .replace(" AND ", "\n")
@@ -55,9 +36,14 @@ class Site(OralArgumentSite):
                 .replace("CONSOLIDATED WITH", "\n")
                 .split()
             )
-            for d in self.html.xpath(path)
-        ]
+            name = row.xpath("td[2]/text()")[0]
+            date = row.xpath("td[3]/text()")[0]
+            url = row.xpath("td[5]//@href")[0]
+            self.cases.append(
+                {"name": name, "url": url, "date": date, "docket": docket}
+            )
 
     def _download_backwards(self, i):
         self.url = f"{self.base_url}?page={i}"
         self.html = self._download()
+        self._process_html()

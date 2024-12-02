@@ -10,6 +10,8 @@ History:
                is to ensure that we get a cookie in our session by visiting the
                homepage before we go and scrape. Dumb.
  - 2019-02-26: Restructured completely by arderyp
+ - 2024-09-18: Update to OpinionSiteLinear, implement backscraper,
+    support unpublished opinions, by @grossir
 
 Contact information:
  - Help desk: (803) 734-1193, Travis
@@ -17,100 +19,103 @@ Contact information:
  - Web Developer (who can help with firewall issues): 803-734-0373, Winkie Clark
 """
 
-import datetime
+from datetime import date
+from typing import Dict, List, Tuple
 
-from juriscraper.lib.exceptions import InsanityException
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    # Full URL example:
+    # https://www.sccourts.org/opinions-orders/opinions/published-opinions/supreme-court/?term=2024-09
+    base_url = (
+        "https://www.sccourts.org/opinions-orders/opinions/{}/{}/?term={}-{}"
+    )
+    opinion_status = "published-opinions"
+    court = "supreme-court"
+    days_interval = 27  # guarantees picking each month
+    first_opinion_date = date(2000, 1, 1)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        today = datetime.date.today()
-        self.url = (
-            "http://www.sccourts.org/opinions/indexSCPub.cfm?year=%d&month=%d"
-            % (today.year, today.month)
-        )
-        self.cases = []
+        self.make_backscrape_iterable(kwargs)
+        self.url = self.make_url_from_date(date.today())
+        if self.opinion_status == "published-opinions":
+            self.status = "Published"
+        else:
+            self.status = "Unpublished"
 
     def _process_html(self):
-        path = '//a[@class="blueLink2"][contains(./@href, ".pdf") or contains(./@href, "?orderNo=")]'
-        for link in self.html.xpath(path):
-            docket, name, url = self.extract_docket_name_url_from_link(link)
-            date, summary = self.extract_date_summary_from_link(link)
+        xpath = ".//p[contains(@class, '{}')]/text()"
+        for row in self.html.xpath("//div[contains(@class,'case-result')]"):
+            date_filed = row.xpath("preceding-sibling::div[h3]/h3/text()")[-1]
+            docket = row.xpath(xpath.format("case-number"))[0]
+            name = row.xpath(xpath.format("case-name"))[0]
+
+            summary = row.xpath(".//div[@class='result-info']/p/text()")
+            if summary:
+                summary = summary[0]
+            else:
+                # Unpublished opinions don't have a summary
+                summary = ""
+
+            url = row.xpath(".//a/@href")[0]
             self.cases.append(
                 {
-                    "date": date,
                     "docket": docket,
                     "name": name,
-                    "url": url,
                     "summary": summary,
+                    "url": url,
+                    "date": date_filed,
                 }
             )
 
-    def extract_docket_name_url_from_link(self, link):
-        url = link.attrib["href"]
-        text = link.text_content().strip()
-        parts = text.split("-", 1)
-        name = parts[1]
-        docket = parts[0].strip()
-        docket = "" if "order" in docket.lower() else docket
-        return docket, name, url
+    def make_backscrape_iterable(
+        self, kwargs: Dict
+    ) -> List[Tuple[date, date]]:
+        """Reuse base function to get a sequence of date objects for
+        each month in the interval. Then, convert them to target URLs
+        and replace the self.back_scrape_iterable
+        """
+        super().make_backscrape_iterable(kwargs)
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )
 
-    def extract_date_summary_from_link(self, link):
-        # Link should be within a <p> tag directly under <div id='maincontent'>, but
-        # occasionally the courts forgets the wrap it in a <p>, in which case it should
-        # be directly under the <div id='maincontent'>
-        container_id = "maincontent"
-        parent = link.getparent()
-        parents_parent = parent.getparent()
-        if "id" in parent.attrib and parent.attrib["id"] == container_id:
-            search_root = link
-        elif (
-            "id" in parents_parent.attrib
-            and parents_parent.attrib["id"] == container_id
-        ):
-            search_root = parent
-        else:
-            raise InsanityException(
-                'Unrecognized placement of Opinion url on page: "%s"'
-                % link.text_content().strip()
-            )
+    def _download_backwards(self, date_obj: date) -> None:
+        """Downloads an older page, and parses it
 
-        # Find date from bolded header element above link (ex: "5-14-2014 - Opinions" or "5-21-2014 - Orders")
-        element_date = search_root.xpath("./preceding-sibling::b")[-1]
-        element_date_text = element_date.text_content().strip().lower()
-        try:
-            date_string = element_date_text.split()[0]
-        except:
-            raise InsanityException(
-                f'Unrecognized bold (date) element: "{element_date_text}"'
-            )
+        Opinions from terms older than 2012-06 are in HTML
+        format, which needs updating the
+        self.expected_content_types attribute.
 
-        # Find summary from blockquote element below link
-        element_blockquote = search_root.xpath(
-            "./following-sibling::blockquote"
-        )[0]
-        summary = element_blockquote.text_content().strip()
+        Only do it for the backscraper to prevent ingesting
+        bad data in the present day
 
-        return convert_date_string(date_string), summary
+        :param date_obj: date object to build the URL
+        :return None
+        """
+        if date_obj.year <= 2012:
+            self.expected_content_types.append("text/html")
 
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
+        self.url = self.make_url_from_date(date_obj)
+        logger.info("Backscraping URL: %s", self.url)
+        self.html = self._download()
+        self._process_html()
 
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
+    def make_url_from_date(self, date_obj: date) -> str:
+        """Builds the target URL from a date object and
+        class attributes
 
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.cases)
-
-    def _get_summaries(self):
-        return [case["summary"] for case in self.cases]
+        :param date_obj: a date
+        :return: the formatted URL
+        """
+        return self.base_url.format(
+            self.opinion_status,
+            self.court,
+            date_obj.year,
+            str(date_obj.month).zfill(2),
+        )

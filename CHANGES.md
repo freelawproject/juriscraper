@@ -16,17 +16,136 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.44 - 2024-11-27**
+
+- Fixes:
+  - Fixes `colo`
+
+## Past
+
+**2.6.43 - 2024-11-21**
+
+- Fixes:
+  - Fixes `ky` and `colo`
+
+**2.6.42 - 2024-11-21**
+
+- Fixes:
+  - Fix `mass` and `massctapp` cleanup content method
+
+**2.6.40 - 2024-11-20**
+
+- Fixes:
+  - Fix `mass` and `massctapp` scrapers, scrape new endpoint
+  - Exclude "Commonwealth" string from short case names
+
+**2.6.39 - 2024-11-18**
+
+- Fixes:
+  - Fix `Kansas, Ohio Ct App's 1-13` opinion scraper
+
+**2.6.38 - 2024-11-08**
+
+- Fixes:
+  - Fix `uscfc` opinion scraper
+
+- Features:
+  - RECAP: add new sealed document phrase
+
+**2.6.37 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+**2.6.35 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+**2.6.34 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+**2.6.32 - 2024-10-21**
+
+Features:
+  - added `okla` cleanup_content
+
+Fixes:
+  - updated `coloctapp` cleanup_content
+
+
+**2.6.31 - 2024-10-21**
+
+Fixes:
+  - `neb` now handles rows with no links
+  - `coloctapp` update cleanup_content
+  - fix `la` xpath selector that was skipping some cases
+
+Features:
+  - new scraper `lactapp_5` for Lousiana Court of Appeals, Fifth Circuit
+  - now sending a `logger.error` call to Sentry when an scraped date is in the future
+
+**2.6.30 - 2024-10-10**
+
+Fixes:
+  - fix `CADC` oral arguments
+
+**2.6.29 - 2024-10-10**
+
+Fixes:
+  - fix `or` and `orctapp` scraper, scraping new endpoint
+  - fix cache control headers in `AbstractSite`
+  - fix `sc` expected content types
+
+**2.6.28 - 2024-09-27**
+
+Features:
+  - new scraper `sc_u`
+
+Fixes:
+  - handle `illappct` (oral args) rows with no download link
+  - `ca11` update to Oral Argument Site Linear
+  - `cadc_u` change docket number getter
+  - `sc` implement new site
+
+**2.6.27 - 2024-09-16**
+
+Fixes:
+  - Fixes `coloctapp`
+
+
+
+**2.6.25 - 2024-09-16**
+
+Fixes:
+  - Handle `nh` edge cases
+  - Update `ohioctapp` to return "lower_courts" in order to disambiguate dockets across districts
+  - Update `lib.string_utils.clean_string` to no longer delete semicolons
+
+**2.6.25 - 2024-09-10**
+
+Fixes:
+  - `ny` Fixes NY
+  - Updates nyappdiv to inherit ny
+  - fixes tests
+
+**2.6.24 - 2024-09-05**
+
+Fixes:
+  - `vt` now collects neutral citations
+  - Fix `ca8` and updated to OpinionSiteLinear
+  - Update README
+
 **2.6.23 - 2024-09-03**
 
 Fixes:
-  - `wisc/wisc ct app` docket numbers are now unique across districts
-  - `ky` logging for no document rows
-
+  - `wis` now collects neutral citations
+  - `ky` now skips rows with no documents
 
 Features:
-  - implemented dynamic backscraper and extract_from_text for `conn`
-
-## Past
+  - new scraper `wisctapp`
 
 **2.6.21 - 2024-08-30**
 
