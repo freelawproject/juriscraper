@@ -66,6 +66,12 @@ class AbstractSite:
             "url": None,
         }
 
+        # Attribute to reference a function passed by the caller,
+        # which takes a single argument, the Site object, after
+        # each GET or POST request. Intended for saving the response for
+        # debugging purposes.
+        self.save_response = kwargs.get("save_response_fn")
+
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
@@ -386,6 +392,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
@@ -398,6 +406,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""

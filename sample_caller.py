@@ -208,6 +208,10 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
 def save_response(site):
     """
     Save response content and headers into /tmp/
+
+    This will be called after each `Site._request_url_get`
+    or `Site._request_url_post`, if the --save-responses
+    optional flag was passed
     """
     now_str = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
     court = site.court_id.split(".")[-1]
@@ -220,10 +224,16 @@ def save_response(site):
         json.dump(dict(response.headers), f, indent=4)
     logger.debug("Saved headers to %s", headers_filename)
 
-    if isinstance(site.html, dict):
+    json_data = None
+    try:
+        json_data = json.loads(response.content)
+    except json.decoder.JSONDecodeError:
+        pass
+
+    if json_data:
         filename = f"{directory}{court}_content_{now_str}.json"
         with open(filename, "w") as f:
-            json.dump(response.text, f, indent=4)
+            json.dump(json_data, f, indent=4)
     else:
         filename = f"{directory}{court}_content_{now_str}.html"
         with open(filename, "w") as f:
@@ -400,30 +410,22 @@ def main():
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
+            site_kwargs = {}
+            if save_responses:
+                site_kwargs = {"save_response_fn": save_response}
             if backscrape:
                 bs_iterable = mod.Site(
                     backscrape_start=backscrape_start,
                     backscrape_end=backscrape_end,
                     days_interval=days_interval,
                 ).back_scrape_iterable
-                sites = site_yielder(bs_iterable, mod)
+                sites = site_yielder(bs_iterable, mod, **site_kwargs)
             else:
-                sites = [mod.Site()]
+                sites = [mod.Site(**site_kwargs)]
 
             for site in sites:
-                error = None
-                try:
-                    site.parse()
-                    scrape_court(site, binaries, extract_content, doctor_host)
-                except Exception as e:
-                    error = e
-                finally:
-                    # Ensure that the response files are saved before raising
-                    # the error that will end the scrape
-                    if save_responses:
-                        save_response(site)
-                    if error:
-                        raise error
+                site.parse()
+                scrape_court(site, binaries, extract_content, doctor_host)
 
     logger.debug("The scraper has stopped.")
 
