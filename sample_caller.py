@@ -15,7 +15,6 @@ import requests
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import trunc
-from juriscraper.report import generate_scraper_report
 
 logger = make_default_logger()
 die_now = False
@@ -164,8 +163,8 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
                     for mime in site.expected_content_types
                 )
                 if not m:
-                    exceptions["DownloadingError"].append(download_url)
-                    logger.debug("DownloadingError: %s", download_url)
+                    exceptions["ContentTypeError"].append(download_url)
+                    logger.debug("ContentTypeError: %s", download_url)
 
             data = r.content
 
@@ -246,13 +245,11 @@ def main():
     signal.signal(signal.SIGTERM, signal_handler)
 
     usage = (
-        "usage: %prog -c COURTID [-d|--daemon] [-b|--binaries] [-r|--report]\n\n"
+        "usage: %prog -c COURTID [-d|--daemon] [-b|--binaries]\n\n"
         "To test ca1, downloading binaries, use: \n"
         "    python %prog -c juriscraper.opinions.united_states.federal_appellate.ca1 -b\n\n"
         "To test all federal courts, omitting binaries, use: \n"
         "    python %prog -c juriscraper.opinions.united_states.federal_appellate\n\n"
-        "Passing the --report option will generate an HTML report in "
-        "the root directory after scrapers have run"
     )
     parser = OptionParser(usage)
     parser.add_option(
@@ -268,18 +265,6 @@ def main():
             'simply "opinions" to do all opinions. If desired, '
             "you can use slashes instead of dots to separate"
             "the import path."
-        ),
-    )
-    parser.add_option(
-        "-d",
-        "--daemon",
-        action="store_true",
-        dest="daemonmode",
-        default=False,
-        help=(
-            "Use this flag to turn on daemon "
-            "mode, in which all courts requested "
-            "will be scraped in turn, non-stop."
         ),
     )
     parser.add_option(
@@ -353,13 +338,6 @@ def main():
         type=int,
     )
     parser.add_option(
-        "-r",
-        "--report",
-        action="store_true",
-        default=False,
-        help="Generate a report.html with the outcome of running the scrapers",
-    )
-    parser.add_option(
         "--save-responses",
         action="store_true",
         default=False,
@@ -368,13 +346,11 @@ def main():
 
     (options, args) = parser.parse_args()
 
-    daemon_mode = options.daemonmode
     court_id = options.court_id
     backscrape = options.backscrape
     backscrape_start = options.backscrape_start
     backscrape_end = options.backscrape_end
     days_interval = options.days_interval
-    generate_report = options.report
     binaries = options.binaries
     doctor_host = options.doctor_host
     extract_content = options.extract_content
@@ -400,8 +376,6 @@ def main():
     # use the easiest to read format
     logger.handlers[0].setFormatter(logging.Formatter("%(message)s"))
 
-    results = {}
-
     if not court_id:
         parser.error("You must specify a court as a package or module.")
     else:
@@ -414,95 +388,44 @@ def main():
             parser.error("Unable to import module or package. Aborting.")
 
         logger.debug("Starting up the scraper.")
-        num_courts = len(module_strings)
-        i = 0
-        while i < num_courts:
-            current_court = module_strings[i]
-            results[current_court] = {"global_failure": False}
+        for module_string in module_strings:
             # this catches SIGINT, so the code can be killed safely.
             if die_now:
                 logger.debug("The scraper has stopped.")
                 sys.exit(1)
 
-            package, module = module_strings[i].rsplit(".", 1)
+            package, module = module_string.rsplit(".", 1)
             logger.debug("Current court: %s.%s", package, module)
 
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
-            try:
-                if backscrape:
-                    for site in site_yielder(
-                        mod.Site(
-                            backscrape_start=backscrape_start,
-                            backscrape_end=backscrape_end,
-                            days_interval=days_interval,
-                        ).back_scrape_iterable,
-                        mod,
-                    ):
-
-                        error = None
-                        try:
-                            site.parse()
-                            scrape_court(
-                                site, binaries, extract_content, doctor_host
-                            )
-                        except Exception as e:
-                            error = e
-                        finally:
-                            if save_responses:
-                                save_response(site)
-                            if error:
-                                raise error
-                else:
-                    site = mod.Site()
-                    logger.debug(
-                        "Sent %s request to: %s", site.method, site.url
-                    )
-                    error = None
-
-                    try:
-                        site.parse()
-                        results[current_court]["scrape"] = scrape_court(
-                            site, binaries, extract_content, doctor_host
-                        )
-                    except Exception as e:
-                        error = e
-                    finally:
-                        if save_responses:
-                            save_response(site)
-                        if error:
-                            raise error
-
-            except Exception:
-                results[current_court][
-                    "global_failure"
-                ] = traceback.format_exc()
-                results[current_court]["scrape"] = {}
-                logger.debug("*************!! CRAWLER DOWN !!****************")
-                logger.debug(
-                    "*****scrape_court method failed on mod: %s*****",
-                    module_strings[i],
-                )
-                logger.debug("*************!! ACTION NEEDED !!***************")
-                logger.debug(traceback.format_exc())
-                i += 1
-                continue
-
-            last_court_in_list = i == (num_courts - 1)
-            if last_court_in_list and daemon_mode:
-                i = 0
+            if backscrape:
+                bs_iterable = mod.Site(
+                    backscrape_start=backscrape_start,
+                    backscrape_end=backscrape_end,
+                    days_interval=days_interval,
+                ).back_scrape_iterable
+                sites = site_yielder(bs_iterable, mod)
             else:
-                i += 1
+                sites = [mod.Site()]
+
+            for site in sites:
+                error = None
+                try:
+                    site.parse()
+                    scrape_court(site, binaries, extract_content, doctor_host)
+                except Exception as e:
+                    error = e
+                finally:
+                    # Ensure that the response files are saved before raising
+                    # the error that will end the scrape
+                    if save_responses:
+                        save_response(site)
+                    if error:
+                        raise error
 
     logger.debug("The scraper has stopped.")
-
-    if generate_report:
-        report_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "../report.html")
-        )
-        logger.debug(f"Generating HTML report at {report_path}")
-        generate_scraper_report(report_path, results)
 
     sys.exit(0)
 
