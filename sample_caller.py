@@ -224,11 +224,11 @@ def save_response(site):
         json.dump(dict(response.headers), f, indent=4)
     logger.debug("Saved headers to %s", headers_filename)
 
-    json_data = None
     try:
+        # Brute force test to see if it's a JSON
         json_data = json.loads(response.content)
-    except json.decoder.JSONDecodeError:
-        pass
+    except:
+        json_data = None
 
     if json_data:
         filename = f"{directory}{court}_content_{now_str}.json"
@@ -410,9 +410,11 @@ def main():
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
+
             site_kwargs = {}
             if save_responses:
                 site_kwargs = {"save_response_fn": save_response}
+
             if backscrape:
                 bs_iterable = mod.Site(
                     backscrape_start=backscrape_start,
