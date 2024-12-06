@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<HTML><HEAD><TITLE>Document</TITLE><meta http-equiv="X-UA-Compatible" content="IE=edge" /></HEAD>
+<BODY BGCOLOR=#FFFFDA>
+<table border=0 align=center>
+<tr><th align=center><b>2 Documents are attached to this filing</b><br><br></th></tr>
+</table>
+<table border=1 align=center cellpadding=5>
+<tr><td>
+  <table border=0 cellpadding=5>
+ <tr><th align=center colspan=3>Document</th> <th align=center>Description</th><th align=center>Pages</th>
+<th align=center>Size</th></tr>
+<TR><TD ALIGN=center><INPUT class='selDocCl' TYPE='checkbox' NAME='md' VALUE='7548050' ONCLICK='sumDocSelected(this,1,13481, 7548050)' CHECKED></TD><td align=center>1</td><td align=center><a HREF='https://ecf.ca1.uscourts.gov/docs1/00117548050' ONCLICK="return doDocPostURL('00117548050')"><img title='Open Document' width='13' height='15' BORDER=2 SRC='TransportRoom?servlet=document.gif' ALT='Open document' ></a>&nbsp;</td><td>Main Document</td><td align=center>1</td><td align=center>13.17 KB</td></tr>
+<TR><TD ALIGN=center><INPUT class='selDocCl' TYPE='checkbox' NAME='md' VALUE='7548051' ONCLICK='sumDocSelected(this,1,8890, 7548051)' CHECKED></TD><td align=center>2</td><td align=center><a HREF='https://ecf.ca1.uscourts.gov/docs1/00117548051' ONCLICK="return doDocPostURL('00117548051')"><img title='Open Document' width='13' height='15' BORDER=2 SRC='TransportRoom?servlet=document.gif' ALT='Open document' ></a>&nbsp;</td><td></td><td align=center>1</td><td align=center>8.68 KB</td></tr>
+  </table>
+</td></tr>
+</table>
+<BR>
+<CENTER>
+<b>Selected Pages: 
+<input id='totPageCntFld' type='text' size='10' value='2' onfocus='this.blur();' />
+&nbsp;&nbsp;Selected Size: 
+<input id='totByteSizeFld' type='text' size='10' value='21.85 KB' onfocus='this.blur();' />
+ </b>
+
+<BR><b>Totals reflect accessible documents only and do not include unauthorized restricted documents.</b>
+ <BR><BR>
+<div id='opts'><FORM name='dktEntry' action=''><INPUT Value='y' TYPE='checkbox' name='incPdfFooter'><B>Include Page Numbers</B><BR>
+<INPUT NAME='viewSelBtn' Value='View Selected' TYPE='button' ONCLICK='ProcessForm("view")'>
+<input type=hidden id='totPageHFld' name='totPageFld' value='2'>
+<input type=hidden id='totBytesHFld' value='22371'>
+<input type=hidden id='dynaTotPageId' name='dynaTotPageFld' value='2'>
+<input type=hidden id='dynaTotBytesId' name='dynaTotBytesFld' value='22371'>
+<input type=hidden id='pageLoadHFld' value='1'>
+</FORM>
+</div><div id='noOpts'  style='visibility:hidden'><b>Selected documents cannot be combined due to size. Please remove some selections to be below 250 MB.</b></div><SCRIPT type='text/javascript'>
+<!--
+var winOptions = 'location=no,resizable,toolbar,status,scrollbars';
+var winTarget = '_blank';
+function doDocPostURL(dls) {
+   // This use of a function when a user clicks a document
+   // link was done so params aren't in copied doc hyperlinks.
+   // This allows user to right click & get the URL for copying doc
+   // links, but still gets params back to the server as needed
+   var aWin = window.open('TransportRoom?servlet=ShowDoc&caseId=46307&dls_id='+dls+'&caseId=46307',winTarget,winOptions,false);
+   return false;
+}
+
+window.onload = function() {
+}
+
+window.onpageshow = function(event) {
+   if(performance.navigation.type == 2){
+     location.reload(true);
+   }
+}
+
+var dlsIdArr = [7548050,7548051];
+function getSize(bytes) {
+   if (bytes >= 1048576) {
+     return Math.round(bytes/1048576*100)/100 + ' MB';
+   }
+   return Math.round(bytes/1024*100)/100 + ' KB';
+}
+function tooManyDocs(disable) {
+   if (disable) {
+     hideOpts();
+     if (document.dktEntry.viewSelBtn.disabled == false) {
+       document.dktEntry.viewSelBtn.disabled = true;
+       alert('Too many documents are selected: ' + getSize(totNumByte) + '. Please remove some selections to be below 250 MB.');
+     }
+   } else {
+     showOpts();
+     document.dktEntry.viewSelBtn.disabled = false;
+   }
+}
+
+var totNumPage = 0.0;
+var totNumByte = 0.0;
+var maxSize = 0;
+function sumDocSelected(aField, numPage, numByte, docId) {
+   pageLoadIndexUpdate();
+   if (aField.checked == true) {
+     dlsIdArr.push(docId);     totNumPage = parseInt(totNumPage) + parseInt(numPage);
+     totNumByte = parseInt(totNumByte) + parseInt(numByte);
+   } else {
+     var dlsIndex = dlsIdArr.indexOf(docId);
+     dlsIdArr.splice(dlsIndex, 1);
+     totNumPage = parseInt(totNumPage) - parseInt(numPage);
+     totNumByte = parseInt(totNumByte) - parseInt(numByte);
+   }
+   document.getElementById('totPageCntFld').value = totNumPage;
+   document.getElementById('totByteSizeFld').value = getSize(totNumByte);
+   document.dktEntry.dynaTotPageFld.value = totNumPage;
+   document.dktEntry.dynaTotBytesFld.value = getSize(totNumByte);
+   tooManyDocs(totNumByte > 262144000); 
+   return false;
+}
+
+function pageLoadIndexUpdate() {
+   var pageLoadIndex = document.getElementById('pageLoadHFld').value;
+   if (pageLoadIndex == 1) {
+     totNumByte = document.getElementById('totBytesHFld').value;
+     totNumPage = document.getElementById('totPageHFld').value;
+     document.getElementById('pageLoadHFld').value = 2; 
+   }
+   return false;
+}
+
+function showOpts() {
+   document.getElementById('opts').style.pointerEvents = 'auto';
+   document.getElementById('opts').style.opacity = '1';
+   document.getElementById('noOpts').style.visibility = 'hidden';
+}
+
+function hideOpts() {
+   document.getElementById('opts').style.pointerEvents = 'none';
+   document.getElementById('opts').style.opacity = '0.4';
+   document.getElementById('noOpts').style.visibility = 'visible';
+}
+
+function ProcessForm(uChoice) {
+   pageLoadIndexUpdate();
+   if (totNumByte == 0) {
+     alert('No entries with accessible documents were selected. Please select the desired documents before proceeding.');
+     return false;
+   }
+   if(uChoice=='view'){
+     var incFoot = '';
+     if (document.dktEntry.incPdfFooter.checked) {
+       incFoot = 'y';
+     }
+     window.location='TransportRoom?servlet=ShowDocMulti&caseId=46307&outputType=doc&d=6315334&outputForm=view&incPdfFooter='+incFoot+'&dls='+dlsIdArr.join();
+   }
+   return false;
+}
+
+//-->
+</SCRIPT>
+</CENTER></BODY></HTML>
