@@ -16,14 +16,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.46 - 2024-12-10**
+
+- Fixes:
+  - Support for parsing the new format of appellate attachment pages has been added
+
+## Past
+
 **2.6.45 - 2024-12-05**
 
 - Features:
   - AbstractSite now supports saving responses and response headers.
   Use it with new optional argument for the sample caller `save-responses`.
   - Delete `--daemon` and `--report` options
-
-## Past
 
 **2.6.44 - 2024-11-27**
 
