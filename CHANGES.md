@@ -16,6 +16,41 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.45 - 2024-12-05**
+
+- Features:
+  - AbstractSite now supports saving responses and response headers.
+  Use it with new optional argument for the sample caller `save-responses`.
+  - Delete `--daemon` and `--report` options
+
+## Past
+
+**2.6.44 - 2024-11-27**
+
+- Fixes:
+  - Fixes `colo`
+
+**2.6.43 - 2024-11-21**
+
+- Fixes:
+  - Fixes `ky` and `colo`
+
+**2.6.42 - 2024-11-21**
+
+- Fixes:
+  - Fix `mass` and `massctapp` cleanup content method
+
+**2.6.40 - 2024-11-20**
+
+- Fixes:
+  - Fix `mass` and `massctapp` scrapers, scrape new endpoint
+  - Exclude "Commonwealth" string from short case names
+
+**2.6.39 - 2024-11-18**
+
+- Fixes:
+  - Fix `Kansas, Ohio Ct App's 1-13` opinion scraper
+
 **2.6.38 - 2024-11-08**
 
 - Fixes:
@@ -23,8 +58,6 @@ Releases are also tagged in git, if that's helpful.
 
 - Features:
   - RECAP: add new sealed document phrase
-
-## Past
 
 **2.6.37 - 2024-10-22**
 
