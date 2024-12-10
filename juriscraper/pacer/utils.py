@@ -598,7 +598,7 @@ def reverse_goDLS_function(s):
     return parts
 
 
-def reverse_sumDocSelected_function(s):
+def reverse_sumDocSelected_function(s) -> Optional[Dict[str, int]]:
     """Extract the arguments from the sumDocSelected JavaScript function.
 
     In: sumDocSelected(this,1,13481, 7548050)
@@ -834,3 +834,22 @@ def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
         # Raise an exception if a timezone abbreviation is not specified.
         raise NotImplementedError(f"Datetime {datetime_str} not understood.")
     return date_time
+
+
+def parse_sumDocSelected_from_row(
+    row: html.HtmlElement,
+) -> Optional[Dict[str, int]]:
+    """Parse the arguments from the sumDocSelected function call parts from a
+    given table row.
+
+    :param row: Table row as an HtmlElement
+    :return: A dictionary of parsed parameters from the sumDocSelected function,
+     or None if the row does not contain such data.
+    """
+
+    input_els = row.xpath(".//input[@class='selDocCl']")
+    for input_el in input_els:
+        onclick = input_el.xpath("./@onclick")
+        if onclick and "sumDocSelected" in onclick[0]:
+            return reverse_sumDocSelected_function(onclick[0])
+    return None
