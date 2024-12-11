@@ -3,7 +3,6 @@ CourtID: mdag
 Court Short Name: Maryland Attorney General
 """
 
-import json
 import re
 from datetime import date
 
@@ -19,7 +18,9 @@ class Site(OpinionSiteLinear):
         )
         self.year = date.today().year
 
-        self.parameters = {
+        self.method = "POST"
+        self.parameters = {}
+        self.request["parameters"]["params"] = {
             "List": "{1BA692B1-E50C-4754-AADD-E6753F46B403}",
             "View": "{E1A60D10-12C0-4029-8BE0-BA5F9AC93BF8}",
             "ViewCount": "50",  # results to return
@@ -30,18 +31,8 @@ class Site(OpinionSiteLinear):
         }
         self.status = "Published"
 
-    def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            with open(self.url) as file:
-                self.json = json.load(file)
-        else:
-            self.json = (
-                self.request["session"]
-                .post(self.url, params=self.parameters)
-                .json()
-            )
-
     def _process_html(self):
+        self.json = self.html
         for row in self.json["Row"]:
             url_path = row["FileRef.urlencodeasurl"]
 

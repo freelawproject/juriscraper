@@ -43,12 +43,6 @@ class Site(OpinionSiteLinear):
             "https://www.courts.ri.gov/_vti_bin/client.svc/ProcessQuery"
         )
 
-    def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            self.json = super()._download(request_dict)
-            return
-        return super()._download(request_dict)
-
     def fetch_json(self) -> None:
         """Fetch JSON data from the site.
 

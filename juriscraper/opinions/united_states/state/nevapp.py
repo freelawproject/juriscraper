@@ -9,10 +9,7 @@ from juriscraper.opinions.united_states.state import nev
 
 
 class Site(nev.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.court_code = "10002"
+    court_code = "10002"
 
     def filter_cases(self):
         """"""

@@ -5,8 +5,6 @@ History:
     - 2023-12-13: Updated by William E. Palin
 """
 
-import json
-
 from lxml.html import fromstring
 
 from juriscraper.DeferringList import DeferringList
@@ -14,6 +12,8 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    court_code = "10001"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -21,28 +21,10 @@ class Site(OpinionSiteLinear):
         self.search = "https://caseinfo.nvsupremecourt.us/public/caseSearch.do"
         self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
         self.status = "Published"
-        self.court_code = "10001"
-        self.headers = {
+        self.request["headers"] = {
             "Referer": "https://nvcourts.gov/",
             "XApiKey": "080d4202-61b2-46c5-ad66-f479bf40be11",
         }
-
-    def _download(self, **kwargs):
-        """Download the JSON to parse
-
-        :param kwargs:
-        :return: None
-        """
-        if self.test_mode_enabled():
-            return json.load(open(self.url))
-        return (
-            self.request["session"]
-            .get(
-                self.url,
-                headers=self.headers,
-            )
-            .json()
-        )
 
     def filter_cases(self):
         """Filter JSON to last two opinions without dupes
@@ -90,7 +72,7 @@ class Site(OpinionSiteLinear):
         :param csNumber: the docket number/cs number to search
         :return: the document url
         """
-        data = {
+        self.parameters = {
             "action": "",
             "csNumber": csNumber,
             "shortTitle": "",
@@ -103,7 +85,8 @@ class Site(OpinionSiteLinear):
             "href": "/public/caseView.do",
             "submitValue": "Search",
         }
-        content = self.request["session"].post(self.search, data=data).text
+        self._request_url_post(self.search)
+        content = self.request["response"].text
         slug = fromstring(content).xpath(self.xp)[-1]
         return f"https://caseinfo.nvsupremecourt.us{slug}"
 
