@@ -19,22 +19,6 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.url = "https://public.courts.in.gov/Decisions/api/Search"
 
-    def _download(self):
-        if self.test_mode_enabled():
-            import json
-
-            return json.load(open(self.url))
-        return (
-            self.request["session"]
-            .get(
-                self.url,
-                headers=self.request["headers"],
-                verify=self.request["verify"],
-                timeout=60,
-            )
-            .json()
-        )
-
     def _process_html(self):
         for case in self.html:
             if case["courtName"] != self.court_name:
