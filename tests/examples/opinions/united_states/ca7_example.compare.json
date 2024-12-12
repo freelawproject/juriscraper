@@ -9,7 +9,8 @@
     "docket_numbers": "21-2913",
     "judges": "Wood",
     "case_name_shorts": "",
-    "authors": "Wood"
+    "authors": "Wood",
+    "per_curiam": false
   },
   {
     "case_dates": "2023-01-13",
@@ -21,7 +22,8 @@
     "docket_numbers": "22-1002",
     "judges": "Easterbrook",
     "case_name_shorts": "",
-    "authors": "Easterbrook"
+    "authors": "Easterbrook",
+    "per_curiam": false
   },
   {
     "case_dates": "2023-01-12",
@@ -33,7 +35,8 @@
     "docket_numbers": "21-1414",
     "judges": "Sykes",
     "case_name_shorts": "",
-    "authors": "Sykes"
+    "authors": "Sykes",
+    "per_curiam": false
   },
   {
     "case_dates": "2023-01-11",
@@ -43,9 +46,10 @@
     "blocked_statuses": false,
     "date_filed_is_approximate": false,
     "docket_numbers": "21-1840",
-    "judges": "PerCuriam",
+    "judges": "",
     "case_name_shorts": "",
-    "authors": "PerCuriam"
+    "authors": "",
+    "per_curiam": true
   },
   {
     "case_dates": "2023-01-11",
@@ -57,6 +61,7 @@
     "docket_numbers": "22-1421",
     "judges": "Easterbrook",
     "case_name_shorts": "",
-    "authors": "Easterbrook"
+    "authors": "Easterbrook",
+    "per_curiam": false
   }
 ]

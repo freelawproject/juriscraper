@@ -31,8 +31,16 @@ class Site(OpinionSiteLinear):
 
                 url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
                 docket = publicationItem["caseNumber"]
-                author = publicationItem["groupName"]
                 name = publicationItem["title"]
+                judge = publicationItem["groupName"]
+                if judge == "On Rehearing":
+                    judge = ""
+
+                per_curiam = False
+                if "curiam" in judge.lower():
+                    judge = ""
+                    per_curiam = True
+
                 self.cases.append(
                     {
                         "date": date_filed,
@@ -40,6 +48,7 @@ class Site(OpinionSiteLinear):
                         "docket": docket,
                         "status": "Published",
                         "url": url,
-                        "judge": author,
+                        "judge": judge,
+                        "per_curiam": per_curiam,
                     }
                 )
