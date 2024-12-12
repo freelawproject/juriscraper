@@ -16,12 +16,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.47 - 2024-12-12**
+
+- Fixes:
+  - standardize usage of download methods in scrapers (_download, _request_url_get, _request_url_post)
+  - refactor scrapers to do not return "Per Curiam" as value for "author_str" or "judges"
+
+- Features
+  - added `extract_from_text` to `sc`
+
+## Past
+
 **2.6.46 - 2024-12-10**
 
 - Fixes:
   - Support for parsing the new format of appellate attachment pages has been added
-
-## Past
 
 **2.6.45 - 2024-12-05**
 
