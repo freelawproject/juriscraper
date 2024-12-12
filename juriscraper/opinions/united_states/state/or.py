@@ -83,8 +83,9 @@ class Site(OpinionSiteLinear):
         else:
             item_id = row["itemId"]
             url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{item_id}/false"
-            json = self.request["session"].get(url).json()
             logger.debug("Getting detail JSON from %s", url)
+            self._request_url_get(url)
+            json = self.request["response"].json()
 
         if len(json["fields"]) == 1:
             fields = json["parent"]["fields"]

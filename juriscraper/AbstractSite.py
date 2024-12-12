@@ -354,13 +354,16 @@ class AbstractSite:
             )
         else:
             logger.info(f"Now downloading case page at: {self.url}")
+
         self._process_request_parameters(request_dict)
-        if self.method == "GET":
+
+        if self.test_mode_enabled():
+            self._request_url_mock(self.url)
+        elif self.method == "GET":
             self._request_url_get(self.url)
         elif self.method == "POST":
             self._request_url_post(self.url)
-        elif self.test_mode_enabled():
-            self._request_url_mock(self.url)
+
         self._post_process_response()
         return self._return_response_text_object()
 
@@ -378,7 +381,7 @@ class AbstractSite:
         if parameters.get("verify") is not None:
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
-        self.request["parameters"] = parameters
+        self.request["parameters"].update(parameters)
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
