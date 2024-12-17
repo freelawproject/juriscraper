@@ -1,0 +1,133 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 0fof83p1vki2hicrbqrem2ardi6i5potd8d8jdo1
+ for email@email.com;
+ Wed, 20 Nov 2024 15:29:31 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nhb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nhb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=nhb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHQnM4eUNqUnhZTDQrMEJUcWF0RTVIQzFtcDhneGhGU1JRRjNOQkprTDFmTGs3dXhvTGduSFlGY3g1aGtqWmUzL1N5N1FRZ1U1aXc4dFRpT0lOcUdlcjdjVmN2aEs1OXVoQTRLTUUvUldTQUpyNHdsbFNNVTFmWGw2WWkrZXJaTVg4WUNHaExMYVFSa3dJRnlLQzY3SUxKVnB4MStpYWZjVnpmRnc1M1ZNNjdKUHNYL0RHaWZ0S1BwZFE1ZG15SHRwSitIeDBIUnJIYVVVQnZSc0pscXJBWlpNdU5oMmx2WUsrci9DUlBMTjZLbVFEVGQwWE1MYmZ3NSt1ejRqd2lUNmZaV2ZIYmFDeGRudXNmazRFemJoYmF5NHZ2YkliQk05clNFWWRKSGszN0E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=FZdgjQfSPVd3tOaDVCVyzypbokfy1buETgJ9GSGIsN2Lc71/CL2/eGPTH1AXyAuA9ieQsC3C0OEAlk1awWhEuUyrFifrcfKrhxmSRVDDL5VCuin9S225th3MmlDW0Gt5pL4kbu6tEx9aSOrgCqS1DGM+vKMtAD6r8tPCOY9fREs=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1732116572; v=1; bh=EL5vcF4aEBC+mJkncUafWJwPoWczu8okcTcn15yNlPw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=10059; q=dns/txt;
+  s=law1w; t=1732116572; x=1763652572;
+  h=date:mime-version:from:to:message-id:subject:
+   content-type:x-sbrs:x-remote-ip;
+  bh=EL5vcF4aEBC+mJkncUafWJwPoWczu8okcTcn15yNlPw=;
+  b=V0mIrNyo1QecSOfbcvPx7dyclJuEN2SNIBbRdmkiTnqsZ7h0g0RWuv9b
+   +Gm1VWpOqRzqQuc2rgqxmbX1BG++FQ11g+WqJ7VAKNQ3dE7cnSGAC9FQ/
+   RZHvXH4gXY9RxuetYb4CHxpems/tplTMhjs/xFfFJRCIppc0wi2LAWg0V
+   /n6RKS0EIvJNydiN1qhCTKJuz4T3lk+eHUeOjBlzS0Pd9zCWAeTVbLqlY
+   zBm1XEv1aJDrV0kpoUJYQ8Z98hPqM750/110Cn0IPazqnSTm2yhFXUVUC
+   RNHcr9bnKxrYiazL4J/oCu8G59NA3wwoOxWmXD8hlDkiRzTBBzGy9cPk+
+   Q==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.55
+Received: from nhbdb.nhb.gtwy.dcn ([156.119.190.55])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 20 Nov 2024 10:29:31 -0500
+Received: from nhbdb.nhb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nhbdb.nhb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AKFSf2t041745
+	for <email@email.com>; Wed, 20 Nov 2024 10:28:42 -0500
+Received: (from ecf_web@localhost)
+	by nhbdb.nhb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4AKFSdTV041624;
+	Wed, 20 Nov 2024 10:28:39 -0500
+Date: Wed, 20 Nov 2024 10:28:39 -0500
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com
+Message-Id:<email@email.com.gov>
+Subject:24-01017-MAF Chapter 7 Detail Design Builders, LLC  Complaint
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Hampshire Live Database</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 11/20/2024 at 10:28 AM EST and filed on 11/20/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Smith v. Earthlandscaping, Inc. dba Earthscape and Lawn    </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nhb.uscourts.gov/cgi-bin/DktRpt.pl?120507>24-01017-MAF</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nhb.uscourts.gov/doc1/11606678791?pdf_header=&magic_num=22314206&de_seq_num=3&caseid=120507'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Detail Design Builders, LLC                       </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nhb.uscourts.gov/cgi-bin/DktRpt.pl?118889>22-10577-MAF</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nhb.uscourts.gov/doc1/11606678793?pdf_header=&magic_num=28049660&de_seq_num=581&caseid=118889'>142</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-01017.   Complaint  <i></i>  by  Timothy P. Smith  against    Earthlandscaping, Inc. dba Earthscape and Lawn.  Fee Amount $ 350.   (Attachments: # (1) Adversary Proceeding Cover Sheet) (12 (Recovery of money/property - 547 preference)) (13 (Recovery of money/property - 548 fraudulent transfer))    (LaMontagne, James)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>S2825882.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/20/2024] [FileNumber=6666626-0
+<BR><TAB>] [45326dd2d0e635e604aafcb07ace8cbc4fe4b9b9cb4161b96a880df972b6a16d6b5
+<BR><TAB>a8e4de9ea1f8ef666de6db6425344ad0599f8b76b347d05755b976ce339de]]
+<BR>
+<STRONG>Document description:</STRONG>Adversary Proceeding Cover Sheet 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\S2827276.PDF
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/20/2024] [FileNumber=6666626-1
+<BR><TAB>] [293a0a2a38a8992b7677fa73b4647edbfaf280025ce2a33f7750b0fcc7241188c95
+<BR><TAB>99bd48cd62e4a56c1a99dbc9058b210dd02b8c13384884f4459bf20f0bfd9]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>S2825882.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/20/2024] [FileNumber=6666627-0
+<BR><TAB>] [4e68386c219df26e03c13962a35fb7175557f71c68724e36b684b54cc70bc43f2aa
+<BR><TAB>2b982f64f8ab44db939f32573808af1bca621809aad91f81314a7af4a4ce5]]
+<BR>
+<STRONG>Document description:</STRONG>Adversary Proceeding Cover Sheet 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\S2827276.PDF
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/20/2024] [FileNumber=6666627-1
+<BR><TAB>] [3c43fdf363a8cb93d2b355623fd2e458141229e16fe8e186ab230618f1d160eb5aa
+<BR><TAB>e1c6ebea4252bdc91bb4cc20b4e2b1c3631d7281505a2459e6202b4ff2335]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

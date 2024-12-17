@@ -1,0 +1,93 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id g5re8rui1ac7mu3nr1tn2d9p2bplooefmas2m581
+ for email@email.com;
+ Tue, 10 Dec 2024 21:06:51 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of flsb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=email@email.com.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of flsb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=email@email.com.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=flsb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHRWV4aHVLbXp5ZHlMS3k1Qzg4azk4TjRCWFFYaXpPNU5DQlJtcmhwZDM2TEttRWlBNUIxb0R5NUdNZDlNYkFkVml0dDFpUUFnaG9LQ3Zlb2s0WDBwLzd2cUUreE9JNWhTb055WEJwVWdGYzY4akoySVRpeGJxL2xEWUo1Zk96aitBQlhDVVRVR0FYNVdMS2hjV2pVR1pJWmY5VnNyc0dGK1VTcE1oSVlrbE9jWlhJNVFIaURaSDFWejhyazBUeTdWRVljUWJiMkRiZG1RSkhVV1NkTkZVZzZ5VW5yK0ZudlZ3YmN2NFZuY2tLRXJlZU8zeDd0bGt6aWI3YTNoSjE0QjI3a1hreXRqM29sTFZxVStXMGxBRC9XamdFNWtYNTNweWZwS09WN1owaXBXSXUxVmNTenl4ZTZsUU9BdCtvb0k9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=VGXbUXzHPPqN6Bsn7VxDfUfKgnJytsfqzyqQeS6kJ0XWm961foau886z/6vh2bVB5DNGFxpt0i1mjFUUZUXLuVyk/ZjaE+1n91hJQVcwD4L0aYBWdZ+U8iqhIUA8YA3kE5Gm+fNBQCa5+Euckcs1ULO2ZgGth42m2/YOOOgNbOU=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1733864812; v=1; bh=mGO7kIoMODnGYfFPJCGsgvFj5mY+1EEVPwH6sEoaGuc=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=5135; q=dns/txt;
+  s=law1w; t=1733864811; x=1765400811;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=mGO7kIoMODnGYfFPJCGsgvFj5mY+1EEVPwH6sEoaGuc=;
+  b=PX9gAvuRcAJsV787o+g8axfO/iJJv1o8Jq1HGLvZzTKvghBFu8G9aV4e
+   /pIsAT5+yKF2bmyYoIp8Snp0wq9+C+l8BToNyW1mzVgiItfOJmiWDReMT
+   eQJbsfkOgPretngMCw4frt5pjygg1559s1rvADTtX+c52BV+j9rDVD8Td
+   EUL6c1XLoBxPpgcm6rw6gMp2WSl/fVEH/aZNDEXWjjnhQwfIcjHzvxiPA
+   VCWrYM2DOBcaPwQfU3rjk3572OsiaiKqjXpxtOSi08kpR+usADhapmFZ4
+   62u+S6p9/u1P9PqPb11MvS6QCKRadjaTpWq7hg8NgJuLHW4QauCPv4+9S
+   A==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.62
+Received: from flsbdb.flsb.gtwy.dcn ([156.119.190.62])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 10 Dec 2024 16:06:51 -0500
+Received: from flsbdb.flsb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by flsbdb.flsb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4BAL5wSJ056873;
+	Tue, 10 Dec 2024 16:05:59 -0500
+Received: (from ecf_web@localhost)
+	by flsbdb.flsb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4BAL5lbs056535;
+	Tue, 10 Dec 2024 16:05:47 -0500
+Date: Tue, 10 Dec 2024 16:05:47 -0500
+X-Authentication-Warning: flsbdb.flsb.gtwy.dcn: ecf_web set sender to email@email.com.GOV using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.GOV>
+Subject:Ch-11 24-13584-MAM Notice of Hearing Evan Phillip Jower
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of Florida</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 12/10/2024 at 4:05 PM EST and filed on 12/10/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Evan Phillip Jowers</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.flsb.uscourts.gov/cgi-bin/DktRpt.pl?814478>24-13584-MAM</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.flsb.uscourts.gov/doc1/0500?pdf_header=&magic_num=25374736&de_seq_num=361&caseid=814478'>110</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Notice of Hearing  (Re: [107]  Motion For Entry of an Order Quashing Counsel Holdings, Inc.'s Subpoena Pursuant to Federal Rule of Bankruptcy Procedure 9016 And Federal Rule of Civil Procedure 45(d)(3)(A)(B), Filed by Interested Party David Hyers., [108]  Motion For Entry of an Order Quashing Counsel Holdings, Inc.'s Subpoena Pursuant to Federal Rule of Bankruptcy Procedure 9016 And Federal Rule of Civil Procedure 45(d)(3)(A)(B), Filed by Interested Party Alexis Lamb., [109]  Motion For Entry of an Order Quashing Counsel Holdings, Inc.'s Subpoena Pursuant to Federal Rule of Bankruptcy Procedure 9016 And Federal Rule of Civil Procedure 45(d)(3)(A)(B), Filed by Interested Party Josh Carr.) Chapter 11 Hearing scheduled for 12/23/2024 at 02:30 PM by Video Conference.   (Romaguera-Serfaty, Maria)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

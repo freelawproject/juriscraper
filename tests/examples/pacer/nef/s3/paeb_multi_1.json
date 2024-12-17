@@ -16,7 +16,7 @@
           "pacer_doc_id": null,
           "pacer_magic_num": null,
           "pacer_seq_no": null,
-          "short_description": ""
+          "short_description": "Close Adversary Case"
         }
       ],
       "docket_number": "23-00075",
@@ -39,7 +39,7 @@
           "pacer_doc_id": null,
           "pacer_magic_num": null,
           "pacer_seq_no": null,
-          "short_description": ""
+          "short_description": "Close Adversary Case"
         }
       ],
       "docket_number": "23-13237",
@@ -50,24 +50,5 @@
       "federal_dn_office_code": null
     }
   ],
-  "email_recipients": [
-    {
-      "email_addresses": [
-        "example@domain.com",
-        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com",
-        "example@domain.com",
-        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com"
-      ],
-      "name": ""
-    },
-    {
-      "email_addresses": [
-        "example@domain.com",
-        "example@domain.com",
-        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com",
-        "USTPRegion03.PH.ECF@usdoj.gov"
-      ],
-      "name": "4510A Adams Circle Bensalem, PA 19020"
-    }
-  ]
+  "email_recipients": []
 }
