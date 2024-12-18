@@ -552,7 +552,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         # Some courts have subjects like
         # `Multiple Cases "{docket} {case name} Close Adversary Case"`
-        if "Close Adversary Case" in subject:
+        if "close adversary case" in subject.lower():
             return "Close Adversary Case"
 
         short_description = ""
@@ -568,9 +568,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         # Deletes:
         # - extra docket number 'components', such as `federal_dn_judge_initials_assigned`
+        #     these are usually 3 letters long. However, we want to keep some special acronyms
+        #     such as MOR (Merchant of Record?)
         # - Chapter component
         # - "NEF: " placeholder
-        regex_cleanup = r"(\-[A-Z]{2,})|(\-[a-z]{2,})|(C[Hh](apter)?[- ]?(13|7|9|11))|(NEF:? )"
+        regex_cleanup = r"((?!-MOR)(\-[A-Z]{2,}))|(\-[a-z]{2,})|(C[Hh](apter)?[- ]?(13|7|9|11))|(NEF:? )|(C[hH][\s-]*$)"
         subject = re.sub(regex_cleanup, " ", subject)
         subject = subject.strip(" -;:, ")
         # some courts use "Re: {case name}"
