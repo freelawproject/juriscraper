@@ -1,0 +1,120 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 9kgc1ln21dsnii2363ru6i5m33slddhnoce8vc81
+ for email@email.com;
+ Wed, 27 Nov 2024 20:23:19 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of deb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of deb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=deb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHdHZHOWE2MlVXSDNUYkFWSjUvZm1rUGh4NHhuS2JyK1RMVm5LZ0xmR25uazE4SWdYMXZYMlEzUWJmd1MxRXdVOXBHZTlSRE5HK25kV3RTQkhoY3lMN0FKOUFXZ1FoclVUS2NPcDVLTUFaaWJVSVdXRlRiWlIyNWk3NGlZQ2N3N0s5VFpraXkzdGZoVEtrdWNxUDN1c1JSZTFFR1hSbWgyQnNHYjRnNzdSSW1ld2xSakZWeTJCRGtNdm81SXRRRHk2N3BpWUszaWFZYVFaMDlPNU9iWHgrZmxqejAraDVFc2taTSt2VFNKM09SbFJKUWNDT3NzV2tsemhyVFE1ZVZJRnFWVUdkNlhlUFZyZk5LTVpBbE5pYk00V3lXcE1YMGYrYjZRWUdtZGNhMzB6bnZQNmZibDk3VW93ajB6eFpsL2c9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Ke8oYNrJJYGHmviIlXyFe2CCdndYZ2QWA4fl/NLVlick7weap5JOJeF87nCpm+Sr4+NNsHzNCxQBEhjVG4/GfHB2WWCg3vkabFTI3dU7fMzpNcL7hrpqqYLbU4G8nkNz36lJznaGa1H4YshQm2PwwXSLWjzoufeDHOh1hfwBOwo=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1732738999; v=1; bh=WJw5/tC3BDhoInDZNpvsKCzWaxqNpLdhmF4a12QQK/E=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=74915; q=dns/txt;
+  s=law1w; t=1732738999; x=1764274999;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=WJw5/tC3BDhoInDZNpvsKCzWaxqNpLdhmF4a12QQK/E=;
+  b=Vr71tjqC5C812emeFU1IYM81QoCzFJxuNELCnCpTCTwOFpU3EiX50Bzn
+   XXjALKDBH4PE4W/4ItjV9nrFoUhrEinfvKOjAr+qvAg+i4AD/s2QngInp
+   WnMioOkv9uUKmsDMK1e1iU5wFRzLkNhjuJ44fcPC0Hjrpo+IKExcZ/wZC
+   L0OkTX16HaF3WXn5yIRTt1w2hbwIbma9HOcldE5ou1GQk/LxleUzPCxXt
+   xPP5fVVkAQ5aGj2TAoYWMBlZJY9y1QH8udTvAM/vfMOXvrV9JoXBNkvtw
+   Av+nVHgWq1j6RHXzlPZRzTTv92bnTGmhufjnw3xtMj0ISl8k/m5Pp+WHK
+   A==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.33
+Received: from debdb.deb.gtwy.dcn ([156.119.190.33])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 27 Nov 2024 15:23:19 -0500
+Received: from debdb.deb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4ARKLqui016644;
+	Wed, 27 Nov 2024 15:21:56 -0500
+Received: (from ecf_web@localhost)
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4ARKLj1Q016451;
+	Wed, 27 Nov 2024 15:21:45 -0500
+Date: Wed, 27 Nov 2024 15:21:45 -0500
+X-Authentication-Warning: debdb.deb.gtwy.dcn: ecf_web set sender to email@email.com.gov using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:24-50237-JTD 24-12480-JTD Franchise Group, I Complaint
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Delaware</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 11/27/2024 at 3:21 PM EST and filed on 11/27/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Franchise Group, Inc. v. Gale et al                                        </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.deb.uscourts.gov/cgi-bin/DktRpt.pl?194952>24-50237-JTD</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.deb.uscourts.gov/doc1/042021961841?pdf_header=&magic_num=94822243&de_seq_num=3&caseid=194952'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Franchise Group, Inc.                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.deb.uscourts.gov/cgi-bin/DktRpt.pl?194674>24-12480-JTD</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.deb.uscourts.gov/doc1/042021961842?pdf_header=&magic_num=24806255&de_seq_num=1262&caseid=194674'>262</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-50237. Complaint <i>Complaint of the Debtors</i>  by    Franchise Group, Inc.  against  Brian  Gale, Mark  Noble, Terry  Philippas,   John Does 1-20.  Fee Amount $350 (91 (Declaratory judgment)),(71 (Injunctive relief - reinstatement of stay)).   (Morton, Edmon)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>COMPLAINT - FRG.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=983460418 [Date=11/27/2024] [FileNumber=18915412-
+<BR><TAB>0] [135e5927c184520889dbfceb21654f384a82d7aefb2a7217ff3a351091b265db76
+<BR><TAB>bc75781cb60c189dac1e772077b0f79cd459ddf6cd1377af03d07b4c911f8c]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>COMPLAINT - FRG.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=983460418 [Date=11/27/2024] [FileNumber=18915413-
+<BR><TAB>0] [2e2d177cedabd0c29e5799cd47bcbf66873c083a20573cfae1fb0c8dd7b542f727
+<BR><TAB>3559881e4d53a2cb6f1538cb297597489e6acc767da49dac327dc40989fe76]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

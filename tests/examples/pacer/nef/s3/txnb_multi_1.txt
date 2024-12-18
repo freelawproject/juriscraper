@@ -1,0 +1,92 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id hohq310tv1trktrvmik1tv98j5sdciepu6dggdg1
+ for email@email.com;
+ Fri, 20 Sep 2024 16:54:26 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of txnb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of txnb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=txnb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHOEc0b1hZNHZ1OGdOaG9Hd1dlNjQ4MUFIMDQrZFU0Mzl4bFZrUFhiWnJmVnZzWW5VOUlwdGZZUHpiSWk2a2JubGFjUTZaK3VheWsvNHdMSXpkNGhSOFdxVmkvNlVZNVh0cFA4MVNQNnpsZ3JDRlhLbEFkWTJzM0xEbzE4QWF1MWE2Tjd6Ri9CRnlBTWdUOXYwZldORU1sVFFzV241Vm5CUHhjM0ZwbVVKRjl0NENsOFdyOTQzK28yRTRYamRaZlQ4TGdpbXBOeWlQUnJHNWlaVFVLU1djUmJQaUpUK0hLY0QwbFdPMnlQZGE1eWhBQzkrZW01bVZOanN0d3FNelVNeEIxajA1K2ZrU0JHeXh1TEJPak5vK2h4RmlaU3lhY0dyYi9iQTREMEJDc01TWFpseFdjU3psVXdOcFhUN0tNeVE9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=PiMq33GGTbdrJSQ6GkNbepI1gLs90X2tBe5Ok5bx1S7pAClg14wyV1aAixGqwFyXmOmt8/hvc51nVC2RdFK8VgwIlcFHtB+5OP/+VGrs4NyH8vMMMjbvcvdfrpyW6P2QoYhq6FSm6D96S075TnO74Y/uceLzOZy6VuHftgS8/K8=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1726851267; v=1; bh=rqX6nky++eAH26WyZkOQ2q8fKwc5QI5CoUz5lelrdYw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.48
+Received: from txnbdb.txnb.gtwy.dcn ([156.119.56.48])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 20 Sep 2024 12:54:26 -0400
+Received: from txnbdb.txnb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by txnbdb.txnb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 48KGre1G047316;
+	Fri, 20 Sep 2024 11:53:42 -0500
+Received: (from ecf_web@localhost)
+	by txnbdb.txnb.gtwy.dcn (8.14.7/8.14.4/Submit) id 48KGra0F047145;
+	Fri, 20 Sep 2024 11:53:36 -0500
+Date: Fri, 20 Sep 2024 11:53:36 -0500
+X-Authentication-Warning: txnbdb.txnb.gtwy.dcn: ecf_web set sender to email@email.com.gov using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:Multiple Cases "Close adversary case"
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Northern District of Texas</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 9/20/2024 at 11:53 AM CDT and filed on 9/20/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>AREYA HOLDER AURZADA, CHAPTER 7 TRUSTEE FOR THE BA v. JPMORGAN CHASE BANK, N.A. et al</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.txnb.uscourts.gov/cgi-bin/DktRpt.pl?515862>24-03029-swe</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 09/20/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Dennis James Rogers, II                           </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.txnb.uscourts.gov/cgi-bin/DktRpt.pl?498457>22-30500-swe7</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 3:24-ap-3029 closed      (Whitaker, Sheniqua)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

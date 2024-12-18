@@ -1,0 +1,120 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id nal5d7pb06bfmscatqfn1a5aamq1nldldeq2e681
+ for email@email.com;
+ Mon, 18 Nov 2024 23:46:38 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ndb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ndb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=ndb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFaUVBMmFzOCtWYUc4aEVRQ1JlOWxWejVrckNKajh5bFZjQUhpTE9pOW1icmZUVGh6N1Qrb1ZXWGUvL0ViQVIwZllNelZJN2VBM01mVkc0bkl4MjU1MWo1Umh5MXFxQW1xWFBCbEIzNE5wck94UnVXZjNmNzVUNElUeFQ1TDNadzVGQlJtWXJOSThUNmJvZy9rWm5KZ0dvbVhJdnJZN3FCLy9ZOS9tdWZMZkhES2c1emR1cGlNaFN4R05pazgxdGJZM0Rvd0J5OWMveVd0ZzB0RG1BWTY4YkQ2Qmx1Q1VENEluRHA0U1JER3JpTDZKZFBGYmtnaUhWL0dmeGJkTWQwUDVDRytxVlRCWC9iRWZiVGFqb3g3TE0wbHI4K0h3UjJhVkVQb25YWU5NaXc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=vpf9ukha8HZrcYY0L1vO296Z49rVbJtrGKzkfh/HRHvtzhFhnlKtbtw4eiVnSbjfm16RyWCiKVfeDpoPSqmq7+s/+Lsd6zSTLI/lNhHeljYlvl8fJP2LcfNs8ViLtH3Etc0mwc11wUqxiNkvBdi/ZYgDvJ1D3Hg45yyMFAQP4r0=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1731973599; v=1; bh=gOOLkCsm9unTQDA7D2M6BWBa/ZhG7nzXybiHDst4FZk=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=5499; q=dns/txt;
+  s=law1w; t=1731973598; x=1763509598;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=gOOLkCsm9unTQDA7D2M6BWBa/ZhG7nzXybiHDst4FZk=;
+  b=cfmDCdVwvyCuLp3O7/nMZlfOUSdEmTpAkv4jsTjn6Ncdu0O1xpz579bX
+   YD509sDJnSPKdOt6Qsjd4knHyhTCvb+rcndVnK6RdRYR2IFDkORrF1exi
+   bnuwq7EHMJIO3hBvSN9LlBobf1MNBM86A51g23ynKs0xFhj0ghch0YBN1
+   INhG1yepcVY5G7ULn8VHDclB9zae679sa9B/lqN99Wux0g9idIVdzaIgX
+   o+KAYuaQDIq9QepYB4dTxdhGeuww3RBypKg4+Z0bhAlhCgz5ejJI85L+0
+   ictbjFDm/SCF5mjGZ1Xp8itGd3/VZ1lLUHXG6tV4RX4d5/sKpk4bQZT7j
+   w==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.242
+Received: from ndbdb.ndb.gtwy.dcn ([156.119.56.242])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 18 Nov 2024 18:46:38 -0500
+Received: from ndbdb.ndb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ndbdb.ndb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AINjrsn081266;
+	Mon, 18 Nov 2024 17:45:53 -0600
+Received: (from ecf_web@localhost)
+	by ndbdb.ndb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4AINjYwM079086;
+	Mon, 18 Nov 2024 17:45:34 -0600
+Date: Mon, 18 Nov 2024 17:45:34 -0600
+X-Authentication-Warning: ndbdb.ndb.gtwy.dcn: ecf_web set sender to email@email.com.gov using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:24-07030 24-30422 Jamieson CAPEX Fund, LLC Complaint
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of North Dakota</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 11/18/2024 at 5:45 PM CST and filed on 11/18/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Jamieson CAPEX Fund, LLC v. Tyler et al                                       </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ndb.uscourts.gov/cgi-bin/DktRpt.pl?45863>24-07030</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ndb.uscourts.gov/doc1/13601640371?pdf_header=&magic_num=21856629&de_seq_num=3&caseid=45863'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Jamieson CAPEX Fund, LLC</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ndb.uscourts.gov/cgi-bin/DktRpt.pl?45779>24-30422</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ndb.uscourts.gov/doc1/13601640372?pdf_header=&magic_num=51569304&de_seq_num=125&caseid=45779'>35</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-07030. Complaint by     Jamieson CAPEX Fund, LLC  against  Karen J. Tyler,   The State of North Dakota. <i></i>   Fee Amount $350. Nature of Suits:(11 (Recovery of money/property - 542 turnover of property),13 (Recovery of money/property - 548 fraudulent transfer)),   (VerStandig, Maurice)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>24.11.18 CAPEX Complaint v3.0.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1065028669 [Date=11/18/2024] [FileNumber=1646554-
+<BR><TAB>0] [1e403078c62210958fac1c81dadea76c853f599358134c0c64cafac229d03309bc
+<BR><TAB>a918493a87a67550dbacc2c71d0a400b005456561ee028822179a0475833ec]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>24.11.18 CAPEX Complaint v3.0.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1065028669 [Date=11/18/2024] [FileNumber=1646555-
+<BR><TAB>0] [7d73fa8234ea71beb20a685b8910e7bc061db8047186686acb2de981bd1fab9e6f
+<BR><TAB>100085aae6a6e563a8a8b4b93dd0bc5ebc778439f347b6e66e306c95b1d877]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

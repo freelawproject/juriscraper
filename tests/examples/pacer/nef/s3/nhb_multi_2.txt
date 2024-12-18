@@ -1,0 +1,175 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id kk5ojak1fhhhtv2f16h9ctseqgqpkuti8dou5n01
+ for email@email.com;
+ Wed, 27 Nov 2024 14:25:02 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of nhb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=email@email.com.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of nhb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=email@email.com.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=nhb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHSnJ5U1lPNE1nSVJkakI1V1pvNG1IM2FVQjA0ck1FSUY0OExCeHNuajhjSlRVdGxYQkVBVUtZQWt4YXRjZlIxRklCMWdqbStsY0dLMFl4RlhsbEJBakJwK3NxNjRRejFpbE9DT3dhN1dsZ0tvZlBmQ1JRNEFVbXkzejRvdmJtSzc2UVFOSDVmVml5VVpRY09rejVWalBVSDNFWHlCZlAzbFg5Ym5Fb0hxTWpndDhsbVNjSTlNNWMycGJpbFZEZXNhMFpvbjF5MDBXakJzanpzeUh3K2Y0aFJrTjVLL3E0c0xUeTM3cG1jOUFGcmZ2Y0tscEJzbFhUTVBueVhLOC9XbkRuTUxzZVQ3UVlkV0dhNGNwcFpJV3ZnOU8xY2ZSeHIwTk5rUm5rMXRpTGc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=DYUXyKghX0xFNv6/JmSrAGlsJ8xPslF9Zxtc9bT/K9kWoF6oH0dZkWS49hVHnXkFNBBfk0sNQGvry7Vq96wvwHSr6XTv/wM+bF/BKF3T7/vMC2WjDNot2ttSysWzi6lwCUvZ5JdTFgIMepio+0LEK19fywV2tMGZQHWCFqQ7IiA=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1732717503; v=1; bh=ZB8eEd260gO4QIEOI1wSOpq6RDCPza4OT2JWEoq8u8o=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=8587; q=dns/txt;
+  s=law1w; t=1732717502; x=1764253502;
+  h=date:mime-version:from:to:message-id:subject:
+   content-type:x-sbrs:x-remote-ip;
+  bh=ZB8eEd260gO4QIEOI1wSOpq6RDCPza4OT2JWEoq8u8o=;
+  b=WZqAdQZJZehXusNr575XK+sKi4E611ke1uto5pb2dkdYD9qtPIvg2xTz
+   W9pD6UDsDnJ0atX4r6nsWDpG2f5Gy96BsKPc36HEhnxD+AY/A06tog1bi
+   Si8sXW3mS6eLr1JHffPdRt8UfdiPyzgmRJOzmS310eySkUVuRULsdpS27
+   RC8dgy2t38dlJWPx8p7b3b6v6siWhmvfoqlWt7S+kMfOfXHULW3X375m3
+   5gRvp+QZw9oSUJ6kp3/2LB3EeT78iPQubSY6Fvv9+b/cGT5JJanUqfEGR
+   akoacszBsLgbQCnFhhIl3kPLNSGJQpbXIO1xXBgp4GrSENX+RMqEkCRTp
+   w==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.55
+Received: from nhbdb.nhb.gtwy.dcn ([156.119.190.55])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 27 Nov 2024 09:25:02 -0500
+Received: from nhbdb.nhb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by nhbdb.nhb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AREOGMs020770
+	for <email@email.com>; Wed, 27 Nov 2024 09:24:16 -0500
+Received: (from ecf_web@localhost)
+	by nhbdb.nhb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4ARENcJ8020303;
+	Wed, 27 Nov 2024 09:23:38 -0500
+Date: Wed, 27 Nov 2024 09:23:38 -0500
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com
+Message-Id:<email@email.com.gov>
+Subject:24-01023-KB Chapter 13 Tricia L Hicks  Complaint
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Hampshire Live Database</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 11/27/2024 at 9:23 AM EST and filed on 11/27/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Marshall v. Hicks                                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nhb.uscourts.gov/cgi-bin/DktRpt.pl?120535>24-01023-KB</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nhb.uscourts.gov/doc1/11606680605?pdf_header=&magic_num=0&de_seq_num=3&caseid=120535'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Tricia L Hicks                                    </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.nhb.uscourts.gov/cgi-bin/DktRpt.pl?120282>24-10563-KB</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.nhb.uscourts.gov/doc1/11606680610?pdf_header=&magic_num=0&de_seq_num=109&caseid=120282'>31</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-01023.   Complaint  <i></i>  by  Steven P. & Erica A.  Marshall  against  Tricia L Hicks.  Fee Amount $ 350.   (Attachments: # (1) Main Document  # (2) Exhibit A - Permanent Injunction Order # (3) Exhibit B - Preliminary Order Granting Preliminary Injunction # (4) Exhibit C - Order Re Motion on Attorneys fees) (68 (Dischargeability - 523(a)(6), willful and malicious injury)) (65 (Dischargeability - other))    (Dahar, Eleanor)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>adversary cover sheet - completed.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668320-0
+<BR><TAB>] [191efbccaede67c19a3aae9d3ab01b7fc5d7f9102270977aea4250603007b8f9edd
+<BR><TAB>4cab6af388d075a375f20d7168d30849a4853b49b4f3d2f55f3fe2a7be714]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\objection to discharge.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668320-1
+<BR><TAB>] [28d862fd694777b82e4f87a5956798b0a1c921f193e04b7c4eddbfc736a80f102d4
+<BR><TAB>bd5dfc9e59b11e69c8bbf807c292159cd7fe0f7b0690d7c0a6bfd19d7c33a]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit A - Permanent Injunction Order
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit A - Permanent injunction - Order on Merits (12.05.2022).pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668320-2
+<BR><TAB>] [700af93f74321e95446bee26ed316d596a892952c035ab093ad0025d238edb3ab38
+<BR><TAB>50b81ccb9ebe3cf44ccdc51401fd57d4b4684c27e9309956a6cc7a6838959]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit B - Preliminary Order Granting Preliminary Injunction
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit B - Preliminary Order granting Preliminary Injunctive Relief.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668320-3
+<BR><TAB>] [6fc26a77ba659b4d4f6152fc04efc69bbbeb7ea3e642e9a074a3790431640919c87
+<BR><TAB>2b91ec919ffa7761c84e5704affdaf20ac3f2c59383c66f804724081e7f62]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit C - Order Re Motion on Attorneys fees
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit C - Order re Motion on Attorneys' Fees and Costs.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668320-4
+<BR><TAB>] [4a18f07c267c46b0cbf3b5cb7fd8a471051cad72878c80c3e3cedcde8bdbb4f13bd
+<BR><TAB>909f81931046a4f68c715a76b2b092daf737a900c69ffeb0f1ffbd4ec0087]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>adversary cover sheet - completed.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668321-0
+<BR><TAB>] [6fc9f39f8153dd3be18d565afe04e1fcc537f42e1cb6ed748fe919d267107568527
+<BR><TAB>ee81ee5f3f6e908b44b2a42d8bd5ad87394b4672d97b20778694bf33c6fc0]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\objection to discharge.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668321-1
+<BR><TAB>] [4db5adf50250dc86676e339205dfd30518605778e3df58e0d1d946891af0867a6a2
+<BR><TAB>1eb1a35e09771e7b9e034b4f9bc1df3b25fa18c30a81e174d4c77a91abbf7]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit A - Permanent Injunction Order
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit A - Permanent injunction - Order on Merits (12.05.2022).pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668321-2
+<BR><TAB>] [2c339c897fbf12021f5f41c8d082e6375756bc09c6357064ad8bff4b4307567b8f2
+<BR><TAB>c794db627ddc106328112002a5f48bd669bfe13556e36268dced2882e85a1]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit B - Preliminary Order Granting Preliminary Injunction
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit B - Preliminary Order granting Preliminary Injunctive Relief.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668321-3
+<BR><TAB>] [57392f79f93e9dd054e15b69669038f2f51ce936c0c7b993b836d06c7a392c31e1e
+<BR><TAB>4897f2131a0e6bad0ae6ba572c004af5dafa549a2da8776b75d52fd027e6d]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit C - Order Re Motion on Attorneys fees
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibit C - Order re Motion on Attorneys' Fees and Costs.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=988526710 [Date=11/27/2024] [FileNumber=6668321-4
+<BR><TAB>] [536fe3cb23f141e8adbfe0a0ca61afb7e4a28e161fc7c8bcd8922ac36e4c31f63dc
+<BR><TAB>5d6891b12279118b533f416b50115b110df32d6ab9f08986607e725ff6fc3]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

@@ -1,0 +1,106 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id gphu60dhan6f8fi2i8brbbq996k0c62nmhjfbio1
+ for email@email.com;
+ Tue, 15 Oct 2024 18:51:02 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of deb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=email@email.com.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of deb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=email@email.com.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=deb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHdzhPWkRKT3c5K3VBMFNhdWp2U09iSDdUdU13MjJqbng1cFdDcklhMjNXUUxjQWZicnM1Q2JJYmIreSsvY1QxMmNoOHE4cjUzdEdtWGlWcVBkZk9rSkl1d2VFeklDYktFb2JpVzlOa0VlSjNMRWJuTjlCRFE3cEh1czUyWTRrcnZZNVNLMUlTM0lUZUt2VVNTeFcwTjdpMEV4R1QwbGUyQ295T3lvMWJmdFZ1T2RVOFUxbCt4QU1UZUdvSitSYmpZeWF1NjhSSEpyVzUrZlJaZ1I1YzYwMHQya3NxTWZubzIrZmk2eDVvQXljbXVoSWtDcmJzUWFFOHBWakxYbHQwSmV2c05mYURBSVZRT0gzMW85MGJ1NThRL1pVQ2gxRXFMby8rM1hXZW85VUFQZ3VUU1hiTHpsZXd4YkczSG5HWVk9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=law/L/3NCMM9+Pt6sbZHNXGpoMPnTRd9jbWyIxOgsxVX9k2F2dOBeXMrg+0KZdNOktD9nH413E0k9LD0i1FLU1JvVqRWkpiDHKSrvqk8GkrTYaWHTdL/sVMDlMi+78q7rnF3TNDq9M974CXCmxSgx9vcUlrJW3utmVV/+c/jpbI=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1729018263; v=1; bh=Zmqsc9/yHm92wXe4QkY9Bc2lnYS8VZ4QRnkQaY4gcc4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=44045; q=dns/txt;
+  s=law1w; t=1729018262; x=1760554262;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=Zmqsc9/yHm92wXe4QkY9Bc2lnYS8VZ4QRnkQaY4gcc4=;
+  b=i5BLmBELT9Uw1gYgKV2ChIYNEjrjB1JqFtqi9z6DWvN8QovWvES8GRWy
+   KtVYoMLslBz6e4yQb2d2xTF4N2y8Ju/2oMbETf5evWBukll7tzdDhAfr/
+   sIzWtJoKuTnII9q+470G0TduGPZXJbfA4B0T7HsFRK5kvZNLdEMwn7A6f
+   umKXxdXhWGNvmrfoFdCsQqc2AdCQvu3UC+ICa0Px26oGWaJlZeJ4VQ2K3
+   T0UssaADSNhmIDLmcec1TQVF+s/cPdjbYOUqOWgtOgVOj8BW+cGPM0bMt
+   5s2oLM9FxgIpdSUYTiXSyKGxyzWRBk0D8RXTOm5RA/34UI8IcFfy98HII
+   g==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.33
+Received: from debdb.deb.gtwy.dcn ([156.119.190.33])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 15 Oct 2024 14:51:02 -0400
+Received: from debdb.deb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 49FInUS4062948;
+	Tue, 15 Oct 2024 14:49:37 -0400
+Received: (from ecf_web@localhost)
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.4/Submit) id 49FInGsJ062015;
+	Tue, 15 Oct 2024 14:49:16 -0400
+Date: Tue, 15 Oct 2024 14:49:16 -0400
+X-Authentication-Warning: debdb.deb.gtwy.dcn: ecf_web set sender to email@email.com.gov using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:Multiple Cases "23-10253-KBO Akorn Holding Comp Close Adversary Case"
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Delaware</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 10/15/2024 at 2:49 PM EDT and filed on 10/15/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>George Miller, Chapter 7 Trustee of the bankruptcy v. Cardinal Health, Inc.                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.deb.uscourts.gov/cgi-bin/DktRpt.pl?192740>24-50041-KBO</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 10/15/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Akorn Holding Company LLC</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.deb.uscourts.gov/cgi-bin/DktRpt.pl?189188>23-10253-KBO</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case 1:24-ap-50041 Closed     (JMC)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

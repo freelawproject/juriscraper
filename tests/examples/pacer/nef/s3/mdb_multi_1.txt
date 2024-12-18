@@ -1,0 +1,91 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id msdi901dqkshl6ll8ivfk1rc3btlbsski4097b81
+ for email@email.com;
+ Wed, 25 Sep 2024 14:53:16 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mdb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mdb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dmarc=none header.from=mdb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHRmNZaERGMHVPL3dRZDlDR01HUmFTTjkrNExxVVBaMDlqdFY3UVM1dStFcWxmelFSYkVNOHZ6YWNtQ3VvZTg0TGZNRzEvTmpxenRKT1RaaGhVMnRJbk5hbzhtbnBOUW0rRUo3M0t2aitCeW5EMTlMSElCVGpnMmhmSnV6bHVHSlNYVzNVQVhjamkyWG9xTldwVUhSY2ZTdGEyRS9GOWttOW1GQWYwOGNlZ1haRVZJQWp0QnBrdHZscmRUUWJid295UUtza0hxdTRxM0NHajkyR25qYVFSWE4weXZtT1YvNVI4L2xNeWdqUFo4Mk5COVBVMkc0ajE3Q29ySmtEOUlQRXJwZlBIdzA5SHBDaUJjemQrRGRwRmllMnhNOTBhdGNkTzFTTXFHa2VINnc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=e8bCcwgkgbpu1q3DszP2a0PDPkpbeC6ZofztR8KYzHB6OBZL9gAia0TcBOfYm6ahYffcJCsc8odgTwFXtZu80ScmjKiB7GVIOIo603Xl3XDqkjJspLd5uY1hHARTbXz2SXqY7Tmm9/s2E9gd/6ZXlE0rLnugxC2ghfthei2xUqo=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1727275997; v=1; bh=wYRFdYWNUmWptN9I3UaSjPky0bic2aDI5DK8TZjlDWI=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.184
+Received: from mdbdb.mdb.gtwy.dcn ([156.119.190.184])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 25 Sep 2024 10:53:16 -0400
+Received: from mdbdb.mdb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 48PEqEja118026;
+	Wed, 25 Sep 2024 10:52:18 -0400
+Received: (from ecf_web@localhost)
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.4/Submit) id 48PEq2kO117406;
+	Wed, 25 Sep 2024 10:52:02 -0400
+Date: Wed, 25 Sep 2024 10:52:02 -0400
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:Multiple Cases "Close Adversary Case" - AP -
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Maryland</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 9/25/2024 at 10:51 AM EDT and filed on 9/25/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Jefferson v. Alter et al</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?768557>22-00193</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 09/25/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>SDI Properties, LLC                               </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?753920>20-20650</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case 0:22-ap-193 Closed.    (Kaniowski, Amanda)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
