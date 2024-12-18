@@ -570,10 +570,16 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         # - extra docket number 'components', such as `federal_dn_judge_initials_assigned`
         #     these are usually 3 letters long. However, we want to keep some special acronyms
         #     such as MOR (Merchant of Record?)
-        # - Chapter component
         # - "NEF: " placeholder
-        regex_cleanup = r"((?!-MOR)(\-[A-Z]{2,}))|(\-[a-z]{2,})|(C[Hh](apter)?[- ]?(13|7|9|11))|(NEF:? )|(C[hH][\s-]*$)"
-        subject = re.sub(regex_cleanup, " ", subject)
+        component_regex = r"((?!-MOR)(\-[A-Z]{2,}))|(\-[a-z]{2,})|(NEF:? )"
+        if self.court_id in ["paeb", "pamb"]:
+            # keeps the "Chapter ..." description on the short description
+            chapter_regex = r"(C[Hh][- ]?(13|7|9|11))|(C[hH][\s-]*$)"
+        else:
+            chapter_regex = r"(C[Hh](apter)?[- ]?(13|7|9|11))|(C[hH][\s-]*$)"
+            
+        cleanup_regex = rf"{component_regex}|{chapter_regex}"
+        subject = re.sub(cleanup_regex, " ", subject)
         subject = subject.strip(" -;:, ")
         # some courts use "Re: {case name}"
         short_description = re.sub("( Re$)|(^Re:? )", "", subject)
