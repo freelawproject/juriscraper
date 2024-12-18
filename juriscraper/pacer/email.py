@@ -577,7 +577,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             chapter_regex = r"(C[Hh][- ]?(13|7|9|11))|(C[hH][\s-]*$)"
         else:
             chapter_regex = r"(C[Hh](apter)?[- ]?(13|7|9|11))|(C[hH][\s-]*$)"
-            
+
         cleanup_regex = rf"{component_regex}|{chapter_regex}"
         subject = re.sub(cleanup_regex, " ", subject)
         subject = subject.strip(" -;:, ")
