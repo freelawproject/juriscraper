@@ -1,0 +1,125 @@
+Return-Path: <ecf_dcb@dcb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 6nid5ninai5dc7kqu95qksl1ee927hh98jumsk01
+ for example@domain.com;
+ Fri, 02 Feb 2024 14:06:32 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of dcb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf_dcb@dcb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of dcb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf_dcb@dcb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=dcb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGYkExU2paODBFS2V4WTF1c3p0ckFvUncwWTMrUjZWQ09pZEZwc2ZFWS9JU0xjajFRTjF3SDlERTVia3pQQjFYR0JGRG9FckhnYzNxZ0t2VHZjR0lsaW1SRE80MURqckVjZE13YS9YUllIMm5jeVFlR0V1L2RtVVI3TWdTVit4c0ZRbkFFTDZteE9YSnJaZENabHhPb3o4M01JbUs3eFJveHE0cUFWUlp1UHowL1l1REIyWm9zSEVEYzVtQk1SdmhsY3g4NkpURWgwOGdldWZvdDlHSzdFZzdXWE5FQmMvdnZUNVd4VjhpemNmbHg1aUdGR2hEWG8zYUlqNjg0blY3UkVhcENGTm1EeFo3Z0JrYmF5dDVkb05tMjlVTWRtZjViOWhLTlU1OVJBd1E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=mNPqgfvh+kAppz8qUtezLtpXIHkyp/Ag7Oe+b+f/qjEJCsjXv6EC1vV77S3RtTJKckppwa/fzSCFrxrxXTxv43IN9lJ2KiZmZSd5mmqZKWEcak+5TVihrZx1YJsKKRTHzseaIWkuTDP8j+4G+uM5Ju4feMQgbe6kNRVqKYxej7k=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706882794; v=1; bh=re1ptExT3cySftvqN3rhnCMD4oa5HCHo8vFtRhJhDkk=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.113
+Received: from dcbdb.dcb.gtwy.dcn ([156.119.190.113])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 02 Feb 2024 09:06:32 -0500
+Received: from dcbdb.dcb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by dcbdb.dcb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 412E5jox025787;
+        Fri, 2 Feb 2024 09:05:50 -0500
+Received: (from ecf_web@localhost)
+        by dcbdb.dcb.gtwy.dcn (8.14.7/8.14.4/Submit) id 412E56vw024511;
+        Fri, 2 Feb 2024 09:05:06 -0500
+Date: Fri, 2 Feb 2024 09:05:06 -0500
+X-Authentication-Warning: dcbdb.dcb.gtwy.dcn: ecf_web set sender to ecf_dcb@dcb.uscourts.gov using -f
+MIME-Version:1.0
+From:ecf_dcb@dcb.uscourts.gov
+To:courtmail@dcb.uscourts.gov
+Message-Id:<2731415@dcb.uscourts.gov>
+Subject:23-00286-ELG CH11  - Avamere NPS Carpenters LLC
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>United States Bankruptcy Court for the District of Columbia</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from admin entered on 02/02/2024  at 00:30 AM  EST and filed on 02/01/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Avamere NPS Carpenters LLC                        </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.dcb.uscourts.gov/cgi-bin/DktRpt.pl?49636>23-00286-ELG</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.dcb.uscourts.gov/doc1/04402826049?pdf_header=&magic_num=3652693&de_seq_num=130&caseid=49636'>45</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+PDF with attached Audio File. Court Date & Time [ 1/31/2024 10:31:49 AM ]. File Size [ 3128 KB ]. Run Time [ 00:06:31 ]. (Audio Duplicate Docket.). (admin).
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document
+<BR><STRONG>Original filename:</STRONG>/data/docs0/ECF/ADI/dcb_live/batch/documents/1bk2023-00286_20240131-103149-MP3.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1011211900 [Date=02/02/2024] [FileNumber=2731369-0] [31eb9fcf5d43a65e85abcf1f5f43988876d6ab8b52c3660edd063d5f7beb234904d68bb7fe6e40634543a4dbcca4710a805d7cdd6c8ec75b3956016ac7617076]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-00286-ELG Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Kristen S. Eustis on behalf of U.S. Trustee   U. S. Trustee for Region Four</span>
+<br>Kristen.S.Eustis@usdoj.gov,  Robert.W.Ours@usdoj.gov
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor In Possession   Avamere NPS Carpenters LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;x.example@domain.com
+<BR>
+<BR><span class="personName">Sara Kathryn  Mayson on behalf of U.S. Trustee   U. S. Trustee for Region Four</span>
+<br>sara.kathryn.mayson@usdoj.gov,  Robert.W.Ours@usdoj.gov
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor In Possession   Avamere NPS Carpenters LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;x.example@domain.com
+<BR>
+<BR><span class="personName">  U. S. Trustee for Region Four</span>
+<br>USTPRegion04.DC.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">Firstnane Lastname on behalf of Creditor   WCP Fund I LLC</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;x.example@domain.com;x@recap.email
+<BR>
+
+<BR>
+<B>
+23-00286-ELG Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

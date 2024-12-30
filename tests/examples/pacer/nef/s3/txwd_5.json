@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Collins v. Pel-State Bulk Plant, LLC",
-      "date_filed": "2021-08-09",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-08-09",
@@ -19,7 +19,12 @@
           "short_description": "Response in Opposition to Motion"
         }
       ],
-      "docket_number": "7:20-cv-00083"
+      "docket_number": "7:20-cv-00083",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "DC",
+      "federal_dn_judge_initials_referred": "RCG",
+      "federal_dn_office_code": "7"
     }
   ],
   "email_recipients": [

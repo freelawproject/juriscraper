@@ -7,10 +7,12 @@ History:
 * 2016-06-23: Created by Rebecca Fordon
 * 2022-05-18: Updated by William E. Palin
 """
+
 from datetime import timedelta
 
 from dateutil.utils import today
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -43,7 +45,12 @@ class Site(OralArgumentSiteLinear):
 
     def _process_html(self):
         for row in self.html.xpath('.//table[@id="ctl04_gvArguments"]/tr')[2:]:
-            url = row.xpath(".//a/@data-audio")[0].replace(" ", "%20")
+            url = row.xpath(".//a/@data-audio")
+            if not url:
+                logger.warning("Skipping row with no audio file to download")
+                continue
+
+            url = url[0].replace(" ", "%20")
             date, district, docket, name, *others = row.xpath(".//span/text()")
             if others:
                 docket, name = name, others[0]

@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Wilson v. Filtrex Service Group Inc",
-      "date_filed": "2021-08-09",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-08-09",
@@ -19,7 +19,12 @@
           "short_description": "Joint Status Report per LCvR16-1(b)(1)"
         }
       ],
-      "docket_number": "4:18-cv-00499"
+      "docket_number": "4:18-cv-00499",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "JED",
+      "federal_dn_judge_initials_referred": "CDL",
+      "federal_dn_office_code": "4"
     }
   ],
   "email_recipients": [

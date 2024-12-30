@@ -6,6 +6,7 @@ Reviewer: mlr
 Date created: 1 Sep 2014
 Type: Precedential
 """
+
 import json
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear

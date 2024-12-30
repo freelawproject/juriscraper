@@ -1,0 +1,156 @@
+{
+    "Items": [
+        {
+            "Author": null,
+            "BoardDocketNumber": null,
+            "Caption": "Velasquez, L., Aplt v. Miranda, L. - No. 108 MAP 2023",
+            "CourtDocketNumber": null,
+            "CourtType": 3,
+            "DispositionDate": "2024-08-29T00:00:00",
+            "Keywords": null,
+            "UserIdentifier": "M.D. Prothonotary",
+            "UploadDate": "0001-01-01T00:00:00",
+            "PostedToday": true,
+            "Postings": [
+                {
+                    "Id": 89593,
+                    "AuthorId": "Dougherty, Kevin M.",
+                    "OpinionId": 81227,
+                    "FileName": "J-45-2024mo - 106055073279289388.pdf",
+                    "ProcessedDate": "2024-08-29T00:00:00",
+                    "PostingTypeId": "mo",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-29T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 0,
+                        "AuthorName": "Justice Kevin Dougherty",
+                        "AuthorCode": "Dougherty, Kevin M.",
+                        "Selectable": true,
+                        "SortOrder": 1440
+                    },
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "mo",
+                        "PostingTypeId": "Majority Opinion",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
+                },
+                {
+                    "Id": 89594,
+                    "AuthorId": "Wecht, David N.",
+                    "OpinionId": 81227,
+                    "FileName": "J-45-2024cdo - 106055073279289621.pdf",
+                    "ProcessedDate": "2024-08-29T00:00:00",
+                    "PostingTypeId": "cd",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-29T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 0,
+                        "AuthorName": "Justice David Wecht",
+                        "AuthorCode": "Wecht, David N.",
+                        "Selectable": true,
+                        "SortOrder": 1450
+                    },
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "cd",
+                        "PostingTypeId": "Concurring and Dissenting Opinion",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
+                },
+                {
+                    "Id": 89595,
+                    "AuthorId": "Brobson, P. Kevin",
+                    "OpinionId": 81227,
+                    "FileName": "J-45-2024do - 106055073279289763.pdf",
+                    "ProcessedDate": "2024-08-29T00:00:00",
+                    "PostingTypeId": "do",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-29T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": {
+                        "Id": 0,
+                        "AuthorName": "Justice P. Kevin Brobson",
+                        "AuthorCode": "Brobson, P. Kevin",
+                        "Selectable": true,
+                        "SortOrder": 1470
+                    },
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "do",
+                        "PostingTypeId": "Dissenting Opinion",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
+                }
+            ],
+            "CreatedById": null,
+            "DeletedById": null,
+            "UpdatedById": null,
+            "CreatedOn": null,
+            "DeletedOn": null,
+            "UpdatedOn": null,
+            "CreatedBy": null,
+            "DeletedBy": null,
+            "UpdatedBy": null,
+            "Id": 81227
+        },
+        {
+            "Author": null,
+            "BoardDocketNumber": null,
+            "Caption": "Commonwealth v. Becher, C., Pet. - No. 212 WAL 2024",
+            "CourtDocketNumber": null,
+            "CourtType": 3,
+            "DispositionDate": "2024-08-28T00:00:00",
+            "Keywords": null,
+            "UserIdentifier": "W.D. Prothonotary",
+            "UploadDate": "0001-01-01T00:00:00",
+            "PostedToday": false,
+            "Postings": [
+                {
+                    "Id": 89581,
+                    "AuthorId": "Per Curiam",
+                    "OpinionId": 81215,
+                    "FileName": "212WAL2024 - 106052645279039768.pdf",
+                    "ProcessedDate": "2024-08-28T00:00:00",
+                    "PostingTypeId": "sd",
+                    "PublicationTypeId": null,
+                    "RenderedDate": "2024-08-28T00:00:00",
+                    "SortOrder": 0,
+                    "FileVersion": 1,
+                    "Author": null,
+                    "PostType": {
+                        "Id": 0,
+                        "PostingTypeCode": "sd",
+                        "PostingTypeId": "Summary Disposition",
+                        "SortOrder": null
+                    },
+                    "PublicationType": null
+                }
+            ],
+            "CreatedById": null,
+            "DeletedById": null,
+            "UpdatedById": null,
+            "CreatedOn": null,
+            "DeletedOn": null,
+            "UpdatedOn": null,
+            "CreatedBy": null,
+            "DeletedBy": null,
+            "UpdatedBy": null,
+            "Id": 81215
+        }
+    ],
+    "TotalItems": 2,
+    "TotalPages": 1,
+    "PageNumber": 1,
+    "PageSize": 20,
+    "HasPrevious": false,
+    "HasNext": false
+}

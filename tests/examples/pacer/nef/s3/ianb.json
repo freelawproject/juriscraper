@@ -1,0 +1,42 @@
+{
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "ianb",
+  "dockets": [
+    {
+      "case_name": "Mercy Hospital, Iowa City, Iowa",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-02-01",
+          "description": "Motion for Relief from Stay . Fee Amount $199. Filed by Corporation (Attachments: (1) Proposed Order (2) Ex. A - Account Statement (3) Ex. B - Exposure Statement (4) Ex. C - Credit App.(Redacted)) (FirstName LastName)",
+          "document_number": "701",
+          "document_url": "https://ecf.ianb.uscourts.gov/doc1/07404369078?pdf_header=&magic_num=82978176&de_seq_num=2927&caseid=108151",
+          "pacer_case_id": "108151",
+          "pacer_doc_id": "07404369078",
+          "pacer_magic_num": "82978176",
+          "pacer_seq_no": "2927",
+          "short_description": "Motion for Relief From Stay (Fee)"
+        }
+      ],
+      "docket_number": "23-00623",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "example@domain.com",
+        "example@domain.com;example@domain.com",
+        "example@domain.com",
+        "example@domain.com",
+        "example@domain.com"
+      ],
+      "name": ""
+    }
+  ]
+}

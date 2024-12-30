@@ -1,0 +1,112 @@
+Return-Path: <DEBdb_ECF_Reply@deb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id rv8bbs6984ubijncfifmaoi4f6c2na6pdse8vc81
+ for user@recap.email;
+ Tue, 23 Apr 2024 20:51:49 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of deb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=DEBdb_ECF_Reply@deb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of deb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=DEBdb_ECF_Reply@deb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=pass header.from=deb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHNVpFY3hEK253S29lbEhlWjY4VndRUVdRblZFS21QWVl3aTVFYkxzMlFmUGNUNC9WMVFvTU9vcnlrd2ZFWExSQ3J0R3hnZjBjb3hiRFdHL2xoa1lWNDBST01sRTVhSlYrdkc3V1hYTnpiSnBXTU9iVDRWZ2VoUnFvR1JBV3lKL3lQSFlrU1hxNTFiTTEvNU56Zm5JN1hqM05Cb3lzTVBtdmJBTEdiRjlvQTVnb2JYZjQxZDYrZXBTTjFaNVNMUkFuUW1NUTlOVGlGNnJ2ay9laFFYVStqUnJJS0Z6b3U2anBDTHZBSkZJdzIwSms3Q0x2SkdqdkZJaFljamNkRzAwQXJsRk5EVWVUUzhMVzhxYzl3ZS9rTVBHY1FIYTZaUnNjYUtKRElHSytHYmRIL3F1QVBqaFFSYjNWM1EvZkhOeGM9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=oMW9mRChuJUAr3ZqeH4esHNmFMRmY1re9Nczl9mrXix6OKx0aSFN4is9q/EnxSVEAB1AxaP1JEt7ePglyCfuG3qi5QgSxtDigKgWqUit8hgGUu9MsnvvYWO+YzlxxxZLE+7gIIBOcTUJZL9WViaUlwMzMFBUlHX5oWPv8zUPRaQ=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713905511; v=1; bh=2t42oGnyedk34f7Dux9GaXWEeKC4z1dog7QKMeXE+8w=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.33
+Received: from debdb.deb.gtwy.dcn ([156.119.190.33])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 23 Apr 2024 16:51:49 -0400
+Received: from debdb.deb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43NKp2sc108959;
+	Tue, 23 Apr 2024 16:51:05 -0400
+Received: (from ecf_web@localhost)
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43NKoPLl107903;
+	Tue, 23 Apr 2024 16:50:25 -0400
+Date: Tue, 23 Apr 2024 16:50:25 -0400
+X-Authentication-Warning: debdb.deb.gtwy.dcn: ecf_web set sender to DEBdb_ECF_Reply@deb.uscourts.gov using -f
+MIME-Version:1.0
+From:DEBdb_ECF_Reply@deb.uscourts.gov
+To:dummail@deb.uscourts.gov
+Message-Id:<18536834@deb.uscourts.gov>
+Subject:Ch-11 24-10418-CTG JOANN Inc. Declaration
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Delaware</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Rebecca L Lamb entered on 4/23/2024 at 4:50 PM EDT and filed on 4/23/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>JOANN Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.deb.uscourts.gov/cgi-bin/DktRpt.pl?192329>24-10418-CTG</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.deb.uscourts.gov/doc1/042021533455?pdf_header=&magic_num=47456538&de_seq_num=1312&caseid=192329'>297</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+   Declaration <i>of Ordinary Course Professional Dickinson Wright PLLC</i>  (related document(s)[226]) Filed by    JOANN Inc..    (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>N:\Bankruptcy\Joann Fabrics - 103513.1001\To Be Filed\NOT Dickinson Wright OCP Declaration.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=983460418 [Date=4/23/2024] [FileNumber=18536832-0
+<BR><TAB>] [a4bc9c188e60f81dff29720bdb2b184215cca147e1606ea064da8109b0f9188763f
+<BR><TAB>8190b47adca4db486d71cd2b16c655de9f32b96f63e97e1a312814ed6b143]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-10418-CTG Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName  LastName on behalf of Creditor   Broward County</span>
+<br>xx@bb.org,  xx@bb.org
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Bank of America, N.A.</span>
+<br>yy@zz.com,  yy@zz.com
+<BR>
+<BR><span class="personName">FirstName  LastName on behalf of Interested Party   Win Properties, Inc.</span>
+<BR>AA BB & CC LLP
+<BR>1 World Trade Center 
+<BR>170 Greenwich Street
+<BR>New York, NY 60001
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

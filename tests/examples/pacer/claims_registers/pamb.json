@@ -1,0 +1,131 @@
+{
+  "assigned_to_str": "Henry W. Van Eck",
+  "case_name": "Anna M Yocum",
+  "chapter": "13",
+  "claims": [
+    {
+      "amount_claimed": "$22033.37",
+      "claim_number": 1,
+      "creditor_details": "U.S. Department of Housing and Urban Development\n100 Penn Square East, 11th\n                                Floor\nPhiladelphia, PA\n                                19107",
+      "creditor_id": "5556497",
+      "date_modified": null,
+      "date_original_entered": "2023-07-25",
+      "date_original_filed": "2023-07-25",
+      "description": "",
+      "entered_by": "Webclaimusr",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-07-25",
+          "description": "Claim #1 filed by U.S. Department of Housing and Urban\n                                                Development, Amount claimed: $22033.37 (Webclaimusr)",
+          "document_number": 1,
+          "id": "17666724",
+          "pacer_case_id": "277622",
+          "type": "claim"
+        }
+      ],
+      "remarks": "(1-1) Account Number (last 4 digits):7153",
+      "secured_claimed": "$22033.37",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$29466.99",
+      "claim_number": 2,
+      "creditor_details": "PENN STATE HEALTH - Sorian\nPO BOX 829725\nPHILADELPHIA, PA\n                                19182",
+      "creditor_id": "5564355",
+      "date_modified": null,
+      "date_original_entered": "2023-09-06",
+      "date_original_filed": "2023-09-06",
+      "description": "",
+      "entered_by": "Karen A Davis",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-09-06",
+          "description": "Claim #2 filed by PENN STATE HEALTH - Sorian, Amount\n                                                claimed: $29466.99 (Davis, Karen)",
+          "document_number": 2,
+          "id": "17713577",
+          "pacer_case_id": "277622",
+          "type": "claim"
+        },
+        {
+          "date_filed": "2023-09-06",
+          "description": "Notice to Filing Party (Penn State Health - Sorian):\n                                                Discrepancy between CM/ECF entry and uploaded PDF. Proof of Claim #2 was\n                                                not filed on the Official Form 410. 2 (Davis, Karen)",
+          "document_number": 10,
+          "pacer_case_id": "277622",
+          "pacer_dm_id": "17714063",
+          "pacer_seq_no": "40",
+          "type": "docket_entry"
+        }
+      ],
+      "remarks": "",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$56993.96",
+      "claim_number": 3,
+      "creditor_details": "M&T BANK\nP.O. Box 840\nBuffalo, NY\n                                14240-0840",
+      "creditor_id": "5565920",
+      "date_modified": null,
+      "date_original_entered": "2023-09-12",
+      "date_original_filed": "2023-09-12",
+      "description": "(3-1) Re: 437 Linton Hill Road Duncannon, PA 17020",
+      "entered_by": "Brian Nicholas",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-09-12",
+          "description": "Claim #3 filed by M&T BANK, Amount claimed: $56993.96\n                                                (Nicholas, Brian)",
+          "document_number": 3,
+          "id": "17721747",
+          "pacer_case_id": "277622",
+          "type": "claim"
+        }
+      ],
+      "remarks": "(3-1) Total Debt Amount: $56,993.96",
+      "secured_claimed": "$56993.96",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$4916.83",
+      "claim_number": 4,
+      "creditor_details": "Portfolio Recovery Associates, LLC\nPOB 12914\nNorfolk VA\n                                23541",
+      "creditor_id": "5569939",
+      "date_modified": null,
+      "date_original_entered": "2023-10-02",
+      "date_original_filed": "2023-10-02",
+      "description": "",
+      "entered_by": "Ebony Russell",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-10-02",
+          "description": "Claim #4 filed by Portfolio Recovery Associates, LLC,\n                                                Amount claimed: $4916.83 (Russell, Ebony)",
+          "document_number": 4,
+          "id": "17747622",
+          "pacer_case_id": "277622",
+          "type": "claim"
+        }
+      ],
+      "remarks": "",
+      "status": ""
+    }
+  ],
+  "court_id": "pamb",
+  "date_filed": "2023-07-24",
+  "date_last_to_file_claims": "2023-10-02",
+  "date_last_to_file_govt": "2024-01-20",
+  "docket_number": "1:23-bk-01674",
+  "federal_defendant_number": null,
+  "federal_dn_case_type": "bk",
+  "federal_dn_judge_initials_assigned": "HWV",
+  "federal_dn_judge_initials_referred": null,
+  "federal_dn_office_code": "1",
+  "office": "Harrisburg",
+  "total_number_of_claims": "4",
+  "trustee_str": "Jack N Zaharopoulos"
+}

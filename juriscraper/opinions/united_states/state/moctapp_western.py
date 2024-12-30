@@ -5,8 +5,5 @@ class Site(mo.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url_slug = "Western"
+        self.court = "Western"
         self.url = self.build_url()
-
-    def _get_divisions(self):
-        return ["Western Dist."] * len(self.cases)

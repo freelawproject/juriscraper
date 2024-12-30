@@ -1,0 +1,114 @@
+Return-Path: <DEBdb_ECF_Reply@deb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 9ifv6rb3p2dhtn5oclbtfsummpbu8pq08ip227o1
+ for user@recap.email;
+ Tue, 23 Apr 2024 21:45:49 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of deb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=DEBdb_ECF_Reply@deb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of deb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=DEBdb_ECF_Reply@deb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=pass header.from=deb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGeFNWdWxycGppb2JkTmw5Zmpsa0xtUDNZalpoSTFNWHZXWFhvREU0MTJTZ1VaOXp1OVIvOWkzcU5KZkJzWC9QSHVrbzYxZ2tRSHJTMzNUUllQd1ZHWW5idGRNMnhRQXhWbHFmQWx2TlVjeWRpYzd0ZytiWkI1c0dHKzlkOWlpWXpSRXJ6bXk5RnpQM2s5QWlmSCt2elVHUmJUMzNZdStyK2JrSnp4QVpIUHNmL0tUNG1LU3FxNGhoTXI4TEpFMDVyaGg1QlQ4WHNuZndPekF3U0VDSnp6aUtjenZkZk9ldmlWUVFxSFhDRTQ2djNETW5DTWpXOUovcCszTXc4RjJib1RiWkJLUzUvSzlWN3ZqZ2NaNmRudXJ2YmlRZGNQVjFTZVY2QnU5cDdOZjNoYzBLOHRqdXg3dktnMERXOThnYjQ9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=fr+iwDe/s12sS2qubWxo7LBY57GoZej3lRMJEzb1GS7dqxZgcuOBw9B4vzasxC5pQuhZ/2S9y7pwKrKNSDQUQh9vq4Ey4E2RPwUFq72F9vLD9F6fMgVVdaSBTFn6/vaa4J6Wijd0WGDu4cq3XodgUqb/nU0rLgY0Suy6VcRXztQ=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713908750; v=1; bh=bdnPdkBHkGTrcEeLKzBHorW0n7g+YnQLApFYRKwGUfM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.33
+Received: from debdb.deb.gtwy.dcn ([156.119.190.33])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 23 Apr 2024 17:45:49 -0400
+Received: from debdb.deb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43NLj2lx113046;
+	Tue, 23 Apr 2024 17:45:05 -0400
+Received: (from ecf_web@localhost)
+	by debdb.deb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43NLiLVD111354;
+	Tue, 23 Apr 2024 17:44:21 -0400
+Date: Tue, 23 Apr 2024 17:44:21 -0400
+X-Authentication-Warning: debdb.deb.gtwy.dcn: ecf_web set sender to DEBdb_ECF_Reply@deb.uscourts.gov using -f
+MIME-Version:1.0
+From:DEBdb_ECF_Reply@deb.uscourts.gov
+To:dummail@deb.uscourts.gov
+Message-Id:<18536996@deb.uscourts.gov>
+Subject:Ch-7 23-10253-KBO Akorn Holding Comp Order
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Delaware</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Mml entered on 4/23/2024 at 5:44 PM EDT and filed on 4/23/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Akorn Holding Company LLC</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.deb.uscourts.gov/cgi-bin/DktRpt.pl?189188>23-10253-KBO</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.deb.uscourts.gov/doc1/042021533640?pdf_header=&magic_num=39159314&de_seq_num=2728&caseid=189188'>795</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Order Approving Confidentiality and Non-Disclosure Agreement Between Chapter 7 Trustee and Thea Pharma Inc. (related document(s)[794]) Order   Signed on 4/23/2024.  (Attachments: # (1) Exhibit 1) (Mml)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Akorn_-_Order_to_Upload.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=983460418 [Date=4/23/2024] [FileNumber=18536994-0
+<BR><TAB>] [41bdc1718287547878a190d76ffbeb97e17665bca02f30a185e8f45bf5f282e1504
+<BR><TAB>0b457e214c9c672d0849064b8e5192865096f9b6443b4dfdd588954ecbee3]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit 1
+<BR><STRONG>Original filename:</STRONG>Akorn_-_Order_to_Upload_ex_1.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=983460418 [Date=4/23/2024] [FileNumber=18536994-1
+<BR><TAB>] [975a753649dd4fbf7b341f9aab4a98e214adf409c1cd7800022bdbec6c912ccaec7
+<BR><TAB>e420b6f8b002f939e1f5f1baaca091c7378949ce4322da889e22a90945876]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-10253-KBO Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FistName LastName on behalf of Creditor Stira Pharmaceuticals, LLC</span>
+<br>xx@gg.com
+<BR>
+<BR>
+<BR><span class="personName">FistName LastName on behalf of Interested Party   AmerisourceBergen Drug Corporation</span>
+<br>yy@gg.com,  zz@gg.com
+<BR>
+<BR><span class="personName">FistName LastName on behalf of Creditor Weldon  Chin</span>
+<br>cc@dd.com
+<BR>
+<BR><span class="personName">FistName LastName on behalf of Creditor   HYG Financial Service, Inc.</span>
+<br>aa@bb.com
+<BR>
+<

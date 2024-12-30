@@ -23,6 +23,7 @@ class Site(OpinionSiteLinear):
         self.base = "https://128archive.com"
         self.url = self.make_url()
         self.court_id = self.__module__
+        self.expected_content_types = ["text"]
 
     def make_url(self) -> str:
         """Build the urls to query

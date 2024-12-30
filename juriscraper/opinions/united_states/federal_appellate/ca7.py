@@ -21,6 +21,12 @@ class Site(OpinionSiteLinear):
             parts = item["summary"].split()
             docket = parts[parts.index("case#") + 1]
             name = item["summary"].split(docket)[1].split("(")[0]
+            author = item["summary"].split("{")[1].split("}")[0]
+            per_curiam = False
+            if "curiam" in author.lower():
+                per_curiam = True
+                author = ""
+
             self.cases.append(
                 {
                     "url": item["link"],
@@ -28,6 +34,8 @@ class Site(OpinionSiteLinear):
                     "date": item["published"],
                     "name": name,
                     "status": "Published",
-                    "author": item["summary"].split("{")[1].split("}")[0],
+                    "judge": author,
+                    "author": author,
+                    "per_curiam": per_curiam,
                 }
             )

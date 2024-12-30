@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Pitts v. Fire Extinguisher Sales & Services of Arkansas LLC",
-      "date_filed": "2021-06-10",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-06-10",
@@ -19,7 +19,12 @@
           "short_description": ""
         }
       ],
-      "docket_number": "4:21-cv-00075"
+      "docket_number": "4:21-cv-00075",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "LPR",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "4"
     }
   ],
   "email_recipients": [

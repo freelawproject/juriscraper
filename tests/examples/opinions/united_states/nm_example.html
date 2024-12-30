@@ -1,471 +1,968 @@
-<!DOCTYPE html>
-<html lang="en"><script type="text/javascript" defer="" async="" src="https://piwik.lexum.com/piwik.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>    Navigation by Date: 2019 - New Mexico Compilation Commission
+    <title>    Advanced Search - NMOneSource.com
 </title>
-    <meta name="robots" content="noindex,nosnippet,noodp,noarchive,noimageindex">
-<link type="text/css" rel="stylesheet" href="/js/thirdparty/chosen/chosen.css">
-<link type="text/css" rel="stylesheet" href="/css/smoothness/jquery-ui-1.10.4.custom.css">
-<link type="text/css" rel="stylesheet" href="/fonts/fontello-decisia/css/fontello.css">
 
-<link type="text/css" rel="stylesheet" href="/css/decisia.css">
-<link type="text/css" rel="stylesheet" href="/css/decisia-inner.css">
-<link type="text/css" rel="stylesheet" href="/css/decisia-print.css" media="print">
+<style type="text/css">
+.decisia-template-page, #decisia-template-footer-menu {
+    width: 1060px;
+}
 
-<link type="text/css" rel="stylesheet" href="/clients/nmos/decisia_colors.css">
+body {
+	font-family: verdana, arial, sans-serif;
+	font-size: 16px;
+}
 
-<noscript>
-    <link type="text/css" rel="stylesheet" href="/css/decisia-inner-noscript.css"/>
-</noscript>
+.decisia-document-info, .decisia-document-warning {
+    font-family: verdana, arial, sans-serif;
+}
 
-<!--[if lte IE 7]>
-<link type="text/css" rel="stylesheet" href="/css/decisia-ie.css" />
-<![endif]-->
-<!--[if IE 8]>
-<link type="text/css" rel="stylesheet" href="/css/decisia-ie8.css" />
-<![endif]-->
-<!--[if gte IE 8]>
-<link type="text/css" rel="stylesheet" href="/css/decisia-ie8up.css" />
-<![endif]-->
+a:link, a:visited, a:link:active, #decisia-main-content #document-content a:link, #decisia-main-content #document-content a:visited, #decisia-main-content #document-content a:link:active {
+    color: #d6213a;
+}
 
+a:link, a:visited, a:link:active, #decisia-main-content .summary-content a:link, #decisia-main-content .summary-content a:visited {
+    text-decoration: none;
+}
 
+a:link:hover, #decisia-main-content .decisia-content a:link:hover {
+    text-decoration: underline;
+}
 
+@supports (mix-blend-mode: screen) {
+    #document-content.pdf-converted .pdf-viewer-page a:link,
+    #document-content.pdf-converted .pdf-viewer-page a:visited,
+    #document-content.pdf-converted .pdf-viewer-page a:link:active {
+        color: inherit;
+        background-color: #d6213a;
+        mix-blend-mode: screen;
+    }
 
-<style type="text/css">.decisia-template-page,#decisia-template-footer-menu{width:1060px}body{font-family:verdana,arial,sans-serif;font-size:16px}a:link,a:visited,a:active,#document-content a:link,#document-content a:visited,#document-content a:active{color:#d6213a}a:link,a:visited,a:active{text-decoration:none}a:hover{text-decoration:underline}#decisia-main-content{min-height:450px}#decisia-footer{top:20px}#decisia-footer .decisia-lexum a{top:-30px}#decisia-template-last-modification-date{margin-top:50px}#decisia-template-banner .decisia-template-page h1{position:absolute;top:0;right:0;color:#707070;font-weight:normal}#decisia-template-banner #nmlogo{position:absolute;top:10px;right:0;color:#707070;font-weight:normal}div.documentcontent p.opintext .selectionSource{text-align:left}div.documentcontent .selectionSource a:link{color:#d6213a;text-decoration:underline;cursor:pointer}div.documentcontent .selectionSource,div.documentcontent .selectionSource a:link{font-family:"Arial","sans-serif";font-size:12pt;line-height:normal}a.paragAnchor{color:#d6213a;text-decoration:underline;cursor:pointer}a.paragAnchor:hover{text-decoration:none}.decisia-content .browse ul.listing a{color:#d6213a;border-color:#d6213a}</style>
+    #document-content.pdf-converted .pdf-viewer-page a:link:hover {
+        color: inherit;
+        background-color: #6f1e2a;
+    }
+}
 
-<style type="text/css" id="lb-html-imports-styles">
-@import "https://my.nmonesource.com/plugin/css/lb-content-script-nmcc.css?v=2.0.16";
-@import "https://my.nmonesource.com/plugin/css/lb-status-dropdown_nmcc.css?v=2.0.16";</style><script id="lb-js-polyfills" src="https://my.nmonesource.com/plugin/js/common/custom-polyfills.js"></script></head>
+#decisia-main-content {
+    min-height: 450px;
+}
+
+#decisia-footer .qweri-lexum a {
+    top: -25px;
+}
+
+#decisia-template-banner .decisia-template-page h1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #707070;
+    font-weight: normal;
+}
+
+#decisia-template-banner #nmlogo {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #707070;
+    font-weight: normal;
+}
+
+div.documentcontent p.opintext .selectionSource {
+    text-align: left;
+}
+
+div.documentcontent .selectionSource a:link {
+    color: #d6213a;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div.documentcontent .selectionSource, div.documentcontent .selectionSource a:link {
+    font-family: "Arial","sans-serif";
+    font-size: 12pt;
+    line-height: normal;
+}
+
+.decisia-content .browse ul.listing a{
+    color:  #d6213a;
+    border-color:  #d6213a;
+}
+
+.decisions.decisia-box:nth-child(5) > h1:first-child:after, 
+.decisia-search-tabs > li.active:nth-child(2):after, 
+.decisia-search-tabs > li:nth-child(2) > a:after {
+  content: " &#174;";
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/* Qweri */
+
+div#content #decisia-login-header a:link,
+div#content #decisia-login-header a:visited,
+div#content #decisia-login-header a:active,
+#documentHeaderDisplay #decisia-document-header a:link,
+#documentHeaderDisplay #decisia-document-header a:visited,
+#documentHeaderDisplay #decisia-document-header a:active {
+    color: #d6213a;
+    text-decoration: none;
+}
+
+#documentHeaderDisplay #decisia-document-header .metadata .documents a {
+    color: #4e4e4e;
+}
+
+#documentHeaderDisplay #decisia-document-header a:hover {
+    text-decoration: underline;
+}
+
+div#content #decisia-login-header a:hover {
+    text-decoration: underline;
+}
+
+.documentHeaderDisplay .metadata table tr:nth-of-type(2) {
+    display: none;
+}
+
+.decisia-qweri-document #decisia-template-banner #nmlogo {
+    top: 0;
+}
+
+.decisia-qweri-document .decisia-template-page,
+.decisia-qweri-document #decisia-template-footer-menu {
+    width: 100%;
+}
+
+.decisia-qweri-document #decisia-main-content,
+html.no-touch #decisia-main-content,
+html.touch #decisia-main-content {
+    min-height: auto;
+}
+
+.decisia-qweri-document #decisia-template-last-modification-date {
+    margin-top: 7px;
+}
+
+.decisia-qweri-document #decisia-footer {
+    top: -30px;
+    min-height: auto;
+}
+
+html.touch #qweri-panel .zoupio-splitter {
+    background-color: #fff;
+}
+
+/* Qweri - Panel */
+
+#document-content #qweri-panel.zoupio-bootstrap .navbar .nav > li > a {
+    color: #777777;
+}
+
+#document-content #qweri-panel.zoupio-bootstrap .navbar .nav > li > a:focus,
+#document-content #qweri-panel.zoupio-bootstrap .navbar .nav > li > a:hover,
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-menu > li > a {
+    color: #333333;
+}
+
+#document-content #qweri-panel.zoupio-bootstrap .navbar .nav > .active > a,
+#document-content #qweri-panel.zoupio-bootstrap .navbar .nav > .active > a:hover,
+#document-content #qweri-panel.zoupio-bootstrap .navbar .nav > .active > a:focus {
+    color: #555555;
+}
+
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-menu > li > a:hover,
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-menu > li > a:focus,
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-submenu:hover > a,
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-submenu:focus > a {
+    color: #ffffff;
+}
+
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-menu > .disabled > a,
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-menu > .disabled > a:hover,
+#document-content #qweri-panel.zoupio-bootstrap .dropdown-menu > .disabled > a:focus {
+    color: #999999;
+}
+
+/* Qweri - Content */
+
+div#content .chunk:not(.pdf-viewer) a:link,
+div#content .chunk:not(.pdf-viewer) a:link:active,
+div#content .chunk:not(.pdf-viewer) a:visited {
+    color: #d6213a;
+    text-decoration: none;
+}
+
+div#content .chunk:not(.pdf-viewer) a:link:hover {
+    text-decoration: underline;
+}
+
+div#content .chunk.pdf-viewer a:link {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1px, #d6213a 1px, #d6213a 2px, rgba(0, 0, 0, 0) 2px);
+}
+
+div#content .chunk.pdf-viewer a:link:hover {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1px, #6f1e2a 1px, #6f1e2a 2px, rgba(0, 0, 0, 0) 2px);
+}
+
+@supports (mix-blend-mode: screen) {
+    div#content .qweri-content:not(.zoupio-highlighted) .chunk.pdf-viewer a:link,
+    div#content .qweri-content:not(.zoupio-highlighted) .chunk.pdf-viewer a:link:hover {
+        background-image: none;
+    }
+
+    .qweri-content:not(.zoupio-highlighted) .pdf-viewer-page a:first-child {
+        background: none #d6213a;
+        mix-blend-mode: screen;
+    }
+
+    .qweri-content:not(.zoupio-highlighted) #chunkDisplay .pdf-viewer-page a:hover {
+        background-color: #6f1e2a;
+    }
+}
+
+div#content p.annotations,
+div#content p.annotations1,
+div#content h6,
+div#content .MsoHeading7,
+div#content .MsoHeading8,
+div#content .MsoHeading9,
+div#content .annotitle,
+div#content .annoarticle,
+div#content .annoformc,
+div#content .annotationsc {
+    background-color: #eeeeee;
+    padding: 5pt;
+    margin: 0;
+}
+
+div#content span.superscript1 {
+    vertical-align: super;
+}
+
+#document-content.pdf-converted {
+    margin: 0;
+    padding: 0;
+}
+#document-content.pdf-converted .documentcontent {
+    width: 1055px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#document-content .documentcontent a:link {
+    text-decoration: none;
+}
+
+#document-content .documentcontent a:link:hover {
+    text-decoration: underline;
+}
+
+/* Qweri - Paragraph Tools */
+
+.qweri-content .paragWrapper {
+    position: relative;
+    padding-right: 1.5em;
+}
+
+#document-content .qweri-content .parag-dropdown-parent {
+    font-weight: normal;
+}
+
+.qweri-content .dropdown-toggle {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.qweri-content .dropdown-toggle:hover {
+    font-size: 24px;
+}
+
+.qweri-content .dropdown .dropdown-toggle .icon-edit {
+    vertical-align: top;
+}
+
+#decisia-main-content #document-content .qweri-content a.dropdown-toggle,
+#decisia-main-content #document-content .qweri-content .dropdown-menu a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+#decisia-main-content #document-content .qweri-content .dropdown-menu a {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 4px 20px;
+}
+
+#decisia-main-content #document-content .qweri-content .dropdown-menu a:hover,
+#decisia-main-content #document-content .qweri-content .dropdown-menu a:focus {
+    color: #ffffff;
+    background-color: #6c757d;
+    background-image: linear-gradient(to bottom, #6c757d, #6c757d);
+    background-repeat: repeat-x;
+}
+
+.qweri-content .dropdown-menu i {
+    margin-right: 0.5em;
+}
+
+.tooltip-wrapper {
+    position: absolute;
+    left: -0.5em;
+    top: 0.5em;
+}
+
+#document-content .qweri-content .parag-dropdown-parent .tooltip.in {
+    opacity: 1;
+}
+
+#document-content .qweri-content .parag-dropdown-parent .tooltip-inner {
+    min-width: 185px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #6c757d;
+}
+
+.decisia-qweri-document #decisia-template-footer-menu {
+    height: 38px;
+}
+
+@media print {
+    .qweri-content .parag-dropdown-parent {
+        display: none;
+    }
+}
+
+</style>
+
+</head>
 
 <body>
     <div id="decisia-breadcrumbs-data" style="display: none">    <span class="decisia-navigation-breadcrumbs">
-            <a class="breadcrumb-link" href="/nmos/en/nav.do">Home</a>
+            <a class="breadcrumb-link" href="https://nmonesource.com/nmos/en/nav.do">Home</a>
             <span class="breadcrumb-separator"><span>&gt;</span></span>
-            <a class="breadcrumb-link decisia-visited-link" href="/nmos/nmsc/en/nav_date.do">Supreme Court of New Mexico</a>
-            <span class="breadcrumb-separator"><span>&gt;</span></span>
-                <span class="last-breadcrumb">Date:&nbsp;2019</span>
+                <span class="last-breadcrumb">Advanced Search</span>
     </span>
 </div>
     <div id="decisia-breadcrumbs-no-home-data" style="display: none">    <span class="decisia-navigation-breadcrumbs">
-            <a class="breadcrumb-link" href="/nmos/en/nav.do">Home</a>
+            <a class="breadcrumb-link" href="https://nmonesource.com/nmos/en/nav.do">Home</a>
             <span class="breadcrumb-separator"><span>&gt;</span></span>
-            <a class="breadcrumb-link decisia-visited-link" href="/nmos/nmsc/en/nav_date.do">Supreme Court of New Mexico</a>
-            <span class="breadcrumb-separator"><span>&gt;</span></span>
-                <span class="last-breadcrumb">Date:&nbsp;2019</span>
+                <span class="last-breadcrumb">Advanced Search</span>
     </span>
 </div>
     <div id="decisia-alternate-urls" style="display: none">
     </div>
-    <div id="decisia-main-content"><div class="decisions decisia-box">
-    <div class="decisia-content">
+    <div id="decisia-main-content"><div class="decisia-content">
 
 
 <div id="decisia-login-header" class="searchLinks">
 
     <div id="decisia-login-menu">
+                <span class="decisia-icon icon-sign-in"></span> <a id="decisia-login-menu-login" class="decisia-login-menu-login" target="_parent" href="https://nmonesource.com/l/l?redirect=%2Fnmos%2Fen%2Fd%2Fs%2Findex.do%3Fcont%3D%26ref%3D%26d1%3D04%2F04%2F2024%26d2%3D04%2F11%2F2024%26col%3D182%26rdnpv%3D%26rdnii%3D%26rdnct%3D%26ca%3D%26p%3D%26or%3Ddate">Login</a>
+            <span class="decisia-icon icon-sign-up"></span> <a id="decisia-login-menu-sign-up" class="decisia-login-menu-sign-up" target="_parent" href="https://nmonesource.com/l/s?redirect=%2Fnmos%2Fen%2Fd%2Fs%2Findex.do%3Fcont%3D%26ref%3D%26d1%3D04%2F04%2F2024%26d2%3D04%2F11%2F2024%26col%3D182%26rdnpv%3D%26rdnii%3D%26rdnct%3D%26ca%3D%26p%3D%26or%3Ddate">Sign up</a>
+    </div>
+    <a target="_parent" href="https://nmonesource.com/nmos/en/q.do" id="decisia-simple-search-help">Help</a>
+</div>
+
+<div class="decisions decisia-box">
+    <h1>
+        <a id="decisia-decisions"></a>
+        Advanced Search
+    </h1>
+
+    <div class="browse">
+        <div class="browse-section">
+
+<ul class="decisia-search-tabs decisia-tabs">
+            <li>
+            <a id="decisia-search-tabs-all-databases" target="_parent" href="https://nmonesource.com/nmos/en/a/s/index.do?cont=&amp;ref=&amp;d1=04%2F04%2F2024&amp;d2=04%2F11%2F2024&amp;ca=&amp;p=&amp;col=182&amp;or=date">All Databases (4)</a>
+        </li>
+
+        <li class="active">New Mexico Appellate Reports (3)</li>
+
+         <li>
+             <a id="decisia-search-tabs-news" target="_parent" href="https://nmonesource.com/nmos/en/n/s/index.do?cont=&amp;ref=&amp;d1=04%2F04%2F2024&amp;d2=04%2F11%2F2024&amp;ca=&amp;p=&amp;col=182&amp;or=date"> New Mexico Laws and Court Rules (1)</a>
+         </li>
+</ul>
+
+            <div class="advanced-search decisia-form">
+                <form target="_parent">
+                        <div class="pull-right">
+                            <label id="decisia-advanced-search-show-fields" for="chkShowAdvanced" aria-label="Show more or less fields" data-toggle="collapse" data-target="#decisia-advanced-search-additional-fields">
+                                Show more fields <span class="decisia-icon icon-chevron-down"></span>
+                            </label>
+                        </div>
+
+                        <input id="chkShowAdvanced" name="chkShowAdvanced" type="checkbox">
+
+                        <div class="clear-right"></div>
+    <div class="decisia-content-row">
+        <div class="label accessibility-only">
+            <label for="decisia-content">Full text search</label>
         </div>
-    <a target="_parent" class="decisia-exit-iframe" href="/nmos/en/q.do" id="decisia-simple-search-help">Help</a>
-<a id="decisia-print-button" href="javascript:void(0)" title="Print the content of this web page">Print</a></div>
+        <div class="input">
+<input id="decisia-content" class="decisia-text" type="text" name="cont" placeholder="Full text search" value="">
+            <div class="decisia-help-tooltip">Syntax: "", OR, AND, EXACT(), /p, /s, /n<div><p class="x_xmsonormal elementToProof" style="margin: 0in;">This search field is punctuation sensitive.</p><p class="x_xmsonormal" style="margin: 0in;">Be aware that docket numbers may contain commas (e.g. No. 27,270).</p></div></div>
+        </div>
+    </div>
+    <div class="decisia-reference-row">
+        <div class="label accessibility-only">
+            <label for="decisia-reference-decisions">Case Name, Official Citation, NM Report Citation, Parallel Citations, Docket Numbers</label>
+        </div>
+        <div class="input">
+<input id="decisia-reference-decisions" class="decisia-text" type="text" name="ref" placeholder="Case Name, Official Citation, NM Report Citation, Parallel Citations, Docket Numbers" value="">
+            <div class="decisia-help-tooltip"><p class="x_xmsonormal elementToProof" style="margin: 0in;">This search field is punctuation sensitive.</p><p class="x_xmsonormal" style="margin: 0in;">Be aware that docket numbers may contain commas (e.g. No. 27,270).</p></div>
+        </div>
+    </div>
+    <div class="decisia-reflexd-noteup-row">
+        <div class="label accessibility-only">
+            <label for="decisia-reflexd-noteup">Noteup: </label>
+        </div>
+        <div class="input">
 
-        <div class="decisions decisia-box">
-            <h1>
-                <a id="decisisa-decisions"></a>
-                    Supreme Court of New Mexico
-            </h1>
 
-<div class="search">
-    <form target="" method="get" action="/nmos/en/d/s/index.do">
-        <div class="simpleSearchContainer">
-            <div class="simpleSearchInput">
-                <label for="decisia-simple-search-input-decisions" class="decisia-accessibility">Search</label>
-                <input id="decisia-simple-search-input-decisions" type="text" name="cont" placeholder="Search" class="ui-autocomplete-input" autocomplete="off">
-            <div class="decisia-help-tooltip" style="">Syntax: "", OR, AND, EXACT(), /p, /s, /n</div>
-            </div>
-            <div class="simpleSearchButton">
-                <input id="decisia-search-iframe-decisions" class="decisia-search-iframe" name="iframe" type="hidden" value="true">
-                <button type="submit">
-                    <span class="icon-search"></span>
-                </button>
+
+
+
+
+    <input id="decisia-reflexd-noteup" type="text" class="decisia-text" placeholder="Noteup:  Official Citation, NM Report Citation, Parallel Citations, Docket Numbers">
+            <div class="decisia-help-tooltip"><p class="x_xmsonormal elementToProof" style="margin: 0in;">This search field is punctuation sensitive.</p><p class="x_xmsonormal" style="margin: 0in;">Be aware that docket numbers may contain commas (e.g. No. 27,270).</p></div>
+
+    <input id="decisia-reflexd-noteup-previous-value" type="hidden" name="rdnpv" value="">
+
+    <input id="decisia-reflexd-noteup-item-id" type="hidden" name="rdnii">
+
+    <input id="decisia-reflexd-noteup-citation-type" type="hidden" name="rdnct">
+        </div>
+    </div>
+
+    <div class="decisia-date-from-row">
+        <div class="label accessibility-only">
+            <label for="decisia-date-from">Date between</label>
+        </div>
+        <div class="input">
+
+
+<div class="date-range-inputs">
+    <input id="decisia-date-from" class="date" type="text" name="d1" placeholder="Date (YYYY or MM/DD/YYYY)" value="04/04/2024" maxlength="10">
+    <label for="decisia-date-to" class="accessibility-only" style="display:none">and (YYYY or MM/DD/YYYY)</label>
+    <input id="decisia-date-to" class="date" type="text" name="d2" placeholder="and (YYYY or MM/DD/YYYY)" value="04/11/2024" maxlength="10">
+    
+            <div class="decisia-help-tooltip">(YYYY or MM/DD/YYYY)</div>
+</div>        </div>
+    </div>
+    <div class="advanced-field decisia-counsel-row">
+        <div class="label accessibility-only">
+            <label for="decisia-counsel">Counsel</label>
+        </div>
+        <div class="input">
+<input id="decisia-counsel" class="decisia-text" type="text" name="ca" placeholder="Counsel" value="">
+        </div>
+    </div>
+    <div class="advanced-field decisia-parties-row">
+        <div class="label accessibility-only">
+            <label for="decisia-parties">Parties</label>
+        </div>
+        <div class="input">
+<input id="decisia-parties" class="decisia-text" type="text" name="p" placeholder="Parties" value="">
+        </div>
+    </div>
+    <div class="advanced-field decisia-adjudicator-row">
+        <div class="label accessibility-only select">
+            <label for="decisia-adjudicator">Decision-maker(s)</label>
+        </div>
+        <div class="input">
+    <select id="decisia-adjudicator" name="j" data-placeholder="Decision-maker(s)" class="toBeChosen" multiple>
+        <option value="A. B. MCMILLAN">A. B. MCMILLAN</option>
+        <option value="A. JOSEPH ALARID">A. JOSEPH ALARID</option>
+        <option value="A. W. MARSHALL">A. W. MARSHALL</option>
+        <option value="ABIGAIL P. ARAGÓN">ABIGAIL P. ARAGÓN</option>
+        <option value="ALBERT A. FREEMAN">ALBERT A. FREEMAN</option>
+        <option value="ALBERT B. FALL">ALBERT B. FALL</option>
+        <option value="ALBERT R. KOOL">ALBERT R. KOOL</option>
+        <option value="ALFORD W. COOLEY">ALFORD W. COOLEY</option>
+        <option value="ALVIN F. JONES">ALVIN F. JONES</option>
+        <option value="AMANDA SANCHEZ VILLALOBOS">AMANDA SANCHEZ VILLALOBOS</option>
+        <option value="AMBER CHAVEZ BAKER">AMBER CHAVEZ BAKER</option>
+        <option value="ANDREW H. HUDSPETH">ANDREW H. HUDSPETH</option>
+        <option value="ANGIE K. SCHNEIDER">ANGIE K. SCHNEIDER</option>
+        <option value="AUGUSTUS T. SEYMOUR">AUGUSTUS T. SEYMOUR</option>
+        <option value="B. C. HERNANDEZ">B. C. HERNANDEZ</option>
+        <option value="B. J. WATERS">B. J. WATERS</option>
+        <option value="BACA">BACA</option>
+        <option value="BARBARA J. VIGIL">BARBARA J. VIGIL</option>
+        <option value="BENJAMIN ANTHONY CHAVEZ">BENJAMIN ANTHONY CHAVEZ</option>
+        <option value="BENJAMIN S. BAKER">BENJAMIN S. BAKER</option>
+        <option value="BENNY E. FLORES">BENNY E. FLORES</option>
+        <option value="BRETT R. LOVELESS">BRETT R. LOVELESS</option>
+        <option value="BRIANA H. ZAMORA">BRIANA H. ZAMORA</option>
+        <option value="BRUCE D. BLACK">BRUCE D. BLACK</option>
+        <option value="BRUCE E. KAUFMAN">BRUCE E. KAUFMAN</option>
+        <option value="BRYAN BIEDSCHEID">BRYAN BIEDSCHEID</option>
+        <option value="BRYAN G. JOHNSON">BRYAN G. JOHNSON</option>
+        <option value="BRYAN P. BIEDSCHEID">BRYAN P. BIEDSCHEID</option>
+        <option value="C. A. HATCH">C. A. HATCH</option>
+        <option value="C. C. MCCULLOH">C. C. MCCULLOH</option>
+        <option value="C. FINCHER NEAL">C. FINCHER NEAL</option>
+        <option value="C. R. MCINTOSH">C. R. MCINTOSH</option>
+        <option value="C. ROY ANDERSON">C. ROY ANDERSON</option>
+        <option value="C. SHANNON BACON">C. SHANNON BACON</option>
+        <option value="CAMILLE MARTINEZ-OLGUIN">CAMILLE MARTINEZ-OLGUIN</option>
+        <option value="CARL J. BUTKUS">CARL J. BUTKUS</option>
+        <option value="CASWELL S. NEAL">CASWELL S. NEAL</option>
+        <option value="CELIA FOY CASTILLO">CELIA FOY CASTILLO</option>
+        <option value="CHARLES A. LELAND">CHARLES A. LELAND</option>
+        <option value="CHARLES C. CURRIER">CHARLES C. CURRIER</option>
+        <option value="CHARLES H. FOWLER">CHARLES H. FOWLER</option>
+        <option value="CHARLES R. BRICE">CHARLES R. BRICE</option>
+        <option value="CHARLES W. DANIELS">CHARLES W. DANIELS</option>
+        <option value="CINDY LEOS">CINDY LEOS</option>
+        <option value="CLARENCE J. BOTTS">CLARENCE J. BOTTS</option>
+        <option value="CLARENCE J. ROBERTS">CLARENCE J. ROBERTS</option>
+        <option value="CLAY CAMPBELL">CLAY CAMPBELL</option>
+        <option value="COLIN NEBLETT">COLIN NEBLETT</option>
+        <option value="CONRAD F. PEREA">CONRAD F. PEREA</option>
+        <option value="CURTIS R. GURLEY">CURTIS R. GURLEY</option>
+        <option value="CYNTHIA A. FRY">CYNTHIA A. FRY</option>
+        <option value="D. A. MACPHERSON">D. A. MACPHERSON</option>
+        <option value="DAN A. MCKINNON, III">DAN A. MCKINNON, III</option>
+        <option value="DAN SOSA, JR">DAN SOSA, JR</option>
+        <option value="DANIEL A. BRYANT">DANIEL A. BRYANT</option>
+        <option value="DANIEL A. SISK">DANIEL A. SISK</option>
+        <option value="DANIEL E. RAMCZYK">DANIEL E. RAMCZYK</option>
+        <option value="DANIEL J. GALLEGOS">DANIEL J. GALLEGOS</option>
+        <option value="DANIEL K. SADLER">DANIEL K. SADLER</option>
+        <option value="DAVID CHAVEZ, JR">DAVID CHAVEZ, JR</option>
+        <option value="DAVID J. LEAHY">DAVID J. LEAHY</option>
+        <option value="DAVID K. THOMSON">DAVID K. THOMSON</option>
+        <option value="DAVID S. BONEM">DAVID S. BONEM</option>
+        <option value="DAVID W. CARMODY">DAVID W. CARMODY</option>
+        <option value="DEE C. BLYTHE">DEE C. BLYTHE</option>
+        <option value="DIANE DAL SANTO">DIANE DAL SANTO</option>
+        <option value="DONNA J. MOWRER">DONNA J. MOWRER</option>
+        <option value="DONNAN STEPHENSON">DONNAN STEPHENSON</option>
+        <option value="DREW D. TATUM">DREW D. TATUM</option>
+        <option value="DUSTIN K. HUNTER">DUSTIN K. HUNTER</option>
+        <option value="E. T. HENSLEY, JR.">E. T. HENSLEY, JR.</option>
+        <option value="EDMUND H. KASE, III">EDMUND H. KASE, III</option>
+        <option value="EDWARD A. MANN">EDWARD A. MANN</option>
+        <option value="EDWARD E. TRIVIZ">EDWARD E. TRIVIZ</option>
+        <option value="EDWARD L. CHÁVEZ">EDWARD L. CHÁVEZ</option>
+        <option value="EDWARD L. MEDLER">EDWARD L. MEDLER</option>
+        <option value="EDWARD P. SEEDS">EDWARD P. SEEDS</option>
+        <option value="EDWARD R. WRIGHT">EDWARD R. WRIGHT</option>
+        <option value="EDWIN L. FELTER">EDWIN L. FELTER</option>
+        <option value="EDWIN L. SWOPE">EDWIN L. SWOPE</option>
+        <option value="EDWIN MECHEM">EDWIN MECHEM</option>
+        <option value="ELISHA V. LONG">ELISHA V. LONG</option>
+        <option value="EMIL J. KEIHNE">EMIL J. KEIHNE</option>
+        <option value="EMIL J. KIEHNE">EMIL J. KIEHNE</option>
+        <option value="EMILIO J. CHAVEZ">EMILIO J. CHAVEZ</option>
+        <option value="ERIN B. O'CONNELL">ERIN B. O'CONNELL</option>
+        <option value="ERIN B. O’CONNELL">ERIN B. O’CONNELL</option>
+        <option value="EUGENE D. LUJAN">EUGENE D. LUJAN</option>
+        <option value="EUGENIO S. MATHIS">EUGENIO S. MATHIS</option>
+        <option value="F. W. PARKER">F. W. PARKER</option>
+        <option value="FLETCHER CATRON">FLETCHER CATRON</option>
+        <option value="FORREST SANDERS">FORREST SANDERS</option>
+        <option value="FRANCIS J. MATHEW">FRANCIS J. MATHEW</option>
+        <option value="FRANK B. ZINN">FRANK B. ZINN</option>
+        <option value="FRANK H. ALLEN, JR">FRANK H. ALLEN, JR</option>
+        <option value="FRANK H. ALLEN, JR.">FRANK H. ALLEN, JR.</option>
+        <option value="FRANK W. PARKER">FRANK W. PARKER</option>
+        <option value="FRED J. FEDERICI">FRED J. FEDERICI</option>
+        <option value="FRED T. HENSLEY">FRED T. HENSLEY</option>
+        <option value="FREDDIE JOSEPH ROMERO">FREDDIE JOSEPH ROMERO</option>
+        <option value="GARNETT R. BURKS">GARNETT R. BURKS</option>
+        <option value="GARY L. CLINGMAN">GARY L. CLINGMAN</option>
+        <option value="GENE E. FRANCHINI">GENE E. FRANCHINI</option>
+        <option value="GEORGE H. PEREZ">GEORGE H. PEREZ</option>
+        <option value="GEORGE L. REESE, JR">GEORGE L. REESE, JR</option>
+        <option value="GEORGE L. ZIMMERMAN">GEORGE L. ZIMMERMAN</option>
+        <option value="GEORGE P. EICHWALD">GEORGE P. EICHWALD</option>
+        <option value="GEORGE T. HARRIS">GEORGE T. HARRIS</option>
+        <option value="GEORGE W. HAY">GEORGE W. HAY</option>
+        <option value="GERALD D. FOWLIE">GERALD D. FOWLIE</option>
+        <option value="GERALD E. BACA">GERALD E. BACA</option>
+        <option value="GERALD R. COLE">GERALD R. COLE</option>
+        <option value="GERARD W. THOMSON">GERARD W. THOMSON</option>
+        <option value="GIDEON D. BANTZ">GIDEON D. BANTZ</option>
+        <option value="H. A. KIKER">H. A. KIKER</option>
+        <option value="H. VERN PAYNE">H. VERN PAYNE</option>
+        <option value="HARL D. BYRD">HARL D. BYRD</option>
+        <option value="HARRIS L. HARTZ">HARRIS L. HARTZ</option>
+        <option value="HARRY E. STOWERS, JR">HARRY E. STOWERS, JR</option>
+        <option value="HARRY P. OWEN">HARRY P. OWEN</option>
+        <option value="HARVEY FRUMAN">HARVEY FRUMAN</option>
+        <option value="HENRY G. COORS">HENRY G. COORS</option>
+        <option value="HENRY M. BOHNHOFF">HENRY M. BOHNHOFF</option>
+        <option value="HERBERT F. RAYNOLDS">HERBERT F. RAYNOLDS</option>
+        <option value="HORACE MOWER">HORACE MOWER</option>
+        <option value="HOWARD L. BICKLEY">HOWARD L. BICKLEY</option>
+        <option value="HUGH W. DANGLER">HUGH W. DANGLER</option>
+        <option value="HUMPHREY B. HAMILTON">HUMPHREY B. HAMILTON</option>
+        <option value="IRA A. ABBOTT">IRA A. ABBOTT</option>
+        <option value="IRA ROBINSON">IRA ROBINSON</option>
+        <option value="IRWIN S. MOISE">IRWIN S. MOISE</option>
+        <option value="J. MILES HANISEE">J. MILES HANISEE</option>
+        <option value="J. MILL PARKER">J. MILL PARKER</option>
+        <option value="J. NORMAN HODGES">J. NORMAN HODGES</option>
+        <option value="J. V. GALLEGOS">J. V. GALLEGOS</option>
+        <option value="JACQUELINE R. MEDINA">JACQUELINE R. MEDINA</option>
+        <option value="JAMES A. HALL">JAMES A. HALL</option>
+        <option value="JAMES A. MALONEY">JAMES A. MALONEY</option>
+        <option value="JAMES A. SCARBOROUGH">JAMES A. SCARBOROUGH</option>
+        <option value="JAMES B. MCGHEE">JAMES B. MCGHEE</option>
+        <option value="JAMES C. COMPTON">JAMES C. COMPTON</option>
+        <option value="JAMES E. SCARBOROUGH">JAMES E. SCARBOROUGH</option>
+        <option value="JAMES J. DAVENPORT">JAMES J. DAVENPORT</option>
+        <option value="JAMES J. WECHSLER">JAMES J. WECHSLER</option>
+        <option value="JAMES L. BROWN">JAMES L. BROWN</option>
+        <option value="JAMES LAWRENCE SANCHEZ">JAMES LAWRENCE SANCHEZ</option>
+        <option value="JAMES M. HUDSON">JAMES M. HUDSON</option>
+        <option value="JAMES M. SCARBOROUGH">JAMES M. SCARBOROUGH</option>
+        <option value="JAMES O'BRIEN">JAMES O'BRIEN</option>
+        <option value="JAMES T. MARTIN">JAMES T. MARTIN</option>
+        <option value="JAMES W. MUSGROVE">JAMES W. MUSGROVE</option>
+        <option value="JANE B. YOHALEM">JANE B. YOHALEM</option>
+        <option value="JANE C. LEVY">JANE C. LEVY</option>
+        <option value="JANE SHULER GRAY">JANE SHULER GRAY</option>
+        <option value="JAROD K. HOFACKET">JAROD K. HOFACKET</option>
+        <option value="JENNIFER DELANEY">JENNIFER DELANEY</option>
+        <option value="JENNIFER E. DELANEY">JENNIFER E. DELANEY</option>
+        <option value="JENNIFER L. ATTREP">JENNIFER L. ATTREP</option>
+        <option value="JERRY H. RITTER">JERRY H. RITTER</option>
+        <option value="JOAB HOUGHTON">JOAB HOUGHTON</option>
+        <option value="JOE ANGEL">JOE ANGEL</option>
+        <option value="JOE H. GALVAN">JOE H. GALVAN</option>
+        <option value="JOE L. MARTINEZ">JOE L. MARTINEZ</option>
+        <option value="JOE W. WOOD">JOE W. WOOD</option>
+        <option value="JOHN B. MCMANUS, JR">JOHN B. MCMANUS, JR</option>
+        <option value="JOHN B. MCMANUS, JR.">JOHN B. MCMANUS, JR.</option>
+        <option value="JOHN C. WATSON">JOHN C. WATSON</option>
+        <option value="JOHN E. BROWN">JOHN E. BROWN</option>
+        <option value="JOHN F. SIMMS">JOHN F. SIMMS</option>
+        <option value="JOHN J. ROMERO JR">JOHN J. ROMERO JR</option>
+        <option value="JOHN P. SLOUGH">JOHN P. SLOUGH</option>
+        <option value="JOHN R. BRAND">JOHN R. BRAND</option>
+        <option value="JOHN R. MCFIE">JOHN R. MCFIE</option>
+        <option value="JOHN S. WATTS">JOHN S. WATTS</option>
+        <option value="JOHN T. WATSON">JOHN T. WATSON</option>
+        <option value="JOHN W. POPE">JOHN W. POPE</option>
+        <option value="JONATHAN B. SUTIN">JONATHAN B. SUTIN</option>
+        <option value="JONATHAN W. CRUMPACKER">JONATHAN W. CRUMPACKER</option>
+        <option value="JOSEPH BELL">JOSEPH BELL</option>
+        <option value="JOSEPH E. CALDWELL">JOSEPH E. CALDWELL</option>
+        <option value="JOSEPH F. BACA">JOSEPH F. BACA</option>
+        <option value="JOSEPH G. PALEN">JOSEPH G. PALEN</option>
+        <option value="JOSEPH L. DAILEY">JOSEPH L. DAILEY</option>
+        <option value="JOSEPH P. KNAPP">JOSEPH P. KNAPP</option>
+        <option value="JOSEPH P. WALSH">JOSEPH P. WALSH</option>
+        <option value="JOSHUA ALLISON">JOSHUA ALLISON</option>
+        <option value="JUDITH K. NAKAMURA">JUDITH K. NAKAMURA</option>
+        <option value="JULIE J. VARGAS">JULIE J. VARGAS</option>
+        <option value="KAREN L. PARSONS">KAREN L. PARSONS</option>
+        <option value="KAREN L. TOWNSEND">KAREN L. TOWNSEND</option>
+        <option value="KATHERINE A. WRAY">KATHERINE A. WRAY</option>
+        <option value="KENNETH B. WILSON">KENNETH B. WILSON</option>
+        <option value="KIRBY BENEDICT">KIRBY BENEDICT</option>
+        <option value="KRISTINA BOGARDUS">KRISTINA BOGARDUS</option>
+        <option value="L. BRADFORD PRINCE">L. BRADFORD PRINCE</option>
+        <option value="LAFEL E. OMAN">LAFEL E. OMAN</option>
+        <option value="LEILA ANDREWS">LEILA ANDREWS</option>
+        <option value="LEON KARELITZ">LEON KARELITZ</option>
+        <option value="LESLIE C. SMITH">LESLIE C. SMITH</option>
+        <option value="LEWIS R. SUTIN">LEWIS R. SUTIN</option>
+        <option value="LINDA M. VANZI">LINDA M. VANZI</option>
+        <option value="LISA CHAVEZ ORTEGA">LISA CHAVEZ ORTEGA</option>
+        <option value="LIVINGSTON N. TAYLOR">LIVINGSTON N. TAYLOR</option>
+        <option value="LORENZO F. GARCIA">LORENZO F. GARCIA</option>
+        <option value="LOUIS E. DEPAULI">LOUIS E. DEPAULI</option>
+        <option value="LOUIS P. MCDONALD">LOUIS P. MCDONALD</option>
+        <option value="LUIS E. ARMIJO">LUIS E. ARMIJO</option>
+        <option value="LYNN PICKARD">LYNN PICKARD</option>
+        <option value="M. A. OTERO, JR">M. A. OTERO, JR</option>
+        <option value="M. CHRISTINA ARMIJO">M. CHRISTINA ARMIJO</option>
+        <option value="M. E. HICKEY">M. E. HICKEY</option>
+        <option value="M. E. NOBLE">M. E. NOBLE</option>
+        <option value="M. MONICA ZAMORA">M. MONICA ZAMORA</option>
+        <option value="MACK EASLEY">MACK EASLEY</option>
+        <option value="MARK EASLEY">MARK EASLEY</option>
+        <option value="MARTIN A. THREET">MARTIN A. THREET</option>
+        <option value="MARY C. WALTERS">MARY C. WALTERS</option>
+        <option value="MARY L. MARLOWE SOMMER">MARY L. MARLOWE SOMMER</option>
+        <option value="MAURICE SANCHEZ">MAURICE SANCHEZ</option>
+        <option value="MEGAN P. DUFFY">MEGAN P. DUFFY</option>
+        <option value="MELISSA A. KENNELLY">MELISSA A. KENNELLY</option>
+        <option value="MERRITT C. MECHEM">MERRITT C. MECHEM</option>
+        <option value="MICHAEL D. BUSTAMANTE">MICHAEL D. BUSTAMANTE</option>
+        <option value="MICHAEL E. VIGIL">MICHAEL E. VIGIL</option>
+        <option value="MICHAEL FRANCKE">MICHAEL FRANCKE</option>
+        <option value="N. RANDOLPH REESE">N. RANDOLPH REESE</option>
+        <option value="NAN G. NASH">NAN G. NASH</option>
+        <option value="NANCY J. FRANCHINI">NANCY J. FRANCHINI</option>
+        <option value="NAPOLEON B. LAUGHLIN">NAPOLEON B. LAUGHLIN</option>
+        <option value="NEEDHAM C. COLLIER">NEEDHAM C. COLLIER</option>
+        <option value="NEIL CANDELARIA">NEIL CANDELARIA</option>
+        <option value="NUMA C. FRENGER">NUMA C. FRENGER</option>
+        <option value="PAMELA B. MINZNER">PAMELA B. MINZNER</option>
+        <option value="PATRICIO M. SERNA">PATRICIO M. SERNA</option>
+        <option value="PAUL F. LARRAZOLO">PAUL F. LARRAZOLO</option>
+        <option value="PAUL J. KENNEDY">PAUL J. KENNEDY</option>
+        <option value="PAUL SNEAD">PAUL SNEAD</option>
+        <option value="PAUL TACKETT">PAUL TACKETT</option>
+        <option value="PERRY E. BROCCHUS">PERRY E. BROCCHUS</option>
+        <option value="PETRA JIMENEZ MAES">PETRA JIMENEZ MAES</option>
+        <option value="PHILIP R. ASHBY">PHILIP R. ASHBY</option>
+        <option value="PHILLIP D. BAIAMONTE">PHILLIP D. BAIAMONTE</option>
+        <option value="R. F. DEACON ARLEDGE">R. F. DEACON ARLEDGE</option>
+        <option value="R. R. RYAN">R. R. RYAN</option>
+        <option value="RAMON LOPEZ">RAMON LOPEZ</option>
+        <option value="RAY C. COWAN">RAY C. COWAN</option>
+        <option value="RAYMOND Z. ORTIZ">RAYMOND Z. ORTIZ</option>
+        <option value="REBECCA SITTERLY">REBECCA SITTERLY</option>
+        <option value="REED HOLLOMAN">REED HOLLOMAN</option>
+        <option value="REUBEN A. REEVES">REUBEN A. REEVES</option>
+        <option value="REUBEN E. NIEVES">REUBEN E. NIEVES</option>
+        <option value="RICHARD B. TRAUB">RICHARD B. TRAUB</option>
+        <option value="RICHARD C. BOSSON">RICHARD C. BOSSON</option>
+        <option value="RICHARD D. BOSSON">RICHARD D. BOSSON</option>
+        <option value="RICHARD E. RANSOM">RICHARD E. RANSOM</option>
+        <option value="RICHARD H. HANNA">RICHARD H. HANNA</option>
+        <option value="RICHARD P. BARNES">RICHARD P. BARNES</option>
+        <option value="ROBERT E. FOX">ROBERT E. FOX</option>
+        <option value="ROBERT E. ROBLES">ROBERT E. ROBLES</option>
+        <option value="ROBERT HAYES SCOTT">ROBERT HAYES SCOTT</option>
+        <option value="ROBERT M. DOUGHTY">ROBERT M. DOUGHTY</option>
+        <option value="ROBERT M. DOUGHTY, II">ROBERT M. DOUGHTY, II</option>
+        <option value="ROBERT W. REIDY">ROBERT W. REIDY</option>
+        <option value="RODERICK T. KENNEDY">RODERICK T. KENNEDY</option>
+        <option value="ROY G. HILL">ROY G. HILL</option>
+        <option value="ROZIER E. SANCHEZ">ROZIER E. SANCHEZ</option>
+        <option value="ROZIER L. SANCHEZ">ROZIER L. SANCHEZ</option>
+        <option value="RUDY S. APODACA">RUDY S. APODACA</option>
+        <option value="RUEBEN E. NIEVES">RUEBEN E. NIEVES</option>
+        <option value="SAM G. BRATTON">SAM G. BRATTON</option>
+        <option value="SAMUEL B. AXTELL">SAMUEL B. AXTELL</option>
+        <option value="SAMUEL C. PARKS">SAMUEL C. PARKS</option>
+        <option value="SAMUEL Z. MONTOYA">SAMUEL Z. MONTOYA</option>
+        <option value="SANTIAGO E. CAMPOS">SANTIAGO E. CAMPOS</option>
+        <option value="SARAH C. BACKUS">SARAH C. BACKUS</option>
+        <option value="SARAH M. SINGLETON">SARAH M. SINGLETON</option>
+        <option value="SCARBOROUGH">SCARBOROUGH</option>
+        <option value="SETH D. MONTGOMERY">SETH D. MONTGOMERY</option>
+        <option value="SHAMMARA H. HENDERSON">SHAMMARA H. HENDERSON</option>
+        <option value="STANLEY F. FROST">STANLEY F. FROST</option>
+        <option value="STANLEY WHITAKER">STANLEY WHITAKER</option>
+        <option value="STEPHEN B. DAVIS, JR.">STEPHEN B. DAVIS, JR.</option>
+        <option value="STEPHEN G. FRENCH">STEPHEN G. FRENCH</option>
+        <option value="STEPHEN PFEFFER">STEPHEN PFEFFER</option>
+        <option value="STEVE HERRERA">STEVE HERRERA</option>
+        <option value="STEVEN BLANKINSHIP">STEVEN BLANKINSHIP</option>
+        <option value="SUSAN M. CONWAY">SUSAN M. CONWAY</option>
+        <option value="SYDNEY A. HUBBELL">SYDNEY A. HUBBELL</option>
+        <option value="T. GLENN ELLINGTON">T. GLENN ELLINGTON</option>
+        <option value="TED BACA">TED BACA</option>
+        <option value="THOMAS A. DONNELLY">THOMAS A. DONNELLY</option>
+        <option value="THOMAS A. SANDENAW, JR">THOMAS A. SANDENAW, JR</option>
+        <option value="THOMAS D. LEIB">THOMAS D. LEIB</option>
+        <option value="THOMAS F. MCKENNA">THOMAS F. MCKENNA</option>
+        <option value="THOMAS G. FITCH">THOMAS G. FITCH</option>
+        <option value="THOMAS J. MABRY">THOMAS J. MABRY</option>
+        <option value="TIMOTHY L. GARCIA">TIMOTHY L. GARCIA</option>
+        <option value="TOMLINSON FORT">TOMLINSON FORT</option>
+        <option value="TONY SCARBOROUGH">TONY SCARBOROUGH</option>
+        <option value="W. DANIEL SCHNEIDER">W. DANIEL SCHNEIDER</option>
+        <option value="W. JOHN BENNAN">W. JOHN BENNAN</option>
+        <option value="W. JOHN BRENNAN">W. JOHN BRENNAN</option>
+        <option value="W. MORRIS SHILLINGLAW, JR.">W. MORRIS SHILLINGLAW, JR.</option>
+        <option value="W. T. BOONE">W. T. BOONE</option>
+        <option value="W. T. HENDERSON">W. T. HENDERSON</option>
+        <option value="W. T. SCOGGIN">W. T. SCOGGIN</option>
+        <option value="WALDO H. ROGERS">WALDO H. ROGERS</option>
+        <option value="WALDO SPIESS">WALDO SPIESS</option>
+        <option value="WARREN BRISTOL">WARREN BRISTOL</option>
+        <option value="WENDY YORK">WENDY YORK</option>
+        <option value="WILLIAM D. LEE">WILLIAM D. LEE</option>
+        <option value="WILLIAM F. RIORDAN">WILLIAM F. RIORDAN</option>
+        <option value="WILLIAM H. BRINKER">WILLIAM H. BRINKER</option>
+        <option value="WILLIAM H. POPE">WILLIAM H. POPE</option>
+        <option value="WILLIAM H. WHITEMAN">WILLIAM H. WHITEMAN</option>
+        <option value="WILLIAM J. MILLS">WILLIAM J. MILLS</option>
+        <option value="WILLIAM R. FEDERICI">WILLIAM R. FEDERICI</option>
+        <option value="WILLIAM R. HENDLEY">WILLIAM R. HENDLEY</option>
+        <option value="WILLIAM W. BIVINS">WILLIAM W. BIVINS</option>
+        <option value="WM. G. BLACKWOOD">WM. G. BLACKWOOD</option>
+        <option value="WM. J. BARKER">WM. J. BARKER</option>
+        <option value="WM. M. BRINKER">WM. M. BRINKER</option>
+        <option value="ZACHARY A. IVES">ZACHARY A. IVES</option>
+    </select>
+    <div class="arrow"></div>
+        </div>
+    </div>
+    <div class="advanced-field decisia-decision-type-row">
+        <div class="label accessibility-only select">
+            <label for="decisia-decision-type">Opinion Type</label>
+        </div>
+        <div class="input">
+        <select id="decisia-decision-type" name="typ" data-placeholder="Opinion Type" class="toBeChosen" multiple>
+                <option value="290">Slip Opinions</option>
+                <option value="291">Reported Opinions</option>
+                <option value="292">Unreported Opinions</option>
+        </select>
+        <div class="arrow"></div>
+        </div>
+    </div>
+    <div class="advanced-field decisia-decision-status-row">
+        <div class="label accessibility-only select">
+            <label for="decisia-decision-status">Judicial Reprimands</label>
+        </div>
+        <div class="input">
+        <select id="decisia-decision-status" name="st" data-placeholder="Judicial Reprimands" class="toBeChosen" multiple>
+                <option value="342">Reported Judicial Reprimand</option>
+                <option value="343">Unreported Judicial Reprimand</option>
+        </select>
+        <div class="arrow"></div>
+        </div>
+    </div>
+    <div class="advanced-field decisia-collection-row">
+        <div class="label accessibility-only select">
+            <label for="decisia-collection">Collection</label>
+        </div>
+        <div class="input">
+<select id="decisia-collection" name="col" data-placeholder="Collection" class="toBeChosen" multiple>
+    <option value="182" selected>
+        Supreme Court of New Mexico</option>
+    <option value="183">
+        Court of Appeals of New Mexico</option>
+    <option value="184">
+        Official Citations Tables</option>
+</select>
+<div class="arrow"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+                    <input name="or" type="hidden" value="date">
+
+                    <div class="decisia-submit-line">
+                        <button type="submit" id="decisia-search-submit" class="raised">
+                            Search <span class="icon-search"></span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-
-                    <input id="decisia-collection" name="col" type="hidden" value="182">
-
-    </form>
-    <div class="searchLinks">
-        <a target="_parent" href="/nmos/en/d/s/index.do">Advanced Search</a>
     </div>
 </div>
 
-            <div class="browse">
-                <div class="browse-section">
+    <div id="lexboxHook"></div>
 
-<ul class="decisia-tabs">
-            <li class="active">Date</li>
-
-        <li><a target="_parent" href="/nmos/nmsc/en/nav_alpha.do">Case Name</a></li>
-
-                <li><a target="_parent" href="/nmos/nmsc/en/nav_neu.do">Official Citation</a></li>
-                <li><a target="_parent" href="/nmos/nmsc/en/nav_re.do">NM Report Citation</a></li>
-</ul>
-
-                    <div class="tab-panel browse-content">
-
-    <ul class="listing date">
-                <li class="">&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li class="selected "><span title="2019">2019</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2018/nav_date.do" title="2018" style="outline: currentcolor none medium;">2018</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2017/nav_date.do" title="2017">2017</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2016/nav_date.do" title="2016">2016</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2015/nav_date.do" title="2015">2015</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2014/nav_date.do" title="2014">2014</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2013/nav_date.do" title="2013">2013</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2012/nav_date.do" title="2012">2012</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2011/nav_date.do" title="2011">2011</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2010/nav_date.do" title="2010">2010</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2009/nav_date.do" title="2009">2009</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2008/nav_date.do" title="2008">2008</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2007/nav_date.do" title="2007">2007</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2006/nav_date.do" title="2006">2006</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2005/nav_date.do" title="2005">2005</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2004/nav_date.do" title="2004">2004</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2003/nav_date.do" title="2003">2003</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2002/nav_date.do" title="2002">2002</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2001/nav_date.do" title="2001">2001</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/2000/nav_date.do" title="2000">2000</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1999/nav_date.do" title="1999">1999</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1998/nav_date.do" title="1998">1998</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1997/nav_date.do" title="1997">1997</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1996/nav_date.do" title="1996">1996</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1995/nav_date.do" title="1995">1995</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1994/nav_date.do" title="1994">1994</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1993/nav_date.do" title="1993">1993</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1992/nav_date.do" title="1992">1992</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1991/nav_date.do" title="1991">1991</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1990/nav_date.do" title="1990">1990</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1989/nav_date.do" title="1989">1989</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1988/nav_date.do" title="1988">1988</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1987/nav_date.do" title="1987">1987</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1986/nav_date.do" title="1986">1986</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1985/nav_date.do" title="1985">1985</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1984/nav_date.do" title="1984">1984</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1983/nav_date.do" title="1983">1983</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1982/nav_date.do" title="1982">1982</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1981/nav_date.do" title="1981">1981</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1980/nav_date.do" title="1980">1980</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1979/nav_date.do" title="1979">1979</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1978/nav_date.do" title="1978">1978</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1977/nav_date.do" title="1977">1977</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1976/nav_date.do" title="1976">1976</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1975/nav_date.do" title="1975">1975</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1974/nav_date.do" title="1974">1974</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1973/nav_date.do" title="1973">1973</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1972/nav_date.do" title="1972">1972</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1971/nav_date.do" title="1971">1971</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1970/nav_date.do" title="1970">1970</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1969/nav_date.do" title="1969">1969</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1968/nav_date.do" title="1968">1968</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1967/nav_date.do" title="1967">1967</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1966/nav_date.do" title="1966">1966</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1965/nav_date.do" title="1965">1965</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1964/nav_date.do" title="1964">1964</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1963/nav_date.do" title="1963">1963</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1962/nav_date.do" title="1962">1962</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1961/nav_date.do" title="1961">1961</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1960/nav_date.do" title="1960">1960</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1959/nav_date.do" title="1959">1959</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1958/nav_date.do" title="1958">1958</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1957/nav_date.do" title="1957">1957</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1956/nav_date.do" title="1956">1956</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1955/nav_date.do" title="1955">1955</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1954/nav_date.do" title="1954">1954</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1953/nav_date.do" title="1953">1953</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1952/nav_date.do" title="1952">1952</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1951/nav_date.do" title="1951">1951</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1950/nav_date.do" title="1950">1950</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1949/nav_date.do" title="1949">1949</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1948/nav_date.do" title="1948">1948</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1947/nav_date.do" title="1947">1947</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1946/nav_date.do" title="1946">1946</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1945/nav_date.do" title="1945">1945</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1944/nav_date.do" title="1944">1944</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1943/nav_date.do" title="1943">1943</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1942/nav_date.do" title="1942">1942</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1941/nav_date.do" title="1941">1941</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1940/nav_date.do" title="1940">1940</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1939/nav_date.do" title="1939">1939</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1938/nav_date.do" title="1938">1938</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1937/nav_date.do" title="1937">1937</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1936/nav_date.do" title="1936">1936</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1935/nav_date.do" title="1935">1935</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1934/nav_date.do" title="1934">1934</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1933/nav_date.do" title="1933">1933</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1932/nav_date.do" title="1932">1932</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1931/nav_date.do" title="1931">1931</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1930/nav_date.do" title="1930">1930</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1929/nav_date.do" title="1929">1929</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1928/nav_date.do" title="1928">1928</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1927/nav_date.do" title="1927">1927</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1926/nav_date.do" title="1926">1926</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1925/nav_date.do" title="1925">1925</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1924/nav_date.do" title="1924">1924</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1923/nav_date.do" title="1923">1923</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1922/nav_date.do" title="1922">1922</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1921/nav_date.do" title="1921">1921</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1920/nav_date.do" title="1920">1920</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1919/nav_date.do" title="1919">1919</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1918/nav_date.do" title="1918">1918</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1917/nav_date.do" title="1917">1917</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1916/nav_date.do" title="1916">1916</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1915/nav_date.do" title="1915">1915</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1914/nav_date.do" title="1914">1914</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1913/nav_date.do" title="1913">1913</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1912/nav_date.do" title="1912">1912</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1911/nav_date.do" title="1911">1911</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1910/nav_date.do" title="1910">1910</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1909/nav_date.do" title="1909">1909</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1908/nav_date.do" title="1908">1908</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1907/nav_date.do" title="1907">1907</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1906/nav_date.do" title="1906">1906</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1905/nav_date.do" title="1905">1905</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1904/nav_date.do" title="1904">1904</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1903/nav_date.do" title="1903">1903</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1902/nav_date.do" title="1902">1902</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1901/nav_date.do" title="1901">1901</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1900/nav_date.do" title="1900">1900</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1899/nav_date.do" title="1899">1899</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1898/nav_date.do" title="1898">1898</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1897/nav_date.do" title="1897">1897</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1896/nav_date.do" title="1896">1896</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1895/nav_date.do" title="1895">1895</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1894/nav_date.do" title="1894">1894</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1893/nav_date.do" title="1893">1893</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1892/nav_date.do" title="1892">1892</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1891/nav_date.do" title="1891">1891</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1890/nav_date.do" title="1890">1890</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1889/nav_date.do" title="1889">1889</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1888/nav_date.do" title="1888">1888</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1887/nav_date.do" title="1887">1887</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1886/nav_date.do" title="1886">1886</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1885/nav_date.do" title="1885">1885</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1884/nav_date.do" title="1884">1884</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1883/nav_date.do" title="1883">1883</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1882/nav_date.do" title="1882">1882</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1881/nav_date.do" title="1881">1881</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1880/nav_date.do" title="1880">1880</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1879/nav_date.do" title="1879">1879</a></li>
-                <li class="disabled "><span title="1878">1878</span></li>
-                <li class="disabled "><span title="1877">1877</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1876/nav_date.do" title="1876">1876</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1875/nav_date.do" title="1875">1875</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1874/nav_date.do" title="1874">1874</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1873/nav_date.do" title="1873">1873</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1872/nav_date.do" title="1872">1872</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1871/nav_date.do" title="1871">1871</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1870/nav_date.do" title="1870">1870</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1869/nav_date.do" title="1869">1869</a></li>
-                <li class="disabled "><span title="1868">1868</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1867/nav_date.do" title="1867">1867</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1866/nav_date.do" title="1866">1866</a></li>
-                <li class="disabled "><span title="1865">1865</span></li>
-                <li class="disabled "><span title="1864">1864</span></li>
-                <li class="disabled "><span title="1863">1863</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1862/nav_date.do" title="1862">1862</a></li>
-                <li class="disabled "><span title="1861">1861</span></li>
-                <li class="disabled "><span title="1860">1860</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1859/nav_date.do" title="1859">1859</a></li>
-                <li class="disabled "><span title="1858">1858</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1857/nav_date.do" title="1857">1857</a></li>
-                <li class="disabled "><span title="1856">1856</span></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1855/nav_date.do" title="1855">1855</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1854/nav_date.do" title="1854">1854</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1853/nav_date.do" title="1853">1853</a></li>
-                <li class=""><a target="_parent" href="/nmos/nmsc/en/1852/nav_date.do" title="1852">1852</a></li>
-                <li class="">&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="resultControls" id="decisia-advanced-search-result-controls">
+<div class="ordering">
+    Sort by:
+        <a target="_parent" class="active" href="https://nmonesource.com/nmos/en/d/s/index.do?cont=&amp;ref=&amp;d1=04%2F04%2F2024&amp;d2=04%2F11%2F2024&amp;ca=&amp;p=&amp;col=182">Relevance</a>
+        <span class="active current">Date</span>
+</div>
+        <div class="decisia-btn-expand-collapse-parent">
+                <a href="javascript:void(0)" title="Expand all results" id="decisia-btn-expand-all" class="decisia-btn-expand-collapse selected"><span class="icon-eq"></span></a><a href="javascript:void(0)" title="Collapse all results" id="decisia-btn-collapse-all" class="decisia-btn-expand-collapse"><span class="icon-bars"></span></a>
         </div>
-
-        <div class="resultControls">
-        </div>
-
-        <h2>5&nbsp;result(s)</h2>
+    </div>
+    <h2>3 result(s)</h2>
+    <div id="decisia-results">
 <div class="documentList">
     <ul class="collectionItemList list-expanded">
-    <li class="odd list-item-expanded" style="cursor: pointer;">
+    <li class="odd list-item-expanded">
 <div class="number">
     <span class="digits">1.</span>
 </div>
-<div class="metadata">
+<div class="metadata" data-lbh-type="CASE" data-lbh-site="nmos" data-lbh-document-url="https://nmonesource.com/nmos/nmsc/en/item/522460/index.do" data-lbh-path="/nmos/nmsc/en/item/522460/index.do" data-lbh-title="N.M. Turn Around v. Oliver" data-lbh-citation="S-1-SC-40068" data-lbh-lang="en" data-lbh-collection="Supreme Court of New Mexico" data-lbh-jurisdiction="" data-lbh-first-sync-date="2024-04-03" data-lbh-decision-date="2024-04-08" data-lbh-decision-type="Unreported Opinions" data-lbh-subjects="" data-lbh-noteup-origin="522460" data-lbh-noteup-url="https://nmonesource.com/nmos/en/a/s/index.do?cont=&amp;ref=&amp;rdnii=522460&amp;rdnct=DECISION">
     <div class="info">
         <div class="subinfo">
             <h3>
-                <span class="title"><a target="_parent" href="/nmos/nmsc/en/item/397247/index.do">State v. Gallegos</a></span>
-
-                - <span class="publicationDate">03/21/2019</span>
+                <span class="title"><a target="_parent" href="https://nmonesource.com/nmos/nmsc/en/item/522460/index.do">N.M. Turn Around v. Oliver</a></span>
+                - <span class="publicationDate">04/08/2024</span>
             </h3>
             <div class="subMetadata">
                 <span>Supreme Court of New Mexico</span>
                     - <span>Unreported Opinions</span>
-            </div>
+            </div> 
             <div class="subject">
-            </div>
-        </div>
+            </div> 
+        </div> 
         <div class="documents">
-                <a target="_blank" href="/nmos/nmsc/en/397247/1/document.do" title="Download the PDF version"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
-        </div>
-    </div>
-    </div>
+                <a target="_blank" href="https://nmonesource.com/nmos/nmsc/en/522460/1/document.do" title="Download the PDF version" class="matomo_download"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
+                <a href="javascript:void(0)" class="expand-result" title="Collapse result"></a>
+        </div> 
+    </div> 
+    </div> 
 </li>
-    <li class="even list-item-expanded" style="cursor: pointer;">
+    <li class="even list-item-expanded">
 <div class="number">
     <span class="digits">2.</span>
 </div>
-<div class="metadata">
+<div class="metadata" data-lbh-type="CASE" data-lbh-site="nmos" data-lbh-document-url="https://nmonesource.com/nmos/nmsc/en/item/522467/index.do" data-lbh-path="/nmos/nmsc/en/item/522467/index.do" data-lbh-title="Provisional Gov't of Santa Teresa v. City of Sunland Park" data-lbh-citation="S-1-SC-39541" data-lbh-lang="en" data-lbh-collection="Supreme Court of New Mexico" data-lbh-jurisdiction="" data-lbh-first-sync-date="2024-04-08" data-lbh-decision-date="2024-04-08" data-lbh-decision-type="Unreported Opinions" data-lbh-subjects="" data-lbh-noteup-origin="522467" data-lbh-noteup-url="https://nmonesource.com/nmos/en/a/s/index.do?cont=&amp;ref=&amp;rdnii=522467&amp;rdnct=DECISION">
     <div class="info">
         <div class="subinfo">
             <h3>
-                <span class="title"><a target="_parent" href="/nmos/nmsc/en/item/397252/index.do">State v. Ortiz</a></span>
-
-                - <span class="publicationDate">03/04/2019</span>
+                <span class="title"><a target="_parent" href="https://nmonesource.com/nmos/nmsc/en/item/522467/index.do">Provisional Gov't of Santa Teresa v. City of Sunland Park</a></span>
+                - <span class="publicationDate">04/08/2024</span>
             </h3>
             <div class="subMetadata">
                 <span>Supreme Court of New Mexico</span>
                     - <span>Unreported Opinions</span>
-            </div>
+            </div> 
             <div class="subject">
-            </div>
-        </div>
+            </div> 
+        </div> 
         <div class="documents">
-                <a target="_blank" href="/nmos/nmsc/en/397252/1/document.do" title="Download the PDF version"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
-        </div>
-    </div>
-    </div>
+                <a target="_blank" href="https://nmonesource.com/nmos/nmsc/en/522467/1/document.do" title="Download the PDF version" class="matomo_download"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
+                <a href="javascript:void(0)" class="expand-result" title="Collapse result"></a>
+        </div> 
+    </div> 
+    </div> 
 </li>
-    <li class="odd list-item-expanded" style="cursor: pointer;">
+    <li class="odd list-item-expanded">
 <div class="number">
     <span class="digits">3.</span>
 </div>
-<div class="metadata">
+<div class="metadata" data-lbh-type="CASE" data-lbh-site="nmos" data-lbh-document-url="https://nmonesource.com/nmos/nmsc/en/item/522468/index.do" data-lbh-path="/nmos/nmsc/en/item/522468/index.do" data-lbh-title="State v. Chavez" data-lbh-citation="S-1-SC-39509" data-lbh-lang="en" data-lbh-collection="Supreme Court of New Mexico" data-lbh-jurisdiction="" data-lbh-first-sync-date="2024-04-08" data-lbh-decision-date="2024-04-08" data-lbh-decision-type="Unreported Opinions" data-lbh-subjects="" data-lbh-noteup-origin="522468" data-lbh-noteup-url="https://nmonesource.com/nmos/en/a/s/index.do?cont=&amp;ref=&amp;rdnii=522468&amp;rdnct=DECISION">
     <div class="info">
         <div class="subinfo">
             <h3>
-                <span class="title"><a target="_parent" href="/nmos/nmsc/en/item/400371/index.do">Unite New Mexico v. Oliver</a></span>
-
-                - <span class="publicationDate">02/07/2019</span>
+                <span class="title"><a target="_parent" href="https://nmonesource.com/nmos/nmsc/en/item/522468/index.do">State v. Chavez</a></span>
+                - <span class="publicationDate">04/08/2024</span>
             </h3>
             <div class="subMetadata">
                 <span>Supreme Court of New Mexico</span>
                     - <span>Unreported Opinions</span>
-            </div>
+            </div> 
             <div class="subject">
-            </div>
-        </div>
+            </div> 
+        </div> 
         <div class="documents">
-                <a target="_blank" href="/nmos/nmsc/en/400371/1/document.do" title="Download the PDF version"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
-        </div>
-    </div>
-    </div>
-</li>
-    <li class="even list-item-expanded" style="cursor: pointer;">
-<div class="number">
-    <span class="digits">4.</span>
-</div>
-<div class="metadata">
-    <div class="info">
-        <div class="subinfo">
-            <h3>
-                <span class="title"><a target="_parent" href="/nmos/nmsc/en/item/392393/index.do">State v. Yazzie</a></span>
-                        - <span class="citation">2019-NMSC-008</span>
-
-                - <span class="publicationDate">01/24/2019</span>
-            </h3>
-            <div class="subMetadata">
-                <span>Supreme Court of New Mexico</span>
-                    - <span>Reported Opinions</span>
-            </div>
-            <div class="subject">
-            </div>
-        </div>
-        <div class="documents">
-                <a target="_blank" href="/nmos/nmsc/en/392393/1/document.do" title="Download the PDF version"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
-        </div>
-    </div>
-    </div>
-</li>
-    <li class="odd list-item-expanded" style="cursor: pointer;">
-<div class="number">
-    <span class="digits">5.</span>
-</div>
-<div class="metadata">
-    <div class="info">
-        <div class="subinfo">
-            <h3>
-                <span class="title"><a target="_parent" href="/nmos/nmsc/en/item/392398/index.do">In re Dixon</a></span>
-                        - <span class="citation">2019-NMSC-006</span>
-
-                - <span class="publicationDate">01/17/2019</span>
-            </h3>
-            <div class="subMetadata">
-                <span>Supreme Court of New Mexico</span>
-                    - <span>Reported Opinions</span>
-            </div>
-            <div class="subject">
-            </div>
-        </div>
-        <div class="documents">
-                <a target="_blank" href="/nmos/nmsc/en/392398/1/document.do" title="Download the PDF version"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
-        </div>
-    </div>
-    </div>
+                <a target="_blank" href="https://nmonesource.com/nmos/nmsc/en/522468/1/document.do" title="Download the PDF version" class="matomo_download"><span class="decisia-icon icon-decisia-file-pdf"></span></a>
+                <a href="javascript:void(0)" class="expand-result" title="Collapse result"></a>
+        </div> 
+    </div> 
+    </div> 
 </li>
     </ul>
     <hr>
 </div>
-
-        <div class="resultControls bottom">
-        </div>
-
     </div>
-</div></div>
-    <script type="text/javascript" src="/js/thirdparty/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="/js/thirdparty/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/js/thirdparty/jquery.ui.datepicker-localization.js"></script>
-<script type="text/javascript" src="/js/thirdparty/chosen/chosen.jquery.js"></script>
 
-<script type="text/javascript">var jQueryDecisia=jQuery;</script>
+</div>
+</div>
+</body>
 
-<script type="text/javascript" src="/js/decisia/auto-complete.js"></script>
-<script type="text/javascript" src="/js/decisia/date-range.js"></script>
-<script type="text/javascript" src="/js/decisia/decisia-storage.js"></script>
-<script type="text/javascript" src="/js/decisia/decisia-iframe.js"></script>
-<script type="text/javascript" src="/js/decisia/decisia-visited-links.js"></script>
-<script type="text/javascript" src="/js/decisia/plugins.js"></script>
-<script type="text/javascript" src="/js/decisia/reflex2.js"></script>
-<script type="text/javascript" src="/js/decisia/reflexd-noteup-auto-complete.js"></script>
-<script type="text/javascript" src="/js/decisia/search-advanced-fields.js"></script>
-<script type="text/javascript" src="/js/decisia/search-expand-collapse-results.js"></script>
-<script type="text/javascript" src="/js/decisia/search-infinite-scroll.js"></script>
-<script type="text/javascript" src="/js/decisia/utils.js"></script>
-<script type="text/javascript" src="/js/decisia/decisia.js"></script>
-
-
-
-<script type="text/javascript">//<![CDATA[
-jQueryDecisia(document).ready(function(){DecisiaMain.decisiaPageInit({});});var decisiaMessages={"date-validator-invalid-date":"The format of the date entered is invalid.","date-validator-unsupported-date":"The date entered is not supported.","date-validator-invalid-range":"The date range selected is invalid. The start date must precede the end date.","search-tag":"Search","no-results-found":"No result match","retrieved-on":"retrieved on","search.collapse":"Collapse all results","search.collapse.one":"Collapse result","search.expand":"Expand all results","search.expand.one":"Expand result","searchForm.reset":"Reset","searchForm.show-more-fields":"Show more fields","searchForm.show-less-fields":"Show less fields","reflex2-continue":"Continue","reflex2-cancel":"No","reflex2-warning":"You are being directed to the most recent version of the statute which may not be the version considered at the time of the judgment.","search-server-error":"Error while loading search results. Please try again later.","search-server-maximum":"The maximum number of displayed search results is reached.","print":"Print","print-tooltip":"Print the content of this web page"};
-//]]></script>
-
-<!-- Piwik -->
-<script type="text/javascript">var _paq=_paq||[];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function(){var u=(("https:"==document.location.protocol)?"https":"http")+"://piwik.lexum.com/";_paq.push(["setTrackerUrl",u+"piwik.php"]);_paq.push(["setSiteId","82"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();</script>
-    <noscript>
-        <p><img src="http://piwik.lexum.com/piwik.php?idsite=82" style="border:0" alt="" data-pagespeed-url-hash="1290270003"/></p>
-    </noscript>
-<!-- End Piwik Tracking Code -->
-
-
-
-
-<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front decisia-autocomplete" style="display: none; font-size: 19.2px;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
+</html>

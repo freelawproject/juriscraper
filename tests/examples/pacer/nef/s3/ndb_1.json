@@ -1,0 +1,39 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "ndb",
+  "dockets": [
+    {
+      "case_name": "Drain Services Inc. v. Houdyshell",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-02-02",
+          "description": "Clerk's Entry of Default (RE: related document(s)[1] Complaint filed by Plaintiff Drain Services Inc.) (vck, Court)",
+          "document_number": "5",
+          "document_url": "https://ecf.ndb.uscourts.gov/doc1/13601595078?pdf_header=&magic_num=63506631&de_seq_num=22&caseid=45339",
+          "pacer_case_id": "45339",
+          "pacer_doc_id": "13601595078",
+          "pacer_magic_num": "63506631",
+          "pacer_seq_no": "22",
+          "short_description": "Clerk's Entry of Default"
+        }
+      ],
+      "docket_number": "23-07017",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "example@domain.com",
+        "example@domain.com;example@domain.com;c@recap.email"
+      ],
+      "name": ""
+    }
+  ]
+}

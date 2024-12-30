@@ -3,105 +3,58 @@ Scraper for the Supreme Court of Tennessee
 CourtID: tenn
 Court Short Name: Tenn.
 """
-import time
-from datetime import date
 
-from lxml import html
-
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.tsc.state.tn.us/courts/supreme-court/opinions"
+        self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
-        self.back_scrape_iterable = list(range(0, 131))
+        self.status = "Published"
 
-    def _get_download_urls(self):
-        return [
-            t
-            for t in self.html.xpath(
-                "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/a/@href"
+    def _process_html(self):
+        for row in self.html.xpath("//tr"):
+            date = (
+                row.xpath(
+                    ".//td[contains(@class, 'views-field-field-opinions-date-filed')]"
+                )[0]
+                .text_content()
+                .strip()
             )
-        ]
-
-    def _get_case_names(self):
-        return [
-            t
-            for t in self.html.xpath(
-                "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/a/text()"
+            lower_court = (
+                row.xpath(
+                    ".//td[contains(@class, 'views-field-field-opinions-county')]"
+                )[0]
+                .text_content()
+                .strip()
             )
-        ]
+            section = row.xpath(
+                ".//td[contains(@class, 'views-field-field-opinions-case-number')]"
+            )[0]
+            url = section.xpath(".//a")[0].get("href")
+            name = section.xpath(".//a")[0].text_content()
+            rows = [
+                row.strip()
+                for row in section.text_content().strip().split("\n", 4)
+            ]
 
-    def _get_lower_courts(self):
-        return [
-            t.strip()
-            for t in self.html.xpath(
-                "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td[2]/text()"
+            judge = rows[2].split(": ")[1]
+            per_curiam = False
+            if "curiam" in judge.lower():
+                judge = ""
+                per_curiam = True
+
+            self.cases.append(
+                {
+                    "date": date,
+                    "lower_court": lower_court,
+                    "url": url,
+                    "name": name,
+                    "docket": rows[1],
+                    "judge": judge,
+                    "summary": rows[-1],
+                    "per_curiam": per_curiam,
+                }
             )
-        ]
-
-    def _get_case_dates(self):
-        dates = []
-        for s in self.html.xpath(
-            "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td[4]/span/text()"
-        ):
-            dates.append(
-                date.fromtimestamp(time.mktime(time.strptime(s, "%m/%d/%y")))
-            )
-        return dates
-
-    def _get_docket_numbers(self):
-        return [
-            t
-            for t in self.html.xpath(
-                "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/div[./@class[contains(.,'number')]]/text()"
-            )
-        ]
-
-    # Here we are using the 'judges' field to list the Authoring Judge.
-    # It would be better for AbstractSite to have an 'author' field and to put
-    # these there.
-    def _get_judges(self):
-        judges = []
-        for t in self.html.xpath(
-            "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/div/text()"
-        ):
-            if "Authoring" in t:
-                # We strip the text 'Authoring Judge: '
-                judges.append(t[17:])
-            else:
-                continue
-        return judges
-
-    def _get_lower_court_judges(self):
-        trial_judges = []
-        for t in self.html.xpath(
-            "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/div/text()"
-        ):
-            if "Trial" in t:
-                # We strip the text 'Trial Court Judge: '
-                trial_judges.append(t[19:])
-            else:
-                continue
-        return trial_judges
-
-    def _get_summaries(self):
-        summaries = []
-        for e in self.html.xpath(
-            "//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td//div[@class='case-body']"
-        ):
-            ps = e.xpath("p")
-            s = ""
-            for p in ps:
-                s += html.tostring(p, method="text", encoding="unicode")
-            summaries.append(s)
-        return summaries
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _download_backwards(self, page):
-        self.url = f"{self.url}?page={page}"
-        self.html = self._download()

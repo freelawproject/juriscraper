@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Lou v. Lopinto",
-      "date_filed": "2022-08-10",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-10",
@@ -19,7 +19,12 @@
           "short_description": "Motion for Partial Summary Judgment"
         }
       ],
-      "docket_number": "2:21-cv-00080"
+      "docket_number": "2:21-cv-00080",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "WBV",
+      "federal_dn_judge_initials_referred": "DPC",
+      "federal_dn_office_code": "2"
     }
   ],
   "email_recipients": [

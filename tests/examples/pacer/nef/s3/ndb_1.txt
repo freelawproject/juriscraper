@@ -1,0 +1,121 @@
+Return-Path: <ecf@ndb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id glmo25n50fd84qdufgc8o3uekt3fe4nfi5nfrgo1
+ for example@domain.com;
+ Fri, 02 Feb 2024 14:26:08 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ndb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf@ndb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ndb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf@ndb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ndb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIbUhjbWdGS2daQVc5MnpOdHBXZ0tLRmpMWkd6ejJBOHVRUmxzUHhnaWtTZFZYY3Aya1hOVlY1TEMvSHlzaG41UXJrU0tDVWFWRngvdUJMME1TOWgrOVduQ3FWNEpOa3grRFB0TUt4TjhaOFpaL01xa1M4L20yOEJocmhEYlNzeUtYVUVRZDIyUUZzdHBiWmpGb0VsaVZ0cWZRRVd3dm5nVG5kVjZDc1dad2l1VFBRNGsyYVczeDJNdW5FSWsxN0hJQUlUQkkxQ1NrYXBjVzJOeStwRkFnS2ZnQU5zdUlnMmVabFNwQWlEOXRxZCtuSFhNTU1LZngrMm5xNzYxTDAyYUZzVjJCeTcxQ2diNEx0ektUdVNhREdKR1hybUk5Q09pbWxJa2xSYmxlU1E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=mhPpoySeDvZtQt6jEeD460/pxkbUe+koqlGb5TiZQx+T9dpprvyfT2MD3pl+zLwC0WyU7W0QlLHSPKET9S6Ij1ucBRqqGaPtLbVSk8GYnj6oNA2ADWXeTCrI2KXrDTsDtIlce3Pad8dlrnJ8xwA5ziWIC5uwkrrUuf4xfznXRK4=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706883969; v=1; bh=N8AZnwlrG8xPV+3InvyNp+w17kX5aKRHp7LS0Vh0G2s=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.193.242
+Received: from ndbdb-rep.ndb.gtwy.dcn ([156.119.193.242])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 02 Feb 2024 09:26:08 -0500
+Received: from ndbdb-rep.ndb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by ndbdb-rep.ndb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 412EPNFN052971;
+        Fri, 2 Feb 2024 08:25:23 -0600
+Received: (from ecf_web@localhost)
+        by ndbdb-rep.ndb.gtwy.dcn (8.14.7/8.14.4/Submit) id 412EOlPR051566;
+        Fri, 2 Feb 2024 08:24:47 -0600
+Date: Fri, 2 Feb 2024 08:24:47 -0600
+X-Authentication-Warning: ndbdb-rep.ndb.gtwy.dcn: ecf_web set sender to ecf@ndb.uscourts.gov using -f
+MIME-Version:1.0
+From:ecf@ndb.uscourts.gov
+To:nate_olson@ndb.uscourts.gov
+Message-Id:<1604226@ndb.uscourts.gov>
+Subject:23-07017 Drain Services Inc. v. Houdyshell et al Clerk's Entry of Default
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of North Dakota</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from vck, Court entered on 2/2/2024 at 8:24 AM CST and filed on 2/2/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Drain Services Inc. v. Houdyshell et al                                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ndb.uscourts.gov/cgi-bin/DktRpt.pl?45339>23-07017</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ndb.uscourts.gov/doc1/13601595078?pdf_header=&magic_num=63506631&de_seq_num=22&caseid=45339'>5</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Clerk's Entry of Default  (RE: related document(s)[1] Complaint filed by Plaintiff Drain Services Inc.)    (vck, Court)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>23-7017 Drain Services v SD Clerks Notice of Default.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1065028669 [Date=2/2/2024] [FileNumber=1604224-0]
+<BR><TAB> [6784c7c8eafb1d97e2229f42651772cd9c720d0e92a789333b5d01bfe4b6126f0d69
+<BR><TAB>7adfa5dbfbd3be634412fd00491935cf062172ccf1452d993c6135af5f53]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-07017 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff   Drain Services Inc.</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;c@recap.email
+<BR>
+
+<BR>
+<B>
+23-07017 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Michael  Houdyshell</span>
+<BR>South Dakota Department of Revenue
+<BR>445 E Capitol Avenue 
+<BR>Pierre, SD 57501
+<BR>
+<BR><span class="personName">  The State of South Dakota</span>
+<BR>c/o Kristi Noem, Governor
+<BR>500 East Capitol Avenue 
+<BR>Pierre, SD 57501
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

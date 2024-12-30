@@ -1,0 +1,1486 @@
+{
+    "totalResults": 20,
+    "browseAllDefaultSortField": "dated",
+    "searchResultsDefaultSortField": "dated",
+    "sortFields": [
+        {
+            "name": "Relevance",
+            "order": "nosort",
+            "ad": "asc"
+        },
+        {
+            "name": "Title",
+            "order": "title",
+            "ad": "asc"
+        },
+        {
+            "name": "Title",
+            "order": "title",
+            "ad": "desc"
+        },
+        {
+            "name": "Official case name",
+            "order": "subjec",
+            "ad": "asc"
+        },
+        {
+            "name": "Official case name",
+            "order": "subjec",
+            "ad": "desc"
+        },
+        {
+            "name": "Citation",
+            "order": "cita",
+            "ad": "asc"
+        },
+        {
+            "name": "Citation",
+            "order": "cita",
+            "ad": "desc"
+        },
+        {
+            "name": "Date decided",
+            "order": "dated",
+            "ad": "asc"
+        },
+        {
+            "name": "Date decided",
+            "order": "dated",
+            "ad": "desc"
+        }
+    ],
+    "filters": {
+        "collections": [
+            {
+                "name": "Briefs -- Oregon Court of Appeals",
+                "selected": false,
+                "alias": "p17027coll8"
+            },
+            {
+                "name": "Briefs -- Oregon Supreme Court",
+                "selected": false,
+                "alias": "p17027coll7"
+            },
+            {
+                "name": "Decisions & Orders -- Oregon Tax Court",
+                "selected": false,
+                "alias": "p17027coll6"
+            },
+            {
+                "name": "District Attorney Public Records Orders",
+                "selected": false,
+                "alias": "p17027coll4"
+            },
+            {
+                "name": "Opinions -- Oregon Court of Appeals",
+                "selected": false,
+                "alias": "p17027coll5"
+            },
+            {
+                "name": "Opinions -- Oregon Supreme Court",
+                "selected": true,
+                "alias": "p17027coll3"
+            },
+            {
+                "name": "Oregon Attorney General Public Records Orders",
+                "selected": false,
+                "alias": "p17027coll2"
+            },
+            {
+                "name": "Oregon Chief Justice Orders",
+                "selected": false,
+                "alias": "p17027coll10"
+            },
+            {
+                "name": "Oregon Employment Relations Board Final Orders",
+                "selected": false,
+                "alias": "p17027coll9"
+            },
+            {
+                "name": "Oregon Governor Executive Orders",
+                "selected": false,
+                "alias": "p17027coll11"
+            }
+        ]
+    },
+    "facets": {
+        "type": [
+            {
+                "title": "opinion",
+                "count": 14
+            },
+            {
+                "title": "petitions for review",
+                "count": 5
+            },
+            {
+                "title": "miscellaneous dispositions",
+                "count": 1
+            }
+        ],
+        "judge": [
+            {
+                "title": "bushong",
+                "count": 4
+            },
+            {
+                "title": "duncan",
+                "count": 2
+            },
+            {
+                "title": "masih",
+                "count": 2
+            },
+            {
+                "title": "dehoog",
+                "count": 1
+            },
+            {
+                "title": "garrett",
+                "count": 1
+            },
+            {
+                "title": "james",
+                "count": 1
+            },
+            {
+                "title": "pc",
+                "count": 1
+            }
+        ],
+        "subjec1": [
+            {
+                "title": "state of oregon",
+                "count": 10
+            },
+            {
+                "title": "anthony lee benjamin iv",
+                "count": 1
+            },
+            {
+                "title": "demetrio medina soto",
+                "count": 1
+            },
+            {
+                "title": "dennis giron-cortez",
+                "count": 1
+            },
+            {
+                "title": "department of revenue",
+                "count": 1
+            },
+            {
+                "title": "ellen rosenblum",
+                "count": 1
+            },
+            {
+                "title": "erik joh meiser",
+                "count": 1
+            },
+            {
+                "title": "ervan ronell herring",
+                "count": 1
+            },
+            {
+                "title": "jason p. munn",
+                "count": 1
+            },
+            {
+                "title": "kevin lavin taylor",
+                "count": 1
+            },
+            {
+                "title": "nicole morrisey o'donnell",
+                "count": 1
+            }
+        ]
+    },
+    "fields": {
+        "queries": [
+            {
+                "mode": "exact",
+                "searchTerm": "20240601-20241010",
+                "field": "dated",
+                "connector": "and"
+            }
+        ],
+        "order": "dated",
+        "direction": "desc"
+    },
+    "items": [
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12488",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12488/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12488",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070313, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Benjamin v. O'Donnell"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 764"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-03"
+                }
+            ],
+            "title": "S070313, Opinion",
+            "detailJson": {
+                "requestedId": 12488,
+                "id": 12465,
+                "parentId": 12488,
+                "collectionAlias": "p17027coll3",
+                "collectionName": "Opinions -- Oregon Supreme Court",
+                "contentType": "application/pdf",
+                "filename": "12466.pdfpage",
+                "title": "S_",
+                "text": "",
+                "pageNumber": -1,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "S070313 1",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": true,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12465/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll3:12488/full/730,/0/default.jpg?page=1",
+                "iiifInfoUri": "/iiif/2/p17027coll3:12465/info.json",
+                "downloadUri": "/api/collection/p17027coll3/id/12465/download",
+                "downloadParentUri": "/digital/api/collection/p17027coll3/id/12488/download",
+                "url": null,
+                "streamUri": null,
+                "parent": {
+                  "title": null,
+                  "nodes": null,
+                  "fields": [
+                    {
+                      "key": "title",
+                      "label": "Title",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S070313, Opinion",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "subjec",
+                      "label": "Official case name",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "Benjamin v. O'Donnell",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "relispt",
+                      "label": "Case number",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S070313",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "type",
+                      "label": "Type",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "Opinion",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "dated",
+                      "label": "Date decided",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "2024-10-03",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "subjec1",
+                      "label": "Parties",
+                      "controlledVocab": true,
+                      "searchable": true,
+                      "value": "Anthony Lee Benjamin IV; Nicole Morrisey O'Donnell; State of Oregon",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "judge",
+                      "label": "Author",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "Duncan",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "cita",
+                      "label": "Citation",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "372 Or 764",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "descri",
+                      "label": "Notes",
+                      "controlledVocab": false,
+                      "searchable": false,
+                      "value": "The petition for a writ of habeas corpus is denied.",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "rights",
+                      "label": "Rights",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "No known copyright restrictions.",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "identi",
+                      "label": "Identifier",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S070313.pdf",
+                      "controlledVocabList": null
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": 12465,
+                      "title": "S070313 1",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12465/thumbnail"
+                    },
+                    {
+                      "id": 12466,
+                      "title": "S070313 2",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12466/thumbnail"
+                    },
+                    {
+                      "id": 12467,
+                      "title": "S070313 3",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12467/thumbnail"
+                    },
+                    {
+                      "id": 12468,
+                      "title": "S070313 4",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12468/thumbnail"
+                    },
+                    {
+                      "id": 12469,
+                      "title": "S070313 5",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12469/thumbnail"
+                    },
+                    {
+                      "id": 12470,
+                      "title": "S070313 6",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12470/thumbnail"
+                    },
+                    {
+                      "id": 12471,
+                      "title": "S070313 7",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12471/thumbnail"
+                    },
+                    {
+                      "id": 12472,
+                      "title": "S070313 8",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12472/thumbnail"
+                    },
+                    {
+                      "id": 12473,
+                      "title": "S070313 9",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12473/thumbnail"
+                    },
+                    {
+                      "id": 12474,
+                      "title": "S070313 10",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12474/thumbnail"
+                    },
+                    {
+                      "id": 12475,
+                      "title": "S070313 11",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12475/thumbnail"
+                    },
+                    {
+                      "id": 12476,
+                      "title": "S070313 12",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12476/thumbnail"
+                    },
+                    {
+                      "id": 12477,
+                      "title": "S070313 13",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12477/thumbnail"
+                    },
+                    {
+                      "id": 12478,
+                      "title": "S070313 14",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12478/thumbnail"
+                    },
+                    {
+                      "id": 12479,
+                      "title": "S070313 15",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12479/thumbnail"
+                    },
+                    {
+                      "id": 12480,
+                      "title": "S070313 16",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12480/thumbnail"
+                    },
+                    {
+                      "id": 12481,
+                      "title": "S070313 17",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12481/thumbnail"
+                    },
+                    {
+                      "id": 12482,
+                      "title": "S070313 18",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12482/thumbnail"
+                    },
+                    {
+                      "id": 12483,
+                      "title": "S070313 19",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12483/thumbnail"
+                    },
+                    {
+                      "id": 12484,
+                      "title": "S070313 20",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12484/thumbnail"
+                    },
+                    {
+                      "id": 12485,
+                      "title": "S070313 21",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12485/thumbnail"
+                    },
+                    {
+                      "id": 12486,
+                      "title": "S070313 22",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12486/thumbnail"
+                    },
+                    {
+                      "id": 12487,
+                      "title": "S070313 23",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12487/thumbnail"
+                    }
+                  ],
+                  "type": null,
+                  "flatCompoundObjectItems": null
+                },
+                "flatCompoundObjects": null
+              }
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12440",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12440/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12440",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S069941, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Giron-Cortez"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 729"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-26"
+                }
+            ],
+            "title": "S069941, Opinion",
+            "detailJson": {
+                "requestedId": 12440,
+                "id": 12406,
+                "parentId": 12440,
+                "collectionAlias": "p17027coll3",
+                "collectionName": "Opinions -- Oregon Supreme Court",
+                "contentType": "application/pdf",
+                "filename": "12407.pdfpage",
+                "title": "S_",
+                "text": "",
+                "pageNumber": -1,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "S069941 1",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": true,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12406/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll3:12440/full/730,/0/default.jpg?page=1",
+                "iiifInfoUri": "/iiif/2/p17027coll3:12406/info.json",
+                "downloadUri": "/api/collection/p17027coll3/id/12406/download",
+                "downloadParentUri": "/digital/api/collection/p17027coll3/id/12440/download",
+                "url": null,
+                "streamUri": null,
+                "parent": {
+                  "title": null,
+                  "nodes": null,
+                  "fields": [
+                    {
+                      "key": "title",
+                      "label": "Title",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S069941, Opinion",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "subjec",
+                      "label": "Official case name",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "State v. Giron-Cortez",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "relispt",
+                      "label": "Case number",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S069941",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "type",
+                      "label": "Type",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "Opinion",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "dated",
+                      "label": "Date decided",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "2024-09-26",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "subjec1",
+                      "label": "Parties",
+                      "controlledVocab": true,
+                      "searchable": true,
+                      "value": "State of Oregon; Dennis Giron-Cortez",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "judge",
+                      "label": "Author",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "Masih",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "cita",
+                      "label": "Citation",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "372 Or 729",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "descri",
+                      "label": "Notes",
+                      "controlledVocab": false,
+                      "searchable": false,
+                      "value": "The decision of the Court of Appeals is reversed.  The judgment of conviction is reversed in part, and the case is remanded to the circuit court for entry of conviction for the lesser-included offense of fourth-degree assault under ORS 163.160(1)(a) and for resentencing consistent with this opinion.",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "relhapt",
+                      "label": "Additional case number",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "A173814 ; A173815",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "rights",
+                      "label": "Rights",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "No known copyright restrictions.",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "identi",
+                      "label": "Identifier",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S069941.pdf",
+                      "controlledVocabList": null
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": 12406,
+                      "title": "S069941 1",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12406/thumbnail"
+                    },
+                    {
+                      "id": 12407,
+                      "title": "S069941 2",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12407/thumbnail"
+                    },
+                    {
+                      "id": 12408,
+                      "title": "S069941 3",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12408/thumbnail"
+                    },
+                    {
+                      "id": 12409,
+                      "title": "S069941 4",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12409/thumbnail"
+                    },
+                    {
+                      "id": 12410,
+                      "title": "S069941 5",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12410/thumbnail"
+                    },
+                    {
+                      "id": 12411,
+                      "title": "S069941 6",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12411/thumbnail"
+                    },
+                    {
+                      "id": 12412,
+                      "title": "S069941 7",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12412/thumbnail"
+                    },
+                    {
+                      "id": 12413,
+                      "title": "S069941 8",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12413/thumbnail"
+                    },
+                    {
+                      "id": 12414,
+                      "title": "S069941 9",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12414/thumbnail"
+                    },
+                    {
+                      "id": 12415,
+                      "title": "S069941 10",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12415/thumbnail"
+                    },
+                    {
+                      "id": 12416,
+                      "title": "S069941 11",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12416/thumbnail"
+                    },
+                    {
+                      "id": 12417,
+                      "title": "S069941 12",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12417/thumbnail"
+                    },
+                    {
+                      "id": 12418,
+                      "title": "S069941 13",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12418/thumbnail"
+                    },
+                    {
+                      "id": 12419,
+                      "title": "S069941 14",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12419/thumbnail"
+                    },
+                    {
+                      "id": 12420,
+                      "title": "S069941 15",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12420/thumbnail"
+                    },
+                    {
+                      "id": 12421,
+                      "title": "S069941 16",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12421/thumbnail"
+                    },
+                    {
+                      "id": 12422,
+                      "title": "S069941 17",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12422/thumbnail"
+                    },
+                    {
+                      "id": 12423,
+                      "title": "S069941 18",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12423/thumbnail"
+                    },
+                    {
+                      "id": 12424,
+                      "title": "S069941 19",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12424/thumbnail"
+                    },
+                    {
+                      "id": 12425,
+                      "title": "S069941 20",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12425/thumbnail"
+                    },
+                    {
+                      "id": 12426,
+                      "title": "S069941 21",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12426/thumbnail"
+                    },
+                    {
+                      "id": 12427,
+                      "title": "S069941 22",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12427/thumbnail"
+                    },
+                    {
+                      "id": 12428,
+                      "title": "S069941 23",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12428/thumbnail"
+                    },
+                    {
+                      "id": 12429,
+                      "title": "S069941 24",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12429/thumbnail"
+                    },
+                    {
+                      "id": 12430,
+                      "title": "S069941 25",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12430/thumbnail"
+                    },
+                    {
+                      "id": 12431,
+                      "title": "S069941 26",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12431/thumbnail"
+                    },
+                    {
+                      "id": 12432,
+                      "title": "S069941 27",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12432/thumbnail"
+                    },
+                    {
+                      "id": 12433,
+                      "title": "S069941 28",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12433/thumbnail"
+                    },
+                    {
+                      "id": 12434,
+                      "title": "S069941 29",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12434/thumbnail"
+                    },
+                    {
+                      "id": 12435,
+                      "title": "S069941 30",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12435/thumbnail"
+                    },
+                    {
+                      "id": 12436,
+                      "title": "S069941 31",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12436/thumbnail"
+                    },
+                    {
+                      "id": 12437,
+                      "title": "S069941 32",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12437/thumbnail"
+                    },
+                    {
+                      "id": 12438,
+                      "title": "S069941 33",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12438/thumbnail"
+                    },
+                    {
+                      "id": 12439,
+                      "title": "S069941 34",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12439/thumbnail"
+                    }
+                  ],
+                  "type": null,
+                  "flatCompoundObjectItems": null
+                },
+                "flatCompoundObjects": null
+              }
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12405",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12405/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12405",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070999, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Herring"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 727"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-19"
+                }
+            ],
+            "title": "S070999, Opinion",
+            "detailJson": {
+                "requestedId": 12405,
+                "id": 12403,
+                "parentId": 12405,
+                "collectionAlias": "p17027coll3",
+                "collectionName": "Opinions -- Oregon Supreme Court",
+                "contentType": "application/pdf",
+                "filename": "12404.pdfpage",
+                "title": "S_",
+                "text": "",
+                "pageNumber": -1,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "S070999 1",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": true,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12403/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll3:12405/full/730,/0/default.jpg?page=1",
+                "iiifInfoUri": "/iiif/2/p17027coll3:12403/info.json",
+                "downloadUri": "/api/collection/p17027coll3/id/12403/download",
+                "downloadParentUri": "/digital/api/collection/p17027coll3/id/12405/download",
+                "url": null,
+                "streamUri": null,
+                "parent": {
+                  "title": null,
+                  "nodes": null,
+                  "fields": [
+                    {
+                      "key": "title",
+                      "label": "Title",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S070999, Opinion",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "subjec",
+                      "label": "Official case name",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "State v. Herring",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "relispt",
+                      "label": "Case number",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S070999",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "type",
+                      "label": "Type",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "Opinion",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "dated",
+                      "label": "Date decided",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "2024-09-19",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "subjec1",
+                      "label": "Parties",
+                      "controlledVocab": true,
+                      "searchable": true,
+                      "value": "State of Oregon; Ervan Ronell Herring",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "judge",
+                      "label": "Author",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "PC",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "cita",
+                      "label": "Citation",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "372 Or 727",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "descri",
+                      "label": "Notes",
+                      "controlledVocab": false,
+                      "searchable": false,
+                      "value": "The petition for review is allowed.",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "relhapt",
+                      "label": "Additional case number",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "A174188",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "rights",
+                      "label": "Rights",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "No known copyright restrictions.",
+                      "controlledVocabList": null
+                    },
+                    {
+                      "key": "identi",
+                      "label": "Identifier",
+                      "controlledVocab": false,
+                      "searchable": true,
+                      "value": "S070999.pdf",
+                      "controlledVocabList": null
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": 12403,
+                      "title": "S070999 1",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12403/thumbnail"
+                    },
+                    {
+                      "id": 12404,
+                      "title": "S070999 2",
+                      "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12404/thumbnail"
+                    }
+                  ],
+                  "type": null,
+                  "flatCompoundObjectItems": null
+                },
+                "flatCompoundObjects": null
+              }
+
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12362",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12362/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll3/id/12362",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "Petitions for review, August 29, 2024"
+                },
+                {
+                    "field": "subjec",
+                    "value": ""
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 720"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-08-29"
+                }
+            ],
+            "title": "Petitions for review, August 29, 2024"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12360",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12360/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12360",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070836, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Blackmon"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 695"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-08-15"
+                }
+            ],
+            "title": "S070836, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12361",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12361/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll3/id/12361",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "Petitions for review. August 8, 2024"
+                },
+                {
+                    "field": "subjec",
+                    "value": ""
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 718; 719"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-08-08"
+                }
+            ],
+            "title": "Petitions for review. August 8, 2024"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12279",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12279/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12279",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S071223, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "In re Flint"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-08-08"
+                }
+            ],
+            "title": "S071223, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12312",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12312/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12312",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070216, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Ortiz"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 658"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-08-08"
+                }
+            ],
+            "title": "S070216, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12204",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12204/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12204",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S069688, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Davis"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 618"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-07-25"
+                }
+            ],
+            "title": "S069688, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12234",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12234/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12234",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070455, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "In re Munn"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 589"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-07-25"
+                }
+            ],
+            "title": "S070455, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12092",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12092/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll3/id/12092",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "Petitions for review, July 18, 2024"
+                },
+                {
+                    "field": "subjec",
+                    "value": ""
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 588"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-07-18"
+                }
+            ],
+            "title": "Petitions for review, July 18, 2024"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12091",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12091/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12091",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S069907, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Soto"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 561"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-07-11"
+                }
+            ],
+            "title": "S069907, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12035",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12035/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/12035",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070387, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Taylor"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 536"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-07-05"
+                }
+            ],
+            "title": "S070387, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "12010",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/12010/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll3/id/12010",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "Petitions for review, July 3, 2024"
+                },
+                {
+                    "field": "subjec",
+                    "value": ""
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 560"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-07-03"
+                }
+            ],
+            "title": "Petitions for review, July 3, 2024"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "11982",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/11982/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/11982",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S069820, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Santa Fe Natural Tobacco Co. v. Dept. of Rev."
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 509"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-06-20"
+                }
+            ],
+            "title": "S069820, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "11903",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/11903/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/11903",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070059, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Meiser"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 438"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-06-13"
+                }
+            ],
+            "title": "S070059, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "11984",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/11984/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll3/id/11984",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "Petitions for review, June 13, 2024"
+                },
+                {
+                    "field": "subjec",
+                    "value": ""
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 534"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-06-13"
+                }
+            ],
+            "title": "Petitions for review, June 13, 2024"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "11924",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/11924/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/11924",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070046, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Autele"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 489"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-06-13"
+                }
+            ],
+            "title": "S070046, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "11983",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/11983/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll3/id/11983",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "Miscellaneous Supreme Court dispositions, June 10 and 13, 2024 "
+                },
+                {
+                    "field": "subjec",
+                    "value": ""
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 535"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-06-10; 2024-06-13"
+                }
+            ],
+            "title": "Miscellaneous Supreme Court dispositions, June 10 and 13, 2024 "
+        },
+        {
+            "collectionAlias": "p17027coll3",
+            "index": null,
+            "itemId": "11851",
+            "filetype": "cpd",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll3/id/11851/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/compoundobject/collection/p17027coll3/id/11851",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "S070965, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Chung v. Rosenblum"
+                },
+                {
+                    "field": "cita",
+                    "value": "372 Or 422"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-06-06"
+                }
+            ],
+            "title": "S070965, Opinion"
+        }
+    ],
+    "facetFields": {
+        "type": "Type",
+        "judge": "Author",
+        "subjec1": "Parties"
+    },
+    "gridViewEnabled": false
+}

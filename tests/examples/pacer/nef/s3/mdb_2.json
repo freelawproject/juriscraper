@@ -1,0 +1,38 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "mdb",
+  "dockets": [
+    {
+      "case_name": "Jefferson v. Alter",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-04-19",
+          "description": "Order Denying Motion To Quash (related document(s):[97] Motion for Protective Order filed by 3rd Party Plaintiff Jennifer L. Alter, Defendant Jennifer L. Alter, 3rd Party Plaintiff Eagle Premier Title Group, LLC, Defendant Eagle Premier Title Group, LLC, Motion to Quash). (LastName, FirstName)",
+          "document_number": "99",
+          "document_url": "https://ecf.mdb.uscourts.gov/doc1/092051714783?pdf_header=&magic_num=11582823&de_seq_num=409&caseid=768557",
+          "pacer_case_id": "768557",
+          "pacer_doc_id": "092051714783",
+          "pacer_magic_num": "11582823",
+          "pacer_seq_no": "409",
+          "short_description": "Order on Motion To Quash"
+        }
+      ],
+      "docket_number": "22-00193",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "a@b.com"
+      ],
+      "name": ""
+    }
+  ]
+}

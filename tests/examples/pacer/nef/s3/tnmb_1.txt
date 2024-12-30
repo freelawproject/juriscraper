@@ -1,0 +1,105 @@
+Return-Path: <TNMBADMIN_ECF@tnmb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id daavku0f2g9ggfq261vvbg89di6i25musc9o1fg1
+ for user@recap.email;
+ Mon, 15 Jul 2024 20:08:54 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of tnmb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=TNMBADMIN_ECF@tnmb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of tnmb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=TNMBADMIN_ECF@tnmb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=tnmb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHZEhoYXFyMHlzNEZTWWl2NDNuV2pZOWp1SzZKRWx1Y1J4MTYyNGJFTU5walNBRGJlUGdpU2NvY2JyelF2KzduaTRjTlFzbEIxN1ZTTzVBWVNVMWcyVUc1TU0wbGFoNWZmWDZPU2s4VGtPOSswdVg2R0JySzBvQmNxZ1VVS0xKODJ4Rmd0Nk5Gdk10SVl5ZXBSaVl6Skxzc1VQOTFpVGhLYWw3WE9WOFVBazRUVTJuRm5HZFFFNTIrcFIvVFBKdGw0enlyU3BRQlpKM3h2R242VENTYWJBYTdpNVRxMFhoS1VwSEpBZXIzQ2UvNEluSUtteXNWZEhILzVjejVXck0xS0RRYWpPQXZJMGhXeElTaEc1Wk9YSzRaOENvWkRyWGFqT1dGNDViTHV3TFZucG5SdElpVnJiNGp1MmJpYkZjeTQ9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=ihIL5Nqb3okvC8h7OsYNw451nLF42mbtRo0CJMcNFo/LOXPujqeF50ouLHGKEkbw3axIKTqdp7HtdHM9ASz/xcFEPsvlxjfdODlrJHerEP+kKmcKnmo5uh36xGwxK/L2BnsAD439NFFgQBI6XSk3WtymDz8BpSiY6Z5oI5L1hvs=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1721074135; v=1; bh=30ZVL55+i3Kbvg8XQRvA5gped81caHwib7jphYzMFHg=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.130
+Received: from tnmbdb.tnmb.gtwy.dcn ([156.119.190.130])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 15 Jul 2024 16:08:54 -0400
+Received: from tnmbdb.tnmb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by tnmbdb.tnmb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 46FK889V110934;
+	Mon, 15 Jul 2024 15:08:09 -0500
+Received: (from ecf_web@localhost)
+	by tnmbdb.tnmb.gtwy.dcn (8.14.7/8.14.4/Submit) id 46FK7fwX110404;
+	Mon, 15 Jul 2024 15:07:41 -0500
+Date: Mon, 15 Jul 2024 15:07:41 -0500
+X-Authentication-Warning: tnmbdb.tnmb.gtwy.dcn: ecf_web set sender to TNMBADMIN_ECF@tnmb.uscourts.gov using -f
+MIME-Version:1.0
+From:TNMBADMIN_ECF@tnmb.uscourts.gov
+To:courtmail@tnmb.uscourts.gov
+Message-Id:<29433560@tnmb.uscourts.gov>
+Subject: Docket Order - Continue Hearing (Auto) Ch 13 Jeffery Wayne Lovell and Tiffany Nicole Lovell 1:24-bk-01377
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>MIDDLE DISTRICT OF TENNESSEE</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from las entered on 07/15/2024  at 3:07 PM  CDT and filed on 07/15/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Jeffery Wayne Lovell and Tiffany Nicole Lovell                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.tnmb.uscourts.gov/cgi-bin/DktRpt.pl?393537>1:24-bk-01377</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+27
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Order Continuing Hearing Re:  (RE: related document(s)[21] Objection to Confirmation of the Plan (Creditor), [3] Chapter 13 Plan).  Hearing has been rescheduled for 08/14/2024 at 09:00 AM, Joint Hearing Courtroom (NSH); (Virtual hearing if allowed; see website for details); 701 Broadway, Nashville, TN 37203. (las)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1:24-bk-01377 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Advanced Building Solutions, Inc.</span>
+<br>attorney@lawfirm.com,  user@recap.email
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Onslow Bay Financial LLC</span>
+<br>user@firm.com,  user@firm.COM
+<BR>
+<BR><span class="personName">  US TRUSTEE</span>
+<br>ustpregion08.na.ecf@usdoj.gov
+<BR>
+
+<BR>
+<B>
+1:24-bk-01377 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Capital One Auto Finance, a division of Capital One, N.A., c/o AIS Portfolio Services, LLC</span>
+<BR>11111 N SomeAve. Dept.
+<BR>Some City, OK 11111
+<BR>

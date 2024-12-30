@@ -1,0 +1,106 @@
+Return-Path: <BKECF_LiveDB@mdb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ibr3vk7f6t482tr3kn5ercbot85rjg38tjumsk01
+ for user@recap.email;
+ Fri, 19 Apr 2024 12:45:04 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=mdb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFb0FJb014VHdjM0xTQ20yTlVZbGNIdmF1Y0JRNWxNN2I3MzMydjY5b3M2MTBlVFg3cVVsU3RVNW5XVzV2aDJiL1RBdit4NkxrQnBjdkJ1VVkwUjlzMlFOUTJ5THV5WmV0SGRETHRmcVlIZGdUdGhJMXZSZXdDcWVHUm1hUVk1NHNDc2ltNTZKSzNHQkxQb1g2aDkrRnFNN1NUN3FvTlFiUzZBdGpSc2RSQTNKQmVDSmJXUktBY0lHNGZ5dnRuRUtPMDZ6RHZNQWZUY3hycjd1U3pJQ0lMOGdhM2hKalFRN1VxdFU1VVNNdHd6b3c2S29uVUJYdWtmWTlTSTRGb3NtYzc4V2FsemFyNXJzeG9xQmF1SFpHdVhBbEJxK0JyM3dScDhxU3dacjBsY0E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=isoxmxwKm31yKkH3VRCk/bg0HDb33JxwYynkTlme1eg90DWsLvz8N4Q0gm58NPS3szvxybsDVrjMrFFGYSgBSlbu6uxxaZyYphJOL7KPOVVEcugC1Gq02aVH+BwRqpstb+7YvX7YhkCta6sxiyFLFmlodXLxJcUq9DOD2rG0YjA=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713530706; v=1; bh=Mljc8QSweEMHvfMI2fKWARVLs4HQK51lhFLdETJcJJk=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.184
+Received: from mdbdb.mdb.gtwy.dcn ([156.119.190.184])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 19 Apr 2024 08:45:04 -0400
+Received: from mdbdb.mdb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43JCiwho075911;
+	Fri, 19 Apr 2024 08:44:59 -0400
+Received: (from ecf_web@localhost)
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43JCinki075611;
+	Fri, 19 Apr 2024 08:44:49 -0400
+Date: Fri, 19 Apr 2024 08:44:49 -0400
+MIME-Version:1.0
+From:BKECF_LiveDB@mdb.uscourts.gov
+To:courtmail@mdb.uscourts.gov
+Message-Id:<47764967@mdb.uscourts.gov>
+Subject:22-00193 Order on Motion To Quash - CH - Jefferson v. Alter et al
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Maryland</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 4/19/2024 at 8:44 AM EDT and filed on 4/19/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Jefferson v. Alter et al</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?768557>22-00193</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.mdb.uscourts.gov/doc1/092051714783?pdf_header=&magic_num=11582823&de_seq_num=409&caseid=768557'>99</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Order Denying Motion To Quash (related document(s):[97] Motion for Protective Order filed by 3rd Party Plaintiff Jennifer L. Alter, Defendant Jennifer L. Alter, 3rd Party Plaintiff   Eagle Premier Title Group, LLC, Defendant   Eagle Premier Title Group, LLC, Motion to Quash).     (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>/opt/BKECF/live/web/eorderDocs/poStampedDocs/lss/1309252-signed.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1013806484 [Date=4/19/2024] [FileNumber=47764965-
+<BR><TAB>0] [08e29cea0e33c7dafb5a4002663cdd825fdf4d72e8c69b2c94b595fa74c7d83949
+<BR><TAB>3f99e7ebbcad9ae4b7cae5f93de45b5ec1cac099a0bee7a20d7b3a258469c7]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+22-00193 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName</span> a@b.com
+<BR>
+
+<BR>
+<B>
+22-00193 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName</span>
+<BR>c/o Company Group, LLC
+<BR>234 Street, Suite C 
+<BR>Baltimore, MD 11111
+<BR>

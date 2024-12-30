@@ -12,160 +12,166 @@ History:
                 to work around resources whose case names cannot be fetched to
                 to access restrictions.
     2020-08-28: Updated to use new secondary search portal at https://appellatepublic.kycourts.net/
-Notes:
-    This scraper is unique. Kentucky does not provide case names in the primary
-    search portal's result page, making them almost useless. They have a secondary
-    search portal that allows a lookup by case year and number, which *does* provide
-    the case name.
-
-    Primary Search Portal:          http://apps.courts.ky.gov/supreme/sc_opinions.shtm
-    Primary Search Portal POST:     http://162.114.92.72/dtsearch.asp
-    Secondary Search Portal:        https://appellatepublic.kycourts.net/
-    Secondary Search Portal POST:   https://appellatepublic.kycourts.net/api/api/v1/cases/search
-
-
-    Our two step process is as follows:
-      1. Get the pdf url, case date, and docket number from the Primary Search Portal
-      2. If the above data is valid, use publication year and docket number
-         to fetch case name from Secondary Search Portal
-
-    Unlike other scrapers, all of the metadata above is gathered at download time,
-    saved on the local object, and merely echoed back in by the standard getters.
-    This design allows us to avoid issues with cases that have restricted access
-    in the Secondary Search Portal (example: year=2015, docket=000574).  These
-    restricted resources will be skipped.
-
-    Also fun, they use IP addresses instead of DNS and hide them behind HTML
-    frames hosted by real domains.
-
-    I tried calling to get more information, and though they've heard of us (a
-    first!), they didn't want to help, and seemed downright aggressive in their
-    opposition. Curious. Anyway, don't bother calling  again.
-
-    You can contact support@dtsearch.com with questions about the search
-    interface. Best of luck.
+    2024-04-08: Updated to use new opinion search portal, by grossir
 """
 
 import re
+from datetime import date, datetime, timedelta
+from typing import Dict, Optional, Tuple
+from urllib.parse import urlencode
 
-from juriscraper.lib.string_utils import convert_date_string, titlecase
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    # Home: https://appellatepublic.kycourts.net/login
+    first_opinion_date = datetime(1982, 2, 18).date()
+    days_interval = 7  # page size of 25
+
+    api_court = "Kentucky Supreme Court"
+    api_url = (
+        "https://appellatepublic.kycourts.net/api/api/v1/opinions/search?"
+    )
+    docket_entry_url = "https://appellatepublic.kycourts.net/api/api/v1/publicaccessdocuments?filter=parentCategory%3Ddocketentries%2CparentID%3D{}"
+    pdf_url = "https://appellatepublic.kycourts.net/api/api/v1/publicaccessdocuments/{}/download"
+
+    # Examples: "BY JUDGE EASTON", "BY CHIEF JUSTICE VANMETER AFFIRMING",
+    # "BY JUDGE A. JONES"
+    judge_regex = r"BY(\sCHIEF)?\s(JUDGE|JUSTICE)\s(?P<judge>(\w\.\s)?\w+)"
+
+    # Examples: "2022-CA-1454, 1456, 1457"
+    docket_regex = r"\d{4}-(CA|SC)-\d{4}(,\s?\d{4})*"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # Sometimes they change the ip/endpoint below, in which
-        # case the scraper will throw a 404 error. just go to
-        # http://apps.courts.ky.gov/supreme/sc_opinions.shtm
-        # and inspect the form html and grab the new "action" url
-        self.url = "http://162.114.92.72/dtSearch/dtisapi6.dll"
-        # Sometimes they also change up the key/value pairs below.
-        # What you want to do is go to the url in the comment above,
-        # open your browser inspector's network tab, then search on
-        # the page's form for "xfirstword", 100 results, sorted by
-        # date, click search, and then inspect the Params for the
-        # POST request that was just triggered. This site sucks.
-        self.parameters = {
-            "index": "*{aa61be39717dafae0e114c24b74f68db}+Supreme+Court+Opinions+(1996+)",
-            "request": "xfirstword",
-            "fuzziness": "0",
-            "MaxFiles": "100",
-            "autoStopLimit": "0",
-            "sort": "Date",
-            "cmd": "search",
-            "SearchForm": "%%SearchForm%%",
-            "dtsPdfWh": "*",
-            "OrigSearchForm": "/dtsearch_form.html",
-            "pageSize": "1000",
-            "fileConditions": "",
-            "booleanConditions": "",
+        self.set_url()
+        self.make_backscrape_iterable(kwargs)
+
+    def set_url(
+        self, start: Optional[date] = None, end: Optional[date] = None
+    ) -> None:
+        """Sets URL with appropiate query parameters
+
+        :param start: start date
+        :param end: end date
+        :return None
+        """
+        if not start:
+            end = datetime.now()
+            start = end - timedelta(7)
+
+        logger.info("Date range %s %s", start, end)
+        params = {
+            "queryString": "true",
+            "searchFields[0].operation": ">=",
+            "searchFields[0].values[0]": start.strftime("%m/%d/%Y"),
+            "searchFields[0].indexFieldName": "filedDate",
+            "searchFields[1].operation": "<=",
+            "searchFields[1].values[0]": end.strftime("%m/%d/%Y"),
+            "searchFields[1].indexFieldName": "filedDate",
+            "searchFilters[0].operation": "=",
+            "searchFilters[0].indexFieldName": "caseHeader.court",
+            "searchFilters[0].values[0]": self.api_court,
         }
-        self.method = "POST"
-        self.docket_number_regex = re.compile(
-            r"(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<number>\d+)"
-        )
-        self.hrefs_contain = "Opinions"
+        self.url = f"{self.api_url}{urlencode(params)}"
 
-    def _process_html(self):
-        # Search second column cells for valid opinions
-        data_cell_path = "//table//tr/td[2]/font"
-        for cell in self.html.xpath(data_cell_path):
-            # Cell must contain a link
-            if cell.xpath("a"):
-                link_href = cell.xpath("a/@href")[0].strip()
-                cell_text = cell.xpath("text()")
-                date = self._parse_date_from_cell_text(cell_text)
-                # Cell must contain a parse-able date
-                if date:
-                    docket_match = self.docket_number_regex.search(link_href)
-                    # Link must contain a docket number conforming to expected format
-                    if docket_match:
-                        if self.test_mode_enabled():
-                            # Don't fetch names when running tests
-                            name = "No case names fetched during tests."
-                        else:
-                            # Fetch case name from external portal search (see doc string at top for details)
-                            case_number = "{}-{}-{}".format(
-                                docket_match.group("year"),
-                                docket_match.group("court"),
-                                docket_match.group("number")[-4:],
-                            )
-                            name = self._fetch_case_name(case_number)
-                        if name:
-                            docket_number = "{} {} {}".format(
-                                docket_match.group("year"),
-                                docket_match.group("court"),
-                                docket_match.group("number"),
-                            )
-                            self.cases.append(
-                                {
-                                    "date": date,
-                                    "docket": docket_number,
-                                    "name": name,
-                                    "status": "Unknown",
-                                    "url": link_href,
-                                }
-                            )
+    def _process_html(self) -> None:
+        """Parse API JSON response into case dictionaries
 
-    def _parse_date_from_cell_text(self, cell_text):
-        date = False
-        for text in cell_text:
-            try:
-                date = text.strip()
-                convert_date_string(date)
-                break
-            except ValueError:
-                pass
-        return date
+        :return None
+        """
+        result_json = self.html
 
-    def _fetch_case_name(self, case_number):
-        """Fetch case name for a given docket number + publication year pair."""
+        for result in result_json["resultItems"]:
+            case_name = ""
+            row = result["rowMap"]
+            date_filed = row["filedDate"]
+            disposition = row["docketEntryDescription"]
+            docket_number = row["caseHeader.caseNumber"]
 
-        # If case_number is not expected 12 characters, skip it, since
-        # we can't know how to fix the courts typo. They likely forgot
-        # to '0' pad the beginning or the end of the 'number' suffix,
-        # but we can't know for sure.
-        if len(case_number) != 12:
-            return False
+            if not row["hasDocuments"]:
+                logger.info(
+                    "Docket %s has no documents, skipping", docket_number
+                )
+                continue
 
-        url = "https://appellatepublic.kycourts.net/api/api/v1/cases/search"
-        self.request["parameters"] = {
-            "params": {
-                "queryString": "true",
-                "searchFields[0].searchType": "Starts With",
-                "searchFields[0].operation": "=",
-                "searchFields[0].values[0]": case_number,
-                "searchFields[0].indexFieldName": "caseNumber",
-            }
-        }
+            # On "PUBLIC OPINIONS IN CONFIDENTIAL CASES", docket numbers
+            # and case names are not as expected
+            # "2024 CA ADMIN - NON-CONFIDENTIAL OPINION - 002"
+            # The proper docket number may be found on the disposition string
+            if not re.search(self.docket_regex, docket_number) and (
+                docket_match := re.search(self.docket_regex, disposition)
+            ):
+                docket_number = docket_match.group(0)
+                # Delete docket numbers from disposition
+                disposition = re.sub(self.docket_regex, "", disposition)
+                if "\n" in disposition:
+                    disposition, case_name = disposition.split("\n", 1)
 
+            judge = ""
+            if judge_match := re.search(self.judge_regex, disposition):
+                judge = normalize_judge_string(judge_match.group("judge"))[0]
+                # Drop from the disposition everything after "BY JUDGE..."
+                # May contain the case name
+                disposition = re.split(self.judge_regex, disposition)[0]
+
+            if disposition.upper() in [
+                "OPINION OF THE COURT",
+                "OPINION AND ORDER",
+            ]:
+                disposition = ""
+
+            if self.test_mode_enabled():
+                # detail request has been manually nested in the test file
+                doc_json = result["detailJson"]
+            else:
+                detail_url = self.docket_entry_url.format(row["docketEntryID"])
+                doc_json = self.get_json(detail_url)
+
+            if not case_name:
+                case_name = doc_json[0]["caseHeader"].get("shortTitle")
+            doc_id = doc_json[0].get("documentID")
+            doc_text = doc_json[0]["documentText"][0]
+
+            if "\r\nTO BE PUBLISHED \r\n" in doc_text:
+                status = "Published"
+            else:
+                status = "Unpublished"
+
+            self.cases.append(
+                {
+                    "url": self.pdf_url.format(doc_id),
+                    "name": titlecase(case_name),
+                    "disposition": disposition,
+                    "docket": docket_number,
+                    "date": date_filed,
+                    "status": status,
+                    "judge": judge,
+                }
+            )
+
+    def get_json(self, url: str) -> Dict:
+        """Get JSON from the API
+
+        :param url: url
+        :return: JSON as dict
+        """
+        logger.debug("Getting JSON: '%s'", url)
         self._request_url_get(url)
-        json = self.request["response"].json()
+        self._post_process_response()
+        return self._return_response_text_object()
 
-        try:
-            title = json["resultItems"][0]["rowMap"]["shortTitle"]
-        except IndexError:
-            return False
-        return titlecase(title)
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Set date range from backscraping args and scrape
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        self.set_url(*dates)
+        self.html = self._download()
+        self._process_html()

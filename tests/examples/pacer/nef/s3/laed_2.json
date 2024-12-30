@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Grant v. Gusman",
-      "date_filed": "2022-08-11",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-11",
@@ -19,7 +19,12 @@
           "short_description": "Scheduling Order"
         }
       ],
-      "docket_number": "2:17-cv-02797"
+      "docket_number": "2:17-cv-02797",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "NJB",
+      "federal_dn_judge_initials_referred": "DMD",
+      "federal_dn_office_code": "2"
     }
   ],
   "email_recipients": [

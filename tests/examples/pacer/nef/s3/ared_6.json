@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Huffman v. Associated Management Ltd",
-      "date_filed": "2021-07-08",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-07-08",
@@ -19,7 +19,12 @@
           "short_description": "Brief in Support"
         }
       ],
-      "docket_number": "4:20-cv-01296"
+      "docket_number": "4:20-cv-01296",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "BRW",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "4"
     }
   ],
   "email_recipients": [

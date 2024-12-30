@@ -15,8 +15,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.domain = "http://www.ag.state.mn.us"
-        self.url = "http://www.ag.state.mn.us/office/opinions/DATE.asp"
+        self.url = "https://www.ag.state.mn.us/office/opinions/DATE.asp"
         self.opinions = []
 
     def _download(self, request_dict={}):

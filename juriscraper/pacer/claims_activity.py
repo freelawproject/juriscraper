@@ -1,6 +1,6 @@
 import re
 from datetime import date
-from typing import Dict, List, Union
+from typing import Dict, List, Tuple, Union
 
 from lxml.html import HtmlElement
 
@@ -216,21 +216,32 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         docket_number = meta_data.get("docket_number")
         if docket_number:
-            meta_data["docket_number"] = self._clean_docket_number(
-                docket_number
+            docket_number, docket_number_components = (
+                self._parse_docket_number(docket_number)
             )
+            meta_data["docket_number"] = docket_number
+            # Include the docket_number components.
+            meta_data.update(docket_number_components)
         else:
             docket_number = claim_table.xpath("(.//tr)[1]/td[1]/a//text()")[0]
-            meta_data["docket_number"] = self._clean_docket_number(
-                docket_number
+            docket_number, docket_number_components = (
+                self._parse_docket_number(docket_number)
             )
+            meta_data["docket_number"] = docket_number
+            # Include the docket_number components.
+            meta_data.update(docket_number_components)
 
-    def _clean_docket_number(self, docket_number: str) -> str:
+    def _parse_docket_number(
+        self, docket_number: str
+    ) -> Tuple[str, Dict[str, Union[str, None]]]:
         """Strip the judge initials off docket numbers, and do any other
         similar cleanup.
 
         :param: docket_number: A string docket number to clean.
-        :return: The docket_number cleaned.
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, the original docket_number and the default docket_number
+        components dict with None values.
         """
 
         # Uses both b/c sometimes the bankr. cases have a dist-style docket
@@ -242,9 +253,12 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         for regex in regexes:
             match = regex.search(docket_number)
             if match:
-                return match.group(1)
+                docket_number_components = self._parse_dn_components(
+                    docket_number
+                )
+                return match.group(1), docket_number_components
 
-        return docket_number
+        return docket_number, self._return_default_dn_components()
 
     def _get_claim_data_from_anchors(
         self, anchor_nodes: List[HtmlElement]
@@ -281,13 +295,13 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
                 claim_att["claim_id"] = self.get_pacer_claim_id_from_claim_url(
                     document_url
                 )
-                claim_att[
-                    "claim_number"
-                ] = self.get_claim_number_from_claim_url(document_url)
+                claim_att["claim_number"] = (
+                    self.get_claim_number_from_claim_url(document_url)
+                )
                 claim_att["short_description"] = anchor.text_content()
-                claim_att[
-                    "claim_doc_seq"
-                ] = self.get_claim_doc_seq_from_claim_url(document_url)
+                claim_att["claim_doc_seq"] = (
+                    self.get_claim_doc_seq_from_claim_url(document_url)
+                )
 
                 attachments.append(claim_att)
 

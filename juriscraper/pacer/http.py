@@ -132,7 +132,8 @@ class PacerSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        kwargs.setdefault("timeout", 300)
+        if "timeout" not in kwargs:
+            kwargs.setdefault("timeout", 300)
 
         r = super().get(url, **kwargs)
 
@@ -262,6 +263,29 @@ class PacerSession(requests.Session):
         xpath = "//update[@id='j_id1:javax.faces.ViewState:0']/text()"
         return tree.xpath(xpath)[0]
 
+    def _prepare_login_request(self, url, data, headers, *args, **kwargs):
+        """Prepares and sends a POST request for login purposes.
+
+        This internal helper function constructs a POST request to the provided URL
+        using the given headers and data. It sets a timeout of 60 seconds for the
+        request.
+
+        :param url: The URL of the login endpoint.
+        :param data: A dictionary containing login credentials.
+        :param headers: Additional headers to include in the request.
+        :param *args: Additional arguments to be passed to the underlying POST
+               request.
+        :param **kwargs: Additional keyword arguments to be passed to the
+               underlying POST request.
+        :return: requests.Response: The response object from the login request.
+        """
+        return super().post(
+            url,
+            headers=headers,
+            timeout=60,
+            data=data,
+        )
+
     def login(self, url=None):
         """Attempt to log into the PACER site.
         The first step is to get an authentication token using a PACER
@@ -295,15 +319,13 @@ class PacerSession(requests.Session):
         if self.client_code:
             data["clientCode"] = self.client_code
 
-        login_post_r = super().post(
-            url,
-            headers={
-                "User-Agent": "Juriscraper",
-                "Content-type": "application/json",
-                "Accept": "application/json",
-            },
-            timeout=60,
-            data=json.dumps(data),
+        headers = {
+            "User-Agent": "Juriscraper",
+            "Content-type": "application/json",
+            "Accept": "application/json",
+        }
+        login_post_r = self._prepare_login_request(
+            url, data=json.dumps(data), headers=headers
         )
 
         if login_post_r.status_code != requests.codes.ok:

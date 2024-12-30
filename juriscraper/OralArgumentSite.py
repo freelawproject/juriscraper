@@ -11,10 +11,13 @@ class OralArgumentSite(AbstractSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.expected_content_types = ["audio/mpeg"]
+
         self._opt_attrs = [
             "docket_numbers",
             "judges",
             "case_name_shorts",
+            "attorneys",
         ]
         self._req_attrs = [
             "case_dates",
@@ -44,4 +47,7 @@ class OralArgumentSite(AbstractSite):
         return None
 
     def _get_judges(self):
+        return None
+
+    def _get_attorneys(self):
         return None

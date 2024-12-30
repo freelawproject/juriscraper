@@ -1,124 +1,73 @@
-import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
+from typing import Tuple
 from urllib.parse import urlencode
 
-from dateutil.rrule import DAILY, rrule
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
-from juriscraper.OpinionSite import OpinionSite
 
+class Site(OpinionSiteLinear):
+    # This URL will show most recent opinions
+    base_url = "https://www.ca1.uscourts.gov/opn/aci"
+    days_interval = 5
+    first_opinion_date = datetime(2003, 3, 23)
 
-class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.base_url = "http://media.ca1.uscourts.gov/cgi-bin/opinions.pl"
         self.court_id = self.__module__
-        today = date.today()
-        params = urlencode(
-            {
-                "FROMDATE": (today - timedelta(7)).strftime("%m/%d/%Y"),
-                "TODATE": today.strftime("%m/%d/%Y"),
-                "puid": "",
-            }
-        )
-        self.url = f"{self.base_url}/?{params}"
-        # self.url = "http://media.ca1.uscourts.gov/cgi-bin/opinions.pl/?TODATE=06%2F24%2F1993&puid=&FROMDATE=05%2F25%2F1993"
-        self.interval = 30
-        self.back_scrape_iterable = [
-            i.date()
-            for i in rrule(
-                DAILY,
-                interval=self.interval,
-                dtstart=date(1992, 1, 1),
-                until=date(2016, 1, 1),
+        self.url = self.base_url
+        self.make_backscrape_iterable(kwargs)
+
+    def _process_html(self):
+        for row in self.html.xpath("//tr[not(th)]"):
+            title = row.xpath("td[2]/a/text()")[0]
+            url = row.xpath("td[2]/a/@href")[0]
+            status = self.get_status_from_opinion_title(title)
+            docket = row.xpath("td[3]/a/text()")[0]
+            date_filed = row.xpath("td[1]/span/text()")[0]
+            name = row.xpath("td[4]/text()")[0]
+            lower_court = row.xpath("td[4]/span/text()")[0]
+            self.cases.append(
+                {
+                    "name": name.strip(),
+                    "url": url,
+                    "date": date_filed,
+                    "status": status,
+                    "docket": docket,
+                    "lower_court": lower_court,
+                }
             )
-        ]
 
-    def _get_case_names(self):
-        return [
-            e.strip()
-            for e in self.html.xpath(
-                "//tr[position() > 1]/td[4]/text()[contains(., 'v.')]"
-            )
-        ]
+    def get_status_from_opinion_title(self, title: str) -> str:
+        """Status is encoded in opinion's link title
 
-    def _get_download_urls(self):
-        return [
-            e for e in self.html.xpath("//tr[position() > 1]/td[2]//@href")
-        ]
+        :param title: opinion title. Ex: 23-1667P.01A, 23-1639U.01A
 
-    def _get_case_dates(self):
-        dates = []
-        for s in self.html.xpath("//tr[position() > 1]/td[1]//text()"):
-            s = s.replace(r"\t", "").replace(r"\n", "").strip()
-            if s == "1996/05/32":
-                s = "1996/05/30"  # My life is thus lain to waste.
-            dates.append(datetime.strptime(s.strip(), "%Y/%m/%d").date())
-        return dates
+        :return: status string
+        """
+        if "U" in title:
+            status = "Unpublished"
+        elif "P" in title:
+            status = "Published"
+        elif "E" in title:
+            status = "Errata"
+        else:
+            status = "Unknown"
+        return status
 
-    def _get_docket_numbers(self):
-        regex = re.compile(r"(\d{2}-.*?\W)(.*)$")
-        docket_numbers = []
-        for s in self.html.xpath("//tr[position() > 1]/td[2]/a/text()"):
-            s = s.replace("O1-", "01-")  # I grow older, the input grows worse.
-            docket_numbers.append(
-                regex.search(s).group(1).strip().replace(".", "")
-            )
-        return docket_numbers
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Change URL to backscraping date range
 
-    def _get_precedential_statuses(self):
-        statuses = []
-        for text in self.html.xpath("//tr[position() > 1]/td[2]//@href"):
-            if "U" in text:
-                statuses.append("Unpublished")
-            elif "P" in text:
-                statuses.append("Published")
-            elif "E" in text:
-                statuses.append("Errata")
-            else:
-                statuses.append("Unknown")
-        return statuses
-
-    def _get_lower_courts(self):
-        lower_courts = []
-        for e in self.html.xpath("//tr[position() > 1]/td[4]/font"):
-            try:
-                lower_courts.append(e.xpath("./text()")[0].strip())
-            except IndexError:
-                lower_courts.append("")
-        return lower_courts
-
-    def _download_backwards(self, d):
-        params = urlencode(
-            {
-                "FROMDATE": d.strftime("%m/%d/%Y"),
-                "TODATE": (d + timedelta(self.interval)).strftime("%m/%d/%Y"),
-                "puid": "",
-            }
-        )
-        self.url = f"{self.base_url}/?{params}"
-
+        :param dates: tuple with date range to scrape
+        :return None
+        """
+        start, end = dates
+        logger.info("Backscraping for range %s %s", *dates)
+        params = {
+            "field_opn_csno_value_op": "starts",
+            "field_opn_issdate_value[min][date]": start.strftime("%m/%d/%Y"),
+            "field_opn_issdate_value[max][date]": end.strftime("%m/%d/%Y"),
+        }
+        self.url = f"{self.base_url}?{urlencode(params)}"
         self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
-
-    def _post_parse(self):
-        """This will remove the cases without a case name"""
-        to_be_removed = [
-            index
-            for index, case_name in enumerate(self.case_names)
-            if not case_name.replace("v.", "").strip()
-        ]
-
-        for attr in self._all_attrs:
-            item = getattr(self, attr)
-            if item is not None:
-                new_item = self.remove_elements(item, to_be_removed)
-                self.__setattr__(attr, new_item)
-
-    @staticmethod
-    def remove_elements(list_, indexes_to_be_removed):
-        return [
-            i for j, i in enumerate(list_) if j not in indexes_to_be_removed
-        ]
+        self._process_html()

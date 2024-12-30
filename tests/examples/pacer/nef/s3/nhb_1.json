@@ -1,0 +1,41 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "nhb",
+  "dockets": [
+    {
+      "case_name": "Mykle Lepene",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-07-15",
+          "description": "Affidavit of Compliance with Discharge Requirements pursuant to Section 1328. (LastName, FirstName)",
+          "document_number": "87",
+          "document_url": "https://ecf.nhb.uscourts.gov/doc1/11606636485?pdf_header=&magic_num=10004684&de_seq_num=302&caseid=117776",
+          "pacer_case_id": "117776",
+          "pacer_doc_id": "11606636485",
+          "pacer_magic_num": "10004684",
+          "pacer_seq_no": "302",
+          "short_description": "Affidavit of Compliance with Discharge Requirements"
+        }
+      ],
+      "docket_number": "21-10245",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "BAH",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "attorney@lawfirm.com",
+        "attoreny@lawfirm.com;user@recap.email",
+        "name@lawfirm.org",
+        "name0@lawfirm.org;name1@lawfirm.org;name2@lawfirm.org;name3@lawfirm.org"
+      ],
+      "name": ""
+    }
+  ]
+}

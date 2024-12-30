@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Mackenzie Brown v. State of Arizona",
-      "date_filed": "2022-08-08",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-08",
@@ -19,7 +19,12 @@
           "short_description": "Amicus Brief by Government or with Consent"
         }
       ],
-      "docket_number": "20-15568"
+      "docket_number": "20-15568",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
     }
   ],
   "email_recipients": [

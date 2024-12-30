@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Allen v. K-MAC Enterprises, Inc.",
-      "date_filed": "2021-08-12",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-08-12",
@@ -19,7 +19,12 @@
           "short_description": "Motion for Extension of Time to File Response/Reply"
         }
       ],
-      "docket_number": "1:21-cv-01008"
+      "docket_number": "1:21-cv-01008",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "SOH",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "1"
     }
   ],
   "email_recipients": [

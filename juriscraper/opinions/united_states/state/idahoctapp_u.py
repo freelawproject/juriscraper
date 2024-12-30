@@ -7,7 +7,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.isc.idaho.gov/appeals-court/coaunpublished"
+        self.url = "https://www.isc.idaho.gov/appeals-court/coaunpublished"
         self.status = "Unpublished"
 
     def _process_html(self):

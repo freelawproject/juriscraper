@@ -1,0 +1,200 @@
+{
+  "assigned_to_str": "A. Benjamin Goldgar",
+  "case_name": "Home Healthcare Renewal Services, Inc.",
+  "chapter": "11",
+  "claims": [
+    {
+      "amount_claimed": "$8413.63",
+      "claim_number": 1,
+      "creditor_details": "INTERNAL REVENUE SERVICE\nP.O. BOX 7346\nPhiladelphia, PA\n                                19104",
+      "creditor_id": "30175257",
+      "date_modified": null,
+      "date_original_entered": "2023-03-30",
+      "date_original_filed": "2023-03-30",
+      "description": "",
+      "entered_by": "Bruce Hayes",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-03-30",
+          "description": "Claim #1 filed by INTERNAL REVENUE SERVICE, Amount claimed:\n                                                $8413.63 (Hayes, Bruce)",
+          "document_number": 1,
+          "id": "80180740",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "priority_claimed": "$8413.63",
+      "remarks": "",
+      "secured_claimed": "$0.00",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$100.00",
+      "claim_number": 2,
+      "creditor_details": "Illinois Department of Revenue\nBankruptcy Section, P.O. Box 19035\nSpringfield, IL\n                                62794-9035",
+      "creditor_id": "30189361",
+      "date_modified": null,
+      "date_original_entered": "2023-04-07",
+      "date_original_filed": "2023-04-07",
+      "description": "",
+      "entered_by": "EPoc ADI",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-04-07",
+          "description": "Claim #2 filed by Illinois Department of Revenue, Amount\n                                                claimed: $100.00 (ADI, EPoc)",
+          "document_number": 2,
+          "id": "80231098",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "priority_claimed": "$61.88",
+      "remarks": "(2-1) Account Number (last 4 digits):0224",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$47990.14",
+      "claim_number": 3,
+      "creditor_details": "BYZFUNDER NY LLC\n1545 U.S. 202, Suite 101\nPomona, NY\n                                10970",
+      "creditor_id": "30191102",
+      "date_modified": null,
+      "date_original_entered": "2023-04-10",
+      "date_original_filed": "2023-04-10",
+      "description": "",
+      "entered_by": "EPoc ADI",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-04-10",
+          "description": "Claim #3 filed by BYZFUNDER NY LLC, Amount claimed:\n                                                $47990.14 (ADI, EPoc)",
+          "document_number": 3,
+          "id": "80238759",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "remarks": "",
+      "secured_claimed": "$47990.14",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$1356.36",
+      "claim_number": 4,
+      "creditor_details": "Illinois Department of Employment Security\n33 S. State Street 10th FL\nChicago, IL\n                                60603",
+      "creditor_id": "30251668",
+      "date_modified": null,
+      "date_original_entered": "2023-05-23",
+      "date_original_filed": "2023-05-23",
+      "description": "",
+      "entered_by": "EPoc ADI",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-05-23",
+          "description": "Claim #4 filed by Illinois Department of Employment\n                                                Security, Amount claimed: $1356.36 (ADI, EPoc)",
+          "document_number": 4,
+          "id": "80510817",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "priority_claimed": "$464.00",
+      "remarks": "(4-1) Account Number (last 4 digits):0224",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$15687.03",
+      "claim_number": 5,
+      "creditor_details": "Humana, Inc., Humana Insurance Company\nFox Swibel Levin & Carroll c/o Ken\n                                Thoma\n200 W. Madison, Suite 3000\nChicago IL\n                                60606",
+      "creditor_id": "30298646",
+      "date_modified": null,
+      "date_original_entered": "2023-06-27",
+      "date_original_filed": "2023-06-27",
+      "description": "",
+      "entered_by": "Christina Corona",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-06-27",
+          "description": "Claim #5 filed by Humana, Inc., Humana Insurance Company,\n                                                Amount claimed: $15687.03 (Corona, Christina)",
+          "document_number": 5,
+          "id": "80711330",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "remarks": "",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$1958.14",
+      "claim_number": 6,
+      "creditor_details": "Aetna, Inc.\nAaron McCollough, McGuireWoods LLP\n77 West Wacker Drive\nSuite\n                                4100\nChicago, IL\n                                60601-1818",
+      "creditor_id": "30468701",
+      "date_modified": null,
+      "date_original_entered": "2023-10-24",
+      "date_original_filed": "2023-10-24",
+      "description": "",
+      "entered_by": "EPoc ADI",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2023-10-24",
+          "description": "Claim #6 filed by Aetna, Inc., Amount claimed: $1958.14\n                                                (ADI, EPoc)",
+          "document_number": 6,
+          "id": "81437136",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "remarks": "",
+      "status": ""
+    },
+    {
+      "amount_claimed": "$2662.58",
+      "claim_number": 7,
+      "creditor_details": "Kristin Lee Nieckula\n14917 Richton Dr.\nLockport, IL\n                                60441",
+      "creditor_id": "30611339",
+      "date_modified": null,
+      "date_original_entered": "2024-01-10",
+      "date_original_filed": "2024-01-10",
+      "description": "",
+      "entered_by": "Annette Hamilton",
+      "filed_by": "CR",
+      "history": [
+        {
+          "attachment_number": 1,
+          "date_filed": "2024-01-10",
+          "description": "Claim #7 filed by Kristin Lee Nieckula, Amount claimed:\n                                                $2662.58 (Hamilton, Annette)",
+          "document_number": 7,
+          "id": "81884308",
+          "pacer_case_id": "1569001",
+          "type": "claim"
+        }
+      ],
+      "remarks": "",
+      "status": ""
+    }
+  ],
+  "court_id": "ilnb",
+  "date_filed": "2023-03-16",
+  "date_last_to_file_claims": null,
+  "date_last_to_file_govt": null,
+  "docket_number": "23-03562",
+  "federal_defendant_number": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_dn_office_code": null,
+  "office": "Eastern Division",
+  "total_number_of_claims": "7",
+  "trustee_str": "Neema T Varghese"
+}

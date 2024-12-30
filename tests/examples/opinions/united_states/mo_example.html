@@ -1,47 +1,57 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="author" content="">
-<meta name="description" content="">
-<meta name="keywords" content="">
+<html lang="en"><head>
 <title>Opinions</title>
-<meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
 
-<!-- CSS -->
-    <link href="/mod/css/font-awesome.min.css" rel="stylesheet" media="screen">
-    <link href="/mod/css/animate.min.css" rel="stylesheet" media="screen">
-    <link href="/mod/css/slidebars.css" rel="stylesheet" media="screen">
-    <link href="/mod/css/lightbox.css" rel="stylesheet" media="screen">
-    <link href="/stylesheet.jsp?id=102650" rel="stylesheet" media="screen" title="default">
-    <link href="/mod/css/width-full.css" rel="stylesheet" media="screen" title="default">
-    <link href="/mod/css/buttons.css" rel="stylesheet" media="screen">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="/mod/js/html5shiv.min.js"></script>
-        <script src="/mod/js/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Scripts -->
-    <script src="/mod/js/jquery.min.js"></script>
-    <script src="/mod/js/jquery.cookie.js"></script>
-    <script src="/mod/js/bootstrap.min.js"></script>
-    <script src="/mod/js/slidebars.js"></script>
-    <script src="/mod/js/buttons.js"></script>
-    <script src="/script.jsp?id=102651"></script>
-</head>
-<body  marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="Created_Date" content="2008-10-08">
 
 
+   
+.modal {
+      display: none; /* Hide the modal by default */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    }
 
-<div id="sb-site"><div class="boxed">            <header id="header-full-top" class="hidden-xs header-full-dark">
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }</style>
+
+<body>
+
+
+
+                    <header id="header-full-top" class="hidden-xs header-full-dark">
                 <div id="header-full-top-inner-alt">
                     <div class="container">
                         <div class="header-full-title">
-
+                        <a href="#content-focus" class="sr-only sr-only-focusable">Skip to main content</a>
                             <a href="/"><h1><span class="sr-only">Your Missouri Courts</span></h1>
 </a>
                         </div>
@@ -50,7 +60,8 @@
                 </div>
                 <div id="header-full-top-backdrop-left-alt"></div>
                 <div id="header-full-top-backdrop-right-alt"></div>
-            </header>             <nav class="navbar yamm navbar-static-top navbar-default navbar-header-full" role="navigation" id="header">
+            </header>
+                    <nav class="navbar yamm navbar-static-top navbar-default navbar-header-full" role="navigation" id="header">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -58,12 +69,16 @@
                             <span class="sr-only">Toggle navigation</span>
                             <span class="fa fa-bars">  </span>
                         </button>
-                        <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="/" style="background-image: none; text-transform: none; ">Your Missouri Courts</a>
+                        <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="/" style="background-image: none; text-transform: none; ">Missouri Courts</a>
+                         <button id="search-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".search" style="left: unset; right: 0;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-search">  </span>
+                        </button>
                     </div>
                     <!-- navbar-header -->
                      <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
     <ul class="nav navbar-nav yamm">
-        <li>
+        <li id="link-home">
             <a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"> </i><span class="sr-only">Home</span></a>
         </li>
         <li class="dropdown yamm-fw"><a href="/page.jsp?id=103114">About the Courts</a>
@@ -80,6 +95,7 @@
                                     <li><a href="/page.jsp?id=612">Boards &amp; Commissions</a> </li>
                                     <li><a href="/page.jsp?id=631">Judicial Personnel</a> </li>
                                     <li><a href="/page.jsp?id=233">Office of State Courts Administrator</a> </li>
+                                    <li><a href="/bicentennial">History of the Judiciary</a> </li>
                                 </ul>
                             </div>
                         </div>
@@ -101,6 +117,7 @@
                                     <li><a href="/page.jsp?id=650">Civil Forms</a> </li>
                                     <li><a href="/page.jsp?id=669">Collections Programs</a> </li>
                                     <li><a href="/page.jsp?id=649">Criminal Forms</a></li>
+                                    <li><a href="/page.jsp?id=191585">Expungement Forms</a> </li>
                                     <li><a href="/page.jsp?id=5240">Family Law Forms</a> </li>
                                     <li><a href="/page.jsp?id=700">Family Access Forms</a> </li>
                                     <li><a href="/page.jsp?id=384">Filing Information Sheet</a> </li>
@@ -141,7 +158,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <ul>
-                                    <li><a href="/page.jsp?id=690">Cameras in the Courtroom</a> </li>
+                                    <li><a href="/page.jsp?id=690">Cameras in the Courts</a></li>
                                     <li><a href="/page.jsp?id=1074">Chief Justice Columns</a> </li>
                                     <li><a href="/page.jsp?id=692">Media Contact</a> </li>
                                     <li><a href="/page.jsp?id=594">Newsroom</a> </li>
@@ -179,13 +196,14 @@
                             <div class="col-xs-12">
                                 <ul>
                                     <li><a href="/page.jsp?id=180">ADA &amp; Court Interpreters</a>
-                                        <br />
                                     </li>
                                     <li><a href="/page.jsp?id=270">Charge Codes</a></li>
                                     <li><a href="/page.jsp?id=46">Court Rules</a> </li>
                                     <li><a href="/page.jsp?id=589">Jury Instructions &amp; Charges</a> </li>
                                     <li><a href="/page.jsp?id=1805">Municipal Judge Education</a> </li>
                                     <li><a href="/page.jsp?id=592">Other Legal Resources</a></li>
+                                    <li><a href="/page.jsp?id=246">Privacy Requests for Judicial Officers</a></li>
+                                    <li><a href="/page.jsp?id=310">Statewide Fine Schedule</a></li>
                                     <li><a href="/page.jsp?id=590">Traffic Guide</a> </li>
                                 </ul>
                             </div>
@@ -200,121 +218,16 @@
                 </div>
                 <!-- container -->
             </nav>
-<div class="search col-sm-3 col-lg-2 hidden-xs">
-<form action="http://www.courts.mo.gov/search">
-	<div class="input-group">
-	  <input type="text" class="form-control" aria-describedby="gsa-search" placeholder="Search" name="q" />
-	  <span class="input-group-btn"><input type="submit" value="" class="fa form-control" id="gsa-search" /></span>
-
-			 <input type="hidden" name="site" value="CourtsHomePage" />
-			 <input type="hidden" name="client" value="CourtsHomePage" />
-			 <input type="hidden" name="num" value="10" />
-			 <input type="hidden" name="output" value="xml_no_dtd" />
-			 <input type="hidden" name="proxystylesheet" value="CourtsHomePage" />
-	</div>
+<div class="search col-sm-3 col-lg-2">
+<form action="https://www.courts.mo.gov/page.jsp? " id="searchform" class="mb-flexbox">
+  <input type="hidden" name="id" value="127315">
+	<div id="search-container" class="input-group" data-template="searchform" data-submit-action="search()">
+     <label for="query" class="sr-only">Submit Search</label>
+	  <input type="text" class="form-control ui-autocomplete-input" aria-describedby="gsa-search" placeholder="Search" name="query" id="query" data-template="suggest" autocomplete="off">
+	  <span class="input-group-btn"><input type="submit" value="" class="fa form-control" id="gsa-search"></span>
+	<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul></div>
 </form>
-</div> <header class="main-header"><div class="container"><h1 class="page-title">Opinions</h1>
-<ol class="breadcrumb pull-right hidden-sm hidden-xs">
-<li></li> </ol>
 </div>
-</header><div class="container"><div class="row margin-bottom-30 margin-top-15"><div class="col-md-8 speeches" id="content"><div align="left">
-
-
-
-
-
-
-
-<script type="text/javascript">
-
-	window.onload=function() {
-		var dist='Opinions Supreme'
-		var year='2016'
-		var date='all'
-		var rpageid='12087'
-		var spageid='12086'
-		if (date!=''){
-			location.href = "/page.jsp?id="+spageid+"&dist="+dist+"&date="+date+"&year="+year+"#"+date;
-		}else{
-			document.forms.court.opinionsearch.focus();
-		}
-
-		var obj=document.court.district;
-		var objy=document.court.opinionyearsel;
-
-		for (index = 0; index < obj.length; index++) {
-			if (obj[index].value == dist) {
-				obj.selectedIndex = index;
-			}
-		}
-
-		for (index = 0; index < objy.length; index++) {
-			if (objy[index].value == year) {
-				objy.selectedIndex = index;
-			}
-		}
-
-		document.forms.court.opinionsearch.value="";
-	}
-
-	function submitOnEnterKey(event,form) {
-    	var key;
-		if(window.event){
-			key = window.event.keyCode; //IE
-		}else{
-			key = event.which; //firefox
-		}
-
-      	if(key==13) {
-      		sendsearch(form);
-      		return false;
-      	}
-	}
-
-	function sendsearch(form){
-		result = form.opinionsearch.value;
-		dist = form.district.value;
-		rpageid='12087'
-		form.action = "/page.jsp?id="+rpageid+"&search="+result+"&dist="+dist+"&n=0";
-		form.submit();
-	}
-
-	function dateSearch(button,form){
-		date = button.value;
-		dist = form.district.value;
-		year = form.opinionyearsel.value;
-		spageid='12086'
-		form.action = "/page.jsp?id="+spageid+"&dist="+dist+"&date="+date+"&year="+year+"&n=0";
-		form.submit();
-	}
-
-	function bottomFormUpdate(form){
-		year = form.opinionyearsel.value;
-		dist = form.district.value;
-		spageid='12086'
-		form.action = "/page.jsp?id="+spageid+"&dist="+dist+"&year="+year+"&n=0";
-		form.submit();
-	}
-
-	function displayAll(form){
-		date="all";
-		year = form.opinionyearsel.value;
-		dist = form.district.value;
-		spageid='12086'
-		form.action = "/page.jsp?id="+spageid+"&dist="+dist+"&date="+date+"&year="+year+"&n=0";
-		form.submit();
-	}
-
-	function districtUpdate(form){
-		dist = form.district.value;
-		spageid='12086'
-		form.action = "/page.jsp?id="+spageid+"&dist="+dist+"&n=0";
-		form.submit();
-	}
-
-</script>
-
-
 
 
 
@@ -331,208 +244,298 @@
 
 
 <h2>Opinions for Supreme Court</h2>
-<hr />
-<h4>Step 1. Select or Change Court</h4>
-<br />
-<form name="court" method="post" action="/page.jsp?id=12086" >
-	<b>Court:&nbsp;&nbsp;</b>
-	<div id="displayselect" >
-		<select name="district" id="district" onchange="districtUpdate(this.form)">
-		  <option value="Opinions"> All Appellates</option>
-		  <option value="Opinions Supreme" >Supreme Court</option>
-		  <option value="Opinions Eastern" >Eastern District</option>
-		  <option value="Opinions Southern" >Southern District</option>
-		  <option value="Opinions Western" >Western District</option>
-		</select>
+<hr>
+<form name="court" method="post" action="/page.jsp?id=12086">
+
+<div class="row margin-bottom-15">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="row">
+			<div class="panel panel-default no-margin-bottom">
+
+				<div class="col-sm-12">
+					<h3 class="h4">Step 1. Select or Change Court</h3>
+					<div class="input-group">
+						<label for="district" class="input-group-addon">Court:</label>
+						<select name="district" id="district" class="form-control">
+							<option value="Opinions"> All Appellates</option>
+							<option value="Opinions Supreme">Supreme Court</option>
+							<option value="Opinions Eastern">Eastern District</option>
+							<option value="Opinions Southern">Southern District</option>
+							<option value="Opinions Western">Western District</option>
+						  </select>
+					  </div>
+					  <hr>
+				</div>
+				<div class="col-sm-12">
+					<h3 class="h4">Step 2. Search Opinions ...</h3>
+					<label for="opinionsearch" class="sr-only">Search by keyword or phrase</label>
+					<div class="input-group">
+						<input type="text" id="opinionsearch" name="opinionsearch" maxlength="150" class="form-control">
+						<span class="input-group-btn">
+						  <input type="button" id="search3" value="Search" class="btn btn-primary">
+						</span>
+						<span class="input-group-addon" style="background: #fff; border:none;"><a href="/page.jsp?id=12088">Need Help?</a></span>
+					  </div>
+					  <hr>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-12 margin-bottom-5">
+							<h3 class="h4">... OR View By Date</h3>
+							<div class="input-group">
+								<label for="opinionyearsel" class="input-group-addon">Year of Opinion:</label>
+								<select id="opinionyearsel" name="opinionyearsel" class="form-control">
+
+										<option value="2023">2023</option>
+
+										<option value="2022">2022</option>
+
+										<option value="2021">2021</option>
+
+										<option value="2020">2020</option>
+
+										<option value="2019">2019</option>
+
+										<option value="2018">2018</option>
+
+										<option value="2017">2017</option>
+
+										<option value="2016">2016</option>
+
+										<option value="2015">2015</option>
+
+										<option value="2014">2014</option>
+
+										<option value="2013">2013</option>
+
+										<option value="2012">2012</option>
+
+										<option value="2011">2011</option>
+
+										<option value="2010">2010</option>
+
+										<option value="2009">2009</option>
+
+										<option value="2008">2008</option>
+
+										<option value="2007">2007</option>
+
+										<option value="2006">2006</option>
+
+										<option value="2005">2005</option>
+
+										<option value="2004">2004</option>
+
+										<option value="2003">2003</option>
+
+										<option value="2002">2002</option>
+
+										<option value="2001">2001</option>
+
+										<option value="2000">2000</option>
+
+										<option value="1999">1999</option>
+
+										<option value="1998">1998</option>
+
+										<option value="1997">1997</option>
+
+								</select>
+							  </div>
+						</div>
+						<div class="col-sm-12 margin-bottom-15">
+							<div class="btn-group btn-group-justified">
+								<div class="btn-group"><button id="showall" type="button" class="btn btn-default" disabled=""><i class="fa fa-eye" style="font-size: 15px;"></i> Show all Opinions for Year</button></div>
+								<div class="btn-group"><button id="hideall" type="button" class="btn btn-default"><i class="fa fa-eye-slash" style="font-size: 15px;"></i> Hide all Opinions</button></div>
+							  </div>
+						</div>
+					</div>
+				</div>
+			<div class="clearfix"></div>
+		</div>
 	</div>
-	<br />
-	<br />
-	<hr />
-	<h4>Step 2. Search Opinions ...</h4>
-	<br />
+	</div>
+</div>
 
-	<div>
-		<input type="text" name="opinionsearch" size="30" maxlength="150" style="border: 1px solid black;" onKeyPress="submitOnEnterKey(event,this.form)" />
-		<input type="button" id="search3" style="border: 1px black solid;" onClick="sendsearch(this.form);" value='Search'/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="/page.jsp?id=12088" style="color: #0000CC; text-decoration:underline;">Need Help?</a>
+<div class="row">
+	<div class="col-sm-12 margin-bottom-5">
+			<em>Click on a date below to view opinions.</em>
+	</div>
+</div>
+
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="10/03/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">10/03/2023</div>
+					<a name="all"></a><a name="10/03/2023"></a>
+					<div class="list-group">
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99977:&nbsp;&nbsp;</b><a href="/file.jsp?id=201835" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=201734" target="_new">State v. Harris</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;APPEAL DISMISSED.  Russell, C.J., Powell, Breckenridge, Ransom, and Wilson, JJ., and Hardin-Tammons, Sp.J., concur.  Broniec, J., not participating.
+									   </div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
 	</div>
 
-	<br />
-	<hr width="40%" align="center"/>
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="08/29/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">08/29/2023</div>
+					<a name="all"></a><a name="08/29/2023"></a>
+					<div class="list-group">
 
-	<h4 style="margin-left:45px">... OR View By Date</h4>
-	<br />
-	<table>
-		<tr>
-			<td style="padding-bottom:10px;"><b>Year of Opinion:</b>&nbsp;
-				<select name="opinionyearsel" onchange="bottomFormUpdate(this.form);"  style="border: 1px solid #000000;" >
 
-						<option value="2016">2016</option>
 
-						<option value="2015">2015</option>
 
-						<option value="2014">2014</option>
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99949:&nbsp;&nbsp;</b><a href="/file.jsp?id=200414" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=200413" target="_new">State ex rel. Steven Wishom, Relator, vs. The Honorable Paula P. Bryant, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge W. Brent Powell
+											<br><b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT MADE PERMANENT.  Russell, C.J., Powell, Breckenridge, Fischer, Ransom and Wilson, JJ., concur.  Draper, J., not participating.
+									   </div>
+									</div>
 
-						<option value="2013">2013</option>
 
-						<option value="2012">2012</option>
 
-						<option value="2011">2011</option>
 
-						<option value="2010">2010</option>
 
-						<option value="2009">2009</option>
 
-						<option value="2008">2008</option>
 
-						<option value="2007">2007</option>
 
-						<option value="2006">2006</option>
 
-						<option value="2005">2005</option>
 
-						<option value="2004">2004</option>
 
-						<option value="2003">2003</option>
 
-						<option value="2002">2002</option>
 
-						<option value="2001">2001</option>
 
-						<option value="2000">2000</option>
 
-						<option value="1999">1999</option>
 
-						<option value="1998">1998</option>
 
-						<option value="1997">1997</option>
 
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td style="padding-bottom:10px;">
-				<input type="radio" name="Expand" onclick="displayAll(this.form);" />Show all Opinions for Year&nbsp;&nbsp;
-				<input type="radio" name="Expand" onclick="bottomFormUpdate(this.form);" />Hide all Opinions
-			</td>
-		</tr>
-		<tr>
-			<td style="padding-bottom:10px;">
-				<i>Click on a date below to view opinions.</i>
-			</td>
-		</tr>
-	</table>
 
-	<table border="1">
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="06/28/2016"/>
-					<a name="all"></a><a name="06/28/2016"></a>
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95465:</b>&nbsp;<a href="/file.jsp?id=102864" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102856" target="_new">Kyle Sanford, Respondent, vs. CenturyTel of Missouri, LLC d/b/a CenturyLink, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;APPEAL DISMISSED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95444:</b>&nbsp;<a href="/file.jsp?id=102866" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102858" target="_new">State of Missouri ex rel. Attorney General Chris Koster and the Missouri Petroleum Storage Tank Insurance Fund Board of Directors, Respondents, vs. ConocoPhillips Company and Phillips 66 Company, Respondents, and Cory Wagoner, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Paul C. Wilson&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Fischer, Stith, Draper and Teitelman, JJ., and Dolan, Sp.J., concur.  Russell, J., not participating.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95307:</b>&nbsp;<a href="/file.jsp?id=102863" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102855" target="_new">Rachal Laut, f/k/a Rachal Govro, and John M. Soellner, Appellants, vs. City of Arnold, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Draper, Teitelman and Russell, JJ., concur; Fischer, J., dissents in separate opinion filed; Wilson, J., dissents in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95255:</b>&nbsp;<a href="/file.jsp?id=102862" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102854" target="_new">Missouri Real Estate Appraisers Commission, Respondent, vs. Mark A. Funk, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Fischer, Draper, Wilson and Russell, JJ., concur; Teitelman, J., concurs in part in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95214:</b>&nbsp;<a href="/file.jsp?id=102865" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102857" target="_new">Tanisha Ross-Paige, Respondent, vs. Saint Louis Metropolitan Police Department Steven A. Gori, Michael A. Deeba, Sr., Saint Louis Board of Police Commissioners, Richard H. Gray, Bettye Battle Turner, Thomas J. Irwin, and Francis G. Slay, Appellants.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95170:</b>&nbsp;<a href="/file.jsp?id=102868" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102860" target="_new">Ronald Malam, Appellant, vs. State of Missouri, Department of Corrections, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Richard B. Teitelman&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Breckenridge, C.J., Stith and Draper, JJ., concur; Russell, J., dissents in separate opinion filed; Fischer and Wilson, JJ., concur in opinion of Russell, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95064:</b>&nbsp;<a href="/file.jsp?id=102867" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102859" target="_new">Avery Contracting, LLC, Appellant, vs. Richard Niehaus, Lisa J. Niehaus, Alicia Niehaus, Creekstone Homeowners Association, and Missouri Highways and Transportation Commission, Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Richard B. Teitelman&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94959:</b>&nbsp;<a href="/file.jsp?id=102861" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=102853" target="_new">State of Missouri, Respondent vs. Adriano Raphael Clark, Sr., Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Chief Justice Patricia Breckenridge&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Stith, Draper and Teitelman, JJ., concur; Wilson, J., concurs in result in separate opinion filed; Fischer and Russell, JJ., concur  in opinion of Wilson, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -578,22 +581,64 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="08/15/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">08/15/2023</div>
+					<a name="all"></a><a name="08/15/2023"></a>
+					<div class="list-group">
 
 
 
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99978:&nbsp;&nbsp;</b><a href="/file.jsp?id=198521" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=198518" target="_new">In the Matter of the Joint Application of Missouri-American Water Company and DCM Land, LLC, for a Variance from the Company's Tariff Provisions Regarding the Extension of Company Mains, Respondents, vs. Office of Public Counsel, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Russell, C.J., Powell, Breckenridge, Ransom and Wilson, JJ., concur.  Draper, J., not participating.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99942:&nbsp;&nbsp;</b><a href="/file.jsp?id=198523" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=198516" target="_new">State ex rel. Monsanto Company, Relator, vs. The Honorable Michael Mullen, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge W. Brent Powell
+											<br><b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT MADE PERMANENT.  Russell, C.J., Breckenridge, Fischer, Ransom and Wilson, JJ., concur; Draper, J., dissents in part and concurs in part in separate opinion filed.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99864:&nbsp;&nbsp;</b><a href="/file.jsp?id=198522" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=198517" target="_new">Shannon Robinson, et al., Respondents, vs. Missouri Department of Health and Senior Services, Respondent; St. Louis County, Appellant; Board of Trustees, Livingston County Health Center and Melanie Hutton, Administrator, Cooper County Public Health Center, Appellants; Jefferson County Health Center, Appellant; Jackson County, Missouri, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  Russell, C.J., Powell, Fischer, Ransom and Wilson, JJ., concur.  Draper, J., not participating.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99719_and_SC99823:&nbsp;&nbsp;</b><a href="/file.jsp?id=198520" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=198519" target="_new">State of Missouri, Respondent, vs. Caitlyn Cordell Williams, Appellant.
+and
+State of Missouri, Respondent, vs. Tamarae Lynn LaRue, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Robin Ransom
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Russell, C.J., Powell, Breckenridge, Fischer and Wilson, JJ.,  concur.  Draper, J., not participating.
+									   </div>
+									</div>
 
 
 
@@ -619,13 +664,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="06/07/2016"/>
-					<a name="all"></a><a name="06/07/2016"></a>
 
 
 
@@ -644,29 +683,9 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94442:</b>&nbsp;<a href="/file.jsp?id=101877" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=101875" target="_new">Curt Peters and Cheri Peters, Appellants, vs. Wady Industries, Inc., Defendant, and Patrick Terrio, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Chief Justice Patricia Breckenridge&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Stith, Draper and Russell, JJ., concur; Fischer, J., concurs in result in separate opinion filed; Wilson, J., concurs in result in separate opinion filed; Teitelman, J., dissents in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94393:</b>&nbsp;<a href="/file.jsp?id=101876" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=101874" target="_new">Paige Parr, a minor, by and through her Conservator, Janett Waid, Jerimy Morehead, and Charles Parr, Appellants, vs. Charles Breeden, Wendy Cogdill, and Melanie Buttry, Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Chief Justice Patricia Breckenridge&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Stith, Draper and Russell, JJ., concur; Fischer, J., concurs in result in separate opinion filed; Wilson, J., concurs in result in separate opinion filed; Teitelman, J., dissents in separate opinion filed.tuu
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -700,7 +719,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="07/20/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">07/20/2023</div>
+					<a name="all"></a><a name="07/20/2023"></a>
+					<div class="list-group">
 
 
 
@@ -715,12 +746,33 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99928:&nbsp;&nbsp;</b><a href="/file.jsp?id=197721" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=197718" target="_new">Christina Forester, Appellant, vs. Crystal May, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99740:&nbsp;&nbsp;</b><a href="/file.jsp?id=197722" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=197719" target="_new">State of Missouri ex rel. Department of Natural Resources, Petitioner, vs. Fowler Land Company, Inc., and Margaret Leist Revocable Trust, Sandy Runnels and Linda Henderson, Trustees, Respondents.</a><br><b>Author: </b>&nbsp;&nbsp;Judge George W. Draper III
+											<br><b>Vote:</b>&nbsp;&nbsp;REVERSED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC100132:&nbsp;&nbsp;</b><a href="/file.jsp?id=197723" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=197720" target="_new">State of Missouri ex rel. Dr. Anna Fitz-James, Respondent, vs. Andrew Bailey, In His Official Capacity, Appellant, and Scott Fitzpatrick, et al., Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Russell, C.J., Powell, Breckenridge, Fischer and Ransom, JJ., concur; Draper, J., not participating.
+									   </div>
+									</div>
 
 
 
@@ -749,13 +801,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="05/24/2016"/>
-					<a name="all"></a><a name="05/24/2016"></a>
 
 
 
@@ -778,42 +824,12 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95337:</b>&nbsp;<a href="/file.jsp?id=101536" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=101533" target="_new">Missouri Municipal League, City of Springfield, and Richard Sheets, Appellants vs. State of Missouri, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Zel M. Fischer&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Stith, Draper, Wilson and Russell, JJ., concur; Teitelman, J., dissents in part and concurs in part in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95301:</b>&nbsp;<a href="/file.jsp?id=101537" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=101534" target="_new">State ex rel. Ryan W. Amorine, Relator vs. The Honorable Kelly Wayne Parker, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT MADE PERMANENT.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95271:</b>&nbsp;<a href="/file.jsp?id=101538" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=101535" target="_new">Peggy Stevens McGraw and Samuel C. Jones, on behalf of themselves and all others similarly situated, Appellants vs. State of Missouri, Missouri State Employees' Retirement System, Missouri Commissioner of Administration Doug Nelson, and Missouri State Treasurer Clint Zweifel, Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Per Curiam&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -831,7 +847,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="06/27/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">06/27/2023</div>
+					<a name="all"></a><a name="06/27/2023"></a>
+					<div class="list-group">
 
 
 
@@ -852,15 +880,43 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99886:&nbsp;&nbsp;</b><a href="/file.jsp?id=196978" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196974" target="_new">State of Missouri, Appellant, vs. Nicholas A. Barton, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Chief Justice Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99816:&nbsp;&nbsp;</b><a href="/file.jsp?id=196979" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196975" target="_new">Jenette Konopasek, Appellant, vs. Douglas and Laura Konopasek, Respondents.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99700:&nbsp;&nbsp;</b><a href="/file.jsp?id=196977" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196973" target="_new">Susan F. Bridegan, Appellant, vs. Gary L. Turntine, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Chief Justice Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Russell, Powell, Breckenridge, Fischer and Ransom, JJ., concur;  Draper, J., dissents without opinion.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99658:&nbsp;&nbsp;</b><a href="/file.jsp?id=196980" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196976" target="_new">State of Missouri, Respondent, vs. Lindsay Michelle Forbes, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;DISMISSED AND REMANDED.  All concur.
+									   </div>
+									</div>
 
 
 
@@ -890,13 +946,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="05/20/2016"/>
-					<a name="all"></a><a name="05/20/2016"></a>
 
 
 
@@ -925,16 +975,6 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95678:</b>&nbsp;<a href="/file.jsp?id=101431" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=101430" target="_new">Joshua Peters, Respondent, The Missouri Attorney General, Intervenor/Respondent, vs. Rachel M. Johns, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Fischer, Draper and Wilson, JJ., concur; Stith, J., dissents in  separate opinion filed; Breckenridge, C.J., and Teitelman, J., concur in  opinion of Stith, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -943,7 +983,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="06/13/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">06/13/2023</div>
+					<a name="all"></a><a name="06/13/2023"></a>
+					<div class="list-group">
 
 
 
@@ -972,24 +1024,73 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99913:&nbsp;&nbsp;</b><a href="/file.jsp?id=196624" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196617" target="_new">State of Missouri, Respondent, vs. Jarrad Ryan Vandergrift, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99896:&nbsp;&nbsp;</b><a href="/file.jsp?id=196626" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196619" target="_new">In the Interest of:   P.D.E., Appellant, vs. Juvenile Officer, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Robin Ransom
+											<br><b>Vote:</b>&nbsp;&nbsp;APPEAL DISMISSED.  Wilson, C.J., Russell, Powell, Fischer and Draper, JJ., concur; Breckenridge, J., dissents in separate opinion filed.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99871:&nbsp;&nbsp;</b><a href="/file.jsp?id=196625" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196618" target="_new">State of Missouri, Respondent, vs. Sylvester Onyejiaka, Jr., Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Robin Ransom
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99655:&nbsp;&nbsp;</b><a href="/file.jsp?id=196623" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196616" target="_new">David Prior Wilmoth, Appellant, vs. Director of Revenue, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Russell, Powell, Ransom and Draper, JJ., and Growcock, Sp.J., concur.  Fischer, J., not participating.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99567:&nbsp;&nbsp;</b><a href="/file.jsp?id=196621" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196614" target="_new">Patriots Bank, Respondent, vs. Black River Motel, LLC, et al., Appellants.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Mary R. Russell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99554:&nbsp;&nbsp;</b><a href="/file.jsp?id=196622" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196615" target="_new">State of Missouri, Respondent, vs. John A. Hamby, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge W. Brent Powell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Russell, Fischer and Ransom, JJ., concur; Breckenridge, J., dissents in separate opinion filed; Draper, J., concurs in opinion of Breckenridge, J.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99092:&nbsp;&nbsp;</b><a href="/file.jsp?id=196627" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196620" target="_new">Conservation Commission and Missouri Department of Conservation, Respondents, vs. Andrew Bailey, in his Official Capacity as Attorney General of Missouri, and Ken Zellers, in his Official Capacity as Commissioner of the Office of Administration, Appellants.</a><br><b>Author: </b>&nbsp;&nbsp;Per Curiam
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Russell, Ransom and Draper, JJ., concur; Breckenridge, J., dissents in separate opinion filed; Powell and Fischer, JJ., concur in opinion of Breckenridge, J.
+									   </div>
+									</div>
 
 
 
@@ -1009,13 +1110,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="05/03/2016"/>
-					<a name="all"></a><a name="05/03/2016"></a>
 
 
 
@@ -1046,68 +1141,30 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95205:</b>&nbsp;<a href="/file.jsp?id=100522" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100517" target="_new">Bartlett International, Inc., and Bartlett Grain Co., L.P., Respondents vs. Director of Revenue, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95181:</b>&nbsp;<a href="/file.jsp?id=100519" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100514" target="_new">Krispy Kreme Doughnut Corporation, Appellant vs. Director of Revenue, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Zel M. Fischer&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="06/08/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">06/08/2023</div>
+					<a name="all"></a><a name="06/08/2023"></a>
+					<div class="list-group">
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95139:</b>&nbsp;<a href="/file.jsp?id=100520" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100515" target="_new">Walter Barton, Appellant vs. State of Missouri, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95079:</b>&nbsp;<a href="/file.jsp?id=100518" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100513" target="_new">Edward L. Hoeber, Appellant vs. State of Missouri, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Chief Justice Patricia Breckenridge&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Stith, Draper, Teitelman and Russell, JJ., concur; Fischer, J., dissents in separate opinion filed; Wilson, J., concurs in opinion of Fischer, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC93134:</b>&nbsp;<a href="/file.jsp?id=100521" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100516" target="_new">Jodie Nevils, Appellant vs. Group Health Plan, Inc. and ACS Recovery Services, Inc., Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Richard B. Teitelman&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Fischer, Stith, Draper and Russell, JJ., concur; Wilson, J., concurs in result in separate opinion filed; Breckenridge, C.J., Fischer, Stith, Draper and Russell, JJ., concur in opinion of Wilson, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -1141,6 +1198,13 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC100077:&nbsp;&nbsp;</b><a href="/file.jsp?id=196434" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=196433" target="_new">State ex rel. Johnny A. Johnson, Petitioner, vs. David Vandergriff, Respondent</a><br><b>Author: </b>&nbsp;&nbsp;Judge Mary R. Russell
+											<br><b>Vote:</b>&nbsp;&nbsp;PETITION DENIED AND MOTION OVERRULED AS MOOT.  Wilson, C. J., Powell, Breckenridge, Fischer, and Ransom, JJ., concur; Draper, J., dissents without opinion.
+									   </div>
+									</div>
 
 
 
@@ -1172,13 +1236,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="04/19/2016"/>
-					<a name="all"></a><a name="04/19/2016"></a>
 
 
 
@@ -1197,7 +1255,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="05/16/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">05/16/2023</div>
+					<a name="all"></a><a name="05/16/2023"></a>
+					<div class="list-group">
 
 
 
@@ -1219,42 +1289,12 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95151:</b>&nbsp;<a href="/file.jsp?id=100018" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100015" target="_new">Jason D. Dodson and Jason D. Dodson, Jr., a Minor, and Eva Raine Dodson-Lohse, a Minor, and August William Davis Dodson, a Minor, said Minors appearing by the duly appointed Next Friend Jason D. Dodson, Respondent/Cross-Appellant vs. Robert P. Ferrara, M.D., and Mercy Clinic Heart and Vascular, LLC, Appellants/Cross-Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., and Stith, J., concur; Fischer and Wilson, JJ., concur in result in separate opinion filed; Draper, J., dissents in separate opinion filed; Teitelman, J., concurs in opinion of Draper, J.; Teitelman, J., dissents in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95083:</b>&nbsp;<a href="/file.jsp?id=100017" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100014" target="_new">Brittany Hunter, Respondent vs. Charles Moore, Sr., Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED AS MODIFIED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94844:</b>&nbsp;<a href="/file.jsp?id=100016" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=100013" target="_new">Ruth Mickels, et al., Appellants vs. Raman Danrad, M.D., Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Paul C. Wilson&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  Breckenridge, C.J., Fischer and Russell, JJ., concur; Teitelman, J., dissents in separate opinion filed; Stith and Draper, JJ.,  concur in opinion of Teitelman, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -1272,9 +1312,23 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99794:&nbsp;&nbsp;</b><a href="/file.jsp?id=195475" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=195473" target="_new">State ex rel. Betty Grooms, Relator, vs. The Honorable Steven A. Privette, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge W. Brent Powell
+											<br><b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT MADE PERMANENT.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99670:&nbsp;&nbsp;</b><a href="/file.jsp?id=195476" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=195474" target="_new">John Lisle, Appellant, vs. Meyer Electric Co., Inc., Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED. All concur.
+									   </div>
+									</div>
 
 
 
@@ -1313,13 +1367,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="04/05/2016"/>
-					<a name="all"></a><a name="04/05/2016"></a>
 
 
 
@@ -1327,7 +1375,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="05/02/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">05/02/2023</div>
+					<a name="all"></a><a name="05/02/2023"></a>
+					<div class="list-group">
 
 
 
@@ -1366,94 +1426,31 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95331:</b>&nbsp;<a href="/file.jsp?id=99385" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99378" target="_new">In re: Joel B. Eisenstein, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Richard B. Teitelman&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;DISCIPLINE IMPOSED.  Breckenridge, C.J., Stith, Draper and Russell, JJ., concur; Fischer, J., dissents in separate opinion filed; Wilson, J., concurs in opinion of Fischer, J.; Wilson, J., dissents in separate opinion filed; Fischer, J., concurs in opinion of Wilson, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95283:</b>&nbsp;<a href="/file.jsp?id=99380" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99373" target="_new">State ex rel. City of Grandview, Missouri, Relator vs. The Honorable Jack R. Grate, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Zel M. Fischer&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;WRIT MADE PERMANENT.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95029:</b>&nbsp;<a href="/file.jsp?id=99382" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99375" target="_new">Office Depot, Inc., Respondent vs. Director of Revenue, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95013:</b>&nbsp;<a href="/file.jsp?id=99384" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99377" target="_new">Janet S. Delana, Individually, and as the Wife of Decedent Tex C. Delana, Appellant vs. CED Sales, Inc. d/b/a Odessa Gun & Pawn, Charles Doleshal, and Derrick Dady, Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Richard B. Teitelman&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED IN PART; REVERSED IN PART; REMANDED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99464:&nbsp;&nbsp;</b><a href="/file.jsp?id=195114" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=195113" target="_new">State of Missouri, Respondent, vs. Randy G. Teter, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Russell, Powell and Ransom, JJ., concur; Breckenridge, J., concurs in separate opinion filed; Wilson, C.J., and Draper, J., concur in separate opinion of Breckenridge., J.
+									   </div>
+									</div>
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95003:</b>&nbsp;<a href="/file.jsp?id=99386" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99379" target="_new">Macon County Emergency Services Board, Appellant vs. Macon County Commission, Alan Wyatt, in his official capacity as a Macon County Commissioner, Drew Belt, in his official capacity as a Macon County Commissioner, and Jon Dwiggins, in his official capacity as a Macon County Commissioner, Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED. All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94999:</b>&nbsp;<a href="/file.jsp?id=99381" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99374" target="_new">IBM Corporation, Respondent/Cross-Appellant vs. Director of Revenue, Appellant/Cross-Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED. All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94622:</b>&nbsp;<a href="/file.jsp?id=99383" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=99376" target="_new">Richard D. Davis, Appellant vs. State of Missouri, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -1490,7 +1487,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="04/18/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">04/18/2023</div>
+					<a name="all"></a><a name="04/18/2023"></a>
+					<div class="list-group">
 
 
 
@@ -1498,13 +1507,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="03/15/2016"/>
-					<a name="all"></a><a name="03/15/2016"></a>
 
 
 
@@ -1547,6 +1550,13 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99517:&nbsp;&nbsp;</b><a href="/file.jsp?id=194614" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=194613" target="_new">Charter Communications Entertainment I, LLC, Respondent, vs. Director of Revenue, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Powell, Fischer, Ransom and Draper, JJ., and Clark II, Sp.J., concur.  Russell, J., not participating.
+									   </div>
+									</div>
 
 
 
@@ -1565,68 +1575,18 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95110:</b>&nbsp;<a href="/file.jsp?id=98660" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=98655" target="_new">State of Missouri, Respondent vs. Daniel D. Hartman, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  Breckenridge, C.J., Stith, Teitelman and Russell, JJ., concur; Wilson, J., dissents in separate opinion filed; Fischer, J., concurs in opinion of Wilson, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95055:</b>&nbsp;<a href="/file.jsp?id=98661" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=98656" target="_new">Harry Fischer, Appellant vs. Director of Revenue, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Paul C. Wilson&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94942:</b>&nbsp;<a href="/file.jsp?id=98659" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=98654" target="_new">State ex rel. Heart of America Council, Boy Scouts of America and Boy Scouts of America, Relators vs. The Honorable Charles H. McKenzie, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT MADE PERMANENT.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94923:</b>&nbsp;<a href="/file.jsp?id=98662" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=98657" target="_new">State of Missouri, Respondent vs. S.F., Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC93648:</b>&nbsp;<a href="/file.jsp?id=98658" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=98653" target="_new">State of Missouri, Respondent vs. Robert Blake Blurton, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Chief Justice Patricia Breckenridge&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Russell, J., concurs; Fischer, J., concurs in separate opinion filed; Wilson, J., concurs in opinion of Fischer, J.; Draper, J., concurs in result in separate opinion filed; Stith and Teitelman, JJ., concur in opinion of Draper, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -1639,7 +1599,19 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="04/04/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">04/04/2023</div>
+					<a name="all"></a><a name="04/04/2023"></a>
+					<div class="list-group">
 
 
 
@@ -1661,13 +1633,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="03/01/2016"/>
-					<a name="all"></a><a name="03/01/2016"></a>
 
 
 
@@ -1698,6 +1664,13 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99656:&nbsp;&nbsp;</b><a href="/file.jsp?id=194134" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=194133" target="_new">Liana MacColl (formerly known as Liana M. Bradford), Appellant, vs. Missouri State Highway Patrol and Boone County, Missouri, Sheriff, Respondents.</a><br><b>Author: </b>&nbsp;&nbsp;Judge George W. Draper III
+											<br><b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Wilson, C.J., Russell and Breckenridge, JJ., concur; Fischer, J., dissents in separate opinion filed; Powell and Ransom, JJ., concur in opinion of Fischer, J.
+									   </div>
+									</div>
 
 
 
@@ -1738,17 +1711,19 @@
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95194:</b>&nbsp;<a href="/file.jsp?id=98034" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=98033" target="_new">State of Missouri, Respondent vs. Luis Zetina-Torres, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED. All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="03/21/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">03/21/2023</div>
+					<a name="all"></a><a name="03/21/2023"></a>
+					<div class="list-group">
 
 
 
@@ -1780,13 +1755,7 @@
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="02/09/2016"/>
-					<a name="all"></a><a name="02/09/2016"></a>
 
 
 
@@ -1809,27 +1778,83 @@
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99818:&nbsp;&nbsp;</b><a href="/file.jsp?id=193509" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193502" target="_new">In re:  Dan K. Purdy, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge George W. Draper III
+											<br><b>Vote:</b>&nbsp;&nbsp;SUSPENDED.  Russell, Breckenridge and Ransom, JJ., concur; Fischer, J., dissents in separate opinion filed; Wilson, C.J., and Powell, J., concur in opinion of Fischer, J.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99799:&nbsp;&nbsp;</b><a href="/file.jsp?id=193507" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193499" target="_new">State of Missouri, Respondent, vs. Jason Michael Hurst, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Mary R. Russell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Breckenridge, Fischer, Ransom and Draper, JJ., concur; Powell, J., concurs in separate opinion filed.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99786:&nbsp;&nbsp;</b><a href="/file.jsp?id=193506" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193498" target="_new">In the Interest of:  L.N.G.S., Juvenile; Juvenile Officer, Respondent, and Missouri Department of Social Services, Children's Division, Respondent, vs. A.S. and A.S., Appellants.</a><br><b>Author: </b>&nbsp;&nbsp;Chief Justice Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;APPEAL DISMISSED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99747:&nbsp;&nbsp;</b><a href="/file.jsp?id=193508" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193501" target="_new">State of Missouri, Respondent, vs. Jacob Hilbert, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Robin Ransom
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99701:&nbsp;&nbsp;</b><a href="/file.jsp?id=193512" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193511" target="_new">Glendale Shooting Club, Inc., A Missouri Non-Profit Corporation, Respondent, vs. William K. Landolt and Jeri F. Landolt, Appellants.</a><br><b>Author: </b>&nbsp;&nbsp;Judge W. Brent Powell
+											<br><b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED. All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99650:&nbsp;&nbsp;</b><a href="/file.jsp?id=193505" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193497" target="_new">Kristine Hill and Dennis Hill, Relators, vs. The Honorable Stanley J. Wallach, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Chief Justice Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT QUASHED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99591:&nbsp;&nbsp;</b><a href="/file.jsp?id=193504" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193496" target="_new">Wesley Hatmon, Appellant, vs. State of Missouri, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Chief Justice Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99488:&nbsp;&nbsp;</b><a href="/file.jsp?id=193503" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193495" target="_new">Cedar County Commission, et al., Appellants, vs. Governor Michael Parson, et al., Respondents.</a><br><b>Author: </b>&nbsp;&nbsp;Chief Justice Paul C. Wilson
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
@@ -1854,75 +1879,35 @@
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="03/07/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">03/07/2023</div>
+					<a name="all"></a><a name="03/07/2023"></a>
+					<div class="list-group">
 
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95094:</b>&nbsp;<a href="/file.jsp?id=97278" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=97241" target="_new">State of Missouri, Respondent vs. Claude Chambers, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Stith, Draper and Teitelman, JJ., concur; Breckenridge, C.J., concurs in separate opinion filed; Fischer, J., concurs in result in separate opinion filed; Breckenridge, C.J., and Wilson, J., concur in opinion of Fischer, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95088:</b>&nbsp;<a href="/file.jsp?id=97276" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=97239" target="_new">William David Hill, Appellant, vs. Oliver "Glenn" Boyer, Sheriff of Jefferson County, Missouri, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Richard B. Teitelman&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94977:</b>&nbsp;<a href="/file.jsp?id=97277" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=97240" target="_new">State of Missouri, Respondent, vs. Blaec James Lammers, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Mary R. Russell&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Fischer, Stith, Draper and Wilson, JJ., concur; Teitelman, J., dissents in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94954:</b>&nbsp;<a href="/file.jsp?id=97274" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=97237" target="_new">State of Missouri, Appellant vs. Pierre Clay, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Breckenridge, C.J., Fischer, Wilson and Russell, JJ., concur; Teitelman, J., dissents in separate opinion filed; Draper, J., concurs in opinion of Teitelman, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94936_and_SC94989:</b>&nbsp;<a href="/file.jsp?id=97275" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=97273" target="_new">State of Missouri, Appellant, vs. Raymond Robinson, Respondent.
-(and)
-State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  Breckenridge, C.J., Fischer, Wilson and Russell, JJ., concur; Teitelman, J., dissents in separate opinion filed; Draper, J., concurs in opinion of Teitelman, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -1945,13 +1930,7 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="01/26/2016"/>
-					<a name="all"></a><a name="01/26/2016"></a>
 
 
 
@@ -1983,6 +1962,13 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC98907:&nbsp;&nbsp;</b><a href="/file.jsp?id=193119" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=193118" target="_new">James J. Wilson, et al., Respondents/Cross-Appellants, vs. City of St. Louis, et al., Respondents, and Adam Layne, Appellant/Cross-Respondent.  City of St. Louis, Respondent, vs. State of Missouri, Appellant/Cross-Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED IN PART AND REVERSED IN PART.  All concur.
+									   </div>
+									</div>
 
 
 
@@ -2005,7 +1991,19 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="02/14/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">02/14/2023</div>
+					<a name="all"></a><a name="02/14/2023"></a>
+					<div class="list-group">
 
 
 
@@ -2034,55 +2032,15 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95098:</b>&nbsp;<a href="/file.jsp?id=96558" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=96554" target="_new">In re: Sanford P. Krigel, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;DISCIPLINE IMPOSED.  Stith and Russell, JJ., concur; Breckenridge, C.J., concurs in part and dissents in part in separate opinion filed; Fischer, J., dissents in separate opinion filed; Wilson and Teitelman, JJ., concur in opinion of Fischer, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94924:</b>&nbsp;<a href="/file.jsp?id=96560" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=96556" target="_new">State of Missouri, Respondent vs. Justin Floyd Eugene Jones, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Paul C. Wilson&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Fischer, Stith and Russell, JJ., concur; Draper, J., concurs in part and dissents in part in separate opinion filed; Teitelman, J., concurs in opinion of Draper, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94745:</b>&nbsp;<a href="/file.jsp?id=96559" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=96555" target="_new">State of Missouri, Appellant vs. Jerri Smiley, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Paul C. Wilson&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;APPEAL DISMISSED.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94658:</b>&nbsp;<a href="/file.jsp?id=96557" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=96553" target="_new">State of Missouri, Respondent vs. Chadwick Leland Walter, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge George W. Draper III&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  Breckenridge, C.J., Stith and Teitelman, JJ., concur; Wilson, J., dissents in separate opinion filed; Russell, J., dissents in separate opinion filed; Fischer, J., concurs in opinion of Russell, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
@@ -2097,13 +2055,7 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
-				</td>
-			</tr>
 
-			<tr>
-				<td align="left" width="100%">
-					<input type="button" width="10" name="handdowndate" onClick="dateSearch(this,this.form)" value="01/12/2016"/>
-					<a name="all"></a><a name="01/12/2016"></a>
 
 
 
@@ -2124,9 +2076,23 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99813:&nbsp;&nbsp;</b><a href="/file.jsp?id=192436" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=192434" target="_new">State ex rel. Andrew Bailey, Relator, vs. The Honorable Robin E. Fulton, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Patricia Breckenridge
+											<br><b>Vote:</b>&nbsp;&nbsp;PRELIMINARY WRIT MADE PERMANENT AS MODIFIED.  All concur.
+									   </div>
+									</div>
 
 
 
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99625:&nbsp;&nbsp;</b><a href="/file.jsp?id=192435" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=192433" target="_new">State of Missouri, Respondent, vs. Clinton M. Boyd, Appellant.</a><br><b>Author: </b>&nbsp;&nbsp;Judge W. Brent Powell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  All concur.
+									   </div>
+									</div>
 
 
 
@@ -2145,7 +2111,19 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
 
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="01/31/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">01/31/2023</div>
+					<a name="all"></a><a name="01/31/2023"></a>
+					<div class="list-group">
 
 
 
@@ -2194,110 +2172,247 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95102:</b>&nbsp;<a href="/file.jsp?id=95900" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=95894" target="_new">Miss Dianna's School of Dance, Inc., Appellant vs. Director of Revenue, Respondent.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Zel M. Fischer&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Wilson and Russell, JJ., concur; Draper, J., dissents in separate opinion filed; Stith and Teitelman, JJ., concur in opinion of Draper, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC95066:</b>&nbsp;<a href="/file.jsp?id=95903" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=95898" target="_new">Lashiya D. Ellis, Respondent vs. JF Enterprises, LLC d/b/a Jeremy Franklin's Suzuki of Kansas City, Appellant, Condor Capital Corp., Defendant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Paul C. Wilson&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  Breckenridge, C.J., Fischer and Russell, JJ., concur; Teitelman, J., dissents in separate opinion filed; Stith and Draper, JJ., concur in opinion of Teitelman, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94927:</b>&nbsp;<a href="/file.jsp?id=95899" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=95893" target="_new">State of Missouri, Respondent vs. Derrick L. Carrawell, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Zel M. Fischer&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Stith and Draper, JJ., concur; Wilson, J., concurs in separate opinion filed; Breckenridge, C.J., and Russell, J., concur in opinion of Wilson, J.; Teitelman, J., concurs in part and dissents in part in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94840:</b>&nbsp;<a href="/file.jsp?id=95973" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=95897" target="_new">Kristin Nicole Stiers, Respondent vs. Director of Revenue, Appellant.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Fischer, Draper and Teitelman, JJ., concur; Wilson, J., dissents in separate opinion filed; Breckenridge, C.J., and Russell, J., concur in opinion of Wilson, J.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94831:</b>&nbsp;<a href="/file.jsp?id=95902" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=95896" target="_new">The Metropolitan St. Louis Sewer District, Appellant vs. The City of Bellefontaine Neighbors, Respondent, Sherrell Construction, Inc., et al., Defendants.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Breckenridge, C.J., Draper, Wilson, Teitelman and Russell, JJ., concur; Fischer, J., concurs in separate opinion filed.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
 
-							<table>
-								<tr>
-									<td>
-										<b>SC94746:</b>&nbsp;<a href="/file.jsp?id=95901" target="_new"><b>Overview/Summary</b></a><br />
-										<a href="/file.jsp?id=95895" target="_new">City of DeSoto, a Political Subdivision of the State of Missouri, and James Acres, Appellants vs. Jeremiah W. Nixon, Governor of the State of Missouri, and Chris Koster, Attorney General of the State of Missouri, Respondents.</a><br/>
-				  						<b>Author:</b>&nbsp;&nbsp;Judge Laura Denvir Stith&nbsp;&nbsp;<b>Vote:</b>&nbsp;&nbsp;REVERSED AND JUDGMENT ENTERED IN FAVOR OF APPELLANTS.  All concur.
-										<br />&nbsp;
-									</td>
-								</tr>
-							</table>
 
 
-				</td>
-			</tr>
 
-	</table>
 
-</form></div> </div>
-<div class="col-md-4" id="sidebar"><div class="panel panel-default">
-    <div class="panel-body sidebar-nav-style">
 
 
-</div>
-</div> </div>
-</div>
-</div>
-<aside id="footer-widgets"><div class="container"><div class="row">
-<div class="col-md-6"><h3 class="footer-widget-title">Find a Court</h3>
+
+
+
+
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99715_and_SC99714:&nbsp;&nbsp;</b><a href="/file.jsp?id=192037" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=192033" target="_new">Brock Smith, Appellant, vs. St. Louis County Police, et al., Respondents.
+and
+Gary Nelson Ford, Appellant, vs. Col. Jon Belmar, Chief of Police as Chief Law Enforcement Officer of St. Louis County, Pursuant to County Charter, and Missouri State Highway Patrol, and Jim Buckles, Sheriff of St. Louis County as "Chief Law Enforcement Official" as Defined by RSMo 589.404(3), Respondents.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Russell, Powell and Ransom, JJ., concur; Breckenridge, J., dissents in separate opinion filed; Draper, J., concurs in opinion of Breckenridge, J.
+									   </div>
+									</div>
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99627:&nbsp;&nbsp;</b><a href="/file.jsp?id=192039" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=192035" target="_new">In re:  Philip E. Prewitt, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Robin Ransom
+											<br><b>Vote:</b>&nbsp;&nbsp;SUSPENDED.  All concur.
+									   </div>
+									</div>
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99592:&nbsp;&nbsp;</b><a href="/file.jsp?id=192040" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=192036" target="_new">Lillian Singleton, Respondent, vs. Sheila Singleton, et al., Appellants.</a><br><b>Author: </b>&nbsp;&nbsp;Judge George W. Draper III
+											<br><b>Vote:</b>&nbsp;&nbsp;REVERSED AND REMANDED.  All concur.
+									   </div>
+									</div>
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99419:&nbsp;&nbsp;</b><a href="/file.jsp?id=192038" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=192034" target="_new">Christopher Zang, Appellant, vs. City of St. Charles, Missouri, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Robin Ransom
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Russell, Powell, Breckenridge and Draper, JJ., concur; Fischer, J., concurs in result.
+									   </div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
+
+		<div class="margin-bottom-15">
+			<input type="button" width="10" name="handdowndate" value="01/10/2023" class="col-md-2 handdownbutton selected-date" tabindex="0" disabled="">
+			<div class="col-md-10 no-padding">
+				<div class="panel panel-default handdown no-margin-bottom">
+					<div class="panel-heading sr-only">01/10/2023</div>
+					<a name="all"></a><a name="01/10/2023"></a>
+					<div class="list-group">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99732:&nbsp;&nbsp;</b><a href="/file.jsp?id=191593" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=191589" target="_new">M.O., Respondent, vs. GEICO General Insurance Company and Government Employees Insurance Company, Appellants.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Zel M. Fischer
+											<br><b>Vote:</b>&nbsp;&nbsp;VACATED AND REMANDED.  All concur.
+									   </div>
+									</div>
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99605:&nbsp;&nbsp;</b><a href="/file.jsp?id=191592" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=191588" target="_new">Thomas Dubuc, Appellant, vs. Treasurer of the State of Missouri Custodian of the Second Injury Fund, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Mary R. Russell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Powell, Fischer and Ransom, JJ., concur; Breckenridge, J., concurs in part and dissents in part in separate opinion filed; Draper, J., concurs in opinion of Breckenridge, J.
+									   </div>
+									</div>
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99563:&nbsp;&nbsp;</b><a href="/file.jsp?id=191591" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=191587" target="_new">James Swafford, Appellant, vs. Treasurer of Missouri as Custodian of Second Injury Fund, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Mary R. Russell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Powell, Fischer and Ransom, JJ., concur; Breckenridge, J., dissents in separate opinion filed; Draper, J., concurs in opinion of Breckenridge, J.
+									   </div>
+									</div>
+
+
+
+								   <div class="list-group-item">
+										   <div class="list-group-item-text">
+											<b>SC99493:&nbsp;&nbsp;</b><a href="/file.jsp?id=191590" target="_new"><b>Overview/Summary</b></a><br>
+											<a href="/file.jsp?id=191586" target="_new">Gary M. Weibrecht, Appellant, vs. Treasurer of Missouri as Custodian of Second Injury Fund, Respondent.</a><br><b>Author: </b>&nbsp;&nbsp;Judge Mary R. Russell
+											<br><b>Vote:</b>&nbsp;&nbsp;AFFIRMED.  Wilson, C.J., Powell, Fischer, Ransom and Draper, JJ., concur;  Breckenridge, J., dissents in separate opinion filed.
+									   </div>
+									</div>
+
+
+						</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
+
+
+</form></div>
+        </div>
+        </div>
+        <aside id="footer-widgets"><div class="container"><div class="row no-gutter">
+<div class="col-md-7"><h3 class="footer-widget-title">Find a Court/Person</h3>
 <h4 style="color: #fff">Search a Location</h4>
-<div class="form-group"><label for="location_city_zip" class="control-label sr-only">Search Court by City or Zip</label> <div class="col-md-7"><form action="/mcw/findacourt/resultsAction.htm" method="post" class="form-horizontal" role="form">
-<input name="courtPageType" value="court" class="hidden" id="courtPageType" /> <div class="input-group"><label for="locationQueryCity" class="control-label sr-only">City</label> <input pattern="^[A-Za-z.- ]{1,60}$" placeholder="City" name="locationQueryCity" value="" maxlength="60" style="width: 70%" class="form-control" title="" id="locationQueryCity" /> <label for="locationQueryZip" class="control-label sr-only">Zip</label> <input placeholder="Zip" name="locationQueryZip" value="" style="width: 30%" class="form-control" id="locationQueryZip" /> <span class="input-group-btn"><input type="submit" value="Find" class="btn btn-primary" /> </span></div>
+<div class="form-group"><div class="col-md-7"><form action="/mcw/findacourt/resultsAction.htm" method="post" class="form-horizontal" role="form">
+<input name="courtPageType" value="court" type="hidden" id="courtPageType"> <div class="input-group"><label for="locationQueryCity" class="control-label sr-only">City</label> <input list="citiesFooter" autocomplete="off" pattern="^[A-Za-z.- ]{1,60}$" placeholder="City" name="locationQueryCity" value="" maxlength="60" style="width: 70%" class="form-control ajaxClass" title="" id="locationQueryCity">
+<datalist id="citiesFooter">
+<div id="cityListFooter"></div>
+</datalist>
+ <label for="locationQueryZip" class="control-label sr-only">Zip</label> <input placeholder="Zip" name="locationQueryZip" value="" style="width: 30%" class="form-control" id="locationQueryZip"> <span class="input-group-btn"><input value="Find" class="btn btn-primary" type="submit"> </span></div>
 </form>
 </div>
 <div class="col-md-1 text-center"><p>or</p>
 </div>
-<label for="inputValue" class="control-label sr-only">Select Court</label> <div class="col-md-4"><form action="/mcw/findacourt/getCountyCourtData.htm" method="post" class="form-horizontal" id="courtSearchCircuitFooterForm" role="form">
-<select name="searchCourtDropDownFooter" class="form-control" id="searchCourtDropDownFooter" onchange="this.form.submit()">
-
-<option value="" disabled="disabled" selected="selected">-- Court --</option>
+<form action="/mcw/findacourt/getCountyCourtData.htm" method="post" class="form-horizontal" id="courtSearchCircuitFooterForm" role="form">
+    <label for="searchCourtDropDownFooter" class="control-label sr-only">Select Court or County</label> <div class="col-md-4">
+<div class="input-group">
+    <select name="searchCourtDropDownFooter" class="form-control" id="searchCourtDropDownFooter">
+<option value="" disabled="disabled" selected="selected">County/Court</option>
  <option value="Municipal">Municipal Divisions</option>
  <option value="Adair">Adair</option>
  <option value="Andrew">Andrew</option>
@@ -2419,87 +2534,95 @@ State of Missouri, Appellant, vs. Steve Lomax, Respondent.</a><br/>
  <option value="Western District">Court of Appeals - Western District</option>
  <option value="Supreme Court">Supreme Court</option>
  <option value="OSCA">Office of State Courts Administrator</option>
-</select> </form>
+</select>
+<span class="input-group-btn"><input value="Find" class="btn btn-primary" type="submit"> </span>
 </div>
+
+</div></form>
 </div>
 <div class="clearfix"></div>
 <h4 style="color: #fff">Find Judicial Personnel</h4>
 <div class="form-group"><div class="col-md-7"><form action="/mcw/findacourt/resultsAction.htm" method="post" class="form-horizontal" role="form">
-<input name="personPageType" value="person" class="hidden" /> <div class="input-group"><input placeholder="First" name="personQueryFirst" value="" style="width: 50%" class="form-control" id="personQueryFirst" /> <label for="personnel_last_name" class="control-label sr-only">Search by Last Name</label> <input placeholder="Last" name="personQueryLast" value="" style="width: 50%" class="form-control" id="personQueryLast" /> <span class="input-group-btn"><input type="submit" value="Find" class="btn btn-primary" /> </span></div>
+<input name="personPageType" value="person" type="hidden"> <div class="input-group"><label for="personQueryFirst" class="sr-only">Search By First Name</label><input placeholder="First" name="personQueryFirst" value="" style="width: 50%" class="form-control" id="personQueryFirst"> <label for="personQueryLast" class="control-label sr-only">Search by Last Name</label> <input placeholder="Last" name="personQueryLast" value="" style="width: 50%" class="form-control" id="personQueryLast"> <span class="input-group-btn"><input value="Find" class="btn btn-primary" type="submit"> </span></div>
 </form>
 </div>
 <div class="col-md-1 text-center"><p>or</p>
 </div>
-<label for="inputValue" class="control-label sr-only">Select Court</label> <div class="col-md-4"><form action="/mcw/findacourt/resultsAction.htm" method="post" class="form-horizontal" id="personQueryTitleFooterForm" role="form">
-<input name="personPageType" value="person" class="hidden" /> <select name="personQueryTitleFooter" style="width: 80%; display: inline-block" class="form-control pull-left" id="personQueryTitleFooter" onchange="this.form.submit()">
-<option value="" disabled="disabled" selected="selected">Position</option>
- <optgroup label="Judge"> <option value="Supreme Court Judge">Supreme Court</option>
- <option value="Appellate Court Judge">Appellate Court</option>
- <option value="Presiding Judge">Presiding</option>
- <option value="Circuit Judge">Circuit</option>
- <option value="Associate Circuit Judge">Associate Circuit</option>
- </optgroup> <option value="Circuit Clerk">Circuit Clerk</option>
- <option value="Juvenile Officer">Juvenile Officer</option>
- <option value="Court Administrator">Court Administrator</option>
- <option value="Commissioner">Commissioner</option>
-</select>
-<span class="fa fa-exclamation-circle list-inline pull-left" data-toggle="tooltip" data-placement="top" title="Additional staff may be available by court-specific search" style="width: 10%;padding-left: 10%; padding-right:10%; padding-top:9px;"> </span>
- </form>
+<form action="/mcw/findacourt/resultsAction.htm" method="post" class="form-horizontal" id="personQueryTitleFooterForm" role="form">
+    <input name="personPageType" value="person" type="hidden">
+    <label for="personQueryTitleFooter" class="control-label sr-only">Select Court</label> <div class="col-md-4">
+<div class="input-group">
+<span class="input-group-addon" style="padding: 0 7px; padding: 0 7px; background: white; color: black; border: 1px solid #ccc;"> <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="Additional staff may be available by court-specific search"> </span></span>
+    <select name="personQueryTitleFooter" class="form-control pull-left" id="personQueryTitleFooter">
+                                                            <option value="" disabled="disabled" selected="selected">
+                                                                Position</option>
+                                                            <optgroup label="Judge">
+                                                                <option value="Supreme Court Judge">Supreme Court
+                                                                </option>
+                                                                <option value="Appellate Court Judge">Appellate Court
+                                                                </option>
+                                                                <option value="Presiding Judge">Presiding</option>
+                                                                <option value="Circuit Judge">Circuit</option>
+                                                                <option value="Associate Circuit Judge">Associate
+                                                                    Circuit</option>
+                                                            </optgroup>
+                                                            <option value="Circuit Clerk">Circuit Clerk</option>
+                                                            <option value="Juvenile Officer">Juvenile Officer</option>
+                                                            <option value="Court Administrator">Court Administrator
+                                                            </option>
+                                                            <option value="Court Reporter">Court Reporter</option>
+                                                            <option value="Commissioner">Commissioner</option>
+                                                            <option value="Municipal Court Clerk">Municipal Court Clerk
+                                                            </option>
+                                                            <option value="Municipal Deputy Clerk">Municipal Deputy
+                                                                Clerk</option>
+                                                            <option value="Municipal Court Administrator">Municipal
+                                                                Court Administrator</option>
+                                                            <option value="Municipal Judge">Municipal Judge</option>
+                                                            <option value="Municipal Provisional/Substitute Judge">
+                                                                Municipal Provisional/Substitute Judge</option>
+                                                            <option value="ADA Coordinator">ADA Coordinator</option>
+    </select>
+    <span class="input-group-btn"><input value="Find" class="btn btn-primary" type="submit"> </span>
 </div>
+
+</div></form>
 </div>
 <!-- /input-group --> </div>
-<div class="col-md-5 col-md-offset-1"><h3 class="footer-widget-title"><br />
-</h3>
-<ul class="list-unstyled double">
+<div class="col-md-4 col-md-offset-1">
+<ul class="list-unstyled double padding-top-60 margin-top-10">
     <li><a href="https://www.courts.mo.gov/casenet" target="_blank">Case.net</a> </li>
     <li><a href="/page.jsp?id=594">Newsroom</a> </li>
     <li><a href="https://www.courts.mo.gov/ecf" target="_blank">eFiling</a> </li>
-    <li><a href="http://www.moga.mo.gov/mostatutes/statutesAna.html">Missouri Statutes</a> </li>
+    <li><a href="https://www.revisor.mo.gov/main/Home.aspx" title="link to index for Revised Statutes of Missouri">Missouri Statutes</a> </li>
     <li><a href="https://www.courts.mo.gov/pbw" target="_blank">Make a Payment</a> </li>
     <li><a href="/page.jsp?id=5240">Representing Yourself</a> </li>
 </ul>
 </div>
 </div>
 <!-- row --> </div>
-<!-- container --> </aside><footer id="footer"><p />
-<ul class="list-inline">
-<li><a title="Careers" href="/page.jsp?id=3171">Careers</a> </li>
-<li><a title="Awards and Bids" href="/page.jsp?id=620">Awards &amp; Bids</a> </li>
-<li><a title="Notices" href="/page.jsp?id=7100">Notices</a> </li>
-<li><a title="Related Sites" href="/page.jsp?id=592">Related Sites</a> </li>
-<li><a title="Site Map" href="/page.jsp?id=942">Site Map</a> </li>
-<li><a title="Contact (opens in new window)" href="javascript:contactWindow()">Contact</a> </li>
-<li><a title="About Your Missouri Courts Website" href="/page.jsp?id=622">About</a> </li>
-<li><a title="CIC Log in" href="/cic">CIC Log in</a> <br />
-</li>
-</ul>
-<p></footer></p>
-<div id="back-top"><a href="#header"></a></div>
-<div role="dialog" tabIndex="-1" aria-hidden="true" id="myModal" class="modal fade" aria-labelledby="myModalLabel"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button> <h4 id="myModalLabel" class="modal-title">Subscribe to E-Mail notifications </h4>
-</div>
-<div class="modal-body clearfix"><div id="edit-newsletters" class="form-checkboxes"><div class="col-md-6"><div class="form-item form-type-checkbox form-item-newsletters-5"><input id="edit-newsletters-5" class="form-checkbox" type="checkbox" value="5" name="newsletters[5]" /> <label class="option" for="edit-newsletters-5">Administrative Order &amp;<br class="hidden-xs hidden-sm visible-md visible-lg" />
-Rule Changes </label></div>
-<div class="form-item form-type-checkbox form-item-newsletters-216"><input id="edit-newsletters-216" class="form-checkbox" type="checkbox" value="216" name="newsletters[216]" /> <label class="option" for="edit-newsletters-216">Opinions </label></div>
-<div class="form-item form-type-checkbox form-item-newsletters-217"><input id="edit-newsletters-217" class="form-checkbox" type="checkbox" value="217" name="newsletters[217]" /> <label class="option" for="edit-newsletters-217">Oral Argument Schedule </label></div>
-</div>
-<div class="col-md-6"><div class="form-item form-type-checkbox form-item-newsletters-823"><input id="edit-newsletters-823" class="form-checkbox" type="checkbox" value="823" name="newsletters[823]" /> <label class="option" for="edit-newsletters-823">Disciplinary Decisions </label></div>
-<div class="form-item form-type-checkbox form-item-newsletters-4"><input id="edit-newsletters-4" class="form-checkbox" type="checkbox" value="4" name="newsletters[4]" /> <label class="option" for="edit-newsletters-4">Announcements </label></div>
-<div class="form-item form-type-checkbox form-item-newsletters-1"><input id="edit-newsletters-1" class="form-checkbox" type="checkbox" value="1" name="newsletters[1]" /> <label class="option" for="edit-newsletters-1">News Releases </label></div>
-</div>
-<div class="col-sm-12 margin-top-15"><div class="input-group  margin-top-5 margin-bottom-15"><input class="form-control" value="" placeholder="E-Mail Address" /> <div class="input-group-btn"><button tabIndex="-1" class="btn btn-primary">Subscribe</button><button aria-expanded="false" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="sr-only">Toggle Dropdown</span></button> <ul role="menu" class="dropdown-menu dropdown-menu-right">
-<li><a href="#">Unsubscribe</a> </li>
-</ul>
-</div>
-</div>
-<a href="#">Track this Case or Vine</a> </div>
-</div>
-</div>
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal">Close</button> </div>
-</div>
-</div>
-</div> </div>
-<!-- boxed --> </div>
-<!-- sb-site -->
-</body>
-</html>
+<!-- container --> </aside> <footer id="footer">
 
+    <ul class="list-inline">
+        <li><a title="Careers" href="/careers/">Careers</a> </li>
+        <li><a title="Awards and Bids" href="/page.jsp?id=620">Awards &amp; Bids</a> </li>
+        <li><a title="Notices" href="/page.jsp?id=7100">Notices</a> </li>
+        <li><a title="Related Sites" href="/page.jsp?id=592">Related Sites</a> </li>
+        <li><a title="Site Map" href="/page.jsp?id=942">Site Map</a> </li>
+        <li><a title="Contact (opens in new window)" href="javascript:contactWindow()">Contact</a> </li>
+        <li><a title="Privacy Policy" href="/page.jsp?id=161876">Privacy Statement</a></li>
+        <li><a title="About Your Missouri Courts Website" href="/page.jsp?id=622">About</a> </li>
+        <li><a title="CIC Log in" href="/page.jsp?id=55145">CIC Log in</a>
+
+        </li>
+    </ul>
+    <p>
+</p>
+</footer>
+<div id="back-top" style="display: block;">
+    <a href="#header"><span class="fa fa-chevron-up"><i class="sr-only">Back to top</i></span></a>
+</div>
+
+
+
+<div class="" style="background: rgb(0, 0, 0);"></div><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>

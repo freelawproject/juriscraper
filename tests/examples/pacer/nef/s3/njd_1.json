@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "KOONES v. KEHATI",
-      "date_filed": "2023-01-30",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2023-01-30",
@@ -19,7 +19,12 @@
           "short_description": "Status Conference"
         }
       ],
-      "docket_number": "2:22-cv-06575"
+      "docket_number": "2:22-cv-06575",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "JMV",
+      "federal_dn_judge_initials_referred": "LDW",
+      "federal_dn_office_code": "2"
     }
   ],
   "email_recipients": [

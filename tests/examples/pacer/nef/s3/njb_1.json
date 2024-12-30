@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Hollister Construction Services, LLC",
-      "date_filed": "2023-01-19",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2023-01-19",
@@ -19,7 +19,12 @@
           "short_description": "Determination of Adjournment Request"
         }
       ],
-      "docket_number": "19-27439"
+      "docket_number": "19-27439",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "MBK",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
     }
   ],
   "email_recipients": []

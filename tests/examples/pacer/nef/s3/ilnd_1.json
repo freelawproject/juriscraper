@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Street v. Footprint Acquisition, LLC",
-      "date_filed": "2021-08-12",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-08-12",
@@ -19,7 +19,12 @@
           "short_description": "status report"
         }
       ],
-      "docket_number": "1:21-cv-02975"
+      "docket_number": "1:21-cv-02975",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "1"
     }
   ],
   "email_recipients": [

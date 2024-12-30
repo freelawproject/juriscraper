@@ -9,6 +9,7 @@ History:
  - 2015-10-23, mlr: Updated to handle annoying situation.
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
 """
+
 from lxml import html
 
 from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
@@ -64,7 +65,7 @@ class Site(OpinionSite):
             url_opinion = False
             for link in cell.xpath(path_link):
                 text = link.text_content().strip()
-                url = link.attrib["href"]
+                url = link.attrib["href"].replace("http://", "https://")
                 urls.append(url)
                 if "Opinion" in text:
                     url_opinion = url

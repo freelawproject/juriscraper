@@ -140,6 +140,7 @@ class BaseReport:
         pacer_doc_id: str,
         pacer_magic_num: Optional[str],
         got_receipt: str,
+        de_seq_num: Optional[str] = None,
     ) -> Tuple[Response, str]:
         """Query the doc1 download URL.
 
@@ -181,6 +182,9 @@ class BaseReport:
         if pacer_magic_num is not None:
             data["magic_num"] = pacer_magic_num
 
+        if de_seq_num:
+            data["de_seq_num"] = de_seq_num
+
         timeout = (60, 300)
         logger.info(f"POSTing URL: {url} with params: {data}")
         r = self.session.post(url, data=data, timeout=timeout)
@@ -192,6 +196,7 @@ class BaseReport:
         pacer_doc_id: int,
         pacer_magic_num: Optional[str] = None,
         appellate: bool = False,
+        de_seq_num: Optional[str] = None,
     ) -> Tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
@@ -207,7 +212,6 @@ class BaseReport:
 
             # Create PACER base url from court_id and pacer_doc_id
             # Magic link parameters
-            # We don't need the de_seq_num parameter to fetch the free document
             if appellate:
                 url = make_docs1_url(self.court_id, pacer_doc_id, True)
                 # For appellate documents the magic_number is the uid param
@@ -221,6 +225,9 @@ class BaseReport:
                     "magic_num": pacer_magic_num,
                     "use_magic": "1",  # Bypass the free look confirmation.
                 }
+
+            if de_seq_num:
+                params["de_seq_num"] = de_seq_num
 
             # Add parameters to the PACER base url and make a GET request
             req_timeout = (60, 300)
@@ -242,7 +249,11 @@ class BaseReport:
         else:
             # If no magic_number use normal method to fetch the document
             r, url = self._query_pdf_download(
-                pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="1"
+                pacer_case_id,
+                pacer_doc_id,
+                pacer_magic_num,
+                got_receipt="1",
+                de_seq_num=de_seq_num,
             )
 
             # Use r.content instead of r.text for performance. See #564
@@ -256,6 +267,13 @@ class BaseReport:
                 )
 
             error = None
+            if b"Cannot locate the case with caseid" in r.content:
+                # Second download attempt failed. log case ID and URL for
+                # debugging
+                error = (
+                    f"Cannot locate the case with caseid: "
+                    f"{pacer_case_id} at {url}"
+                )
             if b"could not retrieve dktentry for dlsid" in r.content:
                 error = (
                     f"Failed to get docket entry in case: "
@@ -281,12 +299,27 @@ class BaseReport:
                 )
             if b"You do not have access to this transcript." in r.content:
                 error = f"Unable to get transcript. {pacer_case_id=}, {url=}"
-            if b"Sealed Document" in r.content or b"Under Seal" in r.content:
+
+            if b"No matter of public record" in r.content:
+                error = (
+                    f"No matter of public record has been filed. "
+                    f"{pacer_case_id=}, {url=}"
+                )
+            sealed_document_phrases = [
+                b"Sealed Document",
+                b"Under Seal",
+                b"Document is Sealed",
+                b"This document is SEALED",
+            ]
+            if any(phrase in r.content for phrase in sealed_document_phrases):
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 # See: https://ecf.cand.uscourts.gov/doc1/035122021132
+                # See: https://ecf.caed.uscourts.gov/doc1/03319001890
                 # Matches against:
-                # "Sealed Document" and
+                # "Sealed Document"
                 # "This document is currently Under Seal and not available..."
+                # "Document is Sealed."
+                # "This document is SEALED"
                 error = f"Document is sealed: {pacer_case_id=} {url=}"
             if (
                 b"This image is not available for viewing by non-court users"
@@ -380,3 +413,17 @@ class BaseReport:
         )
         sealed = "You do not have permission to view this document."
         return sealed in r.content
+
+    def is_entry_sealed(
+        self,
+        pacer_case_id: str,
+        pacer_doc_id: str,
+        pacer_magic_num: Optional[str] = None,
+    ):
+        """Check if a docket entry is sealed without trying to actually download
+        it.
+        """
+        r, url = self._query_pdf_download(
+            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
+        )
+        return b"could not retrieve dktentry for dlsid" in r.content

@@ -1,43 +1,41 @@
-import re
-from datetime import datetime
+from datetime import date, datetime, timedelta
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.courts.state.va.us/scndex.htm"
+        self.status = "Published"
 
-    def _get_case_names(self):
-        path = "//p[./a[contains(./@href, '.pdf')]]/b/text()"
-        return list(self.html.xpath(path))
+    def _process_html(self):
+        if self.test_mode_enabled():
+            today = datetime.strptime("11/20/2023", "%m/%d/%Y").date()
+        else:
+            today = date.today()
 
-    def _get_docket_numbers(self):
-        path = "//p[./a[contains(./@href, '.pdf')]]/a/text()"
-        return [
-            doc.strip()
-            for doc in self.html.xpath(path)
-            if doc.strip().isdigit()
-        ]
+        for row in self.html.xpath("//p"):
+            links = row.xpath(".//a")
+            if len(links) != 2:
+                continue
+            name = row.xpath(".//b/text()")[0].strip()
+            summary = row.text_content().split(name)[1].strip()
+            date_str = summary.split("\n")[0].strip()
+            if "Revised" in date_str:
+                date_str = date_str.split("Revised")[1].strip().strip(")")
+            date_object = datetime.strptime(date_str, "%m/%d/%Y").date()
+            if date_object < today - timedelta(days=60):
+                # Stop after two months
+                break
 
-    def _get_case_dates(self):
-        dates = []
-        path = "//p[./a[contains(./@href, '.pdf')]]/text()"
-        pattern = r"^\s*\d{2}/\d{2}/\d{4}"
-        for s in self.html.xpath(path):
-            date_str = re.findall(pattern, s)
-            if len(date_str):
-                dates.append(
-                    datetime.strptime(date_str[0].strip(), "%m/%d/%Y").date()
-                )
-        return dates
-
-    def _get_download_urls(self):
-        path = "//p[./a[contains(./@href, '.pdf')]]/a[2]/@href"
-        urls = [url for url in self.html.xpath(path) if url.endswith(".pdf")]
-        return urls
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+            self.cases.append(
+                {
+                    "name": row.xpath(".//b/text()")[0].strip(),
+                    "docket": links[0].get("name"),
+                    "url": links[1].get("href"),
+                    "summary": summary,
+                    "date": date_str,
+                }
+            )

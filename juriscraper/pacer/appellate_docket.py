@@ -1,6 +1,7 @@
 import pprint
 import re
 import sys
+from collections import OrderedDict
 
 from lxml.html import tostring
 
@@ -23,8 +24,6 @@ from .utils import (
 
 logger = make_default_logger()
 
-date_regex = r"[—\d\-–/]+"
-
 
 class AppellateDocketReport(BaseDocketReport, BaseReport):
     """Parse appellate dockets.
@@ -39,7 +38,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
     )
-    date_entered_regex = re.compile(r"Entered:\s+(%s)" % date_regex)
 
     CACHE_ATTRS = ["metadata", "docket_entries"]
 
@@ -367,6 +365,101 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         "Terminated": "date_terminated",
     }
 
+    def _parse_party_left(self, tree):
+        """Parse the LHS of an appellate HTML party block.
+
+        This is used by both appellate CM/ECF and ACMS."""
+        # Format:
+        #  <tr><td valign=top width=50%>
+        #  THEODORE D'APUZZO, P.A.<BR>
+        #  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[...];Petitioner
+        # but sometimes there are more fields in there:
+        #  <tr>
+        #  <td valign=top width=50%>LORETTA E. LYNCH, Attorney General<BR>
+        #  <B>Terminated: </B>07/31/2017<BR>
+        #  Respondent
+
+        party = {}
+
+        name_role = self.redelimit_p(tree, self.BR_REGEX)
+        count = len(name_role)
+        assert (
+            count >= 2
+        ), "Expecting 2+ <br>-delimited portions of party left-hand side."
+
+        # Name is first, Role is last
+        party["name"] = force_unicode(name_role[0].text_content().strip())
+        role = name_role[count - 1].text_content().strip()
+        # Strip terminal comma, if present.
+        role = re.sub(r",$", "", role)
+        party["type"] = role
+
+        unparsed = []
+        for element in name_role[1 : count - 1]:
+            # CM/ECF:
+            #  <B>Terminated: </B>07/31/2017<BR>
+            # ACMS:
+            #  <strong>Terminated:</strong> 10/06/2023<br>
+            _ = [element.find("strong"), element.find("b")]
+            # See https://lxml.de/tutorial.html#elements-are-lists
+            _ = [e for e in _ if e is not None]
+            bold = _[0] if _ else None
+            if bold is not None:
+                raw_field = bold.text_content().strip()
+                # Remove terminal colon
+                raw_field = re.sub(r":$", "", raw_field)
+                # Translate field name to Juriscraper schema, if it exists
+                if raw_field in self.PARTY_FIELDS:
+                    field = self.PARTY_FIELDS[raw_field]
+                else:
+                    field = raw_field
+
+                value = bold.tail
+                if raw_field in self.PARTY_DATE_FIELDS:
+                    value = convert_date_string(value)
+                else:
+                    value = force_unicode(value)
+
+                party[field] = value
+            else:
+                unparsed.append(element.text_content())
+
+        if unparsed:
+            party["unparsed"] = unparsed
+
+        return party
+
+    def _parse_attorney(self, tree):
+        """Parse the attorney side of an appellate HTML party block.
+
+        For CM/ECF this is the right-hand side directly.
+        For ACMS, it is wrapped within a <div> that the caller iterates over.
+        """
+
+        attorney = OrderedDict()
+        # Performance note: _br_split() unparses and reparses
+        # the element, just as redelimit_p() does in parties(). So
+        # it's a bit wasteful to use both.
+        attorney_lines = self._br_split(tree)
+        if not attorney_lines:
+            return {}
+        # First line is the name
+        attorney["name"] = attorney_lines.pop(0)
+        if not attorney["name"]:
+            return {}
+        roles = []
+        contacts = []
+        for attorney_line in attorney_lines:
+            # [Bracketted] lines are roles, others are contacts.
+            m = re.match(r"\[(.*)\]", attorney_line)
+            if m:
+                roles.append(m.group(1))
+            else:
+                contacts.append(attorney_line)
+        attorney["roles"] = roles
+        attorney["contact"] = "\n".join(contacts)
+        return attorney
+
     @property
     def parties(self):
         """Return the party table as HTML.
@@ -400,61 +493,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             if len(cells) < 2:
                 continue
 
-            # Format:
-            #  <tr><td valign=top width=50%>
-            #  THEODORE D'APUZZO, P.A.<BR>
-            #  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[...];Petitioner
-            # but sometimes there are more fields in there:
-            #  <tr>
-            #  <td valign=top width=50%>LORETTA E. LYNCH, Attorney General<BR>
-            #  <B>Terminated: </B>07/31/2017<BR>
-            #  Respondent
+            party.update(self._parse_party_left(cells[0]))
 
-            name_role = self.redelimit_p(cells[0], self.BR_REGEX)
-            count = len(name_role)
-            assert (
-                count >= 2
-            ), "Expecting 2+ <br>-delimited portions of first cell."
-
-            # Name is first, Role is last
-            party["name"] = force_unicode(name_role[0].text_content().strip())
-            role = name_role[count - 1].text_content().strip()
-            # Strip terminal comma, if present.
-            role = re.sub(r",$", "", role)
-            party["type"] = role
-
-            unparsed = []
-            for i in range(1, count - 1):
-                element = name_role[i]
-                #  <B>Terminated: </B>07/31/2017<BR>
-                bold = element.find("b")
-                if bold is not None:
-                    raw_field = bold.text_content().strip()
-                    # Remove terminal colon
-                    raw_field = re.sub(r":$", "", raw_field)
-                    # Translate field name to Juriscraper schema, if it exists
-                    if raw_field in self.PARTY_FIELDS:
-                        field = self.PARTY_FIELDS[raw_field]
-                    else:
-                        field = raw_field
-
-                    value = bold.tail
-                    if raw_field in self.PARTY_DATE_FIELDS:
-                        value = convert_date_string(value)
-                    else:
-                        value = force_unicode(value)
-
-                    party[field] = value
-                else:
-                    s = "".join(
-                        tostring(e, encoding="unicode") for e in element
-                    )
-                    unparsed.append(s)
-
-            if unparsed:
-                party["unparsed"] = unparsed
-
-            attorneys = cells[1]
+            attorneys_block = cells[1]
 
             # For reference, here's how the XML defines the schema:
             # <attorney firstName="David"
@@ -504,31 +545,14 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             # We fixup the raw HTML by separating attorneys into <p>
             # elements, replacing <br><br> pairs.
             attorney_rows = self.redelimit_p(
-                attorneys, r"(?i)<br\s*/?><br\s*/?>"
+                attorneys_block, r"(?i)<br\s*/?><br\s*/?>"
             )
             attorneys = []
             for attorney_row in attorney_rows:
-                attorney = {}
-                # Performance note: _br_split() unparses and reparses
-                # the element, just as redelimit_p() does above. So
-                # it's a bit wasteful to use both.
-                attorney_lines = self._br_split(attorney_row)
-                # First line is the name
-                attorney["name"] = attorney_lines.pop(0)
-                if not attorney["name"]:
-                    continue
-                roles = []
-                contacts = []
-                for attorney_line in attorney_lines:
-                    # [Bracketted] lines are roles, others are contacts.
-                    m = re.match(r"\[(.*)\]", attorney_line)
-                    if m:
-                        roles.append(m.group(1))
-                    else:
-                        contacts.append(attorney_line)
-                attorney["roles"] = roles
-                attorney["contact"] = "\n".join(contacts)
-                attorneys.append(attorney)
+                _ = self._parse_attorney(attorney_row)
+                # Don't add empty attorney objects
+                if _:
+                    attorneys.append(_)
 
             party["attorneys"] = attorneys
             parties.append(party)

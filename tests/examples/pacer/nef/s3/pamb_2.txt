@@ -1,0 +1,91 @@
+Return-Path: <PAMB_LiveDB@pamb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id j1u9gedfmb05gdmb7aiseuqaci2jc8geaef0qco1
+ for lawfirm@recap.email;
+ Tue, 21 May 2024 16:06:18 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=pamb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHT08zZ1hhQ2hLNnhrb0RQdHl6eXBwVlNHT2k5dGFvWitXelRPa0hyQktWSXYzR1dXY3NkUTRFaWtURkxVM05LMVdETmZxbll3ZU8rbDJSV2xXQnRQSWxTM1o3K0ovM0pWclVCWW5QZUgwWHI4YjBYOStJK2lWUWZtdUVnNmV0WG1TV1NpeXV4NUJtZU1ERDFqZVhwNzVvZzJiOWZSNVhTSDVYOUFRZE4xQnJ0VzBONDRKcTBNL3plM1NJRDRiOWtVMkR0dmI5WjU2eEsxc1ozWm9heEZqRHhKNmVESGFBbWJ2VmE0ZWV1cUM0dW05NnJWMFJDTjRwWTVXZ3d3NkF4d09YSFZKZWRkb1F1T3cyYlRzRDg1TVlBcGZmaE9ZM1ZDRTBQYVRLTjBNcUE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=JshU4xO4U9YUa8IIFhZ8L/OroUtaOiI5f8fmnOu1iWRvS+TsW7YF0A/6rCY86/mPYxYQNy0lT7rwqhY4AIt7ngX/g6NFCMpIW9ZlUMWOtSghoUduM2zzhAhoUM6k9Q/x+z4mAbCuRM9nd6IzjO+2WHP1fyekxrS3ufLaQK3zj8Q=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1716307579; v=1; bh=hhM4QaLvXx8GKTTn/qNK0u++d/gZiPLofEAltR2TN2Y=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.181
+Received: from pambdb.pamb.gtwy.dcn ([156.119.190.181])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 21 May 2024 12:06:17 -0400
+Received: from pambdb.pamb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 44LG5Twr011524;
+	Tue, 21 May 2024 12:05:35 -0400
+Received: (from ecf_web@localhost)
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.4/Submit) id 44LG5DOp011164;
+	Tue, 21 May 2024 12:05:13 -0400
+Date: Tue, 21 May 2024 12:05:13 -0400
+MIME-Version:1.0
+From:PAMB_LiveDB@pamb.uscourts.gov
+To:Courtmail@pamb.uscourts.gov
+Reply-To: pambecf_helpdesk@pamb.uscourts.gov
+Message-Id:<18028722@pamb.uscourts.gov>
+Subject:Ch-13 5:23-bk-00774-MJC -Sandra Sattof  Hearing Continued
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Middle District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from FirstName LastName entered on 05/21/2024  at 11:54 AM  EDT and filed on 05/21/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Sandra Sattof and David Sattof                                      </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pamb.uscourts.gov/cgi-bin/DktRpt.pl?276698>5:23-bk-00774-MJC</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+38
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+<B>Proceeding Memo for hearing scheduled on: 05/21/2024
+<BR>MATTER:</B> Motion for Relief from Automatic Stay (2635 Blytheburn Road Rd, Mountain Top, PA) (#[35]) filed by NewRez, LLC dba Shellpoint Mortgage Servicing; Objection by the Debtors (#[36]) 
+<BR><b>APPEARANCES:</b> Jill E. Durkin, Esq. (by remote appearance) 
+<BR><b>DISPOSITION:</b> Hearing held and continued. The automatic stay shall remain in effect through the conclusion of the continued hearing. IT IS SO ORDERED /s/ Mark J. Conway. Record made. 
+<BR> <B> HEARING Scheduled for 06/04/2024 at 10:00 AM at U.S. Courthouse, 197 S. Main St. Wilkes-Barre, PA.</B> (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+5:23-bk-00774-MJC Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Debtor 1 Sandra  Sattof</span>
+<br>help@lawfirm.com,  noreply01@lawfirm.com;noreply02@lawfirm.com;noreply03@lawfirm.com;noreply04@lawfirm.com;noreply05@lawfirm.com;lawfirmpc@jubileebk.net;lawfirm@recap.email;ecf@casedriver.com
+<BR>

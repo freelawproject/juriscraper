@@ -1,49 +1,334 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-90802660-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
-<meta name="title" content="Opinions, Decisions and Order Library | Vermont Judiciary" />
-<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="/themes/vermont_judiciary/vtj.ico" type="image/vnd.microsoft.icon" />
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class=" js" style="height: 100%;"><!--<![endif]--><head>
+    <meta charset="utf-8">
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-QTH7K2YQQT&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-90802660-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/themes/vermont_judiciary/vtj.ico" type="image/vnd.microsoft.icon">
 
     <title>Opinions, Decisions and Order Library | Vermont Judiciary</title>
-    <link rel="stylesheet" href="/sites/default/files/css/css_OjtQL7txKtg0dMgefgINt3BNSCqPR-jd0BWQ-RV-wiE.css?p7by31" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_4uz9ULFRuCPh03bXcUKokUZbjajHLRwb3kY__BRpfwU.css?p7by31" media="all" />
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900" media="all" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_SGltJiHV2V7pSOJ8PpfTxNN9YqYCKtghQRDpGzSages.css">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Qz8hcloO4NrO--sF87cmiOJQe841-ZBblG55Vub-8eA.css">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900">
 
 
-<!--[if lte IE 8]>
-<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
-<![endif]-->
+  <style>/*
+.thumb-list {
+    position: block !important;
+}
 
-  </head>
-  <body class="path-opinions-decisions context-opinions-decisions">
+div {
+    position: block !important;
+}
+
+.thumb-list--margin {
+    background-color: yellow;
+    position: block !important;
+}
+
+.index-videos .thumb-list {
+    flex-wrap: none !important;
+} */
+
+.modal {
+      display: none; /* Hide the modal by default */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }</style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.qhDXWpKopYk.L.W.O/am=CAM/d=0/rs=AN8SPfqeKn8wA30q4viup18yaci8udUjKQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.pKBCN6ZnP0o.O/d=1/exm=el_conf/ed=1/rs=AN8SPfqVbIZHrC3kRLef7SZ2JcRPnbS1PQ/m=el_main"></script><script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","version":"","require":[],"description":"This is your new file, start writing code","matches":["*://*/*"],"excludes":[],"namespace":"","noframes":false,"filename":"NewScript-tg7d1qs9.user.js","resources":"","icon":"","grant":[],"exclude-match":[],"name":"NewScript-tg7d1qs9"},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.4.3","scriptMetaStr":"// ==UserScript==\n// @name        NewScript-tg7d1qs9\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "NewScript-tg7d1qs9.user.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                const spans = document.getElementsByTagName('span');
+    for (let span of spans) {
+        if (span.innerText === 'Ad') {
+            span.style.backgroundColor = 'blue';
+        }
+    }
+                //# sourceURL=NewScript-tg7d1qs9.user.js
+            })();
+        })();
+    </script><script>
+        (function() {
+            const GM_info = {"script":{"inject-into":"auto","includes":[],"run-at":"document-end","description":"This is your new file, start writing code","require":[],"version":"","filename":"stuff.js","excludes":[],"namespace":"","noframes":false,"matches":["*://*/*"],"resources":"","icon":"","grant":[],"exclude-match":[],"name":"stuff"},"scriptHandler":"Userscripts","scriptHandlerVersion":"4.4.3","scriptMetaStr":"// ==UserScript==\n// @name        stuff\n// @description This is your new file, start writing code\n// @match       *://*/*\n// ==/UserScript=="};const GM = {info: GM_info};
+            (function() {
+                const US_filename = "stuff.js";
+                const apis = undefined;
+                const browser = undefined;
+                // userscript code below
+                if (window.location.hostname.indexOf("chaturbate") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+        history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
+if (window.location.hostname.indexOf("livejas") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+        history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("sex") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $(".ad-block").remove();
+        $(".ad-footer").remove();
+        $(".ad-small").remove();
+        $(".ad-label").remove();
+        $(".ad-iframe-wrap").remove();
+    };
+    document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("chaturbate") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+//         history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
+
+if (window.location.hostname.indexOf("getsex.xxx") > -1) {
+    var script = document.createElement('script');
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+    script.onload = function () {
+        $("html").remove()
+//         history.back();
+//         window.back();
+    };
+    document.head.appendChild(script);
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
+
+if (window.location.hostname.indexOf("movies") > -1) {
+    var script = document.createElement('script');
+
+    script.src = "https://code.jquery.com/jquery-3.6.0.slim.js"
+
+
+    script.onload = function () {
+        loaditup();
+        keypress();
+        $("#bottom-blocks").remove();
+    };
+    document.head.appendChild(script);
+}
+
+
+function keypress(){
+
+
+//     alert($("a"))
+
+    $("a").each(function(e) {
+        $(this).on("mouseover", function(e) {
+            $(this).css('background','red');
+            $(this).addClass("activeX")
+//             $(this).find("span").addClass("activeS")
+//             $(this).data( "foo", "bar" );
+//             $(this).addClass('active');
+        })
+        $(this).on("mouseout", function(e) {
+            $(this).css('background','white');
+//             $(this).data( "foo", "out" );
+            $(this).removeClass("activeX")
+
+        })
+
+
+    })
+
+
+    $(window).on("keypress", function(e) {
+        if (e.originalEvent.key == "o") {
+
+//             alert("O pressed")
+//             alert($(".active").attr("href"))
+//             var j = $( "a" ).find( "a" ).css( "background-color", "red" );
+//             $("[data=]")
+//             var hh = $.parseHTML( j )
+            console.log($(".activeX"))
+//             alert($('.activeX').length)
+            if ($('.activeX').length == 1) {
+                var h = $('.activeX').attr('href')
+//                 alert(h)
+                var hh = h.replace("//", "https://")
+//                 alert(hh)
+                var html = httpGet(hh)
+//             console.log(html)
+//                 alert(html.split("<source src=\"")[1].split("\"")[0])
+                var link = html.split("<source src=\"")[1].split("\"")[0]
+//                 alert(link)
+
+                var video = $('<video />', {
+                    loop: "loop",
+                    autoplay:"autoplay",
+                    playsinline:"playsinline",
+                    webkitplaysinline:"webkitplaysinline",
+                    src: link,
+                    class: 'thumb-image-container__video',
+                    eid1: "1",
+                    controls: true
+                });
+                video.css("height", "500px");
+                video.css("z-index", 999);
+
+                $('.activeX').parent().parent().parent().parent().replaceWith(video);
+
+
+
+//                 var hhh = $.parseHTML( html )
+//                 alert($(hhh).filter("#thisPlayer"))
+//                 var x = $(hhh).filter("source[type='video/mp4']").attr("src")
+//                 alert(x)
+//                 alert(hhh)
+//                 var href = $(html).filter('link[href*="m3u8"]')
+
+            }
+//                 $.get( hh, function( data ) {
+// //                       $( ".result" ).html( data );
+//                       alert( "Load was performed." );
+//                     });
+//             }
+
+//             var hh = $(".active")[0].attr('href')
+//             alert(hh)
+//             console.log()
+//             link = $($($("video").parent())[0]).attr('href')
+//             var html = httpGet(link)
+//             console.log(html)
+//             var hh = $.parseHTML( html )
+        }
+    });
+}
+
+function loaditup(){
+
+    $(window).on("dblclick", function(){
+        window.stop()
+        var x = $("source[type='video/mp4']").attr("src")
+        var video = $('<video />', {
+                    id: 'video',
+                    src: x,
+                    type: 'video/mp4',
+                    controls: true,
+                    width: "90vw",
+                });
+
+        $(".film-main-row").replaceWith(video);
+
+    })
+
+    $(window).scroll(function(){
+//     $(window).on("dblclick", function(){
+
+
+        console.log("SCROLLING")
+        $("#ldvideocontainer").remove();
+        $(".film-item:not(#showpop)").remove();
+        $("#player-container").remove();
+        $("iframe").remove();
+//         $("img").remove();
+
+        $('.role-pop').removeClass('role-pop')
+        $(".ad").remove()
+
+        $(".traffic-stars").remove()
+
+        $(".adsbyexoclick").remove();
+        $(".exo-ipp").remove();
+        $(".exo_wrapper").remove()
+        $(".exo_notransition").remove();
+        $(".film-th-wrapper > script").remove()
+        $(".film-container > script").remove()
+        $("#blue-banner").remove()
+        if ($(".film-main-row").length > 0) {
+        $(".film-aside-ads").replaceWith( "<h2>New heading</h2>" );
+
+        }
+
+    });
+
+}
+                //# sourceURL=stuff.js
+            })();
+        })();
+    </script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+  <body class="path-opinions-decisions context-opinions-decisions" style="position: relative; min-height: 100%; top: 0px;">
     <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <symbol id="icon-exit-link" viewBox="0 0 82.15 70.41">
       <title>icon-exit-link</title>
       <g>
-        <path d="M5.86 38.11v19a7.17 7.17 0 0 0 2.88 5.86 6.92 6.92 0 0 0 4.44 1.52h38.18a7.39 7.39 0 0 0 7-5.33 8.66 8.66 0 0 0 .27-2.13v-14.3c0-1.19.53-1.72 1.72-1.72h2.57a1.44 1.44 0 0 1 1.57 1.57V57.1a12.53 12.53 0 0 1-2.14 7.25 13.1 13.1 0 0 1-8.49 5.74 14.37 14.37 0 0 1-2.69.24H13.29a12.61 12.61 0 0 1-7.35-2.15 13.09 13.09 0 0 1-5.72-8.47 14.53 14.53 0 0 1-.24-2.73V19.13a12.74 12.74 0 0 1 2.68-8.1 12.95 12.95 0 0 1 10.62-5.24h32a1.46 1.46 0 0 1 1.65 1.64v2.53a1.48 1.48 0 0 1-1.68 1.69H13.16a7.39 7.39 0 0 0-7 5.33 8.36 8.36 0 0 0-.26 2.09c-.05 6.41-.04 12.75-.04 19.04z"/>
-        <path d="M61.84 12.99a2.13 2.13 0 0 1-.38-.24l-7.65-7.64a3.13 3.13 0 0 1-1-1.84A3 3 0 0 1 55.15.11a7 7 0 0 1 1-.07h22.81a2.93 2.93 0 0 1 2.84 1.69 3.23 3.23 0 0 1 .35 1.38v23.21a2.94 2.94 0 0 1-2.83 3 2.6 2.6 0 0 1-1.86-.62c-.16-.13-.31-.28-.46-.42l-7.57-7.57c-.09-.09-.17-.21-.29-.35l-.37.36-29.3 29.3a1.93 1.93 0 0 1-1.09.69 1.32 1.32 0 0 1-1.18-.35q-2.71-2.69-5.39-5.39a1.36 1.36 0 0 1 .06-2l3.14-3.14 26.61-26.61z"/>
+        <path d="M5.86 38.11v19a7.17 7.17 0 0 0 2.88 5.86 6.92 6.92 0 0 0 4.44 1.52h38.18a7.39 7.39 0 0 0 7-5.33 8.66 8.66 0 0 0 .27-2.13v-14.3c0-1.19.53-1.72 1.72-1.72h2.57a1.44 1.44 0 0 1 1.57 1.57V57.1a12.53 12.53 0 0 1-2.14 7.25 13.1 13.1 0 0 1-8.49 5.74 14.37 14.37 0 0 1-2.69.24H13.29a12.61 12.61 0 0 1-7.35-2.15 13.09 13.09 0 0 1-5.72-8.47 14.53 14.53 0 0 1-.24-2.73V19.13a12.74 12.74 0 0 1 2.68-8.1 12.95 12.95 0 0 1 10.62-5.24h32a1.46 1.46 0 0 1 1.65 1.64v2.53a1.48 1.48 0 0 1-1.68 1.69H13.16a7.39 7.39 0 0 0-7 5.33 8.36 8.36 0 0 0-.26 2.09c-.05 6.41-.04 12.75-.04 19.04z"></path>
+        <path d="M61.84 12.99a2.13 2.13 0 0 1-.38-.24l-7.65-7.64a3.13 3.13 0 0 1-1-1.84A3 3 0 0 1 55.15.11a7 7 0 0 1 1-.07h22.81a2.93 2.93 0 0 1 2.84 1.69 3.23 3.23 0 0 1 .35 1.38v23.21a2.94 2.94 0 0 1-2.83 3 2.6 2.6 0 0 1-1.86-.62c-.16-.13-.31-.28-.46-.42l-7.57-7.57c-.09-.09-.17-.21-.29-.35l-.37.36-29.3 29.3a1.93 1.93 0 0 1-1.09.69 1.32 1.32 0 0 1-1.18-.35q-2.71-2.69-5.39-5.39a1.36 1.36 0 0 1 .06-2l3.14-3.14 26.61-26.61z"></path>
       </g>
     </symbol>
     <symbol id="icon-facebook" viewBox="0 0 43.36 43.36">
       <title>icon-facebook</title>
       <g>
-        <path class="cls-1" d="M430,330.59c0-1.75,0-3.5,0-5.25,0-.42-.11-.6-.55-.56s-.89,0-1.34,0-.5-.12-.49-.49c0-1.08,0-2.16,0-3.24,0-.34.14-.46.46-.45s.9,0,1.34,0,.6-.17.6-.62a30.23,30.23,0,0,1,.1-3.13,4.15,4.15,0,0,1,4.11-3.78c1.27,0,2.53-.05,3.8-.1.45,0,.61.15.6.6,0,1,0,2,0,3,0,.44-.16.58-.57.57-.62,0-1.24,0-1.85,0a1.12,1.12,0,0,0-1.19,1.19c0,.55,0,1.1,0,1.65s.16.55.57.54c.81,0,1.61,0,2.42,0,.46,0,.64.14.57.65-.14,1-.23,2.11-.31,3.16,0,.37-.21.45-.54.45-.72,0-1.44,0-2.16,0-.42,0-.52.13-.52.53,0,3.45,0,6.9,0,10.34,0,.77,0,.77-.77.77-1.2,0-2.4,0-3.6,0-.51,0-.65-.18-.64-.66C430,334.05,430,332.32,430,330.59Z" transform="translate(-411.48 -302.7)"/><circle class="cls-2" cx="21.68" cy="21.68" r="20.68"/>
+        <path class="cls-1" d="M430,330.59c0-1.75,0-3.5,0-5.25,0-.42-.11-.6-.55-.56s-.89,0-1.34,0-.5-.12-.49-.49c0-1.08,0-2.16,0-3.24,0-.34.14-.46.46-.45s.9,0,1.34,0,.6-.17.6-.62a30.23,30.23,0,0,1,.1-3.13,4.15,4.15,0,0,1,4.11-3.78c1.27,0,2.53-.05,3.8-.1.45,0,.61.15.6.6,0,1,0,2,0,3,0,.44-.16.58-.57.57-.62,0-1.24,0-1.85,0a1.12,1.12,0,0,0-1.19,1.19c0,.55,0,1.1,0,1.65s.16.55.57.54c.81,0,1.61,0,2.42,0,.46,0,.64.14.57.65-.14,1-.23,2.11-.31,3.16,0,.37-.21.45-.54.45-.72,0-1.44,0-2.16,0-.42,0-.52.13-.52.53,0,3.45,0,6.9,0,10.34,0,.77,0,.77-.77.77-1.2,0-2.4,0-3.6,0-.51,0-.65-.18-.64-.66C430,334.05,430,332.32,430,330.59Z" transform="translate(-411.48 -302.7)"></path><circle class="cls-2" cx="21.68" cy="21.68" r="20.68"></circle>
       </g>
     </symbol>
     <symbol id="icon-search" viewBox="0 0 46.69 46.67">
       <title>Search Icon</title>
       <g>
-        <path d="M445.91,332.66c.14.11.28.21.39.32l9,9a4,4,0,0,1,1.22,2.37,3.69,3.69,0,0,1-2.91,3.88,3.77,3.77,0,0,1-3.42-1.23q-4.5-4.51-9-9a3.28,3.28,0,0,1-.29-.39,19.27,19.27,0,0,1-15.12,3.13,18.94,18.94,0,0,1-11.87-7.42,19.75,19.75,0,1,1,32-.69Zm-3.66-11.21a12.59,12.59,0,1,0-25.18-.09A12.84,12.84,0,0,0,429.51,334,12.71,12.71,0,0,0,442.25,321.45Z" transform="translate(-409.9 -301.65)"/>
+        <path d="M445.91,332.66c.14.11.28.21.39.32l9,9a4,4,0,0,1,1.22,2.37,3.69,3.69,0,0,1-2.91,3.88,3.77,3.77,0,0,1-3.42-1.23q-4.5-4.51-9-9a3.28,3.28,0,0,1-.29-.39,19.27,19.27,0,0,1-15.12,3.13,18.94,18.94,0,0,1-11.87-7.42,19.75,19.75,0,1,1,32-.69Zm-3.66-11.21a12.59,12.59,0,1,0-25.18-.09A12.84,12.84,0,0,0,429.51,334,12.71,12.71,0,0,0,442.25,321.45Z" transform="translate(-409.9 -301.65)"></path>
       </g>
     </symbol>
   </defs>
@@ -56,6 +341,7 @@
     </section>
 
 
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
 
 <section id="page-notifications">
     <section class="region region-notifications">
@@ -64,7 +350,14 @@
 
 
       <div class="block__body clearfix">
-    <p><span>Essex Courthouse in Guildhall is temporarily closed due to a fire alarm activation</span></p>
+    <p>Except as noted below, all Vermont state courthouses are open for normal business hours:</p>
+
+<p>The <strong>Washington Civil/Probate Court</strong> hearings will be remote only pending further notice. The Washington Civil/Probate Courthouse in Montpelier remains closed but civil and probate paper filings can be brought to the Washington Criminal/Family Courthouse in Barre for processing. Electronic filings continue to be processed electronically.</p>
+
+<p>The <strong>Vermont Supreme Court Building</strong> in Montpelier remains closed for repair work following the flooding.</p>
+
+<p><a href="/covid19">Click here</a> for information regarding court operations, including participating in remote hearings.</p>
+
   </div>
   </section>
 
@@ -97,7 +390,7 @@
 
     <span class="logo">
     <a href="/" title="Home" rel="home" class="logo__link">
-      <img src="/themes/vermont_judiciary/logo.svg" alt="Vermont Judiciary" class="logo__img" />
+      <img src="/themes/vermont_judiciary/logo.svg" alt="Vermont Judiciary" class="logo__img">
     </a>
   </span>
     <nav class="nav nav--utility">
@@ -111,10 +404,10 @@
   <div class="form__inline">
   <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keys form-item-keys">
       <label for="edit-keys">Search</label>
-        <input data-drupal-selector="edit-keys" aria-label="Search content" type="text" id="edit-keys" name="keys" value="" size="30" maxlength="128" class="form-text" />
+        <input data-drupal-selector="edit-keys" aria-label="Search content" type="text" id="edit-keys" name="keys" value="" size="30" maxlength="128" class="form-text">
 
         </div>
-<input data-drupal-selector="edit-submit-search-content" aria-label="Run Search" type="submit" id="edit-submit-search-content" value="Run Search" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-submit-search-content" aria-label="Run Search" type="submit" id="edit-submit-search-content" value="Run Search" class="button js-form-submit form-submit">
 
 
 </div>
@@ -128,7 +421,7 @@
       </li>
             <li class="nav__item nav__item--login">
 
-                    <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a>
+                    <a href="/about-vermont-judiciary/login" data-drupal-link-system-path="node/668484">Log In</a>
 
 
 
@@ -144,16 +437,16 @@
   <fieldset class="mobile-search_wrapper">
     <legend>Search content</legend>
 
-<section class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-content-page-1" data-drupal-selector="views-exposed-form-search-content-page-1" id="block-header-search">
+<section class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-content-page-1" data-drupal-selector="views-exposed-form-search-content-page-1" id="block-header-search--2">
       <div class="views-exposed-form__forwarder">Looking for court hearings? <a class="views-exposed-form__forwarder-link" href="/court-hearings">Search here.</a></div>
     <form action="/search/content" method="get" id="views-exposed-form-search-content-page-1" accept-charset="UTF-8">
   <div class="form__inline">
   <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keys form-item-keys">
       <label for="edit-keys-1">Search (mobile)</label>
-        <input data-drupal-selector="edit-keys-1" aria-label="Search mobile" type="text" id="edit-keys-1" name="keys" value="" size="30" maxlength="128" class="form-text" />
+        <input data-drupal-selector="edit-keys-1" aria-label="Search mobile" type="text" id="edit-keys-1" name="keys" value="" size="30" maxlength="128" class="form-text">
 
         </div>
-<input data-drupal-selector="edit-submit-search-content" aria-label="Search site" type="submit" id="edit-submit-search-content" value="Search site" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-submit-search-content-2" aria-label="Search site" type="submit" id="edit-submit-search-content--2" value="Search site" class="button js-form-submit form-submit">
 
 
 </div>
@@ -262,13 +555,22 @@
         <a href="/self-help/divorce-parentage" class="mega-menu__link divorce-&amp;-parentage" data-drupal-link-system-path="node/96">Divorce &amp; Parentage</a>
               </li>
                 <li class="mega-menu__item">
+        <a href="/self-help/finding-legal-help" title="Finding Legal Help" class="mega-menu__link finding-legal-help" data-drupal-link-system-path="node/60437">Finding Legal Help</a>
+              </li>
+                <li class="mega-menu__item">
         <a href="/self-help/housing" class="mega-menu__link housing" data-drupal-link-system-path="node/97">Housing</a>
               </li>
                 <li class="mega-menu__item">
         <a href="/about-vermont-judiciary/boards-and-committees/commission-on-family-treatment-dockets" class="mega-menu__link judicial-commission-on-family-treatment-dockets" data-drupal-link-system-path="node/252572">Judicial Commission on Family Treatment Dockets</a>
               </li>
                 <li class="mega-menu__item">
-        <a href="/self-help/other-topics" class="mega-menu__link other-topics" data-drupal-link-system-path="node/110">Other Topics</a>
+        <a href="/attorneys/judicial-nominating-information" class="mega-menu__link judicial-nominating-board" data-drupal-link-system-path="node/60456">Judicial Nominating Board</a>
+              </li>
+                <li class="mega-menu__item">
+        <a href="/programs-and-services/language-access-interpreters-and-translators" class="mega-menu__link language-access" data-drupal-link-system-path="node/367250">Language Access</a>
+              </li>
+                <li class="mega-menu__item">
+        <a href="/about-vermont-judiciary/public-portal" class="mega-menu__link public-portal" data-drupal-link-system-path="node/463613">Public Portal</a>
               </li>
                 <li class="mega-menu__item">
         <a href="/self-help/traffic-violations" class="mega-menu__link traffic-violations" data-drupal-link-system-path="node/98">Traffic Violations</a>
@@ -278,6 +580,9 @@
               </li>
                 <li class="mega-menu__item">
         <a href="/self-help/wills-estates-trusts" class="mega-menu__link wills,-estates,-&amp;-trusts" data-drupal-link-system-path="node/60410">Wills, Estates, &amp; Trusts</a>
+              </li>
+                <li class="mega-menu__item">
+        <a href="/self-help/other-topics" class="mega-menu__link other-topics" data-drupal-link-system-path="node/110">Other Topics</a>
               </li>
         </ul>
 
@@ -328,7 +633,10 @@
         <a href="/about-vermont-judiciary/records-requests" class="mega-menu__link court-records" data-drupal-link-system-path="node/60274">Court Records</a>
               </li>
                 <li class="mega-menu__item">
-        <a href="/about-vermont-judiciary/memos-vermont-bar" class="mega-menu__link memos-to-the-vermont-bar" data-drupal-link-system-path="node/107831">Memos To the Vermont Bar</a>
+        <a href="/about-vermont-judiciary/data-and-information-requests" class="mega-menu__link data-and-information-requests" data-drupal-link-system-path="node/740476">Data and Information Requests</a>
+              </li>
+                <li class="mega-menu__item">
+        <a href="/about-vermont-judiciary/memos-vermont-bar" class="mega-menu__link memos-to-the-vermont-bar" data-drupal-link-system-path="node/107831">Memos to the Vermont Bar</a>
               </li>
                 <li class="mega-menu__item">
         <a href="/news" class="mega-menu__link news-and-announcements" data-drupal-link-system-path="news">News and Announcements</a>
@@ -338,6 +646,9 @@
               </li>
                 <li class="mega-menu__item">
         <a href="/attorneys/rules" class="mega-menu__link proposed-and-promulgated-rules" data-drupal-link-system-path="node/60389">Proposed and Promulgated Rules</a>
+              </li>
+                <li class="mega-menu__item">
+        <a href="/standing-orders" class="mega-menu__link standing-orders" data-drupal-link-system-path="node/890719">Standing Orders</a>
               </li>
         </ul>
 
@@ -349,13 +660,16 @@
 
                     <ul class="mega-menu__menu">
                     <li class="mega-menu__item">
+        <a href="/self-help/ARC" class="mega-menu__link access-and-resource-center" data-drupal-link-system-path="node/994378">Access and Resource Center</a>
+              </li>
+                <li class="mega-menu__item">
         <a href="/glossary" class="mega-menu__link glossary-of-legal-terms" data-drupal-link-system-path="node/60270">Glossary of Legal Terms</a>
               </li>
                 <li class="mega-menu__item">
-        <a href="/self-help/going-to-court" class="mega-menu__link going-to-court-guidelines" data-drupal-link-system-path="node/60415">Going to Court Guidelines</a>
+        <a href="/self-help/going-to-court" class="mega-menu__link going-to-court-" data-drupal-link-system-path="node/60415">Going to Court </a>
               </li>
-                <li class="mega-menu__item">
-        <a href="https://secure.vermont.gov/vtcdas/user" class="mega-menu__link vermont-courts-online">Vermont Courts Online</a>
+                <li class="mega-menu__item external-link">
+        <a href="https://portal.vtcourts.gov/Portal" class="mega-menu__link vermont-judiciary-public-portal">Vermont Judiciary Public Portal</a>
               </li>
         </ul>
 
@@ -380,7 +694,7 @@
 
 <section id="page-status">
     <section class="region region-status">
-
+    <div data-drupal-messages-fallback="" class="hidden"></div>
 
   </section>
 
@@ -396,12 +710,7 @@
       <div class="block__body clearfix">
 
 <div class="gtranslate">
-<script type="text/javascript">
-/* <![CDATA[ */
-eval(unescape("eval%28function%28p%2Ca%2Cc%2Ck%2Ce%2Cr%29%7Be%3Dfunction%28c%29%7Breturn%28c%3Ca%3F%27%27%3Ae%28parseInt%28c/a%29%29%29+%28%28c%3Dc%25a%29%3E35%3FString.fromCharCode%28c+29%29%3Ac.toString%2836%29%29%7D%3Bif%28%21%27%27.replace%28/%5E/%2CString%29%29%7Bwhile%28c--%29r%5Be%28c%29%5D%3Dk%5Bc%5D%7C%7Ce%28c%29%3Bk%3D%5Bfunction%28e%29%7Breturn%20r%5Be%5D%7D%5D%3Be%3Dfunction%28%29%7Breturn%27%5C%5Cw+%27%7D%3Bc%3D1%7D%3Bwhile%28c--%29if%28k%5Bc%5D%29p%3Dp.replace%28new%20RegExp%28%27%5C%5Cb%27+e%28c%29+%27%5C%5Cb%27%2C%27g%27%29%2Ck%5Bc%5D%29%3Breturn%20p%7D%28%276%207%28a%2Cb%29%7Bn%7B4%282.9%29%7B3%20c%3D2.9%28%22o%22%29%3Bc.p%28b%2Cf%2Cf%29%3Ba.q%28c%29%7Dg%7B3%20c%3D2.r%28%29%3Ba.s%28%5C%27t%5C%27+b%2Cc%29%7D%7Du%28e%29%7B%7D%7D6%20h%28a%29%7B4%28a.8%29a%3Da.8%3B4%28a%3D%3D%5C%27%5C%27%29v%3B3%20b%3Da.w%28%5C%27%7C%5C%27%29%5B1%5D%3B3%20c%3B3%20d%3D2.x%28%5C%27y%5C%27%29%3Bz%283%20i%3D0%3Bi%3Cd.5%3Bi++%294%28d%5Bi%5D.A%3D%3D%5C%27B-C-D%5C%27%29c%3Dd%5Bi%5D%3B4%282.j%28%5C%27k%5C%27%29%3D%3DE%7C%7C2.j%28%5C%27k%5C%27%29.l.5%3D%3D0%7C%7Cc.5%3D%3D0%7C%7Cc.l.5%3D%3D0%29%7BF%286%28%29%7Bh%28a%29%7D%2CG%29%7Dg%7Bc.8%3Db%3B7%28c%2C%5C%27m%5C%27%29%3B7%28c%2C%5C%27m%5C%27%29%7D%7D%27%2C43%2C43%2C%27%7C%7Cdocument%7Cvar%7Cif%7Clength%7Cfunction%7CGTranslateFireEvent%7Cvalue%7CcreateEvent%7C%7C%7C%7C%7C%7Ctrue%7Celse%7CdoGTranslate%7C%7CgetElementById%7Cgoogle_translate_element2%7CinnerHTML%7Cchange%7Ctry%7CHTMLEvents%7CinitEvent%7CdispatchEvent%7CcreateEventObject%7CfireEvent%7Con%7Ccatch%7Creturn%7Csplit%7CgetElementsByTagName%7Cselect%7Cfor%7CclassName%7Cgoog%7Cte%7Ccombo%7Cnull%7CsetTimeout%7C500%27.split%28%27%7C%27%29%2C0%2C%7B%7D%29%29"))
-/* ]]> */
-</script><style type="text/css">
-<!--
+<script>eval(unescape("eval%28function%28p%2Ca%2Cc%2Ck%2Ce%2Cr%29%7Be%3Dfunction%28c%29%7Breturn%28c%3Ca%3F%27%27%3Ae%28parseInt%28c/a%29%29%29+%28%28c%3Dc%25a%29%3E35%3FString.fromCharCode%28c+29%29%3Ac.toString%2836%29%29%7D%3Bif%28%21%27%27.replace%28/%5E/%2CString%29%29%7Bwhile%28c--%29r%5Be%28c%29%5D%3Dk%5Bc%5D%7C%7Ce%28c%29%3Bk%3D%5Bfunction%28e%29%7Breturn%20r%5Be%5D%7D%5D%3Be%3Dfunction%28%29%7Breturn%27%5C%5Cw+%27%7D%3Bc%3D1%7D%3Bwhile%28c--%29if%28k%5Bc%5D%29p%3Dp.replace%28new%20RegExp%28%27%5C%5Cb%27+e%28c%29+%27%5C%5Cb%27%2C%27g%27%29%2Ck%5Bc%5D%29%3Breturn%20p%7D%28%276%207%28a%2Cb%29%7Bn%7B4%282.9%29%7B3%20c%3D2.9%28%22o%22%29%3Bc.p%28b%2Cf%2Cf%29%3Ba.q%28c%29%7Dg%7B3%20c%3D2.r%28%29%3Ba.s%28%5C%27t%5C%27+b%2Cc%29%7D%7Du%28e%29%7B%7D%7D6%20h%28a%29%7B4%28a.8%29a%3Da.8%3B4%28a%3D%3D%5C%27%5C%27%29v%3B3%20b%3Da.w%28%5C%27%7C%5C%27%29%5B1%5D%3B3%20c%3B3%20d%3D2.x%28%5C%27y%5C%27%29%3Bz%283%20i%3D0%3Bi%3Cd.5%3Bi++%294%28d%5Bi%5D.A%3D%3D%5C%27B-C-D%5C%27%29c%3Dd%5Bi%5D%3B4%282.j%28%5C%27k%5C%27%29%3D%3DE%7C%7C2.j%28%5C%27k%5C%27%29.l.5%3D%3D0%7C%7Cc.5%3D%3D0%7C%7Cc.l.5%3D%3D0%29%7BF%286%28%29%7Bh%28a%29%7D%2CG%29%7Dg%7Bc.8%3Db%3B7%28c%2C%5C%27m%5C%27%29%3B7%28c%2C%5C%27m%5C%27%29%7D%7D%27%2C43%2C43%2C%27%7C%7Cdocument%7Cvar%7Cif%7Clength%7Cfunction%7CGTranslateFireEvent%7Cvalue%7CcreateEvent%7C%7C%7C%7C%7C%7Ctrue%7Celse%7CdoGTranslate%7C%7CgetElementById%7Cgoogle_translate_element2%7CinnerHTML%7Cchange%7Ctry%7CHTMLEvents%7CinitEvent%7CdispatchEvent%7CcreateEventObject%7CfireEvent%7Con%7Ccatch%7Creturn%7Csplit%7CgetElementsByTagName%7Cselect%7Cfor%7CclassName%7Cgoog%7Cte%7Ccombo%7Cnull%7CsetTimeout%7C500%27.split%28%27%7C%27%29%2C0%2C%7B%7D%29%29"))</script><style>
 #goog-gt-tt {display:none !important;}
 
 .goog-te-banner-frame {display:none !important;}
@@ -411,10 +720,9 @@ eval(unescape("eval%28function%28p%2Ca%2Cc%2Ck%2Ce%2Cr%29%7Be%3Dfunction%28c%29%
 body {top:0 !important;}
 
 #google_translate_element2 {display:none!important;}
--->
-</style><div id="google_translate_element2"></div>
-<script type="text/javascript">function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element2');}</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script><label class="hidden" for="gtranslate">Translate</label><select id="gtranslate" aria-label="Translate content" onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" style="font-weight:bold;background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -0px;padding-left:18px;">English</option><option value="en|ar" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -16px;padding-left:18px;">Arabic</option><option value="en|bs" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -944px;padding-left:18px;">Bosnian</option><option value="en|fr" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -160px;padding-left:18px;">French</option><option value="en|my" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1296px;padding-left:18px;">Myanmar (Burmese)</option><option value="en|ne" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1184px;padding-left:18px;">Nepali</option><option value="en|so" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1216px;padding-left:18px;">Somali</option><option value="en|es" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -352px;padding-left:18px;">Spanish</option><option value="en|sw" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -720px;padding-left:18px;">Swahili</option><option value="en|th" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -640px;padding-left:18px;">Thai</option><option value="en|vi" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -544px;padding-left:18px;">Vietnamese</option></select>
+</style><div id="google_translate_element2"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Language Translate Widget"><option value="">Select Language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="bm">Bambara</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bho">Bhojpuri</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="dv">Dhivehi</option><option value="doi">Dogri</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="rw">Kinyarwanda</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lg">Luganda</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mai">Maithili</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="qu">Quechua</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="sa">Sanskrit</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="th">Thai</option><option value="ti">Tigrinya</option><option value="ts">Tsonga</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="ak">Twi</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+<script>function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element2');}</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script><label class="hidden" for="gtranslate">Translate</label><select id="gtranslate" aria-label="Translate content" onchange="doGTranslate(this);" class="notranslate"><option value="">Select Language</option><option value="en|en" style="font-weight:bold;background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -0px;padding-left:18px;">English</option><option value="en|ar" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -16px;padding-left:18px;">Arabic</option><option value="en|bs" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -944px;padding-left:18px;">Bosnian</option><option value="en|fr" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -160px;padding-left:18px;">French</option><option value="en|my" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1296px;padding-left:18px;">Myanmar (Burmese)</option><option value="en|ne" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1184px;padding-left:18px;">Nepali</option><option value="en|so" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1216px;padding-left:18px;">Somali</option><option value="en|es" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -352px;padding-left:18px;">Spanish</option><option value="en|sw" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -720px;padding-left:18px;">Swahili</option><option value="en|th" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -640px;padding-left:18px;">Thai</option><option value="en|vi" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -544px;padding-left:18px;">Vietnamese</option></select>
 </div>
   </div>
   </section>
@@ -444,11 +752,11 @@ body {top:0 !important;}
   <div class="form__inline">
   <div class="keyword-search">
     <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext">
-      <label for="edit-search-api-fulltext">Search by keyword or document number</label>
-        <input data-drupal-selector="edit-search-api-fulltext" placeholder="Search by keyword or document number" type="text" id="edit-search-api-fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-text" />
+      <label for="edit-search-api-fulltext--3">Search by keyword or document number</label>
+        <input data-drupal-selector="edit-search-api-fulltext" placeholder="Search by keyword or document number" type="text" id="edit-search-api-fulltext--3" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-text">
 
         </div>
-<input data-drupal-selector="edit-submit-opinions-decisions-and-orders-library" aria-label="Find matches" type="submit" id="edit-submit-opinions-decisions-and-orders-library" value="Find matches" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-submit-opinions-decisions-and-orders-library-3" aria-label="Find matches" type="submit" id="edit-submit-opinions-decisions-and-orders-library--3" value="Find matches" class="button js-form-submit form-submit">
 
 
   </div>
@@ -477,19 +785,19 @@ body {top:0 !important;}
     <form action="/opinions-decisions" method="get" id="views-exposed-form-opinions-decisions-and-orders-library-page-1" accept-charset="UTF-8">
   <div class="form__inline">
   <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-facet-from-date form-item-facet-from-date">
-      <label for="edit-facet-from-date">From Date</label>
-        <input placeholder="ex. 01/01/2018" data-drupal-selector="edit-facet-from-date" type="text" id="edit-facet-from-date" name="facet_from_date" value="" size="30" maxlength="128" class="form-text" />
+      <label for="edit-facet-from-date--2">From Date</label>
+        <input placeholder="ex. 01/01/2023" data-drupal-selector="edit-facet-from-date" type="text" id="edit-facet-from-date--2" name="facet_from_date" value="" size="30" maxlength="128" class="form-text">
 
         </div>
 <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-facet-to-date form-item-facet-to-date">
-      <label for="edit-facet-to-date">Expiration Date</label>
-        <input placeholder="ex. 01/01/2018" data-drupal-selector="edit-facet-to-date" type="text" id="edit-facet-to-date" name="facet_to_date" value="" size="30" maxlength="128" class="form-text" />
+      <label for="edit-facet-to-date--2">Expiration Date</label>
+        <input placeholder="ex. 01/01/2023" data-drupal-selector="edit-facet-to-date" type="text" id="edit-facet-to-date--2" name="facet_to_date" value="" size="30" maxlength="128" class="form-text">
 
-            <div id="edit-facet-to-date--description" class="description">
+            <div id="edit-facet-to-date--2--description" class="description">
       To Date
     </div>
   </div>
-<input data-drupal-selector="edit-submit-opinions-decisions-and-orders-library" type="submit" id="edit-submit-opinions-decisions-and-orders-library" value="Apply" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-submit-opinions-decisions-and-orders-library-2" type="submit" id="edit-submit-opinions-decisions-and-orders-library--2" value="Apply" class="button js-form-submit form-submit">
 
 
 </div>
@@ -499,23 +807,33 @@ body {top:0 !important;}
   </div>
   </section>
 
-<section id="block-courtdivisionopinionslibrary" class="block-facets--checkbox block block-facets block-facet-blockcourt-division-opinions-library-">
+<section class="facet-active block-facet--checkbox block block-facets block-facet-blockcourt-division-opinions-library- accordion-collapsed" id="block-courtdivisionopinionslibrary">
   <div class="block__header clearfix"><h2 class="block__title">Step 2: Select a Court Division</h2>
     <i class="accordion-toggle"></i></div>
-    <div class="block__body clearfix">
-    <div class="item-list"><ul data-drupal-facet-id="court_division_opinions_library_" class="js-facets-checkbox-links"><li class="facet-item"><a href="/opinions-decisions?f%5B0%5D=document_type%3A94" rel="nofollow" class="is-active" data-drupal-facet-item-id="court_division_opinions_library_-4">  <span class="facet-item__status js-facet-deactivate">(-)</span>
+    <div class="block__body clearfix" style="display: none;">
+    <div class="facets-widget-checkbox">
+      <ul data-drupal-facet-id="court_division_opinions_library_" data-drupal-facet-alias="court_division_opinions_library_" class="facet-active js-facets-checkbox-links item-list__checkbox js-facets-widget"><li class="facet-item"><input type="checkbox" class="facets-checkbox" id="court-division-opinions-library--4" checked="checked"><label for="court-division-opinions-library--4">
 <span class="facet-item__value">Family</span>
-</a></li></ul></div>
+</label><a href="/opinions-decisions" rel="nofollow" class="is-active" data-drupal-facet-item-id="court-division-opinions-library--4" data-drupal-facet-item-value="4" data-drupal-facet-item-count="790" style="display: none;">  <span class="facet-item__status js-facet-deactivate">(-)</span>
+<span class="facet-item__value">Family</span>
+</a></li></ul>
+</div>
+
   </div>
   </section>
 
-<section id="block-documenttypeopinionslibrary" class="block-facets--checkbox block block-facets block-facet-blockdocument-type">
+<section class="facet-inactive block-facet--checkbox block block-facets block-facet-blockdocument-type accordion-collapsed" id="block-documenttypeopinionslibrary">
   <div class="block__header clearfix"><h2 class="block__title">Step 3: Select a Document Type</h2>
     <i class="accordion-toggle"></i></div>
-    <div class="block__body clearfix">
-    <div class="item-list"><ul data-drupal-facet-id="document_type" class="js-facets-checkbox-links"><li class="facet-item"><a href="/opinions-decisions?f%5B0%5D=court_division_opinions_library_%3A4" rel="nofollow" class="is-active" data-drupal-facet-item-id="document_type-94">  <span class="facet-item__status js-facet-deactivate">(-)</span>
-<span class="facet-item__value">Opinions</span>
-</a></li></ul></div>
+    <div class="block__body clearfix" style="display: none;">
+    <div class="facets-widget-checkbox">
+      <ul data-drupal-facet-id="document_type" data-drupal-facet-alias="document_type" class="facet-inactive js-facets-checkbox-links item-list__checkbox js-facets-widget"><li class="facet-item"><input type="checkbox" class="facets-checkbox" id="document-type-92"><label for="document-type-92"><span class="facet-item__value">Decisions</span>
+</label><a href="/opinions-decisions?f%5B0%5D=court_division_opinions_library_%3A4&amp;f%5B1%5D=document_type%3A92" rel="nofollow" data-drupal-facet-item-id="document-type-92" data-drupal-facet-item-value="92" data-drupal-facet-item-count="787" style="display: none;"><span class="facet-item__value">Decisions</span>
+</a></li><li class="facet-item"><input type="checkbox" class="facets-checkbox" id="document-type-94"><label for="document-type-94"><span class="facet-item__value">Opinions</span>
+</label><a href="/opinions-decisions?f%5B0%5D=court_division_opinions_library_%3A4&amp;f%5B1%5D=document_type%3A94" rel="nofollow" data-drupal-facet-item-id="document-type-94" data-drupal-facet-item-value="94" data-drupal-facet-item-count="3" style="display: none;"><span class="facet-item__value">Opinions</span>
+</a></li></ul>
+</div>
+
   </div>
   </section>
 
@@ -529,14 +847,180 @@ body {top:0 !important;}
 
 <section class="forms-library">
 <article class="views-row media-document">
-  <div class="views-field views-field-field-document"><span class="field-content">
-<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://www.vermontjudiciary.org/sites/default/files/documents/op17-032.pdf">Lisa Patnode v. Garrison Urette</a></span>
-</span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-11-17T10:00:00Z" class="datetime">11/17/2017</time>
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/14248" hreflang="en">Aaron Tudhope v.  Marina Mironova (Poddubnyak)</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2022-01-14T12:00:00Z" class="datetime">01/14/2022</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">21-AP-191</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/14247" hreflang="en">In re G.J., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2022-01-14T12:00:00Z" class="datetime">01/14/2022</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">21-AP-202</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/12320" hreflang="en">In re Z.L., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2020-09-01T10:00:00Z" class="datetime">09/01/2020</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2020-218</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/12111" hreflang="en">Phalan Haney v. Justin Dorney</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2020-06-05T10:00:00Z" class="datetime">06/05/2020</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2020-086</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/11860" hreflang="en">Rebecca Davin v. James Davin</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2020-02-07T10:00:00Z" class="datetime">02/07/2020</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2019-193</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/11858" hreflang="en">Antony Wood v. Kathryn Ritchie</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2020-02-07T10:00:00Z" class="datetime">02/07/2020</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2019-264</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/11854" hreflang="en">In re B.A., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2020-02-07T10:00:00Z" class="datetime">02/07/2020</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2019-349</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/11801" hreflang="en">Jason C. Barrows v. Jessica Easton</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2020-01-17T10:00:00Z" class="datetime">01/17/2020</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2019-149</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/11063" hreflang="en">In re T.L. &amp; T.L., Juveniles</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2019-06-03T10:00:00Z" class="datetime">06/03/2019</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2019-043</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/9829" hreflang="en">Nicola Weaver v. David Weaver</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2018-06-01T10:00:00Z" class="datetime">06/01/2018</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2017-402</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/9751" hreflang="en">In re R.B., Juvenile </a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2018-05-04T10:00:00Z" class="datetime">05/04/2018</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2018-015</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/9367" hreflang="en">In re P.K.</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2018-01-08T10:00:00Z" class="datetime">01/08/2018</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2017-272</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/9183" hreflang="en">Lisa Patnode v. Garrison Urette</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-11-17T10:00:00Z" class="datetime">11/17/2017</time>
 </span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2017-032</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/9091" hreflang="en">In re Z.L., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-10-27T10:00:00Z" class="datetime">10/27/2017</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">2017-059</span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/6193" hreflang="en">In re M,T, and T.T., Juveniles</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-01-01T00:00:00Z" class="datetime">01/01/2017</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-318 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/6363" hreflang="en">In re W.C., R.C., B.C. and B.C., Juveniles</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-01-01T00:00:00Z" class="datetime">01/01/2017</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-324 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/6055" hreflang="en">In re I.B., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-01-01T00:00:00Z" class="datetime">01/01/2017</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-330 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/7620" hreflang="en">Vera P. Mikhailova v. Andrei V. Babyuk</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2017-01-01T00:00:00Z" class="datetime">01/01/2017</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-272 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/6178" hreflang="en">In re L.L., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-12-01T00:00:00Z" class="datetime">12/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-191 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/5934" hreflang="en">In re C.R., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-12-01T00:00:00Z" class="datetime">12/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-245 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/6343" hreflang="en">In re T.H.</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-12-01T00:00:00Z" class="datetime">12/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-006 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/5772" hreflang="en">In re A.H., Juvenile</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-12-01T00:00:00Z" class="datetime">12/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-260 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/6294" hreflang="en">In re S.D., D.D., M.D. and Z.D., Juveniles</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-12-01T00:00:00Z" class="datetime">12/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-287 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/5622" hreflang="en">Donna Mannings v. Charles Mannings</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-11-01T00:00:00Z" class="datetime">11/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-066 </span></div>
+</article>
+<article class="views-row media-document">
+  <div class="views-field views-field-name  views-field-field-document"><span class="field-content file file--application-pdf external-link"><a href="/media/5918" hreflang="en">In re C.H. and J.H., Juveniles</a></span></div><div class="views-field views-field-field-document-expiration"><span class="field-content"><time datetime="2016-11-01T00:00:00Z" class="datetime">11/01/2016</time>
+</span></div><div class="views-field views-field-field-document-court-division"><span class="field-content">Family</span></div><div class="views-field views-field-field-document-number"><span class="field-content">eo16-184 </span></div>
 </article>
 </section>
 
 
+    <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=3" title="Go to page 4">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=4" title="Go to page 5">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=5" title="Go to page 6">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=6" title="Go to page 7">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=7" title="Go to page 8">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=8" title="Go to page 9">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </li>
+                          <li class="pager__item pager__item--ellipsis" role="presentation">…</li>
+                          <li class="pager__item pager__item--next">
+          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">&gt;</span>
+          </a>
+        </li>
+                          <li class="pager__item pager__item--last">
+          <a href="?f%5B0%5D=court_division_opinions_library_%3A4&amp;search_api_fulltext=&amp;facet_from_date=&amp;facet_to_date=&amp;page=31" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">»</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
 
 
 
@@ -575,12 +1059,15 @@ body {top:0 !important;}
         <a href="/employment-opportunities" data-drupal-link-system-path="node/60301">Employment Opportunities</a>
               </li>
                 <li class="footer__menu-item">
+        <a href="/about-vermont-judiciary/filing-complaint" data-drupal-link-system-path="node/60275">Filing a Complaint</a>
+              </li>
+                <li class="footer__menu-item external-link">
         <a href="https://get.adobe.com/reader/">Get Adobe Reader</a>
               </li>
                 <li class="footer__menu-item">
         <a href="/help-using-website" data-drupal-link-system-path="node/60416">Help Using This Website</a>
               </li>
-                <li class="footer__menu-item">
+                <li class="footer__menu-item external-link">
         <a href="https://portal.office.com/">Outlook Web Access</a>
               </li>
         </ul>
@@ -592,7 +1079,7 @@ body {top:0 !important;}
 
               <ul class="footer__menu-items">
                     <li class="footer__menu-item">
-        <a href="/programs-and-services/interpreters-and-translators-vermont-courts" data-drupal-link-system-path="node/60417">Request an Interpreter</a>
+        <a href="/programs-and-services/language-access-interpreters-and-translators" data-drupal-link-system-path="node/367250">Request an Interpreter</a>
               </li>
                 <li class="footer__menu-item">
         <a href="/sitemap" data-drupal-link-system-path="sitemap">Site Map</a>
@@ -617,17 +1104,17 @@ body {top:0 !important;}
 
           <section class="footer-meta">
       <div class="footer-meta__copyright">
-        <p>© 2017 Vermont Judiciary. All rights reserved. </p>
+        <p>© 2021 Vermont Judiciary. All rights reserved.&nbsp;</p>
 
 </div>
 
       <div class="footer-meta__social">
 
               <ul class="footer-meta__social-items">
-                    <li class="footer-meta__social-item footer-meta__social-item--facebook">
+                    <li class="footer-meta__social-item footer-meta__social-item--facebook external-link">
         <a href="https://www.facebook.com/VTCourts/">Facebook</a>
               </li>
-                <li class="footer-meta__social-item footer-meta__social-item--twitter">
+                <li class="footer-meta__social-item footer-meta__social-item--twitter external-link">
         <a href="https://twitter.com/VermontCourts">Twitter</a>
               </li>
         </ul>
@@ -640,14 +1127,16 @@ body {top:0 !important;}
 
   </footer>
 
+  </div>
 
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"opinions-decisions","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"f":["document_type:94","court_division_opinions_library_:4"]}},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajaxTrustedUrl":{"\/opinions-decisions":true,"\/search\/content":true},"vjUtils":{"accordions":{"blockFacets":{"selector":".block-facets","bodySelector":".block__body"}},"bps":{"vermont_judiciary.onMobile":"screen and (max-width: 424px)"}},"user":{"uid":0,"permissionsHash":"3d128ee7fbd26019c41bd6e7525d91047db03ff99286f72e08cf7edfbf6961e0"}}</script>
-<script src="/sites/default/files/js/js_BKcMdIbOMdbTdLn9dkUq3KCJfIKKo2SvKoQ1AnB8D-g.js"></script>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"opinions-decisions","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"f":["court_division_opinions_library_:4"]}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajaxTrustedUrl":{"\/search\/content":true,"\/opinions-decisions":true},"vjUtils":{"accordions":{"blockFacets":{"selector":".block-facets","bodySelector":".block__body"}},"bps":{"vermont_judiciary.onMobile":"screen and (max-width: 424px)"}},"Toolshed":{"breakpoints":[]},"user":{"uid":0,"permissionsHash":"c09d680df5b4932c9efac2f5cc4ab27a3d843a1e90ccdacb299efab6699f83df"}}</script>
 
 <!--[if lte IE 9]>
 <script src="/sites/default/files/js/js_d0t2jGiT4R2t5F4ly-OG4fLttYOmcdBrFnUGQQn-WRw.js"></script>
 <![endif]-->
-<script src="/sites/default/files/js/js_NNQGyFiKn5XxsS5NsUKA7O4l-SDBRT1-hgU7TUKgs0w.js"></script>
+<script src="/sites/default/files/js/js_B-Vvf5WGpjmES0x8uc2FUQcOhzfXRqj-pz5a2YdjRgY.js"></script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-i3jM8c"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class=" VIpgJd-yAWNEb-hvhgNd-k77Iif-i3jM8c"><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="ltr">Original text</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
 
-  </body>
-</html>
+
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>

@@ -6,50 +6,70 @@ History:
     15 Sep 2014: Created by Jon Andersen
 """
 
-from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSite import OpinionSite
+from datetime import date, datetime
+from typing import Tuple
+from urllib.parse import urlencode
+
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    base_url = "https://www.jag.navy.mil/api/tables/decisions-opinions/data/"
+    days_interval = 60
+    first_opinion_date = datetime(2004, 1, 8)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.jag.navy.mil/courts/opinion_archive.htm"
         self.court_id = self.__module__
-        self.back_scrape_iterable = list(range(2013, 2004 - 1, -1))
+        self.request["verify"] = False
+        self.url = self.base_url
+        self.make_backscrape_iterable(kwargs)
 
-    def _get_case_dates(self):
-        # this court makes a lot of typos apparently
-        typos = {
-            "6/13/30/13": "6/13/13",
-            "6/11/30/13": "6/11/13",
-            "02/12/09 & 12/04/08": "02/12/09",
-            "006/08/2020": "06/08/2020",
+    def _process_html(self) -> None:
+        for row in self.html["results"]:
+            date, docket, notes, name = list(row["data"].values())
+            url = row["documents"][0]["document"]["download_url"]
+            if notes == "Unpublished":
+                status = "Unpublished"
+            else:
+                status = "Published"
+            self.cases.append(
+                {
+                    "date": date,
+                    "name": name,
+                    "url": url,
+                    "status": status,
+                    "docket": docket,
+                }
+            )
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Make custom date range request
+
+        "6e61b248-ef67-423e-b321-f2ed8ad05728" seems to be the name
+        of the date field. It is also present on the response JSON keys.
+        It seems stable through time, from last example file edit in 2023
+        to April 2024.
+
+        If something changes, go to
+        https://www.jag.navy.mil/about/organization/ojag/code-05/nmcca/opinions/
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        ts = str(datetime.now().timestamp()).replace(".", "")[:13]
+        start = dates[0].strftime("%Y-%m-%d")
+        end = dates[1].strftime("%Y-%m-%d")
+        params = {
+            "page": "1",
+            "page_size": "100",
+            "ordering": "-data__6e61b248-ef67-423e-b321-f2ed8ad05728",
+            "data__6e61b248-ef67-423e-b321-f2ed8ad05728__gte": start,
+            "data__6e61b248-ef67-423e-b321-f2ed8ad05728__lte": end,
+            "_": ts,
         }
-
-        dates = []
-        path = "//table/tbody/tr/td[3]//text()"
-        for ds in self.html.xpath(path):
-            ds = typos[ds] if ds in typos else ds
-            dates.append(convert_date_string(ds))
-        return dates
-
-    def _get_case_names(self):
-        path = "//table/tbody/tr/td[1]/text()"
-        return [titlecase(text) for text in self.html.xpath(path)]
-
-    def _get_download_urls(self):
-        path = "//table/tbody/tr/td[4]/a[1]/@href"
-        return [e for e in self.html.xpath(path)]
-
-    def _get_docket_numbers(self):
-        path = "//table/tbody/tr/td[2]//text()"
-        return [docket_number for docket_number in self.html.xpath(path)]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_dates)
-
-    def _download_backwards(self, year):
-        self.url = (
-            "http://www.jag.navy.mil/courts/opinion_archive_%d.htm" % year
-        )
+        self.url = f"{self.base_url}?{urlencode(params)}"
         self.html = self._download()
+        self._process_html()

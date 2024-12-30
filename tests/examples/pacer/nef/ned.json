@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Hicks v. Hawkins Construction Company",
-      "date_filed": "2021-06-10",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-06-10",
@@ -19,7 +19,12 @@
           "short_description": ""
         }
       ],
-      "docket_number": "8:20-cv-00510"
+      "docket_number": "8:20-cv-00510",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "BCB",
+      "federal_dn_judge_initials_referred": "MDN",
+      "federal_dn_office_code": "8"
     }
   ],
   "email_recipients": [

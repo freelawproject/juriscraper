@@ -1,0 +1,291 @@
+{
+  "court_id": "txsd",
+  "docket_number": "2:20-cr-00606",
+  "federal_defendant_number": "1",
+  "federal_dn_case_type": "cr",
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_dn_office_code": "2",
+  "case_name": "United States v. Arias-Hernandez",
+  "date_filed": "2020-03-27",
+  "date_terminated": "2020-04-17",
+  "date_converted": null,
+  "date_discharged": null,
+  "assigned_to_str": "David S. Morales",
+  "referred_to_str": "",
+  "cause": "",
+  "nature_of_suit": "",
+  "jury_demand": "",
+  "demand": "",
+  "jurisdiction": "",
+  "mdl_status": "",
+  "ordered_by": "date_filed",
+  "parties": [
+    {
+      "type": "Defendant",
+      "name": "Martin Arias-Hernandez",
+      "extra_info": "TERMINATED: 04/17/2020",
+      "date_terminated": "2020-04-17",
+      "attorneys": [
+        {
+          "name": "Federal Public Defender - Corpus Christi",
+          "roles": [
+            "LEAD ATTORNEY",
+            "ATTORNEY TO BE NOTICED"
+          ],
+          "contact": "606 N Carancahua\nSte 401\nCorpus Christi, TX 78476\n361-888-3532\nEmail: Mary_Montoya@fd.org\n"
+        },
+        {
+          "name": "Rachel Elizabeth Braver",
+          "roles": [
+            "LEAD ATTORNEY",
+            "ATTORNEY TO BE NOTICED"
+          ],
+          "contact": "Office of the Federal Public Defender\n606 N. Carancahua\nSte. 401\nCorpus Christi, TX 78401-0697\n361-888-3532\nFax: 361-888-3534\nEmail: rachel_braver@fd.org\n"
+        },
+        {
+          "name": "Corpus Christi Interpreter",
+          "roles": [
+            "ATTORNEY TO BE NOTICED"
+          ],
+          "contact": ""
+        }
+      ],
+      "criminal_data": {
+        "counts": [
+          {
+            "name": "REENTRY OF DEPORTED ALIENS(1)",
+            "disposition": "TIME SERVED; $100 Special Assessment (remitted)",
+            "status": "pending"
+          }
+        ],
+        "complaints": [
+          {
+            "name": "8:1326.F--REENTRY OF DEPORTED ALIENS",
+            "disposition": ""
+          }
+        ],
+        "highest_offense_level_opening": "Felony",
+        "highest_offense_level_terminated": "None"
+      }
+    },
+    {
+      "type": "Plaintiff",
+      "name": "USA",
+      "extra_info": "",
+      "date_terminated": null,
+      "attorneys": [
+        {
+          "name": "Neel Kapur",
+          "roles": [
+            "LEAD ATTORNEY",
+            "ATTORNEY TO BE NOTICED"
+          ],
+          "contact": "US Attorney's Office\n800 N Shoreline Blvd\nSte 500\nCorpus Christi, TX 78401\n361-888-3111\nEmail: neel.kapur@usdoj.gov\n"
+        }
+      ]
+    }
+  ],
+  "docket_entries": [
+    {
+      "date_filed": "2020-03-14",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "Arrest of Martin Arias-Hernandez. (KendraPearsonadi, 2) [2:20-mj-00927] (Entered: 03/16/2020)",
+      "date_entered": "2020-03-16"
+    },
+    {
+      "date_filed": "2020-03-15",
+      "document_number": "1",
+      "pacer_doc_id": "179035790896",
+      "pacer_seq_no": "7",
+      "description": "COMPLAINT as to Martin Arias-Hernandez (1), filed. (Brooks) Initial Appearance set for 3/16/2020 at 11:15 AM before Magistrate Judge Jason B Libby (Attachments: # 1 Affidavit) (fcarbia, 2) [2:20-mj-00927] (Entered: 03/15/2020)",
+      "date_entered": "2020-03-15"
+    },
+    {
+      "date_filed": "2020-03-16",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "Interpreter needed as to Martin Arias-Hernandez. Language: SPANISH. Corpus Christi Interpreter for Martin Arias-Hernandez added. (KendraPearsonadi, 2) [2:20-mj-00927] (Entered: 03/16/2020)",
+      "date_entered": "2020-03-16"
+    },
+    {
+      "date_filed": "2020-03-16",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "Minute Entry for proceedings held before Magistrate Judge Jason B Libby: INITIAL APPEARANCE as to Martin Arias-Hernandez, (Deft informed of rights) held on 3/16/2020. Defendant requests appointed counsel. Court grants request for appointment of counsel. Government moves for detention and requests a continuance. Court grants Government's request for continuance. Rights to consular notification given; defendant or counsel may notify the Court if they request notification. Preliminary Examination & Detention Hearing set for 3/19/2020 at 09:00 AM before Magistrate Judge Jason B Libby. Appearances: Amanda Gould, AUSA; USM: George Butcher; Christopher Porche. (Digital # 11:15:30-11:21:35) (ERO: Annette Martinez) (Interpreter: L. Parada-Valdes and S. Buckley/used) Deft remanded to custody. (KendraPearsonadi, 2) [2:20-mj-00927] (Entered: 03/16/2020)",
+      "date_entered": "2020-03-16"
+    },
+    {
+      "date_filed": "2020-03-17",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "US ATTORNEY'S NOTICE OF APPEARANCE. Neel Kapur appearing for USA, filed.(Kapur, Neel) [2:20-mj-00927] (Entered: 03/17/2020)",
+      "date_entered": "2020-03-17"
+    },
+    {
+      "date_filed": "2020-03-17",
+      "document_number": "2",
+      "pacer_doc_id": "179035790908",
+      "pacer_seq_no": "12",
+      "description": "ORDER APPOINTING FEDERAL PUBLIC DEFENDER. (Signed by Magistrate Judge Jason B. Libby) Parties notified. (mjassoadi, 2) [2:20-mj-00927] (Entered: 03/17/2020)",
+      "date_entered": "2020-03-17"
+    },
+    {
+      "date_filed": "2020-03-17",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "NOTICE OF ATTORNEY APPEARANCE Rachel Elizabeth Braver, Federal Public Defender, in case as to Martin Arias-Hernandez, filed.(Braver, Rachel) [2:20-mj-00927] (Entered: 03/17/2020)",
+      "date_entered": "2020-03-17"
+    },
+    {
+      "date_filed": "2020-03-19",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "Minute Entry for proceedings held before Magistrate Judge Jason B Libby: PRELIMINARY EXAMINATION & DETENTION HEARING as to Martin Arias-Hernandez held on 3/19/2020 Defense counsel orally waives both hearings in open court with the permission of defendant. Appearances: Cody Barnes, AUSA; Rachel Braver f/Defendant; USPO: Joann Torres-Cadena; USM: Robin Richards; Christopher Porche. (Digital # 9;13:38-9:14:36) (ERO: Kellie Papaioannou) (Interpreter: M. Wallace/not used) Deft remanded to custody. (KendraPearsonadi, 2) [2:20-mj-00927] (Entered: 03/19/2020)",
+      "date_entered": "2020-03-19"
+    },
+    {
+      "date_filed": "2020-03-19",
+      "document_number": "3",
+      "pacer_doc_id": "179035790915",
+      "pacer_seq_no": "15",
+      "description": "ORDER OF DETENTION PENDING TRIAL as to Martin Arias-Hernandez ( Signed by Magistrate Judge Jason B Libby) Parties notified. (KendraPearsonadi, 2) [2:20-mj-00927] (Entered: 03/19/2020)",
+      "date_entered": "2020-03-19"
+    },
+    {
+      "date_filed": "2020-03-25",
+      "document_number": "4",
+      "pacer_doc_id": "179035790919",
+      "pacer_seq_no": "16",
+      "description": "Pretrial Services Report (Sealed) as to Martin Arias-Hernandez, filed. (ErinLandrum, 2) [2:20-mj-00927] (Entered: 03/25/2020)",
+      "date_entered": "2020-03-25"
+    },
+    {
+      "date_filed": "2020-03-27",
+      "document_number": "5",
+      "pacer_doc_id": "179035790942",
+      "pacer_seq_no": "34",
+      "description": "INFORMATION as to Martin Arias-Hernandez (1) count(s) 1, filed. (KelliePapaioannou, 2) (Entered: 03/30/2020)",
+      "date_entered": "2020-03-30"
+    },
+    {
+      "date_filed": "2020-03-27",
+      "document_number": "6",
+      "pacer_doc_id": "179035790963",
+      "pacer_seq_no": "41",
+      "description": "US Attys Criminal Docket Sheet as to Martin Arias-Hernandez, filed.(KelliePapaioannou, 2) (Entered: 03/30/2020)",
+      "date_entered": "2020-03-30"
+    },
+    {
+      "date_filed": "2020-03-31",
+      "document_number": "7",
+      "pacer_doc_id": "179035804933",
+      "pacer_seq_no": "43",
+      "description": "NOTICE OF SETTING as to Martin Arias-Hernandez. Plea and Sentence set for 4/8/2020 at 09:00 AM before Judge David S Morales, filed. (arodriguez, 2) (Entered: 03/31/2020)",
+      "date_entered": "2020-03-31"
+    },
+    {
+      "date_filed": "2020-04-02",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "**Terminate Deadlines and Hearings as to Martin Arias-Hernandez: Plea and Sentence CANCELED - case not found eligible for expedited hearing. (arodriguez, 2) (Entered: 04/02/2020)",
+      "date_entered": "2020-04-02"
+    },
+    {
+      "date_filed": "2020-04-06",
+      "document_number": "8",
+      "pacer_doc_id": "179035824307",
+      "pacer_seq_no": "47",
+      "description": "SCHEDULING ORDER as to Martin Arias-Hernandez. Arraignment set for 4/9/2020 at 10:00 AM before Magistrate Judge Jason B.Libby. Final Pretrial Conference set for 4/30/2020 at 02:00 PM before Magistrate Judge Jason B.Libby. Jury Trial set for 5/4/2020 at 08:30 AM before Judge David S. Morales. (Signed by Magistrate Judge Jason B.Libby) Parties notified. (KendraPearson, 2) (Entered: 04/06/2020)",
+      "date_entered": "2020-04-06"
+    },
+    {
+      "date_filed": "2020-04-06",
+      "document_number": "9",
+      "pacer_doc_id": "179035826684",
+      "pacer_seq_no": "49",
+      "description": "WAIVER of Presence at Arraignment and Entry of Plea of Not Guilty, filed.(Braver, Rachel) (Entered: 04/06/2020)",
+      "date_entered": "2020-04-06"
+    },
+    {
+      "date_filed": "2020-04-06",
+      "document_number": "10",
+      "pacer_doc_id": "179035828339",
+      "pacer_seq_no": "52",
+      "description": "ORDER as to Martin Arias-Hernandez 9 WAIVER of Presence at Arraignment and Entry of Plea of Not Guilty ( Signed by Magistrate Judge Jason B Libby) Parties notified. (legarza, 2) (Entered: 04/06/2020)",
+      "date_entered": "2020-04-06"
+    },
+    {
+      "date_filed": "2020-04-09",
+      "document_number": "11",
+      "pacer_doc_id": "179035845174",
+      "pacer_seq_no": "54",
+      "description": "NOTICE OF SETTING as to Martin Arias-Hernandez. Re-Arraignment set for 4/14/2020 at 09:00 AM before Magistrate Judge Jason B Libby, filed. (KendraPearson, 2) (Entered: 04/09/2020)",
+      "date_entered": "2020-04-09"
+    },
+    {
+      "date_filed": "2020-04-09",
+      "document_number": "12",
+      "pacer_doc_id": "179035845645",
+      "pacer_seq_no": "56",
+      "description": "NOTICE of Resetting as to Martin Arias-Hernandez. Parties notified. Re-Arraignment reset for 4/14/2020 at 09:00 AM before Magistrate Judge Jason B Libby, filed. Defendants will appear by video-conference. Attorneys may appear by telephone and follow these instructions: Dial in to the Court's Conference phone number of 361-693-6518 (this line will be open 5 minutes prior to the hearing); when prompted, enter your conference ID (26518); when prompted, enter your password (13579); you will now be connected to the conference call. (KendraPearson, 2) (Entered: 04/09/2020)",
+      "date_entered": "2020-04-09"
+    },
+    {
+      "date_filed": "2020-04-09",
+      "document_number": "13",
+      "pacer_doc_id": "179035848767",
+      "pacer_seq_no": "58",
+      "description": "NOTICE OF SETTING as to Martin Arias-Hernandez. Plea and Sentence set for 4/15/2020 at 03:00 PM before Judge David S Morales, filed. (arodriguez, 2) (Entered: 04/09/2020)",
+      "date_entered": "2020-04-09"
+    },
+    {
+      "date_filed": "2020-04-10",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "**Terminate Deadlines and Hearings as to Martin Arias-Hernandez: Re-Arraignment reset for 4/14/2020 at 09:00 AM before Magistrate Judge Jason B Libby is canceled. (KendraPearson, 2) (Entered: 04/10/2020)",
+      "date_entered": "2020-04-10"
+    },
+    {
+      "date_filed": "2020-04-15",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "Minute Entry for proceedings held before Judge David S Morales: RE-ARRAIGNMENT held on 4/15/2020. Martin Arias-Hernandez (1) Guilty Count 1. Deft states he/she is ready to plea guilty today. Deft consents to entering guilty plea by video conference. Deft waives Indictment by Grand Jury. Court accepts the guilty plea. No plea agreement. The standard agreement was offered and explained to the deft, but the deft rejected the agreement. Deft wishes to waive the preparation of a PSR and proceed immediately to sentencing. Appearances:AUSA Y. Zheng; FPD Rachel Braver; USPO CC.(Digital # 2:41 - 3:10)(ERO:K. Papaioannou) (Interpreter: S. Buckley) Deft remanded to custody of USMS, filed.(arodriguez, 2) (Entered: 04/15/2020)",
+      "date_entered": "2020-04-15"
+    },
+    {
+      "date_filed": "2020-04-15",
+      "document_number": null,
+      "pacer_doc_id": null,
+      "pacer_seq_no": null,
+      "description": "Minute Entry for proceedings held before Judge David S Morales: Sentencing held on 4/15/2020 for Martin Arias-Hernandez (1), Count(s) 1, TIME SERVED; $100 Special Assessment (remitted). Deft requests to proceed without the preparation of a PSR. No objection from the Gvmt. The Court waives the requirement of the presentence investigation and adopts the findings in the worksheet as prepared by Probation. Deft is advised of his right to appeal his conviction and sentence. Appearances:AUSA Y. Zheng; FPD Rachel Braver; USPO CC.(Digital # 2:41 - 3:10)(ERO: K. Papaioannou) (Interpreter: S. Buckley) Deft remanded to custody of USMS, filed.(arodriguez, 2) (Entered: 04/15/2020)",
+      "date_entered": "2020-04-15"
+    },
+    {
+      "date_filed": "2020-04-17",
+      "document_number": "14",
+      "pacer_doc_id": "179035880890",
+      "pacer_seq_no": "69",
+      "description": "JUDGMENT as to Martin Arias-Hernandez ( Signed by Judge David S Morales) Parties notified. (MaraSalas, 2) (Entered: 04/17/2020)",
+      "date_entered": "2020-04-17"
+    },
+    {
+      "date_filed": "2020-04-17",
+      "document_number": "15",
+      "pacer_doc_id": "179035880907",
+      "pacer_seq_no": "72",
+      "description": "Statement of Reasons (Sealed) as to Martin Arias-Hernandez. NOTICE: Document available to applicable parties only. Authorized users enter CM/ECF Filer login and password first for authentication. Instructions available at http://www.txs.uscourts.gov/attorney-information - Electronic Access to Sealed Documents. Be sure to SAVE the document locally at the time of viewing, filed. (Entered: 04/17/2020)",
+      "date_entered": "2020-04-17"
+    }
+  ]
+}

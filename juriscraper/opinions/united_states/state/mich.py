@@ -7,6 +7,7 @@ History:
     - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
     - 2022-01-28: Updated for new web site, @satsuki-chan.
 """
+
 import re
 from typing import List
 from urllib.parse import urlencode

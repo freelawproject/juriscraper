@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Lara Fakhoury",
-      "date_filed": "2023-03-08",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2023-03-08",
@@ -19,7 +19,12 @@
           "short_description": "Hearing Rescheduled/Continued (Motion) (BK Case - BNC Option)"
         }
       ],
-      "docket_number": "6:22-bk-13036"
+      "docket_number": "6:22-bk-13036",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "bk",
+      "federal_dn_judge_initials_assigned": "SY",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "6"
     }
   ],
   "email_recipients": [

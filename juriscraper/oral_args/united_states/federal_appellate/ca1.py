@@ -8,7 +8,6 @@ History:
 - 2022-09-20: Updated by flooie
 """
 
-
 import feedparser
 
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear

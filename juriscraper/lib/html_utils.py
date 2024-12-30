@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 import re
 import sys
+from copy import deepcopy
 from urllib.parse import urlsplit, urlunsplit
 
-import lxml
+import nh3
 from lxml import etree, html
-from lxml.etree import XMLSyntaxError
-from lxml.html import HtmlElement, fromstring, html5parser, tostring
-from lxml.html.clean import Cleaner
+from lxml.html import HtmlElement, fromstring, tostring
 from requests import Response
 
 try:
@@ -25,6 +24,29 @@ if sys.maxunicode == 65535:
         "completely supported. See issue #188 for details."
     )
 
+ALLOWED_ATTRIBUTES = deepcopy(nh3.ALLOWED_ATTRIBUTES)
+ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
+ALLOWED_ATTRIBUTES["div"] = {"class", "id"}
+ALLOWED_ATTRIBUTES["font"] = {"face", "size"}
+ALLOWED_ATTRIBUTES["form"] = {"name", "method", "action"}
+ALLOWED_ATTRIBUTES["input"] = {
+    "class",
+    "id",
+    "name",
+    "value",
+    "type",
+    "onclick",
+}
+ALLOWED_ATTRIBUTES["span"] = {"class"}
+ALLOWED_ATTRIBUTES["table"].update({"border", "class"})
+ALLOWED_ATTRIBUTES["tr"].add("class")
+
+ALLOWED_TAGS = deepcopy(nh3.ALLOWED_TAGS)
+ALLOWED_TAGS.add("font")
+ALLOWED_TAGS.add("form")
+ALLOWED_TAGS.add("input")
+ALLOWED_TAGS.add("script")
+
 
 def get_xml_parsed_text(text):
     return etree.fromstring(text)
@@ -41,18 +63,21 @@ def get_html_from_element(element):
 def get_html5_parsed_text(text: str) -> HtmlElement:
     """Return content using the html5parser, ideal for faulty html.
 
-    This dance is slightly different than usual because it uses the
-    html5parser to first create an _Element object, then serialize it using
-    `tostring`, then parse *that* using the usual fromstring function. The
-    end result is that irregularities in the html are fixed by the
-    html5parser, and the usual lxml parser gives us the same API we are
-    used to.
+    This first uses nh3 to sanitize the html before parsing it with
+    the usual lxml parser.
 
     :param text: The html of the document
     :return: an lxml.HtmlElement object
     """
-    parsed = html5parser.document_fromstring(text)
-    return fromstring(tostring(parsed, encoding="unicode"))
+    return fromstring(
+        nh3.clean(
+            text,
+            strip_comments=False,
+            attributes=ALLOWED_ATTRIBUTES,
+            clean_content_tags=set(),
+            tags=ALLOWED_TAGS,
+        )
+    )
 
 
 def get_table_column_text(
@@ -102,20 +127,6 @@ def get_row_column_links(row, cell_num):
     return row.xpath(".//td[%d]//a/@href" % cell_num)[0]
 
 
-def get_clean_body_content(content, remove_extra_tags=[]):
-    """Parse out the body from an html string, clean it up, and send it along."""
-    remove_tags = ["a", "body", "font", "noscript"]
-    remove_tags.extend(remove_extra_tags)
-    cleaner = Cleaner(style=True, remove_tags=remove_tags)
-    try:
-        return cleaner.clean_html(content)
-    except XMLSyntaxError:
-        return (
-            "Unable to extract the content from this file. Please try "
-            "reading the original."
-        )
-
-
 def strip_bad_html_tags_insecure(
     text: str, remove_scripts=True
 ) -> HtmlElement:
@@ -135,40 +146,23 @@ def strip_bad_html_tags_insecure(
         text, str
     ), f"`text` must be of type str, but is of type {type(text)}."
 
-    # lxml fails to parse a script element that contains a '<' followed by any
-    # non-space character e.g: '<ca.length' which causes breakage. Removing
-    # script elements with this problem through lxml will cause all the
-    # following elements are also removed. To avoid this issue first remove
-    # all the script elements using regex before removing the script tags.
-    # See: jpml_1551542
+    clean_content_tags = {"style"}
     if remove_scripts:
-        text = re.sub(r"<script.*?>([\s\S]*?)<\/script>", "", text)
+        clean_content_tags.add("script")
+        tags = deepcopy(ALLOWED_TAGS)
+        tags.remove("script")
+    else:
+        tags = ALLOWED_TAGS
 
-    # Cleaner() can work with strs and unicode, but it does bad things to
-    # encodings if given the chance.
-    tree = get_html5_parsed_text(text)
-    cleaner = Cleaner(
-        # Keep JS: We parse onclicks for pacer metadata
-        javascript=False,
-        safe_attrs_only=False,
-        # Keep forms: We parse them for metadata
-        forms=False,
-        # Keep comments: We use them in appellate PACER. For discussion and fix
-        # to funky workaround below, see:
-        #   https://bugs.launchpad.net/lxml/+bug/1882606
-        # This workaround can be removed once lxml 4.5.2 is released
-        comments=False,
-        processing_instructions=False,
-        remove_unknown_tags=False,
-        allow_tags=set(lxml.html.defs.tags) | {lxml.etree.Comment},
-        # Things we *can* actually remove
-        scripts=remove_scripts,
-        style=True,
-        links=True,
-        embedded=True,
-        frames=True,
+    return fromstring(
+        nh3.clean(
+            text,
+            strip_comments=False,
+            attributes=ALLOWED_ATTRIBUTES,
+            clean_content_tags=clean_content_tags,
+            tags=tags,
+        )
     )
-    return cleaner.clean_html(tree)
 
 
 def get_visible_text(html_content):

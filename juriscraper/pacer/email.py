@@ -1,9 +1,11 @@
 import email
 import re
 from datetime import date
-from typing import Dict, List, Optional, TypedDict, Union
+from typing import Dict, List, Optional, Tuple, TypedDict, Union
 
 from lxml.html import HtmlElement
+
+from juriscraper.AbstractSite import logger
 
 from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
@@ -66,23 +68,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         # Emails with attached images should be ignored.
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
+
         base = {
             "court_id": self.court_id,
         }
+        parsed = {
+            "appellate": self._is_appellate(),
+            "dockets": self._get_dockets(),
+        }
         if self.content_type == "text/plain":
-            parsed = {
-                "appellate": self._is_appellate(),
-                "contains_attachments": self._contains_attachments_plain(),
-                "dockets": self._get_dockets(),
-                "email_recipients": self._get_email_recipients_plain(),
-            }
+            parsed["contains_attachments"] = self._contains_attachments_plain()
+            parsed["email_recipients"] = self._get_email_recipients_plain()
         else:
-            parsed = {
-                "appellate": self._is_appellate(),
-                "contains_attachments": self._contains_attachments(),
-                "dockets": self._get_dockets(),
-                "email_recipients": self._get_email_recipients(),
-            }
+            parsed["contains_attachments"] = self._contains_attachments()
+            parsed["email_recipients"] = self._get_email_recipients()
         return {**base, **parsed}
 
     def _is_appellate(self) -> bool:
@@ -154,32 +153,48 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.case_names.append(clean_string(case_name))
         return clean_string(harmonize(case_name))
 
-    def _get_docket_number(self, current_node: HtmlElement) -> str:
-        """Gets a docket number from the email text
+    def _parse_docket_number(
+        self, current_node: HtmlElement
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Gets a docket number from the email text and also parse the docket
+        number components.
 
         :param  current_node: The relative lxml.HtmlElement
-        :returns: Docket number, parsed
+        :returns: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
         """
 
         if self._is_appellate():
             path = self._sibling_path("Case Number")
             case_number = self._xpath_text_0(current_node, f"{path}/a")
-            return case_number
+            return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
-        docket_number = self._parse_docket_number_strs(
-            current_node.xpath(f"{path}/a/text()")
+        docket_number, docket_number_components = (
+            self._parse_docket_number_strs(
+                current_node.xpath(f"{path}/a/text()")
+            )
         )
         if not docket_number:
-            docket_number = self._parse_docket_number_strs(
-                current_node.xpath(f"{path}/p/a/text()")
+            docket_number, docket_number_components = (
+                self._parse_docket_number_strs(
+                    current_node.xpath(f"{path}/p/a/text()")
+                )
             )
-        return docket_number
+        return docket_number, docket_number_components
 
-    def _get_docket_number_plain(self) -> str:
-        """Gets a docket number from the plain email text
+    def _parse_docket_number_plain(
+        self,
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Gets a docket number from the plain email text and also parse the
+        docket number components.
 
-        :returns: Docket number, parsed
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
         """
         email_body = self.tree.text_content()
         regex = r"Case Number:(.*)"
@@ -309,27 +324,29 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             f"Can't get docket entry description, court: {self.court_id}"
         )
 
-    def _get_description_plain(self):
+    def _get_description_plain(self) -> str:
         """Gets the docket text for plain email
 
+        :raises: Exception if description can't be parsed
         :returns: Cleaned docket text
         """
         email_body = self.tree.text_content()
-        regex = r"^.*?Docket Text:(.*?)electronically mailed to:"
-        find_description = re.findall(regex, email_body, re.DOTALL)
+        regex = r"^.*?Docket Text:(?P<descr>.*?)(The following document|electronically mailed to:)"
+        find_description = re.search(regex, email_body, re.DOTALL)
+
         description = ""
         if find_description:
-            splitlines = find_description[0].splitlines()
-            for index_line in range(len(splitlines)):
-                if "Notice has been" not in splitlines[index_line]:
-                    # Build description line by line
-                    description = f"{description} {splitlines[index_line]}"
-                else:
-                    # Stop looking for description lines
+            for line in find_description.group("descr").splitlines():
+                if "Notice has been" in line:
                     break
-        description = clean_string(description)
+
+                # Build description line by line
+                description += f" {line}"
+            description = clean_string(description)
+
         if description:
             return description
+
         raise Exception(
             f"Can't get docket entry description for court: {self.court_id}"
         )
@@ -352,20 +369,17 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :returns: True if it contains otherwise False.
         """
-
         mail_body = self.tree.text_content()
-        regex = r"^.*?The following document\(s\) are associated with this transaction:(.*?)$"
+        regex = r"^.*?The following document\(s\) are associated with this transaction:(?P<attachments>.*?)(electronically mailed to:|$)"
+        find_attachments = re.search(regex, mail_body, re.DOTALL)
 
-        find_attachments = re.findall(regex, mail_body, re.DOTALL)
         associated_documents = 0
         if find_attachments:
-            splitlines = find_attachments[0].splitlines()
-            for index_line in range(len(splitlines)):
-                if "Document description:" in splitlines[index_line]:
-                    associated_documents = +1
-        if associated_documents <= 1:
-            return False
-        return True
+            for line in find_attachments.group("attachments").splitlines():
+                if "Document description:" in line:
+                    associated_documents += 1
+
+        return associated_documents > 1
 
     def _get_dockets(self) -> DocketType:
         """Get all the dockets mentioned in the notification.
@@ -379,16 +393,22 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         dockets = []
         if self.content_type == "text/plain":
-            docket_number = self._get_docket_number_plain()
+            docket_number, docket_number_components = (
+                self._parse_docket_number_plain()
+            )
+            docket_number = docket_number
+            # Cache the docket number for its later use.
+            self.docket_numbers.append(docket_number)
+
             docket = {
                 "case_name": self._get_case_name_plain(),
                 "docket_number": docket_number,
-                "date_filed": self._get_date_filed(),
+                "date_filed": None,
                 "docket_entries": self._get_docket_entries(),
             }
+            # Include the docket_number components.
+            docket.update(docket_number_components)
             dockets.append(docket)
-            # Cache the docket number for its later use.
-            self.docket_numbers.append(docket_number)
         else:
             dockets_table = self.tree.xpath(
                 "//table[contains(., 'Case Name:')]"
@@ -400,15 +420,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     f"court: {self.court_id}"
                 )
             for docket_table in dockets_table:
-                docket_number = self._get_docket_number(docket_table)
+                docket_number, docket_number_components = (
+                    self._parse_docket_number(docket_table)
+                )
+                docket_number = docket_number
                 # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
                 docket = {
                     "case_name": self._get_case_name(docket_table),
                     "docket_number": docket_number,
-                    "date_filed": self._get_date_filed(),
+                    "date_filed": None,
                     "docket_entries": self._get_docket_entries(docket_table),
                 }
+                # Include the docket_number components.
+                docket.update(docket_number_components)
                 dockets.append(docket)
 
             if len(dockets) > 1:
@@ -435,7 +460,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             description = self._get_description_plain()
             if description is not None:
                 email_body = self.tree.text_content()
-                regex = r"view the document:[\r\n]+([^\r\n]+)"
+                regex = r"view the document:[\r\n\s]+([^\r\n]+)"
                 url = re.findall(regex, email_body)
                 if url:
                     document_url = url[0]
@@ -464,6 +489,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 case_url = self._get_case_anchor(current_node)
 
         if description is not None:
+            # "doc" value for document_number will cause an error on
+            # DocketEntry queries. See issue #799
+            if document_number and document_number == "doc":
+                document_number = None
+
             entries = [
                 {
                     "date_filed": self._get_date_filed(),
@@ -481,18 +511,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
                     document_url
                 )
-                entries[0][
-                    "pacer_magic_num"
-                ] = get_pacer_magic_num_from_doc1_url(
-                    document_url, self.appellate
+                entries[0]["pacer_magic_num"] = (
+                    get_pacer_magic_num_from_doc1_url(
+                        document_url, self.appellate
+                    )
                 )
                 if not self._is_appellate():
-                    entries[0][
-                        "pacer_case_id"
-                    ] = get_pacer_case_id_from_doc1_url(document_url)
-                    entries[0][
-                        "pacer_seq_no"
-                    ] = get_pacer_seq_no_from_doc1_url(document_url)
+                    entries[0]["pacer_case_id"] = (
+                        get_pacer_case_id_from_doc1_url(document_url)
+                    )
+                    entries[0]["pacer_seq_no"] = (
+                        get_pacer_seq_no_from_doc1_url(document_url)
+                    )
 
             # Fallback on the Case URL to get the pacer_case_id.
             if not entries[0]["pacer_case_id"] and case_url:
@@ -513,16 +543,42 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :return: The parsed short description.
         """
 
-        if len(self.docket_numbers) > 1:
-            # Since we don't have examples for bankruptcy multi docket NEF.
-            # No short_description parsing support yet.
+        # See paeb_3.txt for a test of multi docket NEF
+        # So far, we have only seen 2-docket NEF
+        is_multidocket = len(self.docket_numbers) == 2
+        if len(self.docket_numbers) > 1 and self.court_id != "njb":
+            logger.error(
+                "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
+                self.court_id,
+                extra={
+                    "fingerprint": [
+                        f"{self.court_id}-not-parsing-multi-docket-short-description"
+                    ]
+                },
+            )
             return ""
 
         short_description = ""
         docket_number = self.docket_numbers[0]
         case_name = self.case_names[0]
 
-        if self.court_id == "cacb" or self.court_id == "ctb":
+        if is_multidocket:
+            # Docket number / case name from one or both of the 2 cases
+            # may be used in the subject string
+            if self.docket_numbers[1] in subject:
+                docket_number = self.docket_numbers[1]
+            if self.case_names[1] in subject:
+                case_name = self.case_names[1]
+
+        if self.court_id in [
+            "cacb",
+            "ctb",
+            "cob",
+            "ianb",
+            "nyeb",
+            "txnb",
+            "okeb",
+        ]:
             # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
             # Out: Request for courtesy Notice of Electronic Filing (NEF)
             short_description = subject.split(docket_number)[-1]
@@ -530,17 +586,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-
-        elif self.court_id == "njb":
+        elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb", "arwb"]:
             # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
             # Out: Determination of Adjournment Request
+            # In Ch-13 1:24-bk-70534 Meeting of Creditors - Second Non-Appearance; Michael Clayton Lowry
+            # Out: Meeting of Creditors - Second Non-Appearance
             short_description = subject.split(docket_number)[-1]
-            short_description = short_description.rsplit("-", 1)[0]
-
             # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
+            # Remove CH after docket and BK after short description for dcb
+            regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
             short_description = re.sub(regex, "", short_description)
-
+            separator = ";" if self.court_id == "arwb" else "-"
+            short_description = short_description.rsplit(separator, 1)[0]
         elif self.court_id == "nysb":
             # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
             # Out: Affidavit
@@ -555,11 +612,38 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Remove docket number traces "-AAA"
             regex = r"^-.*?\s"
             short_description = re.sub(regex, "", short_description)
-
-        elif self.court_id == "pawb":
+        elif self.court_id in ["pawb", "ndb", "deb", "pamb", "nhb"]:
             # In: Ch-7 22-20823-GLT U LOCK INC Reply
             # Out: Reply
-            short_description = subject.split(case_name)[-1]
+            if case_name in subject:
+                short_description = subject.split(case_name)[-1]
+            elif case_name[:18] in subject:
+                # See deb_2.txt, pamb_1 and pamb_3 for examples
+                short_description = subject.split(case_name[:18])[-1]
+            elif (
+                " and " in case_name and case_name.split(" and ")[0] in subject
+            ):
+                # See pamb_2.txt
+                short_description = subject.split(case_name.split(" and ")[0])[
+                    -1
+                ]
+        elif self.court_id in [
+            "tnmb",
+        ]:
+            # In: Docket Order - Continue Hearing (Auto) Ch 13 Jeffery Wayne Lovell and Tiffany Nicole Lovell 1:24-bk-01377
+            # Out: Docket Order - Continue Hearing (Auto) Ch 13
+            if case_name in subject:
+                short_description = subject.split(case_name)[0]
+        else:
+            logger.error(
+                "Short description has no parsing for bankruptcy court '%s'",
+                self.court_id,
+                extra={
+                    "fingerprint": [
+                        f"{self.court_id}-not-parsing-short-description"
+                    ]
+                },
+            )
 
         return short_description
 

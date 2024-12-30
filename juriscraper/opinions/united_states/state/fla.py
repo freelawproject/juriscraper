@@ -2,62 +2,75 @@
 # CourtID: fla
 # Court Short Name: fla
 
-from datetime import datetime
+from datetime import date, datetime, timedelta
+from typing import Optional, Tuple
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    # make a backscrape request every `days_interval` range, to avoid pagination
+    days_interval = 20
+    first_opinion_date = datetime(1999, 9, 23)
+    # even though you can put whatevere number you want as limit, 50 seems to be max
+    base_url = "https://www.floridasupremecourt.org/search/?searchtype=opinions&limit=50&startdate={}&enddate={}"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        today = datetime.today().strftime("%m/%d/%Y")
-        this_year = datetime.today().year
-        last_year = this_year - 1
-        today_last_year = today.replace(str(this_year), str(last_year))
-        # Get 50 most recent opinions from past year--even though you can
-        # put whatever number you want as limit, 50 seems to be max
-        self.url = (
-            "https://www.floridasupremecourt.org/search/?searchtype=opinions&limit=50&startdate=%s&enddate=%s"
-            % (today_last_year, today)
-        )
-        self.path_cell = '//div[@class="search-results"]//tr/td[%d]'
-        self.cases = []
+        self.status = "Published"
+        self.set_url()
+        self.make_backscrape_iterable(kwargs)
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self._extract_cases_from_html(html)
-        return html
+    def _process_html(self) -> None:
+        """Parses HTML into case dictionaries
 
-    def _extract_cases_from_html(self, html):
+        :return: None
+        """
         path = '//div[@class="search-results"]//tbody/tr'
-        for row in html.xpath(path):
-            cells = row.xpath("./td")
-            url = cells[4].xpath("./a/@href")
-            if not url:
-                # Skip rows without PDFs
+        for row in self.html.xpath(path):
+            cells = row.xpath("td")
+            url = cells[4].xpath("a/@href")
+            name = cells[2].text_content().strip()
+
+            if not url or not name:
+                # Skip rows without PDFs or without case names
                 continue
+
             self.cases.append(
                 {
                     "url": url[0],
-                    "name": cells[2].text_content(),
-                    "docket": cells[1].text_content(),
-                    "date": convert_date_string(cells[0].text_content()),
+                    "docket": cells[1].text_content().strip(),
+                    "name": name,
+                    "date": cells[0].text_content().strip(),
+                    "status": self.status,
                 }
             )
 
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
+    def set_url(
+        self, start: Optional[date] = None, end: Optional[date] = None
+    ) -> None:
+        """Sets URL using date arguments
 
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
+        If not dates are passed, get 50 most recent opinions
 
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
+        :param start: start date
+        :param end: end date
+        :return: none
+        """
+        if not start:
+            end = datetime.today()
+            start = end - timedelta(days=365)
 
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+        fmt = "%m/%d/%Y"
+        self.url = self.base_url.format(start.strftime(fmt), end.strftime(fmt))
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.cases)
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Overrides scraper URL using date inputs
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        self.set_url(*dates)
+        logger.info("Backscraping for range %s %s", *dates)

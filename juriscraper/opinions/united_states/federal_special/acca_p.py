@@ -14,25 +14,26 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.jagcnet.army.mil/85257546006DF36B/ODD?OpenView&Count=-1"
+        self.url = "https://www.jagcnet.army.mil/ACCALibrary/cases/opinions/OC"
         self.status = "Published"
+        self.expected_content_types = ["application/octet-stream"]
 
     def _process_html(self):
-        for row in self.html.xpath('//tr[@class="domino-viewentry"]'):
-            cell_three = row.xpath(".//td[3]")[0]
-            text = cell_three.text_content()
-            text_parts = text.split("-", 1)
-            hrefs = cell_three.xpath(".//a/@href")
-
-            # skip rows without link to opinion
-            if not hrefs:
+        for row in self.html.xpath(
+            '//*[@id="Opinions_ResizeContainer"]/table/tbody/tr'
+        ):
+            col1, col2, col3 = row.xpath(".//td")
+            url = col1.xpath(".//a/@href")
+            if not url:
                 continue
-
+            name = col1.text_content()
+            docket = col2.text_content()
+            date = col3.text_content()
             self.cases.append(
                 {
-                    "date": row.xpath(".//td[1]")[0].text_content(),
-                    "docket": text_parts[0],
-                    "name": text_parts[1],
-                    "url": hrefs[0],
+                    "date": date.strip(),
+                    "docket": docket.strip(),
+                    "name": name.strip(),
+                    "url": url[0],
                 }
             )

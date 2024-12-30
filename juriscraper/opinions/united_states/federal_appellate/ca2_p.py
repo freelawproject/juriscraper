@@ -6,7 +6,6 @@ Contact:
   Shane_Clouden@ca2.uscourts.gov
 """
 
-
 import time
 from datetime import date, timedelta
 

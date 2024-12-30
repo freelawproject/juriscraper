@@ -7,6 +7,7 @@ History:
     - 2014-09-19: Created by Jon Andersen
     - 2022-01-28: Updated for new web site, @satsuki-chan.
 """
+
 from typing import List
 from urllib.parse import urlencode
 

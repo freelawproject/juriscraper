@@ -1,0 +1,177 @@
+Return-Path: <BKECF_LiveDB@paeb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id clofkr5crceoju0ek1t6jh162fp47ah3bmr2a6o1
+ for c@recap.email;
+ Thu, 01 Feb 2024 20:00:46 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=paeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFNzh4QzY2VDFGTllHc3o4MzJpSyswcE9TYlJwVHF1RDZFbmczV1YzdTVLTDZHeHZiVUlIVHI2WXZLd0RjSkJjY2drL3VNYnpLQzlVeFpoRTZSUUVoTmxEMDMzd0JWbllJRFp4Wml4NkZiQzVXdktobFE2RS80VlhrSmVQb2llUVh1bGtVTjVDR2pMVE5JcXl6ZDNmak1ueGNKeGNiSmRrQWRPWWZvdDRaVDJ5bTZ4bjhlUlhPYTBCdHpGdkwxamF0Y0I1bTVWQ3VKaVRmSmxMRXJ2MEhtMFgxcW9jWlM0R3FtL0Q2UDBhRWRHbmMyeGR3ajhPbGJadE9PMWlseERnWTU2QW9rSzdJTHpyRjY2ZXE0SzEyck1wcjBZcDd1TUwyY3lWSWY5Ym4rUTc3d09SSWswNkxTU2s5aXFnYW1FVVk9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=fVGG8ZUQJv0zsk8KeQIXbAewV5oXtxOQdxNeMKyLHuUYVvNI+zGOl0hlHfQjAfw0ue+VI6xuhggrQT+Nu5EfE4GDkGCvrKkdR5gwzIOIeK8+aR9aXl4PVkJLeeJRPM6dKffdAJy0NB3nHfhhSGdU1XuXlEjTm0/ePofnyRP9B0Q=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706817647; v=1; bh=oRdaJ5s9YC1C5Ty8XUuD4CaI4EMuOD2LlxsEcEfY2Uw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.80
+Received: from paebdb.paeb.gtwy.dcn ([156.119.190.80])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 15:00:45 -0500
+Received: from paebdb.paeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 411K0iKA075435;
+        Thu, 1 Feb 2024 15:00:45 -0500
+Received: (from ecf_web@localhost)
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 411K0RBC075196;
+        Thu, 1 Feb 2024 15:00:27 -0500
+Date: Thu, 1 Feb 2024 15:00:27 -0500
+X-Authentication-Warning: paebdb.paeb.gtwy.dcn: ecf_web set sender to BKECF_LiveDB@paeb.uscourts.gov using -f
+MIME-Version:1.0
+From:BKECF_LiveDB@paeb.uscourts.gov
+To:Courtmail@paeb.uscourts.gov
+Message-Id:<31790064@paeb.uscourts.gov>
+Subject:Ch-11 23-13237-pmm Close Adversary Case - Tri-State Paper, I
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from R., Yvette entered on 2/1/2024 at 3:00 PM EST and filed on 2/1/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Tri-State Paper, Inc. v. Foodarama Caterers Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?510318>23-00075-pmm</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 02/01/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Tri-State Paper, Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?510187>23-13237-pmm</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case 2:23-ap-75 Terminated for Statistical Purposes.    (R., LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-00075-pmm Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FIRSTNAME LASTNAME on behalf of Plaintiff   Company, Inc.</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">FIRSTNAME LASTNAME on behalf of Plaintiff   Company, Inc.</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+
+<BR>
+<B>
+23-00075-pmm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Foodarama Caterers Inc.</span>
+<BR>4510A Adams Circle 
+<BR>Bensalem, PA 19020
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
+
+
+
+
+<BR><B>
+23-13237-pmm Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">DAVE P. ADAMS on behalf of U.S. Trustee   United States Trustee</span>
+<br>example@domain.com
+<BR>
+<BR><span class="personName">MICHAEL I. ASSAD on behalf of Creditor   Citizens Bank, N.A., successor by merger to Citizens Bank of Pennsylvania</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+
+<BR><span class="personName">  United States Trustee</span>
+<br>USTPRegion03.PH.ECF@usdoj.gov
+<BR>
+
+<BR>
+<B>
+23-13237-pmm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Law Company, P.C.</span>
+<BR>Deleted
+<BR>Suite 900
+<BR>Philadelphia, PA 19102
+<BR>
+<BR><span class="personName">First Name</span>
+<BR>Deleted
+<BR>Philadelphia, PA 19116-3850
+<BR>
+<BR><span class="personName"> Realty Associates, Inc.</span>
+<BR>Deleted
+<BR>Ardmore, PA 19003
+<BR>
+<BR><span class="personName">  Adjustment Company, Inc.</span>
+<BR>c/o FirstNane LastName
+<BR>Deleted
+<BR>Blue Bell, PA 19422
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

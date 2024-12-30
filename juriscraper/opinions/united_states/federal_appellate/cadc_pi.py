@@ -4,8 +4,10 @@ Court Short Name: Court of Appeals of the District of Columbia
 Author: flooie
 History:
   2021-12-18: Created by flooie
+  2023-01-12: Fixed requests.exceptions.InvalidURL error by grossir
 """
 
+from urllib.parse import urljoin
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -17,7 +19,7 @@ class Site(OpinionSiteLinear):
         self.base = "https://www.cadc.uscourts.gov"
         self.court_id = self.__module__
 
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Iterate over the public interest cases.
 
         :return: None
@@ -32,7 +34,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "date": date,
-                    "url": f"https:{url}",
+                    "url": urljoin("https:", url),
                     "docket": docket,
                     "name": name,
                     "status": "Published",

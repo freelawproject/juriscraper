@@ -15,9 +15,10 @@
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 #  - 2021-12-28: Updated by flooie to remove selenium.
+#  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 
-from datetime import date, timedelta
-from typing import Optional
+from datetime import date, datetime, timedelta
+from typing import Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
@@ -26,17 +27,27 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    param_date_format = "%-m/%-d/%Y"
+    first_opinion_date = datetime(2002, 1, 24, 0, 0, 0)
+    # Interval for default scrape and backscrape iterable generation
+    days_interval = 15
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.checkbox = 0
         self.status = "Published"
         self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
+        self.make_backscrape_iterable(kwargs)
+        self.next_page = None
+        self.current_page = 1
+        # Default scrape range if not doing a backscrape
+        self.end_date = date.today()
+        self.start_date = self.end_date - timedelta(days=self.days_interval)
+        self.is_first_request = True
+        self.seeds = []
 
-    def _set_parameters(
-        self,
-        view_state: str,
-    ) -> None:
+    def _set_parameters(self) -> None:
         """Set ASPX post parameters
 
         This method - chooses the court and date parameters.
@@ -48,66 +59,83 @@ class Site(OpinionSiteLinear):
          3: 2nd District Court of Appeals
          ...etc
 
-        :param view_state: view state of the page
         :return: None
         """
-        today = date.today()
-        last_month = today - timedelta(days=30)
-        last_month_str = last_month.strftime("%m/%d/%Y")
-        today_str = today.strftime("%m/%d/%Y")
+        start_date_str = self.start_date.strftime(self.param_date_format)
+        end_date_str = self.end_date.strftime(self.param_date_format)
 
-        date_param = (
-            '{"enabled":true,"emptyMessage":"",'
-            f'"validationText":"{last_month}-00-00-00",'
-            f'"valueAsString":"{last_month}-00-00-00",'
-            '"minDateStr":"1900-01-01-00-00-00",'
-            '"maxDateStr":"2099-12-31-00-00-00",'
-            f'"lastSetTextBoxValue":"{last_month_str}"'
-            "}"
+        from_date_param = self.make_date_param(self.start_date, start_date_str)
+        to_date_param = self.make_date_param(self.end_date, end_date_str)
+
+        self.parameters = {}
+        for hidden in self.html.xpath("//input[@type='hidden']"):
+            value = hidden.xpath("@value")[0] if hidden.xpath("@value") else ""
+            self.parameters[hidden.xpath("@name")[0]] = value
+
+        self.parameters.update(
+            {
+                "ctl00$ContentPlaceHolder1$SearchType": "rbSearchByDocument",  # "Document Search" radio button
+                "ctl00$ContentPlaceHolder1$dtDocumentFrom": str(
+                    self.start_date
+                ),
+                "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": start_date_str,
+                "ctl00$ContentPlaceHolder1$dtDocumentTo": str(self.end_date),
+                "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": end_date_str,
+                "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": from_date_param,
+                "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput_ClientState": to_date_param,
+                "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
+                "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",  # "Opinion" checkbox
+                f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",  # Court checkbox
+                "ctl00$ContentPlaceHolder1$txtSearchText": "",
+                "ctl00_ContentPlaceHolder1_dtDocumentFrom_ClientState": '{"minDateStr":"1900-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00"}',
+                "ctl00_ContentPlaceHolder1_dtDocumentTo_ClientState": '{"minDateStr":"1900-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00"}',
+                "ctl00$ContentPlaceHolder1$Stemming": "on",
+                "ctl00$ContentPlaceHolder1$Fuzziness": "0",
+            }
         )
 
-        # The parameters required to filter in Texas
-        self.parameters = {
-            "ctl00$ContentPlaceHolder1$SearchType": "rbSearchByDocument",
-            "ctl00$ContentPlaceHolder1$dtDocumentFrom": str(last_month),
-            "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": last_month_str,
-            "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": date_param,
-            "ctl00$ContentPlaceHolder1$dtDocumentTo": str(today),
-            "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": today_str,
-            "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",
-            "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
-            "__VIEWSTATE": view_state,
-            f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",
-        }
+        # "Next page" arrow button has a name like
+        # "ctl00$ContentPlaceHolder1$grdDocuments$ctl00$ctl02$ctl00$ctl18"
+        # Couldn't get pagination working when using the numbered page anchors,
+        # whose id goes into __EVENTTARGET
+        if self.next_page:
+            self.parameters[self.next_page[0].xpath("@name")[0]] = ""
 
     def _process_html(self) -> None:
+        """Process HTML and paginates if needed
+
+        :return: None
+        """
         if not self.test_mode_enabled():
             # Make our post request to get our data
             self.method = "POST"
-            view_state = self.html.xpath("//input[@id='__VIEWSTATE']")[0].get(
-                "value"
-            )
-            self._set_parameters(view_state)
+            self._set_parameters()
             self.html = super()._download()
 
-        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
+        rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
+        for row in self.html.xpath(rows_xpath):
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
+            self.seeds.append(row.xpath(".//a")[2].get("href"))
             self.cases.append(
                 {
-                    "date": row.xpath(f".//td[2]")[0].text_content(),
-                    "docket": row.xpath(f".//td[5]")[0].text_content().strip(),
+                    "date": row.xpath("td[2]")[0].text_content(),
+                    "docket": row.xpath("td[5]")[0].text_content().strip(),
                     "url": row.xpath(".//a")[1].get("href"),
                 }
             )
 
+        next_page_xpath = (
+            "//input[@title='Next Page' and not(@onclick='return false;')]"
+        )
+        self.next_page = self.html.xpath(next_page_xpath)
+        if self.next_page and not self.test_mode_enabled():
+            self.current_page += 1
+            logger.info(f"Paginating to page {self.current_page}")
+            self._process_html()
+
     def _get_case_names(self) -> DeferringList:
         """Get case names using a deferring list."""
-        seeds = []
-        for row in self.html.xpath("//table[@class='rgMasterTable']/tbody/tr"):
-            # In texas we also have to ping the case page to get the name
-            # this is unfortunately part of the process.
-            seeds.append(row.xpath(".//a")[2].get("href"))
 
         def get_name(link: str) -> Optional[str]:
             """Abstract out the case name from the case page."""
@@ -135,4 +163,38 @@ class Site(OpinionSiteLinear):
                 logger.warning(f"No title or defendant found for {self.url}")
                 return None
 
-        return DeferringList(seed=seeds, fetcher=get_name)
+        return DeferringList(seed=self.seeds, fetcher=get_name)
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Overrides present scraper start_date and end_date
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        start, end = dates
+        self.start_date = (
+            start.date() if not isinstance(start, date) else start
+        )
+        self.end_date = end.date() if not isinstance(end, date) else end
+        logger.info(
+            "Backscraping for range %s %s", self.start_date, self.end_date
+        )
+
+    @staticmethod
+    def make_date_param(date_obj: date, date_str: str) -> str:
+        """Make JSON encoded string with dates as expected by formdata
+
+        :param date_obj: a date object
+        :param date_str: string representation of the date in expected format
+
+        :return: JSON encoded string
+        """
+        return (
+            '{"enabled":true,"emptyMessage":"",'
+            f'"validationText":"{date_obj}-00-00-00",'
+            f'"valueAsString":"{date_obj}-00-00-00",'
+            '"minDateStr":"1900-01-01-00-00-00",'
+            '"maxDateStr":"2099-12-31-00-00-00",'
+            f'"lastSetTextBoxValue":"{date_str}"'
+            "}"
+        )

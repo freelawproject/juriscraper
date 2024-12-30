@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Roe v. University Of Cincinnati",
-      "date_filed": "2022-08-08",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-08",
@@ -19,7 +19,12 @@
           "short_description": "Motion for Extension of Time to File Response/Reply"
         }
       ],
-      "docket_number": "1:22-cv-00376"
+      "docket_number": "1:22-cv-00376",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "MWM",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "1"
     }
   ],
   "email_recipients": [

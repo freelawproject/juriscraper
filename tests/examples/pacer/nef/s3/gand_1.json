@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Kinder v. Koch Industries, Inc.",
-      "date_filed": "2021-07-30",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-07-30",
@@ -19,7 +19,12 @@
           "short_description": "Order"
         }
       ],
-      "docket_number": "1:20-cv-02973"
+      "docket_number": "1:20-cv-02973",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "MHC",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "1"
     }
   ],
   "email_recipients": [

@@ -1,0 +1,42 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "paeb",
+  "dockets": [
+    {
+      "case_name": "Br Cun",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-01-31",
+          "description": "BNC Certificate of Mailing - Financial Management Course Certificate. Number of Notices Mailed: (related document(s) (Related Doc [13])). No. of Notices: 1. Notice Date 01/31/2024. (Admin.)",
+          "document_number": "15",
+          "document_url": "https://ecf.paeb.uscourts.gov/doc1/152032522337?pdf_header=&magic_num=26909320&de_seq_num=47&caseid=510078",
+          "pacer_case_id": "510078",
+          "pacer_doc_id": "152032522337",
+          "pacer_magic_num": "26909320",
+          "pacer_seq_no": "47",
+          "short_description": "BNC Certificate of Mailing - Financial Management Course Certificate"
+        }
+      ],
+      "docket_number": "23-13129",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "amc",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "example@domain.com",
+        "example@domain.com;c@recap.email;example@domain.com;example@domain.com;example@domain.com",
+        "example@domain.com",
+        "example@domain.com",
+        "USTPRegion03.PH.ECF@usdoj.gov"
+      ],
+      "name": ""
+    }
+  ]
+}

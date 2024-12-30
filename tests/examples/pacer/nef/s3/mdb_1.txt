@@ -1,0 +1,121 @@
+Return-Path: <BKECF_LiveDB@mdb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id n6hfeb3o73btqoftedndlt6abmu0sqdbadhf3jo1
+ for user@recap.email;
+ Tue, 16 Apr 2024 17:52:27 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mdb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@mdb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=mdb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGU1d5Q2ZHRS9DY1NxZHRtVUF6S2RtcEh3b0s1TjM0KytqeldGd3Y2VlV5OCtFRTI1MkNvOEpGWStHUzZtMFlQMkRqcUYyNERKbll3VldpcHp5UWhRdTNadUVLdzVWT2dFaWZyQ0N4U0ZoSTVTdmQ4WEFZSFBaOE52SmxaUXVabDhYOFUzREYzZjBaRStLRGduQ0NxelloQ2dzUlY5ZHNZRW9sUlJmV0lrdWF5Q1YxVEN5aE0wUjVYMERNTk9TcTR2V0pLUXIzTjZpNXZIbURwZTgwMnF6ODlFb3ZEQldTMXJ0Q1l3L3cwb0kxaXRvK0dMWE8rOFFISlpsQ0U1anMwQjNQc3hRaVQ1SWczYnM2N2pwTXFRZ0h1L2F2T2JGaTlvZmc2Tm1YdTJWeVE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=BldOWgD0OWt1th0rR6mIgfdJqjD5wajF7tky7/P4qphQMSj5FYgzRMnO5TvdUnWWdQiYeEa89oiDCqCtHYBgTdT+rOXDSkY4RsgSzIpZjKyIuhLO5np51uwVRWhh+dnhWMzdpJrca5JICd9ml8uOso8qC2jc/AI+wuzBx0nohgw=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713289948; v=1; bh=4T/d7yF86JogPUD1CKlXC/2mFQE5lzy1klpv0NB9mlU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.184
+Received: from mdbdb.mdb.gtwy.dcn ([156.119.190.184])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 16 Apr 2024 13:52:26 -0400
+Received: from mdbdb.mdb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43GHqKLU071293;
+	Tue, 16 Apr 2024 13:52:23 -0400
+Received: (from ecf_web@localhost)
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43GHplkQ070736;
+	Tue, 16 Apr 2024 13:51:47 -0400
+Date: Tue, 16 Apr 2024 13:51:47 -0400
+MIME-Version:1.0
+From:BKECF_LiveDB@mdb.uscourts.gov
+To:courtmail@mdb.uscourts.gov
+Message-Id:<47751327@mdb.uscourts.gov>
+Subject:20-18680 Response - CH7 - Charles Martin
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Maryland</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Oliver, Yvette  entered on 4/16/2024 at 1:51 PM EDT and filed on 4/16/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Charles Martin                                    </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?751901>20-18680</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.mdb.uscourts.gov/doc1/092051699384?pdf_header=&magic_num=63947579&de_seq_num=1997&caseid=751901'>525</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Response on behalf of  Charles  Martin  Filed by  Charles  Martin  (related document(s)[522] Motion to Sell and Notice of Motion filed by Trustee Cheryl E. Rose). Hearing scheduled for 5/8/2024 at 02:00 PM by videoconference or teleconference. For hearing access information see www.mdb.uscourts.gov/hearings or call 410-962-2688.  (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>20-18680 ba-001.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1013806484 [Date=4/16/2024] [FileNumber=47751325-
+<BR><TAB>0] [1b706080f9378f5d3324a1654a3d9655187e264097d3ed1e58752ebee03cced8b2
+<BR><TAB>c6763291f8a71ed56f7c14982ebd19284a65d5002b9a9b75c6e7b7ba93734e]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+20-18680 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName</span> ab@maryland.gov
+<BR>
+<BR><span class="personName">  US Trustee - Greenbelt</span> USTPRegion04.GB.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">FirstName LastName</span> uyy@zzz.com,
+<br>  aa@bb.com,
+<br>aa@xx.com,
+<br>cc@yy.com,
+<br>user@notify.bestcase.com,
+<br>user@recap.email
+<BR>
+<BR><span class="personName">FirstName LastName</span> aa@bb.com,
+<br>  aa@bb.com,
+<br>AA@BB.net,
+<br>A@kk.com,
+<br>b@kk.com
+<BR>
+
+<BR>
+<B>
+20-18680 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>Debtor(s): FirstName LastName; FirstName LastName; FirstName LastName
+<BR><span class="personName">FirstName LastName</span>
+<BR>11111 Atown Road 
+<BR>Atown, MD 20810
+<BR>

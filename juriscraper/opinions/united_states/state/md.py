@@ -9,55 +9,85 @@ Court Support: webmaster@mdcourts.gov, mdlaw.library@mdcourts.gov
 
 from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    base_url = "https://www.mdcourts.gov/cgi-bin/indexlist.pl?court={}&year={}&order=bydate&submit=Submit"
+    court = "coa"
+    start_year = 1995
+    current_year = date.today().year
+    empty_cite_strings = {"slip.op.", "."}
+    no_judge_strings = {"Order", "PC Order", "Per Curiam"}
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.mdcourts.gov/cgi-bin/indexlist.pl?court=coa&year={current_year}&order=bydate&submit=Submit".format(
-            current_year=date.today().year
-        )
+        self.url = self.base_url.format(self.court, self.current_year)
         self.court_id = self.__module__
+        self.disable_certificate_verification()
+        self.status = "Published"
+        self.make_backscrape_iterable(kwargs)
 
-    def _get_download_urls(self):
-        path = "//table//tr/td[1]//@href[contains(.,'pdf')]"
-        return list(self.html.xpath(path))
+    def _process_html(self) -> None:
+        """Parse HTML into case dictionaries
 
-    def _get_case_names(self):
-        path = "//table//tr/td[5]/font/text()"
-        return [s.split("(")[0] for s in self.html.xpath(path)]
+        :return None
+        """
+        for row in self.html.xpath("//table//tr[td and not (.//h2)]"):
+            url = row.xpath("td//a[contains(@href,'pdf')]/@href")[0]
+            docket = row.xpath("td[1]//text()")[0]
+            date_filed, _, other_date = row.xpath("td[3]/font/text()")[
+                0
+            ].partition(" ")
+            name = row.xpath("td[5]/font/text()")[0].split("(")[0].strip()
 
-    def _get_judges(self):
-        path = "//table//tr/td[4]/font/text()"
-        return [s.split("(")[0] for s in self.html.xpath(path)]
+            per_curiam = False
+            judge = row.xpath("td[4]/font/text()")[0].split("()")[0].strip()
+            if judge in self.no_judge_strings:
+                # Other strings in self.no_judge_strings point to
+                # Per Curiam opinions
+                per_curiam = judge != "Order"
+                judge = ""
 
-    def _get_case_dates(self):
-        dates = []
-        path = "//table//tr/td[3]/font/text()"
-        for date_string in self.html.xpath(path):
-            # Logic in line below handles use case where date cell shows text
-            # like '2019-11-14 corrected 2019-11-19' instead of '2019-11-19'.
-            # See: mdctspecapp_example_2.html
-            date_string = date_string.split()[-1]
-            date_ = convert_date_string(date_string)
-            dates.append(date_)
-        return dates
+            cite = row.xpath("td[2]/font/text()")[0].strip()
+            if cite in self.empty_cite_strings:
+                cite = ""
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+            self.cases.append(
+                {
+                    "name": name,
+                    "url": url,
+                    "judge": judge,
+                    "date": date_filed,
+                    "docket": docket,
+                    "citation": cite,
+                    "per_curiam": per_curiam,
+                    "other_date": other_date.strip(),
+                }
+            )
 
-    def _get_docket_numbers(self):
-        path = "//table//tr/td[1]//text()"
-        return list(self.html.xpath(path))
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
 
-    def _get_citations(self):
-        path = "//table//tr/td[2]/font/text()"
-        cites = []
-        for c in list(self.html.xpath(path)):
-            if c == ".":
-                cites.append("")
-            else:
-                cites.append(c)
-        return cites
+        :param kwargs: passed when initializing the scraper, may or
+            may not contain backscrape controlling arguments
+        :return None
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        start = int(start) if start else self.start_year
+        end = int(end) + 1 if end else self.current_year
+
+        self.back_scrape_iterable = range(start, end)
+
+    def _download_backwards(self, year: int) -> None:
+        """Build URL with year input and scrape
+
+        :param year: year to scrape
+        :return None
+        """
+        self.url = self.base_url.format(self.court, year)
+        self.html = self._download()
+        self._process_html()

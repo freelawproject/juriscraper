@@ -1,56 +1,40 @@
 import re
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    court_code = "S"
+    division = ""
+    date_regex = re.compile(r" \d\d?/\d\d?/\d\d| filed")
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_code = "S"
+        self.url = f"https://www.courts.ca.gov/cms/opinions.htm?Courts={self.court_code}"
+        self.status = "Published"
+        self.request["verify"] = False
 
-    def _download(self, request_dict={}):
-        if not self.test_mode_enabled():
-            self.url = self.build_url()
-        return super()._download(request_dict)
+    def _process_html(self) -> None:
+        for row in self.html.xpath("//table/tr[not(th)]"):
+            name = row.xpath(".//*[@class='op-title']/text()")[0]
 
-    def build_url(self):
-        return (
-            "http://www.courts.ca.gov/cms/opinions.htm?Courts=%s"
-            % self.court_code
-        )
-
-    def _get_case_names(self):
-        case_names = []
-        for cell in self.html.xpath("//table/tr/td[3]"):
-            name = cell.text_content()
-            date_regex = re.compile(r" \d\d?/\d\d?/\d\d| filed")
-            if "P. v. " in date_regex.split(name)[0]:
-                case_names.append(
-                    date_regex.split(name)[0].replace("P. ", "People ")
-                )
+            split = self.date_regex.split(name)[0]
+            if "P. v. " in split:
+                case_name = split.replace("P. ", "People ")
             else:
-                case_names.append(date_regex.split(name)[0])
-        return case_names
+                case_name = split
 
-    def _get_download_urls(self):
-        return [
-            t
-            for t in self.html.xpath(
-                "//table/tr/td[2]/a/@href[contains(.,'PDF')]"
-            )
-        ]
+            url = row.xpath(".//a[@class='op-link']/@href")[0]
+            date_filed = row.xpath(".//*[@class='op-date']/text()")[0]
+            docket = row.xpath(".//*[@class='op-case']/text()")[0]
+            case = {
+                "name": case_name,
+                "url": url,
+                "date": date_filed,
+                "docket": docket,
+            }
+            if self.division:
+                case["division"] = self.division
 
-    def _get_case_dates(self):
-        path = "//table/tr/td[1]/text()"
-        return [
-            convert_date_string(date_string)
-            for date_string in self.html.xpath(path)
-        ]
-
-    def _get_docket_numbers(self):
-        return [t for t in self.html.xpath("//table/tr/td[2]/text()[1]")]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+            self.cases.append(case)

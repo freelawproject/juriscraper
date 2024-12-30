@@ -11,53 +11,115 @@ If there are errors with the site, you can contact:
 She's very responsive.
 """
 
+import re
+from datetime import date, datetime
+from typing import Optional, Tuple
+from urllib.parse import urlencode
+
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    base_url = "https://www.vermontjudiciary.org/opinions-decisions"
+    days_interval = 30
+    first_opinion_date = datetime(2000, 1, 1)
+    division = 7
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.back_scrape_iterable = list(range(1, self.get_backscrape_max()))
-        self.element_path_format = "//article[@class='views-row media-document']/div[@class='views-field views-field-field-document%s']"
-        self.url = (
-            "https://www.vermontjudiciary.org/opinions-decisions?f[0]=document_type%3A94&f[1]=court_division_opinions_library_%3A"
-            + self.get_division_id()
-        )
-        self.backscrape_page_base_url = f"{self.url}&page="
+        if self.division == 7:
+            self.first_opinion_date = datetime(1999, 5, 26)
+        self.status = "Published"
+        self.set_url()
+        self.make_backscrape_iterable(kwargs)
+        self.needs_special_headers = True
+        self.request["headers"] = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        }
 
-    def get_backscrape_max(self):
-        return 7
+    def _process_html(self) -> None:
+        """Process HTML into case dictionaries
 
-    def get_division_id(self):
-        return "7"
+        Source's page size is 25 rows
 
-    def _get_download_urls(self):
-        path_base = self.element_path_format % ""
-        path = f"{path_base}//@href"
-        return self.html.xpath(path)
+        :return None
+        """
+        for case in self.html.xpath(".//article"):
+            name_url_span = case.xpath(
+                ".//div[contains(@class, 'views-field-name')]"
+            )[0]
+            date_filed = (
+                case.xpath(
+                    ".//div[contains(@class, 'views-field-field-document-expiration')]"
+                )[0]
+                .text_content()
+                .strip()
+            )
+            docket = (
+                case.xpath(
+                    ".//div[contains(@class, 'views-field-field-document-number')]"
+                )[0]
+                .text_content()
+                .strip()
+            )
+            self.cases.append(
+                {
+                    "url": name_url_span.xpath(".//a/@href")[0],
+                    "name": titlecase(name_url_span.text_content()),
+                    "date": date_filed,
+                    "docket": docket,
+                }
+            )
 
-    def _get_case_names(self):
-        path = self.element_path_format % ""
-        return [e.text_content().strip() for e in self.html.xpath(path)]
-
-    def _get_case_dates(self):
-        path = self.element_path_format % "-expiration"
-        return [
-            convert_date_string(e.text_content())
-            for e in self.html.xpath(path)
-        ]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_docket_numbers(self):
-        path = self.element_path_format % "-number"
-        return [e.text_content().strip() for e in self.html.xpath(path)]
-
-    def _download_backwards(self, page_number):
-        logger.info("PROCESSING PAGE: %d" % (page_number + 1))
-        self.url = self.backscrape_page_base_url + str(page_number)
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        """Make custom date range request
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        self.set_url(*dates)
         self.html = self._download()
+        self._process_html()
+
+    def set_url(
+        self, start: Optional[date] = None, end: Optional[date] = None
+    ) -> None:
+        """Formats and sets `self.url` with date inputs
+        If no start or end dates are given, scrape without date filter values
+
+        There is a Document Type filter available, with an 'Opinion' value, that
+        can be added to params like this:
+            {"f[1]": "document_type:94"}a
+        However, we are not using it since some documents marked as 'Decisions'
+        also contain opinions. For example:
+        https://www.vermontjudiciary.org/sites/default/files/documents/2020-10-13-57.pdf
+        titled "Opinion and Order on Cross-Motions for Summary Judgment"
+        has 8 pages, most of which are argumentation
+
+        :param start: start date
+        :param end: end date
+        :return None
+        """
+        params = {
+            "facet_from_date": "",
+            "facet_to_date": "",
+            "f[0]": f"court_division_opinions_library_:{self.division}",  # filter by court
+        }
+        if start:
+            params["facet_from_date"] = start.strftime("%m/%d/%Y")
+            params["facet_to_date"] = end.strftime("%m/%d/%Y")
+
+        self.url = f"{self.base_url}?{urlencode(params)}"
+
+    def extract_from_text(self, scraped_text: str):
+        match = re.search(
+            r"(?P<volume>\d{4}) (?P<reporter>VT) (?P<page>\d+)",
+            scraped_text[:1000],
+        )
+        if match:
+            return {"Citation": {"type": 8, **match.groupdict()}}
+
+        return {}

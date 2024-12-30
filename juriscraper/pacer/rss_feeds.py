@@ -4,6 +4,7 @@ import pprint
 import re
 import sys
 from html import unescape
+from typing import Dict, Tuple, Union
 
 import feedparser
 from requests import Session
@@ -242,12 +243,17 @@ class PacerRssFeed(DocketReport):
         if self.is_valid is False:
             return {}
 
+        docket_number, docket_number_components = self._parse_docket_number(
+            entry.title
+        )
         data = {
             "court_id": self.court_id,
-            "pacer_case_id": get_pacer_case_id_from_nonce_url(entry.link)
-            if not self.is_appellate
-            else None,
-            "docket_number": self._get_docket_number(entry.title),
+            "pacer_case_id": (
+                get_pacer_case_id_from_nonce_url(entry.link)
+                if not self.is_appellate
+                else None
+            ),
+            "docket_number": docket_number,
             "case_name": self._get_case_name(entry.title),
             # Filing date is not available. Also the case for free opinions.
             "date_filed": None,
@@ -268,6 +274,8 @@ class PacerRssFeed(DocketReport):
             "chapter": "",
         }
         data.update(self._parse_get_trustee_type_office_chapter(entry.summary))
+        # Include the docket_number components.
+        data.update(docket_number_components)
         data = clean_court_object(data)
         return data
 
@@ -332,7 +340,18 @@ class PacerRssFeed(DocketReport):
             "trustee_str": m.group("trustee") or "",
         }
 
-    def _get_docket_number(self, title_text):
+    def _parse_docket_number(
+        self, title_text
+    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        """Parse docket numbers from a list of potential ones. Also parse
+        the docket number components.
+
+        :param title_text: The potential docket number unicode objects
+        :return: A two-tuple: the docket_number and a dict containing the
+        docket_number components if a valid docket number was found.
+        Otherwise, None and the default docket_number components dict with None
+        values.
+        """
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -347,7 +366,11 @@ class PacerRssFeed(DocketReport):
         for regex in regexes:
             match = regex.search(title_text)
             if match:
-                return match.group(1)
+                docket_number_components = self._parse_dn_components(
+                    title_text
+                )
+                return match.group(1), docket_number_components
+        return None, self._return_default_dn_components()
 
     def _get_case_name(self, title_text):
         # 1:18-cv-04423 Chau v. Gorg &amp; Smith et al --> Chau v. Gorg & Smith

@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Matthew Condran",
-      "date_filed": "2022-10-05",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-10-05",
@@ -19,7 +19,12 @@
           "short_description": "Statement About Your Social Security Numbers (Official Form 121)"
         }
       ],
-      "docket_number": "6:22-bk-13768"
+      "docket_number": "6:22-bk-13768",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "bk",
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "6"
     }
   ],
   "email_recipients": []

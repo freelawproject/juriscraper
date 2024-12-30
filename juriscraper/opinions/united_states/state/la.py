@@ -7,6 +7,7 @@
 #          rgunn@lasc.org
 
 from datetime import date
+from urllib.parse import urljoin
 
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import titlecase
@@ -36,29 +37,31 @@ class Site(OpinionSiteLinear):
         return [self._get_subpage_html_by_url(url) for url in urls]
 
     def _process_html(self):
-        path = (
-            "//a["
-            "contains(., 'v.') or "
-            "contains(., 'IN RE') or "
-            "contains(., 'IN THE') or "
-            "contains(., 'vs.') or "
-            "contains(., 'VS.')"
-            "]"
-        )
+        xpath = "//a[contains(@href, 'opinions') and contains(@href, 'pdf')]"
         for html in self.html:
-            for anchor in html.xpath(path):
+            for anchor in html.xpath(xpath):
                 date_string = self._get_date_for_opinions(html)
                 text = anchor.text_content()
                 parts = text.split(None, 1)
                 summary_lines = anchor.getparent().xpath("./text()")
+
+                judge = self._get_judge_above_anchor(anchor)
+                per_curiam = False
+                if "per curiam" in judge.lower():
+                    per_curiam = True
+                    judge = ""
+
                 self.cases.append(
                     {
                         "date": date_string,
                         "docket": parts[0],
-                        "judge": self._get_judge_above_anchor(anchor),
+                        "judge": judge,
+                        "per_curiam": per_curiam,
                         "name": titlecase(parts[1]),
                         "summary": " ".join(summary_lines).replace(text, ""),
-                        "url": anchor.get("href"),
+                        "url": urljoin(
+                            "http://www.lasc.org", anchor.get("href")
+                        ),
                     }
                 )
 

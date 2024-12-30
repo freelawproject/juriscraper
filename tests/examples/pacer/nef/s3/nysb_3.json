@@ -5,11 +5,11 @@
   "dockets": [
     {
       "case_name": "Gerasimos Stefanitsis",
-      "date_filed": "2022-12-07",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-12-07",
-          "description": "Notice of Adjournment of Hearing re: Motion to Dismiss Case application and certificate of service filed by Krista M. Preuss on behalf of Krista M. Preuss (related document(s)[41]) Motion to Dismiss granted, submit order. Further hearing on 2016(b) Statement to be held 2/22/2023 at 09:00 AM at Videoconference (ZoomGov) (CGM) (DuBois, Linda).",
+          "description": "Notice of Adjournment of Hearing re: Motion to Dismiss Case application and certificate of service filed by Krista M. Preuss on behalf of Krista M. Preuss (related document(s)[41]); Motion to Dismiss granted, submit order. Further hearing on 2016(b) Statement to be held 2/22/2023 at 09:00 AM at Videoconference (ZoomGov) (CGM) (DuBois, Linda).",
           "document_number": "48",
           "document_url": null,
           "pacer_case_id": "313115",
@@ -19,7 +19,12 @@
           "short_description": "Notice of Adjournment of Hearing"
         }
       ],
-      "docket_number": "22-22507"
+      "docket_number": "22-22507",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "cgm",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
     }
   ],
   "email_recipients": []

@@ -1,0 +1,128 @@
+Return-Path: <cmecf_help_desk@njb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 7q9drjsjk6uldcb8pch3k085hpntogopbtqudm01
+ for user@recap.email;
+ Wed, 24 Apr 2024 14:45:11 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of njb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of njb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=njb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIMForamF4Y2oydTNGMEdnUzdFOVMrN2JrdjJab1V1SXNMcGhIaFM2TWNaZEJzeTl5TlFaeGNxY1pYb2ZVV2QwdWo0a0swZ0F0dkE5RXEzdHVBUVAvc2E4WDJKTGJ2cFczUldrSnR4aFpqTUs2cElDTDRMajBaOVlDYmxZcFJhSWQvS3JRa0p1R25KU3UxdHdaeURTYklHdm9QMWZVWUoyUjdZL3VMWDhiUmlCYjcyWk5qVlkxd2J6em12enE1dU9xTGN0L3lPbE00UG50V2RoVEhFc29oRGhlbjBlc24xYU9QTDFMNHdobWRkdjVQbnJURzhrQVRPVlp6U2ZVZGQvRUVFRFlDTHNjN3U0eUdUWURFcDh5aDEvbm5VYk85emJMcXN3NXpNQmZ5YTBpV1JWbGpaQ2s1Q21Od2wzZ2pTTnM9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=n0lxGw63v1EymKTB+LmiKU10UblAkO+ytIJ88CWlOHPFEtj7W/ivYO6QY9IitX/ntkS5NhD5jauKGmIbDIauIFyDZduQ5/jdYf7ie/w7Oe0iLEIhJOnzyEmBKGDHO/AMP02DtsWsf7yjLQQbjYRBS7Qh5WCHrsvHrEcZBfqUIQk=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713969912; v=1; bh=E0+T6lkYHvTCl4jmR0bZGh4ayprnGk4srr+zKTq24Lw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.77
+Received: from unknown (HELO njbdb.njb.gtwy.dcn) ([156.119.190.77])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 24 Apr 2024 10:45:11 -0400
+Received: from njbdb.njb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43OEiPeA123965;
+	Wed, 24 Apr 2024 10:44:28 -0400
+Received: (from ecf_web@localhost)
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43OEhhLp121900;
+	Wed, 24 Apr 2024 10:43:43 -0400
+Date: Wed, 24 Apr 2024 10:43:43 -0400
+MIME-Version:1.0
+From:cmecf_help_desk@njb.uscourts.gov
+To:no-reply@njb.uscourts.gov
+Message-Id:<62950014@njb.uscourts.gov>
+Subject:Ch-7 22-19628-ABA Close Adversary Case - Orbit Energy & Pow
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Jersey</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from def entered on 4/24/2024 at 10:43 AM EDT and filed on 4/24/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Sklar v. JM Custom Homes LLC                               </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.njb.uscourts.gov/cgi-bin/DktRpt.pl?1101619>23-01196-ABA</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 04/24/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Orbit Energy & Power, LLC                         </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.njb.uscourts.gov/cgi-bin/DktRpt.pl?1094352>22-19628-ABA</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case (1:23-ap-1196) Closed.   (def)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-01196-ABA Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">E. FirstName LastName on behalf of Plaintiff FirstName</span>
+<br>aaa@firm.com
+<BR>
+
+<BR>
+<B>
+23-01196-ABA Notice will not be electronically mailed to:
+</B>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
+
+
+
+
+<BR><B>
+22-19628-ABA Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   TVT 2.0 LLC</span>
+<br>person@firm.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Associate Refrigeration, Inc.</span>
+<br>person@firm.com,  person@firm.com,person@firm.com
+<BR>

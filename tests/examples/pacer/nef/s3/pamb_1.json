@@ -1,0 +1,41 @@
+{
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "pamb",
+  "dockets": [
+    {
+      "case_name": "Maria Victoria Diri",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-05-03",
+          "description": "Motion to Reopen Chapter 7 Case. Filing Fee due in the amount of $260.00. Filed by FirstName LastName of firm, P.C. on behalf of Maria Victoria Diri (RE: related document(s)[64]). (Attachments: (1) Proposed Order (2) Certificate of Service) (FirstName LastName)",
+          "document_number": "78",
+          "document_url": "https://ecf.pamb.uscourts.gov/doc1/154018337184?pdf_header=&magic_num=83584343&de_seq_num=341&caseid=270840",
+          "pacer_case_id": "270840",
+          "pacer_doc_id": "154018337184",
+          "pacer_magic_num": "83584343",
+          "pacer_seq_no": "341",
+          "short_description": "Motion to Reopen Case"
+        }
+      ],
+      "docket_number": "5:21-bk-00329",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "bk",
+      "federal_dn_judge_initials_assigned": "MJC",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "5"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "help@lawfirm.com",
+        "a@lawfirm.com;b@lawfirm.com;c@lawfirm.com;noreply04@lawfirm.com;noreply05@lawfirm.com;lawfirmpc@domain.net;lawfirm@recap.email;ecf@casedriver.com",
+        "a@b.com",
+        "c@b.com"
+      ],
+      "name": ""
+    }
+  ]
+}

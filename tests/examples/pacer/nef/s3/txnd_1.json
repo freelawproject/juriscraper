@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Caulkins v. Ditmore",
-      "date_filed": "2021-08-16",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-08-16",
@@ -19,7 +19,12 @@
           "short_description": "Notice of Attorney Appearance"
         }
       ],
-      "docket_number": "4:21-cv-00953"
+      "docket_number": "4:21-cv-00953",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "P",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "4"
     }
   ],
   "email_recipients": [

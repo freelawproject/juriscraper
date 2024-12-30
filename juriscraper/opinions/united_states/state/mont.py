@@ -14,6 +14,7 @@ class Site(OpinionSite):
         self.download_base = (
             "https://juddocumentservice.mt.gov/getDocByCTrackId?DocId="
         )
+        self.expected_content_types = None
 
     def _get_download_urls(self):
         return [f"{self.download_base}{row['cTrackId']}" for row in self.html]
@@ -26,9 +27,11 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         return [
-            "Published"
-            if "Published" in row["documentDescription"]
-            else "Unpublished"
+            (
+                "Published"
+                if "Published" in row["documentDescription"]
+                else "Unpublished"
+            )
             for row in self.html
         ]
 

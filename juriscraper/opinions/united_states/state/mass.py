@@ -15,39 +15,72 @@ History:
  - 2023-01-28, William Palin: Updated scraper
 """
 
-import datetime
 import re
-from datetime import datetime
+from urllib.parse import urljoin
 
+from lxml import etree, html
+
+from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.mass.gov/service-details/new-opinions"
+        self.url = "https://www.socialaw.com/customapi/slips/getopinions"
         self.court_id = self.__module__
-        self.court_identifier = "SJC"
+        self.court_name = "Supreme Judicial Court"
+        self.status = "Published"
+        self.expected_content_types = ["text/html"]
 
     def _process_html(self):
-        for file in self.html.xpath(".//a/@href[contains(.,'pdf')]/.."):
-            content = file.text_content()
-            m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", content)
-            if not m:
+        """Scrape and process the JSON endpoint
+
+        :return: None
+        """
+        for row in self.html:
+            if row["SectionName"] != self.court_name:
                 continue
-            name, docket, _, date = m.groups()
-            if self.court_identifier not in docket:
-                continue
-            url = file.get("href")
-            parts = url.split("/")[-4:-1]
-            parts = [int(d) for d in parts]
-            date = datetime(year=parts[0], month=parts[1], day=parts[2]).date()
+
+            url = urljoin(
+                "https://www.socialaw.com/services/slip-opinions/",
+                row["UrlName"],
+            )
+            details = row["Details"]
+            caption = titlecase(row.get("Parties"))
+            caption = re.sub(r"(\[\d{1,2}\])", "", caption)
+
+            judge_str = details.get("Present", "")
+            judge_str = re.sub(r"(\[\d{1,2}\])", "", judge_str)
+            judge_str = re.sub(r"\, JJ\.", "", judge_str)
+
             self.cases.append(
                 {
-                    "name": name,
-                    "status": "Published",
-                    "date": str(date),
-                    "docket": docket,
+                    "name": caption,
+                    "judge": judge_str,
+                    "date": row["Date"],
                     "url": url,
+                    "docket": details["Docket"],
                 }
             )
+
+    @staticmethod
+    def cleanup_content(content):
+        """Remove non-opinion HTML
+
+        Cleanup HMTL from Social Law page so we can properly display the content
+
+        :param content: The scraped HTML
+        :return: Cleaner HTML
+        """
+        content = content.decode("utf-8")
+        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+        content = tree.xpath(
+            "//div[@id='contentPlaceholder_ctl00_ctl00_ctl00_detailContainer']"
+        )[0]
+        new_tree = etree.Element("html")
+        body = etree.SubElement(new_tree, "body")
+        body.append(content)
+        return html.tostring(new_tree).decode("utf-8")

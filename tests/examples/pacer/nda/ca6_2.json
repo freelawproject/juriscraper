@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Anthony Eid v. Wayne State University",
-      "date_filed": "2022-08-17",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-17",
@@ -19,7 +19,12 @@
           "short_description": "Reset Briefing Schedule Letter"
         }
       ],
-      "docket_number": "22-1458"
+      "docket_number": "22-1458",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
     }
   ],
   "email_recipients": [

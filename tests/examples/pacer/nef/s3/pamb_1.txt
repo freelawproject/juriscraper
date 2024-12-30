@@ -1,0 +1,113 @@
+Return-Path: <PAMB_LiveDB@pamb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id t76hahcikcvql0a6qetq4ha0m18u4kkuvvk7mh81
+ for user@recap.email;
+ Fri, 03 May 2024 15:16:43 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=pamb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFRUE1bE5DU3lXbGpaZTY0d0NPck5STm1PL1MrclJtNGxFUm0valhlanZPeGU4VUw3TTBmZVppSHp1cE1JQXhudTA0aHhDSEs5UGNFS0E5TEh0dmhieVBmUWxCQ2wvbzdkMkdRZW5EVEJqUllKbXFmZmxTeVZxMEQ0djJVdXdFTE52a1hGRUJ0ZkRrZ29wK3lnb3hvd2Vsc1BKZFZwenZyMnkrYWI0b1Z5R2JQd3B4dTlISmRnbEhJUmplYnZKNnE4V0pubGczSW9MVjY5NDg1TVo0RXRiem9xOE5pL3lQcnBGVEMrbXNMb0prNkR4dXF5QlhaaWVyU2tBbHd6MDFJa1Rmc2FmQXpkcG9BWnQydXdnV3BoT2pDSVpsb2hZanhPYTg1VGVGWVhpYlE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=TH0BntyzMqxIIgacH5cnxvF46N7jJ/ExsHwnonIVO7oB2ElMeiDO296AsS8zU+/H6H+pahNdjWb16rr6xsW4QdwJXoi/aWdxs+2WCC80qddYs12hp109DXaWYfhT+9iQjnZ4vHCE3ywkdywbJJAb70YXM/ndCvgd9Tzq6yFGYs4=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1714749404; v=1; bh=Qrkt0OUBDUUrxDuUFv2A4PQ8jdpWQJhuiQ/HPJ2eQ/8=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.181
+Received: from pambdb.pamb.gtwy.dcn ([156.119.190.181])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 03 May 2024 11:16:43 -0400
+Received: from pambdb.pamb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 443FFvTL094209;
+	Fri, 3 May 2024 11:15:58 -0400
+Received: (from ecf_web@localhost)
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.4/Submit) id 443FFtbm094077;
+	Fri, 3 May 2024 11:15:55 -0400
+Date: Fri, 3 May 2024 11:15:55 -0400
+MIME-Version:1.0
+From:PAMB_LiveDB@pamb.uscourts.gov
+To:Courtmail@pamb.uscourts.gov
+Reply-To: pambecf_helpdesk@pamb.uscourts.gov
+Message-Id:<18007556@pamb.uscourts.gov>
+Subject:Ch-7 5:21-bk-00329-MJC -Maria Victoria Dir Motion to Reopen Case
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Middle District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from FirstName LastName entered on 5/3/2024 at 11:15 AM EDT and filed on 5/3/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Maria Victoria Diri                               </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pamb.uscourts.gov/cgi-bin/DktRpt.pl?270840>5:21-bk-00329-MJC</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 10/19/2022</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.pamb.uscourts.gov/doc1/154018337184?pdf_header=&magic_num=83584343&de_seq_num=341&caseid=270840'>78</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+ Motion to Reopen Chapter 7 Case. Filing Fee due in the amount of $260.00. Filed by  FirstName LastName  of firm, P.C. on behalf of  Maria Victoria Diri  (RE: related document(s)[64]).   (Attachments: # (1) Proposed Order  # (2) Certificate of Service) (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>motion
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1009835235 [Date=5/3/2024] [FileNumber=18007554-0
+<BR><TAB>] [3c447d21210e95e1f528e3c7dde4106b82265e1be1815516981a4bc9cf17e5458f1
+<BR><TAB>cc5d141a755e5fd180afa7fea116f64463bcf3668e25a632afd9bf72ae01f]]
+<BR>
+<STRONG>Document description:</STRONG>Proposed Order 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Order
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1009835235 [Date=5/3/2024] [FileNumber=18007554-1
+<BR><TAB>] [c439a1eb44b249359c8bf859c081bc652de2e937249e9f6539a0ae1be6ec196731b
+<BR><TAB>7dd199c44169bee33b5dd3119576f59e0db1e97f3392ce6ab2eaf6fdbb671]]
+<BR>
+<STRONG>Document description:</STRONG>Certificate of Service 
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Certificate of Service
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1009835235 [Date=5/3/2024] [FileNumber=18007554-2
+<BR><TAB>] [5a53a0e4e0a3a308714ef056933b29ccdc96a86b84353a6933df77cb935efadc497
+<BR><TAB>5717ed443e16e0ca39a1f4aa53c72ce3338658fc8d9046f5eb7213cba9780]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+5:21-bk-00329-MJC Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Debtor 1 Maria Victoria Diri</span>
+<br>help@lawfirm.com,  a@lawfirm.com;b@lawfirm.com;c@lawfirm.com;noreply04@lawfirm.com;noreply05@lawfirm.com;lawfirmpc@domain.net;lawfirm@recap.email;ecf@casedriver.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Andrews Federal Credit Union</span>
+<br>a@b.com,  c@b.com

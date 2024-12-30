@@ -11,8 +11,6 @@ from .utils import get_docketxml_url, get_pdf_url, is_pdf
 
 logger = make_default_logger()
 
-date_regex = r"[—\d\-–/]+"
-
 
 class InternetArchive(BaseDocketReport):
     """A simple tool for working with the XML and PDFs on the Internet Archive
@@ -177,14 +175,9 @@ class InternetArchive(BaseDocketReport):
 
         de_nodes = self.tree.xpath("//document_list/document")
         docket_entries = []
-        prev_date_filed = None
         for de_node in de_nodes:
             de = {
                 "document_number": de_node.xpath("./@doc_num")[0],
-                "description": self._xpath_text_0(de_node, "./long_desc"),
-                "short_description": self._xpath_text_0(
-                    de_node, "./short_desc"
-                ),
                 "pacer_seq_no": self._xpath_text_0(
                     de_node, "./pacer_de_seq_num"
                 )
@@ -193,6 +186,12 @@ class InternetArchive(BaseDocketReport):
             attachment_number = de_node.xpath("./@attachment_num")[0]
             if attachment_number != "0":
                 de["attachment_number"] = attachment_number
+                de["description"] = self._xpath_text_0(de_node, "./short_desc")
+            else:
+                de["description"] = self._xpath_text_0(de_node, "./long_desc")
+                de["short_description"] = self._xpath_text_0(
+                    de_node, "./short_desc"
+                )
 
             date_filed_str = self._xpath_text_0(de_node, "./date_filed")
             if date_filed_str:
@@ -202,15 +201,9 @@ class InternetArchive(BaseDocketReport):
                 except ValueError:
                     # Fails for dates like 0000-00-00
                     de["date_filed"] = None
-                else:
-                    prev_date_filed = de["date_filed"]
             else:
                 # No date found.
-                if de.get("attachment_number"):
-                    # If it's an attachment, it probably lacks a date. Get it
-                    # from the previously stored item.
-                    de["date_filed"] = prev_date_filed
-                else:
+                if not de.get("attachment_number"):
                     # If not an attachment, it's probably an old docket entry,
                     # which sometimes lack dates. Press on.
                     continue
@@ -222,7 +215,18 @@ class InternetArchive(BaseDocketReport):
             if not de["document_number"].isdigit():
                 # Some courts put weird stuff in this column.
                 continue
-            docket_entries.append(de)
+            if de.get("attachment_number"):
+                try:
+                    last_de = docket_entries[-1]
+                except IndexError:
+                    continue
+                if last_de.get("document_number") == de["document_number"]:
+                    del de["document_number"]
+                    attachments = last_de.get("attachments", [])
+                    attachments.append(de)
+                    last_de["attachments"] = attachments
+            else:
+                docket_entries.append(de)
 
         docket_entries = clean_court_object(docket_entries)
         self._docket_entries = docket_entries

@@ -1,0 +1,69 @@
+{
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "njb",
+  "dockets": [
+    {
+      "case_name": "Goldberg v. Weingarten Nostat, LLC",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-05-17",
+          "description": "Adversary case 24-01365. Complaint by FirstName LastName against Weingarten Nostat, LLC. Fee Amount $ 350.. (12 (Recovery of money/property - 547 preference)) (Attachments: (1) Exhibit A) (FirstName LastName)",
+          "document_number": "1",
+          "document_url": "https://ecf.njb.uscourts.gov/doc1/118066947529?pdf_header=&magic_num=56972776&de_seq_num=3&caseid=1112881",
+          "pacer_case_id": "1112881",
+          "pacer_doc_id": "118066947529",
+          "pacer_magic_num": "56972776",
+          "pacer_seq_no": "3",
+          "short_description": "Complaint"
+        }
+      ],
+      "docket_number": "24-01365",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "VFP",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    },
+    {
+      "case_name": "Bed Bath & Beyond Inc.",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-05-17",
+          "description": "Adversary case 24-01365. Complaint by FirstName LastName against Weingarten Nostat, LLC. Fee Amount $ 350.. (12 (Recovery of money/property - 547 preference)) (Attachments: (1) Exhibit A) (FirstName LastName)",
+          "document_number": "3229",
+          "document_url": "https://ecf.njb.uscourts.gov/doc1/118066947531?pdf_header=&magic_num=16113382&de_seq_num=11806&caseid=1098474",
+          "pacer_case_id": "1098474",
+          "pacer_doc_id": "118066947531",
+          "pacer_magic_num": "16113382",
+          "pacer_seq_no": "11806",
+          "short_description": "Complaint"
+        }
+      ],
+      "docket_number": "23-13359",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "VFP",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "aa@domain.com",
+        "bb@domain.com"
+      ],
+      "name": ""
+    },
+    {
+      "email_addresses": [
+        "person@firm.com",
+        "person@firm.com"
+      ],
+      "name": "Address 1 Address 2 Town, NY 1111"
+    }
+  ]
+}

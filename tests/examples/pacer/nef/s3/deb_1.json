@@ -1,0 +1,41 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "deb",
+  "dockets": [
+    {
+      "case_name": "JOANN Inc.",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-04-23",
+          "description": "Declaration (related document(s)[226]) Filed by JOANN Inc.. (LastName, FirstName)",
+          "document_number": "297",
+          "document_url": "https://ecf.deb.uscourts.gov/doc1/042021533455?pdf_header=&magic_num=47456538&de_seq_num=1312&caseid=192329",
+          "pacer_case_id": "192329",
+          "pacer_doc_id": "042021533455",
+          "pacer_magic_num": "47456538",
+          "pacer_seq_no": "1312",
+          "short_description": "Declaration"
+        }
+      ],
+      "docket_number": "24-10418",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "CTG",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "xx@bb.org",
+        "xx@bb.org",
+        "yy@zz.com",
+        "yy@zz.com"
+      ],
+      "name": ""
+    }
+  ]
+}

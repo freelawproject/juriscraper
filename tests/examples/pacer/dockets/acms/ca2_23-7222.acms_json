@@ -1,0 +1,85 @@
+{
+  "caseDetails": {
+    "caseId": "9f5ae37f-c44e-4194-b075-3f8f028559c4",
+    "caseNumber": "23-7222",
+    "name": "United States of America v. Raji",
+    "caseOpened": "2023-10-02",
+    "aNumber": null,
+    "receivedDate": "2023-10-02T10:55:11Z",
+    "partyAttorneyList": "<table width='100%'><tr><td width='30%' style='padding-bottom: 20px;'> UNITED STATES OF AMERICA<br>&nbsp;&nbsp;&nbsp;&nbsp;AppelleeUSA, </td><td style='padding-bottom: 20px;'><div style='margin-bottom: 10px'>Won S. Shin, Assistant U.S. Attorney<br>Email: won.shin@usdoj.gov<br>[US Attorney]<br>United States Attorney's Office for the Southern District of New York<br>One Saint Andrew's Plaza<br>New York, NY 10007</div></td></tr><tr><td width='30%' style='padding-bottom: 20px;'> MUSTAPHA RAJI<br>&nbsp;&nbsp;&nbsp;&nbsp;AKA Sealed Defendant 1, <br>&nbsp;&nbsp;&nbsp;&nbsp;Appellant, </td><td style='padding-bottom: 20px;'><div style='margin-bottom: 10px'>Jeremy Schneider, -<br>Direct: 212-571-5500<br>Email: jschneider@rssslaaw.com<br>[CJA Appointment]<br>Rothman, Schneider, Soloway & Stern, LLP<br>100 Lafayette Street<br>Suite 501<br>New York, NY 10013</div></td></tr></table>",
+    "shortCaption": "United States of America,<br>\\n<br>\\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Appellee,<br>\\n<br>\\n&nbsp;&nbsp; v.<br>\\n<br>\\nMustapha Raji, &nbsp;AKA Sealed Defendant 1,<br>\\n<br>\\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Defendant - Appellant.\\n\\n",
+    "court": {
+      "name": "S.D.N.Y . (NEW YORK CITY)",
+      "identifier": "S.D.N.Y. (NEW YORK CITY)"
+    },
+    "caseType": "Criminal",
+    "caseSubType": "Direct Criminal",
+    "caseSubSubType": null,
+    "districtCourtName": null,
+    "feeStatus": "IFP Granted",
+    "byteCount": 1325
+  },
+  "docketInfo": {
+    "isCaseSealed": false,
+    "isUserCaseParticipant": false,
+    "byteCount": 544,
+    "docketEntries": [
+      {
+        "endDate": "2023-09-29",
+        "endDateFormatted": "09/29/2023",
+        "entryNumber": 1,
+        "docketEntryText": "<p>NOTICE OF CRIMINAL APPEAL, with district court docket, on behalf of Appellant Mustapha Raji, FILED. [Entered: 10/02/2023 11:17 AM]</p>",
+        "docketEntryId": "46de54cd-3561-ee11-be6e-001dd804e087",
+        "createdOn": "2023-10-02T15:10:22Z",
+        "documentCount": 1,
+        "pageCount": 18,
+        "fileSize": 142,
+        "restrictedPartyFilingDocketEntry": false,
+        "restrictedDocsAvailable": false,
+        "selected": false
+      },
+      {
+        "endDate": "2023-09-29",
+        "endDateFormatted": "09/29/2023",
+        "entryNumber": 2,
+        "docketEntryText": "<p>DISTRICT COURT JUDGMENT, dated 09/19/2023, RECEIVED. [Entered: 10/02/2023 11:20 AM]</p>",
+        "docketEntryId": "0d24550b-3761-ee11-be6e-001dd804e087",
+        "createdOn": "2023-10-02T15:19:17Z",
+        "documentCount": 1,
+        "pageCount": 8,
+        "fileSize": 319,
+        "restrictedPartyFilingDocketEntry": false,
+        "restrictedDocsAvailable": false,
+        "selected": false
+      },
+      {
+        "endDate": "2023-10-02",
+        "endDateFormatted": "10/02/2023",
+        "entryNumber": 3,
+        "docketEntryText": "<p>NOTICE OF CRIMINAL APPEAL, on behalf of Appellant Mustapha Raji, OPENED. [Entered: 10/02/2023 11:23 AM]</p>",
+        "docketEntryId": "b4cd2647-3761-ee11-be6e-001dd804e087",
+        "createdOn": "2023-10-02T15:21:02Z",
+        "documentCount": 2,
+        "pageCount": 20,
+        "fileSize": 275,
+        "restrictedPartyFilingDocketEntry": false,
+        "restrictedDocsAvailable": false,
+        "selected": false
+      },
+      {
+        "endDate": "2023-10-02",
+        "endDateFormatted": "10/02/2023",
+        "entryNumber": 4,
+        "docketEntryText": "<p>NOTICE OF APPEARANCE AS SUBSTITUTE COUNSEL/ADDITIONAL COUNSEL, on behalf of United States of America, FILED. [Entered: 10/02/2023 12:51 PM]</p>",
+        "docketEntryId": "167e8e98-4361-ee11-be6e-001dd804e4bd",
+        "createdOn": "2023-10-02T16:49:05Z",
+        "documentCount": 1,
+        "pageCount": 1,
+        "fileSize": 90,
+        "restrictedPartyFilingDocketEntry": false,
+        "restrictedDocsAvailable": false,
+        "selected": false
+      }
+    ]
+  }
+}

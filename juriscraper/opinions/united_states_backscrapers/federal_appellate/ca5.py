@@ -68,9 +68,11 @@ class Site(OpinionSiteLinear):
                     "name": row.xpath(".//td[4]")[0].text_content(),
                     "url": row.xpath(".//td[2]/a")[0].attrib["href"],
                     "docket": row.xpath(".//td[2]/a")[0].attrib["title"],
-                    "status": "Published"
-                    if row.xpath(".//td[5]")[0].text_content() == "pub"
-                    else "Unpublished",
+                    "status": (
+                        "Published"
+                        if row.xpath(".//td[5]")[0].text_content() == "pub"
+                        else "Unpublished"
+                    ),
                 }
             )
 
@@ -105,9 +107,11 @@ class Site(OpinionSiteLinear):
                         "name": row.xpath(".//td[4]")[0].text_content(),
                         "url": row.xpath(".//td[2]/a")[0].attrib["href"],
                         "docket": row.xpath(".//td[2]/a")[0].attrib["title"],
-                        "status": "Published"
-                        if row.xpath(".//td[5]")[0].text_content() == "pub"
-                        else "Unpublished",
+                        "status": (
+                            "Published"
+                            if row.xpath(".//td[5]")[0].text_content() == "pub"
+                            else "Unpublished"
+                        ),
                     }
                 )
 

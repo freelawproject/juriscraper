@@ -6,8 +6,5 @@ from juriscraper.opinions.united_states.state import calctapp_1st
 
 
 class Site(calctapp_1st.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.court_code = "G"
-        self.division = "4th App. Dist. Div. 3"
+    court_code = "G"
+    division = "4th App. Dist. Div. 3"

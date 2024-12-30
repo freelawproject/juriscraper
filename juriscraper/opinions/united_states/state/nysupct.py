@@ -1,12 +1,5 @@
-# Scraper and Back Scraper for New York Commercial Division
-# CourtID: nysupct
-# Court Short Name: NY
-
-from juriscraper.opinions.united_states.state import nyappterm_1st
+from juriscraper.opinions.united_states.state import nytrial
 
 
-class Site(nyappterm_1st.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court = "Commercial Division"
-        self.parameters.update({"court": self.court})
+class Site(nytrial.Site):
+    court_regex = r"Sup[rt]?\.? ?[Cc]o?u?r?t?|[sS]ur?pu?rem?e? C(our)?t|Sur?pe?r?me?|Suoreme|Sup County|Integrated Domestic Violence|Soho Fashions LTD"

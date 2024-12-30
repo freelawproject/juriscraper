@@ -1,11 +1,16 @@
 import hashlib
 import json
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
+from typing import Dict, List, Tuple
 
 import certifi
 import requests
 
-from juriscraper.lib.date_utils import fix_future_year_typo, json_date_handler
+from juriscraper.lib.date_utils import (
+    fix_future_year_typo,
+    json_date_handler,
+    make_date_range_tuples,
+)
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -15,6 +20,7 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     clean_string,
@@ -33,7 +39,7 @@ class AbstractSite:
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self, cnt=None):
+    def __init__(self, cnt=None, **kwargs):
         super().__init__()
 
         # Computed metadata
@@ -47,14 +53,29 @@ class AbstractSite:
         self.request = {
             "verify": certifi.where(),
             "session": requests.session(),
-            "headers": {"User-Agent": "Juriscraper"},
-            # Disable CDN caching on sites like SCOTUS (ahem)
-            "cache-control": "no-cache, no-store, max-age=1",
+            "headers": {
+                "User-Agent": "Juriscraper",
+                # Disable CDN caching on sites like SCOTUS (ahem)
+                "Cache-Control": "no-cache, max-age=0, must-revalidate",
+                # backwards compatibility with HTTP/1.0 caches
+                "Pragma": "no-cache",
+            },
             "parameters": {},
             "request": None,
             "status": None,
             "url": None,
         }
+
+        # Attribute to reference a function passed by the caller,
+        # which takes a single argument, the Site object, after
+        # each GET or POST request. Intended for saving the response for
+        # debugging purposes.
+        self.save_response = kwargs.get("save_response_fn")
+
+        # Some courts will block Juriscraper or Courtlistener's user-agent
+        # or may need special headers. This flag let's the caller know it
+        # should use the modified `self.request["headers"]`
+        self.needs_special_headers = False
 
         # Sub-classed metadata
         self.court_id = None
@@ -112,6 +133,14 @@ class AbstractSite:
          site scrapers should be removed when no longer necessary.
         """
         self.request["verify"] = False
+
+    def set_custom_adapter(self, cipher: str):
+        """Set Custom SSL/TLS Adapter for out of date court systems
+
+        :param cipher: The court required cipher
+        :return: None
+        """
+        self.request["session"].mount("https://", SSLAdapter(ciphers=cipher))
 
     def test_mode_enabled(self):
         return self.method == "LOCAL"
@@ -234,6 +263,7 @@ class AbstractSite:
                 prior_case_name = name
                 i += 1
 
+        future_date_count = 0
         for index, case_date in enumerate(self.case_dates):
             if not isinstance(case_date, date):
                 raise InsanityException(
@@ -243,24 +273,30 @@ class AbstractSite:
                 )
             # Sanitize case date, fix typo of current year if present
             fixed_date = fix_future_year_typo(case_date)
+            case_name = self.case_names[index]
             if fixed_date != case_date:
                 logger.info(
                     "Date year typo detected. Converting %s to %s "
-                    "for case '%s' in %s"
-                    % (
-                        case_date,
-                        fixed_date,
-                        self.case_names[index],
-                        self.court_id,
-                    )
+                    "for case '%s' in %s",
+                    case_date,
+                    fixed_date,
+                    case_name,
+                    self.court_id,
                 )
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
-            if case_date.year > 2025:
-                raise InsanityException(
-                    "%s: member of case_dates list is from way in the future, "
-                    "with value %s" % (self.court_id, case_date.year)
-                )
+
+            # dates should not be in the future. Tolerate a week
+            if case_date > (date.today() + timedelta(days=7)):
+                future_date_count += 1
+                error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
+                logger.error(error)
+
+                # Interrupt data ingestion if more than 1 record has a bad date
+                if future_date_count > 1:
+                    raise InsanityException(
+                        f"More than 1 case has a date in the future. Last case: {error}"
+                    )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:
@@ -318,13 +354,16 @@ class AbstractSite:
             )
         else:
             logger.info(f"Now downloading case page at: {self.url}")
+
         self._process_request_parameters(request_dict)
-        if self.method == "GET":
+
+        if self.test_mode_enabled():
+            self._request_url_mock(self.url)
+        elif self.method == "GET":
             self._request_url_get(self.url)
         elif self.method == "POST":
             self._request_url_post(self.url)
-        elif self.test_mode_enabled():
-            self._request_url_mock(self.url)
+
         self._post_process_response()
         return self._return_response_text_object()
 
@@ -342,7 +381,7 @@ class AbstractSite:
         if parameters.get("verify") is not None:
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
-        self.request["parameters"] = parameters
+        self.request["parameters"].update(parameters)
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
@@ -356,6 +395,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
@@ -368,6 +409,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""
@@ -394,9 +437,10 @@ class AbstractSite:
 
                 text = self._clean_text(payload)
                 html_tree = self._make_html_tree(text)
-                html_tree.rewrite_links(
-                    fix_links_in_lxml_tree, base_href=self.request["url"]
-                )
+                if hasattr(html_tree, "rewrite_links"):
+                    html_tree.rewrite_links(
+                        fix_links_in_lxml_tree, base_href=self.request["url"]
+                    )
                 return html_tree
 
     def _get_html_tree_by_url(self, url, parameters={}):
@@ -407,9 +451,58 @@ class AbstractSite:
         tree.make_links_absolute(url)
         return tree
 
-    def _download_backwards(self):
+    def _download_backwards(self, d):
         # methods for downloading the entire Site
         pass
+
+    def make_backscrape_iterable(
+        self, kwargs: Dict
+    ) -> List[Tuple[date, date]]:
+        """Creates back_scrape_iterable in the most common variation,
+        a list of tuples containing (start, end) date pairs, each of
+        `days_interval` size
+
+        Uses default attributes of the scrapers as a fallback, if
+        expected keyword arguments are not passed in the kwargs input
+
+        :param kwargs: if the following keys are present, use them
+            backscrape_start: str in "%Y/%m/%d" format ;
+                            Default: self.first_opinion_date
+            backscrape_end: str
+            days_interval: int; Default: self.days_interval
+
+        :return: None; sets self.back_scrape_iterable in place
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+        days_interval = kwargs.get("days_interval")
+
+        if start:
+            start = datetime.strptime(start, "%Y/%m/%d")
+        else:
+            if hasattr(self, "first_opinion_date"):
+                start = self.first_opinion_date
+            else:
+                logger.warning(
+                    "No `backscrape_start` argument passed; and scraper has no `first_opinion_date` default"
+                )
+
+        if end:
+            end = datetime.strptime(end, "%Y/%m/%d")
+        else:
+            end = datetime.now().date()
+
+        if not days_interval:
+            if hasattr(self, "days_interval"):
+                days_interval = self.days_interval
+            else:
+                logger.warning(
+                    "No `days_interval` argument passed; and scraper has no default"
+                )
+
+        self.back_scrape_iterable = make_date_range_tuples(
+            start, end, days_interval
+        )
 
     @staticmethod
     def cleanup_content(content):

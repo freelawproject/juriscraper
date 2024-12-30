@@ -18,16 +18,18 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
+    start_year = 1997
+    current_year = date.today().year
+    court = "sc"
+    base_url = "http://appellate.nccourts.org/opinions/?c={}&year={}"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = (
-            "http://appellate.nccourts.org/opinions/?c=sc&year=%s"
-            % date.today().year
-        )
-        self.back_scrape_iterable = list(
-            range((date.today().year - 1), 1997, -1)
-        )
+        self.url = self.base_url.format(self.court, self.current_year)
+
+        self.make_backscrape_iterable(kwargs)
+
         self.my_download_urls = []
         self.my_case_names = []
         self.my_docket_numbers = []
@@ -172,6 +174,28 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return self.my_precedential_statuses
 
-    def _download_backwards(self, year):
-        self.url = f"http://appellate.nccourts.org/opinions/?c=sc&year={year}"
+    def _download_backwards(self, year: int) -> None:
+        """Build year URL and scrape
+
+        :param year: year to scrape
+        :return None
+        """
+        self.url = self.base_url.format(self.court, year)
         self.html = self._download()
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
+
+        :param kwargs: passed when initializing the scraper, may or
+            may not contain backscrape controlling arguments
+
+        :return None
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        start = int(start) if start else self.start_year
+        end = int(end) + 1 if end else self.current_year
+
+        self.back_scrape_iterable = range(start, end)

@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Marjorie Taylor Greene v. Secretary of State for the State of Georgia",
-      "date_filed": "2022-08-22",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-22",
@@ -19,7 +19,12 @@
           "short_description": "Court Order Filed Granted by Court Withdraw as Counsel"
         }
       ],
-      "docket_number": "22-11299"
+      "docket_number": "22-11299",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
     }
   ],
   "email_recipients": []

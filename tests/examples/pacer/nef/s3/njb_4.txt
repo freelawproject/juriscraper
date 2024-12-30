@@ -1,0 +1,164 @@
+Return-Path: <cmecf_help_desk@njb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id jq5c7rchbis0odf0kad7mgv913klkknpaaj3a2o1
+ for user@recap.email;
+ Fri, 17 May 2024 16:26:54 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of njb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of njb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf_help_desk@njb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=njb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHclZ4RkZGRmZHVlZBOWo1eXFKOStrS1hPdThwWE1aZVZJMlR3aEw3d25lSUxWUmlEdndTQ2c2WitSRTJUeDdiVzM0Y2YrM1ZqZ0V5UVlqWFRscTVabVF3aEkwam12L21CSzhGOUFOdDliM1dmNUk4OEkyK2tuc2FqdHowK0IvaUxaakVzVnowTDNzVVZsc0V1ekduYXNhYXcxRlROWUEyaXBySDhHT1NSdUxnTUhsbXRJcFptaGNDNG1vd0RINFBlckE2UWYyQlEwaHkzck9DaFVQMDBpbjAyTjUvYzNYRE4xZ0N1b0ZUamt0V0Z3U1IxVkZjQzFla1g0cmhvdmJNSWkwcGoxQWw0OFIvbEZxUGFvWUoxTGZwN2xsWlpIYjRPWmlqNVdyREhxVHBQd29WNnFwQ0Q2VlJiYmord3ZNd2M9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=zpbM2+TKniCYnRx/Dd6FUiseaeK/6X0dbt3yRZ9k2bMESLAsq6FVWNuKaKITRMc9KD1+DKqRdx+RjoarH/MpayqqhKcx6xxH22e8djFfH9PDrtysHfoYHFLY/sRbVnrAFwV3AHeAdtIchbriJ+gIYy/CWGqdTfKZHd/VQ4U7tqk=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1715963215; v=1; bh=5yrTDfWlP/tSqaFSvASO6Pz+iA1v8edyKjWhXm6J4kY=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.77
+Received: from unknown (HELO njbdb.njb.gtwy.dcn) ([156.119.190.77])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 17 May 2024 12:26:54 -0400
+Received: from njbdb.njb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 44HGQ54h062290;
+	Fri, 17 May 2024 12:26:09 -0400
+Received: (from ecf_web@localhost)
+	by njbdb.njb.gtwy.dcn (8.14.7/8.14.4/Submit) id 44HGQ5ME062182;
+	Fri, 17 May 2024 12:26:05 -0400
+Date: Fri, 17 May 2024 12:26:05 -0400
+MIME-Version:1.0
+From:cmecf_help_desk@njb.uscourts.gov
+To:no-reply@njb.uscourts.gov
+Message-Id:<63067338@njb.uscourts.gov>
+Subject:Ch-11 23-13359-VFP Complaint - Bed Bath & Beyond
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of New Jersey</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Marianna Udem entered on 5/17/2024 at 12:25 PM EDT and filed on 5/17/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Goldberg v. Weingarten Nostat, LLC                            </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.njb.uscourts.gov/cgi-bin/DktRpt.pl?1112881>24-01365-VFP</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.njb.uscourts.gov/doc1/118066947529?pdf_header=&magic_num=56972776&de_seq_num=3&caseid=1112881'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Bed Bath & Beyond Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.njb.uscourts.gov/cgi-bin/DktRpt.pl?1098474>23-13359-VFP</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.njb.uscourts.gov/doc1/118066947531?pdf_header=&magic_num=16113382&de_seq_num=11806&caseid=1098474'>3229</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-01365.  Complaint by  FirstName LastName  against    Weingarten Nostat, LLC.  Fee Amount &#036 350.. (12 (Recovery of money/property - 547 preference))   (Attachments: # (1) Exhibit A) (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Weingarten Nostat complaint.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1002741850 [Date=5/17/2024] [FileNumber=63067333-
+<BR><TAB>0] [8513a4713e43f2ece0e22f6e4584ab2a5c0aae9d5849c1f43f9a3f8e04e44bf42d
+<BR><TAB>630d8d52258f508bfe0bf6fd558a62a606552b73d98639bf0a6f1456e333ce]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit A
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Weingarten Nostat, LLC fdba Weingarten Nostat, Inc. (2278419), Exhibit A.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1002741850 [Date=5/17/2024] [FileNumber=63067333-
+<BR><TAB>1] [90360a35d12670b7f860d77d94c311db71e8be4fc65f8e34a6f4cbaa30f32a4cef
+<BR><TAB>5eb8ec38ab9f4197ca2871fef111be12eacd706892a6f1c861e8f1fb94ba26]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Weingarten Nostat complaint.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1002741850 [Date=5/17/2024] [FileNumber=63067334-
+<BR><TAB>0] [64956adc41cc75446eed03ed8814ea14370835d1cc41848a92306d046f180d3a6e
+<BR><TAB>32c0bbf55cd1356210382c8cccd1b1aa478af75f6710ef6fe219f54b5c3924]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit A
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Weingarten Nostat, LLC fdba Weingarten Nostat, Inc. (2278419), Exhibit A.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1002741850 [Date=5/17/2024] [FileNumber=63067334-
+<BR><TAB>1] [a0e55b20da355319b750c9d18714accbd9868a401f6881f8667066d5d2c3049f4f
+<BR><TAB>003be3bbd6c9b5db33ee1362867269a087bc59163a93f32a8d03edc1b67208]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-01365-VFP Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff FirstName LastName</span>
+<br>aa@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Plaintiff FirstName LastName</span>
+<br>bb@domain.com
+<BR>
+
+<BR>
+<B>
+24-01365-VFP Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Company, LLC</span>
+<BR>Address 1
+<BR>Address 2
+<BR>Town, NY 1111
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
+
+
+
+
+<BR><B>
+23-13359-VFP Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Other Prof. Golf & Tennis Pro Shops, Inc. (d/b/a/ PGA TOUR Superstore)</span>
+<br>person@firm.com,  person@firm.com
+<BR>

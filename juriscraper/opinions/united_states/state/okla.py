@@ -6,54 +6,84 @@
 # Reviewer: mlr
 # Date: 2014-07-05
 
-import re
-from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from lxml import html
+
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.elements = []
-        self.base_path = False
-        self.year = date.today().year
-        self.regex = r"([^,]+), (\d{2}.\d{2}.\d{4}), (.*)"
-        self.url = (
-            "http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKCSSC&year=%d&level=1"
-            % self.year
-        )
+        self.url = "https://www.oscn.net/decisions/ok/30"
+        self.status = "Published"
+        self.expected_content_types = ["text/html"]
 
-    def set_base_path(self):
-        # All test files should be edited to use year value of 2018
-        year = 2018 if self.test_mode_enabled() else self.year
-        self.base_path = "//a[contains(./text(), '%d')]" % year
+    def _process_html(self):
+        for row in self.html.xpath(".//li[@class='decision']"):
+            name, citation = row.xpath(".//a/text()")
+            url = row.xpath(".//a/@href")[0]
+            date_filed_raw = row.xpath(".//span[@class='decidedDate']/text()")
+            summary = row.xpath(".//p[@class='summaryParagraph']/text()")[0]
 
-    def _download(self, request_dict={}):
-        self.set_base_path()
-        html = super()._download(request_dict)
-        self.elements = html.xpath(self.base_path)
-        return html
+            docket = row.xpath(".//span[@class='caseNumber']/text()")
+            if not docket:
+                logger.debug("Skipping row without docket number")
+                continue
+            docket_number_raw = docket[0].strip()
 
-    def _get_download_urls(self):
-        path = f"{self.base_path}/@href"
-        return self.html.xpath(path)
+            self.cases.append(
+                {
+                    "date": date_filed_raw[0].strip().split()[1],
+                    "name": name,
+                    "docket": docket_number_raw.split()[1],
+                    "citation": citation,
+                    "url": url,
+                    "summary": summary.strip(),
+                }
+            )
 
-    def _get_case_dates(self):
-        return [self._return_substring(e, 2) for e in self.elements]
+    @staticmethod
+    def cleanup_content(content):
+        """Remove non-opinion HTML
 
-    def _get_case_names(self):
-        return [self._return_substring(e, 3) for e in self.elements]
+        Oklahoma uses ISO-8859-1 formatting which we need to account for
+        so we dont end up with ugly HTML.  Also we should remove a few sections
+        and all of the A tags to avoid hyperlinking to nowhere.
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+        Make sure to wrap the content in an HTML tag so it can be properly
+        processed on CL.
 
-    def _get_citations(self):
-        return [self._return_substring(e, 1) for e in self.elements]
+        :param content: The scraped HTML
+        :return: Cleaner HTML
+        """
+        content = content.decode("ISO-8859-1")
+        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+        for removal_class in ["tmp-citationizer", "footer", "published-info"]:
+            for element in tree.xpath(f"//div[@class='{removal_class}']"):
+                parent = element.getparent()
+                if parent is not None:
+                    parent.remove(element)
+        # Remove the a tags so we dont link around to broken places
+        for a_tag in tree.xpath("//a"):
+            span = html.Element("span")
+            span.text = a_tag.text
+            a_tag.getparent().replace(a_tag, span)
 
-    def _return_substring(self, element, group):
-        text = element.text_content()
-        substring = re.search(self.regex, text).group(group)
-        return substring if group != 2 else convert_date_string(substring)
+        opinions_navigation = tree.xpath("//div[@id='opinons-navigation']")
+        if opinions_navigation:
+            opinions_navigation = opinions_navigation[0]
+            parent = opinions_navigation.getparent()
+
+            # Remove all preceding siblings
+            for sibling in opinions_navigation.itersiblings(preceding=True):
+                parent.remove(sibling)
+            opinions_navigation.getparent().remove(opinions_navigation)
+
+        # Find the core element with id 'oscn-content'
+        core_element = tree.xpath("//*[@id='oscn-content']")[0]
+        html_content = html.tostring(core_element).decode("ISO-8859-1").strip()
+        return f"<html>{html_content}</html>"

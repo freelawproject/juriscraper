@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Greenlee v. Driven Brands, INC.",
-      "date_filed": "2021-06-28",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-06-28",
@@ -19,7 +19,12 @@
           "short_description": "Initial Scheduling Order"
         }
       ],
-      "docket_number": "2:21-cv-02107"
+      "docket_number": "2:21-cv-02107",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "PKH",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "2"
     }
   ],
   "email_recipients": [

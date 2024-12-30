@@ -8,42 +8,28 @@
 
 from datetime import date, timedelta
 
-from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.case_date = date.today()
-        self.a_while_ago = date.today() - timedelta(days=28)
-        self.base_path = "id('art-main')//tr[position() > 1]"
-        self.url = (
-            f"http://www.gaappeals.us/docketdate/results_all.php?searchterm="
-            f"{self.a_while_ago.month:02d}%2F{self.a_while_ago.day:02d}%2F{self.a_while_ago.year}&searchterm2="
-            f"{self.case_date.month:02d}%2F{self.case_date.day:02d}%2F{self.case_date.year}&submit=Search"
-        )
+        today = date.today().strftime("%Y-%m-%d")
+        last_week = (date.today() - timedelta(days=7)).strftime("%Y-%m-%d")
+        self.status = "Published"
+        self.url = f"https://www.gaappeals.us/wp-content/themes/benjamin/docket/docketdate/results_all.php?OPstartDate={last_week}&OPendDate={today}&submit=Start+Opinions+Search"
 
-    def _get_case_names(self):
-        path = f"{self.base_path}/td[2]/text()"
-        return [titlecase(e) for e in self.html.xpath(path)]
-
-    def _get_download_urls(self):
-        path = f"{self.base_path}/td[6]/a/@href"
-        return list(self.html.xpath(path))
-
-    def _get_case_dates(self):
-        path = f"{self.base_path}/td[3]/text()"
-        return [convert_date_string(e) for e in self.html.xpath(path)]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
-
-    def _get_docket_numbers(self):
-        path = f"{self.base_path}/td[1]/text()"
-        return list(self.html.xpath(path))
-
-    def _get_dispositions(self):
-        path = f"{self.base_path}/td[4]/text()"
-        return [titlecase(e) for e in self.html.xpath(path)]
+    def _process_html(self):
+        for row in self.html.xpath("//tr")[::-1][:-1]:
+            docket, name, date, disposition, _, url = row.xpath(".//td")
+            self.cases.append(
+                {
+                    "docket": docket.text_content(),
+                    "name": titlecase(name.text_content()),
+                    "date": date.text_content(),
+                    "disposition": disposition.text_content().title(),
+                    "url": url.xpath(".//a")[0].get("href"),
+                }
+            )

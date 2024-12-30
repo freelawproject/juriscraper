@@ -6,7 +6,6 @@ Contact:
   Shane_Clouden@ca2.uscourts.gov
 """
 
-
 from juriscraper.opinions.united_states.federal_appellate import ca2_p
 
 

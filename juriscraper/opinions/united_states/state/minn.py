@@ -5,90 +5,131 @@
 # Reviewer: mlr
 # Date: 2014-07-03
 # Contact:  Liz Reppe (Liz.Reppe@courts.state.mn.us), Jay Achenbach (jay.achenbach@state.mn.us)
+
+# 2024-08-09: update and implement backscraper, grossir
+
 import re
 from datetime import date
+from typing import Tuple
+from urllib.parse import urljoin
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    court_query = "supct"
+    days_interval = 7
+    first_opinion_date = date(1998, 1, 1)
+    needs_special_headers = True
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # Get 500 most recent results for the year.  This number could be reduced after the
-        # initial run of this fixed code.  We need ot start with a big number though to
-        # capture the cases we've missed over the past few weeks.
-        self.url = "http://mn.gov/law-library-stat/search/opinions/?v:state=root%7Croot-0-500&query=date:{year}".format(
-            year=date.today().year
-        )
-        self.court_filters = ["/supct/"]
-        self.cases = []
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self._extract_case_data_from_html(html)
-        return html
+        self.status = "Published"
+        if self.court_query == "ctapun":
+            self.status = "Unpublished"
 
-    def _extract_case_data_from_html(self, html):
-        """Build list of data dictionaries, one dictionary per case.
+        self.url = "https://mn.gov/law-library/search/"
+        self.params = self.base_params = {
+            "v:sources": "mn-law-library-opinions",
+            "query": f" (url:/archive/{self.court_query}) ",
+            "sortby": "date",
+        }
+        self.request["verify"] = False
+        self.request["headers"] = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-Dest": "document",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Sec-Fetch-Mode": "navigate",
+            "Host": "mn.gov",
+            "User-Agent": "Juriscraper/3.0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+            "Referer": "https://mn.gov/law-library/search/?v%3Asources=mn-law-library-opinions&query=+%28url%3A%2Farchive%2Fsupct%29+&citation=&qt=&sortby=&docket=&case=&v=&p=&start-date=&end-date=",
+            "Connection": "keep-alive",
+        }
+        self.make_backscrape_iterable(kwargs)
 
-        Sometimes the XML is malformed, usually because of a missing docket number,
-        which throws the traditional data list matching off.  Its easier and cleaner
-        to extract all the data at once, and simply skip over records that do not
-        present a docket number.
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
+
+        :return: None
         """
-        for document in html.xpath("//document"):
-            docket = document.xpath('content[@name="docket"]/text()')
-            if docket:
-                docket = docket[0]
-                title = document.xpath('content[@name="dc.title"]/text()')[0]
-                name = self._parse_name_from_title(title)
-                url = document.xpath("@url")[0]
-                if any(s in url for s in self.court_filters):
-                    # Only append cases that are in the right jurisdiction.
-                    self.cases.append(
-                        {
-                            "name": name,
-                            "url": self._file_path_to_url(
-                                document.xpath("@url")[0]
-                            ),
-                            "date": convert_date_string(
-                                document.xpath('content[@name="date"]/text()')[
-                                    0
-                                ]
-                            ),
-                            "status": self._parse_status_from_title(title),
-                            "docket": docket,
-                        }
-                    )
+        self.html = self._download({"params": self.params})
 
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
-
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
-
-    def _file_path_to_url(self, path):
-        return path.replace(
-            "file:///web/prod/static/lawlib/live",
-            "http://mn.gov/law-library-stat",
+        # This warning is useful for backscraping
+        results_number = self.html.xpath(
+            "//div[@class='searchresult_number']/text()"
         )
+        if results_number:
+            results_number = results_number[0].split(" of ")[-1].strip()
+            if int(results_number) > 10:
+                logger.warning(
+                    "Page has a size 10, and there are %s results for this query",
+                    results_number,
+                )
 
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
+        for case in self.html.xpath("//div[@class='searchresult']"):
+            name = re.sub(r"\s+", " ", case.xpath(".//a/text()")[0])
+            name_match = re.search(r"(?P<name>.+)\. A\d{2}-\d+", name)
+            if name_match:
+                name = name_match.group("name")
 
-    def _get_precedential_statuses(self):
-        return [case["status"] for case in self.cases]
+            summary = case.xpath(
+                ".//div[@class='searchresult_snippet']/text()"
+            )[0]
+            disposition = ""
+            # minnctapp_u sometimes has a disposition, but it's format
+            # is much more variable
+            if self.status == "Published":
+                parts = summary.split(".")
+                if (
+                    len(parts) > 2
+                    and len(parts[-2].split()) <= 10
+                    and not re.search(r"\d", parts[-2])
+                ):
+                    # Sometimes there is no disposition. Ex: A23-1504
+                    # False positives usually contain numbers. Ex: A22-0776
+                    disposition = parts[-2].strip()
 
-    def _parse_name_from_title(self, title):
-        name_regex = re.compile(
-            r"(?P<name>.+)\s(?:A(?:DM)?\d\d-\d{1,4})", re.I
+            raw_date = case.xpath(".//div[@class='searchresult_date']")[
+                -1
+            ].text_content()
+            date_filed = re.sub(r"\s+", " ", raw_date).split(":")[1].strip()
+
+            # Backscrapers may find citations, since they are attached some
+            # months after the initial release of an opinion
+            citation = ""
+            if cite_element := case.xpath(
+                ".//div[b[contains(text(), 'Citation:')]]"
+            ):
+                citation = (
+                    cite_element[0].text_content().split(":", 1)[-1].strip()
+                )
+
+            url = case.xpath(".//a/@href")[0]
+            docket = url.split("/")[-1].split("-")[0][2:]
+            self.cases.append(
+                {
+                    "date": date_filed,
+                    "name": name,
+                    "url": urljoin("https://", url),
+                    "disposition": disposition,
+                    "summary": summary,
+                    "docket": docket,
+                    "citation": citation,
+                }
+            )
+
+    def _download_backwards(self, dates: Tuple[date]):
+        logger.info("Backscraping for range %s - %s", *dates)
+        params = {**self.base_params}
+        params.update(
+            {
+                "start-date": dates[0].strftime("%-m/%-d/%Y"),
+                "end-date": dates[1].strftime("%-m/%-d/%Y"),
+                "query": f"{params['query']}date:[{dates[0].strftime('%Y-%m-%d')}..{dates[1].strftime('%Y-%m-%d')}]",
+            }
         )
-        return name_regex.search(title).group("name")
-
-    def _parse_status_from_title(self, title):
-        return "Unpublished" if "unpublished" in title.lower() else "Published"
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+        self.params = params

@@ -5,11 +5,11 @@
   "dockets": [
     {
       "case_name": "Certain Underwriters v. Cox Operating",
-      "date_filed": "2022-08-16",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2022-08-16",
-          "description": "RECORD EXCERPTS FILED by Appellant Certain Underwriters at Lloyds London. Date of service: 08/16/2022 via email - Attorney for Appellants: Bohman, Morse Attorney for Appellees: Lowe, Shipman [22-30371] (Harry E. Morse )",
+          "description": "RECORD EXCERPTS FILED by Appellant Certain Underwriters at Lloyds London. Date of service: 08/16/2022 via email - Attorney for Appellants: Bohman, Morse; Attorney for Appellees: Lowe, Shipman [22-30371] (Harry E. Morse )",
           "document_number": null,
           "document_url": "https://ecf.ca5.uscourts.gov/docs1/00506433781?uid=12e61e2debdbca3f",
           "pacer_case_id": "208667",
@@ -19,7 +19,12 @@
           "short_description": "Record Excerpts Filed"
         }
       ],
-      "docket_number": "22-30371"
+      "docket_number": "22-30371",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
     }
   ],
   "email_recipients": [

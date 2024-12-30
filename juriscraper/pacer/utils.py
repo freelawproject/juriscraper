@@ -25,6 +25,7 @@ def get_court_id_from_doc_id_prefix(prefix):
         "010": "ca10",
         "011": "ca11",
         "012": "cadc",
+        "013": "cafc",
         "014": "cit",
         "015": "cofc",
         "016": "almb",
@@ -35,7 +36,7 @@ def get_court_id_from_doc_id_prefix(prefix):
         "021": "alsd",
         "022": "akb",
         "023": "akd",
-        "024": "arb",
+        "024": "azb",
         "025": "azd",
         "026": "areb",
         "027": "ared",
@@ -230,11 +231,11 @@ def get_doc_id_prefix_from_court_id(court_id):
         "alnd": "019",
         "alsb": "020",
         "alsd": "021",
-        "arb": "024",
         "areb": "026",
         "ared": "027",
         "arwb": "028",
         "arwd": "029",
+        "azb": "024",
         "azd": "025",
         "ca1": "001",
         "ca2": "002",
@@ -247,9 +248,10 @@ def get_doc_id_prefix_from_court_id(court_id):
         "ca9": "009",
         "ca10": "010",
         "ca11": "011",
+        "cadc": "012",
+        "cafc": "013",
         "cacb": "973",
         "cacd": "031",
-        "cadc": "012",
         "caeb": "032",
         "caed": "033",
         "canb": "034",
@@ -596,6 +598,34 @@ def reverse_goDLS_function(s):
     return parts
 
 
+def reverse_sumDocSelected_function(s) -> Optional[Dict[str, int]]:
+    """Extract the arguments from the sumDocSelected JavaScript function.
+
+    In: sumDocSelected(this,1,13481, 7548050)
+    Out: {
+      'page_count': 1,
+      'file_size_bytes': 13481,
+      'doc_id': 7548050
+    }
+
+    The key names correspond to the form field names in the JavaScript on PACER:
+
+     - page_count: Number of pages in the document.
+     - file_size_bytes: Size of the file in bytes.
+     - doc_id: document ID without court prefix, sometimes called dlsid.
+    """
+    match = re.search(r"sumDocSelected\((.*?)\)", s)
+    args = [arg.strip() for arg in match.group(1).split(",")]
+    if args[0] != "this":
+        return None
+    parts = {
+        "page_count": int(args[1]),
+        "file_size_bytes": int(args[2]),
+        "doc_id": int(args[3]),
+    }
+    return parts
+
+
 def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     """Make a doc1 URL.
 
@@ -804,3 +834,22 @@ def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
         # Raise an exception if a timezone abbreviation is not specified.
         raise NotImplementedError(f"Datetime {datetime_str} not understood.")
     return date_time
+
+
+def parse_sumDocSelected_from_row(
+    row: html.HtmlElement,
+) -> Optional[Dict[str, int]]:
+    """Parse the arguments from the sumDocSelected function call parts from a
+    given table row.
+
+    :param row: Table row as an HtmlElement
+    :return: A dictionary of parsed parameters from the sumDocSelected function,
+     or None if the row does not contain such data.
+    """
+
+    input_els = row.xpath(".//input[@class='selDocCl']")
+    for input_el in input_els:
+        onclick = input_el.xpath("./@onclick")
+        if onclick and "sumDocSelected" in onclick[0]:
+            return reverse_sumDocSelected_function(onclick[0])
+    return None

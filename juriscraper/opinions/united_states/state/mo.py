@@ -7,96 +7,40 @@ Date created: 04/27/2014
 
 from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url_slug = "Supreme"
+        self.court = "Supreme"
         self.url = self.build_url()
-        self.cases = []
+        self.status = "Published"
 
     def build_url(self):
-        url_template = "https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions %s&date=all&year=%s#all"
-        return url_template % (self.url_slug, date.today().year)
+        year = date.today().year
+        return f"https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions%20{self.court}&date=all&year={year}#all"
 
-    def _download(self, request_dict={}):
-        html = super()._download(request_dict)
-        self._extract_cases_from_html(html)
-        return html
-
-    def _extract_cases_from_html(self, html):
-        for date_block in html.xpath(
-            "//div[@id='content']/div/form/table/tr/td"
-        ):
-            date_string = date_block.xpath("input/@value")
-            if date_string:
-                for case_block in date_block.xpath("table/tr/td"):
-                    links = case_block.xpath("a")
-                    first_link_text = links[0].xpath("text()")
-                    if (
-                        first_link_text
-                        and "Orders Pursuant to Rules" in first_link_text[0]
-                    ):
-                        continue
-
-                    target_link_index = 1 if len(links) > 1 else 0
-                    bolded_text = case_block.xpath("b")
-                    docket = self.sanitize_docket(
-                        bolded_text[0].xpath("text()")[0]
-                    )
-                    text = case_block.xpath("text()")
-                    (
-                        judge,
-                        disposition,
-                    ) = self.parse_judge_disposition_from_text(text)
-
-                    self.cases.append(
-                        {
-                            "date": convert_date_string(date_string[0]),
-                            "docket": docket,
-                            "judge": judge,
-                            "url": links[target_link_index].xpath("@href")[0],
-                            "name": links[target_link_index].xpath("text()")[
-                                0
-                            ],
-                            "disposition": disposition,
-                        }
-                    )
-
-    @staticmethod
-    def sanitize_docket(docket):
-        for substring in [":", "and", "_", "Consolidated", "(", ")", ","]:
-            docket = docket.replace(substring, " ")
-        return ", ".join(docket.split())
-
-    @staticmethod
-    def parse_judge_disposition_from_text(text_raw_list):
-        text_clean_list = [
-            text.strip() for text in text_raw_list if text.strip()
-        ]
-        return text_clean_list[0], text_clean_list[1]
-
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
-
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
-
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
-
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.cases)
-
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
-
-    def _get_judges(self):
-        return [case["judge"] for case in self.cases]
-
-    def _get_dispositions(self):
-        return [case["disposition"] for case in self.cases]
+    def _process_html(self):
+        for row in self.html.xpath("//div[@class='margin-bottom-15']"):
+            date = row.xpath(".//input")[0].value
+            for opinion in row.xpath(".//div[@class='list-group-item-text']"):
+                links = opinion.xpath("a")
+                if len(links) != 2:
+                    continue
+                url = opinion.xpath("a")[1].get("href")
+                all_text = opinion.xpath(".//text()")
+                case_metadata = [t.strip() for t in all_text if t.strip()]
+                docket, _, name, _, author, _, vote = case_metadata
+                self.cases.append(
+                    {
+                        "name": name,
+                        "docket": docket[:-1],
+                        "url": url,
+                        "date": date,
+                        "disposition": vote.split(".")[0].strip(),
+                        "author": author,
+                        "judge": vote.split(".", 1)[1].strip(),
+                    }
+                )

@@ -1,0 +1,102 @@
+Return-Path: <PAMB_LiveDB@pamb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id dgb0ijh26ohg96nppm39o5hmd643ncgcgrk7mh81
+ for lawfirm@recap.email;
+ Mon, 22 Apr 2024 15:38:41 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=pamb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFRktzTzlDdTR2YVhJdEwrVWxUMUdnR1A3aE9ZbCtpbG5yb2xOeklOZEdocFBkeCtwelZjbVBlQmkxeHdxNk5wSlR5b2owV0pCNkZGSk53SkdjV0ZSV3dGOWNKSDQ4MUh5Y2dyZHFDbXRQR1NPbmtidkFJZHpOSVNWd29FTXpybDdwTVByVVBCQkdEbjVSMXVKOUpBTnY1dGNEaXE4a24zYndRY1dTK2hvQTRFUmlvOUhwSjdxMkhBczkwblJWQW1aMWhhK3hhV0JsSG11VWUxYmk3UTF1VFl5eElKeTFxWEVtSkZTWlNSNTE4RXlFWmU5QWU4OG5iZzJVbTFoTlFSY2lYbkdza2NldTVTK3A0RVpUK0xRS0R6WlhIWnlqWXV2YTJpZEd1U28xRWc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Qj2mMWFFBmqQ15NIa0AhGpALrIFqRkEmfjfHOzCp06vyFCDd5nZT+wQRH3n1K9GvwQ4g+w2SgH4sEckZepqcVADU0WE/PgU0RLVWJEDF86ROJMmX1HwjndQ0QfW2Po027uEHD1Ei7dHdT36pfAXczpiakTKvHsR0+ou4Ah96Ikc=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713800322; v=1; bh=NsQ93dZETMVVyY1ANkhl1du4lH8dvYw6sXqLIyYxmRs=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.181
+Received: from pambdb.pamb.gtwy.dcn ([156.119.190.181])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 22 Apr 2024 11:38:41 -0400
+Received: from pambdb.pamb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43MFbtqB096339;
+	Mon, 22 Apr 2024 11:37:56 -0400
+Received: (from ecf_web@localhost)
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43MFbhQM096096;
+	Mon, 22 Apr 2024 11:37:43 -0400
+Date: Mon, 22 Apr 2024 11:37:43 -0400
+MIME-Version:1.0
+From:PAMB_LiveDB@pamb.uscourts.gov
+To:Courtmail@pamb.uscourts.gov
+Reply-To: pambecf_helpdesk@pamb.uscourts.gov
+Message-Id:<17990203@pamb.uscourts.gov>
+Subject:Ch-13 1:24-bk-00833-HWV -Dennis Edward Laym Employee Income Records
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Middle District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from FirstName LastName entered on 4/22/2024 at 11:37 AM EDT and filed on 4/22/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Dennis Edward Layman, Jr                          </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pamb.uscourts.gov/cgi-bin/DktRpt.pl?279776>1:24-bk-00833-HWV</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.pamb.uscourts.gov/doc1/154018318112?pdf_header=&magic_num=77077650&de_seq_num=58&caseid=279776'>13</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Employee Income Records <i></i>  Filed by  FirstName LastName  of Law Firm, P.C. on behalf of  Dennis Edward Layman Jr.   (FirstName LastName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>Paystubs10123to32924.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1009835235 [Date=4/22/2024] [FileNumber=17990201-
+<BR><TAB>0] [69519a0be97f7a0ebe4072b37ad43ce5b35878a9594a022ed9a6049b5801c6a461
+<BR><TAB>c0398aecefeb09b54d5d01e83c78eebf5c6a99913d801af4422e5e183dce05]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1:24-bk-00833-HWV Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Debtor 1 Dennis Edward Layman, Jr</span>
+<br>help@lawfirm.com,  noreply01@lawfirm.com;noreply02@lawfirm.com;noreply03@lawfirm.com;noreply04@lawfirm.com;noreply05@lawfirm.com;lawfirmpc@jubileebk.net;lawfirm@recap.email;ecf@casedriver.com
+<BR>
+<BR><span class="personName">  United States Trustee</span>
+<br>ustpregion03.ha.ecf@usdoj.gov
+<BR>
+<BR><span class="personName">FirstName LastName</span>
+<br>TWecf@pamd13trustee.com
+<BR>
+

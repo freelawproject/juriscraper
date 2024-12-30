@@ -1,0 +1,459 @@
+{
+    "provider": "content-api",
+    "count": 30227,
+    "results": [
+        {
+            "id": 1042461692,
+            "type": "document",
+            "properties": [
+                {
+                    "property": {
+                        "id": "k06opofdgweyj",
+                        "label": "Court"
+                    },
+                    "values": [
+                        "Colorado Supreme Court"
+                    ]
+                },
+                {
+                    "property": {
+                        "id": "p08",
+                        "label": "Date"
+                    },
+                    "values": [
+                        "July 01, 2024"
+                    ]
+                }
+            ],
+            "title": "In re Marriage of Fox",
+            "country": {
+                "id": "US",
+                "label": "Estados Unidos"
+            },
+            "detail_json": {
+                "parent": {
+                    "id": 1695583,
+                    "type": null,
+                    "parent": {
+                        "id": 14024,
+                        "type": "source",
+                        "title": "Colorado",
+                        "public_url": "http://case-law.vlex.com/source/14024",
+                        "copyright": null,
+                        "title.en": "CO",
+                        "meta": null,
+                        "frontpage_image": null,
+                        "frontpage_image_highres": null,
+                        "jurisdiction_id": "US",
+                        "unpublished_source": false
+                    },
+                    "title": "Colorado Supreme Court",
+                    "subtitle": null,
+                    "alternative_key": "desc1_14024_01",
+                    "public_url": "https://case-law.vlex.com/source/14024/chapter/colorado-supreme-court-1695583",
+                    "meta": {
+                        "children": "/v1/chapters/1695583/children.json"
+                    },
+                    "client_url": "/search/jurisdiction:US+content_type:2+source:14024+emisor_1:01/*"
+                },
+                "id": 1042461692,
+                "type": "document",
+                "published_at": "2024-07-03",
+                "slug": "in-re-marriage-of",
+                "title": "In re Marriage of Fox",
+                "counters": {
+                    "cited_in": {
+                        "negative": 0,
+                        "positive": 0,
+                        "neutral": 0,
+                        "total": 0
+                    },
+                    "cited_authorities": 0,
+                    "versions": false,
+                    "amendments": 0
+                },
+                "is_consolidated_text": false,
+                "history_and_versions": null,
+                "expressions": [
+                    {
+                        "vid": 1042461692,
+                        "label": "Document",
+                        "citedAs": null,
+                        "contentAvailable": true,
+                        "isAuthorized": true,
+                        "tabConfig": {
+                            "title": "Tab",
+                            "type": "tab"
+                        },
+                        "type": null,
+                        "kindOf": []
+                    }
+                ],
+                "followable": false,
+                "reliable_lang": "en",
+                "public_url": "https://colorado.vlex.io/vid/in-re-marriage-of-1042461692",
+                "doc_date": "2024-07-01",
+                "country": {
+                    "id": "US",
+                    "language": "EN",
+                    "name": "United States"
+                },
+                "translatable": true,
+                "iceberg_record_info": {
+                    "iceberg_record_id": "r06sg1sk0947cna",
+                    "iceberg_record_owner": "ICBG",
+                    "iceberg_organization_id": "oupqvi"
+                },
+                "children": [],
+                "formats": [
+                    {
+                        "mime_type": "application/pdf",
+                        "show_inline": false,
+                        "url": "pdf/1042461692",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    },
+                    {
+                        "mime_type": "application/docx",
+                        "url": "docx/1042461692",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    }
+                ],
+                "has_plain_text": true,
+                "properties": [
+                    {
+                        "property": {
+                            "id": "p06oq53ny752l",
+                            "label": "Docket Number"
+                        },
+                        "values": [
+                            "24SC76"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "p06qozl99eoi12p",
+                            "label": "Decision Date"
+                        },
+                        "values": [
+                            "01 July 2024"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06p7opb445qoof",
+                            "label": "Parties"
+                        },
+                        "values": [
+                            "In re the Marriage of Elyssa M. Fox, Petitioner and Alexander L. Speaker, Respondent"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06opofdgweyj",
+                            "label": "Court"
+                        },
+                        "values": [
+                            "Colorado Supreme Court"
+                        ]
+                    }
+                ],
+                "library": {
+                    "id": 14,
+                    "title": "Case Law",
+                    "public_url": "http://case-law.vlex.com",
+                    "type": "library",
+                    "video_library": false,
+                    "library_type": {
+                        "id": 2,
+                        "content_type": "Jurisprudencia"
+                    },
+                    "meta": {
+                        "children": "/v1/libraries/14/children.json"
+                    },
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    }
+                },
+                "abstract_is_analysis": false,
+                "abstract": null,
+                "meta": {
+                    "vincent": "/v1/vincent/vid_analysis/1042461692"
+                },
+                "source": {
+                    "id": 14024,
+                    "type": "source",
+                    "title": "Colorado",
+                    "public_url": "http://case-law.vlex.com/source/14024",
+                    "copyright": null,
+                    "title.en": "CO",
+                    "meta": null,
+                    "frontpage_image": null,
+                    "frontpage_image_highres": null,
+                    "jurisdiction_id": "US",
+                    "unpublished_source": false,
+                    "search_scope": "jurisdiction:US+content_type:2+source:14024",
+                    "isbn": null,
+                    "peer_reviewed": null,
+                    "description": null,
+                    "warning": null,
+                    "full_coverage_from": null,
+                    "source_description": null,
+                    "first_record_at": "1864-01-01",
+                    "last_record_at": "2024-07-01",
+                    "content_type": "Jurisprudencia",
+                    "video_source": false,
+                    "date": "2020-11-12",
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    },
+                    "language": "en",
+                    "alternate_languages": [],
+                    "publisher": null
+                }
+            }
+        },
+        {
+            "id": 1042407550,
+            "type": "document",
+            "properties": [
+                {
+                    "property": {
+                        "id": "k06opofdgweyj",
+                        "label": "Court"
+                    },
+                    "values": [
+                        "Colorado Supreme Court"
+                    ]
+                },
+                {
+                    "property": {
+                        "id": "p08",
+                        "label": "Date"
+                    },
+                    "values": [
+                        "July 01, 2024"
+                    ]
+                },
+                {
+                    "property": {
+                        "id": "pCitations",
+                        "label": "Citations"
+                    },
+                    "values": [
+                        {
+                            "value": "2024 CO 56"
+                        }
+                    ]
+                }
+            ],
+            "title": "Castro v. People",
+            "country": {
+                "id": "US",
+                "label": "Estados Unidos"
+            },
+            "detail_json": {
+                "parent": {
+                    "id": 1695583,
+                    "type": null,
+                    "parent": {
+                        "id": 14024,
+                        "type": "source",
+                        "title": "Colorado",
+                        "public_url": "http://case-law.vlex.com/source/14024",
+                        "copyright": null,
+                        "title.en": "CO",
+                        "meta": null,
+                        "frontpage_image": null,
+                        "frontpage_image_highres": null,
+                        "jurisdiction_id": "US",
+                        "unpublished_source": false
+                    },
+                    "title": "Colorado Supreme Court",
+                    "subtitle": null,
+                    "alternative_key": "desc1_14024_01",
+                    "public_url": "https://case-law.vlex.com/source/14024/chapter/colorado-supreme-court-1695583",
+                    "meta": {
+                        "children": "/v1/chapters/1695583/children.json"
+                    },
+                    "client_url": "/search/jurisdiction:US+content_type:2+source:14024+emisor_1:01/*"
+                },
+                "id": 1042407550,
+                "type": "document",
+                "published_at": "2024-07-02",
+                "slug": "castro-v-people",
+                "title": "Castro v. People",
+                "counters": {
+                    "cited_in": {
+                        "negative": 0,
+                        "positive": 0,
+                        "neutral": 0,
+                        "total": 0
+                    },
+                    "cited_authorities": 0,
+                    "versions": false,
+                    "amendments": 0
+                },
+                "is_consolidated_text": false,
+                "history_and_versions": null,
+                "expressions": [
+                    {
+                        "vid": 1042407550,
+                        "label": "Document",
+                        "citedAs": null,
+                        "contentAvailable": true,
+                        "isAuthorized": true,
+                        "tabConfig": {
+                            "title": "Tab",
+                            "type": "tab"
+                        },
+                        "type": null,
+                        "kindOf": []
+                    }
+                ],
+                "followable": false,
+                "reliable_lang": "en",
+                "public_url": "https://colorado.vlex.io/vid/castro-v-people-1042407550",
+                "doc_date": "2024-07-01",
+                "country": {
+                    "id": "US",
+                    "language": "EN",
+                    "name": "United States"
+                },
+                "translatable": true,
+                "iceberg_record_info": {
+                    "iceberg_record_id": "r06sfzxa6789qby",
+                    "iceberg_record_owner": "ICBG",
+                    "iceberg_organization_id": "oupqvi"
+                },
+                "children": [],
+                "formats": [
+                    {
+                        "mime_type": "application/pdf",
+                        "show_inline": false,
+                        "url": "pdf/1042407550",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    },
+                    {
+                        "mime_type": "application/docx",
+                        "url": "docx/1042407550",
+                        "original": false,
+                        "label": "Document",
+                        "isAuthorized": true
+                    }
+                ],
+                "has_plain_text": true,
+                "properties": [
+                    {
+                        "property": {
+                            "id": "p06oq53ny752l",
+                            "label": "Docket Number"
+                        },
+                        "values": [
+                            "22SC712"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "p06qozl99eoi12p",
+                            "label": "Decision Date"
+                        },
+                        "values": [
+                            "01 July 2024"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "p06opolc4wf8y",
+                            "label": "Citation"
+                        },
+                        "values": [
+                            "2024 CO 56"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06p7opb445qoof",
+                            "label": "Parties"
+                        },
+                        "values": [
+                            "Ricardo Castro, Petitioner v. The People of the State of Colorado, Respondent"
+                        ]
+                    },
+                    {
+                        "property": {
+                            "id": "k06opofdgweyj",
+                            "label": "Court"
+                        },
+                        "values": [
+                            "Colorado Supreme Court"
+                        ]
+                    }
+                ],
+                "library": {
+                    "id": 14,
+                    "title": "Case Law",
+                    "public_url": "http://case-law.vlex.com",
+                    "type": "library",
+                    "video_library": false,
+                    "library_type": {
+                        "id": 2,
+                        "content_type": "Jurisprudencia"
+                    },
+                    "meta": {
+                        "children": "/v1/libraries/14/children.json"
+                    },
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    }
+                },
+                "abstract_is_analysis": false,
+                "abstract": null,
+                "meta": {
+                    "vincent": "/v1/vincent/vid_analysis/1042407550"
+                },
+                "source": {
+                    "id": 14024,
+                    "type": "source",
+                    "title": "Colorado",
+                    "public_url": "http://case-law.vlex.com/source/14024",
+                    "copyright": null,
+                    "title.en": "CO",
+                    "meta": null,
+                    "frontpage_image": null,
+                    "frontpage_image_highres": null,
+                    "jurisdiction_id": "US",
+                    "unpublished_source": false,
+                    "search_scope": "jurisdiction:US+content_type:2+source:14024",
+                    "isbn": null,
+                    "peer_reviewed": null,
+                    "description": null,
+                    "warning": null,
+                    "full_coverage_from": null,
+                    "source_description": null,
+                    "first_record_at": "1864-01-01",
+                    "last_record_at": "2024-07-01",
+                    "content_type": "Jurisprudencia",
+                    "video_source": false,
+                    "date": "2020-11-12",
+                    "country": {
+                        "id": "US",
+                        "language": "EN"
+                    },
+                    "language": "en",
+                    "alternate_languages": [],
+                    "publisher": null
+                }
+            }
+        }
+    ],
+    "properties": []
+}

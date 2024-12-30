@@ -5,7 +5,7 @@
   "dockets": [
     {
       "case_name": "Sanchez v. Palacios",
-      "date_filed": "2021-06-10",
+      "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2021-06-10",
@@ -19,7 +19,12 @@
           "short_description": ""
         }
       ],
-      "docket_number": "3:21-cv-00071"
+      "docket_number": "3:21-cv-00071",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "B",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "3"
     }
   ],
   "email_recipients": [

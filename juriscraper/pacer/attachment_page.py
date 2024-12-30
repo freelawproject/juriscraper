@@ -119,11 +119,8 @@ class AttachmentPage(BaseReport):
         """Return the document number for an item.
 
         In district court attachment pages, this is easy to extract with an
-        XPath. In bankruptcy cases, it's simply not there.
+        XPath. In bankruptcy cases, it's sometimes not there.
         """
-        if self.is_bankruptcy:
-            return None
-
         # First try inspecting the input elements
         input_els = self.tree.xpath("//input")
         for input_el in input_els:
@@ -143,6 +140,9 @@ class AttachmentPage(BaseReport):
                     # Ensure document number is valid
                     if document_number != 0:
                         return document_number
+
+        if self.is_bankruptcy:
+            return None
 
         # There are two styles of attachment menus. Try them both.
         paths = (
@@ -253,15 +253,17 @@ class AttachmentPage(BaseReport):
 
     def _get_description_from_tr(self, row):
         """Get the description from the row"""
+        columns_in_row = row.xpath(f"./td")
         if not self.is_bankruptcy:
             index = 2
             # Some NEFs attachment pages for some courts have an extra column
             # (see nyed_123019137279), use index 3 to get the description
-            columns_in_row = row.xpath(f"./td")
             if len(columns_in_row) == 5:
                 index = 3
         else:
             index = 3
+            if len(columns_in_row) == 6:
+                index = 4
 
         description_text_nodes = row.xpath(f"./td[{index}]//text()")
         if not description_text_nodes:
@@ -362,26 +364,29 @@ class AttachmentPage(BaseReport):
             doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    @staticmethod
-    def _get_pacer_seq_no_from_tr(row):
+    def _get_pacer_seq_no_from_tr(self, row):
         """Take a row of the attachment page, and return the sequence number
         from the goDLS function.
         """
-        try:
-            url = row.xpath(".//a")[0]
-        except IndexError:
-            # No link in the row. Maybe its sealed.
-            pass
-        else:
+        url = row.xpath(".//a")
+        if url:
+            onclick = url[0].xpath("./@onclick")
+            if onclick and "goDLS" in onclick[0]:
+                go_dls_parts = reverse_goDLS_function(onclick[0])
+                return go_dls_parts["de_seq_num"]
+
+        input_els = self.tree.xpath("//input")
+        for input_el in input_els:
             try:
-                onclick = url.xpath("./@onclick")[0]
+                onclick = input_el.xpath("./@onclick")[0]
             except IndexError:
-                # No onclick on this row.
-                pass
+                continue
             else:
-                if "goDLS" in onclick:
-                    go_dls_parts = reverse_goDLS_function(onclick)
-                    return go_dls_parts["de_seq_num"]
+                m = re.search(
+                    r"[?&]arr_de_seq_nums=(\d+)", onclick, flags=re.I
+                )
+                if m:
+                    return m.group(1)
 
         # 1. Couldn't find a link in the row: Maybe it's sealed.
         # 2. No onclick on the row.
