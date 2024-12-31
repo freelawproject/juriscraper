@@ -16,6 +16,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.48 - 2024-12-31**
+
+- Fixes:
+  - updated `idaho_*` scrapers to OpinionSiteLinear
+  - updated `cadc` scrapers to new site
+  - `okla` now skips rows with no docket number
+  - fixes for PACER appellate dockets parsing
+
 **2.6.47 - 2024-12-12**
 
 - Fixes:
