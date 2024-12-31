@@ -1,3 +1,12 @@
+"""
+CourtID: cadc
+Court Short Name: Court of Appeals of the District of Columbia
+Author: mlissner
+History:
+    2014-07-31, mlissner: commited first version
+    2024-12-31, grossir: Implemented new site
+"""
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
