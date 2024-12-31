@@ -2,8 +2,9 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
+from typing import Optional
 
-from lxml.html import tostring
+from lxml import html
 
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
@@ -18,6 +19,8 @@ from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
     get_court_id_from_url,
+    get_file_size_str_from_tr,
+    get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
     is_pdf,
 )
@@ -562,17 +565,20 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._parties = parties
         return parties
 
-    def _get_attachment_number(self, row):
+    def _get_attachment_number(self, row: html.HtmlElement) -> int:
         """Return the attachment number for an item.
 
-        In district courts, this can be easily extracted. In bankruptcy courts,
-        you must extract it, then subtract 1 from the value since these are
-        tallied and include the main document.
+        :param row: Table row as an lxml element
+        :return: Attachment number for row
         """
         return int(row.xpath(".//td/text()")[0].strip())
 
-    def _get_description_from_tr(self, row):
-        """Get the description from the row"""
+    def _get_description_from_tr(self, row: html.HtmlElement) -> str:
+        """Get the description from the row
+
+        :param row: Table row
+        :return: Attachment description
+        """
         description_text_nodes = row.xpath(f"./td[4]//text()")
         if not description_text_nodes:
             # No text in the cell.
@@ -581,38 +587,20 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_input_value_from_tr(tr, idx):
-        """Take a row from the attachment table and return the input value by
-        index.
-        """
-        try:
-            input = tr.xpath(".//input")[0]
-        except IndexError:
-            return None
-        else:
-            # value="6828943 14732034 1 62576"
-            # "62576" is size in bytes "1" is pages
-            value = input.xpath("./@value")[0]
-            split_value = value.split(" ")
-            if len(split_value) != 4:
-                return None
-            return split_value[idx]
-
-    @staticmethod
-    def _get_page_count_from_tr(tr):
+    def _get_page_count_from_tr(tr: html.HtmlElement) -> Optional[int]:
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
-        count = AppellateDocketReport._get_input_value_from_tr(tr, 2)
+        count = get_input_value_from_tr(tr, 2, 4, " ")
         if count is not None:
             return int(count)
 
     @staticmethod
-    def _get_file_size_bytes_from_tr(tr):
+    def _get_file_size_bytes_from_tr(tr: html.HtmlElement) -> Optional[int]:
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
-        file_size_str = AppellateDocketReport._get_input_value_from_tr(tr, 3)
+        file_size_str = get_input_value_from_tr(tr, 3, 4, " ")
         if file_size_str is None:
             return None
         file_size = int(file_size_str)
@@ -621,23 +609,11 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return file_size
 
     @staticmethod
-    def _get_file_size_str_from_tr(tr):
-        """Take a row from the attachment table and return the number of bytes
-        as a str.
-        """
-        cells = tr.xpath("./td")
-        last_cell_contents = cells[-1].text_content()
-        units = ["kb", "mb"]
-        if any(unit in last_cell_contents.lower() for unit in units):
-            return last_cell_contents.strip()
-        return ""
-
-    @staticmethod
-    def _get_pacer_doc_id(row):
+    def _get_pacer_doc_id(row: html.HtmlElement) -> str:
         return row.xpath(".//a/@data-pacer-doc-id")
 
     @staticmethod
-    def _get_pacer_seq_no_from_tr(row):
+    def _get_pacer_seq_no_from_tr(row: html.HtmlElement) -> Optional[str]:
         """Take a row of the attachment table, and return the sequence number
         from the name attribute.
         """
@@ -666,7 +642,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
-                "file_size_str": self._get_file_size_str_from_tr(row),
+                "file_size_str": get_file_size_str_from_tr(row),
                 "pacer_doc_id": self._get_pacer_doc_id(row),
                 # It may not be needed to reparse the seq_no
                 # for each row, but we may as well. So far, it
