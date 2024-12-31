@@ -2,9 +2,10 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
-from typing import Optional
+from typing import Any, Dict, List, Optional
 
 from lxml import html
+from lxml.etree import _ElementUnicodeResult
 
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
@@ -633,9 +634,10 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         return None
 
-    def _get_attachments(self, cells):
+    def _get_attachments(
+        self, cells: html.HtmlElement
+    ) -> List[Dict[str, Any]]:
         rows = cells.xpath("./table//tr//tr")[1:]
-
         result = []
         for row in rows:
             attachment = {
@@ -701,7 +703,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             de["pacer_doc_id"] = self._get_pacer_doc_id(cells[1])
             pacer_seq_no = self._get_pacer_seq_no(cells[1])
             if pacer_seq_no is not None:
-                de["pacer_seq_no"] = pacer_seq_no
+                de["pacer_seq_no"] = str(pacer_seq_no)
             if not de["document_number"]:
                 if de["pacer_doc_id"]:
                     # If we lack the document number, but have
@@ -742,7 +744,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     @staticmethod
-    def _get_pacer_seq_no(cell):
+    def _get_pacer_seq_no(
+        cell: html.HtmlElement,
+    ) -> Optional[_ElementUnicodeResult]:
         """Take a row from the attachment table and return the input value by
         index.
         """
