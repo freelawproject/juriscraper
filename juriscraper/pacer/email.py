@@ -572,7 +572,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         #     such as MOR (Merchant of Record?)
         # - "NEF: " placeholder
         component_regex = r"((?!-MOR)(\-[A-Z]{2,}))|(\-[a-z]{2,})|(NEF:? )"
-        if self.court_id in ["paeb", "pamb"]:
+        if self.court_id in ["paeb", "pamb", "casb"]:
             # keeps the "Chapter ..." description on the short description
             chapter_regex = r"(C[Hh][- ]?(13|7|9|11))|(C[hH][\s-]*$)"
         else:

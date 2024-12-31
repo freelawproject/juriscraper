@@ -1,0 +1,118 @@
+Return-Path: <info_casb@casb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 2svp6bsd2eakbkkimqgodf5gs40agcm8ig097b81
+ for user@recap.email;
+ Mon, 30 Dec 2024 01:32:20 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of casb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=info_casb@casb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of casb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=info_casb@casb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=casb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFZ1N3cjhva1VYRGM5b0U2QTQyeTFxOXlqdkRMUWpDRlIycllNbzJBZ1Z4ZkpkNzBMbnBVKytYOVhDMk1VUlpQYVVpcU5Memd0cVlNZEZ0S2grLzBPbWhnY2FlR0hjei96K3NtaGFBTVRTVTRrUFZRM2E2OENUa3JLd2RJS2J0UTg5WnYxNTVmd1ZVSVBvVWw2MXpnMFAzcW5FU1lqMHNwSzFGVlhBL0o4RWpqSmcrWkNCYy9SdktyaW03TnorMHpOZnd1VEZMNitRY3cyUFJUQXZwQ0ZVSkcyNjBCbHhmcjkyaFZUTTNPOFpkR05KZnRDMEkzUWhFVUJ3b1ZMamhFQ1J1UWVrNXUwVHFwRlV5ckovWVBIVHZuNEJJWnFaeW8xN0RaNzZia3FQeUE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=1O9D1ERM+QDkg3uH2m31SVQJGX/iNvd0BTZ+Xuz1pZV+AtoOEFbXLw2swEKsRKXzrkTmdk7BLHzZ97bH2f5MOLUMhTJulaFgkrXrcd0p9qGn7VROJQ0Fl/sXfiWgipXzNLiC+EZbB1UWrtYVmgWygInVdkmRmMu12wmDNE0AF9A=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1735522341; v=1; bh=0uwzFsOxiLHhfMO0SxPOXnSJcpeYeirDde5wHB1W498=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=2644; q=dns/txt;
+  s=law1e; t=1735522340; x=1767058340;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=0uwzFsOxiLHhfMO0SxPOXnSJcpeYeirDde5wHB1W498=;
+  b=JmWfD9hx/5t34WqUJ1oV8FLUX4EOu+H41zIWpXVcSjeQHDI52tD9/R73
+   2+wJbrVUbDgrhuIrQz6gI6I4ly2gRxVeyr+Pv9HAxmD/DQYPjFON8NAes
+   2AKsIgpttr+9lREgsFPvz35ht2BwbJAuVbB+9FH9Sa9VXd1D7DtlxoPo4
+   GUYib3Qjilt2Nra6lltGRozWgkq/GxBnnPaTEZAvTPnff2PJrgSNJT7fd
+   D6rJuDjfGESRiUHiBUmgjJ+BJ3qBeOjJLjtH8iEmZ1eSP6v66wH6qcIgM
+   lTApbX6WcjB1CvuXpztXrKF6infLJmqq/O5uLn45sMre12qXlVC64MI2H
+   g==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.77
+Received: from casbdb.casb.gtwy.dcn ([156.119.56.77])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 29 Dec 2024 20:32:19 -0500
+Received: from casbdb.casb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by casbdb.casb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4BU1VYfx064455;
+	Sun, 29 Dec 2024 17:31:34 -0800
+Received: (from ecf_web@localhost)
+	by casbdb.casb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4BU1VS3F064382;
+	Sun, 29 Dec 2024 17:31:28 -0800
+Date: Sun, 29 Dec 2024 17:31:28 -0800
+X-Authentication-Warning: casbdb.casb.gtwy.dcn: ecf_web set sender to info_casb@casb.uscourts.gov using -f
+MIME-Version:1.0
+From:info_casb@casb.uscourts.gov
+To:casb_ecf@casb.uscourts.gov
+Message-Id:<20552453@casb.uscourts.gov>
+Subject:24-04888-7 Chapter 7 Voluntary Petition
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of California</strong></p>
+Notice of Bankruptcy Case Filing
+<div>
+<BR>The following transaction was received from FirstName LastName entered on 12/29/2024 at 5:31 PM PST and filed on 12/29/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Omar Jay Alegria                                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.casb.uscourts.gov/cgi-bin/DktRpt.pl?465289>24-04888-7</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.casb.uscourts.gov/doc1/036021419934?pdf_header=&magic_num=29072456&de_seq_num=2&caseid=465289'>1</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Voluntary Petition for Individuals  Schedules & Statements <i></i>   Fee Amount $ 338.00.  Declaration re: Electronic Filing due by 01/13/2025, Filed by  FirstName LastName  of Nexus Bankruptcy  on behalf of  Omar Jay Alegria.   (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document 
+<BR><STRONG>Original filename:</STRONG>Petition(3).pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP CASBStamp_ID=875559582 [Date=12/29/2024] [FileNumber=20552451-0
+<BR><TAB>] [4f239923b005ced168c4148b7490c8d2e7f6570c0f11777b50ad676fd03c1d93884
+<BR><TAB>1c2bf0dcab0191195c1513230a882990fc4e1a21d1d78f8f5988260185e22]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-04888-7 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">LastName FirstName on behalf of Debtor Omar Jay Alegria</span>
+<br>user@gmail.com,  user@recap.email,NexusBankruptcy@sss.net
+<BR>
+<BR><span class="personName">  United States Trustee</span>
+<br>ustp.region15@usdoj.gov
+<BR>
+
+<BR>
+<B>
+24-04888-7 Notice will not be electronically mailed to:
+</B>
+
+<BR>
