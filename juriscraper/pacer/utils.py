@@ -853,3 +853,44 @@ def parse_sumDocSelected_from_row(
         if onclick and "sumDocSelected" in onclick[0]:
             return reverse_sumDocSelected_function(onclick[0])
     return None
+
+
+def get_input_value_from_tr(
+    tr: html.HtmlElement, idx: int, expected_values: int, split_value: str
+) -> Optional[str]:
+    """Take a row from the attachment table and return the input value by
+    index.
+
+    :param tr: An HTML row element from which the input value will be extracted.
+    :param idx: The index of the value to extract from the split list.
+    :param expected_values: The expected number of elements in the split value.
+    :param split_value: The delimiter used to split the value string.
+    :return: The extracted value at the specified index or None
+    """
+    try:
+        input_element = tr.xpath(".//input")[0]
+    except IndexError:
+        return None
+    else:
+        # value="6828943 14732034 1 62576"
+        # "62576" is size in bytes "1" is pages
+        # or
+        # value="23515655-90555-2"
+        # "90555" is size in bytes "2" is pages
+        value = input_element.xpath("./@value")[0]
+        split_value = value.split(split_value)
+        if len(split_value) != expected_values:
+            return None
+        return split_value[idx]
+
+
+def get_file_size_str_from_tr(tr: html.HtmlElement) -> str:
+    """Take a row from the attachment table and return the number of bytes
+    as an int.
+    """
+    cells = tr.xpath("./td")
+    last_cell_contents = cells[-1].text_content()
+    units = ["kb", "mb"]
+    if any(unit in last_cell_contents.lower() for unit in units):
+        return last_cell_contents.strip()
+    return ""
