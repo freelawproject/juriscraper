@@ -1,0 +1,117 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 6i1cv2mirg9slsnkeahp2dnfs00qt6n2b2e0uc81
+ for email@email.com;
+ Thu, 12 Dec 2024 16:28:54 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of flsb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of flsb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=flsb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHazRxWEtHa1UvRUluUHFPeDkyK25BV01hcnY2RHdrM1M4bnRMa05RWFFoMFhGZ3I5ZmF1MEFlU3g5UWlBSFh3WjIwTDhPU1FDWEN2VlNyWlArL2JHdUtxUm1IbzVGaEk0SnhYd1VOQ0EyWGhqV2QydXhUekpNVzZPbkttdUhDY1puN05aMzJDUnBMa0xRTDdzQyszQm5ZaDVBckZnckpGZDJYdW9BamN0aCtUVTZoQlZrNEdRTFhieEU4VzVPUkdzNlQvVXQyTEt1OGNNMmdMSklNQWVrRTFVWmtEY3QxcTAveUxrVDB4UTJFY3lzcmJQUkhtOHpjYjBUWEFQWk50SFU3QlgwQm04K05xWFdtWE02cGRhZlN5SjJhek9BMHlWc3dTN3lldVBSbjBzMGpkRGNacVNCbzZoN1FnNjFTQ0k9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=iEQVggdtgBNLBpxlx03KpydHQCWmnfhxJRgKIaE0nAWhUev71nUDCVrMVK2Qg9NHiMppVU4p2T4/etT1qBFJQZ4quoLJ9/hJRkW0F3QAgMSblT61Le6C8uOGrr825r67ZjpYGP+ucZ+xeOTBNGeMbuK1OR0p7od3FSXxZ5krGXw=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1734020935; v=1; bh=uEylFRjIfG3uGqAq6+ozTRRZTJsncoR0btFSqgllBKY=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=5944; q=dns/txt;
+  s=law1w; t=1734020934; x=1765556934;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=uEylFRjIfG3uGqAq6+ozTRRZTJsncoR0btFSqgllBKY=;
+  b=RWJilaufKp7E3Osok2NQ9c2xOVFUx/lwvJ9O+Pean2TC9v2bUfcH4+pk
+   BK14Is8TSvKgjaOBy7rQOzjIzsI8qUwsUlh1LC4cAhGBGaFgABuUV81ot
+   Uytd79apcNSsByw8VEb/uQlPLxHqROmUuLe36v9WwuAsU6P+z7KW86/DE
+   plQhkDNPZb8zC6HM3NnvbWJTwQUEhtziBFSDZEWcQ98RWJZ56/uanNTUm
+   IiX9W45H4GLD8WkQ0wUWKDczjAPSfEpOpDq0Uk0oe/10UpEA+Xm3Kx1L9
+   +gA1r062J930KOjwkzBLzUrGobKN8j38bRA7hgAd6elnnVPMmU1yHzF1/
+   w==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.62
+Received: from flsbdb.flsb.gtwy.dcn ([156.119.190.62])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 12 Dec 2024 11:28:53 -0500
+Received: from flsbdb.flsb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by flsbdb.flsb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4BCGRlOH094745;
+	Thu, 12 Dec 2024 11:27:50 -0500
+Received: (from ecf_web@localhost)
+	by flsbdb.flsb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4BCGR3pK092637;
+	Thu, 12 Dec 2024 11:27:03 -0500
+Date: Thu, 12 Dec 2024 11:27:03 -0500
+X-Authentication-Warning: flsbdb.flsb.gtwy.dcn: ecf_web set sender to email@email.com.GOV using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.GOV>
+Subject:Ch-11 24-13584-MAM UST Form 11-MOR Evan Phillip Jower
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of Florida</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 12/12/2024 at 11:27 AM EST and filed on 12/12/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Evan Phillip Jowers</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.flsb.uscourts.gov/cgi-bin/DktRpt.pl?814478>24-13584-MAM</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.flsb.uscourts.gov/doc1/050057572723?pdf_header=&magic_num=58443666&de_seq_num=384&caseid=814478'>117</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+  Chapter 11 Monthly Operating Report for the Period Ending 10/31/2024    Filed by Debtor Evan Phillip Jowers.   (Attachments: # (1)  Bank Statement # (2)  Receipts and Disbursements) (Van Horn, Chad)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>A91u4o7ou_1san4il_oas.tmp.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1068065210 [Date=12/12/2024] [FileNumber=59402527
+<BR><TAB>-0] [3518fa4b7ce4e6ceaaf4bd3faf3f22e1c111e58bccfbac6db9b4073af8a79c94f
+<BR><TAB>27f6d1933287f49fc274659ea9aa0031e3dc466a2bae340b9e814110c1686e9]]
+<BR>
+<STRONG>Document description:</STRONG> Bank Statement
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\DIP Oct 2024_Redacted.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1068065210 [Date=12/12/2024] [FileNumber=59402527
+<BR><TAB>-1] [37ab1cea8be2b7787e85797a0c713698f5c0cb00b05e26fcdf88227a9166c1c00
+<BR><TAB>14b77394f10cd4888e2043cc1084e6b2e60dda0b06c227b3030406e13e7257a]]
+<BR>
+<STRONG>Document description:</STRONG> Receipts and Disbursements
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Receipts & Disbursements - Individual.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1068065210 [Date=12/12/2024] [FileNumber=59402527
+<BR><TAB>-2] [9aa6e49f8cdf45584464204142e57bbf5064aa522c2bd5eedcf176979cbe978f6
+<BR><TAB>4c8dcf2f580fa781f14db253e6dc5ce5cd99f5b94a796bbdcd543d801c97586]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

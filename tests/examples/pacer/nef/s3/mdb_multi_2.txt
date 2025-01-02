@@ -1,0 +1,106 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ev1lfkdivupee88ov38sum8gdm627u4bk09o1fg1
+ for email@email.com;
+ Fri, 22 Nov 2024 16:33:00 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mdb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mdb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=email@email.com.gov; helo=icmecf201.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=mdb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIWUxlcS8yenU0SEVGU3Zja2ZVVUk2eHBodWtwYTVweElCOGRQZnZXRGl3Q3pGM3BuYUVFWjdaaCsvYUlJbXBYK2cxWFhHTHFMWjQ1U1FDb0FTb1dtUm1OMXd6S1UwcVNITWQ1S3pmdFE4d1l1N3lXVjZ4SHhMMDhwa0s4U3JVUytWMXFORGtXcVVBRlBBK0lnbGFlNzFud1dJTFdsLzVpM2xWOElkRElYZHgyQm5FWEQ5VVlEOG5MZE1jVWZNbFRxWm5LR2RKQU9iWE1JdUE3Qkh1MlNFUGEyUWtndUJDWnlJQkRUVS82UFByOGhVSFhqRThHeUV1VU5NNnFlK3BHVTZFenZ3SWVHSVBvTHZ3cytvSkg2YUFrNTcrN282aDl5V2s2VnZrT2NYYlE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=qHtZg+mSfZsvnBgRD0sMTRVRpoFRRT5Xhl805QEEG0h+J/wSTHSwVsF70Qr1Am3KG0ug0jEbWnaatH+9JKCprRlXk7TC+PovidT4ZNYXRT9GRm0ufgkHk/a9RHU0LOBjoZQM555Rjui4VkW+1jlt9JjcY/O7XWEHBQe8fGPjAj4=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1732293181; v=1; bh=qCjxr687x2KWxsBnSjQuvjCYuK2qlnzlsOOFC0FuhKo=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=5177; q=dns/txt;
+  s=law1w; t=1732293180; x=1763829180;
+  h=date:mime-version:from:to:message-id:subject:
+   content-type:x-sbrs:x-remote-ip;
+  bh=qCjxr687x2KWxsBnSjQuvjCYuK2qlnzlsOOFC0FuhKo=;
+  b=XZccY1efElD9WzdgjDz6fZL/htwIdKYYKJ5Msd24BfxqMMmuzYu+VHoh
+   Y5UUY3ZBzCNpPhnMOXg+ydIA9qG9PLG1cVDdhUdMJvapxkVVyRrsTkPtU
+   7CsYd7HlJEUghWcq6VP2LVcZyStE6uXOHSHXBcq623Jtl4ER0qIhQbInH
+   bdIZab1nxhzshSFpidMfsXDq+iSPXloCBMOfB1DExdprtb4y1UAAaGZul
+   BzpC3j2iaKE85BYZjZSiXbeaq8+huwRrhOKdHPDoV9PPZqkSM25IdypZW
+   kVonAZjAahblM1OwWP4wI6LrPlF1ESCo0qWaTKCGE4XTl1iiqjx7EFz1V
+   Q==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.184
+Received: from mdbdb.mdb.gtwy.dcn ([156.119.190.184])
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 22 Nov 2024 11:33:00 -0500
+Received: from mdbdb.mdb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AMGW6Em085723;
+	Fri, 22 Nov 2024 11:32:08 -0500
+Received: (from ecf_web@localhost)
+	by mdbdb.mdb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4AMGW1Ub084568;
+	Fri, 22 Nov 2024 11:32:01 -0500
+Date: Fri, 22 Nov 2024 11:32:01 -0500
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:Multiple Cases "Close Adversary Case" - AP -
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Maryland</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 11/22/2024 at 11:32 AM EST and filed on 11/22/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Laura J. Margulies, Chapter 7 Trustee for Botanica v. Rodas                                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?780665>24-00016</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 11/22/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Botanical Decorators, Inc.                        </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.mdb.uscourts.gov/cgi-bin/DktRpt.pl?769236>22-16223</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case 0:24-ap-16 Closed.    (Horning, Kelly)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-00016 
