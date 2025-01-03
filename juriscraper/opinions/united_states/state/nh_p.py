@@ -154,11 +154,14 @@ class Site(OpinionSiteLinear):
 
         :param year: full year integer
         """
+        year_filter = (
+            "" if not self.back_scrape_iterable else self.year_to_filter[year]
+        )
         params = {
             "iterate_nodes": "true",
             # Will raise a KeyError if there is no proper year key, we will
             # need to manually correct this next year
-            "q": self.base_filter.format(self.year_to_filter[year]),
+            "q": self.base_filter.format(year_filter),
             "sort": "field_date_posted|desc|ALLOW_NULLS",
             "filter_mode": self.filter_mode,
             "type": "document",
