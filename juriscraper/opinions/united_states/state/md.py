@@ -7,7 +7,7 @@ Date created: 06/27/2014
 Court Support: webmaster@mdcourts.gov, mdlaw.library@mdcourts.gov
 """
 
-from datetime import date
+from datetime import date, datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -16,7 +16,8 @@ class Site(OpinionSiteLinear):
     base_url = "https://www.mdcourts.gov/cgi-bin/indexlist.pl?court={}&year={}&order=bydate&submit=Submit"
     court = "coa"
     start_year = 1995
-    current_year = date.today().year
+    # current_year = date.today().year
+    current_year = datetime(2024,1,1).year
     empty_cite_strings = {"slip.op.", "."}
     no_judge_strings = {"Order", "PC Order", "Per Curiam"}
 
@@ -40,7 +41,6 @@ class Site(OpinionSiteLinear):
                 0
             ].partition(" ")
             name = row.xpath("td[5]/font/text()")[0].split("(")[0].strip()
-
             per_curiam = False
             judge = row.xpath("td[4]/font/text()")[0].split("()")[0].strip()
             if judge in self.no_judge_strings:
@@ -91,3 +91,20 @@ class Site(OpinionSiteLinear):
         self.url = self.base_url.format(self.court, year)
         self.html = self._download()
         self._process_html()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
+
+    def get_class_name(self):
+        return "md"
+
+    def get_court_name(self):
+        return "Maryland Court of Appeals"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "Maryland"
+

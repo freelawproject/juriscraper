@@ -16,8 +16,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
 
-    print("this is changes for hitesh")
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

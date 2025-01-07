@@ -23,3 +23,9 @@ class Site(ky.Site):
             return "Published"
 
         return "Unknown"
+
+    def get_court_name(self):
+        return "Kentucky Court of Appeals"
+
+    def get_class_name(self):
+        return "kyctapp"

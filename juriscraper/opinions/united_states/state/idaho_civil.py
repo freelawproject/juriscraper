@@ -9,6 +9,7 @@ History:
  - 2015-10-23, mlr: Updated to handle annoying situation.
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
 """
+from datetime import datetime
 
 from lxml import html
 
@@ -88,8 +89,37 @@ class Site(OpinionSite):
         return case_dates
 
     def _get_docket_numbers(self):
+        doc=[]
         path = f"{self.path_base}/td[2]//text()"
-        return [text.strip() for text in self.html.xpath(path) if text.strip()]
+        for text in self.html.xpath(path):
+            text=str(text).strip()
+            if text:
+                doc_arr=[]
+                if text.__contains__("/"):
+                    doc_arr=text.replace(" ","").split('/')
+                elif text.__contains__("&"):
+                    doc_arr=text.replace(" ","").split('&')
+                else:
+                    doc_arr.append(text)
+                doc.append(doc_arr)
+        return doc
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
+
+    def get_class_name(self):
+        return "idaho_civil"
+
+    def get_court_name(self):
+        return "Supreme Court of Idaho"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "Idaho"
+

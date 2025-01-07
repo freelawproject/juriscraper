@@ -18,3 +18,9 @@ class Site(mass.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_identifier = "AC"
+
+    def get_class_name(self):
+        return "massappct"
+
+    def get_court_name(self):
+        return "Massachusetts Appeals Court"

@@ -19,8 +19,10 @@ class Site(mich.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court = "Court Of Appeals"
-        params = self.filters + (("aAppellateCourt", self.court),)
-        self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
+        self.court_resource="opinion"
+        self.opinion_type='SearchCaseOpinions'
+        # params = self.filters + (("aAppellateCourt", self.court),)
+        # self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
     def _get_precedential_statuses(self) -> List[str]:
         """Find Precedential Status
@@ -30,7 +32,7 @@ class Site(mich.Site):
         :return: Precedential statuses
         """
         for case in self.cases:
-            case["precedential_status"] = self.get_status(case["title"])
+            case["precedential_status"] = self.get_status(case["disposition"])
         return [case["precedential_status"] for case in self.cases]
 
     def get_status(self, title: str) -> str:
@@ -44,3 +46,9 @@ class Site(mich.Site):
         else:
             status = "Unpublished"
         return status
+
+    def get_class_name(self):
+        return "michctapp"
+
+    def get_court_name(self):
+        return "Michigan Court of Appeals"

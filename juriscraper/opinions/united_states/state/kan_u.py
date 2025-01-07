@@ -10,3 +10,6 @@ class Site(kan_p.Site):
         self.court_id = self.__module__
         self.status = "Unpublished"
         self.court = "Supreme Court"
+
+    def get_class_name(self):
+        return 'kan_u'

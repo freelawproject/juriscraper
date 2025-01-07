@@ -30,7 +30,7 @@ for opinion in site:
     date = opinion.get('case_dates')
     opinion_date = date.strftime('%d/%m/%Y')
     res = CasemineUtil.compare_date(opinion_date, site.crawled_till)
-    if(res==1):
+    if res == 1:
         site.crawled_till = opinion_date
     year = int(opinion_date.split('/')[2])
     jud = opinion.get('judges')

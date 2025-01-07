@@ -8,11 +8,10 @@ History:
 
 import math
 import re
-
-from juriscraper.lib.html_utils import (
-    get_row_column_links,
-    get_row_column_text,
-)
+from datetime import datetime
+from casemine.casemine_util import CasemineUtil
+from juriscraper.lib.html_utils import (get_row_column_links,
+                                        get_row_column_text, )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -20,11 +19,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self._page_size = 50
-        self._base_url = f"https://www.la-fcca.org/opiniongrid/opinionpub.php?opinionpage_size={self._page_size}"
-        self.url = self._base_url
         self.back_scrape_iterable = self._generate_back_scrape_range()
-
         # The opinions page does not indicate whether a case is
         # published or unpublished. That is only found in the PDF.
         # (Unpublished cases have "Not Designated For Publication" on
@@ -35,14 +30,10 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         for row in self.html.cssselect("#opinion_contentTable tbody tr"):
-            self.cases.append(
-                {
-                    "date": get_row_column_text(row, 1),
-                    "docket": self._parse_docket_numbers(row),
-                    "name": get_row_column_text(row, 4),
-                    "url": get_row_column_links(row, 3),
-                }
-            )
+            self.cases.append({"date": get_row_column_text(row, 1),
+                               "docket": [self._parse_docket_numbers(row)],
+                               "name": get_row_column_text(row, 4),
+                               "url": get_row_column_links(row, 3), })
 
     def _parse_docket_numbers(self, row):
         # Handle cases such as:
@@ -76,3 +67,46 @@ class Site(OpinionSiteLinear):
         self.url = self._base_url + ("&opinionp=%d" % page)
         self.html = self._download()
         self._process_html()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        crawl_till_str = start_date.strftime("%d/%m/%Y")
+        self._page_size = 50
+        page = 1
+        flag = True
+        self._base_url = f"https://www.la-fcca.org/opiniongrid/opinionpub.php?opinionpage_size={self._page_size}"
+        self.url = self._base_url
+        self.method = 'POST'
+        while flag:
+            self.parameters = {"opinionmode": "view",
+                               "opinionsort_field": "sortdate",
+                               "opinionsort_field_by": "",
+                               "opinionsort_field_type": "",
+                               "opinionsort_type": "DESC",
+                               "opinionpage_size": str(self._page_size),
+                               "opinionp": str(page)}
+            self.parse()
+            page = page + 1
+            self.downloader_executed = False
+            trs = self.html.xpath(
+                "//table[@id='opinion_contentTable']//tbody//tr//td[1]//label")
+            for tr in trs:
+                opn_date_str = str(tr.text).replace(' ', '')
+                opn_date = datetime.strptime(opn_date_str, '%m/%d/%Y')
+                opn_date_str = opn_date.strftime('%d/%m/%Y')
+                comp = CasemineUtil.compare_date(opn_date_str, crawl_till_str)
+                if comp == -1:
+                    flag = False
+                    break
+        return 0
+
+    def get_class_name(self):
+        return 'lactapp_1'
+
+    def get_court_name(self):
+        return 'Louisiana Court of Appeal'
+
+    def get_court_type(self):
+        return 'state'
+
+    def get_state_name(self):
+        return 'Louisiana'

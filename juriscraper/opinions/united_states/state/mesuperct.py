@@ -8,7 +8,7 @@ History:
   2023-12-28: Created
 """
 
-from datetime import date
+from datetime import date, datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -17,7 +17,6 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"https://apps.maine.edu/SuperiorCourt/show_list.jsp?plaintiff=&defendant=&year={date.today().year}&code=&rule=&title=&number=&section=&Search=Search"
         self.base_path = ["placeholder"]
         self.back_scrape_iterable = [1]
 
@@ -48,10 +47,26 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "date": date,
-                    "docket": docket_number,
+                    "docket": [docket_number],
                     "url": url,
                     "name": f"{plaintiff} v. {defendant}",
                     "status": "Unpublished",
-                    "judge": author,
+                    "judge": [author],
                 }
             )
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.url = f"https://apps.maine.edu/SuperiorCourt/show_list.jsp?plaintiff=&defendant=&year={start_date.year}&code=&rule=&title=&number=&section=&Search=Search"
+        self.parse()
+        return 0
+
+    def get_state_name(self):
+        return "Maine"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_court_name(self):
+        return "Maine Superior Court"
+
+    def get_class_name(self):
+        return "mesuperct"

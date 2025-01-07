@@ -16,6 +16,7 @@ History:
 """
 
 import re
+from datetime import datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -33,7 +34,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.court_identifier = "SJC"
         self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
+            "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0",
         }
         self.needs_special_headers = True
 
@@ -60,7 +61,23 @@ class Site(OpinionSiteLinear):
                     "name": name,
                     "status": "Published",
                     "date": date,
-                    "docket": docket,
+                    "docket": [docket],
                     "url": url,
                 }
             )
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
+
+    def get_court_name(self):
+        return "Supreme Judicial Court of Massachusetts"
+
+    def get_class_name(self):
+        return "mass"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "Massachusetts"
+

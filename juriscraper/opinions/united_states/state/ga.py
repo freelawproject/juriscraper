@@ -14,8 +14,6 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        today = date.today()
-        self.url = self._get_url(today.year)
         self.status = "Published"
         self.back_scrape_iterable = range(2016, 2022)
 
@@ -46,25 +44,29 @@ class Site(OpinionSiteLinear):
             # - "October 19, 2021—SUMMARIES for NOTEWORTHY OPINIONS"
             # - "July 7, 2021"
             # - "February 15, 2021 – SUMMARIES for NOTEWORTHY OPINIONS"
-            summary = link.xpath(
-                ".//parent::li/parent::ul/preceding-sibling::p[1]"
-            )[0].text_content()
+            summary = \
+                link.xpath(".//parent::li/parent::ul/preceding-sibling::p[1]")[
+                    0].text_content()
             # Character separator for dates from summary text could be:
             # - dash: "-"
             # - hyphen: "—"
             # - character U+2013: "–"
             date_str = (
-                summary.split("–")[0].split("—")[0].split("-")[0].strip()
-            )
+                summary.split("–")[0].split("—")[0].split("-")[0].strip())
             date_summary = datetime.strptime(date_str, "%B %d, %Y")
+            doc_arr = []
+            if docket.__contains__(","):
+                doc_arr = docket.split(',')
+            else:
+                doc_arr.append(docket)
+
+            new_doc=[]
+            for i in doc_arr:
+                new_doc.append(str(i).strip())
+
             self.cases.append(
-                {
-                    "date": date_str,
-                    "docket": docket,
-                    "name": titlecase(name),
-                    "url": url,
-                }
-            )
+                {"date": date_str, "docket": new_doc, "name": titlecase(name),
+                 "url": url, })
 
     def _download_backwards(self, year) -> None:
         self.url = self._get_url(year)
@@ -76,3 +78,20 @@ class Site(OpinionSiteLinear):
         if self.html is not None:
             self.status = 200
             self._process_html()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.url = self._get_url(start_date.year)
+        self.parse()
+        return 0
+
+    def get_state_name(self):
+        return "Georgia"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "ga"
+
+    def get_court_name(self):
+        return "Supreme Court of Georgia"
