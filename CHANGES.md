@@ -16,13 +16,57 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.48 - 2024-12-31**
+
+- Fixes:
+  - updated `idaho_*` scrapers to OpinionSiteLinear
+  - updated `cadc` scrapers to new site
+  - `okla` now skips rows with no docket number
+  - fixes for PACER appellate dockets parsing
+
+**2.6.47 - 2024-12-12**
+
+- Fixes:
+  - standardize usage of download methods in scrapers (_download, _request_url_get, _request_url_post)
+  - refactor scrapers to do not return "Per Curiam" as value for "author_str" or "judges"
+
+- Features
+  - added `extract_from_text` to `sc`
+
+## Past
+
+**2.6.46 - 2024-12-10**
+
+- Fixes:
+  - Support for parsing the new format of appellate attachment pages has been added
+
+**2.6.45 - 2024-12-05**
+
+- Features:
+  - AbstractSite now supports saving responses and response headers.
+  Use it with new optional argument for the sample caller `save-responses`.
+  - Delete `--daemon` and `--report` options
+
+**2.6.44 - 2024-11-27**
+
+- Fixes:
+  - Fixes `colo`
+
+**2.6.43 - 2024-11-21**
+
+- Fixes:
+  - Fixes `ky` and `colo`
+
+**2.6.42 - 2024-11-21**
+
+- Fixes:
+  - Fix `mass` and `massctapp` cleanup content method
+
 **2.6.40 - 2024-11-20**
 
 - Fixes:
   - Fix `mass` and `massctapp` scrapers, scrape new endpoint
-  - Exclude "Commomwealth" string from short case names
-
-## Past
+  - Exclude "Commonwealth" string from short case names
 
 **2.6.39 - 2024-11-18**
 

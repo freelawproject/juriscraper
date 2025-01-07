@@ -21,6 +21,8 @@ from ..lib.utils import clean_court_object, previous_and_next
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
 from .utils import (
+    get_file_size_str_from_tr,
+    get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_anchor,
 )
@@ -1178,29 +1180,11 @@ class DocketReport(BaseDocketReport, BaseReport):
             return split_value[idx]
 
     @staticmethod
-    def _get_input_value_from_tr(tr, idx):
-        """Take a row from the attachment table and return the input value by
-        index.
-        """
-        try:
-            input = tr.xpath(".//input")[0]
-        except IndexError:
-            return None
-        else:
-            # initial value string "23515655-90555-2"
-            # "90555" is size in bytes "2" is pages
-            value = input.xpath("./@value")[0]
-            split_value = value.split("-")
-            if len(split_value) != 3:
-                return None
-            return split_value[idx]
-
-    @staticmethod
     def _get_page_count_from_tr_input_value(tr):
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
-        count = DocketReport._get_input_value_from_tr(tr, 2)
+        count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
 
@@ -1238,25 +1222,13 @@ class DocketReport(BaseDocketReport, BaseReport):
                 tr, 1
             )
         else:
-            file_size_str = DocketReport._get_input_value_from_tr(tr, 1)
+            file_size_str = get_input_value_from_tr(tr, 1, 3, "-")
         if file_size_str is None:
             return None
         file_size = int(file_size_str)
         if file_size == 0:
             return None
         return file_size
-
-    @staticmethod
-    def _get_file_size_str_from_tr(tr):
-        """Take a row from the attachment table and return the number of bytes
-        as a str.
-        """
-        cells = tr.xpath("./td")
-        last_cell_contents = cells[-1].text_content()
-        units = ["kb", "mb"]
-        if any(unit in last_cell_contents.lower() for unit in units):
-            return last_cell_contents.strip()
-        return ""
 
     def _get_pacer_doc_id(self, row):
         """Take in a row from the attachment table and return the pacer_doc_id
@@ -1275,7 +1247,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             if value:
                 pacer_doc_suffix = value[0]
         else:
-            pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
+            pacer_doc_suffix = get_input_value_from_tr(row, 0, 3, "-")
         if pacer_doc_suffix is None:
             return None
         # after inserting prefixes our final doc_id is "035023515655"
@@ -1315,7 +1287,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
-                "file_size_str": self._get_file_size_str_from_tr(row),
+                "file_size_str": get_file_size_str_from_tr(row),
                 "pacer_doc_id": self._get_pacer_doc_id(row),
                 # It may not be needed to reparse the seq_no
                 # for each row, but we may as well. So far, it

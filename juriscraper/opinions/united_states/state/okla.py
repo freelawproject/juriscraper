@@ -9,6 +9,7 @@
 
 from lxml import html
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -25,17 +26,18 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath(".//li[@class='decision']"):
             name, citation = row.xpath(".//a/text()")
             url = row.xpath(".//a/@href")[0]
-            date_filed_raw = row.xpath(".//span[@class='decidedDate']/text()")[
-                0
-            ].strip()
-            docket_number_raw = row.xpath(
-                ".//span[@class='caseNumber']/text()"
-            )[0].strip()
+            date_filed_raw = row.xpath(".//span[@class='decidedDate']/text()")
             summary = row.xpath(".//p[@class='summaryParagraph']/text()")[0]
+
+            docket = row.xpath(".//span[@class='caseNumber']/text()")
+            if not docket:
+                logger.debug("Skipping row without docket number")
+                continue
+            docket_number_raw = docket[0].strip()
 
             self.cases.append(
                 {
-                    "date": date_filed_raw.split()[1],
+                    "date": date_filed_raw[0].strip().split()[1],
                     "name": name,
                     "docket": docket_number_raw.split()[1],
                     "citation": citation,

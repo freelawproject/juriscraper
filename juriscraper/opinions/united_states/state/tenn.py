@@ -39,6 +39,13 @@ class Site(OpinionSiteLinear):
                 row.strip()
                 for row in section.text_content().strip().split("\n", 4)
             ]
+
+            judge = rows[2].split(": ")[1]
+            per_curiam = False
+            if "curiam" in judge.lower():
+                judge = ""
+                per_curiam = True
+
             self.cases.append(
                 {
                     "date": date,
@@ -46,7 +53,8 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "name": name,
                     "docket": rows[1],
-                    "judge": rows[2].split(": ")[1],
+                    "judge": judge,
                     "summary": rows[-1],
+                    "per_curiam": per_curiam,
                 }
             )

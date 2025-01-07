@@ -66,6 +66,12 @@ class AbstractSite:
             "url": None,
         }
 
+        # Attribute to reference a function passed by the caller,
+        # which takes a single argument, the Site object, after
+        # each GET or POST request. Intended for saving the response for
+        # debugging purposes.
+        self.save_response = kwargs.get("save_response_fn")
+
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
@@ -348,13 +354,16 @@ class AbstractSite:
             )
         else:
             logger.info(f"Now downloading case page at: {self.url}")
+
         self._process_request_parameters(request_dict)
-        if self.method == "GET":
+
+        if self.test_mode_enabled():
+            self._request_url_mock(self.url)
+        elif self.method == "GET":
             self._request_url_get(self.url)
         elif self.method == "POST":
             self._request_url_post(self.url)
-        elif self.test_mode_enabled():
-            self._request_url_mock(self.url)
+
         self._post_process_response()
         return self._return_response_text_object()
 
@@ -372,7 +381,7 @@ class AbstractSite:
         if parameters.get("verify") is not None:
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
-        self.request["parameters"] = parameters
+        self.request["parameters"].update(parameters)
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
@@ -386,6 +395,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
@@ -398,6 +409,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""

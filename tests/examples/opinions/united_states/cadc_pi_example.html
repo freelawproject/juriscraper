@@ -1,93 +1,166 @@
-<html><head>
-<meta http-equiv="CADC" content="no-cache">
-<base href="//www.cadc.uscourts.gov/internet/orders.nsf/">
-<link href="styleResponsive.css" rel="stylesheet" type="text/css">
-<script src="jsGlobal.js"></script>
-<link rel="alternate" type="application/rss+xml" title="USCADC Recent Orders of Interest" href="//www.cadc.uscourts.gov/internet/orders.nsf/uscadcorders.xml">
-<!-- viewport meta to reset iPhone inital scale -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script language="JavaScript" type="text/javascript" src="jQueryMenu.js?OpenJavascriptLibrary"></script>
-<title>Orders of Public Interest</title>
-<script language="JavaScript" type="text/javascript">
-<!--
-document._domino_target = "_self";
-function _doClick(v, o, t) {
-  var returnValue = false;
-  var url="/internet/orders.nsf?OpenDatabase&Click=" + v;
-  if (o.href != null) {
-    o.href = url;
-    returnValue = true;
-  } else {
-    if (t == null)
-      t = document._domino_target;
-    window.open(url, t);
-  }
-  return returnValue;
-}
-// -->
-</script>
+<!doctype html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Import -->
+    <link rel="stylesheet" type="text/css" href="/orders/resources/assets/css/core.css">
+    <!-- Library for DatePicker Styles (Bootstrap 4) -->
+    <link rel="stylesheet" type="text/css" href="/orders/resources/assets/css/gijgo.min.css">
+    <!-- The RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="USCADC Recent Orders of Public Interest" href="//media.cadc.uscourts.gov/orders/rss.xml"/>
+    <title>USCA-DC Orders of Public Interest</title>
 </head>
-<body text="#000000" bgcolor="#FFFFFF" link="#000080" alink="#000080" vlink="#000080">
+<body>
 
-<form action=""></form>  <!-- close domino form -->
-<div class="box-header">
-	<div class="content-header">
-		<div class="column-one">
-			<div class="item1of1"><span class="myHeader">Orders of Public Interest</span></div>
-			<div class="item1of1"><span class="myHeaderSmall">U.S. Court of Appeals for the D.C. Circuit</span></div>
-		</div>
-		<div class="column-two">
-<form method="post" action="ViewSearchGeneric?CreateDocument" enctype="multipart/form-data"><input name="SearchString" size="20" maxlength="50"><input type="Submit" value="Search"><br><span class="myFontExtraSmall"> <a href="ViewSearchAdvanced?openform">Advanced Search</a></span></form>
-		</div>
-	</div>
+    <!-- Header -->
+      <div class="container">
+    <div class="header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top cadc cadc-main">
+            <a class="navbar-brand" href="https://www.cadc.uscourts.gov">
+              <img src="/orders/resources/assets/img/seal_cadc.png" width="30" height="30" class="d-inline-block align-top" alt="Court Seal">
+              USCA-DC
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+
+                    <a class='nav-item nav-link' href='/orders'>Orders</a><a class='nav-item nav-link' href='/orders/bydate/thismonth'>Browse</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Recent
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/orders/bydate/recent">Last 10</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/orders/bydate/thisweek">This Week</a>
+                          <a class="dropdown-item" href="/orders/bydate/thismonth">This Month</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/orders/bydate/lastweek">Last Week</a>
+                          <a class="dropdown-item" href="/orders/bydate/lastmonth">Last Month</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarSubscribe" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Subscribe
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarSubscribe">
+                          <a class="dropdown-item" href="/orders/rss.xml"><i class="fas fa-rss-square"></i> RSS</a>
+                          <a class='dropdown-item' href='/orders/subscribe'><i class='fas fa-envelope-square'></i> Email</a>                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav flex-row ml-lg-auto d-none d-lg-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="/orders/rss.xml" aria-label="RSS"><i class="fas fa-rss-square"></i></a>
+              </li>
+              <li class='nav-item'><a class='nav-link' href='/orders/subscribe' aria-label='Email'><i class='fas fa-envelope-square'></i></a></li>            </ul>
+
+        </nav>
+
+        
+
+    </div>
+  </div>
+
+  <div class="container my-3">
+    <h6 class="text-center"><i>U.S. Court of Appeals for the D.C. Circuit</i></h6>
+  </div>
+    <!-- Body -->
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-4">
+       
+
+<div class="card text-center cadcmonthnav ">
+  <div class="card-header">
+
+   <div class="btn-group" role="group" aria-label="Year Control Buttons">
+    <a class="btn mr-2" href="/orders/bydate/2024/1" role="button"><i class="fas fa-angle-left"></i></a>
+
+    <div class="dropdown show dropright">
+     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="yearMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       2025     </a>
+     <div class="dropdown-menu" aria-labelledby="yearMenuLink">
+       <a class='dropdown-item' href='/orders/bydate/2024/1'>2024</a>
+<a class='dropdown-item' href='/orders/bydate/2023/1'>2023</a>
+<a class='dropdown-item' href='/orders/bydate/2022/1'>2022</a>
+<a class='dropdown-item' href='/orders/bydate/2021/1'>2021</a>
+<a class='dropdown-item' href='/orders/bydate/2020/1'>2020</a>
+<a class='dropdown-item' href='/orders/bydate/2019/1'>2019</a>
+      </div>
+    </div>
+
+    <a class="btn ml-2" href="/orders/bydate/2026/1" role="button"><i class="fas fa-angle-right"></i></a>
+   </div>
+
+  </div>
+
+  <div class="XXXcard-body">
+    <nav class="nav nav-pills nav-fill " role="navigation">
+    <a class='text-sm-center nav-link active' href='/orders/bydate/2025/1'>Jan</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/2'>Feb</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/3'>Mar</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/4'>Apr</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/5'>May</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/6'>Jun</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/7'>Jul</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/8'>Aug</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/9'>Sep</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/10'>Oct</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/11'>Nov</a><a class='text-sm-center nav-link' href='/orders/bydate/2025/12'>Dec</a>    </nav>
+  </div>
 </div>
-<div class="box-middle">
-	<div class="content-middle">
-		<div class="column-one"><div id="navigator" class=" myFontNavigator"><a href="#" id="pull">Menu</a><ul><li><a href="/"><b>USCA-DC Home</b></a></li><li class="spacer"></li><li><a href="#">Most Recent</a></li><li class="spacer"></li><li><a href="DocsByRDate?OpenView&amp;count=100">Browse by Date</a></li><li class="spacer"></li><li><a href="DocsShowDate?OpenAgent&amp;scode=0">Today</a></li><li><a href="DocsShowDate?OpenAgent&amp;scode=1">This Week</a></li><li><a href="DocsShowDate?OpenAgent&amp;scode=2">Last Week</a></li><li><a href="DocsShowDate?OpenAgent&amp;scode=3">This Month</a></li><li><a href="DocsShowDate?OpenAgent&amp;scode=4">Last Month</a></li><li class="spacer"></li><li><a href="uscadcorders.xml">Subscribe <img src="rss.jpg" border="0"></a></li><li><a href="Pages/Email+Subscription?OpenDocument">Subscribe <img src="govdelivery.png" border="0"></a></li><li><a href="Pages/About+Subscriptions?OpenDocument">About Subscriptions</a></li></ul></div>
-</div><!-- end of column-one  -->
-		<div class="column-two"><span>Welcome to the Orders of Public Interest Archive<br>for the U.S. Court of Appeals for the District of Columbia Circuit.</span>
-<p>Click <a href="DocsByRDate?OpenView&amp;count=100">here</a> to browse orders of public interest by date filed, or use one of the sorting options to the left.<br>
 
 
 
-</p><div class="myFont1">&nbsp;</div>
+      </div>
 
-		<div class="myFont2"><span class="myEmphasis">Most recent Orders of Public Interest filed in the following:</span></div><tt><font size="4"><br>
-</font></tt>		<div class="viewBodyWrapper">
-		<div class="ViewBody">
+      <div class="col-md-8">
+        <div class="overview">
+         <div class="row">
+ 
+          <div class="col-sm-12 table-responsive">
+            <div class='mt-0 pt-0 pb-3 row'><div class='col-sm-3'><div class='row'><div class='col col-md-12'><a class='' href='/orders/docs/2024/12/24-1113-12.13.24.pdf' target='_blank'>24-1113<i class='pl-2 far fa-file-pdf'></i></a></div></div><div class='row'><div class='col col-md-12'></div></div></div><div class='col-sm-9 ml-3 ml-sm-0'><div class='row'><div class='col col-md-12'>TikTok Inc., et al v. Merrick Garland</div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'><i><span class='small'>12/13/2024</span></i></div></div></div></div>
+<div class='mt-0 pt-0 pb-3 row'><div class='col-sm-3'><div class='row'><div class='col col-md-12'><a class='' href='/orders/docs/2024/10/22-5277OPEN3.pdf' target='_blank'>22-5277<i class='pl-2 far fa-file-pdf'></i></a></div></div><div class='row'><div class='col col-md-12'></div></div></div><div class='col-sm-9 ml-3 ml-sm-0'><div class='row'><div class='col col-md-12'>End Citizens United PAC v. Federal Election Commission and New Republican PAC</div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'><i><span class='small'>10/15/2024</span></i></div></div></div></div>
+<div class='mt-0 pt-0 pb-3 row'><div class='col-sm-3'><div class='row'><div class='col col-md-12'><a class='' href='/orders/docs/2024/06/22-3086.combined.final.pdf' target='_blank'>22-3086<i class='pl-2 far fa-file-pdf'></i></a></div></div><div class='row'><div class='col col-md-12'></div></div></div><div class='col-sm-9 ml-3 ml-sm-0'><div class='row'><div class='col col-md-12'>USA v. Stephen Bannon</div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'><i><span class='small'>06/20/2024</span></i></div></div></div></div>
+<div class='mt-0 pt-0 pb-3 row'><div class='col-sm-3'><div class='row'><div class='col col-md-12'><a class='' href='/orders/docs/2024/03/24-5054LDSN2.pdf' target='_blank'>24-5054<i class='pl-2 far fa-file-pdf'></i></a></div></div><div class='row'><div class='col col-md-12'></div></div></div><div class='col-sm-9 ml-3 ml-sm-0'><div class='row'><div class='col col-md-12'>Meta Platforms, Inc. v. FTC, et al</div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'><i><span class='small'>03/29/2024</span></i></div></div></div></div>
+<div class='mt-0 pt-0 pb-3 row'><div class='col-sm-3'><div class='row'><div class='col col-md-12'><a class='' href='/orders/docs/2024/03/24-3006LDSN.pdf' target='_blank'>24-3006<i class='pl-2 far fa-file-pdf'></i></a></div></div><div class='row'><div class='col col-md-12'></div></div></div><div class='col-sm-9 ml-3 ml-sm-0'><div class='row'><div class='col col-md-12'>United States of America v. Peter Navarro</div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'></div></div><div class='row'><div class='col col-md-12'><i><span class='small'>03/14/2024</span></i></div></div></div></div>
+          </div>
 
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/D0F2F2AA4EC900EA852587AE0073983C/$file/21-3069LDSJ.pdf"><span class="status0">21-3069</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">48.4 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">USA v. Kyle Fitzsimons</div><div class="item1of1"><span class="column-two myDemphasize"><date>12/17/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/334026630C465FC3852587A60078875B/$file/21-5254CHMJ.pdf"><span class="status0">21-5254</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">59 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">Donald Trump v. Bennie Thompson</div><div class="item1of1"><span class="column-two myDemphasize"><date>12/09/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/68528B37E3453B4C8525879600791495/$file/21-5254LDMN.pdf"><span class="status0">21-5254</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">43.5 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">Donald Trump v. Bennie Thompson, et al</div><div class="item1of1"><span class="column-two myDemphasize"><date>11/23/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/B307255BD70EBDE6852587900053A9BD/$file/21-3063LDSJ.pdf"><span class="status0">21-3063</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">47.6 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">USA v. Jeffrey Brown</div><div class="item1of1"><span class="column-two myDemphasize"><date>11/17/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/7609DFB0EAACA3B98525878A0073CBBD/$file/21-5254LDSN.pdf"><span class="status0">21-5254</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">46.2 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">Donald Trump v. Bennie G. Thompson, et al.</div><div class="item1of1"><span class="column-two myDemphasize"><date>11/11/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/1F0E814B6A5DF71885258773004CD245/$file/21-3052LDSJ.pdf"><span class="status0">21-3052</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">47.5 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">USA v. Robert Gieswein</div><div class="item1of1"><span class="column-two myDemphasize"><date>10/19/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/21AD2B183966A4D3852587600076F178/$file/21-5200LDSN2.pdf"><span class="status0">21-5200</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">50.2 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">Nancy Huisha-Huisha, et al v. Alejandro Mayorkas, et al </div><div class="item1of1"><span class="column-two myDemphasize"><date>09/30/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/811EF0D6CBACC61F8525875D004E87DF/$file/21-3046LDSJ.pdf"><span class="status0">21-3046</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">46.8 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">USA v. Donohoe</div><div class="item1of1"><span class="column-two myDemphasize"><date>09/27/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/EE230D17742E906E852587370060C631/$file/21-5093LDSN4.pdf"><span class="status0">21-5093</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">42.2 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">Alabama Association of Realtors, et al. v. U.S. Department of Health and Human Services
-</div><div class="item1of1"><span class="column-two myDemphasize"><date>08/20/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
-<div class="row-entry"><div class="column-one"><div class="item1of1"><a href="/internet/orders.nsf/CAB20A2244F9938F8525872D0004CF32/$file/21-3034LDSJ.pdf"><span class="status0">21-3034</span></a></div><div class="item1of1"><span class="myFontExtraSmall ">45.9 Kb</span></div></div><!-- end column-one --><div class="column-two"><div class="item1of1">United States of America v. George Tanios</div><div class="item1of1"><span class="column-two myDemphasize"><date>08/09/2021</date></span></div></div><!-- end column-two --></div><!-- end row-entry -->
+         </div>
+        </div>
+      </div>
 
-</div>
-</div><tt><font size="4"><br>
-</font></tt><div class="myFont1">&nbsp;</div>
-<p>All orders are available on the Federal Judiciary's public electronic access service PACER. PACER users must register and open a PACER account.
-</p><p><font size="2" face="Times New Roman"><br>
-</font>		</p></div>
-	</div>
-</div>
+      </div
+    </div>
 
-
-
-<ul>
-<ul>
-<ul>
-<ul></ul>
-</ul>
-</ul>
-</ul>
+    <!-- Footer -->
+    
+<footer class="footer">
+  <div class="container">
+    <span>U.S. Court of Appeals for the D.C. Circuit</span>
+  </div>
+</footer> 
 
 
 
-</body></html>
+
+
+
+    <!-- Include JS Script packages -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <!-- Custom Library with CADC stuff -->
+    <script type="text/javascript" src="/orders/resources/assets/js/custom.js"></script>
+    <!-- Library for DatePicker for Bootstrap 4-->
+    <script type="text/javascript" src="/orders/resources/assets/js/gijgo.min.js"></script>
+
+
+</body>
+</html>
