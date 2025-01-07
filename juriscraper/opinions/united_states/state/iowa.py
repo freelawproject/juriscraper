@@ -1,8 +1,10 @@
 # Scraper for Iowa Supreme Court
 # CourtID: iowa
 # Court Short Name: iowa
+from datetime import datetime
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import set_response_encoding
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -13,13 +15,14 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.cases = []
         self.archive = False
+        self.court_code='supreme-court/supreme-court-opinions'
         self.back_scrape_iterable = [
-            "placeholder"
-        ]  # this array can't be empty
-        self.url = "https://www.iowacourts.gov/iowa-courts/supreme-court/supreme-court-opinions/"
+            "placeholder"]  # this array can't be empty
 
     def _download(self, request_dict={}):
         html = super()._download(request_dict)
+        if html is None:
+            return
         self.extract_cases(html)
         if self.test_mode_enabled() or self.archive:
             return html
@@ -48,7 +51,10 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_dates)
 
     def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+        dockets = []
+        for case in self.cases:
+            dockets.append([case["docket"]])
+        return dockets
 
     def _download_backwards(self, _):
         """Walk over all "Archive" links on Archive page,
@@ -75,18 +81,12 @@ class Site(OpinionSite):
             docket = parts[0].replace(case_substring, "").strip()
             name = parts[1].strip()
             date_text = case_element.xpath("./following::p[1]")[
-                0
-            ].text_content()
+                0].text_content()
             date_string = date_text.replace("Filed", "")
             url = case_element.xpath("./following::p[2]//a/@href")[0]
             self.cases.append(
-                {
-                    "name": name,
-                    "docket": docket,
-                    "date": date_string,
-                    "url": url,
-                }
-            )
+                {"name": name, "docket": docket, "date": date_string,
+                 "url": url, })
 
     def extract_archive_cases(self, html):
         """Extract case dictionaries from "Archive" html page
@@ -99,20 +99,14 @@ class Site(OpinionSite):
             path_cases = './following::div[@class="cms_items"][1]/div[@class="cms_item"]'
             for case_container in date_header.xpath(path_cases):
                 docket_element = case_container.xpath(
-                    './div[@class="cms_item_icon_title_row"]'
-                )[0]
-                self.cases.append(
-                    {
-                        "date": date_string,
-                        "url": docket_element.xpath(".//a/@href")[0],
-                        "docket": docket_element.text_content().strip(),
-                        "name": case_container.xpath(
-                            './div[@class="cms_item_description"]'
-                        )[0]
-                        .text_content()
-                        .strip(),
-                    }
-                )
+                    './div[@class="cms_item_icon_title_row"]')[0]
+                self.cases.append({"date": date_string,
+                                   "url": docket_element.xpath(".//a/@href")[
+                                       0],
+                                   "docket": docket_element.text_content().strip(),
+                                   "name": case_container.xpath(
+                                       './div[@class="cms_item_description"]')[
+                                       0].text_content().strip(), })
 
     def extract_next_page_url(self, html):
         """Return the href url from "Next" pagination element
@@ -121,3 +115,32 @@ class Site(OpinionSite):
         path = '//div[contains(./@class, "pagination-next-page")]//a/@href'
         elements = html.xpath(path)
         return elements[0] if elements else False
+
+    def _post_process_response(self):
+        """Cleanup to response object"""
+        try:
+            self.tweak_response_object()
+            self.request["response"].raise_for_status()
+            set_response_encoding(self.request["response"])
+        except Exception as e:
+            print(e)
+            pass
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        for mon in range(1, end_date.month + 1):
+            self.url = f'https://www.iowacourts.gov/iowa-courts/{self.court_code}/archive/{end_date.year}/{mon}'
+            self.parse()
+            self.downloader_executed = False
+        return 0
+
+    def get_court_name(self):
+        return "Supreme Court of Iowa"
+
+    def get_state_name(self):
+        return "Iowa"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "iowa"

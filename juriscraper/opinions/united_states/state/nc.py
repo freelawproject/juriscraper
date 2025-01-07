@@ -19,17 +19,14 @@ from juriscraper.OpinionSite import OpinionSite
 
 class Site(OpinionSite):
     start_year = 1997
-    current_year = date.today().year
+    current_year = None
     court = "sc"
     base_url = "http://appellate.nccourts.org/opinions/?c={}&year={}"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = self.base_url.format(self.court, self.current_year)
-
-        self.make_backscrape_iterable(kwargs)
-
+        # self.make_backscrape_iterable(kwargs)
         self.my_download_urls = []
         self.my_case_names = []
         self.my_docket_numbers = []
@@ -99,9 +96,9 @@ class Site(OpinionSite):
                 case_dates.append(case_date)
                 self.my_download_urls.append(download_url)
                 self.my_case_names.append(case_name)
-                self.my_docket_numbers.append(docket_number)
+                self.my_docket_numbers.append([docket_number])
                 self.my_summaries.append(summary)
-                self.my_neutral_citations.append(neutral_cite)
+                self.my_neutral_citations.append([neutral_cite])
                 self.my_precedential_statuses.append(precedential_status)
 
             elif precedential_status == "Unpublished":
@@ -122,12 +119,11 @@ class Site(OpinionSite):
                     ) = self.parse_title(txt)
                     if case_name.strip() == "":
                         continue  # A few cases are missing a name
-                    case_dates.append(case_date)
                     self.my_download_urls.append(download_url)
                     self.my_case_names.append(case_name)
-                    self.my_docket_numbers.append(docket_number)
+                    self.my_docket_numbers.append([docket_number])
                     self.my_summaries.append("")
-                    self.my_neutral_citations.append(neutral_cite)
+                    self.my_neutral_citations.append([neutral_cite])
                     self.my_precedential_statuses.append(precedential_status)
 
         return case_dates
@@ -199,3 +195,20 @@ class Site(OpinionSite):
         end = int(end) + 1 if end else self.current_year
 
         self.back_scrape_iterable = range(start, end)
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.url = self.base_url.format(self.court, start_date.year)
+        self.parse()
+        return 0
+
+    def get_state_name(self):
+        return "North Carolina"
+
+    def get_court_name(self):
+        return "Supreme Court of North Carolina"
+
+    def get_class_name(self):
+        return "nc"
+
+    def get_court_type(self):
+        return "state"

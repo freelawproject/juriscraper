@@ -14,6 +14,7 @@ History:
               data should be done by scraping the CourtListener API
               https://www.courtlistener.com/api/rest/v3/clusters/?docket__court__id=me
 """
+from datetime import datetime
 
 from lxml import html
 
@@ -55,6 +56,28 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    def _get_docket_numbers(self):
+        return [[]] * len(self.case_names)
+
     def _get_citations(self):
         path = f"{self.path_root}//td[1]//text()"
-        return list(self.html.xpath(path))
+        lst=[]
+        for l in list(self.html.xpath(path)):
+            lst.append([l])
+        return lst
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0
+
+    def get_class_name(self):
+        return "me"
+
+    def get_court_name(self):
+        return "Maine Supreme Judicial Court"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "Maine"

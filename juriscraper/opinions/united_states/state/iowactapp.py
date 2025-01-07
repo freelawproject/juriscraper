@@ -11,7 +11,7 @@ class Site(iowa.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.iowacourts.gov/iowa-courts/court-of-appeals/court-of-appeals-court-opinions/"
+        self.court_code='court-of-appeals/court-of-appeals-court-opinions'
 
     def _download_backwards(self, _):
         """Overriding this method from parent iowa class because the
@@ -53,3 +53,9 @@ class Site(iowa.Site):
                         .strip(),
                     }
                 )
+
+    def get_class_name(self):
+        return "iowactapp"
+
+    def get_court_name(self):
+        return "Iowa Court of Appeals"

@@ -15,11 +15,11 @@ import re
 from datetime import date, datetime
 from typing import Tuple
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.html_utils import (
-    get_row_column_links,
-    get_row_column_text,
-)
+from juriscraper.lib.html_utils import (get_row_column_links,
+                                        get_row_column_text, )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -33,8 +33,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.docket_re = r"\d{4} IL (?P<docket>\d+)"
         self.url = (
-            "https://www.illinoiscourts.gov/top-level-opinions?type=supreme"
-        )
+            "https://www.illinoiscourts.gov/top-level-opinions?type=supreme")
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
@@ -83,9 +82,8 @@ class Site(OpinionSiteLinear):
             except IndexError:
                 logger.warning(
                     "Opinion '%s' has no URL. (Likely a withdrawn opinion).",
-                    citation,
-                )
-                continue
+                    citation, )
+                url = ''
 
             # For illappct: From 2010 to the past, most rows have no
             # citation string. We would have to implement extract_from_text
@@ -98,20 +96,12 @@ class Site(OpinionSiteLinear):
             status = self._get_status(citation)
 
             self.cases.append(
-                {
-                    "date": date_filed,
-                    "name": name,
-                    "citation": citation,
-                    "url": url,
-                    "docket": docket,
-                    "status": status,
-                }
-            )
+                {"date": date_filed, "name": name, "citation": [citation],
+                    "url": url, "docket": [docket], "status": status, })
 
         if len(rows) - 2 >= 150:
             logger.warning(
-                "This source paginates at 150 results. There are 150 results for this page. Some opinions may be lost"
-            )
+                "This source paginates at 150 results. There are 150 results for this page. Some opinions may be lost")
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Make custom date range POST request
@@ -136,17 +126,17 @@ class Site(OpinionSiteLinear):
 
         :return: dictionary with required values
         """
-        self.parameters = {
-            "__EVENTTARGET": "ctl00$ctl04$ddlFilterFilingDate",
-            "ctl00$ctl04$txtFilterPostingFrom": "3/22/2014",
-            "ctl00$ctl04$txtFilterPostingTo": "3/22/2025",
-            "ctl00$ctl04$ddlFilterFilingDate": "Custom Date Range",
-            "ctl00$ctl04$ddlFilterCourtType": self.court_filter,
-            "ctl00$ctl04$hdnSortField": "FilingDate",
-            "ctl00$ctl04$hdnSortDirection": "DESC",
-            "ctl00$ctl04$txtFilterFilingFrom": dates[0].strftime("%-m/%d/%Y"),
-            "ctl00$ctl04$txtFilterFilingTo": dates[1].strftime("%-m/%d/%Y"),
-        }
+        self.parameters = {"__EVENTTARGET": "ctl00$ctl04$ddlFilterFilingDate",
+                           "ctl00$ctl04$txtFilterPostingFrom": "3/22/2014",
+                           "ctl00$ctl04$txtFilterPostingTo": "3/22/2025",
+                           "ctl00$ctl04$ddlFilterFilingDate": "Custom Date Range",
+                           "ctl00$ctl04$ddlFilterCourtType": self.court_filter,
+                           "ctl00$ctl04$hdnSortField": "FilingDate",
+                           "ctl00$ctl04$hdnSortDirection": "DESC",
+                           "ctl00$ctl04$txtFilterFilingFrom": dates[
+                               0].strftime("%-m/%d/%Y"),
+                           "ctl00$ctl04$txtFilterFilingTo": dates[1].strftime(
+                               "%-m/%d/%Y"), }
 
         # if this is the first time loading the Custom Date Range filters
         # we need to do 2 requests. Otherwise, 1 is enough.
@@ -156,3 +146,39 @@ class Site(OpinionSiteLinear):
             vs = self.html.xpath("//input[@name='__VIEWSTATE']/@value")[0]
             self.parameters["__VIEWSTATE"] = vs
             self.html = self._download()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self._request_url_get(self.url)
+        self._post_process_response()
+        temp_html = self._return_response_text_object()
+        hdn = temp_html.xpath("//div[@class='aspNetHidden']")[0]
+        views_state = hdn.xpath("//input[@id='__VIEWSTATE']/@value")[0]
+        self.parameters = {"__EVENTTARGET": "ctl00$ctl04$txtFilterFilingFrom",
+            "__EVENTARGUMENT": "", "__LASTFOCUS": "",
+            "__VIEWSTATE": views_state, "__VIEWSTATEGENERATOR": "66677877",
+            "ctl00$header$search$txtSearch": "",
+            "ctl00$ctl04$txtFilterName": "",
+            "ctl00$ctl04$txtFilterPostingFrom": "12/15/2014",
+            "ctl00$ctl04$txtFilterPostingTo": "12/15/2025",
+            "ctl00$ctl04$ddlFilterFilingDate": "Custom Date Range",
+            "ctl00$ctl04$txtFilterFilingFrom": start_date.strftime('%m/%d/%Y'),
+            "ctl00$ctl04$txtFilterFilingTo": end_date.strftime('%m/%d/%Y'),
+            "ctl00$ctl04$ddlFilterCourtType": "Supreme Court",
+            "ctl00$ctl04$ddlFilterStatus": "",
+            "ctl00$ctl04$hdnSortField": "FilingDate",
+            "ctl00$ctl04$hdnSortDirection": "DESC"}
+        self.method = 'POST'
+        self.parse()
+        return 0
+
+    def get_court_name(self):
+        return "Supreme Court of Illinois"
+
+    def get_class_name(self):
+        return "ill"
+
+    def get_state_name(self):
+        return "Illinois"
+
+    def get_court_type(self):
+        return "state"

@@ -10,3 +10,9 @@ class Site(haw.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_code = "ICA"
+
+    def get_court_name(self):
+        return "Intermediate Court of Appeals"
+
+    def get_class_name(self):
+        return "hawapp"

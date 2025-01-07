@@ -41,6 +41,7 @@ class OpinionSiteLinear(OpinionSite):
         "joined_by",
         "other_date",
         "html_url",
+        "precedential_status",
         "response_html",
     }
 

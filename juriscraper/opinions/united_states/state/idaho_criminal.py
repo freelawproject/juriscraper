@@ -6,3 +6,6 @@ class Site(idaho_civil.Site):
         super().__init__(*args, **kwargs)
         self.url = "https://www.isc.idaho.gov/appeals-court/isc_criminal"
         self.court_id = self.__module__
+
+    def get_class_name(self):
+        return "idaho_criminal"

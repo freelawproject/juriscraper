@@ -6,7 +6,6 @@ from urllib.parse import urlencode
 
 import requests
 from bs4 import BeautifulSoup
-
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase, trunc
@@ -32,6 +31,18 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.make_backscrape_iterable(kwargs)
+        self._opt_attrs = self._opt_attrs + ["ai_summary_urls", "ai_summary_htmls"]
+        self.valid_keys.update({"ai_summary_url", "ai_summary_html"})
+        self._all_attrs = self._req_attrs + self._opt_attrs
+        # Set all metadata to None
+        for attr in self._all_attrs:
+            self.__setattr__(attr, None)
+
+    def _get_ai_summary_urls(self):
+        return self._get_optional_field_by_id("ai_summary_url")
+
+    def _get_ai_summary_htmls(self):
+        return self._get_optional_field_by_id("ai_summary_html")
 
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
@@ -41,7 +52,6 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-
         if self.html is None:
             return
         rows = self.html.xpath("//div[@class='info']")
@@ -55,20 +65,69 @@ class Site(OpinionSiteLinear):
                 ".//a[contains(@title, 'Download the PDF version')]/@href"
             )[0]
             name = row.xpath(".//span[@class='title']/a/text()")[0]
+            cite = row.xpath(".//span[@class='citation']/text()")
+            citation = cite[0] if cite else ""
 
             # Adding html url and response_html
             html_url=row.xpath(".//span[@class='title']/a/@href")[0]
+            if not str(html_url).__contains__('?iframe=true'):
+                html_url=f"{html_url}?iframe=true"
+
+            print(f"\nhitting html {html_url}")
             response = requests.get(url=html_url, proxies=self.proxies, timeout=120)
             response_html = ""
+            doc_list = []
+            judges = ""
+            ai_summary_url = ""
+            ai_summary_html = ""
+            jud_list=[]
+            new_j_list=[]
+            parallal_cite=[]
+            updated_response_html = None
             if response.status_code==200:
                 response_html = response.text
+                soup = BeautifulSoup(response_html,'html.parser')
+                meta_div = soup.find('div', id='decisia-main-content')
+                updated_response_html = meta_div.prettify()
+                header_div = meta_div.find('div', id="decisia-document-header")
+                box_content = header_div.find('div', class_="decisia-box")
+                meta_data = box_content.find('div', class_="metadata")
+                table = meta_data.find('table')
+                # meta_tbody = table.find_next("tbody")
+                trs = table.find_all("tr")
+                for tr in trs:
+                    td = tr.find_all_next('td')[1]
+                    if tr.text.__contains__('Parallel Citations'):
+                        parallal_cite.append(td.text.strip())
+                    if tr.text.__contains__('Docket Numbers'):
+                        docket = td.text.replace("\n", "").replace("Docket Numbers", "").strip()
+                        doc_arr=[]
+                        if docket.__contains__(","):
+                            doc_arr = docket.split(',')
+                        if doc_arr.__len__()==0:
+                            doc_list.append(docket)
+                        else:
+                            for doc in doc_arr:
+                                doc_list.append(doc.strip())
+                    if tr.text.__contains__('Decision-maker(s)'):
+                        judges = td.text.replace("\n", "").replace("Decision-maker(s)", "").strip()
+                        jud_list = judges.split(';')
+                        for i in jud_list:
+                            new_j_list.append(i.strip())
+                    if tr.text.__contains__('AI generated summary'):
+                        ai_summary_url = td.find_next('a').attrs.get('href')
+                        if not ai_summary_url.__contains__('https://nmonesource.com/') or not ai_summary_url.__contains__('?iframe=true'):
+                            ai_summary_url = 'https://nmonesource.com' + ai_summary_url
+                            ai_summary_url = ai_summary_url + '?iframe=true'
 
-            date_filed = row.xpath(".//span[@class='publicationDate']/text()")[
-                0
-            ]
+                print(f'hitting ai url {ai_summary_url}')
+                if not ai_summary_url.__eq__(''):
+                    ai_resp = requests.get(url=ai_summary_url, proxies=self.proxies, timeout=120)
+                    ai_summary_html = ai_resp.text
+                    ai_soup=BeautifulSoup(ai_summary_html,'html.parser')
+                    ai_summary_html = ai_soup.find('div',id="decisia-main-content").prettify()
 
-            cite = row.xpath(".//span[@class='citation']/text()")
-            citation = cite[0] if cite else ""
+            date_filed = row.xpath(".//span[@class='publicationDate']/text()")[0]
 
             status = "Unknown"
             metadata = row.xpath(".//div[@class='subMetadata']/span/text()")
@@ -86,12 +145,16 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date_filed,
                     "html_url": html_url,
-                    "response_html":response_html,
-                    "docket": "",
+                    "response_html":updated_response_html,
+                    "docket": doc_list,
                     "name": titlecase(name),
-                    "citation": citation,
+                    "citation": [citation],
+                    "parallel_citation":parallal_cite,
+                    "judge":new_j_list,
                     "url": url,
                     "status": status,
+                    "ai_summary_url":ai_summary_url,
+                    "ai_summary_html":ai_summary_html,
                 }
             )
 
