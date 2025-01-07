@@ -1,41 +1,31 @@
-import time
-from datetime import date
+"""
+CourtID: cadc
+Court Short Name: Court of Appeals of the District of Columbia
+Author: mlissner
+History:
+    2014-07-31, mlissner: commited first version
+    2024-12-31, grossir: Implemented new site
+"""
 
-from lxml import html
-
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.cadc.uscourts.gov/internet/opinions.nsf/uscadcopinions.xml"
         self.court_id = self.__module__
+        # https://media.cadc.uscourts.gov/opinions/
+        self.url = "https://media.cadc.uscourts.gov/opinions/bydate/recent"
+        self.status = "Published"
 
-    def _get_case_names(self):
-        return [e for e in self.html.xpath("//item/description/text()")]
-
-    def _get_download_urls(self):
-        return [
-            html.tostring(e, method="text").decode()
-            for e in self.html.xpath("//item/link")
-        ]
-
-    def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath("//item/pubdate/text()"):
-            date_only = " ".join(date_string.split(" ")[1:4])
-            dates.append(
-                date.fromtimestamp(
-                    time.mktime(time.strptime(date_only, "%d %b %Y"))
-                )
+    def _process_html(self):
+        link_xpath = "a[contains(@href, '.pdf')]"
+        for row in self.html.xpath(f"//div[div[div[div[{link_xpath}]]]]"):
+            self.cases.append(
+                {
+                    "url": row.xpath(f".//{link_xpath}/@href")[0],
+                    "docket": row.xpath(f".//{link_xpath}/text()")[0],
+                    "name": row.xpath("div[2]/div/div/text()")[0],
+                    "date": row.xpath(".//span/text()")[-1],
+                }
             )
-        return dates
-
-    def _get_docket_numbers(self):
-        return [
-            e.split("|")[0] for e in self.html.xpath("//item/title/text()")
-        ]
-
-    def _get_precedential_statuses(self):
-        return ["Published" for _ in range(0, len(self.case_names))]

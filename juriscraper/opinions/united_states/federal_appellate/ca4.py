@@ -13,10 +13,13 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "https://www.govinfo.gov/wssearch/search"
         self.court_id = self.__module__
+
+        self.method = "POST"
         self.td = date.today()
         today = self.td.strftime("%Y-%m-%d")
         last_month = (self.td - timedelta(days=31)).strftime("%Y-%m-%d")
-        self.parameters = {
+        self.parameters = {}
+        self.request["parameters"]["json"] = {
             "facets": {
                 "accodenav": [
                     "USCOURTS",
@@ -37,7 +40,6 @@ class Site(OpinionSiteLinear):
             "browseByDate": True,
             "historical": False,
         }
-        self.method = "POST"
         self.json = {}
 
         self.interval = 14
@@ -51,25 +53,12 @@ class Site(OpinionSiteLinear):
             )
         ]
 
-    def _download(self, request_dict={}):
-        if self.test_mode_enabled():
-            with open(self.url) as file:
-                self.json = json.load(file)
-        else:
-            self.json = (
-                self.request["session"]
-                .post(
-                    self.url,
-                    json=self.parameters,
-                )
-                .json()
-            )
-
     def _process_html(self) -> None:
         """Process CA4 Opinions
 
         :return: None
         """
+        self.json = self.html
         for row in self.json["resultSet"]:
             package_id = row["fieldMap"]["packageid"]
             docket = row["line1"].split()[0]
@@ -113,5 +102,7 @@ class Site(OpinionSiteLinear):
         """
         start = (dt - timedelta(days=7)).strftime("%Y-%m-%d")
         end = dt.strftime("%Y-%m-%d")
-        self.parameters["query"] = f"publishdate:range({start},{end})"
+        self.request["parameters"]["json"][
+            "query"
+        ] = f"publishdate:range({start},{end})"
         self.html = self._download()
