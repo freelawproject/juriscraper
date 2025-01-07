@@ -31,7 +31,6 @@ class Site(OpinionSiteLinear):
         return self._get_optional_field_by_id("case_info_url")
 
     def _get_case_info_html(self):
-        print("in case_info_html")
         return self._get_optional_field_by_id("case_info_html")
 
     def _process_html(self, info_url=None):

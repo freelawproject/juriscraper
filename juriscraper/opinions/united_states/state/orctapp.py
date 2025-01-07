@@ -6,6 +6,9 @@ Author: William Palin
 History:
     - 2023-11-18: Created
 """
+from datetime import datetime
+
+from lxml import html
 
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -18,6 +21,7 @@ class Site(OpinionSiteLinear):
         self.url = (
             "https://www.courts.oregon.gov/publications/coa/Pages/default.aspx"
         )
+        # https://cdm17027.contentdm.oclc.org/digital/search/advanced
         self.cases = []
         self.status = "Published"
         self.court_code = "p17027coll5"
@@ -33,25 +37,32 @@ class Site(OpinionSiteLinear):
             date_string = header.text_content().strip()
             if not date_string:
                 continue
-            ul = header.xpath("./following-sibling::ul")[0]
-            for item in ul.xpath(".//li"):
-                # Ensure two links are present (skip Petitions for Review rows)
-                # see or_example_2.html
-                anchors = item.xpath(".//a")
-                if not (len(anchors) > 1):
-                    continue
-                text = item.text_content().strip()
-                url = anchors[0].xpath("./@href")[0]
-                docket = anchors[1].text_content().strip()
-                name = text.split(")", 1)[-1]
-                self.cases.append(
-                    {
-                        "date": date_string,
-                        "name": name,
-                        "docket": docket,
-                        "url": url,
-                    }
-                )
+            ul_elements = header.xpath("./following-sibling::ul[position()<=2]")
+            for ul in ul_elements:
+                for item in ul.xpath(".//li"):
+                    anchors = item.xpath(".//a")
+                    if not (len(anchors) > 1):
+                        continue
+
+                    text = item.text_content().strip()
+                    print(f"text : {text}")
+                    url = anchors[0].xpath("./@href")[0]
+                    print(f"url : {url}")
+                    docket = anchors[1].text_content().strip()
+                    print(f"docket : {docket}")
+                    name = text.split(")", 1)[-1].strip()
+                    citation = text.split("(",1)[0].strip()
+                    print (f"name : {name}")
+                    print(f"citation : {citation}")
+
+                    self.cases.append(
+                        {
+                            "date": date_string,
+                            "name": name,
+                            "docket": docket,
+                            "url": url,
+                        }
+                    )
 
     def _get_download_urls(self):
         """Get download urls
@@ -66,3 +77,33 @@ class Site(OpinionSiteLinear):
             return self.fetch_url_json(case["url"].split("=")[-1][:-4])
 
         return DeferringList(seed=self.cases, fetcher=fetcher)
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        if not self.downloader_executed:
+            self.html = self._download()
+            # print(html.tostring(self.html,pretty_print=True).decode('UTF-8'))
+            self._process_html()
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_name(self):
+        return "Supreme Court of Oregon"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "orctapp"
+
+    def get_state_name(self):
+        return "Oregon"

@@ -99,11 +99,9 @@ class Site(OpinionSiteLinear):
                 1]
             row_data = [cell.get_text(strip=True) for cell in
                         first_data_row.find_all("td")]
-            print(f"last page number is {row_data[-1]}")
             curr_page = row_data[-1]
             if curr_page != ">>" and int(curr_page) > self.max_page_num :
                 self.max_page_num=int(curr_page)
-            print(etree.tostring(self.html, pretty_print=True).decode("utf-8"))
 
 
         for row in self.html.xpath(
@@ -132,7 +130,7 @@ class Site(OpinionSiteLinear):
                 "summary": row.xpath(".//td[3]//text()")[0],
                 "date": row.xpath(".//td[6]//text()")[0],
                 "url": row.xpath(".//a")[0].get("href"),
-                "citation": web_cite,
+                "citation": [web_cite],
                 "status": "Published",
             }
 
@@ -155,19 +153,12 @@ class Site(OpinionSiteLinear):
         while True:
             if not self.downloader_executed:
                 self.html = self._download()
-                print(self.html)
-
-
-            print(f"current page and total page is {self.page_number} and {self.max_page_num}")
 
             if(self.page_number == self.max_page_num):
-                print("we can stop now")
                 self._process_html(start_date.year, end_date.year)
                 break
 
             self._process_html(start_date.year, end_date.year)
-
-            print(f"page number is {self.page_number}")
             self.page_number += 1
 
         for attr in self._all_attrs:

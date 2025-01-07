@@ -1,3 +1,8 @@
+
+from datetime import datetime
+
+from lxml import html
+
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -9,6 +14,29 @@ class Site(OpinionSiteLinear):
         self.url = (
             "https://supremecourt.nebraska.gov/courts/supreme-court/opinions"
         )
+
+    def _fetch_duplicate(self, data):
+        # Create query for duplication
+        query_for_duplication = {"docket": data.get("docket"), "citation": data.get("citation")}
+        # Find the document
+        duplicate = self.judgements_collection.find_one(query_for_duplication)
+        object_id = None
+        if duplicate is None:
+            # Insert the new document
+            self.judgements_collection.insert_one(data)
+
+            # Retrieve the document just inserted
+            updated_data = self.judgements_collection.find_one(query_for_duplication)
+            object_id = updated_data.get("_id")  # Get the ObjectId from the document
+            self.flag = True
+        else:
+            # Check if the document already exists and has been processed
+            processed = duplicate.get("processed")
+            if processed == 10:
+                raise Exception("Judgment already Exists!")  # Replace with your custom DuplicateRecordException
+            else:
+                object_id = duplicate.get("_id")  # Get the ObjectId from the existing document
+        return object_id
 
     def _return_response_text_object(self):
         """Remove faulty URLs from HTML
@@ -50,8 +78,9 @@ class Site(OpinionSiteLinear):
             for row in table.xpath(".//tr[td]"):
                 c1, c2, c3 = row.xpath(".//td")
                 docket = c1.xpath(".//text()")[0].strip()
-                if "A-XX-XXXX" in docket:
+                if "S-XX-XXXX" in docket or "A-XX-XXXX" in docket:
                     continue
+                dockets = docket.split(', ')[::-1]
                 citation = c2.xpath(".//text()")[0].strip()
                 name = c3.xpath(".//a/text()")[0].strip()
                 url = c3.xpath(".//a")[0].get("href")
@@ -64,10 +93,27 @@ class Site(OpinionSiteLinear):
                 self.cases.append(
                     {
                         "date": date,
-                        "docket": docket,
+                        "docket": dockets,
                         "name": name,
-                        "citation": citation,
+                        "citation": [citation],
                         "url": url,
                         "status": status,
                     }
                 )
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+         self.parse()
+         return 0
+
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "neb"
+
+    def get_state_name(self):
+        return "Nebraska"
+
+    def get_court_name(self):
+        return "Supreme Court of Nebraska"

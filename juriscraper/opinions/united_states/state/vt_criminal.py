@@ -19,4 +19,5 @@ class Site(vt.Site):
         return "vt_criminal"
 
     def get_court_name(self):
-        return "Supreme Court of Vermont Environmental Division"
+        return "Superior Court of Vermont Criminal Division"
+

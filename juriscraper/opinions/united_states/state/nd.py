@@ -77,6 +77,8 @@ class Site(OpinionSiteLinear):
                 case["judge"] = ""
                 case["per_curiam"] = True
 
+            case['docket']=[case['docket']]
+
             self.cases.append(case)
 
     def clean_name(self, name: str) -> Tuple[str, str]:
@@ -161,7 +163,7 @@ class Site(OpinionSiteLinear):
         start, end = dates
         date_fmt = "%m/%d/%Y"
         # last page is 118 (August 2024)
-        first_page, last_page = 2, 130
+        first_page, last_page = 1, 130
         base_url = self.url
         cases = []
 
@@ -224,3 +226,20 @@ class Site(OpinionSiteLinear):
 
         logger.info("Backscraping for cases between %s and %s", start, end)
         self.back_scrape_iterable = [(start, end)]
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self._download_backwards((start_date.date(),end_date.date()))
+        self.parse()
+        return len(self.cases)
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "nd"
+
+    def get_state_name(self):
+        return "North Dakota"
+
+    def get_court_name(self):
+        return "Supreme Court of North Dakota"

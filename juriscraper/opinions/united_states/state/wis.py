@@ -2,7 +2,6 @@ import re
 from datetime import date, datetime, timedelta
 from typing import Optional, Tuple
 from urllib.parse import urlencode, urljoin
-
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -15,6 +14,8 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/supreme/scopin.jsp"
+        self.page = 1
+        prev_len =0
         self.status = "Published"
         self.set_url()
         self.cite_regex = (
@@ -40,6 +41,7 @@ class Site(OpinionSiteLinear):
 
         params = {
             "range": "None",
+            "page" : self.page,
             "begin_date": start,
             "end_date": end,
             "sortBy": "date",
@@ -54,6 +56,7 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath(".//table/tbody/tr"):
             date, docket, caption, link = row.xpath("./td")
+            # print(f"caption is {caption.text}")
             self.cases.append(
                 {
                     "date": date.text,
@@ -62,7 +65,7 @@ class Site(OpinionSiteLinear):
                         "https://www.wicourts.gov",
                         link.xpath("./input")[0].name,
                     ),
-                    "docket": docket.text,
+                    "docket": [docket.text],
                 }
             )
 
@@ -80,12 +83,46 @@ class Site(OpinionSiteLinear):
         return {}
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
-        """Set date range from backscraping args and scrape
-
-        :param dates: (start_date, end_date) tuple
-        :return None
-        """
         logger.info("Backscraping for range %s %s", *dates)
-        self.set_url(*dates)
-        self.html = self._download()
-        self._process_html()
+        self.prev_len = 0
+        total_page=0
+        while True:
+            self.set_url(*dates)
+            self.html = self._download()
+            if self.page == 1:
+                total_page = self.html.xpath(
+                    ".//form[@name='frmSubmitForm']//table//table//td//strong[2]/text()")
+                # print(f" {type(self.page)} and {type(total_page)}")
+
+            self._process_html()
+            if (self.page==int(total_page[0].strip())):
+                break
+            self.page += 1
+
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        print(f"crawling between range {start_date} and {end_date}")
+        self._download_backwards((start_date, end_date))
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "wis"
+
+    def get_state_name(self):
+        return "Wisconsin"
+
+    def get_court_name(self):
+        return "Supreme Court of Wisconsin"

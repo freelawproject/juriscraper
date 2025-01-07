@@ -15,9 +15,8 @@ class Site(nev.Site):
         self.court_code = "10002"
 
     def filter_cases(self):
-        """"""
         cases = []
-        for case in self.html:
+        for case in self.filtered_json:
             advances = [case["advanceNumber"] for case in cases]
             if (
                 "COA" not in case["caseNumber"]
@@ -25,4 +24,10 @@ class Site(nev.Site):
             ):
                 continue
             cases.append(case)
-        return cases[:20]
+        return cases
+
+    def get_class_name(self):
+        return "nevapp"
+
+    def get_court_name(self):
+        return "Court of Appeals"

@@ -30,7 +30,6 @@ class Site(OpinionSiteLinear):
         return self._get_optional_field_by_id("case_info_url")
 
     def _get_case_info_html(self):
-        print("in case_info_html")
         return self._get_optional_field_by_id("case_info_html")
 
     def _process_html(self):
@@ -51,7 +50,7 @@ class Site(OpinionSiteLinear):
                 response = requests.get(info_url,
                                         headers=self.request["headers"],
                                         proxies=self.proxies,timeout=120)
-                print(response.status_code)
+                logger.info(response.status_code)
                 if response.status_code == 200:
                     case_info_html = response.text  # Print the response content
                 else:
