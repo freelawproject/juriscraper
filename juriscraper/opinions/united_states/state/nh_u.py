@@ -26,3 +26,6 @@ class Site(nh_p.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.status = "Unpublished"
+
+    def get_class_name(self):
+        return "nh_u"

@@ -95,8 +95,6 @@ class Site(OpinionSiteLinear):
                 )
                 continue
 
-            # "title" format changes since 2024, where a citation string
-            # replaces the docket number, and the docket is in another row
             name = case["title"]
 
             citation = ""
@@ -127,8 +125,8 @@ class Site(OpinionSiteLinear):
                         url,
                     ),
                     "name": name,
-                    "docket": docket,
-                    "citation": citation,
+                    "docket": [docket],
+                    "citation": [citation],
                 }
             )
 
@@ -191,3 +189,32 @@ class Site(OpinionSiteLinear):
             self.back_scrape_iterable = [start]
         else:
             self.back_scrape_iterable = range(start, end + 1)
+
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        year = start_date.year
+        self._download_backwards(year)
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_name(self):
+        return "Supreme Court of New Hampshire"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "nh_p"
+
+    def get_state_name(self):
+        return "New Hampshire"

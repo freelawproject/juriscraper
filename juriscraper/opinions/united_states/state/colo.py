@@ -62,7 +62,6 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self) -> None:
         search_json = self.html
-        print("html is ",search_json)
         logger.info(
             "Number of results %s; %s in page",
             search_json["count"],
@@ -145,7 +144,7 @@ class Site(OpinionSiteLinear):
             self.url=f"{self.base_url}?{urlencode(params)}"
             try:
                 self.html = self._download()  # Attempt to download the page
-                print(f"Loading page {page}")
+                logger.info(f"Loading page {page}")
 
                 search_json = self.html
 
@@ -158,7 +157,7 @@ class Site(OpinionSiteLinear):
 
             except Exception as e:
                 logger.error(f"Error loading page {page}: {e}")
-                print(f"Skipping page {page} due to error: {e}")
+                logger.info(f"Skipping page {page} due to error: {e}")
                 page += 1
         logger.info("Finished backscraping for range %s to %s", start, end)
 

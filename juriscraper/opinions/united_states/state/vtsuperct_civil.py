@@ -17,3 +17,9 @@ class Site(vt.Site):
     # Other vtsuperct_* scrapers will inherit from this one
     # to inherit the same behaviour
     extract_from_text = OpinionSite.extract_from_text
+
+    def get_class_name(self):
+        return "vtsuperct_civil"
+
+    def get_court_name(self):
+        return "Superior Court of Vermont Civil Division"

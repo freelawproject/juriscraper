@@ -30,5 +30,11 @@ class Site(pasuperct.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.regex = re.compile(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")
-        self.params["postTypes"] = "complete,mo,opc,pn,sjo"
+        # self.params["postTypes"] = "complete,mo,opc,pn,sjo"
         self.url = f"{self.base_url}{urlencode(self.params)}"
+
+    def get_court_name(self):
+        return "Commonwealth Court"
+
+    def get_class_name(self):
+        return "pacommwct"

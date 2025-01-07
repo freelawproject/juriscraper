@@ -1,70 +1,75 @@
 from datetime import datetime
+from urllib.parse import quote
 
-from juriscraper.OpinionSite import OpinionSite
 
+# from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.utcourts.gov/opinions/supopin/index.htm"
+        self.url = "http://www.utcourts.gov/opinions/supopin/index-2022.php"
+        self.base_url = "http://www.utcourts.gov/opinions/supopin/"
         self.court_id = self.__module__
+        self.status= "Published"
 
-    def _get_case_names(self):
-        return [
-            name
-            for name in self.html.xpath(
-                '/html/body//div[@id="content"]//p[a[@class="bodylink"]]/a/text()'
-            )
-        ]
-
-    def _get_download_urls(self):
-        return [
-            t
-            for t in self.html.xpath(
-                '/html/body//div[@id="content"]//p[a[@class="bodylink"]]/a/@href'
-            )
-        ]
-
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        for text in self.html.xpath(
-            '/html/body//div[@id="content"]//p[a[@class="bodylink"]]/text()'
-        ):
-            try:
-                parts = text.strip().split(", ")
-                docket_numbers.append(parts[1])
-            except IndexError:
-                # Happens in whitespace-only text nodes.
+    def _process_html(self):
+        for row in self.html.xpath("/html/body//div[@class='w-75 pb-4']/p"):
+            docket , date , citation= None, None, None
+            name=row.xpath("./a/text()")[0]
+            if name == "Back to Appellate Court Opinions":
                 continue
-        return docket_numbers
-
-    def _get_case_dates(self):
-        dates = []
-        for text in self.html.xpath(
-            '/html/body//div[@id="content"]//p[a[@class="bodylink"]]/text()'
-        ):
+            text = row.xpath("./text()")[0]
             parts = text.strip().split(", ")
-            try:
-                caseDate = f"{parts[-3]}, {parts[-2]}"
-                dates.append(datetime.strptime(caseDate, "Filed %B %d, %Y"))
-            except IndexError:
-                # Happens in whitespace-only text nodes.
-                continue
-        return dates
+            if parts[0] != "":
+                name=parts[0]
+                docket = parts[1][-8:]
+                date = f"{parts[2]}, {parts[3]}"
+                citation = parts[4]
+            else:
+                docket=parts[1][-8:]
+                date= f"{parts[2]}, {parts[3]}"
+                citation=parts[4]
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+            url = row.xpath(".//a/@href")[0]
+            pdf_url = quote(url, safe="/:")
+            dt = datetime.strptime(date, "Filed %B %d, %Y")
 
-    def _get_citations(self):
-        neutral_citations = []
-        for text in self.html.xpath(
-            '/html/body//div[@id="content"]//p[a[@class="bodylink"]]/text()'
-        ):
-            try:
-                parts = text.strip().split(", ")
-                if parts[-1]:
-                    neutral_citations.append(parts[-1])
-            except IndexError:
-                # Happens in whitespace-only text nodes.
-                continue
-        return neutral_citations
+            self.cases.append(
+                {
+                    "date": str(dt),
+                    "name": name,
+                    "docket": [docket],
+                    "citation": [citation],
+                    "url": pdf_url,
+                }
+            )
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        if not self.downloader_executed:
+            self.html = self._download()
+            self._process_html()
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "utah"
+
+    def get_state_name(self):
+        return "Utah"
+
+    def get_court_name(self):
+        return "Supreme Court of Utah"

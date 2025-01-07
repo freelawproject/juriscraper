@@ -4,133 +4,118 @@ Court Short Name: D.C.
 Author: V. David Zvenyach
 Date created:2014-02-21
 """
-
-from datetime import datetime
-
-import requests
-from lxml import html
-
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+import re
+from datetime import date, datetime, timedelta
+from typing import Optional, Tuple
+from urllib.parse import urlencode, urljoin
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # self.url = "https://www.dccourts.gov/court-of-appeals/opinions-memorandum-of-judgments?page={}"
-        self.url = "https://www.dccourts.gov/court-of-appeals/opinions-memorandum-of-judgments?page={}"
-        self.page = 0
-        qualifier_no_opinions = (
-            'not(contains(td[2]/span/text(), "NO OPINIONS"))'
-        )
-        qualifier_has_pdf_link = 'contains(.//td[1]/a/@href, ".pdf")'
-        self.base_path = "//table//tr[{} and {}]".format(
-            qualifier_no_opinions,
-            qualifier_has_pdf_link,
-        )
+        self.baseurl = "https://www.dccourts.gov/court-of-appeals/opinions-memorandum-of-judgments"
+        self.page=0
+        self.status = "Published"
 
-    def fetch_html(self, page_number):
-        """Fetch the HTML content of a given page."""
-        url = self.url.format(page_number)
-        response = requests.get(url)
-        if response.status_code == 200:
-            return html.fromstring(response.content)
-        else:
-            raise Exception(
-                f"Failed to load page {page_number}. HTTP Status: {response.status_code}")
+    def _process_html(self) -> None:
+        for row in self.html.xpath(".//table[@class='table table-bordered table-condensed table-hover table-striped']//tbody/tr"):
+            # docket = row.xpath(".//td[1]/a/text()")[0]
+            # url=row.xpath(".//td[1]//a/@href")[0]
+            td_element = row.xpath(".//td[1]")[0]
 
-    def parse_page(self, page_number):
-        """Parse the content of a specific page and return case details."""
-        self.html = self.fetch_html(page_number)
-        docket_numbers = self._get_docket_numbers()
-        download_urls = self._get_download_urls()
-        case_names = self._get_case_names()
-        case_dates = self._get_case_dates()
-        statuses = self._get_precedential_statuses()
+            anchor_tag = td_element.xpath(".//a")
 
-        cases = []
-        for i, case_date in enumerate(case_dates):
-            case = {
-                'docket_number': docket_numbers[i],
-                'download_url': download_urls[i],
-                'case_name': case_names[i],
-                'case_date': case_date,
-                'precedential_status': statuses[i],
-            }
-            cases.append(case)
-        return cases
-    def _get_docket_numbers(self):
-        path = f"{self.base_path}/td[1]/a"
-        return [cell.text_content().strip() for cell in self.html.xpath(path)]
+            if anchor_tag:
+                docket = anchor_tag[0].xpath("text()")[0]
+                url = anchor_tag[0].xpath("@href")[0]
+            else:
+                docket = row.xpath(".//td[1]/text()")[0].strip()
+                url = "null"
+            name = row.xpath(".//td[2]/text()")[0]
+            jud = row.xpath(".//td[5]/text()")[0].strip()
+            if jud == 'Per Curiam':
+                judge = ""
+            else:
+                judge = jud
 
-    def _get_download_urls(self):
-        path = f"{self.base_path}/td[1]/a/@href"
-        return [href for href in self.html.xpath(path)]
+            date_str = row.xpath(".//td[3]/text()")[0].strip()
 
-    def _get_case_names(self):
-        path = f"{self.base_path}/td[2]"
-        return [cell.text_content() for cell in self.html.xpath(path)]
+            date_obj = datetime.strptime(date_str, "%b %d, %Y")
 
-    def _get_case_dates(self):
-        path = f"{self.base_path}/td[3]"
-        return [
-            convert_date_string(cell.text_content())
-            for cell in self.html.xpath(path)
-        ]
+            # Format the date in the desired format
+            formatted_date = date_obj.strftime("%d/%m/%Y")
+            result = re.split(r'[,&]\s*', docket)
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+            disposition = row.xpath(".//td[4]/text()")[0].strip()
 
-    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+            cleaned_list = [item.strip() for item in result]
+            self.cases.append(
+                {
+                    "date": formatted_date,
+                    "url": url,
+                    "name": name.strip(),
+                    "docket": cleaned_list,
+                    "judge":judge,
+                    "disposition":disposition
+                }
+            )
 
-        self.parse()
-        filtered_opinions = []
-        start_date = start_date.date()
-        end_date = end_date.date()
+    def set_url(
+        self, start: Optional[date] = None, end: Optional[date] = None
+    ) -> None:
 
+        if not start:
+            start = datetime.today() - timedelta(days=15)
+            end = datetime.today()
+
+        start = start.strftime("%Y-%m-%d")
+        end = end.strftime("%Y-%m-%d")
+        params = {
+            "field_date_value": start,
+            "field_date_value_1": end,
+            "page": self.page,
+            # "Submit": "Search",
+        }
+        self.url = f"{self.baseurl}?{urlencode(params)}"
+
+    def _download_backwards(self, dates: Tuple[date]) -> None:
+        logger.info("Backscraping for range %s %s", *dates)
         while True:
-            cases = self.parse_page(self.page)
-            if not cases:
-                break
-
-            for case in cases:
-                if start_date <= case['case_date'] <= end_date:
-                    filtered_opinions.append(case)
-
-            # Break if there are no more cases on this page
-            if len(cases) < 20:  # Assuming each page has 20 cases
+            self.set_url(*dates)
+            self.html = self._download()
+            cases_before = len(self.cases)
+            self._process_html()
+            cases_after = len(self.cases)
+            if cases_after == cases_before:
+                logger.info("No more cases found. Stopping pagination.")
                 break
 
             self.page += 1
 
-        return len(filtered_opinions)
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        print(f"start date is {start_date} and end date is {end_date}")
+        self._download_backwards((start_date, end_date))
 
-        # start_date = start_date.date()
-        # end_date = end_date.date()
-        # case_dates = self._get_case_dates()
-        # filtered_opinions = []
-        #
-        # # filet cases based in date range
-        # for i, case_date in enumerate(case_dates):
-        #     if start_date <= case_date <= end_date:
-        #         opinion ={
-        #             'docket_number':self._get_docket_numbers()[i],
-        #             'download_url': self._get_download_urls()[i],
-        #             'case_name': self._get_case_names()[i],
-        #             'case_date': case_date,
-        #             'precedential_status': self._get_precedential_statuses()[i],
-        #         }
-        #         filtered_opinions.append(opinion)
-        # # for opinion in filtered_opinions:
-        # #     print(opinion)
-        # return len(filtered_opinions)
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return 0
 
     def get_class_name(self):
         return "dc"
 
     def get_court_name(self):
-        return "D.C. Court of Appeals"
+        return "Court Of Appeals"
 
     def get_state_name(self):
         return "District Of Columbia"

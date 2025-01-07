@@ -33,7 +33,6 @@ class Site(OpinionSiteLinear):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        print("inside conn")
         self.court_id = self.__module__
         self.status = "Published"
 

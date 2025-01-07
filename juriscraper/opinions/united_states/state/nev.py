@@ -6,10 +6,8 @@ History:
 """
 
 import json
-
-from lxml.html import fromstring
-
-from juriscraper.DeferringList import DeferringList
+from datetime import datetime
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -18,14 +16,15 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://publicaccess.nvsupremecourt.us/WebSupplementalAPI/api/AdvanceOpinions"
-        self.search = "https://caseinfo.nvsupremecourt.us/public/caseSearch.do"
-        self.xp = "//tr[td[contains(text(), 'Opinion')]]/td/a/@href"
+        self.pdfurl = "https://publicaccess.nvsupremecourt.us/WebSupplementalAPI/api/urlRequest/doc/"
         self.status = "Published"
         self.court_code = "10001"
         self.headers = {
             "Referer": "https://nvcourts.gov/",
             "XApiKey": "080d4202-61b2-46c5-ad66-f479bf40be11",
+            # "Origin":"https://nvcourts.gov/"
         }
+        self.filtered_json=[]
 
     def _download(self, **kwargs):
         """Download the JSON to parse
@@ -33,9 +32,11 @@ class Site(OpinionSiteLinear):
         :param kwargs:
         :return: None
         """
+        logger.info(f"Now downloading case page at: {self.url}")
         if self.test_mode_enabled():
             return json.load(open(self.url))
         return (
+
             self.request["session"]
             .get(
                 self.url,
@@ -53,7 +54,7 @@ class Site(OpinionSiteLinear):
         :return: List of cases to download
         """
         cases = []
-        for case in self.html:
+        for case in self.filtered_json:
             advances = [case["advanceNumber"] for case in cases]
             if (
                 "COA" in case["caseNumber"]
@@ -61,61 +62,83 @@ class Site(OpinionSiteLinear):
             ):
                 continue
             cases.append(case)
-        return cases[:20]
+        return cases
 
     def _process_html(self):
         """Process Nevada Case Opinions
 
         :return: None
         """
-        for case in self.filter_cases():
+        fil_cases = self.filter_cases()
+
+        for case in fil_cases:
+            logger.info(f"fetching the details of the case with docket : {case['caseNumber']}")
+
+            self.docurl=case['caseTitle']
             vol = int(case["date"].split("-")[0]) - 1884
             citation = f"{vol} Nev., Advance Opinion {case['advanceNumber']}"
+
+            if len(case['caseTitle'].strip().split("C/W"))==1:
+                name = case['caseTitle'].strip()
+                docket = [case['caseNumber']]
+            else:
+                name = case['caseTitle'].split("C/W")[0].strip()
+                docket = [case['caseNumber']]
+                docket = docket + case['caseTitle'].strip().split("C/W")[1].strip().split("/")
+
+            pdf_url = self.get_pdf_url(case['docurl'])
+
             self.cases.append(
                 {
-                    "citation": citation,
-                    "name": case["caseTitle"],
-                    "docket": case["caseNumber"],
-                    "date": case["date"],
-                    "url": "placeholder",
+                    "citation": [citation],
+                    "name": name,
+                    "docket": docket,
+                    "date": case['date'],
+                    "url": pdf_url,
                 }
             )
 
-    def fetch_document_link(self, csNumber: str):
-        """Fetch document url
+    def get_pdf_url(self,dourl : str):
+        u=f"{self.pdfurl}%20{dourl}"
+        url_json = self.request["session"].get(u,headers=self.headers).json()
+        return url_json['value']
 
-        Using case number - make a request to return the case page and
-        find the opinion
+    def filter_records_by_date_range(self,data, start_date: datetime, end_date: datetime):
 
-        :param csNumber: the docket number/cs number to search
-        :return: the document url
-        """
-        data = {
-            "action": "",
-            "csNumber": csNumber,
-            "shortTitle": "",
-            "exclude": "off",
-            "courtID": self.court_code,
-            "startRow": "1",
-            "displayRows": "50",
-            "orderBy": "CsNumber",
-            "orderDir": "DESC",
-            "href": "/public/caseView.do",
-            "submitValue": "Search",
-        }
-        content = self.request["session"].post(self.search, data=data).text
-        slug = fromstring(content).xpath(self.xp)[-1]
-        return f"https://caseinfo.nvsupremecourt.us{slug}"
+        filtered_records = [
+            record for record in data
+            if start_date <= datetime.strptime(record["date"],
+                                               "%Y-%m-%dT%H:%M:%S") <= end_date
+        ]
+        return filtered_records
 
-    def _get_download_urls(self):
-        """Get download urls
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        if not self.downloader_executed:
+            self.html = self._download()
+            self.filtered_json = self.filter_records_by_date_range(self.html, start_date, end_date)
 
-        :return: List URLs
-        """
+            self._process_html()
 
-        def fetcher(case):
-            if self.test_mode_enabled():
-                return case["url"]
-            return self.fetch_document_link(case["docket"])
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
 
-        return DeferringList(seed=self.cases, fetcher=fetcher)
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_class_name(self):
+        return "nev"
+
+    def get_court_name(self):
+        return "Supreme Court"
+
+    def get_state_name(self):
+        return "Nevada"
+
+    def get_court_type(self):
+        return "state"

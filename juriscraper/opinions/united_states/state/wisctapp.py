@@ -64,8 +64,13 @@ class Site(wis.Site):
                     "date": date.text,
                     "name": name.strip(),
                     "url": url,
-                    "docket": docket_number,
+                    "docket": [docket_number],
                     "status": status,
                     "lower_court": lower_court,
                 }
             )
+    def get_class_name(self):
+        return "wisctapp"
+
+    def get_court_name(self):
+        return "Wisconsin Court of Appeals"

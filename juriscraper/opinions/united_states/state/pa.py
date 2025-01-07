@@ -5,16 +5,20 @@ Court Short Name: pa
 """
 
 import re
+import urllib.parse
 from datetime import date, datetime, timedelta
 from typing import Dict, Tuple
 from urllib.parse import urlencode
+
+from lxml import html
+from selenium.webdriver.common.devtools.v85.profiler import start
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    court = "Supreme"
+    court = "SUPREME"
     base_url = "https://www.pacourts.us/api/opinion?"
     document_url = "https://www.pacourts.us/assets/opinions/{}/out/{}"
     days_interval = 20
@@ -34,7 +38,8 @@ class Site(OpinionSiteLinear):
             "startDate": start.strftime(self.api_dt_format),
             "endDate": now.strftime(self.api_dt_format),
             "courtType": self.court,
-            "postTypes": "cd,cds,co,cs,dedc,do,ds,mo,oaj,pco,rv,sd",
+            # "postTypes": "cd,cds,co,cs,dedc,do,ds,mo,oaj,pco,rv,sd",
+            # "pageNumber":0,
             "sortDirection": "-1",
         }
         self.url = f"{self.base_url}{urlencode(self.params)}"
@@ -64,15 +69,20 @@ class Site(OpinionSiteLinear):
                         author_str = ""
                         per_curiam = True
 
-                url = self.document_url.format(self.court, op["FileName"])
+                # url = self.document_url.format(self.court, op["FileName"])
+                url=f"https://www.pacourts.us/assets/opinions/{self.court}/out/{op['FileName']}?cb=1"
+                encoded_url = urllib.parse.quote(url, safe=":/?&=")
                 status = self.get_status(op)
+                post_type = op["PostType"]["PostingTypeId"]
+
                 self.cases.append(
                     {
                         "date": disposition_date,
                         "name": name,
-                        "docket": docket,
-                        "url": url,
+                        "docket": [docket.strip()],
+                        "url": encoded_url,
                         "judge": author_str,
+                        "type":post_type,
                         "status": status,
                         "per_curiam": per_curiam,
                     }
@@ -118,7 +128,42 @@ class Site(OpinionSiteLinear):
         start, end = dates
         self.params["startDate"] = start.strftime(self.api_dt_format)
         self.params["endDate"] = end.strftime(self.api_dt_format)
-        self.url = f"{self.base_url}{urlencode(self.params)}"
-        logger.info("Backscraping for range %s %s", *dates)
-        self.html = self._download()
-        self._process_html()
+        page=1
+        while True:
+            self.params["pageNumber"] = page
+            self.url = f"{self.base_url}{urlencode(self.params)}"
+            logger.info("Backscraping for range %s %s", *dates)
+            self.html = self._download()
+            json_res = self.html
+            if not json_res["Items"]:
+                break
+            self._process_html()
+            page += 1
+
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self._download_backwards((start_date , end_date))
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_name(self):
+        return "Supreme Court of Pennsylvania"
+
+    def get_state_name(self):
+        return "Pennsylvania"
+
+    def get_class_name(self):
+        return "pa"
+
+    def get_court_type(self):
+        return "state"

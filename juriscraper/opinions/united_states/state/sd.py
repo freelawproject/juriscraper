@@ -53,7 +53,7 @@ class Site(OpinionSiteLinear):
                     "name": titlecase(title.rsplit(",", 1)[0]),
                     "citation": cite[0],
                     "url": url,
-                    "docket": docket,
+                    "docket": [docket],
                 }
             )
 
@@ -151,3 +151,34 @@ class Site(OpinionSiteLinear):
             },
         }
         return metadata
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        y = start_date.year
+        self._download_backwards(y)
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            # This needs to be done *after* _clean_attributes() has been run.
+            # The current architecture means this gets run twice. Once when we
+            # iterate over _all_attrs, and again here. It's pretty cheap though.
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_class_name(self):
+        return "sd"
+
+    def get_court_name(self):
+        return "Supreme Court of South Dakota"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "South Dakota"

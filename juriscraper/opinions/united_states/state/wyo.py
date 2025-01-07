@@ -52,8 +52,8 @@ class Site(OpinionSiteLinear):
                     "name": f"{opinion['Appellant']} v. {opinion['Appellee']}",
                     "url": url,
                     "date": date_filed,
-                    "docket": opinion["DocketNumber"],
-                    "citation": opinion["OpinionID"],
+                    "docket": [opinion["DocketNumber"]],
+                    "citation": [opinion["OpinionID"]],
                 }
             )
 
@@ -114,3 +114,30 @@ class Site(OpinionSiteLinear):
             end = datetime.now()
 
         self.back_scrape_iterable = [(start, end)]
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self._download_backwards((start_date,end_date))
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+
+        return len(self.cases)
+
+    def get_court_name(self):
+        return "Supreme Court of Wyoming"
+
+    def get_state_name(self):
+        return "Wyoming"
+
+    def get_class_name(self):
+        return "wyo"
+
+    def get_court_type(self):
+        return "state"

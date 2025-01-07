@@ -90,7 +90,6 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        print("inside process html")
         if not self.test_mode_enabled():
             # Make our post request to get our data
             self.method = "POST"
@@ -100,7 +99,6 @@ class Site(OpinionSiteLinear):
         # rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
         rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[contains(@class, 'rgRow') or contains(@class, 'rgAltRow')]"
         for row in self.html.xpath(rows_xpath):
-            print("inside for loop")
             # In texas we also have to ping the case page to get the name
             # this is unfortunately part of the process.
             self.seeds.append(row.xpath(".//a")[2].get("href"))
@@ -111,7 +109,6 @@ class Site(OpinionSiteLinear):
                     "url": row.xpath(".//a")[1].get("href"),
                 }
             )
-            print(f"inserted value is {self.cases}")
 
         next_page_xpath = (
             "//input[@title='Next Page' and not(@onclick='return false;')]"
@@ -186,10 +183,8 @@ class Site(OpinionSiteLinear):
         self.next_page = None
         self.is_first_request = True
         # Process the HTML and handle pagination
-        print("processing html")
         self._process_html()
         self.parse()
-        print(f"length of the cases is {len(self.cases)}")
         # Return the number of cases found
         return len(self.cases)
 
