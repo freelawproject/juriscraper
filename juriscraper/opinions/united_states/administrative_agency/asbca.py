@@ -24,6 +24,9 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         # Exclude headers and rows that only have the month name
+        if self.test_mode_enabled():
+            self.year = "2024"
+
         rows = self.html.xpath(
             "//tr[not(th) and not(.//span[@style='background-color:#F8C100;'])]"
         )
