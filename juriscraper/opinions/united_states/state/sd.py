@@ -142,12 +142,15 @@ class Site(OpinionSiteLinear):
         """
 
         # The docket number appears to be the first text on the page.
-        # So I crop the text to avoid any confusion that might occur in the
+        # So we crop the text to avoid any confusion that might occur in the
         # body of an opinion.
-        docket = re.findall(r"#\d+.*-.-\w{3}", scraped_text[:100])[0]
+        docket = re.findall(r"#\d+.*-.-\w{3}", scraped_text[:100])
+        if not docket:
+            return {}
+
         metadata = {
             "Docket": {
-                "docket_number": docket,
+                "docket_number": docket[0],
             },
         }
         return metadata

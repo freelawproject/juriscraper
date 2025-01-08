@@ -167,9 +167,10 @@ class Site(OpinionSiteLinear):
         """
         months = "|".join(calendar.month_name[1:])
         date_pattern = re.compile(rf"({months})\s+\d{{1,2}}\s?,?\s+\d{{4}}")
-        match = re.search(date_pattern, scraped_text)
-        date_extracted = match.group(0) if match else ""
-        date_filed = re.sub(r"\s+", " ", date_extracted).strip()
+        if match := re.search(date_pattern, scraped_text):
+            date_filed = re.sub(r"\s+", " ", match.group(0)).strip()
+        else:
+            return {}
 
         metadata = {
             "OpinionCluster": {

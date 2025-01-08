@@ -1,4 +1,5 @@
 import datetime
+import logging
 import unittest
 
 from juriscraper.lib.importer import build_module_list
@@ -752,16 +753,27 @@ class ScraperExtractFromText(unittest.TestCase):
 
     def test_extract_from_text(self):
         """Test that extract_from_text returns the expected data."""
+        # prevent logger.error calls to be triggered
+        logging.disable(logging.CRITICAL)
         for module_string, test_cases in self.test_data.items():
             package, module = module_string.rsplit(".", 1)
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
             site = mod.Site()
+
+            # ensure that if no data is parsed, a dict is returned
+            # also, this ensures that there are no uncontrolled exceptions
+            self.assertTrue(
+                isinstance(
+                    site.extract_from_text("Lorem ipsum dolorem..."), dict
+                )
+            )
             for test_case in test_cases:
                 self.assertEqual(
                     site.extract_from_text(test_case[0]), test_case[1]
                 )
+        logging.disable(logging.NOTSET)
 
     def test_extract_from_text_properly_implemented(self):
         """Ensure that extract_from_text is properly implemented."""
