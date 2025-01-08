@@ -9,7 +9,7 @@ Date created: 21 July 2014
 
 import re
 from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict
 from urllib.parse import urlencode
 
 from juriscraper.opinions.united_states.state import pa
@@ -61,7 +61,7 @@ class Site(pa.Site):
             )
         return author_str
 
-    def extract_from_text(self, scraped_text: str) -> Optional[Dict]:
+    def extract_from_text(self, scraped_text: str) -> Dict:
         """Get neutral citation from the first lines in the first page
 
         Not all scraped opinions have them
@@ -73,3 +73,5 @@ class Site(pa.Site):
             cite_data = cite_match.groupdict()
             cite_data["type"] = 8  # Neutral citation
             return {"Citation": cite_data}
+
+        return {}
