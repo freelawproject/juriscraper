@@ -16,6 +16,15 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.49 - 2024-01-08**
+
+- Fixes:
+  - `nh` scrapers no longer depend on harcoded year filter
+  - Fixed `absca` tests that were failing due to change of year
+  - `pasuperct` now collects citations
+  - `pa`, `pasuperct` and `pacommcwt` now paginate results
+
+
 **2.6.48 - 2024-12-31**
 
 - Fixes:
