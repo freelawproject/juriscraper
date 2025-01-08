@@ -28,6 +28,11 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    """
+    Regular site:
+    https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/opinions
+    """
+
     # document_purpose = 1331 -> Supreme Court Opinion
     base_filter = "{}@field_document_purpose|=|1331"
     year_to_filter = {
@@ -111,7 +116,7 @@ class Site(OpinionSiteLinear):
                     for match in self.docket_regex.finditer(case["title"])
                 ]
             )
-            if not docket:
+            if not docket and fields.get("field_description"):
                 docket_str = fields["field_description"][0]["#text"]
                 docket = self.docket_regex.search(docket_str).group(0)
 
@@ -154,11 +159,14 @@ class Site(OpinionSiteLinear):
 
         :param year: full year integer
         """
+        year_filter = (
+            "" if not self.back_scrape_iterable else self.year_to_filter[year]
+        )
         params = {
             "iterate_nodes": "true",
             # Will raise a KeyError if there is no proper year key, we will
             # need to manually correct this next year
-            "q": self.base_filter.format(self.year_to_filter[year]),
+            "q": self.base_filter.format(year_filter),
             "sort": "field_date_posted|desc|ALLOW_NULLS",
             "filter_mode": self.filter_mode,
             "type": "document",
