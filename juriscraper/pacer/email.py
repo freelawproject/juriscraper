@@ -57,6 +57,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.docket_numbers = []
         self.subject = None
         self.case_names = []
+        self.raw_docket_numbers = set()
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
         else:
@@ -169,19 +170,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if self._is_appellate():
             path = self._sibling_path("Case Number")
             case_number = self._xpath_text_0(current_node, f"{path}/a")
+            self.raw_docket_numbers.add(case_number)
             return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
+        docket_numbers_str = current_node.xpath(f"{path}/a/text()")
+        self.raw_docket_numbers.update(set(docket_numbers_str))
         docket_number, docket_number_components = (
-            self._parse_docket_number_strs(
-                current_node.xpath(f"{path}/a/text()")
-            )
+            self._parse_docket_number_strs(docket_numbers_str)
         )
         if not docket_number:
+            docket_numbers_str = current_node.xpath(f"{path}/p/a/text()")
+            self.raw_docket_numbers.update(set(docket_numbers_str))
             docket_number, docket_number_components = (
-                self._parse_docket_number_strs(
-                    current_node.xpath(f"{path}/p/a/text()")
-                )
+                self._parse_docket_number_strs(docket_numbers_str)
             )
         return docket_number, docket_number_components
 
@@ -199,6 +201,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         email_body = self.tree.text_content()
         regex = r"Case Number:(.*)"
         docket_number = re.findall(regex, email_body)
+        self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
     def _get_date_filed(self) -> date:
@@ -396,7 +399,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             docket_number, docket_number_components = (
                 self._parse_docket_number_plain()
             )
-            docket_number = docket_number
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
@@ -551,12 +553,17 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :return: The parsed short description.
         """
         # Some courts have subjects like
-        # `Multiple Cases "{docket} {case name} Close Adversary Case"`
-        if "close adversary case" in subject.lower():
-            return "Close Adversary Case"
+        # `Multiple Cases "{docket} {case name} Close [Aa]dversary [Cc]ase" - {initials}`
+        if close_adv_match := re.search(
+            r"close adversary case", subject, flags=re.IGNORECASE
+        ):
+            return close_adv_match.group(0)
 
         short_description = ""
-        for part in self.docket_numbers + self.case_names:
+
+        raw_docket_numbers = [i.strip() for i in self.raw_docket_numbers]
+        raw_docket_numbers.sort(key=len, reverse=True)  # use longest first
+        for part in raw_docket_numbers + self.docket_numbers + self.case_names:
             subject = subject.replace(part, " ")
 
         # Sometimes the full case name is not used in the `subject`
@@ -567,20 +574,19 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             subject = subject.replace(case_name.split(" and ")[0], " ")
 
         # Deletes:
-        # - extra docket number 'components', such as `federal_dn_judge_initials_assigned`
-        #     these are usually 3 letters long. However, we want to keep some special acronyms
-        #     such as MOR (Merchant of Record?)
         # - "NEF: " placeholder
-        component_regex = r"((?!-MOR)(\-[A-Z]{2,}))|(\-[a-z]{2,})|(NEF:? )"
-        if self.court_id in ["paeb", "pamb", "casb"]:
-            # keeps the "Chapter ..." description on the short description
-            chapter_regex = r"(C[Hh][- ]?(13|7|9|11))|(C[hH][\s-]*$)"
-        else:
-            chapter_regex = r"(C[Hh](apter)?[- ]?(13|7|9|11))|(C[hH][\s-]*$)"
-
-        cleanup_regex = rf"{component_regex}|{chapter_regex}"
+        # - "Ch \d{1,2}" abbreviations
+        cleanup_regex = r"(NEF:? )|(C[Hh][- ]?(7|9|11|13))|(C[hH][\s-]*$)"
         subject = re.sub(cleanup_regex, " ", subject)
-        subject = subject.strip(" -;:, ")
+
+        # Courts like `nhb` do not use the "Ch \d{1,2}" abbreviation
+        # and we must delete the "Chapter..." string; but only once
+        # See nhb_2 for an example with 2 "Chapter..." strings
+        if self.court_id in ["nhb"]:
+            chapter_regex = r"Chapter[- ]?(7|9|11|13)"
+            subject = re.sub(chapter_regex, " ", subject, 1)
+
+        subject = subject.strip(" ;:,- ")
         # some courts use "Re: {case name}"
         short_description = re.sub("( Re$)|(^Re:? )", "", subject)
 

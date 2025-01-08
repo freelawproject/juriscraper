@@ -1,33 +1,33 @@
-Return-Path: <court_test@cacb.uscourts.gov>
+Return-Path: <cmecfhelpdesk@cacb.uscourts.gov>
 Received: from icmecf201.gtwy.uscourts.gov (icmecf201.gtwy.uscourts.gov [63.241.40.204])
- by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4qi4f6vf121uih2gdltqsq64ld5fbnn4j72lcq01
- for recipient@example.com;
- Tue, 04 Oct 2022 21:40:29 +0000 (UTC)
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id f086thkp632ni7ho26h2cp3m57475aoo531l0rg1
+ for user@recap.email;
+ Wed, 15 Feb 2023 19:05:58 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
-Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=court_test@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+Received-SPF: pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
 Authentication-Results: amazonses.com;
- spf=pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=court_test@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
+ spf=pass (spfCheck: domain of cacb.uscourts.gov designates 63.241.40.204 as permitted sender) client-ip=63.241.40.204; envelope-from=cmecfhelpdesk@cacb.uscourts.gov; helo=icmecf201.gtwy.uscourts.gov;
  dmarc=none header.from=cacb.uscourts.gov;
-X-SES-RECEIPT: AEFBQUFBQUFBQUFGbGl2NXRlSU1oOHN2UEI5VlY3aks0aVRIeFVwWUVpQW9uaTloT2Z5YUE0QlV6RzA2Skdrc3JnRVpISXRtTWJBZUQ5TytFRk1zS1BQWlkzWWp2dS9OamQyK3pLWGhDaGFOUXB6MG45YmZ0L3ZJcGdWK3V0Slg3dUdBVXZWOCtwblRMSHhyNmdXamJZY09hd2JCYThFRVEzemQzZHZ6TVNvWTRxOGlTYnpoK2xtTDc3SGV4bzRMcEF6aFZCTUYyRzdwOXExK3ozWFFsdkg0WDZpTTZ6QUY0NGVKK2tjN1BEajQweG1nait0VEM4TUVJblBwV1ZZUjR0K2JuRy9TdlNjbFdhMi9McXBIcFdSdHl0TVl0M3V6WjlVb3gzRkhrQS8wQStLUTlUYWZySGo5Q0tTL3J2cExkeFpuQkhWSDZEaEk9
-X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=kMfg+anNhSY8jonv/o7qiHzGOmonSKX5pNuKtJST5NivHvYVtM/Jt+5sKDciDbbjeEicJ/drZYdEvc2h4od1dTT8B+BeFdzEJW+sOZxWtsbk06xO6PSLfJEFo2i6nPQIzswzkS8VEmwo6VROc79uKqgWpXAbAk/gYdYQMpGsiKo=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1664919629; v=1; bh=OmOKVyWfAuxyGyhfWgehPtPWdAl9RFb3IbTsQgePhG4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGSkRsMElEeHNURW9JdS9OTUpBaDY1WGJYdHRUR3dpd3RCeElONSs1NEhUeUJUejZCMkJ5dFFxVThqNmNTS280SVJhNTEveXp2dkU2SkZ3NUc4SXk5T0k1SUhqWG5lUFdVZ2hWdHlNb1luWlhWWHlRdXdQQzBsQnV6SmhwOVEySVA2ajBCakpKbGgrQk94RDR0RG5Samh5WjhXNTdFWk1ZcnJRV05HVC8zOTdzQW1CdDRLdFdzbDQvSGJLMHdnekljZTBjVGtLdkJLRWtBZ0xHa0ZVeDZFcU9IT0FpZ3NxZjNnVlFVa3Azdk8yWU1Idk5yN2JSTzNpcW1IQzU4VjdrcDdCRlVURWkvSFBMam9QNmw4a0dmK0l1aUhlVFZTZUlsM3lid2F3Q0tpSnp1dUNlVjhVWVo2ZTRGSG51Smtjblk9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=cyXVrqqoX2hgFA2XPCej1hlEGbluwv2Ox2WNe6t35+t9tfhd9Ph8dOMETcdyzatjzDvONU8enJROV8YWdh8AWOIOMs35snGKrgE667Vv6gc5SrAfeEnlcUpZV0yEsPSgSMLdMF7E3V3lPRExu50gRwqhA3v7RGX1A05XGwkbm0s=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1676487959; v=1; bh=Tw3rhcsR47lIUsxr8IkHEZyLE/vCL1ppyfg937qipHc=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
 X-SBRS: None
 X-REMOTE-IP: 156.119.56.188
 Received: from cacbdb.cacb.gtwy.dcn ([156.119.56.188])
-  by icmecf201.gtwy.uscourts.gov with ESMTP; 04 Oct 2022 17:40:28 -0400
+  by icmecf201.gtwy.uscourts.gov with ESMTP; 15 Feb 2023 14:05:58 -0500
 Received: from cacbdb.cacb.gtwy.dcn (localhost.localdomain [127.0.0.1])
-	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 294LeMLp117731;
-	Tue, 4 Oct 2022 14:40:23 -0700
+	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4) with ESMTP id 31FJ5BJO093254;
+	Wed, 15 Feb 2023 11:05:13 -0800
 Received: (from ecf_web@localhost)
-	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4/Submit) id 294Le2sC117113;
-	Tue, 4 Oct 2022 14:40:02 -0700
-Date: Tue, 4 Oct 2022 14:40:02 -0700
-X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to court_test@cacb.uscourts.gov using -f
+	by cacbdb.cacb.gtwy.dcn (8.14.4/8.14.4/Submit) id 31FJ59NW093057;
+	Wed, 15 Feb 2023 11:05:09 -0800
+Date: Wed, 15 Feb 2023 11:05:09 -0800
+X-Authentication-Warning: cacbdb.cacb.gtwy.dcn: ecf_web set sender to cmecfhelpdesk@cacb.uscourts.gov using -f
 MIME-Version:1.0
-From:court_test@cacb.uscourts.gov
+From:cmecfhelpdesk@cacb.uscourts.gov
 To:Courtmail@cacb.uscourts.gov
-Message-Id:<103122209@cacb.uscourts.gov>
-Subject:6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
+Message-Id:<103732686@cacb.uscourts.gov>
+Subject:6:21-ap-01071-SC ORDER to continue/reschedule hearing (BNC-PDF)
 Content-Type: text/html
 
 <p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
@@ -41,7 +41,7 @@ Content-Type: text/html
 Notice of Electronic Filing
 <BR>
 <div>
-<BR>The following transaction was received from Nichole Glowin entered on 10/4/2022 at 2:40 PM PDT and filed on 10/4/2022 
+<BR>The following transaction was received from AutoDocket, CIAO-User entered on 02/15/2023  at 10:37 AM  PST and filed on 02/15/2023 
 
 <BR>
 
@@ -49,12 +49,12 @@ Notice of Electronic Filing
 
 <table border=0 cellspacing=0>
 <tr><td><strong>Case Name:</strong>
-</td><td>Maximo Arturo Arriola                             </td></tr>
-<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.cacb.uscourts.gov/cgi-bin/DktRpt.pl?1952165>6:22-bk-13643-SY</A></td></tr>
+</td><td>Lee v. Newman                                            </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.cacb.uscourts.gov/cgi-bin/DktRpt.pl?1927388>6:21-ap-01071-SC</A></td></tr>
 
 <tr><td><strong>Document Number:</strong></td>
 <td>
-<a href='https://ecf.cacb.uscourts.gov/doc1/9730105870952?pdf_header=&magic_num=25971254&de_seq_num=39&caseid=1952165'>11</a>
+<a href='https://ecf.cacb.uscourts.gov/doc1/9730106502427?pdf_header=&magic_num=94356268&de_seq_num=252&caseid=1927388'>76</a>
 </td></tr>
 </table>
 
@@ -64,18 +64,15 @@ Notice of Electronic Filing
 <p><strong>Docket Text:</strong>
 
 <BR>
-Request for courtesy Notice of Electronic Filing (NEF) <i></i>  Filed by Glowin, Nichole.   (Glowin, Nichole)
+Order granting stipulation to continue pre-trial conference from 2/28/23 to 4/25/23 @ 10:00 a.m. (BNC-PDF) (Related Doc # [75]) Signed on 2/15/2023 (JC6)
 </p>
 
 <p>The following document(s) are associated with this transaction:</p>
 <table>
-<STRONG>Document description:</STRONG>Main Document  
-<BR><STRONG>Original filename:</STRONG>NEF FOR FILING - ARRIOLA.pdf
-<BR><STRONG>Electronic document
- Stamp:</STRONG>
-<BR><TAB>[STAMP bkecfStamp_ID=1106918562 [Date=10/4/2022] [FileNumber=103122207
-<BR><TAB>-0] [0a8098691c134d64ab67f9c1a54cd3bca4bed423244f4f0790269da84d36ec4f8
-<BR><TAB>7997cb6a58536e8961bfcec236aefc460e38fcd4479c11ae2b06762b7541417]]
+<STRONG>Document description:</STRONG>Main Document
+<BR><STRONG>Original filename:</STRONG>/data/docs0/ECF/ADI/cacb_live/realtime/documents/cdcbbab3-e2cd-4625-b06f-53522d662225.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1106918562 [Date=02/15/2023] [FileNumber=103732406-0] [a400daefa90430e46c061a209095155700b50778d5e6b77aaeb77e450c8a44bf3521e6258f250debf76dca79a24273baeb803ee02251a15bfee9f21993921b8a]]
 <BR>
 
 </table>
@@ -85,17 +82,34 @@ Request for courtesy Notice of Electronic Filing (NEF) <i></i>  Filed by Glowin,
 
 
 <BR><B>
-6:22-bk-13643-SY Notice will be electronically mailed to:
+6:21-ap-01071-SC Notice will be electronically mailed to:
 </B>
+
+<BR>
+
+<BR><span class="personName">Suzanne C Grandt on behalf of Interested Party   The State Bar of California</span>
+<br>suzanne.grandt@calbar.ca.gov,  joan.randolph@calbar.ca.gov
+<BR>
+<BR><span class="personName">Howard B Grobstein (TR)</span>
+<br>hbgtrustee@gtllp.com,  C135@ecfcbis.com
+<BR>
+<BR><span class="personName">Firstname LastName on behalf of Plaintiff Chloe Taekyeong Lee</span>
+<br>a@gmail.com,  x@recap.email,x@y.net
+<BR>
+<BR><span class="personName">Donald W Reid on behalf of Defendant Michael Paul Newman</span>
+<br>don@donreidlaw.com,  ecf@donreidlaw.com
+<BR>
+<BR><span class="personName">  United States Trustee (RS)</span>
+<br>ustpregion16.rs.ecf@usdoj.gov
+<BR>
 
 <BR>
 <B>
-6:22-bk-13643-SY Notice will not be electronically mailed to:
+6:21-ap-01071-SC Notice will not be electronically mailed to:
 </B>
 
 <BR>
 
-<BR>
 <BR>
 
 <BR>

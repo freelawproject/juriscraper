@@ -1,0 +1,94 @@
+Return-Path: <cmecf@ianb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ugnddj3kc9h37vb98bravr1ufqfiolpsoqsik501
+ for user@recap.email;
+ Fri, 07 Jun 2024 21:35:37 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ianb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf@ianb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ianb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=cmecf@ianb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=ianb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGVXB0Wk5CY3p0VnB0VjJmTWNybE1Cb0tCakxhVmN1WFFDSGg4cUJvOWtPc0xRMlFqTjZmeVRzRUNSeHE2UFRrdW1wUkx6YzMxcEtzK1Z3VzVyQVJsK0QzTTBvKys3TnZmNm52MGc2bnkwbEFLMmJWWElPNXdHQlIwNHRtQmZxeUI3MTdLT3pDVlptYUlSdVFlWG5GeVN0T2dPelA2ZHFadUh0anB3dk5XaDNUZ0dCeU1zTVI1enhZeHp5TnF5R1h2OVllUHFtWVRjN1R5WXA3QU1zek4zTnJhSmthSElqZk9nR3ROK2JMK24zU0dBakpwY2cvdUlTYUJsUEUxdW1EcEtqcWNoQ0RLSE1nNjFSNmd2cm05a1NMR2YxeWRUVFp1RlhjSTZ0TWhmU3c9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=2VNGxWppb9ezBlmzejFwug/2Wi6cS0UMfO/U3mmomWRHrF58Zc3vwdPPcYOMpw1hBQoIWqv5BbFKMqVv7w/wBPimwyPvDF7p8k6xJCnsbBugTeYxGFjwfbGIj9Y/Vxu1tBy4ehYMFgkHqNoVjj6/ptMaXBeL7J4YV9NDGEuC0ic=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1717796138; v=1; bh=zNCGb7Lp20bGQOlD04NdeoV0gD2EpLb5svAW8jTviuM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.127
+Received: from ianbdb.ianb.gtwy.dcn ([156.119.56.127])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 07 Jun 2024 17:35:36 -0400
+Received: from ianbdb.ianb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ianbdb.ianb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 457LY5e1055029;
+	Fri, 7 Jun 2024 16:34:19 -0500
+Received: (from ecf_web@localhost)
+	by ianbdb.ianb.gtwy.dcn (8.14.7/8.14.4/Submit) id 457LXorj054796;
+	Fri, 7 Jun 2024 16:33:50 -0500
+Date: Fri, 7 Jun 2024 16:33:50 -0500
+MIME-Version:1.0
+From:cmecf@ianb.uscourts.gov
+To:courtmail@ianb.uscourts.gov
+Message-Id:<4516908@ianb.uscourts.gov>
+Subject:23-00623 Order Confirming Chapter 11 Plan
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>United States Bankruptcy Court</strong></p>
+
+<p align=center><strong>Northern District of Iowa</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from nbec entered on 6/7/2024 at 4:33 PM CDT and filed on 6/7/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Mercy Hospital, Iowa City, Iowa                   </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ianb.uscourts.gov/cgi-bin/DktRpt.pl?108151>23-00623</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ianb.uscourts.gov/doc1/07404406548?pdf_header=&magic_num=85473386&de_seq_num=4579&caseid=108151'>1114</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Findings of Fact, Conclusions of Law, and Order Confirming Debtors' Joint Chapter 11 Plan of Liquidation Ordered on 6/7/2024. (related document(s)[929] Plan, [993] Plan, Disclosure Statement, [1050] Plan)   (nbec)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>23-623order.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=993675052 [Date=6/7/2024] [FileNumber=4516906-0] 
+<BR><TAB>[d845946fdd0c2101a63e2624a3f2aa37418a5dd40162f70435d03c799c436c8b94a68
+<BR><TAB>90b14777ce5ccafde7608c17f49b50723bb485352da278c33e2ab330900]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+23-00623 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Jessica A Board on behalf of Creditor   UnitedHealth Group</span>
+<br>jessica.board@heidmanlaw.com,  Tina.Roberts@heidmanlaw.com;jessica.braunger@heidmanlaw.com
+<BR>
