@@ -17,10 +17,11 @@ class Site(OpinionSiteLinear):
     court = "Supreme"
     base_url = "https://www.pacourts.us/api/opinion?"
     document_url = "https://www.pacourts.us/assets/opinions/{}/out/{}"
-    days_interval = 20
+    days_interval = 1
     api_dt_format = "%Y-%m-%dT00:00:00-05:00"
     first_opinion_date = datetime(1998, 4, 27)
     judge_key = "AuthorCode"
+    regional_cite_regex = re.compile(r"\d{1,3} A\.3d \d+")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -28,8 +29,8 @@ class Site(OpinionSiteLinear):
         self.regex = re.compile(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.status = "Published"
 
-        now = datetime.now() + timedelta(days=1)
-        start = now - timedelta(days=7)
+        now = datetime.now()
+        start = now - timedelta(days=1)
         self.params = {
             "startDate": start.strftime(self.api_dt_format),
             "endDate": now.strftime(self.api_dt_format),
@@ -50,9 +51,13 @@ class Site(OpinionSiteLinear):
         json_response = self.html
 
         for cluster in json_response["Items"]:
-            title = cluster["Caption"]
             disposition_date = cluster["DispositionDate"].split("T")[0]
+            title = cluster["Caption"]
             name, docket = self.parse_case_title(title)
+            # A.3d cites seem to exist only for pasuperct
+            cite = ""
+            if cite_match := self.regional_cite_regex.search(title):
+                cite = cite_match.group(0)
 
             for op in cluster["Postings"]:
                 per_curiam = False
@@ -75,8 +80,17 @@ class Site(OpinionSiteLinear):
                         "judge": author_str,
                         "status": status,
                         "per_curiam": per_curiam,
+                        "citation": cite,
                     }
                 )
+
+        if not self.test_mode_enabled() and json_response.get("HasNext"):
+            next_page = json_response["PageNumber"] + 1
+            logger.info("Paginating to page %s", next_page)
+            self.params["pageNumber"] = next_page
+            self.url = f"{self.base_url}{urlencode(self.params)}"
+            self.html = self._download()
+            self._process_html()
 
     def parse_case_title(self, title: str) -> Tuple[str, str]:
         """Separates case_name and docket_number from case string

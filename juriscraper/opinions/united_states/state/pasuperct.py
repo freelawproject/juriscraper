@@ -17,7 +17,6 @@ from juriscraper.opinions.united_states.state import pa
 
 class Site(pa.Site):
     court = "Superior"
-    days_interval = 20
     first_opinion_date = datetime(1998, 2, 15)
     judge_key = "AuthorName"
 
@@ -61,3 +60,18 @@ class Site(pa.Site):
                 " by ", " "
             )
         return author_str
+
+    def extract_from_text(self, scraped_text: str) -> Dict:
+        """Get neutral citation from the first lines in the first page
+
+        Not all scraped opinions have them
+        """
+        neutral_citation_regex = (
+            r"(?P<volume>\d{4}) (?P<reporter>PA Super) (?P<page>\d+)"
+        )
+        if cite_match := re.search(neutral_citation_regex, scraped_text[:200]):
+            cite_data = cite_match.groupdict()
+            cite_data["type"] = 8  # Neutral citation
+            return {"Citation": cite_data}
+
+        return {}

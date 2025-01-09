@@ -691,6 +691,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 {},
             ),
         ],
+        "juriscraper.opinions.united_states.state.pasuperct": [
+            (
+                "J-A13044-21\n\n                                   2021 PA Super 113\n\n\n  COMMONWEALTH OF PENNSYLVANIA                 :   IN THE SUPERIOR COURT OF\n                                               :        PENNSYLVANIA\n                                               :\n  ",
+                {
+                    "Citation": {
+                        "volume": "2021",
+                        "reporter": "PA Super",
+                        "page": "113",
+                        "type": 8,
+                    }
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.sc": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10744852/
