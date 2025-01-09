@@ -610,11 +610,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         chapter_regex = r"Chapter[- ]?(7|9|11|13)"
         if self.court_id in ["nhb"]:
             subject = re.sub(chapter_regex, " ", subject, 1)
-        else:
-            if len(re.findall(chapter_regex, subject)) > 1:
-                logger.error(
-                    "Trying to parse a RECAP email with more than 1 'Chapter...' string"
-                )
+        elif len(re.findall(chapter_regex, subject)) > 1:
+            logger.error(
+                "Trying to parse a RECAP email with more than 1 'Chapter...' string"
+            )
 
         subject = subject.strip(" ;:,- ")
         # some courts use "Re: {case name}"
@@ -622,7 +621,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         if self.court_id not in self.bankruptcy_courts_with_tests:
             logger.error(
-                "Parsing a RECAP email from a court %s without tests",
+                "Parsing a RECAP email from court %s without tests",
                 self.court_id,
             )
 
