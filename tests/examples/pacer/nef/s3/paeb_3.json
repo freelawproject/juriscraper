@@ -4,22 +4,45 @@
   "court_id": "paeb",
   "dockets": [
     {
-      "case_name": "Kervince Markenzy Michel",
+      "case_name": "Tri-State Paper, Inc. v. Foodarama Caterers Inc.",
       "date_filed": null,
       "docket_entries": [
         {
           "date_filed": "2024-02-01",
-          "description": "Chapter 13 Plan Filed by Kervince Markenzy Michel. (FirstName, LastName)",
-          "document_number": "17",
-          "document_url": "https://ecf.paeb.uscourts.gov/doc1/152032523670?pdf_header=&magic_num=29282863&de_seq_num=78&caseid=510868",
-          "pacer_case_id": "510868",
-          "pacer_doc_id": "152032523670",
-          "pacer_magic_num": "29282863",
-          "pacer_seq_no": "78",
-          "short_description": "Chapter 13 Plan"
+          "description": "Adversary Case 2:23-ap-75 Terminated for Statistical Purposes. (R., LastName)",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "510318",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null,
+          "short_description": "Close Adversary Case"
         }
       ],
-      "docket_number": "23-13878",
+      "docket_number": "23-00075",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "pmm",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    },
+    {
+      "case_name": "Tri-State Paper, Inc.",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-02-01",
+          "description": "Adversary Case 2:23-ap-75 Terminated for Statistical Purposes. (R., LastName)",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "510187",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null,
+          "short_description": "Close Adversary Case"
+        }
+      ],
+      "docket_number": "23-13237",
       "federal_defendant_number": null,
       "federal_dn_case_type": null,
       "federal_dn_judge_initials_assigned": "pmm",
@@ -30,10 +53,21 @@
   "email_recipients": [
     {
       "email_addresses": [
-        "mail@a.com",
-        "a@domain.net;a@recap.email;ecf@a.enterprises;ecf@a.co;ecf@b.gg"
+        "example@domain.com",
+        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com",
+        "example@domain.com",
+        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com"
       ],
       "name": ""
+    },
+    {
+      "email_addresses": [
+        "example@domain.com",
+        "example@domain.com",
+        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com",
+        "USTPRegion03.PH.ECF@usdoj.gov"
+      ],
+      "name": "4510A Adams Circle Bensalem, PA 19020"
     }
   ]
 }

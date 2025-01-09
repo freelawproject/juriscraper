@@ -48,6 +48,31 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         "Modified Date Filed from",
         "Added Correct PDF to document",
     ]
+    bankruptcy_courts_with_tests = [
+        "arwb",
+        "cacb",
+        "casb",
+        "cob",
+        "ctb",
+        "dcb",
+        "deb",
+        "flsb",
+        "ianb",
+        "mdb",
+        "nceb",
+        "ndb",
+        "nhb",
+        "njb",
+        "nyeb",
+        "nysb",
+        "okeb",
+        "paeb",
+        "pamb",
+        "pawb",
+        "tnmb",
+        "txnb",
+        "vaeb",
+    ]
 
     def __init__(self, court_id):
         self.court_id = court_id
@@ -170,7 +195,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if self._is_appellate():
             path = self._sibling_path("Case Number")
             case_number = self._xpath_text_0(current_node, f"{path}/a")
-            self.raw_docket_numbers.add(case_number)
             return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
@@ -559,9 +583,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         ):
             return close_adv_match.group(0)
 
-        short_description = ""
-
-        raw_docket_numbers = [i.strip() for i in self.raw_docket_numbers]
+        # raw dockets from "plain/text" email may have a URL
+        raw_docket_numbers = [
+            i.strip().split(" ")[0] for i in self.raw_docket_numbers
+        ]
         raw_docket_numbers.sort(key=len, reverse=True)  # use longest first
         for part in raw_docket_numbers + self.docket_numbers + self.case_names:
             subject = subject.replace(part, " ")
@@ -582,13 +607,24 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         # Courts like `nhb` do not use the "Ch \d{1,2}" abbreviation
         # and we must delete the "Chapter..." string; but only once
         # See nhb_2 for an example with 2 "Chapter..." strings
+        chapter_regex = r"Chapter[- ]?(7|9|11|13)"
         if self.court_id in ["nhb"]:
-            chapter_regex = r"Chapter[- ]?(7|9|11|13)"
             subject = re.sub(chapter_regex, " ", subject, 1)
+        else:
+            if len(re.findall(chapter_regex, subject)) > 1:
+                logger.error(
+                    "Trying to parse a RECAP email with more than 1 'Chapter...' string"
+                )
 
         subject = subject.strip(" ;:,- ")
         # some courts use "Re: {case name}"
         short_description = re.sub("( Re$)|(^Re:? )", "", subject)
+
+        if self.court_id not in self.bankruptcy_courts_with_tests:
+            logger.error(
+                "Parsing a RECAP email from a court %s without tests",
+                self.court_id,
+            )
 
         return short_description
 

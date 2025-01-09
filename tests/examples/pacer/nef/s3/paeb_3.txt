@@ -1,33 +1,33 @@
 Return-Path: <BKECF_LiveDB@paeb.uscourts.gov>
 Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
- by inbound-smtp.us-west-2.amazonaws.com with SMTP id 0q8hqh8qafa0lsutd6lah6gqo8hp4u3t1pdshtg1
- for a@recap.email;
- Thu, 01 Feb 2024 17:54:01 +0000 (UTC)
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id clofkr5crceoju0ek1t6jh162fp47ah3bmr2a6o1
+ for c@recap.email;
+ Thu, 01 Feb 2024 20:00:46 +0000 (UTC)
 X-SES-Spam-Verdict: PASS
 X-SES-Virus-Verdict: PASS
 Received-SPF: pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
 Authentication-Results: amazonses.com;
  spf=pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=BKECF_LiveDB@paeb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
  dmarc=none header.from=paeb.uscourts.gov;
-X-SES-RECEIPT: AEFBQUFBQUFBQUFHRTV1OTRPc3hqb3dYN1VwMk96RTUzZzhYT0p6THIzTUowQkJBSndPbS9RSExlbUVzeGE3b25VcGtMcHcySUhhM1V5TDZBMk1MUG9QRWFRZm5IKzl4NU42TDJFaG1hbmRwQzdiRUZCTGJ3L0RoYVRGaUpvK04zVy82S0NKWGxheGt3Y1B1Z25NVEMveDJnc2laTEJOTkwxZkRscGExSFY1VGhMRC9EcW56V3MrRjh6RTJJbHl1U0JhMFFUaUhCR0pvU3R5UDY0U0R4NlpFWW1PZ2dlUlJOczNMSzhUQk1tV3BtVVRXcE9HekV1Z1M2NDRNSnUwblVzUmVYekF6UmlUbC85eElCbmU1NjlxZUJOSXVUOVRuSE1IQ3JBckVPRHB3UnMzczFnSUdaY3VabGtvcUtZclk3RmpqUzdZVjNoM0E9
-X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=FZdmHIzcA6pvqu94t2zN6xnibTg703FRK+MJzEXnSYhdu0A+NqVR4r1dzetXJ4F4Hp7GlAej85z8q9svIl6K5atbDUgTW759xst6tM7FhrhsZ0/MtVaHDcvJ6aux/SBAWfEFCrmFBJVn9KMIh2dA9dDyaFEXj03HRYxPNCPAiRs=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706810042; v=1; bh=Xiid0L8AEB+4XykNpGwEZLHqrXOM8eX7CmPzbW9LLnw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFNzh4QzY2VDFGTllHc3o4MzJpSyswcE9TYlJwVHF1RDZFbmczV1YzdTVLTDZHeHZiVUlIVHI2WXZLd0RjSkJjY2drL3VNYnpLQzlVeFpoRTZSUUVoTmxEMDMzd0JWbllJRFp4Wml4NkZiQzVXdktobFE2RS80VlhrSmVQb2llUVh1bGtVTjVDR2pMVE5JcXl6ZDNmak1ueGNKeGNiSmRrQWRPWWZvdDRaVDJ5bTZ4bjhlUlhPYTBCdHpGdkwxamF0Y0I1bTVWQ3VKaVRmSmxMRXJ2MEhtMFgxcW9jWlM0R3FtL0Q2UDBhRWRHbmMyeGR3ajhPbGJadE9PMWlseERnWTU2QW9rSzdJTHpyRjY2ZXE0SzEyck1wcjBZcDd1TUwyY3lWSWY5Ym4rUTc3d09SSWswNkxTU2s5aXFnYW1FVVk9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=fVGG8ZUQJv0zsk8KeQIXbAewV5oXtxOQdxNeMKyLHuUYVvNI+zGOl0hlHfQjAfw0ue+VI6xuhggrQT+Nu5EfE4GDkGCvrKkdR5gwzIOIeK8+aR9aXl4PVkJLeeJRPM6dKffdAJy0NB3nHfhhSGdU1XuXlEjTm0/ePofnyRP9B0Q=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1706817647; v=1; bh=oRdaJ5s9YC1C5Ty8XUuD4CaI4EMuOD2LlxsEcEfY2Uw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
 X-SBRS: None
 X-REMOTE-IP: 156.119.190.80
 Received: from paebdb.paeb.gtwy.dcn ([156.119.190.80])
-  by icmecf101.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 12:54:00 -0500
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 01 Feb 2024 15:00:45 -0500
 Received: from paebdb.paeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
-	by paebdb.paeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 411HrxJC108764;
-	Thu, 1 Feb 2024 12:53:59 -0500
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 411K0iKA075435;
+        Thu, 1 Feb 2024 15:00:45 -0500
 Received: (from ecf_web@localhost)
-	by paebdb.paeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 411HrYCZ108430;
-	Thu, 1 Feb 2024 12:53:34 -0500
-Date: Thu, 1 Feb 2024 12:53:34 -0500
+        by paebdb.paeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 411K0RBC075196;
+        Thu, 1 Feb 2024 15:00:27 -0500
+Date: Thu, 1 Feb 2024 15:00:27 -0500
 X-Authentication-Warning: paebdb.paeb.gtwy.dcn: ecf_web set sender to BKECF_LiveDB@paeb.uscourts.gov using -f
 MIME-Version:1.0
 From:BKECF_LiveDB@paeb.uscourts.gov
 To:Courtmail@paeb.uscourts.gov
-Message-Id:<31789409@paeb.uscourts.gov>
-Subject:Ch-13 23-13878-pmm Chapter 13 Plan - Kervince Markenzy
+Message-Id:<31790064@paeb.uscourts.gov>
+Subject:Ch-11 23-13237-pmm Close Adversary Case - Tri-State Paper, I
 Content-Type: text/html
 
 <p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
@@ -41,7 +41,7 @@ Content-Type: text/html
 Notice of Electronic Filing
 <BR>
 <div>
-<BR>The following transaction was received from FirstName LastName entered on 2/1/2024 at 12:53 PM EST and filed on 2/1/2024 
+<BR>The following transaction was received from R., Yvette entered on 2/1/2024 at 3:00 PM EST and filed on 2/1/2024 
 
 <BR>
 
@@ -49,12 +49,25 @@ Notice of Electronic Filing
 
 <table border=0 cellspacing=0>
 <tr><td><strong>Case Name:</strong>
-</td><td>Kervince Markenzy Michel</td></tr>
-<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?510868>23-13878-pmm</A></td></tr>
+</td><td>Tri-State Paper, Inc. v. Foodarama Caterers Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?510318>23-00075-pmm</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 02/01/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Tri-State Paper, Inc.</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?510187>23-13237-pmm</A></td></tr>
 
 <tr><td><strong>Document Number:</strong></td>
 <td>
-<a href='https://ecf.paeb.uscourts.gov/doc1/152032523670?pdf_header=&magic_num=29282863&de_seq_num=78&caseid=510868'>17</a>
+
 </td></tr>
 </table>
 
@@ -64,19 +77,11 @@ Notice of Electronic Filing
 <p><strong>Docket Text:</strong>
 
 <BR>
-Chapter 13 Plan <i></i>  Filed by  Kervince Markenzy Michel.  (FirstName, LastName)
+Adversary Case 2:23-ap-75 Terminated for Statistical Purposes.    (R., LastName)
 </p>
 
 <p>The following document(s) are associated with this transaction:</p>
 <table>
-<STRONG>Document description:</STRONG>Main Document 
-<BR><STRONG>Original filename:</STRONG>Chapter13Plan.pdf
-<BR><STRONG>Electronic document
- Stamp:</STRONG>
-<BR><TAB>[STAMP bkecfStamp_ID=1008166204 [Date=2/1/2024] [FileNumber=31789407-0
-<BR><TAB>] [56307f306a8f29e2c5ca1688da1849f794c4d2eb3c90663e7ad4d9081180812821a
-<BR><TAB>4d8d55f62abf5a8e340c7b9a8053221ba28ed90b2bd1eea00b3334000a115]]
-<BR>
 
 </table>
 </div>
@@ -85,11 +90,88 @@ Chapter 13 Plan <i></i>  Filed by  Kervince Markenzy Michel.  (FirstName, LastNa
 
 
 <BR><B>
-23-13878-pmm Notice will be electronically mailed to:
+23-00075-pmm Notice will be electronically mailed to:
 </B>
 
 <BR>
 
-<BR><span class="personName">FirstName LastName on behalf of Debtor Kervince Markenzy Michel</span>
-<br>mail@a.com,  a@domain.net;a@recap.email;ecf@a.enterprises;ecf@a.co;ecf@b.gg
+<BR><span class="personName">FIRSTNAME LASTNAME on behalf of Plaintiff   Company, Inc.</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+<BR><span class="personName">FIRSTNAME LASTNAME on behalf of Plaintiff   Company, Inc.</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+
+<BR>
+<B>
+23-00075-pmm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Foodarama Caterers Inc.</span>
+<BR>4510A Adams Circle 
+<BR>Bensalem, PA 19020
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>
+
+
+
+
+<BR><B>
+23-13237-pmm Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">DAVE P. ADAMS on behalf of U.S. Trustee   United States Trustee</span>
+<br>example@domain.com
+<BR>
+<BR><span class="personName">MICHAEL I. ASSAD on behalf of Creditor   Citizens Bank, N.A., successor by merger to Citizens Bank of Pennsylvania</span>
+<br>example@domain.com,  example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com
+<BR>
+
+<BR><span class="personName">  United States Trustee</span>
+<br>USTPRegion03.PH.ECF@usdoj.gov
+<BR>
+
+<BR>
+<B>
+23-13237-pmm Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">  Law Company, P.C.</span>
+<BR>Deleted
+<BR>Suite 900
+<BR>Philadelphia, PA 19102
+<BR>
+<BR><span class="personName">First Name</span>
+<BR>Deleted
+<BR>Philadelphia, PA 19116-3850
+<BR>
+<BR><span class="personName"> Realty Associates, Inc.</span>
+<BR>Deleted
+<BR>Ardmore, PA 19003
+<BR>
+<BR><span class="personName">  Adjustment Company, Inc.</span>
+<BR>c/o FirstNane LastName
+<BR>Deleted
+<BR>Blue Bell, PA 19422
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
 <BR>
