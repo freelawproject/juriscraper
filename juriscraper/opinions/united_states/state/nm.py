@@ -126,10 +126,14 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)[0]
+        docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
+        if not docket_number:
+            logger.error("nm: unable to extract_from_text a docket_number")
+            return {}
+
         metadata = {
             "OpinionCluster": {
-                "docket_number": docket_number,
+                "docket_number": docket_number[0],
             },
         }
         return metadata
