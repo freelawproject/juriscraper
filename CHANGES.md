@@ -16,6 +16,20 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.50 - 2024-01-10**
+
+- Fixes:
+  - add tests to ensure that `extract_from_text` does not fail
+    when it does not find what it looks for; and that it always
+    returns a dict
+  - updated `pasuperct`, `bia`, `bap1`, `nm` and `sd` `extract_from_text` methods
+  - refactored `pacer.email._parse_bankruptcy_short_description`
+  - added tests for new courts `flsb`, `nceb`
+  - added tests for multi docket NEFs
+
+- Features
+  - `pacer.email._parse_bankruptcy_short_description` now supports Multi Docket NEFs
+
 **2.6.49 - 2024-01-08**
 
 - Fixes:
