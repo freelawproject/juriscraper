@@ -18,6 +18,21 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     start_year = 1996
+    initials_to_judges = {
+        "MES": "Mark E. Salter",
+        "SPM": "Scott P. Myren",
+        "SRJ": "Steven R. Jensen",
+        "PJD": "Patricia J. DeVaney",
+        "JMK": "Janine M. Kern",
+    }
+    disposition_mapper = {
+        "dismiss": "Dismiss",
+        "a": "Affirmed",
+        "r": "Reverse and remand",
+        "aff in pt & rev in pt": "Affirm in part and reverse in part",
+        "aff in pt, vacate, & rem in pt": "Affirm in part, vacate and remand in part",
+        "aff in pt & vacate": "Affirm and vacate",  # https://www.courtlistener.com/opinion/9502826/state-v-scott/pdf/
+    }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -41,10 +56,6 @@ class Site(OpinionSiteLinear):
             if not cite:
                 continue
 
-            # https://ujs.sd.gov/uploads/sc/opinions/2928369ef9a6.pdf
-            # We abstract out the first part of the docket number here
-            # And process the full docket number in the `extract_from_text` method
-            # Called after the file has been downloaded.
             url = row.xpath(".//td[2]/a/@href")[0]
             docket = url.split("/")[-1][:5]
             self.cases.append(
@@ -137,17 +148,44 @@ class Site(OpinionSiteLinear):
     def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
         """Can we extract the date filed from the text?
 
+        Some edge cases:
+        - case with 2 judges https://www.courtlistener.com/opinion/9456271/mcgee-v-spencer-quarries-inc/pdf/
+        - case without disposition:  https://www.courtlistener.com/opinion/10121701/discipline-of-ravnsborg/pdf/
+        - case without a judge string https://www.courtlistener.com/opinion/9474051/in-the-matter-of-the-interpretation-of-south-dakota-constitution-and-state/pdf/
+
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
+        metadata = {}
+        target_text = scraped_text[:100]
 
-        # The docket number appears to be the first text on the page.
-        # So I crop the text to avoid any confusion that might occur in the
-        # body of an opinion.
-        docket = re.findall(r"#\d+.*-.-\w{3}", scraped_text[:100])[0]
-        metadata = {
-            "Docket": {
-                "docket_number": docket,
-            },
-        }
+        dockets = re.findall(r"(?<=#)\d+", target_text)
+        if dockets:
+            metadata["Docket"] = {"docket_number": ", ".join(dockets)}
+
+        judge_regex = r"-[A-Z]{3}(\s*[,&]\s+[A-Z]{3})*"
+        if judges_match := re.search(judge_regex, target_text):
+            initials = re.sub(r"[\s,&-]+", " ", judges_match.group(0)).strip()
+            judges = []
+            for initial in initials.split(" "):
+                if judge := self.initials_to_judges.get(initial):
+                    judges.append(judge)
+                else:
+                    # Catch updates
+                    logger.error(
+                        "Judge initials not mapped to full name %s", initial
+                    )
+
+            if judges:
+                metadata["OpinionCluster"] = {"judges": ", ".join(judges)}
+
+        disposition_regex = r"(?<=-)[a-z,&\s]+(?=-)"
+        if disposition_match := re.search(disposition_regex, target_text):
+            raw_disposition = disposition_match.group(0)
+            if disp := self.disposition_mapper.get(raw_disposition):
+                if metadata.get("OpinionCluster"):
+                    metadata["OpinionCluster"]["disposition"] = disp
+                else:
+                    metadata["OpinionCluster"] = {"disposition": disp}
+
         return metadata
