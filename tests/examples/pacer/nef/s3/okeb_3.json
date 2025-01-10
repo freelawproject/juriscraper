@@ -1,0 +1,39 @@
+{
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "okeb",
+  "dockets": [
+    {
+      "case_name": "C M Heavy Machinery, LLC",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-11-22",
+          "description": "Amended Chapter 11 Monthly Operating Report for the Month Ending: 10/31/2024 Filed by FirstName LastName on behalf of C M Heavy Machinery, LLC. (Attachments: (1) P&L (2) Balance Sheet (3) Reconciliation Report (4) Statement (1) (5) Statement (2)) (LastName, FirstName)",
+          "document_number": "52",
+          "document_url": "https://ecf.okeb.uscourts.gov/doc1/14404609723?pdf_header=&magic_num=39816587&de_seq_num=190&caseid=89920",
+          "pacer_case_id": "89920",
+          "pacer_doc_id": "14404609723",
+          "pacer_magic_num": "39816587",
+          "pacer_seq_no": "190",
+          "short_description": "Chapter 11 Monthly Operating Report UST Form 11-MOR"
+        }
+      ],
+      "docket_number": "24-80617",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "aa@b.com",
+        "c@d.com"
+      ],
+      "name": ""
+    }
+  ]
+}

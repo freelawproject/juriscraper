@@ -1,0 +1,148 @@
+Return-Path: <CMECF_help@okeb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id nns9vihfa20493p2a204o0v9ss3aisnnthvupkg1
+ for user@recap.email;
+ Fri, 22 Nov 2024 14:37:01 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of okeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=CMECF_help@okeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of okeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=CMECF_help@okeb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=okeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFINGtMYjhiVVNtNlJtdGl4YkRpWkdsVnEyMHkwdmtxcjRJbWhQRnBvR28wajdmbElsKzVqY0hPdEFVazJETmkxV1VUcU9XYXVRQkhlSjluamNNQldVV3lMZkFuSG9BV0M1YXlyaXFjVXE1Zm9OVFBYdXBrY2hzRlVZQ2VMbjY0czFzQnY1ajY3Qlk1cXpUWUREemh4TDZBZElDeW9qQzhGZEFkMUI3Sk1ia0htV0hEeW9icDZzWDVvR09mZUlmS0JDQ1BEWndlYzFRMGNoaEpic25IMmJCdEFzbTVvOTVZQmtMNWx3TkEvQlYrZkYwTDcrOGc4UWVpNXkzR0hYYzhDT3p4UGZ2MmNCZ1pIekJ3dVprZUlqNUUzZTRuN3FWTFRXUlRacmRSditzYlE9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=iw6wO3Ta+ZqB2uhraFXYDQ6Iaai9yNsw+ato3FuQrLeFsFCxdJ25BxTsJIjFjETqr+3wIaFqKJtBqwBONIBgx1JTGTryDFwag8oq7pXKFZYcp6yrrqrrtXOjdLO2JRhHP6WK/8zSTOMf98R8l+2205/cULMTcgityUFqMQeSZVs=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1732286222; v=1; bh=Boz6pPDiJT2GWGU3IY79ruHinCd/iBL926Q5iADh9b4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=5939; q=dns/txt;
+  s=law1e; t=1732286221; x=1763822221;
+  h=date:mime-version:from:to:message-id:subject:
+   content-type:x-sbrs:x-remote-ip;
+  bh=Boz6pPDiJT2GWGU3IY79ruHinCd/iBL926Q5iADh9b4=;
+  b=IuTZFg7jMpA/YsPixrsZ2iWC66T8JpZMgaA61dHDEYQI1/quaqgnwkh5
+   pPcECT5Yk22PKpPtyP34OyPBP0m1Z2ma8qHQKJnV8S8etmNehTqCQebtr
+   tJe6YVThCuFVylGEd/wz7l+tVNEPun0dV9BdGvrccm+Q8qCbIdX5DMT0t
+   zUzy5yVNDCtqP3V+YCxgx3gqLA6sVUJOVKYtYzpMxtwkhBcwtggLsYK5L
+   /oH3XtFrIG4JzYxYV1wY+cvCg/DjxyFVILKtY0n9sznkMDJlZDujCjaF4
+   z5fmsWK8G4Ds4Dr6hk++9R+RbjE3ZF3Zn5aZxC7bGczGgKqs+QSTmcjFj
+   w==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.93
+Received: from okebdb.okeb.gtwy.dcn ([156.119.56.93])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 22 Nov 2024 09:37:00 -0500
+Received: from okebdb.okeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by okebdb.okeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AMEatTs009212;
+	Fri, 22 Nov 2024 08:36:56 -0600
+Received: (from ecf_web@localhost)
+	by okebdb.okeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4AMEaEQJ008164;
+	Fri, 22 Nov 2024 08:36:14 -0600
+Date: Fri, 22 Nov 2024 08:36:14 -0600
+MIME-Version:1.0
+From:CMECF_help@okeb.uscourts.gov
+To:Courtmail@okeb.uscourts.gov
+Message-Id:<4689891@okeb.uscourts.gov>
+Subject:24-80617 Chapter 11 Monthly Operating Report UST Form 11-MOR
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Oklahoma</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Maurice VerStandig entered on 11/22/2024 at 8:36 AM CST and filed on 11/22/2024 
+
+<BR>
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>C M Heavy Machinery, LLC</td></tr>
+<tr><td><strong>Chapter:</strong></td><td>11</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.okeb.uscourts.gov/cgi-bin/DktRpt.pl?89920>24-80617</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.okeb.uscourts.gov/doc1/14404609723?pdf_header=&magic_num=39816587&de_seq_num=190&caseid=89920'>52</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Amended  Chapter 11 Monthly Operating Report  for the Month Ending:  10/31/2024 Filed by  FirstName LastName   on behalf of    C M Heavy Machinery, LLC.   (Attachments: # (1)  P&L # (2)  Balance Sheet # (3)  Reconciliation Report # (4)  Statement (1) # (5)  Statement (2)) (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>UST Form 11-MOR Signed .pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=11/22/2024] [FileNumber=4689889-
+<BR><TAB>0] [b59cf7692837f334c7dafd6f5f3003c8856ba5462eddeb6b6751f02ccc849768d7
+<BR><TAB>25fb0a5f4be7135dc8bc77c08157404dd75a3355d6a4d40f6f0eabd6d95dab]]
+<BR>
+<STRONG>Document description:</STRONG> P&L
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Oct 24 P&L CM Heavy.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=11/22/2024] [FileNumber=4689889-
+<BR><TAB>1] [3f715f70d5b604cafeb89880a7e772573c90b13df0fdbca5579824610f0884d791
+<BR><TAB>38df6b30e5f35826268cb320e3ffeddef3afeecd6a663761219fe3f03a36f2]]
+<BR>
+<STRONG>Document description:</STRONG> Balance Sheet
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\BalanceSheet-2.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=11/22/2024] [FileNumber=4689889-
+<BR><TAB>2] [4702bd1f33b7696b207c130d8f31dad08207cf05acc12fd6900d5687cd0931a803
+<BR><TAB>730b326dc236121a09ccd8df13343b0bd0bbc0a770b6953661b9b4f9563651]]
+<BR>
+<STRONG>Document description:</STRONG> Reconciliation Report
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Oct 24 Reconile Report.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=11/22/2024] [FileNumber=4689889-
+<BR><TAB>3] [5b130c1237985b504e6d8a0e70a325cf50f3e8743b75d1dd41afae2a9d68b4c87a
+<BR><TAB>7c8c6ca46a5564bb51b276261e712a2557af17c07ea20348a17fd0ca5534cb]]
+<BR>
+<STRONG>Document description:</STRONG> Statement (1)
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\OCT 24 Check Reg Pg 1.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=11/22/2024] [FileNumber=4689889-
+<BR><TAB>4] [a70edef857cc8c1e1da277410b0493247ac2bb740ca65201694891edf35f0f57f2
+<BR><TAB>d26f7f28a86738d0ce2fa79fcdc85ce0f3090c9ba6409e4ce5ec74a2902752]]
+<BR>
+<STRONG>Document description:</STRONG> Statement (2)
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Oct 24 Check Reg Pg 2.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1022787214 [Date=11/22/2024] [FileNumber=4689889-
+<BR><TAB>5] [90b798a62101749dab9f1823a63b1b0f7404022a1f06babe8340b2563fb0b031f5
+<BR><TAB>9578313b67e8b2e1a580984ebc4dc87ab0e810ea7fe1c3ae101b835dc3f906]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-80617 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Creditor   Great Plains National Bank</span>
+<br>aa@b.com,  c@d.com
+<BR>

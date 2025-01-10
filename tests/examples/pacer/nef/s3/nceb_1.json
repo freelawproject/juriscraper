@@ -1,0 +1,38 @@
+{
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "nceb",
+  "dockets": [
+    {
+      "case_name": "Waldrep Jr., Trustee v. Reboot, Inc. d/b/a HIPAA GUARD",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2023-08-31",
+          "description": "Motion to Extend Time to File Response, filed by James S. Livermon III on behalf of Reboot, Inc. d/b/a HIPAA GUARD, Michael Reece, Rural Lab Outreach, LLC. (Livermon, James)",
+          "document_number": "45",
+          "document_url": "https://ecf.nceb.uscourts.gov/doc1/130024615454?pdf_header=&magic_num=4879393&de_seq_num=229&caseid=328908",
+          "pacer_case_id": "328908",
+          "pacer_doc_id": "130024615454",
+          "pacer_magic_num": "4879393",
+          "pacer_seq_no": "229",
+          "short_description": "Motion to Extend"
+        }
+      ],
+      "docket_number": "22-00105",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "JNC",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "5"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "user@domain.com"
+      ],
+      "name": ""
+    }
+  ]
+}
