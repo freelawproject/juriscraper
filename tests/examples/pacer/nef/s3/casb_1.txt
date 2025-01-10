@@ -1,0 +1,113 @@
+Return-Path: <info_casb@casb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id ob5ij3rvul19jfh0ad2a26pglt7ecv44ulgf7j81
+ for user@recap.email;
+ Mon, 30 Dec 2024 01:34:36 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of casb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=info_casb@casb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of casb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=info_casb@casb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=casb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGcUJKaFQrR1VCb3dmMStrS3BXbjBGME9PdDU3RWtXakF1NER2SmZhZk9aU2swUEgvWjcybHJpVkRScm56QjN0VWVyMEVRNlNrVFFtdVNTa2xUYWl5T21TbFdKQWRtSVFCTVBKd1Zwb2dpWjNUbDV4SzZpaTJDWmVSY1piSjZzNjhXZHFiZXB0aExVL1pETDcwZTR2bFh5T0dXamFKZlVyT1RGZW00eWZXZ2lZVnlqcGVvTG9OZ2FkR0Q0am4xeWdCMy9vTE5PS3J6TDI2aG41c1ZTYzJGODRxWERwcyt5VVZISWxYMmk3dDV4SGZ4cXhFeXphQkh1aFpGNXJ1Zy9HblNIQzJ3K285ajlyUFVIdVdyY011Zm43MlM0UnlKdnR4Uy85MUo3aVVCcGc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=WZYM3v/whDpIcmxdvuRctVwk/zOgxnKAjfYrm0mlNFI3Del1Q5xaFHUvDQgH3gKAb9zzc6rQuMLGb9W2CKxzTe38J6R3kLyRlf5fKJVs43SPdhq1ljpqFPEb7YTI9J47viMMB3x+Zh99g851f+xjtKnunCzhsJlGxoDAH6sI9pw=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1735522477; v=1; bh=WVaAKo7MFxJmVM+T9IUik8ou6XvZMd8ooY8rYTHcdns=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=2387; q=dns/txt;
+  s=law1e; t=1735522476; x=1767058476;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=WVaAKo7MFxJmVM+T9IUik8ou6XvZMd8ooY8rYTHcdns=;
+  b=SatsUL9Y410IbsTDPG7cAnsBpnddJ7BVjTD47paFRZuuUucK9tKGo+gQ
+   OfFMBmR8uAKwQiTux7UmC0hGm3UNCSoMa2jzX4aj1IZGzHxPXXCJHLlD6
+   Yk57eEMQVwys48L1AA2D/TRrEceIcPb+PAqSiqFqrs+NKJz5upQ5xntiL
+   htCUyTuru8ISYZFtK6E/fwmH+VlZQsauutWEmGLsfrOHmVmlU0NMrj7mI
+   X9HoleGRi03MftFMHJmHrcDUTLmrqwKcfUkbA/2O7Qj5IbvxAJ70USXfp
+   kLJkn6yMUvfaJp/Y0pUFNyBC19NKjD0OkFsZ+Dv5801s8wwUVqA9t4LCW
+   w==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.77
+Received: from casbdb.casb.gtwy.dcn ([156.119.56.77])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 29 Dec 2024 20:34:35 -0500
+Received: from casbdb.casb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by casbdb.casb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4BU1XnkY067794;
+	Sun, 29 Dec 2024 17:33:49 -0800
+Received: (from ecf_web@localhost)
+	by casbdb.casb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4BU1Xga6067741;
+	Sun, 29 Dec 2024 17:33:42 -0800
+Date: Sun, 29 Dec 2024 17:33:42 -0800
+X-Authentication-Warning: casbdb.casb.gtwy.dcn: ecf_web set sender to info_casb@casb.uscourts.gov using -f
+MIME-Version:1.0
+From:info_casb@casb.uscourts.gov
+To:casb_ecf@casb.uscourts.gov
+Message-Id:<20552464@casb.uscourts.gov>
+Subject:24-04888-CL7 Notice of Chapter 7 Bankruptcy Case & Meeting of Creditors
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of California</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 12/29/2024 at 5:33 PM PST and filed on 12/29/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Omar Jay Alegria                                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.casb.uscourts.gov/cgi-bin/DktRpt.pl?465289>24-04888-CL7</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+5
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Notice of Chapter 7 Bankruptcy Case, Meeting of Creditors & Notice of Appointment of Interim Trustee Ackerman, Leonard J. with<B> 341(a) meeting to be held on 1/28/2025 at 09:00 AM. via Zoom - Ackerman Meeting ID 850 752 6242, and Passcode 5801344241, Phone (619) 367-1561. </B> Financial Management Course Due Date: 3/31/2025. Objections for Discharge due by 3/31/2025. (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-04888-CL7 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Leonard J. Ackerman</span>
+<br>ljabkatty@gmail.com,  lja@trustesolutions.net
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Debtor Omar Jay Alegria</span>
+<br>a@gmail.com,  user@recap.email,a@b.net
+<BR>
+<BR><span class="personName">  United States Trustee</span>
+<br>ustp.region15@usdoj.gov
+<BR>
+
+<BR>
+<B>
+24-04888-CL7 Notice will not be electronically mailed to:
+</B>
+

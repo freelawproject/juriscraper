@@ -1,0 +1,106 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id suhdi52hcsv1703uc1vn3vdvoch8r5a75ttejlo1
+ for email@email.com;
+ Thu, 05 Dec 2024 13:54:09 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=email@email.com.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of paeb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=email@email.com.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=paeb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGYktraFRMTkFpUWZsVlJSMUlGeFNZeEFwRjhBRUJTeHBSUTNndnZNeWhvOC9yb2VSM3hQdUdyVzVRY2lUQU83bXlMUURpaEYvWEhtVVhodzVHQi9SZ29DRjNKaFpmSmFOQmZDZDVYeCsza2huVlczZUZPNGlyR2EwODc3dFBNSFVnZ3lvNlo4c3NrK1JWK2pEQnRQUS9iN252UFF4ZXU2UW0rbkhab1RBRUVzZlZEWVlDNkU5YjVieEgwU3lvc3ZyamxHYW0xY0Z3MllZbk84ZTRWTUZ0L29ZMHZ1ZUk5QVUzYUQyVGsySVN0N0ZNd3MrRzJvelQ3YWlxenZSQ0xKSGhGZmd2bS9nWDRhS0hRcmtmK3kwZXB5aHh6Qnc2cm15bHM4MEN1NnhGMG5maUNNNUpKYU1kU1BGWUN6ckhIZlE9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=WiWIOoGLoGdbRjuXUDEiwVTd0MlZNhgcag5DJCf3zbzITZVjW3dujPpJuBFoRcQQFro5GtE6XajIionp3hRynfB8Xm0GxaSNtzlcgC9WIpxWpRTsZQf81mHx2+VG3WrCbWb8ic5B2crsZAyJ+PNsmZeoo0fSxO178H4xCriuVmk=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1733406849; v=1; bh=BIMa1/YfbtwxkQfNdlpvec8diMTfOKBfEUPkbhbdOU4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=5499; q=dns/txt;
+  s=law1e; t=1733406849; x=1764942849;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=BIMa1/YfbtwxkQfNdlpvec8diMTfOKBfEUPkbhbdOU4=;
+  b=kpVRRFOdCvFHMSSyGqSiMuRf5JidwfNQk5FAqUJ0UrfqVEd3eXoj5VlT
+   s35maHXyzgyggf7vSm1/e78vxYXJg+PA7AmxwJVMWQmE95S1jbzRkNvzB
+   zk7N7/j61svqAVfrvtIgfKFMqg70S3NFFa8GaBvjdoK4sZDVuH7w8BE16
+   7YEEueXWlWthmLaddwc7SpgCzV6f0sK9KH1q6mZo5aBl3/eLMbEXLTeZF
+   pLjnqkAhvx+XF65AoSs9V4lZb/WvnRgkkuqDHI8COmh2GdVbA4ytIV3FJ
+   Nusu90mgK7TFEJS1KeyW0YSW0ugA1FJW0Vf04it2ZOV/6gfzWj/LC0ouD
+   g==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.80
+Received: from paebdb.paeb.gtwy.dcn ([156.119.190.80])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 05 Dec 2024 08:54:08 -0500
+Received: from paebdb.paeb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by paebdb.paeb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4B5Ds6Wh015307;
+	Thu, 5 Dec 2024 08:54:07 -0500
+Received: (from ecf_web@localhost)
+	by paebdb.paeb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4B5Ds4er015279;
+	Thu, 5 Dec 2024 08:54:04 -0500
+Date: Thu, 5 Dec 2024 08:54:04 -0500
+X-Authentication-Warning: paebdb.paeb.gtwy.dcn: ecf_web set sender to email@email.com.gov using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:Ch-13 23-12910-pmm Close Adversary Case - Erik A. Wharton
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Eastern District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 12/5/2024 at 8:54 AM EST and filed on 12/5/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Wharton et al v. Prosper Marketplace Inc.                          </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?512791>24-00078-pmm</A></td></tr>
+<tr><td colspan=2><strong>WARNING: CASE CLOSED on 12/05/2024</strong></td></tr>
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Erik A. Wharton and Shari L. Merton</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.paeb.uscourts.gov/cgi-bin/DktRpt.pl?509857>23-12910-pmm</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary Case 2:24-ap-78 Terminated for Statistical Purposes.    (G., Jeanette)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

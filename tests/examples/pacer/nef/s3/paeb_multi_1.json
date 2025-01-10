@@ -50,24 +50,5 @@
       "federal_dn_office_code": null
     }
   ],
-  "email_recipients": [
-    {
-      "email_addresses": [
-        "example@domain.com",
-        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com",
-        "example@domain.com",
-        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com"
-      ],
-      "name": ""
-    },
-    {
-      "email_addresses": [
-        "example@domain.com",
-        "example@domain.com",
-        "example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com;example@domain.com",
-        "USTPRegion03.PH.ECF@usdoj.gov"
-      ],
-      "name": "4510A Adams Circle Bensalem, PA 19020"
-    }
-  ]
+  "email_recipients": []
 }

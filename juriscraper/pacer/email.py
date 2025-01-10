@@ -48,6 +48,31 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         "Modified Date Filed from",
         "Added Correct PDF to document",
     ]
+    bankruptcy_courts_with_tests = [
+        "arwb",
+        "cacb",
+        "casb",
+        "cob",
+        "ctb",
+        "dcb",
+        "deb",
+        "flsb",
+        "ianb",
+        "mdb",
+        "nceb",
+        "ndb",
+        "nhb",
+        "njb",
+        "nyeb",
+        "nysb",
+        "okeb",
+        "paeb",
+        "pamb",
+        "pawb",
+        "tnmb",
+        "txnb",
+        "vaeb",
+    ]
 
     def __init__(self, court_id):
         self.court_id = court_id
@@ -57,6 +82,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.docket_numbers = []
         self.subject = None
         self.case_names = []
+        self.raw_docket_numbers = set()
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
         else:
@@ -172,16 +198,16 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
+        docket_numbers_str = current_node.xpath(f"{path}/a/text()")
+        self.raw_docket_numbers.update(set(docket_numbers_str))
         docket_number, docket_number_components = (
-            self._parse_docket_number_strs(
-                current_node.xpath(f"{path}/a/text()")
-            )
+            self._parse_docket_number_strs(docket_numbers_str)
         )
         if not docket_number:
+            docket_numbers_str = current_node.xpath(f"{path}/p/a/text()")
+            self.raw_docket_numbers.update(set(docket_numbers_str))
             docket_number, docket_number_components = (
-                self._parse_docket_number_strs(
-                    current_node.xpath(f"{path}/p/a/text()")
-                )
+                self._parse_docket_number_strs(docket_numbers_str)
             )
         return docket_number, docket_number_components
 
@@ -199,6 +225,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         email_body = self.tree.text_content()
         regex = r"Case Number:(.*)"
         docket_number = re.findall(regex, email_body)
+        self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
     def _get_date_filed(self) -> date:
@@ -396,7 +423,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             docket_number, docket_number_components = (
                 self._parse_docket_number_plain()
             )
-            docket_number = docket_number
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
@@ -534,115 +560,69 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         return []
 
     def _parse_bankruptcy_short_description(self, subject: str) -> str:
-        """Parse the short description of a bankruptcy case from the email
-        subject. Subjects for bankruptcy varies a lot from court to court.
-        This function supports parsing the short description for courts with
-        known examples.
+        """Parse the short description of a bankruptcy case from the email subject
+
+        The subject contains: the docket number, the case name, the short description
+        and special characters. The presence and order of these elements varies from
+        court to court. The short description that we parse out should match the
+        "Description" on the "History/Document" report on PACER
+
+        A special case are multi-docket NEFs, of which we have only seen
+        2-docket NEFs. These are labelled as "_multi_" on the example files, and we
+        have only seen "Adversary Cases", so far. The subject will use one
+        of the case names and one of the docket numbers, and then follow
+        the general rules
 
         :param subject: The email subject string.
         :return: The parsed short description.
         """
+        # Some courts have subjects like
+        # `Multiple Cases "{docket} {case name} Close [Aa]dversary [Cc]ase" - {initials}`
+        if close_adv_match := re.search(
+            r"close adversary case", subject, flags=re.IGNORECASE
+        ):
+            return close_adv_match.group(0)
 
-        # See paeb_3.txt for a test of multi docket NEF
-        # So far, we have only seen 2-docket NEF
-        is_multidocket = len(self.docket_numbers) == 2
-        if len(self.docket_numbers) > 1 and self.court_id != "njb":
+        # raw dockets from "plain/text" email may have a URL
+        raw_docket_numbers = [
+            i.strip().split(" ")[0] for i in self.raw_docket_numbers
+        ]
+        raw_docket_numbers.sort(key=len, reverse=True)  # use longest first
+        for part in raw_docket_numbers + self.docket_numbers + self.case_names:
+            subject = subject.replace(part, " ")
+
+        # Sometimes the full case name is not used in the `subject`
+        # Some courts use a 18 character limit
+        # See deb_2.txt, pamb_1 and pamb_3 for examples
+        for case_name in self.case_names:
+            subject = subject.replace(case_name[:18].strip(), " ")
+            subject = subject.replace(case_name.split(" and ")[0], " ")
+
+        # Deletes:
+        # - "NEF: " placeholder
+        # - "Ch \d{1,2}" abbreviations
+        cleanup_regex = r"(NEF:? )|(C[Hh][- ]?(7|9|11|13))|(C[hH][\s-]*$)"
+        subject = re.sub(cleanup_regex, " ", subject)
+
+        # Courts like `nhb` do not use the "Ch \d{1,2}" abbreviation
+        # and we must delete the "Chapter..." string; but only once
+        # See nhb_2 for an example with 2 "Chapter..." strings
+        chapter_regex = r"Chapter[- ]?(7|9|11|13)"
+        if self.court_id in ["nhb"]:
+            subject = re.sub(chapter_regex, " ", subject, 1)
+        elif len(re.findall(chapter_regex, subject)) > 1:
             logger.error(
-                "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
-                self.court_id,
-                extra={
-                    "fingerprint": [
-                        f"{self.court_id}-not-parsing-multi-docket-short-description"
-                    ]
-                },
+                "Trying to parse a RECAP email with more than 1 'Chapter...' string"
             )
-            return ""
 
-        short_description = ""
-        docket_number = self.docket_numbers[0]
-        case_name = self.case_names[0]
+        subject = subject.strip(" ;:,- ")
+        # some courts use "Re: {case name}"
+        short_description = re.sub("( Re$)|(^Re:? )", "", subject)
 
-        if is_multidocket:
-            # Docket number / case name from one or both of the 2 cases
-            # may be used in the subject string
-            if self.docket_numbers[1] in subject:
-                docket_number = self.docket_numbers[1]
-            if self.case_names[1] in subject:
-                case_name = self.case_names[1]
-
-        if self.court_id in [
-            "cacb",
-            "ctb",
-            "cob",
-            "ianb",
-            "nyeb",
-            "txnb",
-            "okeb",
-        ]:
-            # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
-            # Out: Request for courtesy Notice of Electronic Filing (NEF)
-            short_description = subject.split(docket_number)[-1]
-
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb", "arwb"]:
-            # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
-            # Out: Determination of Adjournment Request
-            # In Ch-13 1:24-bk-70534 Meeting of Creditors - Second Non-Appearance; Michael Clayton Lowry
-            # Out: Meeting of Creditors - Second Non-Appearance
-            short_description = subject.split(docket_number)[-1]
-            # Remove docket number traces "-AAA"
-            # Remove CH after docket and BK after short description for dcb
-            regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
-            short_description = re.sub(regex, "", short_description)
-            separator = ";" if self.court_id == "arwb" else "-"
-            short_description = short_description.rsplit(separator, 1)[0]
-        elif self.court_id == "nysb":
-            # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
-            # Out: Affidavit
-            short_description = subject.split(case_name)[0]
-            short_description = short_description.replace("Re:", "")
-            short_description = short_description.split(docket_number)[-1]
-
-            # Remove strings starting with "Ch" followed by a number
-            regex = r"\bCh\d+\b"
-            short_description = re.sub(regex, "", short_description)
-
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb", "deb", "pamb", "nhb"]:
-            # In: Ch-7 22-20823-GLT U LOCK INC Reply
-            # Out: Reply
-            if case_name in subject:
-                short_description = subject.split(case_name)[-1]
-            elif case_name[:18] in subject:
-                # See deb_2.txt, pamb_1 and pamb_3 for examples
-                short_description = subject.split(case_name[:18])[-1]
-            elif (
-                " and " in case_name and case_name.split(" and ")[0] in subject
-            ):
-                # See pamb_2.txt
-                short_description = subject.split(case_name.split(" and ")[0])[
-                    -1
-                ]
-        elif self.court_id in [
-            "tnmb",
-        ]:
-            # In: Docket Order - Continue Hearing (Auto) Ch 13 Jeffery Wayne Lovell and Tiffany Nicole Lovell 1:24-bk-01377
-            # Out: Docket Order - Continue Hearing (Auto) Ch 13
-            if case_name in subject:
-                short_description = subject.split(case_name)[0]
-        else:
+        if self.court_id not in self.bankruptcy_courts_with_tests:
             logger.error(
-                "Short description has no parsing for bankruptcy court '%s'",
+                "Parsing a RECAP email from court %s without tests",
                 self.court_id,
-                extra={
-                    "fingerprint": [
-                        f"{self.court_id}-not-parsing-short-description"
-                    ]
-                },
             )
 
         return short_description
