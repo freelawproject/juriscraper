@@ -66,12 +66,8 @@ class Site(pa.Site):
 
         Not all scraped opinions have them
         """
-        neutral_citation_regex = (
-            r"(?P<volume>\d{4}) (?P<reporter>PA Super) (?P<page>\d+)"
-        )
+        neutral_citation_regex = r"\d{4} PA Super \d+"
         if cite_match := re.search(neutral_citation_regex, scraped_text[:200]):
-            cite_data = cite_match.groupdict()
-            cite_data["type"] = 8  # Neutral citation
-            return {"Citation": cite_data}
+            return {"Citation": cite_match.group(0)}
 
         return {}

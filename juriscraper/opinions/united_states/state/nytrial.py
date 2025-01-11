@@ -129,8 +129,8 @@ class Site(OpinionSiteLinear):
         pattern = r"</table><br><br\s?/?>\s?(.*)\r?\n|Docket Number:\s?(.+)"
         docket_number = self.match(scraped_text, pattern)
 
-        pattern = r"\[(?P<volume>\d+) (?P<reporter>Misc 3d) (?P<page>.+)\]"
-        cite_match = re.search(pattern, scraped_text[:2000])
+        regex_citation = r"(?<=\[)\d+ Misc 3d .+(?=\])"
+        cite_match = re.search(regex_citation, scraped_text[:2000])
 
         # Only for .htm links
         full_case = None
@@ -150,8 +150,7 @@ class Site(OpinionSiteLinear):
                 "author_str": normalize_judge_string(judge)[0]
             }
         if cite_match:
-            metadata["Citation"] = cite_match.groupdict("")
-            metadata["Citation"]["type"] = 2  # 'State' type in courtlistener
+            metadata["Citation"] = cite_match.group(0)
         if full_case:
             full_case = harmonize(full_case)
             metadata["Docket"]["case_name_full"] = full_case
