@@ -1,0 +1,1467 @@
+running test
+running egg_info
+writing juriscraper.egg-info/PKG-INFO
+writing dependency_links to juriscraper.egg-info/dependency_links.txt
+writing requirements to juriscraper.egg-info/requires.txt
+writing top-level names to juriscraper.egg-info/top_level.txt
+reading manifest file 'juriscraper.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'juriscraper.egg-info/SOURCES.txt'
+running build_ext
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/akb.html           ✓ - 0.0s
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/almb.html          ✓ - 0.0s
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/almb_1.html        ✓ - 0.0s
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/almb_2.html        ✓ - 0.0s
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/alnb.html          ✓ - 0.0s
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/alsb.html          ✓ - 0.0s
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/areb.html          ✓ - 0.0s
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_1.html         ✓ - 0.0s
+8. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_10.html        ✓ - 0.0s
+9. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_11.html        ✓ - 0.0s
+10. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_12.html        ✓ - 0.0s
+11. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_13.html        ✓ - 0.0s
+12. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_14.html        ✓ - 0.0s
+13. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_15.html        ✓ - 0.0s
+14. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_16.html        ✓ - 0.0s
+15. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_17.html        ✓ - 0.0s
+16. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_18.html        ✓ - 0.0s
+17. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_19.html        ✓ - 0.0s
+18. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_20.html        ✓ - 0.0s
+19. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_21.html        ✓ - 0.0s
+20. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_22.html        ✓ - 0.0s
+21. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_23.html        ✓ - 0.0s
+22. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_24.html        ✓ - 0.0s
+23. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_25.html        ✓ - 0.0s
+24. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_26.html        ✓ - 0.0s
+25. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_27.html        ✓ - 0.0s
+26. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_28.html        ✓ - 0.0s
+27. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_29.html        ✓ - 0.0s
+28. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_30.html        ✓ - 0.0s
+29. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_31.html        ✓ - 0.0s
+30. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_32.html        ✓ - 0.0s
+31. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_33.html        ✓ - 0.0s
+32. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_34.html        ✓ - 0.0s
+33. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_35.html        ✓ - 0.0s
+34. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_36.html        ✓ - 0.0s
+35. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_37.html        ✓ - 0.0s
+36. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_38.html        ✓ - 0.0s
+37. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_39.html        ✓ - 0.0s
+38. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_40.html        ✓ - 0.0s
+39. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_41.html        ✓ - 0.0s
+40. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_42.html        ✓ - 0.0s
+41. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_43.html        ✓ - 0.0s
+42. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_44.html        ✓ - 0.0s
+43. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_45.html        ✓ - 0.0s
+44. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_46.html        ✓ - 0.0s
+45. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_47.html        ✓ - 0.0s
+46. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_48.html        ✓ - 0.0s
+47. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_49.html        ✓ - 0.0s
+48. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_50.html        ✓ - 0.0s
+49. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_51.html        ✓ - 0.0s
+50. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_52.html        ✓ - 0.0s
+51. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_53.html        ✓ - 0.0s
+52. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_54.html        ✓ - 0.0s
+53. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_55.html        ✓ - 0.0s
+54. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_56.html        ✓ - 0.0s
+55. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_57.html        ✓ - 0.0s
+56. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_58.html        ✓ - 0.1s
+57. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_59.html        ✓ - 0.0s
+58. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_61.html        ✓ - 0.0s
+59. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_62.html        ✓ - 0.0s
+60. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_63.html        ✓ - 0.0s
+61. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/azb_64.html        ✓ - 0.0s
+62. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb.html          ✓ - 0.0s
+63. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_1.html        ✓ - 0.0s
+64. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_10.html       ✓ - 0.0s
+65. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_11.html       ✓ - 0.0s
+66. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_12.html       ✓ - 0.0s
+67. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_13.html       ✓ - 0.0s
+68. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_14.html       ✓ - 0.0s
+69. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_15.html       ✓ - 0.0s
+70. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_16.html       ✓ - 0.0s
+71. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_17.html       ✓ - 0.0s
+72. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_18.html       ✓ - 0.0s
+73. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_19.html       ✓ - 0.0s
+74. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_2.html        ✓ - 0.0s
+75. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_20.html       ✓ - 0.0s
+76. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_21.html       ✓ - 0.0s
+77. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_22.html       ✓ - 0.0s
+78. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_23.html       ✓ - 0.0s
+79. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_24.html       ✓ - 0.0s
+80. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_25.html       ✓ - 0.0s
+81. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_26.html       ✓ - 0.0s
+82. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_27.html       ✓ - 0.0s
+83. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_28.html       ✓ - 0.0s
+84. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_29.html       ✓ - 0.0s
+85. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_3.html        ✓ - 0.0s
+86. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_30.html       ✓ - 0.0s
+87. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_31.html       ✓ - 0.0s
+88. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_32.html       ✓ - 0.0s
+89. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_33.html       ✓ - 0.0s
+90. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_34.html       ✓ - 0.0s
+91. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_35.html       ✓ - 0.0s
+92. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_36.html       ✓ - 0.0s
+93. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_37.html       ✓ - 0.0s
+94. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_38.html       ✓ - 0.0s
+95. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_39.html       ✓ - 0.0s
+96. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_4.html        ✓ - 0.0s
+97. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_40.html       ✓ - 0.0s
+98. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_5.html        ✓ - 0.0s
+99. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_6.html        ✓ - 0.0s
+100. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_7.html        ✓ - 0.0s
+101. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_8.html        ✓ - 0.0s
+102. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cacb_9.html        ✓ - 0.0s
+103. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb.html          ✓ - 0.0s
+104. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_1.html        ✓ - 0.0s
+105. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_2.html        ✓ - 0.0s
+106. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_3.html        ✓ - 0.0s
+107. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_4.html        ✓ - 0.0s
+108. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_5.html        ✓ - 0.0s
+109. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_6.html        ✓ - 0.0s
+110. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_7.html        ✓ - 0.0s
+111. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_8.html        ✓ - 0.0s
+112. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/caeb_9.html        ✓ - 0.0s
+113. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb.html          ✓ - 0.0s
+114. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_1.html        ✓ - 0.0s
+115. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_10.html       ✓ - 0.0s
+116. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_11.html       ✓ - 0.0s
+117. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_12.html       ✓ - 0.0s
+118. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_13.html       ✓ - 0.0s
+119. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_14.html       ✓ - 0.0s
+120. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_15.html       ✓ - 0.0s
+121. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_16.html       ✓ - 0.0s
+122. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_2.html        ✓ - 0.0s
+123. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_3.html        ✓ - 0.0s
+124. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_4.html        ✓ - 0.0s
+125. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_5.html        ✓ - 0.0s
+126. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_6.html        ✓ - 0.0s
+127. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_7.html        ✓ - 0.0s
+128. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_8.html        ✓ - 0.0s
+129. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/canb_9.html        ✓ - 0.0s
+130. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/casb.html          ✓ - 0.1s
+131. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/casb_1.html        ✓ - 0.0s
+132. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/casb_2.html        ✓ - 0.0s
+133. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/casb_3.html        ✓ - 0.0s
+134. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/cob.html           ✓ - 0.0s
+135. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ctb.html           ✓ - 0.0s
+136. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ctb_1.html         ✓ - 0.0s
+137. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ctb_2.html         ✓ - 0.0s
+138. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb.html           ✓ - 0.0s
+139. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_1.html         ✓ - 0.0s
+140. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_10.html        ✓ - 0.0s
+141. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_11.html        ✓ - 0.0s
+142. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_12.html        ✓ - 0.1s
+143. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_13.html        ✓ - 0.0s
+144. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_14.html        ✓ - 0.0s
+145. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_15.html        ✓ - 0.0s
+146. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_16.html        ✓ - 0.0s
+147. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_17.html        ✓ - 0.0s
+148. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_18.html        ✓ - 0.0s
+149. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_19.html        ✓ - 0.0s
+150. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_2.html         ✓ - 0.0s
+151. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_20.html        ✓ - 0.0s
+152. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_21.html        ✓ - 0.0s
+153. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_22.html        ✓ - 0.0s
+154. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_23.html        ✓ - 0.0s
+155. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_24.html        ✓ - 0.0s
+156. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_3.html         ✓ - 0.0s
+157. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_4.html         ✓ - 0.0s
+158. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_5.html         ✓ - 0.0s
+159. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_6.html         ✓ - 0.0s
+160. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_7.html         ✓ - 0.0s
+161. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_8.html         ✓ - 0.0s
+162. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/deb_9.html         ✓ - 0.0s
+163. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb.html          ✓ - 0.0s
+164. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_1.html        ✓ - 0.0s
+165. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_10.html       ✓ - 0.0s
+166. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_11.html       ✓ - 0.0s
+167. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_12.html       ✓ - 0.0s
+168. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_13.html       ✓ - 0.0s
+169. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_14.html       ✓ - 0.0s
+170. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_2.html        ✓ - 0.0s
+171. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_3.html        ✓ - 0.0s
+172. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_4.html        ✓ - 0.0s
+173. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_5.html        ✓ - 0.0s
+174. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_6.html        ✓ - 0.0s
+175. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_7.html        ✓ - 0.0s
+176. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_8.html        ✓ - 0.0s
+177. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flmb_9.html        ✓ - 0.0s
+178. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb.html          ✓ - 0.0s
+179. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_1.html        ✓ - 0.0s
+180. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_2.html        ✓ - 0.0s
+181. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_3.html        ✓ - 0.0s
+182. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_4.html        ✓ - 0.0s
+183. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_5.html        ✓ - 0.0s
+184. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_6.html        ✓ - 0.0s
+185. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_7.html        ✓ - 0.0s
+186. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/flsb_8.html        ✓ - 0.0s
+187. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ganb.html          ✓ - 0.0s
+188. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ianb.html          ✓ - 0.0s
+189. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/iasb.html          ✓ - 0.0s
+190. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb.html          ✓ - 0.0s
+191. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_1.html        ✓ - 0.0s
+192. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_10.html       ✓ - 0.0s
+193. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_11.html       ✓ - 0.0s
+194. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_12.html       ✓ - 0.0s
+195. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_13.html       ✓ - 0.1s
+196. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_14.html       ✓ - 0.0s
+197. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_1418711.html  ✓ - 0.0s
+198. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_15.html       ✓ - 0.0s
+199. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_2.html        ✓ - 0.0s
+200. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_3.html        ✓ - 0.0s
+201. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_4.html        ✓ - 0.0s
+202. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_5.html        ✓ - 0.0s
+203. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_6.html        ✓ - 0.0s
+204. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_7.html        ✓ - 0.0s
+205. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_8.html        ✓ - 0.0s
+206. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ilnb_9.html        ✓ - 0.0s
+207. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/insb_1.html        ✓ - 0.0s
+208. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/insb_2.html        ✓ - 0.0s
+209. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/kywb_238163.html   ✓ - 0.0s
+210. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/laeb.html          ✓ - 0.0s
+211. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/lamb.html          ✓ - 0.0s
+212. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/lawb_18072.html    ✓ - 0.0s
+213. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab.html           ✓ - 0.0s
+214. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_1.html         ✓ - 0.0s
+215. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_2.html         ✓ - 0.0s
+216. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_3.html         ✓ - 0.0s
+217. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_4.html         ✓ - 0.0s
+218. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_5.html         ✓ - 0.0s
+219. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_6.html         ✓ - 0.0s
+220. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_7.html         ✓ - 0.0s
+221. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_8.html         ✓ - 0.0s
+222. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mab_9.html         ✓ - 0.0s
+223. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb.html           ✓ - 0.0s
+224. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_1.html         ✓ - 0.0s
+225. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_10.html        ✓ - 0.0s
+226. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_11.html        ✓ - 0.0s
+227. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_12.html        ✓ - 0.0s
+228. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_13.html        ✓ - 0.0s
+229. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_14.html        ✓ - 0.0s
+230. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_15.html        ✓ - 0.0s
+231. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_16.html        ✓ - 0.0s
+232. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_17.html        ✓ - 0.0s
+233. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_18.html        ✓ - 0.0s
+234. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_19.html        ✓ - 0.0s
+235. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_2.html         ✓ - 0.0s
+236. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_3.html         ✓ - 0.0s
+237. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_4.html         ✓ - 0.0s
+238. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_5.html         ✓ - 0.0s
+239. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_6.html         ✓ - 0.0s
+240. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_7.html         ✓ - 0.0s
+241. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_8.html         ✓ - 0.0s
+242. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mdb_9.html         ✓ - 0.0s
+243. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/meb.html           ✓ - 0.0s
+244. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb.html          ✓ - 0.0s
+245. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_1.html        ✓ - 0.0s
+246. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_2.html        ✓ - 0.0s
+247. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_3.html        ✓ - 0.0s
+248. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_4.html        ✓ - 0.0s
+249. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_5.html        ✓ - 0.0s
+250. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_6.html        ✓ - 0.0s
+251. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_7.html        ✓ - 0.0s
+252. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_8.html        ✓ - 0.0s
+253. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mieb_9.html        ✓ - 0.0s
+254. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/miwb.html          ✓ - 0.0s
+255. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mnb.html           ✓ - 0.0s
+256. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mnb_1.html         ✓ - 0.0s
+257. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mnb_2.html         ✓ - 0.0s
+258. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mnb_3.html         ✓ - 0.0s
+259. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mnb_4.html         ✓ - 0.0s
+260. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/moeb.html          ✓ - 0.0s
+261. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/moeb_1.html        ✓ - 0.0s
+262. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mowb.html          ✓ - 0.0s
+263. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mowb_1.html        ✓ - 0.0s
+264. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mowb_2.html        ✓ - 0.0s
+265. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/mssb.html          ✓ - 0.0s
+266. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nceb.html          ✓ - 0.0s
+267. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nceb_1.html        ✓ - 0.0s
+268. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ncwb.html          ✓ - 0.1s
+269. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ncwb_1.html        ✓ - 0.0s
+270. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ncwb_2.html        ✓ - 0.0s
+271. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ndb.html           ✓ - 0.0s
+272. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb.html           ✓ - 0.0s
+273. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_1.html         ✓ - 0.0s
+274. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_10.html        ✓ - 0.0s
+275. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_11.html        ✓ - 0.0s
+276. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_12.html        ✓ - 0.0s
+277. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_13.html        ✓ - 0.0s
+278. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_14.html        ✓ - 0.0s
+279. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_15.html        ✓ - 0.0s
+280. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_16.html        ✓ - 0.0s
+281. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_17.html        ✓ - 0.0s
+282. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_2.html         ✓ - 0.1s
+283. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_3.html         ✓ - 0.0s
+284. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_4.html         ✓ - 0.0s
+285. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_5.html         ✓ - 0.0s
+286. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_6.html         ✓ - 0.0s
+287. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_7.html         ✓ - 0.0s
+288. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_8.html         ✓ - 0.0s
+289. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/njb_9.html         ✓ - 0.0s
+290. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb.html           ✓ - 0.0s
+291. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_1.html         ✓ - 0.0s
+292. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_10.html        ✓ - 0.0s
+293. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_11.html        ✓ - 0.0s
+294. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_12.html        ✓ - 0.0s
+295. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_13.html        ✓ - 0.0s
+296. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_14.html        ✓ - 0.0s
+297. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_15.html        ✓ - 0.0s
+298. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_16.html        ✓ - 0.0s
+299. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_17.html        ✓ - 0.0s
+300. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_18.html        ✓ - 0.0s
+301. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_19.html        ✓ - 0.0s
+302. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_2.html         ✓ - 0.0s
+303. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_20.html        ✓ - 0.0s
+304. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_21.html        ✓ - 0.0s
+305. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_22.html        ✓ - 0.0s
+306. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_23.html        ✓ - 0.0s
+307. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_24.html        ✓ - 0.0s
+308. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_25.html        ✓ - 0.0s
+309. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_26.html        ✓ - 0.0s
+310. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_27.html        ✓ - 0.0s
+311. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_28.html        ✓ - 0.0s
+312. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_29.html        ✓ - 0.0s
+313. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_3.html         ✓ - 0.0s
+314. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_30.html        ✓ - 0.0s
+315. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_31.html        ✓ - 0.0s
+316. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_32.html        ✓ - 0.0s
+317. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_33.html        ✓ - 0.0s
+318. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_34.html        ✓ - 0.0s
+319. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_35.html        ✓ - 0.0s
+320. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_36.html        ✓ - 0.0s
+321. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_368678.html    ✓ - 0.0s
+322. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_37.html        ✓ - 0.0s
+323. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_38.html        ✓ - 0.0s
+324. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_39.html        ✓ - 0.0s
+325. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_4.html         ✓ - 0.0s
+326. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_40.html        ✓ - 0.0s
+327. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_41.html        ✓ - 0.0s
+328. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_42.html        ✓ - 0.0s
+329. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_43.html        ✓ - 0.0s
+330. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_44.html        ✓ - 0.0s
+331. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_45.html        ✓ - 0.0s
+332. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_46.html        ✓ - 0.0s
+333. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_5.html         ✓ - 0.0s
+334. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_6.html         ✓ - 0.0s
+335. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_7.html         ✓ - 0.0s
+336. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_8.html         ✓ - 0.0s
+337. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nvb_9.html         ✓ - 0.0s
+338. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nyeb.html          ✓ - 0.0s
+339. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nyeb_1.html        ✓ - 0.1s
+340. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nyeb_2.html        ✓ - 0.0s
+341. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nyeb_3.html        ✓ - 0.0s
+342. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nyeb_4.html        ✓ - 0.0s
+343. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nyeb_5.html        ✓ - 0.0s
+344. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nynb.html          ✓ - 0.0s
+345. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nynb_1.html        ✓ - 0.0s
+346. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb.html          ✓ - 0.0s
+347. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_1.html        ✓ - 0.0s
+348. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_10.html       ✓ - 0.0s
+349. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_11.html       ✓ - 0.0s
+350. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_12.html       ✓ - 0.0s
+351. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_13.html       ✓ - 0.0s
+352. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_14.html       ✓ - 0.0s
+353. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_15.html       ✓ - 0.0s
+354. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_16.html       ✓ - 0.0s
+355. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_17.html       ✓ - 0.0s
+356. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_18.html       ✓ - 0.0s
+357. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_19.html       ✓ - 0.1s
+358. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_2.html        ✓ - 0.0s
+359. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_20.html       ✓ - 0.0s
+360. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_21.html       ✓ - 0.0s
+361. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_22.html       ✓ - 0.0s
+362. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_23.html       ✓ - 0.0s
+363. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_24.html       ✓ - 0.0s
+364. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_25.html       ✓ - 0.0s
+365. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_26.html       ✓ - 0.0s
+366. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_27.html       ✓ - 0.0s
+367. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_28.html       ✓ - 0.0s
+368. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_29.html       ✓ - 0.0s
+369. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_3.html        ✓ - 0.0s
+370. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_30.html       ✓ - 0.0s
+371. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_31.html       ✓ - 0.0s
+372. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_32.html       ✓ - 0.0s
+373. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_33.html       ✓ - 0.0s
+374. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_34.html       ✓ - 0.0s
+375. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_35.html       ✓ - 0.0s
+376. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_36.html       ✓ - 0.0s
+377. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_37.html       ✓ - 0.0s
+378. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_38.html       ✓ - 0.0s
+379. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_39.html       ✓ - 0.0s
+380. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_4.html        ✓ - 0.0s
+381. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_5.html        ✓ - 0.0s
+382. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_6.html        ✓ - 0.0s
+383. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_7.html        ✓ - 0.0s
+384. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_8.html        ✓ - 0.0s
+385. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_9.html        ✓ - 0.0s
+386. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_mega.html     ✓ - 0.0s
+387. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/nysb_mega_1.html   ✓ - 0.0s
+388. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ohnb.html          ✓ - 0.0s
+389. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/ohsb.html          ✓ - 0.0s
+390. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/pawb.html          ✓ - 0.0s
+391. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/pawb_1.html        ✓ - 0.0s
+392. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/rib.html           ✓ - 0.0s
+393. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/tnwb.html          ✓ - 0.0s
+394. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb.html          ✓ - 0.0s
+395. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_1.html        ✓ - 0.0s
+396. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_2.html        ✓ - 0.0s
+397. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_3.html        ✓ - 0.0s
+398. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_300577.html   ✓ - 0.0s
+399. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_4.html        ✓ - 0.1s
+400. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_420776.html   ✓ - 0.0s
+401. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_5.html        ✓ - 0.0s
+402. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_6.html        ✓ - 0.0s
+403. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txnb_7.html        ✓ - 0.0s
+404. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txsb.html          ✓ - 0.0s
+405. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txsb_1.html        ✓ - 0.0s
+406. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txsb_2.html        ✓ - 0.0s
+407. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txsb_3.html        ✓ - 0.0s
+408. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txsb_4.html        ✓ - 0.0s
+409. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/txwb.html          ✓ - 0.0s
+410. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/vaeb.html          ✓ - 0.0s
+411. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/vawb_270571.html   ✓ - 0.0s
+412. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/waeb_157024.html   ✓ - 0.0s
+413. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/wawb.html          ✓ - 0.0s
+414. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/wawb_1.html        ✓ - 0.0s
+415. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/wawb_2.html        ✓ - 0.0s
+416. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/wawb_3.html        ✓ - 0.1s
+417. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/wawb_4.html        ✓ - 0.0s
+418. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/bankruptcy/wiwb_1.html        ✓ - 0.0s
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/akd.html           ✓ - 0.0s
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/almd.html          ✓ - 0.0s
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/alnb_1.html        ✓ - 0.0s
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/alsd.html          ✓ - 0.0s
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/azd.html           ✓ - 0.0s
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cacd.html          ✓ - 0.0s
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cacd_2.html        ✓ - 0.0s
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/caed.html          ✓ - 0.0s
+8. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/caed_2.html        ✓ - 0.0s
+9. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/caed_3.html        ✓ - 0.0s
+10. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/canb_1.html        ✓ - 0.0s
+11. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cand.html          ✓ - 0.0s
+12. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cand_2.html        ✓ - 0.0s
+13. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cand_263146.html   ✓ - 0.0s
+14. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cand_3.html        ✓ - 0.0s
+15. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cand_4.html        ✓ - 0.0s
+16. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/cand_7.html        ✓ - 0.0s
+17. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/casd.html          ✓ - 0.0s
+18. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/casd_2.html        ✓ - 0.0s
+19. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/casd_3.html        ✓ - 0.0s
+20. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/casd_4.html        ✓ - 0.0s
+21. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/casd_5.html        ✓ - 0.0s
+22. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/casd_6.html        ✓ - 0.0s
+23. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/dcd_1.html         ✓ - 0.0s
+24. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/dcd_2.html         ✓ - 0.0s
+25. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/dcd_3.html         ✓ - 0.0s
+26. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/ded.html           ✓ - 0.0s
+27. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/gand_1.html        ✓ - 0.0s
+28. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/gasd.html          ✓ - 0.0s
+29. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/hid.html           ✓ - 0.0s
+30. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/ilnd_310470.html   ✓ - 0.0s
+31. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/ilnd_378697.html   ✓ - 0.0s
+32. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/jpml.html          ✓ - 0.0s
+33. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/jpml_1551542.html  ✓ - 0.0s
+34. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/laed_127926.html   ✓ - 0.0s
+35. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/lamd.html          ✓ - 0.0s
+36. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/mad_193254.html    ✓ - 0.0s
+37. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/moed.html          ✓ - 0.0s
+38. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/mowd.html          ✓ - 0.0s
+39. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/ncwd_1.html        ✓ - 0.1s
+40. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/ned.html           ✓ - 0.0s
+41. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/njd_365922.html    ✓ - 0.0s
+42. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/njd_509180.html    ✓ - 0.1s
+43. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nvd_128568.html    ✓ - 0.0s
+44. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nvd_21855.html     ✓ - 0.0s
+45. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nyed.html          ✓ - 0.0s
+46. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd.html          ✓ - 0.1s
+47. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_1.html        ✓ - 0.1s
+48. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_2.html        ✓ - 0.0s
+49. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_3.html        ✓ - 0.0s
+50. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_4.html        ✓ - 0.0s
+51. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_441170.html   ✓ - 0.0s
+52. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_4606.html     ✓ - 0.0s
+53. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/nysd_491943.html   ✓ - 0.0s
+54. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/pamd.html          ✓ - 0.0s
+55. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/txed.html          ✓ - 0.0s
+56. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/txsd.html          ✓ - 0.0s
+57. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/txsd_1.html        ✓ - 0.0s
+58. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/utd.html           ✓ - 0.1s
+59. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/vaed.html          ✓ - 0.0s
+60. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/district/wawd.html          ✓ - 0.0s
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/fake-rss/dcd.html  ✓ - 0.0s
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/fake-rss/mad.html  ✓ - 0.0s
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/alsb_103785005735335.html  ✓ - 0.0s
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/cacd_628915.html           ✓ - 0.0s
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/casd_542797.html           ✓ - 0.0s
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/cod_147282.html            ✓ - 0.0s
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/dcd_191424.html            ✓ - 0.0s
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/flmb_1250874.html          ✓ - 0.0s
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/flsd_516827.html           ✓ - 0.0s
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/flsd_521715.html           ✓ - 0.0s
+8. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/ilnd_155651.html           ✓ - 0.0s
+9. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/mad_194918.html            ✓ - 0.0s
+10. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/ned_43267.html             ✓ - 0.0s
+11. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/njd_304994.html            ✓ - 0.0s
+12. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/paed_457890.html           ✓ - 0.0s
+13. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/pawd_166812.html           ✓ - 0.0s
+14. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/vaed_357297.html           ✓ - 0.0s
+15. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/vaed_357297_1.html         ✓ - 0.0s
+16. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_dockets/wawb_646603.html           ✓ - 0.0s
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/special/cit.html    ✓ - 0.0s
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/special/cit_2.html  ✓ - 0.0s
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/special/cit_3.html  ✓ - 0.0s
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/special/cit_4.html  ✓ - 0.0s
+Normalizing PACER type of 'Defendant                                 (1)' to 'Defendant'...✓
+Normalizing PACER type of 'Debtor 2' to 'Debtor'...✓
+Normalizing PACER type of 'ThirdParty Defendant' to 'Third Party Defendant'...✓
+Normalizing PACER type of 'ThirdParty Plaintiff' to 'Third Party Plaintiff'...✓
+Normalizing PACER type of '3rd Pty Defendant' to 'Third Party Defendant'...✓
+Normalizing PACER type of '3rd party defendant' to 'Third Party Defendant'...✓
+Normalizing PACER type of 'Counter-defendant' to 'Counter Defendant'...✓
+Normalizing PACER type of 'Counter-Claimaint' to 'Counter Claimaint'...✓
+Normalizing PACER type of 'US Trustee' to 'U.S. Trustee'...✓
+Normalizing PACER type of 'United States Trustee' to 'U.S. Trustee'...✓
+Normalizing PACER type of 'U. S. Trustee' to 'U.S. Trustee'...✓
+Normalizing PACER type of 'BUS BOY' to 'Bus Boy'...✓
+Normalizing PACER type of 'JointAdmin Debtor' to 'Jointly Administered Debtor'...✓
+Normalizing PACER type of 'Intervenor-Plaintiff' to 'Intervenor Plaintiff'...✓
+Normalizing PACER type of 'Intervenor Dft' to 'Intervenor Defendant'...✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/akb_1.html   ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/almb_1.html  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/areb_1.html  ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/canb_1.html  ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/deb_1.html   ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/flsb_1.html  ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/insb_1.html  ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/njb_1.html   ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/nysb_1.html  ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/nysb_2.html  ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/nysb_3.html  ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/orb_1.html   ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/claims_activity/txeb_1.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/deb.html    ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/deb_2.html  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/ilcb.html   ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/ilnb.html   ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/insb.html   ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/njb.html    ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/nysb.html   ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/orb.html    ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/pamb.html   ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/txeb.html   ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/claims_registers/txnb.html   ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/free_opinion_report/areb_1.html  Parsed 1 results from written opinions report at areb
+✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/free_opinion_report/arwb_1.html  Parsed 1 results from written opinions report at arwb
+✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/free_opinion_report/cacd_1.html  Parsed 2 results from written opinions report at cacd
+✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/free_opinion_report/cand_2.html  Parsed 12 results from written opinions report at cand
+✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/list_of_creditors/cacb_1.html  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/list_of_creditors/cacb_2.html  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/list_of_creditors/ilnb_1.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/authentication_samples/please_log_in.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/nef/ared_1.html  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/nef/ared_2.html  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/nef/ared_3.html  ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/nef/arwd.html    ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/nef/cacd.html    ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/nef/cand.html    ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/nef/ned.html     ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/nef/txed.html    ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/nef/txnd.html    ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/nef/txwd.html    ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca11_1.txt  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca11_2.txt  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca2_1.txt   ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca2_2.txt   ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca2_3.txt   ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca2_4.txt   ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca2_5.txt   ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca3_1.txt   ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca3_2.txt   ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca4_1.txt   ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca4_2.txt   ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca5_1.txt   ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca5_2.txt   ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca6_1.txt   ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca6_2.txt   ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca9_1.txt   ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca9_2.txt   ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca9_3.txt   ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca9_4.txt   ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/nda/ca9_5.txt   ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/nda/cafc_1.txt  ✓
+21. Doing /workspaces/juriscraper/tests/examples/pacer/nda/cafc_2.txt  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/almd_1.txt        ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/almd_2.txt        ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/almd_3_plain.txt  ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/almd_4_plain.txt  ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/alsd_1.txt        ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/alsd_2.txt        ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/alsd_3.txt        ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_1.txt        ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_2.txt        ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_3.txt        ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_4.txt        ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_5.txt        ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_6.txt        ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ared_7.txt        ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwb_1.txt        ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwb_2.txt        ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwd_1.txt        ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwd_2.txt        ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwd_3.txt        ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwd_4.txt        ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/arwd_5.txt        ✓
+21. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cacb_1.txt        ✓
+22. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cacb_2.txt        ✓
+23. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cacb_3.txt        ✓
+24. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cacb_4.txt        ✓
+25. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cacb_6.txt        ✓
+26. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cacb_7.txt        ✓
+27. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cand_1.txt        ✓
+28. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cand_2.txt        ✓
+29. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cand_3.txt        ✓
+30. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/casb_1.txt        ✓
+31. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/casb_2.txt        ✓
+32. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cob_1.txt         ✓
+33. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/cob_2.txt         ✓
+34. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ctb_1.txt         ✓
+35. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ctb_2.txt         ✓
+36. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ctb_3.txt         ✓
+37. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ctb_multi_1.txt   ✓
+38. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/dcb_1.txt         ✓
+39. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/dcb_2.txt         ✓
+40. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/dcb_3.txt         ✓
+41. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/deb_1.txt         ✓
+42. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/deb_2.txt         ✓
+43. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/deb_multi_1.txt   ✓
+44. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/deb_multi_2.txt   ✓
+45. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ded_1.txt         ✓
+46. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ded_2.txt         ✓
+47. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/flsb_1.txt        ✓
+48. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/flsb_2.txt        ✓
+49. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/gand_1.txt        ✓
+50. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ianb.txt          ✓
+51. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ianb_2.txt        ✓
+52. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ilnd_1.txt        ✓
+53. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/jpml_1.txt        ✓
+54. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/laed_1.txt        ✓
+55. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/laed_2.txt        ✓
+56. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/mdb_1.txt         ✓
+57. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/mdb_2.txt         ✓
+58. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/mdb_3.txt         ✓
+59. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/mdb_multi_1.txt   ✓
+60. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/mdb_multi_2.txt   ✓
+61. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nceb_1.txt        ✓
+62. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ndb_1.txt         ✓
+63. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ndb_multi_1.txt   ✓
+64. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nhb_1.txt         ✓
+65. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nhb_2.txt         ✓
+66. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nhb_multi_1.txt   ✓
+67. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nhb_multi_2.txt   ✓
+68. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/njb_1.txt         ✓
+69. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/njb_2.txt         ✓
+70. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/njb_3.txt         ✓
+71. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/njb_4.txt         ✓
+72. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/njd_1.txt         ✓
+73. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nyeb_1.txt        ✓
+74. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nyeb_2.txt        ✓
+75. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nyed_1.txt        ✓
+76. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nyed_2.txt        ✓
+77. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysb_1.txt        ✓
+78. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysb_2.txt        ✓
+79. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysb_3.txt        ✓
+80. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysd_1.txt        ✓
+81. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysd_2.txt        ✓
+82. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysd_3.txt        ✓
+83. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysd_4.txt        ✓
+84. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/nysd_5.txt        ✓
+85. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ohnd_1.txt        ✓
+86. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ohsd_1.txt        ✓
+87. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ohsd_2.txt        ✓
+88. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/ohsd_3.txt        ✓
+89. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/okeb_1.txt        ✓
+90. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/okeb_2.txt        ✓
+91. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/okeb_3.txt        ✓
+92. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/oknd_1.txt        ✓
+93. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/paeb_1.txt        ✓
+94. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/paeb_2.txt        ✓
+95. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/paeb_3.txt        ✓
+96. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/paeb_4.txt        ✓
+97. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/paeb_multi_1.txt  ✓
+98. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/paeb_multi_3.txt  ✓
+99. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pamb_1.txt        ✓
+100. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pamb_2.txt        ✓
+101. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pamb_3.txt        ✓
+102. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pamb_4.txt        ✓
+103. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pawb_1.txt        ✓
+104. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pawb_2.txt        ✓
+105. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pawb_3.txt        ✓
+106. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pawb_4.txt        ✓
+107. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/pawb_5.txt        ✓
+108. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/tnmb_1.txt        ✓
+109. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txnb_1.txt        ✓
+110. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txnb_2.txt        ✓
+111. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txnb_multi_1.txt  ✓
+112. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txnd_1.txt        ✓
+113. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txsd_1.txt        ✓
+114. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_1.txt        ✓
+115. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_2.txt        ✓
+116. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_3.txt        ✓
+117. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_4.txt        ✓
+118. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_5.txt        ✓
+119. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_6.txt        ✓
+120. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/txwd_7.txt        ✓
+121. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/vaeb_1.txt        ✓
+122. Doing /workspaces/juriscraper/tests/examples/pacer/nef/s3/vaed_1.txt        ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/acms/ca2_23-7222_003.compare.json  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/acms/ca2_23-7246_003.compare.json  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/acms/ca2_23-7246_005.compare.json  ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/acms/ca9_22-21_033.compare.json    ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/acms/ca9_22-22_029.compare.json    ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca2_23-7222.acms_json  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca2_23-7246.acms_json  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca9_22-21.acms_json    ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca9_22-22.acms_json    ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca9_23-2412.acms_json  ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca9_23-2413.acms_json  ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca9_23-2435.acms_json  ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/acms/ca9_23-3206.acms_json  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca1_16-6001_ex1.html   ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca1_16-6001_ex2.html   ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca1_16-6003_ex3.html   ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca1_46307.html         ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca1_46307_new.html     ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca1_bk_16-7.html       ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca2_22-956.html        ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca3_21-2728.html       ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca5_22-30311.html      ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca5_221848.html        ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca6_21-3981.html       ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca7_21-2796.html       ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca9_18-70682.html      ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca9_19-16017_ex1.html  ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/appellate_attachment_pages/ca9_19-16017_ex2.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca11_14-11111.html  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca1_16-1756.html    ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca1_17-21-81.html   ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca1_17-2160.html    ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca5_178105.html     ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca5_18-20519.html   ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca9_16-73537.html   ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/ca9_299715.html     ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/cadc_34816.html     ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/not_appellate_dockets/cafc_17-2229.html   ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/bap9_15-1074.html  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca1.html           ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca11_1.html        ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca11_2.html        ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca1_2.html         ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca1_3.html         ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca1_46307.html     ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca6_1.html         ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca9_1.html         ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca9_2.html         ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/ca9_293296.html    ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/cadc_1.html        ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/dockets/appellate/cavc_18-3815.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/akd_0230682797.html        ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/akd_0230682806.html        ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/almd_017011.html           ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/alnd_019020.html           ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/alsd_02109.html            ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ared_02701906030.html      ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ared_02701906037.html      ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/arwd_029074.html           ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/azd_025014.html            ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/azd_025116943046.html      ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cacd_031034718988.html     ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cacd_03109630188.html      ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cacd_03109630191.html      ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/caed_033043833.html        ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/caed_033043879.html        ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/caed_033043927.html        ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cand_0350167.html          ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cand_035023513538.html     ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cand_035023515598.html     ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/casd_03702.html            ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/cod_039089.html            ✓
+21. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ctd_04102414673.html       ✓
+22. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ctd_04102414838.html       ✓
+23. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/dcd_04505578698.html       ✓
+24. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/dcd_04505784392.html       ✓
+25. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/dcd_04506197028.html       ✓
+26. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/deb_04218015230.html       ✓
+27. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ded_04302.html             ✓
+28. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ded_04305714362.html       ✓
+29. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ded_04305716663.html       ✓
+30. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/flmd_04707734601.html      ✓
+31. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/flmd_04707734613.html      ✓
+32. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/flnd_04902613796.html      ✓
+33. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/flnd_04902613991.html      ✓
+34. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/flsd_0510267.html          ✓
+35. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gamd_0530994269.html       ✓
+36. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gamd_0530995021.html       ✓
+37. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gamd_0530995033.html       ✓
+38. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gamd_0530995409.html       ✓
+39. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gamd_0530995470.html       ✓
+40. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gamd_0530995495.html       ✓
+41. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gand_055081.html           ✓
+42. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gasd_05701159201.html      ✓
+43. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gasd_05701159339.html      ✓
+44. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/gud_05901.html             ✓
+45. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/hid_06101078891.html       ✓
+46. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/hid_06101078941.html       ✓
+47. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/iand_0750899130.html       ✓
+48. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/iand_0750899241.html       ✓
+49. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/iasd_07701192972.html      ✓
+50. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/iasd_07701193034.html      ✓
+51. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ilcd_065054.html           ✓
+52. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ilnd_06708278610.html      ✓
+53. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ilnd_06708278625.html      ✓
+54. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ilsd_069021.html           ✓
+55. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/innd_07101560410.html      ✓
+56. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/innd_07101560495.html      ✓
+57. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/insd_07302.html            ✓
+58. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ksd_07909.html             ✓
+59. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kyed_08102087957.html      ✓
+60. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kyed_08102088108.html      ✓
+61. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kywd_08301713123.html      ✓
+62. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kywd_08301738336.html      ✓
+63. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kywd_08301738342.html      ✓
+64. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kywd_08301738484.html      ✓
+65. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kywd_08301738507.html      ✓
+66. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/kywd_08301738892.html      ✓
+67. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/laed_085013031004.html     ✓
+68. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/laed_085013034901.html     ✓
+69. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/lamd_087037.html           ✓
+70. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/lawd_0890340.html          ✓
+71. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mab_094126221797.html      ✓
+72. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_095011771531.html      ✓
+73. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_09501786991.html       ✓
+74. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_09503618527.html       ✓
+75. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_09503618537.html       ✓
+76. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_0951290550.html        ✓
+77. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_0951290550_new.html    ✓
+78. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mad_94392.html             ✓
+79. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mdd_093030.html            ✓
+80. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/med_091030.html            ✓
+81. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mied_09701899958.html      ✓
+82. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mied_09701900001.html      ✓
+83. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mied_09704148337.html      ✓
+84. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mied_09704148373.html      ✓
+85. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/miwd_09902358030.html      ✓
+86. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/miwd_09902358066.html      ✓
+87. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mnd_101058.html            ✓
+88. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mnd_10111409561.html       ✓
+89. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mnd_10111409561_new.html   ✓
+90. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10702477856.html      ✓
+91. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703199297.html      ✓
+92. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703299661.html      ✓
+93. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703299705.html      ✓
+94. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703299716.html      ✓
+95. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703299872.html      ✓
+96. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703300204.html      ✓
+97. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703300754.html      ✓
+98. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703301291.html      ✓
+99. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/moed_10703301675.html      ✓
+100. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/msnd_1030888190.html       ✓
+101. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/msnd_1030888289.html       ✓
+102. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mssd_10502476698.html      ✓
+103. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mssd_10502476734.html      ✓
+104. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mssd_10502476759.html      ✓
+105. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mssd_10502476769.html      ✓
+106. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/mtd_111027.html            ✓
+107. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868043.html      ✓
+108. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868051.html      ✓
+109. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868065.html      ✓
+110. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868091.html      ✓
+111. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868121.html      ✓
+112. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868202.html      ✓
+113. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nced_13101868514.html      ✓
+114. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ncmd_13301093535.html      ✓
+115. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ncmd_13301093594.html      ✓
+116. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ndd_1370299419.html        ✓
+117. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ndd_1370299490.html        ✓
+118. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ned_11301868173.html       ✓
+119. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ned_11301868787.html       ✓
+120. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nhd_11702.html             ✓
+121. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/njd_119024.html            ✓
+122. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nvd_11503153010.html       ✓
+123. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nvd_11503153019.html       ✓
+124. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nyed_123019137279.html     ✓
+125. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nyed_123019152448.html     ✓
+126. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nyed_12306778644.html      ✓
+127. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nyed_12306778656.html      ✓
+128. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nyed_410668.html           ✓
+129. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nynd_12501829022.html      ✓
+130. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nynd_12501829165.html      ✓
+131. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nynd_1250320138.html       ✓
+132. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysb_12604013833.html      ✓
+133. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysb_12604013833_new.html  ✓
+134. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysb_269295.html           ✓
+135. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysd_127031722970.html     ✓
+136. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysd_127031741309.html     ✓
+137. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysd_12707643538.html      ✓
+138. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysd_12707998365.html      ✓
+139. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysd_12708012889.html      ✓
+140. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nysd_12708012898.html      ✓
+141. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nywd_12901862410.html      ✓
+142. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/nywd_12901862422.html      ✓
+143. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ohnd_141012215024.html     ✓
+144. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ohnd_141032.html           ✓
+145. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ohsd_143083.html           ✓
+146. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ohsd_14309223490.html      ✓
+147. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/oked_1450388419.html       ✓
+148. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/oked_1450388501.html       ✓
+149. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/oknd_147068.html           ✓
+150. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ord_15103322370.html       ✓
+151. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ord_15103322407.html       ✓
+152. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ord_1510899598.html        ✓
+153. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/ord_1510899750.html        ✓
+154. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/pamd_15503122200.html      ✓
+155. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/pamd_15503122212.html      ✓
+156. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/pawd_157015.html           ✓
+157. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/rid_16103.html             ✓
+158. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/scd_163032.html            ✓
+159. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/sdd_16501239147.html       ✓
+160. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/sdd_16501239230.html       ✓
+161. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/tned_16707.html            ✓
+162. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/tnmd_16901.html            ✓
+163. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txed_17503830781.html      ✓
+164. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txed_17503830970.html      ✓
+165. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txnd_17704975453.html      ✓
+166. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txnd_17704975592.html      ✓
+167. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txsd_179041128562.html     ✓
+168. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txsd_179042.html           ✓
+169. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/txwd_181030.html           ✓
+170. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/utd_18301745928.html       ✓
+171. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/utd_18301745946.html       ✓
+172. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/vaed_18901338618.html      ✓
+173. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/vaed_18901338670.html      ✓
+174. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/vid_193055.html            ✓
+175. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/vtd_185015.html            ✓
+176. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/waed_19501349144.html      ✓
+177. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/waed_19501349184.html      ✓
+178. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/waed_19502942659.html      ✓
+179. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wawd_19703755107.html      ✓
+180. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wawd_19703755143.html      ✓
+181. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wawd_19717726991.html      ✓
+182. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wied_20301420356.html      ✓
+183. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wied_20301420395.html      ✓
+184. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wiwd_20502.html            ✓
+185. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wyd_2070797428.html        ✓
+186. Doing /workspaces/juriscraper/tests/examples/pacer/attachment_pages/wyd_2070797444.html        ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries_advanced/cacb.html    ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries_advanced/canb.html    ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries_advanced/canb_2.html  ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries_advanced/canb_3.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/akd_58813.html             ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/alsd.html                  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/alsd_61919.html            ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/arwb_156279.html           ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/azd_1067816.html           ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/cacd_26872.html            ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/canb.html                  ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/cand.html                  ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/cand_317868.html           ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/casd.html                  ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/casd_587221.html           ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/cob_461890.html            ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/cob_case_query_error.html  ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/ctb_113046.html            ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/ctd.html                   ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/ctd_115975.html            ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/dcd.html                   ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/dcd_134505.html            ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/ded_48523.html             ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/flmb.html                  ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/flmd_408091.html           ✓
+21. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/flsd.html                  ✓
+22. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/insb_1.html                ✓
+23. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/insb_2.html                ✓
+24. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/ncwd.html                  ✓
+25. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/njd.html                   ✓
+26. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/nyed.html                  ✓
+27. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/nysb.html                  ✓
+28. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/oknd_35183.html            ✓
+29. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/scb_1.html                 ✓
+30. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/ssd_75741.html             ✓
+31. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txed.html                  ✓
+32. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txed_218695.html           ✓
+33. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txnd_370098.html           ✓
+34. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txsd.html                  ✓
+35. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txsd_2.html                ✓
+36. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txsd_3.html                ✓
+37. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txsd_4.html                ✓
+38. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txsd_5.html                ✓
+39. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/txsd_6.html                ✓
+40. Doing /workspaces/juriscraper/tests/examples/pacer/case_queries/wiwd_50107.html            ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/akd_58813.html         ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/alsd_61919.html        ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/arwb_156279.html       ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/azd_1067816.html       ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cacd_26872.html        ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cacd_584255.html       ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cacd_683137.html       ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cacd_695143.html       ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cand_299226.html       ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cand_317100.html       ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cand_317868.html       ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/casb_463475.html       ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/casd.html              ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/cob_461890.html        ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ctb_113046.html        ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ctd_115975.html        ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/dcd_134505.html        ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/dcd_186935.html        ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/dcd_190182.html        ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/dcd_191692.html        ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ded_48523.html         ✓
+21. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ded_52516.html         ✓
+22. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ded_60071.html         ✓
+23. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ded_60379.html         ✓
+24. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ded_63705.html         ✓
+25. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/flmd_331869.html       ✓
+26. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/flsb_684510.html       ✓
+27. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/flsb_703069.html       ✓
+28. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/flsd_461461.html       ✓
+29. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/flsd_503009.html       ✓
+30. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/flsd_516082.html       ✓
+31. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/gamd_103911.html       ✓
+32. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/gand_172155.html       ✓
+33. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/gand_234816.html       ✓
+34. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/gand_235315.html       ✓
+35. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/idd_40127.html         ✓
+36. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/idd_40171.html         ✓
+37. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ilnd_274007.html       ✓
+38. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ilnd_328711.html       ✓
+39. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ilnd_328988.html       ✓
+40. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ilnd_330732.html       ✓
+41. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ilnd_343997.html       ✓
+42. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ksd_8097.html          ✓
+43. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/mad_189641.html        ✓
+44. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/mied_291380.html       ✓
+45. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/mied_319301.html       ✓
+46. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/moed_139160.html       ✓
+47. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/moed_158177.html       ✓
+48. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/mowd_131124.html       ✓
+49. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/mowd_137344.html       ✓
+50. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nced_156499.html       ✓
+51. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nced_160124.html       ✓
+52. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nced_160125.html       ✓
+53. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ncmd_72956.html        ✓
+54. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nebraskab_149949.html  ✓
+55. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ned_74660.html         ✓
+56. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ned_76965.html         ✓
+57. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ned_78580.html         ✓
+58. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/njd_272151.html        ✓
+59. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/njd_312125.html        ✓
+60. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/njd_345150.html        ✓
+61. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/njd_345216.html        ✓
+62. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/njd_347505.html        ✓
+63. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nmd_361386.html        ✓
+64. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nvd_113336.html        ✓
+65. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nvd_115190.html        ✓
+66. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nvd_126212.html        ✓
+67. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_207658.html       ✓
+68. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_235436.html       ✓
+69. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_270709.html       ✓
+70. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_305919.html       ✓
+71. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_332312.html       ✓
+72. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_406590.html       ✓
+73. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nyed_408792.html       ✓
+74. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nynd_112359.html       ✓
+75. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_417238.html       ✓
+76. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_435841.html       ✓
+77. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_441170.html       ✓
+78. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_451246.html       ✓
+79. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_468435.html       ✓
+80. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_475640.html       ✓
+81. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_475766.html       ✓
+82. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_479771.html       ✓
+83. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_483953.html       ✓
+84. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/nysd_485885.html       ✓
+85. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ohsd_192487.html       ✓
+86. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ohsd_196941.html       ✓
+87. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/ord_121926.html        ✓
+88. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/paeb.html              ✓
+89. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/paeb_424893.html       ✓
+90. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/paed_535229.html       ✓
+91. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/pamd_112754.html       ✓
+92. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/pawd_239060.html       ✓
+93. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/rid_35202.html         ✓
+94. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/rid_43387.html         ✓
+95. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/scd_238034.html        ✓
+96. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/txed_150129.html       ✓
+97. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/txed_163924.html       ✓
+98. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/txed_178838.html       ✓
+99. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/txnd_286784.html       ✓
+100. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/txnd_297356.html       ✓
+101. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/utd_107621.html        ✓
+102. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/vaed_275314.html       ✓
+103. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/vaed_304697.html       ✓
+104. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/vaed_362374.html       ✓
+105. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/wawd_245134.html       ✓
+106. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/wawd_247240.html       ✓
+107. Doing /workspaces/juriscraper/tests/examples/pacer/docket_history_reports/wvnd_35609.html        ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca10_1.html  ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca11_1.html  ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca1_1.html   ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca2_1.html   ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca3_1.html   ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca3_2.html   ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca3_3.html   ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca4_1.html   ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca5_1.html   ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca6_1.html   ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca7_1.html   ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca8_1.html   ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca8_2.html   ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ca9_1.html   ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/cadc_1.html  ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/caeb_1.html  ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/cafc_1.html  ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/cand_1.html  ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/ctd_1.html   ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/txwd_1.html  ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/confirmation_pages/vaed_1.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/almd_49523.xml    ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/azd_1061043.xml   ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/azd_318008.xml    ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/cacb_1669936.xml  ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/cacd_670564.xml   ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/cand_194617.xml   ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/cand_287492.xml   ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/dcd_119997.xml    ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/flmd_330522.xml   ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/ksd_112679.xml    ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/lawb_306314.xml   ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/mab_108660.xml    ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/mdd_81391.xml     ✓
+13. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/mied_318514.xml   ✓
+14. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/nysb_171257.xml   ✓
+15. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/nysd_476194.xml   ✓
+16. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/ohsd_141796.xml   ✓
+17. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/ohsd_170541.xml   ✓
+18. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/txnd_202294.xml   ✓
+19. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/utd_103577.xml    ✓
+20. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/vaeb_538785.xml   ✓
+21. Doing /workspaces/juriscraper/tests/examples/pacer/dockets_internet_archive/waeb_157087.xml   ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/mobile_queries/dcd.html  ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/ca10.xml    ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/ca11.xml    ✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/ca2_1.xml   ✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/ca4_1.xml   ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/ca6.xml     ✓
+5. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/cadc.xml    ✓
+6. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/cafc.xml    ✓
+7. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/mdb_1.xml   ✓
+8. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/mdb_2.xml   ✓
+9. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/nyed_1.xml  ✓
+10. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/nysb_1.xml  ✓
+11. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/sdny_1.xml  ✓
+12. Doing /workspaces/juriscraper/tests/examples/pacer/rss_feeds/wvsd.xml    ✓
+0. Doing /workspaces/juriscraper/tests/examples/pacer/possible_case_numbers/armes-v-hot-pizzas.xml       ✓
+1. Doing /workspaces/juriscraper/tests/examples/pacer/possible_case_numbers/no_results.xml               Cannot find case.
+✓
+2. Doing /workspaces/juriscraper/tests/examples/pacer/possible_case_numbers/sealed_case.xml              Cannot find case.
+✓
+3. Doing /workspaces/juriscraper/tests/examples/pacer/possible_case_numbers/technology-properties.xml    ✓
+4. Doing /workspaces/juriscraper/tests/examples/pacer/possible_case_numbers/veterans-legal-services.xml  ✓
+  juriscraper.opinions.united_states.administrative_agency.asbca    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.administrative_agency.bia      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.administrative_agency.bva      (2 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.administrative_agency.mspb_p   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.administrative_agency.mspb_u   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.administrative_agency.olc      (1 test(s) in 0.0 seconds)
+
+6 scrapers tested successfully against 7 example files, with 0 speed warnings.
+
+No speed warnings detected. That's great, keep up the good work!
+  juriscraper.opinions.united_states.federal_appellate.ca1               (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca2_p             (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca2_u             (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca3_p             (2 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca3_u             (2 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca4               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca5               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca6               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca7               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca8               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca9_p             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca9_u             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca10              (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca11_p            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.ca11_u            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.cadc              (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.cadc_u            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.cadc_pi           (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.cafc              (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.federal_appellate.scotus_chambers   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.scotus_relating   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_appellate.scotus_slip       (1 test(s) in 0.1 seconds)
+
+22 scrapers tested successfully against 24 example files, with 0 speed warnings.
+
+No speed warnings detected. That's great, keep up the good work!
+  juriscraper.opinions.united_states.federal_bankruptcy.bap1    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_bankruptcy.bap9    (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.federal_bankruptcy.bap10   (1 test(s) in 0.0 seconds)
+
+3 scrapers tested successfully against 3 example files, with 0 speed warnings.
+
+No speed warnings detected. That's great, keep up the good work!
+  juriscraper.opinions.united_states.federal_district.dcd   (1 test(s) in 0.4 seconds)
+
+1 scrapers tested successfully against 1 example files, with 0 speed warnings.
+
+No speed warnings detected. That's great, keep up the good work!
+  juriscraper.opinions.united_states.federal_special.acca_memorandum   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.acca_p            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.acca_summary      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.afcca             (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.federal_special.ag                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.armfor            (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.federal_special.cavc              (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.uscgcoca          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.cit               (2 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.federal_special.nmcca             (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.federal_special.tax               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.uscfc             (1 test(s) in 0.5 seconds)
+  juriscraper.opinions.united_states.federal_special.uscfc_vaccine     (1 test(s) in 6.9 seconds)
+  juriscraper.opinions.united_states.federal_special.fisc              (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.federal_special.fiscr             (1 test(s) in 0.0 seconds)
+
+15 scrapers tested successfully against 16 example files, with 1 speed warnings.
+
+At least one speed warning was triggered during the tests. If this is due to a slow scraper you wrote, we suggest attempting to speed it up, as it will be slow both in production and while running tests. This is currently a warning, but may raise a failure in the future as performance requirements are tightened.
+  juriscraper.opinions.united_states.state.ala                        (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.alacivapp                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.alacrimapp                 (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.alaska                     (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.alaskactapp                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ariz                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.arizctapp_div_1            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.arizctapp_div_2            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.ark                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.arkctapp                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.cal                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calag                      (2 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_1st               (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.calctapp_2nd               (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.calctapp_3rd               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_4th_div1          (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.calctapp_4th_div2          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_4th_div3          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_5th               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_6th               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_app_div           (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.calctapp_u                 (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.colo                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.coloctapp                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.conn                       (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.connappct                  (1 test(s) in 0.3 seconds)
+  juriscraper.opinions.united_states.state.dc                         (3 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.delaware                   (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.delch                      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.delctcompl                 (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.delsuperct                 (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fla                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fladistctapp_1             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fladistctapp_2             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fladistctapp_3             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fladistctapp_4             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fladistctapp_5             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.fladistctapp_6             (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.ga                         (1 test(s) in 0.6 seconds)
+  juriscraper.opinions.united_states.state.gactapp                    (2 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.haw                        (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.hawapp                     (2 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.idaho_civil                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.idaho_criminal             (2 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.idahoctapp_civil           (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.idahoctapp_criminal        (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.idahoctapp_u               (2 test(s) in 0.4 seconds)
+  juriscraper.opinions.united_states.state.ill                        (1 test(s) in 0.3 seconds)
+  juriscraper.opinions.united_states.state.illappct                   (5 test(s) in 1.4 seconds)
+  juriscraper.opinions.united_states.state.ind                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.indctapp                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.indtc                      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.iowa                       (4 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.iowactapp                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.kan_p                      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.kan_u                      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.kanctapp_p                 (1 test(s) in 0.3 seconds)
+  juriscraper.opinions.united_states.state.kanctapp_u                 (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.ky                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.kyctapp                    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.la                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.lactapp_1                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.lactapp_2                  Found 246 cases for year 2025
+(1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.lactapp_5                  (2 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.mass                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.massappct                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.massappct_u                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.masslandct                 (1 test(s) in 0.4 seconds)
+  juriscraper.opinions.united_states.state.md                         (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.mdag                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.mdctspecapp                (2 test(s) in 0.3 seconds)
+  juriscraper.opinions.united_states.state.mesuperct                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.mich                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.michctapp                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.minn                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.minnag                     (2 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.minnctapp_p                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.minnctapp_u                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.mont                       (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nc                         (2 test(s) in 0.3 seconds)
+  juriscraper.opinions.united_states.state.ncctapp                    (2 test(s) in 0.7 seconds)
+  juriscraper.opinions.united_states.state.neb                        (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nebctapp                   (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.nd                         (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.nev                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nevapp                     (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nh_p                       (2 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nh_u                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nm                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nmctapp                    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nj                         (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.njsuperctappdiv_p          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.njsuperctappdiv_u          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.njtaxct_p                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.njtaxct_u                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.njsuperctappdiv_u          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.ny                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyag                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyappdiv_1st               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyappdiv_2nd               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyappdiv_3rd               (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyappdiv_4th               (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nyappterm_1st              (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyappterm_2nd              (2 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nysupct_commercial         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nysupct                    (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nyfamct                    (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nycityct                   (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nycountyct                 (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nycivct                    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nycrimct                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nysurct                    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nydistct                   (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.nyjustct                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.nyclaimsct                 (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohio                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_1                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_2                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_3                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_4                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_5                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_6                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_7                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_8                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_9                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_10               (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_11               (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctapp_12               (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctcl                   (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ohioctcl_beginningofyear   (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.or                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.orctapp                    (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.state.ortc                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.okla                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.oklaag                     (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.oklacivapp                 (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.oklacrimapp                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.pa                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.pacommwct                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.pasuperct                  (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.ri                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.sd                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.sc                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.sc_u                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.scctapp                    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.scctapp_u                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.tenn                       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.tennctapp                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.tenncrimapp                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.tex                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texag                      (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_1                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_2                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_3                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_4                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_5                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_6                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_7                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_8                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_9                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_10                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_11                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_12                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_13                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texapp_14                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.texcrimapp                 (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.utah                       (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.utahctapp                  (1 test(s) in 0.3 seconds)
+  juriscraper.opinions.united_states.state.va                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vactapp_u                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vactapp_p                  (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vt                         (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vt_criminal                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vtsuperct_civil            (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vtsuperct_environmental    (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vtsuperct_family           (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.vtsuperct_probate          (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.wash                       (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.washctapp_p                (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.washctapp_u                (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.state.wis                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.wisctapp                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.wva                        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.wvactapp                   (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.state.wyo                        (1 test(s) in 0.0 seconds)
+
+185 scrapers tested successfully against 206 example files, with 1 speed warnings.
+  juriscraper.opinions.united_states.territories.guam            (1 test(s) in 0.2 seconds)
+  juriscraper.opinions.united_states.territories.nmariana        (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.territories.prsupreme       (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.territories.prapp           (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.territories.virginislands   (1 test(s) in 0.1 seconds)
+  juriscraper.opinions.united_states.territories.visuper_p       (1 test(s) in 0.0 seconds)
+  juriscraper.opinions.united_states.territories.visuper_u       (1 test(s) in 0.0 seconds)
+
+7 scrapers tested successfully against 7 example files, with 0 speed warnings.
+
+No speed warnings detected. That's great, keep up the good work!
+  juriscraper.oral_args.united_states.federal_appellate.ca1         (1 test(s) in 0.2 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca2         (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca3         (2 test(s) in 0.7 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca4         (1 test(s) in 0.1 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca5         (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca6         (1 test(s) in 0.1 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca7         (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca8         (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca9         (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca10        (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.ca11        (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.cadc        (1 test(s) in 0.2 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.cafc        (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.federal_appellate.scotus      (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.state.ill                     (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.state.illappct_1st_dist       (1 test(s) in 0.1 seconds)
+  juriscraper.oral_args.united_states.state.illappct_2nd_dist       (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.state.illappct_3rd_dist       (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.state.illappct_4th_dist       (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.state.illappct_5th_dist       (1 test(s) in 0.0 seconds)
+  juriscraper.oral_args.united_states.state.illappct_workers_comp   (1 test(s) in 0.0 seconds)
+
+21 scrapers tested successfully against 22 example files, with 0 speed warnings.
+
+No speed warnings detected. That's great, keep up the good work!
+0. Doing /workspaces/juriscraper/tests/examples/lasc/dockets/BC671284;LA;CV.json  Parsing lasc data from returned JSON into normalized format
