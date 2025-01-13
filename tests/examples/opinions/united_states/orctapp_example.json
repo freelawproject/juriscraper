@@ -1,0 +1,3462 @@
+{
+    "totalResults": 99,
+    "browseAllDefaultSortField": "dated",
+    "searchResultsDefaultSortField": "dated",
+    "sortFields": [
+        {
+            "name": "Relevance",
+            "order": "nosort",
+            "ad": "asc"
+        },
+        {
+            "name": "Title",
+            "order": "title",
+            "ad": "asc"
+        },
+        {
+            "name": "Title",
+            "order": "title",
+            "ad": "desc"
+        },
+        {
+            "name": "Official case name",
+            "order": "subjec",
+            "ad": "asc"
+        },
+        {
+            "name": "Official case name",
+            "order": "subjec",
+            "ad": "desc"
+        },
+        {
+            "name": "Citation",
+            "order": "identia",
+            "ad": "asc"
+        },
+        {
+            "name": "Citation",
+            "order": "identia",
+            "ad": "desc"
+        },
+        {
+            "name": "Date decided",
+            "order": "dated",
+            "ad": "asc"
+        },
+        {
+            "name": "Date decided",
+            "order": "dated",
+            "ad": "desc"
+        }
+    ],
+    "filters": {
+        "collections": [
+            {
+                "name": "Briefs -- Oregon Court of Appeals",
+                "selected": false,
+                "alias": "p17027coll8"
+            },
+            {
+                "name": "Briefs -- Oregon Supreme Court",
+                "selected": false,
+                "alias": "p17027coll7"
+            },
+            {
+                "name": "Decisions & Orders -- Oregon Tax Court",
+                "selected": false,
+                "alias": "p17027coll6"
+            },
+            {
+                "name": "District Attorney Public Records Orders",
+                "selected": false,
+                "alias": "p17027coll4"
+            },
+            {
+                "name": "Opinions -- Oregon Court of Appeals",
+                "selected": true,
+                "alias": "p17027coll5"
+            },
+            {
+                "name": "Opinions -- Oregon Supreme Court",
+                "selected": false,
+                "alias": "p17027coll3"
+            },
+            {
+                "name": "Oregon Attorney General Public Records Orders",
+                "selected": false,
+                "alias": "p17027coll2"
+            },
+            {
+                "name": "Oregon Chief Justice Orders",
+                "selected": false,
+                "alias": "p17027coll10"
+            },
+            {
+                "name": "Oregon Employment Relations Board Final Orders",
+                "selected": false,
+                "alias": "p17027coll9"
+            },
+            {
+                "name": "Oregon Governor Executive Orders",
+                "selected": false,
+                "alias": "p17027coll11"
+            }
+        ]
+    },
+    "facets": {
+        "type": [
+            {
+                "title": "nonprecedential opinion",
+                "count": 64
+            },
+            {
+                "title": "opinion",
+                "count": 35
+            }
+        ],
+        "judge": [
+            {
+                "title": "hellman",
+                "count": 13
+            },
+            {
+                "title": "kamins",
+                "count": 12
+            },
+            {
+                "title": "ortega",
+                "count": 9
+            },
+            {
+                "title": "egan",
+                "count": 8
+            },
+            {
+                "title": "mooney",
+                "count": 7
+            },
+            {
+                "title": "shorr",
+                "count": 7
+            },
+            {
+                "title": "tookey",
+                "count": 7
+            },
+            {
+                "title": "powers",
+                "count": 6
+            },
+            {
+                "title": "joyce",
+                "count": 5
+            },
+            {
+                "title": "lagesen",
+                "count": 5
+            },
+            {
+                "title": "pag�n",
+                "count": 5
+            }
+        ],
+        "subjec1": [
+            {
+                "title": "state of oregon",
+                "count": 52
+            },
+            {
+                "title": "department of human services",
+                "count": 18
+            },
+            {
+                "title": "city of cannon beach",
+                "count": 2
+            },
+            {
+                "title": "SAIF Corporation",
+                "count": 2
+            },
+            {
+                "title": "stanley roberts",
+                "count": 2
+            },
+            {
+                "title": "alanna nicole partin",
+                "count": 1
+            },
+            {
+                "title": "alicia hayward",
+                "count": 1
+            },
+            {
+                "title": "alyssa naftaniel",
+                "count": 1
+            },
+            {
+                "title": "anthony damien cordeiro",
+                "count": 1
+            },
+            {
+                "title": "anthony sam white",
+                "count": 1
+            },
+            {
+                "title": "arthur daniel kelley",
+                "count": 1
+            }
+        ]
+    },
+    "fields": {
+        "queries": [
+            {
+                "mode": "exact",
+                "searchTerm": "20240901-20241010",
+                "field": "dated",
+                "connector": "and"
+            }
+        ],
+        "order": "dated",
+        "direction": "desc"
+    },
+    "items": [
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37201",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37201/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37201",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180170, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Cordeiro"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 457"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A180170, Opinion",
+            "detailJson": {
+                "requestedId": 37201,
+                "id": 37201,
+                "parentId": -1,
+                "collectionAlias": "p17027coll5",
+                "collectionName": "Opinions -- Oregon Court of Appeals",
+                "contentType": "application/pdf",
+                "filename": "37195.pdf",
+                "title": "A_Opinion",
+                "text": "",
+                "pageNumber": null,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A180170, Opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec",
+                    "label": "Official case name",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "State v. Cordeiro",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "relispt",
+                    "label": "Case number",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A180170",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "type",
+                    "label": "Type",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Nonprecedential opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "dated",
+                    "label": "Date decided",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "2024-10-09",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec1",
+                    "label": "Parties",
+                    "controlledVocab": true,
+                    "searchable": true,
+                    "value": "State of Oregon; Anthony Damien Cordeiro",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identia",
+                    "label": "Citation",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "335 Or App 457",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "descri",
+                    "label": "Notes",
+                    "controlledVocab": false,
+                    "searchable": false,
+                    "value": "Affirmed.  State v. Le, 327 Or App 129, 534 P3d 1097, rev den, 371 Or 715 (2023).",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "rights",
+                    "label": "Rights",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "No known copyright restrictions.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identi",
+                    "label": "Identifier",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A180170.pdf",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": false,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37201/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll5:37201/full/730,/0/default.jpg",
+                "iiifInfoUri": "/iiif/2/p17027coll5:37201/info.json",
+                "downloadUri": "/api/collection/p17027coll5/id/37201/download",
+                "downloadParentUri": null,
+                "url": null,
+                "streamUri": null,
+                "parent": null,
+                "flatCompoundObjects": null
+              }
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37189",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37189/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37189",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181792, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Artunyan v. SAIF"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 407"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A181792, Opinion",
+            "detailJson": {
+                "requestedId": 37189,
+                "id": 37189,
+                "parentId": -1,
+                "collectionAlias": "p17027coll5",
+                "collectionName": "Opinions -- Oregon Court of Appeals",
+                "contentType": "application/pdf",
+                "filename": "37194.pdf",
+                "title": "A_Opinion",
+                "text": "",
+                "pageNumber": null,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A181792, Opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec",
+                    "label": "Official case name",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Artunyan v. SAIF",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "relispt",
+                    "label": "Case number",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A181792",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "type",
+                    "label": "Type",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Nonprecedential opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "dated",
+                    "label": "Date decided",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "2024-10-09",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec1",
+                    "label": "Parties",
+                    "controlledVocab": true,
+                    "searchable": true,
+                    "value": "Svetlana Artunyan; SAIF Corporation",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "judge",
+                    "label": "Author",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Egan ",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identia",
+                    "label": "Citation",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "335 Or App 407",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "descri",
+                    "label": "Notes",
+                    "controlledVocab": false,
+                    "searchable": false,
+                    "value": "Affirmed.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "rights",
+                    "label": "Rights",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "No known copyright restrictions.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identi",
+                    "label": "Identifier",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A181792.pdf",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": false,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37189/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll5:37189/full/730,/0/default.jpg",
+                "iiifInfoUri": "/iiif/2/p17027coll5:37189/info.json",
+                "downloadUri": "/api/collection/p17027coll5/id/37189/download",
+                "downloadParentUri": null,
+                "url": null,
+                "streamUri": null,
+                "parent": null,
+                "flatCompoundObjects": null
+              }
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37190",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37190/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37190",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183680, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. L. B."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 452"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A183680, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37191",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37191/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37191",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183710, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. K. K."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 436"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A183710, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37192",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37192/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37192",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180171, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Brown"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 417"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A180171, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37188",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37188/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37188",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182349, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. K. B."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 410"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A182349, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37193",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37193/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37193",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181788, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Cort-Wagner v. SAIF"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 455"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A181788, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37197",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37197/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37197",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179755, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Miles"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 421"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A179755, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37183",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37183/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37183",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179540, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Anner"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 388"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A179540, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37199",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37199/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37199",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A176473, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Haverly v. Board of Parole"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 414"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A176473, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37200",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37200/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37200",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179899, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Brower-Gillpatrick"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 448"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A179899, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37184",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37184/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37184",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A177928, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Silver"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 377"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A177928, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37185",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37185/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37185",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180626, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Gasperetti"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 425"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A180626, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37186",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37186/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37186",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180191, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. England-Ray"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 458"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A180191, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37194",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37194/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37194",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183675, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. L. C. B."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 443"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A183675, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37187",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37187/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37187",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179482, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Carmello"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 373"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A179482, Opinion",
+            "detailJson":{
+                "requestedId": 37187,
+                "id": 37187,
+                "parentId": -1,
+                "collectionAlias": "p17027coll5",
+                "collectionName": "Opinions -- Oregon Court of Appeals",
+                "contentType": "application/pdf",
+                "filename": "37201.pdf",
+                "title": "A_Opinion",
+                "text": "",
+                "pageNumber": null,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A179482, Opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec",
+                    "label": "Official case name",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "State v. Carmello",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "relispt",
+                    "label": "Case number",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A179482",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "type",
+                    "label": "Type",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "dated",
+                    "label": "Date decided",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "2024-10-09",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec1",
+                    "label": "Parties",
+                    "controlledVocab": true,
+                    "searchable": true,
+                    "value": "State of Oregon; Carlos Carmello",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "judge",
+                    "label": "Author",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Tookey",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identia",
+                    "label": "Citation",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "335 Or App 373",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "descri",
+                    "label": "Notes",
+                    "controlledVocab": false,
+                    "searchable": false,
+                    "value": "Affirmed.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "relhapt",
+                    "label": "Additional case number",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A179501",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "rights",
+                    "label": "Rights",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "No known copyright restrictions.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identi",
+                    "label": "Identifier",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A179482.pdf",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": false,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37187/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll5:37187/full/730,/0/default.jpg",
+                "iiifInfoUri": "/iiif/2/p17027coll5:37187/info.json",
+                "downloadUri": "/api/collection/p17027coll5/id/37187/download",
+                "downloadParentUri": null,
+                "url": null,
+                "streamUri": null,
+                "parent": null,
+                "flatCompoundObjects": null
+              }
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37195",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37195/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37195",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181866, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Moore v. Dept. of Corrections"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 396"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A181866, Opinion",
+            "detailJson": {
+                "requestedId": 37195,
+                "id": 37195,
+                "parentId": -1,
+                "collectionAlias": "p17027coll5",
+                "collectionName": "Opinions -- Oregon Court of Appeals",
+                "contentType": "application/pdf",
+                "filename": "37188.pdf",
+                "title": "A_Opinion",
+                "text": "",
+                "pageNumber": null,
+                "imageWidth": 825,
+                "imageHeight": 1275,
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A181866, Opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec",
+                    "label": "Official case name",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Moore v. Dept. of Corrections",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "relispt",
+                    "label": "Case number",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A181866",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "type",
+                    "label": "Type",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Opinion",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "dated",
+                    "label": "Date decided",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "2024-10-09",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "subjec1",
+                    "label": "Parties",
+                    "controlledVocab": true,
+                    "searchable": true,
+                    "value": "Randy Allen Moore; Oregon Department of Corrections; Jane Doe 1-10",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "judge",
+                    "label": "Author",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "Kamins",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identia",
+                    "label": "Citation",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "335 Or App 396",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "descri",
+                    "label": "Notes",
+                    "controlledVocab": false,
+                    "searchable": false,
+                    "value": "Reversed and remanded as to dismissal of defendant Oregon Department of Corrections; otherwise affirmed.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "rights",
+                    "label": "Rights",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "No known copyright restrictions.",
+                    "controlledVocabList": null
+                  },
+                  {
+                    "key": "identi",
+                    "label": "Identifier",
+                    "controlledVocab": false,
+                    "searchable": true,
+                    "value": "A181866.pdf",
+                    "controlledVocabList": null
+                  }
+                ],
+                "fullrsEnabled": false,
+                "hasPrintPDF": false,
+                "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37195/thumbnail",
+                "imageUri": "https://ojd.contentdm.oclc.org/iiif/2/p17027coll5:37195/full/730,/0/default.jpg",
+                "iiifInfoUri": "/iiif/2/p17027coll5:37195/info.json",
+                "downloadUri": "/api/collection/p17027coll5/id/37195/download",
+                "downloadParentUri": null,
+                "url": null,
+                "streamUri": null,
+                "parent": null,
+                "flatCompoundObjects": null
+              }
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37196",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37196/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37196",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180236, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Wilson"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 401"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A180236, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37198",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37198/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37198",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183601, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. J. D. G."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 429"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-09"
+                }
+            ],
+            "title": "A183601, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37169",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37169/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37169",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178409, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Rudolph"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 347"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A178409, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37168",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37168/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37168",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182963, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. M. A. T."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 294"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A182963, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37167",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37167/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37167",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181940, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. R. M. S."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 337"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A181940, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37166",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37166/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37166",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A184345, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Ferguson Creek Investment v. Lane County"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 277"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A184345, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37165",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37165/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37165",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183682, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. J. M. R."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 273"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A183682, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37164",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37164/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37164",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178761, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Partin"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 357"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A178761, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37178",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37178/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37178",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178529, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Sedgwick CMS v. Barreras"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 351"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A178529, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37177",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37177/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37177",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183333, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. C. S."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 324"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A183333, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37176",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37176/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37176",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182707, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. S. G. W."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 343"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A182707, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37179",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37179/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37179",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180409, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Potter"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 368"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A180409, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37180",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37180/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37180",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179656, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. G. B."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 289"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A179656, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37181",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37181/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37181",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180100, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Huff"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 326"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A180100, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37170",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37170/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37170",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181716, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. A. M."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 320"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A181716, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37163",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37163/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37163",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179051, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Waycaster"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 333"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A179051, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37175",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37175/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37175",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180317, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Williams"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 364"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A180317, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37174",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37174/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37174",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180573, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Paradiso"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 372"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A180573, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37173",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37173/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37173",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181885, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Follansbee v. Ooi"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 305"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A181885, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37172",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37172/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37172",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182184, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. M. R. -C."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 339"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A182184, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37171",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37171/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37171",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180128, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Tuchscherer"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 330"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-10-02"
+                }
+            ],
+            "title": "A180128, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37182",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37182/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37182",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179830, Opinion\n"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Goff v. Fhuere\n"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 261\n"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A179830, Opinion\n"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37128",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37128/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37128",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183604, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Sanders v. Highberger"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 255"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A183604, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37131",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37131/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37131",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180846, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Ellis"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 267"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A180846, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37132",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37132/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37132",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182853, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Daily"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 198"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A182853, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37133",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37133/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37133",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181180, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Hernandez-Marquez"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 253"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A181180, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37134",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37134/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37134",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180230, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Bradford"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 264"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A180230, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37135",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37135/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37135",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181049, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Brookwell"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 270"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A181049, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37136",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37136/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37136",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180013, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Sarria"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 201"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A180013, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37137",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37137/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37137",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178957, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Klemp v. Andrach"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 187"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A178957, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37138",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37138/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37138",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182009, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Thorne"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 245"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A182009, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37139",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37139/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37139",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180676, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Day"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 238"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A180676, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37140",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37140/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37140",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180748, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Hansen"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 243"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A180748, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37141",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37141/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37141",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A184663, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Land Conservation v. Clackamas County"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 205"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A184663, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37142",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37142/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37142",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A176794, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. T. L. B."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 225"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A176794, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37143",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37143/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37143",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179163, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Leinweber"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 257"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A179163, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37130",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37130/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37130",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180237, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Gonzales-Salcido"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 247"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-25"
+                }
+            ],
+            "title": "A180237, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37115",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37115/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37115",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178454, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Khoshnaw v. Washburn"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 163"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A178454, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37114",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37114/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37114",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178589, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Britt"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 91"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A178589, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37113",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37113/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37113",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183559, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. L. F."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 158"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A183559, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37112",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37112/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37112",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179469, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Hoppe"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 166"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A179469, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37111",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37111/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37111",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179474, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Goode"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 108"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A179474, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37110",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37110/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37110",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181611, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "City of Eugene v. Wade"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 186"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A181611, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37109",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37109/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37109",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A175360, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "White v. Reyes"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 124"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A175360, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37126",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37126/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37126",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A163980, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State ex rel Rosenblum v. Living Essentials, LLC"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 30"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A163980, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37125",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37125/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37125",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183616, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. C. G."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 155"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A183616, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37124",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37124/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37124",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183729, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. J. W. H. G."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 183"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A183729, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37123",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37123/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37123",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180625, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Jones"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 79"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A180625, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37122",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37122/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37122",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183172, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. C. R."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 150"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A183172, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37121",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37121/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37121",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A177140, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Andrews"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 59"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A177140, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37120",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37120/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37120",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179436, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Martinez"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 103"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A179436, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37119",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37119/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37119",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179813, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Flesey v. Columbia Memorial Hospital"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 185"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A179813, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37118",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37118/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37118",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179286, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Hayward v. High Performance Homes, Inc."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 178"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A179286, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37117",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37117/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37117",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182158, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. E. O."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 172"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A182158, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37116",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37116/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37116",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183731, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. G. G."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 168"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A183731, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37108",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37108/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37108",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179759, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Moore"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 74"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-18"
+                }
+            ],
+            "title": "A179759, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37071",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37071/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37071",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182386, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Printemps-Herget v. Employment Dept."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 24"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-11"
+                }
+            ],
+            "title": "A182386, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37070",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37070/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37070",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182198, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. W. C."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 16"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-11"
+                }
+            ],
+            "title": "A182198, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37069",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37069/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37069",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180918, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Washington County v. Sippel"
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 1"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-11"
+                }
+            ],
+            "title": "A180918, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37068",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37068/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37068",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A183725, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. C. E. B."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 27"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-11"
+                }
+            ],
+            "title": "A183725, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37067",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37067/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37067",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182258, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. H. C."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 20"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-11"
+                }
+            ],
+            "title": "A182258, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37066",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37066/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37066",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181341, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. C. M."
+                },
+                {
+                    "field": "identia",
+                    "value": "335 Or App 13"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-11"
+                }
+            ],
+            "title": "A181341, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37042",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37042/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37042",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A176147, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Kelley"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 802"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A176147, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37043",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37043/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37043",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A184314, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Roberts v. City of Cannon Beach (A184314)"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 762"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A184314, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37044",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37044/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37044",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180819, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Harris v. City of Portland"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 794"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A180819, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37045",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37045/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37045",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A177705, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Vincent"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 714"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A177705, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37046",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37046/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37046",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A184309, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Roberts v. City of Cannon Beach (A184309)"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 807"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A184309, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37040",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37040/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37040",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A179744, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. S. L."
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 782"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A179744, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37041",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37041/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37041",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180950, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Valdovinos-Moreno"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 829"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A180950, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37056",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37056/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37056",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A173374, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Stryffeler v. Jenq"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 788"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A173374, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37057",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37057/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37057",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A169635, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Marshall v. PricewaterhouseCoopers, LLC"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 751"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A169635, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37058",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37058/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37058",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A178262, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. W. K. L."
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 821"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A178262, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37059",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37059/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37059",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A177964, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Antonio"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 778"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A177964, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37047",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37047/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37047",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181592, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "VP Real Estate Investment Services v. Naftaniel"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 747"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A181592, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37048",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37048/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37048",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A181875, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Y. S. H. -A."
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 832"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A181875, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37049",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37049/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37049",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180585, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Doss v. Farmers Ins. Co. of Oregon"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 826"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A180585, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37050",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37050/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37050",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A174187, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Tharp v. Washburn"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 810"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A174187, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37051",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37051/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37051",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A177870, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Meister v. PERB"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 725"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A177870, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37052",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37052/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37052",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A180316, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "State v. Zarazua"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 741"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A180316, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37053",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37053/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37053",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182086, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. N. L."
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 795"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A182086, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37054",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37054/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37054",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A182249, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Dept. of Human Services v. A. R. F."
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 798"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A182249, Opinion"
+        },
+        {
+            "collectionAlias": "p17027coll5",
+            "index": null,
+            "itemId": "37055",
+            "filetype": "pdf",
+            "thumbnailUri": "/api/singleitem/collection/p17027coll5/id/37055/thumbnail",
+            "thumbnailEnabled": true,
+            "itemLink": "/singleitem/collection/p17027coll5/id/37055",
+            "metadataFields": [
+                {
+                    "field": "title",
+                    "value": "A184437, Opinion"
+                },
+                {
+                    "field": "subjec",
+                    "value": "Neice v. Prosper Portland"
+                },
+                {
+                    "field": "identia",
+                    "value": "334 Or App 735"
+                },
+                {
+                    "field": "dated",
+                    "value": "2024-09-05"
+                }
+            ],
+            "title": "A184437, Opinion"
+        }
+    ],
+    "facetFields": {
+        "type": "Type",
+        "judge": "Author",
+        "subjec1": "Parties"
+    },
+    "gridViewEnabled": false
+}

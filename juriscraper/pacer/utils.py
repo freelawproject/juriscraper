@@ -598,6 +598,34 @@ def reverse_goDLS_function(s):
     return parts
 
 
+def reverse_sumDocSelected_function(s) -> Optional[Dict[str, int]]:
+    """Extract the arguments from the sumDocSelected JavaScript function.
+
+    In: sumDocSelected(this,1,13481, 7548050)
+    Out: {
+      'page_count': 1,
+      'file_size_bytes': 13481,
+      'doc_id': 7548050
+    }
+
+    The key names correspond to the form field names in the JavaScript on PACER:
+
+     - page_count: Number of pages in the document.
+     - file_size_bytes: Size of the file in bytes.
+     - doc_id: document ID without court prefix, sometimes called dlsid.
+    """
+    match = re.search(r"sumDocSelected\((.*?)\)", s)
+    args = [arg.strip() for arg in match.group(1).split(",")]
+    if args[0] != "this":
+        return None
+    parts = {
+        "page_count": int(args[1]),
+        "file_size_bytes": int(args[2]),
+        "doc_id": int(args[3]),
+    }
+    return parts
+
+
 def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
     """Make a doc1 URL.
 
@@ -806,3 +834,63 @@ def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
         # Raise an exception if a timezone abbreviation is not specified.
         raise NotImplementedError(f"Datetime {datetime_str} not understood.")
     return date_time
+
+
+def parse_sumDocSelected_from_row(
+    row: html.HtmlElement,
+) -> Optional[Dict[str, int]]:
+    """Parse the arguments from the sumDocSelected function call parts from a
+    given table row.
+
+    :param row: Table row as an HtmlElement
+    :return: A dictionary of parsed parameters from the sumDocSelected function,
+     or None if the row does not contain such data.
+    """
+
+    input_els = row.xpath(".//input[@class='selDocCl']")
+    for input_el in input_els:
+        onclick = input_el.xpath("./@onclick")
+        if onclick and "sumDocSelected" in onclick[0]:
+            return reverse_sumDocSelected_function(onclick[0])
+    return None
+
+
+def get_input_value_from_tr(
+    tr: html.HtmlElement, idx: int, expected_values: int, split_value: str
+) -> Optional[str]:
+    """Take a row from the attachment table and return the input value by
+    index.
+
+    :param tr: An HTML row element from which the input value will be extracted.
+    :param idx: The index of the value to extract from the split list.
+    :param expected_values: The expected number of elements in the split value.
+    :param split_value: The delimiter used to split the value string.
+    :return: The extracted value at the specified index or None
+    """
+    try:
+        input_element = tr.xpath(".//input")[0]
+    except IndexError:
+        return None
+    else:
+        # value="6828943 14732034 1 62576"
+        # "62576" is size in bytes "1" is pages
+        # or
+        # value="23515655-90555-2"
+        # "90555" is size in bytes "2" is pages
+        value = input_element.xpath("./@value")[0]
+        split_value = value.split(split_value)
+        if len(split_value) != expected_values:
+            return None
+        return split_value[idx]
+
+
+def get_file_size_str_from_tr(tr: html.HtmlElement) -> str:
+    """Take a row from the attachment table and return the number of bytes
+    as an int.
+    """
+    cells = tr.xpath("./td")
+    last_cell_contents = cells[-1].text_content()
+    units = ["kb", "mb"]
+    if any(unit in last_cell_contents.lower() for unit in units):
+        return last_cell_contents.strip()
+    return ""

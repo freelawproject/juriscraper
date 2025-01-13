@@ -21,6 +21,8 @@ from ..lib.utils import clean_court_object, previous_and_next
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
 from .utils import (
+    get_file_size_str_from_tr,
+    get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_anchor,
 )
@@ -1119,8 +1121,6 @@ class DocketReport(BaseDocketReport, BaseReport):
         tallied and include the main document.
         """
         number = int(row.xpath(".//td/text()")[0].strip())
-        if self.is_bankruptcy:
-            return number - 1
         return number
 
     def _get_description_from_tr(self, row):
@@ -1143,20 +1143,39 @@ class DocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_input_value_from_tr(tr, idx):
-        """Take a row from the attachment table and return the input value by
-        index.
-        """
+    def _get_de_arr_de_seq_nums_sequence(td):
+        """Get the docket entry row sequence number."""
         try:
-            input = tr.xpath(".//input")[0]
+            input = td.xpath(".//input[@name='arr_de_seq_nums']")[0]
         except IndexError:
             return None
         else:
-            # initial value string "23515655-90555-2"
-            # "90555" is size in bytes "2" is pages
+            # initial value string "arr_de_seq_nums_2"
+            # "2" is sequence
+            id_path = input.xpath("./@id")
+            id_value = None
+            if id_path:
+                id_value = id_path[0].removeprefix("arr_de_seq_nums_")
             value = input.xpath("./@value")[0]
-            split_value = value.split("-")
-            if len(split_value) != 3:
+            if id_value is not None and id_value != value:
+                return None
+            return value
+
+    @staticmethod
+    def _get_attachment_id_value_from_tr(tr, idx):
+        """Take a row from the attachment table and return the id value by
+        index.
+        """
+        try:
+            input = tr.xpath(".//input[@name='download_documents']")[0]
+        except IndexError:
+            return None
+        else:
+            # initial value string "arr_de_seq_nums_2_90555"
+            # "90555" is size in bytes "2" is sequence
+            value = input.xpath("./@id")[0].removeprefix("arr_de_seq_nums_")
+            split_value = value.split("_")
+            if len(split_value) != 2:
                 return None
             return split_value[idx]
 
@@ -1165,7 +1184,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
-        count = DocketReport._get_input_value_from_tr(tr, 2)
+        count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
 
@@ -1197,25 +1216,19 @@ class DocketReport(BaseDocketReport, BaseReport):
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
-        file_size_str = DocketReport._get_input_value_from_tr(tr, 1)
+        download_documents = tr.xpath(".//input[@name='download_documents']")
+        if download_documents:
+            file_size_str = DocketReport._get_attachment_id_value_from_tr(
+                tr, 1
+            )
+        else:
+            file_size_str = get_input_value_from_tr(tr, 1, 3, "-")
         if file_size_str is None:
             return None
         file_size = int(file_size_str)
         if file_size == 0:
             return None
         return file_size
-
-    @staticmethod
-    def _get_file_size_str_from_tr(tr):
-        """Take a row from the attachment table and return the number of bytes
-        as a str.
-        """
-        cells = tr.xpath("./td")
-        last_cell_contents = cells[-1].text_content()
-        units = ["kb", "mb"]
-        if any(unit in last_cell_contents.lower() for unit in units):
-            return last_cell_contents.strip()
-        return ""
 
     def _get_pacer_doc_id(self, row):
         """Take in a row from the attachment table and return the pacer_doc_id
@@ -1227,7 +1240,16 @@ class DocketReport(BaseDocketReport, BaseReport):
         page variant.
         """
         # we get our doc_id suffix "23515655"
-        pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
+        download_documents = row.xpath(".//input[@name='download_documents']")
+        pacer_doc_suffix = None
+        if download_documents:
+            value = download_documents[0].xpath("./@value")
+            if value:
+                pacer_doc_suffix = value[0]
+        else:
+            pacer_doc_suffix = get_input_value_from_tr(row, 0, 3, "-")
+        if pacer_doc_suffix is None:
+            return None
         # after inserting prefixes our final doc_id is "035023515655"
         return f"{self.doc_id_prefix}0{pacer_doc_suffix}"
 
@@ -1248,6 +1270,10 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # No onclick on this row.
                 pass
             else:
+                if name == "download_documents":
+                    return DocketReport._get_attachment_id_value_from_tr(
+                        row, 0
+                    )
                 return name.split("_")[2]
 
         return None
@@ -1261,7 +1287,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
-                "file_size_str": self._get_file_size_str_from_tr(row),
+                "file_size_str": get_file_size_str_from_tr(row),
                 "pacer_doc_id": self._get_pacer_doc_id(row),
                 # It may not be needed to reparse the seq_no
                 # for each row, but we may as well. So far, it
@@ -1273,6 +1299,14 @@ class DocketReport(BaseDocketReport, BaseReport):
                 attachment["file_size_bytes"] = file_size_bytes
             result.append(attachment)
         return result
+
+    @staticmethod
+    def _de_matches_attachment(de, attachment):
+        if de["pacer_doc_id"] != attachment["pacer_doc_id"]:
+            return False
+        if de["pacer_seq_no"] != attachment["pacer_seq_no"]:
+            return False
+        return True
 
     @staticmethod
     def _merge_de_with_attachment(de, attachment):
@@ -1343,18 +1377,35 @@ class DocketReport(BaseDocketReport, BaseReport):
                 if view_multiple_documents and len(cells) >= 3:
                     last_de = docket_entries[-1]
                     attachments = self._get_attachments(cells[2])
-                    if attachments[0]["attachment_number"] == 0:
-                        de_attachment = attachments.pop(0)
-                        self._merge_de_with_attachment(last_de, de_attachment)
-                    last_de["attachments"] = attachments
+                    for idx, attachment in enumerate(attachments):
+                        if self._de_matches_attachment(last_de, attachment):
+                            self._merge_de_with_attachment(last_de, attachment)
+                            if (
+                                idx == 0
+                                and attachment["attachment_number"] == 0
+                            ):
+                                attachments.pop(idx)
+                        elif (
+                            last_de["pacer_seq_no"]
+                            != attachment["pacer_seq_no"]
+                        ):
+                            raise ValueError(
+                                f"docket entry seq_no {last_de['pacer_seq_no']} does not "
+                                f"match attachment seq_no {attachment['pacer_seq_no']}"
+                            )
+                    if len(attachments) > 0:
+                        last_de["attachments"] = attachments
                 # Some older dockets have missing dates. Press on.
                 continue
             de["date_filed"] = convert_date_string(date_filed_str)
             de["document_number"] = self._get_document_number(cells[1])
-            results = self._get_pacer_doc_id_and_seq_no(
+            pacer_doc_id, pacer_seq_no = self._get_pacer_doc_id_and_seq_no(
                 cells[1], de["document_number"]
             )
-            de["pacer_doc_id"], de["pacer_seq_no"] = results[0], results[1]
+            de["pacer_doc_id"] = pacer_doc_id
+            if pacer_seq_no is None:
+                pacer_seq_no = self._get_de_arr_de_seq_nums_sequence(row)
+            de["pacer_seq_no"] = pacer_seq_no
             de["description"] = self._get_description(cells)
             de["date_entered"] = self._get_value(
                 self.date_entered_regex, de["description"], cast_to_date=True

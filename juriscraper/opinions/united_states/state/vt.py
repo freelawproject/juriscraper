@@ -11,6 +11,7 @@ If there are errors with the site, you can contact:
 She's very responsive.
 """
 
+import re
 from datetime import date, datetime
 from typing import Optional, Tuple
 from urllib.parse import urlencode
@@ -34,6 +35,10 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+        self.needs_special_headers = True
+        self.request["headers"] = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        }
 
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
@@ -108,3 +113,13 @@ class Site(OpinionSiteLinear):
             params["facet_to_date"] = end.strftime("%m/%d/%Y")
 
         self.url = f"{self.base_url}?{urlencode(params)}"
+
+    def extract_from_text(self, scraped_text: str):
+        match = re.search(
+            r"(?P<volume>\d{4}) (?P<reporter>VT) (?P<page>\d+)",
+            scraped_text[:1000],
+        )
+        if match:
+            return {"Citation": {"type": 8, **match.groupdict()}}
+
+        return {}

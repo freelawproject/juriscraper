@@ -2,13 +2,9 @@
 # CourtID: flaapp2
 # Court Short Name: flaapp2
 
-from . import fladistctapp
+from juriscraper.opinions.united_states.state import fladistctapp_1
 
 
-class Site(fladistctapp.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.number = "second"
-        self.base = "https://2dca.flcourts.gov"
-        self.update_url()
+class Site(fladistctapp_1.Site):
+    number = "second"
+    court_index = "2"

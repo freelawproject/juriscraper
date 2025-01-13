@@ -29,7 +29,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     # Home: https://appellatepublic.kycourts.net/login
     first_opinion_date = datetime(1982, 2, 18).date()
-    days_interval = 10  # page size of 25
+    days_interval = 7  # page size of 25
 
     api_court = "Kentucky Supreme Court"
     api_url = (
@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
         """
         if not start:
             end = datetime.now()
-            start = end - timedelta(30)
+            start = end - timedelta(7)
 
         logger.info("Date range %s %s", start, end)
         params = {
@@ -73,8 +73,8 @@ class Site(OpinionSiteLinear):
             "searchFields[1].operation": "<=",
             "searchFields[1].values[0]": end.strftime("%m/%d/%Y"),
             "searchFields[1].indexFieldName": "filedDate",
-            "searchFilters[0].indexFieldName": "caseHeader.court",
             "searchFilters[0].operation": "=",
+            "searchFilters[0].indexFieldName": "caseHeader.court",
             "searchFilters[0].values[0]": self.api_court,
         }
         self.url = f"{self.api_url}{urlencode(params)}"
@@ -92,6 +92,12 @@ class Site(OpinionSiteLinear):
             date_filed = row["filedDate"]
             disposition = row["docketEntryDescription"]
             docket_number = row["caseHeader.caseNumber"]
+
+            if not row["hasDocuments"]:
+                logger.info(
+                    "Docket %s has no documents, skipping", docket_number
+                )
+                continue
 
             # On "PUBLIC OPINIONS IN CONFIDENTIAL CASES", docket numbers
             # and case names are not as expected
@@ -112,6 +118,12 @@ class Site(OpinionSiteLinear):
                 # Drop from the disposition everything after "BY JUDGE..."
                 # May contain the case name
                 disposition = re.split(self.judge_regex, disposition)[0]
+
+            if disposition.upper() in [
+                "OPINION OF THE COURT",
+                "OPINION AND ORDER",
+            ]:
+                disposition = ""
 
             if self.test_mode_enabled():
                 # detail request has been manually nested in the test file
@@ -148,6 +160,7 @@ class Site(OpinionSiteLinear):
         :param url: url
         :return: JSON as dict
         """
+        logger.debug("Getting JSON: '%s'", url)
         self._request_url_get(url)
         self._post_process_response()
         return self._return_response_text_object()

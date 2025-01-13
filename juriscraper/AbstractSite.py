@@ -1,6 +1,6 @@
 import hashlib
 import json
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from typing import Dict, List, Tuple
 
 import certifi
@@ -53,14 +53,24 @@ class AbstractSite:
         self.request = {
             "verify": certifi.where(),
             "session": requests.session(),
-            "headers": {"User-Agent": "Juriscraper"},
-            # Disable CDN caching on sites like SCOTUS (ahem)
-            "cache-control": "no-cache, no-store, max-age=1",
+            "headers": {
+                "User-Agent": "Juriscraper",
+                # Disable CDN caching on sites like SCOTUS (ahem)
+                "Cache-Control": "no-cache, max-age=0, must-revalidate",
+                # backwards compatibility with HTTP/1.0 caches
+                "Pragma": "no-cache",
+            },
             "parameters": {},
             "request": None,
             "status": None,
             "url": None,
         }
+
+        # Attribute to reference a function passed by the caller,
+        # which takes a single argument, the Site object, after
+        # each GET or POST request. Intended for saving the response for
+        # debugging purposes.
+        self.save_response = kwargs.get("save_response_fn")
 
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
@@ -253,6 +263,7 @@ class AbstractSite:
                 prior_case_name = name
                 i += 1
 
+        future_date_count = 0
         for index, case_date in enumerate(self.case_dates):
             if not isinstance(case_date, date):
                 raise InsanityException(
@@ -262,24 +273,30 @@ class AbstractSite:
                 )
             # Sanitize case date, fix typo of current year if present
             fixed_date = fix_future_year_typo(case_date)
+            case_name = self.case_names[index]
             if fixed_date != case_date:
                 logger.info(
                     "Date year typo detected. Converting %s to %s "
-                    "for case '%s' in %s"
-                    % (
-                        case_date,
-                        fixed_date,
-                        self.case_names[index],
-                        self.court_id,
-                    )
+                    "for case '%s' in %s",
+                    case_date,
+                    fixed_date,
+                    case_name,
+                    self.court_id,
                 )
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
-            if case_date.year > 2025:
-                raise InsanityException(
-                    "%s: member of case_dates list is from way in the future, "
-                    "with value %s" % (self.court_id, case_date.year)
-                )
+
+            # dates should not be in the future. Tolerate a week
+            if case_date > (date.today() + timedelta(days=7)):
+                future_date_count += 1
+                error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
+                logger.error(error)
+
+                # Interrupt data ingestion if more than 1 record has a bad date
+                if future_date_count > 1:
+                    raise InsanityException(
+                        f"More than 1 case has a date in the future. Last case: {error}"
+                    )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:
@@ -337,13 +354,16 @@ class AbstractSite:
             )
         else:
             logger.info(f"Now downloading case page at: {self.url}")
+
         self._process_request_parameters(request_dict)
-        if self.method == "GET":
+
+        if self.test_mode_enabled():
+            self._request_url_mock(self.url)
+        elif self.method == "GET":
             self._request_url_get(self.url)
         elif self.method == "POST":
             self._request_url_post(self.url)
-        elif self.test_mode_enabled():
-            self._request_url_mock(self.url)
+
         self._post_process_response()
         return self._return_response_text_object()
 
@@ -361,7 +381,7 @@ class AbstractSite:
         if parameters.get("verify") is not None:
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
-        self.request["parameters"] = parameters
+        self.request["parameters"].update(parameters)
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
@@ -375,6 +395,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
@@ -387,6 +409,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""

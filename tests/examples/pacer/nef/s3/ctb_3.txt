@@ -1,0 +1,120 @@
+Return-Path: <CTBECF_Courtmail@ctb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4jcaqrthu48md98sh13qfdrrs00qs47f2c6pt801
+ for user@recap.email;
+ Fri, 15 Nov 2024 19:02:52 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ctb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=CTBECF_Courtmail@ctb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ctb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=CTBECF_Courtmail@ctb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=ctb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFTjV1TUVhM0RFQ1RHSmZ3eUZjODk1SWtublZhRFVNZ3E2RjFBaWFObkc4eHUwNHdaYXFwZ3l5aU5oemtkNjRkSVJQYktZblNlMnN2b1JUVlFyQ3BFc2JOWjJvWVhIeUtQSnhkVjVOV1J6S3ViUTM1NlJoeEVjMVJNK0ZpUzNCVXkza0JOMysrUGI1K1ZyTW1pSW14VHNMMnllaUdUQmFXNmdFR2I0ZVBqem11R0ZvTnNVSTg1TjJ4M3BkcWZhUjdXbnZoeWZjbnl2SmphcWt6dExpcHJBOWVvN1hSSXFzUjhkNGNaYTNSTnJyMG1vT0hOb1Z5ZVI2UmdjbS9iV0VzZUp1aXJRdklnSkR4VWFrMU5QaXlOUVhUd2ZvK3RXUE1iaWlCMk1VdFBGSDVpMjROM2llT1lPWStYWXowOUtjcU09
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=jBkeLyPtD05u1CqIO+mZUXoOgIe8iTStTu3J3qVy0qPqQcCECQPK5wbuovS9/1RbS0HDnD8EbUBCtirKE53MHI/Vb6Yukyr+NBBrYNxhhEc7ETRkyF5MRQsgHFZy75IgAiWGiDxV7IZ8HRu/GDHp6cInEzcUoEDLODN9OSttzAA=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1731697373; v=1; bh=TBxFXYxd1rtRaqXBqt3fSuXV9IZLD1oFbr2pmDUzSWk=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=2591; q=dns/txt;
+  s=law1e; t=1731697372; x=1763233372;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=TBxFXYxd1rtRaqXBqt3fSuXV9IZLD1oFbr2pmDUzSWk=;
+  b=dqF4UeBEm42m6GHhR5k7Vs5zjCBiZnWSG63pm/ywkL8oFyoWHjVzEr4W
+   EHGjMVttQDUMsMMKgMnWnXhh1493T7MYGEbCPnucIKrI4QqCS3cGfKgr5
+   vbMZRIi4iJJDR0+ZYn1+0W9mf+1OBCNSV6e2njRSVnSBAR15nfRLAn7pa
+   M/ZzUF+QI9/uPUZyLr/DJX8WPwn1RkMTPWQlNlHT5BK5jrPXpeFYvhzQH
+   P5YasI4CO4o1rmccbVhfLLX1mDNPoxmk9/ix+7cvGuinBfnIBGSSriG+i
+   S6ku6qXz7NxIzwE8/6Gnp62ZsYiH7e+13wZB3DAqbPQY4VHm2ePySWEfL
+   Q==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.114
+Received: from ctbdb.ctb.gtwy.dcn ([156.119.191.114])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 15 Nov 2024 14:02:51 -0500
+Received: from ctbdb.ctb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ctbdb.ctb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AFJ2bsI017086;
+	Fri, 15 Nov 2024 14:02:37 -0500
+Received: (from ecf_web@localhost)
+	by ctbdb.ctb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4AFJ2K9L016755;
+	Fri, 15 Nov 2024 14:02:20 -0500
+Date: Fri, 15 Nov 2024 14:02:20 -0500
+X-Authentication-Warning: ctbdb.ctb.gtwy.dcn: ecf_web set sender to CTBECF_Courtmail@ctb.uscourts.gov using -f
+MIME-Version:1.0
+From:CTBECF_Courtmail@ctb.uscourts.gov
+To:Courtmail@ctb.uscourts.gov
+Message-Id:<15724769@ctb.uscourts.gov>
+Subject:24-50786 Chapter 11 Case Management Conference/Status Conference
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Connecticut</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from lw entered on 11/15/2024 at 2:02 PM EST and filed on 11/15/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Susanne P. Wahba                                  </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ctb.uscourts.gov/cgi-bin/DktRpt.pl?315519>24-50786</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ctb.uscourts.gov/doc1/040015365979?pdf_header=&magic_num=64265763&de_seq_num=27&caseid=315519'>8</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Order Scheduling Initial Chapter 11 Case Management Conference. Hearing to be held on January 14, 2025 at 11:00 AM at United States Bankruptcy Court, 915 Lafayette Blvd., Room 123, Courtroom, Bridgeport, CT.           (lw)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>case managment.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/15/2024] [FileNumber=15724767
+<BR><TAB>-0] [4fb8fa35e41c54199b3079c1f6674c1e20017ad77b2affbc15d028b7132e05fa4
+<BR><TAB>5324d7fa9b295fae2df73766a4d9ea3936d481e07df154c7486f6de75683068]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-50786 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Debtor Susanne P. Wahba</span>
+<br>a@b.com,  user@recap.email
+<BR>
+<BR><span class="personName">  U. S. Trustee</span>
+<br>USTPRegion02.NH.ECF@USDOJ.GOV
+<BR>
+
+<BR>
+<B>
+24-50786 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+

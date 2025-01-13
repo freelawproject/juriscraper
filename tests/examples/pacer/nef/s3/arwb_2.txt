@@ -1,0 +1,113 @@
+Return-Path: <askecf@arwb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id tvljh98d1kufghijobkja5jttk6a3te17j4lkp01
+ for user@recap.email;
+ Tue, 10 Sep 2024 12:54:28 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of arwb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=askecf@arwb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of arwb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=askecf@arwb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dmarc=none header.from=arwb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHMDFCRU9aMWlRR1NObWlMRGxkV3Mxb3B5bVVwSXRkQ3NOMFZVT2Z0dFNCaVpEZDlibVozSHRLVEt1bHYzaDBHTjFDM2pYcGw0dDBnKzAzNForY1liSWtSVFIyVUxXWnNTZXpnR1A4NUh1MFlhcU9zS21EV1dkMDE2SVJ5cy9sc3JZM2ZDbkhNdy8vMmRBdEM1bVlsT1ovRXluMmdjMWNvNUNoMlFtOE5aS0F1UHhiN2xZTHpsSVFtWm1pZThrcW5FUG4vWUFFS090QXRYWXhDT2VSKzVGdm4rbWd2Z04vTGFEd2xaNG1TUEFPemY3QzZJSVdxclhPUmNBNTg5QStDajZMUENWeVpnSlNBZWZqZGZiMSthT0VlL3FLM0FmekhRRUJCTUdhUCtrSWc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=MDm16T++eLwdR1Sa1a2mcRkJr3Bp9wIJZzaYgduG7XChHDw/PegpdhgHyVuJ8GR9aj0A5voJ69O9JcYDCYc2zCsrLxQWkgG1Uq4IJAlAvybfafDi05s+6MFdQK55b5ftEs1xDqPkLgMBpBSxe/0WmU0JzJBe6fKYE0MIGlBpeBE=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1725972869; v=1; bh=a2JLNw+gmy/6W/k+5Gr4+ch4tLrrfef1QU84nuhgUxE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.112
+Received: from arwbdb.arwb.gtwy.dcn ([156.119.56.112])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 10 Sep 2024 08:54:28 -0400
+Received: from arwbdb.arwb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by arwbdb.arwb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 48ACrhbe008090;
+	Tue, 10 Sep 2024 07:53:44 -0500
+Received: (from ecf_web@localhost)
+	by arwbdb.arwb.gtwy.dcn (8.14.7/8.14.4/Submit) id 48ACrKIH006782;
+	Tue, 10 Sep 2024 07:53:20 -0500
+Date: Tue, 10 Sep 2024 07:53:20 -0500
+MIME-Version:1.0
+From:askecf@arwb.uscourts.gov
+To:Courtmail@arwb.uscourts.gov
+Message-Id:<13821921@arwb.uscourts.gov>
+Subject:Ch-13 1:24-bk-70534 Meeting of Creditors - Second Non-Appearance; Michael Clayton Lowry
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Western District of Arkansas</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from McCann, Daryl entered on 9/10/2024 at 7:53 AM CDT and filed on 9/10/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Michael Clayton Lowry                             </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.arwb.uscourts.gov/cgi-bin/DktRpt.pl?175500>1:24-bk-70534</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.arwb.uscourts.gov/doc1/0280?pdf_header=&magic_num=35238047&de_seq_num=242&caseid=175500'>76</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+<font color=0000FF>Meeting of Creditors - Second Non-Appearance Scheduled 9/9/2024 for Debtor(s) Michael Clayton Lowry with Notice of Opportunity to Respond.  Filed by Trustee</font>   (LastName, FirstName)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1:24-bk-70534 Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Corp Corporation</span>
+<br>xxx@lawfirm.com
+<BR>
+<BR><span class="personName">FirstName LastName</span>
+<br>zz@domain.com
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor FirstName LastName, et al.</span>
+<br>user@gmail.com,  user@recap.email
+<BR>
+<BR><span class="personName">  U.S. Trustee (ust)</span>
+<br>USTPRegion13.LR.ECF@usdoj.gov,  Shari.Sherman@usdoj.gov;jill.p.eschbacher@usdoj.gov;mary.b.mansfield@usdoj.gov;kent.h.johnson@usdoj.gov
+<BR>
+
+<BR>
+<B>
+1:24-bk-70534 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR>
+<BR>
+
+<BR>
+<B>
+
+</B>
+
+<BR>
+<BR>

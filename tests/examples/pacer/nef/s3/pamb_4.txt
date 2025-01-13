@@ -1,0 +1,98 @@
+Return-Path: <PAMB_LiveDB@pamb.uscourts.gov>
+Received: from icmecf102.gtwy.uscourts.gov (icmecf102.gtwy.uscourts.gov [199.107.16.202])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id url2atpvm3bg2pbnoknoqe2blh6vv2ftdhbcbuo1
+ for a@recap.email;
+ Sat, 20 Apr 2024 04:24:21 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of pamb.uscourts.gov designates 199.107.16.202 as permitted sender) client-ip=199.107.16.202; envelope-from=PAMB_LiveDB@pamb.uscourts.gov; helo=icmecf102.gtwy.uscourts.gov;
+ dmarc=none header.from=pamb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFVUdMV2dTQ1orUUNBM0JDc0lvMHVLSlNLbFVLVGIyYUVOQ1U2OWhZZlFrTG01WGVjYjRaVzkraWdXRDZPSjZqeEtvVEE2Smt4b0k4Y3JoYzVCcHY1VjJiOHhoV0hNZUJNdnBCc0U5K0ZmRjY4aUhhL2hzbENWMnRGQU4zbGxYOUE3YURGRUZ5MDZNd21FR05PcXNBdTV3azdPbllOdU9TYTBBeXJHcURvanAySXRGbWNUUGVkMStYemtsMGFJMGgyQW84dFVFRUlnaFBQN2xGbUQyVmV1SGhoaGphY3ArZElwS3piSlpIb2c5K21CZ1FXdktvTDRQYy9xTVlCVVU4STlYL2ZUZHhjVFNNRGRQZGRJcE40TUxiSWdXN29hemNVZWVBdEtSOU9FK2c9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=FRx3GhfGs4MO7o37ZrN/tl1JKf/btUdLE7XPIWz9gTrbyqeiLY+/g9Eg1SHFApWGNP5O+3kdBtmpXqJo9AUSNbp26KPwEBiJeX6PcAHUEJgNku69ezElA9yfYXYI9AtOBpWjKMq3VIAnKJdJJDhhvrWxw7r6zN4YTvajrWbOR7o=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1713587062; v=1; bh=5In37aQpH+5VcUUpTFsA+McFTx1pRoJ2MVdM45reSPE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.181
+Received: from pambdb.pamb.gtwy.dcn ([156.119.190.181])
+  by icmecf102.gtwy.uscourts.gov with ESMTP; 20 Apr 2024 00:24:20 -0400
+Received: from pambdb.pamb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 43K4NVwu130051;
+	Sat, 20 Apr 2024 00:23:42 -0400
+Received: (from ecf_web@localhost)
+	by pambdb.pamb.gtwy.dcn (8.14.7/8.14.4/Submit) id 43K4NC2D129156;
+	Sat, 20 Apr 2024 00:23:12 -0400
+Date: Sat, 20 Apr 2024 00:23:12 -0400
+MIME-Version:1.0
+From:PAMB_LiveDB@pamb.uscourts.gov
+To:Courtmail@pamb.uscourts.gov
+Reply-To: pambecf_helpdesk@pamb.uscourts.gov
+Message-Id:<17988852@pamb.uscourts.gov>
+Subject:Ch-13 1:24-bk-00941-HWV -Charlene R. House BNC Certificate of Notice (341 Meeting Notice (Chapter 13))
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Middle District of Pennsylvania</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Admin entered on 04/20/2024  at 00:22 AM EDT and filed on 04/19/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Charlene R. House                                 </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.pamb.uscourts.gov/cgi-bin/DktRpt.pl?279888>1:24-bk-00941-HWV</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.pamb.uscourts.gov/doc1/154018316665?pdf_header=&magic_num=88545762&de_seq_num=31&caseid=279888'>8</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+BNC Certificate of Notice (341 Meeting Notice (Chapter 13)) (RE: related document(s)[7]). Notice Date 04/19/2024. (Admin.)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Imaged Certificate of Notice
+<BR><STRONG>Original filename:</STRONG>P12400941309I0028.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1009835235 [Date=4/20/2024] [FileNumber=17988766-0] [9bbd2eee2f517505fc0a80fc5273546975a7ff924b3452050bcb4e67f23e6378fdd4d82227bdf9874aaae05c029bff311fb9d298fa691ba13fa2b908a5e6d2f9]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+1:24-bk-00941-HWV Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">FirstName LastName on behalf of Debtor 1 Charlene R. House</span>
+<br>a@domain.com
+<BR>
+<BR><span class="personName">  United States Trustee</span>
+<br>ustpregion03.ha.ecf@usdoj.gov
+<BR>
+<BR><span class="personName">Jack N Zaharopoulos</span>
+<br>TWecf@pamd13trustee.com
+<BR>

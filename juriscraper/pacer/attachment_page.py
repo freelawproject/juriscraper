@@ -7,6 +7,8 @@ from ..lib.string_utils import force_unicode
 from .reports import BaseReport
 from .utils import (
     get_court_id_from_doc_id_prefix,
+    get_file_size_str_from_tr,
+    get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
     reverse_goDLS_function,
 )
@@ -93,15 +95,13 @@ class AttachmentPage(BaseReport):
             file_size_bytes = self._get_file_size_bytes_from_tr(first_row)
             if file_size_bytes is not None:
                 result["file_size_bytes"] = file_size_bytes
-            result["file_size_str"] = self._get_file_size_str_from_tr(
-                first_row
-            )
+            result["file_size_str"] = get_file_size_str_from_tr(first_row)
         for row in rows:
             attachment = {
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
-                "file_size_str": self._get_file_size_str_from_tr(row),
+                "file_size_str": get_file_size_str_from_tr(row),
                 "pacer_doc_id": self._get_pacer_doc_id(row),
                 # It may not be needed to reparse the seq_no
                 # for each row, but we may as well. So far, it
@@ -119,11 +119,8 @@ class AttachmentPage(BaseReport):
         """Return the document number for an item.
 
         In district court attachment pages, this is easy to extract with an
-        XPath. In bankruptcy cases, it's simply not there.
+        XPath. In bankruptcy cases, it's sometimes not there.
         """
-        if self.is_bankruptcy:
-            return None
-
         # First try inspecting the input elements
         input_els = self.tree.xpath("//input")
         for input_el in input_els:
@@ -143,6 +140,9 @@ class AttachmentPage(BaseReport):
                     # Ensure document number is valid
                     if document_number != 0:
                         return document_number
+
+        if self.is_bankruptcy:
+            return None
 
         # There are two styles of attachment menus. Try them both.
         paths = (
@@ -253,15 +253,17 @@ class AttachmentPage(BaseReport):
 
     def _get_description_from_tr(self, row):
         """Get the description from the row"""
+        columns_in_row = row.xpath(f"./td")
         if not self.is_bankruptcy:
             index = 2
             # Some NEFs attachment pages for some courts have an extra column
             # (see nyed_123019137279), use index 3 to get the description
-            columns_in_row = row.xpath(f"./td")
             if len(columns_in_row) == 5:
                 index = 3
         else:
             index = 3
+            if len(columns_in_row) == 6:
+                index = 4
 
         description_text_nodes = row.xpath(f"./td[{index}]//text()")
         if not description_text_nodes:
@@ -271,29 +273,11 @@ class AttachmentPage(BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_input_value_from_tr(tr, idx):
-        """Take a row from the attachment table and return the input value by
-        index.
-        """
-        try:
-            input = tr.xpath(".//input")[0]
-        except IndexError:
-            return None
-        else:
-            # initial value string "23515655-90555-2"
-            # "90555" is size in bytes "2" is pages
-            value = input.xpath("./@value")[0]
-            split_value = value.split("-")
-            if len(split_value) != 3:
-                return None
-            return split_value[idx]
-
-    @staticmethod
     def _get_page_count_from_tr_input_value(tr):
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
-        count = AttachmentPage._get_input_value_from_tr(tr, 2)
+        count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
 
@@ -325,25 +309,13 @@ class AttachmentPage(BaseReport):
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
-        file_size_str = AttachmentPage._get_input_value_from_tr(tr, 1)
+        file_size_str = get_input_value_from_tr(tr, 1, 3, "-")
         if file_size_str is None:
             return None
         file_size = int(file_size_str)
         if file_size == 0:
             return None
         return file_size
-
-    @staticmethod
-    def _get_file_size_str_from_tr(tr):
-        """Take a row from the attachment table and return the number of bytes
-        as an int.
-        """
-        cells = tr.xpath("./td")
-        last_cell_contents = cells[-1].text_content()
-        units = ["kb", "mb"]
-        if any(unit in last_cell_contents.lower() for unit in units):
-            return last_cell_contents.strip()
-        return ""
 
     @staticmethod
     def _get_pacer_doc_id(row):
@@ -362,26 +334,29 @@ class AttachmentPage(BaseReport):
             doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    @staticmethod
-    def _get_pacer_seq_no_from_tr(row):
+    def _get_pacer_seq_no_from_tr(self, row):
         """Take a row of the attachment page, and return the sequence number
         from the goDLS function.
         """
-        try:
-            url = row.xpath(".//a")[0]
-        except IndexError:
-            # No link in the row. Maybe its sealed.
-            pass
-        else:
+        url = row.xpath(".//a")
+        if url:
+            onclick = url[0].xpath("./@onclick")
+            if onclick and "goDLS" in onclick[0]:
+                go_dls_parts = reverse_goDLS_function(onclick[0])
+                return go_dls_parts["de_seq_num"]
+
+        input_els = self.tree.xpath("//input")
+        for input_el in input_els:
             try:
-                onclick = url.xpath("./@onclick")[0]
+                onclick = input_el.xpath("./@onclick")[0]
             except IndexError:
-                # No onclick on this row.
-                pass
+                continue
             else:
-                if "goDLS" in onclick:
-                    go_dls_parts = reverse_goDLS_function(onclick)
-                    return go_dls_parts["de_seq_num"]
+                m = re.search(
+                    r"[?&]arr_de_seq_nums=(\d+)", onclick, flags=re.I
+                )
+                if m:
+                    return m.group(1)
 
         # 1. Couldn't find a link in the row: Maybe it's sealed.
         # 2. No onclick on the row.

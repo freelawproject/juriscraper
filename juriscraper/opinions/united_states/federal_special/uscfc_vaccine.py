@@ -8,12 +8,18 @@ from juriscraper.opinions.united_states.federal_special import uscfc
 class Site(uscfc.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.uscfc.uscourts.gov/aggregator/sources/7"
-        self.court_id = self.__module__
-        self.back_scrape_iterable = [1]
+        self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentDecisionsOfTheSpecialMasters.pl"
 
-    def _download_backwards(self, page):
-        self.url = (
-            f"http://www.uscfc.uscourts.gov/aggregator/sources/7?page={page}"
-        )
-        self.html = self._download()
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract 'status' from text, if possible
+
+        On the first page of the opinion, after the parties and attorneys names
+        the decision title may point to it being published.
+
+        The scraped site itself marks all `uscfc_vaccine` opinions as
+        unreported
+        """
+        if "PUBLISHED DECISION" in scraped_text[:1500]:
+            return {"OpinionCluster": {"precedential_status": "Published"}}
+
+        return {}

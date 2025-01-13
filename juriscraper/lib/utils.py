@@ -1,5 +1,8 @@
 import re
+from datetime import date, datetime
 from itertools import chain, islice, tee
+
+from juriscraper.AbstractSite import logger
 
 from .string_utils import force_unicode
 
@@ -51,3 +54,69 @@ def clean_court_object(obj):
         return re.sub(r"\s+,", ",", s)
     else:
         return obj
+
+
+def backscrape_over_paginated_results(
+    url_template: str,
+    first_page: int,
+    last_page: int,
+    start_date: date,
+    end_date: date,
+    date_fmt: str,
+    site,
+) -> list[dict]:
+    """
+    Iterates over consecutive pages, looking for cases in a specific date range
+    Of use when the page offers no date filters, so one must look through all the pages
+    Assumes the page is returning results ordered by date
+
+    :param url_template: string to apply .format() to, like "url&page={}"
+        where the argument to pass will be the page number
+    :param first_page: integer of the first page
+    :param last_page: integer of the last page
+    :param start_date: cases with a date greater than this value will be collected
+    :param end_date: cases with a date lesses than this value will be collected
+    :param date_fmt: date format to parse case dates
+    :param site: the site object
+
+    :return: the list of cases between the dates
+    """
+    cases = []
+
+    if isinstance(start_date, datetime):
+        start_date = start_date.date()
+    if isinstance(end_date, datetime):
+        end_date = end_date.date()
+
+    for page in range(first_page, last_page):
+        site.cases = []  # reset results container
+        site.url = url_template.format(page)
+        site.html = site._download()
+        site._process_html()
+
+        # results are ordered by desceding date
+        earliest = datetime.strptime(site.cases[-1]["date"], date_fmt).date()
+        latest = datetime.strptime(site.cases[0]["date"], date_fmt).date()
+        logger.info("Results page has date range %s to %s", earliest, latest)
+
+        # no intersection between date ranges
+        if max(earliest, start_date) >= min(latest, end_date):
+            # if earliest date from results is earlier than
+            # the start date, no need to iterate any further
+            if earliest < start_date:
+                logger.info(
+                    "Finishing backscrape: earliest results date is %s earlier than start %s",
+                    earliest,
+                    start_date,
+                )
+                break
+            continue
+
+        # if there is an intersection, test every case and
+        # collect the matching cases
+        for case in site.cases:
+            case_date = datetime.strptime(case["date"], date_fmt).date()
+            if case_date < end_date and case_date > start_date:
+                cases.append(case)
+
+    return cases

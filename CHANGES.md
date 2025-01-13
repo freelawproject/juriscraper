@@ -16,12 +16,238 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.50 - 2024-01-10**
+
+- Fixes:
+  - add tests to ensure that `extract_from_text` does not fail
+    when it does not find what it looks for; and that it always
+    returns a dict
+  - updated `pasuperct`, `bia`, `bap1`, `nm` and `sd` `extract_from_text` methods
+  - refactored `pacer.email._parse_bankruptcy_short_description`
+  - added tests for new courts `flsb`, `nceb`
+  - added tests for multi docket NEFs
+
+- Features
+  - `pacer.email._parse_bankruptcy_short_description` now supports Multi Docket NEFs
+
+**2.6.49 - 2024-01-08**
+
+- Fixes:
+  - `nh` scrapers no longer depend on harcoded year filter
+  - Fixed `absca` tests that were failing due to change of year
+  - `pasuperct` now collects citations
+  - `pa`, `pasuperct` and `pacommcwt` now paginate results
+
+
+**2.6.48 - 2024-12-31**
+
+- Fixes:
+  - updated `idaho_*` scrapers to OpinionSiteLinear
+  - updated `cadc` scrapers to new site
+  - `okla` now skips rows with no docket number
+  - fixes for PACER appellate dockets parsing
+
+**2.6.47 - 2024-12-12**
+
+- Fixes:
+  - standardize usage of download methods in scrapers (_download, _request_url_get, _request_url_post)
+  - refactor scrapers to do not return "Per Curiam" as value for "author_str" or "judges"
+
+- Features
+  - added `extract_from_text` to `sc`
+
+## Past
+
+**2.6.46 - 2024-12-10**
+
+- Fixes:
+  - Support for parsing the new format of appellate attachment pages has been added
+
+**2.6.45 - 2024-12-05**
+
+- Features:
+  - AbstractSite now supports saving responses and response headers.
+  Use it with new optional argument for the sample caller `save-responses`.
+  - Delete `--daemon` and `--report` options
+
+**2.6.44 - 2024-11-27**
+
+- Fixes:
+  - Fixes `colo`
+
+**2.6.43 - 2024-11-21**
+
+- Fixes:
+  - Fixes `ky` and `colo`
+
+**2.6.42 - 2024-11-21**
+
+- Fixes:
+  - Fix `mass` and `massctapp` cleanup content method
+
+**2.6.40 - 2024-11-20**
+
+- Fixes:
+  - Fix `mass` and `massctapp` scrapers, scrape new endpoint
+  - Exclude "Commonwealth" string from short case names
+
+**2.6.39 - 2024-11-18**
+
+- Fixes:
+  - Fix `Kansas, Ohio Ct App's 1-13` opinion scraper
+
+**2.6.38 - 2024-11-08**
+
+- Fixes:
+  - Fix `uscfc` opinion scraper
+
+- Features:
+  - RECAP: add new sealed document phrase
+
+**2.6.37 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+**2.6.35 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+**2.6.34 - 2024-10-22**
+
+Fixes:
+  - Fix for `okla` cleanup_content
+
+**2.6.32 - 2024-10-21**
+
+Features:
+  - added `okla` cleanup_content
+
+Fixes:
+  - updated `coloctapp` cleanup_content
+
+
+**2.6.31 - 2024-10-21**
+
+Fixes:
+  - `neb` now handles rows with no links
+  - `coloctapp` update cleanup_content
+  - fix `la` xpath selector that was skipping some cases
+
+Features:
+  - new scraper `lactapp_5` for Lousiana Court of Appeals, Fifth Circuit
+  - now sending a `logger.error` call to Sentry when an scraped date is in the future
+
+**2.6.30 - 2024-10-10**
+
+Fixes:
+  - fix `CADC` oral arguments
+
+**2.6.29 - 2024-10-10**
+
+Fixes:
+  - fix `or` and `orctapp` scraper, scraping new endpoint
+  - fix cache control headers in `AbstractSite`
+  - fix `sc` expected content types
+
+**2.6.28 - 2024-09-27**
+
+Features:
+  - new scraper `sc_u`
+
+Fixes:
+  - handle `illappct` (oral args) rows with no download link
+  - `ca11` update to Oral Argument Site Linear
+  - `cadc_u` change docket number getter
+  - `sc` implement new site
+
+**2.6.27 - 2024-09-16**
+
+Fixes:
+  - Fixes `coloctapp`
+
+
+
+**2.6.25 - 2024-09-16**
+
+Fixes:
+  - Handle `nh` edge cases
+  - Update `ohioctapp` to return "lower_courts" in order to disambiguate dockets across districts
+  - Update `lib.string_utils.clean_string` to no longer delete semicolons
+
+**2.6.25 - 2024-09-10**
+
+Fixes:
+  - `ny` Fixes NY
+  - Updates nyappdiv to inherit ny
+  - fixes tests
+
+**2.6.24 - 2024-09-05**
+
+Fixes:
+  - `vt` now collects neutral citations
+  - Fix `ca8` and updated to OpinionSiteLinear
+  - Update README
+
+**2.6.23 - 2024-09-03**
+
+Fixes:
+  - `wis` now collects neutral citations
+  - `ky` now skips rows with no documents
+
+Features:
+  - new scraper `wisctapp`
+
+**2.6.21 - 2024-08-30**
+
+Fixes:
+  - `fladistctapp` docket numbers are now unique across districts
+  - updated `ca11` html selectors
+  - updated `pa` to new API format
+  - set needs_special_headers to True for `vt`
+
+Features:
+  - implemented dynamic backscraper and extract_from_text for `conn`
+
+**2.6.20 - 2024-08-28**
+
+Fixes:
+  - Changed to nested format for attachments in the InternetArchive report
+
+**2.6.19 - 2024-08-26**
+
+Fixes:
+  - `nh` renamed to `nh_p` and working by using special headers
+
+Features:
+  - New scraper: `nh_u`
+  - Handle new bankruptcy attachment page format
+  - Make docket history report parser more robust
+
+**2.6.18 - 2024-08-22**
+
+Features:
+  - SCOTUS backscraper
+
+Fixes:
+  - Improvements to bankruptcy docket parsing
+  - Added `njd` regression tests files
+
+**2.6.17 - 2024-08-19**
+
+Fixes:
+  - RECAP:
+    - email: now parses short description for `okeb`
+    - Fixed IndexOutOfRange error in DocketReport::_set_metadata_values method
+  - Scrapers:
+    - fixed `cal` SSL errors
+    - now collecting citations for `minn`
+
 **2.6.16 - 2024-08-12**
 
 Fixes:
   - Fixed Minnesota and implemented it's backscraper
-
-## Past
 
 **2.6.15 - 2024-08-07**
 
