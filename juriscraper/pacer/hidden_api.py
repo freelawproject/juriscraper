@@ -227,8 +227,8 @@ class ShowCaseDocApi(BaseReport):
             )
         )
         logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
-        # we use get request because nysd court disabled all head request
-        # and bans by IP in case this request is made
+        # we use get request because nysd court disabled all head requests
+        # and bans by IP in case head request is made
         self.response = self.session.get(url, allow_redirects=True)
         self.parse()
 
