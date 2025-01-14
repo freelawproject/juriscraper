@@ -17,9 +17,7 @@ class Site(OpinionSiteLinear):
         self.base_url = "https://www.wicourts.gov/supreme/scopin.jsp"
         self.status = "Published"
         self.set_url()
-        self.cite_regex = (
-            r"(?P<volume>20\d{2})\s(?P<reporter>WI)\s(?P<page>\d+)"
-        )
+        self.cite_regex = r"20\d{2}\sWI\s\d+"
         self.make_backscrape_iterable(kwargs)
 
     def set_url(
@@ -73,10 +71,9 @@ class Site(OpinionSiteLinear):
         :return: date filed
         """
         first_line = scraped_text[:100].splitlines()[0]
-        match = re.search(self.cite_regex, first_line)
+        if match := re.search(self.cite_regex, first_line):
+            return {"Citation": match.group(0)}
 
-        if match:
-            return {"Citation": {**match.groupdict(), "type": 8}}
         return {}
 
     def _download_backwards(self, dates: Tuple[date]) -> None:

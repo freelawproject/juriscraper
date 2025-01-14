@@ -145,12 +145,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": '1125 Morris Avenue Realty LLC, Plaintiff(s), against Title Issues Agency LLC, MARTIN E. KOFMAN, STEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE," "ABC CORPORATION," AND "XYZ CORPORATION," Defendant(s).',
                     },
                     "Opinion": {"author_str": "Fidel E. Gomez"},
-                    "Citation": {
-                        "volume": "81",
-                        "reporter": "Misc 3d",
-                        "page": "1215(A)",
-                        "type": 2,
-                    },
+                    "Citation": "81 Misc 3d 1215(A)",
                     "OpinionCluster": {
                         "case_name_full": '1125 Morris Avenue Realty LLC, Plaintiff(s), against Title Issues Agency LLC, MARTIN E. KOFMAN, STEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE," "ABC CORPORATION," AND "XYZ CORPORATION," Defendant(s).'
                     },
@@ -225,12 +220,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "The People of the State of New York, against J.S., Adolescent Offender.",
                     },
                     "Opinion": {"author_str": "Conrad D. Singer"},
-                    "Citation": {
-                        "volume": "66",
-                        "reporter": "Misc 3d",
-                        "page": "1213(A)",
-                        "type": 2,
-                    },
+                    "Citation": "66 Misc 3d 1213(A)",
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York, against J.S., Adolescent Offender."
                     },
@@ -264,12 +254,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {
                         "case_name_full": '201 East 164th Street Associates, LLC, against Pastora Calderon & ROSA IDALIA ABDELNOUR, "JOHN DOE" & "JANE DOE" A/K/A DUNIA GOMEZ Respondents-Undertenants.'
                     },
-                    "Citation": {
-                        "volume": "81",
-                        "reporter": "Misc 3d",
-                        "page": "1211(A)",
-                        "type": 2,
-                    },
+                    "Citation": "81 Misc 3d 1211(A)",
                 },
             ),
         ],
@@ -283,12 +268,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON",
                     },
                     "Opinion": {"author_str": "Peter J. Kelly"},
-                    "Citation": {
-                        "volume": "78",
-                        "reporter": "Misc 3d",
-                        "page": "1203(A)",
-                        "type": 2,
-                    },
+                    "Citation": "78 Misc 3d 1203(A)",
                     "OpinionCluster": {
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON"
                     },
@@ -313,12 +293,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "In the Matter of a Proceeding Under Article 6 of the Family Court Act Robyn C., against William M. J. (Deceased) and EVA JANE P.",
                     },
                     "Opinion": {"author_str": "Javier E. Vargas"},
-                    "Citation": {
-                        "volume": "66",
-                        "reporter": "Misc 3d",
-                        "page": "1210(A)",
-                        "type": 2,
-                    },
+                    "Citation": "66 Misc 3d 1210(A)",
                     "OpinionCluster": {
                         "case_name_full": "In the Matter of a Proceeding Under Article 6 of the Family Court Act Robyn C., against William M. J. (Deceased) and EVA JANE P."
                     },
@@ -333,12 +308,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y.",
                     },
                     "Opinion": {"author_str": "Javier E. Vargas"},
-                    "Citation": {
-                        "volume": "73",
-                        "reporter": "Misc 3d",
-                        "page": "1238(A)",
-                        "type": 2,
-                    },
+                    "Citation": "73 Misc 3d 1238(A)",
                     "OpinionCluster": {
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y."
                     },
@@ -355,12 +325,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "The People of the State of New York against Amela Hot",
                     },
                     "Opinion": {"author_str": "Donald Leo"},
-                    "Citation": {
-                        "volume": "58",
-                        "reporter": "Misc 3d",
-                        "page": "1215(A)",
-                        "type": 2,
-                    },
+                    "Citation": "58 Misc 3d 1215(A)",
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York against Amela Hot"
                     },
@@ -375,12 +340,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "The People of the State of New York, against James Smith",
                     },
                     "Opinion": {"author_str": "Althea E. Drysdale"},
-                    "Citation": {
-                        "volume": "59",
-                        "reporter": "Misc 3d",
-                        "page": "1211(A)",
-                        "type": 2,
-                    },
+                    "Citation": "59 Misc 3d 1211(A)",
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York, against James Smith"
                     },
@@ -408,12 +368,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {
                         "case_name_full": "Bernardo Martinaj, against State of New York"
                     },
-                    "Citation": {
-                        "volume": "78",
-                        "reporter": "Misc 3d",
-                        "page": "1211(A)",
-                        "type": 2,
-                    },
+                    "Citation": "78 Misc 3d 1211(A)",
                 },
             ),
         ],
@@ -427,12 +382,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "Alistair Sims, against Lance Frantz Regis A/K/A LANCE REGIS A/K/A LANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ A/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ, Defendant(s).",
                     },
                     "Opinion": {"author_str": "Michael A. Montesano"},
-                    "Citation": {
-                        "volume": "81",
-                        "reporter": "Misc 3d",
-                        "page": "1210(A)",
-                        "type": 2,
-                    },
+                    "Citation": "81 Misc 3d 1210(A)",
                     "OpinionCluster": {
                         "case_name_full": "Alistair Sims, against Lance Frantz Regis A/K/A LANCE REGIS A/K/A LANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ A/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ, Defendant(s)."
                     },
@@ -477,12 +427,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.courtlistener.com/api/rest/v3/opinions/10473075/
                 """IN THE SUPREME COURT\n                  STATE OF NORTH DAKOTA\n\n                                2024 ND 143\n\nRonald Wayne Wootan,                                 Petitioner and Appellant\n      v.\nState of North Dakota,                              Respondent and Appellee\n\n                                No. 20240025\n\nAppeal from the District Court of Rolette County, Northeast Judicial District,\nthe Honorable Anthony S. Benson, Judge.\n\nAFFIRMED.\n\nPer Curiam.\n\nKiara C. Kraus-Parr, Grand Forks, ND, for petitioner and appellant.\n\nBrian D. Grosinger, State’s Attorney, Rolla, ND, for respondent and appellee.\n\f                               Wootan v. State\n                                No. 20240025\n\nPer Curiam.\n\n      Ronald Wootan appeals from an order denying his postconviction relief\napplication entered after the district court held an evidentiary hearing on\nremand. See Wootan v. State,""",
                 {
-                    "Citation": {
-                        "volume": "2024",
-                        "reporter": "ND",
-                        "page": "143",
-                        "type": 8,
-                    },
+                    "Citation": "2024 ND 143",
                 },
             ),
             (
@@ -490,12 +435,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.courtlistener.com/api/rest/v3/opinions/10473085/
                 """IN THE SUPREME COURT\n                        STATE OF NORTH DAKOTA\n\n                                      2024 ND 141\n\nRenae Irene Gerszewski,                                           Petitioner and Appellee\n      v.\nConrad Keith Rostvet,                                          Respondent and Appellant\n\n\n\n                                     No. 20230361\n\n\n\nConrad Keith Rostvet,                                            Petitioner and Appellant\n      v.\nRenae Irene Gerszewski,                                         Respondent and Appellee\n\n\n\n                                     No. 20230362\n\n\n\nConrad Rostvet,                                                  Petitioner and Appellant\n      v.\nWayne Gerszewski,                                               Respondent and Appellee\n\n\n\n                                     No. 20230363\n\n\n\nAppeal from the District Court of Walsh County, Northeast Judicial District, the Honorable\nBarbara L. Whelan, Judge.\n\fAFFIRMED.\n\nOpinion of the Court by Tufte, Justice.\n\nSamuel A. Gereszek, Grand Forks, N.D., for appellees.\n\nTimothy C. Lamb, Grand Forks, N.D., for appellant.\n\f                                 Gerszewski v. Rostvet\n                                Nos. 20230361–20230363\n\nTufte, Justice.\n\n[¶1] Conrad Rostvet appeals from a district court’s order""",
                 {
-                    "Citation": {
-                        "volume": "2024",
-                        "reporter": "ND",
-                        "page": "141",
-                        "type": 8,
-                    },
+                    "Citation": "2024 ND 141",
                     "OpinionCluster": {"case_name": "Gerszewski v. Rostvet"},
                     "Docket": {
                         "case_name": "Gerszewski v. Rostvet",
@@ -509,12 +449,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.wicourts.gov/sc/opinion/DisplayDocument.pdf?content=pdf&seqNo=669658
                 """2023 WI 50\nS C W\nUPREME OURT OF ISCONSIN\nCASE NO.: 2021AP938-CR\nCOMPLETE TITLE: State of Wisconsin,""",
                 {
-                    "Citation": {
-                        "volume": "2023",
-                        "reporter": "WI",
-                        "page": "50",
-                        "type": 8,
-                    },
+                    "Citation": "2023 WI 50",
                 },
             )
         ],
@@ -523,12 +458,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.wicourts.gov/ca/opinion/DisplayDocument.pdf?content=pdf&seqNo=799325
                 """2024 WI App 36\nCOURT OF APPEALS OF WISCONSIN\nPUBLISHED OPINION""",
                 {
-                    "Citation": {
-                        "volume": "2024",
-                        "reporter": "WI App",
-                        "page": "36",
-                        "type": 8,
-                    },
+                    "Citation": "2024 WI App 36",
                 },
             )
         ],
@@ -600,12 +530,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.courtlistener.com/api/rest/v3/opinions/10566596/
                 """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vtcourts.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                            2024 VT 52\n\n                                          No. 23-AP-226\n\nState of Vermont   """,
                 {
-                    "Citation": {
-                        "volume": "2024",
-                        "reporter": "VT",
-                        "page": "52",
-                        "type": 8,
-                    }
+                    "Citation": "2024 VT 52",
                 },
             )
         ],
@@ -614,12 +539,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 # https://www.courtlistener.com/api/rest/v3/clusters/7854285/
                 """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                            2022 VT 35\n\n                                           No. 2021-059\n\nState of Vermont                                                 Supreme Court\n\n                                                                 On Appeal from\n   v.                                                            Superior Court, Chittenden Unit,\n                                                                 Criminal Division\n\nRandy F. Therrien    """,
                 {
-                    "Citation": {
-                        "volume": "2022",
-                        "reporter": "VT",
-                        "page": "35",
-                        "type": 8,
-                    }
+                    "Citation": "2022 VT 35",
                 },
             )
         ],
@@ -696,12 +616,7 @@ class ScraperExtractFromText(unittest.TestCase):
             (
                 "J-A13044-21\n\n                                   2021 PA Super 113\n\n\n  COMMONWEALTH OF PENNSYLVANIA                 :   IN THE SUPERIOR COURT OF\n                                               :        PENNSYLVANIA\n                                               :\n  ",
                 {
-                    "Citation": {
-                        "volume": "2021",
-                        "reporter": "PA Super",
-                        "page": "113",
-                        "type": 8,
-                    }
+                    "Citation": "2021 PA Super 113",
                 },
             )
         ],
