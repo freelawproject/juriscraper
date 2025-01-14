@@ -13,6 +13,7 @@ import re
 from datetime import datetime
 from typing import Any, Dict
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -70,8 +71,14 @@ class Site(OpinionSiteLinear):
         date = re.findall(
             r"Decided (by (Acting\s)?Attorney General )?(.*\d{4})",
             scraped_text,
-        )[0][-1]
-        date_filed = datetime.strptime(date, "%B %d, %Y").strftime("%Y-%m-%d")
+        )
+        if not date:
+            logger.error("bia: unable to extract_from_text a date_filed")
+            return {}
+
+        date_filed = datetime.strptime(date[0][-1], "%B %d, %Y").strftime(
+            "%Y-%m-%d"
+        )
         metadata = {
             "OpinionCluster": {
                 "date_filed": date_filed,

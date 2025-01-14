@@ -1,0 +1,133 @@
+Return-Path: <ecf_dcb@dcb.uscourts.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id focievj04l9tb4hf9gdjc6tmaqrhm0pa6ni7ei81
+ for user@recap.email;
+ Tue, 09 Jul 2024 14:24:53 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of dcb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf_dcb@dcb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of dcb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=ecf_dcb@dcb.uscourts.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dmarc=none header.from=dcb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFS2NsamZJRnFQUE8yeGRETzVkcklLL1pwQTdNV05SZWltVzByb0JRditVcEVGN2svbXRNWVZnTG1OYWFsSGIzdHhNWGptdFV6cXd3Yi8yUHpoenFJdE1pVXFLZzRNVlV2RjluTXhSWVVrZGdFZVlNQ3pTbEtVRmpvVld4aStocmJmVHNwdFF2a0JERkltTW9QOHRyVzFOU1ErM0t3eXo0bHBWb3djdGNKcVdIdm4wbml1YTJhSVYzUmU4dWI4aURUQzMvcFRDWkdzc05kS2drbExTanRyZDRKbU1OUitMbE5rcU4vaXR3eGhUbE1wRVh0bWV5ejdXbHhPUlhPc1QzakFDQVlDcUlHTTd5b3R5Tk1WKzBEN0wwcG5WNVk2QkdzK0Q5YktqVXRzM0E9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=iJv51c7RQsRtqYiHHwZTwwBEy54ZA5aqI+IVcy/7AdC2vhSi39HiTlEEVsiolJd4ElDAamN3+h0RZGOanFqOztmR46dagB4x0aamvR/nYXCNVQWSlKeHTAfH+FQBObVZDPzssQivg0NKqVBOm5DcGXoVIH8oZr+GUOcqQ2ueXi4=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1720535094; v=1; bh=ClIz5L+XKl+F+S2pfeOkr/D05mlrgYJZlKHjG15tzRw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+X-SBRS: None
+X-REMOTE-IP: 156.119.190.113
+Received: from dcbdb.dcb.gtwy.dcn ([156.119.190.113])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 09 Jul 2024 10:24:52 -0400
+Received: from dcbdb.dcb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by dcbdb.dcb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 469EO6Y3095708;
+	Tue, 9 Jul 2024 10:24:07 -0400
+Received: (from ecf_web@localhost)
+	by dcbdb.dcb.gtwy.dcn (8.14.7/8.14.4/Submit) id 469EO3Pq094963;
+	Tue, 9 Jul 2024 10:24:03 -0400
+Date: Tue, 9 Jul 2024 10:24:03 -0400
+X-Authentication-Warning: dcbdb.dcb.gtwy.dcn: ecf_web set sender to ecf_dcb@dcb.uscourts.gov using -f
+MIME-Version:1.0
+From:ecf_dcb@dcb.uscourts.gov
+To:courtmail@dcb.uscourts.gov
+Message-Id:<2763973@dcb.uscourts.gov>
+Subject:24-00221-ELG CH11 Motion to Convert Case to Chapter 7 - 1616 27th Street Flats L.L.C.
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>United States Bankruptcy Court for the District of Columbia</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Kristen S. Eustis entered on 7/9/2024 at 10:24 AM EDT and filed on 7/9/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>1616 27th Street Flats L.L.C.                     </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.dcb.uscourts.gov/cgi-bin/DktRpt.pl?49987>24-00221-ELG</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.dcb.uscourts.gov/doc1/04402863815?pdf_header=&magic_num=48605890&de_seq_num=50&caseid=49987'>16</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Notice and  Motion to Convert Case to Chapter 7 <i></i>.  Fee Amount $15, or in the alternative   Motion to Dismiss Case <i></i>  Filed by    U. S. Trustee for Region Four.  Objections due by 7/31/2024.Hearing scheduled for 8/7/2024 at 01:00 PM at  Courtroom 1 and Zoom; Contact aimee_mathewes@dcb.uscourts.gov for meeting code. Objections due by 7/31/2024.Hearing scheduled for 8/7/2024 at 01:00 PM at  Courtroom 1 and Zoom; Contact aimee_mathewes@dcb.uscourts.gov for meeting code.  (Attachments: # (1)  Notice of Motion and Hearing # (2)  Proposed Order Converting Case # (3)  Proposed Order Dismissing Case) (Eustis, Kristen)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>1616 27th St Flats 24-00221 - MCD.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1011211900 [Date=7/9/2024] [FileNumber=2763971-0]
+<BR><TAB> [4869d5dd3abf564394a730e95ffbf8564cd15fc9d7d209276d21a2b880fe9d3219ee
+<BR><TAB>e9624aadc50d1a27ab9a1dec3af38688b326bbdf039de56668a5816599f9]]
+<BR>
+<STRONG>Document description:</STRONG> Notice of Motion and Hearing
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\1616 27th St. Flats 24-00221 - NOH MCD.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1011211900 [Date=7/9/2024] [FileNumber=2763971-1]
+<BR><TAB> [527d813ffaa7ae42a5a100f064ce00e89e8c82cbbe6bf1f035799bcc9620a31b35d4
+<BR><TAB>daae067963650f744f6aaf1e2e3e0a97aaaf9dd464a398a1003d286ac572]]
+<BR>
+<STRONG>Document description:</STRONG> Proposed Order Converting Case
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\1616 27th St. Flats 24-00221 - Proposed Order Convert Case.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1011211900 [Date=7/9/2024] [FileNumber=2763971-2]
+<BR><TAB> [37c5e9cea94988f999d845275fa07b219915398df13168ae702e84466c16c0e17b25
+<BR><TAB>5b2fafb0fec9ec9a9d8ef197e0d8e85f6e9e47571e27bfd8c7b526c29f59]]
+<BR>
+<STRONG>Document description:</STRONG> Proposed Order Dismissing Case
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\1616 27th St. Flats 24-00221 - Proposed Order to Dismiss.pdf
+<BR><STRONG>Electronic document
+ Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1011211900 [Date=7/9/2024] [FileNumber=2763971-3]
+<BR><TAB> [934e9d099f67b9ccb0888f1541c0a4c615c098fa114b7aeaf8c2cacf3f2c06c359a4
+<BR><TAB>ac41b78176bcf674f35ec9f8fb83366e23300e18baf7d81408a9fac70e9b]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+24-00221-ELG Notice will be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Kristen S. Eustis on behalf of U.S. Trustee   U. S. Trustee for Region Four</span>
+<br>Kristen.S.Eustis@usdoj.gov,  Robert.W.Ours@usdoj.gov
+<BR>
+<BR>
+<BR><span class="personName">  U. S. Trustee for Region Four</span>
+<br>USTPRegion04.DC.ECF@USDOJ.GOV
+<BR>
+<BR><span class="personName">FirstName LastName on behalf of Creditor   WCP Fund I LLC</span>
+<br>c@e.com,  c@d.com;a@b.com;a@notify.bestcase.com;user@recap.email
+<BR>
+
+<BR>
+<B>
+24-00221-ELG Notice will not be electronically mailed to:
+</B>
+
+<BR>
