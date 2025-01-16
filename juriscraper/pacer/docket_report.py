@@ -1568,6 +1568,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         values = []
         for cell in cells:
             clean_texts = [clean_string(s) for s in self._br_split(cell)]
+            print(clean_texts)
             values.extend(clean_texts)
         values.append(" ".join(values))
         self.metadata_values = values
@@ -1760,4 +1761,5 @@ if __name__ == "__main__":
     with open(filepath) as f:
         text = f.read()
     report._parse_text(text)
-    pprint.pprint(report.data, indent=2)
+    a = report.data
+"""     pprint.pprint(report.data, indent=2) """
