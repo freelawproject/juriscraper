@@ -115,11 +115,8 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
 
     def extract_from_text(self, scraped_text: str):
-        match = re.search(
-            r"(?P<volume>\d{4}) (?P<reporter>VT) (?P<page>\d+)",
-            scraped_text[:1000],
-        )
+        match = re.search(r"\d{4} VT \d+", scraped_text[:1000])
         if match:
-            return {"Citation": {"type": 8, **match.groupdict()}}
+            return {"Citation": match.group(0)}
 
         return {}

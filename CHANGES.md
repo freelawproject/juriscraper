@@ -16,6 +16,11 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.51 - 2024-01-14**
+
+- Fixes:
+  - `extract_from_text` now returns plain citation strings, instead of parsed dicts
+
 **2.6.50 - 2024-01-10**
 
 - Fixes:

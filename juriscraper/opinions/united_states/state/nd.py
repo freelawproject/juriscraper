@@ -115,12 +115,11 @@ class Site(OpinionSiteLinear):
         of models field - value pairs
         """
         metadata = {}
-        regex = r"(?P<volume>20\d{2})\s(?P<reporter>ND)\s(?P<page>\d+)"
+        regex = r"20\d{2}\sND\s\d+"
         citation_match = re.search(regex, scraped_text[:1000])
 
         if citation_match:
-            # type 8 is a neutral citation in Courtlistener
-            metadata["Citation"] = {**citation_match.groupdict(), "type": 8}
+            metadata["Citation"] = citation_match.group(0)
 
         # Most times, paragraphs are enumerated. The data we are interested
         # in is in a few lines before the first paragraph
