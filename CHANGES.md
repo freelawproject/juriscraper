@@ -12,7 +12,10 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- N/A
+- Fixes:
+  - `AppellateDocketReport.download_pdf` now returns a two-tuple containing the
+    response object or None and a str. This aligns with the changes introduced
+    in v 2.5.1.
 
 ## Current
 
