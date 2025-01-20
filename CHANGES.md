@@ -12,12 +12,16 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- N/A
+
+## Current
+
+**2.6.52 - 2024-01-20**
+
 - Fixes:
   - `AppellateDocketReport.download_pdf` now returns a two-tuple containing the
     response object or None and a str. This aligns with the changes introduced
     in v 2.5.1.
-
-## Current
 
 **2.6.51 - 2024-01-14**
 
