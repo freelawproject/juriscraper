@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional
 
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
+from requests import Response
 
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
@@ -260,13 +261,16 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super().parse()
 
-    def download_pdf(self, pacer_doc_id, pacer_case_id=None):
+    def download_pdf(
+        self, pacer_doc_id, pacer_case_id=None
+    ) -> tuple[Response | None, str]:
         """Download a PDF from an appellate court.
 
         :param pacer_case_id: The case ID for the docket
         :param pacer_doc_id: The document ID for the item.
-        :return: request.Response object containing the PDF, if one can be
-        found, else returns None.
+        :return: A tuple of the request.Response object containing a PDF, if
+        one can be found (is not sealed, gone, etc.). And a string indicating
+        the error message, if there is one or else an empty string.
 
         This is a functional curl command to get a PDF (though the cookies have
         been changed to protect the innocent):
@@ -331,8 +335,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 pacer_doc_id,
                 self.court_id,
             )
-            return r
-        return None
+            return r, ""
+        return None, "Unable to download PDF."
 
     @property
     def metadata(self):
