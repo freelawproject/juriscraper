@@ -3,12 +3,12 @@ ci:
 exclude: '^tests/examples/.*\.html$'
 repos:
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.16.0
+    rev: v3.19.1
     hooks:
      - id: pyupgrade
        args: [--py37-plus]
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
      - id: check-added-large-files
      - id: check-ast
@@ -32,7 +32,7 @@ repos:
        args: [--line-length=79, --transform-concats]
 
   - repo: https://github.com/psf/black
-    rev: 24.4.2
+    rev: 24.10.0
     hooks:
      - id: black
        additional_dependencies: ['click==8.0.4']
