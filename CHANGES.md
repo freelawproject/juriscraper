@@ -16,6 +16,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.53 - 2024-01-23**
+
+- Fixes:
+  - `ca6` oral argument scraper is no longer failing
+  - add explicit dependencies for twine and packaging to solve PyPI bug
+
+## Past
+
 **2.6.52 - 2024-01-20**
 
 - Fixes:
@@ -67,8 +75,6 @@ Releases are also tagged in git, if that's helpful.
 
 - Features
   - added `extract_from_text` to `sc`
-
-## Past
 
 **2.6.46 - 2024-12-10**
 
