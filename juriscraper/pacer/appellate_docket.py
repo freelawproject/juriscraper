@@ -332,9 +332,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         if b"Documents are attached to this filing" in r.content:
             error_message = (
-                "This PACER document is part of an attachment page. "
-                "Our system currently lacks the metadata for this attachment. "
-                "Please purchase the attachment page and try again."
+                "Unable to download PDF. "
+                "An attachment page was returned instead."
             )
             return None, error_message
 
