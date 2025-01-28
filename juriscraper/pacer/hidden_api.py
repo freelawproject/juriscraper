@@ -227,8 +227,9 @@ class ShowCaseDocApi(BaseReport):
             )
         )
         logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
-        # Only do a head request, else we get text content we don't need.
-        self.response = self.session.head(url, allow_redirects=True)
+        # we use get request because nysd court disabled all head requests
+        # and bans by IP in case head request is made
+        self.response = self.session.get(url, allow_redirects=True)
         self.parse()
 
     def _parse_text(self, text):

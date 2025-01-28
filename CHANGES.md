@@ -16,6 +16,28 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.54 - 2024-01-24**
+
+- Fixes:
+  - `ca6` oral argument scraper is no longer failing
+  - update the pypi.yml github actions workflow to solve a bug with twine and
+    packaging packages interaction. It now forces the update of packaging
+  - due to that bug, we discarded the 2.6.53 version
+
+## Past
+
+**2.6.52 - 2024-01-20**
+
+- Fixes:
+  - `AppellateDocketReport.download_pdf` now returns a two-tuple containing the
+    response object or None and a str. This aligns with the changes introduced
+    in v 2.5.1.
+
+**2.6.51 - 2024-01-14**
+
+- Fixes:
+  - `extract_from_text` now returns plain citation strings, instead of parsed dicts
+
 **2.6.50 - 2024-01-10**
 
 - Fixes:
@@ -56,7 +78,6 @@ Releases are also tagged in git, if that's helpful.
 - Features
   - added `extract_from_text` to `sc`
 
-## Past
 
 **2.6.46 - 2024-12-10**
 
