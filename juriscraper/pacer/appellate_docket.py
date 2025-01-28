@@ -329,14 +329,23 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         )
         r = self.session.get(self.url, params=query_params)
         r.raise_for_status()
-        if is_pdf(r):
-            logger.info(
-                "Got PDF binary data for document #%s in court %s",
-                pacer_doc_id,
-                self.court_id,
+
+        if b"Documents are attached to this filing" in r.content:
+            error_message = (
+                "Unable to download PDF. "
+                "An attachment page was returned instead."
             )
-            return r, ""
-        return None, "Unable to download PDF."
+            return None, error_message
+
+        if not is_pdf(r):
+            return None, "Unable to download PDF."
+
+        logger.info(
+            "Got PDF binary data for document #%s in court %s",
+            pacer_doc_id,
+            self.court_id,
+        )
+        return r, ""
 
     @property
     def metadata(self):
