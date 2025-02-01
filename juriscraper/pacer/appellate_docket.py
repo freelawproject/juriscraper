@@ -43,6 +43,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     docket_number_dist_regex = re.compile(
         r"((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
     )
+    docket_number_lookup_regex = "Docket #|Case Number"
 
     CACHE_ATTRS = ["metadata", "docket_entries"]
 
@@ -357,7 +358,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_tail_by_regex("Docket #|Case Number"),
+            "docket_number": self._get_tail_by_regex(
+                self.docket_number_lookup_regex
+            ),
             "case_name": self._get_case_name(),
             "panel": self._get_panel(),
             "nature_of_suit": self._get_tail_by_regex("Nature of Suit"),
@@ -917,7 +920,16 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         node = node if node is not None else self.tree
         nodes = node.re_xpath(f'//*[re:match(text(), "{regex}")]')
         try:
-            tail = clean_string(nodes[0].tail.strip())
+            tail_text = nodes[0].tail
+            tail_text = tail_text.strip() if tail_text is not None else ""
+            # If there's no tail text and we're parsing the docket_number,
+            # fall back to parsing the docket_number wrapped in a "tel:" href.
+            if not tail_text and regex == self.docket_number_lookup_regex:
+                a_nodes = nodes[0].xpath(
+                    "following-sibling::a[starts-with(@href, 'tel:')][1]"
+                )
+                tail_text = a_nodes[0].text or "" if a_nodes else ""
+            tail = clean_string(tail_text)
         except (IndexError, AttributeError):
             if cast_to_date:
                 return None
