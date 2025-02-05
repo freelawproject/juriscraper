@@ -621,6 +621,7 @@ class CaseNameTweaker:
             "Biddle",
             "Black",
             "Bonaparte",
+            "Bondi",
             "Bork",
             "Bradford",
             "Breckinridge",
