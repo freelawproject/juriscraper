@@ -16,6 +16,20 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.55 - 2024-02-10**
+
+- Fixes:
+  - `cafc` opinion scraper now requests using `verify=False` #1314
+  - recap: support for parsing docket_numbers wrapped in a `tel:` href tag
+     in appellate dockets. #915
+
+- Features:
+  - recap: improvement to the download_pdf method to handle cases where
+  attachment pages are returned instead of the expected PDF documents. #1309
+
+
+## Past
+
 **2.6.54 - 2024-01-24**
 
 - Fixes:
@@ -23,8 +37,6 @@ Releases are also tagged in git, if that's helpful.
   - update the pypi.yml github actions workflow to solve a bug with twine and
     packaging packages interaction. It now forces the update of packaging
   - due to that bug, we discarded the 2.6.53 version
-
-## Past
 
 **2.6.52 - 2024-01-20**
 
