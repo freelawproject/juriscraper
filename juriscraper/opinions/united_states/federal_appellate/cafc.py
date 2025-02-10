@@ -21,6 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "https://cafc.uscourts.gov/category/opinion-order/feed/"
         self.court_id = self.__module__
+        self.request["verify"] = False
 
     def _process_html(self) -> None:
         """Process the RSS feed.
