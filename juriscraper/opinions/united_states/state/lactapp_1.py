@@ -67,5 +67,5 @@ class Site(OpinionSiteLinear):
         start, end = dates
         last_page = 500  # Real last page is 467 in Oct, 2024
         self.cases = backscrape_over_paginated_results(
-            url_template, 2, last_page, start, end, "%m/%d/%Y", self
+            2, last_page, start, end, "%m/%d/%Y", self, None, url_template
         )
