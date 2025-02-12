@@ -478,7 +478,7 @@ class AbstractSite:
         days_interval = kwargs.get("days_interval")
 
         if start:
-            start = datetime.strptime(start, "%Y/%m/%d")
+            start = datetime.strptime(start, "%Y/%m/%d").date()
         else:
             if hasattr(self, "first_opinion_date"):
                 start = self.first_opinion_date
@@ -488,7 +488,7 @@ class AbstractSite:
                 )
 
         if end:
-            end = datetime.strptime(end, "%Y/%m/%d")
+            end = datetime.strptime(end, "%Y/%m/%d").date()
         else:
             end = datetime.now().date()
 

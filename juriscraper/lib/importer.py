@@ -1,6 +1,10 @@
 import os
+import traceback
+from logging import getLogger
 
 from requests import HTTPError
+
+logger = getLogger()
 
 
 def build_module_list(court_id):
@@ -78,5 +82,6 @@ def site_yielder(iterable, mod, save_response_fn=None):
         try:
             site._download_backwards(i)
             yield site
-        except HTTPError as e:
+        except HTTPError:
+            logger.debug("%s", traceback.format_exc())
             continue
