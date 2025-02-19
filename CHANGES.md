@@ -16,6 +16,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.56 - 2024-02-19**
+
+- Fixes:
+  - n/a
+
+- Features:
+  - MT upgrade to opinion site linear
+  - Add citation extraction and author for MT
+
+
+## Past
+
 **2.6.55 - 2024-02-10**
 
 - Fixes:
@@ -26,9 +38,6 @@ Releases are also tagged in git, if that's helpful.
 - Features:
   - recap: improvement to the download_pdf method to handle cases where
   attachment pages are returned instead of the expected PDF documents. #1309
-
-
-## Past
 
 **2.6.54 - 2024-01-24**
 
