@@ -2,49 +2,29 @@
 # Date created: 2013-06-03
 # Date updated: 2020-02-25
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+import re
+
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://juddocumentservice.mt.gov/getDailyOrders"
-        self.download_base = (
-            "https://juddocumentservice.mt.gov/getDocByCTrackId?DocId="
-        )
+        self.base = "https://juddocumentservice.mt.gov"
+        self.url = f"{self.base}/getDailyOrders"
+        self.download_base = f"{self.base}/getDocByCTrackId?DocId="
         self.expected_content_types = None
+        self.cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
 
-    def _get_download_urls(self):
-        return [f"{self.download_base}{row['cTrackId']}" for row in self.html]
-
-    def _get_case_names(self):
-        return [f"{row['title']}" for row in self.html]
-
-    def _get_case_dates(self):
-        return [convert_date_string(f"{row['fileDate']}") for row in self.html]
-
-    def _get_precedential_statuses(self):
-        return [
-            (
-                "Published"
-                if "Published" in row["documentDescription"]
-                else "Unpublished"
-            )
-            for row in self.html
-        ]
-
-    def _get_docket_numbers(self):
-        return [f"{row['caseNumber']}" for row in self.html]
-
-    def _get_summaries(self):
-        return [f"{row['documentDescription']}" for row in self.html]
-
-    def _get_nature_of_suit(self):
-        natures = []
-
-        for docket in self.docket_numbers:
+    def _process_html(self):
+        for row in self.html:
+            summary = row["documentDescription"]
+            if not summary.startswith("Opinion"):
+                # skip orders and just do opinions
+                continue
+            status = "Published" if "Published" in summary else "Unpublished"
+            docket = row["caseNumber"]
             if docket.startswith("DA"):
                 nature = "Direct Appeal"
             elif docket.startswith("OP"):
@@ -55,5 +35,31 @@ class Site(OpinionSite):
                 nature = "Administrative File"
             else:
                 nature = "Unknown"
-            natures.append(nature)
-        return natures
+
+            m = re.search(
+                r"Justice (?P<author>.*?)\s*(?:author|,|-)", summary, re.I
+            )
+            author = m.group("author") if m else ""
+            self.cases.append(
+                {
+                    "url": self.download_base + row["cTrackId"],
+                    "status": status,
+                    "date": row["fileDate"],
+                    "name": row["title"],
+                    "docket": docket,
+                    "summary": summary,
+                    "nature_of_suit": nature,
+                    "author": author,
+                }
+            )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract citation from text
+
+        :param scraped_text: Text of scraped content
+        :return: date filed
+        """
+        first_text = scraped_text[:400]
+        if match := re.search(self.cite_regex, first_text):
+            return {"Citation": match.group(0)}
+        return {}
