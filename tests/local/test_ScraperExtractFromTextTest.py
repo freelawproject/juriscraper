@@ -664,6 +664,15 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.mont": [
+            (
+                # https://www.courtlistener.com/api/rest/v4/opinions/10744853/
+                "'02/18/2025\n\n\n                                        DA 23-0746\n\n                IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                         2025 MT 35\n\n\n\nIN THE MATTER OF THE ESTATE OF:\n\nWARREN DAN EDDLEMAN,",
+                {
+                    "Citation": "2025 MT 35",
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):

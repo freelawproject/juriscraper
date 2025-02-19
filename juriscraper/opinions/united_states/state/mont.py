@@ -35,6 +35,11 @@ class Site(OpinionSiteLinear):
                 nature = "Administrative File"
             else:
                 nature = "Unknown"
+
+            m = re.search(
+                r"Justice (?P<author>.*?)\s*(?:author|,|-)", summary, re.I
+            )
+            author = m.group("author") if m else ""
             self.cases.append(
                 {
                     "url": self.download_base + row["cTrackId"],
@@ -44,6 +49,7 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                     "summary": summary,
                     "nature_of_suit": nature,
+                    "author": author,
                 }
             )
 
