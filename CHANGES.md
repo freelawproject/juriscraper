@@ -12,7 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- N/A
+- Add workflow to check for new entries in CHANGES.md file
 
 ## Current
 
