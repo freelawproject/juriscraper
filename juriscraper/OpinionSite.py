@@ -40,6 +40,8 @@ class OpinionSite(AbstractSite):
             "other_dates",
             "html_urls",
             "response_htmls",
+            "opinion_types",
+            "teasers"
         ]
         self._req_attrs = [
             "case_dates",
@@ -78,6 +80,12 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_response_htmls(self):
+        return None
+
+    def _get_opinion_types(self):
+        return None
+
+    def _get_teasers(self):
         return None
 
     def _get_dispositions(self):

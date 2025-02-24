@@ -7,7 +7,7 @@ History:
 """
 
 import re
-from datetime import date
+from datetime import date, datetime
 from typing import Any, Dict
 
 from juriscraper.lib.string_utils import normalize_dashes
@@ -18,8 +18,6 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = date.today().strftime("%Y")[-2:]
-        self.url = f"https://www.cnmilaw.org/spm{year}.php#gsc.tab=0"
         self.status = "Published"
 
     def _cleanup_judge_names(self, judges: str) -> [str]:
@@ -58,12 +56,12 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "name": cells[0].text_content(),
-                    "citation": cells[1].text_content(),
+                    "citation": [cells[1].text_content()],
                     "date": cells[2].text_content(),
-                    "judge": ", ".join(self._cleanup_judge_names(judge_text)),
+                    "judge": self._cleanup_judge_names(judge_text),
                     "author": self._fetch_author(judge_text),
                     "url": s.xpath(".//td/a/@href")[0],
-                    "docket": "",
+                    "docket": [],
                 }
             )
 
@@ -82,3 +80,23 @@ class Site(OpinionSiteLinear):
             },
         }
         return metadata
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        for year in range(start_date.year,end_date.year+1):
+            year = str(year)[-2:]
+            self.url = f"https://www.cnmilaw.org/spm{year}.php#gsc.tab=0"
+            self.parse()
+            self.downloader_executed=False
+        return 0
+
+    def get_court_name(self):
+        return "Supreme Court of Northern Mariana Islands"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_state_name(self):
+        return "Northern Mariana Islands"
+
+    def get_class_name(self):
+        return "nmariana"

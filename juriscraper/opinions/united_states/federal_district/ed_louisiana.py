@@ -1,13 +1,20 @@
-from juriscraper.opinions.united_states.federal_appellate import ca4
+from juriscraper.opinions.united_states.federal_district import gov_info
 
 
-class Site(ca4.Site):
+class Site(gov_info.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.parameters = {
-            "offset": 0,
-            "sortBy": "2",
-            "query": "collection:(USCOURTS) AND courtname:(United States District Court Eastern District of Louisiana)",
-            "historical": True,
-        }
+        self.court_name = "United States District Court Eastern District of Louisiana"
+
+    def get_class_name(self):
+        return "ed_louisiana"
+
+    def get_court_type(self):
+        return 'Federal'
+
+    def get_state_name(self):
+        return "5th Circuit"
+
+    def get_court_name(self):
+        return "Eastern District of Louisiana"
