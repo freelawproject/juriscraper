@@ -191,8 +191,8 @@ class Site(OpinionSiteLinear):
 
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        start_date = datetime(2024,10,31)
-        end_date=datetime(2024,11,30)
+        # start_date = datetime(2024,10,31)
+        # end_date=datetime(2024,11,30)
         logger.info("Crawling between the dates from %s to %s", start_date , end_date)
         # self.parse()
         self._download_backwards((start_date, end_date))
