@@ -13,6 +13,8 @@ Releases are also tagged in git, if that's helpful.
 ## Coming up
 
 - Add workflow to check for new entries in CHANGES.md file
+- Fixes:
+  - ignore future date sanity check when date filed is approximate #1321
 
 ## Current
 
