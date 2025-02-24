@@ -9,3 +9,9 @@ from . import minn
 
 class Site(minn.Site):
     court_query = "ctappub"
+
+    def get_class_name(self):
+        return "minnctapp_p"
+
+    def get_court_name(self):
+        return "Minnesota Court of Appeals"

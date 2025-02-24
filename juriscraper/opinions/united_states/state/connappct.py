@@ -16,7 +16,6 @@ class Site(conn.Site):
     court_abbv = "ap"
 
     def __init__(self, *args, **kwargs):
-        print("inside the class connctapp")
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
 

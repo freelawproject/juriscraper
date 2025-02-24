@@ -153,8 +153,13 @@ class Site(OpinionSiteLinear):
         return metadata
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        y = start_date.year
-        self._download_backwards(y)
+        sy = start_date.year
+        es = end_date.year
+        print(f"start and end year is {sy} , {es}")
+        while sy <= es:
+            print(f"for the year {sy}")
+            self._download_backwards(sy)
+            sy +=1
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, f"_get_{attr}")())

@@ -100,8 +100,10 @@ class Site(OpinionSiteLinear):
             row_data = [cell.get_text(strip=True) for cell in
                         first_data_row.find_all("td")]
             curr_page = row_data[-1]
+            if "Ohio" in curr_page :
+                curr_page=1
             if curr_page != ">>" and int(curr_page) > self.max_page_num :
-                self.max_page_num=int(curr_page)
+                    self.max_page_num=int(curr_page)
 
 
         for row in self.html.xpath(
@@ -149,10 +151,13 @@ class Site(OpinionSiteLinear):
 
 
     def crawling_range(self, start_date: datetime ,end_date: datetime ) -> int:
-        # start_date = datetime(2023,1,1)
+        # start_date = datetime(2024,1,1)
         while True:
             if not self.downloader_executed:
                 self.html = self._download()
+
+            if (self.max_page_num != -1 and self.page_number > self.max_page_num):
+                break
 
             if(self.page_number == self.max_page_num):
                 self._process_html(start_date.year, end_date.year)
