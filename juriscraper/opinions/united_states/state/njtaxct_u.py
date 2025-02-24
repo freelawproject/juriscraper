@@ -1,9 +1,9 @@
 from datetime import datetime
 
-from juriscraper.opinions.united_states.state import nj
+from juriscraper.opinions.united_states.state import njtaxct_p
 
 
-class Site(nj.Site):
+class Site(njtaxct_p.Site):
     # there is 1 opinion for datetime(2011, 5, 3),
     # but then none until Feb 2017
     first_opinion_date = datetime(2011, 5, 3)

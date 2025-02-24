@@ -33,7 +33,7 @@ class Site(OpinionSiteLinear):
     def _get_case_info_html(self):
         return self._get_optional_field_by_id("case_info_html")
 
-    def _process_html(self, info_url=None):
+    def _process_html(self, start_date : datetime , end_date : datetime, info_url=None ):
         self.request["headers"].update(
             {
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -48,37 +48,39 @@ class Site(OpinionSiteLinear):
                 continue
             date, middle, div, name, op_type = row.xpath(".//td")
             info_url = middle.xpath("a")[0].get("href")
-            try:
-                # print(f"url is {info_url}")
-                response = requests.get(info_url,
-                                        headers=self.request["headers"],
-                                        proxies=self.proxies,timeout=120)
-                print(response.status_code)
-                if response.status_code == 200:
-                    case_info_html = response.text  # Print the response content
-                else:
-                    case_info_html = ""
-            except Exception as e:
-                logger.info(f"error while downloading case info {e}")
-                case_info_html=""
-            self.cases.append(
-                {
-                    "date": date.text_content(),
-                    "url": middle.xpath("a")[1].get("href").replace(" ", "%20"),
-                    "name": name.text_content().replace("* ", ""),
-                    "docket": [middle.xpath("a")[0].text_content()],
-                    "case_info_url": middle.xpath("a")[0].get("href"),
-                    "case_info_html": case_info_html,
-                    "division":div.text_content()
-                }
-            )
+            parsed_date = datetime.strptime(date.text_content(), "%b. %d, %Y")
+            if parsed_date >= start_date and parsed_date <= end_date:
+                try:
+                    # print(f"url is {info_url}")
+                    response = requests.get(info_url,
+                                            headers=self.request["headers"],
+                                            proxies=self.proxies,timeout=120)
+                    print(response.status_code)
+                    if response.status_code == 200:
+                        case_info_html = response.text  # Print the response content
+                    else:
+                        case_info_html = ""
+                except Exception as e:
+                    logger.info(f"error while downloading case info {e}")
+                    case_info_html=""
+                self.cases.append(
+                    {
+                        "date": date.text_content(),
+                        "url": middle.xpath("a")[1].get("href").replace(" ", "%20"),
+                        "name": name.text_content().replace("* ", ""),
+                        "docket": [middle.xpath("a")[0].text_content()],
+                        "case_info_url": middle.xpath("a")[0].get("href"),
+                        "case_info_html": case_info_html,
+                        "division":div.text_content()
+                    }
+                )
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
 
         if not self.downloader_executed:
             self.html = self._download()
             # print(html.tostring(self.html, pretty_print=True).decode('utf-8'))
-            self._process_html()
+            self._process_html(start_date , end_date)
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, f"_get_{attr}")())

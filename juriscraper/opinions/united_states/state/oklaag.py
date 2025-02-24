@@ -25,7 +25,7 @@ class Site(okla.Site):
         self.status = "Published"
         self.expected_content_types = ["text/html"]
 
-    def _process_html(self):
+    def _process_html(self , start_date : datetime , end_date : datetime):
         proxy_manager = ProxyManager()
         proxy = proxy_manager.get_random_proxy()
         cite_html=""
@@ -45,52 +45,55 @@ class Site(okla.Site):
             docket = docket.replace("\xa0"," ")
             url = row.xpath(".//a/@href")[0]
 
-            try:
-                print(f"hitting url : {url}")
-                response_html = requests.get(url,
-                                             headers=self.request["headers"],
-                                             proxies=self.proxies)
+            if datetime.strptime(date.strip(),
+                                 "%m/%d/%Y") >= start_date and datetime.strptime(
+                date.strip(), "%m/%d/%Y") <= end_date:
+                try:
+                    print(f"hitting url : {url}")
+                    response_html = requests.get(url,
+                                                 headers=self.request["headers"],
+                                                 proxies=self.proxies)
 
-                html_content = response_html.text
+                    html_content = response_html.text
 
-                tree = html.fromstring(html_content)
-                cite_text = tree.xpath("//div[@class='tmp-citationizer']")
-                cite_html = html.tostring(cite_text[0], pretty_print=True).decode(
-                    "utf-8")
-                div_content = tree.xpath(
-                    "//div[@class='container-fluid sized']")
-                if div_content:
-                        tmp = div_content[0].xpath(
-                            ".//div[@id='opinons-navigation']")
-                        if tmp:
-                            tmp[0].getparent().remove(
-                                tmp[0])
-                        tmp_citationizer = div_content[0].xpath(
-                            ".//div[@class='tmp-citationizer']")
-                        if tmp_citationizer:
-                            tmp_citationizer[0].getparent().remove(
-                                tmp_citationizer[0])
+                    tree = html.fromstring(html_content)
+                    cite_text = tree.xpath("//div[@class='tmp-citationizer']")
+                    cite_html = html.tostring(cite_text[0], pretty_print=True).decode(
+                        "utf-8")
+                    div_content = tree.xpath(
+                        "//div[@class='container-fluid sized']")
+                    if div_content:
+                            tmp = div_content[0].xpath(
+                                ".//div[@id='opinons-navigation']")
+                            if tmp:
+                                tmp[0].getparent().remove(
+                                    tmp[0])
+                            tmp_citationizer = div_content[0].xpath(
+                                ".//div[@class='tmp-citationizer']")
+                            if tmp_citationizer:
+                                tmp_citationizer[0].getparent().remove(
+                                    tmp_citationizer[0])
 
-                        div = html.tostring(div_content[0],
-                                            pretty_print=True).decode("utf-8")
+                            div = html.tostring(div_content[0],
+                                                pretty_print=True).decode("utf-8")
 
-            except Exception as e:
-                logger.info(f"inside the exception block .......{e}")
+                except Exception as e:
+                    logger.info(f"inside the exception block .......{e}")
 
-            self.cases.append(
-                {
-                    "date": date,
-                    "name": name,
-                    "docket": [docket],
-                    "url": "null",
-                    "citation": "",
-                    "html_url": url,
-                    "response_html": div,
-                    "cite_info_html": cite_html,
-                }
-            )
-            self.proxy_usage_count +=1
-            print("------------------------------------------------------------------------")
+                self.cases.append(
+                    {
+                        "date": date,
+                        "name": name,
+                        "docket": [docket],
+                        "url": "null",
+                        "citation": "",
+                        "html_url": url,
+                        "response_html": div,
+                        "cite_info_html": cite_html,
+                    }
+                )
+                self.proxy_usage_count +=1
+                print("------------------------------------------------------------------------")
 
     def get_court_name(self):
         return "Opinions of Atty. Gen."

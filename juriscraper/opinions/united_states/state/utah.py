@@ -8,7 +8,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.utcourts.gov/opinions/supopin/index-2022.php"
+        self.url = "http://www.utcourts.gov/opinions/supopin/index.php"
         self.base_url = "http://www.utcourts.gov/opinions/supopin/"
         self.court_id = self.__module__
         self.status= "Published"

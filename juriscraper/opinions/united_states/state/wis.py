@@ -65,7 +65,7 @@ class Site(OpinionSiteLinear):
                         "https://www.wicourts.gov",
                         link.xpath("./input")[0].name,
                     ),
-                    "docket": [docket.text],
+                    "docket": [docket.text]
                 }
             )
 

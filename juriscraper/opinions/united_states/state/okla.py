@@ -1,6 +1,7 @@
 import re
 
 import requests
+from fontTools.misc.plistlib import end_date
 from lxml import html
 from datetime import datetime
 from casemine.proxy_manager import ProxyManager
@@ -64,7 +65,7 @@ class Site(OpinionSiteLinear):
         finally:
             driver.quit()
 
-    def _process_html(self):
+    def _process_html(self , start_date : datetime , end_date : datetime):
         base_url = "https://www.oscn.net/dockets/"
         cite_html=""
         div=""
@@ -100,118 +101,120 @@ class Site(OpinionSiteLinear):
             elif len(parts)==3:
                 docket, date, name = parts
 
-            docket=docket.replace("\xa0"," ")
-            print(f"date of the case is {date}")
+            if datetime.strptime(date.strip(), "%m/%d/%Y") > start_date and datetime.strptime(date.strip(), "%m/%d/%Y") < end_date:
 
-            try:
-                print(f"getting result of docket {docket}")
-                print(f"hitting url {url} for html and cite html")
-                time.sleep(4)
-                response_html = requests.get(url,
-                                             headers=self.request["headers"],
-                                             proxies=self.proxies)
+                docket=docket.replace("\xa0"," ")
+                print(f"date of the case is {date}")
 
-                html_content = response_html.text
+                try:
+                    print(f"getting result of docket {docket}")
+                    print(f"hitting url {url} for html and cite html")
+                    time.sleep(4)
+                    response_html = requests.get(url,
+                                                 headers=self.request["headers"],
+                                                 proxies=self.proxies)
 
-                tree = html.fromstring(html_content)
-                # print(html_content)
-                cite_text = tree.xpath("//div[@class='tmp-citationizer']")
-                cite_html = html.tostring(cite_text[0], pretty_print=True).decode("utf-8")
-                div_content = tree.xpath(
-                    "//div[@class='container-fluid sized']")
-                if div_content:
-                        tmp = div_content[0].xpath(
-                            ".//div[@id='opinons-navigation']")
-                        if tmp:
-                            tmp[0].getparent().remove(
-                                tmp[0])
+                    html_content = response_html.text
 
-                        tmp_citationizer = div_content[0].xpath(
-                            ".//div[@class='tmp-citationizer']")
-                        if tmp_citationizer:
-                            tmp_citationizer[0].getparent().remove(
-                                tmp_citationizer[0])
+                    tree = html.fromstring(html_content)
+                    # print(html_content)
+                    cite_text = tree.xpath("//div[@class='tmp-citationizer']")
+                    cite_html = html.tostring(cite_text[0], pretty_print=True).decode("utf-8")
+                    div_content = tree.xpath(
+                        "//div[@class='container-fluid sized']")
+                    if div_content:
+                            tmp = div_content[0].xpath(
+                                ".//div[@id='opinons-navigation']")
+                            if tmp:
+                                tmp[0].getparent().remove(
+                                    tmp[0])
 
-                        div = html.tostring(div_content[0],pretty_print=True).decode("utf-8")
+                            tmp_citationizer = div_content[0].xpath(
+                                ".//div[@class='tmp-citationizer']")
+                            if tmp_citationizer:
+                                tmp_citationizer[0].getparent().remove(
+                                    tmp_citationizer[0])
 
-                        anchor_text = tree.xpath("//div[@id='tmp-style']//a/text()")
-                        if anchor_text:
-                            case_number = anchor_text[0]
-                            if case_number:
-                                print(f"got the case number {case_number}")
-                                full_url = base_url + "GetCaseInformation.aspx?db=Appellate&number=" + case_number
-                                if "; " in case_number:
-                                    match = re.search(r'^(\d+);', case_number)
-                                    if match:
-                                        number = match.group(1)
-                                        full_url = base_url + "GetCaseInformation.aspx?db=Appellate&number=" + number
+                            div = html.tostring(div_content[0],pretty_print=True).decode("utf-8")
 
-
-                                if "SCBD" in case_number:
-                                    number_match = re.search(r"SCBD-(\d+)",
-                                                             case_number)
-                                    if number_match:
-                                        extracted_number = number_match.group(1)
-                                        print(f"Extracted number: {extracted_number}")
-                                        full_url = base_url + "GetCaseInformation.aspx?db=Appellate&number=" + extracted_number
-                                print(f"getting the content for pdf from the url {full_url}")
-                                get_pdf_html = requests.get(full_url, headers=
-                                self.request["headers"], proxies=self.proxies)
-                                content = get_pdf_html.text
-                                # print(content)
-                                if "OSCN Turnstile" in content or "cf-turnstile" in content:
-                                    print("captcha")
-                                    content=self.fetch_oscn_page_with_proxy(full_url, proxy[0], proxy[1])
+                            anchor_text = tree.xpath("//div[@id='tmp-style']//a/text()")
+                            if anchor_text:
+                                case_number = anchor_text[0]
+                                if case_number:
+                                    print(f"got the case number {case_number}")
+                                    full_url = base_url + "GetCaseInformation.aspx?db=Appellate&number=" + case_number
+                                    if "; " in case_number:
+                                        match = re.search(r'^(\d+);', case_number)
+                                        if match:
+                                            number = match.group(1)
+                                            full_url = base_url + "GetCaseInformation.aspx?db=Appellate&number=" + number
 
 
-                                content1 = html.fromstring(content)
-                                table = content1.xpath(
-                                    "//table[@class='docketlist ocis']")
-                                if table:
-                                    trow = table[0].xpath(".//tbody//tr")
-                                    for tr in trow:
-                                        td = tr.xpath(".//td[2]//nobr/text()")
-                                        dt = tr.xpath(".//td[1]//nobr/text()")
-                                        dt_str = str(dt[0]).strip()
-                                        if td[0] == 'OPIN':
-                                            url1 = tr.xpath(
-                                                ".//td[3]//div[@class='description-wrapper']//a[@class='doc-pdf']/@href")[
-                                                0]
-                                            pdf_url = base_url + url1
-                                        elif td[0] == 'ORDR':
-                                            dt_str = dt_str.replace("-", "/")
-                                            url1 = tr.xpath(".//td[3]//div[@class='description-wrapper']//a[@class='doc-pdf']/@href")[0]
-                                            if dt_str == date:
-                                                print(
-                                                    f"Date matches for ORDR row. PDF URL: {url1}")
+                                    if "SCBD" in case_number:
+                                        number_match = re.search(r"SCBD-(\d+)",
+                                                                 case_number)
+                                        if number_match:
+                                            extracted_number = number_match.group(1)
+                                            print(f"Extracted number: {extracted_number}")
+                                            full_url = base_url + "GetCaseInformation.aspx?db=Appellate&number=" + extracted_number
+                                    print(f"getting the content for pdf from the url {full_url}")
+                                    get_pdf_html = requests.get(full_url, headers=
+                                    self.request["headers"], proxies=self.proxies)
+                                    content = get_pdf_html.text
+                                    # print(content)
+                                    if "OSCN Turnstile" in content or "cf-turnstile" in content:
+                                        print("captcha")
+                                        content=self.fetch_oscn_page_with_proxy(full_url, proxy[0], proxy[1])
+
+
+                                    content1 = html.fromstring(content)
+                                    table = content1.xpath(
+                                        "//table[@class='docketlist ocis']")
+                                    if table:
+                                        trow = table[0].xpath(".//tbody//tr")
+                                        for tr in trow:
+                                            td = tr.xpath(".//td[2]//nobr/text()")
+                                            dt = tr.xpath(".//td[1]//nobr/text()")
+                                            dt_str = str(dt[0]).strip()
+                                            if td[0] == 'OPIN':
+                                                url1 = tr.xpath(
+                                                    ".//td[3]//div[@class='description-wrapper']//a[@class='doc-pdf']/@href")[
+                                                    0]
                                                 pdf_url = base_url + url1
+                                            elif td[0] == 'ORDR':
+                                                dt_str = dt_str.replace("-", "/")
+                                                url1 = tr.xpath(".//td[3]//div[@class='description-wrapper']//a[@class='doc-pdf']/@href")[0]
+                                                if dt_str == date:
+                                                    print(
+                                                        f"Date matches for ORDR row. PDF URL: {url1}")
+                                                    pdf_url = base_url + url1
 
-                                else:
-                                    pdf_url = "null"
-                                print(f"got the pdf url {pdf_url}")
+                                    else:
+                                        pdf_url = "null"
+                                    print(f"got the pdf url {pdf_url}")
 
-                else:
-                    logger.info("no div with calssname container-fluid sized present")
-            except Exception as e:
-                logger.info(f"inside the exception block in okla class ..... {e}")
+                    else:
+                        logger.info("no div with calssname container-fluid sized present")
+                except Exception as e:
+                    logger.info(f"inside the exception block in okla class ..... {e}")
 
-            print("-------------------------------------------------------------------------------------------------------------------")
+                print("-------------------------------------------------------------------------------------------------------------------")
 
 
 
-            self.cases.append(
-                {
-                    "date": date,
-                    "name": name,
-                    "docket": [docket],
-                    "citation": [citation],
-                    "url": pdf_url,
-                    "cite_info_html":cite_html,
-                    "html_url":url,
-                    "response_html":div,
-                }
-            )
-            self.proxy_usage_count +=1
+                self.cases.append(
+                    {
+                        "date": date,
+                        "name": name,
+                        "docket": [docket],
+                        "citation": [citation],
+                        "url": pdf_url,
+                        "cite_info_html":cite_html,
+                        "html_url":url,
+                        "response_html":div,
+                    }
+                )
+                self.proxy_usage_count +=1
 
     @staticmethod
     def cleanup_content(content):
@@ -224,7 +227,7 @@ class Site(OpinionSiteLinear):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         if not self.downloader_executed:
             self.html = self._download()
-            self._process_html()
+            self._process_html(start_date , end_date)
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, f"_get_{attr}")())
