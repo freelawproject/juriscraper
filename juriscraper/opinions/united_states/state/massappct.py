@@ -17,7 +17,7 @@ class Site(mass.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_identifier = "AC"
+        self.court_identifier =  "AC"
 
     def get_class_name(self):
         return "massappct"

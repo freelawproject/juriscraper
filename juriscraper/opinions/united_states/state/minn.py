@@ -9,9 +9,12 @@
 # 2024-08-09: update and implement backscraper, grossir
 
 import re
-from datetime import date
+from datetime import date, datetime
 from typing import Tuple
 from urllib.parse import urljoin
+
+from lxml import html
+from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -31,7 +34,7 @@ class Site(OpinionSiteLinear):
         if self.court_query == "ctapun":
             self.status = "Unpublished"
 
-        self.url = "https://mn.gov/law-library/search/"
+        self.base = "https://mn.gov/law-library/search/"
         self.params = self.base_params = {
             "v:sources": "mn-law-library-opinions",
             "query": f" (url:/archive/{self.court_query}) ",
@@ -56,9 +59,8 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        self.html = self._download({"params": self.params})
+        # self.html = self._download({"params": self.params})
 
-        # This warning is useful for backscraping
         results_number = self.html.xpath(
             "//div[@class='searchresult_number']/text()"
         )
@@ -110,6 +112,7 @@ class Site(OpinionSiteLinear):
 
             url = case.xpath(".//a/@href")[0]
             docket = url.split("/")[-1].split("-")[0][2:]
+            dock = f"{docket[:3]}-{docket[3:]}"
             self.cases.append(
                 {
                     "date": date_filed,
@@ -117,19 +120,64 @@ class Site(OpinionSiteLinear):
                     "url": urljoin("https://", url),
                     "disposition": disposition,
                     "summary": summary,
-                    "docket": docket,
-                    "citation": citation,
+                    "docket": [docket],
+                    "citation": [citation],
                 }
             )
 
     def _download_backwards(self, dates: Tuple[date]):
+        count = 0
         logger.info("Backscraping for range %s - %s", *dates)
-        params = {**self.base_params}
-        params.update(
-            {
-                "start-date": dates[0].strftime("%-m/%-d/%Y"),
-                "end-date": dates[1].strftime("%-m/%-d/%Y"),
-                "query": f"{params['query']}date:[{dates[0].strftime('%Y-%m-%d')}..{dates[1].strftime('%Y-%m-%d')}]",
-            }
-        )
-        self.params = params
+        while True:
+            if(count<1):
+                params = {**self.base_params}
+                params.update(
+                    {
+                        "start-date": dates[0].strftime("%-m/%-d/%Y"),
+                        "end-date": dates[1].strftime("%-m/%-d/%Y"),
+                        "query": f"{params['query']}date:[{dates[0].strftime('%Y-%m-%d')}..{dates[1].strftime('%Y-%m-%d')}]",
+                    }
+                )
+                self.url=f"{self.base}?{urlencode(params)}"
+                count += 1
+
+            else:
+                link=self.html.xpath("//div[@class='results-navigation']/ul/li[last()]/a")
+                if link:
+                    self.url=link[0].xpath('.//@href')[0]
+                else:
+                    break
+
+            print(f"hitting url {self.url}")
+            self.html =self._download()
+            self._process_html()
+
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        start_date=datetime(2024,1,1,)
+        end_date=datetime(2024,12,31)
+        self._download_backwards((start_date,end_date))
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return len(self.cases)
+
+    def get_court_type(self):
+        return "state"
+
+    def get_class_name(self):
+        return "minn"
+
+    def get_state_name(self):
+        return "Minnesota"
+
+    def get_court_name(self):
+        return "Supreme Court of Minnesota"

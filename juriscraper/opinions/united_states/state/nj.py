@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
             name_content = container[0].xpath("string(.)")
             name_str, _, _ = name_content.partition("(")
 
-            docket = row.xpath(
+            doc = row.xpath(
                 './/*[contains(@class, "one-line-truncate me-1 mt-1")]/text()')[
                 0
             ].strip()
@@ -52,9 +52,20 @@ class Site(OpinionSiteLinear):
                 ".//div[@class='col-lg-12 small text-muted mt-2']/text()"
             )[0]
 
+            dock = doc
+            get_docks = dock.split('-')
+            first = get_docks[0]
+            second = get_docks[-1]
+            get_docks = get_docks[1].split('/')
+
+            docket = []
+            for c in get_docks:
+                docket.append(f"{first}-{c}-{second}")
+
+            print(docket)
             case = {
                 "date": date,
-                "docket": [docket],
+                "docket": docket,
                 "name": titlecase(name_str.strip()),
                 "url": url,
             }

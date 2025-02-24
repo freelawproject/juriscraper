@@ -31,6 +31,7 @@ class Site(OpinionSiteLinear):
     # document_purpose = 1331 -> Supreme Court Opinion
     base_filter = "{}@field_document_purpose|=|1331"
     year_to_filter = {
+        2025: "@field_document_subcategory|=|2616",
         2024: "@field_document_subcategory|=|2316",
         2023: "@field_document_subcategory|=|2256",
         2022: "@field_document_subcategory|=|2091",
@@ -57,7 +58,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.status = "Published"
         self.base_url = "https://www.courts.nh.gov/content/api/documents"
-        self.set_request_parameters()
+        # self.set_request_parameters()
         self.needs_special_headers = True
         self.make_backscrape_iterable(kwargs)
         self.paginate = False
@@ -145,7 +146,7 @@ class Site(OpinionSiteLinear):
             self._process_html()
 
     def set_request_parameters(
-        self, year: int = datetime.today().year
+        self, year: int
     ) -> None:
         """Each year has a unique `field_document_subcategory` key, so we must
         set it accordingly
@@ -171,12 +172,24 @@ class Site(OpinionSiteLinear):
             "X-Requested-With": "XMLHttpRequest",
         }
 
-    def _download_backwards(self, year: int) -> None:
-        self.paginate = True
-        self.set_request_parameters(year)
-        logger.info("Backscraping year %s", year)
-        self.html = self._download()
-        self._process_html()
+    def _download_backwards(self, start: int , end : int) -> None:
+        if(start == end):
+            logger.info(f"start year and end year is same.....")
+            self.paginate = True
+            self.set_request_parameters(start)
+            logger.info("Backscraping year %s", start)
+            self.html = self._download()
+            self._process_html()
+        else:
+            logger.info(f"start year is {start} and end year is {end}")
+            curr_year = start
+            while curr_year<= end:
+                logger.info(f"calling for year {curr_year}")
+                self.paginate = True
+                self.set_request_parameters(curr_year)
+                self.html = self._download()
+                self._process_html()
+                curr_year += 1
 
     def make_backscrape_iterable(self, kwargs: Dict) -> List[int]:
         """The API exposes no date filter, so we must query a year
@@ -192,8 +205,9 @@ class Site(OpinionSiteLinear):
 
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        year = start_date.year
-        self._download_backwards(year)
+        start_year = start_date.year
+        end_year=end_date.year
+        self._download_backwards(start_year,end_year)
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, f"_get_{attr}")())

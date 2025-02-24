@@ -54,10 +54,11 @@ class Site(wis.Site):
                 "https://www.wicourts.gov", link.xpath("./input")[0].name
             )
             docket_number = docket.text
-            if self.combine_opinions(url, docket_number):
-                logger.debug("Duplicate row: %s", name)
-                continue
+            # if self.combine_opinions(url, docket_number):
+            #     logger.debug("Duplicate row: %s", name)
+            #     continue
             lower_court = f"Wisconsin Circuit Court, {county.text} County"
+            # print(docket_number)2023AP000207
 
             self.cases.append(
                 {
@@ -67,10 +68,11 @@ class Site(wis.Site):
                     "docket": [docket_number],
                     "status": status,
                     "lower_court": lower_court,
+                    "division": district.text
                 }
             )
     def get_class_name(self):
-        return "wisctapp"
+            return "wisctapp"
 
     def get_court_name(self):
         return "Wisconsin Court of Appeals"

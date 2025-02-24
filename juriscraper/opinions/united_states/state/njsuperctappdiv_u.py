@@ -1,7 +1,7 @@
-from juriscraper.opinions.united_states.state import nj
+from juriscraper.opinions.united_states.state import njsuperctappdiv_p
 
 
-class Site(nj.Site):
+class Site(njsuperctappdiv_p.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

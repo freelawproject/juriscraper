@@ -27,6 +27,7 @@ class Site(OpinionSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.maine.gov/courts/sjc/opinions.html"
+        # self.url = "https://www.courts.maine.gov/courts/sjc/lawcourt/2024/index.html"
         self.path_root = '//table[contains(.//th[1], "Opinion")]'
 
     def _get_cell_path(self, cell_number: int, subpath: str = "") -> str:

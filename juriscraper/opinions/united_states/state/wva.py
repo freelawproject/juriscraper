@@ -1,5 +1,4 @@
-from datetime import datetime
-
+from datetime import datetime, date
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
@@ -9,7 +8,7 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.disable_certificate_verification()
-        self.year = 2024
+        self.year = date.today().year
         self.page = 0
         self.url = f"https://www.courtswv.gov/appellate-courts/supreme-court-of-appeals/opinions/"
         self.court_id = self.__module__
@@ -161,4 +160,4 @@ class Site(OpinionSite):
         return "state"
 
     def get_court_name(self):
-        return "Supreme Court of West Virginia "
+        return "Supreme Court of West Virginia"
