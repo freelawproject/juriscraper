@@ -14,6 +14,9 @@ Releases are also tagged in git, if that's helpful.
 
 - Add workflow to check for new entries in CHANGES.md file
 
+- Fixes:
+  - fix cafc oral argument scraper PR (#1325)[https://github.com/freelawproject/juriscraper/pull/1325]
+
 ## Current
 
 **2.6.56 - 2024-02-19**
