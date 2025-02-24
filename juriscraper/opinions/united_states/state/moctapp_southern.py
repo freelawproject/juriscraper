@@ -6,7 +6,7 @@ class Site(mo.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court = "Southern"
-        self.url = self.build_url()
+        # self.url = self.build_url()
 
     def _download(self, request_dict={}):
         # I have to do something to open up the page - but only for the southern
@@ -41,3 +41,9 @@ class Site(mo.Site):
                         "judge": vote.split(".", 1)[1].strip(),
                     }
                 )
+
+    def get_class_name(self):
+        return "moctapp_southern"
+
+    def get_court_name(self):
+        return "Missouri Court of Appeals"

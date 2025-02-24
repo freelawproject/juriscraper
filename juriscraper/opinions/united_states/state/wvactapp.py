@@ -112,4 +112,4 @@ class Site(wva.Site):
         return "wvactapp"
 
     def get_court_name(self):
-        return "Intermediate Court of Appeals of West Virginia "
+        return "Intermediate Court of Appeals of West Virginia"
