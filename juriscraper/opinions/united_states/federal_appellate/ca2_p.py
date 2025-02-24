@@ -8,26 +8,23 @@ Contact:
 
 import time
 from datetime import date, timedelta, datetime
-from platform import system
-from time import sleep
 
-import lxml.html
 from bs4 import BeautifulSoup
 from dateutil.rrule import DAILY, rrule
-from lxml import html
-from lxml.etree import tostring, parse
-from soupsieve import select
+from lxml.etree import tostring
 
 from casemine.casemine_util import CasemineUtil
-from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
+
 
 class Site(OpinionSite):
     dates = []
     names = []
-    status = []
+    statuses = []
     urls = []
     dockets = []
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.interval = 30
@@ -49,16 +46,7 @@ class Site(OpinionSite):
         return self.dockets
 
     def _get_precedential_statuses(self):
-        return self.status
-
-    def get_class_name(self):
-        return 'ca2_p'
-
-    def get_court_name(self):
-        return 'United States Court of Appeals For the Second Circuit'
-
-    def get_court_type(self):
-        return 'Federal'
+        return self.statuses
 
     def _download_backwards(self, d):
         self.url = "http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100&IW_FILTER_DATE_BEFORE={before}&IW_FILTER_DATE_After={after}".format(
@@ -103,7 +91,7 @@ class Site(OpinionSite):
         if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
             flag = True
-            while(flag):
+            while flag:
                 self.html = self._download()
                 next_page_link = self.pagination()
                 if next_page_link is None:
@@ -124,7 +112,7 @@ class Site(OpinionSite):
                     date_obj = date_filed.strftime('%d/%m/%Y')
                     self.dates.append(date_filed)
                     res = CasemineUtil.compare_date(date_obj, self.crawled_till)
-                    if (res == 1):
+                    if res == 1:
                         self.crawled_till = date_obj
 
 
@@ -142,11 +130,11 @@ class Site(OpinionSite):
                 # status
                 for s in self.html.xpath("//table/td[4]/text()"):
                     if "opn" in s.lower():
-                        self.status.append("Published")
+                        self.statuses.append("Published")
                     elif "sum" in s.lower():
-                        self.status.append("Unpublished")
+                        self.statuses.append("Unpublished")
                     else:
-                        self.status.append("Unknown")
+                        self.statuses.append("Unknown")
                 # Process the available html (optional)
 
         # Set the attribute to the return value from _get_foo()
@@ -174,3 +162,15 @@ class Site(OpinionSite):
             proxies=self.proxies, timeout=60, **self.request["parameters"])
         self._post_process_response()
         self.html = self._return_response_text_object()
+
+    def get_class_name(self):
+        return 'ca2_p'
+
+    def get_court_name(self):
+        return 'Court of Appeals for the Second Circuit'
+
+    def get_court_type(self):
+        return 'Federal'
+
+    def get_state_name(self):
+        return "2d Circuit"

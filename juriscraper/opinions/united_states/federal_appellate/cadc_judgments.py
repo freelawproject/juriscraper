@@ -8,4 +8,4 @@ class Site(cadc.Site):
         self.court_type='judgments'
 
     def get_class_name(self):
-        return "cadc_judments"
+        return "cadc_judgments"

@@ -8,4 +8,6 @@ TEST_COLLECTION = 'test'
 MAIN_COLLECTION = 'JuriscraperData'
 CONFIG_COLLECTION = 'JuriscrapperCrawlConfig'
 
-PDF_DOWNLOAD_PATH = ''
+MAIN_PDF_PATH="/synology/PDFs/US/juriscraper/"
+TEMP_PDF_PATH="/home/gaugedata/Downloads/juriscraper/"
+

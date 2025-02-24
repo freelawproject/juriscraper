@@ -5,6 +5,7 @@ Scraper for the Decisiones del Tribunal Apelaciones
 CourtID: prapp
 Court Short Name: Puerto Rico Court of Apelaciones
 """
+from datetime import datetime
 
 from dateparser import parse
 
@@ -16,10 +17,9 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/"
         self.status = "Published"
 
-    def _download(self, request_dict={}):
+    def _old_download(self, request_dict={}):
         """Download websites
 
         :param request_dict: Empty dict
@@ -52,3 +52,16 @@ class Site(OpinionSiteLinear):
                     "date": str(date_obj.date()),
                 }
             )
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        list_of_pr_months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre']
+        for year in range(start_date.year, end_date.year+1):
+            for month in list_of_pr_months:
+                try:
+                    self.url = f"https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/decisiones-del-tribunal-de-apelaciones-{month}-{year}/"
+                    self.parse()
+                    self.downloader_executed=False
+                except Exception as e:
+                    if str(e).__contains__('404 Client Error: Not Found for url'):
+                        break
+        return 0

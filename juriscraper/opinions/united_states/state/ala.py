@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         self.court_str = "68f021c4-6a44-4735-9a76-5360b2e8af13"
 
     def _build_url(self, court_str):
-        return f"https://publicportal-api.alappeals.gov/courts/cms/publications?courtID={court_str}&page=0&size=25&sort=publicationDate%2Cdesc"
+        return f"https://publicportal-api.alappeals.gov/courts/cms/publications?courtID={court_str}&page=0&size=100&sort=publicationDate%2Cdesc"
 
     def _download(self, request_dict={}):
         if self.test_mode_enabled():

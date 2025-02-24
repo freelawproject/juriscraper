@@ -14,6 +14,7 @@ class OralArgumentSite(AbstractSite):
         self.expected_content_types = ["audio/mpeg"]
 
         self._opt_attrs = [
+            "opinion_types",
             "docket_numbers",
             "judges",
             "case_name_shorts",
@@ -46,4 +47,7 @@ class OralArgumentSite(AbstractSite):
         return None
 
     def _get_judges(self):
+        return None
+
+    def _get_opinion_types(self):
         return None
