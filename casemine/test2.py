@@ -16,6 +16,7 @@ logger.info("executed job successfully")
 print(str(site))
 # Print it out as JSON
 print(site.to_json())
+print("faltu")
 
 # Iterate over the item
 for opinion in site:
