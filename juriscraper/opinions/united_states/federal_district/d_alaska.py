@@ -5,6 +5,7 @@ class Site(gov_info.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+        print("this is working very fine")
         self.court_name = "United States District Court District of Alaska"
 
     def get_class_name(self):
