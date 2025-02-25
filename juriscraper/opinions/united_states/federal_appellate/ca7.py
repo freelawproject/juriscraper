@@ -41,7 +41,7 @@ class Site(OpinionSiteLinear):
             new_date_format = '%d/%m/%Y'
             new_date_string = date_object.strftime(new_date_format)
             res = CasemineUtil.compare_date(new_date_string, self.crawled_till)
-            if (res == 1):
+            if res == 1:
                 self.crawled_till = new_date_string
             timezone = pytz.timezone('America/Chicago')  # CDT is the same as 'America/Chicago'
             date_object = timezone.localize(date_object)
@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
                 "date": formatted_date,
                 "name": title,
                 "status": status,
-                "judge": author,
+                "judge": [author],
                 "author": author,
                 "type": case_type
                 }
@@ -75,11 +75,17 @@ class Site(OpinionSiteLinear):
         self.parse()
         return 0
 
+
     def get_class_name(self):
         return "ca7"
 
-    def get_court_name(self):
-        return 'United States Court of Appeals For the Seventh Circuit'
-
     def get_court_type(self):
         return 'Federal'
+
+    def get_state_name(self):
+        return "7th Circuit"
+
+    def get_court_name(self):
+        return 'Court of Appeals for the Seventh Circuit'
+
+

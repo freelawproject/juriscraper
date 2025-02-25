@@ -8,7 +8,7 @@ History:
 """
 
 import re
-from datetime import date
+from datetime import date, datetime
 from typing import Optional
 
 from dateutil import parser
@@ -21,17 +21,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://guamcourts.org/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
-        self.status = "Published"
-
-        self._year = date.today().year
-        self.parameters = {"Year": str(self._year)}
-        self.method = "POST"
-
-        # The year dropdown goes back to 1990, but the Court wasn't
-        # created until 1996 and there are no opinions posted for
-        # prior years.
-        self.back_scrape_iterable = range(1996, self._year)
+        self.status = "Published"  # The year dropdown goes back to 1990, but the Court wasn't  # created until 1996 and there are no opinions posted for  # prior years.  # self.back_scrape_iterable = range(1996, self._year)
 
     def _process_html(self) -> None:
         """Process HTML into case objects
@@ -68,17 +58,16 @@ class Site(OpinionSiteLinear):
                 docket_match = re.search(r"[A-Z]{3}\d{2}-\d{3}", name)
                 if docket_match:
                     docket = docket_match.group(0)
-
-            self.cases.append(
-                {
-                    "url": table.xpath(".//a/@href")[0],
-                    "name": name,
-                    "docket": docket,
-                    "date": row_date or middle_of_the_year,
-                    "date_filed_is_approximate": row_date is None,
-                    "citation": citation,
-                }
-            )
+            filtered_docket = docket.replace("(","").replace(")","").replace("consolidated with ","").replace(",","").replace("& ","").replace("and ","").replace("\n","")
+            doc_arr = filtered_docket.split(" ")
+            self.cases.append({
+                "url": table.xpath(".//a/@href")[0],
+                "name": name,
+                "docket": doc_arr,
+                "date": row_date or middle_of_the_year,
+                "date_filed_is_approximate": row_date is None,
+                "citation": [citation],
+            })
 
     def find_date(self, text: str) -> Optional[str]:
         """Find dates on text, and validate that they are indeed dates
@@ -104,3 +93,25 @@ class Site(OpinionSiteLinear):
         """
         self._year = year
         self.parameters = {"Year": str(year)}
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.url = "https://guamcourts.org/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
+        for year in range(2019, end_date.year + 1):
+            self._year = year
+            self.parameters = {"Year": str(self._year)}
+            self.method = "POST"
+            self.parse()
+            self.downloader_executed = False
+        return 0
+
+    def get_class_name(self):
+        return "guam"
+
+    def get_state_name(self):
+        return "Guam"
+
+    def get_court_type(self):
+        return "state"
+
+    def get_court_name(self):
+        return "Supreme Court of Guam"

@@ -99,15 +99,20 @@ for opinion in site:
         # extra
         'blocked_statuses': check_none(opinion.get('blocked_statuses')),
         'case_name_shorts': check_none(opinion.get('case_name_shorts')),
+        'opinion_type': check_none(opinion.get('opinion_types')),
         # additional
-        'crawledAt': datetime.now() ,
+        'crawledAt': datetime.now(),
         'processed': 333,
         'court_name': court_name,
         'court_type': court_type,
         'class_name': class_name,
         'year': year,
-        'state':state_name
     }
+    if court_type.__eq__('Federal'):
+        data["circuit"] = state_name
+        data['teaser']= check_none(opinion.get("teasers"))
+    else:
+        data["state"] = state_name
     # print(data)
     flag = site._process_opinion(data)
     if flag:

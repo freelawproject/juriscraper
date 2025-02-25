@@ -161,10 +161,8 @@ class Site(OpinionSiteLinear):
                 soup = BeautifulSoup(html_data, 'html.parser')
                 table = soup.find('table', class_='views-table')
                 if (table == None):
-                    print("hit-" + str(i) + " no Data found")
                     break
                 rows = table.find_all('tr')
-                print("hit-" + str(i) + " Data found")
                 # Print each <tr> tag
                 for row in rows:
                     td = row.find_all_next("td")
@@ -214,7 +212,8 @@ class Site(OpinionSiteLinear):
                          'per_curiam': '',
                          'type': '',
                          'joined_by': '',
-                         'other_date': ''
+                         'other_date': '',
+                         'teaser':''
                     })
                 i = i + 1
 
@@ -328,7 +327,10 @@ class Site(OpinionSiteLinear):
         return "ca1"
 
     def get_court_name(self):
-        return 'United States Court of Appeals For the First Circuit'
+        return 'Court of Appeals for the First Circuit'
 
     def get_court_type(self):
-        return 'Federal'
+        return "Federal"
+
+    def get_state_name(self):
+        return "1st Circuit"

@@ -86,8 +86,11 @@ class Site(OpinionSite):
     def get_class_name(self):
         return "ca6"
 
-    def get_court_name(self):
-        return 'United States Court Of Appeals For The Sixth Circuit'
-
     def get_court_type(self):
         return 'Federal'
+
+    def get_state_name(self):
+        return "6th Circuit"
+
+    def get_court_name(self):
+        return "Court of Appeals for the Sixth Circuit"

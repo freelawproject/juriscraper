@@ -15,3 +15,6 @@ class Site(md.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+
+    def get_class_name(self):
+        return "mdctspecapp"

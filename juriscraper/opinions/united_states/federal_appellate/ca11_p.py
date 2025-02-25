@@ -124,7 +124,10 @@ class Site(OpinionSite):
         return "ca11_p"
 
     def get_court_name(self):
-        return 'United States Court Of Appeals For The Eleventh Circuit'
+        return 'Court of Appeals for the Eleventh Circuit'
 
     def get_court_type(self):
         return 'Federal'
+
+    def get_state_name(self):
+        return "11th Circuit"

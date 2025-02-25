@@ -43,6 +43,8 @@ class OpinionSiteLinear(OpinionSite):
         "html_url",
         "precedential_status",
         "response_html",
+        "opinion_type",
+        "teaser"
     }
 
     def __init__(self, *args, **kwargs):
@@ -61,6 +63,12 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_response_htmls(self):
         return self._get_optional_field_by_id("response_html")
+
+    def _get_teasers(self):
+        return self._get_optional_field_by_id("teaser")
+
+    def _get_opinion_types(self):
+        return self._get_optional_field_by_id("opinion_type")
 
     def _get_case_names(self):
         return [case["name"] for case in self.cases]
