@@ -6,6 +6,7 @@ Date created: December 28, 2023
 
 History:
   2023-12-28: Created
+  2025-02-25: Back scrape 2024
 """
 
 from datetime import date
@@ -19,15 +20,15 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = f"https://apps.maine.edu/SuperiorCourt/show_list.jsp?plaintiff=&defendant=&year={date.today().year}&code=&rule=&title=&number=&section=&Search=Search"
         self.base_path = ["placeholder"]
-        self.back_scrape_iterable = [1]
+        self.back_scrape_iterable = [2024]
 
-    def _download_backwards(self, d: date) -> None:
-        """Sets the URL for the backwards download based on the given date.
+    def _download_backwards(self, year) -> None:
+        """Sets the URL for the backwards download based on the given year.
 
         :param d: Just a placeholder value
         :return: None
         """
-        self.url = "https://apps.maine.edu/SuperiorCourt/show_list.jsp?plaintiff=&defendant=&year=&code=&rule=&title=&number=&section=&Search=Search"
+        self.url = f"https://apps.maine.edu/SuperiorCourt/show_list.jsp?plaintiff=&defendant=&year={year}&code=&rule=&title=&number=&section=&Search=Search"
 
     def _process_html(self) -> None:
         """Processes the HTML content and extracts case information.
