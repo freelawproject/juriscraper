@@ -4,26 +4,32 @@
 
 import re
 
+from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    base_url = "https://juddocumentservice.mt.gov"
+    download_base = f"{base_url}/getDocByCTrackId?DocId="
+    cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.base = "https://juddocumentservice.mt.gov"
-        self.url = f"{self.base}/getDailyOrders"
-        self.download_base = f"{self.base}/getDocByCTrackId?DocId="
+        self.url = f"{self.base_url}/getDailyOrders"
         self.expected_content_types = None
-        self.cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
 
     def _process_html(self):
         for row in self.html:
-            summary = row["documentDescription"]
-            if not summary.startswith("Opinion"):
+            description = row["documentDescription"]
+            if not description.startswith("Opinion"):
                 # skip orders and just do opinions
                 continue
-            status = "Published" if "Published" in summary else "Unpublished"
+
+            status = (
+                "Published" if "Published" in description else "Unpublished"
+            )
+
             docket = row["caseNumber"]
             if docket.startswith("DA"):
                 nature = "Direct Appeal"
@@ -36,10 +42,20 @@ class Site(OpinionSiteLinear):
             else:
                 nature = "Unknown"
 
-            m = re.search(
-                r"Justice (?P<author>.*?)\s*(?:author|,|-)", summary, re.I
-            )
-            author = m.group("author") if m else ""
+            author = ""
+            disposition = ""
+            summary = ""
+            if author_match := re.search(
+                r"Justice (?P<author>.*?)\s*(?:author(ed)?|,|-|\.)",
+                description,
+                re.I,
+            ):
+                author = author_match.group("author")
+                disposition = description[author_match.end() :].strip(" .,-")
+                disposition = disposition[:1].upper() + disposition[1:]
+            else:
+                summary = description
+
             self.cases.append(
                 {
                     "url": self.download_base + row["cTrackId"],
@@ -47,9 +63,10 @@ class Site(OpinionSiteLinear):
                     "date": row["fileDate"],
                     "name": row["title"],
                     "docket": docket,
-                    "summary": summary,
                     "nature_of_suit": nature,
                     "author": author,
+                    "disposition": disposition,
+                    "summary": summary,
                 }
             )
 
@@ -63,3 +80,19 @@ class Site(OpinionSiteLinear):
         if match := re.search(self.cite_regex, first_text):
             return {"Citation": match.group(0)}
         return {}
+
+    @staticmethod
+    def cleanup_content(content: str) -> str:
+        """Raise an error if the content is invalid; otherwise just return it
+
+        Not cleaning up in the common sense; but avoids ingesting error
+        pages. This source does not mark the error page with an error status
+        and does not have content type headers; so we can't detect the error
+        through standard controls
+
+        :param content: the downloaded content
+        :return: the downloaded content, unchanged
+        """
+        if "No document found with CTrack ID" in content[:1000]:
+            raise InvalidDocumentError(content)
+        return content
