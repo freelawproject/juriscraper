@@ -286,8 +286,17 @@ class AbstractSite:
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
 
+            # If a date is approximate, then it may be set in the future until
+            # half of the year has passed. Ignore this case
+            if hasattr(self, "date_filed_is_approximate"):
+                date_is_approximate = self.date_filed_is_approximate[index]
+            else:
+                date_is_approximate = False
+
             # dates should not be in the future. Tolerate a week
-            if case_date > (date.today() + timedelta(days=7)):
+            if not date_is_approximate and case_date > (
+                date.today() + timedelta(days=7)
+            ):
                 future_date_count += 1
                 error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
                 logger.error(error)

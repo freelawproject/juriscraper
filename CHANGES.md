@@ -16,6 +16,11 @@ Releases are also tagged in git, if that's helpful.
 
 - Fixes:
   - fix cafc oral argument scraper PR (#1325)[https://github.com/freelawproject/juriscraper/pull/1325]
+  - ignore future date sanity check when date filed is approximate #1321
+  - new exception InvalidDocumentError to be raised when an error page is detected
+  - update mont parsing; and raise InvalidDocumentError
+
+
 
 ## Current
 
