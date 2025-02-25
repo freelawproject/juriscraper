@@ -45,3 +45,12 @@ class PacerLoginException(Exception):
 
     def __init__(self, message):
         Exception.__init__(self, message)
+
+
+class InvalidDocumentError(Exception):
+    """Raised when the document got from `download_url` is invalid
+
+    May be an error page that is undetected by `response.raise_for_status`
+    or our `expected_content_type` controls. Proper place to raise this
+    would be on `Site.cleanup_content`
+    """
