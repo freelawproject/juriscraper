@@ -32,6 +32,8 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         self.url = self.base_url.format(year)
+        self.html = self._download()
+        self._process_html()
 
     def _process_html(self) -> None:
         """Processes the HTML content and extracts case information.
