@@ -12,6 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Add backscraper for mesuperct
 
 ## Current
 
