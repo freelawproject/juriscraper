@@ -12,10 +12,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- Add backscraper for mesuperct
-- Fix `mont` cleanup_content, would fail when content was bytes #1323
 
 ## Current
+
+**2.6.58 - 2024-02-26**
+
+- Fixes:
+  - Add backscraper for `mesuperct` #1328
+  - Fix `mont` cleanup_content, would fail when content was bytes #1323
 
 **2.6.57 - 2024-02-25**
 
