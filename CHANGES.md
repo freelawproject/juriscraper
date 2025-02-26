@@ -12,10 +12,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- Add workflow to check for new entries in CHANGES.md file
-- Add backscraper for mesuperct
 
 ## Current
+
+**2.6.57 - 2024-02-25**
+
+- Fixes:
+  - fix cafc oral argument scraper PR (#1325)[https://github.com/freelawproject/juriscraper/pull/1325]
+  - ignore future date sanity check when date filed is approximate #1321
+  - new exception InvalidDocumentError to be raised when an error page is detected #1329
+  - update mont parsing; and raise InvalidDocumentError #1329
+
+- Features
+  - Add workflow to check for new entries in CHANGES.md file
+
+## Past
 
 **2.6.56 - 2024-02-19**
 
@@ -26,8 +37,6 @@ Releases are also tagged in git, if that's helpful.
   - MT upgrade to opinion site linear
   - Add citation extraction and author for MT
 
-
-## Past
 
 **2.6.55 - 2024-02-10**
 
