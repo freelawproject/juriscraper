@@ -3,12 +3,15 @@
 # Date updated: 2020-02-25
 
 import re
+from typing import Union
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    # Home: https://juddocumentservice.mt.gov/getDailyOrders
     base_url = "https://juddocumentservice.mt.gov"
     download_base = f"{base_url}/getDocByCTrackId?DocId="
     cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
@@ -24,6 +27,7 @@ class Site(OpinionSiteLinear):
             description = row["documentDescription"]
             if not description.startswith("Opinion"):
                 # skip orders and just do opinions
+                logger.info("Skipping row with description %s", description)
                 continue
 
             status = (
@@ -82,7 +86,7 @@ class Site(OpinionSiteLinear):
         return {}
 
     @staticmethod
-    def cleanup_content(content: str) -> str:
+    def cleanup_content(content: Union[str, bytes]) -> str:
         """Raise an error if the content is invalid; otherwise just return it
 
         Not cleaning up in the common sense; but avoids ingesting error
@@ -90,9 +94,19 @@ class Site(OpinionSiteLinear):
         and does not have content type headers; so we can't detect the error
         through standard controls
 
-        :param content: the downloaded content
+        The content may be a string if it's a string error response, like in
+        https://storage.courtlistener.com/txt/2025/01/17/mercer_v._dphhs.txt
+
+        When the content is PDF bytes, it contains the
+        'DOCUMENT UNAVAILABLE FOR VIEWING' string. However, we can't access
+        that value directly on the bytes. Luckyly, all those PDFs have the
+        same hash, so it won't be a big problem. Check #1323 for more info
+
+        :param content: the downloaded content; maybe a string or PDF bytes
         :return: the downloaded content, unchanged
         """
-        if "No document found with CTrack ID" in content[:1000]:
-            raise InvalidDocumentError(content)
+        if isinstance(content, str):
+            if "No document found with CTrack ID" in content[:1000]:
+                raise InvalidDocumentError(content)
+
         return content

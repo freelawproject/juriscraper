@@ -13,6 +13,7 @@ Releases are also tagged in git, if that's helpful.
 ## Coming up
 
 - Add backscraper for mesuperct
+- Fix `mont` cleanup_content, would fail when content was bytes #1323
 
 ## Current
 
