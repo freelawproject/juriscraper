@@ -95,7 +95,15 @@ class Site(OpinionSiteLinear):
         start_date = kwargs.get("backscrape_start")
         end_date = kwargs.get("backscrape_end")
 
-        start = datetime.strptime(start_date, "%m/%d/%Y").year if start_date else date.today().year
-        end = datetime.strptime(end_date, "%m/%d/%Y").year + 1 if end_date else date.today().year
+        start = (
+            datetime.strptime(start_date, "%m/%d/%Y").year
+            if start_date
+            else date.today().year
+        )
+        end = (
+            datetime.strptime(end_date, "%m/%d/%Y").year + 1
+            if end_date
+            else date.today().year
+        )
 
         self.back_scrape_iterable = range(max(2005, start), end)
