@@ -40,16 +40,22 @@ class Site(OpinionSiteLinear):
 
             # Locate the dropdowns for year and month
             year_dropdown = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "MainContent_ddlSearchOpinions2_Year"))
+                EC.presence_of_element_located(
+                    (By.ID, "MainContent_ddlSearchOpinions2_Year")
+                )
             )
             month_dropdown = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "MainContent_ddlSearchOpinions2_Month"))
+                EC.presence_of_element_located(
+                    (By.ID, "MainContent_ddlSearchOpinions2_Month")
+                )
             )
 
             if opinion_date:
                 opinion_date_obj = datetime.strptime(opinion_date, "%Y-%m-%d")
                 year = str(opinion_date_obj.year)
-                month = opinion_date_obj.strftime("%B")  # Full month name (e.g., "January")
+                month = opinion_date_obj.strftime(
+                    "%B"
+                )  # Full month name (e.g., "January")
 
                 # Select the year
                 year_dropdown.send_keys(year)
@@ -64,7 +70,9 @@ class Site(OpinionSiteLinear):
 
             # Locate and click the 'Search' button
             search_button = WebDriverWait(self.driver, 20).until(
-                EC.element_to_be_clickable((By.ID, "MainContent_btnSearchOpinionsByMonthYear"))
+                EC.element_to_be_clickable(
+                    (By.ID, "MainContent_btnSearchOpinionsByMonthYear")
+                )
             )
             search_button.click()
 
@@ -101,21 +109,31 @@ class Site(OpinionSiteLinear):
         for i, row in enumerate(rows):
             try:
                 # Skip header and footer rows
-                if not row.xpath(".//h4//a") or "table-info-footer" in row.attrib.get("class", ""):
+                if not row.xpath(".//h4//a") or "table-info-footer" in row.attrib.get(
+                    "class", ""
+                ):
                     continue
 
                 # Construct the case dictionary
-                raw_date = row.xpath(".//strong[contains(text(), 'Opinion Date:')]/following-sibling::text()[1]")[0].strip()
-                cleaned_date = clean_date_string(raw_date)  # Clean and reformat the date
+                raw_date = row.xpath(
+                    ".//strong[contains(text(), 'Opinion Date:')]/following-sibling::text()[1]"
+                )[0].strip()
+                cleaned_date = clean_date_string(
+                    raw_date
+                )  # Clean and reformat the date
 
                 case = {
-                    "name": row.xpath(".//strong[contains(text(), 'Case Title:')]/following-sibling::text()[1]")[0].strip(),
+                    "name": row.xpath(
+                        ".//strong[contains(text(), 'Case Title:')]/following-sibling::text()[1]"
+                    )[0].strip(),
                     "url": row.xpath(".//h4//a/@href")[0],
                     "date": cleaned_date,  # Use the cleaned date
                     "docket": row.xpath(
                         ".//strong[starts-with(text(), 'CA') or starts-with(text(), 'KH') or starts-with(text(), 'CW') or starts-with(text(), 'KA') or starts-with(text(), 'WCA') or starts-with(text(), 'KW')]/text()"
                     )[0].strip(),
-                    "lower_court": row.xpath(".//strong[contains(text(), 'Lower Court:')]/following-sibling::text()[1]")[0].strip(),
+                    "lower_court": row.xpath(
+                        ".//strong[contains(text(), 'Lower Court:')]/following-sibling::text()[1]"
+                    )[0].strip(),
                     "status": "Published",  # Default status; adjust as needed
                     "date_filed_is_approximate": False,  # Default value; adjust as needed
                 }
@@ -141,7 +159,9 @@ class Site(OpinionSiteLinear):
 
                 for key, label in optional_fields.items():
                     try:
-                        case[key] = row.xpath(f".//strong[contains(text(), '{label}:')]/following-sibling::text()[1]")[0].strip()
+                        case[key] = row.xpath(
+                            f".//strong[contains(text(), '{label}:')]/following-sibling::text()[1]"
+                        )[0].strip()
                     except IndexError:
                         pass  # Field is not present in the source data
 
