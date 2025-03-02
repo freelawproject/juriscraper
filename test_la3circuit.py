@@ -1,4 +1,5 @@
 import json
+
 from juriscraper.opinions.united_states.state import la3circuit
 
 # Initialize the scraper

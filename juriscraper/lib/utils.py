@@ -151,6 +151,7 @@ def backscrape_over_paginated_results(
 
     return cases
 
+
 def clean_date_string(date_str):
     """
     Cleans and reformats a date string into YYYY-MM-DD format.

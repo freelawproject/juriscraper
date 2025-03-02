@@ -1,12 +1,13 @@
 from datetime import datetime
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+from lxml import html
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from lxml import html
+from selenium.webdriver.support.ui import WebDriverWait
 
 from juriscraper.lib.utils import clean_date_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -101,7 +102,9 @@ class Site(OpinionSiteLinear):
         tree = html.fromstring(self.html)
 
         # Extract rows from the table
-        rows = tree.xpath("//table[@class='table table-striped table-responsive']//tr")
+        rows = tree.xpath(
+            "//table[@class='table table-striped table-responsive']//tr"
+        )
 
         # Initialize the list to store cases
         self.cases = []
@@ -109,9 +112,9 @@ class Site(OpinionSiteLinear):
         for i, row in enumerate(rows):
             try:
                 # Skip header and footer rows
-                if not row.xpath(".//h4//a") or "table-info-footer" in row.attrib.get(
-                    "class", ""
-                ):
+                if not row.xpath(
+                    ".//h4//a"
+                ) or "table-info-footer" in row.attrib.get("class", ""):
                     continue
 
                 # Construct the case dictionary
