@@ -150,3 +150,24 @@ def backscrape_over_paginated_results(
                 cases.append(case)
 
     return cases
+
+def clean_date_string(date_str):
+    """
+    Cleans and reformats a date string into YYYY-MM-DD format.
+    Example: '01152025' -> '2025-01-15'
+    """
+    try:
+        # Ensure the date string has exactly 8 characters
+        if len(date_str) != 8:
+            raise ValueError(f"Invalid date format: {date_str}")
+
+        # Parse the components
+        month = date_str[:2]
+        day = date_str[2:4]
+        year = date_str[4:]
+
+        # Reformat into YYYY-MM-DD
+        return f"{year}-{month}-{day}"
+    except Exception as e:
+        print(f"Error cleaning date string '{date_str}': {e}")
+        return None
