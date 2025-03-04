@@ -12,9 +12,14 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- Change `colo` user agent to prevent site block #1341
 
 ## Current
+
+**2.6.59 - 2024-03-04**
+
+- Change `colo` user agent to prevent site block #1341
+
+## Past
 
 **2.6.58 - 2024-02-26**
 
@@ -33,7 +38,6 @@ Releases are also tagged in git, if that's helpful.
 - Features
   - Add workflow to check for new entries in CHANGES.md file
 
-## Past
 
 **2.6.56 - 2024-02-19**
 
