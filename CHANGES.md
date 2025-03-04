@@ -12,6 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Change `colo` user agent to prevent site block #1341
 
 ## Current
 

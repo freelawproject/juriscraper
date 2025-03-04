@@ -53,6 +53,7 @@ class Site(OpinionSiteLinear):
             "hide_ct6": "true",
         }
         self.update_url()
+        self.request["headers"]["User-Agent"] = "Courtlistener"
 
         # https://www.coloradojudicial.gov/system/files/opinions-2024-11/24SC459.pdf
         # Request won't work without some of these X- headers
