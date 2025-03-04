@@ -15,7 +15,7 @@ class Site(OralArgumentSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://media.ca7.uscourts.gov/oralArguments/oar.jsp?caseyear=&casenumber=&period=Past+month"
+        self.url = "https://media.ca7.uscourts.gov/oralArguments/oar.jsp?caseyear=&casenumber=&period=Past+month"
 
     def _get_download_urls(self):
         path = "//tr[@bgcolor]/td[5]//@href"
