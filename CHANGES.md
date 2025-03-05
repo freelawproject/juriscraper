@@ -12,6 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+Fix `ca7` scrapers url from http to https
 
 ## Current
 
