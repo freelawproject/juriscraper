@@ -12,15 +12,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-Fix `ca7` scrapers url from http to https
 
 ## Current
+
+**2.6.60 - 2024-03-05**
+
+- Fix `ca7` scrapers url from http to https
+
+## Past
 
 **2.6.59 - 2024-03-04**
 
 - Change `colo` user agent to prevent site block #1341
-
-## Past
 
 **2.6.58 - 2024-02-26**
 
