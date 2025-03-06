@@ -12,15 +12,18 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-Fix ca8 opinion scraper by setting request.verify = False  #1346
 
 ## Current
+
+**2.6.61 - 2024-03-06**
+
+- Fix `ca8` opinion scraper by setting `request.verify = False` #1346
+
+## Past
 
 **2.6.60 - 2024-03-05**
 
 - Fix `ca7` scrapers url from http to https
-
-## Past
 
 **2.6.59 - 2024-03-04**
 
