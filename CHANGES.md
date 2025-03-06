@@ -12,6 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+Fix ca8 opinion scraper by setting request.verify = False  #1346
 
 ## Current
 

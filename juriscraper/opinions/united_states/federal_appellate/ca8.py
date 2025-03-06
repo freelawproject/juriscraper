@@ -24,6 +24,7 @@ class Site(OpinionSiteLinear):
                 until=date(2015, 1, 1),
             )
         ]
+        self.request["verify"] = False
 
     def _process_html(self):
         for link in self.html.xpath('//a[contains(@href, "opndir")]'):
