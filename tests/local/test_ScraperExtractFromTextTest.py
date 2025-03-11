@@ -673,6 +673,15 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.ga": [
+            # https://www.courtlistener.com/opinion/3186280/in-the-matter-of-tony-c-jones/
+            (
+                "298 Ga. 313\nFINAL COPY\n\nS11Y1626, S13Y0138, S15Y1641",
+                {
+                    "Citation": "298 Ga. 313",
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
