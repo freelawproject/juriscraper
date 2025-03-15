@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.is_first_request = True
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the HTML and extract the data
 
         :return: None
@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
         # do the actual query
         if not self.test_mode_enabled() and self.is_first_request:
             self.set_parameters()
-            self.html = self._download()
+            self.html = await self._download()
             self.is_first_request = False
 
         for row in self.html.xpath(
@@ -128,7 +128,7 @@ class Site(OpinionSiteLinear):
 
         self.method = "POST"
 
-    def _download_backwards(self, d: tuple[date]) -> None:
+    async def _download_backwards(self, d: tuple[date]) -> None:
         """Filter site to get older records
 
         There is max of 1000 results returned per search; so it's better
@@ -147,7 +147,7 @@ class Site(OpinionSiteLinear):
         self.is_first_request = True
         self.method = "GET"
 
-        cases = backscrape_over_paginated_results(
+        cases = await backscrape_over_paginated_results(
             1,
             100,
             start_date,

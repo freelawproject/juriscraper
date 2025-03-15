@@ -22,16 +22,16 @@ from tests.network import (
 )
 
 
-class PacerFreeOpinionsTest(unittest.TestCase):
+class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests relating to the Free Written Opinions report"""
 
-    def setUp(self):
+    async def asyncSetUp(self):
         pacer_session = PacerSession()
 
         if pacer_credentials_are_defined():
             # CAND chosen at random
             pacer_session = get_pacer_session()
-            pacer_session.login()
+            await pacer_session.login()
 
         with open(os.path.join(JURISCRAPER_ROOT, "pacer/courts.json")) as j:
             self.courts = get_courts_from_json(json.load(j))
@@ -112,59 +112,59 @@ class PacerFreeOpinionsTest(unittest.TestCase):
                 self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_download_simple_pdf(self):
+    async def test_download_simple_pdf(self):
         """Can we download a PDF document returned directly?"""
         report = self.reports["alnb"]
-        r, msg = report.download_pdf("602431", "018129511556")
+        r, msg = await report.download_pdf("602431", "018129511556")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_download_redirected_pdf(self):
+    async def test_download_redirected_pdf(self):
         """Can we download a PDF document returned after a redirection?"""
         report = self.reports["azd"]
-        r, msg = report.download_pdf("1311031", "025125636132")
+        r, msg = await report.download_pdf("1311031", "025125636132")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_download_iframed_pdf(self):
+    async def test_download_iframed_pdf(self):
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports["vib"]
-        r, msg = report.download_pdf("1507", "1921141093")
+        r, msg = await report.download_pdf("1507", "1921141093")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_download_unavailable_pdf(self):
+    async def test_download_unavailable_pdf(self):
         """Do we throw an error if the item is unavailable?"""
         # 5:11-cr-40057-JAR, document 3
         report = self.reports["ksd"]
-        r, msg = report.download_pdf("81531", "07902639735")
+        r, msg = await report.download_pdf("81531", "07902639735")
         self.assertIsNone(r)
         self.assertIn("Document not available in case", msg)
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_query_can_get_multiple_results(self):
+    async def test_query_can_get_multiple_results(self):
         """
         Can we run a query that gets multiple rows and parse them all?
         """
         court_id = "paeb"
         report = self.reports[court_id]
         some_date = convert_date_string(self.valid_dates[court_id])
-        report.query(some_date, some_date, sort="case_number")
+        await report.query(some_date, some_date, sort="case_number")
         self.assertEqual(3, len(report.data), "should get 3 responses for ksb")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_query_using_last_good_row(self):
+    async def test_query_using_last_good_row(self):
         """
         Can we run a query that triggers no content in first cell?
         """
         court_id = "ksb"
         report = self.reports[court_id]
         some_date = convert_date_string(self.valid_dates[court_id])
-        report.query(some_date, some_date, sort="case_number")
+        await report.query(some_date, some_date, sort="case_number")
         self.assertEqual(2, len(report.data), "should get 2 response for ksb")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_ordering_by_date_filed(self):
+    async def test_ordering_by_date_filed(self):
         """Can we change the ordering?"""
         # First try both orderings in areb (where things have special cases) and
         # ded (Delaware) where things are more normal.
@@ -172,20 +172,20 @@ class PacerFreeOpinionsTest(unittest.TestCase):
         for test in tests:
             report = self.reports[test["court"]]
             some_date = convert_date_string(self.valid_dates[test["court"]])
-            report.query(some_date, some_date, sort="date_filed")
+            await report.query(some_date, some_date, sort="date_filed")
             self.assertEqual(
                 test["count"],
                 len(report.data),
                 f"Should get {test['count']} response for {test['court']}",
             )
-            report.query(some_date, some_date, sort="case_number")
+            await report.query(some_date, some_date, sort="case_number")
             self.assertEqual(
                 test["count"],
                 len(report.data),
                 f"should get {test['count']} response for {test['court']}",
             )
 
-    def test_catch_excluded_court_ids(self):
+    async def test_catch_excluded_court_ids(self):
         """Do we properly catch and prevent a query against disused courts?"""
         mock_session = mock.MagicMock()
 
@@ -194,7 +194,7 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
         some_date = convert_date_string("1/1/2015")
 
-        report.query(some_date, some_date, sort="case_number")
+        await report.query(some_date, some_date, sort="case_number")
         self.assertEqual([], report.responses, "should have empty result set")
         self.assertFalse(
             mock_session.post.called, msg="should not trigger a POST query"
@@ -202,15 +202,15 @@ class PacerFreeOpinionsTest(unittest.TestCase):
 
 
 @mock.patch("juriscraper.pacer.reports.logger")
-class PacerMagicLinkTest(unittest.TestCase):
+class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
     """Test related to PACER magic link free download"""
 
-    def setUp(self):
+    async def asyncSetUp(self):
         pacer_session = PacerSession()
         if pacer_credentials_are_defined():
             # CAND chosen at random
             pacer_session = get_pacer_session()
-            pacer_session.login()
+            await pacer_session.login()
 
         self.reports = {}
         court_id = "nysd"
@@ -220,7 +220,7 @@ class PacerMagicLinkTest(unittest.TestCase):
             court_id_nda, pacer_session
         )
 
-    def test_download_simple_pdf_magic_link_fails(self, mock_logger):
+    async def test_download_simple_pdf_magic_link_fails(self, mock_logger):
         """Can we download a PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
         """
@@ -229,7 +229,7 @@ class PacerMagicLinkTest(unittest.TestCase):
         pacer_case_id = "568350"
         pacer_doc_id = "127130869087"
         pacer_magic_num = "46253052"
-        r, msg = report.download_pdf(
+        r, msg = await report.download_pdf(
             pacer_case_id, pacer_doc_id, pacer_magic_num
         )
         mock_logger.warning.assert_called_with(
@@ -240,7 +240,7 @@ class PacerMagicLinkTest(unittest.TestCase):
         # No PDF should be returned
         self.assertEqual(r, None)
 
-    def test_download_nda_pdf_magic_link(self, mock_logger):
+    async def test_download_nda_pdf_magic_link(self, mock_logger):
         """Can we download a NDA PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
         """
@@ -250,7 +250,7 @@ class PacerMagicLinkTest(unittest.TestCase):
         pacer_doc_id = "003014193380"
         pacer_magic_num = "3594681a19879633"
         appellate = True
-        r, msg = report.download_pdf(
+        r, msg = await report.download_pdf(
             pacer_case_id, pacer_doc_id, pacer_magic_num, appellate
         )
         mock_logger.warning.assert_called_with(
@@ -262,12 +262,12 @@ class PacerMagicLinkTest(unittest.TestCase):
         self.assertEqual(r, None)
 
 
-class PacerDownloadConfirmationPageTest(unittest.TestCase):
+class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests for the download confirmation page"""
 
-    def setUp(self):
+    async def asyncSetUp(self):
         self.session = get_pacer_session()
-        self.session.login()
+        await self.session.login()
         self.report = DownloadConfirmationPage("ca8", self.session)
         self.report_att = DownloadConfirmationPage("ca5", self.session)
         self.report_pdf = DownloadConfirmationPage("ca11", self.session)
@@ -283,10 +283,10 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.pacer_doc_id_nef = "035022812318"
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_get_document_number(self):
+    async def test_get_document_number(self):
         """Can we get the PACER document number from a download confirmation
         page?"""
-        self.report.query(self.pacer_doc_id)
+        await self.report.query(self.pacer_doc_id)
         data_report = self.report.data
         self.assertEqual(data_report["document_number"], "00812590792")
         self.assertEqual(data_report["docket_number"], "14-3066")
@@ -295,10 +295,10 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.assertEqual(data_report["document_description"], "PDF Document")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_get_document_number_skipping_attachment_page(self):
+    async def test_get_document_number_skipping_attachment_page(self):
         """Can we get the PACER document number from a download confirmation
         page skipping the attachment page?"""
-        self.report_att.query(self.pacer_doc_id_att)
+        await self.report_att.query(self.pacer_doc_id_att)
         data_report = self.report_att.data
         self.assertEqual(data_report["document_number"], "45-1")
         self.assertEqual(data_report["docket_number"], "22-30311")
@@ -307,26 +307,26 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.assertEqual(data_report["document_description"], "PDF Document")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_no_confirmation_page(self):
+    async def test_no_confirmation_page(self):
         """If the download confirmation page is not available an empty
         dictionary is returned"""
-        self.report.query(self.no_confirmation_page_pacer_doc_id)
+        await self.report.query(self.no_confirmation_page_pacer_doc_id)
         data_report = self.report.data
         self.assertEqual(data_report, {})
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_no_confirmation_page_pdf_returned(self):
+    async def test_no_confirmation_page_pdf_returned(self):
         """If the download confirmation page is not available when the PDF is
         returned directly, no valid page to parse."""
-        self.report_pdf.query(self.pacer_doc_id_pdf)
+        await self.report_pdf.query(self.pacer_doc_id_pdf)
         data_report = self.report_pdf.data
         self.assertEqual(data_report, {})
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_confirmation_page_pdf_district(self):
+    async def test_confirmation_page_pdf_district(self):
         """Can we get the PACER document number from a district download
         confirmation page?"""
-        self.report_nef.query(self.pacer_doc_id_nef)
+        await self.report_nef.query(self.pacer_doc_id_nef)
         data_report = self.report_nef.data
         self.assertEqual(data_report["document_number"], None)
         self.assertEqual(data_report["docket_number"], "3:18-cv-04865-EMC")
@@ -335,10 +335,10 @@ class PacerDownloadConfirmationPageTest(unittest.TestCase):
         self.assertEqual(data_report["document_description"], "Image670-0")
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_no_confirmation_page_pdf_returned_district(self):
+    async def test_no_confirmation_page_pdf_returned_district(self):
         """If the district download confirmation page is not available an empty
         dictionary is returned"""
-        self.report_nef_no_confirmation.query(
+        await self.report_nef_no_confirmation.query(
             self.pacer_doc_id_nef_no_confirmation
         )
         data_report = self.report_nef_no_confirmation.data

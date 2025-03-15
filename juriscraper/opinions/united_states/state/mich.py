@@ -12,7 +12,6 @@ import re
 from typing import List
 from urllib.parse import urlencode
 
-from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -66,7 +65,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_case_names(self) -> List[str]:
+    async def _get_case_names(self) -> list[str]:
         """Get case names *if* missing
 
         In some cases the case name is missing. This method uses a deferred list to the get the case name.
@@ -74,7 +73,7 @@ class Site(OpinionSiteLinear):
         :return: List of case names
         """
 
-        def fetcher(case):
+        async def fetcher(case):
             if case["name"] != "":
                 # Return the name we extracted without using fetcher
                 return case["name"]
@@ -84,13 +83,16 @@ class Site(OpinionSiteLinear):
             else:
                 # Else, query the API and return the name of the case
                 self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent/?searchQuery={case['title']}"
-                self.html = self._download()
+                self.html = await self._download()
                 case["name"] = self.html["opinionResults"]["searchItems"][0][
                     "title"
                 ].title()
             return case["name"]
 
-        return DeferringList(seed=self.cases, fetcher=fetcher)
+        case_names = []
+        for case in self.cases:
+            case_names.append(await fetcher(case))
+        return case_names
 
     def cleanup_case_name(self, name_raw: str) -> str:
         """Clean up case name in Michigan

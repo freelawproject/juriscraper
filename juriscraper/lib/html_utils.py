@@ -5,9 +5,9 @@ from copy import deepcopy
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
+from httpx import Response
 from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
-from requests import Response
 
 try:
     # Use charset-normalizer for performance to detect the character encoding.

@@ -12,6 +12,8 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Migrate from requests to httpx AsyncClient client. #739
+- Migrate sync calls to async. #739
 
 ## Current
 

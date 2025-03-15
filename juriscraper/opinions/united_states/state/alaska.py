@@ -2,7 +2,7 @@ from datetime import date, datetime
 from typing import Dict, Tuple
 
 from dateutil import parser
-from requests.exceptions import ChunkedEncodingError
+from httpx import DecodingError
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
@@ -27,12 +27,12 @@ class Site(OpinionSiteLinear):
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
 
-    def _download(self, request_dict={}):
+    async def _download(self, request_dict={}):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
         # if we just ignore those encoding errors we can live with it
         try:
-            return super()._download(request_dict)
-        except ChunkedEncodingError:
+            return await super()._download(request_dict)
+        except DecodingError:
             return None
 
     def _process_html(self) -> None:

@@ -1,10 +1,13 @@
 import hashlib
+import inspect
 import json
+import ssl
 from datetime import date, datetime, timedelta
 from typing import Dict, List, Tuple
 
 import certifi
-import requests
+import httpx
+from charset_normalizer import from_bytes
 
 from juriscraper.lib.date_utils import (
     fix_future_year_typo,
@@ -20,14 +23,12 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     clean_string,
     harmonize,
     trunc,
 )
-from juriscraper.lib.test_utils import MockRequest
 
 logger = make_default_logger()
 
@@ -39,7 +40,7 @@ class AbstractSite:
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self, cnt=None, **kwargs):
+    def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
 
         # Computed metadata
@@ -50,11 +51,23 @@ class AbstractSite:
         self.downloader_executed = False
         self.cookies = {}
         self.cnt = cnt or CaseNameTweaker()
+        self.user_agent = user_agent
+
+        # Attribute to reference a function passed by the caller,
+        # which takes a single argument, the Site object, after
+        # each GET or POST request. Intended for saving the response for
+        # debugging purposes.
+        self.save_response = kwargs.pop("save_response_fn", None)
+
+        kwargs.pop("backscrape_start", None)
+        kwargs.pop("backscrape_end", None)
+        kwargs.pop("days_interval", None)
+        kwargs.setdefault("http2", True)
+        kwargs.setdefault("verify", certifi.where())
         self.request = {
-            "verify": certifi.where(),
-            "session": requests.session(),
+            "session": httpx.AsyncClient(**kwargs),
             "headers": {
-                "User-Agent": "Juriscraper",
+                "User-Agent": self.user_agent,
                 # Disable CDN caching on sites like SCOTUS (ahem)
                 "Cache-Control": "no-cache, max-age=0, must-revalidate",
                 # backwards compatibility with HTTP/1.0 caches
@@ -65,12 +78,6 @@ class AbstractSite:
             "status": None,
             "url": None,
         }
-
-        # Attribute to reference a function passed by the caller,
-        # which takes a single argument, the Site object, after
-        # each GET or POST request. Intended for saving the response for
-        # debugging purposes.
-        self.save_response = kwargs.get("save_response_fn")
 
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
@@ -86,8 +93,8 @@ class AbstractSite:
         self._req_attrs = []
         self._all_attrs = []
 
-    def __del__(self):
-        self.close_session()
+    async def __aexit__(self):
+        await self.close_session()
 
     def __str__(self):
         out = []
@@ -105,9 +112,9 @@ class AbstractSite:
     def __len__(self):
         return len(self.case_names)
 
-    def close_session(self):
+    async def close_session(self):
         if self.request["session"]:
-            self.request["session"].close()
+            await self.request["session"].aclose()
 
     def _make_item(self, i):
         """Using i, convert a single item into a dict. This is effectively a
@@ -127,20 +134,15 @@ class AbstractSite:
         """Use this for debugging purposes"""
         print(get_html_from_element(element))
 
-    def disable_certificate_verification(self):
-        """Scrapers that require this due to website misconfiguration
-        should be checked periodically--calls to this method from
-         site scrapers should be removed when no longer necessary.
-        """
-        self.request["verify"] = False
-
     def set_custom_adapter(self, cipher: str):
-        """Set Custom SSL/TLS Adapter for out of date court systems
+        """Set Custom SSL/TLS cipher for out of date court systems
 
         :param cipher: The court required cipher
         :return: None
         """
-        self.request["session"].mount("https://", SSLAdapter(ciphers=cipher))
+        ctx = ssl.create_default_context(cafile=certifi.where())
+        ctx.set_ciphers(cipher)
+        return ctx
 
     def test_mode_enabled(self):
         return self.method == "LOCAL"
@@ -151,18 +153,25 @@ class AbstractSite:
             default=json_date_handler,
         )
 
-    def parse(self):
+    async def parse(self):
         if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
-            self.html = self._download()
+            self.html = await self._download()
 
             # Process the available html (optional)
-            self._process_html()
+            if inspect.iscoroutinefunction(self._process_html):
+                await self._process_html()
+            else:
+                self._process_html()
 
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
         for attr in self._all_attrs:
-            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+            get_attr = getattr(self, f"_get_{attr}")
+            if inspect.iscoroutinefunction(get_attr):
+                self.__setattr__(attr, await get_attr())
+            else:
+                self.__setattr__(attr, get_attr())
 
         self._clean_attributes()
         if "case_name_shorts" in self._all_attrs:
@@ -350,7 +359,7 @@ class AbstractSite:
         """
         return get_html_parsed_text(text)
 
-    def _download(self, request_dict={}):
+    async def _download(self, request_dict={}):
         """Download the latest version of Site"""
         self.downloader_executed = True
         if self.method == "POST":
@@ -364,14 +373,12 @@ class AbstractSite:
         else:
             logger.info(f"Now downloading case page at: {self.url}")
 
-        self._process_request_parameters(request_dict)
-
         if self.test_mode_enabled():
-            self._request_url_mock(self.url)
+            await self._request_url_mock(self.url)
         elif self.method == "GET":
-            self._request_url_get(self.url)
+            await self._request_url_get(self.url)
         elif self.method == "POST":
-            self._request_url_post(self.url)
+            await self._request_url_post(self.url)
 
         self._post_process_response()
         return self._return_response_text_object()
@@ -385,35 +392,26 @@ class AbstractSite:
         """
         pass
 
-    def _process_request_parameters(self, parameters={}):
-        """Hook for processing injected parameter overrides"""
-        if parameters.get("verify") is not None:
-            self.request["verify"] = parameters["verify"]
-            del parameters["verify"]
-        self.request["parameters"].update(parameters)
-
-    def _request_url_get(self, url):
+    async def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
         values
         """
         self.request["url"] = url
-        self.request["response"] = self.request["session"].get(
+        self.request["response"] = await self.request["session"].get(
             url,
             headers=self.request["headers"],
-            verify=self.request["verify"],
             timeout=60,
             **self.request["parameters"],
         )
         if self.save_response:
             self.save_response(self)
 
-    def _request_url_post(self, url):
+    async def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
-        self.request["response"] = self.request["session"].post(
+        self.request["response"] = await self.request["session"].post(
             url,
             headers=self.request["headers"],
-            verify=self.request["verify"],
             data=self.parameters,
             timeout=60,
             **self.request["parameters"],
@@ -421,10 +419,32 @@ class AbstractSite:
         if self.save_response:
             self.save_response(self)
 
-    def _request_url_mock(self, url):
+    async def _request_url_mock(self, url):
         """Execute mock request, used for testing"""
         self.request["url"] = url
-        self.request["response"] = MockRequest(url=self.url).get()
+
+        def handler(request: httpx.Request):
+            try:
+                with open(self.mock_url, mode="rb") as stream:
+                    content = stream.read()
+                    try:
+                        text = content.decode("utf-8")
+                    except:
+                        text = str(from_bytes(content).best())
+                    r = httpx.Response(
+                        status_code=200,
+                        request=request,
+                        text=text,
+                    )
+                    if self.mock_url.endswith("json"):
+                        r.headers["content-type"] = "application/json"
+            except OSError as e:
+                raise httpx.RequestError(str(e))
+            return r
+
+        transport = httpx.MockTransport(handler)
+        mock_client = httpx.AsyncClient(transport=transport)
+        self.request["response"] = await mock_client.get(url=self.url)
 
     def _post_process_response(self):
         """Cleanup to response object"""
@@ -452,9 +472,8 @@ class AbstractSite:
                     )
                 return html_tree
 
-    def _get_html_tree_by_url(self, url, parameters={}):
-        self._process_request_parameters(parameters)
-        self._request_url_get(url)
+    async def _get_html_tree_by_url(self, url, parameters={}):
+        await self._request_url_get(url)
         self._post_process_response()
         tree = self._return_response_text_object()
         tree.make_links_absolute(url)

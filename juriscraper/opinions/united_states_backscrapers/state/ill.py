@@ -93,12 +93,12 @@ class Site(OpinionSite):
 
         return neutral_citations
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         self.__set_paths(d)
 
         self.url = self.url_base.format(year=self.year)
         logger.info(f"Scraping year {self.year}")
-        self.html = self._download()
+        self.html = await self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.

@@ -22,12 +22,12 @@ class Site(OpinionSiteLinear):
             }
         )
 
-    def _process_html(self):
+    async def _process_html(self):
         if not self.test_mode_enabled():
             # Loading from a fresh session causes an error page
-            self.html = self._download()
+            self.html = await self._download()
             self._update_parameters()
-            self.html = self._download()
+            self.html = await self._download()
 
         for row in self.html.xpath(".//tr"):
             date_filed, docket_number, case_name, court, status = row.xpath(

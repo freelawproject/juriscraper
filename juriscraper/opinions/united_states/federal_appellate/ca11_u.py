@@ -12,12 +12,12 @@ class Site(ca11_p.Site):
     def _make_html_tree(self, text):
         return get_html5_parsed_text(text)
 
-    def _download_backwards(self, n):
+    async def _download_backwards(self, n):
         self.url = "http://media.ca11.uscourts.gov/opinions/unpub/logname.php?begin={}&num={}&numBegin=1".format(
             n, n / 20 - 1
         )
 
-        self.html = self._download()
+        self.html = await self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.

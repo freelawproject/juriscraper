@@ -123,7 +123,7 @@ class Site(OpinionSiteLinear):
             "OpinionCluster": {"headnotes": headnotes, "summary": summary},
         }
 
-    def _download_backwards(
+    async def _download_backwards(
         self, dates_and_url: Tuple[date, date, str]
     ) -> None:
         """Set proper `masscases.com` url as self.url, and parse content
@@ -133,7 +133,7 @@ class Site(OpinionSiteLinear):
         :return None
         """
         self.start_date, self.end_date, self.url = dates_and_url
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
