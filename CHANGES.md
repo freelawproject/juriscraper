@@ -12,6 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
 
 ## Current
 
