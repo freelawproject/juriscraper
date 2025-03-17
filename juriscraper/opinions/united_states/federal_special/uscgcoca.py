@@ -20,9 +20,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.citation_regex = (
-            r"(?P<MJ>\(?\d{2} M\.J\. \d+\)?)|(?P<WL>\(?\d{4} (WL|Wl) \d+\)?)"
-        )
+        self.citation_regex = r"(?P<MJ>\(?\d{2} M\.?J\.? \d+\)?)|(?P<WL>\(?\d{4} (W\.?[Ll]\.?) \d+\)?)"
         self.url = "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
 
     def _process_html(self) -> None:
