@@ -12,16 +12,19 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
-Fix `uscgcoca` citation regex #1351
 
 ## Current
+
+**2.6.62 - 2024-03-19**
+
+- Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
+- Fix `uscgcoca` citation regex #1351
+
+## Past
 
 **2.6.61 - 2024-03-06**
 
 - Fix `ca8` opinion scraper by setting `request.verify = False` #1346
-
-## Past
 
 **2.6.60 - 2024-03-05**
 
