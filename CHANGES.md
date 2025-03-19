@@ -12,6 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+Fix `uscgcoca` citation regex #1351
 
 ## Current
 
