@@ -27,7 +27,8 @@ class Site(OpinionSiteLinear):
             # Expected title content:
             # - "S20A1505, S20A1506. PENDER v. THE STATE"
             # - "S21A0306. BELL v. RAFFENSPERGER"
-            title = link.text_content()
+            title = link.xpath("string(..)")
+            
             if not title:
                 logger.info("No link title for row %s", url)
                 continue
