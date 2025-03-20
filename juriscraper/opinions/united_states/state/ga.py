@@ -27,13 +27,20 @@ class Site(OpinionSiteLinear):
             # Expected title content:
             # - "S20A1505, S20A1506. PENDER v. THE STATE"
             # - "S21A0306. BELL v. RAFFENSPERGER"
-            title = link.xpath("string(..)")
-            
+            title = link.text_content()
+
             if not title:
                 logger.info("No link title for row %s", url)
                 continue
 
             dockets = re.findall(r"S?\d{2}\w\d{4}", title)
+            if not dockets:
+                # Try this only when the <a> doesn't include the docket;
+                # if done always, may pick up extra info like
+                # "Reinstatement issued" or "Concurral issued"
+                title = link.xpath("string(..)")
+                dockets = re.findall(r"S?\d{2}\w\d{4}", title)
+
             if not dockets or "SUMMARY" in title:
                 # Skip links to weekly summaries or cases without a docket
                 logger.info("Skip summary row %s", title)
