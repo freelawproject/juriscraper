@@ -13,6 +13,7 @@ from datetime import timedelta
 from dateutil.utils import today
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import clean_string
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -46,7 +47,8 @@ class Site(OralArgumentSiteLinear):
             audio_anchor = row.xpath(".//a/@data-audio")
             if not audio_anchor:
                 logger.warning(
-                    "Row has no audio anchor %s", row.xpath("string()")
+                    "Row has no audio anchor '%s'",
+                    clean_string(row.xpath("string()")),
                 )
                 continue
 
