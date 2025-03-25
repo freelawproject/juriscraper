@@ -14,6 +14,7 @@ Releases are also tagged in git, if that's helpful.
 
 - Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
 - Implement extract from text for `ga` #1349
+- Fix `ill` oral argument scraper #1356
 
 ## Current
 
