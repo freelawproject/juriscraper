@@ -12,18 +12,21 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+
+## Current
+
+**2.6.63 - 2024-03-25**
+
 - Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
 - Implement extract from text for `ga` #1349
 - Fix `ill` oral argument scraper #1356
 
-## Current
+## Past
 
 **2.6.62 - 2024-03-19**
 
 - Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
 - Fix `uscgcoca` citation regex #1351
-
-## Past
 
 **2.6.61 - 2024-03-06**
 
