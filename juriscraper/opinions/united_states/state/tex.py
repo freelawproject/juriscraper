@@ -21,7 +21,6 @@ from datetime import date, datetime, timedelta
 from typing import Dict, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
-from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -101,7 +100,7 @@ class Site(OpinionSiteLinear):
         if self.next_page:
             self.parameters[self.next_page[0].xpath("@name")[0]] = ""
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process HTML and paginates if needed
 
         :return: None
@@ -110,7 +109,7 @@ class Site(OpinionSiteLinear):
             # Make our post request to get our data
             self.method = "POST"
             self._set_parameters()
-            self.html = super()._download()
+            self.html = await super()._download()
 
         rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
         for row in self.html.xpath(rows_xpath):
@@ -132,16 +131,16 @@ class Site(OpinionSiteLinear):
         if self.next_page and not self.test_mode_enabled():
             self.current_page += 1
             logger.info(f"Paginating to page {self.current_page}")
-            self._process_html()
+            await self._process_html()
 
-    def _get_case_names(self) -> DeferringList:
+    async def _get_case_names(self) -> list[str]:
         """Get case names using a deferring list."""
 
-        def get_name(link: str) -> Optional[str]:
+        async def get_name(link: str) -> Optional[str]:
             """Abstract out the case name from the case page."""
             if self.test_mode_enabled():
                 return "No case names fetched during tests."
-            html = self._get_html_tree_by_url(link)
+            html = await self._get_html_tree_by_url(link)
             try:
                 plaintiff = html.xpath(
                     '//label[contains(text(), "Style:")]/parent::div/following-sibling::div/text()'
@@ -163,7 +162,10 @@ class Site(OpinionSiteLinear):
                 logger.warning(f"No title or defendant found for {self.url}")
                 return None
 
-        return DeferringList(seed=self.seeds, fetcher=get_name)
+        case_names = []
+        for case in self.cases:
+            case_names.append(await get_name(case))
+        return case_names
 
     def _download_backwards(self, dates: Tuple[date]) -> None:
         """Overrides present scraper start_date and end_date

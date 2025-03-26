@@ -39,16 +39,16 @@ class Site(OpinionSiteLinear):
             )
         ]
 
-    def _download(self):
-        r = self.request["session"].get(self.url)
+    async def _download(self):
+        r = await self.request["session"].get(self.url)
         html = fromstring(r.text)
         self._update_query_params(html)
 
         # Get first set of dates
-        r = self.request["session"].post(self.url, data=self.data)
+        r = await self.request["session"].post(self.url, data=self.data)
         return fromstring(r.text)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         this is a larger function.  It processes the first page and then
@@ -93,12 +93,10 @@ class Site(OpinionSiteLinear):
         current_xp = "//a[@class='rgCurrentPage']/span/text()"
         while last != (current_page := self.html.xpath(current_xp)[0]):
             self._update_pagination_data(page_content, current_page)
-            page_content = (
-                self.request["session"]
-                .post(self.url, headers=self.headers, data=self.data)
-                .text
+            page_content = await self.request["session"].post(
+                self.url, headers=self.headers, data=self.data
             )
-            self.html = fromstring(page_content)
+            self.html = fromstring(page_content.text)
             rows = self.html.xpath(f"//tr[contains(@id, '{row_xpath}')]")
             for row in rows:
                 self.cases.append(

@@ -94,7 +94,7 @@ class Site(OpinionSiteLinear):
         }
         return metadata
 
-    def _download_backwards(self, dt) -> None:
+    async def _download_backwards(self, dt) -> None:
         """Download backward over time method
 
         :param dt: Datetime object
@@ -105,4 +105,4 @@ class Site(OpinionSiteLinear):
         self.request["parameters"]["json"][
             "query"
         ] = f"publishdate:range({start},{end})"
-        self.html = self._download()
+        self.html = await self._download()

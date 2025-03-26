@@ -48,7 +48,9 @@ class Site(OpinionSiteLinear):
         # source indexes from 0
         self.back_scrape_iterable = range(29)[::-1]
 
-    def _download(self, request_dict: Optional[Dict] = None) -> HtmlElement:
+    async def _download(
+        self, request_dict: Optional[Dict] = None
+    ) -> HtmlElement:
         """Gets the source's HTML
 
         For a normal periodic scraper, get the last page where
@@ -59,12 +61,12 @@ class Site(OpinionSiteLinear):
         :return: HTML object from the downloaded page
         """
         if self.base_url == self.url:
-            self.html = super()._download()
+            self.html = await super()._download()
             self.url = self.html.xpath("//li/a/@href")[-1]
 
-        return super()._download()
+        return await super()._download()
 
-    def _download_backwards(self, page_number: int) -> None:
+    async def _download_backwards(self, page_number: int) -> None:
         """Method used by backscraper to download historical records
 
         :param page_number: an element of self.back_scrape_iterable
