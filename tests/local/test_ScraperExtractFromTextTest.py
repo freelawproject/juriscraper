@@ -682,6 +682,47 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.me": [
+            (
+                "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 25\nDocket: Sag-24-5\nSubmitted\nOn Briefs: November 25, 2024\nDecided: March 11, 2025\nPanel: STANFILL, C.J., and HORTON, CONNORS, and DOUGLAS, JJ.\nReporter of Decisions\nSTEPHEN A. CLARK JR. et al.\nv.\nTOWN OF PHIPPSBURG et al.\nCONNORS, J.\n[¶1] This appeal pursuant to Maine Rule of Civil Procedure 80B",
+                {
+                    "Docket": {"date_argued": "November 25, 2024"},
+                    "Opinion": {
+                        "author_str": "CONNORS, J.",
+                        "per_curiam": False,
+                    },
+                    "OpinionCluster": {
+                        "docket_number": "Sag-24-5",
+                        "judges": "STANFILL, C.J., and HORTON, CONNORS, and DOUGLAS, JJ.",
+                    },
+                },
+            ),
+            (
+                "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 26\nDocket: Pen-24-253\nSubmitted\nOn Briefs: February 7, 2025\nDecided: March 13, 2025\nPanel: STANFILL, C.J., and MEAD, CONNORS, LAWRENCE, and DOUGLAS, JJ.\nReporter of Decisions\nSTATE OF MAINE\nv.\nJEFF BELONY\nPER CURIAM\n[¶1] Jeff Belony appeals from",
+                {
+                    "Opinion": {"author_str": "", "per_curiam": True},
+                    "OpinionCluster": {
+                        "docket_number": "Pen-24-253",
+                        "judges": "STANFILL, C.J., and MEAD, CONNORS, LAWRENCE, and DOUGLAS, JJ.",
+                    },
+                    "Docket": {"date_argued": "February 7, 2025"},
+                },
+            ),
+            (
+                "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 32\nDocket: Han-23-466\nArgued: October 8, 2024\nDecided: March 27, 2025\nReporter of Decisions\nPanel: STANFILL, C.J., and MEAD, HORTON, CONNORS, LAWRENCE, and DOUGLAS, JJ.\nSTATE OF MAINE\nv.\nCRAIG A. WOODARD\nSTANFILL, C.J.\n[¶1]",
+                {
+                    "Opinion": {
+                        "author_str": "STANFILL, C.J.",
+                        "per_curiam": False,
+                    },
+                    "OpinionCluster": {
+                        "docket_number": "Han-23-466",
+                        "judges": "STANFILL, C.J., and MEAD, HORTON, CONNORS, LAWRENCE, and DOUGLAS, JJ.",
+                    },
+                    "Docket": {"date_argued": "October 8, 2024"},
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
