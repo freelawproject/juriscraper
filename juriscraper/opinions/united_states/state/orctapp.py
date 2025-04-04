@@ -122,7 +122,7 @@ class Site(OpinionSiteLinear):
                                 "citation": [citation],
                                 "html_url": pdf_url,
                                 "response_html": response_html,
-                                "status": "Unublished"
+                                "status": "Unpublished"
                             }
                         )
 
@@ -147,7 +147,7 @@ class Site(OpinionSiteLinear):
                                 "citation": "",
                                 "html_url": "",
                                 "response_html": "",
-                                "status": "Unublished"
+                                "status": "Unpublished"
                             }
                         )
 

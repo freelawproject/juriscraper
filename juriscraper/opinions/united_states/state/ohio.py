@@ -124,8 +124,11 @@ class Site(OpinionSiteLinear):
 
             citation_or_county = row.xpath(".//td[5]//text()")[0].strip()
             web_cite = row.xpath(".//td[8]//text()")[0]
+            docket=docket.replace(';',',')
+            docket=docket.replace(' &', ',')
+            docket=docket.split(', ')
             case = {
-                "docket": [docket],
+                "docket": docket,
                 "name": name,
                 "judge": judge,
                 "per_curiam": per_curiam,

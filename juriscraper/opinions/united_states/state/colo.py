@@ -30,28 +30,28 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(2010, 1, 1)
     api_court_code = "14024_01"
 
-    # def _fetch_duplicate(self, data):
-    #     # Create query for duplication
-    #     query_for_duplication = {"pdf_url": data.get("pdf_url"), "docket": data.get("docket"), "title": data.get("title") , "citation": data.get("citation")}
-    #     # Find the document
-    #     duplicate = self.judgements_collection.find_one(query_for_duplication)
-    #     object_id = None
-    #     if duplicate is None:
-    #         # Insert the new document
-    #         self.judgements_collection.insert_one(data)
-    #
-    #         # Retrieve the document just inserted
-    #         updated_data = self.judgements_collection.find_one(query_for_duplication)
-    #         object_id = updated_data.get("_id")  # Get the ObjectId from the document
-    #         self.flag = True
-    #     else:
-    #         # Check if the document already exists and has been processed
-    #         processed = duplicate.get("processed")
-    #         if processed == 10:
-    #             raise Exception("Judgment already Exists!")  # Replace with your custom DuplicateRecordException
-    #         else:
-    #             object_id = duplicate.get("_id")  # Get the ObjectId from the existing document
-    #     return object_id
+    def _fetch_duplicate(self, data):
+        # Create query for duplication
+        query_for_duplication = {"pdf_url": data.get("pdf_url"), "docket": data.get("docket"), "title": data.get("title") , "citation": data.get("citation")}
+        # Find the document
+        duplicate = self.judgements_collection.find_one(query_for_duplication)
+        object_id = None
+        if duplicate is None:
+            # Insert the new document
+            self.judgements_collection.insert_one(data)
+
+            # Retrieve the document just inserted
+            updated_data = self.judgements_collection.find_one(query_for_duplication)
+            object_id = updated_data.get("_id")  # Get the ObjectId from the document
+            self.flag = True
+        else:
+            # Check if the document already exists and has been processed
+            processed = duplicate.get("processed")
+            if processed == 10:
+                raise Exception("Judgment already Exists!")  # Replace with your custom DuplicateRecordException
+            else:
+                object_id = duplicate.get("_id")  # Get the ObjectId from the existing document
+        return object_id
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -123,7 +123,6 @@ class Site(OpinionSiteLinear):
             for p in detail_json["properties"]:
                 label = p["property"]["label"]
                 if label == "Docket Number":
-                    print(p["values"][0])
                     docket_number = p["values"][0]
                 if label == "Parties":
                     case_name_full = p["values"][0]
@@ -146,7 +145,6 @@ class Site(OpinionSiteLinear):
                 "html_url": html_url,
                 "response_html": html_res.text,
             }
-            print(f'case docket is : {case["docket"]}')
 
             self.cases.append(case)
 
@@ -191,8 +189,8 @@ class Site(OpinionSiteLinear):
 
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        start_date = datetime(2024,2,1)
-        end_date=datetime(2024,2,29)
+        # start_date = datetime(2024,10,1)
+        # end_date=datetime(2025,1,1)
         logger.info("Crawling between the dates from %s to %s", start_date , end_date)
         # self.parse()
         self._download_backwards((start_date, end_date))

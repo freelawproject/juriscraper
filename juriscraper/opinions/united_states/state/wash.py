@@ -2,6 +2,8 @@ from datetime import datetime
 
 import requests
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.opinions.united_states.state.washctapp_p import \
+    fetch_case_info
 from sample_caller import logger
 
 
@@ -48,18 +50,9 @@ class Site(OpinionSiteLinear):
             info_url = middle.xpath("a")[0].get("href")
             parsed_date = datetime.strptime(date.text_content(), "%b. %d, %Y")
             if parsed_date >= start_date and parsed_date <= end_date:
-                try:
-                    response = requests.get(info_url,
-                                            headers=self.request["headers"],
-                                            proxies=self.proxies,timeout=120)
-                    logger.info(response.status_code)
-                    if response.status_code == 200:
-                        case_info_html = response.text  # Print the response content
-                    else:
-                        case_info_html = ""
-                except Exception as e:
-                    logger.info(f"error while downloading case info {e}")
-                    case_info_html=""
+                case_info_html = fetch_case_info(info_url,
+                                                 self.request["headers"],
+                                                 self.proxies)
 
                 self.cases.append(
                     {

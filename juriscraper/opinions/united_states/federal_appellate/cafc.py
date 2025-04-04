@@ -162,3 +162,6 @@ class Site(OpinionSiteLinear):
 
     def get_court_name(self):
         return "United States Court of Appeals for the Federal Circuit"
+
+    def get_state_name(self):
+        return "Fed. Cir."

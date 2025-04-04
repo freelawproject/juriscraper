@@ -112,7 +112,7 @@ class Site(OpinionSite):
         return 0
 
     def get_class_name(self):
-        return "idaho_civil"
+            return "idaho_civil"
 
     def get_court_name(self):
         return "Supreme Court of Idaho"

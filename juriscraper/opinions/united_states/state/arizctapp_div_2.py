@@ -39,6 +39,7 @@ class Site(OpinionSiteLinear):
             formatted_date = date_obj.strftime("%d/%m/%Y")
             summary_list = item.xpath("./following::tr[1]//text()")
             summary = "".join(summary_list).strip()
+            docket=docket.replace(' \r\n', '')
             self.cases.append(
                 {
                     "name": titlecase(name),
