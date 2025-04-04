@@ -45,4 +45,3 @@ class Site(OpinionSiteLinear):
 
     def get_state_name(self):
         return "Georgia"
-

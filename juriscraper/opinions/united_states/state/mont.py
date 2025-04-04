@@ -85,4 +85,3 @@ class Site(OpinionSiteLinear):
 
     def get_court_name(self):
         return "Supreme Court of Montana"
-

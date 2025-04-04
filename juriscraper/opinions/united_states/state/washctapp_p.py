@@ -7,6 +7,20 @@ from sample_caller import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+def fetch_case_info(url, headers, proxies, retries=4):
+    if retries == 0:
+        print(f"Failed to fetch {url} after multiple attempts")
+        return ""
+
+    try:
+        response = requests.get(url, headers=headers, proxies=proxies,
+                                timeout=120)
+        print(f"Fetching {url}: Status {response.status_code}")
+        return response.text if response.status_code == 200 else ""
+    except Exception as e:
+        return fetch_case_info(url, headers, proxies, retries - 1)
+
+
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -33,6 +47,7 @@ class Site(OpinionSiteLinear):
     def _get_case_info_html(self):
         return self._get_optional_field_by_id("case_info_html")
 
+
     def _process_html(self, start_date : datetime , end_date : datetime, info_url=None ):
         self.request["headers"].update(
             {
@@ -49,20 +64,10 @@ class Site(OpinionSiteLinear):
             date, middle, div, name, op_type = row.xpath(".//td")
             info_url = middle.xpath("a")[0].get("href")
             parsed_date = datetime.strptime(date.text_content(), "%b. %d, %Y")
-            if parsed_date >= start_date and parsed_date <= end_date:
-                try:
-                    # print(f"url is {info_url}")
-                    response = requests.get(info_url,
-                                            headers=self.request["headers"],
-                                            proxies=self.proxies,timeout=120)
-                    print(response.status_code)
-                    if response.status_code == 200:
-                        case_info_html = response.text  # Print the response content
-                    else:
-                        case_info_html = ""
-                except Exception as e:
-                    logger.info(f"error while downloading case info {e}")
-                    case_info_html=""
+            if start_date <= parsed_date <= end_date:
+                case_info_html = fetch_case_info(info_url,
+                                                 self.request["headers"],
+                                                 self.proxies)
                 self.cases.append(
                     {
                         "date": date.text_content(),
@@ -76,6 +81,7 @@ class Site(OpinionSiteLinear):
                 )
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        start_date=datetime(2025,3,10)
 
         if not self.downloader_executed:
             self.html = self._download()

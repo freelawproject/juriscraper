@@ -187,3 +187,6 @@ class Site(OpinionSite):
 
     def get_court_type(self):
         return 'Federal'
+
+    def get_state_name(self):
+        return "U.S. Supreme Court"

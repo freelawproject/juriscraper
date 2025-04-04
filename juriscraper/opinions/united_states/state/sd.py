@@ -51,7 +51,7 @@ class Site(OpinionSiteLinear):
                 {
                     "date": get_row_column_text(row, 1),
                     "name": titlecase(title.rsplit(",", 1)[0]),
-                    "citation": cite[0],
+                    "citation": [cite[0]],
                     "url": url,
                     "docket": [docket],
                 }
