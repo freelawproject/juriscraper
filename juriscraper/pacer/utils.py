@@ -783,7 +783,7 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
 
 
 def set_pacer_doc_id_as_appellate_document_number(
-    de: Dict[str, Union[str, date, datetime]]
+    de: Dict[str, Union[str, date, datetime]],
 ) -> None:
     """For appellate courts that don't use numbers, if available set the
     pacer_doc_id as document number.

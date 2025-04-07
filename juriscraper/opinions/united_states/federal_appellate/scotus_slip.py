@@ -42,7 +42,7 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def get_term(
-        date_of_interest: Union[date, datetime] = date.today()
+        date_of_interest: Union[date, datetime] = date.today(),
     ) -> int:
         """The URLs for SCOTUS correspond to the term, not the calendar.
 

@@ -234,12 +234,12 @@ def clean_html(text: str) -> str:
     # accordingly.
     if sys.maxunicode == 65535:
         text = re.sub(
-            "[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+", "", text
+            "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd]+", "", text
         )
     else:
         text = re.sub(
-            "[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD"
-            "\U00010000-\U0010FFFF]+",
+            "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd"
+            "\U00010000-\U0010ffff]+",
             "",
             text,
         )
