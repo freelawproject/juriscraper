@@ -12,7 +12,13 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Fix `me` Update maine scraper and add backscraper
 
+## Current
+
+**2.6.64 - 2024-03-25**
+- Implement scraper for `lactapp_3` #1197
+- 
 ## Current
 
 **2.6.63 - 2024-03-25**
