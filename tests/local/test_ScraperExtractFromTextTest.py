@@ -686,13 +686,15 @@ class ScraperExtractFromText(unittest.TestCase):
             (
                 "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 25\nDocket: Sag-24-5\nSubmitted\nOn Briefs: November 25, 2024\nDecided: March 11, 2025\nPanel: STANFILL, C.J., and HORTON, CONNORS, and DOUGLAS, JJ.\nReporter of Decisions\nSTEPHEN A. CLARK JR. et al.\nv.\nTOWN OF PHIPPSBURG et al.\nCONNORS, J.\n[¶1] This appeal pursuant to Maine Rule of Civil Procedure 80B",
                 {
-                    "Docket": {"date_argued": "November 25, 2024"},
+                    "Docket": {
+                        "date_argued": "2024-11-25",
+                        "docket_number": "Sag-24-5",
+                    },
                     "Opinion": {
                         "author_str": "CONNORS, J.",
                         "per_curiam": False,
                     },
                     "OpinionCluster": {
-                        "docket_number": "Sag-24-5",
                         "judges": "STANFILL, C.J., and HORTON, CONNORS, and DOUGLAS, JJ.",
                     },
                 },
@@ -702,10 +704,12 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Opinion": {"author_str": "", "per_curiam": True},
                     "OpinionCluster": {
-                        "docket_number": "Pen-24-253",
                         "judges": "STANFILL, C.J., and MEAD, CONNORS, LAWRENCE, and DOUGLAS, JJ.",
                     },
-                    "Docket": {"date_argued": "February 7, 2025"},
+                    "Docket": {
+                        "date_argued": "2025-02-07",
+                        "docket_number": "Pen-24-253",
+                    },
                 },
             ),
             (
@@ -716,10 +720,12 @@ class ScraperExtractFromText(unittest.TestCase):
                         "per_curiam": False,
                     },
                     "OpinionCluster": {
-                        "docket_number": "Han-23-466",
                         "judges": "STANFILL, C.J., and MEAD, HORTON, CONNORS, LAWRENCE, and DOUGLAS, JJ.",
                     },
-                    "Docket": {"date_argued": "October 8, 2024"},
+                    "Docket": {
+                        "date_argued": "2024-10-08",
+                        "docket_number": "Han-23-466",
+                    },
                 },
             ),
         ],

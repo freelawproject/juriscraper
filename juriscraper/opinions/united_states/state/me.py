@@ -21,6 +21,7 @@ import re
 from datetime import date
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.judge_parsers import normalize_judge_names
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -45,11 +46,16 @@ class Site(OpinionSiteLinear):
 
             # handle the one typo
             date_str = date.text_content().replace("Aguust", "August")
+
+            case_name = titlecase(name.text_content())
+            if "Revised" in case_name:
+                # handle revised opinions case name
+                case_name = case_name.split("Revised")[0].strip()
             self.cases.append(
                 {
                     "citation": cite.text_content(),
                     "date": date_str,
-                    "name": titlecase(name.text_content()),
+                    "name": case_name,
                     "url": name.xpath(".//a")[0].attrib["href"],
                     "docket": "",
                 }
@@ -59,9 +65,7 @@ class Site(OpinionSiteLinear):
         """Extract out lots of data from Maine
 
         :param scraped_text: The first page of content
-        :type scraped_text:
-        :return:
-        :rtype:
+        :return: The dictionary of extracted data
         """
         pattern = re.compile(
             r"(?P<label>Docket|On Briefs|Decided|Argued|Panel|Reporter of Decisions):\s*(?P<value>[^\n]+)"
@@ -72,7 +76,7 @@ class Site(OpinionSiteLinear):
             value = match.group("value").strip()
             extracted[label] = value
 
-        author = r"(?P<author_str>.*)\n\[¶1\]"
+        author = r"(?P<author_str>.*)\n+(\s+)?\[¶1\]"
         m = re.search(author, scraped_text, re.MULTILINE)
         if m:
             if m.group("author_str") == "PER CURIAM":
@@ -85,18 +89,26 @@ class Site(OpinionSiteLinear):
             per_curiam = False
             author_str = ""
 
+        date_argued = extracted.get("On Briefs", "") or extracted.get(
+            "Argued", ""
+        )
+        date_argued_str = ""
+        if date_argued:
+            # Format date
+            date_argued = convert_date_string(date_argued)
+            date_argued_str = date_argued.strftime("%Y-%m-%d")
+
         metadata = {
             "Opinion": {
-                "author_str": author_str,
+                "author_str": normalize_judge_names(author_str),
                 "per_curiam": per_curiam,
             },
             "OpinionCluster": {
-                "docket_number": extracted.get("Docket", ""),
                 "judges": extracted.get("Panel", ""),
             },
             "Docket": {
-                "date_argued": extracted.get("On Briefs", "")
-                or extracted.get("Argued", ""),
+                "date_argued": date_argued_str,
+                "docket_number": extracted.get("Docket", ""),
             },
         }
 
