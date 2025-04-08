@@ -17,27 +17,39 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    start_year = 1996
+    # data available in HTML format since 1996, in PDF since 2006
+    start_year = 2006
+    # judges full names from https://ujs.sd.gov/Supreme_Court/Justices.aspx
     initials_to_judges = {
         "MES": "Mark E. Salter",
         "SPM": "Scott P. Myren",
         "SRJ": "Steven R. Jensen",
         "PJD": "Patricia J. DeVaney",
         "JMK": "Janine M. Kern",
+        # not current
+        "JKM": "Judith Meierhenry",  # https://ujs.sd.gov/uploads/sc/opinions/24063.pdf
+        "DG": "David Gilbertson",  # https://ujs.sd.gov/uploads/sc/opinions/23939.pdf
+        "SLZ": "Steven L. Zinter",  # https://ujs.sd.gov/uploads/sc/opinions/24439.pdf
+        "RWS": "Richard Sabers",  # https://ujs.sd.gov/uploads/sc/opinions/24501.pdf
+        "JKK": "John Konenkamp",  # https://ujs.sd.gov/uploads/sc/opinions/24387.pdf
+        "GAS": "Glen Severson",  # https://ujs.sd.gov/uploads/sc/opinions/25115.pdf
+        "LSW": "Lori Wilbur",  # https://ujs.sd.gov/uploads/sc/opinions/25808.pdf
     }
     disposition_mapper = {
-        "dismiss": "Dismiss",
+        "dismiss": "Dismissed",
+        "dis": "Dismissed",  # https://ujs.sd.gov/uploads/sc/opinions/24312.pdf
         "a": "Affirmed",
-        "r": "Reverse and remand",
-        "aff in pt & rev in pt": "Affirm in part and reverse in part",
-        "aff in pt, vacate, & rem in pt": "Affirm in part, vacate and remand in part",
-        "aff in pt & vacate": "Affirm and vacate",  # https://www.courtlistener.com/opinion/9502826/state-v-scott/pdf/
+        "r": "Reversed and remanded",
+        "rev & rem": "Reverse and remanded",  # https://ujs.sd.gov/uploads/sc/opinions/24409.pdf
+        "aff in pt & rev in pt": "Affirmed in part and reversed in part",
+        "aff in pt, rev in pt & rem": "Affirmed in part, reversed in part and remanded",  # https://ujs.sd.gov/uploads/sc/opinions/23919.pdf
+        "aff in pt, vacate, & rem in pt": "Affirmed in part, vacated and remanded in part",
+        "aff in pt & vacate": "Affirmed and vacated",  # https://www.courtlistener.com/opinion/9502826/state-v-scott/pdf/
     }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.status = "Published"
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
@@ -48,23 +60,28 @@ class Site(OpinionSiteLinear):
         :return None
         """
         rows = self.html.xpath(
-            "//div[@id='ContentPlaceHolder1_ChildContent1_UpdatePanel_Opinions']//tbody/tr"
+            "//div[@id='ContentPlaceHolder1_ChildContent1_UpdatePanel_Opinions']//tbody/tr[not(th)][not(.//a[contains(@id, 'DataList_Paging_LinkButton')])]"
         )
         for row in rows:
             title = get_row_column_text(row, 2)
-            cite = re.findall(r"\d{4} S\.D\. \d+", title)
+
+            status = "Published"
+            cite = re.findall(r"\d{4} S\.?D\.? \d+", title)
             if not cite:
-                continue
+                status = "Unpublished"
+                cite = [""]
 
             url = row.xpath(".//td[2]/a/@href")[0]
             docket = url.split("/")[-1][:5]
+            name = titlecase(title.rsplit(",", 1)[0] if cite else title)
             self.cases.append(
                 {
                     "date": get_row_column_text(row, 1),
-                    "name": titlecase(title.rsplit(",", 1)[0]),
+                    "name": name,
                     "citation": cite[0],
                     "url": url,
                     "docket": docket,
+                    "status": status,
                 }
             )
 
@@ -163,7 +180,7 @@ class Site(OpinionSiteLinear):
         if dockets:
             metadata["Docket"] = {"docket_number": ", ".join(dockets)}
 
-        judge_regex = r"-[A-Z]{3}(\s*[,&]\s+[A-Z]{3})*"
+        judge_regex = r"-[A-Z]{2,3}(\s*[,&]\s+[A-Z]{2,3})*"
         if judges_match := re.search(judge_regex, target_text):
             initials = re.sub(r"[\s,&-]+", " ", judges_match.group(0)).strip()
             judges = []

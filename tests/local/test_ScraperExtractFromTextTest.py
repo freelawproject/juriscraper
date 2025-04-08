@@ -94,7 +94,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {"docket_number": "29901"},
                     "OpinionCluster": {
-                        "disposition": "Affirm in part and reverse in part",
+                        "disposition": "Affirmed in part and reversed in part",
                         "judges": "Patricia J. DeVaney, Steven R. Jensen",
                     },
                 },
@@ -109,7 +109,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {"docket_number": "30086, 30094"},
                     "OpinionCluster": {
                         "judges": "Scott P. Myren",
-                        "disposition": "Reverse and remand",
+                        "disposition": "Reversed and remanded",
                     },
                 },
             ),
