@@ -685,6 +685,71 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.mont": [
+            (
+                # https://www.courtlistener.com/api/rest/v4/opinions/10801442/
+                "'02/18/2025\n\n\n                                        DA 23-0746\n\n                IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                         2025 MT 35\n\n\n\nIN THE MATTER OF THE ESTATE OF:\n\nWARREN DAN EDDLEMAN,",
+                {
+                    "Citation": "2025 MT 35",
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.ga": [
+            # https://www.courtlistener.com/opinion/3186280/in-the-matter-of-tony-c-jones/
+            (
+                "298 Ga. 313\nFINAL COPY\n\nS11Y1626, S13Y0138, S15Y1641",
+                {
+                    "Citation": "298 Ga. 313",
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.me": [
+            (
+                "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 25\nDocket: Sag-24-5\nSubmitted\nOn Briefs: November 25, 2024\nDecided: March 11, 2025\nPanel: STANFILL, C.J., and HORTON, CONNORS, and DOUGLAS, JJ.\nReporter of Decisions\nSTEPHEN A. CLARK JR. et al.\nv.\nTOWN OF PHIPPSBURG et al.\nCONNORS, J.\n[¶1] This appeal pursuant to Maine Rule of Civil Procedure 80B",
+                {
+                    "Docket": {
+                        "date_argued": "2024-11-25",
+                        "docket_number": "Sag-24-5",
+                    },
+                    "Opinion": {
+                        "author_str": "CONNORS, J.",
+                        "per_curiam": False,
+                    },
+                    "OpinionCluster": {
+                        "judges": "STANFILL, C.J., and HORTON, CONNORS, and DOUGLAS, JJ.",
+                    },
+                },
+            ),
+            (
+                "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 26\nDocket: Pen-24-253\nSubmitted\nOn Briefs: February 7, 2025\nDecided: March 13, 2025\nPanel: STANFILL, C.J., and MEAD, CONNORS, LAWRENCE, and DOUGLAS, JJ.\nReporter of Decisions\nSTATE OF MAINE\nv.\nJEFF BELONY\nPER CURIAM\n[¶1] Jeff Belony appeals from",
+                {
+                    "Opinion": {"author_str": "", "per_curiam": True},
+                    "OpinionCluster": {
+                        "judges": "STANFILL, C.J., and MEAD, CONNORS, LAWRENCE, and DOUGLAS, JJ.",
+                    },
+                    "Docket": {
+                        "date_argued": "2025-02-07",
+                        "docket_number": "Pen-24-253",
+                    },
+                },
+            ),
+            (
+                "MAINE SUPREME JUDICIAL COURT Decision: 2025 ME 32\nDocket: Han-23-466\nArgued: October 8, 2024\nDecided: March 27, 2025\nReporter of Decisions\nPanel: STANFILL, C.J., and MEAD, HORTON, CONNORS, LAWRENCE, and DOUGLAS, JJ.\nSTATE OF MAINE\nv.\nCRAIG A. WOODARD\nSTANFILL, C.J.\n[¶1]",
+                {
+                    "Opinion": {
+                        "author_str": "STANFILL, C.J.",
+                        "per_curiam": False,
+                    },
+                    "OpinionCluster": {
+                        "judges": "STANFILL, C.J., and MEAD, HORTON, CONNORS, LAWRENCE, and DOUGLAS, JJ.",
+                    },
+                    "Docket": {
+                        "date_argued": "2024-10-08",
+                        "docket_number": "Han-23-466",
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):

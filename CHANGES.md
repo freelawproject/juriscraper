@@ -12,9 +12,73 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- N/A
+- Fix `me` Update maine scraper and add backscraper
 
 ## Current
+
+**2.6.63 - 2024-03-25**
+
+- Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
+- Implement extract from text for `ga` #1349
+- Fix `ill` oral argument scraper #1356
+
+## Past
+
+**2.6.62 - 2024-03-19**
+
+- Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
+- Fix `uscgcoca` citation regex #1351
+
+**2.6.61 - 2024-03-06**
+
+- Fix `ca8` opinion scraper by setting `request.verify = False` #1346
+
+**2.6.60 - 2024-03-05**
+
+- Fix `ca7` scrapers url from http to https
+
+**2.6.59 - 2024-03-04**
+
+- Change `colo` user agent to prevent site block #1341
+
+**2.6.58 - 2024-02-26**
+
+- Fixes:
+  - Add backscraper for `mesuperct` #1328
+  - Fix `mont` cleanup_content, would fail when content was bytes #1323
+
+**2.6.57 - 2024-02-25**
+
+- Fixes:
+  - fix cafc oral argument scraper PR (#1325)[https://github.com/freelawproject/juriscraper/pull/1325]
+  - ignore future date sanity check when date filed is approximate #1321
+  - new exception InvalidDocumentError to be raised when an error page is detected #1329
+  - update mont parsing; and raise InvalidDocumentError #1329
+
+- Features
+  - Add workflow to check for new entries in CHANGES.md file
+
+
+**2.6.56 - 2024-02-19**
+
+- Fixes:
+  - n/a
+
+- Features:
+  - MT upgrade to opinion site linear
+  - Add citation extraction and author for MT
+
+
+**2.6.55 - 2024-02-10**
+
+- Fixes:
+  - `cafc` opinion scraper now requests using `verify=False` #1314
+  - recap: support for parsing docket_numbers wrapped in a `tel:` href tag
+     in appellate dockets. #915
+
+- Features:
+  - recap: improvement to the download_pdf method to handle cases where
+  attachment pages are returned instead of the expected PDF documents. #1309
 
 **2.6.54 - 2024-01-24**
 
@@ -23,8 +87,6 @@ Releases are also tagged in git, if that's helpful.
   - update the pypi.yml github actions workflow to solve a bug with twine and
     packaging packages interaction. It now forces the update of packaging
   - due to that bug, we discarded the 2.6.53 version
-
-## Past
 
 **2.6.52 - 2024-01-20**
 

@@ -167,5 +167,5 @@ class Site(OpinionSiteLinear):
         base_url = self.url
         url_template = f"{base_url}&page={{}}"
         self.cases = backscrape_over_paginated_results(
-            url_template, 2, last_page, start, end, "%m/%d/%Y", self
+            2, last_page, start, end, "%m/%d/%Y", self, None, url_template
         )

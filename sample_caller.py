@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import re
 import signal
 import sys
 import traceback
@@ -88,14 +89,18 @@ def extract_doc_content(
     court_id = site.court_id.split(".")[-1]
     directory = "/tmp/juriscraper/"
     os.makedirs(directory, exist_ok=True)
-    filename = f"{directory}{court_id}_{filename}.html"
-    with open(filename, "w") as f:
+    # remove illegal characters
+    illegal_chars = r'[\/:*?"<>|]'
+    filename = re.sub(illegal_chars, "_", filename)
+
+    filepath = f"{directory}{court_id}_{filename}.html"
+    with open(filepath, "w") as f:
         if extension != ".html":
             f.write(f"<pre>{extracted_content}</pre>")
         else:
             f.write(extracted_content)
 
-    logger.info("\nOpen extracted content with 'file://%s'", filename)
+    logger.info("\nOpen extracted content with 'file://%s'", filepath)
 
     metadata_dict = site.extract_from_text(extracted_content)
     return extracted_content, metadata_dict
@@ -194,7 +199,10 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
             logger.debug("\nValues obtained by Site.extract_from_text:")
             for object_type, value_dict in metadata_from_text.items():
                 logger.debug(object_type)
-                log_dict(value_dict)
+                if object_type != "Citation":
+                    log_dict(value_dict)
+                else:
+                    logger.debug(value_dict)
 
         # Separate cases for easier reading when verbosity=DEBUG
         logger.debug("\n%s\n", "=" * 60)
