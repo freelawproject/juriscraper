@@ -13,6 +13,7 @@ Releases are also tagged in git, if that's helpful.
 ## Coming up
 
 - Fix `me` Update maine scraper and add backscraper
+- Update `sd` backscraper and extract from text
 
 ## Current
 

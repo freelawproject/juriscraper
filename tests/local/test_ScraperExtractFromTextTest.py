@@ -89,8 +89,29 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.sd": [
             (
-                """#30018-a-MES\n2023 S.D. 4""",
-                {"Docket": {"docket_number": "#30018-a-MES"}},
+                # https://www.courtlistener.com/opinion/9456271/mcgee-v-spencer-quarries-inc/pdf/
+                """#29901-aff in pt & rev in pt-PJD & SRJ\n2023 S.D. 66\nIN THE SUPREME COURT""",
+                {
+                    "Docket": {"docket_number": "29901"},
+                    "OpinionCluster": {
+                        "disposition": "Affirmed in part and reversed in part",
+                        "judges": "Patricia J. DeVaney, Steven R. Jensen",
+                    },
+                },
+                """#30354-SRJ\n2024 S.D. 58\nIN THE SUPREME COURT\nOF THE""",
+                {
+                    "Docket": {"docket_number": "30354"},
+                    "OpinionCluster": {"judges": "Steven R. Jensen"},
+                },
+                # https://www.courtlistener.com/opinion/9406747/estate-of-beadle/?q=court_id%3Asd&page=8
+                """#30086, #30094-r-SPM\n2023 S.D. 26\nIN THE SUPREME COURT\nOF THE\nSTATE OF SOUTH DAKOTA""",
+                {
+                    "Docket": {"docket_number": "30086, 30094"},
+                    "OpinionCluster": {
+                        "judges": "Scott P. Myren",
+                        "disposition": "Reversed and remanded",
+                    },
+                },
             ),
         ],
         "juriscraper.opinions.united_states.territories.nmariana": [
