@@ -5,21 +5,26 @@ Author: divagnz
 History:
   2025-04-08: Created by divagnz
 """
+
 import json
 import re
 from dataclasses import dataclass
 from datetime import date, datetime
-from typing import Tuple, Optional, Dict, List
+from typing import Dict, List, Optional, Tuple
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import format_date_with_slashes
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 def get_clean_text(element):
     """Extract and clean text from an lxml element."""
-    return " ".join(element.text_content().split()) if element.text_content() else ""
+    return (
+        " ".join(element.text_content().split())
+        if element.text_content()
+        else ""
+    )
 
 
 @dataclass
@@ -86,7 +91,9 @@ class Site(OpinionSiteLinear):
 
     def _get_auth_data(self):
         # Always start with a GET request to establish the session and get cookies
-        logger.debug("Initial GET request to establish session and obtain cookies")
+        logger.debug(
+            "Initial GET request to establish session and obtain cookies"
+        )
         # Retrieve the initial HTML page to obtain auth_data necessary to retrieve
         # the opinions.
         self.method = "GET"
@@ -99,7 +106,9 @@ class Site(OpinionSiteLinear):
         viewstategenerator = initial_html.xpath(
             '//input[@id="__VIEWSTATEGENERATOR"]/@value'
         )
-        eventvalidation = initial_html.xpath('//input[@id="__EVENTVALIDATION"]/@value')
+        eventvalidation = initial_html.xpath(
+            '//input[@id="__EVENTVALIDATION"]/@value'
+        )
         try:
             self.auth_data = AspxWebformData(
                 view_state=viewstate[0],
@@ -107,7 +116,9 @@ class Site(OpinionSiteLinear):
                 event_validation=eventvalidation[0],
             )
         except AspxWebformDataException:
-            logger.error("Failed to extract auth data from Luisiana 3rd Circuit")
+            logger.error(
+                "Failed to extract auth data from Luisiana 3rd Circuit"
+            )
             raise
 
     def prepare_form_data(self, year: str, month: str):
@@ -137,7 +148,9 @@ class Site(OpinionSiteLinear):
 
             request_dict = {}
             # Add the form data to the request
-            self.prepare_form_data(year=self.active_year, month=self.active_month)
+            self.prepare_form_data(
+                year=self.active_year, month=self.active_month
+            )
             # Set up headers for the POST request
             self.parameters = self.form_data
             self.method = "POST"
@@ -180,7 +193,9 @@ class Site(OpinionSiteLinear):
 
             # Extract text content and split into lines for parsing
             text_content = get_clean_text(cell)
-            compiled_pattern = re.compile(self.data_regex, re.MULTILINE | re.DOTALL)
+            compiled_pattern = re.compile(
+                self.data_regex, re.MULTILINE | re.DOTALL
+            )
             matched_groups = re.findall(compiled_pattern, text_content)
             if matched_groups:
                 docket, date, name, parish, lower_court = matched_groups[0]
@@ -196,14 +211,20 @@ class Site(OpinionSiteLinear):
 
     def _download_backwards(self, dates: date) -> None:
         """Download opinions for a date range"""
-        logger.debug("Backscraping for Year %s and Month %s", dates.year, dates.month)
+        logger.debug(
+            "Backscraping for Year %s and Month %s", dates.year, dates.month
+        )
         self.active_year = dates.year
         self.active_month = f'{dates.strftime("%B")}'
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> List[Tuple[date, date]]:
+    def make_backscrape_iterable(
+        self, kwargs: Dict
+    ) -> List[Tuple[date, date]]:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
         and replace the self.back_scrape_iterable
         """
         super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(self.back_scrape_iterable)
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )

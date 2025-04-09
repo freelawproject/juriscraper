@@ -546,11 +546,13 @@ def normalize_dashes(raw_string):
         raw_string = raw_string.replace(dash, normal)
     return raw_string
 
+
 def format_date_with_slashes(date_str):
     """Convert date string from format DDMMYYYY to DD/MM/YYYY"""
     if len(date_str) == 8:
         return f"{date_str[0:2]}/{date_str[2:4]}/{date_str[4:8]}"
     return date_str
+
 
 class CaseNameTweaker:
     def __init__(self):
