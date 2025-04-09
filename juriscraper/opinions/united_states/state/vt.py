@@ -115,8 +115,16 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
 
     def extract_from_text(self, scraped_text: str):
-        match = re.search(r"\d{4} VT \d+", scraped_text[:1000])
+        match = re.search(r"\n\s*\d{4} VT \d+\s*\n", scraped_text[:1000])
         if match:
-            return {"Citation": match.group(0)}
+            metadata = {"Citation": match.group(0).strip()}
+
+            # update court_id for opinions that have a VT citation, that are
+            # marked on the source as belonging to one of the superior court
+            # divisions. Check test_ScraperExtractFromTextTest examples
+            if "vtsuperct" in self.court_id:
+                metadata["Docket"] = {"court_id": "vt"}
+
+            return metadata
 
         return {}

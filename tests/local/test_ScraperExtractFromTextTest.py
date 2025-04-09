@@ -543,6 +543,38 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.vtsuperct_environmental": [
+            (
+                # https://www.courtlistener.com/opinion/10274910/in-re-windham-windsor-housing-trust-jo-appeal-deborah-lazar-laura/
+                """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vtcourts.gov or by mail at: Vermont Supreme Court,\n109 State Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may\nbe made before this opinion goes to press.\n\n\n                                        2024 VT 73\n\n                                       No. 24-AP-079\n\nIn re Windham  """,
+                {"Citation": "2024 VT 73", "Docket": {"court_id": "vt"}},
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_family": [
+            (
+                # https://www.courtlistener.com/opinion/4707491/jason-c-barrows-v-jessica-easton/
+                """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                             2020 VT 2\n\n                                            No. 2019-149\n\nJason C. Barrows      """,
+                {
+                    "Citation": "2020 VT 2",
+                    "Docket": {"court_id": "vt"},
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_probate": [
+            (
+                # haven't found a proper example yet
+                """""",
+                {},
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_civil": [
+            (
+                # haven't found a proper example yet, let's use a negative example
+                # where a neutral citation is within the range of search
+                """Guildhall VT 0590\n802-676-3910 .vermontjudiciary.org\n\nLisa Rote v. Town of Concord\n\nDECISION ON MOTION TO DISMISS\nIn this case, plaintiff Lisa Rote\nFactual Background\nThe well-pleaded factual allegations in this case are few. For the purpose of this motion, the court accepts as true the following facts, drawn from the complaint and incorporate documents. See Coutu v. Town of Cavendish, 2011 VT 27,""",
+                {},
+            )
+        ],
         "juriscraper.opinions.united_states.state.ny": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04236.htm
