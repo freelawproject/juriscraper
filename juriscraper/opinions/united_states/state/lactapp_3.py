@@ -146,7 +146,10 @@ class Site(OpinionSiteLinear):
             logger.debug("Making POST request to fetch opinion data")
             self._request_url_post(self.url)
         self._post_process_response()
-        return self._return_response_text_object()
+
+        text = self._clean_text(self.request["response"].text)
+        html_tree = self._make_html_tree(text)
+        return html_tree
 
     def _process_html(self):
         """Extract the opinion data from the HTML"""
@@ -190,7 +193,6 @@ class Site(OpinionSiteLinear):
                         "url": download_path,
                     }
                 )
-        print(self.cases)
 
     def _download_backwards(self, dates: date) -> None:
         """Download opinions for a date range"""
