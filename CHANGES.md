@@ -16,6 +16,11 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.64 - 2024-03-25**
+- Implement scraper for `lactapp_3` #1197
+-
+## Current
+
 **2.6.63 - 2024-03-25**
 
 - Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
