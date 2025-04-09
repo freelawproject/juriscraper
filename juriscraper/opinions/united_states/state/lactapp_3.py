@@ -174,8 +174,6 @@ class Site(OpinionSiteLinear):
             # Extract the download link
             url_element = cell.xpath(".//a/@href")
             download_path = url_element[0] if url_element else None
-            if download_path and not download_path.startswith("http"):
-                download_path = f"{self.url}/{download_path}"
 
             # Extract text content and split into lines for parsing
             text_content = get_clean_text(cell)
@@ -207,4 +205,3 @@ class Site(OpinionSiteLinear):
         """
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(self.back_scrape_iterable)
-
