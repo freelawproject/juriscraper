@@ -1,3 +1,14 @@
+"""
+Scraper for the Louisiana Second Circuit Court of Appeal
+CourtID: lactapp_2
+Court Short Name: La. Ct. App. 2d Cir
+Author: Gianfranco Huaman
+History:
+ - 2025-01-11, giancohs: created
+"""
+
+
+
 from datetime import datetime
 
 from juriscraper.AbstractSite import logger
