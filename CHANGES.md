@@ -13,7 +13,7 @@ Releases are also tagged in git, if that's helpful.
 ## Coming up
 
 - Fix `me` Update maine scraper and add backscraper
-
+- Sites were blocking `cafc` scrapers. Fixed by passing a browser user agent #1366
 ## Current
 
 **2.6.63 - 2024-03-25**
