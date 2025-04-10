@@ -9,150 +9,120 @@ History:
 
 
 
-from datetime import datetime
-
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.html_utils import (
-    get_row_column_links,
-    get_row_column_text,
-)
+from datetime import datetime, date
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import get_row_column_text, get_row_column_links
+from urllib.parse import urljoin, urlencode
+import re
 
 class Site(OpinionSiteLinear):
-    first_opinion_date = datetime(2019, 7, 17)
-    days_interval = 28  # Monthly interval
-    abbreviation_to_lower_court = {
-        "Caddo": "First Judicial District Court for the Parish of Caddo, Louisiana",
-        "Ouachita": "Fourth Judicial District Court for the Parish of Ouachita, Louisiana",
-        "Bossier": "Twenty-Sixth Judicial District Court for the Parish of Bossier, Louisiana",
-        "DeSoto": "Forty-Second Judicial District Court for the Parish of DeSoto, Louisiana",
-        "Lincoln": "Third Judicial District Court for the Parish of Lincoln, Louisiana",
-        "Webster": "Twenty-Sixth Judicial District Court for the Parish of Webster, Louisiana",
-        "Franklin": "Fifth Judicial District Court for the Parish of Franklin, Louisiana",
-        "Richland": "Fifth Judicial District Court for the Parish of Richland, Louisiana",
-        "Union": "Third Judicial District Court for the Parish of Union, Louisiana",
-        "Winn": "Eighth Judicial District Court for the Parish of Winn, Louisiana",
-        "Morehouse": "Fourth Judicial District Court for the Parish of Morehouse, Louisiana",
-        "Claiborne": "Second Judicial District Court for the Parish of Claiborne, Louisiana",
-        "Ouachita Monroe City Court": "Monroe City Court for the Parish of Ouachita, Louisiana",
-        "Bienville": "Second Judicial District Court for the Parish of Bienville, Louisiana",
-        "Madison": "Sixth Judicial District Court for the Parish of Madison, Louisiana",
-        "Red River": "Ninth Judicial District Court for the Parish of Red River, Louisiana",
-        "Tensas": "Sixth Judicial District Court for the Parish of Tensas, Louisiana",
-        "Jackson": "Second Judicial District Court for the Parish of Jackson, Louisiana",
-        "Ouachita OWC District 1-E": "Office of Workers' Compensation District 1-E for the Parish of Ouachita, Louisiana",
-        "Caddo OWC District 1-W": "Office of Workers' Compensation District 1-W for the Parish of Caddo, Louisiana",
-        "Caldwell": "Thirty-Seventh Judicial District Court for the Parish of Caldwell, Louisiana",
-        "West Carroll": "Fifth Judicial District Court for the Parish of West Carroll, Louisiana",
-        "East Carroll": "Sixth Judicial District Court for the Parish of East Carroll, Louisiana",
-        "Caddo Juvenile Court": "Juvenile Court for the Parish of Caddo, Louisiana",
-        "Caddo Shreveport City Court": "Shreveport City Court for the Parish of Caddo, Louisiana",
-        "DeSoto OWC District 1-W": "Office of Workers' Compensation District 1-W for the Parish of DeSoto, Louisiana",
-        "Lincoln Ruston City Court": "Ruston City Court for the Parish of Lincoln, Louisiana",
-        "Ouachita West Monroe City Court": "West Monroe City Court for the Parish of Ouachita, Louisiana",
-        "OUACHITA Monroe City Court": "Monroe City Court for the Parish of Ouachita, Louisiana",
-        "Franklin OWC District 1-E": "Office of Workers' Compensation District 1-E for the Parish of Franklin, Louisiana",
-        "Minden City Court Webster": "Minden City Court for the Parish of Webster, Louisiana",
-        "Morehouse Bastrop City Court": "Bastrop City Court for the Parish of Morehouse, Louisiana",
-        "Morehouse OWC District 1-E": "Office of Workers' Compensation District 1-E for the Parish of Morehouse, Louisiana",
-        "Webster Minden City Court": "Minden City Court for the Parish of Webster, Louisiana",
-        "Winn OWC District 2": "Office of Workers' Compensation District 2 for the Parish of Winn, Louisiana",
-    }
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.la2nd.org/opinions/"
         self.year = datetime.now().year
-        self.url = f"{self.base_url}?opinion_year={self.year}"
+        params = {"opinion_year": self.year}
+        self.url = urljoin(self.base_url, f"?{urlencode(params)}")
+        self.cases = []
         self.status = "Published"
-        self.target_date = None
+        self.first_opinion_date = datetime(2019, 7, 17).date()
+        self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
 
     def _download(self):
+        """Download the page content"""
         html = super()._download()
-        # Currenly there are no opinions for 2025, so we need to go back one year
+        
         if html is not None:
-            tables = html.cssselect("table#datatable")
-            if not tables or not tables[0].cssselect("tbody tr"):
+            tables = html.cssselect('table#datatable')
+            if not tables or not tables[0].cssselect('tbody tr'):
+                print(f"No data found for {self.year}, trying {self.year-1}")
                 self.year -= 1
-                self.url = f"{self.base_url}?opinion_year={self.year}"
+                params = {"opinion_year": self.year}
+                self.url = urljoin(self.base_url, f"?{urlencode(params)}")
                 return self._download()
         return html
 
     def _process_html(self):
+        """Process the HTML and extract case information"""
+        self.cases = []
+        
         if self.html is None:
             return
-
-        tables = self.html.cssselect("table#datatable")
-        if not tables or not tables[0].cssselect("tbody tr"):
-            return
-
-        logger.info(f"Processing cases for year: {self.year}")
-        for row in tables[0].cssselect("tbody tr"):
-            case_date = datetime.strptime(
-                get_row_column_text(row, 1), "%m/%d/%Y"
-            ).date()
-
-            if self.skip_row_by_date(case_date):
-                continue
-
-            author = get_row_column_text(row, 4)
-            clean_author = self.clean_judge_name(author)
-
-            # Get the lower court abbreviation
-            lower_court_abbr = get_row_column_text(row, 6)
-
-            # Replace abbreviation with full name
-            lower_court_full = self.abbreviation_to_lower_court.get(
-                lower_court_abbr, lower_court_abbr
-            )
-
-            self.cases.append(
-                {
+        
+        tables = self.html.cssselect('table#datatable')
+        if tables and tables[0].cssselect('tbody tr'):
+            rows = tables[0].cssselect('tbody tr')
+            print(f"Found {len(rows)} cases for year {self.year}")
+            
+            for row in rows:
+                status_str = get_row_column_text(row, 7)
+                status = "Published" if "Published" in status_str else "Unpublished"
+                case_date = datetime.strptime(get_row_column_text(row, 1), '%m/%d/%Y').date()
+                
+                # Skip if not in date range
+                if self.is_backscrape and not self.date_is_in_backscrape_range(case_date):
+                    continue
+                if not self.is_backscrape and case_date < self.first_opinion_date:
+                    continue
+                
+                self.cases.append({
                     "date": get_row_column_text(row, 1),
                     "docket": get_row_column_text(row, 2),
                     "name": get_row_column_text(row, 3),
-                    "author": clean_author,
+                    "author": get_row_column_text(row, 4),
                     "disposition": get_row_column_text(row, 5),
-                    "lower_court": lower_court_full,
                     "url": get_row_column_links(row, 8),
-                }
-            )
+                    "status": status,
+                })
 
-    def skip_row_by_date(self, case_date):
-        """Determine if a row should be skipped based on the case date."""
-        # Skip if before first opinion date
-        if case_date < self.first_opinion_date.date():
-            return True
+    def make_backscrape_iterable(self, kwargs):
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
 
-    def clean_judge_name(self, name):
-        """Remove everything after a comma in the judge's name."""
-        return name.split(",")[0].strip()
+        Louisiana's opinions page returns all opinions for a year, so we must
+        filter out opinions not in the date range we are looking for
 
-    def _download_backwards(self, target_year: int) -> None:
-        logger.info(f"Backscraping for date: {target_year}")
-        self.year = target_year
-        self.url = f"{self.base_url}?opinion_year={self.year}"
-
-        # Pagination not required, all the opinions data is sent in the first request
-        self.html = self._download()
-        self._process_html()
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Sets up the back scrape iterable using start and end year arguments.
-
-        :param kwargs: passed when initializing the scraper, may or
-            may not contain backscrape controlling arguments
-        :return: None
+        :return None
         """
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        # Convert start and end to integers, defaulting to the scraper's start and current year
-        start = int(start) if start else self.first_opinion_date.year
-        end = int(end) + 1 if end else datetime.now().year + 1
+        if start:
+            start = datetime.strptime(start, "%Y/%m/%d").date()
+        else:
+            start = self.first_opinion_date
+        if end:
+            end = datetime.strptime(end, "%Y/%m/%d").date()
+        else:
+            end = datetime.now().date()
 
-        # Create a range of years for back scraping
-        self.back_scrape_iterable = range(start, end)
+        self.back_scrape_iterable = [(start, end)]
+
+    def _download_backwards(self, dates):
+        """Called when backscraping
+
+        :param dates: (start_date, end_date) tuple
+        :return None
+        """
+        self.start_date, self.end_date = dates
+        self.is_backscrape = True
+        logger.info(
+            "Backscraping for range %s %s", self.start_date, self.end_date
+        )
+        
+        self.year = self.start_date.year
+        params = {"opinion_year": self.year}
+        self.url = urljoin(self.base_url, f"?{urlencode(params)}")
+        self.html = self._download()
+        self._process_html()
+
+    def date_is_in_backscrape_range(self, case_date):
+        """When backscraping, check if the case date is in
+        the backscraping range
+
+        :param date_str: string date from the HTML source
+        :return: True if date is in backscrape range
+        """
+        return self.start_date <= case_date <= self.end_date
