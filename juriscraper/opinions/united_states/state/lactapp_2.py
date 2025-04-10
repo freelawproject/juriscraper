@@ -126,3 +126,19 @@ class Site(OpinionSiteLinear):
         :return: True if date is in backscrape range
         """
         return self.start_date <= case_date <= self.end_date
+
+    def extract_from_text(self, scraped_text):
+        """Extract lower court information from the text
+        
+        :param scraped_text: The text content of the document
+        :return: Dictionary containing the extracted lower court information
+        """
+        match = re.search(r"Appealed from the\s*(.*?\s*),\s*Louisiana", scraped_text, re.DOTALL)
+        if match:
+            result = re.sub(r'\s+', ' ', match.group(1).replace("\n", " ")).strip()
+            return {
+                "OpinionCluster": {
+                    "lower_court": result
+                },
+            }
+        return {}
