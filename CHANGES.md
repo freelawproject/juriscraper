@@ -12,8 +12,34 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Fix `me` Update maine scraper and add backscraper
 
 ## Current
+
+**2.6.63 - 2024-03-25**
+
+- Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
+- Implement extract from text for `ga` #1349
+- Fix `ill` oral argument scraper #1356
+
+## Past
+
+**2.6.62 - 2024-03-19**
+
+- Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
+- Fix `uscgcoca` citation regex #1351
+
+**2.6.61 - 2024-03-06**
+
+- Fix `ca8` opinion scraper by setting `request.verify = False` #1346
+
+**2.6.60 - 2024-03-05**
+
+- Fix `ca7` scrapers url from http to https
+
+**2.6.59 - 2024-03-04**
+
+- Change `colo` user agent to prevent site block #1341
 
 **2.6.58 - 2024-02-26**
 
@@ -32,7 +58,6 @@ Releases are also tagged in git, if that's helpful.
 - Features
   - Add workflow to check for new entries in CHANGES.md file
 
-## Past
 
 **2.6.56 - 2024-02-19**
 
