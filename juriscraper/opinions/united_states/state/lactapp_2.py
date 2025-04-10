@@ -7,14 +7,17 @@ History:
  - 2025-01-11, giancohs: created
 """
 
-
-
-from datetime import datetime, date
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.html_utils import get_row_column_text, get_row_column_links
-from urllib.parse import urljoin, urlencode
 import re
+from datetime import date, datetime
+from urllib.parse import urlencode, urljoin
+
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import (
+    get_row_column_links,
+    get_row_column_text,
+)
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
@@ -33,10 +36,10 @@ class Site(OpinionSiteLinear):
     def _download(self):
         """Download the page content"""
         html = super()._download()
-        
+
         if html is not None:
-            tables = html.cssselect('table#datatable')
-            if not tables or not tables[0].cssselect('tbody tr'):
+            tables = html.cssselect("table#datatable")
+            if not tables or not tables[0].cssselect("tbody tr"):
                 print(f"No data found for {self.year}, trying {self.year-1}")
                 self.year -= 1
                 params = {"opinion_year": self.year}
@@ -47,35 +50,47 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         """Process the HTML and extract case information"""
         self.cases = []
-        
+
         if self.html is None:
             return
-        
-        tables = self.html.cssselect('table#datatable')
-        if tables and tables[0].cssselect('tbody tr'):
-            rows = tables[0].cssselect('tbody tr')
+
+        tables = self.html.cssselect("table#datatable")
+        if tables and tables[0].cssselect("tbody tr"):
+            rows = tables[0].cssselect("tbody tr")
             print(f"Found {len(rows)} cases for year {self.year}")
-            
+
             for row in rows:
                 status_str = get_row_column_text(row, 7)
-                status = "Published" if "Published" in status_str else "Unpublished"
-                case_date = datetime.strptime(get_row_column_text(row, 1), '%m/%d/%Y').date()
-                
+                status = (
+                    "Published" if "Published" in status_str else "Unpublished"
+                )
+                case_date = datetime.strptime(
+                    get_row_column_text(row, 1), "%m/%d/%Y"
+                ).date()
+
                 # Skip if not in date range
-                if self.is_backscrape and not self.date_is_in_backscrape_range(case_date):
+                if (
+                    self.is_backscrape
+                    and not self.date_is_in_backscrape_range(case_date)
+                ):
                     continue
-                if not self.is_backscrape and case_date < self.first_opinion_date:
+                if (
+                    not self.is_backscrape
+                    and case_date < self.first_opinion_date
+                ):
                     continue
-                
-                self.cases.append({
-                    "date": get_row_column_text(row, 1),
-                    "docket": get_row_column_text(row, 2),
-                    "name": get_row_column_text(row, 3),
-                    "author": get_row_column_text(row, 4),
-                    "disposition": get_row_column_text(row, 5),
-                    "url": get_row_column_links(row, 8),
-                    "status": status,
-                })
+
+                self.cases.append(
+                    {
+                        "date": get_row_column_text(row, 1),
+                        "docket": get_row_column_text(row, 2),
+                        "name": get_row_column_text(row, 3),
+                        "author": get_row_column_text(row, 4),
+                        "disposition": get_row_column_text(row, 5),
+                        "url": get_row_column_links(row, 8),
+                        "status": status,
+                    }
+                )
 
     def make_backscrape_iterable(self, kwargs):
         """Checks if backscrape start and end arguments have been passed
@@ -111,7 +126,7 @@ class Site(OpinionSiteLinear):
         logger.info(
             "Backscraping for range %s %s", self.start_date, self.end_date
         )
-        
+
         self.year = self.start_date.year
         params = {"opinion_year": self.year}
         self.url = urljoin(self.base_url, f"?{urlencode(params)}")
@@ -129,16 +144,20 @@ class Site(OpinionSiteLinear):
 
     def extract_from_text(self, scraped_text):
         """Extract lower court information from the text
-        
+
         :param scraped_text: The text content of the document
         :return: Dictionary containing the extracted lower court information
         """
-        match = re.search(r"Appealed from the\s*(.*?\s*),\s*Louisiana", scraped_text, re.DOTALL)
+        match = re.search(
+            r"Appealed from the\s*(.*?\s*),\s*Louisiana",
+            scraped_text,
+            re.DOTALL,
+        )
         if match:
-            result = re.sub(r'\s+', ' ', match.group(1).replace("\n", " ")).strip()
+            result = re.sub(
+                r"\s+", " ", match.group(1).replace("\n", " ")
+            ).strip()
             return {
-                "OpinionCluster": {
-                    "lower_court": result
-                },
+                "OpinionCluster": {"lower_court": result},
             }
         return {}
