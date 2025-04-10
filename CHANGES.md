@@ -13,6 +13,7 @@ Releases are also tagged in git, if that's helpful.
 ## Coming up
 
 - Fix `me` Update maine scraper and add backscraper
+- Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt`
 
 ## Current
 
