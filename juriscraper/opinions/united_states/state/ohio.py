@@ -130,7 +130,7 @@ class Site(OpinionSiteLinear):
             case = {
                 "docket": docket,
                 "name": name,
-                "judge": judge,
+                "judge": [judge],
                 "per_curiam": per_curiam,
                 "summary": row.xpath(".//td[3]//text()")[0],
                 "date": row.xpath(".//td[6]//text()")[0],
@@ -140,9 +140,9 @@ class Site(OpinionSiteLinear):
             }
 
             if self.court_index == 0:
-                citation = ""
+                citation = []
                 if web_cite not in citation_or_county:
-                    citation = citation_or_county
+                    citation.append(citation_or_county)
                 case["parallel_citation"] = citation
             elif "ohioctapp" in self.court_id:
                 case["lower_court"] = f"{citation_or_county} County Court"

@@ -71,7 +71,7 @@ class Site(OpinionSiteLinear):
         div=""
 
         for row in self.html.xpath(".//p[@id='document']"):
-            pdf_url = "null"
+            pdf_url = ""
             proxy_manager = ProxyManager()
             proxy = proxy_manager.get_random_proxy()
 
@@ -190,7 +190,7 @@ class Site(OpinionSiteLinear):
                                                     pdf_url = base_url + url1
 
                                     else:
-                                        pdf_url = "null"
+                                        pdf_url = ""
                                     print(f"got the pdf url {pdf_url}")
 
                     else:
