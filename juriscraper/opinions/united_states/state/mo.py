@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
                         "date": date,
                         "disposition": vote.split(".")[0].strip(),
                         "author": author,
-                        "judge": vote.split(".", 1)[1].strip(),
+                        "judge": [vote.split(".", 1)[1].strip()],
                     }
                 )
 

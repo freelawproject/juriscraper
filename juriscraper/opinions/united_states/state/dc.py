@@ -54,7 +54,7 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "name": name.strip(),
                     "docket": cleaned_list,
-                    "judge":judge,
+                    "judge":[judge],
                     "disposition":disposition
                 }
             )

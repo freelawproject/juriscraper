@@ -85,7 +85,7 @@ class Site(okla.Site):
                         "date": date,
                         "name": name,
                         "docket": [docket],
-                        "url": "null",
+                        "url": "",
                         "citation": "",
                         "html_url": url,
                         "response_html": div,

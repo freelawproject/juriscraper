@@ -131,7 +131,9 @@ class Site(OpinionSiteLinear):
                 if label == "Citation":
                     citation = p["values"][0]
                     if len(p["values"]) > 1:
-                        parallel_citation = p["values"][1]
+                        parallel_citation = [p["values"][1]]
+                    else:
+                        parallel_citation=[]
             match = re.search(case_pattern, docket_number)
 
             case = {
@@ -141,10 +143,11 @@ class Site(OpinionSiteLinear):
                 "url" : f"https://research.coloradojudicial.gov/pdf/{case_id}",
                 "status": "Published" if citation else "Unknown",
                 "citation": [citation],
-                "parallel_citation": [parallel_citation],
+                "parallel_citation": parallel_citation,
                 "html_url": html_url,
                 "response_html": html_res.text,
             }
+            print(f'case docket is : {case["docket"]} and parallel citation is {parallel_citation}')
 
             self.cases.append(case)
 
@@ -189,8 +192,8 @@ class Site(OpinionSiteLinear):
 
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        # start_date = datetime(2024,10,1)
-        # end_date=datetime(2025,1,1)
+        # start_date = datetime(2025,3,1)
+        # end_date=datetime(2025,3,1)
         logger.info("Crawling between the dates from %s to %s", start_date , end_date)
         # self.parse()
         self._download_backwards((start_date, end_date))
