@@ -12,7 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- Fix `me` Update maine scraper and add backscraper
+- `nh` was blocking; fixed by updating the user agent string #1370
 - Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt`
 
 ## Current
