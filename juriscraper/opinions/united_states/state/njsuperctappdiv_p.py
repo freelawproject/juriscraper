@@ -61,4 +61,4 @@ class Site(nj.Site):
         return "njsuperctappdiv_p"
 
     def get_court_name(self):
-        return "Superior Court, Appellate Division"
+        return "Superior Court of New Jersey, Appellate Division"

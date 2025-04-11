@@ -8,6 +8,9 @@ from typing import Any, Dict, Optional, Tuple
 from urllib.parse import urlencode
 
 from dns.name import empty
+from lxml import html
+import \
+    requests
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
@@ -31,16 +34,14 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         # Empty document
         h1=list(self.html.xpath("//h1"))
-        if(h1.__len__()!=0):
+        if h1.__len__()!=0:
             h1_text=h1[0].text
-            if(h1_text.__eq__('Empty document')):
+            if h1_text.__eq__('Empty document'):
                 self.flag=False
                 return
         rows = self.html.xpath("//div[@class='info']")
         if len(rows) >= 25:
-            logger.info(
-                "25 results for this query, results may be lost in pagination"
-            )
+            logger.info("25 results for this query, results may be lost in pagination")
         for item in rows:
             per_curiam = False
             name = item.xpath(".//a/text()")[0]
@@ -50,6 +51,14 @@ class Site(OpinionSiteLinear):
                 continue
 
             cite = item.xpath(".//*[@class='citation']/text()")
+            docket_url = item.xpath(".//a/@href")[0]+"?iframe=true"
+            response = requests.get(url=docket_url, headers={"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"}, proxies={"http": "p.webshare.io:9999", "https": "p.webshare.io:9999"}, timeout=120)
+            html_tree = self._make_html_tree(response.text)
+            docket=[]
+            docket_data = html_tree.xpath("//tr[td[@class='label' and text()='Docket Number']]/td[@class='metadata']/text()")
+            if list(docket_data).__len__()!=0:
+                docket.append(docket_data[0].strip())
+
             if cite:
                 cite = cite[0]
 
@@ -57,17 +66,20 @@ class Site(OpinionSiteLinear):
                 per_curiam = metadata[0].text_content().strip() == "Per Curiam"
 
             date_filed = item.xpath(".//*[@class='publicationDate']/text()")[0]
-            if(self.cases.__contains__({"date": date_filed,"docket": [],"name": titlecase(name),"citation": [cite],"url": url,"status": "Published","per_curiam": per_curiam})):
+            if self.cases.__contains__({"date": date_filed, "docket": [], "name": titlecase(name), "citation": [cite], "url": url, "status": "Published", "per_curiam": per_curiam}):
                 return
             self.cases.append(
                 {
                     "date": date_filed,
-                    "docket": [],
+                    "docket": docket,
                     "name": titlecase(name),
                     "citation": [cite],
                     "url": url,
                     "status": "Published",
                     "per_curiam": per_curiam,
+                    "html_url":docket_url,
+                    "response_html":response.text
+
                 }
             )
 
@@ -112,11 +124,11 @@ class Site(OpinionSiteLinear):
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         i=1
-        while(self.flag):
+        while self.flag:
             base_url = f"https://opinions.arcourts.gov/ark/en/d/s/{i}/infiniteScroll.do"
             self.set_url(start_date,end_date,base_url)
             self.parse()
-            if(not self.flag):
+            if not self.flag:
                 break
             i = i + 1
             self.downloader_executed=False

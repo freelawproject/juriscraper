@@ -5,6 +5,7 @@
 import re
 from datetime import date, datetime, timedelta
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -16,14 +17,15 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.status = "Published"
         self.back_scrape_iterable = range(2016, 2022)
+        self.court="opinions"
 
-    def _get_url(self, year: int) -> str:
+    def _get_url(self, year: int, type: str) -> str:
         """Generate the GA URL for a given year.
 
         :param year: Year to scrape
         :return: URL for the given year
         """
-        return f"https://www.gasupreme.us/opinions/{year}-opinions/"
+        return f"https://www.gasupreme.us/opinions/{year}-{type}/"
 
     def _process_html(self) -> None:
         for link in self.html.xpath("//li/a[contains(@href, '.pdf')]"):
@@ -40,6 +42,8 @@ class Site(OpinionSiteLinear):
                 continue
             docket = ", ".join(dockets)
             name = title.split(dockets[-1])[-1].strip("., ")
+            if str(name).__eq__(''):
+                continue
             # Expected summary content:
             # - "October 19, 2021—SUMMARIES for NOTEWORTHY OPINIONS"
             # - "July 7, 2021"
@@ -54,6 +58,10 @@ class Site(OpinionSiteLinear):
             date_str = (
                 summary.split("–")[0].split("—")[0].split("-")[0].strip())
             date_summary = datetime.strptime(date_str, "%B %d, %Y")
+            comp_date=date_summary.strftime("%d/%m/%Y")
+            res=CasemineUtil.compare_date(self.crawled_till,comp_date)
+            if res==1:
+                return
             doc_arr = []
             if docket.__contains__(","):
                 doc_arr = docket.split(',')
@@ -80,8 +88,10 @@ class Site(OpinionSiteLinear):
             self._process_html()
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        self.url = self._get_url(start_date.year)
-        self.parse()
+        for year in range(start_date.year, end_date.year+1):
+            self.url = self._get_url(year,self.court)
+            self.parse()
+            self.downloader_executed=False
         return 0
 
     def get_state_name(self):

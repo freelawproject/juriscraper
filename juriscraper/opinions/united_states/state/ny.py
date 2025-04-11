@@ -189,7 +189,7 @@ class Site(OpinionSiteLinear):
                 start_date = request_dict['start_date']
                 end_date = request_dict['end_date']
                 total_days = (end_date - start_date).days
-                divided_days=10
+                divided_days=8
                 segment_length = total_days // divided_days
 
                 custom_html = "<html><head><title>LRB Search Results</title><script language='javascript'>function funcNewWindow(url) {var x;x = window.open(url, 'newwin', 'height=600, width=800, left=25, top=25, resizable, scrollbars=yes, status=1');}</script></head><script type='text/javascript' src='/lawReporting/javascript/validRequest.js'></script><body topmargin=0 leftmargin=0><form name=form><table border=0 width='100%' cellspacing=0 cellpadding=0 align=center><tr><td align=center><br><table border=0 align=center><tr><td align=right>&nbsp;</td><td><font color='#000099' face=arial size=5>Slip Decisions Search Results</font></td></tr><tr><td colspan=2><table border=0><tr><td valign=top><table border=0 cellspacing=1 cellpadding=1><tr bgcolor=#e6e6e6><td><font face=arial size=2><b>Search Criteria</b></font></td></tr><tr><td><font face=arial size=2> &nbsp; &nbsp; Decision Start Date :</font><font face=arial size=2 color=#000099><b>01/01/2024</b></font></td></tr><tr><td><font face=arial size=2> &nbsp; &nbsp; Decision End Date :</font><font face=arial size=2 color=#000099><b>02/01/2024</b></font></td></tr><tr><td><font face=arial size=2> &nbsp; &nbsp; Court :</font><font face=arial size=2 color=#000099><b>App Div, 1st Dept</b></font></td></tr></table></td></tr></table><br><table border=0 width='100%' cellspacing=1 cellpadding=1><tr><td><font face=arial size=2><b>Total number of records found: 229</b>&nbsp; &nbsp;&nbsp; &nbsp;</font></td></tr><tr><td colspan=4 align=center><input type=button name=again value='Search Again'onclick='history.back()'> <input type=button name=cancelvalue='Home Page'onclick=location.href='http://www.nycourts.gov/reporter/'><br><br></td></tr><tr><td><table></table></td></tr></table></td></tr></table></td></tr></table></form></body></html>"
@@ -304,20 +304,26 @@ class Site(OpinionSiteLinear):
         obj_id = str(objectId)
         download_pdf_path = os.path.join(path, f"{obj_id}.pdf")
         os.makedirs(path, exist_ok=True)
+
+        # Create a temporary download directory
+        temp_download_dir = os.path.join(os.path.expanduser("~"), "Downloads", "temp_pdf_downloads")
+        os.makedirs(temp_download_dir, exist_ok=True)
+
         try:
             if str(pdf_url).endswith(".htm") or str(pdf_url).endswith(".html"):
                 options = webdriver.ChromeOptions()
                 options.add_argument("--no-sandbox")
                 options.add_argument("--headless")
                 options.add_argument("--disable-dev-shm-usage")
-                options.add_argument(
-                    "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
-                options.add_argument(
-                    "--disable-blink-features=AutomationControlled")
+                options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
+                options.add_argument("--disable-blink-features=AutomationControlled")
+
+                # Use proxy as required
                 proxy = "http://p.webshare.io:9999"  # Replace with your proxy
                 options.add_argument(f"--proxy-server={proxy}")
+
                 # Create a WebDriver instance
-                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
+                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
                 driver.get(pdf_url)
                 driver_content = driver.page_source
                 if driver_content.__contains__('Sorry, but the page you requested') and driver_content.__contains__('We apologize for any inconvenience this may have caused you.'):
@@ -331,25 +337,25 @@ class Site(OpinionSiteLinear):
 
                 # Find all anchor tags and remove the href attribute
                 for tag in soup.find_all('a'):
-                    del tag['href']
+                    del \
+                    tag[
+                        'href']
 
                 # Find all <p> tags and remove the ones that are empty
                 for p in soup.find_all('p'):
-                    if not p.get_text(
-                        strip=True):  # Check if the <p> tag is empty or contains only whitespace
+                    if not p.get_text(strip=True):  # Check if the <p> tag is empty or contains only whitespace
                         p.decompose()  # Remove the <p> tag
 
                 # Print the modified HTML
                 modified_html = soup.prettify()
                 pdfkit.from_string(modified_html, download_pdf_path)
-                update_query.__setitem__("response_html",modified_html)
+                update_query.__setitem__("response_html", modified_html)
                 update_query.__setitem__("processed", 0)
-                self.judgements_collection.update_one({'_id': objectId},{'$set': update_query})
+                self.judgements_collection.update_one({'_id': objectId}, {'$set': update_query})
+                driver.quit()
 
             elif str(pdf_url).endswith(".pdf"):
-                download_dir = '/home/gaugedata/Downloads/us/juriscraper/new york/pdfs'  # Update with your desired directory
-                if not os.path.exists(download_dir):
-                    os.makedirs(download_dir)
+                # Use a more reliable approach for PDF downloads
                 options = webdriver.ChromeOptions()
                 options.add_argument("--no-sandbox")
                 options.add_argument("--headless")
@@ -359,31 +365,69 @@ class Site(OpinionSiteLinear):
                 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
                 options.add_argument("--disable-blink-features=AutomationControlled")
 
+                # Use proxy as required
                 proxy = "http://p.webshare.io:9999"  # Replace with your proxy
                 options.add_argument(f"--proxy-server={proxy}")
+
                 # Set preferences for downloading PDFs automatically without a prompt
-                prefs = {"download.default_directory": download_dir,
-                    "download.prompt_for_download": False,
-                    "download.directory_upgrade": True,
-                    "plugins.always_open_pdf_externally": True
-                }
+                prefs = {
+                    "download.default_directory": temp_download_dir, "download.prompt_for_download": False, "download.directory_upgrade": True, "plugins.always_open_pdf_externally": True, "safebrowsing.enabled": True}
                 options.add_experimental_option("prefs", prefs)
-                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
-                # Navigate to the PDF URL
-                driver.get(pdf_url)
-                time.sleep(5)  # Adjust this time based on the file size and download speed
-                # Close the browser
-                driver.quit()
-                src_path = download_dir + "/" + pdf_url.split('/')[-1]
-                shutil.move(src_path, download_pdf_path)
-                update_query.__setitem__("processed", 0)
-                self.judgements_collection.update_one({'_id': objectId},{'$set': update_query})
+
+                # Create a WebDriver instance
+                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+                try:
+                    # Navigate to the PDF URL
+                    print(f"Attempting to download PDF from: {pdf_url}")
+                    driver.get(pdf_url)
+
+                    # Wait for download to complete (up to 30 seconds)
+                    max_wait = 30
+                    wait_time = 0
+                    pdf_filename = \
+                    pdf_url.split('/')[
+                        -1]
+                    expected_file = os.path.join(temp_download_dir, pdf_filename)
+
+                    while not os.path.exists(expected_file) and wait_time < max_wait:
+                        time.sleep(1)
+                        wait_time += 1
+                        print(f"Waiting for download to complete... {wait_time}s")
+
+                    if os.path.exists(expected_file):
+                        # Move the file to the final destination
+                        shutil.move(expected_file, download_pdf_path)
+                        print(f"PDF successfully downloaded to: {download_pdf_path}")
+                        update_query.__setitem__("processed", 0)
+                        self.judgements_collection.update_one({'_id': objectId}, {'$set': update_query})
+                    else:
+                        # Try direct download with requests as fallback, still using proxy
+                        print("Selenium download failed, trying direct download with requests...")
+                        proxies = {
+                            "http": "http://p.webshare.io:9999", "https": "http://p.webshare.io:9999"}
+                        response = requests.get(pdf_url, stream=True, proxies=proxies)
+                        if response.status_code == 200:
+                            with open(download_pdf_path, 'wb') as f:
+                                for chunk in response.iter_content(chunk_size=8192):
+                                    if chunk:
+                                        f.write(chunk)
+                            print(f"PDF successfully downloaded with requests to: {download_pdf_path}")
+                            update_query.__setitem__("processed", 0)
+                            self.judgements_collection.update_one({'_id': objectId}, {'$set': update_query})
+                        else:
+                            raise Exception(f"Failed to download PDF. Status code: {response.status_code}")
+                finally:
+                    driver.quit()
             else:
-                print("Invalid pdf extension")
+                print(f"Invalid pdf extension: {pdf_url}")
+                raise Exception(f"Invalid pdf extension: {pdf_url}")
         except Exception as e:
             print(f"Error while downloading the PDF: {e}")
             update_query.__setitem__("processed", 2)
             self.judgements_collection.update_one({"_id": objectId}, {"$set": update_query})
+            # If there was an error, return None to indicate failure
+            return None
         return download_pdf_path
 
     def set_selenium_driver(self):
@@ -416,8 +460,8 @@ class Site(OpinionSiteLinear):
         return driver
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        start_date=datetime(2024,1,1)
-        end_date=datetime(2024,7,31)
+        # start_date=datetime(2024,1,1)
+        # end_date=datetime(2024,7,31)
         dates = (start_date, end_date)
         print(dates)
         self._download_backwards(dates)

@@ -71,7 +71,7 @@ for opinion in site:
         # required
         'title' : check_none(opinion.get('case_names')),
         'pdf_url': check_none(opinion.get('download_urls')),
-        'date': opinion_date,
+        'date': datetime.strptime(opinion_date,"%d/%m/%Y"),
         'case_status': check_none(opinion.get('precedential_statuses')),
         'docket': docket,
         # optional
@@ -100,6 +100,8 @@ for opinion in site:
         'blocked_statuses': check_none(opinion.get('blocked_statuses')),
         'case_name_shorts': check_none(opinion.get('case_name_shorts')),
         'opinion_type': check_none(opinion.get('opinion_types')),
+        'html_url':check_none(opinion.get('html_urls')),
+        'response_html': check_none(opinion.get('response_htmls')),
         # additional
         'crawledAt': datetime.now(),
         'processed': 333,

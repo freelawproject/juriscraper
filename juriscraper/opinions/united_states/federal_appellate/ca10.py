@@ -126,7 +126,7 @@ class Site(OpinionSiteLinear):
         return "ca10"
 
     def get_court_name(self):
-        return 'United States Court of Appeals For the Tenth Circuit'
+        return 'Court of Appeals for the Tenth Circuit'
 
     def get_court_type(self):
         return 'Federal'

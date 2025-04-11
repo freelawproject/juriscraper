@@ -8,6 +8,7 @@ from typing import Optional, Tuple
 from bs4 import BeautifulSoup
 from lxml import html
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -55,13 +56,16 @@ class Site(OpinionSiteLinear):
             new_doc = []
             for i in doc_arr:
                 new_doc.append(i.strip())
-
+            curr_date = cells[0].text_content().strip()
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             self.cases.append(
                 {
                     "url": url[0],
                     "docket": new_doc,
                     "name": name,
-                    "date": cells[0].text_content().strip(),
+                    "date": curr_date,
                     "status": self.status,
                 }
             )

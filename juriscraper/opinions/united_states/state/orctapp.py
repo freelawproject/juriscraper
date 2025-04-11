@@ -191,7 +191,7 @@ class Site(OpinionSiteLinear):
         return len(self.cases)
 
     def get_court_name(self):
-        return "Court of Appeals"
+        return "Oregon Court of Appeals"
 
     def get_court_type(self):
         return "state"

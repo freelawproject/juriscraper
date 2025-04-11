@@ -53,7 +53,7 @@ class Site(OpinionSiteLinear):
         while flag:
             self.method = "POST"
             if not self.test_mode_enabled():
-                if (self.url == "https://kscourts.gov/Cases-Decisions/Decisions"):
+                if self.url == "https://kscourts.gov/Cases-Decisions/Decisions":
                     self._update_parameters(page)
                     self.html = self._download_again()
             for row in self.html.xpath(".//tr"):

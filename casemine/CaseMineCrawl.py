@@ -195,7 +195,7 @@ class CaseMineCrawl:
         except requests.RequestException as e:
             print(f"Error while downloading the PDF: {e}")
             self.judgements_collection.update_many({"_id": objectId}, {
-                "$set": {"processed": 2, "content": ""}})
+                "$set": {"processed": 2}})
         return download_pdf_path
 
     @abstractmethod

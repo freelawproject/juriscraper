@@ -5,6 +5,7 @@ from datetime import datetime
 import requests
 from lxml import html
 
+from casemine.casemine_util import CasemineUtil
 from casemine.constants import MAIN_PDF_PATH
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -19,6 +20,10 @@ class Site(OpinionSiteLinear):
         for row in rows:
             # print(html.tostring(row,pretty_print=True).decode())
             date = row.xpath("string(./td[1])")
+            curr_date = datetime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             docket_title = html.tostring(row.xpath("./td[2]")[0],
                                          pretty_print=True).decode().replace(
                 "<td>", "").replace("</td>", "").split("<br>")
@@ -54,7 +59,7 @@ class Site(OpinionSiteLinear):
         return "dc_dist"
 
     def get_court_name(self):
-        return 'District Court'
+        return 'United States District Court, District of Columbia Circuit'
 
     def get_court_type(self):
         return 'Federal'
@@ -67,7 +72,7 @@ class Site(OpinionSiteLinear):
         year = int(data.__getitem__('year'))
         court_name = data.get('court_name')
         court_type = data.get('court_type')
-        state_name = data.get('state')
+        state_name = data.get('circuit')
         opinion_type = data.get('opinion_type')
 
         path = MAIN_PDF_PATH + court_type + "/" + state_name + "/" + court_name + "/" + str(year)

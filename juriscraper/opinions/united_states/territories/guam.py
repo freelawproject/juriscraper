@@ -96,7 +96,7 @@ class Site(OpinionSiteLinear):
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         self.url = "https://guamcourts.org/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
-        for year in range(2019, end_date.year + 1):
+        for year in range(start_date.year, end_date.year + 1):
             self._year = year
             self.parameters = {"Year": str(self._year)}
             self.method = "POST"

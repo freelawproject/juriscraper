@@ -43,10 +43,6 @@ class Site(OpinionSiteLinear):
 
             date_str = row.xpath(".//td[3]/text()")[0].strip()
 
-            date_obj = datetime.strptime(date_str, "%b %d, %Y")
-
-            # Format the date in the desired format
-            formatted_date = date_obj.strftime("%d/%m/%Y")
             result = re.split(r'[,&]\s*', docket)
 
             disposition = row.xpath(".//td[4]/text()")[0].strip()
@@ -54,7 +50,7 @@ class Site(OpinionSiteLinear):
             cleaned_list = [item.strip() for item in result]
             self.cases.append(
                 {
-                    "date": formatted_date,
+                    "date": date_str,
                     "url": url,
                     "name": name.strip(),
                     "docket": cleaned_list,
@@ -115,7 +111,7 @@ class Site(OpinionSiteLinear):
         return "dc"
 
     def get_court_name(self):
-        return "Court Of Appeals"
+        return "District of Columbia Court of Appeals"
 
     def get_state_name(self):
         return "District Of Columbia"
