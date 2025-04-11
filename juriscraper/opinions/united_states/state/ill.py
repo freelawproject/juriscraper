@@ -17,6 +17,7 @@ from typing import Tuple
 
 from lxml import html
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (get_row_column_links,
                                         get_row_column_text, )
@@ -76,6 +77,11 @@ class Site(OpinionSiteLinear):
             name = get_row_column_text(row, 1)
             citation = get_row_column_text(row, 2)
             date_filed = get_row_column_text(row, 3)
+
+            date_obj = datetime.strptime(date_filed, '%m/%d/%Y').strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, date_obj)
+            if res == -1:
+                return
             match = re.search(self.docket_re, citation)
             try:
                 url = get_row_column_links(row, 1)

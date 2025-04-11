@@ -44,7 +44,7 @@ class Site(ny.Site):
         return metadata
 
     def get_court_name(self):
-        return "Supreme Court, Appellate Term, First Department"
+        return "Supreme Court, Appellate Term, First Department, New York"
 
     def get_class_name(self):
         return 'nyappterm_1st'

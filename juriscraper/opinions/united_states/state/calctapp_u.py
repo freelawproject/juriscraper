@@ -12,4 +12,4 @@ class Site(cal.Site):
         return "calctapp_u"
 
     def get_court_name(self):
-        return "California Court of Appeals unpublished"
+        return "California Court of Appeals"

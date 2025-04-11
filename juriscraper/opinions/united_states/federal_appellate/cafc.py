@@ -154,6 +154,20 @@ class Site(OpinionSiteLinear):
             self.downloader_executed = False
         return 0
 
+    def _request_url_post(self, url):
+        """Execute POST request and assign appropriate request dictionary values"""
+        self.request["url"] = url
+        self.request["response"] = self.request["session"].post(
+            url,
+            headers=self.request["headers"],
+            verify=False,
+            data=self.parameters,
+            proxies=self.proxies,
+            timeout=60,
+            **self.request["parameters"],
+        )
+
+
     def get_class_name(self):
         return "cafc"
 

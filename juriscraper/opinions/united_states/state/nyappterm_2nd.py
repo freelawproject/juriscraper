@@ -15,7 +15,7 @@ class Site(nyappterm_1st.Site):
         self.parameters.update({"court": self.court})
 
     def get_court_name(self):
-        return "Supreme Court, Appellate Term, Second Department"
+        return "Supreme Court, Appellate Term, Second Department, New York"
 
     def get_class_name(self):
         return 'nyappterm_2nd'

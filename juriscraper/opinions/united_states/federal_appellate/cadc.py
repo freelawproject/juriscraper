@@ -88,7 +88,7 @@ class Site(OpinionSite):
         return "cadc"
 
     def get_court_name(self):
-        return 'Court of Appeals'
+        return 'United States Court of Appeals, District of Columbia Circuit'
 
     def get_court_type(self):
         return 'Federal'
@@ -101,7 +101,7 @@ class Site(OpinionSite):
         year = int(data.__getitem__('year'))
         court_name = data.get('court_name')
         court_type = data.get('court_type')
-        state_name = data.get('state')
+        state_name = data.get('circuit')
         opinion_type = data.get('opinion_type')
 
         path = MAIN_PDF_PATH + court_type + "/" + state_name + "/" + court_name + "/" + str(

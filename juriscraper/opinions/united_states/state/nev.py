@@ -135,7 +135,7 @@ class Site(OpinionSiteLinear):
         return "nev"
 
     def get_court_name(self):
-        return "Supreme Court"
+        return "Supreme Court of Nevada"
 
     def get_state_name(self):
         return "Nevada"

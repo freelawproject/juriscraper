@@ -30,4 +30,4 @@ class Site(nev.Site):
         return "nevapp"
 
     def get_court_name(self):
-        return "Court of Appeals"
+        return "Nevada Court of Appeals"

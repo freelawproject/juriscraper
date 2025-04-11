@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
         return "ca9_p"
 
     def get_court_name(self):
-        return 'United States Court Of Appeals For The Ninth Circuit'
+        return 'Court of Appeal for the Ninth Circuit'
 
     def get_court_type(self):
         return 'Federal'
