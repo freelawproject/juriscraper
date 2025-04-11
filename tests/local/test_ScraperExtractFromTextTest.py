@@ -749,6 +749,17 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.lactapp_2": [
+            (
+                #https://www.la2nd.org/wp-content/uploads/2025/04/56139-40ca.pdf,
+                "                            Appealed from the\n                   Fourth Judicial District Court for the\n                       Parish of Ouachita, Louisiana\n                Trial Court Nos. 2015-3872 and 2024-2434\n\n                    Honorable Wilson Rambo, Judge\n\n                                ",
+                {
+                    "OpinionCluster": {
+                        "lower_court": "Fourth Judicial District Court for the Parish of Ouachita"
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
