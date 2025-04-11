@@ -12,7 +12,7 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
-- N/A
+- New scraper `lactapp_2` for Lousiana Court of Appeals, Second Circuit
 
 ## Current
 
