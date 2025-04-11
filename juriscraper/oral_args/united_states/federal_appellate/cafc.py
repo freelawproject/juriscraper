@@ -26,7 +26,16 @@ class Site(OralArgumentSiteLinear):
         self.expected_content_types = ["audio/mpeg3"]
         self.url = "https://www.cafc.uscourts.gov/home/oral-argument/listen-to-oral-arguments/"
         self.data_url = "https://www.cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=8"
-        self.request["verify"] = False
+        self.needs_special_headers = True
+        self.request.update(
+            {
+                "verify": False,
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+                },
+            }
+        )
+
         self.start_date = None
         self.end_date = None
         self.make_backscrape_iterable(kwargs)
