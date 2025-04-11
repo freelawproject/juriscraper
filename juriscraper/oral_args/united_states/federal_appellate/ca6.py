@@ -7,108 +7,67 @@ Reviewer: None
 History:
   2014-11-06: Started by Brian W. Carver and wrapped up by mlr.
   2016-06-30: Updated by mlr.
+  2025-01-21: Updated to OralArgumentSiteLinear by grossir
 """
 
 import re
-from datetime import datetime
-from urllib.parse import parse_qs, urljoin, urlparse
+from datetime import date, datetime
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
+    days_interval = 10000  # force a single interval
+    first_opinion_date = datetime(2012, 12, 1)
+    # check the first 100 records; Otherwise, it will try to download more
+    # than 1000 every time
+    limit = 100
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
-            "http://www.opn.ca6.uscourts.gov/internet/court_audio/aud1.php"
+            "https://www.opn.ca6.uscourts.gov/internet/court_audio/aud1.php"
         )
-        self.xpath_root = '//table[@class="views-table cols-3"]'
-        self.regex = re.compile(r"((?:\d{2}[- ]\d{4}\s*)+)(.*)")
-        self.back_scrape_iterable = [
-            "nothing"
-        ]  # Just a placeholder for this court
-        self.backscrape = False
+        self.make_backscrape_iterable(kwargs)
 
-    def _get_download_urls(self):
-        """Two options are currently provided by the site. The first is a link
-        to "save" the file, which gives you a zip containing the file. The
-        second is a link to "play" the file, which takes you to a flash player.
+    def _process_html(self) -> None:
+        """All parsable fields are contained in the URL
 
-        The good news is that the link to "play" it contains a real link to
-        actually download it inside the 'link' param.
+        Parsing the URL helps simplifying the backscraper which has a different
+        HTML structure than the regular page
         """
-        if self.backscrape:
-            path_to_flash_page = '//tr/td[3]/a/@href[contains(., "?link=")]'
-        else:
-            path_to_flash_page = '//tr/td[2]/a/@href[contains(., "?link=")]'
-        links_to_flash = list(self.html.xpath(path_to_flash_page))
-        urls = []
-        for url in links_to_flash:
-            path = parse_qs(urlparse(url).query)["link"][0]
-            # Remove newlines and line returns from urls.
-            path = path.replace("\n", "").replace("\r", "")
+        for link in self.html.xpath("//a[text()='Play']/@href")[: self.limit]:
+            *_, date_str, case = link.split("/")
+            docket_match = re.search(r"(\d{2}-\d{4}\s?)+", case)
+            if not docket_match:
+                logger.warning("Skipping row %s", link)
+                continue
 
-            if "www.opn" not in url:
-                # Update the URL if it's not the one we want.
-                url = url.replace("www", "www.opn")
-            urls.append(urljoin(url, path))
-        return urls
+            docket = docket_match.group(0).strip()
+            name = case[docket_match.end() : case.find(".mp3")].strip()
+            self.cases.append(
+                {
+                    "docket": docket,
+                    "name": name,
+                    "url": link,
+                    "date": date_str.rsplit("-", 1)[0].strip(),
+                }
+            )
 
-    def _get_case_names(self):
-        if self.backscrape:
-            path = f"{self.xpath_root}//td[2]/text()"
-        else:
-            path = f"{self.xpath_root}/tr/td[1]/text()"
-        case_names = []
-        for s in self.html.xpath(path):
-            case_names.append(self.regex.search(s).group(2))
-        return case_names
-
-    def _get_case_dates(self):
-        dates = []
-        if self.backscrape:
-            date_strs = self.html.xpath("//table//td[1]//text()")
-            return [convert_date_string(s) for s in date_strs]
-        else:
-            # Multiple items are listed under a single date.
-            date_path = ".//th[1]"
-            # For every table full of OA's...
-            for table in self.html.xpath(self.xpath_root):
-                # Find the date str, e.g. "10-10-2014 - Friday"
-                date_str = table.xpath(date_path)[0].text_content()
-                d = datetime.strptime(date_str[:10], "%m-%d-%Y").date()
-
-                # The count of OAs on a date is the number of rows minus the
-                # header row.
-                total_rows = len(table.xpath(".//tr")) - 1
-                dates.extend([d] * total_rows)
-            return dates
-
-    def _get_docket_numbers(self):
-        if self.backscrape:
-            path = f"{self.xpath_root}//td[2]/text()"
-        else:
-            path = f"{self.xpath_root}/tr/td[1]/text()"
-        return [
-            self.regex.search(s).group(1).strip().replace(" ", "-")
-            for s in self.html.xpath(path)
-        ]
-
-    def _download_backwards(self, _):
-        """You can get everything with a single POST, thus we just ignore the
-        back_scrape_iterable.
-        """
-        self.backscrape = True
+    def _download_backwards(self, dates: tuple[date]) -> None:
+        """Downloads and parses older records according to input dates"""
+        logger.info("Backscraping for range %s", *dates)
+        self.limit = 10000  # disable limit
         self.method = "POST"
-        self.xpath_root = "//table"
-        self.url = "http://www.opn.ca6.uscourts.gov/internet/court_audio/audSearchRes.php"
+        self.url = "https://www.opn.ca6.uscourts.gov/internet/court_audio/audSearchRes.php"
         self.parameters = {
             "caseNumber": "",
             "shortTitle": "",
-            "dateFrom": "01/01/2013",
-            "dateTo": "01/01/2015",
+            "dateFrom": dates[0].strftime("%m/%d/%y"),
+            "dateTo": dates[1].strftime("%m/%d/%y"),
             "Submit": "Submit+Query",
         }
         self.html = self._download()
+        self._process_html()

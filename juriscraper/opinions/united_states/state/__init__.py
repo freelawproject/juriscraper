@@ -77,7 +77,7 @@ __all__ = [
     # that. It will also be worth considering whether the scraper itself
     # should be re-written to scrape CourtListener's API instead of the
     # court's website.
-    # "me",
+    "me",
     "mesuperct",
     "mich",
     "michctapp",

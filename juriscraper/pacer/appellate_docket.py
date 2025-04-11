@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional
 
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
+from requests import Response
 
 from ..lib.judge_parsers import normalize_judge_string
 from ..lib.log_tools import make_default_logger
@@ -260,13 +261,16 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super().parse()
 
-    def download_pdf(self, pacer_doc_id, pacer_case_id=None):
+    def download_pdf(
+        self, pacer_doc_id, pacer_case_id=None
+    ) -> tuple[Optional[Response], str]:
         """Download a PDF from an appellate court.
 
         :param pacer_case_id: The case ID for the docket
         :param pacer_doc_id: The document ID for the item.
-        :return: request.Response object containing the PDF, if one can be
-        found, else returns None.
+        :return: A tuple of the request.Response object containing a PDF, if
+        one can be found (is not sealed, gone, etc.). And a string indicating
+        the error message, if there is one or else an empty string.
 
         This is a functional curl command to get a PDF (though the cookies have
         been changed to protect the innocent):
@@ -325,14 +329,23 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         )
         r = self.session.get(self.url, params=query_params)
         r.raise_for_status()
-        if is_pdf(r):
-            logger.info(
-                "Got PDF binary data for document #%s in court %s",
-                pacer_doc_id,
-                self.court_id,
+
+        if b"Documents are attached to this filing" in r.content:
+            error_message = (
+                "Unable to download PDF. "
+                "An attachment page was returned instead."
             )
-            return r
-        return None
+            return None, error_message
+
+        if not is_pdf(r):
+            return None, "Unable to download PDF."
+
+        logger.info(
+            "Got PDF binary data for document #%s in court %s",
+            pacer_doc_id,
+            self.court_id,
+        )
+        return r, ""
 
     @property
     def metadata(self):
@@ -344,7 +357,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_tail_by_regex("Docket #|Case Number"),
+            "docket_number": self._parse_docket_number(),
             "case_name": self._get_case_name(),
             "panel": self._get_panel(),
             "nature_of_suit": self._get_tail_by_regex("Nature of Suit"),
@@ -463,6 +476,32 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         attorney["roles"] = roles
         attorney["contact"] = "\n".join(contacts)
         return attorney
+
+    def _parse_docket_number(self) -> str:
+        """Parse the docket_number from the appellate report.
+        :return: The docket_number.
+        """
+
+        docket_number_regex = "Docket #|Case Number"
+        # Try to parse docket_number first using _get_tail_by_regex.
+        if docket_number := self._get_tail_by_regex(docket_number_regex):
+            return docket_number
+
+        # If that doesn't work, fall back to parsing the docket_number wrapped
+        # in a "tel:" href.
+        nodes = self.tree.re_xpath(
+            f'//*[re:match(text(), "{docket_number_regex}")]'
+        )
+        if not nodes:
+            return ""
+
+        a_node = nodes[0].xpath(
+            "following-sibling::a[starts-with(@href, 'tel:')][1]"
+        )
+        if a_node and a_node[0].text:
+            return clean_string(a_node[0].text)
+
+        return ""
 
     @property
     def parties(self):

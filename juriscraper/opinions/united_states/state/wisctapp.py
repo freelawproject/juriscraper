@@ -10,9 +10,7 @@ class Site(wis.Site):
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/other/appeals/caopin.jsp"
         self.set_url()
-        self.cite_regex = (
-            r"(?P<volume>20\d{2})\s(?P<reporter>WI App)\s(?P<page>\d+)"
-        )
+        self.cite_regex = r"20\d{2}\sWI App\s\d+"
 
     def combine_opinions(self, url: str, docket_number: str) -> bool:
         """Combine duplicate opinions in self.cases
