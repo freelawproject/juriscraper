@@ -17,13 +17,24 @@ Releases are also tagged in git, if that's helpful.
 
 ## Current
 
+**2.6.65 - 2024-04-11**
+
+- `nh` was blocking; fixed by updating the user agent string #1370
+- Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt` #1150
+
+## Past
+
+**2.6.64 - 2024-04-10**
+
+- Fix `me` Update maine scraper and add backscraper #1360
+- Sites were blocking `cafc` scrapers. Fixed by passing a browser user agent #1366
+
+
 **2.6.63 - 2024-03-25**
 
 - Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
 - Implement extract from text for `ga` #1349
 - Fix `ill` oral argument scraper #1356
-
-## Past
 
 **2.6.62 - 2024-03-19**
 
