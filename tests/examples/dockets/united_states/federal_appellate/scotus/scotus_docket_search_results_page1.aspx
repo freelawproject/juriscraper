@@ -10,10 +10,10 @@
         <link rel="Stylesheet" type="text/css" href="/css/bootstrap.min.css" />
         <link rel="Stylesheet" type="text/css" href="/css/bootstrap-theme.min.css" />
         <link rel="stylesheet" type="text/css" href="/styles/newBootStrap2.css" />
-    
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-   
+
         <!--[if lt IE 9]>
           <script src="/js/html5shiv.js"></script>
           <script src="/js/respond.min.js"></script>
@@ -22,12 +22,12 @@
         <!--[if lt IE 8]>
           <link rel="stylesheet" type="text/css" href="css/bootstrap-ie7.css">
         <![endif]-->
-    
-    
+
+
     <meta name="title" content="Docket" />
     <meta name="created" content='7/13/2017 10:34:50 AM' />
     <meta name="revised" content='1/3/2024 2:22:36 PM' />
-    <meta name="keywords" content="Supreme Court of the United States, Supreme Court, Supreme Court of US, Supremecourt, 
+    <meta name="keywords" content="Supreme Court of the United States, Supreme Court, Supreme Court of US, Supremecourt,
     United State Supreme Court, US Supreme Court, U.S. Supreme Court, Court, Docket, case, tracking system,
     track, Delivery of Documents, Delivery" />
 
@@ -113,7 +113,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                     </div>
                     <div id="searchbox" class="col-md-6 col-sm-6 col-xs-12" style="font-size: 9pt; padding: 20px 0 20px 0;">
                         <div id="ctl00_ctl00_pnlSearch">
-	
+
                             <table style="width: 100%;">
                                 <tr>
                                     <td>
@@ -134,11 +134,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                                     </td>
                                 </tr>
                             </table>
-                        
+
 </div>
                     </div>
                 <div class="text-right" style="margin-right:20px;">
-                    
+
                     <div id="searchboxheader" style="padding: 20px;">
                         <a style="color: #fff;" onclick="toggleSearchshow(); return false;" title="Search"><i class="fa fa-search" style="font-size: 18pt;"></i> Search</a>
                     </div>
@@ -151,14 +151,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
         <nav class="navbar navbar-inverse" role="navigation">
             <div class="container">
                     <!-- menu starts here -->
-                    
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button> 
+            </button>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -200,7 +200,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                             <li><a id="ctl00_ctl00_wucNewMenu1_HyperLink67" href="../orders/ordersbycircuit.aspx">Orders by Circuit</a></li>
                             <li><a id="ctl00_ctl00_wucNewMenu1_HyperLink68" href="../orders/grantednotedlists.aspx">Granted/Noted Cases List</a></li>
                             <li><a id="ctl00_ctl00_wucNewMenu1_HyperLink39" href="../orders/journal.aspx">Journal</a></li>
-                            
+
                         </ul>
                 </li>
                 <li class="dropdown">
@@ -208,7 +208,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                     <ul class="dropdown-menu">
                         <li><a id="ctl00_ctl00_wucNewMenu1_HyperlinkServices" href="../publicinfo/PIOServices.pdf" target="_blank">Services for News Media</a></li>
                         <li><a id="ctl00_ctl00_wucNewMenu1_Hyperlink57" href="../publicinfo/press/pressreleases.aspx">Press Releases</a></li>
-                        <li><a id="ctl00_ctl00_wucNewMenu1_Hyperlink58" href="../publicinfo/media/mediaadvisories.aspx">Media Advisories</a></li>                
+                        <li><a id="ctl00_ctl00_wucNewMenu1_Hyperlink58" href="../publicinfo/media/mediaadvisories.aspx">Media Advisories</a></li>
                         <li><a id="ctl00_ctl00_wucNewMenu1_Hyperlink61" href="../publicinfo/press/presscredentials.aspx">Press Credentials</a></li>
                         <li><a id="ctl00_ctl00_wucNewMenu1_Hyperlink59" href="../publicinfo/speeches/speeches.aspx">Speeches</a></li>
                         <li><a id="ctl00_ctl00_wucNewMenu1_Hyperlink62" href="../publicinfo/reportersguide.pdf" target="_blank">A Reporter's Guide to Applications</a></li>
@@ -237,7 +237,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
 
                     <!-- menu ends here -->
             </div>
-        </nav> 
+        </nav>
     </div>
 
     <div id="subheader">
@@ -251,49 +251,49 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
     </div>
     <div class="container">
         <span id="ctl00_ctl00_lbltemp"></span><br />
-        
+
     <div class="col-md-3" style="padding-top: 20px;">
         <div id="sidenavheader">
             <button class="btn btn-default" onclick="toggleMenushow(); return false;" title="Section Menu"><i class="fa fa-bars" style="font-size: 14pt;"></i></button>
         </div>
         <div id="sidenavbody">
             <div id="ctl00_ctl00_MainEditable_pnlsidemenu">
-	
-                
+
+
 <ul class="sidenav-list">
     <li><a id="ctl00_ctl00_MainEditable_sidenavContent_ctl00_hypdocket" class="list_current" href="docket.aspx">Docket Search</a></li>
     <li><a id="ctl00_ctl00_MainEditable_sidenavContent_ctl00_hypOrdersOfCourt" href="../orders/ordersofthecourt/23">Orders of the Court</a></li>
     <li><a id="ctl00_ctl00_MainEditable_sidenavContent_ctl00_hypOrderbyCircuit" href="../orders/ordersbycircuit.aspx">Orders by Circuit</a></li>
     <li><a id="ctl00_ctl00_MainEditable_sidenavContent_ctl00_hypGrantedNoted" href="../orders/grantednotedlists.aspx">Granted/Noted Cases List</a></li>
     <li><a id="ctl00_ctl00_MainEditable_sidenavContent_ctl00_hypJournal" href="../orders/journal.aspx">Journal</a></li>
-    
+
 </ul>
-            
+
 </div>
         </div>
     </div>
-    
+
     <div id="pagemaindiv" class="col-md-9">
-		
+
 
     <div id="pagetitle" style="color: #9c2426;">
         <h3><b>Docket Search</b></h3>
     </div>
     <br />
-    <p>The Supreme Court&rsquo;s docket system contains information about cases, both pending and decided, that have been filed at the Court. The docket provided 
+    <p>The Supreme Court&rsquo;s docket system contains information about cases, both pending and decided, that have been filed at the Court. The docket provided
         here contains complete information regarding the status of cases filed since the beginning of the 2001 Term.</p>
 
-    <p>Users can search for the docket in a particular case by using a Supreme Court docket number, a case name, or other words or numbers included on a docket 
+    <p>Users can search for the docket in a particular case by using a Supreme Court docket number, a case name, or other words or numbers included on a docket
         report. The format for Supreme Court docket numbers is "Term year-number" (e.g., 21-471; 22-5301).</p>
 
-	 <p>Users can also sign up to receive email notifications of activity in pending cases. To do so, visit the docket page for an individual case and click on 
-		the envelope icon that is just above the case number. You will be asked to enter an email address. When you click “Subscribe,” an email will be sent to 
-		you with a link for you to confirm the correct email address. Once you click that link, you will receive email notifications every time there is a new 
+	 <p>Users can also sign up to receive email notifications of activity in pending cases. To do so, visit the docket page for an individual case and click on
+		the envelope icon that is just above the case number. You will be asked to enter an email address. When you click “Subscribe,” an email will be sent to
+		you with a link for you to confirm the correct email address. Once you click that link, you will receive email notifications every time there is a new
 		filing or action by the Court in the case.
 	</p>
 
-    <p><b>Questions Presented</b>. The Questions Presented in a granted or noted case can be obtained by first obtaining the docket report for that case, then 
-        clicking on the blue “Questions Presented” hyperlink located on the left side of the docket report. Once the hyperlink is clicked, a .pdf file setting 
+    <p><b>Questions Presented</b>. The Questions Presented in a granted or noted case can be obtained by first obtaining the docket report for that case, then
+        clicking on the blue “Questions Presented” hyperlink located on the left side of the docket report. Once the hyperlink is clicked, a .pdf file setting
         forth the Questions Presented in the case will appear.
     </p>
 
@@ -307,9 +307,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                                             <span id="ctl00_ctl00_MainEditable_mainContent_SearchVal2" style="display:inline-block;color:Red;height:20px;visibility:hidden;">Ampersand (&) is not allowed. Try again</span>
 
     <div id="ctl00_ctl00_MainEditable_mainContent_UpdatePanel1">
-	
+
             <div>
-                
+
             </div>
             <div style="width: 80%">
                 <span id="ctl00_ctl00_MainEditable_mainContent_lblCurrentPage">499 items found. Page: 1 of 100 for your search: </B>&quot;feb 20, 2024&quot;</B></span><br />
@@ -322,50 +322,50 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                 <a id="ctl00_ctl00_MainEditable_mainContent_cmdLast" title="Move to last page of this search" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$MainEditable$mainContent$cmdLast&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="display:inline-block;color:Red;border-width:0px;text-decoration:underline;height:20px;">Last >></a>
             </div>
             <div>
-                
+
                      <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; font-weight :bold ; display:block;">
                        Search Results:
                     </fieldset>
-                    
-                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">                     
+
+                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">
                           <img alt="file type icon" src="/images/SearchIcons/html16.gif" width="18" height="18" border="0">
-                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23a769.html"> 
+                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23a769.html">
                         &nbsp;Docket for 23A769</a><br /><cc>Title:</td><td>Christine H. Scott, Applicant v. Florida</td></tr><tr><td width="200"><br /></cc>District Court of Appeal of Florida, Fourth District <ddd/> for a writ of certiorari from <B><i>February 20, 2024</i></B> to April 20, 2024, submitted to Justice Thomas. <ddd/> Main DocumentLower Court Orders/Opinions <ddd/> <br /><!-- %#GetModified(DataBinder.Eval(Container.DataItem, "LastModifiedTime") & "")% --></fieldset>
-                    
-                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">                     
+
+                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">
                           <img alt="file type icon" src="/images/SearchIcons/html16.gif" width="18" height="18" border="0">
-                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-779.html"> 
+                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-779.html">
                         &nbsp;Docket for 23-779</a><br /><cc>Title:</td><td>David Forsythe, Petitioner v. Denis R. McDonough, Secretary of Veterans Affairs</td></tr><tr><td width="200"><br /></cc>Petition for a writ of certiorari filed. (Response due <B><i>February 20, 2024</i></B> <ddd/> extend the time to file a response from <B><i>February 20, 2024</i></B> to March 21, 2024, submitted to The Clerk. <ddd/> <br /><!-- %#GetModified(DataBinder.Eval(Container.DataItem, "LastModifiedTime") & "")% --></fieldset>
-                    
-                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">                     
+
+                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">
                           <img alt="file type icon" src="/images/SearchIcons/html16.gif" width="18" height="18" border="0">
-                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-726.html"> 
+                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-726.html">
                         &nbsp;Docket for 23-726</a><br /><cc>Title:</td><td>Mike Moyle, Speaker of the Idaho House of Representatives, et al., Petitioners v. United States</td></tr><tr><td width="200"><br /></cc>Mike Moyle, Speaker of the Idaho House of Representatives, et al., Petitioners <ddd/> are to be filed on or before Tuesday, <B><i>February 20, 2024</i></B>.  Respondent's brief on the merits is to be <ddd/> <B><i>Feb 20 2024</i></B> <ddd/> <br /><!-- %#GetModified(DataBinder.Eval(Container.DataItem, "LastModifiedTime") & "")% --></fieldset>
-                    
-                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">                     
+
+                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">
                           <img alt="file type icon" src="/images/SearchIcons/html16.gif" width="18" height="18" border="0">
-                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-367.html"> 
+                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-367.html">
                         &nbsp;Docket for 23-367</a><br /><cc>Title:</td><td>Starbucks Corporation, Petitioner v. M. Kathleen McKinney, Regional Director of Region 15 of the National Labor Relations Board, for and on Behalf of the National Labor Relations Board</td></tr><tr><td width="200"><br /></cc>M. Kathleen McKinney, Regional Director of Region 15 of the National Labor Relations Board, for and on Behalf of the National Labor Relations Board <ddd/> Petition for a writ of certiorari filed <ddd/> <B><i>Feb 20 2024</i></B> <ddd/> <br /><!-- %#GetModified(DataBinder.Eval(Container.DataItem, "LastModifiedTime") & "")% --></fieldset>
-                    
-                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">                     
+
+                        <fieldset style="border-width: 0; width: 100%; margin-bottom: 10px; display:block;">
                           <img alt="file type icon" src="/images/SearchIcons/html16.gif" width="18" height="18" border="0">
-                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-156.html"> 
+                         <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-156.html">
                         &nbsp;Docket for 23-156</a><br /><cc>Title:</td><td>Speech First, Inc., Petitioner v. Timothy Sands, Individually and in His Official Capacity as President of the University of Virginia Polytechnic Institute and State University</td></tr><tr><td width="200"><br /></cc>Timothy Sands, Individually and in His Official Capacity as President of the University of Virginia Polytechnic Institute and State University <ddd/> United States Court of Appeals for the Fourth <ddd/> <B><i>Feb 20 2024</i></B> <ddd/> <br /><!-- %#GetModified(DataBinder.Eval(Container.DataItem, "LastModifiedTime") & "")% --></fieldset>
-                    
-                    
+
+
             </div>
-        
+
 </div>
     <br /><br />
     <span style="font-style:italic;">
     Note: The Engrossed Dockets from 1791 to 1995 have been scanned by the National Archives from its microfilm collection and are available in its <a href="https://catalog.archives.gov/id/1524561">Catalog.</a></span>
-  
-           
-   
+
+
+
 
         <br /> <br /> <br />
 
-    </div> 
+    </div>
     <div><p>&nbsp;<br /></p></div>
     <script type="text/javascript">
         $(window).on('resize', function () {
@@ -394,7 +394,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
     </div>
 
     <div class="footer2 noindex">
-        
+
 <div class="container">
     <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
         <div class="col-sm-4 col-xs-12">
@@ -437,7 +437,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                             <li><a id="ctl00_ctl00_wucFooterNav_HyperLink67" href="../orders/ordersbycircuit.aspx">Orders by Circuit</a></li>
                             <li><a id="ctl00_ctl00_wucFooterNav_HyperLink68" href="../orders/grantednotedlists.aspx">Granted/Noted Cases List</a></li>
                             <li><a id="ctl00_ctl00_wucFooterNav_HyperLink39" href="../orders/journal.aspx">Journal</a></li>
-                            
+
                         </ul>
                 </div>
                 <div class="col-sm-4 col-xs-12">
@@ -445,7 +445,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
                     <ul class="footernavlist">
                         <li><a id="ctl00_ctl00_wucFooterNav_HyperlinkServicesft" href="../publicinfo/PIOServices.pdf" target="_blank">Services for News Media</a></li>
                         <li><a id="ctl00_ctl00_wucFooterNav_Hyperlink57" href="../publicinfo/press/pressreleases.aspx">Press Releases</a></li>
-                        <li><a id="ctl00_ctl00_wucFooterNav_Hyperlink58" href="../publicinfo/media/mediaadvisories.aspx">Media Advisories</a></li>                
+                        <li><a id="ctl00_ctl00_wucFooterNav_Hyperlink58" href="../publicinfo/media/mediaadvisories.aspx">Media Advisories</a></li>
                         <li><a id="ctl00_ctl00_wucFooterNav_Hyperlink61" href="../publicinfo/press/presscredentials.aspx">Press Credentials</a></li>
                         <li><a id="ctl00_ctl00_wucFooterNav_Hyperlink59" href="../publicinfo/speeches/speeches.aspx">Speeches</a></li>
                         <li><a id="ctl00_ctl00_wucFooterNav_Hyperlink62" href="../publicinfo/reportersguide.pdf" target="_blank">A Reporter's Guide to Applications (PDF)</a></li>
@@ -503,7 +503,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$RadScriptManager1', 'as
        <button onclick="goToTop(); return false;" id="gototop" title="Go To Top" style="display: none;"><i class="fa fa-chevron-circle-up"></i></button>
     </div>
 
-    
+
 <script type="text/javascript">
 //<![CDATA[
 var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_RegularExpressionValidator2"), document.getElementById("ctl00_ctl00_SearchVal"), document.getElementById("ctl00_ctl00_MainEditable_mainContent_SearchVal"), document.getElementById("ctl00_ctl00_MainEditable_mainContent_RegularExpressionValidator2"), document.getElementById("ctl00_ctl00_MainEditable_mainContent_SearchVal2"));
@@ -557,7 +557,7 @@ function ValidatorOnSubmit() {
         return true;
     }
 }
-        
+
 document.getElementById('ctl00_ctl00_RegularExpressionValidator2').dispose = function() {
     Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_RegularExpressionValidator2'));
 }

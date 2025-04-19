@@ -3,8 +3,8 @@
 import os
 import unittest
 
-from juriscraper.lib.test_utils import MockResponse
 from juriscraper.dockets.united_states.federal_appellate.scotus import clients
+from juriscraper.lib.test_utils import MockResponse
 from tests import TESTS_ROOT_EXAMPLES_SCOTUS
 
 
@@ -50,7 +50,9 @@ class ScotusClientTest(unittest.TestCase):
         )
 
         with open(
-            os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_access_denied.html"),
+            os.path.join(
+                TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_access_denied.html"
+            ),
             "rb",
         ) as _json:
             self.access_denied = _json.read()
@@ -74,7 +76,9 @@ class ScotusClientTest(unittest.TestCase):
             },
         )
         with open(
-            os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_JSON_not_found.html"),
+            os.path.join(
+                TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_JSON_not_found.html"
+            ),
             "rb",
         ) as _html:
             self.not_found_page = _html.read()
@@ -145,7 +149,9 @@ class ScotusClientTest(unittest.TestCase):
 
     def test_access_denied_test(self):
         """Test example 'Access Denied' page text"""
-        self.assertTrue(clients._access_denied_test(self.access_denied_response.text))
+        self.assertTrue(
+            clients._access_denied_test(self.access_denied_response.text)
+        )
         are_false = (
             self.docket_response,
             self.code304_response,
@@ -157,7 +163,9 @@ class ScotusClientTest(unittest.TestCase):
 
     def test_is_access_denied_page(self):
         """Test example 'Access Denied' page text in Response"""
-        self.assertTrue(clients.is_access_denied_page(self.access_denied_response))
+        self.assertTrue(
+            clients.is_access_denied_page(self.access_denied_response)
+        )
         are_false = (
             self.docket_response,
             self.code304_response,

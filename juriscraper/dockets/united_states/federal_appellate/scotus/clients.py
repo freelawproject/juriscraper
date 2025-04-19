@@ -128,7 +128,9 @@ def _access_denied_test(text: str) -> bool:
 def is_access_denied_page(response: requests.Response) -> bool:
     """Take an HTML string from a `Response.text` and test for
     `Access Denied`."""
-    ct, cl = (response.headers.get(f) for f in ("content-type", "content-length"))
+    ct, cl = (
+        response.headers.get(f) for f in ("content-type", "content-length")
+    )
     if ct and cl:
         if ct.startswith("text/html") and int(cl) > 0:
             return _access_denied_test(response.text)
@@ -154,7 +156,9 @@ def is_not_found_page(response: requests.Response) -> bool:
     """Take an HTML string from a `Response.text` and test for
     `ERROR: File or directory not found.`.
     """
-    ct, cl = (response.headers.get(f) for f in ("content-type", "content-length"))
+    ct, cl = (
+        response.headers.get(f) for f in ("content-type", "content-length")
+    )
     if ct and cl:
         if ct.startswith("text/html") and int(cl) > 0:
             return _not_found_test(response.text)
@@ -165,7 +169,9 @@ def is_docket(response: requests.Response) -> bool:
     """Handle two valid possibilities: docket number returns status code 200 and
     either exists or returns HTML error page."""
     if not isinstance(response, requests.Response):
-        raise TypeError(f"Expected requests.Response (sub)class; got {type(response)}")
+        raise TypeError(
+            f"Expected requests.Response (sub)class; got {type(response)}"
+        )
 
     is_json = "application/json" in response.headers.get("content-type", "")
     return response.status_code == 200 and is_json

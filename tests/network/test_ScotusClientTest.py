@@ -3,12 +3,14 @@
 import datetime
 import unittest
 
-from juriscraper.lib.test_utils import MockResponse
+from juriscraper.dockets.united_states.federal_appellate.scotus import clients
 from juriscraper.dockets.united_states.federal_appellate.scotus import (
-    clients,
-    scotus_docket,
     docket_search as ds,
 )
+from juriscraper.dockets.united_states.federal_appellate.scotus import (
+    scotus_docket,
+)
+from juriscraper.lib.test_utils import MockResponse
 
 
 class YAMockResponse(MockResponse):
@@ -73,7 +75,9 @@ class ScotusDownloadManagerTest(unittest.TestCase):
                 self.assertTrue(response.ok)
                 docket = response.json()
                 case_number = docket.get("CaseNumber")
-                self.assertEqual(self.test_docket_numbers[i], case_number.rstrip())
+                self.assertEqual(
+                    self.test_docket_numbers[i], case_number.rstrip()
+                )
 
 
 @unittest.skip("All passed on 2024-03-29")
@@ -91,7 +95,9 @@ class ScotusOrdersDownloadTest(unittest.TestCase):
         instance = ds.SCOTUSOrders(2023, cache_pdfs=False)
         instance.orders_page_download()
         self.assertIsNotNone(instance.homepage_response)
-        self.assertIsInstance(instance.homepage_response, clients.requests.Response)
+        self.assertIsInstance(
+            instance.homepage_response, clients.requests.Response
+        )
 
     def test_orders_page_download_304(self):
         """Try the Orders home page with the 'If-Modified-Since' header set."""
@@ -100,7 +106,9 @@ class ScotusOrdersDownloadTest(unittest.TestCase):
             since_timestamp=datetime.datetime.now(tz=datetime.timezone.utc)
         )
         self.assertIsNotNone(instance.homepage_response)
-        self.assertIsInstance(instance.homepage_response, clients.requests.Response)
+        self.assertIsInstance(
+            instance.homepage_response, clients.requests.Response
+        )
         # this should only fail if page is updated as query executes
         self.assertTrue(instance.homepage_response.status_code == 304)
 
@@ -128,7 +136,7 @@ class ScotusOrdersDownloadTest(unittest.TestCase):
         self.assertNotEqual(instance.order_meta, [])
         self.assertIsNotNone(instance._pdf_cache)
         self.assertTrue(tuple(instance._pdf_cache)[0].content[:4] == b"%PDF")
-        self.assertEqual(instance._docket_numbers, set(["23-411"]))
+        self.assertEqual(instance._docket_numbers, {"23-411"})
         self.assertEqual(instance.docket_numbers(), ["23-411"])
 
 
@@ -151,7 +159,9 @@ class ScotusFullTextSearchDownloadTest(unittest.TestCase):
         instance = ds.DocketFullTextSearch.date_query("2024-02-29")
         instance.search_query()
         self.assertIsNot(instance.query_responses, [])
-        self.assertIsInstance(instance.query_responses[0], ds.requests.Response)
+        self.assertIsInstance(
+            instance.query_responses[0], ds.requests.Response
+        )
         self.assertTrue("Docket Search" in instance.query_responses[0].text)
 
     # TODO: figure out mocking

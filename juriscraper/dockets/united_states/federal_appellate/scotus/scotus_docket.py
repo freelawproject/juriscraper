@@ -15,10 +15,10 @@ Case number (#): Two increasing ranges of integers.
     'IFP' (in forma pauperis) a.k.a pauper cases number 5001 and up each term
 """
 
-from io import BytesIO
 import json
-from math import sqrt
 import re
+from io import BytesIO
+from math import sqrt
 from time import sleep
 from urllib.parse import urljoin
 
@@ -26,18 +26,18 @@ import fitz  # the package name of the `pymupdf` library
 import requests
 from requests.exceptions import ConnectionError
 
-from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.exceptions import AccessDeniedError
+from juriscraper.lib.log_tools import make_default_logger
+
+from . import utils
 from .clients import (
     download_client,
-    response_handler,
-    jitter,
     is_docket,
     is_not_found_page,
     is_stale_content,
+    jitter,
+    response_handler,
 )
-from . import utils
-
 
 logger = make_default_logger()
 
@@ -241,7 +241,9 @@ class SCOTUSDocketReport:
     def docket_number(self):
         if self._docket_number is None:
             dn = self._docket["CaseNumber"].rstrip()
-            self._docket_number = utils.docket_num_strict_regex.search(dn).group(0)
+            self._docket_number = utils.docket_num_strict_regex.search(
+                dn
+            ).group(0)
         return self._docket_number
 
     def _get_petitioner(self):
@@ -324,7 +326,9 @@ class SCOTUSDocketReport:
                 qp = r
         return qp
 
-    def _parse_filing_links(self, links: list, keep_boilerplate: bool = True) -> list:
+    def _parse_filing_links(
+        self, links: list, keep_boilerplate: bool = True
+    ) -> list:
         """Return the main documents from a docket entry with links by excluding
         ancillary documents e.g. 'Proof of Service' and 'Certificate of Word Count'.
 
@@ -498,7 +502,9 @@ class SCOTUSDocketReport:
                     for row in _related:
                         if isinstance(row, dict):
                             if "Vide" in row["RelatedType"]:
-                                self._dispositions.append(("VIDED", mkdt(entry)))
+                                self._dispositions.append(
+                                    ("VIDED", mkdt(entry))
+                                )
                                 break
 
                 # now try splitting field on period before pattern matching
@@ -506,12 +512,14 @@ class SCOTUSDocketReport:
                     sentence = s.strip()
                     if sentence == "":
                         continue
-                    elif judgment_regex.search(sentence) or affirmed_regex.search(
+                    elif judgment_regex.search(
                         sentence
-                    ):
+                    ) or affirmed_regex.search(sentence):
                         self._dispositions.append(("DECIDED", mkdt(entry)))
                         break
-                    elif _disposition := wildcard_petition_regex.search(sentence):
+                    elif _disposition := wildcard_petition_regex.search(
+                        sentence
+                    ):
                         self._dispositions.append(
                             (_disposition.group(2).upper(), mkdt(entry))
                         )

@@ -1,16 +1,15 @@
 """Utilities for SCOTUS docket scraping and processing."""
 
+import re
 from datetime import date, datetime, timedelta
 from hashlib import sha1
-import re
 
 import dateutil.parser
 
-
 """Text utilities
 
-Note: PDF parsing can return various Unicode dashes beyond the standard 
-hyphen-minus character (U+002d). The docket search pattern uses U+002d, 
+Note: PDF parsing can return various Unicode dashes beyond the standard
+hyphen-minus character (U+002d). The docket search pattern uses U+002d,
 U+2010, U+2011, U+2012, U+2013, and U+2014.
 """
 
@@ -23,13 +22,11 @@ docket_num_strict_regex = re.compile(r"(\d\d)([-AOM])(\d{1,5})")
 
 # parse docket PDF filing URLs
 filing_url_regex = re.compile(
-    (
-        r"(?<=www\.supremecourt\.gov)(?:/\w+?/)"
-        r"(?P<term>\d\d)/"
-        r"(?P<docketnum>\d{2}[-AMO]\d{1,5})/"
-        r"(?P<entrynum>\d+)/"
-        r"(?P<timestamp>\d{17})"
-    )
+    r"(?<=www\.supremecourt\.gov)(?:/\w+?/)"
+    r"(?P<term>\d\d)/"
+    r"(?P<docketnum>\d{2}[-AMO]\d{1,5})/"
+    r"(?P<entrynum>\d+)/"
+    r"(?P<timestamp>\d{17})"
 )
 
 
@@ -47,8 +44,10 @@ orders_docket_regex = re.compile(_orders_pat)
 def dedocket(docket_number: str) -> tuple:
     """Accept a padded docket string and return components of a docket number
     as a tuple e.g. (2023, '-', 5) or (2017, 'A', 54)."""
-    term, mod, casenum = [docket_number[i:j] for i, j in ((0, 2), (2, 3), (3, 8))]
-    return int("20" + term), mod.upper(), int(casenum)
+    term, mod, casenum = (
+        docket_number[i:j] for i, j in ((0, 2), (2, 3), (3, 8))
+    )
+    return int(f"20{term}"), mod.upper(), int(casenum)
 
 
 def padocket(x) -> str:
@@ -64,10 +63,10 @@ def padocket(x) -> str:
             and docket_type.upper() in {"-", "A", "M", "O"}
             and isinstance(case_num, int)
         )
-        return str(yyyy)[2:4] + docket_type + ("0000" + str(case_num))[-5:]
+        return str(yyyy)[2:4] + docket_type + f"0000{str(case_num)}"[-5:]
     elif isinstance(x, str):
         assert docket_number_regex.search(x), f"{x} not a docket number"
-        return x[:3] + ("0000" + str(int(x[3:])))[-5:]
+        return x[:3] + f"0000{str(int(x[3:]))}"[-5:]
 
 
 def endocket(x) -> str:
@@ -163,7 +162,7 @@ def parse_filing_timestamp(ts):
         ts[8:10],
         ts[10:12],
         ts[12:14],
-        ts[14:] + "000",
+        f"{ts[14:]}000",
     )
     return datetime(*[int(x) for x in argz])
 
