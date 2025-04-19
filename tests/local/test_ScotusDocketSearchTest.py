@@ -36,27 +36,20 @@ class ScotusOrdersTest(unittest.TestCase):
     """Test the SCOTUS Orders of the Court manager and parser."""
 
     def setUp(self):
-
         with open(
-            os.path.join(
-                TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_orders_home.html"
-            ),
+            os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "scotus_orders_home.html"),
             "rb",
         ) as _hp:
             self.orders_home = _hp.read()
 
         with open(
-            os.path.join(
-                TESTS_ROOT_EXAMPLES_SCOTUS, "orders_list_20240220.pdf"
-            ),
+            os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "orders_list_20240220.pdf"),
             "rb",
         ) as _ol:
             self.orders_list_pdf = _ol.read()
 
         with open(
-            os.path.join(
-                TESTS_ROOT_EXAMPLES_SCOTUS, "misc_order_20240222.pdf"
-            ),
+            os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "misc_order_20240222.pdf"),
             "rb",
         ) as _mo:
             self.misc_order_pdf = _mo.read()
@@ -108,11 +101,11 @@ class ScotusOrdersTest(unittest.TestCase):
 
     def test_parse_orders_page(self):
         """Extract URLs for individual order documents."""
-        expected_url = "https://www.supremecourt.gov/orders/courtorders/032524zor_4h25.pdf"
-        instance = ds.SCOTUSOrders(2023)
-        response = YAMockResponse(
-            status_code=200, headers={}, content=self.orders_home
+        expected_url = (
+            "https://www.supremecourt.gov/orders/courtorders/032524zor_4h25.pdf"
         )
+        instance = ds.SCOTUSOrders(2023)
+        response = YAMockResponse(status_code=200, headers={}, content=self.orders_home)
         # patch instance attribute
         instance.homepage_response = response
         self.assertIsInstance(instance.homepage_response.text, str)
@@ -164,7 +157,6 @@ class ScotusDocketFullTextSearchTest(unittest.TestCase):
     """Test the SCOTUS Docket Search manager and parser."""
 
     def setUp(self):
-
         with open(
             os.path.join(
                 TESTS_ROOT_EXAMPLES_SCOTUS,
@@ -214,9 +206,7 @@ class ScotusDocketFullTextSearchTest(unittest.TestCase):
             "__VIEWSTATE": "jkF4BYmzedCwenqv/sgNCVMXPauykip5wr1PKLEeK6c+FmoDUAqrCoqJc0jApuDzRjFl/iDlmwlcFBsgh165V+fwuqfo5fgTp3J/0Iy/0+e/ovzd1kt2jh0YAL6J6qA+",
             "__VIEWSTATEGENERATOR": "71826567",
         }
-        meta_elements = self.test_instance.search_page_metadata_parser(
-            self.homepage
-        )
+        meta_elements = self.test_instance.search_page_metadata_parser(self.homepage)
         self.assertDictEqual(meta_elements, expected)
 
     def test_page_count_parser1(self):

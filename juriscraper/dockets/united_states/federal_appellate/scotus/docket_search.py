@@ -3,9 +3,9 @@
 > Paper remains the official form of filing at the Supreme Court.
 <https://www.supremecourt.gov/filingandrules/electronicfiling.aspx>
 
-Perhaps because of this second-millennium record keeping practice, there is no 
-publicly-available digital central index of Supreme Court cases. If SCOTUS docket 
-information is not obtained by attempting to query docket numbers in sequence, 
+Perhaps because of this second-millennium record keeping practice, there is no
+publicly-available digital central index of Supreme Court cases. If SCOTUS docket
+information is not obtained by attempting to query docket numbers in sequence,
 one of the Court's information sources needs to be consulted.
 
 In descending order of relevance to scraping, these are:
@@ -15,32 +15,33 @@ In descending order of relevance to scraping, these are:
 [Journal of the SCOTUS](https://www.supremecourt.gov/orders/journal.aspx)
 
 **Orders of the Court**
-* PDFs listing docket numbers of cases for which there has been an action. 
-> Regularly scheduled lists of orders are issued on each Monday that the Court 
-sits, but 'miscellaneous' orders may be issued in individual cases at any time. 
-Scheduled order lists are posted on this Website on the day of their issuance, 
+* PDFs listing docket numbers of cases for which there has been an action.
+> Regularly scheduled lists of orders are issued on each Monday that the Court
+sits, but 'miscellaneous' orders may be issued in individual cases at any time.
+Scheduled order lists are posted on this Website on the day of their issuance,
 while miscellaneous orders are posted on the day of issuance or the next day."
 
 **Docket Search**
-* Full-text search portal that attempts to match the input string to any text 
+* Full-text search portal that attempts to match the input string to any text
 in any docket.
 * Returns URLs of the HTML rendering for dockets. From these, docket numbers can
 be parsed and substituted into the URL pattern for dockets' JSON rendering.
-* Passing date strings formatted like docket entry dates (e.g. 'Feb 29, 2024') 
-will with high probability return a link to a docket with an entry(s) matching 
+* Passing date strings formatted like docket entry dates (e.g. 'Feb 29, 2024')
+will with high probability return a link to a docket with an entry(s) matching
 the input string.
-* There appears to be a limit of 500 search results. Because some of the results 
-will be for matches in the text of a docket entry rather than the entry date 
+* There appears to be a limit of 500 search results. Because some of the results
+will be for matches in the text of a docket entry rather than the entry date
 itself, it is possible that some search results will not be exhaustive.
 
 **Journal of the Supreme Court**
 * The exhaustive -- but not at all timely -- PDFs containing all docket numbers.
-> The Journal of the Supreme Court of the United States contains the official 
-minutes of the Court. It is published chronologically for each day the Court 
-issues orders or opinions or holds oral argument. The Journal reflects the 
-disposition of each case, names the court whose judgment is under review, lists 
+> The Journal of the Supreme Court of the United States contains the official
+minutes of the Court. It is published chronologically for each day the Court
+issues orders or opinions or holds oral argument. The Journal reflects the
+disposition of each case, names the court whose judgment is under review, lists
 the cases argued that day and the attorneys who presented oral argument[].
 """
+
 from datetime import date, timedelta
 from io import BytesIO
 
@@ -172,14 +173,10 @@ class SCOTUSOrders:
         try:
             order_urls = self.orders_link_parser(self.homepage_response.text)
         except Exception as e:
-            logger.error(
-                f"orders_link_parser {self.term} raised {repr(e)}", exc_info=e
-            )
+            logger.error(f"orders_link_parser {self.term} raised {repr(e)}", exc_info=e)
             raise
         else:
-            logger.info(
-                f"Order PDF count for term {self.term}: {len(order_urls)}"
-            )
+            logger.info(f"Order PDF count for term {self.term}: {len(order_urls)}")
 
         # extract metadata for each order list from the URL
         self.order_meta = []
@@ -187,9 +184,7 @@ class SCOTUSOrders:
         for url in order_urls:
             container = {}
             try:
-                _mm, _dd, _yy, listype = order_url_date_regex.search(
-                    url
-                ).groups()
+                _mm, _dd, _yy, listype = order_url_date_regex.search(url).groups()
             except AttributeError as ae:
                 if fedrules_regex.search(url):
                     # Order is an update to the federal judicial rules; ignore
@@ -201,14 +196,10 @@ class SCOTUSOrders:
                     )
                 continue
             except TypeError as e2:
-                logger.error(
-                    f"URL parsing error {self.term} on {url}", exc_info=e2
-                )
+                logger.error(f"URL parsing error {self.term} on {url}", exc_info=e2)
                 continue
             else:
-                container["order_date"] = date(
-                    int("20" + _yy), int(_mm), int(_dd)
-                )
+                container["order_date"] = date(int("20" + _yy), int(_mm), int(_dd))
                 container["order_type"] = listype
                 container["url"] = url
                 self.order_meta.append(container)
@@ -268,9 +259,7 @@ class SCOTUSOrders:
         pdf_string = "\n".join([pg.get_text() for pg in _pdf])
         matches = utils.orders_docket_regex.findall(pdf_string)
         # clean up dash characters so only U+002D is used
-        docket_set = set(
-            [utils.dash_regex.sub("\u002d", dn) for dn in matches]
-        )
+        docket_set = set([utils.dash_regex.sub("\u002d", dn) for dn in matches])
         return docket_set
 
     def _term_constraints(self, *, earliest: str, latest: str) -> dict:
@@ -335,15 +324,11 @@ class SCOTUSOrders:
         available_terms = set(range(2016, utils.current_term() + 2))
         if self.term not in available_terms:
             errmsg = "Only these terms available for scraping: {}"
-            logger.error(
-                f"Bad term {self.term} passed to orders_scraping_manager"
-            )
+            logger.error(f"Bad term {self.term} passed to orders_scraping_manager")
             raise ValueError(errmsg.format(available_terms))
 
         # contstrain search dates to the indicated term
-        date_constraints = self._term_constraints(
-            earliest=earliest, latest=latest
-        )
+        date_constraints = self._term_constraints(earliest=earliest, latest=latest)
         earliest = date_constraints["earliest"]
         latest = date_constraints["latest"]
         logger.debug(
@@ -409,7 +394,7 @@ class SCOTUSOrders:
                     # perform set update
                     self._docket_numbers.update(docket_numbers)
                     logger.info(
-                        f'Scraped {len(docket_numbers)} dockets from {meta_record["order_date"]} {meta_record["order_type"]}'
+                        f"Scraped {len(docket_numbers)} dockets from {meta_record['order_date']} {meta_record['order_type']}"
                     )
             sleep(self.delay + jitter(self.delay))
 
@@ -510,9 +495,7 @@ class DocketFullTextSearch:
         """
         root = html.document_fromstring(html_string)
 
-        page_row = (
-            './/*[@id="ctl00_ctl00_MainEditable_mainContent_lblCurrentPage"]'
-        )
+        page_row = './/*[@id="ctl00_ctl00_MainEditable_mainContent_lblCurrentPage"]'
         element_text = root.xpath(page_row)[0].text
 
         # test for a single result page
@@ -522,18 +505,14 @@ class DocketFullTextSearch:
             page_vals = (page_match.group(0), 1, 1)
         else:
             raise ValueError(f"page_count_parser did not match {element_text}")
-        return {
-            k: int(v) for k, v in zip(("items", "cur_pg", "max_pg"), page_vals)
-        }
+        return {k: int(v) for k, v in zip(("items", "cur_pg", "max_pg"), page_vals)}
 
     def full_text_search_page(self, **kwargs):
         """Download <https://www.supremecourt.gov/docket/docket.aspx> to scrape
         hidden metadata. All `kwargs` are passed to the requests client.
         """
         try:
-            response = download_client(
-                self.SEARCH_URL, session=self.session, **kwargs
-            )
+            response = download_client(self.SEARCH_URL, session=self.session, **kwargs)
         except Exception:
             raise
         else:
@@ -542,15 +521,11 @@ class DocketFullTextSearch:
     def search_query(self):
         """Send POST full text search query."""
         home_page_response = self.full_text_search_page()
-        hidden_payload = self.search_page_metadata_parser(
-            home_page_response.text
-        )
+        hidden_payload = self.search_page_metadata_parser(home_page_response.text)
         _search_string = self.search_string  # .replace(" ", "+")
 
         payload = self.post_template | hidden_payload
-        payload["ctl00$ctl00$MainEditable$mainContent$txtQuery"] = (
-            _search_string
-        )
+        payload["ctl00$ctl00$MainEditable$mainContent$txtQuery"] = _search_string
 
         try:
             _response = self.session.post(self.SEARCH_URL, data=payload)
@@ -564,9 +539,7 @@ class DocketFullTextSearch:
 
     def pager(self):
         """Download 2,...,n pages of search results"""
-        assert (
-            len(self.query_responses) > 0
-        ), "`search_query` must have been run first."
+        assert len(self.query_responses) > 0, "`search_query` must have been run first."
 
         header_updates = {
             "Accept": "*/*",
@@ -587,9 +560,7 @@ class DocketFullTextSearch:
             "__ASYNCPOST": True,
             "": "",
         }
-        hidden_payload = self.search_page_metadata_parser(
-            self.query_responses[0].text
-        )
+        hidden_payload = self.search_page_metadata_parser(self.query_responses[0].text)
 
         payload = self.post_template.copy()
         # must delete the following key for paging to work
@@ -599,13 +570,9 @@ class DocketFullTextSearch:
         # now update POST payload
         payload.update(hidden_payload)
         payload.update(payload_updates)
-        payload["ctl00$ctl00$MainEditable$mainContent$txtQuery"] = (
-            self.search_string
-        )
+        payload["ctl00$ctl00$MainEditable$mainContent$txtQuery"] = self.search_string
         # extract __VIEWSTATE value from non-HTML text
-        if vs_match := self.viewstate_regex.search(
-            self.query_responses[-1].text
-        ):
+        if vs_match := self.viewstate_regex.search(self.query_responses[-1].text):
             payload["__VIEWSTATE"] = vs_match.group(0)
 
         try:
@@ -622,9 +589,7 @@ class DocketFullTextSearch:
         self.search_query()
 
         try:
-            result_params = self.page_count_parser(
-                self.query_responses[0].text
-            )
+            result_params = self.page_count_parser(self.query_responses[0].text)
         except AttributeError as ae:
             if "NoneType" in repr(ae):
                 errmsg = (
@@ -632,9 +597,7 @@ class DocketFullTextSearch:
                     f"{self.search_string}"
                 )
                 logger.error(errmsg, exc_info=ae)
-                logger.debug(
-                    f"Payload: {self.query_responses[0].request.body}"
-                )
+                logger.debug(f"Payload: {self.query_responses[0].request.body}")
                 raise
         except Exception as e:
             errmsg = f".scrape on {self.search_string} raised {repr(e)}"
@@ -646,9 +609,7 @@ class DocketFullTextSearch:
             logger.debug(self.query_responses[0].text[3000:5000])
             raise
 
-        logger.debug(
-            f"'{self.search_string}' first page results {result_params}"
-        )
+        logger.debug(f"'{self.search_string}' first page results {result_params}")
         iter_count = result_params["max_pg"]
         current_page = result_params["cur_pg"]
 
@@ -661,9 +622,7 @@ class DocketFullTextSearch:
                 raise
 
             try:
-                result_params = self.page_count_parser(
-                    self.query_responses[-1].text
-                )
+                result_params = self.page_count_parser(self.query_responses[-1].text)
             except IndexError as ie:
                 logger.debug(self.query_responses[-1].request.headers)
                 logger.debug(self.query_responses[-1].headers)

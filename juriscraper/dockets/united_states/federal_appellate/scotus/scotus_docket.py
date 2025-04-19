@@ -241,9 +241,7 @@ class SCOTUSDocketReport:
     def docket_number(self):
         if self._docket_number is None:
             dn = self._docket["CaseNumber"].rstrip()
-            self._docket_number = utils.docket_num_strict_regex.search(
-                dn
-            ).group(0)
+            self._docket_number = utils.docket_num_strict_regex.search(dn).group(0)
         return self._docket_number
 
     def _get_petitioner(self):
@@ -255,7 +253,7 @@ class SCOTUSDocketReport:
 
     def _get_case_name(self):
         """Petitioner v. Respondent"""
-        return f'{self._get_petitioner()} v. {self._docket.get("RespondentTitle")}'
+        return f"{self._get_petitioner()} v. {self._docket.get('RespondentTitle')}"
 
     def _get_lower_court_cases(self):
         """These are presented as a string representation of a tuple, but not
@@ -326,9 +324,7 @@ class SCOTUSDocketReport:
                 qp = r
         return qp
 
-    def _parse_filing_links(
-        self, links: list, keep_boilerplate: bool = True
-    ) -> list:
+    def _parse_filing_links(self, links: list, keep_boilerplate: bool = True) -> list:
         """Return the main documents from a docket entry with links by excluding
         ancillary documents e.g. 'Proof of Service' and 'Certificate of Word Count'.
 
@@ -430,7 +426,6 @@ class SCOTUSDocketReport:
     def amici(self) -> set:
         """List the amici curiae who file briefs in this docket."""
         if self._amici == set():
-
             for e in self._amicus_entries():
                 match = amicus_regex.search(e["description"])
                 self._amici.add(match.group(1))
@@ -503,9 +498,7 @@ class SCOTUSDocketReport:
                     for row in _related:
                         if isinstance(row, dict):
                             if "Vide" in row["RelatedType"]:
-                                self._dispositions.append(
-                                    ("VIDED", mkdt(entry))
-                                )
+                                self._dispositions.append(("VIDED", mkdt(entry)))
                                 break
 
                 # now try splitting field on period before pattern matching
@@ -513,14 +506,12 @@ class SCOTUSDocketReport:
                     sentence = s.strip()
                     if sentence == "":
                         continue
-                    elif judgment_regex.search(
-                        sentence
-                    ) or affirmed_regex.search(sentence):
-                        self._dispositions.append(("DECIDED", mkdt(entry)))
-                        break
-                    elif _disposition := wildcard_petition_regex.search(
+                    elif judgment_regex.search(sentence) or affirmed_regex.search(
                         sentence
                     ):
+                        self._dispositions.append(("DECIDED", mkdt(entry)))
+                        break
+                    elif _disposition := wildcard_petition_regex.search(sentence):
                         self._dispositions.append(
                             (_disposition.group(2).upper(), mkdt(entry))
                         )

@@ -47,9 +47,7 @@ orders_docket_regex = re.compile(_orders_pat)
 def dedocket(docket_number: str) -> tuple:
     """Accept a padded docket string and return components of a docket number
     as a tuple e.g. (2023, '-', 5) or (2017, 'A', 54)."""
-    term, mod, casenum = [
-        docket_number[i:j] for i, j in ((0, 2), (2, 3), (3, 8))
-    ]
+    term, mod, casenum = [docket_number[i:j] for i, j in ((0, 2), (2, 3), (3, 8))]
     return int("20" + term), mod.upper(), int(casenum)
 
 
@@ -178,6 +176,7 @@ def make_hash(b: bytes) -> str:
     trusted.
     """
     return sha1(b, usedforsecurity=False).hexdigest()
+
 
 def chunker(iterable, chunksize=100):
     """Break a large iterable into a generator of smaller chunks.
