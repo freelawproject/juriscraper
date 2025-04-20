@@ -89,8 +89,29 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.sd": [
             (
-                """#30018-a-MES\n2023 S.D. 4""",
-                {"Docket": {"docket_number": "#30018-a-MES"}},
+                # https://www.courtlistener.com/opinion/9456271/mcgee-v-spencer-quarries-inc/pdf/
+                """#29901-aff in pt & rev in pt-PJD & SRJ\n2023 S.D. 66\nIN THE SUPREME COURT""",
+                {
+                    "Docket": {"docket_number": "29901"},
+                    "OpinionCluster": {
+                        "disposition": "Affirmed in part and reversed in part",
+                        "judges": "Patricia J. DeVaney, Steven R. Jensen",
+                    },
+                },
+                """#30354-SRJ\n2024 S.D. 58\nIN THE SUPREME COURT\nOF THE""",
+                {
+                    "Docket": {"docket_number": "30354"},
+                    "OpinionCluster": {"judges": "Steven R. Jensen"},
+                },
+                # https://www.courtlistener.com/opinion/9406747/estate-of-beadle/?q=court_id%3Asd&page=8
+                """#30086, #30094-r-SPM\n2023 S.D. 26\nIN THE SUPREME COURT\nOF THE\nSTATE OF SOUTH DAKOTA""",
+                {
+                    "Docket": {"docket_number": "30086, 30094"},
+                    "OpinionCluster": {
+                        "judges": "Scott P. Myren",
+                        "disposition": "Reversed and remanded",
+                    },
+                },
             ),
         ],
         "juriscraper.opinions.united_states.territories.nmariana": [
@@ -531,8 +552,26 @@ class ScraperExtractFromText(unittest.TestCase):
                 """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vtcourts.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                            2024 VT 52\n\n                                          No. 23-AP-226\n\nState of Vermont   """,
                 {
                     "Citation": "2024 VT 52",
+                    "OpinionCluster": {"precedential_status": "Published"},
                 },
-            )
+            ),
+            (
+                # https://www.courtlistener.com/api/rest/v4/opinions/10823232/
+                """VERMONT SUPREME COURT
+                Case No.
+                24-AP-136\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774
+                \nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk
+                (*) indicates an appellant and a double asterisk (**) indicates a
+                cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n
+                ENTRY ORDER\n\n
+                in denying his request for a continuance and entering summary judgment for\ndefendants.\n\n       Affirmed.\n\n\n                                              BY THE COURT:\n\n\n\n                                              Harold E. Eaton, Jr., Associate Justice\n\n\n                                              William D. Cohen, Associate Justice\n\n\n                                              Nancy J. Waples, Associate Justice\n\n\n\n\n                                                6\n\f""",
+                {
+                    "OpinionCluster": {
+                        "precedential_status": "Unpublished",
+                        "judges": "Harold E. Eaton, Jr.; William D. Cohen; Nancy J. Waples",
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vt_criminal": [
             (
@@ -540,7 +579,45 @@ class ScraperExtractFromText(unittest.TestCase):
                 """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                            2022 VT 35\n\n                                           No. 2021-059\n\nState of Vermont                                                 Supreme Court\n\n                                                                 On Appeal from\n   v.                                                            Superior Court, Chittenden Unit,\n                                                                 Criminal Division\n\nRandy F. Therrien    """,
                 {
                     "Citation": "2022 VT 35",
+                    "OpinionCluster": {"precedential_status": "Published"},
                 },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_environmental": [
+            (
+                # https://www.courtlistener.com/opinion/10274910/in-re-windham-windsor-housing-trust-jo-appeal-deborah-lazar-laura/
+                """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vtcourts.gov or by mail at: Vermont Supreme Court,\n109 State Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may\nbe made before this opinion goes to press.\n\n\n                                        2024 VT 73\n\n                                       No. 24-AP-079\n\nIn re Windham  """,
+                {
+                    "Citation": "2024 VT 73",
+                    "Docket": {"court_id": "vt"},
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_family": [
+            (
+                # https://www.courtlistener.com/opinion/4707491/jason-c-barrows-v-jessica-easton/
+                """NOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                             2020 VT 2\n\n                                            No. 2019-149\n\nJason C. Barrows      """,
+                {
+                    "Citation": "2020 VT 2",
+                    "OpinionCluster": {"precedential_status": "Published"},
+                    "Docket": {"court_id": "vt"},
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_probate": [
+            (
+                # haven't found a proper example yet
+                """""",
+                {},
+            )
+        ],
+        "juriscraper.opinions.united_states.state.vtsuperct_civil": [
+            (
+                # haven't found a proper example yet, let's use a negative example
+                # where a neutral citation is within the range of search
+                """Guildhall VT 0590\n802-676-3910 .vermontjudiciary.org\n\nLisa Rote v. Town of Concord\n\nDECISION ON MOTION TO DISMISS\nIn this case, plaintiff Lisa Rote\nFactual Background\nThe well-pleaded factual allegations in this case are few. For the purpose of this motion, the court accepts as true the following facts, drawn from the complaint and incorporate documents. See Coutu v. Town of Cavendish, 2011 VT 27,""",
+                {},
             )
         ],
         "juriscraper.opinions.united_states.state.ny": [

@@ -11,16 +11,26 @@ words, they're the ones you'll want to watch, and the others are mostly noise.
 Releases are also tagged in git, if that's helpful.
 
 ## Coming up
+
 - New scraper `lactapp_2` for Lousiana Court of Appeals, Second Circuit
+- Fix `me` Update maine scraper and add backscraper
+- Update `sd` backscraper and extract from text
+
 
 ## Current
+
+**2.6.65 - 2024-04-11**
+
+- `nh` was blocking; fixed by updating the user agent string #1370
+- Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt` #1150
+
+## Past
 
 **2.6.64 - 2024-04-10**
 
 - Fix `me` Update maine scraper and add backscraper #1360
 - Sites were blocking `cafc` scrapers. Fixed by passing a browser user agent #1366
 
-## Past
 
 **2.6.63 - 2024-03-25**
 

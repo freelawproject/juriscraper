@@ -175,8 +175,8 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
-            "Sec-Ch-Ua": '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+            "Sec-Ch-Ua": '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
             "Referer": f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/{self.document_type}/{year}",
             "X-Requested-With": "XMLHttpRequest",
         }
