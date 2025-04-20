@@ -8,7 +8,7 @@ History:
 """
 
 import re
-from datetime import date, datetime
+from datetime import datetime
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -17,7 +17,7 @@ from juriscraper.lib.html_utils import (
     get_row_column_text,
 )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
+from juriscraper.lib.judge_parsers import normalize_judge_string
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
@@ -27,8 +27,6 @@ class Site(OpinionSiteLinear):
         self.year = datetime.now().year
         params = {"opinion_year": self.year}
         self.url = urljoin(self.base_url, f"?{urlencode(params)}")
-        self.cases = []
-        self.status = "Published"
         self.first_opinion_date = datetime(2019, 7, 17).date()
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
@@ -49,55 +47,51 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         """Process the HTML and extract case information"""
-        self.cases = []
-
-        if self.html is None:
+        rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')
+        if not rows:
             return
 
-        tables = self.html.cssselect("table#datatable")
-        if tables and tables[0].cssselect("tbody tr"):
-            rows = tables[0].cssselect("tbody tr")
-            print(f"Found {len(rows)} cases for year {self.year}")
+        print(f"Found {len(rows)} cases for year {self.year}")
 
-            for row in rows:
-                status_str = get_row_column_text(row, 7)
-                status = (
-                    "Published" if "Published" in status_str else "Unpublished"
-                )
-                case_date = datetime.strptime(
-                    get_row_column_text(row, 1), "%m/%d/%Y"
-                ).date()
+        for row in rows:
+            author_str = get_row_column_text(row, 4)
+            cleaned_author = normalize_judge_string(author_str)[0]
+            if cleaned_author.endswith(" J."):
+                cleaned_author = cleaned_author[:-3]
+            status_str = get_row_column_text(row, 7)
+            status = (
+                "Published" if "Published" in status_str else "Unpublished"
+            )
+            date_str = get_row_column_text(row, 1)
+            case_date = datetime.strptime(
+               date_str, "%m/%d/%Y"
+            ).date()
 
-                # Skip if not in date range
-                if (
-                    self.is_backscrape
-                    and not self.date_is_in_backscrape_range(case_date)
-                ):
-                    continue
-                if (
-                    not self.is_backscrape
-                    and case_date < self.first_opinion_date
-                ):
-                    continue
-
-                self.cases.append(
-                    {
-                        "date": get_row_column_text(row, 1),
-                        "docket": get_row_column_text(row, 2),
-                        "name": get_row_column_text(row, 3),
-                        "author": get_row_column_text(row, 4),
-                        "disposition": get_row_column_text(row, 5),
-                        "url": get_row_column_links(row, 8),
-                        "status": status,
-                    }
-                )
+            # Skip if not in date range
+            if (
+                self.is_backscrape
+                and not self.date_is_in_backscrape_range(case_date)
+            ):
+                continue
+            
+            self.cases.append(
+                {
+                    "date": date_str,
+                    "docket": get_row_column_text(row, 2),
+                    "name": get_row_column_text(row, 3),
+                    "author": cleaned_author,
+                    "disposition": get_row_column_text(row, 5),
+                    "url": get_row_column_links(row, 8),
+                    "status": status,
+                }
+            )
 
     def make_backscrape_iterable(self, kwargs):
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
-        Louisiana's opinions page returns all opinions for a year, so we must
-        filter out opinions not in the date range we are looking for
+        Louisiana's opinions page returns all opinions for a year (pagination is not needed), 
+        so we must filter out opinions not in the date range we are looking for
 
         :return None
         """
@@ -143,21 +137,38 @@ class Site(OpinionSiteLinear):
         return self.start_date <= case_date <= self.end_date
 
     def extract_from_text(self, scraped_text):
-        """Extract lower court information from the text
+        """Extract the following values from the opinion's pdf text. The information we need is in the first page
+            - appeal_from_str
+            - judges
 
-        :param scraped_text: The text content of the document
-        :return: Dictionary containing the extracted lower court information
+        :param scraped_text: The text content of the pdf
+        :return: Dictionary containing the extracted values that matches the courtlistener model objects
         """
-        match = re.search(
+        metadata = {"Docket": {}}
+
+        appeal_from_match = re.search(
             r"Appealed from the\s*(.*?\s*),\s*Louisiana",
             scraped_text,
             re.DOTALL,
         )
-        if match:
-            result = re.sub(
-                r"\s+", " ", match.group(1).replace("\n", " ")
+        # Judges are in the format "Before [Judge1], [Judge2], and [Judge3], JJ." 
+        # Sometimes there are more than 3 judges, and other edge cases like "and" is in uppercase 
+        # or there is no comma between the last two judges
+        judges_match = re.findall(
+            r"Before\s+(.+?)(?:,\s*|\s+)?(?:and|AND)\s+([A-Z]+),\s+JJ\.",
+            scraped_text,
+            re.DOTALL,
+        )
+        if appeal_from_match:
+            appeal_from_result = re.sub( r"\s+", " ", appeal_from_match.group(1).replace("\n", " ")
             ).strip()
-            return {
-                "OpinionCluster": {"lower_court": result},
+            metadata["Docket"] = {
+                "appeal_from_str": appeal_from_result,
             }
-        return {}
+        if judges_match:
+            initial_judges, last_judge = judges_match[0]
+            all_judges = initial_judges.split(",") + [last_judge]
+            metadata["OpinionCluster"] = {
+                "judges": "; ".join(filter(None, map(str.strip, all_judges))),
+            }            
+        return metadata
