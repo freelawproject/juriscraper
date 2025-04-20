@@ -749,9 +749,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {
                         "appeal_from_str": "Fourth Judicial District Court for the Parish of Ouachita"
                     },
-                    "OpinionCluster": {
-                        "judges": "PITMAN; THOMPSON; MARCOTTE"
-                    }
+                    "OpinionCluster": {"judges": "PITMAN; THOMPSON; MARCOTTE"},
                 },
             )
         ],

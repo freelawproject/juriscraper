@@ -16,8 +16,9 @@ from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
@@ -63,17 +64,14 @@ class Site(OpinionSiteLinear):
                 "Published" if "Published" in status_str else "Unpublished"
             )
             date_str = get_row_column_text(row, 1)
-            case_date = datetime.strptime(
-               date_str, "%m/%d/%Y"
-            ).date()
+            case_date = datetime.strptime(date_str, "%m/%d/%Y").date()
 
             # Skip if not in date range
-            if (
-                self.is_backscrape
-                and not self.date_is_in_backscrape_range(case_date)
+            if self.is_backscrape and not self.date_is_in_backscrape_range(
+                case_date
             ):
                 continue
-            
+
             self.cases.append(
                 {
                     "date": date_str,
@@ -90,7 +88,7 @@ class Site(OpinionSiteLinear):
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
-        Louisiana's opinions page returns all opinions for a year (pagination is not needed), 
+        Louisiana's opinions page returns all opinions for a year (pagination is not needed),
         so we must filter out opinions not in the date range we are looking for
 
         :return None
@@ -151,8 +149,8 @@ class Site(OpinionSiteLinear):
             scraped_text,
             re.DOTALL,
         )
-        # Judges are in the format "Before [Judge1], [Judge2], and [Judge3], JJ." 
-        # Sometimes there are more than 3 judges, and other edge cases like "and" is in uppercase 
+        # Judges are in the format "Before [Judge1], [Judge2], and [Judge3], JJ."
+        # Sometimes there are more than 3 judges, and other edge cases like "and" is in uppercase
         # or there is no comma between the last two judges
         judges_match = re.findall(
             r"Before\s+(.+?)(?:,\s*|\s+)?(?:and|AND)\s+([A-Z]+),\s+JJ\.",
@@ -160,7 +158,8 @@ class Site(OpinionSiteLinear):
             re.DOTALL,
         )
         if appeal_from_match:
-            appeal_from_result = re.sub( r"\s+", " ", appeal_from_match.group(1).replace("\n", " ")
+            appeal_from_result = re.sub(
+                r"\s+", " ", appeal_from_match.group(1).replace("\n", " ")
             ).strip()
             metadata["Docket"] = {
                 "appeal_from_str": appeal_from_result,
@@ -170,5 +169,5 @@ class Site(OpinionSiteLinear):
             all_judges = initial_judges.split(",") + [last_judge]
             metadata["OpinionCluster"] = {
                 "judges": "; ".join(filter(None, map(str.strip, all_judges))),
-            }            
+            }
         return metadata
