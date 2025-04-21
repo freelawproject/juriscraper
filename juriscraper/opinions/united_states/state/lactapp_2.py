@@ -35,7 +35,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         """Process the HTML and extract case information"""
         rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')
-        
+
         for row in rows:
             author_str = get_row_column_text(row, 4)
             cleaned_author = normalize_judge_string(author_str)[0]
