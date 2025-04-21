@@ -32,20 +32,6 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self):
-        """Download the page content"""
-        html = super()._download()
-
-        if html is not None:
-            tables = html.cssselect("table#datatable")
-            if not tables or not tables[0].cssselect("tbody tr"):
-                print(f"No data found for {self.year}, trying {self.year-1}")
-                self.year -= 1
-                params = {"opinion_year": self.year}
-                self.url = urljoin(self.base_url, f"?{urlencode(params)}")
-                return self._download()
-        return html
-
     def _process_html(self):
         """Process the HTML and extract case information"""
         rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')
