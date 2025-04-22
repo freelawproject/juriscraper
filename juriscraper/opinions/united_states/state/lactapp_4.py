@@ -10,8 +10,8 @@ import re
 from datetime import date, datetime
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -131,7 +131,6 @@ class Site(OpinionSiteLinear):
         self.target_date = target_date
         self.html = self._download()
         self._process_html()
-
 
     def make_backscrape_iterable(self, kwargs):
         super().make_backscrape_iterable(kwargs)
