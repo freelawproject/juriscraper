@@ -5,6 +5,7 @@ from urllib.parse import urlencode
 
 from bs4 import BeautifulSoup
 from lxml import etree
+from typing_extensions import override
 
 from casemine.CaseMineCrawl import CaseMineCrawl
 from casemine.casemine_util import CasemineUtil
@@ -146,21 +147,49 @@ class Site(OpinionSiteLinear):
         self.parse()
         return 0
 
+    @override
+    def _request_url_post(self, url):
+        """Execute POST request and assign appropriate request dictionary values"""
+        self.request["url"] = url
+        self.request["response"] = self.request["session"].post(
+            url,
+            headers=self.request["headers"],
+            verify=self.request["verify"],
+            data=self.parameters,
+            proxies=self.proxies,
+            timeout=60,
+            **self.request["parameters"],
+        )
+
     def parse(self):
         if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
             i = 0
-            while (True):
+            while True:
                 self.parameters.__setitem__("page", i)
-                self._request_url_post(self.url)
-                self._post_process_response()
+                while True:
+                    try:
+                        # Getting new us proxy
+                        us_proxy = CasemineUtil.get_us_proxy()
+                        # Setting in proxies header
+                        self.proxies = {
+                            "http": f"{us_proxy.ip}:{us_proxy.port}", "https": f"{us_proxy.ip}:{us_proxy.port}", }
+                        self._request_url_post(self.url)
+                        self._post_process_response()
+                        break
+                    except Exception as ex:
+                        if str(ex).__contains__("Unable to connect to proxy") or str(ex).__contains__("Forbidden for url"):
+                            i += 1
+                            continue
+                        else:
+                            raise ex
                 self.html = self._return_response_text_object()
                 # Process the available html (optional)
                 html_data = self.html[2]['data']
                 # Create a BeautifulSoup object by parsing the HTML string
                 soup = BeautifulSoup(html_data, 'html.parser')
                 table = soup.find('table', class_='views-table')
-                if (table == None):
+                if table == None:
                     break
                 rows = table.find_all('tr')
                 # Print each <tr> tag
@@ -180,9 +209,10 @@ class Site(OpinionSiteLinear):
                     # Format the date object to the new format
                     date_obj = datetime.strptime(date_filed_2, "%Y/%m/%d")
                     date_obj = date_obj.strftime('%d/%m/%Y')
-                    res = CasemineUtil.compare_date(date_obj, self.crawled_till)
-                    if(res == 1):
+                    res = CasemineUtil.compare_date( self.crawled_till,date_obj)
+                    if res == 1:
                         self.crawled_till = date_obj
+                        break
                     dockets = []
                     docket = td.__getitem__(2).text.replace("\n","").strip()
                     dockets.append(docket)
@@ -234,10 +264,10 @@ class Site(OpinionSiteLinear):
             self._make_hash()
             return self
 
-    def _download(self, request_dict={}):
-        self._request_url_post(self.url)
-        self._post_process_response()
-        return self._return_response_text_object()
+    # def _download(self, request_dict={}):
+    #     self._request_url_post(self.url)
+    #     self._post_process_response()
+    #     return self._return_response_text_object()
 
     def _process_html(self):
         html_data = self.html[2]['data']

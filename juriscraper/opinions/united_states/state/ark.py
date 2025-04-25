@@ -12,6 +12,7 @@ from lxml import html
 import \
     requests
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import normalize_dashes, titlecase
@@ -66,6 +67,10 @@ class Site(OpinionSiteLinear):
                 per_curiam = metadata[0].text_content().strip() == "Per Curiam"
 
             date_filed = item.xpath(".//*[@class='publicationDate']/text()")[0]
+            curr_date = datetime.strptime(date_filed, "%m/%d/%Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             if self.cases.__contains__({"date": date_filed, "docket": [], "name": titlecase(name), "citation": [cite], "url": url, "status": "Published", "per_curiam": per_curiam}):
                 return
             self.cases.append(

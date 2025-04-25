@@ -60,7 +60,7 @@ class Site(OpinionSite):
         begin = 0
         numbegin = 1
         flag = True
-        while(flag):
+        while flag:
             if(self.get_class_name().__eq__("ca11_p")):
                 self.url = 'https://media.ca11.uscourts.gov/opinions/pub/logname.php?begin='+str(begin)+'&num='+str(num)+'&numBegin='+str(numbegin)
             else:
@@ -86,7 +86,7 @@ class Site(OpinionSite):
                     date_obj = datetime.strptime(clean_string(s), "%m-%d-%Y").date()
                     formatted_date = date_obj.strftime("%d/%m/%Y")
                     res = CasemineUtil.compare_date(formatted_date,self.crawled_till)
-                    if(res==-1):
+                    if res==-1:
                         flag=False
 
                     self.dates.append(date_obj)
@@ -102,7 +102,7 @@ class Site(OpinionSite):
                 begin = begin + 20
                 # if (num == 5):
                 #     break
-                if (num == 20):
+                if num == 20:
                     numbegin = numbegin + 20
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()

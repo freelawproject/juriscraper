@@ -11,6 +11,7 @@ from datetime import datetime
 
 from lxml import html
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -31,6 +32,9 @@ class Site(OpinionSiteLinear):
                         name=strng[strng.find(" ")+1 :]
                         dt = datetime.strptime(dat, "%m/%d/%Y")
                         formatted_date = dt.strftime("%d/%m/%Y")
+                        res = CasemineUtil.compare_date(self.crawled_till, formatted_date)
+                        if res == 1:
+                            return
                         dock=records.xpath("./a/text()")
                         url=records.xpath("./a/@href")[0]
 

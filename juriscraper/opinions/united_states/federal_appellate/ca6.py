@@ -36,7 +36,7 @@ class Site(OpinionSite):
             dates.append(dt)
             comp_date = dt.strftime('%d/%m/%Y')
             res = CasemineUtil.compare_date(comp_date, self.crawled_till)
-            if (res == 1):
+            if res == 1:
                 self.crawled_till = comp_date
         return dates
 

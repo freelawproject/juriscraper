@@ -44,6 +44,10 @@ class Site(OpinionSiteLinear):
         for i in range(len(data)):
             item = data[i]
             date = item[0]
+            curr_date = datetime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             docket = item[1]
             origin = item[2]
             type = item[3]
@@ -51,7 +55,7 @@ class Site(OpinionSiteLinear):
             status = item[5]
             slug = item[6]
             self.cases.append({"date": date, "docket": [docket],
-                               "url": f"https://cafc.uscourts.gov/{slug}",
+                               "url": f"https://www.cafc.uscourts.gov/{slug}",
                                "name": name,
                                "status": self._get_status(status.lower())})
 
@@ -68,7 +72,7 @@ class Site(OpinionSiteLinear):
             docket, title = item["title"].split(" [")[0].split(": ", 1)
             slug = fromstring(value).xpath(".//a/@href")[0]
             self.cases.append({"date": item["published"], "docket": docket,
-                               "url": f"https://cafc.uscourts.gov/{slug}",
+                               "url": f"https://www.cafc.uscourts.gov/{slug}",
                                "name": titlecase(title),
                                "status": self._get_status(
                                    item["title"].lower()), })
@@ -87,7 +91,7 @@ class Site(OpinionSiteLinear):
         return status
 
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-        self.url = 'https://cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=1'
+        self.url = 'https://www.cafc.uscourts.gov/wp-admin/admin-ajax.php?action=get_wdtable&table_id=1'
         self.method = 'POST'
         sdate = start_date.strftime("%d/%m/%Y").split("/")
         edate = end_date.strftime("%d/%m/%Y").split("/")
@@ -146,7 +150,7 @@ class Site(OpinionSiteLinear):
                                'order[0][dir]': 'desc', 'start': f'{start}',
                                'length': f'{length}', 'search[value]': '',
                                'search[regex]': 'false',
-                               'wdtNonce': '3a29821d98',
+                               'wdtNonce': '6f7f326c1c',
                                'sRangeSeparator': '|'}
             self.parse()
             start = start + length

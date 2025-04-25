@@ -18,6 +18,7 @@ from urllib.parse import urlencode
 
 import requests
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -135,7 +136,11 @@ class Site(OpinionSiteLinear):
                     else:
                         parallel_citation=[]
             match = re.search(case_pattern, docket_number)
-
+            # %Y-%m-%d
+            curr_date = datetime.strptime(date_filed, "%Y-%m-%d").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             case = {
                 "date": date_filed,
                 "docket": [match.group()],
@@ -194,7 +199,7 @@ class Site(OpinionSiteLinear):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         # start_date = datetime(2025,3,1)
         # end_date=datetime(2025,3,1)
-        logger.info("Crawling between the dates from %s to %s", start_date , end_date)
+        # logger.info("Crawling between the dates from %s to %s", start_date , end_date)
         # self.parse()
         self._download_backwards((start_date, end_date))
         self.parse()

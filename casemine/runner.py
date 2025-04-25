@@ -2,15 +2,15 @@ import ast
 from datetime import datetime
 
 from casemine.casemine_util import CasemineUtil
-from juriscraper.opinions.united_states.state import calctapp_4th_div1, \
-    calctapp_4th_div2, calctapp_4th_div3, calctapp_5th, calctapp_6th, \
-    calctapp_app_div, calctapp_u
+from juriscraper.opinions.united_states.federal_bankruptcy import bank_dc
+from juriscraper.opinions.united_states.federal_district import md_ala
+from juriscraper.opinions.united_states.state import ark_admin_law, ark_work_comp, la_ag, mo_ag, neb_ag, wash_ag
 
-site = calctapp_u.Site()
+site = bank_dc.Site()
 
-site.execute_job("nysupct")
+site.execute_job("bank_dc")
 
-print(f"Total judgements: {site.cases.__len__()}")
+# print(f"Total judgements: {site.cases.__len__()}")
 
 # Iterate over the items
 class_name = site.get_class_name()
@@ -120,7 +120,7 @@ for opinion in site:
     if flag:
         print(f'{ctr} - {data}')
     else:
-        print("\t!!..Duplicate..!!")
+        print(f"{ctr} - !!..Duplicate..!!")
     ctr = ctr + 1
 
 site.set_crawl_config_details(class_name, site.crawled_till)

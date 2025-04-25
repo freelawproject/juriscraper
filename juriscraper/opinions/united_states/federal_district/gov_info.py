@@ -2,7 +2,11 @@ import re
 from datetime import datetime
 from typing import Dict, Any
 
+from typing_extensions import override
+
+from casemine.casemine_util import CasemineUtil
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.html_utils import set_response_encoding
 
 
 class Site(OpinionSiteLinear):
@@ -16,9 +20,50 @@ class Site(OpinionSiteLinear):
 
     def _download(self, request_dict={}):
         """Download the latest version of Site"""
-        self._request_url_post(self.url)
-        self._post_process_response()
+        i = 0
+        while True:
+            try:
+                # Getting new us proxy
+                us_proxy = CasemineUtil.get_us_proxy()
+                # Setting in proxies header
+                self.proxies = {
+                    "http": f"{us_proxy.ip}:{us_proxy.port}", "https": f"{us_proxy.ip}:{us_proxy.port}",
+                }
+                self._request_url_post(self.url)
+                self._post_process_response()
+                break
+            except Exception as ex:
+                if str(ex).__contains__("Unable to connect to proxy") or str(ex).__contains__("Forbidden for url"):
+                    # print(f"{i} {ex} - hitting with new proxy after 2 minutes")
+                    # sleep(30)
+                    if i == 100:
+                        break
+                    else:
+                        continue
+                else:
+                    raise ex
         return self._return_response_text_object()
+
+    @override
+    def _request_url_post(self, url):
+        """Execute POST request and assign appropriate request dictionary values"""
+        self.request["url"] = url
+        self.request["response"] = self.request["session"].post(
+            url,
+            headers=self.request["headers"],
+            verify=self.request["verify"],
+            data=self.parameters,
+            proxies=self.proxies,
+            timeout=60,
+            **self.request["parameters"],
+        )
+
+    @override
+    def _post_process_response(self):
+        """Cleanup to response object"""
+        self.tweak_response_object()
+        self.request["response"].raise_for_status()
+        set_response_encoding(self.request["response"])
 
     def _process_html(self) -> None:
         self.json = self.html
@@ -35,6 +80,10 @@ class Site(OpinionSiteLinear):
                 date_finder = date_arr[-2]
 
             date_str = date_finder.split("day, ")[1].strip(".")
+            curr_date = datetime.strptime(date_str, "%B %d, %Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             teaser = ''
             if dict(row["fieldMap"]).keys().__contains__("teaser"):
                 teaser = row["fieldMap"]["teaser"]
@@ -85,7 +134,7 @@ class Site(OpinionSiteLinear):
         flag = True
         page = 0
         while flag:
-            self.parameters = '{"historical":false,"offset":' + str(page) + ',"query":"publishdate:range(' + start_date.strftime("%Y-%m-%d") + ',' + end_date.strftime("%Y-%m-%d") + ') ","facetToExpand":"governmentauthornav","facets":{"accodenav":["USCOURTS"],"governmentauthornav":["' + self.court_name + '"]},"filterOrder":["accodenav","governmentauthornav"],"sortBy":"2","pageSize":100}'
+            self.parameters = '{"historical":false,"offset":' + str(page) + ',"query":"publishdate:range(' + start_date.strftime("%Y-%m-%d") + ',' + end_date.strftime("%Y-%m-%d") + ')","facetToExpand":"governmentauthornav","facets":{"accodenav":["USCOURTS"],"governmentauthornav":["' + self.court_name + '"]},"filterOrder":["accodenav","governmentauthornav"],"sortBy":"2","pageSize":100}'
             self.parse()
             if list(self.json["resultSet"]).__len__() == 0:
                 flag = False

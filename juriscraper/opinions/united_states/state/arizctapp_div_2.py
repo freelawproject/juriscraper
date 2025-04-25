@@ -37,6 +37,9 @@ class Site(OpinionSiteLinear):
             date = clean_if_py3(date_string).rsplit(":", 1)[1].strip()
             date_obj = datetime.strptime(date,"%m/%d/%Y")
             formatted_date = date_obj.strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till,formatted_date)
+            if res == 1:
+                return
             summary_list = item.xpath("./following::tr[1]//text()")
             summary = "".join(summary_list).strip()
             docket=docket.replace(' \r\n', '')

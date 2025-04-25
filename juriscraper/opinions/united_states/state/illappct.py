@@ -68,12 +68,16 @@ class Site(ill.Site):
             }
             self.method = 'POST'
             self.parse()
-            next_div = self.html.xpath('//tr[@class="pagenation"]//table/tr')[0]
-            last_td = next_div.xpath('td[last()]')[0]
-            check_last = html.tostring(last_td, pretty_print=True).decode()
-            self.downloader_executed = False
-            i = i + 1
-            if not check_last.__contains__('href="javascript:__doPostBack'):
+            next_div = self.html.xpath('//tr[@class="pagenation"]//table/tr')
+            if list(next_div).__len__()!=0:
+                next_page=next_div[0]
+                last_td = next_page.xpath('td[last()]')[0]
+                check_last = html.tostring(last_td, pretty_print=True).decode()
+                self.downloader_executed = False
+                i = i + 1
+                if not check_last.__contains__('href="javascript:__doPostBack'):
+                    flag=False
+            else:
                 flag=False
         return 0
 

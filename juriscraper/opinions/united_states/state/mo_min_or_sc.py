@@ -87,7 +87,7 @@ class Site(OpinionSiteLinear):
         return "state"
 
     def get_class_name(self):
-        return "mo"
+        return "mo_min_or_sc"
 
     def get_state_name(self):
         return "Missouri"

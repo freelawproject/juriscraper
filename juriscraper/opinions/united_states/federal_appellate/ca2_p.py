@@ -114,13 +114,12 @@ class Site(OpinionSite):
                     res = CasemineUtil.compare_date(date_obj, self.crawled_till)
                     if res == 1:
                         self.crawled_till = date_obj
-
+                        flag=False
 
                 # docket_numbers
                 docket_node = self.html.xpath("//table/td/b/a/nobr")
                 for doc in docket_node:
-                    cus_doc = []
-                    cus_doc.append(doc.text_content())
+                    cus_doc = str(doc.text_content()).split(",")
                     self.dockets.append(cus_doc)
 
                 url_node = self.html.xpath("//table/td/b/a/@href")

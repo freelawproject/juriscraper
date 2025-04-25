@@ -4,6 +4,7 @@ from typing import Tuple
 
 from dateutil.parser import parse
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -62,10 +63,14 @@ class Site(OpinionSiteLinear):
                 date_filed_is_approximate = False
                 date_filed = self.find_published_date(pub[0])
             else:
-
                 date_filed = f"{self.current_year}-07-01"
                 date_filed_is_approximate = True
 
+            # curr_date = datetime.strptime(date_filed, "%m/%d/%Y").strftime("%d/%m/%Y")
+            curr_date = datetime.strptime(date_filed, "%B %d, %Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
                 {
@@ -83,10 +88,7 @@ class Site(OpinionSiteLinear):
 
     def extract_from_text(self, scraped_text: str):
         metadata = {"OpinionCluster": {}}
-
-
         judges_end = 1_000_000
-
         regex_date = r"Argued.+officially\sreleased\s(?P<date>[JFMASOND]\w+\s\d{1,2},\s\d{4})"
         if date_match := re.search(regex_date, scraped_text):
             try:
@@ -124,7 +126,6 @@ class Site(OpinionSiteLinear):
                 )
 
             judges_end = min(judges_end, sy_start_index)
-
         if judges_end != 1_000_000:
             if docket_match := list(
                 re.finditer(r"[AS]C\s\d{5}", scraped_text[:judges_end])

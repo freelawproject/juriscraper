@@ -3,6 +3,7 @@ from datetime import datetime
 
 import requests
 
+from casemine.casemine_util import CasemineUtil
 from casemine.constants import MAIN_PDF_PATH
 from juriscraper.OpinionSite import OpinionSite
 
@@ -63,6 +64,10 @@ class Site(OpinionSite):
                 'string(.//div[@class="col-sm-9 ml-3 ml-sm-0"]/div[@class="row"][1])')
             date = row.xpath(
                 'string(.//div[@class="col-sm-9 ml-3 ml-sm-0"]/div[@class="row"][4])')
+            curr_date = datetime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             self.names.append(title)
             self.dates.append(datetime.strptime(date,'%m/%d/%Y'))
             self.dockets.append([docket])
