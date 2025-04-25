@@ -8,6 +8,8 @@ import re
 from datetime import date, datetime, timedelta
 from typing import Optional, Tuple
 from urllib.parse import urlencode, urljoin
+
+from casemine.casemine_util import CasemineUtil
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -42,7 +44,10 @@ class Site(OpinionSiteLinear):
                 judge = jud
 
             date_str = row.xpath(".//td[3]/text()")[0].strip()
-
+            curr_date = datetime.strptime(date_str, "%b %d, %Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             result = re.split(r'[,&]\s*', docket)
 
             disposition = row.xpath(".//td[4]/text()")[0].strip()

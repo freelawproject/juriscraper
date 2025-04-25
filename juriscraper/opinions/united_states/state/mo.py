@@ -7,6 +7,9 @@ Date created: 04/27/2014
 
 from datetime import date, datetime
 
+import requests
+
+from casemine.casemine_util import CasemineUtil
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -50,15 +53,29 @@ class Site(OpinionSiteLinear):
                 )
 
     def crawl_back(self,start: int , end : int):
-        if(start == end):
-            print("start and end year are same")
+        if start == end:
+            # print("start and end year are same")
             self.url = self.build_url(start)
-            self.html=self._download()
+            i=0
+            while True:
+                try:
+                    proxy = CasemineUtil.get_us_proxy()
+                    prox = {
+                        "http": f"{proxy.ip}:{proxy.port}", "https": f"{proxy.ip}:{proxy.port}", }
+                    self.html = requests.get(url=self.url,proxies=prox,headers=self.request["headers"],verify = self.request["verify"])
+                    break
+                except Exception as ex:
+                    i+=1
+                    print(f"{i} {proxy.ip}:{proxy.port}  - {ex}")
+                    if str(ex).__contains__("Unable to connect to proxy") or str(ex).__contains__("Forbidden for url"):
+                        if i>50:
+                            break
+                        else:
+                            continue
             self._process_html()
         else:
-            while(start != end):
-                print(f"start and end year are not same start year is {start} and end year is {end}")
-
+            while start != end:
+                # print(f"start and end year are not same start year is {start} and end year is {end}")
                 self.url =self.build_url(start)
                 self.html = self._download()
                 self._process_html()

@@ -29,7 +29,10 @@ class Site(OpinionSiteLinear):
         self.set_custom_adapter(self.cipher)
 
     def _process_html(self):
-        for row in self.html.cssselect("#opinion_contentTable tbody tr"):
+        rows = self.html.cssselect("#opinion_contentTable tbody tr")
+        if rows is None:
+            return
+        for row in rows:
             self.cases.append({"date": get_row_column_text(row, 1),
                                "docket": [self._parse_docket_numbers(row)],
                                "name": get_row_column_text(row, 4),

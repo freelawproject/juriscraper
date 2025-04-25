@@ -20,6 +20,12 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")
+
+        ###################################################
+        #################### DATE #########################
+        #################### NOT #########################
+        #################### FOUND #########################
+
         for case in cases:
             docket = case.xpath(".//h4")[0].text_content().strip()
             summary = case.xpath(".//p")[0].text_content().strip()
@@ -38,18 +44,6 @@ class Site(OpinionSiteLinear):
                     "status": "Published",
                 }
             )
-
-    # def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
-    #     return 0
-    #
-    # def get_court_type(self):
-    #     return "state"
-    #
-    # def get_state_name(self):
-    #     return "Texas"
-    #
-    # def get_class_name(self):
-    #     return "texag"
-    #
-    # def get_court_name(self):
-    #     return ""
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self.parse()
+        return 0

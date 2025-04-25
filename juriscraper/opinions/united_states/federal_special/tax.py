@@ -20,22 +20,13 @@ class Site(OpinionSiteLinear):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.params = None
         self.set_blue_green = None
         self.base = "https://public-api-green.dawson.ustaxcourt.gov/public-api"
         self.url = f"{self.base}/opinion-search"
         self.court_id = self.__module__
-        self.td = date.today()
-        today = self.td.strftime("%m/%d/%Y")
-        self.method = "GET"
-
-        last_month = (self.td - timedelta(days=31)).strftime("%m/%d/%Y")
-        self.params = {
-            "dateRange": "customDates",
-            "startDate": last_month,
-            "endDate": today,
-            "opinionTypes": "MOP,SOP,TCOP",
-        }
         self.make_backscrape_iterable(kwargs)
+        self.method = "GET"
 
     def _download(self, request_dict={}):
         """Download from api
@@ -82,11 +73,11 @@ class Site(OpinionSiteLinear):
             )
             self.cases.append(
                 {
-                    "judge": case.get(
+                    "judge": [case.get(
                         "signedJudgeName", case.get("judge", "")
-                    ),
+                    )],
                     "date": case["filingDate"][:10],
-                    "docket": case["docketNumber"],
+                    "docket": [case["docketNumber"]],
                     "url": url,
                     "name": titlecase(case["caseCaption"]),
                     "status": status,
@@ -131,4 +122,24 @@ class Site(OpinionSiteLinear):
         # {'message': 'you are only allowed 15 requests in a 60 second window time', 'type': 'ip-limiter'}
         if len(self.json) > 0:
             logger.info("Sleeping for 61 seconds to prevent rate limit")
-            time.sleep(61)
+            # time.sleep(61)
+
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        print(f"startDate {start_date.strftime('%m/%d/%Y')} -> endDate {end_date.strftime('%m/%d/%Y')}")
+        self.params = {
+            "dateRange": "customDates", "startDate": start_date.strftime("%m/%d/%Y"), "endDate": end_date.strftime("%m/%d/%Y"), "opinionTypes": "MOP,SOP,TCOP", }
+        self.parse()
+        return 0
+
+    def get_court_type(self):
+        return "Special"
+
+    def get_court_name(self):
+        return "United States Tax Court"
+
+    def get_state_name(self):
+        return "Tax"
+
+    def get_class_name(self):
+        return "tax"

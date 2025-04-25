@@ -138,3 +138,8 @@ class Site(OpinionSite):
             f"http://www.uscfc.uscourts.gov/aggregator/sources/8?page={page}"
         )
         self.html = self._download()
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        self._download_backwards(1)
+        return 0
+

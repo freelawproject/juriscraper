@@ -65,6 +65,10 @@ class Site(OpinionSiteLinear):
             _, date, docket, link, justice, citation = row.xpath(".//td")
             if not link.text_content():
                 continue
+            curr_date = datetime.strptime(date.text_content(), "%m/%d/%y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             self.cases.append(
                 {
                     "citation": [citation.text_content()],

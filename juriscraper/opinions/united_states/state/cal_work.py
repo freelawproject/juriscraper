@@ -9,9 +9,6 @@ Court Short Name: Ariz.
 import re
 from datetime import datetime
 
-from lxml import html
-from nipype.info import description
-
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 

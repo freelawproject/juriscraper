@@ -79,3 +79,7 @@ class Site(OpinionSiteLinear):
             },
         }
         return metadata
+
+    def crawling(self, crawled_till) -> int:
+        self.parse()
+        return 0

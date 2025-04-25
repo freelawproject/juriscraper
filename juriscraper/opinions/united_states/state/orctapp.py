@@ -57,7 +57,7 @@ class Site(OpinionSiteLinear):
         return response_html['text']
 
     def _process_html(self, start_date: datetime, end_date: datetime):
-        print(f"inside process html {start_date} , {end_date}")
+        # print(f"inside process html {start_date} , {end_date}")
         for header in self.html.xpath("//h4//a/parent::h4"):
             date_string = header.text_content().strip()
             pdf_url = ""

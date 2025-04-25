@@ -5,9 +5,10 @@ History:
     - 2023-12-13: Updated by William E. Palin
 """
 from juriscraper.AbstractSite import logger
-from juriscraper.opinions.united_states.state import nev
+from juriscraper.opinions.united_states.state import nev, nevapp
 
-class Site(nev.Site):
+
+class Site(nevapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

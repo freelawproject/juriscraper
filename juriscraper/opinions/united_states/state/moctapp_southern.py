@@ -1,3 +1,4 @@
+from casemine.casemine_util import CasemineUtil
 from juriscraper.opinions.united_states.state import mo
 
 
@@ -6,6 +7,10 @@ class Site(mo.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court = "Southern"
+        proxy = CasemineUtil.get_us_proxy()
+        self.proxies = {
+            "http": f"{proxy.ip}:{proxy.port}", "https": f"{proxy.ip}:{proxy.port}",
+        }
         # self.url = self.build_url()
 
     def _download(self, request_dict={}):

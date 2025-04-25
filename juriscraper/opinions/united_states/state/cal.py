@@ -1,6 +1,7 @@
 import re
 from datetime import datetime
 
+from casemine.casemine_util import CasemineUtil
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -28,6 +29,10 @@ class Site(OpinionSiteLinear):
 
             url = row.xpath(".//a[@class='op-link']/@href")[0]
             date_filed = row.xpath(".//*[@class='op-date']/text()")[0]
+            curr_date = datetime.strptime(date_filed, "%b %d, %Y").strftime("%d/%m/%Y")
+            res = CasemineUtil.compare_date(self.crawled_till, curr_date)
+            if res == 1:
+                return
             docket = row.xpath(".//*[@class='op-case']/text()")[0]
             case = {
                 "name": case_name,

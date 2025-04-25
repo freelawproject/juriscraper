@@ -80,7 +80,7 @@ class Site(OpinionSiteLinear):
 
             date_obj = datetime.strptime(date_filed, '%m/%d/%Y').strftime("%d/%m/%Y")
             res = CasemineUtil.compare_date(self.crawled_till, date_obj)
-            if res == -1:
+            if res > 1:
                 return
             match = re.search(self.docket_re, citation)
             try:
