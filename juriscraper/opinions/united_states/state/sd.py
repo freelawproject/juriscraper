@@ -10,6 +10,8 @@ import re
 from datetime import datetime
 from typing import Any, Dict
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_row_column_text
 from juriscraper.lib.string_utils import titlecase
@@ -23,20 +25,58 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
-        self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
+        self.base = "https://ujs.sd.gov/supreme-court/opinions/"
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self) -> None:
-        """Parse HTML into case dictionaries
+    def _fetch_duplicate(self, data):
+        # Create query for duplication
+        query_for_duplication = {"pdf_url": data.get("pdf_url"),
+                                 "docket": data.get("docket"),
+                                 "title": data.get("title")}
+        # Find the document
+        query_for_url = {
+                                 "docket": data.get("docket"),
+                                 "title": data.get("title")}
+        duplicate = self.judgements_collection.find_one(query_for_duplication)
+        url_d = self.judgements_collection.find_one(query_for_url)
 
-        :return None
-        """
-        rows = self.html.xpath(
-            "//div[@id='ContentPlaceHolder1_ChildContent1_UpdatePanel_Opinions']//tbody/tr"
-        )
-        for row in rows:
-            title = get_row_column_text(row, 2)
+        url=url_d["pdf_url"]
+        object_id = None
+        if duplicate is None:
+            if data.get("pdf_url").split('/')[-1] in url.split('/')[-1]:
+                processed = url_d.get("processed")
+                if processed == 10:
+                    raise Exception(
+                        "Judgment already Exists!")  # Replace with your custom DuplicateRecordException
+                else:
+                    object_id = url_d.get(
+                        "_id")
+            else:
+                # Insert the new document
+                self.judgements_collection.insert_one(data)
+
+                # Retrieve the document just inserted
+                updated_data = self.judgements_collection.find_one(
+                    query_for_duplication)
+                object_id = updated_data.get(
+                    "_id")  # Get the ObjectId from the document
+                self.flag = True
+        else:
+            # Check if the document already exists and has been processed
+            processed = duplicate.get("processed")
+            if processed == 10:
+                raise Exception(
+                    "Judgment already Exists!")  # Replace with your custom DuplicateRecordException
+            else:
+                object_id = duplicate.get(
+                    "_id")  # Get the ObjectId from the existing document
+        return object_id
+    def _process_html(self) -> None:
+
+        for row in self.html.xpath(".//table[@class='file-search-results__table']/tbody/tr"):
+            title = row.xpath(".//td[2]//a/text()")[0]
+            name = re.sub(r',\s*\d{4}\s*S\.D\.\s*\d+', '',title)
             cite = re.findall(r"\d{4} S\.D\. \d+", title)
             if not cite:
                 continue
@@ -45,13 +85,13 @@ class Site(OpinionSiteLinear):
             # We abstract out the first part of the docket number here
             # And process the full docket number in the `extract_from_text` method
             # Called after the file has been downloaded.
-            url = row.xpath(".//td[2]/a/@href")[0]
+            url = row.xpath(".//td[2]//a/@href")[0]
             docket = url.split("/")[-1][:5]
             self.cases.append(
                 {
                     "date": get_row_column_text(row, 1),
                     "name": titlecase(title.rsplit(",", 1)[0]),
-                    "citation": [cite[0]],
+                    "citation": cite,
                     "url": url,
                     "docket": [docket],
                 }
@@ -86,38 +126,6 @@ class Site(OpinionSiteLinear):
         }
         self.parameters = data
         self.html = super()._download()
-
-    def _download_backwards(self, year: int) -> None:
-        """Get input year's page
-
-        We need to GET the homepage first to load hidden inputs
-        Then, we can POST for the desired year's page
-
-        :param year:
-        :return: None
-        """
-        logger.info("Backscraping for year %s", year)
-        self.is_backscrape = True
-
-        self.method = "GET"
-        self.html = super()._download()
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
-        event_validation = self.html.xpath(
-            "//input[@id='__EVENTVALIDATION']/@value"
-        )[0]
-        a = self.html.xpath(
-            f".//a[contains(@id,'ContentPlaceHolder1_ChildContent1_Repeater_OpinionsYear_LinkButton1')][contains(text(), '{year}')]/@href"
-        )
-        link = a[0].split("'")[1]
-        data = {
-            "__VIEWSTATE": view_state,
-            "__EVENTVALIDATION": event_validation,
-            "__EVENTTARGET": link,
-        }
-        self.parameters = data
-        self.method = "POST"
-        self.html = super()._download()
-        self._process_html()
 
     def make_backscrape_iterable(self, kwargs: Dict) -> None:
         """Creates backscrape iterable from kwargs or defaults
@@ -158,7 +166,17 @@ class Site(OpinionSiteLinear):
         print(f"start and end year is {sy} , {es}")
         while sy <= es:
             print(f"for the year {sy}")
-            self._download_backwards(sy)
+            page = 1
+            while True:
+                self.url = f"{self.base}/?year={sy}&page={page}"
+                page += 1
+                self.html=self._download()
+
+                html_string = html.tostring(self.html,
+                                            ).decode('UTF-8')
+                if "We're sorry, there were no results found for this search." in html_string: break
+                self._process_html()
+
             sy +=1
 
         for attr in self._all_attrs:

@@ -144,7 +144,6 @@ class Site(OpinionSiteLinear):
         self.requestDigest = ""
         self.headers = {
             "Referer": "https://www.courts.ri.gov/Courts/SupremeCourt/Pages/published-opinions.aspx",
-            # "X-RequestDigest":"0x6393A8D5D33FFB310A0C9BC512C8E67EF945B58F7A8BDE5E996C5DDA69A1674DC229B1BD99841B2941DB473954ACE58DB1DBB83E72F0CC9C70774EBB806CE980,30 Jan 2025 07:39:48 -0000"
         }
 
         # self.data_xml = (
@@ -184,6 +183,7 @@ class Site(OpinionSiteLinear):
             }
         )
         response_json = self.download_json()
+        print(response_json)
         rows = response_json[-3][self.search_key][
             "ResultTables"
         ][0]["ResultRows"]
@@ -194,8 +194,8 @@ class Site(OpinionSiteLinear):
             summary=summary.replace('\n','')
             date= row["RIJDateOWSDATE"].split(" ")[0]
             if datetime.strptime(date.strip(),
-                                 "%m/%d/%Y") > start_date and datetime.strptime(
-                date.strip(), "%m/%d/%Y") < end_date:
+                                 "%m/%d/%Y") >= start_date and datetime.strptime(
+                date.strip(), "%m/%d/%Y") <= end_date:
                 name = row['RIJLongTitleOWSMTXT']
                 url = quote(row['Path'], safe='://&')
                 doc = row['RIJLongNumberOWSMTXT']
@@ -206,13 +206,6 @@ class Site(OpinionSiteLinear):
                 docs = docs.replace(', ', ',')
                 docket = docs.split(',')
                 date =  row["RIJDateOWSDATE"].split(" ")[0]
-                # print(f"name : {name}")
-                # # print(url)
-                # print(f"url : {url}")
-                # print(f"summary : {summary}")
-                # print(f"docket : {docket}")
-                # print(f'date : {date}')
-                # print("-------------------------------------------------------------")
                 self.cases.append(
                     {
                         "url": url,

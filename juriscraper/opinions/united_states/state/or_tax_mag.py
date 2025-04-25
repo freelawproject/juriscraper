@@ -1,23 +1,21 @@
-"""
-History:
- - 2014-08-05: Adapted scraper to have year-based URLs.
- - 2023-11-18: Fixed and updated
-"""
-from juriscraper.DeferringList import DeferringList
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 import re
 from datetime import datetime
 
 from lxml import html
 
-class Site(OpinionSiteLinear):
+from juriscraper.DeferringList import DeferringList
+from juriscraper.opinions.united_states.state import orsc
+
+
+class Site(orsc.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
-            "https://www.courts.oregon.gov/publications/sc/Pages/default.aspx"
+            "https://www.courts.oregon.gov/publications/tax/Pages/tax-magistrate.aspx"
         )
-        self.court_code = "p17027coll3"
+        self.status = "Unublished"
+        self.court_code = "p17027coll6"
 
     def get_pdf_id(self,docket : str, name : str):
         u = f"https://cdm17027.contentdm.oclc.org/digital/api/search/collection/p17027coll3!p17027coll5!p17027coll6/searchterm/{docket}/field/all/mode/all/conn/all/order/date/ad/desc/maxRecords/50"
@@ -39,7 +37,6 @@ class Site(OpinionSiteLinear):
         url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{id}/false"
         response_html = self.request["session"].get(url,headers=self.request["headers"]).json()
         return response_html['text']
-
     def _get_download_urls(self):
         """Get download urls
 
@@ -60,53 +57,44 @@ class Site(OpinionSiteLinear):
         """"""
         url = f"https://ojd.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/{self.court_code}/identi^{identifier}^all^and/title!subjec!descri!dmrecord/title/1024/1/0/0/0/0/json"
         json = self.request["session"].get(url).json()
-        return f"https://ojd.contentdm.oclc.org/digital/api/collection/{self.court_code}/id/{json['records'][0]['pointer']}/download"
+        print(json)
+        if len(json['records'])>0:
+            code=json['records'][0]['pointer']
+        else:
+            code = ""
+        return f"https://ojd.contentdm.oclc.org/digital/api/collection/{self.court_code}/id/{code}/download"
 
     def _process_html(self, start_date: datetime, end_date: datetime):
-        for header in self.html.xpath("//h4//a/parent::h4"):
-            date_string = header.text_content().strip()
-            pdf_url = ""
-            if not date_string:
-                continue
-            if datetime.strptime(date_string.strip(),
-                                 "%m/%d/%Y") >= start_date and datetime.strptime(
-                date_string.strip(), "%m/%d/%Y") <= end_date:
+        start = start_date.year
+        end = end_date.year
+        for header in self.html.xpath("//div[@id='ctl00_ctl00_MainContentPlaceHolder_PageContentPlaceHolder_PageContentPlaceHolder_RichHtmlField1__ControlWrapper_OregonRichHtmlField']/ul"):
+            for row in header.xpath(".//li"):
+                date = row.xpath("./b/text()")[0].strip()
+                month , day , year = date.split('/')
+                dt = f"{day}/{month}/{year}"
+                if int(year) >end or int(year)<start: break
+                docket=row.xpath("./a[2]/text()")[0].strip()
+                docket = docket.replace("\t" , " ")
+                pdf = row.xpath("./a[1]/@href")[0]
+                name = row.xpath("./text()")[-1]
+                name = name.replace(") ","")
 
-                ul_elements = header.xpath("./following-sibling::ul[1]")
-                for ul in ul_elements:
-                    for item in ul.xpath(".//li"):
-                        anchors = item.xpath(".//a")
-                        if not (len(anchors) > 1):
-                            continue
-                        text = item.text_content().strip()
-                        url = anchors[0].xpath("./@href")[0]
-                        print(url)
-                        docket = anchors[1].text_content().strip()
-                        name = text.split(")", 1)[-1].strip()
-                        citation = text.split("(", 1)[0].strip()
-                        citation = re.sub(r'\s+', ' ', citation)
-                        pdf_url_id = self.get_pdf_id(docket, name)
+                pdf_url_id = self.get_pdf_id(docket, name)
+                html_url = f"https://cdm17027.contentdm.oclc.org/digital/collection/p17027coll6/id/{pdf_url_id}/rec"
+                response_html = self.get_html_responsd(pdf_url_id)
 
-                        if (pdf_url_id is not None):
-                            pdf_url = f"https://cdm17027.contentdm.oclc.org/digital/collection/{self.court_code}/id/{pdf_url_id}/rec"
-                            response_html = self.get_html_responsd(pdf_url_id)
-                        else:
-                            pdf_url=""
-                            response_html = ""
+                self.cases.append(
+                    {
+                        "date": date,
+                        "name": name,
+                        "docket": [docket],
+                        "url": pdf,
+                        "html_url": html_url,
+                        "response_html": response_html,
+                        "status": "Unpublished"
+                    }
+                )
 
-
-                        self.cases.append(
-                            {
-                                "date": date_string,
-                                "name": name,
-                                "docket": [docket],
-                                "url": url,
-                                "citation":[citation],
-                                "html_url":pdf_url,
-                                "response_html":response_html,
-                                "status":"Published"
-                            }
-                        )
 
 
 
@@ -128,16 +116,15 @@ class Site(OpinionSiteLinear):
         self._make_hash()
         return len(self.cases)
 
-    def get_court_type(self):
-        return "state"
 
     def get_state_name(self):
         return "Oregon"
 
     def get_court_name(self):
-        return "Supreme Court of Oregon"
+        return "Oregon Tax Court"
 
     def get_class_name(self):
-        return "orsc"
+        return "or_tax_mag"
 
-
+    def get_court_type(self):
+        return "state"
