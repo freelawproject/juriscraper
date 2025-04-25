@@ -5,9 +5,12 @@
 #          Robert Gunn
 #          504-310-2592
 #          rgunn@lasc.org
-
+import datetime
 from datetime import date
 
+from lxml import html
+
+from casemine.casemine_util import CasemineUtil
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -18,7 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = date.today().year
-        self.url = "http://www.lasc.org/CourtActions/%d" % self.year
+        self.url = "https://www.lasc.org/CourtActions/2025"#"http://www.lasc.org/CourtActions/%d" % self.year
         self.status = "Published"
 
     def _download(self, request_dict={}):
@@ -28,11 +31,14 @@ class Site(OpinionSiteLinear):
         path = (
             "//tr["
             "contains(./td[3], 'Opinion') or "
+            "contains(./td[3], 'Actions') or "
+            "contains(./td[3], 'Rehearings') or "
             "contains(./td[3], 'PER CURIAM')"
             "]//td[2]//@href"
         )
         # parse 2 most recent Opinon/PerCuriam sub-pages
-        urls = landing_page.xpath(path)[:2]
+        urls = landing_page.xpath(path)
+        print(urls)
         return [self._get_subpage_html_by_url(url) for url in urls]
 
     def _process_html(self):
@@ -54,8 +60,8 @@ class Site(OpinionSiteLinear):
                 self.cases.append(
                     {
                         "date": date_string,
-                        "docket": parts[0],
-                        "judge": self._get_judge_above_anchor(anchor),
+                        "docket": [parts[0]],
+                        "judge": [self._get_judge_above_anchor(anchor)],
                         "name": titlecase(parts[1]),
                         "summary": " ".join(summary_lines).replace(text, ""),
                         "url": f"http://www.lasc.org{anchor.get('href')}",
@@ -72,6 +78,7 @@ class Site(OpinionSiteLinear):
         return " ".join([month, day, year])
 
     def _get_judge_above_anchor(self, anchor):
+        print(html.tostring(anchor,pretty_print=True).decode('UTF-8'))
         path = (
             "./preceding::*["
             "starts-with(., 'BY ') or "
@@ -82,6 +89,8 @@ class Site(OpinionSiteLinear):
             text = anchor.xpath(path)[-1].text_content()
         except IndexError:
             return None
+
+        if "PER CURIAM" in text : return None
         return text.rstrip(":").lstrip("BY").strip()
 
     def _get_subpage_html_by_url(self, url):
@@ -92,3 +101,33 @@ class Site(OpinionSiteLinear):
         path = ".//textarea[@id='PostContent']"
         html = page.xpath(path)[0].text_content()
         return get_html_parsed_text(html)
+
+    def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
+        if not self.downloader_executed:
+            self.html = self._download()
+
+            self._process_html()
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, f"_get_{attr}")())
+
+        self._clean_attributes()
+        if "case_name_shorts" in self._all_attrs:
+            self.case_name_shorts = self._get_case_name_shorts()
+        self._post_parse()
+        self._check_sanity()
+        self._date_sort()
+        self._make_hash()
+        return 0
+
+    def get_class_name(self):
+        return 'la'
+
+    def get_court_name(self):
+        return 'Supreme Court of Louisiana'
+
+    def get_court_type(self):
+        return 'state'
+
+    def get_state_name(self):
+        return 'Louisiana'
