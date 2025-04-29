@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 - Fix `me` Update maine scraper and add backscraper
 - Update `sd` backscraper and extract from text
 - Implement `or` extract_from_text to collection regional citations #1226
+- Fix `bia` scraper
 
 ## Current
 
