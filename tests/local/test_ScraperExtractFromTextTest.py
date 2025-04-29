@@ -804,6 +804,20 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.or": [
+            # https://www.courtlistener.com/opinion/10160687/mclaughlin-v-wilson/
+            (
+                """"                                        535\n\n   Argued and submitted May 15, at Mt. Hood Community College, Gresham,\n    Oregon; decision of Court of Appeals affirmed, judgment of circuit court\n  reversed in part, and case remanded to circuit court for further proceedings\n                               September 12, 2019\n\n\n\n                    Nicole McLAUGHLIN,\n                    Respondent on Review,\n                               v.\n                   Kenneth WILSON, M.D.,\n                     Petitioner on Review.\n           (CC 13C21746) (CA A160000) (SC S066047)\n                                    449 P3d 492\n\n     Plaintiff filed complaint alleging """,
+                {"Citation": "449 P3d 492"},
+            )
+        ],
+        "juriscraper.opinions.united_states.state.orctapp": [
+            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
+            (
+                """"                                      184\n\n    On appellant’s petition for reconsideration filed June 29, reconsideration\nallowed, former opinion (302 Or App 407, 461 P3d 249) withdrawn; reversed and\n                           remanded October 7, 2020\n\n\n                       STATE OF OREGON,\n                        Plaintiff-Respondent,\n                                  v.\n                       NATHAN OXFORD,\n                    aka Nathan Daniel Oxford,\n                       Defendant-Appellant.\n                  Multnomah County Circuit Court\n                        140230856; A161408\n                                   474 P3d 465\n\n    Defendant, who was convicted of various sex crimes, seeks reconsideration""",
+                {"Citation": "474 P3d 465"},
+            ),
+        ],
     }
 
     def test_extract_from_text(self):

@@ -2,8 +2,10 @@
 History:
  - 2014-08-05: Adapted scraper to have year-based URLs.
  - 2023-11-18: Fixed and updated
+ - 2025-04-23: implement extract_from_text, grossir
 """
 
+import re
 from datetime import datetime, timedelta
 
 from juriscraper.AbstractSite import logger
@@ -129,3 +131,18 @@ class Site(OpinionSiteLinear):
         start = datetime.strftime(start_date, "%Y%m%d")
         end = datetime.strftime(end_date, "%Y%m%d")
         return self.base_url.format(self.court_code, start, end)
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract citations from text
+
+        Be careful with citations referring to other opinions that are
+        mentioned before the actual citation
+
+        See, for example:
+        https://ojd.contentdm.oclc.org/digital/api/collection/p17027coll5/id/28946/download
+        """
+        regex = r"\n\s+(?P<cite>\d+ P3d \d+)\s+\n"
+        if match := re.search(regex, scraped_text[:1000]):
+            return {"Citation": match.group("cite")}
+
+        return {}
