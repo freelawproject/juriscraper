@@ -13,6 +13,7 @@ Releases are also tagged in git, if that's helpful.
 ## Coming up
 
 - Fix `me` Update maine scraper and add backscraper
+- Add backscraper for `dcd` #1336
 - Update `sd` backscraper and extract from text
 - Implement datestring format validation in test_ScraperExtractFromTextTest #838
 - Implement `or` extract_from_text to collection regional citations #1226
