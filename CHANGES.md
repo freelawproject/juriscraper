@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 - Fix `me` Update maine scraper and add backscraper
 - Update `sd` backscraper and extract from text
 - Implement datestring format validation in test_ScraperExtractFromTextTest #838
+- Fix `bia` scraper
 
 ## Current
 

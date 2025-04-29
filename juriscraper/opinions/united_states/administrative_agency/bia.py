@@ -7,6 +7,7 @@ Type:
 History:
     2021-12-18: Created by William E. Palin
     2024-05-07: Updated by grossir
+    2025-04-25: Updated by quevon24
 """
 
 import re
@@ -69,14 +70,14 @@ class Site(OpinionSiteLinear):
         :return: Metadata to be added to the case
         """
         date = re.findall(
-            r"Decided (by (Acting\s)?Attorney General )?(.*\d{4})",
+            r"Decided (?:(?:by (?:Acting\s)?Attorney General|as amended)\s)?(.*\d{4})",
             scraped_text,
         )
         if not date:
             logger.error("bia: unable to extract_from_text a date_filed")
             return {}
 
-        date_filed = datetime.strptime(date[0][-1], "%B %d, %Y").strftime(
+        date_filed = datetime.strptime(date[0], "%B %d, %Y").strftime(
             "%Y-%m-%d"
         )
         metadata = {
