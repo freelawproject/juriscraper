@@ -11,6 +11,7 @@ words, they're the ones you'll want to watch, and the others are mostly noise.
 Releases are also tagged in git, if that's helpful.
 
 ## Coming up
+- Fix `bia` scraper and add extract from text test cases
 
 ## Current
 

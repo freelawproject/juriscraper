@@ -70,7 +70,7 @@ class Site(OpinionSiteLinear):
         :return: Metadata to be added to the case
         """
         date = re.findall(
-            r"Decided (?:(?:by (?:Acting\s)?Attorney General|as amended)\s)?(.*\d{4})",
+            r"Decided (?:(?:by (?:(?:Acting\s)?Attorney General|Board)|as amended)\s)?(.*\d{4})",
             scraped_text,
         )
         if not date:

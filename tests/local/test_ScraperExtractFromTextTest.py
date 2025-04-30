@@ -31,6 +31,42 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             ),
+            (
+                "Matter of O-A-R-G-, et al., Respondents\nDecided as amended April 16, 2025 1\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-04-16",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+            (
+                "Matter of Leobardo DE JESUS-PLATON, Respondent\nDecided by Board January 17, 2025 1\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-01-17",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+            (
+                "Matter of Foo, Respondent\nDecided by Attorney General April 30, 2025\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-04-30",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+            (
+                "Matter of Bar, Respondent\nDecided by Acting Attorney General April 30, 2025\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-04-30",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.nm": [
             (
