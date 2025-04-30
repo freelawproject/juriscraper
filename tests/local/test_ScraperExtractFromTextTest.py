@@ -49,6 +49,24 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             ),
+            (
+                "Matter of Foo, Respondent\nDecided by Attorney General April 30, 2025\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-04-30",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+            (
+                "Matter of Bar, Respondent\nDecided by Acting Attorney General April 30, 2025\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-04-30",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.nm": [
             (
