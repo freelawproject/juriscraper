@@ -15,53 +15,62 @@ Releases are also tagged in git, if that's helpful.
 - New scraper `lactapp_2` for Lousiana Court of Appeals, Second Circuit
 - Fix `me` Update maine scraper and add backscraper
 - Update `sd` backscraper and extract from text
+- Fix `bia` scraper and add extract from text test cases
 
 
 ## Current
 
-**2.6.65 - 2024-04-11**
+**2.6.66 - 2025-04-29**
+
+- Add backscraper for `dcd` #1336
+- Update `sd` backscraper and extract from text
+- Implement datestring format validation in test_ScraperExtractFromTextTest #838
+- Implement `or` extract_from_text to collection regional citations #1226
+- Fix `bia` scraper
+
+**2.6.65 - 2025-04-11**
 
 - `nh` was blocking; fixed by updating the user agent string #1370
 - Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt` #1150
 
 ## Past
 
-**2.6.64 - 2024-04-10**
+**2.6.64 - 2025-04-10**
 
 - Fix `me` Update maine scraper and add backscraper #1360
 - Sites were blocking `cafc` scrapers. Fixed by passing a browser user agent #1366
 
 
-**2.6.63 - 2024-03-25**
+**2.6.63 - 2025-03-25**
 
 - Make `ga` backscraper take kwargs; fix a bug in 2018 #1349
 - Implement extract from text for `ga` #1349
 - Fix `ill` oral argument scraper #1356
 
-**2.6.62 - 2024-03-19**
+**2.6.62 - 2025-03-19**
 
 - Fix `uscgcoca` and `asbca` by replicating browser request headers #1352
 - Fix `uscgcoca` citation regex #1351
 
-**2.6.61 - 2024-03-06**
+**2.6.61 - 2025-03-06**
 
 - Fix `ca8` opinion scraper by setting `request.verify = False` #1346
 
-**2.6.60 - 2024-03-05**
+**2.6.60 - 2025-03-05**
 
 - Fix `ca7` scrapers url from http to https
 
-**2.6.59 - 2024-03-04**
+**2.6.59 - 2025-03-04**
 
 - Change `colo` user agent to prevent site block #1341
 
-**2.6.58 - 2024-02-26**
+**2.6.58 - 2025-02-26**
 
 - Fixes:
   - Add backscraper for `mesuperct` #1328
   - Fix `mont` cleanup_content, would fail when content was bytes #1323
 
-**2.6.57 - 2024-02-25**
+**2.6.57 - 2025-02-25**
 
 - Fixes:
   - fix cafc oral argument scraper PR (#1325)[https://github.com/freelawproject/juriscraper/pull/1325]
@@ -73,7 +82,7 @@ Releases are also tagged in git, if that's helpful.
   - Add workflow to check for new entries in CHANGES.md file
 
 
-**2.6.56 - 2024-02-19**
+**2.6.56 - 2025-02-19**
 
 - Fixes:
   - n/a
@@ -83,7 +92,7 @@ Releases are also tagged in git, if that's helpful.
   - Add citation extraction and author for MT
 
 
-**2.6.55 - 2024-02-10**
+**2.6.55 - 2025-02-10**
 
 - Fixes:
   - `cafc` opinion scraper now requests using `verify=False` #1314
@@ -94,7 +103,7 @@ Releases are also tagged in git, if that's helpful.
   - recap: improvement to the download_pdf method to handle cases where
   attachment pages are returned instead of the expected PDF documents. #1309
 
-**2.6.54 - 2024-01-24**
+**2.6.54 - 2025-01-24**
 
 - Fixes:
   - `ca6` oral argument scraper is no longer failing
@@ -102,19 +111,19 @@ Releases are also tagged in git, if that's helpful.
     packaging packages interaction. It now forces the update of packaging
   - due to that bug, we discarded the 2.6.53 version
 
-**2.6.52 - 2024-01-20**
+**2.6.52 - 2025-01-20**
 
 - Fixes:
   - `AppellateDocketReport.download_pdf` now returns a two-tuple containing the
     response object or None and a str. This aligns with the changes introduced
     in v 2.5.1.
 
-**2.6.51 - 2024-01-14**
+**2.6.51 - 2025-01-14**
 
 - Fixes:
   - `extract_from_text` now returns plain citation strings, instead of parsed dicts
 
-**2.6.50 - 2024-01-10**
+**2.6.50 - 2025-01-10**
 
 - Fixes:
   - add tests to ensure that `extract_from_text` does not fail
@@ -128,7 +137,7 @@ Releases are also tagged in git, if that's helpful.
 - Features
   - `pacer.email._parse_bankruptcy_short_description` now supports Multi Docket NEFs
 
-**2.6.49 - 2024-01-08**
+**2.6.49 - 2025-01-08**
 
 - Fixes:
   - `nh` scrapers no longer depend on harcoded year filter
