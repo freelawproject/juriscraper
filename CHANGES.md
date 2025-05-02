@@ -11,7 +11,12 @@ words, they're the ones you'll want to watch, and the others are mostly noise.
 Releases are also tagged in git, if that's helpful.
 
 ## Coming up
+
+- New scraper `lactapp_2` for Lousiana Court of Appeals, Second Circuit
+- Fix `me` Update maine scraper and add backscraper
+- Update `sd` backscraper and extract from text
 - Fix `bia` scraper and add extract from text test cases
+
 
 ## Current
 

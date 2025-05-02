@@ -775,6 +775,18 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.lactapp_2": [
+            (
+                # https://www.la2nd.org/wp-content/uploads/2025/04/56139-40ca.pdf,
+                "Appealed from the\n                   Fourth Judicial District Court for the\n                       Parish of Ouachita, Louisiana\n                Trial Court Nos. 2015-3872 and 2024-2434\n\n                    Honorable Wilson Rambo, Judge\n\n                                *****\n\nDIANNE HILL                                          Counsel for Appellant,\n                                                     Darryl Michael Miller\n\nCUMMINS AND FITTS, LLC                               Counsel for Appellee,\nBy: Jessica L. Fitts                                 Cleo Miller\n\nTHE JONES LAW GROUP, LLC\nBy: Charles D. Jones\n\n\n                                *****\n\n         Before PITMAN, THOMPSON, and MARCOTTE, JJ.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Fourth Judicial District Court for the Parish of Ouachita"
+                    },
+                    "OpinionCluster": {"judges": "PITMAN; THOMPSON; MARCOTTE"},
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.mont": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10801442/
