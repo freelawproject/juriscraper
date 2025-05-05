@@ -31,7 +31,11 @@ class Site(OpinionSiteLinear):
         """"""
         url = f"https://ojd.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/{self.court_code}/identi^{identifier}^all^and/title!subjec!descri!dmrecord/title/1024/1/0/0/0/0/json"
         json = self.request["session"].get(url).json()
-        return f"https://ojd.contentdm.oclc.org/digital/api/collection/{self.court_code}/id/{json['records'][0]['pointer']}/download"
+        try:
+            pdf_id = json['records'][0]['pointer']
+        except:
+            pdf_id=""
+        return f"https://ojd.contentdm.oclc.org/digital/api/collection/{self.court_code}/id/{pdf_id}/download"
 
     def get_pdf_id(self,docket : str, name : str):
         u = f"https://cdm17027.contentdm.oclc.org/digital/api/search/collection/p17027coll3!p17027coll5!p17027coll6/searchterm/{docket}/field/all/mode/all/conn/all/order/date/ad/desc/maxRecords/50"
@@ -57,7 +61,6 @@ class Site(OpinionSiteLinear):
         return response_html['text']
 
     def _process_html(self, start_date: datetime, end_date: datetime):
-        print(f"inside process html {start_date} , {end_date}")
         for header in self.html.xpath("//h4//a/parent::h4"):
             date_string = header.text_content().strip()
             pdf_url = ""
@@ -75,10 +78,9 @@ class Site(OpinionSiteLinear):
                             continue
                         text = item.text_content().strip()
                         text=text.replace("\t"," ")
-                        url = anchors[0].xpath("./@href")[0]
-                        print(url)
                         docket = anchors[1].text_content().strip()
                         name = text.split(")", 1)[-1].strip()
+                        url = self.fetch_url_json(docket)
                         citation = text.split("(", 1)[0].strip()
                         citation = re.sub(r'\s+', ' ', citation)
                         pdf_url_id = self.get_pdf_id(docket, name)
@@ -153,30 +155,11 @@ class Site(OpinionSiteLinear):
                         )
 
 
-
-    def _get_download_urls(self):
-        """Get download urls
-
-        :return: List URLs
-        """
-
-        def fetcher(case):
-            if self.test_mode_enabled():
-                return case["url"]
-
-            if case["url"] == "null":
-                return "null"
-
-            return self.fetch_url_json(case["url"].split("=")[-1][:-4])
-
-        return DeferringList(seed=self.cases, fetcher=fetcher)
-
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         # start_date=datetime(2024,10,1)
         # end_date=datetime(2024,10,9)
         if not self.downloader_executed:
             self.html = self._download()
-            # print(html.tostring(self.html,pretty_print=True).decode('UTF-8'))
             self._process_html(start_date,end_date)
 
         for attr in self._all_attrs:

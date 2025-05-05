@@ -57,7 +57,6 @@ class Site(orsc.Site):
         """"""
         url = f"https://ojd.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/{self.court_code}/identi^{identifier}^all^and/title!subjec!descri!dmrecord/title/1024/1/0/0/0/0/json"
         json = self.request["session"].get(url).json()
-        print(json)
         if len(json['records'])>0:
             code=json['records'][0]['pointer']
         else:
@@ -101,7 +100,6 @@ class Site(orsc.Site):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         if not self.downloader_executed:
             self.html = self._download()
-            # print(html.tostring(self.html,pretty_print=True).decode('UTF-8'))
             self._process_html(start_date,end_date)
 
         for attr in self._all_attrs:

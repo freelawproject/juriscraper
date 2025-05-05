@@ -29,6 +29,19 @@ class Site(OpinionSiteLinear):
         self.year = date.today().year
         self.url = "https://www.supremecourt.ohio.gov/rod/docs/"
         self.court_id = self.__module__
+        self._opt_attrs = self._opt_attrs + ["minute_orders"]
+
+        self.valid_keys.update({
+            "minute_orders"
+        })
+        self._all_attrs = self._req_attrs + self._opt_attrs
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, None)
+
+    def _get_minute_orders(self):
+        return self._get_optional_field_by_id("minute_orders")
+
     def _set_parameters(self,start_year,end_year) -> None:
         event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
         view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
@@ -127,6 +140,9 @@ class Site(OpinionSiteLinear):
             docket=docket.replace(';',',')
             docket=docket.replace(' &', ',')
             docket=docket.split(', ')
+            if "Case Announcements" in name or "Administrative Actions" in name :
+                order = True
+            else: order=False
             case = {
                 "docket": docket,
                 "name": name,
@@ -137,6 +153,7 @@ class Site(OpinionSiteLinear):
                 "url": row.xpath(".//a")[0].get("href"),
                 "citation": [web_cite],
                 "status": "Published",
+                "minute_orders": order
             }
 
             if self.court_index == 0:

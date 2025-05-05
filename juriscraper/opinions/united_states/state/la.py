@@ -38,38 +38,56 @@ class Site(OpinionSiteLinear):
         )
         # parse 2 most recent Opinon/PerCuriam sub-pages
         urls = landing_page.xpath(path)
-        print(urls)
         return [self._get_subpage_html_by_url(url) for url in urls]
 
     def _process_html(self):
-        path = (
-            "//a["
-            "contains(., 'v.') or "
-            "contains(., 'IN RE') or "
-            "contains(., 'IN THE') or "
-            "contains(., 'vs.') or "
-            "contains(., 'VS.')"
-            "]"
-        )
-        for html in self.html:
-            for anchor in html.xpath(path):
-                date_string = self._get_date_for_opinions(html)
-                text = anchor.text_content()
-                parts = text.split(None, 1)
-                summary_lines = anchor.getparent().xpath("./text()")
-                self.cases.append(
-                    {
-                        "date": date_string,
-                        "docket": [parts[0]],
-                        "judge": [self._get_judge_above_anchor(anchor)],
-                        "name": titlecase(parts[1]),
-                        "summary": " ".join(summary_lines).replace(text, ""),
-                        "url": f"http://www.lasc.org{anchor.get('href')}",
-                    }
-                )
+        for h in self.html:
+            date=""
+            for row in h.xpath(".//div[@class='nrbody']//p"):
+                text = row.text_content().strip()
+                date_span = row.xpath(".//span")
+                # if date_span and "day of" in date_span[
+                #     0].text_content().strip():
+                date_span = row.xpath(".//span[@class='nrdate']")
+                if date_span:
+                    current_date = date_span[0].text_content().strip()
+                    parts = current_date.split("day of")
+                    day = parts[0].split()[-1]
+                    month = parts[1].split()[0]
+                    year = parts[1].split()[1].strip(",")
+                    date = " ".join([month, day, year])
+                    continue
 
-    def _get_date_for_opinions(self, html):
-        element_date = html.xpath("//span")[0]
+
+                for anchor in row.xpath(".//a["
+                    "contains(., 'v.') or "
+                    "contains(., 'IN RE') or "
+                    "contains(., 'IN THE') or "
+                    "contains(., 'vs.') or "
+                    "contains(., 'VS.')"
+                    "]"):
+                    text = anchor.text_content()
+                    parts = text.split(None, 1)
+                    summary_lines = anchor.getparent().xpath("./text()")
+                    judges=[]
+                    if self._get_judge_above_anchor(anchor) :
+                        judges.append(self._get_judge_above_anchor(anchor))
+
+                    url = f"http://www.lasc.org{anchor.get('href')}"
+
+                    self.cases.append(
+                        {
+                            "docket": [parts[0]],
+                            "judge": judges,
+                            "name": titlecase(parts[1]),
+                            "date": date,
+                            "summary": " ".join(summary_lines).replace(text, ""),
+                            "url": url
+                        }
+                    )
+
+    def _get_date_for_opinions(self, h):
+        element_date = h.xpath("//span")[0]
         element_date_text = element_date.text_content().strip()
         parts = element_date_text.split("day of")
         day = parts[0].split()[-1]
@@ -78,7 +96,6 @@ class Site(OpinionSiteLinear):
         return " ".join([month, day, year])
 
     def _get_judge_above_anchor(self, anchor):
-        print(html.tostring(anchor,pretty_print=True).decode('UTF-8'))
         path = (
             "./preceding::*["
             "starts-with(., 'BY ') or "
@@ -105,7 +122,6 @@ class Site(OpinionSiteLinear):
     def crawling_range(self, start_date: datetime, end_date: datetime) -> int:
         if not self.downloader_executed:
             self.html = self._download()
-
             self._process_html()
 
         for attr in self._all_attrs:

@@ -44,6 +44,18 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}{urlencode(self.params)}"
         self.make_backscrape_iterable(kwargs)
+        self._opt_attrs = self._opt_attrs + ["minute_orders"]
+
+        self.valid_keys.update({
+            "minute_orders"
+        })
+        self._all_attrs = self._req_attrs + self._opt_attrs
+
+        for attr in self._all_attrs:
+            self.__setattr__(attr, None)
+
+    def _get_minute_orders(self):
+        return self._get_optional_field_by_id("minute_orders")
 
     def _process_html(self) -> None:
         """Parses data into case dictionaries
@@ -75,6 +87,11 @@ class Site(OpinionSiteLinear):
                 status = self.get_status(op)
                 post_type = op["PostType"]["PostingTypeId"]
 
+                if "Case Announcements" in name or "Argument List" in name:
+                    order = True
+                else:
+                    order = False
+
                 self.cases.append(
                     {
                         "date": disposition_date,
@@ -85,6 +102,7 @@ class Site(OpinionSiteLinear):
                         "type":post_type,
                         "status": status,
                         "per_curiam": per_curiam,
+                        "minute_orders": order
                     }
                 )
 
