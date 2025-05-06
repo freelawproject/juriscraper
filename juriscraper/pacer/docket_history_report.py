@@ -110,9 +110,9 @@ class DocketHistoryReport(DocketReport):
         :return: request response object
         """
         # Set up and sanity tests
-        assert (
-            self.session is not None
-        ), "session attribute of DocketHistoryReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of DocketHistoryReport cannot be None."
+        )
 
         if query_type not in ["History", "Documents"]:
             raise ValueError("Invalid value for 'query_type' parameter.")
@@ -156,9 +156,7 @@ class DocketHistoryReport(DocketReport):
         docket_header = './/th/text()[contains(., "Description")]'
         docket_entry_rows = self.tree.xpath(
             f"//table[{docket_header}]/tbody/tr"
-        )[
-            1:
-        ]  # Skip first row
+        )[1:]  # Skip first row
 
         docket_entries = []
         for row in docket_entry_rows:

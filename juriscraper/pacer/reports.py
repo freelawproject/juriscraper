@@ -96,9 +96,9 @@ class BaseReport:
         :param text: A unicode object
         :return: None
         """
-        assert isinstance(
-            text, str
-        ), f"Input must be unicode, not {type(text)}"
+        assert isinstance(text, str), (
+            f"Input must be unicode, not {type(text)}"
+        )
         text = clean_html(text)
         self.check_validity(text)
         if self.is_valid:

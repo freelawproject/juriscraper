@@ -355,9 +355,9 @@ class ACMSDocketReport(AppellateDocketReport):
             # by the superclass, which can be told to parse `date`s
             # but not `datetime`s. So we have to do it ourselves.
             datetime_str = self._get_value(datetime_entered_regex, docket_text)
-            assert (
-                datetime_str != ""
-            ), "Docket entry's Entered: date should not be null"
+            assert datetime_str != "", (
+                "Docket entry's Entered: date should not be null"
+            )
             de["date_entered"] = convert_date_string(
                 datetime_str, datetime=True
             )

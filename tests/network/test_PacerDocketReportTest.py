@@ -96,7 +96,7 @@ class PacerDocketReportTest(unittest.TestCase):
         self.assertIn(
             "Cheema",
             self.report.response.text,
-            msg="Didn't find party info when it was explicitly " "requested.",
+            msg="Didn't find party info when it was explicitly requested.",
         )
         self.report.query(
             self.pacer_case_id,

@@ -109,12 +109,12 @@ class MobileQuery(BaseDocketReport, BaseReport):
         The important notes, from testing:
          - The CASE_NUM cookie isn't needed.
          """
-        assert (
-            self.session is not None
-        ), "session attribute of MobileQuery cannot be None."
-        assert bool(
-            pacer_case_id
-        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        assert self.session is not None, (
+            "session attribute of MobileQuery cannot be None."
+        )
+        assert bool(pacer_case_id), (
+            f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        )
         logger.info(
             "Running mobile query for case id '%s' in court '%s'",
             pacer_case_id,

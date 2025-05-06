@@ -101,10 +101,13 @@ class ScraperExampleTest(unittest.TestCase):
                     # Compare result with corresponding json file
                     example_file = path.rsplit("/", 1)[1]
                     compare_file = json_path.rsplit("/", 1)[1]
-                    with open(json_path) as input_file, self.subTest(
-                        "Testing example files",
-                        json_path=json_path,
-                        module_string=module_string,
+                    with (
+                        open(json_path) as input_file,
+                        self.subTest(
+                            "Testing example files",
+                            json_path=json_path,
+                            module_string=module_string,
+                        ),
                     ):
                         fixture_json = json.load(input_file)
                         self.assertEqual(

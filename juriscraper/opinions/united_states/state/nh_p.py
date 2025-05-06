@@ -147,7 +147,7 @@ class Site(OpinionSiteLinear):
         )
         for page in range(2, json_response["last_page"] + 1):
             logger.info("Paginating to page %s", page)
-            self.url = self.url.replace(f"page={page-1}", f"page={page}")
+            self.url = self.url.replace(f"page={page - 1}", f"page={page}")
             self.html = self._download()
             self._process_html()
 

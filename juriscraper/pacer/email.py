@@ -467,9 +467,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 # description of the first item.
                 for docket in dockets:
                     if docket["docket_entries"]:
-                        docket["docket_entries"][0][
-                            "short_description"
-                        ] = self._get_short_description()
+                        docket["docket_entries"][0]["short_description"] = (
+                            self._get_short_description()
+                        )
         return dockets
 
     def _get_docket_entries(

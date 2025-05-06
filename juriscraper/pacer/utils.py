@@ -517,9 +517,9 @@ def get_pacer_doc_id_from_doc1_url(url: str) -> str:
 
     See tests for more examples.
     """
-    assert (
-        "show_case_doc" not in url
-    ), "Cannot get doc1 ID from show_case_doc URL"
+    assert "show_case_doc" not in url, (
+        "Cannot get doc1 ID from show_case_doc URL"
+    )
     url = url.rsplit("/", 1)[1].split("?")[0]
     url = f"{url[:3]}0{url[4:]}"
     return url
@@ -783,7 +783,7 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
 
 
 def set_pacer_doc_id_as_appellate_document_number(
-    de: Dict[str, Union[str, date, datetime]]
+    de: Dict[str, Union[str, date, datetime]],
 ) -> None:
     """For appellate courts that don't use numbers, if available set the
     pacer_doc_id as document number.

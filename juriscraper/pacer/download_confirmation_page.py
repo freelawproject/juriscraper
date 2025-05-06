@@ -33,9 +33,9 @@ class DownloadConfirmationPage(BaseReport):
         :return: a request response object
         """
 
-        assert (
-            self.session is not None
-        ), "session attribute of DownloadConfirmationPage cannot be None."
+        assert self.session is not None, (
+            "session attribute of DownloadConfirmationPage cannot be None."
+        )
 
         if self.is_appellate:
             # Make the appellate document URL

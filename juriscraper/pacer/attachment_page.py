@@ -33,9 +33,9 @@ class AttachmentPage(BaseReport):
         :param document_number: The internal PACER document ID for the item.
         :return: a request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of DocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of DocketReport cannot be None."
+        )
         # coerce the fourth digit of the document number to 1 to ensure we get
         # the attachment page.
         document_number = f"{document_number[:3]}0{document_number[4:]}"
