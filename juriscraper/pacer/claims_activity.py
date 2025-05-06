@@ -32,9 +32,9 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         self._clear_caches()
         self._metadata = None
         self._claims = None
-        assert court_id.endswith(
-            "b"
-        ), "Unable to create object. Must use bankruptcy court abbreviation."
+        assert court_id.endswith("b"), (
+            "Unable to create object. Must use bankruptcy court abbreviation."
+        )
 
     @property
     def data(self):
@@ -402,9 +402,9 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         :return: request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of ClaimsActivity cannot be None."
+        assert self.session is not None, (
+            "session attribute of ClaimsActivity cannot be None."
+        )
 
         params = {
             "all_case_ids": pacer_case_id,

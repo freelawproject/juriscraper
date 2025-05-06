@@ -27,9 +27,9 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
 
         self._clear_caches()
         self._metadata = None
-        assert court_id.endswith(
-            "b"
-        ), "Unable to create object. Must use bankruptcy court abbreviation."
+        assert court_id.endswith("b"), (
+            "Unable to create object. Must use bankruptcy court abbreviation."
+        )
 
     @property
     def data(self):
@@ -100,9 +100,9 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
 
         :return: A valid query POST param 'x-L_1_0-1'
         """
-        assert (
-            self.session is not None
-        ), "session attribute of ListOfCreditors cannot be None."
+        assert self.session is not None, (
+            "session attribute of ListOfCreditors cannot be None."
+        )
 
         logger.info(f"Getting a valid POST param for '{self.court_id}'")
         self.response = self.session.get(self.url)
@@ -123,9 +123,9 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
 
         :return: request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of ListOfCreditors cannot be None."
+        assert self.session is not None, (
+            "session attribute of ListOfCreditors cannot be None."
+        )
 
         params = {
             "all_case_ids": pacer_case_id,

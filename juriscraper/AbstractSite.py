@@ -310,7 +310,7 @@ class AbstractSite:
         # Is cookies a dict?
         if type(self.cookies) != dict:
             raise InsanityException(
-                "self.cookies not set to be a dict by " "scraper."
+                "self.cookies not set to be a dict by scraper."
             )
         logger.info(
             "%s: Successfully found %s items."

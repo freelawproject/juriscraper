@@ -31,11 +31,10 @@ repos:
      - id: flynt
        args: [--line-length=79, --transform-concats]
 
-  - repo: https://github.com/psf/black
-    rev: 24.4.2
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.8
     hooks:
-     - id: black
-       additional_dependencies: ['click==8.0.4']
+      - id: ruff-format
 
   - repo: https://github.com/PyCQA/isort
     rev: 5.13.2

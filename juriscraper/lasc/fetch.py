@@ -90,7 +90,7 @@ class LASCSearch:
         :return: The parsed, cleaned, normalized data
         """
         logger.info(
-            "Parsing lasc data from returned JSON into normalized " "format"
+            "Parsing lasc data from returned JSON into normalized format"
         )
 
         try:

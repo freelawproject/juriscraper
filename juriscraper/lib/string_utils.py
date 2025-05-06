@@ -398,7 +398,7 @@ def clean_string(s):
     s = " ".join(s.split())
 
     # Convert non-breaking spaces to regular spaces
-    s = s.replace("\u00A0", " ")
+    s = s.replace("\u00a0", " ")
 
     return s
 

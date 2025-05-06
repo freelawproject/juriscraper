@@ -29,9 +29,9 @@ class PossibleCaseNumberApi(BaseReport):
         :param docket_number: A string representing a docket number
         :return: a request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of PossibleCaseNUmberApi cannot be None."
+        assert self.session is not None, (
+            "session attribute of PossibleCaseNUmberApi cannot be None."
+        )
         url = f"{self.url}?{docket_number.lower()}"
         logger.info(
             f"Querying the possible case number endpoint at URL: {url}"
@@ -89,7 +89,7 @@ class PossibleCaseNumberApi(BaseReport):
                     logger.info("Cannot find case.")
                     return None
             raise ParsingException(
-                "Unknown XML content in " "PossibleCaseNumberApi result."
+                "Unknown XML content in PossibleCaseNumberApi result."
             )
         elif case_count == 1:
             # Only one node, all set to go.
@@ -198,9 +198,9 @@ class ShowCaseDocApi(BaseReport):
     PATH = "cgi-bin/show_case_doc"
 
     def __init__(self, court_id, pacer_session=None):
-        assert not court_id.endswith(
-            "b"
-        ), "This API is not available at bankruptcy courts."
+        assert not court_id.endswith("b"), (
+            "This API is not available at bankruptcy courts."
+        )
         super().__init__(court_id, pacer_session)
 
     def query(self, pacer_case_id, document_number, attachment_number=""):
@@ -212,9 +212,9 @@ class ShowCaseDocApi(BaseReport):
         :param attachment_number: The attachment number of the item on the
         attachment page.
         """
-        assert (
-            self.session is not None
-        ), "session attribute of ShowCaseDocApi cannot be None."
+        assert self.session is not None, (
+            "session attribute of ShowCaseDocApi cannot be None."
+        )
         url = (
             "{url}?"
             "{document_number},"

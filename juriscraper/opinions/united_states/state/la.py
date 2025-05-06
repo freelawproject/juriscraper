@@ -76,10 +76,7 @@ class Site(OpinionSiteLinear):
 
     def _get_judge_above_anchor(self, anchor):
         path = (
-            "./preceding::*["
-            "starts-with(., 'BY ') or "
-            "contains(., 'CURIAM:')"
-            "]"
+            "./preceding::*[starts-with(., 'BY ') or contains(., 'CURIAM:')]"
         )
         try:
             text = anchor.xpath(path)[-1].text_content()

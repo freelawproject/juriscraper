@@ -74,8 +74,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def url(self):
         if self.court_id == "psc":
             return (
-                "https://dcecf.psc.uscourts.gov/"
-                "n/beam/servlet/TransportRoom"
+                "https://dcecf.psc.uscourts.gov/n/beam/servlet/TransportRoom"
             )
         elif self.court_id in ["ca5", "ca7", "ca11"]:
             return (
@@ -195,12 +194,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 All parameters same as above, except...
                 confirmCharge=y <-- Added
         """
-        assert (
-            self.session is not None
-        ), "session attribute of AppellateDocketReport cannot be None."
-        assert bool(
-            docket_number
-        ), f'docket_number must be a valid value, not "{docket_number}"'
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
+        assert bool(docket_number), (
+            f'docket_number must be a valid value, not "{docket_number}"'
+        )
 
         if not show_docket_entries and (date_end or date_start):
             raise ValueError(
@@ -312,9 +311,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         identified and so is ignored below.
         # noqa
         """
-        assert (
-            self.session is not None
-        ), "session attribute of AppellateDocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
         query_params = {
             "servlet": "ShowDoc",
             "incPdfHeader": "Y",
@@ -400,9 +399,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         name_role = self.redelimit_p(tree, self.BR_REGEX)
         count = len(name_role)
-        assert (
-            count >= 2
-        ), "Expecting 2+ <br>-delimited portions of party left-hand side."
+        assert count >= 2, (
+            "Expecting 2+ <br>-delimited portions of party left-hand side."
+        )
 
         # Name is first, Role is last
         party["name"] = force_unicode(name_role[0].text_content().strip())

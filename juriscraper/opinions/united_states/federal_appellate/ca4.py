@@ -102,7 +102,7 @@ class Site(OpinionSiteLinear):
         """
         start = (dt - timedelta(days=7)).strftime("%Y-%m-%d")
         end = dt.strftime("%Y-%m-%d")
-        self.request["parameters"]["json"][
-            "query"
-        ] = f"publishdate:range({start},{end})"
+        self.request["parameters"]["json"]["query"] = (
+            f"publishdate:range({start},{end})"
+        )
         self.html = self._download()

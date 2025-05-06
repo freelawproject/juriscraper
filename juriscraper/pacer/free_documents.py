@@ -134,9 +134,9 @@ class FreeOpinionReport(BaseReport):
         :param text: A unicode object
         :return: None
         """
-        assert isinstance(
-            text, str
-        ), f"Input must be unicode, not {type(text)}"
+        assert isinstance(text, str), (
+            f"Input must be unicode, not {type(text)}"
+        )
         text = clean_html(text)
         self.tree = get_html_parsed_text(text)
         self._strip_bad_html_tags_insecure(text)
@@ -399,9 +399,9 @@ class FreeOpinionRow(BaseDocketReport):
         if self._column_count == 4:
             return ""
         try:
-            return self.element.xpath(
-                "./td[5]/i[contains(./text(), " '"NOS")]'
-            )[0].tail.strip()
+            return self.element.xpath('./td[5]/i[contains(./text(), "NOS")]')[
+                0
+            ].tail.strip()
         except IndexError:
             return ""
 
@@ -410,7 +410,7 @@ class FreeOpinionRow(BaseDocketReport):
             return ""
         try:
             return self.element.xpath(
-                "./td[5]/i[contains(./text(), " '"Cause")]'
+                './td[5]/i[contains(./text(), "Cause")]'
             )[0].tail.strip()
         except IndexError:
             return ""
