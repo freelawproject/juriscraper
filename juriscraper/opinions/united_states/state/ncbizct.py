@@ -5,18 +5,18 @@ Author: Kevin Ramirez
 History:
     2025-05-06, quevon24: First version
 """
+
 import re
-from typing import Dict
 from datetime import date, datetime
+from typing import Dict
 from urllib.parse import urlencode
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -25,18 +25,35 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
-        for row in self.html.xpath(".//div[contains(@class,'list__items')]/article"):
+        for row in self.html.xpath(
+            ".//div[contains(@class,'list__items')]/article"
+        ):
             # Extract case name and citation
-            case_string = row.xpath(f".//h5[contains(@class,'list__title')]/a")[0].text_content().strip()
+            case_string = (
+                row.xpath(f".//h5[contains(@class,'list__title')]/a")[0]
+                .text_content()
+                .strip()
+            )
             case_name, citation = self.extract_case_and_citation(case_string)
 
             # Extract other data
             date_filed = row.xpath(f".//time")[0].text_content().strip()
-            docket_number = row.xpath(f".//span[4]")[0].text_content().split("(", 1)[0].strip()
+            docket_number = (
+                row.xpath(f".//span[4]")[0]
+                .text_content()
+                .split("(", 1)[0]
+                .strip()
+            )
             status = row.xpath(f".//span[6]")[0].text_content().strip()
-            download_url = row.xpath(f".//div[contains(@class,'file file--teaser')]/a/@href")[0]
-            description = row.xpath(f".//div[contains(@itemprop,'description')]/p")
-            summary_text = description[0].text_content().strip() if description else ""
+            download_url = row.xpath(
+                f".//div[contains(@class,'file file--teaser')]/a/@href"
+            )[0]
+            description = row.xpath(
+                f".//div[contains(@itemprop,'description')]/p"
+            )
+            summary_text = (
+                description[0].text_content().strip() if description else ""
+            )
 
             self.cases.append(
                 {
@@ -49,7 +66,6 @@ class Site(OpinionSiteLinear):
                     "status": status,
                 }
             )
-
 
     def extract_case_and_citation(self, case_string):
         """Extract citations and clean up case name
@@ -64,14 +80,13 @@ class Site(OpinionSiteLinear):
 
         if citation_match:
             citation = citation_match.group(1)
-            case_name = case_string[:citation_match.start()].strip()
+            case_name = case_string[: citation_match.start()].strip()
             case_name = case_name.rstrip(", ").strip()
         else:
             citation = ""
             case_name = case_string
 
         return case_name, citation
-
 
     def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Build URL with year input and scrape
@@ -105,6 +120,4 @@ class Site(OpinionSiteLinear):
         else:
             end = datetime.now().date()
 
-        self.back_scrape_iterable = make_date_range_tuples(
-            start, end, 1
-        )
+        self.back_scrape_iterable = make_date_range_tuples(start, end, 1)
