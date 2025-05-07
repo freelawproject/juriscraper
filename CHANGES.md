@@ -16,6 +16,7 @@ Releases are also tagged in git, if that's helpful.
 - Fix `me` Update maine scraper and add backscraper
 - Update `sd` backscraper and extract from text
 - Fix `bia` scraper and add extract from text test cases
+- update `nc` scraper to OpinionSiteLinear and new website #1373
 
 
 ## Current
