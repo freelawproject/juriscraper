@@ -29,7 +29,9 @@ class Site(OpinionSiteLinear):
     them.
     """
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
         dates_page = super()._download(request_dict)
         self.parse_date_pages(dates_page)
 

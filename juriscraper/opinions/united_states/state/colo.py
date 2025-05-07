@@ -13,7 +13,7 @@ History:
 """
 
 from datetime import date, datetime, timedelta
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -124,7 +124,7 @@ class Site(OpinionSiteLinear):
             case = self.update_case(case, detail_json)
             self.cases.append(case)
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -135,7 +135,7 @@ class Site(OpinionSiteLinear):
         self.html = self._download()
         self._process_html()
 
-    def update_url(self, dates: Optional[Tuple[date]] = None) -> None:
+    def update_url(self, dates: Optional[tuple[date]] = None) -> None:
         """
         Set URL with date filters and current timestamp.
         Request with no date filter was returning very old documents

@@ -1,9 +1,10 @@
 from lxml import etree
 
-from ..lib.diff_tools import get_closest_match_index
-from ..lib.exceptions import ParsingException
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import force_unicode
+from juriscraper.lib.diff_tools import get_closest_match_index
+from juriscraper.lib.exceptions import ParsingException
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import force_unicode
+
 from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url
 
@@ -111,11 +112,11 @@ class PossibleCaseNumberApi(BaseReport):
 
             if len(nodes) > 1 and docket_number_letters is not None:
                 # Remove items by docket number, if they have cv or cr.
-                f = (
-                    lambda node: docket_number_letters
-                    in node.xpath("./@number")[0]
-                )
-                nodes = list(filter(f, nodes))
+                nodes = [
+                    node
+                    for node in nodes
+                    if docket_number_letters in node.xpath("./@number")[0]
+                ]
 
             if len(nodes) > 1:
                 # If we only have sequential defendant attributes, pick the
@@ -216,15 +217,10 @@ class ShowCaseDocApi(BaseReport):
             "session attribute of ShowCaseDocApi cannot be None."
         )
         url = (
-            "{url}?"
-            "{document_number},"
-            "{pacer_case_id},"
-            "{attachment_number},,".format(
-                url=self.url,
-                document_number=document_number,
-                pacer_case_id=pacer_case_id,
-                attachment_number=attachment_number,
-            )
+            f"{self.url}?"
+            f"{document_number},"
+            f"{pacer_case_id},"
+            f"{attachment_number},,"
         )
         logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
         # we use get request because nysd court disabled all head requests

@@ -12,7 +12,7 @@ History:
 
 import re
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -63,7 +63,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the date filed from the text?
 
         :param scraped_text: The content of the document downloaded

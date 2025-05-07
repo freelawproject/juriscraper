@@ -150,7 +150,7 @@ class Site(OpinionSite):
             except IndexError:
                 # Unable to find comma to split on. No neutral cite.
                 neutral_cite = ""
-        except:
+        except Exception:
             raise InsanityException(
                 f"Unable to parse: {txt}\n{traceback.format_exc()}"
             )

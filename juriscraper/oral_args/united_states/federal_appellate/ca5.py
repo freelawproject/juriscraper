@@ -24,7 +24,7 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         path = "//item/description/text()[2]"
-        return [s for s in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_case_dates(self):
         path = "//item/description/text()[3]"
@@ -35,4 +35,4 @@ class Site(OralArgumentSite):
 
     def _get_docket_numbers(self):
         path = "//item/description/text()[1]"
-        return [s for s in self.html.xpath(path)]
+        return list(self.html.xpath(path))

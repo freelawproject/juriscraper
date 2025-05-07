@@ -4,10 +4,13 @@ import re
 import requests
 from requests.packages.urllib3 import exceptions
 
-from ..lib.exceptions import PacerLoginException
-from ..lib.html_utils import get_html_parsed_text, get_xml_parsed_text
-from ..lib.log_tools import make_default_logger
-from ..pacer.utils import is_pdf, is_text
+from juriscraper.lib.exceptions import PacerLoginException
+from juriscraper.lib.html_utils import (
+    get_html_parsed_text,
+    get_xml_parsed_text,
+)
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
 
@@ -41,16 +44,13 @@ def check_if_logged_in_page(content: bytes) -> bool:
         ]
     ):
         not_logged_in = re.search(b"text.*Not logged in", content)
-        if not_logged_in:
-            # An unauthenticated PossibleCaseNumberApi XML result. Simply
-            # continue onwards. The complete result looks like:
-            # <request number='1501084'>
-            #   <message text='Not logged in.  Please refresh this page.'/>
-            # </request>
-            # An authenticated PossibleCaseNumberApi XML result.
-            return False
-        else:
-            return True
+        # An unauthenticated PossibleCaseNumberApi XML result. Simply
+        # continue onwards. The complete result looks like:
+        # <request number='1501084'>
+        #   <message text='Not logged in.  Please refresh this page.'/>
+        # </request>
+        # An authenticated PossibleCaseNumberApi XML result.
+        return not not_logged_in
 
     # Detect if we are logged in. If so, no need to do so. If not, we login
     # again below.
@@ -72,7 +72,7 @@ def check_if_logged_in_page(content: bytes) -> bool:
     appellate_document_error = (
         b"The requested document cannot be displayed" in content
     )
-    if any(
+    return any(
         [
             found_district_logout_link,
             found_appellate_logout_link,
@@ -80,11 +80,7 @@ def check_if_logged_in_page(content: bytes) -> bool:
             appellate_attachment_page,
             appellate_document_error,
         ]
-    ):
-        # A normal HTML page we're logged into.
-        return True
-
-    return False
+    )
 
 
 class PacerSession(requests.Session):
@@ -207,7 +203,7 @@ class PacerSession(requests.Session):
         :param data: dict of data to transform
         :return: dict with values wrapped into tuples like:(None, <value>)
         """
-        output = dict()
+        output = {}
         for key in data:
             output[key] = (None, data[key])
         return output
@@ -338,7 +334,7 @@ class PacerSession(requests.Session):
 
         # 'loginResult': '0', user successfully logged; '1', user not logged
         if (
-            response_json.get("loginResult") == None
+            response_json.get("loginResult") is None
             or response_json.get("loginResult") == "1"
         ):
             message = f"Invalid username/password: {response_json.get('errorDescription')}"

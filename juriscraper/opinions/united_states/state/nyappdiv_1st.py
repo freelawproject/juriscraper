@@ -6,7 +6,7 @@
 # Date: 2014-07-04
 import re
 from datetime import date
-from typing import Any, Dict
+from typing import Any
 
 from juriscraper.opinions.united_states.state import ny
 
@@ -22,7 +22,7 @@ class Site(ny.Site):
         self.make_backscrape_iterable(kwargs)
         self._set_parameters()
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 
         :param scraped_text: The content of the document downloaded

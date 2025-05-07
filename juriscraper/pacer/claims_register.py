@@ -1,12 +1,16 @@
 import re
 import urllib.parse
-from typing import Dict, Tuple, Union
+from typing import Union
 
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
+    convert_date_string,
+    force_unicode,
+    harmonize,
+)
+from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.reports import BaseReport
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, force_unicode, harmonize
-from ..lib.utils import clean_court_object
 from .docket_report import BaseDocketReport
 from .utils import get_pacer_doc_id_from_doc1_url
 
@@ -118,7 +122,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, docket_number
-    ) -> Tuple[str, Dict[str, Union[str, None]]]:
+    ) -> tuple[str, dict[str, Union[str, None]]]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.

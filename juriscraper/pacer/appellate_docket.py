@@ -2,21 +2,22 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
 from requests import Response
 
-from ..lib.judge_parsers import normalize_judge_string
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import (
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
     force_unicode,
     harmonize,
 )
-from ..lib.utils import clean_court_object
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
@@ -618,7 +619,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         :param row: Table row
         :return: Attachment description
         """
-        description_text_nodes = row.xpath(f"./td[4]//text()")
+        description_text_nodes = row.xpath("./td[4]//text()")
         if not description_text_nodes:
             # No text in the cell.
             return ""
@@ -674,7 +675,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     def _get_attachments(
         self, cells: html.HtmlElement
-    ) -> List[Dict[str, Any]]:
+    ) -> list[dict[str, Any]]:
         rows = cells.xpath("./table//tr//tr")[1:]
         result = []
         for row in rows:
@@ -728,14 +729,17 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 continue
 
             date_filed_str = force_unicode(cells[0].text_content())
-            if not date_filed_str.strip():
-                if view_multiple_documents and len(cells) >= 3:
-                    last_de = docket_entries[-1]
-                    attachments = self._get_attachments(cells[2])
-                    if len(attachments) == 0:
-                        continue
-                    last_de["attachments"] = attachments
+            if (
+                not date_filed_str.strip()
+                and view_multiple_documents
+                and len(cells) >= 3
+            ):
+                last_de = docket_entries[-1]
+                attachments = self._get_attachments(cells[2])
+                if len(attachments) == 0:
                     continue
+                last_de["attachments"] = attachments
+                continue
             de["date_filed"] = convert_date_string(date_filed_str)
             de["document_number"] = self._get_document_number(cells[1])
             de["pacer_doc_id"] = self._get_pacer_doc_id(cells[1])

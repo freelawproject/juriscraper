@@ -1,7 +1,6 @@
-import datetime
 import re
 from datetime import date, datetime
-from typing import Any, Dict, Tuple
+from typing import Any
 
 from dateutil import parser
 from lxml.html import fromstring
@@ -85,7 +84,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extracts docket number from downloaded opinion HTML
 
         Possible on SJC. since `Records And Briefs` section cites
@@ -124,7 +123,7 @@ class Site(OpinionSiteLinear):
         }
 
     def _download_backwards(
-        self, dates_and_url: Tuple[date, date, str]
+        self, dates_and_url: tuple[date, date, str]
     ) -> None:
         """Set proper `masscases.com` url as self.url, and parse content
 

@@ -18,7 +18,9 @@ class Site(OpinionSite):
         self.url = "https://www.ag.state.mn.us/office/opinions/DATE.asp"
         self.opinions = []
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
         html = super()._download(request_dict)
         self._extract_case_data_from_html(html)
         return html

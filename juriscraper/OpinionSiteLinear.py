@@ -167,7 +167,7 @@ class OpinionSiteLinear(OpinionSite):
                 # happens with mich example files
                 continue
 
-            for key in case.keys():
+            for key in case:
                 if key not in self.valid_keys:
                     raise KeyError(
                         f"Invalid key '{key}' for case dictionary {self.__module__}"

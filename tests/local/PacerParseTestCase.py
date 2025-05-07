@@ -15,7 +15,7 @@ class PacerParseTestCase(unittest.TestCase):
     def parse_files(self, path_root, file_ext, test_class):
         """Can we do a simple query and parse?"""
         paths = []
-        for root, dirnames, filenames in os.walk(path_root):
+        for root, _, filenames in os.walk(path_root):
             for filename in fnmatch.filter(filenames, file_ext):
                 paths.append(os.path.join(root, filename))
         paths.sort()

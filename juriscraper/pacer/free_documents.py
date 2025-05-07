@@ -5,21 +5,26 @@ which is free.
 import pprint
 import sys
 
-from ..lib.date_utils import make_date_range_tuples
-from ..lib.html_utils import (
+from juriscraper.lib.date_utils import make_date_range_tuples
+from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
     get_html_parsed_text,
     set_response_encoding,
 )
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, harmonize
-from ..pacer.utils import (
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    harmonize,
+)
+from juriscraper.pacer.utils import (
     get_nonce_from_form,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     reverse_goDLS_function,
 )
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 

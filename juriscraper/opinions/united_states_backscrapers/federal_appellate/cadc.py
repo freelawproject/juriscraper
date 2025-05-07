@@ -1,4 +1,3 @@
-import ssl
 import time
 from datetime import date
 
@@ -22,20 +21,18 @@ class Site(OpinionSite):
         ]
 
     def _get_case_names(self):
-        return [
-            e
-            for e in self.html.xpath(
+        return list(
+            self.html.xpath(
                 "//div[@class='row-entry'][position() mod 2 = 1]/span[2]/text()"
             )
-        ]
+        )
 
     def _get_download_urls(self):
-        return [
-            e
-            for e in self.html.xpath(
+        return list(
+            self.html.xpath(
                 "//div[@class='row-entry'][position() mod 2 = 1]/span[1]/a/@href"
             )
-        ]
+        )
 
     def _get_case_dates(self):
         dates = []
@@ -50,12 +47,11 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [
-            e
-            for e in self.html.xpath(
+        return list(
+            self.html.xpath(
                 "//div[@class='row-entry'][position() mod 2 = 1]/span[1]/a/text()"
             )
-        ]
+        )
 
     def _get_precedential_statuses(self):
         return ["Published" for _ in range(0, len(self.case_names))]

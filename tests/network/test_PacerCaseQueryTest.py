@@ -4,7 +4,6 @@
 import unittest
 from datetime import date
 
-from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.pacer import CaseQuery
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
@@ -31,21 +30,21 @@ class PacerCaseQueryTest(unittest.TestCase):
         metadata = self.report.metadata
         self.assertIn(
             "Foley v. Bates et al",
-            self.report.metadata["case_name_raw"],
+            metadata["case_name_raw"],
             msg="case_name_raw query failed",
         )
         self.assertEqual(
             date(2007, 11, 29),
-            self.report.metadata["date_last_filing"],
+            metadata["date_last_filing"],
             msg="date_last_filing query failed",
         )
         self.assertEqual(
             date(2007, 5, 7),
-            self.report.metadata["date_terminated"],
+            metadata["date_terminated"],
             msg="date_terminated query failed",
         )
         self.assertEqual(
             date(2006, 11, 27),
-            self.report.metadata["date_filed"],
+            metadata["date_filed"],
             msg="date_filed query failed",
         )

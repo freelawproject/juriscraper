@@ -2,11 +2,6 @@ ci:
   autoupdate_schedule: quarterly
 exclude: '^tests/examples/.*\.html$'
 repos:
-  - repo: https://github.com/asottile/pyupgrade
-    rev: v3.16.0
-    hooks:
-     - id: pyupgrade
-       args: [--py37-plus]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
@@ -25,19 +20,9 @@ repos:
        args: [--markdown-linebreak-ext=md]
        exclude: ^tests/examples/pacer/nef/s3/.*\.txt$
 
-  - repo: https://github.com/ikamensh/flynt/
-    rev: '1.0.1'
-    hooks:
-     - id: flynt
-       args: [--line-length=79, --transform-concats]
-
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.11.8
     hooks:
+      - id: ruff
+        args: [ --fix ]
       - id: ruff-format
-
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
-    hooks:
-     - id: isort
-       name: isort (python)

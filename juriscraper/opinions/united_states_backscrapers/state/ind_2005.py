@@ -23,7 +23,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath("//table/tr/td[1]/font/a/text()")]
+        return list(self.html.xpath("//table/tr/td[1]/font/a/text()"))
 
     def _get_case_dates(self):
         dates = []
@@ -61,7 +61,7 @@ class Site(OpinionSite):
         return dates
 
     def _get_download_urls(self):
-        return [s for s in self.html.xpath("//table/tr/td[4]/font/a/@href")]
+        return list(self.html.xpath("//table/tr/td[4]/font/a/@href"))
 
     def _get_docket_numbers(self):
         return [

@@ -10,7 +10,6 @@
 
 import re
 from datetime import date
-from typing import Tuple
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -122,7 +121,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: Tuple[date]):
+    def _download_backwards(self, dates: tuple[date]):
         logger.info("Backscraping for range %s - %s", *dates)
         params = {**self.base_params}
         params.update(

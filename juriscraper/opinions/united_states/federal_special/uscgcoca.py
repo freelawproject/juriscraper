@@ -10,7 +10,6 @@ History:
 """
 
 import re
-from typing import List
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -73,7 +72,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_case_names(self) -> List[str]:
+    def _get_case_names(self) -> list[str]:
         """Clean case names
 
         :return: List of case names

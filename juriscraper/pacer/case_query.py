@@ -8,9 +8,10 @@ import pprint
 import re
 import sys
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, force_unicode, harmonize
-from ..lib.utils import clean_court_object
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import clean_string, force_unicode, harmonize
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 

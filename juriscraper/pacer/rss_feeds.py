@@ -4,14 +4,15 @@ import pprint
 import re
 import sys
 from html import unescape
-from typing import Dict, Tuple, Union
+from typing import Union
 
 import feedparser
 from requests import Session
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, harmonize
-from ..lib.utils import clean_court_object
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import DocketReport
 from .utils import (
     get_pacer_case_id_from_nonce_url,
@@ -342,7 +343,7 @@ class PacerRssFeed(DocketReport):
 
     def _parse_docket_number(
         self, title_text
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -429,7 +430,7 @@ sorry if that was your filename.""",
                 "Reading RSS feed from %s as %s"
                 % (args.court_or_file, feed.court_id)
             )
-            f = open(args.court_or_file)
+            f = open(args.court_or_file)  # noqa: SIM115
         feed._parse_text(f.read().decode("utf-8"))
 
     print(f"Got {len(feed.data)} items")
