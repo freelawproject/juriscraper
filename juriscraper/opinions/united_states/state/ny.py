@@ -11,7 +11,10 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any, Optional
+from typing import Any, Optional, Union
+
+from lxml import html
+from lxml.etree import ParserError
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -132,3 +135,27 @@ class Site(OpinionSiteLinear):
         self._set_parameters(*dates)
         self.html = self._download()
         self._process_html()
+
+    @staticmethod
+    def cleanup_content(content: Union[str, bytes]) -> Union[str, bytes]:
+        """Remove hash altering timestamps to prevent duplicates
+
+        Recently the NY courts introduced a timestamped script tag, 
+        apparently for cloudflare analytics. This is causing us to ingest
+        duplicates
+        """
+        try:
+            tree = html.fromstring(content)
+        except ParserError:
+            return content
+
+        scripts = tree.xpath("//script")
+        if not scripts:
+            return content
+
+        for script in scripts:
+            parent = script.getparent()
+            if parent is not None:
+                parent.remove(script)
+
+        return html.tostring(tree)
