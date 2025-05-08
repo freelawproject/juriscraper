@@ -17,6 +17,7 @@ from lxml.html import fromstring
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import harmonize
+from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -170,3 +171,7 @@ class Site(OpinionSiteLinear):
         m = re.findall(pattern, scraped_text)
         r = list(filter(None, chain.from_iterable(m)))
         return r[0].strip() if r else ""
+
+    @staticmethod
+    def cleanup_content(content: str) -> str:
+        return ny.Site.cleanup_content(content)

@@ -16,7 +16,7 @@ Releases are also tagged in git, if that's helpful.
 - Fix `me` Update maine scraper and add backscraper
 - Update `sd` backscraper and extract from text
 - Fix `bia` scraper and add extract from text test cases
-
+- Implement `cleanup_content` for `ny` sites #1393
 
 ## Current
 
