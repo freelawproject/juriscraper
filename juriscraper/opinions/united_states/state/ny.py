@@ -140,7 +140,7 @@ class Site(OpinionSiteLinear):
     def cleanup_content(content: Union[str, bytes]) -> Union[str, bytes]:
         """Remove hash altering timestamps to prevent duplicates
 
-        Recently the NY courts introduced a timestamped script tag, 
+        Recently the NY courts introduced a timestamped script tag,
         apparently for cloudflare analytics. This is causing us to ingest
         duplicates
         """
