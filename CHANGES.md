@@ -12,13 +12,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+## Current
+
+**2.6.67 - 2025-05-08**
+
 - New scraper `lactapp_2` for Lousiana Court of Appeals, Second Circuit
 - Fix `me` Update maine scraper and add backscraper
 - Update `sd` backscraper and extract from text
 - Fix `bia` scraper and add extract from text test cases
 - Implement `cleanup_content` for `ny` sites #1393
 
-## Current
+## Past
 
 **2.6.66 - 2025-04-29**
 
@@ -33,7 +37,6 @@ Releases are also tagged in git, if that's helpful.
 - `nh` was blocking; fixed by updating the user agent string #1370
 - Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt` #1150
 
-## Past
 
 **2.6.64 - 2025-04-10**
 
