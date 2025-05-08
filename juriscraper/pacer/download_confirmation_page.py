@@ -1,8 +1,13 @@
 import re
 from typing import Optional
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, force_unicode
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    force_unicode,
+)
+
 from .reports import BaseReport
 from .utils import is_pdf, make_doc1_url, make_docs1_url
 
@@ -93,9 +98,9 @@ class DownloadConfirmationPage(BaseReport):
         """
 
         try:
-            transaction_str = self.tree.re_xpath(
-                '//*[re:match(text(), "Transaction Receipt")]'
-            )[0]
+            self.tree.re_xpath('//*[re:match(text(), "Transaction Receipt")]')[
+                0
+            ]
         except IndexError:
             return False
         return True

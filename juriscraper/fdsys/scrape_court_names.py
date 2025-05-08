@@ -1,5 +1,4 @@
 import json
-from pprint import pprint
 
 import requests
 from lxml import etree, html
@@ -9,7 +8,7 @@ def get_court_names():
     response = requests.get("https://www.courtlistener.com/api/jurisdictions/")
     tree = html.fromstring(response.text)
 
-    data = dict()
+    data = {}
 
     for tr in tree.xpath("//tr"):
         pre = tr.xpath("./td[5]/a/text()")
@@ -28,7 +27,7 @@ def get_fdsys_court_names():
     )
     response.raw.decode_content = True
     tree = etree.parse(response.raw)
-    data = dict()
+    data = {}
 
     for url in tree.xpath(
         "//m:loc/text()",

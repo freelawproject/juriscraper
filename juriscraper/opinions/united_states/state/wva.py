@@ -17,10 +17,7 @@ class Site(OpinionSite):
         ]
 
     def _get_download_urls(self):
-        return [
-            href
-            for href in self.html.xpath(f"{self.cell_path % 3}/a[1]/@href")
-        ]
+        return list(self.html.xpath(f"{self.cell_path % 3}/a[1]/@href"))
 
     def _get_case_dates(self):
         return [
@@ -75,5 +72,5 @@ class Site(OpinionSite):
         results = []
         for cell in self.html.xpath(path):
             code = cell.text_content().strip()
-            results.append(codes[code] if code in codes else "Unknown")
+            results.append(codes.get(code, "Unknown"))
         return results

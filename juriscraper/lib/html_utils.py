@@ -294,6 +294,4 @@ def fix_links_in_lxml_tree(link, keep_anchors=False):
 def is_html(response: Response) -> bool:
     """Determines whether the item downloaded is an HTML document or something
     else."""
-    if "text/html" in response.headers.get("content-type", ""):
-        return True
-    return False
+    return "text/html" in response.headers.get("content-type", "")

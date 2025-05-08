@@ -3,7 +3,7 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 from datetime import date, datetime
-from typing import Dict, List, Union
+from typing import Union
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -42,13 +42,15 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def get_term(
-        date_of_interest: Union[date, datetime] = date.today(),
+        date_of_interest: Union[date, datetime, None] = None,
     ) -> int:
         """The URLs for SCOTUS correspond to the term, not the calendar.
 
         The terms kick off on the first Monday of October, so we use October 1st
         as our cut off date.
         """
+        if date_of_interest is None:
+            date_of_interest = date.today()
         term_cutoff = date(date_of_interest.year, 10, 1)
         if isinstance(date_of_interest, datetime):
             date_of_interest = date_of_interest.date()
@@ -75,7 +77,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> List[str]:
+    def make_backscrape_iterable(self, kwargs: dict) -> list[str]:
         """Use the default make_backscrape_iterable to parse input
         and create date objects. Then, use the dates to get the terms
 

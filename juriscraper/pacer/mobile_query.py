@@ -6,8 +6,9 @@ This provides the total number of docket entries, which is useful for alerts
 import pprint
 import sys
 
-from ..lib.log_tools import make_default_logger
-from ..lib.utils import clean_court_object
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 

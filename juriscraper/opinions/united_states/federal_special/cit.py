@@ -19,7 +19,7 @@ class Site(OpinionSite):
         self.base = '//tr[../tr/th[contains(., "Caption")]]'
 
     def _get_download_urls(self):
-        return [t for t in self.html.xpath(f"{self.base}/td[1]/a/@href")]
+        return list(self.html.xpath(f"{self.base}/td[1]/a/@href"))
 
     def _get_citations(self):
         neutral_citations = []
@@ -92,6 +92,4 @@ class Site(OpinionSite):
         return judges
 
     def _get_nature_of_suit(self):
-        return [
-            t for t in self.html.xpath(f"{self.base}/td[6][../td/a]/text()")
-        ]
+        return list(self.html.xpath(f"{self.base}/td[6][../td/a]/text()"))

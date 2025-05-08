@@ -1,13 +1,17 @@
 import email
 import re
 from datetime import date
-from typing import Dict, List, Optional, Tuple, TypedDict, Union
+from typing import Optional, TypedDict, Union
 
 from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    harmonize,
+)
 
-from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
@@ -33,7 +37,7 @@ class DocketEntryType(TypedDict):
 class DocketType(TypedDict):
     case_name: str
     date_filed: date
-    docket_entries: List[DocketEntryType]
+    docket_entries: list[DocketEntryType]
     docket_number: str
 
 
@@ -181,7 +185,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, current_node: HtmlElement
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Gets a docket number from the email text and also parse the docket
         number components.
 
@@ -213,7 +217,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number_plain(
         self,
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Gets a docket number from the plain email text and also parse the
         docket number components.
 
@@ -336,12 +340,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             node = current_node.xpath(f"{main_path}{path}")
             if len(node):
                 for des_part in node:
-                    if self._is_appellate():
-                        if (
-                            des_part
-                            == "Notice will be electronically mailed to:"
-                        ):
-                            break
+                    if (
+                        self._is_appellate()
+                        and des_part
+                        == "Notice will be electronically mailed to:"
+                    ):
+                        break
                     description = description + des_part
                 description = clean_string(description)
                 if description:
@@ -387,9 +391,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         document_nodes = self.tree.xpath(
             '//strong[contains(., "Document description:")]'
         )
-        if len(document_nodes) <= 1:
-            return False
-        return True
+        return not len(document_nodes) <= 1
 
     def _contains_attachments_plain(self) -> bool:
         """Determines if the plain/txt notification contains attached documents.
@@ -474,7 +476,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _get_docket_entries(
         self, current_node: HtmlElement = None
-    ) -> List[DocketEntryType]:
+    ) -> list[DocketEntryType]:
         """Gets the full list of docket entries with document and sequence numbers
 
         :param  current_node: The relative lxml.HtmlElement
@@ -609,13 +611,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         # See nhb_2 for an example with 2 "Chapter..." strings
         chapter_regex = r"Chapter[- ]?(7|9|11|13)"
         if self.court_id in ["nhb"]:
-            subject = re.sub(chapter_regex, " ", subject, 1)
+            subject = re.sub(chapter_regex, " ", subject, count=1)
         elif len(re.findall(chapter_regex, subject)) > 1:
             logger.error(
                 "Trying to parse a RECAP email with more than 1 'Chapter...' string"
             )
 
-        subject = subject.strip(" ;:,- ")
+        subject = subject.strip(" ;:,-")
         # some courts use "Re: {case name}"
         short_description = re.sub("( Re$)|(^Re:? )", "", subject)
 
@@ -789,7 +791,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
         )
 
-    def _get_email_recipients(self) -> List[Dict[str, Union[str, List[str]]]]:
+    def _get_email_recipients(self) -> list[dict[str, Union[str, list[str]]]]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
@@ -815,7 +817,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _get_email_recipients_plain(
         self,
-    ) -> List[Dict[str, Union[str, List[str]]]]:
+    ) -> list[dict[str, Union[str, list[str]]]]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses

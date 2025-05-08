@@ -16,15 +16,17 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/"
+        self.url = "https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones/"
         self.status = "Published"
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         """Download websites
 
         :param request_dict: Empty dict
         :return: HTML object
         """
+        if request_dict is None:
+            request_dict = {}
         if self.test_mode_enabled():
             return super()._download()
         if not self.html:

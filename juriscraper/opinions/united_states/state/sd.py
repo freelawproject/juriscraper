@@ -8,7 +8,7 @@
 
 import re
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_row_column_text
@@ -147,7 +147,7 @@ class Site(OpinionSiteLinear):
         self.html = super()._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> None:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Creates backscrape iterable from kwargs or defaults
 
         :param kwargs: passed when initializing the scraper, may or
@@ -162,7 +162,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the date filed from the text?
 
         Some edge cases:

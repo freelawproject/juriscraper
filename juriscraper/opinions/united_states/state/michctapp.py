@@ -8,7 +8,6 @@ History:
     - 2022-01-28: Updated for new web site, @satsuki-chan.
 """
 
-from typing import List
 from urllib.parse import urlencode
 
 from juriscraper.opinions.united_states.state import mich
@@ -22,7 +21,7 @@ class Site(mich.Site):
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
-    def _get_precedential_statuses(self) -> List[str]:
+    def _get_precedential_statuses(self) -> list[str]:
         """Find Precedential Status
 
         If the case is published they note Published in the title string.

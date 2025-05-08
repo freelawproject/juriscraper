@@ -43,10 +43,10 @@ def clean_court_object(obj):
     :return: A dict or list with the string values cleaned.
     """
     if isinstance(obj, list):
-        l = []
+        items = []
         for i in obj:
-            l.append(clean_court_object(i))
-        return l
+            items.append(clean_court_object(i))
+        return items
     elif isinstance(obj, dict):
         d = {}
         for k, v in obj.items():

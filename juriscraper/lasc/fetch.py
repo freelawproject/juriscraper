@@ -1,9 +1,7 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 
-from dateutil.rrule import WEEKLY, rrule
-
-from ..lib.log_tools import make_default_logger
-from ..lib.utils import clean_court_object
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.utils import clean_court_object
 
 logger = make_default_logger()
 
@@ -45,10 +43,8 @@ class LASCSearch:
         """
         start_str = start.strftime("%m-%d-%Y")
         end_str = end.strftime("%m-%d-%Y")
-        date_query_url = "https://{}GetRecentCivilCases/{}/{}".format(
-            self.api_base,
-            start_str,
-            end_str,
+        date_query_url = (
+            f"https://{self.api_base}GetRecentCivilCases/{start_str}/{end_str}"
         )
         r = self.session.get(date_query_url)
         cases = r.json()["ResultList"]

@@ -27,9 +27,7 @@ class Site(OralArgumentSite):
     @staticmethod
     def _return_download_url(d):
         file_type = "mp3"  # or 'wma' is also available for any case.
-        download_url = "http://www.supremecourt.gov/media/audio/{type}files/{docket_number}.{type}".format(
-            type=file_type, docket_number=d
-        )
+        download_url = f"http://www.supremecourt.gov/media/audio/{file_type}files/{d}.{file_type}"
         return download_url
 
     def _get_case_names(self):
@@ -41,7 +39,7 @@ class Site(OralArgumentSite):
         return [
             datetime.strptime(s, "%m/%d/%y").date()
             for s in self.html.xpath(path)
-            if not "Date" in s
+            if "Date" not in s
         ]
 
     def _get_docket_numbers(self):

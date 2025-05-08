@@ -81,9 +81,8 @@ class Site(OpinionSiteLinear):
             # Append a "V" as seen in the opinions PDF for the vaccine
             # claims. This will help disambiguation, in case docket
             # numbers collide
-            if self.is_vaccine:
-                if not docket.lower().endswith("v"):
-                    yy, number = docket.split("-")
-                    parsed_case["docket"] = f"{yy}-{number.zfill(4)}V"
+            if self.is_vaccine and not docket.lower().endswith("v"):
+                yy, number = docket.split("-")
+                parsed_case["docket"] = f"{yy}-{number.zfill(4)}V"
 
             self.cases.append(parsed_case)

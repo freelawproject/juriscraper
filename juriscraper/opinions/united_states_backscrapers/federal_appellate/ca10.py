@@ -2,7 +2,6 @@ import time
 from datetime import date
 
 from dateutil.rrule import DAILY, rrule
-from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
 
@@ -28,18 +27,12 @@ class Site(OpinionSite):
         )
 
     def _get_case_names(self):
-        return [
-            e
-            for e in self.html.xpath(
-                f"{self.base}/td[@class='case-name']/text()"
-            )
-        ]
+        return list(
+            self.html.xpath(f"{self.base}/td[@class='case-name']/text()")
+        )
 
     def _get_download_urls(self):
-        return [
-            e
-            for e in self.html.xpath(f"{self.base}/td[@class='link']/a/@href")
-        ]
+        return list(self.html.xpath(f"{self.base}/td[@class='link']/a/@href"))
 
     def _get_case_dates(self):
         dates = []
@@ -55,21 +48,15 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [
-            e
-            for e in self.html.xpath(
-                f"{self.base}/td[@class='case-no']/text()"
-            )
-        ]
+        return list(
+            self.html.xpath(f"{self.base}/td[@class='case-no']/text()")
+        )
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
     def _get_lower_courts(self):
-        return [
-            e
-            for e in self.html.xpath(f"{self.base}/td[@class='origin']/text()")
-        ]
+        return list(self.html.xpath(f"{self.base}/td[@class='origin']/text()"))
 
     def _download_backwards(self, d):
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(

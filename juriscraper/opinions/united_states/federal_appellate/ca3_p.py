@@ -14,16 +14,10 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [
-            e
-            for e in self.html.xpath('//a[contains(@href, "opinarch")]/text()')
-        ]
+        return list(self.html.xpath('//a[contains(@href, "opinarch")]/text()'))
 
     def _get_download_urls(self):
-        return [
-            e
-            for e in self.html.xpath('//a[contains(@href, "opinarch")]/@href')
-        ]
+        return list(self.html.xpath('//a[contains(@href, "opinarch")]/@href'))
 
     def _get_case_dates(self):
         dates = []

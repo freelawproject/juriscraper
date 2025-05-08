@@ -20,7 +20,6 @@ History:
 
 import re
 from datetime import datetime
-from typing import Dict, List
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -188,7 +187,7 @@ class Site(OpinionSiteLinear):
         self.html = self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> List[int]:
+    def make_backscrape_iterable(self, kwargs: dict) -> list[int]:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.
         """

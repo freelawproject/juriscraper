@@ -105,8 +105,10 @@ class Site(OpinionSiteLinear):
         :param content: the downloaded content; maybe a string or PDF bytes
         :return: the downloaded content, unchanged
         """
-        if isinstance(content, str):
-            if "No document found with CTrack ID" in content[:1000]:
-                raise InvalidDocumentError(content)
+        if (
+            isinstance(content, str)
+            and "No document found with CTrack ID" in content[:1000]
+        ):
+            raise InvalidDocumentError(content)
 
         return content

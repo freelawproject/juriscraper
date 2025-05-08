@@ -108,13 +108,14 @@ class Site(OpinionSiteLinear):
                     status = "Published"
             elif field["key"] == "descri":
                 disposition = field["value"]
-            elif field["key"] == "relhapt":
+            elif (
+                field["key"] == "relhapt"
                 # For orctapp this field may be populated with consolidated docket
                 # numbers
-                if self.court_id.endswith("or") and not field[
-                    "value"
-                ].startswith("S"):
-                    lower_court_number = field["value"]
+                and self.court_id.endswith("or")
+                and not field["value"].startswith("S")
+            ):
+                lower_court_number = field["value"]
 
         return judge, disposition, status, lower_court_number
 

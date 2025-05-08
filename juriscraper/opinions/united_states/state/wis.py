@@ -1,6 +1,6 @@
 import re
 from datetime import date, datetime, timedelta
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -76,7 +76,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple

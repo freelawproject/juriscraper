@@ -3,9 +3,9 @@ from typing import Optional
 import requests
 from requests import Response
 
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.reports import BaseReport
 
-from ..lib.log_tools import make_default_logger
 from .docket_report import BaseDocketReport
 
 logger = make_default_logger()

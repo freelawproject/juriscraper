@@ -121,7 +121,7 @@ class ScraperExampleTest(unittest.TestCase):
                                 module_string,
                             ),
                         )
-                        for i, item in enumerate(fixture_json):
+                        for i, _item in enumerate(fixture_json):
                             self.assertEqual(
                                 fixture_json[i],
                                 json_data[i],
@@ -144,13 +144,9 @@ class ScraperExampleTest(unittest.TestCase):
             print(f"({num_tests} test(s) in {duration:0.1f} seconds)")
 
         print(
-            "\n{num_scrapers} scrapers tested successfully against "
-            "{num_example_files} example files, with {num_warnings} "
-            "speed warnings.".format(
-                num_scrapers=num_scrapers,
-                num_example_files=num_example_files,
-                num_warnings=num_warnings,
-            )
+            f"\n{num_scrapers} scrapers tested successfully against "
+            f"{num_example_files} example files, with {num_warnings} "
+            "speed warnings."
         )
         if json_compare_files_generated:
             msg = (

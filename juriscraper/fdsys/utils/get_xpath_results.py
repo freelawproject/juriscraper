@@ -23,13 +23,13 @@ def print_xpath_results(query):
             query, namespaces={"m": "http://www.loc.gov/mods/v3"}
         )
         count = 0
-        if type(results) in [bool, float]:
+        if isinstance(results, (bool, float)):
             print(f"{indent}{count}.\t{results}")
 
-        elif type(results) == list:
+        elif isinstance(results, list):
             s = set()
             for result in results:
-                if type(result) == _ElementStringResult:
+                if isinstance(result, _ElementStringResult):
                     print(f"{indent}{count}.\t{result}")
                     s.add("".join(result.split()))
                 else:

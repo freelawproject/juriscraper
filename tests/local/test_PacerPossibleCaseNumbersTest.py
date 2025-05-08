@@ -46,7 +46,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         path_root = os.path.join(
             TESTS_ROOT_EXAMPLES_PACER, "possible_case_numbers"
         )
-        for root, dirnames, filenames in os.walk(path_root):
+        for root, _, filenames in os.walk(path_root):
             for filename in fnmatch.filter(filenames, "*.xml"):
                 paths.append(os.path.join(root, filename))
         paths.sort()

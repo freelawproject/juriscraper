@@ -1,21 +1,21 @@
 import re
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urljoin
 
 import requests
 from lxml.html import HtmlElement
 from requests import Response
 
-from ..lib.html_utils import (
+from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
-    get_html5_parsed_text,
     get_html_parsed_text,
     is_html,
     set_response_encoding,
     strip_bad_html_tags_insecure,
 )
-from ..lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import make_default_logger
+
 from .utils import (
     get_doc_id_prefix_from_court_id,
     is_pdf,
@@ -141,7 +141,7 @@ class BaseReport:
         pacer_magic_num: Optional[str],
         got_receipt: str,
         de_seq_num: Optional[str] = None,
-    ) -> Tuple[Response, str]:
+    ) -> tuple[Response, str]:
         """Query the doc1 download URL.
 
         :param pacer_case_id: The ID of the case
@@ -197,7 +197,7 @@ class BaseReport:
         pacer_magic_num: Optional[str] = None,
         appellate: bool = False,
         de_seq_num: Optional[str] = None,
-    ) -> Tuple[Optional[Response], str]:
+    ) -> tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
