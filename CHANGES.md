@@ -12,6 +12,9 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
+timestamped opinions and check if `Site.cleanup_content` is working #1392
+
 ## Current
 
 **2.6.67 - 2025-05-08**
