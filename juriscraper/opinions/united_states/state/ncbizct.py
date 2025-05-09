@@ -17,11 +17,13 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    days_interval = 7
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.nccourts.gov/documents/business-court-opinions"
-        self.first_opinion_date = datetime(1996, 10, 24).date()
+        self.first_opinion_date = date(1996, 10, 24)
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
@@ -30,40 +32,49 @@ class Site(OpinionSiteLinear):
         ):
             # Extract case name and citation
             case_string = (
-                row.xpath(f".//h5[contains(@class,'list__title')]/a")[0]
+                row.xpath(".//h5[contains(@class,'list__title')]/a")[0]
                 .text_content()
                 .strip()
             )
             case_name, citation = self.extract_case_and_citation(case_string)
 
             # Extract other data
-            date_filed = row.xpath(f".//time")[0].text_content().strip()
-            docket_number = (
-                row.xpath(f".//span[4]")[0]
-                .text_content()
-                .split("(", 1)[0]
-                .strip()
-            )
-            status = row.xpath(f".//span[6]")[0].text_content().strip()
+            date_filed = row.xpath(".//time")[0].text_content().strip()
+            # In the same span we can find the docket number, the lower court and the author
+            span_text = row.xpath(".//div[@class='meta']/span[4]")[0].text_content().strip()
+            docket_number = span_text.split("(", 1)[0].strip()
+
+            start_parentheses = span_text.find('(')
+            end_parentheses = span_text.find(')')
+
+            lower_court = ""
+            author_str = ""
+
+            if start_parentheses != -1 and end_parentheses != -1:
+                text_in_parentheses = span_text[start_parentheses + 1:end_parentheses].strip()
+                parts = text_in_parentheses.split(' - ', 1)
+
+                if len(parts) > 0:
+                    lower_court = parts[0].strip()
+
+                if len(parts) > 1:
+                    author_str = parts[1].strip()
+
+            status = row.xpath(".//span[6]")[0].text_content().strip()
             download_url = row.xpath(
-                f".//div[contains(@class,'file file--teaser')]/a/@href"
+                ".//div[contains(@class,'file file--teaser')]/a/@href"
             )[0]
-            description = row.xpath(
-                f".//div[contains(@itemprop,'description')]/p"
-            )
-            summary_text = (
-                description[0].text_content().strip() if description else ""
-            )
 
             self.cases.append(
                 {
                     "name": titlecase(case_name),
                     "docket": docket_number,
                     "url": download_url,
-                    "summary": summary_text,
                     "date": date_filed,
                     "citation": citation,
                     "status": status,
+                    "author": author_str,
+                    "lower_court": lower_court,
                 }
             )
 
@@ -101,23 +112,3 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.url}?{urlencode(params)}"
         self.html = self._download()
         self._process_html()
-
-    def make_backscrape_iterable(self, kwargs: Dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
-
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start:
-            start = datetime.strptime(start, "%Y/%m/%d").date()
-        else:
-            start = self.first_opinion_date
-        if end:
-            end = datetime.strptime(end, "%Y/%m/%d").date()
-        else:
-            end = datetime.now().date()
-
-        self.back_scrape_iterable = make_date_range_tuples(start, end, 1)
