@@ -7,11 +7,9 @@ History:
 """
 
 import re
-from datetime import date, datetime
-from typing import Dict
+from datetime import date
 from urllib.parse import urlencode
 
-from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -41,18 +39,24 @@ class Site(OpinionSiteLinear):
             # Extract other data
             date_filed = row.xpath(".//time")[0].text_content().strip()
             # In the same span we can find the docket number, the lower court and the author
-            span_text = row.xpath(".//div[@class='meta']/span[4]")[0].text_content().strip()
+            span_text = (
+                row.xpath(".//div[@class='meta']/span[4]")[0]
+                .text_content()
+                .strip()
+            )
             docket_number = span_text.split("(", 1)[0].strip()
 
-            start_parentheses = span_text.find('(')
-            end_parentheses = span_text.find(')')
+            start_parentheses = span_text.find("(")
+            end_parentheses = span_text.find(")")
 
             lower_court = ""
             author_str = ""
 
             if start_parentheses != -1 and end_parentheses != -1:
-                text_in_parentheses = span_text[start_parentheses + 1:end_parentheses].strip()
-                parts = text_in_parentheses.split(' - ', 1)
+                text_in_parentheses = span_text[
+                    start_parentheses + 1 : end_parentheses
+                ].strip()
+                parts = text_in_parentheses.split(" - ", 1)
 
                 if len(parts) > 0:
                     lower_court = parts[0].strip()
