@@ -22,7 +22,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path = '//a[contains(@id , "hypCaseNum")]/@href'
-        return [t for t in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
         path = '//span[contains(@id , "lblTitle")]//text()'
@@ -51,4 +51,4 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = '//a[contains(@id , "hypCaseNum")]//text()'
-        return [t for t in self.html.xpath(path)]
+        return list(self.html.xpath(path))

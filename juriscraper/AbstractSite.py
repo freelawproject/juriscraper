@@ -1,7 +1,6 @@
 import hashlib
 import json
 from datetime import date, datetime, timedelta
-from typing import Dict, List, Tuple
 
 import certifi
 import requests
@@ -147,7 +146,7 @@ class AbstractSite:
 
     def to_json(self):
         return json.dumps(
-            [item for item in self],
+            list(self),
             default=json_date_handler,
         )
 
@@ -252,16 +251,14 @@ class AbstractSite:
                         "%s: Required fields do not contain any data: %s"
                         % (self.court_id, field)
                     )
-            i = 0
             prior_case_name = None
-            for name in self.case_names:
+            for i, name in enumerate(self.case_names):
                 if not name.strip():
                     raise InsanityException(
                         "Item with index %s has an empty case name. The prior "
                         "item had case name of: %s" % (i, prior_case_name)
                     )
                 prior_case_name = name
-                i += 1
 
         future_date_count = 0
         for index, case_date in enumerate(self.case_dates):
@@ -307,10 +304,9 @@ class AbstractSite:
                         f"More than 1 case has a date in the future. Last case: {error}"
                     )
 
-        # Is cookies a dict?
-        if type(self.cookies) != dict:
+        if not isinstance(self.cookies, dict):
             raise InsanityException(
-                "self.cookies not set to be a dict by " "scraper."
+                "self.cookies not set to be a dict by scraper."
             )
         logger.info(
             "%s: Successfully found %s items."
@@ -350,8 +346,10 @@ class AbstractSite:
         """
         return get_html_parsed_text(text)
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         """Download the latest version of Site"""
+        if request_dict is None:
+            request_dict = {}
         self.downloader_executed = True
         if self.method == "POST":
             truncated_params = {}
@@ -385,8 +383,10 @@ class AbstractSite:
         """
         pass
 
-    def _process_request_parameters(self, parameters={}):
+    def _process_request_parameters(self, parameters=None):
         """Hook for processing injected parameter overrides"""
+        if parameters is None:
+            parameters = {}
         if parameters.get("verify") is not None:
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
@@ -441,7 +441,7 @@ class AbstractSite:
             else:
                 try:
                     payload = self.request["response"].content.decode("utf8")
-                except:
+                except Exception:
                     payload = self.request["response"].text
 
                 text = self._clean_text(payload)
@@ -452,7 +452,9 @@ class AbstractSite:
                     )
                 return html_tree
 
-    def _get_html_tree_by_url(self, url, parameters={}):
+    def _get_html_tree_by_url(self, url, parameters=None):
+        if parameters is None:
+            parameters = {}
         self._process_request_parameters(parameters)
         self._request_url_get(url)
         self._post_process_response()
@@ -465,8 +467,8 @@ class AbstractSite:
         pass
 
     def make_backscrape_iterable(
-        self, kwargs: Dict
-    ) -> List[Tuple[date, date]]:
+        self, kwargs: dict
+    ) -> list[tuple[date, date]]:
         """Creates back_scrape_iterable in the most common variation,
         a list of tuples containing (start, end) date pairs, each of
         `days_interval` size

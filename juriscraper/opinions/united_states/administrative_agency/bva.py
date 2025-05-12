@@ -40,7 +40,9 @@ class Site(OpinionSite):
             yield startat
             startat += incr
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
         html = super()._download(request_dict)
         self._extract_case_data_from_html(html)
         return html
@@ -55,7 +57,7 @@ class Site(OpinionSite):
             text = result.text_content().strip()
             try:
                 (citation, date, docket) = regex.match(text).group(1, 2, 4)
-            except:
+            except Exception:
                 raise Exception(
                     "regex failure in _extract_case_data_from_html method of bva scraper"
                 )

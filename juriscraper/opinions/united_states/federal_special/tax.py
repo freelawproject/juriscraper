@@ -6,7 +6,6 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 import time
 from datetime import date, datetime, timedelta
-from typing import Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
@@ -36,7 +35,7 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         """Download from api
 
         The tax court switches between blue and green deploys so we need to
@@ -45,6 +44,8 @@ class Site(OpinionSiteLinear):
         :param request_dict: An empty dictionary.
         :return: None
         """
+        if request_dict is None:
+            request_dict = {}
         if self.test_mode_enabled():
             return super()._download()
 
@@ -103,7 +104,7 @@ class Site(OpinionSiteLinear):
         pdf_url = super()._download()["url"]
         return pdf_url
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request to the API
 
         Note that the API returns 100 results or less, so the

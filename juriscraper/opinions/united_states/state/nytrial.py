@@ -9,7 +9,7 @@ History:
 import re
 from datetime import date
 from itertools import chain
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 from dateutil.rrule import MONTHLY, rrule
 from lxml.html import fromstring
@@ -17,6 +17,7 @@ from lxml.html import fromstring
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import harmonize
+from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -99,7 +100,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_docket_numbers(self) -> List[str]:
+    def _get_docket_numbers(self) -> list[str]:
         """Overriding from OpinionSiteLinear, since docket numbers are
         not in the HTML and they are required
 
@@ -117,7 +118,7 @@ class Site(OpinionSiteLinear):
         """
         self.url = self.build_url(target_date)
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract values from opinion's text
 
         :param scraped_text: pdf or html string contents
@@ -170,3 +171,7 @@ class Site(OpinionSiteLinear):
         m = re.findall(pattern, scraped_text)
         r = list(filter(None, chain.from_iterable(m)))
         return r[0].strip() if r else ""
+
+    @staticmethod
+    def cleanup_content(content: str) -> str:
+        return ny.Site.cleanup_content(content)

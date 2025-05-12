@@ -142,9 +142,9 @@ def strip_bad_html_tags_insecure(
     :return: the cleaned HTML tree
     """
 
-    assert isinstance(
-        text, str
-    ), f"`text` must be of type str, but is of type {type(text)}."
+    assert isinstance(text, str), (
+        f"`text` must be of type str, but is of type {type(text)}."
+    )
 
     clean_content_tags = {"style"}
     if remove_scripts:
@@ -234,12 +234,12 @@ def clean_html(text: str) -> str:
     # accordingly.
     if sys.maxunicode == 65535:
         text = re.sub(
-            "[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD]+", "", text
+            "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd]+", "", text
         )
     else:
         text = re.sub(
-            "[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD"
-            "\U00010000-\U0010FFFF]+",
+            "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd"
+            "\U00010000-\U0010ffff]+",
             "",
             text,
         )
@@ -294,6 +294,4 @@ def fix_links_in_lxml_tree(link, keep_anchors=False):
 def is_html(response: Response) -> bool:
     """Determines whether the item downloaded is an HTML document or something
     else."""
-    if "text/html" in response.headers.get("content-type", ""):
-        return True
-    return False
+    return "text/html" in response.headers.get("content-type", "")

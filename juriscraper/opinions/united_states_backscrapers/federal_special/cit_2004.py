@@ -2,7 +2,6 @@
 # CourtID: cit
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
-import re
 import time
 from datetime import date
 
@@ -19,12 +18,9 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_download_urls(self):
-        return [
-            t
-            for t in self.html.xpath(
-                "//table[3]//tr[position() > 1]/td/font//a/@href"
-            )
-        ]
+        return list(
+            self.html.xpath("//table[3]//tr[position() > 1]/td/font//a/@href")
+        )
 
     def _get_citations(self):
         neutral_citations = []

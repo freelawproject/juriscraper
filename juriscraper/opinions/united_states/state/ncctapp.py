@@ -6,8 +6,6 @@ History:
     2014-08-04: Created by Jon Andersen
 """
 
-from datetime import date
-
 from juriscraper.opinions.united_states.state import nc
 
 

@@ -10,7 +10,7 @@ History:
 import datetime
 import re
 from datetime import date
-from typing import Any, Dict
+from typing import Any
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -50,7 +50,7 @@ class Site(OpinionSiteLinear):
                 # The table has a malformed row
                 continue
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the case name and clean it up?
 
         This method is a bit ... ugly.  Mostly due to bad PDFs that occur

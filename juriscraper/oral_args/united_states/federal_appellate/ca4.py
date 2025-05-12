@@ -16,7 +16,7 @@ class Site(OralArgumentSite):
         self.url = "http://www.ca4.uscourts.gov/oral-argument/listen-to-oral-arguments"
 
     def _get_download_urls(self):
-        return [href for href in self.html.xpath("//tr/td[2]//a/@href")]
+        return list(self.html.xpath("//tr/td[2]//a/@href"))
 
     def _get_case_names(self):
         return self.text_from_cell(3)

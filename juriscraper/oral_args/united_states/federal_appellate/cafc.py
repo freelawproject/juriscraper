@@ -121,4 +121,4 @@ class Site(OralArgumentSiteLinear):
             self.end_date = date.today()
             self.start_date = self.end_date - timedelta(days=30)
 
-        return f'{self.start_date.strftime("%m/%d/%Y")}|{self.end_date.strftime("%m/%d/%Y")}'
+        return f"{self.start_date.strftime('%m/%d/%Y')}|{self.end_date.strftime('%m/%d/%Y')}"

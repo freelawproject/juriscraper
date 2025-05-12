@@ -1,5 +1,4 @@
 from datetime import date, datetime
-from typing import Dict, Tuple
 
 from dateutil import parser
 from requests.exceptions import ChunkedEncodingError
@@ -27,9 +26,11 @@ class Site(OpinionSiteLinear):
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
         # if we just ignore those encoding errors we can live with it
+        if request_dict is None:
+            request_dict = {}
         try:
             return super()._download(request_dict)
         except ChunkedEncodingError:
@@ -67,7 +68,7 @@ class Site(OpinionSiteLinear):
                         }
                     )
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> None:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
@@ -92,7 +93,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple

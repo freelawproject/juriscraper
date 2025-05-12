@@ -29,10 +29,10 @@ class Site(cit.Site):
         return case_dates
 
     def _get_download_urls(self):
-        return [t for t in self.html.xpath("//table[3]//tr/td[1]/a/@href")]
+        return list(self.html.xpath("//table[3]//tr/td[1]/a/@href"))
 
     def _get_citations(self):
-        return [t for t in self.html.xpath("//table[3]//tr/td[1]/a/text()")]
+        return list(self.html.xpath("//table[3]//tr/td[1]/a/text()"))
 
     def _get_case_names(self):
         # Exclude confidential rows
@@ -86,6 +86,4 @@ class Site(cit.Site):
         return judges
 
     def _get_nature_of_suit(self):
-        return [
-            t for t in self.html.xpath("//table[3]//tr/td[6][../td/a]/text()")
-        ]
+        return list(self.html.xpath("//table[3]//tr/td[6][../td/a]/text()"))

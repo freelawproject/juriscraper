@@ -5,12 +5,7 @@ Author: Brian W. Carver
 Date created: June 20, 2014
 """
 
-from datetime import date, datetime
-
-from lxml import html
-
 from juriscraper.opinions.united_states.state import me
-from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(me.Site):

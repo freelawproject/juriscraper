@@ -9,7 +9,6 @@ Substantially Revised: Brian W. Carver, 2014-03-28
 
 import re
 from datetime import date, datetime
-from typing import Tuple
 
 from lxml import html
 
@@ -62,7 +61,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def get_docket_document_number_from_url(self, url: str) -> Tuple[str, str]:
+    def get_docket_document_number_from_url(self, url: str) -> tuple[str, str]:
         """Get docket document number from the opinion URL
 
         :param url:

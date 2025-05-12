@@ -3,7 +3,7 @@
 # Court Short Name: fla
 
 from datetime import date, datetime, timedelta
-from typing import Optional, Tuple
+from typing import Optional
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -66,7 +66,7 @@ class Site(OpinionSiteLinear):
         fmt = "%m/%d/%Y"
         self.url = self.base_url.format(start.strftime(fmt), end.strftime(fmt))
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Overrides scraper URL using date inputs
 
         :param dates: (start_date, end_date) tuple

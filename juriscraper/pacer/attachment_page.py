@@ -2,8 +2,9 @@ import pprint
 import re
 import sys
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import force_unicode
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import force_unicode
+
 from .reports import BaseReport
 from .utils import (
     get_court_id_from_doc_id_prefix,
@@ -33,9 +34,9 @@ class AttachmentPage(BaseReport):
         :param document_number: The internal PACER document ID for the item.
         :return: a request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of DocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of DocketReport cannot be None."
+        )
         # coerce the fourth digit of the document number to 1 to ensure we get
         # the attachment page.
         document_number = f"{document_number[:3]}0{document_number[4:]}"
@@ -221,9 +222,7 @@ class AttachmentPage(BaseReport):
         if court_id not in sub_dlsid:
             return False
         dlsid = int(doc_id[3:])
-        if sub_dlsid[court_id] < dlsid:
-            return False
-        return True
+        return sub_dlsid[court_id] >= dlsid
 
     def _get_name_attachment_number(self, row):
         try:
@@ -253,7 +252,7 @@ class AttachmentPage(BaseReport):
 
     def _get_description_from_tr(self, row):
         """Get the description from the row"""
-        columns_in_row = row.xpath(f"./td")
+        columns_in_row = row.xpath("./td")
         if not self.is_bankruptcy:
             index = 2
             # Some NEFs attachment pages for some courts have an extra column

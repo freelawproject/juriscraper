@@ -235,7 +235,7 @@ def save_response(site):
     try:
         # Brute force test to see if it's a JSON
         json_data = json.loads(response.content)
-    except:
+    except Exception:
         json_data = None
 
     if json_data:
@@ -379,7 +379,7 @@ def main():
         binaries = True
         # If we are making the effort of downloading documents
         # we should force the user to actually see the outputs
-        verbosity = 1 if not verbosity else verbosity
+        verbosity = verbosity if verbosity else 1
 
     if verbosity == 0:
         # default level will only show that the scrapers are working

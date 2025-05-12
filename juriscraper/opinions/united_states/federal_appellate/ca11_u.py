@@ -13,9 +13,7 @@ class Site(ca11_p.Site):
         return get_html5_parsed_text(text)
 
     def _download_backwards(self, n):
-        self.url = "http://media.ca11.uscourts.gov/opinions/unpub/logname.php?begin={}&num={}&numBegin=1".format(
-            n, n / 20 - 1
-        )
+        self.url = f"http://media.ca11.uscourts.gov/opinions/unpub/logname.php?begin={n}&num={n / 20 - 1}&numBegin=1"
 
         self.html = self._download()
         if self.html is not None:

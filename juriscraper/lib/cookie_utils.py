@@ -9,11 +9,11 @@ def normalize_cookies(cookies):
     such), but a dict is essentially all we need.
     """
     requests_cookies = {}
-    if type(cookies) == list:
+    if isinstance(cookies, list):
         # Selenium cookies
         for cookie in cookies:
             requests_cookies[cookie["name"]] = cookie["value"]
-    elif type(cookies) == RequestsCookieJar:
+    elif isinstance(cookies, RequestsCookieJar):
         # Requests cookies. Convert to dict.
         requests_cookies = dict(cookies)
 

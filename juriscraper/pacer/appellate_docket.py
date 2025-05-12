@@ -2,21 +2,22 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
 from requests import Response
 
-from ..lib.judge_parsers import normalize_judge_string
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import (
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
     force_unicode,
     harmonize,
 )
-from ..lib.utils import clean_court_object
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
@@ -74,8 +75,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def url(self):
         if self.court_id == "psc":
             return (
-                "https://dcecf.psc.uscourts.gov/"
-                "n/beam/servlet/TransportRoom"
+                "https://dcecf.psc.uscourts.gov/n/beam/servlet/TransportRoom"
             )
         elif self.court_id in ["ca5", "ca7", "ca11"]:
             return (
@@ -195,12 +195,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 All parameters same as above, except...
                 confirmCharge=y <-- Added
         """
-        assert (
-            self.session is not None
-        ), "session attribute of AppellateDocketReport cannot be None."
-        assert bool(
-            docket_number
-        ), f'docket_number must be a valid value, not "{docket_number}"'
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
+        assert bool(docket_number), (
+            f'docket_number must be a valid value, not "{docket_number}"'
+        )
 
         if not show_docket_entries and (date_end or date_start):
             raise ValueError(
@@ -312,9 +312,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         identified and so is ignored below.
         # noqa
         """
-        assert (
-            self.session is not None
-        ), "session attribute of AppellateDocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
         query_params = {
             "servlet": "ShowDoc",
             "incPdfHeader": "Y",
@@ -400,9 +400,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         name_role = self.redelimit_p(tree, self.BR_REGEX)
         count = len(name_role)
-        assert (
-            count >= 2
-        ), "Expecting 2+ <br>-delimited portions of party left-hand side."
+        assert count >= 2, (
+            "Expecting 2+ <br>-delimited portions of party left-hand side."
+        )
 
         # Name is first, Role is last
         party["name"] = force_unicode(name_role[0].text_content().strip())
@@ -619,7 +619,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         :param row: Table row
         :return: Attachment description
         """
-        description_text_nodes = row.xpath(f"./td[4]//text()")
+        description_text_nodes = row.xpath("./td[4]//text()")
         if not description_text_nodes:
             # No text in the cell.
             return ""
@@ -675,7 +675,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     def _get_attachments(
         self, cells: html.HtmlElement
-    ) -> List[Dict[str, Any]]:
+    ) -> list[dict[str, Any]]:
         rows = cells.xpath("./table//tr//tr")[1:]
         result = []
         for row in rows:
@@ -729,14 +729,17 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 continue
 
             date_filed_str = force_unicode(cells[0].text_content())
-            if not date_filed_str.strip():
-                if view_multiple_documents and len(cells) >= 3:
-                    last_de = docket_entries[-1]
-                    attachments = self._get_attachments(cells[2])
-                    if len(attachments) == 0:
-                        continue
-                    last_de["attachments"] = attachments
+            if (
+                not date_filed_str.strip()
+                and view_multiple_documents
+                and len(cells) >= 3
+            ):
+                last_de = docket_entries[-1]
+                attachments = self._get_attachments(cells[2])
+                if len(attachments) == 0:
                     continue
+                last_de["attachments"] = attachments
+                continue
             de["date_filed"] = convert_date_string(date_filed_str)
             de["document_number"] = self._get_document_number(cells[1])
             de["pacer_doc_id"] = self._get_pacer_doc_id(cells[1])

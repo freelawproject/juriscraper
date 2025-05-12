@@ -1,14 +1,18 @@
 import re
 from datetime import date
-from typing import Dict, List, Tuple, Union
+from typing import Union
 
 from lxml.html import HtmlElement
 
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
+    convert_date_string,
+    force_unicode,
+    harmonize,
+)
+from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.reports import BaseReport
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string, force_unicode, harmonize
-from ..lib.utils import clean_court_object
 from .docket_report import BaseDocketReport
 from .utils import get_pacer_case_id_from_doc1_url
 
@@ -32,9 +36,9 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         self._clear_caches()
         self._metadata = None
         self._claims = None
-        assert court_id.endswith(
-            "b"
-        ), "Unable to create object. Must use bankruptcy court abbreviation."
+        assert court_id.endswith("b"), (
+            "Unable to create object. Must use bankruptcy court abbreviation."
+        )
 
     @property
     def data(self):
@@ -182,8 +186,8 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     def _fill_non_present_values_as_empty(
         self,
-        field_mappings: Dict[str, str],
-        meta_data: Dict[str, Union[str, date, None, List[Dict[str, str]]]],
+        field_mappings: dict[str, str],
+        meta_data: dict[str, Union[str, date, None, list[dict[str, str]]]],
     ) -> None:
         """Fill claim missing values in meta_data with empty values if they are
         not present.
@@ -193,7 +197,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         :return: None, meta_data is modified in place.
         """
 
-        for key, value in field_mappings.items():
+        for value in field_mappings.values():
             if value not in meta_data:
                 if value.startswith("date_") or value.startswith("last_date_"):
                     meta_data[value] = None
@@ -202,7 +206,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     def _parse_case_name_and_docket_number(
         self,
-        meta_data: Dict[str, Union[str, date, None, List[Dict[str, str]]]],
+        meta_data: dict[str, Union[str, date, None, list[dict[str, str]]]],
         claim_table: HtmlElement,
     ) -> None:
         """Parses the case name and docket number from the provided meta_data
@@ -233,7 +237,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, docket_number: str
-    ) -> Tuple[str, Dict[str, Union[str, None]]]:
+    ) -> tuple[str, dict[str, Union[str, None]]]:
         """Strip the judge initials off docket numbers, and do any other
         similar cleanup.
 
@@ -261,8 +265,8 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         return docket_number, self._return_default_dn_components()
 
     def _get_claim_data_from_anchors(
-        self, anchor_nodes: List[HtmlElement]
-    ) -> Dict[str, Union[str, List[Dict[str, str]]]]:
+        self, anchor_nodes: list[HtmlElement]
+    ) -> dict[str, Union[str, list[dict[str, str]]]]:
         """Retrieves claim data from a list of HTML anchor elements.
 
         :param anchor_nodes: A list of HTML anchor elements that contain
@@ -337,8 +341,8 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     @staticmethod
     def _get_label_value_pair_from_string(
-        string: str, field_mappings: Dict[str, str]
-    ) -> Dict[str, Union[str, date, None]]:
+        string: str, field_mappings: dict[str, str]
+    ) -> dict[str, Union[str, date, None]]:
         """Get the field name and value from a string.
 
         e.g: Case: 3:23-bk-10722
@@ -365,7 +369,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             .replace(")", "")
             .rstrip(":")
         )
-        label = field_mappings.get(label, None)
+        label = field_mappings.get(label)
 
         if not label:
             return {}
@@ -402,9 +406,9 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         :return: request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of ClaimsActivity cannot be None."
+        assert self.session is not None, (
+            "session attribute of ClaimsActivity cannot be None."
+        )
 
         params = {
             "all_case_ids": pacer_case_id,

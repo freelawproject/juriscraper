@@ -6,7 +6,6 @@ Court Short Name: pa
 
 import re
 from datetime import date, datetime, timedelta
-from typing import Dict, Tuple
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -92,7 +91,7 @@ class Site(OpinionSiteLinear):
             self.html = self._download()
             self._process_html()
 
-    def parse_case_title(self, title: str) -> Tuple[str, str]:
+    def parse_case_title(self, title: str) -> tuple[str, str]:
         """Separates case_name and docket_number from case string
 
         :param title: string from the source
@@ -108,7 +107,7 @@ class Site(OpinionSiteLinear):
             docket = ""
         return name, docket
 
-    def get_status(self, op: Dict) -> str:
+    def get_status(self, op: dict) -> str:
         """Get status from opinion json.
         Inheriting classes have status data
 
@@ -123,7 +122,7 @@ class Site(OpinionSiteLinear):
         """
         return author_str
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Modify GET querystring for desired date range
 
         :param dates: (start_date, end_date) tuple

@@ -35,6 +35,7 @@ __all__ = [
     FreeOpinionReport,
     InternetArchive,
     ListOfCreditors,
+    MobileQuery,
     NotificationEmail,
     S3NotificationEmail,
     PacerRssFeed,
