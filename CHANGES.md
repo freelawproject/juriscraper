@@ -12,6 +12,17 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+The following changes are not yet released, but are code complete:
+
+Features:
+-
+
+Changes:
+- Add auth token to ny trial courts
+
+Fixes:
+-
+
 ## Current
 
 **2.6.67 - 2025-05-08**
