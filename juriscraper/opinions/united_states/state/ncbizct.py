@@ -49,9 +49,8 @@ class Site(OpinionSiteLinear):
             start_parentheses = span_text.find("(")
             end_parentheses = span_text.find(")")
 
-            lower_court = ""
             author_str = ""
-
+            lower_courts = []
             if start_parentheses != -1 and end_parentheses != -1:
                 text_in_parentheses = span_text[
                     start_parentheses + 1 : end_parentheses
@@ -59,7 +58,9 @@ class Site(OpinionSiteLinear):
                 parts = text_in_parentheses.split(" - ", 1)
 
                 if len(parts) > 0:
-                    lower_court = parts[0].strip()
+                    lower_court_parts = parts[0].strip().split(",")
+                    for court in lower_court_parts:
+                        lower_courts.append(f"{court} County Court")
 
                 if len(parts) > 1:
                     author_str = parts[1].strip()
@@ -78,7 +79,7 @@ class Site(OpinionSiteLinear):
                     "citation": citation,
                     "status": status,
                     "author": author_str,
-                    "lower_court": lower_court,
+                    "lower_court": ", ".join(lower_courts),
                 }
             )
 
