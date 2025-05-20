@@ -12,10 +12,26 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+The following changes are not yet released, but are code complete:
+
+Features:
 - Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
 timestamped opinions and check if `Site.cleanup_content` is working #1392
 
+Changes:
+-
+
+Fixes:
+-
+
 ## Current
+
+**2.6.68 - 2025-05-12**
+
+- Add auth token to ny trial courts
+
+
+## Past
 
 **2.6.67 - 2025-05-08**
 
@@ -25,7 +41,6 @@ timestamped opinions and check if `Site.cleanup_content` is working #1392
 - Fix `bia` scraper and add extract from text test cases
 - Implement `cleanup_content` for `ny` sites #1393
 
-## Past
 
 **2.6.66 - 2025-04-29**
 
