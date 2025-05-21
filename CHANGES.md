@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- Fixes for `prapp` with backscraper
+
 
 ## Current
 
