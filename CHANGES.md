@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- New scraper `ncbizct` for North Carolina Business Court
 
 Changes:
 -
