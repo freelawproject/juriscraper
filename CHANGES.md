@@ -15,6 +15,19 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+
+## Current
+**2.6.69 - 2025-05-21**
+
+Features:
 - New scraper `ncbizct` for North Carolina Business Court
 
 Changes:
@@ -24,14 +37,13 @@ Fixes:
 - Fixes for `prapp` with backscraper
 
 
-## Current
+
+## Past
 
 **2.6.68 - 2025-05-12**
 
 - Add auth token to ny trial courts
 
-
-## Past
 
 **2.6.67 - 2025-05-08**
 
