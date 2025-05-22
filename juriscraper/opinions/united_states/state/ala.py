@@ -41,7 +41,8 @@ class Site(OpinionSiteLinear):
                     if end_idx != -1:
                         # Extract the content inside the parenthesis
                         content = name[
-                                  idx + len("(Appeal from"):end_idx].strip()
+                            idx + len("(Appeal from") : end_idx
+                        ].strip()
                         # Split on the last colon to separate court and number
                         if ":" in content:
                             parts = content.rsplit(":", 1)

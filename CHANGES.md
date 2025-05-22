@@ -28,7 +28,7 @@ Fixes:
 **2.6.68 - 2025-05-12**
 
 - Add auth token to ny trial courts
-- Clean up ala scraped case names 
+- Clean up ala scraped case names
 
 
 ## Past
