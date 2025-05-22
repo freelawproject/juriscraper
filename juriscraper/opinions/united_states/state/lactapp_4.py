@@ -120,6 +120,5 @@ class Site(OpinionSiteLinear):
 
             self.update_date_filters()
             self.update_hidden_inputs()
-
-        self.method = "POST"
+            self.method = "POST"
         return super()._download()
