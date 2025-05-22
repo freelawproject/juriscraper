@@ -8,6 +8,7 @@ History:
  - 2023-01-04: Created.
  - 2023-011-14: Alabama no longer uses page or use selenium.
 """
+
 import re
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -44,9 +45,10 @@ class Site(OpinionSiteLinear):
                 if match:
                     lower_court = match.group("lower_court").strip()
                     lower_court_number = match.group(
-                        "lower_court_number").strip()
+                        "lower_court_number"
+                    ).strip()
                     # Remove the parenthetical from the name
-                    name = name[:match.start()].rstrip()
+                    name = name[: match.start()].rstrip()
 
                 judge = publicationItem["groupName"]
                 if judge == "On Rehearing":
