@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix for CA4 - minor edge case bug
 
 
 ## Current
