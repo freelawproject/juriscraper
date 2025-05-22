@@ -11,8 +11,8 @@ from datetime import date, datetime
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -32,7 +32,6 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         """Process the HTML to extract case details."""
-
 
         # XPath for the opinion results
         opinion_results_xpath = "//div[contains(@class, 'opinion-result')]"
