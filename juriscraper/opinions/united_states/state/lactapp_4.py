@@ -24,7 +24,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.la4th.org/Default.aspx"
         self.search_is_configured = False
-        self.target_date = datetime(2025, 1, 1)
+        self.target_date = date.today()
         self.make_backscrape_iterable(kwargs)
         self.status = "Unknown"
         self.parameters = {}
