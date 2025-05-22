@@ -32,6 +32,24 @@ class Site(OpinionSiteLinear):
                 url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
                 docket = publicationItem["caseNumber"]
                 name = publicationItem["title"]
+
+                lower_court = ""
+                lower_court_number = ""
+                idx = name.find("(Appeal from")
+                if idx != -1:
+                    end_idx = name.find(")", idx)
+                    if end_idx != -1:
+                        # Extract the content inside the parenthesis
+                        content = name[
+                                  idx + len("(Appeal from"):end_idx].strip()
+                        # Split on the last colon to separate court and number
+                        if ":" in content:
+                            parts = content.rsplit(":", 1)
+                            lower_court = parts[0].strip()
+                            lower_court_number = parts[1].strip()
+                    # Remove the parenthetical from the name
+                    name = name[:idx].rstrip()
+
                 judge = publicationItem["groupName"]
                 if judge == "On Rehearing":
                     judge = ""
@@ -50,5 +68,7 @@ class Site(OpinionSiteLinear):
                         "url": url,
                         "judge": judge,
                         "per_curiam": per_curiam,
+                        "lower_court": lower_court,
+                        "lower_court_number": lower_court_number,
                     }
                 )

@@ -28,6 +28,7 @@ Fixes:
 **2.6.68 - 2025-05-12**
 
 - Add auth token to ny trial courts
+- Clean up ala scraped case names 
 
 
 ## Past
@@ -1659,8 +1660,3 @@ Changes:
    jurisdiction (Veterans, Tax, etc.)
 - 0.1 - Supports opinions from all 13 Federal Circuit courts and the
    U.S. Supreme Court
-
-
-
-
-
