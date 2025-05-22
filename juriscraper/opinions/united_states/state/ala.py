@@ -8,6 +8,7 @@ History:
  - 2023-01-04: Created.
  - 2023-011-14: Alabama no longer uses page or use selenium.
 """
+import re
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -35,21 +36,17 @@ class Site(OpinionSiteLinear):
 
                 lower_court = ""
                 lower_court_number = ""
-                idx = name.find("(Appeal from")
-                if idx != -1:
-                    end_idx = name.find(")", idx)
-                    if end_idx != -1:
-                        # Extract the content inside the parenthesis
-                        content = name[
-                            idx + len("(Appeal from") : end_idx
-                        ].strip()
-                        # Split on the last colon to separate court and number
-                        if ":" in content:
-                            parts = content.rsplit(":", 1)
-                            lower_court = parts[0].strip()
-                            lower_court_number = parts[1].strip()
+                # Regex to match: (Appeal from <court>: <number>) or (Appeal from <court>: <number> and <number>)
+                match = re.search(
+                    r"\(Appeal from (?P<lower_court>.+?): (?P<lower_court_number>.+?)\)",
+                    name,
+                )
+                if match:
+                    lower_court = match.group("lower_court").strip()
+                    lower_court_number = match.group(
+                        "lower_court_number").strip()
                     # Remove the parenthetical from the name
-                    name = name[:idx].rstrip()
+                    name = name[:match.start()].rstrip()
 
                 judge = publicationItem["groupName"]
                 if judge == "On Rehearing":
