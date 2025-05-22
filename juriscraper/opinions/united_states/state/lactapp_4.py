@@ -110,7 +110,7 @@ class Site(OpinionSiteLinear):
             self.back_scrape_iterable
         )
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         if not self.test_mode_enabled():
             if not self.search_is_configured:
                 self.method = "GET"
