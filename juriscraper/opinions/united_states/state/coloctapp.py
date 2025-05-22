@@ -9,10 +9,6 @@ History:
     - 2023-11-19: Updated by William E. Palin
 """
 
-import re
-
-from lxml import html
-
 from juriscraper.opinions.united_states.state import colo
 
 

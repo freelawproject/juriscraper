@@ -18,7 +18,7 @@
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 
 from datetime import date, datetime, timedelta
-from typing import Dict, Optional, Tuple
+from typing import Optional
 
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
@@ -165,7 +165,7 @@ class Site(OpinionSiteLinear):
 
         return DeferringList(seed=self.seeds, fetcher=get_name)
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Overrides present scraper start_date and end_date
 
         :param dates: (start_date, end_date) tuple

@@ -8,9 +8,10 @@ import pprint
 import re
 import sys
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, force_unicode, harmonize
-from ..lib.utils import clean_court_object
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import clean_string, force_unicode, harmonize
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 
@@ -273,12 +274,12 @@ class CaseQuery(BaseDocketReport, BaseReport):
          - The case_num parameter needs a value; any value will do.
          - As usual, the ?1-L_1_0-1 business in the URL is needed
         """
-        assert (
-            self.session is not None
-        ), "session attribute of CaseQuery report cannot be None."
-        assert bool(
-            pacer_case_id
-        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        assert self.session is not None, (
+            "session attribute of CaseQuery report cannot be None."
+        )
+        assert bool(pacer_case_id), (
+            f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        )
         params = {
             "UserType": "",
             "all_case_ids": pacer_case_id,

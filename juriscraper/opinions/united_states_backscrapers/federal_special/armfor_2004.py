@@ -15,7 +15,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [t for t in self.html.xpath("//table//tr/td[1]/font/text()")]
+        return list(self.html.xpath("//table//tr/td[1]/font/text()"))
 
     def _get_download_urls(self):
         download_urls = []

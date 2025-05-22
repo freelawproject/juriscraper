@@ -15,7 +15,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         path = "//item/description/text()[2]"
-        return [s for s in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_download_urls(self):
         path = "//item/link"
@@ -30,7 +30,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = "//item/description/text()[1]"
-        return [s for s in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_precedential_statuses(self):
         path = "//item/description/text()[3]"
@@ -46,4 +46,4 @@ class Site(OpinionSite):
 
     def _get_nature_of_suit(self):
         path = "//item/description/text()[4]"
-        return [s for s in self.html.xpath(path)]
+        return list(self.html.xpath(path))

@@ -8,7 +8,7 @@ History:
 
 import re
 from datetime import date
-from typing import Any, Dict
+from typing import Any
 
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -69,7 +69,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content

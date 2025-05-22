@@ -23,12 +23,9 @@ class Site(OpinionSite):
         self.my_precedential_statuses = []
 
     def _get_case_names(self):
-        raw_case_names = [
-            s
-            for s in self.html.xpath(
-                "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/text()"
-            )
-        ]
+        raw_case_names = self.html.xpath(
+            "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/text()"
+        )
         case_names = []
         self.my_precedential_statuses = []
         for case_name in raw_case_names:
@@ -41,12 +38,11 @@ class Site(OpinionSite):
         return case_names
 
     def _get_download_urls(self):
-        return [
-            s
-            for s in self.html.xpath(
+        return list(
+            self.html.xpath(
                 "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/@href"
             )
-        ]
+        )
 
     def _get_case_dates(self):
         dates = []
@@ -65,12 +61,11 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [
-            s
-            for s in self.html.xpath(
+        return list(
+            self.html.xpath(
                 "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[4]//font/text()"
             )
-        ]
+        )
 
     def _get_lower_court_numbers(self):
         return [

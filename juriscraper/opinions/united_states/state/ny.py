@@ -11,7 +11,10 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Optional, Union
+
+from lxml import html
+from lxml.etree import ParserError
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -20,7 +23,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
 
@@ -108,7 +110,7 @@ class Site(OpinionSiteLinear):
                 case["author"] = cleaned_author
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 
         :param scraped_text: The content of the document downloaded
@@ -123,7 +125,7 @@ class Site(OpinionSiteLinear):
             return {"Docket": dockets.groupdict()}
         return {}
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -133,3 +135,27 @@ class Site(OpinionSiteLinear):
         self._set_parameters(*dates)
         self.html = self._download()
         self._process_html()
+
+    @staticmethod
+    def cleanup_content(content: Union[str, bytes]) -> Union[str, bytes]:
+        """Remove hash altering timestamps to prevent duplicates
+
+        Recently the NY courts introduced a timestamped script tag,
+        apparently for cloudflare analytics. This is causing us to ingest
+        duplicates
+        """
+        try:
+            tree = html.fromstring(content)
+        except ParserError:
+            return content
+
+        scripts = tree.xpath("//script")
+        if not scripts:
+            return content
+
+        for script in scripts:
+            parent = script.getparent()
+            if parent is not None:
+                parent.remove(script)
+
+        return html.tostring(tree)

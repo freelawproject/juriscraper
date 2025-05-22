@@ -1,10 +1,15 @@
 from lxml import etree
 from requests import Session
 
-from ..lib.judge_parsers import normalize_judge_string
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, harmonize
-from ..lib.utils import clean_court_object, previous_and_next
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    harmonize,
+)
+from juriscraper.lib.utils import clean_court_object, previous_and_next
+
 from .docket_report import BaseDocketReport
 from .docket_utils import normalize_party_types
 from .utils import get_docketxml_url, get_pdf_url, is_pdf
@@ -69,9 +74,9 @@ class InternetArchive(BaseDocketReport):
         self._parse_text(self.response.text)
 
     def _parse_text(self, text):
-        assert isinstance(
-            text, str
-        ), f"Input must be unicode, not {type(text)}"
+        assert isinstance(text, str), (
+            f"Input must be unicode, not {type(text)}"
+        )
         self.tree = etree.fromstring(text.encode("utf-8"), self.parser)
 
     @property
@@ -115,7 +120,7 @@ class InternetArchive(BaseDocketReport):
         party_nodes = self.tree.xpath("//party_list/party")
 
         parties = []
-        for prev, party_node, nxt in previous_and_next(party_nodes):
+        for _prev, party_node, _next in previous_and_next(party_nodes):
             pt = self._xpath_text_0(party_node, "./type")
             extra_info = self._xpath_text_0(party_node, "./extra_info")
             name = self._xpath_text_0(party_node, "./name")

@@ -60,7 +60,7 @@ def get_module_by_name(name):
     db_root = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "..", "opinions")
     )
-    for dirName, subdirList, fileList in os.walk(db_root):
+    for dirName, _subdirList, fileList in os.walk(db_root):
         for fname in fileList:
             if f"{name}.py" == fname:
                 package, module = (

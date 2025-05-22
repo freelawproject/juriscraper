@@ -20,7 +20,6 @@ History:
 
 import re
 from datetime import datetime
-from typing import Dict, List
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -147,7 +146,7 @@ class Site(OpinionSiteLinear):
         )
         for page in range(2, json_response["last_page"] + 1):
             logger.info("Paginating to page %s", page)
-            self.url = self.url.replace(f"page={page-1}", f"page={page}")
+            self.url = self.url.replace(f"page={page - 1}", f"page={page}")
             self.html = self._download()
             self._process_html()
 
@@ -188,7 +187,7 @@ class Site(OpinionSiteLinear):
         self.html = self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> List[int]:
+    def make_backscrape_iterable(self, kwargs: dict) -> list[int]:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.
         """

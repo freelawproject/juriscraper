@@ -17,7 +17,7 @@ History:
 
 import re
 from datetime import date, datetime, timedelta
-from typing import Dict, Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -154,7 +154,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def get_json(self, url: str) -> Dict:
+    def get_json(self, url: str) -> dict:
         """Get JSON from the API
 
         :param url: url
@@ -165,7 +165,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple

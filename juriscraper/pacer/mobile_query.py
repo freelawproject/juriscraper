@@ -6,8 +6,9 @@ This provides the total number of docket entries, which is useful for alerts
 import pprint
 import sys
 
-from ..lib.log_tools import make_default_logger
-from ..lib.utils import clean_court_object
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 
@@ -109,12 +110,12 @@ class MobileQuery(BaseDocketReport, BaseReport):
         The important notes, from testing:
          - The CASE_NUM cookie isn't needed.
          """
-        assert (
-            self.session is not None
-        ), "session attribute of MobileQuery cannot be None."
-        assert bool(
-            pacer_case_id
-        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        assert self.session is not None, (
+            "session attribute of MobileQuery cannot be None."
+        )
+        assert bool(pacer_case_id), (
+            f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        )
         logger.info(
             "Running mobile query for case id '%s' in court '%s'",
             pacer_case_id,

@@ -4,7 +4,7 @@
 
 import re
 from datetime import date, datetime, timedelta
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -98,7 +98,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
@@ -110,7 +110,7 @@ class Site(OpinionSiteLinear):
             return {"OpinionCluster": {"docket_number": match[0]}}
         return {}
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple

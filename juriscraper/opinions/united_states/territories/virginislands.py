@@ -18,7 +18,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
-            f"https://supreme.vicourts.org/court_opinions/published_opinions"
+            "https://supreme.vicourts.org/court_opinions/published_opinions"
         )
         self.status = "Published"
         today = date.today()

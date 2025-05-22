@@ -2,14 +2,6 @@
 import re
 import unittest
 
-from juriscraper.opinions.united_states.state import (
-    colo,
-    mass,
-    massappct,
-    nh_p,
-)
-from juriscraper.oral_args.united_states.federal_appellate import ca6
-
 
 class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested

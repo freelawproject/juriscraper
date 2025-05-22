@@ -1,18 +1,18 @@
 import pprint
 import re
 import sys
-from typing import Dict, Optional
+from typing import Optional
 
 from lxml import html
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.pacer.utils import (
     get_pacer_doc_id_from_doc1_url,
     parse_sumDocSelected_from_row,
 )
 
-from ..lib.log_tools import make_default_logger
 from .reports import BaseReport
 
 logger = make_default_logger()
@@ -43,9 +43,9 @@ class AppellateAttachmentPage(BaseReport):
         :param document_number: The internal PACER document ID for the item.
         :return: a request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of DocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of DocketReport cannot be None."
+        )
 
         # Generate the document URL from the document number.
         document_number = f"{document_number[:3]}0{document_number[4:]}"
@@ -59,7 +59,7 @@ class AppellateAttachmentPage(BaseReport):
         self.tree = strip_bad_html_tags_insecure(text, remove_scripts=False)
 
     @property
-    def data(self) -> Dict:
+    def data(self) -> dict:
         """Get data back from the query for the matching document entry.
 
         Appellate attachments is different than the district court.  We have

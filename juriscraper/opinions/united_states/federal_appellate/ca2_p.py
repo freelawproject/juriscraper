@@ -10,7 +10,6 @@ import time
 from datetime import date, timedelta
 
 from dateutil.rrule import DAILY, rrule
-from lxml import html
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
@@ -36,7 +35,7 @@ class Site(OpinionSite):
         return [titlecase(t) for t in self.html.xpath("//table/td[2]/text()")]
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath("//table/td/b/a/@href")]
+        return list(self.html.xpath("//table/td/b/a/@href"))
 
     def _get_case_dates(self):
         dates = []

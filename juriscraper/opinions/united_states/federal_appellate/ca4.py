@@ -1,7 +1,6 @@
-import json
 import re
 from datetime import date, timedelta
-from typing import Any, Dict
+from typing import Any
 
 from dateutil.rrule import DAILY, rrule
 
@@ -75,7 +74,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return precedential status
 
         :param scraped_text: Text of scraped content
@@ -102,7 +101,7 @@ class Site(OpinionSiteLinear):
         """
         start = (dt - timedelta(days=7)).strftime("%Y-%m-%d")
         end = dt.strftime("%Y-%m-%d")
-        self.request["parameters"]["json"][
-            "query"
-        ] = f"publishdate:range({start},{end})"
+        self.request["parameters"]["json"]["query"] = (
+            f"publishdate:range({start},{end})"
+        )
         self.html = self._download()

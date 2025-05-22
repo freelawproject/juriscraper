@@ -10,14 +10,15 @@ In the cases, we look up search results by name, date, etc.
 import pprint
 import sys
 
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import (
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
     force_unicode,
     harmonize,
 )
-from ..lib.utils import clean_court_object
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import get_pacer_case_id_from_nonce_url
@@ -110,8 +111,7 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         # none would deny this is a hackish way to normalize the results.
 
         table_rows = self.tree.xpath(
-            '//table//tr[@class="rowBackground1" or '
-            '@class="rowbackground2"]'
+            '//table//tr[@class="rowBackground1" or @class="rowbackground2"]'
         )
         data = []
 
@@ -198,9 +198,9 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         :return None: Instead, sets self.response attribute and runs
         self.parse()
         """
-        assert (
-            self.session is not None
-        ), "session attribute of DocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of DocketReport cannot be None."
+        )
         assert all([filed_from, filed_to]) or not any(
             [filed_from, filed_to]
         ), "Both or neither of filing date fields must be complete."
@@ -218,9 +218,9 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         if filed_from:
             assert (filed_to - filed_from).days + 1 < max_days, max_days_msg
         if last_entry_from:
-            assert (
-                last_entry_to - last_entry_from
-            ).days + 1 < max_days, max_days_msg
+            assert (last_entry_to - last_entry_from).days + 1 < max_days, (
+                max_days_msg
+            )
 
         params = {}
         if filed_from:

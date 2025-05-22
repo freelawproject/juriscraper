@@ -1,9 +1,6 @@
-from juriscraper.opinions.united_states.federal_appellate import scotus_slip
-
 """
 Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
-
 
 from datetime import date
 
@@ -66,7 +63,9 @@ class Site(OpinionSite):
         else:
             return today.strftime("%y")
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
         if not self.test_mode_enabled():
             self.set_url()
         html = super()._download(request_dict)
@@ -102,10 +101,9 @@ class Site(OpinionSite):
                     self.cases.append(revision)
 
     def extract_case_data_from_row(self, row):
-        cell_index = 0
         case = {"revisions": []}
         # Process each cell in row
-        for cell in row.xpath("./td"):
+        for cell_index, cell in enumerate(row.xpath("./td")):
             text = cell.text_content().strip()
             # Skip rows with blank first cell
             if cell_index == 0 and not text:
@@ -131,7 +129,6 @@ class Site(OpinionSite):
                 href = cell.xpath("./a/@href")
                 if href:
                     case[f"{label}_Url"] = href[0]
-            cell_index += 1
         return case
 
     def _get_case_names(self):

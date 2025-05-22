@@ -21,7 +21,9 @@ class Site(OpinionSite):
         self.case_xpath = "//p[@class='article-listing']/a/@href"
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
         if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
             html_trees = [
@@ -62,8 +64,7 @@ class Site(OpinionSite):
             html_tree = html.fromstring(text)
             html_tree.make_links_absolute(self.url)
 
-            remove_anchors = lambda url: url.split("#")[0]
-            html_tree.rewrite_links(remove_anchors)
+            html_tree.rewrite_links(lambda url: url.split("#")[0])
             html_trees.append(html_tree)
         return html_trees
 

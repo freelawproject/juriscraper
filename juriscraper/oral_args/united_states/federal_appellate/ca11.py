@@ -16,7 +16,7 @@ class Site(OralArgumentSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
-        self.back_scrape_iterable = [i for i in range(0, 52)]
+        self.back_scrape_iterable = list(range(0, 52))
 
     def _process_html(self):
         for row in self.html.xpath("//tr[not(th)]"):

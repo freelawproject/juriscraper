@@ -84,6 +84,6 @@ class PacerSessionTest(unittest.TestCase):
     def test_scraper_has_session_attribute(self):
         report = CaseQuery("cand", PacerSession())
         try:
-            report.session
+            report.session  # noqa: B018
         except AttributeError:
             self.fail("Did not have session attribute on CaseQuery object.")
