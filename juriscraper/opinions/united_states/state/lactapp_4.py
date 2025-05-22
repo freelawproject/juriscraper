@@ -100,7 +100,6 @@ class Site(OpinionSiteLinear):
 
     def _download_backwards(self, target_date: date) -> None:
         self.target_date = target_date
-        self.current_month = target_date.strftime("%B")
         self.html = self._download()
         self._process_html()
 
