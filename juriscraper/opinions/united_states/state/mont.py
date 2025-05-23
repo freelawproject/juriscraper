@@ -1,8 +1,9 @@
 # Author: Michael Lissner
 # Date created: 2013-06-03
-# Date updated: 2020-02-25
+# Date updated: 2025-05-23
 
 import re
+from datetime import date, datetime
 from typing import Union
 
 from juriscraper.AbstractSite import logger
@@ -15,12 +16,15 @@ class Site(OpinionSiteLinear):
     base_url = "https://juddocumentservice.mt.gov"
     download_base = f"{base_url}/getDocByCTrackId?DocId="
     cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
+    days_interval = 1
+    first_opinion_date = datetime(2020, 12, 29)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/getDailyOrders"
         self.expected_content_types = None
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
         for row in self.html:
@@ -112,3 +116,8 @@ class Site(OpinionSiteLinear):
             raise InvalidDocumentError(content)
 
         return content
+
+    def _download_backwards(self, target_date: date) -> None:
+        self.target_date = target_date
+        self.html = self._download()
+        self._process_html()
