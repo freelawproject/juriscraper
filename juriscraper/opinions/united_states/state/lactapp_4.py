@@ -132,14 +132,15 @@ class Site(OpinionSiteLinear):
         metadata = {}
 
         # Look for court composition info
-        court_panel_match = re.search(r"\(Court composed of (.*?)\)",
-                                      scraped_text, re.DOTALL)
+        court_panel_match = re.search(
+            r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL
+        )
         if court_panel_match:
             judges = court_panel_match.group(1)
             # Clean up and normalize judge names
-            judges = re.sub(r'Judge\s+', '', judges)
-            judges = re.sub(r'\s+', ' ', judges)
-            judges = judges.replace(',', ';').strip()
+            judges = re.sub(r"Judge\s+", "", judges)
+            judges = re.sub(r"\s+", " ", judges)
+            judges = judges.replace(",", ";").strip()
             if judges:
                 metadata["OpinionCluster"] = {"judges": judges}
 
