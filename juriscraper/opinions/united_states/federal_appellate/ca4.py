@@ -59,7 +59,7 @@ class Site(OpinionSiteLinear):
             if (
                 "OPINION" not in line2
                 or "day, " not in line2
-                or "OPINION ATTACHMENTS" in line2
+                or "OPINION ATTACHMENT" in line2
             ):
                 logger.debug("Skipping %s", line2)
                 continue
