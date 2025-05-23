@@ -1,4 +1,4 @@
-import json
+import re
 from datetime import date, datetime
 
 from dateutil.relativedelta import relativedelta
@@ -23,6 +23,8 @@ class Site(OpinionSiteLinear):
         )
         self.end = date.today().strftime("%Y-%m-%d")
         self.date_range = f"{self.start},{self.end}"
+        self.parameters = {}
+        self.update_parameters()
         self.make_backscrape_iterable(kwargs)
 
     def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
@@ -53,26 +55,79 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         for row in self.html["resultSet"]:
-            case_metadata = row.get("line2")
+            line2 = row.get("line2")
             if (
-                "OPINION" not in case_metadata
-                or "day, " not in case_metadata
-                or "OPINION ATTACHMENTS" in case_metadata
+                "OPINION" not in line2
+                or "day, " not in line2
+                or "OPINION ATTACHMENTS" in line2
             ):
-                logger.debug("Skipping %s", case_metadata)
+                logger.debug("Skipping %s", line2)
                 continue
 
-            is_published = " PUBLISHED" in case_metadata
-            self.cases.append(
-                {
-                    "docket": row["line1"].split()[0],
-                    "name": row.get("fieldMap").get("title"),
-                    "url": row.get("fieldMap").get("url"),
-                    "date": row["line2"].split("day, ")[1].strip("."),
-                    "status": "Published" if is_published else "Unpublished",
-                    "per_curiam": "PER CURIAM" in case_metadata,
-                }
-            )
+            teaser = row.get("fieldMap").get("teaser")
+            metadata = self.extract_metadata(teaser)
+            is_published = " PUBLISHED" in line2
+            case = {
+                "docket": row["line1"].split()[0],
+                "name": row.get("fieldMap").get("title"),
+                "url": row.get("fieldMap").get("url"),
+                "date": row["line2"].split("day, ")[1].strip("."),
+                "status": "Published" if is_published else "Unpublished",
+                "per_curiam": "PER CURIAM" in line2,
+            }
+            case.update(metadata)
+            self.cases.append(case)
+
+    def extract_metadata(self, teaser: str) -> dict[str, str]:
+        """Extract out various metadata fields
+
+        Method leaves in a few regex patterns that we do not currently support
+        but could be added to our ingestion pipeline.
+
+        :param teaser: The teaser line provided in some opinions
+        :return: Extracted data
+        """
+        if not teaser:
+            return {"lower_court": "", "lower_court_number": ""}
+        patterns = {
+            "lower_court": re.compile(
+                r"""
+                (?:
+                   Appeal(?:s)?\s+from\s+the\s+
+                 | On\s+Petition\s+for\s+Review\s+of\s+an\s+Order\s+of\s+the\s+
+                )
+                (?P<lower_court>[^.,]+?)
+                (?=[\.,])
+                """,
+                re.X,
+            ),
+            "lower_court_number": re.compile(
+                r"""
+                \(\s*
+                (?P<lower_court_number>\d+:\d{2}-[a-z]{2}-\d+(?:-[\w-]+)*)
+                \s*\)
+                """,
+                re.IGNORECASE | re.VERBOSE,
+            ),
+            # "date_argued": re.compile(
+            #     r"Argued:\s*(?P<date_argued>[A-Z][a-z]+ \d{1,2}, \d{4})"),
+            # "date_decided": re.compile(
+            #     r"Decided:\s*(?P<date_decided>[A-Z][a-z]+ \d{1,2}, \d{4})"),
+            # "amended_date": re.compile(
+            #     r"Amended:\s*(?P<amended_date>[A-Z][a-z]+ \d{1,2}, \d{4})"),
+            # "panel_str": re.compile(r"Before\s+(?P<panel_str>[^.]+)"),
+        }
+        metadata: dict[str, str] = {}
+        for name, pat in patterns.items():
+            m = pat.search(teaser)
+            match = m.group(name) if m else ""
+            if (
+                match.strip()
+                == "United States District Court for the Southern District of West"
+            ):
+                match = "United States District Court for the Southern District of West Virginia"
+            metadata[name] = match
+        return metadata
 
     def update_parameters(self):
         """Update the date range parameter"""
@@ -92,16 +147,6 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         self.date_range = date_range
-
-    def _download(self, request_dict=None):
-        """Download JSON object
-
-        :param request_dict: None
-        :return: the json if any
-        """
-        if self.test_mode_enabled():
-            with open(self.url) as f:
-                return json.load(f)
         self.update_parameters()
-        json_param = self.request["parameters"]["json"]
-        return self.request["session"].post(self.url, json=json_param).json()
+        self.html = self._download()
+        self._process_html()
