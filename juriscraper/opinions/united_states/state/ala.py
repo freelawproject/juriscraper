@@ -25,50 +25,50 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.json = self.html
 
-        for item in self.json["_embedded"]["results"][:1]:
-            date_filed = item["scheduledDate"][:10]
-            for publicationItem in item["publicationItems"]:
-                if not publicationItem.get("documents", []):
-                    continue
+        # Only the first result is processed because the API returns a list where only the first item contains the relevant publication data.
+        item = self.json["_embedded"]["results"][0]
 
-                url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
-                docket = publicationItem["caseNumber"]
-                name = publicationItem["title"]
+        date_filed = item["scheduledDate"][:10]
+        for publicationItem in item["publicationItems"]:
+            if not publicationItem.get("documents", []):
+                continue
 
-                lower_court = ""
-                lower_court_number = ""
-                # Regex to match: (Appeal from <court>: <number>) or (Appeal from <court>: <number> and <number>)
-                match = re.search(
-                    r"\(Appeal from (?P<lower_court>.+?): (?P<lower_court_number>.+?)\)",
-                    name,
-                )
-                if match:
-                    lower_court = match.group("lower_court").strip()
-                    lower_court_number = match.group(
-                        "lower_court_number"
-                    ).strip()
-                    # Remove the parenthetical from the name
-                    name = name[: match.start()].rstrip()
+            url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
+            docket = publicationItem["caseNumber"]
+            name = publicationItem["title"]
 
-                judge = publicationItem["groupName"]
-                if judge == "On Rehearing":
-                    judge = ""
+            lower_court = ""
+            lower_court_number = ""
+            # Regex to match: (Appeal from <court>: <number>) or (Appeal from <court>: <number> and <number>)
+            match = re.search(
+                r"\(Appeal from (?P<lower_court>.+?): (?P<lower_court_number>.+?)\)",
+                name,
+            )
+            if match:
+                lower_court = match.group("lower_court").strip()
+                lower_court_number = match.group("lower_court_number").strip()
+                # Remove the parenthetical from the name
+                name = name[: match.start()].rstrip()
 
-                per_curiam = False
-                if "curiam" in judge.lower():
-                    judge = ""
-                    per_curiam = True
+            judge = publicationItem["groupName"]
+            if judge == "On Rehearing":
+                judge = ""
 
-                self.cases.append(
-                    {
-                        "date": date_filed,
-                        "name": name,
-                        "docket": docket,
-                        "status": "Published",
-                        "url": url,
-                        "judge": judge,
-                        "per_curiam": per_curiam,
-                        "lower_court": lower_court,
-                        "lower_court_number": lower_court_number,
-                    }
-                )
+            per_curiam = False
+            if "curiam" in judge.lower():
+                judge = ""
+                per_curiam = True
+
+            self.cases.append(
+                {
+                    "date": date_filed,
+                    "name": name,
+                    "docket": docket,
+                    "status": "Published",
+                    "url": url,
+                    "judge": judge,
+                    "per_curiam": per_curiam,
+                    "lower_court": lower_court,
+                    "lower_court_number": lower_court_number,
+                }
+            )
