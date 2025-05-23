@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+-  implement mont backscraper functionality #5143
 
 Fixes:
 -
@@ -1680,8 +1680,3 @@ Changes:
    jurisdiction (Veterans, Tax, etc.)
 - 0.1 - Supports opinions from all 13 Federal Circuit courts and the
    U.S. Supreme Court
-
-
-
-
-
