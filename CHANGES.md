@@ -21,10 +21,22 @@ Changes:
 -
 
 Fixes:
-- Fix for CA4 - minor edge case bug
-
+-
 
 ## Current
+**2.6.70 - 2025-05-23**
+
+Features:
+- Fix for CA4 - minor edge case bug
+
+Changes:
+-
+
+Fixes:
+-
+
+## Past
+
 **2.6.69 - 2025-05-21**
 
 Features:
@@ -35,10 +47,6 @@ Changes:
 
 Fixes:
 - Fixes for `prapp` with backscraper
-
-
-
-## Past
 
 **2.6.68 - 2025-05-12**
 
