@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- New scraper `lactapp_4` for Lousiana Court of Appeals, Second Circuit
 
 Fixes:
 -
@@ -1680,8 +1680,3 @@ Changes:
    jurisdiction (Veterans, Tax, etc.)
 - 0.1 - Supports opinions from all 13 Federal Circuit courts and the
    U.S. Supreme Court
-
-
-
-
-
