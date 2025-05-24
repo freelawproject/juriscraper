@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.json = self.html
 
-        # Only the first result is processed because the API returns a list where only the first item contains the relevant publication data.
+        # Processes only the first result to scrape the most recent data.
         item = self.json["_embedded"]["results"][0]
 
         date_filed = item["scheduledDate"][:10]
