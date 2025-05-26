@@ -9,6 +9,8 @@ History:
  - 2023-011-14: Alabama no longer uses page or use selenium.
 """
 
+import re
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -23,32 +25,50 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.json = self.html
 
-        for item in self.json["_embedded"]["results"][:1]:
-            date_filed = item["scheduledDate"][:10]
-            for publicationItem in item["publicationItems"]:
-                if not publicationItem.get("documents", []):
-                    continue
+        # Processes only the first result to scrape the most recent data.
+        item = self.json["_embedded"]["results"][0]
 
-                url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
-                docket = publicationItem["caseNumber"]
-                name = publicationItem["title"]
-                judge = publicationItem["groupName"]
-                if judge == "On Rehearing":
-                    judge = ""
+        date_filed = item["scheduledDate"][:10]
+        for publicationItem in item["publicationItems"]:
+            if not publicationItem.get("documents", []):
+                continue
 
-                per_curiam = False
-                if "curiam" in judge.lower():
-                    judge = ""
-                    per_curiam = True
+            url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/case/{publicationItem['caseInstanceUUID']}/docketentrydocuments/{publicationItem['documents'][0]['documentLinkUUID']}"
+            docket = publicationItem["caseNumber"]
+            name = publicationItem["title"]
 
-                self.cases.append(
-                    {
-                        "date": date_filed,
-                        "name": name,
-                        "docket": docket,
-                        "status": "Published",
-                        "url": url,
-                        "judge": judge,
-                        "per_curiam": per_curiam,
-                    }
-                )
+            lower_court = ""
+            lower_court_number = ""
+            # Regex to match: (Appeal from <court>: <number>) or (Appeal from <court>: <number> and <number>)
+            match = re.search(
+                r"\(Appeal from (?P<lower_court>.+?): (?P<lower_court_number>.+?)\)",
+                name,
+            )
+            if match:
+                lower_court = match.group("lower_court").strip()
+                lower_court_number = match.group("lower_court_number").strip()
+                # Remove the parenthetical from the name
+                name = name[: match.start()].rstrip()
+
+            judge = publicationItem["groupName"]
+            if judge == "On Rehearing":
+                judge = ""
+
+            per_curiam = False
+            if "curiam" in judge.lower():
+                judge = ""
+                per_curiam = True
+
+            self.cases.append(
+                {
+                    "date": date_filed,
+                    "name": name,
+                    "docket": docket,
+                    "status": "Published",
+                    "url": url,
+                    "judge": judge,
+                    "per_curiam": per_curiam,
+                    "lower_court": lower_court,
+                    "lower_court_number": lower_court_number,
+                }
+            )
