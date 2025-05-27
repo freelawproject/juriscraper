@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- IImprove test speed by reducing the size of the uscfc_vaccine example array
 
 ## Current
 **2.6.70 - 2025-05-23**
