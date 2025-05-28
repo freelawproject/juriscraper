@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix tenn scraper parsing error #1413
 
 ## Current
 **2.6.70 - 2025-05-23**
