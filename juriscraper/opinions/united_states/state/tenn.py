@@ -40,7 +40,9 @@ class Site(OpinionSiteLinear):
                 for row in section.text_content().strip().split("\n", 4)
             ]
 
-            judge = rows[2].split(": ")[1]
+            judge = (
+                rows[2].split(": ")[1] if "judge" in rows[2].lower() else ""
+            )
             per_curiam = False
             if "curiam" in judge.lower():
                 judge = ""
