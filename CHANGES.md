@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- New scraper `lactapp_4` for Lousiana Court of Appeals, Second Circuit
 
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
