@@ -185,14 +185,13 @@ Instead of installing Juriscraper via pip, do the following:
 ::
 
     git clone https://github.com/freelawproject/juriscraper.git .
-    pip install -r requirements.txt
-    python setup.py test
+    pip install tox
 
-    # run tests against multiple python versions via tox
+    # run tests against a single Python version
+    tox -e py312
+
+    # run tests against all Python versions
     tox
-
-    # run network tests (on demand, not run via default command above)
-    python setup.py testnetwork
 
 You may need to also install Juriscraper locally with:
 
@@ -332,34 +331,11 @@ Future Goals
 
 Deployment
 ==========
-Deployment to PyPi should happen automatically when a tagged version is pushed
+Deployment to PyPI should happen automatically when a tagged version is pushed
 to master in the format v*.*.*. If you do not have push permission on master,
-this will also work for merged, tagged pull requests. Simply update setup.py,
-tag your commit with the correct tag (v.*.*.*), and do a PR with that.
-
-If you wish to create a new version manually, the process is:
-
-1. Update CHANGES.md
-
-1. Update version info in ``setup.py``
-
-1. Install the requirements in requirements_dev.txt
-
-1. Set up a config file at ~/.pypirc
-
-1. Generate a distribution
-
-    ::
-
-        python setup.py bdist_wheel
-
-1. Upload the distribution
-
-    ::
-
-        twine upload dist/* -r pypi (or pypitest)
-
-
+this will also work for merged, tagged pull requests. Update the version number
+in ``pyproject.toml``, tag your commit with the correct tag (v.*.*.*), and do a
+PR with that.
 
 License
 =======
