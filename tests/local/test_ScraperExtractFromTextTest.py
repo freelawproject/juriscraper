@@ -856,6 +856,51 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Citation": "474 P3d 465"},
             ),
         ],
+        "juriscraper.opinions.united_states.state.tenn": [
+            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
+            (
+                """"  IN THE SUPREME COURT OF TENNESSEE\n                      AT KNOXVILLE\n                  September 5, 2024 Session\nPAYTON CASTILLO v. DAVID LLOYD REX, M.D. ET AL.\n      Appeal by Permission from the Court of Appeals\n             Circuit Court for Hamilton County\n    No. 20C1270       Ward Jeffrey Holl""",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Court of Appeals Circuit Court for Hamilton County"
+                    },
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
+            ),
+            (
+                """ 03/11/2025\n                   IN THE COURT OF APPEALS OF TENNESSEE\n                                AT JACKSON\n\n              MANOUCHEKA THERMITUS v. SCHILLER JEROME\n\n                     Appeal from the Chancery Court for Shelby County\n                      No. CH-22-0257 JoeDae L. Jenkins, Chancellor\n                          ___________________________________\n\n                                No. W2024-01508-COA-R3-CV\n                            ___________________________________\n\n\nAppellant, Schiller Jerome, has appealed an order of the Shelby County Chancery Court\nthat was entered on September 3, 2024. We determine that the trial court’s order does not\nconstitute a final appealable judgment. As a result, this Court lacks jurisdiction to consider\nthis appeal. The appeal is, therefore, dismissed.\n\n                  Tenn. R. App. P. 3 Appeal as of Right; Appeal Dismissed.\n\nJ. STEVEN STAFFORD, P.J., W.S.; KENNY ARMSTRONG, J.; CARMA DENNIS MCGEE, J.\n\nLinda Kendall Garner, Memphis, Tennessee, for the appellant, Schiller Jerome.\n\nZachary Michael Moore, Memphis, Tennessee, for the appellee, Manoucheka Thermitus.\n\n\n                                   MEMORANDUM OPINION1\n""",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Chancery Court for Shelby County"
+                    },
+                    "OpinionCluster": {"precedential_status": "Unpublished"},
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.tenncrimapp": [
+            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
+            (
+                """05/28/2025\nIN THE COURT OF CRIMINAL APPEALS OF TENNESSEE\nAT KNOXVILLE\nAssigned on Briefs May 20, 2025\nSTATE OF TENNESSEE v. TRA’SHAWN GLASS\nAppeal from the Criminal Court for Knox County\nNo. 125669 Steven Wayne Sword, Judge\n___________________________________\n""",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Criminal Court for Knox County"
+                    },
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.tennctapp": [
+            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
+            (
+                """05/28/2025\nIN THE COURT OF APPEALS OF TENNESSEE\nAT NASHVILLE\nApril 2, 2024 Session\nHEATHER MARIE BAILEY v. DANIEL MICHAEL BAILEY\nAppeal from the General Sessions Court for Warren County\nNo. 21-DV-9505 L. Craig Johnson, Judge1""",
+                {
+                    "Docket": {
+                        "appeal_from_str": "General Sessions Court for Warren County"
+                    },
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
