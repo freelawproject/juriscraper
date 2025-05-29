@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Added support for Python 3.13
 
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
