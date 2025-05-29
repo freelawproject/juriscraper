@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
+- Fix `asbca` scraper to use special headers #1411
 
 ## Current
 **2.6.70 - 2025-05-23**
