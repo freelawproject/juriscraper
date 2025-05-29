@@ -36,6 +36,7 @@ class Site(OpinionSiteLinear):
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
         }
+        self.expected_content_types = ["text/html", "application/pdf"]
 
     def _process_html(self):
         # Exclude headers and rows that only have the month name
