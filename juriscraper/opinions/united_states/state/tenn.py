@@ -48,7 +48,7 @@ class Site(OpinionSiteLinear):
             elif "dissenting" in type_raw:
                 type = "040dissent"
             else:
-                type = type_raw
+                type = "020lead"
 
             name = re.sub(r"\s*\([^)]+\)", "", name_text).strip()
             rows = [
