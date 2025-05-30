@@ -97,7 +97,9 @@ class Site(OpinionSiteLinear):
             result["Docket"] = {"appeal_from_str": lower_court}
         return result
 
-    def extract_court_name(self, text: str) -> str | None:
+    from typing import Optional
+
+    def extract_court_name(self, text: str) -> Optional[str]:
         patterns = [
             (
                 r"Appeal by Permission from the\s+(Court of (?:Appeals|Criminal Appeals))(?:\s*\n?\s*)+((?:Chancery|Circuit|Criminal) Court for \w+(?:\s+\w+)* County)",
