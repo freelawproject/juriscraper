@@ -140,8 +140,8 @@ For scrapers to be merged:
 - This project is configured to use git pre-commit hooks managed by the
   Python program `pre-commit <https://pre-commit.com/>`__. Pre-
   commit checks let us easily ensure that the code is properly formatted with
-  black before it can even be commited. If you install the dev dependencies in
-  `requirements-dev.txt`, you should then be able to run `$ pre-commit install`
+  black before it can even be commited. To install it run:
+    uv tool install pre-commit --with pre-commit-uv
   which will set up a git pre-commit hook for you. This install step is only
   necessary once in your repository. When using this hook, any code
   files that do not comply to black will automatically be unstaged and re-
@@ -357,11 +357,11 @@ feel free to commit, but **please remember** to include the new ``*_example*``
 
 Individual tests can be run with:
 
-   python -m unittest -v tests.local.test_DateTest.DateTest.test_various_date_extractions
+   tox -e py -- tests/local/test_DateTest.py::DateTest::test_date_range_creation
 
 Or, to run and drop to the Python debugger if it fails, but you must install `nost` to have `nosetests`:
 
-  nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_various_date_extractions
+  uv run nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_date_range_creation
 
 
 Future Goals
