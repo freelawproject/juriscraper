@@ -175,36 +175,80 @@ protection of Free Law Project and our users; it does not change your
 rights to use your own Contributions for any other purpose.
 
 
-Getting Set Up as a Developer
-=============================
+Development
+===========
 
-To get set up as a developer of Juriscraper, you'll want to install the code
-from git. To do that, install the dependencies and geckodriver as described above.
-Instead of installing Juriscraper via pip, do the following:
+To work on Juriscraper, clone its repository:
 
 ::
 
-    git clone https://github.com/freelawproject/juriscraper.git .
-    pip install tox
+    git clone https://github.com/freelawproject/juriscraper.git
 
-    # run tests against a single Python version
-    tox -e py312
+Then, you can run its tests with `tox <https://tox.readthedocs.io/en/latest/>`__.
+Install tox with `uv <https://docs.astral.sh/uv/>`__ as a `tool <https://docs.astral.sh/uv/concepts/tools/>`__, adding the `tox-uv extension <https://github.com/tox-dev/tox-uv>`__:
 
-    # run tests against all Python versions
+::
+
+    uv tool install tox --with tox-uv
+
+To run juriscraper’s tests for all Python versions, run:
+
+::
+
     tox
 
-You may need to also install Juriscraper locally with:
+To run tests for a single Python version, pass the environment name, such as for Python 3.13:
 
 ::
 
-   pip install .
+    tox -e py313
 
-If you've not installed juriscraper, you can run `sample_caller.py` as:
+To pass extra arguments to pytest, add them after a ``--`` separator, like:
 
 ::
 
-   PYTHONPATH=`pwd` python  sample_caller.py
+    tox -e py313 -- --pdb
 
+Network tests
+-------------
+
+The tests in ``tests/network`` interact with PACER.
+By default, they are skipped, as they require working credentials.
+To run them, set the environment variables ``PACER_USERNAME`` and ``PACER_PASSWORD`` to your PACER credentials, for example:
+
+::
+
+    export PACER_USERNAME=the-coolest-lawyer
+    export PACER_PASSWORD=hunter2
+
+Then, run the tests as usual:
+
+::
+
+    tox -e py313
+
+Or, to run only the network tests:
+
+::
+
+    tox -e py313 -- tests/network
+
+``sample_caller.py``
+--------------------
+
+This script demonstrates how to use Juriscraper.
+Run it with:
+
+::
+
+    uv run sample_caller.py
+
+It requires options to select which courts to scrape, per its help output.
+For example, to test ca1, run:
+
+::
+
+    uv run sample_caller.py -c juriscraper.opinions.united_states.federal_appellate.ca1
 
 Usage
 =====
