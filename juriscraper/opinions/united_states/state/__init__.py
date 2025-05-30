@@ -164,7 +164,7 @@ __all__ = [
     "tenn",
     "tennctapp",
     "tenncrimapp",
-    "tex",
+    "texapp.py",
     "texag",
     "texapp_1",
     "texapp_2",

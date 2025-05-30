@@ -6,10 +6,10 @@
 # Date: 2015-09-02
 
 
-from juriscraper.opinions.united_states.state import tex
+from juriscraper.opinions.united_states.state import texapp
 
 
-class Site(tex.Site):
+class Site(texapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
