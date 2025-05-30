@@ -29,22 +29,44 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.start = None
+        self.end = None
+        self.opinion_page = False
+        self.hrefs = []
         self.court_id = self.__module__
         self.first_opinion_date = datetime(2025, 1, 1)
         self.year = date.today().year
         self.url = (
             f"https://www.txcourts.gov/supreme/orders-opinions/{self.year}/"
         )
-        self.make_backscrape_iterable(kwargs)
         self.status = "Published"
         self.needs_special_headers = True
-        self.opinion_page = False
         self.publication_date = ""
+        self.days_interval = 1
+        self.building_backscrape = False
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Process HTML
         :return: None
         """
+        if self.building_backscrape:
+            links = self.html.xpath('//div[@class="panel-content"]//a')
+            for link in links:
+                href = link.get("href", None)
+                if href:
+                    # Extract date from the URL (e.g., .../may-23-2025/)
+                    match = re.search(r"/(\w+-\d{2}-\d{4})/?$", href)
+                    if match:
+                        date_str = match.group(1)
+                        link_date = datetime.strptime(
+                            date_str, "%B-%d-%Y"
+                        ).date()
+
+                        if self.start <= link_date <= self.end:
+                            self.hrefs.append(href)
+            return
+
         if not self.opinion_page:
             last_publication_url = self.html.xpath(
                 '//div[@class="panel-content"]//a'
@@ -53,11 +75,7 @@ class Site(OpinionSiteLinear):
                 logger.info("No publication date found in the HTML.")
                 return
             # If we are not on the opinion page, we need to go there
-            match = re.search(
-                r"/(\d{4})/([a-z]+)/([a-z]+-\d{2}-\d{4})/",
-                last_publication_url,
-            )
-            self.publication_date = match.group(3)
+            self.set_publication_date(last_publication_url)
             self.opinion_page = True
             self.url = last_publication_url
             self.html = self._download()
@@ -200,36 +218,46 @@ class Site(OpinionSiteLinear):
         end = kwargs.get("backscrape_end")
 
         if start:
-            start = datetime.strptime(start, "%Y/%m/%d").date()
+            self.start = datetime.strptime(start, "%Y/%m/%d").date()
         else:
-            start = self.first_opinion_date
+            self.start = self.first_opinion_date.date()
         if end:
-            end = datetime.strptime(end, "%Y/%m/%d").date()
+            self.end = datetime.strptime(end, "%Y/%m/%d").date()
         else:
-            end = datetime.now().date()
+            self.end = datetime.now().date()
 
-        self.back_scrape_iterable = [(start, end)]
+        years = list(range(self.start.year, self.end.year + 1))
 
-    def update_parameters(self):
-        """Update the date range parameter"""
+        self.back_scrape_iterable = years
 
-        self.year = self.start_date.year
-        self.month = self.start_date.strftime("%B").lower()
-        self.complete_date = self.start_date.strftime("%b-%d-%Y").lower()
-
-    def _download_backwards(self, dates):
+    def _download_backwards(self, year) -> None:
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple
         :return None
         """
-        self.start_date, self.end_date = dates
-        self.is_backscrape = True
-        logger.info(
-            "Backscraping for range %s %s", self.start_date, self.end_date
-        )
-        self.update_parameters()
-
-        self.url = f"https://www.txcourts.gov/supreme/orders-opinions/{self.year}/{self.month}/{self.complete_date}/"
+        self.building_backscrape = True
+        self.url = f"https://www.txcourts.gov/supreme/orders-opinions/{year}/"
         self.html = self._download()
         self._process_html()
+
+        self.building_backscrape = False
+
+        self.opinion_page = True
+        for href in self.hrefs:
+            self.url = href
+            self.set_publication_date(href)
+            self.html = self._download()
+            self._process_html()
+
+    def set_publication_date(self, url):
+        """Set the publication date based on the URL
+
+        :param url: URL of the opinion
+        :return: None
+        """
+        match = re.search(r"/(\w+-\d{2}-\d{4})/?$", url)
+        if match:
+            self.publication_date = match.group(1)
+        else:
+            logger.warning("Publication date not found in URL: %s", url)
