@@ -25,13 +25,6 @@ class Site(OpinionSiteLinear):
                 .text_content()
                 .strip()
             )
-            # lower_court = (
-            #     row.xpath(
-            #         ".//td[contains(@class, 'views-field-field-opinions-county')]"
-            #     )[0]
-            #     .text_content()
-            #     .strip()
-            # )
             section = row.xpath(
                 ".//td[contains(@class, 'views-field-field-opinions-case-number')]"
             )[0]
@@ -68,7 +61,6 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "date": date,
-                    # "lower_court": lower_court,
                     "url": url,
                     "name": name,
                     "docket": rows[1],
