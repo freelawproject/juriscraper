@@ -53,6 +53,9 @@ class Site(OpinionSiteLinear):
             judge = (
                 rows[2].split(": ")[1] if "judge" in rows[2].lower() else ""
             )
+            lower_court_judge = (
+                rows[3].split(": ")[1] if "judge" in rows[3].lower() else ""
+            )
             summary = rows[-1] if "Judge" not in rows[-1] else ""
             per_curiam = False
             if "curiam" in judge.lower():
@@ -66,6 +69,7 @@ class Site(OpinionSiteLinear):
                     "name": name,
                     "docket": rows[1],
                     "judge": judge,
+                    "lower_court_judge": lower_court_judge,
                     "summary": summary,
                     "per_curiam": per_curiam,
                     "type": type,
