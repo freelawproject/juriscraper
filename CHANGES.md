@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
 - Fix `asbca` scraper to use special headers #1411
+-  Fix `tex` scraper to use special headers #1410
 
 - Fix `uscgcoca` by using `self.needs_special_headers` #1419
 
