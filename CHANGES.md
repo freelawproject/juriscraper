@@ -18,15 +18,23 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.71 - 2025-05-30**
+
+Changes:
 - Added support for Python 3.13
 
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
 - Fix `asbca` scraper to use special headers #1411
-
 - Fix `uscgcoca` by using `self.needs_special_headers` #1419
 
-## Current
 **2.6.70 - 2025-05-23**
 
 Features:
