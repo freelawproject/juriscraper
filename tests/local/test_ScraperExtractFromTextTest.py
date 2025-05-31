@@ -857,7 +857,6 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.tenn": [
-            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
             (
                 """"  IN THE SUPREME COURT OF TENNESSEE\n                      AT KNOXVILLE\n                  September 5, 2024 Session\nPAYTON CASTILLO v. DAVID LLOYD REX, M.D. ET AL.\n      Appeal by Permission from the Court of Appeals\n             Circuit Court for Hamilton County\n    No. 20C1270       Ward Jeffrey Holl""",
                 {
@@ -878,7 +877,6 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.tenncrimapp": [
-            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
             (
                 """05/28/2025\nIN THE COURT OF CRIMINAL APPEALS OF TENNESSEE\nAT KNOXVILLE\nAssigned on Briefs May 20, 2025\nSTATE OF TENNESSEE v. TRA’SHAWN GLASS\nAppeal from the Criminal Court for Knox County\nNo. 125669 Steven Wayne Sword, Judge\n___________________________________\n""",
                 {
@@ -890,7 +888,6 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.tennctapp": [
-            # https://www.courtlistener.com/opinion/10161013/state-v-oxford/pdf/
             (
                 """05/28/2025\nIN THE COURT OF APPEALS OF TENNESSEE\nAT NASHVILLE\nApril 2, 2024 Session\nHEATHER MARIE BAILEY v. DANIEL MICHAEL BAILEY\nAppeal from the General Sessions Court for Warren County\nNo. 21-DV-9505 L. Craig Johnson, Judge1""",
                 {
