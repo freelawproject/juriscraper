@@ -18,11 +18,13 @@ Features:
 -
 
 Changes:
--
+- Added support for Python 3.13
 
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
 - Fix `asbca` scraper to use special headers #1411
+
+- Fix `uscgcoca` by using `self.needs_special_headers` #1419
 
 ## Current
 **2.6.70 - 2025-05-23**
@@ -30,21 +32,12 @@ Fixes:
 Features:
 - Fix for CA4 - minor edge case bug
 
-Changes:
--
-
-Fixes:
--
-
 ## Past
 
 **2.6.69 - 2025-05-21**
 
 Features:
 - New scraper `ncbizct` for North Carolina Business Court
-
-Changes:
--
 
 Fixes:
 - Fixes for `prapp` with backscraper

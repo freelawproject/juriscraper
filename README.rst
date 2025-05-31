@@ -140,8 +140,8 @@ For scrapers to be merged:
 - This project is configured to use git pre-commit hooks managed by the
   Python program `pre-commit <https://pre-commit.com/>`__. Pre-
   commit checks let us easily ensure that the code is properly formatted with
-  black before it can even be commited. If you install the dev dependencies in
-  `requirements-dev.txt`, you should then be able to run `$ pre-commit install`
+  black before it can even be commited. To install it run:
+    uv tool install pre-commit --with pre-commit-uv
   which will set up a git pre-commit hook for you. This install step is only
   necessary once in your repository. When using this hook, any code
   files that do not comply to black will automatically be unstaged and re-
@@ -175,37 +175,80 @@ protection of Free Law Project and our users; it does not change your
 rights to use your own Contributions for any other purpose.
 
 
-Getting Set Up as a Developer
-=============================
+Development
+===========
 
-To get set up as a developer of Juriscraper, you'll want to install the code
-from git. To do that, install the dependencies and geckodriver as described above.
-Instead of installing Juriscraper via pip, do the following:
+To work on Juriscraper, clone its repository:
 
 ::
 
-    git clone https://github.com/freelawproject/juriscraper.git .
-    pip install -r requirements.txt
-    python setup.py test
+    git clone https://github.com/freelawproject/juriscraper.git
 
-    # run tests against multiple python versions via tox
+Then, you can run its tests with `tox <https://tox.readthedocs.io/en/latest/>`__.
+Install tox with `uv <https://docs.astral.sh/uv/>`__ as a `tool <https://docs.astral.sh/uv/concepts/tools/>`__, adding the `tox-uv extension <https://github.com/tox-dev/tox-uv>`__:
+
+::
+
+    uv tool install tox --with tox-uv
+
+To run juriscraper’s tests for all Python versions, run:
+
+::
+
     tox
 
-    # run network tests (on demand, not run via default command above)
-    python setup.py testnetwork
-
-You may need to also install Juriscraper locally with:
+To run tests for a single Python version, pass the environment name, such as for Python 3.13:
 
 ::
 
-   pip install .
+    tox -e py313
 
-If you've not installed juriscraper, you can run `sample_caller.py` as:
+To pass extra arguments to pytest, add them after a ``--`` separator, like:
 
 ::
 
-   PYTHONPATH=`pwd` python  sample_caller.py
+    tox -e py313 -- --pdb
 
+Network tests
+-------------
+
+The tests in ``tests/network`` interact with PACER.
+By default, they are skipped, as they require working credentials.
+To run them, set the environment variables ``PACER_USERNAME`` and ``PACER_PASSWORD`` to your PACER credentials, for example:
+
+::
+
+    export PACER_USERNAME=the-coolest-lawyer
+    export PACER_PASSWORD=hunter2
+
+Then, run the tests as usual:
+
+::
+
+    tox -e py313
+
+Or, to run only the network tests:
+
+::
+
+    tox -e py313 -- tests/network
+
+``sample_caller.py``
+--------------------
+
+This script demonstrates how to use Juriscraper.
+Run it with:
+
+::
+
+    uv run sample_caller.py
+
+It requires options to select which courts to scrape, per its help output.
+For example, to test ca1, run:
+
+::
+
+    uv run sample_caller.py -c juriscraper.opinions.united_states.federal_appellate.ca1
 
 Usage
 =====
@@ -314,11 +357,11 @@ feel free to commit, but **please remember** to include the new ``*_example*``
 
 Individual tests can be run with:
 
-   python -m unittest -v tests.local.test_DateTest.DateTest.test_various_date_extractions
+   tox -e py -- tests/local/test_DateTest.py::DateTest::test_date_range_creation
 
 Or, to run and drop to the Python debugger if it fails, but you must install `nost` to have `nosetests`:
 
-  nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_various_date_extractions
+  uv run nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_date_range_creation
 
 
 Future Goals
@@ -332,34 +375,11 @@ Future Goals
 
 Deployment
 ==========
-Deployment to PyPi should happen automatically when a tagged version is pushed
+Deployment to PyPI should happen automatically when a tagged version is pushed
 to master in the format v*.*.*. If you do not have push permission on master,
-this will also work for merged, tagged pull requests. Simply update setup.py,
-tag your commit with the correct tag (v.*.*.*), and do a PR with that.
-
-If you wish to create a new version manually, the process is:
-
-1. Update CHANGES.md
-
-1. Update version info in ``setup.py``
-
-1. Install the requirements in requirements_dev.txt
-
-1. Set up a config file at ~/.pypirc
-
-1. Generate a distribution
-
-    ::
-
-        python setup.py bdist_wheel
-
-1. Upload the distribution
-
-    ::
-
-        twine upload dist/* -r pypi (or pypitest)
-
-
+this will also work for merged, tagged pull requests. Update the version number
+in ``pyproject.toml``, tag your commit with the correct tag (v.*.*.*), and do a
+PR with that.
 
 License
 =======
