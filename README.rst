@@ -141,9 +141,9 @@ For scrapers to be merged:
   Python program `pre-commit <https://pre-commit.com/>`__. Pre-
   commit checks let us easily ensure that the code is properly formatted with
   black before it can even be commited. To install it run:
-  
+
   `uv tool install pre-commit --with pre-commit-uv`
-  
+
   which will set up a git pre-commit hook for you. This install step is only
   necessary once in your repository. When using this hook, any code
   files that do not comply to black will automatically be unstaged and re-
