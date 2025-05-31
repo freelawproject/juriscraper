@@ -5,6 +5,7 @@ Court Short Name: Tenn.
 """
 
 import re
+from typing import Optional
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -88,8 +89,6 @@ class Site(OpinionSiteLinear):
         if lower_court:
             result["Docket"] = {"appeal_from_str": lower_court}
         return result
-
-    from typing import Optional
 
     def extract_court_name(self, text: str) -> Optional[str]:
         patterns = [
