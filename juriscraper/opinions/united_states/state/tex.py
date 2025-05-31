@@ -50,6 +50,10 @@ class Site(OpinionSiteLinear):
         """Process HTML
         :return: None
         """
+        if self.test_mode_enabled():
+            self.opinion_page = True
+            self.publication_date = "may-23-2025"
+
         if self.building_backscrape:
             links = self.html.xpath('//div[@class="panel-content"]//a')
             for link in links:
