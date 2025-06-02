@@ -6,7 +6,7 @@
 #  - Blake Hawthorne <Blake.Hawthorne@txcourts.gov>
 #  - Eddie Murillo <Eddie.Murillo@txcourts.gov>
 #  - Judicial Info <JudInfo@txcourts.gov>
-# Author: Andrei Chelaru
+# judge: Andrei Chelaru
 # Reviewer: mlr
 # History:
 #  - 2014-07-10: Created by Andrei Chelaru
@@ -51,7 +51,7 @@ class Site(OpinionSiteLinear):
         if request_dict is None:
             request_dict = {}
 
-        if not self.is_backscrape:
+        if not self.is_backscrape and not self.test_mode_enabled():
             self.html = super()._download(request_dict)
             self.url = self.html.xpath(
                 '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
@@ -100,14 +100,14 @@ class Site(OpinionSiteLinear):
                 if not dispositions:
                     continue
                 judges_str = "".join(row.xpath(self.judge_xpath))
-                author = "" if per_curiam else judges_str.split("delivered")[0]
-                judge = (
+                judge = "" if per_curiam else judges_str.split("delivered")[0]
+                joined_by = (
                     judges_str.split("in which")[-1]
                     if "in which" in judges_str
                     else ""
                 )
-                judge = (
-                    judge.replace("joined.", "")
+                joined_by = (
+                    joined_by.replace("joined.", "")
                     .replace("and", ",")
                     .replace(".", "")
                     .replace(" , ", ",")
@@ -123,8 +123,8 @@ class Site(OpinionSiteLinear):
                         "date": self.current_opinion_date,
                         "type": type,
                         "per_curiam": per_curiam,
-                        "author": author,
                         "judge": judge,
+                        "joined_by": joined_by,
                     }
                 )
 
@@ -136,7 +136,7 @@ class Site(OpinionSiteLinear):
         """
         self.is_backscrape = True
         self.url = self.base_url.format(target_date)
-        self._download()
+        self.html = self._download()
         for link in self.html.xpath(
             '//*[@id="MainContent"]/div/div/div/ul/li/a'
         ):
