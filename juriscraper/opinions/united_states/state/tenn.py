@@ -7,6 +7,13 @@ Court Short Name: Tenn.
 import re
 from typing import Optional
 
+from juriscraper.lib.type_utils import (
+    CONCURRENCE,
+    CONCURRING_IN_PART_AND_DISSENTING_IN_PART,
+    DISSENT,
+    MAJORITY,
+    types_mapping,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -18,6 +25,13 @@ class Site(OpinionSiteLinear):
         self.status = "Unknown"
 
     def _process_html(self):
+        """
+        Parse the HTML table rows and extract case details.
+
+        Iterates over each table row in the HTML, extracting the date, URL, case name,
+        docket number, judge, lower court judge, summary, per curiam status, and opinion type.
+        Appends a dictionary with these details to self.cases.
+        """
         for row in self.html.xpath("//tr"):
             date = (
                 row.xpath(
@@ -35,14 +49,7 @@ class Site(OpinionSiteLinear):
             type_match = re.search(r"\(([^)]+)\)", name_text)
             type_raw = type_match.group(1).lower() if type_match else ""
 
-            if "concurring" in type_raw:
-                type = "030concurrence"
-            elif "in part" in type_raw:
-                type = "035concurrenceinpart"
-            elif "dissenting" in type_raw:
-                type = "040dissent"
-            else:
-                type = "020lead"
+            opinion_type = self.extract_type(type_raw)
 
             name = re.sub(r"\s*\([^)]+\)", "", name_text).strip()
             rows = [
@@ -72,12 +79,13 @@ class Site(OpinionSiteLinear):
                     "lower_court_judge": lower_court_judge,
                     "summary": summary,
                     "per_curiam": per_curiam,
-                    "type": type,
+                    "type": opinion_type,
                 }
             )
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.
+
         :param scraped_text: Text of the scraped content
         :return: dictionary with precedential_status and appeal_from_str
         """
@@ -122,3 +130,21 @@ class Site(OpinionSiteLinear):
             if match:
                 return handler(match)
         return None
+
+    def extract_type(self, type_raw: str) -> str:
+        """
+        Map a raw opinion type string to a standardized type.
+
+        :param type_raw: Raw type string extracted from the opinion (e.g., 'concurring', 'dissenting')
+        :return: Standardized type string from types_mapping
+        """
+        if "concurring" in type_raw:
+            type_key = CONCURRENCE
+        elif "in part" in type_raw:
+            type_key = CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+        elif "dissenting" in type_raw:
+            type_key = DISSENT
+        else:
+            type_key = MAJORITY
+
+        return types_mapping[type_key]
