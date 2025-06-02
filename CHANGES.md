@@ -26,12 +26,36 @@ Fixes:
 
 ## Current
 
+**2.6.71 - 2025-05-30**
+
+Changes:
+- Added support for Python 3.13
+
+Fixes:
+- Improve test speed by reducing the size of the uscfc_vaccine example array
+- Fix `asbca` scraper to use special headers #1411
+- Fix `uscgcoca` by using `self.needs_special_headers` #1419
+
+**2.6.70 - 2025-05-23**
+
+Features:
+- Fix for CA4 - minor edge case bug
+
+## Past
+
+**2.6.69 - 2025-05-21**
+
+Features:
+- New scraper `ncbizct` for North Carolina Business Court
+
+Fixes:
+- Fixes for `prapp` with backscraper
+
 **2.6.68 - 2025-05-12**
 
 - Add auth token to ny trial courts
+- Clean up ala scraped case names #1272
 
-
-## Past
 
 **2.6.67 - 2025-05-08**
 
@@ -1660,8 +1684,3 @@ Changes:
    jurisdiction (Veterans, Tax, etc.)
 - 0.1 - Supports opinions from all 13 Federal Circuit courts and the
    U.S. Supreme Court
-
-
-
-
-

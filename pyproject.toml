@@ -1,3 +1,67 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools",
+]
+
+[project]
+name = "juriscraper"
+version = "2.6.71"
+description = "An API to scrape American court websites for metadata."
+readme = "README.rst"
+keywords = [ "scraping", "legal", "pacer" ]
+license = " BSD-2-Clause"
+license-files = [ "LICENSE" ]
+authors = [
+  { name = "Free Law Project", email = "info@free.law" },
+]
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+urls.Repository = "https://github.com/freelawproject/juriscraper"
+
+dependencies = [
+  "certifi>=2017.4.17",
+  "chardet>=3.0.2",
+  "charset-normalizer>=3.1.0",
+  "cssselect",
+  "dateparser>=1.2.0",
+  "feedparser>=6.0.11",
+  "geonamescache>=2.0.0",
+  "html5lib",
+  "lxml>=5.2",
+  "nh3",
+  "python-dateutil>=2.8.2",
+  "requests>=2.20.0",
+  "selenium>=4.9.1",
+  "tldextract",
+]
+
+[dependency-groups]
+dev = [
+  "jsondate3-aware",
+  "jinja2",
+  "pytest",
+]
+
+[tool.setuptools]
+packages = [ "juriscraper" ]
+
 [tool.ruff]
 line-length = 79
 lint.extend-safe-fixes = [
