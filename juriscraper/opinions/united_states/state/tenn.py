@@ -15,7 +15,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
-        self.status = "Published"
+        self.status = "Unknown"
 
     def _process_html(self):
         for row in self.html.xpath("//tr"):
