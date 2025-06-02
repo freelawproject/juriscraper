@@ -50,6 +50,7 @@ class Site(OpinionSiteLinear):
     def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
+
         if not self.is_backscrape:
             self.html = super()._download(request_dict)
             self.url = self.html.xpath(
@@ -60,6 +61,8 @@ class Site(OpinionSiteLinear):
             )[-1]
             return super()._download(request_dict)
         else:
+            if self.test_mode_enabled():
+                self.current_opinion_date = "May 23, 2025"
             self.html = super()._download(request_dict)
             return self.html
 
