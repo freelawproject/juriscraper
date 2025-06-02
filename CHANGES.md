@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
+timestamped opinions and check if `Site.cleanup_content` is working #1392
 
 Changes:
 - New scraper `lactapp_4` for Lousiana Court of Appeals, Second Circuit
@@ -23,26 +24,37 @@ Changes:
 Fixes:
 -
 
-
 ## Current
+
+**2.6.71 - 2025-05-30**
+
+Changes:
+- Added support for Python 3.13
+
+Fixes:
+- Improve test speed by reducing the size of the uscfc_vaccine example array
+- Fix `asbca` scraper to use special headers #1411
+- Fix `uscgcoca` by using `self.needs_special_headers` #1419
+
+**2.6.70 - 2025-05-23**
+
+Features:
+- Fix for CA4 - minor edge case bug
+
+## Past
+
 **2.6.69 - 2025-05-21**
 
 Features:
 - New scraper `ncbizct` for North Carolina Business Court
 
-Changes:
--
-
 Fixes:
 - Fixes for `prapp` with backscraper
-
-
-
-## Past
 
 **2.6.68 - 2025-05-12**
 
 - Add auth token to ny trial courts
+- Clean up ala scraped case names #1272
 
 
 **2.6.67 - 2025-05-08**
