@@ -5,7 +5,6 @@ Court Short Name: Tenn.
 """
 
 import re
-from typing import Optional
 
 from juriscraper.lib.type_utils import (
     CONCURRENCE,
@@ -102,34 +101,63 @@ class Site(OpinionSiteLinear):
             result["Docket"] = {"appeal_from_str": lower_court}
         return result
 
-    def extract_court_name(self, text: str) -> Optional[str]:
-        patterns = [
-            (
-                r"Appeal by Permission from the\s+(Court of (?:Appeals|Criminal Appeals))(?:\s*\n?\s*)+((?:Chancery|Circuit|Criminal) Court for \w+(?:\s+\w+)* County)",
-                lambda m: f"{m.group(1)} {m.group(2)}",
-            ),
-            (
-                r"Direct Appeal from the\s+((?:Chancery|Circuit|Criminal) Court for \w+(?:\s+\w+)* County)",
-                lambda m: m.group(1),
-            ),
-            (
-                r"Appeal from the\s+((?:Chancery|Circuit|Criminal|General Sessions|Juvenile) Court for \w+(?:\s+\w+)* County|\w+(?:\s+\w+)* County (?:Chancery|Circuit|Criminal|General Sessions) Court|Juvenile)",
-                lambda m: m.group(1),
-            ),
-            (
-                r"Appeal by Permission from the\s+(Court of (?:Appeals|Criminal Appeals))(?!\s*(?:Chancery|Circuit|Criminal))",
-                lambda m: m.group(1),
-            ),
-            (
-                r"^(?!.*(?:Appeal by Permission from|Direct Appeal from|Appeal from)).*?((?:Chancery|Circuit|Criminal) Court for \w+(?:\s+\w+)* County)",
-                lambda m: m.group(1),
-            ),
+    def extract_court_name(self, text: str) -> str:
+        """
+        Extract the lower court name from the provided opinion text.
+
+        :param text: The full text of the opinion document.
+        :return: The extracted lower court name as a string, or an empty string if not found.
+        """
+        lines = [
+            line.strip() for line in text.split("\n")[:15] if line.strip()
         ]
-        for pattern, handler in patterns:
-            match = re.search(pattern, text, re.MULTILINE | re.IGNORECASE)
-            if match:
-                return handler(match)
-        return None
+
+        # Find the last line with 'v.' (case name)
+        v_line_index = -1
+        for i, line in enumerate(lines):
+            if re.search(r"\s+v\.\s+", line, re.IGNORECASE):
+                v_line_index = i
+        if v_line_index == -1:
+            return ""
+
+        start_index = v_line_index + 1
+
+        # Try to find a line with a court keyword or a likely court name
+        court_keywords = [
+            "appeal",
+            "direct appeal",
+            "circuit court",
+            "chancery court",
+            "criminal court",
+        ]
+        for i in range(start_index, len(lines)):
+            line_lower = lines[i].lower()
+            if any(keyword in line_lower for keyword in court_keywords):
+                start_index = i
+                break
+            if lines[i].isupper() and len(lines[i]) > 10:
+                continue
+            start_index = i
+            break
+
+        # Find the end index (before the docket number)
+        end_index = len(lines)
+        for i in range(start_index, len(lines)):
+            if re.search(r"\bNo\.\s*[A-Za-z0-9]", lines[i]):
+                end_index = i
+                break
+
+        # Collect lines for the court info
+        extracted_lines = [
+            line
+            for line in lines[start_index:end_index]
+            if line and not line.startswith("_")
+        ]
+        court_info = re.sub(r"\s+", " ", " ".join(extracted_lines))
+
+        if "from the" in court_info:
+            return court_info.split("from the", 1)[1].strip()
+        return court_info
 
     def extract_type(self, type_raw: str) -> str:
         """
