@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import re
-import sys
 from copy import deepcopy
 from urllib.parse import urlsplit, urlunsplit
 
@@ -14,15 +13,6 @@ try:
     import charset_normalizer as chardet
 except ImportError:
     import chardet
-
-if sys.maxunicode == 65535:
-    from .log_tools import make_default_logger
-
-    logger = make_default_logger()
-    logger.warning(
-        "You are using a narrow build of Python, which is not "
-        "completely supported. See issue #188 for details."
-    )
 
 ALLOWED_ATTRIBUTES = deepcopy(nh3.ALLOWED_ATTRIBUTES)
 ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
@@ -229,20 +219,12 @@ def clean_html(text: str) -> str:
         text = re.sub(r"&#0[1-8]\b|&#[1-8]\b", "", text)
 
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
-    # Note that this won't work completely on narrow builds of Python, which
-    # existed prior to Py3. Thus, we check if it's a narrow build, and adjust
-    # accordingly.
-    if sys.maxunicode == 65535:
-        text = re.sub(
-            "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd]+", "", text
-        )
-    else:
-        text = re.sub(
-            "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd"
-            "\U00010000-\U0010ffff]+",
-            "",
-            text,
-        )
+    text = re.sub(
+        "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd"
+        "\U00010000-\U0010ffff]+",
+        "",
+        text,
+    )
 
     return text
 

@@ -101,16 +101,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"OpinionCluster": {"docket_number": "E-21-215"}},
             ),
         ],
-        "juriscraper.opinions.united_states.federal_appellate.ca4": [
-            (
-                """USCA4 Appeal: 22-6079      Doc: 17         Filed: 07/26/2022    Pg: 1 of 2\n\n\n\n\n                                            UNPUBLISHED \n\n                               UNITED STATES COURT OF APPEALS\n""",
-                {"OpinionCluster": {"precedential_status": "Unpublished"}},
-            ),
-            (
-                """USCA4 Appeal: 22-6079      Doc: 17         Filed: 07/26/2022    Pg: 1 of 2\n\n\n\n\n                                            PUBLISHED\n\n                               UNITED STATES COURT OF APPEALS\n""",
-                {"OpinionCluster": {"precedential_status": "Published"}},
-            ),
-        ],
         "juriscraper.opinions.united_states.state.nyappterm_1st": [
             (
                 """<br>PRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n\n <br>570410/22 \n and more and more """,

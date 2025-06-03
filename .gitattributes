@@ -198,8 +198,6 @@ pnpm-lock.yaml    text eol=lf -diff
 *.yaml            text
 *.yml             text
 browserslist      text
-Makefile          text
-makefile          text
 
 ### Ignore files (like .npmignore or .gitignore) ###
 *.*ignore         text
