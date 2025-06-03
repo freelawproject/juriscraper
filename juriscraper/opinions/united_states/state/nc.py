@@ -48,6 +48,16 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
+        """
+        Process the HTML content of the court opinions page and extract case details.
+
+        Iterates over each row in the HTML, extracting the title, link, summary, headnote,
+        docket, status, author, per curiam status, date, and citation for each opinion.
+        Handles cases where opinions may be withdrawn (no link), and parses additional
+        information from the headnote HTML if available.
+
+        Appends a dictionary of extracted case data to self.cases for each valid row.
+        """
         for row in self.html.xpath(self.row_xpath):
             title = row.xpath("string(span[@class='title'])")
 
@@ -155,6 +165,19 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = range(start, end)
 
     def _download(self, request_dict=None):
+        """
+        Download and parse the headnote HTML for the current court and year.
+
+        This method fetches the digested index page for the specified court and year,
+        parses the HTML to extract headnote information, and stores it in `self.headnote_html`.
+        If test mode is enabled, it uses a mock request and a test HTML file.
+
+        Args:
+            request_dict (dict, optional): Additional request parameters. Defaults to None.
+
+        Returns:
+            The result of the superclass's _download method.
+        """
         if request_dict is None:
             request_dict = {}
 
