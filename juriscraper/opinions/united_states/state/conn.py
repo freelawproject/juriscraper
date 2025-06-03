@@ -15,7 +15,6 @@ History:
 
 import re
 from datetime import date
-from typing import Tuple
 
 from dateutil.parser import parse
 
@@ -54,7 +53,7 @@ class Site(OpinionSiteLinear):
         )
         return m.groups()[0] if m.groups()[0] else m.groups()[1]
 
-    def extract_dockets_and_name(self, row) -> Tuple[str, str]:
+    def extract_dockets_and_name(self, row) -> tuple[str, str]:
         """Extract the docket and case name from each row
 
         :param row: Row to process
@@ -177,20 +176,21 @@ class Site(OpinionSiteLinear):
 
         # Judges string is in the first page after the docket number,
         # before the following section, which may be Syllabus or Procedural History
-        if judges_end != 1_000_000:
-            if docket_match := list(
+        if judges_end != 1_000_000 and (
+            docket_match := list(
                 re.finditer(r"[AS]C\s\d{5}", scraped_text[:judges_end])
+            )
+        ):
+            judges = scraped_text[docket_match[-1].end() : judges_end]
+            clean_judges = []
+            for judge in (
+                judges.strip("\n )(").replace(" and ", ",").split(",")
             ):
-                judges = scraped_text[docket_match[-1].end() : judges_end]
-                clean_judges = []
-                for judge in (
-                    judges.strip("\n )(").replace(" and ", ",").split(",")
-                ):
-                    if not judge.strip() or "Js." in judge or "C. J." in judge:
-                        continue
-                    clean_judges.append(judge.strip("\n "))
+                if not judge.strip() or "Js." in judge or "C. J." in judge:
+                    continue
+                clean_judges.append(judge.strip("\n "))
 
-                metadata["OpinionCluster"]["judges"] = "; ".join(clean_judges)
+            metadata["OpinionCluster"]["judges"] = "; ".join(clean_judges)
 
         return metadata
 

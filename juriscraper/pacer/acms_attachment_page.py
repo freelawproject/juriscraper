@@ -2,11 +2,11 @@ import json
 import pprint
 import sys
 import unicodedata
-from typing import Dict
 
-from ..lib.html_utils import strip_bad_html_tags_insecure
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string
+from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import convert_date_string
+
 from .reports import BaseReport
 
 logger = make_default_logger()
@@ -74,17 +74,15 @@ class ACMSAttachmentPage(BaseReport):
         Set self.is_valid flag to True or False
         """
         if not all(
-            [
-                x in parsed_json
-                for x in ["caseDetails", "docketEntry", "docketEntryDocuments"]
-            ]
+            x in parsed_json
+            for x in ["caseDetails", "docketEntry", "docketEntryDocuments"]
         ):
             self.is_valid = False
             return
         self.is_valid = True
 
     @property
-    def data(self) -> Dict:
+    def data(self) -> dict:
         """Extract relevant information from the JSON payload
         provided by the extension.
 

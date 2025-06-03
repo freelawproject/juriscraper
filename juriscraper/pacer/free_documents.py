@@ -5,21 +5,26 @@ which is free.
 import pprint
 import sys
 
-from ..lib.date_utils import make_date_range_tuples
-from ..lib.html_utils import (
+from juriscraper.lib.date_utils import make_date_range_tuples
+from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
     get_html_parsed_text,
     set_response_encoding,
 )
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import clean_string, convert_date_string, harmonize
-from ..pacer.utils import (
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    harmonize,
+)
+from juriscraper.pacer.utils import (
     get_nonce_from_form,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     reverse_goDLS_function,
 )
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 
@@ -134,9 +139,9 @@ class FreeOpinionReport(BaseReport):
         :param text: A unicode object
         :return: None
         """
-        assert isinstance(
-            text, str
-        ), f"Input must be unicode, not {type(text)}"
+        assert isinstance(text, str), (
+            f"Input must be unicode, not {type(text)}"
+        )
         text = clean_html(text)
         self.tree = get_html_parsed_text(text)
         self._strip_bad_html_tags_insecure(text)
@@ -399,9 +404,9 @@ class FreeOpinionRow(BaseDocketReport):
         if self._column_count == 4:
             return ""
         try:
-            return self.element.xpath(
-                "./td[5]/i[contains(./text(), " '"NOS")]'
-            )[0].tail.strip()
+            return self.element.xpath('./td[5]/i[contains(./text(), "NOS")]')[
+                0
+            ].tail.strip()
         except IndexError:
             return ""
 
@@ -410,7 +415,7 @@ class FreeOpinionRow(BaseDocketReport):
             return ""
         try:
             return self.element.xpath(
-                "./td[5]/i[contains(./text(), " '"Cause")]'
+                './td[5]/i[contains(./text(), "Cause")]'
             )[0].tail.strip()
         except IndexError:
             return ""

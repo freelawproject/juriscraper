@@ -147,6 +147,6 @@ class Site(OpinionSite):
                 f"{base_path}/preceding-sibling::td[2]"
             )
             self.docket_numbers_path = f"{base_path}/preceding-sibling::td[2]"
-            self.neutral_citations_path = "{}/preceding-sibling::td[1]".format(
-                base_path
+            self.neutral_citations_path = (
+                f"{base_path}/preceding-sibling::td[1]"
             )

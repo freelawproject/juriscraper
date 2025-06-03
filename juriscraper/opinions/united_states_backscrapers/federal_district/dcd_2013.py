@@ -8,7 +8,7 @@ Substantially Revised: Brian W. Carver, 2014-03-28
 
 import re
 import time
-from datetime import date, datetime
+from datetime import date
 
 from lxml import html
 
@@ -27,7 +27,7 @@ class Site(OpinionSite):
         # This requires us to pad every other metadata field to match the
         # number of urls we find here.
         path = "//table[2]//tr[position()>0]/td[3]/a/@href"
-        return [url for url in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
         casenames = []
@@ -134,7 +134,7 @@ class Site(OpinionSite):
                 # these 'mj' and 'mc' codes and the first page of these
                 #  documents will often refer to them as 'Magistrate Case
                 # ####-####' so, we will too.
-                elif nature_code == "mj" or "mc":
+                elif nature_code in ("mj", "mc"):
                     nos.append("Magistrate Case")
                 else:
                     nos.append("Unknown")

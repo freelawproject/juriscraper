@@ -1,6 +1,6 @@
 import re
 from datetime import date, datetime
-from typing import Dict, Optional, Union
+from typing import Optional, Union
 
 import requests
 import tldextract
@@ -8,7 +8,7 @@ from dateutil import parser
 from dateutil.tz import gettz
 from lxml import html
 
-from ..lib.exceptions import ParsingException
+from juriscraper.lib.exceptions import ParsingException
 
 
 def get_court_id_from_doc_id_prefix(prefix):
@@ -517,9 +517,9 @@ def get_pacer_doc_id_from_doc1_url(url: str) -> str:
 
     See tests for more examples.
     """
-    assert (
-        "show_case_doc" not in url
-    ), "Cannot get doc1 ID from show_case_doc URL"
+    assert "show_case_doc" not in url, (
+        "Cannot get doc1 ID from show_case_doc URL"
+    )
     url = url.rsplit("/", 1)[1].split("?")[0]
     url = f"{url[:3]}0{url[4:]}"
     return url
@@ -598,7 +598,7 @@ def reverse_goDLS_function(s):
     return parts
 
 
-def reverse_sumDocSelected_function(s) -> Optional[Dict[str, int]]:
+def reverse_sumDocSelected_function(s) -> Optional[dict[str, int]]:
     """Extract the arguments from the sumDocSelected JavaScript function.
 
     In: sumDocSelected(this,1,13481, 7548050)
@@ -686,16 +686,12 @@ def make_docs1_url(
 
 def is_pdf(response):
     """Determines whether the item downloaded is a PDF or something else."""
-    if response.headers.get("content-type") == "application/pdf":
-        return True
-    return False
+    return response.headers.get("content-type") == "application/pdf"
 
 
 def is_text(response):
     """Determines whether the item downloaded is a text file or something else."""
-    if ".txt" in response.headers.get("content-type", ""):
-        return True
-    return False
+    return ".txt" in response.headers.get("content-type", "")
 
 
 def get_nonce_from_form(r):
@@ -765,11 +761,7 @@ def get_document_filename(
 
 
 def get_docketxml_url(court, pacer_case_id):
-    return "{}/{}/{}".format(
-        BASE_IA_URL,
-        get_bucket_name(court, pacer_case_id),
-        get_docket_filename(court, pacer_case_id),
-    )
+    return f"{BASE_IA_URL}/{get_bucket_name(court, pacer_case_id)}/{get_docket_filename(court, pacer_case_id)}"
 
 
 def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
@@ -783,7 +775,7 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
 
 
 def set_pacer_doc_id_as_appellate_document_number(
-    de: Dict[str, Union[str, date, datetime]]
+    de: dict[str, Union[str, date, datetime]],
 ) -> None:
     """For appellate courts that don't use numbers, if available set the
     pacer_doc_id as document number.
@@ -838,7 +830,7 @@ def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
 
 def parse_sumDocSelected_from_row(
     row: html.HtmlElement,
-) -> Optional[Dict[str, int]]:
+) -> Optional[dict[str, int]]:
     """Parse the arguments from the sumDocSelected function call parts from a
     given table row.
 

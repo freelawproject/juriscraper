@@ -21,7 +21,6 @@ Contact information:
 
 import re
 from datetime import date
-from typing import Dict, List, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
@@ -76,8 +75,8 @@ class Site(OpinionSiteLinear):
             )
 
     def make_backscrape_iterable(
-        self, kwargs: Dict
-    ) -> List[Tuple[date, date]]:
+        self, kwargs: dict
+    ) -> list[tuple[date, date]]:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
         and replace the self.back_scrape_iterable

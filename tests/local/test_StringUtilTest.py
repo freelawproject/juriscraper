@@ -552,8 +552,12 @@ class StringUtilTest(unittest.TestCase):
             if after:
                 self.assertEqual(split_date_range_string(before), after)
             else:
-                with self.assertRaises(Exception):
+                with self.assertRaises(Exception) as cm:
                     split_date_range_string(before)
+
+                assert cm.exception.args[0].startswith(
+                    "Unrecognized date format:"
+                )
 
     def test_normalize_dashes(self):
         tests = [

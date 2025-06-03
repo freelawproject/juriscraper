@@ -4,9 +4,10 @@ import re
 import sys
 from collections import OrderedDict
 
-from ..lib.html_utils import strip_bad_html_tags_insecure
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import convert_date_string
+from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import convert_date_string
+
 from .appellate_docket import AppellateDocketReport
 
 logger = make_default_logger()
@@ -355,9 +356,9 @@ class ACMSDocketReport(AppellateDocketReport):
             # by the superclass, which can be told to parse `date`s
             # but not `datetime`s. So we have to do it ourselves.
             datetime_str = self._get_value(datetime_entered_regex, docket_text)
-            assert (
-                datetime_str != ""
-            ), "Docket entry's Entered: date should not be null"
+            assert datetime_str != "", (
+                "Docket entry's Entered: date should not be null"
+            )
             de["date_entered"] = convert_date_string(
                 datetime_str, datetime=True
             )

@@ -4,7 +4,6 @@
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
 import re
 from datetime import date, datetime
-from typing import Tuple
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -82,7 +81,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
-    def clean_name(self, name: str) -> Tuple[str, str]:
+    def clean_name(self, name: str) -> tuple[str, str]:
         """Cleans case name
 
         Some case names list the consolidated docket or a
@@ -125,7 +124,7 @@ class Site(OpinionSiteLinear):
         # in is in a few lines before the first paragraph
         lines = scraped_text.split("\n")
         found = False
-        for index, line in enumerate(lines):
+        for index, line in enumerate(lines):  # noqa: B007
             if "[¶1]" in line:
                 found = True
                 break
@@ -154,7 +153,7 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple

@@ -63,7 +63,7 @@ def titlecase(text, DEBUG=False):
         all_caps = ALL_CAPS.match(line)
         words = re.split(r"[\t ]", line)
         tc_line = []
-        for i, word in enumerate(words):
+        for word in words:
             if DEBUG:
                 print(f"Word: {word}")
             if all_caps:
@@ -398,7 +398,7 @@ def clean_string(s):
     s = " ".join(s.split())
 
     # Convert non-breaking spaces to regular spaces
-    s = s.replace("\u00A0", " ")
+    s = s.replace("\u00a0", " ")
 
     return s
 
@@ -438,7 +438,7 @@ def force_unicode(s, encoding="utf-8", strings_only=False, errors="strict"):
             # errors), so that if s is a SafeString, it ends up being a
             # SafeUnicode at the end.
             s = s.decode(encoding, errors)
-    except UnicodeDecodeError as e:
+    except UnicodeDecodeError:
         if not isinstance(s, Exception):
             raise
         else:
@@ -758,19 +758,23 @@ class CaseNameTweaker:
                 if parts[0][0].lower() not in self.bad_words:
                     # Simple case: Langley v. Google
                     return parts[0][0]
-                elif len(parts[1]) == 1:
+                elif (
+                    len(parts[1]) == 1
                     # Plaintiff was a bad_word. Try the defendant.
                     # Dallas v. Lissner
-                    if parts[1][0].lower() not in self.bad_words:
-                        return parts[1][0]
-            elif len(parts[0]) > 1:
+                    and parts[1][0].lower() not in self.bad_words
+                ):
+                    return parts[1][0]
+            elif (
+                len(parts[0]) > 1
                 # Plaintiff part is longer than a single word, focus on the
                 # defendant.
-                if len(parts[1]) == 1:
-                    # If the defendant is a single word.
-                    if parts[1][0].lower() not in self.bad_words:
-                        # That's not a bad word.
-                        return parts[1][0]
+                and len(parts[1]) == 1
+                # If the defendant is a single word.
+                and parts[1][0].lower() not in self.bad_words
+            ):
+                # That's not a bad word.
+                return parts[1][0]
 
         # More than 1 instance of v. or otherwise no matches --> Give up.
         return ""

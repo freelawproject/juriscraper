@@ -10,7 +10,7 @@ History:
 
 import calendar
 import re
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 
 from lxml.html import HtmlElement
 
@@ -48,7 +48,7 @@ class Site(OpinionSiteLinear):
         # source indexes from 0
         self.back_scrape_iterable = range(29)[::-1]
 
-    def _download(self, request_dict: Optional[Dict] = None) -> HtmlElement:
+    def _download(self, request_dict: Optional[dict] = None) -> HtmlElement:
         """Gets the source's HTML
 
         For a normal periodic scraper, get the last page where
@@ -158,7 +158,7 @@ class Site(OpinionSiteLinear):
         """
         return html_element.xpath(xpath)[0].text_content().strip()
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract Date Filed from text
 
         :param scraped_text: Text of scraped content

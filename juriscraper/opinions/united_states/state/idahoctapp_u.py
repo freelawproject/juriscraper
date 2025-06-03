@@ -16,7 +16,7 @@ class Site(OpinionSiteLinear):
             date_string = " ".join(text.split()[0:3])
             try:
                 convert_date_string(date_string)
-            except:
+            except Exception:
                 raise InsanityException(f'Unexpected text format: "{text}"')
             docket_name = text.replace(date_string, "").strip().lstrip("-")
 

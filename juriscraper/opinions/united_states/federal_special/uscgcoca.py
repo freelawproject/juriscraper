@@ -10,7 +10,6 @@ History:
 """
 
 import re
-from typing import List
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -37,6 +36,7 @@ class Site(OpinionSiteLinear):
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
         }
+        self.needs_special_headers = True
 
     def _process_html(self) -> None:
         """Process the HTML
@@ -73,7 +73,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_case_names(self) -> List[str]:
+    def _get_case_names(self) -> list[str]:
         """Clean case names
 
         :return: List of case names

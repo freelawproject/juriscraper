@@ -25,8 +25,8 @@ class Site(miss.Site):
         today = date.today()
         self.url = (
             "http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?"
-            "Year={year}&Court=Court+of+Appeals&Submit=Submit"
-        ).format(year=int(today.year) - 1)
+            f"Year={int(today.year) - 1}&Court=Court+of+Appeals&Submit=Submit"
+        )
         beginning_of_year = (
             date(today.year, 1, 1) <= today <= date(today.year, 1, 15)
         )

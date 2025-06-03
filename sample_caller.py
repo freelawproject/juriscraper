@@ -1,3 +1,4 @@
+import hashlib
 import json
 import logging
 import os
@@ -34,6 +35,45 @@ def signal_handler(signal, frame):
     logger.debug("**************")
     global die_now
     die_now = True
+
+
+# Copied from django
+def force_bytes(s, encoding="utf-8", strings_only=False, errors="strict"):
+    """
+    Similar to smart_bytes, except that lazy instances are resolved to
+    strings, rather than kept as lazy objects.
+
+    If strings_only is True, don't convert (some) non-string-like objects.
+    """
+    # Handle the common case first for performance reasons.
+    if isinstance(s, bytes):
+        if encoding == "utf-8":
+            return s
+        else:
+            return s.decode("utf-8", errors).encode(encoding, errors)
+    if isinstance(s, memoryview):
+        return bytes(s)
+    return str(s).encode(encoding, errors)
+
+
+# Copied from Courtlistener
+def sha1(s):
+    """Return the sha1sum of a string.
+
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    ! This algorithm is obsolete for most purposes. Its !
+    ! usage is discouraged. Please use SHA256 instead.  !
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    :param s: The data to hash. Ideally bytes, but if unicode is passed in, it
+    will convert it to bytes first.
+    :return: a hexadecimal SHA1 hash of the data
+    """
+    if isinstance(s, str):
+        s = s.encode()
+    sha1sum = hashlib.sha1()
+    sha1sum.update(s)
+    return sha1sum.hexdigest()
 
 
 def log_dict(dic: dict) -> None:
@@ -93,6 +133,19 @@ def extract_doc_content(
     illegal_chars = r'[\/:*?"<>|]'
     filename = re.sub(illegal_chars, "_", filename)
 
+    # save raw data for inspection; useful for looking for hash-duplicating
+    # timestamps. Open it in a code editor; the browser will auto correct
+    # bad HTML elements; or execute some javascript
+    filepath_raw_data = (
+        f"{directory}{court_id}_{filename}_downloaded.{extension}"
+    )
+    with open(filepath_raw_data, "wb") as f:
+        f.write(data)
+
+    logger.info(
+        "\nOpen downloaded content with 'file://%s'", filepath_raw_data
+    )
+
     filepath = f"{directory}{court_id}_{filename}.html"
     with open(filepath, "w") as f:
         if extension != ".html":
@@ -106,7 +159,94 @@ def extract_doc_content(
     return extracted_content, metadata_dict
 
 
-def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
+def get_binary_content(download_url: str, site, exceptions) -> bytes:
+    """Download an opinion from a URL; and check the result
+
+    Mimics Courtlistener's `get_binary_content`
+    """
+    # some sites require a custom ssl_context, contained in the Site's
+    # session. However, we can't send a request with both a
+    # custom ssl_context and `verify = False`
+    has_cipher = hasattr(site, "cipher")
+    s = site.request["session"] if has_cipher else requests.session()
+
+    if site.needs_special_headers:
+        headers = site.request["headers"]
+    else:
+        headers = {"User-Agent": "CourtListener"}
+
+    # Note that we do a GET even if site.method is POST. This is
+    # deliberate.
+    r = s.get(
+        download_url,
+        verify=has_cipher,  # WA has a certificate we don't understand
+        headers=headers,
+        cookies=site.cookies,
+        timeout=300,
+    )
+
+    # test for expected content type (thanks mont for nil)
+    if site.expected_content_types:
+        # Clean up content types like "application/pdf;charset=utf-8"
+        # and 'application/octet-stream; charset=UTF-8'
+        content_type = (
+            r.headers.get("Content-Type").lower().split(";")[0].strip()
+        )
+        m = any(
+            content_type in mime.lower()
+            for mime in site.expected_content_types
+        )
+        if not m:
+            exceptions["ContentTypeError"].append(download_url)
+            logger.debug("ContentTypeError: %s", download_url)
+
+    data = r.content
+    return data
+
+
+def check_hashes(data: bytes, download_url: str, site) -> None:
+    """Detect timestamped content by downloading the same URL twice and
+    comparing hashes
+
+    :param data: data downloaded on the regular loop
+    :param download_url: the URL to get the same data as in the first argument
+    :param site: the site object
+    """
+    datas = [data, get_binary_content(download_url, site, {})]
+    hashes = []
+
+    for data in datas:
+        sha_before = sha1(force_bytes(data))
+        data = site.cleanup_content(data)
+        sha_after = sha1(force_bytes(data))
+
+        # useful for double checking if a Site.cleanup_content is working
+        # If implemented properly, the hash should change
+        if sha_before == sha_after:
+            logger.warning("SHA has NOT changed after `Site.cleanup_content`")
+        else:
+            logger.info(
+                "SHA has changed after `Site.cleanup_content`. It's OK"
+            )
+
+        hashes.append(sha_after)
+
+    if hashes[0] != hashes[1]:
+        logger.warning(
+            "Same URL hashes are not the same. Check the document for timestamps"
+        )
+    else:
+        logger.info("Same URL hashes are the same. It's OK")
+
+
+def scrape_court(
+    site,
+    binaries=False,
+    extract_content=False,
+    doctor_host="",
+    test_hashes: bool = False,
+    limit: int = 1000,
+):
     """Calls the requested court(s), gets its binary content, and
     extracts the content if possible. See --extract-content option
 
@@ -119,7 +259,9 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
     basic pitfalls that a caller will run into.
     """
     exceptions = defaultdict(list)
-    for item in site:
+    for index, item in enumerate(site):
+        if index == limit:
+            break
         # First turn the download urls into a utf-8 byte string
         item_download_urls = item["download_urls"].encode("utf-8")
         # Percent encode URLs (this is a Python wart)
@@ -135,43 +277,7 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
             continue
 
         try:
-            # some sites require a custom ssl_context, contained in the Site's
-            # session. However, we can't send a request with both a
-            # custom ssl_context and `verify = False`
-            has_cipher = hasattr(site, "cipher")
-            s = site.request["session"] if has_cipher else requests.session()
-
-            if site.needs_special_headers:
-                headers = site.request["headers"]
-            else:
-                headers = {"User-Agent": "CourtListener"}
-
-            # Note that we do a GET even if site.method is POST. This is
-            # deliberate.
-            r = s.get(
-                download_url,
-                verify=has_cipher,  # WA has a certificate we don't understand
-                headers=headers,
-                cookies=site.cookies,
-                timeout=300,
-            )
-
-            # test for expected content type (thanks mont for nil)
-            if site.expected_content_types:
-                # Clean up content types like "application/pdf;charset=utf-8"
-                # and 'application/octet-stream; charset=UTF-8'
-                content_type = (
-                    r.headers.get("Content-Type").lower().split(";")[0].strip()
-                )
-                m = any(
-                    content_type in mime.lower()
-                    for mime in site.expected_content_types
-                )
-                if not m:
-                    exceptions["ContentTypeError"].append(download_url)
-                    logger.debug("ContentTypeError: %s", download_url)
-
-            data = r.content
+            data = get_binary_content(download_url, site, exceptions)
 
             # test for empty files (thank you CA1)
             if len(data) == 0:
@@ -184,10 +290,13 @@ def scrape_court(site, binaries=False, extract_content=False, doctor_host=""):
             logger.debug(traceback.format_exc())
             continue
 
-        filename = item["case_names"].lower().replace(" ", "_")[:40]
-        # cleanup_content is called before the extraction task in CL
-        # so it is only useful for cleaning HTML files
+        if test_hashes:
+            check_hashes(data, download_url, site)
+
         data = site.cleanup_content(data)
+
+        filename = item["case_names"].lower().replace(" ", "_")[:40]
+
         data, metadata_from_text = extract_doc_content(
             data, extract_content, site, doctor_host, filename
         )
@@ -235,7 +344,7 @@ def save_response(site):
     try:
         # Brute force test to see if it's a JSON
         json_data = json.loads(response.content)
-    except:
+    except Exception:
         json_data = None
 
     if json_data:
@@ -361,6 +470,22 @@ def main():
         default=False,
         help="Save response headers and returned HTML or JSON",
     )
+    parser.add_option(
+        "--test-hashes",
+        action="store_true",
+        default=False,
+        help=(
+            "Download the opionion twice and compute hashes to detect "
+            "timestamped content. Also useful to see if Site.cleanup_content"
+            " works (hash should change)"
+        ),
+    )
+    parser.add_option(
+        "--limit-per-scrape",
+        type=int,
+        default=1000,
+        help="How many items to scrape per `scrape_court` call",
+    )
 
     (options, args) = parser.parse_args()
 
@@ -374,12 +499,17 @@ def main():
     extract_content = options.extract_content
     verbosity = options.verbosity
     save_responses = options.save_responses
+    test_hashes = options.test_hashes
+    limit_per_scrape = options.limit_per_scrape
+
+    if test_hashes:
+        binaries = True
 
     if extract_content:
         binaries = True
         # If we are making the effort of downloading documents
         # we should force the user to actually see the outputs
-        verbosity = 1 if not verbosity else verbosity
+        verbosity = verbosity if verbosity else 1
 
     if verbosity == 0:
         # default level will only show that the scrapers are working
@@ -435,7 +565,14 @@ def main():
 
             for site in sites:
                 site.parse()
-                scrape_court(site, binaries, extract_content, doctor_host)
+                scrape_court(
+                    site,
+                    binaries,
+                    extract_content,
+                    doctor_host,
+                    test_hashes,
+                    limit_per_scrape,
+                )
 
     logger.debug("The scraper has stopped.")
 

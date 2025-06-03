@@ -11,10 +11,60 @@ words, they're the ones you'll want to watch, and the others are mostly noise.
 Releases are also tagged in git, if that's helpful.
 
 ## Coming up
-- Fix `bia` scraper and add extract from text test cases
-- update `nc` scraper to OpinionSiteLinear and new website #1373
+
+The following changes are not yet released, but are code complete:
+
+Features:
+- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
+timestamped opinions and check if `Site.cleanup_content` is working #1392
+
+Changes:
+-
+
+Fixes:
+-
 
 ## Current
+
+**2.6.71 - 2025-05-30**
+
+Changes:
+- Added support for Python 3.13
+
+Fixes:
+- Improve test speed by reducing the size of the uscfc_vaccine example array
+- Fix `asbca` scraper to use special headers #1411
+- Fix `uscgcoca` by using `self.needs_special_headers` #1419
+
+**2.6.70 - 2025-05-23**
+
+Features:
+- Fix for CA4 - minor edge case bug
+
+## Past
+
+**2.6.69 - 2025-05-21**
+
+Features:
+- New scraper `ncbizct` for North Carolina Business Court
+
+Fixes:
+- Fixes for `prapp` with backscraper
+
+**2.6.68 - 2025-05-12**
+
+- Add auth token to ny trial courts
+- Clean up ala scraped case names #1272
+
+
+**2.6.67 - 2025-05-08**
+
+- New scraper `lactapp_2` for Lousiana Court of Appeals, Second Circuit
+- Fix `me` Update maine scraper and add backscraper
+- Update `sd` backscraper and extract from text
+- Fix `bia` scraper and add extract from text test cases
+- Implement `cleanup_content` for `ny` sites #1393
+
 
 **2.6.66 - 2025-04-29**
 
@@ -29,7 +79,6 @@ Releases are also tagged in git, if that's helpful.
 - `nh` was blocking; fixed by updating the user agent string #1370
 - Update `vtsuperct_*` scrapers to inherit `extract_from_text` from `vt` #1150
 
-## Past
 
 **2.6.64 - 2025-04-10**
 
@@ -1635,8 +1684,3 @@ Changes:
    jurisdiction (Veterans, Tax, etc.)
 - 0.1 - Supports opinions from all 13 Federal Circuit courts and the
    U.S. Supreme Court
-
-
-
-
-
