@@ -12,9 +12,14 @@ from datetime import date, datetime
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.type_utils import (
+    CONCURRENCE,
+    CONCURRING_IN_PART_AND_DISSENTING_IN_PART,
+    DISSENT,
+    MAJORITY,
+    types_mapping,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.type_utils import types_mapping, MAJORITY, \
-    CONCURRING_IN_PART_AND_DISSENTING_IN_PART, CONCURRENCE, DISSENT
 
 
 class Site(OpinionSiteLinear):
@@ -144,7 +149,9 @@ class Site(OpinionSiteLinear):
         opinion = {}
 
         # Extract author information
-        match = re.search(r"\*{6,}\s*([A-Za-z .\-']+)\s*\*{6,}", scraped_text, re.IGNORECASE)
+        match = re.search(
+            r"\*{6,}\s*([A-Za-z .\-']+)\s*\*{6,}", scraped_text, re.IGNORECASE
+        )
         author = match.group(1).strip() if match else ""
         if author:
             opinion["author_str"] = titlecase(author)
@@ -163,12 +170,14 @@ class Site(OpinionSiteLinear):
         opinion["type"] = types_mapping.get(opinion_type, "")
 
         # Extract court panel judges
-        court_panel_match = re.search(r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL)
+        court_panel_match = re.search(
+            r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL
+        )
         if court_panel_match:
             judges = court_panel_match.group(1)
-            judges = re.sub(r'Judge\s+', '', judges)
-            judges = re.sub(r'\s+', ' ', judges)
-            judges = judges.replace(',', ';').strip()
+            judges = re.sub(r"Judge\s+", "", judges)
+            judges = re.sub(r"\s+", " ", judges)
+            judges = judges.replace(",", ";").strip()
             if judges:
                 opinion_cluster["judges"] = judges
 
