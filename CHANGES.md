@@ -22,7 +22,7 @@ Changes:
 -
 
 Fixes:
--
+-  Fix `tex` get opinions from the orders on causes page
 
 ## Current
 
