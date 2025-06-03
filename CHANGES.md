@@ -19,7 +19,7 @@ Features:
 timestamped opinions and check if `Site.cleanup_content` is working #1392
 
 Changes:
--
+- update `nc` scraper to OpinionSiteLinear and new website #1373
 
 Fixes:
 -
