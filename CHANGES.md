@@ -15,7 +15,18 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
+timestamped opinions and check if `Site.cleanup_content` is working #1392
+
+Changes:
 -
+
+Fixes:
+-
+
+## Current
+
+**2.6.71 - 2025-05-30**
 
 Changes:
 - Added support for Python 3.13
@@ -23,11 +34,8 @@ Changes:
 Fixes:
 - Improve test speed by reducing the size of the uscfc_vaccine example array
 - Fix `asbca` scraper to use special headers #1411
--  Fix `tex` scraper to use special headers #1410
-
 - Fix `uscgcoca` by using `self.needs_special_headers` #1419
 
-## Current
 **2.6.70 - 2025-05-23**
 
 Features:
