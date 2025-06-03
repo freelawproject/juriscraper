@@ -13,6 +13,7 @@ from juriscraper.opinions.united_states.state import nc
 
 class Site(nc.Site):
     court = "coa"
+    court_number = 2
     unpub_date_xpath = (
         "../preceding-sibling::tr/td[contains(text(), 'Rule 30e')]"
     )
@@ -21,5 +22,5 @@ class Site(nc.Site):
         r"(?P<date>\d[\d \w]+)[\t\xa0\n]+- Rule 30e", flags=re.MULTILINE
     )
 
-    # For `ncctapp` opinions (last available in 2012, as of April 2025)
     state_cite_regex = r"\d+ NC App \d+"
+    collect_summary = False

@@ -11,6 +11,8 @@ History:
 import re
 from datetime import date
 
+from lxml.html import fromstring
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -19,9 +21,11 @@ class Site(OpinionSiteLinear):
     start_year = 1997
     current_year = date.today().year
     court = "sc"
+    court_number = 1
     base_url = "http://appellate.nccourts.org/opinion-filings/?c={}&year={}"
     row_xpath = "//span[span[@class='title']] | //td[span[@class='title']]"
     title_regex = r"\((?P<docket>[\dA-Z-]+)\s+- (?P<status>(Unp|P)ublished)"
+    collect_summary = True
 
     # in the browser inspector the tr-td containers do not appear for `nc`
     # but they do exist in the source inspected as text
@@ -52,6 +56,32 @@ class Site(OpinionSiteLinear):
 
             url = link[0].split('("')[1].strip('")')
 
+            summary = (
+                row.xpath("string(span[@class='desc'])")
+                if self.collect_summary
+                else ""
+            )
+            headnote = (
+                ""
+                if self.collect_summary
+                else row.xpath("string(span[@class='desc'])")
+            )
+
+            url = url.replace("http:", "https:")
+            divs = self.headnote_html.xpath(
+                f'(//a[@href="{url}"]/ancestor::p)[1]'
+            )
+            if divs:
+                p_elt = divs[0]
+                all_text = p_elt.xpath("text()")
+
+                summary = "".join(
+                    text.replace("—", "")
+                    for text in all_text
+                    if not (text.startswith("<b>") or text.startswith("<a"))
+                ).strip()
+                headnote = p_elt.xpath("./b//text()")[0]
+
             match = re.search(self.title_regex, title)
             name = title[: match.start()].strip(" ,")
 
@@ -62,7 +92,6 @@ class Site(OpinionSiteLinear):
 
             docket = match.group("docket")
             status = match.group("status")
-            summary = row.xpath("string(span[@class='desc'])")
 
             author = row.xpath("string(span[@class='author']/i)").strip()
             per_curiam = False
@@ -86,6 +115,7 @@ class Site(OpinionSiteLinear):
                     "author": author,
                     "per_curiam": per_curiam,
                     "summary": summary,
+                    "headnote": headnote,
                     "status": status,
                     "docket": docket,
                     "name": name,
@@ -120,3 +150,14 @@ class Site(OpinionSiteLinear):
         end = int(end) + 1 if end else self.current_year
 
         self.back_scrape_iterable = range(start, end)
+
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
+
+        if self.html is None:
+            url = f"https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber={self.court_number}&sFilingYear={self.current_year}"
+
+        r = self.request["session"].get(url)
+        self.headnote_html = fromstring(r.text)
+        return super()._download(request_dict)
