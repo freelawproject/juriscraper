@@ -13,6 +13,8 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.type_utils import types_mapping, MAJORITY, \
+    CONCURRING_IN_PART_AND_DISSENTING_IN_PART, CONCURRENCE, DISSENT
 
 
 class Site(OpinionSiteLinear):
@@ -25,7 +27,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.la4th.org/Default.aspx"
         self.search_is_configured = False
-        self.target_date = date.today()
+        self.target_date = datetime(2025, 5, 1)
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
         self.parameters = {}
@@ -63,7 +65,6 @@ class Site(OpinionSiteLinear):
                 "url": download_url if download_url else None,
             }
 
-            # Append the case to the list of cases
             self.cases.append(case)
 
     def update_date_filters(self) -> None:
@@ -122,26 +123,58 @@ class Site(OpinionSiteLinear):
         return super()._download()
 
     def extract_from_text(self, scraped_text: str) -> dict:
-        """Extract metadata from Louisiana Court of Appeal 4th Circuit opinions.
-        Looks for:
-        - Panel judges
+        """
+        Extracts structured metadata from the provided opinion text.
 
-        :param scraped_text: The text content of the opinion document
-        :return: Dictionary with extracted metadata
+        Args:
+            scraped_text (str): The raw text content of a judicial opinion.
+
+        Returns:
+            dict: A dictionary containing extracted metadata, including:
+                - Opinion: Information about the opinion's author and type.
+                - OpinionCluster: Information about the panel of judges, if available.
+
+        Extraction details:
+            - Author: Detected by a pattern of asterisks surrounding the name.
+            - Opinion type: Determined by keywords in the text if author is not found.
+            - Judges: Extracted from a parenthetical listing the court panel.
         """
         metadata = {}
+        opinion_cluster = {}
+        opinion = {}
 
-        # Look for court composition info
-        court_panel_match = re.search(
-            r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL
-        )
+        # Extract author information
+        match = re.search(r"\*{6,}\s*([A-Za-z .\-']+)\s*\*{6,}", scraped_text, re.IGNORECASE)
+        author = match.group(1).strip() if match else ""
+        if author:
+            opinion["author_str"] = titlecase(author)
+            opinion_type = MAJORITY
+        else:
+            parts = re.split(r"\*{7,}", scraped_text, maxsplit=1)
+            text = parts[1].lower() if len(parts) > 1 else ""
+            if "in part" in text:
+                opinion_type = CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+            elif "concurs" in text or "concurring" in text:
+                opinion_type = CONCURRENCE
+            elif "dissents" in text or "dissenting" in text:
+                opinion_type = DISSENT
+            else:
+                opinion_type = None
+        opinion["type"] = types_mapping.get(opinion_type, "")
+
+        # Extract court panel judges
+        court_panel_match = re.search(r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL)
         if court_panel_match:
             judges = court_panel_match.group(1)
-            # Clean up and normalize judge names
-            judges = re.sub(r"Judge\s+", "", judges)
-            judges = re.sub(r"\s+", " ", judges)
-            judges = judges.replace(",", ";").strip()
+            judges = re.sub(r'Judge\s+', '', judges)
+            judges = re.sub(r'\s+', ' ', judges)
+            judges = judges.replace(',', ';').strip()
             if judges:
-                metadata["OpinionCluster"] = {"judges": judges}
+                opinion_cluster["judges"] = judges
+
+        if opinion_cluster:
+            metadata["OpinionCluster"] = opinion_cluster
+        if opinion:
+            metadata["Opinion"] = opinion
 
         return metadata
