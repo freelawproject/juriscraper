@@ -24,3 +24,6 @@ class Site(nc.Site):
 
     state_cite_regex = r"\d+ NC App \d+"
     collect_summary = False
+    headnote_test_url = (
+        "tests/examples/opinions/united_states/ncctapp_headnote.html"
+    )

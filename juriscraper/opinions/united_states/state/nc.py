@@ -9,20 +9,23 @@ History:
 """
 
 import re
-from datetime import date
 
 from lxml.html import fromstring
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.test_utils import MockRequest
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     start_year = 1997
-    current_year = date.today().year
+    current_year = 2024
     court = "sc"
     court_number = 1
     base_url = "http://appellate.nccourts.org/opinion-filings/?c={}&year={}"
+    headnote_test_url = (
+        "tests/examples/opinions/united_states/nc_headnote.html"
+    )
     row_xpath = "//span[span[@class='title']] | //td[span[@class='title']]"
     title_regex = r"\((?P<docket>[\dA-Z-]+)\s+- (?P<status>(Unp|P)ublished)"
     collect_summary = True
@@ -158,6 +161,12 @@ class Site(OpinionSiteLinear):
         if self.html is None:
             url = f"https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber={self.court_number}&sFilingYear={self.current_year}"
 
-        r = self.request["session"].get(url)
+        if self.test_mode_enabled():
+            self.request["url"] = self.headnote_test_url
+            r = self.request["response"] = MockRequest(
+                url=self.headnote_test_url
+            ).get()
+        else:
+            r = self.request["session"].get(url)
         self.headnote_html = fromstring(r.text)
         return super()._download(request_dict)
