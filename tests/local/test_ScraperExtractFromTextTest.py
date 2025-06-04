@@ -861,7 +861,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 """"  IN THE SUPREME COURT OF TENNESSEE\n                      AT KNOXVILLE\n                  September 5, 2024 Session\nPAYTON CASTILLO v. DAVID LLOYD REX, M.D. ET AL.\n      Appeal by Permission from the Court of Appeals\n             Circuit Court for Hamilton County\n    No. 20C1270       Ward Jeffrey Holl""",
                 {
                     "Docket": {
-                        "appeal_from_str": "Court of Appeals Circuit Court for Hamilton County"
+                        "appeal_from_str": "Circuit Court for Hamilton County"
                     },
                     "OpinionCluster": {"precedential_status": "Published"},
                 },
