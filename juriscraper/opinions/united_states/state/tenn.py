@@ -84,7 +84,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of the scraped content
         :return: dictionary with precedential_status and appeal_from_str
         """
-        lower_court = self.extract_court_name(scraped_text)
+        lower_court = self.extract_lower_court_name(scraped_text)
         precedential_status = (
             "Published"
             if "MEMORANDUM OPINION" not in scraped_text
@@ -97,8 +97,17 @@ class Site(OpinionSiteLinear):
             result["Docket"] = {"appeal_from_str": lower_court}
         return result
 
-    def extract_court_name(self, text: str) -> str:
-        """Extract the lower court name from the provided opinion text."""
+    def extract_lower_court_name(self, text: str) -> str:
+        """Extract the lower court name from the provided opinion text.
+
+        Sometimes there is no introductory cue for the lower court. In that
+        case, it's usually between the case name that contains a "v." and the
+        docket number "No."
+        That's what the third pattern is for
+
+        :param text: the opinion's extracted text
+        :return: the lower court or an empty string
+        """
 
         patterns = [
             r"Appeal by Permission from.+\n(.+)\n",
