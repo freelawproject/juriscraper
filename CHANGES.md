@@ -15,8 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
-timestamped opinions and check if `Site.cleanup_content` is working #1392
+-
 
 Changes:
 -
@@ -25,6 +24,13 @@ Fixes:
 -  Fix `tex` get opinions from the orders on causes page #1410
 
 ## Current
+
+**2.6.72 - 2025-06-04**
+
+- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
+timestamped opinions and check if `Site.cleanup_content` is working #1392
+- fix tenn scraper parsing error #1413
+
 
 **2.6.71 - 2025-05-30**
 
