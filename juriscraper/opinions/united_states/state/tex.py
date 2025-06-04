@@ -6,7 +6,7 @@
 #  - Blake Hawthorne <Blake.Hawthorne@txcourts.gov>
 #  - Eddie Murillo <Eddie.Murillo@txcourts.gov>
 #  - Judicial Info <JudInfo@txcourts.gov>
-# judge: Andrei Chelaru
+# author: Andrei Chelaru
 # Reviewer: mlr
 # History:
 #  - 2014-07-10: Created by Andrei Chelaru
@@ -21,13 +21,7 @@
 from datetime import date, datetime
 
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.type_utils import (
-    CONCURRENCE,
-    DISSENT,
-    MAJORITY,
-    UNANIMOUS,
-    types_mapping,
-)
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -141,49 +135,60 @@ class Site(OpinionSiteLinear):
             '//*[@id="MainContent"]/div/div/div/ul/li/a'
         ):
             self.current_opinion_date = link.xpath("text()")[0]
-            self.url = link.xpath("@href")[0]
-            self._download()
-            self._process_html()
+            link_date = datetime.strptime(
+                self.current_opinion_date, "%B %d, %Y"
+            ).date()
+            if self.start <= link_date <= self.end:
+                self.url = link.xpath("@href")[0]
+                self._download()
+                self._process_html()
 
-    def extract_type(self, url):
+    def extract_type(self, url: str) -> tuple[OpinionType, bool]:
         """
-        Extracts the opinion type and per curiam status from the URL using types_mapping.
+
+        Rules:
+        - Ends with 'pc.pdf' → UNANIMOUS + per curiam
+        - Ends with 'd.pdf'  → DISSENT
+        - Ends with 'c.pdf'  → CONCURRENCE
+        - Otherwise          → MAJORITY
         """
         per_curiam = False
         if url.endswith("pc.pdf"):
-            type_key = UNANIMOUS
-            per_curiam = True
+            op_type, per_curiam = OpinionType.UNANIMOUS, True
         elif url.endswith("d.pdf"):
-            type_key = DISSENT
+            op_type = OpinionType.DISSENT
         elif url.endswith("c.pdf"):
-            type_key = CONCURRENCE
+            op_type = OpinionType.CONCURRENCE
         else:
-            type_key = MAJORITY
+            op_type = OpinionType.MAJORITY
+        return (op_type, per_curiam)
 
-        type = types_mapping[type_key]
-        return type, per_curiam
 
-    def make_backscrape_iterable(self, kwargs):
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
+def make_backscrape_iterable(self, kwargs):
+    """
+    Initializes the backscrape iterable based on optional start and end dates.
 
-        Louisiana's opinions page returns all opinions for a year (pagination is not needed),
-        so we must filter out opinions not in the date range we are looking for
+    Args:
+        kwargs (dict): Dictionary that may contain 'backscrape_start' and 'backscrape_end'
+            as strings in the format 'YYYY/MM/DD'.
 
-        :return None
-        """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
+    Sets:
+        self.start (date): The start date for backscraping.
+        self.end (date): The end date for backscraping.
+        self.back_scrape_iterable (list): List of years between start and end (inclusive).
+    """
+    start = kwargs.get("backscrape_start")
+    end = kwargs.get("backscrape_end")
 
-        if start:
-            self.start = datetime.strptime(start, "%Y/%m/%d").date()
-        else:
-            self.start = self.first_opinion_date
-        if end:
-            self.end = datetime.strptime(end, "%Y/%m/%d").date()
-        else:
-            self.end = datetime.now().date()
+    if start:
+        self.start = datetime.strptime(start, "%Y/%m/%d").date()
+    else:
+        self.start = self.first_opinion_date
+    if end:
+        self.end = datetime.strptime(end, "%Y/%m/%d").date()
+    else:
+        self.end = datetime.now().date()
 
-        years = list(range(self.start.year, self.end.year + 1))
+    years = list(range(self.start.year, self.end.year + 1))
 
-        self.back_scrape_iterable = years
+    self.back_scrape_iterable = years
