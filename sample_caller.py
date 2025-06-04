@@ -549,15 +549,19 @@ def main():
                 f"{package}.{module}", globals(), locals(), [module]
             )
 
-            site_kwargs = {
-                "backscrape_start": backscrape_start,
-                "backscrape_end": backscrape_end,
-                "days_interval": days_interval,
-            }
+            site_kwargs = {}
             if save_responses:
-                site_kwargs["save_response_fn"] = save_responses
+                site_kwargs = {"save_response_fn": save_response}
 
             if backscrape:
+                site_kwargs.update(
+                    {
+                        "backscrape_start": backscrape_start,
+                        "backscrape_end": backscrape_end,
+                        "days_interval": days_interval,
+                    }
+                )
+
                 bs_iterable = mod.Site(
                     backscrape_start=backscrape_start,
                     backscrape_end=backscrape_end,

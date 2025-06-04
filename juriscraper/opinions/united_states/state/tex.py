@@ -163,32 +163,31 @@ class Site(OpinionSiteLinear):
             op_type = OpinionType.MAJORITY
         return (op_type, per_curiam)
 
+    def make_backscrape_iterable(self, kwargs):
+        """
+        Initializes the backscrape iterable based on optional start and end dates.
 
-def make_backscrape_iterable(self, kwargs):
-    """
-    Initializes the backscrape iterable based on optional start and end dates.
+        Args:
+            kwargs (dict): Dictionary that may contain 'backscrape_start' and 'backscrape_end'
+                as strings in the format 'YYYY/MM/DD'.
 
-    Args:
-        kwargs (dict): Dictionary that may contain 'backscrape_start' and 'backscrape_end'
-            as strings in the format 'YYYY/MM/DD'.
+        Sets:
+            self.start (date): The start date for backscraping.
+            self.end (date): The end date for backscraping.
+            self.back_scrape_iterable (list): List of years between start and end (inclusive).
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
 
-    Sets:
-        self.start (date): The start date for backscraping.
-        self.end (date): The end date for backscraping.
-        self.back_scrape_iterable (list): List of years between start and end (inclusive).
-    """
-    start = kwargs.get("backscrape_start")
-    end = kwargs.get("backscrape_end")
+        if start:
+            self.start = datetime.strptime(start, "%Y/%m/%d").date()
+        else:
+            self.start = self.first_opinion_date
+        if end:
+            self.end = datetime.strptime(end, "%Y/%m/%d").date()
+        else:
+            self.end = datetime.now().date()
 
-    if start:
-        self.start = datetime.strptime(start, "%Y/%m/%d").date()
-    else:
-        self.start = self.first_opinion_date
-    if end:
-        self.end = datetime.strptime(end, "%Y/%m/%d").date()
-    else:
-        self.end = datetime.now().date()
+        years = list(range(self.start.year, self.end.year + 1))
 
-    years = list(range(self.start.year, self.end.year + 1))
-
-    self.back_scrape_iterable = years
+        self.back_scrape_iterable = years
