@@ -99,36 +99,17 @@ class Site(OpinionSiteLinear):
 
     def extract_court_name(self, text: str) -> str:
         """Extract the lower court name from the provided opinion text."""
-        # Try regex patterns first
+
         patterns = [
             r"Appeal by Permission from.+\n(.+)\n",
             r"Appeal from the (.+)",
+            r".+\bv\..+\n(?P<lower_court>.*(\n.*)?)\n.+No\.",
         ]
 
         for pattern in patterns:
             match = re.search(pattern, text[:1000])
             if match:
                 return match.group(1).strip()
-
-        # Fallback: find line between case name (with "v.") and case number
-        lines = [line.strip() for line in text.splitlines() if line.strip()]
-
-        try:
-            case_idx = next(
-                i for i, line in enumerate(lines) if re.search(r"\bv\.", line)
-            )
-            no_idx = next(
-                i
-                for i in range(case_idx + 1, len(lines))
-                if lines[i].startswith("No.")
-            )
-
-            # Return the last non-empty line before "No." line
-            for i in range(no_idx - 1, case_idx, -1):
-                if lines[i]:
-                    return lines[i]
-        except StopIteration:
-            pass
 
         return ""
 
