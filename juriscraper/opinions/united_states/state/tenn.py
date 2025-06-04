@@ -51,10 +51,12 @@ class Site(OpinionSiteLinear):
             ]
 
             judge = (
-                rows[2].split(": ")[1] if "judge" in rows[2].lower() else ""
+                rows[2].split(": ")[1] if "Authoring Judge" in rows[2] else ""
             )
             lower_court_judge = (
-                rows[3].split(": ")[1] if "judge" in rows[3].lower() else ""
+                rows[3].split(": ")[1]
+                if "Trial Court Judge" in rows[3]
+                else ""
             )
             summary = rows[-1] if "Judge" not in rows[-1] else ""
             per_curiam = False
@@ -96,62 +98,39 @@ class Site(OpinionSiteLinear):
         return result
 
     def extract_court_name(self, text: str) -> str:
-        """
-        Extract the lower court name from the provided opinion text.
-
-        :param text: The full text of the opinion document.
-        :return: The extracted lower court name as a string, or an empty string if not found.
-        """
-        lines = [
-            line.strip() for line in text.split("\n")[:15] if line.strip()
+        """Extract the lower court name from the provided opinion text."""
+        # Try regex patterns first
+        patterns = [
+            r"Appeal by Permission from.+\n(.+)\n",
+            r"Appeal from the (.+)",
         ]
 
-        # Find the last line with 'v.' (case name)
-        v_line_index = -1
-        for i, line in enumerate(lines):
-            if re.search(r"\s+v\.\s+", line, re.IGNORECASE):
-                v_line_index = i
-        if v_line_index == -1:
-            return ""
+        for pattern in patterns:
+            match = re.search(pattern, text[:1000])
+            if match:
+                return match.group(1).strip()
 
-        start_index = v_line_index + 1
+        # Fallback: find line between case name (with "v.") and case number
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
 
-        # Try to find a line with a court keyword or a likely court name
-        court_keywords = [
-            "appeal",
-            "direct appeal",
-            "circuit court",
-            "chancery court",
-            "criminal court",
-        ]
-        for i in range(start_index, len(lines)):
-            line_lower = lines[i].lower()
-            if any(keyword in line_lower for keyword in court_keywords):
-                start_index = i
-                break
-            if lines[i].isupper() and len(lines[i]) > 10:
-                continue
-            start_index = i
-            break
+        try:
+            case_idx = next(
+                i for i, line in enumerate(lines) if re.search(r"\bv\.", line)
+            )
+            no_idx = next(
+                i
+                for i in range(case_idx + 1, len(lines))
+                if lines[i].startswith("No.")
+            )
 
-        # Find the end index (before the docket number)
-        end_index = len(lines)
-        for i in range(start_index, len(lines)):
-            if re.search(r"\bNo\.\s*[A-Za-z0-9]", lines[i]):
-                end_index = i
-                break
+            # Return the last non-empty line before "No." line
+            for i in range(no_idx - 1, case_idx, -1):
+                if lines[i]:
+                    return lines[i]
+        except StopIteration:
+            pass
 
-        # Collect lines for the court info
-        extracted_lines = [
-            line
-            for line in lines[start_index:end_index]
-            if line and not line.startswith("_")
-        ]
-        court_info = re.sub(r"\s+", " ", " ".join(extracted_lines))
-
-        if "from the" in court_info:
-            return court_info.split("from the", 1)[1].strip()
-        return court_info
+        return ""
 
     def extract_type(self, type_raw: str) -> str:
         """
