@@ -143,7 +143,7 @@ class Site(OpinionSiteLinear):
                 self._download()
                 self._process_html()
 
-    def extract_type(self, url: str) -> tuple[OpinionType, bool]:
+    def extract_type(self, url: str) -> tuple[str, bool]:
         """
 
         Rules:
@@ -161,7 +161,7 @@ class Site(OpinionSiteLinear):
             op_type = OpinionType.CONCURRENCE
         else:
             op_type = OpinionType.MAJORITY
-        return (op_type, per_curiam)
+        return (op_type.value, per_curiam)
 
     def make_backscrape_iterable(self, kwargs):
         """
