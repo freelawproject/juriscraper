@@ -76,9 +76,9 @@ def get_module_by_name(name):
                 return juriscraper_module.Site()
 
 
-def site_yielder(iterable, mod, save_response_fn=None):
+def site_yielder(iterable, mod, kwargs=None):
     for i in iterable:
-        site = mod.Site(save_response_fn=save_response_fn)
+        site = mod.Site(**kwargs)
         try:
             site._download_backwards(i)
             yield site
