@@ -50,10 +50,10 @@ class Site(OpinionSiteLinear):
             self.html = super()._download(request_dict)
             self.url = self.html.xpath(
                 '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
-            )[-2]
+            )[-1]
             self.current_opinion_date = self.html.xpath(
                 '//*[@id="MainContent"]/div/div/div/ul/li/a/text()'
-            )[-2]
+            )[-1]
             return super()._download(request_dict)
         else:
             if self.test_mode_enabled():
