@@ -6,13 +6,7 @@ Court Short Name: Tenn.
 
 import re
 
-from juriscraper.lib.type_utils import (
-    CONCURRENCE,
-    CONCURRING_IN_PART_AND_DISSENTING_IN_PART,
-    DISSENT,
-    MAJORITY,
-    types_mapping,
-)
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -167,12 +161,12 @@ class Site(OpinionSiteLinear):
         :return: Standardized type string from types_mapping
         """
         if "concurring" in type_raw:
-            type_key = CONCURRENCE
+            op_type = OpinionType.CONCURRENCE
         elif "in part" in type_raw:
-            type_key = CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+            op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
         elif "dissenting" in type_raw:
-            type_key = DISSENT
+            op_type = OpinionType.DISSENT
         else:
-            type_key = MAJORITY
+            op_type = OpinionType.MAJORITY
 
-        return types_mapping[type_key]
+        return op_type.value
