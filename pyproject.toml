@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "juriscraper"
-version = "2.6.73"
+version = "2.6.74"
 description = "An API to scrape American court websites for metadata."
 readme = "README.rst"
 keywords = [ "scraping", "legal", "pacer" ]
@@ -63,8 +63,7 @@ dev = [
 
 
 [tool.setuptools.packages.find]
-exclude = ["juriscraper.tests*", "*egg-info"]
-
+exclude = ["tests*"]
 
 [tool.ruff]
 line-length = 79

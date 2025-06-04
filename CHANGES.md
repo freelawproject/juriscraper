@@ -25,7 +25,7 @@ Fixes:
 
 ## Current
 
-**2.6.73 - 2025-06-04**
+**2.6.74 - 2025-06-04**
 
 - Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
 timestamped opinions and check if `Site.cleanup_content` is working #1392
