@@ -17,8 +17,10 @@
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 #  - 2025-05-30; Updated by lmanzur: get opinions from the orders on causes page
-
+import re
 from datetime import date, datetime
+
+from lxml import etree
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.type_utils import OpinionType
@@ -28,7 +30,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     base_url = "https://www.txcourts.gov/supreme/orders-opinions/{}/"
     dispo_xpath = ".//span[contains(@class, 'a70')]/node()[following-sibling::br]/descendant-or-self::text()"
-    judge_xpath = ".//span[contains(@class, 'a70')]/br[1]/following-sibling::node()/descendant-or-self::text()"
     first_opinion_date = date(2014, 10, 3)
     current_opinion_date = None
 
@@ -66,6 +67,7 @@ class Site(OpinionSiteLinear):
         )
         for row in pdf_table_rows:
             links = row.xpath('.//a[contains(@href, ".pdf")]')
+            opinions_counter = 1
             for link in links:
                 url, name, docket = None, None, None
                 docket_paths = row.xpath(
@@ -93,18 +95,40 @@ class Site(OpinionSiteLinear):
                 dispositions = row.xpath(self.dispo_xpath)
                 if not dispositions:
                     continue
-                judges_str = "".join(row.xpath(self.judge_xpath))
-                judge = "" if per_curiam else judges_str.split("delivered")[0]
+
+                span = row.xpath('.//span[@class="a70"]')[0]
+                html_content = etree.tostring(
+                    span, encoding="unicode", method="html"
+                )
+                # Split by <br><br> patterns
+                segments = re.split(r"<br\s*/?>\s*<br\s*/?>", html_content)
+
+                # Clean up HTML tags from each segment
+                clean_segments = []
+                for segment in segments:
+                    # Remove HTML tags but keep link text
+                    clean_text = re.sub(r"<[^>]+>", "", segment)
+                    if clean_text.strip():
+                        clean_segments.append(clean_text.strip())
+                judges_str = clean_segments[opinions_counter]
+                judge = (
+                    ""
+                    if per_curiam
+                    else re.split(
+                        r"filed|delivered", judges_str, flags=re.IGNORECASE
+                    )[0]
+                )
                 joined_by = (
-                    judges_str.split("in which")[-1]
+                    judges_str.split("in which", 1)[1]
                     if "in which" in judges_str
                     else ""
                 )
                 joined_by = (
                     joined_by.replace("joined.", "")
-                    .replace("and", ",")
+                    .replace("in which", "")
+                    .replace("and", "")
                     .replace(".", "")
-                    .replace(" , ", ",")
+                    .replace(" , ", ", ")
                     .strip()
                 )
 
@@ -121,6 +145,7 @@ class Site(OpinionSiteLinear):
                         "joined_by": joined_by,
                     }
                 )
+                opinions_counter += 1
 
     def _download_backwards(self, target_date: date) -> None:
         """Method used by backscraper to download historical records
