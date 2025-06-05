@@ -111,6 +111,7 @@ class Site(OpinionSiteLinear):
         self.target_date = target_date
         self.html = self._download()
         self._process_html()
+
     def make_backscrape_iterable(self, kwargs):
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(
