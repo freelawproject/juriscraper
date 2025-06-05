@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.is_backscrape = False
 
-    def _download(self, request_dict=None) -> any | None:
+    def _download(self, request_dict=None):
         """
         Downloads the HTML content for the current opinion page.
 
