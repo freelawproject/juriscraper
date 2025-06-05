@@ -12,8 +12,8 @@ from datetime import date, datetime
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.type_utils import OpinionType
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -164,7 +164,9 @@ class Site(OpinionSiteLinear):
         opinion = {}
 
         # Extract author information
-        match = re.search(r"\*{6,}\s*([A-Za-z .\-']+)\s*\*{6,}", scraped_text, re.IGNORECASE)
+        match = re.search(
+            r"\*{6,}\s*([A-Za-z .\-']+)\s*\*{6,}", scraped_text, re.IGNORECASE
+        )
         author = match.group(1).strip() if match else ""
         if author:
             opinion["author_str"] = titlecase(author)
@@ -173,7 +175,9 @@ class Site(OpinionSiteLinear):
             parts = re.split(r"\*{7,}", scraped_text, maxsplit=1)
             text = parts[1].lower() if len(parts) > 1 else ""
             if "in part" in text:
-                opinion_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+                opinion_type = (
+                    OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+                )
             elif "concurs" in text or "concurring" in text:
                 opinion_type = OpinionType.CONCURRENCE
             elif "dissents" in text or "dissenting" in text:
@@ -183,12 +187,14 @@ class Site(OpinionSiteLinear):
         opinion["type"] = opinion_type.value if opinion_type else ""
 
         # Extract court panel judges
-        court_panel_match = re.search(r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL)
+        court_panel_match = re.search(
+            r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL
+        )
         if court_panel_match:
             judges = court_panel_match.group(1)
-            judges = re.sub(r'Judge\s+', '', judges)
-            judges = re.sub(r'\s+', ' ', judges)
-            judges = judges.replace(',', ';').strip()
+            judges = re.sub(r"Judge\s+", "", judges)
+            judges = re.sub(r"\s+", " ", judges)
+            judges = judges.replace(",", ";").strip()
             if judges:
                 opinion_cluster["judges"] = judges
 
