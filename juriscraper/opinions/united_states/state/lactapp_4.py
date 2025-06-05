@@ -26,7 +26,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.la4th.org/Default.aspx"
         self.search_is_configured = False
-        self.target_date = datetime(2025, 5, 1)
+        self.target_date = date.today()
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
         self.parameters = {}
@@ -99,10 +99,18 @@ class Site(OpinionSiteLinear):
             self.parameters[name] = value
 
     def _download_backwards(self, target_date: date) -> None:
+        """
+        Download and process opinions for a given target date.
+
+        Args:
+            target_date (date): The date for which to download opinions.
+
+        This method sets the target date, downloads the corresponding HTML,
+        and processes the HTML to extract case details.
+        """
         self.target_date = target_date
         self.html = self._download()
         self._process_html()
-
     def make_backscrape_iterable(self, kwargs):
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(
@@ -110,6 +118,19 @@ class Site(OpinionSiteLinear):
         )
 
     def _download(self, request_dict=None):
+        """
+        Download the HTML content for the current search state.
+
+        Handles the initial GET request to configure the search, then
+        updates date filters and hidden inputs for a POST request to
+        retrieve the filtered results. Returns the downloaded HTML.
+
+        Args:
+            request_dict (dict, optional): Additional request parameters.
+
+        Returns:
+            lxml.html.HtmlElement: The downloaded HTML content.
+        """
         if not self.test_mode_enabled():
             if not self.search_is_configured:
                 self.method = "GET"
