@@ -13,8 +13,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.type_utils import types_mapping, MAJORITY, \
-    CONCURRING_IN_PART_AND_DISSENTING_IN_PART, CONCURRENCE, DISSENT
+from juriscraper.lib.type_utils import OpinionType
 
 
 class Site(OpinionSiteLinear):
@@ -148,19 +147,19 @@ class Site(OpinionSiteLinear):
         author = match.group(1).strip() if match else ""
         if author:
             opinion["author_str"] = titlecase(author)
-            opinion_type = MAJORITY
+            opinion_type = OpinionType.MAJORITY
         else:
             parts = re.split(r"\*{7,}", scraped_text, maxsplit=1)
             text = parts[1].lower() if len(parts) > 1 else ""
             if "in part" in text:
-                opinion_type = CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+                opinion_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
             elif "concurs" in text or "concurring" in text:
-                opinion_type = CONCURRENCE
+                opinion_type = OpinionType.CONCURRENCE
             elif "dissents" in text or "dissenting" in text:
-                opinion_type = DISSENT
+                opinion_type = OpinionType.DISSENT
             else:
                 opinion_type = None
-        opinion["type"] = types_mapping.get(opinion_type, "")
+        opinion["type"] = opinion_type.value if opinion_type else ""
 
         # Extract court panel judges
         court_panel_match = re.search(r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL)
