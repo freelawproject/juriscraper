@@ -9,23 +9,19 @@ History:
 """
 
 import re
-
-from lxml.html import fromstring
+from datetime import datetime
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.test_utils import MockRequest
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     start_year = 1997
-    current_year = 2024
+    current_year = datetime.today().year
     court = "sc"
     court_number = 1
     base_url = "http://appellate.nccourts.org/opinion-filings/?c={}&year={}"
-    headnote_test_url = (
-        "tests/examples/opinions/united_states/nc_headnote.html"
-    )
+
     row_xpath = "//span[span[@class='title']] | //td[span[@class='title']]"
     title_regex = r"\((?P<docket>[\dA-Z-]+)\s+- (?P<status>(Unp|P)ublished)"
     collect_summary = True
@@ -50,71 +46,27 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         """
         Process the HTML content of the court opinions page and extract case details.
-
-        Iterates over each row in the HTML, extracting the title, link, summary, headnote,
-        docket, status, author, per curiam status, date, and citation for each opinion.
-        Handles cases where opinions may be withdrawn (no link), and parses additional
-        information from the headnote HTML if available.
-
-        Appends a dictionary of extracted case data to self.cases for each valid row.
         """
         for row in self.html.xpath(self.row_xpath):
             title = row.xpath("string(span[@class='title'])")
-
-            link = row.xpath("span[@class='title']/@onclick")
-            if not link:
-                # some opinions may be withdrawn
-                logger.warning("No link for row %s", title)
-                continue
-
-            url = link[0].split('("')[1].strip('")')
-
+            links = row.xpath("span[@class='title']/@onclick")
             summary = (
                 row.xpath("string(span[@class='desc'])")
                 if self.collect_summary
                 else ""
             )
-            headnote = (
-                ""
-                if self.collect_summary
-                else row.xpath("string(span[@class='desc'])")
+            if not links:
+                logger.warning("No link for row %s", title)
+                continue
+            url = links[0][13:-2].replace("http:", "https:")
+            m = re.search(
+                r"(?P<name>.*),?\s?(?P<cite>\d+ NC \d+)? \((?P<docket>.*) - (?P<status>.*)\)",
+                title,
             )
-
-            url = url.replace("http:", "https:")
-            divs = self.headnote_html.xpath(
-                f'(//a[@href="{url}"]/ancestor::p)[1]'
-            )
-            if divs:
-                p_elt = divs[0]
-                all_text = p_elt.xpath("text()")
-
-                summary = "".join(
-                    text.replace("—", "")
-                    for text in all_text
-                    if not (text.startswith("<b>") or text.startswith("<a"))
-                ).strip()
-                headnote = p_elt.xpath("./b//text()")[0]
-
-            match = re.search(self.title_regex, title)
-            name = title[: match.start()].strip(" ,")
-
-            state_cite = ""
-            if cite_match := re.search(self.state_cite_regex, name):
-                state_cite = cite_match.group(0)
-                name = name[: cite_match.start()].strip(" ,")
-
-            docket = match.group("docket")
-            status = match.group("status")
-
+            name, citation, docket, status = m.groups()
             author = row.xpath("string(span[@class='author']/i)").strip()
-            per_curiam = False
-            if author.lower() == "per curiam":
-                per_curiam = True
-                author = ""
-
-            # pick the last preceding-sibling, the most recent date block
+            per_curiam = author == "Per Curiam"
             date_block = row.xpath(self.date_xpath)[-1].text_content()
-
             if match := re.search(self.date_regex, date_block):
                 date = match.group("date")
             else:
@@ -122,19 +74,17 @@ class Site(OpinionSiteLinear):
                 date = self.secondary_date_regex.search(date_block).group(
                     "date"
                 )
-
             self.cases.append(
                 {
-                    "author": author,
                     "per_curiam": per_curiam,
-                    "summary": summary,
-                    "headnote": headnote,
-                    "status": status,
+                    "author": "" if per_curiam else author,
                     "docket": docket,
+                    "status": status,
                     "name": name,
                     "url": url,
                     "date": date,
-                    "citation": state_cite,
+                    "summary": summary,
+                    "citation": citation or "",
                 }
             )
 
@@ -146,6 +96,7 @@ class Site(OpinionSiteLinear):
         """
         self.url = self.base_url.format(self.court, year)
         self.html = self._download()
+        self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
@@ -163,33 +114,3 @@ class Site(OpinionSiteLinear):
         end = int(end) + 1 if end else self.current_year
 
         self.back_scrape_iterable = range(start, end)
-
-    def _download(self, request_dict=None):
-        """
-        Download and parse the headnote HTML for the current court and year.
-
-        This method fetches the digested index page for the specified court and year,
-        parses the HTML to extract headnote information, and stores it in `self.headnote_html`.
-        If test mode is enabled, it uses a mock request and a test HTML file.
-
-        Args:
-            request_dict (dict, optional): Additional request parameters. Defaults to None.
-
-        Returns:
-            The result of the superclass's _download method.
-        """
-        if request_dict is None:
-            request_dict = {}
-
-        if self.html is None:
-            url = f"https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber={self.court_number}&sFilingYear={self.current_year}"
-
-        if self.test_mode_enabled():
-            self.request["url"] = self.headnote_test_url
-            r = self.request["response"] = MockRequest(
-                url=self.headnote_test_url
-            ).get()
-        else:
-            r = self.request["session"].get(url)
-        self.headnote_html = fromstring(r.text)
-        return super()._download(request_dict)

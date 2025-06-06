@@ -21,9 +21,5 @@ class Site(nc.Site):
     secondary_date_regex = re.compile(
         r"(?P<date>\d[\d \w]+)[\t\xa0\n]+- Rule 30e", flags=re.MULTILINE
     )
-
     state_cite_regex = r"\d+ NC App \d+"
     collect_summary = False
-    headnote_test_url = (
-        "tests/examples/opinions/united_states/ncctapp_headnote.html"
-    )
