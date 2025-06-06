@@ -901,18 +901,30 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.lactapp_4": [
             (
                 """PLAQUEMINES PORT                         *       NO. 2024-CA-0614\nHARBOR & TERMINAL\nDISTRICT                                 *\n                                                 COURT OF APPEAL\nVERSUS                                   *\n                                                 FOURTH CIRCUIT\nTUAN NGUYEN                              *\n                                                 STATE OF LOUISIANA\n                                   *******\n\n\n\n                               APPEAL FROM\n                   25TH JDC, PARISH OF PLAQUEMINES\n                          NO. 68-734, DIVISION “A”\n                          Honorable Kevin D. Conner\n                                  ******\n                          Judge Monique G. Morial\n                                  ******\n(Court composed of Judge Daniel L. Dysart, Judge Rosemary Ledet, Judge Tiffany\nGautier Chase, Judge Nakisha Ervin-Knott, Judge Monique G. Morial)""",
-                {"Docket": {
-                    "panel_str": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge TiffanyGautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"},
-                 "Opinion": {"author_str": "Judge Monique G. Morial",
-                             "type": "020lead"}, "OpinionCluster": {
-                    "judges": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge TiffanyGautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"}}
+                {
+                    "Docket": {
+                        "panel_str": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge TiffanyGautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"
+                    },
+                    "Opinion": {
+                        "author_str": "Judge Monique G. Morial",
+                        "type": "020lead",
+                    },
+                    "OpinionCluster": {
+                        "judges": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge TiffanyGautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"
+                    },
+                },
             ),
             (
                 """      STERLING DOUCETTE, * NO. 2024sCAs0585\nDAVID NIXON, AND LEON\nRICHARD * COURT OF APPEAL\n\nVERSUS * FOURTH CIRCUIT\n\nEASTOVER PROPERTY * STATE OF LOUISIANA\nOWNERS" ASSOCIATION,\nINC. AND EASTOVER *\nNEIGHBORHOOD\nIMPROVEMENT AND *\nSECURITY DISTRICT *******\n\n\nJCL LOBRANO, J., CONCURS IN THE RESULT""",
-                {"Docket": {}, "Opinion": {"author_str": "Lobrano",
-                                           "type": "030concurrence"},
-                 "OpinionCluster": {}}
-              ),
+                {
+                    "Docket": {},
+                    "Opinion": {
+                        "author_str": "Lobrano",
+                        "type": "030concurrence",
+                    },
+                    "OpinionCluster": {},
+                },
+            ),
         ],
     }
 

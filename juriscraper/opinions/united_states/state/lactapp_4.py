@@ -55,13 +55,15 @@ class Site(OpinionSiteLinear):
                 ".//p/a[contains(text(), 'View Document')]/@href"
             )[0]
 
-            self.cases.append({
-                "docket": docket,
-                "name": titlecase(name),
-                "disposition": titlecase(decree),
-                "date": date,
-                "url": download_url
-            })
+            self.cases.append(
+                {
+                    "docket": docket,
+                    "name": titlecase(name),
+                    "disposition": titlecase(decree),
+                    "date": date,
+                    "url": download_url,
+                }
+            )
 
     def update_parameters(self) -> None:
         """Set year and month values from `self.search_date`
@@ -73,10 +75,12 @@ class Site(OpinionSiteLinear):
             self.search_date.month,
         )
 
-        self.parameters.update({
-            "ctl00$Main$ddlOpMonth": self.search_date.strftime("%B"),
-            "ctl00$Main$ddlOpYear": self.search_date.strftime("%Y"),
-        })
+        self.parameters.update(
+            {
+                "ctl00$Main$ddlOpMonth": self.search_date.strftime("%B"),
+                "ctl00$Main$ddlOpYear": self.search_date.strftime("%Y"),
+            }
+        )
 
         for input in self.html.xpath('//input[@type="hidden"][@name]'):
             name = input.get("name")
@@ -141,13 +145,9 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-        metadata = {
-            "OpinionCluster": {},
-            "Opinion": {},
-            "Docket": {}
-        }
+        metadata = {"OpinionCluster": {}, "Opinion": {}, "Docket": {}}
         pattern = r"^\s+[*]{6,}\n(?P<judge>.*)\s+[*]{6,}$"
-        pattern2 = "\s+\*{5,}(?:.*\n)*?\s+(\s+(?P<judge>.*), J\..*(RESULT|REASON|CONCUR))"
+        pattern2 = "\\s+\\*{5,}(?:.*\n)*?\\s+(\\s+(?P<judge>.*), J\\..*(RESULT|REASON|CONCUR))"
         pattern3 = r"\(Court composed of (?P<judges>.*?)\)"
 
         m = re.search(pattern, scraped_text, flags=re.MULTILINE)
@@ -155,27 +155,41 @@ class Site(OpinionSiteLinear):
         m3 = re.search(pattern3, scraped_text, flags=re.DOTALL)
 
         if m:
-            metadata["Opinion"]["author_str"] = titlecase(m.groups()[0].strip().replace(
-                "\n", "").capitalize())
+            metadata["Opinion"]["author_str"] = titlecase(
+                m.groups()[0].strip().replace("\n", "").capitalize()
+            )
             metadata["Opinion"]["type"] = OpinionType.MAJORITY.value
 
         elif m2:
-            metadata["Opinion"]["author_str"] = titlecase(m2.group("judge").split(" ")[-1].strip())
+            metadata["Opinion"]["author_str"] = titlecase(
+                m2.group("judge").split(" ")[-1].strip()
+            )
 
             match = re.search(r"\*{7,}\s*(.*)", scraped_text, flags=re.DOTALL)
             text = match.group(1).lower() if match else ""
             if "in part" in text:
-                metadata["Opinion"][
-                    "type"] = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
+                metadata["Opinion"]["type"] = (
+                    OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
+                )
             elif "concurs" in text or "concurring" in text:
                 metadata["Opinion"]["type"] = OpinionType.CONCURRENCE.value
             elif "dissents" in text or "dissenting" in text:
                 metadata["Opinion"]["type"] = OpinionType.DISSENT.value
 
         if m3:
-            metadata["OpinionCluster"]["judges"] = m3.groups()[0].strip().replace(
-                "\n", "").replace(", ", "; ").replace(",", "; ")
-            metadata["Docket"]["panel_str"] = m3.groups()[0].strip().replace(
-                "\n", "").replace(", ", "; ").replace(",", "; ")
+            metadata["OpinionCluster"]["judges"] = (
+                m3.groups()[0]
+                .strip()
+                .replace("\n", "")
+                .replace(", ", "; ")
+                .replace(",", "; ")
+            )
+            metadata["Docket"]["panel_str"] = (
+                m3.groups()[0]
+                .strip()
+                .replace("\n", "")
+                .replace(", ", "; ")
+                .replace(",", "; ")
+            )
 
         return metadata
