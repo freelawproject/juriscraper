@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def set_url(
-            self, start: Optional[date] = None, end: Optional[date] = None
+        self, start: Optional[date] = None, end: Optional[date] = None
     ) -> None:
         """Sets URL with date filters in query string
 
@@ -39,7 +39,7 @@ class Site(OpinionSiteLinear):
         """
 
         if not start:
-            start = (date.today() - relativedelta(months=1))
+            start = date.today() - relativedelta(months=1)
             end = date.today()
 
         params = {
@@ -51,13 +51,14 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
 
     def _process_html(self):
-
-        for row in self.html.xpath('//table[@id="searchResultsTable"]//tbody/tr'):
+        for row in self.html.xpath(
+            '//table[@id="searchResultsTable"]//tbody/tr'
+        ):
             date_filed, docket_number, case_name, court, status = row.xpath(
                 ".//td/text()"
             )
 
-            cleaned_case_name = re.sub(r'\s+', ' ', case_name).strip()
+            cleaned_case_name = re.sub(r"\s+", " ", case_name).strip()
 
             url = row.xpath(".//td/a")[0].get("href")
             self.cases.append(
