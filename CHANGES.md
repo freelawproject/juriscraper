@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Update kan and kanctapp scrapers
 
 Fixes:
 -
