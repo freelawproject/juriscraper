@@ -34,6 +34,7 @@ class Site(OpinionSiteLinear):
     link_xp = '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
     date_xp = '//*[@id="MainContent"]/div/div[1]/div/text()'
     judge_xp = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
+    days_interval = 365
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -166,15 +167,11 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
+        super().make_backscrape_iterable(kwargs)
 
-        start = (
-            dt.strptime(start, "%Y/%m/%d").date()
-            if start
-            else self.first_opinion_date
-        )
-        end = dt.strptime(end, "%Y/%m/%d").date() if end else date.today()
+        # use the parsed values to compute the actual iterable
+        start = self.back_scrape_iterable[0][0]
+        end = self.back_scrape_iterable[-1][-1]
 
         dates = []
         for year in list(range(start.year, end.year + 1)):
