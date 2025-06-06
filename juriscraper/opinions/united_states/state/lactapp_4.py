@@ -106,7 +106,7 @@ class Site(OpinionSiteLinear):
         Prepares the iterable for backscraping by ensuring that each element
         represents a unique year and month combination.
 
-        param kwargs: if the following keys are present, use them
+        :param kwargs if the following keys are present, use them
             backscrape_start: str in "%Y/%m/%d" format ;
                             Default: self.first_opinion_date
             backscrape_end: str
@@ -123,11 +123,9 @@ class Site(OpinionSiteLinear):
         """
         Download the HTML content for the current search state.
 
-        Args:
-            request_dict (dict, optional): Additional request parameters.
+        :params request_dict (dict, optional): Additional request parameters.
 
-        Returns:
-            lxml.html.HtmlElement: The downloaded HTML content.
+        :return lxml.html.HtmlElement: The downloaded HTML content.
         """
         if not self.test_mode_enabled():
             if not self.html:
@@ -166,6 +164,7 @@ class Site(OpinionSiteLinear):
             )
 
             match = re.search(r"\*{7,}\s*(.*)", scraped_text, flags=re.DOTALL)
+
             text = match.group(1).lower() if match else ""
             if "in part" in text:
                 metadata["Opinion"]["type"] = (
