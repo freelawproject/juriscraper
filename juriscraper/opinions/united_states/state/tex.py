@@ -49,15 +49,9 @@ class Site(OpinionSiteLinear):
         """
         Downloads the HTML content for the current opinion page.
 
-        If not in backscrape mode and not in test mode, it first downloads the main page,
-        updates the URL to the latest opinion link, and then downloads that page.
-        Otherwise, it simply downloads the page at the current URL.
+        :params request_dict (dict, optional): Additional request parameters.
 
-        Args:
-            request_dict (dict, optional): Additional request parameters.
-
-        Returns:
-            The downloaded HTML content.
+        :return The downloaded HTML content.
         """
         if request_dict is None:
             request_dict = {}
@@ -73,15 +67,7 @@ class Site(OpinionSiteLinear):
         """
         Parses the HTML content of the current opinion page and extracts case details.
 
-        This method locates all PDF links representing opinions, then for each link:
-          - Finds the associated docket number and case title from preceding table rows.
-          - Extracts the disposition from the parent element.
-          - Attempts to identify the authoring judge using a regex.
-          - Determines if the opinion is per curiam.
-          - Appends a dictionary with all extracted information to self.cases.
-
-        Returns:
-            None
+        :return None
         """
         date = self.html.xpath(self.date_xp)[0].strip()
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
@@ -115,6 +101,16 @@ class Site(OpinionSiteLinear):
                     author = ""
                     per_curiam = True
 
+                lower_court_regex = r"from (?P<lower_court>.*)\s*\("
+                lower_court_match = re.search(
+                    lower_court_regex, title, flags=re.MULTILINE
+                )
+
+                lower_court_number_regex = r"\((?P<lower_court_number>[^,)]*)"
+                lower_court_number_match = re.search(
+                    lower_court_number_regex, title, flags=re.MULTILINE
+                )
+
                 self.cases.append(
                     {
                         "name": titlecase(title.split(";")[0]),
@@ -126,6 +122,16 @@ class Site(OpinionSiteLinear):
                         "per_curiam": per_curiam,
                         "judge": ", ".join(judges),
                         "author": author,
+                        "lower_court": lower_court_match.group(
+                            "lower_court"
+                        ).strip()
+                        if lower_court_match
+                        else "",
+                        "lower_court_number": lower_court_number_match.group(
+                            "lower_court_number"
+                        ).strip()
+                        if lower_court_number_match
+                        else "",
                     }
                 )
 
@@ -134,11 +140,9 @@ class Site(OpinionSiteLinear):
         """
         Determines the opinion type based on the PDF file name in the link.
 
-        Args:
-            link (etree.Element): The anchor element containing the PDF link.
+        :params link (etree.Element): The anchor element containing the PDF link.
 
-        Returns:
-            tuple[OpinionType, bool]: The opinion type, as defined in OpinionType.
+        :return tuple[OpinionType, bool]: The opinion type, as defined in OpinionType.
         """
         url = link.get("href")
         if url.endswith("pc.pdf"):
@@ -181,12 +185,9 @@ class Site(OpinionSiteLinear):
         """
         Downloads and processes opinions for a given year within a specified date range.
 
-        Args:
-            analysis_window (tuple): A tuple containing the year (int), start date (date), and end date (date).
+        :params analysis_window (tuple): A tuple containing the year (int), start date (date), and end date (date).
 
-        This method sets the scraper to backscrape mode, constructs the URL for the specified year,
-        and iterates through all opinion links on the page. For each link, it parses the date from the URL,
-        filters out links not within the specified date range, and processes the HTML for valid links.
+        :return None
         """
         self.is_backscrape = True
         year, start, end = analysis_window
