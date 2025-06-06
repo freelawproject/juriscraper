@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
-- New scraper `lactapp_4` for Lousiana Court of Appeals, Second Circuit
+- New scraper `lactapp_4` for Lousiana Court of Appeals, Fourth Circuit
 
 Fixes:
 -

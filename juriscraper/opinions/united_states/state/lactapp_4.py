@@ -1,4 +1,4 @@
-"""Scraper for Louisiana Court of Appeal, fourth Circuit
+"""Scraper for Louisiana Court of Appeal, Fourth Circuit
 CourtID: lactapp_4
 Court Short Name: La. Ct. App. 4th Cir.
 Author: Luis-manzur
@@ -9,6 +9,8 @@ History:
 import re
 from datetime import date, datetime
 
+from lxml.html import HtmlElement
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
@@ -17,19 +19,20 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    first_opinion_date = datetime(2019, 7, 17)
-    days_interval = 28  # ensure a tick for each month
-    date_regex = re.compile(r"\d{2}/\d{2}/\d{4}")
+    first_opinion_date = datetime(1992, 1, 1)
+    days_interval = 1
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.la4th.org/Default.aspx"
         self.search_is_configured = False
-        self.target_date = date.today()
+        self.search_date = datetime(2025, 5, 1)
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
-        self.parameters = {}
+        self.parameters = {
+            "__EVENTTARGET": "ctl00$Main$btnOpMonthYearSearch",
+        }
 
     def _process_html(self):
         """Process the HTML to extract case details."""
@@ -37,9 +40,6 @@ class Site(OpinionSiteLinear):
         # XPath for the opinion results
         opinion_results_xpath = "//div[contains(@class, 'opinion-result')]"
         results = self.html.xpath(opinion_results_xpath)
-
-        # Log the number of results found
-        logger.info("Found %d results on the page.", len(results))
 
         self.cases = []
         for result in results:
@@ -55,75 +55,69 @@ class Site(OpinionSiteLinear):
                 ".//p/a[contains(text(), 'View Document')]/@href"
             )[0]
 
-            # Clean and structure the extracted data
-            case = {
-                "docket": docket if docket else None,
-                "name": titlecase(name) if name else None,
-                "disposition": titlecase(decree) if decree else None,
-                "date": date if date else None,
-                "url": download_url if download_url else None,
-            }
+            self.cases.append({
+                "docket": docket,
+                "name": titlecase(name),
+                "disposition": titlecase(decree),
+                "date": date,
+                "url": download_url
+            })
 
-            self.cases.append(case)
-
-    def update_date_filters(self) -> None:
-        """Set year and month values from `self.target_date`
+    def update_parameters(self) -> None:
+        """Set year and month values from `self.search_date`
         into self.parameters for POST use
         """
         logger.info(
             "Scraping for year: %s - month: %s",
-            self.target_date.year,
-            self.target_date.month,
+            self.search_date.year,
+            self.search_date.month,
         )
 
-        month_name = self.target_date.strftime("%B")
+        self.parameters.update({
+            "ctl00$Main$ddlOpMonth": self.search_date.strftime("%B"),
+            "ctl00$Main$ddlOpYear": self.search_date.strftime("%Y"),
+        })
 
-        self.parameters.update(
-            {
-                "ctl00$Main$ddlOpMonth": month_name,
-                "ctl00$Main$ddlOpYear": str(self.target_date.year),
-                "__EVENTTARGET": "ctl00$Main$btnOpMonthYearSearch",
-                "__EVENTARGUMENT": "",
-            }
-        )
-
-        self.update_hidden_inputs()
-
-    def update_hidden_inputs(self) -> None:
-        """Parse form values characteristic of aspx sites,
-        and put them in self.parameters for POST use."""
         for input in self.html.xpath('//input[@type="hidden"][@name]'):
             name = input.get("name")
             value = input.get("value", "")
 
             self.parameters[name] = value
 
-    def _download_backwards(self, target_date: date) -> None:
+    def _download_backwards(self, search_date: date) -> None:
         """
-        Download and process opinions for a given target date.
+        Download and process HTML for a given target date.
 
-        Args:
-            target_date (date): The date for which to download opinions.
+        :param search_date (date): The date for which to download and process opinions.
 
-        This method sets the target date, downloads the corresponding HTML,
+        :return: None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
-        self.target_date = target_date
+        self.search_date = search_date
         self.html = self._download()
         self._process_html()
-    def make_backscrape_iterable(self, kwargs):
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """
+        Prepares the iterable for backscraping by ensuring that each element
+        represents a unique year and month combination.
+
+        param kwargs: if the following keys are present, use them
+            backscrape_start: str in "%Y/%m/%d" format ;
+                            Default: self.first_opinion_date
+            backscrape_end: str
+            days_interval: int; Default: self.days_interval
+
+        :return: None; sets self.back_scrape_iterable in place
+        """
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(
             self.back_scrape_iterable
         )
 
-    def _download(self, request_dict=None):
+    def _download(self, request_dict=None) -> HtmlElement:
         """
         Download the HTML content for the current search state.
-
-        Handles the initial GET request to configure the search, then
-        updates date filters and hidden inputs for a POST request to
-        retrieve the filtered results. Returns the downloaded HTML.
 
         Args:
             request_dict (dict, optional): Additional request parameters.
@@ -132,13 +126,11 @@ class Site(OpinionSiteLinear):
             lxml.html.HtmlElement: The downloaded HTML content.
         """
         if not self.test_mode_enabled():
-            if not self.search_is_configured:
-                self.method = "GET"
+            if not self.html:
                 self.html = super()._download()
                 self.search_is_configured = True
 
-            self.update_date_filters()
-            self.update_hidden_inputs()
+            self.update_parameters()
             self.method = "POST"
         return super()._download()
 
@@ -146,61 +138,44 @@ class Site(OpinionSiteLinear):
         """
         Extracts structured metadata from the provided opinion text.
 
-        Args:
-            scraped_text (str): The raw text content of a judicial opinion.
-
-        Returns:
-            dict: A dictionary containing extracted metadata, including:
-                - Opinion: Information about the opinion's author and type.
-                - OpinionCluster: Information about the panel of judges, if available.
-
-        Extraction details:
-            - Author: Detected by a pattern of asterisks surrounding the name.
-            - Opinion type: Determined by keywords in the text if author is not found.
-            - Judges: Extracted from a parenthetical listing the court panel.
+        :param scraped_text: The content of the document downloaded
+        :return: Metadata to be added to the case
         """
-        metadata = {}
-        opinion_cluster = {}
-        opinion = {}
+        metadata = {
+            "OpinionCluster": {},
+            "Opinion": {},
+            "Docket": {}
+        }
+        pattern = r"^\s+[*]{6,}\n(?P<judge>.*)\s+[*]{6,}$"
+        pattern2 = "\s+\*{5,}(?:.*\n)*?\s+(\s+(?P<judge>.*), J\..*(RESULT|REASON|CONCUR))"
+        pattern3 = r"\(Court composed of (?P<judges>.*?)\)"
 
-        # Extract author information
-        match = re.search(
-            r"\*{6,}\s*([A-Za-z .\-']+)\s*\*{6,}", scraped_text, re.IGNORECASE
-        )
-        author = match.group(1).strip() if match else ""
-        if author:
-            opinion["author_str"] = titlecase(author)
-            opinion_type = OpinionType.MAJORITY
-        else:
-            parts = re.split(r"\*{7,}", scraped_text, maxsplit=1)
-            text = parts[1].lower() if len(parts) > 1 else ""
+        m = re.search(pattern, scraped_text, flags=re.MULTILINE)
+        m2 = re.search(pattern2, scraped_text, flags=re.MULTILINE)
+        m3 = re.search(pattern3, scraped_text, flags=re.DOTALL)
+
+        if m:
+            metadata["Opinion"]["author_str"] = titlecase(m.groups()[0].strip().replace(
+                "\n", "").capitalize())
+            metadata["Opinion"]["type"] = OpinionType.MAJORITY.value
+
+        elif m2:
+            metadata["Opinion"]["author_str"] = titlecase(m2.group("judge").split(" ")[-1].strip())
+
+            match = re.search(r"\*{7,}\s*(.*)", scraped_text, flags=re.DOTALL)
+            text = match.group(1).lower() if match else ""
             if "in part" in text:
-                opinion_type = (
-                    OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
-                )
+                metadata["Opinion"][
+                    "type"] = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
             elif "concurs" in text or "concurring" in text:
-                opinion_type = OpinionType.CONCURRENCE
+                metadata["Opinion"]["type"] = OpinionType.CONCURRENCE.value
             elif "dissents" in text or "dissenting" in text:
-                opinion_type = OpinionType.DISSENT
-            else:
-                opinion_type = None
-        opinion["type"] = opinion_type.value if opinion_type else ""
+                metadata["Opinion"]["type"] = OpinionType.DISSENT.value
 
-        # Extract court panel judges
-        court_panel_match = re.search(
-            r"\(Court composed of (.*?)\)", scraped_text, re.DOTALL
-        )
-        if court_panel_match:
-            judges = court_panel_match.group(1)
-            judges = re.sub(r"Judge\s+", "", judges)
-            judges = re.sub(r"\s+", " ", judges)
-            judges = judges.replace(",", ";").strip()
-            if judges:
-                opinion_cluster["judges"] = judges
-
-        if opinion_cluster:
-            metadata["OpinionCluster"] = opinion_cluster
-        if opinion:
-            metadata["Opinion"] = opinion
+        if m3:
+            metadata["OpinionCluster"]["judges"] = m3.groups()[0].strip().replace(
+                "\n", "").replace(", ", "; ").replace(",", "; ")
+            metadata["Docket"]["panel_str"] = m3.groups()[0].strip().replace(
+                "\n", "").replace(", ", "; ").replace(",", "; ")
 
         return metadata
