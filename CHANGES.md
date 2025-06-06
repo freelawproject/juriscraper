@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- update `nc` scraper to OpinionSiteLinear and new website #1373
 
 Fixes:
 -
