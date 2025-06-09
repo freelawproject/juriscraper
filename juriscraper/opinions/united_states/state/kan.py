@@ -32,7 +32,6 @@ class Site(OpinionSiteLinearWebDriven):
         """
         if not self.test_mode_enabled():
             self.initiate_webdriven_session()
-        if not self.test_mode_enabled():
             self.url = "https://searchdro.kscourts.gov/Data/decisionsList"
             self.webdriver.get(self.url)
             self.html = fromstring(self.webdriver.page_source)
@@ -61,4 +60,4 @@ class Site(OpinionSiteLinearWebDriven):
             )
 
         if not self.test_mode_enabled():
-            self.webdriver.quit()
+            self.close_webdriver_session()
