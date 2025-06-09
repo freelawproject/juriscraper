@@ -73,68 +73,69 @@ class Site(OpinionSiteLinear):
         date = self.html.xpath(self.date_xp)[0].strip()
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
         for link in links:
-            if link.getprevious() is not None:
-                precedingTRs = link.xpath(
-                    'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
-                ) or link.xpath(
-                    'ancestor::tr/preceding-sibling::tr[td[@class="a54cl"]]'
-                )
-                docket, title, *_ = [
-                    x for x in precedingTRs[-1].xpath(".//text()") if x.strip()
-                ]
-                disposition = link.getparent().xpath(".//text()")[0]
-                judge_str = "".join(
-                    [
-                        x
-                        for x in [
-                            link.getprevious().tail,
-                            link.text,
-                            link.tail,
-                        ]
-                        if x
+            if link.getprevious() is None:
+                continue
+            precedingTRs = link.xpath(
+                'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
+            ) or link.xpath(
+                'ancestor::tr/preceding-sibling::tr[td[@class="a54cl"]]'
+            )
+            docket, title, *_ = [
+                x for x in precedingTRs[-1].xpath(".//text()") if x.strip()
+            ]
+            disposition = link.getparent().xpath(".//text()")[0]
+            judge_str = "".join(
+                [
+                    x
+                    for x in [
+                        link.getprevious().tail,
+                        link.text,
+                        link.tail,
                     ]
-                )
-                judges = re.findall(self.judge_xp, judge_str)
-                if judges:
-                    author = judges[0]
-                    per_curiam = False
-                else:
-                    author = ""
-                    per_curiam = True
+                    if x
+                ]
+            )
+            judges = re.findall(self.judge_xp, judge_str)
+            if judges:
+                author = judges[0]
+                per_curiam = False
+            else:
+                author = ""
+                per_curiam = True
 
-                lower_court_regex = r"from (?P<lower_court>.*)\s*\("
-                lower_court_match = re.search(
-                    lower_court_regex, title, flags=re.MULTILINE
-                )
+            lower_court_regex = r"from (?P<lower_court>.*)\s*\("
+            lower_court_match = re.search(
+                lower_court_regex, title, flags=re.MULTILINE
+            )
 
-                lower_court_number_regex = r"\((?P<lower_court_number>[^,)]*)"
-                lower_court_number_match = re.search(
-                    lower_court_number_regex, title, flags=re.MULTILINE
-                )
+            lower_court_number_regex = r"\((?P<lower_court_number>[^,)]*)"
+            lower_court_number_match = re.search(
+                lower_court_number_regex, title, flags=re.MULTILINE
+            )
 
-                self.cases.append(
-                    {
-                        "name": titlecase(title.split(";")[0]),
-                        "disposition": disposition,
-                        "url": link.get("href"),
-                        "docket": docket,
-                        "date": date,
-                        "type": self.extract_type(link),
-                        "per_curiam": per_curiam,
-                        "judge": ", ".join(judges),
-                        "author": author,
-                        "lower_court": lower_court_match.group(
-                            "lower_court"
-                        ).strip()
-                        if lower_court_match
-                        else "",
-                        "lower_court_number": lower_court_number_match.group(
-                            "lower_court_number"
-                        ).strip()
-                        if lower_court_number_match
-                        else "",
-                    }
-                )
+            self.cases.append(
+                {
+                    "name": titlecase(title.split(";")[0]),
+                    "disposition": disposition,
+                    "url": link.get("href"),
+                    "docket": docket,
+                    "date": date,
+                    "type": self.extract_type(link),
+                    "per_curiam": per_curiam,
+                    "judge": ", ".join(judges),
+                    "author": author,
+                    "lower_court": lower_court_match.group(
+                        "lower_court"
+                    ).strip()
+                    if lower_court_match
+                    else "",
+                    "lower_court_number": lower_court_number_match.group(
+                        "lower_court_number"
+                    ).strip()
+                    if lower_court_number_match
+                    else "",
+                }
+            )
 
     @staticmethod
     def extract_type(link: etree.Element) -> str:
@@ -143,16 +144,16 @@ class Site(OpinionSiteLinear):
 
         :params link (etree.Element): The anchor element containing the PDF link.
 
-        :return tuple[OpinionType, bool]: The opinion type, as defined in OpinionType.
+        :return str: The opinion type as a string.
         """
-        url = link.get("href")
-        if url.endswith("pc.pdf"):
+        text = link.text
+        if "per curiam" in text.lower():
             op_type = OpinionType.UNANIMOUS
-        elif url.endswith("cd.pdf"):
+        elif "in part" in text.lower():
             op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
-        elif url.endswith("d.pdf"):
+        elif "dissenting" in text.lower():
             op_type = OpinionType.DISSENT
-        elif url.endswith("c.pdf"):
+        elif "concurring" in text.lower():
             op_type = OpinionType.CONCURRENCE
         else:
             op_type = OpinionType.MAJORITY
