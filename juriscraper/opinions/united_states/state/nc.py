@@ -11,73 +11,56 @@ History:
 import re
 from datetime import datetime
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    start_year = 1997
+    start_year = 1998
     current_year = datetime.today().year
     court = "sc"
     court_number = 1
-    base_url = "http://appellate.nccourts.org/opinion-filings/?c={}&year={}"
-
     row_xpath = "//span[span[@class='title']] | //td[span[@class='title']]"
-    title_regex = r"\((?P<docket>[\dA-Z-]+)\s+- (?P<status>(Unp|P)ublished)"
-    collect_summary = True
-
-    # in the browser inspector the tr-td containers do not appear for `nc`
-    # but they do exist in the source inspected as text
-    date_xpath = (
-        "../../preceding-sibling::tr//strong[contains(text()[1], 'Filed:')] "
-    )
+    date_xpath = "../../preceding-sibling::tr//strong[contains(text()[1], 'Filed:')] | ../preceding-sibling::tr/td[contains(text(), 'Rule 30e')]"
     date_regex = r"Filed: (?P<date>[\d\w ]+)"
-    secondary_date_regex = None
-
-    # For `nc` opinions (last available in 2022, as of April 2025)
-    state_cite_regex = r"\d+ NC \d+"
+    coa_rgx = re.compile(
+        r"(?P<date>\d[\d \w]+)[\t\xa0\n]+- Rule 30e", flags=re.M
+    )
+    pattern = r"(?P<name>.*?)(?:[\s,]+\s*(?P<cite>\d+\s+NC(?:\s+App)?\s+\d+))?\s*\(\s*(?P<docket>[^\s]+)\s*-\s*(?P<status>[^)]+)\s*\)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.base_url = (
+            "https://appellate.nccourts.org/opinion-filings/?c={}&year={}"
+        )
         self.url = self.base_url.format(self.court, self.current_year)
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
-        """
-        Process the HTML content of the court opinions page and extract case details.
+        """Process the html
+
+        :return: None
         """
         for row in self.html.xpath(self.row_xpath):
             title = row.xpath("string(span[@class='title'])")
             links = row.xpath("span[@class='title']/@onclick")
-            summary = (
-                row.xpath("string(span[@class='desc'])")
-                if self.collect_summary
-                else ""
-            )
+            summary = row.xpath("string(span[@class='desc'])")
             if not links:
                 logger.warning("No link for row %s", title)
                 continue
             url = links[0][13:-2].replace("http:", "https:")
-            m = re.search(
-                r"(?P<name>.*),?\s?(?P<cite>\d+ NC \d+)? \((?P<docket>.*) - (?P<status>.*)\)",
-                title,
-            )
+            m = re.search(self.pattern, title)
             name, citation, docket, status = m.groups()
             author = row.xpath("string(span[@class='author']/i)").strip()
             per_curiam = author == "Per Curiam"
-            date_block = row.xpath(self.date_xpath)[-1].text_content()
-            if match := re.search(self.date_regex, date_block):
-                date = match.group("date")
-            else:
-                # # for ncctapp unpublished opinions
-                date = self.secondary_date_regex.search(date_block).group(
-                    "date"
-                )
+            date = self.extract_date(row)
             self.cases.append(
                 {
                     "per_curiam": per_curiam,
-                    "author": "" if per_curiam else author,
+                    "author": author if not per_curiam else "",
                     "docket": docket,
                     "status": status,
                     "name": name,
@@ -87,6 +70,18 @@ class Site(OpinionSiteLinear):
                     "citation": citation or "",
                 }
             )
+
+    def extract_date(self, row: html.HtmlElement) -> str:
+        """Extract date str for opinion in row
+
+        :param row: row to process
+        :return: date string
+        """
+        date_block = row.xpath(self.date_xpath)[-1].text_content()
+        if match := re.search(self.date_regex, date_block):
+            return match.group("date")
+        # Second pattern for ncctapp unpublished opinions
+        return self.coa_rgx.search(date_block).group("date")
 
     def _download_backwards(self, year: int) -> None:
         """Build year URL and scrape
