@@ -1,53 +1,249 @@
 
-<!DOCTYPE html PUBLIC "//W3C//DTD XHTML 1.1 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="keywords" content="supreme, court">
-<link rel="stylesheet" type="text/css" href="/st1la1.css">
-<link rel="stylesheet" type="text/css" href="http://www.nccourts.org/_stylesheet/Common.css">
-<title>N.C. Appellate Courts</title>
-<script type="text/javascript" src="/jscript/jquery-1.7-min.js"></script><script type="text/javascript" src="/jscript/menucommands-min.js?date=2011-06-19"></script><script type="text/javascript" src="/jscript/suggest-min.js?date=2011-06-19"></script><script type="text/javascript" src="/jscript/jquery.ceebox-min.js"></script><script>
-			$(document).ready(function(){
-				$(".ceebox").ceebox(
-					{
-						overlayOpacity: 0.6,
-						htmlWidth: 800,
-						htmlHeight: "100%"
-					});
-			});
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Supreme Court Slip Opinions &lt;select style=&quot;font-weight: bold  !important;font-size: 24px  !important;&quot; onchange=&quot;window.location.assign(&#039;https://appellate.nccourts.org/opinion-filings/?c=sc&amp;year=&#039; + this.value)&quot;&gt;&lt;option value=&quot;2025&quot;  selected &gt;2025&lt;/option&gt;&lt;option value=&quot;2024&quot; &gt;2024&lt;/option&gt;&lt;option value=&quot;2023&quot; &gt;2023&lt;/option&gt;&lt;option value=&quot;2022&quot; &gt;2022&lt;/option&gt;&lt;option value=&quot;2021&quot; &gt;2021&lt;/option&gt;&lt;option value=&quot;2020&quot; &gt;2020&lt;/option&gt;&lt;option value=&quot;2019&quot; &gt;2019&lt;/option&gt;&lt;option value=&quot;2018&quot; &gt;2018&lt;/option&gt;&lt;option value=&quot;2017&quot; &gt;2017&lt;/option&gt;&lt;option value=&quot;2016&quot; &gt;2016&lt;/option&gt;&lt;option value=&quot;2015&quot; &gt;2015&lt;/option&gt;&lt;option value=&quot;2014&quot; &gt;2014&lt;/option&gt;&lt;option value=&quot;2013&quot; &gt;2013&lt;/option&gt;&lt;option value=&quot;2012&quot; &gt;2012&lt;/option&gt;&lt;option value=&quot;2011&quot; &gt;2011&lt;/option&gt;&lt;option value=&quot;2010&quot; &gt;2010&lt;/option&gt;&lt;option value=&quot;2009&quot; &gt;2009&lt;/option&gt;&lt;option value=&quot;2008&quot; &gt;2008&lt;/option&gt;&lt;option value=&quot;2007&quot; &gt;2007&lt;/option&gt;&lt;option value=&quot;2006&quot; &gt;2006&lt;/option&gt;&lt;option value=&quot;2005&quot; &gt;2005&lt;/option&gt;&lt;option value=&quot;2004&quot; &gt;2004&lt;/option&gt;&lt;option value=&quot;2003&quot; &gt;2003&lt;/option&gt;&lt;option value=&quot;2002&quot; &gt;2002&lt;/option&gt;&lt;option value=&quot;2001&quot; &gt;2001&lt;/option&gt;&lt;option value=&quot;2000&quot; &gt;2000&lt;/option&gt;&lt;option value=&quot;1999&quot; &gt;1999&lt;/option&gt;&lt;option value=&quot;1998&quot; &gt;1998&lt;/option&gt;&lt;/select&gt;</title>
+</head>
+    <body>
+        <a class="shortcut--main" href="#content-container">Skip to main content</a>
+<!-- -------------------------------------------------------- START OF HEADER ----------------------------------------------------- -->
 
-			function viewOpinion ( pdf )
-			{
-				window.open ( pdf );
-			}
-		</script><style>
+<header id="header-container" class="header-container" role="banner">
+    <div class="actions">
+        <h1 class="logo logo--header"><a href="https://www.nccourts.gov/" title="Back to home page"><span>North Carolina
+                    Judicial Branch</span></a></h1>
+        <button id="toggle--search" class="toggle toggle--search" aria-controls="panel--search" aria-expanded="false">Search</button>
+        <button id="toggle--menu" class="toggle toggle--menu" aria-controls="panel--menu" aria-expanded="false">Menu</button>
+    </div>
+    <div id="panel--search" class="panel panel--search">
+        <form class="form--search" action="https://www.nccourts.gov/search-results">
+            <label for="site-search">Search</label>
+            <input id="site-search" name="search_api_fulltext" placeholder="Search..." autocomplete="off" type="search">
+            <input type="submit" value="Search" />
+        </form>
+
+    </div>
+    <div id="panel--menu" class="panel panel--menu">
+        <nav id="menu--primary" class="menu menu--primary">
+            <h2 class="menu__title">Menu</h2>
+            <ul class="menu__list">
+                <li class="menu__item menu__item--dropdown ">
+                    <a href="#">Courts</a>
+                    <div class="menu__dropdown">
+                        <div class="menu__subtitle">North Carolina Courts</div>
+                        <ul>
+                            <li><a href="https://www.nccourts.gov/courts">Overview of the Courts</a></li>
+                            <li><a href="https://www.nccourts.gov/courts/supreme-court"><strong>Supreme
+                                        Court</strong></a></li>
+                            <li><a href="https://www.nccourts.gov/courts/court-of-appeals"><strong>Court of
+                                        Appeals</strong></a></li>
+                            <li><a href="https://www.nccourts.gov/courts/superior-court"><strong>Superior
+                                        Court</strong></a></li>
+                            <li><a href="https://www.nccourts.gov/courts/district-court"><strong>District
+                                        Court</strong></a></li>
+                            <li><a href="https://www.nccourts.gov/courts/business-court"><strong>Business
+                                        Court</strong></a></li>
+                            <li><a href="https://www.nccourts.gov/courts/recovery-courts"><strong>Recovery
+                                        Courts</strong></a></li>
+                        </ul>
+                        <div class="menu__divider"></div>
+                        <div class="menu__subtitle">Related links</div>
+                        <ul>
+                            <li><a href="https://appellate.nccourts.org/opinion-filings/?c=sc">Opinion Filings Supreme
+                                    Court</a></li>
+                            <li><a href="https://appellate.nccourts.org/opinion-filings/?c=coa">Opinion Filings Court of
+                                    Appeals</a></li>
+                            <li><a href="https://www.nccourts.gov/documents/opinions">Opinion Search</a></li>
+                            <li><a href="https://appellate.nccourts.org/calendar.php?court=1">Oral Argument Calendar</a>
+                            </li>
+                            <li><a href="https://appellate.nccourts.org/dockets.php?c=1">Dockets</a></li>
+                            <li><a href="https://appellate.nccourts.org/orders.php">Orders</a></li>
+                            <li><a href="https://appellate.nccourts.org/notify_signup.php">Opinion Email
+                                    Notification</a></li>
+                            <li><a href="https://www.nccourts.gov/locations">Hours and Locations</a></li>
+                            <li><a href="https://www.nccourts.gov/holiday-schedule">Holiday Schedule</a></li>
+                            <li><a href="https://www.nccourts.gov/closings">Closings</a></li>
+                            <li><a href="https://www.nccourts.gov/commissions">Commissions</a></li>
+                            <li><a href="https://www.nccourts.gov/programs">Programs</a></li>
+                            <li><a href="https://www.nccourts.gov/about/about-judicial-branch/careers">Careers</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu__item menu__item--dropdown ">
+                    <a href="https://www.nccourts.gov/help-topics">Help topics</a>
+                    <div class="menu__dropdown">
+                        <div class="menu__subtitle">Categories</div>
+                        <ul>
+                            <li><a href="https://www.nccourts.gov/help-topics/court-records">Court Records</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/criminal-law">Criminal Law</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/disability-and-special-needs">Disability
+                                    and Special Needs</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/divorce">Divorce</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/domestic-violence">Domestic Violence</a>
+                            </li>
+                            <li><a href="https://www.nccourts.gov/help-topics/family-and-children">Family and
+                                    Children</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/fees-and-payments">Fees and Payments</a>
+                            </li>
+                            <li><a href="https://www.nccourts.gov/help-topics/find-an-attorney">Find an Attorney</a>
+                            </li>
+                            <li><a href="https://www.nccourts.gov/help-topics/guardianship">Guardianship</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/housing">Housing</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/jury-service">Jury Service</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/will-and-estates">Lawsuits and Small
+                                    Claims</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/traffic-and-vehicles">Traffic and
+                                    Vehicles</a></li>
+                            <li><a href="https://www.nccourts.gov/help-topics/wills-and-estates">Wills and Estates</a>
+                            </li>
+                        </ul>
+                        <div class="menu__divider"></div>
+                        <ul>
+                            <li><a href="https://www.nccourts.gov/help-topics">See All Help Topics</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu__item menu__item--dropdown menu__item--expanded menu__item--#">
+                    <a href="">Services</a>
+
+                    <div class="menu__dropdown">
+
+                        <div class="menu__subtitle">eCourts</div>
+                        <ul>
+                            <a href="https://www3.nccourts.org/onlineservices/menu.sp">
+                                Citation Tickets
+                            </a>
+                            <a href="https://www3.nccourts.org/onlinepayments/menu.sp">
+                                Court Collections
+                            </a>
+                            <a href="https://www.nccourts.gov/services#ecourts-guide-amp-file-8964">
+                                Guide &amp; File
+                            </a>
+                        </ul>
+                        <div class="menu__divider"></div>
+                        <div class="menu__subtitle">eFiling</div>
+                        <ul>
+                            <a href="https://www.ncappellatecourts.org/">
+                                Appellate Courts
+                            </a>
+                            <a href="https://ncbc.nccourts.org/filer/">
+                                Business Court
+                            </a>
+                            <a href="https://www.efiling.nccourts.org/">
+                                Civil Cases
+                            </a>
+                        </ul>
+                        <div class="menu__divider"></div>
+                        <div class="menu__subtitle">Requests</div>
+                        <ul>
+                            <a href="https://www3.nccourts.org/onlineservices/notifications/menu.sp">
+                                Court Date Notifications
+                            </a>
+                            <a href="https://www.nccourts.gov/help-topics/court-records/criminal-background-check">
+                                Criminal Background Check
+                            </a>
+                            <a href="https://www.nccourts.gov/form/request-for-disability-accommodation">
+                                Disability Accommodation
+                            </a>
+                            <a href="https://www.nccourts.gov/services/request-a-public-record">
+                                Public Record
+                            </a>
+                            <a href="https://www.nccourts.gov/services/remote-public-access-program">
+                                Remote Public Access
+                            </a>
+                            <a href="https://www.nccourts.gov/programs/office-of-language-access-services/do-you-need-a-court-interpreter">
+                                Spoken Language Interpreter
+                            </a>
+                        </ul>
+                        <div class="menu__divider"></div>
+                        <ul>
+                            <a href="https://www.nccourts.gov/services">
+                                See All Services
+                            </a>
+
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="menu__item "><a href="https://www.nccourts.gov/documents/forms">Forms</a></li>
+                <li class="menu__item "><a href="https://www.nccourts.gov/court-dates">Court Dates</a></li>
+                <li class="menu__item "><a href="https://www.nccourts.gov/contact">Contact</a></li>
+                <li class="menu__item  menu__item--last-child"><a href="https://www.nccourts.gov/going-to-court">Going
+                        to Court</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- -------------------------------------------------------- END OF HEADER ----------------------------------------------------- -->
+
+        <!-- -------------------------------------------------------- START OF MAIN CONTENT ----------------------------------------------------- -->
+        <main id="content-container" class="content-container" role="main">
+            <!-- ------------------------------ MAIN - START ------------------------------ -->
+            <article itemscope itemtype="http://schema.org/WebPage">
+                <!-- ------------------------------ ARTICLE - START ------------------------------ -->
+                <header class="title title--primary" >
+                    <!-- ------------------------------ HEADER - START ------------------------------ -->
+                    <!-- ------------------------------ HEADER - END ------------------------------ -->
+                </header>
+                <div class="zones">
+                    <div class="zone" itemprop="mainContentOfPage">
+                        <!-- ------------------------------ ZONE - START ------------------------------ -->
+                        <div class="band">
+                            <!-- ------------------------------ BAND (1 column) - START ------------------------------ -->
+                        <div class="wrapper">
+                            <h1 class="title__label" itemprop="headline" style="margin-top: 0px; margin-bottom: 40px !important; padding: 0px !important;">Supreme Court Slip Opinions <select style="font-weight: bold  !important;font-size: 24px  !important;" onchange="window.location.assign('https://appellate.nccourts.org/opinion-filings/?c=sc&year=' + this.value)"><option value="2025"  selected >2025</option><option value="2024" >2024</option><option value="2023" >2023</option><option value="2022" >2022</option><option value="2021" >2021</option><option value="2020" >2020</option><option value="2019" >2019</option><option value="2018" >2018</option><option value="2017" >2017</option><option value="2016" >2016</option><option value="2015" >2015</option><option value="2014" >2014</option><option value="2013" >2013</option><option value="2012" >2012</option><option value="2011" >2011</option><option value="2010" >2010</option><option value="2009" >2009</option><option value="2008" >2008</option><option value="2007" >2007</option><option value="2006" >2006</option><option value="2005" >2005</option><option value="2004" >2004</option><option value="2003" >2003</option><option value="2002" >2002</option><option value="2001" >2001</option><option value="2000" >2000</option><option value="1999" >1999</option><option value="1998" >1998</option></select></h1>
+                        </div>
+                        <div class="wrapper">
+                            <div class="band__parts">
+                                <div class="band__part">
+                                     <?xml version="1.0"?>
+<style>
 span.h_underline:hover {
 	text-decoration: underline;
 	cursor: pointer;
-	font-size: 10pt;
-	font-weight: bold;
 }
+
+.published {
+    cursor: auto;
+	font-size: 10pt;
+}
+
+.author {
+    cursor: auto;
+	font-size: 10pt;
+}
+
 
 a.h_underline:hover {
 	text-decoration: underline;
 	cursor: pointer;
-	font-size: 10pt;
-	font-weight: bold;
 }
 
 .underline {
 	text-decoration: underline;
 }
 
+.email_signup {
+	font-size: 12pt;
+      margin-left:20px;
+    }
+
 .title {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.coa_opinion {
+	color: dark-gray;
 	font-size: 10pt;
 }
 
 .main {
 	font-weight: normal;
-	font-family: 'Verdana';
-	font-size: 10px;
+	font-size: 14px;
 	margin-left: auto;
 	margin-right: auto;
 	border-bottom: 1px solid black;
@@ -55,7 +251,7 @@ a.h_underline:hover {
 }
 
 .desc {
-	color: red;
+	color: dark-gray;
 	font-weight: normal;
 	font-family: verdana;
 	font-size: 9pt;
@@ -70,117 +266,243 @@ td {
 	white-space: normal;
 }
 
-tr.hover:hover {
-	border: 2px solid black;
+	</style><div><a href="https://appellate.nccourts.org/notify_signup.php" class="button button--primary" style="margin-bottom: 10px;margin-right:15px;">
+					  	Signup For Email Notification
+					  </a><a href="https://appellate.nccourts.org/opinion-filings/?c=coa" class="button button--primary" style="margin-bottom: 10px;margin-right:15px;">
+					  	Court of Appeals Opinions
+					  </a><a href="https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber=1&amp;sFilingYear=2025" class="button button--primary" target="_blank" style="margin-bottom: 10px;margin-right:15px;">
+					  	Headnote Index for 2025</a><a href="https://appellate.nccourts.org/opinion-filings/index-search.php?court=1" class="button button--primary" target="_blank" style="margin-bottom: 10px;">
+					  	Case Summaries/Headnotes
+					  </a></div><br/>
 
-			background-color: #BEDFEF;
-
-}
-	</style>
-</head>
-<body leftmargin="2" topmargin="2" marginwidth="2" marginheight="2" bgcolor="#FFFFFF">
-<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td width="23" valign="top"><span href="#"><img class="ImageBlock" src="http://www.nccourts.org/images/Header/HeadHome.gif" alt="The North Carolina Court System Home" title="The North Carolina Court System Home" border="0" width="23" height="70"></span></td>
-<td width="727" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
-<td><img class="ImageBlock" src="http://www.nccourts.org/images/Header/HeadTitle.gif" alt="The North Carolina Court System" title="The North Carolina Court System" border="0" width="604" height="46"></td>
-<td><img class="ImageBlock" src="http://www.nccourts.org/images/Header/HeadEmpty.gif" alt="The North Carolina Court System" title="The North Carolina Court System" border="0" width="123" height="46"></td>
-</tr></table></td>
-</tr>
-<tr><td valign="top" class="HeadColorBar" colspan="2"> </td></tr>
-</table>
-<div class="links" style="width: 95%; text-align:center; font-size: 14pt; font-weight: bold">
-	SUPREME COURT OPINIONS -
-	2014<br><span style="font-family: Arial; font-size: 8pt; font-weight: bold">
-		Last Modified: April 16 2014 05:25:38 PM</span>
-</div>
-<br><br><table class="main" style="margin-left: auto; margin-right: auto; width: 95%;" border="0">
-
-<tr><td colspan="2" style="text-alignment: left; font-weight: bold; font-size: 8pt; border-top: 1px solid gray; border-bottom: 1px solid gray">
-<strong>11 April 2014
-			</strong><a style="text-decoration: underline; color: black" href="http://appellate.nccourts.org/getopzip.php?c=1&amp;d=MjAxNC0wNC0xMQ==">Zip File of Published Opinions</a><br>
-			Mandate: 1 May 2014 <br><br><span class="bold">Case Title / Description</span><br>
-</td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31511")'>Beroth Oil Co. v. N.C. Dep't of Transp.,  (390PA11-2)
-					</span><br><span class="desc">Interlocutory appeal; whether the trial court erred in denying plaintiffs' motion for class certification of their inverse condemnation claim<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31512")'>State v. Stokes,  (94PA13-2)
-					</span><br><span class="desc">Whether, after holding that the State presented insufficient evidence to convict defendant of second-degree kidnapping, the COA correctly declined to consider whether defendant committed the lesser included offense of attempted second-degree kidnapping<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31513")'>State v. Barnes,  (461A13)
-					</span><br><span class="desc">Whether a person can be convicted of possessing marijuana in a local confinement facility under N.C.G.S. § 90-95(e)(9) after having been involuntarily brought into the facility following an arrest<br></span></span></td></tr>
-<tr><td colspan="2" style="font-size: 10pt; padding-left: 5%; padding-right: 5%">
-<br>
-			IN ADDITION TO THE ABOVE LISTED OPINIONS, THE COURT CONSIDERED
-			<span style="font-weight: bold"><a href="/petitions.php" style="color: red">90</a></span>
-			OTHER MATTERS. THE OTHER MATTERS MAY
-			INCLUDE, BUT ARE NOT LIMITED TO, NOTICES OF APPEALS BASED UPON CONSTITUTIONAL QUESTIONS, PETITIONS FOR
-			DISCRETIONARY REVIEW, PETITIONS FOR WRIT OF CERTIORARI IN DEATH CASES, DEATH STAYS, PETITIONS FOR WRITS
-			OF CERTIORARI IN OTHER CRIMINAL AND CIVIL CASES, PETITIONS FOR WRITS OF SUPERSEDEAS, MOTIONS FOR TEMPORARY STAYS,
-			PETITIONS FOR WRITS OF MANDAMUS, PETITIONS FOR WRITS OF HABEAS CORPUS, PETITIONS FOR WRIT OF MANDAMUS, MOTIONS
-			FOR APPROPRIATE RELIEF, AND DIRECT APPEALS FROM DECISIONS OF THE JUDICIAL STANDARDS COMMISSION AND THE UTILITIES
-			COMMISSION. THE COURT ALSO CONSIDERS MOTIONS FOR EXTENSIONS OF TIME AND MOTIONS TO AMEND ON A DAILY BASIS. SUCH
-			"ROUTINE" MOTIONS ARE NOT INCLUDED IN THE PETITION LIST PUBLISHED BY THE COURT EACH MONTH. <br><br>
-</td></tr>
+    <tr><td colspan="2" style="text-alignment: left; font-weight: bold; font-size: 12pt;border-bottom: 1px solid gray; padding-top: 25px;"><strong>
+				Filed: 23 May 2025<br/>
+			Mandate: 12 June 2025<br/><a style="text-decoration: underline; color: black" href="https://appellate.nccourts.org/getopzip.php?c=1&amp;d=MjAyNS0wNS0yMw==">Zip File of Published Opinions</a><br/>
+            Headnote Index: <a href="https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber=1&amp;sFilingDate=23 May 2025" target="_blank">23 May 2025</a><br/><br/><span class="bold">Case Title / Description</span><br/></strong></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44751&quot;)">In re Kimble,  (321A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><br/><span class="desc">Review of recommendation for censure.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44750&quot;)">State v. Hunt,  (280A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=43783&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether defendant satisfied the prejudice prong for plain error where a law enforcement officer testifying as a lay witness gave his opinion regarding defendant's intent at the time of an accident.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44749&quot;)">State v. Melton,  (170A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=43238&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals' majority erred in holding that the trial court did not commit structural error in denying defendant's court-appointed counsel's motion to withdraw for defendant to hire counsel of his own choosing.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44748&quot;)">White v. N.C. Dep't of Health &amp; Hum. Servs.,  (140A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=43172&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in reversing the superior court's order in which it determined that petitioners are entitled to receive adoption assistance benefits several years after the adoption was finalized.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44747&quot;)">In re L.C.,  (108PA24 - Published)
+					</span><span class="author">Author: <i>Justice Paul Newby</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=43595&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in vacating the trial court's adjudication order and remanding for additional factual findings about how respondent-mother's actions impaired or substantially risked impairing the welfare of her juvenile daughter.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44746&quot;)">Hanson v. Charlotte-Mecklenburg Bd. of Educ.,  (70PA24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42596&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in holding that defendant must pay an employer-funded 5% contribution under N.C.G.S. 143-166.50(e).<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44745&quot;)">State v. Chambers,  (56PA24 - Published)
+					</span><span class="author">Author: <i>Justice Paul Newby</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=43178&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether substitution of an alternate juror during guilt deliberations in a criminal trial violates a defendant's constitutional right to a jury of twelve.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44744&quot;)">State v. Bowman,  (49A24 - Published)
+					</span><span class="author">Author: <i>Justice Allison Riggs</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42867&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred by determining the trial court committed plain error by instructing the jury once on first-degree forcible sexual offense where the defendant was indicted for two counts of first-degree forcible sexual offense.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44743&quot;)">Jones v. J. Kim Hatcher Ins. Agencies, Inc.,  (264A23 - Published)
+					</span><span class="author">Author: <i>Justice Anita Earls</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42468&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in reversing dismissal of a claim for negligence at the 12(b)(6) stage based on contributory negligence and in affirming dismissal of a claim for punitive damages.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44742&quot;)">Hwang v. Cairns,  (58PA23 - Published)
+					</span><span class="author">Author: <i>Justice Phil Berger Jr.</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=41663&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether public official immunity applies to a medical director at a state university and whether summary judgment was proper.<br/></span></span></td></tr>
+    <tr><td colspan="2" style="font-size: 10pt; padding-left: 5%; padding-right: 5%"><br/>
+					IN ADDITION TO THE ABOVE LISTED OPINIONS, THE COURT CONSIDERED
+					<span style="font-weight: bold"><a href="/petitions.php">133</a></span>
+				OTHER MATTERS. THE OTHER MATTERS MAY
+				INCLUDE, BUT ARE NOT LIMITED TO, NOTICES OF APPEALS BASED UPON CONSTITUTIONAL QUESTIONS, PETITIONS FOR
+				DISCRETIONARY REVIEW, PETITIONS FOR WRIT OF CERTIORARI IN DEATH CASES, DEATH STAYS, PETITIONS FOR WRITS
+				OF CERTIORARI IN OTHER CRIMINAL AND CIVIL CASES, PETITIONS FOR WRITS OF SUPERSEDEAS, MOTIONS FOR TEMPORARY STAYS,
+				PETITIONS FOR WRITS OF MANDAMUS, PETITIONS FOR WRITS OF HABEAS CORPUS, PETITIONS FOR WRIT OF MANDAMUS, MOTIONS
+				FOR APPROPRIATE RELIEF, AND DIRECT APPEALS FROM DECISIONS OF THE JUDICIAL STANDARDS COMMISSION AND THE UTILITIES
+				COMMISSION. THE COURT ALSO CONSIDERS MOTIONS FOR EXTENSIONS OF TIME AND MOTIONS TO AMEND ON A DAILY BASIS. SUCH
+				"ROUTINE" MOTIONS ARE NOT INCLUDED IN THE PETITION LIST PUBLISHED BY THE COURT EACH MONTH. <br/><br/></td></tr>
 
 
-<tr><td colspan="2" style="text-alignment: left; font-weight: bold; font-size: 8pt; border-top: 1px solid gray; border-bottom: 1px solid gray">
-<strong>7 March 2014
-			</strong><a style="text-decoration: underline; color: black" href="http://appellate.nccourts.org/getopzip.php?c=1&amp;d=MjAxNC0wMy0wNw==">Zip File of Published Opinions</a><br>
-			Mandate: 27 March 2014 <br><br><span class="bold">Case Title / Description</span><br>
-</td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31386")'>State v. Joe,  (333PA11-2)
-					</span><br><span class="desc">On remand; whether trial court erred in granting defendant's pretrial motions to suppress and to dismiss the charge of resisting a public officer<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31387")'>State v. Jones,  (527A12)
-					</span><br><span class="desc">Whether indictments charging Jones with obtaining property by false pretenses and charging his codefendant with trafficking in stolen identities were properly dismissed by the trial court; whether the State offered sufficient proof of identity theft to support Jones's conviction for that offense<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31388")'>Gregory v. Pearson,  (116PA13)
-					</span><br><span class="desc">Workers' Compensation; whether plaintiff's decedent, an employee of a temporary agency that assigned him to work at a County facility, was also a County employee under the special employment doctrine<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31389")'>In re Suttles Surveying, P.A.,  (252PA13)
-					</span><br><span class="desc">Whether the N.C. Board of Examiners for Engineers and Surveyors exceeded its statutory authority or violated the due process rights of a licensee and his company by disciplining them for violating the Board's professional conduct rules<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31390")'>In re E.H.,  (302PA13)
-					</span><br><span class="desc">Whether DSS can voluntarily dismiss a juvenile petition alleging abuse and neglect before an adjudication hearing is held; interpretation of N.C. R. Civ. P. 41(a) in conjunction with N.C.G.S. § 7B-201(a)<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31391")'>State v. Howard,  (320A13)
-					</span><br><span class="desc">Firearms possession charge; admissibility of evidence under Rule 404(b) about defendant's previous arrest; whether defendant properly preserved the issue he argued on appeal<br></span></span></td></tr>
-<tr><td colspan="2" style="font-size: 10pt; padding-left: 5%; padding-right: 5%">
-<br>
-			IN ADDITION TO THE ABOVE LISTED OPINIONS, THE COURT CONSIDERED
-			<span style="font-weight: bold"><a href="/petitions.php" style="color: red"></a></span>
-			OTHER MATTERS. THE OTHER MATTERS MAY
-			INCLUDE, BUT ARE NOT LIMITED TO, NOTICES OF APPEALS BASED UPON CONSTITUTIONAL QUESTIONS, PETITIONS FOR
-			DISCRETIONARY REVIEW, PETITIONS FOR WRIT OF CERTIORARI IN DEATH CASES, DEATH STAYS, PETITIONS FOR WRITS
-			OF CERTIORARI IN OTHER CRIMINAL AND CIVIL CASES, PETITIONS FOR WRITS OF SUPERSEDEAS, MOTIONS FOR TEMPORARY STAYS,
-			PETITIONS FOR WRITS OF MANDAMUS, PETITIONS FOR WRITS OF HABEAS CORPUS, PETITIONS FOR WRIT OF MANDAMUS, MOTIONS
-			FOR APPROPRIATE RELIEF, AND DIRECT APPEALS FROM DECISIONS OF THE JUDICIAL STANDARDS COMMISSION AND THE UTILITIES
-			COMMISSION. THE COURT ALSO CONSIDERS MOTIONS FOR EXTENSIONS OF TIME AND MOTIONS TO AMEND ON A DAILY BASIS. SUCH
-			"ROUTINE" MOTIONS ARE NOT INCLUDED IN THE PETITION LIST PUBLISHED BY THE COURT EACH MONTH. <br><br>
-</td></tr>
+    <tr><td colspan="2" style="text-alignment: left; font-weight: bold; font-size: 12pt;border-bottom: 1px solid gray; padding-top: 25px;"><strong>
+				Filed: 21 March 2025<br/>
+			Mandate: 10 April 2025<br/><a style="text-decoration: underline; color: black" href="https://appellate.nccourts.org/getopzip.php?c=1&amp;d=MjAyNS0wMy0yMQ==">Zip File of Published Opinions</a><br/>
+            Headnote Index: <a href="https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber=1&amp;sFilingDate=21 March 2025" target="_blank">21 March 2025</a><br/><br/><span class="bold">Case Title / Description</span><br/></strong></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44641&quot;)">State v. Borlase,  (33A24 - Published)
+					</span><span class="author">Author: <i>Justice Phil Berger Jr.</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42764&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals conducted an appropriate review of the sentencing court's conclusion that defendant's sentence was constitutionally sufficient under Miller v. Alabama, 567 U.S. 460 (2012).<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44646&quot;)">Charles Schwab &amp; Co. v. Marilley,  (210A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><br/><span class="desc">Whether the Business Court erred in ruling that the parties' intrafamilial dispute fell outside the scope of their arbitration agreement with Charles Schwab.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44645&quot;)">Ayers v. Currituck Cnty. Dep't of Soc. Servs.,  (110A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42908&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether unacceptable personal conduct provided just cause for termination of a state employee.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44644&quot;)">Happel v. Guilford Cnty. Bd. of Educ.,  (86PA24 - Published)
+					</span><span class="author">Author: <i>Justice Paul Newby</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=43095&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the federal PREP Act preempts all state law claims, including those brought under the state constitution.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44643&quot;)">State v. Miller,  (81A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42433&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in determining that the trial court did not err in (1) denying defendant's motion to dismiss the charge under N.C.G.S. 90-95(h)(4) and (2) instructing the jury that opioids were included in the definition of 'opium or opiate' under N.C.G.S. 90-95(h)(4).<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44642&quot;)">Smith v. Smith,  (79A24 - Published)
+					</span><span class="author">Author: <i>Justice Trey Allen</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42956&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred by affirming the trial court's decision to classify a tract of land as defendant's separate property.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44640&quot;)">State v. Gregory,  (23A24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42890&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the trial court erred in limiting cross-examination of the State's expert witness.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44639&quot;)">Vanguard Pai Lung, LLC v. Moody,  (15A24 - Published)
+					</span><span class="author">Author: <i>Justice Richard Dietz</i></span><br/><span class="desc">Whether defendants adequately preserved arguments in their post-trial motion for judgment notwithstanding the verdict where those arguments were not specifically articulated in their corresponding motion for directed verdict.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44638&quot;)">State v. Macon,  (10PA24 - Published)
+					</span><span class="author">Author: <i>Per Curiam</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42846&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the trial court complied with N.C.G.S. 15A-1242 where it
+informed a defendant of a miscalculated the maximum sentence.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44637&quot;)">State v. Fenner,  (289PA23 - Published)
+					</span><span class="author">Author: <i>Justice Richard Dietz</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42654&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the trial court complied with N.C.G.S. 15A-1242 where it informed a defendant who sought to proceed pro se only of the harshest sentences he faced and miscalculated the maximum sentence by two years, but both the potential sentence and the actual sentence amounted to life in prison.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44636&quot;)">Lannan v. Bd. of Governors of the Univ. of N.C.,  (316PA22 - Published)
+					</span><span class="author">Author: <i>Justice Trey Allen</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=41092&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in affirming the denial of the University's motion to dismiss plaintiffs' breach of contract claims.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44635&quot;)">Ashe County v. Ashe Cnty. Plan. Bd.,  (249PA19-2 - Published)
+					</span><span class="author">Author: <i>Justice Allison Riggs</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=41594&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals erred in holding that a land developer was not entitled to the benefit of permit choice based on its determination of application completeness and the existence of a now-expired moratorium.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44634&quot;)">State v. Sims,  (297PA18 - Published)
+					</span><span class="author">Author: <i>Justice Phil Berger Jr.</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=35761&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the sentencing court's findings of the mitigating factors under N.C.G.S. 15A-1340.19B support defendant's juvenile sentence to life without parole, and whether defendant's claims under J.E.B. v. Alabama ex rel. T.B., 511 U.S. 127 (1994) are procedurally barred under N.C.G.S. 15A-1419(a)(3).<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44633&quot;)">State v. Bell,  (86A02-2 - Published)
+					</span><span class="author">Author: <i>Justice Tamara Barringer</i></span><br/><span class="desc">Whether defendant's J.E.B. claim is preserved and whether the claim was procedurally barred.<br/></span></span></td></tr>
+    <tr><td colspan="2" style="font-size: 10pt; padding-left: 5%; padding-right: 5%"><br/>
+					IN ADDITION TO THE ABOVE LISTED OPINIONS, THE COURT CONSIDERED
+					<span style="font-weight: bold"><a href="/petitions.php">275</a></span>
+				OTHER MATTERS. THE OTHER MATTERS MAY
+				INCLUDE, BUT ARE NOT LIMITED TO, NOTICES OF APPEALS BASED UPON CONSTITUTIONAL QUESTIONS, PETITIONS FOR
+				DISCRETIONARY REVIEW, PETITIONS FOR WRIT OF CERTIORARI IN DEATH CASES, DEATH STAYS, PETITIONS FOR WRITS
+				OF CERTIORARI IN OTHER CRIMINAL AND CIVIL CASES, PETITIONS FOR WRITS OF SUPERSEDEAS, MOTIONS FOR TEMPORARY STAYS,
+				PETITIONS FOR WRITS OF MANDAMUS, PETITIONS FOR WRITS OF HABEAS CORPUS, PETITIONS FOR WRIT OF MANDAMUS, MOTIONS
+				FOR APPROPRIATE RELIEF, AND DIRECT APPEALS FROM DECISIONS OF THE JUDICIAL STANDARDS COMMISSION AND THE UTILITIES
+				COMMISSION. THE COURT ALSO CONSIDERS MOTIONS FOR EXTENSIONS OF TIME AND MOTIONS TO AMEND ON A DAILY BASIS. SUCH
+				"ROUTINE" MOTIONS ARE NOT INCLUDED IN THE PETITION LIST PUBLISHED BY THE COURT EACH MONTH. <br/><br/></td></tr>
 
 
-<tr><td colspan="2" style="text-alignment: left; font-weight: bold; font-size: 8pt; border-top: 1px solid gray; border-bottom: 1px solid gray">
-<strong>24 January 2014
-			</strong><a style="text-decoration: underline; color: black" href="http://appellate.nccourts.org/getopzip.php?c=1&amp;d=MjAxNC0wMS0yNA==">Zip File of Published Opinions</a><br>
-			Mandate: 13 February 2014 <br><br><span class="bold">Case Title / Description</span><br>
-</td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31209")'>State v. Whittington,  (291PA12)
-					</span><br><span class="desc">Whether a defendant's Confrontation Clause rights were violated when a witness who did not conduct tests identifying a substance as opium testified to the results of an analysis done by a nontestifying chemist; application of the waiver provisions of N.C.G.S. § 90-95(g)<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31210")'>Glens of Ironduff Prop. Owners Ass'n, Inc. v. Daly,  (21PA13)
-					</span><br><span class="desc">Whether the six year statute of repose applicable to a homeowners' association's claim for negligent road construction is tolled by N.C.G.S. § 47F-3-111(c) until the period of declarant control terminates<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31211")'>Rutherford Plantation, LLC v. Challenge Golf Grp. of the Carolinas, LLC,  (79A13)
-					</span><br><span class="desc">Action to recover balance due on a purchase money promissory note and secured by a purchase money deed of trust; trial court's grant of partial summary judgment for amount due on note; whether the trial court made an error of law for which defendant is entitled to amendment of the partial summary judgment order<br></span></span></td></tr>
-<tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick='viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31212")'>In re Blue Ridge Hous. of Bakersville LLC,  (173PA13)
-					</span><br><span class="desc">Exemption of low-income housing project from ad valorem taxation under N.C.G.S. §§ 105-278.6(a)(8) and -277.16<br></span></span></td></tr>
-<tr><td colspan="2" style="font-size: 10pt; padding-left: 5%; padding-right: 5%">
-<br>
-			IN ADDITION TO THE ABOVE LISTED OPINIONS, THE COURT CONSIDERED
-			<span style="font-weight: bold"><a href="/petitions.php" style="color: red"></a></span>
-			OTHER MATTERS. THE OTHER MATTERS MAY
-			INCLUDE, BUT ARE NOT LIMITED TO, NOTICES OF APPEALS BASED UPON CONSTITUTIONAL QUESTIONS, PETITIONS FOR
-			DISCRETIONARY REVIEW, PETITIONS FOR WRIT OF CERTIORARI IN DEATH CASES, DEATH STAYS, PETITIONS FOR WRITS
-			OF CERTIORARI IN OTHER CRIMINAL AND CIVIL CASES, PETITIONS FOR WRITS OF SUPERSEDEAS, MOTIONS FOR TEMPORARY STAYS,
-			PETITIONS FOR WRITS OF MANDAMUS, PETITIONS FOR WRITS OF HABEAS CORPUS, PETITIONS FOR WRIT OF MANDAMUS, MOTIONS
-			FOR APPROPRIATE RELIEF, AND DIRECT APPEALS FROM DECISIONS OF THE JUDICIAL STANDARDS COMMISSION AND THE UTILITIES
-			COMMISSION. THE COURT ALSO CONSIDERS MOTIONS FOR EXTENSIONS OF TIME AND MOTIONS TO AMEND ON A DAILY BASIS. SUCH
-			"ROUTINE" MOTIONS ARE NOT INCLUDED IN THE PETITION LIST PUBLISHED BY THE COURT EACH MONTH. <br><br>
-</td></tr>
+    <tr><td colspan="2" style="text-alignment: left; font-weight: bold; font-size: 12pt;border-bottom: 1px solid gray; padding-top: 25px;"><strong>
+				Filed: 31 January 2025<br/>
+			Mandate: 20 February 2025<br/><a style="text-decoration: underline; color: black" href="https://appellate.nccourts.org/getopzip.php?c=1&amp;d=MjAyNS0wMS0zMQ==">Zip File of Published Opinions</a><br/>
+            Headnote Index: <a href="https://appellate.nccourts.org/opinion-filings/digested-index.php?iCourtNumber=1&amp;sFilingDate=31 January 2025" target="_blank">31 January 2025</a><br/><br/><span class="bold">Case Title / Description</span><br/></strong></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44409&quot;)">State v. Tirado,  (267PA21 - Published)
+					</span><span class="author">Author: <i>Justice Paul Newby</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=40262&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Court of Appeals failed to consider defendant's state constitutional challenge to his sentences of life imprisonment without parole and whether the resentencing order complied with state constitutional requirements.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44415&quot;)">James H.Q. Davis Tr. v. JHD Props., LLC,  (32PA24 - Published)
+					</span><span class="author">Author: <i>Justice Tamara Barringer</i></span><br/><span class="desc">Whether the Business Court erred in ordering an entry of summary judgment in favor of plaintiffs on plaintiffs' complaint seeking judicial dissolution of the manager-managed LLCs, pursuant to N.C.G.S. 57D-6-02(2)(i), because continued operation of the LLCs in conformance with the operating agreements was 'not practicable.'<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44414&quot;)">State v. Lester,  (293PA23-2 - Published)
+					</span><span class="author">Author: <i>Justice Anita Earls</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42777&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the Confrontation Clause and hearsay rules barred admission of cell phone records at trial.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44413&quot;)">Cohane v. Home Missioners of Am.,  (278A23 - Published)
+					</span><span class="author">Author: <i>Justice Anita Earls</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42543&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether section 4.2(b) of the SAFE Child Act's revival of claims 'for child sexual abuse otherwise time-barred' by a three-year statute of limitations encompasses claims against defendants who did not directly commit the alleged abuse.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44412&quot;)">Doe v. Roman Cath. Diocese,  (168PA22 - Published)
+					</span><span class="author">Author: <i>Justice Richard Dietz</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=40954&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether an act of the General Assembly that purports to set aside a final judgment of the judicial branch violates separation of powers principles in the North Carolina Constitution.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44411&quot;)">Doe 1K v. Roman Cath. Diocese,  (167PA22 - Published)
+					</span><span class="author">Author: <i>Justice Richard Dietz</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=40953&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether an act of the General Assembly that purports to set aside a final judgment of the judicial branch violates separation of powers principles in the North Carolina Constitution.<br/></span></span></td></tr>
+    <tr class="hover"><td colspan="2"><span class="h_underline" style="text-decoration: none; color: black; width: 100%"><span class="title" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=1&amp;pdf=44410&quot;)">McKinney v. Goins,  (109PA22-2 - Published)
+					</span><span class="author">Author: <i>Justice Paul Newby</i></span><span class="coa_opinion" style="margin-left:15px;" onclick="viewOpinion(&quot;http://appellate.nccourts.org/opinions/?c=2&amp;pdf=42545&quot;)"> (View COA Opinion)</span><br/><span class="desc">Whether the SAFE Child Act's revival of previously time-barred civil claims was facially unconstitutional.<br/></span></span></td></tr>
+    <tr><td colspan="2" style="font-size: 10pt; padding-left: 5%; padding-right: 5%"><br/></td></tr>
 
-</table>
-</body>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ------------------------------ BAND (1 column) - END ------------------------------ -->
+                        </div>
+                        <!-- ------------------------------ ZONE - END ------------------------------ -->
+                    </div>
+                </div>
+                <!-- ------------------------------ ARTICLE - END ------------------------------ -->
+            </article>
+            <!-- ------------------------------ MAIN - END ------------------------------ -->
+        </main>
+        <!-- -------------------------------------------------------- END OF MAIN ----------------------------------------------------- -->
+
+<!-- -------------------------------------------------------- START OF FOOTER ----------------------------------------------------- -->
+<footer id="footer-container" class="footer-container" role="contentinfo">
+    <div class="wrapper">
+        <div class="logo logo--footer">
+            <a href="#" title="Back to home page">
+                <div class="sr-only">
+                    <strong>North Carolina Judicial Branch</strong>
+                </div>
+            </a>
+        </div>
+        <div class="tagline">justice for all</div>
+        <div class="primary">
+            <div class="panel-group panel-group--additional" role="tablist" aria-multiselectable="true">
+                <div class="panel">
+                    <div id="heading__panel-additional" class="panel__heading" role="tab">
+                        <h4 class="panel__title"><a role="button" data-toggle="collapse" href="#panel__content-additional" aria-expanded="false" aria-controls="panel__content-additional">Additional Information</a></h4>
+                    </div>
+                    <div id="panel__content-additional" class="panel__content" role="tabpanel" aria-hidden="true">
+                        <div class="links">
+                            <ul class="links__list">
+                                <li class="links__item"><a href="https://www.nccourts.gov/news">News</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/programs">Programs</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/commissions">Commissions</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/documents">Documents</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/about">About</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/about/careers">Careers</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/judicial-directory">Judicial Directory</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/about/data-statistics">Data and Statistics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group panel-group--community" role="tablist" aria-multiselectable="true">
+                <div class="panel">
+                    <div id="heading__panel-community" class="panel__heading" role="tab">
+                        <h4 class="panel__title"><a role="button" data-toggle="collapse" href="#panel__content-community" aria-expanded="false" aria-controls="panel__content-community">Community Support</a></h4>
+                    </div>
+                    <div id="panel__content-community" class="panel__content" role="tabpanel" aria-hidden="true">
+                        <div class="links">
+                            <ul class="links__list">
+                                <li class="links__item"><a href="https://www.nccourts.gov/general-public">General Public</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/legal-community">Legal Community</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/judicial-community">Judicial Community</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/media">Media</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group panel-group--help-support" role="tablist" aria-multiselectable="true">
+                <div class="panel">
+                    <div id="heading__panel-help-support" class="panel__heading" role="tab">
+                        <h4 class="panel__title"><a role="button" data-toggle="collapse" href="https://www.nccourts.gov/#panel__content-help-support" aria-expanded="false" aria-controls="panel__content-help-support">Help and Support</a></h4>
+                    </div>
+                    <div id="panel__content-help-support" class="panel__content" role="tabpanel" aria-hidden="true">
+                        <div class="links">
+                            <ul class="links__list">
+                                <li class="links__item"><a href="https://www.nccourts.gov/locations">Hours and Locations</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/services">Online Services</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/help-topics">Help Topics</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secondary">
+            <div class="panel-group panel-group--legal" role="tablist" aria-multiselectable="true">
+                <div class="panel">
+                    <div id="heading__panel-legal" class="panel__heading" role="tab">
+                        <h4 class="panel__title"><a role="button" data-toggle="collapse" href="#panel__content-legal" aria-expanded="false" aria-controls="panel__content-legal">Site information</a></h4>
+                    </div>
+                    <div id="panel__content-legal" class="panel__content" role="tabpanel" aria-hidden="true">
+                        <div class="links">
+                            <ul class="links__list">
+                                <li class="links__item"><a href="https://www.nccourts.gov/closings">Closings</a></li>
+                                <li class="links__item links__item--bullet"></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/help-topics" data-drupal-link-system-path="help-topics">Help</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/legal-notices-disclaimers-and-terms-use#section-accessibility-information">Accessibility</a></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/legal-notices-disclaimers-and-terms-use">Legal Notices, Disclaimers and Terms of Use</a></li>
+                                <li class="links__item links__item--bullet"></li>
+                                <li class="links__item"><a href="https://www.nccourts.gov/sitemap">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="links links--connect ">
+                <h4 class="links__title">Connect with us</h4>
+                <ul class="links__list">
+                    <li class="links__item links__item--facebook">
+                        <a href="https://www.facebook.com/NCcourts/" target="_blank"><span>Facebook</span></a>
+                    </li>
+                    <li class="links__item links__item--linkedin">
+                        <a href="https://www.linkedin.com/company/north-carolina-administrative-office-of-the-courts" target="_blank"><span>LinkedIn</span></a>
+                    </li>
+                    <li class="links__item links__item--twitter">
+                        <a href="https://twitter.com/NCCourts" target="_blank"><span>Twitter</span></a>
+                    </li>
+                    <li class="links__item links__item--youtube">
+                        <a href="https://www.youtube.com/user/NorthCarolinaCourts" target="_blank"><span>Youtube</span></a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </body>
 </html>

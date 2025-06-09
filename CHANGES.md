@@ -19,6 +19,7 @@ Features:
 
 Changes:
 - Update kan and kanctapp scrapers
+- update `nc` scraper to OpinionSiteLinear and new website #1373
 
 Fixes:
 -
