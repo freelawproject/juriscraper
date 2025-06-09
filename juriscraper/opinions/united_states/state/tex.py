@@ -108,14 +108,30 @@ class Site(OpinionSiteLinear):
                 lower_court_regex, title, flags=re.MULTILINE
             )
 
-            lower_court_number_regex = r"\((?P<lower_court_number>[^,)]*)"
+            lower_court_number_regex = r"\((?P<lower_court_number>(?:\d{2}-\d{2}-\d{5}-CV|U\.S[^\),]*))"
             lower_court_number_match = re.search(
                 lower_court_number_regex, title, flags=re.MULTILINE
             )
 
+            lower_court = (
+                lower_court_match.group("lower_court").strip()
+                if lower_court_match
+                else ""
+            )
+            lower_court_number = (
+                lower_court_number_match.group("lower_court_number").strip()
+                if lower_court_number_match
+                else ""
+            )
+
+            title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
+            title_match = re.search(title_regex, title, flags=re.MULTILINE)
+
             self.cases.append(
                 {
-                    "name": titlecase(title.split(";")[0]),
+                    "name": titlecase(
+                        title_match.group("name").split(";from")[0]
+                    ),
                     "disposition": disposition,
                     "url": link.get("href"),
                     "docket": docket,
@@ -124,16 +140,8 @@ class Site(OpinionSiteLinear):
                     "per_curiam": per_curiam,
                     "judge": ", ".join(judges),
                     "author": author,
-                    "lower_court": lower_court_match.group(
-                        "lower_court"
-                    ).strip()
-                    if lower_court_match
-                    else "",
-                    "lower_court_number": lower_court_number_match.group(
-                        "lower_court_number"
-                    ).strip()
-                    if lower_court_number_match
-                    else "",
+                    "lower_court": lower_court,
+                    "lower_court_number": lower_court_number,
                 }
             )
 
