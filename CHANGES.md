@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Update kan and kanctapp scrapers
 
 Fixes:
 -  Fix `tex` get opinions from the orders on causes page #1410
