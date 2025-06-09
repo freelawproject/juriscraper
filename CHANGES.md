@@ -15,16 +15,23 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
-timestamped opinions and check if `Site.cleanup_content` is working #1392
+-
 
 Changes:
+- Update kan and kanctapp scrapers
 - update `nc` scraper to OpinionSiteLinear and new website #1373
 
 Fixes:
 -
 
 ## Current
+
+**2.6.74 - 2025-06-04**
+
+- Add `test_hashes` optional argument to `sample_caller`. Helpful to detect
+timestamped opinions and check if `Site.cleanup_content` is working #1392
+- fix tenn scraper parsing error #1413
+- fix package release process #1426
 
 **2.6.71 - 2025-05-30**
 
