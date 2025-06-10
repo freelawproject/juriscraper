@@ -47,11 +47,9 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = False
 
     def _download(self, request_dict=None):
-        """
-        Downloads the HTML content for the current opinion page.
+        """Downloads the HTML content for the current opinion page.
 
-        :params request_dict (dict, optional): Additional request parameters.
-
+        :param request_dict (dict, optional): Additional request parameters.
         :return The downloaded HTML content.
         """
         if request_dict is None:
@@ -65,8 +63,7 @@ class Site(OpinionSiteLinear):
         return self.html
 
     def _process_html(self) -> None:
-        """
-        Parses the HTML content of the current opinion page and extracts case details.
+        """Parses the HTML content
 
         :return None
         """
@@ -132,8 +129,8 @@ class Site(OpinionSiteLinear):
     def parse_lower_court_info(cls, title: str) -> tuple[str, str]:
         """Parses lower court information from the title string
 
-        :param title: title string
-        :return: lower_court, lower_court_number
+        :param title string
+        :return lower_court, lower_court_number
         """
 
         # format when appeal comes from texapp. Example:
@@ -161,12 +158,10 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def extract_type(link: etree.Element) -> str:
-        """
-        Determines the opinion type based on the PDF file name in the link.
+        """Determines the opinion type
 
-        :params link (etree.Element): The anchor element containing the PDF link.
-
-        :return str: The opinion type as a string.
+        :params link (etree.Element) The anchor element containing the PDF link.
+        :return str The opinion type as a string.
         """
         text = link.text
         if "per curiam" in text.lower():
@@ -183,7 +178,6 @@ class Site(OpinionSiteLinear):
 
     def make_backscrape_iterable(self, kwargs) -> None:
         """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
 
         Texas opinions page returns all opinions for a year (pagination is not needed),
         so we must filter out opinions not in the date range we are looking for
@@ -202,11 +196,9 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = dates
 
     def _download_backwards(self, analysis_window: tuple) -> None:
-        """
-        Downloads and processes opinions for a given year within a specified date range.
+        """Downloads and processes opinions for a given year within a specified date range.
 
-        :params analysis_window (tuple): A tuple containing the year (int), start date (date), and end date (date).
-
+        :param analysis_window (tuple): A tuple containing the year (int), start date (date), and end date (date).
         :return None
         """
         self.is_backscrape = True
