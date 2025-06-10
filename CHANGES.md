@@ -18,13 +18,21 @@ Features:
 -
 
 Changes:
-- Update kan and kanctapp scrapers
-- update `nc` scraper to OpinionSiteLinear and new website #1373
+-
 
 Fixes:
 -
 
 ## Current
+
+**2.6.75 - 2025-06-09**
+
+Changes:
+- Update kan and kanctapp scrapers
+- update `nc` scraper to OpinionSiteLinear and new website #1373
+
+
+## Past
 
 **2.6.74 - 2025-06-04**
 
@@ -47,8 +55,6 @@ Fixes:
 
 Features:
 - Fix for CA4 - minor edge case bug
-
-## Past
 
 **2.6.69 - 2025-05-21**
 
