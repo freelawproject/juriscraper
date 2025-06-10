@@ -125,10 +125,19 @@ class Site(OpinionSiteLinear):
                 lower_court = lower_court_docket_number = ""
             else:
                 name, _, lower_court, lower_court_docket_number = m.groups()
-                if "-CV" in lower_court_docket_number:
-                    lower_court_docket_number = (
-                        lower_court_docket_number.split("-CV,")[0] + "-CV"
-                    )
+                if any(
+                    suffix in lower_court_docket_number
+                    for suffix in ["-CV", "-CR"]
+                ):
+                    for suffix in ["-CV", "-CR"]:
+                        if suffix in lower_court_docket_number:
+                            lower_court_docket_number = (
+                                lower_court_docket_number.split(f"{suffix},")[
+                                    0
+                                ]
+                                + suffix
+                            )
+                            break
 
                 if "BODA" in lower_court_docket_number:
                     lower_court = "Board of Disciplinary Appeals"
@@ -161,15 +170,15 @@ class Site(OpinionSiteLinear):
         :params link (etree.Element) The anchor element containing the PDF link.
         :return str The opinion type as a string.
         """
-        text = link.text
+        text = link.text.lower()
         url = link.get("href")
-        if "per curiam" in text.lower() or url.endswith("pc.pdf"):
+        if "per curiam" in text or url.endswith("pc.pdf"):
             op_type = OpinionType.UNANIMOUS
-        elif "in part" in text.lower() or url.endswith("cd.pdf"):
+        elif "in part" in text or url.endswith("cd.pdf"):
             op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
-        elif "dissenting" in text.lower() or url.endswith("d.pdf"):
+        elif "dissenting" in text or url.endswith("d.pdf"):
             op_type = OpinionType.DISSENT
-        elif "concurring" in text.lower() or url.endswith("c.pdf"):
+        elif "concurring" in text or url.endswith("c.pdf"):
             op_type = OpinionType.CONCURRENCE
         else:
             op_type = OpinionType.MAJORITY
