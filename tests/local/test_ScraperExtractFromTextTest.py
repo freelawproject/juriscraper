@@ -903,14 +903,14 @@ class ScraperExtractFromText(unittest.TestCase):
                 """PLAQUEMINES PORT                         *       NO. 2024-CA-0614\nHARBOR & TERMINAL\nDISTRICT                                 *\n                                                 COURT OF APPEAL\nVERSUS                                   *\n                                                 FOURTH CIRCUIT\nTUAN NGUYEN                              *\n                                                 STATE OF LOUISIANA\n                                   *******\n\n\n\n                               APPEAL FROM\n                   25TH JDC, PARISH OF PLAQUEMINES\n                          NO. 68-734, DIVISION “A”\n                          Honorable Kevin D. Conner\n                                  ******\n                          Judge Monique G. Morial\n                                  ******\n(Court composed of Judge Daniel L. Dysart, Judge Rosemary Ledet, Judge Tiffany\nGautier Chase, Judge Nakisha Ervin-Knott, Judge Monique G. Morial)""",
                 {
                     "Docket": {
-                        "panel_str": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge TiffanyGautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"
+                        "panel_str": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge Tiffany Gautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"
                     },
                     "Opinion": {
                         "author_str": "Judge Monique G. Morial",
                         "type": "020lead",
                     },
                     "OpinionCluster": {
-                        "judges": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge TiffanyGautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"
+                        "judges": "Judge Daniel L. Dysart; Judge Rosemary Ledet; Judge Tiffany Gautier Chase; Judge Nakisha Ervin-Knott; Judge Monique G. Morial"
                     },
                 },
             ),
