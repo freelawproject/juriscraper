@@ -94,7 +94,7 @@ class Site(OpinionSiteLinear):
 
         :param search_date (date): The date for which to download and process opinions.
 
-        :return: None; sets the target date, downloads the corresponding HTML
+        :return None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
         self.search_date = search_date
@@ -112,7 +112,7 @@ class Site(OpinionSiteLinear):
             backscrape_end: str
             days_interval: int; Default: self.days_interval
 
-        :return: None; sets self.back_scrape_iterable in place
+        :return None; sets self.back_scrape_iterable in place
         """
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(
@@ -141,11 +141,11 @@ class Site(OpinionSiteLinear):
         Extracts structured metadata from the provided opinion text.
 
         :param scraped_text: The content of the document downloaded
-        :return: Metadata to be added to the case
+        :return Metadata to be added to the case
         """
         metadata = {"OpinionCluster": {}, "Opinion": {}, "Docket": {}}
         pattern = r"^\s+[*]{6,}\n(?P<judge>.*)\s+[*]{6,}$"
-        pattern2 = "\\s+\\*{5,}(?:.*\n)*?\\s+(\\s+(?P<judge>.*), J\\..*(RESULT|REASON|CONCUR))"
+        pattern2 = r"\s+\*{5,}(?:.*\n)*?\s+(\s+(?P<judge>.*)[,.] J\..*(RESULT|REASON|CONCUR))"
         pattern3 = r"\(Court composed of (?P<judges>.*?)\)"
 
         m = re.search(pattern, scraped_text, flags=re.MULTILINE)
@@ -179,7 +179,7 @@ class Site(OpinionSiteLinear):
             metadata["OpinionCluster"]["judges"] = (
                 m3.groups()[0]
                 .strip()
-                .replace("\n", "")
+                .replace("\n", " ")
                 .replace(", ", "; ")
                 .replace(",", "; ")
             )
