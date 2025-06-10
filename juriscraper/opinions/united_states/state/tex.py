@@ -70,28 +70,44 @@ class Site(OpinionSiteLinear):
         date = self.html.xpath(self.date_xp)[0].strip()
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
         for link in links:
-            if link.getprevious() is None:
+            if link.getparent() is None or link.getparent().get(
+                "class"
+            ) not in ["a79", "a70"]:
                 continue
             precedingTRs = link.xpath(
                 'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
             ) or link.xpath(
                 'ancestor::tr/preceding-sibling::tr[td[@class="a54cl"]]'
             )
+
             docket, title, *_ = [
-                x for x in precedingTRs[-1].xpath(".//text()") if x.strip()
+                tr_text
+                for tr_text in precedingTRs[-1].xpath(".//text()")
+                if tr_text.strip()
             ]
-            disposition = link.getparent().xpath(".//text()")[0]
-            judge_str = "".join(
-                [
-                    x
-                    for x in [
-                        link.getprevious().tail,
-                        link.text,
-                        link.tail,
-                    ]
-                    if x
-                ]
+
+            disposition = (
+                link.getparent().xpath(".//text()")[0]
+                if link.getparent().get("class") == "a70"
+                else ""
             )
+
+            judge_str = (
+                "".join(
+                    [
+                        x
+                        for x in [
+                            link.getprevious().tail,
+                            link.text,
+                            link.tail,
+                        ]
+                        if x
+                    ]
+                )
+                if disposition
+                else ""
+            )
+
             judges = re.findall(self.judge_xp, judge_str)
             if judges:
                 author = judges[0]
@@ -100,9 +116,22 @@ class Site(OpinionSiteLinear):
                 author = ""
                 per_curiam = True
 
-            lower_court, lower_court_number = self.parse_lower_court_info(
-                title
+            m = re.search(
+                r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))(. from )?(?P<lower_court>.*)\((?P<docket>.*)\)",
+                title,
             )
+            if not m:
+                name = titlecase(title.split(";")[0])
+                lower_court = lower_court_docket_number = ""
+            else:
+                name, _, lower_court, lower_court_docket_number = m.groups()
+                if "-CV" in lower_court_docket_number:
+                    lower_court_docket_number = (
+                        lower_court_docket_number.split("-CV,")[0] + "-CV"
+                    )
+
+                if "BODA" in lower_court_docket_number:
+                    lower_court = "Board of Disciplinary Appeals"
 
             title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
             title_match = re.search(title_regex, title, flags=re.MULTILINE)
@@ -121,40 +150,9 @@ class Site(OpinionSiteLinear):
                     "judge": ", ".join(judges),
                     "author": author,
                     "lower_court": lower_court,
-                    "lower_court_number": lower_court_number,
+                    "lower_court_number": lower_court_docket_number,
                 }
             )
-
-    @classmethod
-    def parse_lower_court_info(cls, title: str) -> tuple[str, str]:
-        """Parses lower court information from the title string
-
-        :param title string
-        :return lower_court, lower_court_number
-        """
-
-        # format when appeal comes from texapp. Example:
-        # ' from Harris County; 1st Court of Appeals District (01-22-00182-CV, 699 SW3d 20, 03-23-23)'
-        texapp_regex = r" from (?P<lower_court>.*)\s*\("
-
-        # - Texas is in the `ca5` federal jurisdiction
-        # - BODA is the 'Board of Disciplinary Appeals' appointed by the
-        # Supreme Court
-        # We haven't found any other formats, so far
-        # Examples:
-        #  "(U.S. Fifth Circuit 23-10804)"
-        #  "(U.S. 5th Circuit 19-51012)"
-        # "(BODA Cause No. 67623)"
-        other_courts_regex = r"\((?P<lower_court>(BODA|U\.S\. (Fif|5)th Circuit))\s(?P<lower_number>(Cause No. )?[\d-]+)\)$"
-
-        if match := re.search(texapp_regex, title):
-            lower_court = match.group("lower_court")
-            lower_court_number = title[match.end() :].split(",")[0]
-            return lower_court, lower_court_number
-        elif match := re.search(other_courts_regex, title):
-            return match.group("lower_court"), match.group("lower_number")
-
-        return "", ""
 
     @staticmethod
     def extract_type(link: etree.Element) -> str:
@@ -164,13 +162,14 @@ class Site(OpinionSiteLinear):
         :return str The opinion type as a string.
         """
         text = link.text
-        if "per curiam" in text.lower():
+        url = link.get("href")
+        if "per curiam" in text.lower() or url.endswith("pc.pdf"):
             op_type = OpinionType.UNANIMOUS
-        elif "in part" in text.lower():
+        elif "in part" in text.lower() or url.endswith("cd.pdf"):
             op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
-        elif "dissenting" in text.lower():
+        elif "dissenting" in text.lower() or url.endswith("d.pdf"):
             op_type = OpinionType.DISSENT
-        elif "concurring" in text.lower():
+        elif "concurring" in text.lower() or url.endswith("c.pdf"):
             op_type = OpinionType.CONCURRENCE
         else:
             op_type = OpinionType.MAJORITY
