@@ -89,11 +89,9 @@ class Site(OpinionSiteLinear):
             self.parameters[name] = value
 
     def _download_backwards(self, search_date: date) -> None:
-        """
-        Download and process HTML for a given target date.
+        """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
-
         :return None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
@@ -102,12 +100,10 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs) -> None:
-        """
-        Prepares the iterable for backscraping by ensuring that each element
-        represents a unique year and month combination.
+        """Prepares the iterable for backscraping
 
         :param kwargs if the following keys are present, use them
-            backscrape_start: str in "%Y/%m/%d" format ;
+            backscrape_start: str in "%Y/%m/%d" format;
                             Default: self.first_opinion_date
             backscrape_end: str
             days_interval: int; Default: self.days_interval
@@ -120,11 +116,9 @@ class Site(OpinionSiteLinear):
         )
 
     def _download(self, request_dict=None) -> HtmlElement:
-        """
-        Download the HTML content for the current search state.
+        """Download the HTML content for the current search state.
 
-        :params request_dict (dict, optional): Additional request parameters.
-
+        :param request_dict (dict, optional): Additional request parameters.
         :return lxml.html.HtmlElement: The downloaded HTML content.
         """
         if not self.test_mode_enabled():
@@ -137,8 +131,7 @@ class Site(OpinionSiteLinear):
         return super()._download()
 
     def extract_from_text(self, scraped_text: str) -> dict:
-        """
-        Extracts structured metadata from the provided opinion text.
+        """Extracts structured metadata from the provided opinion text.
 
         :param scraped_text: The content of the document downloaded
         :return Metadata to be added to the case
