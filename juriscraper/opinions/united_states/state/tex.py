@@ -116,31 +116,9 @@ class Site(OpinionSiteLinear):
                 author = ""
                 per_curiam = True
 
-            m = re.search(
-                r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))(. from )?(?P<lower_court>.*)\((?P<docket>.*)\)",
-                title,
+            lower_court, lower_court_number = self.parse_lower_court_info(
+                title
             )
-            if not m:
-                name = titlecase(title.split(";")[0])
-                lower_court = lower_court_docket_number = ""
-            else:
-                name, _, lower_court, lower_court_docket_number = m.groups()
-                if any(
-                    suffix in lower_court_docket_number
-                    for suffix in ["-CV", "-CR"]
-                ):
-                    for suffix in ["-CV", "-CR"]:
-                        if suffix in lower_court_docket_number:
-                            lower_court_docket_number = (
-                                lower_court_docket_number.split(f"{suffix},")[
-                                    0
-                                ]
-                                + suffix
-                            )
-                            break
-
-                if "BODA" in lower_court_docket_number:
-                    lower_court = "Board of Disciplinary Appeals"
 
             title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
             title_match = re.search(title_regex, title, flags=re.MULTILINE)
@@ -159,15 +137,47 @@ class Site(OpinionSiteLinear):
                     "judge": ", ".join(judges),
                     "author": author,
                     "lower_court": lower_court,
-                    "lower_court_number": lower_court_docket_number,
+                    "lower_court_number": lower_court_number,
                 }
             )
+
+    @staticmethod
+    def parse_lower_court_info(title: str) -> tuple[str, str]:
+        """Parses lower court information from the title string
+
+        :param title string
+        :return lower_court, lower_court_number
+        """
+
+        # format when appeal comes from texapp. Example:
+        # ' from Harris County; 1st Court of Appeals District (01-22-00182-CV, 699 SW3d 20, 03-23-23)'
+        texapp_regex = r" from (?P<lower_court>.*)\s*\("
+
+        # Examples:
+        #  "(U.S. Fifth Circuit 23-10804)"
+        #  "(U.S. 5th Circuit 19-51012)"
+        # "(BODA Cause No. 67623)"
+        other_courts_regex = r"\((?P<lower_court>(BODA|U\.S\. (Fif|5)th Circuit))\s(?P<lower_number>(Cause No. )?[\d-]+)\)$"
+
+        if match := re.search(texapp_regex, title):
+            lower_court = match.group("lower_court")
+            lower_court_number = title[match.end() :].split(",")[0]
+            return lower_court, lower_court_number
+        elif match := re.search(other_courts_regex, title):
+            lower_court = match.group("lower_court")
+            lower_court_number = match.group("lower_number")
+
+            if "BODA" in lower_court_number:
+                lower_court = "Board of Disciplinary Appeals"
+
+            return lower_court, lower_court_number
+        return "", ""
 
     @staticmethod
     def extract_type(link: etree.Element) -> str:
         """Determines the opinion type
 
-        :params link (etree.Element) The anchor element containing the PDF link.
+        :param link (etree.Element) The anchor element containing the PDF link.
         :return str The opinion type as a string.
         """
         text = link.text.lower()
