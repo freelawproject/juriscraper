@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Update `uscgcoca` add backscraper
 
 Fixes:
 -  Fix `tex` get opinions from the orders on causes page #1410

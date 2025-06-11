@@ -7,6 +7,7 @@ Reviewer: flooie
 History:
     2021-03-29: Created by Evando Blanco
     2021-12-17: Updated by flooie for OpinionSiteLinear
+    2025-06-11: Updated by lmanzur to add backscraping support
 """
 
 import re
@@ -20,7 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.citation_regex = r"(?P<MJ>\(?\d{2} M\.?J\.? \d+\)?)|(?P<WL>\(?\d{4} (W\.?[Ll]\.?) \d+\)?)"
-        self.url = "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
+        self.base_url = "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
         self.request["headers"] = {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-encoding": "gzip, deflate, br, zstd",
@@ -37,6 +38,8 @@ class Site(OpinionSiteLinear):
             "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
         }
         self.needs_special_headers = True
+
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Process the HTML
@@ -73,6 +76,14 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    def _download_backwards(self, page_number: int) -> None:
+        """Method used by backscraper to download historical records
+
+        :param page_number: an element of self.back_scrape_iterable
+        :return: None
+        """
+        self.url = f"{self.base_url}?smdpage15701={page_number}"
+
     def _get_case_names(self) -> list[str]:
         """Clean case names
 
@@ -100,3 +111,17 @@ class Site(OpinionSiteLinear):
             case["name"] = titlecase(case["name"].strip(" -"))
 
         return [c["name"] for c in self.cases]
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed"""
+
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        if start is None or not str(start).isdigit():
+            # There are 34 historical pages as of development in Jun 2025
+            start = 34
+        if end is None or not str(end).isdigit():
+            end = 1
+
+        self.back_scrape_iterable = range(int(start), int(end) - 1, -1)
