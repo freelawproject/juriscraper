@@ -6,11 +6,12 @@ Court Contact: ca01_BAP@ca1.uscourts.gov, (617) 748-9650
 Author: Gianfranco Rossi
 History:
  - 2023-12-28, grossir: created
+ - 2025-06-11 lmanzur remove _download method from scraper
 """
 
 import calendar
 import re
-from typing import Any, Optional
+from typing import Any
 
 from lxml.html import HtmlElement
 
@@ -47,22 +48,6 @@ class Site(OpinionSiteLinear):
         # There are 29 historical pages as of development in Dec 2023
         # source indexes from 0
         self.back_scrape_iterable = range(29)[::-1]
-
-    def _download(self, request_dict: Optional[dict] = None) -> HtmlElement:
-        """Gets the source's HTML
-
-        For a normal periodic scraper, get the last page where
-        most recent opinions are
-        Backscraper will iterate over all available pages
-
-        :param request_dict: unused in this scraper
-        :return: HTML object from the downloaded page
-        """
-        if self.base_url == self.url:
-            self.html = super()._download()
-            self.url = self.html.xpath("//li/a/@href")[-1]
-
-        return super()._download()
 
     def _download_backwards(self, page_number: int) -> None:
         """Method used by backscraper to download historical records
