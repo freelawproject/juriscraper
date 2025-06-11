@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+-  Fix `bap1` not scraping recent data #1422
 
 Fixes:
 -  Fix `tex` get opinions from the orders on causes page #1410
