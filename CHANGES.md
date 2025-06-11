@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 -  Fix `tex` get opinions from the orders on causes page #1410
+- Add "lower_court_ids" to fields returned by OpinionSite #1432
 
 ## Current
 
