@@ -18,6 +18,7 @@ Features:
 -
 
 Changes:
+-  Fix `bap1` not scraping recent data #1422
 - Update `uscgcoca` add backscraper #1431
 
 Fixes:
