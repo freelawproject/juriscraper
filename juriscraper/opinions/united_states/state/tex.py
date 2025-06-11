@@ -116,8 +116,8 @@ class Site(OpinionSiteLinear):
                 author = ""
                 per_curiam = True
 
-            lower_court, lower_court_number = self.parse_lower_court_info(
-                title
+            lower_court, lower_court_number, lower_court_id = (
+                self.parse_lower_court_info(title)
             )
 
             title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
@@ -138,6 +138,7 @@ class Site(OpinionSiteLinear):
                     "author": author,
                     "lower_court": lower_court,
                     "lower_court_number": lower_court_number,
+                    "lower_court_id": lower_court_id,
                 }
             )
 
@@ -162,16 +163,21 @@ class Site(OpinionSiteLinear):
         if match := re.search(texapp_regex, title):
             lower_court = match.group("lower_court")
             lower_court_number = title[match.end() :].split(",")[0]
-            return lower_court, lower_court_number
+            return lower_court, lower_court_number, "texapp"
         elif match := re.search(other_courts_regex, title):
             lower_court = match.group("lower_court")
             lower_court_number = match.group("lower_number")
 
-            if "BODA" in lower_court_number:
+            if lower_court == "BODA":
                 lower_court = "Board of Disciplinary Appeals"
+                lower_court_id = ""
+            else:
+                # if this is not a BODA match, then it can only be a
+                # Fifth Circuit match. Update this if the regex above changes
+                lower_court_id = "ca5"
 
-            return lower_court, lower_court_number
-        return "", ""
+            return lower_court, lower_court_number, lower_court_id
+        return "", "", ""
 
     @staticmethod
     def extract_type(link: etree.Element) -> str:
