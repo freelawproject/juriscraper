@@ -18,22 +18,28 @@ Features:
 -
 
 Changes:
--  Fix `bap1` not scraping recent data #1422
 - Update `uscgcoca` add backscraper #1431
 
 Fixes:
--  Fix `tex` get opinions from the orders on causes page #1410
+-
 
 ## Current
+
+**2.6.76 - 2025-06-12**
+
+Changes:
+-  Fix `tex` get opinions from the orders on causes page #1410
+-  Fix `sd`
+-  Fix `bap1` not scraping recent data #1422
+
+
+## Past
 
 **2.6.75 - 2025-06-09**
 
 Changes:
 - Update kan and kanctapp scrapers
 - update `nc` scraper to OpinionSiteLinear and new website #1373
-
-
-## Past
 
 **2.6.74 - 2025-06-04**
 
