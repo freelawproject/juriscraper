@@ -94,12 +94,8 @@ class Site(OpinionSiteLinear):
         name = case["name"]
 
         for citation in [case.get("citation"), case.get("parallel_citation")]:
-            if citation:
-                name = re.sub(
-                    rf"\s*[\(\[]?\s*{re.escape(citation)}\s*[\)\]]?\s*",
-                    "",
-                    name,
-                )
+            if citation and citation in name:
+                name = name.split(citation, 1)[0]
 
         parts = re.split(r"[(-]| WITH | ONREMAND | PETITION FOR", name)
         if len(parts) > 1 and parts[0].strip().lower() in [
