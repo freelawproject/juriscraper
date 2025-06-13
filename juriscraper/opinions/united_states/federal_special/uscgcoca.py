@@ -129,8 +129,8 @@ class Site(OpinionSiteLinear):
 
         if start is None or not str(start).isdigit():
             # There are 34 historical pages as of development in Jun 2025
-            start = 34
+            start = 1
         if end is None or not str(end).isdigit():
-            end = 1
+            end = 34
 
-        self.back_scrape_iterable = range(int(start), int(end) - 1, -1)
+        self.back_scrape_iterable = range(int(end), int(start) - 1, -1)
