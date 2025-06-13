@@ -20,7 +20,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.citation_regex = r"(?P<MJ>\(?\d{2} M\.?J\.? \d+\)?)|(?P<WL>\(?\d{4} (W\.?[Ll]\.?) \d+\)?)"
+        self.citation_regex = r"(?P<MJ>[\(\[]?\d{2} M\.?J\.?\.?\s*\d+[\)\]]?)|(?P<WL>[\(\[]?\d{4} W\.?L\.?\.?\s*\d+[\)\]]?)"
         self.base_url = self.url = (
             "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
         )
@@ -67,15 +67,17 @@ class Site(OpinionSiteLinear):
             status = "Published" if m and mj else "Unpublished"
 
             self.cases.append(
-                {
-                    "name": first_cell,
-                    "date": date_string,
-                    "docket": docket,
-                    "url": url,
-                    "status": status,
-                    "citation": mj,
-                    "parallel_citation": wl,
-                }
+                self.clean_case_name(
+                    {
+                        "name": first_cell,
+                        "date": date_string,
+                        "docket": docket,
+                        "url": url,
+                        "status": status,
+                        "citation": mj,
+                        "parallel_citation": wl,
+                    }
+                )
             )
 
     def _download_backwards(self, page_number: int) -> None:
@@ -86,33 +88,39 @@ class Site(OpinionSiteLinear):
         """
         self.url = f"{self.base_url}?smdpage15701={page_number}"
 
-    def _get_case_names(self) -> list[str]:
-        """Clean case names
+    @staticmethod
+    def clean_case_name(case) -> dict:
+        """Clean case name by removing citations and unnecessary text"""
+        name = case["name"]
 
-        :return: List of case names
-        """
-        for case in self.cases:
-            if case["citation"]:
-                case["name"] = re.sub(
-                    rf"\(?\s?{case['citation']}\s?\)?",
+        for citation in [case.get("citation"), case.get("parallel_citation")]:
+            if citation:
+                name = re.sub(
+                    rf"\s*[\(\[]?\s*{re.escape(citation)}\s*[\)\]]?\s*",
                     "",
-                    case["name"],
+                    name,
                 )
-            if case["parallel_citation"]:
-                case["name"] = re.sub(
-                    rf"\(?\s?{case['parallel_citation']}\s?\)?",
-                    "",
-                    case["name"],
-                )
-            case["name"] = re.sub(
-                r"\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|\(on reconsid\)|ORDER|- UNPUBLISHED|- UNPLUBLISHED|.PDF",
-                "",
-                case["name"],
-                flags=re.IGNORECASE,
-            ).strip()
-            case["name"] = titlecase(case["name"].strip(" -").strip(": "))
 
-        return [c["name"] for c in self.cases]
+        parts = re.split(r"[(-]| WITH | ONREMAND | PETITION FOR", name)
+        if len(parts) > 1 and parts[0].strip().lower() in [
+            "order",
+            "opinion",
+            "petition",
+        ]:
+            name = parts[1].strip()
+        else:
+            name = parts[0].strip()
+
+        name = re.sub(r"^order\s*:?[\s-]*", "", name, flags=re.IGNORECASE)
+        name = re.sub(
+            r"\b(opinion|petition|petition order)\b\s*$",
+            "",
+            name,
+            flags=re.IGNORECASE,
+        )
+
+        case["name"] = titlecase(name.strip(" -:"))
+        return case
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed"""
