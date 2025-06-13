@@ -21,7 +21,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.citation_regex = r"(?P<MJ>\(?\d{2} M\.?J\.? \d+\)?)|(?P<WL>\(?\d{4} (W\.?[Ll]\.?) \d+\)?)"
-        self.case_name_regex = r"^(?P<case_name>.*?)\s*(?:-\s*(?:Unpublished|Published)|(?:\s*\([^)]*(?:WL|MERITS|UNPUBLISHED)[^)]*\))|(?:\s*\(UNPUBLISHED\))|(?:\s*-\s*UNPUBLISHED))\s*$"
         self.base_url = self.url = (
             "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
         )
@@ -65,12 +64,6 @@ class Site(OpinionSiteLinear):
                 mj = ""
                 wl = ""
 
-            match = re.match(self.case_name_regex, first_cell)
-            if match:
-                first_cell = (
-                    match.group("case_name").strip().replace("II", "2nd")
-                )
-
             status = "Published" if m and mj else "Unpublished"
 
             self.cases.append(
@@ -112,12 +105,12 @@ class Site(OpinionSiteLinear):
                     case["name"],
                 )
             case["name"] = re.sub(
-                r"\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|ORDER",
+                r"\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|\(on reconsid\)|ORDER|- UNPUBLISHED|- UNPLUBLISHED|.PDF",
                 "",
                 case["name"],
                 flags=re.IGNORECASE,
-            )
-            case["name"] = titlecase(case["name"].strip(" -"))
+            ).strip()
+            case["name"] = titlecase(case["name"].strip(" -").strip(": "))
 
         return [c["name"] for c in self.cases]
 
