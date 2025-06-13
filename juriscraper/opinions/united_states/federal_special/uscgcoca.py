@@ -128,9 +128,9 @@ class Site(OpinionSiteLinear):
         end = kwargs.get("backscrape_end")
 
         if start is None or not str(start).isdigit():
-            # There are 34 historical pages as of development in Jun 2025
             start = 1
         if end is None or not str(end).isdigit():
+            # There are 34 historical pages as of development in Jun 2025
             end = 34
 
         self.back_scrape_iterable = range(int(end), int(start) - 1, -1)
