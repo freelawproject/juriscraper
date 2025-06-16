@@ -47,7 +47,11 @@ class Site(OpinionSiteLinear):
         self.cases = []
         for result in results:
             docket = result.xpath(".//strong/text()")[0]
-            name = result.xpath(".//p[not(strong)]/text()")[0].replace(" VS. .", ".").strip()
+            name = (
+                result.xpath(".//p[not(strong)]/text()")[0]
+                .replace(" VS. .", ".")
+                .strip()
+            )
             decree = result.xpath(
                 ".//p[strong[contains(text(), 'Decree')]]/text()"
             )[0]
