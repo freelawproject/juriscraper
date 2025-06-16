@@ -11,7 +11,6 @@ from datetime import date, datetime
 
 from lxml.html import HtmlElement
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.type_utils import OpinionType
