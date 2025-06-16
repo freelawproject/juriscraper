@@ -21,7 +21,7 @@ Changes:
 - Update `uscgcoca` add backscraper #1431
 
 Fixes:
--
+- Fix `va` collecting bad docket_number values #1441
 
 ## Current
 
