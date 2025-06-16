@@ -7,9 +7,11 @@ Reviewer: flooie
 History:
     2021-03-29: Created by Evando Blanco
     2021-12-17: Updated by flooie for OpinionSiteLinear
+    2025-06-11: Updated by lmanzur to add backscraping support
 """
 
 import re
+from urllib.parse import urljoin
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -19,8 +21,10 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.citation_regex = r"(?P<MJ>\(?\d{2} M\.?J\.? \d+\)?)|(?P<WL>\(?\d{4} (W\.?[Ll]\.?) \d+\)?)"
-        self.url = "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
+        self.citation_regex = r"(?P<MJ>[\(\[]?\d{2} M\.?J\.?\.?\s*\d+[\)\]]?)|(?P<WL>[\(\[]?\d{4} W\.?L\.?\.?\s*\d+[\)\]]?)"
+        self.base_url = self.url = (
+            "https://www.uscg.mil/Resources/Legal/Court-of-Criminal-Appeals/CGCCA-Opinions/"
+        )
         self.request["headers"] = {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-encoding": "gzip, deflate, br, zstd",
@@ -37,6 +41,8 @@ class Site(OpinionSiteLinear):
             "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
         }
         self.needs_special_headers = True
+
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Process the HTML
@@ -62,41 +68,71 @@ class Site(OpinionSiteLinear):
             status = "Published" if m and mj else "Unpublished"
 
             self.cases.append(
-                {
-                    "name": first_cell,
-                    "date": date_string,
-                    "docket": docket,
-                    "url": url,
-                    "status": status,
-                    "citation": mj,
-                    "parallel_citation": wl,
-                }
+                self.clean_case_name(
+                    {
+                        "name": first_cell,
+                        "date": date_string,
+                        "docket": docket,
+                        "url": url,
+                        "status": status,
+                        "citation": mj,
+                        "parallel_citation": wl,
+                    }
+                )
             )
 
-    def _get_case_names(self) -> list[str]:
-        """Clean case names
+    def _download_backwards(self, page_number: int) -> None:
+        """Method used by backscraper to download historical records
 
-        :return: List of case names
+        :param page_number: an element of self.back_scrape_iterable
+        :return: None
         """
-        for case in self.cases:
-            if case["citation"]:
-                case["name"] = re.sub(
-                    rf"\(?\s?{case['citation']}\s?\)?",
-                    "",
-                    case["name"],
-                )
-            if case["parallel_citation"]:
-                case["name"] = re.sub(
-                    rf"\(?\s?{case['parallel_citation']}\s?\)?",
-                    "",
-                    case["name"],
-                )
-            case["name"] = re.sub(
-                r"\(UNPUBLISHED\)|\(MERITS\)|\(PER CURIAM\)|ORDER",
-                "",
-                case["name"],
-                flags=re.IGNORECASE,
-            )
-            case["name"] = titlecase(case["name"].strip(" -"))
+        self.url = urljoin(self.base_url, f"?smdpage15701={page_number}")
 
-        return [c["name"] for c in self.cases]
+    @staticmethod
+    def clean_case_name(case: dict) -> dict:
+        """Clean case name by removing citations and unnecessary text
+
+        :param case: A dictionary containing case information
+        :return dict: The updated case dictionary with a cleaned case name
+        """
+        name = case["name"]
+
+        for citation in [case.get("citation"), case.get("parallel_citation")]:
+            if citation and citation in name:
+                name = name.split(citation, 1)[0]
+
+        parts = re.split(r"[(-]| WITH | ONREMAND | PETITION FOR", name)
+        if len(parts) > 1 and parts[0].strip().lower() in [
+            "order",
+            "opinion",
+            "petition",
+        ]:
+            name = parts[1].strip()
+        else:
+            name = parts[0].strip()
+
+        name = re.sub(r"^order\s*:?[\s-]*", "", name, flags=re.IGNORECASE)
+        name = re.sub(
+            r"\b(opinion|petition|petition order)\b\s*$",
+            "",
+            name,
+            flags=re.IGNORECASE,
+        )
+
+        case["name"] = titlecase(name.strip(" -:"))
+        return case
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed"""
+
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        if start is None or not str(start).isdigit():
+            start = 1
+        if end is None or not str(end).isdigit():
+            # There are 34 historical pages as of development in Jun 2025
+            end = 34
+
+        self.back_scrape_iterable = range(int(end), int(start) - 1, -1)
