@@ -34,8 +34,11 @@ class Site(OpinionSiteLinear):
             "__EVENTTARGET": "ctl00$Main$btnOpMonthYearSearch",
         }
 
-    def _process_html(self):
-        """Process the HTML to extract case details."""
+    def _process_html(self) -> None:
+        """Process the HTML to extract case details.
+
+        :return None
+        """
 
         # XPath for the opinion results
         opinion_results_xpath = "//div[contains(@class, 'opinion-result')]"
@@ -44,7 +47,7 @@ class Site(OpinionSiteLinear):
         self.cases = []
         for result in results:
             docket = result.xpath(".//strong/text()")[0]
-            name = result.xpath(".//p[not(strong)]/text()")[0]
+            name = result.xpath(".//p[not(strong)]/text()")[0].replace(" VS. .", ".").strip()
             decree = result.xpath(
                 ".//p[strong[contains(text(), 'Decree')]]/text()"
             )[0]
@@ -66,8 +69,11 @@ class Site(OpinionSiteLinear):
             )
 
     def update_parameters(self) -> None:
-        """Set year and month values from `self.search_date`
-        into self.parameters for POST use
+        """Set year and month values in the parameters for the search.
+
+        Updates the parameters for the search request with the current search date.
+
+        :return None
         """
         logger.info(
             "Scraping for year: %s - month: %s",
@@ -100,15 +106,10 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs) -> None:
-        """Prepares the iterable for backscraping
+        """Make back scrape iterable
 
-        :param kwargs if the following keys are present, use them
-            backscrape_start: str in "%Y/%m/%d" format;
-                            Default: self.first_opinion_date
-            backscrape_end: str
-            days_interval: int; Default: self.days_interval
-
-        :return None; sets self.back_scrape_iterable in place
+        :param kwargs: the back scraping params
+        :return: None
         """
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(
