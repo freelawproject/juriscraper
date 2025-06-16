@@ -90,8 +90,12 @@ class Site(OpinionSiteLinear):
         self.url = urljoin(self.base_url, f"?smdpage15701={page_number}")
 
     @staticmethod
-    def clean_case_name(case) -> dict:
-        """Clean case name by removing citations and unnecessary text"""
+    def clean_case_name(case: dict) -> dict:
+        """Clean case name by removing citations and unnecessary text
+
+        :param case: A dictionary containing case information
+        :return dict: The updated case dictionary with a cleaned case name
+        """
         name = case["name"]
 
         for citation in [case.get("citation"), case.get("parallel_citation")]:
