@@ -26,7 +26,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.la4th.org/Default.aspx"
-        self.search_is_configured = False
         self.search_date = datetime.today()
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
@@ -79,12 +78,6 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        logger.info(
-            "Scraping for year: %s - month: %s",
-            self.search_date.year,
-            self.search_date.month,
-        )
-
         self.parameters.update(
             {
                 "ctl00$Main$ddlOpMonth": self.search_date.strftime("%B"),
@@ -129,7 +122,6 @@ class Site(OpinionSiteLinear):
         if not self.test_mode_enabled():
             if not self.html:
                 self.html = super()._download()
-                self.search_is_configured = True
 
             self.update_parameters()
             self.method = "POST"
