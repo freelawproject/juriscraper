@@ -10,7 +10,11 @@ class Site(OpinionSiteLinear):
         self.url = "http://www.courts.state.va.us/scndex.htm"
         self.status = "Published"
 
-    def _process_html(self):
+    def _process_html(self) -> None:
+        """Parses the HTML content to extract case information.
+
+        :return: None
+        """
         if self.test_mode_enabled():
             today = datetime.strptime("11/20/2023", "%m/%d/%Y").date()
         else:
@@ -33,7 +37,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "name": row.xpath(".//b/text()")[0].strip(),
-                    "docket": links[0].get("name"),
+                    "docket": links[1].text.strip(" '\""),
                     "url": links[1].get("href"),
                     "summary": summary,
                     "date": date_str,
