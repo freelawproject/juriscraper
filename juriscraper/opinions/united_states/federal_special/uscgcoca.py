@@ -11,6 +11,7 @@ History:
 """
 
 import re
+from urllib.parse import urljoin
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -86,7 +87,7 @@ class Site(OpinionSiteLinear):
         :param page_number: an element of self.back_scrape_iterable
         :return: None
         """
-        self.url = f"{self.base_url}?smdpage15701={page_number}"
+        self.url = urljoin(self.base_url, f"?smdpage15701={page_number}")
 
     @staticmethod
     def clean_case_name(case) -> dict:
