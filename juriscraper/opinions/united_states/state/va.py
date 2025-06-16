@@ -25,8 +25,13 @@ class Site(OpinionSiteLinear):
             if len(links) != 2:
                 continue
             name = row.xpath(".//b/text()")[0].strip()
-            summary = row.text_content().split(name)[1].strip()
-            date_str = summary.split("\n")[0].strip()
+
+            text = row.text_content().split(name)[1].strip()
+            split_test = text.split("\n")
+
+            date_str = split_test[0].strip()
+            summary = split_test[1].strip()
+
             if "Revised" in date_str:
                 date_str = date_str.split("Revised")[1].strip().strip(")")
             date_object = datetime.strptime(date_str, "%m/%d/%Y").date()
