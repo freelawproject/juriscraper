@@ -59,10 +59,7 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        rows = self.html.xpath(
-            "//div[@id='ContentPlaceHolder1_ChildContent1_UpdatePanel_Opinions']//tbody/tr[not(th)][not(.//a[contains(@id, 'DataList_Paging_LinkButton')])]"
-        )
-        for row in rows:
+        for row in self.html.xpath("//tr[td/strong/a]"):
             title = get_row_column_text(row, 2)
 
             status = "Published"
@@ -71,7 +68,7 @@ class Site(OpinionSiteLinear):
                 status = "Unpublished"
                 cite = [""]
 
-            url = row.xpath(".//td[2]/a/@href")[0]
+            url = row.xpath(".//a/@href")[0]
             docket = url.split("/")[-1][:5]
             name = titlecase(title.rsplit(",", 1)[0] if cite else title)
             self.cases.append(
