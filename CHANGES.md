@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `va` collecting bad docket_number values #1441
+- Fix `mich` change date expected key to `date_filed` #1445
 
 ## Current
 
