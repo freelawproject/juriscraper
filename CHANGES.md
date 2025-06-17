@@ -18,6 +18,7 @@ Features:
 -
 
 Changes:
+- New scraper `lactapp_4` for Lousiana Court of Appeals, Fourth Circuit
 - Update `uscgcoca` add backscraper #1431
 
 Fixes:
