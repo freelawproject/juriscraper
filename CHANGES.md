@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+
+**2.6.77 - 2025-06-17**
+
+Changes:
 - New scraper `lactapp_4` for Lousiana Court of Appeals, Fourth Circuit
 - Update `uscgcoca` add backscraper #1431
 - Update `tenn` add backscraper #1425
@@ -25,8 +36,6 @@ Changes:
 Fixes:
 - Fix `va` collecting bad docket_number values #1441
 - Fix `mich` change date expected key to `date_filed` #1445
-
-## Current
 
 **2.6.76 - 2025-06-12**
 
