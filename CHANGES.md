@@ -18,10 +18,11 @@ Features:
 - Add error handling for scrapers with expected results #1447
 
 Changes:
+- New scraper `lactapp_4` for Lousiana Court of Appeals, Fourth Circuit
 - Update `uscgcoca` add backscraper #1431
 
 Fixes:
--
+- Fix `va` collecting bad docket_number values #1441
 
 ## Current
 
