@@ -143,18 +143,18 @@ class Site(OpinionSiteLinear):
             )
 
     @staticmethod
-    def parse_lower_court_info(title: str) -> tuple[str, str]:
+    def parse_lower_court_info(title: str) -> tuple[str, str, str]:
         """Parses lower court information from the title string
 
-        :param title string
-        :return lower_court, lower_court_number
+        :param title: a string with lower court information
+        :return: values for lower_court, lower_court_number, lower_court_id
         """
 
-        # format when appeal comes from texapp. Example:
+        # Format when appeal comes from texapp districts. Example:
         # ' from Harris County; 1st Court of Appeals District (01-22-00182-CV, 699 SW3d 20, 03-23-23)'
         texapp_regex = r" from (?P<lower_court>.*)\s*\("
 
-        # Examples:
+        # Format when appeal comes from other possible courts. Examples:
         #  "(U.S. Fifth Circuit 23-10804)"
         #  "(U.S. 5th Circuit 19-51012)"
         # "(BODA Cause No. 67623)"
@@ -164,19 +164,21 @@ class Site(OpinionSiteLinear):
             lower_court = match.group("lower_court")
             lower_court_number = title[match.end() :].split(",")[0]
             return lower_court, lower_court_number, "texapp"
+
         elif match := re.search(other_courts_regex, title):
             lower_court = match.group("lower_court")
             lower_court_number = match.group("lower_number")
 
             if lower_court == "BODA":
                 lower_court = "Board of Disciplinary Appeals"
-                lower_court_id = ""
+                lower_court_id = "txboda"
             else:
                 # if this is not a BODA match, then it can only be a
                 # Fifth Circuit match. Update this if the regex above changes
                 lower_court_id = "ca5"
 
             return lower_court, lower_court_number, lower_court_id
+
         return "", "", ""
 
     @staticmethod
