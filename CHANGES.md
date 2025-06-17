@@ -19,6 +19,7 @@ Features:
 
 Changes:
 - Update `uscgcoca` add backscraper #1431
+- Update `tenn` add backscraper #1425
 
 Fixes:
 - Fix `va` collecting bad docket_number values #1441
