@@ -141,8 +141,15 @@ class Site(OpinionSiteLinear):
         """Remove hash altering timestamps to prevent duplicates
 
         Recently the NY courts introduced a timestamped script tag,
-        apparently for cloudflare analytics. This is causing us to ingest
+        apparently for cloudflare analytics. This was causing us to ingest
         duplicates
+
+        Another problem are the email protection tags; which come with a varying ID
+        which is also causing us to ingest duplicates
+
+        :param content: processing will happen if it's HTML. If not, it will
+            return the content as is
+        :return: content without hash altering elements
         """
         try:
             tree = html.fromstring(content)
@@ -150,8 +157,26 @@ class Site(OpinionSiteLinear):
             return content
 
         scripts = tree.xpath("//script")
-        if not scripts:
+        email_protection = tree.xpath(
+            "//a[@data-cfemail] | //a[@href='/cdn-cgi/l/email-protection']"
+        )
+
+        if not scripts and not email_protection:
             return content
+
+        # Replace the email protection anchor tag with its text content
+        for email in email_protection:
+            text = email.text_content()
+            parent = email.getparent()
+            if parent is None:
+                continue
+
+            if email.tail:
+                text += email.tail
+                email.tail = ""
+
+            email.drop_tree()
+            parent.text = (parent.text or "") + text
 
         for script in scripts:
             parent = script.getparent()
