@@ -76,6 +76,9 @@ class AbstractSite:
         # should use the modified `self.request["headers"]`
         self.needs_special_headers = False
 
+        # indicates whether the scraper should have results or not to raise an error
+        self.should_have_results = False
+
         # Sub-classed metadata
         self.court_id = None
         self.url = None
@@ -243,7 +246,12 @@ class AbstractSite:
                 " lengths: %s" % (self.court_id, lengths)
             )
         if len(self.case_names) == 0:
-            logger.warning(f"{self.court_id}: Returned with zero items.")
+            if self.should_have_results:
+                logger.error(
+                    f"{self.court_id}: Returned with zero items, but should have results."
+                )
+            else:
+                logger.warning(f"{self.court_id}: Returned with zero items.")
         else:
             for field in self._req_attrs:
                 if self.__getattribute__(field) is None:
