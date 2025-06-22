@@ -305,7 +305,11 @@ class ACMSDocketReport(AppellateDocketReport):
         """
 
         docket_entries = []
-        for row in self._acms_json["docketInfo"]["docketEntries"]:
+        raw_entries_ordered = sorted(
+            self._acms_json["docketInfo"]["docketEntries"],
+            key=lambda x: (x["endDate"], x["entryNumber"]),
+        )
+        for row in raw_entries_ordered:
             _ = """Here's what we have to work with:
 {
   "endDate": "2023-10-05",
