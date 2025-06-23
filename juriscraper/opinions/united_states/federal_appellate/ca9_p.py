@@ -20,6 +20,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/opinions/index.xml"
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         feed = feedparser.parse(tostring(self.html))
