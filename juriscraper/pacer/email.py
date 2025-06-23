@@ -82,6 +82,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
+        self.acms = None
+        self.acms_partial_short_description = None
         self.image_attached = False
         self.docket_numbers = []
         self.subject = None
@@ -104,6 +106,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         }
         parsed = {
             "appellate": self._is_appellate(),
+            "acms": self._is_acms(),
             "dockets": self._get_dockets(),
         }
         if self.content_type == "text/plain":
@@ -127,6 +130,36 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             return self.appellate
         return self.appellate
 
+    def _is_acms(self) -> bool:
+        """Checks if the NDA belongs to ACMS.
+
+        :return: True if it’s an ACMS notification, otherwise False.
+        """
+        if self.acms is not None:
+            return self.acms
+
+        # Table version notification. It's not ACMS
+        if self.tree.xpath("//table[contains(., 'Case Name:')]"):
+            self.acms = False
+            return False
+
+        # Div-based version notification. ACMS.
+        case_names = self.tree.xpath("//strong[contains(., 'Case Name:')]")
+        case_names_count = len(case_names)
+
+        # Multi-docket ACMS for appellate is not yet supported
+        if self.appellate and case_names_count > 1:
+            raise NotImplementedError(
+                "Received a potential multi-docket ACMS NDA notification. "
+                "This is probably our chance to add support for it. "
+                "Court: %s",
+                self.court_id,
+            )
+
+        # 1 Div-based Case Name found. This is an ACMS notification.
+        self.acms = case_names_count == 1
+        return self.acms
+
     def _sibling_path(self, label):
         """Gets the path string for the sibling of a label cell (td)
 
@@ -144,7 +177,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param  current_node: The relative lxml.HtmlElement
         :returns: Case name, cleaned and harmonized
         """
-        path = self._sibling_path("Case Name")
+
+        path = (
+            "//strong[contains(., 'Case Name:')]/following-sibling::span[1]"
+            if self._is_acms()
+            else self._sibling_path("Case Name")
+        )
         case_name = self._xpath_text_0(current_node, path)
         if not case_name:
             case_name = self._xpath_text_0(current_node, f"{path}/p")
@@ -197,7 +235,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
 
         if self._is_appellate():
-            path = self._sibling_path("Case Number")
+            path = (
+                "//strong[contains(., 'Case Number:')]/../"
+                if self._is_acms()
+                else self._sibling_path("Case Number")
+            )
             case_number = self._xpath_text_0(current_node, f"{path}/a")
             return case_number, self._return_default_dn_components()
 
@@ -278,13 +320,27 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Anchor tag, if it's found
         """
         try:
-            if self._is_appellate():
-                path = f"{self._sibling_path('Document(s)')}//a"
-            else:
-                path = f"{self._sibling_path('Document Number')}//a"
+            path = (
+                "//b[contains(., 'Document:')]/following-sibling::a"
+                if self._is_acms()
+                else f"{self._sibling_path('Document(s)')}//a"
+                if self._is_appellate()
+                else f"{self._sibling_path('Document Number')}//a"
+            )
             return current_node.xpath(path)[0]
         except IndexError:
             return None
+
+    def _get_acms_partial_short_description(
+        self, current_node: HtmlElement
+    ) -> str:
+        """Retrieves the acms partial short description.
+
+        :param  current_node: The relative lxml.HtmlElement
+        :returns: Partial short description, if it's found
+        """
+        path = "//b[contains(., 'Document:')]/following-sibling::a"
+        return self._xpath_text_0(current_node, path)
 
     def _get_case_anchor(self, current_node: HtmlElement) -> Optional[str]:
         """Safely retrieves the anchor tag for a case.
@@ -336,6 +392,17 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Paths to look for NDAs description
             main_path = './following::strong[contains(., "Docket Text:")][1]/following::'
             possible_paths = ["text()"]
+
+        if self._is_acms():
+            # Path to look for ACMS description
+            main_path = (
+                "//strong[normalize-space(.)='Docket Text:']"
+                "/ancestor::div[1]"
+                "/following-sibling::div[1]"
+                "//div//"
+            )
+            possible_paths = ["text()"]
+
         for path in possible_paths:
             node = current_node.xpath(f"{main_path}{path}")
             if len(node):
@@ -438,6 +505,23 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             docket.update(docket_number_components)
             dockets.append(docket)
         else:
+            if self._is_acms():
+                docket_number, docket_number_components = (
+                    self._parse_docket_number(self.tree)
+                )
+                # Cache the docket number and case name for its later use.
+                self.docket_numbers.append(docket_number)
+                docket = {
+                    "case_name": self._get_case_name(self.tree),
+                    "docket_number": docket_number,
+                    "date_filed": None,
+                    "docket_entries": self._get_docket_entries(self.tree),
+                }
+                # Include the docket_number components.
+                docket.update(docket_number_components)
+                dockets.append(docket)
+                return dockets
+
             dockets_table = self.tree.xpath(
                 "//table[contains(., 'Case Name:')]"
             )
@@ -508,13 +592,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 document_url = (
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
-                if self._is_appellate():
+                if self._is_appellate() or self._is_acms():
                     document_number = None
                 else:
                     document_number = self._get_document_number(current_node)
 
                 # Get Case URL for HTML version.
                 case_url = self._get_case_anchor(current_node)
+
+                # Get the ACMS partial short description for later use in short_description parsing.
+                self.acms_partial_short_description = (
+                    self._get_acms_partial_short_description(current_node)
+                    if self._is_acms()
+                    else None
+                )
 
         if description is not None:
             # "doc" value for document_number will cause an error on
@@ -536,8 +627,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 }
             ]
             if document_url is not None:
-                entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
-                    document_url
+                entries[0]["pacer_doc_id"] = (
+                    get_pacer_doc_id_from_doc1_url(document_url)
+                    if not self._is_acms()
+                    else None
                 )
                 entries[0]["pacer_magic_num"] = (
                     get_pacer_magic_num_from_doc1_url(
@@ -668,6 +761,30 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         )
         return longer_short_description
 
+    def _parse_acms_short_description(self, subject: str) -> str:
+        """Parse the short description of an ACMS entry from the subject
+         notification.
+
+        :param subject: The subject string from which to parse the short
+        description.
+        :return: The parsed short description
+        """
+        partial_des = re.escape(self.acms_partial_short_description)
+        match = re.search(partial_des, subject, re.IGNORECASE)
+        if not match:
+            return ""
+
+        # Identify - boundaries for the short description and extract it.
+        start_idx, end_idx = match.span()
+        left_hyphen_idx = subject.rfind("-", 0, start_idx)
+        right_hyphen_idx = subject.find("-", end_idx)
+        slice_start = left_hyphen_idx + 1 if left_hyphen_idx != -1 else 0
+        slice_end = (
+            right_hyphen_idx if right_hyphen_idx != -1 else len(subject)
+        )
+
+        return subject[slice_start:slice_end].strip()
+
     def _get_short_description(self) -> str:
         """Get the short description of a case from the subject string.
 
@@ -685,7 +802,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if len(subject_split_case_name) > 1:
                 break
 
-        if self.appellate:
+        if self._is_acms():
+            short_description = self._parse_acms_short_description(
+                subject_split_case_name[-1]
+            )
+        elif self.appellate:
             # Appellate notification.
             short_description = self._parse_appellate_short_description(
                 subject
