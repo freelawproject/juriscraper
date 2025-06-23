@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- Improve `ny` cleanup_content to remove email protection that was causing
+  duplicates #1450
 
 ## Current
 

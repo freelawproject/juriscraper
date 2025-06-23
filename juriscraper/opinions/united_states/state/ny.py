@@ -11,10 +11,9 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any, Optional, Union
+from typing import Any, Optional
 
-from lxml import html
-from lxml.etree import ParserError
+import nh3
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -137,25 +136,27 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     @staticmethod
-    def cleanup_content(content: Union[str, bytes]) -> Union[str, bytes]:
+    def cleanup_content(content: bytes) -> bytes:
         """Remove hash altering timestamps to prevent duplicates
 
-        Recently the NY courts introduced a timestamped script tag,
-        apparently for cloudflare analytics. This is causing us to ingest
-        duplicates
+        Previously we've been more targeted about removing a href's but
+        doctor will strip them out anyway so we should just clean our html
+        content here.
+
+        :param content: downloaded content `r.content`
+        :return: content without hash altering elements
         """
         try:
-            tree = html.fromstring(content)
-        except ParserError:
+            html_str = content.decode("utf-8")
+        except UnicodeDecodeError:
             return content
 
-        scripts = tree.xpath("//script")
-        if not scripts:
+        if not nh3.is_html(html_str):
             return content
 
-        for script in scripts:
-            parent = script.getparent()
-            if parent is not None:
-                parent.remove(script)
+        # remove a tags
+        allowed = set(nh3.ALLOWED_TAGS)
+        allowed.discard("a")
 
-        return html.tostring(tree)
+        cleaned = nh3.clean(html_str, tags=allowed)
+        return cleaned.encode()
