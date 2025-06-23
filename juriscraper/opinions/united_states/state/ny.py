@@ -14,7 +14,6 @@ from datetime import date, timedelta
 from typing import Any, Optional
 
 import nh3
-from lxml import etree, html
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -140,8 +139,9 @@ class Site(OpinionSiteLinear):
     def cleanup_content(content: bytes) -> bytes:
         """Remove hash altering timestamps to prevent duplicates
 
-        Use Nh3 to clean scripts and remove all tags around links outside
-        the document but leave footnote links
+        Previously we've been more targeted about removing a href's but
+        doctor will strip them out anyway so we should just clean our html
+        content here.
 
         :param content: downloaded content `r.content`
         :return: content without hash altering elements
@@ -154,8 +154,9 @@ class Site(OpinionSiteLinear):
         if not nh3.is_html(html_str):
             return content
 
-        tree = html.fromstring(nh3.clean(html_str))
-        for link in tree.xpath("//a[not(starts-with(@href, '#'))]"):
-            link.drop_tag()
+        # remove a tags
+        allowed = set(nh3.ALLOWED_TAGS)
+        allowed.discard("a")
 
-        return etree.tostring(tree, encoding="unicode", method="html").encode()
+        cleaned = nh3.clean(html_str, tags=allowed)
+        return cleaned.encode()
