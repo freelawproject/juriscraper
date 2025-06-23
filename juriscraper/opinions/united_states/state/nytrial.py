@@ -6,6 +6,7 @@ History:
  - 2024-01-05, grossir: created
 """
 
+import html
 import re
 from datetime import date
 from itertools import chain
@@ -144,9 +145,7 @@ class Site(OpinionSiteLinear):
             full_case = fromstring(scraped_text).xpath("//table")
             full_case = full_case[1].text_content() if full_case else ""
 
-        metadata = {
-            "Docket": {"docket_number": docket_number},
-        }
+        metadata = {"Docket": {"docket_number": html.unescape(docket_number)}}
 
         if judge:
             metadata["Opinion"] = {

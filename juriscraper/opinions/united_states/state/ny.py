@@ -11,10 +11,10 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any, Optional, Union
+from typing import Any, Optional
 
-from lxml import html
-from lxml.etree import ParserError
+import nh3
+from lxml import etree, html
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -137,50 +137,25 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     @staticmethod
-    def cleanup_content(content: Union[str, bytes]) -> Union[str, bytes]:
+    def cleanup_content(content: bytes) -> bytes:
         """Remove hash altering timestamps to prevent duplicates
 
-        Recently the NY courts introduced a timestamped script tag,
-        apparently for cloudflare analytics. This was causing us to ingest
-        duplicates
+        Use Nh3 to clean scripts and remove all tags around links outside
+        the document but leave footnote links
 
-        Another problem are the email protection tags; which come with a varying ID
-        which is also causing us to ingest duplicates
-
-        :param content: processing will happen if it's HTML. If not, it will
-            return the content as is
+        :param content: downloaded content `r.content`
         :return: content without hash altering elements
         """
         try:
-            tree = html.fromstring(content)
-        except ParserError:
+            html_str = content.decode("utf-8")
+        except UnicodeDecodeError:
             return content
 
-        scripts = tree.xpath("//script")
-        email_protection = tree.xpath(
-            "//a[@data-cfemail] | //a[@href='/cdn-cgi/l/email-protection']"
-        )
-
-        if not scripts and not email_protection:
+        if not nh3.is_html(html_str):
             return content
 
-        # Replace the email protection anchor tag with its text content
-        for email in email_protection:
-            text = email.text_content()
-            parent = email.getparent()
-            if parent is None:
-                continue
+        tree = html.fromstring(nh3.clean(html_str))
+        for link in tree.xpath("//a[not(starts-with(@href, '#'))]"):
+            link.drop_tag()
 
-            if email.tail:
-                text += email.tail
-                email.tail = ""
-
-            email.drop_tree()
-            parent.text = (parent.text or "") + text
-
-        for script in scripts:
-            parent = script.getparent()
-            if parent is not None:
-                parent.remove(script)
-
-        return html.tostring(tree)
+        return etree.tostring(tree, encoding="unicode", method="html").encode()
