@@ -17,6 +17,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.jagcnet.army.mil/ACCALibrary/cases/opinions/OC"
         self.status = "Published"
         self.expected_content_types = ["application/octet-stream"]
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath(

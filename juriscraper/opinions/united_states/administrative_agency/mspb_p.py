@@ -19,6 +19,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.url = "https://www.mspb.gov/decisions/precedential/PrecedentialDecisions_Manifest_Table.json"
         self.base = "https://www.mspb.gov/decisions/precedential"
+        self.should_have_results = True
 
     def _process_html(self):
         if self.test_mode_enabled():
