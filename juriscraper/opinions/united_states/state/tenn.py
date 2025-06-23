@@ -16,6 +16,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.status = "Unknown"
+        self.should_have_results = True
 
     def _process_html(self):
         """

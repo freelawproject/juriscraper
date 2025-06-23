@@ -23,6 +23,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.nccourts.gov/documents/business-court-opinions"
         self.first_opinion_date = date(1996, 10, 24)
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath(

@@ -14,6 +14,7 @@ class Site(OpinionSiteLinear):
         self.url = f"https://www.courts.ca.gov/cms/opinions.htm?Courts={self.court_code}"
         self.status = "Published"
         self.request["verify"] = False
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         for row in self.html.xpath("//table/tr[not(th)]"):
