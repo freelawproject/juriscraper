@@ -1,3 +1,4 @@
+import gzip
 import json
 import re
 
@@ -8,6 +9,7 @@ from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
     get_html_parsed_text,
     get_xml_parsed_text,
+    strip_bad_html_tags_insecure,
 )
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.utils import is_pdf, is_text
@@ -423,3 +425,121 @@ class PacerSession(requests.Session):
                 "Invalid/expired PACER session and do not have credentials "
                 "for re-login."
             )
+
+
+class AcmsSession(requests.Session):
+    """
+    Extends requests.Session to streamline interactions with ACMS endpoints
+    and APIs, abstracting away the complexities of ACMS authentication.
+
+    This class encapsulates the necessary logic to obtain and manage ACMS
+    authentication tokens, making them readily available for subsequent
+    requests to ACMS-protected resources.
+    """
+
+    # Base URL for retrieving SAML credentials.
+    # Other ACMS court URLs could be used as alternatives.
+    DOCKET_SHEET_URL = "https://ca9-showdoc.azurewebsites.us/25-2066"
+    SAML_URL = "https://ca9-showdoc.azurewebsites.us/Saml2/Acs"
+
+    def __init__(self, next_gen_cso, client_code=None):
+        """
+        Initializes an AcmsSession instance.
+
+        Configures the session with necessary headers for ACMS authentication,
+        retrieves the authentication token, and sets the Authorization header.
+
+        :param next_gen_cso: The value for the 'X-NEXT-GEN-CSO' header,
+        :param client_code: Optional value for the 'X-PACER-CLIENT-CODE' header.
+            Defaults to None.
+        """
+        super().__init__()
+        # Initialize an empty cookie jar.
+        self.cookies = requests.cookies.RequestsCookieJar()
+        # Disable SSL certificate verification
+        self.verify = False
+        self.headers.update(
+            {
+                "X-NEXT-GEN-CSO": next_gen_cso,
+                "X-PACER-CLIENT-CODE": client_code,
+            }
+        )
+        # Retrieve the ACMS authentication object, which includes the auth token
+        self.auth_data = self._get_acms_auth_object()
+        # Update headers with the bearer token from the retrieved model.
+        self.headers.update(
+            {"Authorization": f"Bearer {self.auth_data['AuthToken']['Token']}"}
+        )
+
+    def _get_saml_auth_request_parameters(self) -> dict[str, str]:
+        """
+        Retrieves SAML authentication request parameters by initiating a request
+        to the DOCKET_SHEET_URL. This simulates the initial browser interaction
+        that triggers the SAML flow, parsing hidden input fields from the
+        response.
+
+        :return: A dictionary where keys are the 'name' attributes and values are
+            the 'value' attributes of hidden input elements found in the SAML
+            authentication request form.
+        """
+        self.headers.update(
+            {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+                "Accept-Encoding": "gzip, deflate, br",
+            }
+        )
+        logger.info("Attempting to get SAML credentials")
+        response = self.post(self.DOCKET_SHEET_URL)
+        result_parts = response.text.split("\r\n")
+        # Handle gzip decoding
+        js_screen = result_parts[-1]
+        try:
+            # Try to decompress if it's gzipped
+            inflated_screen = gzip.decompress(js_screen.encode()).decode()
+        except:
+            # If decompression fails, use the original
+            inflated_screen = js_screen
+
+        # Strip potentially problematic HTML tags for safer parsing.
+        html = strip_bad_html_tags_insecure(inflated_screen)
+        # Extract all hidden input elements from the HTML.
+        hidden_inputs = html.xpath('//input[@type="hidden"]')
+
+        # Return a dictionary of hidden input names and their values.
+        return {
+            input_element.get("name"): input_element.get("value")
+            for input_element in hidden_inputs
+        }
+
+    def _get_acms_auth_object(self):
+        """
+        Retrieves the ACMS authentication object by submitting SAML parameters
+        to the SAML_URL. This object typically contains the authentication token
+        and other session-related data.
+
+        This method parses the HTML response to extract a JavaScript  variable
+        named 'model', which contains the authentication data. This is
+        necessary because the authentication data is embedded directly within
+        a script tag in the response HTML.
+
+        :return: A dictionary representing the ACMS authentication object if
+            successfully extracted and parsed from the response.
+        """
+        auth_params = self._get_saml_auth_request_parameters()
+        if not auth_params:
+            raise PacerLoginException(
+                "Failed to extract ACMS authentication data from SAML response."
+            )
+
+        self.headers.update(
+            {"Content-Type": "application/x-www-form-urlencoded"}
+        )
+        logger.info("Attempting to retrieve ACMS authentication token")
+        response = self.post(self.SAML_URL, data=auth_params)
+        match = re.search(r"var model = '(.*?)';", response.text)
+        if not match:
+            raise PacerLoginException("")
+
+        model_value = match.group(1)
+        model_string = re.sub("&quot;", '"', model_value)
+        return json.loads(model_string)

@@ -13,13 +13,14 @@ from .download_confirmation_page import DownloadConfirmationPage
 from .email import NotificationEmail, S3NotificationEmail
 from .free_documents import FreeOpinionReport
 from .hidden_api import PossibleCaseNumberApi, ShowCaseDocApi
-from .http import PacerSession
+from .http import AcmsSession, PacerSession
 from .internet_archive import InternetArchive
 from .list_of_creditors import ListOfCreditors
 from .mobile_query import MobileQuery
 from .rss_feeds import PacerRssFeed
 
 __all__ = [
+    AcmsSession,
     ACMSAttachmentPage,
     ACMSDocketReport,
     AppellateDocketReport,
