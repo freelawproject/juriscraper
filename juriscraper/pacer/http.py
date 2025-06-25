@@ -18,6 +18,12 @@ logger = make_default_logger()
 
 requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
+# Compile the regex pattern once for efficiency.
+# This pattern captures the court_id (e.g., 'ca9', 'ca2') from the URL.
+ACMS_URL_PATTERN = re.compile(
+    r"https://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
+)
+
 
 def check_if_logged_in_page(content: bytes) -> bool:
     """Is this a valid HTML page from PACER?
@@ -125,6 +131,33 @@ class PacerSession(requests.Session):
         self.acms_user_data = {}
         self.acms_tokens = {}
 
+    def _check_url_and_retrieve_acms_token(self, url: str) -> str:
+        """
+        Checks if the provided URL is an ACMS URL and, if so, ensures the
+        ACMS bearer token is available for that court ID.
+
+        If the ACMS bearer token for the detected court ID is not already
+        in the session's `acms_tokens`, this method will trigger the
+        `get_acms_auth_object()` method to perform authentication and
+        retrieve the token.
+
+        :param url: The URL of the request to check.
+        :return: The ACMS bearer token if the URL is an ACMS URL and a token
+                 is available. Returns an empty string otherwise
+        """
+        # Check if the URL matches the ACMS pattern
+        match = ACMS_URL_PATTERN.match(url)
+        if not match:
+            return ""
+
+        acms_court_id = match.group(1)
+        logger.debug(f"Detected ACMS request for court: {acms_court_id}")
+
+        if acms_court_id not in self.acms_tokens:
+            self.get_acms_auth_object(acms_court_id)
+
+        return self.acms_tokens[acms_court_id]["Token"]
+
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
 
@@ -132,6 +165,15 @@ class PacerSession(requests.Session):
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
+        # Check if the URL matches the ACMS pattern
+        acms_token = self._check_url_and_retrieve_acms_token(url)
+        # If it's an ACMS request, add the bearer token to the headers
+        if acms_token:
+            # Ensure 'headers' key exists in kwargs as a dictionary.
+            # If it doesn't exist, it's created as an empty dict.
+            kwargs.setdefault("headers", {})
+            kwargs["headers"].update({"Authorization": f"Bearer {acms_token}"})
+
         if "timeout" not in kwargs:
             kwargs.setdefault("timeout", 300)
 
@@ -146,7 +188,7 @@ class PacerSession(requests.Session):
             # request, so that's what we do here. PACER needs some frustrating
             # and inelegant hacks sometimes.
             r = super().get(url, **kwargs)
-        if auto_login:
+        if auto_login and not acms_token:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
@@ -172,6 +214,15 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
+        # Check if the URL matches the ACMS pattern
+        acms_token = self._check_url_and_retrieve_acms_token(url)
+        # If it's an ACMS request, add the bearer token to the headers
+        if acms_token:
+            # Ensure 'headers' key exists in kwargs as a dictionary.
+            # If it doesn't exist, it's created as an empty dict.
+            kwargs.setdefault("headers", {})
+            kwargs["headers"].update({"Authorization": f"Bearer {acms_token}"})
+
         kwargs.setdefault("timeout", 300)
 
         if data:
@@ -181,7 +232,7 @@ class PacerSession(requests.Session):
             kwargs.update({"data": data, "json": json})
 
         r = super().post(url, **kwargs)
-        if auto_login:
+        if auto_login and not acms_token:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
