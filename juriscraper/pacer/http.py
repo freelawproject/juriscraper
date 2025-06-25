@@ -1,3 +1,4 @@
+import gzip
 import json
 import re
 
@@ -8,6 +9,7 @@ from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
     get_html_parsed_text,
     get_xml_parsed_text,
+    strip_bad_html_tags_insecure,
 )
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.utils import is_pdf, is_text
@@ -120,6 +122,8 @@ class PacerSession(requests.Session):
         self.password = password
         self.client_code = client_code
         self.additional_request_done = False
+        self.acms_user_data = {}
+        self.acms_tokens = {}
 
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
@@ -377,6 +381,9 @@ class PacerSession(requests.Session):
         self.cookies = session_cookies
         logger.info("New PACER session established.")
 
+        for court_id in ["ca2", "ca9"]:
+            self.get_acms_auth_object(court_id)
+
     def _do_additional_request(self, r: requests.Response) -> bool:
         """Check if we should do an additional request to PACER, sometimes
         PACER returns the login page even though cookies are still valid.
@@ -423,3 +430,110 @@ class PacerSession(requests.Session):
                 "Invalid/expired PACER session and do not have credentials "
                 "for re-login."
             )
+
+    def _get_docket_sheet_url(self, court_id: str) -> str:
+        """
+        Retrieves the base docket sheet URL for a given court ID. This URL
+        serves as the initial entry point to trigger the authentication flow.
+
+        :param court_id: The court identifier
+        :return: The corresponding docket sheet URL.
+        """
+        if court_id == "ca9":
+            return "https://ca9-showdoc.azurewebsites.us/25-2066"
+        elif court_id == "ca2":
+            return "https://ca2-showdoc.azurewebsites.us/25-1569"
+        else:
+            not NotImplemented(
+                f"Docket sheet URL not implemented for court_id: {court_id}"
+            )
+
+    def _get_saml_auth_request_parameters(
+        self, court_id: str
+    ) -> dict[str, str]:
+        """
+        Retrieves SAML authentication request parameters by initiating a request
+        to the DOCKET_SHEET_URL. This simulates the initial browser interaction
+        that triggers the SAML flow, parsing hidden input fields from the
+        response.
+
+        :param court_id: The court identifier.
+        :return: A dictionary where keys are the 'name' attributes and values are
+            the 'value' attributes of hidden input elements found in the SAML
+            authentication request form.
+        """
+        headers = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+        }
+        logger.info(f"Attempting to get SAML credentials for {court_id}")
+        # Base URL for retrieving SAML credentials.
+        url = self._get_docket_sheet_url(court_id)
+        response = self._prepare_login_request(url, data={}, headers=headers)
+        result_parts = response.text.split("\r\n")
+        # Handle gzip decoding
+        js_screen = result_parts[-1]
+        try:
+            # Try to decompress if it's gzipped
+            inflated_screen = gzip.decompress(js_screen.encode()).decode()
+        except Exception:
+            # If decompression fails, use the original
+            inflated_screen = js_screen
+
+        # Strip potentially problematic HTML tags for safer parsing.
+        html = strip_bad_html_tags_insecure(inflated_screen)
+        # Extract all hidden input elements from the HTML.
+        hidden_inputs = html.xpath('//input[@type="hidden"]')
+
+        # Return a dictionary of hidden input names and their values.
+        return {
+            input_element.get("name"): input_element.get("value")
+            for input_element in hidden_inputs
+        }
+
+    def get_acms_auth_object(self, court_id: str):
+        """
+        Retrieves the ACMS authentication object by submitting SAML parameters
+        to the SAML_URL. This object typically contains the authentication token
+        and other session-related data.
+
+        This method parses the HTML response to extract a JavaScript  variable
+        named 'model', which contains the authentication data. This is
+        necessary because the authentication data is embedded directly within
+        a script tag in the response HTML.
+
+        :param court_id: The court identifier.
+        :return: A dictionary representing the ACMS authentication object if
+            successfully extracted and parsed from the response.
+        """
+        auth_params = self._get_saml_auth_request_parameters(court_id)
+        if not auth_params:
+            raise PacerLoginException(
+                "Failed to extract ACMS authentication data from SAML response."
+            )
+
+        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+        logger.info("Attempting to retrieve ACMS authentication token")
+        saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
+        response = self._prepare_login_request(
+            saml_url, data=auth_params, headers=headers
+        )
+        match = re.search(r"var model = '(.*?)';", response.text)
+        if not match:
+            raise PacerLoginException(
+                "Failed to extract ACMS authentication data from SAML response."
+            )
+
+        model_value = match.group(1)
+        model_string = re.sub("&quot;", '"', model_value)
+        model_json = json.loads(model_string)
+
+        if not self.acms_user_data:
+            data = model_json["PacerUser"]
+            self.acms_user_data = {
+                "CsoId": data["CsoId"],
+                "EmailAddress": data["EmailAddress"],
+                "LoginId": data["LoginId"],
+            }
+
+        self.acms_tokens[court_id] = model_json["AuthToken"]
