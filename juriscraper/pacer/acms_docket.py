@@ -356,19 +356,15 @@ class ACMSDocketReport(AppellateDocketReport):
             # by the superclass, which can be told to parse `date`s
             # but not `datetime`s. So we have to do it ourselves.
             datetime_str = self._get_value(datetime_entered_regex, docket_text)
-            assert datetime_str != "", (
-                "Docket entry's Entered: date should not be null"
-            )
-            de["date_entered"] = convert_date_string(
-                datetime_str, datetime=True
+            de["date_entered"] = (
+                convert_date_string(datetime_str, datetime=True)
+                if datetime_str
+                else None
             )
 
-            # Unfortunately, the server expects a `date_filed`,
-            # which we don't have, and probably can't get (it's in the
-            # NDA though). Although the server also doesn't know that
-            # other parsers send it `date_entered` in lieu of
-            # `date_filed`, without being so explicit about it. Ugh!
-            de["date_filed"] = de["date_entered"]
+            de["date_filed"] = convert_date_string(
+                row["endDateFormatted"], datetime=True
+            )
 
             de["pacer_doc_id"] = row["docketEntryId"]
             de["page_count"] = row["pageCount"]
