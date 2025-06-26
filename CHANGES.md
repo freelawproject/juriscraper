@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Enhances `PacerSession` class to support ACMS authentication.
+- Adds case purchasing functionality to `ACMSDocketReport`.
 
 Changes:
 - Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
