@@ -583,8 +583,7 @@ class PacerSession(requests.Session):
             data = model_json["PacerUser"]
             self.acms_user_data = {
                 "CsoId": data["CsoId"],
-                "EmailAddress": data["EmailAddress"],
-                "LoginId": data["LoginId"],
+                "ContactType": data["ContactType"],
             }
 
         self.acms_tokens[court_id] = model_json["AuthToken"]
