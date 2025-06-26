@@ -491,11 +491,11 @@ class PacerSession(requests.Session):
         :return: The corresponding docket sheet URL.
         """
         if court_id == "ca9":
-            return "https://ca9-showdoc.azurewebsites.us/25-2066"
+            return "https://ca9-showdoc.azurewebsites.us/"
         elif court_id == "ca2":
-            return "https://ca2-showdoc.azurewebsites.us/25-1569"
+            return "https://ca2-showdoc.azurewebsites.us/"
         else:
-            not NotImplemented(
+            raise NotImplementedError(
                 f"Docket sheet URL not implemented for court_id: {court_id}"
             )
 
