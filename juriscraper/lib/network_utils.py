@@ -152,7 +152,7 @@ class AcmsApiClient:
         }
 
         entries = []
-        for row in raw_data.get("matchingDocketEntries"):
+        for row in raw_data.get("matchingDocketEntries", []):
             entry_data = {
                 "endDate": row.get("pcx_enddate"),
                 "endDateFormatted": datetime.strptime(
