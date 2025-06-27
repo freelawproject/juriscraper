@@ -40,6 +40,9 @@ class ACMSDocketReport(AppellateDocketReport):
 
         :param case_id: The unique identifier of the case to query.
         """
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
         # Fetch Case Details
         case_data = self.api_client.get_case_details(case_id)
 
