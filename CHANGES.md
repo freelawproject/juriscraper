@@ -16,12 +16,15 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Added support for parsing ACMS NDA notifications
+- Enhances `PacerSession` class to support ACMS authentication.
 
 Changes:
--
+- Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
+  and expands the use of raw data fields for reliable date information. #1459
 
 Fixes:
--
+- Improve `ny` cleanup_content to remove email protection that was causing
+  duplicates #1450
 
 ## Current
 
