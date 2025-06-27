@@ -50,7 +50,7 @@ class BaseDocketReport:
         r"[tT]erminated:\s+(%s)" % DATE_REGEX, flags=re.IGNORECASE
     )
     docket_number_dist_regex = re.compile(
-        r"(?<!\d)((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
+        r"(?<!\d)((\d{1,2}:)?\d\d-[a-zA-Z]{1,5}-\d{1,10})"
     )
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
