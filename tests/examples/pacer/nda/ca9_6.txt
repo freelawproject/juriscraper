@@ -1,0 +1,145 @@
+Return-Path: <bounces+16017090-ee1f-v.anne=recap.email@em4346.ca9.fedcourts.us>
+Received: from o1.ptr5067.ca9.fedcourts.us (o1.ptr5067.ca9.fedcourts.us [149.72.33.13])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 1pvlcj4c7dmc3beaaflh08dff2cj4cmn615djpo1
+ for example@recap.email;
+ Fri, 20 Jun 2025 21:11:49 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-ee1f-v.anne=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-ee1f-v.anne=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+ dkim=pass header.i=@ca9.fedcourts.us;
+ dmarc=pass header.from=ca9.fedcourts.us;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHWVFDOThzczdoS1JuTmVaQSszUEF5NzhJdWhDSUhNdGVTUVB0NHlhaE9JNlY1R1FtMmRycmMrNjduZk9kbHhsQUtFUHc3Y2t2N29TZ3lNNkNYcGN1eHBPaGlGWE1aUDEyRXBEdWN1Yko0MzFxSjFINmxWZWRBVXh6VEN0dUhaUUcwdnZMRVRXRDByNElGYjhJbU9oRGhGWklhd04rZS9yeXFpUUR4dTZuWG1aNlZ6cHpEb3ZwaUZ2blhkT2grcWpuQXBQaFo1SHVxckpzM1Qya3Rxb2hoalZweWlWb1hqVmJ2dDVuNzU3L0FRVkpDc2FDYkpFSHlWLy8xUjdaMjVISXl4eGVyS3B3WG91Zmk1dlZVOWVzT2VxT2Nid3NORUNaY0E1dGkxZW8vMFdKTzRIemsvMEVqZExvSHl3cWw5dFR2QzNIUmZKSFJFUHhSVXpHeUtOVjdxZExXTzNCVGdtd0cvWFUwdU5pdVJRPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=R2qVKPoaaOfASVL43wANLH/oDWL93Ug8xwXKbnD2MIKVrfmmlPZoB1NfHj1+0PfzmCZFH/SA2U6MsjHK/093dxm9Cr1uftHHqM/cBfg3jMYN/ms0W0cVFDzF9VJ2qG9Yn9XKB2dZ+ycYcvf67lDRMRTRh8rfkYmri6gUTqs5nRE=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1750453910; v=1; bh=Igrkzvd8f45mupAmPqDlzI4+iooWiNYR2s2taAfMlME=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ca9.fedcourts.us;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:to:
+	cc:content-type:from:subject:to;
+	s=s1; bh=Igrkzvd8f45mupAmPqDlzI4+iooWiNYR2s2taAfMlME=;
+	b=NNNmkQs1NbphKFSby8N6qnupCBdVz5s8UwRNiEJASZXyZCPQLinl6KhEw8iL8sqvu8g7
+	HLv0LjlYG4zwFVxbfMC7GcCfX9pxg3jfrTUsWwOwU+8lLuIdoqQbX7UYj86O0aSBunwDZh
+	LOnGVHmuKw0YFTSbeFTX355wHYld7yjMz6I3NZHrCBvQdwWDvbbm6w7dl7aznMsjuPk10A
+	HYRbbsUDufT0RWTYgIlqD1tzLkspkjeUExTLKPNmbucKTE+hGZgLUEubNFS0KaFHgcdGFh
+	kdnTyb/t2GbQcWMsnd+Gg3131ZFOW9kESwmvjzcSo2wx20C63DVyfxFdBXvwiGpw==
+Received: by recvd-7d86b8fd66-c8dtd with SMTP id recvd-7d86b8fd66-c8dtd-1-6855CE94-E
+	2025-06-20 21:11:48.320265469 +0000 UTC m=+1398423.138550462
+Received: from MTYwMTcwOTA (unknown)
+	by geopod-ismtpd-canary-0 (SG)
+	with HTTP
+	id OHWTZx1LRUi0GnXTXgMtnA
+	Fri, 20 Jun 2025 21:11:48.273 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Fri, 20 Jun 2025 21:11:48 +0000 (UTC)
+From: ACMS@ca9.fedcourts.us
+Mime-Version: 1.0
+Message-ID: <OHWTZx1LRUi0GnXTXgMtnA@geopod-ismtpd-canary-0>
+Subject: Am. Fed'n of Gov't Employees, AFL-CIO v. United States Office of
+ Personnel Mgmt. 25-1677 - Answering Brief Submitted for Filing - 490849
+X-SG-EID:
+ =?us-ascii?Q?u001=2E4svFcY8SGSTLM5KvpBU22kPBzh+nOgjhRgMJOZ1Vsu4DidjssF5vc+Op1?=
+ =?us-ascii?Q?1FC9sFj+xDDUG4+B8SB=2FRZCj4EKh8PQQ1AwFWys?=
+ =?us-ascii?Q?2mPDS1RJvwAx5K9=2FmtacyDhtJOOz5inzZbaHQx8?=
+ =?us-ascii?Q?3AMt4stQiY1mMXAWIATy6PvAB8YgP0NRAc8izpJ?=
+ =?us-ascii?Q?EyJ8dwxtTOZMzv3cXQPJEFQS+79LD1JtToTlHoE?=
+ =?us-ascii?Q?g=3D=3D?=
+To: example@recap.email
+X-Entity-ID: u001.C8m2t2EQL+JwwooNEkA5cg==
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">***NOTE TO PUBLIC ACCESS USERS*** Judicial Confer=
+ence of the United States policy permits
+ attorneys of record and parties in a case (including pro se litigants) to =
+receive one free electronic copy of all documents filed electronically, if =
+receipt is required by law or directed by the filer. PACER access fees appl=
+y to all other users. To avoid later
+ charges, download a copy of each document during this first viewing.</span=
+></strong></span></span></span></div>
+<div>&nbsp;</div>
+<div style=3D"text-align:center"><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">United States Court of Appeals for the&nbsp;Ninth Circ=
+uit</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice of Docket Activity</span></strong></span><=
+/span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif">The following transaction was entered on 06/20/2025 2:09:13 PM=
+ PDT and filed on 06/20/2025</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Name:&nbsp;</span></strong><span style=3D"font-fa=
+mily:'Segoe UI',sans-serif">Am. Fed'n of Gov't Employees, AFL-CIO v. United=
+ States Office of Personnel Mgmt.&nbsp;</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Number:
+</span></strong><span style=3D"font-family:'Segoe UI',sans-serif"><a href=
+=3D'https://ca9-showdoc.azurewebsites.us/25-1677'>25-1677</a></span></span>=
+</span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Docket Text:</span></strong></span></span></span></div=
+>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div><strong>ANSWERING BRIEF </strong>submitted for filing by =
+Appellee American Federation Of Government Employees, AFL-CIO, Appellee Ame=
+rican Federation of State, County & Municipal Employees, AFL-CIO, Appellee =
+American Federation of Government Employees - Local 1216, Appellee United N=
+urses Associations of California - Union of Health Care Professionals, AFSC=
+ME, AFL-CIO, Appellee American Federation of Government Employees - Local 2=
+110, Appellee American Public Health Association, Appellee Association of F=
+light Attendants-CWA AFL-CIO, Appellee American Geophysical Union. [25-1677=
+, 25-2637]</div></span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div class=3D'documents'><b>Document:</b> <a href=3D'https://c=
+a9-showdoc.azurewebsites.us/NDA/633c4728-1b4e-f011-8779-001dd8075871'>Brief=
+</a></div></span></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice will be electronically mailed to:</span></=
+strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif">John Doe ; example@mail.com<br/>
+User exanoke ; example2@mail.com<br/=
+>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Case participants listed below will not receive t=
+his electronic notice:</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif"></span></span></span></span></div>
+<div>&nbsp;</div>
+<img src=3D"http://url4437.ca9.fedcourts.us/wf/open?upn=3Du001.5gmUxijX97DC=
+AA4rbjBVEEGEiWYb6pBtgGVt5F4dz2exg0y-2Fhy-2FYPUlU5TCI2n4xk10REfUu2QkWld-2Fep=
+TCpoR0QbO8BNUp8cObaF3zPHtk8-2BAKvVl8cdwV5yHqB2sxwmDabSY3l4edpja3QHCVHhT8Pm-=
+2Fdqb7u5ieuv-2B40-2B170hPB9n6-2F3vTQCbekCTJ5JTOyb45Uqq2D22toOEW09nKw-3D-3D"=
+ alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !import=
+ant;width:1px !important;border-width:0 !important;margin-top:0 !important;=
+margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !importa=
+nt;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !im=
+portant;padding-left:0 !important;"/></body>
+</html>
