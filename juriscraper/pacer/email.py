@@ -323,9 +323,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             path = (
                 "//b[contains(., 'Document:')]/following-sibling::a"
                 if self._is_acms()
-                else f"{self._sibling_path('Document(s)')}//a"
-                if self._is_appellate()
-                else f"{self._sibling_path('Document Number')}//a"
+                else (
+                    f"{self._sibling_path('Document(s)')}//a"
+                    if self._is_appellate()
+                    else f"{self._sibling_path('Document Number')}//a"
+                )
             )
             return current_node.xpath(path)[0]
         except IndexError:
@@ -504,24 +506,22 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Include the docket_number components.
             docket.update(docket_number_components)
             dockets.append(docket)
+        elif self._is_acms():
+            docket_number, docket_number_components = (
+                self._parse_docket_number(self.tree)
+            )
+            # Cache the docket number and case name for its later use.
+            self.docket_numbers.append(docket_number)
+            docket = {
+                "case_name": self._get_case_name(self.tree),
+                "docket_number": docket_number,
+                "date_filed": None,
+                "docket_entries": self._get_docket_entries(self.tree),
+            }
+            # Include the docket_number components.
+            docket.update(docket_number_components)
+            dockets.append(docket)
         else:
-            if self._is_acms():
-                docket_number, docket_number_components = (
-                    self._parse_docket_number(self.tree)
-                )
-                # Cache the docket number and case name for its later use.
-                self.docket_numbers.append(docket_number)
-                docket = {
-                    "case_name": self._get_case_name(self.tree),
-                    "docket_number": docket_number,
-                    "date_filed": None,
-                    "docket_entries": self._get_docket_entries(self.tree),
-                }
-                # Include the docket_number components.
-                docket.update(docket_number_components)
-                dockets.append(docket)
-                return dockets
-
             dockets_table = self.tree.xpath(
                 "//table[contains(., 'Case Name:')]"
             )
