@@ -25,6 +25,7 @@ class OpinionSite(AbstractSite):
             "docket_numbers",
             "judges",
             "lower_courts",
+            "lower_court_ids",
             "lower_court_judges",
             "lower_court_numbers",
             "nature_of_suit",
@@ -102,6 +103,9 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_lower_courts(self):
+        return None
+
+    def _get_lower_court_ids(self):
         return None
 
     def _get_lower_court_judges(self):
