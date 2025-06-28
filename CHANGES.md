@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Added support for parsing ACMS NDA notifications
 - Enhances `PacerSession` class to support ACMS authentication.
+- Adds case purchasing functionality to `ACMSDocketReport`.
 - Added support for parsing docket numbers with case types with up to five letters
 
 Changes:
