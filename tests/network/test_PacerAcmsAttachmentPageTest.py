@@ -12,10 +12,10 @@ class AcmsAttachmentPageTest(unittest.TestCase):
         self.session = get_pacer_session()
         self.session.login()
         self.report = ACMSAttachmentPage("ca2", self.session)
-        self.pacer_case_id = (
-            "70c4875d-f112-48e5-ad41-5e6d403ca9cd"  # Ogunbekun v. Town of Brighton
+        self.pacer_case_id = "70c4875d-f112-48e5-ad41-5e6d403ca9cd"  # Ogunbekun v. Town of Brighton
+        self.docket_doc_id = (
+            "21ad9f34-6350-f011-877a-001dd803d067"  # Docket Entry 7
         )
-        self.docket_doc_id = "21ad9f34-6350-f011-877a-001dd803d067"  # Docket Entry 7
 
     @SKIP_IF_NO_PACER_LOGIN
     def test_queries(self):
@@ -43,7 +43,9 @@ class AcmsAttachmentPageTest(unittest.TestCase):
             data["date_end"],
             msg="appeal_from query failed",
         )
-        self.assertIsNotNone(data["attachments"], msg="attachments query failed")
+        self.assertIsNotNone(
+            data["attachments"], msg="attachments query failed"
+        )
         self.assertEqual(
             3, len(data["attachments"]), msg="attachments count query failed"
         )
