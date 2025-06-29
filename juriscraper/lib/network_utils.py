@@ -52,6 +52,7 @@ class AcmsApiClient:
     )
     CASE_DETAILS_ENDPOINT = "CaseDetailsByCaseId/{case_id}"
     DOCKET_ENTRIES_ENDPOINT = "DocketEntriesByCaseId/{case_id}"
+    ATTACHMENTS_ENDPOINT = "DocketEntryDocumentsByDocketId/{entry_id}"
 
     def __init__(self, session: Session, court_id: str):
         self.session = session
@@ -175,6 +176,42 @@ class AcmsApiClient:
         docket_info["docketEntries"] = entries
         return docket_info
 
+    def _map_docket_entry_document(
+        self, raw_doc_data: dict[str, Any]
+    ) -> dict[str, Any]:
+        """
+        Maps a raw dictionary representing a docket entry document to a
+        standardized format.
+
+
+        :param raw_doc_data: A single dictionary object for a document.
+
+        :return: A dictionary containing the mapped document details.
+                Returns an empty dictionary if raw_doc_data is None or empty.
+        """
+        if not raw_doc_data:
+            return {}
+
+        return {
+            "docketDocumentDetailsId": raw_doc_data.get(
+                "acms_docketdocumentdetailsid"
+            ),
+            "name": raw_doc_data.get("acms_name"),
+            "documentUrl": raw_doc_data.get("acms_documenturl"),
+            "caseFilingDocumentUrl": raw_doc_data.get(
+                "acms_casefilingdocumenturl"
+            ),
+            "documentPermission": raw_doc_data.get("acms_documentpermission"),
+            "pageCount": raw_doc_data.get("acms_pagecount"),
+            "fileSize": raw_doc_data.get("acms_filesize"),
+            "createdOn": raw_doc_data.get("createdon"),
+            "billablePages": raw_doc_data.get("billablePages"),
+            "cost": raw_doc_data.get("cost"),
+            "documentNumber": raw_doc_data.get("acms_documentnumber"),
+            "searchValue": raw_doc_data.get("searchValue"),
+            "searchTransaction": raw_doc_data.get("searchTransaction"),
+        }
+
     def get_case_details(self, case_id: str) -> dict[str, Any]:
         """
         Fetches and maps case details for a given case ID.
@@ -208,3 +245,41 @@ class AcmsApiClient:
         )
         response.raise_for_status()
         return self._map_docket_entries_response(response.json())
+
+    def get_attachments(
+        self,
+        docket_entry_id: str,
+        is_case_participant: bool,
+        is_restricted_party_filing_entry: bool,
+    ) -> dict[str, Any]:
+        """
+        Fetches and maps attachments for a specific docket entry.
+
+        :param docket_entry_id: The ID of the docket entry to retrieve
+                                attachments for.
+        :param is_case_participant: Indicates if the user is a participant in
+                                    the case.
+        :param is_restricted_party_filing_entry: Indicates if the docket entry is a
+                                                restricted party filing.
+        :return: A list of dictionaries, where each dictionary represents an
+                 attachment.
+        """
+        path = self.ATTACHMENTS_ENDPOINT.format(entry_id=docket_entry_id)
+        url = f"{self.base_url}{path}"
+        logger.info(f"Fetching attachment from: {url}")
+        response = self.session.post(
+            url,
+            json={
+                "isUserCaseParticipant": is_case_participant,
+                "restrictedPartyFilingDocketEntry": is_restricted_party_filing_entry,
+            },
+        )
+        response.raise_for_status()
+        raw_attachments = response.json()
+        if not raw_attachments:
+            return []
+
+        return [
+            self._map_docket_entry_document(attachment)
+            for attachment in raw_attachments
+        ]
