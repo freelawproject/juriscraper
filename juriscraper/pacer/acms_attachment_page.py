@@ -113,6 +113,7 @@ class ACMSAttachmentPage(BaseReport):
             )
             self.is_valid = False
             self._acms_json = {}
+            return
 
         is_case_participant = docket_info["isUserCaseParticipant"]
         is_restricted_party_filing_entry = entry_data[
