@@ -251,7 +251,7 @@ class AcmsApiClient:
         docket_entry_id: str,
         is_case_participant: bool,
         is_restricted_party_filing_entry: bool,
-    ) -> dict[str, Any]:
+    ) -> list[dict[str, Any]]:
         """
         Fetches and maps attachments for a specific docket entry.
 
