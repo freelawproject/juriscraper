@@ -55,10 +55,12 @@ class Site(OpinionSiteLinear):
                     try:
                         url = get_row_column_links(row, 1)
                     except IndexError:
-                        # If there is no link in the first column, find it inside the case page
-                        url = self.retrieve_pdf_from_alternate_page(row)
-                        if not url:
-                            continue
+                        if not self.test_mode_enabled():
+                            # If there is no link in the first column, find it inside the case page
+                            url = self.retrieve_pdf_from_alternate_page(row)
+                            if not url:
+                                continue
+                        continue
 
                     self.cases.append(
                         {
