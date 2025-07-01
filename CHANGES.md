@@ -27,6 +27,7 @@ Changes:
 Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing
   duplicates #1450
+- Fix `ariz` update download URLs #1474
 
 ## Current
 

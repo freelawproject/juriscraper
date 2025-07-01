@@ -22,7 +22,12 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path = '//a[contains(@id , "hypCaseNum")]/@href'
-        return list(self.html.xpath(path))
+        return [
+            href.replace(
+                "http://www.azcourts.gov", "https://opinions.azcourts.gov"
+            )
+            for href in self.html.xpath(path)
+        ]
 
     def _get_case_names(self):
         path = '//span[contains(@id , "lblTitle")]//text()'
