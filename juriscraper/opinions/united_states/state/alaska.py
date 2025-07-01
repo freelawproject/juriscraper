@@ -52,11 +52,13 @@ class Site(OpinionSiteLinear):
 
             for row in table.xpath(".//tr"):
                 if row.text_content().strip():
-                    # skip rows without PDF links in first column
                     try:
                         url = get_row_column_links(row, 1)
                     except IndexError:
-                        continue
+                        # If there is no link in the first column, find it inside the case page
+                        url = self.retrieve_pdf_from_alternate_page(row)
+                        if not url:
+                            continue
 
                     self.cases.append(
                         {
@@ -67,6 +69,26 @@ class Site(OpinionSiteLinear):
                             "url": url,
                         }
                     )
+
+    def retrieve_pdf_from_alternate_page(self, row):
+        """Retrieve the PDF URL from the alternate page
+
+        :param The row element to check
+        :return The PDF URL or None if not found
+        """
+        try:
+            url = get_row_column_links(row, 3)
+            if url:
+                self.url = url
+                case_html = self._download()
+                download_url = case_html.xpath(
+                    "//td[contains(@class, 'cms-case-download')]//a/@href"
+                )[0]
+                if download_url:
+                    return download_url
+        except IndexError:
+            pass
+        return None
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
