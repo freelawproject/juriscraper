@@ -9,6 +9,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "http://www.courts.state.va.us/scndex.htm"
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parses the HTML content to extract case information.

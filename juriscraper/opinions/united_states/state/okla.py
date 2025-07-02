@@ -21,6 +21,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.oscn.net/decisions/ok/30"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath(".//li[@class='decision']"):

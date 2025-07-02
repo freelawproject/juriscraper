@@ -11,6 +11,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.back_scrape_iterable = ["placeholder"]
         self.do_backscrape = False
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parse HTML into case objects

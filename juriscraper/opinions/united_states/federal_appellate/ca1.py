@@ -16,6 +16,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = self.base_url
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath("//tr[not(th)]"):

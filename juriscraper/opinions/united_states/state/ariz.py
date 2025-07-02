@@ -19,6 +19,7 @@ class Site(OpinionSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999"
+        self.should_have_results = True
 
     def _get_download_urls(self):
         path = '//a[contains(@id , "hypCaseNum")]/@href'

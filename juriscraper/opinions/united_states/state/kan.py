@@ -24,6 +24,7 @@ class Site(OpinionSiteLinearWebDriven):
         self.court_id = self.__module__
         self.url = "https://free.law"
         self.uses_selenium = True
+        self.should_have_results = True
 
     def _process_html(self):
         """Process with selenium

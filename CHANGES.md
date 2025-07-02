@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add error handling for scrapers with expected results #1447
 - Added support for parsing ACMS NDA notifications
 - Enhances `PacerSession` class to support ACMS authentication.
 - Adds case purchasing functionality to `ACMSDocketReport`.
@@ -42,6 +43,8 @@ Changes:
 Fixes:
 - Fix `va` collecting bad docket_number values #1441
 - Fix `mich` change date expected key to `date_filed` #1445
+
+## Current
 
 **2.6.76 - 2025-06-12**
 

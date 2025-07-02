@@ -12,6 +12,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/olc/opinions?items_per_page=40"
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath(".//article"):

@@ -12,6 +12,7 @@ class Site(OpinionSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.opn.ca6.uscourts.gov/opinions/opinions.php"
+        self.should_have_results = True
 
     def _get_case_names(self):
         return [

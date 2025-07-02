@@ -53,6 +53,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries

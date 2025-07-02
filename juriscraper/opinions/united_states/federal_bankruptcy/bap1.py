@@ -44,6 +44,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.base_url = self.url = "https://www.bap1.uscourts.gov/bapopn"
         self.court_id = self.__module__
+        self.should_have_results = True
 
         # There are 29 historical pages as of development in Dec 2023
         # source indexes from 0

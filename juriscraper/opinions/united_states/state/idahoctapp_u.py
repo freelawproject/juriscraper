@@ -9,6 +9,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.isc.idaho.gov/appeals-court/coaunpublished"
         self.status = "Unpublished"
+        self.should_have_results = True
 
     def _process_html(self):
         for item in self.html.xpath('//li[contains(.//a/@href, ".pdf")]'):
