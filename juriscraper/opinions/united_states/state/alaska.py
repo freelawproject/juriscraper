@@ -25,6 +25,7 @@ class Site(OpinionSiteLinear):
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
+        self.is_citation_visible = True
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -63,7 +64,9 @@ class Site(OpinionSiteLinear):
                             "date": adate,
                             "docket": get_row_column_text(row, 3),
                             "name": get_row_column_text(row, 4),
-                            "citation": get_row_column_text(row, 5),
+                            "citation": get_row_column_text(row, 5)
+                            if self.is_citation_visible
+                            else "",
                             "url": url,
                         }
                     )
