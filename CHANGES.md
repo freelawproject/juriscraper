@@ -16,13 +16,33 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add error handling for scrapers with expected results #1447
+- Added support for parsing ACMS NDA notifications
+- Enhances `PacerSession` class to support ACMS authentication.
+- Adds case purchasing functionality to `ACMSDocketReport`.
+- Added support for parsing docket numbers with case types with up to five letters
+
+Changes:
+- Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
+  and expands the use of raw data fields for reliable date information. #1459
+
+Fixes:
+- Improve `ny` cleanup_content to remove email protection that was causing
+  duplicates #1450
+- Fix `minn` move `need_special_headers` to `__init__` #1470
+
+## Current
+
+
+**2.6.77 - 2025-06-17**
 
 Changes:
 - New scraper `lactapp_4` for Lousiana Court of Appeals, Fourth Circuit
 - Update `uscgcoca` add backscraper #1431
+- Update `tenn` add backscraper #1425
 
 Fixes:
 - Fix `va` collecting bad docket_number values #1441
+- Fix `mich` change date expected key to `date_filed` #1445
 
 ## Current
 

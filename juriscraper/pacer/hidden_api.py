@@ -242,3 +242,43 @@ class ShowCaseDocApi(BaseReport):
             raise ParsingException(
                 f"Unable to get doc1-style URL. Instead got {url}"
             )
+
+
+class AcmsCaseSearch(BaseReport):
+    """
+    Looks up an ACMS case by its docket number using the CaseSearch API.
+    """
+
+    def query(self, docket_number):
+        assert self.session is not None, (
+            "session attribute of AcmsCaseSearch cannot be None."
+        )
+        url = f"https://{self.court_id}-showdocservices.azurewebsites.us/api/CaseSearch/{docket_number}"
+        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
+        self.response = self.session.get(url, params={"exactMatch": True})
+        self.parse()
+
+    def _parse_text(self, text):
+        """Just a stub. No parsing needed here."""
+        pass
+
+    @property
+    def data(self):
+        """
+        Retrieves the parsed case data from the API response.
+
+        The returned dictionary contains the following keys:
+            - '@odata.etag'
+            - 'pcx_caseid'
+            - 'pcx_casenumber'
+            - 'pcx_name'
+            - 'pcx_istestcase'
+
+        :return: A dictionary containing the case data, or an empty dictionary
+                 if no data is found, the response is malformed, or an error
+                 occurred.
+        """
+        case_data = self.response.json()
+        if not case_data:
+            return {}
+        return case_data[0]

@@ -20,7 +20,6 @@ class Site(OpinionSiteLinear):
     court_query = "supct"
     days_interval = 7
     first_opinion_date = date(1998, 1, 1)
-    needs_special_headers = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -49,6 +48,7 @@ class Site(OpinionSiteLinear):
             "Connection": "keep-alive",
         }
         self.make_backscrape_iterable(kwargs)
+        self.needs_special_headers = True
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
