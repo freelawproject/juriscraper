@@ -23,6 +23,7 @@ Features:
 Changes:
 - Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
   and expands the use of raw data fields for reliable date information. #1459
+- Improve `nd` scraper to extract citations from the html.
 
 Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing

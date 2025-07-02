@@ -15,6 +15,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     base_url = "https://www.ndcourts.gov/"
     ordered_fields = [
+        "citation",
         "name",
         "docket",
         "date",
@@ -50,11 +51,23 @@ class Site(OpinionSiteLinear):
 
             for idx, txt in enumerate(raw_values[:5]):
                 if idx == 0:
-                    txt, _ = self.clean_name(txt)
+                    # Separate case name and citation if present
+                    match = re.match(
+                        r"^(.*?)(\s*((20\d{2}\sND\s\d+)|(1 \d\.N\.W3 d\d+)))?\s*$",
+                        txt,
+                    )
+                    if match:
+                        case_name = match.group(1).strip()
+                        citation = (
+                            match.group(2).strip() if match.group(2) else ""
+                        )
+                        txt = case_name
+                    else:
+                        citation = ""
+                    values.append(citation)
                 else:
                     txt = txt.split(":", 1)[1].strip()
                 values.append(txt)
-
             summary = (
                 " ".join(raw_values[5:]).strip() if len(raw_values) > 5 else ""
             )
@@ -72,7 +85,7 @@ class Site(OpinionSiteLinear):
                 continue
             seen_urls.add(url)
 
-            case = dict(zip(self.ordered_fields, values[:5]))
+            case = dict(zip(self.ordered_fields, values[:6]))
             case.update({"summary": summary, "url": url, "per_curiam": False})
 
             if "per curiam" in case["judge"].lower():
