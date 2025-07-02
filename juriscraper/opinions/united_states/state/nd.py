@@ -53,7 +53,7 @@ class Site(OpinionSiteLinear):
                 if idx == 0:
                     # Separate case name and citation if present
                     match = re.match(
-                        r"^(.*?)(\s*((20\d{2}\sND\s\d+)|(1 \d\.N\.W3 d\d+)))?\s*$",
+                        r"^(.*?)(\s*((\d{4}\sND\s\d+)|(1 \d\.N\.W\d d\d+)))?\s*$",
                         txt,
                     )
                     if match:
@@ -64,6 +64,7 @@ class Site(OpinionSiteLinear):
                         txt = case_name
                     else:
                         citation = ""
+                    txt, _ = self.clean_name(txt)
                     values.append(citation)
                 else:
                     txt = txt.split(":", 1)[1].strip()
