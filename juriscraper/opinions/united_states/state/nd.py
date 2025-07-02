@@ -1,7 +1,10 @@
 # Author: Phil Ardery
 # Contact: https://www.ndcourts.gov/contact-us
+# History:
 # Date created: 2019-02-28
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
+# Updated: 2025-07-02, luism: get citation from HTML
+
 import re
 from datetime import date, datetime
 from urllib.parse import urljoin
