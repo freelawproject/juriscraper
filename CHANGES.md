@@ -28,6 +28,7 @@ Changes:
 Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing
   duplicates #1450
+- Fix `minn` move `need_special_headers` to `__init__` #1470
 
 ## Current
 
