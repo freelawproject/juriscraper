@@ -61,13 +61,19 @@ class Site(OpinionSiteLinear):
                     )
                     if match:
                         case_name = match.group(1).strip()
-                        citation = (
-                            match.group(2).strip() if match.group(2) else ""
-                        )
+                        # If matched with the second regex (1 \d\.N\.W\d d\d+), set citation to ""
+                        if match.group(5):
+                            citation = ""
+                        else:
+                            citation = (
+                                match.group(2).strip()
+                                if match.group(2)
+                                else ""
+                            )
                         txt = case_name
                     else:
                         citation = ""
-                    txt, _ = self.clean_name(txt)
+                    txt = self.clean_name(txt)
                     values.append(citation)
                 else:
                     txt = txt.split(":", 1)[1].strip()
@@ -98,7 +104,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
-    def clean_name(self, name: str) -> tuple[str, str]:
+    def clean_name(self, name: str) -> str:
         """Cleans case name
 
         Some case names list the consolidated docket or a
@@ -107,14 +113,12 @@ class Site(OpinionSiteLinear):
         :param name: raw case name
         :return: cleaned name and extra_docket numbers
         """
-        other_dockets = ""
         if "(consolidated w/" in name:
-            other_dockets = ",".join(re.findall(r"\d{8}", name))
             name = name.split("(consolidated w/")[0]
         if "(CONFIDENTIAL" in name:
             name = name.split("(CONFIDENTIAL")[0]
 
-        return name.strip(), other_dockets
+        return name.strip()
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract model fields from opinion's document text
