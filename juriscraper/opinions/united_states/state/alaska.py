@@ -29,6 +29,7 @@ class Site(OpinionSiteLinear):
         self.seeds = []
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=30)
+        self.dispositions = []
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -62,8 +63,8 @@ class Site(OpinionSiteLinear):
                     except IndexError:
                         url = ""
 
-                    # Store a tuple of (case page link, opinion PDF url) for later retrieval
-                    self.seeds.append((get_row_column_links(row, 3), url))
+                    # Store case page link for later retrieval
+                    self.seeds.append(get_row_column_links(row, 3))
                     self.cases.append(
                         {
                             "date": adate,
@@ -80,28 +81,38 @@ class Site(OpinionSiteLinear):
         :return: List of download URLs
         """
 
-        def get_download_url(links):
+        def get_download_url(link) -> DeferringList:
             """Retrieve the PDF URL from the alternate page
 
             :param link: The URL of the case page
             :return The PDF URL or None if not found
             """
-            link, case_download_url = links
 
-            if case_download_url != "":
-                return case_download_url
-            elif self.test_mode_enabled():
-                # if we're in test mode, return a dummy url
+            if self.test_mode_enabled():
+                # if we're in test mode, return a dummy url and add dummy disposition
+                self.dispositions.append("Affirmed")
                 return "https://example.com/test.pdf"
             case_html = self._get_html_tree_by_url(link)
+
+            disposition = case_html.xpath("//table[1]//td[3]")[0].text
+            self.dispositions.append(disposition)
+
             download_url = case_html.xpath(
                 "//td[contains(@class, 'cms-case-download')]//a/@href"
             )[0]
+
             if download_url:
                 return download_url
             return None
 
         return DeferringList(seed=self.seeds, fetcher=get_download_url)
+
+    def _get_dispositions(self):
+        """Get the dispositions for the cases
+
+        :return: List of dispositions
+        """
+        return self.dispositions
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
