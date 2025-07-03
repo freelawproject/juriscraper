@@ -4,7 +4,7 @@ __all__ = [
     "alacrimapp",
     "alaska",
     "alaskactapp",
-    "alaska_cro",
+    "alaska_slip",
     "alaska_u",
     "ariz",
     "arizctapp_div_1",
