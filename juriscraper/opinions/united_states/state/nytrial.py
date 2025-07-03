@@ -4,6 +4,7 @@ Court Contact: phone: (518) 453-6900
 Author: Gianfranco Rossi
 History:
  - 2024-01-05, grossir: created
+ - 2025-07-03, luism: make back scraping dynamic
 """
 
 import html
@@ -12,11 +13,11 @@ from datetime import date
 from itertools import chain
 from typing import Any, Optional
 
-from dateutil.rrule import MONTHLY, rrule
 from lxml.html import fromstring
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
+from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.opinions.united_states.state import ny
@@ -27,6 +28,7 @@ class Site(OpinionSiteLinear):
     court_regex: str  # to be defined on inheriting classes
     base_url = "https://nycourts.gov/reporter/slipidx/miscolo.shtml"
     first_opinion_date = date(2003, 12, 1)
+    days_interval = 30
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -34,10 +36,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = self.build_url()
 
-        date_keys = rrule(
-            MONTHLY, dtstart=self.first_opinion_date, until=date(2023, 12, 30)
-        )
-        self.back_scrape_iterable = [i.date() for i in date_keys]
+        self.make_backscrape_iterable(kwargs)
         self.expected_content_types = ["application/pdf", "text/html"]
         set_api_token_header(self)
 
@@ -176,3 +175,14 @@ class Site(OpinionSiteLinear):
     @staticmethod
     def cleanup_content(content: str) -> str:
         return ny.Site.cleanup_content(content)
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """Make back scrape iterable
+
+        :param kwargs: the back scraping params
+        :return: None
+        """
+        super().make_backscrape_iterable(kwargs)
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )
