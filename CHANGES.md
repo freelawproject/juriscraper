@@ -15,6 +15,19 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.78 - 2025-06-18**
+
+Features:
 - Added support for parsing ACMS NDA notifications
 - Enhances `PacerSession` class to support ACMS authentication.
 - Adds case purchasing functionality to `ACMSDocketReport`.
@@ -29,8 +42,8 @@ Fixes:
   duplicates #1450
 - Fix `minn` move `need_special_headers` to `__init__` #1470
 
-## Current
 
+## Past
 
 **2.6.77 - 2025-06-17**
 
@@ -49,9 +62,6 @@ Changes:
 -  Fix `tex` get opinions from the orders on causes page #1410
 -  Fix `sd`
 -  Fix `bap1` not scraping recent data #1422
-
-
-## Past
 
 **2.6.75 - 2025-06-09**
 

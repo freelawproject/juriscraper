@@ -275,7 +275,7 @@ wheels = [
 
 [[package]]
 name = "juriscraper"
-version = "2.6.77"
+version = "2.6.78"
 source = { editable = "." }
 dependencies = [
     { name = "certifi" },
