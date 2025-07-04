@@ -1,9 +1,10 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 from dateutil import parser
 from requests.exceptions import ChunkedEncodingError
 
 from juriscraper.AbstractSite import logger
+from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
@@ -25,6 +26,10 @@ class Site(OpinionSiteLinear):
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
+        self.seeds = []
+        self.end_date = date.today()
+        self.start_date = self.end_date - timedelta(days=30)
+        self.dispositions = []
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -44,20 +49,22 @@ class Site(OpinionSiteLinear):
             return
         for table in self.html.xpath("//table"):
             adate = table.xpath("./preceding-sibling::h5")[0].text_content()
-            if self.is_backscrape and not self.date_is_in_backscrape_range(
-                adate
+            if (
+                not self.date_is_in_range(adate)
+                and not self.test_mode_enabled()
             ):
                 logger.debug("Backscraper skipping %s", adate)
                 continue
 
             for row in table.xpath(".//tr"):
                 if row.text_content().strip():
-                    # skip rows without PDF links in first column
                     try:
                         url = get_row_column_links(row, 1)
                     except IndexError:
-                        continue
+                        url = ""
 
+                    # Store case page link for later retrieval
+                    self.seeds.append(get_row_column_links(row, 3))
                     self.cases.append(
                         {
                             "date": adate,
@@ -67,6 +74,45 @@ class Site(OpinionSiteLinear):
                             "url": url,
                         }
                     )
+
+    def _get_download_urls(self):
+        """Get the download URLs for the cases if missing
+
+        :return: List of download URLs
+        """
+
+        def get_download_url(link) -> DeferringList:
+            """Retrieve the PDF URL from the alternate page
+
+            :param link: The URL of the case page
+            :return The PDF URL or None if not found
+            """
+
+            if self.test_mode_enabled():
+                # if we're in test mode, return a dummy url and add dummy disposition
+                self.dispositions.append("Affirmed")
+                return "https://example.com/test.pdf"
+            case_html = self._get_html_tree_by_url(link)
+
+            disposition = case_html.xpath("//table[1]//td[3]")[0].text
+            self.dispositions.append(disposition)
+
+            download_url = case_html.xpath(
+                "//td[contains(@class, 'cms-case-download')]//a/@href"
+            )[0]
+
+            if download_url:
+                return download_url
+            return None
+
+        return DeferringList(seed=self.seeds, fetcher=get_download_url)
+
+    def _get_dispositions(self):
+        """Get the dispositions for the cases
+
+        :return: List of dispositions
+        """
+        return self.dispositions
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
@@ -105,12 +151,12 @@ class Site(OpinionSiteLinear):
             "Backscraping for range %s %s", self.start_date, self.end_date
         )
 
-    def date_is_in_backscrape_range(self, date_str: str) -> bool:
-        """When backscraping, check if the table date is in
-        the backscraping range
+    def date_is_in_range(self, date_str: str) -> bool:
+        """Check if the table date is in
+        the range
 
         :param date_str: string date from the HTML source
         :return: True if date is in backscrape range
         """
         parsed_date = parser.parse(date_str).date()
-        return self.start_date <= parsed_date and parsed_date <= self.end_date
+        return self.start_date <= parsed_date <= self.end_date
