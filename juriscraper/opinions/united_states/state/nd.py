@@ -67,7 +67,7 @@ class Site(OpinionSiteLinear):
                         txt = case_name
                     else:
                         citation = ""
-                    txt = self.clean_name(txt)
+                    txt, other_docket = self.clean_name(txt)
                     values.append(citation)
                 else:
                     txt = txt.split(":", 1)[1].strip()
@@ -96,23 +96,28 @@ class Site(OpinionSiteLinear):
                 case["judge"] = ""
                 case["per_curiam"] = True
 
+            if other_docket:
+                case["docket"] = f"{case['docket']}, {other_docket}"
+
             self.cases.append(case)
 
-    def clean_name(self, name: str) -> str:
+    def clean_name(self, name: str) -> tuple[str, str]:
         """Cleans case name
 
         Some case names list the consolidated docket or a
         (CONFIDENTIAL) parentheses
 
         :param name: raw case name
-        :return: cleaned name
+        :return: cleaned name and extra_docket numbers
         """
+        other_dockets = ""
         if "(consolidated w/" in name:
+            other_dockets = ",".join(re.findall(r"\d{8}", name))
             name = name.split("(consolidated w/")[0]
         if "(CONFIDENTIAL" in name:
             name = name.split("(CONFIDENTIAL")[0]
 
-        return name.strip()
+        return name.strip(), other_dockets
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract model fields from opinion's document text
