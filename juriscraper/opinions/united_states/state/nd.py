@@ -56,20 +56,14 @@ class Site(OpinionSiteLinear):
                 if idx == 0:
                     # Separate case name and citation if present
                     match = re.match(
-                        r"^(.*?)(\s*((\d{4}\sND\s\d+)|(1 \d\.N\.W\d d\d+)))?\s*$",
+                        r"^(.*?)(\s*(\d{4}\sND\s\d+))?\s*$",
                         txt,
                     )
                     if match:
                         case_name = match.group(1).strip()
-                        # If matched with the second regex (1 \d\.N\.W\d d\d+), set citation to ""
-                        if match.group(5):
-                            citation = ""
-                        else:
-                            citation = (
-                                match.group(2).strip()
-                                if match.group(2)
-                                else ""
-                            )
+                        citation = (
+                            match.group(2).strip() if match.group(2) else ""
+                        )
                         txt = case_name
                     else:
                         citation = ""
@@ -111,7 +105,7 @@ class Site(OpinionSiteLinear):
         (CONFIDENTIAL) parentheses
 
         :param name: raw case name
-        :return: cleaned name and extra_docket numbers
+        :return: cleaned name
         """
         if "(consolidated w/" in name:
             name = name.split("(consolidated w/")[0]
