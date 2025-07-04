@@ -32,6 +32,7 @@ Features:
 - Enhances `PacerSession` class to support ACMS authentication.
 - Adds case purchasing functionality to `ACMSDocketReport`.
 - Added support for parsing docket numbers with case types with up to five letters
+- Introduces logic to purchase ACMS docket entry attachment pages.
 
 Changes:
 - Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
