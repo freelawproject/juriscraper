@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- handle empty cases in `ca7` scraper #1484
 
 ## Current
 
