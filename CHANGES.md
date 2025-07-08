@@ -18,12 +18,20 @@ Features:
 -
 
 Changes:
-- Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
+-
 
 Fixes:
 -
 
 ## Current
+
+**2.6.79 - 2025-07-08**
+
+Changes:
+- Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
+
+
+## Past
 
 **2.6.78 - 2025-06-18**
 
@@ -42,9 +50,6 @@ Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing
   duplicates #1450
 - Fix `minn` move `need_special_headers` to `__init__` #1470
-
-
-## Past
 
 **2.6.77 - 2025-06-17**
 
