@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
 
 Fixes:
 -
