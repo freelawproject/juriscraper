@@ -13,6 +13,8 @@ from juriscraper.lib.html_utils import (
 )
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.utils import is_pdf, is_text
+from requests.utils import dict_from_cookiejar
+import json
 
 logger = make_default_logger()
 
@@ -528,7 +530,7 @@ class PacerSession(requests.Session):
         logger.info(f"Attempting to get SAML credentials for {court_id}")
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
-        response = self._prepare_login_request(url, data={}, headers=headers)
+        response = self._prepare_login_request(url, data={}, headers={})
         result_parts = response.text.split("\r\n")
         # Handle gzip decoding
         js_screen = result_parts[-1]
@@ -570,13 +572,16 @@ class PacerSession(requests.Session):
             raise PacerLoginException(
                 "Failed to extract ACMS authentication data from SAML response."
             )
-
         headers = {"Content-Type": "application/x-www-form-urlencoded"}
         logger.info("Attempting to retrieve ACMS authentication token")
         saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
         response = self._prepare_login_request(
-            saml_url, data=auth_params, headers=headers
+            saml_url, data=auth_params, headers={}
         )
+        print(json.dumps(dict_from_cookiejar(self.cookies), indent=2))
+        """
+        print(response.text)
+        """
         match = re.search(r"var model = '(.*?)';", response.text)
         if not match:
             raise PacerLoginException(
