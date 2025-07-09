@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- improve `ind` add new fields for lower court details and judge names
 
 ## Current
 
