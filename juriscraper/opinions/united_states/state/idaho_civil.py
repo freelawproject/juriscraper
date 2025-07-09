@@ -9,6 +9,7 @@ History:
  - 2015-10-23, mlr: Updated to handle annoying situation.
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
  - 2024-12-30, grossir: updated to OpinionSiteLinear
+ - 2025-07-09, luism: Updated to prevent wrongly formatted dates
 """
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -43,7 +44,9 @@ class Site(OpinionSiteLinear):
             url = self.get_opinion_url(row).replace("http://", "https://")
             self.cases.append(
                 {
-                    "date": row.xpath("string(td[1])").strip(),
+                    "date": row.xpath("string(td[1])")
+                    .replace(",", ", ")
+                    .strip(),
                     "docket": row.xpath("string(td[2])").strip(),
                     "name": row.xpath("string(td[3])").strip(),
                     "url": url,
