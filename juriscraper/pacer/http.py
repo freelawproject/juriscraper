@@ -501,9 +501,9 @@ class PacerSession(requests.Session):
         :return: The corresponding docket sheet URL.
         """
         if court_id == "ca9":
-            return "http://ca9-showdoc.azurewebsites.us/"
+            return "https://ca9-showdoc.azurewebsites.us/"
         elif court_id == "ca2":
-            return "http://ca2-showdoc.azurewebsites.us/"
+            return "https://ca2-showdoc.azurewebsites.us/"
         else:
             raise NotImplementedError(
                 f"Docket sheet URL not implemented for court_id: {court_id}"
@@ -530,9 +530,12 @@ class PacerSession(requests.Session):
         logger.info(f"Attempting to get SAML credentials for {court_id}")
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
-        print(url)
-        response = self._prepare_login_request(url, data={}, headers={})
+        response = self._prepare_login_request(url, data={}, headers=headers)
         result_parts = response.text.split("\r\n")
+        for cookie in self.cookies:
+            cookie.secure = False
+        for cookie in self.cookies:
+            print(f"  Name: {cookie.name}, Secure: {cookie.secure}, Domain: {cookie.domain}, Path: {cookie.path}")
         # Handle gzip decoding
         js_screen = result_parts[-1]
         try:
@@ -577,11 +580,8 @@ class PacerSession(requests.Session):
         logger.info("Attempting to retrieve ACMS authentication token")
         saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
         response = self._prepare_login_request(
-            saml_url, data=auth_params, headers={}
+            saml_url, data=auth_params, headers=headers
         )
-        """
-        print(response.text)
-        """
         match = re.search(r"var model = '(.*?)';", response.text)
         if not match:
             raise PacerLoginException(
