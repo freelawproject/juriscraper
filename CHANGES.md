@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `visuper_p` adaptation to new html tags #1489
 
 ## Current
 
