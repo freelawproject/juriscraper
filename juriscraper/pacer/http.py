@@ -442,7 +442,7 @@ class PacerSession(requests.Session):
         logger.info("New PACER session established.")
 
         if self.get_acms_tokens:
-            for court_id in ["ca2", "ca9"]:
+            for court_id in ["ca2"]:
                 self.get_acms_auth_object(court_id)
 
     def _do_additional_request(self, r: requests.Response) -> bool:
@@ -501,9 +501,9 @@ class PacerSession(requests.Session):
         :return: The corresponding docket sheet URL.
         """
         if court_id == "ca9":
-            return "https://ca9-showdoc.azurewebsites.us/"
+            return "http://ca9-showdoc.azurewebsites.us/"
         elif court_id == "ca2":
-            return "https://ca2-showdoc.azurewebsites.us/"
+            return "http://ca2-showdoc.azurewebsites.us/"
         else:
             raise NotImplementedError(
                 f"Docket sheet URL not implemented for court_id: {court_id}"
@@ -530,6 +530,7 @@ class PacerSession(requests.Session):
         logger.info(f"Attempting to get SAML credentials for {court_id}")
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
+        print(url)
         response = self._prepare_login_request(url, data={}, headers={})
         result_parts = response.text.split("\r\n")
         # Handle gzip decoding
@@ -578,7 +579,6 @@ class PacerSession(requests.Session):
         response = self._prepare_login_request(
             saml_url, data=auth_params, headers={}
         )
-        print(json.dumps(dict_from_cookiejar(self.cookies), indent=2))
         """
         print(response.text)
         """
