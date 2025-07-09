@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix `idaho_civil` preformat date to prevent parsing errors #1284
 
 ## Current
 
