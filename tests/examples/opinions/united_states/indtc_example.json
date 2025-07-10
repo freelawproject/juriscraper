@@ -1,1210 +1,1270 @@
 [
-    {
-        "id": -1793203144,
-        "style": "Holcim (US) Inc.\nv.\nACMS Group, Inc.",
-        "caseNumber": "24A-PL-02458",
-        "date": "7/10/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge Bradford.",
-        "publishedText": "",
-        "voteText": "Judge May and Judge Mathias concur",
-        "opinionUrl": "api/Document/Opinion?Id=wwVh7alXhekn_272ni0Z82n0vr4CgNaQ5xJDG9mOsd0SQavECf40OavXhd4FWuzW0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjZfMXhfS0lYRWE1LTVHUzZNWUZvZm0xSG1VQkFHbm84ZU0yNFpQYWdFVDgxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiNUllU2tnYWFtQkstMnpLQmNPZWd5dy1NX2txWnN2MFpCTVY1cVMxTjM3MDEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 42651016,
-                "name": "Lake Superior Court, Civil Division 1",
-                "number": "45D01-2202-PL-000163"
-            },
-            {
-                "id": 45564280,
-                "name": "Court of Appeals",
-                "number": "24A-PL-02458"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9772471,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9772471,
-                    "judgeCode": 70235,
-                    "judge": "Bradford, Cale J.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9772471,
-                    "judgeCode": 70210,
-                    "judge": "May, Melissa S.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9772471,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                }
-            ]
+  {
+    "id": -1793203144,
+    "style": "Holcim (US) Inc.\nv.\nACMS Group, Inc.",
+    "caseNumber": "24A-PL-02458",
+    "date": "7/10/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge Bradford.",
+    "publishedText": "",
+    "voteText": "Judge May and Judge Mathias concur",
+    "opinionUrl": "api/Document/Opinion?Id=wwVh7alXhekn_272ni0Z82n0vr4CgNaQ5xJDG9mOsd0SQavECf40OavXhd4FWuzW0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjZfMXhfS0lYRWE1LTVHUzZNWUZvZm0xSG1VQkFHbm84ZU0yNFpQYWdFVDgxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiNUllU2tnYWFtQkstMnpLQmNPZWd5dy1NX2txWnN2MFpCTVY1cVMxTjM3MDEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 42651016,
+        "name": "Lake Superior Court, Civil Division 1",
+        "number": "45D01-2202-PL-000163"
+      },
+      {
+        "id": 45564280,
+        "name": "Court of Appeals",
+        "number": "24A-PL-02458"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9772471,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9772471,
+          "judgeCode": 70235,
+          "judge": "Bradford, Cale J.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9772471,
+          "judgeCode": 70210,
+          "judge": "May, Melissa S.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9772471,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
         }
-    },
-    {
-        "id": -1585095984,
-        "style": "Angel M Mohr\nv.\nStar A Johnston",
-        "caseNumber": "25A-TR-00059",
-        "date": "7/9/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge Tavitas.",
-        "publishedText": "",
-        "voteText": "Judge Altice and Judge Brown concur",
-        "opinionUrl": "api/Document/Opinion?Id=4Ya3s6RY8c_AFvfel2RqA8yheBqvJcApP0kcrf1hubc4KdAvzb30E5j8NlurvUCV0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImgyRmNxWlNMY0lYTWRfUk9mS2ZqR1BpLTM5RHFoc2k1SDBreFZzYlQ2UkkxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoia0tzZ2h1ZVZRQWE1UnFKM2lERmNJcjltdUl4dXdFVk1JSjAyUUNfVWoxZzEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44101870,
-                "name": "Allen Superior Court 2",
-                "number": "02D02-2307-ES-000019"
-            },
-            {
-                "id": 44274190,
-                "name": "Allen Superior Court 3",
-                "number": "02D03-2308-TR-000009"
-            },
-            {
-                "id": 45821520,
-                "name": "Court of Appeals",
-                "number": "25A-TR-00059"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9769900,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9769900,
-                    "judgeCode": 70233,
-                    "judge": "Brown, Elaine B.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9769900,
-                    "judgeCode": 78574,
-                    "judge": "Altice, Robert R.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9769900,
-                    "judgeCode": 91517,
-                    "judge": "Tavitas, Elizabeth F.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": 2093745811,
-        "style": "Tim Kinder\nv.\nElena Kinder",
-        "caseNumber": "24A-DN-01079",
-        "date": "7/3/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Reversed and Remanded",
-        "opinionText": "in an opinion by Judge May.",
-        "publishedText": "",
-        "voteText": "Judge Tavitas and Judge DeBoer concur",
-        "opinionUrl": "api/Document/Opinion?Id=5nOh1SMamuri3I2BJ_V1qgWaq8gtwy6MXhwIdmPTZpcnAW1sldiYP61KnfUlWcuK0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImFHUzVfVzE2Sk9KX0trNkVCSlpodm9kclpUakJMc01zTWF3endOcHJsdUExIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoia0tzZ2h1ZVZRQWE1UnFKM2lERmNJcUZ1dmJ1WDl6eVJoeDFIak9aYWZIMDEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 43643557,
-                "name": "Monroe Circuit Court 8",
-                "number": "53C08-2302-DN-000051"
-            },
-            {
-                "id": 45059931,
-                "name": "Court of Appeals",
-                "number": "24A-DN-01079"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9761841,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9761841,
-                    "judgeCode": 109631,
-                    "judge": "DeBoer, Mary A.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9761841,
-                    "judgeCode": 70210,
-                    "judge": "May, Melissa S.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9761841,
-                    "judgeCode": 91517,
-                    "judge": "Tavitas, Elizabeth F.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                }
-            ]
-        }
-    },
-    {
-        "id": -1751093076,
-        "style": "Anthony Tyrone Stone\nv.\nState of Indiana",
-        "caseNumber": "24A-CR-02602",
-        "date": "7/3/2025",
-        "category": "Criminal  ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed, Reversed and Remanded",
-        "opinionText": "in an opinion by Judge Vaidik.",
-        "publishedText": "",
-        "voteText": "Judge Bailey and Judge DeBoer concur",
-        "opinionUrl": "api/Document/Opinion?Id=_TqJmHLdNGUb65v9m6kHnSHkLoSqqVq2RyJFKkno8Cq7a2nreWDSYSQErXAIm2zj0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjJJZ2I4QUI1djI3OURZVU9GbmNKVHZRRnhBbFRGcm9TVDNoQTBTZ1JiT1UxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiMFZVY2lRVm13UkdpVjVwMGJWN19BbGhnQkZGdUFmZXFENnFpUG5HS2gtczEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44314858,
-                "name": "Vanderburgh Superior Court 3",
-                "number": "82D03-2309-F1-005598"
-            },
-            {
-                "id": 45616332,
-                "name": "Court of Appeals",
-                "number": "24A-CR-02602"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9762676,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9762676,
-                    "judgeCode": 109631,
-                    "judge": "DeBoer, Mary A.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9762676,
-                    "judgeCode": 70198,
-                    "judge": "Bailey, Lloyd Mark",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9762676,
-                    "judgeCode": 70207,
-                    "judge": "Vaidik, Nancy H.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": -1670164761,
-        "style": "Hamilton National Title, LLC\nv.\nLinda Rothrock Jurus",
-        "caseNumber": "24A-PL-02872",
-        "date": "7/3/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge Bailey.",
-        "publishedText": "",
-        "voteText": "Judge Brown and Judge Weissmann concur",
-        "opinionUrl": "api/Document/Opinion?Id=rV5lKllIbr1ee3SYQoYYPp5R8j_yZahxH20HYYLh81t2_zHMFKau-wgCwFU7zlkE0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImhSN0NoTGwwM0V5a2RZMV9WcENFRDFaNlpCb21fWHp4Wkx3Z2NjX2FXNVExIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidzJBVmpRN0l5UlRIYmdrYTNUV1pQalhlUXUycnVRTFA1emU2T2xZQUw5ODEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 42656508,
-                "name": "Elkhart Superior Court 3",
-                "number": "20D03-2202-PL-000040"
-            },
-            {
-                "id": 45716367,
-                "name": "Court of Appeals",
-                "number": "24A-PL-02872"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9761840,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9761840,
-                    "judgeCode": 70198,
-                    "judge": "Bailey, Lloyd Mark",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9761840,
-                    "judgeCode": 70233,
-                    "judge": "Brown, Elaine B.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9761840,
-                    "judgeCode": 99243,
-                    "judge": "Weissmann, Leanna K.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                }
-            ]
-        }
-    },
-    {
-        "id": 1972688669,
-        "style": "Clorissa Williams\nv.\nJames Williams",
-        "caseNumber": "24A-DR-00726",
-        "date": "7/1/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge Weissmann.",
-        "publishedText": "",
-        "voteText": "Judge Mathias concurs.  Judge Scheele dissents",
-        "opinionUrl": "api/Document/Opinion?Id=IIU31y1zFC3fqWy8oU1N8WZOZts8QwQF5zaJEUY9_ud-Z0KYPfa7T7l5FqaYkgju0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Inh4Y0VoejIyUXR5UnVJdmtmb2FEbjZrN0RZZFhvSlJuV0VKdlM3a3BTM1UxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidGVzXy00clFzU3FOSUFpSkNtSGZlUzRidlFPSEdESGpBZ2R3UFRJdHF4WTEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 15979647,
-                "name": "Marion Superior Court 10",
-                "number": "49D10-1406-DR-019459"
-            },
-            {
-                "id": 44910293,
-                "name": "Court of Appeals",
-                "number": "24A-DR-00726"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9754909,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9754909,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9754909,
-                    "judgeCode": 99243,
-                    "judge": "Weissmann, Leanna K.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9754909,
-                    "judgeCode": 110151,
-                    "judge": "Scheele, Stephen E.",
-                    "voteCode": 71043,
-                    "voteValue": "Dissent",
-                    "seperateOpinion": true,
-                    "voteRank": 2
-                }
-            ]
-        }
-    },
-    {
-        "id": -1850087979,
-        "style": "Jason Hensley\nv.\nLewis Brothers Bakeries, Inc.",
-        "caseNumber": "24A-PL-02246",
-        "date": "6/30/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Reversed and Remanded",
-        "opinionText": "in an opinion by Judge Altice.",
-        "publishedText": "",
-        "voteText": "Judge Brown and Judge Tavitas concur",
-        "opinionUrl": "api/Document/Opinion?Id=LDU_vNoqd5FTl_8z2l9kNHkybls3vmZ_Rd8xlD3ETTJO-Gk8kPRbrk_xRzD6mVid0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImpvQVlzRldBdTZVYmUxQ1JGUHBmVjN5LVFyRWJiQi1yVG5IODFrSVZ4d2MxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiVWdHeF9oaGV6TURvZjlMQlV5RWpVNXFLTmt6SkFKbnZQVGFXVlh2VWtkNDEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 45082095,
-                "name": "Vanderburgh Superior Court 7",
-                "number": "82D07-2405-PL-002926"
-            },
-            {
-                "id": 45493965,
-                "name": "Court of Appeals",
-                "number": "24A-PL-02246"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9752257,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9752257,
-                    "judgeCode": 78574,
-                    "judge": "Altice, Robert R.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9752257,
-                    "judgeCode": 70233,
-                    "judge": "Brown, Elaine B.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9752257,
-                    "judgeCode": 91517,
-                    "judge": "Tavitas, Elizabeth F.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                }
-            ]
-        }
-    },
-    {
-        "id": -1712033747,
-        "style": "Erie Insurance Exchange\nv.\nState Farm Mutual Automobile Insurance Company",
-        "caseNumber": "24A-CT-02747",
-        "date": "6/30/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Reversed and Remanded",
-        "opinionText": "in an opinion by Judge Pyle.",
-        "publishedText": "",
-        "voteText": "Judge Bradford and Judge Kenworthy concur",
-        "opinionUrl": "api/Document/Opinion?Id=bWu-y4eU84QYqVtLm1ctswpmAjWeDEkSG5PGX08y9P0w4-p5L8513NUY9Is4_8XU0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IkdtS1FLcENoRTdPaG5rV0lpUmh6empjb2JoVUNlMWFTWXhJQTU2UHE5emMxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiZ0lQLWpSMm9ZS29aSGFzNDhQQTRqTTh4UUFqSE9vZmdHOVdDbjlfbEFPWTEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 43679036,
-                "name": "Howard Superior Court 1",
-                "number": "34D01-2302-CT-000417"
-            },
-            {
-                "id": 45664613,
-                "name": "Court of Appeals",
-                "number": "24A-CT-02747"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9753244,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9753244,
-                    "judgeCode": 105977,
-                    "judge": "Kenworthy, Dana J.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9753244,
-                    "judgeCode": 70235,
-                    "judge": "Bradford, Cale J.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9753244,
-                    "judgeCode": 70232,
-                    "judge": "Pyle, Rudolph R., III",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": -1458076512,
-        "style": "State of Indiana\nv.\nBH",
-        "caseNumber": "25S-JV-00047",
-        "date": "6/30/2025",
-        "category": "Juvenile  ",
-        "courtName": "Supreme Court",
-        "decision": "Dismissed",
-        "opinionText": "in an opinion by Justice Rush.",
-        "publishedText": "",
-        "voteText": "All Justices concur",
-        "opinionUrl": "api/Document/Opinion?Id=l-Q5yEEliTTp0TNkW5_Xq3QqGf8paq2y_a9FW03l3bgFrQM9NtoUzbjd30-TEk8I0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Im5hRlFMTXJRb21HUS0wTVRJRXJlMHNPWWR4SHBUbnlCZzI4enotQUh2Q0UxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiXzVSSy1wd3AxdWdvekUxdDJDRFM2MmpxYnB5Qm1RRlhlanAtRXVhbWt0YzEifX0=",
-        "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=3003&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44951336,
-                "name": "Cass Circuit Court",
-                "number": "09C01-2404-JD-000016"
-            },
-            {
-                "id": 45121712,
-                "name": "Court of Appeals",
-                "number": "24A-JV-01247"
-            },
-            {
-                "id": 45978528,
-                "name": "Supreme Court",
-                "number": "25S-JV-00047"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9752773,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9752773,
-                    "judgeCode": 80781,
-                    "judge": "Slaughter, Geoffrey",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9752773,
-                    "judgeCode": 105288,
-                    "judge": "Molter, Derek R.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 4
-                },
-                {
-                    "dispCompInstanceId": 9752773,
-                    "judgeCode": 86360,
-                    "judge": "Goff, Christopher M",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 3
-                },
-                {
-                    "dispCompInstanceId": 9752773,
-                    "judgeCode": 70275,
-                    "judge": "Massa, Mark S.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9752773,
-                    "judgeCode": 70274,
-                    "judge": "Rush, Loretta H.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": -1623139209,
-        "style": "Scott P. Hedge, et al.\nv.\nDale Hartlerode",
-        "caseNumber": "24A-MI-03083",
-        "date": "6/27/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge May.",
-        "publishedText": "",
-        "voteText": "Judge Mathias and Judge Bradford concur",
-        "opinionUrl": "api/Document/Opinion?Id=MT6-_gTguNBF0KchGOyC3kdwRZaWp3Xi6aiRbFm3qu94582PKpudUGgJqfShOGFy0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IkEwbU04VHgxYjhsdVVHaUpjeXNGaDkxaHk3UktXa01YcFBNRnl0US1oMzgxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidk1NWDBsTFhHRUVIRjVxSFJmclp2Mm9zTmlOdkxqNDA3UVFkYWlpZlJ6STEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 43675611,
-                "name": "Scott Superior Court",
-                "number": "72D01-2302-MI-000007"
-            },
-            {
-                "id": 45774495,
-                "name": "Court of Appeals",
-                "number": "24A-MI-03083"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9749390,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9749390,
-                    "judgeCode": 70235,
-                    "judge": "Bradford, Cale J.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9749390,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9749390,
-                    "judgeCode": 70210,
-                    "judge": "May, Melissa S.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": 2042751305,
-        "style": "Paul Oliver\nv.\nFLH Mill, LLC, et al.",
-        "caseNumber": "24A-CT-00938",
-        "date": "6/26/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed, Reversed and Remanded",
-        "opinionText": "in an opinion by Judge Mathias.",
-        "publishedText": "",
-        "voteText": "Judge Altice and Judge Scheele concur",
-        "opinionUrl": "api/Document/Opinion?Id=LqvC30ULcNbqgKuEVx_CqGrubd_UHpU81ds7Z95OuU2ch8jNA_2q0kcAKmyIeilm0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjVXaGhIU0dtamlLRmxVQ3UxbVlxU0s4REUxQnNxOTcxMjVtQWxuUFoxWDQxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidFpGSXd6aVVXbEJoN0UyVDZ5RlJDb001Umw5WDJ3dXVOa1B1RzVYU09tTTEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 36949340,
-                "name": "Greene Superior Court",
-                "number": "28D01-1908-CT-000008"
-            },
-            {
-                "id": 44996897,
-                "name": "Court of Appeals",
-                "number": "24A-CT-00938"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9745014,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9745014,
-                    "judgeCode": 110151,
-                    "judge": "Scheele, Stephen E.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9745014,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9745014,
-                    "judgeCode": 78574,
-                    "judge": "Altice, Robert R.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                }
-            ]
-        }
-    },
-    {
-        "id": -1643130408,
-        "style": "Zainab Abbas, M.D., et al. v. Hetep Bilal Neter-Nu",
-        "caseNumber": "24S-CT-00435",
-        "date": "6/26/2025",
-        "category": "Civil     ",
-        "courtName": "Supreme Court",
-        "decision": "Affirmed, Reversed and Remanded",
-        "opinionText": "in an opinion by Justice Goff.",
-        "publishedText": "",
-        "voteText": "All Justices concur",
-        "opinionUrl": "api/Document/Opinion?Id=VFYBuGpZMbhZOHN40lGJo3qeSEFRQr127pE08QO5wjxuAICnY6ig2kke3ykHQ0eO0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Im5YMFRsUGF3WklpbXl5ZG54ZUhaYlpCUl96VEl5WmVIdEpGdGRQWjVwMVkxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiZlE3TVdYWW12T3lwd2oxX0ZuR2ZQNjhSWE53UGRvTm42dDJxanlqdTNTODEifX0=",
-        "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=2959&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 33634869,
-                "name": "Lake Superior Court, Civil Division 7",
-                "number": "45D11-1809-CT-000541"
-            },
-            {
-                "id": 43714454,
-                "name": "Court of Appeals",
-                "number": "23A-CT-00438"
-            },
-            {
-                "id": 45749784,
-                "name": "Supreme Court",
-                "number": "24S-CT-00435"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9746350,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9746350,
-                    "judgeCode": 70274,
-                    "judge": "Rush, Loretta H.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9746350,
-                    "judgeCode": 70275,
-                    "judge": "Massa, Mark S.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9746350,
-                    "judgeCode": 80781,
-                    "judge": "Slaughter, Geoffrey",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9746350,
-                    "judgeCode": 86360,
-                    "judge": "Goff, Christopher M",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 3
-                },
-                {
-                    "dispCompInstanceId": 9746350,
-                    "judgeCode": 105288,
-                    "judge": "Molter, Derek R.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 4
-                }
-            ]
-        }
-    },
-    {
-        "id": -1782998418,
-        "style": "Troyon Ramon Scott\nv.\nState of Indiana",
-        "caseNumber": "24A-PC-02482",
-        "date": "6/25/2025",
-        "category": "Criminal  ",
-        "courtName": "Court of Appeals",
-        "decision": "Reversed and Remanded",
-        "opinionText": "in an opinion by Judge Foley.",
-        "publishedText": "",
-        "voteText": "Judge Mathias and Judge Felix concur",
-        "opinionUrl": "api/Document/Opinion?Id=PxE46BjXkUG1SAP0DrS4Ou65qWQDlhLUUaqXdJD9IljkvXwmB7UBfy9MzO4yGH2p0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImVtdVpUNGZLRm82cDM0LTdxZVllVzEzcEZsODhxbFZBV0dlQmZTYng1dWMxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoibGM5S3paRUFyZUlPRTdaS1lwVm12ZHctY19iTXZwM0E1MEdGR3ZxQl9nWTEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44697200,
-                "name": "St. Joseph Superior Court 3",
-                "number": "71D03-2401-PC-000001"
-            },
-            {
-                "id": 45576894,
-                "name": "Court of Appeals",
-                "number": "24A-PC-02482"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9741483,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9741483,
-                    "judgeCode": 106858,
-                    "judge": "Felix, Paul A.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9741483,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9741483,
-                    "judgeCode": 105450,
-                    "judge": "Foley, Peter R.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": -1761376275,
-        "style": "Enoch J. Frank\nv.\nMonica S. Frank",
-        "caseNumber": "24A-DN-02572",
-        "date": "6/25/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge DeBoer.",
-        "publishedText": "",
-        "voteText": "Judge Bailey and Judge Vaidik concur",
-        "opinionUrl": "api/Document/Opinion?Id=_o1InD-u9K2a5dV5CyAT-OH5jPHeEewlc_plcw-TQ0x1-o6_Er4q3gR9T78xqe3m0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjlOOFNQSUlvVjd4WDJQS2xPTjNPWV9QWVV1MUl0Q2wyRW0yU3owWlMtbzgxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiSjdoeFhJTTl2NUNaUGZ2QTNRWldUUGhYWlN6RklUdEowaGxnd3FMV1RMczEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44783913,
-                "name": "Marion Superior Court 24",
-                "number": "49D24-2402-DN-001622"
-            },
-            {
-                "id": 45603621,
-                "name": "Court of Appeals",
-                "number": "24A-DN-02572"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9741344,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9741344,
-                    "judgeCode": 70207,
-                    "judge": "Vaidik, Nancy H.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9741344,
-                    "judgeCode": 70198,
-                    "judge": "Bailey, Lloyd Mark",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9741344,
-                    "judgeCode": 109631,
-                    "judge": "DeBoer, Mary A.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": -1753888980,
-        "style": "Lee White\nv.\nState of Indiana",
-        "caseNumber": "24A-CR-02592",
-        "date": "6/25/2025",
-        "category": "Criminal  ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge Mathias.",
-        "publishedText": "",
-        "voteText": "Judge Foley concurs.  Judge Felix concurs in result",
-        "opinionUrl": "api/Document/Opinion?Id=6rYJlkCCTscFLEDDkyFcIsF6Falb6uOUq5PJSzruplKsTikKnYASlMHBXSz7CUt60",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IlVaeVRzRHhNYnA4b0tLNzk2cG0tWDlleE5vM2xEQUhyVDBnQ1pTUV90TDQxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoicFhPdEpsUzlYMzRKdmtJQjNZcVBCdkgzeERwdlZsemZHcHVuUUpKMkVVczEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44154723,
-                "name": "Marion Superior Court 21",
-                "number": "49D21-2307-F4-020729"
-            },
-            {
-                "id": 45612876,
-                "name": "Court of Appeals",
-                "number": "24A-CR-02592"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9741464,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9741464,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9741464,
-                    "judgeCode": 105450,
-                    "judge": "Foley, Peter R.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9741464,
-                    "judgeCode": 106858,
-                    "judge": "Felix, Paul A.",
-                    "voteCode": 71041,
-                    "voteValue": "Concur in Result",
-                    "seperateOpinion": true,
-                    "voteRank": 2
-                }
-            ]
-        }
-    },
-    {
-        "id": -1709676321,
-        "style": "Gregg Peterson\nv.\nCloud CM, LLC, et al.",
-        "caseNumber": "24A-CT-02757",
-        "date": "6/24/2025",
-        "category": "Civil     ",
-        "courtName": "Court of Appeals",
-        "decision": "Reversed and Remanded",
-        "opinionText": "in an opinion by Judge Bradford.",
-        "publishedText": "Changed to a published opinion Jul 08, 2025",
-        "voteText": "Judge May and Judge Mathias concur",
-        "opinionUrl": "api/Document/Opinion?Id=y34apHYRXkqyVz8nm2IZe7SfI0yRVg1btjT4nVzj1WFMHDyIcIWo_4fOi_X4ZaJ30",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IndlTF8wZ2h2cjBoc2ZCUVBINUVfaHZWblo4WmZrekttYnZma3pCTjlhcHcxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidGN4LVRoeU82dFczWC1WbWE1T0lpSmlyR0w0anpsNHpVNm51eThDNDZXQTEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 38931640,
-                "name": "Clark Circuit Court 6",
-                "number": "10C06-2009-CT-000126"
-            },
-            {
-                "id": 45667527,
-                "name": "Court of Appeals",
-                "number": "24A-CT-02757"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9739610,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9739610,
-                    "judgeCode": 70235,
-                    "judge": "Bradford, Cale J.",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                },
-                {
-                    "dispCompInstanceId": 9739610,
-                    "judgeCode": 70210,
-                    "judge": "May, Melissa S.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9739610,
-                    "judgeCode": 70206,
-                    "judge": "Mathias, Paul D.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                }
-            ]
-        }
-    },
-    {
-        "id": -1804009766,
-        "style": "Ryan Scott Fisher\nv.\nState of Indiana",
-        "caseNumber": "24A-CR-02402",
-        "date": "6/24/2025",
-        "category": "Criminal  ",
-        "courtName": "Court of Appeals",
-        "decision": "Affirmed",
-        "opinionText": "in an opinion by Judge Crone.",
-        "publishedText": "",
-        "voteText": "Judge May and Judge Bradford concur",
-        "opinionUrl": "api/Document/Opinion?Id=MW-UTMwGj4Arlz4oIk78HWNnb9TLaRx0yVnz90bEqLQZy2ykXh5YdeVWZG2PmonT0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Ikg4Qk40NzNqbGFvdHVoNGowUkN6cmdpb3FoVnJtMU5NajVZUmozWExQUUUxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiX1BaOTdZLV9BOEEwZkFxTWhIM3JXbUhwQ0NWZzhWMm0yQnoza3NvTXlyODEifX0=",
-        "argumentUrl": null,
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 44319231,
-                "name": "Sullivan Superior Court",
-                "number": "77D01-2309-F4-000436"
-            },
-            {
-                "id": 45550922,
-                "name": "Court of Appeals",
-                "number": "24A-CR-02402"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9737676,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9737676,
-                    "judgeCode": 70235,
-                    "judge": "Bradford, Cale J.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9737676,
-                    "judgeCode": 70210,
-                    "judge": "May, Melissa S.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9737676,
-                    "judgeCode": 109697,
-                    "judge": "Crone, Terry A. - SR",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
-    },
-    {
-        "id": -1698502413,
-        "style": "South Bend Community School Corporation\nv.\nConnie Grabowski",
-        "caseNumber": "24S-CT-00395",
-        "date": "6/24/2025",
-        "category": "Civil     ",
-        "courtName": "Supreme Court",
-        "decision": "Reversed and Remanded",
-        "opinionText": "in an opinion by Justice Slaughter.",
-        "publishedText": "",
-        "voteText": "Justice Rush and Justice Massa concur.  Justice Goff and Justice Molter dissent",
-        "opinionUrl": "api/Document/Opinion?Id=b-EA5lK3qcpNes5T9kLqQ9XtDQrZCA1tnEZebE7Ryddk6imRUYYcM6D3rYI1PwQc0",
-        "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjJHYXRQcjZIMmlTeF9ES204U1ZtM3l1Y2tXMUxVQXlHRWI3cmRJdW1KbEkxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiX1ZBUmEzTlo5TG5rSTgwQzZ1c1dxNmQwOHhCc0NEcmk4VElOY0lvQUdGczEifX0=",
-        "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=2958&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
-        "additionalCourtCount": 0,
-        "isMemorandum": false,
-        "courts": [
-            {
-                "id": 26202512,
-                "name": "St. Joseph Circuit Court",
-                "number": "71C01-1702-CT-000061"
-            },
-            {
-                "id": 43667875,
-                "name": "Court of Appeals",
-                "number": "23A-CT-00343"
-            },
-            {
-                "id": 45681339,
-                "name": "Supreme Court",
-                "number": "24S-CT-00395"
-            }
-        ],
-        "opinion": {
-            "dispCompInstanceId": 9737727,
-            "result": "Majority Opinion",
-            "perCuriam": false,
-            "votes": [
-                {
-                    "dispCompInstanceId": 9737727,
-                    "judgeCode": 80781,
-                    "judge": "Slaughter, Geoffrey",
-                    "voteCode": 71039,
-                    "voteValue": "Author",
-                    "seperateOpinion": false,
-                    "voteRank": 2
-                },
-                {
-                    "dispCompInstanceId": 9737727,
-                    "judgeCode": 86360,
-                    "judge": "Goff, Christopher M",
-                    "voteCode": 71043,
-                    "voteValue": "Dissent",
-                    "seperateOpinion": true,
-                    "voteRank": 3
-                },
-                {
-                    "dispCompInstanceId": 9737727,
-                    "judgeCode": 105288,
-                    "judge": "Molter, Derek R.",
-                    "voteCode": 71043,
-                    "voteValue": "Dissent",
-                    "seperateOpinion": false,
-                    "voteRank": 4
-                },
-                {
-                    "dispCompInstanceId": 9737727,
-                    "judgeCode": 70275,
-                    "judge": "Massa, Mark S.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 1
-                },
-                {
-                    "dispCompInstanceId": 9737727,
-                    "judgeCode": 70274,
-                    "judge": "Rush, Loretta H.",
-                    "voteCode": 71040,
-                    "voteValue": "Concur",
-                    "seperateOpinion": false,
-                    "voteRank": 0
-                }
-            ]
-        }
+      ]
     }
+  },
+  {
+    "id": -1585095984,
+    "style": "Angel M Mohr\nv.\nStar A Johnston",
+    "caseNumber": "25A-TR-00059",
+    "date": "7/9/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge Tavitas.",
+    "publishedText": "",
+    "voteText": "Judge Altice and Judge Brown concur",
+    "opinionUrl": "api/Document/Opinion?Id=4Ya3s6RY8c_AFvfel2RqA8yheBqvJcApP0kcrf1hubc4KdAvzb30E5j8NlurvUCV0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImgyRmNxWlNMY0lYTWRfUk9mS2ZqR1BpLTM5RHFoc2k1SDBreFZzYlQ2UkkxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoia0tzZ2h1ZVZRQWE1UnFKM2lERmNJcjltdUl4dXdFVk1JSjAyUUNfVWoxZzEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44101870,
+        "name": "Allen Superior Court 2",
+        "number": "02D02-2307-ES-000019"
+      },
+      {
+        "id": 44274190,
+        "name": "Allen Superior Court 3",
+        "number": "02D03-2308-TR-000009"
+      },
+      {
+        "id": 45821520,
+        "name": "Court of Appeals",
+        "number": "25A-TR-00059"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9769900,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9769900,
+          "judgeCode": 70233,
+          "judge": "Brown, Elaine B.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9769900,
+          "judgeCode": 78574,
+          "judge": "Altice, Robert R.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9769900,
+          "judgeCode": 91517,
+          "judge": "Tavitas, Elizabeth F.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 2093745811,
+    "style": "Tim Kinder\nv.\nElena Kinder",
+    "caseNumber": "24A-DN-01079",
+    "date": "7/3/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Reversed and Remanded",
+    "opinionText": "in an opinion by Judge May.",
+    "publishedText": "",
+    "voteText": "Judge Tavitas and Judge DeBoer concur",
+    "opinionUrl": "api/Document/Opinion?Id=5nOh1SMamuri3I2BJ_V1qgWaq8gtwy6MXhwIdmPTZpcnAW1sldiYP61KnfUlWcuK0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImFHUzVfVzE2Sk9KX0trNkVCSlpodm9kclpUakJMc01zTWF3endOcHJsdUExIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoia0tzZ2h1ZVZRQWE1UnFKM2lERmNJcUZ1dmJ1WDl6eVJoeDFIak9aYWZIMDEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 43643557,
+        "name": "Monroe Circuit Court 8",
+        "number": "53C08-2302-DN-000051"
+      },
+      {
+        "id": 45059931,
+        "name": "Court of Appeals",
+        "number": "24A-DN-01079"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9761841,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9761841,
+          "judgeCode": 109631,
+          "judge": "DeBoer, Mary A.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9761841,
+          "judgeCode": 70210,
+          "judge": "May, Melissa S.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9761841,
+          "judgeCode": 91517,
+          "judge": "Tavitas, Elizabeth F.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": -1751093076,
+    "style": "Anthony Tyrone Stone\nv.\nState of Indiana",
+    "caseNumber": "24A-CR-02602",
+    "date": "7/3/2025",
+    "category": "Criminal  ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed, Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Vaidik.",
+    "publishedText": "",
+    "voteText": "Judge Bailey and Judge DeBoer concur",
+    "opinionUrl": "api/Document/Opinion?Id=_TqJmHLdNGUb65v9m6kHnSHkLoSqqVq2RyJFKkno8Cq7a2nreWDSYSQErXAIm2zj0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjJJZ2I4QUI1djI3OURZVU9GbmNKVHZRRnhBbFRGcm9TVDNoQTBTZ1JiT1UxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiMFZVY2lRVm13UkdpVjVwMGJWN19BbGhnQkZGdUFmZXFENnFpUG5HS2gtczEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44314858,
+        "name": "Vanderburgh Superior Court 3",
+        "number": "82D03-2309-F1-005598"
+      },
+      {
+        "id": 45616332,
+        "name": "Court of Appeals",
+        "number": "24A-CR-02602"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9762676,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9762676,
+          "judgeCode": 109631,
+          "judge": "DeBoer, Mary A.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9762676,
+          "judgeCode": 70198,
+          "judge": "Bailey, Lloyd Mark",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9762676,
+          "judgeCode": 70207,
+          "judge": "Vaidik, Nancy H.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": -1670164761,
+    "style": "Hamilton National Title, LLC\nv.\nLinda Rothrock Jurus",
+    "caseNumber": "24A-PL-02872",
+    "date": "7/3/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge Bailey.",
+    "publishedText": "",
+    "voteText": "Judge Brown and Judge Weissmann concur",
+    "opinionUrl": "api/Document/Opinion?Id=rV5lKllIbr1ee3SYQoYYPp5R8j_yZahxH20HYYLh81t2_zHMFKau-wgCwFU7zlkE0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImhSN0NoTGwwM0V5a2RZMV9WcENFRDFaNlpCb21fWHp4Wkx3Z2NjX2FXNVExIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidzJBVmpRN0l5UlRIYmdrYTNUV1pQalhlUXUycnVRTFA1emU2T2xZQUw5ODEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 42656508,
+        "name": "Elkhart Superior Court 3",
+        "number": "20D03-2202-PL-000040"
+      },
+      {
+        "id": 45716367,
+        "name": "Court of Appeals",
+        "number": "24A-PL-02872"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9761840,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9761840,
+          "judgeCode": 70198,
+          "judge": "Bailey, Lloyd Mark",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9761840,
+          "judgeCode": 70233,
+          "judge": "Brown, Elaine B.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9761840,
+          "judgeCode": 99243,
+          "judge": "Weissmann, Leanna K.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": 1972688669,
+    "style": "Clorissa Williams\nv.\nJames Williams",
+    "caseNumber": "24A-DR-00726",
+    "date": "7/1/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge Weissmann.",
+    "publishedText": "",
+    "voteText": "Judge Mathias concurs.  Judge Scheele dissents",
+    "opinionUrl": "api/Document/Opinion?Id=IIU31y1zFC3fqWy8oU1N8WZOZts8QwQF5zaJEUY9_ud-Z0KYPfa7T7l5FqaYkgju0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Inh4Y0VoejIyUXR5UnVJdmtmb2FEbjZrN0RZZFhvSlJuV0VKdlM3a3BTM1UxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidGVzXy00clFzU3FOSUFpSkNtSGZlUzRidlFPSEdESGpBZ2R3UFRJdHF4WTEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 15979647,
+        "name": "Marion Superior Court 10",
+        "number": "49D10-1406-DR-019459"
+      },
+      {
+        "id": 44910293,
+        "name": "Court of Appeals",
+        "number": "24A-DR-00726"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9754909,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9754909,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9754909,
+          "judgeCode": 99243,
+          "judge": "Weissmann, Leanna K.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9754909,
+          "judgeCode": 110151,
+          "judge": "Scheele, Stephen E.",
+          "voteCode": 71043,
+          "voteValue": "Dissent",
+          "seperateOpinion": true,
+          "voteRank": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": -1850087979,
+    "style": "Jason Hensley\nv.\nLewis Brothers Bakeries, Inc.",
+    "caseNumber": "24A-PL-02246",
+    "date": "6/30/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Altice.",
+    "publishedText": "",
+    "voteText": "Judge Brown and Judge Tavitas concur",
+    "opinionUrl": "api/Document/Opinion?Id=LDU_vNoqd5FTl_8z2l9kNHkybls3vmZ_Rd8xlD3ETTJO-Gk8kPRbrk_xRzD6mVid0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImpvQVlzRldBdTZVYmUxQ1JGUHBmVjN5LVFyRWJiQi1yVG5IODFrSVZ4d2MxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiVWdHeF9oaGV6TURvZjlMQlV5RWpVNXFLTmt6SkFKbnZQVGFXVlh2VWtkNDEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 45082095,
+        "name": "Vanderburgh Superior Court 7",
+        "number": "82D07-2405-PL-002926"
+      },
+      {
+        "id": 45493965,
+        "name": "Court of Appeals",
+        "number": "24A-PL-02246"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9752257,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9752257,
+          "judgeCode": 78574,
+          "judge": "Altice, Robert R.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9752257,
+          "judgeCode": 70233,
+          "judge": "Brown, Elaine B.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9752257,
+          "judgeCode": 91517,
+          "judge": "Tavitas, Elizabeth F.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": -1712033747,
+    "style": "Erie Insurance Exchange\nv.\nState Farm Mutual Automobile Insurance Company",
+    "caseNumber": "24A-CT-02747",
+    "date": "6/30/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Pyle.",
+    "publishedText": "",
+    "voteText": "Judge Bradford and Judge Kenworthy concur",
+    "opinionUrl": "api/Document/Opinion?Id=bWu-y4eU84QYqVtLm1ctswpmAjWeDEkSG5PGX08y9P0w4-p5L8513NUY9Is4_8XU0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IkdtS1FLcENoRTdPaG5rV0lpUmh6empjb2JoVUNlMWFTWXhJQTU2UHE5emMxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiZ0lQLWpSMm9ZS29aSGFzNDhQQTRqTTh4UUFqSE9vZmdHOVdDbjlfbEFPWTEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 43679036,
+        "name": "Howard Superior Court 1",
+        "number": "34D01-2302-CT-000417"
+      },
+      {
+        "id": 45664613,
+        "name": "Court of Appeals",
+        "number": "24A-CT-02747"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9753244,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9753244,
+          "judgeCode": 105977,
+          "judge": "Kenworthy, Dana J.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9753244,
+          "judgeCode": 70235,
+          "judge": "Bradford, Cale J.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9753244,
+          "judgeCode": 70232,
+          "judge": "Pyle, Rudolph R., III",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": -1458076512,
+    "style": "State of Indiana\nv.\nBH",
+    "caseNumber": "25S-JV-00047",
+    "date": "6/30/2025",
+    "category": "Juvenile  ",
+    "courtName": "Supreme Court",
+    "decision": "Dismissed",
+    "opinionText": "in an opinion by Justice Rush.",
+    "publishedText": "",
+    "voteText": "All Justices concur",
+    "opinionUrl": "api/Document/Opinion?Id=l-Q5yEEliTTp0TNkW5_Xq3QqGf8paq2y_a9FW03l3bgFrQM9NtoUzbjd30-TEk8I0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Im5hRlFMTXJRb21HUS0wTVRJRXJlMHNPWWR4SHBUbnlCZzI4enotQUh2Q0UxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiXzVSSy1wd3AxdWdvekUxdDJDRFM2MmpxYnB5Qm1RRlhlanAtRXVhbWt0YzEifX0=",
+    "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=3003&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44951336,
+        "name": "Cass Circuit Court",
+        "number": "09C01-2404-JD-000016"
+      },
+      {
+        "id": 45121712,
+        "name": "Court of Appeals",
+        "number": "24A-JV-01247"
+      },
+      {
+        "id": 45978528,
+        "name": "Supreme Court",
+        "number": "25S-JV-00047"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9752773,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9752773,
+          "judgeCode": 80781,
+          "judge": "Slaughter, Geoffrey",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9752773,
+          "judgeCode": 105288,
+          "judge": "Molter, Derek R.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 4
+        },
+        {
+          "dispCompInstanceId": 9752773,
+          "judgeCode": 86360,
+          "judge": "Goff, Christopher M",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 3
+        },
+        {
+          "dispCompInstanceId": 9752773,
+          "judgeCode": 70275,
+          "judge": "Massa, Mark S.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9752773,
+          "judgeCode": 70274,
+          "judge": "Rush, Loretta H.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": -1623139209,
+    "style": "Scott P. Hedge, et al.\nv.\nDale Hartlerode",
+    "caseNumber": "24A-MI-03083",
+    "date": "6/27/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge May.",
+    "publishedText": "",
+    "voteText": "Judge Mathias and Judge Bradford concur",
+    "opinionUrl": "api/Document/Opinion?Id=MT6-_gTguNBF0KchGOyC3kdwRZaWp3Xi6aiRbFm3qu94582PKpudUGgJqfShOGFy0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IkEwbU04VHgxYjhsdVVHaUpjeXNGaDkxaHk3UktXa01YcFBNRnl0US1oMzgxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidk1NWDBsTFhHRUVIRjVxSFJmclp2Mm9zTmlOdkxqNDA3UVFkYWlpZlJ6STEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 43675611,
+        "name": "Scott Superior Court",
+        "number": "72D01-2302-MI-000007"
+      },
+      {
+        "id": 45774495,
+        "name": "Court of Appeals",
+        "number": "24A-MI-03083"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9749390,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9749390,
+          "judgeCode": 70235,
+          "judge": "Bradford, Cale J.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9749390,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9749390,
+          "judgeCode": 70210,
+          "judge": "May, Melissa S.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 2042751305,
+    "style": "Paul Oliver\nv.\nFLH Mill, LLC, et al.",
+    "caseNumber": "24A-CT-00938",
+    "date": "6/26/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed, Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Mathias.",
+    "publishedText": "",
+    "voteText": "Judge Altice and Judge Scheele concur",
+    "opinionUrl": "api/Document/Opinion?Id=LqvC30ULcNbqgKuEVx_CqGrubd_UHpU81ds7Z95OuU2ch8jNA_2q0kcAKmyIeilm0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjVXaGhIU0dtamlLRmxVQ3UxbVlxU0s4REUxQnNxOTcxMjVtQWxuUFoxWDQxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidFpGSXd6aVVXbEJoN0UyVDZ5RlJDb001Umw5WDJ3dXVOa1B1RzVYU09tTTEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 36949340,
+        "name": "Greene Superior Court",
+        "number": "28D01-1908-CT-000008"
+      },
+      {
+        "id": 44996897,
+        "name": "Court of Appeals",
+        "number": "24A-CT-00938"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9745014,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9745014,
+          "judgeCode": 110151,
+          "judge": "Scheele, Stephen E.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9745014,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9745014,
+          "judgeCode": 78574,
+          "judge": "Altice, Robert R.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": -1643130408,
+    "style": "Zainab Abbas, M.D., et al. v. Hetep Bilal Neter-Nu",
+    "caseNumber": "24S-CT-00435",
+    "date": "6/26/2025",
+    "category": "Civil     ",
+    "courtName": "Supreme Court",
+    "decision": "Affirmed, Reversed and Remanded",
+    "opinionText": "in an opinion by Justice Goff.",
+    "publishedText": "",
+    "voteText": "All Justices concur",
+    "opinionUrl": "api/Document/Opinion?Id=VFYBuGpZMbhZOHN40lGJo3qeSEFRQr127pE08QO5wjxuAICnY6ig2kke3ykHQ0eO0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Im5YMFRsUGF3WklpbXl5ZG54ZUhaYlpCUl96VEl5WmVIdEpGdGRQWjVwMVkxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiZlE3TVdYWW12T3lwd2oxX0ZuR2ZQNjhSWE53UGRvTm42dDJxanlqdTNTODEifX0=",
+    "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=2959&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 33634869,
+        "name": "Lake Superior Court, Civil Division 7",
+        "number": "45D11-1809-CT-000541"
+      },
+      {
+        "id": 43714454,
+        "name": "Court of Appeals",
+        "number": "23A-CT-00438"
+      },
+      {
+        "id": 45749784,
+        "name": "Supreme Court",
+        "number": "24S-CT-00435"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9746350,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9746350,
+          "judgeCode": 70274,
+          "judge": "Rush, Loretta H.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9746350,
+          "judgeCode": 70275,
+          "judge": "Massa, Mark S.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9746350,
+          "judgeCode": 80781,
+          "judge": "Slaughter, Geoffrey",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9746350,
+          "judgeCode": 86360,
+          "judge": "Goff, Christopher M",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 3
+        },
+        {
+          "dispCompInstanceId": 9746350,
+          "judgeCode": 105288,
+          "judge": "Molter, Derek R.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": -1782998418,
+    "style": "Troyon Ramon Scott\nv.\nState of Indiana",
+    "caseNumber": "24A-PC-02482",
+    "date": "6/25/2025",
+    "category": "Criminal  ",
+    "courtName": "Court of Appeals",
+    "decision": "Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Foley.",
+    "publishedText": "",
+    "voteText": "Judge Mathias and Judge Felix concur",
+    "opinionUrl": "api/Document/Opinion?Id=PxE46BjXkUG1SAP0DrS4Ou65qWQDlhLUUaqXdJD9IljkvXwmB7UBfy9MzO4yGH2p0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6ImVtdVpUNGZLRm82cDM0LTdxZVllVzEzcEZsODhxbFZBV0dlQmZTYng1dWMxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoibGM5S3paRUFyZUlPRTdaS1lwVm12ZHctY19iTXZwM0E1MEdGR3ZxQl9nWTEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44697200,
+        "name": "St. Joseph Superior Court 3",
+        "number": "71D03-2401-PC-000001"
+      },
+      {
+        "id": 45576894,
+        "name": "Court of Appeals",
+        "number": "24A-PC-02482"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9741483,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9741483,
+          "judgeCode": 106858,
+          "judge": "Felix, Paul A.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9741483,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9741483,
+          "judgeCode": 105450,
+          "judge": "Foley, Peter R.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": -1761376275,
+    "style": "Enoch J. Frank\nv.\nMonica S. Frank",
+    "caseNumber": "24A-DN-02572",
+    "date": "6/25/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge DeBoer.",
+    "publishedText": "",
+    "voteText": "Judge Bailey and Judge Vaidik concur",
+    "opinionUrl": "api/Document/Opinion?Id=_o1InD-u9K2a5dV5CyAT-OH5jPHeEewlc_plcw-TQ0x1-o6_Er4q3gR9T78xqe3m0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjlOOFNQSUlvVjd4WDJQS2xPTjNPWV9QWVV1MUl0Q2wyRW0yU3owWlMtbzgxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiSjdoeFhJTTl2NUNaUGZ2QTNRWldUUGhYWlN6RklUdEowaGxnd3FMV1RMczEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44783913,
+        "name": "Marion Superior Court 24",
+        "number": "49D24-2402-DN-001622"
+      },
+      {
+        "id": 45603621,
+        "name": "Court of Appeals",
+        "number": "24A-DN-02572"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9741344,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9741344,
+          "judgeCode": 70207,
+          "judge": "Vaidik, Nancy H.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9741344,
+          "judgeCode": 70198,
+          "judge": "Bailey, Lloyd Mark",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9741344,
+          "judgeCode": 109631,
+          "judge": "DeBoer, Mary A.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": -1753888980,
+    "style": "Lee White\nv.\nState of Indiana",
+    "caseNumber": "24A-CR-02592",
+    "date": "6/25/2025",
+    "category": "Criminal  ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge Mathias.",
+    "publishedText": "",
+    "voteText": "Judge Foley concurs.  Judge Felix concurs in result",
+    "opinionUrl": "api/Document/Opinion?Id=6rYJlkCCTscFLEDDkyFcIsF6Falb6uOUq5PJSzruplKsTikKnYASlMHBXSz7CUt60",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IlVaeVRzRHhNYnA4b0tLNzk2cG0tWDlleE5vM2xEQUhyVDBnQ1pTUV90TDQxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoicFhPdEpsUzlYMzRKdmtJQjNZcVBCdkgzeERwdlZsemZHcHVuUUpKMkVVczEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44154723,
+        "name": "Marion Superior Court 21",
+        "number": "49D21-2307-F4-020729"
+      },
+      {
+        "id": 45612876,
+        "name": "Court of Appeals",
+        "number": "24A-CR-02592"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9741464,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9741464,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9741464,
+          "judgeCode": 105450,
+          "judge": "Foley, Peter R.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9741464,
+          "judgeCode": 106858,
+          "judge": "Felix, Paul A.",
+          "voteCode": 71041,
+          "voteValue": "Concur in Result",
+          "seperateOpinion": true,
+          "voteRank": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": -1709676321,
+    "style": "Gregg Peterson\nv.\nCloud CM, LLC, et al.",
+    "caseNumber": "24A-CT-02757",
+    "date": "6/24/2025",
+    "category": "Civil     ",
+    "courtName": "Court of Appeals",
+    "decision": "Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Bradford.",
+    "publishedText": "Changed to a published opinion Jul 08, 2025",
+    "voteText": "Judge May and Judge Mathias concur",
+    "opinionUrl": "api/Document/Opinion?Id=y34apHYRXkqyVz8nm2IZe7SfI0yRVg1btjT4nVzj1WFMHDyIcIWo_4fOi_X4ZaJ30",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IndlTF8wZ2h2cjBoc2ZCUVBINUVfaHZWblo4WmZrekttYnZma3pCTjlhcHcxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoidGN4LVRoeU82dFczWC1WbWE1T0lpSmlyR0w0anpsNHpVNm51eThDNDZXQTEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 38931640,
+        "name": "Clark Circuit Court 6",
+        "number": "10C06-2009-CT-000126"
+      },
+      {
+        "id": 45667527,
+        "name": "Court of Appeals",
+        "number": "24A-CT-02757"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9739610,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9739610,
+          "judgeCode": 70235,
+          "judge": "Bradford, Cale J.",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        },
+        {
+          "dispCompInstanceId": 9739610,
+          "judgeCode": 70210,
+          "judge": "May, Melissa S.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9739610,
+          "judgeCode": 70206,
+          "judge": "Mathias, Paul D.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": -1804009766,
+    "style": "Ryan Scott Fisher\nv.\nState of Indiana",
+    "caseNumber": "24A-CR-02402",
+    "date": "6/24/2025",
+    "category": "Criminal  ",
+    "courtName": "Court of Appeals",
+    "decision": "Affirmed",
+    "opinionText": "in an opinion by Judge Crone.",
+    "publishedText": "",
+    "voteText": "Judge May and Judge Bradford concur",
+    "opinionUrl": "api/Document/Opinion?Id=MW-UTMwGj4Arlz4oIk78HWNnb9TLaRx0yVnz90bEqLQZy2ykXh5YdeVWZG2PmonT0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Ikg4Qk40NzNqbGFvdHVoNGowUkN6cmdpb3FoVnJtMU5NajVZUmozWExQUUUxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiX1BaOTdZLV9BOEEwZkFxTWhIM3JXbUhwQ0NWZzhWMm0yQnoza3NvTXlyODEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44319231,
+        "name": "Sullivan Superior Court",
+        "number": "77D01-2309-F4-000436"
+      },
+      {
+        "id": 45550922,
+        "name": "Court of Appeals",
+        "number": "24A-CR-02402"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9737676,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9737676,
+          "judgeCode": 70235,
+          "judge": "Bradford, Cale J.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9737676,
+          "judgeCode": 70210,
+          "judge": "May, Melissa S.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9737676,
+          "judgeCode": 109697,
+          "judge": "Crone, Terry A. - SR",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": -1698502413,
+    "style": "South Bend Community School Corporation\nv.\nConnie Grabowski",
+    "caseNumber": "24S-CT-00395",
+    "date": "6/24/2025",
+    "category": "Civil     ",
+    "courtName": "Supreme Court",
+    "decision": "Reversed and Remanded",
+    "opinionText": "in an opinion by Justice Slaughter.",
+    "publishedText": "",
+    "voteText": "Justice Rush and Justice Massa concur.  Justice Goff and Justice Molter dissent",
+    "opinionUrl": "api/Document/Opinion?Id=b-EA5lK3qcpNes5T9kLqQ9XtDQrZCA1tnEZebE7Ryddk6imRUYYcM6D3rYI1PwQc0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IjJHYXRQcjZIMmlTeF9ES204U1ZtM3l1Y2tXMUxVQXlHRWI3cmRJdW1KbEkxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiX1ZBUmEzTlo5TG5rSTgwQzZ1c1dxNmQwOHhCc0NEcmk4VElOY0lvQUdGczEifX0=",
+    "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=2958&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 26202512,
+        "name": "St. Joseph Circuit Court",
+        "number": "71C01-1702-CT-000061"
+      },
+      {
+        "id": 43667875,
+        "name": "Court of Appeals",
+        "number": "23A-CT-00343"
+      },
+      {
+        "id": 45681339,
+        "name": "Supreme Court",
+        "number": "24S-CT-00395"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9737727,
+      "result": "Majority Opinion",
+      "perCuriam": false,
+      "votes": [
+        {
+          "dispCompInstanceId": 9737727,
+          "judgeCode": 80781,
+          "judge": "Slaughter, Geoffrey",
+          "voteCode": 71039,
+          "voteValue": "Author",
+          "seperateOpinion": false,
+          "voteRank": 2
+        },
+        {
+          "dispCompInstanceId": 9737727,
+          "judgeCode": 86360,
+          "judge": "Goff, Christopher M",
+          "voteCode": 71043,
+          "voteValue": "Dissent",
+          "seperateOpinion": true,
+          "voteRank": 3
+        },
+        {
+          "dispCompInstanceId": 9737727,
+          "judgeCode": 105288,
+          "judge": "Molter, Derek R.",
+          "voteCode": 71043,
+          "voteValue": "Dissent",
+          "seperateOpinion": false,
+          "voteRank": 4
+        },
+        {
+          "dispCompInstanceId": 9737727,
+          "judgeCode": 70275,
+          "judge": "Massa, Mark S.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 1
+        },
+        {
+          "dispCompInstanceId": 9737727,
+          "judgeCode": 70274,
+          "judge": "Rush, Loretta H.",
+          "voteCode": 71040,
+          "voteValue": "Concur",
+          "seperateOpinion": false,
+          "voteRank": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 1246759636,
+    "style": "Gary II LLC\n v. \nLake County Assessor",
+    "caseNumber": "23T-TA-00012",
+    "date": "3/13/2025",
+    "category": "Tax       ",
+    "courtName": "Tax Court",
+    "decision": "Affirmed, Reversed and Remanded",
+    "opinionText": "in an opinion by Judge Wentworth.",
+    "publishedText": "",
+    "voteText": null,
+    "opinionUrl": "api/Document/Opinion?Id=RokQDl0LHOd2T9JNWeH9zFdEyhlf9tSkoczg26jjZ697sjzPLIUb1AQjqdXjj6C_0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6IlI4a0FWNldFSkg3ZmgyOExYeUtRc281Mml3N2ZoZFdVcWtVeEEzNjlIR0ExIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiTzJiTGFNZHJSR1ZxSHpzNzVpSWpJb0RJRzRRVlZiakttQUNEWWRZZDBIZzEifX0=",
+    "argumentUrl": null,
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 43850367,
+        "name": "Tax Court",
+        "number": "23T-TA-00012"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9528531,
+      "result": null,
+      "perCuriam": false,
+      "votes": []
+    }
+  },
+  {
+    "id": -2074475252,
+    "style": "Madison County Assessor\n v. \nKohl's Indiana LP",
+    "caseNumber": "24T-TA-00009",
+    "date": "12/6/2024",
+    "category": "Tax       ",
+    "courtName": "Tax Court",
+    "decision": "Opinion Issued",
+    "opinionText": "in an opinion by Judge McAdam.",
+    "publishedText": "",
+    "voteText": null,
+    "opinionUrl": "api/Document/Opinion?Id=R_UQ9ioxHm-6cfWv9sp7T9GrsoW2britbNglplI3ZAjpyk0eT6AFNR4bBroUDcvJ0",
+    "detailsUrl": "https://public.courts.in.gov/mycase/#/vw/CaseSummary/eyJ2Ijp7IkNhc2VUb2tlbiI6Iml3Q0U1OTlaSHpocTk0V3VkRWVrTjRxSDM3RnJRYTUzaHRKc3JHa05xNXMxIiwiSGlkZVRvb2xiYXJzIjp0cnVlLCJQQUxvZ28iOmZhbHNlLCJTUkNUIjoiY0ljM0VZT3hSSDhScVQ1dlhwcjQwSzZuNUV0REJKOXNSWURuRFJLNEpoMDEifX0=",
+    "argumentUrl": "https://mycourts.in.gov/arguments/default.aspx?&id=2920&view=detail&yr=&when=&page=1&court=sup&search=&direction=%20ASC&future=False&sort=&judge=&county=&admin=False&pageSize=20",
+    "additionalCourtCount": 0,
+    "isMemorandum": false,
+    "courts": [
+      {
+        "id": 44938858,
+        "name": "Tax Court",
+        "number": "24T-TA-00009"
+      }
+    ],
+    "opinion": {
+      "dispCompInstanceId": 9333405,
+      "result": null,
+      "perCuriam": false,
+      "votes": []
+    }
+  }
 ]
