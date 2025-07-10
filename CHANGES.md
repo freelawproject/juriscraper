@@ -25,6 +25,14 @@ Fixes:
 
 ## Current
 
+**2.6.79 - 2025-07-08**
+
+Changes:
+- Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
+
+
+## Past
+
 **2.6.78 - 2025-06-18**
 
 Features:
@@ -32,6 +40,7 @@ Features:
 - Enhances `PacerSession` class to support ACMS authentication.
 - Adds case purchasing functionality to `ACMSDocketReport`.
 - Added support for parsing docket numbers with case types with up to five letters
+- Introduces logic to purchase ACMS docket entry attachment pages.
 
 Changes:
 - Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
@@ -41,9 +50,6 @@ Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing
   duplicates #1450
 - Fix `minn` move `need_special_headers` to `__init__` #1470
-
-
-## Past
 
 **2.6.77 - 2025-06-17**
 
