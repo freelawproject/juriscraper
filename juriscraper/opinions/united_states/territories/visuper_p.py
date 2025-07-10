@@ -18,6 +18,7 @@ class Site(OpinionSiteLinear):
             "https://superior.vicourts.org/court_opinions/published_opinions"
         )
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parse HTML into case objects

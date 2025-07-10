@@ -19,6 +19,7 @@ class Site(OpinionSite):
         )
         qualifier_has_pdf_link = 'contains(.//td[1]/a/@href, ".pdf")'
         self.base_path = f"//table//tr[{qualifier_no_opinions} and {qualifier_has_pdf_link}]"
+        self.should_have_results = True
 
     def _get_docket_numbers(self):
         path = f"{self.base_path}/td[1]/a"
