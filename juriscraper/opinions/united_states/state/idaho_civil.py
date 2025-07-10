@@ -37,6 +37,7 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}{self.url_part}"
         self.court_id = self.__module__
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self):
         row_xpath = f"//table//tr[.//{self.path_conditional_anchor}]"

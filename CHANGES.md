@@ -15,12 +15,14 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add error handling for scrapers with expected results #1447
 
 Changes:
 -
 
 Fixes:
+- Fix `visuper_p` adaptation to new html tags #1489
+- Fix `ariz` update download URLs #1474
 - fix `idaho_civil` preformat date to prevent parsing errors #1284
 
 ## Current

@@ -36,6 +36,7 @@ class Site(OpinionSiteLinear):
         )
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _get_docket(self, match: re.match) -> str:
         """Get docket_number from a regex match

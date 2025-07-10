@@ -24,6 +24,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.year = None
         self.expected_content_types = ["text/html"]
+        self.should_have_results = True
 
     def _get_download_urls(self) -> list[str]:
         links = self.html.xpath(

@@ -1,6 +1,12 @@
 # Scraper for Superior Court of the Virgin Islands (published)
 # CourtID: visuper_p
 
+# History:
+#   2023-12-11: Created - Garza
+#   2024-01-15: Updated - Rossi
+#   2025-07-09: Fixed - luism
+
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -12,13 +18,14 @@ class Site(OpinionSiteLinear):
             "https://superior.vicourts.org/court_opinions/published_opinions"
         )
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parse HTML into case objects
 
         :return: None
         """
-        row_xpath = ".//tbody//tr[.//a[text() and not(@title='Summary')]]"
+        row_xpath = ".//table[@id='rfp-table']//tbody//tr[.//a[text() and not(@title='Summary')]]"
         for row in self.html.xpath(row_xpath):
             (
                 case_name,

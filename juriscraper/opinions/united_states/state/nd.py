@@ -31,6 +31,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.ndcourts.gov/supreme-court/opinions?topic=&author=&searchQuery=&trialJudge=&pageSize=100&sortOrder=1"
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Most values are inside a <p>: whitespace and
