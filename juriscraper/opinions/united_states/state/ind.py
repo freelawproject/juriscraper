@@ -26,7 +26,7 @@ class Site(OpinionSiteLinear):
             if case["courtName"] != self.court_name:
                 continue
 
-            is_percuriam = case["opinion"]["perCuriam"]
+            is_per_curiam = case["opinion"]["perCuriam"]
             other_courts = [
                 c for c in case["courts"] if c["name"] != self.court_name
             ]
@@ -47,11 +47,11 @@ class Site(OpinionSiteLinear):
                         for v in case["opinion"]["votes"]
                     ),
                     "author": ""
-                    if is_percuriam
+                    if is_per_curiam
                     else case["opinionText"]
                     .replace("in an opinion by ", "")
                     .replace(".", ""),
-                    "per_curiam": is_percuriam,
+                    "per_curiam": is_per_curiam,
                     "type": case["opinion"]["result"],
                 }
             )
