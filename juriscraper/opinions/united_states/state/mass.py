@@ -33,6 +33,7 @@ class Site(OpinionSiteLinear):
         self.court_name = "Supreme Judicial Court"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
+        self.should_have_results = True
 
     def _process_html(self):
         """Scrape and process the JSON endpoint

@@ -30,6 +30,7 @@ class Site(OpinionSiteLinear):
                 },
             }
         )
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Process the RSS feed.
