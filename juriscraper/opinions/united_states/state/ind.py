@@ -46,17 +46,14 @@ class Site(OpinionSiteLinear):
                         self.clean_judge_name(v["judge"])
                         for v in case["opinion"]["votes"]
                     ),
-                    "author": ""
-                    if is_per_curiam
-                    else case["opinionText"]
-                    .replace("in an opinion by ", "")
-                    .replace(".", ""),
+                    "author": self.extract_author(case, is_per_curiam),
                     "per_curiam": is_per_curiam,
                     "type": case["opinion"]["result"],
                 }
             )
 
-    def clean_judge_name(self, name: str) -> str:
+    @staticmethod
+    def clean_judge_name(name: str) -> str:
         """Cleans and formats a judge's name string."""
 
         parts = name.split(", ")
@@ -70,3 +67,14 @@ class Site(OpinionSiteLinear):
             result += f" {parts[2]}"
 
         return result
+
+    @staticmethod
+    def extract_author(case: dict, is_per_curiam: bool) -> str:
+        """Extracts and cleans the author field from the case data."""
+        if is_per_curiam:
+            return ""
+        return (
+            case["opinionText"]
+            .replace("in an opinion by ", "")
+            .replace(".", "")
+        )
