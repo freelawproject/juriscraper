@@ -24,6 +24,12 @@ class Site(OpinionSiteLinear):
         for case in self.html:
             if case["courtName"] != self.court_name:
                 continue
+
+            is_percuriam = case["opinion"]["perCuriam"]
+            other_courts = [
+                c for c in case["courts"] if c["name"] != self.court_name
+            ]
+
             self.cases.append(
                 {
                     "name": case["style"],
@@ -31,19 +37,35 @@ class Site(OpinionSiteLinear):
                     "date": case["date"],
                     "url": f"https://public.courts.in.gov/Decisions/{case['opinionUrl']}",
                     "disposition": case["decision"],
-                    "lower_court": ", ".join(
-                        court["name"]
-                        for court in case["courts"]
-                        if court["name"] != self.court_name
-                    ),
+                    "lower_court": ", ".join(c["name"] for c in other_courts),
                     "lower_court_number": ", ".join(
-                        court["number"]
-                        for court in case["courts"]
-                        if court["name"] != self.court_name
+                        c["number"] for c in other_courts
                     ),
                     "judge": ", ".join(
-                        vote["judge"].split(",")[-1].replace(".", "")
-                        for vote in case["opinion"]["votes"]
+                        self.clean_judge_name(v["judge"])
+                        for v in case["opinion"]["votes"]
                     ),
+                    "author": ""
+                    if is_percuriam
+                    else case["opinionText"]
+                    .replace("in an opinion by ", "")
+                    .replace(".", ""),
+                    "per_curiam": is_percuriam,
+                    "type": case["opinion"]["result"],
                 }
             )
+
+    def clean_judge_name(self, name: str) -> str:
+        """Cleans and formats a judge's name string."""
+
+        parts = name.split(", ")
+        if len(parts) < 2:
+            return parts[0]
+
+        result = parts[0]
+        if "SR" in parts[1]:
+            result += " SR"
+        elif len(parts) > 2:
+            result += f" {parts[2]}"
+
+        return result
