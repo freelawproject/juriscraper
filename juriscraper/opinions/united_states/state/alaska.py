@@ -1,4 +1,5 @@
 from datetime import date, datetime, timedelta
+from urllib.parse import urljoin
 
 from dateutil import parser
 from requests.exceptions import ChunkedEncodingError
@@ -13,13 +14,15 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     # Sharin S. Anderson v Alyeska Pipeline Service Co.; Opinion Number: 6496
     first_opinion_date = datetime(2010, 7, 23).date()
+    base_url = "https://appellate-records.courts.alaska.gov/CMSPublic/"
+    is_coa = False
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
         self.court_id = self.__module__
-        self.url = "https://appellate-records.courts.alaska.gov/CMSPublic/Home/Opinions?isCOA=False"
+        self.url = urljoin(self.base_url, f"Home/Opinions?isCOA={self.is_coa}")
         self.status = "Published"
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
@@ -63,7 +66,10 @@ class Site(OpinionSiteLinear):
                     # build download URL
                     document_number = get_row_column_text(row, 2)
                     cleaned_case_number = case_number.split(",")[0]
-                    url = f"https://appellate-records.courts.alaska.gov/CMSPublic/UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={cleaned_case_number}&opinionType=OP"
+                    url = urljoin(
+                        self.base_url,
+                        f"UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={cleaned_case_number}&opinionType=OP",
+                    )
 
                     # Store case page link for later retrieval
                     self.cases.append(
