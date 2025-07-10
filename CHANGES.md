@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `ariz` update download URLs #1474
 
 ## Current
 

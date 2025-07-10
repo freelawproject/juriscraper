@@ -7,49 +7,65 @@ CourtID: ariz
 Court Short Name: Ariz.
 """
 
-import time
-from datetime import date
-
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999"
         self.should_have_results = True
 
-    def _get_download_urls(self):
-        path = '//a[contains(@id , "hypCaseNum")]/@href'
-        return list(self.html.xpath(path))
+    def _process_html(self) -> None:
+        """Parse HTML into case objects
 
-    def _get_case_names(self):
-        path = '//span[contains(@id , "lblTitle")]//text()'
-        return [titlecase(t.upper()) for t in self.html.xpath(path)]
+        :return: None
+        """
+        self.cases = []
 
-    def _get_case_dates(self):
-        path = '//span[contains(@id , "FilingDate")]//text()'
-        return [
-            date.fromtimestamp(
-                time.mktime(time.strptime(date_string, "%m/%d/%Y"))
+        # Extract download URLs
+        download_urls_path = '//a[contains(@id , "hypCaseNum")]/@href'
+        download_urls = [
+            href.replace(
+                "http://www.azcourts.gov", "https://opinions.azcourts.gov"
             )
-            for date_string in self.html.xpath(path)
+            for href in self.html.xpath(download_urls_path)
         ]
 
-    def _get_precedential_statuses(self):
-        statuses = []
-        path = '//*[contains(@id, "DecType")]/text()'
-        for s in self.html.xpath(path):
-            if "OPINION" in s:
-                statuses.append("Published")
-            elif "MEMORANDUM" in s:
-                statuses.append("Unpublished")
-            else:
-                statuses.append("Unknown")
-        return statuses
+        # Extract case names
+        case_names_path = '//span[contains(@id , "lblTitle")]//text()'
+        case_names = [
+            titlecase(t.upper()) for t in self.html.xpath(case_names_path)
+        ]
 
-    def _get_docket_numbers(self):
-        path = '//a[contains(@id , "hypCaseNum")]//text()'
-        return list(self.html.xpath(path))
+        # Extract case dates
+        case_dates_path = '//span[contains(@id , "FilingDate")]//text()'
+        case_dates = list(self.html.xpath(case_dates_path))
+
+        # Extract precedential statuses
+        precedential_statuses = []
+        precedential_statuses_path = '//*[contains(@id, "DecType")]/text()'
+        for s in self.html.xpath(precedential_statuses_path):
+            if "OPINION" in s:
+                precedential_statuses.append("Published")
+            elif "MEMORANDUM" in s:
+                precedential_statuses.append("Unpublished")
+            else:
+                precedential_statuses.append("Unknown")
+
+        # Extract docket numbers
+        docket_numbers_path = '//a[contains(@id , "hypCaseNum")]//text()'
+        docket_numbers = list(self.html.xpath(docket_numbers_path))
+
+        # Build cases list
+        for i in range(len(download_urls)):
+            case = {
+                "name": case_names[i],
+                "date": case_dates[i],
+                "status": precedential_statuses[i],
+                "docket": docket_numbers[i],
+                "url": download_urls[i],
+            }
+            self.cases.append(case)
