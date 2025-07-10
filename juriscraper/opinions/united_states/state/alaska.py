@@ -80,13 +80,6 @@ class Site(OpinionSiteLinear):
                         }
                     )
 
-    def _get_dispositions(self):
-        """Get the dispositions for the cases
-
-        :return: List of dispositions
-        """
-        return self.dispositions
-
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
