@@ -13,19 +13,18 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    page_court_id = "9510"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_name = "Supreme Court"
         self.status = "Published"
-        self.url = "https://public.courts.in.gov/Decisions/api/Search"
+        self.url = f"https://public.courts.in.gov/Decisions/api/Search?courtId={self.page_court_id}"
         self.should_have_results = True
 
     def _process_html(self):
         for case in self.html:
-            if case["courtName"] != self.court_name:
-                continue
-
             is_per_curiam = case["opinion"]["perCuriam"]
             other_courts = [
                 c for c in case["courts"] if c["name"] != self.court_name
