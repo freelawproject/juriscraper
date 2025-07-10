@@ -66,8 +66,8 @@ class Site(OpinionSiteLinear):
                         url = get_row_column_links(row, 1)
                     except IndexError:
                         document_number = get_row_column_text(row, 2)
-
-                        url = f"https://appellate-records.courts.alaska.gov/CMSPublic/UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={case_number}&opinionType=OP"
+                        cleaned_case_number = case_number.split(",")[0]
+                        url = f"https://appellate-records.courts.alaska.gov/CMSPublic/UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={cleaned_case_number}&opinionType=OP"
 
                     # Store case page link for later retrieval
                     self.cases.append(
