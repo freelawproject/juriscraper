@@ -24,7 +24,7 @@ downloading and saving its results. A reference implementation of the
 caller has been developed and is in use at
 `CourtListener.com <https://www.courtlistener.com>`__. The code for that
 caller can be `found
-here <https://github.com/freelawproject/courtlistener/tree/master/cl/scrapers/management/commands>`__.
+here <https://github.com/freelawproject/courtlistener/blob/main/cl/scrapers/management/commands/cl_scrape_opinions.py>`__.
 There is also a basic sample caller `included in
 Juriscraper <https://github.com/freelawproject/juriscraper/blob/main/sample_caller.py>`__
 that can be used for testing or as a starting point when developing your
@@ -46,14 +46,18 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 3.8+.x, then:
+First step: Install Python 3.9+.x, then:
 
 Install the dependencies
 ------------------------
 
-On Ubuntu/Debian Linux::
+On Ubuntu based distributions/Debian Linux::
 
     sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
+
+On Arch based distributions::
+
+    sudo pacman -S libxml2 libxslt libyaml
 
 On macOS with Homebrew <https://brew.sh>::
 
@@ -121,6 +125,43 @@ Kansas's precedential scraper uses a webdriver. If you do this and watch
 selenium, you should see it in action.
 
 
+Code Style & Linting
+====================
+
+We use `Ruff <https://docs.astral.sh/ruff/>`__ for code formatting and linting. Ruff replaces tools like flake8, isort,
+black, and autoflake with a single fast tool.
+
+Ruff is automatically run via `pre-commit hooks <https://pre-commit.com>`__, which you can set up like this:
+
+::
+
+    uv tool install pre-commit --with pre-commit-uv
+    pre-commit install
+
+To run Ruff manually on all files:
+
+::
+
+    pre-commit run ruff-format --all-files
+    pre-commit run ruff --all-files
+
+To run only on staged files:
+
+::
+
+    pre-commit run ruff-format
+    pre-commit run ruff
+
+You can also `integrate Ruff into your editor <https://docs.astral.sh/ruff/editors/setup/>`__ for automatic formatting and diagnostics.
+
+Formatting Guidelines
+----------------------
+
+Beyond what Ruff will catch:
+
+- If you manually make whitespace or formatting changes, do them in a **separate commit** from logic changes.
+- Avoid combining whitespace reformatting with functional changes, as it makes code review harder.
+
 Joining the Project as a Developer
 ==================================
 
@@ -135,39 +176,26 @@ For scrapers to be merged:
    `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
    major Pylint problems or Intellij inspection issues.
 
--  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating into your editor  <https://black.readthedocs.io/en/stable/integrations/editors.html>`__.
-
-- This project is configured to use git pre-commit hooks managed by the
-  Python program `pre-commit <https://pre-commit.com/>`__. Pre-
-  commit checks let us easily ensure that the code is properly formatted with
-  black before it can even be commited. To install it run:
-
-  `uv tool install pre-commit --with pre-commit-uv`
-
-  which will set up a git pre-commit hook for you. This install step is only
-  necessary once in your repository. When using this hook, any code
-  files that do not comply to black will automatically be unstaged and re-
-  formatted. You will see a message to this effect. It is your job to then re-stage
-  and commit the files.
-
--  Beyond what black will do for you by default, if you somehow find a way to do whitespace or other formatting changes, do so in their own commit and ideally in its own PR. When whitespace is combined with other code changes, the PR's become impossible to read and risky to merge. This is a big reason we use black.
-
 -  Your code should efficiently parse a page, returning no exceptions or
    speed warnings during tests on a modern machine.
 
 When you're ready to develop a scraper, get in touch, and we'll find you
 a scraper that makes sense and that nobody else is working on. We have `a wiki
 list <https://github.com/freelawproject/juriscraper/wiki/Court-Websites>`__
-of courts that you can browse yourself. There are templates for new
-scrapers `here (for
-opinions) <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/opinions/opinion_template.py>`__
-and `here (for oral
-arguments) <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/oral_args/oral_argument_template.py>`__.
+of courts that you can browse yourself.
 
-When you're done with your scraper, fork this repository, push your
-changes into your fork, and then send a pull request for your changes.
-Be sure to remember to update the ``__init__.py`` file as well, since it
-contains a list of completed scrapers.
+There are templates for new scrapers available:
+
+- `Opinion scraper template <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/opinions/opinion_template.py>`__
+- `Oral argument scraper template <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/oral_args/oral_argument_template.py>`__
+
+When you're done with your scraper:
+
+1. Fork this repository.
+2. Push your changes to your fork.
+3. Submit a pull request.
+
+Be sure to update the ``__init__.py`` file that registers completed scrapers.
 
 Before we can accept any changes from any contributor, we need a signed
 and completed Contributor License Agreement. You can find this agreement
@@ -180,11 +208,67 @@ rights to use your own Contributions for any other purpose.
 Development
 ===========
 
-To work on Juriscraper, clone its repository:
+Requirements (for Development)
+------------------------------
+
+To work on Juriscraper (e.g. to write or edit scrapers, run tests, or contribute code), you'll need:
+
+- Python 3.9 or newer
+- `uv <https://github.com/astral-sh/uv>`__, a fast and modern Python package manager
+- Git
+- Optionally: Docker, if you want to run Selenium tests with a remote webdriver
+
+See below for OS-specific instructions for installing `uv`.
+
+Environment Setup with uv
+--------------------------
+
+This project uses uv, a fast and modern Python package manager, to manage the development environment.
+
+1. Install uv
+
+- Ubuntu based distributions / Debian:
+
+::
+
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+
+- Arch Linux based distributions:
+
+::
+
+    sudo pacman -S uv
+
+- macOS:
+
+::
+
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+2. Clone the Repository
 
 ::
 
     git clone https://github.com/freelawproject/juriscraper.git
+
+3. Set Up the Environment
+
+Create a development environment using uv and the included pyproject.toml and uv.lock files:
+
+::
+
+    uv venv
+
+Activate the environment:
+
+- Linux/macOS:
+
+::
+
+    source .venv/bin/activate
+
+4. Run Tests with tox
 
 Then, you can run its tests with `tox <https://tox.readthedocs.io/en/latest/>`__.
 Install tox with `uv <https://docs.astral.sh/uv/>`__ as a `tool <https://docs.astral.sh/uv/concepts/tools/>`__, adding the `tox-uv extension <https://github.com/tox-dev/tox-uv>`__:
@@ -281,9 +365,11 @@ follows:
 That will print out all the current meta data for a site, including
 links to the objects you wish to download (typically opinions or oral
 arguments). If you download those opinions, we also recommend running the
-``_cleanup_content()`` method against the items that you download (PDFs,
+``cleanup_content()`` method against the items that you download (PDFs,
 HTML, etc.). See the ``sample_caller.py`` for an example and see
-``_cleanup_content()`` for an explanation of what it does.
+``cleanup_content()`` for an explanation of what it does.
+Note that if cleanup_content() is not implemented in the scraper,
+it will simply return the original content unchanged.
 
 It's also possible to iterate over all courts in a Python package, even
 if they're not known before starting the scraper. For example:
