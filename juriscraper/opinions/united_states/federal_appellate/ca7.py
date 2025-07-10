@@ -4,6 +4,7 @@
 
 import feedparser
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -19,17 +20,14 @@ class Site(OpinionSiteLinear):
             self.year = 2022
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
+            if item.get("published_parsed", None) is None:
+                logger.warning("BAD DATA")
+                continue
             parts = item["summary"].split()
             docket = parts[parts.index("case#") + 1]
             name = item["summary"].split(docket)[1].split("(")[0]
             author = item["summary"].split("{")[1].split("}")[0]
-            date = (
-                item["published"]
-                if item["published"] not in ["", None, "::"]
-                else None
-            )
-            if not date:
-                continue
+            date = item["published"]
             per_curiam = False
             if "curiam" in author.lower():
                 per_curiam = True
