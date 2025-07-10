@@ -19,6 +19,7 @@ class Site(OpinionSiteLinear):
         )
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions

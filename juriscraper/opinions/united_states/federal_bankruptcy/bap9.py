@@ -17,6 +17,7 @@ class Site(OpinionSiteLinear):
             "c_mode": "view",
             "c_page_size": "500",
         }
+        self.should_have_results = True
 
     def _process_html(self):
         path = "//table[@id='search-results-table']//tr[position()>1]"
