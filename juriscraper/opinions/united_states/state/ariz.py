@@ -16,6 +16,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999"
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parse HTML into case objects

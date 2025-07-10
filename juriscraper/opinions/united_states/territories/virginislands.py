@@ -23,6 +23,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         today = date.today()
         self.previous_date = today - timedelta(days=60)
+        self.should_have_results = True
 
     def _process_html(self):
         if self.test_mode_enabled():

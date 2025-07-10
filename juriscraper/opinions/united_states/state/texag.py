@@ -16,6 +16,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://texasattorneygeneral.gov/opinions"
         self.expected_content_types = ["application/pdf"]
+        self.should_have_results = True
 
     def _process_html(self):
         cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")

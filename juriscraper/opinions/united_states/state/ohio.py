@@ -35,6 +35,7 @@ class Site(OpinionSiteLinear):
         self.url = f"https://www.supremecourt.ohio.gov/rod/docs/?HideTopicsAndIssuesColumn=False&Sort=&PageSize=50&Source={self.court_index}"
         self.make_backscrape_iterable(kwargs)
         self.is_first_request = True
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Process the HTML and extract the data
