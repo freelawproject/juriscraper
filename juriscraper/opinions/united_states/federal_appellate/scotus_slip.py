@@ -39,6 +39,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.url = f"{self.base_url}/{self.get_term()}"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     @staticmethod
     def get_term(

@@ -17,6 +17,7 @@ class Site(OpinionSite):
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/index.html"
         self.court_id = self.__module__
         self.base = '//tr[../tr/th[contains(., "Caption")]]'
+        self.should_have_results = True
 
     def _get_download_urls(self):
         return list(self.html.xpath(f"{self.base}/td[1]/a/@href"))

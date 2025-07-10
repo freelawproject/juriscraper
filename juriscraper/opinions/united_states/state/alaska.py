@@ -25,6 +25,7 @@ class Site(OpinionSiteLinear):
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
+        self.should_have_results = True
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but

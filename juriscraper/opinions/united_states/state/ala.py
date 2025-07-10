@@ -21,6 +21,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"https://publicportal-api.alappeals.gov/courts/cms/publications?courtID={self.court_str}&page=0&size=25&sort=publicationDate%2Cdesc"
+        self.should_have_results = True
 
     def _process_html(self):
         self.json = self.html

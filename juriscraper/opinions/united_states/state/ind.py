@@ -19,6 +19,7 @@ class Site(OpinionSiteLinear):
         self.court_name = "Supreme Court"
         self.status = "Published"
         self.url = "https://public.courts.in.gov/Decisions/api/Search"
+        self.should_have_results = True
 
     def _process_html(self):
         for case in self.html:

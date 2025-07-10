@@ -27,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.url = f"{self.base_url}?items_per_page=40"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath(".//article"):
