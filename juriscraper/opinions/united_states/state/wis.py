@@ -19,6 +19,7 @@ class Site(OpinionSiteLinear):
         self.set_url()
         self.cite_regex = r"20\d{2}\sWI\s\d+"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def set_url(
         self, start: Optional[date] = None, end: Optional[date] = None
