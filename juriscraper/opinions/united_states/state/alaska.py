@@ -5,7 +5,6 @@ from requests.exceptions import ChunkedEncodingError
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
-    get_row_column_links,
     get_row_column_text,
 )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -25,10 +24,8 @@ class Site(OpinionSiteLinear):
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
-        self.seeds = []
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=30)
-        self.dispositions = []
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -62,12 +59,11 @@ class Site(OpinionSiteLinear):
                     case_number = get_row_column_text(row, 3)
                     name = get_row_column_text(row, 4)
                     citation = get_row_column_text(row, 5)
-                    try:
-                        url = get_row_column_links(row, 1)
-                    except IndexError:
-                        document_number = get_row_column_text(row, 2)
-                        cleaned_case_number = case_number.split(",")[0]
-                        url = f"https://appellate-records.courts.alaska.gov/CMSPublic/UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={cleaned_case_number}&opinionType=OP"
+
+                    # build download URL
+                    document_number = get_row_column_text(row, 2)
+                    cleaned_case_number = case_number.split(",")[0]
+                    url = f"https://appellate-records.courts.alaska.gov/CMSPublic/UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={cleaned_case_number}&opinionType=OP"
 
                     # Store case page link for later retrieval
                     self.cases.append(
