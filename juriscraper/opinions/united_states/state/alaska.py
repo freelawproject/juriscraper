@@ -4,7 +4,6 @@ from dateutil import parser
 from requests.exceptions import ChunkedEncodingError
 
 from juriscraper.AbstractSite import logger
-from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
@@ -53,59 +52,33 @@ class Site(OpinionSiteLinear):
                 not self.date_is_in_range(adate)
                 and not self.test_mode_enabled()
             ):
-                logger.debug("Backscraper skipping %s", adate)
-                continue
+                if self.is_backscrape:
+                    logger.debug("Backscraper skipping %s", adate)
+                    continue
+                break
 
             for row in table.xpath(".//tr"):
                 if row.text_content().strip():
+                    case_number = get_row_column_text(row, 3)
+                    name = get_row_column_text(row, 4)
+                    citation = get_row_column_text(row, 5)
                     try:
                         url = get_row_column_links(row, 1)
                     except IndexError:
-                        url = ""
+                        document_number = get_row_column_text(row, 2)
+
+                        url = f"https://appellate-records.courts.alaska.gov/CMSPublic/UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={case_number}&opinionType=OP"
 
                     # Store case page link for later retrieval
-                    self.seeds.append(get_row_column_links(row, 3))
                     self.cases.append(
                         {
                             "date": adate,
-                            "docket": get_row_column_text(row, 3),
-                            "name": get_row_column_text(row, 4),
-                            "citation": get_row_column_text(row, 5),
+                            "docket": case_number,
+                            "name": name,
+                            "citation": citation,
                             "url": url,
                         }
                     )
-
-    def _get_download_urls(self):
-        """Get the download URLs for the cases if missing
-
-        :return: List of download URLs
-        """
-
-        def get_download_url(link) -> DeferringList:
-            """Retrieve the PDF URL from the alternate page
-
-            :param link: The URL of the case page
-            :return The PDF URL or None if not found
-            """
-
-            if self.test_mode_enabled():
-                # if we're in test mode, return a dummy url and add dummy disposition
-                self.dispositions.append("Affirmed")
-                return "https://example.com/test.pdf"
-            case_html = self._get_html_tree_by_url(link)
-
-            disposition = case_html.xpath("//table[1]//td[3]")[0].text
-            self.dispositions.append(disposition)
-
-            download_url = case_html.xpath(
-                "//td[contains(@class, 'cms-case-download')]//a/@href"
-            )[0]
-
-            if download_url:
-                return download_url
-            return None
-
-        return DeferringList(seed=self.seeds, fetcher=get_download_url)
 
     def _get_dispositions(self):
         """Get the dispositions for the cases
