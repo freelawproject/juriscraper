@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- Fix `visuper_p` adaptation to new html tags #1489
 - Fix `ariz` update download URLs #1474
 
 ## Current
