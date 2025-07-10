@@ -57,14 +57,12 @@ class Site(OpinionSiteLinear):
                 if idx == 0:
                     # Separate case name and citation if present
                     match = re.match(
-                        r"^(.*?)(\s*(\d{4}\sND\s\d+))?\s*$",
+                        r"^(.*?)(\s*(\d{4}\sND\s\d+))\s*$",
                         txt,
                     )
                     if match:
                         case_name = match.group(1).strip()
-                        citation = (
-                            match.group(2).strip() if match.group(2) else ""
-                        )
+                        citation = match.group(2).strip()
                         txt = case_name
                     else:
                         citation = ""
