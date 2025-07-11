@@ -29,8 +29,8 @@ class Site(OpinionSiteLinear):
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
-        self.start_date = self.end_date - timedelta(days=30)
         self.end_date = date.today()
+        self.start_date = self.end_date - timedelta(days=30)
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
