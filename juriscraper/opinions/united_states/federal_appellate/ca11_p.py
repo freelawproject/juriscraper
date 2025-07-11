@@ -16,6 +16,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php"
         self.back_scrape_iterable = list(range(20, 10000, 20))
+        self.should_have_results = True
 
     def _get_case_names(self):
         return list(self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()"))
