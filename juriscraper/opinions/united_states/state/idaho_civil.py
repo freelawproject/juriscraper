@@ -43,11 +43,15 @@ class Site(OpinionSiteLinear):
         row_xpath = f"//table//tr[.//{self.path_conditional_anchor}]"
         for row in self.html.xpath(row_xpath):
             url = self.get_opinion_url(row).replace("http://", "https://")
+
+            # Sanitize case date, fix typo in date format
+            date = row.xpath("string(td[1])").strip()
+            if date == "Aug 22,2018":
+                date = "Aug 22, 2018"
+
             self.cases.append(
                 {
-                    "date": row.xpath("string(td[1])")
-                    .replace(",", ", ")
-                    .strip(),
+                    "date": date,
                     "docket": row.xpath("string(td[2])").strip(),
                     "name": row.xpath("string(td[3])").strip(),
                     "url": url,
