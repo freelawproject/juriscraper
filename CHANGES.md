@@ -47,6 +47,8 @@ Features:
 Changes:
 - Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
   and expands the use of raw data fields for reliable date information. #1459
+- make `nytrial` back scraping dynamic #1402
+- Improve `alaska` scraper to handle case page to retrieve download_url #937
 
 Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing
