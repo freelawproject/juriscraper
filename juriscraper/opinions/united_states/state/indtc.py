@@ -12,6 +12,8 @@ from juriscraper.opinions.united_states.state import ind
 
 
 class Site(ind.Site):
+    page_court_id = "9550"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
