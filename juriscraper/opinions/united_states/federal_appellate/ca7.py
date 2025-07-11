@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             if item.get("published_parsed", None) is None:
-                logger.warning("BAD DATA")
+                logger.warning("Skipping item with no published date")
                 continue
             parts = item["summary"].split()
             docket = parts[parts.index("case#") + 1]
