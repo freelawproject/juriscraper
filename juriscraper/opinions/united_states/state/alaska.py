@@ -1,5 +1,5 @@
 from datetime import date, datetime, timedelta
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
 
 from dateutil import parser
 from requests.exceptions import ChunkedEncodingError
@@ -15,6 +15,8 @@ class Site(OpinionSiteLinear):
     # Sharin S. Anderson v Alyeska Pipeline Service Co.; Opinion Number: 6496
     first_opinion_date = datetime(2010, 7, 23).date()
     base_url = "https://appellate-records.courts.alaska.gov/CMSPublic/"
+    # endpoint for opinion url without parameters
+    op_endpoint = urljoin(base_url, "UserControl/OpenOpinionDocument")
     is_coa = False
 
     def __init__(self, *args, **kwargs):
@@ -27,8 +29,8 @@ class Site(OpinionSiteLinear):
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
-        self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=30)
+        self.end_date = date.today()
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -63,15 +65,14 @@ class Site(OpinionSiteLinear):
                     name = get_row_column_text(row, 4)
                     citation = get_row_column_text(row, 5)
 
-                    # build download URL
-                    document_number = get_row_column_text(row, 2)
-                    cleaned_case_number = case_number.split(",")[0]
-                    url = urljoin(
-                        self.base_url,
-                        f"UserControl/OpenOpinionDocument?docNumber={document_number}&caseNumber={cleaned_case_number}&opinionType=OP",
-                    )
+                    # get parameters required to build opinion url
+                    params = {
+                        "docNumber": get_row_column_text(row, 2),
+                        "caseNumber": case_number.split(",")[0],
+                        "opinionType": "OP",
+                    }
+                    url = f"{self.op_endpoint}?{urlencode(params)}"
 
-                    # Store case page link for later retrieval
                     self.cases.append(
                         {
                             "date": adate,
