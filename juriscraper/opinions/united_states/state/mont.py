@@ -21,6 +21,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = f"{self.base_url}/getDailyOrders"
         self.expected_content_types = None
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html:

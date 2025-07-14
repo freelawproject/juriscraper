@@ -56,7 +56,7 @@ class Site(OpinionSiteLinear):
                 name = ""
             self.cases.append(
                 {
-                    "date": item["displayDate"],
+                    "date": item["filingDate"],
                     "docket": docket,
                     "name": name,
                     "url": f"https://www.courts.michigan.gov{item['documentUrl'].strip()}",

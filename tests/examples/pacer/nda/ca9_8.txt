@@ -1,0 +1,184 @@
+Return-Path: <bounces+16017090-53e4-mattcrapo=recap.email@em4346.ca9.fedcourts.us>
+Received: from o1.ptr5067.ca9.fedcourts.us (o1.ptr5067.ca9.fedcourts.us [149.72.33.13])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id vojvm617dgmjgctkuhqvsjs5n1cv4pptefsmkl01
+ for example@recap.email;
+ Thu, 29 May 2025 05:43:44 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-53e4-mattcrapo=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-53e4-mattcrapo=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+ dkim=pass header.i=@ca9.fedcourts.us;
+ dmarc=pass header.from=ca9.fedcourts.us;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFYm0zOHVKWkM4REV6ZXJTcmFDbXY1U08xUWFlaEVuMTVsR3VCY0M1eWUrMUF6QjZIWks2eHBpdUl5NmNsOGJYMDliNVVOQWZmVE9qTFVqWkljbGxMSlhkTUp5RGRycC9ZWjl5dDU4TFJNSStPOGR6ZWhYK2NJQ2h3Z0RFUWdHdHI2ZXVMdUNMbXl5bldPQUJDM3pZbUc1QTc1M014YU9nYXZYRzQ1TjFTOFR2TXhxaXBYcTMyTythR1ZnVWovam9BNmJuOEw5aXNxUkNMZUl6cEh5SW9rUEhGdFJSQ1BJd0xJMzJpMEx5VTJnVENBZ1ltb3cxaU5FaFZUZitZTThzemZiRmM3WUV4OTRqZnVFMmZ5MHRLRll0M1hWZGZEOElFSUdOc1VDTkw3c0xPZmFYRDg0WUVWbFhhTUJpNFAwUmpIMUFNQ1haek92eVpMNTNkY0ROYmFwSlBFcUZtT1dnTm5xZWE4ZTBQS1FnPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=NlDZOOm66bre0xaA3mpoOYYA+PiYczmedhcjNpm96VyWDdOCuQSrPJIqABckQz8KHrR2m2CldISj/uZGhJNmNj7EKJaMpWXWmVE+s5GekD5N+acez2s8v2F44Lct6VyOdY/VWCJVHhvynNGL8xDNNBS69ExWoH9AcoZTsDmc1wg=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1748497425; v=1; bh=DD2y7MOWfXX8NVpgPcLqzj8QnJZUzsf0wWazSldvgyE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ca9.fedcourts.us;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:to:
+	cc:content-type:from:subject:to;
+	s=s1; bh=4GEmG4EBtHUvfq/fa+Sr0Veg8Dv8nS4Qhkd2hP0+IlQ=;
+	b=UnWGxgHxF7nAO7181y+//8uWRNxKxEUWDq9jRjk6PklVpNlSZVBhHNbqqwceVs2DPSAo
+	q1WysGMa8RA2rU0VUC5jKzL79V3X19yr8fqTTYTCYZNPLXKc28X1weP8HNj1CCH1NsmjR/
+	TwH8r13Ec6n+xbe8fej1fftbh3w9ANmCtyvdkHE/DyL71ATseTtb7iILlYNfD94FJg00vq
+	+hnAP+J2vBcBfzZDEUR1JDQcJ1D6EbKBN+0ou4DxEJW7fcS9FwLDCHvSF50xLkXfMxsipz
+	Y80BY4oLE5Y3i7f1VfzGf9rSTpV4SRkyplUJZUKf03lnxtwWedXsmE6VrqKY4S4Q==
+Received: by recvd-545d4d4647-j8xnv with SMTP id recvd-545d4d4647-j8xnv-1-6837F40F-5
+	2025-05-29 05:43:43.084825215 +0000 UTC m=+4347310.463874186
+Received: from MTYwMTcwOTA (unknown)
+	by geopod-ismtpd-7 (SG) with HTTP
+	id Yw-4JnwKTfaiA2NMI19EYg
+	Thu, 29 May 2025 05:43:43.042 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Thu, 29 May 2025 05:43:43 +0000 (UTC)
+From: ACMS@ca9.fedcourts.us
+Mime-Version: 1.0
+Message-ID: <Yw-4JnwKTfaiA2NMI19EYg@geopod-ismtpd-7>
+Subject: National TPS Alliance, et al. v. Noem, et al. 25-2120 - 049 - Motion
+ for Judicial Notice
+X-SG-EID:
+ =?us-ascii?Q?u001=2E4svFcY8SGSTLM5KvpBU22kPBzh+nOgjhRgMJOZ1Vsu7pi7aw6QumrKErH?=
+ =?us-ascii?Q?HEo+8RXmC7KRdn=2FQL10esKxw60rgNleGZAGwovI?=
+ =?us-ascii?Q?tM62cWRIac9MdfgLnbdx=2FPahOq1aiopk12RwvpJ?=
+ =?us-ascii?Q?jUCN0upWKJ=2Fw=2Fc0Rjh=2FfWeL0xsmatiFMwWDIJ0N?=
+ =?us-ascii?Q?haoqQDaFRN8dq4odKpaKvYRNm6+6edZErS=2F=2FPWv?=
+ =?us-ascii?Q?g=3D=3D?=
+To: example@recap.email
+X-Entity-ID: u001.C8m2t2EQL+JwwooNEkA5cg==
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">***NOTE TO PUBLIC ACCESS USERS*** Judicial Confer=
+ence of the United States policy permits
+ attorneys of record and parties in a case (including pro se litigants) to =
+receive one free electronic copy of all documents filed electronically, if =
+receipt is required by law or directed by the filer. PACER access fees appl=
+y to all other users. To avoid later
+ charges, download a copy of each document during this first viewing.</span=
+></strong></span></span></span></div>
+<div>&nbsp;</div>
+<div style=3D"text-align:center"><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">United States Court of Appeals for the&nbsp;Ninth Circ=
+uit</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice of Docket Activity</span></strong></span><=
+/span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif">The following transaction was entered on 05/28/2025 8:58:22 PM=
+ PDT and filed on 05/28/2025</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Name:&nbsp;</span></strong><span style=3D"font-fa=
+mily:'Segoe UI',sans-serif">National TPS Alliance, et al. v. Noem, et al.&n=
+bsp;</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Number:
+</span></strong><span style=3D"font-family:'Segoe UI',sans-serif"><a href=
+=3D'https://ca9-showdoc.azurewebsites.us/25-2120'>25-2120</a></span></span>=
+</span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Docket Text:</span></strong></span></span></span></div=
+>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div><strong>MOTION</strong>  for Judicial Notice filed by App=
+ellee National TPS Alliance, Appellee Mariela Gonzalez, Appellee Freddy Ara=
+pe Rivas, Appellee M.H., Appellee Cecilia Gonzalez Herrera, Appellee Alba P=
+urica Hernandez, Appellee E. R., Appellee Hendrina Vivas Castillo, Appellee=
+ Viles Dorsainvil, Appellee A.C.A., Appellee Sherika Blanc.</div></span></s=
+pan></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div class=3D'documents'><b>Document:</b> <a href=3D'https://c=
+a9-showdoc.azurewebsites.us/NDA/387d07d4-4f3c-f011-b4cc-001dd80ba017'>Motio=
+n</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/=
+NDA/427d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> =
+<a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/477d07d4-4f3c-f011-b4cc=
+-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-show=
+doc.azurewebsites.us/NDA/6a7d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><=
+br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/76=
+7d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a hre=
+f=3D'https://ca9-showdoc.azurewebsites.us/NDA/867d07d4-4f3c-f011-b4cc-001dd=
+80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.az=
+urewebsites.us/NDA/927d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b=
+>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/9f7d07d4=
+-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'h=
+ttps://ca9-showdoc.azurewebsites.us/NDA/a57d07d4-4f3c-f011-b4cc-001dd80ba01=
+7'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azureweb=
+sites.us/NDA/b27d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Docum=
+ent:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/bf7d07d4-4f3c-=
+f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https:/=
+/ca9-showdoc.azurewebsites.us/NDA/c97d07d4-4f3c-f011-b4cc-001dd80ba017'>Exh=
+ibit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.=
+us/NDA/d57d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</=
+b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/e27d07d4-4f3c-f011-b=
+4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-s=
+howdoc.azurewebsites.us/NDA/ee7d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</=
+a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA=
+/fa7d07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a =
+href=3D'https://ca9-showdoc.azurewebsites.us/NDA/047e07d4-4f3c-f011-b4cc-00=
+1dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc=
+.azurewebsites.us/NDA/0f7e07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/=
+><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/1c7e0=
+7d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=
+=3D'https://ca9-showdoc.azurewebsites.us/NDA/277e07d4-4f3c-f011-b4cc-001dd8=
+0ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azu=
+rewebsites.us/NDA/307e07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>=
+Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/3a7e07d4-=
+4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'ht=
+tps://ca9-showdoc.azurewebsites.us/NDA/457e07d4-4f3c-f011-b4cc-001dd80ba017=
+'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebs=
+ites.us/NDA/507e07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Docume=
+nt:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/607e07d4-4f3c-f=
+011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b> <a href=3D'https://=
+ca9-showdoc.azurewebsites.us/NDA/6c7e07d4-4f3c-f011-b4cc-001dd80ba017'>Exhi=
+bit</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.u=
+s/NDA/7f7e07d4-4f3c-f011-b4cc-001dd80ba017'>Exhibit</a><br/><b>Document:</b=
+> <a href=3D'https://ca9-showdoc.azurewebsites.us/NDA/8d7e07d4-4f3c-f011-b4=
+cc-001dd80ba017'>Exhibit</a></div></span></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice will be electronically mailed to:</span></=
+strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif">User Example ; example@mail.com<br/>
+</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Case participants listed below will not receive t=
+his electronic notice:</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif"></span></span></span></span></div>
+<div>&nbsp;</div>
+<img src=3D"http://url4437.ca9.fedcourts.us/wf/open?upn=3Du001.cLrfVVgnz9fy=
+hstf5y41Rwze27knPXTbYmYDem1GpdSVJX-2FS39ddNWwHxB05bZOFqv2MByoJ8YXG7P3GLIYTe=
+5i3ab3X4wbDb5cK5s06ITtwZPrc0mW0Q8r90xdTLKNYzCkNzsO3Hvrs7m2Ur2HmJb2g3BwmihP8=
+TUZa-2BhUJtJTlQg-2F4IEf2oruHG-2B1f6hjIibBtYJOfeaSHcvqY6BJ-2FxQ-3D-3D" alt=
+=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;=
+width:1px !important;border-width:0 !important;margin-top:0 !important;marg=
+in-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;p=
+adding-top:0 !important;padding-bottom:0 !important;padding-right:0 !import=
+ant;padding-left:0 !important;"/></body>
+</html>

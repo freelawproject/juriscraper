@@ -15,16 +15,56 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add error handling for scrapers with expected results #1447
 
 Changes:
+- Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
+
+Fixes:
+- Fix `visuper_p` adaptation to new html tags #1489
+- Fix `ariz` update download URLs #1474
+
+## Current
+
+**2.6.79 - 2025-07-08**
+
+Changes:
+- Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
+
+
+## Past
+
+**2.6.78 - 2025-06-18**
+
+Features:
+- Added support for parsing ACMS NDA notifications
+- Enhances `PacerSession` class to support ACMS authentication.
+- Adds case purchasing functionality to `ACMSDocketReport`.
+- Added support for parsing docket numbers with case types with up to five letters
+- Introduces logic to purchase ACMS docket entry attachment pages.
+
+Changes:
+- Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
+  and expands the use of raw data fields for reliable date information. #1459
+- make `nytrial` back scraping dynamic #1402
+- Improve `alaska` scraper to handle case page to retrieve download_url #937
+
+Fixes:
+- Improve `ny` cleanup_content to remove email protection that was causing
+  duplicates #1450
+- Fix `minn` move `need_special_headers` to `__init__` #1470
+
+**2.6.77 - 2025-06-17**
+
+Changes:
+- New scraper `lactapp_4` for Lousiana Court of Appeals, Fourth Circuit
 - Update `uscgcoca` add backscraper #1431
+- Update `tenn` add backscraper #1425
 
 Fixes:
 - Add "lower_court_ids" to fields returned by OpinionSite #1432
 - Fix `va` collecting bad docket_number values #1441
-
-## Current
+- Fix `mich` change date expected key to `date_filed` #1445
 
 **2.6.76 - 2025-06-12**
 
@@ -32,9 +72,6 @@ Changes:
 -  Fix `tex` get opinions from the orders on causes page #1410
 -  Fix `sd`
 -  Fix `bap1` not scraping recent data #1422
-
-
-## Past
 
 **2.6.75 - 2025-06-09**
 

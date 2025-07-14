@@ -5,6 +5,8 @@ Court Short Name: Tenn.
 """
 
 import re
+from datetime import date, datetime
+from urllib.parse import urljoin
 
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -16,6 +18,10 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.status = "Unknown"
+        self.should_have_results = True
+        self.first_opinion_date = datetime(1993, 1, 22)
+        self.days_interval = 7
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
         """
@@ -139,3 +145,17 @@ class Site(OpinionSiteLinear):
             op_type = OpinionType.MAJORITY
 
         return op_type.value
+
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
+        r"""Download cases within a given date range.
+
+        :param dates: Tuple containing the start and end dates \(`date`, `date`\) for the query.
+        :return None:
+        """
+        start, end = dates
+        self.url = urljoin(
+            self.url,
+            f"?field_opinions_date_filed={start.strftime('%Y-%m-%d')}&field_opinions_date_filed_1={end.strftime('%Y-%m-%d')}",
+        )
+        self.html = self._download()
+        self._process_html()

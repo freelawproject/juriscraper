@@ -43,6 +43,8 @@ class Site(OpinionSiteLinear):
             "https://www.courts.ri.gov/_vti_bin/client.svc/ProcessQuery"
         )
 
+        self.should_have_results = True
+
     def fetch_json(self) -> None:
         """Fetch JSON data from the site.
 

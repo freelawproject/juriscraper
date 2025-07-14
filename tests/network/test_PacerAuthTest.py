@@ -21,6 +21,8 @@ class PacerAuthTest(unittest.TestCase):
                     "NextGenCSO", None, domain=".uscourts.gov", path="/"
                 )
             )
+            self.assertEqual(self.session.acms_user_data, {})
+            self.assertEqual(self.session.acms_tokens, {})
         except PacerLoginException:
             self.fail("Could not log into PACER")
 

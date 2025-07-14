@@ -6,6 +6,7 @@ from collections import OrderedDict
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.network_utils import AcmsApiClient
 from juriscraper.lib.string_utils import convert_date_string
 
 from .appellate_docket import AppellateDocketReport
@@ -19,6 +20,7 @@ class ACMSDocketReport(AppellateDocketReport):
     def __init__(self, court_id, pacer_session=None):
         super().__init__(court_id, pacer_session)
         self._acms_json = None
+        self.api_client = AcmsApiClient(pacer_session, court_id)
 
     def _parse_text(self, text):
         """Store the ACMS JSON
@@ -31,6 +33,27 @@ class ACMSDocketReport(AppellateDocketReport):
         :return: None
         """
         self._acms_json = json.loads(text)
+
+    def query(self, case_id: str):
+        """
+        Queries the court API for case and docket details for a given case ID.
+
+        :param case_id: The unique identifier of the case to query.
+        """
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
+        # Fetch Case Details
+        case_data = self.api_client.get_case_details(case_id)
+
+        # Fetch Docket Entry Details
+        entry_details = self.api_client.get_docket_entries(case_id)
+
+        # Combine and store results
+        self._acms_json = {
+            "caseDetails": case_data,
+            "docketInfo": entry_details,
+        }
 
     @property
     def metadata(self):
@@ -356,19 +379,15 @@ class ACMSDocketReport(AppellateDocketReport):
             # by the superclass, which can be told to parse `date`s
             # but not `datetime`s. So we have to do it ourselves.
             datetime_str = self._get_value(datetime_entered_regex, docket_text)
-            assert datetime_str != "", (
-                "Docket entry's Entered: date should not be null"
-            )
-            de["date_entered"] = convert_date_string(
-                datetime_str, datetime=True
+            de["date_entered"] = (
+                convert_date_string(datetime_str, datetime=True)
+                if datetime_str
+                else None
             )
 
-            # Unfortunately, the server expects a `date_filed`,
-            # which we don't have, and probably can't get (it's in the
-            # NDA though). Although the server also doesn't know that
-            # other parsers send it `date_entered` in lieu of
-            # `date_filed`, without being so explicit about it. Ugh!
-            de["date_filed"] = de["date_entered"]
+            de["date_filed"] = convert_date_string(
+                row["endDateFormatted"], datetime=True
+            )
 
             de["pacer_doc_id"] = row["docketEntryId"]
             de["page_count"] = row["pageCount"]
