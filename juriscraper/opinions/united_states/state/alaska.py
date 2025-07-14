@@ -18,13 +18,16 @@ class Site(OpinionSiteLinear):
     # endpoint for opinion url without parameters
     op_endpoint = urljoin(base_url, "UserControl/OpenOpinionDocument")
     is_coa = False
+    search_parameter = "Opinions"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
         self.court_id = self.__module__
-        self.url = urljoin(self.base_url, f"Home/Opinions?isCOA={self.is_coa}")
+        self.url = urljoin(
+            self.base_url, f"Home/{self.search_parameter}?isCOA={self.is_coa}"
+        )
         self.status = "Published"
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
