@@ -14,6 +14,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.court_code = "S.Ct"
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Parse HTML into case objects

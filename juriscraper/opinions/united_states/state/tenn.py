@@ -18,6 +18,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.status = "Unknown"
+        self.should_have_results = True
         self.first_opinion_date = datetime(1993, 1, 22)
         self.days_interval = 7
         self.make_backscrape_iterable(kwargs)

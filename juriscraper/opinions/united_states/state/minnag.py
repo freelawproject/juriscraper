@@ -17,6 +17,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "https://www.ag.state.mn.us/office/opinions/DATE.asp"
         self.opinions = []
+        self.should_have_results = True
 
     def _download(self, request_dict=None):
         if request_dict is None:
