@@ -9,6 +9,7 @@ History:
     2025-07-09: Updated bt luism add new fields for lower court details and judge names
 """
 
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -30,24 +31,36 @@ class Site(OpinionSiteLinear):
                 c for c in case["courts"] if c["name"] != self.court_name
             ]
 
+            disposition = case["decision"]
+            if disposition == "Opinion Issued":
+                disposition = ""
+
+            judge = ", ".join(
+                self.clean_judge_name(v["judge"])
+                for v in case["opinion"]["votes"]
+            )
+
+            type = (
+                OpinionType.MAJORITY.value
+                if "Majority Opinion" in (case["opinion"].get("result") or "")
+                else ""
+            )
+
             self.cases.append(
                 {
                     "name": case["style"],
                     "docket": case["caseNumber"],
                     "date": case["date"],
                     "url": f"https://public.courts.in.gov/Decisions/{case['opinionUrl']}",
-                    "disposition": case["decision"],
+                    "disposition": disposition,
                     "lower_court": ", ".join(c["name"] for c in other_courts),
                     "lower_court_number": ", ".join(
                         c["number"] for c in other_courts
                     ),
-                    "judge": ", ".join(
-                        self.clean_judge_name(v["judge"])
-                        for v in case["opinion"]["votes"]
-                    ),
+                    "judge": judge,
                     "author": self.extract_author(case, is_per_curiam),
                     "per_curiam": is_per_curiam,
-                    "type": case["opinion"]["result"],
+                    "type": type,
                 }
             )
 
