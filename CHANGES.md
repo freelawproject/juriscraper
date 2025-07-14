@@ -16,7 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add error handling for scrapers with expected results #1447
-- Add `alaska_cro` and `alaska_u` new scrapers
+- Add `alaska_slip` and `alaska_u` new scrapers
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
