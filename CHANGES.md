@@ -18,7 +18,7 @@ Features:
 - Add error handling for scrapers with expected results #1447
 
 Changes:
--
+- Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
 
 Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489

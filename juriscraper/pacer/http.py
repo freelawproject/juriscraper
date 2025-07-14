@@ -21,7 +21,7 @@ requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 # Compile the regex pattern once for efficiency.
 # This pattern captures the court_id (e.g., 'ca9', 'ca2') from the URL.
 ACMS_URL_PATTERN = re.compile(
-    r"https://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
+    r"https?://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
 )
 
 
