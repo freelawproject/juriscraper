@@ -9,7 +9,6 @@ History:
     2025-07-09: Updated bt luism add new fields for lower court details and judge names
 """
 
-from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -25,6 +24,10 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     def _process_html(self):
+        """Process the HTML to extract case details.
+
+        :return None
+        """
         for case in self.html:
             is_per_curiam = case["opinion"]["perCuriam"]
             other_courts = [
@@ -40,11 +43,14 @@ class Site(OpinionSiteLinear):
                 for v in case["opinion"]["votes"]
             )
 
-            type = (
-                OpinionType.MAJORITY.value
-                if "Majority Opinion" in (case["opinion"].get("result") or "")
-                else ""
-            )
+            if is_per_curiam:
+                author = (
+                    case["opinionText"]
+                    .replace("in an opinion by ", "")
+                    .replace(".", "")
+                )
+            else:
+                author = ""
 
             self.cases.append(
                 {
@@ -58,15 +64,19 @@ class Site(OpinionSiteLinear):
                         c["number"] for c in other_courts
                     ),
                     "judge": judge,
-                    "author": self.extract_author(case, is_per_curiam),
+                    "author": author,
                     "per_curiam": is_per_curiam,
-                    "type": type,
                 }
             )
 
     @staticmethod
     def clean_judge_name(name: str) -> str:
-        """Cleans and formats a judge's name string."""
+        """Cleans and formats a judge's name string.
+
+        :param name: The name of the judge as a string.
+        :return: A cleaned and formatted version of the judge's name.
+
+        """
 
         parts = name.split(", ")
         if len(parts) < 2:
@@ -79,14 +89,3 @@ class Site(OpinionSiteLinear):
             result += f" {parts[2]}"
 
         return result
-
-    @staticmethod
-    def extract_author(case: dict, is_per_curiam: bool) -> str:
-        """Extracts and cleans the author field from the case data."""
-        if is_per_curiam:
-            return ""
-        return (
-            case["opinionText"]
-            .replace("in an opinion by ", "")
-            .replace(".", "")
-        )
