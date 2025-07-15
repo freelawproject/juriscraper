@@ -4,6 +4,7 @@ import sys
 from datetime import date, datetime, timedelta
 
 import certifi
+import pytz
 import requests
 
 from juriscraper.lib.date_utils import (
@@ -82,6 +83,8 @@ class AbstractSite:
 
         # Default working hours, can be overridden by subclasses
         self.working_hours = (0, 24)
+        # use print(pytz.all_timezones) to get a list of time zones
+        self.time_zone = "America/Los_Angeles"
 
         # indicates the rate limit for the scraper, in seconds
         self.rate_limit = 0
@@ -367,7 +370,7 @@ class AbstractSite:
 
         :return: True if within working hours, False otherwise.
         """
-        now = datetime.now().time()
+        now = datetime.now(pytz.timezone(self.time_zone)).time()
         start, end = self.working_hours
         return start <= now.hour < end
 
