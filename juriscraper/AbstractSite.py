@@ -1,5 +1,6 @@
 import hashlib
 import json
+import sys
 from datetime import date, datetime, timedelta
 
 import certifi
@@ -78,6 +79,12 @@ class AbstractSite:
 
         # indicates whether the scraper should have results or not to raise an error
         self.should_have_results = False
+
+        # Default working hours, can be overridden by subclasses
+        self.working_hours = (0, 24)
+
+        # indicates the rate limit for the scraper, in seconds
+        self.rate_limit = 0
 
         # Sub-classed metadata
         self.court_id = None
@@ -354,8 +361,21 @@ class AbstractSite:
         """
         return get_html_parsed_text(text)
 
+    def is_within_working_hours(self) -> bool:
+        """
+        Checks if the current time is within the allowed working hours.
+
+        :return: True if within working hours, False otherwise.
+        """
+        now = datetime.now().time()
+        start, end = self.working_hours
+        return start <= now.hour < end
+
     def _download(self, request_dict=None):
         """Download the latest version of Site"""
+        if not self.is_within_working_hours():
+            raise sys.exit("Attempted to download outside of working hours.")
+
         if request_dict is None:
             request_dict = {}
         self.downloader_executed = True

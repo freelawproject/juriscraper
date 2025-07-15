@@ -10,6 +10,7 @@ import webbrowser
 from collections import defaultdict
 from datetime import datetime
 from optparse import OptionParser
+from time import sleep
 from urllib import parse
 
 import requests
@@ -177,6 +178,8 @@ def get_binary_content(download_url: str, site, exceptions) -> bytes:
 
     # Note that we do a GET even if site.method is POST. This is
     # deliberate.
+
+    sleep(site.rate_limit)
     r = s.get(
         download_url,
         verify=has_cipher,  # WA has a certificate we don't understand

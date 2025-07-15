@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add error handling for scrapers with expected results #1447
+- Adds the possibility to use working hours and rate limit in all scrapers #1496
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
