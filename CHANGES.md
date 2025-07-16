@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add error handling for scrapers with expected results #1447
+- Add a check to verify ACMS user data is loaded before querying attachment pages #1495
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
@@ -24,6 +25,7 @@ Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489
 - Fix `ariz` update download URLs #1474
 - improve `ind` add new fields for lower court details and judge names
+- handle empty cases in `ca7` scraper #1484
 
 ## Current
 
@@ -63,6 +65,7 @@ Changes:
 - Update `tenn` add backscraper #1425
 
 Fixes:
+- Add "lower_court_ids" to fields returned by OpinionSite #1432
 - Fix `va` collecting bad docket_number values #1441
 - Fix `mich` change date expected key to `date_filed` #1445
 
