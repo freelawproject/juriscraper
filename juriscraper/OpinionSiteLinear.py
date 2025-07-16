@@ -33,6 +33,7 @@ class OpinionSiteLinear(OpinionSite):
         "docket_attachment_number",
         "docket_document_number",
         "nature_of_suit",
+        "lower_court_id",
         "lower_court_number",
         "lower_court_judge",
         "author",
@@ -111,6 +112,9 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_lower_courts(self):
         return self._get_optional_field_by_id("lower_court")
+
+    def _get_lower_court_ids(self):
+        return self._get_optional_field_by_id("lower_court_id")
 
     def _get_lower_court_judges(self):
         return self._get_optional_field_by_id("lower_court_judge")
