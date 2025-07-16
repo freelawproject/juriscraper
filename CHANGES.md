@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Add error handling for scrapers with expected results #1447
 - Add a check to verify ACMS user data is loaded before querying attachment pages #1495
+- Adds the possibility to use working hours and rate limit in all scrapers #1496
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
