@@ -26,11 +26,14 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    court_name = "Supreme Judicial Court"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.socialaw.com/customapi/slips/getopinions"
         self.court_id = self.__module__
-        self.court_name = "Supreme Judicial Court"
+        self.parameters = {"SectionName": "", "ArchiveDate": self.court_name}
+        self.method = "POST"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
         self.should_have_results = True
@@ -41,9 +44,6 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         for row in self.html:
-            if row["SectionName"] != self.court_name:
-                continue
-
             url = urljoin(
                 "https://www.socialaw.com/services/slip-opinions/",
                 row["UrlName"],
