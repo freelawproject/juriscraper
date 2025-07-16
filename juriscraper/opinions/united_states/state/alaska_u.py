@@ -8,6 +8,7 @@ class Site(alaska.Site):
     first_opinion_date = datetime(1997, 3, 5).date()
     is_coa = False
     search_parameter = "MOJOpinions"
+    document_type = "MO&J"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

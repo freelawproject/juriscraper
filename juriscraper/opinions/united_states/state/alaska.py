@@ -19,6 +19,7 @@ class Site(OpinionSiteLinear):
     op_endpoint = urljoin(base_url, "UserControl/OpenOpinionDocument")
     is_coa = False
     search_parameter = "Opinions"
+    document_type = "OP"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -77,7 +78,7 @@ class Site(OpinionSiteLinear):
                     params = {
                         "docNumber": get_row_column_text(row, 2),
                         "caseNumber": case_number.split(",")[0],
-                        "opinionType": "OP",
+                        "opinionType": self.document_type,
                     }
                     url = f"{self.op_endpoint}?{urlencode(params)}"
 
