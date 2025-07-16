@@ -63,6 +63,7 @@ Changes:
 - Update `tenn` add backscraper #1425
 
 Fixes:
+- Add "lower_court_ids" to fields returned by OpinionSite #1432
 - Fix `va` collecting bad docket_number values #1441
 - Fix `mich` change date expected key to `date_filed` #1445
 
