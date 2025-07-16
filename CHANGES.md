@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Add error handling for scrapers with expected results #1447
 - Add a check to verify ACMS user data is loaded before querying attachment pages #1495
+- Add `alaska_slip` and `alaska_u` new scrapers
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.

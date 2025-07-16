@@ -18,19 +18,24 @@ class Site(OpinionSiteLinear):
     # endpoint for opinion url without parameters
     op_endpoint = urljoin(base_url, "UserControl/OpenOpinionDocument")
     is_coa = False
+    search_parameter = "Opinions"
+    document_type = "OP"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
         self.court_id = self.__module__
-        self.url = urljoin(self.base_url, f"Home/Opinions?isCOA={self.is_coa}")
+        self.url = urljoin(
+            self.base_url, f"Home/{self.search_parameter}?isCOA={self.is_coa}"
+        )
         self.status = "Published"
         # juriscraper in the user agent crashes it
         # it appears to be just straight up blocked.
         self.request["headers"]["user-agent"] = "Free Law Project"
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=30)
+        self.is_citation_visible = True
 
     def _download(self, request_dict=None):
         # Unfortunately, about 2/3 of calls are rejected by alaska but
@@ -63,13 +68,17 @@ class Site(OpinionSiteLinear):
                 if row.text_content().strip():
                     case_number = get_row_column_text(row, 3)
                     name = get_row_column_text(row, 4)
-                    citation = get_row_column_text(row, 5)
+                    citation = (
+                        get_row_column_text(row, 5)
+                        if self.is_citation_visible
+                        else ""
+                    )
 
                     # get parameters required to build opinion url
                     params = {
                         "docNumber": get_row_column_text(row, 2),
                         "caseNumber": case_number.split(",")[0],
-                        "opinionType": "OP",
+                        "opinionType": self.document_type,
                     }
                     url = f"{self.op_endpoint}?{urlencode(params)}"
 
