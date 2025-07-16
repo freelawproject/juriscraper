@@ -18,6 +18,7 @@ Features:
 - Add error handling for scrapers with expected results #1447
 - Add a check to verify ACMS user data is loaded before querying attachment pages #1495
 - Add `alaska_slip` and `alaska_u` new scrapers
+- Add `masssuperct` new scraper for Massachusetts Superior Court
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
