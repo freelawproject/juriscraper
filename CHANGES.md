@@ -15,9 +15,22 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.80 - 2025-07-16**
+
+Features:
 - Add error handling for scrapers with expected results #1447
 - Add a check to verify ACMS user data is loaded before querying attachment pages #1495
-- Add `alaska_slip` and `alaska_u` new scrapers
+- Add `alaska_slip` and `alaska_u` new scrapers #1478
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
@@ -28,15 +41,12 @@ Fixes:
 - handle empty cases in `ca7` scraper #1484
 - fix `idaho_civil` preformat date to prevent parsing errors #1284
 
-## Current
+## Past
 
 **2.6.79 - 2025-07-08**
 
 Changes:
 - Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
-
-
-## Past
 
 **2.6.78 - 2025-06-18**
 
