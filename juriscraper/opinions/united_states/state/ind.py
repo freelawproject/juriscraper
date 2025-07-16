@@ -75,7 +75,6 @@ class Site(OpinionSiteLinear):
 
         :param name: The name of the judge as a string.
         :return: A cleaned and formatted version of the judge's name.
-
         """
 
         parts = name.split(", ")
