@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add error handling for scrapers with expected results #1447
+- Add a check to verify ACMS user data is loaded before querying attachment pages #1495
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
@@ -63,6 +64,7 @@ Changes:
 - Update `tenn` add backscraper #1425
 
 Fixes:
+- Add "lower_court_ids" to fields returned by OpinionSite #1432
 - Fix `va` collecting bad docket_number values #1441
 - Fix `mich` change date expected key to `date_filed` #1445
 
