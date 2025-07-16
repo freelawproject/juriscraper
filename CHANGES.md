@@ -26,6 +26,7 @@ Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489
 - Fix `ariz` update download URLs #1474
 - handle empty cases in `ca7` scraper #1484
+- fix `idaho_civil` preformat date to prevent parsing errors #1284
 
 ## Current
 
