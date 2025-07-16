@@ -30,9 +30,13 @@ class Site(OpinionSiteLinear):
         """
         for case in self.html:
             is_per_curiam = case["opinion"]["perCuriam"]
-            other_courts = [
-                c for c in case["courts"] if c["name"] != self.court_name
-            ]
+
+            if len(case["courts"]) > 1:
+                lower_court = case["courts"][-2]["name"]
+                lower_court_number = case["courts"][-2]["number"]
+            else:
+                lower_court = ""
+                lower_court_number = ""
 
             disposition = case["decision"]
             if disposition == "Opinion Issued":
@@ -59,10 +63,8 @@ class Site(OpinionSiteLinear):
                     "date": case["date"],
                     "url": f"https://public.courts.in.gov/Decisions/{case['opinionUrl']}",
                     "disposition": disposition,
-                    "lower_court": ", ".join(c["name"] for c in other_courts),
-                    "lower_court_number": ", ".join(
-                        c["number"] for c in other_courts
-                    ),
+                    "lower_court": lower_court,
+                    "lower_court_number": lower_court_number,
                     "judge": judge,
                     "author": author,
                     "per_curiam": is_per_curiam,
