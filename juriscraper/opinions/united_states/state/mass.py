@@ -16,10 +16,12 @@ History:
 """
 
 import re
+from datetime import date, datetime
 from urllib.parse import urljoin
 
 from lxml import etree, html
 
+from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -27,16 +29,23 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     court_name = "Supreme Judicial Court"
+    first_opinion_date = datetime(2017, 6, 20)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.socialaw.com/customapi/slips/getopinions"
         self.court_id = self.__module__
-        self.parameters = {"SectionName": "", "ArchiveDate": self.court_name}
+        self.search_date = datetime.today()
+        self.parameters = {
+            "SectionName": self.court_name,
+            "ArchiveDate": self.search_date.strftime("%B %Y"),
+        }
         self.method = "POST"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
         self.should_have_results = True
+        self.days_interval = 30
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
         """Scrape and process the JSON endpoint
@@ -84,3 +93,29 @@ class Site(OpinionSiteLinear):
         body = etree.SubElement(new_tree, "body")
         body.append(content)
         return html.tostring(new_tree).decode("utf-8")
+
+    def _download_backwards(self, search_date: date) -> None:
+        """Download and process HTML for a given target date.
+
+        :param search_date (date): The date for which to download and process opinions.
+        :return None; sets the target date, downloads the corresponding HTML
+        and processes the HTML to extract case details.
+        """
+        self.search_date = search_date
+        self.parameters = {
+            "SectionName": self.court_name,
+            "ArchiveDate": self.search_date.strftime("%B %Y"),
+        }
+        self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """Make back scrape iterable
+
+        :param kwargs: the back scraping params
+        :return: None
+        """
+        super().make_backscrape_iterable(kwargs)
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )

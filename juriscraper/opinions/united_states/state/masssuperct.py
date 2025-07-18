@@ -9,12 +9,11 @@ History:
     - Created by luism
 """
 
+from datetime import datetime
+
 from juriscraper.opinions.united_states.state import mass
 
 
 class Site(mass.Site):
     court_name = "Superior Court"
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
+    first_opinion_date = datetime(2017, 6, 20)
