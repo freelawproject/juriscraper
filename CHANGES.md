@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `masssuperct` new scraper for Massachusetts Superior Court #1498
 
 Changes:
 -
