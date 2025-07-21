@@ -143,40 +143,6 @@ class RateLimiter:
             # Update last request time
             self._last_request_time[site_key] = current_time
 
-    def get_allowed_requests_in_minutes(
-        self, rate_config: Optional[dict[str, Any]], minutes: int
-    ) -> int:
-        """
-        Return the number of requests allowed in the given number of minutes
-        according to the site's rate limiting config.
-
-        :params rate_config: dict, Rate limiting config
-            minutes: int, Number of minutes to calculate for
-
-        :return: int, Number of allowed requests in the given period
-        """
-        # Note: returning 0 here means no limit
-        if (
-            not rate_config
-            or "max_requests" not in rate_config
-            or "time_window" not in rate_config
-        ):
-            return 0
-
-        time_window = rate_config["time_window"]
-        max_requests = rate_config["max_requests"]
-        total_seconds = minutes * 60
-
-        # Calculate how many full windows fit in the period
-        windows = total_seconds // time_window
-        allowed_requests = windows * max_requests
-
-        # If there's a remainder, allow max_requests for the partial window
-        if total_seconds % time_window:
-            allowed_requests += max_requests
-
-        return allowed_requests
-
 
 # Global rate limiter instance
 global_rate_limiter = RateLimiter()
