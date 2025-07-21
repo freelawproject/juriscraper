@@ -47,7 +47,7 @@ class Site(OpinionSiteLinear):
                 for v in case["opinion"]["votes"]
             )
 
-            if is_per_curiam:
+            if not is_per_curiam:
                 author = (
                     case["opinionText"]
                     .replace("in an opinion by ", "")
