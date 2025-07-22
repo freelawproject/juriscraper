@@ -1,0 +1,133 @@
+{
+   "ConsumedCapacity":{
+      "CapacityUnits":0.5,
+      "TableName":"bap"
+   },
+   "Count":3,
+   "Items":[
+      {
+         "bap_num":{
+            "S":"23-1199"
+         },
+         "bap_num_lc":{
+            "S":"23-1199"
+         },
+         "data_source":{
+            "S":"CMECF"
+         },
+         "data_source_id":{
+            "S":"546619"
+         },
+         "date_filed":{
+            "S":"09/09/2024"
+         },
+         "debtor":{
+            "S":"Brenda M. Johnson"
+         },
+         "debtor_lc":{
+            "S":"brenda m. johnson"
+         },
+         "deleted":{
+            "S":"0"
+         },
+         "document_type":{
+            "S":"Unpublished Opinion"
+         },
+         "file_name":{
+            "S":"/datastore/bap/2024/09/09/23-1199.pdf"
+         },
+         "last_updated":{
+            "S":"2024-09-09 12:37:05"
+         },
+         "pk_id":{
+            "S":"13956239360453"
+         },
+         "publish":{
+            "N":"20240909000000"
+         }
+      },
+      {
+         "bap_num":{
+            "S":"23-1195"
+         },
+         "bap_num_lc":{
+            "S":"23-1195"
+         },
+         "data_source":{
+            "S":"CMECF"
+         },
+         "data_source_id":{
+            "S":"546619"
+         },
+         "date_filed":{
+            "S":"09/09/2024"
+         },
+         "debtor":{
+            "S":"Brenda M. Johnson"
+         },
+         "debtor_lc":{
+            "S":"brenda m. johnson"
+         },
+         "deleted":{
+            "S":"0"
+         },
+         "document_type":{
+            "S":"Unpublished Opinion"
+         },
+         "file_name":{
+            "S":"/datastore/bap/2024/09/09/23-1195.pdf"
+         },
+         "last_updated":{
+            "S":"2024-09-09 12:37:04"
+         },
+         "pk_id":{
+            "S":"13956239327644"
+         },
+         "publish":{
+            "N":"20240909000000"
+         }
+      },
+      {
+         "bap_num":{
+            "S":"23-1190"
+         },
+         "bap_num_lc":{
+            "S":"23-1190"
+         },
+         "data_source":{
+            "S":"CMECF"
+         },
+         "data_source_id":{
+            "S":"546619"
+         },
+         "date_filed":{
+            "S":"09/09/2024"
+         },
+         "debtor":{
+            "S":"Brenda M. Johnson"
+         },
+         "debtor_lc":{
+            "S":"brenda m. johnson"
+         },
+         "deleted":{
+            "S":"0"
+         },
+         "document_type":{
+            "S":"Unpublished Opinion"
+         },
+         "file_name":{
+            "S":"/datastore/bap/2024/09/09/23-1190.pdf"
+         },
+         "last_updated":{
+            "S":"2024-09-09 12:37:03"
+         },
+         "pk_id":{
+            "S":"13956239294563"
+         },
+         "publish":{
+            "N":"20240909000000"
+         }
+      }
+   ],
+   "ScannedCount":3
+}
