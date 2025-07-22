@@ -38,7 +38,7 @@ class Site(OpinionSiteLinear):
         self.search_date = datetime.today()
         self.parameters = {
             "SectionName": self.court_name,
-            "ArchiveDate": self.search_date.strftime("%B %Y"),
+            "ArchiveDate": "May 2025",
         }
         self.method = "POST"
         self.status = "Published"
@@ -64,6 +64,13 @@ class Site(OpinionSiteLinear):
             judge_str = details.get("Present", "")
             judge_str = re.sub(r"(\[\d{1,2}\])", "", judge_str)
             judge_str = re.sub(r"\, JJ\.", "", judge_str)
+            judge_str = re.sub(
+                r"(Associate\s+)?Justice*|of the Superior Court", "", judge_str
+            )
+
+            # Clear judge_str if it matches a date like 'July 16, 2024'
+            if re.match(r"^[A-Za-z]+\s+\d{1,2},\s+\d{4}$", judge_str.strip()):
+                judge_str = ""
 
             self.cases.append(
                 {
