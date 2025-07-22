@@ -34,6 +34,7 @@ Features:
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
+- fetch dynamo db directly `ca9` and implement backscraper #863
 
 Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489

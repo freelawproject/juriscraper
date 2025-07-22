@@ -3,40 +3,85 @@ CourtID: ca9
 Court Short Name: ca9
 """
 
-from juriscraper.lib.html_utils import get_row_column_text
+from datetime import date, datetime
+from urllib.parse import urljoin
+
+from juriscraper.lib.dynamo_db_utils import (
+    get_temp_credentials,
+    query_dynamodb,
+)
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
+    region = "us-west-2"
+    identity_id = "us-west-2:8d780f3b-d7d2-ca54-c86e-6eacc92a1265"
+    table_name = "media"
+    signed_headers = "content-type;host;x-amz-content-sha256;x-amz-date;x-amz-security-token;x-amz-target"
+    first_opinion_date = datetime(2000, 1, 1)
+    days_interval = 1
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.ca9.uscourts.gov/media/"
+        self.base_url = "https://www.ca9.uscourts.gov/media/"
         self.expected_content_types = [
             "application/octet-stream; charset=UTF-8"
         ]
 
+    def _download(self):
+        """Download data from DynamoDB for oral arguments.
+
+        Retrieves temporary AWS credentials, constructs a DynamoDB scan payload
+        to filter oral argument records by publish date, and queries the
+        DynamoDB `media` table for matching items.
+
+        :return: The JSON response from DynamoDB containing oral argument records.
+        """
+        creds = get_temp_credentials(self.identity_id, self.region)
+        payload_dict = {
+            "FilterExpression": "#PUBLISH >= :from_date",
+            "ReturnConsumedCapacity": "TOTAL",
+            "ExpressionAttributeNames": {"#PUBLISH": "publish"},
+            "ExpressionAttributeValues": {":from_date": {"N": "20250701"}},
+            "TableName": "media",
+        }
+        return query_dynamodb(
+            creds,
+            self.region,
+            payload_dict,
+            self.signed_headers,
+            target="DynamoDB_20120810.Scan",
+        )
+
     def _process_html(self):
-        path = "//table[@id='search-results-table']//tr"
-        rows = self.html.xpath(path)
-        for row in rows[1:-2]:
-            parts = row.xpath(".//td[6]/a/@href")[0].split("/")
-            # the components needed to build the URL for the media file are
-            # are all availble in this HTML element.  The path consisters of
-            # year, month, day, and the docket number.mp3
-            year = parts[-3][1:5]
-            month = parts[-3][5:7]
-            day = parts[-3][7:]
-            docket_number = parts[-2]
-            # Build URL for media file with the information we have
-            # No need to traverse another page.
-            url = f"https://cdn.ca9.uscourts.gov/datastore/media/{year}/{month}/{day}/{docket_number}.mp3"
+        """Process the HTML response and extract case details.
+
+        Iterates over the items in the HTML response, extracts relevant
+        case information, and appends it to the cases list.
+
+        :return: None; updates self.cases with extracted case details.
+        """
+        for item in self.html.get("Items", []):
             self.cases.append(
                 {
-                    "date": get_row_column_text(row, 5),
-                    "docket": get_row_column_text(row, 2),
-                    "judge": get_row_column_text(row, 3),
-                    "name": get_row_column_text(row, 1),
-                    "url": url,
+                    "name": item.get("case_name").get("S", ""),
+                    "date": item.get("hearing_date").get("S"),
+                    "url": urljoin(
+                        self.base_url, item.get("audio_file_name").get("S")
+                    ),
+                    "docket": item.get("case_num").get("S"),
+                    "judge": item.get("case_panel_lc", {}).get("S", ""),
                 }
             )
+
+    def _download_backwards(self, search_date: date) -> None:
+        """Download and process HTML for a given target date.
+
+        :param search_date (date): The date for which to download and process opinions.
+        :return None; sets the target date, downloads the corresponding HTML
+        and processes the HTML to extract case details.
+        """
+        self.search_date = search_date[0]
+        self.html = self._download()
+        self._process_html()
