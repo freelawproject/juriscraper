@@ -21,7 +21,7 @@ requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 # Compile the regex pattern once for efficiency.
 # This pattern captures the court_id (e.g., 'ca9', 'ca2') from the URL.
 ACMS_URL_PATTERN = re.compile(
-    r"https://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
+    r"https?://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
 )
 
 
@@ -103,7 +103,12 @@ class PacerSession(requests.Session):
     LOGIN_URL = "https://pacer.login.uscourts.gov/services/cso-auth"
 
     def __init__(
-        self, cookies=None, username=None, password=None, client_code=None
+        self,
+        cookies=None,
+        username=None,
+        password=None,
+        client_code=None,
+        get_acms_tokens=False,
     ):
         """
         Instantiate a new PACER API Session with some Juriscraper defaults
@@ -111,6 +116,7 @@ class PacerSession(requests.Session):
         :param username: a PACER account username
         :param password: a PACER account password
         :param client_code: an optional PACER client code for the session
+        :param get_acms_tokens: boolean flag to enable ACMS authentication during login.
         """
         super().__init__()
         self.headers["User-Agent"] = "Juriscraper"
@@ -128,6 +134,7 @@ class PacerSession(requests.Session):
         self.password = password
         self.client_code = client_code
         self.additional_request_done = False
+        self.get_acms_tokens = get_acms_tokens
         self.acms_user_data = {}
         self.acms_tokens = {}
 
@@ -432,8 +439,9 @@ class PacerSession(requests.Session):
         self.cookies = session_cookies
         logger.info("New PACER session established.")
 
-        for court_id in ["ca2", "ca9"]:
-            self.get_acms_auth_object(court_id)
+        if self.get_acms_tokens:
+            for court_id in ["ca2", "ca9"]:
+                self.get_acms_auth_object(court_id)
 
     def _do_additional_request(self, r: requests.Response) -> bool:
         """Check if we should do an additional request to PACER, sometimes

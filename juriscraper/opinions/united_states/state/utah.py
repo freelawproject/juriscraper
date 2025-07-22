@@ -10,6 +10,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://legacy.utcourts.gov/opinions/supopin/"
         self.court_id = self.__module__
         self.status = "Published"
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath(
