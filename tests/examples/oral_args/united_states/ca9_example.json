@@ -1,0 +1,186 @@
+{
+   "ConsumedCapacity":{
+      "CapacityUnits":128.5,
+      "TableName":"media"
+   },
+   "Count":3,
+   "Items":[
+      {
+         "active":{
+            "S":"1"
+         },
+         "associated_cases":{
+            "S":""
+         },
+         "audio_file_name":{
+            "S":"2025/07/16/16-70007.mp3"
+         },
+         "case_name":{
+            "S":"Tongxi Wang v. Pamela Bondi"
+         },
+         "case_name_lc":{
+            "S":"tongxi wang v. pamela bondi"
+         },
+         "case_num":{
+            "S":"16-70007"
+         },
+         "case_panel":{
+            "S":"WARDLAW, MENDOZA, JOHNSTONE"
+         },
+         "case_panel_lc":{
+            "S":"wardlaw, mendoza, johnstone"
+         },
+         "cr_display":{
+            "S":"Courtroom 1"
+         },
+         "created_date":{
+            "S":"2025-07-16 17:00:30"
+         },
+         "description":{
+            "S":""
+         },
+         "hearing_date":{
+            "S":"2025-07-16"
+         },
+         "hearing_location":{
+            "S":"Pasadena, CA"
+         },
+         "hearing_location_code":{
+            "S":"PAS"
+         },
+         "hearing_location_lc":{
+            "S":"pasadena, ca"
+         },
+         "publish":{
+            "N":"20250716"
+         },
+         "record_type":{
+            "S":"ora"
+         },
+         "youtube_code":{
+            "S":"uneye9Igw6c"
+         }
+      },
+      {
+         "active":{
+            "S":"1"
+         },
+         "associated_cases":{
+            "S":""
+         },
+         "audio_file_name":{
+            "S":"2025/07/09/24-2861.mp3"
+         },
+         "case_name":{
+            "S":"USA v. VanDyke"
+         },
+         "case_name_lc":{
+            "S":"usa v. vandyke"
+         },
+         "case_num":{
+            "S":"24-2861"
+         },
+         "case_panel":{
+            "S":"McKEOWN, PAEZ, SANCHEZ"
+         },
+         "case_panel_lc":{
+            "S":"mckeown, paez, sanchez"
+         },
+         "cr_display":{
+            "S":"5th Floor Courtroom 3"
+         },
+         "created_date":{
+            "S":"2025-07-09 12:13:28"
+         },
+         "description":{
+            "S":""
+         },
+         "hearing_date":{
+            "S":"2025-07-09"
+         },
+         "hearing_location":{
+            "S":"Seattle, WA"
+         },
+         "hearing_location_code":{
+            "S":"SE"
+         },
+         "hearing_location_lc":{
+            "S":"seattle, wa"
+         },
+         "publish":{
+            "N":"20250709"
+         },
+         "record_type":{
+            "S":"ora"
+         },
+         "youtube_code":{
+            "S":"20_YB-7GKZY"
+         }
+      },
+      {
+         "active":{
+            "S":"1"
+         },
+         "associated_cases":{
+            "S":""
+         },
+         "audio_file_name":{
+            "S":"2025/07/10/24-4706.mp3"
+         },
+         "case_name":{
+            "S":"Wells Fargo Bank, N.A. v. Santillana, et al."
+         },
+         "case_name_lc":{
+            "S":"wells fargo bank, n.a. v. santillana, et al."
+         },
+         "case_num":{
+            "S":"24-4706"
+         },
+         "case_panel":{
+            "S":"McKEOWN, PAEZ, SANCHEZ"
+         },
+         "case_panel_lc":{
+            "S":"mckeown, paez, sanchez"
+         },
+         "cr_display":{
+            "S":"5th Floor Courtroom 3"
+         },
+         "created_date":{
+            "S":"2025-07-10 12:32:45"
+         },
+         "description":{
+            "S":""
+         },
+         "hearing_date":{
+            "S":"2025-07-10"
+         },
+         "hearing_location":{
+            "S":"Seattle, WA"
+         },
+         "hearing_location_code":{
+            "S":"SE"
+         },
+         "hearing_location_lc":{
+            "S":"seattle, wa"
+         },
+         "publish":{
+            "N":"20250710"
+         },
+         "record_type":{
+            "S":"ora"
+         },
+         "youtube_code":{
+            "S":"lo1U6pRvT7g"
+         }
+      }
+   ],
+   "LastEvaluatedKey":{
+      "case_num":{
+         "S":"17-71092"
+      },
+      "hearing_date":{
+         "S":"2020-10-08"
+      }
+   },
+   "ScannedCount":2666
+}

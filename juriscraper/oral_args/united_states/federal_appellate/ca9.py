@@ -38,6 +38,12 @@ class Site(OralArgumentSiteLinear):
 
         :return: The JSON response from DynamoDB containing oral argument records.
         """
+
+        if self.test_mode_enabled():
+            self._request_url_mock(self.url)
+            self._post_process_response()
+            return self._return_response_text_object()
+
         creds = get_temp_credentials(self.identity_id, self.region)
         payload_dict = {
             "FilterExpression": "#PUBLISH >= :from_date",
