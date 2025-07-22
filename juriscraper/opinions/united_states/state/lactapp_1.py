@@ -9,7 +9,6 @@ History:
 
 import json
 import re
-from datetime import datetime, timedelta
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -49,29 +48,12 @@ class Site(OpinionSiteLinear):
         }
 
     def _download(self, request_dict=None):
+        if self.test_mode_enabled():
+            return super()._download(request_dict)
+
         self._request_url_post(self.url)
         self._post_process_response()
         return self._return_response_text_object()
-
-    @staticmethod
-    def parse_ms_date(date_str):
-        """Parses .NET date strings like '/Date(1748979939000)/' or '/Date(-62135578800000)/'
-
-        :param date_str: raw .Net date string
-        :return: datetime object or None for null/unset dates (negative timestamps)
-        """
-        match = re.search(r"Date\((-?\d+)\)", date_str)
-        if not match:
-            return None
-
-        timestamp = int(match.group(1)) // 1000  # Convert to seconds
-
-        # Handle negative timestamps (pre-1970)
-        if timestamp < 0:
-            # .NET's epoch is 1/1/0001, convert to Python's 1/1/1970
-            return datetime(1, 1, 1) + timedelta(milliseconds=abs(timestamp))
-
-        return datetime.fromtimestamp(timestamp)
 
     @staticmethod
     def extract_case_name_info(case_name):
@@ -91,11 +73,10 @@ class Site(OpinionSiteLinear):
         json_data = self.html
         for item in json_data["d"]["DataObject"]:
             docket, clean_name = self.extract_case_name_info(item["Name"])
-            pub_date = self.parse_ms_date(item["PublishDate"])
             case = {
                 "name": clean_name,
                 "url": item["DownloadLink"],
-                "date": pub_date.strftime("%Y-%m-%d"),
+                "date": item["CreationDateString"],
                 "docket": docket,
                 "status": self.status,
             }
