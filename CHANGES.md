@@ -18,7 +18,8 @@ Features:
 - Add `masssuperct` new scraper for Massachusetts Superior Court #1498
 
 Changes:
-- Update README
+- Update README.rst
+- Add CHANGES.md
 
 Fixes:
 -
