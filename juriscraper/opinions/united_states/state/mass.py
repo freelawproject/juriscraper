@@ -38,7 +38,7 @@ class Site(OpinionSiteLinear):
         self.search_date = datetime.today()
         self.parameters = {
             "SectionName": self.court_name,
-            "ArchiveDate": "May 2025",
+            "ArchiveDate": self.search_date.strftime("%B %Y"),
         }
         self.method = "POST"
         self.status = "Published"
