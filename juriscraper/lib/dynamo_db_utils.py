@@ -7,13 +7,20 @@ import requests
 
 
 def get_temp_credentials(identity_id: str, region: str) -> dict:
+    """Retrieve temporary AWS credentials for a given Cognito identity.
+
+    :param identity_id (str): The Cognito identity ID.
+    :param region (str): The AWS region.
+    :return dict: Dictionary containing temporary AWS credentials.
+    """
+
     response = requests.post(
         f"https://cognito-identity.{region}.amazonaws.com/",
         headers={
             "Content-Type": "application/x-amz-json-1.1",
             "X-Amz-Target": "AWSCognitoIdentityService.GetCredentialsForIdentity",
         },
-        data=json.dumps({"IdentityId": identity_id}),
+        data=json.dumps({"IdentityId": f"{region}:{identity_id}"}),
     )
     response.raise_for_status()
     return response.json()["Credentials"]
@@ -27,6 +34,17 @@ def generate_signature_headers(
     target: str,
     service: str = "dynamodb",
 ) -> dict:
+    """Generate AWS Signature v4 headers for DynamoDB requests.
+
+    :param payload (str): The request payload as a JSON string.
+    :param creds (dict): Temporary AWS credentials.
+    :param region (str): AWS region.
+    :param signed_headers (str): Semicolon-separated list of headers to sign.
+    :param target (str): The X-Amz-Target value for the DynamoDB API.
+    :param service (str, optional): AWS service name. Defaults to 'dynamodb'.
+    :return dict: Dictionary of headers for the signed DynamoDB request.
+    """
+
     access_key = creds["AccessKeyId"]
     secret_key = creds["SecretKey"]
     session_token = creds["SessionToken"]
@@ -76,12 +94,30 @@ def generate_signature_headers(
         ]
     )
 
-    def sign(key, msg):
+    def sign(key: bytes, msg: str | bytes) -> bytes:
+        """Create an HMAC-SHA256 signature.
+
+        :param key: The key to use for signing (bytes).
+        :param msg: The message to sign (str or bytes).
+        :return: The HMAC-SHA256 signature as bytes.
+        """
+
         if isinstance(msg, str):
             msg = msg.encode("utf-8")
         return hmac.new(key, msg, hashlib.sha256).digest()
 
-    def get_signature_key(key, date_stamp, region_name, service_name):
+    def get_signature_key(
+        key: str, date_stamp: str, region_name: str, service_name: str
+    ) -> bytes:
+        """Generate the AWS Signature v4 signing key.
+
+        :param key: AWS secret access key.
+        :param date_stamp: Date in YYYYMMDD format.
+        :param region_name: AWS region name.
+        :param service_name: AWS service name.
+        :return: The derived signing key as bytes.
+        """
+
         kDate = sign(("AWS4" + key).encode("utf-8"), date_stamp)
         kRegion = sign(kDate, region_name)
         kService = sign(kRegion, service_name)
@@ -110,12 +146,25 @@ def generate_signature_headers(
 
 
 def query_dynamodb(
-    creds: dict,
+    identity_id: str,
     region: str,
     payload_dict: dict,
     signed_headers: str,
     target: str,
 ) -> dict:
+    """Query DynamoDB using temporary credentials and signed headers.
+
+    :param identity_id (str): The Cognito identity ID.
+    :param region (str): The AWS region.
+    :param payload_dict (dict): The request payload as a dictionary.
+    :param signed_headers (str): Semicolon-separated list of headers to sign.
+    :param target (str): The X-Amz-Target value for the DynamoDB API.
+    :return dict: JSON response from DynamoDB.
+    """
+
+    creds = get_temp_credentials(identity_id, region)
+
+    target = f"DynamoDB_20120810.{target}"
     payload = json.dumps(payload_dict)
     headers = generate_signature_headers(
         payload, creds, region, signed_headers, target
@@ -123,10 +172,6 @@ def query_dynamodb(
 
     endpoint = f"https://dynamodb.{region}.amazonaws.com/"
     response = requests.post(endpoint, headers=headers, data=payload)
-
-    if not response.ok:
-        print(f"Error: {response.status_code}")
-        print(f"Response: {response.text}")
 
     response.raise_for_status()
     return response.json()

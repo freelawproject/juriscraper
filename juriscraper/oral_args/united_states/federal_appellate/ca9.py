@@ -3,11 +3,10 @@ CourtID: ca9
 Court Short Name: ca9
 """
 
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
 from juriscraper.lib.dynamo_db_utils import (
-    get_temp_credentials,
     query_dynamodb,
 )
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
@@ -15,10 +14,10 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 class Site(OralArgumentSiteLinear):
     region = "us-west-2"
-    identity_id = "us-west-2:8d780f3b-d7d2-ca54-c86e-6eacc92a1265"
+    identity_id = "8d780f3b-d7d2-ca54-c86e-6eacc92a1265"
     table_name = "media"
     signed_headers = "content-type;host;x-amz-content-sha256;x-amz-date;x-amz-security-token;x-amz-target"
-    first_opinion_date = datetime(2000, 1, 1)
+    first_opinion_date = datetime(2000, 10, 16)
     days_interval = 1
 
     def __init__(self, *args, **kwargs):
@@ -28,6 +27,8 @@ class Site(OralArgumentSiteLinear):
         self.expected_content_types = [
             "application/octet-stream; charset=UTF-8"
         ]
+
+        self.search_date = date.today() - timedelta(days=1)
 
     def _download(self):
         """Download data from DynamoDB for oral arguments.
@@ -44,20 +45,22 @@ class Site(OralArgumentSiteLinear):
             self._post_process_response()
             return self._return_response_text_object()
 
-        creds = get_temp_credentials(self.identity_id, self.region)
-        payload_dict = {
+        self.parameters = {
             "FilterExpression": "#PUBLISH >= :from_date",
             "ReturnConsumedCapacity": "TOTAL",
             "ExpressionAttributeNames": {"#PUBLISH": "publish"},
-            "ExpressionAttributeValues": {":from_date": {"N": "20250701"}},
+            "ExpressionAttributeValues": {
+                ":from_date": {"N": self.search_date.strftime("%Y%m%d")}
+            },
             "TableName": "media",
         }
+
         return query_dynamodb(
-            creds,
+            self.identity_id,
             self.region,
-            payload_dict,
+            self.parameters,
             self.signed_headers,
-            target="DynamoDB_20120810.Scan",
+            target="Scan",
         )
 
     def _process_html(self):
