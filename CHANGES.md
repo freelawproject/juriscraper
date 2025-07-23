@@ -18,7 +18,7 @@ Features:
 - Add `masssuperct` new scraper for Massachusetts Superior Court #1498
 
 Changes:
--
+- Update `lactapp_1` scraper, site has changed #1357
 
 Fixes:
 -
