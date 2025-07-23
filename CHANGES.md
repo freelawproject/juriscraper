@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
-- Update `lactapp_1` scraper, site has changed
+- Update `lactapp_1` scraper, site has changed #1357
 
 Fixes:
 -

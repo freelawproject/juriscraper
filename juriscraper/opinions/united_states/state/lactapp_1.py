@@ -9,7 +9,9 @@ History:
 
 import json
 import re
+from datetime import datetime
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -17,11 +19,14 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.status = "Published"
+        self.status = "Unknown"
         self.base_url = "https://lafcca.hosted2.civiclive.com/portal/svc/ContentItemSvc.asmx/GetItemList"
         self.url = self.base_url
         self.method = "POST"
         self.should_have_results = True
+
+        if datetime.now().year != 2025:
+            logger.error("Update lactapp_1 parameters from 2025 parameters")
 
         # This payload is specific for 2025
         self.payload = {
