@@ -19,6 +19,8 @@ Features:
 - Fix document URL parsing in plain‑text email minute‑entry notifications #1362
 
 Changes:
+- Update README.rst
+- Add CHANGES.md
 - Update `lactapp_1` scraper, site has changed #1357
 
 Fixes:
