@@ -16,10 +16,12 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add `masssuperct` new scraper for Massachusetts Superior Court #1498
+- Fix document URL parsing in plain‑text email minute‑entry notifications #1362
 
 Changes:
 - Update README.rst
 - Add CHANGES.md
+- Update `lactapp_1` scraper, site has changed #1357
 
 Fixes:
 -
@@ -39,6 +41,7 @@ Changes:
 Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489
 - Fix `ariz` update download URLs #1474
+- improve `ind` add new fields for lower court details and judge names
 - handle empty cases in `ca7` scraper #1484
 - fix `idaho_civil` preformat date to prevent parsing errors #1284
 
