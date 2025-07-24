@@ -1,0 +1,39 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "flmd",
+  "dockets": [
+    {
+      "case_name": "Heartbeat of Miami, Inc. v.",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2025-04-08",
+          "description": "ORDER granting [87] Motion for Extension of Time. Defendant Gabriella Oropesa must submit letters of apology in accordance with the [86] Judgment no later than 14 days after the conclusion of the appeal of her related criminal conviction in case No. 8:23-cr-25-VMC-AEP. Signed by Judge Kathryn Kimball Mizelle on 4/8/2025. (KMP)",
+          "document_number": "88",
+          "document_url": null,
+          "pacer_case_id": "412491",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null,
+          "short_description": "Jane's Revenge et al Order on Motion for Extension of Time to File"
+        }
+      ],
+      "docket_number": "8:23-cv-00705",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "cv",
+      "federal_dn_judge_initials_assigned": "KKM",
+      "federal_dn_judge_initials_referred": "AAS",
+      "federal_dn_office_code": "8"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "User Test user@test.com"
+      ],
+      "name": ""
+    }
+  ]
+}
