@@ -29,14 +29,7 @@ class Site(OpinionSiteLinear):
         :return None
         """
         for case in self.html:
-            is_per_curiam = case["opinion"]["perCuriam"]
-
-            if len(case["courts"]) > 1:
-                lower_court = case["courts"][-2]["name"]
-                lower_court_number = case["courts"][-2]["number"]
-            else:
-                lower_court = ""
-                lower_court_number = ""
+            lower_court, lower_court_number = self.parse_court_info(case)
 
             disposition = case["decision"]
             if disposition == "Opinion Issued":
@@ -47,14 +40,16 @@ class Site(OpinionSiteLinear):
                 for v in case["opinion"]["votes"]
             )
 
-            if not is_per_curiam:
-                author = (
+            per_curiam = case.get("opinion").get("perCuriam")
+            author = (
+                (
                     case["opinionText"]
                     .replace("in an opinion by ", "")
                     .replace(".", "")
                 )
-            else:
-                author = ""
+                if not per_curiam
+                else ""
+            )
 
             self.cases.append(
                 {
@@ -67,7 +62,7 @@ class Site(OpinionSiteLinear):
                     "lower_court_number": lower_court_number,
                     "judge": judge,
                     "author": author,
-                    "per_curiam": is_per_curiam,
+                    "per_curiam": case.get("opinion").get("perCuriam"),
                 }
             )
 
@@ -90,3 +85,32 @@ class Site(OpinionSiteLinear):
             result += f" {parts[2]}"
 
         return result
+
+    def parse_court_info(self, case):
+        """Extract the lower court name and number from case data
+
+        :param case: case row json to parse
+        :return: lower court data
+        """
+        excluded = {self.court_name}
+        if self.court_name == "Court of Appeals":
+            excluded.add("Supreme Court")
+
+        # Filter out excluded courts
+        courts = [
+            c for c in case.get("courts", []) if c.get("name") not in excluded
+        ]
+        if not courts:
+            return "", ""
+
+        # Pick the court with the largest ID
+        target = max(courts, key=lambda c: c.get("id", 0))
+        name = target.get("name", "")
+        number = target.get("number", "")
+
+        # Normalize specific court names
+        normalization = {
+            "Court of Appeals": "Indiana Court of Appeals",
+            "Tax Court": "Indiana Tax Court",
+        }
+        return normalization.get(name, name), number

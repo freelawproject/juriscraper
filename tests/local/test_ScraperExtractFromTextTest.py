@@ -926,6 +926,14 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.indtc": [
+            (
+                """PETITIONERS APPEARING PRO SE: ATTORNEY FOR RESPONDENT:\nLAWRENCE PACHNIAK MARILYN S. MEIGHEN\nCulver, IN MEIGHEN & ASSOCIATES, P.C.\nCarmel, IN\n_____________________________________________________________________\nIN THE\nINDIANA TAX COURT\n_____________________________________________________________________\nLAWRENCE and GLENDA PACHNIAK, )\nPetitioners, )\nv. ) Cause No. 49T10-0904-TA-18\nMARSHALL COUNTY ASSESSOR, )\n)\n)\n)\n)\nRespondent. )\n______________________________________________________________________\nON APPEAL FROM A FINAL DETERMINATION OF\nTHE INDIANA BOARD OF TAX REVIEW\nNOT FOR PUBLICATION\nJune 8, 2010\nFISHER, J.\nLawrence and Glenda Pachniak (the Pachniaks) challenge the final""",
+                {
+                    "OpinionCluster": {"precedential_status": "Unpublished"},
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
