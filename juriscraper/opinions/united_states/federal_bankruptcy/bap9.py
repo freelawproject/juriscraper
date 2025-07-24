@@ -4,75 +4,56 @@ CourtID: bap9
 Court Short Name: 9th Cir. BAP
 """
 
-from datetime import date, datetime
+import json
+from datetime import datetime
 from urllib.parse import urljoin
 
-from juriscraper.lib.dynamo_db_utils import (
-    get_temp_credentials,
-    query_dynamodb,
-)
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    region = "us-west-2"
-    identity_id = "us-west-2:8d780f3b-d79c-c6c8-1125-e7a905da6b9b"
-    table_name = "bap"
-    signed_headers = "host;x-amz-date;x-amz-security-token;x-amz-target"
-    first_opinion_date = datetime(2000, 1, 1)
-    days_interval = 1
+    query_url = "https://dynamodb.us-west-2.amazonaws.com/"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.ca9.uscourts.gov/bap/"
-        self.status = "Published"
-        self.search_date = datetime.today()
-        self.make_backscrape_iterable(kwargs)
+
+        self.table = "bap"
+        self.headers = {
+            "Content-Type": "application/x-amz-json-1.1",
+            "X-Amz-Target": "AWSCognitoIdentityService.GetCredentialsForIdentity",
+        }
+        self.params = {
+            "IdentityId": "us-west-2:8d780f3b-d79c-c6c8-1125-e7a905da6b9b"
+        }
+        self.payload = json.dumps(
+            {"TableName": self.table, "ReturnConsumedCapacity": "TOTAL"}
+        )
+        self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
 
     def _download(self):
         """Download data from DynamoDB for oral arguments.
 
-        Retrieves temporary AWS credentials, constructs a DynamoDB scan payload
-        to filter oral argument records by publish date, and queries the
-        DynamoDB `bap` table for matching items.
-
         :return: The JSON response from DynamoDB containing oral argument records.
         """
         if self.test_mode_enabled():
-            self._request_url_mock(self.url)
-            self._post_process_response()
-            return self._return_response_text_object()
+            return json.load(open(self.url))
 
-        creds = get_temp_credentials(self.identity_id, self.region)
-        payload_dict = {
-            "TableName": self.table_name,
-            "IndexName": "date_filed-index",
-            "KeyConditionExpression": "#date_filed = :date_filed",
-            "ExpressionAttributeNames": {"#date_filed": "date_filed"},
-            "ExpressionAttributeValues": {
-                ":date_filed": {"S": self.search_date.strftime("%m/%d/%Y")},
-            },
-            "ReturnConsumedCapacity": "TOTAL",
-        }
-        return query_dynamodb(
-            creds,
-            self.region,
-            payload_dict,
-            self.signed_headers,
-            target="DynamoDB_20120810.Query",
-        )
+        sess = self.request["session"]
 
-    def _download_backwards(self, search_date: date) -> None:
-        """Download and process HTML for a given target date.
+        # fetch for credentials
+        res = sess.post(self.url, headers=self.headers, json=self.params)
+        creds = res.json().get("Credentials")
 
-        :param search_date (date): The date for which to download and process opinions.
-        :return None; sets the target date, downloads the corresponding HTML
-        and processes the HTML to extract case details.
-        """
-        self.search_date = search_date[0]
-        self.html = self._download()
-        self._process_html()
+        # fetch signed headers
+        sig = generate_aws_sigv4_headers(self.table, creds)
+
+        # fetch bap table
+        data = sess.post(self.query_url, headers=sig, data=self.payload)
+        return data.json().get("Items", [])
 
     def _process_html(self):
         """Process the HTML response and extract case details.
@@ -82,15 +63,37 @@ class Site(OpinionSiteLinear):
 
         :return: None; updates self.cases with extracted case details.
         """
-        print(self.html)
-        for item in self.html.get("Items", []):
+        sorted_items = self.sort_items_by_date_filed_desc(self.html)
+        for item in sorted_items:
+            date_str = item.get("date_filed").get("S")
+            try:
+                datetime.strptime(date_str, "%m/%d/%Y")
+            except ValueError:
+                logger.debug("Skipping row with bad date data")
+                continue
+            slug = item.get("file_name").get("S")
             self.cases.append(
                 {
                     "name": f"In re: {item.get('debtor').get('S', '')}",
                     "date": item.get("date_filed").get("S"),
-                    "url": urljoin(
-                        self.base_url, item.get("file_name").get("S")
-                    ),
+                    "url": urljoin("https://cdn.ca9.uscourts.gov", slug),
                     "docket": item.get("bap_num", {}).get("S"),
+                    "status": item.get("document_type").get("S"),
                 }
             )
+
+    def sort_items_by_date_filed_desc(self, items: list) -> list:
+        """Sort by date filed
+
+        :param items: all items in the data
+        :return: sorted list
+        """
+
+        def parse_date(item):
+            date_str = item.get("date_filed", {}).get("S", "")
+            try:
+                return datetime.strptime(date_str, "%m/%d/%Y")
+            except ValueError:
+                return datetime.min  # put malformed dates at the end
+
+        return sorted(items, key=parse_date, reverse=True)
