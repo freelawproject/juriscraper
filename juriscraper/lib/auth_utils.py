@@ -1,7 +1,6 @@
 import datetime
 import hashlib
 import hmac
-import json
 import os
 
 from juriscraper.AbstractSite import logger
@@ -31,6 +30,7 @@ def set_api_token_header(site: OpinionSite) -> None:
 
 
 def generate_aws_sigv4_headers(
+    payload: str,
     table_name: str = None,
     creds: dict = None,
     signed_headers: str = "host;x-amz-date;x-amz-security-token;x-amz-target",
@@ -43,7 +43,7 @@ def generate_aws_sigv4_headers(
     This function builds the necessary SigV4 signing information and returns
     a complete set of HTTP headers you can pass to `requests` (or any HTTP
     client) to perform an authenticated DynamoDB Scan.
-
+    :param payload: The JSON payload to send in the request body
     :param table_name: Table to scan or query
     :param creds: temp dictionary of credentials
     :param signed_headers: headers to include
@@ -52,9 +52,6 @@ def generate_aws_sigv4_headers(
     :param region: the aws region
     :return: signed headers to use to query db
     """
-    payload_dict = {"TableName": table_name, "ReturnConsumedCapacity": "TOTAL"}
-    payload = json.dumps(payload_dict)
-
     # 1. Prepare SigV4 signing
     now = datetime.datetime.utcnow()
     amz_date = now.strftime("%Y%m%dT%H%M%SZ")
