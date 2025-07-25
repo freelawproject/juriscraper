@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Add `masssuperct` new scraper for Massachusetts Superior Court #1498
 - Fix document URL parsing in plain‑text email minute‑entry notifications #1362
+- Add support for downloading ACMS NDA free look documents.
 
 Changes:
 - Update `lactapp_1` scraper, site has changed #1357
