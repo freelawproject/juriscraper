@@ -19,6 +19,7 @@ from juriscraper.lib.log_tools import make_default_logger
 from .utils import (
     get_doc_id_prefix_from_court_id,
     is_pdf,
+    make_acms_free_doc_url,
     make_doc1_url,
     make_docs1_url,
 )
@@ -197,6 +198,7 @@ class BaseReport:
         pacer_magic_num: Optional[str] = None,
         appellate: bool = False,
         de_seq_num: Optional[str] = None,
+        acms: bool = False,
     ) -> tuple[Optional[Response], str]:
         """Download a PDF from PACER.
 
@@ -212,8 +214,10 @@ class BaseReport:
 
             # Create PACER base url from court_id and pacer_doc_id
             # Magic link parameters
-            if appellate:
-                url = make_docs1_url(self.court_id, pacer_doc_id, True)
+            if acms:
+                url = make_acms_free_doc_url(self.court_id, pacer_magic_num)
+            elif appellate:
+                url = make_docs1_url(self.court_id, str(pacer_doc_id), True)
                 # For appellate documents the magic_number is the uid param
                 params = {
                     "uid": pacer_magic_num,

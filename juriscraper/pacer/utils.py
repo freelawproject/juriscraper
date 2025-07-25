@@ -684,6 +684,15 @@ def make_docs1_url(
     return f"https://ecf.{court_id}.uscourts.gov/docs1/{pacer_doc_id}"
 
 
+def make_acms_free_doc_url(court_id: str, pacer_magic_num: str) -> str:
+    """Make a URL for ACMS NDAs free look downloads.
+
+    :param court_id: The court ID.
+    :param pacer_magic_num: The PACER document ID magic number
+    """
+    return f"https://{court_id}-showdoc.azurewebsites.us/NDA/{pacer_magic_num}"
+
+
 def is_pdf(response):
     """Determines whether the item downloaded is a PDF or something else."""
     return response.headers.get("content-type") == "application/pdf"
