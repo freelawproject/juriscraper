@@ -10,7 +10,6 @@ from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
-from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -32,21 +31,39 @@ class Site(OpinionSiteLinear):
         self.params = {
             "IdentityId": "us-west-2:8d780f3b-d79c-c6c8-1125-e7a905da6b9b"
         }
-        self.search_date = datetime.now()
+        self.end_date = datetime.now()
+        self.start_date = self.end_date - timedelta(days=self.days_interval)
+        self.build_payload()
+        self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
+        self.make_backscrape_iterable(kwargs)
+
+    def build_payload(self):
+        """Build query
+
+        :return: query dict
+        """
+        expression_values = {
+            ":start_date": {"S": self.start_date.strftime("%m")},
+            ":year": {"S": self.start_date.strftime("%Y")},
+        }
+        filter_expression = (
+            "#date_filed > :start_date and contains(#date_filed, :year)"
+        )
+        if date.month != 12:
+            expression_values[":end_date"] = {
+                "S": self.end_date.strftime("%m")
+            }
+            filter_expression = "#date_filed > :start_date and #date_filed < :end_date and contains(#date_filed, :year)"
+
         self.payload = json.dumps(
             {
                 "TableName": self.table,
-                "FilterExpression": "#date_filed = :date",
+                "FilterExpression": filter_expression,
                 "ExpressionAttributeNames": {"#date_filed": "date_filed"},
-                "ExpressionAttributeValues": {
-                    ":date": {"S": self.search_date.strftime("%m/%d/%Y")},
-                },
+                "ExpressionAttributeValues": expression_values,
                 "ReturnConsumedCapacity": "TOTAL",
             }
         )
-
-        self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
-        self.make_backscrape_iterable(kwargs)
 
     def _download(self):
         """Download data from DynamoDB for oral arguments.
@@ -92,18 +109,28 @@ class Site(OpinionSiteLinear):
         for item in self.html:
             date_str = item.get("date_filed").get("S")
             try:
-                datetime.strptime(date_str, "%m/%d/%Y")
+                d = datetime.strptime(date_str, "%m/%d/%Y")
+                if d < self.start_date:
+                    continue
+                if d > self.end_date:
+                    continue
             except ValueError:
                 logger.debug("Skipping row with bad date data")
                 continue
+
             slug = item.get("file_name").get("S")
+            status = item.get("document_type").get("S")
+            if status == "Unpublished Opinion":
+                status = "Unpublished"
+            else:
+                status = "Published"
             self.cases.append(
                 {
                     "name": f"In re: {item.get('debtor').get('S', '')}",
                     "date": item.get("date_filed").get("S"),
                     "url": urljoin("https://cdn.ca9.uscourts.gov", slug),
                     "docket": item.get("bap_num", {}).get("S"),
-                    "status": item.get("document_type").get("S"),
+                    "status": status,
                 }
             )
 
@@ -113,29 +140,23 @@ class Site(OpinionSiteLinear):
         :param dates: A tuple containing start and end dates.
         :return: None; updates self.cases with cases from the specified date range.
         """
-        end = (date.replace(day=1) + timedelta(days=32)).replace(day=1)
+        start_str, end_str, _ = date
 
-        expression_values = {
-            ":start_date": {"S": date.strftime("%m")},
-            ":year": {"S": date.strftime("%Y")},
-        }
-        filter_expression = (
-            "#date_filed > :start_date and contains(#date_filed, :year)"
-        )
-        if date.month != 12:
-            expression_values[":end_date"] = {"S": end.strftime("%m")}
-            filter_expression = "#date_filed > :start_date and #date_filed < :end_date and contains(#date_filed, :year)"
+        # Parse start date or fall back to first_opinion_date
+        if start_str:
+            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
+        else:
+            self.start_date = self.first_opinion_date
+
+        # Parse end date or fall back to now
+        if end_str:
+            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
+        else:
+            self.end_date = datetime.now()
 
         self.payload = json.dumps(
-            {
-                "TableName": self.table,
-                "FilterExpression": filter_expression,
-                "ExpressionAttributeNames": {"#date_filed": "date_filed"},
-                "ExpressionAttributeValues": expression_values,
-                "ReturnConsumedCapacity": "TOTAL",
-            }
+            {"TableName": self.table, "ReturnConsumedCapacity": "TOTAL"}
         )
-
         self.html = self._download()
         self._process_html()
 
@@ -145,7 +166,8 @@ class Site(OpinionSiteLinear):
         :param kwargs: the back scraping params
         :return: None
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
+        self.start_date = kwargs.get(
+            "backscrape_start", self.first_opinion_date
         )
+        self.end_date = kwargs.get("backscrape_end", datetime.now())
+        self.back_scrape_iterable = [(self.start_date, self.end_date, None)]
