@@ -4,7 +4,7 @@ Court Short Name: ca9
 """
 
 import json
-from datetime import date, datetime
+from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -14,11 +14,12 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 class Site(OralArgumentSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
-    days_interval = 365
+    days_interval = 30
     first_opinion_date = datetime(2000, 10, 16)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
         self.court_id = self.__module__
         self.table = "media"
         self.base_url = "https://www.ca9.uscourts.gov/"
@@ -26,6 +27,8 @@ class Site(OralArgumentSiteLinear):
             "application/octet-stream; charset=UTF-8"
         ]
         self.status = "Published"
+
+        # AWS Cognito creds step:
         self.headers = {
             "Content-Type": "application/x-amz-json-1.1",
             "X-Amz-Target": "AWSCognitoIdentityService.GetCredentialsForIdentity",
@@ -34,21 +37,30 @@ class Site(OralArgumentSiteLinear):
             "IdentityId": "us-west-2:8d780f3b-d79c-c6c8-1125-e7a905da6b9b"
         }
 
-        self.search_date = datetime.now()
+        self.end_date = datetime.now()
+        self.start_date = self.end_date - timedelta(days=self.days_interval)
+        self.build_payload()
 
+        self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
+        self.make_backscrape_iterable(kwargs)
+
+    def build_payload(self):
+        """Build the DynamoDB query for the current start_date/end_date
+
+        :return: None
+        """
         self.payload = json.dumps(
             {
                 "TableName": self.table,
                 "ReturnConsumedCapacity": "TOTAL",
-                "FilterExpression": "#PUBLISH = :publish",
+                "FilterExpression": "#PUBLISH >= :from_date AND #PUBLISH <= :to_date",
                 "ExpressionAttributeNames": {"#PUBLISH": "publish"},
                 "ExpressionAttributeValues": {
-                    ":publish": {"N": self.search_date.strftime("%Y%m%d")},
+                    ":from_date": {"N": self.start_date.strftime("%Y%m%d")},
+                    ":to_date": {"N": self.end_date.strftime("%Y%m%d")},
                 },
             }
         )
-        self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
-        self.make_backscrape_iterable(kwargs)
 
     def _download(self):
         """Build and download the table to parse
@@ -71,7 +83,6 @@ class Site(OralArgumentSiteLinear):
             "Now downloading case page at: %s (params: %s)"
             % (self.url, self.payload)
         )
-
         # Fetch media table
         self.request["response"] = sess.post(
             self.query_url, headers=sig, data=self.payload
@@ -87,71 +98,60 @@ class Site(OralArgumentSiteLinear):
         """Process the json response"""
 
         for record in self.html:
-            date_str = record.get("hearing_date").get("S")
+            date_str = record.get("hearing_date", {}).get("S")
             try:
+                # validate ISO date
                 datetime.strptime(date_str, "%Y-%m-%d")
-            except ValueError:
-                logger.debug("Skipping row with bad data")
+            except Exception:
+                logger.debug(f"Skipping row with bad hearing_date: {date_str}")
                 continue
 
-            date = record["hearing_date"]["S"]
-            docket = record["case_num"]["S"]
-            judge = record["case_panel"]["S"]
-            name = record["case_name"]["S"]
             try:
-                url = urljoin(self.base_url, record["audio_file_name"]["S"])
+                audio = record["audio_file_name"]["S"]
             except KeyError:
-                logger.debug("Skipping row with no audio file")
+                logger.debug("Skipping row with no audio_file_name")
                 continue
 
             self.cases.append(
                 {
-                    "date": date,
-                    "docket": docket,
-                    "judge": judge,
-                    "name": name,
-                    "url": url,
+                    "date": date_str,
+                    "docket": record["case_num"]["S"],
+                    "judge": record["case_panel"]["S"],
+                    "name": record["case_name"]["S"],
+                    "url": urljoin(self.base_url, audio),
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
-        """Download cases for a specific date range.
+    def _download_backwards(self, dates: tuple[str, str]) -> None:
+        """Download backwards
 
-        :param dates: A tuple containing start and end dates.
-        :return: None; updates self.cases with cases from the specified date range.
+        :param dates: (start_str, end_str) in "%Y/%m/%d" or empty.
+        :return: None
         """
+        start_str, end_str = dates
 
-        start = dates[0]
-        end = dates[1]
+        # Parse start date or fall back to first_opinion_date
+        if start_str:
+            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
+        else:
+            self.start_date = self.first_opinion_date
 
-        self.payload = json.dumps(
-            {
-                "FilterExpression": "#PUBLISH >= :from_date AND #PUBLISH <= :to_date",
-                "ReturnConsumedCapacity": "TOTAL",
-                "ExpressionAttributeNames": {"#PUBLISH": "publish"},
-                "ExpressionAttributeValues": {
-                    ":from_date": {"N": start.strftime("%Y%m%d")},
-                    ":to_date": {"N": end.strftime("%Y%m%d")},
-                },
-                "TableName": "media",
-            }
-        )
+        # Parse end date or fall back to now
+        if end_str:
+            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
+        else:
+            self.end_date = datetime.now()
 
+        # Rebuild payload for this slice
+        self.build_payload()
         self.html = self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Set up the backscrape iterable for the scraper.
-
-        This method is called to prepare the scraper for backscraping
-        by setting the date range and other parameters.
-
-        :param kwargs: Keyword arguments passed to the scraper.
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = [
-            (
-                self.back_scrape_iterable[0][0],
-                self.back_scrape_iterable[-1][-1],
-            )
-        ]
+        Prepare a single (start, end) tuple, defaulting to __init__’s range
+        or overridden via backscrape_start / backscrape_end in kwargs.
+        """
+        start = kwargs.get("backscrape_start", self.start_date)
+        end = kwargs.get("backscrape_end", self.end_date)
+        self.back_scrape_iterable = [(start, end)]
