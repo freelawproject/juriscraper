@@ -35,6 +35,7 @@ Features:
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
+- Add `bap9` backscraper #1008
 
 Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489
