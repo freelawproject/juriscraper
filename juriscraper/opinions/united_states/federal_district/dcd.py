@@ -9,7 +9,6 @@ Substantially Revised: Brian W. Carver, 2014-03-28
 
 import re
 from datetime import date, datetime
-from typing import Tuple
 
 from lxml import html
 
@@ -26,6 +25,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = f"https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?{date.today().year}"
         self.status = "Published"
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
         """
@@ -61,7 +61,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def get_docket_document_number_from_url(self, url: str) -> Tuple[str, str]:
+    def get_docket_document_number_from_url(self, url: str) -> tuple[str, str]:
         """Get docket document number from the opinion URL
 
         :param url:
@@ -72,3 +72,37 @@ class Site(OpinionSiteLinear):
         doc_number = match.group(6) if match else url
 
         return doc_number
+
+    def _download_backwards(self, year: int) -> None:
+        """Build URL with year input and scrape
+
+        :param year: year to scrape
+        :return None
+        """
+        self.url = f"https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?{year}"
+        self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Checks if backscrape start and end arguments have been passed
+        by caller, and parses them accordingly
+
+        :param kwargs: passed when initializing the scraper, may or
+            may not contain backscrape controlling arguments
+        :return None
+        """
+        start_date = kwargs.get("backscrape_start")
+        end_date = kwargs.get("backscrape_end")
+
+        start = (
+            datetime.strptime(start_date, "%m/%d/%Y").year
+            if start_date
+            else date.today().year
+        )
+        end = (
+            datetime.strptime(end_date, "%m/%d/%Y").year + 1
+            if end_date
+            else date.today().year
+        )
+
+        self.back_scrape_iterable = range(max(2005, start), end)

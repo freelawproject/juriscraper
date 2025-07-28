@@ -17,8 +17,11 @@ class Site(OpinionSite):
             "placeholder"
         ]  # this array can't be empty
         self.url = "https://www.iowacourts.gov/iowa-courts/supreme-court/supreme-court-opinions/"
+        self.should_have_results = True
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
+        if request_dict is None:
+            request_dict = {}
         html = super()._download(request_dict)
         self.extract_cases(html)
         if self.test_mode_enabled() or self.archive:

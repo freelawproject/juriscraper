@@ -13,7 +13,6 @@ History:
 
 import re
 from datetime import date, datetime
-from typing import Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
@@ -37,6 +36,7 @@ class Site(OpinionSiteLinear):
         )
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _get_docket(self, match: re.match) -> str:
         """Get docket_number from a regex match
@@ -113,7 +113,7 @@ class Site(OpinionSiteLinear):
                 "This source paginates at 150 results. There are 150 results for this page. Some opinions may be lost"
             )
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range POST request
 
         :param dates: (start_date, end_date) tuple
@@ -128,7 +128,7 @@ class Site(OpinionSiteLinear):
         self.get_target_page(dates)
         self._process_html()
 
-    def get_target_page(self, dates: Tuple[date]) -> None:
+    def get_target_page(self, dates: tuple[date]) -> None:
         """Makes requests until target page is loaded
         The number of requests is variable on the "__VIEWSTATE"
 

@@ -80,7 +80,7 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
              'description_html': '<p>NEW PARTY, Intervenor, Free Law Project. [Entered: 10/26/2023 6:18 PM]</p>',
              'description': 'NEW PARTY, Intervenor, Free Law Project. [Entered: 10/26/2023 6:18 PM]',
              'date_entered': datetime.datetime(2023, 10, 26, 18, 18),
-             'date_filed': datetime.datetime(2023, 10, 26, 18, 18),
+             'date_filed': datetime.datetime(2023, 10, 28, 0, 0),
              'pacer_doc_id': '19b65316-744e-11ee-a0a4-13890013fe63',
              'page_count': 1}]}"""  # noqa
 
@@ -104,7 +104,7 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
              'description_html': '<p>NEW PARTY, Intervenor, Free Law Project. [Entered: 10/26/2023 6:18 PM]</p>',
              'description': 'NEW PARTY, Intervenor, Free Law Project. [Entered: 10/26/2023 6:18 PM]',
              'date_entered': datetime.datetime(2023, 10, 26, 18, 18),
-             'date_filed': datetime.datetime(2023, 10, 26, 18, 18),
+             'date_filed': datetime.datetime(2023, 10, 28, 0, 0),
              'pacer_doc_id': '19b65316-744e-11ee-a0a4-13890013fe63',
              'page_count': 1}]}"""  # noqa
 

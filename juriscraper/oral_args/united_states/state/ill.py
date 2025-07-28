@@ -12,6 +12,8 @@ from datetime import timedelta
 
 from dateutil.utils import today
 
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import clean_string
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -42,11 +44,19 @@ class Site(OralArgumentSiteLinear):
 
     def _process_html(self):
         for row in self.html.xpath(".//tr")[1:]:
+            audio_anchor = row.xpath(".//a/@data-audio")
+            if not audio_anchor:
+                logger.warning(
+                    "Row has no audio anchor '%s'",
+                    clean_string(row.xpath("string()")),
+                )
+                continue
+
             self.cases.append(
                 {
                     "date": row.xpath(".//td[1]/span[1]/text()")[0],
                     "docket": row.xpath(".//td[2]/span[1]/text()")[0],
                     "name": row.xpath(".//td[3]/span[1]/text()")[0],
-                    "url": row.xpath(".//a/@data-audio")[0],
+                    "url": audio_anchor[0],
                 }
             )

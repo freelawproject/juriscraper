@@ -1,6 +1,10 @@
 import re
+import traceback
 from datetime import date, datetime
 from itertools import chain, islice, tee
+from typing import Callable, Optional
+
+from requests.exceptions import HTTPError
 
 from juriscraper.AbstractSite import logger
 
@@ -39,10 +43,10 @@ def clean_court_object(obj):
     :return: A dict or list with the string values cleaned.
     """
     if isinstance(obj, list):
-        l = []
+        items = []
         for i in obj:
-            l.append(clean_court_object(i))
-        return l
+            items.append(clean_court_object(i))
+        return items
     elif isinstance(obj, dict):
         d = {}
         for k, v in obj.items():
@@ -57,27 +61,32 @@ def clean_court_object(obj):
 
 
 def backscrape_over_paginated_results(
-    url_template: str,
     first_page: int,
     last_page: int,
     start_date: date,
     end_date: date,
     date_fmt: str,
     site,
+    prepare_request_fn: Optional[Callable] = None,
+    url_template: str = "",
 ) -> list[dict]:
     """
     Iterates over consecutive pages, looking for cases in a specific date range
-    Of use when the page offers no date filters, so one must look through all the pages
-    Assumes the page is returning results ordered by date
+    Of use when the page offers no date filters, so one must look through all
+    the pages. Assumes the page is returning results ordered by date
 
-    :param url_template: string to apply .format() to, like "url&page={}"
-        where the argument to pass will be the page number
     :param first_page: integer of the first page
     :param last_page: integer of the last page
     :param start_date: cases with a date greater than this value will be collected
     :param end_date: cases with a date lesses than this value will be collected
     :param date_fmt: date format to parse case dates
     :param site: the site object
+    :prepare_request_fn: a function that takes as arguments the page number
+        and the site object, and modifies the site's attribute to prepare
+        the request before `site._download()` is called.
+        If not passed, it will try to use the url_template argument
+    :param url_template: string to apply .format() to, like "url&page={}"
+        where the argument to pass will be the page number
 
     :return: the list of cases between the dates
     """
@@ -90,14 +99,35 @@ def backscrape_over_paginated_results(
 
     for page in range(first_page, last_page):
         site.cases = []  # reset results container
-        site.url = url_template.format(page)
-        site.html = site._download()
-        site._process_html()
+
+        if prepare_request_fn:
+            prepare_request_fn(page, site)
+        else:
+            site.url = url_template.format(page)
+
+        try:
+            site.html = site._download()
+            site._process_html()
+        except HTTPError:
+            # if the request returned and error, take advantage of the cases
+            # already downloaded. This may also be a case when the last page
+            # was unknown, and `last_page + 1` generates an error
+            logger.info(
+                "Error while downloading, breaking pagination at page %s", page
+            )
+            logger.debug("%s", traceback.format_exc())
+            break
+
+        if not site.cases:
+            logger.info("No cases in this page; breaking the loop")
+            break
 
         # results are ordered by desceding date
         earliest = datetime.strptime(site.cases[-1]["date"], date_fmt).date()
         latest = datetime.strptime(site.cases[0]["date"], date_fmt).date()
-        logger.info("Results page has date range %s to %s", earliest, latest)
+        logger.info(
+            "Results page %s has date range %s to %s", page, earliest, latest
+        )
 
         # no intersection between date ranges
         if max(earliest, start_date) >= min(latest, end_date):

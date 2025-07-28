@@ -4,7 +4,6 @@
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
 import re
 from datetime import date, datetime
-from typing import Tuple
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -32,6 +31,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://www.ndcourts.gov/supreme-court/opinions?topic=&author=&searchQuery=&trialJudge=&pageSize=100&sortOrder=1"
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         """Most values are inside a <p>: whitespace and
@@ -82,7 +82,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
-    def clean_name(self, name: str) -> Tuple[str, str]:
+    def clean_name(self, name: str) -> tuple[str, str]:
         """Cleans case name
 
         Some case names list the consolidated docket or a
@@ -115,18 +115,17 @@ class Site(OpinionSiteLinear):
         of models field - value pairs
         """
         metadata = {}
-        regex = r"(?P<volume>20\d{2})\s(?P<reporter>ND)\s(?P<page>\d+)"
+        regex = r"20\d{2}\sND\s\d+"
         citation_match = re.search(regex, scraped_text[:1000])
 
         if citation_match:
-            # type 8 is a neutral citation in Courtlistener
-            metadata["Citation"] = {**citation_match.groupdict(), "type": 8}
+            metadata["Citation"] = citation_match.group(0)
 
         # Most times, paragraphs are enumerated. The data we are interested
         # in is in a few lines before the first paragraph
         lines = scraped_text.split("\n")
         found = False
-        for index, line in enumerate(lines):
+        for index, line in enumerate(lines):  # noqa: B007
             if "[¶1]" in line:
                 found = True
                 break
@@ -155,7 +154,7 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -168,5 +167,5 @@ class Site(OpinionSiteLinear):
         base_url = self.url
         url_template = f"{base_url}&page={{}}"
         self.cases = backscrape_over_paginated_results(
-            url_template, 2, last_page, start, end, "%m/%d/%Y", self
+            2, last_page, start, end, "%m/%d/%Y", self, None, url_template
         )

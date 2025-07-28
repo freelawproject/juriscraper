@@ -4,19 +4,23 @@ Court Contact: phone: (518) 453-6900
 Author: Gianfranco Rossi
 History:
  - 2024-01-05, grossir: created
+ - 2025-07-03, luism: make back scraping dynamic
 """
 
+import html
 import re
 from datetime import date
 from itertools import chain
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
-from dateutil.rrule import MONTHLY, rrule
 from lxml.html import fromstring
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.auth_utils import set_api_token_header
+from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import harmonize
+from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -24,6 +28,7 @@ class Site(OpinionSiteLinear):
     court_regex: str  # to be defined on inheriting classes
     base_url = "https://nycourts.gov/reporter/slipidx/miscolo.shtml"
     first_opinion_date = date(2003, 12, 1)
+    days_interval = 30
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -31,11 +36,9 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = self.build_url()
 
-        date_keys = rrule(
-            MONTHLY, dtstart=self.first_opinion_date, until=date(2023, 12, 30)
-        )
-        self.back_scrape_iterable = [i.date() for i in date_keys]
+        self.make_backscrape_iterable(kwargs)
         self.expected_content_types = ["application/pdf", "text/html"]
+        set_api_token_header(self)
 
     def build_url(self, target_date: Optional[date] = None) -> str:
         """URL as is loads most recent month page
@@ -99,7 +102,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_docket_numbers(self) -> List[str]:
+    def _get_docket_numbers(self) -> list[str]:
         """Overriding from OpinionSiteLinear, since docket numbers are
         not in the HTML and they are required
 
@@ -117,7 +120,7 @@ class Site(OpinionSiteLinear):
         """
         self.url = self.build_url(target_date)
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract values from opinion's text
 
         :param scraped_text: pdf or html string contents
@@ -129,8 +132,8 @@ class Site(OpinionSiteLinear):
         pattern = r"</table><br><br\s?/?>\s?(.*)\r?\n|Docket Number:\s?(.+)"
         docket_number = self.match(scraped_text, pattern)
 
-        pattern = r"\[(?P<volume>\d+) (?P<reporter>Misc 3d) (?P<page>.+)\]"
-        cite_match = re.search(pattern, scraped_text[:2000])
+        regex_citation = r"(?<=\[)\d+ Misc 3d .+(?=\])"
+        cite_match = re.search(regex_citation, scraped_text[:2000])
 
         # Only for .htm links
         full_case = None
@@ -141,17 +144,14 @@ class Site(OpinionSiteLinear):
             full_case = fromstring(scraped_text).xpath("//table")
             full_case = full_case[1].text_content() if full_case else ""
 
-        metadata = {
-            "Docket": {"docket_number": docket_number},
-        }
+        metadata = {"Docket": {"docket_number": html.unescape(docket_number)}}
 
         if judge:
             metadata["Opinion"] = {
                 "author_str": normalize_judge_string(judge)[0]
             }
         if cite_match:
-            metadata["Citation"] = cite_match.groupdict("")
-            metadata["Citation"]["type"] = 2  # 'State' type in courtlistener
+            metadata["Citation"] = cite_match.group(0)
         if full_case:
             full_case = harmonize(full_case)
             metadata["Docket"]["case_name_full"] = full_case
@@ -171,3 +171,18 @@ class Site(OpinionSiteLinear):
         m = re.findall(pattern, scraped_text)
         r = list(filter(None, chain.from_iterable(m)))
         return r[0].strip() if r else ""
+
+    @staticmethod
+    def cleanup_content(content: str) -> str:
+        return ny.Site.cleanup_content(content)
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """Make back scrape iterable
+
+        :param kwargs: the back scraping params
+        :return: None
+        """
+        super().make_backscrape_iterable(kwargs)
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )

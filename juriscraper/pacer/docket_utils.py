@@ -1,6 +1,6 @@
 import re
 
-from ..lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase
 
 
 def normalize_party_types(t):

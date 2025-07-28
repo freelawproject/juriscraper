@@ -1,0 +1,43 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "dcb",
+  "dockets": [
+    {
+      "case_name": "1616 27th Street Flats L.L.C.",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-07-09",
+          "description": "Notice and Motion to Convert Case to Chapter 7 . Fee Amount $15, or in the alternative Motion to Dismiss Case Filed by U. S. Trustee for Region Four. Objections due by 7/31/2024.Hearing scheduled for 8/7/2024 at 01:00 PM at Courtroom 1 and Zoom; Contact aimee_mathewes@dcb.uscourts.gov for meeting code. Objections due by 7/31/2024.Hearing scheduled for 8/7/2024 at 01:00 PM at Courtroom 1 and Zoom; Contact aimee_mathewes@dcb.uscourts.gov for meeting code. (Attachments: (1) Notice of Motion and Hearing (2) Proposed Order Converting Case (3) Proposed Order Dismissing Case) (Eustis, Kristen)",
+          "document_number": "16",
+          "document_url": "https://ecf.dcb.uscourts.gov/doc1/04402863815?pdf_header=&magic_num=48605890&de_seq_num=50&caseid=49987",
+          "pacer_case_id": "49987",
+          "pacer_doc_id": "04402863815",
+          "pacer_magic_num": "48605890",
+          "pacer_seq_no": "50",
+          "short_description": "Motion to Convert Case to Chapter 7"
+        }
+      ],
+      "docket_number": "24-00221",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "ELG",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "Kristen.S.Eustis@usdoj.gov",
+        "Robert.W.Ours@usdoj.gov",
+        "USTPRegion04.DC.ECF@USDOJ.GOV",
+        "c@e.com",
+        "c@d.com;a@b.com;a@notify.bestcase.com;user@recap.email"
+      ],
+      "name": ""
+    }
+  ]
+}

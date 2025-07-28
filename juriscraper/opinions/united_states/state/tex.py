@@ -16,185 +16,232 @@
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
+#  - 2025-05-30; Updated by lmanzur: get opinions from the orders on causes page
 
-from datetime import date, datetime, timedelta
-from typing import Dict, Optional, Tuple
+import re
+from datetime import date
+from datetime import datetime as dt
 
-from juriscraper.AbstractSite import logger
-from juriscraper.DeferringList import DeferringList
+from lxml import etree
+
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    param_date_format = "%-m/%-d/%Y"
-    first_opinion_date = datetime(2002, 1, 24, 0, 0, 0)
-    # Interval for default scrape and backscrape iterable generation
-    days_interval = 15
+    base_url = "https://www.txcourts.gov/supreme/orders-opinions/{}/"
+    link_xp = '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
+    date_xp = '//*[@id="MainContent"]/div/div[1]/div/text()'
+    judge_xp = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
+    days_interval = 365
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.checkbox = 0
+        self.first_opinion_date = date(2014, 10, 3)
+        self.current_year = date.today().year
+        self.url = self.base_url.format(self.current_year)
         self.status = "Published"
-        self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.make_backscrape_iterable(kwargs)
-        self.next_page = None
-        self.current_page = 1
-        # Default scrape range if not doing a backscrape
-        self.end_date = date.today()
-        self.start_date = self.end_date - timedelta(days=self.days_interval)
-        self.is_first_request = True
-        self.seeds = []
+        self.is_backscrape = False
 
-    def _set_parameters(self) -> None:
-        """Set ASPX post parameters
+    def _download(self, request_dict=None):
+        """Downloads the HTML content for the current opinion page.
 
-        This method - chooses the court and date parameters.
-        ctl00$ContentPlaceHolder1$chkListCourts$[KEY] is what selects a ct
-
-         0: Supreme
-         1: Court of Criminal Appeals
-         2: 1st District Court of Appeals
-         3: 2nd District Court of Appeals
-         ...etc
-
-        :return: None
+        :param request_dict (dict, optional): Additional request parameters.
+        :return The downloaded HTML content.
         """
-        start_date_str = self.start_date.strftime(self.param_date_format)
-        end_date_str = self.end_date.strftime(self.param_date_format)
+        if request_dict is None:
+            request_dict = {}
 
-        from_date_param = self.make_date_param(self.start_date, start_date_str)
-        to_date_param = self.make_date_param(self.end_date, end_date_str)
+        if not self.is_backscrape and not self.test_mode_enabled():
+            self.html = super()._download(request_dict)
+            self.url = self.html.xpath(self.link_xp)[-1]
+        self.html = super()._download(request_dict)
 
-        self.parameters = {}
-        for hidden in self.html.xpath("//input[@type='hidden']"):
-            value = hidden.xpath("@value")[0] if hidden.xpath("@value") else ""
-            self.parameters[hidden.xpath("@name")[0]] = value
-
-        self.parameters.update(
-            {
-                "ctl00$ContentPlaceHolder1$SearchType": "rbSearchByDocument",  # "Document Search" radio button
-                "ctl00$ContentPlaceHolder1$dtDocumentFrom": str(
-                    self.start_date
-                ),
-                "ctl00$ContentPlaceHolder1$dtDocumentFrom$dateInput": start_date_str,
-                "ctl00$ContentPlaceHolder1$dtDocumentTo": str(self.end_date),
-                "ctl00$ContentPlaceHolder1$dtDocumentTo$dateInput": end_date_str,
-                "ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput_ClientState": from_date_param,
-                "ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput_ClientState": to_date_param,
-                "ctl00$ContentPlaceHolder1$btnSearchText": "Search",
-                "ctl00$ContentPlaceHolder1$chkListDocTypes$0": "on",  # "Opinion" checkbox
-                f"ctl00$ContentPlaceHolder1$chkListCourts${self.checkbox}": "on",  # Court checkbox
-                "ctl00$ContentPlaceHolder1$txtSearchText": "",
-                "ctl00_ContentPlaceHolder1_dtDocumentFrom_ClientState": '{"minDateStr":"1900-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00"}',
-                "ctl00_ContentPlaceHolder1_dtDocumentTo_ClientState": '{"minDateStr":"1900-01-01-00-00-00","maxDateStr":"2099-12-31-00-00-00"}',
-                "ctl00$ContentPlaceHolder1$Stemming": "on",
-                "ctl00$ContentPlaceHolder1$Fuzziness": "0",
-            }
-        )
-
-        # "Next page" arrow button has a name like
-        # "ctl00$ContentPlaceHolder1$grdDocuments$ctl00$ctl02$ctl00$ctl18"
-        # Couldn't get pagination working when using the numbered page anchors,
-        # whose id goes into __EVENTTARGET
-        if self.next_page:
-            self.parameters[self.next_page[0].xpath("@name")[0]] = ""
+        return self.html
 
     def _process_html(self) -> None:
-        """Process HTML and paginates if needed
+        """Parses the HTML content
 
-        :return: None
+        :return None
         """
-        if not self.test_mode_enabled():
-            # Make our post request to get our data
-            self.method = "POST"
-            self._set_parameters()
-            self.html = super()._download()
+        date = self.html.xpath(self.date_xp)[0].strip()
+        links = self.html.xpath('//a[contains(@href, ".pdf")]')
+        for link in links:
+            if link.getparent() is None or link.getparent().get(
+                "class"
+            ) not in ["a79", "a70"]:
+                continue
+            precedingTRs = link.xpath(
+                'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
+            ) or link.xpath(
+                'ancestor::tr/preceding-sibling::tr[td[@class="a54cl"]]'
+            )
 
-        rows_xpath = "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
-        for row in self.html.xpath(rows_xpath):
-            # In texas we also have to ping the case page to get the name
-            # this is unfortunately part of the process.
-            self.seeds.append(row.xpath(".//a")[2].get("href"))
+            docket, title, *_ = [
+                tr_text
+                for tr_text in precedingTRs[-1].xpath(".//text()")
+                if tr_text.strip()
+            ]
+
+            disposition = (
+                link.getparent().xpath(".//text()")[0]
+                if link.getparent().get("class") == "a70"
+                else ""
+            )
+
+            judge_str = (
+                "".join(
+                    [
+                        x
+                        for x in [
+                            link.getprevious().tail,
+                            link.text,
+                            link.tail,
+                        ]
+                        if x
+                    ]
+                )
+                if disposition
+                else ""
+            )
+
+            judges = re.findall(self.judge_xp, judge_str)
+            if judges:
+                author = judges[0]
+                per_curiam = False
+            else:
+                author = ""
+                per_curiam = True
+
+            lower_court, lower_court_number, lower_court_id = (
+                self.parse_lower_court_info(title)
+            )
+
+            title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
+            title_match = re.search(title_regex, title, flags=re.MULTILINE)
+
             self.cases.append(
                 {
-                    "date": row.xpath("td[2]")[0].text_content(),
-                    "docket": row.xpath("td[5]")[0].text_content().strip(),
-                    "url": row.xpath(".//a")[1].get("href"),
+                    "name": titlecase(
+                        title_match.group("name") if title_match else title
+                    ),
+                    "disposition": disposition,
+                    "url": link.get("href"),
+                    "docket": docket,
+                    "date": date,
+                    "type": self.extract_type(link),
+                    "per_curiam": per_curiam,
+                    "judge": ", ".join(judges),
+                    "author": author,
+                    "lower_court": lower_court,
+                    "lower_court_number": lower_court_number,
+                    "lower_court_id": lower_court_id,
                 }
             )
 
-        next_page_xpath = (
-            "//input[@title='Next Page' and not(@onclick='return false;')]"
-        )
-        self.next_page = self.html.xpath(next_page_xpath)
-        if self.next_page and not self.test_mode_enabled():
-            self.current_page += 1
-            logger.info(f"Paginating to page {self.current_page}")
-            self._process_html()
+    @staticmethod
+    def parse_lower_court_info(title: str) -> tuple[str, str, str]:
+        """Parses lower court information from the title string
 
-    def _get_case_names(self) -> DeferringList:
-        """Get case names using a deferring list."""
-
-        def get_name(link: str) -> Optional[str]:
-            """Abstract out the case name from the case page."""
-            if self.test_mode_enabled():
-                return "No case names fetched during tests."
-            html = self._get_html_tree_by_url(link)
-            try:
-                plaintiff = html.xpath(
-                    '//label[contains(text(), "Style:")]/parent::div/following-sibling::div/text()'
-                )[0].strip()
-                defendant = html.xpath(
-                    '//label[contains(text(), "v.:")]/parent::div/following-sibling::div/text()'
-                )[0].strip()
-
-                # In many cases the court leaves off the plaintiff (The State of Texas).  But
-                # in some of these cases the appellant is ex parte.  So we need to
-                # add the state of texas in some cases but not others.
-                if defendant:
-                    return titlecase(f"{plaintiff} v. {defendant}")
-                elif "WR-" not in link:
-                    return titlecase(f"{plaintiff} v. The State of Texas")
-                else:
-                    return titlecase(f"{plaintiff}")
-            except IndexError:
-                logger.warning(f"No title or defendant found for {self.url}")
-                return None
-
-        return DeferringList(seed=self.seeds, fetcher=get_name)
-
-    def _download_backwards(self, dates: Tuple[date]) -> None:
-        """Overrides present scraper start_date and end_date
-
-        :param dates: (start_date, end_date) tuple
-        :return None
+        :param title: a string with lower court information
+        :return: values for lower_court, lower_court_number, lower_court_id
         """
-        start, end = dates
-        self.start_date = (
-            start.date() if not isinstance(start, date) else start
-        )
-        self.end_date = end.date() if not isinstance(end, date) else end
-        logger.info(
-            "Backscraping for range %s %s", self.start_date, self.end_date
-        )
+
+        # Format when appeal comes from texapp districts. Example:
+        # ' from Harris County; 1st Court of Appeals District (01-22-00182-CV, 699 SW3d 20, 03-23-23)'
+        texapp_regex = r" from (?P<lower_court>.*)\s*\("
+
+        # Format when appeal comes from other possible courts. Examples:
+        #  "(U.S. Fifth Circuit 23-10804)"
+        #  "(U.S. 5th Circuit 19-51012)"
+        # "(BODA Cause No. 67623)"
+        other_courts_regex = r"\((?P<lower_court>(BODA|U\.S\. (Fif|5)th Circuit))\s(?P<lower_number>(Cause No. )?[\d-]+)\)$"
+
+        if match := re.search(texapp_regex, title):
+            lower_court = match.group("lower_court")
+            lower_court_number = title[match.end() :].split(",")[0]
+            return lower_court, lower_court_number, "texapp"
+
+        elif match := re.search(other_courts_regex, title):
+            lower_court = match.group("lower_court")
+            lower_court_number = match.group("lower_number")
+
+            if lower_court == "BODA":
+                lower_court = "Board of Disciplinary Appeals"
+                lower_court_id = "txboda"
+            else:
+                # if this is not a BODA match, then it can only be a
+                # Fifth Circuit match. Update this if the regex above changes
+                lower_court_id = "ca5"
+
+            return lower_court, lower_court_number, lower_court_id
+
+        return "", "", ""
 
     @staticmethod
-    def make_date_param(date_obj: date, date_str: str) -> str:
-        """Make JSON encoded string with dates as expected by formdata
+    def extract_type(link: etree.Element) -> str:
+        """Determines the opinion type
 
-        :param date_obj: a date object
-        :param date_str: string representation of the date in expected format
-
-        :return: JSON encoded string
+        :param link (etree.Element) The anchor element containing the PDF link.
+        :return str The opinion type as a string.
         """
-        return (
-            '{"enabled":true,"emptyMessage":"",'
-            f'"validationText":"{date_obj}-00-00-00",'
-            f'"valueAsString":"{date_obj}-00-00-00",'
-            '"minDateStr":"1900-01-01-00-00-00",'
-            '"maxDateStr":"2099-12-31-00-00-00",'
-            f'"lastSetTextBoxValue":"{date_str}"'
-            "}"
-        )
+        text = link.text.lower()
+        url = link.get("href")
+        if "per curiam" in text or url.endswith("pc.pdf"):
+            op_type = OpinionType.UNANIMOUS
+        elif "in part" in text or url.endswith("cd.pdf"):
+            op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+        elif "dissenting" in text or url.endswith("d.pdf"):
+            op_type = OpinionType.DISSENT
+        elif "concurring" in text or url.endswith("c.pdf"):
+            op_type = OpinionType.CONCURRENCE
+        else:
+            op_type = OpinionType.MAJORITY
+        return str(op_type.value)
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """Checks if backscrape start and end arguments have been passed
+
+        Texas opinions page returns all opinions for a year (pagination is not needed),
+        so we must filter out opinions not in the date range we are looking for
+
+        :return None
+        """
+        super().make_backscrape_iterable(kwargs)
+
+        # use the parsed values to compute the actual iterable
+        start = self.back_scrape_iterable[0][0]
+        end = self.back_scrape_iterable[-1][-1]
+
+        dates = []
+        for year in list(range(start.year, end.year + 1)):
+            dates.append((year, start, end))
+        self.back_scrape_iterable = dates
+
+    def _download_backwards(self, analysis_window: tuple) -> None:
+        """Downloads and processes opinions for a given year within a specified date range.
+
+        :param analysis_window (tuple): A tuple containing the year (int), start date (date), and end date (date).
+        :return None
+        """
+        self.is_backscrape = True
+        year, start, end = analysis_window
+        self.url = self.base_url.format(year)
+        self._download()
+
+        for path in self.html.xpath(self.link_xp):
+            if "historical" in path:
+                # in 2014 they have an extra link for pre-2014 ops
+                continue
+            date_str = path.strip("/").split("/")[-1]
+            date_obj = dt.strptime(date_str, "%B-%d-%Y").date()
+
+            if not (start <= date_obj <= end):
+                continue
+
+            self.url = path
+            self._download()
+            self._process_html()

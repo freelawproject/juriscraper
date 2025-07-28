@@ -1,13 +1,17 @@
 import email
 import re
 from datetime import date
-from typing import Dict, List, Optional, Tuple, TypedDict, Union
+from typing import Optional, TypedDict, Union
 
 from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import (
+    clean_string,
+    convert_date_string,
+    harmonize,
+)
 
-from ..lib.string_utils import clean_string, convert_date_string, harmonize
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
@@ -33,7 +37,7 @@ class DocketEntryType(TypedDict):
 class DocketType(TypedDict):
     case_name: str
     date_filed: date
-    docket_entries: List[DocketEntryType]
+    docket_entries: list[DocketEntryType]
     docket_number: str
 
 
@@ -48,15 +52,43 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         "Modified Date Filed from",
         "Added Correct PDF to document",
     ]
+    bankruptcy_courts_with_tests = [
+        "arwb",
+        "cacb",
+        "casb",
+        "cob",
+        "ctb",
+        "dcb",
+        "deb",
+        "flsb",
+        "ianb",
+        "mdb",
+        "nceb",
+        "ndb",
+        "nhb",
+        "njb",
+        "nyeb",
+        "nysb",
+        "okeb",
+        "paeb",
+        "pamb",
+        "pawb",
+        "tnmb",
+        "txnb",
+        "vaeb",
+    ]
 
     def __init__(self, court_id):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
+        self.acms = None
+        self.acms_partial_short_description = None
         self.image_attached = False
         self.docket_numbers = []
         self.subject = None
         self.case_names = []
+        self.raw_docket_numbers = set()
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
         else:
@@ -74,6 +106,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         }
         parsed = {
             "appellate": self._is_appellate(),
+            "acms": self._is_acms(),
             "dockets": self._get_dockets(),
         }
         if self.content_type == "text/plain":
@@ -97,6 +130,36 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             return self.appellate
         return self.appellate
 
+    def _is_acms(self) -> bool:
+        """Checks if the NDA belongs to ACMS.
+
+        :return: True if it’s an ACMS notification, otherwise False.
+        """
+        if self.acms is not None:
+            return self.acms
+
+        # Table version notification. It's not ACMS
+        if self.tree.xpath("//table[contains(., 'Case Name:')]"):
+            self.acms = False
+            return False
+
+        # Div-based version notification. ACMS.
+        case_names = self.tree.xpath("//strong[contains(., 'Case Name:')]")
+        case_names_count = len(case_names)
+
+        # Multi-docket ACMS for appellate is not yet supported
+        if self.appellate and case_names_count > 1:
+            raise NotImplementedError(
+                "Received a potential multi-docket ACMS NDA notification. "
+                "This is probably our chance to add support for it. "
+                "Court: %s",
+                self.court_id,
+            )
+
+        # 1 Div-based Case Name found. This is an ACMS notification.
+        self.acms = case_names_count == 1
+        return self.acms
+
     def _sibling_path(self, label):
         """Gets the path string for the sibling of a label cell (td)
 
@@ -114,7 +177,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :param  current_node: The relative lxml.HtmlElement
         :returns: Case name, cleaned and harmonized
         """
-        path = self._sibling_path("Case Name")
+
+        path = (
+            "//strong[contains(., 'Case Name:')]/following-sibling::span[1]"
+            if self._is_acms()
+            else self._sibling_path("Case Name")
+        )
         case_name = self._xpath_text_0(current_node, path)
         if not case_name:
             case_name = self._xpath_text_0(current_node, f"{path}/p")
@@ -155,7 +223,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, current_node: HtmlElement
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Gets a docket number from the email text and also parse the docket
         number components.
 
@@ -167,27 +235,31 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
 
         if self._is_appellate():
-            path = self._sibling_path("Case Number")
+            path = (
+                "//strong[contains(., 'Case Number:')]/../"
+                if self._is_acms()
+                else self._sibling_path("Case Number")
+            )
             case_number = self._xpath_text_0(current_node, f"{path}/a")
             return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
+        docket_numbers_str = current_node.xpath(f"{path}/a/text()")
+        self.raw_docket_numbers.update(set(docket_numbers_str))
         docket_number, docket_number_components = (
-            self._parse_docket_number_strs(
-                current_node.xpath(f"{path}/a/text()")
-            )
+            self._parse_docket_number_strs(docket_numbers_str)
         )
         if not docket_number:
+            docket_numbers_str = current_node.xpath(f"{path}/p/a/text()")
+            self.raw_docket_numbers.update(set(docket_numbers_str))
             docket_number, docket_number_components = (
-                self._parse_docket_number_strs(
-                    current_node.xpath(f"{path}/p/a/text()")
-                )
+                self._parse_docket_number_strs(docket_numbers_str)
             )
         return docket_number, docket_number_components
 
     def _parse_docket_number_plain(
         self,
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Gets a docket number from the plain email text and also parse the
         docket number components.
 
@@ -199,6 +271,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         email_body = self.tree.text_content()
         regex = r"Case Number:(.*)"
         docket_number = re.findall(regex, email_body)
+        self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
     def _get_date_filed(self) -> date:
@@ -247,13 +320,29 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         :returns: Anchor tag, if it's found
         """
         try:
-            if self._is_appellate():
-                path = f"{self._sibling_path('Document(s)')}//a"
-            else:
-                path = f"{self._sibling_path('Document Number')}//a"
+            path = (
+                "//b[contains(., 'Document:')]/following-sibling::a"
+                if self._is_acms()
+                else (
+                    f"{self._sibling_path('Document(s)')}//a"
+                    if self._is_appellate()
+                    else f"{self._sibling_path('Document Number')}//a"
+                )
+            )
             return current_node.xpath(path)[0]
         except IndexError:
             return None
+
+    def _get_acms_partial_short_description(
+        self, current_node: HtmlElement
+    ) -> str:
+        """Retrieves the acms partial short description.
+
+        :param  current_node: The relative lxml.HtmlElement
+        :returns: Partial short description, if it's found
+        """
+        path = "//b[contains(., 'Document:')]/following-sibling::a"
+        return self._xpath_text_0(current_node, path)
 
     def _get_case_anchor(self, current_node: HtmlElement) -> Optional[str]:
         """Safely retrieves the anchor tag for a case.
@@ -305,16 +394,27 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Paths to look for NDAs description
             main_path = './following::strong[contains(., "Docket Text:")][1]/following::'
             possible_paths = ["text()"]
+
+        if self._is_acms():
+            # Path to look for ACMS description
+            main_path = (
+                "//strong[normalize-space(.)='Docket Text:']"
+                "/ancestor::div[1]"
+                "/following-sibling::div[1]"
+                "//div//"
+            )
+            possible_paths = ["text()"]
+
         for path in possible_paths:
             node = current_node.xpath(f"{main_path}{path}")
             if len(node):
                 for des_part in node:
-                    if self._is_appellate():
-                        if (
-                            des_part
-                            == "Notice will be electronically mailed to:"
-                        ):
-                            break
+                    if (
+                        self._is_appellate()
+                        and des_part
+                        == "Notice will be electronically mailed to:"
+                    ):
+                        break
                     description = description + des_part
                 description = clean_string(description)
                 if description:
@@ -360,9 +460,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         document_nodes = self.tree.xpath(
             '//strong[contains(., "Document description:")]'
         )
-        if len(document_nodes) <= 1:
-            return False
-        return True
+        return not len(document_nodes) <= 1
 
     def _contains_attachments_plain(self) -> bool:
         """Determines if the plain/txt notification contains attached documents.
@@ -396,7 +494,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             docket_number, docket_number_components = (
                 self._parse_docket_number_plain()
             )
-            docket_number = docket_number
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
@@ -405,6 +502,21 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "docket_number": docket_number,
                 "date_filed": None,
                 "docket_entries": self._get_docket_entries(),
+            }
+            # Include the docket_number components.
+            docket.update(docket_number_components)
+            dockets.append(docket)
+        elif self._is_acms():
+            docket_number, docket_number_components = (
+                self._parse_docket_number(self.tree)
+            )
+            # Cache the docket number and case name for its later use.
+            self.docket_numbers.append(docket_number)
+            docket = {
+                "case_name": self._get_case_name(self.tree),
+                "docket_number": docket_number,
+                "date_filed": None,
+                "docket_entries": self._get_docket_entries(self.tree),
             }
             # Include the docket_number components.
             docket.update(docket_number_components)
@@ -441,14 +553,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 # description of the first item.
                 for docket in dockets:
                     if docket["docket_entries"]:
-                        docket["docket_entries"][0][
-                            "short_description"
-                        ] = self._get_short_description()
+                        docket["docket_entries"][0]["short_description"] = (
+                            self._get_short_description()
+                        )
         return dockets
 
     def _get_docket_entries(
         self, current_node: HtmlElement = None
-    ) -> List[DocketEntryType]:
+    ) -> list[DocketEntryType]:
         """Gets the full list of docket entries with document and sequence numbers
 
         :param  current_node: The relative lxml.HtmlElement
@@ -460,7 +572,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             description = self._get_description_plain()
             if description is not None:
                 email_body = self.tree.text_content()
-                regex = r"view the document:[\r\n\s]+([^\r\n]+)"
+                regex = r"view the document:[\r\n\s]+(https?://[^\s]+)"
                 url = re.findall(regex, email_body)
                 if url:
                     document_url = url[0]
@@ -480,13 +592,20 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 document_url = (
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
-                if self._is_appellate():
+                if self._is_appellate() or self._is_acms():
                     document_number = None
                 else:
                     document_number = self._get_document_number(current_node)
 
                 # Get Case URL for HTML version.
                 case_url = self._get_case_anchor(current_node)
+
+                # Get the ACMS partial short description for later use in short_description parsing.
+                self.acms_partial_short_description = (
+                    self._get_acms_partial_short_description(current_node)
+                    if self._is_acms()
+                    else None
+                )
 
         if description is not None:
             # "doc" value for document_number will cause an error on
@@ -508,8 +627,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 }
             ]
             if document_url is not None:
-                entries[0]["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
-                    document_url
+                entries[0]["pacer_doc_id"] = (
+                    get_pacer_doc_id_from_doc1_url(document_url)
+                    if not self._is_acms()
+                    else None
                 )
                 entries[0]["pacer_magic_num"] = (
                     get_pacer_magic_num_from_doc1_url(
@@ -534,115 +655,69 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         return []
 
     def _parse_bankruptcy_short_description(self, subject: str) -> str:
-        """Parse the short description of a bankruptcy case from the email
-        subject. Subjects for bankruptcy varies a lot from court to court.
-        This function supports parsing the short description for courts with
-        known examples.
+        """Parse the short description of a bankruptcy case from the email subject
+
+        The subject contains: the docket number, the case name, the short description
+        and special characters. The presence and order of these elements varies from
+        court to court. The short description that we parse out should match the
+        "Description" on the "History/Document" report on PACER
+
+        A special case are multi-docket NEFs, of which we have only seen
+        2-docket NEFs. These are labelled as "_multi_" on the example files, and we
+        have only seen "Adversary Cases", so far. The subject will use one
+        of the case names and one of the docket numbers, and then follow
+        the general rules
 
         :param subject: The email subject string.
         :return: The parsed short description.
         """
+        # Some courts have subjects like
+        # `Multiple Cases "{docket} {case name} Close [Aa]dversary [Cc]ase" - {initials}`
+        if close_adv_match := re.search(
+            r"close adversary case", subject, flags=re.IGNORECASE
+        ):
+            return close_adv_match.group(0)
 
-        # See paeb_3.txt for a test of multi docket NEF
-        # So far, we have only seen 2-docket NEF
-        is_multidocket = len(self.docket_numbers) == 2
-        if len(self.docket_numbers) > 1 and self.court_id != "njb":
+        # raw dockets from "plain/text" email may have a URL
+        raw_docket_numbers = [
+            i.strip().split(" ")[0] for i in self.raw_docket_numbers
+        ]
+        raw_docket_numbers.sort(key=len, reverse=True)  # use longest first
+        for part in raw_docket_numbers + self.docket_numbers + self.case_names:
+            subject = subject.replace(part, " ")
+
+        # Sometimes the full case name is not used in the `subject`
+        # Some courts use a 18 character limit
+        # See deb_2.txt, pamb_1 and pamb_3 for examples
+        for case_name in self.case_names:
+            subject = subject.replace(case_name[:18].strip(), " ")
+            subject = subject.replace(case_name.split(" and ")[0], " ")
+
+        # Deletes:
+        # - "NEF: " placeholder
+        # - "Ch \d{1,2}" abbreviations
+        cleanup_regex = r"(NEF:? )|(C[Hh][- ]?(7|9|11|13))|(C[hH][\s-]*$)"
+        subject = re.sub(cleanup_regex, " ", subject)
+
+        # Courts like `nhb` do not use the "Ch \d{1,2}" abbreviation
+        # and we must delete the "Chapter..." string; but only once
+        # See nhb_2 for an example with 2 "Chapter..." strings
+        chapter_regex = r"Chapter[- ]?(7|9|11|13)"
+        if self.court_id in ["nhb"]:
+            subject = re.sub(chapter_regex, " ", subject, count=1)
+        elif len(re.findall(chapter_regex, subject)) > 1:
             logger.error(
-                "Not parsing description for Bankruptcy Multi Docket NEF for court '%s'",
-                self.court_id,
-                extra={
-                    "fingerprint": [
-                        f"{self.court_id}-not-parsing-multi-docket-short-description"
-                    ]
-                },
+                "Trying to parse a RECAP email with more than 1 'Chapter...' string"
             )
-            return ""
 
-        short_description = ""
-        docket_number = self.docket_numbers[0]
-        case_name = self.case_names[0]
+        subject = subject.strip(" ;:,-")
+        # some courts use "Re: {case name}"
+        short_description = re.sub("( Re$)|(^Re:? )", "", subject)
 
-        if is_multidocket:
-            # Docket number / case name from one or both of the 2 cases
-            # may be used in the subject string
-            if self.docket_numbers[1] in subject:
-                docket_number = self.docket_numbers[1]
-            if self.case_names[1] in subject:
-                case_name = self.case_names[1]
-
-        if self.court_id in [
-            "cacb",
-            "ctb",
-            "cob",
-            "ianb",
-            "nyeb",
-            "txnb",
-            "okeb",
-        ]:
-            # In: 6:22-bk-13643-SY Request for courtesy Notice of Electronic Filing (NEF)
-            # Out: Request for courtesy Notice of Electronic Filing (NEF)
-            short_description = subject.split(docket_number)[-1]
-
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["njb", "dcb", "vaeb", "paeb", "mdb", "arwb"]:
-            # In: Ch-11 19-27439-MBK Determination of Adjournment Request - Hollister Construc
-            # Out: Determination of Adjournment Request
-            # In Ch-13 1:24-bk-70534 Meeting of Creditors - Second Non-Appearance; Michael Clayton Lowry
-            # Out: Meeting of Creditors - Second Non-Appearance
-            short_description = subject.split(docket_number)[-1]
-            # Remove docket number traces "-AAA"
-            # Remove CH after docket and BK after short description for dcb
-            regex = r"^-.*?\s|C[Hh][\s\d]+|[ (]?B[Kk]( Other)?[) ]?"
-            short_description = re.sub(regex, "", short_description)
-            separator = ";" if self.court_id == "arwb" else "-"
-            short_description = short_description.rsplit(separator, 1)[0]
-        elif self.court_id == "nysb":
-            # In: 22-22507-cgm Ch13 Affidavit Re: Gerasimos Stefanitsis
-            # Out: Affidavit
-            short_description = subject.split(case_name)[0]
-            short_description = short_description.replace("Re:", "")
-            short_description = short_description.split(docket_number)[-1]
-
-            # Remove strings starting with "Ch" followed by a number
-            regex = r"\bCh\d+\b"
-            short_description = re.sub(regex, "", short_description)
-
-            # Remove docket number traces "-AAA"
-            regex = r"^-.*?\s"
-            short_description = re.sub(regex, "", short_description)
-        elif self.court_id in ["pawb", "ndb", "deb", "pamb", "nhb"]:
-            # In: Ch-7 22-20823-GLT U LOCK INC Reply
-            # Out: Reply
-            if case_name in subject:
-                short_description = subject.split(case_name)[-1]
-            elif case_name[:18] in subject:
-                # See deb_2.txt, pamb_1 and pamb_3 for examples
-                short_description = subject.split(case_name[:18])[-1]
-            elif (
-                " and " in case_name and case_name.split(" and ")[0] in subject
-            ):
-                # See pamb_2.txt
-                short_description = subject.split(case_name.split(" and ")[0])[
-                    -1
-                ]
-        elif self.court_id in [
-            "tnmb",
-        ]:
-            # In: Docket Order - Continue Hearing (Auto) Ch 13 Jeffery Wayne Lovell and Tiffany Nicole Lovell 1:24-bk-01377
-            # Out: Docket Order - Continue Hearing (Auto) Ch 13
-            if case_name in subject:
-                short_description = subject.split(case_name)[0]
-        else:
+        if self.court_id not in self.bankruptcy_courts_with_tests:
             logger.error(
-                "Short description has no parsing for bankruptcy court '%s'",
+                "Parsing a RECAP email from court %s without tests",
                 self.court_id,
-                extra={
-                    "fingerprint": [
-                        f"{self.court_id}-not-parsing-short-description"
-                    ]
-                },
             )
 
         return short_description
@@ -686,6 +761,30 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         )
         return longer_short_description
 
+    def _parse_acms_short_description(self, subject: str) -> str:
+        """Parse the short description of an ACMS entry from the subject
+         notification.
+
+        :param subject: The subject string from which to parse the short
+        description.
+        :return: The parsed short description
+        """
+        partial_des = re.escape(self.acms_partial_short_description)
+        match = re.search(partial_des, subject, re.IGNORECASE)
+        if not match:
+            return ""
+
+        # Identify - boundaries for the short description and extract it.
+        start_idx, end_idx = match.span()
+        left_hyphen_idx = subject.rfind("-", 0, start_idx)
+        right_hyphen_idx = subject.find("-", end_idx)
+        slice_start = left_hyphen_idx + 1 if left_hyphen_idx != -1 else 0
+        slice_end = (
+            right_hyphen_idx if right_hyphen_idx != -1 else len(subject)
+        )
+
+        return subject[slice_start:slice_end].strip()
+
     def _get_short_description(self) -> str:
         """Get the short description of a case from the subject string.
 
@@ -703,7 +802,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if len(subject_split_case_name) > 1:
                 break
 
-        if self.appellate:
+        if self._is_acms():
+            short_description = self._parse_acms_short_description(
+                subject_split_case_name[-1]
+            )
+        elif self.appellate:
             # Appellate notification.
             short_description = self._parse_appellate_short_description(
                 subject
@@ -809,7 +912,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
         )
 
-    def _get_email_recipients(self) -> List[Dict[str, Union[str, List[str]]]]:
+    def _get_email_recipients(self) -> list[dict[str, Union[str, list[str]]]]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
@@ -835,7 +938,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _get_email_recipients_plain(
         self,
-    ) -> List[Dict[str, Union[str, List[str]]]]:
+    ) -> list[dict[str, Union[str, list[str]]]]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses

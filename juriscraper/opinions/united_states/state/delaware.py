@@ -17,6 +17,7 @@ class Site(OpinionSite):
         )
         # Note that we can't do the usual thing here because 'del' is a Python keyword.
         self.court_id = "juriscraper.opinions.united_states.state.del"
+        self.should_have_results = True
 
     def _get_case_dates(self):
         return [

@@ -1,0 +1,55 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "deb",
+  "dockets": [
+    {
+      "case_name": "Franchise Group, Inc. v. Gale",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-11-27",
+          "description": "Adversary case 24-50237. Complaint by Franchise Group, Inc. against Brian Gale, Mark Noble, Terry Philippas, John Does 1-20. Fee Amount $350 (91 (Declaratory judgment)),(71 (Injunctive relief - reinstatement of stay)). (Morton, Edmon)",
+          "document_number": "1",
+          "document_url": "https://ecf.deb.uscourts.gov/doc1/042021961841?pdf_header=&magic_num=94822243&de_seq_num=3&caseid=194952",
+          "pacer_case_id": "194952",
+          "pacer_doc_id": "042021961841",
+          "pacer_magic_num": "94822243",
+          "pacer_seq_no": "3",
+          "short_description": "Complaint"
+        }
+      ],
+      "docket_number": "24-50237",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "JTD",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    },
+    {
+      "case_name": "Franchise Group, Inc.",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-11-27",
+          "description": "Adversary case 24-50237. Complaint by Franchise Group, Inc. against Brian Gale, Mark Noble, Terry Philippas, John Does 1-20. Fee Amount $350 (91 (Declaratory judgment)),(71 (Injunctive relief - reinstatement of stay)). (Morton, Edmon)",
+          "document_number": "262",
+          "document_url": "https://ecf.deb.uscourts.gov/doc1/042021961842?pdf_header=&magic_num=24806255&de_seq_num=1262&caseid=194674",
+          "pacer_case_id": "194674",
+          "pacer_doc_id": "042021961842",
+          "pacer_magic_num": "24806255",
+          "pacer_seq_no": "1262",
+          "short_description": "Complaint"
+        }
+      ],
+      "docket_number": "24-12480",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "JTD",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": []
+}

@@ -9,7 +9,6 @@ Date created: 21 July 2014
 
 import re
 from datetime import datetime
-from typing import Dict
 from urllib.parse import urlencode
 
 from juriscraper.opinions.united_states.state import pa
@@ -17,7 +16,6 @@ from juriscraper.opinions.united_states.state import pa
 
 class Site(pa.Site):
     court = "Superior"
-    days_interval = 20
     first_opinion_date = datetime(1998, 2, 15)
     judge_key = "AuthorName"
 
@@ -29,7 +27,7 @@ class Site(pa.Site):
         )
         self.url = f"{self.base_url}{urlencode(self.params)}"
 
-    def get_status(self, op: Dict) -> str:
+    def get_status(self, op: dict) -> str:
         """Get status from opinion object
 
         :param op: opinion json
@@ -61,3 +59,14 @@ class Site(pa.Site):
                 " by ", " "
             )
         return author_str
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Get neutral citation from the first lines in the first page
+
+        Not all scraped opinions have them
+        """
+        neutral_citation_regex = r"\d{4} PA Super \d+"
+        if cite_match := re.search(neutral_citation_regex, scraped_text[:200]):
+            return {"Citation": cite_match.group(0)}
+
+        return {}

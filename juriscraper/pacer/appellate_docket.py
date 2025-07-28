@@ -2,22 +2,28 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
+from typing import Any, Optional
 
-from lxml.html import tostring
+from lxml import html
+from lxml.etree import _ElementUnicodeResult
+from requests import Response
 
-from ..lib.judge_parsers import normalize_judge_string
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import (
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
     force_unicode,
     harmonize,
 )
-from ..lib.utils import clean_court_object
+from juriscraper.lib.utils import clean_court_object
+
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
     get_court_id_from_url,
+    get_file_size_str_from_tr,
+    get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
     is_pdf,
 )
@@ -69,8 +75,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     def url(self):
         if self.court_id == "psc":
             return (
-                "https://dcecf.psc.uscourts.gov/"
-                "n/beam/servlet/TransportRoom"
+                "https://dcecf.psc.uscourts.gov/n/beam/servlet/TransportRoom"
             )
         elif self.court_id in ["ca5", "ca7", "ca11"]:
             return (
@@ -190,12 +195,12 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 All parameters same as above, except...
                 confirmCharge=y <-- Added
         """
-        assert (
-            self.session is not None
-        ), "session attribute of AppellateDocketReport cannot be None."
-        assert bool(
-            docket_number
-        ), f'docket_number must be a valid value, not "{docket_number}"'
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
+        assert bool(docket_number), (
+            f'docket_number must be a valid value, not "{docket_number}"'
+        )
 
         if not show_docket_entries and (date_end or date_start):
             raise ValueError(
@@ -256,13 +261,16 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super().parse()
 
-    def download_pdf(self, pacer_doc_id, pacer_case_id=None):
+    def download_pdf(
+        self, pacer_doc_id, pacer_case_id=None
+    ) -> tuple[Optional[Response], str]:
         """Download a PDF from an appellate court.
 
         :param pacer_case_id: The case ID for the docket
         :param pacer_doc_id: The document ID for the item.
-        :return: request.Response object containing the PDF, if one can be
-        found, else returns None.
+        :return: A tuple of the request.Response object containing a PDF, if
+        one can be found (is not sealed, gone, etc.). And a string indicating
+        the error message, if there is one or else an empty string.
 
         This is a functional curl command to get a PDF (though the cookies have
         been changed to protect the innocent):
@@ -304,9 +312,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         identified and so is ignored below.
         # noqa
         """
-        assert (
-            self.session is not None
-        ), "session attribute of AppellateDocketReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of AppellateDocketReport cannot be None."
+        )
         query_params = {
             "servlet": "ShowDoc",
             "incPdfHeader": "Y",
@@ -321,14 +329,23 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         )
         r = self.session.get(self.url, params=query_params)
         r.raise_for_status()
-        if is_pdf(r):
-            logger.info(
-                "Got PDF binary data for document #%s in court %s",
-                pacer_doc_id,
-                self.court_id,
+
+        if b"Documents are attached to this filing" in r.content:
+            error_message = (
+                "Unable to download PDF. "
+                "An attachment page was returned instead."
             )
-            return r
-        return None
+            return None, error_message
+
+        if not is_pdf(r):
+            return None, "Unable to download PDF."
+
+        logger.info(
+            "Got PDF binary data for document #%s in court %s",
+            pacer_doc_id,
+            self.court_id,
+        )
+        return r, ""
 
     @property
     def metadata(self):
@@ -340,7 +357,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         data = {
             "court_id": self.court_id,
-            "docket_number": self._get_tail_by_regex("Docket #|Case Number"),
+            "docket_number": self._parse_docket_number(),
             "case_name": self._get_case_name(),
             "panel": self._get_panel(),
             "nature_of_suit": self._get_tail_by_regex("Nature of Suit"),
@@ -383,9 +400,9 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
         name_role = self.redelimit_p(tree, self.BR_REGEX)
         count = len(name_role)
-        assert (
-            count >= 2
-        ), "Expecting 2+ <br>-delimited portions of party left-hand side."
+        assert count >= 2, (
+            "Expecting 2+ <br>-delimited portions of party left-hand side."
+        )
 
         # Name is first, Role is last
         party["name"] = force_unicode(name_role[0].text_content().strip())
@@ -459,6 +476,32 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         attorney["roles"] = roles
         attorney["contact"] = "\n".join(contacts)
         return attorney
+
+    def _parse_docket_number(self) -> str:
+        """Parse the docket_number from the appellate report.
+        :return: The docket_number.
+        """
+
+        docket_number_regex = "Docket #|Case Number"
+        # Try to parse docket_number first using _get_tail_by_regex.
+        if docket_number := self._get_tail_by_regex(docket_number_regex):
+            return docket_number
+
+        # If that doesn't work, fall back to parsing the docket_number wrapped
+        # in a "tel:" href.
+        nodes = self.tree.re_xpath(
+            f'//*[re:match(text(), "{docket_number_regex}")]'
+        )
+        if not nodes:
+            return ""
+
+        a_node = nodes[0].xpath(
+            "following-sibling::a[starts-with(@href, 'tel:')][1]"
+        )
+        if a_node and a_node[0].text:
+            return clean_string(a_node[0].text)
+
+        return ""
 
     @property
     def parties(self):
@@ -562,6 +605,97 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._parties = parties
         return parties
 
+    def _get_attachment_number(self, row: html.HtmlElement) -> int:
+        """Return the attachment number for an item.
+
+        :param row: Table row as an lxml element
+        :return: Attachment number for row
+        """
+        return int(row.xpath(".//td/text()")[0].strip())
+
+    def _get_description_from_tr(self, row: html.HtmlElement) -> str:
+        """Get the description from the row
+
+        :param row: Table row
+        :return: Attachment description
+        """
+        description_text_nodes = row.xpath("./td[4]//text()")
+        if not description_text_nodes:
+            # No text in the cell.
+            return ""
+        description = description_text_nodes[0].strip()
+        return force_unicode(description)
+
+    @staticmethod
+    def _get_page_count_from_tr(tr: html.HtmlElement) -> Optional[int]:
+        """Take a row from the attachment table and return the page count as an
+        int extracted from the input value.
+        """
+        count = get_input_value_from_tr(tr, 2, 4, " ")
+        if count is not None:
+            return int(count)
+
+    @staticmethod
+    def _get_file_size_bytes_from_tr(tr: html.HtmlElement) -> Optional[int]:
+        """Take a row from the attachment table and return the number of bytes
+        as an int.
+        """
+        file_size_str = get_input_value_from_tr(tr, 3, 4, " ")
+        if file_size_str is None:
+            return None
+        file_size = int(file_size_str)
+        if file_size == 0:
+            return None
+        return file_size
+
+    @staticmethod
+    def _get_pacer_doc_id(row: html.HtmlElement) -> str:
+        return row.xpath(".//a/@data-pacer-doc-id")
+
+    @staticmethod
+    def _get_pacer_seq_no_from_tr(row: html.HtmlElement) -> Optional[str]:
+        """Take a row of the attachment table, and return the sequence number
+        from the name attribute.
+        """
+        try:
+            input = row.xpath(".//input")[0]
+        except IndexError:
+            # No link in the row. Maybe its sealed.
+            pass
+        else:
+            try:
+                name = input.xpath("./@value")[0]
+            except IndexError:
+                # No onclick on this row.
+                pass
+            else:
+                return name.split(" ")[0]
+
+        return None
+
+    def _get_attachments(
+        self, cells: html.HtmlElement
+    ) -> list[dict[str, Any]]:
+        rows = cells.xpath("./table//tr//tr")[1:]
+        result = []
+        for row in rows:
+            attachment = {
+                "attachment_number": self._get_attachment_number(row),
+                "description": self._get_description_from_tr(row),
+                "page_count": self._get_page_count_from_tr(row),
+                "file_size_str": get_file_size_str_from_tr(row),
+                "pacer_doc_id": self._get_pacer_doc_id(row),
+                # It may not be needed to reparse the seq_no
+                # for each row, but we may as well. So far, it
+                # has always been the same as the main document.
+                "pacer_seq_no": self._get_pacer_seq_no_from_tr(row),
+            }
+            file_size_bytes = self._get_file_size_bytes_from_tr(row)
+            if file_size_bytes is not None:
+                attachment["file_size_bytes"] = file_size_bytes
+            result.append(attachment)
+        return result
+
     @property
     def docket_entries(self):
         """Get the docket entries"""
@@ -577,19 +711,41 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         )
         docket_entry_rows = self.tree.xpath(path)
 
+        # Detect if the report was generated with "View multiple documents"
+        # option enabled.
+        view_multiple_documents = False
+        view_selected_btn = self.tree.xpath("//input[@value='View Selected']")
+        if view_selected_btn:
+            view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
             de = {}
             cells = row.xpath("./td")
+            if len(cells) == 0:
+                continue
             if len(cells) == 1:
                 if cells[0].text_content() == "No docket entries found.":
                     break
                 continue
 
             date_filed_str = force_unicode(cells[0].text_content())
+            if (
+                not date_filed_str.strip()
+                and view_multiple_documents
+                and len(cells) >= 3
+            ):
+                last_de = docket_entries[-1]
+                attachments = self._get_attachments(cells[2])
+                if len(attachments) == 0:
+                    continue
+                last_de["attachments"] = attachments
+                continue
             de["date_filed"] = convert_date_string(date_filed_str)
             de["document_number"] = self._get_document_number(cells[1])
             de["pacer_doc_id"] = self._get_pacer_doc_id(cells[1])
+            pacer_seq_no = self._get_pacer_seq_no(cells[1])
+            if pacer_seq_no is not None:
+                de["pacer_seq_no"] = str(pacer_seq_no)
             if not de["document_number"]:
                 if de["pacer_doc_id"]:
                     # If we lack the document number, but have
@@ -628,6 +784,20 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         else:
             doc1_url = urls[0].xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
+
+    @staticmethod
+    def _get_pacer_seq_no(
+        cell: html.HtmlElement,
+    ) -> Optional[_ElementUnicodeResult]:
+        """Take a row from the attachment table and return the input value by
+        index.
+        """
+        try:
+            input = cell.xpath(".//input")[0]
+        except IndexError:
+            return None
+        else:
+            return input.xpath("./@value")[0]
 
     def _get_case_name(self):
         """Get the case name."""

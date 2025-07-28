@@ -33,6 +33,7 @@ class OpinionSiteLinear(OpinionSite):
         "docket_attachment_number",
         "docket_document_number",
         "nature_of_suit",
+        "lower_court_id",
         "lower_court_number",
         "lower_court_judge",
         "author",
@@ -41,6 +42,7 @@ class OpinionSiteLinear(OpinionSite):
         "joined_by",
         "other_date",
         "attorney",
+        "headnote",
     }
 
     def __init__(self, *args, **kwargs):
@@ -111,6 +113,9 @@ class OpinionSiteLinear(OpinionSite):
     def _get_lower_courts(self):
         return self._get_optional_field_by_id("lower_court")
 
+    def _get_lower_court_ids(self):
+        return self._get_optional_field_by_id("lower_court_id")
+
     def _get_lower_court_judges(self):
         return self._get_optional_field_by_id("lower_court_judge")
 
@@ -158,6 +163,10 @@ class OpinionSiteLinear(OpinionSite):
         """Goes into OpinionCluster.attorneys, type: string"""
         return self._get_optional_field_by_id("attorney")
 
+    def _get_headnotes(self):
+        """Goes into OpinionCluster.headnotes, type: string"""
+        return self._get_optional_field_by_id("headnote")
+
     def _check_sanity(self):
         super()._check_sanity()
         # Check that all returned keys have the proper name to be used
@@ -167,7 +176,7 @@ class OpinionSiteLinear(OpinionSite):
                 # happens with mich example files
                 continue
 
-            for key in case.keys():
+            for key in case:
                 if key not in self.valid_keys:
                     raise KeyError(
                         f"Invalid key '{key}' for case dictionary {self.__module__}"

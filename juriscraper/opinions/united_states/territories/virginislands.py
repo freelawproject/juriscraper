@@ -18,11 +18,12 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
-            f"https://supreme.vicourts.org/court_opinions/published_opinions"
+            "https://supreme.vicourts.org/court_opinions/published_opinions"
         )
         self.status = "Published"
         today = date.today()
         self.previous_date = today - timedelta(days=60)
+        self.should_have_results = True
 
     def _process_html(self):
         if self.test_mode_enabled():

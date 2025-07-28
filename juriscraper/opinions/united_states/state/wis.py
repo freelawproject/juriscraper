@@ -1,6 +1,6 @@
 import re
 from datetime import date, datetime, timedelta
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -17,10 +17,9 @@ class Site(OpinionSiteLinear):
         self.base_url = "https://www.wicourts.gov/supreme/scopin.jsp"
         self.status = "Published"
         self.set_url()
-        self.cite_regex = (
-            r"(?P<volume>20\d{2})\s(?P<reporter>WI)\s(?P<page>\d+)"
-        )
+        self.cite_regex = r"20\d{2}\sWI\s\d+"
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def set_url(
         self, start: Optional[date] = None, end: Optional[date] = None
@@ -73,13 +72,12 @@ class Site(OpinionSiteLinear):
         :return: date filed
         """
         first_line = scraped_text[:100].splitlines()[0]
-        match = re.search(self.cite_regex, first_line)
+        if match := re.search(self.cite_regex, first_line):
+            return {"Citation": match.group(0)}
 
-        if match:
-            return {"Citation": {**match.groupdict(), "type": 8}}
         return {}
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple

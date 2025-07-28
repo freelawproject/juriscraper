@@ -9,6 +9,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = "https://www.isc.idaho.gov/appeals-court/coaunpublished"
         self.status = "Unpublished"
+        self.should_have_results = True
 
     def _process_html(self):
         for item in self.html.xpath('//li[contains(.//a/@href, ".pdf")]'):
@@ -16,7 +17,7 @@ class Site(OpinionSiteLinear):
             date_string = " ".join(text.split()[0:3])
             try:
                 convert_date_string(date_string)
-            except:
+            except Exception:
                 raise InsanityException(f'Unexpected text format: "{text}"')
             docket_name = text.replace(date_string, "").strip().lstrip("-")
 

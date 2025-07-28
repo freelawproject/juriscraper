@@ -1,2464 +1,474 @@
 {
+    "st": "publishdate:range(2022-06-14,2022-06-14)  AND  courtname:(United States Court of Appeals for the Fourth Circuit) AND collection:USCOURTS",
     "currentPage": 0,
-    "iTotalCount": 299,
-    "navigators": [
-        {
-            "buckets": [
-                {
-                    "count": 11388,
-                    "displayValue": "United States Courts Opinions",
-                    "selected": true,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "USCOURTS"
-                },
-                {
-                    "count": 566,
-                    "displayValue": "Congressional Bills",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "BILLS"
-                },
-                {
-                    "count": 93,
-                    "displayValue": "Compilation of Presidential Documents",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "CPD"
-                },
-                {
-                    "count": 55,
-                    "displayValue": "Congressional Reports",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "CRPT"
-                },
-                {
-                    "count": 33,
-                    "displayValue": "Congressional Calendars",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "CCAL"
-                }
-            ],
-            "collectionSpecific": false,
-            "customSortName": "alphabetical",
-            "displayName": "Collection",
-            "hasMore": true,
-            "name": "accodenav",
-            "selected": true,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 299,
-                    "displayValue": "2022",
-                    "selected": false,
-                    "totalCount": 24,
-                    "treeBuckets": [
-                        {
-                            "count": 196,
-                            "displayValue": "July",
-                            "selected": false,
-                            "totalCount": 18,
-                            "treeBuckets": [
-                                {
-                                    "count": 31,
-                                    "displayValue": "25",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/25"
-                                },
-                                {
-                                    "count": 25,
-                                    "displayValue": "01",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/01"
-                                },
-                                {
-                                    "count": 25,
-                                    "displayValue": "26",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/26"
-                                },
-                                {
-                                    "count": 16,
-                                    "displayValue": "22",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/22"
-                                },
-                                {
-                                    "count": 13,
-                                    "displayValue": "07",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/07"
-                                },
-                                {
-                                    "count": 13,
-                                    "displayValue": "12",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/12"
-                                },
-                                {
-                                    "count": 13,
-                                    "displayValue": "21",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/21"
-                                },
-                                {
-                                    "count": 12,
-                                    "displayValue": "15",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/15"
-                                },
-                                {
-                                    "count": 12,
-                                    "displayValue": "19",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/19"
-                                },
-                                {
-                                    "count": 11,
-                                    "displayValue": "20",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/20"
-                                },
-                                {
-                                    "count": 6,
-                                    "displayValue": "14",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/14"
-                                },
-                                {
-                                    "count": 5,
-                                    "displayValue": "06",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/06"
-                                },
-                                {
-                                    "count": 4,
-                                    "displayValue": "05",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/05"
-                                },
-                                {
-                                    "count": 4,
-                                    "displayValue": "18",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/18"
-                                },
-                                {
-                                    "count": 3,
-                                    "displayValue": "08",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/08"
-                                },
-                                {
-                                    "count": 2,
-                                    "displayValue": "13",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/13"
-                                },
-                                {
-                                    "count": 1,
-                                    "displayValue": "11",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/07/11"
-                                }
-                            ],
-                            "valid": true,
-                            "value": "2022/07"
-                        },
-                        {
-                            "count": 103,
-                            "displayValue": "June",
-                            "selected": false,
-                            "totalCount": 5,
-                            "treeBuckets": [
-                                {
-                                    "count": 34,
-                                    "displayValue": "30",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/06/30"
-                                },
-                                {
-                                    "count": 32,
-                                    "displayValue": "27",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/06/27"
-                                },
-                                {
-                                    "count": 28,
-                                    "displayValue": "28",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/06/28"
-                                },
-                                {
-                                    "count": 9,
-                                    "displayValue": "29",
-                                    "selected": false,
-                                    "totalCount": 1,
-                                    "valid": true,
-                                    "value": "2022/06/29"
-                                }
-                            ],
-                            "valid": true,
-                            "value": "2022/06"
-                        }
-                    ],
-                    "valid": true,
-                    "value": "2022"
-                }
-            ],
-            "collectionSpecific": false,
-            "customSortName": "date",
-            "displayName": "Date Published",
-            "hasMore": false,
-            "name": "publishdatehier",
-            "selected": false,
-            "tree": true,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 1754,
-                    "displayValue": "United States District Court Eastern District of California",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of California"
-                },
-                {
-                    "count": 793,
-                    "displayValue": "United States District Court Northern District of California",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of California"
-                },
-                {
-                    "count": 585,
-                    "displayValue": "United States District Court Southern District of California",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Southern District of California"
-                },
-                {
-                    "count": 437,
-                    "displayValue": "United States District Court District of Nebraska",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Nebraska"
-                },
-                {
-                    "count": 337,
-                    "displayValue": "United States District Court District of New Jersey",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of New Jersey"
-                },
-                {
-                    "count": 299,
-                    "displayValue": "United States Court of Appeals for the Fourth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Fourth Circuit"
-                },
-                {
-                    "count": 282,
-                    "displayValue": "United States District Court Eastern District of Michigan",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Michigan"
-                },
-                {
-                    "count": 278,
-                    "displayValue": "United States Court of Appeals for the Fifth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Fifth Circuit"
-                },
-                {
-                    "count": 249,
-                    "displayValue": "United States District Court Northern District of Texas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Texas"
-                },
-                {
-                    "count": 234,
-                    "displayValue": "United States Court of Federal Claims",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Federal Claims"
-                },
-                {
-                    "count": 213,
-                    "displayValue": "United States District Court Northern District of Illinois",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Illinois"
-                },
-                {
-                    "count": 208,
-                    "displayValue": "United States District Court Eastern District of Pennsylvania",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Pennsylvania"
-                },
-                {
-                    "count": 203,
-                    "displayValue": "United States District Court District of Oregon",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Oregon"
-                },
-                {
-                    "count": 182,
-                    "displayValue": "United States Court of Appeals for the Eleventh Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Eleventh Circuit"
-                },
-                {
-                    "count": 182,
-                    "displayValue": "United States District Court Middle District of Georgia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Middle District of Georgia"
-                },
-                {
-                    "count": 179,
-                    "displayValue": "United States District Court Eastern District of Missouri",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Missouri"
-                },
-                {
-                    "count": 178,
-                    "displayValue": "United States District Court District of Arizona",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Arizona"
-                },
-                {
-                    "count": 175,
-                    "displayValue": "United States District Court Eastern District of Louisiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Louisiana"
-                },
-                {
-                    "count": 168,
-                    "displayValue": "United States District Court District of Maryland",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Maryland"
-                },
-                {
-                    "count": 168,
-                    "displayValue": "United States District Court Northern District of Ohio",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Ohio"
-                },
-                {
-                    "count": 164,
-                    "displayValue": "United States District Court Eastern District of New York",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of New York"
-                },
-                {
-                    "count": 157,
-                    "displayValue": "United States District Court Southern District of Texas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Southern District of Texas"
-                },
-                {
-                    "count": 151,
-                    "displayValue": "United States District Court District of Montana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Montana"
-                },
-                {
-                    "count": 151,
-                    "displayValue": "United States District Court Southern District of Florida",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Southern District of Florida"
-                },
-                {
-                    "count": 150,
-                    "displayValue": "United States District Court District of Kansas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Kansas"
-                },
-                {
-                    "count": 141,
-                    "displayValue": "United States District Court District of Minnesota",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Minnesota"
-                },
-                {
-                    "count": 138,
-                    "displayValue": "United States Court of Appeals for the Tenth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Tenth Circuit"
-                },
-                {
-                    "count": 136,
-                    "displayValue": "United States District Court Western District of Pennsylvania",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Pennsylvania"
-                },
-                {
-                    "count": 131,
-                    "displayValue": "United States District Court Northern District of New York",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of New York"
-                },
-                {
-                    "count": 129,
-                    "displayValue": "United States District Court District of Columbia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Columbia"
-                },
-                {
-                    "count": 128,
-                    "displayValue": "United States District Court Western District of Texas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Texas"
-                },
-                {
-                    "count": 118,
-                    "displayValue": "United States District Court Middle District of Pennsylvania",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Middle District of Pennsylvania"
-                },
-                {
-                    "count": 117,
-                    "displayValue": "United States Court of Appeals for the Eighth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Eighth Circuit"
-                },
-                {
-                    "count": 111,
-                    "displayValue": "United States District Court Western District of Arkansas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Arkansas"
-                },
-                {
-                    "count": 110,
-                    "displayValue": "United States Court of Appeals for the Seventh Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Seventh Circuit"
-                },
-                {
-                    "count": 107,
-                    "displayValue": "United States District Court Western District of Michigan",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Michigan"
-                },
-                {
-                    "count": 105,
-                    "displayValue": "United States District Court Middle District of Tennessee",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Middle District of Tennessee"
-                },
-                {
-                    "count": 104,
-                    "displayValue": "United States District Court Southern District of Indiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Southern District of Indiana"
-                },
-                {
-                    "count": 101,
-                    "displayValue": "United States District Court Eastern District of Washington",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Washington"
-                },
-                {
-                    "count": 100,
-                    "displayValue": "United States Court of Appeals for the Third Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Third Circuit"
-                },
-                {
-                    "count": 93,
-                    "displayValue": "United States District Court Northern District of Florida",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Florida"
-                },
-                {
-                    "count": 92,
-                    "displayValue": "United States District Court District of Utah",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Utah"
-                },
-                {
-                    "count": 91,
-                    "displayValue": "United States District Court Eastern District of Tennessee",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Tennessee"
-                },
-                {
-                    "count": 89,
-                    "displayValue": "United States Court of Appeals for the Sixth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Sixth Circuit"
-                },
-                {
-                    "count": 80,
-                    "displayValue": "United States District Court District of Connecticut",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Connecticut"
-                },
-                {
-                    "count": 76,
-                    "displayValue": "United States District Court District of Massachusetts",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Massachusetts"
-                },
-                {
-                    "count": 71,
-                    "displayValue": "United States District Court Western District of Missouri",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Missouri"
-                },
-                {
-                    "count": 70,
-                    "displayValue": "United States District Court Northern District of Alabama",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Alabama"
-                },
-                {
-                    "count": 68,
-                    "displayValue": "United States District Court District of Colorado",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Colorado"
-                },
-                {
-                    "count": 64,
-                    "displayValue": "United States District Court District of Maine",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Maine"
-                },
-                {
-                    "count": 63,
-                    "displayValue": "United States District Court Northern District of Iowa",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Iowa"
-                },
-                {
-                    "count": 62,
-                    "displayValue": "United States Court of Appeals for the District of Columbia Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the District of Columbia Circuit"
-                },
-                {
-                    "count": 62,
-                    "displayValue": "United States District Court District of Delaware",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Delaware"
-                },
-                {
-                    "count": 60,
-                    "displayValue": "United States District Court Western District of Kentucky",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Kentucky"
-                },
-                {
-                    "count": 57,
-                    "displayValue": "United States Court of Appeals for the Ninth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Ninth Circuit"
-                },
-                {
-                    "count": 52,
-                    "displayValue": "United States Court of Appeals for the Federal Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Federal Circuit"
-                },
-                {
-                    "count": 46,
-                    "displayValue": "United States District Court Northern District of West Virginia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of West Virginia"
-                },
-                {
-                    "count": 43,
-                    "displayValue": "United States District Court Middle District of Louisiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Middle District of Louisiana"
-                },
-                {
-                    "count": 39,
-                    "displayValue": "United States District Court District of Idaho",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Idaho"
-                },
-                {
-                    "count": 39,
-                    "displayValue": "United States District Court Western District of Tennessee",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Western District of Tennessee"
-                },
-                {
-                    "count": 32,
-                    "displayValue": "United States District Court District of Hawaii",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Hawaii"
-                },
-                {
-                    "count": 30,
-                    "displayValue": "United States District Court Northern District of Georgia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Northern District of Georgia"
-                },
-                {
-                    "count": 28,
-                    "displayValue": "United States District Court Eastern District of Oklahoma",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Eastern District of Oklahoma"
-                },
-                {
-                    "count": 27,
-                    "displayValue": "United States District Court District of Puerto Rico",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Puerto Rico"
-                },
-                {
-                    "count": 25,
-                    "displayValue": "United States District Court District of South Dakota",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of South Dakota"
-                },
-                {
-                    "count": 24,
-                    "displayValue": "United States District Court District of Alaska",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Alaska"
-                },
-                {
-                    "count": 21,
-                    "displayValue": "United States Court of Appeals for the First Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the First Circuit"
-                },
-                {
-                    "count": 21,
-                    "displayValue": "United States District Court District of New Hampshire",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of New Hampshire"
-                },
-                {
-                    "count": 20,
-                    "displayValue": "United States District Court District of Vermont",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Vermont"
-                },
-                {
-                    "count": 19,
-                    "displayValue": "United States District Court Middle District of North Carolina",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court Middle District of North Carolina"
-                },
-                {
-                    "count": 16,
-                    "displayValue": "United States Court of Appeals for the Second Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Second Circuit"
-                },
-                {
-                    "count": 15,
-                    "displayValue": "United States Court of International Trade",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of International Trade"
-                },
-                {
-                    "count": 13,
-                    "displayValue": "United States District Court District of North Dakota",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of North Dakota"
-                },
-                {
-                    "count": 12,
-                    "displayValue": "United States Bankruptcy Court Southern District of New York",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Southern District of New York"
-                },
-                {
-                    "count": 10,
-                    "displayValue": "United States District Court of the Virgin Islands",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court of the Virgin Islands"
-                },
-                {
-                    "count": 9,
-                    "displayValue": "United States District Court District of Guam",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States District Court District of Guam"
-                },
-                {
-                    "count": 7,
-                    "displayValue": "United States Bankruptcy Court Eastern District of Oklahoma",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of Oklahoma"
-                },
-                {
-                    "count": 6,
-                    "displayValue": "United States Bankruptcy Court District of Delaware",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Delaware"
-                },
-                {
-                    "count": 5,
-                    "displayValue": "United States Bankruptcy Court Southern District of Florida",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Southern District of Florida"
-                },
-                {
-                    "count": 5,
-                    "displayValue": "United States Bankruptcy Court Southern District of Texas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Southern District of Texas"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court Central District of California",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Central District of California"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court District of New Jersey",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of New Jersey"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court District of New Mexico",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of New Mexico"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court Eastern District of New York",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of New York"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court Eastern District of North Carolina",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of North Carolina"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court Eastern District of Wisconsin",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of Wisconsin"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court Northern District of Illinois",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Northern District of Illinois"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "United States Bankruptcy Court Western District of Texas",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Texas"
-                },
-                {
-                    "count": 3,
-                    "displayValue": "United States Bankruptcy Court Eastern District of Pennsylvania",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of Pennsylvania"
-                },
-                {
-                    "count": 3,
-                    "displayValue": "United States Bankruptcy Court Northern District of Georgia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Northern District of Georgia"
-                },
-                {
-                    "count": 3,
-                    "displayValue": "United States Bankruptcy Court Northern District of Ohio",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Northern District of Ohio"
-                },
-                {
-                    "count": 3,
-                    "displayValue": "United States Bankruptcy Court Western District of Pennsylvania",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Pennsylvania"
-                },
-                {
-                    "count": 2,
-                    "displayValue": "United States Bankruptcy Court Eastern District of Tennessee",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of Tennessee"
-                },
-                {
-                    "count": 2,
-                    "displayValue": "United States Bankruptcy Court Middle District of Florida",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Middle District of Florida"
-                },
-                {
-                    "count": 2,
-                    "displayValue": "United States Bankruptcy Court Southern District of Illinois",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Southern District of Illinois"
-                },
-                {
-                    "count": 2,
-                    "displayValue": "United States Bankruptcy Court Western District of Michigan",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Michigan"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Arizona",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Arizona"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Columbia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Columbia"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Hawaii",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Hawaii"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Maryland",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Maryland"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Massachusetts",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Massachusetts"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Montana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Montana"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court District of Puerto Rico",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court District of Puerto Rico"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Eastern District of California",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of California"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Eastern District of Louisiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Eastern District of Louisiana"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Middle District of Georgia",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Middle District of Georgia"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Middle District of Louisiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Middle District of Louisiana"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Northern District of California",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Northern District of California"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Northern District of Mississippi",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Northern District of Mississippi"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Southern District of Indiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Southern District of Indiana"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Southern District of Ohio",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Southern District of Ohio"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Western District of Louisiana",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Louisiana"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Western District of Missouri",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Missouri"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Western District of New York",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of New York"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Western District of Oklahoma",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Oklahoma"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Western District of Washington",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Washington"
-                },
-                {
-                    "count": 1,
-                    "displayValue": "United States Bankruptcy Court Western District of Wisconsin",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Bankruptcy Court Western District of Wisconsin"
-                }
-            ],
-            "collectionSpecific": false,
-            "customSortName": "alphabetical",
-            "displayName": "Government Author",
-            "hasMore": false,
-            "name": "governmentauthornav",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 299,
-                    "displayValue": "United States Court of Appeals for the Fourth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States Court of Appeals for the Fourth Circuit"
-                }
-            ],
-            "collectionSpecific": false,
-            "customSortName": "alphabetical",
-            "displayName": "Organization",
-            "hasMore": false,
-            "name": "companiesnav",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 153,
-                    "displayValue": "United States of America",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "United States of America"
-                },
-                {
-                    "count": 9,
-                    "displayValue": "Merrick B. Garland",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "Merrick B. Garland"
-                },
-                {
-                    "count": 7,
-                    "displayValue": "Ronald Satish Emrit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "Ronald Satish Emrit"
-                },
-                {
-                    "count": 4,
-                    "displayValue": "3D Systems, Inc.",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "3D Systems, Inc."
-                },
-                {
-                    "count": 4,
-                    "displayValue": "Board of Immigration Appeals",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "Board of Immigration Appeals"
-                }
-            ],
-            "collectionSpecific": false,
-            "customSortName": "alphabetical",
-            "displayName": "Person",
-            "hasMore": true,
-            "name": "personnamesnav",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 299,
-                    "displayValue": "Appellate",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "CourtType1"
-                }
-            ],
-            "collectionSpecific": true,
-            "customSortName": "alphabetical",
-            "displayName": "Court Type",
-            "hasMore": false,
-            "name": "courttypenav",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 299,
-                    "displayValue": "United States Court of Appeals for the Fourth Circuit",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "1040-United States Court of Appeals for the Fourth Circuit"
-                }
-            ],
-            "collectionSpecific": true,
-            "customSortName": "alphabetical",
-            "displayName": "Court Name",
-            "hasMore": false,
-            "name": "courtnamenav",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [
-                {
-                    "count": 299,
-                    "displayValue": "4th",
-                    "selected": false,
-                    "totalCount": 1,
-                    "valid": true,
-                    "value": "4"
-                }
-            ],
-            "collectionSpecific": true,
-            "customSortName": "alphabetical",
-            "displayName": "Circuit",
-            "hasMore": false,
-            "name": "circuit",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        },
-        {
-            "buckets": [],
-            "collectionSpecific": true,
-            "customSortName": "alphabetical",
-            "displayName": "State",
-            "hasMore": false,
-            "name": "statenav",
-            "selected": false,
-            "tree": false,
-            "type": 0
-        }
-    ],
+    "iTotalCount": 16,
     "nextPage": 0,
     "previousPage": 0,
-    "resultSet": [
+    "navigators": [
+        {
+            "name": "accodenav",
+            "displayName": "Collection",
+            "customSortName": "count",
+            "type": 0,
+            "tree": false,
+            "selected": true,
+            "collectionSpecific": false,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "USCOURTS",
+                    "displayValue": "United States Courts Opinions",
+                    "selected": true,
+                    "count": 16,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
+        {
+            "name": "publishdatehier",
+            "displayName": "Date Published",
+            "customSortName": "count",
+            "type": 0,
+            "tree": true,
+            "selected": false,
+            "collectionSpecific": false,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "2022",
+                    "displayValue": "2022",
+                    "selected": false,
+                    "count": 16,
+                    "valid": true,
+                    "treeBuckets": [
+                        {
+                            "value": "2022/06",
+                            "displayValue": "June",
+                            "selected": false,
+                            "count": 16,
+                            "valid": true,
+                            "treeBuckets": [
+                                {
+                                    "value": "2022/06/14",
+                                    "displayValue": "14",
+                                    "selected": false,
+                                    "count": 16,
+                                    "valid": true,
+                                    "totalCount": 1
+                                }
+                            ],
+                            "totalCount": 2
+                        }
+                    ],
+                    "totalCount": 3
+                }
+            ]
+        },
+        {
+            "name": "governmentauthornav",
+            "displayName": "Government Author",
+            "customSortName": "count",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": false,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "United States Court of Appeals for the Fourth Circuit",
+                    "displayValue": "United States Court of Appeals for the Fourth Circuit",
+                    "selected": false,
+                    "count": 16,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
+        {
+            "name": "companiesnav",
+            "displayName": "Organization",
+            "customSortName": "count",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": false,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "United States Court of Appeals for the Fourth Circuit",
+                    "displayValue": "United States Court of Appeals for the Fourth Circuit",
+                    "selected": false,
+                    "count": 16,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
         {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06387",
-                "teaser": "... - Appellee. Appeal from the United States District Court for the Eastern District of Virginia, at Richmond. John A. Gibney, Jr., Senior District Judge. (3:20-cv-00577-JAG-EWH) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Dismissed by unpublished per curiam opinion. Sean K. Heyward, Appellant ...",
-                "title": "Sean Heyward v. Harold Clarke"
-            },
-            "index": "1",
-            "line1": "22-6387 - Sean Heyward v. Harold Clarke",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04428",
-                "teaser": "..., a/k/a Sosa, Defendant - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Newport News. David J. Novak, District Judge. (4:20-cr-00015-DJN-LRL-1) Submitted: April 25, 2022 Decided: July 26, 2022 Before GREGORY, Chief Judge, DIAZ, and THACKER, Circuit Judges. Affirmed by unpublished per curiam ...",
-                "title": "US v. Dawhan Archible"
-            },
-            "index": "2",
-            "line1": "21-4428 - US v. Dawhan Archible",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06142",
-                "teaser": "... Well Path Health Care; NURSE WALL, Charge Nurse with Corizon Health Care; A. BOYD, HSA of Well Path Health Care & Corizon Health Care, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Richmond. Henry E. Hudson, Senior District Judge. (3:21-cv-00692-HEH-EWH) Submitted: July 21, 2022 ...",
-                "title": "DeAndre Dunston v. Mary Taylor"
-            },
-            "index": "3",
-            "line1": "22-6142 - DeAndre Dunston v. Mary Taylor",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01593",
-                "teaser": "... Plaintiff - Appellee, v. SSC SENECA OPERATING COMPANY LLC, d/b/a Seneca Health and Rehabilitation Center; SAVASENIORCARE ADMINISTRATIVE SERVICES, LLC; SAVASENIORCARE CONSULTING LLC, Defendants \u2013 Appellants, and SAVASENIORCARE, LLC; SSC EQUITY HOLDINGS, LLC, Defendants. Appeal from the United States District Court for the District of South Carolina...",
-                "title": "Tammy Fowler v. SSC Seneca Operating Company LLC"
-            },
-            "index": "4",
-            "line1": "21-1593 - Tammy Fowler v. SSC Seneca Operating Company LLC",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01586",
-                "teaser": "...(1:21-cv-03156-JRR) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Petition denied by unpublished per curiam opinion. William Whittman, Petitioner Pro Se. Unpublished opinions are not binding precedent in this circuit. USCA4 Appeal: 22-1586 Doc: 9 Filed: 07/26/2022 Pg: 1 of 2 2 PER CURIAM: William ...",
-                "title": "In re: William Whittman"
-            },
-            "index": "5",
-            "line1": "22-1586 - In re: William Whittman",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06246",
-                "teaser": ".... Appeal from the United States District Court for the Eastern District of Virginia, at Norfolk. Arenda L. Wright Allen, District Judge. (2:20-cv-00637-AWA-RJK) Submitted: July 13, 2022 Decided: July 26, 2022 Before NIEMEYER, WYNN, and QUATTLEBAUM, Circuit Judges. Affirmed by unpublished per curiam opinion. Joe Lee Fulgham, Appellant Pro Se. ...",
-                "title": "Joe Fulgham v. Unknown"
-            },
-            "index": "6",
-            "line1": "22-6246 - Joe Fulgham v. Unknown",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06255",
-                "teaser": "... E. ISHEE, Commissioner, Director of Department of Public Safety, Respondent - Appellee. No. 22-6255 ABDU-SALIM GOULD, a/k/a Salimabdu Gould, Petitioner - Appellant, v. TODD E. ISHEE, Commissioner, Director of Department of Public Safety, Respondent - Appellee. Appeals from the United States District Court for the Eastern District of North ...",
-                "title": "Abdu-Salim Gould v. Todd Ishee"
-            },
-            "index": "7",
-            "line1": "22-6255 - Abdu-Salim Gould v. Todd Ishee",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-18-04824",
-                "teaser": "... \u2013 Appellant. Appeal from the United States District Court for the District of South Carolina, at Spartanburg. Timothy M. Cain, District Judge. (7:16-cr-00776-TMC-3) Submitted: April 25, 2022 Decided: July 26, 2022 Before GREGORY, Chief Judge, HARRIS, Circuit Judge, and KEENAN, Senior Circuit Judge. Affirmed by unpublished per curiam opinion. ON ...",
-                "title": "US v. Soeuth Ath"
-            },
-            "index": "8",
-            "line1": "18-4824 - US v. Soeuth Ath",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06227",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Claude M. Hilton, Senior District Judge. (1:01-cr-00191-CMH-1) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. David Hill, Appellant Pro Se. ...",
-                "title": "US v. David Hill"
-            },
-            "index": "9",
-            "line1": "22-6227 - US v. David Hill",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-00006",
-                "teaser": "... Correctional Institution, Respondent - Appellee. Appeal from the United States District Court for the District of South Carolina, at Rock Hill. Donald C. Coggins, Jr., District Judge. (0:18-cv-01544-DCC-PJG) Argued: September 22, 2021 Decided: July 26, 2022 Before GREGORY, Chief Judge, HARRIS, and RUSHING, Circuit Judges. Reversed and remanded...",
-                "title": "Quincy Allen v. Michael Stephan"
-            },
-            "index": "10",
-            "line1": "20-006 - Quincy Allen v. Michael Stephan",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06083",
-                "teaser": "... Attorney; ROBERT SPENCER, Asst. U.S. Attorney; KAREN NESTER, FBI Agent; PAUL TIMKO, FBI Agent; JANE DOE, Warden, D.C. Jail; JOHN DOE, Correctional Officer; JOHN DOE, Correctional Officer; JANE DOE, Correctional Officer; ALEXANDRIA DISTRICT ATTORNEY\u2019S OFFICE, U.S. Attorney Office; GERALD B. LEE, Former Judge, Defendants - Appellees. Appeal from the...",
-                "title": "David Hill v. Paul McNulty"
-            },
-            "index": "11",
-            "line1": "22-6083 - David Hill v. Paul McNulty",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06343",
-                "teaser": "... - Appellee. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. Terrence W. Boyle, District Judge. (5:20-hc-02160-BO) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Dismissed by unpublished per curiam opinion. Ronald Dennis Williams, ...",
-                "title": "Ronald Williams v. Shanticia Hawkins"
-            },
-            "index": "12",
-            "line1": "22-6343 - Ronald Williams v. Shanticia Hawkins",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06084",
-                "teaser": "... - Appellant, v. LIEUTENANT BURNS; SERGEANT CHRISTOPHER COONS; CORPORAL COOPER; CORPORAL JULIUS BEAN, Defendants - Appellees, and SHERIFF L. C. KNIGHT; MAJOR RICHARD DARLINGTON, Defendants. No. 22-6086 JAMARV PAREMORE HAMMOND, also known as Jamarv P. Hammond, #265009, Plaintiff - Appellant, v. SHERIFF L. C. KNIGHT; MAJOR R. DARLINGTON; ...",
-                "title": "Jamarv Hammond v. Lieutenant Burns"
-            },
-            "index": "13",
-            "line1": "22-6084 - Jamarv Hammond v. Lieutenant Burns",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06086",
-                "teaser": "... - Appellant, v. LIEUTENANT BURNS; SERGEANT CHRISTOPHER COONS; CORPORAL COOPER; CORPORAL JULIUS BEAN, Defendants - Appellees, and SHERIFF L. C. KNIGHT; MAJOR RICHARD DARLINGTON, Defendants. No. 22-6086 JAMARV PAREMORE HAMMOND, also known as Jamarv P. Hammond, #265009, Plaintiff - Appellant, v. SHERIFF L. C. KNIGHT; MAJOR R. DARLINGTON; ...",
-                "title": "Jamarv Hammond v. L. Knight"
-            },
-            "index": "14",
-            "line1": "22-6086 - Jamarv Hammond v. L. Knight",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06336",
-                "teaser": "... - Appellee. Appeal from the United States District Court for the Southern District of West Virginia, at Beckley. Frank W. Volk, District Judge. (5:20-cv-00857) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed as modified by unpublished per curiam opinion. Ethan Jerome Moore, Appellant Pro...",
-                "title": "Ethan Moore v. David Young"
-            },
-            "index": "15",
-            "line1": "22-6336 - Ethan Moore v. David Young",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06215",
-                "teaser": "... ROGERS, Defendant - Appellant. Appeal from the United States District Court for the District of South Carolina, at Florence. Mary G. Lewis, District Judge. (4:14-cr-00028-MGL-1) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. Christopher Ray-Bryan Rogers...",
-                "title": "US v. Christopher Rogers"
-            },
-            "index": "16",
-            "line1": "22-6215 - US v. Christopher Rogers",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06153",
-                "teaser": "... HYATT; DETECTIVE C. PODGURSKI; RENEE DICKENS; MICHAEL FULLER; DAVID FUELINGER; OFFICER ALLEN; OFFICER MASTERS; DETECTIVE GENSEL; OFFICER NOPPINGER, Defendants - Appellees. Appeal from the United States District Court for the District of Maryland, at Greenbelt. George Jarrod Hazel, District Judge. (8:20-cv-02173-GJH) Submitted: July 21, 2022 ...",
-                "title": "Terrance Hammock v. Melissa Hyatt"
-            },
-            "index": "17",
-            "line1": "22-6153 - Terrance Hammock v. Melissa Hyatt",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06382",
-                "teaser": "...KENNETH NELSON, Warden, Respondent - Appellee. Appeal from the United States District Court for the District of South Carolina, at Orangeburg. Joseph Dawson, III, District Judge. (5:21-cv-01987-JD) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Dismissed by unpublished per curiam opinion. George A....",
-                "title": "George Jones v. Kenneth Nelson"
-            },
-            "index": "18",
-            "line1": "22-6382 - George Jones v. Kenneth Nelson",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06045",
-                "teaser": "...; NC DPS, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. Richard E. Myers, II, Chief District Judge. (5:21-ct-03210-M) Submitted: July 20, 2022 Decided: July 26, 2022 Before THACKER and RUSHING, Circuit Judges, and TRAXLER, Senior Circuit Judge. Affirmed by unpublished ...",
-                "title": "Timothy Davis v. Chia Wang"
-            },
-            "index": "19",
-            "line1": "22-6045 - Timothy Davis v. Chia Wang",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06160",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the District of South Carolina, at Spartanburg. Henry M. Herlong, Jr., Senior District Judge. (7:04-cr-00027-HMH-1; 7:22- cv-00011-HMH) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Dismissed by unpublished per curiam opinion. ...",
-                "title": "US v. Kenneth Brown"
-            },
-            "index": "20",
-            "line1": "22-6160 - US v. Kenneth Brown",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06079",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. N. Carlton Tilley, Jr., Senior District Judge. (1:14-cr-00190-NCT-1; 1:17- cv-00124-NCT-JLW) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Dismissed by unpublished per ...",
-                "title": "US v. Roger Lunsford"
-            },
-            "index": "21",
-            "line1": "22-6079 - US v. Roger Lunsford",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06182",
-                "teaser": "...Sussex II State Prison; OFFICER VANDERMARK; OFFICER R. JOHNSON, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Richmond. David J. Novak, District Judge. (3:20-cv-00511-DJN-EWH) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by ...",
-                "title": "Robert Via, Jr. v. Beth Cabell"
-            },
-            "index": "22",
-            "line1": "22-6182 - Robert Via, Jr. v. Beth Cabell",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06138",
-                "teaser": "...a Chili, Defendant - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Asheville. Martin K. Reidinger, Chief District Judge. (1:01-cr-00052-MR-WCM-7) Submitted: July 21, 2022 Decided: July 26, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. ...",
-                "title": "US v. Ventura Garcia"
-            },
-            "index": "23",
-            "line1": "22-6138 - US v. Ventura Garcia",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06193",
-                "teaser": "...k/a Billy, Jail Officer; MR. CAPPS, C/O Jail Officer; MR. JONES, C/O Jail Officer, Defendants - Appellees, and MEHERRIN RIVER REGIONAL JAIL, Defendant. Appeal from the United States District Court for the Eastern District of Virginia, at Richmond. John A. Gibney, Jr., Senior District Judge. (3:21-cv-00262-JAG-EWH) Submitted: July 21, 2022 Decided: ...",
-                "title": "Stephen Reese v. William Newman"
-            },
-            "index": "24",
-            "line1": "22-6193 - Stephen Reese v. William Newman",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06195",
-                "teaser": "... E. ISHEE, Commissioner, Director of Department of Public Safety, Respondent - Appellee. No. 22-6255 ABDU-SALIM GOULD, a/k/a Salimabdu Gould, Petitioner - Appellant, v. TODD E. ISHEE, Commissioner, Director of Department of Public Safety, Respondent - Appellee. Appeals from the United States District Court for the Eastern District of North ...",
-                "title": "Abdu-Salim Gould v. Todd Ishee"
-            },
-            "index": "25",
-            "line1": "22-6195 - Abdu-Salim Gould v. Todd Ishee",
-            "line2": "United States Courts Opinions. Tuesday, July 26, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04420",
-                "teaser": "..., a/k/a Twan, Defendant - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. Richard E. Myers, II, Chief District Judge. (5:15-cr-00172-M-2) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. ON ...",
-                "title": "US v. Antoine Myles"
-            },
-            "index": "26",
-            "line1": "21-4420 - US v. Antoine Myles",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01065",
-                "teaser": "...; JUSTICE EVAN JENKINS; JUSTICE BETH WALKER; JUSTICE BILL WOOTEN; JUSTICE TIM ARMSTEAD; JUSTICE JOHN HUTCHINSON; EDYTHE GAISER; ANNE LAMBRIGHT; GAIL HENDERSON STAPLES, Defendants - Appellees. Appeal from the United States District Court for the Southern District of West Virginia, at Charleston. Irene C. Berger, District Judge. (2:21-cv-00119) ...",
-                "title": "Anthony Zappin v. Rachael Fletcher Cipoletti"
-            },
-            "index": "27",
-            "line1": "22-1065 - Anthony Zappin v. Rachael Fletcher Cipoletti",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07628",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the District of Maryland, at Greenbelt. Theodore D. Chuang, District Judge. (8:16-cr-00108-TDC-1) Submitted: June 29, 2022 Decided: July 25, 2022 Before NIEMEYER and RUSHING, Circuit Judges, and KEENAN, Senior Circuit Judge. Affirmed by unpublished per curiam opinion. ...",
-                "title": "US v. Derrick Battle"
-            },
-            "index": "28",
-            "line1": "21-7628 - US v. Derrick Battle",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01268",
-                "teaser": "..., doing business as Skillets Restaurant; GOOD BREAKFAST, LLC, d/b/a Skillets Restaurant; SKILLETS HOLDINGS, LLC, Plaintiffs - Appellants, v. COLONY INSURANCE COMPANY, Defendant - Appellee. RESTAURANT LAW CENTER; VIRGINIA RESTAURANT, LODGING & TRAVEL ASSOCIATION, Amici Supporting Appellants, AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION; ...",
-                "title": "Skillets, LLC v. Colony Insurance Company"
-            },
-            "index": "29",
-            "line1": "21-1268 - Skillets, LLC v. Colony Insurance Company",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01195",
-                "teaser": "...; M. KANG, Police Officer; N. MINDELL, Police Officer; S. BUTZER, Police Officer; H. BUCHOFER, Police Officer; ARLINGTON COUNTY, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Rossie David Alston, Jr., District Judge. (1:20-cv-00113-RDA-TCB) Submitted: July 21, 2022 ...",
-                "title": "Benedict Emesowum v. Ashley Buxton"
-            },
-            "index": "30",
-            "line1": "22-1195 - Benedict Emesowum v. Ashley Buxton",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-06505",
-                "teaser": "... as Sheriff of the Richland County Sheriff\u2019s Department; JAMES GILBERT, in his individual capacity, Defendants - Appellees. Appeal from the United States District Court for the District of South Carolina, at Columbia. Mary G. Lewis, District Judge. (3:19-cv-00026-MGL) Submitted: April 29, 2022 Decided: July 25, 2022 Before GREGORY, Chief Judge, ...",
-                "title": "LeAnne Culbertson v. Leon Lott"
-            },
-            "index": "31",
-            "line1": "21-6505 - LeAnne Culbertson v. Leon Lott",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04473",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:19-cr-00095-D-1) Argued: May 5, 2022 Decided: July 25, 2022 Before KING and RICHARDSON, Circuit Judges, and KEENAN, Senior Circuit Judge. Affirmed by published opinion. Judge Richardson ...",
-                "title": "US v. David Orozco"
-            },
-            "index": "32",
-            "line1": "21-4473 - US v. David Orozco",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-02224",
-                "teaser": "...ANNIE NELSON, Social Worker; HENDERSON CO. DSS; MINDY DENNY, Social Worker; KELLY YOUNG, Social Worker; NC DIVISION OF SOCIAL SERVICES; MANDY COHEN, State Director DSS-HHS; YOUTH VILLAGES, INC., Reg Agent URS Agents LLC; ELLIT DURBAN, Social Worker; BRENDA TRIPLETT, Social Worker; RICHARD TANKER, Attorney; THE MEDIATION CENTER, Defendants - ...",
-                "title": "Marcia Ballard v. Jerrie McFalls"
-            },
-            "index": "33",
-            "line1": "21-2224 - Marcia Ballard v. Jerrie McFalls",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04554",
-                "teaser": "... Defendant \u2013 Appellant. Appeal from the United States District Court for the Western District of Virginia, at Abingdon. James P. Jones, Senior District Judge. (1:20-cr-00014-JPJ-PMS-1) Argued: May 5, 2022 Decided: July 25, 2022 Before WILKINSON and AGEE, Circuit Judges, and FLOYD, Senior Circuit Judge. Affirmed by unpublished per curiam opinion. ...",
-                "title": "US v. Tracy Brown"
-            },
-            "index": "34",
-            "line1": "21-4554 - US v. Tracy Brown",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04182",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Richmond. David J. Novak, District Judge. (3:20-cr-00099-DJN-1) Submitted: July 11, 2022 Decided: July 25, 2022 Before NIEMEYER, WYNN, and HEYTENS, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF: Geremy C. Kamens, Federal...",
-                "title": "US v. Chanrelle Harris"
-            },
-            "index": "35",
-            "line1": "21-4182 - US v. Chanrelle Harris",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-19-04812",
-                "teaser": "...JR., Defendant \u2013 Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Charlotte. Robert J. Conrad, Jr., District Judge. (3:17-cr-00124-RJC-DSC-1) Argued: December 9, 2021 Decided: July 25, 2022 Before RICHARDSON and RUSHING, Circuit Judges, and TRAXLER, Senior Circuit Judge. Affirmed by published ...",
-                "title": "US v. Derrick Daniels, Jr."
-            },
-            "index": "36",
-            "line1": "19-4812 - US v. Derrick Daniels, Jr.",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01186",
-                "teaser": "...; CMC, (Community Management Corporation); WOODBURN VILLAGE CONDOMINIUM UNIT OWNERS ASSOCIATION AND/OR WOODBURN VLG CONDO UNIT OWNERS, (The Association), Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Rossie David Alston, Jr., District Judge. (1:21-cv-00077-RDA-TCB) ...",
-                "title": "William Whittman v. Associa, Associations, Inc."
-            },
-            "index": "37",
-            "line1": "22-1186 - William Whittman v. Associa, Associations, Inc.",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-02371",
-                "teaser": "... General, Respondent. On Petition for Review of an Order of the Board of Immigration Appeals. Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Petition denied by unpublished per curiam opinion. ON BRIEF: H. Glenn Fogle, Jr., THE FOGLE LAW FIRM, LLC, Atlanta, Georgia, for Petitioner. Brian Boynton, ...",
-                "title": "Aleyda Ochea-Alcerro v. Merrick Garland"
-            },
-            "index": "38",
-            "line1": "21-2371 - Aleyda Ochea-Alcerro v. Merrick Garland",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-19-04837",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Norfolk. Raymond A. Jackson, Senior District Judge. (2:18-cr-00177-RAJ-LRL-4) Submitted: July 8, 2022 Decided: July 25, 2022 Before NIEMEYER and AGEE, Circuit Judges, and FLOYD, Senior Circuit Judge. Vacated and remanded in part, ...",
-                "title": "US v. Darrius Heuser-Whitaker"
-            },
-            "index": "39",
-            "line1": "19-4837 - US v. Darrius Heuser-Whitaker",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04587",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:19-cr-00411-D-1) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed in part, dismissed in part by unpublished per curiam opinion...",
-                "title": "US v. Andrew Bass, II"
-            },
-            "index": "40",
-            "line1": "21-4587 - US v. Andrew Bass, II",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01334",
-                "teaser": "... (CIA); DIRECTOR OF NATIONAL INTELLIGENCE (DNI); NATIONAL SECURITY COUNCIL (NSC), Defendants - Appellees. Appeal from the United States District Court for the Northern District of West Virginia, at Martinsburg. Gina M. Groh, District Judge. (3:22-cv-00035-GMG-RWT) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, ...",
-                "title": "Ronald Emrit v. Central Intelligence Agency (CIA)"
-            },
-            "index": "41",
-            "line1": "22-1334 - Ronald Emrit v. Central Intelligence Agency (CIA)",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-17-04588",
-                "teaser": "...JR., Defendant - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Newport News. Mark S. Davis, Chief District Judge. (4:17-cr-00006-MSD-LRL-1) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF: Geremy ...",
-                "title": "US v. Angel Rivas, Jr."
-            },
-            "index": "42",
-            "line1": "17-4588 - US v. Angel Rivas, Jr.",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-19-04808",
-                "teaser": "... Vontay, Defendant - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Norfolk. Raymond A. Jackson, Senior District Judge. (2:18-cr-00177-RAJ-LRL-1) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Vacated and remanded in part, affirmed in part by ...",
-                "title": "US v. Devonta Doyle"
-            },
-            "index": "43",
-            "line1": "19-4808 - US v. Devonta Doyle",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07631",
-                "teaser": "..., a/k/a Bilal, Defendant - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Charlotte. Frank D. Whitney, District Judge. (3:14-cr-00073-FDW-3) Submitted: June 16, 2022 Decided: July 25, 2022 Before NIEMEYER, AGEE, and DIAZ, Circuit Judges. Affirmed by unpublished per curiam opinion. Reginald...",
-                "title": "US v. Reginald Lindsey"
-            },
-            "index": "44",
-            "line1": "21-7631 - US v. Reginald Lindsey",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01190",
-                "teaser": "...; JIM BREEDING, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Leonie M. Brinkema, District Judge. (1:20-cv-01399-LMB-IDD) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. ...",
-                "title": "Damali Gordon v. Emily Breeding"
-            },
-            "index": "45",
-            "line1": "22-1190 - Damali Gordon v. Emily Breeding",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07651",
-                "teaser": "... - Appellee. Appeal from the United States District Court for the District of South Carolina, at Beaufort. Joseph Dawson, III, District Judge. (9:21-cv-00004-JD) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per curiam opinion. Jerrell Antonio Roberts, Appellant Pro Se....",
-                "title": "Jerrell Roberts v. Bryan Dobbs"
-            },
-            "index": "46",
-            "line1": "21-7651 - Jerrell Roberts v. Bryan Dobbs",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01158",
-                "teaser": "... OF WOMEN (\u201cNOW\u201d); WEAVE OF SACRAMENTO, CA, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Leonie M. Brinkema, District Judge. (1:22-cv-00123-LMB-TCB) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by ...",
-                "title": "Tori Smith v. Jehovah's Witnesses"
-            },
-            "index": "47",
-            "line1": "22-1158 - Tori Smith v. Jehovah's Witnesses",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-06553",
-                "teaser": "...R.O.S.P.; J. HICKS, Correctional Officer of R.O.S.P.; E. HESS, Correctional Officer of R.O.S.P.; C. HOLBROOK, Correctional Officer of R.O.S.P.; T. LARGE, Sergeant of R.O.S.P.; J. LYALL, Lieutenant of R.O.S.P.; C. DOCKERY, Correctional Officer of R.O.S.P.; E. GWINN, Correctional Officer of R.O.S.P.; A. MULLINS, Correctional Officer of R.O.S.P.; J. ...",
-                "title": "Gary Wall v. E. Rasnick"
-            },
-            "index": "48",
-            "line1": "21-6553 - Gary Wall v. E. Rasnick",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01112",
-                "teaser": "... Comptroller; CRAIG M. BURNS, Tax Commissioner, Defendants - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Liam O\u2019Grady, Senior District Judge. (1:20-cv-00784-LO-IDD) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by ...",
-                "title": "Gregory Savoy v. Peter Franchot"
-            },
-            "index": "49",
-            "line1": "22-1112 - Gregory Savoy v. Peter Franchot",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04681",
-                "teaser": "... Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. N. Carlton Tilley, Jr., Senior District Judge. (1:10-cr-00197-NCT-1) Submitted: July 8, 2022 Decided: July 25, 2022 Before MOTZ and DIAZ, Circuit Judges, and KEENAN, Senior Circuit Judge. Affirmed by unpublished per curiam ...",
-                "title": "US v. Ivan Powell"
-            },
-            "index": "50",
-            "line1": "21-4681 - US v. Ivan Powell",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-06122",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Rossie David Alston, Jr., District Judge. (1:12\u2212cr\u221200027\u2212RDA\u22121) Argued: March 8, 2022 Decided: July 25, 2022 Before MOTZ and DIAZ, Circuit Judges, and KEENAN, Senior Circuit Judge. Reversed and remanded with instructions by published ...",
-                "title": "US v. Yonathan Melaku"
-            },
-            "index": "51",
-            "line1": "21-6122 - US v. Yonathan Melaku",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07392",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the District of Maryland, at Baltimore. George L. Russell, III, District Judge. (1:09-cr-00581-GLR-1) Submitted: June 30, 2022 Decided: July 25, 2022 Before NIEMEYER and THACKER, Circuit Judges, and FLOYD, Senior Circuit Judge. Affirmed by unpublished per curiam opinion. ...",
-                "title": "US v. Kevin Scott"
-            },
-            "index": "52",
-            "line1": "21-7392 - US v. Kevin Scott",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07769",
-                "teaser": "... CLARKE, Director of the Virginia Department of Corrections, sued Individually and Official Capacity; IVAN GILMORE, Warden, Defendants - Appellees. and E. WITT, Grievance Coordinator and Ombudsman Sussex I State Prison, sued Individually and Official Capacity; SGT. RIDDICK, Night Sergeant Housing 2 Sussex I State Prison, sued Individually and ...",
-                "title": "David Firewalker-Fields v. Harold Clarke"
-            },
-            "index": "53",
-            "line1": "21-7769 - David Firewalker-Fields v. Harold Clarke",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04621",
-                "teaser": ".../a Danny Rashee O\u2019Connor, Jr., Defendant - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Charlotte. Max O. Cogburn, Jr., District Judge. (3:18-cr-00361-MOC-DCK-2) Submitted: July 21, 2022 Decided: July 25, 2022 Before MOTZ, HARRIS, and RUSHING, Circuit Judges. Affirmed by unpublished per ...",
-                "title": "US v. Khalil Morrison"
-            },
-            "index": "54",
-            "line1": "21-4621 - US v. Khalil Morrison",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01523",
-                "teaser": "... Mandamus. (1:85-cr-00547-DKC-1) Submitted: July 13, 2022 Decided: July 25, 2022 Before GREGORY, Chief Judge, and NIEMEYER and MOTZ, Circuit Judges. Petition denied by unpublished per curiam opinion. Maurice Cortez Proctor, Sr., Petitioner Pro Se. Unpublished opinions are not binding precedent in this circuit. USCA4 Appeal: 22-1523 Doc: 7 Filed: 07...",
-                "title": "In re: Maurice Proctor, Sr."
-            },
-            "index": "55",
-            "line1": "22-1523 - In re: Maurice Proctor, Sr.",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01338",
-                "teaser": "... (BIA); CITIZENSHIP & IMMIGRATION SERVICES (CIS); CUSTOMS AND BORDER PATROL (CBP); STATE DEPARTMENT; DEPARTMENT OF HOMELAND SECURITY (DHS), Defendants - Appellees. Appeal from the United States District Court for the District of Maryland, at Greenbelt. George Jarrod Hazel, District Judge. (8:22-cv-00623-GJH) Submitted: July 21, 2022 Decided: ...",
-                "title": "Ronald Emrit v. Board of Immigration Appeals (BIA)"
-            },
-            "index": "56",
-            "line1": "22-1338 - Ronald Emrit v. Board of Immigration Appeals (BIA)",
-            "line2": "United States Courts Opinions. Monday, July 25, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01666",
-                "teaser": "... - Appellee. Appeal from the United States District Court for the Eastern District of Virginia, at Norfolk. Raymond A. Jackson, Senior District Judge. (2:21-cv-00069-RAJ-LRL) Submitted: June 27, 2022 Decided: July 22, 2022 Before NIEMEYER, AGEE, and RICHARDSON, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF: Mark J. ...",
-                "title": "Sabrina Brown v. US"
-            },
-            "index": "57",
-            "line1": "21-1666 - Sabrina Brown v. US",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01246",
-                "teaser": "... for Writ of Mandamus. (5:22-mc-00019) Submitted: July 12, 2022 Decided: July 22, 2022 Before KING, AGEE, and RICHARDSON, Circuit Judges. Petition denied by unpublished per curiam opinion. Michael S. Owlfeather-Gorbey, Petitioner Pro Se. Unpublished opinions are not binding precedent in this circuit. USCA4 Appeal: 22-1246 Doc: 12 Filed: 07/22/...",
-                "title": "In re: Michael Owlfeather-Gorbey"
-            },
-            "index": "58",
-            "line1": "22-1246 - In re: Michael Owlfeather-Gorbey",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01490",
-                "teaser": "...Defendant - Appellee, and ROXANNE TOBLETES, Head Cashier; MACK WIGGINS, ASM; ARTIE BROOKER, ASM; BETH LNU, Defendants. Appeal from the United States District Court for the Western District of North Carolina, at Charlotte. Robert J. Conrad, Jr., District Judge. (3:21-cv-00034-RJC-DSC) Submitted: October 28, 2021 Decided: July 22, 2022 Before GREGORY...",
-                "title": "Marcus Smith v. Lowes Companies, Incorporated"
-            },
-            "index": "59",
-            "line1": "21-1490 - Marcus Smith v. Lowes Companies, Incorporated",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07751",
-                "teaser": "... Case Manager; MS. DUNSKIN; MS. SWAN; SGT. SELLMAN; COMMISSIONER OF CORRECTION; F. TODD TAYLOR; SANDRA HOLMES, Administrative Officer II, Defendants - Appellees. Appeal from the United States District Court for the District of Maryland, at Baltimore. Richard D. Bennett, Senior District Judge. (1:20-cv-02510-RDB) Submitted: May 19, 2022 Decided: ...",
-                "title": "David Brightwell v. Allen Gang"
-            },
-            "index": "60",
-            "line1": "21-7751 - David Brightwell v. Allen Gang",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01572",
-                "teaser": "... as KBP Foods; GBENGA OLAGBAJU, KFC, General Manager, Defendants - Appellees. Appeal from the United States District Court for the District of Maryland, at Greenbelt. Paula Xinis, District Judge. (8:20-cv-03241-PX) Submitted: July 18, 2022 Decided: July 22, 2022 Before NIEMEYER, KING, and QUATTLEBAUM, Circuit Judges. Dismissed by unpublished ...",
-                "title": "Brian Horsley v. KBP Investments"
-            },
-            "index": "61",
-            "line1": "22-1572 - Brian Horsley v. KBP Investments",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01126",
-                "teaser": "... A. ROCKWELL, The Judge Advocate General United States Air Force; LIEUTENANT GENERAL JOSEPH T. GUASTELLA, Deputy Chief of Staff for Operations, Plans and Requirements United States Air Force; FRANK KENDALL, Respondents - Appellees. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. Anthony John ...",
-                "title": "Clarence Anderson, III v. Jeffrey Rockwell"
-            },
-            "index": "62",
-            "line1": "22-1126 - Clarence Anderson, III v. Jeffrey Rockwell",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07530",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Asheville. Martin K. Reidinger, Chief District Judge. (1:02-cr-00004-MR-4) Submitted: June 2, 2022 Decided: July 22, 2022 Before GREGORY, Chief Judge, KING, Circuit Judge, and FLOYD, Senior Circuit Judge. Vacated and remanded by ...",
-                "title": "US v. Harry Moody"
-            },
-            "index": "63",
-            "line1": "21-7530 - US v. Harry Moody",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-06095",
-                "teaser": "... - Appellant. No. 22-6095 UNITED STATES OF AMERICA, Plaintiff - Appellee, v. JAMES THOMAS WEBB, Defendant - Appellant. Appeals from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:12-cr-00301-D-1; 5:17-cv-00081-D) Submitted: June 1, 2022 Decided: July 22, 2022 ...",
-                "title": "US v. James Webb"
-            },
-            "index": "64",
-            "line1": "22-6095 - US v. James Webb",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01217",
-                "teaser": "...; STAFFING 360 SOLUTIONS, INC., Defendants - Appellants. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. N. Carlton Tilley, Jr., Senior District Judge. (1:20\u2212cv\u221200012\u2212NCT\u2212JLW) Argued: March 9, 2022 Decided: July 22, 2022 Before RICHARDSON and HEYTENS, Circuit Judges, and KEENAN, Senior Circuit...",
-                "title": "Pamela Whitaker v. Monroe Staffing Services, LLC"
-            },
-            "index": "65",
-            "line1": "21-1217 - Pamela Whitaker v. Monroe Staffing Services, LLC",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04184",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. Catherine C. Eagles, District Judge. (1:20-cr-00136-CCE-1) Submitted: July 1, 2022 Decided: July 22, 2022 Before WYNN and RICHARDSON, Circuit Judges, and FLOYD, Senior Circuit Judge. Affirmed by unpublished per curiam ...",
-                "title": "US v. Kenneth Wiley"
-            },
-            "index": "66",
-            "line1": "21-4184 - US v. Kenneth Wiley",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04477",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Greenville. James C. Dever III, District Judge. (4:20-cr-00111-D-1) Submitted: May 27, 2022 Decided: July 22, 2022 Before GREGORY, Chief Judge, and DIAZ and HARRIS, Circuit Judges. Affirmed in part and dismissed in part by ...",
-                "title": "US v. Shelley Bandy"
-            },
-            "index": "67",
-            "line1": "21-4477 - US v. Shelley Bandy",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01543",
-                "teaser": "... SOLUTIONS, LLC, Defendant \u2013 Appellees. Appeal from the United States District Court for the District of Maryland, at Baltimore. Albert David Copperthite, Magistrate Judge. (1:19-cv-02565-ADC) Argued: March 10, 2022 Decided: July 22, 2022 Before GREGORY, Chief Judge, THACKER, and QUATTLEBAUM, Circuit Judges. Affirmed in part, vacated in part, ...",
-                "title": "Terri Cowgill v. First Data Technologies, Inc."
-            },
-            "index": "68",
-            "line1": "21-1543 - Terri Cowgill v. First Data Technologies, Inc.",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-06540",
-                "teaser": "... - Appellant. No. 22-6095 UNITED STATES OF AMERICA, Plaintiff - Appellee, v. JAMES THOMAS WEBB, Defendant - Appellant. Appeals from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:12-cr-00301-D-1; 5:17-cv-00081-D) Submitted: June 1, 2022 Decided: July 22, 2022 ...",
-                "title": "US v. James Webb"
-            },
-            "index": "69",
-            "line1": "21-6540 - US v. James Webb",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-18-04804",
-                "teaser": "...., Defendant - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:17-cr-00104-D-1) Submitted: June 2, 2022 Decided: July 22, 2022 Before GREGORY, Chief Judge, and KING and WYNN, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF: ...",
-                "title": "US v. Robert Holden, Jr."
-            },
-            "index": "70",
-            "line1": "18-4804 - US v. Robert Holden, Jr.",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01539",
-                "teaser": "...-cv-03002-CCB) Submitted: July 19, 2022 Decided: July 22, 2022 Before WYNN and RICHARDSON, Circuit Judges, and FLOYD, Senior Circuit Judge. Petition denied by unpublished per curiam opinion. Larry Davis, Petitioner Pro Se. Unpublished opinions are not binding precedent in this circuit. USCA4 Appeal: 22-1539 Doc: 9 Filed: 07/22/2022 Pg: 1 of 2 2 PER...",
-                "title": "In re: Larry Davis"
-            },
-            "index": "71",
-            "line1": "22-1539 - In re: Larry Davis",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04648",
-                "teaser": "...JR., Defendant - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Charlotte. Robert J. Conrad, Jr., District Judge. (3:20-cr-00241-RJC-DCK-2) Submitted: June 30, 2022 Decided: July 22, 2022 Before THACKER and RUSHING, Circuit Judges, and FLOYD, Senior Circuit Judge. Affirmed by unpublished per ...",
-                "title": "US v. Daryl Terry, Jr."
-            },
-            "index": "72",
-            "line1": "21-4648 - US v. Daryl Terry, Jr.",
-            "line2": "United States Courts Opinions. Friday, July 22, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-06216",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:12-cr-00301-D-1) Submitted: May 31, 2022 Decided: July 21, 2022 Before GREGORY, Chief Judge, THACKER, and RICHARDSON, Circuit Judges. Affirmed by unpublished per curiam opinion. James ...",
-                "title": "US v. James Webb"
-            },
-            "index": "73",
-            "line1": "21-6216 - US v. James Webb",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-02180",
-                "teaser": "... Board of Elections, in his official capacity; JAMILAH D. LECRUISE, Secretary of the State Board of Elections, in her official capacity; JOHN O\u2019BANNON, Vice Chair of the State Board of Elections, in his official capacity; SUSAN BEALS, Commissioner of the Virginia Department of Elections, in her official capacity, Defendants \u2013 Appellants, and ...",
-                "title": "Paul Goldman v. Robert Brink"
-            },
-            "index": "74",
-            "line1": "21-2180 - Paul Goldman v. Robert Brink",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-04590",
-                "teaser": "... - Appellant. Appeal from the United States District Court for the District of Maryland, at Greenbelt. Theodore D. Chuang, District Judge. (8:18-cr-00012-TDC-1) Submitted: June 14, 2022 Decided: July 21, 2022 Before NIEMEYER, KING, and HARRIS, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF: William M. Sullivan, Thomas C....",
-                "title": "US v. Mark Lambert"
-            },
-            "index": "75",
-            "line1": "20-4590 - US v. Mark Lambert",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07168",
-                "teaser": "... ALSTON; MONICA BOND; LIEUTENANT JAMES WILLIAMS, JR., Defendants - Appellees. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. Richard E. Myers, II, Chief District Judge. (5:18-ct-03225-M) Submitted: May 11, 2022 Decided: July 21, 2022 Before AGEE, RICHARDSON, and QUATTLEBAUM, Circuit Judges. ...",
-                "title": "James McNeill v. Lt. Crystal Taylor"
-            },
-            "index": "76",
-            "line1": "21-7168 - James McNeill v. Lt. Crystal Taylor",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-04531",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the District of South Carolina, at Anderson. Donald C. Coggins, Jr., District Judge. (8:19-cr-00181-DCC-3) Submitted: June 30, 2022 Decided: July 21, 2022 Before WYNN, RUSHING, and HEYTENS, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF: Ray Coit ...",
-                "title": "US v. Jamal Latimer"
-            },
-            "index": "77",
-            "line1": "20-4531 - US v. Jamal Latimer",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-04082",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Charlotte. Robert J. Conrad, Jr., District Judge. (3:18-cr-00285-RJC-DCK-1) Argued: May 5, 2022 Decided: July 21, 2022 Before KING and RICHARDSON, Circuit Judges, and KEENAN, Senior Circuit Judge. Affirmed in part, vacated in part, ...",
-                "title": "US v. Dewan Garris"
-            },
-            "index": "78",
-            "line1": "21-4082 - US v. Dewan Garris",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-02388",
-                "teaser": "...; JANEAN OHIN, Acting Director of Immigration & Customs Enforcement, Respondents. On Petition for Review of an Order of the Board of Immigration Appeals. Submitted: July 13, 2022 Decided: July 21, 2022 Before DIAZ and QUATTLEBAUM, Circuit Judges, and FLOYD, Senior Circuit Judge. Petition dismissed by unpublished per curiam opinion. ON BRIEF: ...",
-                "title": "Henry Portillo Silva v. Merrick Garland"
-            },
-            "index": "79",
-            "line1": "21-2388 - Henry Portillo Silva v. Merrick Garland",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-19-04513",
-                "teaser": "..., JR., Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. Catherine C. Eagles, District Judge. (1:18-cr-00412-CCE-1) Submitted: May 10, 2022 Decided: July 21, 2022 Before GREGORY, Chief Judge, and WYNN and HARRIS, Circuit Judges. Dismissed in part and affirmed in part by ...",
-                "title": "US v. Garland Morehead, Jr."
-            },
-            "index": "80",
-            "line1": "19-4513 - US v. Garland Morehead, Jr.",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-02373",
-                "teaser": "...HARBOR, LLC; DOES 1 THROUGH 50, inclusive, Defendants - Appellees. Appeal from the United States District Court for the District of Maryland, at Greenbelt. Peter J. Messitte, Senior District Judge. (8:18-cv-03405-PJM) Submitted: April 29, 2022 Decided: July 21, 2022 Before DIAZ, QUATTLEBAUM, and HEYTENS, Circuit Judges. Affirmed in part, vacated in...",
-                "title": "Brittney Felder v. MGM National Harbor, LLC"
-            },
-            "index": "81",
-            "line1": "20-2373 - Brittney Felder v. MGM National Harbor, LLC",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01290",
-                "teaser": "..., v. MEDCOM CAROLINAS, INC.; JEFF TURPIN, Defendants - Appellees, and JOHN DOES 1-50, Defendants. Appeal from the United States District Court for the Middle District of North Carolina at Greensboro. William L. Osteen, Jr., U.S. District Judge. (1:17-cv-00034-WO-LPA) Argued: March 10, 2022 Decided: July 21, 2022 Before WYNN, HARRIS, and ...",
-                "title": "US ex rel. Haile Nicholson v. Medcom Carolinas, Inc."
-            },
-            "index": "82",
-            "line1": "21-1290 - US ex rel. Haile Nicholson v. Medcom Carolinas, Inc.",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01682",
-                "teaser": "... Board of Elections, in his official capacity; JAMILAH D. LECRUISE, Secretary of the State Board of Elections, in her official capacity; JOHN O\u2019BANNON, Vice Chair of the State Board of Elections, in his official capacity; SUSAN BEALS, Commissioner of the Virginia Department of Elections, in her official capacity, Defendants \u2013 Appellants, and ...",
-                "title": "Paul Goldman v. Robert Brink"
-            },
-            "index": "83",
-            "line1": "22-1682 - Paul Goldman v. Robert Brink",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-02100",
-                "teaser": "..., Attorney General, Respondent. On Petition for Review of an Order of the Board of Immigration Appeals. Submitted: June 7, 2022 Decided: July 21, 2022 Before NIEMEYER, AGEE, and HEYTENS, Circuit Judges. Petition dismissed by unpublished per curiam opinion. ON BRIEF: Abraham F. Carpio, THE CARPIO LAW FIRM, LLC, Hyattsville, Maryland, for Petitioners...",
-                "title": "Jeysi Flores-Sanchez v. Merrick Garland"
-            },
-            "index": "84",
-            "line1": "21-2100 - Jeysi Flores-Sanchez v. Merrick Garland",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-06751",
-                "teaser": "..., Respondent - Appellee. Appeal from the United States District Court for the Northern District of West Virginia, at Wheeling. John Preston Bailey, District Judge. (5:20-cv-00128-JPB) Submitted: July 20, 2022 Decided: July 21, 2022 Before AGEE and WYNN, Circuit Judges, and FLOYD, Senior Circuit Judge. Affirmed by unpublished per curiam opinion....",
-                "title": "Osvaldo Rodriguez v. Robert Hudgins"
-            },
-            "index": "85",
-            "line1": "21-6751 - Osvaldo Rodriguez v. Robert Hudgins",
-            "line2": "United States Courts Opinions. Thursday, July 21, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01868",
-                "teaser": "...Next Friend, Cheryl Ord; SERENA S., minor, by Next Friend, Sarah Dixon; THEO S., minor, by Next Friend, L. Scott Briscoe; GARRETT M., minor, by Next Friend, L. Scott Briscoe; GRETCHEN C., minor, by Next Friend, Cathy L. Greiner; DENNIS R., minor, by Next Friend, Debbie Stone; CHRIS K., CALVIN K., and CAROLINA K., minors, by Next Friend, Katherine ...",
-                "title": "Jonathan R. v. Jim Justice"
-            },
-            "index": "86",
-            "line1": "21-1868 - Jonathan R. v. Jim Justice",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-18-07042",
-                "teaser": "... capacity; STEPHANIE K. RUSH, in her individual capacity; ANDRES E. HERNANDEZ, in his individual capacity; DOUGLAS L. STINE, in his individual capacity; WILLIAM T. BICKART, in his individual capacity; ROB NAGLE, in his individual capacity; KELLI L. HECK, in her individual capacity; ANDREA R. WEISMAN, in her individual capacity; HOLLY ...",
-                "title": "Philip Sebolt v. John Pindelski"
-            },
-            "index": "87",
-            "line1": "18-7042 - Philip Sebolt v. John Pindelski",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-18-04572",
-                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. William L. Osteen, Jr., District Judge. (1:16-cr-00209-WO-1) Submitted: June 7, 2022 Decided: July 20, 2022 Before KING and DIAZ, Circuit Judges, and TRAXLER, Senior Circuit Judge. Affirmed by unpublished per curiam ...",
-                "title": "US v. Bryant Narcisse"
-            },
-            "index": "88",
-            "line1": "18-4572 - US v. Bryant Narcisse",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-04102",
-                "teaser": "...a/k/a Ocho, Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. William L. Osteen, Jr., District Judge. (1:18-cr-00452-WO-1) Submitted: May 23, 2022 Decided: July 20, 2022 Before DIAZ and RICHARDSON, Circuit Judges, and TRAXLER, Senior Circuit Judge. Affirmed by unpublished ...",
-                "title": "US v. Larry Smith"
-            },
-            "index": "89",
-            "line1": "20-4102 - US v. Larry Smith",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01517",
-                "teaser": "... - Appellants, v. DAKOTA FINANCE LLC, d/b/a Arabella Farm; KEN SMITH; SHARON SMITH; WILLARD R. LAMNECK, JR., Defendants - Appellees. SOUTH CAROLINA COASTAL CONSERVATION LEAGUE; CHARLESTON WATERKEEPER, Amici Supporting Appellants. SOUTH CAROLINA CHAMBER OF COMMERCE, Amicus Supporting Appellee. Appeal from the United States District Court for the...",
-                "title": "Naturaland Trust v. Dakota Finance LLC"
-            },
-            "index": "90",
-            "line1": "21-1517 - Naturaland Trust v. Dakota Finance LLC",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-18-04110",
-                "teaser": "...., Defendant \u2013 Appellant. Appeal from the United States District Court for the Southern District of West Virginia, at Charleston. Joseph R. Goodwin, District Judge. (2:16-cr-00174-1) Argued: January 31, 2019 Decided: April 25, 2019 Before WILKINSON, NIEMEYER, and KING, Circuit Judges. Affirmed by published opinion. Judge King wrote the opinion, in...",
-                "title": "US v. Charles Walker, Jr."
-            },
-            "index": "91",
-            "line1": "18-4110 - US v. Charles Walker, Jr.",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-02111",
-                "teaser": "... of the Air Force, Defendant - Appellee. Appeal from the United States District Court for the District of South Carolina, at Columbia. Mary G. Lewis, District Judge. (3:19-cv-02863-MGL) Submitted: May 26, 2022 Decided: July 20, 2022 Before WYNN and QUATTLEBAUM, Circuit Judges, and KEENAN, Senior Circuit Judge. Affirmed by unpublished per ...",
-                "title": "Ester Bullock v. Frank Kendall"
-            },
-            "index": "92",
-            "line1": "21-2111 - Ester Bullock v. Frank Kendall",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-07009",
-                "teaser": "..., a/k/a Spunk, Defendant - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. Louise W. Flanagan, District Judge. (5:11-cr-00099-FL-1) Submitted: June 29, 2022 Decided: July 20, 2022 Before KING and RICHARDSON, Circuit Judges, and FLOYD, Senior Circuit Judge. Affirmed by unpublished per ...",
-                "title": "US v. Michael Jones"
-            },
-            "index": "93",
-            "line1": "21-7009 - US v. Michael Jones",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-22-01047",
-                "teaser": "..., v. BALTIMORE CITY; BALTIMORE CITY POLICE DEPARTMENT; BALTIMORE COUNTY; BALTIMORE COUNTY POLICE DEPARTMENT; LOWER CHICESTER TOWNSHIP; LOWER CHICESTER TOWNSHIP POLICE DEPARTMENT; OFFICER TIMOTHY MCBRIDE; JOHN DOES 1-30; RICHARD ROES 1-30, Defendants - Appellees, and DELAWARE COUNTY; DELAWARE COUNTY SHERIFF\u2019S OFFICE, Defendants. Appeal from the ...",
-                "title": "Gabriella Tillery v. Baltimore City"
-            },
-            "index": "94",
-            "line1": "22-1047 - Gabriella Tillery v. Baltimore City",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-06867",
-                "teaser": "... capacity; STEPHANIE K. RUSH, in her individual capacity; ANDRES E. HERNANDEZ, in his individual capacity; DOUGLAS L. STINE, in his individual capacity; WILLIAM T. BICKART, in his individual capacity; ROB NAGLE, in his individual capacity; KELLI L. HECK, in her individual capacity; ANDREA R. WEISMAN, in her individual capacity; HOLLY ...",
-                "title": "Philip Sebolt v. John Pindelski"
-            },
-            "index": "95",
-            "line1": "20-6867 - Philip Sebolt v. John Pindelski",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-07745",
-                "teaser": "... Defendant - Appellant. Appeal from the United States District Court for the Western District of North Carolina, at Asheville. Martin K. Reidinger, Chief District Judge. (1:09-cr-00013-MR-WCM-7) Submitted: June 8, 2022 Decided: July 20, 2022 Before MOTZ and HARRIS, Circuit Judges, and FLOYD, Senior Circuit Judge. Vacated and remanded by unpublished...",
-                "title": "US v. Doris Foster"
-            },
-            "index": "96",
-            "line1": "20-7745 - US v. Doris Foster",
-            "line2": "United States Courts Opinions. Wednesday, July 20, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-18-04531",
-                "teaser": "... FOURTH CIRCUIT No. 18-4531 UNITED STATES OF AMERICA, Plaintiff \u2013 Appellee, v. BRYSHUN GENARD FURLOW, Defendant \u2013 Appellant. Appeal from the United States District Court for the District of South Carolina, at Columbia. Cameron McGowan Currie, Senior District Judge. (3:17-cr-00862-CMC-1) Argued: March 21, 2019 Decided: June 27, 2019 Before ...",
-                "title": "US v. Bryshun Furlow"
-            },
-            "index": "97",
-            "line1": "18-4531 - US v. Bryshun Furlow",
-            "line2": "United States Courts Opinions. Tuesday, July 19, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-21-01740",
-                "teaser": "... of Hatteras Island, NC, Plaintiff - Appellant, v. DOUG DOUGHTIE, Sheriff, in his official and individual capacity; DONAVAN RUTH; DARE COUNTY, NORTH CAROLINA; ROBERT OUTTEN, Dare County Attorney, in his official and individual capacity; ROBERT WOODARD, Dare County Board of Commissioner Chairman, in his official capacity and individual capacity; ...",
-                "title": "Daniel Felix v. Doug Doughtie"
-            },
-            "index": "98",
-            "line1": "21-1740 - Daniel Felix v. Doug Doughtie",
-            "line2": "United States Courts Opinions. Tuesday, July 19, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-04121",
-                "teaser": "... - Appellant. No. 20-4121 UNITED STATES OF AMERICA, Plaintiff - Appellee, v. DAVID HARRIS MILLER, Defendant - Appellant. Appeal from the United States District Court for the Eastern District of Virginia, at Alexandria. T. S. Ellis, III, Senior District Judge. (1:17\u2212cr\u221200213\u2212TSE\u22121) Argued: May 3, 2022 Decided: July 19, 2022 Before KING and ...",
-                "title": "US v. David Miller"
-            },
-            "index": "99",
-            "line1": "20-4121 - US v. David Miller",
-            "line2": "United States Courts Opinions. Tuesday, July 19, 2022."
-        },
-        {
-            "fieldMap": {
-                "collectionCode": "USCOURTS",
-                "packageid": "USCOURTS-ca4-20-01873",
-                "teaser": "... PHYSICS LABORATORY, Defendant - Appellee. Appeal from the United States District Court for the District of Maryland, at Greenbelt. Peter J. Messitte, Senior District Judge. (8:18-cv-03180-PJM) Submitted: June 30, 2022 Decided: July 19, 2022 Before MOTZ, RICHARDSON, and QUATTLEBAUM, Circuit Judges. Affirmed by unpublished per curiam opinion. ...",
-                "title": "Patrick Myles v. The Johns Hopkins Univ APL"
-            },
-            "index": "100",
-            "line1": "20-1873 - Patrick Myles v. The Johns Hopkins Univ APL",
-            "line2": "United States Courts Opinions. Tuesday, July 19, 2022."
+            "name": "personnamesnav",
+            "displayName": "Person",
+            "customSortName": "count",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": false,
+            "hasMore": true,
+            "buckets": [
+                {
+                    "value": "A Better Balance",
+                    "displayValue": "A Better Balance",
+                    "selected": false,
+                    "count": 4,
+                    "valid": true,
+                    "totalCount": 1
+                },
+                {
+                    "value": "A. David Robinson",
+                    "displayValue": "A. David Robinson",
+                    "selected": false,
+                    "count": 1,
+                    "valid": true,
+                    "totalCount": 1
+                },
+                {
+                    "value": "American Association of University Women",
+                    "displayValue": "American Association of University Women",
+                    "selected": false,
+                    "count": 4,
+                    "valid": true,
+                    "totalCount": 1
+                },
+                {
+                    "value": "American Federation of State, County, and Municipal Employees",
+                    "displayValue": "American Federation of State, County, and Municipal Employees",
+                    "selected": false,
+                    "count": 4,
+                    "valid": true,
+                    "totalCount": 1
+                },
+                {
+                    "value": "American Federation of Teachers",
+                    "displayValue": "American Federation of Teachers",
+                    "selected": false,
+                    "count": 4,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
+        {
+            "name": "courttypenav",
+            "displayName": "Court Type",
+            "customSortName": "alphabetical",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": true,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "CourtType1",
+                    "displayValue": "Appellate",
+                    "selected": false,
+                    "count": 16,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
+        {
+            "name": "courtnamenav",
+            "displayName": "Court Name",
+            "customSortName": "alphabetical",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": true,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "1040-United States Court of Appeals for the Fourth Circuit",
+                    "displayValue": "United States Court of Appeals for the Fourth Circuit",
+                    "selected": false,
+                    "count": 16,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
+        {
+            "name": "circuit",
+            "displayName": "Circuit",
+            "customSortName": "alphabetical",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": true,
+            "hasMore": false,
+            "buckets": [
+                {
+                    "value": "4",
+                    "displayValue": "4th",
+                    "selected": false,
+                    "count": 16,
+                    "valid": true,
+                    "totalCount": 1
+                }
+            ]
+        },
+        {
+            "name": "statenav",
+            "displayName": "State",
+            "customSortName": "alphabetical",
+            "type": 0,
+            "tree": false,
+            "selected": false,
+            "collectionSpecific": true,
+            "hasMore": false,
+            "buckets": []
         }
     ],
-    "st": "publishdate:range(2022-06-27,2022-07-28)"
+    "resultSet": [
+        {
+            "index": "1",
+            "line1": "20-1001 - Bonnie Peltier v. Charter Day School, Inc.",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. PUBLISHED AUTHORED OPINION filed. Originating case number: 7:16-cv-00030-H-KS. [1001177633] [20-1001, 20-1023]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "569003",
+                "granuleid": "USCOURTS-ca4-20-01001-3",
+                "pdffile": "pdf/USCOURTS-ca4-20-01001-3.pdf",
+                "packageid": "USCOURTS-ca4-20-01001",
+                "collectionCode": "USCOURTS",
+                "title": "Bonnie Peltier v. Charter Day School, Inc.",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-01001/pdf/USCOURTS-ca4-20-01001-3.pdf",
+                "teaser": "...ERIKA BOOTH, as Guardian of I.B., a minor child; KEELY BURKS, Plaintiffs - Appellees, v. CHARTER DAY SCHOOL, INC.; ROBERT P. SPENCER, in his capacity as member of the Board of Trustees of Charter Day School, Inc.; CHAD ADAMS, in his capacity as member of the Board of Trustees of Charter Day School, Inc.; SUZANNE WEST, in her capacity as member of ..."
+            }
+        },
+        {
+            "index": "2",
+            "line1": "20-1001 - Bonnie Peltier v. Charter Day School, Inc.",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. OPINION ATTACHMENTS. [1001177647] [20-1001, 20-1023]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "4741735",
+                "granuleid": "USCOURTS-ca4-20-01001-4",
+                "pdffile": "pdf/USCOURTS-ca4-20-01001-4.pdf",
+                "packageid": "USCOURTS-ca4-20-01001",
+                "collectionCode": "USCOURTS",
+                "title": "Bonnie Peltier v. Charter Day School, Inc.",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-01001/pdf/USCOURTS-ca4-20-01001-4.pdf",
+                "teaser": "... Scan Brief THE HISTORY OF HBCUS HBCUs are institutions of higher education (IHEs) established during the era of legal segregation prior to 1964, with the mission to provide Black Americans with a postsecondary education. HBCUs are concentrated in the South and Southeast regions of the United States and include both two- and four-year institutions...."
+            }
+        },
+        {
+            "index": "3",
+            "line1": "21-1714 - William Thorpe v. Harold Clarke",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. PUBLISHED AUTHORED OPINION filed. Originating case number: 2:20-cv-00007-JPJ-PMS. [1001177608] [21-1714]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "337493",
+                "granuleid": "USCOURTS-ca4-21-01714-0",
+                "pdffile": "pdf/USCOURTS-ca4-21-01714-0.pdf",
+                "packageid": "USCOURTS-ca4-21-01714",
+                "collectionCode": "USCOURTS",
+                "title": "William Thorpe v. Harold Clarke",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-21-01714/pdf/USCOURTS-ca4-21-01714-0.pdf",
+                "teaser": "...; VERNON BROOKS; BRIAN CAVITT; DEREK CORNELISON; CHRISTOPHER COTTRELL; PETER MUKURIA; STEVEN RIDDICK; KEVIN SNODGRASS, Plaintiffs – Appellees, v. HAROLD CLARKE; RANDALL C. MATHENA; H. SCOTT RICHESON; A. DAVID ROBINSON; HENRY J. PONTON; MARCUS ELAM; DENISE MALONE; DR. STEVE HERRICK; TORI RAIFORD; JEFFREY KISER; CARL MANIS, Defendants – Appellants, ..."
+            }
+        },
+        {
+            "index": "4",
+            "line1": "20-2250 - Redstone International, Inc. v. Liberty Mutual Fire Insurance",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED AUTHORED OPINION filed. Originating case number: 5:18-cv-00175-JPB. Copies to all parties and the district court/agency. [1001177148] [20-2250]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "234274",
+                "granuleid": "USCOURTS-ca4-20-02250-0",
+                "pdffile": "pdf/USCOURTS-ca4-20-02250-0.pdf",
+                "packageid": "USCOURTS-ca4-20-02250",
+                "collectionCode": "USCOURTS",
+                "title": "Redstone International, Inc. v. Liberty Mutual Fire Insurance",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-02250/pdf/USCOURTS-ca4-20-02250-0.pdf",
+                "teaser": "...FIRE INSURANCE COMPANY; THE INSURANCE MARKET, INC., Defendants - Appellees. Appeal from the United States District Court for the Northern District of West Virginia, at Wheeling. John Preston Bailey, District Judge. (5:18-cv-00175-JPB) Argued: May 5, 2022 Decided: June 14, 2022 Before MOTZ, QUATTLEBAUM, and HEYTENS, Circuit Judges. Affirmed by ..."
+            }
+        },
+        {
+            "index": "5",
+            "line1": "20-2172 - Constance Arthur-Nelson v. U. S. Bancorp Government Leasi",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED AUTHORED OPINION filed. Originating case numbers: 2:18-cv-01061; 1:19-cv-00169-IMK; 1:19-cv00168-IMK; 1:19-cv-00167-IMK. Copies to all parties and the district court/agency. [1001177323] [19-1759, 20-2163, 20-2171, 20-2172]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "232374",
+                "granuleid": "USCOURTS-ca4-20-02172-0",
+                "pdffile": "pdf/USCOURTS-ca4-20-02172-0.pdf",
+                "packageid": "USCOURTS-ca4-20-02172",
+                "collectionCode": "USCOURTS",
+                "title": "Constance Arthur-Nelson v. U. S. Bancorp Government Leasi",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-02172/pdf/USCOURTS-ca4-20-02172-0.pdf",
+                "teaser": "... - Appellant, v. U. S. BANCORP GOVERNMENT LEASING AND FINANCE, INC., as Trustee for the benefit of the holders of COMM 2013-CCRE12 Mortgage Trust Commercial Mortgage Pass-Through Certificates; WELLS FARGO COMMERCIAL MORTGAGE SERVICING, Defendants - Appellees. Appeal from the United States District Court for the Southern District of West ..."
+            }
+        },
+        {
+            "index": "6",
+            "line1": "21-1493 - Bel Air Auto Auction, Incorporated v. Great Northern Insurance Company",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED PER CURIAM OPINION filed. Motion disposition in opinion--denying motion to defer [1001155424-2]; denying motion to reconsider [1001155447-2]. Originating case number: 1:20-cv-02892-RDB. Copies to all parties and the district court/agency. [1001177144] [21-1493]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "204918",
+                "granuleid": "USCOURTS-ca4-21-01493-0",
+                "pdffile": "pdf/USCOURTS-ca4-21-01493-0.pdf",
+                "packageid": "USCOURTS-ca4-21-01493",
+                "collectionCode": "USCOURTS",
+                "title": "Bel Air Auto Auction, Incorporated v. Great Northern Insurance Company",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-21-01493/pdf/USCOURTS-ca4-21-01493-0.pdf",
+                "teaser": "... COMPANY, Defendant – Appellee. AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION; NATIONAL ASSOCIATION OF MUTUAL INSURANCE COMPANIES, Amici Supporting Appellee. Appeal from the United States District Court for the District of Maryland, at Baltimore. Richard D. Bennett, Senior District Judge. (1:20-cv-02892-RDB) Submitted: June 9, 2022 ..."
+            }
+        },
+        {
+            "index": "7",
+            "line1": "19-1759 - Dianna Nidy v. U.S. Bancorp",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED AUTHORED OPINION filed. Originating case numbers: 2:18-cv-01061; 1:19-cv-00169-IMK; 1:19-cv00168-IMK; 1:19-cv-00167-IMK. Copies to all parties and the district court/agency. [1001177323] [19-1759, 20-2163, 20-2171, 20-2172]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "232380",
+                "granuleid": "USCOURTS-ca4-19-01759-0",
+                "pdffile": "pdf/USCOURTS-ca4-19-01759-0.pdf",
+                "packageid": "USCOURTS-ca4-19-01759",
+                "collectionCode": "USCOURTS",
+                "title": "Dianna Nidy v. U.S. Bancorp",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-19-01759/pdf/USCOURTS-ca4-19-01759-0.pdf",
+                "teaser": "... - Appellant, v. U. S. BANCORP GOVERNMENT LEASING AND FINANCE, INC., as Trustee for the benefit of the holders of COMM 2013-CCRE12 Mortgage Trust Commercial Mortgage Pass-Through Certificates; WELLS FARGO COMMERCIAL MORTGAGE SERVICING, Defendants - Appellees. Appeal from the United States District Court for the Southern District of West ..."
+            }
+        },
+        {
+            "index": "8",
+            "line1": "20-4057 - US v. Kimjuan Ellis, Jr.",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED PER CURIAM OPINION filed. Motion disposition in opinion--denying Motion to file supplemental brief(s) [1000905555-2]. Originating case number: 5:19-cr-00011-D-1. Copies to all parties and the district court/agency. [1001177238] [20-4057]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "211718",
+                "granuleid": "USCOURTS-ca4-20-04057-0",
+                "pdffile": "pdf/USCOURTS-ca4-20-04057-0.pdf",
+                "packageid": "USCOURTS-ca4-20-04057",
+                "collectionCode": "USCOURTS",
+                "title": "US v. Kimjuan Ellis, Jr.",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-04057/pdf/USCOURTS-ca4-20-04057-0.pdf",
+                "teaser": "..., JR., Defendant - Appellant. Appeal from the United States District Court for the Eastern District of North Carolina, at Raleigh. James C. Dever III, District Judge. (5:19-cr-00011-D-1) Submitted: May 9, 2022 Decided: June 14, 2022 Before MOTZ and HARRIS, Circuit Judges, and TRAXLER, Senior Circuit Judge. Vacated and remanded by unpublished per ..."
+            }
+        },
+        {
+            "index": "9",
+            "line1": "20-2171 - The Elswick Company, LLC v. U. S. Bancorp Government Leasi",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED AUTHORED OPINION filed. Originating case numbers: 2:18-cv-01061; 1:19-cv-00169-IMK; 1:19-cv00168-IMK; 1:19-cv-00167-IMK. Copies to all parties and the district court/agency. [1001177323] [19-1759, 20-2163, 20-2171, 20-2172]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "232372",
+                "granuleid": "USCOURTS-ca4-20-02171-0",
+                "pdffile": "pdf/USCOURTS-ca4-20-02171-0.pdf",
+                "packageid": "USCOURTS-ca4-20-02171",
+                "collectionCode": "USCOURTS",
+                "title": "The Elswick Company, LLC v. U. S. Bancorp Government Leasi",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-02171/pdf/USCOURTS-ca4-20-02171-0.pdf",
+                "teaser": "... - Appellant, v. U. S. BANCORP GOVERNMENT LEASING AND FINANCE, INC., as Trustee for the benefit of the holders of COMM 2013-CCRE12 Mortgage Trust Commercial Mortgage Pass-Through Certificates; WELLS FARGO COMMERCIAL MORTGAGE SERVICING, Defendants - Appellees. Appeal from the United States District Court for the Southern District of West ..."
+            }
+        },
+        {
+            "index": "10",
+            "line1": "20-4591 - US v. Jody Hairston",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED PER CURIAM OPINION filed. Originating case number: 1:13-cr-00054-TDS-1. Copies to all parties and the district court/agency. [1001177261] [20-4591]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "214495",
+                "granuleid": "USCOURTS-ca4-20-04591-0",
+                "pdffile": "pdf/USCOURTS-ca4-20-04591-0.pdf",
+                "packageid": "USCOURTS-ca4-20-04591",
+                "collectionCode": "USCOURTS",
+                "title": "US v. Jody Hairston",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-04591/pdf/USCOURTS-ca4-20-04591-0.pdf",
+                "teaser": "..., Defendant - Appellant. Appeal from the United States District Court for the Middle District of North Carolina, at Greensboro. Thomas D. Schroeder, Chief District Judge. (1:13-cr-00054-TDS-1) Submitted: May 31, 2022 Decided: June 14, 2022 Before THACKER, QUATTLEBAUM, and HEYTENS, Circuit Judges. Affirmed by unpublished per curiam opinion. ON BRIEF..."
+            }
+        },
+        {
+            "index": "11",
+            "line1": "21-4598 - US v. Robert Henderson",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED PER CURIAM OPINION filed. Originating case number: 7:20-cr-00107-BO-1. Copies to all parties and the district court/agency. [1001177359] [21-4598]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "211640",
+                "granuleid": "USCOURTS-ca4-21-04598-0",
+                "pdffile": "pdf/USCOURTS-ca4-21-04598-0.pdf",
+                "packageid": "USCOURTS-ca4-21-04598",
+                "collectionCode": "USCOURTS",
+                "title": "US v. Robert Henderson",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-21-04598/pdf/USCOURTS-ca4-21-04598-0.pdf",
+                "teaser": "..., a/k/a 40, Defendant - Appellant. Appeal from the United States District Court for the District of North Carolina, at Wilmington. Terrence W. Boyle, District Judge. (7:20-cr-00107-BO-1) Submitted: May 26, 2022 Decided: June 14, 2022 Before NIEMEYER and DIAZ, Circuit Judges, and TRAXLER, Senior Circuit Judge. Affirmed by unpublished per curiam ..."
+            }
+        },
+        {
+            "index": "12",
+            "line1": "20-1023 - Bonnie Peltier v. Charter Day School, Inc.",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. PUBLISHED AUTHORED OPINION filed. Originating case number: 7:16-cv-00030-H-KS. [1001177633] [20-1001, 20-1023]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "569057",
+                "granuleid": "USCOURTS-ca4-20-01023-3",
+                "pdffile": "pdf/USCOURTS-ca4-20-01023-3.pdf",
+                "packageid": "USCOURTS-ca4-20-01023",
+                "collectionCode": "USCOURTS",
+                "title": "Bonnie Peltier v. Charter Day School, Inc.",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-01023/pdf/USCOURTS-ca4-20-01023-3.pdf",
+                "teaser": "...ERIKA BOOTH, as Guardian of I.B., a minor child; KEELY BURKS, Plaintiffs - Appellees, v. CHARTER DAY SCHOOL, INC.; ROBERT P. SPENCER, in his capacity as member of the Board of Trustees of Charter Day School, Inc.; CHAD ADAMS, in his capacity as member of the Board of Trustees of Charter Day School, Inc.; SUZANNE WEST, in her capacity as member of ..."
+            }
+        },
+        {
+            "index": "13",
+            "line1": "20-1023 - Bonnie Peltier v. Charter Day School, Inc.",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. OPINION ATTACHMENTS. [1001177647] [20-1001, 20-1023]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "4741733",
+                "granuleid": "USCOURTS-ca4-20-01023-4",
+                "pdffile": "pdf/USCOURTS-ca4-20-01023-4.pdf",
+                "packageid": "USCOURTS-ca4-20-01023",
+                "collectionCode": "USCOURTS",
+                "title": "Bonnie Peltier v. Charter Day School, Inc.",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-01023/pdf/USCOURTS-ca4-20-01023-4.pdf",
+                "teaser": "... Scan Brief THE HISTORY OF HBCUS HBCUs are institutions of higher education (IHEs) established during the era of legal segregation prior to 1964, with the mission to provide Black Americans with a postsecondary education. HBCUs are concentrated in the South and Southeast regions of the United States and include both two- and four-year institutions...."
+            }
+        },
+        {
+            "index": "14",
+            "line1": "21-7231 - Donald Stout v. Preston County Sheriff's Department",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. OPINION/ORDER DIRECTING LIMITED REMAND [4CCA retains jurisdiction]. Originating case number: 1:19-cv-00123-TSK Copies to all parties and the district court/agency. Mailed to: Donald Stout. [1001177137] [21-7231]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "201681",
+                "granuleid": "USCOURTS-ca4-21-07231-0",
+                "pdffile": "pdf/USCOURTS-ca4-21-07231-0.pdf",
+                "packageid": "USCOURTS-ca4-21-07231",
+                "collectionCode": "USCOURTS",
+                "title": "Donald Stout v. Preston County Sheriff's Department",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-21-07231/pdf/USCOURTS-ca4-21-07231-0.pdf",
+                "teaser": "...; SHERIFF DANIEL LOUGHRIE; DEPUTY RANDY STOCKETT; OFFICER OKAN, K-9 Dog, Defendants - Appellees. Appeal from the United States District Court for the Northern District of West Virginia, at Clarksburg. Thomas S. Kleeh, Chief District Judge. (1:19-cv-00123-TSK) Submitted: May 27, 2022 Decided: June 14, 2022 Before NIEMEYER and THACKER, ..."
+            }
+        },
+        {
+            "index": "15",
+            "line1": "21-1383 - Marino Estrada-Ortiz v. Merrick Garland",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED PER CURIAM OPINION filed. Originating case number: A202-091-156. Copies to all parties and the agency. [1001177287] [21-1383]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "199140",
+                "granuleid": "USCOURTS-ca4-21-01383-0",
+                "pdffile": "pdf/USCOURTS-ca4-21-01383-0.pdf",
+                "packageid": "USCOURTS-ca4-21-01383",
+                "collectionCode": "USCOURTS",
+                "title": "Marino Estrada-Ortiz v. Merrick Garland",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-21-01383/pdf/USCOURTS-ca4-21-01383-0.pdf",
+                "teaser": "..., Respondent. On Petition for Review of an Order of the Board of Immigration Appeals. Submitted: April 26, 2022 Decided: June 14, 2022 Before WYNN and RICHARDSON, Circuit Judges, and TRAXLER, Senior Circuit Judge. Petition denied by unpublished per curiam opinion. ON BRIEF: Buxton Reed Bailey, BUXTON R. BAILEY, P.C., Raleigh, North Carolina, for ..."
+            }
+        },
+        {
+            "index": "16",
+            "line1": "20-2163 - George Leeson v. U. S. Bancorp Govt Leasing",
+            "line2": "United States Courts Opinions. United States Court of Appeals for the Fourth Circuit. UNPUBLISHED AUTHORED OPINION filed. Originating case numbers: 2:18-cv-01061; 1:19-cv-00169-IMK; 1:19-cv00168-IMK; 1:19-cv-00167-IMK. Copies to all parties and the district court/agency. [1001177323] [19-1759, 20-2163, 20-2171, 20-2172]. Tuesday, June 14, 2022.",
+            "fieldMap": {
+                "pdfsize": "232374",
+                "granuleid": "USCOURTS-ca4-20-02163-0",
+                "pdffile": "pdf/USCOURTS-ca4-20-02163-0.pdf",
+                "packageid": "USCOURTS-ca4-20-02163",
+                "collectionCode": "USCOURTS",
+                "title": "George Leeson v. U. S. Bancorp Govt Leasing",
+                "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-20-02163/pdf/USCOURTS-ca4-20-02163-0.pdf",
+                "teaser": "... - Appellant, v. U. S. BANCORP GOVERNMENT LEASING AND FINANCE, INC., as Trustee for the benefit of the holders of COMM 2013-CCRE12 Mortgage Trust Commercial Mortgage Pass-Through Certificates; WELLS FARGO COMMERCIAL MORTGAGE SERVICING, Defendants - Appellees. Appeal from the United States District Court for the Southern District of West ..."
+            }
+        }
+    ]
 }

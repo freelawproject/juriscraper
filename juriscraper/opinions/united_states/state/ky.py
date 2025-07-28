@@ -17,7 +17,7 @@ History:
 
 import re
 from datetime import date, datetime, timedelta
-from typing import Dict, Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -29,7 +29,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     # Home: https://appellatepublic.kycourts.net/login
     first_opinion_date = datetime(1982, 2, 18).date()
-    days_interval = 10  # page size of 25
+    days_interval = 7  # page size of 25
 
     api_court = "Kentucky Supreme Court"
     api_url = (
@@ -62,7 +62,7 @@ class Site(OpinionSiteLinear):
         """
         if not start:
             end = datetime.now()
-            start = end - timedelta(30)
+            start = end - timedelta(7)
 
         logger.info("Date range %s %s", start, end)
         params = {
@@ -73,8 +73,8 @@ class Site(OpinionSiteLinear):
             "searchFields[1].operation": "<=",
             "searchFields[1].values[0]": end.strftime("%m/%d/%Y"),
             "searchFields[1].indexFieldName": "filedDate",
-            "searchFilters[0].indexFieldName": "caseHeader.court",
             "searchFilters[0].operation": "=",
+            "searchFilters[0].indexFieldName": "caseHeader.court",
             "searchFilters[0].values[0]": self.api_court,
         }
         self.url = f"{self.api_url}{urlencode(params)}"
@@ -119,6 +119,12 @@ class Site(OpinionSiteLinear):
                 # May contain the case name
                 disposition = re.split(self.judge_regex, disposition)[0]
 
+            if disposition.upper() in [
+                "OPINION OF THE COURT",
+                "OPINION AND ORDER",
+            ]:
+                disposition = ""
+
             if self.test_mode_enabled():
                 # detail request has been manually nested in the test file
                 doc_json = result["detailJson"]
@@ -148,7 +154,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def get_json(self, url: str) -> Dict:
+    def get_json(self, url: str) -> dict:
         """Get JSON from the API
 
         :param url: url
@@ -159,7 +165,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple

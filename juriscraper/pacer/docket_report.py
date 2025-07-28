@@ -2,25 +2,28 @@ import copy
 import pprint
 import re
 import sys
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Optional, Union
 
 from dateutil.tz import gettz
 from lxml import etree
 from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
-from ..lib.judge_parsers import normalize_judge_string
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import (
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
     force_unicode,
     harmonize,
 )
-from ..lib.utils import clean_court_object, previous_and_next
+from juriscraper.lib.utils import clean_court_object, previous_and_next
+
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
 from .utils import (
+    get_file_size_str_from_tr,
+    get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_anchor,
 )
@@ -47,7 +50,7 @@ class BaseDocketReport:
         r"[tT]erminated:\s+(%s)" % DATE_REGEX, flags=re.IGNORECASE
     )
     docket_number_dist_regex = re.compile(
-        r"(?<!\d)((\d{1,2}:)?\d\d-[a-zA-Z]{1,4}-\d{1,10})"
+        r"(?<!\d)((\d{1,2}:)?\d\d-[a-zA-Z]{1,5}-\d{1,10})"
     )
     docket_number_bankr_regex = re.compile(r"(?:#:\s+)?((\d-)?\d\d-\d*)")
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
@@ -159,7 +162,7 @@ class BaseDocketReport:
             return s
 
     @staticmethod
-    def _return_default_dn_components() -> Dict[str, Union[str, None]]:
+    def _return_default_dn_components() -> dict[str, Union[str, None]]:
         """Return a dictionary with default values for the docket_number
         components to return on non-valid docket_numbers.
 
@@ -176,7 +179,7 @@ class BaseDocketReport:
 
     def _parse_dn_components(
         self, potential_docket_number
-    ) -> Dict[str, Union[str, None]]:
+    ) -> dict[str, Union[str, None]]:
         """Parse the potential docket number into its components.
 
         :param potential_docket_number: The docket number string to be parsed.
@@ -254,8 +257,8 @@ class BaseDocketReport:
         return self._return_default_dn_components()
 
     def _parse_docket_number_strs(
-        self, potential_docket_numbers: List[_ElementUnicodeResult]
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+        self, potential_docket_numbers: list[_ElementUnicodeResult]
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -667,8 +670,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 continue
 
             name_path = (
-                ".//b[not(./parent::i)][not(./u)]"
-                '[not(contains(., "------"))]'
+                './/b[not(./parent::i)][not(./u)][not(contains(., "------"))]'
             )
             is_party_name_cell = len(cells[0].xpath(name_path)) > 0
             prev_has_disposition = (
@@ -834,7 +836,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         }
         current_party_i = -1
         criminal_data = copy.deepcopy(empty_criminal_data)
-        for prev, row, nxt in previous_and_next(party_rows):
+        for _prev, row, nxt in previous_and_next(party_rows):
             cells = row.xpath(".//td")
             if len(cells) == 0:
                 # Empty row. Press on.
@@ -1040,7 +1042,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "contact": "",
             }
             path = "./following-sibling::* | ./following-sibling::text()"
-            for prev, node, nxt in previous_and_next(atty_node.xpath(path)):
+            for _prev, node, nxt in previous_and_next(atty_node.xpath(path)):
                 # noinspection PyProtectedMember
                 if isinstance(node, etree._ElementUnicodeResult):
                     clean_atty = "%s\n" % " ".join(
@@ -1086,7 +1088,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return None
         return order
 
-    def _get_docket_entry_rows(self) -> List[HtmlElement]:
+    def _get_docket_entry_rows(self) -> list[HtmlElement]:
         # There can be multiple docket entry tables on a single docket page.
         # See https://github.com/freelawproject/courtlistener/issues/762. ∴ we
         # need to identify the first table, and all following tables. The
@@ -1100,14 +1102,10 @@ class DocketReport(BaseDocketReport, BaseReport):
         footer_multi_doc = 'not(.//text()[contains(., "Footer format:")])'
         docket_entry_all_rows = self.tree.xpath(
             "//table"
-            "[preceding-sibling::table[{dh}] or {dh}]"
-            "[{b_multi_doc}]"
-            "[{footer_multi_doc}]"
-            "/tbody/tr".format(
-                dh=docket_header,
-                b_multi_doc=bankr_multi_doc,
-                footer_multi_doc=footer_multi_doc,
-            )
+            f"[preceding-sibling::table[{docket_header}] or {docket_header}]"
+            f"[{bankr_multi_doc}]"
+            f"[{footer_multi_doc}]"
+            "/tbody/tr"
         )
         return docket_entry_all_rows
 
@@ -1127,7 +1125,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             index = 2
             # Some NEFs attachment pages for some courts have an extra column
             # (see nyed_123019137279), use index 3 to get the description
-            columns_in_row = row.xpath(f"./td")
+            columns_in_row = row.xpath("./td")
             if len(columns_in_row) == 5:
                 index = 3
         else:
@@ -1178,29 +1176,11 @@ class DocketReport(BaseDocketReport, BaseReport):
             return split_value[idx]
 
     @staticmethod
-    def _get_input_value_from_tr(tr, idx):
-        """Take a row from the attachment table and return the input value by
-        index.
-        """
-        try:
-            input = tr.xpath(".//input")[0]
-        except IndexError:
-            return None
-        else:
-            # initial value string "23515655-90555-2"
-            # "90555" is size in bytes "2" is pages
-            value = input.xpath("./@value")[0]
-            split_value = value.split("-")
-            if len(split_value) != 3:
-                return None
-            return split_value[idx]
-
-    @staticmethod
     def _get_page_count_from_tr_input_value(tr):
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
-        count = DocketReport._get_input_value_from_tr(tr, 2)
+        count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
 
@@ -1238,25 +1218,13 @@ class DocketReport(BaseDocketReport, BaseReport):
                 tr, 1
             )
         else:
-            file_size_str = DocketReport._get_input_value_from_tr(tr, 1)
+            file_size_str = get_input_value_from_tr(tr, 1, 3, "-")
         if file_size_str is None:
             return None
         file_size = int(file_size_str)
         if file_size == 0:
             return None
         return file_size
-
-    @staticmethod
-    def _get_file_size_str_from_tr(tr):
-        """Take a row from the attachment table and return the number of bytes
-        as a str.
-        """
-        cells = tr.xpath("./td")
-        last_cell_contents = cells[-1].text_content()
-        units = ["kb", "mb"]
-        if any(unit in last_cell_contents.lower() for unit in units):
-            return last_cell_contents.strip()
-        return ""
 
     def _get_pacer_doc_id(self, row):
         """Take in a row from the attachment table and return the pacer_doc_id
@@ -1275,7 +1243,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             if value:
                 pacer_doc_suffix = value[0]
         else:
-            pacer_doc_suffix = DocketReport._get_input_value_from_tr(row, 0)
+            pacer_doc_suffix = get_input_value_from_tr(row, 0, 3, "-")
         if pacer_doc_suffix is None:
             return None
         # after inserting prefixes our final doc_id is "035023515655"
@@ -1315,7 +1283,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
-                "file_size_str": self._get_file_size_str_from_tr(row),
+                "file_size_str": get_file_size_str_from_tr(row),
                 "pacer_doc_id": self._get_pacer_doc_id(row),
                 # It may not be needed to reparse the seq_no
                 # for each row, but we may as well. So far, it
@@ -1330,11 +1298,10 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     @staticmethod
     def _de_matches_attachment(de, attachment):
-        if de["pacer_doc_id"] != attachment["pacer_doc_id"]:
-            return False
-        if de["pacer_seq_no"] != attachment["pacer_seq_no"]:
-            return False
-        return True
+        return (
+            de["pacer_doc_id"] == attachment["pacer_doc_id"]
+            and de["pacer_seq_no"] == attachment["pacer_seq_no"]
+        )
 
     @staticmethod
     def _merge_de_with_attachment(de, attachment):
@@ -1505,12 +1472,12 @@ class DocketReport(BaseDocketReport, BaseReport):
         self.parse()
         """
         # Set up and sanity tests
-        assert (
-            self.session is not None
-        ), "session attribute of DocketReport cannot be None."
-        assert bool(
-            pacer_case_id
-        ), f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        assert self.session is not None, (
+            "session attribute of DocketReport cannot be None."
+        )
+        assert bool(pacer_case_id), (
+            f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+        )
 
         if date_range_type not in ["Filed", "Entered"]:
             raise ValueError("Invalid value for 'date_range_type' parameter.")
@@ -1633,7 +1600,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             word for phrase in self._br_split(cell) for word in phrase.split()
         ]
         if words:
-            first_word = re.sub("[\\s\u00A0]", "", words[0])
+            first_word = re.sub("[\\s\u00a0]", "", words[0])
             if self.court_id == "txnb":
                 # txnb merges the second and third columns, so if the first
                 # word is a number, return it. Otherwise, assume doc number
@@ -1653,7 +1620,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         # combined. The field can have one of four formats. Attempt the most
         # detailed first, then work our way down to just giving up and
         # capturing it all.
-        ws = "[\\s\u00A0]"  # Whitespace including nbsp
+        ws = "[\\s\u00a0]"  # Whitespace including nbsp
         regexes = [
             # 2 (23 pgs; 4 docs) Blab blah (happens when attachments exist and
             # page numbers are on)
@@ -1729,7 +1696,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self,
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse a valid docket number and its components.
 
         :return: A two-tuple: the docket_number and a dict containing the

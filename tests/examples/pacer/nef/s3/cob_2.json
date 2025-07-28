@@ -1,0 +1,44 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "cob",
+  "dockets": [
+    {
+      "case_name": "Delta, LLC",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2023-11-06",
+          "description": "ORDER ACCEPTING TRUSTEE'S REPORT AND CLOSING CASE. It appearing to the Court that the Trustee has filed a report certifying that the estate in the above-captioned case has been fully administered and that no objections to the report have been filed within 30 days thereafter, it is ORDERED that pursuant to Rule 5009, Federal Rule of Bankruptcy Procedure, there is a presumption that the estate has been fully administered; that the trustee be and hereby is discharged; that all nonexempt property listed by the Debtor and not administered by the trustee is hereby deemed abandoned pursuant to 11 U.S.C. 554(c); and the case hereby is closed pursuant to 11 U.S.C. 350(a). IT IS FURTHER ORDERED that all pending motions requiring notice and a hearing for which no certificate has been tendered in accordance with L.B.R. 9013-1 are deemed abandoned for want of prosecution and denied without prejudice.. (dd)",
+          "document_number": "33",
+          "document_url": null,
+          "pacer_case_id": "516007",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null,
+          "short_description": "Close Bankruptcy Case"
+        }
+      ],
+      "docket_number": "23-14130",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "JGR",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "sbrown@acjblaw.com",
+        "colleen@acjblaw.com",
+        "x@y.com",
+        "x.gmail.com@recap.email",
+        "benjamin.a.sales@usdoj.gov",
+        "USTPRegion19.DV.ECF@usdoj.gov"
+      ],
+      "name": ""
+    }
+  ]
+}

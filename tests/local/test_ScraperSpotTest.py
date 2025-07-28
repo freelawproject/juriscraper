@@ -2,14 +2,6 @@
 import re
 import unittest
 
-from juriscraper.opinions.united_states.state import (
-    colo,
-    mass,
-    massappct,
-    nh_p,
-)
-from juriscraper.oral_args.united_states.federal_appellate import ca6
-
 
 class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested
@@ -135,41 +127,3 @@ class ScraperSpotTest(unittest.TestCase):
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
-
-    def test_ca6_oa(self):
-        # Tests are triads. 1: Input s, 2: Group 1, 3: Group 2.
-        tests = (
-            (
-                "13-4101 Avis Rent A Car V City of Dayton Ohio",
-                "13-4101",
-                "Avis Rent A Car V City of Dayton Ohio",
-            ),
-            (
-                "13-3950 13-3951 USA v Damien Russ",
-                "13-3950 13-3951",
-                "USA v Damien Russ",
-            ),
-            ("09 5517  USA vs Taylor", "09 5517", "USA vs Taylor"),
-            ("11-2451Spikes v Mackie", "11-2451", "Spikes v Mackie"),
-        )
-        regex = ca6.Site().regex
-        for test, group_1, group_2 in tests:
-            try:
-                result_1 = regex.search(test).group(1).strip()
-                self.assertEqual(
-                    result_1,
-                    group_1,
-                    msg="Did not get expected results when regex'ing: '%s'.\n"
-                    "  Expected: '%s'\n"
-                    "  Instead:  '%s'" % (test, group_1, result_1),
-                )
-                result_2 = regex.search(test).group(2).strip()
-                self.assertEqual(
-                    result_2,
-                    group_2,
-                    msg="Did not get expected results when regex'ing: '%s'.\n"
-                    "  Expected: '%s'\n"
-                    "  Instead:  '%s'" % (test, group_2, result_2),
-                )
-            except AttributeError:
-                self.fail(f"Unable to parse ca6 string: '{test}'")

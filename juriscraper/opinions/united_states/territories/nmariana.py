@@ -8,7 +8,7 @@ History:
 
 import re
 from datetime import date
-from typing import Any, Dict
+from typing import Any
 
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -46,7 +46,7 @@ class Site(OpinionSiteLinear):
         :return: The author
         """
         if "*" not in judges:
-            author = "Per Curiam"
+            author = ""
         else:
             author = [j for j in judges.split(",") if "*" in j][0].strip("*")
         return author
@@ -55,19 +55,21 @@ class Site(OpinionSiteLinear):
         for s in self.html.xpath(".//td/a/@href[contains(., 'pdf')]/../../.."):
             cells = s.xpath(".//td")
             judge_text = cells[3].text_content()
+            author = self._fetch_author(judge_text)
             self.cases.append(
                 {
                     "name": cells[0].text_content(),
                     "citation": cells[1].text_content(),
                     "date": cells[2].text_content(),
                     "judge": ", ".join(self._cleanup_judge_names(judge_text)),
-                    "author": self._fetch_author(judge_text),
+                    "author": author,
+                    "per_curiam": not author,
                     "url": s.xpath(".//td/a/@href")[0],
                     "docket": "",
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content

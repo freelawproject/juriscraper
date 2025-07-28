@@ -1,15 +1,16 @@
 import re
-from typing import Dict, Tuple, Union
+from typing import Union
 
-from ..lib.judge_parsers import normalize_judge_string
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import (
+from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
     force_unicode,
     harmonize,
 )
-from ..lib.utils import clean_court_object, previous_and_next
+from juriscraper.lib.utils import clean_court_object, previous_and_next
+
 from .docket_report import DocketReport
 from .utils import (
     get_nonce_from_form,
@@ -110,9 +111,9 @@ class DocketHistoryReport(DocketReport):
         :return: request response object
         """
         # Set up and sanity tests
-        assert (
-            self.session is not None
-        ), "session attribute of DocketHistoryReport cannot be None."
+        assert self.session is not None, (
+            "session attribute of DocketHistoryReport cannot be None."
+        )
 
         if query_type not in ["History", "Documents"]:
             raise ValueError("Invalid value for 'query_type' parameter.")
@@ -156,9 +157,7 @@ class DocketHistoryReport(DocketReport):
         docket_header = './/th/text()[contains(., "Description")]'
         docket_entry_rows = self.tree.xpath(
             f"//table[{docket_header}]/tbody/tr"
-        )[
-            1:
-        ]  # Skip first row
+        )[1:]  # Skip first row
 
         docket_entries = []
         for row in docket_entry_rows:
@@ -249,7 +248,7 @@ class DocketHistoryReport(DocketReport):
         matches = set()
         # Skip the last value, it's a concat of all previous values and
         # isn't needed for case name matching.
-        for prev, v, nxt in previous_and_next(self.metadata_values[:-1]):
+        for prev, v, _nxt in previous_and_next(self.metadata_values[:-1]):
             if prev is None:
                 continue
             for regex in regexes:
@@ -269,7 +268,7 @@ class DocketHistoryReport(DocketReport):
 
     def _parse_docket_number(
         self,
-    ) -> Tuple[Union[str, None], Dict[str, Union[str, None]]]:
+    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.
@@ -301,7 +300,7 @@ class DocketHistoryReport(DocketReport):
     def _get_assigned_judge(self):
         if self.is_bankruptcy:
             # Look for string like "Judge: Michael J. Fox"
-            for prev, v, nxt in previous_and_next(self.metadata_values[:-1]):
+            for prev, v, _nxt in previous_and_next(self.metadata_values[:-1]):
                 if prev is not None and re.search("Judge:", prev, flags=re.I):
                     return normalize_judge_string(v)[0]
         else:

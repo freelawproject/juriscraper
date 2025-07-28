@@ -25,6 +25,7 @@ class OpinionSite(AbstractSite):
             "docket_numbers",
             "judges",
             "lower_courts",
+            "lower_court_ids",
             "lower_court_judges",
             "lower_court_numbers",
             "nature_of_suit",
@@ -39,6 +40,7 @@ class OpinionSite(AbstractSite):
             "types",
             "other_dates",
             "attorneys",
+            "headnotes",
         ]
         self._req_attrs = [
             "case_dates",
@@ -103,6 +105,9 @@ class OpinionSite(AbstractSite):
     def _get_lower_courts(self):
         return None
 
+    def _get_lower_court_ids(self):
+        return None
+
     def _get_lower_court_judges(self):
         return None
 
@@ -138,7 +143,10 @@ class OpinionSite(AbstractSite):
     def _get_attorneys(self):
         return None
 
-    def extract_from_text(self, scraped_text):
+    def _get_headnotes(self):
+        return None
+
+    def extract_from_text(self, scraped_text: str) -> dict:
         """Pass scraped text into function and return data as a dictionary
 
         :param opinion_text: Text of scraped content

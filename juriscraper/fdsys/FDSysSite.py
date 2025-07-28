@@ -3,7 +3,6 @@ import json
 import re
 from collections import defaultdict
 from datetime import date
-from pprint import pprint
 
 import requests
 from lxml import etree
@@ -148,7 +147,7 @@ class FDSysSite(AbstractSite):
         self.back_scrape_iterable = list(range(1982, current_year + 1))
 
     def __iter__(self):
-        for i, url in enumerate(xpath(self.html, "//s:loc/text()")):
+        for url in xpath(self.html, "//s:loc/text()"):
             self.save_mods_file(url)
             mods_file = FDSysModsContent(url)
             yield mods_file.get_content()
@@ -168,7 +167,7 @@ class FDSysSite(AbstractSite):
             for block in response.iter_content(1024):
                 handle.write(block)
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         """
         it actually builds an XML tree
         """
@@ -214,7 +213,7 @@ def get_court_locations_list():
 
 
 def get_the_first_5_words():
-    l = defaultdict(list)
+    l = defaultdict(list)  # noqa: E741
     p = defaultdict(list)
     word_counter = defaultdict(int)
     for f in glob.glob("./examples/*/*.xml"):

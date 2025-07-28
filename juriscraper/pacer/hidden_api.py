@@ -1,9 +1,10 @@
 from lxml import etree
 
-from ..lib.diff_tools import get_closest_match_index
-from ..lib.exceptions import ParsingException
-from ..lib.log_tools import make_default_logger
-from ..lib.string_utils import force_unicode
+from juriscraper.lib.diff_tools import get_closest_match_index
+from juriscraper.lib.exceptions import ParsingException
+from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.string_utils import force_unicode
+
 from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url
 
@@ -29,9 +30,9 @@ class PossibleCaseNumberApi(BaseReport):
         :param docket_number: A string representing a docket number
         :return: a request response object
         """
-        assert (
-            self.session is not None
-        ), "session attribute of PossibleCaseNUmberApi cannot be None."
+        assert self.session is not None, (
+            "session attribute of PossibleCaseNUmberApi cannot be None."
+        )
         url = f"{self.url}?{docket_number.lower()}"
         logger.info(
             f"Querying the possible case number endpoint at URL: {url}"
@@ -89,7 +90,7 @@ class PossibleCaseNumberApi(BaseReport):
                     logger.info("Cannot find case.")
                     return None
             raise ParsingException(
-                "Unknown XML content in " "PossibleCaseNumberApi result."
+                "Unknown XML content in PossibleCaseNumberApi result."
             )
         elif case_count == 1:
             # Only one node, all set to go.
@@ -111,11 +112,11 @@ class PossibleCaseNumberApi(BaseReport):
 
             if len(nodes) > 1 and docket_number_letters is not None:
                 # Remove items by docket number, if they have cv or cr.
-                f = (
-                    lambda node: docket_number_letters
-                    in node.xpath("./@number")[0]
-                )
-                nodes = list(filter(f, nodes))
+                nodes = [
+                    node
+                    for node in nodes
+                    if docket_number_letters in node.xpath("./@number")[0]
+                ]
 
             if len(nodes) > 1:
                 # If we only have sequential defendant attributes, pick the
@@ -198,9 +199,9 @@ class ShowCaseDocApi(BaseReport):
     PATH = "cgi-bin/show_case_doc"
 
     def __init__(self, court_id, pacer_session=None):
-        assert not court_id.endswith(
-            "b"
-        ), "This API is not available at bankruptcy courts."
+        assert not court_id.endswith("b"), (
+            "This API is not available at bankruptcy courts."
+        )
         super().__init__(court_id, pacer_session)
 
     def query(self, pacer_case_id, document_number, attachment_number=""):
@@ -212,23 +213,19 @@ class ShowCaseDocApi(BaseReport):
         :param attachment_number: The attachment number of the item on the
         attachment page.
         """
-        assert (
-            self.session is not None
-        ), "session attribute of ShowCaseDocApi cannot be None."
+        assert self.session is not None, (
+            "session attribute of ShowCaseDocApi cannot be None."
+        )
         url = (
-            "{url}?"
-            "{document_number},"
-            "{pacer_case_id},"
-            "{attachment_number},,".format(
-                url=self.url,
-                document_number=document_number,
-                pacer_case_id=pacer_case_id,
-                attachment_number=attachment_number,
-            )
+            f"{self.url}?"
+            f"{document_number},"
+            f"{pacer_case_id},"
+            f"{attachment_number},,"
         )
         logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
-        # Only do a head request, else we get text content we don't need.
-        self.response = self.session.head(url, allow_redirects=True)
+        # we use get request because nysd court disabled all head requests
+        # and bans by IP in case head request is made
+        self.response = self.session.get(url, allow_redirects=True)
         self.parse()
 
     def _parse_text(self, text):
@@ -245,3 +242,43 @@ class ShowCaseDocApi(BaseReport):
             raise ParsingException(
                 f"Unable to get doc1-style URL. Instead got {url}"
             )
+
+
+class AcmsCaseSearch(BaseReport):
+    """
+    Looks up an ACMS case by its docket number using the CaseSearch API.
+    """
+
+    def query(self, docket_number):
+        assert self.session is not None, (
+            "session attribute of AcmsCaseSearch cannot be None."
+        )
+        url = f"https://{self.court_id}-showdocservices.azurewebsites.us/api/CaseSearch/{docket_number}"
+        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
+        self.response = self.session.get(url, params={"exactMatch": True})
+        self.parse()
+
+    def _parse_text(self, text):
+        """Just a stub. No parsing needed here."""
+        pass
+
+    @property
+    def data(self):
+        """
+        Retrieves the parsed case data from the API response.
+
+        The returned dictionary contains the following keys:
+            - '@odata.etag'
+            - 'pcx_caseid'
+            - 'pcx_casenumber'
+            - 'pcx_name'
+            - 'pcx_istestcase'
+
+        :return: A dictionary containing the case data, or an empty dictionary
+                 if no data is found, the response is malformed, or an error
+                 occurred.
+        """
+        case_data = self.response.json()
+        if not case_data:
+            return {}
+        return case_data[0]

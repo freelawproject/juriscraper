@@ -4,6 +4,8 @@ CourtID: tennctcrimapp
 Court Short Name: Tenn. Ct. Crim. App.
 """
 
+from datetime import datetime
+
 from juriscraper.opinions.united_states.state import tenn
 
 
@@ -14,3 +16,4 @@ class Site(tenn.Site):
         self.url = (
             "https://www.tncourts.gov/courts/court-criminal-appeals/opinions"
         )
+        self.first_opinion_date = datetime(1988, 12, 8)

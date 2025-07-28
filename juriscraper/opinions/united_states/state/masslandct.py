@@ -12,8 +12,6 @@ Notes:
 """
 
 import datetime
-from typing import List
-from urllib.parse import quote
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSite
@@ -26,20 +24,21 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.year = None
         self.expected_content_types = ["text/html"]
+        self.should_have_results = True
 
-    def _get_download_urls(self) -> List[str]:
+    def _get_download_urls(self) -> list[str]:
         links = self.html.xpath(
             f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[2]/a'
         )
         return [row.get("href") for row in links]
 
-    def _get_docket_numbers(self) -> List[str]:
+    def _get_docket_numbers(self) -> list[str]:
         links = self.html.xpath(
             f'//*[@id="{self.year}"]/../following-sibling::section/table//tr/td[2]/a'
         )
         return [row.text for row in links]
 
-    def _get_case_names(self) -> List[str]:
+    def _get_case_names(self) -> list[str]:
         return [
             titlecase(case_name)
             for case_name in self.html.xpath(
@@ -47,7 +46,7 @@ class Site(OpinionSite):
             )
         ]
 
-    def _get_case_dates(self) -> List[datetime.date]:
+    def _get_case_dates(self) -> list[datetime.date]:
         self.year = self.html.xpath('//li[@class="menuitems"]/a/text()')[-1]
         return [
             convert_date_string(
@@ -61,5 +60,5 @@ class Site(OpinionSite):
             )
         ]
 
-    def _get_precedential_statuses(self) -> List[str]:
+    def _get_precedential_statuses(self) -> list[str]:
         return len(self.download_urls) * ["Published"]

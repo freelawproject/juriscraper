@@ -6,11 +6,12 @@ Court Contact: ca01_BAP@ca1.uscourts.gov, (617) 748-9650
 Author: Gianfranco Rossi
 History:
  - 2023-12-28, grossir: created
+ - 2025-06-11 lmanzur remove _download method from scraper
 """
 
 import calendar
 import re
-from typing import Any, Dict, Optional
+from typing import Any
 
 from lxml.html import HtmlElement
 
@@ -43,26 +44,11 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.base_url = self.url = "https://www.bap1.uscourts.gov/bapopn"
         self.court_id = self.__module__
+        self.should_have_results = True
 
         # There are 29 historical pages as of development in Dec 2023
         # source indexes from 0
         self.back_scrape_iterable = range(29)[::-1]
-
-    def _download(self, request_dict: Optional[Dict] = None) -> HtmlElement:
-        """Gets the source's HTML
-
-        For a normal periodic scraper, get the last page where
-        most recent opinions are
-        Backscraper will iterate over all available pages
-
-        :param request_dict: unused in this scraper
-        :return: HTML object from the downloaded page
-        """
-        if self.base_url == self.url:
-            self.html = super()._download()
-            self.url = self.html.xpath("//li/a/@href")[-1]
-
-        return super()._download()
 
     def _download_backwards(self, page_number: int) -> None:
         """Method used by backscraper to download historical records
@@ -158,7 +144,7 @@ class Site(OpinionSiteLinear):
         """
         return html_element.xpath(xpath)[0].text_content().strip()
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract Date Filed from text
 
         :param scraped_text: Text of scraped content
@@ -167,9 +153,10 @@ class Site(OpinionSiteLinear):
         """
         months = "|".join(calendar.month_name[1:])
         date_pattern = re.compile(rf"({months})\s+\d{{1,2}}\s?,?\s+\d{{4}}")
-        match = re.search(date_pattern, scraped_text)
-        date_extracted = match.group(0) if match else ""
-        date_filed = re.sub(r"\s+", " ", date_extracted).strip()
+        if match := re.search(date_pattern, scraped_text):
+            date_filed = re.sub(r"\s+", " ", match.group(0)).strip()
+        else:
+            return {}
 
         metadata = {
             "OpinionCluster": {

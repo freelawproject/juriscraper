@@ -1,0 +1,41 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "ctb",
+  "dockets": [
+    {
+      "case_name": "Susanne P. Wahba",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-11-15",
+          "description": "Order Scheduling Initial Chapter 11 Case Management Conference. Hearing to be held on January 14, 2025 at 11:00 AM at United States Bankruptcy Court, 915 Lafayette Blvd., Room 123, Courtroom, Bridgeport, CT. (lw)",
+          "document_number": "8",
+          "document_url": "https://ecf.ctb.uscourts.gov/doc1/040015365979?pdf_header=&magic_num=64265763&de_seq_num=27&caseid=315519",
+          "pacer_case_id": "315519",
+          "pacer_doc_id": "040015365979",
+          "pacer_magic_num": "64265763",
+          "pacer_seq_no": "27",
+          "short_description": "Chapter 11 Case Management Conference/Status Conference"
+        }
+      ],
+      "docket_number": "24-50786",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "a@b.com",
+        "user@recap.email",
+        "USTPRegion02.NH.ECF@USDOJ.GOV"
+      ],
+      "name": ""
+    }
+  ]
+}

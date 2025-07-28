@@ -1,0 +1,55 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "mdb",
+  "dockets": [
+    {
+      "case_name": "Jefferson v. Alter",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-09-25",
+          "description": "Adversary Case 0:22-ap-193 Closed. (Kaniowski, Amanda)",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "768557",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null,
+          "short_description": "Close Adversary Case"
+        }
+      ],
+      "docket_number": "22-00193",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    },
+    {
+      "case_name": "SDI Properties, LLC",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-09-25",
+          "description": "Adversary Case 0:22-ap-193 Closed. (Kaniowski, Amanda)",
+          "document_number": null,
+          "document_url": null,
+          "pacer_case_id": "753920",
+          "pacer_doc_id": null,
+          "pacer_magic_num": null,
+          "pacer_seq_no": null,
+          "short_description": "Close Adversary Case"
+        }
+      ],
+      "docket_number": "20-20650",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": null,
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": []
+}

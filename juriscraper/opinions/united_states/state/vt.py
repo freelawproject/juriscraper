@@ -13,7 +13,7 @@ She's very responsive.
 
 import re
 from datetime import date, datetime
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -32,7 +32,9 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         if self.division == 7:
             self.first_opinion_date = datetime(1999, 5, 26)
-        self.status = "Published"
+
+        # status will be updated in extract_from_text
+        self.status = "Unknown"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
         self.needs_special_headers = True
@@ -74,7 +76,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
         :param dates: (start_date, end_date) tuple
         :return None
@@ -115,11 +117,57 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
 
     def extract_from_text(self, scraped_text: str):
-        match = re.search(
-            r"(?P<volume>\d{4}) (?P<reporter>VT) (?P<page>\d+)",
-            scraped_text[:1000],
-        )
-        if match:
-            return {"Citation": {"type": 8, **match.groupdict()}}
+        """Extract a neutral citation if it exists, and update court and status
 
-        return {}
+        Some documents have this heading:
+        > Decisions of a three-justice panel are not to be considered as
+        > precedent before any tribunal.
+
+        However, there are some edge cases of decisions by 3 judges that
+        actually have a neutral citation, like:
+        https://www.courtlistener.com/opinion/10350446/state-v-aaliyah-johnson/
+
+        Docs with a neutral citation have another heading, so the presence
+        of the above heading may be used
+        > This opinion is subject to motions for reargument under V.R.A.P. 40
+        > as well as formal revision before publication in the Vermont Reports.
+        """
+        metadata = {}
+        cite_regex = r"\n\s*\d{4} VT \d+\s*\n"
+        match = re.search(cite_regex, scraped_text[:1000])
+        if match:
+            metadata = {
+                "Citation": match.group(0).strip(),
+                "OpinionCluster": {"precedential_status": "Published"},
+            }
+
+            # update court_id for opinions that have a VT citation, that are
+            # marked on the source as belonging to one of the superior court
+            # divisions. Check test_ScraperExtractFromTextTest examples
+            if "vtsuperct" in self.court_id:
+                metadata["Docket"] = {"court_id": "vt"}
+
+            return metadata
+
+        non_precedential_heading = (
+            "decisions of a three-justice panel are not to be considered as "
+            "precedent before any tribunal"
+        )
+        if non_precedential_heading in scraped_text[:1000].lower():
+            splitted = scraped_text.split("BY THE COURT:")
+            if len(splitted) > 1:
+                judge_regex = (
+                    r"(?P<judge>[A-Za-z .,]+),\s+(Associate|Chief) Justice"
+                )
+                judges = [
+                    j.group("judge").strip()
+                    for j in re.finditer(judge_regex, splitted[-1])
+                ]
+                cluster = {"judges": "; ".join(judges)}
+
+                if len(judges) == 3:
+                    cluster["precedential_status"] = "Unpublished"
+
+                metadata["OpinionCluster"] = cluster
+
+        return metadata

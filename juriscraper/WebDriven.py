@@ -38,7 +38,7 @@ class WebDriven:
             # sometimes quiting below throws a cryptic and otherwise ignorable OS error
             try:
                 self.webdriver.quit()
-            except:
+            except Exception:
                 pass
 
     def dump_html_web_element(self, element: WebElement):

@@ -1,0 +1,55 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "nhb",
+  "dockets": [
+    {
+      "case_name": "Smith v. Earthlandscaping, Inc. dba Earthscape and Lawn",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-11-20",
+          "description": "Adversary case 24-01017. Complaint by Timothy P. Smith against Earthlandscaping, Inc. dba Earthscape and Lawn. Fee Amount $ 350. (Attachments: (1) Adversary Proceeding Cover Sheet) (12 (Recovery of money/property - 547 preference)) (13 (Recovery of money/property - 548 fraudulent transfer)) (LaMontagne, James)",
+          "document_number": "1",
+          "document_url": "https://ecf.nhb.uscourts.gov/doc1/11606678791?pdf_header=&magic_num=22314206&de_seq_num=3&caseid=120507",
+          "pacer_case_id": "120507",
+          "pacer_doc_id": "11606678791",
+          "pacer_magic_num": "22314206",
+          "pacer_seq_no": "3",
+          "short_description": "Complaint"
+        }
+      ],
+      "docket_number": "24-01017",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "MAF",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    },
+    {
+      "case_name": "Detail Design Builders, LLC",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-11-20",
+          "description": "Adversary case 24-01017. Complaint by Timothy P. Smith against Earthlandscaping, Inc. dba Earthscape and Lawn. Fee Amount $ 350. (Attachments: (1) Adversary Proceeding Cover Sheet) (12 (Recovery of money/property - 547 preference)) (13 (Recovery of money/property - 548 fraudulent transfer)) (LaMontagne, James)",
+          "document_number": "142",
+          "document_url": "https://ecf.nhb.uscourts.gov/doc1/11606678793?pdf_header=&magic_num=28049660&de_seq_num=581&caseid=118889",
+          "pacer_case_id": "118889",
+          "pacer_doc_id": "11606678793",
+          "pacer_magic_num": "28049660",
+          "pacer_seq_no": "581",
+          "short_description": "Complaint"
+        }
+      ],
+      "docket_number": "22-10577",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "MAF",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": []
+}

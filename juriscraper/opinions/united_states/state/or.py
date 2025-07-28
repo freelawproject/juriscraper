@@ -2,8 +2,10 @@
 History:
  - 2014-08-05: Adapted scraper to have year-based URLs.
  - 2023-11-18: Fixed and updated
+ - 2025-04-23: implement extract_from_text, grossir
 """
 
+import re
 from datetime import datetime, timedelta
 
 from juriscraper.AbstractSite import logger
@@ -83,8 +85,9 @@ class Site(OpinionSiteLinear):
         else:
             item_id = row["itemId"]
             url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{item_id}/false"
-            json = self.request["session"].get(url).json()
             logger.debug("Getting detail JSON from %s", url)
+            self._request_url_get(url)
+            json = self.request["response"].json()
 
         if len(json["fields"]) == 1:
             fields = json["parent"]["fields"]
@@ -105,13 +108,14 @@ class Site(OpinionSiteLinear):
                     status = "Published"
             elif field["key"] == "descri":
                 disposition = field["value"]
-            elif field["key"] == "relhapt":
+            elif (
+                field["key"] == "relhapt"
                 # For orctapp this field may be populated with consolidated docket
                 # numbers
-                if self.court_id.endswith("or") and not field[
-                    "value"
-                ].startswith("S"):
-                    lower_court_number = field["value"]
+                and self.court_id.endswith("or")
+                and not field["value"].startswith("S")
+            ):
+                lower_court_number = field["value"]
 
         return judge, disposition, status, lower_court_number
 
@@ -128,3 +132,18 @@ class Site(OpinionSiteLinear):
         start = datetime.strftime(start_date, "%Y%m%d")
         end = datetime.strftime(end_date, "%Y%m%d")
         return self.base_url.format(self.court_code, start, end)
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract citations from text
+
+        Be careful with citations referring to other opinions that are
+        mentioned before the actual citation
+
+        See, for example:
+        https://ojd.contentdm.oclc.org/digital/api/collection/p17027coll5/id/28946/download
+        """
+        regex = r"\n\s+(?P<cite>\d+ P3d \d+)\s+\n"
+        if match := re.search(regex, scraped_text[:1000]):
+            return {"Citation": match.group("cite")}
+
+        return {}

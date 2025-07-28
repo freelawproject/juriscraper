@@ -16,16 +16,13 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php"
         self.back_scrape_iterable = list(range(20, 10000, 20))
+        self.should_have_results = True
 
     def _get_case_names(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()")
-        ]
+        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()"))
 
     def _get_download_urls(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[1]/a/@href")
-        ]
+        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[1]/a/@href"))
 
     def _get_case_dates(self):
         dates = []
@@ -40,9 +37,7 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()")
-        ]
+        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()"))
 
     def _get_precedential_statuses(self):
         if "unpub" in self.url:
@@ -51,14 +46,10 @@ class Site(OpinionSite):
             return ["Published"] * len(self.case_names)
 
     def _get_nature_of_suit(self):
-        return [
-            e for e in self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()")
-        ]
+        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()"))
 
     def _download_backwards(self, n):
-        self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={}&num={}&numBegin=1".format(
-            n, n / 20 - 1
-        )
+        self.url = f"http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={n}&num={n / 20 - 1}&numBegin=1"
 
         self.html = self._download()
         if self.html is not None:

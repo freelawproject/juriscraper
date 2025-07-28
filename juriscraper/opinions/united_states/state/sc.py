@@ -19,8 +19,8 @@ Contact information:
  - Web Developer (who can help with firewall issues): 803-734-0373, Winkie Clark
 """
 
+import re
 from datetime import date
-from typing import Dict, List, Tuple
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
@@ -37,6 +37,7 @@ class Site(OpinionSiteLinear):
     court = "supreme-court"
     days_interval = 27  # guarantees picking each month
     first_opinion_date = date(2000, 1, 1)
+    docket_regex = r"Appellate Case No. (?P<docket>\d{4}-\d+)"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -74,8 +75,8 @@ class Site(OpinionSiteLinear):
             )
 
     def make_backscrape_iterable(
-        self, kwargs: Dict
-    ) -> List[Tuple[date, date]]:
+        self, kwargs: dict
+    ) -> list[tuple[date, date]]:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
         and replace the self.back_scrape_iterable
@@ -119,3 +120,8 @@ class Site(OpinionSiteLinear):
             date_obj.year,
             str(date_obj.month).zfill(2),
         )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        if match := re.search(self.docket_regex, scraped_text):
+            return {"Docket": {"docket_number": match.group("docket")}}
+        return {}

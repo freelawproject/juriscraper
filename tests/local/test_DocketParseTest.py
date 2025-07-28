@@ -24,11 +24,11 @@ class DocketParseTest(unittest.TestCase):
     def run_parsers_on_path(
         self,
         path_root,
-        required_fields=["date_filed", "case_name", "docket_number"],
+        required_fields=("date_filed", "case_name", "docket_number"),
     ):
         """Test all the parsers, faking the network query."""
         paths = []
-        for root, dirnames, filenames in os.walk(path_root):
+        for root, _, filenames in os.walk(path_root):
             for filename in fnmatch.filter(filenames, "*.html"):
                 paths.append(os.path.join(root, filename))
         paths.sort()

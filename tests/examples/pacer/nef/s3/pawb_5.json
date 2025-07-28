@@ -1,0 +1,42 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "pawb",
+  "dockets": [
+    {
+      "case_name": "U LOCK INC",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2023-01-30",
+          "description": "Order Regarding Order to Show Cause and Request for Administrative Expense Signed on 1/30/2023. (RE: related document(s): [293] Memorandum Opinion, [294] Order Scheduling Hearing, [304] Response). The Order to Show Cause is continued generally. The Oral Motion to Extend Time to File a Motion Seeking Reconsideration of the Memorandum Opinion is GRANTED and shall be filed on or before 3/1/2023. On or before 3/1/2023, Ms. Biros shall file a Renewed or Amended Application for Expense Claim shall be filed on or before 3/1/2023. (nsha)",
+          "document_number": "314",
+          "document_url": "https://ecf.pawb.uscourts.gov/doc1/156029036038?pdf_header=&magic_num=58599263&de_seq_num=1194&caseid=376948",
+          "pacer_case_id": "376948",
+          "pacer_doc_id": "156029036038",
+          "pacer_magic_num": "58599263",
+          "pacer_seq_no": "1194",
+          "short_description": "Order -Non-motion related"
+        }
+      ],
+      "docket_number": "22-20823",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "GLT",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "a@a.com",
+        "a@b.com;c@ecf.courtdrive.com;cwirick@ecf.courtdrive.com",
+        "bankruptcy@bononilaw.com",
+        "pa69@ecfcbis.com"
+      ],
+      "name": ""
+    }
+  ]
+}

@@ -9,7 +9,6 @@ History:
 """
 
 import re
-from typing import List
 from urllib.parse import urlencode
 
 from juriscraper.DeferringList import DeferringList
@@ -57,7 +56,7 @@ class Site(OpinionSiteLinear):
                 name = ""
             self.cases.append(
                 {
-                    "date": item["displayDate"],
+                    "date": item["filingDate"],
                     "docket": docket,
                     "name": name,
                     "url": f"https://www.courts.michigan.gov{item['documentUrl'].strip()}",
@@ -66,7 +65,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _get_case_names(self) -> List[str]:
+    def _get_case_names(self) -> list[str]:
         """Get case names *if* missing
 
         In some cases the case name is missing. This method uses a deferred list to the get the case name.
@@ -103,7 +102,7 @@ class Site(OpinionSiteLinear):
             name = name.replace("People of Mi ", "People of Michigan ")
         return name
 
-    def get_lower_courts(self, courts: List[str]) -> str:
+    def get_lower_courts(self, courts: list[str]) -> str:
         """Get the lower courts
 
         :param courts: Court names as an array

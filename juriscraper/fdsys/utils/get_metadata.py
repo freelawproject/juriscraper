@@ -109,7 +109,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Get all the metadata from a mods file."
     )
-    args = parser.parse_args()
+    parser.parse_args()
 
     print_xpath_results()
 
@@ -118,7 +118,7 @@ def get_fdsys_court_names():
     response = glob.glob("../examples/2015_USCOURTS_sitemap.xml")
     tree = etree.parse(response[0])
     # print(etree.tostring(tree, pretty_print=True))
-    data = dict()
+    data = {}
 
     for url in tree.xpath(
         "//m:loc/text()",

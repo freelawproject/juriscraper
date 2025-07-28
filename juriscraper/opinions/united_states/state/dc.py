@@ -18,10 +18,8 @@ class Site(OpinionSite):
             'not(contains(td[2]/span/text(), "NO OPINIONS"))'
         )
         qualifier_has_pdf_link = 'contains(.//td[1]/a/@href, ".pdf")'
-        self.base_path = "//table//tr[{} and {}]".format(
-            qualifier_no_opinions,
-            qualifier_has_pdf_link,
-        )
+        self.base_path = f"//table//tr[{qualifier_no_opinions} and {qualifier_has_pdf_link}]"
+        self.should_have_results = True
 
     def _get_docket_numbers(self):
         path = f"{self.base_path}/td[1]/a"
@@ -29,7 +27,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path = f"{self.base_path}/td[1]/a/@href"
-        return [href for href in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
         path = f"{self.base_path}/td[2]"

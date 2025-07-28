@@ -10,6 +10,7 @@ class Site(OpinionSiteLinear):
         self.url = (
             "https://supremecourt.nebraska.gov/courts/supreme-court/opinions"
         )
+        self.should_have_results = True
 
     def _return_response_text_object(self):
         """Remove faulty URLs from HTML

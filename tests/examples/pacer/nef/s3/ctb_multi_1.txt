@@ -1,0 +1,148 @@
+Return-Path: <email@email.com.gov>
+Received: from icmecf101.gtwy.uscourts.gov (icmecf101.gtwy.uscourts.gov [199.107.16.200])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id k38b0456po5ke6jfm75uh4a3tc5aaur56gb8beo1
+ for email@email.com;
+ Fri, 22 Nov 2024 03:05:50 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of ctb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=email@email.com.gov; helo=icmecf101.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of ctb.uscourts.gov designates 199.107.16.200 as permitted sender) client-ip=199.107.16.200; envelope-from=email@email.com.gov; helo=icmecf101.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=ctb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHbzBHb2lFUUZhNEtjTzlTZEpWWitjZFNzWkFqNWNndi82T1p0Y3dvdHhpb3pwNDhramc3Rkk2RVNsQVBMc1UrYWszOHIrVjh5d3dYelplUUVBclRvM1FxeTVtWkdlamViZTBUNXJveDZXN3dBNkkzVWZqdkVJQjZGaDJKOUd0REx5S3ZWMXFCSVMrRG04VkVuZ3lBQzlmRGVqMU5UalR0amNFQTVNZk42QkdDM2JpZit2VlBvZDl2eDcxLzF5Z1FBUUp0bHp6T08wS0Q4VzQxVGhId0pZWHVSQkt1ZjJac0E3WWp3V08xUlFuZnBxdURHZUdQcitScUMxZnY0VlArR0tkaFQ4V0RKYllrajc5ZE1SNUVXd05UZG91K2NtSFB2S0REN2h6YnF1YVFPWDBnYnBUbzJPUlBRdFdKV0tVVGs9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=HUFtJui1IUY87ie8tiJHTRRK+FFiLU41Ex4Wc36g/gMTxY8XocRYvdrAI/2iCFvbLlfB6jAxh72bGcKYuRHUHwvTV26g1bwp6IRcY+VdD53vpwo0MjSALnCDE/Tybiye6UqZh/rII3V6nJSHs17TfhDAe9PaYMQzkc8NjxQwGeI=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1732244751; v=1; bh=lVDjHVq6Iir6oq29ypBqSxqrAuDIhBJrNUzwKV8MRxM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=uscourts.gov; i=@uscourts.gov; l=8269; q=dns/txt;
+  s=law1e; t=1732244750; x=1763780750;
+  h=date:x-authentication-warning:mime-version:from:to:
+   message-id:subject:content-type:x-sbrs:x-remote-ip;
+  bh=lVDjHVq6Iir6oq29ypBqSxqrAuDIhBJrNUzwKV8MRxM=;
+  b=LP9HL2sv/m9Q22TTqUNfl1aspzjgOrrceR2DuznMvtXLJ7e+SD4gm0Uk
+   oZXTQliEvqXP6DxIOVLbPlrl185s1wuZfNp31dnw+b0/gxghr7o1DG5ZM
+   I1rQpwGczNWHkGuns8JGz6WyY8tAr64VWKMJPKGxV2KU3bi0S4z14l/h7
+   Fm/XVfESk5eOKRcDaFGPKs4Efq8QyaEXG1eMDyR6jmC5ZPBZwsFDRiCIG
+   sugF11h7Hkk2wIhVrW3e7itaEWN2uW4OBosDnX7Hq873Rc8sa3HjMzbqE
+   LIWyi3u7s4L3Vn5iT2QhE+JguKFAQsiXmZNz/oIcLGjoYrLKpuRVEk/qt
+   A==;
+X-SBRS: None
+X-REMOTE-IP: 156.119.191.114
+Received: from ctbdb.ctb.gtwy.dcn ([156.119.191.114])
+  by icmecf101.gtwy.uscourts.gov with ESMTP; 21 Nov 2024 22:05:50 -0500
+Received: from ctbdb.ctb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by ctbdb.ctb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 4AM355VE102900;
+	Thu, 21 Nov 2024 22:05:06 -0500
+Received: (from ecf_web@localhost)
+	by ctbdb.ctb.gtwy.dcn (8.14.7/8.14.4/Submit) id 4AM34g9q101211;
+	Thu, 21 Nov 2024 22:04:42 -0500
+Date: Thu, 21 Nov 2024 22:04:42 -0500
+X-Authentication-Warning: ctbdb.ctb.gtwy.dcn: ecf_web set sender to email@email.com.gov using -f
+MIME-Version:1.0
+From:email@email.com.gov
+To:email@email.com.gov
+Message-Id:<email@email.com.gov>
+Subject:24-03015 Complaint
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>District of Connecticut</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from LastName, FirstName entered on 11/21/2024 at 10:04 PM EST and filed on 11/21/2024 
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Lotto v. U.S. BANK TRUST NATIONAL ASSOCIATION NOT IN ITS  I</td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ctb.uscourts.gov/cgi-bin/DktRpt.pl?315593>24-03015</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ctb.uscourts.gov/doc1/040015374935?pdf_header=&magic_num=60081811&de_seq_num=3&caseid=315593'>1</a>
+</td></tr>
+</table>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Michael Henry Lotto                               </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.ctb.uscourts.gov/cgi-bin/DktRpt.pl?314759>24-30774</A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.ctb.uscourts.gov/doc1/040015374938?pdf_header=&magic_num=34452225&de_seq_num=185&caseid=314759'>69</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+Adversary case 24-03015. Complaint <i></i>  (21 (Validity, priority or extent of lien or other interest in property)) (81 (Subordination of claim or interest)) (91 (Declaratory judgment)) (02 (Other (e.g. other actions that would have been brought in state court if unrelated to bankruptcy))) (72 (Injunctive relief - other)) filed by  Michael J.FirstName LastName on behalf of  Michael Henry Lotto  against    U.S. BANK TRUST NATIONAL ASSOCIATION NOT IN ITS  INDIVIDUAL CAPACITY BUT SOLELY AS OWNER TRUSTEE FOR RCF 2  ACQUISITION TRUST,   Selene Finance LP,   Discover Bank.  Receipt #NotDue  Fee Amount $350. Fee Not Due.  (Attachments: # (1)  Form B1040 - Adversary Proceeding Cover Sheet # (2) Exhibit Exhibits A through F) (Habib, Michael)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>ADVERSARY COMPLAINT_LOTTO_11.21.2024_FINAL.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/21/2024] [FileNumber=15733343
+<BR><TAB>-0] [b62f864b285b5925b6a685449c54a1290aef8c5e400bb26440e2a0575a4a09235
+<BR><TAB>2ead8528545efe9e53c2c322ed9ae12e5aa6dae2105c2c6c4a9bf21e97720b1]]
+<BR>
+<STRONG>Document description:</STRONG> Form B1040 - Adversary Proceeding Cover Sheet
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Form B1040_Adversary Proceeding Cover Sheet_Lotto_11.21.2024.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/21/2024] [FileNumber=15733343
+<BR><TAB>-1] [b55c2b39a3993a6d04513dca153f4991202323423d3677b74a1f52bccfd5a365e
+<BR><TAB>5ff1bd8c72d560a86d67171fe3c87a43f4f74aa6ec1b9d8183832136b32af6f]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit Exhibits A through F
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibits to Complaint_Lotto_11.21.2024.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/21/2024] [FileNumber=15733343
+<BR><TAB>-2] [7dcce3f46d124cfc6321d47356cdebe04b98d8f0f0616953f99bdfa65935b73e8
+<BR><TAB>75d34a1a674d5a287e3cb72d407cbe19af48e448f2d8a793a18a29837cb1f07]]
+<BR>
+<STRONG>Document description:</STRONG>Main Document  
+<BR><STRONG>Original filename:</STRONG>ADVERSARY COMPLAINT_LOTTO_11.21.2024_FINAL.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/21/2024] [FileNumber=15733344
+<BR><TAB>-0] [18834182338b3a081bd17cadae69000cd91cda1538665246a3b41313f286209ac
+<BR><TAB>9b5e95b87340081b6aea9c62008b08cc285760420546c138093c3677332aa43]]
+<BR>
+<STRONG>Document description:</STRONG> Form B1040 - Adversary Proceeding Cover Sheet
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Form B1040_Adversary Proceeding Cover Sheet_Lotto_11.21.2024.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/21/2024] [FileNumber=15733344
+<BR><TAB>-1] [75c34453ecbcc75d6b285a034223d5ea1bcd2ce26c4c7db30cf4e23500ee06694
+<BR><TAB>a5a245a1d55f7a4f9e4873ebba4e17a78a5adb58ea2760cfecfbea1fcb99299]]
+<BR>
+<STRONG>Document description:</STRONG>Exhibit Exhibits A through F
+<BR><STRONG>Original filename:</STRONG>C:\fakepath\Exhibits to Complaint_Lotto_11.21.2024.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR><TAB>[STAMP bkecfStamp_ID=1018027260 [Date=11/21/2024] [FileNumber=15733344
+<BR><TAB>-2] [196a1a6e452b7c81f82369f7c47c0bc62e99f22de7f3cbf784da443f1ee7a3512
+<BR><TAB>96e043738965900435410ce007ae9c084b121feb5d585bcc2dad8bbf8d2bc5b]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>

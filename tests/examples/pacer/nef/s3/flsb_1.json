@@ -1,0 +1,32 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": true,
+  "court_id": "flsb",
+  "dockets": [
+    {
+      "case_name": "Evan Phillip Jowers",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2024-12-12",
+          "description": "Chapter 11 Monthly Operating Report for the Period Ending 10/31/2024 Filed by Debtor Evan Phillip Jowers. (Attachments: (1) Bank Statement (2) Receipts and Disbursements) (Van Horn, Chad)",
+          "document_number": "117",
+          "document_url": "https://ecf.flsb.uscourts.gov/doc1/050057572723?pdf_header=&magic_num=58443666&de_seq_num=384&caseid=814478",
+          "pacer_case_id": "814478",
+          "pacer_doc_id": "050057572723",
+          "pacer_magic_num": "58443666",
+          "pacer_seq_no": "384",
+          "short_description": "UST Form 11-MOR"
+        }
+      ],
+      "docket_number": "24-13584",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "MAM",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": []
+}

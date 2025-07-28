@@ -1,24 +1,30 @@
 [
   {
     "case_dates": "2023-11-09",
-    "case_names": "S.M. v. State of Alabama (Appeal from Lee Circuit Court: CC-07-606.67)",
+    "case_names": "S.M. v. State of Alabama",
     "download_urls": "https://publicportal-api.alappeals.gov/courts/b82b30d5-bd3c-46d7-9451-1cb05e470873/cms/case/1A70DC59-B88E-4053-964A-B265AF23DA51/docketentrydocuments/7A6EF661-DD4D-416D-B9DA-7C11C14B66FE",
     "precedential_statuses": "Published",
     "blocked_statuses": false,
     "date_filed_is_approximate": false,
     "docket_numbers": "CR-2023-0461",
-    "judges": "On Rehearing",
-    "case_name_shorts": "S.M."
+    "judges": "",
+    "lower_courts": "Lee Circuit Court",
+    "lower_court_numbers": "CC-07-606.67",
+    "case_name_shorts": "S.M.",
+    "per_curiam": false
   },
   {
     "case_dates": "2023-11-09",
-    "case_names": "Mondrell Kenee Ward v. State of Alabama (Appeal from Madison Circuit Court: CC-18-4946)",
+    "case_names": "Mondrell Kenee Ward v. State of Alabama",
     "download_urls": "https://publicportal-api.alappeals.gov/courts/b82b30d5-bd3c-46d7-9451-1cb05e470873/cms/case/39312897-FABB-4F2A-A483-EBAC92D5AC2A/docketentrydocuments/A1F7D25E-DA7D-4F41-A69C-3168001F444A",
     "precedential_statuses": "Published",
     "blocked_statuses": false,
     "date_filed_is_approximate": false,
     "docket_numbers": "CR-2022-1020",
-    "judges": "On Rehearing",
-    "case_name_shorts": ""
+    "judges": "",
+    "lower_courts": "Madison Circuit Court",
+    "lower_court_numbers": "CC-18-4946",
+    "case_name_shorts": "",
+    "per_curiam": false
   }
 ]

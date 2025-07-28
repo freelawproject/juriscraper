@@ -1,6 +1,10 @@
 import os
+import traceback
+from logging import getLogger
 
 from requests import HTTPError
+
+logger = getLogger()
 
 
 def build_module_list(court_id):
@@ -56,7 +60,7 @@ def get_module_by_name(name):
     db_root = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "..", "opinions")
     )
-    for dirName, subdirList, fileList in os.walk(db_root):
+    for dirName, _subdirList, fileList in os.walk(db_root):
         for fname in fileList:
             if f"{name}.py" == fname:
                 package, module = (
@@ -72,11 +76,12 @@ def get_module_by_name(name):
                 return juriscraper_module.Site()
 
 
-def site_yielder(iterable, mod):
+def site_yielder(iterable, mod, save_response_fn=None):
     for i in iterable:
-        site = mod.Site()
+        site = mod.Site(save_response_fn=save_response_fn)
         try:
             site._download_backwards(i)
             yield site
-        except HTTPError as e:
+        except HTTPError:
+            logger.debug("%s", traceback.format_exc())
             continue

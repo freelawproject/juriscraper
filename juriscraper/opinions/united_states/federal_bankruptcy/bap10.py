@@ -11,7 +11,7 @@ History:
 """
 
 from datetime import date, datetime, timedelta
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -28,6 +28,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self) -> None:
         for row in self.html.xpath(".//tr"):
@@ -66,7 +67,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple

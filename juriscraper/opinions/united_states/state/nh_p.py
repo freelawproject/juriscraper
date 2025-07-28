@@ -20,7 +20,6 @@ History:
 
 import re
 from datetime import datetime
-from typing import Dict, List
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -28,6 +27,11 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    """
+    Regular site:
+    https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/opinions
+    """
+
     # document_purpose = 1331 -> Supreme Court Opinion
     base_filter = "{}@field_document_purpose|=|1331"
     year_to_filter = {
@@ -111,7 +115,7 @@ class Site(OpinionSiteLinear):
                     for match in self.docket_regex.finditer(case["title"])
                 ]
             )
-            if not docket:
+            if not docket and fields.get("field_description"):
                 docket_str = fields["field_description"][0]["#text"]
                 docket = self.docket_regex.search(docket_str).group(0)
 
@@ -142,7 +146,7 @@ class Site(OpinionSiteLinear):
         )
         for page in range(2, json_response["last_page"] + 1):
             logger.info("Paginating to page %s", page)
-            self.url = self.url.replace(f"page={page-1}", f"page={page}")
+            self.url = self.url.replace(f"page={page - 1}", f"page={page}")
             self.html = self._download()
             self._process_html()
 
@@ -154,11 +158,14 @@ class Site(OpinionSiteLinear):
 
         :param year: full year integer
         """
+        year_filter = (
+            "" if not self.back_scrape_iterable else self.year_to_filter[year]
+        )
         params = {
             "iterate_nodes": "true",
             # Will raise a KeyError if there is no proper year key, we will
             # need to manually correct this next year
-            "q": self.base_filter.format(self.year_to_filter[year]),
+            "q": self.base_filter.format(year_filter),
             "sort": "field_date_posted|desc|ALLOW_NULLS",
             "filter_mode": self.filter_mode,
             "type": "document",
@@ -167,8 +174,8 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
-            "Sec-Ch-Ua": '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+            "Sec-Ch-Ua": '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
             "Referer": f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/{self.document_type}/{year}",
             "X-Requested-With": "XMLHttpRequest",
         }
@@ -180,7 +187,7 @@ class Site(OpinionSiteLinear):
         self.html = self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: Dict) -> List[int]:
+    def make_backscrape_iterable(self, kwargs: dict) -> list[int]:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.
         """

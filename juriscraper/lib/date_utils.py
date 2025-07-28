@@ -17,11 +17,13 @@ MISSPELLINGS = {
     "Term": "1",
 }
 
-json_date_handler = lambda obj: (
-    obj.isoformat()
-    if isinstance(obj, datetime.datetime) or isinstance(obj, datetime.date)
-    else None
-)
+
+def json_date_handler(obj):
+    return (
+        obj.isoformat()
+        if isinstance(obj, (datetime.datetime, datetime.date))
+        else None
+    )
 
 
 class BetterInfo(parserinfo):
@@ -167,7 +169,7 @@ def unique_year_month(
     seen_year_months = set()
 
     for obj in date_list:
-        if isinstance(obj, date) or isinstance(obj, datetime.datetime):
+        if isinstance(obj, (date, datetime.datetime)):
             obj = [obj]
 
         for date_obj in obj:

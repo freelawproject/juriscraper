@@ -1,0 +1,47 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "cacb",
+  "dockets": [
+    {
+      "case_name": "Lee v. Newman",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2023-02-15",
+          "description": "Order granting stipulation to continue pre-trial conference from 2/28/23 to 4/25/23 @ 10:00 a.m. (BNC-PDF) (Related Doc [75]) Signed on 2/15/2023 (JC6)",
+          "document_number": "76",
+          "document_url": "https://ecf.cacb.uscourts.gov/doc1/9730106502427?pdf_header=&magic_num=94356268&de_seq_num=252&caseid=1927388",
+          "pacer_case_id": "1927388",
+          "pacer_doc_id": "9730106502427",
+          "pacer_magic_num": "94356268",
+          "pacer_seq_no": "252",
+          "short_description": "ORDER to continue/reschedule hearing (BNC-PDF)"
+        }
+      ],
+      "docket_number": "6:21-ap-01071",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": "ap",
+      "federal_dn_judge_initials_assigned": "SC",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": "6"
+    }
+  ],
+  "email_recipients": [
+    {
+      "email_addresses": [
+        "suzanne.grandt@calbar.ca.gov",
+        "joan.randolph@calbar.ca.gov",
+        "hbgtrustee@gtllp.com",
+        "C135@ecfcbis.com",
+        "a@gmail.com",
+        "x@recap.emailx@y.net",
+        "don@donreidlaw.com",
+        "ecf@donreidlaw.com",
+        "ustpregion16.rs.ecf@usdoj.gov"
+      ],
+      "name": ""
+    }
+  ]
+}

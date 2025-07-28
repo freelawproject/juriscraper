@@ -1,5 +1,4 @@
 from datetime import date, datetime
-from typing import Tuple
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -17,6 +16,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.url = self.base_url
         self.make_backscrape_iterable(kwargs)
+        self.should_have_results = True
 
     def _process_html(self):
         for row in self.html.xpath("//tr[not(th)]"):
@@ -55,7 +55,7 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Change URL to backscraping date range
 
         :param dates: tuple with date range to scrape

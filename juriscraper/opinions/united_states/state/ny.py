@@ -11,7 +11,9 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Optional
+
+import nh3
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -20,7 +22,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
 
@@ -108,7 +109,7 @@ class Site(OpinionSiteLinear):
                 case["author"] = cleaned_author
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> Dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 
         :param scraped_text: The content of the document downloaded
@@ -123,7 +124,7 @@ class Site(OpinionSiteLinear):
             return {"Docket": dockets.groupdict()}
         return {}
 
-    def _download_backwards(self, dates: Tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -133,3 +134,29 @@ class Site(OpinionSiteLinear):
         self._set_parameters(*dates)
         self.html = self._download()
         self._process_html()
+
+    @staticmethod
+    def cleanup_content(content: bytes) -> bytes:
+        """Remove hash altering timestamps to prevent duplicates
+
+        Previously we've been more targeted about removing a href's but
+        doctor will strip them out anyway so we should just clean our html
+        content here.
+
+        :param content: downloaded content `r.content`
+        :return: content without hash altering elements
+        """
+        try:
+            html_str = content.decode("utf-8")
+        except UnicodeDecodeError:
+            return content
+
+        if not nh3.is_html(html_str):
+            return content
+
+        # remove a tags
+        allowed = set(nh3.ALLOWED_TAGS)
+        allowed.discard("a")
+
+        cleaned = nh3.clean(html_str, tags=allowed)
+        return cleaned.encode()

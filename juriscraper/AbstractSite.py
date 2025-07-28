@@ -1,7 +1,6 @@
 import hashlib
 import json
 from datetime import date, datetime, timedelta
-from typing import Dict, List, Tuple
 
 import certifi
 import requests
@@ -66,10 +65,19 @@ class AbstractSite:
             "url": None,
         }
 
+        # Attribute to reference a function passed by the caller,
+        # which takes a single argument, the Site object, after
+        # each GET or POST request. Intended for saving the response for
+        # debugging purposes.
+        self.save_response = kwargs.get("save_response_fn")
+
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
         self.needs_special_headers = False
+
+        # indicates whether the scraper should have results or not to raise an error
+        self.should_have_results = False
 
         # Sub-classed metadata
         self.court_id = None
@@ -141,7 +149,7 @@ class AbstractSite:
 
     def to_json(self):
         return json.dumps(
-            [item for item in self],
+            list(self),
             default=json_date_handler,
         )
 
@@ -238,7 +246,12 @@ class AbstractSite:
                 " lengths: %s" % (self.court_id, lengths)
             )
         if len(self.case_names) == 0:
-            logger.warning(f"{self.court_id}: Returned with zero items.")
+            if self.should_have_results:
+                logger.error(
+                    f"{self.court_id}: Returned with zero items, but should have results."
+                )
+            else:
+                logger.warning(f"{self.court_id}: Returned with zero items.")
         else:
             for field in self._req_attrs:
                 if self.__getattribute__(field) is None:
@@ -246,16 +259,14 @@ class AbstractSite:
                         "%s: Required fields do not contain any data: %s"
                         % (self.court_id, field)
                     )
-            i = 0
             prior_case_name = None
-            for name in self.case_names:
+            for i, name in enumerate(self.case_names):
                 if not name.strip():
                     raise InsanityException(
                         "Item with index %s has an empty case name. The prior "
                         "item had case name of: %s" % (i, prior_case_name)
                     )
                 prior_case_name = name
-                i += 1
 
         future_date_count = 0
         for index, case_date in enumerate(self.case_dates):
@@ -280,8 +291,17 @@ class AbstractSite:
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
 
+            # If a date is approximate, then it may be set in the future until
+            # half of the year has passed. Ignore this case
+            if hasattr(self, "date_filed_is_approximate"):
+                date_is_approximate = self.date_filed_is_approximate[index]
+            else:
+                date_is_approximate = False
+
             # dates should not be in the future. Tolerate a week
-            if case_date > (date.today() + timedelta(days=7)):
+            if not date_is_approximate and case_date > (
+                date.today() + timedelta(days=7)
+            ):
                 future_date_count += 1
                 error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
                 logger.error(error)
@@ -292,10 +312,9 @@ class AbstractSite:
                         f"More than 1 case has a date in the future. Last case: {error}"
                     )
 
-        # Is cookies a dict?
-        if type(self.cookies) != dict:
+        if not isinstance(self.cookies, dict):
             raise InsanityException(
-                "self.cookies not set to be a dict by " "scraper."
+                "self.cookies not set to be a dict by scraper."
             )
         logger.info(
             "%s: Successfully found %s items."
@@ -335,8 +354,10 @@ class AbstractSite:
         """
         return get_html_parsed_text(text)
 
-    def _download(self, request_dict={}):
+    def _download(self, request_dict=None):
         """Download the latest version of Site"""
+        if request_dict is None:
+            request_dict = {}
         self.downloader_executed = True
         if self.method == "POST":
             truncated_params = {}
@@ -348,13 +369,16 @@ class AbstractSite:
             )
         else:
             logger.info(f"Now downloading case page at: {self.url}")
+
         self._process_request_parameters(request_dict)
-        if self.method == "GET":
+
+        if self.test_mode_enabled():
+            self._request_url_mock(self.url)
+        elif self.method == "GET":
             self._request_url_get(self.url)
         elif self.method == "POST":
             self._request_url_post(self.url)
-        elif self.test_mode_enabled():
-            self._request_url_mock(self.url)
+
         self._post_process_response()
         return self._return_response_text_object()
 
@@ -367,12 +391,14 @@ class AbstractSite:
         """
         pass
 
-    def _process_request_parameters(self, parameters={}):
+    def _process_request_parameters(self, parameters=None):
         """Hook for processing injected parameter overrides"""
+        if parameters is None:
+            parameters = {}
         if parameters.get("verify") is not None:
             self.request["verify"] = parameters["verify"]
             del parameters["verify"]
-        self.request["parameters"] = parameters
+        self.request["parameters"].update(parameters)
 
     def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
@@ -386,6 +412,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
@@ -398,6 +426,8 @@ class AbstractSite:
             timeout=60,
             **self.request["parameters"],
         )
+        if self.save_response:
+            self.save_response(self)
 
     def _request_url_mock(self, url):
         """Execute mock request, used for testing"""
@@ -419,7 +449,7 @@ class AbstractSite:
             else:
                 try:
                     payload = self.request["response"].content.decode("utf8")
-                except:
+                except Exception:
                     payload = self.request["response"].text
 
                 text = self._clean_text(payload)
@@ -430,7 +460,9 @@ class AbstractSite:
                     )
                 return html_tree
 
-    def _get_html_tree_by_url(self, url, parameters={}):
+    def _get_html_tree_by_url(self, url, parameters=None):
+        if parameters is None:
+            parameters = {}
         self._process_request_parameters(parameters)
         self._request_url_get(url)
         self._post_process_response()
@@ -443,8 +475,8 @@ class AbstractSite:
         pass
 
     def make_backscrape_iterable(
-        self, kwargs: Dict
-    ) -> List[Tuple[date, date]]:
+        self, kwargs: dict
+    ) -> list[tuple[date, date]]:
         """Creates back_scrape_iterable in the most common variation,
         a list of tuples containing (start, end) date pairs, each of
         `days_interval` size
@@ -465,7 +497,7 @@ class AbstractSite:
         days_interval = kwargs.get("days_interval")
 
         if start:
-            start = datetime.strptime(start, "%Y/%m/%d")
+            start = datetime.strptime(start, "%Y/%m/%d").date()
         else:
             if hasattr(self, "first_opinion_date"):
                 start = self.first_opinion_date
@@ -475,7 +507,7 @@ class AbstractSite:
                 )
 
         if end:
-            end = datetime.strptime(end, "%Y/%m/%d")
+            end = datetime.strptime(end, "%Y/%m/%d").date()
         else:
             end = datetime.now().date()
 

@@ -8,17 +8,14 @@ History:
  - 2015-10-20, mlr: Updated due to new page in use.
  - 2015-10-23, mlr: Updated to handle annoying situation.
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
+ - 2024-12-30, grossir: updated to OpinionSiteLinear
+ - 2025-07-09, luism: Updated to prevent wrongly formatted dates
 """
 
-from lxml import html
-
-from juriscraper.lib.string_utils import clean_if_py3, convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
-    # Skip first row of table, it's a header
-    path_table_row_start = "//table//tr[position() > 1]"
+class Site(OpinionSiteLinear):
     # Skip rows that don't have  link in 4th cell with
     # either 'Opinion', 'Order', 'ORDER', or 'Amend' in
     # the link text
@@ -30,66 +27,51 @@ class Site(OpinionSite):
         'contains(.//text(), "Amended")'
         "]"
     )
-    path_conditional_row = f"/td[4]//{path_conditional_anchor}"
-    path_base = f"{path_table_row_start}[./{path_conditional_row}]"
+
+    # https://www.isc.idaho.gov/appeals-court/isc_civil
+    base_url = "https://www.isc.idaho.gov/appeals-court/"
+    url_part = "isc_civil"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.isc.idaho.gov/appeals-court/isc_civil"
+        self.url = f"{self.base_url}{self.url_part}"
         self.court_id = self.__module__
+        self.status = "Published"
+        self.should_have_results = True
 
-    def _get_case_names(self):
-        case_names = []
-        path = f"{self.path_base}/td[3]"
-        for cell in self.html.xpath(path):
-            name_string = html.tostring(
-                cell, method="text", encoding="unicode"
+    def _process_html(self):
+        row_xpath = f"//table//tr[.//{self.path_conditional_anchor}]"
+        for row in self.html.xpath(row_xpath):
+            url = self.get_opinion_url(row).replace("http://", "https://")
+
+            # Sanitize case date, fix typo in date format
+            date = row.xpath("string(td[1])").strip()
+            if date == "Aug 22,2018":
+                date = "Aug 22, 2018"
+
+            self.cases.append(
+                {
+                    "date": date,
+                    "docket": row.xpath("string(td[2])").strip(),
+                    "name": row.xpath("string(td[3])").strip(),
+                    "url": url,
+                }
             )
-            name_string = clean_if_py3(name_string).strip()
-            if name_string:
-                case_names.append(name_string)
-        return case_names
 
-    def _get_download_urls(self):
-        # We'll accept an order document if the opinion document
-        # is missing. But we obviously prefer the opinion doc,
-        # as indicated in the algorithm below. Since each row
-        # can list multiple valid links, we will parse all
-        # acceptable links, take the opinion link if present,
-        # otherwise take the first acceptable link.
-        opinion_urls = []
-        path = f"{self.path_base}/td[4]"
-        path_link = f".//{self.path_conditional_anchor}"
-        for cell in self.html.xpath(path):
-            urls = []
-            url_opinion = False
-            for link in cell.xpath(path_link):
-                text = link.text_content().strip()
-                url = link.attrib["href"].replace("http://", "https://")
-                urls.append(url)
-                if "Opinion" in text:
-                    url_opinion = url
-            opinion_urls.append(url_opinion if url_opinion else urls[0])
-        return opinion_urls
+    def get_opinion_url(self, row) -> str:
+        """Get's the URL tagged as an Opinion, if possible
 
-    def _get_case_dates(self):
-        case_dates = []
-        path = f"{self.path_base}/td[1]"
-        for cell in self.html.xpath(path):
-            date_string = html.tostring(
-                cell, method="text", encoding="unicode"
-            )
-            date_string = clean_if_py3(date_string).strip()
-            if date_string:
-                date_string = date_string.replace(
-                    "Sept ", "Sep "
-                )  # GIGO!  (+1 by arderyp)
-                case_dates.append(convert_date_string(date_string))
-        return case_dates
+        We'll accept an order document if the opinion document
+        is missing. Since each row can list multiple valid links,
+        we will parse all acceptable links, take the opinion link
+        if present, otherwise take the first acceptable link.
 
-    def _get_docket_numbers(self):
-        path = f"{self.path_base}/td[2]//text()"
-        return [text.strip() for text in self.html.xpath(path) if text.strip()]
+        :param row: the lxml object of the row
+        :return: the document URL
+        """
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+        for link in row.xpath("td[4]//a"):
+            if "Opinion" in link.text_content().strip():
+                return link.xpath("@href")[0]
+
+        return row.xpath("td[4]//a/@href")[0]
