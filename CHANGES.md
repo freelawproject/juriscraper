@@ -15,24 +15,41 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add error handling for scrapers with expected results #1447
+- Add `masssuperct` new scraper for Massachusetts Superior Court #1498
+- Fix document URL parsing in plain‑text email minute‑entry notifications #1362
 
 Changes:
+- Update `lactapp_1` scraper, site has changed #1357
+
+Fixes:
 -
+
+## Current
+
+**2.6.80 - 2025-07-16**
+
+Features:
+- Add error handling for scrapers with expected results #1447
+- Add a check to verify ACMS user data is loaded before querying attachment pages #1495
+- Add `alaska_slip` and `alaska_u` new scrapers #1478
+
+Changes:
+- Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
+- Add `bap9` backscraper #1008
 
 Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489
 - Fix `ariz` update download URLs #1474
+- improve `ind` add new fields for lower court details and judge names
+- handle empty cases in `ca7` scraper #1484
+- fix `idaho_civil` preformat date to prevent parsing errors #1284
 
-## Current
+## Past
 
 **2.6.79 - 2025-07-08**
 
 Changes:
 - Updates `PacerSession` class to make ACMS authentication optional, and disabled it by default.
-
-
-## Past
 
 **2.6.78 - 2025-06-18**
 
@@ -46,7 +63,8 @@ Features:
 Changes:
 - Refactor `ACMSDocketReport` to handle missing "date entered" values gracefully
   and expands the use of raw data fields for reliable date information. #1459
-- Improve `nd` scraper to extract citations from the html.
+- make `nytrial` back scraping dynamic #1402
+- Improve `alaska` scraper to handle case page to retrieve download_url #937
 
 Fixes:
 - Improve `ny` cleanup_content to remove email protection that was causing
@@ -61,6 +79,7 @@ Changes:
 - Update `tenn` add backscraper #1425
 
 Fixes:
+- Add "lower_court_ids" to fields returned by OpinionSite #1432
 - Fix `va` collecting bad docket_number values #1441
 - Fix `mich` change date expected key to `date_filed` #1445
 

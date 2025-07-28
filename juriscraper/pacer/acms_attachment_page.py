@@ -95,6 +95,13 @@ class ACMSAttachmentPage(BaseReport):
         :param entry_id: The unique identifier of the specific docket entry to
                          retrieve.
         """
+        # Ensure ACMS user data is available before fetching attachments.
+        # Attachment requests include user-specific data in the request body,
+        # so the session must have the necessary authentication data
+        # initialized beforehand.
+        if not self.session.acms_user_data:
+            self.session.get_acms_auth_object(self.court_id)
+
         # Fetch Docket Entry Details
         docket_info = self.api_client.get_docket_entries(case_id)
 
