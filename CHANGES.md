@@ -19,7 +19,9 @@ Features:
 -
 
 Changes:
--
+- Update README.rst
+- Add CONTRIBUTING.md
+- Update `lactapp_1` scraper, site has changed #1357
 
 Fixes:
 -
