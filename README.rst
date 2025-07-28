@@ -128,7 +128,7 @@ Contributing
 ============
 
 We welcome contributions! If you'd like to get involved, please take a look at our
-`CONTRIBUTING.md <https://github.com/freelawproject/juriscraper/blob/main/CONTRIBUTING.md>`__
+`CONTRIBUTING.md <CONTRIBUTING.md>`__
 guide for instructions on setting up your environment, running tests, and more.
 
 License

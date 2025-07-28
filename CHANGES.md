@@ -19,7 +19,7 @@ Features:
 
 Changes:
 - Update README.rst
-- Add CHANGES.md
+- Add CONTRIBUTING.md
 
 Fixes:
 -
