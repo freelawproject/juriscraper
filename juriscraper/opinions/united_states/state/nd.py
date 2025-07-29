@@ -1,7 +1,10 @@
 # Author: Phil Ardery
 # Contact: https://www.ndcourts.gov/contact-us
+# History:
 # Date created: 2019-02-28
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
+# Updated: 2025-07-02, luism: get citation from HTML
+
 import re
 from datetime import date, datetime
 from urllib.parse import urljoin
@@ -15,6 +18,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     base_url = "https://www.ndcourts.gov/"
     ordered_fields = [
+        "citation",
         "name",
         "docket",
         "date",
@@ -51,11 +55,22 @@ class Site(OpinionSiteLinear):
 
             for idx, txt in enumerate(raw_values[:5]):
                 if idx == 0:
-                    txt, _ = self.clean_name(txt)
+                    # Separate case name and citation if present
+                    match = re.match(
+                        r"^(.*?)(\s*(\d{4}\sND\s\d+))\s*$",
+                        txt,
+                    )
+                    if match:
+                        case_name = match.group(1).strip()
+                        citation = match.group(2).strip()
+                        txt = case_name
+                    else:
+                        citation = ""
+                    txt, other_docket = self.clean_name(txt)
+                    values.append(citation)
                 else:
                     txt = txt.split(":", 1)[1].strip()
                 values.append(txt)
-
             summary = (
                 " ".join(raw_values[5:]).strip() if len(raw_values) > 5 else ""
             )
@@ -73,12 +88,15 @@ class Site(OpinionSiteLinear):
                 continue
             seen_urls.add(url)
 
-            case = dict(zip(self.ordered_fields, values[:5]))
+            case = dict(zip(self.ordered_fields, values[:6]))
             case.update({"summary": summary, "url": url, "per_curiam": False})
 
             if "per curiam" in case["judge"].lower():
                 case["judge"] = ""
                 case["per_curiam"] = True
+
+            if other_docket:
+                case["docket"] = f"{case['docket']}, {other_docket}"
 
             self.cases.append(case)
 
