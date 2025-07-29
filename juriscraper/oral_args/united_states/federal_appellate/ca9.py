@@ -22,7 +22,7 @@ class Site(OralArgumentSiteLinear):
 
         self.court_id = self.__module__
         self.table = "media"
-        self.base_url = "https://www.ca9.uscourts.gov/"
+        self.base_url = "https://www.ca9.uscourts.gov/datastore/media/"
         self.expected_content_types = [
             "application/octet-stream; charset=UTF-8"
         ]
