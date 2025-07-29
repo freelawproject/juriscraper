@@ -24,7 +24,7 @@ Changes:
 - Update `lactapp_1` scraper, site has changed #1357
 
 Fixes:
--
+- Fix `ca9` download URLs #1515
 
 ## Current
 
