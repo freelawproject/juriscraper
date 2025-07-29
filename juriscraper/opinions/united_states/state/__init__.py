@@ -52,6 +52,7 @@ __all__ = [
     "illappct",
     "ind",
     "indctapp",
+    "indctapp_reclassified",
     "indtc",
     "iowa",
     "iowactapp",
