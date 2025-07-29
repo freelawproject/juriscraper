@@ -8,8 +8,7 @@
 #  - Judicial Info <JudInfo@txcourts.gov>
 # Author: Luis Manzur
 # History:
-#  - 2025-07-29: Created by Andrei Chelaru
-
+#  - 2025-07-29: Created by Luis Manzur
 import re
 
 from juriscraper.lib.string_utils import titlecase
