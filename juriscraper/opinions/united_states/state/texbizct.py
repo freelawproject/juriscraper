@@ -16,13 +16,13 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    pattern = r"^(\S+)\s+(.+?)(?:\s+(\d{4} Tex\. Bus\. \d+))?(?:\s+(Opinion.*|Memorandum.*))?$"
+    pattern = r"^(\S+)\s+(.+?)(?:\s+(\d{4} Tex\. Bus\. \d+))?(?:\s+(?:Opinion|Memorandum|Denied|Some Defendants Dismissed|Remand|Reconsideration|Me|MSJ|PTJ|Rule).*)?$"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.txcourts.gov/businesscourt/opinions/"
         self.court_id = self.__module__
-        self.status = "Unknown"
+        self.status = "Published"
         self.should_have_results = True
 
     def _process_html(self) -> None:
@@ -42,13 +42,6 @@ class Site(OpinionSiteLinear):
 
             match = re.match(self.pattern, text)
 
-            if match.group(3):
-                status = "Published"
-            elif match.group(4) and "Memorandum" in match.group(4):
-                status = "Unpublished"
-            else:
-                status = "Published"
-
             if match:
                 self.cases.append(
                     {
@@ -57,6 +50,17 @@ class Site(OpinionSiteLinear):
                         "citation": match.group(3) or "",
                         "url": link.get("href"),
                         "date": opinion_date_str,
-                        "status": status,
                     }
                 )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extracts case citation from the scraped text.
+
+        :param scraped_text: The text content of the opinion.
+        :return: A dictionary with case details.
+        """
+        pattern = r"(\d{4})\sTex\.\sBus\.\s(?:Ct\.\s)?(\d+)"
+        match = re.search(pattern, scraped_text)
+        if not match:
+            return {}
+        return {"Citation": match.group(0)}
