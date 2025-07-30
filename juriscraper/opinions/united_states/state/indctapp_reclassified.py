@@ -1,7 +1,7 @@
 """
-Scraper for Indiana Supreme Court
-CourtID: ind
-Court Short Name: Ind.
+Scraper for Indiana Court of Appeals Reclassified Opinions
+CourtID: indctapp
+Court Short Name: Ind. Ct. App.
 Auth: Luis Manzur
 History:
     2025-07-29: Created by Luis Manzur
@@ -18,6 +18,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.url = "https://www.in.gov/courts/appeals/reclassified/"
         self.should_have_results = True
+        self.expected_content_types = ["application/pdf"]
 
     def _process_html(self):
         """Process the HTML to extract case details.
