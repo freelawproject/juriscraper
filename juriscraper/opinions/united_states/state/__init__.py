@@ -181,7 +181,7 @@ __all__ = [
     "texapp_12",
     "texapp_13",
     "texapp_14",
-    "texb",
+    "texbizct",
     "texcrimapp",
     "utah",
     "utahctapp",

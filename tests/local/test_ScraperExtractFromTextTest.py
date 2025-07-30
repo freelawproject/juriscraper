@@ -934,7 +934,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
-        "juriscraper.opinions.united_states.state.texb": [
+        "juriscraper.opinions.united_states.state.texbizct": [
             (
                 """FILED IN\nBUSINESS COURT OF TEXAS\nBEVERLY CRUMLEY, CLERK\nENTERED\n7/16/2025\n2025 Tex. Bus. 27\n\n\n\nThe Business Court of Texas,\nFirst Division\n\nBP Energy Company,                     §\nPlaintiff,                        §\nv.                                     §   Cause No. 24-BC01A-0002\nBrad E. Cox,                           §\nDefendant.                        §\n\n═══════════════════════════════════════\nMemorandum Opinion and Order of Transfer\n═════════════════════════════════""",
                 {

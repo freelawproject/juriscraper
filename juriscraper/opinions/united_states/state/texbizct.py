@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "https://www.txcourts.gov/businesscourt/opinions/"
         self.court_id = self.__module__
-        self.status = "Unknown"
+        self.status = "Published"
         self.should_have_results = True
 
     def _process_html(self) -> None:
@@ -52,19 +52,3 @@ class Site(OpinionSiteLinear):
                         "date": opinion_date_str,
                     }
                 )
-
-    def extract_from_text(self, scraped_text: str) -> dict:
-        """Extracts metadata from the scraped text.
-
-        :param scraped_text: The text content of the opinion.
-        :return: A dictionary with extracted metadata.
-        """
-        pattern = r"═+\s*\n\s*(.+?)\s*\n\s*═+"
-        match = re.search(pattern, scraped_text, re.MULTILINE)
-        status = "Published"
-        if match:
-            raw_type = match.group(1).strip().lower()
-            if "memorandum" in raw_type:
-                status = "Unpublished"
-
-        return {"OpinionCluster": {"precedential_status": status}}
