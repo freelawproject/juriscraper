@@ -16,13 +16,13 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    pattern = r"^(\S+)\s+(.+?)(?:\s+(\d{4} Tex\. Bus\. \d+))?$"
+    pattern = r"^(\S+)\s+(.+?)(?:\s+(\d{4} Tex\. Bus\. \d+))?(?:\s+(Opinion.*|Memorandum.*))?$"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.txcourts.gov/businesscourt/opinions/"
         self.court_id = self.__module__
-        self.status = "Published"
+        self.status = "Unknown"
         self.should_have_results = True
 
     def _process_html(self) -> None:
@@ -42,13 +42,21 @@ class Site(OpinionSiteLinear):
 
             match = re.match(self.pattern, text)
 
+            if match.group(3):
+                status = "Published"
+            elif match.group(4) and "Memorandum" in match.group(4):
+                status = "Unpublished"
+            else:
+                status = "Published"
+
             if match:
                 self.cases.append(
                     {
                         "docket": match.group(1),
-                        "name": titlecase(match.group(2)),
+                        "name": titlecase(match.group(2).strip()),
                         "citation": match.group(3) or "",
                         "url": link.get("href"),
                         "date": opinion_date_str,
+                        "status": status,
                     }
                 )
