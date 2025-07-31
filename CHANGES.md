@@ -19,6 +19,16 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.82 - 2025-07-31**
+
+Changes:
 - Update README.rst
 - Add CONTRIBUTING.md
 - Update `lactapp_1` scraper, site has changed #1357
@@ -26,10 +36,9 @@ Changes:
 Fixes:
 - Fix `ca9` download URLs #1515
 
-## Current
+## Past
 
 **2.6.81 - 2025-07-28**
-
 
 Features:
 - Add `masssuperct` new scraper for Massachusetts Superior Court #1498
