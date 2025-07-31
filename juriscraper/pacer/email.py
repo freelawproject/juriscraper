@@ -18,6 +18,7 @@ from .utils import (
     get_pacer_case_id_from_doc1_url,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
+    get_pacer_magic_num_from_acms_url,
     get_pacer_magic_num_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
 )
@@ -636,6 +637,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     get_pacer_magic_num_from_doc1_url(
                         document_url, self.appellate
                     )
+                    if not self._is_acms()
+                    else get_pacer_magic_num_from_acms_url(document_url)
                 )
                 if not self._is_appellate():
                     entries[0]["pacer_case_id"] = (

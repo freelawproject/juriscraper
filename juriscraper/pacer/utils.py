@@ -503,6 +503,16 @@ def get_pacer_magic_num_from_doc1_url(
         return None
 
 
+def get_pacer_magic_num_from_acms_url(
+    url: str,
+) -> Optional[str]:
+    """Extract the magic number from the NDA ACMS free look URL."""
+    match = re.search(r"(?<=/NDA/)[^/]+", url)
+    if match:
+        return match.group()
+    return None
+
+
 def get_pacer_doc_id_from_doc1_url(url: str) -> str:
     """Extract the pacer document ID from the doc1 URL. Coerce the fourth digit
     to zero.

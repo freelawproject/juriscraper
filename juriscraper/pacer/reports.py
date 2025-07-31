@@ -193,8 +193,8 @@ class BaseReport:
 
     def download_pdf(
         self,
-        pacer_case_id: str,
-        pacer_doc_id: int,
+        pacer_case_id: Optional[str] = None,
+        pacer_doc_id: Optional[int] = None,
         pacer_magic_num: Optional[str] = None,
         appellate: bool = False,
         de_seq_num: Optional[str] = None,
@@ -208,6 +208,11 @@ class BaseReport:
         one can be found (is not sealed, gone, etc.). And a string indicating
         the error message, if there is one or else an empty string.
         """
+
+        assert acms or (pacer_case_id and pacer_doc_id), (
+            "pacer_case_id and pacer_doc_id can't be None for non-ACMS downloads."
+        )
+
         if pacer_magic_num:
             # If magic_number is available try to download the
             # document anonymously by its magic link
@@ -216,6 +221,7 @@ class BaseReport:
             # Magic link parameters
             if acms:
                 url = make_acms_free_doc_url(self.court_id, pacer_magic_num)
+                params = {}
             elif appellate:
                 url = make_docs1_url(self.court_id, str(pacer_doc_id), True)
                 # For appellate documents the magic_number is the uid param
