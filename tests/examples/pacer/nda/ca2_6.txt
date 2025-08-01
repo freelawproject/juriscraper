@@ -1,0 +1,129 @@
+Return-Path: <bounces+17287138-3493-user_example=recap.email@em5788.ca2.fedcourts.us>
+Received: from xvfrsxhh.outbound-mail.sendgrid.net (xvfrsxhh.outbound-mail.sendgrid.net [168.245.106.0])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 5ljh3jk2dlno4ln5h14pgu0btg6qi6crsun3q0o1
+ for user_example@recap.email;
+ Fri, 25 Jul 2025 01:53:53 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of em5788.ca2.fedcourts.us designates 168.245.106.0 as permitted sender) client-ip=168.245.106.0; envelope-from=bounces+17287138-3493-user_example=recap.email@em5788.ca2.fedcourts.us; helo=xvfrsxhh.outbound-mail.sendgrid.net;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of em5788.ca2.fedcourts.us designates 168.245.106.0 as permitted sender) client-ip=168.245.106.0; envelope-from=bounces+17287138-3493-user_example=recap.email@em5788.ca2.fedcourts.us; helo=xvfrsxhh.outbound-mail.sendgrid.net;
+ dkim=pass header.i=@ca2.fedcourts.us;
+ dmarc=pass header.from=ca2.fedcourts.us;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIdEg5MDJSVVB1V3lrSFVaRHc0eGd5MXkrQkFNQWpHWFFUZERPWTNZMkd0MVhMdndRMGc5QVdJek5kbGhXaDdaVWtkOHBMdmdvVlVKbExlT2l5R1l1RlZmNkloMkhqTGk2VmZCcjVRZnYxK3pJTzN0YlZMbThON2pwMkx5QUZWdC9jeVF4VXdQcElhK2NwTXArRjc2YjdKY3ZyYUlROTlTTEZRaVZ0QXY0azhYNnVPREhGQ1NnRkcrc21SeVZEMFpwclhmWEJKK2FkLytvVHV6d0RJVi9NV3FOSEVhbzYyakY4NUR5WDBQbU5ZU21GNi81NVZMa2VvS0hIM0FWZnZxd0pCVDJaeDN4V0dFNU8wYlVKZndXTWpLd0Y1LzYyMVJiWEZSYWlnYXREbWRaNXhFZVpCN2g3VlBxajJXVzVwaXlIZzkvNDdpVi9URzV0eUw3RGdpVDlEcERRbE9Bem00c2haQVZIbWJJRHVnPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=CwctQEBlvT4y1mu9gizgOkCM4BVMrtRWtocLLQY4DMnAgSpUJZHyksZrnoFoaPFkLA79Ufqu3YkmPN1TgN+dYLlL0AkmSAITN+gduaw4RAa7hApK8qY6OzVB9YXu8CLL0ePXROuP6kC0CA8Z4PgGMeusaO0i2DvfNFh33uiV4Vk=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1753408434; v=1; bh=lw7sowVGw/lucwsc6PEubZkYlwVlL5UYoV9e+N9+FU4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ca2.fedcourts.us;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	to:cc:content-type:date:from:subject:to;
+	s=s1; bh=lw7sowVGw/lucwsc6PEubZkYlwVlL5UYoV9e+N9+FU4=;
+	b=eABi5ebOsB5Ifrb170uxd3azd8xFLqAjD1hjtUL+uqN7lA7mpC1wvwbKh8bE63w57UHR
+	fM/CJgo0cbtlGlywnquLYppGWVnGPgIsKTdcODPp8+bnlabxCa3tWo0Xa7OvyMgMRMRJ2X
+	fs+J0PqsMr+pQHma2Ym0EBFpbie+CY3ifVeN06RuMBLpLhqWkUx2WQ7/8LonMZxz4EYutT
+	GNDZhFzDog+raMhoIhTGVKHE8KS0WQ12aymKHuma6CkfsGem930mrYdGg8YaTXkuXz7PN8
+	m3WLVwYiV/Ht80EuhODvXk/D+8vmkblyO6aRdMLnZaypJXZWq9fCttD/9/F/Iz1A==
+Received: by recvd-7d86b8fd66-5dgsp with SMTP id recvd-7d86b8fd66-5dgsp-1-6882E3B0-8
+	2025-07-25 01:53:52.248623447 +0000 UTC m=+4352947.184155162
+Received: from MTcyODcxMzg (unknown)
+	by geopod-ismtpd-5 (SG) with HTTP
+	id ex-sw0GuSaS2bLCBcTOyTA
+	Fri, 25 Jul 2025 01:53:52.222 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Fri, 25 Jul 2025 01:53:52 +0000 (UTC)
+From: ACMS@ca2.fedcourts.us
+Mime-Version: 1.0
+Message-ID: <ex-sw0GuSaS2bLCBcTOyTA@geopod-ismtpd-5>
+Subject: 336 LLC v. City of New York 24-621 - 125 - Petition for Rehearing
+ Rehearing En Banc FILED
+X-SG-EID:
+ =?us-ascii?Q?u001=2E4svFcY8SGSTLM5KvpBU22v5FVaswSdDdFcKldPrphoV6DNI82RjDOhEX8?=
+ =?us-ascii?Q?USWKvZRIvP8ToqE+IHlGz68T5ekPWw0CYuQNZS7?=
+ =?us-ascii?Q?jsZ8XEoXk9gAI2iYVzke7OBGTrrvelNAddbCC4q?=
+ =?us-ascii?Q?iCB4wzbYRh8Sr0ySvpYKZLUuCvkPcjqWj547=2FpV?=
+ =?us-ascii?Q?kYIZkjMo=2FVF=2FyXhBNI2BAu0RFh+S8E7Vv6r44MF?=
+ =?us-ascii?Q?Q=3D=3D?=
+To: user_example@recap.email
+X-Entity-ID: u001.3RrkiZw4UZpTObJkOy26xw==
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">***NOTE TO PUBLIC ACCESS USERS*** Judicial Confer=
+ence of the United States policy permits
+ attorneys of record and parties in a case (including pro se litigants) to =
+receive one free electronic copy of all documents filed electronically, if =
+receipt is required by law or directed by the filer. PACER access fees appl=
+y to all other users. To avoid later
+ charges, download a copy of each document during this first viewing.</span=
+></strong></span></span></span></div>
+<div>&nbsp;</div>
+<div style=3D"text-align:center"><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">United States Court of Appeals for the&nbsp;Second Cir=
+cuit</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice of Docket Activity</span></strong></span><=
+/span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif">The following transaction was entered on 07/24/2025 9:51:07 PM=
+ EDT and filed on 07/24/2025</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Name:&nbsp;</span></strong><span style=3D"font-fa=
+mily:'Segoe UI',sans-serif">336 LLC v. City of New York&nbsp;</span></span>=
+</span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Number:
+</span></strong><span style=3D"font-family:'Segoe UI',sans-serif"><a href=
+=3D'https://ca2-showdoc.azurewebsites.us/24-621'>24-621</a></span></span></=
+span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Docket Text:</span></strong></span></span></span></div=
+>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div>PETITION FOR REHEARING/REHEARING EN BANC, on behalf of Ap=
+pellant 557 Entertainment Inc., Appellant DCD Exclusive Video Inc., Appella=
+nt Video Lovers Inc., Appellant Jaysara Video, Inc., Appellant Vishara Vide=
+o, Inc., Appellant Rainbow Station 7 Inc., FILED.&nbsp;Service date 07/24/2=
+025 by ACMS. [Entered: 07/24/2025 09:52 PM]</div></span></span></span></spa=
+n></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div class=3D'documents'><b>Document:</b> <a href=3D'https://c=
+a2-showdoc.azurewebsites.us/NDA/f89f202b-fa68-f011-bec2-001dd80d9613'>Petit=
+ion for Rehearing Rehearing En Banc</a></div></span></span></span></span><b=
+r>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice will be electronically mailed to:</span></=
+strong></span></span></span><br>
+&nbsp;</div>
+
+<img src=3D"http://url7170.ca2.fedcourts.us/wf/open?upn=3Du001.gQAR2-2BiBNV=
+ezm2V7uZ5bAkZhijmhPbIr5-2BnJWuNornev6iprzC4it1EbPIYqbOJKSGAMyYxDkibIY-2FDPJ=
+7EBGuEeNHLBHPIQdjOhBK0VECg143fiz7Gg1Na6qa1N-2FH5aLfok5JBONgfIjAaUqBDV5dVuTJ=
+UKhfRPknFd9c5pgEffuXNndHncmi9zU3nYmmLwAeFXcxnQSFBxUHIuCUl2Gw-3D-3D" alt=3D"=
+" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;widt=
+h:1px !important;border-width:0 !important;margin-top:0 !important;margin-b=
+ottom:0 !important;margin-right:0 !important;margin-left:0 !important;paddi=
+ng-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;=
+padding-left:0 !important;"/></body>
+</html>

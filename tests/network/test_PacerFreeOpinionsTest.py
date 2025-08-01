@@ -215,9 +215,13 @@ class PacerMagicLinkTest(unittest.TestCase):
         self.reports = {}
         court_id = "nysd"
         court_id_nda = "ca3"
+        court_id_acms = "ca9"
         self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
         self.reports[court_id_nda] = FreeOpinionReport(
             court_id_nda, pacer_session
+        )
+        self.reports[court_id_acms] = FreeOpinionReport(
+            court_id_acms, pacer_session
         )
 
     def test_download_simple_pdf_magic_link_fails(self, mock_logger):
@@ -256,6 +260,22 @@ class PacerMagicLinkTest(unittest.TestCase):
         mock_logger.warning.assert_called_with(
             "Document not available via magic link in case: "
             f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
+            f"URL: {url}"
+        )
+        # No PDF should be returned
+        self.assertEqual(r, None)
+
+    def test_download_acms_nda_pdf_magic_link(self, mock_logger):
+        """Can we download an NDA ACMS PACER document with an invalid or expired
+        magic link? land on a login page and returns an error.
+        """
+        report = self.reports["ca9"]
+        url = "https://ca9-showdoc.azurewebsites.us/NDA/6b939b7c-9a69-f011-bec2-001dd806079d"
+        pacer_magic_num = "6b939b7c-9a69-f011-bec2-001dd806079d"
+        r, msg = report.download_pdf(None, None, pacer_magic_num, acms=True)
+        mock_logger.warning.assert_called_with(
+            "Document not available via magic link in case: "
+            f"caseid: {None}, magic_num: {pacer_magic_num}, "
             f"URL: {url}"
         )
         # No PDF should be returned
