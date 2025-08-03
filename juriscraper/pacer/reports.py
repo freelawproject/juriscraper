@@ -311,7 +311,10 @@ class BaseReport:
                 b"Document is Sealed",
                 b"This document is SEALED",
             ]
-            if any(phrase.lower() in r.content.lower() for phrase in sealed_document_phrases):
+            if any(
+                phrase.lower() in r.content.lower()
+                for phrase in sealed_document_phrases
+            ):
                 # See: https://ecf.almd.uscourts.gov/doc1/01712589088
                 # See: https://ecf.cand.uscourts.gov/doc1/035122021132
                 # See: https://ecf.caed.uscourts.gov/doc1/03319001890
