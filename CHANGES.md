@@ -22,7 +22,7 @@ Changes:
 -
 
 Fixes:
--
+- Add new validation to `cleanup_content` to ensure that the content is not an error page #1520
 
 ## Current
 
