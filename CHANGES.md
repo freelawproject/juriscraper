@@ -15,8 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Implement scraper for texas 15th court of appeals  `texapp_15`  #1436
-- Add support for downloading ACMS NDA free look documents. #1510
+-
+-
 
 Changes:
 -
@@ -25,6 +25,14 @@ Fixes:
 - Add new validation to `cleanup_content` to ensure that the content is not an error page #1520
 
 ## Current
+
+**2.6.83 - 2025-08-05**
+
+Features:
+- Implement scraper for texas 15th court of appeals  `texapp_15`  #1436
+- Add support for downloading ACMS NDA free look documents. #1510
+
+## Past
 
 **2.6.82 - 2025-07-31**
 
@@ -35,8 +43,6 @@ Changes:
 
 Fixes:
 - Fix `ca9` download URLs #1515
-
-## Past
 
 **2.6.81 - 2025-07-28**
 
