@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add support for downloading ACMS NDA free look documents.
+- Implement scraper for texas 15th court of appeals  `texapp_15`  #1436
+- Add support for downloading ACMS NDA free look documents. #1510
 
 Changes:
 -
