@@ -55,9 +55,12 @@ class Site(OpinionSiteLinear):
             url = item.xpath(".//td/a/@href")[0]
             first_cell = item.xpath(".//td/a/text()")[0]
             docket = re.sub(
-                r"Docket Nos?\.", "", item.xpath(".//td[2]/text()")[0]
+                r"Docket Nos?\.", "", item.xpath(".//td[4]/text()")[0]
             )
-            date_string = item.xpath(".//td[3]/text()")[0]
+            summary = item.xpath(".//td[3]/text()")[0]
+            per_curiam = "per curiam" in summary.lower()
+
+            date_string = item.xpath(".//td[6]/text()")[0]
             m = re.search(self.citation_regex, first_cell)
             if m:
                 mj = m.group("MJ").strip("()") if m.group("MJ") else ""
@@ -78,6 +81,8 @@ class Site(OpinionSiteLinear):
                         "status": status,
                         "citation": mj,
                         "parallel_citation": wl,
+                        "summary": summary,
+                        "per_curiam": per_curiam,
                     }
                 )
             )
