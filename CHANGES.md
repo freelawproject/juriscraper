@@ -15,18 +15,49 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add `masssuperct` new scraper for Massachusetts Superior Court #1498
-- Fix document URL parsing in plain‑text email minute‑entry notifications #1362
+-
+-
 
 Changes:
+- Update `uscgcoca` scraper, site has changed #1526
+
+Fixes:
+- Add new validation to `cleanup_content` to ensure that the content is not an error page #1520
+
+## Current
+
+**2.6.83 - 2025-08-05**
+
+Features:
+- Implement scraper for texas 15th court of appeals  `texapp_15`  #1436
+- Add support for downloading ACMS NDA free look documents. #1510
+
+## Past
+
+**2.6.82 - 2025-07-31**
+
+Changes:
+- Update README.rst
+- Add CONTRIBUTING.md
 - Update `lactapp_1` scraper, site has changed #1357
 - Improve `nd` scraper to extract citations from the html #1301
 
 
 Fixes:
--
+- Fix `ca9` download URLs #1515
 
-## Current
+**2.6.81 - 2025-07-28**
+
+Features:
+- Add `masssuperct` new scraper for Massachusetts Superior Court #1498
+- Fix document URL parsing in plain‑text email minute‑entry notifications #1362
+- Add `bap9` backscraper #1008
+- Add `ca9` backscraper
+
+Changes:
+- Update `lactapp_1` scraper, site has changed #1357
+- improve `ind` add new fields for lower court details and judge names #1266
+
 
 **2.6.80 - 2025-07-16**
 
@@ -37,16 +68,13 @@ Features:
 
 Changes:
 - Expanded ACMS URL matching to support both HTTP and HTTPS protocols.
-- Add `bap9` backscraper #1008
 
 Fixes:
 - Fix `visuper_p` adaptation to new html tags #1489
 - Fix `ariz` update download URLs #1474
-- improve `ind` add new fields for lower court details and judge names
 - handle empty cases in `ca7` scraper #1484
 - fix `idaho_civil` preformat date to prevent parsing errors #1284
 
-## Past
 
 **2.6.79 - 2025-07-08**
 

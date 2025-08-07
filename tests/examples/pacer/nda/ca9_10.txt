@@ -1,0 +1,130 @@
+Return-Path: <bounces+16017090-53e4-user_example=recap.email@em4346.ca9.fedcourts.us>
+Received: from o1.ptr5067.ca9.fedcourts.us (o1.ptr5067.ca9.fedcourts.us [149.72.33.13])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id glv580n5t22h1uku115euk3afqfjntgvpbd4ito1
+ for user_example@recap.email;
+ Fri, 25 Jul 2025 15:10:31 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-53e4-user_example=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-53e4-user_example=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+ dkim=pass header.i=@ca9.fedcourts.us;
+ dmarc=pass header.from=ca9.fedcourts.us;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIZEI3UC9VTjVUTTBHaDJ0QVptVnd1N1UrS1VLU01YVWdBNkRRTEcvakh6RmZRb1BpM3FqMW8rSE85WkRUTDlld0N5dHB5c0MyRWp0bGt1aEJjb1FYcldlVTlQaXgzRkc2TnJacWI0QXRETHB5L2VFRTUvaTJzSTZ4WGFaa3lIcTBwRHBWWFFXcUQ4UUszZ3ZMM2xKYTdrVk93cndHaDhGQWQveXFOT3M1MkVYNW1YZitOWEx6aTQ0bVFKdzh2R3ZrYm9TYWc5VlpDaTYyYjBnU2tJcEZWN2Z4d21nNTJaRTk0cUc2UHF5V0w2UXhQcm02U1g1T0cyRFYrajQ3cXZmajZXMHRhYW8zVHV3SzRISitjdGhSWG5CRFE4R2ttUCtwUXpKNnRZVXBLazFYN2d5bjBWbjRBY1dDQ2pzdXlRSklqVTllNGFSaHAxYVVFcm1XRURvcGdiVHpXSldxM2ZxeEVQM2Eza3puZmd3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=UqBqsGirFLgkgv9uBZVXixwyjcRh8fCdAcB7vFxhv6bWZcXrCMldnWkjbXDv7cKouoCS8F4EFLRp9iwMgHffjzYkO/V95oFTcXiqTwCYV/aluu4GZmjWkWYkuDhBSiZbEZ+2ZqSXitizL1pjmDvfmIum0USLzrrbvnAJjdZ6ShM=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1753456233; v=1; bh=gxHaUDwyDBY1lVkhx8X0JKFMeO4eNGkWc623X5QuUaE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ca9.fedcourts.us;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	to:cc:content-type:date:from:subject:to;
+	s=s1; bh=gxHaUDwyDBY1lVkhx8X0JKFMeO4eNGkWc623X5QuUaE=;
+	b=Zp2kNlKSmg1BsQM2T+d4LzIlFyLf/SomTfNWp2ZzSTzWcSVAFFNQ0N/yiA9V3iOtk8WS
+	td1leqtrLaisBDYMYZtjIJIztOhHtz+IpgLsE+dh562E3tR/RuUo0YQqVxUYtkyhWfs7ap
+	NHeU+jSyuzWcHgwyrmmQ4s3v3BhuMyNraWbexCOnDJHQxrlK0SC4wQdsLh8ciczhTIbVb5
+	I1bjqsefUnQtF/nf4qRIjW4bEYAz6LKpyp2JOcRQIA6IrEbmur5Ha9KRpfs0INiS01pQGb
+	G2fnPZTnUXzILNP2ANy/6dWVNnDE6DNc06xXPYHx2dK6D9vWaES6yvFShh8CKSpg==
+Received: by recvd-7fd96f4944-kskzt with SMTP id recvd-7fd96f4944-kskzt-1-68839E66-53
+	2025-07-25 15:10:30.712840071 +0000 UTC m=+4400764.822934055
+Received: from MTYwMTcwOTA (unknown)
+	by geopod-ismtpd-1 (SG) with HTTP
+	id m0lltUpGQYWf6ujL4C_YrQ
+	Fri, 25 Jul 2025 15:10:30.713 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Fri, 25 Jul 2025 15:10:30 +0000 (UTC)
+From: ACMS@ca9.fedcourts.us
+Mime-Version: 1.0
+Message-ID: <m0lltUpGQYWf6ujL4C_YrQ@geopod-ismtpd-1>
+Subject: National TPS Alliance, et al. v. Noem, et al. 25-2120 - Citation of
+ Supplemental Authorities (28j Letter) - 515663
+X-SG-EID:
+ =?us-ascii?Q?u001=2E4svFcY8SGSTLM5KvpBU22kPBzh+nOgjhRgMJOZ1Vsu4I8l8q8yfF2k3tk?=
+ =?us-ascii?Q?4TlY5g0z9MJ0Th5w5uwINmZfVKquP3+iZtqRBz8?=
+ =?us-ascii?Q?lsTdS0yAdoycEDiSY7Gt+wPOzZ9ISoB+=2FO8JBIN?=
+ =?us-ascii?Q?8o2cGvXi45xH7qqXm3QIhgc1aqBRh+20blIF+Er?=
+ =?us-ascii?Q?=2FosShNeEeszR4zJYJIKAm0=2FIsLJ0vLnzJqSXDSI?=
+ =?us-ascii?Q?g=3D=3D?=
+To: user_example@recap.email
+X-Entity-ID: u001.C8m2t2EQL+JwwooNEkA5cg==
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">***NOTE TO PUBLIC ACCESS USERS*** Judicial Confer=
+ence of the United States policy permits
+ attorneys of record and parties in a case (including pro se litigants) to =
+receive one free electronic copy of all documents filed electronically, if =
+receipt is required by law or directed by the filer. PACER access fees appl=
+y to all other users. To avoid later
+ charges, download a copy of each document during this first viewing.</span=
+></strong></span></span></span></div>
+<div>&nbsp;</div>
+<div style=3D"text-align:center"><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">United States Court of Appeals for the&nbsp;Ninth Circ=
+uit</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice of Docket Activity</span></strong></span><=
+/span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif">The following transaction was entered on 07/25/2025 8:05:50 AM=
+ PDT and filed on 07/25/2025</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Name:&nbsp;</span></strong><span style=3D"font-fa=
+mily:'Segoe UI',sans-serif">National TPS Alliance, et al. v. Noem, et al.&n=
+bsp;</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Number:
+</span></strong><span style=3D"font-family:'Segoe UI',sans-serif"><a href=
+=3D'https://ca9-showdoc.azurewebsites.us/25-2120'>25-2120</a></span></span>=
+</span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Docket Text:</span></strong></span></span></span></div=
+>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div><strong>CITATION</strong> of Supplemental Authorities (28=
+j Letter)&nbsp;filed by Appellant Kristi Noem, Appellant United States Depa=
+rtment of Homeland Security, Appellant United States of America. [Entered: =
+07/25/2025 08:08 AM]</div></span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div class=3D'documents'><b>Document:</b> <a href=3D'https://c=
+a9-showdoc.azurewebsites.us/NDA/55aabb77-6969-f011-bec2-001dd806079d'>28j L=
+etter</a></div></span></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice will be electronically mailed to:</span></=
+strong></span></span></span><br>
+&nbsp;</div>
+
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif"></span></span></span></span></div>
+<div>&nbsp;</div>
+<img src=3D"http://url4437.ca9.fedcourts.us/wf/open?upn=3Du001.cLrfVVgnz9fy=
+hstf5y41Rwze27knPXTbYmYDem1GpdTuVeVoLd6AaOd4cic0gpIHZUvZ7fxmBhkqXgksPKDPBmd=
+wQpbKdUNloVaDNzXcOTZd7mybCn-2FIvbT9y72EXuLbB9kLBIjC8X9P6Jh0qMsk-2B5osUCRmdu=
+KxC3wy4A-2BudNhRfZnPpwGV0rWHVHYVlLugpVlZk4PtRDsQC9hrANj0Aw-3D-3D" alt=3D"" =
+width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:=
+1px !important;border-width:0 !important;margin-top:0 !important;margin-bot=
+tom:0 !important;margin-right:0 !important;margin-left:0 !important;padding=
+-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;pa=
+dding-left:0 !important;"/></body>
+</html>

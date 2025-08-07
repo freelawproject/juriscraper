@@ -24,7 +24,7 @@ downloading and saving its results. A reference implementation of the
 caller has been developed and is in use at
 `CourtListener.com <https://www.courtlistener.com>`__. The code for that
 caller can be `found
-here <https://github.com/freelawproject/courtlistener/tree/master/cl/scrapers/management/commands>`__.
+here <https://github.com/freelawproject/courtlistener/blob/main/cl/scrapers/management/commands/cl_scrape_opinions.py>`__.
 There is also a basic sample caller `included in
 Juriscraper <https://github.com/freelawproject/juriscraper/blob/main/sample_caller.py>`__
 that can be used for testing or as a starting point when developing your
@@ -46,14 +46,18 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 3.8+.x, then:
+First step: Install Python 3.9+, then:
 
 Install the dependencies
 ------------------------
 
-On Ubuntu/Debian Linux::
+On Ubuntu based distributions/Debian Linux::
 
     sudo apt-get install libxml2-dev libxslt-dev libyaml-dev
+
+On Arch based distributions::
+
+    sudo pacman -S libxml2 libxslt libyaml
 
 On macOS with Homebrew <https://brew.sh>::
 
@@ -120,268 +124,12 @@ Once you have selenium running like that, you can do a test like::
 Kansas's precedential scraper uses a webdriver. If you do this and watch
 selenium, you should see it in action.
 
-
-Joining the Project as a Developer
-==================================
-
-For scrapers to be merged:
-
--  Automated testing should pass. The test suite will be run automatically by Github Actions. If changes are being made to the pacer code, the pacer tests must also pass when run. These tests are skipped by default. To run them, set environment variables for PACER_USERNAME and PACER_PASSWORD.
-
--  A \*\_example\* file must be included in the ``tests/examples``
-   directory (this is needed for the tests to run your code).
-
--  Your code should be
-   `PEP8 <http://www.python.org/dev/peps/pep-0008/>`__ compliant with no
-   major Pylint problems or Intellij inspection issues.
-
--  We use the `black <https://black.readthedocs.io/en/stable/>`__ code formatter to make sure all our Python code has the same formatting. This is an automated tool that you must run on any code you run before you push it to Github. When you run it, it will reformat your code. We recommend `integrating into your editor  <https://black.readthedocs.io/en/stable/integrations/editors.html>`__.
-
-- This project is configured to use git pre-commit hooks managed by the
-  Python program `pre-commit <https://pre-commit.com/>`__. Pre-
-  commit checks let us easily ensure that the code is properly formatted with
-  black before it can even be commited. To install it run:
-
-  `uv tool install pre-commit --with pre-commit-uv`
-
-  which will set up a git pre-commit hook for you. This install step is only
-  necessary once in your repository. When using this hook, any code
-  files that do not comply to black will automatically be unstaged and re-
-  formatted. You will see a message to this effect. It is your job to then re-stage
-  and commit the files.
-
--  Beyond what black will do for you by default, if you somehow find a way to do whitespace or other formatting changes, do so in their own commit and ideally in its own PR. When whitespace is combined with other code changes, the PR's become impossible to read and risky to merge. This is a big reason we use black.
-
--  Your code should efficiently parse a page, returning no exceptions or
-   speed warnings during tests on a modern machine.
-
-When you're ready to develop a scraper, get in touch, and we'll find you
-a scraper that makes sense and that nobody else is working on. We have `a wiki
-list <https://github.com/freelawproject/juriscraper/wiki/Court-Websites>`__
-of courts that you can browse yourself. There are templates for new
-scrapers `here (for
-opinions) <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/opinions/opinion_template.py>`__
-and `here (for oral
-arguments) <https://github.com/freelawproject/juriscraper/blob/master/juriscraper/oral_args/oral_argument_template.py>`__.
-
-When you're done with your scraper, fork this repository, push your
-changes into your fork, and then send a pull request for your changes.
-Be sure to remember to update the ``__init__.py`` file as well, since it
-contains a list of completed scrapers.
-
-Before we can accept any changes from any contributor, we need a signed
-and completed Contributor License Agreement. You can find this agreement
-in the root of the repository. While an annoying bit of paperwork, this
-license is for your protection as a Contributor as well as the
-protection of Free Law Project and our users; it does not change your
-rights to use your own Contributions for any other purpose.
-
-
-Development
-===========
-
-To work on Juriscraper, clone its repository:
-
-::
-
-    git clone https://github.com/freelawproject/juriscraper.git
-
-Then, you can run its tests with `tox <https://tox.readthedocs.io/en/latest/>`__.
-Install tox with `uv <https://docs.astral.sh/uv/>`__ as a `tool <https://docs.astral.sh/uv/concepts/tools/>`__, adding the `tox-uv extension <https://github.com/tox-dev/tox-uv>`__:
-
-::
-
-    uv tool install tox --with tox-uv
-
-To run juriscraper’s tests for all Python versions, run:
-
-::
-
-    tox
-
-To run tests for a single Python version, pass the environment name, such as for Python 3.13:
-
-::
-
-    tox -e py313
-
-To pass extra arguments to pytest, add them after a ``--`` separator, like:
-
-::
-
-    tox -e py313 -- --pdb
-
-Network tests
--------------
-
-The tests in ``tests/network`` interact with PACER.
-By default, they are skipped, as they require working credentials.
-To run them, set the environment variables ``PACER_USERNAME`` and ``PACER_PASSWORD`` to your PACER credentials, for example:
-
-::
-
-    export PACER_USERNAME=the-coolest-lawyer
-    export PACER_PASSWORD=hunter2
-
-Then, run the tests as usual:
-
-::
-
-    tox -e py313
-
-Or, to run only the network tests:
-
-::
-
-    tox -e py313 -- tests/network
-
-``sample_caller.py``
---------------------
-
-This script demonstrates how to use Juriscraper.
-Run it with:
-
-::
-
-    uv run sample_caller.py
-
-It requires options to select which courts to scrape, per its help output.
-For example, to test ca1, run:
-
-::
-
-    uv run sample_caller.py -c juriscraper.opinions.united_states.federal_appellate.ca1
-
-Usage
-=====
-
-The scrapers are written in Python, and can can scrape a court as
-follows:
-
-::
-
-    from juriscraper.opinions.united_states.federal_appellate import ca1
-
-    # Create a site object
-    site = ca1.Site()
-
-    # Populate it with data, downloading the page if necessary
-    site.parse()
-
-    # Print out the object
-    print(str(site))
-
-    # Print it out as JSON
-    print(site.to_json())
-
-    # Iterate over the item
-    for opinion in site:
-        print(opinion)
-
-That will print out all the current meta data for a site, including
-links to the objects you wish to download (typically opinions or oral
-arguments). If you download those opinions, we also recommend running the
-``_cleanup_content()`` method against the items that you download (PDFs,
-HTML, etc.). See the ``sample_caller.py`` for an example and see
-``_cleanup_content()`` for an explanation of what it does.
-
-It's also possible to iterate over all courts in a Python package, even
-if they're not known before starting the scraper. For example:
-
-::
-
-    # Start with an import path. This will do all federal courts.
-    court_id = 'juriscraper.opinions.united_states.federal'
-    # Import all the scrapers
-    scrapers = __import__(
-        court_id,
-        globals(),
-        locals(),
-        ['*']
-    ).__all__
-    for scraper in scrapers:
-        mod = __import__(
-            '%s.%s' % (court_id, scraper),
-            globals(),
-            locals(),
-            [scraper]
-        )
-        # Create a Site instance, then get the contents
-        site = mod.Site()
-        site.parse()
-        print(str(site))
-
-This can be useful if you wish to create a command line scraper that
-iterates over all courts of a certain jurisdiction that is provided by a
-script. See ``lib/importer.py`` for an example that's used in
-the sample caller.
-
-District Court Parser
-=====================
-A sample driver to run the PACER District Court parser on an html file is included.
-It takes HTML file(s) as arguments and outputs JSON to stdout.
-
-Example usage:
-
-::
-
-   PYTHONPATH=`pwd` python juriscraper/pacerdocket.py tests/examples/pacer/dockets/district/nysd.html
-
-
-Tests
-=====
-
-We got that! You can (and should) run the tests with
-``tox``. This will run ``python setup.py test`` for all supported Python runtimes,
-iterating over all of the ``*_example*`` files and run the scrapers against them.
-
-Each scraper has one or more ``*_example*`` files.  When creating a new scraper,
-or covering a new use case for an existing scraper, you will have to create an
-example file yourself.  Please see the files under ``tests/examples/`` to see
-for yourself how the naming structure works.  What you want to put in your new
-example file is the HTML/json/xml that the scraper in question needs to test
-parsing.  Sometimes creating these files can be tricky, but more often than not,
-it is as simple as getting the data to display in your browser, viewing then copying
-the page source, then pasting that text into your new example file.
-
-Each ``*_example*`` file has a corresponding ``*_example*.compare.json`` file. This
-file contains a json data object that represents the data extracted when parsing
-the corresponding ``*_example*`` file.  These are used to ensure that each scraper
-parses the exact data we expect from each of its ``*_example*`` files. You do not
-need to create these ``*_example*.compare.json`` files yourself.  Simply create
-your ``*_example*`` file, then run the test suite.  It will fail the first time,
-indicating that a new ``*_example*.compare.json`` file was generated.  You should
-review that file, make sure the data is correct, then re-run the test suite.  This
-time, the tests should pass (or at least they shouldn't fail because of the newly
-generated ``*_example*.compare.json`` file).  Once the tests are passing,
-feel free to commit, but **please remember** to include the new ``*_example*``
-**and** ``*_example*.compare.json`` files in your commit.
-
-Individual tests can be run with:
-
-   tox -e py -- tests/local/test_DateTest.py::DateTest::test_date_range_creation
-
-Or, to run and drop to the Python debugger if it fails, but you must install `nost` to have `nosetests`:
-
-  uv run nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_date_range_creation
-
-
-Future Goals
+Contributing
 ============
--  Support for additional PACER pages and utilities
--  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
--  Support opinions from for all federal district courts with non-PACER opinion listings
--  For every court above where a backscraper is possible, it is implemented.
--  Support video, additional oral argument audio, and transcripts everywhere available
 
-
-Deployment
-==========
-Deployment to PyPI should happen automatically when a tagged version is pushed
-to master in the format v*.*.*. If you do not have push permission on master,
-this will also work for merged, tagged pull requests. Update the version number
-in ``pyproject.toml``, tag your commit with the correct tag (v.*.*.*), and do a
-PR with that.
+We welcome contributions! If you'd like to get involved, please take a look at our
+`CONTRIBUTING.md <CONTRIBUTING.md>`__
+guide for instructions on setting up your environment, running tests, and more.
 
 License
 =======
