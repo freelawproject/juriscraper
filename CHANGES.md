@@ -29,7 +29,7 @@ Fixes:
 
 Features:
 - add `indctapp_reclassified` new scraper for reclassified opinions #1509
-- 
+-
 
 Changes:
 - Update `uscgcoca` scraper, site has changed #1526
