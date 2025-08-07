@@ -15,16 +15,31 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- add `indctapp` new scraper for reclassified opinions #1509
 -
+
+Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.84 - 2025-08-07**
+
+Features:
+- add `indctapp_reclassified` new scraper for reclassified opinions #1509
+- 
 
 Changes:
 - Update `uscgcoca` scraper, site has changed #1526
 
 Fixes:
-- Add new validation to `cleanup_content` to ensure that the content is not an error page #1520
+- Add new validation to `mont.Site.cleanup_content` to ensure that the content is not an error page #1520
+- Improve `nd` scraper to extract citations from the html #1301
 
-## Current
+## Past
+
 
 **2.6.83 - 2025-08-05**
 
@@ -32,7 +47,6 @@ Features:
 - Implement scraper for texas 15th court of appeals  `texapp_15`  #1436
 - Add support for downloading ACMS NDA free look documents. #1510
 
-## Past
 
 **2.6.82 - 2025-07-31**
 
@@ -40,7 +54,6 @@ Changes:
 - Update README.rst
 - Add CONTRIBUTING.md
 - Update `lactapp_1` scraper, site has changed #1357
-- Improve `nd` scraper to extract citations from the html #1301
 
 
 Fixes:
