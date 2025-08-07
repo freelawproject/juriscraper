@@ -40,6 +40,8 @@ Changes:
 - Update README.rst
 - Add CONTRIBUTING.md
 - Update `lactapp_1` scraper, site has changed #1357
+- Improve `nd` scraper to extract citations from the html #1301
+
 
 Fixes:
 - Fix `ca9` download URLs #1515
