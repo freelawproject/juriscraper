@@ -48,7 +48,7 @@ class Site(OpinionSiteLinear):
             else:
                 lower_court = ", ".join(
                     part.strip()
-                    for part in cells[3].xpath("string()").split("\n")
+                    for part in cells[3].xpath(".//text()[normalize-space()]")
                     if part.strip()
                 )
 
