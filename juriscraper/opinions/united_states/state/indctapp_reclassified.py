@@ -41,11 +41,16 @@ class Site(OpinionSiteLinear):
             url = link[0].get("href")
 
             lower_court_parts = cells[3].xpath(".//p")
-            lower_court = (
-                ", ".join(p.text.strip() for p in lower_court_parts)
-                if lower_court_parts
-                else cells[3].text.strip()
-            )
+            if lower_court_parts:
+                lower_court = ", ".join(
+                    p.text.strip() for p in lower_court_parts
+                )
+            else:
+                lower_court = ", ".join(
+                    part.strip()
+                    for part in cells[3].xpath("string()").split("\n")
+                    if part.strip()
+                )
 
             docket_parts = cells[4].xpath(".//p")
             docket = (
@@ -56,8 +61,8 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(
                 {
-                    "date": cells[0].text.strip(),
-                    "other_date": f"Date opinion was reclassified as published: {cells[1].text.strip()}",
+                    "date": cells[1].text.strip(),
+                    "other_date": f"Date opinion was reclassified as published: {cells[0].text.strip()}",
                     "name": name,
                     "url": url,
                     "lower_court_number": lower_court,
