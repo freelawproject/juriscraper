@@ -5,6 +5,7 @@ from datetime import date, datetime, timedelta
 import certifi
 import requests
 
+from juriscraper.exceptions import EmptyFileError, UnexpectedContentTypeError
 from juriscraper.lib.date_utils import (
     fix_future_year_typo,
     json_date_handler,
@@ -381,6 +382,65 @@ class AbstractSite:
 
         self._post_process_response()
         return self._return_response_text_object()
+
+    def download_content(self, download_url) -> str | bytes:
+        """Download the content from the given URL and return the content as binary or string
+
+        Downloads the file, covering a few special cases such as invalid SSL
+        certificates and empty file errors.
+
+        :param download_url: The URL for the item you wish to download.
+        :param site: Site object used to download data
+
+        :return: The downloaded and cleaned content
+        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
+        """
+
+        has_cipher = hasattr(self, "cipher")
+        s = self.request["session"] if has_cipher else requests.session()
+
+        if self.needs_special_headers:
+            headers = self.request["headers"]
+        else:
+            headers = {"User-Agent": "CourtListener"}
+
+        if hasattr(self, "apply_rate_limit"):
+            self.apply_rate_limit()
+        # Note that we do a GET even if self.method is POST. This is
+        # deliberate.
+        r = s.get(
+            download_url,
+            verify=has_cipher,  # WA has a certificate we don't understand
+            headers=headers,
+            cookies=self.cookies,
+            timeout=300,
+        )
+
+        # test for empty files (thank you CA1)
+        if len(r.content) == 0:
+            raise EmptyFileError(f"EmptyFileError: '{download_url}'")
+
+        # test for expected content type (thanks mont for nil)
+        if self.expected_content_types:
+            # Clean up content types like "application/pdf;charset=utf-8"
+            # and 'application/octet-stream; charset=UTF-8'
+            content_type = (
+                r.headers.get("Content-Type").lower().split(";")[0].strip()
+            )
+            m = any(
+                content_type in mime.lower()
+                for mime in self.expected_content_types
+            )
+
+            if not m:
+                court_str = self.court_id.split(".")[-1].split("_")[0]
+                fingerprint = [f"{court_str}-unexpected-content-type"]
+                msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
+                raise UnexpectedContentTypeError(msg, fingerprint=fingerprint)
+
+        content = self.cleanup_content(r.content)
+
+        return content
 
     def _process_html(self):
         """Hook for processing available self.html after it's been downloaded.
