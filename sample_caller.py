@@ -1,6 +1,7 @@
 import hashlib
 import json
 import logging
+import mimetypes
 import os
 import re
 import signal
@@ -239,6 +240,53 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
         logger.info("Same URL hashes are the same. It's OK")
 
 
+def download_item(data: bytes, item, download_url: str, site):
+    """Save each case's metadata and content for manual upload."""
+
+    # Create a folder named after the court_id
+    folder_name = f"./{site.court_id.replace('.', '_')}"
+    os.makedirs(folder_name, exist_ok=True)
+
+    # Get extension from response headers if possible
+    ext = None
+    if "Content-Type" in site.request["response"].headers:
+        content_type = (
+            site.request["response"]
+            .headers["Content-Type"]
+            .split(";")[0]
+            .strip()
+        )
+        ext = mimetypes.guess_extension(content_type)
+    if not ext:
+        # Fallback: try to get extension from download_url
+        ext = os.path.splitext(parse.unquote(download_url))[1]
+        if not ext:
+            ext = ".bin"  # default if unknown
+
+    file_hash = sha1(download_url)
+    json_path = os.path.join(folder_name, f"{file_hash}.json")
+    content_path = os.path.join(folder_name, f"{file_hash}{ext}")
+
+    # Save metadata
+    with open(json_path, "w") as f:
+        item_parsed = item.copy()
+        if "case_dates" in item_parsed:
+            try:
+                item_parsed["case_dates"] = item_parsed["case_dates"].strftime(
+                    "%d/%m/%Y"
+                )
+            except Exception:
+                pass
+        json.dump(item_parsed, f, indent=2)
+    # Save content
+    if isinstance(data, (bytes, bytearray)):
+        with open(content_path, "wb") as f:
+            f.write(data)
+    else:
+        with open(content_path, "w", encoding="utf-8") as f:
+            f.write(data)
+
+
 def scrape_court(
     site,
     binaries=False,
@@ -246,6 +294,7 @@ def scrape_court(
     doctor_host="",
     test_hashes: bool = False,
     limit: int = 1000,
+    save_for_manual_upload: bool = False,
 ):
     """Calls the requested court(s), gets its binary content, and
     extracts the content if possible. See --extract-content option
@@ -273,7 +322,7 @@ def scrape_court(
         logger.debug("\nAdding new item:")
         log_dict(item)
 
-        if not binaries:
+        if not binaries and not save_for_manual_upload:
             continue
 
         try:
@@ -315,6 +364,9 @@ def scrape_court(
 
         # Separate cases for easier reading when verbosity=DEBUG
         logger.debug("\n%s\n", "=" * 60)
+
+        if save_for_manual_upload:
+            download_item(data, item, download_url, site)
 
     logger.info(
         "\n%s: Successfully crawled %s items.", site.court_id, len(site)
@@ -487,6 +539,13 @@ def main():
         help="How many items to scrape per `scrape_court` call",
     )
 
+    parser.add_option(
+        "--save-for-manual-upload",
+        action="store_true",
+        default=False,
+        help="Save each case's metadata and content for manual upload. Files are named with a hash and stored in a folder named after the court_id.",
+    )
+
     (options, args) = parser.parse_args()
 
     court_id = options.court_id
@@ -501,6 +560,7 @@ def main():
     save_responses = options.save_responses
     test_hashes = options.test_hashes
     limit_per_scrape = options.limit_per_scrape
+    save_for_manual_upload = options.save_for_manual_upload
 
     if test_hashes:
         binaries = True
@@ -572,6 +632,7 @@ def main():
                     doctor_host,
                     test_hashes,
                     limit_per_scrape,
+                    save_for_manual_upload,
                 )
 
     logger.debug("The scraper has stopped.")

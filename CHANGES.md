@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- add new flag `--save-for-manual-upload` to `sample_caller` to save
+  the scraped data for manual upload to CourtListener.
 
 Changes:
 -
