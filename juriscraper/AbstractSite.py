@@ -1,6 +1,7 @@
 import hashlib
 import json
 from datetime import date, datetime, timedelta
+from typing import Union
 
 import certifi
 import requests
@@ -383,7 +384,7 @@ class AbstractSite:
         self._post_process_response()
         return self._return_response_text_object()
 
-    def download_content(self, download_url) -> str | bytes:
+    def download_content(self, download_url) -> Union[str, bytes]:
         """Download the content from the given URL and return the content as binary or string
 
         Downloads the file, covering a few special cases such as invalid SSL
