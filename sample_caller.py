@@ -1,7 +1,6 @@
 import hashlib
 import json
 import logging
-import mimetypes
 import os
 import re
 import signal
@@ -107,8 +106,6 @@ def extract_doc_content(
         the extracted content
         the structured metadata parsed by Site.extract_from_text
     """
-    if not extract_from_text:
-        return data, {}
 
     # Get the file type from the document's raw content
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
@@ -117,6 +114,9 @@ def extract_doc_content(
     )
     extension_response.raise_for_status()
     extension = extension_response.text
+
+    if not extract_from_text:
+        return data, {}, extension
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
@@ -157,7 +157,7 @@ def extract_doc_content(
     logger.info("\nOpen extracted content with 'file://%s'", filepath)
 
     metadata_dict = site.extract_from_text(extracted_content)
-    return extracted_content, metadata_dict
+    return extracted_content, metadata_dict, extension
 
 
 def get_binary_content(download_url: str, site, exceptions) -> bytes:
@@ -240,32 +240,18 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
         logger.info("Same URL hashes are the same. It's OK")
 
 
-def download_item(data: bytes, item, download_url: str, site):
+def download_item(data: bytes, item, download_url: str, site, extension: str):
     """Save each case's metadata and content for manual upload."""
 
     # Create a folder named after the court_id
-    folder_name = f"./{site.court_id.replace('.', '_')}"
+    folder_name = os.path.join(
+        os.path.expanduser("~"), "Downloads", site.court_id.replace(".", "_")
+    )
     os.makedirs(folder_name, exist_ok=True)
-
-    # Get extension from response headers if possible
-    ext = None
-    if "Content-Type" in site.request["response"].headers:
-        content_type = (
-            site.request["response"]
-            .headers["Content-Type"]
-            .split(";")[0]
-            .strip()
-        )
-        ext = mimetypes.guess_extension(content_type)
-    if not ext:
-        # Fallback: try to get extension from download_url
-        ext = os.path.splitext(parse.unquote(download_url))[1]
-        if not ext:
-            ext = ".bin"  # default if unknown
 
     file_hash = sha1(download_url)
     json_path = os.path.join(folder_name, f"{file_hash}.json")
-    content_path = os.path.join(folder_name, f"{file_hash}{ext}")
+    content_path = os.path.join(folder_name, f"{file_hash}{extension}")
 
     # Save metadata
     with open(json_path, "w") as f:
@@ -273,7 +259,7 @@ def download_item(data: bytes, item, download_url: str, site):
         if "case_dates" in item_parsed:
             try:
                 item_parsed["case_dates"] = item_parsed["case_dates"].strftime(
-                    "%d/%m/%Y"
+                    "%Y%m%d"
                 )
             except Exception:
                 pass
@@ -346,7 +332,7 @@ def scrape_court(
 
         filename = item["case_names"].lower().replace(" ", "_")[:40]
 
-        data, metadata_from_text = extract_doc_content(
+        data, metadata_from_text, extension = extract_doc_content(
             data, extract_content, site, doctor_host, filename
         )
         logger.log(
@@ -366,7 +352,7 @@ def scrape_court(
         logger.debug("\n%s\n", "=" * 60)
 
         if save_for_manual_upload:
-            download_item(data, item, download_url, site)
+            download_item(data, item, download_url, site, extension)
 
     logger.info(
         "\n%s: Successfully crawled %s items.", site.court_id, len(site)
