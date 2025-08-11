@@ -43,7 +43,6 @@ class Site(OpinionSiteLinear):
         self.method = "POST"
         self.status = "Published"
         self.expected_content_types = ["text/html"]
-        self.should_have_results = True
         self.days_interval = 30
         self.make_backscrape_iterable(kwargs)
 

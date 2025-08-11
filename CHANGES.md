@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- remove should_have_results flag from `wis` `mass` to prevent false positives #1513
 
 ## Current
 
