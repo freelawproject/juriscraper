@@ -13,6 +13,7 @@ from urllib import parse
 
 import requests
 
+from juriscraper.lib.exceptions import BadContentError
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import trunc
@@ -232,12 +233,7 @@ def scrape_court(
 
         try:
             data = site.download_content(download_url)
-        except Exception:
-            logger.error(
-                "Error downloading %s from %s",
-                item["case_names"],
-                download_url,
-            )
+        except BadContentError:
             continue
 
         if test_hashes:

@@ -6,13 +6,16 @@ from typing import Union
 import certifi
 import requests
 
-from juriscraper.exceptions import EmptyFileError, UnexpectedContentTypeError
 from juriscraper.lib.date_utils import (
     fix_future_year_typo,
     json_date_handler,
     make_date_range_tuples,
 )
-from juriscraper.lib.exceptions import InsanityException
+from juriscraper.lib.exceptions import (
+    EmptyFileError,
+    InsanityException,
+    UnexpectedContentTypeError,
+)
 from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
