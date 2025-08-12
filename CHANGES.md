@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Forces proper html structure for `colo` #1538
 
 ## Current
 

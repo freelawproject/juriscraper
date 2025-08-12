@@ -7,6 +7,7 @@ History:
     - 2023-01-05: Updated by William E. Palin
     - 2023-11-04: Updated by Honey K. Joule
     - 2023-11-19: Updated by William E. Palin
+    - 2025-08-11: Add cleanup_content method, quevon24
 """
 
 from juriscraper.opinions.united_states.state import colo
@@ -19,3 +20,8 @@ class Site(colo.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.expected_content_types = ["application/pdf"]
+
+    @staticmethod
+    def cleanup_content(content):
+        """Return raw pdf content"""
+        return content
