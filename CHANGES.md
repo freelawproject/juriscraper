@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- new validations for `_sanity_check` in `AbstractSite`
 
 Fixes:
 - Forces proper html structure for `colo` #1538
