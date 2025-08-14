@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Update `bap1` backscraper #1539
 
 ## Current
 
