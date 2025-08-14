@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Forces proper html structure for `colo` #1538
 - remove should_have_results flag from `wis` `mass` to prevent false positives #1513
+- Fix `ky` scraper to handle missing document text to prevent errors #1540
 
 ## Current
 
