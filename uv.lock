@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 2
 requires-python = ">=3.9"
 
 [[package]]
@@ -275,7 +275,7 @@ wheels = [
 
 [[package]]
 name = "juriscraper"
-version = "2.6.85"
+version = "2.6.86"
 source = { editable = "." }
 dependencies = [
     { name = "certifi" },
