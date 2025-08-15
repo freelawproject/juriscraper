@@ -18,6 +18,7 @@ from .utils import (
     get_pacer_case_id_from_doc1_url,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
+    get_pacer_magic_num_from_acms_url,
     get_pacer_magic_num_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
 )
@@ -83,10 +84,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.content_type = None
         self.appellate = None
         self.acms = None
-        self.acms_partial_short_description = None
         self.image_attached = False
         self.docket_numbers = []
         self.subject = None
+        self.subject_cleaned = None
         self.case_names = []
         self.raw_docket_numbers = set()
         if self.court_id.endswith("b"):
@@ -333,17 +334,6 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         except IndexError:
             return None
 
-    def _get_acms_partial_short_description(
-        self, current_node: HtmlElement
-    ) -> str:
-        """Retrieves the acms partial short description.
-
-        :param  current_node: The relative lxml.HtmlElement
-        :returns: Partial short description, if it's found
-        """
-        path = "//b[contains(., 'Document:')]/following-sibling::a"
-        return self._xpath_text_0(current_node, path)
-
     def _get_case_anchor(self, current_node: HtmlElement) -> Optional[str]:
         """Safely retrieves the anchor tag for a case.
 
@@ -387,6 +377,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             "font[1]/b//text()",
             "b[1]/span//text()",
             "text()",
+            "font[@face='arial,helvetica']//text()",
             "following::font[@face='arial,helvetica']//text()",
         ]
 
@@ -400,10 +391,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             main_path = (
                 "//strong[normalize-space(.)='Docket Text:']"
                 "/ancestor::div[1]"
-                "/following-sibling::div[1]"
-                "//div//"
+                "/following-sibling::div[normalize-space(string())][1]"
             )
-            possible_paths = ["text()"]
+            possible_paths = ["/descendant::text()"]
 
         for path in possible_paths:
             node = current_node.xpath(f"{main_path}{path}")
@@ -568,6 +558,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
 
         case_url = None
+        short_description = self._get_short_description()
         if self.content_type == "text/plain":
             description = self._get_description_plain()
             if description is not None:
@@ -592,20 +583,18 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 document_url = (
                     anchor.xpath("./@href")[0] if anchor is not None else None
                 )
-                if self._is_appellate() or self._is_acms():
+
+                if self._is_acms():
+                    document_number = self._parse_acms_document_number(
+                        self.subject_cleaned, self.docket_numbers[0]
+                    )
+                elif self._is_appellate():
                     document_number = None
                 else:
                     document_number = self._get_document_number(current_node)
 
                 # Get Case URL for HTML version.
                 case_url = self._get_case_anchor(current_node)
-
-                # Get the ACMS partial short description for later use in short_description parsing.
-                self.acms_partial_short_description = (
-                    self._get_acms_partial_short_description(current_node)
-                    if self._is_acms()
-                    else None
-                )
 
         if description is not None:
             # "doc" value for document_number will cause an error on
@@ -617,7 +606,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
-                    "short_description": self._get_short_description(),
+                    "short_description": short_description,
                     "document_url": document_url,
                     "document_number": document_number,
                     "pacer_doc_id": None,
@@ -636,6 +625,8 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     get_pacer_magic_num_from_doc1_url(
                         document_url, self.appellate
                     )
+                    if not self._is_acms()
+                    else get_pacer_magic_num_from_acms_url(document_url)
                 )
                 if not self._is_appellate():
                     entries[0]["pacer_case_id"] = (
@@ -761,29 +752,60 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         )
         return longer_short_description
 
-    def _parse_acms_short_description(self, subject: str) -> str:
-        """Parse the short description of an ACMS entry from the subject
-         notification.
+    @staticmethod
+    def _parse_acms_subject(
+        subject: str, docket_number: str
+    ) -> Optional[tuple[Optional[str], str]]:
+        """Match on the docket_number, an optional document number, then
+        potential short description.
 
-        :param subject: The subject string from which to parse the short
-        description.
-        :return: The parsed short description
+        :param subject: The email subject string.
+        :param docket_number: The docket number to anchor on.
+        :return: A tuple (doc_num_str, raw_description) if we match, else None.
         """
-        partial_des = re.escape(self.acms_partial_short_description)
-        match = re.search(partial_des, subject, re.IGNORECASE)
-        if not match:
+
+        pattern = rf"{re.escape(docket_number)}\s*-\s*(?:(\d+)\s*-\s*)?(.*)"
+        match = re.search(pattern, subject, re.IGNORECASE)
+        return match.groups() if match else None
+
+    def _parse_acms_document_number(
+        self, subject: str, docket_number: str
+    ) -> Optional[str]:
+        """Extract the document number if exists immediately following the
+        docket_number.
+
+        :param subject: The email subject string.
+        :param docket_number: The docket_number to locate first.
+        :return: The document number as str, or None if not present.
+        """
+        subject_parsed = self._parse_acms_subject(subject, docket_number)
+        if not subject_parsed:
+            return None
+
+        doc_num_str, _ = subject_parsed
+        # Convert the document number to an integer to remove the leading zero,
+        # then convert it back to a string.
+        return str(int(doc_num_str)) if doc_num_str else None
+
+    def _parse_acms_short_description(
+        self, subject: str, docket_number: str
+    ) -> str:
+        """Extract the short description from the subject.
+
+        :param subject: The email subject string.
+        :param docket_number: The docket number to locate first.
+        :return: The parsed short description.
+        """
+        subject_parsed = self._parse_acms_subject(subject, docket_number)
+        if not subject_parsed:
             return ""
 
-        # Identify - boundaries for the short description and extract it.
-        start_idx, end_idx = match.span()
-        left_hyphen_idx = subject.rfind("-", 0, start_idx)
-        right_hyphen_idx = subject.find("-", end_idx)
-        slice_start = left_hyphen_idx + 1 if left_hyphen_idx != -1 else 0
-        slice_end = (
-            right_hyphen_idx if right_hyphen_idx != -1 else len(subject)
-        )
+        doc_num_str, raw_desc = subject_parsed
 
-        return subject[slice_start:slice_end].strip()
+        # Strip off any trailing "- <digits>"
+        raw_desc = re.sub(r"\s*-\s*\d+\s*$", "", raw_desc)
+
+        return raw_desc.strip()
 
     def _get_short_description(self) -> str:
         """Get the short description of a case from the subject string.
@@ -802,9 +824,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if len(subject_split_case_name) > 1:
                 break
 
+        self.subject_cleaned = subject_split_case_name[-1].strip()
         if self._is_acms():
             short_description = self._parse_acms_short_description(
-                subject_split_case_name[-1]
+                self.subject_cleaned, self.docket_numbers[0]
             )
         elif self.appellate:
             # Appellate notification.
@@ -821,7 +844,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # District notification.
             # In: Activity in Case 1:21-cv-01456-MN CBV, Inc. v. ChanBond, LLC Letter
             # Out: Letter
-            short_description = subject_split_case_name[-1].strip()
+            short_description = self.subject_cleaned
 
         return clean_string(short_description)
 

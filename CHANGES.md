@@ -16,20 +16,65 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - add `texbizct` new scraper for Texas Business Court #1437
+
+Changes:
 -
+
+Fixes:
+-
+
+## Current
+
+**2.6.86 - 2025-08-15**
+
+Fixes:
+- Update `bap1` backscraper #1539
+- Fix `ky` scraper to handle missing document text to prevent errors #1540
+
+
+## Past
+
+**2.6.85 - 2025-08-14**
+
+Fixes:
+- Forces proper html structure for `colo` #1538
+- remove should_have_results flag from `wis` `mass` to prevent false positives #1513
+- Fixes parsing of email ACMS and `ord` docket entry short description variations
+
+
+**2.6.84 - 2025-08-07**
+
+Features:
+- add `indctapp_reclassified` new scraper for reclassified opinions #1509
+-
+
+Changes:
+- Update `uscgcoca` scraper, site has changed #1526
+
+Fixes:
+- Add new validation to `mont.Site.cleanup_content` to ensure that the content is not an error page #1520
+- Improve `nd` scraper to extract citations from the html #1301
+
+
+**2.6.83 - 2025-08-05**
+
+Features:
+- Implement scraper for texas 15th court of appeals  `texapp_15`  #1436
+- Add support for downloading ACMS NDA free look documents. #1510
+
+
+**2.6.82 - 2025-07-31**
 
 Changes:
 - Update README.rst
 - Add CONTRIBUTING.md
 - Update `lactapp_1` scraper, site has changed #1357
 
+
 Fixes:
 - Fix `ca9` download URLs #1515
 
-## Current
-
 **2.6.81 - 2025-07-28**
-
 
 Features:
 - Add `masssuperct` new scraper for Massachusetts Superior Court #1498
