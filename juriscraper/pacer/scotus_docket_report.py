@@ -157,7 +157,7 @@ class SCOTUSDocketReport:
     def _build_attorney(att: dict[str, Any]) -> dict[str, Any]:
         """Build a normalized attorney dictionary from a raw SCOTUS JSON record.
 
-        :param a: dictionary containing attorney information from the SCOTUS JSON.
+        :param att: dictionary containing attorney information from the SCOTUS JSON.
         :return: Dictionary with normalized attorney fields.
         """
 
