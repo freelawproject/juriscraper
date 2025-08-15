@@ -141,7 +141,9 @@ class Site(OpinionSiteLinear):
                 else ""
             )
 
-            if "\r\nTO BE PUBLISHED \r\n" in doc_text:
+            if not doc_text:
+                status = "Unknown"
+            elif "\r\nTO BE PUBLISHED \r\n" in doc_text:
                 status = "Published"
             else:
                 status = "Unpublished"
