@@ -377,6 +377,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             "font[1]/b//text()",
             "b[1]/span//text()",
             "text()",
+            "font[@face='arial,helvetica']//text()",
             "following::font[@face='arial,helvetica']//text()",
         ]
 
@@ -390,10 +391,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             main_path = (
                 "//strong[normalize-space(.)='Docket Text:']"
                 "/ancestor::div[1]"
-                "/following-sibling::div[1]"
-                "//div//"
+                "/following-sibling::div[normalize-space(string())][1]"
             )
-            possible_paths = ["text()"]
+            possible_paths = ["/descendant::text()"]
 
         for path in possible_paths:
             node = current_node.xpath(f"{main_path}{path}")

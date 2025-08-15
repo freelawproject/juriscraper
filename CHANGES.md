@@ -21,10 +21,26 @@ Changes:
 -
 
 Fixes:
-- Forces proper html structure for `colo` #1538
-- remove should_have_results flag from `wis` `mass` to prevent false positives #1513
+-
 
 ## Current
+
+**2.6.86 - 2025-08-15**
+
+Fixes:
+- Update `bap1` backscraper #1539
+- Fix `ky` scraper to handle missing document text to prevent errors #1540
+
+
+## Past
+
+**2.6.85 - 2025-08-14**
+
+Fixes:
+- Forces proper html structure for `colo` #1538
+- remove should_have_results flag from `wis` `mass` to prevent false positives #1513
+- Fixes parsing of email ACMS and `ord` docket entry short description variations
+
 
 **2.6.84 - 2025-08-07**
 
@@ -38,8 +54,6 @@ Changes:
 Fixes:
 - Add new validation to `mont.Site.cleanup_content` to ensure that the content is not an error page #1520
 - Improve `nd` scraper to extract citations from the html #1301
-
-## Past
 
 
 **2.6.83 - 2025-08-05**

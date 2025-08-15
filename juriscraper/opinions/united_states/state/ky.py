@@ -135,9 +135,15 @@ class Site(OpinionSiteLinear):
             if not case_name:
                 case_name = doc_json[0]["caseHeader"].get("shortTitle")
             doc_id = doc_json[0].get("documentID")
-            doc_text = doc_json[0]["documentText"][0]
+            doc_text = (
+                doc_json[0]["documentText"][0]
+                if doc_json[0].get("documentText")
+                else ""
+            )
 
-            if "\r\nTO BE PUBLISHED \r\n" in doc_text:
+            if not doc_text:
+                status = "Unknown"
+            elif "\r\nTO BE PUBLISHED \r\n" in doc_text:
                 status = "Published"
             else:
                 status = "Unpublished"
