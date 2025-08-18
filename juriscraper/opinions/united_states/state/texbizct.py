@@ -11,8 +11,11 @@
 #  - 2025-07-29: Created by Luis Manzur
 import re
 
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):
@@ -22,7 +25,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "https://www.txcourts.gov/businesscourt/opinions/"
         self.court_id = self.__module__
-        self.status = "Published"
+        self.status = "Unknown"
         self.should_have_results = True
 
     def _process_html(self) -> None:
@@ -38,6 +41,7 @@ class Site(OpinionSiteLinear):
 
             text = link.text
             if not text:
+                logger.debug("Skipping link with empty text: %s", link)
                 continue
 
             match = re.match(self.case_info_pattern, text)
@@ -61,6 +65,11 @@ class Site(OpinionSiteLinear):
         """
         pattern = r"(\d{4})\sTex\.\sBus\.\s(?:Ct\.\s)?(\d+)"
         match = re.search(pattern, scraped_text)
-        if not match:
-            return {}
-        return {"Citation": match.group(0)}
+        status = "Published" if match else "Unknown"
+        citation = match.group(0) if match else ""
+        return {
+            "Citation": citation,
+            "OpinionCluster": {
+                "precedential_status": status,
+            },
+        }
