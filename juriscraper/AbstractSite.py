@@ -1,5 +1,6 @@
 import hashlib
 import json
+import os
 from datetime import date, datetime, timedelta
 from typing import Union
 
@@ -14,6 +15,7 @@ from juriscraper.lib.date_utils import (
 from juriscraper.lib.exceptions import (
     EmptyFileError,
     InsanityException,
+    NoDownloadUrlError,
     UnexpectedContentTypeError,
 )
 from juriscraper.lib.html_utils import (
@@ -400,6 +402,17 @@ class AbstractSite:
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
         """
 
+        if not download_url:
+            raise NoDownloadUrlError(download_url)
+
+        # noinspection PyBroadException
+        if self.test_mode_enabled():
+            media_root = os.environ.get("MEDIA_ROOT", None)
+            url = os.path.join(media_root, download_url)
+            mr = MockRequest(url=url)
+            r = mr.get()
+            s = requests.Session()
+
         has_cipher = hasattr(self, "cipher")
         s = self.request["session"] if has_cipher else requests.session()
 
@@ -408,8 +421,6 @@ class AbstractSite:
         else:
             headers = {"User-Agent": "CourtListener"}
 
-        if hasattr(self, "apply_rate_limit"):
-            self.apply_rate_limit()
         # Note that we do a GET even if self.method is POST. This is
         # deliberate.
         r = s.get(
