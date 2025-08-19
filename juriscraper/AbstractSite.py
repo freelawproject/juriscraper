@@ -391,7 +391,7 @@ class AbstractSite:
         return self._return_response_text_object()
 
     def download_content(
-        self, download_url, is_sample=False
+        self, download_url, is_sample=False, media_root=""
     ) -> Union[str, bytes]:
         """Download the content from the given URL and return the content as binary or string
 
@@ -400,6 +400,7 @@ class AbstractSite:
 
         :param download_url: The URL for the item you wish to download.
         :param is_sample: If True, this indicates that the download is a sample
+        :param media_root: The root directory for local files, used in test mode
 
 
         :return: The downloaded and cleaned content
@@ -411,7 +412,6 @@ class AbstractSite:
 
         # noinspection PyBroadException
         if self.test_mode_enabled():
-            media_root = os.environ.get("MEDIA_ROOT", None)
             url = os.path.join(media_root, download_url)
             mr = MockRequest(url=url)
             r = mr.get()
