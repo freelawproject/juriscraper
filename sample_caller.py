@@ -16,16 +16,14 @@ import requests
 from juriscraper.lib.exceptions import BadContentError
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.microservices_utils import (
+    MICROSERVICE_URLS,
+    get_extension,
+)
 from juriscraper.lib.string_utils import trunc
 
 logger = make_default_logger()
 die_now = False
-
-# `doctor` urls to be used optionally with --extract-content arg
-MICROSERVICE_URLS = {
-    "document-extract": "{}/extract/doc/text/",
-    "buffer-extension": "{}/utils/file/extension/",
-}
 
 
 def signal_handler(signal, frame):
@@ -109,13 +107,7 @@ def extract_doc_content(
     if not extract_from_text:
         return data, {}
 
-    # Get the file type from the document's raw content
-    extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
-    extension_response = requests.post(
-        extension_url, files={"file": ("filename", data)}, timeout=30
-    )
-    extension_response.raise_for_status()
-    extension = extension_response.text
+    extension = get_extension(data)
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
@@ -232,7 +224,7 @@ def scrape_court(
             continue
 
         try:
-            data = site.download_content(download_url)
+            data = site.download_content(download_url, is_sample=True)
         except BadContentError:
             continue
 

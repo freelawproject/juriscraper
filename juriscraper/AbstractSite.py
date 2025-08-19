@@ -26,6 +26,7 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.microservices_utils import follow_redirections
 from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
@@ -389,14 +390,17 @@ class AbstractSite:
         self._post_process_response()
         return self._return_response_text_object()
 
-    def download_content(self, download_url) -> Union[str, bytes]:
+    def download_content(
+        self, download_url, is_sample=False
+    ) -> Union[str, bytes]:
         """Download the content from the given URL and return the content as binary or string
 
         Downloads the file, covering a few special cases such as invalid SSL
         certificates and empty file errors.
 
         :param download_url: The URL for the item you wish to download.
-        :param site: Site object used to download data
+        :param is_sample: If True, this indicates that the download is a sample
+
 
         :return: The downloaded and cleaned content
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
@@ -412,46 +416,53 @@ class AbstractSite:
             mr = MockRequest(url=url)
             r = mr.get()
             s = requests.Session()
-
-        has_cipher = hasattr(self, "cipher")
-        s = self.request["session"] if has_cipher else requests.session()
-
-        if self.needs_special_headers:
-            headers = self.request["headers"]
         else:
-            headers = {"User-Agent": "CourtListener"}
+            has_cipher = hasattr(self, "cipher")
+            s = self.request["session"] if has_cipher else requests.session()
 
-        # Note that we do a GET even if self.method is POST. This is
-        # deliberate.
-        r = s.get(
-            download_url,
-            verify=has_cipher,  # WA has a certificate we don't understand
-            headers=headers,
-            cookies=self.cookies,
-            timeout=300,
-        )
+            if self.needs_special_headers:
+                headers = self.request["headers"]
+            else:
+                headers = {"User-Agent": "CourtListener"}
 
-        # test for empty files (thank you CA1)
-        if len(r.content) == 0:
-            raise EmptyFileError(f"EmptyFileError: '{download_url}'")
-
-        # test for expected content type (thanks mont for nil)
-        if self.expected_content_types:
-            # Clean up content types like "application/pdf;charset=utf-8"
-            # and 'application/octet-stream; charset=UTF-8'
-            content_type = (
-                r.headers.get("Content-Type").lower().split(";")[0].strip()
-            )
-            m = any(
-                content_type in mime.lower()
-                for mime in self.expected_content_types
+            # Note that we do a GET even if self.method is POST. This is
+            # deliberate.
+            r = s.get(
+                download_url,
+                verify=has_cipher,  # WA has a certificate we don't understand
+                headers=headers,
+                cookies=self.cookies,
+                timeout=300,
             )
 
-            if not m:
-                court_str = self.court_id.split(".")[-1].split("_")[0]
-                fingerprint = [f"{court_str}-unexpected-content-type"]
-                msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
-                raise UnexpectedContentTypeError(msg, fingerprint=fingerprint)
+            # test for empty files (thank you CA1)
+            if len(r.content) == 0:
+                raise EmptyFileError(f"EmptyFileError: '{download_url}'")
+
+            # test for expected content type (thanks mont for nil)
+            if self.expected_content_types:
+                # Clean up content types like "application/pdf;charset=utf-8"
+                # and 'application/octet-stream; charset=UTF-8'
+                content_type = (
+                    r.headers.get("Content-Type").lower().split(";")[0].strip()
+                )
+                m = any(
+                    content_type in mime.lower()
+                    for mime in self.expected_content_types
+                )
+
+                if not m:
+                    court_str = self.court_id.split(".")[-1].split("_")[0]
+                    fingerprint = [f"{court_str}-unexpected-content-type"]
+                    msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
+                    raise UnexpectedContentTypeError(
+                        msg, fingerprint=fingerprint
+                    )
+
+            if not is_sample:
+                # test for and follow meta redirects
+                r = follow_redirections(r, s)
+                r.raise_for_status()
 
         content = self.cleanup_content(r.content)
 
