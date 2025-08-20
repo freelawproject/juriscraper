@@ -16,7 +16,8 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add scotus_docket_report to parse SCOTUS JSON dockets
-
+- Add scotus_docket_report to parse SCOTUS HTML dockets
+- 
 Changes:
 -
 
