@@ -16,6 +16,7 @@ import requests
 
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.ocr_utils import needs_ocr
 from juriscraper.lib.string_utils import trunc
 
 logger = make_default_logger()
@@ -86,6 +87,13 @@ def log_dict(dic: dict) -> None:
         logger.debug('    %s: "%s"', k, v)
 
 
+def extract_content_from_doctor(url, files, ocr_available=False):
+    params = {"ocr_available": True} if ocr_available else None
+    response = requests.post(url, files=files, timeout=120, params=params)
+    response.raise_for_status()
+    return response.json()["content"]
+
+
 def extract_doc_content(
     data, extract_from_text: bool, site, doctor_host: str, filename: str
 ):
@@ -119,9 +127,12 @@ def extract_doc_content(
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    extraction__response = requests.post(url, files=files, timeout=120)
-    extraction__response.raise_for_status()
-    extracted_content = extraction__response.json()["content"]
+    extracted_content = extract_content_from_doctor(url, files)
+
+    if needs_ocr(extracted_content):
+        extracted_content = extract_content_from_doctor(
+            url, files, ocr_available=True
+        )
 
     # The extracted content is embedded for display in Courtlistener.
     # We save it into /tmp/ to have an idea how it would look. You can
