@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- implement `neb` and `nebctapp` extract_from_text #1549
 - add `texbizct` new scraper for Texas Business Court #1437
 
 Changes:

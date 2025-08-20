@@ -934,6 +934,20 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        # https://www.courtlistener.com/api/rest/v4/opinions/2684767/
+        "juriscraper.opinions.united_states.state.neb": [
+            (
+                "SYLISSA J.\t607\n\t                             Cite as 288 Neb. 607\n\namended ",
+                {"Citation": "288 Neb. 607"},
+            )
+        ],
+        # https://www.courtlistener.com/api/rest/v4/opinions/2810802/
+        "juriscraper.opinions.united_states.state.nebctapp": [
+            (
+                "TRUST\t999\n\t                        Cite as 22 Neb. App. 999\n\nthe iss",
+                {"Citation": "22 Neb. App. 999"},
+            )
+        ],
         "juriscraper.opinions.united_states.state.texbizct": [
             (
                 """\nsuch evidence in the future, if a party moves to modify the protective order to allow\nspecific in-house attorneys access to AEO material.\nDate signed: May 16, 2025""",
