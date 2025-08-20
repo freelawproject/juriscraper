@@ -936,10 +936,12 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.texbizct": [
             (
-                """FILED IN\nBUSINESS COURT OF TEXAS\nBEVERLY CRUMLEY, CLERK\nENTERED\n7/16/2025\n2025 Tex. Bus. 27\n\n\n\nThe Business Court of Texas,\nFirst Division\n\nBP Energy Company,                     §\nPlaintiff,                        §\nv.                                     §   Cause No. 24-BC01A-0002\nBrad E. Cox,                           §\nDefendant.                        §\n\n═══════════════════════════════════════\nMemorandum Opinion and Order of Transfer\n═════════════════════════════════""",
+                """\nsuch evidence in the future, if a party moves to modify the protective order to allow\nspecific in-house attorneys access to AEO material.\nDate signed: May 16, 2025""",
                 {
-                    "Citation": "2025 Tex. Bus. 27",
-                    "OpinionCluster": {"precedential_status": "Published"},
+                    "OpinionCluster": {
+                        "date_filled": "2025-05-16",
+                        "date_filed_is_approximate": False,
+                    },
                 },
             ),
         ],

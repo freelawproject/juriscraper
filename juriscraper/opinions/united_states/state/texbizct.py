@@ -25,7 +25,6 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.url = "https://www.txcourts.gov/businesscourt/opinions/"
         self.court_id = self.__module__
-        self.status = "Unknown"
         self.should_have_results = True
 
     def _process_html(self) -> None:
@@ -35,41 +34,68 @@ class Site(OpinionSiteLinear):
         """
 
         links = self.html.xpath('//div[@class="panel-content"]//a')
-
         for link in links:
-            opinion_date_str = link.xpath("./preceding::h2[1]")[0].text.strip()
-
-            text = link.text
+            text = link.get("title")
+            short_title = link.text
             if not text:
                 logger.debug("Skipping link with empty text: %s", link)
                 continue
 
-            match = re.match(self.case_info_pattern, text)
+            summary = ""
+            summary_list = link.xpath("following::li[1]/text()")
+            if summary_list:
+                summary = summary_list[0].strip()
 
+            match = re.match(self.case_info_pattern, text)
             if match:
+                citation = (
+                    short_title.split(",")[-1].strip()
+                    if short_title
+                    else (match.group(3) or "")
+                )
+
                 self.cases.append(
                     {
                         "docket": match.group(1),
                         "name": titlecase(match.group(2).strip()),
-                        "citation": match.group(3) or "",
+                        "citation": citation,
                         "url": link.get("href"),
-                        "date": opinion_date_str,
+                        "date": f"{citation[:4]}/07/01",
+                        "date_filed_is_approximate": True,
+                        "status": bool(citation),
+                        "summary": summary,
                     }
                 )
 
     def extract_from_text(self, scraped_text: str) -> dict:
-        """Extracts case citation from the scraped text.
+        """Extracts date filled  from the scraped text.
 
         :param scraped_text: The text content of the opinion.
         :return: A dictionary with case details.
         """
-        pattern = r"(\d{4})\sTex\.\sBus\.\s(?:Ct\.\s)?(\d+)"
-        match = re.search(pattern, scraped_text)
-        status = "Published" if match else "Unknown"
-        citation = match.group(0) if match else ""
+
+        date_filled_pattern = r"(?:\:|Signed)\s*([A-Za-z]+\s\d{1,2},\s\d{4})"
+        date_filled_match = re.search(date_filled_pattern, scraped_text)
+        date_filled = (
+            date_filled_match.group(1).strip() if date_filled_match else ""
+        )
+
+        # Convert to ISO format if found
+        date_filled_iso = ""
+        if date_filled:
+            try:
+                from datetime import datetime
+
+                date_obj = datetime.strptime(date_filled, "%B %d, %Y")
+                date_filled_iso = date_obj.date().isoformat()
+            except Exception:
+                date_filled_iso = ""  # fallback to empty if parsing fails
+
+        if not date_filled_iso:
+            return {}
         return {
-            "Citation": citation,
             "OpinionCluster": {
-                "precedential_status": status,
+                "date_filled": date_filled_iso,
+                "date_filed_is_approximate": False,
             },
         }
