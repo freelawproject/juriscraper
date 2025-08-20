@@ -336,9 +336,9 @@ class SCOTUSDocketReport:
 
         # Case 6: Ampersand-separated with prefixes or 'See also'-separated with prefixes: "95-56639 & 96-55194" or "95-56639 See also 96-55194"
         if "&" in raw_text:
-            return raw_text.replace(" & ", ", ").split(",")
+            return raw_text.replace(" & ", ",").split(",")
         if "See also" in raw_text:
-            return raw_text.replace(" See also ", ", ").split(",")
+            return raw_text.replace(" See also ", ",").split(",")
 
         # Case 7: Preserve specific formats: "CR-99-1140", "1998-CA-0022039-MR"
         if any(
