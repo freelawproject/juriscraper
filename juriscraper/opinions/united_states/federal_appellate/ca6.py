@@ -3,9 +3,11 @@ CourtID:	ca6
 Court Contact:	WebSupport@ca6.uscourts.gov
 """
 
+from urllib.parse import urljoin
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from urllib.parse import urljoin
+
 
 class Site(OpinionSiteLinear):
     initials_to_judges = {
@@ -55,10 +57,12 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//table/tr[not(th)]"):
             filename = row.xpath("td[1]/a/text()")[0].lower()
             lower_court = row.xpath("td[4]/font/text()")[0]
-            
+
             # other entities that appeal to `ca6`: FCC, BIA
             if "District" in lower_court:
-                lower_court = f"United States District Court for the {lower_court}"
+                lower_court = (
+                    f"United States District Court for the {lower_court}"
+                )
 
             is_bap_opinion = (
                 "b" in filename or "bankruptcy court" in lower_court.lower()
@@ -97,7 +101,7 @@ class Site(OpinionSiteLinear):
 
     def parse_judges(self, initials: str) -> str:
         """Parse judge initials into full names
-        
+
         :param initials: comma separated 3 letter initials
         :return: colon separated full judge names
         """
