@@ -10,6 +10,7 @@
 # History:
 #  - 2025-07-29: Created by Luis Manzur
 import re
+from datetime import datetime
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import titlecase
@@ -95,8 +96,6 @@ class Site(OpinionSiteLinear):
         date_filed_iso = ""
         if date_filed:
             try:
-                from datetime import datetime
-
                 date_obj = datetime.strptime(date_filed, "%B %d, %Y")
                 date_filed_iso = date_obj.date().isoformat()
             except ValueError:
