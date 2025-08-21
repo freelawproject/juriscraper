@@ -509,7 +509,7 @@ def main():
         "--ocr-available",
         action="store_true",
         default=False,
-        help="Save response headers and returned HTML or JSON",
+        help="If set it will tell doctor that OCR is available. ",
     )
 
     (options, args) = parser.parse_args()
