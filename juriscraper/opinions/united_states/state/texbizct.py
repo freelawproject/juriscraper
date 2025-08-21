@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         links = self.html.xpath('//div[@class="panel-content"]//a')
         for link in links:
             text = link.get("title")
-            short_title = link.text
+            short_title = link.text_content()
             if not text:
                 logger.debug("Skipping link with empty text: %s", link)
                 continue
@@ -56,7 +56,7 @@ class Site(OpinionSiteLinear):
 
                 self.cases.append(
                     {
-                        "docket": match.group(1),
+                        "docket": match.group(1) if match else "",
                         "name": titlecase(match.group(2).strip()),
                         "citation": citation,
                         "url": link.get("href"),
@@ -80,6 +80,11 @@ class Site(OpinionSiteLinear):
             date_filled_match.group(1).strip() if date_filled_match else ""
         )
 
+        # Docket number pattern: 24-BC04A-0002
+        docket_pattern = r"\b\d{2}-BC\d{2}[A-Z]-\d{4}\b"
+        docket_match = re.search(docket_pattern, scraped_text)
+        docket_number = docket_match.group(0) if docket_match else None
+
         # Convert to ISO format if found
         date_filled_iso = ""
         if date_filled:
@@ -88,14 +93,19 @@ class Site(OpinionSiteLinear):
 
                 date_obj = datetime.strptime(date_filled, "%B %d, %Y")
                 date_filled_iso = date_obj.date().isoformat()
-            except Exception:
-                date_filled_iso = ""  # fallback to empty if parsing fails
+            except ValueError:
+                logger.error(
+                    "Failed to parse date '%s' from text: %s",
+                    date_filled,
+                )
+                date_filled_iso = None  # fallback to empty if parsing fails
 
-        if not date_filled_iso:
-            return {}
-        return {
-            "OpinionCluster": {
-                "date_filled": date_filled_iso,
-                "date_filed_is_approximate": False,
-            },
-        }
+        result = {}
+        if date_filled_iso or docket_number:
+            result.setdefault("OpinionCluster", {})
+        if date_filled_iso:
+            result["OpinionCluster"]["date_filled"] = date_filled_iso
+            result["OpinionCluster"]["date_filed_is_approximate"] = False
+        if docket_number:
+            result["OpinionCluster"]["docket_number"] = docket_number
+        return result
