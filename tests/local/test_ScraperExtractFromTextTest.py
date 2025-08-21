@@ -950,11 +950,12 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.texbizct": [
             (
-                """\nsuch evidence in the future, if a party moves to modify the protective order to allow\nspecific in-house attorneys access to AEO material.\nDate signed: May 16, 2025""",
+                """\nThe Business Court of Texas,\n11th Division\nWESTLAKE LONGVIEW CORP. and §\nWESTLAKE CHEMICAL OPCO LP,  §\nPlaintiffs,             § Cause No. 24-BC11B-0023 \nv.                          §\nEASTMAN CHEMICAL CO.,       §\nDefendant.              §\n═══════════════════════════════════════\nOPINION ON MOTION FOR PROTECTIVE ORDER\n══\nsuch evidence in the future, if a party moves to modify the protective order to allow\nspecific in-house attorneys access to AEO material.\nDate signed: May 16, 2025""",
                 {
                     "OpinionCluster": {
-                        "date_filled": "2025-05-16",
+                        "date_filed": "2025-05-16",
                         "date_filed_is_approximate": False,
+                        "docket_number": "24-BC11B-0023",
                     },
                 },
             ),

@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         links = self.html.xpath('//div[@class="panel-content"]//a')
         for link in links:
             text = link.get("title")
-            short_title = link.text
+            short_title = link.text_content()
             if not text:
                 logger.debug("Skipping link with empty text: %s", link)
                 continue
@@ -49,7 +49,11 @@ class Site(OpinionSiteLinear):
             match = re.match(self.case_info_pattern, text)
 
             split_short_title = short_title.split(",")
-            name = split_short_title[0].strip() if short_title else ""
+            name = (
+                titlecase(match.group(2).strip())
+                if match
+                else split_short_title[0].strip()
+            )
             citation = (
                 split_short_title[-1].strip()
                 if short_title
@@ -57,8 +61,8 @@ class Site(OpinionSiteLinear):
             )
 
             case = {
-                "docket": match.group(1) if match else "",
-                "name": titlecase(match.group(2).strip()) if match else name,
+                "docket": match.group(1) if match else "temp-docket",
+                "name": name,
                 "citation": citation,
                 "url": link.get("href"),
                 "date": f"{citation[:4]}/07/01",
