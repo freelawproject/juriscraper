@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         links = self.html.xpath('//div[@class="panel-content"]//a')
         for link in links:
             text = link.get("title")
-            short_title = link.text_content()
+            short_title = link.text
             if not text:
                 logger.debug("Skipping link with empty text: %s", link)
                 continue
@@ -47,25 +47,27 @@ class Site(OpinionSiteLinear):
                 summary = summary_list[0].strip()
 
             match = re.match(self.case_info_pattern, text)
-            if match:
-                citation = (
-                    short_title.split(",")[-1].strip()
-                    if short_title
-                    else (match.group(3) or "")
-                )
 
-                self.cases.append(
-                    {
-                        "docket": match.group(1) if match else "",
-                        "name": titlecase(match.group(2).strip()),
-                        "citation": citation,
-                        "url": link.get("href"),
-                        "date": f"{citation[:4]}/07/01",
-                        "date_filed_is_approximate": True,
-                        "status": bool(citation),
-                        "summary": summary,
-                    }
-                )
+            split_short_title = short_title.split(",")
+            name = split_short_title[0].strip() if short_title else ""
+            citation = (
+                split_short_title[-1].strip()
+                if short_title
+                else (match.group(3) or "")
+            )
+
+            case = {
+                "docket": match.group(1) if match else "",
+                "name": titlecase(match.group(2).strip()) if match else name,
+                "citation": citation,
+                "url": link.get("href"),
+                "date": f"{citation[:4]}/07/01",
+                "date_filed_is_approximate": True,
+                "status": "Published" if citation else "Unknown",
+                "summary": summary,
+            }
+
+            self.cases.append(case)
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts date filled  from the scraped text.
@@ -74,10 +76,10 @@ class Site(OpinionSiteLinear):
         :return: A dictionary with case details.
         """
 
-        date_filled_pattern = r"(?:\:|Signed)\s*([A-Za-z]+\s\d{1,2},\s\d{4})"
-        date_filled_match = re.search(date_filled_pattern, scraped_text)
-        date_filled = (
-            date_filled_match.group(1).strip() if date_filled_match else ""
+        date_filed_pattern = r"(?:\:|Signed)\s*([A-Za-z]+\s\d{1,2},\s\d{4})"
+        date_filed_match = re.search(date_filed_pattern, scraped_text)
+        date_filed = (
+            date_filed_match.group(1).strip() if date_filed_match else ""
         )
 
         # Docket number pattern: 24-BC04A-0002
@@ -86,25 +88,25 @@ class Site(OpinionSiteLinear):
         docket_number = docket_match.group(0) if docket_match else None
 
         # Convert to ISO format if found
-        date_filled_iso = ""
-        if date_filled:
+        date_filed_iso = ""
+        if date_filed:
             try:
                 from datetime import datetime
 
-                date_obj = datetime.strptime(date_filled, "%B %d, %Y")
-                date_filled_iso = date_obj.date().isoformat()
+                date_obj = datetime.strptime(date_filed, "%B %d, %Y")
+                date_filed_iso = date_obj.date().isoformat()
             except ValueError:
                 logger.error(
                     "Failed to parse date '%s' from text: %s",
-                    date_filled,
+                    date_filed,
                 )
-                date_filled_iso = None  # fallback to empty if parsing fails
+                date_filed_iso = None  # fallback to empty if parsing fails
 
         result = {}
-        if date_filled_iso or docket_number:
+        if date_filed_iso or docket_number:
             result.setdefault("OpinionCluster", {})
-        if date_filled_iso:
-            result["OpinionCluster"]["date_filled"] = date_filled_iso
+        if date_filed_iso:
+            result["OpinionCluster"]["date_filed"] = date_filed_iso
             result["OpinionCluster"]["date_filed_is_approximate"] = False
         if docket_number:
             result["OpinionCluster"]["docket_number"] = docket_number
