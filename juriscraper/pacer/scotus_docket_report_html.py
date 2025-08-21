@@ -1,4 +1,6 @@
 import re
+from collections import defaultdict
+from dataclasses import dataclass
 from typing import Any, Optional
 
 from lxml import html
@@ -9,8 +11,22 @@ from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.pacer import SCOTUSDocketReport
 
 
+@dataclass
+class ContactAddress:
+    title: Optional[str]
+    address_lines: list[str]
+    city: Optional[str]
+    state: Optional[str]
+    zip_code: Optional[str]
+    email: Optional[str]
+
+
 class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     """Parse SCOTUS docket HTML."""
+
+    EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
+    ID_RE = re.compile(r"^#[A-Za-z0-9]+\b")
+    ADDRESS_RE = r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$"
 
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
@@ -61,10 +77,16 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         docketed_str = self._td_value_by_label("Docketed:")
         date_filed = self.normalize_date(docketed_str)
 
-        links = (self._td_value_by_label("Linked with:") or "").strip()
+        linked_with_val = self._td_value_by_label("Linked with:")
+        if not linked_with_val:
+            # Sometimes the value is in the same cell: Linked with 16A827
+            target_label = "string(//table[@id='docketinfo']//tr[td[1]/span[starts-with(normalize-space(.), 'Linked with')]])"
+            linked_with_val = self.tree.xpath(target_label).replace(
+                "Linked with", ""
+            )
+        links = (linked_with_val or "").strip()
 
         lower_court = self._td_value_by_label("Lower Ct:")
-
         # Lower court case numbers
         lower_court_raw = self._td_value_by_label(
             "Case Numbers:", allow_indent=True
@@ -84,6 +106,11 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         lower_court_rehearing_denied = self.normalize_date(
             self._td_value_by_label("Rehearing Denied:", allow_indent=True)
         )
+        discretionary_court_decision = self.normalize_date(
+            self._td_value_by_label(
+                "Discretionary Court Decision Date:", allow_indent=True
+            )
+        )
 
         return {
             "docket_number": docket_number,
@@ -96,7 +123,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied,
-            "discretionary_court_decision": None,
+            "discretionary_court_decision": discretionary_court_decision,
         }
 
     @staticmethod
@@ -129,6 +156,55 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         return "".join(parts)
 
+    def _build_docket_entry(
+        self,
+        date_str: str,
+        description_td: Optional[HtmlElement],
+        attachment_path: str,
+    ) -> dict[str, Any]:
+        """Build a normalized docket entry dict.
+
+        :param date_str: Raw date string from the date cell.
+        :param description_td: The <td> element containing the description.
+        :param attachment_path: XPath to select attachment anchors inside the
+        description cell.
+        :return: Dict with date_filed, description, description_html, attachments.
+        """
+        description_html = ""
+        attachments: list[dict[str, Any]] = []
+
+        if description_td is not None:
+            # Select content up to first <br> and excluding .documentlinks;
+            # fallback to whole cell.
+            description_html = (
+                self._parse_description_html(description_td).strip()
+                or html.tostring(description_td, encoding="unicode").strip()
+            )
+            # Parse attachments.
+            for a in description_td.xpath(attachment_path):
+                href = a.get("href")
+                if not href:
+                    continue
+                short_desc = self._clean_whitespace(
+                    (a.text or a.get("title") or "").strip()
+                )
+                attachments.append(
+                    {
+                        "short_description": short_desc or "Document",
+                        "document_url": href,
+                    }
+                )
+
+        cleaned = strip_bad_html_tags_insecure(description_html or "")
+        description = self._clean_whitespace(cleaned.text_content())
+
+        return {
+            "date_filed": self.normalize_date(date_str),
+            "description": description,
+            "description_html": description_html,
+            "attachments": attachments,
+        }
+
     @property
     def docket_entries(self) -> list[dict[str, Any]]:
         """Return docket entries from 'Proceedings and Orders'.
@@ -136,10 +212,10 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: List of dicts with date_filed, description, description_html,
         attachments.
         """
-
         if self.tree is None:
             return []
 
+        # Div-based layout
         entries: list[dict[str, Any]] = []
         rows = self.tree.xpath(
             "//div[@id='proceedings']//div[contains(@class,'card')]"
@@ -148,56 +224,76 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         for tr in rows:
             date_td = tr.xpath("./td[contains(@class,'ProceedingDate')]")
             text_td = tr.xpath("./td[not(contains(@class,'ProceedingDate'))]")
-
             date_str = self._join_nodes_content(date_td)
             description_td = text_td[0] if text_td else None
-
-            description_html = ""
-            attachments = []
-            if description_td is not None:
-                # Only the content before <br> and exclude .documentlinks
-                description_html = self._parse_description_html(
-                    description_td
-                ).strip()
-                # Extract attachments from the full td cell
-                for a in description_td.xpath(
-                    ".//span[contains(@class,'documentlinks')]//a[contains(@class,'documentanchor')]"
-                ):
-                    attachments.append(
-                        {
-                            "short_description": self._clean_whitespace(
-                                (a.text or "").strip()
-                            ),
-                            "document_url": a.get("href"),
-                        }
-                    )
-
-            # Clean text description
-            description_cleaned = strip_bad_html_tags_insecure(
-                description_html or ""
-            )
-            description = self._clean_whitespace(
-                description_cleaned.text_content()
-            )
             entries.append(
-                {
-                    "date_filed": self.normalize_date(date_str),
-                    "description": description,
-                    "description_html": description_html,
-                    "attachments": attachments,
-                }
+                self._build_docket_entry(
+                    date_str=date_str,
+                    description_td=description_td,
+                    attachment_path=".//span[contains(@class,'documentlinks')]//a[contains(@class,'documentanchor')]",
+                )
             )
+        if entries:
+            return entries
+
+        # Table-based layout
+        table = self.tree.xpath("//table[@id='proceedings']")
+        if not table:
+            return []
+
+        entries = []
+        for tr in table[0].xpath(".//tr[td]"):
+            # omit proceedingheader header
+            if tr.xpath(
+                "./td[contains(concat(' ', normalize-space(@class), ' '), ' proceedingheader ')]"
+            ):
+                continue
+            # omit borderbttm separator
+            if tr.xpath(
+                "./td[contains(concat(' ', normalize-space(@class), ' '), ' borderbttm ')]"
+            ):
+                continue
+
+            # omit non entries cells.
+            tds = tr.xpath("./td")
+            if len(tds) < 2:
+                continue
+
+            date_td, text_td = tds[:2]
+            date_str = self._clean_whitespace(date_td.text_content())
+
+            # Table layout, any link in the cell is a potential attachment.
+            entries.append(
+                self._build_docket_entry(
+                    date_str=date_str,
+                    description_td=text_td,
+                    attachment_path=".//a[@href]",
+                )
+            )
+
         return entries
 
     @property
     def parties(self) -> list[dict[str, Any]]:
         """Return parties grouped under Contacts (Petitioner/Respondent/Other).
 
-        :return: List of party dicts, each with name party name and attorneys list.
+        Tries the card-based layout first. If not found, tries the table-based layout.
+        :return: List of dicts containing parties data.
         """
         if self.tree is None:
             return []
 
+        parties = self._parties_from_cards()
+        if parties:
+            return parties
+
+        return self._parties_from_contacts_table()
+
+    def _parties_from_cards(self) -> list[dict[str, Any]]:
+        """Parse parties from the Contacts card-based layout.
+
+        :return: List of dicts containing parties data.
+        """
         sections = [
             ("Attorneys for Petitioners", "Petitioner"),
             ("Attorneys for Respondents", "Respondent"),
@@ -205,6 +301,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         ]
 
         parties = []
+
         for heading_text, type_key in sections:
             section_root = self._section_by_heading(heading_text)
             if section_root is None:
@@ -213,98 +310,211 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             names = section_root.xpath(
                 ".//div[contains(@class,'ContactName')]"
             )
-            datas = section_root.xpath(
+            contact_data = section_root.xpath(
                 ".//div[contains(@class,'ContactData2')]"
             )
 
+            attorneys_by_party = defaultdict(list)
             for i, name_div in enumerate(names):
-                data_div = datas[i] if i < len(datas) else None
+                data_div = contact_data[i] if i < len(contact_data) else None
                 attorney = self._build_attorney_from_contact(
                     name_div, data_div
                 )
-
-                # Group attorneys by "party_name"
-                party_name = None
+                # Normalize party_name
+                party_name = ""
                 if data_div is not None:
-                    pn = data_div.xpath(
+                    party_name_raw = data_div.xpath(
                         ".//span[contains(@class,'partyname')]/text()"
                     )
-                    party_name = self._clean_whitespace("".join(pn)) or None
-
-                existing = next(
-                    (
-                        p
-                        for p in parties
-                        if p["type"] == type_key
-                        and p["name"] == (party_name or "")
-                    ),
-                    None,
-                )
-                if existing:
-                    existing["attorneys"].append(attorney)
-                else:
-                    parties.append(
-                        {
-                            "type": type_key,
-                            "name": party_name.replace(
-                                "Party name:", ""
-                            ).strip()
-                            or "",
-                            "attorneys": [attorney],
-                        }
+                    party_name = (
+                        self._clean_whitespace("".join(party_name_raw)) or ""
                     )
+                party_name = party_name.replace("Party name:", "").strip()
+                attorneys_by_party[(type_key, party_name)].append(attorney)
+
+            parties.extend(
+                {"type": t, "name": n, "attorneys": attys}
+                for (t, n), attys in attorneys_by_party.items()
+            )
         return parties
 
-    def _td_value_by_label(
-        self, label: str, allow_indent: bool = False
-    ) -> Optional[str]:
-        """Fetch the value from the docketinfo table whose first TD label matches.
+    def _parties_from_contacts_table(self) -> list[dict[str, Any]]:
+        """Parse parties from the table-based contacts layout.
 
-        :param label: The label text in the first TD.
-        :param allow_indent: True to allow labels with leading indentation.
-        :return: Cleaned string value or None.
+        :return: List of dicts containing parties data.
         """
-        if self.tree is None:
-            return None
+        table = next(iter(self.tree.xpath("//table[@id='Contacts']")), None)
+        if table is None:
+            return []
 
-        if allow_indent:
-            # Parse labels like "&nbsp;&nbsp;&nbsp;Case Numbers:"
-            xpath_expr = (
-                f"//table[@id='docketinfo']//tr[td[1]/span[normalize-space(translate(text(), '\u00a0',' '))='{label}']]"
-                "/td[2]//span"
-            )
-        else:
-            xpath_expr = f"//table[@id='docketinfo']//tr[td[1]/span[normalize-space(text())='{label}']]/td[2]//span"
+        parties_by_key: dict[tuple[str, str], list] = defaultdict(list)
+        current_type = None
+        rows = table.xpath(".//tr[td]")
+        for i, tr in enumerate(rows):
+            # omit section header
+            if tr.xpath(
+                "./td[contains(concat(' ', normalize-space(@class), ' '), ' ContactSubHeader ')]"
+            ):
+                header_text = self._clean_whitespace(
+                    "".join(
+                        tr.xpath(
+                            ".//span[contains(@class,'tableheadertext')]/text()"
+                        )
+                    )
+                )
+                current_type = self._map_contacts_header_to_type(header_text)
+                continue
 
-        return self._clean_whitespace(
-            self._join_nodes_content(self.tree.xpath(xpath_expr))
+            # Attorney row
+            tds = tr.xpath("./td")
+            if current_type and len(tds) == 3:
+                name_td, addr_td, phone_td = tds
+                name_text = self._clean_whitespace(
+                    self._parse_description_html(name_td) or ""
+                )
+                full_name_cell = self._clean_whitespace(name_td.text_content())
+                is_counsel_of_record = bool(
+                    re.search(r"\bcounsel of record\b", full_name_cell, re.I)
+                )
+
+                contact_data = self._parse_contacts_table_address_cell(addr_td)
+                title = contact_data.title
+                address_lines = contact_data.address_lines
+                city = contact_data.city
+                state = contact_data.state
+                zip_code = contact_data.zip_code
+                email = contact_data.email
+                phone = self._clean_whitespace(phone_td.text_content()) or None
+
+                # Party row
+                party_name = ""
+                if i + 1 < len(rows):
+                    next_tr = rows[i + 1]
+                    if next_tr.xpath(
+                        "./td[contains(concat(' ', normalize-space(@class), ' '), ' ContactParty ')]"
+                        " | ./td[contains(normalize-space(string(.)), 'Party name:')]"
+                    ):
+                        raw_party = self._clean_whitespace(
+                            next_tr.text_content()
+                        )
+                        party_name = re.sub(
+                            r"^Party name:\s*", "", raw_party, flags=re.I
+                        ).strip()
+
+                # Build attorney
+                attorney = {
+                    "name": name_text or None,
+                    "is_counsel_of_record": is_counsel_of_record,
+                    "title": title,
+                    "phone": phone,
+                    "address": ", ".join(address_lines)
+                    if address_lines
+                    else None,
+                    "city": city,
+                    "state": state,
+                    "zip": zip_code,
+                    "email": email,
+                }
+                # Group parties by type-name
+                parties_by_key[(current_type, party_name or "")].append(
+                    attorney
+                )
+
+        return [
+            {"type": party_type, "name": name, "attorneys": attorneys}
+            for (party_type, name), attorneys in parties_by_key.items()
+        ]
+
+    @staticmethod
+    def _map_contacts_header_to_type(header_text: str) -> Optional[str]:
+        """Map table section headers to normalized types.
+
+        :param header_text: Text to be mapped.
+        :return: Normalized party type or None.
+        """
+        t = (header_text or "").strip().lower()
+        if "petitioner" in t:
+            return "Petitioner"
+        if "respondent" in t:
+            return "Respondent"
+        if "other" in t:
+            return "Other"
+        return None
+
+    def _append_clean_text(
+        self, text: Optional[str], lines: list[str]
+    ) -> None:
+        """Clean the given text and append it to the list of lines if not empty."""
+        cleaned = self._clean_whitespace(text)
+        if cleaned:
+            lines.append(cleaned)
+
+    def _parse_contacts_table_address_cell(
+        self, td: HtmlElement
+    ) -> ContactAddress:
+        """Parse the address TD of the table layout into a ContactAddress object.
+
+        :param td: The td element to parse the address from.
+        :return: A ContactAddress object.
+        """
+
+        raw_lines = []
+        self._append_clean_text(td.text, raw_lines)
+        for child in td:
+            self._append_clean_text(child.text, raw_lines)
+            self._append_clean_text(child.tail, raw_lines)
+
+        lines = [
+            ln for ln in (self._clean_whitespace(ln) for ln in raw_lines) if ln
+        ]
+
+        # Extract email line
+        email = None
+        for idx, ln in list(enumerate(lines)):
+            if m := self.EMAIL_RE.search(ln):
+                email = m.group(0)
+                del lines[idx]
+                break
+
+        # Title, omit lines starting with # like #1098260
+        title = None
+        start_idx = 0
+        for j, ln in enumerate(lines):
+            if self.ID_RE.match(ln):
+                continue
+            title = ln
+            start_idx = j + 1
+            break
+
+        address_lines = lines[start_idx:] if start_idx < len(lines) else []
+
+        # parse City/State/Zip
+        city = state = zip_code = None
+        if address_lines:
+            last = address_lines[-1]
+            if m := re.search(self.ADDRESS_RE, last):
+                city, state, zip_code = (
+                    m.group(1).strip(),
+                    m.group(2),
+                    m.group(3),
+                )
+                address_lines = address_lines[:-1]
+
+        return ContactAddress(
+            title=title,
+            address_lines=address_lines,
+            city=city,
+            state=state,
+            zip_code=zip_code,
+            email=email,
         )
 
-    @staticmethod
-    def _clean_whitespace(text: Optional[str]) -> str:
-        """Collapse whitespace to single spaces.
-
-        :param text: Raw text.
-        :return: Normalized text to a single-line.
-        """
-        return "" if not text else re.sub(r"\s+", " ", text).strip()
-
-    @staticmethod
-    def _join_nodes_content(nodes: list[HtmlElement]) -> str:
-        """Concatenate the text content of multiple HTML nodes.
-
-        :param nodes: List of lxml HtmlElement objects.
-        :return: Combined and cleaned text content.
-        """
-        return "".join(
-            node.text_content() for node in nodes if node is not None
-        ).strip()
-
     def _section_by_heading(self, heading_text: str) -> Optional[HtmlElement]:
-        """Return the <div class="card-body"> for a given Contacts section heading.
+        """Return the "card-body" node for a given Contacts
+        section heading.
 
-        :param heading_text: The header text e.g. "Attorneys for Petitioners".
-        :return: The matching <div class="card-body"> node, or None if not found.
+        :param heading_text: The header text like "Attorneys for Petitioners".
+        :return: The matching "card-body" node, or None if not found.
         """
         if self.tree is None:
             return None
@@ -336,7 +546,6 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         )
 
         title = address = city = state = zip_code = email = phone = None
-
         if data_div is not None:
             email = self._clean_whitespace(
                 self._join_nodes_content(
@@ -354,10 +563,13 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 ".//span[contains(@class,'address1')]"
             )
             if address_span:
-                title, addr_lines, city, state, zip_code = (
-                    self._parse_address_block(address_span[0])
-                )
-                address = ", ".join(addr_lines) if addr_lines else None
+                contact_data = self._parse_address_block(address_span[0])
+                title = contact_data.title
+                address_lines = contact_data.address_lines
+                city = contact_data.city
+                state = contact_data.state
+                zip_code = contact_data.zip_code
+                address = ", ".join(address_lines) if address_lines else None
 
         return {
             "name": name_text or None,
@@ -368,48 +580,97 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             "city": city,
             "state": state,
             "zip": zip_code,
-            "email": email,
+            "email": email or None,
         }
 
-    def _parse_address_block(
-        self, node: HtmlElement
-    ) -> tuple[
-        Optional[str], list[str], Optional[str], Optional[str], Optional[str]
-    ]:
+    def _parse_address_block(self, node: HtmlElement) -> ContactAddress:
         """Parse the address block into title, address lines, city, state, zip.
 
-        :param node: The HTML element to split by <br>.
-        :return: A tuple: title, address_lines, city, state, zip
+        :param node: The HTML element (usually span.address1) to split by <br>.
+        :return: A ContactAddress object.
         """
 
-        def add_line(s: Optional[str], acc: list[str]) -> None:
-            s = self._clean_whitespace(s)  # or _normalize_ws
-            if s:
-                acc.append(s)
-
-        lines = []
-        add_line(node.text, lines)
+        raw_lines = []
+        self._append_clean_text(node.text, raw_lines)
         for child in node:
-            add_line(child.text, lines)
-            add_line(child.tail, lines)
+            self._append_clean_text(child.text, raw_lines)
+            self._append_clean_text(child.tail, raw_lines)
 
-        title = lines[0] if lines else None
-        address_lines = lines[1:] if len(lines) > 1 else []
+        if len(raw_lines) >= 3:
+            # If more than 3 lines. Title is the first one.
+            title = raw_lines[0]
+            address_lines = raw_lines[1:]
+        else:
+            # 0, 1, or 2 lines, there is no title
+            title = None
+            address_lines = raw_lines[:]
+
+        # Extract city/state/zip from the last address line, if present
         city = state = zip_code = None
         if address_lines:
             last = address_lines[-1]
-            matched_address = re.search(
-                r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$", last
-            )
-            if matched_address:
+            m = re.search(r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$", last)
+            if m:
                 city, state, zip_code = (
-                    matched_address.group(1).strip(),
-                    matched_address.group(2),
-                    matched_address.group(3),
+                    m.group(1).strip(),
+                    m.group(2),
+                    m.group(3),
                 )
                 address_lines = address_lines[:-1]
 
-        return title, address_lines, city, state, zip_code
+        return ContactAddress(
+            title=title,
+            address_lines=address_lines,
+            city=city,
+            state=state,
+            zip_code=zip_code,
+            email=None,
+        )
+
+    def _td_value_by_label(
+        self, label: str, allow_indent: bool = False
+    ) -> Optional[str]:
+        """Fetch the value from the docketinfo table whose first TD label matches.
+
+        :param label: The label text in the first TD.
+        :param allow_indent: True to allow labels with leading indentation.
+        :return: Cleaned string value or None.
+        """
+        if self.tree is None:
+            return None
+
+        if allow_indent:
+            # Parse labels like "&nbsp;&nbsp;&nbsp;Case Numbers:"
+            target_label = (
+                f"//table[@id='docketinfo']//tr[td[1]/span[normalize-space(translate(text(), '\u00a0',' '))='{label}']]"
+                "/td[2]//span"
+            )
+        else:
+            target_label = f"//table[@id='docketinfo']//tr[td[1]/span[normalize-space(text())='{label}']]/td[2]//span"
+
+        return self._clean_whitespace(
+            self._join_nodes_content(self.tree.xpath(target_label))
+        )
+
+    @staticmethod
+    def _clean_whitespace(text: Optional[str]) -> str:
+        """Collapse whitespace to single spaces.
+
+        :param text: Raw text.
+        :return: Normalized text to a single-line.
+        """
+        return "" if not text else re.sub(r"\s+", " ", text).strip()
+
+    @staticmethod
+    def _join_nodes_content(nodes: list[HtmlElement]) -> str:
+        """Concatenate the text content of multiple HTML nodes.
+
+        :param nodes: List of lxml HtmlElement objects.
+        :return: Combined and cleaned text content.
+        """
+        return "".join(
+            node.text_content() for node in nodes if node is not None
+        ).strip()
 
 
 def _main():
