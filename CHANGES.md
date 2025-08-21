@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - implement `neb` and `nebctapp` extract_from_text #1549
+- Add new flag `--ocr-available` to `sample_caller` to tell doctor that OCR is available #1552
 
 Changes:
 -
