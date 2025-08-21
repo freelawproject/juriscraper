@@ -91,11 +91,16 @@ def extract_content_from_doctor(url, files, ocr_available=False):
     params = {"ocr_available": True} if ocr_available else None
     response = requests.post(url, files=files, timeout=120, params=params)
     response.raise_for_status()
-    return response.json()["content"]
+    return response.json()["content"], response.json()["page_count"]
 
 
 def extract_doc_content(
-    data, extract_from_text: bool, site, doctor_host: str, filename: str
+    data,
+    extract_from_text: bool,
+    site,
+    doctor_host: str,
+    filename: str,
+    ocr_available: bool = False,
 ):
     """Extracts document's content using a local doctor host
 
@@ -109,6 +114,7 @@ def extract_doc_content(
     :param doctor_host: local doctor instance host. calls will fail if
         the doctor host is not valid
     :param filename: Name for saving extracted content into a file in tmp
+    :ocr_available: if True, it will tell doctor that OCR is available
 
     :return: a tuple with:
         the extracted content
@@ -127,10 +133,11 @@ def extract_doc_content(
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    extracted_content = extract_content_from_doctor(url, files)
+    extracted_content, page_count = extract_content_from_doctor(url, files)
 
-    if needs_ocr(extracted_content):
-        extracted_content = extract_content_from_doctor(
+    if ocr_available and needs_ocr(extracted_content, page_count):
+        logger.info("OCR is needed for this document. Using OCR doctor.")
+        extracted_content, page_count = extract_content_from_doctor(
             url, files, ocr_available=True
         )
 
@@ -257,6 +264,7 @@ def scrape_court(
     doctor_host="",
     test_hashes: bool = False,
     limit: int = 1000,
+    ocr_available: bool = False,
 ):
     """Calls the requested court(s), gets its binary content, and
     extracts the content if possible. See --extract-content option
@@ -309,7 +317,7 @@ def scrape_court(
         filename = item["case_names"].lower().replace(" ", "_")[:40]
 
         data, metadata_from_text = extract_doc_content(
-            data, extract_content, site, doctor_host, filename
+            data, extract_content, site, doctor_host, filename, ocr_available
         )
         logger.log(
             5, "\nShowing extracted document data (500 chars):\n%s", data[:500]
@@ -497,6 +505,12 @@ def main():
         default=1000,
         help="How many items to scrape per `scrape_court` call",
     )
+    parser.add_option(
+        "--ocr-available",
+        action="store_true",
+        default=False,
+        help="Save response headers and returned HTML or JSON",
+    )
 
     (options, args) = parser.parse_args()
 
@@ -512,6 +526,7 @@ def main():
     save_responses = options.save_responses
     test_hashes = options.test_hashes
     limit_per_scrape = options.limit_per_scrape
+    ocr_available = options.ocr_available
 
     if test_hashes:
         binaries = True
@@ -583,6 +598,7 @@ def main():
                     doctor_host,
                     test_hashes,
                     limit_per_scrape,
+                    ocr_available,
                 )
 
     logger.debug("The scraper has stopped.")

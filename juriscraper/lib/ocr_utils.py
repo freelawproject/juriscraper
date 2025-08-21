@@ -1,8 +1,13 @@
 import re
 
+from juriscraper.lib.log_tools import make_default_logger
+
+logger = make_default_logger()
+
 PAGINATION_RE = re.compile(r"\b(?:Page|Pg)\s+\d+\s+of\s+\d+\b", re.I)
 PAGINATION_COLON_RE = re.compile(r"\bPage:\s*\d+\b", re.I)
 PAGINATION_PAGE_ID_RE = re.compile(r"\bPageID\s+#:\s*\d+\b", re.I)
+PAGINATION_NUMBER_DASH_RE = re.compile(r"- (\d+) -")
 
 
 def is_page_line(line: str) -> bool:
@@ -12,9 +17,9 @@ def is_page_line(line: str) -> bool:
     :return: True if the line matches "Page X of Y" or "Page: X"; False otherwise.
     """
     return bool(
-        PAGINATION_RE.search(line)
-        or PAGINATION_COLON_RE.search(line)
-        or PAGINATION_PAGE_ID_RE.search(line)
+        PAGINATION_RE.search(line.strip())
+        or PAGINATION_COLON_RE.search(line.strip())
+        or PAGINATION_PAGE_ID_RE.search(line.strip())
     )
 
 
@@ -56,17 +61,15 @@ def is_doc_common_header(line: str) -> bool:
     )
 
 
-def needs_ocr(content):
-    """Determines if OCR is needed for a PDF.
+def needs_ocr(content, page_count=0, line_count_threshold=5):
+    """Determines if OCR is needed for a PDF (PACER-aware).
 
-    Every document in PACER (pretty much) has the case number written on the
-    top of every page. This is a great practice, but it means that to test if
-    OCR is needed, we need to remove this text and see if anything is left.
-
-    As a fallback it removes these common headers so that if no text remains,
-    we can be sure that the PDF needs OCR.
+    Checks for valid content lines between pages using PACER-style headers.
+    Falls back to missing-pages logic if no page lines are found.
 
     :param content: The content of a PDF.
+    :param page_count: The expected number of pages in the PDF.
+    :param line_count_threshold: Minimum non-header lines per page.
     :return: boolean indicating if OCR is needed.
     """
     lines = (ln.strip() for ln in content.splitlines())
@@ -75,7 +78,10 @@ def needs_ocr(content):
     saw_any_page = False
     for line in lines:
         if is_page_line(line):
-            if in_page and other_content_count < 5:
+            if in_page and other_content_count < line_count_threshold:
+                logger.info(
+                    f"Page with insufficient content: {other_content_count} lines (threshold: {line_count_threshold})"
+                )
                 return True
             in_page = True
             saw_any_page = True
@@ -90,12 +96,39 @@ def needs_ocr(content):
             other_content_count += 1
 
     # end of document, close the trailing page
-    if in_page and other_content_count < 5:
+    if in_page and other_content_count < line_count_threshold:
+        logger.info(
+            f"Trailing page with insufficient content: {other_content_count} lines (threshold: {line_count_threshold})"
+        )
         return True
 
     # If no pages were found, fall back to the regular behavior of checking whether
     # any content remains after removing common headers.
     if not saw_any_page:
+        # Fallback: original missing-pages logic
+        page_patterns = [
+            r"Page\s+(\d+)",
+            r"- (\d+) -",
+            r"\[(\d+)\]",
+            r"(\d+)\s*$",
+        ]
+        found_pages = set()
+        for pattern in page_patterns:
+            matches = re.findall(pattern, content, re.MULTILINE)
+            for match in matches:
+                try:
+                    page_num = int(match)
+                    if 1 <= page_num <= page_count:
+                        found_pages.add(page_num)
+                except ValueError:
+                    continue
+        missing_pages = set(range(1, page_count + 1)) - found_pages
+        if len(missing_pages) > 2:
+            logger.info(
+                f"Missing pages: {sorted(missing_pages)} out of expected {page_count}"
+            )
+            return True
+        # If any non-header line exists, OCR is not needed
         for line in content.splitlines():
             if not is_doc_common_header(line.strip()):
                 return False
