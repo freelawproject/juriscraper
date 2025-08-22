@@ -308,7 +308,7 @@ def scrape_court(
         logger.debug("\nAdding new item:")
         log_dict(item)
 
-        if not binaries and not save_for_manual_upload:
+        if not binaries:
             continue
 
         try:
@@ -548,7 +548,7 @@ def main():
     limit_per_scrape = options.limit_per_scrape
     save_for_manual_upload = options.save_for_manual_upload
 
-    if test_hashes:
+    if test_hashes or save_for_manual_upload:
         binaries = True
 
     if extract_content:
