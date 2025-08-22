@@ -81,7 +81,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(case)
 
     def extract_from_text(self, scraped_text: str) -> dict:
-        """Extracts date filled  from the scraped text.
+        """Extracts date filed from the scraped text.
 
         :param scraped_text: The text content of the opinion.
         :return: A dictionary with case details.
