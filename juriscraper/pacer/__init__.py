@@ -18,8 +18,6 @@ from .internet_archive import InternetArchive
 from .list_of_creditors import ListOfCreditors
 from .mobile_query import MobileQuery
 from .rss_feeds import PacerRssFeed
-from .scotus_docket_report import SCOTUSDocketReport
-from .scotus_docket_report_html import SCOTUSDocketReportHTML
 
 __all__ = [
     AcmsCaseSearch,
@@ -45,6 +43,4 @@ __all__ = [
     PacerSession,
     PossibleCaseNumberApi,
     ShowCaseDocApi,
-    SCOTUSDocketReport,
-    SCOTUSDocketReportHTML,
 ]
