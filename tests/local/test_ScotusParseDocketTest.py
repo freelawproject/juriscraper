@@ -1,7 +1,7 @@
 import os
 
-from juriscraper.pacer import SCOTUSDocketReport
-from tests import TESTS_ROOT_EXAMPLES_PACER
+from juriscraper.scotus import SCOTUSDocketReport
+from tests import TESTS_ROOT_EXAMPLES_SCOTUS
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
 
@@ -12,7 +12,5 @@ class ScotusParseDocketTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_scotus_json_dockets(self):
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER, "dockets", "scotus", "json"
-        )
+        path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "json")
         self.parse_files(path_root, "*.scotus_json", SCOTUSDocketReport)
