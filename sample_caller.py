@@ -88,7 +88,7 @@ def log_dict(dic: dict) -> None:
 
 
 def extract_content_from_doctor(url, files, ocr_available=False):
-    params = {"ocr_available": True} if ocr_available else None
+    params = {"ocr_available": ocr_available}
     response = requests.post(url, files=files, timeout=120, params=params)
     response.raise_for_status()
     return response.json()["content"], response.json()["page_count"]
@@ -114,7 +114,7 @@ def extract_doc_content(
     :param doctor_host: local doctor instance host. calls will fail if
         the doctor host is not valid
     :param filename: Name for saving extracted content into a file in tmp
-    :ocr_available: if True, it will tell doctor that OCR is available
+    :param ocr_available: if True, it will tell doctor that OCR is available
 
     :return: a tuple with:
         the extracted content
@@ -133,7 +133,9 @@ def extract_doc_content(
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    extracted_content, page_count = extract_content_from_doctor(url, files)
+    extracted_content, page_count = extract_content_from_doctor(
+        url, files, ocr_available=False
+    )
 
     if ocr_available and needs_ocr(extracted_content, page_count):
         logger.info("OCR is needed for this document. Using OCR doctor.")
