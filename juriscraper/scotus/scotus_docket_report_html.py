@@ -8,7 +8,7 @@ from lxml.html import HtmlElement
 
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import clean_string, harmonize
-from juriscraper.pacer import SCOTUSDocketReport
+from juriscraper.scotus import SCOTUSDocketReport
 
 
 @dataclass
