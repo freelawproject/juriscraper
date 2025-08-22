@@ -97,7 +97,6 @@ class Site(OpinionSiteLinear):
                     "status": status,
                 }
             )
-            print(self.cases[-1])
 
     def parse_judges(self, initials: str) -> str:
         """Parse judge initials into full names
