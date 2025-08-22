@@ -261,7 +261,7 @@ def download_item(data: bytes, item, download_url: str, site, extension: str):
                 item_parsed["case_dates"] = item_parsed["case_dates"].strftime(
                     "%Y%m%d"
                 )
-            except Exception:
+            except (AttributeError, TypeError):
                 pass
         json.dump(item_parsed, f, indent=2)
     # Save content
