@@ -13,4 +13,4 @@ class ScotusParseDocketTest(PacerParseTestCase):
 
     def test_parsing_scotus_json_dockets(self):
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "json")
-        self.parse_files(path_root, "*.scotus_json", SCOTUSDocketReport)
+        self.parse_files(path_root, "*.compare.json", SCOTUSDocketReport)
