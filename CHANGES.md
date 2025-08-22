@@ -16,6 +16,8 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - implement `neb` and `nebctapp` extract_from_text #1549
+- add new flag `--save-for-manual-upload` to `sample_caller` to save
+  the scraped data for manual upload to CourtListener.
 
 Changes:
 -

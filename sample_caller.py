@@ -106,8 +106,6 @@ def extract_doc_content(
         the extracted content
         the structured metadata parsed by Site.extract_from_text
     """
-    if not extract_from_text:
-        return data, {}
 
     # Get the file type from the document's raw content
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
@@ -116,6 +114,9 @@ def extract_doc_content(
     )
     extension_response.raise_for_status()
     extension = extension_response.text
+
+    if not extract_from_text:
+        return data, {}, extension
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
@@ -156,7 +157,7 @@ def extract_doc_content(
     logger.info("\nOpen extracted content with 'file://%s'", filepath)
 
     metadata_dict = site.extract_from_text(extracted_content)
-    return extracted_content, metadata_dict
+    return extracted_content, metadata_dict, extension
 
 
 def get_binary_content(download_url: str, site, exceptions) -> bytes:
@@ -239,6 +240,41 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
         logger.info("Same URL hashes are the same. It's OK")
 
 
+def download_item(data: bytes, item, download_url: str, site, extension: str):
+    """Save each case's metadata and content for manual upload."""
+
+    # Create a folder named after the court_id
+    folder_name = os.path.join(
+        os.path.expanduser("~"), "Downloads", site.court_id.replace(".", "_")
+    )
+    os.makedirs(folder_name, exist_ok=True)
+
+    file_hash = hashlib.sha256(force_bytes(download_url)).hexdigest()
+    json_path = os.path.join(folder_name, f"{file_hash}.json")
+    # Ensure extension starts with a dot
+    ext = extension if extension.startswith(".") else f".{extension}"
+    content_path = os.path.join(folder_name, f"{file_hash}{ext}")
+
+    # Save metadata
+    with open(json_path, "w") as f:
+        item_parsed = item.copy()
+        if "case_dates" in item_parsed:
+            try:
+                item_parsed["case_dates"] = item_parsed["case_dates"].strftime(
+                    "%Y%m%d"
+                )
+            except (AttributeError, TypeError):
+                pass
+        json.dump(item_parsed, f, indent=2)
+    # Save content
+    if isinstance(data, (bytes, bytearray)):
+        with open(content_path, "wb") as f:
+            f.write(data)
+    else:
+        with open(content_path, "w", encoding="utf-8") as f:
+            f.write(data)
+
+
 def scrape_court(
     site,
     binaries=False,
@@ -246,6 +282,7 @@ def scrape_court(
     doctor_host="",
     test_hashes: bool = False,
     limit: int = 1000,
+    save_for_manual_upload: bool = False,
 ):
     """Calls the requested court(s), gets its binary content, and
     extracts the content if possible. See --extract-content option
@@ -297,7 +334,7 @@ def scrape_court(
 
         filename = item["case_names"].lower().replace(" ", "_")[:40]
 
-        data, metadata_from_text = extract_doc_content(
+        data, metadata_from_text, extension = extract_doc_content(
             data, extract_content, site, doctor_host, filename
         )
         logger.log(
@@ -315,6 +352,9 @@ def scrape_court(
 
         # Separate cases for easier reading when verbosity=DEBUG
         logger.debug("\n%s\n", "=" * 60)
+
+        if save_for_manual_upload:
+            download_item(data, item, download_url, site, extension)
 
     logger.info(
         "\n%s: Successfully crawled %s items.", site.court_id, len(site)
@@ -487,6 +527,13 @@ def main():
         help="How many items to scrape per `scrape_court` call",
     )
 
+    parser.add_option(
+        "--save-for-manual-upload",
+        action="store_true",
+        default=False,
+        help="Save each case's metadata and content for manual upload. Files are named with a hash and stored in a folder named after the court_id.",
+    )
+
     (options, args) = parser.parse_args()
 
     court_id = options.court_id
@@ -501,8 +548,9 @@ def main():
     save_responses = options.save_responses
     test_hashes = options.test_hashes
     limit_per_scrape = options.limit_per_scrape
+    save_for_manual_upload = options.save_for_manual_upload
 
-    if test_hashes:
+    if test_hashes or save_for_manual_upload:
         binaries = True
 
     if extract_content:
@@ -572,6 +620,7 @@ def main():
                     doctor_host,
                     test_hashes,
                     limit_per_scrape,
+                    save_for_manual_upload,
                 )
 
     logger.debug("The scraper has stopped.")
