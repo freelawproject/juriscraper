@@ -249,7 +249,7 @@ def download_item(data: bytes, item, download_url: str, site, extension: str):
     )
     os.makedirs(folder_name, exist_ok=True)
 
-    file_hash = sha1(download_url)
+    file_hash = hashlib.sha256(force_bytes(download_url)).hexdigest()
     json_path = os.path.join(folder_name, f"{file_hash}.json")
     content_path = os.path.join(folder_name, f"{file_hash}{extension}")
 
