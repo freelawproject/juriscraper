@@ -955,6 +955,8 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {
                         "date_filed": "2025-05-16",
                         "date_filed_is_approximate": False,
+                    },
+                    "Docket": {
                         "docket_number": "24-BC11B-0023",
                     },
                 },

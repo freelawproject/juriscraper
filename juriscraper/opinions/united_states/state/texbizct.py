@@ -20,7 +20,7 @@ logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):
-    case_info_pattern = r"^(\S+)\s+(.+?)(?:\s+(\d{4} Tex\. Bus\. \d+))?(?:\s+(?:Opinion|Memorandum|Denied|Some Defendants Dismissed|Remand|Reconsideration|Me|MSJ|PTJ|Rule).*)?$"
+    case_info_pattern = r"^(?P<docket>\S+)\s+(?P<name>.+?)(?:\s+(?P<citation>\d{4} Tex\. Bus\. \d+))?(?:\s+(?:Opinion|Memorandum|Denied|Some Defendants Dismissed|Remand|Reconsideration|Me|MSJ|PTJ|Rule).*)?$"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -51,22 +51,28 @@ class Site(OpinionSiteLinear):
 
             split_short_title = short_title.split(",")
             name = (
-                titlecase(match.group(2).strip())
+                titlecase(match.group("name").strip())
                 if match
                 else split_short_title[0].strip()
             )
             citation = (
                 split_short_title[-1].strip()
                 if short_title
-                else (match.group(3) or "")
+                else (match.group("citation") or "")
+            )
+
+            date = (
+                f"{citation[:4]}/07/01"
+                if citation
+                else f"{datetime.now().year}/07/01"
             )
 
             case = {
-                "docket": match.group(1) if match else "temp-docket",
+                "docket": match.group("docket") if match else "",
                 "name": name,
                 "citation": citation,
                 "url": link.get("href"),
-                "date": f"{citation[:4]}/07/01",
+                "date": date,
                 "date_filed_is_approximate": True,
                 "status": "Published" if citation else "Unknown",
                 "summary": summary,
@@ -100,17 +106,17 @@ class Site(OpinionSiteLinear):
                 date_filed_iso = date_obj.date().isoformat()
             except ValueError:
                 logger.error(
-                    "Failed to parse date '%s' from text: %s",
+                    "Failed to parse date '%s'",
                     date_filed,
                 )
                 date_filed_iso = None  # fallback to empty if parsing fails
 
         result = {}
-        if date_filed_iso or docket_number:
-            result.setdefault("OpinionCluster", {})
         if date_filed_iso:
-            result["OpinionCluster"]["date_filed"] = date_filed_iso
-            result["OpinionCluster"]["date_filed_is_approximate"] = False
+            result["OpinionCluster"] = {
+                "date_filed": date_filed_iso,
+                "date_filed_is_approximate": False,
+            }
         if docket_number:
-            result["OpinionCluster"]["docket_number"] = docket_number
+            result["Docket"] = {"docket_number": docket_number}
         return result
