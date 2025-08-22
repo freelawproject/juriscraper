@@ -251,7 +251,9 @@ def download_item(data: bytes, item, download_url: str, site, extension: str):
 
     file_hash = hashlib.sha256(force_bytes(download_url)).hexdigest()
     json_path = os.path.join(folder_name, f"{file_hash}.json")
-    content_path = os.path.join(folder_name, f"{file_hash}{extension}")
+    # Ensure extension starts with a dot
+    ext = extension if extension.startswith('.') else f'.{extension}'
+    content_path = os.path.join(folder_name, f"{file_hash}{ext}")
 
     # Save metadata
     with open(json_path, "w") as f:
