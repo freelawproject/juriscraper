@@ -1,0 +1,139 @@
+Return-Path: <bounces+16017090-53e4-mattcrapo=recap.email@em4346.ca9.fedcourts.us>
+Received: from o1.ptr5067.ca9.fedcourts.us (o1.ptr5067.ca9.fedcourts.us [149.72.33.13])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 5ndsk5va1suhtep6quoq7pqa0rjk6pf0cmgj4301
+ for user_example@recap.email;
+ Thu, 14 Aug 2025 15:59:16 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-53e4-mattcrapo=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-53e4-mattcrapo=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+ dkim=pass header.i=@ca9.fedcourts.us;
+ dmarc=pass header.from=ca9.fedcourts.us;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFMmVkSE4xZXI1YW5qK21VY055NTIxZk9hcjVDY2lscklhVTVjamZ0Y2xBS2gyM1UzRHdPUjJGOXZIZnBMcEl5cy9tQ1VHNUxmQnJNc3RuZXZNeElWYk5ERXVYSXY2UTJ0VVI0WHJnckovQXZwZWdUTkVTNTFLdmpMaGltQTAxWDFXUU56M1A5MW00Sk5GdEg1dkxtN2JuZFpwKzR6RWd4ekVPU3hvRW5hczNOQjNOb0RNM25WZ0tWOEpkUkxvaGFYQVowVFY1SytMVWlqQUQwaUxmV1llQTFnRmtVMElIZVllZ2dWTDRXRGFOTldMcDdPNlRuQXB6amw5SlN0MWhXZlRUMnVYNHRTL2o3ZW40NlpOb013TjJ1VEw0ZkVmWSs4RGpqL24wbDI2MjJGMW00a3kvTDJPcHdPTkY4VUlSeVNFU0c1djVpdmx1NlVYMXd6WnBzR25obzdqZXNkWTZNNmtVRlVTeGk2VVpnPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=V4gGvrnWon2WEqbIyH9KIHPgkCBDTVD7Q7wxw6/AGyTmET2j/kj0NlU2o/rVqAPVS628Yxlguo9MiXAh5ufQUGQt3DR9iRW6xf2zVo5nSzlgOTCTTb49K+uAWzLCr+41e8k3eDxZ1RgitsQKI/wJyHfqC1uLqfvfC+fD9Jo4O8M=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1755187157; v=1; bh=5gCCSDgKlTOujT5rQK3MCZH1uE9j6F2eq48Z1Ll8/qI=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ca9.fedcourts.us;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	to:cc:content-type:date:from:subject:to;
+	s=s1; bh=5gCCSDgKlTOujT5rQK3MCZH1uE9j6F2eq48Z1Ll8/qI=;
+	b=CRaJ5aRN6rYqkwlddmI56LEEzjZH5wZf1MTiS97ddAkSPwAhWF5ZhG4wkHHqQLmOrq/N
+	ZyzE+pkCWn5W+Ar8WKBsvh0xj1cbujjGYhL/dy/IsChNw9bXnTMd540wZe4cfosjj6ntHf
+	DrcGz95eLyMD/qd4TEc6Gny16ll+LdkYtwePfV6F39YR4wwUP7ITUKqLidmfRC3nQV/t/u
+	sEzHe8R/eNUVqwxAP6cTqCqMV8gp3wnlxyIWNq2c3hk+SEsd5oA29WhJcczqhnppCBaCgk
+	TS/MFIU6UIveFLZRJNwG9b5Nhc3MqJ9GQgrMyQmkX3PFK3KQBvN3DkwcAf6TSCvQ==
+Received: by recvd-7f4fb8995-rgjpj with SMTP id recvd-7f4fb8995-rgjpj-1-689E07D3-3E
+	2025-08-14 15:59:15.632119223 +0000 UTC m=+6131722.740933666
+Received: from MTYwMTcwOTA (unknown)
+	by geopod-ismtpd-11 (SG) with HTTP
+	id 4mApCSNpSXKgAQtyiMV3bA
+	Thu, 14 Aug 2025 15:59:15.593 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Thu, 14 Aug 2025 15:59:15 +0000 (UTC)
+From: ACMS@ca9.fedcourts.us
+Mime-Version: 1.0
+Message-ID: <4mApCSNpSXKgAQtyiMV3bA@geopod-ismtpd-11>
+Subject: Vasquez Perdomo, et al. v. Noem, et al. 25-4312 - 063 - Corrected
+ Chambers Order for Publication
+X-SG-EID:
+ =?us-ascii?Q?u001=2E4svFcY8SGSTLM5KvpBU22kPBzh+nOgjhRgMJOZ1Vsu4e1MxdymCSBefB4?=
+ =?us-ascii?Q?Mm26aqlwoDxMC23kL6Ei77Gm9wWXhIqYzkOWK+z?=
+ =?us-ascii?Q?oRf1GRrUbaCxei2xkDF30NKgBzNpme4Rb11UfnX?=
+ =?us-ascii?Q?nz6SvXBi7kkcZ3J5nW=2FsNkyxvQdlI1FlgGlwA95?=
+ =?us-ascii?Q?4sY5Zw12T4WSP8jG6Ihco=2FVmLpgvTNLMVXeUlS5?=
+ =?us-ascii?Q?A=3D=3D?=
+To: user_example@recap.email
+X-Entity-ID: u001.C8m2t2EQL+JwwooNEkA5cg==
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">***NOTE TO PUBLIC ACCESS USERS*** Judicial Confer=
+ence of the United States policy permits
+ attorneys of record and parties in a case (including pro se litigants) to =
+receive one free electronic copy of all documents filed electronically, if =
+receipt is required by law or directed by the filer. PACER access fees appl=
+y to all other users. To avoid later
+ charges, download a copy of each document during this first viewing.</span=
+></strong></span></span></span></div>
+<div>&nbsp;</div>
+<div style=3D"text-align:center"><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">United States Court of Appeals for the&nbsp;Ninth Circ=
+uit</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice of Docket Activity</span></strong></span><=
+/span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif">The following transaction was entered on 08/14/2025 8:54:23 AM=
+ PDT and filed on 08/14/2025</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Name:&nbsp;</span></strong><span style=3D"font-fa=
+mily:'Segoe UI',sans-serif">Vasquez Perdomo, et al. v. Noem, et al.&nbsp;</=
+span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Number:
+</span></strong><span style=3D"font-family:'Segoe UI',sans-serif"><a href=
+=3D'https://ca9-showdoc.azurewebsites.us/25-4312'>25-4312</a></span></span>=
+</span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Docket Text:</span></strong></span></span></span></div=
+>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><strong>UPDATED ORDER FOR PUBLICATION.&nbsp;</strong>(Ronald M=
+. GOULD, Marsha S. BERZON, Jennifer SUNG) Attached reformatted order and we=
+bcite. [Entered: 08/14/2025 08:56 AM]</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div class=3D'documents'><b>Document:</b> <a href=3D'https://c=
+a9-showdoc.azurewebsites.us/NDA/cc095098-2779-f011-b4cb-001dd8020d3e'>Order=
+</a><br/><b>Document:</b> <a href=3D'https://ca9-showdoc.azurewebsites.us/N=
+DA/0b0a5098-2779-f011-b4cb-001dd8020d3e'>Order</a></div></span></span></spa=
+n></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice will be electronically mailed to:</span></=
+strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif">
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Case participants listed below will not receive t=
+his electronic notice:</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Sego=
+e UI',sans-serif"></span></span></span></span></div>
+<div>&nbsp;</div>
+<img src=3D"http://url4437.ca9.fedcourts.us/wf/open?upn=3Du001.cLrfVVgnz9fy=
+hstf5y41Rwze27knPXTbYmYDem1GpdQV2qDU6clt7l9Es-2F6riSMFtQXs3BvCW72nTXFOgV2rr=
+Em5-2BMVV0OwaNyCsXkpgwl8qd0SYbgKr-2BqjceVeoab-2FVe7n-2FIeQJvv2SQ7NB0QsM1BcS=
+aQx8-2BwnHM-2F-2BUY0ZbsP9Fm1QlEyqzGaEzOHBdnaUKwIkIndLorVvUD-2BeebT1loQ-3D-3=
+D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !impo=
+rtant;width:1px !important;border-width:0 !important;margin-top:0 !importan=
+t;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !impor=
+tant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !=
+important;padding-left:0 !important;"/></body>
+</html>
