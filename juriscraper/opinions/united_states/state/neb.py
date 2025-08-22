@@ -1,9 +1,16 @@
+import re
+from typing import Any
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    citation_regex = re.compile(
+        r"Cite\s+as\s+(?P<citation>\d+ +Neb\.( App\.)? \d+)"
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -75,3 +82,14 @@ class Site(OpinionSiteLinear):
                         "status": status,
                     }
                 )
+
+    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+        """Get the state citation from the document's text
+
+        :param scraped_text: extracted text
+        :return: a dictionary with the expected format
+        """
+        if match := self.citation_regex.search(scraped_text[:1000]):
+            return {"Citation": match.group("citation")}
+
+        return {}
