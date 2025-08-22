@@ -88,7 +88,7 @@ def log_dict(dic: dict) -> None:
 
 
 def extract_content_from_doctor(url, files, ocr_available=False):
-    params = {"ocr_available": True} if ocr_available else None
+    params = {"ocr_available": ocr_available}
     response = requests.post(url, files=files, timeout=120, params=params)
     response.raise_for_status()
     return response.json()["content"], response.json()["page_count"]
