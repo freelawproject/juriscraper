@@ -1,0 +1,65 @@
+{
+  "capital_case": null,
+  "case_name": "Michael B. Graves, Applicant v. Gary A. Feess",
+  "date_filed": null,
+  "discretionary_court_decision": null,
+  "docket_entries": [
+    {
+      "attachments": [],
+      "date_filed": "2004-10-13",
+      "description": "Application (04A289) for a stay, submitted to Justice O'Connor.",
+      "description_html": "Application (04A289) for a stay, submitted to Justice O'Connor."
+    },
+    {
+      "attachments": [],
+      "date_filed": "2004-10-13",
+      "description": "Application (04A289) denied by Justice O'Connor.",
+      "description_html": "Application (04A289) denied by Justice O'Connor."
+    }
+  ],
+  "docket_number": "04A289",
+  "links": "",
+  "lower_court": "United States Court of Appeals for the Ninth Circuit",
+  "lower_court_case_numbers": [
+    "04-55138"
+  ],
+  "lower_court_case_numbers_raw": "(04-55138)",
+  "lower_court_decision_date": null,
+  "lower_court_rehearing_denied_date": null,
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "address": "816 E. 101st Street",
+          "city": "Los Angeles",
+          "email": null,
+          "is_counsel_of_record": true,
+          "name": "Michael Ben Graves",
+          "phone": "(323) 357-0244",
+          "state": "CA",
+          "title": null,
+          "zip": "90002"
+        }
+      ],
+      "name": "Michael B. Graves",
+      "type": "Petitioner"
+    },
+    {
+      "attorneys": [
+        {
+          "address": "Department of Justice",
+          "city": "Washington",
+          "email": null,
+          "is_counsel_of_record": true,
+          "name": "Paul D. Clement",
+          "phone": "(202) 514-2217",
+          "state": "DC",
+          "title": "Acting Solicitor General",
+          "zip": "20530"
+        }
+      ],
+      "name": "Gary A. Feess, et al.",
+      "type": "Respondent"
+    }
+  ]
+}
