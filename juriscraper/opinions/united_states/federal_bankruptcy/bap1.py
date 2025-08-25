@@ -7,20 +7,25 @@ Author: Gianfranco Rossi
 History:
  - 2023-12-28, grossir: created
  - 2025-06-11 lmanzur remove _download method from scraper
+ - 2025-08-13 quevon24: update backscraper
 """
 
 import calendar
 import re
+from datetime import date
 from typing import Any
+from urllib.parse import urlencode
 
 from lxml.html import HtmlElement
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import SkipRowError
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    days_interval = 7
     lower_court_to_abbreviation = {
         "USBC - District of New Hampshire": "NH",
         "USBC - District of Massachusetts (Worcester)": "MW",
@@ -42,21 +47,33 @@ class Site(OpinionSiteLinear):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.base_url = self.url = "https://www.bap1.uscourts.gov/bapopn"
+        self.url = "https://www.bap1.uscourts.gov/bapopn"
+        self.first_opinion_date = date(2001, 9, 7)
+        self.make_backscrape_iterable(kwargs)
         self.court_id = self.__module__
         self.should_have_results = True
 
-        # There are 29 historical pages as of development in Dec 2023
-        # source indexes from 0
-        self.back_scrape_iterable = range(29)[::-1]
-
-    def _download_backwards(self, page_number: int) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Method used by backscraper to download historical records
 
-        :param page_number: an element of self.back_scrape_iterable
-        :return: None
+        :param dates: (start_date, end_date) tuple
+        :return None
         """
-        self.url = f"{self.base_url}?page={page_number}"
+        logger.info("Backscraping for range %s - %s", *dates)
+        params = {
+            "opn": "",
+            "field_opn_short_title_value": "",
+            "field_opn_issdate_value[min][date]": dates[0].strftime(
+                "%m/%d/%Y"
+            ),
+            "field_opn_issdate_value[max][date]": dates[1].strftime(
+                "%m/%d/%Y"
+            ),
+        }
+
+        self.url = f"{self.url}?{urlencode(params)}"
+        self.html = self._download()
+        self._process_html()
 
     def _process_html(self) -> None:
         """Parses a page's HTML into opinion dictionaries

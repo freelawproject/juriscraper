@@ -10,13 +10,17 @@ History:
     - 2023-11-19: Drop Selenium by WEP
     - 2023-12-20: Updated with citations, judges and summaries, Palin
     - 2024-07-04: Update to new site, grossir
+    - 2025-08-11: Add cleanup_content method, quevon24
 """
 
 from datetime import date, datetime, timedelta
 from typing import Optional
 from urllib.parse import urlencode
 
+from lxml import etree, html
+
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -159,3 +163,20 @@ class Site(OpinionSiteLinear):
             }
         )
         self.url = f"{self.base_url}?{urlencode(params)}"
+
+    @staticmethod
+    def cleanup_content(content):
+        """Wrap content in HTML structure if needed
+
+        :param content: The scraped HTML
+        :return: Proper HTML document
+        """
+        content = content.decode("utf-8")
+        if "<html" not in content.lower():
+            tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+            new_tree = etree.Element("html")
+            body = etree.SubElement(new_tree, "body")
+            body.append(tree)
+            return html.tostring(new_tree).decode("utf-8")
+
+        return content
