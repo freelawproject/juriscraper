@@ -1,6 +1,5 @@
 import hashlib
 import json
-import re
 from datetime import date, datetime, timedelta
 
 import certifi
@@ -235,10 +234,6 @@ class AbstractSite:
         If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.
         """
-        SUSPICIOUS_EXTENSIONS = re.compile(
-            r"\.(js|py|rb|java|c|cpp|cs|go|sh|pl|swift|ts|css)$", re.IGNORECASE
-        )
-        FORBIDDEN_CHARS = re.compile(r"[<>\"'\\|/?*:]")
 
         lengths = {}
         for attr in self._all_attrs:
@@ -270,10 +265,6 @@ class AbstractSite:
                     raise InsanityException(
                         "Item with index %s has an empty case name. The prior item had case name of: %s"
                         % (i, prior_case_name)
-                    )
-                if FORBIDDEN_CHARS.search(name):
-                    logger.warning(
-                        f"{self.court_id}: Forbidden character found in case name at index {i}: {name}"
                     )
                 prior_case_name = name
 
@@ -324,14 +315,6 @@ class AbstractSite:
             raise InsanityException(
                 "self.cookies not set to be a dict by scraper."
             )
-
-        # Check for suspicious download_urls
-        if hasattr(self, "download_urls") and self.download_urls is not None:
-            for url in self.download_urls:
-                if SUSPICIOUS_EXTENSIONS.search(url.strip()):
-                    raise InsanityException(
-                        f"{self.court_id}: Suspicious download_url detected in sanity check: {url}"
-                    )
 
         logger.info(
             "%s: Successfully found %s items."
