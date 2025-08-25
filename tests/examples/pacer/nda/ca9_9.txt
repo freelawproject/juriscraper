@@ -1,0 +1,123 @@
+Return-Path: <bounces+16017090-10e7-user_example=recap.email@em4346.ca9.fedcourts.us>
+Received: from o1.ptr5067.ca9.fedcourts.us (o1.ptr5067.ca9.fedcourts.us [149.72.33.13])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 1b9n73pcjoi26shmtk2n2rtteiaj3v8jpsbo9eg1
+ for user_example@recap.email;
+ Fri, 25 Jul 2025 19:53:27 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-10e7-user_example=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of em4346.ca9.fedcourts.us designates 149.72.33.13 as permitted sender) client-ip=149.72.33.13; envelope-from=bounces+16017090-10e7-user_example=recap.email@em4346.ca9.fedcourts.us; helo=o1.ptr5067.ca9.fedcourts.us;
+ dkim=pass header.i=@ca9.fedcourts.us;
+ dmarc=pass header.from=ca9.fedcourts.us;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIYkFMWTRiNzhFUFVFQmRwZkZCUzlJWnBLTENrYjhKdk1jTTVzdlZ2b2xiamVnMzVCOUhSZW1zaXF2blhJVFJmNUlpemQzS3QxNWFmWlB1ZnhTWCttU3F5WEdjMDFaSDc4eUhrUW8rZ0dSdGxPaUtYeVJpSTEyRm05REVWSEoxTi8rbDRpNTU4OFMxTUtYOG1ZeDJTSEwxQ0FKZStFV2lSMWJsMWgremU1cjVWZk5TOEJaMVU4NVJ0RHd4RHU5SkdlR01nMWVTTkJxVFZod2tuQjRsS1NUOHJ2NnNka1dtQit6SkRnSFNVYjlXQit2R2xVVEVXMDVrZGtRMlZUQUFnNkVyQjl2TVBUakNUazNZT3FsQVBHS2J0cVFJQ1RrYU9NdHMyajdrNHl3Zy9KamFEcDF4ZllnbFlBSnpsMTlvTHN1cUdzNEpuanM4S0xlV2Uxa0pJZUc3TzhHbEc0eTdDTjc1bVRKcWdlaUpBPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=WNmC7zYIYKDvWlCi0oRnmwGCYdMcl2YILVMcjrmg0bKTSp+9vEABCK176exorvghkNRxFV6ukdspWYugkmydnF7/dh+0nBUyL2e54uy2Cou9rPzLdKFF3LwtJwvfAq1gyB/tIuJSVWO+74Agv8F6WpZpOCw5dSm/3IGDjEhWG8I=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1753473208; v=1; bh=HnizdcyuYfOn8Hq/v9Hpau7ndJS/ibJ2s7WR7ETKvs4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ca9.fedcourts.us;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	to:cc:content-type:date:from:subject:to;
+	s=s1; bh=HnizdcyuYfOn8Hq/v9Hpau7ndJS/ibJ2s7WR7ETKvs4=;
+	b=PYaKKfXC2hxrsidxOKtRhwXfC5MDgu+51CiSOK5NgLhs4L1T27TRmKPyasxhB3nbMByY
+	jJA8KnZFKPqFk4Hg99MCm54NnLV6NPhXxJX6MEl/Xv0dFfW9Tql3bvEIc4lm8VLX+afjcA
+	Opyd/un1rm/dEg/2Rn8+xHRknvKPz24W+gz0CGID7FkKLcQ7sZbZ1k/0CXWHYKXEat7T0+
+	C9bQSI00C9HfLlEWizkaz/JkNXmHU0chwd9GJTfefhVL4Aiuhe7Qzo5PTEGPxZF6LzSE3g
+	NZ1AV8UeKyxJBOz8EykGclwAW+d0eu0C7aquEVUwbR6Vk6vtyhc4SjnE/CksnCzg==
+Received: by recvd-canary-69c768f6d6-jqxn6 with SMTP id recvd-canary-69c768f6d6-jqxn6-1-6883E0B6-C
+	2025-07-25 19:53:26.6633344 +0000 UTC m=+4481107.762255118
+Received: from MTYwMTcwOTA (unknown)
+	by geopod-ismtpd-13 (SG) with HTTP
+	id yHJw7X0GTxe48ZUjCv7HnA
+	Fri, 25 Jul 2025 19:53:26.622 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Fri, 25 Jul 2025 19:53:26 +0000 (UTC)
+From: ACMS@ca9.fedcourts.us
+Mime-Version: 1.0
+Message-ID: <yHJw7X0GTxe48ZUjCv7HnA@geopod-ismtpd-13>
+Subject: Multiple Energy Technologies, LLC v. Hologenix, LLC 24-2883 - 030 -
+ Notice of Appearance
+X-SG-EID:
+ =?us-ascii?Q?u001=2E4svFcY8SGSTLM5KvpBU22kPBzh+nOgjhRgMJOZ1Vsu6hrvR9SoLDFjKLs?=
+ =?us-ascii?Q?VOrY8m3maUmADGf=2FqK+1KChsDAsjWzrerGe6UFV?=
+ =?us-ascii?Q?iS1CM8PnWD=2F+8sQmiN2x+mD8rXpANuU=2Fy2uqIYZ?=
+ =?us-ascii?Q?Ks1bffwLGaVQp59zrVOsavNl3k9tevZxJ8b17og?=
+ =?us-ascii?Q?+mzXyD775c0nfMij+ZjMiHDYCKbMbSK1WSajbc0?=
+ =?us-ascii?Q?g=3D=3D?=
+To: user_example@recap.email
+X-Entity-ID: u001.C8m2t2EQL+JwwooNEkA5cg==
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">***NOTE TO PUBLIC ACCESS USERS*** Judicial Confer=
+ence of the United States policy permits
+ attorneys of record and parties in a case (including pro se litigants) to =
+receive one free electronic copy of all documents filed electronically, if =
+receipt is required by law or directed by the filer. PACER access fees appl=
+y to all other users. To avoid later
+ charges, download a copy of each document during this first viewing.</span=
+></strong></span></span></span></div>
+<div>&nbsp;</div>
+<div style=3D"text-align:center"><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">United States Court of Appeals for the&nbsp;Ninth Circ=
+uit</span></strong></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice of Docket Activity</span></strong></span><=
+/span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif">The following transaction was entered on 07/25/2025 12:52:03 P=
+M PDT and filed on 07/25/2025</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Name:&nbsp;</span></strong><span style=3D"font-fa=
+mily:'Segoe UI',sans-serif">Multiple Energy Technologies, LLC v. Hologenix,=
+ LLC&nbsp;</span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Case Number:
+</span></strong><span style=3D"font-family:'Segoe UI',sans-serif"><a href=
+=3D'https://ca9-showdoc.azurewebsites.us/24-2883'>24-2883</a></span></span>=
+</span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-family:'S=
+egoe UI',sans-serif">Docket Text:</span></strong></span></span></span></div=
+>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"><div><strong>NOTICE OF APPEARANCE</strong> by Nicole Sullivan =
+for Appellee Multiple Energy Technologies, LLC. [Entered: 07/25/2025 12:52 =
+PM]</div></span></span></span></span></div>
+<div><br>
+<span style=3D"font-size:11pt"><span style=3D"line-height:normal"><span sty=
+le=3D"font-family:Calibri,sans-serif"><span style=3D"font-family:'Segoe UI'=
+,sans-serif"></span></span></span></span><br>
+&nbsp;</div>
+<div><span style=3D"font-size:11pt"><span style=3D"line-height:normal"><spa=
+n style=3D"font-family:Calibri,sans-serif"><strong><span style=3D"font-fami=
+ly:'Segoe UI',sans-serif">Notice will be electronically mailed to:</span></=
+strong></span></span></span><br>
+&nbsp;</div>
+
+<img src=3D"http://url4437.ca9.fedcourts.us/wf/open?upn=3Du001.vua2YWBO15wr=
+2zfSMyeCHL-2Fe0vmCHEaSDPLhw3S-2BSnvN46RMDo9UmEdIm5nbxfsdVAL1enTVyImu1QJFMfe=
+QHaVaJENDjFjpJPw4QHK2gOwZ-2FOVAfhToyPK8M8FZgh9-2F1AVLxCoEES8IoSovl6Htx0Su-2=
+BBkabz5RqvoOJv223lZogTo8GhSoVI6b8622FSWB-2FsMN6C15Aulv0VRXk31gW3vkDYEBouDyJ=
+lb-2Bmano0s4-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"he=
+ight:1px !important;width:1px !important;border-width:0 !important;margin-t=
+op:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin=
+-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;pad=
+ding-right:0 !important;padding-left:0 !important;"/></body>
+</html>

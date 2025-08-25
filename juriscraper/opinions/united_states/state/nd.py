@@ -1,7 +1,10 @@
 # Author: Phil Ardery
 # Contact: https://www.ndcourts.gov/contact-us
+# History:
 # Date created: 2019-02-28
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
+# Updated: 2025-07-02, luism: get citation from HTML
+
 import re
 from datetime import date, datetime
 from urllib.parse import urljoin
@@ -15,6 +18,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     base_url = "https://www.ndcourts.gov/"
     ordered_fields = [
+        "citation",
         "name",
         "docket",
         "date",
@@ -24,6 +28,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1955, 10, 25)
     # Ensure the backscrape iterable has a single item
     days_interval = (datetime.today() - first_opinion_date).days + 2
+    name_regex = re.compile(r"^(.*?)(\s*(\d{4}\sND\s\d+))\s*$")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -46,41 +51,62 @@ class Site(OpinionSiteLinear):
         seen_urls = set()
 
         for row in self.html.xpath('//table//div[@class="row"]'):
-            raw_values = list(map(str.strip, row.xpath("./div/p[1]/text()")))
-            values = []
-
-            for idx, txt in enumerate(raw_values[:5]):
-                if idx == 0:
-                    txt, _ = self.clean_name(txt)
-                else:
-                    txt = txt.split(":", 1)[1].strip()
-                values.append(txt)
-
-            summary = (
-                " ".join(raw_values[5:]).strip() if len(raw_values) > 5 else ""
+            raw_name, *values = list(
+                map(str.strip, row.xpath("./div[1]/p[1]/text()"))
             )
+
+            # Do the URL check
             url = urljoin(
                 self.base_url,
                 row.xpath(".//button[@onclick]/@onclick")[0].split("'")[1],
             )
             if url in seen_urls:
                 logger.info(
-                    "Skipping %s %s, we already have a case with url %s",
-                    raw_values[0],
-                    raw_values[1],
+                    "Skipping %s, we already have a case with url %s",
+                    raw_name,
                     url,
                 )
                 continue
             seen_urls.add(url)
 
-            case = dict(zip(self.ordered_fields, values[:5]))
-            case.update({"summary": summary, "url": url, "per_curiam": False})
+            docket, date, nature, author = [
+                txt.split(":", 1)[1].strip() for txt in values if txt
+            ]
 
-            if "per curiam" in case["judge"].lower():
-                case["judge"] = ""
-                case["per_curiam"] = True
+            if match := self.name_regex.search(raw_name):
+                case_name = match.group(1).strip()
+                citation = match.group(2).strip()
+                raw_name = case_name
+            else:
+                citation = ""
 
-            self.cases.append(case)
+            case_name, other_docket = self.clean_name(raw_name)
+
+            if other_docket:
+                docket = f"{docket}, {other_docket}"
+
+            per_curiam = False
+            if "per curiam" in author.lower():
+                author = ""
+                per_curiam = True
+
+            if summary_texts := row.xpath("./div[2]/p[1]/text()"):
+                summary = " ".join(summary_texts).strip()
+
+            self.cases.append(
+                {
+                    "date": date,
+                    "per_curiam": per_curiam,
+                    "author": author,
+                    "judge": author,
+                    "summary": summary,
+                    "name": case_name,
+                    "citation": citation,
+                    "docket": docket,
+                    "nature_of_suit": nature,
+                    "url": url,
+                }
+            )
 
     def clean_name(self, name: str) -> tuple[str, str]:
         """Cleans case name
