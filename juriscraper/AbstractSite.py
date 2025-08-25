@@ -1,6 +1,8 @@
 import hashlib
 import json
+import os
 from datetime import date, datetime, timedelta
+from typing import Union
 
 import certifi
 import requests
@@ -10,7 +12,12 @@ from juriscraper.lib.date_utils import (
     json_date_handler,
     make_date_range_tuples,
 )
-from juriscraper.lib.exceptions import InsanityException
+from juriscraper.lib.exceptions import (
+    EmptyFileError,
+    InsanityException,
+    NoDownloadUrlError,
+    UnexpectedContentTypeError,
+)
 from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
@@ -19,6 +26,7 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
 )
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.microservices_utils import follow_redirections
 from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
@@ -381,6 +389,84 @@ class AbstractSite:
 
         self._post_process_response()
         return self._return_response_text_object()
+
+    def download_content(
+        self, download_url, is_sample=False, media_root=""
+    ) -> Union[str, bytes]:
+        """Download the content from the given URL and return the content as binary or string
+
+        Downloads the file, covering a few special cases such as invalid SSL
+        certificates and empty file errors.
+
+        :param download_url: The URL for the item you wish to download.
+        :param is_sample: If True, this indicates that the download is a sample
+        :param media_root: The root directory for local files, used in test mode
+
+
+        :return: The downloaded and cleaned content
+        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
+        """
+
+        if not download_url:
+            raise NoDownloadUrlError(download_url)
+
+        # noinspection PyBroadException
+        if self.test_mode_enabled():
+            url = os.path.join(media_root, download_url)
+            mr = MockRequest(url=url)
+            r = mr.get()
+            s = requests.Session()
+        else:
+            has_cipher = hasattr(self, "cipher")
+            s = self.request["session"] if has_cipher else requests.session()
+
+            if self.needs_special_headers:
+                headers = self.request["headers"]
+            else:
+                headers = {"User-Agent": "CourtListener"}
+
+            # Note that we do a GET even if self.method is POST. This is
+            # deliberate.
+            r = s.get(
+                download_url,
+                verify=has_cipher,  # WA has a certificate we don't understand
+                headers=headers,
+                cookies=self.cookies,
+                timeout=300,
+            )
+
+            # test for empty files (thank you CA1)
+            if len(r.content) == 0:
+                raise EmptyFileError(f"EmptyFileError: '{download_url}'")
+
+            # test for expected content type (thanks mont for nil)
+            if self.expected_content_types:
+                # Clean up content types like "application/pdf;charset=utf-8"
+                # and 'application/octet-stream; charset=UTF-8'
+                content_type = (
+                    r.headers.get("Content-Type").lower().split(";")[0].strip()
+                )
+                m = any(
+                    content_type in mime.lower()
+                    for mime in self.expected_content_types
+                )
+
+                if not m:
+                    court_str = self.court_id.split(".")[-1].split("_")[0]
+                    fingerprint = [f"{court_str}-unexpected-content-type"]
+                    msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
+                    raise UnexpectedContentTypeError(
+                        msg, fingerprint=fingerprint
+                    )
+
+            if not is_sample:
+                # test for and follow meta redirects
+                r = follow_redirections(r, s)
+                r.raise_for_status()
+
+        content = self.cleanup_content(r.content)
+
+        return content
 
     def _process_html(self):
         """Hook for processing available self.html after it's been downloaded.

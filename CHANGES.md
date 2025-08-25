@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add new method `download_conent` to `AbstractSite` for improved file retrieval #1535
 - add `bap6` scraper, inherits from `ca6` #1544
 - implement `neb` and `nebctapp` extract_from_text #1549
 
