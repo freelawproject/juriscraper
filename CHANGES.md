@@ -15,9 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- add `bap8` scraper, inherits from `ca8` #1544
-- add `bap6` scraper, inherits from `ca6` #1544
-- implement `neb` and `nebctapp` extract_from_text #1549
+-
 
 Changes:
 -
@@ -27,14 +25,20 @@ Fixes:
 
 ## Current
 
+**2.6.87 - 2025-08-25**
+
+Features:
+- add `bap8` scraper, inherits from `ca8` #1544
+- add `bap6` scraper, inherits from `ca6` #1544
+- implement `neb` and `nebctapp` extract_from_text #1549
+
+## Past
+
 **2.6.86 - 2025-08-15**
 
 Fixes:
 - Update `bap1` backscraper #1539
 - Fix `ky` scraper to handle missing document text to prevent errors #1540
-
-
-## Past
 
 **2.6.85 - 2025-08-14**
 
