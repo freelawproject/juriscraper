@@ -19,7 +19,7 @@ Features:
 - implement `neb` and `nebctapp` extract_from_text #1549
 
 Changes:
--
+- new validations for `_sanity_check` in `AbstractSite`
 
 Fixes:
 -
