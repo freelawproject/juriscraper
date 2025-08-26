@@ -958,6 +958,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.federal_appellate.ca7": [
+            (
+                "                               In the\n\n    United States Court of Appeals\n                 For the Seventh Circuit\n                     ____________________\nNo. 24-2572\nCHRISTOPHER GEORGE PABLE,\n                                                  Plaintiff-Appellant,\n                                and\n\nTIMOTHY A. DUFFY,\n                                                            Appellant,\n\n                                 v.\n\nCHICAGO TRANSIT AUTHORITY\nand CLEVER DEVICES, LTD.,\n                                               Defendants-Appellees.\n                     ____________________\n\n         Appeal from the United States District Court for the\n           Northern District of Illinois, Eastern Division.\n          No. 1:19-cv-07868 — Robert W. Gettleman, Judge.\n                     ____________________\n\n      ARGUED APRIL 16, 2025 — DECIDED JULY 28, 2025\n                ____________________\n\n   Before SYKES, Chief Judge, and ST. EVE and JACKSON-\nAKIWUMI, Circuit Judges.\n   JACKSON-AKIWUMI, Circuit Judge. In this appeal, an attor-\ney and client seek review of the court order sanctioning both\n2                                                 No. 24-2572\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Northern District of Illinois, Eastern Division",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):

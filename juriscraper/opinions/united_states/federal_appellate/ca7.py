@@ -45,3 +45,34 @@ class Site(OpinionSiteLinear):
                     "per_curiam": per_curiam,
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        import re
+
+        pattern = re.compile(
+            r"""
+            (?:
+               Appeal(?:s)?\s+from\s+the\s+
+           | (?:On\s+)?Petition(?:s)?\s+for\s+Review\s+of\s+(?:an\s+)?Order(?:s)?\s+of\s+the\s+
+            )
+            (?P<lower_court>[^.]+?)
+            (?=\s*(?:\.|Nos?\.|USDC))
+            """,
+            re.X,
+        )
+        match = pattern.search(scraped_text)
+        lower_court = (
+            re.sub(r"\s+", " ", match.group("lower_court")).strip()
+            if match
+            else ""
+        )
+        return {
+            "Docket": {
+                "appeal_from_str": lower_court,
+            }
+        }
