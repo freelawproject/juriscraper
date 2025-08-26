@@ -968,6 +968,26 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.federal_appellate.ca11_p": [
+            (
+                "USCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025   Page: 1 of 17\n\n\n\n\n                                                                [PUBLISH]\n                                      In the\n                 United States Court of Appeals\n                           For the Eleventh Circuit\n\n                            ____________________\n\n                                   No. 23-12178\n                            ____________________\n\n        JEREMY JONES,\n                                                         Plaintiﬀ-Appellant,\n        versus\n        DAVID CEINSKI, JR.,\n        Oﬃcer, in his individual capacity,\n\n\n                                                       Defendant-Appellee.\n\n\n                            ____________________\n\n                  Appeal from the United States District Court\n                       for the Middle District of Florida\n                     D.C. Docket No. 8:22-cv-00231-AAS\n                           ____________________\nUSCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025     Page: 2 of 17",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Florida",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca11_u": [
+            (
+                "USCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025   Page: 1 of 17\n\n\n\n\n                                                                [PUBLISH]\n                                      In the\n                 United States Court of Appeals\n                           For the Eleventh Circuit\n\n                            ____________________\n\n                                   No. 23-12178\n                            ____________________\n\n        JEREMY JONES,\n                                                         Plaintiﬀ-Appellant,\n        versus\n        DAVID CEINSKI, JR.,\n        Oﬃcer, in his individual capacity,\n\n\n                                                       Defendant-Appellee.\n\n\n                            ____________________\n\n                  Appeal from the United States District Court\n                       for the Middle District of Florida\n                     D.C. Docket No. 8:22-cv-00231-AAS\n                           ____________________\nUSCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025     Page: 2 of 17",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Florida",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
