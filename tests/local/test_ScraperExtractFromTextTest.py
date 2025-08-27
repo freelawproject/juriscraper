@@ -948,6 +948,17 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Citation": "22 Neb. App. 999"},
             )
         ],
+        "juriscraper.opinions.united_states.state.texbizct": [
+            (
+                """\nThe Business Court of Texas,\n11th Division\nWESTLAKE LONGVIEW CORP. and §\nWESTLAKE CHEMICAL OPCO LP,  §\nPlaintiffs,             § Cause No. 24-BC11B-0023 \nv.                          §\nEASTMAN CHEMICAL CO.,       §\nDefendant.              §\n═══════════════════════════════════════\nOPINION ON MOTION FOR PROTECTIVE ORDER\n══\nsuch evidence in the future, if a party moves to modify the protective order to allow\nspecific in-house attorneys access to AEO material.\nDate signed: May 16, 2025""",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2025-05-16",
+                        "date_filed_is_approximate": False,
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.federal_appellate.ca5": [
             (
                 "         United States Court of Appealsfor the Fifth Circuit____________United States Court of AppealsFifth CircuitNo. 25-30051Summary Calendar                                  FILED____________                                August 26, 2025Lyle W. CayceUnited States of America,                                                          ClerkPlaintiff—Appellee,versus Bobby Glenn Wall, Jr.,Defendant—Appellant.______________________________ Appeal from the United States District Court for the Middle District of Louisiana USDC No. 3:24-CR-20-2 ______________________________ Before Jones, Richman, and Duncan, Circuit Judges.Per Curiam: *Bobby Glenn Wall, Jr. pleaded guilty to the distribution of childpornography. He was sentenced above the advisory guidelines to 192 monthsof imprisonment and 15 years of supervised release. Wall challenges thesubstantive reasonableness of his sentence.",
