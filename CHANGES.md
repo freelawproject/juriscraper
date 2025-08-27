@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `nd` use empty string when no summary is found #1561
 
 ## Current
 
