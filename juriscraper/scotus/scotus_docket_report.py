@@ -2,6 +2,7 @@ import json
 import pprint
 import re
 import sys
+from collections import defaultdict
 from datetime import datetime
 from typing import Any, Optional
 
@@ -9,7 +10,7 @@ from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 
 
 class SCOTUSDocketReport:
-    """Parse SCOTUS docket JSON (TODO:HTML/HTM variant)."""
+    """Parse SCOTUS docket JSON"""
 
     DATE_FORMATS = (
         "%B %d, %Y",  # July 3, 2024
@@ -19,18 +20,16 @@ class SCOTUSDocketReport:
     )
 
     LOWER_COURT_PATTERNS = {
-        "slash_same_prefix": re.compile(r"^\d+-[A-Za-z]*-?\d+(/\d+)+$"),
-        "sep_inherited_prefix": re.compile(r"^\d+-\d+([;/,-]-\d+)+$"),
-        "neg_prefix_numbers": re.compile(r"^\d+-\d+(,-\d+)*,-?$"),
+        "common_prefix": re.compile(
+            r"^\d+(?:-[A-Za-z]+)?-\d+(?:(?:[;/,-]-\d+)+|(?:,-\d+)*,-?|(?:/\d+)+)$"
+        ),
         "comma_correct_prefix": re.compile(
             r"^(\d+-[A-Za-z]+, )*\d+-[A-Za-z]+$"
         ),
-        "slash_shared_prefix": re.compile(r"^\d+-\d+(/\d+)+$"),
         "special_formats": [
             re.compile(r"^(CR|CA)-\d+-\d+$"),
             re.compile(r"^\d+-\d+-\d+-[A-Za-z]+$"),
         ],
-        "neg_prefix_list": re.compile(r"^\d+-\d+(,-\d+)+$"),
     }
 
     def __init__(self, court_id: str = "scotus"):
@@ -62,9 +61,9 @@ class SCOTUSDocketReport:
         """
 
         scotus_data = self._scotus_json
-        docket_number = (scotus_data.get("CaseNumber") or "").strip()
+        docket_number = (scotus_data.get("CaseNumber", "")).strip()
         docket_number = (
-            docket_number.replace(" *** CAPITAL CASE ***", "")
+            docket_number.replace("*** CAPITAL CASE ***", "").strip()
             if docket_number
             else None
         )
@@ -133,14 +132,14 @@ class SCOTUSDocketReport:
         """
         entries = []
         for row in self._scotus_json.get("ProceedingsandOrder", []):
-            links = row.get("Links") or []
+            links = row.get("Links", [])
             attachments = [
                 {
                     "short_description": link.get("Description", "").strip(),
                     "document_url": link.get("DocumentUrl"),
                 }
                 for link in links
-            ] or []
+            ]
 
             description_html = row.get("Text", "")
             description = strip_bad_html_tags_insecure(description_html)
@@ -187,27 +186,22 @@ class SCOTUSDocketReport:
             - attorneys: List of attorney dictionaries.
         """
 
-        type_parties = self._scotus_json.get(type_key) or []
+        type_parties = self._scotus_json.get(type_key, [])
         if not type_parties:
             return []
 
-        # Keep insertion order of first appearance of each PartyName
-        grouped: dict[str, list[dict[str, Any]]] = {}
-        order = []
+        grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for party in type_parties:
             party_name = party.get("PartyName", "").strip()
-            if party_name not in grouped:
-                grouped[party_name] = []
-                order.append(party_name)
             grouped[party_name].append(self._build_attorney(party))
 
         return [
             {
                 "type": type_key,
                 "name": party_name,
-                "attorneys": grouped[party_name],
+                "attorneys": attorneys,
             }
-            for party_name in order
+            for party_name, attorneys in grouped.items()
         ]
 
     @property
@@ -269,15 +263,6 @@ class SCOTUSDocketReport:
             for p in parts
         ]
 
-    @staticmethod
-    def _clean_parts(parts: list[str]) -> list[str]:
-        """Clean lower court numbers
-
-        :param parts: list of strings
-        :return: list of cleaned lower court numbers
-        """
-        return [p.strip() for p in parts]
-
     def clean_lower_court_cases(self, raw_text: str) -> list[str]:
         """Clean and normalize lower court case numbers from various formats.
 
@@ -286,68 +271,50 @@ class SCOTUSDocketReport:
         """
         raw_text = raw_text.replace("(", "").replace(")", "").strip()
 
-        # Case 1: Slash-separated numbers with same prefix
-        if self.LOWER_COURT_PATTERNS["slash_same_prefix"].match(raw_text):
-            parts = raw_text.split("/")
-            prefix_match = re.match(r"(.*-)(\d+)$", parts[0])
+        # Case Slash-separated numbers with the same prefix: "98-35309/35509" or  "96-C-235/239/240/241"
+        # Negative prefix-separated numbers: "99-1845,-1846,-1847,-197" or "98-60240,-60454,-60467,-"
+        # "98-4033;-4214;-4246"
+        if self.LOWER_COURT_PATTERNS["common_prefix"].match(raw_text):
+            # slash case
+            if "/" in raw_text and not re.search(r"[;,]", raw_text):
+                parts = raw_text.split("/")
+                prefix_match = re.match(r"(.*-)(\d+)$", parts[0])
+                if not prefix_match:
+                    return raw_text.split(",")
+                prefix = prefix_match.group(1)
+                return self._apply_prefix(
+                    prefix, [p.lstrip("-") for p in parts]
+                )
+
+            # Mixed or negative-prefix (commas/semicolons and possibly slashes after the first number)
+            # Supports optional letter segment, e.g. "96-C-235"
+            prefix_match = re.match(r"(\d+(?:-[A-Za-z]+)?-)(\d+)", raw_text)
             if not prefix_match:
                 return raw_text.split(",")
+
             prefix = prefix_match.group(1)
-            return self._clean_parts(
-                self._apply_prefix(prefix, [p.lstrip("-") for p in parts])
+            suffix = prefix_match.group(2)
+            numbers = [suffix] + re.split(
+                r"[;,/]", raw_text[len(prefix_match.group(0)) :]
             )
+            return [f"{prefix}{n.strip('-')}" for n in numbers if n.strip("-")]
 
-        # Case 2: Various separators with inherited prefixes: "98-4033;-4214;-4246"
-        if self.LOWER_COURT_PATTERNS["sep_inherited_prefix"].match(raw_text):
-            parts = re.split(r"[;/,-]", raw_text)
-            prefix = parts[0].split("-")[0]
-            return self._clean_parts(
-                [
-                    f"{prefix}-{p.strip('-')}"
-                    for p in parts
-                    if p.strip("-") != prefix
-                ]
-            )
-
-        # Case 3: Negative prefix-separated numbers: "99-1845,-1846,-1847,-197" or "98-60240,-60454,-60467,-""
-        if self.LOWER_COURT_PATTERNS["neg_prefix_numbers"].match(raw_text):
-            prefix_match = re.match(r"(\d+-)(\d+)", raw_text)
-            if not prefix_match:
-                return raw_text.split(",")
-            prefix = prefix_match.group(1)
-            numbers = [prefix_match.group(2)] + raw_text[
-                len(prefix_match.group(0)) :
-            ].split(",")
-            return self._clean_parts(
-                [f"{prefix}{n.strip('-')}" for n in numbers if n.strip("-")]
-            )
-
-        # Case 4: Comma-separated items with prefixes already correct: "33094-CW, 33095-CW"
+        # Case Comma-separated items with prefixes already correct: "33094-CW, 33095-CW"
         if self.LOWER_COURT_PATTERNS["comma_correct_prefix"].match(raw_text):
             return raw_text.split(",")
 
-        # Case 5: Mixed slash-separated values with a shared prefix: "98-16950/17044/17137"
-        if self.LOWER_COURT_PATTERNS["slash_shared_prefix"].match(raw_text):
-            prefix = raw_text.split("-")[0]
-            parts = raw_text.split("/")
-            return self._clean_parts(
-                [f"{prefix}-{p.split('-')[-1]}" for p in parts]
-            )
-
-        # Case 6: Ampersand-separated with prefixes or 'See also'-separated with prefixes: "95-56639 & 96-55194" or "95-56639 See also 96-55194"
-        if "&" in raw_text:
-            return raw_text.replace(" & ", ",").split(",")
+        # Case Ampersand-separated with prefixes or 'See also'-separated with prefixes: "95-56639 & 96-55194" or "95-56639 See also 96-55194"
         if "See also" in raw_text:
             return raw_text.replace(" See also ", ",").split(",")
 
-        # Case 7: Preserve specific formats: "CR-99-1140", "1998-CA-0022039-MR"
+        # Case Preserve specific formats: "CR-99-1140", "1998-CA-0022039-MR"
         if any(
             p.match(raw_text)
             for p in self.LOWER_COURT_PATTERNS["special_formats"]
         ):
             return raw_text.split(",")
 
-        # Case 8: Range expansion: "97-1715/98-1111 to 1115" or "97-1715/1111 to 1115"
+        # Case Range expansion: "97-1715/98-1111 to 1115" or "97-1715/1111 to 1115"
         if re.search(r"\d+/\d+(-\d+)? to \d+", raw_text):
             parts = raw_text.split("/")
             cleaned = [parts[0]]
@@ -372,25 +339,14 @@ class SCOTUSDocketReport:
                     f"{parts[0].split('-')[0]}-{range_part.strip()}"
                 )
 
-            return self._clean_parts(cleaned)
-
-        # Case 9: Various separators with inherited prefixes: "98-4033;-4214;-4246"
-        if self.LOWER_COURT_PATTERNS["sep_inherited_prefix"].match(raw_text):
-            parts = re.split(r"[;/,-]", raw_text)
-            prefix = parts[0].split("-")[0]
-            return self._clean_parts(
-                [f"{prefix}-{p.strip('-')}" for p in parts]
-            )
-
-        # Case 10: Negative prefix-separated numbers: "99-1845,-1846,-1847,-197"
-        if self.LOWER_COURT_PATTERNS["neg_prefix_list"].match(raw_text):
-            prefix = raw_text.split("-")[0]
-            return self._clean_parts(
-                [f"{prefix}-{n.strip('-')}" for n in raw_text.split(",")]
-            )
+            return cleaned
 
         # Default cleanup for other separators
-        return self._clean_parts(re.sub(r"[;&\n]", ",", raw_text).split(","))
+        return [
+            p.strip()
+            for p in re.sub(r"[;&\n]", ",", raw_text).split(",")
+            if p.strip()
+        ]
 
 
 def _main():
