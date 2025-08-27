@@ -15,15 +15,25 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- add `texbizct` new scraper for Texas Business Court #1437
+-
 
 Changes:
 -
 
 Fixes:
-- Fix `nd` use empty string when no summary is found #1561
+-
 
 ## Current
+
+**2.6.88 - 2025-08-27**
+
+Features:
+- add `texbizct` new scraper for Texas Business Court #1437
+
+Fixes:
+- Fix `nd` use empty string when no summary is found #1561
+
+## Past
 
 **2.6.87 - 2025-08-25**
 
@@ -32,7 +42,6 @@ Features:
 - add `bap6` scraper, inherits from `ca6` #1544
 - implement `neb` and `nebctapp` extract_from_text #1549
 
-## Past
 
 **2.6.86 - 2025-08-15**
 
