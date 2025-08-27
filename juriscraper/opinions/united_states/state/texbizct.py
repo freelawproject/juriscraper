@@ -21,7 +21,6 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.should_have_results = True
         self.status = "Published"
-        self.date_filed_is_approximate = True
 
     def _process_html(self) -> None:
         """Parses the HTML content
@@ -40,6 +39,9 @@ class Site(OpinionSiteLinear):
             raw_docket = title.split()[0]
             docket = raw_docket.strip(",").replace("--", "-")
 
+            summary = link.xpath("../following-sibling::ul/li/text()")
+            summary = " ".join(summary)
+
             self.cases.append(
                 {
                     "docket": docket,
@@ -47,6 +49,8 @@ class Site(OpinionSiteLinear):
                     "citation": citation,
                     "url": url,
                     "date": date,
+                    "date_filed_is_approximate": True,
+                    "summary": summary,
                 }
             )
 
