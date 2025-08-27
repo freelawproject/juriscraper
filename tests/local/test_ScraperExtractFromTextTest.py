@@ -1028,6 +1028,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.federal_appellate.cafc": [
+            (
+                "Case: 24-1479    Document: 50     Page: 1   Filed: 08/26/2025\n\n\n\n\n           NOTE: This order is nonprecedential.\n\n\n   United States Court of Appeals\n       for the Federal Circuit\n                  ______________________\n\n           PHILIPS NORTH AMERICA, LLC,\n                  Plaintiff-Appellant\n\n                             v.\n\n                      FITBIT LLC,\n                        Defendant\n                  ______________________\n\n                        2024-1479\n                  ______________________\n\n     Appeal from the United States District Court for the\n District of Massachusetts in No. 1:19-cv-11586-FDS, Judge\n F. Dennis Saylor, IV.\n                  ______________________\n\n                      ON MOTION\n                  ______________________\n\n                        ORDER\n     Upon consideration of ECF No. 49, which the court con-\n strues as a motion to dismiss the appeal under Federal\n Rule of Appellate Procedure 42(b),\nCase: 24-1479    Document: 50     Page: 2    Filed: 08/26/2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Massachusetts",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
