@@ -988,6 +988,26 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.federal_appellate.cadc": [
+            (
+                "FOR THE DISTRICT OF COLUMBIA CIRCUIT\n\n\n\nArgued March 6, 2025               Decided August 19, 2025\n\n                       No. 24-7077\n\n                   EUGENE HUDSON, JR.,\n                       APPELLANT\n\n                             v.\n\n   AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES,\n                     APPELLEE\n\n\n        Appeal from the United States District Court\n                for the District of Columbia\n                    (No. 1:17-cv-01867)\n\n\n\n    Harold C. Bone II argued the cause for appellant.\nElizabeth Clark Bone and Kimberly S. Estelle entered\nappearances.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Columbia",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cadc_u": [
+            (
+                "United States Court of Appeals\n                             FOR THE DISTRICT OF COLUMBIA CIRCUIT\n                                      ____________\nNo. 25-5003                                                 September Term, 2024\n                                                                        1:24-cv-02139-UNA\n                                                        Filed On: July 28, 2025\nLori Ann Henriques,\n\n              Appellant\n\n       v.\n\nUnited States Government,\n\n              Appellee\n\n            ON APPEAL FROM THE UNITED STATES DISTRICT COURT\n                     FOR THE DISTRICT OF COLUMBIA\n\n       BEFORE:        Katsas, Rao, and Walker, Circuit Judges\n\n                                     JUDGMENT\n\n        This appeal was considered on the record from the United States District Court\nfor the District of Columbia and on the brief filed by appellant. See Fed. R. App. P.\n34(a)(2); D.C. Cir. Rule 34(j). It is",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Columbia",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
