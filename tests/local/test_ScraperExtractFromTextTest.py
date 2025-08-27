@@ -1008,6 +1008,26 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.federal_appellate.ca9_u": [
+            (
+                "NOT FOR PUBLICATION                          FILED\n                    UNITED STATES COURT OF APPEALS                       AUG 22 2025\n                                                                     MOLLY C. DWYER, CLERK\n                                                                       U.S. COURT OF APPEALS\n                            FOR THE NINTH CIRCUIT\n\nGRISEL PALLARES-MEDINA; L. A.                   No. 24-3184\nGUZMAN-PALLARES; G. G. GUZMAN-                  Agency Nos.\nPALLARES,                                       A246-597-420\n                                                A246-597-421\n             Petitioners,\n                                                A246-597-422\n v.\n                                                MEMORANDUM*\nPAMELA BONDI, Attorney General,\n\n             Respondent.\n\n                     On Petition for Review of an Order of the\n                         Board of Immigration Appeals\n\n                            Submitted August 13, 2025**\n                               Seattle, Washington\n\nBefore: HAWKINS, McKEOWN, and WARDLAW, Circuit Judges.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board of Immigration Appeals",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca9_p": [
+            (
+                "FILED\n                    UNITED STATES COURT OF APPEALS                       AUG 22 2025\n                                                                     MOLLY C. DWYER, CLERK\n                                                                       U.S. COURT OF APPEALS\n                            FOR THE NINTH CIRCUIT\n\nGRISEL PALLARES-MEDINA; L. A.                   No. 24-3184\nGUZMAN-PALLARES; G. G. GUZMAN-                  Agency Nos.\nPALLARES,                                       A246-597-420\n                                                A246-597-421\n             Petitioners,\n                                                A246-597-422\n v.\n                                                MEMORANDUM*\nPAMELA BONDI, Attorney General,\n\n             Respondent.\n\n                     On Petition for Review of an Order of the\n                         Board of Immigration Appeals\n\n                            Submitted August 13, 2025**\n                               Seattle, Washington\n\nBefore: HAWKINS, McKEOWN, and WARDLAW, Circuit Judges.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board of Immigration Appeals",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
