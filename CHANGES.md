@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add scotus_docket_report to parse SCOTUS JSON dockets
 
 Changes:
 - Add lower court extraction to `federal_appellate` scrapers #1560
