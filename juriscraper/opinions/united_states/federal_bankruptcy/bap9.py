@@ -5,6 +5,7 @@ Court Short Name: 9th Cir. BAP
 """
 
 import json
+import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
@@ -140,25 +141,23 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        import re
 
         pattern = re.compile(
             r"""
-            (?:
-               Appeal(?:s)?\s+from\s+the\s+
-            )
+             Appeals?\s+from\s+the\s+
             (?P<lower_court>[^.]+?)
             (?=\s*(?:\.|(?:in\s+)?Nos?\.))
             """,
             re.X,
         )
-        match = pattern.search(scraped_text)
-        lower_court = (
-            re.sub(r"\s+", " ", match.group("lower_court")).strip()
-            if match
-            else ""
-        )
 
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        # Lower court names often have additional and unwanted information after "of"
         if "of" in lower_court:
             parts = lower_court.split()
             try:
@@ -168,11 +167,14 @@ class Site(OpinionSiteLinear):
             except ValueError:
                 pass
 
-        return {
-            "Docket": {
-                "appeal_from_str": lower_court,
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
             }
-        }
+
+        return {}
 
     def _download_backwards(self, date: date) -> None:
         """Download cases for a specific date range.
