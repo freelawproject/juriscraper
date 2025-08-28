@@ -18,7 +18,7 @@ Features:
 - Add scotus_docket_report to parse SCOTUS JSON dockets
 
 Changes:
--
+- Retrieve lower court information in `bap9` and `ba10` #1567
 
 Fixes:
 -

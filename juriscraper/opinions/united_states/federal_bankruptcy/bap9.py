@@ -134,6 +134,46 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        import re
+
+        pattern = re.compile(
+            r"""
+            (?:
+               Appeal(?:s)?\s+from\s+the\s+
+            )
+            (?P<lower_court>[^.]+?)
+            (?=\s*(?:\.|(?:in\s+)?Nos?\.))
+            """,
+            re.X,
+        )
+        match = pattern.search(scraped_text)
+        lower_court = (
+            re.sub(r"\s+", " ", match.group("lower_court")).strip()
+            if match
+            else ""
+        )
+
+        if "of" in lower_court:
+            parts = lower_court.split()
+            try:
+                idx = parts.index("of")
+                if idx + 1 < len(parts):
+                    lower_court = " ".join(parts[: idx + 2])
+            except ValueError:
+                pass
+
+        return {
+            "Docket": {
+                "appeal_from_str": lower_court,
+            }
+        }
+
     def _download_backwards(self, date: date) -> None:
         """Download cases for a specific date range.
 
