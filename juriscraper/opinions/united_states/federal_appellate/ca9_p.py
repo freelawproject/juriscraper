@@ -8,6 +8,8 @@ History:
     - 2025-08-27: Added extract_from_text and avoid duplicates.
 """
 
+import re
+
 import feedparser
 from lxml.html import tostring
 
@@ -43,12 +45,10 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        import re
-
         pattern = re.compile(
             r"""
             (?:
-               Appeal(s)?\s+from\s+the\s+
+               Appeals?\s+from\s+the\s+
               | On\s+Remand\s+from\s+the\s+
               | On\s+Petition\s+for\s+Review\s+of\s+an\s+Order\s+of\s+the\s+
             )
@@ -57,27 +57,31 @@ class Site(OpinionSiteLinear):
             """,
             re.X,
         )
-        match = pattern.search(scraped_text)
-        lower_court = (
-            re.sub(r"\s+", " ", match.group("lower_court")).strip()
-            if match
-            else ""
-        )
-        # Truncate after the next word following 'of'
-        if (
-            "of" in lower_court
-            and lower_court != "Board of Immigration Appeals"
-        ):
-            parts = lower_court.split()
-            try:
-                idx = parts.index("of")
-                if idx + 1 < len(parts):
-                    lower_court = " ".join(parts[: idx + 2])
-            except ValueError:
-                pass
 
-        return {
-            "Docket": {
-                "appeal_from_str": lower_court,
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+            # Truncate after the next word following 'of'
+            if (
+                "of" in lower_court
+                and lower_court != "Board of Immigration Appeals"
+            ):
+                parts = lower_court.split()
+                try:
+                    idx = parts.index("of")
+                    if idx + 1 < len(parts):
+                        lower_court = " ".join(parts[: idx + 2])
+                except ValueError:
+                    pass
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
             }
-        }
+
+        return {}

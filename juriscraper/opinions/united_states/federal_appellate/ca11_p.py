@@ -5,6 +5,7 @@
 # 2014-07-02  | New website required rewrite.
 # 2025-08-26  | Updated to use OpinionSiteLinear and added extract_from_text.
 
+import re
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -20,42 +21,29 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     def _process_html(self):
-        case_names = list(
-            self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()")
-        )
-        download_urls = list(
-            self.html.xpath("//tr[./td[1]/a//text()]/td[1]/a/@href")
-        )
-        case_dates = list(
-            self.html.xpath("//tr[./td[1]/a//text()]/td[5]//text()")
-        )
-        docket_numbers = list(
-            self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()")
-        )
-        nature_of_suit = list(
-            self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()")
-        )
+        rows = self.html.xpath("//tr")
+        for row in rows:
+            # Extract values from each <td> in the row
+            tds = row.xpath("td")
+            if len(tds) < 5:
+                continue  # Skip rows that don't have enough columns
 
-        case_dates_cleaned = []
-        for date_string in case_dates:
-            s = clean_string(date_string)
+            name = tds[0].xpath("a//text()")[0]
+            url = tds[0].xpath("a/@href")[0]
+            docket = tds[1].xpath(".//text()")[0]
+            date = tds[4].xpath(".//text()")[0]
+            nature = tds[3].xpath(".//text()")[0]
+
+            s = clean_string(date)
             if s == "00-00-0000" and "begin=21160" in self.url:
-                # Bad data found during backscrape.
                 s = "12-13-2006"
-            case_dates_cleaned.append(clean_string(s))
+            date_cleaned = clean_string(s)
 
-        for name, url, date, docket, nature in zip(
-            case_names,
-            download_urls,
-            case_dates_cleaned,
-            docket_numbers,
-            nature_of_suit,
-        ):
             self.cases.append(
                 {
                     "name": clean_string(name),
                     "url": url,
-                    "date": date,
+                    "date": date_cleaned,
                     "docket": clean_string(docket),
                     "status": "Published",
                     "nature_of_suit": clean_string(nature),
@@ -68,30 +56,32 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        import re
-
         pattern = re.compile(
             r"""
             (?:
-               Appeal(?:s)?\s+from\s+the\s+
-              | Petition(?:s)?\s+for\s+Review\s+of\s+(?:a\s+)?Decision\s+of\s+the\s+
+               Appeals?\s+from\s+the\s+
+              | Petitions?\s+for\s+Review\s+of\s+(?:a\s+)?Decision\s+of\s+the\s+
             )
             (?P<lower_court>[^.]+?)
             (?=\s*(?:\.|Nos?\.|USC|D.C.))
             """,
             re.X,
         )
-        match = pattern.search(scraped_text)
-        lower_court = (
-            re.sub(r"\s+", " ", match.group("lower_court")).strip()
-            if match
-            else ""
-        )
-        return {
-            "Docket": {
-                "appeal_from_str": lower_court,
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
             }
-        }
+
+        return {}
 
     def _download_backwards(self, n):
         self.url = f"http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={n}&num={n / 20 - 1}&numBegin=1"

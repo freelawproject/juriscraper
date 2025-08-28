@@ -10,6 +10,8 @@ History:
     2025-08-26: Added extract_from_text, @lmanzur.
 """
 
+import re
+
 import feedparser
 from lxml.html import fromstring
 
@@ -74,13 +76,12 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        import re
 
         pattern = re.compile(
             r"""
             (?:
-               Appeal(?:s)?\s+from\s+the\s+
-              | Petition(?:s)?\s+for\s+review\s+of\s+the\s+
+               Appeals?\s+from\s+the\s+
+              | Petitions?\s+for\s+review\s+of\s+the\s+
               | On\s+Petition\s+for\s+Writ\s+of\s+Mandamus\s+to\s+the\s+
             )
             (?P<lower_court>[^.]+?)
@@ -88,14 +89,17 @@ class Site(OpinionSiteLinear):
             """,
             re.X,
         )
-        match = pattern.search(scraped_text)
-        lower_court = (
-            re.sub(r"\s+", " ", match.group("lower_court")).strip()
-            if match
-            else ""
-        )
-        return {
-            "Docket": {
-                "appeal_from_str": lower_court,
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
             }
-        }
+        return {}

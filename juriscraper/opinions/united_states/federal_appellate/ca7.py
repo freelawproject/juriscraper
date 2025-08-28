@@ -2,6 +2,8 @@
 # CourtID: ca7
 # Court Short Name: 7th Cir.
 
+import re
+
 import feedparser
 
 from juriscraper.AbstractSite import logger
@@ -52,27 +54,28 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        import re
-
         pattern = re.compile(
             r"""
             (?:
-               Appeal(?:s)?\s+from\s+the\s+
-           | (?:On\s+)?Petition(?:s)?\s+for\s+Review\s+of\s+(?:an\s+)?Order(?:s)?\s+of\s+the\s+
+               Appeals?\s+from\s+the\s+
+           | (?:On\s+)?Petitions?\s+for\s+Review\s+of\s+(?:an\s+)?Orders?\s+of\s+the\s+
             )
             (?P<lower_court>[^.]+?)
             (?=\s*(?:\.|Nos?\.|USDC))
             """,
             re.X,
         )
-        match = pattern.search(scraped_text)
-        lower_court = (
-            re.sub(r"\s+", " ", match.group("lower_court")).strip()
-            if match
-            else ""
-        )
-        return {
-            "Docket": {
-                "appeal_from_str": lower_court,
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
             }
-        }
+        return {}
