@@ -19,7 +19,6 @@ class ScotusParseDocketTest(PacerParseTestCase):
     def test_parsing_scotus_html_dockets(self):
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "html")
         self.parse_files(path_root, "*.html", SCOTUSDocketReportHTML)
-        
 
 
 class LowerCourtCasesCleaningTest(unittest.TestCase):

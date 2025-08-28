@@ -26,6 +26,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
     EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
     ID_RE = re.compile(r"^#[A-Za-z0-9]+\b")
+    ADDRESS_NUMBER = re.compile(
+        r"\b(\d{1,6}(?:-\d{1,6})?(?:\s+\d+\/\d+)?[A-Za-z]?)\b"
+    )
     ADDRESS_RE = r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$"
 
     def __init__(self, court_id: str = "scotus"):
@@ -476,16 +479,20 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 del lines[idx]
                 break
 
-        # Title, omit lines starting with # like #1098260
-        title = None
+        title_parts = []
         start_idx = 0
+        # Parse title.
         for j, ln in enumerate(lines):
             if self.ID_RE.match(ln):
+                # Omit lines starting with # like #1098260
                 continue
-            title = ln
-            start_idx = j + 1
-            break
+            if self.ADDRESS_NUMBER.search(ln):
+                # Match the start of an address by looking for a street number.
+                start_idx = j
+                break
+            title_parts.append(ln)
 
+        title = ", ".join(title_parts)
         address_lines = lines[start_idx:] if start_idx < len(lines) else []
 
         # parse City/State/Zip
