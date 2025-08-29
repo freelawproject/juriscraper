@@ -242,40 +242,19 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             if ln:
                 filtered_lines.append(ln)
 
-        # If there are 4 lines: the title is the first 2 lines, and the address is the remaining lines.
-        # If there are 3 lines: the title is the first line, and the address is the remaining lines.
-        # If there are 2 lines: only address lines are present, no title.
-        title = None
-        if len(filtered_lines) == 4:
-            title = filtered_lines[0:2]
-            title = ", ".join(title)
-            addr_lines = filtered_lines[2:]
-        elif len(filtered_lines) == 3:
-            title = filtered_lines[0]
-            addr_lines = filtered_lines[1:]
-        else:
-            addr_lines = filtered_lines
+        title, start_add_idx = self._parse_address_title(filtered_lines)
+        partial_address = self._parse_address_lines(
+            filtered_lines, start_add_idx
+        )
 
-        # Parse city/state/zip from the last address line, if present.
-        city = state = zip_code = None
-        if addr_lines:
-            last = addr_lines[-1]
-            m = re.search(self.ADDRESS_RE, last)
-            if m:
-                city, state, zip_code = (
-                    m.group(1).strip(),
-                    m.group(2),
-                    m.group(3),
-                )
-                addr_lines = addr_lines[:-1]
-
+        addr_lines = partial_address.address_lines
         current_attorney.update(
             {
                 "title": title,
                 "address": ", ".join(addr_lines) if addr_lines else None,
-                "city": city,
-                "state": state,
-                "zip": zip_code,
+                "city": partial_address.city,
+                "state": partial_address.state,
+                "zip": partial_address.zip_code,
                 "email": email,
             }
         )

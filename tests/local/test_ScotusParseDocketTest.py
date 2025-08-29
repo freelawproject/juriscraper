@@ -28,6 +28,7 @@ class ScotusParseDocketTest(PacerParseTestCase):
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "htm")
         self.parse_files(path_root, "*.htm", SCOTUSDocketReportHTM)
 
+
 class LowerCourtCasesCleaningTest(unittest.TestCase):
     """Test the SCOTUSDocketReport clean_lower_court_cases method"""
 
