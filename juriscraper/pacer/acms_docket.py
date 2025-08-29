@@ -82,7 +82,7 @@ class ACMSDocketReport(AppellateDocketReport):
         attachment_list = self.api_client.get_attachments(
             entry_id, False, False
         )
-        if not len(attachment_list):
+        if not attachment_list:
             return None, "No documents found for the given entry."
 
         # Case: multiple documents found but no document ID provided
