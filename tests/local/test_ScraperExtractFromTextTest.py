@@ -959,6 +959,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.federal_bankruptcy.bap9": [
+            (
+                """                                                                                  FILED\n                                                                                   AUG 22 2025\n                          NOT FOR PUBLICATION                                 SUSAN M. SPRAUL, CLERK\n                                                                                 U.S. BKCY. APP. PANEL\n                                                                                 OF THE NINTH CIRCUIT\n\n           UNITED STATES BANKRUPTCY APPELLATE PANEL\n                     OF THE NINTH CIRCUIT\n\n In re:                                              BAP No. OR-24-1134-GBL\n NATALIA ALEKSANDROVNA NEAL,\n             Debtor.                                 Bk. No. 3:22-bk-31714-PCM\n\nSHARON ELIZABETH NEAL,\n             Appellant,\n v.                                                  MEMORANDUM*\n NATALIA ALEKSANDROVNA NEAL,\n             Appellee.\n\n               Appeal from the United States Bankruptcy Court\n                          for the District of Oregon\n               Peter C. McKittrick, Bankruptcy Judge, Presiding\nBefore: GAN, BRAND, and LAFFERTY, Bankruptcy Judges.\n\n                                 INTRODUCTION\nCreditor Sharon Elizabeth Neal (“Sharon”)1 appeals the bankruptcy\n\ncourt’s orders denying her motion to dismiss the chapter 13 2 case of debtor""",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States Bankruptcy Court for the District of Oregon",
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.federal_appellate.ca5": [
             (
                 "         United States Court of Appealsfor the Fifth Circuit____________United States Court of AppealsFifth CircuitNo. 25-30051Summary Calendar                                  FILED____________                                August 26, 2025Lyle W. CayceUnited States of America,                                                          ClerkPlaintiff—Appellee,versus Bobby Glenn Wall, Jr.,Defendant—Appellant.______________________________ Appeal from the United States District Court for the Middle District of Louisiana USDC No. 3:24-CR-20-2 ______________________________ Before Jones, Richman, and Duncan, Circuit Judges.Per Curiam: *Bobby Glenn Wall, Jr. pleaded guilty to the distribution of childpornography. He was sentenced above the advisory guidelines to 192 monthsof imprisonment and 15 years of supervised release. Wall challenges thesubstantive reasonableness of his sentence.",

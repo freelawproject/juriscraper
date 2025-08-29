@@ -18,6 +18,7 @@ Features:
 - Add scotus_docket_report to parse SCOTUS JSON dockets
 
 Changes:
+- Retrieve lower court information in `bap9` and `bap10` #1567
 - Add lower court extraction to `federal_appellate` scrapers #1560
 
 Fixes:
