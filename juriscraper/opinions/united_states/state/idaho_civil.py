@@ -10,7 +10,10 @@ History:
  - 2016-02-25 arderyp: Updated to catch "ORDER" (in addition to "Order") in download url text
  - 2024-12-30, grossir: updated to OpinionSiteLinear
  - 2025-07-09, luism: Updated to prevent wrongly formatted dates
+ - 2025-08-29, luism: Added extract_from_text to get lower court information
 """
+
+import re
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -75,3 +78,35 @@ class Site(OpinionSiteLinear):
                 return link.xpath("@href")[0]
 
         return row.xpath("td[4]//a/@href")[0]
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            Appeals?\s+from\s+the\s+
+            (?P<lower_court>[^.]+?)
+            (?=\s*\.)
+            """,
+            re.X | re.DOTALL,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            if "County," in lower_court:
+                lower_court = lower_court.split("County")[0] + "County"
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+
+        return {}
