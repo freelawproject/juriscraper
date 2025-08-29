@@ -453,7 +453,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         if cleaned:
             lines.append(cleaned)
 
-    def _parse_address_title(self, lines) -> tuple[str, int]:
+    def _parse_address_title(self, lines) -> tuple[Optional[str], int]:
         """Extract the party title from address lines and determine where the address begins.
 
         :param lines: A list of text lines containing the party title and address.
@@ -473,7 +473,8 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 break
             title_parts.append(ln)
 
-        return ", ".join(title_parts), start_add_idx
+        title = ", ".join(title_parts) or None
+        return title, start_add_idx
 
     def _parse_address_lines(self, lines, start_add_idx) -> ContactAddress:
         """Parse the address components starting from a given index.
