@@ -19,7 +19,7 @@ Features:
 - Add support for downloading documents from the ACMS court API.
 
 Changes:
--
+- Retrieve lower court information in `bap9` and `bap10` #1567
 
 Fixes:
 -

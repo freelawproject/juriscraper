@@ -959,6 +959,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.federal_bankruptcy.bap9": [
+            (
+                """                                                                                  FILED\n                                                                                   AUG 22 2025\n                          NOT FOR PUBLICATION                                 SUSAN M. SPRAUL, CLERK\n                                                                                 U.S. BKCY. APP. PANEL\n                                                                                 OF THE NINTH CIRCUIT\n\n           UNITED STATES BANKRUPTCY APPELLATE PANEL\n                     OF THE NINTH CIRCUIT\n\n In re:                                              BAP No. OR-24-1134-GBL\n NATALIA ALEKSANDROVNA NEAL,\n             Debtor.                                 Bk. No. 3:22-bk-31714-PCM\n\nSHARON ELIZABETH NEAL,\n             Appellant,\n v.                                                  MEMORANDUM*\n NATALIA ALEKSANDROVNA NEAL,\n             Appellee.\n\n               Appeal from the United States Bankruptcy Court\n                          for the District of Oregon\n               Peter C. McKittrick, Bankruptcy Judge, Presiding\nBefore: GAN, BRAND, and LAFFERTY, Bankruptcy Judges.\n\n                                 INTRODUCTION\nCreditor Sharon Elizabeth Neal (“Sharon”)1 appeals the bankruptcy\n\ncourt’s orders denying her motion to dismiss the chapter 13 2 case of debtor""",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States Bankruptcy Court for the District of Oregon",
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
