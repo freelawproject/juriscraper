@@ -90,6 +90,7 @@ class Site(OpinionSiteLinear):
                 author = ""
                 per_curiam = True
 
+            summary = ""
             if summary_texts := row.xpath("./div[2]/p[1]/text()"):
                 summary = " ".join(summary_texts).strip()
 
@@ -129,7 +130,8 @@ class Site(OpinionSiteLinear):
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract model fields from opinion's document text
 
-        The citation is only available in the document's text
+        Most times, the citations are available in the HTML; sometimes, they
+        are only listed on the text
 
         For case_name and docket_number, even if they are available
         in the HTML, the document's text has the best values
