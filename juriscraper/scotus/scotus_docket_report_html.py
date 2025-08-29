@@ -452,6 +452,61 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         if cleaned:
             lines.append(cleaned)
 
+    def _parse_address_title(self, lines) -> tuple[str, int]:
+        """Extract the party title from address lines and determine where the address begins.
+
+        :param lines: A list of text lines containing the party title and address.
+        :return: A twp tuple where the first element is the concatenated title
+        string and th index where the address starts.
+        """
+        title_parts = []
+        start_add_idx = 0
+        # Parse title.
+        for j, ln in enumerate(lines):
+            if self.ID_RE.match(ln):
+                # Omit lines starting with # like #1098260
+                continue
+            if self.ADDRESS_NUMBER.search(ln):
+                # Match the start of an address by looking for a street number.
+                start_add_idx = j
+                break
+            title_parts.append(ln)
+
+        return ", ".join(title_parts), start_add_idx
+
+    def _parse_address_lines(self, lines, start_add_idx) -> ContactAddress:
+        """Parse the address components starting from a given index.
+
+        :param lines: A list of text lines containing the address data.
+        :param start_add_idx: Index indicating where the address lines begin.
+        :return: A ContactAddress object.
+        """
+
+        address_lines = (
+            lines[start_add_idx:] if start_add_idx < len(lines) else []
+        )
+
+        # parse City/State/Zip
+        city = state = zip_code = None
+        if address_lines:
+            last = address_lines[-1]
+            if m := re.search(self.ADDRESS_RE, last):
+                city, state, zip_code = (
+                    m.group(1).strip(),
+                    m.group(2),
+                    m.group(3),
+                )
+                address_lines = address_lines[:-1]
+
+        return ContactAddress(
+            title=None,
+            address_lines=address_lines,
+            city=city,
+            state=state,
+            zip_code=zip_code,
+            email=None,
+        )
+
     def _parse_contacts_table_address_cell(
         self, td: HtmlElement
     ) -> ContactAddress:
@@ -479,40 +534,15 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 del lines[idx]
                 break
 
-        title_parts = []
-        start_idx = 0
-        # Parse title.
-        for j, ln in enumerate(lines):
-            if self.ID_RE.match(ln):
-                # Omit lines starting with # like #1098260
-                continue
-            if self.ADDRESS_NUMBER.search(ln):
-                # Match the start of an address by looking for a street number.
-                start_idx = j
-                break
-            title_parts.append(ln)
-
-        title = ", ".join(title_parts)
-        address_lines = lines[start_idx:] if start_idx < len(lines) else []
-
-        # parse City/State/Zip
-        city = state = zip_code = None
-        if address_lines:
-            last = address_lines[-1]
-            if m := re.search(self.ADDRESS_RE, last):
-                city, state, zip_code = (
-                    m.group(1).strip(),
-                    m.group(2),
-                    m.group(3),
-                )
-                address_lines = address_lines[:-1]
+        title, start_add_idx = self._parse_address_title(lines)
+        partial_address = self._parse_address_lines(lines, start_add_idx)
 
         return ContactAddress(
             title=title,
-            address_lines=address_lines,
-            city=city,
-            state=state,
-            zip_code=zip_code,
+            address_lines=partial_address.address_lines,
+            city=partial_address.city,
+            state=partial_address.state,
+            zip_code=partial_address.zip_code,
             email=email,
         )
 
