@@ -339,6 +339,6 @@ class AcmsApiClient:
             break
 
         # Step 3: Retrieve the merged PDF by its file ID
-        response = self.session.get(f"{get_pdf_path}/?fileGuid={pdf_id}")
+        response = self.session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
         response.raise_for_status()
         return response
