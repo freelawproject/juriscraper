@@ -998,6 +998,45 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.ariz": [
+            (
+                "IN THE\n\n   SUPREME COURT OF THE STATE OF ARIZONA\n\n          PHOENIX UNION HIGH SCHOOL DISTRICT NO. 210,\n                          Petitioner,\n\n                                  v.\n\n  THE HON. JOAN M. SINCLAIR, JUDGE OF THE SUPERIOR COURT OF THE\n      STATE OF ARIZONA, IN AND FOR THE COUNTY OF MARICOPA,\n                            Respondent,\n\n                                And\n\nCHRISTOPHER A. LUCERO, A MINOR CHILD, BY AND THROUGH HIS NATURAL\n                 FATHER, CHRISTOPHER J. LUCERO,\n                       Real Party in Interest.\n\n\n\n\n                         No. CV-24-0307-PR\n                         Filed July 15, 2025\n\n\nPetition for Special Action from the Superior Court in Maricopa County\n                 The Honorable Joan M. Sinclair, Judge\n                           No. CV2022-005719\n\n      REVERSED AND REMANDED WITH INSTRUCTIONS\n\n\n           Order from the Court of Appeals, Division One\n                         1 CA-SA 24-0205\n                      Filed December 4, 2024\n\n                             VACATED\n                   PUSD 210 V. HON. SINCLAIR/LUCERO\n                         Opinion of the Court",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Honorable Joan M. Sinclair"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arizctapp_div_1": [
+            (
+                "IN THE\n\n   SUPREME COURT OF THE STATE OF ARIZONA\n\n          PHOENIX UNION HIGH SCHOOL DISTRICT NO. 210,\n                          Petitioner,\n\n                                  v.\n\n  THE HON. JOAN M. SINCLAIR, JUDGE OF THE SUPERIOR COURT OF THE\n      STATE OF ARIZONA, IN AND FOR THE COUNTY OF MARICOPA,\n                            Respondent,\n\n                                And\n\nCHRISTOPHER A. LUCERO, A MINOR CHILD, BY AND THROUGH HIS NATURAL\n                 FATHER, CHRISTOPHER J. LUCERO,\n                       Real Party in Interest.\n\n\n\n\n                         No. CV-24-0307-PR\n                         Filed July 15, 2025\n\n\nPetition for Special Action from the Superior Court in Maricopa County\n                 The Honorable Joan M. Sinclair, Judge\n                           No. CV2022-005719\n\n      REVERSED AND REMANDED WITH INSTRUCTIONS\n\n\n           Order from the Court of Appeals, Division One\n                         1 CA-SA 24-0205\n                      Filed December 4, 2024\n\n                             VACATED\n                   PUSD 210 V. HON. SINCLAIR/LUCERO\n                         Opinion of the Court",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Honorable Joan M. Sinclair"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arizctapp_div_2": [
+            (
+                "IN THE\n\n   SUPREME COURT OF THE STATE OF ARIZONA\n\n          PHOENIX UNION HIGH SCHOOL DISTRICT NO. 210,\n                          Petitioner,\n\n                                  v.\n\n  THE HON. JOAN M. SINCLAIR, JUDGE OF THE SUPERIOR COURT OF THE\n      STATE OF ARIZONA, IN AND FOR THE COUNTY OF MARICOPA,\n                            Respondent,\n\n                                And\n\nCHRISTOPHER A. LUCERO, A MINOR CHILD, BY AND THROUGH HIS NATURAL\n                 FATHER, CHRISTOPHER J. LUCERO,\n                       Real Party in Interest.\n\n\n\n\n                         No. CV-24-0307-PR\n                         Filed July 15, 2025\n\n\nPetition for Special Action from the Superior Court in Maricopa County\n                 The Honorable Joan M. Sinclair, Judge\n                           No. CV2022-005719\n\n      REVERSED AND REMANDED WITH INSTRUCTIONS\n\n\n           Order from the Court of Appeals, Division One\n                         1 CA-SA 24-0205\n                      Filed December 4, 2024\n\n                             VACATED\n                   PUSD 210 V. HON. SINCLAIR/LUCERO\n                         Opinion of the Court",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Honorable Joan M. Sinclair"
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):

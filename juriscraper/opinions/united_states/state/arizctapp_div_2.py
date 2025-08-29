@@ -7,13 +7,17 @@ Reviewer: mlr
 History:
     2014-07-23: Created by Andrei Chelaru
     2021-12-10: URL changed to recent opinions page, satsuki-chan
+    2025-08-29: Use ariz.Site.extract_from_text, Luis Manzur
 """
 
 from juriscraper.lib.string_utils import clean_if_py3, titlecase
+from juriscraper.opinions.united_states.state import ariz
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    extract_from_text = ariz.Site.extract_from_text
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
