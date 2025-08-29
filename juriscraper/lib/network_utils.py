@@ -291,8 +291,8 @@ class AcmsApiClient:
         document_id: str,
         page_count: int,
         document_url: str,
-        max_attempts: int = 60,
-        poll_interval: float = 2.0,
+        max_attempts: int = 90,
+        poll_interval: float = 1.0,
     ):
         """
         Requests generation and download of a merged PDF from the remote API.
