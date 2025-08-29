@@ -329,6 +329,7 @@ class AcmsApiClient:
         # Step 2: Poll until the merge job is completed
         while True:
             response = self.session.get(status_url)
+            response.raise_for_status()
             data = response.json()
             status = data["runtimeStatus"].lower()
             if status != "completed":
@@ -339,4 +340,5 @@ class AcmsApiClient:
 
         # Step 3: Retrieve the merged PDF by its file ID
         response = self.session.get(f"{get_pdf_path}/?fileGuid={pdf_id}")
+        response.raise_for_status()
         return response
