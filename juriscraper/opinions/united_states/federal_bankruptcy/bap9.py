@@ -18,6 +18,9 @@ class Site(OpinionSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     days_interval = 31
     first_opinion_date = datetime(2005, 1, 6)
+    lower_court_regex = re.compile(
+        r"Appeals? from the (?P<lower_court>.+\n.+)"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -116,7 +119,7 @@ class Site(OpinionSiteLinear):
                 if d > self.end_date:
                     continue
             except ValueError:
-                logger.debug("Skipping row with bad date data")
+                logger.debug("Skipping row with bad date data %s", item)
                 continue
 
             slug = item.get("file_name").get("S")
@@ -141,33 +144,10 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-
-        pattern = re.compile(
-            r"""
-             Appeals?\s+from\s+the\s+
-            (?P<lower_court>[^.]+?)
-            (?=\s*(?:\.|(?:in\s+)?Nos?\.))
-            """,
-            re.X,
-        )
-
-        lower_court = ""
-        if match := pattern.search(scraped_text):
+        if match := self.lower_court_regex.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
-
-        # Lower court names often have additional and unwanted information after "of"
-        if "of" in lower_court:
-            parts = lower_court.split()
-            try:
-                idx = parts.index("of")
-                if idx + 1 < len(parts):
-                    lower_court = " ".join(parts[: idx + 2])
-            except ValueError:
-                pass
-
-        if lower_court:
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,
