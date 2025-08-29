@@ -24,6 +24,11 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     def _process_html(self):
+        """Process the html and extract out the opinions
+
+        :return: None
+        """
+
         for row in self.html.xpath(self.base_path):
             docket = row.xpath("./td[1]/a/text()")[0].strip()
             url = row.xpath("./td[1]/a/@href")[0].strip()
