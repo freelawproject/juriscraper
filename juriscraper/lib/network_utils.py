@@ -287,7 +287,12 @@ class AcmsApiClient:
         ]
 
     def download_pdf(
-        self, document_id: str, page_count: int, document_url: str
+        self,
+        document_id: str,
+        page_count: int,
+        document_url: str,
+        max_attempts: int = 60,
+        poll_interval: float = 2.0,
     ):
         """
         Requests generation and download of a merged PDF from the remote API.
@@ -299,6 +304,8 @@ class AcmsApiClient:
         :param document_id: identifier of the document in the ACMS system.
         :param page_count: number of pages in the document.
         :param document_url: The URL where the source document can be accessed.
+        :param max_attempts: Maximum number of polling attempts before timing out.
+        :param poll_interval: Seconds to wait between polling attempts.
         :return: The HTTP response containing the merged PDF file.
         """
         # API endpoints for merge and retrieval
@@ -326,17 +333,23 @@ class AcmsApiClient:
         # Extract URL to check merge job status
         status_url = data["statusQueryGetUri"]
 
-        # Step 2: Poll until the merge job is completed
-        while True:
+        # Step 2: Poll until the merge job is completed or timeout
+        for _ in range(max_attempts):
             response = self.session.get(status_url)
             response.raise_for_status()
             data = response.json()
             status = data["runtimeStatus"].lower()
-            if status != "completed":
-                # Job still running, keep polling
-                continue
-            pdf_id = data["output"]
-            break
+
+            if status == "completed":
+                pdf_id = data["output"]
+                break
+
+            time.sleep(poll_interval)
+        else:
+            # If loop completes without break
+            raise TimeoutError(
+                f"Merge job did not complete after {max_attempts} attempts."
+            )
 
         # Step 3: Retrieve the merged PDF by its file ID
         response = self.session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
