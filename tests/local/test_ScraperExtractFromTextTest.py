@@ -1157,6 +1157,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.dc": [
+            (
+                "Notice: This opinion is subject to formal revision before publication in the Atlantic\nand Maryland Reporters. Users are requested to notify the Clerk of the Court of\nany formal errors so that corrections may be made before the bound volumes go\nto press.\n\n             DISTRICT OF COLUMBIA COURT OF APPEALS\n\n                                 No. 24-BG-0090\n\n                      IN RE CRAIG A. BUTLER, RESPONDENT.\n\n                         A Suspended Member of the Bar\n                   of the District of Columbia Court of Appeals\n                          (Bar Registration No. 451320)\n\n                          On Report and Recommendation\n                    of the Board on Professional Responsibility\n\n                    (BDN: 22-BD-003; DDN: 2018-D024, etc.)\n\n(Argued January 7, 2025                                    Decided August 7, 2025)\n\n      Johnny M. Howard for respondent.\n\n      Theodore (Jack) Metzler, Senior Assistant Disciplinary Counsel, with whom\nHamilton P. Fox, III, Disciplinary Counsel, Julia L. Porter, Deputy Disciplinary\nCounsel, and Sean O’Brien, Assistant Disciplinary Counsel, were on the brief, for\nthe Office of Disciplinary Counsel.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board on Professional Responsibility",
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
