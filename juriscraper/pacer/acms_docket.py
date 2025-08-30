@@ -3,6 +3,9 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
+from typing import Optional
+
+from requests import Response
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -54,6 +57,62 @@ class ACMSDocketReport(AppellateDocketReport):
             "caseDetails": case_data,
             "docketInfo": entry_details,
         }
+
+    def download_pdf(
+        self, entry_id: str, doc_id: str
+    ) -> tuple[Optional[Response], str]:
+        """
+        Downloads a PDF for a given docket entry and document ID.
+
+        This method retrieves the list of documents associated with the given
+        entry, validates the provided document ID, and then requests the PDF
+        download from the API client.
+
+        :param entry_id: The identifier of the docket entry.
+        :param doc_id: The identifier of the document within the entry.
+                    If not provided and only one document exists,
+                    that document is used by default.
+        :return: A tuple containing:
+                - Response object if the PDF download was successful, otherwise
+                 None.
+                - An error message string if an issue occurred, otherwise an
+                 empty string.
+        """
+        # Fetch all documents for given entry
+        attachment_list = self.api_client.get_attachments(
+            entry_id, False, False
+        )
+        if not attachment_list:
+            return None, "No documents found for the given entry."
+
+        # Case: multiple documents found but no document ID provided
+        if not doc_id and len(attachment_list) > 1:
+            error_message = (
+                "Multiple documents found for this entry. Please "
+                "provide a document ID."
+            )
+            return None, error_message
+
+        # Determine which document data to use
+        if not doc_id:
+            doc_data = attachment_list[0]
+        else:
+            doc_data = next(
+                filter(
+                    lambda v: v["docketDocumentDetailsId"] == doc_id,
+                    attachment_list,
+                ),
+                None,
+            )
+            if not doc_data:
+                return None, f"Document ID '{doc_id}' not found in this entry."
+
+        r = self.api_client.download_pdf(
+            doc_data["docketDocumentDetailsId"],
+            doc_data["pageCount"],
+            doc_data["documentUrl"],
+        )
+        return r, ""
 
     @property
     def metadata(self):

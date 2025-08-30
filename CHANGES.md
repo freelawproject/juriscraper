@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add scotus_docket_report to parse SCOTUS JSON dockets
+- Add support for downloading documents from the ACMS court API.
 
 Changes:
 - Retrieve lower court information in `bap9` and `bap10` #1567
