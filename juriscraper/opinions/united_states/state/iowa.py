@@ -1,6 +1,7 @@
 # Scraper for Iowa Supreme Court
 # CourtID: iowa
 # Court Short Name: iowa
+import re
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
@@ -124,3 +125,37 @@ class Site(OpinionSite):
         path = '//div[contains(./@class, "pagination-next-page")]//a/@href'
         elements = html.xpath(path)
         return elements[0] if elements else False
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (?:
+               Appeals?\s+from\s+the\s+
+              | On\s+review\s+of\s+the\s+report\s+of\s+the\s+
+              | On\s+application\s+of\s+the\s+
+            )
+            (?P<lower_court>[^.,]+?)
+            (?=\s*(?:\.|,))
+            """,
+            re.X | re.IGNORECASE,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+
+        return {}
