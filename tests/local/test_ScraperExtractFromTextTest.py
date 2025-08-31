@@ -1247,6 +1247,26 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.ky": [
+            (
+                "\n                                                   RENDERED: JUNE 20, 2025\n                                                             TO BE PUBLISHED\n\n\n                Supreme Court of Kentucky\n                                 2023-SC-0124-MR\n\n\nEARL K.JOHNSON                                                          APPELLANT\n\n\n                 ON APPEAL FROM LOGAN CIRCUIT COURT\nV.HONORABLE JOE W.HENDRICKS, JR., JUDGE\n                            NO.19-CR-00158\n\n\nCOMMONWEALTH OF KENTUCKY                                                   APPELLEE\n\n\n\n              OPINION OF THE COURT BY JUSTICE THOMPSON\n\n       AFFIRMING IN PART, REVERSING IN PART, AND REMANDING\n\n      Earl K.Johnson was convicted after a jury trial on four counts of\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Logan Circuit Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.kyctapp": [
+            (
+                "\n                                                   RENDERED: JUNE 20, 2025\n                                                             TO BE PUBLISHED\n\n\n                Supreme Court of Kentucky\n                                 2023-SC-0124-MR\n\n\nEARL K.JOHNSON                                                          APPELLANT\n\n\n                 ON APPEAL FROM LOGAN CIRCUIT COURT\nV.HONORABLE JOE W.HENDRICKS, JR., JUDGE\n                            NO.19-CR-00158\n\n\nCOMMONWEALTH OF KENTUCKY                                                   APPELLEE\n\n\n\n              OPINION OF THE COURT BY JUSTICE THOMPSON\n\n       AFFIRMING IN PART, REVERSING IN PART, AND REMANDING\n\n      Earl K.Johnson was convicted after a jury trial on four counts of\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Logan Circuit Court",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
