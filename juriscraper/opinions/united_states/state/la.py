@@ -5,7 +5,7 @@
 #          Robert Gunn
 #          504-310-2592
 #          rgunn@lasc.org
-
+import re
 from datetime import date
 from urllib.parse import urljoin
 
@@ -94,3 +94,34 @@ class Site(OpinionSiteLinear):
         path = ".//textarea[@id='PostContent']"
         html = page.xpath(path)[0].text_content()
         return get_html_parsed_text(html)
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (?:
+               On\s+Writ\s+of\s+Certiorari\s+to\s+the\s+
+               |On\s+Supervisory\s+Writ\s+to\s+the\s+
+            )
+            (?P<lower_court>.*?)\n\s*\n
+            """,
+            re.X | re.DOTALL)
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+
+        return {}
