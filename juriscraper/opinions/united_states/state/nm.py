@@ -125,14 +125,17 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
+        metadata = {}
         docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
-        if not docket_number:
-            logger.error("nm: unable to extract_from_text a docket_number")
-            return {}
+        if docket_number:
+            metadata.setdefault("OpinionCluster", {})["docket_number"] =  docket_number[0]
 
-        metadata = {
-            "OpinionCluster": {
-                "docket_number": docket_number[0],
-            },
-        }
+        lower_court_regex = re.compile(r"APPEAL FROM THE (?P<lower_court>.+\n)")
+
+        if match := lower_court_regex.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            metadata.setdefault("Docket", {})["appeal_from_str"] = titlecase(lower_court)
+
         return metadata
