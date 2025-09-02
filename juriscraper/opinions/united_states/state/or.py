@@ -142,8 +142,28 @@ class Site(OpinionSiteLinear):
         See, for example:
         https://ojd.contentdm.oclc.org/digital/api/collection/p17027coll5/id/28946/download
         """
+        pattern = re.compile(
+            r"""
+                    (?:
+                        review\s+from\s+the\s+
+                        |On\s+appeal\s+from\s+the\s+
+                     )
+                    (?P<lower_court>[^.]+?)
+                    (?=\s*(?:\.|,))
+                    """,
+            re.X,
+        )
         regex = r"\n\s+(?P<cite>\d+ P3d \d+)\s+\n"
-        if match := re.search(regex, scraped_text[:1000]):
-            return {"Citation": match.group("cite")}
 
-        return {}
+        result = {}
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            if lower_court:
+                result["Docket"] = {"appeal_from_str": lower_court}
+
+        if match := re.search(regex, scraped_text[:1000]):
+            result["Citation"] = match.group("cite")
+
+        return result
