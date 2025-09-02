@@ -2,6 +2,8 @@
 # CourtID: ca7
 # Court Short Name: 7th Cir.
 
+import re
+
 import feedparser
 
 from juriscraper.AbstractSite import logger
@@ -45,3 +47,35 @@ class Site(OpinionSiteLinear):
                     "per_curiam": per_curiam,
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (?:
+               Appeals?\s+from\s+the\s+
+           | (?:On\s+)?Petitions?\s+for\s+Review\s+of\s+(?:an\s+)?Orders?\s+of\s+the\s+
+            )
+            (?P<lower_court>[^.]+?)
+            (?=\s*(?:\.|Nos?\.|USDC))
+            """,
+            re.X,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+        return {}

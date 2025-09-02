@@ -1,1 +1,41 @@
-<rss version="2.0" xml:base="https://www.ca10.uscourts.gov/opinions-page" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">\n  <channel>\n    <title>Tenth Circuit Daily Decisions</title>\n    <link>https://www.ca10.uscourts.gov/opinions-page\n    <description>A feed of decisions posted by the United States Court of Appeals for the 10th Circuit</description>\n    <language>en</language>\n     <link href="https://www.ca10.uscourts.gov/opinions/new/daily_decisions.rss" rel="self" type="application/rss+xml">\n      <item>\n    <title>United States v. Taylor</title>\n    <link>https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010110951897.pdf\n    <description>Docket#: 22-6114 - Date Issued: Tue Nov 14 2023 - Published Opinion</description>\n     <pubdate>Tue, 14 Nov 2023 08:40:01 -0700</pubdate>\n <creator>United States District Court for the Western District of Oklahoma - Oklahoma City</creator>\n <guid ispermalink="false">11044335</guid>\n  </item>\n  <item>\n    <title>Duran, et al. v. Budaj, et al.</title>\n    <link>https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010110951925.pdf\n    <description>Docket#: 22-1365 - Date Issued: Tue Nov 14 2023 - Published Opinion</description>\n     <pubdate>Tue, 14 Nov 2023 09:20:01 -0700</pubdate>\n <creator>United States District Court for the District of Colorado - Denver</creator>\n <guid ispermalink="false">11044352</guid>\n  </item>\n  </channel>\n</rss>
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.ca10.uscourts.gov/opinions-page" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Tenth Circuit Daily Decisions</title>
+    <link>https://www.ca10.uscourts.gov/opinions-page</link>
+    <description>A feed of decisions posted by the United States Court of Appeals for the 10th Circuit</description>
+    <language>en</language>
+     <atom:link href="https://www.ca10.uscourts.gov/opinions/new/daily_decisions.rss" rel="self" type="application/rss+xml" />
+      <item>
+    <title>United States v. Clay</title>
+    <link>https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111288732.pdf</link>
+    <description>Docket#: 24-2057 - Date Issued: Tue Aug 26 2025 - Published Opinion</description>
+     <pubDate>Tue, 26 Aug 2025 08:40:02 -0600</pubDate>
+ <dc:creator>United States District Court for the District of New Mexico - Las Cruces</dc:creator>
+ <guid isPermaLink="false">11208556</guid>
+  </item>
+  <item>
+    <title>Gaddy, et al. v. Corp. of the President of the Church of Jesus, et al.</title>
+    <link>https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111288755.pdf</link>
+    <description>Docket#: 23-4110 - Date Issued: Tue Aug 26 2025 - Published Opinion</description>
+     <pubDate>Tue, 26 Aug 2025 09:00:01 -0600</pubDate>
+ <dc:creator>United States District Court for the District of Utah - Salt Lake City</dc:creator>
+ <guid isPermaLink="false">11208569</guid>
+  </item>
+  <item>
+    <title>O.C.V., et al. v. Bondi</title>
+    <link>https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111288784.pdf</link>
+    <description>Docket#: 23-9609 - Date Issued: Tue Aug 26 2025 - Published Opinion</description>
+     <pubDate>Tue, 26 Aug 2025 09:00:01 -0600</pubDate>
+ <dc:creator>Board of Immigration Appeals</dc:creator>
+ <guid isPermaLink="false">11208580</guid>
+  </item>
+  <item>
+    <title>United States v. Valdivias</title>
+    <link>https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111288942.pdf</link>
+    <description>Docket#: 24-3179 - Date Issued: Tue Aug 26 2025 - Unpublished Order and Judgment</description>
+     <pubDate>Tue, 26 Aug 2025 10:20:02 -0600</pubDate>
+ <dc:creator>United States District Court for the District of Kansas - Kansas City</dc:creator>
+ <guid isPermaLink="false">11208671</guid>
+  </item>
+  </channel>
+</rss>

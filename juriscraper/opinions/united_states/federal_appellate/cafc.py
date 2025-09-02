@@ -7,7 +7,10 @@ Type:
 History:
     2016-05-10: Created by Dave Voutila, @voutilad
     2021-01-24: Item's title split fixed to extract opinions name, @satsuki-chan
+    2025-08-26: Added extract_from_text, @lmanzur.
 """
+
+import re
 
 import feedparser
 from lxml.html import fromstring
@@ -66,3 +69,37 @@ class Site(OpinionSiteLinear):
         else:
             status = "Unknown"
         return status
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+
+        pattern = re.compile(
+            r"""
+            (?:
+               Appeals?\s+from\s+the\s+
+              | Petitions?\s+for\s+review\s+of\s+the\s+
+              | On\s+Petition\s+for\s+Writ\s+of\s+Mandamus\s+to\s+the\s+
+            )
+            (?P<lower_court>[^.]+?)
+            (?=\s*(?:\.|(?:in\s+)?Nos?\.))
+            """,
+            re.X,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+        return {}
