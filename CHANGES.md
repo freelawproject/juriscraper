@@ -22,7 +22,7 @@ Changes:
 - Retrieve lower court information in `bap9` and `bap10` #1567
 
 Fixes:
--
+- fix `cafc` oral arguments scraper #1570
 
 ## Current
 
