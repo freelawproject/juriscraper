@@ -15,6 +15,19 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.89 - 2025-09-02**
+
+Features:
 - Add scotus_docket_report to parse SCOTUS JSON dockets
 - Add support for downloading documents from the ACMS court API.
 
@@ -24,7 +37,7 @@ Changes:
 Fixes:
 - fix `cafc` oral arguments scraper #1570
 
-## Current
+## Past
 
 **2.6.88 - 2025-08-27**
 
@@ -34,7 +47,6 @@ Features:
 Fixes:
 - Fix `nd` use empty string when no summary is found #1561
 
-## Past
 
 **2.6.87 - 2025-08-25**
 
