@@ -116,9 +116,15 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             )
         )
 
-        #Questions Presented
-        questions_presented_label = self.tree.xpath("//tr[td[1][starts-with(normalize-space(.), 'Questions Presented')]]//a[@href]")
-        questions_presented_val = questions_presented_label[0].get("href") if questions_presented_label else None
+        # Questions Presented
+        questions_presented_label = self.tree.xpath(
+            "//tr[td[1][starts-with(normalize-space(.), 'Questions Presented')]]//a[@href]"
+        )
+        questions_presented_val = (
+            questions_presented_label[0].get("href")
+            if questions_presented_label
+            else None
+        )
 
         return {
             "docket_number": docket_number,
