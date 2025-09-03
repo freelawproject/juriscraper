@@ -105,7 +105,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied_date,
-            "questions_presented": None, # HTM version doesn’t have this link.
+            "questions_presented": None,  # HTM version doesn’t have this link.
             "discretionary_court_decision": None,
         }
 
