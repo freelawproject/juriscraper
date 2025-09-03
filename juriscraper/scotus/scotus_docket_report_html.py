@@ -6,6 +6,7 @@ from typing import Any, Optional
 from lxml import html
 from lxml.html import HtmlElement
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReport
@@ -116,6 +117,16 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             )
         )
 
+        # Questions Presented
+        questions_presented_label = self.tree.xpath(
+            "//tr[td[1][starts-with(normalize-space(.), 'Questions Presented')]]//a[@href]"
+        )
+        questions_presented_val = (
+            questions_presented_label[0].get("href")
+            if questions_presented_label
+            else None
+        )
+
         return {
             "docket_number": docket_number,
             "capital_case": None,
@@ -127,6 +138,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied,
+            "questions_presented": questions_presented_val or None,
             "discretionary_court_decision": discretionary_court_decision,
         }
 
@@ -165,6 +177,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         date_str: str,
         description_td: Optional[HtmlElement],
         attachment_path: str,
+        table_layout: bool = False,
     ) -> dict[str, Any]:
         """Build a normalized docket entry dict.
 
@@ -172,6 +185,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :param description_td: The <td> element containing the description.
         :param attachment_path: XPath to select attachment anchors inside the
         description cell.
+        :param table_layout: If parsing a table layout docket.
         :return: Dict with date_filed, description, description_html, attachments.
         """
         description_html = ""
@@ -189,6 +203,13 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 href = a.get("href")
                 if not href:
                     continue
+
+                if table_layout and href:
+                    logger.error(
+                        "Found a potential attachment in a table-layout docket. "
+                        "This could be an opportunity to add support for it."
+                    )
+
                 short_desc = self._clean_whitespace(
                     (a.text or a.get("title") or "").strip()
                 )
@@ -272,6 +293,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                     date_str=date_str,
                     description_td=text_td,
                     attachment_path=".//a[@href]",
+                    table_layout=True,
                 )
             )
 
