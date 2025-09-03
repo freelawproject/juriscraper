@@ -8,6 +8,7 @@ History:
     2014-09-01: First draft by Jon Andersen
     2014-09-02: Revised by mlr to use _clean_text() instead of pushing logic
                 into the _get_case_dates function.
+    2025-08-28, lmanzur: Retrieve lower_court.
 """
 
 from datetime import date, datetime, timedelta
@@ -38,6 +39,9 @@ class Site(OpinionSiteLinear):
                     "docket": row.xpath(".//td")[0].text_content().strip(),
                     "name": row.xpath(".//td")[1].text_content().strip(),
                     "date": row.xpath(".//td")[2].text_content().strip(),
+                    "lower_court": row.xpath(".//td")[3]
+                    .text_content()
+                    .strip(),
                     "url": row.xpath(".//a/@href")[0],
                     "status": "Published",
                 }

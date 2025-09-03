@@ -53,6 +53,8 @@ class AcmsApiClient:
     CASE_DETAILS_ENDPOINT = "CaseDetailsByCaseId/{case_id}"
     DOCKET_ENTRIES_ENDPOINT = "DocketEntriesByCaseId/{case_id}"
     ATTACHMENTS_ENDPOINT = "DocketEntryDocumentsByDocketId/{entry_id}"
+    MERGE_PDF_ENDPOINT = "MergePDFFiles/"
+    GET_PDF_ENDPOINT = "GetMergedFile/"
 
     def __init__(self, session: Session, court_id: str):
         self.session = session
@@ -283,3 +285,73 @@ class AcmsApiClient:
             self._map_docket_entry_document(attachment)
             for attachment in raw_attachments
         ]
+
+    def download_pdf(
+        self,
+        document_id: str,
+        page_count: int,
+        document_url: str,
+        max_attempts: int = 90,
+        poll_interval: float = 1.0,
+    ):
+        """
+        Requests generation and download of a merged PDF from the remote API.
+
+        This method sends a request to merge a document, polls the status
+        of the operation until it is completed, and then retrieves the PDF file
+        from the API.
+
+        :param document_id: identifier of the document in the ACMS system.
+        :param page_count: number of pages in the document.
+        :param document_url: The URL where the source document can be accessed.
+        :param max_attempts: Maximum number of polling attempts before timing out.
+        :param poll_interval: Seconds to wait between polling attempts.
+        :return: The HTTP response containing the merged PDF file.
+        """
+        # API endpoints for merge and retrieval
+        merge_pdf_path = f"{self.base_url}{self.MERGE_PDF_ENDPOINT}"
+        get_pdf_path = f"{self.base_url}{self.GET_PDF_ENDPOINT}"
+
+        # Request body specifying the document to merge
+        body = {
+            "header": True,
+            "mergeScope": "External",
+            "pagination": False,
+            "docketEntryDocuments": [
+                {
+                    "acms_docketdocumentdetailsid": document_id,
+                    "acms_documenturl": document_url,
+                    "acms_pagecount": page_count,
+                }
+            ],
+        }
+        # Step 1: Request PDF merge operation
+        response = self.session.post(merge_pdf_path, json=body)
+        response.raise_for_status()
+        data = response.json()
+
+        # Extract URL to check merge job status
+        status_url = data["statusQueryGetUri"]
+
+        # Step 2: Poll until the merge job is completed or timeout
+        for _ in range(max_attempts):
+            response = self.session.get(status_url)
+            response.raise_for_status()
+            data = response.json()
+            status = data["runtimeStatus"].lower()
+
+            if status == "completed":
+                pdf_id = data["output"]
+                break
+
+            time.sleep(poll_interval)
+        else:
+            # If loop completes without break
+            raise TimeoutError(
+                f"Merge job did not complete after {max_attempts} attempts."
+            )
+
+        # Step 3: Retrieve the merged PDF by its file ID
+        response = self.session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
+        response.raise_for_status()
+        return response
