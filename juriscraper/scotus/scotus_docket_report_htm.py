@@ -105,6 +105,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied_date,
+            "questions_presented": None, # HTM version doesn’t have this link.
             "discretionary_court_decision": None,
         }
 
@@ -211,17 +212,11 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     def _build_htm_attorney(
         self,
         current_attorney: Optional[dict[str, Any]],
-        current_type: Optional[str],
-        current_party_name: str,
-        parties_by_key: dict[tuple[str, str], list],
     ) -> Optional[dict[str, Any]]:
         """Complete an attorney dict from the HTM Contacts table.
 
         :param current_attorney: The in-progress attorney dict with initial values.
-        :param current_type: Current section type ('Petitioner', 'Respondent', or 'Other').
-        :param current_party_name: The party name that this attorney belongs to.
-        :param parties_by_key: parties by type-party for grouping.
-        :return: None. The current_attorney is modified in place.
+        :return: The current_attorney dict.
         """
         if current_attorney is None:
             return None
@@ -258,9 +253,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 "email": email,
             }
         )
-        type_key = (current_type or "Other", current_party_name)
-        parties_by_key[type_key].append(current_attorney)
-        return None
+        return current_attorney
 
     @property
     def parties(self) -> list[dict[str, Any]]:
@@ -293,14 +286,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             )
             if header_text:
                 # Inside Petitioner, Respondent or Other parties.
-                parties_header = header_text.lower()
-                current_type = (
-                    "Petitioner"
-                    if "petitioner" in parties_header
-                    else "Respondent"
-                    if "respondent" in parties_header
-                    else "Other"
-                )
+                current_type = self._map_contacts_header_to_type(header_text)
                 continue
 
             # Party name row. Finish previous attorney.
@@ -313,10 +299,9 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 if current_attorney:
                     current_attorney = self._build_htm_attorney(
                         current_attorney,
-                        current_type,
-                        current_party_name,
-                        parties_by_key,
                     )
+                    type_key = (current_type or "Other", current_party_name)
+                    parties_by_key[type_key].append(current_attorney)
                 continue
 
             tds = tr.xpath("./td")
