@@ -32,6 +32,8 @@ class SCOTUSDocketReport:
         ],
     }
 
+    SCOTUS_BASE_URL = "https://www.supremecourt.gov"
+
     def __init__(self, court_id: str = "scotus"):
         self._scotus_json = None
 
@@ -84,6 +86,9 @@ class SCOTUSDocketReport:
             "LowerCourtRehearingDenied", ""
         )
         links = scotus_data.get("Links", "").replace("Linked with", "").strip()
+        questions_presented_raw = scotus_data.get("QPLink", "")
+        questions_presented = re.sub(r"^\.\.", self.SCOTUS_BASE_URL, questions_presented_raw)
+
         return {
             "docket_number": docket_number,
             "capital_case": scotus_data.get("bCapitalCase"),
@@ -105,6 +110,7 @@ class SCOTUSDocketReport:
             "lower_court_rehearing_denied_date": self.normalize_date(
                 lower_court_rehearing_denied_date
             ),
+            "questions_presented":questions_presented or None,
             "discretionary_court_decision": self.normalize_date(
                 scotus_data.get("DiscretionaryCourtDecision", "")
             ),
