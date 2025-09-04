@@ -959,55 +959,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
-        "juriscraper.opinions.united_states.federal_bankruptcy.bap9": [
-            (
-                """                                                                                  FILED\n                                                                                   AUG 22 2025\n                          NOT FOR PUBLICATION                                 SUSAN M. SPRAUL, CLERK\n                                                                                 U.S. BKCY. APP. PANEL\n                                                                                 OF THE NINTH CIRCUIT\n\n           UNITED STATES BANKRUPTCY APPELLATE PANEL\n                     OF THE NINTH CIRCUIT\n\n In re:                                              BAP No. OR-24-1134-GBL\n NATALIA ALEKSANDROVNA NEAL,\n             Debtor.                                 Bk. No. 3:22-bk-31714-PCM\n\nSHARON ELIZABETH NEAL,\n             Appellant,\n v.                                                  MEMORANDUM*\n NATALIA ALEKSANDROVNA NEAL,\n             Appellee.\n\n               Appeal from the United States Bankruptcy Court\n                          for the District of Oregon\n               Peter C. McKittrick, Bankruptcy Judge, Presiding\nBefore: GAN, BRAND, and LAFFERTY, Bankruptcy Judges.\n\n                                 INTRODUCTION\nCreditor Sharon Elizabeth Neal (“Sharon”)1 appeals the bankruptcy\n\ncourt’s orders denying her motion to dismiss the chapter 13 2 case of debtor""",
-                {
-                    "Docket": {
-                        "appeal_from_str": "United States Bankruptcy Court for the District of Oregon",
-                    },
-                },
-            ),
-        ],
-        "juriscraper.opinions.united_states.state.alaska": [
-            (
-                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
-                {
-                    "Docket": {
-                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
-                    },
-                    "OriginatingCourtInformation": {
-                        "assigned_to_str": "Josie Garton"
-                    },
-                },
-            ),
-        ],
-        "juriscraper.opinions.united_states.state.alaskactapp": [
-            (
-                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
-                {
-                    "Docket": {
-                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
-                    },
-                    "OriginatingCourtInformation": {
-                        "assigned_to_str": "Josie Garton"
-                    },
-                },
-            ),
-        ],
-        "juriscraper.opinions.united_states.state.alaska_u": [
-            (
-                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
-                {
-                    "Docket": {
-                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
-                    },
-                    "OriginatingCourtInformation": {
-                        "assigned_to_str": "Josie Garton"
-                    },
-                },
-            ),
-        ],
         "juriscraper.opinions.united_states.state.ariz": [
             (
                 "IN THE\n\n   SUPREME COURT OF THE STATE OF ARIZONA\n\n          PHOENIX UNION HIGH SCHOOL DISTRICT NO. 210,\n                          Petitioner,\n\n                                  v.\n\n  THE HON. JOAN M. SINCLAIR, JUDGE OF THE SUPERIOR COURT OF THE\n      STATE OF ARIZONA, IN AND FOR THE COUNTY OF MARICOPA,\n                            Respondent,\n\n                                And\n\nCHRISTOPHER A. LUCERO, A MINOR CHILD, BY AND THROUGH HIS NATURAL\n                 FATHER, CHRISTOPHER J. LUCERO,\n                       Real Party in Interest.\n\n\n\n\n                         No. CV-24-0307-PR\n                         Filed July 15, 2025\n\n\nPetition for Special Action from the Superior Court in Maricopa County\n                 The Honorable Joan M. Sinclair, Judge\n                           No. CV2022-005719\n\n      REVERSED AND REMANDED WITH INSTRUCTIONS\n\n\n           Order from the Court of Appeals, Division One\n                         1 CA-SA 24-0205\n                      Filed December 4, 2024\n\n                             VACATED\n                   PUSD 210 V. HON. SINCLAIR/LUCERO\n                         Opinion of the Court",
