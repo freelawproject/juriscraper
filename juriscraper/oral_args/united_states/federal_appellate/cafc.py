@@ -11,6 +11,7 @@ History:
 """
 
 from datetime import date, timedelta
+from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
@@ -63,7 +64,12 @@ class Site(OralArgumentSiteLinear):
         for row in self.request["response"].json()["data"]:
             _, name, _, url, _ = row[2].split('"')
             self.cases.append(
-                {"date": row[0], "docket": row[1], "name": name, "url": url}
+                {
+                    "date": row[0],
+                    "docket": row[1],
+                    "name": name,
+                    "url": urljoin(self.url, url),
+                }
             )
 
     def _download_backwards(self, d: date) -> None:
