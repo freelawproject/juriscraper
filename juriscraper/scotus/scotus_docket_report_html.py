@@ -26,11 +26,12 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     """Parse SCOTUS docket HTML."""
 
     EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
-    ID_RE = re.compile(r"^#[A-Za-z0-9]+\b")
+    ID_RE = re.compile(r"#\s*[A-Za-z0-9-]+\b")
     ADDRESS_NUMBER = re.compile(
         r"\b(\d{1,6}(?:-\d{1,6})?(?:\s+\d+\/\d+)?[A-Za-z]?)\b"
     )
     ADDRESS_RE = r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$"
+    DOCKET_NUMBER_RE = r"No\.\s*([^\s<]+)"
 
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
@@ -63,7 +64,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         )
         docket_number = None
         if docket_title_text:
-            m = re.search(r"No\.\s*([^\s<]+)", docket_title_text)
+            m = re.search(self.DOCKET_NUMBER_RE, docket_title_text)
             docket_number = m.group(1).strip() if m else None
 
         case_name = clean_string(
