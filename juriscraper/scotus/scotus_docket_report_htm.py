@@ -298,7 +298,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 ).strip()
                 if current_attorney:
                     current_attorney = self._build_htm_attorney(
-                        current_attorney,
+                        current_attorney
                     )
                     type_key = (current_type or "Other", current_party_name)
                     parties_by_key[type_key].append(current_attorney)

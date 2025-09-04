@@ -16,6 +16,7 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add scotus_docket_report_html to parse SCOTUS HTML dockets
+- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
 Changes:
 -
