@@ -44,13 +44,18 @@ class Site(OpinionSiteLinear):
 
         for row in self.html.xpath("//table"):
             summary = row.xpath("string(following-sibling::p[1])")
-            name = row.xpath(".//td[1]/*[self::strong or self::b]/text()")[0]
-            row_text = row.xpath(".//td[1]/text()")[-1]
+            name = row.xpath(".//td[1]//*[self::strong or self::b]/text()")[0]
+
+            if row.xpath(".//td[1]/text()"):
+                row_text = row.xpath(".//td[1]/text()")[-1]
+            else:
+                row_text = row.xpath(".//td[1]/p/text()")[-1]
+
             citation, year = row_text.split("(", 1)
 
             year = re.search(r"\d{4}", year).group(0)
-            url = row.xpath(".//td[2]/a/@href")
-            docket = row.xpath("string(.//td[2]/a)")
+            url = row.xpath(".//td[2]//a/@href")
+            docket = row.xpath("string(.//td[2]//a)")
             self.cases.append(
                 {
                     "name": name,
