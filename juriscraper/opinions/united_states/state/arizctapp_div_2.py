@@ -11,9 +11,12 @@ History:
 
 from juriscraper.lib.string_utils import clean_if_py3, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.opinions.united_states.state import ariz
 
 
 class Site(OpinionSiteLinear):
+    extract_from_text = ariz.Site.extract_from_text
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
