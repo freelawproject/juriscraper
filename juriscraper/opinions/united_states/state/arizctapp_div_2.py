@@ -10,8 +10,8 @@ History:
 """
 
 from juriscraper.lib.string_utils import clean_if_py3, titlecase
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.opinions.united_states.state import ariz
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):

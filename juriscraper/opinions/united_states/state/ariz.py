@@ -6,6 +6,7 @@ Scraper for the Supreme Court of Arizona
 CourtID: ariz
 Court Short Name: Ariz.
 """
+
 import re
 
 from juriscraper.lib.string_utils import titlecase
