@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix `bia` scraper #1574
 
 ## Current
 
