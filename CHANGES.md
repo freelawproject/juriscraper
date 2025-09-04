@@ -18,7 +18,7 @@ Features:
 - Add scotus_docket_report_html to parse SCOTUS HTML dockets
 
 Changes:
--
+- Retrieve lower court information in `cal` scrapers #1569
 
 Fixes:
 -
