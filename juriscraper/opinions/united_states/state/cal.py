@@ -39,3 +39,30 @@ class Site(OpinionSiteLinear):
                 case["division"] = self.division
 
             self.cases.append(case)
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"S\d+\s+"
+            r"(?P<lower_court>.+?)\s+"  # <-- capture the lower_court
+            r"[A-Z0-9]{3,}",  # the following case number
+            re.DOTALL,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+        return {}
