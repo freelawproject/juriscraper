@@ -22,7 +22,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix connappct #1580
 
 ## Current
 
