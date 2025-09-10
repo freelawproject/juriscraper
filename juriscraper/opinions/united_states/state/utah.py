@@ -1,8 +1,7 @@
 import re
 
-from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
+from juriscraper.AbstractSite import logger
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
@@ -16,13 +15,14 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath(
             "//div[@id='content']//p[a[contains(@href, '.pdf')]]"
         ):
-            if row.xpath("br"):
-                # Superseded opinions
-                logger.info("Skipping row %s", row.text_content())
+            texts = row.xpath("text()")
+            if any('superseded' in t.lower() for t in texts):
+                # Superseding opinions are published in their own rows
+                logger.info("Skipping row with superseded opinion %s", texts)
                 continue
-
+            
             # pick longest text; if not, HTML comments may cause wrong indexing
-            text = sorted(row.xpath("text()"))[-1]
+            text = sorted(texts)[-1]
             neutral_cite_match = re.search(r"\d{4} UT( App)? \d{1,}", text)
             citation = neutral_cite_match.group(0)
 
