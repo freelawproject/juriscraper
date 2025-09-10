@@ -5,6 +5,7 @@
 # - 2014-08-05: Updated URL by mlr
 # - 2021-12-28: Updated by flooie
 # - 2024-04-11: grossir, Merge backscraper and scraper; implement dynamic backscraper
+# - 2025-09-10: luism, Extract lower_court info from text
 
 import re
 from datetime import datetime
@@ -202,5 +203,19 @@ class Site(OpinionSiteLinear):
                     metadata["OpinionCluster"]["disposition"] = disp
                 else:
                     metadata["OpinionCluster"] = {"disposition": disp}
+
+        lower_court_regex = re.compile(
+            r"""
+                     APPEAL\s+FROM\s+THE\s+
+                    (?P<lower_court>[^.]+?)
+                    (?=\s*(?:\.|\n\s*\n|,\s+SOUTH\s+DAKOTA))
+                    """,
+            re.X,
+        )
+        if match := lower_court_regex.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            metadata["Docket"] = {"appeal_from_str": titlecase(lower_court)}
 
         return metadata
