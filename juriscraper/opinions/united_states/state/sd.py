@@ -217,6 +217,8 @@ class Site(OpinionSiteLinear):
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             # Update Docket dict instead of overwriting
-            metadata.setdefault("Docket", {})["appeal_from_str"] = titlecase(lower_court)
+            metadata.setdefault("Docket", {})["appeal_from_str"] = titlecase(
+                lower_court
+            )
 
         return metadata

@@ -120,7 +120,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {
                         "docket_number": "29901",
-                        "appeal_from_str": "Circuit Court of the First Judicial Circuit Brule County"
+                        "appeal_from_str": "Circuit Court of the First Judicial Circuit Brule County",
                     },
                     "OpinionCluster": {
                         "disposition": "Affirmed in part and reversed in part",
