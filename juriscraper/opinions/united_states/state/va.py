@@ -63,7 +63,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        if match := self.lower_court_regex.search(scraped_text):
+        if match := self.lower_court_regex.search(scraped_text[:1000]):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
