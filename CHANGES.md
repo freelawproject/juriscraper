@@ -23,7 +23,7 @@ Changes:
 - Retrieve lower court information in `utah` #1569
 
 Fixes:
--
+- fix `bia` scraper #1574
 
 ## Current
 
