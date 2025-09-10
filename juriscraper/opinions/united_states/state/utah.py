@@ -41,3 +41,42 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (On\s+Direct\s+Appeal
+                (?:\s+and\s+Petition\s+for\s+Extraordinary\s+Relief)?
+            |On\s+Appeal\s+of\s+Interlocutory\s+Order
+            |On\s+Certification\s+from\s+the\s+Court\s+of\s+Appeals
+            |On\s+Petition\s+for\s+Review\s+ of\s+Agency\s+Decision
+            |On\s+Certiorari\s+to\s+the\s+Utah\s+Court\s+of\s+Appeals)
+
+            \s*\n+
+            (?P<lower_court>(?:[^\S\r\n]*\S.*(?:\n|$))+?)
+            [^\S\r\n]*the\s+Honorable\s+(?P<lower_court_judge>.*?)(?:\s+No\.)
+            """,
+            re.MULTILINE | re.VERBOSE | re.IGNORECASE
+        )
+
+        if match := pattern.search(scraped_text):
+            lower_court_str = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            lower_court_judge = match.group("lower_court_judge").strip()
+
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court_str,
+                },
+                "OriginatingCourtInformation": {
+                    "assigned_to_str": lower_court_judge,
+                }
+            }
+
+        return {}

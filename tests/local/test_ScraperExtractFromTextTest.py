@@ -969,6 +969,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.utah": [
+            (
+                "\nThis opinion is subject to revision before final\n                     publication in the Pacific Reporter\n                                2025 UT 17\n\n\n                                   IN THE\n\n      SUPREME COURT OF THE STATE OF UTAH\n\n                         UNIVERSITY OF UTAH,\n                             Appellant,\n                                      v.\n                JOHN TULLIS and AMELIA TULLIS,\n        individually and as parents and natural guardians\n                      of P.T., a minor child,\n                            Appellees.\n\n                           No. 20230672\n                       Heard October 25, 2024\n                         Filed June 5, 2025\n\n                On Appeal of Interlocutory Order\n\n              Third District Court, Salt Lake County\n                  The Honorable Adam T. Mow\n                          No. 190907183\n\n\n                                Attorneys∗:\nCarolyn S. Stevens, Amy F. Sorenson, Cameron J. Cutler, Annika\n L. Jones, Salt Lake City, Derek J. Williams, Millcreek, LaMar F.\n      Jost, Clarissa M. Collier, Denver, Colo., for appellant\n    Christine Durham, Deno Himonas, Sarah Smith, Caitlin\nMcKelvie, Cate Vaden, Charles H. Thronson, Michael A. Worel,\nSalt Lake City, Mark R. Yohalem, Los Angeles, Cal., for appellees\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Third District Court, Salt Lake County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Adam T. Mow"
+                    }
+                }
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
