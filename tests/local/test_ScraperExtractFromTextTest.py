@@ -972,6 +972,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.va": [
+            (
+                "\nPRESENT: All the Justices\n\nTOLL ROAD INVESTORS PARTNERSHIP II, L.P.\n                                                               OPINION BY\nv. Record No. 250002                                 JUSTICE STEPHEN R. McCULLOUGH\n                                                                July 17, 2025\nSTATE CORPORATION COMMISSION, et al.\n\n\n                     FROM THE STATE CORPORATION COMMISSION\n\n\n       Toll Road Investors Partnership II, L.P. (“TRIP II”), the operator of a toll road in\n\nLoudoun County, appeals from a decision of the State Corporation Commission (“the\n\nCommission”) denying a toll increase. TRIP II contends that the Commission misapplied the\n\nrelevant statutory criteria and, further, that denying it a toll increase would constitute an\n\nuncompensated taking in violation of the United States and Virginia Constitutions. For the\n\nforegoing reasons, we conclude that the decision of the State Corporation Commission should be\n\naffirmed.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "State Corporation Commission"
+                    }
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.utah": [
             (
                 "\nThis opinion is subject to revision before final\n                     publication in the Pacific Reporter\n                                2025 UT 17\n\n\n                                   IN THE\n\n      SUPREME COURT OF THE STATE OF UTAH\n\n                         UNIVERSITY OF UTAH,\n                             Appellant,\n                                      v.\n                JOHN TULLIS and AMELIA TULLIS,\n        individually and as parents and natural guardians\n                      of P.T., a minor child,\n                            Appellees.\n\n                           No. 20230672\n                       Heard October 25, 2024\n                         Filed June 5, 2025\n\n                On Appeal of Interlocutory Order\n\n              Third District Court, Salt Lake County\n                  The Honorable Adam T. Mow\n                          No. 190907183\n\n\n                                Attorneys∗:\nCarolyn S. Stevens, Amy F. Sorenson, Cameron J. Cutler, Annika\n L. Jones, Salt Lake City, Derek J. Williams, Millcreek, LaMar F.\n      Jost, Clarissa M. Collier, Denver, Colo., for appellant\n    Christine Durham, Deno Himonas, Sarah Smith, Caitlin\nMcKelvie, Cate Vaden, Charles H. Thronson, Michael A. Worel,\nSalt Lake City, Mark R. Yohalem, Los Angeles, Cal., for appellees\n",
