@@ -1,14 +1,12 @@
 import re
 from datetime import date, datetime, timedelta
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    lower_court_regex = re.compile(
-        r"FROM THE (?P<lower_court>.+)"
-    )
+    lower_court_regex = re.compile(r"FROM THE (?P<lower_court>.+)")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -16,7 +14,6 @@ class Site(OpinionSiteLinear):
         self.url = "http://www.courts.state.va.us/scndex.htm"
         self.status = "Published"
         self.should_have_results = True
-
 
     def _process_html(self) -> None:
         """Parses the HTML content to extract case information.
