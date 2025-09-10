@@ -976,7 +976,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {
                         "appeal_from_str": "State Corporation Commission"
                     }
-                }
+                },
             ),
         ],
     }
