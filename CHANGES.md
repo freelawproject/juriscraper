@@ -19,7 +19,7 @@ Features:
 - Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
 Changes:
--
+- Retrieve lower court information in `va` #1569
 
 Fixes:
 -

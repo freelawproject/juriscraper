@@ -969,6 +969,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.va": [
+            (
+                "\nPRESENT: All the Justices\n\nTOLL ROAD INVESTORS PARTNERSHIP II, L.P.\n                                                               OPINION BY\nv. Record No. 250002                                 JUSTICE STEPHEN R. McCULLOUGH\n                                                                July 17, 2025\nSTATE CORPORATION COMMISSION, et al.\n\n\n                     FROM THE STATE CORPORATION COMMISSION\n\n\n       Toll Road Investors Partnership II, L.P. (“TRIP II”), the operator of a toll road in\n\nLoudoun County, appeals from a decision of the State Corporation Commission (“the\n\nCommission”) denying a toll increase. TRIP II contends that the Commission misapplied the\n\nrelevant statutory criteria and, further, that denying it a toll increase would constitute an\n\nuncompensated taking in violation of the United States and Virginia Constitutions. For the\n\nforegoing reasons, we conclude that the decision of the State Corporation Commission should be\n\naffirmed.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "State Corporation Commission"
+                    }
+                }
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
