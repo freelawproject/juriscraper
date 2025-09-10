@@ -116,9 +116,12 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.sd": [
             (
                 # https://www.courtlistener.com/opinion/9456271/mcgee-v-spencer-quarries-inc/pdf/
-                """#29901-aff in pt & rev in pt-PJD & SRJ\n2023 S.D. 66\nIN THE SUPREME COURT""",
+                """\n#29901-aff in pt & rev in pt-PJD & SRJ\n2023 S.D. 66\nIN THE SUPREME COURT\nOF THE\nSTATE OF SOUTH DAKOTA\n* * * *\nAUSTIN MCGEE, Plaintiff and Appellee,\nv.\nSPENCER QUARRIES, INC.,\na South Dakota Corporation, Defendant,\nand\nSOUTH DAKOTA DEPARTMENT OF\nTRANSPORTATION; KENT GATES,\nas an employee of the South Dakota\nDepartment of Transportation; and KRIS\nROYALTY, as an employee of the South\nDakota Department of Transportation, Defendants and Appellants.\n* * * *\nAPPEAL FROM THE CIRCUIT COURT OF\nTHE FIRST JUDICIAL CIRCUIT\nBRULE COUNTY, SOUTH DAKOTA\n* * * *\nTHE HONORABLE BRUCE V. ANDERSON\nJudge\n* * * *\n""",
                 {
-                    "Docket": {"docket_number": "29901"},
+                    "Docket": {
+                        "docket_number": "29901",
+                        "appeal_from_str": "Circuit Court of the First Judicial Circuit Brule County"
+                    },
                     "OpinionCluster": {
                         "disposition": "Affirmed in part and reversed in part",
                         "judges": "Patricia J. DeVaney, Steven R. Jensen",
