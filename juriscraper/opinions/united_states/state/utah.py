@@ -58,8 +58,8 @@ class Site(OpinionSiteLinear):
             |On\s+Certiorari\s+to\s+the\s+Utah\s+Court\s+of\s+Appeals)
 
             \s*\n+
-            (?P<lower_court>(?:[^\S\r\n]*\S.*(?:\n|$))+?)
-            [^\S\r\n]*the\s+Honorable\s+(?P<lower_court_judge>.*?)(?:\s+No\.)
+            (?P<lower_court>([^\S\r\n]*\S.*(?:\n|$))+?)
+            [^\S\r\n]*the\s+Honorable\s+(?P<lower_court_judge>.*?)(\s+No\.)\s*(?P<lower_court_number>\S+)
             """,
             re.MULTILINE | re.VERBOSE | re.IGNORECASE,
         )
@@ -69,6 +69,7 @@ class Site(OpinionSiteLinear):
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             lower_court_judge = match.group("lower_court_judge").strip()
+            lower_court_number = match.group("lower_court_number").strip()
 
             return {
                 "Docket": {
@@ -76,6 +77,7 @@ class Site(OpinionSiteLinear):
                 },
                 "OriginatingCourtInformation": {
                     "assigned_to_str": lower_court_judge,
+                    "docket_number": lower_court_number
                 },
             }
 

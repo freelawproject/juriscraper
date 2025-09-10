@@ -977,7 +977,8 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "Third District Court, Salt Lake County"
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Adam T. Mow"
+                        "assigned_to_str": "Adam T. Mow",
+                        "docket_number": "190907183"
                     },
                 },
             ),
