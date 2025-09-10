@@ -15,8 +15,9 @@ from datetime import datetime
 from typing import Any
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
