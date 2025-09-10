@@ -18,10 +18,10 @@ Features:
 -
 
 Changes:
-- 
+-
 
 Fixes:
-- 
+-
 
 ## Current
 
