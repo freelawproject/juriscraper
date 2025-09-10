@@ -1,5 +1,5 @@
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import utah
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(utah.Site):
