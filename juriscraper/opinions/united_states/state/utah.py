@@ -77,7 +77,7 @@ class Site(OpinionSiteLinear):
                 },
                 "OriginatingCourtInformation": {
                     "assigned_to_str": lower_court_judge,
-                    "docket_number": lower_court_number
+                    "docket_number": lower_court_number,
                 },
             }
 

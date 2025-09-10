@@ -981,7 +981,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Adam T. Mow",
-                        "docket_number": "190907183"
+                        "docket_number": "190907183",
                     },
                 },
             ),
