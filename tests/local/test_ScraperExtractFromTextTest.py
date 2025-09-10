@@ -978,8 +978,8 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Adam T. Mow"
-                    }
-                }
+                    },
+                },
             ),
         ],
     }

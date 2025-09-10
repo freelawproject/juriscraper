@@ -61,7 +61,7 @@ class Site(OpinionSiteLinear):
             (?P<lower_court>(?:[^\S\r\n]*\S.*(?:\n|$))+?)
             [^\S\r\n]*the\s+Honorable\s+(?P<lower_court_judge>.*?)(?:\s+No\.)
             """,
-            re.MULTILINE | re.VERBOSE | re.IGNORECASE
+            re.MULTILINE | re.VERBOSE | re.IGNORECASE,
         )
 
         if match := pattern.search(scraped_text):
@@ -76,7 +76,7 @@ class Site(OpinionSiteLinear):
                 },
                 "OriginatingCourtInformation": {
                     "assigned_to_str": lower_court_judge,
-                }
+                },
             }
 
         return {}
