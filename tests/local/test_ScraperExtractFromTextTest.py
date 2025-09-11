@@ -599,6 +599,24 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       25-AP-046\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                  SEPTEMBER TERM, 2025\n\nXandra Velenchik v. Alan Velenchik*                 }    APPEALED FROM:\n                                                    }    Superior Court, Bennington Unit,\n                                                    }    Family Division\n                                                    }    CASE NO. 22-DM-02104\n                                                         Trial Judge: Howard A. Kalfus\n\n                                In the above-entitled cause, the Clerk will enter:\n\n       Husband appeals the property-division and maintenance portions of a final divorce order.\nWe affirm.\n\n        Following a three-day hearing, the family division issued an order containing the\nfollowing findings and conclusions. The parties married in 2001 and separated in 2021. They\nare both well-educated and in good health. Wife is a dentist in a solo practice in Manchester,\nVermont. With husband’s support, she graduated from dental school in 2003. In 2017, she\npurchased an existing dental practice and moved it to Manchester. Wife made physical\nimprovements to the office and purchased new dental equipment. Husband contributed some\nlabor to the physical improvements. The court credited wife’s expert’s testimony that the\npractice was worth $440,000, but that ninety percent of its value was in human capital. To\nrealize the full sale price, wife would need to be willing to stay involved in the practice during\nthe transition to a new provider, and agree to a noncompete clause prohibiting her from\npracticing dentistry within a twenty-mile radius. Absent these provisions, the value of the\npractice was only $45,000.\n\n       Affirmed.\n\n\n\n                                              BY THE COURT:\n\n\n\n                                              Paul L. Reiber, Chief Justice\n\n\n                                              William D. Cohen, Associate Justice\n\n\n                                              Nancy J. Waples, Associate Justice\n\n\n\n\n                                               5\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Bennington Unit, Family "
+                                           "Division"
+                    },
+                    "OpinionCluster": {
+                        "judges": "Paul L. Reiber; William D. Cohen; Nancy J. "
+                                  "Waples",
+                        "precedential_status": "Unpublished"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Howard A. Kalfus",
+                        "docket_number": "22-DM-02104"
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vt_criminal": [
             (
@@ -607,6 +625,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Citation": "2022 VT 35",
                     "OpinionCluster": {"precedential_status": "Published"},
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Chittenden Unit, Criminal Division"},
                 },
             ),
         ],
