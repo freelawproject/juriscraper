@@ -1003,10 +1003,10 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {
                         "appeal_from_str": "District Court of Park County"
                     },
-                     "OriginatingCourtInformation": {
-                         "assigned_to_str": "Bobbi Dean Overfield"
-                 }
-                }
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Bobbi Dean Overfield"
+                    },
+                },
             ),
         ],
     }
