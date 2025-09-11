@@ -604,17 +604,17 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {
                         "appeal_from_str": "Superior Court, Bennington Unit, Family "
-                                           "Division"
+                        "Division"
                     },
                     "OpinionCluster": {
                         "judges": "Paul L. Reiber; William D. Cohen; Nancy J. "
-                                  "Waples",
-                        "precedential_status": "Unpublished"
+                        "Waples",
+                        "precedential_status": "Unpublished",
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Howard A. Kalfus",
-                        "docket_number": "22-DM-02104"
-                    }
+                        "docket_number": "22-DM-02104",
+                    },
                 },
             ),
         ],
@@ -626,7 +626,8 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Citation": "2022 VT 35",
                     "OpinionCluster": {"precedential_status": "Published"},
                     "Docket": {
-                        "appeal_from_str": "Superior Court, Chittenden Unit, Criminal Division"},
+                        "appeal_from_str": "Superior Court, Chittenden Unit, Criminal Division"
+                    },
                 },
             ),
         ],

@@ -183,17 +183,23 @@ class Site(OpinionSiteLinear):
         )
         match = pattern.search(cleaned_text)
         if match:
-            lower_court = re.sub(r"\s+", " ", match.group("lower_court")).strip()
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
             lower_court_number = match.group("lower_court_number").strip()
             lower_court_judge = match.group("lower_court_judge")
             docket = metadata.setdefault("Docket", {})
-            originating_court_info = metadata.setdefault("OriginatingCourtInformation", {})
+            originating_court_info = metadata.setdefault(
+                "OriginatingCourtInformation", {}
+            )
             if lower_court:
                 docket["appeal_from_str"] = lower_court
             if lower_court_number:
                 originating_court_info["docket_number"] = lower_court_number
             if lower_court_judge:
-                originating_court_info["assigned_to_str"] = lower_court_judge.strip()
+                originating_court_info["assigned_to_str"] = (
+                    lower_court_judge.strip()
+                )
         else:
             fall_back_pattern = re.compile(
                 r"On\s+Appeal\s+from\s*\n*\s*(?:v\.)?\s*(?P<lower_court>.+?)(?:\n{2,}|$)",
@@ -201,7 +207,9 @@ class Site(OpinionSiteLinear):
             )
             match = fall_back_pattern.search(scraped_text[:1000])
             if match:
-                lower_court = re.sub(r"\s+", " ", match.group("lower_court")).strip()
+                lower_court = re.sub(
+                    r"\s+", " ", match.group("lower_court")
+                ).strip()
                 docket = metadata.setdefault("Docket", {})
                 docket["appeal_from_str"] = lower_court
 
