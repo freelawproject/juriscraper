@@ -27,6 +27,9 @@ class Site(OpinionSiteLinear):
     court_abbv = "sup"
     start_year = 2000
     base_url = "http://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
+    date_filed_regex = re.compile(
+        r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -40,18 +43,22 @@ class Site(OpinionSiteLinear):
         self.cipher = "AES256-SHA256"
         self.set_custom_adapter(self.cipher)
 
-    @staticmethod
-    def find_published_date(date_str: str) -> str:
+    @classmethod
+    def find_published_date(cls, date_strs: list[str]) -> str:
         """Extract published date
 
         :param date_str: The row text
         :return: The date string
         """
-        m = re.search(
-            r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)",
-            date_str,
-        )
-        return m.groups()[0] if m.groups()[0] else m.groups()[1]
+        for date_str in date_strs:
+            m = cls.date_filed_regex.search(
+                date_str,
+            )
+            if not m:
+                continue
+
+            return m.groups()[0] if m.groups()[0] else m.groups()[1]
+        return ""
 
     def extract_dockets_and_name(self, row) -> tuple[str, str]:
         """Extract the docket and case name from each row
@@ -84,14 +91,16 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
             pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
+            date_filed_is_approximate = True
             if pub:
-                date_filed_is_approximate = False
-                date_filed = self.find_published_date(pub[0])
-            else:
+                date_filed = self.find_published_date(pub)
+                if date_filed:
+                    date_filed_is_approximate = False
+
+            if date_filed_is_approximate:
                 # May happen on most recent opinions, which have a header like
                 # "Publication in the Connecticut Law Journal To Be Determined"
                 date_filed = f"{self.current_year}-07-01"
-                date_filed_is_approximate = True
 
             dockets, name = self.extract_dockets_and_name(row)
             self.cases.append(
