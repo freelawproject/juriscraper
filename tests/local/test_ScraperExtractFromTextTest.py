@@ -1017,6 +1017,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.wyo": [
+            (
+                "\n                 IN THE SUPREME COURT, STATE OF WYOMING\n\n                                            2025 WY 59\n\n                                                                      APRIL TERM, A.D. 2025\n\n                                                                            May 28, 2025\n\n RICK HOLLOWAY and JOHN HOSKIN,\n\n Appellants\n (Plaintiffs),\n\n v.\n                                                                 S-24-0271\n HIDDEN CREEK OUTFITTERS, LLC and\n PARK COUNTY TITLE COMPANY, LLC,\n\n Appellees\n (Defendants).\n\n                        Appeal from the District Court of Park County\n                        The Honorable Bobbi Dean Overfield, Judge\n\nRepresenting Appellants:\n      David Michael Hill and Larry B. Jones, Burg Simpson Eldredge Hersh & Jardine,\n      P.C, Cody, Wyoming. Argument by Mr. Jones.\n\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Park County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Bobbi Dean Overfield"
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
