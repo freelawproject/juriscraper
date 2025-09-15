@@ -75,37 +75,38 @@ class Site(OpinionSiteLinear):
         """
         lower_court_pattern = re.compile(
             r"""
-            (?:
-               Appeals?\s+from\s+the\s+
-              | Petition\s+for\s+Special\s+Action\s+from\s+the\s+
-            )
-            (?P<lower_court>[^,.]+?)\s*
-            (?=Nos?\.|The|ICA)
+            Appeal\s+from\s+the\s+(?P<lower_court>[^\n]+)\n\s*
+            The\s+(?P<lower_court_judge>[^,]+),\s+Judge[^\n]*\n\s*
+            No\.\s+(?P<lower_court_number>[^\s]+)
             """,
-            re.X,
+            re.X | re.MULTILINE | re.DOTALL,
         )
 
-        # Pattern for judge name: The Honorable ... , Judge
-        judge_pattern = re.compile(
-            r"The\s+(?P<lower_court_judge>[^,]+),\s+(Judge|Administrative)\b",
-            re.X,
-        )
+        result = {}
 
-        lower_court = ""
+
         if match := lower_court_pattern.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        lower_court_judge = ""
-        if judge_match := judge_pattern.search(scraped_text):
-            lower_court_judge = judge_match.group("lower_court_judge").strip()
+            lower_court_judge = match.group("lower_court_judge").strip()
+            lower_court_number = match.group("lower_court_number").strip()
 
-        result = {}
-        if lower_court:
-            result["Docket"] = {"appeal_from_str": lower_court}
+            if lower_court:
+                result["Docket"] = {"appeal_from_str": lower_court}
             if lower_court_judge:
                 result.setdefault("OriginatingCourtInformation", {})[
                     "assigned_to_str"
                 ] = lower_court_judge
+            if lower_court_number:
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "docket_number"
+                ] = lower_court_number
+
+
+
+
+
+
         return result
