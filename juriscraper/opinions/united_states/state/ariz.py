@@ -84,7 +84,6 @@ class Site(OpinionSiteLinear):
 
         result = {}
 
-
         if match := lower_court_pattern.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
@@ -103,10 +102,5 @@ class Site(OpinionSiteLinear):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "docket_number"
                 ] = lower_court_number
-
-
-
-
-
 
         return result
