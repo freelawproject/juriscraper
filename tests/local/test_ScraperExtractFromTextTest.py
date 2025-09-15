@@ -996,6 +996,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.wyo": [
+            (
+                "\n                 IN THE SUPREME COURT, STATE OF WYOMING\n\n                                            2025 WY 59\n\n                                                                      APRIL TERM, A.D. 2025\n\n                                                                            May 28, 2025\n\n RICK HOLLOWAY and JOHN HOSKIN,\n\n Appellants\n (Plaintiffs),\n\n v.\n                                                                 S-24-0271\n HIDDEN CREEK OUTFITTERS, LLC and\n PARK COUNTY TITLE COMPANY, LLC,\n\n Appellees\n (Defendants).\n\n                        Appeal from the District Court of Park County\n                        The Honorable Bobbi Dean Overfield, Judge\n\nRepresenting Appellants:\n      David Michael Hill and Larry B. Jones, Burg Simpson Eldredge Hersh & Jardine,\n      P.C, Cody, Wyoming. Argument by Mr. Jones.\n\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Park County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Bobbi Dean Overfield"
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.ariz": [
             (
                 "IN THE\n\n   SUPREME COURT OF THE STATE OF ARIZONA\n\n          PHOENIX UNION HIGH SCHOOL DISTRICT NO. 210,\n                          Petitioner,\n\n                                  v.\n\n  THE HON. JOAN M. SINCLAIR, JUDGE OF THE SUPERIOR COURT OF THE\n      STATE OF ARIZONA, IN AND FOR THE COUNTY OF MARICOPA,\n                            Respondent,\n\n                                And\n\nCHRISTOPHER A. LUCERO, A MINOR CHILD, BY AND THROUGH HIS NATURAL\n                 FATHER, CHRISTOPHER J. LUCERO,\n                       Real Party in Interest.\n\n\n\n\n                         No. CV-24-0307-PR\n                         Filed July 15, 2025\n\n\nPetition for Special Action from the Superior Court in Maricopa County\n                 The Honorable Joan M. Sinclair, Judge\n                           No. CV2022-005719\n\n      REVERSED AND REMANDED WITH INSTRUCTIONS\n\n\n           Order from the Court of Appeals, Division One\n                         1 CA-SA 24-0205\n                      Filed December 4, 2024\n\n                             VACATED\n                   PUSD 210 V. HON. SINCLAIR/LUCERO\n                         Opinion of the Court",

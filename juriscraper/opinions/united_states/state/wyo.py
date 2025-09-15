@@ -114,3 +114,31 @@ class Site(OpinionSiteLinear):
             end = datetime.now()
 
         self.back_scrape_iterable = [(start, end)]
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        metadata = {}
+        lower_court_pattern = re.compile(
+            r"Appeal\s+from\s+the\s+(?P<lower_court>.*?)[,\n]\s*The\s+Honorable\s+(?P<judge>.+?),\s*Judge",
+            re.DOTALL,
+        )
+        lower_court = ""
+        lower_court_judge = ""
+        if match := lower_court_pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            lower_court_judge = match.group("judge").strip()
+
+        if lower_court:
+            metadata.setdefault("Docket", {})["appeal_from_str"] = lower_court
+        if lower_court_judge:
+            metadata.setdefault("OriginatingCourtInformation", {})[
+                "assigned_to_str"
+            ] = lower_court_judge
+
+        return metadata
