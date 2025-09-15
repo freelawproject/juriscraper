@@ -116,9 +116,12 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.sd": [
             (
                 # https://www.courtlistener.com/opinion/9456271/mcgee-v-spencer-quarries-inc/pdf/
-                """#29901-aff in pt & rev in pt-PJD & SRJ\n2023 S.D. 66\nIN THE SUPREME COURT""",
+                """\n#29901-aff in pt & rev in pt-PJD & SRJ\n2023 S.D. 66\nIN THE SUPREME COURT\nOF THE\nSTATE OF SOUTH DAKOTA\n* * * *\nAUSTIN MCGEE, Plaintiff and Appellee,\nv.\nSPENCER QUARRIES, INC.,\na South Dakota Corporation, Defendant,\nand\nSOUTH DAKOTA DEPARTMENT OF\nTRANSPORTATION; KENT GATES,\nas an employee of the South Dakota\nDepartment of Transportation; and KRIS\nROYALTY, as an employee of the South\nDakota Department of Transportation, Defendants and Appellants.\n* * * *\nAPPEAL FROM THE CIRCUIT COURT OF\nTHE FIRST JUDICIAL CIRCUIT\nBRULE COUNTY, SOUTH DAKOTA\n* * * *\nTHE HONORABLE BRUCE V. ANDERSON\nJudge\n* * * *\n""",
                 {
-                    "Docket": {"docket_number": "29901"},
+                    "Docket": {
+                        "docket_number": "29901",
+                        "appeal_from_str": "Circuit Court of the First Judicial Circuit Brule County",
+                    },
                     "OpinionCluster": {
                         "disposition": "Affirmed in part and reversed in part",
                         "judges": "Patricia J. DeVaney, Steven R. Jensen",
@@ -965,6 +968,43 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {
                         "appeal_from_str": "United States Bankruptcy Court for the District of Oregon",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.va": [
+            (
+                "\nPRESENT: All the Justices\n\nTOLL ROAD INVESTORS PARTNERSHIP II, L.P.\n                                                               OPINION BY\nv. Record No. 250002                                 JUSTICE STEPHEN R. McCULLOUGH\n                                                                July 17, 2025\nSTATE CORPORATION COMMISSION, et al.\n\n\n                     FROM THE STATE CORPORATION COMMISSION\n\n\n       Toll Road Investors Partnership II, L.P. (“TRIP II”), the operator of a toll road in\n\nLoudoun County, appeals from a decision of the State Corporation Commission (“the\n\nCommission”) denying a toll increase. TRIP II contends that the Commission misapplied the\n\nrelevant statutory criteria and, further, that denying it a toll increase would constitute an\n\nuncompensated taking in violation of the United States and Virginia Constitutions. For the\n\nforegoing reasons, we conclude that the decision of the State Corporation Commission should be\n\naffirmed.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "State Corporation Commission"
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.utah": [
+            (
+                "\nThis opinion is subject to revision before final\n                     publication in the Pacific Reporter\n                                2025 UT 17\n\n\n                                   IN THE\n\n      SUPREME COURT OF THE STATE OF UTAH\n\n                         UNIVERSITY OF UTAH,\n                             Appellant,\n                                      v.\n                JOHN TULLIS and AMELIA TULLIS,\n        individually and as parents and natural guardians\n                      of P.T., a minor child,\n                            Appellees.\n\n                           No. 20230672\n                       Heard October 25, 2024\n                         Filed June 5, 2025\n\n                On Appeal of Interlocutory Order\n\n              Third District Court, Salt Lake County\n                  The Honorable Adam T. Mow\n                          No. 190907183\n\n\n                                Attorneys∗:\nCarolyn S. Stevens, Amy F. Sorenson, Cameron J. Cutler, Annika\n L. Jones, Salt Lake City, Derek J. Williams, Millcreek, LaMar F.\n      Jost, Clarissa M. Collier, Denver, Colo., for appellant\n    Christine Durham, Deno Himonas, Sarah Smith, Caitlin\nMcKelvie, Cate Vaden, Charles H. Thronson, Michael A. Worel,\nSalt Lake City, Mark R. Yohalem, Los Angeles, Cal., for appellees\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Third District Court, Salt Lake County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Adam T. Mow",
+                        "docket_number": "190907183",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.wyo": [
+            (
+                "\n                 IN THE SUPREME COURT, STATE OF WYOMING\n\n                                            2025 WY 59\n\n                                                                      APRIL TERM, A.D. 2025\n\n                                                                            May 28, 2025\n\n RICK HOLLOWAY and JOHN HOSKIN,\n\n Appellants\n (Plaintiffs),\n\n v.\n                                                                 S-24-0271\n HIDDEN CREEK OUTFITTERS, LLC and\n PARK COUNTY TITLE COMPANY, LLC,\n\n Appellees\n (Defendants).\n\n                        Appeal from the District Court of Park County\n                        The Honorable Bobbi Dean Overfield, Judge\n\nRepresenting Appellants:\n      David Michael Hill and Larry B. Jones, Burg Simpson Eldredge Hersh & Jardine,\n      P.C, Cody, Wyoming. Argument by Mr. Jones.\n\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Park County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Bobbi Dean Overfield"
                     },
                 },
             ),
