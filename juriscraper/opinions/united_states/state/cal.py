@@ -41,28 +41,36 @@ class Site(OpinionSiteLinear):
             self.cases.append(case)
 
     def extract_from_text(self, scraped_text: str) -> dict:
-        """Extract lower court from the scraped text.
+        """Extract lower court and case number from the scraped text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
         pattern = re.compile(
-            r"S\d+\s+"
-            r"(?P<lower_court>.+?)\s+"  # <-- capture the lower_court
-            r"[A-Z0-9]{3,}",  # the following case number
-            re.DOTALL,
+            r"S\d+\s*\n"
+            r"(?P<lower_court>.+?)\s*$"
+            r"(\s*\n\s*)"
+            r"(?P<lower_court_number>[A-Z0-9]{4,})\s*$",
+            re.MULTILINE,
         )
 
         lower_court = ""
+        lower_court_number = ""
+
         if match := pattern.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
+            lower_court_number = match.group("lower_court_number").strip()
 
-        if lower_court:
-            return {
-                "Docket": {
-                    "appeal_from_str": lower_court,
-                }
-            }
-        return {}
+        result = {}
+        if lower_court or lower_court_number:
+
+            if lower_court:
+                result["Docket"] = {}
+                result["Docket"]["appeal_from_str"] = lower_court
+            if lower_court_number:
+                result["OriginatingCourtInformation"] = {}
+                result["OriginatingCourtInformation"]["lower_court_number"] = lower_court_number
+
+        return result
