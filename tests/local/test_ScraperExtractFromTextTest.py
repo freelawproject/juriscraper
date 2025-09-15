@@ -1012,10 +1012,14 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.cal": [
             (
                 "IN THE SUPREME COURT OF\n               CALIFORNIA\n\n                     TY WHITEHEAD,\n                  Plaintiff and Appellant,\n                              v.\n                   CITY OF OAKLAND,\n                 Defendant and Respondent.\n\n                           S284303\n\n            First Appellate District, Division Three\n                           A164483\n\n               Alameda County Superior Court\n                       RG18896233\n\n\n\n                         May 1, 2025\n\nJustice Evans authored the opinion of the Court, in which\nChief Justice Guerrero and Justices Corrigan, Liu, Kruger,\nGroban, and Jenkins concurred.\n\nJustice Kruger filed a concurring opinion.\n             WHITEHEAD v. CITY OF OAKLAND\n                            S284303\n\n\n               Opinion of the Court by Evans, J.",
-                {"Docket": {
-                    "appeal_from_str": "First Appellate District, Division Three"},
-                 "OriginatingCourtInformation": {
-                     "lower_court_number": "A164483"}}
+                {
+                    "Docket": {
+                        "appeal_from_str": "First Appellate District, Division Three"
+                    },
+                    "OriginatingCourtInformation": {
+                        "lower_court_number": "A164483"
+                    },
+                },
             ),
         ],
         "juriscraper.opinions.united_states.state.calctapp_1st": [
