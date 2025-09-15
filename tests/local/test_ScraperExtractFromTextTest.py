@@ -640,6 +640,14 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {"court_id": "vt"},
                     "OpinionCluster": {"precedential_status": "Published"},
                 },
+            ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       25-AP-060\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                          JULY TERM, 2025\n\nIn re 181 Parker Hill Road Application    }             APPEALED FROM:\n(Anthony J. Vetrano* & Kathleen Vetrano*) }\n                                          }\n                                          }             Superior Court, Environmental Division\n                                          }\n                                          }             CASE NO. 23-ENV-00116\n                                                        Trial Judge: Thomas G. Walsh\n\n                                In the above-entitled cause, the Clerk will enter:\n",
+                {"Docket": {
+                    "appeal_from_str": "Superior Court, Environmental Division"},
+                 "OriginatingCourtInformation": {
+                     "assigned_to_str": "Thomas G. Walsh",
+                     "docket_number": "23-ENV-00116"}}
             )
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_family": [
@@ -651,13 +659,26 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {"precedential_status": "Published"},
                     "Docket": {"court_id": "vt"},
                 },
+            ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       21-AP-202\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                     JANUARY TERM, 2022\n\nIn re G.J., Juvenile                                }    APPEALED FROM:\n(G.J., Father* & M.J., Mother*)                     }\n                                                    }    Superior Court, Bennington Unit,\n                                                    }    Family Division\n                                                    }    CASE NO. 171-10-19 Bnjv\n                                                         Trial Judge: Kerry Ann McDonald-Cady\n\n                                In the above-entitled cause, the Clerk will enter:\n\n          Parents appeal the termination of their parental rights to their six-year-old son, G.J. We\n",
+                {"Docket": {
+                    "appeal_from_str": "Superior Court, Bennington Unit, Family "
+                                       "Division"},
+                 "OriginatingCourtInformation": {
+                     "assigned_to_str": "Kerry Ann McDonald-Cady",
+                     "docket_number": "171-10-19"}}
             )
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_probate": [
             (
                 # haven't found a proper example yet
-                """""",
-                {},
+                "\nNOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                             2017 VT 80\n\n                                            No. 2017-095\n\nIn re M.S., Juvenile                                              Supreme Court\n\n                                                                  On Appeal from\n                                                                  Superior Court, Windham Unit,\n                                                                  Family Division\n\n                                                                  June Term, 2017\n\n\nKatherine A. Hayes, J.\n\nMatthew Valerio, Defender General, and Katina Francis Ready, Appellate Defender, Montpelier,\n",
+                {"Citation": "2017 VT 80",
+                 "Docket": {
+                     "appeal_from_str": "Superior Court, Windham Unit, Family Division",
+                     "court_id": "vt"},
+                 "OpinionCluster": {"precedential_status": "Published"}},
             )
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_civil": [
