@@ -170,7 +170,7 @@ class Site(OpinionSiteLinear):
 
         cleaned_text = "\n".join(
             line.rsplit("}", 1)[-1] if "}" in line else line
-            for line in scraped_text[:1000].splitlines()
+            for line in scraped_text[:1500].splitlines()
         )
 
         pattern = re.compile(
