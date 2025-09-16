@@ -25,8 +25,6 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        self.cases = []
-
         # Extract download URLs
         download_urls_path = '//a[contains(@id , "hypCaseNum")]/@href'
         download_urls = self.html.xpath(download_urls_path)
