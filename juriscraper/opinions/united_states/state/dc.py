@@ -7,8 +7,9 @@ History:
     - 2025-08-29: Update to OpinionSiteLinear and added extract_from_text method to get lower court info, Luis Manzur
 """
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 import re
+
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -77,7 +78,7 @@ class Site(OpinionSiteLinear):
                 },
                 "OriginatingCourtInformation": {
                     "docket_number": lower_court_number,
-                }
+                },
             }
 
         return {}

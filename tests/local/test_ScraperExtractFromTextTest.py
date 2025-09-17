@@ -1018,7 +1018,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "docket_number": "2020-CA-001727-B"
-                    }
+                    },
                 },
             ),
         ],
