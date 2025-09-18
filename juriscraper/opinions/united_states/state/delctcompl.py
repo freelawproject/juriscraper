@@ -5,8 +5,8 @@
 # Reviewer: mlr
 # Date created: 31 July 2014
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import delaware
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(delaware.Site):

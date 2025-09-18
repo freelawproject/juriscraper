@@ -56,7 +56,7 @@ class Site(OpinionSiteLinear):
 
         number_pattern = re.compile(
             r"Nos?\.:?\s*(?P<lower_court_number>\S{5,})(?:\s|\()",
-            re.IGNORECASE
+            re.IGNORECASE,
         )
 
         result = {}
@@ -65,14 +65,14 @@ class Site(OpinionSiteLinear):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
-            result["Docket"] =  {
-                    "appeal_from_str": lower_court
-                }
+            result["Docket"] = {"appeal_from_str": lower_court}
 
             if number_match := number_pattern.search(cleaned_text):
-                lower_court_number = number_match.group("lower_court_number").strip()
+                lower_court_number = number_match.group(
+                    "lower_court_number"
+                ).strip()
                 result["OriginatingCourtInformation"] = {
-                        "docket_number": lower_court_number
+                    "docket_number": lower_court_number
                 }
 
         return result

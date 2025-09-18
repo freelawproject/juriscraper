@@ -1278,7 +1278,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "docket_number": "CM20694-N"
-                    }
+                    },
                 },
             ),
         ],
