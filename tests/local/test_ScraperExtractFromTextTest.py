@@ -1009,6 +1009,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.dc": [
+            (
+                "\nNotice: This opinion is subject to formal revision before publication in the Atlantic\nand Maryland Reporters. Users are requested to notify the Clerk of the Court of\nany formal errors so that corrections may be made before the bound volumes go\nto press.\n\n\n               DISTRICT OF COLUMBIA COURT OF APPEALS\n\n                                  No. 23-CV-0977\n\n                      TYROSHI INVESTMENTS, LLC, APPELLANT,\n\n                                          V.\n\n   U.S. BANK, N.A., SUCCESSOR TRUSTEE TO LASALLE BANK, N.A., APPELLEE.\n\n                           Appeal from the Superior Court\n                            of the District of Columbia\n                               (2020-CA-001727-B)\n\n                        (Hon. Robert R. Rigsby, Trial Judge)\n\n(Argued June 12, 2025                                Decided September 11, 2025)\n\n      Ian G. Thomas, with whom Tracy L. Buck was on the brief, for appellant.\n\n      Melissa O. Martinez for appellee.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the District of Columbia",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "2020-CA-001727-B"
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):

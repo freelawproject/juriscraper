@@ -23,6 +23,7 @@ Changes:
 - Retrieve lower court information in `va` #1569
 - Retrieve lower court information in `utah` #1569
 - Retrieve lower court information in `wyo` #1569
+- Retrieve lower court information in `dc` #1569
 
 Fixes:
 - Fix connappct #1580
