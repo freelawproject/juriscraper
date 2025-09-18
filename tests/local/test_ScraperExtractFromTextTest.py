@@ -1277,7 +1277,8 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Lamont C. Berecz"}
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
                 },
             ),
         ],
@@ -1289,7 +1290,8 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Lamont C. Berecz"}
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
                 },
             ),
         ],
@@ -1301,7 +1303,8 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Lamont C. Berecz"}
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
                 },
             ),
         ],
@@ -1313,7 +1316,8 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Lamont C. Berecz"}
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
                 },
             ),
         ],
@@ -1325,7 +1329,8 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Lamont C. Berecz"}
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
                 },
             ),
         ],
