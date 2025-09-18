@@ -1230,6 +1230,45 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.alaska": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaskactapp": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaska_u": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
