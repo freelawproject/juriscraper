@@ -19,10 +19,12 @@ Features:
 - Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
 Changes:
+- Retrieve lower court information in `vt` #1569
 - Retrieve lower court information in `sd` #1569
 - Retrieve lower court information in `va` #1569
 - Retrieve lower court information in `utah` #1569
 - Retrieve lower court information in `wyo` #1569
+- Retrieve lower court information in `dc` #1569
 - Retrieve lower court information in `cal` scrapers #1569
 
 Fixes:

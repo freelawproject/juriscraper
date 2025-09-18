@@ -599,6 +599,24 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       25-AP-046\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                  SEPTEMBER TERM, 2025\n\nXandra Velenchik v. Alan Velenchik*                 }    APPEALED FROM:\n                                                    }    Superior Court, Bennington Unit,\n                                                    }    Family Division\n                                                    }    CASE NO. 22-DM-02104\n                                                         Trial Judge: Howard A. Kalfus\n\n                                In the above-entitled cause, the Clerk will enter:\n\n       Husband appeals the property-division and maintenance portions of a final divorce order.\nWe affirm.\n\n        Following a three-day hearing, the family division issued an order containing the\nfollowing findings and conclusions. The parties married in 2001 and separated in 2021. They\nare both well-educated and in good health. Wife is a dentist in a solo practice in Manchester,\nVermont. With husband’s support, she graduated from dental school in 2003. In 2017, she\npurchased an existing dental practice and moved it to Manchester. Wife made physical\nimprovements to the office and purchased new dental equipment. Husband contributed some\nlabor to the physical improvements. The court credited wife’s expert’s testimony that the\npractice was worth $440,000, but that ninety percent of its value was in human capital. To\nrealize the full sale price, wife would need to be willing to stay involved in the practice during\nthe transition to a new provider, and agree to a noncompete clause prohibiting her from\npracticing dentistry within a twenty-mile radius. Absent these provisions, the value of the\npractice was only $45,000.\n\n       Affirmed.\n\n\n\n                                              BY THE COURT:\n\n\n\n                                              Paul L. Reiber, Chief Justice\n\n\n                                              William D. Cohen, Associate Justice\n\n\n                                              Nancy J. Waples, Associate Justice\n\n\n\n\n                                               5\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Bennington Unit, Family "
+                        "Division"
+                    },
+                    "OpinionCluster": {
+                        "judges": "Paul L. Reiber; William D. Cohen; Nancy J. "
+                        "Waples",
+                        "precedential_status": "Unpublished",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Howard A. Kalfus",
+                        "docket_number": "22-DM-02104",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vt_criminal": [
             (
@@ -607,6 +625,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Citation": "2022 VT 35",
                     "OpinionCluster": {"precedential_status": "Published"},
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Chittenden Unit, Criminal Division"
+                    },
                 },
             ),
         ],
@@ -619,7 +640,19 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {"court_id": "vt"},
                     "OpinionCluster": {"precedential_status": "Published"},
                 },
-            )
+            ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       25-AP-060\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                          JULY TERM, 2025\n\nIn re 181 Parker Hill Road Application    }             APPEALED FROM:\n(Anthony J. Vetrano* & Kathleen Vetrano*) }\n                                          }\n                                          }             Superior Court, Environmental Division\n                                          }\n                                          }             CASE NO. 23-ENV-00116\n                                                        Trial Judge: Thomas G. Walsh\n\n                                In the above-entitled cause, the Clerk will enter:\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Environmental Division"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Thomas G. Walsh",
+                        "docket_number": "23-ENV-00116",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_family": [
             (
@@ -630,13 +663,33 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {"precedential_status": "Published"},
                     "Docket": {"court_id": "vt"},
                 },
-            )
+            ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       21-AP-202\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                     JANUARY TERM, 2022\n\nIn re G.J., Juvenile                                }    APPEALED FROM:\n(G.J., Father* & M.J., Mother*)                     }\n                                                    }    Superior Court, Bennington Unit,\n                                                    }    Family Division\n                                                    }    CASE NO. 171-10-19 Bnjv\n                                                         Trial Judge: Kerry Ann McDonald-Cady\n\n                                In the above-entitled cause, the Clerk will enter:\n\n          Parents appeal the termination of their parental rights to their six-year-old son, G.J. We\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Bennington Unit, Family "
+                        "Division"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Kerry Ann McDonald-Cady",
+                        "docket_number": "171-10-19",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_probate": [
             (
                 # haven't found a proper example yet
-                """""",
-                {},
+                "\nNOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                             2017 VT 80\n\n                                            No. 2017-095\n\nIn re M.S., Juvenile                                              Supreme Court\n\n                                                                  On Appeal from\n                                                                  Superior Court, Windham Unit,\n                                                                  Family Division\n\n                                                                  June Term, 2017\n\n\nKatherine A. Hayes, J.\n\nMatthew Valerio, Defender General, and Katina Francis Ready, Appellate Defender, Montpelier,\n",
+                {
+                    "Citation": "2017 VT 80",
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Windham Unit, Family Division",
+                        "court_id": "vt",
+                    },
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_civil": [
@@ -1005,6 +1058,19 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Bobbi Dean Overfield"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.dc": [
+            (
+                "\nNotice: This opinion is subject to formal revision before publication in the Atlantic\nand Maryland Reporters. Users are requested to notify the Clerk of the Court of\nany formal errors so that corrections may be made before the bound volumes go\nto press.\n\n\n               DISTRICT OF COLUMBIA COURT OF APPEALS\n\n                                  No. 23-CV-0977\n\n                      TYROSHI INVESTMENTS, LLC, APPELLANT,\n\n                                          V.\n\n   U.S. BANK, N.A., SUCCESSOR TRUSTEE TO LASALLE BANK, N.A., APPELLEE.\n\n                           Appeal from the Superior Court\n                            of the District of Columbia\n                               (2020-CA-001727-B)\n\n                        (Hon. Robert R. Rigsby, Trial Judge)\n\n(Argued June 12, 2025                                Decided September 11, 2025)\n\n      Ian G. Thomas, with whom Tracy L. Buck was on the brief, for appellant.\n\n      Melissa O. Martinez for appellee.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the District of Columbia",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "2020-CA-001727-B"
                     },
                 },
             ),
