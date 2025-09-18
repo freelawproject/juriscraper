@@ -5,11 +5,12 @@ Creator: Andrei Chelaru
 Reviewer: mlr
 """
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+import re
+
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = (
@@ -18,46 +19,60 @@ class Site(OpinionSite):
         # Note that we can't do the usual thing here because 'del' is a Python keyword.
         self.court_id = "juriscraper.opinions.united_states.state.del"
         self.should_have_results = True
+        self.status = "Published"
 
-    def _get_case_dates(self):
-        return [
-            convert_date_string(date.strip())
-            for date in self._get_nth_cell_data(2, text=True)
-        ]
+    def _process_html(self):
+        """Process the html and extract out the opinions
 
-    def _get_download_urls(self):
-        return [url.strip() for url in self._get_nth_cell_data(1, href=True)]
+        :return: None
+        """
+        for row in self.html.xpath("//table/tr"):
+            self.cases.append(
+                {
+                    "name": row.xpath("./td[1]/a/text()")[0].strip(),
+                    "date": row.xpath("./td[2]/text()")[0].strip(),
+                    "docket": row.xpath("./td[3]/a/text()")[0].strip(),
+                    "url": row.xpath("./td[1]/a/@href")[0].strip(),
+                    "judge": " ".join(row.xpath("./td[6]/text()")),
+                }
+            )
 
-    def _get_case_names(self):
-        return [
-            name.strip() for name in self._get_nth_cell_data(1, link_text=True)
-        ]
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
 
-    def _get_docket_numbers(self):
-        return [
-            docket.strip()
-            for docket in self._get_nth_cell_data(3, link_text=True)
-        ]
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_dates)
+        cleaned_text = "\n".join(
+            line.rsplit("§", 1)[-1] if "§" in line else line
+            for line in scraped_text[:1500].splitlines()
+        )
 
-    def _get_judges(self):
-        # We need special logic here because they use <br> tags in the cell text
-        return [
-            " ".join(cell.xpath("text()"))
-            for cell in self.html.xpath("//table/tr/td[6]")
-        ]
+        pattern = re.compile(
+            r"Court\s+Below[–—\-:]\s*(?P<lower_court>.*?)\n\s*\n",
+            re.X | re.IGNORECASE | re.DOTALL,
+        )
 
-    def _get_nth_cell_data(
-        self, cell_number, text=False, href=False, link_text=False
-    ):
-        # Retrieve specific types of data from all nTH cells in the table
-        path = "//table/tr/td[%d]" % cell_number
-        if text:
-            path += "/text()"
-        elif href:
-            path += "/a/@href"
-        elif link_text:
-            path += "/a/text()"
-        return self.html.xpath(path)
+        number_pattern = re.compile(
+            r"Nos?\.:?\s*(?P<lower_court_number>\S{5,})(?:\s|\()",
+            re.IGNORECASE
+        )
+
+        result = {}
+
+        if match := pattern.search(cleaned_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            result["Docket"] =  {
+                    "appeal_from_str": lower_court
+                }
+
+            if number_match := number_pattern.search(cleaned_text):
+                lower_court_number = number_match.group("lower_court_number").strip()
+                result["OriginatingCourtInformation"] = {
+                        "docket_number": lower_court_number
+                }
+
+        return result
