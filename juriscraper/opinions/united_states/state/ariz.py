@@ -74,7 +74,7 @@ class Site(OpinionSiteLinear):
         lower_court_pattern = re.compile(
             r"""
             Appeal\s+from\s+the\s+(?P<lower_court>[^\n]+)\n\s*
-            The\s+(?P<lower_court_judge>[^,]+),\s+Judge[^\n]*\n\s*
+            The\s+(?:Honorable\s+)?(?P<lower_court_judge>[^,]+),\s+Judge[^\n]*\n\s*
             No\.\s+(?P<lower_court_number>[^\s]+)
             """,
             re.X | re.MULTILINE | re.DOTALL,

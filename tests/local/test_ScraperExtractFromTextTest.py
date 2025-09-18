@@ -1190,13 +1190,13 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.ariz": [
             (
-                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Honorable Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
                 {
                     "Docket": {
                         "appeal_from_str": "Superior Court in Maricopa County"
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Honorable Sigmund G. Popko",
+                        "assigned_to_str": "Sigmund G. Popko",
                         "docket_number": "JS520409",
                     },
                 },
@@ -1204,13 +1204,13 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.arizctapp_div_1": [
             (
-                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Honorable Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
                 {
                     "Docket": {
                         "appeal_from_str": "Superior Court in Maricopa County"
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Honorable Sigmund G. Popko",
+                        "assigned_to_str": "Sigmund G. Popko",
                         "docket_number": "JS520409",
                     },
                 },
@@ -1218,13 +1218,13 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.arizctapp_div_2": [
             (
-                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Honorable Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
                 {
                     "Docket": {
                         "appeal_from_str": "Superior Court in Maricopa County"
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Honorable Sigmund G. Popko",
+                        "assigned_to_str": "Sigmund G. Popko",
                         "docket_number": "JS520409",
                     },
                 },
