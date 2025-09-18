@@ -1188,6 +1188,87 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.ariz": [
+            (
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Sigmund G. Popko",
+                        "docket_number": "JS520409",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arizctapp_div_1": [
+            (
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Sigmund G. Popko",
+                        "docket_number": "JS520409",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arizctapp_div_2": [
+            (
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Sigmund G. Popko",
+                        "docket_number": "JS520409",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaska": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaskactapp": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaska_u": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.delaware": [
             (
                 "\n            IN THE SUPREME COURT OF THE STATE OF DELAWARE\n\n    IN THE MATTER OF ROLF D.                    §\n    BREWSTER, a person with a                   §\n    disability,1                                § No. 254, 2025\n                                                §\n                                                § Court Below—Court of Chancery\n                                                § of the State of Delaware\n                                                §\n                                                § C.M. No. CM20694-N\n                                                §\n\n                                Submitted: July 25, 2025\n                                Decided:   August 8, 2025\n\nBefore VALIHURA, TRAYNOR, and LEGROW, Justices.\n\n                                             ORDER\n\n          After consideration of the notice to show cause and the responses, it appears\n\nto the Court that:\n\n          (1)    On September 24, 2024, Christiana Care Health Systems filed a petition\n\nin the Court of Chancery seeking appointment of a guardian of the person and\n\nproperty of “Rolf D. Brewster” under Title 12, Chapter 39 of the Delaware Code.\n\nThe court appointed an attorney ad litem for Brewster. Brewster’s wife (“Wife”)\n\nobjected to the petition.\n",
