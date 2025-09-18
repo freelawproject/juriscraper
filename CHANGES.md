@@ -19,6 +19,7 @@ Features:
 - Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
 Changes:
+- Revert Mass back to old for to collect PDF
 - Retrieve lower court information in `sd` #1569
 - Retrieve lower court information in `va` #1569
 - Retrieve lower court information in `utah` #1569
