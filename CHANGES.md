@@ -41,6 +41,7 @@ Features:
 
 Changes:
 - Retrieve lower court information in `bap9` and `bap10` #1567
+- Retrieve lower court information in `ariz`  #1569
 
 Fixes:
 - fix `cafc` oral arguments scraper #1570
