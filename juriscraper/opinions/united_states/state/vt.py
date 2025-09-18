@@ -147,8 +147,6 @@ class Site(OpinionSiteLinear):
             if "vtsuperct" in self.court_id:
                 metadata["Docket"] = {"court_id": "vt"}
 
-            return metadata
-
         non_precedential_heading = (
             "decisions of a three-justice panel are not to be considered as "
             "precedent before any tribunal"
@@ -169,5 +167,50 @@ class Site(OpinionSiteLinear):
                     cluster["precedential_status"] = "Unpublished"
 
                 metadata["OpinionCluster"] = cluster
+
+        cleaned_text = "\n".join(
+            line.rsplit("}", 1)[-1] if "}" in line else line
+            for line in scraped_text[:1500].splitlines()
+        )
+
+        pattern = re.compile(
+            r"APPEALED\s+FROM:\s*(?P<lower_court>.*?)"  # non-greedy, capture all up to Case No
+            r"[.\n\r]*?"  # allow for dot, newlines, carriage returns, etc.
+            r"CASE\s+NO[S]?\.?:?\s*([\n\r]*)?"  # match CASE NO. or CASE NOS. (case-insensitive)
+            r"(?P<lower_court_number>[\w-]+)"  # the case number
+            r"(?:.*?Trial\s+Judge:\s*(?P<lower_court_judge>[^\n\r]+))?",  # optional trial judge
+            re.IGNORECASE | re.DOTALL,
+        )
+        match = pattern.search(cleaned_text)
+        if match:
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            lower_court_number = match.group("lower_court_number").strip()
+            lower_court_judge = match.group("lower_court_judge")
+            docket = metadata.setdefault("Docket", {})
+            originating_court_info = metadata.setdefault(
+                "OriginatingCourtInformation", {}
+            )
+            if lower_court:
+                docket["appeal_from_str"] = lower_court
+            if lower_court_number:
+                originating_court_info["docket_number"] = lower_court_number
+            if lower_court_judge:
+                originating_court_info["assigned_to_str"] = (
+                    lower_court_judge.strip()
+                )
+        else:
+            fall_back_pattern = re.compile(
+                r"On\s+Appeal\s+from\s*\n*\s*(?:v\.)?\s*(?P<lower_court>.+?)(?:\n{2,}|$)",
+                re.X | re.DOTALL,
+            )
+            match = fall_back_pattern.search(scraped_text[:1000])
+            if match:
+                lower_court = re.sub(
+                    r"\s+", " ", match.group("lower_court")
+                ).strip()
+                docket = metadata.setdefault("Docket", {})
+                docket["appeal_from_str"] = lower_court
 
         return metadata
