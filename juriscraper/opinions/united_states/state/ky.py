@@ -213,10 +213,12 @@ class Site(OpinionSiteLinear):
             lower_court_number = match.group("lower_court_number")
 
             if lower_court_judge:
-                result.setdefault("OriginatingCourtInformation", {})["assigned_to_str"] = titlecase(
-                    lower_court_judge.strip()
-                )
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "assigned_to_str"
+                ] = titlecase(lower_court_judge.strip())
             if lower_court_number:
-                result.setdefault("OriginatingCourtInformation", {})["docket_number"] = lower_court_number.strip()
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "docket_number"
+                ] = lower_court_number.strip()
 
         return result

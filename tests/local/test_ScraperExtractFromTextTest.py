@@ -1446,7 +1446,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "docket_number": "19-CR-00158"
-                    }
+                    },
                 },
             )
         ],
@@ -1459,7 +1459,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "docket_number": "19-CR-00158"
-                    }
+                    },
                 },
             )
         ],
