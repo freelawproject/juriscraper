@@ -50,7 +50,7 @@ class Site(OpinionSiteLinear):
         )
 
         pattern = re.compile(
-            r"Court\s+Below[–—\-:]\s*(?P<lower_court>.*?)\n\s*\n",
+            r"Court\s+Below[–—\-:]\s*(?:the\s+)?(?P<lower_court>.*?)\n\s*\n",
             re.X | re.IGNORECASE | re.DOTALL,
         )
 
