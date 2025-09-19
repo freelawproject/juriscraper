@@ -1359,6 +1359,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.delaware": [
+            (
+                "\n            IN THE SUPREME COURT OF THE STATE OF DELAWARE\n\n    IN THE MATTER OF ROLF D.                    §\n    BREWSTER, a person with a                   §\n    disability,1                                § No. 254, 2025\n                                                §\n                                                § Court Below—Court of Chancery\n                                                § of the State of Delaware\n                                                §\n                                                § C.M. No. CM20694-N\n                                                §\n\n                                Submitted: July 25, 2025\n                                Decided:   August 8, 2025\n\nBefore VALIHURA, TRAYNOR, and LEGROW, Justices.\n\n                                             ORDER\n\n          After consideration of the notice to show cause and the responses, it appears\n\nto the Court that:\n\n          (1)    On September 24, 2024, Christiana Care Health Systems filed a petition\n\nin the Court of Chancery seeking appointment of a guardian of the person and\n\nproperty of “Rolf D. Brewster” under Title 12, Chapter 39 of the Delaware Code.\n\nThe court appointed an attorney ad litem for Brewster. Brewster’s wife (“Wife”)\n\nobjected to the petition.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Court of Chancery of the State of Delaware",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "CM20694-N"
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.iowa": [
             (
                 "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
