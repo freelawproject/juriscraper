@@ -52,8 +52,7 @@ class Site(OpinionSiteLinear):
               | On\s+Remand\s+from\s+the\s+
               | On\s+Petition\s+for\s+Review\s+of\s+an\s+Order\s+of\s+the\s+
             )
-            (?P<lower_court>[^.]+?)
-            (?=\s*(?:\.|\n\s*\n))
+            (?P<lower_court>.+(?:\n.+)?)
             """,
             re.X,
         )
@@ -63,19 +62,6 @@ class Site(OpinionSiteLinear):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
-
-            # Truncate after the next word following 'of'
-            if (
-                "of" in lower_court
-                and lower_court != "Board of Immigration Appeals"
-            ):
-                parts = lower_court.split()
-                try:
-                    idx = parts.index("of")
-                    if idx + 1 < len(parts):
-                        lower_court = " ".join(parts[: idx + 2])
-                except ValueError:
-                    pass
 
         if lower_court:
             return {
