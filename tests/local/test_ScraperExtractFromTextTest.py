@@ -1381,7 +1381,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Shawn Showers"
-                    }
+                    },
                 },
             )
         ],
@@ -1394,7 +1394,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Shawn Showers"
-                    }
+                    },
                 },
             )
         ],

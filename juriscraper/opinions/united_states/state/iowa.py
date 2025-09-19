@@ -156,14 +156,16 @@ class Site(OpinionSite):
             ).strip()
 
             result["Docket"] = {
-                    "appeal_from_str": lower_court,
-                }
+                "appeal_from_str": lower_court,
+            }
 
             if match.group("lower_court_judge"):
                 lower_court_judge = re.sub(
                     r"\s+", " ", match.group("lower_court_judge")
                 ).strip()
 
-                result["OriginatingCourtInformation"] = {"assigned_to_str": lower_court_judge}
+                result["OriginatingCourtInformation"] = {
+                    "assigned_to_str": lower_court_judge
+                }
 
         return result
