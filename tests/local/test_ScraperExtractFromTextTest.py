@@ -1269,6 +1269,96 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.federal_appellate.ca5": [
+            (
+                "         United States Court of Appealsfor the Fifth Circuit____________United States Court of AppealsFifth CircuitNo. 25-30051Summary Calendar                                  FILED____________                                August 26, 2025Lyle W. CayceUnited States of America,                                                          ClerkPlaintiff—Appellee,versus Bobby Glenn Wall, Jr.,Defendant—Appellant.______________________________ Appeal from the United States District Court for the Middle District of Louisiana USDC No. 3:24-CR-20-2 ______________________________ Before Jones, Richman, and Duncan, Circuit Judges.Per Curiam: *Bobby Glenn Wall, Jr. pleaded guilty to the distribution of childpornography. He was sentenced above the advisory guidelines to 192 monthsof imprisonment and 15 years of supervised release. Wall challenges thesubstantive reasonableness of his sentence.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Louisiana",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca7": [
+            (
+                "                               In the\n\n    United States Court of Appeals\n                 For the Seventh Circuit\n                     ____________________\nNo. 24-2572\nCHRISTOPHER GEORGE PABLE,\n                                                  Plaintiff-Appellant,\n                                and\n\nTIMOTHY A. DUFFY,\n                                                            Appellant,\n\n                                 v.\n\nCHICAGO TRANSIT AUTHORITY\nand CLEVER DEVICES, LTD.,\n                                               Defendants-Appellees.\n                     ____________________\n\n         Appeal from the United States District Court for the\n           Northern District of Illinois, Eastern Division.\n          No. 1:19-cv-07868 — Robert W. Gettleman, Judge.\n                     ____________________\n\n      ARGUED APRIL 16, 2025 — DECIDED JULY 28, 2025\n                ____________________\n\n   Before SYKES, Chief Judge, and ST. EVE and JACKSON-\nAKIWUMI, Circuit Judges.\n   JACKSON-AKIWUMI, Circuit Judge. In this appeal, an attor-\ney and client seek review of the court order sanctioning both\n2                                                 No. 24-2572\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Northern District of Illinois, Eastern Division",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca11_p": [
+            (
+                "USCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025   Page: 1 of 17\n\n\n\n\n                                                                [PUBLISH]\n                                      In the\n                 United States Court of Appeals\n                           For the Eleventh Circuit\n\n                            ____________________\n\n                                   No. 23-12178\n                            ____________________\n\n        JEREMY JONES,\n                                                         Plaintiﬀ-Appellant,\n        versus\n        DAVID CEINSKI, JR.,\n        Oﬃcer, in his individual capacity,\n\n\n                                                       Defendant-Appellee.\n\n\n                            ____________________\n\n                  Appeal from the United States District Court\n                       for the Middle District of Florida\n                     D.C. Docket No. 8:22-cv-00231-AAS\n                           ____________________\nUSCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025     Page: 2 of 17",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Florida",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca11_u": [
+            (
+                "USCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025   Page: 1 of 17\n\n\n\n\n                                                                [PUBLISH]\n                                      In the\n                 United States Court of Appeals\n                           For the Eleventh Circuit\n\n                            ____________________\n\n                                   No. 23-12178\n                            ____________________\n\n        JEREMY JONES,\n                                                         Plaintiﬀ-Appellant,\n        versus\n        DAVID CEINSKI, JR.,\n        Oﬃcer, in his individual capacity,\n\n\n                                                       Defendant-Appellee.\n\n\n                            ____________________\n\n                  Appeal from the United States District Court\n                       for the Middle District of Florida\n                     D.C. Docket No. 8:22-cv-00231-AAS\n                           ____________________\nUSCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025     Page: 2 of 17",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Florida",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cadc": [
+            (
+                "FOR THE DISTRICT OF COLUMBIA CIRCUIT\n\n\n\nArgued March 6, 2025               Decided August 19, 2025\n\n                       No. 24-7077\n\n                   EUGENE HUDSON, JR.,\n                       APPELLANT\n\n                             v.\n\n   AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES,\n                     APPELLEE\n\n\n        Appeal from the United States District Court\n                for the District of Columbia\n                    (No. 1:17-cv-01867)\n\n\n\n    Harold C. Bone II argued the cause for appellant.\nElizabeth Clark Bone and Kimberly S. Estelle entered\nappearances.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Columbia",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cadc_u": [
+            (
+                "United States Court of Appeals\n                             FOR THE DISTRICT OF COLUMBIA CIRCUIT\n                                      ____________\nNo. 25-5003                                                 September Term, 2024\n                                                                        1:24-cv-02139-UNA\n                                                        Filed On: July 28, 2025\nLori Ann Henriques,\n\n              Appellant\n\n       v.\n\nUnited States Government,\n\n              Appellee\n\n            ON APPEAL FROM THE UNITED STATES DISTRICT COURT\n                     FOR THE DISTRICT OF COLUMBIA\n\n       BEFORE:        Katsas, Rao, and Walker, Circuit Judges\n\n                                     JUDGMENT\n\n        This appeal was considered on the record from the United States District Court\nfor the District of Columbia and on the brief filed by appellant. See Fed. R. App. P.\n34(a)(2); D.C. Cir. Rule 34(j). It is",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Columbia",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca9_u": [
+            (
+                "NOT FOR PUBLICATION                          FILED\n                    UNITED STATES COURT OF APPEALS                       AUG 22 2025\n                                                                     MOLLY C. DWYER, CLERK\n                                                                       U.S. COURT OF APPEALS\n                            FOR THE NINTH CIRCUIT\n\nGRISEL PALLARES-MEDINA; L. A.                   No. 24-3184\nGUZMAN-PALLARES; G. G. GUZMAN-                  Agency Nos.\nPALLARES,                                       A246-597-420\n                                                A246-597-421\n             Petitioners,\n                                                A246-597-422\n v.\n                                                MEMORANDUM*\nPAMELA BONDI, Attorney General,\n\n             Respondent.\n\n                     On Petition for Review of an Order of the\n                         Board of Immigration Appeals\n\n                            Submitted August 13, 2025**\n                               Seattle, Washington\n\nBefore: HAWKINS, McKEOWN, and WARDLAW, Circuit Judges.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board of Immigration Appeals",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca9_p": [
+            (
+                "FILED\n                    UNITED STATES COURT OF APPEALS                       AUG 22 2025\n                                                                     MOLLY C. DWYER, CLERK\n                                                                       U.S. COURT OF APPEALS\n                            FOR THE NINTH CIRCUIT\n\nGRISEL PALLARES-MEDINA; L. A.                   No. 24-3184\nGUZMAN-PALLARES; G. G. GUZMAN-                  Agency Nos.\nPALLARES,                                       A246-597-420\n                                                A246-597-421\n             Petitioners,\n                                                A246-597-422\n v.\n                                                MEMORANDUM*\nPAMELA BONDI, Attorney General,\n\n             Respondent.\n\n                     On Petition for Review of an Order of the\n                         Board of Immigration Appeals\n\n                            Submitted August 13, 2025**\n                               Seattle, Washington\n\nBefore: HAWKINS, McKEOWN, and WARDLAW, Circuit Judges.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board of Immigration Appeals",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cafc": [
+            (
+                "Case: 24-1479    Document: 50     Page: 1   Filed: 08/26/2025\n\n\n\n\n           NOTE: This order is nonprecedential.\n\n\n   United States Court of Appeals\n       for the Federal Circuit\n                  ______________________\n\n           PHILIPS NORTH AMERICA, LLC,\n                  Plaintiff-Appellant\n\n                             v.\n\n                      FITBIT LLC,\n                        Defendant\n                  ______________________\n\n                        2024-1479\n                  ______________________\n\n     Appeal from the United States District Court for the\n District of Massachusetts in No. 1:19-cv-11586-FDS, Judge\n F. Dennis Saylor, IV.\n                  ______________________\n\n                      ON MOTION\n                  ______________________\n\n                        ORDER\n     Upon consideration of ECF No. 49, which the court con-\n strues as a motion to dismiss the appeal under Federal\n Rule of Appellate Procedure 42(b),\nCase: 24-1479    Document: 50     Page: 2    Filed: 08/26/2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Massachusetts",
+                    }
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.delaware": [
             (
                 "\n            IN THE SUPREME COURT OF THE STATE OF DELAWARE\n\n    IN THE MATTER OF ROLF D.                    §\n    BREWSTER, a person with a                   §\n    disability,1                                § No. 254, 2025\n                                                §\n                                                § Court Below—Court of Chancery\n                                                § of the State of Delaware\n                                                §\n                                                § C.M. No. CM20694-N\n                                                §\n\n                                Submitted: July 25, 2025\n                                Decided:   August 8, 2025\n\nBefore VALIHURA, TRAYNOR, and LEGROW, Justices.\n\n                                             ORDER\n\n          After consideration of the notice to show cause and the responses, it appears\n\nto the Court that:\n\n          (1)    On September 24, 2024, Christiana Care Health Systems filed a petition\n\nin the Court of Chancery seeking appointment of a guardian of the person and\n\nproperty of “Rolf D. Brewster” under Title 12, Chapter 39 of the Delaware Code.\n\nThe court appointed an attorney ad litem for Brewster. Brewster’s wife (“Wife”)\n\nobjected to the petition.\n",
