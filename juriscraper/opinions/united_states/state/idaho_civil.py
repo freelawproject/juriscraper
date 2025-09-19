@@ -114,6 +114,8 @@ class Site(OpinionSiteLinear):
                 lower_court_judge = re.sub(
                     r"\s+", " ", match.group("judge")
                 ).strip()
-                result["OriginatingCourtInformation"] = {"assigned_to_str": lower_court_judge}
+                result["OriginatingCourtInformation"] = {
+                    "assigned_to_str": lower_court_judge
+                }
 
         return result
