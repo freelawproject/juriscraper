@@ -15,16 +15,41 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add scotus_docket_report_html to parse SCOTUS HTML dockets
+- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
+
+Changes:
+- Retrieve lower court information in `vt` #1569
+- Retrieve lower court information in `sd` #1569
+- Retrieve lower court information in `va` #1569
+- Retrieve lower court information in `utah` #1569
+- Retrieve lower court information in `wyo` #1569
+- Retrieve lower court information in `dc` #1569
+- Retrieve lower court information in `cal` scrapers #1569
+- Retrieve lower court information in 'alaska' #1569
+- Add lower court extraction to `federal_appellate` scrapers #1560
+
+
+Fixes:
+- Fix connappct #1580
+- fix `bia` scraper #1574
+
+## Current
+
+**2.6.89 - 2025-09-02**
+
+Features:
 - Add scotus_docket_report to parse SCOTUS JSON dockets
+- Add support for downloading documents from the ACMS court API.
 
 Changes:
 - Retrieve lower court information in `bap9` and `bap10` #1567
-- Add lower court extraction to `federal_appellate` scrapers #1560
+- Retrieve lower court information in `ariz`  #1569
 
 Fixes:
--
+- fix `cafc` oral arguments scraper #1570
 
-## Current
+## Past
 
 **2.6.88 - 2025-08-27**
 
@@ -34,7 +59,6 @@ Features:
 Fixes:
 - Fix `nd` use empty string when no summary is found #1561
 
-## Past
 
 **2.6.87 - 2025-08-25**
 

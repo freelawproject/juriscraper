@@ -1,7 +1,10 @@
-from juriscraper.opinions.united_states.state import cal
+from juriscraper.opinions.united_states.state import calctapp_1st
 
 
-class Site(cal.Site):
+class Site(calctapp_1st.Site):
+    court_code = "S"
+    division = ""
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.courts.ca.gov/cms/npopinions.htm"
