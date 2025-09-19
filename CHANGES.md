@@ -31,6 +31,7 @@ Changes:
 - Add lower court extraction to `iowa` scrapers #1569
 
 - Retrieve lower court information in `delaware` scrapers #1569
+- Retrieve lower court information in `idaho` #1569
 
 Fixes:
 - Fix connappct #1580
