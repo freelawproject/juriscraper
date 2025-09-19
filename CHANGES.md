@@ -27,6 +27,9 @@ Changes:
 - Retrieve lower court information in `dc` #1569
 - Retrieve lower court information in `cal` scrapers #1569
 - Retrieve lower court information in 'alaska' #1569
+- Add lower court extraction to `federal_appellate` scrapers #1560
+
+- Retrieve lower court information in `delaware` scrapers #1569
 - Retrieve lower court information in `idaho` #1569
 
 Fixes:
