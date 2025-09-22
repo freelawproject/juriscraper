@@ -110,7 +110,8 @@ class Site(OpinionSiteLinear):
             )
             (?P<lower_court>.*?)\n\s*\n
             """,
-            re.X | re.DOTALL)
+            re.X | re.DOTALL,
+        )
 
         lower_court = ""
         if match := pattern.search(scraped_text):
