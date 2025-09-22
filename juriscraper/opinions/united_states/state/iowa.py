@@ -135,9 +135,10 @@ class Site(OpinionSite):
         pattern = re.compile(
             r"""
             (?:
-               Appeals?\s+from\s+the\s+
+               Appeals?\s+from\s+the\s+(?:report\s+of\s+the\s+)?
               | On\s+review\s+of\s+the\s+report\s+of\s+the\s+
               | On\s+application\s+of\s+the\s+
+              | On\s+review\s+from\s+the\s+
             )
             (?P<lower_court>[^,.]+?)
             (?:,\s*
