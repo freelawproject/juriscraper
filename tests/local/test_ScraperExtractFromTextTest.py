@@ -844,8 +844,8 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "John A. Kutzman",
-                        "docket_number": "CDC-22-346"
-                    }
+                        "docket_number": "CDC-22-346",
+                    },
                 },
             )
         ],

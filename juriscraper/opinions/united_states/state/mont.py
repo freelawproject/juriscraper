@@ -84,7 +84,7 @@ class Site(OpinionSiteLinear):
         result = {}
         first_text = scraped_text[:400]
         if match := re.search(self.cite_regex, first_text):
-            result["Citation"] =  match.group(0)
+            result["Citation"] = match.group(0)
 
         lower_court_pattern = re.compile(
             r"""
@@ -93,7 +93,7 @@ class Site(OpinionSiteLinear):
                 (?:.*?No\.\s+(?P<lower_court_docket>[^\n,]+))?
                 (?:.*?Honorable\s+(?P<judge>.+?),\s*Presiding\s*Judge)?
             """,
-            re.X | re.DOTALL
+            re.X | re.DOTALL,
         )
 
         if match := lower_court_pattern.search(scraped_text):
@@ -108,7 +108,9 @@ class Site(OpinionSiteLinear):
                 ] = lower_court_judge
             lower_court_docket = match.group("lower_court_docket")
             if lower_court_docket:
-                result.setdefault("OriginatingCourtInformation", {})["docket_number"] = lower_court_docket
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "docket_number"
+                ] = lower_court_docket
         return result
 
     @staticmethod
