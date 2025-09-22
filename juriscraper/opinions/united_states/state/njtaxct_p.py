@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import nj
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(nj.Site):

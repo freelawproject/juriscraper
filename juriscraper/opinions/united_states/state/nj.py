@@ -96,7 +96,6 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-
     def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
