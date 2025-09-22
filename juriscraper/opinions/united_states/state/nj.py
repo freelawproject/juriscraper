@@ -60,6 +60,43 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (?:
+                On\s+certification\s+to\s+the\s+
+                |On\s+appeal\s+from\s+the\s+
+                |On\s+petitions\s+for\s+review\s+of\s+a\s+decision\s+of\s+the\s+
+            )
+            (?P<lower_court>[^.]+?)
+            (?=\s*[.,])
+            """,
+            re.X,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            if lower_court.lower().strip() == "superior court":
+                lower_court = "New Jersey Superior Court"
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": titlecase(lower_court),
+                }
+            }
+
+        return {}
+
+
     def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
 
