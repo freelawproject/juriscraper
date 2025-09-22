@@ -488,6 +488,10 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {
                         "case_name": "Gerszewski v. Rostvet",
                         "docket_number": "Nos. 20230361-20230363",
+                        "appeal_from_str": "District Court of Walsh County, Northeast Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Barbara L. Whelan"
                     },
                 },
             ),
