@@ -205,6 +205,10 @@ class Site(OpinionSiteLinear):
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
+            # Prepend 'Kentucky' if lower_court is 'Court of Appeals'
+            if lower_court.lower() == "court of appeals":
+                lower_court = "Kentucky Court of Appeals"
+
             result["Docket"] = {
                 "appeal_from_str": titlecase(lower_court),
             }
