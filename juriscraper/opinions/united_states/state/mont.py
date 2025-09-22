@@ -76,15 +76,40 @@ class Site(OpinionSiteLinear):
             )
 
     def extract_from_text(self, scraped_text: str) -> dict:
-        """Extract citation from text
+        """Extract citation, and OriginatingCourtInformation from text
 
         :param scraped_text: Text of scraped content
         :return: date filed
         """
+        result = {}
         first_text = scraped_text[:400]
         if match := re.search(self.cite_regex, first_text):
-            return {"Citation": match.group(0)}
-        return {}
+            result["Citation"] =  match.group(0)
+
+        lower_court_pattern = re.compile(
+            r"""
+                APPEAL\s+FROM:\s+
+                (?P<lower_court>.*?)(?:,\s+Cause)
+                (?:.*?No\.\s+(?P<lower_court_docket>[^\n,]+))?
+                (?:.*?Honorable\s+(?P<judge>.+?),\s*Presiding\s*Judge)?
+            """,
+            re.X | re.DOTALL
+        )
+
+        if match := lower_court_pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            result.setdefault("Docket", {})["appeal_from_str"] = lower_court
+            lower_court_judge = match.group("judge")
+            if lower_court_judge:
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "assigned_to_str"
+                ] = lower_court_judge
+            lower_court_docket = match.group("lower_court_docket")
+            if lower_court_docket:
+                result.setdefault("OriginatingCourtInformation", {})["docket_number"] = lower_court_docket
+        return result
 
     @staticmethod
     def cleanup_content(content: Union[str, bytes]) -> str:
