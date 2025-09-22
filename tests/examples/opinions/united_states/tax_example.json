@@ -1,111 +1,130 @@
-[
-    {
-        "eventCode": "TCOP",
-        "isStricken": false,
-        "numberOfPages": 23,
-        "documentType": "T.C. Opinion",
-        "filingDate": "2021-12-08T19:33:04.910Z",
-        "docketEntryId": "919cb4ce-fb26-4cb3-a0f3-a1a2f0e6927b",
-        "signedJudgeName": "Weiler",
-        "documentTitle": "T.C. Opinion Judge Weiler 157 T.C. No. 12. (An appropriate order will be issued).",
-        "isFileAttached": true,
-        "docketNumber": "21580-19",
-        "_score": null,
-        "isSealed": false,
-        "caseCaption": "Alice J. Coggin, Petitioner",
-        "docketNumberWithSuffix": "21580-19",
-        "irsPractitioners": [
-            {
-                "serviceIndicator": "Electronic",
-                "role": "irsPractitioner",
-                "barNumber": "KA0402",
-                "entityName": "IrsPractitioner",
-                "contact": {
-                    "address3": "4905 Koger Blvd., Suite 102",
-                    "address2": "Alamance Building, Mail Stop 2",
-                    "city": "Greensboro",
-                    "phone": "336-690-6315",
-                    "address1": "Office of Chief Counsel, SB/SE",
-                    "postalCode": "27407-2734",
-                    "state": "NC",
-                    "countryType": "domestic"
-                },
-                "name": "Ashley M. Bender",
-                "sk": "irsPractitioner|02fe2002-a119-4a1d-bb79-11cfe058678d",
-                "pk": "case|21580-19",
-                "userId": "02fe2002-a119-4a1d-bb79-11cfe058678d",
-                "indexedTimestamp": 1626686345253,
-                "email": "ashley.m.bender@irscounsel.treas.gov"
-            },
-            {
-                "serviceIndicator": "Electronic",
-                "role": "irsPractitioner",
-                "barNumber": "HO0056",
-                "entityName": "IrsPractitioner",
-                "contact": {
-                    "address3": "Alamance Building, MS 24",
-                    "address2": "4905 Koger Blvd., Suite 102",
-                    "city": "Greensboro",
-                    "phone": "336-690-6326",
-                    "address1": "IRS, Office of Chief Counsel",
-                    "postalCode": "27407-2734",
-                    "state": "NC",
-                    "countryType": "domestic"
-                },
-                "name": "Olivia H. Rembach",
-                "sk": "irsPractitioner|5a09197b-1500-4918-9c42-546950581a23",
-                "pk": "case|21580-19",
-                "userId": "5a09197b-1500-4918-9c42-546950581a23",
-                "indexedTimestamp": 1626686082009,
-                "email": "olivia.h.rembach@irscounsel.treas.gov"
-            }
-        ],
-        "privatePractitioners": [
-            {
-                "role": "privatePractitioner",
-                "representing": [
-                    "6E2B3BBD-167C-45AB-BD82-609B1A04D339"
-                ],
-                "userId": "a4b5234a-b345-45a9-881d-3fa8044208f8",
-                "serviceIndicator": "Electronic",
-                "barNumber": "BB0450",
-                "entityName": "PrivatePractitioner",
-                "contact": {
-                    "address3": null,
-                    "address2": "Suite 405",
-                    "city": "Charlotte",
-                    "phone": "704-833-8181",
-                    "address1": "521 E. Morehead Street",
-                    "postalCode": "28209",
-                    "state": "NC",
-                    "countryType": "domestic"
-                },
-                "name": "Brian C. Bernhardt",
-                "sk": "privatePractitioner|a4b5234a-b345-45a9-881d-3fa8044208f8",
-                "firmName": "Forrest Firm, P.C.",
-                "pk": "case|21580-19",
-                "indexedTimestamp": 1626686081881,
-                "email": "brian.bernhardt@forrestfirm.com"
-            }
-        ],
-        "petitioners": [
-            {
-                "isAddressSealed": false,
-                "country": "U.S.A.",
-                "address2": "Apt. 120",
-                "city": "Burlington",
-                "contactId": "6E2B3BBD-167C-45AB-BD82-609B1A04D339",
-                "address1": "1880 Brookwood Ave.",
-                "postalCode": "27215",
-                "contactType": "petitioner",
-                "sealedAndUnavailable": false,
-                "countryType": "domestic",
-                "serviceIndicator": "None",
-                "phone": "No Phone",
-                "entityName": "Petitioner",
-                "name": "Alice J. Coggin",
-                "state": "NC"
-            }
-        ]
-    }
-]
+{
+    "results": [
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Blomquist Holdings, LLC, Crestlawn Investors, LLC, Tax Matters Partner, Petitioner",
+            "docketEntryId": "365055fd-383b-463c-833b-851ca9622eca",
+            "docketNumber": "8015-21",
+            "docketNumberWithSuffix": "8015-21",
+            "documentTitle": "T.C. Opinion Judge Paris 165 T.C. No. 6  (An appropriate order will be issued.)",
+            "documentType": "T.C. Opinion",
+            "eventCode": "TCOP",
+            "filingDate": "2025-09-17T18:32:31.597Z",
+            "isStricken": false,
+            "judge": "Paris",
+            "numberOfPages": 22
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Ayla A. Savage, Petitioner",
+            "docketEntryId": "37ca8b87-c04a-4e1e-8e43-3f4b7af30404",
+            "docketNumber": "21606-22",
+            "docketNumberWithSuffix": "21606-22",
+            "documentTitle": "T.C. Opinion Judge Toro 165 T.C. No. 5  (Appropriate decision will be entered.)",
+            "documentType": "T.C. Opinion",
+            "eventCode": "TCOP",
+            "filingDate": "2025-09-11T18:33:42.571Z",
+            "isStricken": false,
+            "judge": "Toro",
+            "numberOfPages": 19
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Patricia A. Torres, Petitioner",
+            "docketEntryId": "37ca8b87-c04a-4e1e-8e43-3f4b7af30404",
+            "docketNumber": "21607-22",
+            "docketNumberWithSuffix": "21607-22",
+            "documentTitle": "T.C. Opinion Judge Toro 165 T.C. No. 5  (Appropriate decision will be entered.)",
+            "documentType": "T.C. Opinion",
+            "eventCode": "TCOP",
+            "filingDate": "2025-09-11T18:33:42.570Z",
+            "isStricken": false,
+            "judge": "Toro",
+            "numberOfPages": 19
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Artena Moon & Kenneth Moon, Petitioners",
+            "docketEntryId": "ad14dbb7-7b6c-4833-9512-da90e8669815",
+            "docketNumber": "21998-21",
+            "docketNumberWithSuffix": "21998-21",
+            "documentTitle": "T.C. Opinion Judge Foley 165 T.C. No. 4 ( Decision will be entered for respondent as to the deficiency and for petitioners as to the accuracy-related penalty.)",
+            "documentType": "T.C. Opinion",
+            "eventCode": "TCOP",
+            "filingDate": "2025-09-10T18:32:22.074Z",
+            "isStricken": false,
+            "judge": "Foley",
+            "numberOfPages": 3
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Joseph R. Gottesman, Petitioner",
+            "docketEntryId": "85a7f6c1-652a-46eb-935d-1ae38317d880",
+            "docketNumber": "27005-21",
+            "docketNumberWithSuffix": "27005-21",
+            "documentTitle": "Memorandum Opinion Judge Jones Opinion - T.C. Memo. 2025-94 (An appropriate order and decision will be entered.)",
+            "documentType": "Memorandum Opinion",
+            "eventCode": "MOP",
+            "filingDate": "2025-09-10T18:32:13.421Z",
+            "isStricken": false,
+            "judge": "Jones",
+            "numberOfPages": 14
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Jack Donald Supinger, Petitioner",
+            "docketEntryId": "1042d563-05df-4713-8f4a-2f6bf7646048",
+            "docketNumber": "13680-22",
+            "docketNumberWithSuffix": "13680-22",
+            "documentTitle": "Memorandum Opinion Judge Marshall T.C. Memo. 2025-93  (An appropriate order and decision will be entered.)",
+            "documentType": "Memorandum Opinion",
+            "eventCode": "MOP",
+            "filingDate": "2025-09-04T18:35:02.451Z",
+            "isStricken": false,
+            "judge": "Marshall",
+            "numberOfPages": 16
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "James D. Sullivan, Petitioner",
+            "docketEntryId": "534302e9-80ee-4747-8b73-8fb357080455",
+            "docketNumber": "2589-24",
+            "docketNumberWithSuffix": "2589-24L",
+            "documentTitle": "Memorandum Opinion Special Trial Judge Siegel T.C. Memo. 2025-92  (An appropriate order & decision will be entered.)",
+            "documentType": "Memorandum Opinion",
+            "eventCode": "MOP",
+            "filingDate": "2025-08-27T18:31:35.975Z",
+            "isStricken": false,
+            "judge": "Siegel",
+            "numberOfPages": 6
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Lisa Marie Walsh, Petitioner",
+            "docketEntryId": "dd7cdb23-934e-4082-ad9f-bd0c11e49c38",
+            "docketNumber": "4460-22",
+            "docketNumberWithSuffix": "4460-22",
+            "documentTitle": "Memorandum Opinion Judge Landy T.C. Memo. 2025-91  (An appropriate decision will be entered.)",
+            "documentType": "Memorandum Opinion",
+            "eventCode": "MOP",
+            "filingDate": "2025-08-26T18:33:34.825Z",
+            "isStricken": false,
+            "judge": "Landy",
+            "numberOfPages": 24
+        },
+        {
+            "entityName": "PublicDocumentSearchResult",
+            "caseCaption": "Veleta Williams, Petitioner",
+            "docketEntryId": "06a9e402-d272-41a5-83ee-f3033a25a9e0",
+            "docketNumber": "372-24",
+            "docketNumberWithSuffix": "372-24",
+            "documentTitle": "Memorandum Opinion Judge Arbeit  T.C. Memo. 2025-90 (An order of dismissal for lack of jurisdiction will be entered.)",
+            "documentType": "Memorandum Opinion",
+            "eventCode": "MOP",
+            "filingDate": "2025-08-25T18:28:29.974Z",
+            "isStricken": false,
+            "judge": "Arbeit",
+            "numberOfPages": 8
+        }
+    ]
+}
