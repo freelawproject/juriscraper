@@ -40,6 +40,7 @@ Changes:
 Fixes:
 - Fix connappct #1580
 - fix `bia` scraper #1574
+- fix `tax` scraper #1599
 
 ## Current
 
