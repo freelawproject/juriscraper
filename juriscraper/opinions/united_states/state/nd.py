@@ -172,7 +172,7 @@ class Site(OpinionSiteLinear):
 
         lower_court_pattern = re.compile(
             r"Appeal\s+from\s+the\s+(?P<lower_court>.*?),\s*the\s+Honorable\s+(?P<judge>.+?),\s*Judge",
-            re.DOTALL
+            re.DOTALL,
         )
 
         lower_court = ""
@@ -197,7 +197,9 @@ class Site(OpinionSiteLinear):
             metadata["Docket"]["appeal_from_str"] = lower_court
         if lower_court_judge:
             metadata.update({"OriginatingCourtInformation": {}})
-            metadata["OriginatingCourtInformation"]["assigned_to_str"] = lower_court_judge
+            metadata["OriginatingCourtInformation"]["assigned_to_str"] = (
+                lower_court_judge
+            )
 
         return metadata
 

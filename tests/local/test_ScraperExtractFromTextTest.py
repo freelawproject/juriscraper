@@ -492,7 +492,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "Barbara L. Whelan"
-                    }
+                    },
                 },
             ),
         ],
