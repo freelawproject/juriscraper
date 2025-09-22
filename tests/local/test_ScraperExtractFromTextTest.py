@@ -836,9 +836,16 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.mont": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10801442/
-                "'02/18/2025\n\n\n                                        DA 23-0746\n\n                IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                         2025 MT 35\n\n\n\nIN THE MATTER OF THE ESTATE OF:\n\nWARREN DAN EDDLEMAN,",
+                "\n                                                                                        08/26/2025\n\n\n                                         DA 23-0430\n                                                                                     Case Number: DA 23-0430\n\n\n              IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                        2025 MT 189\n\n\n\nSTATE OF MONTANA,\n\n              Plaintiff and Appellee,\n\n         v.\n\nJEFFREY SCOTT ANDERSON,\n\n              Defendant and Appellant.\n\n\n\nAPPEAL FROM:          District Court of the Eighth Judicial District,\n                      In and For the County of Cascade, Cause No. CDC-22-346\n                      Honorable John A. Kutzman, Presiding Judge\n\n\nCOUNSEL OF RECORD:\n\n               For Appellant:\n\n                      James M. Siegman, Attorney at Law, Jackson, Mississippi\n\n               For Appellee:\n\n                      Austin Knudsen, Montana Attorney General, Katie F. Schulz,\n                      Assistant Attorney General, Helena, Montana\n\n                      Joshua A. Racki, Cascade County Attorney, Amanda Lofink, Deputy\n                      County Attorney, Great Falls, Montana\n",
                 {
-                    "Citation": "2025 MT 35",
+                    "Citation": "2025 MT 189",
+                    "Docket": {
+                        "appeal_from_str": "District Court of the Eighth Judicial District, In and For the County of Cascade"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "John A. Kutzman",
+                        "docket_number": "CDC-22-346",
+                    },
                 },
             )
         ],

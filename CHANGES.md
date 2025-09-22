@@ -34,6 +34,7 @@ Changes:
 - Retrieve lower court information in `idaho` #1569
 - Retrieve lower court information in `ky` #1569
 - Retrieve lower court information in `la` #1569
+- Retrieve lower court information in `mont` #1569
 
 Fixes:
 - Fix connappct #1580
