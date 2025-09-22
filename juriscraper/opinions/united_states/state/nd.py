@@ -4,6 +4,7 @@
 # Date created: 2019-02-28
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
 # Updated: 2025-07-02, luism: get citation from HTML
+# Updated: 2025-09-01, luism: extract lower court information from text
 
 import re
 from datetime import date, datetime
@@ -169,6 +170,19 @@ class Site(OpinionSiteLinear):
                 case_name = reversed_lines[index + 1].strip()
                 break
 
+        lower_court_pattern = re.compile(
+            r"Appeal\s+from\s+the\s+(?P<lower_court>.*?),\s*the\s+Honorable\s+(?P<judge>.+?),\s*Judge",
+            re.DOTALL,
+        )
+
+        lower_court = ""
+        lower_court_judge = ""
+        if match := lower_court_pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            lower_court_judge = match.group("judge").strip()
+
         # We only put keys into the objects when they exist
         # Otherwise, we would overwrite existing data with empty values
         metadata.update({"OpinionCluster": {}, "Docket": {}})
@@ -178,6 +192,13 @@ class Site(OpinionSiteLinear):
         if docket_number:
             metadata["Docket"]["docket_number"] = normalize_dashes(
                 docket_number
+            )
+        if lower_court:
+            metadata["Docket"]["appeal_from_str"] = lower_court
+        if lower_court_judge:
+            metadata.update({"OriginatingCourtInformation": {}})
+            metadata["OriginatingCourtInformation"]["assigned_to_str"] = (
+                lower_court_judge
             )
 
         return metadata
