@@ -1437,6 +1437,32 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.iowa": [
+            (
+                "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Iowa District Court for Jefferson County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Shawn Showers"
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.iowactapp": [
+            (
+                "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Iowa District Court for Jefferson County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Shawn Showers"
+                    },
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
