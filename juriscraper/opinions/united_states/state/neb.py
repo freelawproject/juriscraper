@@ -3,8 +3,8 @@ from typing import Any
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -17,7 +17,7 @@ class Site(OpinionSiteLinear):
                     Appeals?\s+from\s+the\s+
                     (?P<lower_court>.*?):\s+(?P<judge>.+?),\s*Judge
                     """,
-        re.X |re.DOTALL,
+        re.X | re.DOTALL,
     )
 
     def __init__(self, *args, **kwargs):
@@ -103,7 +103,9 @@ class Site(OpinionSiteLinear):
         match = self.lower_court_regex.search(scraped_text)
         if match:
             result["Docket"] = {
-                "appeal_from_str": re.sub(r"\s+", " ", match.group("lower_court")).strip()
+                "appeal_from_str": re.sub(
+                    r"\s+", " ", match.group("lower_court")
+                ).strip()
             }
             result["OriginatingCourtInformation"] = {
                 "assigned_to_str": titlecase(
