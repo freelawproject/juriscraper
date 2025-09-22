@@ -1437,6 +1437,32 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.iowa": [
+            (
+                "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Iowa District Court for Jefferson County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Shawn Showers"
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.iowactapp": [
+            (
+                "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Iowa District Court for Jefferson County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Shawn Showers"
+                    },
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.la": [
             (
                 "\nFOR IMMEDIATE NEWS RELEASE                                                       NEWS RELEASE #031\n\n\nFROM: CLERK OF SUPREME COURT OF LOUISIANA\n\n\nThe Opinions handed down on the 27th day of June, 2025 are as follows:\n\nBY Hughes, J.:\n\n 2024-C-00676             KELLY O. ORGERON VS. EDWARD J. ORGERON, JR. (Parish of St.\n                          Tammany)\n\n                          JUDGMENT IN FAVOR OF DEFENDANT REVERSED; JUDGMENT\n                          RENDERED IN FAVOR OF PLAINTIFF. SEE OPINION.\n\n                          Retired Judge John Conery, appointed Justice ad hoc, sitting for Chief\n                          Justice Weimer, recused.\n\n                          Retired Judge E. Joseph Bleich, appointed Justice ad hoc, sitting for Justice\n                          Crain, recused.\n\n                          Retired Judge Martin E. Coady, appointed Justice ad hoc, sitting for Justice\n                          Guidry, recused.\n\n                          McCallum, J., dissents and assigns reasons.\n                          Cole, J., dissents for the reasons assigned by Justice McCallum.\n                          Bleich, A.H.J., additionally concurs and assigns reasons.\n SUPREME COURT OF LOUISIANA\n\n                                    NUMBER 2024-C-00676\n\n                                     KELLY O.ORGERON\n\n                                              VERSUS\n\n                                 EDWARD J.ORGERON, JR.\n\n\n              On Writ of Certiorari to the Court of Appeal, First Circuit, \n                               Parish of St.Tammany\n\n\nHUGHES, J.* \n\n          The plaintiff / ex-wife in this case contends the lower courts erred in failing to\n\naward her a community property share of the $16, 949, 000 in “liquidated damages”\n\npaid to her defendant / ex-husband, upon the termination of his employment as a\n",
