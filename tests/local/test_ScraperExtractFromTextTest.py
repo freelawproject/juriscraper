@@ -836,9 +836,16 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.mont": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10801442/
-                "'02/18/2025\n\n\n                                        DA 23-0746\n\n                IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                         2025 MT 35\n\n\n\nIN THE MATTER OF THE ESTATE OF:\n\nWARREN DAN EDDLEMAN,",
+                "\n                                                                                        08/26/2025\n\n\n                                         DA 23-0430\n                                                                                     Case Number: DA 23-0430\n\n\n              IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                        2025 MT 189\n\n\n\nSTATE OF MONTANA,\n\n              Plaintiff and Appellee,\n\n         v.\n\nJEFFREY SCOTT ANDERSON,\n\n              Defendant and Appellant.\n\n\n\nAPPEAL FROM:          District Court of the Eighth Judicial District,\n                      In and For the County of Cascade, Cause No. CDC-22-346\n                      Honorable John A. Kutzman, Presiding Judge\n\n\nCOUNSEL OF RECORD:\n\n               For Appellant:\n\n                      James M. Siegman, Attorney at Law, Jackson, Mississippi\n\n               For Appellee:\n\n                      Austin Knudsen, Montana Attorney General, Katie F. Schulz,\n                      Assistant Attorney General, Helena, Montana\n\n                      Joshua A. Racki, Cascade County Attorney, Amanda Lofink, Deputy\n                      County Attorney, Great Falls, Montana\n",
                 {
-                    "Citation": "2025 MT 35",
+                    "Citation": "2025 MT 189",
+                    "Docket": {
+                        "appeal_from_str": "District Court of the Eighth Judicial District, In and For the County of Cascade"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "John A. Kutzman",
+                        "docket_number": "CDC-22-346",
+                    },
                 },
             )
         ],
@@ -1486,6 +1493,16 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OriginatingCourtInformation": {
                         "docket_number": "19-CR-00158"
                     },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.la": [
+            (
+                "\nFOR IMMEDIATE NEWS RELEASE                                                       NEWS RELEASE #031\n\n\nFROM: CLERK OF SUPREME COURT OF LOUISIANA\n\n\nThe Opinions handed down on the 27th day of June, 2025 are as follows:\n\nBY Hughes, J.:\n\n 2024-C-00676             KELLY O. ORGERON VS. EDWARD J. ORGERON, JR. (Parish of St.\n                          Tammany)\n\n                          JUDGMENT IN FAVOR OF DEFENDANT REVERSED; JUDGMENT\n                          RENDERED IN FAVOR OF PLAINTIFF. SEE OPINION.\n\n                          Retired Judge John Conery, appointed Justice ad hoc, sitting for Chief\n                          Justice Weimer, recused.\n\n                          Retired Judge E. Joseph Bleich, appointed Justice ad hoc, sitting for Justice\n                          Crain, recused.\n\n                          Retired Judge Martin E. Coady, appointed Justice ad hoc, sitting for Justice\n                          Guidry, recused.\n\n                          McCallum, J., dissents and assigns reasons.\n                          Cole, J., dissents for the reasons assigned by Justice McCallum.\n                          Bleich, A.H.J., additionally concurs and assigns reasons.\n SUPREME COURT OF LOUISIANA\n\n                                    NUMBER 2024-C-00676\n\n                                     KELLY O.ORGERON\n\n                                              VERSUS\n\n                                 EDWARD J.ORGERON, JR.\n\n\n              On Writ of Certiorari to the Court of Appeal, First Circuit, \n                               Parish of St.Tammany\n\n\nHUGHES, J.* \n\n          The plaintiff / ex-wife in this case contends the lower courts erred in failing to\n\naward her a community property share of the $16, 949, 000 in “liquidated damages”\n\npaid to her defendant / ex-husband, upon the termination of his employment as a\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Court of Appeal, First Circuit, Parish of St.Tammany",
+                    }
                 },
             )
         ],
