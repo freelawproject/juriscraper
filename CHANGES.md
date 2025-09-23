@@ -36,6 +36,7 @@ Changes:
 - Retrieve lower court information in `la` #1569
 - Retrieve lower court information in `mont` #1569
 - Retrieve lower court information in `nd` #1569
+- Retrieve lower court information in `nj` #1569
 - Retrieve lower court information in `neb` #1569
 
 Fixes:

@@ -1526,6 +1526,36 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.nj": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.njsuperctappdiv_p": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.njsuperctappdiv_u": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
