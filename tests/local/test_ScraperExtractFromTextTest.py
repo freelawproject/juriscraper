@@ -1516,7 +1516,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "OpinionCluster": {
                         "date_filed": "2014-12-19",
-                        "date_filed_is_approximate": False
+                        "date_filed_is_approximate": False,
                     }
                 },
             )
