@@ -90,7 +90,7 @@ class Site(OpinionSiteLinear):
         """
         if not start:
             end = datetime.now() + timedelta(1)
-            start = end - timedelta(90)
+            start = end - timedelta(7)
 
         params = {
             "cont": "",
