@@ -128,20 +128,27 @@ class Site(OpinionSiteLinear):
         metadata = {}
         docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
         if docket_number:
-            metadata.setdefault("OpinionCluster", {})["docket_number"] =  docket_number[0]
+            metadata.setdefault("OpinionCluster", {})["docket_number"] = (
+                docket_number[0]
+            )
 
-        lower_court_regex = re.compile(r"APPEAL FROM THE (?P<lower_court>.+)\n\s*\d*\s*(?P<lower_court_judge>.+), District (?:Court )?Judge")
+        lower_court_regex = re.compile(
+            r"APPEAL FROM THE (?P<lower_court>.+)\n\s*\d*\s*(?P<lower_court_judge>.+), District (?:Court )?Judge"
+        )
 
         if match := lower_court_regex.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
-            metadata.setdefault("Docket", {})["appeal_from_str"] = titlecase(lower_court)
+            metadata.setdefault("Docket", {})["appeal_from_str"] = titlecase(
+                lower_court
+            )
 
             lower_court_judge = re.sub(
                 r"\s+", " ", match.group("lower_court_judge")
             ).strip()
-            metadata.setdefault("OriginatingCourtInformation", {})["assigned_to_str"] = titlecase(lower_court_judge)
-
+            metadata.setdefault("OriginatingCourtInformation", {})[
+                "assigned_to_str"
+            ] = titlecase(lower_court_judge)
 
         return metadata

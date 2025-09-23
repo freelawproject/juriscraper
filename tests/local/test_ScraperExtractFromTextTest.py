@@ -78,9 +78,8 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "James Lawrence Sanchez"
                     },
-                    "OpinionCluster":
-                        {"docket_number": "S-1-SC-39283"}
-                }
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.nmctapp": [
@@ -93,9 +92,8 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "James Lawrence Sanchez"
                     },
-                    "OpinionCluster":
-                        {"docket_number": "S-1-SC-39283"}
-                }
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.ark": [
