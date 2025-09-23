@@ -3,12 +3,21 @@ from typing import Any
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     citation_regex = re.compile(
         r"Cite\s+as\s+(?P<citation>\d+ +Neb\.( App\.)? \d+)"
+    )
+
+    lower_court_regex = re.compile(
+        r"""
+                    Appeals?\s+from\s+the\s+
+                    (?P<lower_court>.*?):\s+(?P<judge>.+?),\s*Judge
+                    """,
+        re.X | re.DOTALL,
     )
 
     def __init__(self, *args, **kwargs):
@@ -84,12 +93,24 @@ class Site(OpinionSiteLinear):
                 )
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
-        """Get the state citation from the document's text
+        """Get the state citation and lower court info from the document's text."""
+        result = {}
 
-        :param scraped_text: extracted text
-        :return: a dictionary with the expected format
-        """
-        if match := self.citation_regex.search(scraped_text[:1000]):
-            return {"Citation": match.group("citation")}
+        match = self.citation_regex.search(scraped_text[:1000])
+        if match:
+            result["Citation"] = match.group("citation")
 
-        return {}
+        match = self.lower_court_regex.search(scraped_text)
+        if match:
+            result["Docket"] = {
+                "appeal_from_str": re.sub(
+                    r"\s+", " ", match.group("lower_court")
+                ).strip()
+            }
+            result["OriginatingCourtInformation"] = {
+                "assigned_to_str": titlecase(
+                    re.sub(r"\s+", " ", match.group("judge")).strip()
+                )
+            }
+
+        return result
