@@ -1579,6 +1579,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {
                         "date_filed": "2014-12-19",
                         "date_filed_is_approximate": False,
+                        "syllabus": "Property Tax – Applicability of Homestead Tax Credit to Special Benefit District Taxes"
                     }
                 },
             )

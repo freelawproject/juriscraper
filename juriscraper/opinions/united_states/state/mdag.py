@@ -9,6 +9,7 @@ from datetime import date
 from dateutil import parser
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSiteLinear):
@@ -28,19 +29,30 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.json = self.html
         for row in self.json["d"]["results"]:
-            title = row["Title"]
+
+            # created_x0020_date looks like this 0;#2021-11-09 14:29:09
+            datetime_string = row["Created_x0020_Date"]
+            date_filed = re.findall(r"\d{4}-\d{2}-\d{2}", datetime_string)[0]
+
+            docket_number = row["Title"]
+            title = "Maryland Attorney General Opinion " + docket_number
             year = row["Year"]
             attachment = row["Attachment"]
-            approximate_date = f"{year}-01-01"
+
+
+            citation = ""
+            citation_pattern = r'(\d+)\s*OAG\s*(\d+)'
+            if match := re.search(citation_pattern, docket_number):
+                citation = f"{match.group(1)} Op. Atty Gen. Md. {match.group(2)}"
 
             self.cases.append(
                 {
-                    "docket": title,
-                    "summary": row["Summary"],
+                    "docket": docket_number,
                     "name": title,
                     "url": f"https://oag.maryland.gov/resources-info/Documents/pdfs/Opinions/{year}/{attachment}.pdf",
-                    "date": approximate_date,
+                    "date": date_filed,
                     "date_filed_is_approximate": True,
+                    "citation": citation,
                 }
             )
 
@@ -50,12 +62,26 @@ class Site(OpinionSiteLinear):
 
         if matches := re.findall(pattern, scraped_text):
             date_string = parser.parse(matches[0]).strftime("%Y-%m-%d")
-            # Return the first date found
+
+            # Find the paragraph before the date
+            date_index = scraped_text.find(matches[0])
+            before_text = scraped_text[:date_index].rstrip()
+            paragraphs = [p for p in before_text.split('\n\n') if p.strip()]
+
+            syllabus = ""
+            if paragraphs:
+                last_paragraph = paragraphs[-1]
+                first_newline = last_paragraph.find('\n')
+                if first_newline != -1:
+                    syllabus_text = last_paragraph[first_newline + 1 :]
+                else:
+                    syllabus_text = last_paragraph
+                syllabus = re.sub(r"\s{2,}", " ", syllabus_text.replace("\n", "").strip())
             return {
                 "OpinionCluster": {
                     "date_filed": date_string,
                     "date_filed_is_approximate": False,
+                    "syllabus": titlecase(syllabus),
                 }
             }
-        else:
-            return {}
+        return {}
