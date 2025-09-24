@@ -8,8 +8,8 @@ from datetime import date
 
 from dateutil import parser
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -29,18 +29,18 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.json = self.html
         for row in self.json["d"]["results"]:
-
             docket_number = row["Title"]
             title = "Maryland Attorney General Opinion " + docket_number
             year = row["Year"]
             attachment = row["Attachment"]
             approximate_date = f"{year}-01-01"
 
-
             citation = ""
-            citation_pattern = r'(\d+)\s*OAG\s*(\d+)'
+            citation_pattern = r"(\d+)\s*OAG\s*(\d+)"
             if match := re.search(citation_pattern, docket_number):
-                citation = f"{match.group(1)} Op. Atty Gen. Md. {match.group(2)}"
+                citation = (
+                    f"{match.group(1)} Op. Atty Gen. Md. {match.group(2)}"
+                )
 
             self.cases.append(
                 {
@@ -63,17 +63,19 @@ class Site(OpinionSiteLinear):
             # Find the paragraph before the date
             date_index = scraped_text.find(matches[0])
             before_text = scraped_text[:date_index].rstrip()
-            paragraphs = [p for p in before_text.split('\n\n') if p.strip()]
+            paragraphs = [p for p in before_text.split("\n\n") if p.strip()]
 
             syllabus = ""
             if paragraphs:
                 last_paragraph = paragraphs[-1]
-                first_newline = last_paragraph.find('\n')
+                first_newline = last_paragraph.find("\n")
                 if first_newline != -1:
                     syllabus_text = last_paragraph[first_newline + 1 :]
                 else:
                     syllabus_text = last_paragraph
-                syllabus = re.sub(r"\s{2,}", " ", syllabus_text.replace("\n", "").strip())
+                syllabus = re.sub(
+                    r"\s{2,}", " ", syllabus_text.replace("\n", "").strip()
+                )
             return {
                 "OpinionCluster": {
                     "date_filed": date_string,
