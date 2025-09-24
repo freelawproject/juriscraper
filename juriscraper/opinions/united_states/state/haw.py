@@ -1,6 +1,7 @@
 # Author: Michael Lissner
 # Date created: 2013-05-23
 
+import re
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -32,7 +33,11 @@ class Site(OpinionSiteLinear):
             if not docket.xpath(".//a"):
                 continue
 
-            name = name.text_content().split("(")[0]
+            name_text = name.text_content()
+            if "(" in name_text:
+                name = name_text.split("(", 1)[0].strip()
+            else:
+                name = re.split(r", Dated|(?<!v)(?<!Jr)(?<!U\.S)(?<! [A-Z])\.(?! Inc\.)", name.text_content(), maxsplit=1)[0].strip()
             self.cases.append(
                 {
                     "date": date.text_content(),
