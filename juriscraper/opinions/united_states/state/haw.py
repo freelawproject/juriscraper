@@ -33,15 +33,19 @@ class Site(OpinionSiteLinear):
             if not docket.xpath(".//a"):
                 continue
 
-            name_text = name.text_content()
+            name_text = name.text_content().strip()
+            last_period_regex = r", Dated|(?<!v)(?<!Jr)(?<!U\.S)(?<! [A-Z])\.(?! Inc\.)"
+
             if "(" in name_text:
                 name = name_text.split("(", 1)[0].strip()
             else:
-                name = re.split(
-                    r", Dated|(?<!v)(?<!Jr)(?<!U\.S)(?<! [A-Z])\.(?! Inc\.)",
-                    name.text_content(),
-                    maxsplit=1,
-                )[0].strip()
+                v_match = re.search(r" v\. ", name_text)
+                if v_match:
+                    post_v = name_text[v_match.end():]
+                    name = name_text[:v_match.end()] + re.split(last_period_regex, post_v, maxsplit=1)[0].strip()
+                else:
+                    name = re.split(last_period_regex, name_text, maxsplit=1)[0].strip()
+
             self.cases.append(
                 {
                     "date": date.text_content(),
