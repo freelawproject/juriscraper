@@ -37,7 +37,11 @@ class Site(OpinionSiteLinear):
             if "(" in name_text:
                 name = name_text.split("(", 1)[0].strip()
             else:
-                name = re.split(r", Dated|(?<!v)(?<!Jr)(?<!U\.S)(?<! [A-Z])\.(?! Inc\.)", name.text_content(), maxsplit=1)[0].strip()
+                name = re.split(
+                    r", Dated|(?<!v)(?<!Jr)(?<!U\.S)(?<! [A-Z])\.(?! Inc\.)",
+                    name.text_content(),
+                    maxsplit=1,
+                )[0].strip()
             self.cases.append(
                 {
                     "date": date.text_content(),
