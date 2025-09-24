@@ -1004,15 +1004,31 @@ class ScraperExtractFromText(unittest.TestCase):
         # https://www.courtlistener.com/api/rest/v4/opinions/2684767/
         "juriscraper.opinions.united_states.state.neb": [
             (
-                "SYLISSA J.\t607\n\t                             Cite as 288 Neb. 607\n\namended ",
-                {"Citation": "288 Neb. 607"},
+                "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n09/01/2025 01:32 PM CDT\n\n\n\n\n                                                         - 182 -\n                               Nebraska Supreme Court Advance Sheets\n                                        319 Nebraska Reports\n                                                GENTELE V. GENTELE\n                                                 Cite as 319 Neb. 182\n\n\n\n\n                                         Tara Gentele, appellant, v.\n                                        Christopher Gentele, appellee.\n                                                     ___ N.W.3d ___\n\n                                           Filed June 13, 2025.    No. S-24-472.\n\n                 1. Waiver: Appeal and Error. Whether a party waived his or her right to\n                    appellate review is a question of law.\n                 2. Judgments: Appeal and Error. When reviewing questions of law, an\n                    appellate court resolves the questions independently of the lower court’s\n                    conclusions.\n                 3. ____: ____. Generally, under the acceptance of benefits rule, an appel-\n                    lant may not voluntarily accept the benefits of part of a judgment in the\n                    appellant’s favor and afterward prosecute an appeal or error proceeding\n                    from the part that is against the appellant.\n\n                 Appeal from the District Court for Lancaster County:\n               Andrew R. Jacobsen, Judge. Appeal dismissed.",
+                {
+                    "Citation": "319 Neb. 182",
+                    "Docket": {
+                        "appeal_from_str": "District Court for Lancaster County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Andrew R. Jacobsen"
+                    },
+                },
             )
         ],
         # https://www.courtlistener.com/api/rest/v4/opinions/2810802/
         "juriscraper.opinions.united_states.state.nebctapp": [
             (
-                "TRUST\t999\n\t                        Cite as 22 Neb. App. 999\n\nthe iss",
-                {"Citation": "22 Neb. App. 999"},
+                "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n09/01/2025 01:32 PM CDT\n\n\n\n\n                                                         - 182 -\n                               Nebraska Supreme Court Advance Sheets\n                                        319 Nebraska Reports\n                                                GENTELE V. GENTELE\n                                                 Cite as 319 Neb. 182\n\n\n\n\n                                         Tara Gentele, appellant, v.\n                                        Christopher Gentele, appellee.\n                                                     ___ N.W.3d ___\n\n                                           Filed June 13, 2025.    No. S-24-472.\n\n                 1. Waiver: Appeal and Error. Whether a party waived his or her right to\n                    appellate review is a question of law.\n                 2. Judgments: Appeal and Error. When reviewing questions of law, an\n                    appellate court resolves the questions independently of the lower court’s\n                    conclusions.\n                 3. ____: ____. Generally, under the acceptance of benefits rule, an appel-\n                    lant may not voluntarily accept the benefits of part of a judgment in the\n                    appellant’s favor and afterward prosecute an appeal or error proceeding\n                    from the part that is against the appellant.\n\n                 Appeal from the District Court for Lancaster County:\n               Andrew R. Jacobsen, Judge. Appeal dismissed.",
+                {
+                    "Citation": "319 Neb. 182",
+                    "Docket": {
+                        "appeal_from_str": "District Court for Lancaster County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Andrew R. Jacobsen"
+                    },
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.texbizct": [
@@ -1506,6 +1522,36 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Docket": {
                         "appeal_from_str": "Court of Appeal, First Circuit, Parish of St.Tammany",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.nj": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.njsuperctappdiv_p": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.njsuperctappdiv_u": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
                     }
                 },
             )
