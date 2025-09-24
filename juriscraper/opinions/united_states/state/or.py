@@ -3,6 +3,7 @@ History:
  - 2014-08-05: Adapted scraper to have year-based URLs.
  - 2023-11-18: Fixed and updated
  - 2025-04-23: implement extract_from_text, grossir
+ - 2025-09-23: add lower court extraction, luism
 """
 
 import re
@@ -142,8 +143,29 @@ class Site(OpinionSiteLinear):
         See, for example:
         https://ojd.contentdm.oclc.org/digital/api/collection/p17027coll5/id/28946/download
         """
+        pattern = re.compile(
+            r"""
+                    (?:
+                        review\s+from\s+the\s+
+                        |On\s+appeal\s+from\s+the\s+
+                     )
+                    (?P<lower_court>[^.]+?)
+                    (?=\s*[.,])
+                    """,
+            re.X,
+        )
         regex = r"\n\s+(?P<cite>\d+ P3d \d+)\s+\n"
-        if match := re.search(regex, scraped_text[:1000]):
-            return {"Citation": match.group("cite")}
 
-        return {}
+        result = {}
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            if lower_court in ["Court of Appeals", "Tax Court"]:
+                lower_court = "Oregon " + lower_court
+            result["Docket"] = {"appeal_from_str": lower_court}
+
+        if match := re.search(regex, scraped_text[:1000]):
+            result["Citation"] = match.group("cite")
+
+        return result
