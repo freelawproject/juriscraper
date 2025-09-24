@@ -70,14 +70,30 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nm": [
             (
-                """Opinion Number: _______________ Filing Date: January 10, 2022\nNO. S-1-SC-38247\nCITIZENS FOR FAIR RATES""",
-                {"OpinionCluster": {"docket_number": "S-1-SC-38247"}},
+                "\n                                                                   Office of the         New Mexico\n                                                                       Director          Compilation\n                                                                                         Commission\n                                                            10:53:07 2025.08.04\n                                                                         '00'06-\n            IN THE SUPREME COURT OF THE STATE OF NEW MEXICO\n\nOpinion Number: 2025-NMSC-023\n\nFiling Date: April 21, 2025\n\nNo. S-1-SC-39283\n\nSTATE OF NEW MEXICO,\n\n      Plaintiff-Appellant,\n\nv.\n\nDEBORAH GREEN,\n\n      Defendant-Appellee.\n\nAPPEAL FROM THE DISTRICT COURT OF CIBOLA COUNTY\nJames Lawrence Sanchez, District Judge",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Cibola County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "James Lawrence Sanchez"
+                    },
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.nmctapp": [
             (
-                """Opinion Number: _______________ Filing Date: January 10, 2022\nNo. A-1-CA-39059\nCITIZENS FOR FAIR RATES""",
-                {"OpinionCluster": {"docket_number": "A-1-CA-39059"}},
+                "\n                                                                   Office of the         New Mexico\n                                                                       Director          Compilation\n                                                                                         Commission\n                                                            10:53:07 2025.08.04\n                                                                         '00'06-\n            IN THE SUPREME COURT OF THE STATE OF NEW MEXICO\n\nOpinion Number: 2025-NMSC-023\n\nFiling Date: April 21, 2025\n\nNo. S-1-SC-39283\n\nSTATE OF NEW MEXICO,\n\n      Plaintiff-Appellant,\n\nv.\n\nDEBORAH GREEN,\n\n      Defendant-Appellee.\n\nAPPEAL FROM THE DISTRICT COURT OF CIBOLA COUNTY\nJames Lawrence Sanchez, District Judge",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Cibola County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "James Lawrence Sanchez"
+                    },
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.ark": [
