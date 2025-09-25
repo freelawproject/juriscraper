@@ -141,8 +141,12 @@ class Site(OpinionSiteLinear):
             if judge:
                 judge = judge.strip().replace("The Honorable", "")
                 judge = judge.split(", Circuit")[0].split(", PCR")[0]
-                results["OriginatingCourtInformation"] = {"assigned_to_str": judge}
+                results["OriginatingCourtInformation"] = {
+                    "assigned_to_str": judge
+                }
 
         if match := re.search(self.docket_regex, scraped_text):
-            results.setdefault("Docket", {})["docket_number"]= match.group("docket")
+            results.setdefault("Docket", {})["docket_number"] = match.group(
+                "docket"
+            )
         return results
