@@ -146,7 +146,7 @@ class Site(OpinionSiteLinear):
                      )
                     (?P<lower_court>.*?)(?=\s*(?:\.|at|entered|Order|,))
                     """,
-            re.X | re.DOTALL
+            re.X | re.DOTALL,
         )
         result = {}
         if match := pattern.search(cleaned_text):
