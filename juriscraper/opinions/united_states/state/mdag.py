@@ -35,6 +35,7 @@ class Site(OpinionSiteLinear):
             year = row["Year"]
             attachment = row["Attachment"]
             approximate_date = f"{year}-01-01"
+            summary = row["Summary"]
 
 
             citation = ""
@@ -46,6 +47,7 @@ class Site(OpinionSiteLinear):
                 {
                     "docket": docket_number,
                     "name": title,
+                    "summary": summary,
                     "url": f"https://oag.maryland.gov/resources-info/Documents/pdfs/Opinions/{year}/{attachment}.pdf",
                     "date": approximate_date,
                     "date_filed_is_approximate": True,
@@ -59,26 +61,10 @@ class Site(OpinionSiteLinear):
 
         if matches := re.findall(pattern, scraped_text):
             date_string = parser.parse(matches[0]).strftime("%Y-%m-%d")
-
-            # Find the paragraph before the date
-            date_index = scraped_text.find(matches[0])
-            before_text = scraped_text[:date_index].rstrip()
-            paragraphs = [p for p in before_text.split('\n\n') if p.strip()]
-
-            syllabus = ""
-            if paragraphs:
-                last_paragraph = paragraphs[-1]
-                first_newline = last_paragraph.find('\n')
-                if first_newline != -1:
-                    syllabus_text = last_paragraph[first_newline + 1 :]
-                else:
-                    syllabus_text = last_paragraph
-                syllabus = re.sub(r"\s{2,}", " ", syllabus_text.replace("\n", "").strip())
             return {
                 "OpinionCluster": {
                     "date_filed": date_string,
                     "date_filed_is_approximate": False,
-                    "syllabus": titlecase(syllabus),
                 }
             }
         return {}
