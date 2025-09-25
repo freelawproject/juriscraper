@@ -12,6 +12,7 @@ History:
  - 2019-02-26: Restructured completely by arderyp
  - 2024-09-18: Update to OpinionSiteLinear, implement backscraper,
     support unpublished opinions, by @grossir
+- 2025-09-03: Retrieve lower_court in extract_from_text by @luism
 
 Contact information:
  - Help desk: (803) 734-1193, Travis
@@ -38,6 +39,9 @@ class Site(OpinionSiteLinear):
     days_interval = 27  # guarantees picking each month
     first_opinion_date = date(2000, 1, 1)
     docket_regex = r"Appellate Case No. (?P<docket>\d{4}-\d+)"
+    lower_court_regex = re.compile(
+        r"Appeal? [Ff]rom (the )?(?P<lower_court>.+)\n(?P<judge>.+)?\n"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -122,6 +126,23 @@ class Site(OpinionSiteLinear):
         )
 
     def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract docket number from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        results = {}
+        if match := self.lower_court_regex.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            results.setdefault("Docket", {})["appeal_from_str"] = lower_court
+            judge = match.group("judge")
+            if judge:
+                judge = judge.strip().replace("The Honorable", "")
+                judge = judge.split(", Circuit")[0].split(", PCR")[0]
+                results["OriginatingCourtInformation"] = {"assigned_to_str": judge}
+
         if match := re.search(self.docket_regex, scraped_text):
-            return {"Docket": {"docket_number": match.group("docket")}}
-        return {}
+            results.setdefault("Docket", {})["docket_number"]= match.group("docket")
+        return results
