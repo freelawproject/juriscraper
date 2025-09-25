@@ -40,6 +40,7 @@ Changes:
 - Retrieve lower court information in `neb` #1569
 - Retrieve lower court information in `nm` #1569
 - Retrieve lower court information in `or` #1569
+- Retrieve lower court information in `pa` #1569
 
 Fixes:
 - Fix connappct #1580

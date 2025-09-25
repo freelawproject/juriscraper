@@ -122,6 +122,45 @@ class Site(OpinionSiteLinear):
         """
         return author_str
 
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract citations from text
+
+        Be careful with citations referring to other opinions that are
+        mentioned before the actual citation
+
+        See, for example:
+        https://ojd.contentdm.oclc.org/digital/api/collection/p17027coll5/id/28946/download
+        """
+        # For each line, keep only the part after the last colon
+        cleaned_text = "\n".join(
+            line.rsplit(":", 1)[-1] if ":" in line else line
+            for line in scraped_text.splitlines()
+        )
+
+        pattern = re.compile(
+            r"""
+                    (?:
+                        review\s+from\s+the\s+
+                        |Order\s+of(?:\s+the)?\s+
+                        |Appeal\s+from\s+the(?:\s[Oo]rder\s+of\s+the)?\s+
+                     )
+                    (?P<lower_court>.*?)(?=\s*(?:\.|at|entered|Order|,))
+                    """,
+            re.X | re.DOTALL
+        )
+        result = {}
+        if match := pattern.search(cleaned_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+            if lower_court in ["Superior Court", "Commonwealth Court"]:
+                lower_court = "Pennsylvania " + lower_court
+
+            result["Docket"] = {"appeal_from_str": lower_court}
+
+        return result
+
     def _download_backwards(self, dates: tuple[date]) -> None:
         """Modify GET querystring for desired date range
 
