@@ -39,6 +39,8 @@ Changes:
 - Retrieve lower court information in `nj` #1569
 - Retrieve lower court information in `neb` #1569
 - Clean up `haw` names #1582
+- Retrieve lower court information in `nm` #1569
+- Retrieve lower court information in `or` #1569
 
 Fixes:
 - Fix connappct #1580

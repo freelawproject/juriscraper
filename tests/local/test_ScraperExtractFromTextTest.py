@@ -70,14 +70,30 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nm": [
             (
-                """Opinion Number: _______________ Filing Date: January 10, 2022\nNO. S-1-SC-38247\nCITIZENS FOR FAIR RATES""",
-                {"OpinionCluster": {"docket_number": "S-1-SC-38247"}},
+                "\n                                                                   Office of the         New Mexico\n                                                                       Director          Compilation\n                                                                                         Commission\n                                                            10:53:07 2025.08.04\n                                                                         '00'06-\n            IN THE SUPREME COURT OF THE STATE OF NEW MEXICO\n\nOpinion Number: 2025-NMSC-023\n\nFiling Date: April 21, 2025\n\nNo. S-1-SC-39283\n\nSTATE OF NEW MEXICO,\n\n      Plaintiff-Appellant,\n\nv.\n\nDEBORAH GREEN,\n\n      Defendant-Appellee.\n\nAPPEAL FROM THE DISTRICT COURT OF CIBOLA COUNTY\nJames Lawrence Sanchez, District Judge",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Cibola County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "James Lawrence Sanchez"
+                    },
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.nmctapp": [
             (
-                """Opinion Number: _______________ Filing Date: January 10, 2022\nNo. A-1-CA-39059\nCITIZENS FOR FAIR RATES""",
-                {"OpinionCluster": {"docket_number": "A-1-CA-39059"}},
+                "\n                                                                   Office of the         New Mexico\n                                                                       Director          Compilation\n                                                                                         Commission\n                                                            10:53:07 2025.08.04\n                                                                         '00'06-\n            IN THE SUPREME COURT OF THE STATE OF NEW MEXICO\n\nOpinion Number: 2025-NMSC-023\n\nFiling Date: April 21, 2025\n\nNo. S-1-SC-39283\n\nSTATE OF NEW MEXICO,\n\n      Plaintiff-Appellant,\n\nv.\n\nDEBORAH GREEN,\n\n      Defendant-Appellee.\n\nAPPEAL FROM THE DISTRICT COURT OF CIBOLA COUNTY\nJames Lawrence Sanchez, District Judge",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Cibola County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "James Lawrence Sanchez"
+                    },
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.ark": [
@@ -912,8 +928,11 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.or": [
             # https://www.courtlistener.com/opinion/10160687/mclaughlin-v-wilson/
             (
-                """"                                        535\n\n   Argued and submitted May 15, at Mt. Hood Community College, Gresham,\n    Oregon; decision of Court of Appeals affirmed, judgment of circuit court\n  reversed in part, and case remanded to circuit court for further proceedings\n                               September 12, 2019\n\n\n\n                    Nicole McLAUGHLIN,\n                    Respondent on Review,\n                               v.\n                   Kenneth WILSON, M.D.,\n                     Petitioner on Review.\n           (CC 13C21746) (CA A160000) (SC S066047)\n                                    449 P3d 492\n\n     Plaintiff filed complaint alleging """,
-                {"Citation": "449 P3d 492"},
+                "\n                                        535\n\n   Argued and submitted May 15, at Mt. Hood Community College, Gresham,\n    Oregon; decision of Court of Appeals affirmed, judgment of circuit court\n  reversed in part, and case remanded to circuit court for further proceedings\n                               September 12, 2019\n\n\n\n                    Nicole McLAUGHLIN,\n                    Respondent on Review,\n                               v.\n                   Kenneth WILSON, M.D.,\n                     Petitioner on Review.\n           (CC 13C21746) (CA A160000) (SC S066047)\n                                    449 P3d 492\n\n     Plaintiff filed complaint alleging that defendant had retaliated against her\nORS 659A.030(1)(f). Defendant moved to dismiss the claim, arguing that his\nactions were not retaliation prohibited by that statute. The trial court granted\nthe motion. The Court of Appeals reversed. Held: (1) As used in ORS 659A.030\n(1)(f), “any person” includes individuals who are not employers; (2) “otherwise dis-\ncriminate” in ORS 659A.030(1)(f) does not require an employment relationship;\n(3) defendant’s conduct “otherwise discriminate[d]” against plaintiff.\n    The decision of the Court of Appeals is affirmed. The judgment of the circuit\ncourt is reversed in part, and the case is remanded to the circuit court for further\nproceedings.\n\n\n\n    On review from the Court of Appeals.*\n   Thomas M. Christ, Sussman Shank LLP, Portland,\nargued the cause and filed the briefs for petitioner on review.\n   Andrew Altschul, Buchanan Angeli Altschul & Sullivan\nLLP, Portland, argued the cause and filed the brief for\nrespondent on review.\n",
+                {
+                    "Citation": "449 P3d 492",
+                    "Docket": {"appeal_from_str": "Oregon Court of Appeals"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.orctapp": [
