@@ -9,7 +9,6 @@ from datetime import date
 from dateutil import parser
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSiteLinear):
@@ -29,7 +28,6 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         self.json = self.html
         for row in self.json["d"]["results"]:
-
             docket_number = row["Title"]
             title = "Maryland Attorney General Opinion " + docket_number
             year = row["Year"]
@@ -37,11 +35,12 @@ class Site(OpinionSiteLinear):
             approximate_date = f"{year}-01-01"
             summary = row["Summary"]
 
-
             citation = ""
-            citation_pattern = r'(\d+)\s*OAG\s*(\d+)'
+            citation_pattern = r"(\d+)\s*OAG\s*(\d+)"
             if match := re.search(citation_pattern, docket_number):
-                citation = f"{match.group(1)} Op. Atty Gen. Md. {match.group(2)}"
+                citation = (
+                    f"{match.group(1)} Op. Atty Gen. Md. {match.group(2)}"
+                )
 
             self.cases.append(
                 {
