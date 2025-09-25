@@ -41,6 +41,7 @@ Changes:
 - Clean up `haw` names #1582
 - Retrieve lower court information in `nm` #1569
 - Retrieve lower court information in `or` #1569
+- Update `mdag` scraper, site has changed #1598
 
 Fixes:
 - Fix connappct #1580
