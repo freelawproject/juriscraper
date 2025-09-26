@@ -82,6 +82,7 @@ Features:
 - add `bap8` scraper, inherits from `ca8` #1544
 - add `bap6` scraper, inherits from `ca6` #1544
 - implement `neb` and `nebctapp` extract_from_text #1549
+- Add new flag `--ocr-available` to `sample_caller` to tell doctor that OCR is available #1552
 
 
 **2.6.86 - 2025-08-15**
