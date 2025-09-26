@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Retrieve lower court information in `sc` #1569
 
 Fixes:
 -

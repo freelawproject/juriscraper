@@ -800,10 +800,14 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.sc": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10744852/
-                "                   THE STATE OF SOUTH CAROLINA\n                        In The Supreme Court\n\n             In the Matter of Lawrence J. Purvis, Jr., Respondent.\n\n             Appellate Case No. 2024-000453\n\n\n                              Opinion No. 28244\n             Submitted October 30, 2024 – Filed November 20, 2024\n\n\n",
+                "\n                    THE STATE OF SOUTH CAROLINA\n                         In The Supreme Court\n\n            The State, Respondent,\n\n            v.\n\n            Thomas Charles Felton Jones, Appellant.\n\n            Appellate Case No. 2020-000108\n\n\n\n                        Appeal from Greenville County\n                      Robin B. Stilwell, Circuit Court Judge\n\n\n                              Opinion No. 28203\n                     Heard June 6, 2023 – Filed May 8, 2024\n\n\n                                  REVERSED\n\n\n            Assistant Public Defender Andre Ta Nguyen, Assistant\n            Public Defender Jacob Goldstein, and Assistant Public\n            Defender John Christopher Shipman, all of Greenville, for\n            Appellant.\n\n            Attorney General Alan McCrory Wilson and Assistant\n            Deputy Attorney General Mark Reynolds Farthing, both\n            of Columbia, for Respondent.\n",
                 {
                     "Docket": {
-                        "docket_number": "2024-000453",
+                        "appeal_from_str": "Greenville County",
+                        "docket_number": "2020-000108",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Robin B. Stilwell"
                     },
                 },
             )
@@ -814,7 +818,11 @@ class ScraperExtractFromText(unittest.TestCase):
                 "THIS OPINION HAS NO PRECEDENTIAL VALUE. IT SHOULD NOT BE\n   CITED OR RELIED ON AS PRECEDENT IN ANY PROCEEDING\n        EXCEPT AS PROVIDED BY RULE 268(d)(2), SCACR.\n\n                 THE STATE OF SOUTH CAROLINA\n                      In The Supreme Court\n\n        Robin Allen, Petitioner,\n\n        v.\n\n        Richard Winn Academy, Kristen Chaisson (in her\n        individual capacity and as Head of School), and John\n        Ryan II, Respondents.\n\n        Appellate Case No. 2023-000805\n\n\n\n     ON WRIT OF CERTIORARI TO THE COURT OF APPEALS\n\n\n                     Appeal from Fairfield County\n                Eugene C. Griffith, Jr., Circuit Court Judge\n\n\n                Memorandum Opinion No. 2024-MO-024\n       ",
                 {
                     "Docket": {
+                        "appeal_from_str": "Fairfield County",
                         "docket_number": "2023-000805",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Eugene C. Griffith, Jr."
                     },
                 },
             )
@@ -825,7 +833,11 @@ class ScraperExtractFromText(unittest.TestCase):
                 "THIS OPINION HAS NO PRECEDENTIAL VALUE. IT SHOULD NOT BE\n   CITED OR RELIED ON AS PRECEDENT IN ANY PROCEEDING\n        EXCEPT AS PROVIDED BY RULE 268(d)(2), SCACR.\n\n                THE STATE OF SOUTH CAROLINA\n                    In The Court of Appeals\n\n        South Carolina Department of Social Services,\n        Respondent,\n\n        v.\n\n        Corey M. Nelson, Appellant.\n\n        In the interest of a minor under the age of eighteen.\n\n        Appellate Case No. 2024-000816\n\n\n\n                     Appeal From Richland County\n                  M. Scott Rankin, Family Court Judge\n\n\n ",
                 {
                     "Docket": {
+                        "appeal_from_str": "Richland County",
                         "docket_number": "2024-000816",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "M. Scott Rankin"
                     },
                 },
             )
@@ -836,7 +848,11 @@ class ScraperExtractFromText(unittest.TestCase):
                 "                     THE STATE OF SOUTH CAROLINA\n                         In The Court of Appeals\n\n             Crescent Homes SC, LLC, Appellant,\n\n             v.\n\n             CJN, LLC, Respondent.\n\n             Appellate Case No. 2022-000897\n\n\n\n                        Appeal From Greenville County\n                    Charles B. Simmons, Jr., Master-in-Equity\n\n\n                               Opinion No. 6093\n                  Heard May 9, 2024 – Filed November 20, 2024\n\n\n                                   AFFIRMED\n\n\n             Ellis Reed-Hill Lesemann and Benjamin Houston Joyce,\n             both of Lesemann & Associates, LLC, of Charleston, for\n   ",
                 {
                     "Docket": {
+                        "appeal_from_str": "Greenville County",
                         "docket_number": "2022-000897",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Charles B. Simmons, Jr."
                     },
                 },
             )
