@@ -25,11 +25,7 @@ Fixes:
 
 ## Current
 
-**2.6.90 - 2025-09-10**
-
-Features:
-- Add scotus_docket_report_html to parse SCOTUS HTML dockets
-- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
+**2.6.91 - 2025-09-26**
 
 Changes:
 - Retrieve lower court information in `vt` #1569
@@ -42,7 +38,6 @@ Changes:
 - Retrieve lower court information in 'alaska' #1569
 - Add lower court extraction to `federal_appellate` scrapers #1560
 - Add lower court extraction to `iowa` scrapers #1569
-
 - Retrieve lower court information in `delaware` scrapers #1569
 - Retrieve lower court information in `idaho` #1569
 - Retrieve lower court information in `ky` #1569
@@ -58,12 +53,19 @@ Changes:
 - Retrieve lower court information in `pa` #1569
 
 Fixes:
-- Fix connappct #1580
-- fix `bia` scraper #1574
 - fix `tax` scraper #1599
 - Fix `conn` to handle unusual HTML #1601
 
 ## Past
+
+**2.6.90 - 2025-09-10**
+Features:
+- Add scotus_docket_report_html to parse SCOTUS HTML dockets
+- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
+
+Fixes:
+- Fix connappct #1580
+- fix `bia` scraper #1574
 
 **2.6.89 - 2025-09-02**
 
