@@ -15,6 +15,19 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.90 - 2025-09-10**
+
+Features:
 - Add scotus_docket_report_html to parse SCOTUS HTML dockets
 - Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
@@ -50,7 +63,7 @@ Fixes:
 - fix `tax` scraper #1599
 - Fix `conn` to handle unusual HTML #1601
 
-## Current
+## Past
 
 **2.6.89 - 2025-09-02**
 
@@ -64,8 +77,6 @@ Changes:
 
 Fixes:
 - fix `cafc` oral arguments scraper #1570
-
-## Past
 
 **2.6.88 - 2025-08-27**
 
