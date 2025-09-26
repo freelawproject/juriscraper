@@ -67,6 +67,14 @@ class Site(OpinionSiteLinear):
         :return: Docket(s) and Case Name
         """
         text = " ".join(row.xpath("ancestor::li[1]//text()"))
+        if not text:
+            # bad/unusual HTML, when there is no external <li>
+            # get the floating texts in the same "level", these should contain
+            # the case name and docket number
+            prev = row.xpath("preceding-sibling::text()[1]")
+            next = row.xpath("following-sibling::text()[1]")
+            text = f"{prev[0] if prev else ''}{row.xpath('string(.)')}{next[0] if next else ''}"
+
         clean_text = re.sub(r"[\n\r\t\s]+", " ", text)
         m = re.match(
             r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? - (?P<case_name>.*)",
