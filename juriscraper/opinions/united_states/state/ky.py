@@ -13,6 +13,7 @@ History:
                 to access restrictions.
     2020-08-28: Updated to use new secondary search portal at https://appellatepublic.kycourts.net/
     2024-04-08: Updated to use new opinion search portal, by grossir
+    2025-06-31: Added extract_from_text method to get lower court info, luism
 """
 
 import re
@@ -181,3 +182,47 @@ class Site(OpinionSiteLinear):
         self.set_url(*dates)
         self.html = self._download()
         self._process_html()
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            ON\s+(?:APPEAL|REVIEW)\s+FROM\s+(?P<lower_court>[^\n.]+)
+            .*?
+            (?:HONORABLE\s+(?P<lower_court_judge>[\w\s.\-]+),\s*JUDGE.*?)?
+            NOS?\.\s*(?P<lower_court_number>[\w\-]+)
+            """,
+            re.I | re.S | re.X,
+        )
+
+        result = {}
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+            # Prepend 'Kentucky' if lower_court is 'Court of Appeals'
+            if lower_court.lower() == "court of appeals":
+                lower_court = "Kentucky Court of Appeals"
+
+            result["Docket"] = {
+                "appeal_from_str": titlecase(lower_court),
+            }
+
+            lower_court_judge = match.group("lower_court_judge")
+            lower_court_number = match.group("lower_court_number")
+
+            if lower_court_judge:
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "assigned_to_str"
+                ] = titlecase(lower_court_judge.strip())
+            if lower_court_number:
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "docket_number"
+                ] = lower_court_number.strip()
+
+        return result

@@ -32,13 +32,36 @@ Features:
 - Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
 Changes:
+- Retrieve lower court information in `vt` #1569
 - Retrieve lower court information in `sd` #1569
 - Retrieve lower court information in `va` #1569
 - Retrieve lower court information in `utah` #1569
+- Retrieve lower court information in `wyo` #1569
+- Retrieve lower court information in `dc` #1569
+- Retrieve lower court information in `cal` scrapers #1569
+- Retrieve lower court information in 'alaska' #1569
+- Add lower court extraction to `federal_appellate` scrapers #1560
+- Add lower court extraction to `iowa` scrapers #1569
+
+- Retrieve lower court information in `delaware` scrapers #1569
+- Retrieve lower court information in `idaho` #1569
+- Retrieve lower court information in `ky` #1569
+- Retrieve lower court information in `la` #1569
+- Retrieve lower court information in `mont` #1569
+- Retrieve lower court information in `nd` #1569
+- Retrieve lower court information in `nj` #1569
+- Retrieve lower court information in `neb` #1569
+- Clean up `haw` names #1582
+- Retrieve lower court information in `nm` #1569
+- Retrieve lower court information in `or` #1569
+- Update `mdag` scraper, site has changed #1598
+- Retrieve lower court information in `pa` #1569
 
 Fixes:
 - Fix connappct #1580
 - fix `bia` scraper #1574
+- fix `tax` scraper #1599
+- Fix `conn` to handle unusual HTML #1601
 
 ## Past
 
@@ -50,6 +73,7 @@ Features:
 
 Changes:
 - Retrieve lower court information in `bap9` and `bap10` #1567
+- Retrieve lower court information in `ariz`  #1569
 
 Fixes:
 - fix `cafc` oral arguments scraper #1570

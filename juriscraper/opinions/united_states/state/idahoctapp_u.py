@@ -1,9 +1,12 @@
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import clean_string, convert_date_string
+from juriscraper.opinions.united_states.state import idaho_civil
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    extract_from_text = idaho_civil.Site.extract_from_text
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

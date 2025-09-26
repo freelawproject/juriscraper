@@ -7,6 +7,8 @@ CourtID: ariz
 Court Short Name: Ariz.
 """
 
+import re
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -23,16 +25,9 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        self.cases = []
-
         # Extract download URLs
         download_urls_path = '//a[contains(@id , "hypCaseNum")]/@href'
-        download_urls = [
-            href.replace(
-                "http://www.azcourts.gov", "https://opinions.azcourts.gov"
-            )
-            for href in self.html.xpath(download_urls_path)
-        ]
+        download_urls = self.html.xpath(download_urls_path)
 
         # Extract case names
         case_names_path = '//span[contains(@id , "lblTitle")]//text()'
@@ -69,3 +64,41 @@ class Site(OpinionSiteLinear):
                 "url": download_urls[i],
             }
             self.cases.append(case)
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court and judge from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        lower_court_pattern = re.compile(
+            r"""
+            Appeal\s+from\s+the\s+(?P<lower_court>[^\n]+)\n\s*
+            The\s+(?:Honorable\s+)?(?P<lower_court_judge>[^,]+),\s+Judge[^\n]*\n\s*
+            No\.\s+(?P<lower_court_number>[^\s]+)
+            """,
+            re.X | re.MULTILINE | re.DOTALL,
+        )
+
+        result = {}
+
+        if match := lower_court_pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+            lower_court_judge = match.group("lower_court_judge").strip()
+            lower_court_number = match.group("lower_court_number").strip()
+
+            if lower_court:
+                result["Docket"] = {"appeal_from_str": lower_court}
+            if lower_court_judge:
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "assigned_to_str"
+                ] = lower_court_judge
+            if lower_court_number:
+                result.setdefault("OriginatingCourtInformation", {})[
+                    "docket_number"
+                ] = lower_court_number
+
+        return result
