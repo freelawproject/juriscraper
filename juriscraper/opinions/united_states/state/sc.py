@@ -42,7 +42,7 @@ class Site(OpinionSiteLinear):
     lower_court_regex = re.compile(
         r"Appeals? [Ff]rom (the )?(?P<lower_court>.+?)\n"
         r"(?P<judge>.+?),?\s*(?:Circuit|PCR|Master-in-Equity)[^\n]*\n",
-        re.MULTILINE
+        re.MULTILINE,
     )
 
     def __init__(self, *args, **kwargs):
