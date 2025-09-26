@@ -41,7 +41,7 @@ class Site(OpinionSiteLinear):
     docket_regex = r"Appellate Case No. (?P<docket>\d{4}-\d+)"
     lower_court_regex = re.compile(
         r"Appeals? [Ff]rom (the )?(?P<lower_court>.+?)\n"
-        r"(?P<judge>.+?),?\s*(?:Circuit|PCR|Master-in-Equity)[^\n]*\n",
+        r"(?P<judge>.+?),?\s*(?:Circuit|PCR|Master-in-Equity|Family)[^\n]*\n",
         re.MULTILINE,
     )
 

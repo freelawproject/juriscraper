@@ -837,8 +837,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "2024-000816",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "M. Scott Rankin, Family "
-                        "Court Judge"
+                        "assigned_to_str": "M. Scott Rankin"
                     },
                 },
             )
@@ -853,8 +852,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "2022-000897",
                     },
                     "OriginatingCourtInformation": {
-                        "assigned_to_str": "Charles B. Simmons, Jr., "
-                        "Master-in-Equity"
+                        "assigned_to_str": "Charles B. Simmons, Jr."
                     },
                 },
             )
