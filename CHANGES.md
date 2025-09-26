@@ -41,12 +41,14 @@ Changes:
 - Clean up `haw` names #1582
 - Retrieve lower court information in `nm` #1569
 - Retrieve lower court information in `or` #1569
+- Update `mdag` scraper, site has changed #1598
 - Retrieve lower court information in `sc` #1569
 
 Fixes:
 - Fix connappct #1580
 - fix `bia` scraper #1574
 - fix `tax` scraper #1599
+- Fix `conn` to handle unusual HTML #1601
 
 ## Current
 
