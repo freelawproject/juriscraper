@@ -1575,6 +1575,17 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.mdag": [
+            (
+                "\nGen. 225 ]                                                    225\n\n                          TAXATION\nPROPERTY TAX – APPLICABILITY OF HOMESTEAD TAX CREDIT\n    TO SPECIAL BENEFIT DISTRICT TAXES\n\n                       December 19, 2014\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2014-12-19",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            )
+        ],
         "juriscraper.opinions.united_states.state.pa": [
             (
                 "\n                          [J-62-2024] [MO: McCaffery, J.]\n                   IN THE SUPREME COURT OF PENNSYLVANIA\n                               WESTERN DISTRICT\n\n\n IN THE INTEREST OF: S.W., A MINOR               :     No. 14 WAP 2024\n                                                 :\n                                                 :     Appeal from the Order of the\n APPEAL OF: S.W., MINOR, AND                     :     Superior Court entered March 13,\n ALLEGHENY COUNTY OFFICE OF                      :     2024, at No. 22 WDA 2023,\n CHILDREN, YOUTH AND FAMILIES                    :     Vacating and Remanding the\n                                                 :     Order of the Court of Common Pleas\n                                                 :     Allegheny County Juvenile Division\n                                                 :     entered November 8, 2022, at\n                                                 :     No. CP-02-DP-0000729-2020.\n                                                 :\n                                                 :     ARGUED: October 8, 2024\n\n\n                                CONCURRING OPINION\n\n\nJUSTICE BROBSON                                                DECIDED: APRIL 25, 2025\n       I agree with the Majority insofar as it concludes that the General Assembly’s\n",
