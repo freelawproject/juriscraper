@@ -40,7 +40,9 @@ class Site(OpinionSiteLinear):
     first_opinion_date = date(2000, 1, 1)
     docket_regex = r"Appellate Case No. (?P<docket>\d{4}-\d+)"
     lower_court_regex = re.compile(
-        r"Appeal? [Ff]rom (the )?(?P<lower_court>.+)\n(?P<judge>.+)?\n"
+        r"Appeals? [Ff]rom (the )?(?P<lower_court>.+?)\n"
+        r"(?P<judge>.+?),?\s*(?:Circuit|PCR|Master-in-Equity)[^\n]*\n",
+        re.MULTILINE
     )
 
     def __init__(self, *args, **kwargs):
@@ -137,10 +139,8 @@ class Site(OpinionSiteLinear):
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             results.setdefault("Docket", {})["appeal_from_str"] = lower_court
-            judge = match.group("judge")
+            judge = match.group("judge").strip()
             if judge:
-                judge = judge.strip().replace("The Honorable", "")
-                judge = judge.split(", Circuit")[0].split(", PCR")[0]
                 results["OriginatingCourtInformation"] = {
                     "assigned_to_str": judge
                 }
