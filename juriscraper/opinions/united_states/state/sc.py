@@ -124,7 +124,7 @@ class Site(OpinionSiteLinear):
             self.opinion_status,
             self.court,
             date_obj.year,
-            str(date_obj.month).zfill(2),
+            str(date_obj.month - 1).zfill(2),
         )
 
     def extract_from_text(self, scraped_text: str) -> dict:
