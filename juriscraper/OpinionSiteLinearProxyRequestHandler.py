@@ -3,9 +3,7 @@ import os
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class OpinionSiteLinearProxyRequestHandler(
-    OpinionSiteLinear
-):
+class OpinionSiteLinearProxyRequestHandler(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
