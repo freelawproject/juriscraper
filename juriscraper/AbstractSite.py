@@ -405,25 +405,40 @@ class AbstractSite:
         values
         """
         self.request["url"] = url
+
+        #check for proxy attribute and set proxies if present
+        proxies = None
+        if hasattr(self, "proxy") and self.proxy:
+            proxies = {"http": self.proxy, "https": self.proxy}
+
         self.request["response"] = self.request["session"].get(
             url,
             headers=self.request["headers"],
             verify=self.request["verify"],
             timeout=60,
+            proxies=proxies,
             **self.request["parameters"],
         )
+
         if self.save_response:
             self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
+
+        # check for proxy attribute and set proxies if present
+        proxies = None
+        if hasattr(self, "proxy") and self.proxy:
+            proxies = {"http": self.proxy, "https": self.proxy}
+
         self.request["response"] = self.request["session"].post(
             url,
             headers=self.request["headers"],
             verify=self.request["verify"],
             data=self.parameters,
             timeout=60,
+            proxies=proxies,
             **self.request["parameters"],
         )
         if self.save_response:
