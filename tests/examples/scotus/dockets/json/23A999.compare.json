@@ -1,0 +1,55 @@
+{
+   "CaseNumber":"23A999 *** CAPITAL CASE ***",
+   "bCapitalCase":true,
+   "sJsonCreationDate":"07/25/2024",
+   "sJsonTerm":"2023",
+   "sJsonCaseNumber":"00999",
+   "sJsonCaseType":null,
+   "RelatedCaseNumber":[
+
+   ],
+   "PetitionerTitle":"Thomas E. Creech, Applicant",
+   "RespondentTitle":"Tim Richardson, Warden",
+   "DocketedDate":"May 9, 2024",
+   "Links":"Linked with 24-5142",
+   "LowerCourt":"United States Court of Appeals for the Ninth Circuit",
+   "LowerCourtCaseNumbers":"(24-275)",
+   "ProceedingsandOrder":[
+      {
+         "Date":"May 07 2024",
+         "Text":"Application (23A999) to extend the time to file a petition for a writ of certiorari from May 24, 2024 to July 23, 2024, submitted to Justice Kagan.",
+         "Links":[
+            {
+               "Description":"Main Document",
+               "File":"EOT_App_w_Exs_1-2_2024_05_07.pdf",
+               "DocumentUrl":"http://www.supremecourt.gov/DocketPDF/23/23A999/309200/20240507140758771_EOT_App_w_Exs_1-2_2024_05_07.pdf"
+            },
+            {
+               "Description":"Proof of Service",
+               "File":"Proof_Service_EOT_2024_05_07.pdf",
+               "DocumentUrl":"http://www.supremecourt.gov/DocketPDF/23/23A999/309200/20240507140824838_Proof_Service_EOT_2024_05_07.pdf"
+            }
+         ]
+      },
+      {
+         "Date":"May 09 2024",
+         "Text":"Application (23A999) granted by Justice Kagan extending the time to file until July 23, 2024."
+      }
+   ],
+   "AttorneyHeaderPetitioner":"Attorneys for Petitioner",
+   "Petitioner":[
+      {
+         "Attorney":"Jonah Joshua Horwitz",
+         "IsCounselofRecord":true,
+         "Title":"Federal Defender Services of ldaho",
+         "PrisonerId":null,
+         "Phone":"208 331 5530",
+         "Address":"702 W. ldaho St. Ste. 900",
+         "City":"Boise",
+         "State":"ID",
+         "Zip":"83702",
+         "Email":"JONAH_HORWITZ@FD.ORG",
+         "PartyName":"Thomas Creech"
+      }
+   ]
+}

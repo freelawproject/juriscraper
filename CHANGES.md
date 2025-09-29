@@ -16,25 +16,92 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add new method `download_conent` to `AbstractSite` for improved file retrieval #1535
-- add `bap6` scraper, inherits from `ca6` #1544
-- implement `neb` and `nebctapp` extract_from_text #1549
 
 Changes:
--
+- Retrieve lower court information in `sc` #1569
 
 Fixes:
 -
 
 ## Current
 
+**2.6.91 - 2025-09-26**
+
+Changes:
+- Retrieve lower court information in `vt` #1569
+- Retrieve lower court information in `sd` #1569
+- Retrieve lower court information in `va` #1569
+- Retrieve lower court information in `utah` #1569
+- Retrieve lower court information in `wyo` #1569
+- Retrieve lower court information in `dc` #1569
+- Retrieve lower court information in `cal` scrapers #1569
+- Retrieve lower court information in 'alaska' #1569
+- Add lower court extraction to `federal_appellate` scrapers #1560
+- Add lower court extraction to `iowa` scrapers #1569
+- Retrieve lower court information in `delaware` scrapers #1569
+- Retrieve lower court information in `idaho` #1569
+- Retrieve lower court information in `ky` #1569
+- Retrieve lower court information in `la` #1569
+- Retrieve lower court information in `mont` #1569
+- Retrieve lower court information in `nd` #1569
+- Retrieve lower court information in `nj` #1569
+- Retrieve lower court information in `neb` #1569
+- Clean up `haw` names #1582
+- Retrieve lower court information in `nm` #1569
+- Retrieve lower court information in `or` #1569
+- Update `mdag` scraper, site has changed #1598
+- Retrieve lower court information in `pa` #1569
+
+Fixes:
+- fix `tax` scraper #1599
+- Fix `conn` to handle unusual HTML #1601
+
+## Past
+
+**2.6.90 - 2025-09-10**
+Features:
+- Add scotus_docket_report_html to parse SCOTUS HTML dockets
+- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
+
+Fixes:
+- Fix connappct #1580
+- fix `bia` scraper #1574
+
+**2.6.89 - 2025-09-02**
+
+Features:
+- Add scotus_docket_report to parse SCOTUS JSON dockets
+- Add support for downloading documents from the ACMS court API.
+
+Changes:
+- Retrieve lower court information in `bap9` and `bap10` #1567
+- Retrieve lower court information in `ariz`  #1569
+
+Fixes:
+- fix `cafc` oral arguments scraper #1570
+
+**2.6.88 - 2025-08-27**
+
+Features:
+- add `texbizct` new scraper for Texas Business Court #1437
+
+Fixes:
+- Fix `nd` use empty string when no summary is found #1561
+
+
+**2.6.87 - 2025-08-25**
+
+Features:
+- add `bap8` scraper, inherits from `ca8` #1544
+- add `bap6` scraper, inherits from `ca6` #1544
+- implement `neb` and `nebctapp` extract_from_text #1549
+
+
 **2.6.86 - 2025-08-15**
 
 Fixes:
 - Update `bap1` backscraper #1539
 - Fix `ky` scraper to handle missing document text to prevent errors #1540
-
-
-## Past
 
 **2.6.85 - 2025-08-14**
 

@@ -1,0 +1,75 @@
+{
+  "capital_case": false,
+  "case_name": "Jake Delahney Taylor, Applicant v. United States",
+  "date_filed": "2024-07-03",
+  "discretionary_court_decision": null,
+  "docket_entries": [
+    {
+      "attachments": [
+        {
+          "document_url": "http://www.supremecourt.gov/DocketPDF/24/24A1/316143/20240701161149036_2024.07.01%20Taylor%20Application%20for%20Extension%20of%20Time.pdf",
+          "short_description": "Main Document"
+        },
+        {
+          "document_url": "http://www.supremecourt.gov/DocketPDF/24/24A1/316143/20240701161259439_2024.07.01%20Taylor%20-%20Certificate%20of%20Service%20re%20Application.pdf",
+          "short_description": "Proof of Service"
+        }
+      ],
+      "date_filed": "2024-07-01",
+      "description": "Application (24A1) to extend the time to file a petition for a writ of certiorari from July 15, 2024 to September 13, 2024, submitted to Justice Alito.",
+      "description_html": "Application (24A1) to extend the time to file a petition for a writ of certiorari from July 15, 2024 to September 13, 2024, submitted to Justice Alito."
+    },
+    {
+      "attachments": [],
+      "date_filed": "2024-07-10",
+      "description": "Application (24A1) granted by Justice Alito extending the time to file until August 15, 2024.",
+      "description_html": "Application (24A1) granted by Justice Alito extending the time to file until August 15, 2024."
+    }
+  ],
+  "docket_number": "24A1",
+  "links": "24-170",
+  "lower_court": "United States Court of Appeals for the Fifth Circuit",
+  "lower_court_case_numbers": [
+    "23-40273"
+  ],
+  "lower_court_case_numbers_raw": "(23-40273)",
+  "lower_court_decision_date": null,
+  "lower_court_rehearing_denied_date": null,
+  "parties": [
+    {
+      "attorneys": [
+        {
+          "address": "717 Texas, Suite 2800",
+          "city": "Houston",
+          "email": "disaak@steptoe.com",
+          "is_counsel_of_record": true,
+          "name": "David Isaak",
+          "phone": "7132212352",
+          "state": "TX",
+          "title": "Steptoe LLP",
+          "zip": "77002"
+        }
+      ],
+      "name": "Jake Delahney Taylor",
+      "type": "Petitioner"
+    },
+    {
+      "attorneys": [
+        {
+          "address": "United States Department of Justice\r\n950 Pennsylvania Avenue, NW",
+          "city": "Washington",
+          "email": "SUPREMECTBRIEFS@USDOJ.GOV",
+          "is_counsel_of_record": true,
+          "name": "Elizabeth B. Prelogar",
+          "phone": "202-514-2217",
+          "state": "DC",
+          "title": "Solicitor General",
+          "zip": "20530-0001"
+        }
+      ],
+      "name": "United States",
+      "type": "Respondent"
+    }
+  ],
+  "questions_presented": null
+}

@@ -5,6 +5,7 @@ Court Short Name: 9th Cir. BAP
 """
 
 import json
+import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
@@ -17,6 +18,9 @@ class Site(OpinionSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     days_interval = 31
     first_opinion_date = datetime(2005, 1, 6)
+    lower_court_regex = re.compile(
+        r"Appeals? from the (?P<lower_court>.+\n.+)"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -115,7 +119,7 @@ class Site(OpinionSiteLinear):
                 if d > self.end_date:
                     continue
             except ValueError:
-                logger.debug("Skipping row with bad date data")
+                logger.debug("Skipping row with bad date data %s", item)
                 continue
 
             slug = item.get("file_name").get("S")
@@ -133,6 +137,24 @@ class Site(OpinionSiteLinear):
                     "status": status,
                 }
             )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        if match := self.lower_court_regex.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+
+        return {}
 
     def _download_backwards(self, date: date) -> None:
         """Download cases for a specific date range.

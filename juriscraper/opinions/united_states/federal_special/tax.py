@@ -68,7 +68,7 @@ class Site(OpinionSiteLinear):
         """
         self.json = self.html
 
-        for case in self.json:
+        for case in self.json.get("results", []):
             url = self._get_url(case["docketNumber"], case["docketEntryId"])
             status = (
                 "Published"

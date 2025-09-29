@@ -4,6 +4,7 @@
 # Date created: 2019-02-28
 # Updated: 2024-05-08, grossir: to OpinionSiteLinear and new URL
 # Updated: 2025-07-02, luism: get citation from HTML
+# Updated: 2025-09-01, luism: extract lower court information from text
 
 import re
 from datetime import date, datetime
@@ -90,6 +91,7 @@ class Site(OpinionSiteLinear):
                 author = ""
                 per_curiam = True
 
+            summary = ""
             if summary_texts := row.xpath("./div[2]/p[1]/text()"):
                 summary = " ".join(summary_texts).strip()
 
@@ -129,7 +131,8 @@ class Site(OpinionSiteLinear):
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract model fields from opinion's document text
 
-        The citation is only available in the document's text
+        Most times, the citations are available in the HTML; sometimes, they
+        are only listed on the text
 
         For case_name and docket_number, even if they are available
         in the HTML, the document's text has the best values
@@ -167,6 +170,19 @@ class Site(OpinionSiteLinear):
                 case_name = reversed_lines[index + 1].strip()
                 break
 
+        lower_court_pattern = re.compile(
+            r"Appeal\s+from\s+the\s+(?P<lower_court>.*?),\s*the\s+Honorable\s+(?P<judge>.+?),\s*Judge",
+            re.DOTALL,
+        )
+
+        lower_court = ""
+        lower_court_judge = ""
+        if match := lower_court_pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+            lower_court_judge = match.group("judge").strip()
+
         # We only put keys into the objects when they exist
         # Otherwise, we would overwrite existing data with empty values
         metadata.update({"OpinionCluster": {}, "Docket": {}})
@@ -176,6 +192,13 @@ class Site(OpinionSiteLinear):
         if docket_number:
             metadata["Docket"]["docket_number"] = normalize_dashes(
                 docket_number
+            )
+        if lower_court:
+            metadata["Docket"]["appeal_from_str"] = lower_court
+        if lower_court_judge:
+            metadata.update({"OriginatingCourtInformation": {}})
+            metadata["OriginatingCourtInformation"]["assigned_to_str"] = (
+                lower_court_judge
             )
 
         return metadata
