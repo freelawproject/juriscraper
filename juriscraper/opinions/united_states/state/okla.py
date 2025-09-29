@@ -10,9 +10,10 @@
 from lxml import html
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteLinearProxyRequestHandler import \
-    OpinionSiteLinearProxyRequestHandler
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.OpinionSiteLinearProxyRequestHandler import (
+    OpinionSiteLinearProxyRequestHandler,
+)
 
 
 class Site(OpinionSiteLinearProxyRequestHandler):

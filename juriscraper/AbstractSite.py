@@ -406,7 +406,7 @@ class AbstractSite:
         """
         self.request["url"] = url
 
-        #check for proxy attribute and set proxies if present
+        # check for proxy attribute and set proxies if present
         proxies = None
         if hasattr(self, "proxy") and self.proxy:
             proxies = {"http": self.proxy, "https": self.proxy}
