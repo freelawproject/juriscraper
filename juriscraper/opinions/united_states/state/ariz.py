@@ -8,6 +8,7 @@ Court Short Name: Ariz.
 """
 
 import re
+from urllib.parse import urljoin
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -17,7 +18,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "http://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999"
+        self.url = "https://www.azcourts.gov/opinions/SearchOpinionsMemoDecs.aspx?court=999"
         self.should_have_results = True
 
     def _process_html(self) -> None:
@@ -25,45 +26,34 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        # Extract download URLs
-        download_urls_path = '//a[contains(@id , "hypCaseNum")]/@href'
-        download_urls = self.html.xpath(download_urls_path)
-
-        # Extract case names
-        case_names_path = '//span[contains(@id , "lblTitle")]//text()'
-        case_names = [
-            titlecase(t.upper()) for t in self.html.xpath(case_names_path)
-        ]
-
-        # Extract case dates
-        case_dates_path = '//span[contains(@id , "FilingDate")]//text()'
-        case_dates = list(self.html.xpath(case_dates_path))
-
-        # Extract precedential statuses
-        precedential_statuses = []
-        precedential_statuses_path = '//*[contains(@id, "DecType")]/text()'
-        for s in self.html.xpath(precedential_statuses_path):
-            if "OPINION" in s:
-                precedential_statuses.append("Published")
-            elif "MEMORANDUM" in s:
-                precedential_statuses.append("Unpublished")
+        for row in self.html.xpath("//tr[@class='AOC_NewsItemRow']"):
+            raw_status = row.xpath('.//*[contains(@id, "DecType")]/text()')[0]
+            if "OPINION" in raw_status:
+                status = "Published"
+            elif "MEMORANDUM" in raw_status:
+                status = "Unpublished"
             else:
-                precedential_statuses.append("Unknown")
+                status = "Unknown"
 
-        # Extract docket numbers
-        docket_numbers_path = '//a[contains(@id , "hypCaseNum")]//text()'
-        docket_numbers = list(self.html.xpath(docket_numbers_path))
-
-        # Build cases list
-        for i in range(len(download_urls)):
-            case = {
-                "name": case_names[i],
-                "date": case_dates[i],
-                "status": precedential_statuses[i],
-                "docket": docket_numbers[i],
-                "url": download_urls[i],
+            name = row.xpath(
+                './/span[contains(@id , "lblTitle")]//text()'
+            ).upper()
+            parsed_case = {
+                "name": titlecase(name),
+                "url": urljoin(
+                    self.url,
+                    row.xpath('.//a[contains(@id , "hypCaseNum")]/@href'),
+                ),
+                "date": row.xpath(
+                    './/span[contains(@id , "FilingDate")]//text()'
+                )[0],
+                "docket": row.xpath(
+                    './/a[contains(@id , "hypCaseNum")]//text()'
+                ),
+                "status": status,
             }
-            self.cases.append(case)
+
+            self.cases.append(parsed_case)
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court and judge from the scraped text.
