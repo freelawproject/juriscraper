@@ -89,7 +89,7 @@ class AbstractSite:
 
         # has defaults in OpinionSite and OralArgumentSite
         self.expected_content_types = []
-        
+
         # Sub-classed metadata
         self.court_id = None
         self.url = None
