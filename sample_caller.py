@@ -5,7 +5,6 @@ import os
 import re
 import signal
 import sys
-import traceback
 import webbrowser
 from collections import defaultdict
 from datetime import datetime
@@ -14,18 +13,17 @@ from urllib import parse
 
 import requests
 
+from juriscraper.lib.exceptions import BadContentError
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.microservices_utils import (
+    MICROSERVICE_URLS,
+    get_extension,
+)
 from juriscraper.lib.string_utils import trunc
 
 logger = make_default_logger()
 die_now = False
-
-# `doctor` urls to be used optionally with --extract-content arg
-MICROSERVICE_URLS = {
-    "document-extract": "{}/extract/doc/text/",
-    "buffer-extension": "{}/utils/file/extension/",
-}
 
 
 def signal_handler(signal, frame):
@@ -109,13 +107,7 @@ def extract_doc_content(
     if not extract_from_text:
         return data, {}
 
-    # Get the file type from the document's raw content
-    extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
-    extension_response = requests.post(
-        extension_url, files={"file": ("filename", data)}, timeout=30
-    )
-    extension_response.raise_for_status()
-    extension = extension_response.text
+    extension = get_extension(data)
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
@@ -159,51 +151,6 @@ def extract_doc_content(
     return extracted_content, metadata_dict
 
 
-def get_binary_content(download_url: str, site, exceptions) -> bytes:
-    """Download an opinion from a URL; and check the result
-
-    Mimics Courtlistener's `get_binary_content`
-    """
-    # some sites require a custom ssl_context, contained in the Site's
-    # session. However, we can't send a request with both a
-    # custom ssl_context and `verify = False`
-    has_cipher = hasattr(site, "cipher")
-    s = site.request["session"] if has_cipher else requests.session()
-
-    if site.needs_special_headers:
-        headers = site.request["headers"]
-    else:
-        headers = {"User-Agent": "CourtListener"}
-
-    # Note that we do a GET even if site.method is POST. This is
-    # deliberate.
-    r = s.get(
-        download_url,
-        verify=has_cipher,  # WA has a certificate we don't understand
-        headers=headers,
-        cookies=site.cookies,
-        timeout=300,
-    )
-
-    # test for expected content type (thanks mont for nil)
-    if site.expected_content_types:
-        # Clean up content types like "application/pdf;charset=utf-8"
-        # and 'application/octet-stream; charset=UTF-8'
-        content_type = (
-            r.headers.get("Content-Type").lower().split(";")[0].strip()
-        )
-        m = any(
-            content_type in mime.lower()
-            for mime in site.expected_content_types
-        )
-        if not m:
-            exceptions["ContentTypeError"].append(download_url)
-            logger.debug("ContentTypeError: %s", download_url)
-
-    data = r.content
-    return data
-
-
 def check_hashes(data: bytes, download_url: str, site) -> None:
     """Detect timestamped content by downloading the same URL twice and
     comparing hashes
@@ -212,7 +159,7 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
     :param download_url: the URL to get the same data as in the first argument
     :param site: the site object
     """
-    datas = [data, get_binary_content(download_url, site, {})]
+    datas = [data, site.download_content(download_url)]
     hashes = []
 
     for data in datas:
@@ -277,17 +224,10 @@ def scrape_court(
             continue
 
         try:
-            data = get_binary_content(download_url, site, exceptions)
-
-            # test for empty files (thank you CA1)
-            if len(data) == 0:
-                exceptions["EmptyFileError"].append(download_url)
-                logger.debug("EmptyFileError: %s", download_url)
-                continue
-        except Exception:
-            exceptions["DownloadingError"].append(download_url)
-            logger.debug("DownloadingError: %s", download_url)
-            logger.debug(traceback.format_exc())
+            data = site.download_content(
+                download_url, is_doctor_available=extract_content
+            )
+        except BadContentError:
             continue
 
         if test_hashes:

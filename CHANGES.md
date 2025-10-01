@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add new method `download_content` to `AbstractSite` for improved file retrieval #1535
 
 Changes:
 - Retrieve lower court information in `sc` #1569
