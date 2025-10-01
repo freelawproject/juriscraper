@@ -15,15 +15,25 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add new method `download_content` to `AbstractSite` for improved file retrieval #1535
+-
 
 Changes:
-- Retrieve lower court information in `sc` #1569
+-
 
 Fixes:
 -
 
 ## Current
+
+**2.6.92 - 2025-10-01**
+
+Features:
+- Add new method `download_content` to `AbstractSite` for improved file retrieval #1535
+
+Changes:
+- Retrieve lower court information in `sc` #1569
+
+## Past
 
 **2.6.91 - 2025-09-26**
 
@@ -56,7 +66,6 @@ Fixes:
 - fix `tax` scraper #1599
 - Fix `conn` to handle unusual HTML #1601
 
-## Past
 
 **2.6.90 - 2025-09-10**
 Features:
