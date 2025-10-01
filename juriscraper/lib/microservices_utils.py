@@ -22,26 +22,33 @@ def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
     :param r: A response object
     :return:  A boolean and value
     """
+    try:
+        extension = get_extension(r.content)
+    except Exception:
+        # blanket exception until we get more error information
+        logger.error("Error getting extension on juriscraper", exc_info=True)
+        extension = ""
 
-    extension = get_extension(r.content)
+    if extension != ".html":
+        return False, None
 
-    if extension == ".html":
-        html_tree = html.fromstring(r.text)
-        try:
-            path = (
-                "//meta[translate(@http-equiv, 'REFSH', 'refsh') = "
-                "'refresh']/@content"
-            )
-            attr = html_tree.xpath(path)[0]
-            wait, text = attr.split(";")
-            if text.lower().startswith("url="):
-                url = text[4:]
-                if not url.startswith("http"):
-                    # Relative URL, adapt
-                    url = urljoin(r.url, url)
-                return True, url
-        except IndexError:
-            return False, None
+    html_tree = html.fromstring(r.text)
+
+    path = (
+        "//meta[translate(@http-equiv, 'REFSH', 'refsh') = 'refresh']/@content"
+    )
+    try:
+        attr = html_tree.xpath(path)[0]
+        wait, text = attr.split(";")
+        if text.lower().startswith("url="):
+            url = text[4:]
+            if not url.startswith("http"):
+                # Relative URL, adapt
+                url = urljoin(r.url, url)
+            return True, url
+    except IndexError:
+        return False, None
+
     return False, None
 
 
@@ -57,18 +64,18 @@ def follow_redirections(r: Response, s: Session) -> Response:
     return r
 
 
-def get_extension(r) -> str:
+def get_extension(content: bytes) -> str:
     """
     Get the extension of a file using a microservice.
 
     :param r: The item to get the extension for
     :return extension: The extension of the file, e.g. ".pdf", ".html", etc.
     """
-    doctor_host = os.environ.get("DOCTOR_HOST", "http://cl-doctor:5050")
     # Get the file type from the document's raw content
+    doctor_host = os.environ.get("DOCTOR_HOST", "http://cl-doctor:5050")
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
     extension_response = requests.post(
-        extension_url, files={"file": ("filename", r)}, timeout=30
+        extension_url, files={"file": ("filename", content)}, timeout=30
     )
     extension_response.raise_for_status()
     extension = extension_response.text

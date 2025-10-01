@@ -224,7 +224,9 @@ def scrape_court(
             continue
 
         try:
-            data = site.download_content(download_url, is_sample=True)
+            data = site.download_content(
+                download_url, is_doctor_available=extract_content
+            )
         except BadContentError:
             continue
 

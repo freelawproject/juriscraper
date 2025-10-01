@@ -391,17 +391,21 @@ class AbstractSite:
         return self._return_response_text_object()
 
     def download_content(
-        self, download_url, is_sample=False, media_root=""
+        self,
+        download_url: str,
+        doctor_is_available: bool = True,
+        media_root: str = "",
     ) -> Union[str, bytes]:
-        """Download the content from the given URL and return the content as binary or string
+        """Download the URL and return the cleaned content
 
         Downloads the file, covering a few special cases such as invalid SSL
         certificates and empty file errors.
 
         :param download_url: The URL for the item you wish to download.
-        :param is_sample: If True, this indicates that the download is a sample
-        :param media_root: The root directory for local files, used in test mode
-
+        :param doctor_is_available: If True, it will try to follow meta
+            redirections
+        :param media_root: The root directory for local files in Courtlistener,
+            used in test mode
 
         :return: The downloaded and cleaned content
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
@@ -459,8 +463,9 @@ class AbstractSite:
                         msg, fingerprint=fingerprint
                     )
 
-            if not is_sample:
-                # test for and follow meta redirects
+            if doctor_is_available:
+                # test for and follow meta redirects, uses doctor get_extension
+                # service
                 r = follow_redirections(r, s)
                 r.raise_for_status()
 
