@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix download_content call in sample_caller #1619
 
 ## Current
 
