@@ -3,6 +3,7 @@ import json
 import os
 from datetime import date, datetime, timedelta
 from typing import Union
+from urllib.parse import urlencode
 
 import certifi
 import requests
@@ -535,6 +536,9 @@ class AbstractSite:
     def _request_url_via_proxy(self, url):
         if not self.SCRAPINGBEE_API_KEY or not self.SCRAPINGBEE_API_URL:
             raise RuntimeError("SCRAPINGBEE_API_KEY and SCRAPINGBEE_API_URL not set in environment.")
+
+        if self.request["parameters"].get("params"):
+            self.url += "?" + urlencode(self.request["parameters"]["params"])
 
         base_proxy_params = {
             'api_key': self.SCRAPINGBEE_API_KEY,

@@ -30,11 +30,12 @@ class Site(OpinionSiteLinear):
             self.status = "Unpublished"
 
         self.url = "https://mn.gov/law-library/search/"
-        self.params = self.base_params = {
+        self.params = {
             "v:sources": "mn-law-library-opinions",
             "query": f" (url:/archive/{self.court_query}) ",
             "sortby": "date",
         }
+
         self.request["verify"] = False
         self.request["headers"] = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -47,16 +48,16 @@ class Site(OpinionSiteLinear):
             "Referer": "https://mn.gov/law-library/search/?v%3Asources=mn-law-library-opinions&query=+%28url%3A%2Farchive%2Fsupct%29+&citation=&qt=&sortby=&docket=&case=&v=&p=&start-date=&end-date=",
             "Connection": "keep-alive",
         }
+        self.request["parameters"]["params"] = self.params
         self.make_backscrape_iterable(kwargs)
         self.needs_special_headers = True
+        # self.use_proxy = True
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
-        self.html = self._download({"params": self.params})
-
         # This warning is useful for backscraping
         results_number = self.html.xpath(
             "//div[@class='searchresult_number']/text()"
@@ -123,7 +124,7 @@ class Site(OpinionSiteLinear):
 
     def _download_backwards(self, dates: tuple[date]):
         logger.info("Backscraping for range %s - %s", *dates)
-        params = {**self.base_params}
+        params = {**self.params}
         params.update(
             {
                 "start-date": dates[0].strftime("%-m/%-d/%Y"),
@@ -132,3 +133,4 @@ class Site(OpinionSiteLinear):
             }
         )
         self.params = params
+        self.request["parameters"]["params"] = self.params

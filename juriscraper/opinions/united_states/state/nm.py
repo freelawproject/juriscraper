@@ -1,7 +1,7 @@
 import re
 from datetime import date, datetime, timedelta
 from typing import Any, Optional
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
@@ -17,7 +17,7 @@ class Site(OpinionSiteLinear):
     Additionally, we moved docket number capture to PDF extraction, to limit the number of requests.
     """
 
-    base_url = "https://nmonesource.com/nmos/en/d/s/index.do"
+    base_url = "https://nmonesource.com/"
     court_code = "182"
     first_opinion_date = datetime(1900, 1, 1)
     days_interval = 15
@@ -27,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+        self.use_proxy = True
 
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
@@ -46,6 +47,8 @@ class Site(OpinionSiteLinear):
             url = row.xpath(
                 ".//a[contains(@title, 'Download the PDF version')]/@href"
             )[0]
+            url = urljoin(self.base_url, url)
+
             name = row.xpath(".//span[@class='title']/a/text()")[0]
             date_filed = row.xpath(".//span[@class='publicationDate']/text()")[
                 0
@@ -106,7 +109,8 @@ class Site(OpinionSiteLinear):
             "or": "date",
             "iframe": "true",
         }
-        self.url = f"{self.base_url}?{urlencode(params)}"
+
+        self.url = urljoin(self.base_url, "nmos/en/d/s/index.do") + f"?{urlencode(params)}"
 
     def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request
