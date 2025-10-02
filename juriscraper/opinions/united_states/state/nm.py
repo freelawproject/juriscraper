@@ -110,7 +110,10 @@ class Site(OpinionSiteLinear):
             "iframe": "true",
         }
 
-        self.url = urljoin(self.base_url, "nmos/en/d/s/index.do") + f"?{urlencode(params)}"
+        self.url = (
+            urljoin(self.base_url, "nmos/en/d/s/index.do")
+            + f"?{urlencode(params)}"
+        )
 
     def _download_backwards(self, dates: tuple[date]) -> None:
         """Make custom date range request

@@ -446,7 +446,7 @@ class AbstractSite:
                     "render_js": "false",
                     "cookies": self.cookies,
                     "country_code": "us",
-                    'premium_proxy': 'true',
+                    "premium_proxy": "true",
                 }
 
                 r = s.get(
@@ -535,17 +535,19 @@ class AbstractSite:
 
     def _request_url_via_proxy(self, url):
         if not self.SCRAPINGBEE_API_KEY or not self.SCRAPINGBEE_API_URL:
-            raise RuntimeError("SCRAPINGBEE_API_KEY and SCRAPINGBEE_API_URL not set in environment.")
+            raise RuntimeError(
+                "SCRAPINGBEE_API_KEY and SCRAPINGBEE_API_URL not set in environment."
+            )
 
         if self.request["parameters"].get("params"):
             self.url += "?" + urlencode(self.request["parameters"]["params"])
 
         base_proxy_params = {
-            'api_key': self.SCRAPINGBEE_API_KEY,
-            'url': url,
-            'premium_proxy': 'true',
-            'country_code': 'us',
-            'block_resources': 'false',
+            "api_key": self.SCRAPINGBEE_API_KEY,
+            "url": url,
+            "premium_proxy": "true",
+            "country_code": "us",
+            "block_resources": "false",
         }
         if self.additional_params:
             base_proxy_params.update(self.additional_params)
