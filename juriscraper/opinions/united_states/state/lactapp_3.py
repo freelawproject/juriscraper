@@ -6,12 +6,12 @@ History:
   2025-10-06: Created by Luis-manzur
 """
 
-from datetime import datetime, date
+from datetime import date, datetime
 from urllib.parse import urljoin
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
@@ -46,26 +46,38 @@ class Site(OpinionSiteLinear):
         :return None
         """
 
-        rows = self.html.xpath("(//table[contains(@class, 'table table-striped table-responsive')])[6]//tr")
+        rows = self.html.xpath(
+            "(//table[contains(@class, 'table table-striped table-responsive')])[6]//tr"
+        )
 
         for row in rows:
-            hrefs = row.xpath(".//a[contains(text(), 'Download Opinion')]/@href")
+            hrefs = row.xpath(
+                ".//a[contains(text(), 'Download Opinion')]/@href"
+            )
             if not hrefs:
                 continue
             download_url = urljoin(self.base_url, hrefs[0])
             docket = row.xpath(".//strong[1]/text()")[0]
-            date_raw = row.xpath(".//strong[contains(text(), 'Opinion Date:')]/following-sibling::text()[1]")[0].strip()
+            date_raw = row.xpath(
+                ".//strong[contains(text(), 'Opinion Date:')]/following-sibling::text()[1]"
+            )[0].strip()
             date = f"{date_raw[:2]}/{date_raw[2:4]}/{date_raw[4:]}"
-            name = row.xpath(".//strong[contains(text(), 'Case Title:')]/following-sibling::text()[1]")[0].strip()
-            lower_court = row.xpath(".//strong[contains(text(), 'Lower Court:')]/following-sibling::text()[1]")[0].strip()
+            name = row.xpath(
+                ".//strong[contains(text(), 'Case Title:')]/following-sibling::text()[1]"
+            )[0].strip()
+            lower_court = row.xpath(
+                ".//strong[contains(text(), 'Lower Court:')]/following-sibling::text()[1]"
+            )[0].strip()
 
-            self.cases.append({
-                "docket": docket,
-                "date": date,
-                "name": titlecase(name),
-                "lower_court": lower_court,
-                "url": download_url,
-            })
+            self.cases.append(
+                {
+                    "docket": docket,
+                    "date": date,
+                    "name": titlecase(name),
+                    "lower_court": lower_court,
+                    "url": download_url,
+                }
+            )
 
     def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
@@ -75,11 +87,19 @@ class Site(OpinionSiteLinear):
         and processes the HTML to extract case details.
         """
 
-        self.parameters.update({
-            "ctl00$MainContent$ddlSearchOpinions1_Year": str(search_date.year),
-            "ctl00$MainContent$ddlSearchOpinions2_Year": str(search_date.year),
-            "ctl00$MainContent$ddlSearchOpinions2_Month": search_date.strftime("%B")
-        })
+        self.parameters.update(
+            {
+                "ctl00$MainContent$ddlSearchOpinions1_Year": str(
+                    search_date.year
+                ),
+                "ctl00$MainContent$ddlSearchOpinions2_Year": str(
+                    search_date.year
+                ),
+                "ctl00$MainContent$ddlSearchOpinions2_Month": search_date.strftime(
+                    "%B"
+                ),
+            }
+        )
         self.html = self._download()
         self._process_html()
 
