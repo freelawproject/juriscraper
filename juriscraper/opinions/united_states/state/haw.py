@@ -2,11 +2,19 @@
 # Date created: 2013-05-23
 
 import re
+from datetime import date, datetime
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.lib.log_tools import make_default_logger
+
+logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):
+    first_opinion_date = datetime(2010, 1, 1)
+    days_interval = 1
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = (
@@ -16,6 +24,12 @@ class Site(OpinionSiteLinear):
         self.court_code = "S.Ct"
         self.status = "Published"
         self.should_have_results = True
+        self.search_date = date.today()
+        self.request["parameters"]["params"] = {
+            "yr": self.search_date.year,
+            "mo": f"{self.search_date.month:02d}",
+        }
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Parse HTML into case objects
@@ -68,3 +82,33 @@ class Site(OpinionSiteLinear):
                     "citation": citation.text_content(),
                 }
             )
+
+    def _download_backwards(self, search_date: date) -> None:
+        """Download and process HTML for a given target date.
+
+        :param search_date (date): The date for which to download and process opinions.
+        :return None; sets the target date, downloads the corresponding HTML
+        and processes the HTML to extract case details.
+        """
+
+        self.request["parameters"]["params"] = {
+            "yr": search_date.year,
+            "mo": f"{search_date.month:02d}",
+        }
+        logger.info(
+            "Now downloading case page at: %s (params: %s)"
+            % (self.url, self.request["parameters"]["params"])
+        )
+        self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """Make back scrape iterable
+
+        :param kwargs: the back scraping params
+        :return: None
+        """
+        super().make_backscrape_iterable(kwargs)
+        self.back_scrape_iterable = unique_year_month(
+            self.back_scrape_iterable
+        )
