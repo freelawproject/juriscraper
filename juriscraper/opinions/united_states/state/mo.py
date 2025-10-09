@@ -23,7 +23,10 @@ class Site(OpinionSiteLinear):
 
     def build_url(self):
         year = date.today().year
-        return urljoin(self.base_url, f"/page.jsp?id=12086&dist=Opinions%20{self.court}&date=all&year={year}#all")
+        return urljoin(
+            self.base_url,
+            f"/page.jsp?id=12086&dist=Opinions%20{self.court}&date=all&year={year}#all",
+        )
 
     def _process_html(self):
         for row in self.html.xpath("//div[@class='margin-bottom-15']"):
@@ -32,7 +35,7 @@ class Site(OpinionSiteLinear):
                 links = opinion.xpath("a")
                 if len(links) != 2:
                     continue
-                url = urljoin(self.base_url,opinion.xpath("a")[1].get("href"))
+                url = urljoin(self.base_url, opinion.xpath("a")[1].get("href"))
                 all_text = opinion.xpath(".//text()")
                 case_metadata = [t.strip() for t in all_text if t.strip()]
                 docket, _, name, _, author, _, vote = case_metadata
