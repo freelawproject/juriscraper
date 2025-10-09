@@ -25,10 +25,6 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.should_have_results = True
         self.search_date = date.today()
-        self.request["parameters"]["params"] = {
-            "yr": self.search_date.year,
-            "mo": f"{self.search_date.month:02d}",
-        }
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
