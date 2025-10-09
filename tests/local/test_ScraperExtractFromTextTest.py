@@ -1145,7 +1145,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "appeal_from_str": "First Appellate District, Division Three"
                     },
                     "OriginatingCourtInformation": {
-                        "lower_court_number": "A164483"
+                        "docket_number": "A164483"
                     },
                 },
             ),
