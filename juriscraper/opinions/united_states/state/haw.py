@@ -24,7 +24,6 @@ class Site(OpinionSiteLinear):
         self.court_code = "S.Ct"
         self.status = "Published"
         self.should_have_results = True
-        self.search_date = date.today()
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
