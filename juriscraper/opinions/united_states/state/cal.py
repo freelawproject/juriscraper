@@ -70,7 +70,7 @@ class Site(OpinionSiteLinear):
                 result["Docket"]["appeal_from_str"] = lower_court
             if lower_court_number:
                 result["OriginatingCourtInformation"] = {}
-                result["OriginatingCourtInformation"]["lower_court_number"] = (
+                result["OriginatingCourtInformation"]["docket_number"] = (
                     lower_court_number
                 )
 
