@@ -4,9 +4,9 @@
 import re
 from datetime import date, datetime
 
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 logger = make_default_logger()
 
