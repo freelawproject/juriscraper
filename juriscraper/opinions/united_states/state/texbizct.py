@@ -40,7 +40,8 @@ class Site(OpinionSiteLinear):
                 name, citation = short_title.rsplit(", ", 1)
             except (ValueError, AttributeError):
                 try:
-                    name, citation = title.rsplit(", ", 1)
+                    citation = title.rsplit(", ", 1)[-1]
+                    name = short_title
                 except (ValueError, AttributeError):
                     name, citation = short_title, ""
 
@@ -55,8 +56,8 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "docket": docket,
-                    "name": name,
-                    "citation": citation,
+                    "name": name.split("(", 1)[0].strip(),
+                    "citation": citation.split("(", 1)[0].strip(),
                     "url": url,
                     "date": date,
                     "date_filed_is_approximate": True,
