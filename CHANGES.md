@@ -18,6 +18,16 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.93 - 2025-10-17**
+
+Changes:
 - add backscraper for haw #1583
 
 Fixes:
@@ -26,7 +36,7 @@ Fixes:
 - fix `texbizct` improve error handling for name and citation extraction from titles #1629
 - add `ncbizct` to init #1631
 
-## Current
+## Past
 
 **2.6.92 - 2025-10-01**
 
@@ -36,7 +46,6 @@ Features:
 Changes:
 - Retrieve lower court information in `sc` #1569
 
-## Past
 
 **2.6.91 - 2025-09-26**
 
