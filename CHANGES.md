@@ -24,6 +24,7 @@ Fixes:
 - fix download_content call in sample_caller #1619
 - fix `cal` rename key in OriginatingCourtInformation for accuracy #1625
 - fix `texbizct` improve error handling for name and citation extraction from titles #1629
+- add `ncbizct` to init #1631
 
 ## Current
 
