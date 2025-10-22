@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
-- 
+-
 
 Fixes:
 - handle different table structures in `uscgcoca` scraper #1526

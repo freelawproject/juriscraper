@@ -60,19 +60,13 @@ class Site(OpinionSiteLinear):
 
             # Different table structure for recent vs older opinions
             if len(tds) > 3:
-                docket = re.sub(
-                    r"Docket Nos?\.", "", tds[3].text
-                )
+                docket = re.sub(r"Docket Nos?\.", "", tds[3].text)
                 summary = tds[2].text
                 per_curiam = "per curiam" in summary.lower()
                 date_string = tds[5].text
             else:
-                docket = re.sub(
-                    r"Docket Nos?\.", "", tds[1].text
-                )
+                docket = re.sub(r"Docket Nos?\.", "", tds[1].text)
                 date_string = tds[2].text
-
-
 
             m = re.search(self.citation_regex, first_cell)
             if m:
