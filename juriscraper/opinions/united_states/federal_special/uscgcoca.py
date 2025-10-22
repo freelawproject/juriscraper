@@ -54,13 +54,20 @@ class Site(OpinionSiteLinear):
         for item in self.html.xpath(path):
             url = item.xpath(".//td/a/@href")[0]
             first_cell = item.xpath(".//td/a/text()")[0]
-            docket = re.sub(
-                r"Docket Nos?\.", "", item.xpath(".//td[4]/text()")[0]
-            )
-            summary = item.xpath(".//td[3]/text()")[0]
-            per_curiam = "per curiam" in summary.lower()
+            tds = item.xpath(".//td")
+            summary = ""
+            per_curiam = False
 
-            date_string = item.xpath(".//td[6]/text()")[0]
+            # Different table structure for recent vs older opinions
+            if len(tds) > 3:
+                docket = re.sub(r"Docket Nos?\.", "", tds[3].text)
+                summary = tds[2].text
+                per_curiam = "per curiam" in summary.lower()
+                date_string = tds[5].text
+            else:
+                docket = re.sub(r"Docket Nos?\.", "", tds[1].text)
+                date_string = tds[2].text
+
             m = re.search(self.citation_regex, first_cell)
             if m:
                 mj = m.group("MJ").strip("()") if m.group("MJ") else ""
