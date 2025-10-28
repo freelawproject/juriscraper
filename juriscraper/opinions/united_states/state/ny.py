@@ -7,6 +7,7 @@ History:
  2015-10-23: Parts rewritten by mlr.
  2016-05-04: Updated by arderyp to handle typos in docket string format
  2024-09-05: Updated by flooie to deal with block from main website
+ 2025-10-27: Updated by quevon24 to fix content cleanup
 """
 
 import re
@@ -14,6 +15,7 @@ from datetime import date, timedelta
 from typing import Any, Optional
 
 import nh3
+from lxml.html import fromstring, tostring
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -154,9 +156,12 @@ class Site(OpinionSiteLinear):
         if not nh3.is_html(html_str):
             return content
 
+        tree = fromstring(html_str)
+        normalized_html = tostring(tree, encoding="unicode", method="html")
+
         # remove a tags
         allowed = set(nh3.ALLOWED_TAGS)
         allowed.discard("a")
 
-        cleaned = nh3.clean(html_str, tags=allowed)
+        cleaned = nh3.clean(normalized_html, tags=allowed)
         return cleaned.encode()
