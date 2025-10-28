@@ -22,7 +22,7 @@ Changes:
 
 Fixes:
 - handle different table structures in `uscgcoca` scraper #1526
-
+- add expected content types for document handling in 'texapp' scraper #1636
 ## Current
 
 **2.6.93 - 2025-10-17**

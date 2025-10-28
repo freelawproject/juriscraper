@@ -46,6 +46,7 @@ class Site(OpinionSiteLinear):
         self.start_date = self.end_date - timedelta(days=self.days_interval)
         self.is_first_request = True
         self.seeds = []
+        self.expected_content_types = ["application/vnd.ms-word", "application/pdf"]
 
     def _set_parameters(self) -> None:
         """Set ASPX post parameters
