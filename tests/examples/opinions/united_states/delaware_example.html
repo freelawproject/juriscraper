@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,1771 +9,2078 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
 
-    <!-- Header Include File -->
-        <!-- Favorites Icon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <!-- Bookmarklets Icon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon114.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon144.png" />
-
-    <!-- Google Translate Meta -->
-    <meta name="google" content="43ec6db4277f1c9a-06e18d88e2e346a7-gd6c10ef7ddc37b03-10">
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.css" type='text/css'>
-
-    <!-- Custom Styles for Courts Header and Footer -->
-    <link href="/css/courts_global_styles.css" rel="stylesheet" type='text/css'>
-
-    <!-- Retina Display LESS Styles -->
-    <link href="/css/retina.less" rel="stylesheet" type='text/css'>
-
-    <!-- CSS Animations Styles -->
-    <link href="/css/animate.min.css" rel="stylesheet" type='text/css'>
-
-    <!-- Font Awesome Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Font Styles (From Google.com/fonts) -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- Core JavaScript
-    ================================================== -->
-    <script src="/js/jquery-2.1.4.min.js"></script>
-    <script async src="/js/jquery.easing-1.3.min.js"></script>
-    <script src="/js/ready.js" async="async"></script>
-    <script src="/js/bootstrap.min.js" async="async"></script>
-
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Google Analytics -->
-    <script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-29274223-1', 'courts.delaware.gov');
-	ga('send', 'pageview');
-	</script>
-    <link rel="stylesheet" href="/css/courts-style.css" />
-    <link rel="stylesheet" href="/css/courts-datepicker.css" />
-
     <!-- description, author and page title -->
-	<meta name="description" content="Court opinions from the Delaware Court system.">
-	<title>Opinions - Delaware Courts - State of Delaware</title>
+    <meta name="description" content="Court opinions from the Delaware Court system.">
+    <title>Opinions - Delaware Courts - State of Delaware</title>
 
 </head>
+
 <body>
-    <!-- EMERGENCY NOTIFICATION SYSTEM (ENS) AREA -->
-    <!-- Uncomment to use this section to use in emergency situations, when finished comment it out again to make it disappear -->
 
-    <!-- END EMERGENCY NOTIFICATION AREA -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a href="#content" class="skip">Skip to Content</a>
+        <div class="menu-bg hidden-lg hidden-md"></div>
+        <button id="clickBlur" type="button" aria-label="Toggle Navigation" class="lines-button x2 hidden-lg hidden-md">
+            <span class="lines"></span>
+        </button>
 
-    <!-- BEGIN Fixed Main Nav Bar -->
-      <!-- Fixed navbar -->
+        <!-- MOBILE -->
+        <div class="menu-items hidden-lg hidden-md">
+            <div><a data-toggle="collapse" class="dropdown-toggle" href="#CourtsMenu">Courts<i
+                        class="fa fa-caret-down fa-fw global-caret"></i></a></div>
+            <ul id="CourtsMenu" class="panel-collapse collapse">
+                <li class="dropdown-header">Delaware Courts</li>
+                <li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
+                <li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
+                <li><a href="/superior/"><strong>Superior Court</strong></a></li>
+                <li><a href="/family/"><strong>Family Court</strong></a></li>
+                <li><a href="/commonpleas/"><strong>Court of Common Pleas</strong></a></li>
+                <li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
+                <li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Related Links</li>
+                <li><a href="/aoc/ada.aspx">Accessibility</a></li>
+                <li><a href="/aoc/communitycourt.aspx">Community Court</a></li>
+                <li><a href="/locations/">Hours and Locations</a></li>
+                <li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
+                <li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
+                <li><a href="/career/">Job Opportunities</a></li>
+                <li><a href="/lawlibraries/">Judicial Law Libraries</a></li>
+                <li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
+                <li><a href="/overview.aspx">Overview of the Courts</a></li>
+            </ul>
+            <div><a data-toggle="collapse" class="dropdown-toggle" href="#ServicesMenu">eServices<i
+                        class="fa fa-caret-down fa-fw global-caret"></i></a></div>
+            <ul id="ServicesMenu" class="panel-collapse collapse">
+                <li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
+                <li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
+                <li><a href="/calendars/">Calendars</a></li>
+                <li><a href="/docket.aspx">Civil Case Search</a></li>
+                <li><a href="/family/support/supportcalculator.aspx">Child Support Calculator</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/efiling/">eFiling</a></li>
+                <li><a href="/epayment.aspx">ePayment for Fines</a></li>
+                <li><a href="/forms/">Forms</a></li>
+                <li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
+                <li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/opinions/">Opinions &amp; Orders</a></li>
+                <li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
+                <li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
+                <li><a href="/tradenames/">Trade Names Database</a></li>
+                <li><a href="/docs/WirelessFAQforCourtUsers.pdf" target="_blank"
+                        aria-label="Wireless Service in Courthouse">Wireless Service in Courthouses<i
+                            class="fa fa-file-pdf-o fa-fw"></i></a></li>
+            </ul>
+            <div><a href="/forms/">Forms</a></div>
+            <div><a href="/rules/" aria-label="Delaware Court Rules">Rules</a></div>
+            <div><a href="/calendars/">Calendars</a></div>
+            <div><a href="/opinions/">Opinions</a></div><br />
+            <div id="google_translate_element"></div>
 
-<!-- MOBILE -->
+            <hr class="footer" />
+            <div class="col-xs-6">
+                <div>
+                    <p><a href="/help/"><span class="label label-warning selfhelp"><i class="fa fa-info-circle fa-lg"
+                                    aria-hidden="true"></i>&nbsp;Self-Help</span></a></p>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div>
+                    <p><a href="/feedback/">Feedback</a></p>
+                </div>
+            </div>
 
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="menu-bg hidden-lg hidden-md"></div>
-    <button id="clickBlur" type="button" aria-label="Toggle Navigation" class="lines-button x2 hidden-lg hidden-md">
-      <span class="lines"></span>
-    </button>
-    <div class="menu-items hidden-lg hidden-md">
-	  <div><a data-toggle="collapse" class="dropdown-toggle" href="#CourtsMenu">Courts<i class="fa fa-caret-down fa-fw global-caret"></i></a></div>
-		<ul id="CourtsMenu" class="panel-collapse collapse">
-		  <li class="dropdown-header">Delaware Courts</li>
-		  <li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
-		  <li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
-		  <li><a href="/superior/"><strong>Superior Court</strong></a></li>
-		  <li><a href="/family/"><strong>Family Court</strong></a></li>
-		  <li><a href="/commonpleas/"><strong>Court of Common Pleas</strong></a></li>
-		  <li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
-		  <li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
-		  <li role="separator" class="divider"></li>
-		  <li class="dropdown-header">Related Links</li>
-		  <li><a href="/locations/">Hours and Locations</a></li>
-		  <li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
-		  <li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
-		  <li><a href="/career/">Job Opportunities</a></li>
-      <li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
-		  <li><a href="/overview.aspx">Overview of the Courts</a></li>
-		</ul>
-	  <div><a data-toggle="collapse" class="dropdown-toggle" href="#ServicesMenu">eServices<i class="fa fa-caret-down fa-fw global-caret"></i></a></div>
-		<ul id="ServicesMenu" class="panel-collapse collapse">
-		  <li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
-          <li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
-          <li><a href="/calendars/">Calendars</a></li>
-          <li><a href="/docket.aspx">Civil Case Search</a></li>
-          <li><a href="/family/supportcalculator/">Child Support Calculator</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/efiling/">eFiling</a></li>
-          <li><a href="/epayment.aspx">ePayment for Fines</a></li>
-          <li><a href="/forms/">Forms</a></li>
-          <li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
-          <li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/opinions/">Opinions &amp; Orders</a></li>
-          <li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
-          <li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
-          <li><a href="/tradenames/">Trade Names Database</a></li>
-          <li><a href="/docs/WirelessFAQforCourtUsers.pdf" target="_blank">Wireless Service in Courthouses<i class="fa fa-file-pdf-o fa-fw"></i></a></li>
-		</ul>
-      <div><a href="/forms/">Forms</a></div>
-      <div><a href="/rules/">Rules</a></div>
-      <div><a href="/calendars/">Calendars</a></div>
-      <div><a href="/opinions/">Opinions</a></div><br />
-      <hr class="footer" />
-        <div class="col-xs-6">
-          <div><p><a href="/help/">Help</a></p></div>
         </div>
-        <div class="col-xs-6">
-          <div><p><a href="/feedback/">Feedback</a></p></div>
+        <!-- END MOBILE -->
+        <!-- DESKTOP -->
+        <div class="navbar-header">
+            <a href="../../"><img src="/img/delaware_courts_logo.jpg"
+                    alt="Delaware Courts - The Offical Website of the Delaware Judiciary"
+                    title="Delaware Courts - The Official Website of the Delaware Judiciary" class="img-responsive"
+                    aria-label="Return to Delaware Courts home page" /></a>
         </div>
-    </div>
-
-<!-- END MOBILE -->
-
-<!-- DESKTOP -->
-
-    <div class="navbar-header">
-      <a href="../../index.aspx"><img src="/img/delaware_courts_logo.jpg" alt="Delaware Courts - The Offical Website of the Delaware Judiciary" title="Delaware Courts - The Offical Website of the Delaware Judiciary" class="img-responsive" /></a>
-    </div>
-    <ul class="nav navbar-nav hidden-xs hidden-sm">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courts <i class="fa fa-caret-down fa-fw global-caret"></i></a>
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">Delaware Courts</li>
-		  <li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
-		  <li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
-		  <li><a href="/superior/"><strong>Superior Court</strong></a></li>
-		  <li><a href="/family/"><strong>Family Court</strong></a></li>
-		  <li><a href="/commonpleas"><strong>Court of Common Pleas</strong></a></li>
-		  <li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
-		  <li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
-          <li role="separator" class="divider"></li>
-          <li class="dropdown-header">Related Links</li>
-		  <li><a href="/locations/">Hours and Locations</a></li>
-		  <li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
-		  <li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
-		  <li><a href="/career/">Job Opportunities</a></li>
-		  <li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
-		  <li><a href="/overview.aspx">Overview of the Courts</a></li>
+        <ul class="nav navbar-nav hidden-xs hidden-sm">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Courts <i class="fa fa-caret-down fa-fw global-caret"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">Delaware Courts</li>
+                    <li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
+                    <li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
+                    <li><a href="/superior/"><strong>Superior Court</strong></a></li>
+                    <li><a href="/family/"><strong>Family Court</strong></a></li>
+                    <li><a href="/commonpleas"><strong>Court of Common Pleas</strong></a></li>
+                    <li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
+                    <li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Related Links</li>
+                    <li><a href="/aoc/ada.aspx">Accessibility</a></li>
+                    <li><a href="/aoc/communitycourt.aspx">Community Court</a></li>
+                    <li><a href="/locations/">Hours and Locations</a></li>
+                    <li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
+                    <li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
+                    <li><a href="/career/">Job Opportunities</a></li>
+                    <li><a href="/lawlibraries/">Judicial Law Libraries</a></li>
+                    <li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
+                    <li><a href="/overview.aspx">Overview of the Courts</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">eServices <i class="fa fa-caret-down fa-fw global-caret"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">eServices</li>
+                    <li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
+                    <li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
+                    <li><a href="/calendars/">Calendars</a></li>
+                    <li><a href="/docket.aspx">Civil Case Search</a></li>
+                    <li><a href="/family/support/supportcalculator.aspx">Child Support Calculator</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/efiling/">eFiling</a></li>
+                    <li><a href="/epayment.aspx">ePayment for Fines</a></li>
+                    <li><a href="/forms/">Forms</a></li>
+                    <li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
+                    <li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/opinions/">Opinions &amp; Orders</a></li>
+                    <li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
+                    <li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
+                    <li><a href="/tradenames/">Trade Names Database</a></li>
+                    <li><a href="/forms/download.aspx?id=103848">Wireless Service in Courthouses<i
+                                class="fa-light fa-file-pdf fa-fw"></i></a></li>
+                </ul>
+            </li>
+            <li><a href="/forms/" aria-label="Delaware Court Forms">Forms</a></li>
+            <li><a href="/rules/" aria-label="Delaware Court Rules">Rules</a></li>
+            <li><a href="/calendars/">Calendars</a></li>
+            <li><a href="/opinions/" aria-label="Court Opinions">Opinions</a></li>
         </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">eServices <i class="fa fa-caret-down fa-fw global-caret"></i></a>
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">eServices</li>
-          <li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
-          <li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
-          <li><a href="/calendars/">Calendars</a></li>
-          <li><a href="/docket.aspx">Civil Case Search</a></li>
-          <li><a href="/family/supportcalculator/">Child Support Calculator</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/efiling/">eFiling</a></li>
-          <li><a href="/epayment.aspx">ePayment for Fines</a></li>
-          <li><a href="/forms/">Forms</a></li>
-          <li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
-          <li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/opinions/">Opinions &amp; Orders</a></li>
-          <li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
-          <li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
-          <li><a href="/tradenames/">Trade Names Database</a></li>
-          <li><a href="/docs/WirelessFAQforCourtUsers.pdf" target="_blank">Wireless Service in Courthouses<i class="fa fa-file-pdf-o fa-fw"></i></a></li>
+        <!-- END DESKTOP -->
+        <!-- SEARCH BUTTON -->
+        <div id="sb-search" class="sb-search">
+            <form id="search-form" method="GET">
+                <input type="text" id="st-search-input" class="sb-search-input" placeholder="Enter your search term..."
+                    aria-label="Search">
+                <input type="submit" id="sb-search-submit" class="sb-search-submit" aria-label="Search"><span
+                    class="sb-icon-search"></span>
+            </form>
+        </div>
+        <!-- END SEARCH BUTTON -->
+        <!-- SELF-HELP BUTTON -->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="hidden-xs hidden-sm">
+                <div id="google_translate_element"></div>
+            </li>
+            <li class="hidden-xs hidden-sm">
+                <a href="/help/">
+                    <!--<span class="label label-warning selfhelp"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;Self-Help</span></a>-->
+                    <span class="label label-warning selfhelp1">Self-Help</span>&nbsp;&nbsp;
+                </a>
+            </li>
+            <!-- <li class="hidden-xs hidden-sm"> <div id="google_translate_element"></div></li> -->
+
+            <li class="hidden-xs hidden-sm">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
         </ul>
-      </li>
-      <li><a href="/forms/">Forms</a></li>
-      <li><a href="/rules/">Rules</a></li>
-      <li><a href="/calendars/">Calendars</a></li>
-      <li><a href="/opinions/">Opinions</a></li>
-    </ul>
+        <!-- END SELF-HELP BUTTON -->
 
-    <div id="sb-search" class="sb-search">
-	  <form id="courtsGlobalSearch">
-        <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="query" id="txtKeyword">
-        <input id="sb-search-submit" class="sb-search-submit" type="submit" value="">
-        <span class="sb-icon-search"></span>
-      </form>
+
+        <!--<script type="text/javascript" class="hidden-xs hidden-sm">
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>-->
+
+
+
     </div>
-
-    <ul class="nav navbar-nav navbar-right">
-	  <li class="hidden-xs hidden-sm"><a href="/help/">Help</a></li>
-	  <li class="hidden-xs hidden-sm"><a href="/feedback/">Feedback</a></li>
-	  <li class="hidden-xs hidden-sm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-	</ul>
-  </div>
-
-<!-- END DESKTOP -->
-
-
-
+    <!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
     <!-- END Fixed Main Nav Bar -->
 
 
 
 
-
     <div class="container">
-      <div class="row">
-        <div class="col-md-12" id="main_content">
+        <div class="row">
+            <div class="col-md-12" id="main_content">
 
-    <form method="POST" action="./list.aspx?ag=supreme+court" id="frmCourtOpinions">
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="PCavNm4nFj4dWfNzh9/5W/l2FCIMuePnbycA4PwG/+s/GYVtUvU56cYKxPhKf+/kTObvckUhhfMsnqkmJvPQjsnYX+dAfwVyvEu5pieCM3I=" />
-</div>
+                <div id="content"><!-- for skip navigation -->
+                    <form method="POST" action="./List.aspx?ag=supreme+court" id="frmCourtOpinions" class="form-inline">
+                        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                            value="7WEPlLd2ZWnt1Uv4OZFRDU8hB6vG12/RPsnVvE8o6EDyt7n/yavt4V6eP8fu6gacP/xnvEEeVVXCjeWHTjgvYZwzLLuwr/x1yqq4ZlQIOzk=" />
 
-<div class="aspNetHidden">
+                        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="785559C1" />
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="785559C1" />
-</div>
+                        <div class="page-header">
+                            <h1><span class="impressive">Opinions</span> and Orders</h1>
+                        </div>
 
-        <div class="page-header">
-            <h1><span class="impressive">Opinions</span> and Orders</h1>
+                        <p>Please note: These electronic orders may contain computer-generated errors or other
+                            deviations from the official printed versions. In case of discrepancies between the print
+                            and electronic versions of orders, the print version controls. In case of discrepancies
+                            between the print and electronic versions of orders and any later official version of them,
+                            the later version controls. </p><br />
+
+
+                        <div class="col-md-1">
+                            <div class="input-group">
+                                <label id="selAgencies-Label" for="selAgencies">
+                                    Court:
+                                </label>
+                                <select id="selAgencies" name="ctlOpinions1selAgencies" class="form-control"
+                                    onchange="submitForm(true)">
+
+                                    <option value="All Courts">All Courts</option>
+
+                                    <option value="Court of Chancery">Court of Chancery</option>
+
+                                    <option value="Court of Common Pleas">Court of Common Pleas</option>
+
+                                    <option value="Family Court">Family Court</option>
+
+                                    <option value="Justice Of The Peace Court">Justice Of The Peace Court</option>
+
+                                    <option value="Superior Court">Superior Court</option>
+
+                                    <option value="Supreme Court" selected>Supreme Court</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="input-group">
+                                <label id="ctlOpinions1selperiods-label" for="ctlOpinions1selperiods">
+                                    Revision Date:
+                                </label>
+                                <select id="ctlOpinions1selperiods" name="ctlOpinions1selperiods" class="form-control"
+                                    onchange="submitForm(true)">
+
+                                    <option value="7">Past 7 days</option>
+
+                                    <option value="30">Past 30 days</option>
+
+                                    <option value="180">Past 180 days</option>
+
+                                    <option value="2025" selected>This year</option>
+
+                                    <option value="year">Custom year</option>
+
+                                    <option value="date">Custom dates</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                <label id="ctlOpinions1txtsearchtext-label" for="ctlOpinions1txtsearchtext">
+                                    Search:
+                                </label>
+                                <input id="ctlOpinions1txtsearchtext" name="ctlOpinions1txtsearchtext" type="text"
+                                    class="form-control" value="" placeholder="Search for..." size="40" maxlength="25"
+                                    role="textbox" tabindex="0"
+                                    onkeydown="if (event.keyCode === 13) { submitForm(true); return false; }" />
+                                <span class="input-group-btn">
+                                    <button class="btn searchButton" type="button" onclick="submitForm(true)"
+                                        tabindex="0">
+                                        <i class="fa-light fa-magnifying-glass" aria-hidden="true"></i>Search
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="clearfix" style="margin-bottom: 24px;" aria-hidden="true"></div>
+
+
+
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active" role="presentation">
+                                <a href="#" role="tab" aria-selected="true" tabindex="0"
+                                    onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
+                                    All Cases
+                                </a>
+                            </li>
+                            <li class="" role="presentation">
+                                <a href="#" role="tab" aria-selected="false" tabindex="0"
+                                    onclick="document.getElementById('ctlOpinions1hdncasetype').value='Civil';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
+                                    Civil
+                                </a>
+                            </li>
+                            <li class="" role="presentation">
+                                <a href="#" role="tab" aria-selected="false" tabindex="0"
+                                    onclick="document.getElementById('ctlOpinions1hdncasetype').value='Criminal';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
+                                    Criminal
+                                </a>
+                            </li>
+                            <li class="" role="presentation">
+                                <a href="#" role="tab" aria-selected="false" tabindex="0"
+                                    onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='ccld';submitForm(true); return false;">
+                                    Complex Commercial Litigation Division
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
+
+
+
+
+                        <div class="col-md-12" style="display: flex; align-items: flex-end;">
+
+
+                            <div class="col-md-8 noleftpadding totalcal">
+                                supreme court Opinions and Orders
+
+                                <span class="label label-default">
+                                    398 Opinions
+                                </span>
+
+                            </div>
+
+                            <div class="col-md-4 norightpadding" style="text-align: right; align-content: end;">
+                                <label id="ctlOpinions1selresults-label" for="ctlOpinions1selresults">
+                                    Results per page
+                                </label>
+                                <select id="ctlOpinions1selresults" name="ctlOpinions1selresults" class="form-control"
+                                    onchange="submitForm(false)">
+
+                                    <option value="25" selected>
+                                        25
+                                    </option>
+
+                                    <option value="50">
+                                        50
+                                    </option>
+
+                                    <option value="100">
+                                        100
+                                    </option>
+
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
+
+
+                        <table class="table table-responsive table-bordered table-striped">
+
+                            <thead>
+                                <tr>
+
+                                    <th class="col-md-2" scope="col">
+
+                                        <button type="button" class="sort-btn" onclick="
+                                            document.getElementById('ctlOpinions1hdnsortbynew').value='parties';
+                                            submitForm(false)
+                                            " aria-label="Sort by Parties/Caption">
+                                            Parties/Caption
+                                            <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </th>
+
+                                    <th class="col-md-1" scope="col">
+
+                                        <button type="button" class="sort-btn" onclick="
+                                            document.getElementById('ctlOpinions1hdnsortbynew').value='date';
+                                            submitForm(false)
+                                            " aria-label="Sort by Date">
+                                            Date
+                                            <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </th>
+
+                                    <th class="col-md-2" scope="col">
+
+                                        <button type="button" class="sort-btn" onclick="
+                                            document.getElementById('ctlOpinions1hdnsortbynew').value='number';
+                                            submitForm(false)
+                                            " aria-label="Sort by File Number">
+                                            File Number
+                                            <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </th>
+
+                                    <th class="col-md-1" scope="col">
+
+                                        <button type="button" class="sort-btn" onclick="
+                                            document.getElementById('ctlOpinions1hdnsortbynew').value='court';
+                                            submitForm(false)
+                                            " aria-label="Sort by Court">
+                                            Court
+                                            <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </th>
+
+                                    <th class="col-md-1" scope="col">
+
+                                        <button type="button" class="sort-btn" onclick="
+                                            document.getElementById('ctlOpinions1hdnsortbynew').value='type';
+                                            submitForm(false)
+                                            " aria-label="Sort by Type">
+                                            Type
+                                            <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </th>
+
+                                    <th class="col-md-1" scope="col">
+
+                                        <button type="button" class="sort-btn" onclick="
+                                            document.getElementById('ctlOpinions1hdnsortbynew').value='officer';
+                                            submitForm(false)
+                                            " aria-label="Sort by Judicial Officer">
+                                            Judicial Officer
+                                            <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </th>
+
+                                    <th class="col-md-4" scope="col">
+                                        Description
+
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref1" href="/Opinions/Download.aspx?id=386500"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue1">Jones v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/27/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref2" href="/Opinions/Download.aspx?id=386500"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue2">323, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref3" href="/Opinions/Download.aspx?id=386460"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue3">Shelley v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/27/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref4" href="/Opinions/Download.aspx?id=386460"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue4">293, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref5" href="/Opinions/Download.aspx?id=386450"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue5">Allen v. Amazon Fulfillment Svcs., Inc. &
+                                                UIAB</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/24/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref6" href="/Opinions/Download.aspx?id=386450"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue6">70, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref7" href="/Opinions/Download.aspx?id=386300"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue7">ANDERSON v. STATE</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/24/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref8" href="/Opinions/Download.aspx?id=386300"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue8">522, 2024</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref9" href="/Opinions/Download.aspx?id=386360"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue9">Anderson v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/24/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref10" href="/Opinions/Download.aspx?id=386360"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue10">277, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref11" href="/Opinions/Download.aspx?id=386340"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue11">EN PROPERTIES, LLC v. FREEDOM MORTGAGE
+                                                CORPORATION and DILKS</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/24/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref12" href="/Opinions/Download.aspx?id=386340"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue12">73, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref13" href="/Opinions/Download.aspx?id=386440"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue13">Reed v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/24/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref14" href="/Opinions/Download.aspx?id=386440"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue14">302, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref15" href="/Opinions/Download.aspx?id=386320"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue15">WEIL HOLDINGS II, LLC v. JEFFREY
+                                                ALEXANDER, DPM</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/23/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref16" href="/Opinions/Download.aspx?id=386320"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue16">139, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Court of Chancery)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref17" href="/Opinions/Download.aspx?id=386330"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue17">MITCHELL v. DSCYF</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/23/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref18" href="/Opinions/Download.aspx?id=386330"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue18">229, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Family Court)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref19" href="/Opinions/Download.aspx?id=386200"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue19"> Kelly Oscar and Jack Oscar v. Larry
+                                                Lafferty</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/22/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref20" href="/Opinions/Download.aspx?id=386200"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue20">531, 2024</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Family Court)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Traynor<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref21" href="/Opinions/Download.aspx?id=386140"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue21">Appiah v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/21/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref22" href="/Opinions/Download.aspx?id=386140"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue22">263, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref23" href="/Opinions/Download.aspx?id=386090"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue23"> Keynetics Shareholder Trust and Gary
+                                                Lutin v. Keynetics Inc.</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/20/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref24" href="/Opinions/Download.aspx?id=386090"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue24">118,2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Court of Chancery)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Seitz<br />
+                                        C.J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref25" href="/Opinions/Download.aspx?id=386060"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue25">Perryman v. Curonix LLC, a Delaware
+                                                limited liability company</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/20/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref26" href="/Opinions/Download.aspx?id=386060"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue26">367, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Court of Chancery)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Seitz<br />
+                                        C.J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref27" href="/Opinions/Download.aspx?id=386120"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue27">Banks v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/20/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref28" href="/Opinions/Download.aspx?id=386120"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue28">46, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref29" href="/Opinions/Download.aspx?id=386100"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue29">Boyles v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/20/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref30" href="/Opinions/Download.aspx?id=386100"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue30">328, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Seitz<br />
+                                        C.J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref31" href="/Opinions/Download.aspx?id=386050"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue31">Crosby-Avant v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/20/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref32" href="/Opinions/Download.aspx?id=386050"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue32">484, 2024</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Traynor<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref33" href="/Opinions/Download.aspx?id=386070"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue33">Henderson v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/20/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref34" href="/Opinions/Download.aspx?id=386070"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue34">30, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref35" href="/Opinions/Download.aspx?id=385990"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue35">Rick Henricus Van Den Wildenberg v.
+                                                Sign-Zone Holdings L.P., et al.</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/17/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref36" href="/Opinions/Download.aspx?id=385990"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue36">97, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Court of Chancery)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref37" href="/Opinions/Download.aspx?id=386040"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue37">Garcia-Vincente v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/17/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref38" href="/Opinions/Download.aspx?id=386040"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue38">48, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Valihura <br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref39" href="/Opinions/Download.aspx?id=385970"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue39">Hilton v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/17/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref40" href="/Opinions/Download.aspx?id=385970"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue40">308, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Seitz<br />
+                                        C.J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref41" href="/Opinions/Download.aspx?id=385930"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue41">Clark v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/16/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref42" href="/Opinions/Download.aspx?id=385930"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue42">145, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        Griffiths<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref43" href="/Opinions/Download.aspx?id=385940"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue43">In re Kostyshyn 634 Governor
+                                                Circle</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/16/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref44" href="/Opinions/Download.aspx?id=385940"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue44">397, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Seitz<br />
+                                        C.J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref45" href="/Opinions/Download.aspx?id=385870"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue45">Krafchick v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/14/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref46" href="/Opinions/Download.aspx?id=385870"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue46">233, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref47" href="/Opinions/Download.aspx?id=385860"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue47">Muniz-Rodriguez v. State</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/14/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref48" href="/Opinions/Download.aspx?id=385860"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue48">120, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court<br />(Superior Court)
+
+                                    </td>
+
+                                    <td>
+                                        Criminal
+
+                                    </td>
+
+                                    <td>
+                                        LeGrow<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref49" href="/Opinions/Download.aspx?id=385800"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue49">In the Matter of a Member of the Bar of
+                                                the Supreme Court of the State of Delaware</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        10/09/2025
+
+                                    </td>
+
+                                    <td>
+
+                                        <a id="ctlOpinions1LinkHref50" href="/Opinions/Download.aspx?id=385800"
+                                            role="link">
+                                            <span id="ctlOpinions1LinkValue50">422, 2025</span>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        Supreme Court
+
+                                    </td>
+
+                                    <td>
+                                        Civil
+
+                                    </td>
+
+                                    <td>
+                                        Per Curiam<br />
+                                        J.
+
+                                    </td>
+
+                                    <td>
+                                        Order
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <nav class="text-center" aria-label="Index of pages">
+                            <ul class="pagination" role="list">
+
+                                <li class="disabled" role="listitem">
+                                    <button type="button" disabled aria-label="No previous page">
+                                        <i class="fa-regular fa-chevron-left" aria-hidden="true"></i>
+                                    </button>
+                                </li>
+
+                                <li class="active" role="listitem">
+                                    <button type="button"
+                                        onclick="document.getElementById('ctlOpinions1hdnpageno').value='1';submitForm(false)"
+                                        aria-label="Page 1 of 16" aria-current='page'>
+                                        1
+                                    </button>
+                                </li>
+
+                                <li class="" role="listitem">
+                                    <button type="button"
+                                        onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"
+                                        aria-label="Page 2 of 16">
+                                        2
+                                    </button>
+                                </li>
+
+                                <li class="" role="listitem">
+                                    <button type="button"
+                                        onclick="document.getElementById('ctlOpinions1hdnpageno').value='3';submitForm(false)"
+                                        aria-label="Page 3 of 16">
+                                        3
+                                    </button>
+                                </li>
+
+                                <li role="listitem">
+                                    <button type="button"
+                                        onclick="document.getElementById('ctlOpinions1hdnpageno').value='4';submitForm(false)"
+                                        aria-label="More next pages">
+                                        <span aria-hidden="true"><i class="fa-regular fa-ellipsis"
+                                                aria-hidden="true"></i></span>
+                                    </button>
+                                </li>
+                                <li role="listitem">
+                                    <button type="button"
+                                        onclick="document.getElementById('ctlOpinions1hdnpageno').value='16';submitForm(false)"
+                                        aria-label="Page 16 of 16">
+                                        16
+                                    </button>
+                                </li>
+
+                                <li role="listitem">
+                                    <button type="button"
+                                        onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"
+                                        aria-label="Next page">
+                                        <i class="fa-regular fa-chevron-right" aria-hidden="true"></i>
+                                    </button>
+                                </li>
+
+                            </ul>
+                        </nav>
+                        <style>
+                            .judge-label {
+                                background-color: unset;
+                                color: unset;
+                                font-size: unset;
+                                font-weight: unset;
+                                margin: 2px;
+                                padding: 6px;
+                                border-radius: 6px;
+                                display: inline-block;
+                                text-align: center;
+                            }
+
+                            .title-c {
+                                color: black;
+                                background-color: #b3c6c6;
+                            }
+
+                            .title-cj {
+                                color: black;
+                                background-color: #c0d4b8;
+                            }
+
+                            .title-j {
+                                color: black;
+                                background-color: #d9baa3;
+                            }
+
+                            .title-sm {
+                                color: black;
+                                background-color: #9ea4ba;
+                            }
+
+                            .title-m {
+                                color: black;
+                                background-color: #a3c2d9;
+                            }
+
+                            .title-pj {
+                                color: black;
+                                background-color: #ccb8d4;
+                            }
+
+                            .title-rj {
+                                color: black;
+                                background-color: #88bdf2;
+                            }
+
+                            .title-vc {
+                                color: black;
+                                background-color: #BADBA2;
+                            }
+                        </style>
+
+                        <div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
+                        <div class="col-md-12 text-center">
+
+
+                            <span class="judge-label title-c">C.=Chancellor or Commissioner</span>
+                            <span class="judge-label title-cj">C.J.=Chief Justice or Chief Judge</span>
+                            <span class="judge-label title-j">J.=Justice or Judge</span>
+                            <span class="judge-label title-sm">S.M.=Senior Magistrate</span>
+                            <span class="judge-label title-m">M.=Magistrate in Chancery</span>
+                            <span class="judge-label title-pj">P.J.=President Judge</span>
+                            <span class="judge-label title-rj">R.J.=Resident Judge</span>
+                            <span class="judge-label title-vc">V.C.=Vice Chancellor</span>
+                        </div>
+                        <div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
+
+
+
+
+                        <input id="ctlOpinions1hdnagency" name="ctlOpinions1hdnagency" type="hidden"
+                            value="supreme court" />
+
+                        <input id="ctlOpinions1hdncasetype" name="ctlOpinions1hdncasetype" type="hidden" value="" />
+
+                        <input id="ctlOpinions1hdndivision" name="ctlOpinions1hdndivision" type="hidden" value="" />
+
+                        <input id="ctlOpinions1hdnsortby" name="ctlOpinions1hdnsortby" type="hidden" value="" />
+
+                        <input id="ctlOpinions1hdnsortorder" name="ctlOpinions1hdnsortorder" type="hidden" value="0" />
+
+                        <input id="ctlOpinions1hdnsortbynew" name="ctlOpinions1hdnsortbynew" type="hidden" value="" />
+
+                        <input id="ctlOpinions1hdnpageno" name="ctlOpinions1hdnpageno" type="hidden" value="" />
+
+
+                        <script type="text/javascript">
+                            function submitForm(clear) {
+                                if (clear) {
+                                    if (document.getElementById('ctlOpinions1hdnsortby')) {
+                                        document.getElementById('ctlOpinions1hdnsortby').value = '';
+                                    }
+                                    if (document.getElementById('ctlOpinions1hdnsortorder')) {
+                                        document.getElementById('ctlOpinions1hdnsortorder').value = '';
+                                    }
+                                    if (document.getElementById('ctlOpinions1hdnsortbynew')) {
+                                        document.getElementById('ctlOpinions1hdnsortbynew').value = '';
+                                    }
+                                    if (document.getElementById('ctlOpinions1hdnpageno')) {
+                                        document.getElementById('ctlOpinions1hdnpageno').value = '';
+                                    }
+                                }
+                                frmCourtOpinions.submit();
+                            }
+
+                            function submitFormGet(sortBy, sortOrder, page) {
+                                var addYear = false;
+                                var addDates = false;
+                                var agency;
+                                var period;
+                                var year;
+                                var fromDate;
+                                var toDate;
+                                var resultsPerPage;
+                                var searchText;
+
+                                if (document.getElementById("selAgencies")) {
+                                    agency = document.getElementById("selAgencies").value;
+                                } else {
+                                    agency = 'supreme court';
+                                }
+
+                                if (document.getElementById("selYears")) {
+                                    year = document.getElementById("selYears").value;
+                                } else {
+                                    year = '0';
+                                }
+
+                                if (document.getElementById("selSearch")) {
+                                    period = document.getElementById("selSearch").value;
+                                    if (period === 'year') {
+                                        addYear = true;
+                                    }
+                                    if (period === 'range') {
+                                        addDates = true;
+                                    }
+                                } else {
+                                }
+
+                                if (document.getElementById("txtFromDate")) {
+                                    fromDate = document.getElementById("txtFromDate").value;
+                                } else {
+                                    fromDate = '01/01/2025';
+                                }
+
+                                if (document.getElementById("txtToDate")) {
+                                    toDate = document.getElementById("txtToDate").value;
+                                } else {
+                                    toDate = '10/28/2025';
+                                }
+
+                                if (document.getElementById("selResults")) {
+                                    resultsPerPage = document.getElementById("selResults").value;
+                                } else {
+                                    resultsPerPage = '25';
+                                }
+
+                                if (document.getElementById("txtSearch")) {
+                                    searchText = document.getElementById("txtSearch").value;
+                                } else {
+                                    searchText = '';
+                                }
+
+                                document.location.href = encodeURI('/opinions/List.aspx' +
+                                    '?ag=' + agency +
+                                    '&typ=' + '' +
+                                    '&div=' + '' +
+                                    '&period=' + period +
+                                    (addYear ? ('&year=' + year) : '') +
+                                    (addDates ? ('&from=' + fromDate + '&to=' + toDate) : '') +
+                                    '&results=' + resultsPerPage +
+                                    '&ss=' + searchText +
+                                    '&srt=' + sortBy +
+                                    '&srtord=' + sortOrder +
+                                    '&page=' + page);
+                            }
+
+                        </script>
+
+                    </form>
+                </div><!-- end content -->
+
+            </div>
         </div>
-
-        <p class="text-info">Please note: These electronic orders may contain computer-generated errors or other deviations from the official printed versions. In case of discrepancies between the print and electronic versions of orders, the print version controls. In case of discrepancies between the print and electronic versions of orders and any later official version of them, the later version controls. </p>
-
-
-
-<br />
-<div class="col-md-12 noleftpadding">
-
-<div class="col-md-2">
-    <div class="form-group">
-        <label for="exampleInputYear">Court:</label>
-        <select id="selAgencies" name="ctlOpinions1selagencies" class="form-control" onchange="submitForm(true)">
-
-            <option value="All Courts" >All Courts</option>
-
-            <option value="Court of Chancery" >Court of Chancery</option>
-
-            <option value="Court of Common Pleas" >Court of Common Pleas</option>
-
-            <option value="Justice Of The Peace Court" >Justice Of The Peace Court</option>
-
-            <option value="Superior Court" >Superior Court</option>
-
-            <option value="Supreme Court" selected>Supreme Court</option>
-
-        </select>
-    </div>
-</div>
-
-<div class="col-md-2">
-    <div class="form-group">
-        <label for="InputYear">Decision Date:</label><br />
-        <select id="ctlOpinions1selperiods" name="ctlOpinions1selperiods" class="form-control" onchange="submitForm(true)">
-
-            <option value="7" >Past 7 days</option>
-
-            <option value="30" >Past 30 days</option>
-
-            <option value="180" >Past 180 days</option>
-
-            <option value="2016" selected>This year</option>
-
-            <option value="year" >Custom year</option>
-
-            <option value="date" >Custom dates</option>
-
-        </select>
-    </div>
-</div>
-
-
-<span class="visible-xs">
-    <br />
-</span>
-<div class="col-md-3">
-    <div class="input-group">
-        <label for="toDate">Search:</label>
-        <input type="text" maxlength="25" id="ctlOpinions1txtsearchtext" value="" name="ctlOpinions1txtsearchtext" placeholder="Search for..." class="form-control" onkeydown="if (event.keyCode == 13) { submitForm(true); return false; }" />
-        <span class="input-group-btn">
-            <button class="btn btn-warning searchButton" type="button" onclick="submitForm(true)"><i class="fa fa-search"></i></button>
-        </span>
-    </div>
-</div>
-<div class="clearfix"></div>
-
-</div>
-
-<ul class="nav nav-tabs">
-    <li class="active"><a class="pointer" onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true);">All Cases</a></li>
-    <li class=""><a class="pointer" onclick="document.getElementById('ctlOpinions1hdncasetype').value='Civil';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true);">Civil</a></li>
-    <li class=""><a class="pointer" onclick="document.getElementById('ctlOpinions1hdncasetype').value='Criminal';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true);">Criminal</a></li>
-    <li class=""><a class="pointer" onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='ccld';submitForm(true);">Complex Commercial Litigation Division</a></li>
-</ul>
-
-
-
-<br />
-<span class="visible-sm">
-<br />
-</span>
-
-
-<div class="col-md-8 noleftpadding">
-    <div class="form-inline">
-    <h4>supreme court Opinions and Orders <span class="label label-default">176 Opinions</span></h4>
-    </div>
-</div>
-
-<div class="col-md-4 norightpadding">
-<div class="form-group pull-right">
-    <label for="exampleInputYear">Results per page</label>
-    <select id="ctlOpinions1selresults" name="ctlOpinions1selresults" onchange="submitForm(false)" class="form-control">
-
-        <option value="25" selected>25</option>
-
-        <option value="50" >50</option>
-
-        <option value="100" >100</option>
-
-    </select>
-</div>
-</div>
-<div class="clearfix"></div>
-
-<div class="table-responsive">
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-
-                <th>
-
-                    <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnsortbynew').value='parties';submitForm(false)">Parties/Caption</a>
-
-                </th>
-
-                <th>
-
-                    <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnsortbynew').value='date';submitForm(false)">Date</a>
-
-                </th>
-
-                <th>
-
-                    <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnsortbynew').value='number';submitForm(false)">File Number</a>
-
-                </th>
-
-                <th>
-
-                    <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnsortbynew').value='court';submitForm(false)">Court</a>
-
-                </th>
-
-                <th>
-
-                    <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnsortbynew').value='type';submitForm(false)">Type</a>
-
-                </th>
-
-                <th>
-
-                    <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnsortbynew').value='officer';submitForm(false)">Judicial Officer</a>
-
-                </th>
-
-                <th>
-                    Description
-
-                </th>
-
-            </tr>
-        </thead>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239030'>Ibirithi v. State</a>
-
-            </td>
-
-            <td>
-                04/05/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239030'>683, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Holland<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239000'>Matter of a Member of the Bar: Poliquin</a>
-
-            </td>
-
-            <td>
-                04/05/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239000'>129, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Vaughn,<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-Office of Disciplinary Counsel (ODC)
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239010'>Rosser v. State</a>
-
-            </td>
-
-            <td>
-                04/05/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239010'>470, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Strine<br/>
-C.J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238990'>Snyder, et al. v. New Castle County, et al.</a>
-
-            </td>
-
-            <td>
-                04/05/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238990'>519, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Vaughn,<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238980'>The Lima Delta Company, et al. v. Global Aerospace, Inc., et al. </a>
-
-            </td>
-
-            <td>
-                04/05/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238980'>114, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239020'>Wilmer v. State</a>
-
-            </td>
-
-            <td>
-                04/05/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=239020'>628, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Strine<br/>
-C.J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238970'>Drummond v. State</a>
-
-            </td>
-
-            <td>
-                04/04/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238970'>99, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238940'>Goode v. State</a>
-
-            </td>
-
-            <td>
-                04/04/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238940'>276, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Seitz<br/>
-J.
-
-            </td>
-
-            <td>
-                Opinion
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238960'>Jackson v. State</a>
-
-            </td>
-
-            <td>
-                04/04/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238960'>542, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Strine<br/>
-C.J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238950'>Pickens v. CitiMortgage, Inc.</a>
-
-            </td>
-
-            <td>
-                04/04/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238950'>387, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Holland<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238840'>Evans v. State</a>
-
-            </td>
-
-            <td>
-                04/01/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238840'>121, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238700'>Humbertson v. State</a>
-
-            </td>
-
-            <td>
-                03/31/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238700'>599, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238710'>Infectious Disease Associates, P.A. v. Doe</a>
-
-            </td>
-
-            <td>
-                03/31/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238710'>62, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238620'>Cook v. State</a>
-
-            </td>
-
-            <td>
-                03/29/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238620'>675, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Holland<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238580'>Roos Foods v. Magdalena Guardado</a>
-
-            </td>
-
-            <td>
-                03/28/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238580'>87, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238560'>Masarone v. State</a>
-
-            </td>
-
-            <td>
-                03/24/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238560'>391, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Vaughn,<br/>
-J.
-
-            </td>
-
-            <td>
-                Opinion
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238550'>Rossi v. State</a>
-
-            </td>
-
-            <td>
-                03/24/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238550'>374, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Strine<br/>
-C.J.
-
-            </td>
-
-            <td>
-                Opinion
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238530'>Lanham v. State</a>
-
-            </td>
-
-            <td>
-                03/23/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238530'>665, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Seitz<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238570'>Matter of Evans</a>
-
-            </td>
-
-            <td>
-                03/23/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238570'>90, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Valihura<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-Writ of Mandamus
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238540'>Smith v. JP Morgan Chase National Bank</a>
-
-            </td>
-
-            <td>
-                03/23/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238540'>43, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Holland<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238460'>Kraft-Morris v. DFS, et al. </a>
-
-            </td>
-
-            <td>
-                03/22/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238460'>399, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Vaughn,<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238440'>Rivera v. State</a>
-
-            </td>
-
-            <td>
-                03/21/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238440'>416, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Vaughn,<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238320'>Kane v. State</a>
-
-            </td>
-
-            <td>
-                03/17/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238320'>448, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Strine<br/>
-C.J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238310'>Walsh v. State</a>
-
-            </td>
-
-            <td>
-                03/16/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238310'>23, 2016</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Criminal
-
-            </td>
-
-            <td>
-                Strine<br/>
-C.J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238300'>Walsh v. State</a>
-
-            </td>
-
-            <td>
-                03/16/2016
-
-            </td>
-
-            <td>
-
-                <a target="_blank" href='/Opinions/Download.aspx?id=238300'>688, 2015</a>
-
-            </td>
-
-            <td>
-                Supreme Court
-
-            </td>
-
-            <td>
-                Civil
-
-            </td>
-
-            <td>
-                Seitz<br/>
-J.
-
-            </td>
-
-            <td>
-                Order
-
-            </td>
-
-        </tr>
-
-    </table>
-</div>
-
-<div class="col-md-12 text-center">
-    <nav>
-        <ul class="pagination">
-
-            <li class="disabled">
-                <a href="#"><i class="fa fa-chevron-left"></i></a>
-            </li>
-
-            <li class="active">
-                <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnpageno').value='1';submitForm(false)">1</a>&nbsp;&nbsp;
-            </li>
-
-            <li class="">
-                <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)">2</a>&nbsp;&nbsp;
-            </li>
-
-            <li class="">
-                <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnpageno').value='3';submitForm(false)">3</a>&nbsp;&nbsp;
-            </li>
-
-            <li><a class="pointer" onclick="document.getElementById('ctlOpinions1hdnpageno').value='4';submitForm(false)">...</a>&nbsp;&nbsp;</li>
-            <li>
-                <a class="pointer" onclick="document.getElementById('ctlOpinions1hdnpageno').value='8';submitForm(false)">8</a>&nbsp;&nbsp;
-            </li>
-
-            <li>
-                <a aria-label="Next" class="pointer" onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"><i class="fa fa-chevron-right"></i></a>
-            </li>
-
-        </ul>
-    </nav>
-</div>
-
-
-<br />
-<div class="col-md-12 text-center">
-    <span>*</span>
-    <span class="label label-default">C.=Chancellor or Commissioner</span>
-    <span class="label label-primary">C.J.=Chief Justice or Chief Judge</span>
-    <span class="label label-warning">J.=Justice or Judge</span>
-    <span class="label label-success">M.=Master</span>
-    <span class="label label-info">P.J.=President Judge</span>
-    <span class="label label-danger">R.J.=Resident Judge</span>
-    <span class="label label-success">V.C.=Vice Chancellor</span>
-</div>
-<div class="clearfix"></div>
-<br />
-
-<input type="hidden" id="ctlOpinions1hdnagency" name="ctlOpinions1hdnagency" value="supreme court" />
-<input type="hidden" id="ctlOpinions1hdncasetype" name="ctlOpinions1hdncasetype" value="" />
-<input type="hidden" id="ctlOpinions1hdndivision" name="ctlOpinions1hdndivision" value="" />
-
-<input type="hidden" id="ctlOpinions1hdnsortby" name="ctlOpinions1hdnsortby" value="" />
-<input type="hidden" id="ctlOpinions1hdnsortorder" name="ctlOpinions1hdnsortorder" value="0" />
-<input type="hidden" id="ctlOpinions1hdnsortbynew" name="ctlOpinions1hdnsortbynew" value="" />
-<input type="hidden" id="ctlOpinions1hdnpageno" name="ctlOpinions1hdnpageno" value="" />
-
-
-<script type="text/javascript">
-    function submitForm(clear) {
-        if (clear) {
-            if (document.getElementById('ctlOpinions1hdnsortby')) {
-                document.getElementById('ctlOpinions1hdnsortby').value = '';
-            }
-            if (document.getElementById('ctlOpinions1hdnsortorder')) {
-                document.getElementById('ctlOpinions1hdnsortorder').value = '';
-            }
-            if (document.getElementById('ctlOpinions1hdnsortbynew')) {
-                document.getElementById('ctlOpinions1hdnsortbynew').value = '';
-            }
-            if (document.getElementById('ctlOpinions1hdnpageno')) {
-                document.getElementById('ctlOpinions1hdnpageno').value = '';
-            }
-        }
-        frmCourtOpinions.submit();
-    }
-
-    function submitFormGet(sortBy, sortOrder, page) {
-        var addYear = false;
-        var addDates = false;
-        var agency;
-        var period;
-        var year;
-        var fromDate;
-        var toDate;
-        var resultsPerPage;
-        var searchText;
-
-        if (document.getElementById("selAgencies")) {
-            agency = document.getElementById("selAgencies").value;
-        } else {
-            agency = 'supreme court';
-        }
-
-        if (document.getElementById("selYears")) {
-            year = document.getElementById("selYears").value;
-        } else {
-            year = '0';
-        }
-
-        if (document.getElementById("selSearch")) {
-            period = document.getElementById("selSearch").value;
-            if (period === 'year') {
-                addYear = true;
-            }
-            if (period === 'range') {
-                addDates = true;
-            }
-        } else {
-        }
-
-        if (document.getElementById("txtFromDate")) {
-            fromDate = document.getElementById("txtFromDate").value;
-        } else {
-            fromDate = '01/01/2016';
-        }
-
-        if (document.getElementById("txtToDate")) {
-            toDate = document.getElementById("txtToDate").value;
-        } else {
-            toDate = '04/06/2016';
-        }
-
-        if (document.getElementById("selResults")) {
-            resultsPerPage = document.getElementById("selResults").value;
-        } else {
-            resultsPerPage = '25';
-        }
-
-        if (document.getElementById("txtSearch")) {
-            searchText = document.getElementById("txtSearch").value;
-        } else {
-            searchText = '';
-        }
-
-        document.location.href = encodeURI('/opinions/list.aspx' +
-                '?ag=' + agency +
-                '&typ=' + '' +
-                '&div=' + '' +
-                '&period=' + period +
-                (addYear ? ('&year=' + year) : '') +
-                (addDates ? ('&from=' + fromDate + '&to=' + toDate) : '') +
-                '&results=' + resultsPerPage +
-                '&ss=' + searchText +
-                '&srt=' + sortBy +
-                '&srtord=' + sortOrder +
-                '&page=' + page);
-    }
-
-</script>
-
-    </form>
-
-
-        </div>
-       </div>
     </div>
     <!-- /container -->
 
     <br />
 
     <!-- BEGIN Courts Footer -->
+    <footer>
         <div id="footer">
-      <div id="txt_options">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-          	  <p class="hidden-xs">The Official Website of the Delaware Judiciary</p>
+            <div id="txt_options">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="hidden-xs">The Official Website of the Delaware Judiciary</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="txt_size">
+                                Change Your Text Size: &nbsp; <a class="decreaseFont text_buttons" tabindex="0"
+                                    role="button"><span class="wave_text">Make Text Size Smaller</span><i
+                                        class="far fa-minus-square fa-fw fa-lg" aria-label="Make text size smaller"
+                                        title="Make text size smaller"></i></a>
+                                <a class="resetFont text_buttons" role="button" tabindex="0"><span
+                                        class="wave_text">Reset Text Size</span><i class="far fa-square fa-fw fa-lg"
+                                        aria-label="Reset text size" title="Reset text size"></i></a>
+                                <a class="increaseFont text_buttons" tabindex="0" role="button"><span class="wave_text"
+                                        tabindex="0">Make Text Size Bigger</span><i
+                                        class="far fa-plus-square fa-fw fa-lg" aria-label="Make text size larger"
+                                        title="Make text size larger"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6">
-        	  <p class="txt_size">Change Your Text Size: &nbsp; <a class="decreaseFont text_buttons"><span class="wave_text">Make Text Size Smaler</span><i class="fa fa-minus-square-o fa-fw fa-lg"></i></a>
-        	  <a class="resetFont text_buttons"><span class="wave_text">Reset Text Size</span><i class="fa fa-square-o fa-fw fa-lg"></i></a>
-        	  <a class="increaseFont text_buttons"><span class="wave_text">Make Text Size Bigger</span><i class="fa fa-plus-square-o fa-fw fa-lg"></i></a></p>
+            <div class="container">
+
+                <div class="row">
+                    <br /><br />
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <p class="ft_subhead"><a href="/locations/" aria-label="Delaware Courts Hours & Locations">Hours
+                                &amp; Locations</a></p><br />
+
+                        <!--<p class="ft_subhead"><a href="/locations/contacts.aspx">Court Contacts</a></p><br /> -->
+                        <p class="ft_subhead"><a href="/help/">Self-Help</a></p><br />
+                        <p class="ft_subhead"><a href="/docket.aspx">Civil Case Search</a></p><br />
+                        <p class="ft_subhead"><a href="/help/traffic/">Traffic</a></p><br />
+                        <p class="ft_subhead"><a href="/epayment.aspx">EPayments</a></p><br />
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <p class="ft_subhead"><a href="/information_public.aspx">For the Public</a></p><br />
+                        <p class="ft_subhead"><a href="/information_jurors.aspx">For Jurors</a></p><br />
+                        <p class="ft_subhead"><a href="/information_attorneys.aspx">For Attorneys</a></p><br />
+                        <p class="ft_subhead"><a href="/information_media.aspx">For the Media</a></p><br />
+                        <p class="ft_subhead"><a href="/topics.aspx">Topics</a></p><br />
+                    </div>
+
+                    <div class="clearfix visible-sm"></div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <p class="ft_subhead"><a href="/aoc/ada.aspx">Accessibility</a></p><br />
+                        <p class="ft_subhead"><a href="/help/espanol.aspx">Material en español</a></p><br />
+                        <p class="ft_subhead"><a href="/supreme/access.aspx">Access to Justice</a></p><br />
+                        <p class="ft_subhead"><a href="/career/">Careers</a></p><br />
+                        <p class="ft_subhead"><a href="/feedback/index.aspx/">Feedback</a></p><br /><br />
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+
+                        <br /><br />
+                        <a href="../../index.aspx"><img src="/img/delaware_courts_logo_footer.png"
+                                alt="Delaware Courts logo" class="img-responsive foot-logo" /></a>
+                        <br /><br />
+                    </div>
+
+                </div>
+                <hr class="footer" />
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p><a href="/">Delaware Courts Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                                href="../../../../../terms.aspx">Terms of
+                                Use</a>&nbsp;&nbsp;<!--|&nbsp;&nbsp;<a href="/feedback/">Feedback</a>&nbsp;&nbsp;-->|&nbsp;&nbsp;<a
+                                href="https://delaware.gov/">Delaware.gov</a></p>
+                        <p><small>&copy; 2025 The Delaware Judiciary - <a href="/">courts.delaware.gov</a></small></p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-6">
-            <h2>Courts</h2><br />
-
-            <p class="ft_subhead"><strong><a href="/supreme/">Supreme Court</a></strong></p>
-            <p><a href="/locations/supreme.aspx">Hours &amp; Locations</a><br />
-            <a href="/locations/supreme.aspx">Contacts</a><br />
-            <a href="/supreme/operating-procedures/">Operating Procedures</a><br />
-            <a href="/supreme/oralarguments/">Oral Arguments</a><br />
-            <a href="/supreme/press.aspx">Press Releases</a></p><br />
-
-            <p class="ft_subhead"><strong><a href="/chancery/">Court of Chancery</a></strong></p>
-            <p><a href="/locations/chancery.aspx">Hours &amp; Locations</a><br />
-            <a href="/chancery/telephone-ncc.aspx">Contacts</a><br />
-            <a href="/chancery/guardianship/">Guardianship</a><br />
-            <a href="/forms/download.aspx?id=15478" target="_blank">Mediation<i class="fa fa-file-pdf-o fa-fw"></i></a><br />
-            <a href="/chancery/roomrequest.aspx">Room Reservation</a></p><br />
-
-            <p class="ft_subhead"><strong><a href="/superior/">Superior Court</a></strong></p>
-            <p><a href="/locations/superior.aspx">Hours &amp; Locations</a><br />
-            <a href="/superior/contact_superior.aspx">Contacts</a><br />
-            <a href="/help/expungements.aspx" target="_blank">Expungement</a><br />
-            <a href="/aoc/oscce/epayments.aspx">Pay Criminal Fines/Restitution</a><br />
-            <a href="/superior/weapons.aspx">Weapon Permits</a></p><br />
-
-            <p class="ft_subhead"><strong><a href="/family/">Family Court</a></strong></p>
-            <p><a href="/locations/family.aspx">Hours &amp; Locations</a><br />
-            <a href="/locations/family.aspx">Contacts</a><br />
-            <a href="/family/supportcalculator/">Child Support Calculator</a><br />
-            <a href="/family/divorce/">Divorce Information</a><br />
-            <a href="/help/legalassistance.aspx">Legal Assistance</a></p><br />
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6">
-            <h2 class="hidden-xs">&nbsp;</h2><br />
-
-            <p class="ft_subhead"><strong><a href="/commonpleas/">Court of Common Pleas</a></strong></p>
-            <p><a href="/locations/commonpleas.aspx">Hours &amp; Locations</a><br />
-            <a href="/locations/commonpleas.aspx">Contacts</a><br />
-            <a href="/commonpleas/admdir.aspx">Administrative Directives</a><br />
-            <a href="/forms/download.aspx?id=45808" target="_blank">Mediation<i class="fa fa-file-pdf-o fa-fw"></i></a><br />
-            <a href="/commonpleas/ccp_civil.aspx">Proceedings and Process</a></p><br />
-
-            <p class="ft_subhead"><strong><a href="/jpcourt/">Justice of the Peace Court</a></strong></p>
-            <p><a href="/locations/jpcourt.aspx">Hours &amp; Locations</a><br />
-            <a href="/feedback/">Contact</a><br />
-            <a href="/help/fees/jpfees.aspx">Civil Fees</a><br />
-            <a href="/jpcourt/jpcivil.aspx">Civil Case Process</a><br />
-            <a href="/help/jp_crimevictim.aspx">Victim's Assistance</a></p><br />
-
-            <p class="ft_subhead"><strong><a href="/aoc/">Administrative Office of the Courts</a></strong></p>
-            <p><a href="/aoc/contacts.aspx">Contacts</a><br />
-            <a href="/agencies.aspx">Non-judicial Agencies</a><br />
-            <a href="/career/">Employment</a><br />
-            <a href="/aoc/publications.aspx">Publications and Statistics</a></p><br />
-
-            <p class="ft_subhead"><strong><a href="/supreme/index.aspx#arms">Arms of the Court</a></strong></p>
-            <p><a href="/bbe/">Board of Bar Examiners</a><br />
-            <a href="/cle/">Continuing Legal Education</a><br />
-            <a href="/lfcp/">Lawyers Fund for Client Protection</a><br />
-            <a href="/odc/">Office of Disciplinary Counsel</a><br />
-            <a href="/declt/">Commission on Law &amp; Technology</a></p><br />
-          </div><div class="clearfix visible-sm"></div>
-
-          <div class="col-lg-3 col-md-3 col-sm-6">
-            <h2>Help</h2><br />
-
-            <p class="ft_subhead"><strong>CIVIL</strong></p>
-            <p><a href="/help/jp_property.aspx">Abandoned Personal Property</a><br />
-            <a href="/help/changename/">Change Your Name</a><br />
-            <a href="/help/proceedings/">Court Proceedings</a><br />
-            <a href="/help/licensesregistrations/">Licenses/Registrations</a><br />
-            <a href="/help/landlordtenant/">Landlord/Tenant</a></p><br />
-
-            <p class="ft_subhead"><strong>FAMILY</strong></p>
-            <p><a href="/family/adoption/">Adoption</a><br />
-            <a href="/family/custody/">Custody</a><br />
-            <a href="/family/divorce/">Divorce</a><br />
-            <a href="/family/guardianship/">Guardianship</a><br />
-            <a href="/family/support/">Support</a></p><br />
-
-            <p class="ft_subhead"><strong>CRIMINAL</strong></p>
-            <p><a href="/help/bail/">Bail Bonds</a><br />
-            <a href="/help/expungements.aspx">Expungement/Pardons</a><br />
-            <a href="/help/proceedings/fc_criminal.aspx">Family Court Processes</a><br />
-            <a href="/help/proceedings/ccp.aspx">CCP Proceedings</a><br />
-            <a href="/help/transcripts.aspx">Transcripts</a></p><br />
-
-            <p class="ft_subhead"><strong>TRAFFIC</strong></p>
-            <p><a href="/help/traffic/">Justice of the Peace FAQ</a><br />
-            <a href="/help/traffic/traffic_ccp.aspx">CCP Traffic Court</a><br />
-            <a href="/forms/download.aspx?id=45668" target="_blank">Restoration of Driving<i class="fa fa-file-pdf-o fa-fw"></i></a><br />
-            <a href="/forms/download.aspx?id=6128" target="_blank">Restoration of License<i class="fa fa-file-pdf-o fa-fw"></i></a><br />
-            <a href="http://deljis.delaware.gov/eticketinstructions.shtml">Pay Traffic Ticket</a></p><br />
-          </div>
-
-          <div class="col-lg-3 col-md-3 col-sm-6">
-            <h2>Information</h2><br />
-
-            <img src="/img/court_info_icon_public.png" alt="Information for the Public" title="Information for the Public" class="float_left img-responsive" />
-            <p class="ft_subhead"><strong><a href="/information_public.aspx">Public</a></strong></p><br /><br /><br />
-
-            <img src="/img/court_info_icon_attorneys.png" alt="Information for Attorneys" title="Information for Attorneys" class="float_left img-responsive" />
-            <p class="ft_subhead"><strong><a href="/information_jurors.aspx">Jurors</a></strong></p><br /><br /><br />
-
-            <img src="/img/court_info_icon_jurors.png" alt="Information for Jurors" title="Information for Jurors" class="float_left img-responsive" />
-            <p class="ft_subhead"><strong><a href="/information_attorneys.aspx">Attorneys</a></strong></p><br /><br /><br />
-
-            <img src="/img/court_info_icon_media.png" alt="The Media" title="The Media" class="float_left img-responsive" />
-            <p class="ft_subhead"><strong><a href="/information_media.aspx">Media</a></strong></p><br /><br /><br />
-
-            <a href="../../index.aspx"><img src="/img/delaware_courts_logo_foot.png" alt="Delaware Courts - The Offical Website of the Delaware Judiciary" title="Delaware Courts - The Offical Website of the Delaware Judiciary" class="img-responsive foot-logo" /></a>
-
-          </div>
-
-        </div>
-        <hr class="footer" />
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <p><a href="/">Delaware Courts Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../../../../../terms.aspx">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/feedback/">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://delaware.gov/" target="_blank">Delaware.gov</a></p>
-            <p><small>&copy; MMXVI The Delaware Judiciary - <a href="/">courts.delaware.gov</a></small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-	<script type="text/javascript">
-	$(document).ready(function() {
-		$().UItoTop({ easingType: 'easeOutQuart' });
-	});
-	</script>
-
-	<!-- Retina Display JS Files -->
-	<script src="/js/retina.js"></script>
-    <script src="/js/less.js"></script>
-
-    <!-- Searchbar Files -->
-    <script src="/js/uisearch.js"></script>
-    <script src="/js/classie.js"></script>
-    <script>
-	  new UISearch( document.getElementById( 'sb-search' ) );
-	</script>
-    <!-- END Courts Footer -->
-
-    <script src="/js/courts-scripts.js"></script>
+    </footer>
 
 
 </body>
+
 </html>

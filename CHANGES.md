@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - handle different table structures in `uscgcoca` scraper #1526
 - add expected content types for document handling in 'texapp' scraper #1636
+
 ## Current
 
 **2.6.93 - 2025-10-17**
@@ -35,6 +36,7 @@ Fixes:
 - fix `cal` rename key in OriginatingCourtInformation for accuracy #1625
 - fix `texbizct` improve error handling for name and citation extraction from titles #1629
 - add `ncbizct` to init #1631
+- update `delaware`, `delch`, `delsuperct` and `delctcompl` scrapers and examples #1641
 
 ## Past
 
