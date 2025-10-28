@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- update `guam` domain #1635
 
 Fixes:
 - handle different table structures in `uscgcoca` scraper #1526

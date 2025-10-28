@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://guamcourts.org/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
+        self.url = "https://guamcourts.gov/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
         self.status = "Published"
 
         self._year = date.today().year
