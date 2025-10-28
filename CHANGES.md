@@ -18,11 +18,12 @@ Features:
 -
 
 Changes:
--
+- update `guam` domain #1635
 
 Fixes:
 - handle different table structures in `uscgcoca` scraper #1526
 - update cleanup_content method for `ny` #1637
+- add expected content types for document handling in 'texapp' scraper #1636
 
 ## Current
 
