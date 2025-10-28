@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - handle different table structures in `uscgcoca` scraper #1526
+- update cleanup_content method for `ny` #1637
 
 ## Current
 
