@@ -37,6 +37,7 @@ Fixes:
 - fix `cal` rename key in OriginatingCourtInformation for accuracy #1625
 - fix `texbizct` improve error handling for name and citation extraction from titles #1629
 - add `ncbizct` to init #1631
+- update `delaware`, `delch`, `delsuperct` and `delctcompl` scrapers and examples #1641
 
 ## Past
 

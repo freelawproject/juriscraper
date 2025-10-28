@@ -14,5 +14,5 @@ class Site(delaware.Site):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://courts.delaware.gov/opinions/List.aspx?ag=Court%20of%20Chancery"
+        self.url = "https://courts.delaware.gov/opinions/List.aspx?ag=Court%20of%20Chancery"
         self.court_id = self.__module__
