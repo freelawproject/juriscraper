@@ -18,10 +18,10 @@ Features:
 -
 
 Changes:
--
+- update cleanup_content method for `ny` #1637
 
 Fixes:
--
+- cleanup_content method called twice in sample_caller.py
 
 ## Current
 

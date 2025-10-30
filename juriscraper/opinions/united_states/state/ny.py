@@ -156,12 +156,13 @@ class Site(OpinionSiteLinear):
         if not nh3.is_html(html_str):
             return content
 
-        tree = fromstring(html_str)
-        normalized_html = tostring(tree, encoding="unicode", method="html")
-
         # remove a tags
         allowed = set(nh3.ALLOWED_TAGS)
         allowed.discard("a")
 
-        cleaned = nh3.clean(normalized_html, tags=allowed)
-        return cleaned.encode()
+        cleaned = nh3.clean(html_str, tags=allowed)
+
+        tree = fromstring(cleaned)
+        normalized_html = tostring(tree, encoding="unicode", method="html")
+
+        return normalized_html.encode()
