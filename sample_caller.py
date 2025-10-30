@@ -233,8 +233,6 @@ def scrape_court(
         if test_hashes:
             check_hashes(data, download_url, site)
 
-        data = site.cleanup_content(data)
-
         filename = item["case_names"].lower().replace(" ", "_")[:40]
 
         data, metadata_from_text = extract_doc_content(
