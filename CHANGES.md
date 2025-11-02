@@ -19,6 +19,7 @@ Features:
 
 Changes:
 - update cleanup_content method for `ny` #1637
+- Update ga ct app backscraper
 
 Fixes:
 - cleanup_content method called twice in sample_caller.py
