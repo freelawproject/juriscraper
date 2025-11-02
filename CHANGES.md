@@ -18,13 +18,22 @@ Features:
 -
 
 Changes:
+
+Fixes:
+
+## Current
+
+**2.6.95 - 2025-11-02**
+
+Changes:
 - update cleanup_content method for `ny` #1637
 - Update ga ct app backscraper
 
 Fixes:
 - cleanup_content method called twice in sample_caller.py
 
-## Current
+
+## Past
 
 **2.6.94 - 2025-10-28**
 
@@ -37,8 +46,6 @@ Fixes:
 - add expected content types for document handling in 'texapp' scraper #1636
 - update `delaware`, `delch`, `delsuperct` and `delctcompl` scrapers and examples #1641
 
-
-## Past
 
 **2.6.93 - 2025-10-17**
 
