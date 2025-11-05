@@ -57,7 +57,7 @@ class Site(OpinionSiteLinear):
             date_of_interest = date_of_interest.date()
         year = int(date_of_interest.strftime("%y"))
         # Return the previous year if we haven't reached the cutoff
-        return 24
+        return year - 1 if date_of_interest < term_cutoff else year
 
     def _process_html(self):
         for row in self.html.xpath("//tr"):
