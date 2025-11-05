@@ -57,7 +57,7 @@ class Site(OpinionSiteLinear):
             date_of_interest = date_of_interest.date()
         year = int(date_of_interest.strftime("%y"))
         # Return the previous year if we haven't reached the cutoff
-        return year - 1 if date_of_interest < term_cutoff else year
+        return 24
 
     def _process_html(self):
         for row in self.html.xpath("//tr"):
@@ -101,3 +101,13 @@ class Site(OpinionSiteLinear):
         logger.info("Backscraping %s", self.url)
         self.html = self._download()
         self._process_html()
+
+    @staticmethod
+    def cleanup_extracted_text(content):
+        """Remove all watermark references from the extracted text
+
+        :param content: The scraped text
+        :return: Cleaned text
+        """
+        content = content.replace("Page Proof Pending Publication\n", "")
+        return content
