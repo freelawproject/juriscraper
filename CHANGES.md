@@ -20,6 +20,7 @@ Features:
 Changes:
 
 Fixes:
+- fix `mich` and `michctapp` bad docket numbers #1648
 
 ## Current
 
