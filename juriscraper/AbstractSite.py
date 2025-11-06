@@ -632,10 +632,10 @@ class AbstractSite:
         return content
 
     @staticmethod
-    def cleanup_extracted_text(content):
+    def cleanup_extracted_text(content: str) -> str:
         """
-        Given the plain text content extracted from a PDF or HTML document,
-        perform any necessary post-extraction cleaning.
+        Given the plain text content extracted from a PDF, HTML, DOCX, DOC, TXT
+        or similar document, perform any necessary post-extraction cleaning.
 
         This method should be called after Doctor has extracted text from the
         binary content and works to clean up extraction artifacts, formatting

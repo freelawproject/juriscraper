@@ -103,10 +103,10 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     @staticmethod
-    def cleanup_extracted_text(content):
+    def cleanup_extracted_text(content: str) -> str:
         """Remove all watermark references from the extracted text
 
-        :param content: The scraped text
+        :param content: The text content of the document, extracted by doctor or other extraction service
         :return: Cleaned text
         """
         content = content.replace("Page Proof Pending Publication\n", "")
