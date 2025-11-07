@@ -96,7 +96,7 @@ class Site(OpinionSiteLinear):
 
     def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
         """
-        Return 2 empty strings. We can get the values via `extract_from_text`
+        Return 2 placeholders. We can get the values via `extract_from_text`
         To be overriden in `michctapp`
         Sometimes the API returns bad "title" values. See #1648
         """
