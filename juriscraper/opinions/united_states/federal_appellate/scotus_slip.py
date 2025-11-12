@@ -44,7 +44,9 @@ class Site(OpinionSiteLinear):
 
     def set_url(self):
         if self.court == "in-chambers":
-            self.url = f"https://www.supremecourt.gov/opinions/{self.court}.aspx"
+            self.url = (
+                f"https://www.supremecourt.gov/opinions/{self.court}.aspx"
+            )
         else:
             self.url = f"{self.base_url}{self.court}/{self.get_term()}"
 
@@ -65,7 +67,6 @@ class Site(OpinionSiteLinear):
         year = int(date_of_interest.strftime("%y"))
         # Return the previous year if we haven't reached the cutoff
         return year - 1 if date_of_interest < term_cutoff else year
-
 
     def _download(self, request_dict=None):
         if not self.test_mode_enabled():

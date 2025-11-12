@@ -10,7 +10,6 @@ class Site(scotus_slip.Site):
         self.precedential = "Relating-to"
         self.court = "relatingtoorders"
 
-
     @staticmethod
     def get_fields(cells, row):
         if len(cells) != 5:
