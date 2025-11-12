@@ -1661,8 +1661,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 )
             )
             for test_case in test_cases:
-                print(site.extract_from_text(test_case[0]))
-                print(test_case[1])
                 self.assertEqual(
                     site.extract_from_text(test_case[0]), test_case[1]
                 )
