@@ -6,6 +6,7 @@ import re
 from datetime import date
 from typing import Any
 
+from juriscraper.lib.string_utils import clean_string
 from juriscraper.opinions.united_states.state import ny
 
 
@@ -25,20 +26,24 @@ class Site(ny.Site):
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 
+        Examples
+        2017-1270 K CR
+        570086/18
+        20-159
+
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-        # Ny App Term 1st Dept. 2nd and Sup Ct all have different varying
-        # docket number types.
-        # ie. 123413/03 vs. 51706 vs. 2003-718 Q C or 2003-1288 K C
+        regexes = [
+            re.compile(
+                r"<br>[\s\n]*(?P<docket_number>\d{2,}-\d{2,}( [A-Z]{1,2} CR?)?)"
+            ),
+            re.compile(r"<br>[\s\n]*(?P<docket_number>\d+/\d+)[\s\n]*<br>"),
+        ]
+        for regex in regexes:
+            if match := regex.search(clean_string(scraped_text[:2500])):
+                cleaned_docket = self.clean_docket_match(match)
+                if cleaned_docket:
+                    return {"Docket": {"docket_number": cleaned_docket}}
 
-        dockets = re.findall(
-            r"(\d+\/\d+)|^(\d{5,})|^(\d+-\d+ \w+\s\w+)", scraped_text
-        )
-        dockets = [list(filter(None, x)) for x in dockets]
-        metadata = {
-            "Docket": {
-                "docket_number": dockets[0][0] if dockets else "",
-            },
-        }
-        return metadata
+        return {}
