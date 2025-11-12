@@ -18,6 +18,7 @@ Features:
 -
 
 Changes:
+- update `scotus_chambers` and `scotus_relating` scrapers to inherit `scotus_slip` #1658
 
 Fixes:
 - fix `mich` and `michctapp` bad docket numbers #1648

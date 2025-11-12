@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
         "SS": "Sonia Sotomayor",
         "T": "Clarence Thomas",
     }
-    base_url = "https://www.supremecourt.gov/opinions/slipopinion"
+
     first_opinion_date = datetime(2018, 6, 25)
     days_interval = 365
 
@@ -37,9 +37,16 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
-        self.url = f"{self.base_url}/{self.get_term()}"
+        self.court = "slipopinion"
+        self.base_url = "https://www.supremecourt.gov/opinions/"
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
+
+    def set_url(self):
+        if self.court == "in-chambers":
+            self.url = f"https://www.supremecourt.gov/opinions/{self.court}.aspx"
+        else:
+            self.url = f"{self.base_url}{self.court}/{self.get_term()}"
 
     @staticmethod
     def get_term(
@@ -59,24 +66,46 @@ class Site(OpinionSiteLinear):
         # Return the previous year if we haven't reached the cutoff
         return year - 1 if date_of_interest < term_cutoff else year
 
+
+    def _download(self, request_dict=None):
+        if not self.test_mode_enabled():
+            self.set_url()
+        return super()._download(request_dict)
+
     def _process_html(self):
         for row in self.html.xpath("//tr"):
             cells = row.xpath(".//td")
-            if len(cells) != 6:
+
+            fields = self.get_fields(cells, row)
+            if fields is None or fields[0] is None:
                 continue
-            _, date, docket, link, justice, citation = row.xpath(".//td")
-            if not link.text_content():
+            date, docket, link, revised, justice, citation = fields
+
+            name = link.text_content()
+            if not name:
                 continue
-            self.cases.append(
-                {
-                    "citation": citation.text_content(),
-                    "date": date.text_content(),
-                    "url": link.xpath(".//a/@href")[0],
-                    "name": link.text_content(),
-                    "docket": docket.text_content(),
-                    "judge": self.justices[justice.text_content()],
-                }
-            )
+            name = name.split("Revisions:")[0].strip()
+            hrefs = link.xpath(".//a/@href")
+            revised_hrefs = revised.xpath(".//a/@href") if revised else []
+            hrefs = hrefs + revised_hrefs
+            for href in hrefs:
+                self.cases.append(
+                    {
+                        "citation": citation.text_content(),
+                        "date": date.text_content(),
+                        "url": href,
+                        "name": name,
+                        "docket": docket.text_content(),
+                        "judge": self.justices.get(justice.text_content()),
+                    }
+                )
+
+    @staticmethod
+    def get_fields(cells, row):
+        if len(cells) != 6:
+            return None
+        _, date, docket, link, justice, citation = row.xpath(".//td")
+        return date, docket, link, None, justice, citation
 
     def make_backscrape_iterable(self, kwargs: dict) -> list[str]:
         """Use the default make_backscrape_iterable to parse input
