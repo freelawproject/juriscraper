@@ -5,8 +5,11 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 from datetime import date, datetime
 from typing import Union
 
+import requests
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.string_utils import normalize_dashes
 
 
 class Site(OpinionSiteLinear):
@@ -41,12 +44,7 @@ class Site(OpinionSiteLinear):
         self.base_url = "https://www.supremecourt.gov/opinions/"
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
-
-    def set_url(self):
-        if self.court == "in-chambers":
-            self.url = f"https://www.supremecourt.gov/opinions/{self.court}.aspx"
-        else:
-            self.url = f"{self.base_url}{self.court}/{self.get_term()}"
+        self.url = f"{self.base_url}{self.court}/{self.get_term()}"
 
     @staticmethod
     def get_term(
@@ -66,27 +64,26 @@ class Site(OpinionSiteLinear):
         # Return the previous year if we haven't reached the cutoff
         return year - 1 if date_of_interest < term_cutoff else year
 
-
-    def _download(self, request_dict=None):
-        if not self.test_mode_enabled():
-            self.set_url()
-        return super()._download(request_dict)
-
     def _process_html(self):
         for row in self.html.xpath("//tr"):
             cells = row.xpath(".//td")
 
             fields = self.get_fields(cells, row)
             if fields is None or fields[0] is None:
+                logger.info("Skipping row: get_fields returned None")
                 continue
             date, docket, link, revised, justice, citation = fields
 
             name = link.text_content()
             if not name:
+                logger.info("Skipping row: empty name")
                 continue
             name = name.split("Revisions:")[0].strip()
             hrefs = link.xpath(".//a/@href")
-            revised_hrefs = revised.xpath(".//a/@href") if revised else []
+            if revised:
+                revised_hrefs = revised.xpath(".//a/@href")
+            else:
+                revised_hrefs = []
             hrefs = hrefs + revised_hrefs
             for href in hrefs:
                 self.cases.append(
@@ -94,7 +91,7 @@ class Site(OpinionSiteLinear):
                         "citation": citation.text_content(),
                         "date": date.text_content(),
                         "url": href,
-                        "name": name,
+                        "name": normalize_dashes(name),
                         "docket": docket.text_content(),
                         "judge": self.justices.get(justice.text_content()),
                     }
@@ -102,6 +99,13 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def get_fields(cells, row):
+        """
+        Extract fields from a table row for slip opinions.
+
+        :params cells: list of HtmlElement objects representing the row's cells
+                row: HtmlElement for the table row to extract fields from
+        :return: tuple(date, docket, link, revised, justice, citation) or None
+        """
         if len(cells) != 6:
             return None
         _, date, docket, link, justice, citation = row.xpath(".//td")
