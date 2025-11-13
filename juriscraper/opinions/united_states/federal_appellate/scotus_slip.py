@@ -5,11 +5,9 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 from datetime import date, datetime
 from typing import Union
 
-import requests
-
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 from juriscraper.lib.string_utils import normalize_dashes
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
