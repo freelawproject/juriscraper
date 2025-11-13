@@ -13,7 +13,6 @@ class Site(scotus_slip.Site):
         self.court = "relatingtoorders"
         self.url = f"{self.base_url}{self.court}/{self.get_term()}"
 
-
     @staticmethod
     def get_fields(cells: list[HtmlElement], row: HtmlElement) -> tuple:
         """
