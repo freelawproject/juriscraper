@@ -1612,6 +1612,34 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.state.mich": [
+            # https://www.courtlistener.com/api/rest/v4/opinions/10771292/
+            (
+                "Kimberly K. Muschong\n\n\n\n       C-SPINE ORTHOPEDICS, PLLC v PROGRESSIVE MICHIGAN INSURANCE COMPANY\n               WALLACE v SUBURBAN MOBILITY AUTHORITY FOR REGIONAL\n                                  TRANSPORTATION\n\n           Docket Nos. 165537, 165538, and 165964. Argued on application for leave to appeal on\n      November 13, 2024. Decided July 3, 2025.\n\n  ",
+                {
+                    "Docket": {
+                        "docket_number": "165537, 165538, and 165964",
+                        "case_name": "C-Spine Orthopedics, Pllc v Progressive Michigan Insurance Company; Wallace v Suburban Mobility Authority for Regional; Transportation",
+                    },
+                    "OpinionCluster": {
+                        "case_name": "C-Spine Orthopedics, Pllc v Progressive Michigan Insurance Company; Wallace v Suburban Mobility Authority for Regional; Transportation"
+                    },
+                },
+            ),
+            #         https://www.courtlistener.com/opinion/10362821/d/
+            (
+                "Michigan Supreme Court\n               Lansing, Michigan\n\n\n\n\nSyllabus\n             Chief Justice:              Justices:\n                                                        Elizabeth T. Clement       Brian K. Zahra\n                                                                                   Richard H. Bernstein\n                                                                                   Megan K. Cavanagh\n                                                                                   Elizabeth M. Welch\n                                                                                   Kyra H. Bolden\n                                                                                   Kimberly A. Thomas\n\n             This syllabus constitutes no part of the opinion of the Court but has been\n             prepared by the Reporter of Decisions for the convenience of the reader.\n\n\n\n                         DINE BRANDS GLOBAL, INC v EUBANKS\n                        THE WALT DISNEY COMPANY v EUBANKS\n\n      Docket Nos. 165391 and 165392. Argued on application for leave to appeal October 10,",
+                {
+                    "Docket": {
+                        "docket_number": "165391 and 165392",
+                        "case_name": "Dine Brands Global, Inc v Eubanks; The Walt Disney Company v Eubanks",
+                    },
+                    "OpinionCluster": {
+                        "case_name": "Dine Brands Global, Inc v Eubanks; The Walt Disney Company v Eubanks",
+                    },
+                },
+            ),
+        ],
     }
 
     def test_extract_from_text(self):
