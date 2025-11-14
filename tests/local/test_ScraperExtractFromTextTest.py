@@ -11,6 +11,42 @@ class ScraperExtractFromText(unittest.TestCase):
     without a full integration test.
     """
 
+    def _run_text_tests(self, data_dict, method_name, type):
+        """Run text-based tests for the given data dict and Site method name."""
+        logging.disable(logging.CRITICAL)
+        for module_string, test_cases in data_dict.items():
+            package, module = module_string.rsplit(".", 1)
+            mod = __import__(f"{package}.{module}", globals(), locals(),
+                             [module])
+            site = mod.Site()
+            method = getattr(site, method_name)
+
+            # ensure that if no data is parsed, a dict is returned and no exceptions raised
+            self.assertTrue(isinstance(method("Lorem ipsum dolorem..."), type))
+
+            for test_case in test_cases:
+                input_text, expected = test_case[0], test_case[1]
+                actual = method(input_text)
+                self.assertEqual(actual, expected)
+        logging.disable(logging.NOTSET)
+
+    def _assert_method_properly_implemented(self, method_name, base_method,test_data):
+        """Helper: ensure overridden Site.\<method_name\> implementations are in test_data."""
+        module_strings = build_module_list(
+            "juriscraper.opinions.united_states")
+        for module_string in module_strings:
+            package, module = module_string.rsplit(".", 1)
+            mod = __import__(f"{package}.{module}", globals(), locals(),
+                             [module])
+            method = getattr(mod.Site, method_name)
+            if method == base_method:
+                continue
+            self.assertIn(
+                module_string,
+                test_data.keys(),
+                msg=f"{module_string} not yet added to {method_name} test data.",
+            )
+
     test_data = {
         "juriscraper.opinions.united_states.administrative_agency.bia": [
             (
@@ -1616,47 +1652,13 @@ class ScraperExtractFromText(unittest.TestCase):
 
     def test_extract_from_text(self):
         """Test that extract_from_text returns the expected data."""
-        # prevent logger.error calls to be triggered
-        logging.disable(logging.CRITICAL)
-        for module_string, test_cases in self.test_data.items():
-            package, module = module_string.rsplit(".", 1)
-            mod = __import__(
-                f"{package}.{module}", globals(), locals(), [module]
-            )
-            site = mod.Site()
+        self._run_text_tests(self.test_data, "extract_from_text", dict)
 
-            # ensure that if no data is parsed, a dict is returned
-            # also, this ensures that there are no uncontrolled exceptions
-            self.assertTrue(
-                isinstance(
-                    site.extract_from_text("Lorem ipsum dolorem..."), dict
-                )
-            )
-            for test_case in test_cases:
-                self.assertEqual(
-                    site.extract_from_text(test_case[0]), test_case[1]
-                )
-        logging.disable(logging.NOTSET)
 
     def test_extract_from_text_properly_implemented(self):
-        """Ensure that extract_from_text is properly implemented."""
-
-        module_strings = build_module_list(
-            "juriscraper.opinions.united_states"
+        self._assert_method_properly_implemented(
+            "extract_from_text", OpinionSite.extract_from_text, self.test_data
         )
-        for module_string in module_strings:
-            package, module = module_string.rsplit(".", 1)
-            mod = __import__(
-                f"{package}.{module}", globals(), locals(), [module]
-            )
-            if mod.Site.extract_from_text == OpinionSite.extract_from_text:
-                # Method is not overridden, so skip it.
-                continue
-            self.assertIn(
-                module_string,
-                self.test_data.keys(),
-                msg=f"{module_string} not yet added to extract_from_text test data.",
-            )
 
     def test_valid_date_format(self):
         """Is the returned date format valid for a Django model date field?
@@ -1702,3 +1704,21 @@ class ScraperExtractFromText(unittest.TestCase):
                             self.fail(
                                 f"Not an accepted type for a date field {module_string} '{key}' '{value}'"
                             )
+
+    clean_test_data = {
+        "juriscraper.opinions.united_states.federal_appellate.scotus_slip": [
+            (
+                "PRELIMINARY PRINT\n\n             Volume 591 U. S. Part 2\n                             Pages 979–986\n\n\n\n\n       OFFICIAL REPORTS\n                                    OF\n\n\n   THE SUPREME COURT\n                               July 14, 2020\n\n\nPage Proof Pending Publication\n\n\n\n\n    NOTICE: This preliminary print is subject to formal revision before\n  the bound volume is published. Users are requested to notify the Reporter\n  of Decisions, Supreme Court of the United States, Washington",
+                "PRELIMINARY PRINT\n\n             Volume 591 U. S. Part 2\n                             Pages 979–986\n\n\n\n\n       OFFICIAL REPORTS\n                                    OF\n\n\n   THE SUPREME COURT\n                               July 14, 2020\n\n\n\n\n\n\n    NOTICE: This preliminary print is subject to formal revision before\n  the bound volume is published. Users are requested to notify the Reporter\n  of Decisions, Supreme Court of the United States, Washington",
+            )
+        ],
+    }
+
+    def test_cleanup_extracted_text(self):
+        """Test that cleanup_extracted_text returns the expected data."""
+        self._run_text_tests(self.clean_test_data, "cleanup_extracted_text", str)
+
+    def test_cleanup_extracted_text_properly_implemented(self):
+        self._assert_method_properly_implemented(
+            "cleanup_extracted_text", OpinionSite.cleanup_extracted_text, self.clean_test_data
+        )
