@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- add cleanup_extracted_text method for post-extraction text sanitization #1651
 
 Changes:
 
