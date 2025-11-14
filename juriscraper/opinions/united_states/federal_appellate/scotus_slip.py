@@ -114,7 +114,7 @@ class Site(OpinionSiteLinear):
         _, date, docket, link, justice, citation = row.xpath(".//td")
         return date, docket, link, None, justice, citation
 
-    def make_backscrape_iterable(self, kwargs: dict) -> list[str]:
+    def make_backscrape_iterable(self, kwargs: dict):
         """Use the default make_backscrape_iterable to parse input
         and create date objects. Then, use the dates to get the terms
 
