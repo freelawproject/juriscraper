@@ -8,38 +8,67 @@ History:
     - 2022-01-28: Updated for new web site, @satsuki-chan.
 """
 
+import re
 from urllib.parse import urlencode
 
+from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.state import mich
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(mich.Site):
+    court = "Court Of Appeals"
+    extract_from_text = OpinionSite.extract_from_text
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court = "Court Of Appeals"
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
-    def _get_precedential_statuses(self) -> list[str]:
-        """Find Precedential Status
+    def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
+        """Try to get the case name using a secondary request
 
-        If the case is published they note Published in the title string.
+        Example of the content in the URL
+        https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/377920
 
-        :return: Precedential statuses
+        :param item: the opinion item from the API
+        :return: case name and docket number
         """
-        for case in self.cases:
-            case["precedential_status"] = self.get_status(case["title"])
-        return [case["precedential_status"] for case in self.cases]
+        if self.test_mode_enabled():
+            return "Placeholder name", "Placeholder docket"
 
-    def get_status(self, title: str) -> str:
-        """Get the status of a case
-
-        :param title: The JSON API title string
-        :return: The status of the case
-        """
-        if "Published" in title:
-            status = "Published"
+        logger.info("Getting case name from secondary request")
+        docket_number = ""
+        if match := re.search(
+            r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
+        ):
+            docket_number = match.group("docket_number")
         else:
-            status = "Unpublished"
-        return status
+            docket_number = item["caseUrl"].split("/")[-1]
+
+        if not docket_number:
+            logger.error("michctapp: could not get docket number", extra=item)
+            return "Placeholder name", "Placeholder docket"
+
+        url = f"https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/{docket_number}"
+        self._request_url_get(url)
+        response = self.request["response"].json()
+        return self.cleanup_case_name(response["title"]), docket_number
+
+    def get_disposition(self, item: dict) -> str:
+        """Get the disposition value
+
+        Examples:
+        Affirm in Part, Vacate in Part, Remanded
+        L/Ct Judgment/Order Affirmed
+        Appeal Dismissed
+
+        :param item:
+        :return: the disposition string
+        """
+        return (
+            (item.get("decision", "") or "")
+            .replace("L/Ct", "Lower Court")
+            .strip()
+        )
