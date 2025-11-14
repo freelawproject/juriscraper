@@ -1,5 +1,7 @@
 import email
+import pprint
 import re
+import sys
 from datetime import datetime
 from email.message import EmailMessage
 from pathlib import Path
@@ -171,3 +173,27 @@ class SCOTUSEmail:
         ][0]
         docket_number = Path(file).stem
         return clean_string(docket_number)
+
+
+def _main():
+    """Parse a local email file and pretty print extracted data.
+
+    :return: None
+    """
+    if len(sys.argv) != 2:
+        print("Usage: python -m juriscraper.scotus_email <filepath>")
+        print("Please provide a path to an email file to parse.")
+        sys.exit(1)
+
+    report = SCOTUSEmail()
+    filepath = sys.argv[1]
+    print(f"Parsing email file at {filepath}")
+    with open(filepath, encoding="utf-8") as f:
+        text = f.read()
+
+    report._parse_text(text)
+    pprint.pprint(report.data, indent=2)
+
+
+if __name__ == "__main__":
+    _main()
