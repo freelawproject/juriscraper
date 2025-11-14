@@ -124,9 +124,7 @@ class Site(OpinionSiteLinear):
         start = self.get_term(self.back_scrape_iterable[0][0])
         end = self.get_term(self.back_scrape_iterable[-1][1])
 
-        self.back_scrape_iterable = [
-            yy for yy in range(start, end)
-        ]
+        self.back_scrape_iterable = list(range(start, end))
 
     def _download_backwards(self, d: str):
         self.url = urljoin(self.base_url, f"{self.court}/{d}")
