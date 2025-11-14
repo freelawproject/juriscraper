@@ -1,3 +1,5 @@
+from typing import Optional
+
 from lxml.html import HtmlElement
 
 from juriscraper.opinions.united_states.federal_appellate import (
@@ -14,7 +16,7 @@ class Site(scotus_slip.Site):
         self.url = f"{self.base_url}{self.court}.aspx"
 
     @staticmethod
-    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> tuple:
+    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> Optional[tuple[HtmlElement]]:
         """
         Extract fields from a table row for in-chambers opinions.
 

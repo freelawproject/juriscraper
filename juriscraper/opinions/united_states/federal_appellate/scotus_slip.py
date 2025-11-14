@@ -3,7 +3,10 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 from datetime import date, datetime
-from typing import Union
+from typing import Union, Optional
+from urllib.parse import urljoin
+
+from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes
@@ -42,7 +45,7 @@ class Site(OpinionSiteLinear):
         self.base_url = "https://www.supremecourt.gov/opinions/"
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
-        self.url = f"{self.base_url}{self.court}/{self.get_term()}"
+        self.url = urljoin(self.base_url, f"{self.court}/{self.get_term()}")
 
     @staticmethod
     def get_term(
@@ -96,7 +99,7 @@ class Site(OpinionSiteLinear):
                 )
 
     @staticmethod
-    def get_fields(cells, row):
+    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> Optional[tuple[Optional[HtmlElement]]]:
         """
         Extract fields from a table row for slip opinions.
 
@@ -120,15 +123,13 @@ class Site(OpinionSiteLinear):
         super().make_backscrape_iterable(kwargs)
         start = self.get_term(self.back_scrape_iterable[0][0])
         end = self.get_term(self.back_scrape_iterable[-1][1])
-        if start == end:
-            self.back_scrape_iterable = [f"{self.base_url}/{start}"]
-        else:
-            self.back_scrape_iterable = [
-                f"{self.base_url}/{yy}" for yy in range(start, end)
-            ]
+
+        self.back_scrape_iterable = [
+            yy for yy in range(start, end)
+        ]
 
     def _download_backwards(self, d: str):
-        self.url = d
+        self.url = urljoin(self.base_url, f"{self.court}/{d}")
         logger.info("Backscraping %s", self.url)
         self.html = self._download()
         self._process_html()
