@@ -16,8 +16,9 @@ class ScraperExtractFromText(unittest.TestCase):
         logging.disable(logging.CRITICAL)
         for module_string, test_cases in data_dict.items():
             package, module = module_string.rsplit(".", 1)
-            mod = __import__(f"{package}.{module}", globals(), locals(),
-                             [module])
+            mod = __import__(
+                f"{package}.{module}", globals(), locals(), [module]
+            )
             site = mod.Site()
             method = getattr(site, method_name)
 
@@ -30,14 +31,18 @@ class ScraperExtractFromText(unittest.TestCase):
                 self.assertEqual(actual, expected)
         logging.disable(logging.NOTSET)
 
-    def _assert_method_properly_implemented(self, method_name, base_method,test_data):
-        """Helper: ensure overridden Site.\<method_name\> implementations are in test_data."""
+    def _assert_method_properly_implemented(
+        self, method_name, base_method, test_data
+    ):
+        r"""Helper: ensure overridden Site.\<method_name\> implementations are in test_data."""
         module_strings = build_module_list(
-            "juriscraper.opinions.united_states")
+            "juriscraper.opinions.united_states"
+        )
         for module_string in module_strings:
             package, module = module_string.rsplit(".", 1)
-            mod = __import__(f"{package}.{module}", globals(), locals(),
-                             [module])
+            mod = __import__(
+                f"{package}.{module}", globals(), locals(), [module]
+            )
             method = getattr(mod.Site, method_name)
             if method == base_method:
                 continue
@@ -1682,7 +1687,6 @@ class ScraperExtractFromText(unittest.TestCase):
         """Test that extract_from_text returns the expected data."""
         self._run_text_tests(self.test_data, "extract_from_text", dict)
 
-
     def test_extract_from_text_properly_implemented(self):
         self._assert_method_properly_implemented(
             "extract_from_text", OpinionSite.extract_from_text, self.test_data
@@ -1744,9 +1748,13 @@ class ScraperExtractFromText(unittest.TestCase):
 
     def test_cleanup_extracted_text(self):
         """Test that cleanup_extracted_text returns the expected data."""
-        self._run_text_tests(self.clean_test_data, "cleanup_extracted_text", str)
+        self._run_text_tests(
+            self.clean_test_data, "cleanup_extracted_text", str
+        )
 
     def test_cleanup_extracted_text_properly_implemented(self):
         self._assert_method_properly_implemented(
-            "cleanup_extracted_text", OpinionSite.cleanup_extracted_text, self.clean_test_data
+            "cleanup_extracted_text",
+            OpinionSite.cleanup_extracted_text,
+            self.clean_test_data,
         )
