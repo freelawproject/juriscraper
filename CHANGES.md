@@ -18,6 +18,7 @@ Features:
 -
 
 Changes:
+- Add scotus_email to parse SCOTUS email notifications
 
 Fixes:
 - fix `mich` and `michctapp` bad docket numbers #1648

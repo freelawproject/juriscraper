@@ -1,0 +1,72 @@
+Delivered-To: alberto@free.law
+Received: by 2002:a17:505:7147:b0:1d78:1b00:c369 with SMTP id na7csp2992872njc;
+        Mon, 10 Nov 2025 08:16:40 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFOeZmYfjo9TFoyPYl5SngTCKlnY4sYrIvTMuVRLdlQ9w7nTbu3ok0Mmn7LPtetLtuZju4F
+X-Received: by 2002:a05:622a:11d4:b0:4e8:a941:4b81 with SMTP id d75a77b69052e-4eda4ecf7demr117590431cf.32.1762791400301;
+        Mon, 10 Nov 2025 08:16:40 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1762791400; cv=none;
+        d=google.com; s=arc-20240605;
+        b=k0L1J0r1ws3CnJHkO9X/X19kI86Pi6EXNXNs9ra0g+RtfL5mq1aYwsr+4OrQb4/Ttv
+         ZE9kmgf0ct3xdkyv4PzuQm803uOO0L/vqQngP86QEfbrS8HM3wd2ZpvN5JuNOY+9vcA+
+         Z8SehyzeqLiJhp/2W9yZ8Rsvh/oVFlCzJ4+76HEfgR2Js8lo14ZjvIM0JmIdQBz1VLmY
+         GnYBxPy1m5PAX8BuqRGGeghekCYiq3/3gx+t2ZmD9Pycbi+P2JqBHhPdRmRSoY9kvsT9
+         jza9A1rGPf2pqqSSBuMzmqPVbrjn5BksAbUydiTcLrHwiGIwCN97WSOOmYLdAZH6QUDK
+         G/GQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=yHGM3KLGaLUegfL2DnP7JwyLvNgi57VuHfgsKuaDS6I=;
+        fh=XITYYVdeQ2LgDb1PFuywY+yCkUNXMC5kE3hbyd+JRSw=;
+        b=EhpeJntx0ZlYvzeHAtRsuJ4uxPjxjoeNe0W1jrDh5zvRP464zGNOeXdqaKYvI4stZ5
+         odzFFBvOCvF8siopwR5l0gwYPsbFLuZSKFsbH0Vcp1umGYR5wqkV9/ZkpTZyE34EFQKg
+         wabU2X6RA2VLUVQJ2y7uMgO4sLoj+mBhT/C3i9BTWQ1fVvLjQO1nLghga0s2EJL10d0h
+         9TERSQQ7KIZtnZmiaaRuiAd8G55wVPI7xV+otQc9xyVzplm/GzYY+l/Dd4wE5aZy5imu
+         3vWGeGR8XIc4n3DgN7R6l3AqlwT4M4NGI1TWgDCiOWF5vSsWFIRq04DUL/2EiNI75cZV
+         MiSQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sc-us.gov header.s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy header.b=a19T5ysk;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=eSnRyN2X;
+       spf=pass (google.com: domain of 0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@amazonses.com designates 54.240.65.131 as permitted sender) smtp.mailfrom=0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sc-us.gov
+Return-Path: <0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@amazonses.com>
+Received: from a65-131.smtp-out.amazonses.com (a65-131.smtp-out.amazonses.com. [54.240.65.131])
+        by mx.google.com with ESMTPS id d75a77b69052e-4eda57e746csi25586681cf.777.2025.11.10.08.16.40
+        for <alberto@free.law>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 10 Nov 2025 08:16:40 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@amazonses.com designates 54.240.65.131 as permitted sender) client-ip=54.240.65.131;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sc-us.gov header.s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy header.b=a19T5ysk;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=eSnRyN2X;
+       spf=pass (google.com: domain of 0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@amazonses.com designates 54.240.65.131 as permitted sender) smtp.mailfrom=0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sc-us.gov
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy; d=sc-us.gov; t=1762791399;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=0KkSTXLNFmfRgBsAwx2rlhqTjW7viDsfx07sRSDz2gU=;
+	b=a19T5yskshP3iXUY+lqXS6139cukHymmFWeWgku5b2OK2SEB/9lvxhYs65fHqMJG
+	5IPIHCxi7Ek48D0SwvhxDUIX+g9/WiXI2qvrjxSJP567Tj11VgN9P+gk8lMiS7SJmdT
+	JfU75uC6xwQIubPGU46T7RPFl5hd3pKHheTMwRu0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1762791399;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=0KkSTXLNFmfRgBsAwx2rlhqTjW7viDsfx07sRSDz2gU=;
+	b=eSnRyN2XQi81rUmJOXK/p72CNzQ3af7HW4FU8BoM6aaJKhnkKxokjukwrmBcfbws
+	qVbC3eSJyZtODpJnSIZjxC4zVYqKU7/5VU/pO79NJcwCQQNYQqPZ8Uo2DHwUbpp588H
+	8v/GPdmuRMTnnoW6mFt9dFXd394iOujozmx7wBbc=
+From: no-reply@sc-us.gov
+To: alberto@free.law
+Subject: Supreme Court Electronic Filing System
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <0100019a6e8e2122-22cbfef6-5187-4f56-9381-9a4d7291847b-000000@email.amazonses.com>
+Date: Mon, 10 Nov 2025 16:16:39 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2025.11.10-54.240.65.131
+
+A new docket entry, "Petition DENIED." has been added for <a href='https://www.supremecourt.gov/search.aspx?filename=/docket/DocketFiles/html/Public/25-261.html'>Christine Asing, Petitioner v. Hawaii Government Employees Association - AFSCME Local 152, AFL-CIO</a>. You have been signed up to receive email notifications for No. 25-261. <br><br> If you no longer wish to receive email notifications on this case, please
+
+<a href='https://file.supremecourt.gov/Request/NotificationOptOutGet?id=CfDJ8LWjh78o-U5EigyPTWy9BmfsEAmf7290kloCwoEiKtZ9ejWRZeySxIt0O138MxneSqRSAzt_KpNMb-CFo4ac6qVA4cE8V9A11dndR337rQS6sKafGFqQ_YMTtevv7lHVgKt09mzz5mIgYfGTRxROc-8'>click here</a>.
+
