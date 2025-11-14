@@ -16,7 +16,9 @@ class Site(scotus_slip.Site):
         self.url = f"{self.base_url}{self.court}/{self.get_term()}"
 
     @staticmethod
-    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> Optional[tuple[Optional[HtmlElement]]]:
+    def get_fields(
+        cells: list[HtmlElement], row: HtmlElement
+    ) -> Optional[tuple[Optional[HtmlElement]]]:
         """
         Extract fields from a table row for relating-to opinions.
 

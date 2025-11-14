@@ -3,7 +3,7 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 from datetime import date, datetime
-from typing import Union, Optional
+from typing import Optional, Union
 from urllib.parse import urljoin
 
 from lxml.html import HtmlElement
@@ -99,7 +99,9 @@ class Site(OpinionSiteLinear):
                 )
 
     @staticmethod
-    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> Optional[tuple[Optional[HtmlElement]]]:
+    def get_fields(
+        cells: list[HtmlElement], row: HtmlElement
+    ) -> Optional[tuple[Optional[HtmlElement]]]:
         """
         Extract fields from a table row for slip opinions.
 
