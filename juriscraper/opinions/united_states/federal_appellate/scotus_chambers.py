@@ -16,7 +16,9 @@ class Site(scotus_slip.Site):
         self.url = f"{self.base_url}{self.court}.aspx"
 
     @staticmethod
-    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> Optional[tuple[HtmlElement]]:
+    def get_fields(
+        cells: list[HtmlElement], row: HtmlElement
+    ) -> Optional[tuple[HtmlElement]]:
         """
         Extract fields from a table row for in-chambers opinions.
 

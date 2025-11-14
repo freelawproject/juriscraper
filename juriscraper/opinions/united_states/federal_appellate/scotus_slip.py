@@ -3,7 +3,7 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 from datetime import date, datetime
-from typing import Union, Optional
+from typing import Optional, Union
 from urllib.parse import urljoin
 
 from lxml.html import HtmlElement
@@ -99,7 +99,9 @@ class Site(OpinionSiteLinear):
                 )
 
     @staticmethod
-    def get_fields(cells: list[HtmlElement], row: HtmlElement) -> Optional[tuple[Optional[HtmlElement]]]:
+    def get_fields(
+        cells: list[HtmlElement], row: HtmlElement
+    ) -> Optional[tuple[Optional[HtmlElement]]]:
         """
         Extract fields from a table row for slip opinions.
 
@@ -124,9 +126,7 @@ class Site(OpinionSiteLinear):
         start = self.get_term(self.back_scrape_iterable[0][0])
         end = self.get_term(self.back_scrape_iterable[-1][1])
 
-        self.back_scrape_iterable = [
-            yy for yy in range(start, end)
-        ]
+        self.back_scrape_iterable = [yy for yy in range(start, end)]
 
     def _download_backwards(self, d: str):
         self.url = urljoin(self.base_url, f"{self.court}/{d}")
