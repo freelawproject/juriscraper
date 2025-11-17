@@ -1,4 +1,4 @@
-Delivered-To: alberto@free.law
+Delivered-To: recipient@test-mail.com
 Received: by 2002:a59:bc6f:0:b0:4f8:9d3:7e27 with SMTP id t15csp1308319vqy;
         Wed, 8 Oct 2025 19:04:06 -0700 (PDT)
 X-Google-Smtp-Source: AGHT+IHliMlxnJ95NXAjhR3QeYsM5b9Hyr3/tb23p/td/9kzxHMz0/hLujRMrpEHWbdYAAaerZXO
@@ -32,7 +32,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
 Return-Path: <01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com>
 Received: from a66-91.smtp-out.amazonses.com (a66-91.smtp-out.amazonses.com. [54.240.66.91])
         by mx.google.com with ESMTPS id af79cd13be357-884a14e14d9si58850485a.995.2025.10.08.19.04.06
-        for <alberto@free.law>
+        for <recipient@test-mail.com>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
         Wed, 08 Oct 2025 19:04:06 -0700 (PDT)
 Received-SPF: pass (google.com: domain of 01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com designates 54.240.66.91 as permitted sender) client-ip=54.240.66.91;
@@ -56,7 +56,7 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
 	z1f1Mf/TvlE5UgXCGFslOsQG9/BSXpds/KD+eHNAcrujJpbBbFlpIvjuJDSYrouNxfy
 	d6UWGWM4r8KjwNuoTvuTcadrfC+IJLvOjB99BGXg=
 From: no-reply@sc-us.gov
-To: alberto@free.law
+To: recipient@test-mail.com
 Subject: Supreme Court Electronic Filing System
 MIME-Version: 1.0
 Content-Type: text/html; charset=UTF-8
