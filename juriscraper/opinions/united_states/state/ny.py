@@ -175,5 +175,5 @@ class Site(OpinionSiteLinear):
         :return: cleaned docket number
         """
         docket_number = match.group("docket_number")
-        docket_number = docket_number.replace("|", "; ").replace("\n", "; ")
+        docket_number = re.sub(r"(\||\n|<br>)", "; ", docket_number)
         return re.sub("[\\s\n]+", " ", docket_number.strip("; ()"))
