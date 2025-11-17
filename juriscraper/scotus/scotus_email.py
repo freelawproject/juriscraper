@@ -51,8 +51,7 @@ class SCOTUSEmail:
                 "case_url": self._parse_case_link(),
                 "entry_description": self._parse_filing_name(),
             }
-        else:
-            return {}
+        return {}
 
     def _parse_text(self, text: str) -> None:
         """Extract and store the first part of the email with the "Content-Type"
