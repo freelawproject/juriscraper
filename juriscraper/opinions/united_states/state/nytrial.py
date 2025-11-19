@@ -164,7 +164,7 @@ class Site(OpinionSiteLinear):
         target_text = clean_string(target_text)
         docket_regexes = [
             re.compile(
-                r"<br>[\s\n]*(?P<docket_number>(Case|Claim|Docket|Index|File|Indictment|Ind\.) No\.?:? [\d ,/A-Z&\[\]-]+)[\s\n]*(<br>|Appeareances)",
+                r"<br>[\s\n]*(?P<docket_number>(Case|Claim|Docket|Index|File|Indictment|Ind\.) No\.?:? [\d ,/A-Z&\[\]-]+)[\s\n]*(<br>|Appearances)",
                 flags=re.IGNORECASE,
             ),
             re.compile(
@@ -207,7 +207,7 @@ class Site(OpinionSiteLinear):
                 judge = judge_matches[-1].group("judge")
             else:
                 judge = judge_matches[0].group("judge")
-        else:
+        elif judge_matches:
             judge = judge_matches[0].group("judge")
 
         if judge:
