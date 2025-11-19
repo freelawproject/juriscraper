@@ -1,4 +1,4 @@
-Delivered-To: alberto@free.law
+Delivered-To: recipient@test-mail.com
 Received: by 2002:a17:505:2a0f:b0:1d78:1b00:c369 with SMTP id xw15csp1781928njc;
         Fri, 14 Nov 2025 09:08:07 -0800 (PST)
 X-Google-Smtp-Source: AGHT+IEPeJA/S6JL2d6FiOvsCtkd6o4dDLitF7jbTLoC8DoxdcpwPEcROMEYgzefU6Y2l7585zki
@@ -32,7 +32,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
 Return-Path: <0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com>
 Received: from a65-130.smtp-out.amazonses.com (a65-130.smtp-out.amazonses.com. [54.240.65.130])
         by mx.google.com with ESMTPS id d75a77b69052e-4ede888f8f2si20474331cf.659.2025.11.14.09.08.05
-        for <alberto@free.law>
+        for <recipient@test-mail.com>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
         Fri, 14 Nov 2025 09:08:05 -0800 (PST)
 Received-SPF: pass (google.com: domain of 0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com designates 54.240.65.130 as permitted sender) client-ip=54.240.65.130;
@@ -57,7 +57,7 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
 	bnO8J5oXeNJtjZh3QyovEhqEdNiLcKSdkyh6BWXQ=
 From: no-reply@sc-us.gov
 Reply-To: efilingsupport@supremecourt.gov
-To: alberto@free.law
+To: recipient@test-mail.com
 Subject: Supreme Court Case Notification 25a561.
 MIME-Version: 1.0
 Content-Type: text/html; charset=UTF-8
