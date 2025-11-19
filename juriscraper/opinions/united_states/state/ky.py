@@ -133,6 +133,10 @@ class Site(OpinionSiteLinear):
                 detail_url = self.docket_entry_url.format(row["docketEntryID"])
                 doc_json = self.get_json(detail_url)
 
+            if not doc_json:
+                logger.info("Skipping entry: no document details returned")
+                continue
+
             if not case_name:
                 case_name = doc_json[0]["caseHeader"].get("shortTitle")
             doc_id = doc_json[0].get("documentID")
