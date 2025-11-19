@@ -4,7 +4,7 @@ import re
 import sys
 from datetime import datetime
 from email.message import EmailMessage
-from enum import Enum, auto
+from enum import Enum
 from pathlib import Path
 from typing import Optional
 from urllib.parse import parse_qs, urlparse
@@ -18,9 +18,9 @@ from juriscraper.lib.string_utils import clean_string, harmonize
 
 
 class EmailType(Enum):
-    INVALID = auto()
-    CONFIRMATION = auto()
-    DOCKET_ENTRY = auto()
+    INVALID = "invalid"
+    CONFIRMATION = "confirmation"
+    DOCKET_ENTRY = "docket_entry"
 
 
 class SCOTUSEmail:
@@ -66,19 +66,19 @@ class SCOTUSEmail:
         email parsing has not occurred or has failed. A field will be set to
         `None` if extraction of that specific field from the email fails.
         """
+        email_data = {"email_type": self.email_type.value}
+
         if self.email_type == EmailType.DOCKET_ENTRY:
-            return {
-                "email_type": "docket_entry",
+            return email_data | {
                 "docket_number": self._parse_docket_number(),
                 "notification_datetime": self._parse_datetime(),
                 "case_name": self._parse_case_name(),
-                "case_url": self._parse_case_link(),
+                "case_url": self._parse_first_link(),
                 "entry_description": self._parse_filing_name(),
             }
         elif self.email_type == EmailType.CONFIRMATION:
-            return {
-                "email_type": "confirmation",
-                "confirmation_link": self._parse_confirmation_link(),
+            return email_data | {
+                "confirmation_link": self._parse_first_link(),
             }
         return {}
 
@@ -211,14 +211,6 @@ class SCOTUSEmail:
         """
         return harmonize(self.tree.findtext(".//a"))
 
-    def _parse_case_link(self) -> str:
-        """Extract the `href` attribute from the first `<a>` tag in the email
-        body, which should be the link to the case.
-
-        :return: Link to the case.
-        """
-        return self.tree.find(".//a").get("href")
-
     def _parse_docket_number(self) -> str:
         """Extract the docket number using the `href` attribute from the first
         `<a>` tag in the email body.
@@ -231,9 +223,9 @@ class SCOTUSEmail:
         docket_number = Path(file).stem
         return clean_string(docket_number)
 
-    def _parse_confirmation_link(self) -> str:
+    def _parse_first_link(self) -> str:
         """Extract the `href` attribute from the first `<a>` tag in the email
-        body, which should be the confirmation link.
+        body.
         """
         return self.tree.find(".//a").get("href")
 
