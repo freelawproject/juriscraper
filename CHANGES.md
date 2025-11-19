@@ -18,10 +18,12 @@ Features:
 -
 
 Changes:
+- Add scotus_email to parse SCOTUS email notifications
 - update `scotus_chambers` and `scotus_relating` scrapers to inherit `scotus_slip` #1658
 
 Fixes:
 - fix `mich` and `michctapp` bad docket numbers #1648
+- fix `nyappdiv`, `nyappterm` and `nytrail` extract_from_text to get docket numbers #1655
 - remove unnecessary print statements from test cases
 
 ## Current
