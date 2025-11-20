@@ -44,7 +44,7 @@ class Site(OralArgumentSiteLinear):
         }
 
     def _process_html(self):
-        for row in self.html.xpath('.//table[@id="ctl04_gvArguments"]/tr')[2:]:
+        for row in self.html.xpath('.//table[@id="ctl04_gvArguments"]/tr[not(th)]'):
             url = row.xpath(".//a/@data-audio")
             if not url:
                 logger.warning("Skipping row with no audio file to download")
@@ -55,11 +55,11 @@ class Site(OralArgumentSiteLinear):
             spans = [span.text_content().strip() for span in span_elements]
             if len(spans) < 4:
                 logger.warning(
-                    "Skipping row with insufficient data: expected at least 4 values, got %d",
-                    len(spans),
+                    "Skipping row with insufficient data: expected at least 4 values, got %s",
+                    "-".join(spans),
                 )
                 continue
-            date, district, docket, name, *others = spans
+            date, _, docket, name, *others = spans
             if others:
                 docket, name = name, others[0]
             self.cases.append(
@@ -67,7 +67,6 @@ class Site(OralArgumentSiteLinear):
                     "date": date,
                     "docket": docket,
                     "name": name,
-                    "district": district,
                     "url": url,
                 }
             )
