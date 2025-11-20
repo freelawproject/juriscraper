@@ -44,7 +44,9 @@ class Site(OralArgumentSiteLinear):
         }
 
     def _process_html(self):
-        for row in self.html.xpath('.//table[@id="ctl04_gvArguments"]/tr[not(th)]'):
+        for row in self.html.xpath(
+            './/table[@id="ctl04_gvArguments"]/tr[not(th)]'
+        ):
             url = row.xpath(".//a/@data-audio")
             if not url:
                 logger.warning("Skipping row with no audio file to download")
