@@ -51,7 +51,15 @@ class Site(OralArgumentSiteLinear):
                 continue
 
             url = url[0].replace(" ", "%20")
-            date, district, docket, name, *others = row.xpath(".//span/text()")
+            span_elements = row.xpath(".//span")
+            spans = [span.text_content().strip() for span in span_elements]
+            if len(spans) < 4:
+                logger.warning(
+                    "Skipping row with insufficient data: expected at least 4 values, got %d",
+                    len(spans),
+                )
+                continue
+            date, district, docket, name, *others = spans
             if others:
                 docket, name = name, others[0]
             self.cases.append(
