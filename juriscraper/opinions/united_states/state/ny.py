@@ -166,3 +166,14 @@ class Site(OpinionSiteLinear):
         normalized_html = tostring(tree, encoding="unicode", method="html")
 
         return normalized_html.encode()
+
+    @staticmethod
+    def clean_docket_match(match: re.Match) -> str:
+        """Clean a docket number extracted from text
+
+        :param match: a Match object with a named group
+        :return: cleaned docket number
+        """
+        docket_number = match.group("docket_number")
+        docket_number = re.sub(r"(\||\n|<br>)", "; ", docket_number)
+        return re.sub("[\\s\n]+", " ", docket_number.strip("; ()"))

@@ -23,6 +23,7 @@ Changes:
 
 Fixes:
 - fix `mich` and `michctapp` bad docket numbers #1648
+- fix `nyappdiv`, `nyappterm` and `nytrail` extract_from_text to get docket numbers #1655
 - remove unnecessary print statements from test cases
 
 ## Current
