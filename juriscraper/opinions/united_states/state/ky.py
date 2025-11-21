@@ -95,7 +95,7 @@ class Site(OpinionSiteLinear):
             docket_number = row["caseHeader.caseNumber"]
 
             if not row["hasDocuments"]:
-                logger.info(
+                logger.error(
                     "Docket %s has no documents, skipping", docket_number
                 )
                 continue
@@ -132,6 +132,13 @@ class Site(OpinionSiteLinear):
             else:
                 detail_url = self.docket_entry_url.format(row["docketEntryID"])
                 doc_json = self.get_json(detail_url)
+
+            if not doc_json:
+                logger.error(
+                    "Skipping entry: no document details returned for Docket %s ",
+                    docket_number,
+                )
+                continue
 
             if not case_name:
                 case_name = doc_json[0]["caseHeader"].get("shortTitle")

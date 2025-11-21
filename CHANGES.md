@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
 
 ## Current
 
