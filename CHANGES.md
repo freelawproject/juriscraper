@@ -18,6 +18,16 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+- fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
+
+## Current
+
+**2.6.96 - 2025-11-21**
+
+Changes:
 - Add scotus_email to parse SCOTUS email notifications
 - Update scotus_email scraper to handle subscription confirmation emails
 
@@ -25,9 +35,10 @@ Fixes:
 - fix `mich` and `michctapp` bad docket numbers #1648
 - fix `nyappdiv`, `nyappterm` and `nytrail` extract_from_text to get docket numbers #1655
 - remove unnecessary print statements from test cases
-- fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
+- fix `illappct` oral args scrapers to handle nested HTML elements in case names #1668.
+- fix `illappct` oral argument scraper skipping the first row of HTML tables
 
-## Current
+## Past
 
 **2.6.95 - 2025-11-02**
 
@@ -39,7 +50,6 @@ Fixes:
 - cleanup_content method called twice in sample_caller.py
 
 
-## Past
 
 **2.6.94 - 2025-10-28**
 
