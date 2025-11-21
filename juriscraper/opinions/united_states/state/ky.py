@@ -134,7 +134,7 @@ class Site(OpinionSiteLinear):
                 doc_json = self.get_json(detail_url)
 
             if not doc_json:
-                logger.info("Skipping entry: no document details returned")
+                logger.error("Skipping entry: no document details returned for Docket %s ", docket_number)
                 continue
 
             if not case_name:
