@@ -95,7 +95,7 @@ class Site(OpinionSiteLinear):
             docket_number = row["caseHeader.caseNumber"]
 
             if not row["hasDocuments"]:
-                logger.info(
+                logger.error(
                     "Docket %s has no documents, skipping", docket_number
                 )
                 continue
