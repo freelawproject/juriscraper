@@ -899,7 +899,7 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Citation": "2025 MT 189",
                     "Docket": {
                         "appeal_from_str": "District Court of the Eighth Judicial District, In and For the County of Cascade",
-                        "docket_number": "DA 23-0430"
+                        "docket_number": "DA 23-0430",
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "John A. Kutzman",
