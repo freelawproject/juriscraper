@@ -741,7 +741,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467",
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_2nd": [
             (
@@ -753,7 +753,16 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Index No. 705239/20",
                     },
                 },
-            )
+            ),
+            (
+                #  https://www.courtlistener.com/api/rest/v4/opinions/6342850/
+                'Judicial Department\n\n<br>COLLEEN D. DUFFY, J.P.\n<br>ANGELA G. IANNACCI\n<br>ROBERT J. MILLER\n<br>JOSEPH A. ZAYAS, JJ.\n\n<div align="center"></div>\n<br>2022-03440\tDECISION, ORDER &amp; JUDGMENT\n\n<br><br><div ',
+                {
+                    "Docket": {
+                        "docket_number": "2022-03440",
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_3rd": [
             (
