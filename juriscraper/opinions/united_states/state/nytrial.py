@@ -168,7 +168,7 @@ class Site(OpinionSiteLinear):
                 flags=re.IGNORECASE,
             ),
             re.compile(
-                r"<br>[\s\n]*(?P<docket_number>[A-Z/0-9-]+)[\s\n]*<br>"
+                r"<br>[\s\n]*(?P<docket_number>[A-Z/0-9-]*\d[A-Z/0-9-]*)[\s\n]*<br>"
             ),
         ]
         for regex in docket_regexes:

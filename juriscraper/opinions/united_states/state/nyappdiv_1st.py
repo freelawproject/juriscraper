@@ -53,11 +53,11 @@ class Site(ny.Site):
         """
         regexes = [
             re.compile(
-                r"<br>[\s\n]*(?P<docket_number>(\(?(Appeal|Docket|Index|Ind\.?|Motion|SCI|Case) No\.? [\d ,/A-Z&\[\]-]+[\s\n|<br>)]*)+)[\s\n]*<br>",
+                r"<br>[\s\n]*(?P<docket_number>(\(?(Appeal|Docket|Index|Ind\.?|Motion|SCI|Case) No\.? [\d ,/A-Z&\[\]-]*\d[\d ,/A-Z&\[\]-]*[\s\n|<br>)]*)+)[\s\n]*<br>",
                 flags=re.IGNORECASE,
             ),
             re.compile(
-                r"<br>[\s\n]*(?P<docket_number>[A-Z0-9()/., -]+)[\s\n]*<br>"
+                r"<br>[\s\n]*(?P<docket_number>[A-Z0-9()/., -]*\d[A-Z0-9()/., -]*)[\s\n]*(<br>|DECISION, ORDER)"
             ),
         ]
         for regex in regexes:
