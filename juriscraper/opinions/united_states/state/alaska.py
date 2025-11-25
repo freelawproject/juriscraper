@@ -65,7 +65,7 @@ class Site(OpinionSiteLinear):
                     continue
                 break
 
-            for row in table.xpath(".//tr"):
+            for row in table.xpath(".//tbody/tr"):
                 if row.text_content().strip():
                     case_number = get_row_column_text(row, 3)
                     name = get_row_column_text(row, 4)

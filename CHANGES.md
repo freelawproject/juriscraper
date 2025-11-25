@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- fix `alaska` scraper to skip header rows and prevent IndexError in table parsing #1674
 - fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
 - fix `nyappdiv` and `nytrial` docket number extraction regex to require at least 1 number #1655
 
