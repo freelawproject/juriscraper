@@ -25,6 +25,7 @@ Fixes:
 - fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
 - fix `nyappdiv` and `nytrial` docket number extraction regex to require at least 1 number #1655
 
+
 ## Current
 
 **2.6.96 - 2025-11-21**
@@ -998,7 +999,7 @@ Changes:
 
 Features:
 
--
+- implement `mont` extract_from_text to extract docket numbers #1339
 
 Changes:
 

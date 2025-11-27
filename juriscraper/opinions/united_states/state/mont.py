@@ -111,6 +111,11 @@ class Site(OpinionSiteLinear):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "docket_number"
                 ] = lower_court_docket
+
+        docket_number_pattern = re.compile(r"(DA|OP)\s[0-9]{2}-[0-9]{4}")
+        if match := docket_number_pattern.search(scraped_text):
+            result.setdefault("Docket", {})["docket_number"] = match.group(0)
+
         return result
 
     @staticmethod
