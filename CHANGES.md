@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- new validations for `_sanity_check` in `AbstractSite`
 
 Fixes:
 -

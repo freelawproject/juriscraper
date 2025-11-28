@@ -245,16 +245,16 @@ class AbstractSite:
         If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.
         """
+
         lengths = {}
         for attr in self._all_attrs:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
         values = list(lengths.values())
         if values.count(values[0]) != len(values):
-            # Are all elements equal?
             raise InsanityException(
-                "%s: Scraped meta data fields have differing"
-                " lengths: %s" % (self.court_id, lengths)
+                "%s: Scraped meta data fields have differing lengths: %s"
+                % (self.court_id, lengths)
             )
         if len(self.case_names) == 0:
             if self.should_have_results:
@@ -274,8 +274,8 @@ class AbstractSite:
             for i, name in enumerate(self.case_names):
                 if not name.strip():
                     raise InsanityException(
-                        "Item with index %s has an empty case name. The prior "
-                        "item had case name of: %s" % (i, prior_case_name)
+                        "Item with index %s has an empty case name. The prior item had case name of: %s"
+                        % (i, prior_case_name)
                     )
                 prior_case_name = name
 
@@ -283,17 +283,14 @@ class AbstractSite:
         for index, case_date in enumerate(self.case_dates):
             if not isinstance(case_date, date):
                 raise InsanityException(
-                    "%s: member of case_dates list not a valid date object. "
-                    "Instead it is: %s with value: %s"
+                    "%s: member of case_dates list not a valid date object. Instead it is: %s with value: %s"
                     % (self.court_id, type(case_date), case_date)
                 )
-            # Sanitize case date, fix typo of current year if present
             fixed_date = fix_future_year_typo(case_date)
             case_name = self.case_names[index]
             if fixed_date != case_date:
                 logger.info(
-                    "Date year typo detected. Converting %s to %s "
-                    "for case '%s' in %s",
+                    "Date year typo detected. Converting %s to %s for case '%s' in %s",
                     case_date,
                     fixed_date,
                     case_name,
@@ -302,31 +299,34 @@ class AbstractSite:
                 case_date = fixed_date
                 self.case_dates[index] = fixed_date
 
-            # If a date is approximate, then it may be set in the future until
-            # half of the year has passed. Ignore this case
             if hasattr(self, "date_filed_is_approximate"):
                 date_is_approximate = self.date_filed_is_approximate[index]
             else:
                 date_is_approximate = False
 
-            # dates should not be in the future. Tolerate a week
             if not date_is_approximate and case_date > (
                 date.today() + timedelta(days=7)
             ):
                 future_date_count += 1
                 error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
                 logger.error(error)
-
-                # Interrupt data ingestion if more than 1 record has a bad date
                 if future_date_count > 1:
                     raise InsanityException(
                         f"More than 1 case has a date in the future. Last case: {error}"
                     )
 
+            if not date_is_approximate and case_date < date(1900, 1, 1):
+                error = f"{self.court_id}: {case_date} date is before 1900. Case '{case_name}'"
+                logger.error(error)
+                raise InsanityException(
+                    f"Case has a date before 1900. Case: {error}"
+                )
+
         if not isinstance(self.cookies, dict):
             raise InsanityException(
                 "self.cookies not set to be a dict by scraper."
             )
+
         logger.info(
             "%s: Successfully found %s items."
             % (self.court_id, len(self.case_names))
