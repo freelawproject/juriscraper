@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add residential proxies to refresh ip address when necessary #1616
 
 Changes:
 -
