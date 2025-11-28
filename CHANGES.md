@@ -21,12 +21,19 @@ Changes:
 -
 
 Fixes:
+-
+
+
+## Current
+
+**2.6.97 - 2025-11-28**
+
+Fixes:
 - fix `alaska` scraper to skip header rows and prevent IndexError in table parsing #1674
 - fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
 - fix `nyappdiv` and `nytrial` docket number extraction regex to require at least 1 number #1655
 
-
-## Current
+## Past
 
 **2.6.96 - 2025-11-21**
 
@@ -41,7 +48,6 @@ Fixes:
 - fix `illappct` oral args scrapers to handle nested HTML elements in case names #1668.
 - fix `illappct` oral argument scraper skipping the first row of HTML tables
 
-## Past
 
 **2.6.95 - 2025-11-02**
 
