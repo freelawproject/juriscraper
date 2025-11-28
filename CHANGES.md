@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- add a residential proxy to AbstractSite to help with sites that block known data center IPs #1616
+- add scraper for Louisiana Court of Appeal, Third Circuit #1455
 
 Changes:
 -
