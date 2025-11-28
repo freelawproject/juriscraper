@@ -32,7 +32,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self):
+    async def _download(self):
         """Download case pages
 
         If a backscrape ignore the need to find the correct page
@@ -41,7 +41,7 @@ class Site(OpinionSiteLinear):
         :return: HTML object
         """
         if self.test_mode_enabled():
-            return super()._download()
+            return await super()._download()
         if not self.html:
             self.html = super()._download()
 
@@ -60,7 +60,7 @@ class Site(OpinionSiteLinear):
                 f"No opinions yet posted for current month {self.current_month}, moving to most recent month."
             )
 
-        return super()._download()
+        return await super()._download()
 
     def _process_html(self):
         """Process the html

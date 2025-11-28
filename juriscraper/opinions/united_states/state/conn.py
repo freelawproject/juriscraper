@@ -32,6 +32,8 @@ class Site(OpinionSiteLinear):
     )
 
     def __init__(self, *args, **kwargs):
+        cipher = "AES256-SHA256"
+        kwargs.setdefault("verify", self.set_custom_adapter(cipher))
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
@@ -40,8 +42,7 @@ class Site(OpinionSiteLinear):
         self.url = self.make_url(self.current_year)
         self.make_backscrape_iterable(kwargs)
 
-        self.cipher = "AES256-SHA256"
-        self.set_custom_adapter(self.cipher)
+        self.cipher = cipher
 
     @classmethod
     def find_published_date(cls, date_strs: list[str]) -> str:
@@ -211,7 +212,7 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
         :param year: year to scrape
@@ -219,7 +220,7 @@ class Site(OpinionSiteLinear):
         """
         logger.info("Backscraping for year %s", year)
         self.url = self.make_url(year)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
