@@ -37,6 +37,29 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._clear_caches()
         super().parse()
 
+    def _get_docket_number(self):
+        """Extract docket number from mobile query HTML.
+
+        :return: The docket number string if available, otherwise None.
+        """
+        try:
+            # Try the divider header first
+            docket_str = self.tree.xpath(
+                '//li[@data-role="list-divider"]//div[@class="ui-block-a"]/text()'
+            )[0].strip()
+            return docket_str
+        except IndexError:
+            pass
+
+        try:
+            # Fallback: try the hidden input field
+            docket_str = self.tree.xpath('//input[@name="caseNum"]/@value')[
+                0
+            ].strip()
+            return docket_str
+        except IndexError:
+            return None
+
     @property
     def metadata(self):
         if self.is_valid is False:
@@ -67,11 +90,20 @@ class MobileQuery(BaseDocketReport, BaseReport):
             return data
         span = self.tree.xpath('.//a[@id="entriesLink"]//span')[0]
         entry_count = int(span.text_content().strip())
+
+        # Extract docket number and parse components
+        docket_number = self._get_docket_number()
+        docket_number_components = self._parse_dn_components(
+            docket_number or ""
+        )
+
         data = {
             "court_id": self.court_id,
+            "docket_number": docket_number,
             "entry_count": entry_count,
             "cost": cost_raw,
         }
+        data.update(docket_number_components)
 
         data = clean_court_object(data)
 
