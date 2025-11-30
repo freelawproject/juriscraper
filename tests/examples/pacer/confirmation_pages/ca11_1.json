@@ -1,8 +1,13 @@
 {
-    "document_number":"01116407625",
-    "cost":"2.70",
-    "docket_number":"10-14375",
-    "billable_pages":"27",
-    "document_description":"PDF Document",
-    "transaction_date": "2022-09-15 18:10:29"
- }
+  "billable_pages": "27",
+  "cost": "2.70",
+  "docket_number": "10-14375",
+  "document_description": "PDF Document",
+  "document_number": "01116407625",
+  "federal_defendant_number": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_dn_office_code": null,
+  "transaction_date": "2022-09-15T18:10:29Z"
+}
