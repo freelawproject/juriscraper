@@ -8,10 +8,11 @@ column in various table layouts (2-column, 3-column, etc.).
 """
 
 import unittest
+
 from lxml import html
 
-from juriscraper.pacer.docket_report import DocketReport
 from juriscraper.pacer.docket_history_report import DocketHistoryReport
+from juriscraper.pacer.docket_report import DocketReport
 from juriscraper.pacer.http import PacerSession
 
 
@@ -50,9 +51,13 @@ class TestDocketReportColumnDetection(unittest.TestCase):
         """
         report = DocketReport("akd", self.session)
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index()
-        self.assertEqual(idx, 2, "Expected description column at index 2 for 3-column layout")
+        self.assertEqual(
+            idx,
+            2,
+            "Expected description column at index 2 for 3-column layout",
+        )
 
     def test_2_column_layout(self):
         """Test detection with 2-column layout (Date, Description)."""
@@ -80,9 +85,13 @@ class TestDocketReportColumnDetection(unittest.TestCase):
         """
         report = DocketReport("test", self.session)
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index()
-        self.assertEqual(idx, 1, "Expected description column at index 1 for 2-column layout")
+        self.assertEqual(
+            idx,
+            1,
+            "Expected description column at index 1 for 2-column layout",
+        )
 
     def test_description_header_variant(self):
         """Test detection with 'Description' header instead of 'Docket Text'."""
@@ -104,9 +113,13 @@ class TestDocketReportColumnDetection(unittest.TestCase):
         """
         report = DocketReport("test", self.session)
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index()
-        self.assertEqual(idx, 2, "Expected description column at index 2 with 'Description' header")
+        self.assertEqual(
+            idx,
+            2,
+            "Expected description column at index 2 with 'Description' header",
+        )
 
     def test_fallback_when_no_header(self):
         """Test fallback to index 2 when no description header is found."""
@@ -128,9 +141,13 @@ class TestDocketReportColumnDetection(unittest.TestCase):
         """
         report = DocketReport("test", self.session)
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index()
-        self.assertEqual(idx, 2, "Expected fallback to index 2 when no description header found")
+        self.assertEqual(
+            idx,
+            2,
+            "Expected fallback to index 2 when no description header found",
+        )
 
     def test_caching_of_detected_index(self):
         """Test that the detected column index is cached."""
@@ -151,13 +168,15 @@ class TestDocketReportColumnDetection(unittest.TestCase):
         """
         report = DocketReport("test", self.session)
         report.tree = html.fromstring(html_content)
-        
+
         # First call should detect and cache
         idx1 = report._detect_description_column_index()
         # Second call should return cached value
         idx2 = report._detect_description_column_index()
-        
-        self.assertEqual(idx1, idx2, "Cached index should match initial detection")
+
+        self.assertEqual(
+            idx1, idx2, "Cached index should match initial detection"
+        )
         self.assertEqual(idx1, 1, "Expected description at index 1")
 
     def test_case_insensitive_header_matching(self):
@@ -180,9 +199,11 @@ class TestDocketReportColumnDetection(unittest.TestCase):
         """
         report = DocketReport("test", self.session)
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index()
-        self.assertEqual(idx, 2, "Expected case-insensitive matching of 'DOCKET TEXT'")
+        self.assertEqual(
+            idx, 2, "Expected case-insensitive matching of 'DOCKET TEXT'"
+        )
 
 
 class TestDocketHistoryReportColumnDetection(unittest.TestCase):
@@ -216,9 +237,13 @@ class TestDocketHistoryReportColumnDetection(unittest.TestCase):
         """
         report = DocketHistoryReport("akd")
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index_history()
-        self.assertEqual(idx, 2, "Expected description column at index 2 for 3-column history layout")
+        self.assertEqual(
+            idx,
+            2,
+            "Expected description column at index 2 for 3-column history layout",
+        )
 
     def test_2_column_layout_history(self):
         """Test detection with 2-column layout in history report."""
@@ -246,9 +271,13 @@ class TestDocketHistoryReportColumnDetection(unittest.TestCase):
         """
         report = DocketHistoryReport("test")
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index_history()
-        self.assertEqual(idx, 1, "Expected description column at index 1 for 2-column history layout")
+        self.assertEqual(
+            idx,
+            1,
+            "Expected description column at index 1 for 2-column history layout",
+        )
 
     def test_fallback_when_no_header_history(self):
         """Test fallback to index 2 when no description header is found in history report."""
@@ -270,9 +299,13 @@ class TestDocketHistoryReportColumnDetection(unittest.TestCase):
         """
         report = DocketHistoryReport("test")
         report.tree = html.fromstring(html_content)
-        
+
         idx = report._detect_description_column_index_history()
-        self.assertEqual(idx, 2, "Expected fallback to index 2 when no description header found in history")
+        self.assertEqual(
+            idx,
+            2,
+            "Expected fallback to index 2 when no description header found in history",
+        )
 
 
 class TestColumnDetectionIntegration(unittest.TestCase):
@@ -303,15 +336,20 @@ class TestColumnDetectionIntegration(unittest.TestCase):
         """
         report = DocketHistoryReport("test")
         report.tree = html.fromstring(html_content)
-        
+
         # Get docket entries which should use the detected column
         entries = report.docket_entries
-        
+
         # Verify that the description was extracted from the correct column
-        self.assertTrue(len(entries) > 0, "Should have at least one docket entry")
+        self.assertTrue(
+            len(entries) > 0, "Should have at least one docket entry"
+        )
         if len(entries) > 0:
             # The description should be from column index 1 (second column)
-            self.assertIn("Test description text", entries[0].get("short_description", ""))
+            self.assertIn(
+                "Test description text",
+                entries[0].get("short_description", ""),
+            )
 
     def test_docket_entries_use_detected_column_3col(self):
         """Test that docket entries correctly use detected column in 3-column layout."""
@@ -335,17 +373,21 @@ class TestColumnDetectionIntegration(unittest.TestCase):
         """
         report = DocketHistoryReport("test")
         report.tree = html.fromstring(html_content)
-        
+
         # Get docket entries which should use the detected column
         entries = report.docket_entries
-        
+
         # Verify that the description was extracted from the correct column
-        self.assertTrue(len(entries) > 0, "Should have at least one docket entry")
+        self.assertTrue(
+            len(entries) > 0, "Should have at least one docket entry"
+        )
         if len(entries) > 0:
             # The description should be from column index 2 (third column)
-            self.assertIn("Three column description", entries[0].get("short_description", ""))
+            self.assertIn(
+                "Three column description",
+                entries[0].get("short_description", ""),
+            )
 
 
 if __name__ == "__main__":
     unittest.main()
-

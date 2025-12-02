@@ -211,7 +211,9 @@ class DocketHistoryReport(DocketReport):
                 # Handle both 2-column and 3-column layouts
                 if len(cells) == 3:
                     # 3-column layout: Doc No., Date, Description
-                    de["document_number"] = clean_string(cells[0].text_content())
+                    de["document_number"] = clean_string(
+                        cells[0].text_content()
+                    )
                     if de["document_number"] == "":
                         de["document_number"] = None
                     anchors = cells[0].xpath(".//a")
@@ -236,7 +238,7 @@ class DocketHistoryReport(DocketReport):
                     de["pacer_seq_no"] = None
                     de["date_filed"] = self._get_date_filed(cells[0])
                     de["date_entered"] = self._get_date_entered(cells[0])
-                
+
                 # Use the detected column index instead of hardcoding to 2
                 if desc_col_idx < len(cells):
                     de["short_description"] = force_unicode(
