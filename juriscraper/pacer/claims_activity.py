@@ -390,8 +390,8 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         pacer_case_id: str,
         docket_number: str,
         creditor_name: str,
-        date_start: date = None,
-        date_end: date = None,
+        date_start: date | None = None,
+        date_end: date | None = None,
     ):
         """Query the claims activity and return the results.
 

@@ -31,8 +31,8 @@ def set_api_token_header(site: OpinionSite) -> None:
 
 def generate_aws_sigv4_headers(
     payload: str,
-    table_name: str = None,
-    creds: dict = None,
+    table_name: str | None = None,
+    creds: dict | None = None,
     signed_headers: str = "host;x-amz-date;x-amz-security-token;x-amz-target",
     target: str = "DynamoDB_20120810.Scan",
     service: str = "dynamodb",

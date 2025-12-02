@@ -549,7 +549,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         return dockets
 
     def _get_docket_entries(
-        self, current_node: HtmlElement = None
+        self, current_node: HtmlElement | None = None
     ) -> list[DocketEntryType]:
         """Gets the full list of docket entries with document and sequence numbers
 
