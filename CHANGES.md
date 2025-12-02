@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add header-based column detection for PACER docket descriptions to support both 2-column and 3-column table layouts #239
 
 Changes:
 -

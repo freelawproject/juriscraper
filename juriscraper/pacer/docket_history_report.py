@@ -40,6 +40,46 @@ class DocketHistoryReport(DocketReport):
 
     PATH = "cgi-bin/HistDocQry.pl"
 
+    def __init__(self, court_id, pacer_session=None):
+        super().__init__(court_id, pacer_session)
+        self._description_column_index = None
+
+    def _detect_description_column_index_history(self) -> int:
+        """Detect the column index for the 'Description' column in history reports.
+
+        Similar to the parent class method but adapted for docket history reports
+        which may have a different table structure.
+
+        :return: The 0-based index of the description column, or 2 as a fallback
+        """
+        if self._description_column_index is not None:
+            return self._description_column_index
+
+        # Try to find the header row in the docket history table
+        docket_header = './/th/text()[contains(., "Description")]'
+        header_rows = self.tree.xpath(
+            f"//table[{docket_header}]/tbody/tr[1]/th"
+        )
+
+        # Search for "Description" in the headers
+        for idx, header in enumerate(header_rows):
+            header_text = header.text_content().strip().lower()
+            if "description" in header_text:
+                self._description_column_index = idx
+                logger.debug(
+                    f"Detected description column at index {idx} "
+                    f"for docket history in court {self.court_id}"
+                )
+                return idx
+
+        # Fallback to index 2 (the traditional assumption)
+        logger.warning(
+            f"Could not detect description column for docket history in "
+            f"court {self.court_id}, falling back to index 2"
+        )
+        self._description_column_index = 2
+        return 2
+
     @property
     def data(self):
         """Get all the data back from this endpoint."""
@@ -159,33 +199,54 @@ class DocketHistoryReport(DocketReport):
             f"//table[{docket_header}]/tbody/tr"
         )[1:]  # Skip first row
 
+        # Detect the description column index
+        desc_col_idx = self._detect_description_column_index_history()
+
         docket_entries = []
         for row in docket_entry_rows:
             cells = row.xpath("./td")
-            if len(cells) == 3:
+            if len(cells) >= 2:
                 # Normal row, parse the document_number, date, etc.
                 de = {}
-                de["document_number"] = clean_string(cells[0].text_content())
-                if de["document_number"] == "":
+                # Handle both 2-column and 3-column layouts
+                if len(cells) == 3:
+                    # 3-column layout: Doc No., Date, Description
+                    de["document_number"] = clean_string(cells[0].text_content())
+                    if de["document_number"] == "":
+                        de["document_number"] = None
+                    anchors = cells[0].xpath(".//a")
+                    if len(anchors) == 1:
+                        doc1_url = anchors[0].xpath("./@href")[0]
+                        de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
+                            doc1_url
+                        )
+                        de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_anchor(
+                            anchors[0]
+                        )
+                    else:
+                        # Unlinked minute entry; may or may not be numbered
+                        de["pacer_doc_id"] = None
+                        de["pacer_seq_no"] = None
+                    de["date_filed"] = self._get_date_filed(cells[1])
+                    de["date_entered"] = self._get_date_entered(cells[1])
+                elif len(cells) == 2:
+                    # 2-column layout: Date, Description
                     de["document_number"] = None
-                anchors = cells[0].xpath(".//a")
-                if len(anchors) == 1:
-                    doc1_url = anchors[0].xpath("./@href")[0]
-                    de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
-                        doc1_url
-                    )
-                    de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_anchor(
-                        anchors[0]
-                    )
-                else:
-                    # Unlinked minute entry; may or may not be numbered
                     de["pacer_doc_id"] = None
                     de["pacer_seq_no"] = None
-                de["date_filed"] = self._get_date_filed(cells[1])
-                de["date_entered"] = self._get_date_entered(cells[1])
-                de["short_description"] = force_unicode(
-                    cells[2].text_content()
-                )
+                    de["date_filed"] = self._get_date_filed(cells[0])
+                    de["date_entered"] = self._get_date_entered(cells[0])
+                
+                # Use the detected column index instead of hardcoding to 2
+                if desc_col_idx < len(cells):
+                    de["short_description"] = force_unicode(
+                        cells[desc_col_idx].text_content()
+                    )
+                else:
+                    # Fallback to last cell if index is out of bounds
+                    de["short_description"] = force_unicode(
+                        cells[-1].text_content()
+                    )
                 de["description"] = ""
                 docket_entries.append(de)
             elif len(cells) in {1, 2}:
