@@ -128,7 +128,7 @@ class Site(OpinionSiteLinear):
             case = self.update_case(case, detail_json)
             self.cases.append(case)
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date,date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
