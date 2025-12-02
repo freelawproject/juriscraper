@@ -214,9 +214,17 @@ def clean_html(text: str) -> str:
     if isinstance(text, str):
         text = re.sub(r"^\s*<\?xml\s+.*?\?>", "", text)
 
-        # Remove bad escaped HTML chars &#01 or &#1 to &#08 or &#8 since are not
-        # valid XML bytes 0x1 to 0x8
-        text = re.sub(r"&#0[1-8]\b|&#[1-8]\b", "", text)
+        # Remove HTML entities for invalid XML characters
+        # Invalid chars: 0x00-0x08, 0x0B-0x0C, 0x0E-0x1F
+        # Valid chars that look invalid: 0x09 (tab), 0x0A (LF), 0x0D (CR)
+        # Decimal: &#0; through &#8;, &#11;, &#12;, &#14; through &#31;
+        # Hex: &#x0; through &#x1F; (excluding 9, A, D)
+        text = re.sub(
+            r"&#([0-8]|11|12|1[4-9]|2[0-9]|3[01]);|"
+            r"&#[xX]([0-8bceBCE]|1[0-9a-fA-F]);",
+            "",
+            text,
+        )
 
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
     text = re.sub(
