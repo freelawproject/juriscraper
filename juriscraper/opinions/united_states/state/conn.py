@@ -142,7 +142,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text extracted from the PDF
         :returns: metadata object expected by Courtlistener
         """
-        metadata : dict[str,dict] = {"OpinionCluster": {}}
+        metadata: dict[str, dict] = {"OpinionCluster": {}}
 
         # initial value for end index for judges
         judges_end = 1_000_000

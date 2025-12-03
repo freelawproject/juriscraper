@@ -55,7 +55,7 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
-    def _download_backwards(self, dates: tuple[date,date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Change URL to backscraping date range
 
         :param dates: tuple with date range to scrape
