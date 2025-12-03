@@ -326,7 +326,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             ("Other Attorneys", "Other"),
         ]
 
-        parties : list[dict]= []
+        parties: list[dict] = []
 
         for heading_text, type_key in sections:
             section_root = self._section_by_heading(heading_text)
@@ -540,7 +540,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: A ContactAddress object.
         """
 
-        raw_lines : list[str] = []
+        raw_lines: list[str] = []
         self._append_clean_text(td.text, raw_lines)
         for child in td:
             self._append_clean_text(child.text, raw_lines)
@@ -651,7 +651,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: A ContactAddress object.
         """
 
-        raw_lines : list[str] = []
+        raw_lines: list[str] = []
         self._append_clean_text(node.text, raw_lines)
         for child in node:
             self._append_clean_text(child.text, raw_lines)

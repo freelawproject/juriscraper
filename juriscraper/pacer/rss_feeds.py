@@ -342,8 +342,7 @@ class PacerRssFeed(DocketReport):
         }
 
     def _parse_docket_number(
-        self, 
-        title_text: str | None = None
+        self, title_text: str | None = None
     ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
