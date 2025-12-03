@@ -169,7 +169,7 @@ class Site(OpinionSiteLinear):
 
         return DeferringList(seed=self.seeds, fetcher=get_name)
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date,date]) -> None:
         """Overrides present scraper start_date and end_date
 
         :param dates: (start_date, end_date) tuple

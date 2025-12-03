@@ -104,7 +104,7 @@ class Site(OpinionSiteLinear):
         pdf_url = super()._download()["url"]
         return pdf_url
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date,date]) -> None:
         """Make custom date range request to the API
 
         Note that the API returns 100 results or less, so the
