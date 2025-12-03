@@ -116,7 +116,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: pdf or html string contents
         :return: dict where keys match courtlistener model objects
         """
-        metadata = {
+        metadata : dict[str,dict]= {
             "Citation": {},
             "Docket": {},
             "Opinion": {},
