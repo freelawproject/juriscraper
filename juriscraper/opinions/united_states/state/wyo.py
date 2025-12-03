@@ -121,7 +121,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        metadata = {}
+        metadata : dict = {}
         lower_court_pattern = re.compile(
             r"Appeal\s+from\s+the\s+(?P<lower_court>.*?)[,\n]\s*The\s+Honorable\s+(?P<judge>.+?),\s*Judge",
             re.DOTALL,

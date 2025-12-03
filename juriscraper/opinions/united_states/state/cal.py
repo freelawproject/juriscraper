@@ -63,7 +63,7 @@ class Site(OpinionSiteLinear):
             ).strip()
             lower_court_number = match.group("lower_court_number").strip()
 
-        result = {}
+        result : dict[str,dict] = {}
         if lower_court or lower_court_number:
             if lower_court:
                 result["Docket"] = {}
