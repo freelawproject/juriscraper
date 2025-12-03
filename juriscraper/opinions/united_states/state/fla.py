@@ -66,7 +66,7 @@ class Site(OpinionSiteLinear):
         fmt = "%m/%d/%Y"
         self.url = self.base_url.format(start.strftime(fmt), end.strftime(fmt))
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date,date]) -> None:
         """Overrides scraper URL using date inputs
 
         :param dates: (start_date, end_date) tuple

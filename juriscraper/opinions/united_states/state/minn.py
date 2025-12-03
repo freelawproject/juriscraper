@@ -121,7 +121,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date]):
+    def _download_backwards(self, dates: tuple[date,date]):
         logger.info("Backscraping for range %s - %s", *dates)
         params = {**self.base_params}
         params.update(
