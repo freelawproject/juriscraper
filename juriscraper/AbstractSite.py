@@ -2,7 +2,7 @@ import hashlib
 import json
 import os
 from datetime import date, datetime, timedelta
-from typing import Union
+from typing import Optional,Union
 
 import certifi
 import requests
@@ -570,7 +570,7 @@ class AbstractSite:
 
     def make_backscrape_iterable(
         self, kwargs: dict
-    ) -> list[tuple[date, date]]:
+    ) -> Optional[list[tuple[date, date]]]:
         """Creates back_scrape_iterable in the most common variation,
         a list of tuples containing (start, end) date pairs, each of
         `days_interval` size
