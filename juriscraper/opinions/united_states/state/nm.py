@@ -125,7 +125,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        metadata = {}
+        metadata : dict[str,dict] = {}
         docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
         if docket_number:
             metadata.setdefault("OpinionCluster", {})["docket_number"] = (

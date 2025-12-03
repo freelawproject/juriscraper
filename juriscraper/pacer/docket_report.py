@@ -1696,6 +1696,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self,
+        title_text: str | None = None
     ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse a valid docket number and its components.
 
