@@ -56,7 +56,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date,date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Downloads and parses older records according to input dates"""
         logger.info("Backscraping for range %s", *dates)
         self.limit = 10000  # disable limit

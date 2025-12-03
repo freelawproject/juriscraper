@@ -42,7 +42,7 @@ class Site(OpinionSiteLinear):
     ]
     # on the cl_scrape_opinions command in Courtlistener,
     # a headers variable is required for mass
-    headers : dict = {}
+    headers: dict = {}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -129,7 +129,7 @@ class Site(OpinionSiteLinear):
 
         self.method = "POST"
 
-    def _download_backwards(self, d: tuple[date,date]) -> None:
+    def _download_backwards(self, d: tuple[date, date]) -> None:
         """Filter site to get older records
 
         There is max of 1000 results returned per search; so it's better

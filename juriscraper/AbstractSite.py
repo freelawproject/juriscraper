@@ -2,7 +2,7 @@ import hashlib
 import json
 import os
 from datetime import date, datetime, timedelta
-from typing import Optional,Union
+from typing import Optional, Union
 
 import certifi
 import requests

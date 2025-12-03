@@ -221,7 +221,9 @@ class Site(OpinionSiteLinear):
             dates.append((year, start, end))
         self.back_scrape_iterable = dates
 
-    def _download_backwards(self, analysis_window: tuple[int,date,date]) -> None:
+    def _download_backwards(
+        self, analysis_window: tuple[int, date, date]
+    ) -> None:
         """Downloads and processes opinions for a given year within a specified date range.
 
         :param analysis_window (tuple): A tuple containing the year (int), start date (date), and end date (date).

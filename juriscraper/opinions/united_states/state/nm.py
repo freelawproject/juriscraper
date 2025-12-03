@@ -108,7 +108,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
-    def _download_backwards(self, dates: tuple[date,date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -125,7 +125,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        metadata : dict[str,dict] = {}
+        metadata: dict[str, dict] = {}
         docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
         if docket_number:
             metadata.setdefault("OpinionCluster", {})["docket_number"] = (

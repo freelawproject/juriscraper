@@ -76,7 +76,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-    def _download_backwards(self, dates: tuple[date,date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple

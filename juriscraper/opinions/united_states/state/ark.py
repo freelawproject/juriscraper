@@ -110,7 +110,7 @@ class Site(OpinionSiteLinear):
             return {"OpinionCluster": {"docket_number": match[0]}}
         return {}
 
-    def _download_backwards(self, dates: tuple[date,date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
