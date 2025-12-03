@@ -73,19 +73,19 @@ def get_html5_parsed_text(text: str) -> HtmlElement:
 def get_table_column_text(
     html: HtmlElement,
     cell_num: int,
-    path_base: bool = False,
+    path_base: str | None = None,
     table_id: str = "",
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]" % (table, cell_num)
-    path = path_base + path_cell if path_base else path_cell
+    path = path_base + path_cell if path_base is not None else path_cell
     return [cell.text_content().strip() for cell in html.xpath(path)]
 
 
 def get_table_column_links(
     html: HtmlElement,
     cell_num: int,
-    path_base: bool = False,
+    path_base: str | None = None,
     table_id: str = "",
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"
