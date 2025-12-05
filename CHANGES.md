@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix recap.email docket_number parsing inside nested tags
 
 
 ## Current
