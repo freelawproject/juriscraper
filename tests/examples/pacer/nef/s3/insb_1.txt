@@ -1,0 +1,120 @@
+Return-Path: <courtmail@insb.uscourts.gov>
+Received: from icmecf202.gtwy.uscourts.gov (icmecf202.gtwy.uscourts.gov [63.241.40.205])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 4ip7k1khkvmgb1gffnb0dhn32fp5en6in98c7v81
+ for user_example@recap.email;
+ Fri, 26 Sep 2025 04:26:09 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of insb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=courtmail@insb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of insb.uscourts.gov designates 63.241.40.205 as permitted sender) client-ip=63.241.40.205; envelope-from=courtmail@insb.uscourts.gov; helo=icmecf202.gtwy.uscourts.gov;
+ dkim=pass header.i=@uscourts.gov;
+ dmarc=pass header.from=insb.uscourts.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHeTFXbmwvMnRFL1VsN3d1Q20vOTRpUjY0ODVQMmlkVjB3UTNORE5DMU9rcjdxNHhoWVR0Ykx5YXhEMFgzZ1M2WXNSQnlWejVndmlQM2lxNFpSek0zd3Fnc1dpaEl3bzJOSnRUWFZ4K3djaEpwODd2d0dtbFNZQVM1dTdYQzJXSFUzajFpeWdMOW4zc0VvMk13YmNjclNXN0VHNzYzM2VOa1ZNMi9XRERISGpBcW41M0RaMjgvZkFyOUFGcGhTTnlhOERDUEM0dmVBNlVMbEZUVmg5N1RWZC9BZmloeXZKbjBqVnZHL1NBOWFzc25nWFRwV2xib3p1M0txN0J1RUo1Vi9BRkVYZklKellpVDlRNkd3bEpRcFRKMEFicWpnNFpVbzJobEpTU2RlVXc9PQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=r333MUgCz2tfQW0xpmt+3Jqr/RBtrsm+/7z5V/ij6q3Cxsn8XjHHiafuriALbumEVyAd6ZvTzH8MCLU0pRPCC/fI/qcSWDDYPpVd7ic5VzNTIMiuTjtMfDatc0O3axagM9vYGK9Kvwo8aG/kTQXAUaY5B/nyCLd/mGWDY0FCtrU=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1758860770; v=1; bh=/RI/7ufuL4OrQ+ueG/FOuUKy7NCz5DL9nXn4qUrl9zU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=uscourts.gov; i=@uscourts.gov; q=dns/txt; s=law1w;
+  t=1758860769; x=1790396769;
+  h=date:mime-version:from:to:message-id:subject;
+  bh=nP2c8Cda3f8KDmzicR94zVJZtOCGP9sNOYfV785a8g4=;
+  b=lLK/uOAU9moLLC4DK8Efqehb4QfDzCzpsaLTY0FWz6Pz79n7FlZDL3J9
+   mDDrz0tcHsFa0HOGBHK2w/8uZ9f5F9aKlADUELZtk2+dYi2quJa2g+Dob
+   KJak3KRQ0oPCeFuGxCSqQ2vrHc9yGYLx82GglZQ3DOh0euICKF6zO2EPv
+   gfXrTmH7e52QCGjz0q71R/TF4KbRrZ6+9B8oBfrzOxyi66KK+47vI0ui/
+   Ki0qB1RLoPsYkiH7p+D+FJ5MqShRcQOrd4Eh074DS5zKp8stPF4ovQDPP
+   DW4A9wXzLwqSwUEHAxQfF3xqm0jxYyarhgCX/nR3h6LnQeYwiM+UKK1Sk
+   A==;
+X-CSE-ConnectionGUID: GWg48zENSX2rI0mraVPbWw==
+X-CSE-MsgGUID: xBkrcBfDRuuhfctIhiqvXA==
+X-SBRS: None
+X-REMOTE-IP: 156.119.56.241
+Received: from insbdb.insb.gtwy.dcn ([156.119.56.241])
+  by icmecf202.gtwy.uscourts.gov with ESMTP; 26 Sep 2025 00:26:09 -0400
+Received: from insbdb.insb.gtwy.dcn (localhost.localdomain [127.0.0.1])
+	by insbdb.insb.gtwy.dcn (8.14.7/8.14.7) with ESMTP id 58Q4PDVl052935;
+	Fri, 26 Sep 2025 00:25:38 -0400
+Received: (from ecf_web@localhost)
+	by insbdb.insb.gtwy.dcn (8.14.7/8.14.4/Submit) id 58Q4OwPG051834;
+	Fri, 26 Sep 2025 00:24:58 -0400
+Date: Fri, 26 Sep 2025 00:24:58 -0400
+MIME-Version:1.0
+From:courtmail@insb.uscourts.gov
+To:courtmail@insb.uscourts.gov
+Message-Id:<47721416@insb.uscourts.gov>
+Subject:25-03768-JMC-13 BNC Certificate of Service - OFFICIAL COURT NOTICE
+Content-Type: text/html
+
+<p><strong>***NOTE TO PUBLIC ACCESS USERS*** Judicial Conference of the United States policy permits attorneys of record and parties in a case (including pro se litigants) to receive one free electronic copy of all documents filed electronically, if receipt is required by law or directed by the filer. PACER access fees apply to all other users.  To avoid later charges, download a copy of each document during this first viewing. However, if the referenced document is a transcript, the free copy and 30-page limit do not apply.</strong></p>
+
+
+
+
+<p align=center><strong>U.S. Bankruptcy Court</strong></p>
+
+<p align=center><strong>Southern District of Indiana</strong></p>
+Notice of Electronic Filing
+<BR>
+<div>
+<BR>The following transaction was received from Admin entered on 09/26/2025  at 00:20 AM EDT and filed on 09/25/2025
+
+<BR>
+
+
+
+<table border=0 cellspacing=0>
+<tr><td><strong>Case Name:</strong>
+</td><td>Gerardo Lorenzo Linarducci                        </td></tr>
+<tr><td><strong>Case Number:</strong></td><td><A HREF=https://ecf.insb.uscourts.gov/cgi-bin/DktRpt.pl?769408><FONT COLOR=Green>25-03768-JMC-13</FONT></A></td></tr>
+
+<tr><td><strong>Document Number:</strong></td>
+<td>
+<a href='https://ecf.insb.uscourts.gov/doc1/072048850541?pdf_header=&magic_num=62566217&de_seq_num=253&caseid=769408'>65</a>
+</td></tr>
+</table>
+
+
+
+
+<p><strong>Docket Text:</strong>
+
+<BR>
+BNC Certificate of Service - OFFICIAL COURT NOTICE (re: Doc # [62]). <i></i> No. of Notices: 2 Notice Date 09/25/2025. (Admin)
+</p>
+
+<p>The following document(s) are associated with this transaction:</p>
+<table>
+<STRONG>Document description:</STRONG>Imaged Certificate of Notice
+<BR><STRONG>Original filename:</STRONG>P12503768SF002000246.pdf
+<BR><STRONG>Electronic document Stamp:</STRONG>
+<BR>[STAMP bkecfStamp_ID=1072195184 [Date=9/26/2025] [FileNumber=47721030-0] [9ebfb1e27f8e83afeecb350ad30ab5fb35e6b542b6b2cd91fd30d4132988837dfc47fee2804e4a68b0ad2c3ec9c9a973ce14c17397250de933a1051d0df9a7e1]]
+<BR>
+
+</table>
+</div>
+
+
+
+
+<BR><B>
+25-03768-JMC-13 Notice will be electronically mailed to:
+</B>
+
+<BR>
+<B>
+25-03768-JMC-13 Notice will not be electronically mailed to:
+</B>
+
+<BR>
+
+<BR><span class="personName">Craig Eugene Thomas</span>
+<BR>6304 W Cedar Chase Dr
+<BR>McCordsville, IN 46163-9284
+<BR>
+
+<BR>
+<B>
+20-01963-JMC-11 These participants in a related case have chosen not to receive notice from this case:
+</B>
+
+<BR>
+<BR>
