@@ -50,7 +50,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = self.search_url.format(self.court_index, urlencode(params))
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the html and extract out the opinions
         Paginates if necessary
 
@@ -98,5 +98,5 @@ class Site(OpinionSiteLinear):
         ):
             self.offset = self.offset + 10
             self.update_url()
-            self.html = super()._download()
-            self._process_html()
+            self.html = await super()._download()
+            await self._process_html()
