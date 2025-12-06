@@ -32,6 +32,8 @@ class SCOTUSDocketReport:
         ],
     }
 
+    DOC_NUM_RE = r"DocketPDF/\d+/[^/]+/(\d+)/"
+
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
 
     def __init__(self, court_id: str = "scotus"):
@@ -148,11 +150,19 @@ class SCOTUSDocketReport:
                 }
                 for link in links
             ]
+            document_number = None
+            if attachments and (
+                match := re.search(
+                    self.DOC_NUM_RE, attachments[0].get("document_url") or ""
+                )
+            ):
+                document_number = int(match.group(1))
 
             description_html = row.get("Text", "")
             description = strip_bad_html_tags_insecure(description_html)
             de = {
                 "date_filed": self.normalize_date(row.get("Date")),
+                "document_number": document_number,
                 "description": description.text_content(),
                 "description_html": description_html,
                 "attachments": attachments,
