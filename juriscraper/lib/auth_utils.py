@@ -2,6 +2,7 @@ import datetime
 import hashlib
 import hmac
 import os
+from typing import Optional
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
@@ -31,8 +32,8 @@ def set_api_token_header(site: OpinionSite) -> None:
 
 def generate_aws_sigv4_headers(
     payload: str,
-    table_name: str = None,
-    creds: dict = None,
+    table_name: Optional[str] = None,
+    creds: Optional[dict] = None,
     signed_headers: str = "host;x-amz-date;x-amz-security-token;x-amz-target",
     target: str = "DynamoDB_20120810.Scan",
     service: str = "dynamodb",

@@ -179,7 +179,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple
