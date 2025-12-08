@@ -21,8 +21,7 @@ Changes:
 -
 
 Fixes:
--
-
+- Fix `fla` and `fladistctapp` scrapers #1690
 
 ## Current
 

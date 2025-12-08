@@ -3,100 +3,49 @@ Scraper for Florida 1st District Court of Appeals
 CourtID: fladistctapp1
 """
 
-from datetime import datetime, timedelta
-from urllib.parse import urlencode, urljoin
-
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.opinions.united_states.state import fla
 
 
-class Site(OpinionSiteLinear):
-    court_index = "1"
-    number = "first"
-    base_url = "https://{}dca.flcourts.gov/"
-    search_url = "https://{}dca.flcourts.gov/search?{}"
+class Site(fla.Site):
+    # Example built URL
+    # "https://flcourts-media.flcourts.gov/_search/opinions/?enddate=2025-12-08&limit=25&offset=0&query=&scopes[]=first_district_court_of_appeal&searchtype=opinions&siteaccess=1dca&startdate=2025-10-01&type[]=pca&type[]=written"
+    scopes = "first_district_court_of_appeal"
+    site_access = "1dca"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.offset = 0
-        self.update_url()
+        self.set_url()
 
-    def update_url(self) -> None:
-        """Scrape last 7 days of opinions
+    def get_docket_number(self, raw_docket_number: str) -> str:
+        """Prepend the district code to a docket number
 
-        :return: none
+        This is useful to disambiguate district court of appeals docket numbers
+
+        :param raw_docket_number: the docket number as returned by the source
+        :return: the clean docket number
         """
-        today = datetime.now().strftime("%m/%d/%Y")
-        prev = (datetime.now() - timedelta(days=7)).strftime("%m/%d/%Y")
-        params = {
-            "sort": "opinion/disposition_date desc, opinion/case_number asc",
-            "view": "full",
-            "searchtype": "opinions",
-            "limit": "10",
-            "scopes[]": f"{self.number}_district_court_of_appeal",
-            "type[]": [
-                "pca",
-                "written",
-            ],
-            "startdate": prev,
-            "enddate": today,
-            "date[year]": "",
-            "date[month]": "",
-            "date[day]": "",
-            "query": "",
-            "offset": self.offset,
-        }
-        self.url = self.search_url.format(self.court_index, urlencode(params))
+        court_code = self.site_access[:2].upper()
 
-    def _process_html(self) -> None:
-        """Process the html and extract out the opinions
-        Paginates if necessary
+        if raw_docket_number.startswith(court_code):
+            return raw_docket_number
 
-        :return: None
+        return f"{court_code}{raw_docket_number.strip()}"
+
+    def get_disposition(self, raw_disposition: str, note: str) -> str:
+        """Get a valid disposition value from raw values
+
+        :param raw_disposition: the raw disposition in the returned json
+        :param note: a value in the return json that may contain a disposition
+        return: A clean disposition value
         """
-        for row in self.html.xpath("//tr[.//td]"):
-            if not row.xpath(".//a"):
-                logger.debug("No document URL in row, skipping")
-                continue
+        valid_dispositions = ("Denied", "Affirmed", "Dismissed", "Reversed")
+        if raw_disposition == "Appeal - Per Curiam Affirmed":
+            return "Affirmed"
 
-            # Row headers:
-            # File, Type, Case No., Case Name, Disposition, Note, Release Date
-            values = [
-                cell.text_content().strip() for cell in row.xpath(".//td")
-            ]
-
-            # Prepend the district prefix as seen in the PDFs. If we don't do this
-            # cases across districts will be merged
-            docket_number = f"{self.court_index}D{values[2]}"
-
-            url = row.xpath(".//a")[0].get("href")
-            per_curiam = "per curiam" in values[4].lower()
-            disposition = values[5].split("-")[0]
-
-            self.cases.append(
-                {
-                    "name": titlecase(values[3]),
-                    "date": values[6],
-                    "disposition": disposition,
-                    "url": urljoin(
-                        self.base_url.format(self.court_index), url
-                    ),
-                    "status": "Published",
-                    "docket": docket_number,
-                    "per_curiam": per_curiam,
-                }
-            )
-
-        paginator_exists = self.html.xpath("//ul[@class='pagination']")
-        paginator_disabled = self.html.xpath('//li[@class="next disabled"]')
         if (
-            paginator_exists
-            and not paginator_disabled
-            and not self.test_mode_enabled()
+            note in valid_dispositions
+            or note.split(" ")[0] in valid_dispositions
         ):
-            self.offset = self.offset + 10
-            self.update_url()
-            self.html = super()._download()
-            self._process_html()
+            return note.split(" ")[0]
+
+        return ""
