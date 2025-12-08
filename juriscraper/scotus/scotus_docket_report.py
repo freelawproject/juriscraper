@@ -129,7 +129,7 @@ class SCOTUSDocketReport:
               "attachments":[
                  {
                     "document_url":"http://www.supremecourt.gov/DocketPDF/24/24A100/319653/20240723152722701_Johnson%20cert%20extension.pdf",
-                    "short_description":"Main Document"
+                    "description":"Main Document"
                  }
               ],
               "date_filed":"2024-07-30",
@@ -143,20 +143,21 @@ class SCOTUSDocketReport:
         entries = []
         for row in self._scotus_json.get("ProceedingsandOrder", []):
             links = row.get("Links", [])
-            attachments = [
-                {
-                    "short_description": link.get("Description", "").strip(),
-                    "document_url": link.get("DocumentUrl"),
-                }
-                for link in links
-            ]
             document_number = None
-            if attachments and (
+            if links and (
                 match := re.search(
-                    self.DOC_NUM_RE, attachments[0].get("document_url") or ""
+                    self.DOC_NUM_RE, links[0].get("DocumentUrl") or ""
                 )
             ):
                 document_number = int(match.group(1))
+            attachments = [
+                {
+                    "description": link.get("Description", "").strip(),
+                    "document_url": link.get("DocumentUrl"),
+                    "document_number": document_number,
+                }
+                for link in links
+            ]
 
             description_html = row.get("Text", "")
             description = strip_bad_html_tags_insecure(description_html)

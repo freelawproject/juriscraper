@@ -221,8 +221,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 )
                 attachments.append(
                     {
-                        "short_description": short_desc or "Document",
+                        "description": short_desc or "Document",
                         "document_url": href,
+                        "document_number": document_number,
                     }
                 )
 
