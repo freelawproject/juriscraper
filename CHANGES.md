@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Added more fields to the SCOTUS docket parsers
 
 Fixes:
 -
