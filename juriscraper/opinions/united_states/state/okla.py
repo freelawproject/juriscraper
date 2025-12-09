@@ -70,8 +70,8 @@ class Site(OpinionSiteLinear):
             ".footer",
             "footer",
             ".published-info",
-            "#opinons-navigation", #old versions typo
-            "#opinions-navigation"
+            "#opinons-navigation",  # old versions typo
+            "#opinions-navigation",
         ]
 
         for selector in selectors_to_remove:
