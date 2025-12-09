@@ -12,14 +12,11 @@ class Site(fla.Site):
     scopes = "first_district_court_of_appeal"
     site_access = "1dca"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.set_url()
-
     def get_docket_number(self, raw_docket_number: str) -> str:
         """Prepend the district code to a docket number
 
         This is useful to disambiguate district court of appeals docket numbers
+        See #1136
 
         :param raw_docket_number: the docket number as returned by the source
         :return: the clean docket number

@@ -15,7 +15,8 @@ class Site(OpinionSiteLinear):
     # make a backscrape request every `days_interval` range, to avoid pagination
     days_interval = 20
     first_opinion_date = datetime(1999, 9, 23)
-    # even though you can put whatevere number you want as limit, 50 seems to be max
+    # even though you can put whatever number you want as limit, 50 seems to be
+    # the max
     base_url = "https://flcourts-media.flcourts.gov/_search/opinions/?limit=50&offset=0&query=&scopes[]={}&searchtype=opinions&siteaccess={}&startdate={}&enddate={}"
     scopes = "supreme_court"
     site_access = "supreme2"
@@ -43,9 +44,9 @@ class Site(OpinionSiteLinear):
 
             name = fields.get("case_style", "")
             if not name:
-                # These seem to be family - childs related cases. See for example
-                # https://flcourts-media.ccplatform.net/content/download/2472477/28965542?version=5
+                # These seem to be family - children related cases. See example
                 # in district 4 example file
+                # https://flcourts-media.ccplatform.net/content/download/2472477/28965542?version=5
                 logger.info("Skipping case with no name %s", fields)
                 continue
 
