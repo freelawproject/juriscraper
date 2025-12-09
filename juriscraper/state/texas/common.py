@@ -29,6 +29,39 @@ class TexasAppealsCourt(TypedDict):
     justice: str
 
 
+def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
+    """
+    Helper function to parse appeals court information and construct a `TexasAppealsCourt` instance. Used by `TexasSupremeCourtScraper` and `TexasCourtOfCriminalAppealsScraper`.
+
+    :return: Extracted appeals court information.
+    """
+    container = tree.find(
+        './/*[@id="ctl00_ContentPlaceHolder1_divCOAInfo"]/div/div/div[2]'
+    )
+    info_container = container.find(
+        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
+    )
+    # Texas gives the judge their own child element all to themselves for some reason.
+    judge_container = container.find(
+        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
+    )
+    if judge_container is None:
+        judge_container = []
+    case_info = {
+        clean_string(row.find(".//*[1]").text_content()): row.find(".//*[2]")
+        for row in (list(info_container) + list(judge_container))
+    }
+
+    return TexasAppealsCourt(
+        case_number=clean_string(case_info["COA Case"].text_content()),
+        case_url=case_info["COA Case"].find(".//a").get("href"),
+        disposition=clean_string(case_info["Disposition"].text_content()),
+        opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
+        district=clean_string(case_info["COA District"].text_content()),
+        justice=clean_string(case_info.get("COA Justice", HtmlElement("")).text_content()),
+    )
+
+
 class TexasCaseParty(TypedDict):
     """
     Schema for Texas case party details.

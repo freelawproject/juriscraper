@@ -6,6 +6,7 @@ from juriscraper.state.texas.common import (
     TexasCaseEvent,
     TexasCommonData,
     TexasCommonScraper,
+    _parse_appeals_court,
 )
 
 
@@ -70,7 +71,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         ]
 
         return TexasSupremeCourtDocket(
-            appeals_court=self._parse_appeals_court(),
+            appeals_court=_parse_appeals_court(self.tree),
             case_events=case_events,
             appellate_briefs=appellate_briefs,
             docket_number=common_data["docket_number"],
@@ -78,28 +79,4 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
             case_type=common_data["case_type"],
             parties=common_data["parties"],
             trial_court=common_data["trial_court"],
-        )
-
-    def _parse_appeals_court(self) -> TexasAppealsCourt:
-        """
-        Parses the appeals court information and constructs a `TexasAppealsCourt` instance.
-
-        :return: Extracted appeals court information.
-        """
-        container = self.tree.find('.//*[@id="ctl00_ContentPlaceHolder1_divCOAInfo"]/div/div/div[2]')
-        info_container = container.find('.//*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]')
-        # Texas gives the judge their own child element all to themselves for some reason.
-        judge_container = container.find('.//*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]')
-        case_info = {
-            clean_string(row.find('.//*[1]').text_content()): row.find('.//*[2]')
-            for row in (list(info_container) + list(judge_container))
-        }
-
-        return TexasAppealsCourt(
-            case_number=clean_string(case_info["COA Case"].text_content()),
-            case_url=case_info["COA Case"].find(".//a").get("href"),
-            disposition=clean_string(case_info["Disposition"].text_content()),
-            opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
-            district=clean_string(case_info["COA District"].text_content()),
-            justice=clean_string(case_info["COA Justice"].text_content()),
         )
