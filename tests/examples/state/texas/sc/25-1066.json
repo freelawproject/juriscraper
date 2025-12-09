@@ -1,0 +1,103 @@
+{
+  "appeals_court": {
+    "case_number": "14-25-00552-CV",
+    "case_url": "https://search.txcourts.gov/Case.aspx?cn=14-25-00552-CV",
+    "disposition": "Denied",
+    "district": "14th Court of Appeals",
+    "justice": "Honorable Per Curiam",
+    "opinion_cite": "SW3d ___, 11-13-25"
+  },
+  "appellate_briefs": [
+    {
+      "date": "2025-11-26T00:00:00",
+      "description": "Relator",
+      "documents": [
+        {
+          "name": "",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b721f5e4-e1ef-457c-8e3d-3192887c453c&coa=cossup&DT=BRIEFS&MediaID=04a7d363-d2e9-4abf-a06b-3bd33d12145e"
+        },
+        {
+          "name": "Notice",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744"
+        }
+      ],
+      "remarks": "",
+      "type": "Petition for Writ of Mandamus filed"
+    }
+  ],
+  "case_events": [
+    {
+      "date": "2025-12-02T00:00:00",
+      "disposition": "",
+      "documents": [],
+      "remarks": "",
+      "type": "Case forwarded to Court"
+    },
+    {
+      "date": "2025-11-26T00:00:00",
+      "disposition": "",
+      "documents": [
+        {
+          "name": "",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=fddb9f97-e403-4829-8324-6778694a8fa8&coa=cossup&DT=RECORD&MediaID=a9e83097-59c7-482d-b7cd-c336c93ed6d8"
+        }
+      ],
+      "remarks": "Mandamus Record filed on behalf of Client X.",
+      "type": "Case Record Filed"
+    },
+    {
+      "date": "2025-11-26T00:00:00",
+      "disposition": "",
+      "documents": [
+        {
+          "name": "",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b721f5e4-e1ef-457c-8e3d-3192887c453c&coa=cossup&DT=BRIEFS&MediaID=04a7d363-d2e9-4abf-a06b-3bd33d12145e"
+        },
+        {
+          "name": "Notice",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744"
+        }
+      ],
+      "remarks": "Petition for Writ of Mandamus filed on behalf of Client X.",
+      "type": "Petition for Writ of Mandamus filed"
+    }
+  ],
+  "case_type": "Petition for Writ of Mandamus",
+  "date_filed": "2025-12-01T00:00:00",
+  "docket_number": "25-1066",
+  "parties": [
+    {
+      "name": "Hernandez , Laura",
+      "representatives": [
+        "Mr. Benjamin L. Hall III",
+        "Mr. William Leroy Van Fleet"
+      ],
+      "type": "Real Party in Interest"
+    },
+    {
+      "name": "Client X",
+      "representatives": [
+        "Mr. David Calvillo",
+        "Mr. Emmanuel Almaraz",
+        "Mr. David Medina"
+      ],
+      "type": "Relator"
+    },
+    {
+      "name": "Jacob M. Monty",
+      "representatives": [
+        "Ms. Meredith B. Parenti",
+        "Mr. Steven R. Selsberg"
+      ],
+      "type": "Real Party in Interest"
+    }
+  ],
+  "trial_court": {
+    "case": "2024-56655",
+    "county": "Harris",
+    "judge": "Honorable Kristen Brauchle Hawkins",
+    "name": "11th District Court",
+    "punishment": "",
+    "reporter": ""
+  }
+}

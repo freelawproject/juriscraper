@@ -10,6 +10,25 @@ from juriscraper.lib.string_utils import clean_string
 from juriscraper.scraper import Scraper
 
 
+class TexasAppealsCourt(TypedDict):
+    """
+    Schema for Texas appeals court details.
+
+    :ivar case_number: The case number of the appeals court case.
+    :ivar case_url: The URL to the appeals court case.
+    :ivar disposition: The disposition of the appeals court case.
+    :ivar opinion_cite: The opinion citation.
+    :ivar district: The appeals court district.
+    :ivar justice: The name of the appeals court judge.
+    """
+    case_number: str
+    case_url: str
+    disposition: str
+    opinion_cite: str
+    district: str
+    justice: str
+
+
 class TexasCaseParty(TypedDict):
     """
     Schema for Texas case party details.
@@ -126,6 +145,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     - Trial court information (court name, county, judge, case number, reporter, and punishment)
 
     :ivar tree: The HTML tree of the docket page.
+    :ivar events: The "Case Events" table data extracted with `parse_table`.
+    :ivar briefs: The "Appellate Briefs" table data extracted with `parse_table`.
     :ivar is_valid: `True` if the HTML tree has been successfully parsed by calling `_parse_text`, `False` otherwise.
     """
     date_format = "%m/%d/%Y"
@@ -161,8 +182,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     @property
     def data(self) -> TexasCommonData:
         """
-        Access parsed data from an HTML tree. This property returns the `TexasCommonData`
-        `TypedDict` object.
+        Extract parsed data from an HTML tree. This property returns the `TexasCommonData`
+        object.
 
         :raises ValueError: If the `_parse_text` method has not been called yet.
 
