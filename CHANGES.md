@@ -21,8 +21,8 @@ Changes:
 -
 
 Fixes:
--
-
+- Fix `fla` and `fladistctapp` scrapers by scraping new API endpoint #1690
+- fix `uscgcoca` and `asbca` headers #1664
 
 ## Current
 
@@ -30,7 +30,6 @@ Fixes:
 
 Fixes:
 - fix recap.email docket_number parsing inside nested tags
-- fix `uscgcoca` and `asbca` headers #1664
 
 ## Past
 
