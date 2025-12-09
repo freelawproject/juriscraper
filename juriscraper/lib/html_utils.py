@@ -8,6 +8,8 @@ from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
 from requests import Response
 
+from build.lib.juriscraper.lib.string_utils import clean_string
+
 try:
     # Use charset-normalizer for performance to detect the character encoding.
     import charset_normalizer as chardet
@@ -279,9 +281,9 @@ def is_html(response: Response) -> bool:
     return "text/html" in response.headers.get("content-type", "")
 
 
-def parse_table(table: HtmlElement) -> dict[str, list[str]]:
+def parse_table(table: HtmlElement) -> dict[str, list[list[str]]]:
     # TODO: Would probably save a lot of time in future state scrapers to update this to handle tabular data that isn't stored in a table element, but that is a relatively large project and I'm not sure how often it would be useful.
-    headers = [th.text_content().strip() for th in table.xpath(".//thead//th")]
+    headers = [clean_string(th.text_content()) for th in table.xpath(".//thead//th")]
 
     columns = {header: [] for header in headers}
 
@@ -290,6 +292,8 @@ def parse_table(table: HtmlElement) -> dict[str, list[str]]:
     for row in rows:
         cells = row.xpath(".//td")
         for header, cell in zip(headers, cells):
-            columns[header].append(cell.text_content().strip())
+            # Should split text content on <br/>s
+            text_parts = [clean_string(text) for text in cell.xpath(".//text()")]
+            columns[header].append(text_parts)
 
     return columns

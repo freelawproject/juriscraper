@@ -84,7 +84,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     :ivar is_valid: `True` if the HTML tree has been successfully parsed by calling `_parse_text`, `False` otherwise.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, court_id: str) -> None:
+        super().__init__(court_id)
         self.tree: HtmlElement = HtmlElement()
         self.is_valid: bool = False
 
@@ -96,8 +97,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :param text: The raw HTML string.
         """
-        html_text = clean_html(text)
-        self.tree = html.fromstring(html_text)
+        self.tree = html.fromstring(clean_html(text))
         self.is_valid = True
 
     @property
@@ -129,9 +129,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        return self.tree.find(
-            '//*[@id="case"]/div[2]/div/strong'
-        ).text_content()
+        return clean_string(self.tree.find(
+            './/*[@id="case"]/div[2]/div/strong'
+        ).text_content())
 
     def _parse_date_filed(self) -> datetime:
         """
@@ -140,9 +140,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Date filed
         """
-        date_string = self.tree.find(
-            '//*[@id="case"]/../*[2]/div[2]/div'
-        ).text_content()
+        date_string = clean_string(self.tree.find(
+            './/*[@id="case"]/../*[2]/div[2]/div'
+        ).text_content())
         return datetime.strptime(date_string, "%m/%d/%Y")
 
     def _parse_case_type(self) -> str:
@@ -152,9 +152,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        return self.tree.find(
-            '//*[@id="case"]/../*[3]/div[2]/div'
-        ).text_content()
+        return clean_string(self.tree.find(
+            './/*[@id="case"]/../*[3]/div[2]'
+        ).text_content())
 
     def _parse_parties(self) -> list[TexasCaseParty]:
         """
@@ -163,15 +163,15 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        table = self.tree.find('//*[contains(@id, "Party")]/table')
+        table = self.tree.find('.//table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]')
         parties = parse_table(table)
         n_parties = len(parties["Party"])
 
         return [
             TexasCaseParty(
-                name=parties["Party"][i],
-                type=parties["PartyType"][i],
-                representatives=parties["Representative"][i].split("\n"),
+                name=parties["Party"][i][0],
+                type=parties["PartyType"][i][0],
+                representatives=parties["Representative"][i],
             )
             for i in range(n_parties)
         ]
@@ -184,9 +184,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         :return: Trial court info.
         """
         info_panel: HtmlElement = self.tree.find(
-            '//*[contains(@id, "TrialCourtInfo")]/div[2]'
+            './/*[@id="panelTrialCourtInfo"]/div[2]'
         )
-        fields = {
+        fields: dict[str, str] = {
             clean_string(child.find(".//*[1]").text_content()): clean_string(
                 child.find(".//*[2]").text_content()
             )
@@ -194,10 +194,10 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         }
 
         return TexasTrialCourt(
-            name=fields["Court"],
-            county=fields["County"],
-            judge=fields["Court Judge"],
-            case=fields["Court Case"],
-            reporter=fields["Reporter"],
-            punishment=fields["Punishment"],
+            name=fields.get("Court", ""),
+            county=fields.get("County", ""),
+            judge=fields.get("Court Judge", ""),
+            case=fields.get("Court Case", ""),
+            reporter=fields.get("Reporter", ""),
+            punishment=fields.get("Punishment", ""),
         )
