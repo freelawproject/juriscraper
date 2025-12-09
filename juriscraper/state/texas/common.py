@@ -134,6 +134,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     def __init__(self, court_id: str) -> None:
         super().__init__(court_id)
         self.tree: HtmlElement = HtmlElement()
+        self.events: dict[str, list[HtmlElement]] = {}
+        self.briefs: dict[str, list[HtmlElement]] = {}
         self.is_valid: bool = False
 
     def _parse_text(self, text: str) -> None:
@@ -146,6 +148,14 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         """
         self.tree = html.fromstring(clean_html(text))
         self.tree.rewrite_links(fix_links_but_keep_anchors, base_href=self.base_url)
+        briefs_table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"]'
+        )
+        events_table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"]'
+        )
+        self.events = parse_table(events_table)
+        self.briefs = parse_table(briefs_table)
         self.is_valid = True
 
     @property
@@ -252,7 +262,15 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             punishment=fields.get("Punishment", ""),
         )
 
-    def _parse_case_documents(self, cell: HtmlElement) -> list[TexasCaseDocument]:
+    @staticmethod
+    def _parse_case_documents(cell: HtmlElement) -> list[TexasCaseDocument]:
+        """
+        Helper method to parse case documents for a given docket entry.
+
+        Tries to find a table in the given cell and extracts the document URLs and names from it. If no table is found, returns an empty list.
+
+        :return: List of case documents.
+        """
         table = cell.find(".//table")
         if table is None:
             return []
@@ -268,41 +286,49 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         ]
 
     def _parse_case_events(self) -> list[TexasCaseEvent]:
-        table = self.tree.find(
-            './/table[@id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"]'
-        )
-        events = parse_table(table)
+        """
+        Extracts and parses case events.
+
+        This method processes the "Case Events" table and produces a list of
+        TexasCaseEvent objects. If the table is empty, an empty list is returned.
+
+        :return: A list of parsed TexasCaseEvent objects.
+        """
         # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
-        if len(events["Event Type"]) == 0:
+        if len(self.events["Event Type"]) == 0:
             return []
-        n = len(events["Date"])
+        n = len(self.events["Date"])
 
         return [
             TexasCaseEvent(
                 date=datetime.strptime(
-                    clean_string(events["Date"][i].text_content()),
+                    clean_string(self.events["Date"][i].text_content()),
                     self.date_format,
                 ),
-                type=clean_string(events["Event Type"][i].text_content()),
-                documents=self._parse_case_documents(events["Document"][i]),
-                disposition=clean_string(events["Disposition"][i].text_content())
+                type=clean_string(self.events["Event Type"][i].text_content()),
+                documents=self._parse_case_documents(self.events["Document"][i]),
+                disposition=clean_string(self.events["Disposition"][i].text_content())
             )
             for i in range(n)
         ]
 
     def _parse_appellate_briefs(self) -> list[TexasAppellateBrief]:
-        table = self.tree.find(
-            './/table[@id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"]'
-        )
-        briefs = parse_table(table)
+        """
+        Extracts and parses appellate briefs.
+
+        This method processes the "Appellate Briefs" table and produces a list of
+        TexasAppellateBrief objects. If the table is empty, an empty list is returned.
+
+        :return: A list of parsed TexasAppellateBrief objects.
+        """
         # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
-        if len(briefs["Event Type"]) == 0:
+        if len(self.briefs["Event Type"]) == 0:
             return []
-        n = len(briefs["Date"])
+        n = len(self.briefs["Date"])
 
         return [TexasAppellateBrief(
-            date=datetime.strptime(clean_string(briefs["Date"][i].text_content()), self.date_format),
-            type=clean_string(briefs["Event Type"][i].text_content()),
-            documents=self._parse_case_documents(briefs["Document"][i]),
-            description=clean_string(briefs["Description"][i].text_content())
+            date=datetime.strptime(clean_string(self.briefs["Date"][i].text_content()), self.date_format),
+            type=clean_string(self.briefs["Event Type"][i].text_content()),
+            documents=self._parse_case_documents(self.briefs["Document"][i]),
+            description=clean_string(self.briefs["Description"][i].text_content())
         ) for i in range(n)]
