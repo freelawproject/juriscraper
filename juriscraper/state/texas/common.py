@@ -51,21 +51,44 @@ class TexasTrialCourt(TypedDict):
 
 
 class TexasCaseDocument(TypedDict):
+    """
+    Schema for Texas case document details.
+
+    :ivar url: The URL of the document.
+    :ivar name: The name of the document (may be empty).
+    """
     url: str
     name: str
 
 
 class TexasDocketEntry(TypedDict):
+    """
+    Schema for Texas docket entry details.
+
+    :ivar date: The date of the docket entry.
+    :ivar type: The type of the docket entry (e.g., "Notice of appeal received").
+    :ivar documents: Any documents associated with the docket entry.
+    """
     date: datetime
     type: str
     documents: list[TexasCaseDocument]
 
 
 class TexasCaseEvent(TexasDocketEntry):
+    """
+    Extension of `TexasDocketEntry` to handle rows from the "Case Events" table.
+
+    :ivar disposition: The value of the "Disposition" column (e.g., "Filing granted")
+    """
     disposition: str
 
 
 class TexasAppellateBrief(TexasDocketEntry):
+    """
+    Extension of `TexasDocketEntry` to handle rows from the "Appellate Briefs" table.
+
+    :ivar description: The value of the "Description" column (e.g., "Relator")
+    """
     description: str
 
 
