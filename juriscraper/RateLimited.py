@@ -53,10 +53,13 @@ class RateLimited:
             False if outside working hours.
         """
         config = self.get_rate_limit_config()
-        if config and "working_hours" in config:
-            if not self._check_working_hours(config["working_hours"]):
-                logger.info("Request is outside of allowed working hours")
-                return False
+        if (
+            config
+            and "working_hours" in config
+            and not self._check_working_hours(config["working_hours"])
+        ):
+            logger.info("Request is outside of allowed working hours")
+            return False
         return True
 
     @staticmethod
@@ -137,4 +140,3 @@ class RateLimited:
             return RateLimited._check_time_window(
                 current_hour, start_hour, end_hour
             )
-
