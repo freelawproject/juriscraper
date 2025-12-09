@@ -68,6 +68,7 @@ class Site(OpinionSiteLinear):
                 parent = element.getparent()
                 if parent is not None:
                     parent.remove(element)
+
         # Remove the a tags so we dont link around to broken places
         for a_tag in tree.xpath("//a"):
             span = html.Element("span")
@@ -83,6 +84,12 @@ class Site(OpinionSiteLinear):
             for sibling in opinions_navigation.itersiblings(preceding=True):
                 parent.remove(sibling)
             opinions_navigation.getparent().remove(opinions_navigation)
+
+        # remove comments that generate duplicates
+        comments = tree.xpath("//comment()")
+        for comment in comments:
+            if comment.getparent():
+                comment.getparent().remove(comment)
 
         # Find the core element with id 'oscn-content'
         core_element = tree.xpath("//*[@id='oscn-content']")[0]
