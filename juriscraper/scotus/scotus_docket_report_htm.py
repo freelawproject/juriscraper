@@ -155,6 +155,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
         return {
             "date_filed": self.normalize_date(date_str),
+            "document_number": None,
             "description": description,
             "description_html": description_html,
             "attachments": [],
