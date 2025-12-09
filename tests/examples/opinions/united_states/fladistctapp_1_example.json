@@ -1,0 +1,2683 @@
+{
+    "searchParams": {
+        "query": "",
+        "searchEngine": "solr",
+        "siteaccess": "1dca",
+        "offset": 0,
+        "view": "full",
+        "exactMatch": null,
+        "startDate": "2024-12-08",
+        "endDate": "2025-12-08",
+        "searchType": "opinions",
+        "scopes": [
+            "first_district_court_of_appeal"
+        ],
+        "date": null,
+        "limit": 50,
+        "sort": "opinion/disposition_date desc, opinion/case_number asc",
+        "recentOnly": false,
+        "types": [
+            "Written",
+            "PCA",
+            "Citation"
+        ],
+        "activeOnly": false,
+        "active_only": false,
+        "nonActiveOnly": false,
+        "nonactive_only": false,
+        "show_scopes": false,
+        "hide_search": false,
+        "hide_filters": false,
+        "opinionsSearchFields": []
+    },
+    "allScopes": {
+        "2451807": {
+            "label": "Supreme Court",
+            "value": "supreme_court"
+        },
+        "50651": {
+            "label": "First DCA",
+            "value": "first_district_court_of_appeal"
+        },
+        "247": {
+            "label": "Second DCA",
+            "value": "second_district_court_of_appeal"
+        },
+        "248": {
+            "label": "Third DCA",
+            "value": "third_district_court_of_appeal"
+        },
+        "60": {
+            "label": "Fourth DCA",
+            "value": "fourth_district_court_of_appeal"
+        },
+        "202379": {
+            "label": "Fifth DCA",
+            "value": "fifth_district_court_of_appeal"
+        },
+        "850596": {
+            "label": "Sixth DCA",
+            "value": "sixth_district_court_of_appeal"
+        }
+    },
+    "pagerHtml": "<div class=\"pagination\"><ul class='pagination'><li class=\"prev disabled\"><span>Previous</span></li><li class=\"active\"><span>1</span></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=50&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">2</a></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=100&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">3</a></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=150&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">4</a></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=200&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">5</a></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=250&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">6</a></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=300&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">7</a></li><li class=\"disabled\"><span>&hellip;</span></li><li><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=2150&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\">44</a></li><li class=\"next\"><a href=\"?query=&searchEngine=solr&siteaccess=1dca&offset=50&view=full&startDate=2024-12-08&endDate=2025-12-08&searchType=opinions&scopes[0]=first_district_court_of_appeal&limit=50&sort=opinion/disposition_date desc, opinion/case_number asc&recentOnly=0&types[0]=Written&types[1]=PCA&types[2]=Citation&activeOnly=0&active_only=0&nonActiveOnly=0&nonactive_only=0&show_scopes=0&hide_search=0&hide_filters=0&type[0]=Written&type[1]=PCA&type[2]=Citation\" rel=\"next\">Next</a></li></ul></div>",
+    "searchResults": [
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-3176",
+                "isInNewTab": false,
+                "locationId": 2532456,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/05/2025-3176",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481721,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/05/2025-3176",
+                "typeIdentifier": "opinion",
+                "name": "2025-3176",
+                "modified": 1765222521,
+                "fields": {
+                    "case_number": "2025-3176",
+                    "opinion": {
+                        "uri": "/content/download/2481721/opinion/Opinion_2025-3176.pdf",
+                        "fileName": "download?documentVersionID=16d5cf67-67af-4fae-a0b1-6025ab7b13bb",
+                        "fileSize": 57768,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "S.T. v. Department of Children and Families.",
+                    "disposition": "Petition - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-05 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Denied",
+                    "remote_id": "ctrack_19202381|2025-3176"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-1144",
+                "isInNewTab": false,
+                "locationId": 2532485,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-1144",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481750,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-1144",
+                "typeIdentifier": "opinion",
+                "name": "2024-1144",
+                "modified": 1765224743,
+                "fields": {
+                    "case_number": "2024-1144",
+                    "opinion": {
+                        "uri": "/content/download/2481750/opinion/Opinion_2024-1144.pdf",
+                        "fileName": "download?documentVersionID=86401ac3-5bb9-4aa7-8e19-05938672022f",
+                        "fileSize": 56694,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Dortly v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200863|2024-1144"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-1613",
+                "isInNewTab": false,
+                "locationId": 2532475,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-1613",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481740,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-1613",
+                "typeIdentifier": "opinion",
+                "name": "2024-1613",
+                "modified": 1765224090,
+                "fields": {
+                    "case_number": "2024-1613",
+                    "opinion": {
+                        "uri": "/content/download/2481740/opinion/Opinion_2024-1613.pdf",
+                        "fileName": "download?documentVersionID=88569f2e-b556-449e-adb2-07e1217e2523",
+                        "fileSize": 57940,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Hollifield v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200873|2024-1613"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2465",
+                "isInNewTab": false,
+                "locationId": 2532486,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-2465",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481751,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-2465",
+                "typeIdentifier": "opinion",
+                "name": "2024-2465",
+                "modified": 1765224734,
+                "fields": {
+                    "case_number": "2024-2465",
+                    "opinion": {
+                        "uri": "/content/download/2481751/opinion/Opinion_2024-2465.pdf",
+                        "fileName": "download?documentVersionID=6a4da838-daa6-4851-b906-dc0d9973342d",
+                        "fileSize": 57267,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Defeudis v. Pennington",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200898|2024-2465"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2891",
+                "isInNewTab": false,
+                "locationId": 2532474,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-2891",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481739,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2024-2891",
+                "typeIdentifier": "opinion",
+                "name": "2024-2891",
+                "modified": 1765224095,
+                "fields": {
+                    "case_number": "2024-2891",
+                    "opinion": {
+                        "uri": "/content/download/2481739/opinion/Opinion_2024-2891.pdf",
+                        "fileName": "download?documentVersionID=16a30661-1611-44d7-affb-e3622bee5236",
+                        "fileSize": 57154,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Howard v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200910|2024-2891"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0630",
+                "isInNewTab": false,
+                "locationId": 2532488,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-0630",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481753,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-0630",
+                "typeIdentifier": "opinion",
+                "name": "2025-0630",
+                "modified": 1765224739,
+                "fields": {
+                    "case_number": "2025-0630",
+                    "opinion": {
+                        "uri": "/content/download/2481753/opinion/Opinion_2025-0630.pdf",
+                        "fileName": "download?documentVersionID=11083a77-67e0-4f22-b757-fbab90097b59",
+                        "fileSize": 57235,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Thomas v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200917|2025-0630"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0886",
+                "isInNewTab": false,
+                "locationId": 2532487,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-0886",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481752,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-0886",
+                "typeIdentifier": "opinion",
+                "name": "2025-0886",
+                "modified": 1765224751,
+                "fields": {
+                    "case_number": "2025-0886",
+                    "opinion": {
+                        "uri": "/content/download/2481752/opinion/Opinion_2025-0886.pdf",
+                        "fileName": "download?documentVersionID=5c8d9553-0361-415b-868a-edb28123e5e8",
+                        "fileSize": 55450,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Woullard v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200922|2025-0886"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1226",
+                "isInNewTab": false,
+                "locationId": 2532477,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-1226",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481742,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-1226",
+                "typeIdentifier": "opinion",
+                "name": "2025-1226",
+                "modified": 1765224091,
+                "fields": {
+                    "case_number": "2025-1226",
+                    "opinion": {
+                        "uri": "/content/download/2481742/opinion/Opinion_2025-1226.pdf",
+                        "fileName": "download?documentVersionID=221ff060-2f4b-4fcf-a2db-0b3848b4b10a",
+                        "fileSize": 56285,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Wieland v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200930|2025-1226"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1441",
+                "isInNewTab": false,
+                "locationId": 2532476,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-1441",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481741,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/04/2025-1441",
+                "typeIdentifier": "opinion",
+                "name": "2025-1441",
+                "modified": 1765224087,
+                "fields": {
+                    "case_number": "2025-1441",
+                    "opinion": {
+                        "uri": "/content/download/2481741/opinion/Opinion_2025-1441.pdf",
+                        "fileName": "download?documentVersionID=7bd61b0d-8731-413e-b3a6-82f2b3881866",
+                        "fileSize": 55260,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Wilson v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19200937|2025-1441"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1599",
+                "isInNewTab": false,
+                "locationId": 2532461,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/04/2025-1599",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481726,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/04/2025-1599",
+                "typeIdentifier": "opinion",
+                "name": "2025-1599",
+                "modified": 1765222890,
+                "fields": {
+                    "case_number": "2025-1599",
+                    "opinion": {
+                        "uri": "/content/download/2481726/opinion/Opinion_2025-1599.pdf",
+                        "fileName": "download?documentVersionID=508e7d4f-ba7b-4b17-b69d-38c5909733d4",
+                        "fileSize": 55406,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Hale v. State of Florida",
+                    "disposition": "Petition - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Dismissed",
+                    "remote_id": "ctrack_19200941|2025-1599"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1974",
+                "isInNewTab": false,
+                "locationId": 2532454,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/04/2025-1974",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481719,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/04/2025-1974",
+                "typeIdentifier": "opinion",
+                "name": "2025-1974",
+                "modified": 1765222520,
+                "fields": {
+                    "case_number": "2025-1974",
+                    "opinion": {
+                        "uri": "/content/download/2481719/opinion/Opinion_2025-1974.pdf",
+                        "fileName": "download?documentVersionID=ec6bf27c-da94-4e21-bb91-28dab5024324",
+                        "fileSize": 56207,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Delgado v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Dismissed",
+                    "remote_id": "ctrack_19200947|2025-1974"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-2480",
+                "isInNewTab": false,
+                "locationId": 2532460,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/04/2025-2480",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481725,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/04/2025-2480",
+                "typeIdentifier": "opinion",
+                "name": "2025-2480",
+                "modified": 1765222893,
+                "fields": {
+                    "case_number": "2025-2480",
+                    "opinion": {
+                        "uri": "/content/download/2481725/opinion/Opinion_2025-2480.pdf",
+                        "fileName": "download?documentVersionID=2010eb0d-cb1f-4e78-886c-1a62947164c5",
+                        "fileSize": 56543,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Washington v. State of Florida",
+                    "disposition": "Petition - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-04 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Dismissed",
+                    "remote_id": "ctrack_19200961|2025-2480"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2023-1893",
+                "isInNewTab": false,
+                "locationId": 2532462,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/03/2023-1893",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481727,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/03/2023-1893",
+                "typeIdentifier": "opinion",
+                "name": "2023-1893",
+                "modified": 1765222905,
+                "fields": {
+                    "case_number": "2023-1893",
+                    "opinion": {
+                        "uri": "/content/download/2481727/opinion/Opinion_2023-1893.pdf",
+                        "fileName": "download?documentVersionID=9893c237-ccd1-4613-a727-23b69ab48494",
+                        "fileSize": 133738,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Hinson v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Non-dispositive - withdrawn 12/3/25 as issued in error",
+                    "remote_id": "ctrack_19198106|2023-1893"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2012",
+                "isInNewTab": false,
+                "locationId": 2532458,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2012",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481723,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2012",
+                "typeIdentifier": "opinion",
+                "name": "2024-2012",
+                "modified": 1765222873,
+                "fields": {
+                    "case_number": "2024-2012",
+                    "opinion": {
+                        "uri": "/content/download/2481723/opinion/Opinion_2024-2012.pdf",
+                        "fileName": "download?documentVersionID=238b029e-06c1-4bd4-82d3-5a164d4841b3",
+                        "fileSize": 76699,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Dunlap v. Needle Rush Point Owners' Association, Inc.",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Reversed",
+                    "remote_id": "ctrack_19198180|2024-2012"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2148",
+                "isInNewTab": false,
+                "locationId": 2532457,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2148",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481722,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2148",
+                "typeIdentifier": "opinion",
+                "name": "2024-2148",
+                "modified": 1765222870,
+                "fields": {
+                    "case_number": "2024-2148",
+                    "opinion": {
+                        "uri": "/content/download/2481722/opinion/Opinion_2024-2148.pdf",
+                        "fileName": "download?documentVersionID=9e47ce1c-26a2-4f73-b7a2-d14292b0062a",
+                        "fileSize": 89256,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Lantz v. Gibson",
+                    "disposition": "Appeal - Authored Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Reversed",
+                    "remote_id": "ctrack_19198217|2024-2148"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2186",
+                "isInNewTab": false,
+                "locationId": 2532451,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2186",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481716,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2186",
+                "typeIdentifier": "opinion",
+                "name": "2024-2186",
+                "modified": 1765222157,
+                "fields": {
+                    "case_number": "2024-2186",
+                    "opinion": {
+                        "uri": "/content/download/2481716/opinion/Opinion_2024-2186.pdf",
+                        "fileName": "download?documentVersionID=74ae17a2-9b32-4fbc-af7b-bed4375c576b",
+                        "fileSize": 97660,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Heule v. Humphrey",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Reversed",
+                    "remote_id": "ctrack_19198236|2024-2186"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2187",
+                "isInNewTab": false,
+                "locationId": 2532450,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2187",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481715,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2187",
+                "typeIdentifier": "opinion",
+                "name": "2024-2187",
+                "modified": 1765222156,
+                "fields": {
+                    "case_number": "2024-2187",
+                    "opinion": {
+                        "uri": "/content/download/2481715/opinion/Opinion_2024-2187.pdf",
+                        "fileName": "download?documentVersionID=74ae17a2-9b32-4fbc-af7b-bed4375c576b",
+                        "fileSize": 97660,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Heule v. Humphrey",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Reversed",
+                    "remote_id": "ctrack_19198236|2024-2187"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2329",
+                "isInNewTab": false,
+                "locationId": 2532453,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2329",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481718,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2329",
+                "typeIdentifier": "opinion",
+                "name": "2024-2329",
+                "modified": 1765222494,
+                "fields": {
+                    "case_number": "2024-2329",
+                    "opinion": {
+                        "uri": "/content/download/2481718/opinion/Opinion_2024-2329.pdf",
+                        "fileName": "download?documentVersionID=64e943e4-e45e-4f9a-a4a8-81081b12fc45",
+                        "fileSize": 81648,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Jamie Laiquan Frazier v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19198275|2024-2329"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2856",
+                "isInNewTab": false,
+                "locationId": 2532446,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2856",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481711,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-2856",
+                "typeIdentifier": "opinion",
+                "name": "2024-2856",
+                "modified": 1765222133,
+                "fields": {
+                    "case_number": "2024-2856",
+                    "opinion": {
+                        "uri": "/content/download/2481711/opinion/Opinion_2024-2856.pdf",
+                        "fileName": "download?documentVersionID=bcfeb664-6348-408f-982a-e21041c98730",
+                        "fileSize": 93966,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "State of Florida v. Milton",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Reversed",
+                    "remote_id": "ctrack_19198290|2024-2856"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-3125",
+                "isInNewTab": false,
+                "locationId": 2532447,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-3125",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481712,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2024-3125",
+                "typeIdentifier": "opinion",
+                "name": "2024-3125",
+                "modified": 1765222134,
+                "fields": {
+                    "case_number": "2024-3125",
+                    "opinion": {
+                        "uri": "/content/download/2481712/opinion/Opinion_2024-3125.pdf",
+                        "fileName": "download?documentVersionID=94cc42b1-529f-423b-9364-0d6aebfbf213",
+                        "fileSize": 76375,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Christopher McQuay v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Reversed",
+                    "remote_id": "ctrack_19198316|2024-3125"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0085",
+                "isInNewTab": false,
+                "locationId": 2532445,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2025-0085",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481710,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2025-0085",
+                "typeIdentifier": "opinion",
+                "name": "2025-0085",
+                "modified": 1765222129,
+                "fields": {
+                    "case_number": "2025-0085",
+                    "opinion": {
+                        "uri": "/content/download/2481710/opinion/Opinion_2025-0085.pdf",
+                        "fileName": "download?documentVersionID=58a60cae-e60c-48e2-b485-3859bda936f3",
+                        "fileSize": 71529,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Zacharko v. Sarasota County School Board, Commercial Risk Management, Inc.",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19198336|2025-0085"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1448",
+                "isInNewTab": false,
+                "locationId": 2532448,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2025-1448",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481713,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2025-1448",
+                "typeIdentifier": "opinion",
+                "name": "2025-1448",
+                "modified": 1765222135,
+                "fields": {
+                    "case_number": "2025-1448",
+                    "opinion": {
+                        "uri": "/content/download/2481713/opinion/Opinion_2025-1448.pdf",
+                        "fileName": "download?documentVersionID=086f2d45-a59e-4848-a0c4-d931230ca87f",
+                        "fileSize": 70074,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Jordan v. State of Florida",
+                    "disposition": "Appeal - Citation",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19198345|2025-1448"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1808",
+                "isInNewTab": false,
+                "locationId": 2532459,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2025-1808",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481724,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/03/2025-1808",
+                "typeIdentifier": "opinion",
+                "name": "2025-1808",
+                "modified": 1765222871,
+                "fields": {
+                    "case_number": "2025-1808",
+                    "opinion": {
+                        "uri": "/content/download/2481724/opinion/Opinion_2025-1808.pdf",
+                        "fileName": "download?documentVersionID=d92a3cba-fbe6-4215-82fe-7f99dd6d7bd0",
+                        "fileSize": 71416,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Kidder v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-03 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Dismissed",
+                    "remote_id": "ctrack_19198398|2025-1808"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2356",
+                "isInNewTab": false,
+                "locationId": 2532482,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2024-2356",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481747,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2024-2356",
+                "typeIdentifier": "opinion",
+                "name": "2024-2356",
+                "modified": 1765224698,
+                "fields": {
+                    "case_number": "2024-2356",
+                    "opinion": {
+                        "uri": "/content/download/2481747/opinion/Opinion_2024-2356.pdf",
+                        "fileName": "download?documentVersionID=e8e5c38d-07cc-4d08-b39a-ae7636485dcc",
+                        "fileSize": 56350,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Russo v. Russo",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-02 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19197034|2024-2356"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2814",
+                "isInNewTab": false,
+                "locationId": 2532473,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2024-2814",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481738,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2024-2814",
+                "typeIdentifier": "opinion",
+                "name": "2024-2814",
+                "modified": 1765224074,
+                "fields": {
+                    "case_number": "2024-2814",
+                    "opinion": {
+                        "uri": "/content/download/2481738/opinion/Opinion_2024-2814.pdf",
+                        "fileName": "download?documentVersionID=b09952d5-7fd3-4f20-8961-393ff0a6a999",
+                        "fileSize": 58174,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Walters v. Department of Revenue, Byfied",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-02 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19197075|2024-2814"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0198",
+                "isInNewTab": false,
+                "locationId": 2532483,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-0198",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481748,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-0198",
+                "typeIdentifier": "opinion",
+                "name": "2025-0198",
+                "modified": 1765224699,
+                "fields": {
+                    "case_number": "2025-0198",
+                    "opinion": {
+                        "uri": "/content/download/2481748/opinion/Opinion_2025-0198.pdf",
+                        "fileName": "download?documentVersionID=4960ad3f-2703-48ab-bccd-ce22c284fd42",
+                        "fileSize": 56885,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Gee v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-02 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19197087|2025-0198"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0336",
+                "isInNewTab": false,
+                "locationId": 2532484,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-0336",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481749,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-0336",
+                "typeIdentifier": "opinion",
+                "name": "2025-0336",
+                "modified": 1765224701,
+                "fields": {
+                    "case_number": "2025-0336",
+                    "opinion": {
+                        "uri": "/content/download/2481749/opinion/Opinion_2025-0336.pdf",
+                        "fileName": "download?documentVersionID=bb73e75a-b0ee-41af-a4cb-fef3183accfb",
+                        "fileSize": 106741,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "City of Alachua, Florida, City of Newberry, Florida v. City of Archer, Florida, Alachua County, Florida, et al",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-02 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19197106|2025-0336"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0539",
+                "isInNewTab": false,
+                "locationId": 2532469,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-0539",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481734,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-0539",
+                "typeIdentifier": "opinion",
+                "name": "2025-0539",
+                "modified": 1765223413,
+                "fields": {
+                    "case_number": "2025-0539",
+                    "opinion": {
+                        "uri": "/content/download/2481734/opinion/Opinion_2025-0539.pdf",
+                        "fileName": "download?documentVersionID=874bd8d7-c465-4b41-b234-ff1975a6fd91",
+                        "fileSize": 56648,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Nixon v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-02 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19197137|2025-0539"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1094",
+                "isInNewTab": false,
+                "locationId": 2532468,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-1094",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481733,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/02/2025-1094",
+                "typeIdentifier": "opinion",
+                "name": "2025-1094",
+                "modified": 1765223415,
+                "fields": {
+                    "case_number": "2025-1094",
+                    "opinion": {
+                        "uri": "/content/download/2481733/opinion/Opinion_2025-1094.pdf",
+                        "fileName": "download?documentVersionID=8d5187bd-43d9-4643-be52-e187a5bd80f3",
+                        "fileSize": 55316,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Livingston v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-02 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19197151|2025-1094"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2023-1616",
+                "isInNewTab": false,
+                "locationId": 2532481,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2023-1616",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481746,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2023-1616",
+                "typeIdentifier": "opinion",
+                "name": "2023-1616",
+                "modified": 1765224711,
+                "fields": {
+                    "case_number": "2023-1616",
+                    "opinion": {
+                        "uri": "/content/download/2481746/opinion/Opinion_2023-1616.pdf",
+                        "fileName": "download?documentVersionID=fc97bf65-e00d-4dff-b362-12fb35eb7288",
+                        "fileSize": 59054,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Kenneth Woliner v.Joseph Ladapo, M.D., in his official capacity as Secretary, the State of Florida Department of Health; Paul  Vazquez, in his official capacity as Executive Director, Florida Board of Medicine",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194608|2023-1616"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-1369",
+                "isInNewTab": false,
+                "locationId": 2532471,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-1369",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481736,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-1369",
+                "typeIdentifier": "opinion",
+                "name": "2024-1369",
+                "modified": 1765224060,
+                "fields": {
+                    "case_number": "2024-1369",
+                    "opinion": {
+                        "uri": "/content/download/2481736/opinion/Opinion_2024-1369.pdf",
+                        "fileName": "download?documentVersionID=f1e84164-cbb1-40b5-8432-81680055d128",
+                        "fileSize": 57945,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Kuriger v. Dion Enterprises, LLC and Bridgefield Casualty Insurance Co.",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194642|2024-1369"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2435",
+                "isInNewTab": false,
+                "locationId": 2532449,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/01/2024-2435",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481714,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/01/2024-2435",
+                "typeIdentifier": "opinion",
+                "name": "2024-2435",
+                "modified": 1765222150,
+                "fields": {
+                    "case_number": "2024-2435",
+                    "opinion": {
+                        "uri": "/content/download/2481714/opinion/Opinion_2024-2435.pdf",
+                        "fileName": "download?documentVersionID=23982bff-224f-400f-96a0-e8277db3b561",
+                        "fileSize": 55683,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Scott v. State of Florida",
+                    "disposition": "Petition - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Dismissed",
+                    "remote_id": "ctrack_19194664|2024-2435"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2525",
+                "isInNewTab": false,
+                "locationId": 2532470,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-2525",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481735,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-2525",
+                "typeIdentifier": "opinion",
+                "name": "2024-2525",
+                "modified": 1765224061,
+                "fields": {
+                    "case_number": "2024-2525",
+                    "opinion": {
+                        "uri": "/content/download/2481735/opinion/Opinion_2024-2525.pdf",
+                        "fileName": "download?documentVersionID=70956458-26b7-406a-ba8e-345a1bb7b6c0",
+                        "fileSize": 56867,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Howard v. Howard",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194680|2024-2525"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2722",
+                "isInNewTab": false,
+                "locationId": 2532465,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-2722",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481730,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-2722",
+                "typeIdentifier": "opinion",
+                "name": "2024-2722",
+                "modified": 1765223400,
+                "fields": {
+                    "case_number": "2024-2722",
+                    "opinion": {
+                        "uri": "/content/download/2481730/opinion/Opinion_2024-2722.pdf",
+                        "fileName": "download?documentVersionID=7ac14590-a138-4fe5-aafd-d9b569ee520b",
+                        "fileSize": 56513,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Rigby v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194700|2024-2722"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2927",
+                "isInNewTab": false,
+                "locationId": 2532479,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-2927",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481744,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-2927",
+                "typeIdentifier": "opinion",
+                "name": "2024-2927",
+                "modified": 1765224713,
+                "fields": {
+                    "case_number": "2024-2927",
+                    "opinion": {
+                        "uri": "/content/download/2481744/opinion/Opinion_2024-2927.pdf",
+                        "fileName": "download?documentVersionID=a1f83058-177b-4266-b088-76814d3b1d1c",
+                        "fileSize": 56418,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Waugh v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194715|2024-2927"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-3225",
+                "isInNewTab": false,
+                "locationId": 2532480,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-3225",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481745,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2024-3225",
+                "typeIdentifier": "opinion",
+                "name": "2024-3225",
+                "modified": 1765224714,
+                "fields": {
+                    "case_number": "2024-3225",
+                    "opinion": {
+                        "uri": "/content/download/2481745/opinion/Opinion_2024-3225.pdf",
+                        "fileName": "download?documentVersionID=45d74ccc-d660-4dfc-9c1d-8f3c1e5a3b9b",
+                        "fileSize": 56931,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Rodriguez v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194723|2024-3225"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0185",
+                "isInNewTab": false,
+                "locationId": 2532464,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0185",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481729,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0185",
+                "typeIdentifier": "opinion",
+                "name": "2025-0185",
+                "modified": 1765223398,
+                "fields": {
+                    "case_number": "2025-0185",
+                    "opinion": {
+                        "uri": "/content/download/2481729/opinion/Opinion_2025-0185.pdf",
+                        "fileName": "download?documentVersionID=8796c459-d423-40d8-917c-a19c9ff1097e",
+                        "fileSize": 57426,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Hope v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194736|2025-0185"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0426",
+                "isInNewTab": false,
+                "locationId": 2532478,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0426",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481743,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0426",
+                "typeIdentifier": "opinion",
+                "name": "2025-0426",
+                "modified": 1765224715,
+                "fields": {
+                    "case_number": "2025-0426",
+                    "opinion": {
+                        "uri": "/content/download/2481743/opinion/Opinion_2025-0426.pdf",
+                        "fileName": "download?documentVersionID=502cac9f-feb3-4a9a-9f1a-7bf0238699c5",
+                        "fileSize": 57152,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Baucham v. Florida State Hospital",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194751|2025-0426"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0714",
+                "isInNewTab": false,
+                "locationId": 2532463,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0714",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481728,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0714",
+                "typeIdentifier": "opinion",
+                "name": "2025-0714",
+                "modified": 1765223401,
+                "fields": {
+                    "case_number": "2025-0714",
+                    "opinion": {
+                        "uri": "/content/download/2481728/opinion/Opinion_2025-0714.pdf",
+                        "fileName": "download?documentVersionID=432080ca-da7f-444e-a651-cd107e2212c8",
+                        "fileSize": 55062,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Moore v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194770|2025-0714"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0871",
+                "isInNewTab": false,
+                "locationId": 2532472,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0871",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481737,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-0871",
+                "typeIdentifier": "opinion",
+                "name": "2025-0871",
+                "modified": 1765224058,
+                "fields": {
+                    "case_number": "2025-0871",
+                    "opinion": {
+                        "uri": "/content/download/2481737/opinion/Opinion_2025-0871.pdf",
+                        "fileName": "download?documentVersionID=eb610eab-c19a-45d7-b5f1-93343f976cc5",
+                        "fileSize": 59164,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Hollingshead Materials, LLC v. Yellow Tag Auctions, LLC, Smyrna Ready Mix Concrete, LLC, et al",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194786|2025-0871"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1181",
+                "isInNewTab": false,
+                "locationId": 2532467,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-1181",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481732,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-1181",
+                "typeIdentifier": "opinion",
+                "name": "2025-1181",
+                "modified": 1765223403,
+                "fields": {
+                    "case_number": "2025-1181",
+                    "opinion": {
+                        "uri": "/content/download/2481732/opinion/Opinion_2025-1181.pdf",
+                        "fileName": "download?documentVersionID=5e3b9031-9241-4688-837d-06e072ee6f6f",
+                        "fileSize": 55921,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Matthews v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194843|2025-1181"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1184",
+                "isInNewTab": false,
+                "locationId": 2532452,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/01/2025-1184",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481717,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/december/01/2025-1184",
+                "typeIdentifier": "opinion",
+                "name": "2025-1184",
+                "modified": 1765222484,
+                "fields": {
+                    "case_number": "2025-1184",
+                    "opinion": {
+                        "uri": "/content/download/2481717/opinion/Opinion_2025-1184.pdf",
+                        "fileName": "download?documentVersionID=ec6ac1c0-f56c-4db7-883f-bb44ed7af029",
+                        "fileSize": 56504,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Meeks v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Dismissed",
+                    "remote_id": "ctrack_19194877|2025-1184"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-1419",
+                "isInNewTab": false,
+                "locationId": 2532466,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-1419",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2481731,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/december/01/2025-1419",
+                "typeIdentifier": "opinion",
+                "name": "2025-1419",
+                "modified": 1765223399,
+                "fields": {
+                    "case_number": "2025-1419",
+                    "opinion": {
+                        "uri": "/content/download/2481731/opinion/Opinion_2025-1419.pdf",
+                        "fileName": "download?documentVersionID=bc9d72d8-e8e6-4b2c-9479-ec60beb1c58b",
+                        "fileSize": 55598,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Wade v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-12-01 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19194895|2025-1419"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-0054",
+                "isInNewTab": false,
+                "locationId": 2522856,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2024-0054",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472114,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2024-0054",
+                "typeIdentifier": "opinion",
+                "name": "2024-0054",
+                "modified": 1765224043,
+                "fields": {
+                    "case_number": "2024-0054",
+                    "opinion": {
+                        "uri": "/content/download/2472114/opinion/Opinion_2024-0054.pdf",
+                        "fileName": "download?documentVersionID=26e50ee8-0b7a-42ef-b4bc-065f6a092a55",
+                        "fileSize": 56905,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Frye v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19191997|2024-0054"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-0907",
+                "isInNewTab": false,
+                "locationId": 2522858,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2024-0907",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472116,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2024-0907",
+                "typeIdentifier": "opinion",
+                "name": "2024-0907",
+                "modified": 1765224746,
+                "fields": {
+                    "case_number": "2024-0907",
+                    "opinion": {
+                        "uri": "/content/download/2472116/opinion/Opinion_2024-0907.pdf",
+                        "fileName": "download?documentVersionID=be7e375f-309a-4fca-8d25-0f39f43993a0",
+                        "fileSize": 59647,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Jacobs v. Family Dollar Distribution Center, Sedgwick CMS",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19192010|2024-0907"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-1587",
+                "isInNewTab": false,
+                "locationId": 2522842,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/november/26/2024-1587",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472100,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/november/26/2024-1587",
+                "typeIdentifier": "opinion",
+                "name": "2024-1587",
+                "modified": 1765222512,
+                "fields": {
+                    "case_number": "2024-1587",
+                    "opinion": {
+                        "uri": "/content/download/2472100/opinion/Opinion_2024-1587.pdf",
+                        "fileName": "download?documentVersionID=4af45ff7-2169-407b-ac1a-97fe37ba57e7",
+                        "fileSize": 75952,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Sheffield v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19191811|2024-1587"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-1996",
+                "isInNewTab": false,
+                "locationId": 2522866,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2024-1996",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472124,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2024-1996",
+                "typeIdentifier": "opinion",
+                "name": "2024-1996",
+                "modified": 1765224686,
+                "fields": {
+                    "case_number": "2024-1996",
+                    "opinion": {
+                        "uri": "/content/download/2472124/opinion/Opinion_2024-1996.pdf",
+                        "fileName": "download?documentVersionID=cbb4be9e-b918-48ab-bd3c-9e2d8bab4bf9",
+                        "fileSize": 56660,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "William Charles Carawan Jr v. State of Florida",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19192039|2024-1996"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2283",
+                "isInNewTab": false,
+                "locationId": 2522843,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/november/26/2024-2283",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472101,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/november/26/2024-2283",
+                "typeIdentifier": "opinion",
+                "name": "2024-2283",
+                "modified": 1765222495,
+                "fields": {
+                    "case_number": "2024-2283",
+                    "opinion": {
+                        "uri": "/content/download/2472101/opinion/Opinion_2024-2283.pdf",
+                        "fileName": "download?documentVersionID=2a40318f-51e5-470d-8337-06f0199e9368",
+                        "fileSize": 70623,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Service American Indemnity Company/PMA Insurance Group and Robert B. Hess Racing, Inc. v. Bulfrano Andres Bahena",
+                    "disposition": "Appeal - Per Curiam Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19191826|2024-2283"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-2730",
+                "isInNewTab": false,
+                "locationId": 2522846,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/november/26/2024-2730",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472104,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/Written-Opinions/2025/november/26/2024-2730",
+                "typeIdentifier": "opinion",
+                "name": "2024-2730",
+                "modified": 1765222126,
+                "fields": {
+                    "case_number": "2024-2730",
+                    "opinion": {
+                        "uri": "/content/download/2472104/opinion/Opinion_2024-2730.pdf",
+                        "fileName": "download?documentVersionID=02f947ca-0d32-4a50-8a40-691fd11b97bb",
+                        "fileSize": 94273,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Russell, etc. v. Florida Department of Corrections",
+                    "disposition": "Appeal - Authored Opinion",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19191846|2024-2730"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "1DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2025-0719",
+                "isInNewTab": false,
+                "locationId": 2522876,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2025-0719",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2472134,
+                "url": "https://1dca.flcourts.gov/opinions/Opinions-Archive/PCAs-PCDs/2025/november2/26/2025-0719",
+                "typeIdentifier": "opinion",
+                "name": "2025-0719",
+                "modified": 1765224048,
+                "fields": {
+                    "case_number": "2025-0719",
+                    "opinion": {
+                        "uri": "/content/download/2472134/opinion/Opinion_2025-0719.pdf",
+                        "fileName": "download?documentVersionID=6f87f889-1aae-4040-b0cd-c90393da2748",
+                        "fileSize": 57055,
+                        "mimeType": "application/pdf"
+                    },
+                    "case_style": "Rajasekhar v. Reemployment Assistance Appeals Commission and 22nd Century Technologies, Inc.",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2025-11-26 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_19192057|2025-0719"
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "1DCA"
+        }
+    ],
+    "totalCount": 2199,
+    "availableFilters": {
+        "Content Type": {
+            "48": {
+                "title": "Opinion",
+                "count": 2199,
+                "identifier": "contentType",
+                "value": "48",
+                "active": false
+            }
+        }
+    },
+    "activeFilters": [],
+    "siteaccess": "1dca",
+    "view": "full",
+    "sort": "opinion/disposition_date desc, opinion/case_number asc",
+    "template": "full"
+}

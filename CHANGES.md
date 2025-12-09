@@ -21,8 +21,9 @@ Changes:
 - Added more fields to the SCOTUS docket parsers
 
 Fixes:
--
-
+- fix `okla` improve cleanup_content method to use CSS selectors and return bytes #1692
+- Fix `fla` and `fladistctapp` scrapers by scraping new API endpoint #1690
+- fix `uscgcoca` and `asbca` headers #1664
 
 ## Current
 
