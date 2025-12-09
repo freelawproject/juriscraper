@@ -4,6 +4,7 @@ from typing import TypedDict
 from lxml import html
 from lxml.html import HtmlElement
 
+from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.html_utils import clean_html, parse_table
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.scraper import Scraper
@@ -49,6 +50,25 @@ class TexasTrialCourt(TypedDict):
     punishment: str
 
 
+class TexasCaseDocument(TypedDict):
+    url: str
+    name: str
+
+
+class TexasDocketEntry(TypedDict):
+    date: datetime
+    type: str
+    documents: list[TexasCaseDocument]
+
+
+class TexasCaseEvent(TexasDocketEntry):
+    disposition: str
+
+
+class TexasAppellateBrief(TexasDocketEntry):
+    description: str
+
+
 class TexasCommonData(TypedDict):
     """
     Schema for data common to all Texas dockets.
@@ -67,6 +87,8 @@ class TexasCommonData(TypedDict):
     case_type: str
     parties: list[TexasCaseParty]
     trial_court: TexasTrialCourt
+    case_events: list[TexasCaseEvent]
+    appellate_briefs: list[TexasAppellateBrief]
 
 
 class TexasCommonScraper(Scraper[TexasCommonData]):
@@ -83,6 +105,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     :ivar tree: The HTML tree of the docket page.
     :ivar is_valid: `True` if the HTML tree has been successfully parsed by calling `_parse_text`, `False` otherwise.
     """
+    date_format = "%m/%d/%Y"
+    base_url = "https://search.txcourts.gov"
 
     def __init__(self, court_id: str) -> None:
         super().__init__(court_id)
@@ -98,6 +122,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         :param text: The raw HTML string.
         """
         self.tree = html.fromstring(clean_html(text))
+        self.tree.rewrite_links(fix_links_but_keep_anchors, base_href=self.base_url)
         self.is_valid = True
 
     @property
@@ -119,6 +144,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             case_type=self._parse_case_type(),
             parties=self._parse_parties(),
             trial_court=self._parse_trial_court(),
+            case_events=self._parse_case_events(),
+            appellate_briefs=self._parse_appellate_briefs()
         )
         return data
 
@@ -143,7 +170,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         date_string = clean_string(self.tree.find(
             './/*[@id="case"]/../*[2]/div[2]/div'
         ).text_content())
-        return datetime.strptime(date_string, "%m/%d/%Y")
+        return datetime.strptime(date_string, self.date_format)
 
     def _parse_case_type(self) -> str:
         """
@@ -169,9 +196,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         return [
             TexasCaseParty(
-                name=parties["Party"][i][0],
-                type=parties["PartyType"][i][0],
-                representatives=parties["Representative"][i],
+                name=clean_string(parties["Party"][i].text_content()),
+                type=clean_string(parties["PartyType"][i].text_content()),
+                representatives=[clean_string(text) for text in parties["Representative"][i].xpath(".//text()")],
             )
             for i in range(n_parties)
         ]
@@ -201,3 +228,58 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             reporter=fields.get("Reporter", ""),
             punishment=fields.get("Punishment", ""),
         )
+
+    def _parse_case_documents(self, cell: HtmlElement) -> list[TexasCaseDocument]:
+        table = cell.find(".//table")
+        if table is None:
+            return []
+        documents = parse_table(table)
+        n = len(documents["0"])
+
+        return [
+            TexasCaseDocument(
+                url=documents["0"][i].find(".//a").get("href"),
+                name=clean_string(documents["1"][i].text_content())
+            )
+            for i in range(n)
+        ]
+
+    def _parse_case_events(self) -> list[TexasCaseEvent]:
+        table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"]'
+        )
+        events = parse_table(table)
+        # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
+        if len(events["Event Type"]) == 0:
+            return []
+        n = len(events["Date"])
+
+        return [
+            TexasCaseEvent(
+                date=datetime.strptime(
+                    clean_string(events["Date"][i].text_content()),
+                    self.date_format,
+                ),
+                type=clean_string(events["Event Type"][i].text_content()),
+                documents=self._parse_case_documents(events["Document"][i]),
+                disposition=clean_string(events["Disposition"][i].text_content())
+            )
+            for i in range(n)
+        ]
+
+    def _parse_appellate_briefs(self) -> list[TexasAppellateBrief]:
+        table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"]'
+        )
+        briefs = parse_table(table)
+        # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
+        if len(briefs["Event Type"]) == 0:
+            return []
+        n = len(briefs["Date"])
+
+        return [TexasAppellateBrief(
+            date=datetime.strptime(clean_string(briefs["Date"][i].text_content()), self.date_format),
+            type=clean_string(briefs["Event Type"][i].text_content()),
+            documents=self._parse_case_documents(briefs["Document"][i]),
+            description=clean_string(briefs["Description"][i].text_content())
+        ) for i in range(n)]

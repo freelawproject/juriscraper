@@ -281,19 +281,19 @@ def is_html(response: Response) -> bool:
     return "text/html" in response.headers.get("content-type", "")
 
 
-def parse_table(table: HtmlElement) -> dict[str, list[list[str]]]:
+def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
     # TODO: Would probably save a lot of time in future state scrapers to update this to handle tabular data that isn't stored in a table element, but that is a relatively large project and I'm not sure how often it would be useful.
     headers = [clean_string(th.text_content()) for th in table.xpath(".//thead//th")]
-
+    if len(headers) == 0:
+        headers = list(map(str, range(len(table.find(".//tr").findall(".//td")))))
+        rows = table.findall(".//tr")
+    else:
+        rows = table.findall(".//tbody/tr")
     columns = {header: [] for header in headers}
 
-    rows = table.xpath(".//tbody/tr")
-
     for row in rows:
-        cells = row.xpath(".//td")
+        cells = row.findall(".//td")
         for header, cell in zip(headers, cells):
-            # Should split text content on <br/>s
-            text_parts = [clean_string(text) for text in cell.xpath(".//text()")]
-            columns[header].append(text_parts)
+            columns[header].append(cell)
 
     return columns
