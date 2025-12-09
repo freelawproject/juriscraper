@@ -137,4 +137,3 @@ class RateLimited:
             return RateLimited._check_time_window(
                 current_hour, start_hour, end_hour
             )
-
