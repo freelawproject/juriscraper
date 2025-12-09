@@ -277,3 +277,19 @@ def is_html(response: Response) -> bool:
     """Determines whether the item downloaded is an HTML document or something
     else."""
     return "text/html" in response.headers.get("content-type", "")
+
+
+def parse_table(table: HtmlElement) -> dict[str, list[str]]:
+    # TODO: Would probably save a lot of time in future state scrapers to update this to handle tabular data that isn't stored in a table element, but that is a relatively large project and I'm not sure how often it would be useful.
+    headers = [th.text_content().strip() for th in table.xpath(".//thead//th")]
+
+    columns = {header: [] for header in headers}
+
+    rows = table.xpath(".//tbody/tr")
+
+    for row in rows:
+        cells = row.xpath(".//td")
+        for header, cell in zip(headers, cells):
+            columns[header].append(cell.text_content().strip())
+
+    return columns
