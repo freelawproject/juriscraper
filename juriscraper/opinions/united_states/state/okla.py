@@ -63,13 +63,25 @@ class Site(OpinionSiteLinear):
         """
         content = content.decode("ISO-8859-1")
         tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
-        for removal_class in ["tmp-citationizer", "footer", "published-info"]:
-            for element in tree.xpath(f"//div[@class='{removal_class}']"):
+
+        # Remove unwanted elements using CSS selectors
+        selectors_to_remove = [
+            ".tmp-citationizer",
+            ".footer",
+            "footer",
+            ".published-info",
+            "#opinons-navigation",  # old versions typo
+            "#opinions-navigation",
+        ]
+
+        for selector in selectors_to_remove:
+            for element in tree.cssselect(selector):
                 parent = element.getparent()
                 if parent is not None:
                     parent.remove(element)
 
         # Remove the a tags so we dont link around to broken places
+        # Remove the <a> tags so we don't link around to broken places
         for a_tag in tree.xpath("//a"):
             span = html.Element("span")
             span.text = a_tag.text
@@ -94,4 +106,4 @@ class Site(OpinionSiteLinear):
         # Find the core element with id 'oscn-content'
         core_element = tree.xpath("//*[@id='oscn-content']")[0]
         html_content = html.tostring(core_element).decode("ISO-8859-1").strip()
-        return f"<html>{html_content}</html>"
+        return f"<html>{html_content}</html>".encode("ISO-8859-1")
