@@ -18,10 +18,10 @@ Features:
 -
 
 Changes:
--
+- 
 
 Fixes:
--
+- fix `okla` improve cleanup_content method to use CSS selectors and return bytes #1692
 
 
 ## Current
