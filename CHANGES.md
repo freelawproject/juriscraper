@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add a new ClusterSite class that returns OpinionClusters with grouped opinions. See #883
+- Convert `tenn`, `tenncrimapp` and `tennctapp` to ClusterSite #1704
 
 Changes:
 -
