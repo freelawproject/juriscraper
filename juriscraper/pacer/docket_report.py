@@ -1695,7 +1695,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return clean_string(harmonize(case_name))
 
     def _parse_docket_number(
-        self, title_text: Optional[str] = None
+        self
     ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
         """Parse a valid docket number and its components.
 
