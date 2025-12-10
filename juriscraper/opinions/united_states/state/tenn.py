@@ -22,6 +22,9 @@ class Site(OpinionSiteLinear):
         self.first_opinion_date = datetime(1993, 1, 22)
         self.days_interval = 7
         self.make_backscrape_iterable(kwargs)
+        # we got this UA whitelisted #1689
+        self.request["headers"] = {"User-Agent": "Juriscraper"}
+        self.needs_special_headers = True
 
     def _process_html(self):
         """
