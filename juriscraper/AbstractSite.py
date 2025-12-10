@@ -570,7 +570,7 @@ class AbstractSite:
 
     def make_backscrape_iterable(
         self, kwargs: dict
-    ) -> Optional[list[tuple[date, date]]]:
+    ) -> None:
         """Creates back_scrape_iterable in the most common variation,
         a list of tuples containing (start, end) date pairs, each of
         `days_interval` size
