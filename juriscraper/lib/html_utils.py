@@ -283,9 +283,13 @@ def is_html(response: Response) -> bool:
 
 def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
     # TODO: Would probably save a lot of time in future state scrapers to update this to handle tabular data that isn't stored in a table element, but that is a relatively large project and I'm not sure how often it would be useful.
-    headers = [clean_string(th.text_content()) for th in table.xpath(".//thead//th")]
+    headers = [
+        clean_string(th.text_content()) for th in table.xpath(".//thead//th")
+    ]
     if len(headers) == 0:
-        headers = list(map(str, range(len(table.find(".//tr").findall(".//td")))))
+        headers = list(
+            map(str, range(len(table.find(".//tr").findall(".//td"))))
+        )
         rows = table.findall(".//tr")
     else:
         rows = table.findall(".//tbody/tr")

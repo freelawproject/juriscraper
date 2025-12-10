@@ -10,6 +10,7 @@ from juriscraper.state.texas.common import (
 class TexasCourtOfCriminalAppealsDocket(TexasCommonData):
     appeals_court: TexasAppealsCourt
 
+
 class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     """
     Extends the `TexasCommonScraper` class to extract data specific to Texas Court of Criminal Appeals dockets. Unique data extracted is:
@@ -19,7 +20,6 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
 
     def __init__(self, court_id: str = "texas_coc"):
         super().__init__(court_id)
-
 
     @property
     def data(self) -> TexasCourtOfCriminalAppealsDocket:

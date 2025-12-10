@@ -24,7 +24,9 @@ class TexasParseCommonDataTest(PacerParseTestCase):
 
     def test_coca(self):
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "coca"
-        self.parse_files(path_root, "*.html", TexasCourtOfCriminalAppealsScraper)
+        self.parse_files(
+            path_root, "*.html", TexasCourtOfCriminalAppealsScraper
+        )
 
     def test_coa(self):
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "coa"

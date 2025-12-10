@@ -31,6 +31,7 @@ class CourtID(Enum):
     FOURTEENTH_COURT_OF_APPEALS = "texas_coa14"
     FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
 
+
 COA_ID_MAP = {
     "first court of appeals": CourtID.FIRST_COURT_OF_APPEALS,
     "second court of appeals": CourtID.SECOND_COURT_OF_APPEALS,
@@ -46,7 +47,7 @@ COA_ID_MAP = {
     "twelfth court of appeals": CourtID.TWELFTH_COURT_OF_APPEALS,
     "thirteenth court of appeals": CourtID.THIRTEENTH_COURT_OF_APPEALS,
     "fourteenth court of appeals": CourtID.FOURTEENTH_COURT_OF_APPEALS,
-    "fifteenth court of appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS
+    "fifteenth court of appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS,
 }
 
 
@@ -61,6 +62,7 @@ class TexasAppealsCourt(TypedDict):
     :ivar district: The appeals court district.
     :ivar justice: The name of the appeals court judge.
     """
+
     case_number: str
     case_url: str
     disposition: str
@@ -98,7 +100,9 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=clean_string(case_info["COA District"].text_content()),
-        justice=clean_string(case_info.get("COA Justice", HtmlElement("")).text_content()),
+        justice=clean_string(
+            case_info.get("COA Justice", HtmlElement("")).text_content()
+        ),
     )
 
 
@@ -149,6 +153,7 @@ class TexasCaseDocument(TypedDict):
     :ivar url: The URL of the document.
     :ivar name: The name of the document (may be empty).
     """
+
     url: str
     name: str
 
@@ -161,6 +166,7 @@ class TexasDocketEntry(TypedDict):
     :ivar type: The type of the docket entry (e.g., "Notice of appeal received").
     :ivar documents: Any documents associated with the docket entry.
     """
+
     date: datetime
     type: str
     documents: list[TexasCaseDocument]
@@ -172,6 +178,7 @@ class TexasCaseEvent(TexasDocketEntry):
 
     :ivar disposition: The value of the "Disposition" column (e.g., "Filing granted")
     """
+
     disposition: str
 
 
@@ -181,6 +188,7 @@ class TexasAppellateBrief(TexasDocketEntry):
 
     :ivar description: The value of the "Description" column (e.g., "Relator")
     """
+
     description: str
 
 
@@ -206,6 +214,7 @@ class TexasCommonData(TypedDict):
     case_events: list[TexasCaseEvent]
     appellate_briefs: list[TexasAppellateBrief]
 
+
 class TexasCommonScraper(Scraper[TexasCommonData]):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court, Court of Criminal Appeals, and Court of Appeals).
@@ -222,6 +231,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     :ivar briefs: The "Appellate Briefs" table data extracted with `parse_table`.
     :ivar is_valid: `True` if the HTML tree has been successfully parsed by calling `_parse_text`, `False` otherwise.
     """
+
     date_format = "%m/%d/%Y"
     base_url = "https://search.txcourts.gov"
 
@@ -241,7 +251,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         :param text: The raw HTML string.
         """
         self.tree = html.fromstring(clean_html(text))
-        self.tree.rewrite_links(fix_links_but_keep_anchors, base_href=self.base_url)
+        self.tree.rewrite_links(
+            fix_links_but_keep_anchors, base_href=self.base_url
+        )
         briefs_table = self.tree.find(
             './/table[@id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"]'
         )
@@ -273,7 +285,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             parties=self._parse_parties(),
             trial_court=self._parse_trial_court(),
             case_events=self._parse_case_events(),
-            appellate_briefs=self._parse_appellate_briefs()
+            appellate_briefs=self._parse_appellate_briefs(),
         )
         return data
 
@@ -284,9 +296,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        return clean_string(self.tree.find(
-            './/*[@id="case"]/div[2]/div/strong'
-        ).text_content())
+        return clean_string(
+            self.tree.find('.//*[@id="case"]/div[2]/div/strong').text_content()
+        )
 
     def _parse_date_filed(self) -> datetime:
         """
@@ -295,9 +307,11 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Date filed
         """
-        date_string = clean_string(self.tree.find(
-            './/*[@id="case"]/../*[2]/div[2]/div'
-        ).text_content())
+        date_string = clean_string(
+            self.tree.find(
+                './/*[@id="case"]/../*[2]/div[2]/div'
+            ).text_content()
+        )
         return datetime.strptime(date_string, self.date_format)
 
     def _parse_case_type(self) -> str:
@@ -307,9 +321,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        return clean_string(self.tree.find(
-            './/*[@id="case"]/../*[3]/div[2]'
-        ).text_content())
+        return clean_string(
+            self.tree.find('.//*[@id="case"]/../*[3]/div[2]').text_content()
+        )
 
     def _parse_parties(self) -> list[TexasCaseParty]:
         """
@@ -318,7 +332,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        table = self.tree.find('.//table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]')
+        table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
+        )
         parties = parse_table(table)
         n_parties = len(parties["Party"])
 
@@ -326,7 +342,10 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             TexasCaseParty(
                 name=clean_string(parties["Party"][i].text_content()),
                 type=clean_string(parties["PartyType"][i].text_content()),
-                representatives=[clean_string(text) for text in parties["Representative"][i].xpath(".//text()")],
+                representatives=[
+                    clean_string(text)
+                    for text in parties["Representative"][i].xpath(".//text()")
+                ],
             )
             for i in range(n_parties)
         ]
@@ -375,7 +394,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         return [
             TexasCaseDocument(
                 url=documents["0"][i].find(".//a").get("href"),
-                name=clean_string(documents["1"][i].text_content())
+                name=clean_string(documents["1"][i].text_content()),
             )
             for i in range(n)
         ]
@@ -401,8 +420,12 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
                     self.date_format,
                 ),
                 type=clean_string(self.events["Event Type"][i].text_content()),
-                documents=self._parse_case_documents(self.events["Document"][i]),
-                disposition=clean_string(self.events["Disposition"][i].text_content())
+                documents=self._parse_case_documents(
+                    self.events["Document"][i]
+                ),
+                disposition=clean_string(
+                    self.events["Disposition"][i].text_content()
+                ),
             )
             for i in range(n)
         ]
@@ -421,9 +444,19 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             return []
         n = len(self.briefs["Date"])
 
-        return [TexasAppellateBrief(
-            date=datetime.strptime(clean_string(self.briefs["Date"][i].text_content()), self.date_format),
-            type=clean_string(self.briefs["Event Type"][i].text_content()),
-            documents=self._parse_case_documents(self.briefs["Document"][i]),
-            description=clean_string(self.briefs["Description"][i].text_content())
-        ) for i in range(n)]
+        return [
+            TexasAppellateBrief(
+                date=datetime.strptime(
+                    clean_string(self.briefs["Date"][i].text_content()),
+                    self.date_format,
+                ),
+                type=clean_string(self.briefs["Event Type"][i].text_content()),
+                documents=self._parse_case_documents(
+                    self.briefs["Document"][i]
+                ),
+                description=clean_string(
+                    self.briefs["Description"][i].text_content()
+                ),
+            )
+            for i in range(n)
+        ]

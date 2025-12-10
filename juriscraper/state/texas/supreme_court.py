@@ -16,7 +16,9 @@ class TexasSupremeCourtCaseEvent(TexasCaseEvent):
 
     :ivar remarks: The text content of the relevant cell in the "Remarks" column.
     """
+
     remarks: str
+
 
 class TexasSupremeCourtAppellateBrief(TexasAppellateBrief):
     """
@@ -24,7 +26,9 @@ class TexasSupremeCourtAppellateBrief(TexasAppellateBrief):
 
     :ivar remarks: The text content of the relevant cell in the "Remarks" column.
     """
+
     remarks: str
+
 
 class TexasSupremeCourtDocket(TexasCommonData):
     """
@@ -33,9 +37,11 @@ class TexasSupremeCourtDocket(TexasCommonData):
     :ivar case_events: A list of `TexasSupremeCourtCaseEvent` objects representing the case events.
     :ivar appellate_briefs: A list of `TexasSupremeCourtAppellateBrief` objects representing the appellate briefs.
     """
+
     appeals_court: TexasAppealsCourt
     case_events: list[TexasSupremeCourtCaseEvent]
     appellate_briefs: list[TexasSupremeCourtAppellateBrief]
+
 
 class TexasSupremeCourtScraper(TexasCommonScraper):
     """
@@ -44,6 +50,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
     - Appeals court information.
     - Remarks on case events and appellate briefs.
     """
+
     def __init__(self, court_id: str = "texas_sc"):
         super().__init__(court_id)
 
@@ -58,14 +65,14 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         case_events = [
             TexasSupremeCourtCaseEvent(
                 remarks=clean_string(self.events["Remarks"][i].text_content()),
-                **common_data["case_events"][i]
+                **common_data["case_events"][i],
             )
             for i in range(len(common_data["case_events"]))
         ]
         appellate_briefs = [
             TexasSupremeCourtAppellateBrief(
                 remarks=clean_string(self.events["Remarks"][i].text_content()),
-                **common_data["appellate_briefs"][i]
+                **common_data["appellate_briefs"][i],
             )
             for i in range(len(common_data["appellate_briefs"]))
         ]
