@@ -1,6 +1,6 @@
-
 from build.lib.juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
+    CourtID,
     TexasAppealsCourt,
     TexasAppellateBrief,
     TexasCaseEvent,
@@ -71,6 +71,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         ]
 
         return TexasSupremeCourtDocket(
+            court_id=CourtID.SUPREME_COURT.value,
             appeals_court=_parse_appeals_court(self.tree),
             case_events=case_events,
             appellate_briefs=appellate_briefs,

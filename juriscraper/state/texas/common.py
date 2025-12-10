@@ -1,4 +1,5 @@
 from datetime import datetime
+from enum import Enum
 from typing import TypedDict
 
 from lxml import html
@@ -8,6 +9,45 @@ from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.html_utils import clean_html, parse_table
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.scraper import Scraper
+
+
+class CourtID(Enum):
+    UNKNOWN = "texas_unknown"
+    SUPREME_COURT = "texas_sc"
+    COURT_OF_CRIMINAL_APPEALS = "texas_coca"
+    FIRST_COURT_OF_APPEALS = "texas_coa1"
+    SECOND_COURT_OF_APPEALS = "texas_coa2"
+    THIRD_COURT_OF_APPEALS = "texas_coa3"
+    FOURTH_COURT_OF_APPEALS = "texas_coa4"
+    FIFTH_COURT_OF_APPEALS = "texas_coa5"
+    SIXTH_COURT_OF_APPEALS = "texas_coa6"
+    SEVENTH_COURT_OF_APPEALS = "texas_coa7"
+    EIGHTH_COURT_OF_APPEALS = "texas_coa8"
+    NINTH_COURT_OF_APPEALS = "texas_coa9"
+    TENTH_COURT_OF_APPEALS = "texas_coa10"
+    ELEVENTH_COURT_OF_APPEALS = "texas_coa11"
+    TWELFTH_COURT_OF_APPEALS = "texas_coa12"
+    THIRTEENTH_COURT_OF_APPEALS = "texas_coa13"
+    FOURTEENTH_COURT_OF_APPEALS = "texas_coa14"
+    FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
+
+COA_ID_MAP = {
+    "first court of appeals": CourtID.FIRST_COURT_OF_APPEALS,
+    "second court of appeals": CourtID.SECOND_COURT_OF_APPEALS,
+    "third court of appeals": CourtID.THIRD_COURT_OF_APPEALS,
+    "fourth court of appeals": CourtID.FOURTH_COURT_OF_APPEALS,
+    "fifth court of appeals": CourtID.FIFTH_COURT_OF_APPEALS,
+    "sixth court of appeals": CourtID.SIXTH_COURT_OF_APPEALS,
+    "seventh court of appeals": CourtID.SEVENTH_COURT_OF_APPEALS,
+    "eighth court of appeals": CourtID.EIGHTH_COURT_OF_APPEALS,
+    "ninth court of appeals": CourtID.NINTH_COURT_OF_APPEALS,
+    "tenth court of appeals": CourtID.TENTH_COURT_OF_APPEALS,
+    "eleventh court of appeals": CourtID.ELEVENTH_COURT_OF_APPEALS,
+    "twelfth court of appeals": CourtID.TWELFTH_COURT_OF_APPEALS,
+    "thirteenth court of appeals": CourtID.THIRTEENTH_COURT_OF_APPEALS,
+    "fourteenth court of appeals": CourtID.FOURTEENTH_COURT_OF_APPEALS,
+    "fifteenth court of appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS
+}
 
 
 class TexasAppealsCourt(TypedDict):
@@ -157,6 +197,7 @@ class TexasCommonData(TypedDict):
     :ivar trial_court: Information about the trial court handling the case was appealed from.
     """
 
+    court_id: str
     docket_number: str
     date_filed: datetime
     case_type: str
@@ -164,7 +205,6 @@ class TexasCommonData(TypedDict):
     trial_court: TexasTrialCourt
     case_events: list[TexasCaseEvent]
     appellate_briefs: list[TexasAppellateBrief]
-
 
 class TexasCommonScraper(Scraper[TexasCommonData]):
     """
@@ -226,6 +266,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             raise ValueError("HTML tree has not been parsed yet.")
 
         data = TexasCommonData(
+            court_id=CourtID.UNKNOWN.value,
             docket_number=self._parse_docket_number(),
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),

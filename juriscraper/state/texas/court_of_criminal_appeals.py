@@ -1,4 +1,5 @@
 from juriscraper.state.texas.common import (
+    CourtID,
     TexasAppealsCourt,
     TexasCommonData,
     TexasCommonScraper,
@@ -30,6 +31,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         common_data = super().data
 
         return TexasCourtOfCriminalAppealsDocket(
+            court_id=CourtID.COURT_OF_CRIMINAL_APPEALS.value,
             appeals_court=_parse_appeals_court(self.tree),
             case_events=common_data["case_events"],
             appellate_briefs=common_data["appellate_briefs"],
