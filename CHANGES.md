@@ -25,6 +25,7 @@ Fixes:
 - Fix `fla` and `fladistctapp` scrapers by scraping new API endpoint #1690
 - fix `uscgcoca` and `asbca` headers #1664
 - `okla` `cleanup_content` now deletes HTML comments that were causing duplicates #1697
+- make `tenn` use whitelisted user agent #1689
 
 ## Current
 
