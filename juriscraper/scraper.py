@@ -6,6 +6,7 @@ T = TypeVar("T")
 
 class Scraper(Generic[T], ABC):
     """Abstract base class, which all scrapers should inherit from."""
+
     @abstractmethod
     def __init__(self, court_id: str):
         self.court_id: str = court_id

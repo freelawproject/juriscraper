@@ -4,11 +4,10 @@ from copy import deepcopy
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
+from build.lib.juriscraper.lib.string_utils import clean_string
 from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
 from requests import Response
-
-from build.lib.juriscraper.lib.string_utils import clean_string
 
 try:
     # Use charset-normalizer for performance to detect the character encoding.
