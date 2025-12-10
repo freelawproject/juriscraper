@@ -18,6 +18,16 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.6.99 - 2025-12-10**
+
+Changes:
 - Added more fields to the SCOTUS docket parsers
 
 Fixes:
@@ -26,8 +36,6 @@ Fixes:
 - fix `uscgcoca` and `asbca` headers #1664
 - `okla` `cleanup_content` now deletes HTML comments that were causing duplicates #1697
 - make `tenn` use whitelisted user agent #1689
-
-## Current
 
 **2.6.98 - 2025-12-05**
 
