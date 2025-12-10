@@ -18,7 +18,9 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     - Appeals court information.
     """
 
-    def __init__(self, court_id: str = "texas_coc"):
+    def __init__(
+        self, court_id: str = CourtID.COURT_OF_CRIMINAL_APPEALS.value
+    ):
         super().__init__(court_id)
 
     @property

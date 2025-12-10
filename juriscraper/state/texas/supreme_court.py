@@ -1,4 +1,4 @@
-from build.lib.juriscraper.lib.string_utils import clean_string
+from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
     CourtID,
     TexasAppealsCourt,
@@ -65,16 +65,16 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         case_events = [
             TexasSupremeCourtCaseEvent(
                 remarks=clean_string(self.events["Remarks"][i].text_content()),
-                **common_data["case_events"][i],
+                **event_data,
             )
-            for i in range(len(common_data["case_events"]))
+            for i, event_data in enumerate(common_data["case_events"])
         ]
         appellate_briefs = [
             TexasSupremeCourtAppellateBrief(
-                remarks=clean_string(self.events["Remarks"][i].text_content()),
-                **common_data["appellate_briefs"][i],
+                remarks=clean_string(self.briefs["Remarks"][i].text_content()),
+                **event_data,
             )
-            for i in range(len(common_data["appellate_briefs"]))
+            for i, event_data in enumerate(common_data["appellate_briefs"])
         ]
 
         return TexasSupremeCourtDocket(

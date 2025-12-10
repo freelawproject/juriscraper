@@ -235,7 +235,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     date_format = "%m/%d/%Y"
     base_url = "https://search.txcourts.gov"
 
-    def __init__(self, court_id: str) -> None:
+    def __init__(self, court_id: str = CourtID.UNKNOWN.value) -> None:
         super().__init__(court_id)
         self.tree: HtmlElement = HtmlElement()
         self.events: dict[str, list[HtmlElement]] = {}
