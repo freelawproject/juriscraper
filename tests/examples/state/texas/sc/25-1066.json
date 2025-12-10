@@ -1,5 +1,4 @@
 {
-  "court_id": "texas_sc",
   "appeals_court": {
     "case_number": "14-25-00552-CV",
     "case_url": "https://search.txcourts.gov/Case.aspx?cn=14-25-00552-CV",
@@ -22,7 +21,7 @@
           "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744"
         }
       ],
-      "remarks": "",
+      "remarks": "Petition for Writ of Mandamus filed on behalf of Client X.",
       "type": "Petition for Writ of Mandamus filed"
     }
   ],
@@ -64,6 +63,7 @@
     }
   ],
   "case_type": "Petition for Writ of Mandamus",
+  "court_id": "texas_sc",
   "date_filed": "2025-12-01T00:00:00",
   "docket_number": "25-1066",
   "parties": [
