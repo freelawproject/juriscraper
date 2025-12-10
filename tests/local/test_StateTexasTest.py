@@ -1,4 +1,5 @@
 from juriscraper.state.texas.common import TexasCommonScraper
+from juriscraper.state.texas.court_of_appeals import TexasCourtOfAppealsScraper
 from juriscraper.state.texas.court_of_criminal_appeals import (
     TexasCourtOfCriminalAppealsScraper,
 )
@@ -24,3 +25,7 @@ class TexasParseCommonDataTest(PacerParseTestCase):
     def test_coca(self):
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "coca"
         self.parse_files(path_root, "*.html", TexasCourtOfCriminalAppealsScraper)
+
+    def test_coa(self):
+        path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "coa"
+        self.parse_files(path_root, "*.html", TexasCourtOfAppealsScraper)

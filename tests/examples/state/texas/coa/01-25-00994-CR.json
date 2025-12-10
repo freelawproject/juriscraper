@@ -1,0 +1,67 @@
+{
+  "appellate_briefs": [],
+  "case_events": [
+    {
+      "date": "2025-12-01T00:00:00",
+      "disposition": "",
+      "documents": [
+        {
+          "name": "NOA 1897778 SLOAN",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=ec2ed687-fdea-4e87-b865-3688199757f7&coa=coa01&DT=Other&MediaID=20eca1f0-ee61-4f85-b162-848a7ab205d3"
+        },
+        {
+          "name": "Notice",
+          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=af381195-10c3-4c59-8fb0-67460d389672&coa=coa01&DT=NOA RECD&MediaID=52b72c80-11e6-4f5b-84b2-6020a871f87d"
+        }
+      ],
+      "type": "Notice of appeal received"
+    },
+    {
+      "date": "2025-12-01T00:00:00",
+      "disposition": "",
+      "documents": [],
+      "type": "Case began in court of appeals"
+    },
+    {
+      "date": "2025-11-12T00:00:00",
+      "disposition": "",
+      "documents": [],
+      "type": "Notice of appeal filed in trial court"
+    },
+    {
+      "date": "2025-11-12T00:00:00",
+      "disposition": "",
+      "documents": [],
+      "type": "Sentence imposed in the trial court"
+    }
+  ],
+  "case_type": "Poss of a Firearm by Felon",
+  "court_id": "texas_coa1",
+  "date_filed": "2025-12-01T00:00:00",
+  "docket_number": "01-25-00994-CR",
+  "parties": [
+    {
+      "name": "The State of Texas",
+      "representatives": [
+        "The Honorable Sean Teare",
+        "Jessica A. Caird"
+      ],
+      "type": "Criminal - State of Texas"
+    },
+    {
+      "name": "Sloan, Anthony Ray",
+      "representatives": [
+        "Anthony Ray Sloan"
+      ],
+      "type": "Criminal - Appellant"
+    }
+  ],
+  "trial_court": {
+    "case": "1897778",
+    "county": "Harris",
+    "judge": "Honorable Judge 497th District Court",
+    "name": "497th District Court",
+    "punishment": "7 YEARS TDCJ",
+    "reporter": "Louella Badipour"
+  }
+}
