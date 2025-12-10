@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Added more fields to the SCOTUS docket parsers
 
 Fixes:
 - fix `okla` improve cleanup_content method to use CSS selectors and return bytes #1692

@@ -190,6 +190,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         """
         description_html = ""
         attachments: list[dict[str, Any]] = []
+        document_number: Optional[int] = None
 
         if description_td is not None:
             # Select content up to first <br> and excluding .documentlinks;
@@ -204,6 +205,11 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 if not href:
                     continue
 
+                if document_number is None and "DocketPDF" in href:
+                    match = re.search(self.DOC_NUM_RE, href)
+                    if match:
+                        document_number = int(match.group(1))
+
                 if table_layout and href:
                     logger.error(
                         "Found a potential attachment in a table-layout docket. "
@@ -215,8 +221,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 )
                 attachments.append(
                     {
-                        "short_description": short_desc or "Document",
+                        "description": short_desc or "Document",
                         "document_url": href,
+                        "document_number": document_number,
                     }
                 )
 
@@ -225,6 +232,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         return {
             "date_filed": self.normalize_date(date_str),
+            "document_number": document_number,
             "description": description,
             "description_html": description_html,
             "attachments": attachments,
