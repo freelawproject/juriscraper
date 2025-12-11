@@ -107,7 +107,9 @@ class Site(OpinionSiteLinear):
 
         # If we didn't get all results, try increasing per_page
         if results_in_page < total_count and not self.test_mode_enabled():
-            new_per_page = min(total_count, 500)  # Cap at 500 to avoid server errors
+            new_per_page = min(
+                total_count, 500
+            )  # Cap at 500 to avoid server errors
 
             logger.info(
                 "Incomplete results: got %s of %s. Retrying with per_page=%s",
