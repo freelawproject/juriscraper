@@ -40,6 +40,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
+        self.current_dates = None  # Track current date range for retries
         self.params = {
             "product_id": "COLORADO",
             "jurisdiction": "US",
@@ -95,11 +96,34 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self) -> None:
         search_json = self.html
+        total_count = search_json["count"]
+        results_in_page = len(search_json["results"])
+
         logger.info(
             "Number of results %s; %s in page",
-            search_json["count"],
-            len(search_json["results"]),
+            total_count,
+            results_in_page,
         )
+
+        # If we didn't get all results, try increasing per_page
+        if results_in_page < total_count:
+            new_per_page = min(total_count, 500)  # Cap at 500 to avoid server errors
+
+            logger.info(
+                "Incomplete results: got %s of %s. Retrying with per_page=%s",
+                results_in_page,
+                total_count,
+                new_per_page,
+            )
+            self.params["per_page"] = str(new_per_page)
+            self.update_url()  # Rebuild URL with new per_page
+            self.html = self._download()  # Re-download with larger page size
+            search_json = self.html
+            logger.info(
+                "After retry: got %s of %s results",
+                len(search_json["results"]),
+                search_json["count"],
+            )
 
         for result in search_json["results"]:
             case = {"citation": "", "parallel_citation": ""}
@@ -126,6 +150,20 @@ class Site(OpinionSiteLinear):
                 )
 
             case = self.update_case(case, detail_json)
+
+            # Validate required fields before appending
+            required_fields = ["name", "url", "date", "status", "docket"]
+            missing_fields = [
+                field for field in required_fields if not case.get(field)
+            ]
+            if missing_fields:
+                logger.warning(
+                    "Skipping case %s due to missing fields: %s",
+                    case.get("docket", "unknown"),
+                    ", ".join(missing_fields),
+                )
+                continue
+
             self.cases.append(case)
 
     def _download_backwards(self, dates: tuple[date]) -> None:
@@ -149,8 +187,15 @@ class Site(OpinionSiteLinear):
             scrape last week
         """
         if not dates:
-            today = datetime.now()
-            dates = (today - timedelta(7), today + timedelta(1))
+            # If dates not provided, use stored dates or default to last week
+            if self.current_dates:
+                dates = self.current_dates
+            else:
+                today = datetime.now()
+                dates = (today - timedelta(7), today + timedelta(1))
+
+        # Store the dates for potential retries
+        self.current_dates = dates
 
         start = dates[0].strftime("%Y-%m-%d")
         end = dates[1].strftime("%Y-%m-%d")

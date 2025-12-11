@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Improve `colo` scraper to automatically increase per_page parameter and add required field validation before appending cases #1656 
 
 Fixes:
 -
