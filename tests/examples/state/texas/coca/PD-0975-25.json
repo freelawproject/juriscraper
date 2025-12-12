@@ -1,5 +1,7 @@
 {
   "court_id": "texas_coca",
+  "case_name": "VANZANDT, SCOTT EDWARD v.",
+  "case_name_full": "VANZANDT, SCOTT EDWARD v.",
   "appeals_court": {
     "case_number": "10-24-00237-CR",
     "case_url": "https://search.txcourts.gov/Case.aspx?cn=10-24-00237-CR",
@@ -13,10 +15,10 @@
     {
       "date": "2025-12-01T00:00:00",
       "disposition": "Granted",
-      "documents": [
+      "attachments": [
         {
-          "name": "Notice",
-          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=23a37cee-d4a3-414a-9342-7fa3dc318a77&coa=coscca&DT=EXT PDR DISP/NFE&MediaID=2278fd4a-c0fd-41ec-819c-550b1a3e73de"
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=23a37cee-d4a3-414a-9342-7fa3dc318a77&coa=coscca&DT=EXT PDR DISP/NFE&MediaID=2278fd4a-c0fd-41ec-819c-550b1a3e73de"
         }
       ],
       "type": "EXT PDR DISP/NFE"
@@ -24,10 +26,10 @@
     {
       "date": "2025-12-01T00:00:00",
       "disposition": "",
-      "documents": [
+      "attachments": [
         {
-          "name": "MOTION",
-          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=49229729-3899-4599-bfa3-eac8923a80c1&coa=coscca&DT=MOTION&MediaID=a356b69e-242a-4f8c-b99b-7c4aa00c4424"
+          "description": "MOTION",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=49229729-3899-4599-bfa3-eac8923a80c1&coa=coscca&DT=MOTION&MediaID=a356b69e-242a-4f8c-b99b-7c4aa00c4424"
         }
       ],
       "type": "EXT PDR FILED"
@@ -35,10 +37,10 @@
     {
       "date": "2025-12-01T00:00:00",
       "disposition": "",
-      "documents": [
+      "attachments": [
         {
-          "name": "Notice",
-          "url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b29f96ef-db3b-4129-b337-97443be0fc6c&coa=coscca&DT=COA RECORD MISSING&MediaID=86facd47-6ba6-4a41-9bd4-88815890d482"
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b29f96ef-db3b-4129-b337-97443be0fc6c&coa=coscca&DT=COA RECORD MISSING&MediaID=86facd47-6ba6-4a41-9bd4-88815890d482"
         }
       ],
       "type": "DOCUMENTS MISSING FROM COA RECORD"
@@ -46,7 +48,7 @@
     {
       "date": "2025-12-01T00:00:00",
       "disposition": "",
-      "documents": [],
+      "attachments": [],
       "type": "COA RECORD RECEIVED"
     }
   ],
