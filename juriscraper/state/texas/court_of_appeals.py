@@ -1,6 +1,7 @@
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
     COA_ID_MAP,
+    DOCKET_NUMBER_REGEXES,
     TexasCommonData,
     TexasCommonScraper,
 )
@@ -9,6 +10,7 @@ from juriscraper.state.texas.common import (
 class TexasCourtOfAppealsScraper(TexasCommonScraper):
     def __init__(self, court_id: str):
         super().__init__(court_id)
+        self.docket_number_regex = DOCKET_NUMBER_REGEXES["coa"]
 
     @property
     def data(self) -> TexasCommonData:

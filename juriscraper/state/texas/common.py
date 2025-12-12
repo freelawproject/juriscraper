@@ -222,6 +222,14 @@ class TexasCommonData(TypedDict):
     appellate_briefs: list[TexasAppellateBrief]
 
 
+DOCKET_NUMBER_REGEXES = {
+    "placeholder": re.compile(r".+"),
+    "sc": re.compile(r"\d{2}-\d{4}"),
+    "coa": re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),
+    "coca": re.compile(r"\w{2}-\d{4}-\d{2}"),
+}
+
+
 class TexasCommonScraper(Scraper[TexasCommonData]):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court, Court of Criminal Appeals, and Court of Appeals).
@@ -248,6 +256,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         self.events: dict[str, list[HtmlElement]] = {}
         self.briefs: dict[str, list[HtmlElement]] = {}
         self.case_data: dict[str, str] = {}
+        # Required so tests don't fail
+        self.docket_number_regex = DOCKET_NUMBER_REGEXES["placeholder"]
         self.is_valid: bool = False
 
     def _parse_text(self, text: str) -> None:
@@ -353,9 +363,14 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         """
         name_part_1 = self.case_data["style"]
         name_part_2 = self.case_data["v"]
-        name = harmonize(f"{name_part_1} v. {name_part_2}")
+        case_name_full = (
+            f"{name_part_1} v. {name_part_2}"
+            if len(name_part_2) > 0
+            else name_part_1
+        )
+        case_name_short = case_name_full
 
-        return name, name
+        return harmonize(case_name_short), harmonize(case_name_full)
 
     def _parse_docket_number(self) -> str:
         """
@@ -364,7 +379,12 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        return self.case_data["case"]
+        docket_number = self.case_data["case"]
+        if self.docket_number_regex.fullmatch(docket_number) is None:
+            raise ValueError(
+                f"Unrecognized docket number format: {docket_number}"
+            )
+        return docket_number
 
     def _parse_date_filed(self) -> datetime:
         """
