@@ -91,7 +91,7 @@ def get_table_column_links(
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]//a/@href" % (table, cell_num)
-    path = path_base + path_cell if path_base else path_cell
+    path = path_base + path_cell if path_base is not None else path_cell
     return html.xpath(path)
 
 
