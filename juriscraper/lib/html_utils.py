@@ -297,13 +297,13 @@ def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
         headers = list(
             map(str, range(len(table.find(".//tr").findall(".//td"))))
         )
-        rows = table.findall(".//tr")
+        rows = table.findall("./tr")
     else:
-        rows = table.findall(".//tbody/tr")
+        rows = table.findall("./tbody/tr")
     columns = {header: [] for header in headers}
 
     for row in rows:
-        cells = row.findall(".//td")
+        cells = row.xpath("./td")
         for header, cell in zip(headers, cells):
             columns[header].append(cell)
 
