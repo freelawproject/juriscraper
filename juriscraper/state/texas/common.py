@@ -2,12 +2,12 @@ from datetime import datetime
 from enum import Enum
 from typing import TypedDict
 
-from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from lxml import html
 from lxml.html import HtmlElement
 
+from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.html_utils import clean_html, parse_table
-from juriscraper.lib.string_utils import clean_string
+from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scraper import Scraper
 
 
@@ -150,12 +150,12 @@ class TexasCaseDocument(TypedDict):
     """
     Schema for Texas case document details.
 
-    :ivar url: The URL of the document.
-    :ivar name: The name of the document (may be empty).
+    :ivar document_url: The URL of the document.
+    :ivar description: The name of the document (may be empty).
     """
 
-    url: str
-    name: str
+    document_url: str
+    description: str
 
 
 class TexasDocketEntry(TypedDict):
@@ -164,12 +164,12 @@ class TexasDocketEntry(TypedDict):
 
     :ivar date: The date of the docket entry.
     :ivar type: The type of the docket entry (e.g., "Notice of appeal received").
-    :ivar documents: Any documents associated with the docket entry.
+    :ivar attachments: Any documents associated with the docket entry.
     """
 
     date: datetime
     type: str
-    documents: list[TexasCaseDocument]
+    attachments: list[TexasCaseDocument]
 
 
 class TexasCaseEvent(TexasDocketEntry):
@@ -198,7 +198,10 @@ class TexasCommonData(TypedDict):
 
     This class is a `TypedDict` that defines the schema for representing data common to all Texas dockets. It is used as a utility for safety and type hints.
 
+    :ivar court_id: The ID of the court this docket is from.
     :ivar docket_number: The docket number of the case.
+    :ivar case_name: The shortened and normalized name of the case.
+    :ivar case_name_full: The full name of the case.
     :ivar date_filed: The date the case was filed.
     :ivar case_type: The type of case.
     :ivar parties: A list of parties involved in the case and their associated representatives.
@@ -207,6 +210,8 @@ class TexasCommonData(TypedDict):
 
     court_id: str
     docket_number: str
+    case_name: str
+    case_name_full: str
     date_filed: datetime
     case_type: str
     parties: list[TexasCaseParty]
@@ -260,6 +265,10 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         events_table = self.tree.find(
             './/table[@id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"]'
         )
+        if events_table is None:
+            raise ValueError("Case events table not found.")
+        if briefs_table is None:
+            raise ValueError("Appellate briefs table not found.")
         self.events = parse_table(events_table)
         self.briefs = parse_table(briefs_table)
         self.is_valid = True
@@ -277,6 +286,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         if not self.is_valid:
             raise ValueError("HTML tree has not been parsed yet.")
 
+        name, name_full = self._parse_case_name()
+
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
             docket_number=self._parse_docket_number(),
@@ -286,8 +297,24 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             trial_court=self._parse_trial_court(),
             case_events=self._parse_case_events(),
             appellate_briefs=self._parse_appellate_briefs(),
+            case_name=name,
+            case_name_full=name_full,
         )
         return data
+
+    def _parse_case_name(self) -> tuple[str, str]:
+        """
+        Extracts the case name from the HTML tree. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Tuple containing the normalized case name and the full case name.
+        """
+        name_part_1 = self.tree.findtext('.//*[@id="case"]/../*[3]/div[2]')
+        name_part_2 = self.tree.findtext('.//*[@id="case"]/../*[4]/div[2]')
+        name = harmonize(clean_string(f"{name_part_1} v. {name_part_2}"))
+
+        return name, name
+
 
     def _parse_docket_number(self) -> str:
         """
@@ -319,7 +346,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         Extracts the case type from the HTML tree. Will fail if `_parse_text`
         has not yet been called.
 
-        :return: Docket number.
+        :return: Case Type
         """
         return clean_string(
             self.tree.find('.//*[@id="case"]/../*[3]/div[2]').text_content()
@@ -330,7 +357,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         Extracts the parties from the HTML tree. Multiline entries in the "Representative" column will be treated as if each line is an individual representative for the relevant party. Will fail if `_parse_text`
         has not yet been called.
 
-        :return: Docket number.
+        :return: Parties
         """
         table = self.tree.find(
             './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
@@ -393,8 +420,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         return [
             TexasCaseDocument(
-                url=documents["0"][i].find(".//a").get("href"),
-                name=clean_string(documents["1"][i].text_content()),
+                document_url=documents["0"][i].find(".//a").get("href"),
+                description=clean_string(documents["1"][i].text_content()),
             )
             for i in range(n)
         ]
@@ -420,7 +447,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
                     self.date_format,
                 ),
                 type=clean_string(self.events["Event Type"][i].text_content()),
-                documents=self._parse_case_documents(
+                attachments=self._parse_case_documents(
                     self.events["Document"][i]
                 ),
                 disposition=clean_string(
@@ -451,7 +478,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
                     self.date_format,
                 ),
                 type=clean_string(self.briefs["Event Type"][i].text_content()),
-                documents=self._parse_case_documents(
+                attachments=self._parse_case_documents(
                     self.briefs["Document"][i]
                 ),
                 description=clean_string(

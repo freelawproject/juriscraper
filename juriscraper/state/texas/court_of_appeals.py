@@ -24,6 +24,8 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
             case_type=common_data["case_type"],
             parties=common_data["parties"],
             trial_court=common_data["trial_court"],
+            case_name=common_data["case_name"],
+            case_name_full=common_data["case_name_full"],
         )
 
     def _parse_court_name(self) -> str:
