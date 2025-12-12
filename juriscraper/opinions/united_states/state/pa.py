@@ -161,7 +161,7 @@ class Site(OpinionSiteLinear):
 
         return result
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Modify GET querystring for desired date range
 
         :param dates: (start_date, end_date) tuple
