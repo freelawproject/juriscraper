@@ -2,10 +2,10 @@ from datetime import datetime
 from enum import Enum
 from typing import TypedDict
 
-from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from lxml import html
 from lxml.html import HtmlElement
 
+from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.html_utils import clean_html, parse_table
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scraper import Scraper
@@ -309,8 +309,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Tuple containing the normalized case name and the full case name.
         """
-        name_part_1 = self.tree.findtext('.//*[@id="case"]/../*[3]/div[2]')
-        name_part_2 = self.tree.findtext('.//*[@id="case"]/../*[4]/div[2]')
+        name_part_1 = self.tree.findtext('.//*[@id="case"]/../*[4]/div[2]')
+        name_part_2 = self.tree.findtext('.//*[@id="case"]/../*[5]/div[2]')
         name = harmonize(clean_string(f"{name_part_1} v. {name_part_2}"))
 
         return name, name
