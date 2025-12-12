@@ -1,7 +1,8 @@
 import re
 from datetime import datetime
 from enum import Enum
-from itertools import chain
+from functools import cached_property
+from itertools import chain, groupby
 from typing import TypedDict
 
 from lxml import html
@@ -297,19 +298,17 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         if not self.is_valid:
             raise ValueError("HTML tree has not been parsed yet.")
 
-        name, name_full = self._parse_case_name()
-
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
             docket_number=self._parse_docket_number(),
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
-            parties=self._parse_parties(),
+            parties=self.parties,
             trial_court=self._parse_trial_court(),
             case_events=self._parse_case_events(),
             appellate_briefs=self._parse_appellate_briefs(),
-            case_name=name,
-            case_name_full=name_full,
+            case_name=self.case_name,
+            case_name_full=self.case_name_full,
         )
         return data
 
@@ -351,23 +350,88 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             for child in children
         }
 
-    def _parse_case_name(self) -> tuple[str, str]:
+    @staticmethod
+    def _find_party_in_case_name(
+        case_name: str, party_name: str
+    ) -> tuple[int, int]:
         """
-        Extracts the case name from the HTML tree. Will fail if `_parse_text`
-        has not yet been called.
+        Finds the start and end indices of the party name in the case name.
 
-        :return: Tuple containing the normalized case name and the full case name.
+        Useful in instances where a name appears as "last, first" in the parties list and "first last" in the case name.
+
+        :param case_name: The case name to search in.
+        :param party_name: The party name to search for.
+
+        :return: Index of the party name in the case name.
         """
+        party_name_parts = [
+            part.strip().lower() for part in party_name.split(",")
+        ]
+        if len(party_name_parts) == 1:
+            i = case_name.lower().find(party_name.lower())
+            return i, i + len(party_name)
+        party_name_parts_indexed = [
+            (party_name_part, case_name.lower().find(party_name_part))
+            for party_name_part in party_name_parts
+        ]
+        party_name_parts_indexed.sort(key=lambda x: x[1])
+
+        start = party_name_parts_indexed[0][1]
+        end = party_name_parts_indexed[-1][1] + len(
+            party_name_parts_indexed[-1][0]
+        )
+        return start, end
+
+    @cached_property
+    def case_name_full(self) -> str:
         name_part_1 = self.case_data["style"]
         name_part_2 = self.case_data["v"]
-        case_name_full = (
-            f"{name_part_1} v. {name_part_2}"
-            if len(name_part_2) > 0
-            else name_part_1
-        )
-        case_name_short = case_name_full
+        if len(name_part_2) == 0:
+            return name_part_1
+        if len(self.parties) == 2:
+            return harmonize(f"{name_part_1} v. {name_part_2}")
+        return ""
 
-        return harmonize(case_name_short), harmonize(case_name_full)
+    @cached_property
+    def case_name(self) -> str:
+        name_part_1 = self.case_data["style"]
+        name_part_2 = self.case_data["v"]
+        if len(name_part_2) == 0:
+            return harmonize(name_part_1)
+        if len(self.parties) == 2:
+            return harmonize(f"{name_part_1} v. {name_part_2}")
+        grouped_parties = {
+            k: list(g)
+            for k, g in groupby(self.parties, lambda party: party["type"])
+        }
+        first_parties = [
+            self._find_party_in_case_name(self.case_name_full, party["name"])
+            for party in chain(
+                grouped_parties.get("Petitioner", []),
+                grouped_parties.get("Appellee", []),
+            )
+        ]
+        first_parties.sort(key=lambda x: x[0])
+        second_parties = [
+            self._find_party_in_case_name(self.case_name_full, party["name"])
+            for party in chain(
+                grouped_parties.get("Respondent", []),
+                grouped_parties.get("Appellant", []),
+            )
+        ]
+        second_parties.sort(key=lambda x: x[0])
+
+        name_short_part_1 = self.case_name_full[
+            first_parties[0][0] : first_parties[0][1]
+        ]
+        if len(first_parties) > 1:
+            name_short_part_1 = f"{name_short_part_1}, et al."
+        name_short_part_2 = self.case_name_full[
+            second_parties[0][0] : second_parties[0][1]
+        ]
+        if len(second_parties) > 1:
+            name_short_part_2 = f"{name_short_part_2}, et al."
+        return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
 
     def _parse_docket_number(self) -> str:
         """
@@ -402,6 +466,10 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         :return: Case Type
         """
         return self.case_data["case type"]
+
+    @cached_property
+    def parties(self) -> list[TexasCaseParty]:
+        return self._parse_parties()
 
     def _parse_parties(self) -> list[TexasCaseParty]:
         """

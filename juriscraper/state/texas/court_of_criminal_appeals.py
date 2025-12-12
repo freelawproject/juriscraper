@@ -1,3 +1,6 @@
+from functools import cached_property
+from itertools import groupby
+
 from juriscraper.state.texas.common import (
     CourtID,
     TexasAppealsCourt,
@@ -45,3 +48,22 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
             case_name=common_data["case_name"],
             case_name_full=common_data["case_name_full"],
         )
+
+    @cached_property
+    def case_name(self) -> str:
+        # If there is only one party, and it is not the state, assume there was a clerical error
+        if (
+            len(self.parties) == 1
+            and self.parties[0]["type"].lower().find("state") < 0
+        ):
+            return f"{self.parties[0]['name']} v. The State of Texas"
+
+        grouped_parties = {
+            k: sorted(g, key=lambda x: x["name"])
+            for k, g in groupby(self.parties, lambda party: party["type"])
+        }
+
+        if "State" in grouped_parties and "Appellant" in grouped_parties:
+            return f"{grouped_parties['Appellant'][0]['name']} v. {grouped_parties['State'][0]['name']}"
+        # Fall back on the full case name property
+        return self.case_name_full
