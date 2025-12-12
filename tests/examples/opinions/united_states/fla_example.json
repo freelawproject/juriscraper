@@ -1,0 +1,1263 @@
+{
+  "searchParams": {
+    "query": "",
+    "searchEngine": "solr",
+    "siteaccess": "supreme2",
+    "offset": 0,
+    "view": "full",
+    "exactMatch": null,
+    "startDate": "2025-10-29",
+    "endDate": "2025-12-08",
+    "searchType": "opinions",
+    "scopes": [
+      "supreme_court"
+    ],
+    "date": null,
+    "limit": 100,
+    "sort": "opinion/disposition_date desc, opinion/case_number asc",
+    "recentOnly": false,
+    "types": [
+      "Written",
+      "PCA",
+      "Citation"
+    ],
+    "activeOnly": false,
+    "active_only": false,
+    "nonActiveOnly": false,
+    "nonactive_only": false,
+    "show_scopes": false,
+    "hide_search": false,
+    "hide_filters": false,
+    "opinionsSearchFields": []
+  },
+  "allScopes": {
+    "2451807": {
+      "label": "Supreme Court",
+      "value": "supreme_court"
+    },
+    "50651": {
+      "label": "First DCA",
+      "value": "first_district_court_of_appeal"
+    },
+    "247": {
+      "label": "Second DCA",
+      "value": "second_district_court_of_appeal"
+    },
+    "248": {
+      "label": "Third DCA",
+      "value": "third_district_court_of_appeal"
+    },
+    "60": {
+      "label": "Fourth DCA",
+      "value": "fourth_district_court_of_appeal"
+    },
+    "202379": {
+      "label": "Fifth DCA",
+      "value": "fifth_district_court_of_appeal"
+    },
+    "850596": {
+      "label": "Sixth DCA",
+      "value": "sixth_district_court_of_appeal"
+    }
+  },
+  "pagerHtml": "\u003Cdiv class=\"pagination\"\u003E\u003Cul class='pagination'\u003E\u003Cli class=\"prev disabled\"\u003E\u003Cspan\u003EPrevious\u003C/span\u003E\u003C/li\u003E\u003Cli class=\"active\"\u003E\u003Cspan\u003E1\u003C/span\u003E\u003C/li\u003E\u003Cli class=\"next disabled\"\u003E\u003Cspan\u003ENext\u003C/span\u003E\u003C/li\u003E\u003C/ul\u003E\u003C/div\u003E",
+  "searchResults": [
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2023-1470",
+        "isInNewTab": false,
+        "locationId": 2523294,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2023-1470",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2472511,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2023-1470",
+        "typeIdentifier": "opinion",
+        "name": "SC2023-1470",
+        "modified": 1764863782,
+        "fields": {
+          "case_number": "SC2023-1470",
+          "opinion": {
+            "uri": "/content/download/2472511/opinion/Opinion_SC2023-1470.pdf",
+            "fileName": "sc2023-1470.pdf",
+            "fileSize": 209691,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "Florida Atlantic University Board of Trustees v. Harbor Branch Oceanographic Institute Foundation, Inc.",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-12-04 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-12-04 15:50:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2024-1512",
+        "isInNewTab": false,
+        "locationId": 2523295,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-1512",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2472516,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-1512",
+        "typeIdentifier": "opinion",
+        "name": "SC2024-1512",
+        "modified": 1764949474,
+        "fields": {
+          "case_number": "SC2024-1512",
+          "opinion": {
+            "uri": "/content/download/2472516/opinion/Opinion_SC2024-1512.pdf",
+            "fileName": "sc2024-1512.pdf",
+            "fileSize": 139821,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "David Kelsey Sparre v. State of Florida",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-12-04 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-12-04 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2024-0622",
+        "isInNewTab": false,
+        "locationId": 2522891,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-0622",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2472148,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-0622",
+        "typeIdentifier": "opinion",
+        "name": "SC2024-0622",
+        "modified": 1764172948,
+        "fields": {
+          "case_number": "SC2024-0622",
+          "opinion": {
+            "uri": "/content/download/2472148/opinion/Opinion_SC2024-0622.pdf",
+            "fileName": "sc2024-0622.pdf",
+            "fileSize": 163326,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "The Florida Bar v. Robert Michael Fojo",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-26 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-26 15:45:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-0530",
+        "isInNewTab": false,
+        "locationId": 2522893,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-05302",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2472150,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-05302",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-0530",
+        "modified": 1764172915,
+        "fields": {
+          "case_number": "SC2025-0530",
+          "opinion": {
+            "uri": "/content/download/2472150/opinion/Opinion_SC2025-0530.pdf",
+            "fileName": "sc2025-0530.pdf",
+            "fileSize": 103024,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to the Florida Rules of Criminal Procedure - 2025 Legislation",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-26 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-26 15:45:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-1808",
+        "isInNewTab": false,
+        "locationId": 2522895,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1808",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2472152,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1808",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-1808",
+        "modified": 1764172866,
+        "fields": {
+          "case_number": "SC2025-1808",
+          "opinion": {
+            "uri": "/content/download/2472152/opinion/Opinion_SC2025-1808.pdf",
+            "fileName": "sc2025-1808.pdf",
+            "fileSize": 134913,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Certification of Need for Additional Judges",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-26 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-26 15:45:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-0017",
+        "isInNewTab": false,
+        "locationId": 2522604,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0017",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471856,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0017",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-0017",
+        "modified": 1763654482,
+        "fields": {
+          "case_number": "SC2025-0017",
+          "opinion": {
+            "uri": "/content/download/2471856/opinion/Opinion_SC2025-0017.pdf",
+            "fileName": "sc2025-0017.pdf",
+            "fileSize": 80799,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Rules Regulating The Florida Bar - Rules 6-3.5 and 6-3.6",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-20 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-20 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2022-0575",
+        "isInNewTab": false,
+        "locationId": 2522211,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2022-0575",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471476,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2022-0575",
+        "typeIdentifier": "opinion",
+        "name": "SC2022-0575",
+        "modified": 1763049320,
+        "fields": {
+          "case_number": "SC2022-0575",
+          "opinion": {
+            "uri": "/content/download/2471476/opinion/Opinion_SC2022-0575.pdf",
+            "fileName": "sc2022-0575.pdf",
+            "fileSize": 111486,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rules of Civil Procedure 1.440 and 1.500",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2024-1778",
+        "isInNewTab": false,
+        "locationId": 2522213,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-17782",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471477,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-17782",
+        "typeIdentifier": "opinion",
+        "name": "SC2024-1778",
+        "modified": 1763049549,
+        "fields": {
+          "case_number": "SC2024-1778",
+          "opinion": {
+            "uri": "/content/download/2471477/opinion/Opinion_SC2024-1778.pdf",
+            "fileName": "sc2024-1778_CORRECTED OPINION.pdf",
+            "fileSize": 123539,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rules of General Practice and Judicial Administration",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "note": "Corrected Opinion",
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2024-1778",
+        "isInNewTab": false,
+        "locationId": 2522214,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-17783",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471479,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-17783",
+        "typeIdentifier": "opinion",
+        "name": "SC2024-1778",
+        "modified": 1763049589,
+        "fields": {
+          "case_number": "SC2024-1778",
+          "opinion": {
+            "uri": "/content/download/2471479/opinion/Opinion_SC2024-1778.pdf",
+            "fileName": "sc2024-1778_NOTICE OF CORRECTION.pdf",
+            "fileSize": 46262,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rules of General Practice and Judicial Administration",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "note": "Notice of Correction",
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-0045",
+        "isInNewTab": false,
+        "locationId": 2522215,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0045",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471480,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0045",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-0045",
+        "modified": 1763049652,
+        "fields": {
+          "case_number": "SC2025-0045",
+          "opinion": {
+            "uri": "/content/download/2471480/opinion/Opinion_SC2025-0045.pdf",
+            "fileName": "sc2025-0045.pdf",
+            "fileSize": 172064,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rule of Civil Procedure 1.442 and Forms 1.902 and 1.938",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-1036",
+        "isInNewTab": false,
+        "locationId": 2522217,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-10363",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471482,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-10363",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-1036",
+        "modified": 1763049610,
+        "fields": {
+          "case_number": "SC2025-1036",
+          "opinion": {
+            "uri": "/content/download/2471482/opinion/Opinion_SC2025-1036.pdf",
+            "fileName": "sc2025-1036_NOTICE OF CORRECTION.pdf",
+            "fileSize": 41964,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rule of Criminal Procedure 3.992",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "note": "Notice of Correction",
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-1036",
+        "isInNewTab": false,
+        "locationId": 2522216,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-10362",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471481,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-10362",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-1036",
+        "modified": 1763049777,
+        "fields": {
+          "case_number": "SC2025-1036",
+          "opinion": {
+            "uri": "/content/download/2471481/opinion/Opinion_SC2025-1036.pdf",
+            "fileName": "sc2025-1036_CORRECTED OPINION.pdf",
+            "fileSize": 249193,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rule of Criminal Procedure 3.992",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "note": "Corrected Opinion",
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-1722 & SC2025-1723",
+        "isInNewTab": false,
+        "locationId": 2522242,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1722-sc2025-1723",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471508,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1722-sc2025-1723",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-1722 & SC2025-1723",
+        "modified": 1763067576,
+        "fields": {
+          "case_number": "SC2025-1722 & SC2025-1723",
+          "opinion": {
+            "uri": "/content/download/2471508/opinion/Opinion_SC2025-1722 & SC2025-1723.pdf",
+            "fileName": "sc2025-1722.pdf",
+            "fileSize": 149743,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "Richard Barry Randolph v. State of Florida & Richard Barry Randolph v. Secretary, Department of Corrections",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-13 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-13 20:50:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2023-1219",
+        "isInNewTab": false,
+        "locationId": 2521849,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2023-1219",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471152,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2023-1219",
+        "typeIdentifier": "opinion",
+        "name": "SC2023-1219",
+        "modified": 1762444582,
+        "fields": {
+          "case_number": "SC2023-1219",
+          "opinion": {
+            "uri": "/content/download/2471152/opinion/Opinion_SC2023-1219.pdf",
+            "fileName": "sc2023-1219.pdf",
+            "fileSize": 167318,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "The Florida Bar v. Larry Elliot Klayman",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-06 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-06 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2023-1609 & SC2024-0294",
+        "isInNewTab": false,
+        "locationId": 2521851,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2023-1609-sc2024-0294",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471157,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2023-1609-sc2024-0294",
+        "typeIdentifier": "opinion",
+        "name": "SC2023-1609 & SC2024-0294",
+        "modified": 1762444583,
+        "fields": {
+          "case_number": "SC2023-1609 & SC2024-0294",
+          "opinion": {
+            "uri": "/content/download/2471157/opinion/Opinion_SC2023-1609 & SC2024-0294.pdf",
+            "fileName": "sc2023-1609.pdf",
+            "fileSize": 147282,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rules of Traffic Court & In Re: Amendments to Florida Rule of Traffic Court 6.455",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-06 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-06 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-0659",
+        "isInNewTab": false,
+        "locationId": 2521853,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0659",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471158,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0659",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-0659",
+        "modified": 1762444585,
+        "fields": {
+          "case_number": "SC2025-0659",
+          "opinion": {
+            "uri": "/content/download/2471158/opinion/Opinion_SC2025-0659.pdf",
+            "fileName": "sc2025-0659.pdf",
+            "fileSize": 96449,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Evidence Code",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-06 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-06 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-1496",
+        "isInNewTab": false,
+        "locationId": 2521850,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1496",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471160,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1496",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-1496",
+        "modified": 1762444583,
+        "fields": {
+          "case_number": "SC2025-1496",
+          "opinion": {
+            "uri": "/content/download/2471160/opinion/Opinion_SC2025-1496.pdf",
+            "fileName": "sc2025-1496.pdf",
+            "fileSize": 182146,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rules of Criminal Procedure - 2025 Legislation",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-06 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-06 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-1642 & SC2025-1686 & SC2025-1687",
+        "isInNewTab": false,
+        "locationId": 2521852,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1642-sc2025-1686-sc2025-1687",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2471164,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-1642-sc2025-1686-sc2025-1687",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-1642 & SC2025-1686 & SC2025-1687",
+        "modified": 1762444584,
+        "fields": {
+          "case_number": "SC2025-1642 & SC2025-1686 & SC2025-1687",
+          "opinion": {
+            "uri": "/content/download/2471164/opinion/Opinion_SC2025-1642 & SC2025-1686 & SC2025-1687.pdf",
+            "fileName": "sc2025-1686.pdf",
+            "fileSize": 207342,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "Bryan Fredrick Jennings v. State of Florida & Bryan Fredrick Jennings v. State of Florida & Bryan Fredrick Jennings v. Secretary, Department of Corrections",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-11-06 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-11-06 15:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2024-0839",
+        "isInNewTab": false,
+        "locationId": 2521515,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-0839",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2470825,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2024-0839",
+        "typeIdentifier": "opinion",
+        "name": "SC2024-0839",
+        "modified": 1761836183,
+        "fields": {
+          "case_number": "SC2024-0839",
+          "opinion": {
+            "uri": "/content/download/2470825/opinion/Opinion_SC2024-0839.pdf",
+            "fileName": "sc2024-0839.pdf",
+            "fileSize": 153707,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Rule of Criminal Procedure 3.190",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-10-30 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-10-30 14:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-0448 & SC2025-0451",
+        "isInNewTab": false,
+        "locationId": 2521513,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0448-sc2025-0451",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2470829,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0448-sc2025-0451",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-0448 & SC2025-0451",
+        "modified": 1761836182,
+        "fields": {
+          "case_number": "SC2025-0448 & SC2025-0451",
+          "opinion": {
+            "uri": "/content/download/2470829/opinion/Opinion_SC2025-0448 & SC2025-0451.pdf",
+            "fileName": "sc2025-0448.pdf",
+            "fileSize": 97155,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "The Florida Bar v. Lee David Sarkin & The Florida Bar v. Drew Mark Levitt",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-10-30 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-10-30 14:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    },
+    {
+      "type": "opinion",
+      "typeLabel": "Opinion",
+      "image": null,
+      "highlight": null,
+      "link": {
+        "name": "SC2025-0667",
+        "isInNewTab": false,
+        "locationId": 2521514,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0667",
+        "isExternal": false
+      },
+      "content": {
+        "id": 2470831,
+        "url": "https://supremecourt.flcourts.gov/case-information/opinions/Opinion-Search-For-All-Appellate-Courts/Written-Opinions/sc2025-0667",
+        "typeIdentifier": "opinion",
+        "name": "SC2025-0667",
+        "modified": 1761836182,
+        "fields": {
+          "case_number": "SC2025-0667",
+          "opinion": {
+            "uri": "/content/download/2470831/opinion/Opinion_SC2025-0667.pdf",
+            "fileName": "sc2025-0667.pdf",
+            "fileSize": 102543,
+            "mimeType": "application/pdf"
+          },
+          "case_style": "In Re: Amendments to Florida Probate Rule 5.010",
+          "disposition": "affirmed",
+          "disposition_date": {
+            "date": {
+              "date": "2025-10-30 00:00:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "l d F Y"
+          },
+          "type": {
+            "selection": [0]
+          },
+          "publish_date": {
+            "value": {
+              "date": "2025-10-30 14:55:00.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "stringFormat": "U"
+          }
+        }
+      },
+      "scorePercent": 100,
+      "externalVideoLink": "",
+      "internalVideoLinks": [],
+      "oralArgUrl": null,
+      "opinionTypeLabel": "Written",
+      "siteAccessLabel": "SC"
+    }
+  ],
+  "totalCount": 21,
+  "availableFilters": {
+    "Content Type": {
+      "48": {
+        "title": "Opinion",
+        "count": 21,
+        "identifier": "contentType",
+        "value": "48",
+        "active": false
+      }
+    }
+  },
+  "activeFilters": [],
+  "siteaccess": "supreme2",
+  "view": "full",
+  "sort": "opinion/disposition_date desc, opinion/case_number asc",
+  "template": "full"
+}

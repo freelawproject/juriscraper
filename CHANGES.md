@@ -23,8 +23,26 @@ Changes:
 Fixes:
 -
 
-
 ## Current
+
+**2.6.99 - 2025-12-10**
+
+Changes:
+- Added more fields to the SCOTUS docket parsers
+
+Fixes:
+- fix `okla` improve cleanup_content method to use CSS selectors and return bytes #1692
+- Fix `fla` and `fladistctapp` scrapers by scraping new API endpoint #1690
+- fix `uscgcoca` and `asbca` headers #1664
+- `okla` `cleanup_content` now deletes HTML comments that were causing duplicates #1697
+- make `tenn` use whitelisted user agent #1689
+
+**2.6.98 - 2025-12-05**
+
+Fixes:
+- fix recap.email docket_number parsing inside nested tags
+
+## Past
 
 **2.6.97 - 2025-11-28**
 
@@ -32,8 +50,6 @@ Fixes:
 - fix `alaska` scraper to skip header rows and prevent IndexError in table parsing #1674
 - fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
 - fix `nyappdiv` and `nytrial` docket number extraction regex to require at least 1 number #1655
-
-## Past
 
 **2.6.96 - 2025-11-21**
 

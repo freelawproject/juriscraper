@@ -6,5 +6,5 @@ from juriscraper.opinions.united_states.state import fladistctapp_1
 
 
 class Site(fladistctapp_1.Site):
-    number = "third"
-    court_index = "3"
+    scopes = "third_district_court_of_appeal"
+    site_access = "3dca"

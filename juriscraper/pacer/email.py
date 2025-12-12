@@ -245,13 +245,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             return case_number, self._return_default_dn_components()
 
         path = self._sibling_path("Case Number")
-        docket_numbers_str = current_node.xpath(f"{path}/a/text()")
+        docket_numbers_str = current_node.xpath(f"{path}/a//text()")
+
         self.raw_docket_numbers.update(set(docket_numbers_str))
         docket_number, docket_number_components = (
             self._parse_docket_number_strs(docket_numbers_str)
         )
         if not docket_number:
-            docket_numbers_str = current_node.xpath(f"{path}/p/a/text()")
+            docket_numbers_str = current_node.xpath(f"{path}/p/a//text()")
             self.raw_docket_numbers.update(set(docket_numbers_str))
             docket_number, docket_number_components = (
                 self._parse_docket_number_strs(docket_numbers_str)
