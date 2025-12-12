@@ -1,12 +1,14 @@
+import re
 from datetime import datetime
 from enum import Enum
+from itertools import chain
 from typing import TypedDict
 
 from lxml import html
 from lxml.html import HtmlElement
 
 from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
-from juriscraper.lib.html_utils import clean_html, parse_table
+from juriscraper.lib.html_utils import clean_html, get_all_text, parse_table
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scraper import Scraper
 
@@ -245,6 +247,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         self.tree: HtmlElement = HtmlElement()
         self.events: dict[str, list[HtmlElement]] = {}
         self.briefs: dict[str, list[HtmlElement]] = {}
+        self.case_data: dict[str, str] = {}
         self.is_valid: bool = False
 
     def _parse_text(self, text: str) -> None:
@@ -271,6 +274,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             raise ValueError("Appellate briefs table not found.")
         self.events = parse_table(events_table)
         self.briefs = parse_table(briefs_table)
+        self.case_data = self._extract_case_data()
         self.is_valid = True
 
     @property
@@ -302,6 +306,44 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         )
         return data
 
+    @staticmethod
+    def _extract_case_data_name(name_element: HtmlElement) -> str:
+        """
+        Helper method used by _extract_case_data to clean the titles of entries
+        in the case data table. First calls the clean_string method, then removes
+        all characters that are not whitespace or alphanumeric and converts to
+        lowercase.
+        """
+        name = "".join(get_all_text(name_element))
+        return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
+
+    def _extract_case_data(self) -> dict[str, str]:
+        """
+        Helper method to extract the case information at the top of the page
+        into a dictionary. After cleaning text, the keys are the text on the left
+        of the table and the values are the text on the right. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Dictionary containing the case information.
+        """
+        parent = self.tree.find('.//*[@id="case"]/..')
+        coa_parent = parent.find(
+            './/*[@id="ctl00_ContentPlaceHolder1_COAOnly"]'
+        )
+        children = parent.iterfind('.//*[@class="row-fluid"]')
+
+        if coa_parent is not None:
+            children = chain(
+                children, coa_parent.iterfind('.//*[@class="row-fluid"]')
+            )
+
+        return {
+            self._extract_case_data_name(child.find(".//*[1]")): clean_string(
+                get_all_text(child.find(".//*[2]"))
+            )
+            for child in children
+        }
+
     def _parse_case_name(self) -> tuple[str, str]:
         """
         Extracts the case name from the HTML tree. Will fail if `_parse_text`
@@ -309,9 +351,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Tuple containing the normalized case name and the full case name.
         """
-        name_part_1 = self.tree.findtext('.//*[@id="case"]/../*[4]/div[2]')
-        name_part_2 = self.tree.findtext('.//*[@id="case"]/../*[5]/div[2]')
-        name = harmonize(clean_string(f"{name_part_1} v. {name_part_2}"))
+        name_part_1 = self.case_data["style"]
+        name_part_2 = self.case_data["v"]
+        name = harmonize(f"{name_part_1} v. {name_part_2}")
 
         return name, name
 
@@ -322,9 +364,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Docket number.
         """
-        return clean_string(
-            self.tree.find('.//*[@id="case"]/div[2]/div/strong').text_content()
-        )
+        return self.case_data["case"]
 
     def _parse_date_filed(self) -> datetime:
         """
@@ -333,11 +373,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Date filed
         """
-        date_string = clean_string(
-            self.tree.find(
-                './/*[@id="case"]/../*[2]/div[2]/div'
-            ).text_content()
-        )
+        date_string = self.case_data["date filed"]
         return datetime.strptime(date_string, self.date_format)
 
     def _parse_case_type(self) -> str:
@@ -347,9 +383,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         :return: Case Type
         """
-        return clean_string(
-            self.tree.find('.//*[@id="case"]/../*[3]/div[2]').text_content()
-        )
+        return self.case_data["case type"]
 
     def _parse_parties(self) -> list[TexasCaseParty]:
         """
