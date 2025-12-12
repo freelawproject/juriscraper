@@ -222,12 +222,11 @@ class TexasCommonData(TypedDict):
     appellate_briefs: list[TexasAppellateBrief]
 
 
-DOCKET_NUMBER_REGEXES = {
-    "placeholder": re.compile(r".+"),
-    "sc": re.compile(r"\d{2}-\d{4}"),
-    "coa": re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),
-    "coca": re.compile(r"\w{2}-\d{4}-\d{2}"),
-}
+DOCKET_NUMBER_REGEXES = [
+    re.compile(r"\d{2}-\d{4}"),  # Supreme Court
+    re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
+    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals
+]
 
 
 class TexasCommonScraper(Scraper[TexasCommonData]):
@@ -256,8 +255,6 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         self.events: dict[str, list[HtmlElement]] = {}
         self.briefs: dict[str, list[HtmlElement]] = {}
         self.case_data: dict[str, str] = {}
-        # Required so tests don't fail
-        self.docket_number_regex = DOCKET_NUMBER_REGEXES["placeholder"]
         self.is_valid: bool = False
 
     def _parse_text(self, text: str) -> None:
@@ -377,14 +374,15 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         Extracts the docket number from the HTML tree. Will fail if `_parse_text`
         has not yet been called.
 
+        :raises ValueError: If the docket number format is not recognized.
+
         :return: Docket number.
         """
         docket_number = self.case_data["case"]
-        if self.docket_number_regex.fullmatch(docket_number) is None:
-            raise ValueError(
-                f"Unrecognized docket number format: {docket_number}"
-            )
-        return docket_number
+        for docket_number_regex in DOCKET_NUMBER_REGEXES:
+            if docket_number_regex.fullmatch(docket_number):
+                return docket_number
+        raise ValueError(f"Unrecognized docket number format: {docket_number}")
 
     def _parse_date_filed(self) -> datetime:
         """

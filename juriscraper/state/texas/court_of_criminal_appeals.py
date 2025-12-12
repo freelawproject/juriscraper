@@ -1,5 +1,4 @@
 from juriscraper.state.texas.common import (
-    DOCKET_NUMBER_REGEXES,
     CourtID,
     TexasAppealsCourt,
     TexasCommonData,
@@ -23,7 +22,6 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         self, court_id: str = CourtID.COURT_OF_CRIMINAL_APPEALS.value
     ):
         super().__init__(court_id)
-        self.docket_number_regex = DOCKET_NUMBER_REGEXES["coca"]
 
     @property
     def data(self) -> TexasCourtOfCriminalAppealsDocket:
