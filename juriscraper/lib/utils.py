@@ -2,13 +2,34 @@ import re
 import traceback
 from datetime import date, datetime
 from itertools import chain, islice, tee
-from typing import Callable, Optional
+from typing import Any, Callable, Optional
 
 from requests.exceptions import HTTPError
 
 from juriscraper.AbstractSite import logger
 
-from .string_utils import force_unicode
+from .date_utils import fix_future_year_typo
+from .string_utils import clean_string, force_unicode, harmonize
+
+
+def clean_attribute(name: str, value: Any) -> Any:
+    if name == "download_urls":
+        return value.strip()
+
+    if isinstance(value, str):
+        value = clean_string(value)
+    elif isinstance(value, datetime):
+        value = value.date()
+        # Sanitize case date, fix typo of current year if present
+        fixed_date = fix_future_year_typo(value)
+        if fixed_date != value:
+            logger.info("Date year typo detected. Converting %s to %s")
+            value = fixed_date
+
+    if name in ["case_names", "docket_numbers"]:
+        value = harmonize(value)
+
+    return value
 
 
 def previous_and_next(some_iterable):
