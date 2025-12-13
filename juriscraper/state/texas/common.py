@@ -1,0 +1,613 @@
+import re
+from datetime import datetime
+from enum import Enum
+from functools import cached_property
+from itertools import chain, groupby
+from typing import TypedDict
+
+from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
+from lxml import html
+from lxml.html import HtmlElement
+
+from juriscraper.lib.html_utils import clean_html, get_all_text, parse_table
+from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.scraper import Scraper
+
+
+class CourtID(Enum):
+    UNKNOWN = "texas_unknown"
+    SUPREME_COURT = "texas_sc"
+    COURT_OF_CRIMINAL_APPEALS = "texas_coca"
+    FIRST_COURT_OF_APPEALS = "texas_coa1"
+    SECOND_COURT_OF_APPEALS = "texas_coa2"
+    THIRD_COURT_OF_APPEALS = "texas_coa3"
+    FOURTH_COURT_OF_APPEALS = "texas_coa4"
+    FIFTH_COURT_OF_APPEALS = "texas_coa5"
+    SIXTH_COURT_OF_APPEALS = "texas_coa6"
+    SEVENTH_COURT_OF_APPEALS = "texas_coa7"
+    EIGHTH_COURT_OF_APPEALS = "texas_coa8"
+    NINTH_COURT_OF_APPEALS = "texas_coa9"
+    TENTH_COURT_OF_APPEALS = "texas_coa10"
+    ELEVENTH_COURT_OF_APPEALS = "texas_coa11"
+    TWELFTH_COURT_OF_APPEALS = "texas_coa12"
+    THIRTEENTH_COURT_OF_APPEALS = "texas_coa13"
+    FOURTEENTH_COURT_OF_APPEALS = "texas_coa14"
+    FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
+
+
+COA_ID_MAP = {
+    "first court of appeals": CourtID.FIRST_COURT_OF_APPEALS,
+    "second court of appeals": CourtID.SECOND_COURT_OF_APPEALS,
+    "third court of appeals": CourtID.THIRD_COURT_OF_APPEALS,
+    "fourth court of appeals": CourtID.FOURTH_COURT_OF_APPEALS,
+    "fifth court of appeals": CourtID.FIFTH_COURT_OF_APPEALS,
+    "sixth court of appeals": CourtID.SIXTH_COURT_OF_APPEALS,
+    "seventh court of appeals": CourtID.SEVENTH_COURT_OF_APPEALS,
+    "eighth court of appeals": CourtID.EIGHTH_COURT_OF_APPEALS,
+    "ninth court of appeals": CourtID.NINTH_COURT_OF_APPEALS,
+    "tenth court of appeals": CourtID.TENTH_COURT_OF_APPEALS,
+    "eleventh court of appeals": CourtID.ELEVENTH_COURT_OF_APPEALS,
+    "twelfth court of appeals": CourtID.TWELFTH_COURT_OF_APPEALS,
+    "thirteenth court of appeals": CourtID.THIRTEENTH_COURT_OF_APPEALS,
+    "fourteenth court of appeals": CourtID.FOURTEENTH_COURT_OF_APPEALS,
+    "fifteenth court of appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS,
+}
+
+
+class TexasAppealsCourt(TypedDict):
+    """
+    Schema for Texas appeals court details.
+
+    :ivar case_number: The case number of the appeals court case.
+    :ivar case_url: The URL to the appeals court case.
+    :ivar disposition: The disposition of the appeals court case.
+    :ivar opinion_cite: The opinion citation.
+    :ivar district: The appeals court district.
+    :ivar justice: The name of the appeals court judge.
+    """
+
+    case_number: str
+    case_url: str
+    disposition: str
+    opinion_cite: str
+    district: str
+    justice: str
+
+
+def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
+    """
+    Helper function to parse appeals court information and construct a `TexasAppealsCourt` instance. Used by `TexasSupremeCourtScraper` and `TexasCourtOfCriminalAppealsScraper`.
+
+    :return: Extracted appeals court information.
+    """
+    container = tree.find(
+        './/*[@id="ctl00_ContentPlaceHolder1_divCOAInfo"]/div/div/div[2]'
+    )
+    info_container = container.find(
+        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
+    )
+    # Texas gives the judge their own child element all to themselves for some reason.
+    judge_container = container.find(
+        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
+    )
+    if judge_container is None:
+        judge_container = []
+    case_info = {
+        clean_string(row.find(".//*[1]").text_content()): row.find(".//*[2]")
+        for row in (list(info_container) + list(judge_container))
+    }
+
+    return TexasAppealsCourt(
+        case_number=clean_string(case_info["COA Case"].text_content()),
+        case_url=case_info["COA Case"].find(".//a").get("href"),
+        disposition=clean_string(case_info["Disposition"].text_content()),
+        opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
+        district=clean_string(case_info["COA District"].text_content()),
+        justice=clean_string(
+            case_info.get("COA Justice", HtmlElement("")).text_content()
+        ),
+    )
+
+
+class TexasCaseParty(TypedDict):
+    """
+    Schema for Texas case party details.
+
+    This class is used as a utility to define the necessary attributes for a party and allow type hints.
+
+    :ivar name: The name associated with the party.
+    :ivar type: The type of the party (respondent, petitioner, etc.).
+    :ivar representatives: A list of representatives associated with the party.
+    """
+
+    name: str
+    type: str
+    representatives: list[str]
+
+
+class TexasTrialCourt(TypedDict):
+    """
+    Schema for Texas Trial Court details.
+
+    This class is a `TypedDict` that defines the schema for representing a Texas Trial Court. It is used as a utility for safety and type hints.
+
+    The `judge`, `reporter`, and `punishment` attributes may be empty (most often the `punishment` field will be empty in civil cases), and it is up to the consumer to handle those cases.
+
+    :ivar name: The name of the court.
+    :ivar county: The county where the court is located.
+    :ivar judge: The name of the presiding judge in the court.
+    :ivar case: Specific case identification or name handled by this court.
+    :ivar reporter: The name of the court reporter for the case.
+    :ivar punishment: The punishment or outcome decided by the court in the case.
+    """
+
+    name: str
+    county: str
+    judge: str
+    case: str
+    reporter: str
+    punishment: str
+
+
+class TexasCaseDocument(TypedDict):
+    """
+    Schema for Texas case document details.
+
+    :ivar document_url: The URL of the document.
+    :ivar description: The name of the document (may be empty).
+    """
+
+    document_url: str
+    description: str
+
+
+class TexasDocketEntry(TypedDict):
+    """
+    Schema for Texas docket entry details.
+
+    :ivar date: The date of the docket entry.
+    :ivar type: The type of the docket entry (e.g., "Notice of appeal received").
+    :ivar attachments: Any documents associated with the docket entry.
+    """
+
+    date: datetime
+    type: str
+    attachments: list[TexasCaseDocument]
+
+
+class TexasCaseEvent(TexasDocketEntry):
+    """
+    Extension of `TexasDocketEntry` to handle rows from the "Case Events" table.
+
+    :ivar disposition: The value of the "Disposition" column (e.g., "Filing granted")
+    """
+
+    disposition: str
+
+
+class TexasAppellateBrief(TexasDocketEntry):
+    """
+    Extension of `TexasDocketEntry` to handle rows from the "Appellate Briefs" table.
+
+    :ivar description: The value of the "Description" column (e.g., "Relator")
+    """
+
+    description: str
+
+
+class TexasCommonData(TypedDict):
+    """
+    Schema for data common to all Texas dockets.
+
+    This class is a `TypedDict` that defines the schema for representing data common to all Texas dockets. It is used as a utility for safety and type hints.
+
+    :ivar court_id: The ID of the court this docket is from.
+    :ivar docket_number: The docket number of the case.
+    :ivar case_name: The shortened and normalized name of the case.
+    :ivar case_name_full: The full name of the case.
+    :ivar date_filed: The date the case was filed.
+    :ivar case_type: The type of case.
+    :ivar parties: A list of parties involved in the case and their associated representatives.
+    :ivar trial_court: Information about the trial court handling the case was appealed from.
+    """
+
+    court_id: str
+    docket_number: str
+    case_name: str
+    case_name_full: str
+    date_filed: datetime
+    case_type: str
+    parties: list[TexasCaseParty]
+    trial_court: TexasTrialCourt
+    case_events: list[TexasCaseEvent]
+    appellate_briefs: list[TexasAppellateBrief]
+
+
+DOCKET_NUMBER_REGEXES = [
+    re.compile(r"\d{2}-\d{4}"),  # Supreme Court
+    re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
+    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals
+]
+
+
+class TexasCommonScraper(Scraper[TexasCommonData]):
+    """
+    A scraper for extracting data common to all Texas dockets (Supreme Court, Court of Criminal Appeals, and Court of Appeals).
+
+    Extracts the following data:
+    - Docket number
+    - Date filed
+    - Case type
+    - Case parties (name, type, and representatives)
+    - Trial court information (court name, county, judge, case number, reporter, and punishment)
+
+    :ivar tree: The HTML tree of the docket page.
+    :ivar events: The "Case Events" table data extracted with `parse_table`.
+    :ivar briefs: The "Appellate Briefs" table data extracted with `parse_table`.
+    :ivar is_valid: `True` if the HTML tree has been successfully parsed by calling `_parse_text`, `False` otherwise.
+    """
+
+    date_format = "%m/%d/%Y"
+    base_url = "https://search.txcourts.gov"
+
+    def __init__(self, court_id: str = CourtID.UNKNOWN.value) -> None:
+        super().__init__(court_id)
+        self.tree: HtmlElement = HtmlElement()
+        self.events: dict[str, list[HtmlElement]] = {}
+        self.briefs: dict[str, list[HtmlElement]] = {}
+        self.case_data: dict[str, str] = {}
+        self.is_valid: bool = False
+
+    def _parse_text(self, text: str) -> None:
+        """
+        Takes in a string, cleans it, and parses it into an HTML tree. If the
+        tree is parsed without raising an exception, the `is_valid` attribute
+        is set to `True`.
+
+        :param text: The raw HTML string.
+        """
+        self.tree = html.fromstring(clean_html(text))
+        self.tree.rewrite_links(
+            fix_links_but_keep_anchors, base_href=self.base_url
+        )
+        briefs_table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdBriefs_ctl00"]'
+        )
+        events_table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdEvents_ctl00"]'
+        )
+        if events_table is None:
+            raise ValueError("Case events table not found.")
+        if briefs_table is None:
+            raise ValueError("Appellate briefs table not found.")
+        self.events = parse_table(events_table)
+        self.briefs = parse_table(briefs_table)
+        self.case_data = self._extract_case_data()
+        self.is_valid = True
+
+    @property
+    def data(self) -> TexasCommonData:
+        """
+        Extract parsed data from an HTML tree. This property returns the `TexasCommonData`
+        object.
+
+        :raises ValueError: If the `_parse_text` method has not been called yet.
+
+        :return: Parsed data.
+        """
+        if not self.is_valid:
+            raise ValueError("HTML tree has not been parsed yet.")
+
+        data = TexasCommonData(
+            court_id=CourtID.UNKNOWN.value,
+            docket_number=self._parse_docket_number(),
+            date_filed=self._parse_date_filed(),
+            case_type=self._parse_case_type(),
+            parties=self.parties,
+            trial_court=self._parse_trial_court(),
+            case_events=self._parse_case_events(),
+            appellate_briefs=self._parse_appellate_briefs(),
+            case_name=self.case_name,
+            case_name_full=self.case_name_full,
+        )
+        return data
+
+    @staticmethod
+    def _extract_case_data_name(name_element: HtmlElement) -> str:
+        """
+        Helper method used by _extract_case_data to clean the titles of entries
+        in the case data table. First calls the clean_string method, then removes
+        all characters that are not whitespace or alphanumeric and converts to
+        lowercase.
+        """
+        name = "".join(get_all_text(name_element))
+        return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
+
+    def _extract_case_data(self) -> dict[str, str]:
+        """
+        Helper method to extract the case information at the top of the page
+        into a dictionary. After cleaning text, the keys are the text on the left
+        of the table and the values are the text on the right. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Dictionary containing the case information.
+        """
+        parent = self.tree.find('.//*[@id="case"]/..')
+        coa_parent = parent.find(
+            './/*[@id="ctl00_ContentPlaceHolder1_COAOnly"]'
+        )
+        children = parent.iterfind('.//*[@class="row-fluid"]')
+
+        if coa_parent is not None:
+            children = chain(
+                children, coa_parent.iterfind('.//*[@class="row-fluid"]')
+            )
+
+        return {
+            self._extract_case_data_name(child.find(".//*[1]")): clean_string(
+                get_all_text(child.find(".//*[2]"))
+            )
+            for child in children
+        }
+
+    def _find_party_in_case_name(self, party_name: str) -> tuple[int, int]:
+        """
+        Finds the start and end indices of the party name in the case name.
+
+        Useful in instances where a name appears as "last, first" in the parties list and "first last" in the case name.
+
+        :param party_name: The party name to search for.
+
+        :return: Index of the party name in the case name.
+        """
+        party_name = party_name.lower()
+        if party_name[:3] == "the":
+            party_name = party_name[3:]
+        party_name_parts = [part.strip() for part in party_name.split(",")]
+        if len(party_name_parts) == 1:
+            start = self.case_name_full.lower().find(party_name_parts[0])
+            end = start + len(party_name_parts[0])
+            return start, end
+        party_name_parts_indexed = [
+            (self.case_name_full.find(part), part) for part in party_name_parts
+        ]
+        party_name_parts_indexed.sort(key=lambda x: x[0])
+        start = party_name_parts_indexed[0][0]
+        end = party_name_parts_indexed[-1][0] + len(
+            party_name_parts_indexed[-1][1]
+        )
+        return start, end
+
+    @cached_property
+    def case_name_full(self) -> str:
+        name_part_1 = self.case_data["style"]
+        name_part_2 = self.case_data["v"]
+        if len(name_part_2) == 0:
+            return harmonize(name_part_1)
+        return harmonize(f"{name_part_1} v. {name_part_2}")
+
+    @cached_property
+    def case_name(self) -> str:
+        name_part_1 = self.case_data["style"]
+        name_part_2 = self.case_data["v"]
+        if len(name_part_2) == 0:
+            return harmonize(name_part_1)
+        if len(self.parties) == 2:
+            return harmonize(f"{name_part_1} v. {name_part_2}")
+        grouped_parties = {
+            k: list(g)
+            for k, g in groupby(self.parties, lambda party: party["type"])
+        }
+        first_parties = list(
+            chain(
+                grouped_parties.get("Petitioner", []),
+                grouped_parties.get("Appellee", []),
+            )
+        )
+        second_parties = list(
+            chain(
+                grouped_parties.get("Respondent", []),
+                grouped_parties.get("Appellant", []),
+            )
+        )
+        if len(first_parties) == 1:
+            name_short_part_1 = first_parties[0]["name"]
+            index_1 = 0
+        else:
+            first_party_indices = [
+                self._find_party_in_case_name(party["name"])
+                for party in first_parties
+            ]
+            first_party_indices.sort(key=lambda x: x[0])
+            start, end = first_party_indices[0]
+            index_1 = start
+            name_short_part_1 = f"{self.case_name_full[start:end]}"
+        if len(second_parties) == 1:
+            name_short_part_2 = second_parties[0]["name"]
+            index_2 = 0
+        else:
+            second_party_indices = [
+                self._find_party_in_case_name(party["name"])
+                for party in second_parties
+            ]
+            second_party_indices.sort(key=lambda x: x[0])
+            start, end = second_party_indices[0]
+            index_2 = start
+            name_short_part_2 = f"{self.case_name_full[start:end]}"
+        if index_1 < index_2:
+            return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
+        return harmonize(f"{name_short_part_2} v. {name_short_part_1}")
+
+    def _parse_docket_number(self) -> str:
+        """
+        Extracts the docket number from the HTML tree. Will fail if `_parse_text`
+        has not yet been called.
+
+        :raises ValueError: If the docket number format is not recognized.
+
+        :return: Docket number.
+        """
+        docket_number = self.case_data["case"]
+        for docket_number_regex in DOCKET_NUMBER_REGEXES:
+            if docket_number_regex.fullmatch(docket_number):
+                return docket_number
+        raise ValueError(f"Unrecognized docket number format: {docket_number}")
+
+    def _parse_date_filed(self) -> datetime:
+        """
+        Extracts the date the case was filed from the HTML tree and parses it into a `datetime` object from mm/dd/yyyy format. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Date filed
+        """
+        date_string = self.case_data["date filed"]
+        return datetime.strptime(date_string, self.date_format)
+
+    def _parse_case_type(self) -> str:
+        """
+        Extracts the case type from the HTML tree. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Case Type
+        """
+        return self.case_data["case type"]
+
+    @cached_property
+    def parties(self) -> list[TexasCaseParty]:
+        return self._parse_parties()
+
+    def _parse_parties(self) -> list[TexasCaseParty]:
+        """
+        Extracts the parties from the HTML tree. Multiline entries in the "Representative" column will be treated as if each line is an individual representative for the relevant party. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Parties
+        """
+        table = self.tree.find(
+            './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
+        )
+        parties = parse_table(table)
+        n_parties = len(parties["Party"])
+
+        return [
+            TexasCaseParty(
+                name=clean_string(parties["Party"][i].text_content()),
+                type=clean_string(parties["PartyType"][i].text_content()),
+                representatives=[
+                    clean_string(text)
+                    for text in parties["Representative"][i].xpath(".//text()")
+                ],
+            )
+            for i in range(n_parties)
+        ]
+
+    def _parse_trial_court(self) -> TexasTrialCourt:
+        """
+        Extracts the trial court info from the HTML tree. Will fail if `_parse_text`
+        has not yet been called.
+
+        :return: Trial court info.
+        """
+        info_panel: HtmlElement = self.tree.find(
+            './/*[@id="panelTrialCourtInfo"]/div[2]'
+        )
+        fields: dict[str, str] = {
+            clean_string(child.find(".//*[1]").text_content()): clean_string(
+                child.find(".//*[2]").text_content()
+            )
+            for child in info_panel.iterchildren()
+        }
+
+        return TexasTrialCourt(
+            name=fields.get("Court", ""),
+            county=fields.get("County", ""),
+            judge=fields.get("Court Judge", ""),
+            case=fields.get("Court Case", ""),
+            reporter=fields.get("Reporter", ""),
+            punishment=fields.get("Punishment", ""),
+        )
+
+    @staticmethod
+    def _parse_case_documents(cell: HtmlElement) -> list[TexasCaseDocument]:
+        """
+        Helper method to parse case documents for a given docket entry.
+
+        Tries to find a table in the given cell and extracts the document URLs and names from it. If no table is found, returns an empty list.
+
+        :return: List of case documents.
+        """
+        table = cell.find(".//table")
+        if table is None:
+            return []
+        documents = parse_table(table)
+        n = len(documents["0"])
+
+        return [
+            TexasCaseDocument(
+                document_url=documents["0"][i].find(".//a").get("href"),
+                description=clean_string(documents["1"][i].text_content()),
+            )
+            for i in range(n)
+        ]
+
+    def _parse_case_events(self) -> list[TexasCaseEvent]:
+        """
+        Extracts and parses case events.
+
+        This method processes the "Case Events" table and produces a list of
+        TexasCaseEvent objects. If the table is empty, an empty list is returned.
+
+        :return: A list of parsed TexasCaseEvent objects.
+        """
+        # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
+        if len(self.events["Event Type"]) == 0:
+            return []
+        n = len(self.events["Date"])
+
+        return [
+            TexasCaseEvent(
+                date=datetime.strptime(
+                    clean_string(self.events["Date"][i].text_content()),
+                    self.date_format,
+                ),
+                type=clean_string(self.events["Event Type"][i].text_content()),
+                attachments=self._parse_case_documents(
+                    self.events["Document"][i]
+                ),
+                disposition=clean_string(
+                    self.events["Disposition"][i].text_content()
+                ),
+            )
+            for i in range(n)
+        ]
+
+    def _parse_appellate_briefs(self) -> list[TexasAppellateBrief]:
+        """
+        Extracts and parses appellate briefs.
+
+        This method processes the "Appellate Briefs" table and produces a list of
+        TexasAppellateBrief objects. If the table is empty, an empty list is returned.
+
+        :return: A list of parsed TexasAppellateBrief objects.
+        """
+        # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
+        if len(self.briefs["Event Type"]) == 0:
+            return []
+        n = len(self.briefs["Date"])
+
+        return [
+            TexasAppellateBrief(
+                date=datetime.strptime(
+                    clean_string(self.briefs["Date"][i].text_content()),
+                    self.date_format,
+                ),
+                type=clean_string(self.briefs["Event Type"][i].text_content()),
+                attachments=self._parse_case_documents(
+                    self.briefs["Document"][i]
+                ),
+                description=clean_string(
+                    self.briefs["Description"][i].text_content()
+                ),
+            )
+            for i in range(n)
+        ]
