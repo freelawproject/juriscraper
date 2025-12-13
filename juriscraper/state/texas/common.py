@@ -350,35 +350,31 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             for child in children
         }
 
-    @staticmethod
-    def _find_party_in_case_name(
-        case_name: str, party_name: str
-    ) -> tuple[int, int]:
+    def _find_party_in_case_name(self, party_name: str) -> tuple[int, int]:
         """
         Finds the start and end indices of the party name in the case name.
 
         Useful in instances where a name appears as "last, first" in the parties list and "first last" in the case name.
 
-        :param case_name: The case name to search in.
         :param party_name: The party name to search for.
 
         :return: Index of the party name in the case name.
         """
-        party_name_parts = [
-            part.strip().lower() for part in party_name.split(",")
-        ]
+        party_name = party_name.lower()
+        if party_name[:3] == "the":
+            party_name = party_name[3:]
+        party_name_parts = [part.strip() for part in party_name.split(",")]
         if len(party_name_parts) == 1:
-            i = case_name.lower().find(party_name.lower())
-            return i, i + len(party_name)
+            start = self.case_name_full.lower().find(party_name_parts[0])
+            end = start + len(party_name_parts[0])
+            return start, end
         party_name_parts_indexed = [
-            (party_name_part, case_name.lower().find(party_name_part))
-            for party_name_part in party_name_parts
+            (self.case_name_full.find(part), part) for part in party_name_parts
         ]
-        party_name_parts_indexed.sort(key=lambda x: x[1])
-
-        start = party_name_parts_indexed[0][1]
-        end = party_name_parts_indexed[-1][1] + len(
-            party_name_parts_indexed[-1][0]
+        party_name_parts_indexed.sort(key=lambda x: x[0])
+        start = party_name_parts_indexed[0][0]
+        end = party_name_parts_indexed[-1][0] + len(
+            party_name_parts_indexed[-1][1]
         )
         return start, end
 
@@ -387,10 +383,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         name_part_1 = self.case_data["style"]
         name_part_2 = self.case_data["v"]
         if len(name_part_2) == 0:
-            return name_part_1
-        if len(self.parties) == 2:
-            return harmonize(f"{name_part_1} v. {name_part_2}")
-        return ""
+            return harmonize(name_part_1)
+        return harmonize(f"{name_part_1} v. {name_part_2}")
 
     @cached_property
     def case_name(self) -> str:
@@ -404,34 +398,45 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             k: list(g)
             for k, g in groupby(self.parties, lambda party: party["type"])
         }
-        first_parties = [
-            self._find_party_in_case_name(self.case_name_full, party["name"])
-            for party in chain(
+        first_parties = list(
+            chain(
                 grouped_parties.get("Petitioner", []),
                 grouped_parties.get("Appellee", []),
             )
-        ]
-        first_parties.sort(key=lambda x: x[0])
-        second_parties = [
-            self._find_party_in_case_name(self.case_name_full, party["name"])
-            for party in chain(
+        )
+        second_parties = list(
+            chain(
                 grouped_parties.get("Respondent", []),
                 grouped_parties.get("Appellant", []),
             )
-        ]
-        second_parties.sort(key=lambda x: x[0])
-
-        name_short_part_1 = self.case_name_full[
-            first_parties[0][0] : first_parties[0][1]
-        ]
-        if len(first_parties) > 1:
-            name_short_part_1 = f"{name_short_part_1}, et al."
-        name_short_part_2 = self.case_name_full[
-            second_parties[0][0] : second_parties[0][1]
-        ]
-        if len(second_parties) > 1:
-            name_short_part_2 = f"{name_short_part_2}, et al."
-        return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
+        )
+        if len(first_parties) == 1:
+            name_short_part_1 = first_parties[0]["name"]
+            index_1 = 0
+        else:
+            first_party_indices = [
+                self._find_party_in_case_name(party["name"])
+                for party in first_parties
+            ]
+            first_party_indices.sort(key=lambda x: x[0])
+            start, end = first_party_indices[0]
+            index_1 = start
+            name_short_part_1 = f"{self.case_name_full[start:end]}"
+        if len(second_parties) == 1:
+            name_short_part_2 = second_parties[0]["name"]
+            index_2 = 0
+        else:
+            second_party_indices = [
+                self._find_party_in_case_name(party["name"])
+                for party in second_parties
+            ]
+            second_party_indices.sort(key=lambda x: x[0])
+            start, end = second_party_indices[0]
+            index_2 = start
+            name_short_part_2 = f"{self.case_name_full[start:end]}"
+        if index_1 < index_2:
+            return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
+        return harmonize(f"{name_short_part_2} v. {name_short_part_1}")
 
     def _parse_docket_number(self) -> str:
         """
