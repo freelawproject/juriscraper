@@ -5,10 +5,10 @@ from functools import cached_property
 from itertools import chain, groupby
 from typing import TypedDict
 
+from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from lxml import html
 from lxml.html import HtmlElement
 
-from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.html_utils import clean_html, get_all_text, parse_table
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scraper import Scraper
