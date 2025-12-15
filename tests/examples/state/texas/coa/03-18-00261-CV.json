@@ -801,7 +801,6 @@
   "court_id": "texas_coa03",
   "date_filed": "2018-04-17T00:00:00",
   "docket_number": "03-18-00261-CV",
-  "publication_service": "West Publishing",
   "parties": [
     {
       "name": "Henry Whitman, in his official capacity as DFPS Commissioner",
@@ -872,6 +871,13 @@
       "type": "Appellant"
     }
   ],
+  "publication_service": "West Publishing",
+  "transfer_from": {
+    "court_id": "texas_coa08",
+    "date": "2018-04-17T00:00:00",
+    "origin_docket": "08-16-00334-CV"
+  },
+  "transfer_to": null,
   "trial_court": {
     "case": "D-1-GN-15-004336",
     "county": "Travis",
