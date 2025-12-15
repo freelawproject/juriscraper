@@ -5,10 +5,10 @@ from functools import cached_property
 from itertools import chain, groupby
 from typing import TypedDict
 
-from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from lxml import html
 from lxml.html import HtmlElement
 
+from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from juriscraper.lib.html_utils import clean_html, get_all_text, parse_table
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scraper import Scraper
@@ -378,6 +378,32 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         )
         return start, end
 
+    def _make_short_party_name(
+        self, name_part: str, parties: list[TexasCaseParty]
+    ) -> str:
+        if len(parties) == 0:
+            return name_part
+        if len(parties) == 1:
+            if len(parties[0]["name"]) < len(name_part):
+                return parties[0]["name"]
+            else:
+                return name_part
+        semi = name_part.find(";")
+        if semi > 0:
+            return name_part[:semi]
+        else:
+            if len(parties) == 1:
+                return parties[0]["name"]
+            else:
+                party_indices = [
+                    self._find_party_in_case_name(party["name"])
+                    for party in parties
+                ]
+                party_indices.sort(key=lambda x: x[0])
+                print(name_part, parties)
+                start, end = party_indices[0]
+                return self.case_name_full[start:end]
+
     @cached_property
     def case_name_full(self) -> str:
         name_part_1 = self.case_data["style"]
@@ -392,8 +418,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         name_part_2 = self.case_data["v"]
         if len(name_part_2) == 0:
             return harmonize(name_part_1)
-        if len(self.parties) == 2:
-            return harmonize(f"{name_part_1} v. {name_part_2}")
+
         grouped_parties = {
             k: list(g)
             for k, g in groupby(self.parties, lambda party: party["type"])
@@ -401,42 +426,23 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         first_parties = list(
             chain(
                 grouped_parties.get("Petitioner", []),
-                grouped_parties.get("Appellee", []),
+                grouped_parties.get("Appellant", []),
             )
         )
         second_parties = list(
             chain(
                 grouped_parties.get("Respondent", []),
-                grouped_parties.get("Appellant", []),
+                grouped_parties.get("Appellee", []),
             )
         )
-        if len(first_parties) == 1:
-            name_short_part_1 = first_parties[0]["name"]
-            index_1 = 0
-        else:
-            first_party_indices = [
-                self._find_party_in_case_name(party["name"])
-                for party in first_parties
-            ]
-            first_party_indices.sort(key=lambda x: x[0])
-            start, end = first_party_indices[0]
-            index_1 = start
-            name_short_part_1 = f"{self.case_name_full[start:end]}"
-        if len(second_parties) == 1:
-            name_short_part_2 = second_parties[0]["name"]
-            index_2 = 0
-        else:
-            second_party_indices = [
-                self._find_party_in_case_name(party["name"])
-                for party in second_parties
-            ]
-            second_party_indices.sort(key=lambda x: x[0])
-            start, end = second_party_indices[0]
-            index_2 = start
-            name_short_part_2 = f"{self.case_name_full[start:end]}"
-        if index_1 < index_2:
-            return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
-        return harmonize(f"{name_short_part_2} v. {name_short_part_1}")
+
+        name_short_part_1 = self._make_short_party_name(
+            name_part_1, first_parties
+        )
+        name_short_part_2 = self._make_short_party_name(
+            name_part_2, second_parties
+        )
+        return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
 
     def _parse_docket_number(self) -> str:
         """
