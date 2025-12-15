@@ -77,7 +77,7 @@ class Site(OpinionSiteLinear):
                 summary = summary_container[-2].xpath("string(.)")
             # text inside may be separated by <br> tags
             summary = re.sub(r"\s+", " ", summary)
-            
+
             # prevent picking up one of the judge containers
             if "Judge:" in summary:
                 summary = ""
