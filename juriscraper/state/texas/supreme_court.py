@@ -33,6 +33,7 @@ class TexasSupremeCourtAppellateBrief(TexasAppellateBrief):
 class TexasSupremeCourtDocket(TexasCommonData):
     """
     Extension of the `TexasCommonData` schema with data specific to Texas Supreme Court dockets.
+
     :ivar appeals_court: Information about the appeals court which heard this case.
     :ivar case_events: A list of `TexasSupremeCourtCaseEvent` objects representing the case events.
     :ivar appellate_briefs: A list of `TexasSupremeCourtAppellateBrief` objects representing the appellate briefs.
@@ -61,6 +62,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
 
         :return: Parsed data.
         """
+
         common_data = super().data
         case_events = [
             TexasSupremeCourtCaseEvent(

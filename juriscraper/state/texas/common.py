@@ -15,6 +15,10 @@ from juriscraper.scraper import Scraper
 
 
 class CourtID(Enum):
+    """
+    Standardized IDs for Texas courts. Created by prefixing "texas_" to the ID that TAMES uses. Used by consumers to deterministically identify courts.
+    """
+
     UNKNOWN = "texas_unknown"
     SUPREME_COURT = "texas_cossup"
     COURT_OF_CRIMINAL_APPEALS = "texas_coscca"
@@ -35,23 +39,50 @@ class CourtID(Enum):
     FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
 
 
-COA_ID_MAP = {
-    "first court of appeals": CourtID.FIRST_COURT_OF_APPEALS,
-    "second court of appeals": CourtID.SECOND_COURT_OF_APPEALS,
-    "third court of appeals": CourtID.THIRD_COURT_OF_APPEALS,
-    "fourth court of appeals": CourtID.FOURTH_COURT_OF_APPEALS,
-    "fifth court of appeals": CourtID.FIFTH_COURT_OF_APPEALS,
-    "sixth court of appeals": CourtID.SIXTH_COURT_OF_APPEALS,
-    "seventh court of appeals": CourtID.SEVENTH_COURT_OF_APPEALS,
-    "eighth court of appeals": CourtID.EIGHTH_COURT_OF_APPEALS,
-    "ninth court of appeals": CourtID.NINTH_COURT_OF_APPEALS,
-    "tenth court of appeals": CourtID.TENTH_COURT_OF_APPEALS,
-    "eleventh court of appeals": CourtID.ELEVENTH_COURT_OF_APPEALS,
-    "twelfth court of appeals": CourtID.TWELFTH_COURT_OF_APPEALS,
-    "thirteenth court of appeals": CourtID.THIRTEENTH_COURT_OF_APPEALS,
-    "fourteenth court of appeals": CourtID.FOURTEENTH_COURT_OF_APPEALS,
-    "fifteenth court of appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS,
+COA_ORDINAL_MAP = {
+    "first": CourtID.FIRST_COURT_OF_APPEALS,
+    "second": CourtID.SECOND_COURT_OF_APPEALS,
+    "third": CourtID.THIRD_COURT_OF_APPEALS,
+    "fourth": CourtID.FOURTH_COURT_OF_APPEALS,
+    "fifth": CourtID.FIFTH_COURT_OF_APPEALS,
+    "sixth": CourtID.SIXTH_COURT_OF_APPEALS,
+    "seventh": CourtID.SEVENTH_COURT_OF_APPEALS,
+    "eighth": CourtID.EIGHTH_COURT_OF_APPEALS,
+    "ninth": CourtID.NINTH_COURT_OF_APPEALS,
+    "tenth": CourtID.TENTH_COURT_OF_APPEALS,
+    "eleventh": CourtID.ELEVENTH_COURT_OF_APPEALS,
+    "twelfth": CourtID.TWELFTH_COURT_OF_APPEALS,
+    "thirteenth": CourtID.THIRTEENTH_COURT_OF_APPEALS,
+    "fourteenth": CourtID.FOURTEENTH_COURT_OF_APPEALS,
+    "fifteenth": CourtID.FIFTEENTH_COURT_OF_APPEALS,
+    "1st": CourtID.FIRST_COURT_OF_APPEALS,
+    "2nd": CourtID.SECOND_COURT_OF_APPEALS,
+    "3rd": CourtID.THIRD_COURT_OF_APPEALS,
+    "4th": CourtID.FOURTH_COURT_OF_APPEALS,
+    "5th": CourtID.FIFTH_COURT_OF_APPEALS,
+    "6th": CourtID.SIXTH_COURT_OF_APPEALS,
+    "7th": CourtID.SEVENTH_COURT_OF_APPEALS,
+    "8th": CourtID.EIGHTH_COURT_OF_APPEALS,
+    "9th": CourtID.NINTH_COURT_OF_APPEALS,
+    "10th": CourtID.TENTH_COURT_OF_APPEALS,
+    "11th": CourtID.ELEVENTH_COURT_OF_APPEALS,
+    "12th": CourtID.TWELFTH_COURT_OF_APPEALS,
+    "13th": CourtID.THIRTEENTH_COURT_OF_APPEALS,
+    "14th": CourtID.FOURTEENTH_COURT_OF_APPEALS,
+    "15th": CourtID.FIFTEENTH_COURT_OF_APPEALS,
 }
+
+
+def coa_name_to_court_id(coa_name: str) -> CourtID:
+    """
+    Takes in the name of a Texas Court of Appeals and returns the corresponding CourtID.
+
+    :param coa_name: The name of the Court of Appeals, extracted from the docket page.
+
+    :return: The CourtID corresponding to the given Court of Appeals name.
+    """
+    ordinal = coa_name.split()[0]
+    return COA_ORDINAL_MAP[ordinal.lower()]
 
 
 class TexasAppealsCourt(TypedDict):
@@ -209,6 +240,8 @@ class TexasCommonData(TypedDict):
     :ivar case_type: The type of case.
     :ivar parties: A list of parties involved in the case and their associated representatives.
     :ivar trial_court: Information about the trial court handling the case was appealed from.
+    :ivar case_events: A list of case events (e.g., filing of the case, notice of appeal received).
+    :ivar appellate_briefs: A list of briefs filed in the case.
     """
 
     court_id: str
@@ -300,7 +333,7 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
-            docket_number=self._parse_docket_number(),
+            docket_number=self.docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
             parties=self.parties,
@@ -311,6 +344,13 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             case_name_full=self.case_name_full,
         )
         return data
+
+    @cached_property
+    def docket_number(self) -> str:
+        """
+        The docket number of the case.
+        """
+        return self._parse_docket_number()
 
     @staticmethod
     def _extract_case_data_name(name_element: HtmlElement) -> str:
@@ -381,6 +421,19 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
     def _make_short_party_name(
         self, name_part: str, parties: list[TexasCaseParty]
     ) -> str:
+        """
+        Creates a shortened version of the party name based on the given list of parties.
+
+        Sometimes multiple parties to a case are listed in the same entry on TAMES so this method
+
+        1. Chooses the shortest party name between the list of parties and the long case name (these are often different)
+        2. Attempts to find and return the first party name in a string by splitting on semicolons. Some cases also list multiple parties in one entry separated by commas, but this is significantly more difficult to handle due to cases such as "lastname, firstname" and "company, LLC".
+
+        :param name_part: The initial part of the case name to process.
+        :param parties: A list of parties from which to determine the shortened name.
+
+        :return: The shortened party name derived from the input parameters.
+        """
         if len(parties) == 0:
             return name_part
         if len(parties) == 1:
@@ -400,12 +453,14 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
                     for party in parties
                 ]
                 party_indices.sort(key=lambda x: x[0])
-                print(name_part, parties)
                 start, end = party_indices[0]
                 return self.case_name_full[start:end]
 
     @cached_property
     def case_name_full(self) -> str:
+        """
+        The unshortened name of the case as it appears on TAMES.
+        """
         name_part_1 = self.case_data["style"]
         name_part_2 = self.case_data["v"]
         if len(name_part_2) == 0:
@@ -414,6 +469,9 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
 
     @cached_property
     def case_name(self) -> str:
+        """
+        A (possibly) shortened version of the case name created using some heuristics. Useful to make cases easier to search and match.
+        """
         name_part_1 = self.case_data["style"]
         name_part_2 = self.case_data["v"]
         if len(name_part_2) == 0:

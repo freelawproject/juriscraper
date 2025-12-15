@@ -11,6 +11,12 @@ from juriscraper.state.texas.common import (
 
 
 class TexasCourtOfCriminalAppealsDocket(TexasCommonData):
+    """
+    Extension of the `TexasCommonData` schema with data specific to Texas Court of Criminal Appeals dockets.
+
+    :ivar appeals_court: Information about the appeals court which heard this case.
+    """
+
     appeals_court: TexasAppealsCourt
 
 
@@ -33,6 +39,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
 
         :return: Parsed data.
         """
+
         common_data = super().data
 
         return TexasCourtOfCriminalAppealsDocket(
@@ -51,6 +58,12 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
 
     @cached_property
     def case_name(self) -> str:
+        """
+        Special version of case name processing, which handles instances where the state is not listed as a party, which we assume to be a clerical error. Also eliminates most of the default logic for shortening case names as the defendant party's name is typically a person's name, which doesn't need to be shortened.
+
+        :return: Shortened case name
+        """
+
         # If there is only one party, and it is not the state, assume there was a clerical error
         if (
             len(self.parties) == 1
