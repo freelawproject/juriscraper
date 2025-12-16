@@ -24,6 +24,7 @@ Fixes:
 - `ca11_p`: remove hardcoded status field #1708
 - `tenn`: fix opinion type extraction #1704
 - `tenn`: fix docket number and judges extraction #1705
+- `ca11_p` and `ca11_u` parse lower court docket number #1710
 
 ## Current
 
