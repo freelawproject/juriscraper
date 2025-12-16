@@ -22,7 +22,8 @@ Changes:
 -
 
 Fixes:
--
+- `tenn`: fix opinion type extraction #1704
+- `tenn`: fix docket number and judges extraction #1705
 
 ## Current
 
