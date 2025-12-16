@@ -90,9 +90,10 @@ class Site(ClusterSite):
             case_dict = {
                 "date": date,
                 "url": url,
-                "name": name,
+                "name": name.strip(),
                 "docket": section.xpath(docket_xpath)[0].strip(),
                 "judge": judge,
+                "author": judge,
                 "lower_court_judge": lower_court_judge or "",
                 "summary": summary or "",
                 "per_curiam": per_curiam,
@@ -140,6 +141,9 @@ class Site(ClusterSite):
         candidate_cluster["sub_opinions"].append(
             {key: case_dict.pop(key) for key in opinion_fields}
         )
+
+        # add to the cluster
+        candidate_cluster["judge"] += f"; {case_dict['judge']}"
 
         return True
 
