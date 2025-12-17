@@ -57,6 +57,7 @@ dev = [
   "jsondate3-aware",
   "jinja2",
   "pytest",
+  "responses>=0.25.8",
 ]
 
 [tool.setuptools]

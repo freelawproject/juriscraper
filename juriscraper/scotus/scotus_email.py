@@ -108,7 +108,7 @@ class _SCOTUSConfirmationPageScraper:
         self.tree: Optional[HtmlElement] = None
 
     @property
-    def data(self) -> SCOTUSConfirmationResult:
+    def data(self) -> str:
         """
         Determine the result of our attempt to confirm our subscription.
 
@@ -138,20 +138,20 @@ class _SCOTUSConfirmationPageScraper:
         )
 
         if confirmation_status == "badrequest":
-            return SCOTUSConfirmationResult.BadRequest
+            return SCOTUSConfirmationResult.BadRequest.value
         if confirmation_status == "fail":
-            return SCOTUSConfirmationResult.Failed
+            return SCOTUSConfirmationResult.Failed.value
         if confirmation_status == "noverifymessage":
-            return SCOTUSConfirmationResult.NoVerify
+            return SCOTUSConfirmationResult.NoVerify.value
         if confirmation_status == "linkexpired":
-            return SCOTUSConfirmationResult.LinkExpired
+            return SCOTUSConfirmationResult.LinkExpired.value
         if confirmation_status == "notfound":
-            return SCOTUSConfirmationResult.NotFound
+            return SCOTUSConfirmationResult.NotFound.value
         if confirmation_status == "duplicate":
-            return SCOTUSConfirmationResult.AlreadySubscribed
+            return SCOTUSConfirmationResult.AlreadySubscribed.value
         if confirmation_status == "ok":
-            return SCOTUSConfirmationResult.Success
-        return SCOTUSConfirmationResult.Unknown
+            return SCOTUSConfirmationResult.Success.value
+        return SCOTUSConfirmationResult.Unknown.value
 
     def _parse_text(self, text: str) -> None:
         """Parse raw HTML and store a lxml tree."""
@@ -204,9 +204,7 @@ class SCOTUSEmail:
             data=data,
         )
 
-    async def handle_email(
-        self, timeout: float = 1.0
-    ) -> SCOTUSEmailHandlingResult:
+    def handle_email(self, timeout: float = 1.0) -> SCOTUSEmailHandlingResult:
         """
         Handle next steps in email processing.
 
