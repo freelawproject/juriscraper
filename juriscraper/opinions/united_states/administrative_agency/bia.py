@@ -27,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.volume = 0
         self.urls = None
         self.status = "Published"
+        self.needs_special_headers = True
 
     def _process_html(self) -> None:
         if not self.test_mode_enabled():
