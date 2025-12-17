@@ -21,7 +21,9 @@ Changes:
 - Improve `colo` scraper to automatically increase per_page parameter and add required field validation before appending cases #1656
 
 Fixes:
--
+- `ca11_p`: remove hardcoded status field #1708
+- `tenn`: fix opinion type extraction #1704
+- `tenn`: fix docket number and judges extraction #1705
 
 ## Current
 
