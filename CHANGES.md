@@ -24,6 +24,7 @@ Fixes:
 - `ca11_p`: remove hardcoded status field #1708
 - `tenn`: fix opinion type extraction #1704
 - `tenn`: fix docket number and judges extraction #1705
+- `bia`: add special headers to avoid 401 status code #1715
 
 ## Current
 
