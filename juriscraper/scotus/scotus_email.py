@@ -6,7 +6,7 @@ from datetime import datetime
 from email.message import EmailMessage
 from enum import Enum
 from pathlib import Path
-from typing import Optional, TypedDict
+from typing import Optional, TypedDict, Union
 from urllib.parse import parse_qs, urlparse
 
 import requests
@@ -56,7 +56,7 @@ class SCOTUSEmailData(TypedDict):
     email_type: str
     followup_url: str
     email_datetime: datetime
-    data: SCOTUSNotificationEmail | None
+    data: Optional[SCOTUSNotificationEmail]
 
 
 class SCOTUSEmailHandlingResult(TypedDict):
@@ -65,7 +65,7 @@ class SCOTUSEmailHandlingResult(TypedDict):
     """
 
     email_type: str
-    data: dict[str, str] | str
+    data: Union[dict[str, str], str]
 
 
 class SCOTUSConfirmationResult(Enum):
