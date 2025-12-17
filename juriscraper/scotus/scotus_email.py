@@ -6,21 +6,156 @@ from datetime import datetime
 from email.message import EmailMessage
 from enum import Enum
 from pathlib import Path
-from typing import Optional
+from typing import Optional, TypedDict
 from urllib.parse import parse_qs, urlparse
 
+import requests
 from lxml import html
 from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html
 from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.scotus import SCOTUSDocketReportHTML
 
 
-class EmailType(Enum):
+class SCOTUSEmailType(Enum):
+    """
+    Enum for the different types of emails that can be received from SCOTUS.
+    """
+
     INVALID = "invalid"
     CONFIRMATION = "confirmation"
     DOCKET_ENTRY = "docket_entry"
+
+
+class SCOTUSNotificationEmail(TypedDict):
+    """
+    Schema for data extracted from SCOTUS notification emails.
+
+    :ivar docket_number: The docket number of the case from the email.
+    :ivar case_name: The name of the case from the email.
+    :ivar entry_description: The description of the docket entry from the email.
+    """
+
+    docket_number: str
+    case_name: str
+    entry_description: str
+
+
+class SCOTUSEmailData(TypedDict):
+    """
+    Schema for data extracted from SCOTUS emails.
+
+    :ivar email_type: The type of email this data is extracted from.
+    :ivar followup_url: The URL to perform the next action in the email flow (confirmation link for confirmation emails, case URL for docket entry emails). Must be set if the email type is valid and must be an empty string otherwise.
+    :ivar email_datetime: The time (extracted from the "Date" email header) the email was sent.
+    :ivar data: The data extracted from the email. Type corresponds to `email_type` (DOCKET_ENTRY: SCOTUSNotificationEmail; CONFIRMATION, UNKNOWN: None).
+    """
+
+    email_type: str
+    followup_url: str
+    email_datetime: datetime
+    data: SCOTUSNotificationEmail | None
+
+
+class SCOTUSEmailHandlingResult(TypedDict):
+    """
+    Schema for result of handling SCOTUS emails.
+    """
+
+    email_type: str
+    data: dict[str, str] | str
+
+
+class SCOTUSConfirmationResult(Enum):
+    """
+    Enum for the possible results of attempting to confirm a subscription to SCOTUS emails.
+    """
+
+    BadRequest = "bad_request"
+    """Possibly: the request was malformed or missing required parameters. Unclear from SCOTUS website."""
+    Failed = "failed"
+    """Possibly: The confirmation request failed for some reason. Unclear from SCOTUS website."""
+    NoVerify = "no_verify"
+    """Unclear from SCOTUS website."""
+    LinkExpired = "link_expired"
+    """The confirmation link has expired."""
+    NotFound = "not_found"
+    """The email address associated with the confirmation link was not found (don't ask me how that could happen)."""
+    AlreadySubscribed = "duplicate"
+    """The email address is already subscribed to SCOTUS emails."""
+    Success = "success"
+    """The subscription confirmation was successful."""
+    Unknown = "unknown"
+    """Unknown error. Used when we can't determine the confirmation result. Should never appear in practice and exists only for future-proofing."""
+
+
+class _SCOTUSConfirmationPageScraper:
+    """
+    Special-purpose scraper for parsing the subscription confirmation page for SCOTUS email updates.
+
+    Should only be used by `SCOTUSEmail`.
+
+    Mainly exists to make testing easier.
+
+    :ivar court_id: Court ID for the scraper.
+    :ivar tree: Parsed HTML tree.
+    """
+
+    def __init__(self, court_id: str = "scotus"):
+        self.court_id = court_id
+        self.tree: Optional[HtmlElement] = None
+
+    @property
+    def data(self) -> SCOTUSConfirmationResult:
+        """
+        Determine the result of our attempt to confirm our subscription.
+
+        :return: Result of the confirmation attempt.
+        """
+        body_content = self.tree.find(".//div[@class='body-content']")
+        script_tag = body_content.find(".//script")
+        script = script_tag.text_content()
+        # The confirmation page by default displays all response messages and uses
+        # a (presumably) server-generated if/else chain with conditions set to `true`
+        # or `false` to determine which message to display. A better solution would be
+        # to either render the page with JS enabled or to parse the script tag into an
+        # AST, but this works for now.
+        match = re.search(r"true\)\s\{([^}]+)", script)
+        statement_body = match.group(1)
+        visibility_calls = [
+            line.strip() for line in statement_body.split("\n")[2:-1]
+        ]
+        visibility_re = re.compile(r"^\$\(\'#(.+)\'\)\.(show|hide)\(\);$")
+        visibility_matches = [
+            visibility_re.match(call) for call in visibility_calls
+        ]
+        confirmation_status = next(
+            visibility_match.group(1)[3:].lower()
+            for visibility_match in visibility_matches
+            if visibility_match.group(2) == "show"
+        )
+
+        if confirmation_status == "badrequest":
+            return SCOTUSConfirmationResult.BadRequest
+        if confirmation_status == "fail":
+            return SCOTUSConfirmationResult.Failed
+        if confirmation_status == "noverifymessage":
+            return SCOTUSConfirmationResult.NoVerify
+        if confirmation_status == "linkexpired":
+            return SCOTUSConfirmationResult.LinkExpired
+        if confirmation_status == "notfound":
+            return SCOTUSConfirmationResult.NotFound
+        if confirmation_status == "duplicate":
+            return SCOTUSConfirmationResult.AlreadySubscribed
+        if confirmation_status == "ok":
+            return SCOTUSConfirmationResult.Success
+        return SCOTUSConfirmationResult.Unknown
+
+    def _parse_text(self, text: str) -> None:
+        """Parse raw HTML and store a lxml tree."""
+        self.tree = html.fromstring(clean_html(text))
 
 
 class SCOTUSEmail:
@@ -38,64 +173,94 @@ class SCOTUSEmail:
         self.court_id: str = court_id
         self.tree: Optional[HtmlElement] = None
         self.message: Optional[EmailMessage] = None
-        self.email_type: EmailType = EmailType.INVALID
+        self.email_type: SCOTUSEmailType = SCOTUSEmailType.INVALID
 
     @property
-    def data(self) -> dict:
+    def data(self) -> SCOTUSEmailData:
         """Extract all the data in the email.
 
         If the email is a docket update email, the output will be formatted:
 
-        {
-            "email_type": "docket_entry",
-            "docket_number": "25-250",
-            "notification_datetime": "2025-10-09 02:04:05+00:00",
-            "case_name": "Donald J. Trump, President of the United States v. V.O.S. Selections, Inc.",
-            "case_url": "https://www.supremecourt.gov/search.aspx?filename=/docket/DocketFiles/html/Public/25-250.html",
-            "entry_description": "Amicus brief of Corey J. Biazzo, Esq. submitted."
-        }
-
-        If the email is a confirmation email, the output will be formatted:
-
-        {
-            "email_type": "confirmation",
-            "confirmation_link": "http://file.supremecourt.gov/casenotification/update?verify=CfDJ8LWjh78o-U5EigyPTWy9BmekjhR9plnZeYQHVl3uPceov95hvtFvqNhiJMMqHBzJV2ghZqBPHNh5RsKiWpg5xIivNeMJY6khyqOvoh-hr-GWniqjbqooFYeevAFYHzSBQhlX_vMY2mIJORl9dYZAaLJvbk-JFWLANLnh3vaPhtAknU6xszMVXJwPqQNU2onUC7VoP-YN_pV3k6UXmQvUziwuPaKuwgWOogpRaNQt1lapNhv6zXvL8zIJnH-nCnZeom2o2g7odXotLrdvau4p1xtZ6lOzboGltJGV0LTuxQFT"
-        }
-
-        :return: `dict` of data extracted from the email. Will return `{}` if
-        email parsing has not occurred or has failed. A field will be set to
-        `None` if extraction of that specific field from the email fails.
+        :return: Data extracted from the email. The `data` key will be `None` if the email type is unknown or parsing fails.
         """
-        email_data = {"email_type": self.email_type.value}
 
-        if self.email_type == EmailType.DOCKET_ENTRY:
-            return email_data | {
-                "docket_number": self._parse_docket_number(),
-                "notification_datetime": self._parse_datetime(),
-                "case_name": self._parse_case_name(),
-                "case_url": self._parse_first_link(),
-                "entry_description": self._parse_filing_name(),
-            }
-        elif self.email_type == EmailType.CONFIRMATION:
-            return email_data | {
-                "confirmation_link": self._parse_first_link(),
-            }
-        return {}
+        if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
+            followup_url = self._parse_first_link()
+            data = SCOTUSNotificationEmail(
+                docket_number=self._parse_docket_number(),
+                case_name=self._parse_case_name(),
+                entry_description=self._parse_filing_name(),
+            )
+        elif self.email_type == SCOTUSEmailType.CONFIRMATION:
+            followup_url = self._parse_first_link()
+            data = None
+        else:
+            followup_url = ""
+            data = None
+        return SCOTUSEmailData(
+            email_type=self.email_type.value,
+            followup_url=followup_url,
+            email_datetime=self._parse_datetime(),
+            data=data,
+        )
 
-    def _determine_email_type(self) -> EmailType:
+    async def handle_email(
+        self, timeout: float = 1.0
+    ) -> SCOTUSEmailHandlingResult:
+        """
+        Handle next steps in email processing.
+
+        If the email is a docket update, request the docket page and return the parsed data.
+
+        If the email is a confirmation email, attempt to confirm the subscription and return the parsed result.
+
+        :param timeout: Timeout for the HTTP request in seconds.
+
+        :return: Result of handling the email.
+        """
+        if self.email_type == SCOTUSEmailType.INVALID:
+            raise TypeError("Unknown email type.")
+
+        with requests.Session() as session:
+            session.headers.update({"User-Agent": "Free Law Project"})
+            # The `followup_url` property is guaranteed to be present if the email type is valid.
+            response = session.get(self.data["followup_url"], timeout=timeout)
+            response.raise_for_status()
+
+            if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
+                scotus_docket_report_html = SCOTUSDocketReportHTML(
+                    self.court_id
+                )
+                scotus_docket_report_html._parse_text(response.text)
+                return SCOTUSEmailHandlingResult(
+                    email_type=self.email_type.value,
+                    data=scotus_docket_report_html.data,
+                )
+
+            # The only remaining possibility is a confirmation email.
+            scotus_confirmation_page_scraper = _SCOTUSConfirmationPageScraper(
+                self.court_id
+            )
+            scotus_confirmation_page_scraper._parse_text(response.text)
+            return SCOTUSEmailHandlingResult(
+                email_type=self.email_type.value,
+                data=scotus_confirmation_page_scraper.data.value,
+            )
+
+    def _determine_email_type(self) -> SCOTUSEmailType:
         """Determine the type of the email (docket update/confirmation) based
         on the subject line. If the subject line does not match any known
         patterns, return `EmailType.INVALID`."""
         subject = self.message.get("Subject", failobj="")
 
         if self.DOCKET_ENTRY_SUBJECT_REGEX.match(subject) is not None:
-            return EmailType.DOCKET_ENTRY
+            return SCOTUSEmailType.DOCKET_ENTRY
         elif self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
-            return EmailType.CONFIRMATION
+            return SCOTUSEmailType.CONFIRMATION
         logger.error(
             "Email subject did not match known patterns. Subject: %s", subject
         )
-        return EmailType.INVALID
+        return SCOTUSEmailType.INVALID
 
     def _parse_text(self, text: str) -> None:
         """Extract and store the first part of the email with the "Content-Type"
@@ -110,7 +275,7 @@ class SCOTUSEmail:
         self.message = email.message_from_string(text)
         email_type = self._determine_email_type()
 
-        if email_type == EmailType.INVALID:
+        if email_type == SCOTUSEmailType.INVALID:
             return
 
         content_part = next(
@@ -144,7 +309,7 @@ class SCOTUSEmail:
 
         n_anchors = sum(1 for _ in self.tree.iterfind(".//a"))
 
-        if email_type == EmailType.DOCKET_ENTRY:
+        if email_type == SCOTUSEmailType.DOCKET_ENTRY:
             if self.message.get("Date") is None:
                 logger.error("Unable to find 'Date' header in email")
                 return
@@ -164,7 +329,7 @@ class SCOTUSEmail:
                 return
 
             self.email_type = email_type
-        elif email_type == EmailType.CONFIRMATION:
+        elif email_type == SCOTUSEmailType.CONFIRMATION:
             if n_anchors != 1:
                 logger.error(
                     "Incorrect number of links in email body. Should be exactly one (confirmation link); found %d",
