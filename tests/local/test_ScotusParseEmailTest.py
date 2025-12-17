@@ -12,7 +12,5 @@ class ScotusParseEmailTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_emails(self):
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "email"
-        )
+        path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "email")
         self.parse_files(path_root, "*.eml", SCOTUSEmail)
