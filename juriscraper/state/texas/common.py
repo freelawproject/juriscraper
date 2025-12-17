@@ -5,11 +5,15 @@ from functools import cached_property
 from itertools import chain, groupby
 from typing import TypedDict
 
-from build.lib.juriscraper.lib.html_utils import fix_links_but_keep_anchors
 from lxml import html
 from lxml.html import HtmlElement
 
-from juriscraper.lib.html_utils import clean_html, get_all_text, parse_table
+from juriscraper.lib.html_utils import (
+    clean_html,
+    fix_links_but_keep_anchors,
+    get_all_text,
+    parse_table,
+)
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scraper import Scraper
 
@@ -135,7 +139,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=clean_string(case_info["COA District"].text_content()),
         justice=clean_string(
-            case_info.get("COA Justice", HtmlElement("")).text_content()
+            case_info.get("COA Justice", HtmlElement()).text_content()
         ),
     )
 
