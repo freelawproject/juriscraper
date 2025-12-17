@@ -40,7 +40,6 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.current_dates = None  # Track current date range for retries
         self.params = {
             "product_id": "COLORADO",
             "jurisdiction": "US",
@@ -48,7 +47,7 @@ class Site(OpinionSiteLinear):
             "court": self.api_court_code,
             "bypass_rabl": "true",
             "include": "parent,abstract,snippet,properties_with_ids",
-            "per_page": "50",  # Server breaks down when per_page=500, returns 503
+            "per_page": "10",  # Server breaks down when per_page=500, returns 503
             "page": "1",
             "sort": "date",
             "type": "document",
@@ -57,7 +56,7 @@ class Site(OpinionSiteLinear):
             "locale": "en",
             "hide_ct6": "true",
         }
-        self.update_url()
+        self.dates = self.update_url()
         self.request["headers"]["User-Agent"] = "Courtlistener"
 
         # https://www.coloradojudicial.gov/system/files/opinions-2024-11/24SC459.pdf
@@ -107,25 +106,7 @@ class Site(OpinionSiteLinear):
 
         # If we didn't get all results, try increasing per_page
         if results_in_page < total_count and not self.test_mode_enabled():
-            new_per_page = min(
-                total_count, 500
-            )  # Cap at 500 to avoid server errors
-
-            logger.info(
-                "Incomplete results: got %s of %s. Retrying with per_page=%s",
-                results_in_page,
-                total_count,
-                new_per_page,
-            )
-            self.params["per_page"] = str(new_per_page)
-            self.update_url()  # Rebuild URL with new per_page
-            self.html = self._download()  # Re-download with larger page size
-            search_json = self.html
-            logger.info(
-                "After retry: got %s of %s results",
-                len(search_json["results"]),
-                search_json["count"],
-            )
+            self.update_page_size(total_count, results_in_page, self.dates)
 
         for result in search_json["results"]:
             case = {"citation": "", "parallel_citation": ""}
@@ -175,11 +156,11 @@ class Site(OpinionSiteLinear):
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
-        self.update_url(dates)
+        self.dates = self.update_url(dates)
         self.html = self._download()
         self._process_html()
 
-    def update_url(self, dates: Optional[tuple[date]] = None) -> None:
+    def update_url(self, dates: Optional[tuple[date]] = None) -> tuple[date]:
         """
         Set URL with date filters and current timestamp.
         Request with no date filter was returning very old documents
@@ -187,17 +168,11 @@ class Site(OpinionSiteLinear):
 
         :param dates: start and end date tuple. If not present,
             scrape last week
+        :return: The dates used for the URL
         """
         if not dates:
-            # If dates not provided, use stored dates or default to last week
-            if self.current_dates:
-                dates = self.current_dates
-            else:
-                today = datetime.now()
-                dates = (today - timedelta(7), today + timedelta(1))
-
-        # Store the dates for potential retries
-        self.current_dates = dates
+            today = datetime.now()
+            dates = (today - timedelta(7), today + timedelta(1))
 
         start = dates[0].strftime("%Y-%m-%d")
         end = dates[1].strftime("%Y-%m-%d")
@@ -210,6 +185,7 @@ class Site(OpinionSiteLinear):
             }
         )
         self.url = f"{self.base_url}?{urlencode(params)}"
+        return dates
 
     @staticmethod
     def cleanup_content(content):
@@ -227,3 +203,26 @@ class Site(OpinionSiteLinear):
             return html.tostring(new_tree).decode("utf-8")
 
         return content
+
+    def update_page_size(
+        self, total_count: int, results_in_page: int, dates: tuple[date]
+    ) -> None:
+        new_per_page = min(
+            total_count, 500
+        )  # Cap at 500 to avoid server errors
+
+        logger.info(
+            "Incomplete results: got %s of %s. Retrying with per_page=%s",
+            results_in_page,
+            total_count,
+            new_per_page,
+        )
+        self.params["per_page"] = str(new_per_page)
+        self.update_url(dates)  # Rebuild URL with new per_page
+        self.html = self._download()  # Re-download with larger page size
+        search_json = self.html
+        logger.info(
+            "After retry: got %s of %s results",
+            len(search_json["results"]),
+            search_json["count"],
+        )
