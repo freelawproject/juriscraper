@@ -1,0 +1,114 @@
+Delivered-To: example@free.law
+Received: by 2002:a05:6124:66a6:b0:42a:496b:28a0 with SMTP id jz38csp457636vlb;
+        Thu, 18 Dec 2025 07:52:56 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IG/wqZY/L66PGQ38AkLAdeVkCR+DJS1fHwzpAU4P5HQumaBfj0hfBKBdn4C6FLNFoz+hUsX
+X-Received: by 2002:a05:690c:968e:b0:788:201c:a170 with SMTP id 00721157ae682-78e66dc9163mr402971177b3.42.1766073176466;
+        Thu, 18 Dec 2025 07:52:56 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1766073176; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=elided==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:message-id:content-transfer-encoding:subject:date:to
+         :from:dkim-signature;
+        bh=elided==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@txcourts.gov header.s=selector1 header.b=H6xwDcuh;
+       arc=pass (i=1 spf=pass spfdomain=txcourts.gov dkim=pass dkdomain=txcourts.gov dmarc=pass fromdomain=txcourts.gov);
+       spf=pass (google.com: domain of noreply-tames@txcourts.gov designates 2a01:111:f403:c112::5 as permitted sender) smtp.mailfrom=NOREPLY-TAMES@txcourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=txcourts.gov
+Return-Path: <NOREPLY-TAMES@txcourts.gov>
+Received: from CY7PR03CU001.outbound.protection.outlook.com (mail-westcentralusazlp170100005.outbound.protection.outlook.com. [2a01:111:f403:c112::5])
+        by mx.google.com with ESMTPS id 00721157ae682-78fa6ef733bsi42284197b3.47.2025.12.18.07.52.56
+        for <example@free.law>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 18 Dec 2025 07:52:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply-tames@txcourts.gov designates 2a01:111:f403:c112::5 as permitted sender) client-ip=2a01:111:f403:c112::5;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@txcourts.gov header.s=selector1 header.b=H6xwDcuh;
+       arc=pass (i=1 spf=pass spfdomain=txcourts.gov dkim=pass dkdomain=txcourts.gov dmarc=pass fromdomain=txcourts.gov);
+       spf=pass (google.com: domain of noreply-tames@txcourts.gov designates 2a01:111:f403:c112::5 as permitted sender) smtp.mailfrom=NOREPLY-TAMES@txcourts.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=txcourts.gov
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=elided==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=elided=;
+ b=elided==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=txcourts.gov; dmarc=pass action=none header.from=txcourts.gov;
+ dkim=pass header.d=txcourts.gov; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=txcourts.gov;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=elided=;
+ b=elided==
+Authentication-Results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=txcourts.gov;
+Received: from BY1PR13MB6716.namprd13.prod.outlook.com (2603:10b6:a03:4ac::9)
+ by DS7PR13MB4591.namprd13.prod.outlook.com (2603:10b6:5:3a1::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9434.6; Thu, 18 Dec
+ 2025 15:52:54 +0000
+Received: from BY3PR13MB4915.namprd13.prod.outlook.com
+ ([fe80::b953:7f0e:a057:65b9]) by BY1PR13MB6716.namprd13.prod.outlook.com
+ ([fe80::b953:7f0e:a057:65b9%4]) with mapi id 15.20.9434.001; Thu, 18 Dec 2025
+ 15:52:54 +0000
+From: "Supreme Court" <noreply-tames@txcourts.gov>
+To: example@free.law
+Date: 18 Dec 2025 09:39:54 -0600
+Subject: Automated Case Update from Supreme Court
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+X-ClientProxiedBy: SN6PR05CA0034.namprd05.prod.outlook.com
+ (2603:10b6:805:de::47) To BY3PR13MB4915.namprd13.prod.outlook.com
+ (2603:10b6:a03:366::6)
+Return-Path: NOREPLY-TAMES@txcourts.gov
+Message-ID:
+ <BY3PR13MB4915E2CAE00C0D7E3AD127619AA8A@BY3PR13MB4915.namprd13.prod.outlook.com>
+MIME-Version: 1.0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BY1PR13MB6716:EE_|DS7PR13MB4591:EE_
+X-MS-Office365-Filtering-Correlation-Id: 87cb68ba-406c-4962-0c5d-08de3e4bb130
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|366016|52116014|376014|1800799024|38350700014|8096899003|13003099007;
+X-Microsoft-Antispam-Message-Info:
+	=elided=
+X-Forefront-Antispam-Report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:BY1PR13MB6716.namprd13.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(366016)(52116014)(376014)(1800799024)(38350700014)(8096899003)(13003099007);DIR:OUT;SFP:1101;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	=elided=
+X-OriginatorOrg: txcourts.gov
+X-MS-Exchange-CrossTenant-Network-Message-Id: 87cb68ba-406c-4962-0c5d-08de3e4bb130
+X-MS-Exchange-CrossTenant-AuthSource: BY3PR13MB4915.namprd13.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Dec 2025 15:39:55.1739
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: af8c2e54-e86d-4d88-835e-891b649d5bcb
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: CV+AeLiZ/t2Kne7lhb9HkcBNpaPdWw9idPsu9xoFrRk9Jkyi7oNdbDEJ53BzC61O1IYbZyQ91LH5tQLXprPZM7MLVWZ0OUVKAM/xjuBGioM=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS7PR13MB4591
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij48L2hlYWQ+DQo8Ym9keT5UaGUgRm9sbG93aW5nIGFy
+ZSBhY3Rpb25zIHRha2VuIGJ5IHRoZSBTdXByZW1lIENvdXJ0IGluIGNhc2VzIGluIHdoaWNoIHlv
+dSBoYXZlIHJlcXVlc3RlZCBub3RpY2UuIE9jY2FzaW9uYWxseSB5b3UgbWF5IHJlY2VpdmUgZW1h
+aWwgYWxlcnRzIHdpdGggbGlua3MgdGhhdCBkbyBub3Qgc2hvdyBhIGZpbGluZyBvciBkZXZlbG9w
+bWVudCBpbiB0aGUgY2FzZS4gVGhlc2UgZW1haWwgYWxlcnRzIGFyZSB0cmlnZ2VyZWQgbW9zdGx5
+IGJ5ICdob3VzZWtlZXBpbmcnIGluIGNhc2UgZmlsZXMgYXMgY2xlcmtzIG1ha2UgbWlub3IgY2hh
+bmdlcyBpbiB0aGUgZmlsZXMgb3IgZXZlbiBieSBzaW1wbHkgb3BlbmluZyB0aGVtOiA8YnI+PGJy
+PkNhc2UgTnVtYmVyOiAyNS0xMTE3ICAgIFJPQU5FLVdJTExJQU1TIFRFWEFTIE1JTkVSQUxTLCBM
+TEMgdnMgRU9HIFJFU09VUkNFUywgSU5DLiBBTkQgUkVBR0FOIFNNSVRIIEVORVJHWSBTT0xVVElP
+TlMsIElOQy48YnI+ICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9zZWFyY2gudHhjb3VydHMuZ292L0Nh
+c2UuYXNweD9jbj0yNS0xMTE3Ij5odHRwczovL3NlYXJjaC50eGNvdXJ0cy5nb3YvQ2FzZS5hc3B4
+P2NuPTI1LTExMTc8L2E+PGJyPjxicj48YnI+VG8gZGlzY29udGludWUgYWxsIGF1dG9tYXRlZCBt
+YWlsaW5ncyBmcm9tIFRleGFzIENvdXJ0cyBPbmxpbmUsIGxvZyBpbnRvIHlvdXIgYWNjb3VudCBh
+bmQgY2hhbmdlIHRoZSBzdGF0dXMgdG8gSU5BQ1RJVkUuIFRvIGRpc2NvbnRpbnVlIHNwZWNpZmlj
+IGNvdXJ0IG9yIGNhc2UgYXV0b21hdGVkIG1haWxpbmdzIE9OTFksIGxvZyBpbnRvIHlvdXIgYWNj
+b3VudCBhbmQgZWRpdCB5b3VyIENvdXJ0IGFuZC9vciBDYXNlIExpc3RpbmdzIGluZGl2aWR1YWxs
+eS48L2JvZHk+PC9odG1sPg0K
