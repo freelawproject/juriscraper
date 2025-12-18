@@ -8,6 +8,7 @@ from typing import TypedDict
 from lxml import html
 from lxml.html import HtmlElement
 
+from juriscraper.abstract_parser import AbstractParser
 from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_but_keep_anchors,
@@ -15,7 +16,6 @@ from juriscraper.lib.html_utils import (
     parse_table,
 )
 from juriscraper.lib.string_utils import clean_string, harmonize
-from juriscraper.scraper import Scraper
 
 
 class CourtID(Enum):
@@ -268,7 +268,7 @@ DOCKET_NUMBER_REGEXES = [
 ]
 
 
-class TexasCommonScraper(Scraper[TexasCommonData]):
+class TexasCommonScraper(AbstractParser[TexasCommonData]):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court, Court of Criminal Appeals, and Court of Appeals).
 

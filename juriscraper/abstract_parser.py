@@ -4,7 +4,7 @@ from typing import Generic, TypeVar
 T = TypeVar("T")
 
 
-class Scraper(Generic[T], ABC):
+class AbstractParser(Generic[T], ABC):
     """Abstract base class, which all scrapers should inherit from."""
 
     @abstractmethod
