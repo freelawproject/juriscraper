@@ -47,7 +47,7 @@ class Site(OpinionSiteLinear):
             "court": self.api_court_code,
             "bypass_rabl": "true",
             "include": "parent,abstract,snippet,properties_with_ids",
-            "per_page": "10",  # Server breaks down when per_page=500, returns 503
+            "per_page": "50",  # Server breaks down when per_page=500, returns 503
             "page": "1",
             "sort": "date",
             "type": "document",
