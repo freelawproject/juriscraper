@@ -17,7 +17,7 @@ History:
 """
 
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 
 from dateutil.relativedelta import relativedelta
 from lxml import etree, html
@@ -31,11 +31,13 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     court_name = "Supreme Judicial Court"
-    first_opinion_date = datetime.now() - relativedelta(months=3) #the site only have last 3 month available
+    first_opinion_date = datetime.now() - relativedelta(
+        months=3
+    )  # the site only have last 3 month available
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = f"https://www.socialaw.com/services/slip-opinions/"
+        self.url = "https://www.socialaw.com/services/slip-opinions/"
         self.request["parameters"]["params"] = {
             "Court": self.court_name,
         }
@@ -55,11 +57,13 @@ class Site(OpinionSiteLinear):
         for row in rows[2::]:
             name = row.xpath(".//strong[@class='title sh2']")[0].text.strip()
 
-            #clean name participants enum
+            # clean name participants enum
             name = titlecase(re.sub(r"\[\d\]", "", name))
 
             date = row.xpath(".//span[@class='date sh3']")[0].text.strip()
-            docket = row.xpath(".//div[@class='section-header']/div[@class='rich-text rich-text-sm']")[0].text.strip()
+            docket = row.xpath(
+                ".//div[@class='section-header']/div[@class='rich-text rich-text-sm']"
+            )[0].text.strip()
             url = row.xpath(".//a")[0].get("href")
 
             self.cases.append(
