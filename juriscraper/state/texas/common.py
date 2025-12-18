@@ -131,6 +131,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
         clean_string(row.find(".//*[1]").text_content()): row.find(".//*[2]")
         for row in (list(info_container) + list(judge_container))
     }
+    justice_node = case_info.get("COA Justice")
 
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
@@ -139,7 +140,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=clean_string(case_info["COA District"].text_content()),
         justice=clean_string(
-            case_info.get("COA Justice", HtmlElement()).text_content()
+            justice_node.text_content() if justice_node is not None else ""
         ),
     )
 
@@ -413,7 +414,8 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
             end = start + len(party_name_parts[0])
             return start, end
         party_name_parts_indexed = [
-            (self.case_name_full.find(part), part) for part in party_name_parts
+            (self.case_name_full.lower().find(part), part)
+            for part in party_name_parts
         ]
         party_name_parts_indexed.sort(key=lambda x: x[0])
         start = party_name_parts_indexed[0][0]
@@ -443,22 +445,18 @@ class TexasCommonScraper(Scraper[TexasCommonData]):
         if len(parties) == 1:
             if len(parties[0]["name"]) < len(name_part):
                 return parties[0]["name"]
-            else:
-                return name_part
+            return name_part
         semi = name_part.find(";")
         if semi > 0:
             return name_part[:semi]
-        else:
-            if len(parties) == 1:
-                return parties[0]["name"]
-            else:
-                party_indices = [
-                    self._find_party_in_case_name(party["name"])
-                    for party in parties
-                ]
-                party_indices.sort(key=lambda x: x[0])
-                start, end = party_indices[0]
-                return self.case_name_full[start:end]
+        if len(parties) == 1:
+            return parties[0]["name"]
+        party_indices = [
+            self._find_party_in_case_name(party["name"]) for party in parties
+        ]
+        party_indices.sort(key=lambda x: x[0])
+        start, end = party_indices[0]
+        return self.case_name_full[start:end]
 
     @cached_property
     def case_name_full(self) -> str:
