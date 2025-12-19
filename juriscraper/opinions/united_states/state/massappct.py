@@ -17,4 +17,3 @@ from juriscraper.opinions.united_states.state import mass
 
 class Site(mass.Site):
     court_name = "Appeals Court"
-    first_opinion_date = datetime(2017, 6, 15)
