@@ -489,8 +489,6 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         semi = name_part.find(";")
         if semi > 0:
             return name_part[:semi]
-        if len(parties) == 1:
-            return parties[0]["name"]
         party_indices = [
             self._find_party_in_case_name(party["name"]) for party in parties
         ]
