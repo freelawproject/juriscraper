@@ -52,7 +52,9 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        rows = self.html.xpath("//div[@id='slip-opinion-list-accordion']//div[@class='accordion-item']")
+        rows = self.html.xpath(
+            "//div[@id='slip-opinion-list-accordion']//div[@class='accordion-item']"
+        )
 
         for row in rows:
             name = row.xpath(".//strong[@class='title sh2']")[0].text.strip()

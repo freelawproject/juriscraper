@@ -9,8 +9,6 @@ History:
     - Created by luism
 """
 
-from datetime import datetime
-
 from juriscraper.opinions.united_states.state import mass
 
 
