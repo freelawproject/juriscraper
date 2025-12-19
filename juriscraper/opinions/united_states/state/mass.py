@@ -48,7 +48,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
-        """Scrape and process the JSON endpoint
+        """Scrape and process the html
 
         :return: None
         """
