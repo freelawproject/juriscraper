@@ -8,6 +8,7 @@ import re
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -22,6 +23,9 @@ class Site(OpinionSiteLinear):
         self.first_opinion_date = datetime(1993, 1, 22)
         self.days_interval = 7
         self.make_backscrape_iterable(kwargs)
+        # we got this UA whitelisted #1689
+        self.request["headers"] = {"User-Agent": "Juriscraper"}
+        self.needs_special_headers = True
 
     def _process_html(self):
         """
@@ -45,26 +49,39 @@ class Site(OpinionSiteLinear):
             url = section.xpath(".//a")[0].get("href")
 
             name_text = section.xpath(".//a")[0].text_content()
-            type_match = re.search(r"\(([^)]+)\)", name_text)
-            type_raw = type_match.group(1).lower() if type_match else ""
+            name, opinion_type = self.extract_type(name_text)
 
-            opinion_type = self.extract_type(type_raw)
-
-            name = re.sub(r"\s*\([^)]+\)", "", name_text).strip()
-            rows = [
-                row.strip()
-                for row in section.text_content().strip().split("\n", 4)
-            ]
-
+            # the docket will be the first no empty floating text
+            docket_xpath = ".//p/text()[normalize-space()]"
             judge = (
-                rows[2].split(": ")[1] if "Authoring Judge" in rows[2] else ""
+                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
+                .strip()
+                .split(":", 1)[1]
+                .strip()
             )
-            lower_court_judge = (
-                rows[3].split(": ")[1]
-                if "Trial Court Judge" in rows[3]
-                else ""
+
+            # may be empty
+            lower_court_judge = section.xpath(
+                ".//text()[contains(., 'Trial Court Judge:')]"
             )
-            summary = rows[-1] if "Judge" not in rows[-1] else ""
+            if lower_court_judge:
+                lower_court_judge = (
+                    lower_court_judge[0].split(":", 1)[1].strip()
+                )
+
+            # the summary will be the last non empty p or p/span
+            summary_container = section.xpath(".//p")
+            if not (
+                summary := summary_container[-1].xpath("string(.)").strip()
+            ):
+                summary = summary_container[-2].xpath("string(.)")
+            # text inside may be separated by <br> tags
+            summary = re.sub(r"\s+", " ", summary)
+
+            # prevent picking up one of the judge containers
+            if "Judge:" in summary:
+                summary = ""
+
             per_curiam = False
             if "curiam" in judge.lower():
                 judge = ""
@@ -75,10 +92,10 @@ class Site(OpinionSiteLinear):
                     "date": date,
                     "url": url,
                     "name": name,
-                    "docket": rows[1],
+                    "docket": section.xpath(docket_xpath)[0].strip(),
                     "judge": judge,
-                    "lower_court_judge": lower_court_judge,
-                    "summary": summary,
+                    "lower_court_judge": lower_court_judge or "",
+                    "summary": summary or "",
                     "per_curiam": per_curiam,
                     "type": opinion_type,
                 }
@@ -128,23 +145,55 @@ class Site(OpinionSiteLinear):
 
         return ""
 
-    def extract_type(self, type_raw: str) -> str:
+    def extract_type(self, raw_name: str) -> tuple[str, str]:
         """
-        Map a raw opinion type string to a standardized type.
+        Find the opinion type if it exists and clean it out fo the name
 
-        :param type_raw: Raw type string extracted from the opinion (e.g., 'concurring', 'dissenting')
-        :return: Standardized type string from types_mapping
+        See edge cases:
+            "In Re: Winston Bradshaw Sitton, BPR#018440 - Concurring in Section III, not joining in Sections I and II"
+            "State of Tennessee v. Jerome Antonio McElrath - Concurring In the suppression of evidence; dissenting from the adoption of an exclusionary rule exception for constitutional violations caused by careless police recordkeeping"
+
+        Be careful when cleaning out the name. See example:
+            "State of Tennessee v. Tabitha Gentry (AKA ABKA RE BAY)"
+
+        :param raw_name: full name including opinion type
+        :return: (Standardized type string from types_mapping, name cleaned of the type)
         """
-        if "concurring" in type_raw:
-            op_type = OpinionType.CONCURRENCE
-        elif "in part" in type_raw:
+        # everything between a dash or parenthesis and the end of the string
+        type_regex = re.compile(r"(- |\().+?\)?$")
+        type_string = ""
+        if match := type_regex.search(raw_name):
+            type_string = match.group(0)
+        lower_type = type_string.lower()
+
+        concur = "concur" in lower_type
+        dissent = "dissent" in lower_type
+        not_join = "not join" in lower_type
+
+        op_type = ""
+        if (
+            "in part" in lower_type
+            or (concur and dissent)
+            or (concur and not_join)
+        ):
             op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
-        elif "dissenting" in type_raw:
+        elif concur:
+            op_type = OpinionType.CONCURRENCE
+        elif dissent:
             op_type = OpinionType.DISSENT
-        else:
-            op_type = OpinionType.MAJORITY
 
-        return op_type.value
+        # if no type was found, set it to Majority but do not edit the name
+        if not op_type:
+            return raw_name, OpinionType.MAJORITY.value
+
+        # delete the type string
+        if match:
+            logger.debug(
+                "Deleting '%s' from case name '%s'", match.group(0), raw_name
+            )
+            raw_name = raw_name[: match.start()].strip()
+
+        return raw_name, op_type.value
 
     def _download_backwards(self, dates: tuple[date, date]) -> None:
         r"""Download cases within a given date range.

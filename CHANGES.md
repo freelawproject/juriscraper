@@ -20,14 +20,27 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+- `ca11_p`: remove hardcoded status field #1708
+- `tenn`: fix opinion type extraction #1704
+- `tenn`: fix docket number and judges extraction #1705
+- `delaware`: update XPath selectors for changed website structure #1713
+
+## Current
+
+**2.6.99 - 2025-12-10**
+
+Changes:
 - Added more fields to the SCOTUS docket parsers
 
 Fixes:
 - fix `okla` improve cleanup_content method to use CSS selectors and return bytes #1692
 - Fix `fla` and `fladistctapp` scrapers by scraping new API endpoint #1690
 - fix `uscgcoca` and `asbca` headers #1664
-
-## Current
+- `okla` `cleanup_content` now deletes HTML comments that were causing duplicates #1697
+- make `tenn` use whitelisted user agent #1689
 
 **2.6.98 - 2025-12-05**
 
