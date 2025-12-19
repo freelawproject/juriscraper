@@ -4,6 +4,7 @@ from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
 from typing import TypedDict
+from urllib.parse import parse_qs, urlparse
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -201,10 +202,15 @@ class TexasCaseDocument(TypedDict):
     Schema for Texas case document details.
 
     :ivar document_url: The URL of the document.
+    :ivar media_id: The `media_id` parameter extracted from `document_url`.
+    :ivar media_version_id: The `media_version_id` parameter extracted from
+    `document_url`.
     :ivar description: The name of the document (may be empty).
     """
 
     document_url: str
+    media_id: str
+    media_version_id: str
     description: str
 
 
@@ -639,20 +645,41 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         Tries to find a table in the given cell and extracts the document URLs
         and names from it. If no table is found, returns an empty list.
 
+        :param cell: The parent element containing the case documents.
+
         :return: List of case documents.
         """
         table = cell.find(".//table")
         if table is None:
             return []
         documents = parse_table(table)
-        n = len(documents["0"])
+        urls: list[str] = [
+            parent.find(".//a").get("href") for parent in documents["0"]
+        ]
+        query_dicts: list[dict[str, list[str]]] = [
+            parse_qs(urlparse(url).query) for url in urls
+        ]
+        media_ids = [
+            (query.get("MediaID", []), query.get("MediaVersionID", []))
+            for query in query_dicts
+        ]
+        descriptions: list[str] = [
+            clean_string(document.text_content())
+            for document in documents["1"]
+        ]
 
         return [
             TexasCaseDocument(
-                document_url=documents["0"][i].find(".//a").get("href"),
-                description=clean_string(documents["1"][i].text_content()),
+                document_url=url,
+                description=description,
+                media_id=media_id[0] if len(media_id) > 0 else "",
+                media_version_id=media_version_id[0]
+                if len(media_version_id) > 0
+                else "",
             )
-            for i in range(n)
+            for url, (media_id, media_version_id), description in zip(
+                urls, media_ids, descriptions
+            )
         ]
 
     def _parse_case_events(self) -> list[TexasCaseEvent]:

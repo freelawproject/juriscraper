@@ -86,6 +86,9 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         }
 
         if "State" in grouped_parties and "Appellant" in grouped_parties:
-            return f"{grouped_parties['Appellant'][0]['name']} v. {grouped_parties['State'][0]['name']}"
+            return (
+                f"{grouped_parties['Appellant'][0]['name']} v. "
+                f"{grouped_parties['State'][0]['name']}"
+            )
         # Fall back on the full case name property
         return self.case_name_full

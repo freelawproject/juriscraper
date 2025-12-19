@@ -1,59 +1,69 @@
 {
-  "court_id": "texas_unknown",
-  "case_name": "IN RE CLIENT X",
-  "case_name_full": "IN RE CLIENT X",
   "appellate_briefs": [
     {
-      "date": "2025-11-26T00:00:00",
-      "description": "Relator",
       "attachments": [
         {
           "description": "",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b721f5e4-e1ef-457c-8e3d-3192887c453c&coa=cossup&DT=BRIEFS&MediaID=04a7d363-d2e9-4abf-a06b-3bd33d12145e"
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b721f5e4-e1ef-457c-8e3d-3192887c453c&coa=cossup&DT=BRIEFS&MediaID=04a7d363-d2e9-4abf-a06b-3bd33d12145e",
+          "media_id": "04a7d363-d2e9-4abf-a06b-3bd33d12145e",
+          "media_version_id": "b721f5e4-e1ef-457c-8e3d-3192887c453c"
         },
         {
           "description": "Notice",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744"
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744",
+          "media_id": "3911b630-6736-40d2-8efd-1fd5e8345744",
+          "media_version_id": "82dd1446-fa08-452d-bb8e-54e33c069ee1"
         }
       ],
+      "date": "2025-11-26T00:00:00",
+      "description": "Relator",
       "type": "Petition for Writ of Mandamus filed"
     }
   ],
   "case_events": [
     {
+      "attachments": [],
       "date": "2025-12-02T00:00:00",
       "disposition": "",
-      "attachments": [],
       "type": "Case forwarded to Court"
     },
     {
-      "date": "2025-11-26T00:00:00",
-      "disposition": "",
       "attachments": [
         {
           "description": "",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=fddb9f97-e403-4829-8324-6778694a8fa8&coa=cossup&DT=RECORD&MediaID=a9e83097-59c7-482d-b7cd-c336c93ed6d8"
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=fddb9f97-e403-4829-8324-6778694a8fa8&coa=cossup&DT=RECORD&MediaID=a9e83097-59c7-482d-b7cd-c336c93ed6d8",
+          "media_id": "a9e83097-59c7-482d-b7cd-c336c93ed6d8",
+          "media_version_id": "fddb9f97-e403-4829-8324-6778694a8fa8"
         }
       ],
+      "date": "2025-11-26T00:00:00",
+      "disposition": "",
       "type": "Case Record Filed"
     },
     {
-      "date": "2025-11-26T00:00:00",
-      "disposition": "",
       "attachments": [
         {
           "description": "",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b721f5e4-e1ef-457c-8e3d-3192887c453c&coa=cossup&DT=BRIEFS&MediaID=04a7d363-d2e9-4abf-a06b-3bd33d12145e"
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b721f5e4-e1ef-457c-8e3d-3192887c453c&coa=cossup&DT=BRIEFS&MediaID=04a7d363-d2e9-4abf-a06b-3bd33d12145e",
+          "media_id": "04a7d363-d2e9-4abf-a06b-3bd33d12145e",
+          "media_version_id": "b721f5e4-e1ef-457c-8e3d-3192887c453c"
         },
         {
           "description": "Notice",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744"
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=82dd1446-fa08-452d-bb8e-54e33c069ee1&coa=cossup&DT=MANDAMUS FILED&MediaID=3911b630-6736-40d2-8efd-1fd5e8345744",
+          "media_id": "3911b630-6736-40d2-8efd-1fd5e8345744",
+          "media_version_id": "82dd1446-fa08-452d-bb8e-54e33c069ee1"
         }
       ],
+      "date": "2025-11-26T00:00:00",
+      "disposition": "",
       "type": "Petition for Writ of Mandamus filed"
     }
   ],
+  "case_name": "IN RE CLIENT X",
+  "case_name_full": "IN RE CLIENT X",
   "case_type": "Petition for Writ of Mandamus",
+  "court_id": "texas_unknown",
   "date_filed": "2025-12-01T00:00:00",
   "docket_number": "25-1066",
   "parties": [
