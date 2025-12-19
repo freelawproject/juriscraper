@@ -12,9 +12,11 @@ from juriscraper.state.texas.common import (
 
 class TexasCourtOfCriminalAppealsDocket(TexasCommonData):
     """
-    Extension of the `TexasCommonData` schema with data specific to Texas Court of Criminal Appeals dockets.
+    Extension of the `TexasCommonData` schema with data specific to Texas Court
+    of Criminal Appeals dockets.
 
-    :ivar appeals_court: Information about the appeals court which heard this case.
+    :ivar appeals_court: Information about the appeals court which heard this
+    case.
     """
 
     appeals_court: TexasAppealsCourt
@@ -22,7 +24,8 @@ class TexasCourtOfCriminalAppealsDocket(TexasCommonData):
 
 class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     """
-    Extends the `TexasCommonScraper` class to extract data specific to Texas Court of Criminal Appeals dockets. Unique data extracted is:
+    Extends the `TexasCommonScraper` class to extract data specific to Texas
+    Court of Criminal Appeals dockets. Unique data extracted is:
 
     - Appeals court information.
     """
@@ -35,7 +38,8 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     @property
     def data(self) -> TexasCourtOfCriminalAppealsDocket:
         """
-        Extract parsed data from an HTML tree. This property returns a `TexasCourtOfCriminalAppealsDocket`.
+        Extract parsed data from an HTML tree. This property returns a
+        `TexasCourtOfCriminalAppealsDocket`.
 
         :return: Parsed data.
         """
@@ -59,12 +63,17 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     @cached_property
     def case_name(self) -> str:
         """
-        Special version of case name processing, which handles instances where the state is not listed as a party, which we assume to be a clerical error. Also eliminates most of the default logic for shortening case names as the defendant party's name is typically a person's name, which doesn't need to be shortened.
+        Special version of case name processing, which handles instances where
+        the state is not listed as a party, which we assume to be a clerical
+        error. Also eliminates most of the default logic for shortening case
+        names as the defendant party's name is typically a person's name, which
+        doesn't need to be shortened.
 
         :return: Shortened case name
         """
 
-        # If there is only one party, and it is not the state, assume there was a clerical error
+        # If there is only one party, and it is not the state, assume there was
+        # a clerical error
         if (
             len(self.parties) == 1
             and self.parties[0]["type"].lower().find("state") < 0

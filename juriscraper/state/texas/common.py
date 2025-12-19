@@ -20,7 +20,8 @@ from juriscraper.lib.string_utils import clean_string, harmonize
 
 class CourtID(Enum):
     """
-    Standardized IDs for Texas courts. Created by prefixing "texas_" to the ID that TAMES uses. Used by consumers to deterministically identify courts.
+    Standardized IDs for Texas courts. Created by prefixing "texas_" to the ID
+    that TAMES uses. Used by consumers to deterministically identify courts.
     """
 
     UNKNOWN = "texas_unknown"
@@ -79,9 +80,11 @@ COA_ORDINAL_MAP = {
 
 def coa_name_to_court_id(coa_name: str) -> CourtID:
     """
-    Takes in the name of a Texas Court of Appeals and returns the corresponding CourtID.
+    Takes in the name of a Texas Court of Appeals and returns the corresponding
+    CourtID.
 
-    :param coa_name: The name of the Court of Appeals, extracted from the docket page.
+    :param coa_name: The name of the Court of Appeals, extracted from the
+    docket page.
 
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
@@ -111,7 +114,9 @@ class TexasAppealsCourt(TypedDict):
 
 def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     """
-    Helper function to parse appeals court information and construct a `TexasAppealsCourt` instance. Used by `TexasSupremeCourtScraper` and `TexasCourtOfCriminalAppealsScraper`.
+    Helper function to parse appeals court information and construct a
+    `TexasAppealsCourt` instance. Used by `TexasSupremeCourtScraper` and
+    `TexasCourtOfCriminalAppealsScraper`.
 
     :return: Extracted appeals court information.
     """
@@ -121,7 +126,8 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     info_container = container.find(
         './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
     )
-    # Texas gives the judge their own child element all to themselves for some reason.
+    # Texas gives the judge their own child element all to themselves for some
+    # reason.
     judge_container = container.find(
         './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
     )
@@ -149,7 +155,8 @@ class TexasCaseParty(TypedDict):
     """
     Schema for Texas case party details.
 
-    This class is used as a utility to define the necessary attributes for a party and allow type hints.
+    This class is used as a utility to define the necessary attributes for a
+    party and allow type hints.
 
     :ivar name: The name associated with the party.
     :ivar type: The type of the party (respondent, petitioner, etc.).
@@ -165,16 +172,20 @@ class TexasTrialCourt(TypedDict):
     """
     Schema for Texas Trial Court details.
 
-    This class is a `TypedDict` that defines the schema for representing a Texas Trial Court. It is used as a utility for safety and type hints.
+    This class is a `TypedDict` that defines the schema for representing a
+    Texas Trial Court. It is used as a utility for safety and type hints.
 
-    The `judge`, `reporter`, and `punishment` attributes may be empty (most often the `punishment` field will be empty in civil cases), and it is up to the consumer to handle those cases.
+    The `judge`, `reporter`, and `punishment` attributes may be empty (most
+    often the `punishment` field will be empty in civil cases), and it is up to
+    the consumer to handle those cases.
 
     :ivar name: The name of the court.
     :ivar county: The county where the court is located.
     :ivar judge: The name of the presiding judge in the court.
     :ivar case: Specific case identification or name handled by this court.
     :ivar reporter: The name of the court reporter for the case.
-    :ivar punishment: The punishment or outcome decided by the court in the case.
+    :ivar punishment: The punishment or outcome decided by the court in the
+    case.
     """
 
     name: str
@@ -202,7 +213,8 @@ class TexasDocketEntry(TypedDict):
     Schema for Texas docket entry details.
 
     :ivar date: The date of the docket entry.
-    :ivar type: The type of the docket entry (e.g., "Notice of appeal received").
+    :ivar type: The type of the docket entry (e.g., "Notice of appeal
+    received").
     :ivar attachments: Any documents associated with the docket entry.
     """
 
@@ -213,9 +225,11 @@ class TexasDocketEntry(TypedDict):
 
 class TexasCaseEvent(TexasDocketEntry):
     """
-    Extension of `TexasDocketEntry` to handle rows from the "Case Events" table.
+    Extension of `TexasDocketEntry` to handle rows from the "Case Events"
+    table.
 
-    :ivar disposition: The value of the "Disposition" column (e.g., "Filing granted")
+    :ivar disposition: The value of the "Disposition" column (e.g., "Filing
+    granted")
     """
 
     disposition: str
@@ -223,7 +237,8 @@ class TexasCaseEvent(TexasDocketEntry):
 
 class TexasAppellateBrief(TexasDocketEntry):
     """
-    Extension of `TexasDocketEntry` to handle rows from the "Appellate Briefs" table.
+    Extension of `TexasDocketEntry` to handle rows from the "Appellate Briefs"
+    table.
 
     :ivar description: The value of the "Description" column (e.g., "Relator")
     """
@@ -235,7 +250,9 @@ class TexasCommonData(TypedDict):
     """
     Schema for data common to all Texas dockets.
 
-    This class is a `TypedDict` that defines the schema for representing data common to all Texas dockets. It is used as a utility for safety and type hints.
+    This class is a `TypedDict` that defines the schema for representing data
+    common to all Texas dockets. It is used as a utility for safety and type
+    hints.
 
     :ivar court_id: The ID of the court this docket is from.
     :ivar docket_number: The docket number of the case.
@@ -243,9 +260,12 @@ class TexasCommonData(TypedDict):
     :ivar case_name_full: The full name of the case.
     :ivar date_filed: The date the case was filed.
     :ivar case_type: The type of case.
-    :ivar parties: A list of parties involved in the case and their associated representatives.
-    :ivar trial_court: Information about the trial court handling the case was appealed from.
-    :ivar case_events: A list of case events (e.g., filing of the case, notice of appeal received).
+    :ivar parties: A list of parties involved in the case and their associated
+    representatives.
+    :ivar trial_court: Information about the trial court handling the case was
+    appealed from.
+    :ivar case_events: A list of case events (e.g., filing of the case, notice
+    of appeal received).
     :ivar appellate_briefs: A list of briefs filed in the case.
     """
 
@@ -270,19 +290,23 @@ DOCKET_NUMBER_REGEXES = [
 
 class TexasCommonScraper(AbstractParser[TexasCommonData]):
     """
-    A scraper for extracting data common to all Texas dockets (Supreme Court, Court of Criminal Appeals, and Court of Appeals).
+    A scraper for extracting data common to all Texas dockets (Supreme Court,
+    Court of Criminal Appeals, and Court of Appeals).
 
     Extracts the following data:
     - Docket number
     - Date filed
     - Case type
     - Case parties (name, type, and representatives)
-    - Trial court information (court name, county, judge, case number, reporter, and punishment)
+    - Trial court information (court name, county, judge, case number,
+    reporter, and punishment)
 
     :ivar tree: The HTML tree of the docket page.
     :ivar events: The "Case Events" table data extracted with `parse_table`.
-    :ivar briefs: The "Appellate Briefs" table data extracted with `parse_table`.
-    :ivar is_valid: `True` if the HTML tree has been successfully parsed by calling `_parse_text`, `False` otherwise.
+    :ivar briefs: The "Appellate Briefs" table data extracted with
+    `parse_table`.
+    :ivar is_valid: `True` if the HTML tree has been successfully parsed by
+    calling `_parse_text`, `False` otherwise.
     """
 
     date_format = "%m/%d/%Y"
@@ -326,10 +350,12 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
     @property
     def data(self) -> TexasCommonData:
         """
-        Extract parsed data from an HTML tree. This property returns the `TexasCommonData`
+        Extract parsed data from an HTML tree. This property returns the
+        `TexasCommonData`
         object.
 
-        :raises ValueError: If the `_parse_text` method has not been called yet.
+        :raises ValueError: If the `_parse_text` method has not been called
+        yet.
 
         :return: Parsed data.
         """
@@ -361,9 +387,9 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
     def _extract_case_data_name(name_element: HtmlElement) -> str:
         """
         Helper method used by _extract_case_data to clean the titles of entries
-        in the case data table. First calls the clean_string method, then removes
-        all characters that are not whitespace or alphanumeric and converts to
-        lowercase.
+        in the case data table. First calls the clean_string method, then
+        removes all characters that are not whitespace or alphanumeric and
+        converts to lowercase.
         """
         name = "".join(get_all_text(name_element))
         return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
@@ -371,9 +397,9 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
     def _extract_case_data(self) -> dict[str, str]:
         """
         Helper method to extract the case information at the top of the page
-        into a dictionary. After cleaning text, the keys are the text on the left
-        of the table and the values are the text on the right. Will fail if `_parse_text`
-        has not yet been called.
+        into a dictionary. After cleaning text, the keys are the text on the
+        left of the table and the values are the text on the right. Will fail
+        if `_parse_text` has not yet been called.
 
         :return: Dictionary containing the case information.
         """
@@ -399,7 +425,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         """
         Finds the start and end indices of the party name in the case name.
 
-        Useful in instances where a name appears as "last, first" in the parties list and "first last" in the case name.
+        Useful in instances where a name appears as "last, first" in the
+        parties list and "first last" in the case name.
 
         :param party_name: The party name to search for.
 
@@ -428,15 +455,22 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         self, name_part: str, parties: list[TexasCaseParty]
     ) -> str:
         """
-        Creates a shortened version of the party name based on the given list of parties.
+        Creates a shortened version of the party name based on the given list
+        of parties.
 
-        Sometimes multiple parties to a case are listed in the same entry on TAMES so this method
+        Sometimes multiple parties to a case are listed in the same entry on
+        TAMES so this method
 
-        1. Chooses the shortest party name between the list of parties and the long case name (these are often different)
-        2. Attempts to find and return the first party name in a string by splitting on semicolons. Some cases also list multiple parties in one entry separated by commas, but this is significantly more difficult to handle due to cases such as "lastname, firstname" and "company, LLC".
+        1. Chooses the shortest party name between the list of parties and the
+        long case name (these are often different)
+        2. Attempts to find and return the first party name in a string by
+        splitting on semicolons. Some cases also list multiple parties in one
+        entry separated by commas, but this is significantly more difficult to
+        handle due to cases such as "lastname, firstname" and "company, LLC".
 
         :param name_part: The initial part of the case name to process.
-        :param parties: A list of parties from which to determine the shortened name.
+        :param parties: A list of parties from which to determine the shortened
+        name.
 
         :return: The shortened party name derived from the input parameters.
         """
@@ -472,7 +506,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
     @cached_property
     def case_name(self) -> str:
         """
-        A (possibly) shortened version of the case name created using some heuristics. Useful to make cases easier to search and match.
+        A (possibly) shortened version of the case name created using some
+        heuristics. Useful to make cases easier to search and match.
         """
         name_part_1 = self.case_data["style"]
         name_part_2 = self.case_data["v"]
@@ -506,8 +541,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
     def _parse_docket_number(self) -> str:
         """
-        Extracts the docket number from the HTML tree. Will fail if `_parse_text`
-        has not yet been called.
+        Extracts the docket number from the HTML tree. Will fail if
+        `_parse_text` has not yet been called.
 
         :raises ValueError: If the docket number format is not recognized.
 
@@ -521,8 +556,9 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
     def _parse_date_filed(self) -> datetime:
         """
-        Extracts the date the case was filed from the HTML tree and parses it into a `datetime` object from mm/dd/yyyy format. Will fail if `_parse_text`
-        has not yet been called.
+        Extracts the date the case was filed from the HTML tree and parses it
+        into a `datetime` object from mm/dd/yyyy format. Will fail if
+        `_parse_text` has not yet been called.
 
         :return: Date filed
         """
@@ -544,8 +580,10 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
     def _parse_parties(self) -> list[TexasCaseParty]:
         """
-        Extracts the parties from the HTML tree. Multiline entries in the "Representative" column will be treated as if each line is an individual representative for the relevant party. Will fail if `_parse_text`
-        has not yet been called.
+        Extracts the parties from the HTML tree. Multiline entries in the
+        "Representative" column will be treated as if each line is an
+        individual representative for the relevant party. Will fail if
+        `_parse_text` has not yet been called.
 
         :return: Parties
         """
@@ -569,8 +607,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
     def _parse_trial_court(self) -> TexasTrialCourt:
         """
-        Extracts the trial court info from the HTML tree. Will fail if `_parse_text`
-        has not yet been called.
+        Extracts the trial court info from the HTML tree. Will fail if
+        `_parse_text` has not yet been called.
 
         :return: Trial court info.
         """
@@ -598,7 +636,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         """
         Helper method to parse case documents for a given docket entry.
 
-        Tries to find a table in the given cell and extracts the document URLs and names from it. If no table is found, returns an empty list.
+        Tries to find a table in the given cell and extracts the document URLs
+        and names from it. If no table is found, returns an empty list.
 
         :return: List of case documents.
         """
@@ -621,11 +660,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         Extracts and parses case events.
 
         This method processes the "Case Events" table and produces a list of
-        TexasCaseEvent objects. If the table is empty, an empty list is returned.
+        TexasCaseEvent objects. If the table is empty, an empty list is
+        returned.
 
         :return: A list of parsed TexasCaseEvent objects.
         """
-        # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
+        # Works because when there are no entries, Texas places a single <td>
+        # element, which will be parsed by parse_table as 1 entry in the first
+        # column and 0 in all others.
         if len(self.events["Event Type"]) == 0:
             return []
         n = len(self.events["Date"])
@@ -651,12 +693,15 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         """
         Extracts and parses appellate briefs.
 
-        This method processes the "Appellate Briefs" table and produces a list of
-        TexasAppellateBrief objects. If the table is empty, an empty list is returned.
+        This method processes the "Appellate Briefs" table and produces a list
+        of TexasAppellateBrief objects. If the table is empty, an empty list is
+        returned.
 
         :return: A list of parsed TexasAppellateBrief objects.
         """
-        # Works because when there are no entries, Texas places a single <td> element, which will be parsed by parse_table as 1 entry in the first column and 0 in all others.
+        # Works because when there are no entries, Texas places a single <td>
+        # element, which will be parsed by parse_table as 1 entry in the first
+        # column and 0 in all others.
         if len(self.briefs["Event Type"]) == 0:
             return []
         n = len(self.briefs["Date"])

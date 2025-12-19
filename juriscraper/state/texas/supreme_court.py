@@ -12,9 +12,11 @@ from juriscraper.state.texas.common import (
 
 class TexasSupremeCourtCaseEvent(TexasCaseEvent):
     """
-    Extension of `TexasCaseEvent` to allow for the "Remarks" column in Texas Supreme Court dockets.
+    Extension of `TexasCaseEvent` to allow for the "Remarks" column in Texas
+    Supreme Court dockets.
 
-    :ivar remarks: The text content of the relevant cell in the "Remarks" column.
+    :ivar remarks: The text content of the relevant cell in the "Remarks"
+    column.
     """
 
     remarks: str
@@ -22,9 +24,11 @@ class TexasSupremeCourtCaseEvent(TexasCaseEvent):
 
 class TexasSupremeCourtAppellateBrief(TexasAppellateBrief):
     """
-    Extension of `TexasAppellateBrief` to allow for the "Remarks" column in Texas Supreme Court dockets.
+    Extension of `TexasAppellateBrief` to allow for the "Remarks" column in
+    Texas Supreme Court dockets.
 
-    :ivar remarks: The text content of the relevant cell in the "Remarks" column.
+    :ivar remarks: The text content of the relevant cell in the "Remarks"
+    column.
     """
 
     remarks: str
@@ -32,11 +36,15 @@ class TexasSupremeCourtAppellateBrief(TexasAppellateBrief):
 
 class TexasSupremeCourtDocket(TexasCommonData):
     """
-    Extension of the `TexasCommonData` schema with data specific to Texas Supreme Court dockets.
+    Extension of the `TexasCommonData` schema with data specific to Texas
+    Supreme Court dockets.
 
-    :ivar appeals_court: Information about the appeals court which heard this case.
-    :ivar case_events: A list of `TexasSupremeCourtCaseEvent` objects representing the case events.
-    :ivar appellate_briefs: A list of `TexasSupremeCourtAppellateBrief` objects representing the appellate briefs.
+    :ivar appeals_court: Information about the appeals court which heard this
+    case.
+    :ivar case_events: A list of `TexasSupremeCourtCaseEvent` objects
+    representing the case events.
+    :ivar appellate_briefs: A list of `TexasSupremeCourtAppellateBrief` objects
+    representing the appellate briefs.
     """
 
     appeals_court: TexasAppealsCourt
@@ -46,7 +54,8 @@ class TexasSupremeCourtDocket(TexasCommonData):
 
 class TexasSupremeCourtScraper(TexasCommonScraper):
     """
-    Extends the `TexasCommonScraper` class to extract data specific to Texas Supreme Court dockets. Unique data extracted is:
+    Extends the `TexasCommonScraper` class to extract data specific to Texas
+    Supreme Court dockets. Unique data extracted is:
 
     - Appeals court information.
     - Remarks on case events and appellate briefs.
@@ -58,7 +67,8 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
     @property
     def data(self) -> TexasSupremeCourtDocket:
         """
-        Extract parsed data from an HTML tree. This property returns a `TexasSupremeCourtDocket`.
+        Extract parsed data from an HTML tree. This property returns a
+        `TexasSupremeCourtDocket`.
 
         :return: Parsed data.
         """

@@ -11,11 +11,13 @@ from juriscraper.state.texas.common import (
 
 class TexasAppealsCourtTransfer(TypedDict):
     """
-    Texas Appeals Courts transfer cases in and out to balance workload across the state. This class captures details about one of these transfers.
+    Texas Appeals Courts transfer cases in and out to balance workload across
+    the state. This class captures details about one of these transfers.
 
     :ivar court_id: The ID of the court the case was transferred to or from.
     :ivar date: The date the case was transferred.
-    :ivar origin_docket: The docket number of the case in the court initiating the transfer.
+    :ivar origin_docket: The docket number of the case in the court initiating
+    the transfer.
     """
 
     court_id: str
@@ -25,11 +27,15 @@ class TexasAppealsCourtTransfer(TypedDict):
 
 class TexasCourtOfAppealsDocket(TexasCommonData):
     """
-    Extension of the `TexasCommonData` schema with data specific to Texas Court of Appeals dockets.
+    Extension of the `TexasCommonData` schema with data specific to Texas Court
+    of Appeals dockets.
 
-    :ivar publication_service: The name of the publication service that published the case. Value may be an empty string.
-    :ivar transfer_from: Details about the transfer from another court of appeals, if available.
-    :ivar transfer_to: Details about the transfer to another court of appeals, if available.
+    :ivar publication_service: The name of the publication service that
+    published the case. Value may be an empty string.
+    :ivar transfer_from: Details about the transfer from another court of
+    appeals, if available.
+    :ivar transfer_to: Details about the transfer to another court of appeals,
+    if available.
     """
 
     publication_service: str
@@ -39,7 +45,8 @@ class TexasCourtOfAppealsDocket(TexasCommonData):
 
 class TexasCourtOfAppealsScraper(TexasCommonScraper):
     """
-    Extends the `TexasCommonScraper` class to extract data specific to Texas Court of Appeals dockets. Unique data extracted is:
+    Extends the `TexasCommonScraper` class to extract data specific to Texas
+    Court of Appeals dockets. Unique data extracted is:
 
     - Publication service name (if available).
     - Transfer information (if available).
@@ -83,10 +90,14 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         Optional[TexasAppealsCourtTransfer],
     ]:
         """
-        Parses transfer information from the provided case data and returns details
-        about transfers both from and to other courts of appeal, if available.
+        Parses transfer information from the provided case data and returns
+        details about transfers both from and to other courts of appeal, if
+        available.
 
-        :return: A tuple with the first element containing details about the transfer from court, and the second element containing details about the transfer to court. Either or both of these values may be None if no transfer information is available.
+        :return: A tuple with the first element containing details about the
+        transfer from court, and the second element containing details about
+        the transfer to court. Either or both of these values may be None if no
+        transfer information is available.
         """
 
         transfer_from_court = self.case_data["transfer from"]

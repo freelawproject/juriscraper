@@ -289,7 +289,10 @@ def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
 
     :returns: A dictionary mapping column headers to lists of cell elements.
     """
-    # TODO: Would probably save a lot of time in future state scrapers to update this to handle tabular data that isn't stored in a table element, but that is a relatively large project and I'm not sure how often it would be useful.
+    # TODO: Would probably save a lot of time in future state scrapers to
+    #  update this to handle tabular data that isn't stored in a table element,
+    #  but that is a relatively large project and I'm not sure how often it
+    #  would be useful.
     headers = [
         clean_string(th.text_content()) for th in table.xpath(".//thead//th")
     ]
