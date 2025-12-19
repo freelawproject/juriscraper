@@ -10,8 +10,6 @@ History:
     - Update 2023-01-28 by William E. Palin
 """
 
-from datetime import datetime
-
 from juriscraper.opinions.united_states.state import mass
 
 
