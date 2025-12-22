@@ -132,7 +132,11 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The content of the document downloaded
         :return Metadata to be added to the case
         """
-        metadata = {"OpinionCluster": {}, "Opinion": {}, "Docket": {}}
+        metadata: dict[str, dict] = {
+            "OpinionCluster": {},
+            "Opinion": {},
+            "Docket": {},
+        }
         pattern = r"^\s+[*]{6,}\n(?P<judge>.*)\s+[*]{6,}$"
         pattern2 = r"\s+\*{5,}(?:.*\n)*?\s+(\s+(?P<judge>.*)[,.] J\..*(RESULT|REASON|CONCUR))"
         pattern3 = r"\(Court composed of (?P<judges>.*?)\)"

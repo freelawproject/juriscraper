@@ -45,7 +45,6 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "date": date_cleaned,
                     "docket": clean_string(docket),
-                    "status": "Published",
                     "nature_of_suit": clean_string(nature),
                 }
             )
