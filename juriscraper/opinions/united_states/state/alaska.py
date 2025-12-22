@@ -171,7 +171,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple
