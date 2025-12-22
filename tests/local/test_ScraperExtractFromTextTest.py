@@ -1665,7 +1665,7 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.colo": [
             (
-                '<b></b><p><span> Thomas Ray Collins, Petitioner <br> v.</span><span> <br> The People of the State of Colorado.</span> Respondent </p>\n<p>No. 25SC546</p>\n<p><span>Supreme Court of Colorado, En Banc.</span></p>',
+                "<b></b><p><span> Thomas Ray Collins, Petitioner <br> v.</span><span> <br> The People of the State of Colorado.</span> Respondent </p>\n<p>No. 25SC546</p>\n<p><span>Supreme Court of Colorado, En Banc.</span></p>",
                 {
                     "Docket": {
                         "docket_number": "25SC546",

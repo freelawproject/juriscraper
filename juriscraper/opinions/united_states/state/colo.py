@@ -12,13 +12,13 @@ History:
     - 2024-07-04: Update to new site, grossir
     - 2025-08-11: Add cleanup_content method, quevon24
 """
+
 import re
 from datetime import date, datetime, timedelta
 from typing import Optional
 from urllib.parse import urlencode
 
 from lxml import etree, html
-from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
@@ -90,9 +90,9 @@ class Site(OpinionSiteLinear):
             return "", ""
 
         # Pattern for Colorado official citations: "2023 CO 5"
-        co_pattern = r'\b(\d{4}\s+COA?\s+\d+)\b'
+        co_pattern = r"\b(\d{4}\s+COA?\s+\d+)\b"
         # Pattern for Pacific Reporter citations: "527 P.3d 371" or "123 P.2d 456"
-        pacific_pattern = r'\b(\d+\s+P\.\d+d\s+\d+)\b'
+        pacific_pattern = r"\b(\d+\s+P\.\d+d\s+\d+)\b"
 
         citations = []
 
@@ -155,7 +155,9 @@ class Site(OpinionSiteLinear):
 
         # If we didn't get all results, try increasing per_page
         if results_in_page < total_count and not self.test_mode_enabled():
-            search_json = self.update_page_size(total_count, results_in_page, self.dates)
+            search_json = self.update_page_size(
+                total_count, results_in_page, self.dates
+            )
 
         for result in search_json["results"]:
             case = {"citation": "", "parallel_citation": ""}
@@ -288,9 +290,7 @@ class Site(OpinionSiteLinear):
         )
         return search_json
 
-
     def extract_from_text(self, scraped_text: str) -> dict:
-
         docket_pattern = re.compile(self.docket_number_regex)
         metadata = {}
         if match := docket_pattern.search(scraped_text):
