@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         self.url = f"https://www.cnmilaw.org/spm{year}.php#gsc.tab=0"
         self.status = "Published"
 
-    def _cleanup_judge_names(self, judges: str) -> [str]:
+    def _cleanup_judge_names(self, judges: str) -> list[str]:
         """Extract judge panel
 
         Because of a judge Torres,Jr. - and the various permutations of his
