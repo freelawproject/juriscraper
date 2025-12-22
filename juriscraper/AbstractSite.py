@@ -1,7 +1,7 @@
 import hashlib
 import json
 import os
-from datetime import date, datetime
+from datetime import datetime
 from typing import Union
 
 import certifi
