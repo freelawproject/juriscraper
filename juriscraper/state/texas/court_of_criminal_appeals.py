@@ -1,5 +1,4 @@
 from functools import cached_property
-from itertools import groupby
 
 from juriscraper.state.texas.common import (
     CourtID,
@@ -79,16 +78,5 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
             and self.parties[0]["type"].lower().find("state") < 0
         ):
             return f"{self.parties[0]['name']} v. The State of Texas"
-
-        grouped_parties = {
-            k: sorted(g, key=lambda x: x["name"])
-            for k, g in groupby(self.parties, lambda party: party["type"])
-        }
-
-        if "State" in grouped_parties and "Appellant" in grouped_parties:
-            return (
-                f"{grouped_parties['Appellant'][0]['name']} v. "
-                f"{grouped_parties['State'][0]['name']}"
-            )
         # Fall back on the full case name property
         return self.case_name_full

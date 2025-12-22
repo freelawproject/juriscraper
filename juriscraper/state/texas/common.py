@@ -427,6 +427,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             for child in children
         }
 
+    BUSINESS_AND_TITLE_STRIP_REGEXES = [
+        re.compile(
+            r"(,\s+)?" + r"\.?".join(list(acronym)) + r"\.?", re.IGNORECASE
+        )
+        for acronym in ["LLC", "MD", "PA"]
+    ]
+
     def _find_party_in_case_name(self, party_name: str) -> tuple[int, int]:
         """
         Finds the start and end indices of the party name in the case name.
@@ -439,13 +446,37 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         :return: Index of the party name in the case name.
         """
         party_name = harmonize(party_name).lower()
-        if party_name[:3] == "the":
-            party_name = party_name[3:]
         party_name_parts = [part.strip() for part in party_name.split(",")]
         if len(party_name_parts) == 1:
             start = self.case_name_full.lower().find(party_name_parts[0])
             end = start + len(party_name_parts[0])
             return start, end
+        # If there are two parts, this might be someone's name written as Last,
+        # First
+        if len(party_name_parts) == 2:
+            # Try to find First Last
+            maybe_first_last = f"{party_name_parts[1]} {party_name_parts[0]}"
+            start = self.case_name_full.lower().find(maybe_first_last)
+            if start >= 0:
+                end = start + len(maybe_first_last)
+                return start, end
+
+            # There do not appear to be instances of a person's name written
+            # as Last, First in the case name in TAMES, so we don't check for
+            # that case.
+
+        # If we failed to find the party name in the case name by treating
+        # it as a person's name, assume that the comma indicates a list of
+        # parties
+        # Strip out acronyms like LLC, MD, and PA so they don't clutter things
+        for STRIP_REGEX in self.BUSINESS_AND_TITLE_STRIP_REGEXES:
+            party_name_parts = filter(
+                lambda part: not STRIP_REGEX.fullmatch(part), party_name_parts
+            )
+        party_name_parts = [
+            part.removeprefix("the ").strip() for part in party_name_parts
+        ]
+        print(party_name_parts)
         party_name_parts_indexed = [
             (self.case_name_full.lower().find(part), part)
             for part in party_name_parts
@@ -489,11 +520,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         semi = name_part.find(";")
         if semi > 0:
             return name_part[:semi]
+
         party_indices = [
             self._find_party_in_case_name(party["name"]) for party in parties
         ]
         party_indices.sort(key=lambda x: x[0])
-        start, end = party_indices[0]
+        start, end = next(
+            indices for indices in party_indices if indices[0] >= 0
+        )
         return self.case_name_full[start:end]
 
     @cached_property
@@ -518,10 +552,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         if len(name_part_2) == 0:
             return harmonize(name_part_1)
 
-        grouped_parties = {
-            k: list(g)
-            for k, g in groupby(self.parties, lambda party: party["type"])
-        }
+        grouped_parties = {}
+        for k, g in groupby(self.parties, lambda party: party["type"]):
+            if k in grouped_parties:
+                grouped_parties[k].extend(list(g))
+            else:
+                grouped_parties[k] = list(g)
+
         first_parties = list(
             chain(
                 grouped_parties.get("Petitioner", []),
