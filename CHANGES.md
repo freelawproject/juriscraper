@@ -21,12 +21,19 @@ Changes:
 -
 
 Fixes:
+- 
+
+## Current
+
+**2.6.100 - 2025-12-22**
+
+Fixes:
 - `ca11_p`: remove hardcoded status field #1708
 - `tenn`: fix opinion type extraction #1704
 - `tenn`: fix docket number and judges extraction #1705
 - `delaware`: update XPath selectors for changed website structure #1713
 
-## Current
+## Past
 
 **2.6.99 - 2025-12-10**
 
@@ -44,8 +51,6 @@ Fixes:
 
 Fixes:
 - fix recap.email docket_number parsing inside nested tags
-
-## Past
 
 **2.6.97 - 2025-11-28**
 
