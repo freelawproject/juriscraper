@@ -57,10 +57,10 @@ dev = [
   "jsondate3-aware",
   "jinja2",
   "pytest",
-  "types-lxml>=2025.11.25",
-  "types-requests>=2.32.4.20250913",
   "mypy>=1.19.0",
   "types-python-dateutil>=2.9.0.20251115",
+  "types-requests>=2.32.4.20250913",
+  "types-lxml>=2025.11.25",
 ]
 
 [tool.setuptools]
