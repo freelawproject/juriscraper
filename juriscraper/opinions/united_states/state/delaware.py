@@ -29,9 +29,9 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath("//table//tr[not(th)]"):
             case = {
-                "name": row.xpath("td[1]/a/span/text()")[0].strip(),
-                "date": row.xpath("td[2]/text()")[0].strip(),
-                "docket": row.xpath("td[3]/a/span/text()")[0].strip(),
+                "name": row.xpath("td[1]/a/text()")[0].strip(),
+                "date": row.xpath("td[2]/span/text()")[0].strip(),
+                "docket": row.xpath("td[3]/a/text()")[0].strip(),
                 "url": urljoin(
                     self.url, row.xpath("td[1]/a/@href")[0].strip()
                 ),
