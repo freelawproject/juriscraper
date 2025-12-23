@@ -307,7 +307,7 @@ wheels = [
 
 [[package]]
 name = "juriscraper"
-version = "2.6.99"
+version = "2.6.100"
 source = { editable = "." }
 dependencies = [
     { name = "certifi", version = "2025.4.26", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
