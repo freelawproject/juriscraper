@@ -814,7 +814,7 @@ def size_string_to_bytes(size: str) -> int:
         return 0
     size_group = file_size_match.group(1)
     size_unit_group = file_size_match.group(2)
-    n_bytes = int(round(float(size_group)))
+    n_bytes = float(size_group)
     units = {"B": 1, "KB": 10**3, "MB": 10**6, "GB": 10**9, "TB": 10**12}
     size_unit = units.get(size_unit_group, 0)
-    return n_bytes * size_unit
+    return int(round(n_bytes * size_unit))
