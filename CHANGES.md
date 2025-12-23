@@ -14,6 +14,8 @@ Releases are also tagged in git, if that's helpful.
 
 The following changes are not yet released, but are code complete:
 
+* Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
+
 Features:
 - Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
 
