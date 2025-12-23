@@ -1,5 +1,5 @@
 import re
-from datetime import datetime
+from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
@@ -16,7 +16,12 @@ from juriscraper.lib.html_utils import (
     get_all_text,
     parse_table,
 )
-from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.string_utils import (
+    FILE_SIZE_RE,
+    clean_string,
+    harmonize,
+    size_string_to_bytes,
+)
 
 
 class CourtID(Enum):
@@ -212,6 +217,8 @@ class TexasCaseDocument(TypedDict):
     media_id: str
     media_version_id: str
     description: str
+    file_size_bytes: int
+    file_size_str: str
 
 
 class TexasDocketEntry(TypedDict):
@@ -224,7 +231,7 @@ class TexasDocketEntry(TypedDict):
     :ivar attachments: Any documents associated with the docket entry.
     """
 
-    date: datetime
+    date: date
     type: str
     attachments: list[TexasCaseDocument]
 
@@ -279,7 +286,7 @@ class TexasCommonData(TypedDict):
     docket_number: str
     case_name: str
     case_name_full: str
-    date_filed: datetime
+    date_filed: date
     case_type: str
     parties: list[TexasCaseParty]
     trial_court: TexasTrialCourt
@@ -427,12 +434,15 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             for child in children
         }
 
-    BUSINESS_AND_TITLE_STRIP_REGEXES = [
-        re.compile(
-            r"(,\s+)?" + r"\.?".join(list(acronym)) + r"\.?", re.IGNORECASE
-        )
-        for acronym in ["LLC", "MD", "PA"]
-    ]
+    BUSINESS_AND_TITLE_STRIP_RE = re.compile(
+        "|".join(
+            [
+                r"(?:(,\s+)?" + r"\.?".join(list(acronym)) + r"\.?)"
+                for acronym in ["LLC", "MD", "PA"]
+            ]
+        ),
+        re.IGNORECASE,
+    )
 
     def _find_party_in_case_name(self, party_name: str) -> tuple[int, int]:
         """
@@ -469,14 +479,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         # it as a person's name, assume that the comma indicates a list of
         # parties
         # Strip out acronyms like LLC, MD, and PA so they don't clutter things
-        for STRIP_REGEX in self.BUSINESS_AND_TITLE_STRIP_REGEXES:
-            party_name_parts = filter(
-                lambda part: not STRIP_REGEX.fullmatch(part), party_name_parts
-            )
+        party_name_parts = filter(
+            lambda part: not self.BUSINESS_AND_TITLE_STRIP_RE.fullmatch(part),
+            party_name_parts,
+        )
         party_name_parts = [
             part.removeprefix("the ").strip() for part in party_name_parts
         ]
-        print(party_name_parts)
         party_name_parts_indexed = [
             (self.case_name_full.lower().find(part), part)
             for part in party_name_parts
@@ -595,7 +604,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
                 return docket_number
         raise ValueError(f"Unrecognized docket number format: {docket_number}")
 
-    def _parse_date_filed(self) -> datetime:
+    def _parse_date_filed(self) -> date:
         """
         Extracts the date the case was filed from the HTML tree and parses it
         into a `datetime` object from mm/dd/yyyy format. Will fail if
@@ -604,7 +613,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         :return: Date filed
         """
         date_string = self.case_data["date filed"]
-        return datetime.strptime(date_string, self.date_format)
+        return datetime.strptime(date_string, self.date_format).date()
 
     def _parse_case_type(self) -> str:
         """
@@ -688,9 +697,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         if table is None:
             return []
         documents = parse_table(table)
-        urls: list[str] = [
-            parent.find(".//a").get("href") for parent in documents["0"]
-        ]
+        anchors = [parent.find(".//a") for parent in documents["0"]]
+        urls: list[str] = [anchor.get("href") for anchor in anchors]
         query_dicts: list[dict[str, list[str]]] = [
             parse_qs(urlparse(url).query) for url in urls
         ]
@@ -702,6 +710,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             clean_string(document.text_content())
             for document in documents["1"]
         ]
+        file_size_matches = [
+            FILE_SIZE_RE.search(anchor.text_content()) for anchor in anchors
+        ]
+        file_size_strs = [
+            match.group(0) if match is not None else ""
+            for match in (file_size_matches)
+        ]
 
         return [
             TexasCaseDocument(
@@ -711,9 +726,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
                 media_version_id=media_version_id[0]
                 if len(media_version_id) > 0
                 else "",
+                file_size_str=file_size_str,
+                file_size_bytes=size_string_to_bytes(file_size_str),
             )
-            for url, (media_id, media_version_id), description in zip(
-                urls, media_ids, descriptions
+            for url, (
+                media_id,
+                media_version_id,
+            ), description, file_size_str in zip(
+                urls, media_ids, descriptions, file_size_strs
             )
         ]
 
@@ -739,7 +759,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
                 date=datetime.strptime(
                     clean_string(self.events["Date"][i].text_content()),
                     self.date_format,
-                ),
+                ).date(),
                 type=clean_string(self.events["Event Type"][i].text_content()),
                 attachments=self._parse_case_documents(
                     self.events["Document"][i]
@@ -773,7 +793,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
                 date=datetime.strptime(
                     clean_string(self.briefs["Date"][i].text_content()),
                     self.date_format,
-                ),
+                ).date(),
                 type=clean_string(self.briefs["Event Type"][i].text_content()),
                 attachments=self._parse_case_documents(
                     self.briefs["Document"][i]
