@@ -15,10 +15,10 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
 
 Changes:
--
+- BREAKING CHANGE: Output format of `SCOTUSEmail` changed
 
 Fixes:
 -
