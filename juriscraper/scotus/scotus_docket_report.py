@@ -3,7 +3,7 @@ import pprint
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any, Optional
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
@@ -256,9 +256,7 @@ class SCOTUSDocketReport:
         return parties
 
     @classmethod
-    def normalize_date(
-        cls, date_str: Optional[str]
-    ) -> Optional[datetime.date]:
+    def normalize_date(cls, date_str: Optional[str]) -> Optional[date]:
         """Convert a date string to YYYY-MM-DD using common SCOTUS formats.
 
         :param date_str: Raw date string (e.g., "July 3, 2024", "Jul 03 2024", "08/16/2024")

@@ -1,6 +1,6 @@
 import re
 from datetime import date
-from typing import Union
+from typing import Optional, Union
 
 from lxml.html import HtmlElement
 
@@ -390,8 +390,8 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         pacer_case_id: str,
         docket_number: str,
         creditor_name: str,
-        date_start: date = None,
-        date_end: date = None,
+        date_start: Optional[date] = None,
+        date_end: Optional[date] = None,
     ):
         """Query the claims activity and return the results.
 
