@@ -23,7 +23,8 @@ Changes:
 - BREAKING CHANGE: Output format of `SCOTUSEmail` changed
 
 Fixes:
--
+- `ca11_p` and `ca11_u` parse lower court docket number #1710
+
 
 ## Current
 
