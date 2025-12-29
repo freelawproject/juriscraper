@@ -57,23 +57,41 @@ def build_module_list(court_id):
 
 
 def get_module_by_name(name):
-    db_root = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..", "opinions")
-    )
-    for dirName, _subdirList, fileList in os.walk(db_root):
-        for fname in fileList:
-            if f"{name}.py" == fname:
-                package, module = (
-                    dirName.split("/juriscraper/", 1)[1].replace("/", "."),
-                    fname[:-3],
-                )
-                juriscraper_module = __import__(
-                    f"juriscraper.{package}.{module}",
-                    globals(),
-                    locals(),
-                    [module],
-                )
-                return juriscraper_module.Site()
+    """Find and return a Site instance by scraper name.
+
+    Searches opinions, oral_args, and dockets directories.
+
+    Args:
+        name: The scraper module name (e.g., 'tex', 'ca1')
+
+    Returns:
+        Site instance or None if not found
+    """
+    # Search in opinions, oral_args, and dockets directories
+    search_dirs = ["opinions", "oral_args", "dockets"]
+
+    for search_dir in search_dirs:
+        db_root = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", search_dir)
+        )
+        if not os.path.exists(db_root):
+            continue
+
+        for dirName, _subdirList, fileList in os.walk(db_root):
+            for fname in fileList:
+                if f"{name}.py" == fname:
+                    package, module = (
+                        dirName.split("/juriscraper/", 1)[1].replace("/", "."),
+                        fname[:-3],
+                    )
+                    juriscraper_module = __import__(
+                        f"juriscraper.{package}.{module}",
+                        globals(),
+                        locals(),
+                        [module],
+                    )
+                    return juriscraper_module.Site()
+    return None
 
 
 def site_yielder(iterable, mod, save_response_fn=None):

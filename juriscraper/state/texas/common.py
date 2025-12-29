@@ -297,7 +297,8 @@ class TexasCommonData(TypedDict):
 DOCKET_NUMBER_REGEXES = [
     re.compile(r"\d{2}-\d{4}"),  # Supreme Court
     re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
-    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals
+    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals (petitions)
+    re.compile(r"WR-[\d,]+-\d{2}"),  # Court of Criminal Appeals (writs)
 ]
 
 
