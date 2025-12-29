@@ -14,19 +14,29 @@ Releases are also tagged in git, if that's helpful.
 
 The following changes are not yet released, but are code complete:
 
+* Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
+
 Features:
--
+- Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
 
 Changes:
--
+- BREAKING CHANGE: Output format of `SCOTUSEmail` changed
+
+Fixes:
+- `ca11_p` and `ca11_u` parse lower court docket number #1710
+
+
+## Current
+
+**2.6.100 - 2025-12-22**
 
 Fixes:
 - `ca11_p`: remove hardcoded status field #1708
 - `tenn`: fix opinion type extraction #1704
 - `tenn`: fix docket number and judges extraction #1705
-- `ca11_p` and `ca11_u` parse lower court docket number #1710
+- `delaware`: update XPath selectors for changed website structure #1713
 
-## Current
+## Past
 
 **2.6.99 - 2025-12-10**
 
@@ -44,8 +54,6 @@ Fixes:
 
 Fixes:
 - fix recap.email docket_number parsing inside nested tags
-
-## Past
 
 **2.6.97 - 2025-11-28**
 

@@ -794,3 +794,27 @@ def clean_if_py3(s):
         s = s.replace(raw, replacement)
 
     return s
+
+
+FILE_SIZE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(\w+)")
+
+
+def size_string_to_bytes(size: str) -> int:
+    """
+    Quick and dirty method to turn a human-readable file-size string into the
+    corresponding number of bytes. Returns 0 if the size is noninteger or
+    was invalid.
+
+    :param size: The human-readable file size string, e.g. "10 MB"
+
+    :return: The number of bytes rounded to the nearest integer.
+    """
+    file_size_match = FILE_SIZE_RE.fullmatch(size)
+    if file_size_match is None:
+        return 0
+    size_group = file_size_match.group(1)
+    size_unit_group = file_size_match.group(2)
+    n_bytes = float(size_group)
+    units = {"B": 1, "KB": 10**3, "MB": 10**6, "GB": 10**9, "TB": 10**12}
+    size_unit = units.get(size_unit_group, 0)
+    return int(round(n_bytes * size_unit))
