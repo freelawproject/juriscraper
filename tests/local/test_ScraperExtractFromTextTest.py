@@ -1663,6 +1663,26 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.colo": [
+            (
+                "<b></b><p><span> Thomas Ray Collins, Petitioner <br> v.</span><span> <br> The People of the State of Colorado.</span> Respondent </p>\n<p>No. 25SC546</p>\n<p><span>Supreme Court of Colorado, En Banc.</span></p>",
+                {
+                    "Docket": {
+                        "docket_number": "25SC546",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.coloctapp": [
+            (
+                "25CA0167 Brauweiler v National Jewish 12-18-2025\nCOLORADO COURT OF APPEALS\n\nCourt of Appeals No. 25CA0167\nCity and County of Denver District Court No. 23CV31536\nHonorable Andrew J. Luxen, Judge",
+                {
+                    "Docket": {
+                        "docket_number": "25CA0167",
+                    }
+                },
+            )
+        ],
     }
 
     def test_extract_from_text(self):
