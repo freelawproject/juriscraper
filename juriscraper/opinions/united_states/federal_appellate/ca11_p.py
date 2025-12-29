@@ -31,8 +31,9 @@ class Site(OpinionSiteLinear):
             name = tds[0].xpath("a//text()")[0]
             url = tds[0].xpath("a/@href")[0]
             docket = tds[1].xpath(".//text()")[0]
-            date = tds[4].xpath(".//text()")[0]
+            lower_court_docket = tds[2].xpath(".//text()")[0]
             nature = tds[3].xpath(".//text()")[0]
+            date = tds[4].xpath(".//text()")[0]
 
             s = clean_string(date)
             if s == "00-00-0000" and "begin=21160" in self.url:
@@ -45,6 +46,7 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "date": date_cleaned,
                     "docket": clean_string(docket),
+                    "lower_court_number": lower_court_docket,
                     "nature_of_suit": clean_string(nature),
                 }
             )
