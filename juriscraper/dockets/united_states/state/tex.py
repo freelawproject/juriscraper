@@ -20,9 +20,9 @@ from datetime import date, timedelta
 from typing import Optional
 from urllib.parse import parse_qs, urlparse
 
-from juriscraper.DocketSite import DocketSite
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.state.DocketSite import DocketSite
 from juriscraper.state.texas.common import TexasCommonData
 from juriscraper.state.texas.court_of_appeals import TexasCourtOfAppealsScraper
 from juriscraper.state.texas.court_of_criminal_appeals import (
@@ -239,9 +239,12 @@ class Site(DocketSite):
 
             case_url = case_link[0].get("href", "")
             if case_url and case_url not in self._case_urls:
-                # Normalize URL
-                if case_url.startswith("/"):
-                    case_url = f"{self.BASE_URL}{case_url}"
+                # Just being extra cautious about these urls
+                if not case_url.startswith("http"):
+                    if case_url.startswith("/"):
+                        case_url = f"{self.BASE_URL}{case_url}"
+                    else:
+                        case_url = f"{self.BASE_URL}/{case_url}"
                 self._case_urls.append(case_url)
 
     def _has_next_page(self, html) -> bool:

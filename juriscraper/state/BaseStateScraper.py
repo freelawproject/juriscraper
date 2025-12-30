@@ -1,0 +1,274 @@
+"""Abstract base class for state-level docket enumeration scrapers.
+
+This module provides a base class for scrapers that enumerate dockets across
+multiple courts within a state. Unlike DocketSite which parses docket details,
+BaseStateScraper is designed for discovering and listing dockets.
+
+Example usage:
+    # Create a request manager (or let the scraper create one)
+    request_manager = ScraperRequestManager()
+
+    class TexasStateScraper(BaseStateScraper[DocketEntry]):
+        def scrape(self, court: str, date: date) -> Generator[DocketEntry, None, None]:
+            response = self.request_manager.get(url)
+            # Implementation
+            ...
+
+        def backfill(
+            self,
+            courts: list[str],
+            date_range: tuple[date, date],
+        ) -> Generator[DocketEntry, None, None]:
+            # Implementation
+            ...
+
+    scraper = TexasStateScraper(request_manager=request_manager)
+"""
+
+from abc import ABC, abstractmethod
+from collections.abc import Generator
+from datetime import date
+from typing import (
+    Any,
+    Callable,
+    Final,
+    Generic,
+    Optional,
+    TypeVar,
+    Union,
+)
+
+import certifi
+import requests
+
+from juriscraper.lib.log_tools import make_default_logger
+
+logger = make_default_logger()
+
+T = TypeVar("T")
+
+# Type alias for response callback functions
+# Callback receives the request manager and the response
+ResponseCallback = Callable[["ScraperRequestManager", requests.Response], None]
+
+
+class ScraperRequestManager:
+    """Manages HTTP requests for scrapers with callback support.
+
+    This class encapsulates HTTP request handling with support for:
+    - Session management with default Juriscraper headers
+    - Response callbacks for logging/debugging
+    - Separate callbacks for archived/historical requests
+
+    Attributes:
+        session: The requests Session used for HTTP requests
+        all_response_fn: Optional callback invoked after every HTTP response
+        archive_response_fn: Optional callback invoked only for archived requests
+    """
+
+    def __init__(
+        self,
+        session: Optional[requests.Session] = None,
+        all_response_fn: Optional[ResponseCallback] = None,
+        archive_response_fn: Optional[ResponseCallback] = None,
+    ) -> None:
+        """Initialize the request manager.
+
+        Args:
+            session: Optional requests Session. If not provided, a new session
+                will be created with default Juriscraper headers.
+            all_response_fn: Optional callback function invoked after every
+                HTTP response (both request and archived_request). Receives
+                the request manager instance and the response object.
+            archive_response_fn: Optional callback function invoked only after
+                archived_request calls. Receives the request manager instance
+                and the response object.
+        """
+        if session is not None:
+            self.session = session
+        else:
+            self.session = requests.Session()
+            self.session.headers.update(
+                {
+                    "User-Agent": "Juriscraper",
+                    "Cache-Control": "no-cache, max-age=0, must-revalidate",
+                    "Pragma": "no-cache",
+                }
+            )
+
+        self.all_response_fn = all_response_fn
+        self.archive_response_fn = archive_response_fn
+
+        # SSL verification - can be disabled for misconfigured sites
+        self._verify: Union[str, bool] = certifi.where()
+
+    def __del__(self) -> None:
+        """Close the session when the manager is garbage collected."""
+        self.close()
+
+    def close(self) -> None:
+        """Close the HTTP session."""
+        if self.session:
+            self.session.close()
+
+    def request(
+        self,
+        method: str,
+        url: str,
+        **kwargs: Any,
+    ) -> requests.Response:
+        """Make an HTTP request using the internal session.
+
+        This method mirrors the requests library's request method signature.
+        The all_response_fn callback (if set) will be invoked after the
+        request completes.
+
+        Args:
+            method: HTTP method (GET, POST, etc.)
+            url: URL to request
+            **kwargs: Additional arguments passed to session.request()
+                (params, data, json, headers, timeout, etc.)
+
+        Returns:
+            The requests Response object
+        """
+        kwargs.setdefault("timeout", 60)
+        kwargs.setdefault("verify", self._verify)
+
+        response = self.session.request(method, url, **kwargs)
+
+        if self.all_response_fn:
+            self.all_response_fn(self, response)
+
+        return response
+
+    def archived_request(
+        self,
+        method: str,
+        url: str,
+        **kwargs: Any,
+    ) -> requests.Response:
+        """Make an HTTP request for archived/historical content.
+
+        This method is identical to request() but additionally invokes
+        the archive_response_fn callback if set. Use this for requests
+        that fetch archived or historical data during backscraping.
+
+        Args:
+            method: HTTP method (GET, POST, etc.)
+            url: URL to request
+            **kwargs: Additional arguments passed to session.request()
+
+        Returns:
+            The requests Response object
+        """
+        kwargs.setdefault("timeout", 60)
+        kwargs.setdefault("verify", self._verify)
+
+        response = self.session.request(method, url, **kwargs)
+
+        if self.all_response_fn:
+            self.all_response_fn(self, response)
+
+        if self.archive_response_fn:
+            self.archive_response_fn(self, response)
+
+        return response
+
+    def merge_headers(self, headers: dict[str, str]) -> None:
+        """Merge additional headers into the session headers.
+
+        Args:
+            headers: Dictionary of headers to merge. Existing headers with
+                the same keys will be overwritten.
+        """
+        self.session.headers.update(headers)
+
+    # Convenience methods that mirror requests library
+    def get(self, url: str, **kwargs: Any) -> requests.Response:
+        """Make a GET request. See request() for details."""
+        return self.request("GET", url, **kwargs)
+
+    def post(self, url: str, **kwargs: Any) -> requests.Response:
+        """Make a POST request. See request() for details."""
+        return self.request("POST", url, **kwargs)
+
+    def archived_get(self, url: str, **kwargs: Any) -> requests.Response:
+        """Make a GET request for archived content. See archived_request()."""
+        return self.archived_request("GET", url, **kwargs)
+
+    def archived_post(self, url: str, **kwargs: Any) -> requests.Response:
+        """Make a POST request for archived content. See archived_request()."""
+        return self.archived_request("POST", url, **kwargs)
+
+
+class BaseStateScraper(ABC, Generic[T]):
+    """Abstract base class for state-level docket enumeration.
+
+    This class provides a foundation for scrapers that need to enumerate
+    dockets from a court website. It delegates HTTP requests to a
+    ScraperRequestManager instance.
+
+    Type Parameters:
+        T: The type of items yielded by the scraper (e.g., DocketEntry)
+
+    Attributes:
+        ADDITIONAL_HEADERS: Class constant for headers to merge into the
+            request manager's session. Override in subclasses if needed.
+        COURT_IDS: list of court ids handled by the scraper. 
+        request_manager: The ScraperRequestManager handling HTTP requests
+    """
+
+    # Override in subclasses to add custom headers to all requests
+    ADDITIONAL_HEADERS: Final[Optional[dict[str, str]]] = None
+    COURT_IDS: Final[list[str]] = []
+
+    def __init__(
+        self,
+        request_manager: Optional[ScraperRequestManager] = None,
+        **kwargs: Any,
+    ) -> None:
+        """Initialize the scraper.
+
+        Args:
+            request_manager: Optional ScraperRequestManager instance. If not
+                provided, a new one will be created with default settings.
+            **kwargs: Additional keyword arguments for subclass customization.
+        """
+        super().__init__()
+
+        if request_manager is not None:
+            self.request_manager = request_manager
+        else:
+            self.request_manager = ScraperRequestManager()
+
+        # Merge additional headers if defined by subclass
+        if self.ADDITIONAL_HEADERS is not None:
+            self.request_manager.merge_headers(self.ADDITIONAL_HEADERS)
+
+    @abstractmethod
+    def scrape(self) -> Generator[T, None, None]:
+        """This is a method for online/recent scraping.
+
+        Subclasses must implement this method to fetch dockets 
+        """
+        ...
+
+    @abstractmethod
+    def backfill(
+        self,
+        courts: list[str],
+        date_range: tuple[date, date],
+    ) -> Generator[T, None, None]:
+        """Backfill dockets for multiple courts over a date range.
+
+        Subclasses must implement this method to enumerate historical dockets.
+
+        Args:
+            courts: List of court identifiers to scrape
+            date_range: Tuple of (start_date, end_date) inclusive
+
+        Yields:
+            Items of type T (typically DocketEntry or similar)
+        """
+        ...
