@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
-from typing import TypedDict
+from typing import Optional, TypedDict
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -95,7 +95,7 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
     ordinal = coa_name.split()[0]
-    return COA_ORDINAL_MAP[ordinal.lower()]
+    return COA_ORDINAL_MAP.get(ordinal.lower(), CourtID.UNKNOWN)
 
 
 class TexasAppealsCourt(TypedDict):
@@ -111,7 +111,7 @@ class TexasAppealsCourt(TypedDict):
     """
 
     case_number: str
-    case_url: str
+    case_url: Optional[str]
     disposition: str
     opinion_cite: str
     district: str
@@ -145,9 +145,12 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     }
     justice_node = case_info.get("COA Justice")
 
+    case_url_node = case_info["COA Case"].find(".//a")
+    if case_url_node is None:
+        case_url_node = {}
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
-        case_url=case_info["COA Case"].find(".//a").get("href"),
+        case_url=case_url_node.get("href"),
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=clean_string(case_info["COA District"].text_content()),
@@ -297,7 +300,8 @@ class TexasCommonData(TypedDict):
 DOCKET_NUMBER_REGEXES = [
     re.compile(r"\d{2}-\d{4}"),  # Supreme Court
     re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
-    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals
+    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals (petitions)
+    re.compile(r"WR-[\d,]+-\d{2}"),  # Court of Criminal Appeals (writs)
 ]
 
 
