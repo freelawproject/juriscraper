@@ -25,7 +25,7 @@ Changes:
 
 Fixes:
 - `ca11_p` and `ca11_u` parse lower court docket number #1710
-
+- fix `bia` and `olc` by handling "I am not a robot challenge" when downloading a document #1724
 
 ## Current
 
