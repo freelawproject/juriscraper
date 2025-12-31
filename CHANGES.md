@@ -17,6 +17,8 @@ The following changes are not yet released, but are code complete:
 * Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
 
 Features:
+- Add a new ClusterSite class that returns OpinionClusters with grouped opinions. See #883
+- Convert `tenn`, `tenncrimapp` and `tennctapp` to ClusterSite #1704
 - Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
 
 Changes:
