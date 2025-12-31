@@ -58,7 +58,7 @@ ALL_COURTS = [
     "coa15",
 ]
 
-COURT_CHECKBOX_MAPPING: dict[str,str] = {
+COURT_CHECKBOX_MAPPING: dict[str, str] = {
     "texas_cossup": "ctl00$ContentPlaceHolder1$chkListCourts$0",
     "texas_coscca": "ctl00$ContentPlaceHolder1$chkListCourts$1",
     "texas_coa01": "ctl00$ContentPlaceHolder1$chkListCourts$2",
@@ -127,8 +127,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         self._hidden_fields: dict[str, str] = {}
 
     def scrape(self) -> Generator[TexasCommonData, None, None]:
-        """Scrape dockets for a date range.
-        """
+        """Scrape dockets for a date range."""
         end_date = date.today()
         start_date = end_date - timedelta(days=7)
 
@@ -170,7 +169,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         self,
         start_date: date,
         end_date: date,
-        court_ids: Optional[list[str]] = None
+        court_ids: Optional[list[str]] = None,
     ) -> Generator[TexasCommonData, None, None]:
         """Search TAMES for dockets in a date range.
 
@@ -181,7 +180,9 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         self._fetch_search_form()
 
         # Submit the search
-        case_urls = list(self._submit_search(start_date, end_date, court_ids=court_ids))
+        case_urls = list(
+            self._submit_search(start_date, end_date, court_ids=court_ids)
+        )
 
         logger.info(
             f"{self.court_id}: Found {len(case_urls)} cases for "
@@ -206,7 +207,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         self,
         start_date: date,
         end_date: date,
-        court_ids: Optional[list[str]] = None
+        court_ids: Optional[list[str]] = None,
     ) -> Generator[str, None, None]:
         """Submit a search and yield case URLs.
 
@@ -270,7 +271,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         self,
         start_date: date,
         end_date: date,
-        court_ids: Optional[list[str]] = None
+        court_ids: Optional[list[str]] = None,
     ) -> Generator[str, None, None]:
         """Handle case where search returns 1000+ results.
 
@@ -296,17 +297,20 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         self._fetch_search_form()
 
         # Search first half
-        yield from self._submit_search(start_date, midpoint, court_ids=court_ids)
+        yield from self._submit_search(
+            start_date, midpoint, court_ids=court_ids
+        )
 
         # Re-fetch form for fresh hidden fields
         self._fetch_search_form()
 
         # Search second half
-        yield from self._submit_search(midpoint + timedelta(days=1), end_date, court_ids=court_ids)
+        yield from self._submit_search(
+            midpoint + timedelta(days=1), end_date, court_ids=court_ids
+        )
 
     def _parse_search_results(self, tree) -> Generator[str, None, None]:
-        """Parse search results and yield case URLs.
-        """
+        """Parse search results and yield case URLs."""
         # Find result rows
         rows = tree.xpath(
             "//table[@id='ctl00_ContentPlaceHolder1_grdCases_ctl00']"
@@ -336,15 +340,13 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
             yield case_url
 
     def _has_next_page(self, tree) -> bool:
-        """Check if there are more result pages.
-        """
+        """Check if there are more result pages."""
         next_button = tree.xpath("//input[contains(@class, 'rgPageNext')]")
         current_page_has_next = tree.cssselect(".rgCurrentPage + a")
         return bool(next_button and current_page_has_next)
 
     def _fetch_next_page(self, tree):
-        """Fetch the next page of results.
-        """
+        """Fetch the next page of results."""
         next_button = tree.xpath("//input[contains(@class, 'rgPageNext')]")[0]
         submit_name = next_button.get("name", "")
         submit_val = next_button.get("value", "")
@@ -360,8 +362,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
     def _fetch_and_parse_case(
         self, case_url: str
     ) -> Optional[TexasCommonData]:
-        """Fetch and parse a case detail page.
-        """
+        """Fetch and parse a case detail page."""
         try:
             response = self.request_manager.get(case_url)
             response.raise_for_status()
@@ -386,8 +387,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
         html_str: str,
         court_type: str,
     ) -> Optional[TexasCommonData]:
-        """Parse a case detail page using the appropriate parser.
-        """
+        """Parse a case detail page using the appropriate parser."""
         try:
             if court_type == COURT_TYPE_SUPREME:
                 parser = TexasSupremeCourtScraper()
@@ -418,8 +418,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
 
     @staticmethod
     def _extract_hidden_fields(tree) -> dict[str, str]:
-        """Form submission relies on some hidden fields.
-        """
+        """Form submission relies on some hidden fields."""
         hidden_fields = {}
         for input_elem in tree.xpath("//input[@type='hidden']"):
             name = input_elem.get("name", "")
@@ -430,8 +429,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
 
     @staticmethod
     def _make_date_client_state(date_obj: date, date_str: str) -> str:
-        """Include the extraneous info the date picker expects/uses
-        """
+        """Include the extraneous info the date picker expects/uses"""
         date_formatted = date_obj.strftime("%Y-%m-%d")
         return (
             '{"enabled":true,"emptyMessage":"",'
@@ -445,8 +443,7 @@ class TAMESScraper(BaseStateScraper[TexasCommonData]):
 
     @staticmethod
     def _get_result_count(tree) -> int:
-        """Extract result count from search results.
-        """
+        """Extract result count from search results."""
         info_div = tree.xpath(
             "//div[contains(@class, 'rgWrap') and contains(@class, 'rgInfoPart')]"
         )

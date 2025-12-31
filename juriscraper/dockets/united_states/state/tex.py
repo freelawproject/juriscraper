@@ -148,8 +148,7 @@ class Site(DocketSite):
         self._fetch_case_details()
 
     def _extract_hidden_fields(self) -> dict[str, str]:
-        """They be tryin to hide things.
-        """
+        """They be tryin to hide things."""
         hidden_fields = {}
         for input_elem in self.html.xpath("//input[@type='hidden']"):
             name = input_elem.get("name", "")
@@ -160,8 +159,7 @@ class Site(DocketSite):
 
     @staticmethod
     def _make_date_client_state(date_obj: date, date_str: str) -> str:
-        """A wad of data that's mostly extraneous to our concerns.
-        """
+        """A wad of data that's mostly extraneous to our concerns."""
         date_formatted = date_obj.strftime("%Y-%m-%d")
         return (
             '{"enabled":true,"emptyMessage":"",'
@@ -192,7 +190,7 @@ class Site(DocketSite):
         """Handle case where search returns 1000+ results.
 
         Splits the date range in half and searches each half separately.
-        Returns if 
+        Returns if
         """
         if (end_date - start_date).days <= 1:
             # Can't split further - just log warning and continue
@@ -200,7 +198,9 @@ class Site(DocketSite):
                 f"{self.court_id}: Search for single day {start_date} "
                 "returned 1000+ results, some may be missed"
             )
-            raise Exception("Single day with 1k+ results. Fundamental assumption broken.")
+            raise Exception(
+                "Single day with 1k+ results. Fundamental assumption broken."
+            )
 
         midpoint = start_date + (end_date - start_date) // 2
 
@@ -248,15 +248,13 @@ class Site(DocketSite):
                 self._case_urls.append(case_url)
 
     def _has_next_page(self, html) -> bool:
-        """Check for the presence of that nextpage input. 
-        """
+        """Check for the presence of that nextpage input."""
         next_button = html.xpath("//input[contains(@class, 'rgPageNext')]")
         current_page_has_next = html.cssselect(".rgCurrentPage + a")
         return bool(next_button and current_page_has_next)
 
     def _fetch_next_page(self, html):
-        """Fetch the next page of results.
-        """
+        """Fetch the next page of results."""
         next_button = html.xpath("//input[contains(@class, 'rgPageNext')]")[0]
         submit_name = next_button.get("name", "")
         submit_val = next_button.get("value", "")
@@ -324,8 +322,7 @@ class Site(DocketSite):
     def _parse_case_page(
         self, html, court_type: str
     ) -> TexasCommonData | None:
-        """Parse a case detail page using the appropriate parser.
-        """
+        """Parse a case detail page using the appropriate parser."""
         try:
             from lxml import etree
 
@@ -359,15 +356,13 @@ class Site(DocketSite):
             return None
 
     def _parse_supreme_court(self, html_str: str) -> TexasCommonData:
-        """Parse a Texas Supreme Court case page.
-        """
+        """Parse a Texas Supreme Court case page."""
         parser = TexasSupremeCourtScraper()
         parser._parse_text(html_str)
         return parser.data
 
     def _parse_criminal_appeals(self, html_str: str) -> TexasCommonData:
-        """Parse a Texas Court of Criminal Appeals case page.
-        """
+        """Parse a Texas Court of Criminal Appeals case page."""
         parser = TexasCourtOfCriminalAppealsScraper()
         parser._parse_text(html_str)
         return parser.data
@@ -375,8 +370,7 @@ class Site(DocketSite):
     def _parse_court_of_appeals(
         self, html_str: str, court_type: str
     ) -> TexasCommonData:
-        """Parse a Texas Court of Appeals case page.
-        """
+        """Parse a Texas Court of Appeals case page."""
         # Convert court type to court_id format (e.g., 'coa01' -> 'texas_coa01')
         court_id = f"texas_{court_type}"
         parser = TexasCourtOfAppealsScraper(court_id=court_id)
@@ -384,8 +378,7 @@ class Site(DocketSite):
         return parser.data
 
     def _parse_common(self, html_str: str) -> TexasCommonData:
-        """Parse a case page using the common parser (fallback).
-        """
+        """Parse a case page using the common parser (fallback)."""
         from juriscraper.state.texas.common import TexasCommonScraper
 
         parser = TexasCommonScraper()
@@ -393,8 +386,7 @@ class Site(DocketSite):
         return parser.data
 
     def _download_backwards(self, date_range: tuple[date, date]) -> None:
-        """Download dockets for a specific date range during backscraping.
-        """
+        """Download dockets for a specific date range during backscraping."""
         start_date, end_date = date_range
         self._search_start_date = start_date
         self._search_end_date = end_date

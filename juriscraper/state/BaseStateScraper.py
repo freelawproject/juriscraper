@@ -215,7 +215,7 @@ class BaseStateScraper(ABC, Generic[T]):
     Attributes:
         ADDITIONAL_HEADERS: Class constant for headers to merge into the
             request manager's session. Override in subclasses if needed.
-        COURT_IDS: list of court ids handled by the scraper. 
+        COURT_IDS: list of court ids handled by the scraper.
         request_manager: The ScraperRequestManager handling HTTP requests
     """
 
@@ -250,7 +250,7 @@ class BaseStateScraper(ABC, Generic[T]):
     def scrape(self) -> Generator[T, None, None]:
         """This is a method for online/recent scraping.
 
-        Subclasses must implement this method to fetch dockets 
+        Subclasses must implement this method to fetch dockets
         """
         ...
 
