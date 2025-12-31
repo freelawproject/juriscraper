@@ -130,12 +130,11 @@ class Site(ClusterSite):
 
         # if the sub_opinions list does not exist yet, build it from the existing
         # candidate_cluster
-        sub_opinions = candidate_cluster.get("sub_opinions", [])
+        sub_opinions = candidate_cluster.get("sub_opinions")
         if not sub_opinions:
-            candidate_cluster["sub_opinions"] = sub_opinions
-            sub_opinions.append(
+            candidate_cluster["sub_opinions"] = [
                 {key: candidate_cluster.pop(key) for key in opinion_fields}
-            )
+            ]
 
         # add the new opinion to the cluster
         candidate_cluster["sub_opinions"].append(
