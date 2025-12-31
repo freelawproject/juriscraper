@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "juriscraper"
-version = "2.6.99"
+version = "2.6.100"
 description = "An API to scrape American court websites for metadata."
 readme = "README.rst"
 keywords = [ "scraping", "legal", "pacer" ]
@@ -61,6 +61,7 @@ dev = [
   "types-python-dateutil>=2.9.0.20251115",
   "types-requests>=2.32.4.20250913",
   "types-lxml>=2025.11.25",
+  "responses>=0.25.8",
 ]
 
 [tool.setuptools]
