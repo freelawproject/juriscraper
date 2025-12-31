@@ -1,14 +1,98 @@
 import re
 import traceback
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Callable, Optional
+from typing import Any, Callable, Optional
 
 from requests.exceptions import HTTPError
 
-from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import InsanityException
+from juriscraper.lib.log_tools import make_default_logger
 
-from .string_utils import force_unicode
+from .date_utils import fix_future_year_typo
+from .string_utils import (
+    clean_string,
+    convert_date_string,
+    force_unicode,
+    harmonize,
+)
+
+logger = make_default_logger()
+
+
+def sanity_check_dates(dates_and_names: list[tuple], court_id: str) -> None:
+    """Checks that dates are datetime.date objects and that they are not in the future
+
+    :param dates_and_names: a 3 member tuple (case_date, case_name, date_is_approximate)
+    :param court_id: for logging purposes
+    """
+    # check that no date is in the future
+    future_date_count = 0
+    for case_date, case_name, date_is_approximate in dates_and_names:
+        if not isinstance(case_date, date):
+            raise InsanityException(
+                f"{court_id}: Member of case_dates list not a valid date object. "
+                f"Instead it is: {type(case_date)} with value: {case_date}"
+            )
+
+        # If a date is approximate, then it may be set in the future until
+        # half of the year has passed. Ignore this case
+        # dates should not be in the future. Tolerate a week
+        if not date_is_approximate and case_date > (
+            date.today() + timedelta(days=7)
+        ):
+            future_date_count += 1
+            error = f"{court_id}: {case_date} date is in the future. Case '{case_name}'"
+            logger.error(error)
+
+            # Interrupt data ingestion if more than 1 record has a bad date
+            if future_date_count > 1:
+                raise InsanityException(
+                    f"More than 1 case has a date in the future. Last case: {error}"
+                )
+
+
+def sanity_check_case_names(case_names: list[str]) -> None:
+    """Check that no name is an empty string
+
+    :param case_names: ordered list of case names
+    """
+    prior_case_name = None
+    for i, name in enumerate(case_names):
+        if not name.strip():
+            raise InsanityException(
+                "Item with index %s has an empty case name. The prior "
+                "item had case name of: %s" % (i, prior_case_name)
+            )
+        prior_case_name = name
+
+
+def clean_attribute(name: str, value: Any) -> Any:
+    """Performs standard cleaning by type; and some specific cleaning by name
+
+    :param name: attribute standard name
+    :param value: attribute value
+    :return: cleaned value
+    """
+    if name == "download_urls":
+        return value.strip()
+    elif name == "case_dates" and not isinstance(value, (datetime, date)):
+        value = convert_date_string(value)
+
+    if isinstance(value, str):
+        value = clean_string(value)
+    elif isinstance(value, datetime):
+        value = value.date()
+        # Sanitize case date, fix typo of current year if present
+        fixed_date = fix_future_year_typo(value)
+        if fixed_date != value:
+            logger.info("Date year typo detected. Converting %s to %s")
+            value = fixed_date
+
+    if name in ["case_names", "docket_numbers"]:
+        value = harmonize(value)
+
+    return value
 
 
 def previous_and_next(some_iterable):

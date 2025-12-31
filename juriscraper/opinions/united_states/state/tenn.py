@@ -9,11 +9,11 @@ from datetime import date, datetime
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(ClusterSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
@@ -87,19 +87,64 @@ class Site(OpinionSiteLinear):
                 judge = ""
                 per_curiam = True
 
-            self.cases.append(
-                {
-                    "date": date,
-                    "url": url,
-                    "name": name,
-                    "docket": section.xpath(docket_xpath)[0].strip(),
-                    "judge": judge,
-                    "lower_court_judge": lower_court_judge or "",
-                    "summary": summary or "",
-                    "per_curiam": per_curiam,
-                    "type": opinion_type,
-                }
-            )
+            case_dict = {
+                "date": date,
+                "url": url,
+                "name": name.strip(),
+                "docket": section.xpath(docket_xpath)[0].strip(),
+                "judge": judge,
+                "author": judge,
+                "lower_court_judge": lower_court_judge or "",
+                "summary": summary or "",
+                "per_curiam": per_curiam,
+                "type": opinion_type,
+            }
+
+            if self.cluster_opinions(case_dict):
+                logger.info("Clustered opinions into %s", self.cases[-1])
+                continue
+
+            self.cases.append(case_dict)
+
+    def cluster_opinions(self, case_dict: dict) -> bool:
+        """Try to cluster current opinion with previous opinions
+
+        :param case_dict: current case dict
+        :return: True if current case dict was clustered
+        """
+        # first parsed case
+        if not self.cases:
+            return False
+
+        candidate_cluster = self.cases[-1]
+
+        # all of these should be the same for this to be considered a cluster
+        if (
+            case_dict["name"] != candidate_cluster["name"]
+            or case_dict["docket"] != candidate_cluster["docket"]
+            or case_dict["date"] != candidate_cluster["date"]
+        ):
+            return False
+
+        opinion_fields = ["type", "url", "per_curiam", "author"]
+
+        # if the sub_opinions list does not exist yet, build it from the existing
+        # candidate_cluster
+        sub_opinions = candidate_cluster.get("sub_opinions")
+        if not sub_opinions:
+            candidate_cluster["sub_opinions"] = [
+                {key: candidate_cluster.pop(key) for key in opinion_fields}
+            ]
+
+        # add the new opinion to the cluster
+        candidate_cluster["sub_opinions"].append(
+            {key: case_dict.pop(key) for key in opinion_fields}
+        )
+
+        # add to the cluster
+        candidate_cluster["judge"] += f"; {case_dict['judge']}"
+
+        return True
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.

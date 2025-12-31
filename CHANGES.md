@@ -17,6 +17,21 @@ The following changes are not yet released, but are code complete:
 * Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.7.0 - 2025-12-31**
+
+Features:
+- Minor version bump: Add a new ClusterSite class that returns OpinionClusters with grouped opinions. See #883
+- Convert `tenn`, `tenncrimapp` and `tennctapp` to ClusterSite #1704
 - Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
 
 Changes:
@@ -28,7 +43,8 @@ Fixes:
 - fix `bia` and `olc` by handling "I am not a robot challenge" when downloading a document #1724
 - fix Delaware scrapers, site HTML had changed #1728
 
-## Current
+## Past
+
 
 **2.6.100 - 2025-12-22**
 
@@ -37,8 +53,6 @@ Fixes:
 - `tenn`: fix opinion type extraction #1704
 - `tenn`: fix docket number and judges extraction #1705
 - `delaware`: update XPath selectors for changed website structure #1713
-
-## Past
 
 **2.6.99 - 2025-12-10**
 
