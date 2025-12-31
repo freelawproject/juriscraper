@@ -25,7 +25,7 @@ Changes:
 
 Fixes:
 - `ca11_p` and `ca11_u` parse lower court docket number #1710
-
+- fix Delaware scrapers, site HTML had changed #1728
 
 ## Current
 
