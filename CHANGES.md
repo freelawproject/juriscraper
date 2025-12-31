@@ -20,6 +20,7 @@ Features:
 - Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
 
 Changes:
+- Improve `colo` scraper to automatically increase per_page parameter and add required field validation before appending cases #1656
 - BREAKING CHANGE: Output format of `SCOTUSEmail` changed
 
 Fixes:

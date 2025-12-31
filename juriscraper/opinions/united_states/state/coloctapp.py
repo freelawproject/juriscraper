@@ -16,6 +16,7 @@ from juriscraper.opinions.united_states.state import colo
 class Site(colo.Site):
     api_court_code = "14024_02"
     days_interval = 15
+    docket_number_regex = r"\d{2,2}CA\d{1,4}"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
