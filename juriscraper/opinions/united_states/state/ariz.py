@@ -152,7 +152,7 @@ class Site(OpinionSiteLinear):
             file_url = opinion.get("FileUrl", "")
             decision_type = opinion.get("DecisionType", "")
             html_summary = opinion.get("Summary", "")
-            summary = re.sub(r'<[^>]+>', '', html_summary).strip() # remove html tags from summary
+            summary = re.sub(r"<[^>]+>", "", html_summary).strip() # remove html tags from summary
             # Build full URL for the PDF
             url = urljoin(self.base_url, file_url)
 
