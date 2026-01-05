@@ -57,7 +57,11 @@ class Site(OpinionSiteLinear):
 
         if not self.is_backscrape and not self.test_mode_enabled():
             self.html = super()._download(request_dict)
-            self.url = self.html.xpath(self.link_xp)[-1]
+            links = self.html.xpath(self.link_xp)
+            if links:
+                self.url = links[-1]
+            else:
+                return self.html
         self.html = super()._download(request_dict)
 
         return self.html
@@ -67,6 +71,9 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
+        if not self.html.xpath(self.date_xp):
+            return
+
         date = self.html.xpath(self.date_xp)[0].strip()
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
         for link in links:

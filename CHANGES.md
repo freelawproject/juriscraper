@@ -23,7 +23,7 @@ Changes:
 -
 
 Fixes:
--
+- fix `tex` add error handling for empty order list to prevent IndexError #1738
 
 ## Current
 
