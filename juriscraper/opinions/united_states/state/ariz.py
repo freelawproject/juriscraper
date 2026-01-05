@@ -10,7 +10,6 @@ History:
 
 import re
 from datetime import date, datetime, timedelta
-
 from typing import Optional
 from urllib.parse import urljoin
 
@@ -57,8 +56,8 @@ class Site(OpinionSiteLinear):
         """
         params = [
             "searchPhrase=",
-            f"startDate={start_date.strftime("%Y-%m-%d") or ''}",
-            f"endDate={end_date.strftime("%Y-%m-%d") or ''}",
+            f"startDate={start_date.strftime('%Y-%m-%d') or ''}",
+            f"endDate={end_date.strftime('%Y-%m-%d') or ''}",
             f"court={self.court_param}",
             "decisionType=",
             "decisionInvolvementType=",
@@ -160,7 +159,9 @@ class Site(OpinionSiteLinear):
             file_url = opinion.get("FileUrl", "")
             decision_type = opinion.get("DecisionType", "")
             html_summary = opinion.get("Summary", "")
-            summary = re.sub(r"<[^>]+>", "", html_summary).strip() # remove html tags from summary
+            summary = re.sub(
+                r"<[^>]+>", "", html_summary
+            ).strip()  # remove html tags from summary
             # Build full URL for the PDF
             url = urljoin(self.base_url, file_url)
 
@@ -212,7 +213,6 @@ class Site(OpinionSiteLinear):
         self.url = self._update_page_in_url(self.url, page)
         self.html = self._download()
         self._process_html()
-
 
     def _update_page_in_url(self, url: str, page: int) -> str:
         """Update the page parameter in a URL.
