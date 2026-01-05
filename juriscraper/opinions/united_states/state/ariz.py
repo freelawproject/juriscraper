@@ -101,7 +101,7 @@ class Site(OpinionSiteLinear):
         self.tab_id = tab_match.group(1)
 
         # Extract moduleId from app-container element
-        module_match = re.search(r'app-container-(\d+)', html_content)
+        module_match = re.search(r"app-container-(\d+)", html_content)
         if not module_match:
             raise ValueError("Could not find moduleId in page")
         self.module_id = module_match.group(1)
