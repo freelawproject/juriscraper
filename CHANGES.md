@@ -17,7 +17,7 @@ The following changes are not yet released, but are code complete:
 * Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
 
 Features:
--
+- Add new scraper `tenn_workers_comp` for the Supreme Court of Tennessee, Workers Compensation Panel #1725
 
 Changes:
 -

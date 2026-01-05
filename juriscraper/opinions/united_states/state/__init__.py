@@ -164,6 +164,7 @@ __all__ = [
     "sc_u",
     "scctapp",
     "scctapp_u",
+    "tenn_workers_comp",
     "tenn",
     "tennctapp",
     "tenncrimapp",
