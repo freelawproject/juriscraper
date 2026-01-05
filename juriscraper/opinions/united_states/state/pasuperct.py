@@ -18,8 +18,33 @@ class Site(pa.Site):
     court = "Superior"
     first_opinion_date = datetime(1998, 2, 15)
     judge_key = "AuthorName"
+    post_type_key = "PostingTypeCode"
 
     def __init__(self, *args, **kwargs):
+        """
+        About the postTypes filter:
+        1 = opinion
+        2 = opinion per curiam
+        3 = Opinion in Support of Affirmance
+        4 = Opinion in Support of Reversal
+        5 = Memorandum
+        6 = Judgment Order
+        7 = Concurring Opinion
+        8 = Dissenting Opinion
+        9 = Concurring and Dissenting Opinion
+        10 = Concurring Statement
+        11 = Dissenting Statement
+        12 = Concurring and Dissenting Statement
+        13 = Concurring Memorandum
+        14 = Dissenting Memorandum
+        15 = Concurring and Dissenting Memorandum
+        16 = Concurring Memorandum Statement
+        17 = Dissenting Memorandum Statement
+        18 = Concurring and Dissenting Memorandum Statement
+        19 = Per Curiam Order
+        32 = Revised
+        33 = Complete
+        """
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.params["postTypes"] = (

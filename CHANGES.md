@@ -23,7 +23,7 @@ Changes:
 -
 
 Fixes:
--
+- pa, pasuperct and pacommwct now use ClusterSite #1694
 
 ## Current
 
