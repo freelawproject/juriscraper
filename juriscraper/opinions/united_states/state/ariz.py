@@ -22,8 +22,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     base_url = "https://www.azcourts.gov"
     court_param = "Supreme"
-    module_id = "12754"
-    tab_id = "9535"
     search_page_path = "/opinions/SearchOpinionsMemoDecs"
     first_opinion_date = datetime(1998, 1, 1)
     days_interval = 30
@@ -72,12 +70,13 @@ class Site(OpinionSiteLinear):
         ]
         return f"{self.base_url}/API/Azcourts/Opinions/GetOpinions?{'&'.join(params)}"
 
-    def _get_verification_token(self) -> str:
-        """Fetch the search page to get the verification token and cookies.
+    def _get_verification_token(self) -> None:
+        """Fetch the search page to get the verification token, module_id, and tab_id.
 
         The session cookies are automatically stored in self.request["session"].
+        Sets self.verification_token, self.module_id, and self.tab_id.
 
-        :return: The __RequestVerificationToken value
+        :return: None
         """
         search_url = urljoin(self.base_url, self.search_page_path)
         logger.info("Fetching verification token from %s", search_url)
@@ -86,18 +85,27 @@ class Site(OpinionSiteLinear):
         html_content = self.request["response"].text
 
         # Extract the __RequestVerificationToken from the hidden input
-        match = re.search(
+        token_match = re.search(
             r'name="__RequestVerificationToken"[^>]*value="([^"]+)"',
             html_content,
         )
-        if not match:
+        if not token_match:
             raise ValueError(
                 "Could not find __RequestVerificationToken in page"
             )
+        self.verification_token = token_match.group(1)
 
-        token = match.group(1)
-        logger.info("Retrieved verification token")
-        return token
+        # Extract tabId from g_dnnsfState JavaScript variable
+        tab_match = re.search(r'"tabId":(\d+)', html_content)
+        if not tab_match:
+            raise ValueError("Could not find tabId in page")
+        self.tab_id = tab_match.group(1)
+
+        # Extract moduleId from app-container element
+        module_match = re.search(r'app-container-(\d+)', html_content)
+        if not module_match:
+            raise ValueError("Could not find moduleId in page")
+        self.module_id = module_match.group(1)
 
     def _download(self, request_dict=None):
         """Override download to add authentication headers.
@@ -114,7 +122,7 @@ class Site(OpinionSiteLinear):
 
         # Get the verification token (also sets up session cookies)
         if not self.verification_token:
-            self.verification_token = self._get_verification_token()
+            self._get_verification_token()
 
         # Set up headers for the API request
         self.request["headers"].update(
