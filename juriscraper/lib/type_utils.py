@@ -3,6 +3,7 @@ from enum import Enum
 
 # OpinionType is used to represent the type of opinion in a case. These values are the ones used on CourtListener.
 class OpinionType(Enum):
+    COMBINED = "010combined"
     UNANIMOUS = "015unamimous"
     MAJORITY = "020lead"
     PLURALITY = "025plurality"

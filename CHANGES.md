@@ -23,7 +23,7 @@ Changes:
 - Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
 
 Fixes:
--
+- pa, pasuperct and pacommwct now use ClusterSite #1694
 
 ## Current
 
