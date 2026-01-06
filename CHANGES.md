@@ -20,7 +20,7 @@ Features:
 -
 
 Changes:
--
+- Exclude "Com." from case name shorts #1737
 
 Fixes:
 - pa, pasuperct and pacommwct now use ClusterSite #1694
