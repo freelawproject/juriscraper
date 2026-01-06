@@ -24,6 +24,7 @@ Changes:
 
 Fixes:
 - pa, pasuperct and pacommwct now use ClusterSite #1694
+- refactor `wash`; make `washctapp` scrapers inherit from it #1745
 
 ## Current
 
