@@ -65,31 +65,25 @@
   },
   {
     "case_dates": "2025-05-27",
-    "download_urls": "/sites/default/files/OpinionsPDFVersion/Separate%20Opinion%20-%20Hixson.pdf",
     "case_names": "State of Tennessee v. Michael Flamini, Jr.",
     "docket_numbers": "E2023-01292-CCA-R3-CD",
-    "judges": "Judge Kyle A. Hixson",
-    "authors": "Judge Kyle A. Hixson",
+    "judges": "Judge Kyle A. Hixson; Judge Robert H. Montgomery",
     "lower_court_judges": "Judge Steven W. Sword",
     "summaries": "The lead opinion considers the Defendant to have preserved for appeal his constitutional issue concerning the admission of the civil forfeiture order, although it ultimately subjects the issue to a relevancy analysis. I respectfully disagree that the constitutional claim on appeal was preserved in the trial court. The Defendant's non-contemporaneous reference to his right to remain silent arguably preserved a Fifth Amendment self-incrimination claim. The problem for the Defendant, however, is that he raises a Fourteenth Amendment due process claim on appeal that was never presented to or ruled upon by the trial court. As such, the issue concerning the admission of the civil forfeiture order is waived, and the Defendant is not otherwise entitled to relief. For this reason, I concur only in the result of the lead opinion as to this issue. I fully join the lead opinion as to the other issues raised by the Defendant.",
-    "per_curiam": false,
-    "types": "020lead",
-    "case_name_shorts": "",
-    "date_filed_is_approximate": false,
-    "blocked_statuses": false,
-    "precedential_statuses": "Unknown"
-  },
-  {
-    "case_dates": "2025-05-27",
-    "download_urls": "/sites/default/files/OpinionsPDFVersion/Majority%20Opinion_2.pdf",
-    "case_names": "State of Tennessee v. Michael Flamini, Jr.",
-    "docket_numbers": "E2023-01292-CCA-R3-CD",
-    "judges": "Judge Robert H. Montgomery",
-    "authors": "Judge Robert H. Montgomery",
-    "lower_court_judges": "Judge Steven W. Sword",
-    "summaries": "The Defendant, Michael Flamini, Jr., was convicted by a Knox County Criminal Courtjury of possession with the intent to manufacture, deliver, or sell one-half gram or moreof methamphetamine, a Class B felony; and possession with the intent to manufacture,deliver, or sell less than fifteen grams of fentanyl, a Class C felony. See T.C.A. \u00a7\u00a7 39-17-434 (2018) (possession with intent to manufacture, deliver, or sell methamphetamine);39-17-417 (Supp. 2020) (subsequently amended) (possession with the intent tomanufacture, deliver, or sell fentanyl). The trial court sentenced the Defendant as aRange II offender and imposed concurrent sentences of fifteen years and ten years,respectively. On appeal, the Defendant contends that the trial court (1) erred by denyinghis motion to suppress, (2) erred by denying his motion for a mistrial, and (3) violated hisright to remain silent by admitting evidence related to a civil asset forfeiture proceeding.We conclude that the trial court erred by admitting evidence of an asset forfeiture order.However, we, likewise, conclude that the error was harmless and affirm the judgments ofthe trial court.",
-    "per_curiam": false,
-    "types": "020lead",
+    "sub_opinions": [
+      {
+        "types": "030concurrence",
+        "download_urls": "/sites/default/files/OpinionsPDFVersion/Separate%20Opinion%20-%20Hixson.pdf",
+        "per_curiam": false,
+        "authors": "Judge Kyle A. Hixson"
+      },
+      {
+        "types": "030concurrence",
+        "download_urls": "/sites/default/files/OpinionsPDFVersion/Majority%20Opinion_2.pdf",
+        "per_curiam": false,
+        "authors": "Judge Robert H. Montgomery"
+      }
+    ],
     "case_name_shorts": "",
     "date_filed_is_approximate": false,
     "blocked_statuses": false,

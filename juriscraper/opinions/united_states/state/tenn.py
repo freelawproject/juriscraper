@@ -49,7 +49,6 @@ class Site(ClusterSite):
             url = section.xpath(".//a")[0].get("href")
 
             name_text = section.xpath(".//a")[0].text_content()
-            name, opinion_type = self.extract_type(name_text)
 
             # the docket will be the first no empty floating text
             docket_xpath = ".//p/text()[normalize-space()]"
@@ -77,6 +76,8 @@ class Site(ClusterSite):
                 summary = summary_container[-2].xpath("string(.)")
             # text inside may be separated by <br> tags
             summary = re.sub(r"\s+", " ", summary)
+
+            name, opinion_type = self.extract_type(name_text, summary)
 
             # prevent picking up one of the judge containers
             if "Judge:" in summary:
@@ -116,35 +117,37 @@ class Site(ClusterSite):
         if not self.cases:
             return False
 
-        candidate_cluster = self.cases[-1]
-
-        # all of these should be the same for this to be considered a cluster
-        if (
-            case_dict["name"] != candidate_cluster["name"]
-            or case_dict["docket"] != candidate_cluster["docket"]
-            or case_dict["date"] != candidate_cluster["date"]
-        ):
-            return False
-
         opinion_fields = ["type", "url", "per_curiam", "author"]
 
-        # if the sub_opinions list does not exist yet, build it from the existing
-        # candidate_cluster
-        sub_opinions = candidate_cluster.get("sub_opinions")
-        if not sub_opinions:
-            candidate_cluster["sub_opinions"] = [
-                {key: candidate_cluster.pop(key) for key in opinion_fields}
-            ]
+        # Check all existing cases for a matching cluster
+        for candidate_cluster in reversed(self.cases):
+            # all of these should be the same for this to be considered a cluster
+            if (
+                case_dict["name"] != candidate_cluster["name"]
+                or case_dict["docket"] != candidate_cluster["docket"]
+                or case_dict["date"] != candidate_cluster["date"]
+            ):
+                continue
 
-        # add the new opinion to the cluster
-        candidate_cluster["sub_opinions"].append(
-            {key: case_dict.pop(key) for key in opinion_fields}
-        )
+            # if the sub_opinions list does not exist yet, build it from the existing
+            # candidate_cluster
+            sub_opinions = candidate_cluster.get("sub_opinions")
+            if not sub_opinions:
+                candidate_cluster["sub_opinions"] = [
+                    {key: candidate_cluster.pop(key) for key in opinion_fields}
+                ]
 
-        # add to the cluster
-        candidate_cluster["judge"] += f"; {case_dict['judge']}"
+            # add the new opinion to the cluster
+            candidate_cluster["sub_opinions"].append(
+                {key: case_dict.pop(key) for key in opinion_fields}
+            )
 
-        return True
+            # add to the cluster
+            candidate_cluster["judge"] += f"; {case_dict['judge']}"
+
+            return True
+
+        return False
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.
@@ -190,7 +193,7 @@ class Site(ClusterSite):
 
         return ""
 
-    def extract_type(self, raw_name: str) -> tuple[str, str]:
+    def extract_type(self, raw_name: str, summary: str) -> tuple[str, str]:
         """
         Find the opinion type if it exists and clean it out fo the name
 
@@ -202,6 +205,7 @@ class Site(ClusterSite):
             "State of Tennessee v. Tabitha Gentry (AKA ABKA RE BAY)"
 
         :param raw_name: full name including opinion type
+        :param summary: summary of the opinion
         :return: (Standardized type string from types_mapping, name cleaned of the type)
         """
         # everything between a dash or parenthesis and the end of the string
@@ -211,9 +215,9 @@ class Site(ClusterSite):
             type_string = match.group(0)
         lower_type = type_string.lower()
 
-        concur = "concur" in lower_type
-        dissent = "dissent" in lower_type
-        not_join = "not join" in lower_type
+        concur = "concur" in lower_type or re.search(r"\bconcur", summary)
+        dissent = "dissent" in lower_type or re.search(r"\bdissent", summary)
+        not_join = "not join" in lower_type or re.search(r"\bnot join", summary)
 
         op_type = ""
         if (

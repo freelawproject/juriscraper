@@ -8,6 +8,7 @@ from requests.exceptions import HTTPError
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.type_utils import OpinionType
 
 from .date_utils import fix_future_year_typo
 from .string_utils import (
@@ -65,6 +66,45 @@ def sanity_check_case_names(case_names: list[str]) -> None:
                 "item had case name of: %s" % (i, prior_case_name)
             )
         prior_case_name = name
+
+
+def sanity_check_opinion_types(sub_opinions: list[dict]) -> None:
+    """Check opinion type assignment rules within a cluster
+
+    :param sub_opinions: list of sub_opinion dictionaries
+    :raises InsanityException: if any rule is violated
+    """
+    if not sub_opinions:
+        return
+
+    # Rule 1: At most 1 MAJORITY opinion per cluster
+    majority_count = sum(
+        1
+        for op in sub_opinions
+        if op.get("types") == OpinionType.MAJORITY.value
+    )
+    if majority_count > 1:
+        raise InsanityException(
+            f"Cluster has {majority_count} MAJORITY opinions, expected at most 1 {sub_opinions}"
+        )
+
+    # Rule 2: COMBINED type only valid in single-opinion clusters
+    has_combined = any(
+        op.get("types") == OpinionType.COMBINED.value for op in sub_opinions
+    )
+    if has_combined and len(sub_opinions) > 1:
+        raise InsanityException(
+            f"COMBINED type used in cluster with {len(sub_opinions)} sub_opinions, "
+            "expected only 1"
+        )
+
+    # Rule 3: UNANIMOUS requires per_curiam=True
+    for op in sub_opinions:
+        if op.get("types") == OpinionType.UNANIMOUS.value:
+            if not op.get("per_curiam"):
+                raise InsanityException(
+                    "UNANIMOUS opinion must have per_curiam=True"
+                )
 
 
 def clean_attribute(name: str, value: Any) -> Any:
