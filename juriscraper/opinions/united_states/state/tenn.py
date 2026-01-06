@@ -217,7 +217,7 @@ class Site(ClusterSite):
 
         concur = "concur" in lower_type or re.search(r"\bconcur", summary)
         dissent = "dissent" in lower_type or re.search(r"\bdissent", summary)
-        not_join = "not join" in lower_type or re.search(r"\bnot join", summary)
+        not_join = "not join" in lower_type
 
         op_type = ""
         if (
