@@ -56,14 +56,13 @@ class Site(ClusterSite):
             )[0]
             url = section.xpath(".//a")[0].get("href")
 
-            name_text = section.xpath(".//a")[0].text_content()
+            summary = self.get_summary(section)
+            # prevent picking up one of the judge containers
+            if "Judge:" in summary:
+                summary = ""
 
-            judge = (
-                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
-                .strip()
-                .split(":", 1)[1]
-                .strip()
-            )
+            name_text = section.xpath(".//a")[0].text_content()
+            name, opinion_type = self.extract_type(name_text, summary)
 
             # may be empty
             lower_court_judge = section.xpath(
@@ -74,11 +73,12 @@ class Site(ClusterSite):
                     lower_court_judge[0].split(":", 1)[1].strip()
                 )
 
-            summary = self.get_summary(section)
-            # prevent picking up one of the judge containers
-            if "Judge:" in summary:
-                summary = ""
-
+            judge = (
+                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
+                .strip()
+                .split(":", 1)[1]
+                .strip()
+            )
             per_curiam = False
             if "curiam" in judge.lower():
                 judge = ""
