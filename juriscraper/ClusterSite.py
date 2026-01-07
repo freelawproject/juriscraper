@@ -4,6 +4,7 @@ from juriscraper.lib.utils import (
     clean_attribute,
     sanity_check_case_names,
     sanity_check_dates,
+    sanity_check_opinion_types,
 )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -216,6 +217,11 @@ class ClusterSite(OpinionSiteLinear):
 
         sanity_check_case_names(case_names)
         sanity_check_dates(dates_and_names, self.court_id)
+
+        # Check opinion type rules for clusters with sub_opinions
+        for case in self.cases:
+            if case.get("sub_opinions"):
+                sanity_check_opinion_types(case["sub_opinions"])
 
         logger.info(
             f"{self.court_id}: Successfully found {len(self.cases)} items."
