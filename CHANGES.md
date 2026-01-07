@@ -17,13 +17,15 @@ The following changes are not yet released, but are code complete:
 * Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
 
 Features:
--
+- Add opinion type sanity check #1736
 
 Changes:
 -
 
 Fixes:
 - `conn` and `connappct` now use ClusterSite #1733
+- fix `tenn` miss adding opinion types #1749
+
 
 ## Current
 

@@ -56,15 +56,13 @@ class Site(ClusterSite):
             )[0]
             url = section.xpath(".//a")[0].get("href")
 
-            name_text = section.xpath(".//a")[0].text_content()
-            name, opinion_type = self.extract_type(name_text)
+            summary = self.get_summary(section)
+            # prevent picking up one of the judge containers
+            if "Judge:" in summary:
+                summary = ""
 
-            judge = (
-                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
-                .strip()
-                .split(":", 1)[1]
-                .strip()
-            )
+            name_text = section.xpath(".//a")[0].text_content()
+            name, opinion_type = self.extract_type(name_text, summary)
 
             # may be empty
             lower_court_judge = section.xpath(
@@ -75,11 +73,12 @@ class Site(ClusterSite):
                     lower_court_judge[0].split(":", 1)[1].strip()
                 )
 
-            summary = self.get_summary(section)
-            # prevent picking up one of the judge containers
-            if "Judge:" in summary:
-                summary = ""
-
+            judge = (
+                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
+                .strip()
+                .split(":", 1)[1]
+                .strip()
+            )
             per_curiam = False
             if "curiam" in judge.lower():
                 judge = ""
@@ -98,10 +97,8 @@ class Site(ClusterSite):
                 "type": opinion_type,
             }
 
-            # only attempt to merge with the last seen case
-            if self.cases and self.cluster_opinions(
-                case_dict, [self.cases[-1]]
-            ):
+            # attempt to merge with previous cases
+            if self.cluster_opinions(case_dict, self.cases):
                 # add to the cluster
                 self.cases[-1]["judge"] += f"; {case_dict['judge']}"
                 logger.info("Clustered opinions into %s", self.cases[-1])
@@ -153,7 +150,7 @@ class Site(ClusterSite):
 
         return ""
 
-    def extract_type(self, raw_name: str) -> tuple[str, str]:
+    def extract_type(self, raw_name: str, summary: str) -> tuple[str, str]:
         """
         Find the opinion type if it exists and clean it out fo the name
 
@@ -165,6 +162,7 @@ class Site(ClusterSite):
             "State of Tennessee v. Tabitha Gentry (AKA ABKA RE BAY)"
 
         :param raw_name: full name including opinion type
+        :param summary: summary of the opinion
         :return: (Standardized type string from types_mapping, name cleaned of the type)
         """
         # everything between a dash or parenthesis and the end of the string
@@ -174,8 +172,14 @@ class Site(ClusterSite):
             type_string = match.group(0)
         lower_type = type_string.lower()
 
-        concur = "concur" in lower_type
-        dissent = "dissent" in lower_type
+        # Use specific patterns to avoid false positives like "concurrent"
+        # Match "concurring" or "concurrence" but not "concurrent"
+        concur = "concur" in lower_type or re.search(
+            r"\bconcur(?:ring|rence|s)?\b", summary, re.IGNORECASE
+        )
+        dissent = "dissent" in lower_type or re.search(
+            r"\bdissent(?:ing|s)?\b", summary, re.IGNORECASE
+        )
         not_join = "not join" in lower_type
 
         op_type = ""
