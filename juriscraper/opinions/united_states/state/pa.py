@@ -45,7 +45,7 @@ class Site(ClusterSite):
         self.status = "Published"
 
         now = datetime.now()
-        start = now - timedelta(days=100)
+        start = now - timedelta(days=1)
         self.params = {
             "startDate": start.strftime(self.api_dt_format),
             "endDate": now.strftime(self.api_dt_format),
