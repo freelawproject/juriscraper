@@ -8,24 +8,32 @@ import re
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
+
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
 
 
 class Site(ClusterSite):
+    first_opinion_date = datetime(1993, 1, 22)
+    days_interval = 7
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.status = "Unknown"
         self.should_have_results = True
-        self.first_opinion_date = datetime(1993, 1, 22)
-        self.days_interval = 7
         self.make_backscrape_iterable(kwargs)
+
         # we got this UA whitelisted #1689
         self.request["headers"] = {"User-Agent": "Juriscraper"}
         self.needs_special_headers = True
+
+        self.section_selector = "views-field-field-opinions-case-number"
+        # the docket will be the first no empty floating text in the "section"
+        self.docket_xpath = ".//p/text()[normalize-space()]"
 
     def _process_html(self):
         """
@@ -44,14 +52,12 @@ class Site(ClusterSite):
                 .strip()
             )
             section = row.xpath(
-                ".//td[contains(@class, 'views-field-field-opinions-case-number')]"
+                f".//td[contains(@class, '{self.section_selector}')]"
             )[0]
             url = section.xpath(".//a")[0].get("href")
 
             name_text = section.xpath(".//a")[0].text_content()
 
-            # the docket will be the first no empty floating text
-            docket_xpath = ".//p/text()[normalize-space()]"
             judge = (
                 section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
                 .strip()
@@ -68,17 +74,7 @@ class Site(ClusterSite):
                     lower_court_judge[0].split(":", 1)[1].strip()
                 )
 
-            # the summary will be the last non empty p or p/span
-            summary_container = section.xpath(".//p")
-            if not (
-                summary := summary_container[-1].xpath("string(.)").strip()
-            ):
-                summary = summary_container[-2].xpath("string(.)")
-            # text inside may be separated by <br> tags
-            summary = re.sub(r"\s+", " ", summary)
-
-            name, opinion_type = self.extract_type(name_text, summary)
-
+            summary = self.get_summary(section)
             # prevent picking up one of the judge containers
             if "Judge:" in summary:
                 summary = ""
@@ -92,7 +88,7 @@ class Site(ClusterSite):
                 "date": date,
                 "url": url,
                 "name": name.strip(),
-                "docket": section.xpath(docket_xpath)[0].strip(),
+                "docket": section.xpath(self.docket_xpath)[0].strip(),
                 "judge": judge,
                 "author": judge,
                 "lower_court_judge": lower_court_judge or "",
@@ -263,3 +259,20 @@ class Site(ClusterSite):
         )
         self.html = self._download()
         self._process_html()
+
+    def get_summary(self, section: HtmlElement) -> str:
+        """Get the summary
+
+        :param section: the html element containing the case summary
+        :return the parsed summary
+        """
+        # the summary will be the last non empty p or p/span
+        summary_container = section.xpath(".//p")
+
+        if not (summary := summary_container[-1].xpath("string(.)").strip()):
+            summary = summary_container[-2].xpath("string(.)")
+
+        # text inside may be separated by <br> tags
+        summary = re.sub(r"\s+", " ", summary)
+
+        return summary
