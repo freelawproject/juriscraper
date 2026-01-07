@@ -23,10 +23,24 @@ Changes:
 -
 
 Fixes:
-- pa, pasuperct and pacommwct now use ClusterSite #1694
 - `conn` and `connappct` now use ClusterSite #1733
 
 ## Current
+
+**2.7.1 - 2025-01-07**
+
+Features:
+- Add new scraper `tenn_workers_comp` for the Supreme Court of Tennessee, Workers Compensation Panel #1725
+- Adds helper to normalize attachment numbers for ACMS uploads #1744
+
+
+Fixes:
+- pa, pasuperct and pacommwct now use ClusterSite #1694
+- refactor `wash`; make `washctapp` scrapers inherit from it #1745
+
+
+## Past
+
 
 **2.7.0 - 2025-12-31**
 
@@ -41,9 +55,9 @@ Changes:
 
 Fixes:
 - `ca11_p` and `ca11_u` parse lower court docket number #1710
+- fix `bia` and `olc` by handling "I am not a robot challenge" when downloading a document #1724
 - fix Delaware scrapers, site HTML had changed #1728
 
-## Past
 
 
 **2.6.100 - 2025-12-22**
