@@ -100,51 +100,16 @@ class Site(ClusterSite):
                 "type": opinion_type,
             }
 
-            if self.cluster_opinions(case_dict):
+            # only attempt to merge with the last seen case
+            if self.cases and self.cluster_opinions(
+                case_dict, [self.cases[-1]]
+            ):
+                # add to the cluster
+                self.cases[-1]["judge"] += f"; {case_dict['judge']}"
                 logger.info("Clustered opinions into %s", self.cases[-1])
                 continue
 
             self.cases.append(case_dict)
-
-    def cluster_opinions(self, case_dict: dict) -> bool:
-        """Try to cluster current opinion with previous opinions
-
-        :param case_dict: current case dict
-        :return: True if current case dict was clustered
-        """
-        # first parsed case
-        if not self.cases:
-            return False
-
-        candidate_cluster = self.cases[-1]
-
-        # all of these should be the same for this to be considered a cluster
-        if (
-            case_dict["name"] != candidate_cluster["name"]
-            or case_dict["docket"] != candidate_cluster["docket"]
-            or case_dict["date"] != candidate_cluster["date"]
-        ):
-            return False
-
-        opinion_fields = ["type", "url", "per_curiam", "author"]
-
-        # if the sub_opinions list does not exist yet, build it from the existing
-        # candidate_cluster
-        sub_opinions = candidate_cluster.get("sub_opinions")
-        if not sub_opinions:
-            candidate_cluster["sub_opinions"] = [
-                {key: candidate_cluster.pop(key) for key in opinion_fields}
-            ]
-
-        # add the new opinion to the cluster
-        candidate_cluster["sub_opinions"].append(
-            {key: case_dict.pop(key) for key in opinion_fields}
-        )
-
-        # add to the cluster
-        candidate_cluster["judge"] += f"; {case_dict['judge']}"
-
-        return True
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.

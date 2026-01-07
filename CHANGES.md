@@ -24,6 +24,7 @@ Changes:
 
 Fixes:
 - pa, pasuperct and pacommwct now use ClusterSite #1694
+- `conn` and `connappct` now use ClusterSite #1733
 
 ## Current
 
