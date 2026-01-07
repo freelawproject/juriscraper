@@ -100,8 +100,7 @@ def sanity_check_opinion_types(sub_opinions: list[dict]) -> None:
 
     # Rule 3: UNANIMOUS requires per_curiam=True
     for op in sub_opinions:
-        if op.get("types") == OpinionType.UNANIMOUS.value:
-            if not op.get("per_curiam"):
+        if op.get("types") == OpinionType.UNANIMOUS.value and not op.get("per_curiam"):
                 raise InsanityException(
                     "UNANIMOUS opinion must have per_curiam=True"
                 )
