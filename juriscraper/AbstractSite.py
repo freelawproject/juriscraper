@@ -427,7 +427,7 @@ class AbstractSite:
                     fingerprint = [f"{court_str}-unexpected-content-type"]
                     msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
                     raise UnexpectedContentTypeError(
-                        msg, fingerprint=fingerprint
+                        msg, fingerprint=fingerprint, data={"response": r}
                     )
 
             if doctor_is_available:
