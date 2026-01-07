@@ -16,8 +16,6 @@ MICROSERVICE_URLS = {
 logger = make_default_logger()
 
 
-
-
 def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
     """Test for meta data redirections
 
@@ -30,7 +28,7 @@ def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
         # Transient network issues - don't send to Sentry
         logger.warning(
             "Timeout/connection error getting extension from microservice: %s",
-            e
+            e,
         )
         extension = ""
     except Exception:

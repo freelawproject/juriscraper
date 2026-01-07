@@ -20,7 +20,7 @@ Features:
 - Adds helper to normalize attachment numbers for ACMS uploads #1744
 
 Changes:
-- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644     
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644  
 
 Fixes:
 - pa, pasuperct and pacommwct now use ClusterSite #1694

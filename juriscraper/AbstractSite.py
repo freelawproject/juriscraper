@@ -6,7 +6,8 @@ from typing import Union
 
 import certifi
 import requests
-from requests import Timeout, ConnectionError as RequestsConnectionError
+from requests import ConnectionError as RequestsConnectionError
+from requests import Timeout
 
 from juriscraper.lib.date_utils import (
     json_date_handler,
@@ -40,6 +41,7 @@ from juriscraper.lib.utils import (
 )
 
 logger = make_default_logger()
+
 
 class AbstractSite:
     """Contains generic methods for scraping data. Should be extended by all
@@ -472,7 +474,7 @@ class AbstractSite:
                 **self.request["parameters"],
             )
         except (Timeout, RequestsConnectionError) as e:
-             # Transient network issues - log as warning, not error
+            # Transient network issues - log as warning, not error
             logger.warning(
                 "Timeout/connection error during GET request to %s: %s",
                 url,
@@ -495,7 +497,7 @@ class AbstractSite:
                 **self.request["parameters"],
             )
         except (Timeout, RequestsConnectionError) as e:
-             # Transient network issues - log as warning, not error
+            # Transient network issues - log as warning, not error
             logger.warning(
                 "Timeout/connection error during POST request to %s: %s",
                 url,
