@@ -6,6 +6,7 @@ from typing import Union
 
 import certifi
 import requests
+from requests import Timeout, ConnectionError as RequestsConnectionError
 
 from juriscraper.lib.date_utils import (
     json_date_handler,
@@ -39,7 +40,6 @@ from juriscraper.lib.utils import (
 )
 
 logger = make_default_logger()
-
 
 class AbstractSite:
     """Contains generic methods for scraping data. Should be extended by all
@@ -463,27 +463,45 @@ class AbstractSite:
         values
         """
         self.request["url"] = url
-        self.request["response"] = self.request["session"].get(
-            url,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-            timeout=60,
-            **self.request["parameters"],
-        )
+        try:
+            self.request["response"] = self.request["session"].get(
+                url,
+                headers=self.request["headers"],
+                verify=self.request["verify"],
+                timeout=60,
+                **self.request["parameters"],
+            )
+        except (Timeout, RequestsConnectionError) as e:
+             # Transient network issues - log as warning, not error
+            logger.warning(
+                "Timeout/connection error during GET request to %s: %s",
+                url,
+                e,
+            )
+            raise
         if self.save_response:
             self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
-        self.request["response"] = self.request["session"].post(
-            url,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-            data=self.parameters,
-            timeout=60,
-            **self.request["parameters"],
-        )
+        try:
+            self.request["response"] = self.request["session"].post(
+                url,
+                headers=self.request["headers"],
+                verify=self.request["verify"],
+                data=self.parameters,
+                timeout=60,
+                **self.request["parameters"],
+            )
+        except (Timeout, RequestsConnectionError) as e:
+             # Transient network issues - log as warning, not error
+            logger.warning(
+                "Timeout/connection error during POST request to %s: %s",
+                url,
+                e,
+            )
+            raise
         if self.save_response:
             self.save_response(self)
 
