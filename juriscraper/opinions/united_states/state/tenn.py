@@ -215,8 +215,14 @@ class Site(ClusterSite):
             type_string = match.group(0)
         lower_type = type_string.lower()
 
-        concur = "concur" in lower_type or re.search(r"\bconcur", summary)
-        dissent = "dissent" in lower_type or re.search(r"\bdissent", summary)
+        # Use specific patterns to avoid false positives like "concurrent"
+        # Match "concurring" or "concurrence" but not "concurrent"
+        concur = "concur" in lower_type or re.search(
+            r"\bconcur(?:ring|rence|s)?\b", summary, re.IGNORECASE
+        )
+        dissent = "dissent" in lower_type or re.search(
+            r"\bdissent(?:ing|s)?\b", summary, re.IGNORECASE
+        )
         not_join = "not join" in lower_type
 
         op_type = ""
