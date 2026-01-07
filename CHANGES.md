@@ -18,12 +18,14 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Add new scraper `tenn_workers_comp` for the Supreme Court of Tennessee, Workers Compensation Panel #1725
+- Adds helper to normalize attachment numbers for ACMS uploads #1744
 
 Changes:
 -
 
 Fixes:
 - pa, pasuperct and pacommwct now use ClusterSite #1694
+- refactor `wash`; make `washctapp` scrapers inherit from it #1745
 
 ## Current
 
@@ -40,6 +42,7 @@ Changes:
 
 Fixes:
 - `ca11_p` and `ca11_u` parse lower court docket number #1710
+- fix `bia` and `olc` by handling "I am not a robot challenge" when downloading a document #1724
 - fix Delaware scrapers, site HTML had changed #1728
 
 ## Past
