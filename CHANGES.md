@@ -24,6 +24,7 @@ Changes:
 
 Fixes:
 - fix `tenn` miss adding opinion types #1749
+- fix `michctapp` captcha block by handling errors gracefully and adding extract_from_text #1677
 
 
 ## Current

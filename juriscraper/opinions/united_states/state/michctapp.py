@@ -13,12 +13,10 @@ from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.state import mich
-from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(mich.Site):
     court = "Court Of Appeals"
-    extract_from_text = OpinionSite.extract_from_text
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -39,7 +37,6 @@ class Site(mich.Site):
             return "Placeholder name", "Placeholder docket"
 
         logger.info("Getting case name from secondary request")
-        docket_number = ""
         if match := re.search(
             r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
         ):
@@ -54,6 +51,14 @@ class Site(mich.Site):
         url = f"https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/{docket_number}"
         self._request_url_get(url)
         response = self.request["response"].json()
+
+        if "error" in response:
+            logger.warning(
+                "michctapp: secondary request returned error: %s",
+                response["error"],
+            )
+            return "Placeholder name", docket_number
+
         return self.cleanup_case_name(response["title"]), docket_number
 
     def get_disposition(self, item: dict) -> str:
@@ -72,3 +77,33 @@ class Site(mich.Site):
             .replace("L/Ct", "Lower Court")
             .strip()
         )
+
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract case name and docket number from opinion text
+
+        :param scraped_text: Text content of the opinion
+        :return: Dictionary with extracted case name and docket number
+        """
+        case_pattern = re.compile(
+            r"COURT OF APPEALS\s+"
+            r"(?P<plaintiff>[A-Z][A-Z\s]+?),.*?"
+            r"Plaintiff.*?"
+            r"v\s+.*?No\.\s*(?P<docket>\d{6}).*?"
+            r"(?P<defendant>[A-Z][A-Z\s]+?),.*?"
+            r"Defendant",
+            re.DOTALL,
+        )
+        if match := case_pattern.search(scraped_text[:2000]):
+            plaintiff = self.cleanup_case_name(match.group("plaintiff"))
+            defendant = self.cleanup_case_name(match.group("defendant"))
+            docket_number = match.group("docket")
+            case_name = f"{plaintiff} v. {defendant}"
+            return {
+                "OpinionCluster": {"case_name": case_name},
+                "Docket": {"case_name": case_name, "docket_number": docket_number},
+            }
+
+        logger.warning(
+            "michctapp: extract_from_text failed to match case pattern"
+        )
+        return {}
