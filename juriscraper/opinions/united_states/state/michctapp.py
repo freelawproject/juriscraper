@@ -100,7 +100,10 @@ class Site(mich.Site):
             case_name = f"{plaintiff} v. {defendant}"
             return {
                 "OpinionCluster": {"case_name": case_name},
-                "Docket": {"case_name": case_name, "docket_number": docket_number},
+                "Docket": {
+                    "case_name": case_name,
+                    "docket_number": docket_number,
+                },
             }
 
         logger.warning(
