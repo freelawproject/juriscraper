@@ -109,7 +109,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         transfer_from = None
         transfer_to = None
 
-        if transfer_from_court is not None and len(transfer_from_court) > 0:
+        if transfer_from_court:
             transfer_from = TexasAppealsCourtTransfer(
                 court_id=coa_name_to_court_id(transfer_from_court).value,
                 date=datetime.strptime(transfer_from_date, "%m/%d/%Y")
@@ -117,7 +117,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
                 else None,
                 origin_docket=docket_number,
             )
-        if transfer_to_court is not None and len(transfer_to_court) > 0:
+        if transfer_to_court:
             transfer_to = TexasAppealsCourtTransfer(
                 court_id=coa_name_to_court_id(transfer_to_court).value,
                 date=datetime.strptime(transfer_to_date, "%m/%d/%Y")
