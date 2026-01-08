@@ -562,7 +562,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
                 indices for indices in party_indices if indices[0] >= 0
             )
         except StopIteration:
-            return self.case_name_full
+            return name_part
         return self.case_name_full[start:end]
 
     @cached_property

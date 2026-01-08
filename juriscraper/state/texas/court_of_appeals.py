@@ -78,7 +78,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
             trial_court=common_data["trial_court"],
             case_name=common_data["case_name"],
             case_name_full=common_data["case_name_full"],
-            publication_service=self.case_data.get("pub service"),
+            publication_service=self.case_data["pub service"],
             transfer_to=transfer_to,
             transfer_from=transfer_from,
         )
@@ -100,11 +100,11 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         transfer information is available.
         """
 
-        transfer_from_court = self.case_data.get("transfer from")
-        transfer_from_date = self.case_data.get("transfer in")
-        docket_number = self.case_data.get("transfer case")
-        transfer_to_court = self.case_data.get("transfer to")
-        transfer_to_date = self.case_data.get("transfer out")
+        transfer_from_court = self.case_data["transfer from"]
+        transfer_from_date = self.case_data["transfer in"]
+        docket_number = self.case_data["transfer case"]
+        transfer_to_court = self.case_data["transfer to"]
+        transfer_to_date = self.case_data["transfer out"]
 
         transfer_from = None
         transfer_to = None
