@@ -1,3 +1,5 @@
+from typing import Optional
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.utils import (
@@ -226,3 +228,61 @@ class ClusterSite(OpinionSiteLinear):
         logger.info(
             f"{self.court_id}: Successfully found {len(self.cases)} items."
         )
+
+    def cluster_opinions(
+        self, case_dict: dict, possible_clusters: list[dict]
+    ) -> Optional[dict]:
+        """Try to cluster current opinion with previous opinions.
+        To cluster, opinions should have the same
+        - date
+        - case name
+        - docket number
+
+        The caller should take care to propagate any metadata from the
+        `case_dict` to the cluster proper
+
+        :param case_dict: the case dict we will atempt to merge into any of the
+            possible clusters
+        :param possible_clusters: the existing clusters we will try to compare
+
+        :return: None if we couldn't find a cluster
+            the cluster dict if the current case dict was clustered
+        """
+        if not possible_clusters:
+            return
+
+        opinion_fields = ["type", "url", "per_curiam", "author"]
+
+        for candidate_cluster in possible_clusters:
+            # all of these should be the same for this to be considered a cluster
+            if (
+                case_dict["name"] != candidate_cluster["name"]
+                or case_dict["docket"] != candidate_cluster["docket"]
+                or case_dict["date"] != candidate_cluster["date"]
+            ):
+                continue
+
+            # if the sub_opinions list does not exist yet, build it from the
+            # existing candidate_cluster
+            sub_opinions = candidate_cluster.get("sub_opinions")
+            if not sub_opinions:
+                candidate_cluster["sub_opinions"] = [
+                    {
+                        key: candidate_cluster.pop(key)
+                        for key in opinion_fields
+                        if key in candidate_cluster
+                    }
+                ]
+
+            # add the new opinion to the cluster
+            candidate_cluster["sub_opinions"].append(
+                {
+                    key: case_dict.pop(key)
+                    for key in opinion_fields
+                    if key in case_dict
+                }
+            )
+
+            return candidate_cluster
+
+        return
