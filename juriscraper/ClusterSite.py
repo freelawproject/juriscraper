@@ -270,7 +270,7 @@ class ClusterSite(OpinionSiteLinear):
                     {
                         key: candidate_cluster.pop(key)
                         for key in opinion_fields
-                        if key in case_dict
+                        if key in candidate_cluster
                     }
                 ]
 

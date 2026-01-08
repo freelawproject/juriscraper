@@ -76,18 +76,7 @@ class Site(ClusterSite):
             next = row.xpath("following-sibling::text()[1]")
             text = f"{prev[0] if prev else ''}{row.xpath('string(.)')}{next[0] if next else ''}"
 
-        clean_text = re.sub(r"[\n\r\t\s]+", " ", text)
-        m = re.match(
-            r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? - (?P<case_name>.*)",
-            clean_text,
-        )
-        if not m:
-            # Handle bad inputs
-            m = re.match(
-                r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? (?P<case_name>.*)",
-                clean_text,
-            )
-        name = m.group("case_name")
+        clean_text = re.sub(r"[\n\r\t\s]+", " ", text).replace("–", "-")
 
         is_concurrence = "concur" in clean_text.lower()
         is_dissent = "dissent" in clean_text.lower()
@@ -104,7 +93,22 @@ class Site(ClusterSite):
         else:
             op_type = OpinionType.MAJORITY
 
-        return m.group("dockets"), name, op_type.value
+        if op_type == OpinionType.MAJORITY:
+            # there is no type information in this row; the name is everything
+            # after the docket number
+            match = re.match(
+                r"\s*(?P<dockets>([SA]C\d+[, ]*)+)(?P<case_name>.*)",
+                clean_text,
+            )
+        else:
+            # there is type information, and the case name will be after the
+            # type or after the dash
+            match = re.match(
+                r"\s*(?P<dockets>([SA]C\d+[, ]*)+).*(Appendix|Concurrence|Dissent|in Part)[\s-]*(?P<case_name>.*)",
+                clean_text,
+            )
+
+        return match.group("dockets"), match.group("case_name"), op_type.value
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
@@ -127,7 +131,7 @@ class Site(ClusterSite):
             dockets, name, op_type = self.extract_metadata(row)
             case_dict = {
                 "url": row.get("href"),
-                "name": name.strip(),
+                "name": name.strip("- "),
                 "docket": dockets.strip(),
                 "date": date_filed,
                 "date_filed_is_approximate": date_filed_is_approximate,
