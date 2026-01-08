@@ -20,7 +20,7 @@ Features:
 - Add opinion type sanity check #1736
 
 Changes:
--
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644  
 
 Fixes:
 - fix `tenn` miss adding opinion types #1749
