@@ -10,6 +10,7 @@ class OpinionType(Enum):
     CONCURRENCE = "030concurrence"
     CONCURRING_IN_PART_AND_DISSENTING_IN_PART = "035concurrenceinpart"
     DISSENT = "040dissent"
+    ADDENDUM = "050addendum"
     REMITTITUR = "060remittitur"
     REHEARING = "070rehearing"
     ON_THE_MERITS = "080onthemerits"

@@ -1,3 +1,5 @@
+from typing import Optional
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.utils import (
@@ -229,7 +231,7 @@ class ClusterSite(OpinionSiteLinear):
 
     def cluster_opinions(
         self, case_dict: dict, possible_clusters: list[dict]
-    ) -> bool:
+    ) -> Optional[dict]:
         """Try to cluster current opinion with previous opinions.
         To cluster, opinions should have the same
         - date
@@ -243,10 +245,11 @@ class ClusterSite(OpinionSiteLinear):
             possible clusters
         :param possible_clusters: the existing clusters we will try to compare
 
-        :return: True if current case dict was clustered
+        :return: None if we couldn't find a cluster
+            the cluster dict if the current case dict was clustered
         """
         if not possible_clusters:
-            return False
+            return
 
         opinion_fields = ["type", "url", "per_curiam", "author"]
 
@@ -280,6 +283,6 @@ class ClusterSite(OpinionSiteLinear):
                 }
             )
 
-            return True
+            return candidate_cluster
 
-        return False
+        return

@@ -91,6 +91,7 @@ class Site(ClusterSite):
 
         is_concurrence = "concur" in clean_text.lower()
         is_dissent = "dissent" in clean_text.lower()
+        is_appendix = "appendix" in clean_text.lower()
 
         if is_concurrence and is_dissent:
             op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
@@ -98,6 +99,8 @@ class Site(ClusterSite):
             op_type = OpinionType.CONCURRENCE
         elif is_dissent:
             op_type = OpinionType.DISSENT
+        elif is_appendix:
+            op_type = OpinionType.ADDENDUM
         else:
             op_type = OpinionType.MAJORITY
 

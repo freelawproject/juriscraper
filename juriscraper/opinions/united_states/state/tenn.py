@@ -98,9 +98,9 @@ class Site(ClusterSite):
             }
 
             # attempt to merge with previous cases
-            if self.cluster_opinions(case_dict, self.cases):
+            if cluster := self.cluster_opinions(case_dict, self.cases):
                 # add to the cluster
-                self.cases[-1]["judge"] += f"; {case_dict['judge']}"
+                cluster["judge"] += f"; {case_dict['judge']}"
                 logger.info("Clustered opinions into %s", self.cases[-1])
                 continue
 
