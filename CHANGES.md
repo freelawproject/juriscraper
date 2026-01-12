@@ -20,7 +20,7 @@ Features:
 - Add opinion type sanity check #1736
 
 Changes:
--
+- `wva`, `wvactapp` now use ClusterSite #1748
 
 Fixes:
 - `conn` and `connappct` now use ClusterSite #1733

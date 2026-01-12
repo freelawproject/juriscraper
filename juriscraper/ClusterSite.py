@@ -1,5 +1,7 @@
 from typing import Optional
 
+from dateutil import parser
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.utils import (
@@ -80,6 +82,9 @@ class ClusterSite(OpinionSiteLinear):
         self.all_attributes = self._all_attrs
         # doing this will help us re-use `AbstractSite.parse``
         self._all_attrs = []
+
+        # if set,  allow clustering when dates are not exactly the same
+        self.cluster_by_date_max_days = 0
 
     def __iter__(self):
         yield from self.cases
@@ -229,6 +234,28 @@ class ClusterSite(OpinionSiteLinear):
             f"{self.court_id}: Successfully found {len(self.cases)} items."
         )
 
+    def validate_cluster_dates(
+        self, datestring1: str, datestring2: str
+    ) -> bool:
+        """Check that 2 dates are close enough to cluster the opinions
+
+        By default, it will check that the date strings are exactly the same
+
+        If the instance attribute `cluster_by_date_max_days` is set to a value
+        different from 0, it will try to parse the dates and check if the dates
+        are close enough
+
+        :param datestring1: a date string
+        :param datestring2: another date strin
+        :return: True if the datestrigs or their dates are close enough
+        """
+        if self.cluster_by_date_max_days:
+            dt1 = parser.parse(datestring1)
+            dt2 = parser.parse(datestring2)
+            return abs((dt1 - dt2).days) < self.cluster_by_date_max_days
+        else:
+            return datestring1 == datestring2
+
     def cluster_opinions(
         self, case_dict: dict, possible_clusters: list[dict]
     ) -> Optional[dict]:
@@ -251,14 +278,16 @@ class ClusterSite(OpinionSiteLinear):
         if not possible_clusters:
             return
 
-        opinion_fields = ["type", "url", "per_curiam", "author"]
+        opinion_fields = ["type", "url", "per_curiam", "author", "joined_by"]
 
         for candidate_cluster in possible_clusters:
             # all of these should be the same for this to be considered a cluster
             if (
                 case_dict["name"] != candidate_cluster["name"]
                 or case_dict["docket"] != candidate_cluster["docket"]
-                or case_dict["date"] != candidate_cluster["date"]
+                or not self.validate_cluster_dates(
+                    case_dict["date"], candidate_cluster["date"]
+                )
             ):
                 continue
 
