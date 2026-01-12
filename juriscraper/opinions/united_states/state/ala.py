@@ -22,9 +22,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "{}/courts/cms/publications?courtID={}&page=0&size=25&sort=publicationDate%2Cdesc".format(
-            self.base_url, self.court_str
-        )
+        self.url = f"{self.base_url}/courts/cms/publications?courtID={self.court_str}&page=0&size=25&sort=publicationDate%2Cdesc"
         self.should_have_results = True
 
     def _download(self, request_dict=None):
@@ -44,9 +42,7 @@ class Site(OpinionSiteLinear):
         publication_uuid = releases[0].get("publicationUUID")
 
         # Fetch detailed publication data
-        self.url = "{}/courts/{}/cms/publication/{}".format(
-            self.base_url, self.court_str, publication_uuid
-        )
+        self.url = f"{self.base_url}/courts/{self.court_str}/cms/publication/{publication_uuid}"
         return super()._download(request_dict)
 
     def _process_html(self):
@@ -79,7 +75,9 @@ class Site(OpinionSiteLinear):
             if match:
                 # Groups 1,2 for "Appeal from"; groups 3,4 for Ex parte format
                 lower_court = (match.group(1) or match.group(3) or "").strip()
-                lower_court_number = (match.group(2) or match.group(4) or "").strip()
+                lower_court_number = (
+                    match.group(2) or match.group(4) or ""
+                ).strip()
                 if match.group(1):
                     # "Appeal from" format - just remove the parenthetical
                     name = name[: match.start()].rstrip()
@@ -89,7 +87,9 @@ class Site(OpinionSiteLinear):
                         r"\s*PETITION FOR WRIT OF .+?(?=\(|$)", "", name
                     ).strip()
                     name = re.sub(r"\s*\(In re:\s*.+?\)", "", name).strip()
-                    name = re.sub(r"\s*\([^)]+Court[^)]+\)\.*", "", name).strip()
+                    name = re.sub(
+                        r"\s*\([^)]+Court[^)]+\)\.*", "", name
+                    ).strip()
                     name = name.rstrip(".")
 
             judge = publicationItem["groupName"]
