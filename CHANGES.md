@@ -26,6 +26,7 @@ Fixes:
 - `conn` and `connappct` now use ClusterSite #1733
 - fix `tenn` miss adding opinion types #1749
 - add ADDENDUM to OpinionType enum #1754
+- fix `ala` by fetching detailed publication data from new API endpoint #1758
 
 ## Current
 

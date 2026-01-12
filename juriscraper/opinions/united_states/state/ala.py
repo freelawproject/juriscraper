@@ -24,12 +24,15 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     def _process_html(self):
-        self.json = self.html
+        # Get the publicationUUID from the initial response
+        publication_uuid = self.html["_embedded"]["results"][0]["publicationUUID"]
 
-        # Processes only the first result to scrape the most recent data.
-        item = self.json["_embedded"]["results"][0]
+        # Fetch detailed publication data which contains full case information
+        detail_url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/publication/{publication_uuid}"
+        self.request["url"] = detail_url
+        item = self.request["session"].get(detail_url).json()
 
-        date_filed = item["scheduledDate"][:10]
+        date_filed = item["publicationDate"][:10]
         for publicationItem in item["publicationItems"]:
             if not publicationItem.get("documents", []):
                 continue
