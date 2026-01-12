@@ -25,7 +25,9 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         # Get the publicationUUID from the initial response
-        publication_uuid = self.html["_embedded"]["results"][0]["publicationUUID"]
+        publication_uuid = self.html["_embedded"]["results"][0][
+            "publicationUUID"
+        ]
 
         # Fetch detailed publication data which contains full case information
         detail_url = f"https://publicportal-api.alappeals.gov/courts/{self.court_str}/cms/publication/{publication_uuid}"
