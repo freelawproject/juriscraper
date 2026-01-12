@@ -25,20 +25,20 @@ class Site(OpinionSiteLinear):
         self.method = "POST"
         self.should_have_results = True
 
-        if datetime.now().year != 2025:
-            logger.error("Update lactapp_1 parameters from 2025 parameters")
+        if datetime.now().year != 2026:
+            logger.error("Update lactapp_1 parameters from 2026 parameters")
 
-        # This payload is specific for 2025
+        # This payload is specific for 2026
         self.payload = {
-            "parentId": "283468",
+            "parentId": "310729",
             "Params": json.dumps(
                 {
-                    "ContextId": 283467,
+                    "ContextId": 310728,
                     "OneLink": "/cms/One.aspx",
-                    "RawUrl": "/cms/One.aspx?portalId=161585&pageId=283465",
-                    "Extension": "23741",
+                    "RawUrl": "/decisions/o_p_i_n_i_o_n_s_2026",
+                    "Extension": "24725",
                     "PortalId": "161585",
-                    "PageId": "283465",
+                    "PageId": "310727",
                     "InstanceId": "23741",
                 }
             ),
