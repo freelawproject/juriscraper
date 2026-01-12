@@ -1,5 +1,8 @@
 import re
 
+from dateutil import parser
+
+from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
 
@@ -65,9 +68,9 @@ class Site(ClusterSite):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # self.disable_certificate_verification()
         self.url = "https://www.courtswv.gov/appellate-courts/supreme-court-of-appeals/opinions/prior-terms"
         self.court_id = self.__module__
+        self.cluster_by_date_max_days = 7
 
     def _process_html(self):
         for row in self.html.xpath("//tr[td[@headers]]"):
@@ -78,13 +81,35 @@ class Site(ClusterSite):
             case_type = row.xpath("td[4]/text()")[0].strip()
             case_dict.update(
                 {
-                    "date": row.xpath("td[1]/text()")[0],
-                    "docket": row.xpath("td[2]/text()")[0],
+                    "date": row.xpath("td[1]/text()")[0].strip(),
+                    "docket": row.xpath("td[2]/text()")[0].strip(),
                     "url": row.xpath("td[3]/a/@href")[0],
                     "nature_of_suit": self.codes.get(case_type, ""),
                 }
             )
-            self.cases.append(case_dict)
+            if cluster := self.cluster_opinions(case_dict, self.cases):
+                # accumulate judges
+                if case_dict.get("judge"):
+                    cluster["judge"] += f"; {case_dict['judge']}"
+
+                # Date corrections. See 'Todd Jarell' case on example files
+                if case_dict["date"] == cluster["date"]:
+                    continue
+
+                cluster_date = parser.parse(cluster["date"])
+                case_date = parser.parse(case_dict["date"])
+
+                if cluster_date > case_date:
+                    cluster["other_date"] = (
+                        f"Some opinions were filed on {cluster['date']};"
+                    )
+                    cluster["date"] = case_dict["date"]
+                else:
+                    cluster["other_date"] = (
+                        f"Some opinions were filed on {case_dict['date']};"
+                    )
+            else:
+                self.cases.append(case_dict)
 
     def get_metadata(self, name: str, decision_type: str) -> dict[str, str]:
         """Parses Opinion and Cluster values out of the raw data
@@ -101,7 +126,9 @@ class Site(ClusterSite):
         op_type = OpinionType.MAJORITY
         author = ""
         joined_by = ""
-        judges = ""
+        judge = ""
+
+        name = re.sub(r"[\s\n]+", " ", name)
 
         if "MD" in decision_type:
             status = "Unpublished"
@@ -127,14 +154,23 @@ class Site(ClusterSite):
                 elif concurrence:
                     op_type = OpinionType.CONCURRENCE
 
-                if judges := re.findall(
+                if matches := re.finditer(
                     r"(Justice|Judge) (?P<judge>[A-Z][a-z]+)", value
                 ):
-                    judges = judges[0]
+                    judges = [i.group("judge") for i in matches]
                     author = judges[0]
+
                     if len(judges) > 1:
                         joined_by = "; ".join(judges[1:])
-                        judges = f"; {joined_by}"
+                        judge = "; ".join(judges)
+                    else:
+                        judge = author
+            else:
+                # see wvactapp
+                op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+                logger.warning(
+                    "%s: could not find Opinion.type", self.court_id
+                )
 
         return {
             "status": status,
@@ -142,6 +178,6 @@ class Site(ClusterSite):
             "per_curiam": per_curiam,
             "author": author,
             "joined_by": joined_by,
-            "judges": judges,
+            "judge": judge,
             "name": name,
         }
