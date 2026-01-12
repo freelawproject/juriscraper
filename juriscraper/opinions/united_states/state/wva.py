@@ -70,7 +70,7 @@ class Site(ClusterSite):
         super().__init__(*args, **kwargs)
         self.url = "https://www.courtswv.gov/appellate-courts/supreme-court-of-appeals/opinions/prior-terms"
         self.court_id = self.__module__
-        self.cluster_by_date_max_days = 7
+        self.cluster_by_date_max_days = 15
 
     def _process_html(self):
         for row in self.html.xpath("//tr[td[@headers]]"):
@@ -117,7 +117,7 @@ class Site(ClusterSite):
         Gets opinion type, status, per curiam, author, judges, joined by, and may modify the name
 
         :param name: raw name
-        :param decistion type: the source decision type
+        :param decision type: the source decision type
         :return a parsed case dict
         """
         # defaults
@@ -140,7 +140,7 @@ class Site(ClusterSite):
         elif "SEP" in decision_type:
             # try to get the op type
             if match := self.author_and_type_regex.search(name):
-                name = name[: match.start()].strip()
+                name = name[: match.start()].strip(", .")
                 value = match.group("author_and_type")
                 dissent = "dissent" in value.lower()
                 concurrence = "concur" in value.lower()

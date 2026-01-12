@@ -49,48 +49,27 @@
   },
   {
     "precedential_statuses": "Published",
-    "types": "020lead",
-    "per_curiam": false,
-    "authors": "",
-    "joined_by": "",
-    "judges": "",
-    "case_names": "DD Oil Company v. State of West Virginia, ex rel., Harold D. Ward, Cabinet Secretary, West Virginia Department of Environmental Protection",
-    "case_dates": "2023-12-08",
-    "docket_numbers": "22-ICA-74",
-    "download_urls": "/sites/default/pubfilesmnt/2023-12/22-ICA-74_so.pdf",
-    "nature_of_suit": "Administrative Agency-Other",
-    "case_name_shorts": "",
-    "date_filed_is_approximate": false,
-    "blocked_statuses": false
-  },
-  {
-    "precedential_statuses": "Published",
-    "types": "040dissent",
-    "per_curiam": false,
-    "authors": "Lorensen",
-    "joined_by": "",
     "judges": "Lorensen",
     "case_names": "DD Oil Company v. State of West Virginia, ex rel., Harold D. Ward, Cabinet Secretary, West Virginia Department of Environmental Protection",
     "case_dates": "2023-12-08",
     "docket_numbers": "22-ICA-74",
-    "download_urls": "/sites/default/pubfilesmnt/2023-12/22-ICA-74%20Separate%20Opinion.pdf",
     "nature_of_suit": "Administrative Agency-Other",
-    "case_name_shorts": "",
-    "date_filed_is_approximate": false,
-    "blocked_statuses": false
-  },
-  {
-    "precedential_statuses": "Published",
-    "types": "035concurrenceinpart",
-    "per_curiam": false,
-    "authors": "",
-    "joined_by": "",
-    "judges": "",
-    "case_names": "Jay Folse v. G. Russell Rollyson, Jr. and John McCuskey, Jr.",
-    "case_dates": "2023-11-29",
-    "docket_numbers": "22-ICA-243",
-    "download_urls": "/sites/default/pubfilesmnt/2023-11/22-ICA-243-sep-greear.pdf",
-    "nature_of_suit": "Civil-Other",
+    "sub_opinions": [
+      {
+        "types": "020lead",
+        "download_urls": "/sites/default/pubfilesmnt/2023-12/22-ICA-74_so.pdf",
+        "per_curiam": false,
+        "authors": "",
+        "joined_by": ""
+      },
+      {
+        "types": "040dissent",
+        "download_urls": "/sites/default/pubfilesmnt/2023-12/22-ICA-74%20Separate%20Opinion.pdf",
+        "per_curiam": false,
+        "authors": "Lorensen",
+        "joined_by": ""
+      }
+    ],
     "case_name_shorts": "",
     "date_filed_is_approximate": false,
     "blocked_statuses": false
@@ -113,16 +92,28 @@
   },
   {
     "precedential_statuses": "Published",
-    "types": "020lead",
-    "per_curiam": false,
-    "authors": "",
-    "joined_by": "",
     "judges": "",
     "case_names": "Jay Folse v. G. Russell Rollyson, Jr. and John McCuskey, Jr.",
     "case_dates": "2023-11-16",
     "docket_numbers": "22-ICA-243",
-    "download_urls": "/sites/default/pubfilesmnt/2023-11/22-ICA-243.pdf",
     "nature_of_suit": "Civil-Other",
+    "sub_opinions": [
+      {
+        "types": "035concurrenceinpart",
+        "download_urls": "/sites/default/pubfilesmnt/2023-11/22-ICA-243-sep-greear.pdf",
+        "per_curiam": false,
+        "authors": "",
+        "joined_by": ""
+      },
+      {
+        "types": "020lead",
+        "download_urls": "/sites/default/pubfilesmnt/2023-11/22-ICA-243.pdf",
+        "per_curiam": false,
+        "authors": "",
+        "joined_by": ""
+      }
+    ],
+    "other_dates": "Some opinions were filed on 11/29/2023",
     "case_name_shorts": "",
     "date_filed_is_approximate": false,
     "blocked_statuses": false
