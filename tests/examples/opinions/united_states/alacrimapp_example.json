@@ -1,58 +1,153 @@
 {
-  "publicationUUID": "5dade74e-4b1e-4747-b2a8-e52a101a72da",
-  "courtID": "2",
-  "courtAbbreviation": "Alabama Court of Criminal Appeals",
-  "publicationNumber": "CR-RELEASE-2023-11-09",
-  "publicationName": "Court of Criminal Appeals Release List - November 9, 2023",
-  "publicationNote": "Decisions Announced on Thursday, November 9, 2023",
-  "groupFlag": true,
-  "scheduledDate": "2023-11-09T15:00:00.000+00:00",
-  "publicationDate": "2023-11-09T15:06:48.399+00:00",
-  "publicationItems": [
-    {
-      "publicationItemUUID": "1B61C109-317A-4B94-95F8-D4A162F03B2E",
-      "docketEntryUUID": "EA17B9B3-D5F5-4400-A83B-DA785A61CCAC",
-      "caseInstanceUUID": "39312897-FABB-4F2A-A483-EBAC92D5AC2A",
-      "caseNumber": "CR-2022-1020",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 2,
-      "title": "Mondrell Kenee Ward v. State of Alabama (Appeal from Madison Circuit Court:  CC-18-4946)",
-      "decision": "Application for Rehearing Overruled.",
-      "orderBy": 1,
-      "documents": [
+    "courtAbbreviation": "Alabama Court of Criminal Appeals",
+    "publicationNumber": "CR-RELEASE-2026-01-09",
+    "publicationName": "Court of Criminal Appeals Release List - January 9, 2026",
+    "publicationNote": "Decisions Announced on Friday, January 9, 2026",
+    "publicationDate": "2026-01-09T14:38:52.245+00:00",
+    "publicationItems": [
         {
-          "documentLinkUUID": "A1F7D25E-DA7D-4F41-A69C-3168001F444A",
-          "documentName": "Rehearing Notice"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "E5397E43-E3D8-42AA-8AE7-D47B7664D501",
-      "docketEntryUUID": "28467514-9277-4D4B-B7B7-3C6D92A04306",
-      "caseInstanceUUID": "458B00C6-1ADC-4D01-B819-A1DA7E353862",
-      "caseNumber": "CR-2022-1351",
-      "groupName": "Presiding Judge Windom",
-      "groupOrderBy": 1,
-      "title": "Matthew K. Bouarassa v. State of Alabama (Appeal from Russell Circuit Court: CC-21-610 and CC-21-611)",
-      "decision": "Decision - Affirmed by Memorandum",
-      "orderBy": 1
-    },
-    {
-      "publicationItemUUID": "B11417A5-8F20-4308-B44A-17E9C2916FA8",
-      "docketEntryUUID": "9136F2C3-969F-4895-A88F-1DDE64C5CDD5",
-      "caseInstanceUUID": "1A70DC59-B88E-4053-964A-B265AF23DA51",
-      "caseNumber": "CR-2023-0461",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 2,
-      "title": "S.M. v. State of Alabama (Appeal from Lee Circuit Court: CC-07-606.67)",
-      "decision": "Application for Rehearing Overruled.",
-      "orderBy": 2,
-      "documents": [
+            "publicationItemUUID": "B129392B-A686-48B5-805F-9ED7B25632A5",
+            "caseInstanceUUID": "6878E0B3-3BEB-4D14-9C59-1B6BFCE6C9A0",
+            "caseNumber": "CR-2023-0736",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Grady Wayne Wilkes v. State of Alabama (Appeal from Lee Circuit Court: CC-20-578)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 1,
+            "documents": [
+                {
+                    "documentLinkUUID": "25BB9C39-B730-4559-84CE-BDB94714F4A7",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
         {
-          "documentLinkUUID": "7A6EF661-DD4D-416D-B9DA-7C11C14B66FE",
-          "documentName": "Rehearing Notice"
+            "publicationItemUUID": "C7B99F59-7169-42C6-8AF2-0D9E8F30B21F",
+            "caseInstanceUUID": "5355EB32-C06A-4EC5-A78A-0499504324E9",
+            "caseNumber": "CR-2024-0861",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Jarquise Hayes v. State of Alabama (Appeal from Clarke Circuit Court: CC-21-162)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 2,
+            "documents": [
+                {
+                    "documentLinkUUID": "4D9421DA-1E2B-445A-ABC8-6EBED79C6D17",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "988AC05A-E14F-4B01-BCBD-471F0E143ADA",
+            "caseInstanceUUID": "3F585D99-C93C-4B5F-9C6C-17E757471D9E",
+            "caseNumber": "CR-2024-1013",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Gary Thomas Singleton v. State of Alabama (Appeal from Limestone Circuit Court: CC-92-25.69)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 3,
+            "documents": [
+                {
+                    "documentLinkUUID": "7972B230-A432-46CB-8384-DDD2A5C6A63B",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "C6C6051D-570B-4A0A-87D8-38282B525803",
+            "caseInstanceUUID": "5694136F-3C24-4AA6-83EE-571383C0B470",
+            "caseNumber": "CR-2025-0113",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Dolphus Atchison v. State of Alabama (Appeal from Madison Circuit Court: CC-23-1756)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 4,
+            "documents": [
+                {
+                    "documentLinkUUID": "D48228CB-5AB1-442A-B1E4-9B58F27EE0CD",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "141B66A5-51A3-421D-8AFD-2277AEF5005D",
+            "caseInstanceUUID": "FA445C1A-971F-49DF-B914-98FCC9731A96",
+            "caseNumber": "CR-2025-0329",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Natalie Leanne Morgan v. State of Alabama (Appeal from Morgan Circuit Court: CC-22-1038 and CC-22-1041)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 5,
+            "documents": [
+                {
+                    "documentLinkUUID": "65D8B858-DC5F-48F1-814B-ECF1DA1B00A4",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "94450256-6627-4F57-9C75-530FD0FB0394",
+            "caseInstanceUUID": "728A5F98-3F0C-4F4B-9E1A-DDC07B9DC3B2",
+            "caseNumber": "CR-2025-0346",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Justin Norfleet v. State of Alabama (Appeal from Madison Circuit Court: CC-22-3139)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 6,
+            "documents": [
+                {
+                    "documentLinkUUID": "8287A24D-D03F-41B3-9A01-CAFB7317AB7D",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "5A59E1D0-5431-4351-B754-82BDC1A0D406",
+            "caseInstanceUUID": "7CA02057-CCFD-4221-A3B6-F54E4B4A0042",
+            "caseNumber": "CR-2025-0448",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "S.S., Jr. v. State of Alabama (Appeal from Montgomery Juvenile Court: JU-24-324.01)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 7,
+            "documents": [
+                {
+                    "documentLinkUUID": "D966A523-757F-44DA-9357-1FE532DE430F",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "5FBDA507-DDB1-407D-B715-C29F912D304A",
+            "caseInstanceUUID": "91C435CD-76E5-455C-B7C4-4E3BCC9AF926",
+            "caseNumber": "CR-2025-0486",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Tyrus Luru Thornton v. State of Alabama (Appeal from Madison Circuit Court: CC-22-3147.71 and CC-22-3177.71)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 8,
+            "documents": [
+                {
+                    "documentLinkUUID": "BBBCA0AA-66C6-4B87-B9DC-071758E9905D",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "023049C9-E770-483C-9766-A9EE13D34453",
+            "caseInstanceUUID": "7ABE0FE7-7C90-4787-8FDA-50DF37C52272",
+            "caseNumber": "CR-2025-0669",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 1,
+            "title": "Michael Shane Fletcher v. State of Alabama (Appeal from Mobile Circuit Court: CC-19-4306.60)",
+            "decision": "Application for Rehearing Overruled",
+            "orderBy": 9,
+            "documents": [
+                {
+                    "documentLinkUUID": "896D4EBD-5BD0-4885-86B8-2FEFFC93A0F9",
+                    "documentName": "Rehearing Notice"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

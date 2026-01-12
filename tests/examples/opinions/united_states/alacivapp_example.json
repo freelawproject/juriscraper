@@ -1,205 +1,249 @@
 {
-  "publicationUUID": "a5044506-38cf-45e6-a0fa-b03e2923e6dd",
-  "courtID": "3",
-  "courtAbbreviation": "Alabama Court of Civil Appeals",
-  "publicationNumber": "CL-RELEASE-2023-11-09",
-  "publicationName": "Court of Civil Appeals Release List - November 9, 2023",
-  "publicationNote": "Decisions Announced on Thursday, November 9, 2023",
-  "groupFlag": true,
-  "scheduledDate": "2023-11-09T14:15:00.000+00:00",
-  "publicationDate": "2023-11-09T14:55:51.829+00:00",
-  "publicationItems": [
-    {
-      "publicationItemUUID": "9AA6954D-C3B4-4E3E-888D-95920E3BB677",
-      "docketEntryUUID": "67155BE4-1E22-4851-BB8F-A47EAF3DF634",
-      "caseInstanceUUID": "1B1CA827-2759-4FEB-845A-D325380EA2E8",
-      "caseNumber": "CL-2023-0257",
-      "groupName": "Edwards, J.",
-      "groupOrderBy": 2,
-      "title": "E.C. v. DeKalb County Department of Human Resources (Appeal from DeKalb Juvenile Court:  JU-22-64.02).",
-      "decision": "Decision - Affirmed by Unpublished Memorandum.",
-      "orderBy": 1
-    },
-    {
-      "publicationItemUUID": "B0CA9E09-66E8-4117-BAC0-B0E9550BFD49",
-      "docketEntryUUID": "3B6C3500-B911-4801-999F-AC5FC8042A43",
-      "caseInstanceUUID": "990A1541-5E9D-4F25-BBC4-30C7E92AA8E8",
-      "caseNumber": "CL-2022-1230",
-      "groupName": "Fridy, J.",
-      "groupOrderBy": 4,
-      "title": "Richard D. Hollar v. Carrie A. Hollar (Appeal from Chilton Circuit Court:  DR-19-900201).",
-      "decision": "Decision - Affirmed In Part; Reversed In Part; And Remanded With Instructions.",
-      "orderBy": 1,
-      "documents": [
+    "courtAbbreviation": "Alabama Court of Civil Appeals",
+    "publicationNumber": "CL-RELEASE-2026-01-09",
+    "publicationName": "Court of Civil Appeals Release List - January 9, 2026",
+    "publicationNote": "Decisions Announced on Friday, January 9, 2026",
+    "publicationDate": "2026-01-09T14:44:19.015+00:00",
+    "publicationItems": [
         {
-          "documentLinkUUID": "1DA3F254-DBA4-4F5B-98C6-068AABD2B35C",
-          "documentName": "Decision"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "5E4CFB93-E714-4708-88A3-4CBAE0D88C6C",
-      "docketEntryUUID": "2807E578-FF3D-46A8-8E2B-EC8FFE72456A",
-      "caseInstanceUUID": "4AF983D1-7824-4913-B33B-1DD1849E8369",
-      "caseNumber": "CL-2022-1095",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 6,
-      "title": "D.H. v. Tuscaloosa County Department of Human Resources (Appeal from Tuscaloosa Juvenile Court:  JU-19-513.02).",
-      "decision": "Rehearing - Overruled",
-      "orderBy": 1,
-      "documents": [
+            "publicationItemUUID": "CA2F300B-AE4D-457D-87F5-C75DF97F7F88",
+            "caseInstanceUUID": "9B9038C6-4489-4ECB-9DF5-FCD8FEDB4552",
+            "caseNumber": "CL-2025-0203",
+            "groupName": "Bowden, J.",
+            "groupOrderBy": 5,
+            "title": "Reginald Burrell v. Christine Hernandez, James Adam Muns, and Hernandez and Associates, LLC (Appeal from Mobile Circuit Court: CV-24-901514).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 1
+        },
         {
-          "documentLinkUUID": "8E86DE1D-2427-4503-8984-BEC704F768A2",
-          "documentName": "Order"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "8B788B85-9BD7-42C1-ABC1-BE4F0C332D2E",
-      "docketEntryUUID": "4EE54D66-260B-495D-AD64-9DC3299446EC",
-      "caseInstanceUUID": "55B39F8C-2E1A-49F4-B483-BA633B28A74C",
-      "caseNumber": "CL-2022-1176",
-      "groupName": "Per Curiam",
-      "groupOrderBy": 5,
-      "title": "K.D.S. v. M.P. and F.P. (Appeal from Tallapoosa Circuit Court:  JU-20-19.01).",
-      "decision": "Decision - Affirmed In Part; Reversed In Part; And Remanded With Instructions.",
-      "orderBy": 1,
-      "documents": [
+            "publicationItemUUID": "39C8DA13-9BE5-481C-8585-C7D302623D93",
+            "caseInstanceUUID": "799C859F-AE16-4C91-9911-FD844DC414BB",
+            "caseNumber": "CL-2025-0366",
+            "groupName": "Edwards, J.",
+            "groupOrderBy": 2,
+            "title": "L.M.W. v. Shelby County Department of Human Resources (Appeal from Shelby Juvenile Court:  JU-24-654.02).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 1
+        },
         {
-          "documentLinkUUID": "A8F66065-5F71-4E80-86F2-6D90E773589F",
-          "documentName": "Decision"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "2592AD6F-58E9-4462-BA65-7A6BEC109B00",
-      "docketEntryUUID": "32734871-266E-414B-BBF1-E2FC60A419B0",
-      "caseInstanceUUID": "36130E2C-4352-4A25-B7A8-7EA91781EF7F",
-      "caseNumber": "CL-2022-1265",
-      "groupName": "Fridy, J.",
-      "groupOrderBy": 4,
-      "title": "John Paul Madrigal v. Courtney H. Madrigal (Appeal from Talladega Circuit Court:  DR-20-900004.02).",
-      "decision": "Decision - Reversed and Remanded.",
-      "orderBy": 2,
-      "documents": [
+            "publicationItemUUID": "91D1901F-54E0-4399-A7C6-740D51DE5632",
+            "caseInstanceUUID": "EB22D0E8-6C74-4D09-BFF4-4153BF90D4EC",
+            "caseNumber": "CL-2025-0299",
+            "groupName": "Fridy, J.",
+            "groupOrderBy": 4,
+            "title": "Susan Nixon Bailey v. David Keith Nixon (Appeal from Russell Circuit Court:  DR-12-900036.03).",
+            "decision": "Decision - Reversed and Remanded with Instructions",
+            "orderBy": 1,
+            "documents": [
+                {
+                    "documentLinkUUID": "D37F476F-F7AF-4E8E-AE1A-B02E7A4CF36A",
+                    "documentName": "Decision - Distributed"
+                }
+            ]
+        },
         {
-          "documentLinkUUID": "6796BB42-EB50-4B84-A8ED-8EB2B29F3DFB",
-          "documentName": "Decision"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "F474E34B-A9EB-42AA-AFD8-4163786ED944",
-      "docketEntryUUID": "55A67F97-50D8-43A5-A8BD-1E869A06141E",
-      "caseInstanceUUID": "242BA2E0-4474-4480-B98F-210627379C5F",
-      "caseNumber": "CL-2022-1177",
-      "groupName": "Per Curiam",
-      "groupOrderBy": 5,
-      "title": "K.D.S. v. M.P. and F.P. (Appeal from Tallapoosa Circuit Court:  JU-20-20.01).",
-      "decision": "Decision - Affirmed In Part; Reversed In Part; And Remanded With Instructions.",
-      "orderBy": 2,
-      "documents": [
+            "publicationItemUUID": "2CA5FFD0-0037-4394-B3BB-2DE871FB0D82",
+            "caseInstanceUUID": "5E942888-2941-40E4-A537-F8B738F7C0A2",
+            "caseNumber": "CL-2025-0122",
+            "groupName": "Hanson, J.",
+            "groupOrderBy": 3,
+            "title": "Carolyn Delisa Robinson v. Bank of America, NA (Appeal from Jefferson Circuit Court:  CV-23-901199).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 1
+        },
         {
-          "documentLinkUUID": "ED65723C-35E4-4DAA-99E5-05BB78FDFDEF",
-          "documentName": "Decision"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "8F2B1C7A-D94B-4F36-B4A2-98D07030A8A4",
-      "docketEntryUUID": "97285C5C-0B67-45C6-B854-385175B89A5C",
-      "caseInstanceUUID": "D3914036-3BC6-4C36-BAAF-E12E58FA71B2",
-      "caseNumber": "CL-2022-1281",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 6,
-      "title": "D.G. v. Marshall County Department of Human Resources (Appeal from Marshall Juvenile Court:  JU-18-276.02).",
-      "decision": "Rehearing - Overruled",
-      "orderBy": 2,
-      "documents": [
+            "publicationItemUUID": "7E2FB969-F417-4CF0-9BDE-4621C14E97FD",
+            "caseInstanceUUID": "9C0134AC-C853-4CD8-ABDD-B8F07E8790F5",
+            "caseNumber": "CL-2025-0240",
+            "groupName": "Moore, P.J.",
+            "groupOrderBy": 1,
+            "title": "K.G. v. Dallas County Department of Human Resources (Appeal from Dallas Juvenile Court:  JU-21-83.03).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 1
+        },
         {
-          "documentLinkUUID": "05F95A51-8CB0-4922-9843-17F260309AD0",
-          "documentName": "Order"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "18CB00C7-E8FD-41F7-B3A7-CC42977D149D",
-      "docketEntryUUID": "E9F6C460-476D-4F64-A48C-4892ECAD1878",
-      "caseInstanceUUID": "B9C9D2E8-9DC0-4AF2-AAB9-32E3BA0DDC37",
-      "caseNumber": "CL-2022-1282",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 6,
-      "title": "D.G. v. Marshall County Department of Human Resources (Appeal from Marshall Juvenile Court:  JU-18-277.02).",
-      "decision": "Rehearing - Overruled",
-      "orderBy": 3,
-      "documents": [
+            "publicationItemUUID": "1CC7C121-76D9-4EAC-8754-2606D41682EF",
+            "caseInstanceUUID": "D9585BAA-9D44-4A20-98E2-44C96872ABEE",
+            "caseNumber": "CL-2025-0034",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 6,
+            "title": "Alicia Gale Fraser v. Joshua Keith Fraser (Appeal from Mobile Circuit Court:  DR-23-901100).",
+            "decision": "Rehearing - Overruled",
+            "orderBy": 1,
+            "documents": [
+                {
+                    "documentLinkUUID": "56AF87BC-134A-4AB4-AD14-0345FD567E2B",
+                    "documentName": "Decision - Distributed"
+                }
+            ]
+        },
         {
-          "documentLinkUUID": "5FAC0778-7A15-4AB3-AB3B-2D219466AB14",
-          "documentName": "Order"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "E83689AB-CCCC-483B-B3B3-6F0CC59D4656",
-      "docketEntryUUID": "01E5145A-FD1C-47B5-980F-78A4AD23CD3C",
-      "caseInstanceUUID": "8081617C-797F-442D-8D50-DB7407B19B46",
-      "caseNumber": "CL-2022-1283",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 6,
-      "title": "M.G. v. Marshall County Department of Human Resources (Appeal from Marshall Juvenile Court:  JU-18-276.02).",
-      "decision": "Rehearing - Overruled",
-      "orderBy": 4,
-      "documents": [
+            "publicationItemUUID": "0C906F92-EAD8-4193-A1FF-CC34331F06D0",
+            "caseInstanceUUID": "265FE100-3B3D-48C6-9FBE-F34A973D5B81",
+            "caseNumber": "CL-2025-0065",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 6,
+            "title": "R.D. v. Mobile County Department of Human Resources (Appeal from Mobile Juvenile Court:  JU-23-832.02).",
+            "decision": "Rehearing - Overruled",
+            "orderBy": 2,
+            "documents": [
+                {
+                    "documentLinkUUID": "6D6BB70F-5BCD-4DEA-A32D-EA94CDD900EE",
+                    "documentName": "Decision - Distributed"
+                }
+            ]
+        },
         {
-          "documentLinkUUID": "A9A76486-3540-4AB5-BD0C-40163700409A",
-          "documentName": "Order"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "08C78B3F-0494-40DD-9B2F-DA89E3AF7169",
-      "docketEntryUUID": "E0ADD1B4-18C8-4EB3-A381-C9ABBE7C7A68",
-      "caseInstanceUUID": "07B023F2-DE54-4A84-B896-1B582354A431",
-      "caseNumber": "CL-2023-0207",
-      "groupName": "Thompson, P.J.",
-      "groupOrderBy": 1,
-      "title": "B.P.W. v. Talladega County Department of Human Resources (Appeal from Talladega Juvenile Court:  JU-21-100031.02).",
-      "decision": "Decision - Affirmed by Unpublished Memorandum.",
-      "orderBy": 4
-    },
-    {
-      "publicationItemUUID": "BA4339B1-6CED-4E5C-B4DF-A7116C60B724",
-      "docketEntryUUID": "572B2C66-6676-4B7E-8145-EAED77FC59AA",
-      "caseInstanceUUID": "A0AEAD62-73EA-48AA-B38F-069AF119647F",
-      "caseNumber": "CL-2022-1284",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 6,
-      "title": "M.G. v. Marshall County Department of Human Resources (Appeal from Marshall Juvenile Court:  JU-18-277.02).",
-      "decision": "Rehearing - Overruled",
-      "orderBy": 5,
-      "documents": [
+            "publicationItemUUID": "EDDCF609-95A3-4FB0-9BA9-4FA045E3AD2E",
+            "caseInstanceUUID": "ADED5DE8-152A-4205-BD1D-B409987D06E6",
+            "caseNumber": "CL-2025-0298",
+            "groupName": "Moore, P.J.",
+            "groupOrderBy": 1,
+            "title": "Kimberly Johnston v. Gregory Johnston (Appeal from Lauderdale Circuit Court:  DR-21-900146).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 2
+        },
         {
-          "documentLinkUUID": "697B3B6A-EB1F-4D45-9CE9-B1017469D7FE",
-          "documentName": "Order"
-        }
-      ]
-    },
-    {
-      "publicationItemUUID": "EBD82AB6-ED2A-47B1-AA63-6DD5F1A4629C",
-      "docketEntryUUID": "C563769A-D58B-4758-93EA-A79B2524AAFC",
-      "caseInstanceUUID": "83704147-7B2F-4C16-8FA5-72A142B65BFF",
-      "caseNumber": "CL-2023-0255",
-      "groupName": "On Rehearing",
-      "groupOrderBy": 6,
-      "title": "B.W. v. Limestone County Department of Human Resources (Appeal from Limestone Juvenile Court:  JU-22-71.02).",
-      "decision": "Rehearing - Overruled",
-      "orderBy": 6,
-      "documents": [
+            "publicationItemUUID": "3CEF4825-BC9C-428C-B529-1558C00FAF6E",
+            "caseInstanceUUID": "E57AB825-8EE9-4D12-A9E0-814A51C4339D",
+            "caseNumber": "CL-2025-0520",
+            "groupName": "Hanson, J.",
+            "groupOrderBy": 3,
+            "title": "M.G. v. Chambers County Department of Human Resources (Appeal from Chambers Juvenile Court:  JU-23-50.02).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 2
+        },
         {
-          "documentLinkUUID": "072C46FA-7E51-4D9C-9CEE-10DD390E7E2B",
-          "documentName": "Order"
+            "publicationItemUUID": "08BBF995-043A-4411-9776-C6C622236FB4",
+            "caseInstanceUUID": "F38407F1-36FF-4182-8698-24C6CA85C4E5",
+            "caseNumber": "CL-2025-0313",
+            "groupName": "Fridy, J.",
+            "groupOrderBy": 4,
+            "title": "E.C. III v. Mobile County Department of Human Resources (Appeal from Mobile Juvenile Court:  JU-21-1552.04).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 2
+        },
+        {
+            "publicationItemUUID": "6301DF7A-A6C9-4B07-8457-D46426AA0617",
+            "caseInstanceUUID": "0803B823-9FA1-4EE0-A1C8-B2ABC2D2C2D6",
+            "caseNumber": "CL-2025-0367",
+            "groupName": "Edwards, J.",
+            "groupOrderBy": 2,
+            "title": "L.M.W. v. Shelby County Department of Human Resources (Appeal from Shelby Juvenile Court:  JU-24-655.02).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 2
+        },
+        {
+            "publicationItemUUID": "BF6F697A-6D8F-4E9F-B6B3-9890B62C8BF2",
+            "caseInstanceUUID": "ECC91B8E-695F-408F-8966-45E91EF2F945",
+            "caseNumber": "CL-2025-0368",
+            "groupName": "Edwards, J.",
+            "groupOrderBy": 2,
+            "title": "M.B.C. v. Shelby County Department of Human Resources (Appeal from Shelby Juvenile Court:  JU-24-654.02).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 3
+        },
+        {
+            "publicationItemUUID": "8C17058C-A0AA-4C2F-B99D-99F93E7D1E28",
+            "caseInstanceUUID": "18A179EA-C329-4C53-B050-AE43A00C9956",
+            "caseNumber": "CL-2025-0474",
+            "groupName": "Fridy, J.",
+            "groupOrderBy": 4,
+            "title": "Bennie W. Loyd v. Ray C. Loyd (Appeal from Sumter Circuit Court:  DR-23-900011).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 3
+        },
+        {
+            "publicationItemUUID": "7AAB53C7-BFE1-42E5-9865-81B4692A371D",
+            "caseInstanceUUID": "2C1C38F6-E26B-4046-B5BD-B250CADF17C7",
+            "caseNumber": "CL-2025-0521",
+            "groupName": "Hanson, J.",
+            "groupOrderBy": 3,
+            "title": "M.G. v. Chambers County Department of Human Resources (Appeal from Chambers Juvenile Court:  JU-23-51.02).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 3
+        },
+        {
+            "publicationItemUUID": "98B6CF09-1A91-4D1E-8B3E-2A0A02B175AC",
+            "caseInstanceUUID": "3B68EA71-DA75-48FB-A7B8-BB2828103D87",
+            "caseNumber": "CL-2025-0419",
+            "groupName": "Moore, P.J.",
+            "groupOrderBy": 1,
+            "title": "Dr. Scott Harris, in his official capacity as the State Health Officer v. Oasis Family Birthing Center, LLC, Dr. Heather Skanes,  Alabama Birth Center, Dr. Yashica Robinson, Alabama Affiliate of the American College of Nurse-Midwives, Jo Crawford, and Tracie Stone (Appeal from Montgomery Circuit Court:  CV-23-901109).",
+            "decision": "Decision - Reversed and Judgment Rendered.",
+            "orderBy": 3,
+            "documents": [
+                {
+                    "documentLinkUUID": "D2BD4025-5AFE-4651-8D63-B0B00F45FA95",
+                    "documentName": "Decision - Distributed"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "CACB884F-4EEA-4A92-8FDF-82C6FCA73F25",
+            "caseInstanceUUID": "84750A75-4BCD-4352-819C-6E3B52642917",
+            "caseNumber": "CL-2025-0116",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 6,
+            "title": "Billy Ray Morris v. Celeste R. Lazzari and Cynthia Lazzari (Appeal from Baldwin Circuit Court:  CV-19-900912).",
+            "decision": "Rehearing - Overruled",
+            "orderBy": 3,
+            "documents": [
+                {
+                    "documentLinkUUID": "218695E8-6B77-4914-BCA9-421159159B8C",
+                    "documentName": "Decision - Distributed"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "D2BA301E-EE64-4256-9120-1E6F32EBCEE8",
+            "caseInstanceUUID": "BDFFECEA-69E4-4199-85AC-936472A46314",
+            "caseNumber": "CL-2025-0637",
+            "groupName": "Hanson, J.",
+            "groupOrderBy": 3,
+            "title": "William Petraszewsky v. Ronald Shepard (Appeal from Madison Circuit Court:  DR-01-419.01).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 4
+        },
+        {
+            "publicationItemUUID": "19BD74CE-AEBF-4D96-AF0A-ACE9C0E73CDE",
+            "caseInstanceUUID": "B45805A9-3650-4EDD-93A0-7373428E4853",
+            "caseNumber": "CL-2025-0434",
+            "groupName": "Moore, P.J.",
+            "groupOrderBy": 1,
+            "title": "Sharon Tubbs Owen v. Michael Owen (Appeal from Lowndes Circuit Court:  DR-24-900017).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 4
+        },
+        {
+            "publicationItemUUID": "6F8E8634-F6C7-47C9-A449-4635A757FE79",
+            "caseInstanceUUID": "52CFAEFC-D272-4F92-8566-AEE18D7BE0B4",
+            "caseNumber": "CL-2025-0369",
+            "groupName": "Edwards, J.",
+            "groupOrderBy": 2,
+            "title": "M.B.C. v. Shelby County Department of Human Resources (Appeal from Shelby Juvenile Court:  JU-24-655.02).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 4
+        },
+        {
+            "publicationItemUUID": "76AF50D3-1741-4277-A046-634631154A38",
+            "caseInstanceUUID": "2949A14B-4F35-4B4A-8D15-CBE14CCB85BA",
+            "caseNumber": "CL-2025-0805",
+            "groupName": "Hanson, J.",
+            "groupOrderBy": 3,
+            "title": "T.H. v. Jefferson County Department of Human Resources (Appeal from Jefferson Juvenile Court: JU-13-160.05).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 5
+        },
+        {
+            "publicationItemUUID": "7DA48D3F-7CE2-4203-A6FC-3921EF41A948",
+            "caseInstanceUUID": "DE452D2F-650F-4D80-BA69-26FBB9EB649A",
+            "caseNumber": "CL-2025-0731",
+            "groupName": "Moore, P.J.",
+            "groupOrderBy": 1,
+            "title": "State of Alabama v. $1,594 in U.S. Currency (Appeal from Tuscaloosa Circuit Court: CV-20-900714).",
+            "decision": "Decision - Affirmed by Unpublished Memorandum.",
+            "orderBy": 5
         }
-      ]
-    }
-  ]
+    ]
 }
