@@ -46,10 +46,8 @@ class Site(OpinionSiteLinear):
         return super()._download(request_dict)
 
     def _process_html(self):
-        item = self.html
-
-        date_filed = item["publicationDate"][:10]
-        for publicationItem in item["publicationItems"]:
+        date_filed = self.html["publicationDate"][:10]
+        for publicationItem in self.html["publicationItems"]:
             if not publicationItem.get("documents", []):
                 continue
 
