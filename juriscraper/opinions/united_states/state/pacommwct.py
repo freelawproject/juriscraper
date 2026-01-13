@@ -29,8 +29,16 @@ class Site(pasuperct.Site):
     # and avoid triggering the example requirement from
     # tests.local.test_ScraperExtractFromTextTest
     extract_from_text = OpinionSite.extract_from_text
+    post_type_key = "PostingTypeId"
 
     def __init__(self, *args, **kwargs):
+        """About postTypes
+        complete = Complete Opinion
+        mo = majority opinion
+        opc = opinion per curiam
+        pn = Previous Non-reported Opinion
+        sjo = single judge opinion
+        """
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.regex = re.compile(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")

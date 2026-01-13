@@ -82,6 +82,7 @@ class AutoLoggingException(Exception):
         logger: Optional[logging.Logger] = None,
         logging_level: Optional[int] = None,
         fingerprint: Optional[list[str]] = None,
+        data: Optional[dict] = None,
     ):
         if not message:
             message = self.message
@@ -93,6 +94,9 @@ class AutoLoggingException(Exception):
         log_kwargs = {}
         if fingerprint:
             log_kwargs["extra"] = {"fingerprint": fingerprint}
+
+        # pass custom data that an outer try/except block can access
+        self.data = data
 
         logger.log(logging_level, message, **log_kwargs)
         super().__init__(message)
