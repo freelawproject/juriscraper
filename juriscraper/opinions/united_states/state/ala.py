@@ -22,7 +22,13 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"{self.base_url}/courts/cms/publications?courtID={self.court_str}&page=0&size=25&sort=publicationDate%2Cdesc"
+        self.url = f"{self.base_url}/courts/cms/publications"
+        self.request["parameters"]["params"] = {
+            "courtID": self.court_str,
+            "page": 0,
+            "size": 25,
+            "sort": "publicationDate,desc",
+        }
         self.should_have_results = True
 
     def _download(self, request_dict=None):
@@ -41,8 +47,9 @@ class Site(OpinionSiteLinear):
         releases = html["_embedded"]["results"]
         publication_uuid = releases[0].get("publicationUUID")
 
-        # Fetch detailed publication data
+        # Fetch detailed publication data (no params needed for this endpoint)
         self.url = f"{self.base_url}/courts/{self.court_str}/cms/publication/{publication_uuid}"
+        self.request["parameters"]["params"] = {}
         return super()._download(request_dict)
 
     def _process_html(self):
