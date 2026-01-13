@@ -12,7 +12,7 @@ History:
 import re
 from datetime import date, datetime, timedelta
 from typing import Optional
-from urllib.parse import urljoin, quote
+from urllib.parse import quote, urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_visible_text
@@ -145,7 +145,9 @@ class Site(OpinionSiteLinear):
             file_url = opinion.get("FileUrl", "")
             decision_type = opinion.get("DecisionType", "")
             html_summary = opinion.get("Summary", "")
-            summary = get_visible_text(html_summary).strip() if html_summary else ""
+            summary = (
+                get_visible_text(html_summary).strip() if html_summary else ""
+            )
             # Normalize whitespace in summary
             summary = " ".join(summary.split())
 
@@ -156,7 +158,9 @@ class Site(OpinionSiteLinear):
                     "date": opinion.get("FilingDate", ""),
                     "url": urljoin(self.base_url, quote(file_url, safe="/:@")),
                     "status": self.status_map.get(decision_type, "Unknown"),
-                    "author": self._extract_author(opinion.get("OpinionJudges", [])),
+                    "author": self._extract_author(
+                        opinion.get("OpinionJudges", [])
+                    ),
                     "summary": summary,
                 }
             )
@@ -174,7 +178,11 @@ class Site(OpinionSiteLinear):
         :return: Author name or empty string
         """
         author = next(
-            (p for p in judges if p.get("DecisionInvolvementType") == "Author"),
+            (
+                p
+                for p in judges
+                if p.get("DecisionInvolvementType") == "Author"
+            ),
             None,
         )
         if not author:
