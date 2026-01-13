@@ -8,24 +8,32 @@ import re
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
+
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
 
 
 class Site(ClusterSite):
+    first_opinion_date = datetime(1993, 1, 22)
+    days_interval = 7
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.status = "Unknown"
         self.should_have_results = True
-        self.first_opinion_date = datetime(1993, 1, 22)
-        self.days_interval = 7
         self.make_backscrape_iterable(kwargs)
+
         # we got this UA whitelisted #1689
         self.request["headers"] = {"User-Agent": "Juriscraper"}
         self.needs_special_headers = True
+
+        self.section_selector = "views-field-field-opinions-case-number"
+        # the docket will be the first no empty floating text in the "section"
+        self.docket_xpath = ".//p/text()[normalize-space()]"
 
     def _process_html(self):
         """
@@ -44,21 +52,17 @@ class Site(ClusterSite):
                 .strip()
             )
             section = row.xpath(
-                ".//td[contains(@class, 'views-field-field-opinions-case-number')]"
+                f".//td[contains(@class, '{self.section_selector}')]"
             )[0]
             url = section.xpath(".//a")[0].get("href")
 
-            name_text = section.xpath(".//a")[0].text_content()
-            name, opinion_type = self.extract_type(name_text)
+            summary = self.get_summary(section)
+            # prevent picking up one of the judge containers
+            if "Judge:" in summary:
+                summary = ""
 
-            # the docket will be the first no empty floating text
-            docket_xpath = ".//p/text()[normalize-space()]"
-            judge = (
-                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
-                .strip()
-                .split(":", 1)[1]
-                .strip()
-            )
+            name_text = section.xpath(".//a")[0].text_content()
+            name, opinion_type = self.extract_type(name_text, summary)
 
             # may be empty
             lower_court_judge = section.xpath(
@@ -69,19 +73,12 @@ class Site(ClusterSite):
                     lower_court_judge[0].split(":", 1)[1].strip()
                 )
 
-            # the summary will be the last non empty p or p/span
-            summary_container = section.xpath(".//p")
-            if not (
-                summary := summary_container[-1].xpath("string(.)").strip()
-            ):
-                summary = summary_container[-2].xpath("string(.)")
-            # text inside may be separated by <br> tags
-            summary = re.sub(r"\s+", " ", summary)
-
-            # prevent picking up one of the judge containers
-            if "Judge:" in summary:
-                summary = ""
-
+            judge = (
+                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
+                .strip()
+                .split(":", 1)[1]
+                .strip()
+            )
             per_curiam = False
             if "curiam" in judge.lower():
                 judge = ""
@@ -91,7 +88,7 @@ class Site(ClusterSite):
                 "date": date,
                 "url": url,
                 "name": name.strip(),
-                "docket": section.xpath(docket_xpath)[0].strip(),
+                "docket": section.xpath(self.docket_xpath)[0].strip(),
                 "judge": judge,
                 "author": judge,
                 "lower_court_judge": lower_court_judge or "",
@@ -100,51 +97,14 @@ class Site(ClusterSite):
                 "type": opinion_type,
             }
 
-            if self.cluster_opinions(case_dict):
+            # attempt to merge with previous cases
+            if cluster := self.cluster_opinions(case_dict, self.cases):
+                # add to the cluster
+                cluster["judge"] += f"; {case_dict['judge']}"
                 logger.info("Clustered opinions into %s", self.cases[-1])
                 continue
 
             self.cases.append(case_dict)
-
-    def cluster_opinions(self, case_dict: dict) -> bool:
-        """Try to cluster current opinion with previous opinions
-
-        :param case_dict: current case dict
-        :return: True if current case dict was clustered
-        """
-        # first parsed case
-        if not self.cases:
-            return False
-
-        candidate_cluster = self.cases[-1]
-
-        # all of these should be the same for this to be considered a cluster
-        if (
-            case_dict["name"] != candidate_cluster["name"]
-            or case_dict["docket"] != candidate_cluster["docket"]
-            or case_dict["date"] != candidate_cluster["date"]
-        ):
-            return False
-
-        opinion_fields = ["type", "url", "per_curiam", "author"]
-
-        # if the sub_opinions list does not exist yet, build it from the existing
-        # candidate_cluster
-        sub_opinions = candidate_cluster.get("sub_opinions")
-        if not sub_opinions:
-            candidate_cluster["sub_opinions"] = [
-                {key: candidate_cluster.pop(key) for key in opinion_fields}
-            ]
-
-        # add the new opinion to the cluster
-        candidate_cluster["sub_opinions"].append(
-            {key: case_dict.pop(key) for key in opinion_fields}
-        )
-
-        # add to the cluster
-        candidate_cluster["judge"] += f"; {case_dict['judge']}"
-
-        return True
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.
@@ -190,7 +150,7 @@ class Site(ClusterSite):
 
         return ""
 
-    def extract_type(self, raw_name: str) -> tuple[str, str]:
+    def extract_type(self, raw_name: str, summary: str) -> tuple[str, str]:
         """
         Find the opinion type if it exists and clean it out fo the name
 
@@ -202,6 +162,7 @@ class Site(ClusterSite):
             "State of Tennessee v. Tabitha Gentry (AKA ABKA RE BAY)"
 
         :param raw_name: full name including opinion type
+        :param summary: summary of the opinion
         :return: (Standardized type string from types_mapping, name cleaned of the type)
         """
         # everything between a dash or parenthesis and the end of the string
@@ -211,8 +172,14 @@ class Site(ClusterSite):
             type_string = match.group(0)
         lower_type = type_string.lower()
 
-        concur = "concur" in lower_type
-        dissent = "dissent" in lower_type
+        # Use specific patterns to avoid false positives like "concurrent"
+        # Match "concurring" or "concurrence" but not "concurrent"
+        concur = "concur" in lower_type or re.search(
+            r"\bconcur(?:ring|rence|s)?\b", summary, re.IGNORECASE
+        )
+        dissent = "dissent" in lower_type or re.search(
+            r"\bdissent(?:ing|s)?\b", summary, re.IGNORECASE
+        )
         not_join = "not join" in lower_type
 
         op_type = ""
@@ -253,3 +220,20 @@ class Site(ClusterSite):
         )
         self.html = self._download()
         self._process_html()
+
+    def get_summary(self, section: HtmlElement) -> str:
+        """Get the summary
+
+        :param section: the html element containing the case summary
+        :return the parsed summary
+        """
+        # the summary will be the last non empty p or p/span
+        summary_container = section.xpath(".//p")
+
+        if not (summary := summary_container[-1].xpath("string(.)").strip()):
+            summary = summary_container[-2].xpath("string(.)")
+
+        # text inside may be separated by <br> tags
+        summary = re.sub(r"\s+", " ", summary)
+
+        return summary

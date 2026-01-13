@@ -95,7 +95,7 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
     ordinal = coa_name.split()[0]
-    return COA_ORDINAL_MAP[ordinal.lower()]
+    return COA_ORDINAL_MAP.get(ordinal.lower(), CourtID.UNKNOWN)
 
 
 class TexasAppealsCourt(TypedDict):
@@ -145,9 +145,12 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     }
     justice_node = case_info.get("COA Justice")
 
+    case_url_node = case_info["COA Case"].find(".//a")
+    if case_url_node is None:
+        case_url_node = {}
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
-        case_url=case_info["COA Case"].find(".//a").get("href"),
+        case_url=case_url_node.get("href", ""),
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=clean_string(case_info["COA District"].text_content()),
@@ -295,10 +298,22 @@ class TexasCommonData(TypedDict):
 
 
 DOCKET_NUMBER_REGEXES = [
-    re.compile(r"\d{2}-\d{4}"),  # Supreme Court
+    re.compile(r"\d{1,2}[bB]?-\d{4}"),  # Supreme Court
+    re.compile(r"\d{5}"),  # Supreme Court (older writs)
+    re.compile(r"[ABC]-\d+"),  # Supreme Court (older cases)
     re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
-    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals
+    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals (petitions)
+    re.compile(r"WR-[\d,]+-\d{2}"),  # Court of Criminal Appeals (writs)
+    re.compile(r"AP-[\d,]+"),  # Court of Criminal Appeals (Appeal Case Type)
+    re.compile(
+        r"(B-3872A|D-0190|D-2169|D-4261|A-\d{4}-A)"
+    ),  # Oddly numbered cases that appear to be valid
 ]
+#  These exist, but look like bad data to me. It's fine if they're flagged
+#  as part of scraping.
+#    re.compile(
+#        r"(07-07-0MISC-CV|07-07-0SHEP-CV|100TH DAY = 10)"
+#    ),
 
 
 class TexasCommonScraper(AbstractParser[TexasCommonData]):
@@ -438,7 +453,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         "|".join(
             [
                 r"(?:(,\s+)?" + r"\.?".join(list(acronym)) + r"\.?)"
-                for acronym in ["LLC", "MD", "PA"]
+                for acronym in ["LLC", "MD", "PA", "Inc"]
             ]
         ),
         re.IGNORECASE,
@@ -478,6 +493,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         # If we failed to find the party name in the case name by treating
         # it as a person's name, assume that the comma indicates a list of
         # parties
+        # Also split on " and " since party names may join multiple entities
+        # with "and" (e.g., "Adolfo Rafael Vivas and Still American, LLC")
+        expanded_parts = []
+        for part in party_name_parts:
+            expanded_parts.extend(
+                p.strip() for p in part.split(" and ") if p.strip()
+            )
+        party_name_parts = expanded_parts
         # Strip out acronyms like LLC, MD, and PA so they don't clutter things
         party_name_parts = filter(
             lambda part: not self.BUSINESS_AND_TITLE_STRIP_RE.fullmatch(part),
@@ -490,6 +513,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             (self.case_name_full.lower().find(part), part)
             for part in party_name_parts
         ]
+
         party_name_parts_indexed.sort(key=lambda x: x[0])
         start = party_name_parts_indexed[0][0]
         end = party_name_parts_indexed[-1][0] + len(
@@ -529,14 +553,16 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         semi = name_part.find(";")
         if semi > 0:
             return name_part[:semi]
-
         party_indices = [
             self._find_party_in_case_name(party["name"]) for party in parties
         ]
         party_indices.sort(key=lambda x: x[0])
-        start, end = next(
-            indices for indices in party_indices if indices[0] >= 0
-        )
+        try:
+            start, end = next(
+                indices for indices in party_indices if indices[0] >= 0
+            )
+        except StopIteration:
+            return name_part
         return self.case_name_full[start:end]
 
     @cached_property
@@ -641,6 +667,10 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
         )
         parties = parse_table(table)
+        # Handle "no records" case where Party column has a placeholder but
+        # other columns are empty
+        if len(parties["PartyType"]) == 0:
+            return []
         n_parties = len(parties["Party"])
 
         return [
