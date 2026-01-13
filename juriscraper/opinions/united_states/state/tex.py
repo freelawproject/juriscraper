@@ -58,12 +58,13 @@ class Site(OpinionSiteLinear):
         if not self.is_backscrape and not self.test_mode_enabled():
             self.html = super()._download(request_dict)
             links = self.html.xpath(self.link_xp)
-            if links:
-                self.url = links[-1]
-            else:
-                return self.html
-        self.html = super()._download(request_dict)
+            if not links:
+                # No orders posted yet (common in early January)
+                self.html = None
+                return None
+            self.url = links[-1]
 
+        self.html = super()._download(request_dict)
         return self.html
 
     def _process_html(self) -> None:
@@ -71,7 +72,7 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        if not self.html.xpath(self.date_xp):
+        if self.html is None:
             return
 
         date = self.html.xpath(self.date_xp)[0].strip()
