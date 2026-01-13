@@ -1,6 +1,7 @@
 """Scraper for the Arizona Supreme Court
 CourtID: ariz
 Court Short Name: Ariz.
+Court Contact: aaborns@courts.az.gov
 
 History:
     2013-04-05: Created by Michael Lissner
@@ -11,9 +12,10 @@ History:
 import re
 from datetime import date, datetime, timedelta
 from typing import Optional
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.html_utils import get_visible_text
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -25,6 +27,22 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1998, 1, 1)
     days_interval = 30
 
+    # XPaths for extracting authentication values
+    module_xp = "//div[contains(@id, 'app-container-')]/@id"
+    tab_xp = "//script[contains(text(), 'g_dnnsfState')]/text()"
+    token_xp = "//input[@name='__RequestVerificationToken']/@value"
+
+    # Static API parameters
+    params = [
+        "searchPhrase=",
+        "decisionType=",
+        "decisionInvolvementType=",
+        "judgeId=",
+        "caseType=",
+        "caseSubType=",
+        "constitutionalityOpinionsOnly=false",
+    ]
+
     # Map API decision types to precedential status
     status_map = {
         "Opinion": "Published",
@@ -35,10 +53,9 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.verification_token = None
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=7)
-        self.url = self._build_api_url(self.start_date, self.end_date)
+        self.url = urljoin(self.base_url, self.search_page_path)
         self.make_backscrape_iterable(kwargs)
 
     def _build_api_url(
@@ -54,57 +71,37 @@ class Site(OpinionSiteLinear):
         :param page: Page number (0-indexed)
         :return: Full API URL
         """
-        params = [
-            "searchPhrase=",
-            f"startDate={start_date.strftime('%Y-%m-%d') or ''}",
-            f"endDate={end_date.strftime('%Y-%m-%d') or ''}",
+        dynamic_params = [
+            f"startDate={start_date.strftime('%Y-%m-%d') if start_date else ''}",
+            f"endDate={end_date.strftime('%Y-%m-%d') if end_date else ''}",
             f"court={self.court_param}",
-            "decisionType=",
-            "decisionInvolvementType=",
-            "judgeId=",
-            "caseType=",
-            "caseSubType=",
-            "constitutionalityOpinionsOnly=false",
             f"page={page}",
         ]
+
+        params = self.params + dynamic_params
         return f"{self.base_url}/API/Azcourts/Opinions/GetOpinions?{'&'.join(params)}"
 
-    def _get_verification_token(self) -> None:
-        """Fetch the search page to get the verification token, module_id, and tab_id.
+    def _set_auth_headers(self, html) -> None:
+        """Extract and set authentication headers from HTML page.
 
-        The session cookies are automatically stored in self.request["session"].
-        Sets self.verification_token, self.module_id, and self.tab_id.
-
+        :param html: Parsed HTML page (lxml element)
         :return: None
         """
-        search_url = urljoin(self.base_url, self.search_page_path)
-        logger.info("Fetching verification token from %s", search_url)
+        module_id_attr = html.xpath(self.module_xp)[0]
+        module_id = re.search(r"app-container-(\d+)", module_id_attr).group(1)
 
-        self._request_url_get(search_url)
-        html_content = self.request["response"].text
+        tab_script = html.xpath(self.tab_xp)[0]
+        tab_id = re.search(r'"tabId":(\d+)', tab_script).group(1)
 
-        # Extract the __RequestVerificationToken from the hidden input
-        token_match = re.search(
-            r'name="__RequestVerificationToken"[^>]*value="([^"]+)"',
-            html_content,
+        token = html.xpath(self.token_xp)[0]
+
+        self.request["headers"].update(
+            {
+                "ModuleId": module_id,
+                "TabId": tab_id,
+                "RequestVerificationToken": token,
+            }
         )
-        if not token_match:
-            raise ValueError(
-                "Could not find __RequestVerificationToken in page"
-            )
-        self.verification_token = token_match.group(1)
-
-        # Extract tabId from g_dnnsfState JavaScript variable
-        tab_match = re.search(r'"tabId":(\d+)', html_content)
-        if not tab_match:
-            raise ValueError("Could not find tabId in page")
-        self.tab_id = tab_match.group(1)
-
-        # Extract moduleId from app-container element
-        module_match = re.search(r"app-container-(\d+)", html_content)
-        if not module_match:
-            raise ValueError("Could not find moduleId in page")
-        self.module_id = module_match.group(1)
 
     def _download(self, request_dict=None):
         """Override download to add authentication headers.
@@ -119,20 +116,12 @@ class Site(OpinionSiteLinear):
         if self.test_mode_enabled():
             return super()._download(request_dict)
 
-        # Get the verification token (also sets up session cookies)
-        if not self.verification_token:
-            self._get_verification_token()
+        # Fetch search page and extract auth headers
+        html = super()._download()
+        self._set_auth_headers(html)
 
-        # Set up headers for the API request
-        self.request["headers"].update(
-            {
-                "ModuleId": self.module_id,
-                "TabId": self.tab_id,
-                "RequestVerificationToken": self.verification_token,
-            }
-        )
-
-        # Make the API request
+        # Build API URL and fetch JSON
+        self.url = self._build_api_url(self.start_date, self.end_date)
         return super()._download(request_dict)
 
     def _process_html(self) -> None:
@@ -153,35 +142,24 @@ class Site(OpinionSiteLinear):
         )
 
         for opinion in json_response.get("Opinions", []):
-            case_name = titlecase(opinion.get("Title", ""))
-            docket = opinion.get("CaseNumber", "")
-            date_filed = opinion.get("FilingDate", "")
             file_url = opinion.get("FileUrl", "")
             decision_type = opinion.get("DecisionType", "")
             html_summary = opinion.get("Summary", "")
-            summary = re.sub(
-                r"<[^>]+>", "", html_summary
-            ).strip()  # remove html tags from summary
-            # Build full URL for the PDF
-            url = urljoin(self.base_url, file_url)
+            summary = get_visible_text(html_summary).strip() if html_summary else ""
+            # Normalize whitespace in summary
+            summary = " ".join(summary.split())
 
-            # Map decision type to status
-            status = self.status_map.get(decision_type, "Unknown")
-
-            # Extract author
-            author = self._extract_author(opinion.get("OpinionJudges", []))
-
-            case = {
-                "name": case_name,
-                "docket": docket,
-                "date": date_filed,
-                "url": url,
-                "status": status,
-                "author": author,
-                "summary": summary,
-            }
-
-            self.cases.append(case)
+            self.cases.append(
+                {
+                    "name": titlecase(opinion.get("Title", "")),
+                    "docket": opinion.get("CaseNumber", ""),
+                    "date": opinion.get("FilingDate", ""),
+                    "url": urljoin(self.base_url, quote(file_url, safe="/:@")),
+                    "status": self.status_map.get(decision_type, "Unknown"),
+                    "author": self._extract_author(opinion.get("OpinionJudges", [])),
+                    "summary": summary,
+                }
+            )
 
         # Handle pagination if not in test mode
         if not self.test_mode_enabled():
@@ -195,33 +173,29 @@ class Site(OpinionSiteLinear):
         :param judges: List of judge dictionaries from API
         :return: Author name or empty string
         """
-        for judge in judges:
-            if judge.get("DecisionInvolvementType") == "Author":
-                first = judge.get("FirstName", "")
-                middle = judge.get("MiddleName", "")
-                last = judge.get("LastName", "")
-                suffix = judge.get("Suffix", "")
-                return " ".join(filter(None, [first, middle, last, suffix]))
-        return ""
+        author = next(
+            (p for p in judges if p.get("DecisionInvolvementType") == "Author"),
+            None,
+        )
+        if not author:
+            return ""
+        name = f"{author.get('FirstName', '')} {author.get('MiddleName', '')} {author.get('LastName', '')}".strip()
+        name = " ".join(name.split())  # Normalize whitespace
+        if author.get("Suffix"):
+            name = f"{name}, {author['Suffix']}"
+        return name
 
     def _fetch_next_page(self, page: int) -> None:
         """Fetch next page of results.
 
+        Auth headers are already set from the initial download.
+
         :param page: Page number to fetch from
         :return: None
         """
-        self.url = self._update_page_in_url(self.url, page)
-        self.html = self._download()
+        self.url = self._build_api_url(self.start_date, self.end_date, page)
+        self.html = super()._download()
         self._process_html()
-
-    def _update_page_in_url(self, url: str, page: int) -> str:
-        """Update the page parameter in a URL.
-
-        :param url: The URL to update
-        :param page: New page number
-        :return: Updated URL
-        """
-        return re.sub(r"page=\d+", f"page={page}", url)
 
     def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request for backscraping.
@@ -229,15 +203,13 @@ class Site(OpinionSiteLinear):
         :param dates: (start_date, end_date) tuple
         :return: None
         """
-        start, end = dates
-        logger.info("Backscraping for range %s to %s", start, end)
-
-        start_str = start
-        end_str = end
-
-        self.url = self._build_api_url(
-            start_date=start_str, end_date=end_str, page=0
+        self.start_date, self.end_date = dates
+        logger.info(
+            "Backscraping for range %s to %s", self.start_date, self.end_date
         )
+
+        # Reset URL to search page so _download fetches fresh auth tokens
+        self.url = urljoin(self.base_url, self.search_page_path)
         self.html = self._download()
         self._process_html()
 
