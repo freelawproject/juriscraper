@@ -12,7 +12,7 @@ History:
 import re
 from datetime import date, datetime, timedelta
 from typing import Optional
-from urllib.parse import quote, urljoin
+from urllib.parse import quote, urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_visible_text
@@ -33,21 +33,21 @@ class Site(OpinionSiteLinear):
     token_xp = "//input[@name='__RequestVerificationToken']/@value"
 
     # Static API parameters
-    params = [
-        "searchPhrase=",
-        "decisionType=",
-        "decisionInvolvementType=",
-        "judgeId=",
-        "caseType=",
-        "caseSubType=",
-        "constitutionalityOpinionsOnly=false",
-    ]
+    params = {
+        "searchPhrase": "",
+        "decisionType": "",
+        "decisionInvolvementType": "",
+        "judgeId": "",
+        "caseType": "",
+        "caseSubType": "",
+        "constitutionalityOpinionsOnly": "false",
+    }
 
     # Map API decision types to precedential status
+    # Note: "Decord" (Decision Order) entries are procedural orders, not opinions
     status_map = {
         "Opinion": "Published",
         "Memo": "Unpublished",
-        "Decord": "Unpublished",
     }
 
     def __init__(self, *args, **kwargs):
@@ -57,11 +57,12 @@ class Site(OpinionSiteLinear):
         self.start_date = self.end_date - timedelta(days=7)
         self.url = urljoin(self.base_url, self.search_page_path)
         self.make_backscrape_iterable(kwargs)
+        self.opinions_url = f"{self.base_url}/API/Azcourts/Opinions/GetOpinions"
 
     def _build_api_url(
         self,
-        start_date: Optional[date] = None,
-        end_date: Optional[date] = None,
+        start_date: Optional[date],
+        end_date: Optional[date],
         page: int = 0,
     ) -> str:
         """Build the API URL with query parameters.
@@ -71,15 +72,14 @@ class Site(OpinionSiteLinear):
         :param page: Page number (0-indexed)
         :return: Full API URL
         """
-        dynamic_params = [
-            f"startDate={start_date.strftime('%Y-%m-%d') if start_date else ''}",
-            f"endDate={end_date.strftime('%Y-%m-%d') if end_date else ''}",
-            f"court={self.court_param}",
-            f"page={page}",
-        ]
-
-        params = self.params + dynamic_params
-        return f"{self.base_url}/API/Azcourts/Opinions/GetOpinions?{'&'.join(params)}"
+        params = {
+            **self.params,
+            "startDate": start_date.strftime("%Y-%m-%d"),
+            "endDate": end_date.strftime("%Y-%m-%d"),
+            "court": self.court_param,
+            "page": page,
+        }
+        return f"{self.opinions_url}?{urlencode(params)}"
 
     def _set_auth_headers(self) -> None:
         """Extract and set authentication headers from HTML page.
@@ -136,20 +136,26 @@ class Site(OpinionSiteLinear):
         )
 
         for opinion in json_response.get("Opinions", []):
-            file_url = opinion.get("FileUrl", "")
-            decision_type = opinion.get("DecisionType", "")
-            html_summary = opinion.get("Summary", "")
-            summary = (
-                get_visible_text(html_summary).strip() if html_summary else ""
-            )
+            decision_type = opinion["DecisionType"]
+            # Skip Decord (Decision Order) - these are procedural orders, not opinions
+            if decision_type not in self.status_map:
+                continue
+            file_url = opinion["FileUrl"]
+
+            html_summary = opinion["Summary"]
+            summary = ""
+            if html_summary:
+                summary = (
+                    get_visible_text(html_summary).strip()
+                )
             # Normalize whitespace in summary
             summary = " ".join(summary.split())
 
             self.cases.append(
                 {
-                    "name": titlecase(opinion.get("Title", "")),
-                    "docket": opinion.get("CaseNumber", ""),
-                    "date": opinion.get("FilingDate", ""),
+                    "name": titlecase(opinion["Title"]),
+                    "docket": opinion["CaseNumber"],
+                    "date": opinion["FilingDate"],
                     "url": urljoin(self.base_url, quote(file_url, safe="/:@")),
                     "status": self.status_map.get(decision_type, "Unknown"),
                     "author": self._extract_author(
