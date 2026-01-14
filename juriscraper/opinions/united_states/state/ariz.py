@@ -28,7 +28,7 @@ class Site(OpinionSiteLinear):
     days_interval = 30
 
     # XPaths for extracting authentication values
-    module_xp = "//div[contains(@id, 'app-container-')]/@id"
+    module_xp = "//div[@id='dnn_ContentPane']/div/a/@name"
     tab_xp = "//script[contains(text(), 'g_dnnsfState')]/text()"
     token_xp = "//input[@name='__RequestVerificationToken']/@value"
 
@@ -81,25 +81,19 @@ class Site(OpinionSiteLinear):
         params = self.params + dynamic_params
         return f"{self.base_url}/API/Azcourts/Opinions/GetOpinions?{'&'.join(params)}"
 
-    def _set_auth_headers(self, html) -> None:
+    def _set_auth_headers(self) -> None:
         """Extract and set authentication headers from HTML page.
 
-        :param html: Parsed HTML page (lxml element)
         :return: None
         """
-        module_id_attr = html.xpath(self.module_xp)[0]
-        module_id = re.search(r"app-container-(\d+)", module_id_attr).group(1)
-
-        tab_script = html.xpath(self.tab_xp)[0]
+        tab_script = self.html.xpath(self.tab_xp)[0]
         tab_id = re.search(r'"tabId":(\d+)', tab_script).group(1)
-
-        token = html.xpath(self.token_xp)[0]
 
         self.request["headers"].update(
             {
-                "ModuleId": module_id,
+                "ModuleId": self.html.xpath(self.module_xp)[0],
                 "TabId": tab_id,
-                "RequestVerificationToken": token,
+                "RequestVerificationToken": self.html.xpath(self.token_xp)[0],
             }
         )
 
@@ -117,8 +111,8 @@ class Site(OpinionSiteLinear):
             return super()._download(request_dict)
 
         # Fetch search page and extract auth headers
-        html = super()._download()
-        self._set_auth_headers(html)
+        self.html = super()._download()
+        self._set_auth_headers()
 
         # Build API URL and fetch JSON
         self.url = self._build_api_url(self.start_date, self.end_date)
