@@ -1,7 +1,7 @@
 """Abstract base class for state-level docket enumeration scrapers.
 
 This module provides a base class for scrapers that enumerate dockets across
-multiple courts within a state. Unlike DocaaaaketSite which parses docket details,
+multiple courts within a state. Unlike DocketSite which parses docket details,
 BaseStateScraper is designed for discovering and listing dockets.
 """
 
@@ -11,7 +11,6 @@ from datetime import date
 from typing import (
     Any,
     Callable,
-    Final,
     Optional,
     TypedDict,
     TypeVar,
@@ -72,15 +71,6 @@ class ScraperRequestManager:
             )
 
         self.all_response_fn = all_response_fn
-
-    def __del__(self) -> None:
-        """Close the session when the manager is garbage collected."""
-        self.close()
-
-    def close(self) -> None:
-        """Close the HTTP session."""
-        if self.session:
-            self.session.close()
 
     def request(
         self,
@@ -150,8 +140,8 @@ class BaseStateScraper(ABC):
     """
 
     # Override in subclasses to add custom headers to all requests
-    ADDITIONAL_HEADERS: Final[Optional[dict[str, str]]] = None
-    COURT_IDS: Final[list[str]] = []
+    ADDITIONAL_HEADERS: Optional[dict[str, str]] = None
+    COURT_IDS: list[str] = []
 
     def __init__(
         self,
