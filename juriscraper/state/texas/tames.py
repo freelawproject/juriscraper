@@ -192,6 +192,14 @@ class TAMESScraper(BaseStateScraper):
             received_count = 0
             new_cases = 0
 
+            if (
+                result_count == self.MAX_RESULTS_PER_SEARCH
+                and start_date == current_end
+            ):
+                logger.warning(
+                    f"Single day search returned at least {self.MAX_RESULTS_PER_SEARCH} records. Unreliable scrape."
+                )
+
             for item in search_gen:
                 # All subsequent yields are TamesSearchRow
                 assert not isinstance(item, int)
