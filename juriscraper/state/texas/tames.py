@@ -116,6 +116,8 @@ class TAMESScraper(BaseStateScraper):
 
     COURT_IDS: Final[list[str]] = [c.value for c in CourtID]
 
+    MAX_RESULTS_PER_SEARCH: int = 1000
+
     def __init__(
         self,
         request_manager: Optional[ScraperRequestManager] = None,
@@ -244,18 +246,21 @@ class TAMESScraper(BaseStateScraper):
                 prior_last_day_result is not None
                 and redundant_cases != prior_last_day_result
             ) or received_count != result_count:
-                logger.warn(log_message)
+                logger.warning(log_message)
             else:
                 logger.info(log_message)
 
             prior_last_day_result = last_days_results
 
             # If we got less than 1k results, we're just done.
-            if received_count < 1000:
+            if received_count < self.MAX_RESULTS_PER_SEARCH:
                 current_end = start_date
 
             # The search may have some, but not all results for our first day
-            if received_count == 1000 and start_date == current_end:
+            if (
+                received_count == self.MAX_RESULTS_PER_SEARCH
+                and start_date == current_end
+            ):
                 overlap_start = True
 
     def _fetch_search_form(self) -> None:
