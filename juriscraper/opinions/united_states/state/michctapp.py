@@ -6,17 +6,20 @@ Reviewer: mlr
 History:
     - 2014-09-19: Created by Jon Andersen
     - 2022-01-28: Updated for new web site, @satsuki-chan.
+    - 2026-01-14: Updated for new secondary request url
 """
 
 import re
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import mich
 
 
 class Site(mich.Site):
     court = "Court Of Appeals"
+    extract_from_text = OpinionSite.extract_from_text
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -28,7 +31,7 @@ class Site(mich.Site):
         """Try to get the case name using a secondary request
 
         Example of the content in the URL
-        https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/377920
+        https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery=371918
 
         :param item: the opinion item from the API
         :return: case name and docket number
@@ -48,18 +51,14 @@ class Site(mich.Site):
             logger.error("michctapp: could not get docket number", extra=item)
             return "Placeholder name", "Placeholder docket"
 
-        url = f"https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/{docket_number}"
+        url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
         self._request_url_get(url)
         response = self.request["response"].json()
-
-        if "error" in response:
-            logger.warning(
-                "michctapp: secondary request returned error: %s",
-                response["error"],
-            )
+        search_items = response.get("caseDetailResults", {}).get("searchItems", [])
+        if not search_items:
+            logger.error(f"michctapp: no results from search API for docket {docket_number}")
             return "Placeholder name", docket_number
-
-        return self.cleanup_case_name(response["title"]), docket_number
+        return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
     def get_disposition(self, item: dict) -> str:
         """Get the disposition value
@@ -77,36 +76,3 @@ class Site(mich.Site):
             .replace("L/Ct", "Lower Court")
             .strip()
         )
-
-    def extract_from_text(self, scraped_text: str) -> dict:
-        """Extract case name and docket number from opinion text
-
-        :param scraped_text: Text content of the opinion
-        :return: Dictionary with extracted case name and docket number
-        """
-        case_pattern = re.compile(
-            r"COURT OF APPEALS\s+"
-            r"(?P<plaintiff>[A-Z][A-Z\s]+?),.*?"
-            r"Plaintiff.*?"
-            r"v\s+.*?No\.\s*(?P<docket>\d{6}).*?"
-            r"(?P<defendant>[A-Z][A-Z\s]+?),.*?"
-            r"Defendant",
-            re.DOTALL,
-        )
-        if match := case_pattern.search(scraped_text[:2000]):
-            plaintiff = self.cleanup_case_name(match.group("plaintiff"))
-            defendant = self.cleanup_case_name(match.group("defendant"))
-            docket_number = match.group("docket")
-            case_name = f"{plaintiff} v. {defendant}"
-            return {
-                "OpinionCluster": {"case_name": case_name},
-                "Docket": {
-                    "case_name": case_name,
-                    "docket_number": docket_number,
-                },
-            }
-
-        logger.warning(
-            "michctapp: extract_from_text failed to match case pattern"
-        )
-        return {}

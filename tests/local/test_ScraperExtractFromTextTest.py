@@ -1663,20 +1663,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
-        "juriscraper.opinions.united_states.state.michctapp": [
-            (
-                '            If this opinion indicates that it is "FOR PUBLICATION," it is subject to\n                 revision until final publication in the Michigan Appeals Reports.\n\n\n\n\n                          STATE OF MICHIGAN\n\n                            COURT OF APPEALS\n\n\nPEOPLE OF THE STATE OF MICHIGAN,                                    UNPUBLISHED\n                                                                    December 26, 2025\n               Plaintiff-Appellee,                                  12:25 PM\n\nv                                                                   No. 366968\n                                                                    Wayne Circuit Court\nHOLLY CHRISTINE ALEXANDER,                                          LC No. 2022-025589-FH\n\n               Defendant-Appellant.\n\n\nBefore: GARRETT, P.J., and RICK and MARIANI, JJ.',
-                {
-                    "Docket": {
-                        "docket_number": "366968",
-                        "case_name": "People of the State of Michigan v. Holly Christine Alexander",
-                    },
-                    "OpinionCluster": {
-                        "case_name": "People of the State of Michigan v. Holly Christine Alexander",
-                    },
-                },
-            ),
-        ],
         "juriscraper.opinions.united_states.state.colo": [
             (
                 "<b></b><p><span> Thomas Ray Collins, Petitioner <br> v.</span><span> <br> The People of the State of Colorado.</span> Respondent </p>\n<p>No. 25SC546</p>\n<p><span>Supreme Court of Colorado, En Banc.</span></p>",
