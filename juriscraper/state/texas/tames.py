@@ -15,7 +15,7 @@ import time
 from collections.abc import Generator
 from datetime import date, datetime
 from typing import Final, Optional, Union
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
 
 from lxml import html
 
@@ -461,3 +461,11 @@ class TAMESScraper(BaseStateScraper):
             if match:
                 return int(match.group(1))
         return 0
+
+    @classmethod
+    def get_casemail_link(docket_number: str):
+        return f"https://casemail.txcourts.gov/CaseAdd.aspx?{urlencode({'FullCaseNumber': docket_number})}"
+
+    @classmethod
+    def get_docket_link(docket_number: str):
+        return f"https://search.txcourts.gov/Case.aspx?{urlencode({'cn': docket_number})}"
