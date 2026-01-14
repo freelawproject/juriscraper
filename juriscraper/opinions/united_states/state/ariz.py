@@ -57,7 +57,9 @@ class Site(OpinionSiteLinear):
         self.start_date = self.end_date - timedelta(days=7)
         self.url = urljoin(self.base_url, self.search_page_path)
         self.make_backscrape_iterable(kwargs)
-        self.opinions_url = f"{self.base_url}/API/Azcourts/Opinions/GetOpinions"
+        self.opinions_url = (
+            f"{self.base_url}/API/Azcourts/Opinions/GetOpinions"
+        )
 
     def _build_api_url(
         self,
@@ -145,9 +147,7 @@ class Site(OpinionSiteLinear):
             html_summary = opinion["Summary"]
             summary = ""
             if html_summary:
-                summary = (
-                    get_visible_text(html_summary).strip()
-                )
+                summary = get_visible_text(html_summary).strip()
             # Normalize whitespace in summary
             summary = " ".join(summary.split())
 
