@@ -212,7 +212,7 @@ class TAMESScraper(BaseStateScraper):
                             last_days_results += 1
                     except ValueError:
                         logger.warning(
-                            f"Missing/malformed filing date from case:{case}"
+                            "Missing/malformed filing date from case: %s", case
                         )
                         pass
                 if case["case_url"] in last_seen_case_urls:
@@ -229,7 +229,9 @@ class TAMESScraper(BaseStateScraper):
             ) and start_date < current_end:
                 # Occasionally, TAMES returns 0 rows on status 200 responses that succeed a moment later
                 logger.warning(
-                    f"Zero rows returned on a search with expected results: {start_date} to {current_end}"
+                    "Zero rows returned on a search with expected results: %s to %s",
+                    start_date,
+                    current_end,
                 )
                 search_retries += 1
                 time.sleep(search_retries)
@@ -242,7 +244,18 @@ class TAMESScraper(BaseStateScraper):
                     return
             search_retries = 0
 
-            log_message = f"Collected cases from {current_end} to {search_end}. {new_cases} new cases, {redundant_cases}/{prior_last_day_result} redundant, {received_count}[{result_count}] total"
+            log_message = (
+                "Collected cases from %s to %s. %s new cases, %s/%s redundant, %s[%s] total"
+                % (
+                    current_end,
+                    search_end,
+                    new_cases,
+                    redundant_cases,
+                    prior_last_day_result,
+                    received_count,
+                    result_count,
+                )
+            )
             if (
                 prior_last_day_result is not None
                 and redundant_cases != prior_last_day_result
@@ -267,7 +280,13 @@ class TAMESScraper(BaseStateScraper):
             # We may have 1k results for a single day
             if last_days_results == self.MAX_RESULTS_PER_SEARCH:
                 raise InsanityException(
-                    f"Single day search returned at least {self.MAX_RESULTS_PER_SEARCH} records. Courts: {','.join(courts)} . Date range: {start_date} to {current_end} . Unreliable TAMES scrape."
+                    "Single day search returned at least %s records. Courts: %s. Date range: %s to %s. Unreliable TAMES scrape."
+                    % (
+                        self.MAX_RESULTS_PER_SEARCH,
+                        ",".join(courts),
+                        start_date,
+                        current_end,
+                    )
                 )
 
     def _fetch_search_form(self) -> None:
