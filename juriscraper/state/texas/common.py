@@ -30,7 +30,7 @@ class CourtID(Enum):
     that TAMES uses. Used by consumers to deterministically identify courts.
     """
 
-    UNKNOWN = "texas_unknown"
+    UNKNOWN = "unknown"
     SUPREME_COURT = "tex"
     COURT_OF_CRIMINAL_APPEALS = "texcrimapp"
     FIRST_COURT_OF_APPEALS = "texctapp1"
