@@ -19,6 +19,7 @@ from urllib.parse import urljoin
 
 from lxml import html
 
+from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.BaseStateScraper import (
     BaseStateScraper,
@@ -192,14 +193,6 @@ class TAMESScraper(BaseStateScraper):
             received_count = 0
             new_cases = 0
 
-            if (
-                result_count == self.MAX_RESULTS_PER_SEARCH
-                and start_date == current_end
-            ):
-                logger.warning(
-                    f"Single day search returned at least {self.MAX_RESULTS_PER_SEARCH} records. Unreliable scrape."
-                )
-
             for item in search_gen:
                 # All subsequent yields are TamesSearchRow
                 assert not isinstance(item, int)
@@ -270,6 +263,12 @@ class TAMESScraper(BaseStateScraper):
                 and start_date == current_end
             ):
                 overlap_start = True
+
+            # We may have 1k results for a single day
+            if last_days_results == self.MAX_RESULTS_PER_SEARCH:
+                raise InsanityException(
+                    f"Single day search returned at least {self.MAX_RESULTS_PER_SEARCH} records. Courts: {','.join(courts)} . Date range: {start_date} to {current_end} . Unreliable TAMES scrape."
+                )
 
     def _fetch_search_form(self) -> None:
         """Fetch the search form page and extract hidden fields."""

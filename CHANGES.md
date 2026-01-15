@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 * Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
 
 Features:
+- Add enumerating texas supreme courts and court of appeals dockets #1756
 -
 
 Changes:
