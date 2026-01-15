@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "",
     "case_url": "",
+    "court_id": "texas_unknown",
     "disposition": "",
     "district": "",
     "justice": "",
@@ -42,7 +43,7 @@
   "case_name": "MARTINEZ, FRANCISCO C. v. The State of Texas",
   "case_name_full": "MARTINEZ, FRANCISCO C.",
   "case_type": "Original Writ of Mandamus",
-  "court_id": "texas_coscca",
+  "court_id": "texcrimapp",
   "date_filed": "2025-12-05",
   "docket_number": "WR-70,849-04",
   "parties": [
@@ -57,6 +58,7 @@
   "trial_court": {
     "case": "F02-72304-UM",
     "county": "Dallas",
+    "court_id": "texdistct195",
     "judge": "",
     "name": "194th District Court",
     "punishment": "",

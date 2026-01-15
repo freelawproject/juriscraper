@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "",
     "case_url": "",
+    "court_id": "texas_unknown",
     "disposition": "",
     "district": "",
     "justice": "",
@@ -46,13 +47,14 @@
   "case_name": "HURST v. SEARS ROEBUCK & CO.",
   "case_name_full": "HURST v. SEARS ROEBUCK & CO.",
   "case_type": "App Writ of Error",
-  "court_id": "texas_cossup",
+  "court_id": "tex",
   "date_filed": "1900-01-01",
   "docket_number": "C-2302",
   "parties": [],
   "trial_court": {
     "case": "",
     "county": "",
+    "court_id": "texcntyct",
     "judge": "",
     "name": "",
     "punishment": "",

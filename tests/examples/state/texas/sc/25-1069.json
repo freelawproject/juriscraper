@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "11-25-00030-CV",
     "case_url": "https://search.txcourts.gov/Case.aspx?cn=11-25-00030-CV",
+    "court_id": "texctapp11",
     "disposition": "Affirmed",
     "district": "11th Court of Appeals",
     "justice": "Honorable William Stacy Trotter",
@@ -104,7 +105,7 @@
   "case_name": "STEVE VAN HORNE v. CENTRAL APPRAISAL DISTRICT OF TAYLOR COUNTY",
   "case_name_full": "STEVE VAN HORNE v. CENTRAL APPRAISAL DISTRICT OF TAYLOR COUNTY",
   "case_type": "Motion for Extension of Time to File Petition for Review pursuant to Tex. R. App. P. 53.7(f)",
-  "court_id": "texas_cossup",
+  "court_id": "tex",
   "date_filed": "2025-12-01",
   "docket_number": "25-1069",
   "parties": [
@@ -127,6 +128,7 @@
   "trial_court": {
     "case": "51801-A",
     "county": "Taylor",
+    "court_id": "texdistct43",
     "judge": "Honorable James Eidson",
     "name": "42nd District Court",
     "punishment": "",

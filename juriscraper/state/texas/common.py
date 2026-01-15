@@ -31,23 +31,23 @@ class CourtID(Enum):
     """
 
     UNKNOWN = "texas_unknown"
-    SUPREME_COURT = "texas_cossup"
-    COURT_OF_CRIMINAL_APPEALS = "texas_coscca"
-    FIRST_COURT_OF_APPEALS = "texas_coa01"
-    SECOND_COURT_OF_APPEALS = "texas_coa02"
-    THIRD_COURT_OF_APPEALS = "texas_coa03"
-    FOURTH_COURT_OF_APPEALS = "texas_coa04"
-    FIFTH_COURT_OF_APPEALS = "texas_coa05"
-    SIXTH_COURT_OF_APPEALS = "texas_coa06"
-    SEVENTH_COURT_OF_APPEALS = "texas_coa07"
-    EIGHTH_COURT_OF_APPEALS = "texas_coa08"
-    NINTH_COURT_OF_APPEALS = "texas_coa09"
-    TENTH_COURT_OF_APPEALS = "texas_coa10"
-    ELEVENTH_COURT_OF_APPEALS = "texas_coa11"
-    TWELFTH_COURT_OF_APPEALS = "texas_coa12"
-    THIRTEENTH_COURT_OF_APPEALS = "texas_coa13"
-    FOURTEENTH_COURT_OF_APPEALS = "texas_coa14"
-    FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
+    SUPREME_COURT = "tex"
+    COURT_OF_CRIMINAL_APPEALS = "texcrimapp"
+    FIRST_COURT_OF_APPEALS = "texctapp1"
+    SECOND_COURT_OF_APPEALS = "texctapp2"
+    THIRD_COURT_OF_APPEALS = "texctapp3"
+    FOURTH_COURT_OF_APPEALS = "texctapp4"
+    FIFTH_COURT_OF_APPEALS = "texctapp5"
+    SIXTH_COURT_OF_APPEALS = "texctapp6"
+    SEVENTH_COURT_OF_APPEALS = "texctapp7"
+    EIGHTH_COURT_OF_APPEALS = "texctapp8"
+    NINTH_COURT_OF_APPEALS = "texctapp9"
+    TENTH_COURT_OF_APPEALS = "texctapp10"
+    ELEVENTH_COURT_OF_APPEALS = "texctapp11"
+    TWELFTH_COURT_OF_APPEALS = "texctapp12"
+    THIRTEENTH_COURT_OF_APPEALS = "texctapp13"
+    FOURTEENTH_COURT_OF_APPEALS = "texctapp14"
+    FIFTEENTH_COURT_OF_APPEALS = "texctapp15"
 
 
 COA_ORDINAL_MAP = {
@@ -94,8 +94,10 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
 
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
-    ordinal = coa_name.split()[0]
-    return COA_ORDINAL_MAP.get(ordinal.lower(), CourtID.UNKNOWN)
+    coa_name_parts = coa_name.split()
+    if len(coa_name_parts) == 0:
+        return CourtID.UNKNOWN
+    return COA_ORDINAL_MAP.get(coa_name_parts[0].lower(), CourtID.UNKNOWN)
 
 
 class TexasAppealsCourt(TypedDict):
@@ -115,6 +117,7 @@ class TexasAppealsCourt(TypedDict):
     disposition: str
     opinion_cite: str
     district: str
+    court_id: str
     justice: str
 
 
@@ -148,12 +151,14 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     case_url_node = case_info["COA Case"].find(".//a")
     if case_url_node is None:
         case_url_node = {}
+    district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
         case_url=case_url_node.get("href", ""),
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
-        district=clean_string(case_info["COA District"].text_content()),
+        district=district,
+        court_id=coa_name_to_court_id(district).value,
         justice=clean_string(
             justice_node.text_content() if justice_node is not None else ""
         ),
@@ -198,11 +203,65 @@ class TexasTrialCourt(TypedDict):
     """
 
     name: str
+    court_id: str
     county: str
     judge: str
     case: str
     reporter: str
     punishment: str
+
+
+DISTRICT_COURT_RE = re.compile(
+    r"^(\d{1,3}(?:\w{2})?|1-?A)\s*(?:Judicial)?\s+District\s+Court$",
+    re.IGNORECASE,
+)
+DISTRICT_COURT_DISTRICT_RE = re.compile(r"^(\d+)\w*$")
+BUSINESS_COURT_RE = re.compile(r"^Business\s+Court", re.IGNORECASE)
+
+
+def _trial_court_name_to_id(name: str, county: str) -> str:
+    """Takes in a trial court name from TAMES and returns the ID in
+    Courtlistener.
+
+    This is necessary because there are many interesting ways that trial court
+    names are formatted in TAMES. Additionally, it appears that the "Trial
+    Court" for a case can be a Court of Appeals.
+
+    :param name: The trial court name from TAMES.
+    :param county: The county where the court is located.
+    :return: The CL ID of the trial court."""
+    name = name.lower().strip()
+    # District courts
+    district_court_match = DISTRICT_COURT_RE.match(name)
+    if district_court_match is not None:
+        district = district_court_match.group(1)
+        if district == "1-a" or district == "1a":
+            return "texdistct2"
+        n = int(DISTRICT_COURT_DISTRICT_RE.match(district).group(1))
+        if n > 1:
+            n += 1
+        return f"texdistct{n}"
+
+    # Business court
+    business_court_match = BUSINESS_COURT_RE.match(name)
+    if business_court_match is not None:
+        return "texbizct"
+
+    # Probate courts
+    if name.find("probate") >= 0:
+        return "texprobct"
+
+    # Unknown
+    if name.find("unknown court") >= 0:
+        return "unknown"
+
+    # County courts
+    county_slug = county.lower().replace(" ", "_")
+    if name.find("municipal") < 0:
+        return f"texcntyct{county_slug}"
+
+    # Assume anything left is a municipal court
+    return "texctyct"
 
 
 class TexasCaseDocument(TypedDict):
@@ -702,9 +761,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             for child in info_panel.iterchildren()
         }
 
+        court_name = fields.get("Court", "")
+        county = fields.get("County", "")
+
         return TexasTrialCourt(
-            name=fields.get("Court", ""),
-            county=fields.get("County", ""),
+            name=court_name,
+            court_id=_trial_court_name_to_id(court_name, county),
+            county=county,
             judge=fields.get("Court Judge", ""),
             case=fields.get("Court Case", ""),
             reporter=fields.get("Reporter", ""),
