@@ -605,11 +605,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         """
         if len(parties) == 0:
             return name_part
+        semi = name_part.find(";")
         if len(parties) == 1:
             if len(parties[0]["name"]) < len(name_part):
                 return parties[0]["name"]
+            if semi > 0:
+                return name_part[:semi]
             return name_part
-        semi = name_part.find(";")
         if semi > 0:
             return name_part[:semi]
         party_indices = [
