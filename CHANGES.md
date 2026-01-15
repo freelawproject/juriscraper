@@ -20,7 +20,7 @@ Features:
 -
 
 Changes:
--
+- `tex` now uses ClusterSite #1762
 
 Fixes:
 -
