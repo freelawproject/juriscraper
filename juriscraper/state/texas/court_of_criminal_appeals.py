@@ -78,5 +78,12 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
             and self.parties[0]["type"].lower().find("state") < 0
         ):
             return f"{self.parties[0]['name']} v. The State of Texas"
+        if len(self.parties) == 2:
+            defendant = (
+                self.parties[0]
+                if self.parties[0]["type"].lower().find("state") < 0
+                else self.parties[1]
+            )
+            return f"{defendant['name']} v. The State of Texas"
         # Fall back on the full case name property
         return self.case_name_full
