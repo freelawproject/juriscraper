@@ -41,10 +41,10 @@ class Site(OpinionSiteLinear):
             return super()._download(request_dict)
 
         # First, get the list of publications
-        html = super()._download(request_dict)
+        resp = super()._download(request_dict)
 
         # Get the publicationUUID from the initial response
-        releases = html["_embedded"]["results"]
+        releases = resp["_embedded"]["results"]
         publication_uuid = releases[0].get("publicationUUID")
 
         # Fetch detailed publication data (no params needed for this endpoint)
@@ -58,6 +58,12 @@ class Site(OpinionSiteLinear):
             if not publicationItem.get("documents", []):
                 continue
 
+            name = publicationItem["title"]
+
+            # Skip petition cases
+            if "PETITION FOR WRIT" in name:
+                continue
+
             url = "{}/courts/{}/cms/case/{}/docketentrydocuments/{}".format(
                 self.base_url,
                 self.court_str,
@@ -65,37 +71,19 @@ class Site(OpinionSiteLinear):
                 publicationItem["documents"][0]["documentLinkUUID"],
             )
             docket = publicationItem["caseNumber"]
-            name = publicationItem["title"]
 
             lower_court = ""
             lower_court_number = ""
 
-            # Match either:
-            # 1. (Appeal from <court>: <number>) - standard appeals
-            # 2. (<Court>: <num>; <Appeals>: <num>) - Ex parte cases (extract Appeals court)
+            # Match (Appeal from <court>: <number>) format for standard appeals
             match = re.search(
-                r"\((?:Appeal from ([^:]+):\s*([^)]+)|[^;]+;\s*([^:]+Appeals):\s*([^)]+))\)",
+                r"\(Appeal from ([^:]+):\s*([^)]+)\)",
                 name,
             )
             if match:
-                # Groups 1,2 for "Appeal from"; groups 3,4 for Ex parte format
-                lower_court = (match.group(1) or match.group(3) or "").strip()
-                lower_court_number = (
-                    match.group(2) or match.group(4) or ""
-                ).strip()
-                if match.group(1):
-                    # "Appeal from" format - just remove the parenthetical
-                    name = name[: match.start()].rstrip()
-                else:
-                    # Ex parte format - clean up the full case name
-                    name = re.sub(
-                        r"\s*PETITION FOR WRIT OF .+?(?=\(|$)", "", name
-                    ).strip()
-                    name = re.sub(r"\s*\(In re:\s*.+?\)", "", name).strip()
-                    name = re.sub(
-                        r"\s*\([^)]+Court[^)]+\)\.*", "", name
-                    ).strip()
-                    name = name.rstrip(".")
+                lower_court = match.group(1).strip()
+                lower_court_number = match.group(2).strip()
+                name = name[: match.start()].rstrip()
 
             judge = publicationItem["groupName"]
             if judge == "On Rehearing":
