@@ -1,252 +1,74 @@
 [
   {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15808&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "KIRKLAND, JOSEPH v. the State of Texas",
+    "nature_of_suit": "11.07 HC",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=c1ee0a83-1ef5-425d-948a-e184a63c648d&coa=coscca&DT=OPINION&MediaID=4d6ae38d-1f44-402a-b40e-4b9d47acce66",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "HC Relief granted",
+    "lower_courts": "485TH DISTRICT COURT",
+    "lower_court_numbers": "C-485-W012385-1724597-A",
+    "case_dates": "2024-02-28",
+    "docket_numbers": "WR-95,476-01",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "WR-82,941-01",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15593&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "MCGUIRE, SEAN MICHAEL v. the State of Texas",
+    "nature_of_suit": "PDR Case Type",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=59f22e02-f84c-4e02-8a87-75fcd0b752af&coa=coscca&DT=OPINION&MediaID=091f82d1-999f-4a6a-a384-a321fc4ccdef",
+        "types": "020lead"
+      },
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=540d7572-1ae5-4555-9f90-b1e718dee379&coa=coscca&DT=OPINION&MediaID=0436c2a7-58e9-46d7-baee-966f2b03fc0d",
+        "types": "030concurrence"
+      }
+    ],
+    "dispositions": "Reversed COA & Trial Court;Remanded to Trial Court",
+    "lower_court_numbers": "01-18-00146-CR",
+    "lower_courts": "1st Court of Appeals",
+    "case_dates": "2024-02-21",
+    "docket_numbers": "PD-0984-19",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "PD-0474-14",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15125&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "DANIEL, BERNARD v. the State of Texas",
+    "nature_of_suit": "PDR Case Type",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=13b7a2e8-b99f-4df9-9af5-f0344d2dc41b&coa=coscca&DT=OPINION&MediaID=1eee18b8-7674-45f1-a0d6-833ebe51866c",
+        "types": "020lead"
+      },
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=fafdaafd-343a-4ba5-bee0-b1f1e093a22d&coa=coscca&DT=OPINION&MediaID=e08f5e9b-a472-4b71-824c-f4b585d61be6",
+        "types": "040dissent"
+      },
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=6fceba07-40a9-4059-b4e8-1c65d0b9bd94&coa=coscca&DT=OPINION&MediaID=e55e6579-b560-4391-9f24-01990114b26b",
+        "types": "030concurrence"
+      }
+    ],
+    "dispositions": "Reversed COA; Affirmed the Trial Court",
+    "lower_court_numbers": "03-20-00519-CR",
+    "lower_courts": "3rd Court of Appeals",
+    "case_dates": "2024-02-14",
+    "docket_numbers": "PD-0037-22",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "WR-82,426-03",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=12887&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-20,460-02",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=12770&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1071-14",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=12500&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-81,830-01",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-07-01",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=11570&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-0421-14",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15187&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1790-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=14839&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1792-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=14626&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1793-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=14419&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1791-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=13486&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-79,465-01",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=13036&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1792-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=12939&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-81,078-04",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=12802&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1790-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=11015&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1791-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-24",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=11013&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-1791-13",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-17",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=16254&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-0501-14",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-17",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15999&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-81,875-01",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-17",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15422&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-82,919-01",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-17",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=14931&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-76,781-01",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-17",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=14231&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "PD-0501-14",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-10",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=15519&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-82,563-01",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-10",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=14516&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-81,806-03",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2015-06-10",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "tests/examples/opinions/united_states/RetrieveDocument.aspx?DocId=12360&Index=%5c%5cOCA%2dPSQL01%2ecourts%2estate%2etx%2eus%5cTamesIndexes%5ccca%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "WR-81,806-04",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

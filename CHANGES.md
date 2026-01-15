@@ -20,7 +20,7 @@ Features:
 -
 
 Changes:
--
+- updates `texapp`, `texcrimapp` to ClusterSite #1767
 
 Fixes:
 -
