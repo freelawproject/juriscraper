@@ -14,20 +14,49 @@ Releases are also tagged in git, if that's helpful.
 
 The following changes are not yet released, but are code complete:
 
-* Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
-
 Features:
-- Add opinion type sanity check #1736
+-
 
 Changes:
 -
 
 Fixes:
-- fix `tenn` miss adding opinion types #1749
 - fix `michctapp` captcha block by using new url #1677
 
-
 ## Current
+
+**2.7.3 - 2025-01-15**
+
+Features:
+- Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
+- Add enumerating texas supreme courts and court of appeals dockets #1756
+- `tex` now uses ClusterSite #1762
+
+Changes:
+- `wva`, `wvactapp` now use ClusterSite #1748
+- `conn` and `connappct` now use ClusterSite #1733
+
+Fixes:
+- fix `tenn` miss adding opinion types #1749
+- add ADDENDUM to OpinionType enum #1754
+- update `lactapp_1` parameters for 2026 #1734
+
+
+## Past
+
+**2.7.2 - 2025-01-13**
+
+Features:
+- Add opinion type sanity check #1736
+
+Changes:
+- `wva`, `wvactapp` now use ClusterSite #1748
+- `conn` and `connappct` now use ClusterSite #1733
+
+Fixes:
+- fix `tenn` miss adding opinion types #1749
+- add ADDENDUM to OpinionType enum #1754
+- update `lactapp_1` parameters for 2026 #1734
 
 **2.7.1 - 2025-01-07**
 
@@ -39,9 +68,6 @@ Features:
 Fixes:
 - pa, pasuperct and pacommwct now use ClusterSite #1694
 - refactor `wash`; make `washctapp` scrapers inherit from it #1745
-
-
-## Past
 
 
 **2.7.0 - 2025-12-31**
