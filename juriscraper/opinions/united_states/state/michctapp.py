@@ -13,8 +13,8 @@ import re
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
-from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import mich
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(mich.Site):
@@ -54,9 +54,13 @@ class Site(mich.Site):
         url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
         self._request_url_get(url)
         response = self.request["response"].json()
-        search_items = response.get("caseDetailResults", {}).get("searchItems", [])
+        search_items = response.get("caseDetailResults", {}).get(
+            "searchItems", []
+        )
         if not search_items:
-            logger.error(f"michctapp: no results from search API for docket {docket_number}")
+            logger.error(
+                f"michctapp: no results from search API for docket {docket_number}"
+            )
             return "Placeholder name", docket_number
         return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
