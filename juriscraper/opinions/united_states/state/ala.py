@@ -6,7 +6,7 @@ Author: William Palin
 Court Contact:
 History:
  - 2023-01-04: Created.
- - 2023-011-14: Alabama no longer uses page or use selenium.
+ - 2023-11-14: Alabama no longer uses page or use selenium.
  - 2026-01-12: fetch detailed publication data from new API endpoint.
 """
 
@@ -38,7 +38,8 @@ class Site(OpinionSiteLinear):
         the detailed publication endpoint to get full case information.
         """
         if self.test_mode_enabled():
-            return super()._download(request_dict)
+            self.json =  super()._download(request_dict)
+            return
 
         # First, get the list of publications
         resp = super()._download(request_dict)
@@ -50,11 +51,11 @@ class Site(OpinionSiteLinear):
         # Fetch detailed publication data (no params needed for this endpoint)
         self.url = f"{self.base_url}/courts/{self.court_str}/cms/publication/{publication_uuid}"
         self.request["parameters"]["params"] = {}
-        return super()._download(request_dict)
+        self.json = super()._download(request_dict)
 
     def _process_html(self):
-        date_filed = self.html["publicationDate"][:10]
-        for publicationItem in self.html["publicationItems"]:
+        date_filed = self.json["publicationDate"][:10]
+        for publicationItem in self.json["publicationItems"]:
             if not publicationItem.get("documents", []):
                 continue
 
@@ -77,12 +78,12 @@ class Site(OpinionSiteLinear):
 
             # Match (Appeal from <court>: <number>) format for standard appeals
             match = re.search(
-                r"\(Appeal from ([^:]+):\s*([^)]+)\)",
+                r"\(Appeal from (?P<lower_court>[^:]+):\s*(?P<lower_court_number>[^)]+)\)",
                 name,
             )
             if match:
-                lower_court = match.group(1).strip()
-                lower_court_number = match.group(2).strip()
+                lower_court = match.group("lower_court").strip()
+                lower_court_number = match.group("lower_court_number").strip()
                 name = name[: match.start()].rstrip()
 
             judge = publicationItem["groupName"]
