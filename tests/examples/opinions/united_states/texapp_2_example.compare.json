@@ -1,212 +1,50 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22795&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Texas Equal Access Fund v. Ashley Maxwell",
+    "nature_of_suit": "Injunction",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=59102180-2384-4b34-89e3-e5a4a7691ded&coa=coa02&DT=Opinion&MediaID=a147d5fe-ac7b-4874-93cd-391849ff8d65",
+        "types": "020lead"
+      },
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=665d2d13-8aa7-49b4-964e-3834b6cc3e55&coa=coa02&DT=Opinion&MediaID=483c1738-1b86-4042-8010-eb0501e3a39c",
+        "types": "030concurrence"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "431st District Court",
+    "lower_court_judges": "Honorable James S. Johnson",
+    "lower_court_numbers": "22-2100-431",
+    "court_reporter": "",
+    "case_dates": "2024-02-29",
+    "docket_numbers": "02-22-00347-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00317-CV",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22792&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Lyneisha Marie McCuin v. the State of Texas",
+    "nature_of_suit": "Murder",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=8ea6213f-bc83-420c-a9b1-ef64b4982acb&coa=coa02&DT=Opinion&MediaID=5cbc6828-9ebe-426d-83d5-11d6badada5a",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "372nd District Court",
+    "lower_court_judges": "Honorable Julie Lugo",
+    "lower_court_numbers": "1771194R",
+    "court_reporter": "",
+    "case_dates": "2024-02-29",
+    "docket_numbers": "02-23-00075-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "02-12-00249-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22791&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00301-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22789&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00165-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22788&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-12-00301-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22782&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00253-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22770&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00106-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22761&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00091-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22760&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00558-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22750&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-12-00301-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22734&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00253-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22728&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00558-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22718&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00091-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22715&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00301-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22708&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00317-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22699&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00165-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22692&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-12-00249-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22618&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00028-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22606&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00023-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22604&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-14-00046-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=22600&Index=***coa02%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "02-13-00336-CV",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

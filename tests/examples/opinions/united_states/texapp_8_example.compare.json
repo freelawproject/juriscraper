@@ -1,62 +1,46 @@
 [
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6964&Index=***coa08%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Don Carbon Corporation v. Rami Azzam",
+    "nature_of_suit": "Miscellaneous/other civil",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=2ecb5d2b-2545-4930-be4a-71be15eb1061&coa=coa08&DT=Opinion&MediaID=3cb0b677-ecda-4905-bb94-6b73cb57729a",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Dismissed",
+    "lower_courts": "346th District Court",
+    "lower_court_judges": "Honorable Patricia Baca",
+    "lower_court_numbers": "2022-DCV3158",
+    "court_reporter": "Mary Ann Marin",
+    "case_dates": "2024-03-05",
+    "docket_numbers": "08-23-00340-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "08-11-00258-CR",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6955&Index=***coa08%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Ricardo Marquez v. the State of Texas",
+    "nature_of_suit": "Murder",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=d124175d-dca5-4224-a3e4-9fd689647f66&coa=coa08&DT=Opinion&MediaID=8ef508f9-e35c-4750-9563-0513f6b570b8",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "409th District Court",
+    "lower_court_judges": "Honorable Sam Medrano, Jr.",
+    "lower_court_numbers": "20220D01247",
+    "court_reporter": "Natalie Martinez",
+    "case_dates": "2024-02-29",
+    "docket_numbers": "08-22-00177-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "08-12-00332-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6949&Index=***coa08%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "08-12-00261-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6908&Index=***coa08%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "08-11-00258-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6907&Index=***coa08%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "08-12-00332-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6897&Index=***coa08%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "08-12-00261-CR",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

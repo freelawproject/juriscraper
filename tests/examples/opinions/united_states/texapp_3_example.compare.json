@@ -1,62 +1,46 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=30908&Index=***coa03%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "David Cardenas v. the State of Texas",
+    "nature_of_suit": "Burglary of a Habitation",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=57236759-83d5-405c-a740-eddc78c05aa8&coa=coa03&DT=Opinion&MediaID=313c1fa9-45b3-4253-9c68-b9a8a9eb356e",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Modified and, as Modified, Affirmed",
+    "lower_courts": "460th District Court",
+    "lower_court_judges": "Honorable Selena Alvarenga",
+    "lower_court_numbers": "D-1-DC-19-200136",
+    "court_reporter": "Shana R. Wise",
+    "case_dates": "2024-02-29",
+    "docket_numbers": "03-23-00068-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "03-13-00448-CV",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=30833&Index=***coa03%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Carroll L. Lee, Peggy G. Lee, Lee Concho Valley Family L.P., Sandra Cagle, Jerry D. Lee, Larry G. Lee, and Matthew Lee v. Memorial Production Operating, LLC; Grandfield Consulting, Inc.; Boaz Energy, LLC; And Ivory Energy, LLC",
+    "nature_of_suit": "Real Property",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=8b896d89-d991-48ea-97ba-d011d6960e20&coa=coa03&DT=Opinion&MediaID=9c2e5998-94c1-4dd7-8596-90d5f5e7d8c3",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "51st District Court",
+    "lower_court_judges": "Honorable Carmen Dusek",
+    "lower_court_numbers": "CV1604622",
+    "court_reporter": "Cindy J. Wilde",
+    "case_dates": "2024-02-29",
+    "docket_numbers": "03-22-00063-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "03-13-00613-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=30829&Index=***coa03%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "03-12-00302-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=30815&Index=***coa03%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "03-13-00448-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=30765&Index=***coa03%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "03-13-00613-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=30746&Index=***coa03%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "03-12-00302-CR",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

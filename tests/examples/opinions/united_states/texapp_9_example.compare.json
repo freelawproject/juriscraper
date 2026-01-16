@@ -1,52 +1,46 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=4559&Index=***coa09%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "In Re Jonathan Irving Hitt v. the State of Texas",
+    "nature_of_suit": "Miscellaneous/other civil",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=fc1b59d7-3e29-48ca-b283-e83ca715b2db&coa=coa09&DT=Opinion&MediaID=4224b3ac-f0ce-4301-9ce9-b8502efe6e40",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Motion or Writ Denied",
+    "lower_courts": "435th District Court",
+    "lower_court_judges": "Honorable Patricia Maginnis",
+    "lower_court_numbers": "09-10-09978-CV",
+    "court_reporter": "Tavis Jacks",
+    "case_dates": "2024-03-07",
+    "docket_numbers": "09-22-00022-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "09-13-00539-CV",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=4551&Index=***coa09%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Valyn Rose Faulk v. the State of Texas",
+    "nature_of_suit": "Manslaughter",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=d6650bba-5c0d-45db-b573-ec3581b7d8ba&coa=coa09&DT=Opinion&MediaID=99dcad4d-eb3c-42ad-96b9-8855fa263b8f",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Reversed & Rendered",
+    "lower_courts": "128th District Court",
+    "lower_court_judges": "Honorable Courtney Arkeen",
+    "lower_court_numbers": "A200085-R",
+    "court_reporter": "Holli Harrison",
+    "case_dates": "2024-03-06",
+    "docket_numbers": "09-22-00028-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "09-14-00262-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=4537&Index=***coa09%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "09-12-00271-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=4530&Index=***coa09%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "09-14-00090-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=4526&Index=***coa09%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "09-14-00096-CV",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

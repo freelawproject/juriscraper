@@ -52,15 +52,17 @@ class ClusterSite(OpinionSiteLinear):
         "parallel_citation": "parallel_citations",
         "summary": "summaries",
         "child_courts": "child_courts",
-        "lower_court": "lower_courts",
-        "lower_court_id": "lower_court_ids",
-        "lower_court_judge": "lower_court_judges",
-        "lower_court_number": "lower_court_numbers",
         "disposition": "dispositions",
         "nature_of_suit": "nature_of_suit",
         "other_date": "other_dates",
         "attorney": "attorneys",
         "headnote": "headnotes",
+        # lower court info
+        "lower_court": "lower_courts",
+        "lower_court_id": "lower_court_ids",
+        "lower_court_judge": "lower_court_judges",
+        "lower_court_number": "lower_court_numbers",
+        "court_reporter": "court_reporter",
         # special field to hold the opinion list
         "sub_opinions": "sub_opinions",
         # opinion fields
@@ -112,7 +114,7 @@ class ClusterSite(OpinionSiteLinear):
         if self.short_to_full_attribute_name.get(name):
             return self.short_to_full_attribute_name[name]
 
-        raise ValueError("")
+        raise ValueError(f"Invalid normalized name '{name}'")
 
     def _clean_attributes(self):
         """Perform name normalization and standard attribute cleaning.
