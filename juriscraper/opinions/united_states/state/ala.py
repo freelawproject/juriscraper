@@ -38,7 +38,7 @@ class Site(OpinionSiteLinear):
         the detailed publication endpoint to get full case information.
         """
         if self.test_mode_enabled():
-            self.json =  super()._download(request_dict)
+            self.json = super()._download(request_dict)
             return
 
         # First, get the list of publications
