@@ -18,6 +18,7 @@ from .supreme_court import (
     TexasSupremeCourtDocket,
     TexasSupremeCourtScraper,
 )
+from .tames import ALL_COURTS, TAMESScraper
 
 __all__ = [
     "TexasAppealsCourt",
@@ -34,4 +35,6 @@ __all__ = [
     "TexasSupremeCourtAppellateBrief",
     "TexasSupremeCourtDocket",
     "TexasSupremeCourtScraper",
+    "TAMESScraper",
+    "ALL_COURTS",
 ]
