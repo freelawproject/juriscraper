@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "10-24-00237-CR",
     "case_url": "https://search.txcourts.gov/Case.aspx?cn=10-24-00237-CR",
+    "court_id": "texctapp10",
     "disposition": "",
     "district": "10th Court of Appeals",
     "justice": "",
@@ -64,7 +65,7 @@
   "case_name": "VANZANDT, SCOTT EDWARD v. The State of Texas",
   "case_name_full": "VANZANDT, SCOTT EDWARD",
   "case_type": "PDR Case Type",
-  "court_id": "texas_coscca",
+  "court_id": "texcrimapp",
   "date_filed": "2025-12-01",
   "docket_number": "PD-0975-25",
   "parties": [
@@ -79,6 +80,7 @@
   "trial_court": {
     "case": "2020-953-C1",
     "county": "McLennan",
+    "court_id": "texdistct20",
     "judge": "",
     "name": "19th District Court",
     "punishment": "",

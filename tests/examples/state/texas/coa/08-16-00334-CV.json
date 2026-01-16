@@ -1164,7 +1164,7 @@
   "case_name": "Texas Department of Family and Protective Services v. Grassroots Leadership, Inc.",
   "case_name_full": "Texas Department of Family and Protective Services; Henry Whitman, in His Official Capacity as DFPS Commissioner; Texas Health and Human Services; and Charles Smith, in his Official Capacity as HHSC Executive Commissioner and Corrections Corp. of America v. Grassroots Leadership, Inc., Gloria Valenzuela, E.G.S., for herself and as next friend for A.E.S.G., F.D.G., for herself and as next friend for N.R.C.D., Y.E.M.A., for herself and as next friend for A.S.A.",
   "case_type": "Administrative law",
-  "court_id": "texas_coa08",
+  "court_id": "texctapp8",
   "date_filed": "2016-12-21",
   "docket_number": "08-16-00334-CV",
   "parties": [
@@ -1234,18 +1234,19 @@
   ],
   "publication_service": "",
   "transfer_from": {
-    "court_id": "texas_coa03",
+    "court_id": "texctapp3",
     "date": "2016-12-21T00:00:00",
     "origin_docket": "03-16-00831-CV"
   },
   "transfer_to": {
-    "court_id": "texas_coa03",
+    "court_id": "texctapp3",
     "date": "2018-04-16T00:00:00",
     "origin_docket": "08-16-00334-CV"
   },
   "trial_court": {
     "case": "D-1-GN-15-004336",
     "county": "Travis",
+    "court_id": "texdistct354",
     "judge": "Honorable Karin Crump",
     "name": "353rd District Court",
     "punishment": "",
