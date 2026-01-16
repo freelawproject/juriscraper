@@ -10,9 +10,9 @@ retrieves docket information for cases from all Texas appellate courts:
 Website: https://search.txcourts.gov/CaseSearch.aspx
 """
 
+import asyncio
 import re
-import time
-from collections.abc import Generator
+from collections.abc import AsyncGenerator, Generator
 from datetime import date, datetime
 from typing import Final, Optional, Union
 from urllib.parse import urljoin
@@ -138,11 +138,11 @@ class TAMESScraper(BaseStateScraper):
     def scrape(self):
         pass
 
-    def backfill(
+    async def backfill(
         self,
         courts: list[str],
         date_range: tuple[date, date],
-    ) -> Generator[TamesSearchRow, None, None]:
+    ) -> AsyncGenerator[TamesSearchRow, None, None]:
         """Backfill dockets for multiple courts over a date range.
         There are three issues that inform the structure of this method.
         1. TAMES caps results at 1000 of the most recent cases for a given search
@@ -167,7 +167,7 @@ class TAMESScraper(BaseStateScraper):
         start_date, end_date = date_range
         current_end = end_date
 
-        self._fetch_search_form()
+        await self._fetch_search_form()
         last_days_results = 0
         search_retries = 0
         prior_last_day_result = None
@@ -186,14 +186,14 @@ class TAMESScraper(BaseStateScraper):
             )
 
             # First yield is always the result count (int)
-            first_value = next(search_gen)
+            first_value = await search_gen.__anext__()
             assert isinstance(first_value, int)
             result_count: int = first_value
 
             received_count = 0
             new_cases = 0
 
-            for item in search_gen:
+            async for item in search_gen:
                 # All subsequent yields are TamesSearchRow
                 assert not isinstance(item, int)
                 case: TamesSearchRow = item
@@ -234,7 +234,7 @@ class TAMESScraper(BaseStateScraper):
                     current_end,
                 )
                 search_retries += 1
-                time.sleep(search_retries)
+                await asyncio.sleep(search_retries)
                 if search_retries <= 3:
                     continue
                 else:
@@ -289,20 +289,20 @@ class TAMESScraper(BaseStateScraper):
                     )
                 )
 
-    def _fetch_search_form(self) -> None:
+    async def _fetch_search_form(self) -> None:
         """Fetch the search form page and extract hidden fields."""
-        response = self.request_manager.get(self.SEARCH_URL)
+        response = await self.request_manager.get(self.SEARCH_URL)
         response.raise_for_status()
 
         tree: html.HtmlElement = html.fromstring(response.content)
         self._hidden_fields = self._extract_hidden_fields(tree)
 
-    def _submit_search(
+    async def _submit_search(
         self,
         start_date: date,
         end_date: date,
         court_ids: Optional[list[str]] = None,
-    ) -> Generator[Union[int, TamesSearchRow], None, None]:
+    ) -> AsyncGenerator[Union[int, TamesSearchRow], None, None]:
         """Submit a search and yield results one at a time.
 
         Yields:
@@ -342,7 +342,9 @@ class TAMESScraper(BaseStateScraper):
             form_data["ctl00$ContentPlaceHolder1$chkAllCourts"] = "on"
 
         # Submit the search
-        response = self.request_manager.post(self.SEARCH_URL, data=form_data)
+        response = await self.request_manager.post(
+            self.SEARCH_URL, data=form_data
+        )
         response.raise_for_status()
 
         tree = html.fromstring(response.content)
@@ -357,7 +359,7 @@ class TAMESScraper(BaseStateScraper):
 
         # Handle pagination - yield results from subsequent pages
         while self._has_next_page(tree):
-            tree = self._fetch_next_page(tree, form_data)
+            tree = await self._fetch_next_page(tree, form_data)
             for search_row in self._parse_search_results(tree):
                 yield search_row
 
@@ -418,7 +420,7 @@ class TAMESScraper(BaseStateScraper):
         current_page_has_next = tree.cssselect(".rgCurrentPage + a")
         return bool(next_button and current_page_has_next)
 
-    def _fetch_next_page(self, tree, form_data):
+    async def _fetch_next_page(self, tree, form_data):
         """Fetch the next page of results."""
         next_button = tree.xpath("//input[contains(@class, 'rgPageNext')]")[0]
         submit_name = next_button.get("name", "")
@@ -433,7 +435,7 @@ class TAMESScraper(BaseStateScraper):
             submit_name: submit_val,
         }
 
-        response = self.request_manager.post(
+        response = await self.request_manager.post(
             self.SEARCH_URL, data=next_form_data
         )
         response.raise_for_status()

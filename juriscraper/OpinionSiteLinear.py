@@ -43,6 +43,8 @@ class OpinionSiteLinear(OpinionSite):
         "other_date",
         "attorney",
         "headnote",
+        "title",
+        "precedential_status",
     }
 
     def __init__(self, *args, **kwargs):

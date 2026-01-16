@@ -120,10 +120,12 @@ class Site(OpinionSiteLinear):
 
         return judge, disposition, status, lower_court_number
 
-    def _download_backwards(self, dates: tuple[datetime, datetime]) -> None:
+    async def _download_backwards(
+        self, dates: tuple[datetime, datetime]
+    ) -> None:
         logger.info("Backscraping for range %s %s", *dates)
         self.url = self.format_url(*dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def format_url(self, start_date: datetime, end_date: datetime) -> str:

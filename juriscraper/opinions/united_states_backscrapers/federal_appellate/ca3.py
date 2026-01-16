@@ -2,7 +2,6 @@ import time
 from datetime import date
 
 import certifi
-import requests
 from lxml import html
 
 from juriscraper.AbstractSite import logger
@@ -21,33 +20,33 @@ class Site(OpinionSite):
         self.case_xpath = "//p[@class='article-listing']/a/@href"
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
         if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
             html_trees = [
-                super()._download(request_dict=request_dict),
+                await super()._download(request_dict=request_dict),
             ]
         else:
-            html_l = super()._download(request_dict)
+            html_l = await super()._download(request_dict)
             html_trees = self._get_case_html_page([], html_l, request_dict)
 
             # handle the next page data
             if html_l.xpath(self.next_page_xpath):
                 self.url = html_l.xpath(self.next_page_xpath)[0]
-                html_next_trees = self._download(request_dict)
+                html_next_trees = await self._download(request_dict)
                 html_trees.extend(html_next_trees)
         return html_trees
 
-    def _get_case_html_page(self, html_trees, html_l, request_dict):
+    async def _get_case_html_page(self, html_trees, html_l, request_dict):
         """Gets each of the individual case pages"""
-        s = requests.session()
+        s = self.request["session"]
         for case_url in html_l.xpath(self.case_xpath):
             logger.info(f"  Getting sub-page at: {case_url}")
-            r = s.get(
+            r = await s.get(
                 case_url,
-                headers={"User-Agent": "Juriscraper"},
+                headers={"User-Agent": self.user_agent},
                 verify=certifi.where(),
                 timeout=60,
                 **request_dict,
@@ -139,9 +138,9 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         self.url = self.base_url.format(year=d)
-        self.html = self._download()
+        self.html = await self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
