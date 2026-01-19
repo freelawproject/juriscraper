@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644  
 
 Fixes:
 -
