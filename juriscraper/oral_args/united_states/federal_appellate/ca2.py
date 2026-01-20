@@ -12,6 +12,8 @@ History:
   2023-12-11: Fixed by quevon24
 """
 
+import re
+from datetime import datetime
 from urllib.parse import urljoin
 
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
@@ -20,6 +22,7 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 class Site(OralArgumentSiteLinear):
     base_xpath = '//tr[contains(.//a/@href, "mp3")]'
     base_url = "http://ww3.ca2.uscourts.gov"
+    docket_regex = re.compile(r"\d{2,2}-\d{3,3}")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -42,6 +45,7 @@ class Site(OralArgumentSiteLinear):
 
     def _process_html(self):
         for row in self.html.xpath("//table[@border='1']"):
+            is_date_aproximate = False
             link = row.xpath(".//a")[0].get("href")
 
             if ".mp3" not in link:
@@ -49,13 +53,32 @@ class Site(OralArgumentSiteLinear):
             url = urljoin(self.base_url, link)
 
             docket = row.xpath(".//a/nobr/text()")[0]
-            name, date = row.xpath(".//td/text()")
+            try:
+                name, date = row.xpath(".//td/text()")
+            except ValueError:
+                name = row.xpath(".//td/text()")[0]
+                date = (
+                    self.cases[-1]["date"]
+                    if self.cases
+                    else datetime.now().strftime("%-m-%d-%y")
+                )  # use last case date
+                is_date_aproximate = True
+
+            if not self.docket_regex.search(docket):
+                docket = name
+                name = row.xpath(".//a/nobr/text()")[0]
 
             if docket == "GMT20230614-175136_Recording":
                 continue  # skip bad data
 
             self.cases.append(
-                {"docket": docket, "url": url, "name": name, "date": date}
+                {
+                    "docket": docket,
+                    "url": url,
+                    "name": name,
+                    "date": date,
+                    "date_filed_is_approximate": is_date_aproximate,
+                }
             )
 
     def _download_backwards(self, d):
