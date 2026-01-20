@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Update `haw` and `hawapp` to ClusterSite #1772
 
 Fixes:
 -
