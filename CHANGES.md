@@ -18,6 +18,7 @@ Features:
 -
 
 Changes:
+- Update `haw` and `hawapp` to ClusterSite #1772
 - updates `texapp`, `texcrimapp` to ClusterSite #1767
 - update `michctapp` to ClusterSite #1652
 
