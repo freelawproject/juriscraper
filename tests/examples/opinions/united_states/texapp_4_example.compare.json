@@ -1,82 +1,45 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1860&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "In the Interest of R.P., a Child v. the State of Texas",
+    "nature_of_suit": "Termination of parental rights or conservatorship - accelerated",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=4df7389b-edc9-4524-8f5d-0116b9416d10&coa=coa04&DT=Opinion&MediaID=35d8989e-90fd-4831-a652-73deba171190",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Reversed and Remanded",
+    "lower_courts": "408th Judicial District Court",
+    "lower_court_judges": "Honorable Raul Perales",
+    "lower_court_numbers": "2022-PA-01371",
+    "court_reporter": "David Zarate",
+    "case_dates": "2024-02-28",
+    "docket_numbers": "04-23-00828-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "04-14-00337-CV",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1833&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "In Re Cervantes v. the State of Texas",
+    "nature_of_suit": "Mandamus",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=83b1277e-ba95-42e4-be78-e17c9f17ef34&coa=coa04&DT=Opinion&MediaID=cdc3a948-253d-48e3-95f2-0bb25d332f8e",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Motion or Writ Denied",
+    "lower_courts": "County Court",
+    "lower_court_judges": "Honorable David E. Garcia",
+    "lower_court_numbers": "1071",
+    "case_dates": "2024-02-21",
+    "docket_numbers": "04-23-00334-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "04-12-00237-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1831&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "04-12-00237-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1769&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "04-14-00039-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1686&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "04-13-00750-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1503&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "04-13-00820-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1495&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "04-13-00553-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=1485&Index=***coa04%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "04-14-00180-CR",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]
