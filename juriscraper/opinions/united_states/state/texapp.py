@@ -35,6 +35,10 @@ class Site(ClusterSite):
     # Interval for default scrape and backscrape iterable generation
     days_interval = 15
 
+    # opinions in a single cluster may be published in different, but nearby
+    # days
+    max_days_to_cluster = 10
+
     oci_mapper = {
         # Court of Appeals Information
         "COA Case": "lower_court_number",
@@ -346,7 +350,10 @@ class Site(ClusterSite):
                 logger.warning("Could not parse date '%s'", date_string)
                 continue
 
-            if abs((search_date - opinion_date).days) > 10:
+            if (
+                abs((search_date - opinion_date).days)
+                > self.max_days_to_cluster
+            ):
                 # this opinion belongs to an older opinion cluster
                 logger.warning("Skipping older opinion clusters")
                 continue
