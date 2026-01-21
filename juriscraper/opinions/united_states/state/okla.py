@@ -11,10 +11,12 @@ from lxml import html
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.OpinionSiteLinearProxyRequestHandler import (
+    OpinionSiteLinearProxyRequestHandler,
+)
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinearProxyRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
