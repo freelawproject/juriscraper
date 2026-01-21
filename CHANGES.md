@@ -19,6 +19,7 @@ Features:
 
 Changes:
 - updates `texapp`, `texcrimapp` to ClusterSite #1767
+- update `michctapp` to ClusterSite #1652
 
 Fixes:
 -

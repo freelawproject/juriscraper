@@ -47,34 +47,40 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         for item in self.html["searchItems"]:
-            if match := self.title_re.search(item["title"]):
-                docket = match.group("docket")
-                name = self.cleanup_case_name(match.group("name"))
-            else:
-                name, docket = self.get_missing_name_and_docket(item)
+            self.cases.append(self._extract_case_data_from_item(item))
 
-            disposition = self.get_disposition(item)
+    def _extract_case_data_from_item(self, item: dict) -> dict:
+        """Extract the case data from the item
 
-            status = "Published"
-            if "Unpublished" in item["title"]:
-                status = "Unpublished"
+        :param item: The item from the API
+        :return: The case data
+        """
+        if match := self.title_re.search(item["title"]):
+            docket = match.group("docket")
+            name = self.cleanup_case_name(match.group("name"))
+        else:
+            name, docket = self.get_missing_name_and_docket(item)
 
-            per_curiam = False
-            if "per curiam" in item["title"].lower():
-                per_curiam = True
+        disposition = self.get_disposition(item)
 
-            self.cases.append(
-                {
-                    "date": item["filingDate"],
-                    "docket": docket,
-                    "name": name,
-                    "url": urljoin(self.url, item["documentUrl"].strip()),
-                    "lower_court": self.parse_lower_courts(item["courts"]),
-                    "status": status,
-                    "per_curiam": per_curiam,
-                    "disposition": disposition,
-                }
-            )
+        status = "Published"
+        if "Unpublished" in item["title"]:
+            status = "Unpublished"
+
+        per_curiam = False
+        if "per curiam" in item["title"].lower():
+            per_curiam = True
+
+        return {
+            "date": item["filingDate"],
+            "docket": docket,
+            "name": name,
+            "url": urljoin(self.url, item["documentUrl"].strip()),
+            "lower_court": self.parse_lower_courts(item["courts"]),
+            "status": status,
+            "per_curiam": per_curiam,
+            "disposition": disposition,
+        }
 
     def cleanup_case_name(self, name_raw: str) -> str:
         """Clean up case name in Michigan
