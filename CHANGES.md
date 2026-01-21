@@ -22,7 +22,7 @@ Changes:
 - updates `texapp`, `texcrimapp` to ClusterSite #1767
 
 Fixes:
--
+- fix `michctapp` captcha block by using new url #1677
 
 ## Current
 
