@@ -92,7 +92,8 @@ class Site(ClusterSite):
             judges = ""
 
             # the text describing the opinion type will be inside the links
-            for link in name_container.xpath(".//a"):
+            links = name_container.xpath(".//a")
+            for link_index, link in enumerate(links):
                 link_text = link.text_content()
                 lower_link_text = link_text.strip().lower()
                 dissent = "dissent" in lower_link_text
@@ -112,13 +113,28 @@ class Site(ClusterSite):
                     continue
 
                 author = ""
-                if author_match := re.search(r"by (?P<author>\w+)", link_text):
+                # start at this link's text; end at the next link's text
+                # Author and joined by should be in this interval
+                start_text_index = name_text.find(link_text)
+
+                if link_index + 1 == len(links):
+                    end_text_index = len(name_text)
+                else:
+                    end_text_index = name_text.find(
+                        links[link_index + 1].text_content(), start_text_index
+                    )
+
+                judges_text = name_text[start_text_index:end_text_index]
+
+                if author_match := re.search(
+                    r"by ([CJ.]+ )?(?P<author>\w+)", judges_text
+                ):
                     author = author_match.group("author")
                     judges += f"; {author}"
 
                 joined_by = ""
                 if joined_by_match := re.search(
-                    r"in which (?P<joined_by>.+)[jJ]oins", link_text
+                    r"in which (?P<joined_by>.+)[jJ]oins", judges_text
                 ):
                     joined_by = joined_by_match.group("joined_by").strip()
                     judges += f"; {joined_by}"
