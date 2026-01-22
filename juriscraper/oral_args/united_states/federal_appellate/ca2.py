@@ -10,19 +10,21 @@ History:
   2016-09-09: Created by MLR
   2023-11-21: Fixed by flooie
   2023-12-11: Fixed by quevon24
+  2026-01-21:Fixed by Luis-manzur
 """
 
 import re
 from datetime import datetime
 from urllib.parse import urljoin
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    base_xpath = '//tr[contains(.//a/@href, "mp3")]'
     base_url = "http://ww3.ca2.uscourts.gov"
-    docket_regex = re.compile(r"\d{2,2}-\d{3,3}")
+    docket_regex = re.compile(r"\d{2}-\d{2,4}")
+    date_regex = re.compile(r"\d{1,2}-\d{1,2}-\d{2}")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -45,15 +47,16 @@ class Site(OralArgumentSiteLinear):
 
     def _process_html(self):
         for row in self.html.xpath("//table[@border='1']"):
-            is_date_aproximate = False
             link = row.xpath(".//a")[0].get("href")
 
             if ".mp3" not in link:
+                logger.info("Skipping row without mp3 link: %s", link)
                 continue  # skip bad data
             url = urljoin(self.base_url, link)
 
             docket = row.xpath(".//a/nobr/text()")[0]
-            try:
+
+            try: # Row may have empty date column
                 name, date = row.xpath(".//td/text()")
             except ValueError:
                 name = row.xpath(".//td/text()")[0]
@@ -62,11 +65,14 @@ class Site(OralArgumentSiteLinear):
                     if self.cases
                     else datetime.now().strftime("%-m-%d-%y")
                 )  # use last case date
-                is_date_aproximate = True
 
-            if not self.docket_regex.search(docket):
-                docket = name
-                name = row.xpath(".//a/nobr/text()")[0]
+            if not self.docket_regex.search(docket): # Row may have mixed columns
+                if self.date_regex.search(docket):
+                    date = docket
+                    docket = self.docket_regex.search(link).group(0)
+                else:
+                    docket = name
+                    name = row.xpath(".//a/nobr/text()")[0]
 
             if docket == "GMT20230614-175136_Recording":
                 continue  # skip bad data
@@ -77,7 +83,6 @@ class Site(OralArgumentSiteLinear):
                     "url": url,
                     "name": name,
                     "date": date,
-                    "date_filed_is_approximate": is_date_aproximate,
                 }
             )
 
