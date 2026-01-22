@@ -56,7 +56,7 @@ class Site(OralArgumentSiteLinear):
 
             docket = row.xpath(".//a/nobr/text()")[0]
 
-            try: # Row may have empty date column
+            try:  # Row may have empty date column
                 name, date = row.xpath(".//td/text()")
             except ValueError:
                 name = row.xpath(".//td/text()")[0]
@@ -66,7 +66,9 @@ class Site(OralArgumentSiteLinear):
                     else datetime.now().strftime("%-m-%d-%y")
                 )  # use last case date
 
-            if not self.docket_regex.search(docket): # Row may have mixed columns
+            if not self.docket_regex.search(
+                docket
+            ):  # Row may have mixed columns
                 if self.date_regex.search(docket):
                     date = docket
                     docket = self.docket_regex.search(link).group(0)
