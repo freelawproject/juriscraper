@@ -164,6 +164,9 @@ class Site(ClusterSite):
             ]
             case_dict["judge"] = "; ".join(judges)
 
+            if not case_dict["sub_opinions"]:
+                case_dict["url"] = case_url
+
             self.cases.append(case_dict)
 
         # pagination

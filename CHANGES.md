@@ -21,7 +21,7 @@ Changes:
 - Revert Mass back to old for to collect PDF
 
 Fixes:
--
+- Fix `texapp` URL assignment when no sub_opinions are available
 
 ## Current
 
