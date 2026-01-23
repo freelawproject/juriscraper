@@ -1,0 +1,32 @@
+{
+  "acms": false,
+  "appellate": false,
+  "contains_attachments": false,
+  "court_id": "insb",
+  "dockets": [
+    {
+      "case_name": "Gerardo Lorenzo Linarducci",
+      "date_filed": null,
+      "docket_entries": [
+        {
+          "date_filed": "2025-09-25",
+          "description": "BNC Certificate of Service - OFFICIAL COURT NOTICE (re: Doc [62]). No. of Notices: 2 Notice Date 09/25/2025. (Admin)",
+          "document_number": "65",
+          "document_url": "https://ecf.insb.uscourts.gov/doc1/072048850541?pdf_header=&magic_num=62566217&de_seq_num=253&caseid=769408",
+          "pacer_case_id": "769408",
+          "pacer_doc_id": "072048850541",
+          "pacer_magic_num": "62566217",
+          "pacer_seq_no": "253",
+          "short_description": "BNC Certificate of Service - OFFICIAL COURT NOTICE"
+        }
+      ],
+      "docket_number": "25-03768",
+      "federal_defendant_number": null,
+      "federal_dn_case_type": null,
+      "federal_dn_judge_initials_assigned": "JMC",
+      "federal_dn_judge_initials_referred": null,
+      "federal_dn_office_code": null
+    }
+  ],
+  "email_recipients": []
+}

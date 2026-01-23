@@ -30,15 +30,15 @@ class Site(OpinionSiteLinear):
             "accept-encoding": "gzip, deflate, br, zstd",
             "accept-language": "en-US,en;q=0.9",
             "priority": "u=0, i",
-            "sec-ch-ua": '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+            "sec-ch-ua": '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="142"',
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Linux"',
             "sec-fetch-dest": "document",
             "sec-fetch-mode": "navigate",
-            "sec-fetch-site": "none",
+            "sec-fetch-site": "cross-site",
             "sec-fetch-user": "?1",
             "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
         }
         self.needs_special_headers = True
         self.should_have_results = True
@@ -54,13 +54,20 @@ class Site(OpinionSiteLinear):
         for item in self.html.xpath(path):
             url = item.xpath(".//td/a/@href")[0]
             first_cell = item.xpath(".//td/a/text()")[0]
-            docket = re.sub(
-                r"Docket Nos?\.", "", item.xpath(".//td[4]/text()")[0]
-            )
-            summary = item.xpath(".//td[3]/text()")[0]
-            per_curiam = "per curiam" in summary.lower()
+            tds = item.xpath(".//td")
+            summary = ""
+            per_curiam = False
 
-            date_string = item.xpath(".//td[6]/text()")[0]
+            # Different table structure for recent vs older opinions
+            if len(tds) > 3:
+                docket = re.sub(r"Docket Nos?\.", "", tds[3].text)
+                summary = tds[2].text
+                per_curiam = "per curiam" in summary.lower()
+                date_string = tds[5].text
+            else:
+                docket = re.sub(r"Docket Nos?\.", "", tds[1].text)
+                date_string = tds[2].text
+
             m = re.search(self.citation_regex, first_cell)
             if m:
                 mj = m.group("MJ").strip("()") if m.group("MJ") else ""

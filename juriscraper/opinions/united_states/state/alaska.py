@@ -1,3 +1,4 @@
+import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode, urljoin
 
@@ -64,7 +65,7 @@ class Site(OpinionSiteLinear):
                     continue
                 break
 
-            for row in table.xpath(".//tr"):
+            for row in table.xpath(".//tbody/tr"):
                 if row.text_content().strip():
                     case_number = get_row_column_text(row, 3)
                     name = get_row_column_text(row, 4)
@@ -92,6 +93,59 @@ class Site(OpinionSiteLinear):
                         }
                     )
 
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
+
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (?:
+                Appeals?\s+from\s+the\s+|
+                Appeals\s+in\s+File\s+Nos\.\s+S-\d+(?:/\d+)?\s+from\s+the\s+|
+                Petitions?\s+for\s+Review\s+from\s+the\s+|
+                Petition\s+for\s+Hearing\s+from\s+the\s+|
+                Certified\s+(?:Original\s+Application\s+for\s+Relief\s+and\s+Jurisdiction\s+Transfer|Question)\s+from\s+the\s+
+            )
+            (?P<lower_court>.*?)(?=Judge\.|\n\s*\n)
+            """,
+            re.X | re.DOTALL,
+        )
+
+        lower_court_str = ""
+        if match := pattern.search(scraped_text):
+            lower_court_str = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court_str:
+            parts = [part.strip() for part in lower_court_str.split(",")]
+            if "appeals" in parts[0].lower():
+                lower_court = parts[0]
+            else:
+                lower_court = ", ".join(parts[:2])
+            # Handle judge name, including cases like "Jr."
+            lower_court_judge = None
+            if len(parts) > 1:
+                lower_court_judge = parts[-2]
+                if lower_court_judge == "Jr." and len(parts) > 2:
+                    lower_court_judge = f"{parts[-3]} Jr."
+
+            return_dict = {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                },
+            }
+            if lower_court_judge:
+                return_dict.setdefault("OriginatingCourtInformation", {})[
+                    "assigned_to_str"
+                ] = lower_court_judge
+
+            return return_dict
+
+        return {}
+
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
@@ -117,7 +171,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple

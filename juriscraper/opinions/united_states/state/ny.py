@@ -7,6 +7,7 @@ History:
  2015-10-23: Parts rewritten by mlr.
  2016-05-04: Updated by arderyp to handle typos in docket string format
  2024-09-05: Updated by flooie to deal with block from main website
+ 2025-10-27: Updated by quevon24 to fix content cleanup
 """
 
 import re
@@ -14,6 +15,7 @@ from datetime import date, timedelta
 from typing import Any, Optional
 
 import nh3
+from lxml.html import fromstring, tostring
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -124,7 +126,7 @@ class Site(OpinionSiteLinear):
             return {"Docket": dockets.groupdict()}
         return {}
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -159,4 +161,19 @@ class Site(OpinionSiteLinear):
         allowed.discard("a")
 
         cleaned = nh3.clean(html_str, tags=allowed)
-        return cleaned.encode()
+
+        tree = fromstring(cleaned)
+        normalized_html = tostring(tree, encoding="unicode", method="html")
+
+        return normalized_html.encode()
+
+    @staticmethod
+    def clean_docket_match(match: re.Match) -> str:
+        """Clean a docket number extracted from text
+
+        :param match: a Match object with a named group
+        :return: cleaned docket number
+        """
+        docket_number = match.group("docket_number")
+        docket_number = re.sub(r"(\||\n|<br>)", "; ", docket_number)
+        return re.sub("[\\s\n]+", " ", docket_number.strip("; ()"))

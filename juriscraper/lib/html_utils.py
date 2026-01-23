@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import re
 from copy import deepcopy
+from typing import Optional
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
@@ -8,11 +9,13 @@ from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
 from requests import Response
 
+from juriscraper.lib.string_utils import clean_string
+
 try:
     # Use charset-normalizer for performance to detect the character encoding.
     import charset_normalizer as chardet
 except ImportError:
-    import chardet
+    import chardet  # type: ignore
 
 ALLOWED_ATTRIBUTES = deepcopy(nh3.ALLOWED_ATTRIBUTES)
 ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
@@ -73,19 +76,19 @@ def get_html5_parsed_text(text: str) -> HtmlElement:
 def get_table_column_text(
     html: HtmlElement,
     cell_num: int,
-    path_base: bool = False,
+    path_base: Optional[str] = None,
     table_id: str = "",
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]" % (table, cell_num)
-    path = path_base + path_cell if path_base else path_cell
+    path = path_base + path_cell if path_base is not None else path_cell
     return [cell.text_content().strip() for cell in html.xpath(path)]
 
 
 def get_table_column_links(
     html: HtmlElement,
     cell_num: int,
-    path_base: bool = False,
+    path_base: Optional[str] = None,
     table_id: str = "",
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"
@@ -277,3 +280,46 @@ def is_html(response: Response) -> bool:
     """Determines whether the item downloaded is an HTML document or something
     else."""
     return "text/html" in response.headers.get("content-type", "")
+
+
+def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
+    """
+    Parse a table element into a dataframe
+
+    :param table: The table element to parse.
+
+    :returns: A dictionary mapping column headers to lists of cell elements.
+    """
+    # TODO: Would probably save a lot of time in future state scrapers to
+    #  update this to handle tabular data that isn't stored in a table element,
+    #  but that is a relatively large project and I'm not sure how often it
+    #  would be useful.
+    headers = [
+        clean_string(th.text_content()) for th in table.xpath(".//thead//th")
+    ]
+    if len(headers) == 0:
+        headers = list(
+            map(str, range(len(table.find(".//tr").findall(".//td"))))
+        )
+        rows = table.findall("./tr")
+    else:
+        rows = table.findall("./tbody/tr")
+    columns = {header: [] for header in headers}
+
+    for row in rows:
+        cells = row.xpath("./td")
+        for header, cell in zip(headers, cells):
+            columns[header].append(cell)
+
+    return columns
+
+
+def get_all_text(element: HtmlElement) -> str:
+    """
+    Get all text from an element and its children.
+
+    :param element: The parent element to get text from.
+
+    :returns: Text content of the element and its children.
+    """
+    return "".join(element.xpath(".//text()"))

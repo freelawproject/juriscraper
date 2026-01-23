@@ -1,0 +1,70 @@
+Delivered-To: recipient@test-mail.com
+Received: by 2002:a17:505:2a0f:b0:1d78:1b00:c369 with SMTP id xw15csp1781928njc;
+        Fri, 14 Nov 2025 09:08:07 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEPeJA/S6JL2d6FiOvsCtkd6o4dDLitF7jbTLoC8DoxdcpwPEcROMEYgzefU6Y2l7585zki
+X-Received: by 2002:a05:622a:13ca:b0:4ed:ba3f:dff6 with SMTP id d75a77b69052e-4edf2115ccbmr54300911cf.57.1763140086990;
+        Fri, 14 Nov 2025 09:08:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763140086; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GDtfzjvnrADMafrlHqehumEeWnYSGsrzOd3Qso64YiWZROvOt/V50SOw5kYp2n400d
+         81L6RF6LIvZCrLOldNzTM2JLeEReYdlreaHP4LBZ0p9KjaUKHZztgZT8m+mnlGgYLeML
+         dEaeVO/jg3JkTCEIyN69Ju2pCOq4cQWxJpiKmd6R1quukHZw4fQO/y3gPEdXYFkC0znH
+         54dwN1+7FJQpX6QPWeRzmo2qdiiqTK2GkfUE4G8FBHMRGE1jRfkSDgPEYdeXt5vFrv/t
+         f6g6HqroNWI/FP6zFlJxnJISZ+OBV4lzLYBQPjuBI2bWg3bCbtb4qAN3YgFx9cAF98qg
+         WVaQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:reply-to:from:dkim-signature:dkim-signature;
+        bh=MCXSzQ/rx/3h11+oj66YGyjPObejgCN0WYld3PutBKA=;
+        fh=XITYYVdeQ2LgDb1PFuywY+yCkUNXMC5kE3hbyd+JRSw=;
+        b=XKGCn+nYvvxqYquFARAiposGGvVSeMzdTwDyeLiV9DqvMpC6lUoYDiA3r4EFNBdpuB
+         vDBqcOLj7eRRsElPs76V/027Tc6OVuiYNnUGcmYYoBxk2LzrUZ365zOA5rekOrpmNpSr
+         mVK22KuCVmXQGnWpRrIdRGLimrLynwPh9JCxzuVkjKdHQJD1cUetas8WD4PQfhNK5lk1
+         SpJU4GN8M8PPuStM2eUI3pvlS5SDg9JqCPENFEqP+UYOfcNKVpF1gpgouVLPRFR3pX+W
+         /veENjggO3aRpD4YFzgUbgXNCmEOlqsLfew3gPnqiNQByFQvFhLBimp1fCKZpbmrT8bQ
+         ev3Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sc-us.gov header.s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy header.b=R2CJKYBa;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b="YzaW/juL";
+       spf=pass (google.com: domain of 0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com designates 54.240.65.130 as permitted sender) smtp.mailfrom=0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sc-us.gov
+Return-Path: <0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com>
+Received: from a65-130.smtp-out.amazonses.com (a65-130.smtp-out.amazonses.com. [54.240.65.130])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ede888f8f2si20474331cf.659.2025.11.14.09.08.05
+        for <recipient@test-mail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 14 Nov 2025 09:08:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com designates 54.240.65.130 as permitted sender) client-ip=54.240.65.130;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sc-us.gov header.s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy header.b=R2CJKYBa;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b="YzaW/juL";
+       spf=pass (google.com: domain of 0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com designates 54.240.65.130 as permitted sender) smtp.mailfrom=0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sc-us.gov
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy; d=sc-us.gov; t=1763140085;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=PgB2giGQlCb1QV2h8w8m409DFB0+iUaAOXJXiH9eMXo=;
+	b=R2CJKYBapZBx7Nx+I4xigHe1/1W+7rj5/u3OLHze0ZrCe6bqybxBseG4dGOhIeD2
+	oOxU1jOp9PH4PfWWi96cBcjQvPcujpu/b30CeJu6TQghNs7MMX6kR5DaxlTbUBt88oS
+	DmH3URGEGI2Y2UBHaMnxITICWANIiRlQxC2Tfn/Q=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1763140085;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=PgB2giGQlCb1QV2h8w8m409DFB0+iUaAOXJXiH9eMXo=;
+	b=YzaW/juLciJ12W62ibugR+2+hpyZjZcrSFLMvnh6f1fo4MlM0jGbYRcqp/r3jWZR
+	A5PHMbSctJ1xTj1OmOE27bboSgEoymsMojK21OQKGq+fzJyeYWbluVzQ1iJPWXqnSSs
+	bnO8J5oXeNJtjZh3QyovEhqEdNiLcKSdkyh6BWXQ=
+From: no-reply@sc-us.gov
+Reply-To: efilingsupport@supremecourt.gov
+To: recipient@test-mail.com
+Subject: Supreme Court Case Notification 25a561.
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <0100019a8356a70c-10c73a65-9209-4805-b8e4-5177fce5635d-000000@email.amazonses.com>
+Date: Fri, 14 Nov 2025 17:08:05 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2025.11.14-54.240.65.130
+
+We have received a request that you would like to be notified via email of any new filings in 25a561. Please confirm this choice by clicking <a href = http://file.supremecourt.gov/casenotification/update?verify=CfDJ8LWjh78o-U5EigyPTWy9BmekjhR9plnZeYQHVl3uPceov95hvtFvqNhiJMMqHBzJV2ghZqBPHNh5RsKiWpg5xIivNeMJY6khyqOvoh-hr-GWniqjbqooFYeevAFYHzSBQhlX_vMY2mIJORl9dYZAaLJvbk-JFWLANLnh3vaPhtAknU6xszMVXJwPqQNU2onUC7VoP-YN_pV3k6UXmQvUziwuPaKuwgWOogpRaNQt1lapNhv6zXvL8zIJnH-nCnZeom2o2g7odXotLrdvau4p1xtZ6lOzboGltJGV0LTuxQFT>here</a>.  If you do not wish to be notified, you can ignore this email and you will not receive email notifications.

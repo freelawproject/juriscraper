@@ -8,38 +8,98 @@ History:
     - 2022-01-28: Updated for new web site, @satsuki-chan.
 """
 
+import re
 from urllib.parse import urlencode
 
+from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
+from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(mich.Site):
+class Site(ClusterSite, mich.Site):
+    court = "Court Of Appeals"
+    extract_from_text = OpinionSite.extract_from_text
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court = "Court Of Appeals"
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
-    def _get_precedential_statuses(self) -> list[str]:
-        """Find Precedential Status
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
 
-        If the case is published they note Published in the title string.
-
-        :return: Precedential statuses
+        :return: None
         """
-        for case in self.cases:
-            case["precedential_status"] = self.get_status(case["title"])
-        return [case["precedential_status"] for case in self.cases]
+        for item in self.html["searchItems"]:
+            case_dict = self._extract_case_data_from_item(item)
 
-    def get_status(self, title: str) -> str:
-        """Get the status of a case
+            # Use URL suffix to get the type. Other prefixes not used here
+            # "o.opn.pdf": "On Remand" opinions
+            # "a.opn.pdf": "After Second Remand"
+            url = case_dict.get("url", "")
+            lower_url = url.lower()
+            if lower_url.endswith("p.opn.pdf"):
+                case_dict["type"] = (
+                    OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
+                )
+            elif lower_url.endswith("d.opn.pdf"):
+                case_dict["type"] = OpinionType.DISSENT.value
+            elif lower_url.endswith("c.opn.pdf"):
+                case_dict["type"] = OpinionType.CONCURRENCE.value
+            else:
+                case_dict["type"] = OpinionType.MAJORITY.value
 
-        :param title: The JSON API title string
-        :return: The status of the case
+            # If we can't cluster it, append it to self.cases
+            # if it was clustered, the data will already be in self.cases
+            if not self.cluster_opinions(case_dict, self.cases):
+                self.cases.append(case_dict)
+
+    def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
+        """Try to get the case name using a secondary request
+
+        Example of the content in the URL
+        https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/377920
+
+        :param item: the opinion item from the API
+        :return: case name and docket number
         """
-        if "Published" in title:
-            status = "Published"
+        if self.test_mode_enabled():
+            return "Placeholder name", "Placeholder docket"
+
+        logger.info("Getting case name from secondary request")
+        docket_number = ""
+        if match := re.search(
+            r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
+        ):
+            docket_number = match.group("docket_number")
         else:
-            status = "Unpublished"
-        return status
+            docket_number = item["caseUrl"].split("/")[-1]
+
+        if not docket_number:
+            logger.error("michctapp: could not get docket number", extra=item)
+            return "Placeholder name", "Placeholder docket"
+
+        url = f"https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/{docket_number}"
+        self._request_url_get(url)
+        response = self.request["response"].json()
+        return self.cleanup_case_name(response["title"]), docket_number
+
+    def get_disposition(self, item: dict) -> str:
+        """Get the disposition value
+
+        Examples:
+        Affirm in Part, Vacate in Part, Remanded
+        L/Ct Judgment/Order Affirmed
+        Appeal Dismissed
+
+        :param item:
+        :return: the disposition string
+        """
+        return (
+            (item.get("decision", "") or "")
+            .replace("L/Ct", "Lower Court")
+            .strip()
+        )

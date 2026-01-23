@@ -11,7 +11,7 @@
 What is This?
 =============
 
-Juriscraper is a scraper library started several years ago that gathers judicial opinions, oral arguments, and PACER data in the American court system. It is currently able to scrape:
+Juriscraper is a scraper library started many years ago that gathers judicial opinions, oral arguments, and PACER data in the American court system. It is currently able to scrape:
 
 -  a variety of pages and reports within the PACER system
 -  opinions from all major appellate Federal courts

@@ -3,56 +3,88 @@
 #    Date     | Issue
 # 2013-01-28  | InsanityException due to the court adding busted share links.
 # 2014-07-02  | New website required rewrite.
+# 2025-08-26  | Updated to use OpinionSiteLinear and added extract_from_text.
 
-from datetime import datetime
+import re
 
 from juriscraper.lib.string_utils import clean_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://media.ca11.uscourts.gov/opinions/pub/logname.php"
         self.back_scrape_iterable = list(range(20, 10000, 20))
         self.should_have_results = True
+        self.status = "Published"
 
-    def _get_case_names(self):
-        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[1]//text()"))
+    def _process_html(self):
+        rows = self.html.xpath("//tr")
+        for row in rows:
+            # Extract values from each <td> in the row
+            tds = row.xpath("td")
+            if len(tds) < 5:
+                continue  # Skip rows that don't have enough columns
 
-    def _get_download_urls(self):
-        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[1]/a/@href"))
+            name = tds[0].xpath("a//text()")[0]
+            url = tds[0].xpath("a/@href")[0]
+            docket = tds[1].xpath(".//text()")[0]
+            lower_court_docket = tds[2].xpath(".//text()")[0]
+            nature = tds[3].xpath(".//text()")[0]
+            date = tds[4].xpath(".//text()")[0]
 
-    def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath(
-            "//tr[./td[1]/a//text()]/td[5]//text()"
-        ):
-            s = clean_string(date_string)
+            s = clean_string(date)
             if s == "00-00-0000" and "begin=21160" in self.url:
-                # Bad data found during backscrape.
                 s = "12-13-2006"
-            dates.append(datetime.strptime(clean_string(s), "%m-%d-%Y").date())
-        return dates
+            date_cleaned = clean_string(s)
 
-    def _get_docket_numbers(self):
-        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[2]//text()"))
+            self.cases.append(
+                {
+                    "name": clean_string(name),
+                    "url": url,
+                    "date": date_cleaned,
+                    "docket": clean_string(docket),
+                    "lower_court_number": lower_court_docket,
+                    "nature_of_suit": clean_string(nature),
+                }
+            )
 
-    def _get_precedential_statuses(self):
-        if "unpub" in self.url:
-            return ["Unpublished"] * len(self.case_names)
-        else:
-            return ["Published"] * len(self.case_names)
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """Extract lower court from the scraped text.
 
-    def _get_nature_of_suit(self):
-        return list(self.html.xpath("//tr[./td[1]/a//text()]/td[4]//text()"))
+        :param scraped_text: The text to extract from.
+        :return: A dictionary with the metadata.
+        """
+        pattern = re.compile(
+            r"""
+            (?:
+               Appeals?\s+from\s+the\s+
+              | Petitions?\s+for\s+Review\s+of\s+(?:a\s+)?Decision\s+of\s+the\s+
+            )
+            (?P<lower_court>[^.]+?)
+            (?=\s*(?:\.|Nos?\.|USC|D.C.))
+            """,
+            re.X,
+        )
+
+        lower_court = ""
+        if match := pattern.search(scraped_text):
+            lower_court = re.sub(
+                r"\s+", " ", match.group("lower_court")
+            ).strip()
+
+        if lower_court:
+            return {
+                "Docket": {
+                    "appeal_from_str": lower_court,
+                }
+            }
+
+        return {}
 
     def _download_backwards(self, n):
         self.url = f"http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={n}&num={n / 20 - 1}&numBegin=1"
-
         self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
+        self._process_html()

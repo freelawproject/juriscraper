@@ -15,20 +15,222 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add scotus_docket_report_html to parse SCOTUS HTML dockets
-- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
+-
 
 Changes:
 - Revert Mass back to old for to collect PDF
+
+Fixes:
+-
+
+## Current
+
+**2.7.4 - 2026-01-22**
+
+Features:
+-
+
+Changes:
+- Update `haw` and `hawapp` to ClusterSite #1772
+- updates `texapp`, `texcrimapp` to ClusterSite #1767
+- update `michctapp` to ClusterSite #1652
+
+Fixes:
+-
+
+**2.7.3 - 2025-01-15**
+
+Features:
+- Add scrapers for Texas Supreme Court, Court of Criminal Appeals, and Courts of Appeal
+- Add enumerating texas supreme courts and court of appeals dockets #1756
+- `tex` now uses ClusterSite #1762
+
+Changes:
+- `wva`, `wvactapp` now use ClusterSite #1748
+- `conn` and `connappct` now use ClusterSite #1733
+
+Fixes:
+- fix `tenn` miss adding opinion types #1749
+- add ADDENDUM to OpinionType enum #1754
+- update `lactapp_1` parameters for 2026 #1734
+
+
+## Past
+
+**2.7.2 - 2025-01-13**
+
+Features:
+- Add opinion type sanity check #1736
+
+Changes:
+- `wva`, `wvactapp` now use ClusterSite #1748
+- `conn` and `connappct` now use ClusterSite #1733
+
+Fixes:
+- fix `tenn` miss adding opinion types #1749
+- add ADDENDUM to OpinionType enum #1754
+- update `lactapp_1` parameters for 2026 #1734
+
+**2.7.1 - 2025-01-07**
+
+Features:
+- Add new scraper `tenn_workers_comp` for the Supreme Court of Tennessee, Workers Compensation Panel #1725
+- Adds helper to normalize attachment numbers for ACMS uploads #1744
+
+
+Fixes:
+- pa, pasuperct and pacommwct now use ClusterSite #1694
+- refactor `wash`; make `washctapp` scrapers inherit from it #1745
+
+
+**2.7.0 - 2025-12-31**
+
+Features:
+- Minor version bump: Add a new ClusterSite class that returns OpinionClusters with grouped opinions. See #883
+- Convert `tenn`, `tenncrimapp` and `tennctapp` to ClusterSite #1704
+- Add new `handle_email` method to `SCOTUSEmail` to confirm subscriptions or fetch full dockets depending on email type #1712
+
+Changes:
+- Improve `colo` scraper to automatically increase per_page parameter and add required field validation before appending cases #1656
+- BREAKING CHANGE: Output format of `SCOTUSEmail` changed
+
+Fixes:
+- `ca11_p` and `ca11_u` parse lower court docket number #1710
+- fix `bia` and `olc` by handling "I am not a robot challenge" when downloading a document #1724
+- fix Delaware scrapers, site HTML had changed #1728
+
+
+
+**2.6.100 - 2025-12-22**
+
+Fixes:
+- `ca11_p`: remove hardcoded status field #1708
+- `tenn`: fix opinion type extraction #1704
+- `tenn`: fix docket number and judges extraction #1705
+- `delaware`: update XPath selectors for changed website structure #1713
+
+**2.6.99 - 2025-12-10**
+
+Changes:
+- Added more fields to the SCOTUS docket parsers
+
+Fixes:
+- fix `okla` improve cleanup_content method to use CSS selectors and return bytes #1692
+- Fix `fla` and `fladistctapp` scrapers by scraping new API endpoint #1690
+- fix `uscgcoca` and `asbca` headers #1664
+- `okla` `cleanup_content` now deletes HTML comments that were causing duplicates #1697
+- make `tenn` use whitelisted user agent #1689
+
+**2.6.98 - 2025-12-05**
+
+Fixes:
+- fix recap.email docket_number parsing inside nested tags
+
+**2.6.97 - 2025-11-28**
+
+Fixes:
+- fix `alaska` scraper to skip header rows and prevent IndexError in table parsing #1674
+- fix `ky` and `kyctapp` IndexError when API returns empty document details #1666
+- fix `nyappdiv` and `nytrial` docket number extraction regex to require at least 1 number #1655
+
+**2.6.96 - 2025-11-21**
+
+Changes:
+- Add scotus_email to parse SCOTUS email notifications
+- Update scotus_email scraper to handle subscription confirmation emails
+
+Fixes:
+- fix `mich` and `michctapp` bad docket numbers #1648
+- fix `nyappdiv`, `nyappterm` and `nytrial` extract_from_text to get docket numbers #1655
+- remove unnecessary print statements from test cases
+- fix `illappct` oral args scrapers to handle nested HTML elements in case names #1668.
+- fix `illappct` oral argument scraper skipping the first row of HTML tables
+
+
+**2.6.95 - 2025-11-02**
+
+Changes:
+- update cleanup_content method for `ny` #1637
+- Update ga ct app backscraper
+
+Fixes:
+- cleanup_content method called twice in sample_caller.py
+
+
+
+**2.6.94 - 2025-10-28**
+
+Changes:
+- update `guam` domain #1635
+
+Fixes:
+- handle different table structures in `uscgcoca` scraper #1526
+- update cleanup_content method for `ny` #1637
+- add expected content types for document handling in 'texapp' scraper #1636
+- update `delaware`, `delch`, `delsuperct` and `delctcompl` scrapers and examples #1641
+
+
+**2.6.93 - 2025-10-17**
+
+Changes:
+- add backscraper for haw #1583
+
+Fixes:
+- fix download_content call in sample_caller #1619
+- fix `cal` rename key in OriginatingCourtInformation for accuracy #1625
+- fix `texbizct` improve error handling for name and citation extraction from titles #1629
+- add `ncbizct` to init #1631
+
+
+**2.6.92 - 2025-10-01**
+
+Features:
+- Add new method `download_content` to `AbstractSite` for improved file retrieval #1535
+
+Changes:
+- Retrieve lower court information in `sc` #1569
+
+
+**2.6.91 - 2025-09-26**
+
+Changes:
+- Retrieve lower court information in `vt` #1569
 - Retrieve lower court information in `sd` #1569
 - Retrieve lower court information in `va` #1569
 - Retrieve lower court information in `utah` #1569
+- Retrieve lower court information in `wyo` #1569
+- Retrieve lower court information in `dc` #1569
+- Retrieve lower court information in `cal` scrapers #1569
+- Retrieve lower court information in 'alaska' #1569
+- Add lower court extraction to `federal_appellate` scrapers #1560
+- Add lower court extraction to `iowa` scrapers #1569
+- Retrieve lower court information in `delaware` scrapers #1569
+- Retrieve lower court information in `idaho` #1569
+- Retrieve lower court information in `ky` #1569
+- Retrieve lower court information in `la` #1569
+- Retrieve lower court information in `mont` #1569
+- Retrieve lower court information in `nd` #1569
+- Retrieve lower court information in `nj` #1569
+- Retrieve lower court information in `neb` #1569
+- Clean up `haw` names #1582
+- Retrieve lower court information in `nm` #1569
+- Retrieve lower court information in `or` #1569
+- Update `mdag` scraper, site has changed #1598
+- Retrieve lower court information in `pa` #1569
+
+Fixes:
+- fix `tax` scraper #1599
+- Fix `conn` to handle unusual HTML #1601
+
+
+**2.6.90 - 2025-09-10**
+Features:
+- Add scotus_docket_report_html to parse SCOTUS HTML dockets
+- Add scotus_docket_report_htm to parse SCOTUS HTM dockets
 
 Fixes:
 - Fix connappct #1580
 - fix `bia` scraper #1574
-
-## Current
 
 **2.6.89 - 2025-09-02**
 
@@ -38,11 +240,10 @@ Features:
 
 Changes:
 - Retrieve lower court information in `bap9` and `bap10` #1567
+- Retrieve lower court information in `ariz`  #1569
 
 Fixes:
 - fix `cafc` oral arguments scraper #1570
-
-## Past
 
 **2.6.88 - 2025-08-27**
 
@@ -902,7 +1103,7 @@ Changes:
 
 Features:
 
--
+- implement `mont` extract_from_text to extract docket numbers #1339
 
 Changes:
 

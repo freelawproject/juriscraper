@@ -8,20 +8,32 @@ import re
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
+
+from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(ClusterSite):
+    first_opinion_date = datetime(1993, 1, 22)
+    days_interval = 7
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.tncourts.gov/courts/supreme-court/opinions"
         self.court_id = self.__module__
         self.status = "Unknown"
         self.should_have_results = True
-        self.first_opinion_date = datetime(1993, 1, 22)
-        self.days_interval = 7
         self.make_backscrape_iterable(kwargs)
+
+        # we got this UA whitelisted #1689
+        self.request["headers"] = {"User-Agent": "Juriscraper"}
+        self.needs_special_headers = True
+
+        self.section_selector = "views-field-field-opinions-case-number"
+        # the docket will be the first no empty floating text in the "section"
+        self.docket_xpath = ".//p/text()[normalize-space()]"
 
     def _process_html(self):
         """
@@ -40,49 +52,59 @@ class Site(OpinionSiteLinear):
                 .strip()
             )
             section = row.xpath(
-                ".//td[contains(@class, 'views-field-field-opinions-case-number')]"
+                f".//td[contains(@class, '{self.section_selector}')]"
             )[0]
             url = section.xpath(".//a")[0].get("href")
 
+            summary = self.get_summary(section)
+            # prevent picking up one of the judge containers
+            if "Judge:" in summary:
+                summary = ""
+
             name_text = section.xpath(".//a")[0].text_content()
-            type_match = re.search(r"\(([^)]+)\)", name_text)
-            type_raw = type_match.group(1).lower() if type_match else ""
+            name, opinion_type = self.extract_type(name_text, summary)
 
-            opinion_type = self.extract_type(type_raw)
-
-            name = re.sub(r"\s*\([^)]+\)", "", name_text).strip()
-            rows = [
-                row.strip()
-                for row in section.text_content().strip().split("\n", 4)
-            ]
+            # may be empty
+            lower_court_judge = section.xpath(
+                ".//text()[contains(., 'Trial Court Judge:')]"
+            )
+            if lower_court_judge:
+                lower_court_judge = (
+                    lower_court_judge[0].split(":", 1)[1].strip()
+                )
 
             judge = (
-                rows[2].split(": ")[1] if "Authoring Judge" in rows[2] else ""
+                section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
+                .strip()
+                .split(":", 1)[1]
+                .strip()
             )
-            lower_court_judge = (
-                rows[3].split(": ")[1]
-                if "Trial Court Judge" in rows[3]
-                else ""
-            )
-            summary = rows[-1] if "Judge" not in rows[-1] else ""
             per_curiam = False
             if "curiam" in judge.lower():
                 judge = ""
                 per_curiam = True
 
-            self.cases.append(
-                {
-                    "date": date,
-                    "url": url,
-                    "name": name,
-                    "docket": rows[1],
-                    "judge": judge,
-                    "lower_court_judge": lower_court_judge,
-                    "summary": summary,
-                    "per_curiam": per_curiam,
-                    "type": opinion_type,
-                }
-            )
+            case_dict = {
+                "date": date,
+                "url": url,
+                "name": name.strip(),
+                "docket": section.xpath(self.docket_xpath)[0].strip(),
+                "judge": judge,
+                "author": judge,
+                "lower_court_judge": lower_court_judge or "",
+                "summary": summary or "",
+                "per_curiam": per_curiam,
+                "type": opinion_type,
+            }
+
+            # attempt to merge with previous cases
+            if cluster := self.cluster_opinions(case_dict, self.cases):
+                # add to the cluster
+                cluster["judge"] += f"; {case_dict['judge']}"
+                logger.info("Clustered opinions into %s", self.cases[-1])
+                continue
+
+            self.cases.append(case_dict)
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.
@@ -128,23 +150,62 @@ class Site(OpinionSiteLinear):
 
         return ""
 
-    def extract_type(self, type_raw: str) -> str:
+    def extract_type(self, raw_name: str, summary: str) -> tuple[str, str]:
         """
-        Map a raw opinion type string to a standardized type.
+        Find the opinion type if it exists and clean it out fo the name
 
-        :param type_raw: Raw type string extracted from the opinion (e.g., 'concurring', 'dissenting')
-        :return: Standardized type string from types_mapping
+        See edge cases:
+            "In Re: Winston Bradshaw Sitton, BPR#018440 - Concurring in Section III, not joining in Sections I and II"
+            "State of Tennessee v. Jerome Antonio McElrath - Concurring In the suppression of evidence; dissenting from the adoption of an exclusionary rule exception for constitutional violations caused by careless police recordkeeping"
+
+        Be careful when cleaning out the name. See example:
+            "State of Tennessee v. Tabitha Gentry (AKA ABKA RE BAY)"
+
+        :param raw_name: full name including opinion type
+        :param summary: summary of the opinion
+        :return: (Standardized type string from types_mapping, name cleaned of the type)
         """
-        if "concurring" in type_raw:
-            op_type = OpinionType.CONCURRENCE
-        elif "in part" in type_raw:
+        # everything between a dash or parenthesis and the end of the string
+        type_regex = re.compile(r"(- |\().+?\)?$")
+        type_string = ""
+        if match := type_regex.search(raw_name):
+            type_string = match.group(0)
+        lower_type = type_string.lower()
+
+        # Use specific patterns to avoid false positives like "concurrent"
+        # Match "concurring" or "concurrence" but not "concurrent"
+        concur = "concur" in lower_type or re.search(
+            r"\bconcur(?:ring|rence|s)?\b", summary, re.IGNORECASE
+        )
+        dissent = "dissent" in lower_type or re.search(
+            r"\bdissent(?:ing|s)?\b", summary, re.IGNORECASE
+        )
+        not_join = "not join" in lower_type
+
+        op_type = ""
+        if (
+            "in part" in lower_type
+            or (concur and dissent)
+            or (concur and not_join)
+        ):
             op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
-        elif "dissenting" in type_raw:
+        elif concur:
+            op_type = OpinionType.CONCURRENCE
+        elif dissent:
             op_type = OpinionType.DISSENT
-        else:
-            op_type = OpinionType.MAJORITY
 
-        return op_type.value
+        # if no type was found, set it to Majority but do not edit the name
+        if not op_type:
+            return raw_name, OpinionType.MAJORITY.value
+
+        # delete the type string
+        if match:
+            logger.debug(
+                "Deleting '%s' from case name '%s'", match.group(0), raw_name
+            )
+            raw_name = raw_name[: match.start()].strip()
+
+        return raw_name, op_type.value
 
     def _download_backwards(self, dates: tuple[date, date]) -> None:
         r"""Download cases within a given date range.
@@ -159,3 +220,20 @@ class Site(OpinionSiteLinear):
         )
         self.html = self._download()
         self._process_html()
+
+    def get_summary(self, section: HtmlElement) -> str:
+        """Get the summary
+
+        :param section: the html element containing the case summary
+        :return the parsed summary
+        """
+        # the summary will be the last non empty p or p/span
+        summary_container = section.xpath(".//p")
+
+        if not (summary := summary_container[-1].xpath("string(.)").strip()):
+            summary = summary_container[-2].xpath("string(.)")
+
+        # text inside may be separated by <br> tags
+        summary = re.sub(r"\s+", " ", summary)
+
+        return summary

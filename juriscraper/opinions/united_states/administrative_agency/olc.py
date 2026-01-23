@@ -12,6 +12,8 @@ from datetime import date, datetime
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.auth_utils import get_justice_dot_gov_auth_cookies
+from juriscraper.lib.exceptions import UnexpectedContentTypeError
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -47,7 +49,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -64,3 +66,21 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.html = self._download()
         self._process_html()
+
+    def download_content(
+        self, download_url, doctor_is_available=True, media_root=""
+    ):
+        """Overrides regular download_content to handle the
+        "I am not a robot challenge". See #1724
+        """
+        try:
+            return super().download_content(
+                download_url, doctor_is_available, media_root
+            )
+        except UnexpectedContentTypeError as exc:
+            # access HTML with JS variables to populate cookies
+            html_text = exc.data["response"].text
+            self.cookies = get_justice_dot_gov_auth_cookies(html_text)
+            return super().download_content(
+                download_url, doctor_is_available, media_root
+            )

@@ -114,6 +114,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         date_str: str,
         description_td: Optional[HtmlElement],
         attachment_path: str,
+        table_layout: bool = False,
     ) -> dict[str, Any]:
         """Build a normalized docket entry dict.
 
@@ -155,6 +156,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
         return {
             "date_filed": self.normalize_date(date_str),
+            "document_number": None,
             "description": description,
             "description_html": description_html,
             "attachments": [],

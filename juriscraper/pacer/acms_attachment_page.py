@@ -69,6 +69,30 @@ class ACMSAttachmentPage(BaseReport):
         # Extract description before format extension
         return parts[-1].split(".")[0]
 
+    def _parse_attachment_number(self, value: str) -> int:
+        """
+        Parse an ACMS attachment number into its integer form.
+
+        Based on observed ACMS data, attachment numbers are represented as
+        either:
+            - A single integer (e.g., "2")
+            - A dotted notation where the attachment number appears after the
+          dot (e.g., "3.1", "3.2")
+
+        This helper encapsulates the normalization logic so we can work
+        with a consistent integer representation regardless of the input
+        format.
+
+        Examples:
+            '2'   -> 2
+            '3.1' -> 1
+            '3.2' -> 2
+        """
+        if "." in value:
+            _, attachment = value.split(".", 1)
+            return int(attachment)
+        return int(value)
+
     def check_validity(self, parsed_json: dict) -> None:
         """Place sanity checks here to make sure that the returned json is
         valid and not an error page or some other kind of problem.
@@ -178,7 +202,9 @@ class ACMSAttachmentPage(BaseReport):
         for row in self._acms_json["docketEntryDocuments"]:
             result["attachments"].append(
                 {
-                    "attachment_number": int(row["documentNumber"]),
+                    "attachment_number": self._parse_attachment_number(
+                        row["documentNumber"]
+                    ),
                     "description": self._clean_attachment_description(
                         row["name"]
                     ),

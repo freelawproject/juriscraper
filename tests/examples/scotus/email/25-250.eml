@@ -1,0 +1,72 @@
+Delivered-To: recipient@test-mail.com
+Received: by 2002:a59:bc6f:0:b0:4f8:9d3:7e27 with SMTP id t15csp1308319vqy;
+        Wed, 8 Oct 2025 19:04:06 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHliMlxnJ95NXAjhR3QeYsM5b9Hyr3/tb23p/td/9kzxHMz0/hLujRMrpEHWbdYAAaerZXO
+X-Received: by 2002:ac8:5902:0:b0:4b7:aa00:1e6d with SMTP id d75a77b69052e-4e6ead74a71mr83870481cf.76.1759975446359;
+        Wed, 08 Oct 2025 19:04:06 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1759975446; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EjWLWdp8uSiUsOGeDuJNWCVyKoyUFpNDcBSo35JIlQsbmj/dOTv1yifYS6bZjYlIKf
+         Cx9RSBykdF42SzLvUO90JYxZXBlYbQi/nDfVj4BCbG349snXQlkjBpe2gtz5YcrnqaIH
+         qgikxjBMi0VAXLSbnmIashkgJIkUsLD0Ni9QEACamwnrk867mWS1FOWbSDWmi161l9GE
+         HfYW9OygGr0KqtvoXNwmqjueZ2hGR4nuTQvSKAOsYmokGJJbNEPVfgFHtHa8UuNcBUjY
+         F/oGAvj2i7e0UyCkOPKInBo6SX2gEfMwqalf3/wvSVPHYM6osM6rSnJ7+4qpKwAv3XxE
+         SCsA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=xbUXWjZ0pqjfkzbaDbvJwFCWLYx5ygpwmoZphn1L/ZM=;
+        fh=XITYYVdeQ2LgDb1PFuywY+yCkUNXMC5kE3hbyd+JRSw=;
+        b=M4dRo3sD8IY6E9eSCQ2sFlOw+6PwvwA25IKMXdlMQIqmuhqaZ+hxeQ5FCkyAT8zDU1
+         nULgDx0v3UWoc5e8cgUvgoiEy9Qxm8D3JdHCmPgHogCGVFsAW3ddJ+1BNiz2pNCpMFpq
+         GC0LhCYSNLC7R0Pt9m6vNYr+1dnppqL67R/mreBdL0EDUqd/Ma9Z8DgNCbhv/OpSruP0
+         TaiZs8gn+9oP/0kvBDJkxP7s6RlJ7A+1tckVJfkiTFC5+KWK8IX7vPi80kOFBc0xXCcJ
+         bDj+fQJ7gDBp+3acJuSsvn64NL6nPIUPDkYjCNTvXTyD6rC1v+1huBTiWB/plzuXtHkD
+         pLxw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sc-us.gov header.s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy header.b=NqvU7+7h;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=fUb0HRQR;
+       spf=pass (google.com: domain of 01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com designates 54.240.66.91 as permitted sender) smtp.mailfrom=01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sc-us.gov
+Return-Path: <01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com>
+Received: from a66-91.smtp-out.amazonses.com (a66-91.smtp-out.amazonses.com. [54.240.66.91])
+        by mx.google.com with ESMTPS id af79cd13be357-884a14e14d9si58850485a.995.2025.10.08.19.04.06
+        for <recipient@test-mail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 08 Oct 2025 19:04:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com designates 54.240.66.91 as permitted sender) client-ip=54.240.66.91;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sc-us.gov header.s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy header.b=NqvU7+7h;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=fUb0HRQR;
+       spf=pass (google.com: domain of 01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com designates 54.240.66.91 as permitted sender) smtp.mailfrom=01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sc-us.gov
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy; d=sc-us.gov; t=1759975445;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=xoN1csv8xfdueaxhiYDmPNH2k/OJAzT2WvVjKobcIgM=;
+	b=NqvU7+7h57vM4KEyPDGqY1M8X0ngMnDt0v5qQxlF10WOZ7v6leV1Y0JRveZMIl+H
+	Q7HpKs3f9H7iWveVhHlG7W9g3jgEnlD2gKSDBuNYKPQOnslxCWk0Z1upCSEBiC5lYPd
+	7jxK1kiwUnQM3UOV02PqqrMspu+CxHucW5Q01BGM=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1759975445;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=xoN1csv8xfdueaxhiYDmPNH2k/OJAzT2WvVjKobcIgM=;
+	b=fUb0HRQR/QVLSlmUxMTkGsIy7cREFB7UcUV8zGFrPDh42/B49YpEF/XffqUvuEQk
+	z1f1Mf/TvlE5UgXCGFslOsQG9/BSXpds/KD+eHNAcrujJpbBbFlpIvjuJDSYrouNxfy
+	d6UWGWM4r8KjwNuoTvuTcadrfC+IJLvOjB99BGXg=
+From: no-reply@sc-us.gov
+To: recipient@test-mail.com
+Subject: Supreme Court Electronic Filing System
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <01000199c6b6152a-bc0268cf-b07b-4083-b2b5-9264e44e3b98-000000@email.amazonses.com>
+Date: Thu, 9 Oct 2025 02:04:05 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2025.10.09-54.240.66.91
+
+A new docket entry, "Amicus brief of Corey J. Biazzo, Esq. submitted." has been added for <a href='https://www.supremecourt.gov/search.aspx?filename=/docket/DocketFiles/html/Public/25-250.html'>Donald J. Trump, President of the United States, et al., Petitioners v. V.O.S. Selections, Inc., et al.</a>. You have been signed up to receive email notifications for No. 25-250. <br><br> If you no longer wish to receive email notifications on this case, please
+
+<a href='https://file.supremecourt.gov/Request/NotificationOptOutGet?id=CfDJ8LWjh78o-U5EigyPTWy9Bmdt2n0ow1EqzsnURwF3fhk-3LjR9A5QM9KTFXoQieQS_FkqPMfSjGdVEbXRkld5NUm6hZpqENPhb8irwO0EOauUGmQLME2C2Cnopp7yZnWSltUvpp9EWsHDAY1-nkHoH9k'>click here</a>.
+

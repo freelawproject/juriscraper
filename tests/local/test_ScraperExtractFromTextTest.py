@@ -70,14 +70,30 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nm": [
             (
-                """Opinion Number: _______________ Filing Date: January 10, 2022\nNO. S-1-SC-38247\nCITIZENS FOR FAIR RATES""",
-                {"OpinionCluster": {"docket_number": "S-1-SC-38247"}},
+                "\n                                                                   Office of the         New Mexico\n                                                                       Director          Compilation\n                                                                                         Commission\n                                                            10:53:07 2025.08.04\n                                                                         '00'06-\n            IN THE SUPREME COURT OF THE STATE OF NEW MEXICO\n\nOpinion Number: 2025-NMSC-023\n\nFiling Date: April 21, 2025\n\nNo. S-1-SC-39283\n\nSTATE OF NEW MEXICO,\n\n      Plaintiff-Appellant,\n\nv.\n\nDEBORAH GREEN,\n\n      Defendant-Appellee.\n\nAPPEAL FROM THE DISTRICT COURT OF CIBOLA COUNTY\nJames Lawrence Sanchez, District Judge",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Cibola County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "James Lawrence Sanchez"
+                    },
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.nmctapp": [
             (
-                """Opinion Number: _______________ Filing Date: January 10, 2022\nNo. A-1-CA-39059\nCITIZENS FOR FAIR RATES""",
-                {"OpinionCluster": {"docket_number": "A-1-CA-39059"}},
+                "\n                                                                   Office of the         New Mexico\n                                                                       Director          Compilation\n                                                                                         Commission\n                                                            10:53:07 2025.08.04\n                                                                         '00'06-\n            IN THE SUPREME COURT OF THE STATE OF NEW MEXICO\n\nOpinion Number: 2025-NMSC-023\n\nFiling Date: April 21, 2025\n\nNo. S-1-SC-39283\n\nSTATE OF NEW MEXICO,\n\n      Plaintiff-Appellant,\n\nv.\n\nDEBORAH GREEN,\n\n      Defendant-Appellee.\n\nAPPEAL FROM THE DISTRICT COURT OF CIBOLA COUNTY\nJames Lawrence Sanchez, District Judge",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Cibola County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "James Lawrence Sanchez"
+                    },
+                    "OpinionCluster": {"docket_number": "S-1-SC-39283"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.ark": [
@@ -103,14 +119,15 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nyappterm_1st": [
             (
-                """<br>PRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n\n <br>570410/22 \n and more and more """,
+                """<br>PRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n\n <br>570410/22 \n<br> and more and more """,
                 {"Docket": {"docket_number": "570410/22"}},
             ),
         ],
         "juriscraper.opinions.united_states.state.nyappterm_2nd": [
             (
-                """SUPREME COURT, APPELLATE TERM, FIRST DEPARTMENT \nPRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n 570613/17 """,
-                {"Docket": {"docket_number": "570613/17"}},
+                # https://www.courtlistener.com/opinion/10689722/xx/
+                """Prando v Kelly</b></td>\n</tr>\n<tr>\n<td align=\"center\">2021 NY Slip Op 51241(U) [73 Misc 3d 144(A)]</td>\n</tr>\n<tr>\n<td align=\"center\">Decided on December 16, 2021</td>\n</tr>\n<tr>\n<td align=\"center\">Appellate Term, Second Department</td>\n</tr>\n<tr>\n<td align=\"center\">Published by New York State Law Reporting Bureau\npursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align=\"center\">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</tbody></table>\n<br><br>\n\nDecided on December 16, 2021\n<br><div>SUPREME COURT, APPELLATE TERM, SECOND\nDEPARTMENT, 9th and 10th JUDICIAL DISTRICTS</div>\n<br>PRESENT: : TERRY JANE RUDERMAN, P.J., ELIZABETH H. EMERSON, TIMOTHY\nS. DRISCOLL, JJ\n\n\n\n<br>2020-989 D C\n\n<br><br><div><b>Gregory Prando, App""",
+                {"Docket": {"docket_number": "2020-989 D C"}},
             ),
         ],
         "juriscraper.opinions.united_states.state.sd": [
@@ -203,7 +220,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nysupct": [
             (
                 # https://www.nycourts.gov/reporter/pdfs/2019/2019_32654.pdf
-                """Deboer v Friedman\n2019 NY Slip Op 32654(U)\nSeptember 4, 2019\nSupreme Court, New York County\nDocket Number: 654329/2018\nJudge: Arthur F. Engoron""",
+                """Deboer v Friedman\n2019 NY Slip Op 32654(U)\nSeptember 4, 2019\nSupreme Court, New York County\nDocket Number: 654329/2018\nJudge: Arthur F. Engoron\n""",
                 {
                     "Docket": {"docket_number": "654329/2018"},
                     "Opinion": {"author_str": "Arthur F. Engoron"},
@@ -211,7 +228,7 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2019/2019_30152.pdf
-                """1809 Emns Ave Inc. v American Signcrafters LLC\n2019 NY Slip Op 30152(U)\nJanuary 10, 2019\nSupreme Court, Kings County\nDocket Number: 517955/18\nJudge: Leon Ruchelsman""",
+                """1809 Emns Ave Inc. v American Signcrafters LLC\n2019 NY Slip Op 30152(U)\nJanuary 10, 2019\nSupreme Court, Kings County\nDocket Number: 517955/18\nJudge: Leon Ruchelsman\n""",
                 {
                     "Docket": {"docket_number": "517955/18"},
                     "Opinion": {"author_str": "Leon Ruchelsman"},
@@ -219,7 +236,7 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2021/2021_33275.pdf
-                """Ciardiello v Village of New Paltz\n2021 NY Slip Op 33275(U)\nMarch 8, 2021\nSupreme Court, Ulster County\nDocket Number: Index No. EF18-3323\nJudge: Christopher E. Cahill""",
+                """Ciardiello v Village of New Paltz\n2021 NY Slip Op 33275(U)\nMarch 8, 2021\nSupreme Court, Ulster County\nDocket Number: Index No. EF18-3323\nJudge: Christopher E. Cahill\n""",
                 {
                     "Docket": {"docket_number": "Index No. EF18-3323"},
                     "Opinion": {"author_str": "Christopher E. Cahill"},
@@ -238,12 +255,12 @@ class ScraperExtractFromText(unittest.TestCase):
                 """Rothman v Puretz\n2023 NY Slip Op 32445(U)\nJuly 18, 2023\nSupreme Court, Monroe County\nDocket Number: Index No. E2023001856\nJudge: J. Scott Odorisi\nCases posted with a "30000" identifier, i""",
                 {
                     "Docket": {"docket_number": "Index No. E2023001856"},
-                    "Opinion": {"author_str": "Scott Odorisi"},
+                    "Opinion": {"author_str": "J. Scott Odorisi"},
                 },
             ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2021/2021_30613.pdf
-                """Dodaj v Lofti\n2021 NY Slip Op 30613(U)\nJanuary 13, 2021\nSupreme Court, Bronx County\nDocket Number: 20240/2019E\nJudge: Veronica G. Hummel""",
+                """Dodaj v Lofti\n2021 NY Slip Op 30613(U)\nJanuary 13, 2021\nSupreme Court, Bronx County\nDocket Number: 20240/2019E\nJudge: Veronica G. Hummel\n""",
                 {
                     "Docket": {"docket_number": "20240/2019E"},
                     "Opinion": {"author_str": "Veronica G. Hummel"},
@@ -253,7 +270,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nycountyct": [
             (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_33955.pdf
-                """People v Wiltshire\n2018 NY Slip Op 33955(U)\nAugust 15, 2018\nCounty Court, Westchester County\nDocket Number: 18-0465-01\nJudge: Larry J. Schwartz""",
+                """People v Wiltshire\n2018 NY Slip Op 33955(U)\nAugust 15, 2018\nCounty Court, Westchester County\nDocket Number: 18-0465-01\nJudge: Larry J. Schwartz\n""",
                 {
                     "Docket": {"docket_number": "18-0465-01"},
                     "Opinion": {"author_str": "Larry J. Schwartz"},
@@ -298,7 +315,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Index No. 11523/2020",
                         "case_name_full": '201 East 164th Street Associates, LLC, against Pastora Calderon & ROSA IDALIA ABDELNOUR, "JOHN DOE" & "JANE DOE" A/K/A DUNIA GOMEZ Respondents-Undertenants.',
                     },
-                    "Opinion": {"author_str": "Shorab Ibrahim"},
+                    "Opinion": {"author_str": "Ibrahim"},
                     "OpinionCluster": {
                         "case_name_full": '201 East 164th Street Associates, LLC, against Pastora Calderon & ROSA IDALIA ABDELNOUR, "JOHN DOE" & "JANE DOE" A/K/A DUNIA GOMEZ Respondents-Undertenants.'
                     },
@@ -315,7 +332,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "File No. 2021-31/C",
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON",
                     },
-                    "Opinion": {"author_str": "Peter J. Kelly"},
+                    "Opinion": {"author_str": "Kelly"},
                     "Citation": "78 Misc 3d 1203(A)",
                     "OpinionCluster": {
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON"
@@ -355,7 +372,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Docket No. F-30317/2004/19F",
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y.",
                     },
-                    "Opinion": {"author_str": "Javier E. Vargas"},
+                    "Opinion": {"author_str": "Vargas"},
                     "Citation": "73 Misc 3d 1238(A)",
                     "OpinionCluster": {
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y."
@@ -372,7 +389,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "2017KN054132",
                         "case_name_full": "The People of the State of New York against Amela Hot",
                     },
-                    "Opinion": {"author_str": "Donald Leo"},
+                    "Opinion": {"author_str": "Leo"},
                     "Citation": "58 Misc 3d 1215(A)",
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York against Amela Hot"
@@ -398,10 +415,10 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nyclaimsct": [
             (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_34469.pdf
-                """Lawrence v State of N.Y. Dept. of\nCommunity Supervision\n2018 NY Slip Op 34469(U)\nJanuary 10, 2018\nCourt of Claims\nDocket Number: Index No. 2010-038-505\nJudge: W. Brooks DeBow""",
+                """Lawrence v State of N.Y. Dept. of\nCommunity Supervision\n2018 NY Slip Op 34469(U)\nJanuary 10, 2018\nCourt of Claims\nDocket Number: Index No. 2010-038-505\nJudge: W. Brooks DeBow\n""",
                 {
                     "Docket": {"docket_number": "Index No. 2010-038-505"},
-                    "Opinion": {"author_str": "W. Brooks Debow"},
+                    "Opinion": {"author_str": "W. Brooks DeBow"},
                 },
             ),
             (
@@ -412,7 +429,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Claim No. 136323-A",
                         "case_name_full": "Bernardo Martinaj, against State of New York",
                     },
-                    "Opinion": {"author_str": "Javier E. Vargas"},
+                    "Opinion": {"author_str": "Vargas"},
                     "OpinionCluster": {
                         "case_name_full": "Bernardo Martinaj, against State of New York"
                     },
@@ -423,7 +440,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nydistct": [
             (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51308.htm
-                """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Sims v Regis</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51308(U) [81 Misc 3d 1210(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on November 30, 2023</td>\n</tr>\n<tr>\n<td align="center">District Court Of Nassau County, Second District</td>\n</tr>\n<tr>\n<td align="center">Montesano, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on November 30, 2023\n<br><div align="center">District Court of Nassau County, Second District</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Alistair Sims,\nClaimant,\n\n<br><br>against<br><br>Lance Frantz Regis A/K/A LANCE REGIS A/K/A\nLANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ\nA/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ,\nDefendant(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. SC-000830-23/NA \n<<br><br>\n<br>Alistair Sims; Lance Regis<br>\n\n\n<br>Michael A. Montesano, J.\n\n<p class="auto-style1">Papers Considered:</p>""",
+                """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Sims v Regis</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51308(U) [81 Misc 3d 1210(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on November 30, 2023</td>\n</tr>\n<tr>\n<td align="center">District Court Of Nassau County, Second District</td>\n</tr>\n<tr>\n<td align="center">Montesano, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on November 30, 2023\n<br><div align="center">District Court of Nassau County, Second District</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Alistair Sims,\nClaimant,\n\n<br><br>against<br><br>Lance Frantz Regis A/K/A LANCE REGIS A/K/A\nLANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ\nA/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ,\nDefendant(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. SC-000830-23/NA \n<br><br>\n<br>Alistair Sims; Lance Regis<br>\n\n\n<br>Michael A. Montesano, J.\n\n<p class="auto-style1">Papers Considered:</p>""",
                 {
                     "Docket": {
                         "docket_number": "Index No. SC-000830-23/NA",
@@ -456,7 +473,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nycityct": [
             (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_23374.htm
-                """<div>\n\nPotentia Mgt. Group, LLC v D.W. (2023 NY Slip Op 23374)\n\n\n\n\n[*1]\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Potentia Mgt. Group, LLC v D.W.</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23374</td>\n</tr>\n<tr>\n<td align="center">Decided on December 1, 2023</td>\n</tr>\n<tr>\n<td align="center">Utica City Court</td>\n</tr>\n<tr>\n<td align="center">Giruzzi, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 1, 2023\n<br><div align="center">Utica City Court</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Potentia Management Group, LLC\n\n<br><br>against<br><br>D.W.</b></div><br><br>\n\n</td></tr></table><br><br>Docket No. CV-00357-23\n<<br><br>Ralph W. Fusco, Esq., for the Plaintiff<br><br>Benjamin M. Burdick, Esq., for the Defendant<p></p>\n\n\n<br>F. Christopher Giruzzi, J.\n\n<p class="auto-style1">Procedural History</p>\n<i>a. Initial Filings</i><p>On February 10, 2023, Potentia Management Group, LLC, (hereinafter referred to as Potentia Management and / o""",
+                """<div>\n\nPotentia Mgt. Group, LLC v D.W. (2023 NY Slip Op 23374)\n\n\n\n\n[*1]\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Potentia Mgt. Group, LLC v D.W.</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23374</td>\n</tr>\n<tr>\n<td align="center">Decided on December 1, 2023</td>\n</tr>\n<tr>\n<td align="center">Utica City Court</td>\n</tr>\n<tr>\n<td align="center">Giruzzi, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 1, 2023\n<br><div align="center">Utica City Court</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Potentia Management Group, LLC\n\n<br><br>against<br><br>D.W.</b></div><br><br>\n\n</td></tr></table><br><br>Docket No. CV-00357-23\n<br><br>Ralph W. Fusco, Esq., for the Plaintiff<br><br>Benjamin M. Burdick, Esq., for the Defendant<p></p>\n\n\n<br>F. Christopher Giruzzi, J.\n\n<p class="auto-style1">Procedural History</p>\n<i>a. Initial Filings</i><p>On February 10, 2023, Potentia Management Group, LLC, (hereinafter referred to as Potentia Management and / o""",
                 {
                     "Docket": {
                         "docket_number": "Docket No. CV-00357-23",
@@ -488,6 +505,10 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {
                         "case_name": "Gerszewski v. Rostvet",
                         "docket_number": "Nos. 20230361-20230363",
+                        "appeal_from_str": "District Court of Walsh County, Northeast Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Barbara L. Whelan"
                     },
                 },
             ),
@@ -599,6 +620,24 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       25-AP-046\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                  SEPTEMBER TERM, 2025\n\nXandra Velenchik v. Alan Velenchik*                 }    APPEALED FROM:\n                                                    }    Superior Court, Bennington Unit,\n                                                    }    Family Division\n                                                    }    CASE NO. 22-DM-02104\n                                                         Trial Judge: Howard A. Kalfus\n\n                                In the above-entitled cause, the Clerk will enter:\n\n       Husband appeals the property-division and maintenance portions of a final divorce order.\nWe affirm.\n\n        Following a three-day hearing, the family division issued an order containing the\nfollowing findings and conclusions. The parties married in 2001 and separated in 2021. They\nare both well-educated and in good health. Wife is a dentist in a solo practice in Manchester,\nVermont. With husband’s support, she graduated from dental school in 2003. In 2017, she\npurchased an existing dental practice and moved it to Manchester. Wife made physical\nimprovements to the office and purchased new dental equipment. Husband contributed some\nlabor to the physical improvements. The court credited wife’s expert’s testimony that the\npractice was worth $440,000, but that ninety percent of its value was in human capital. To\nrealize the full sale price, wife would need to be willing to stay involved in the practice during\nthe transition to a new provider, and agree to a noncompete clause prohibiting her from\npracticing dentistry within a twenty-mile radius. Absent these provisions, the value of the\npractice was only $45,000.\n\n       Affirmed.\n\n\n\n                                              BY THE COURT:\n\n\n\n                                              Paul L. Reiber, Chief Justice\n\n\n                                              William D. Cohen, Associate Justice\n\n\n                                              Nancy J. Waples, Associate Justice\n\n\n\n\n                                               5\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Bennington Unit, Family "
+                        "Division"
+                    },
+                    "OpinionCluster": {
+                        "judges": "Paul L. Reiber; William D. Cohen; Nancy J. "
+                        "Waples",
+                        "precedential_status": "Unpublished",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Howard A. Kalfus",
+                        "docket_number": "22-DM-02104",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vt_criminal": [
             (
@@ -607,6 +646,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Citation": "2022 VT 35",
                     "OpinionCluster": {"precedential_status": "Published"},
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Chittenden Unit, Criminal Division"
+                    },
                 },
             ),
         ],
@@ -619,7 +661,19 @@ class ScraperExtractFromText(unittest.TestCase):
                     "Docket": {"court_id": "vt"},
                     "OpinionCluster": {"precedential_status": "Published"},
                 },
-            )
+            ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       25-AP-060\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                          JULY TERM, 2025\n\nIn re 181 Parker Hill Road Application    }             APPEALED FROM:\n(Anthony J. Vetrano* & Kathleen Vetrano*) }\n                                          }\n                                          }             Superior Court, Environmental Division\n                                          }\n                                          }             CASE NO. 23-ENV-00116\n                                                        Trial Judge: Thomas G. Walsh\n\n                                In the above-entitled cause, the Clerk will enter:\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Environmental Division"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Thomas G. Walsh",
+                        "docket_number": "23-ENV-00116",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_family": [
             (
@@ -630,13 +684,33 @@ class ScraperExtractFromText(unittest.TestCase):
                     "OpinionCluster": {"precedential_status": "Published"},
                     "Docket": {"court_id": "vt"},
                 },
-            )
+            ),
+            (
+                "\nVERMONT SUPREME COURT                                                      Case No.       21-AP-202\n109 State Street\nMontpelier VT 05609-0801\n802-828-4774\nwww.vermontjudiciary.org\n\n\nNote: In the case title, an asterisk (*) indicates an appellant and a double asterisk (**) indicates a cross-\nappellant. Decisions of a three-justice panel are not to be considered as precedent before any tribunal.\n\n\n                                           ENTRY ORDER\n\n\n                                     JANUARY TERM, 2022\n\nIn re G.J., Juvenile                                }    APPEALED FROM:\n(G.J., Father* & M.J., Mother*)                     }\n                                                    }    Superior Court, Bennington Unit,\n                                                    }    Family Division\n                                                    }    CASE NO. 171-10-19 Bnjv\n                                                         Trial Judge: Kerry Ann McDonald-Cady\n\n                                In the above-entitled cause, the Clerk will enter:\n\n          Parents appeal the termination of their parental rights to their six-year-old son, G.J. We\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Bennington Unit, Family "
+                        "Division"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Kerry Ann McDonald-Cady",
+                        "docket_number": "171-10-19",
+                    },
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_probate": [
             (
                 # haven't found a proper example yet
-                """""",
-                {},
+                "\nNOTICE: This opinion is subject to motions for reargument under V.R.A.P. 40 as well as formal\nrevision before publication in the Vermont Reports. Readers are requested to notify the Reporter\nof Decisions by email at: JUD.Reporter@vermont.gov or by mail at: Vermont Supreme Court, 109\nState Street, Montpelier, Vermont 05609-0801, of any errors in order that corrections may be made\nbefore this opinion goes to press.\n\n\n                                             2017 VT 80\n\n                                            No. 2017-095\n\nIn re M.S., Juvenile                                              Supreme Court\n\n                                                                  On Appeal from\n                                                                  Superior Court, Windham Unit,\n                                                                  Family Division\n\n                                                                  June Term, 2017\n\n\nKatherine A. Hayes, J.\n\nMatthew Valerio, Defender General, and Katina Francis Ready, Appellate Defender, Montpelier,\n",
+                {
+                    "Citation": "2017 VT 80",
+                    "Docket": {
+                        "appeal_from_str": "Superior Court, Windham Unit, Family Division",
+                        "court_id": "vt",
+                    },
+                    "OpinionCluster": {"precedential_status": "Published"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.vtsuperct_civil": [
@@ -660,30 +734,40 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_1st": [
             (
-                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04182.htm
-                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\n<br>Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
+                # https://www.courtlistener.com/opinion/10034744/matter-of-michael-f/
+                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\n<br>Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n<br>\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
                 {
                     "Docket": {
                         "docket_number": "Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467",
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_2nd": [
             (
+                # https://www.courtlistener.com/opinion/10033897/awr-group-inc-v-240-echo-place-hous-dev-fund-corp/
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04118.htm
-                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n<br>2023-03266\n<br>(Index No. 705239/20)\n\n[*1]AWR Group, Inc., respondent,\n",
+                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n<br>2023-03266\n<br>(Index No. 705239/20)\n<br>\n[*1]AWR Group, Inc., respondent,\n",
                 {
                     "Docket": {
-                        "docket_number": "2023-03266; Index No. 705239/20",
+                        "docket_number": "Index No. 705239/20",
                     },
                 },
-            )
+            ),
+            (
+                #  https://www.courtlistener.com/api/rest/v4/opinions/6342850/
+                'Judicial Department\n\n<br>COLLEEN D. DUFFY, J.P.\n<br>ANGELA G. IANNACCI\n<br>ROBERT J. MILLER\n<br>JOSEPH A. ZAYAS, JJ.\n\n<div align="center"></div>\n<br>2022-03440\tDECISION, ORDER &amp; JUDGMENT\n\n<br><br><div ',
+                {
+                    "Docket": {
+                        "docket_number": "2022-03440",
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_3rd": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04173.htm
-                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>PM-154-24\n\n[*1]In the Matter of Att",
+                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>PM-154-24\n<br>\n[*1]In the Matter of Att",
                 {
                     "Docket": {
                         "docket_number": "PM-154-24",
@@ -692,13 +776,24 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04171.htm
-                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>CV-23-1597\n\n",
+                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>CV-23-1597\n<br>\n",
                 {
                     "Docket": {
                         "docket_number": "CV-23-1597",
                     },
                 },
             ),
+        ],
+        "juriscraper.opinions.united_states.state.nyappdiv_4th": [
+            (
+                # https://www.courtlistener.com/opinion/10641306/xx/
+                '<div><p>People v Correia (2025 NY Slip Op 04433)\n\n\n\n</p><table align="center">\n<tbody><tr>\n<td align="center"><b>People v Correia</b></td>\n</tr>\n<tr>\n<td align="center">2025 NY Slip Op 04433</td>\n</tr>\n<tr>\n<td align="center">Decided on July 25, 2025</td>\n</tr>\n<tr>\n<td align="center">Appellate Division, Fourth Department</td>\n</tr>\n\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the Official Reports.</td>\n</tr>\n</tbody></table>\n<br><br>\nDecided on July 25, 2025\nSUPREME COURT OF THE STATE OF NEW YORK\nAppellate Division, Fourth Judicial Department\n\n<br>PRESENT: BANNISTER, J.P., SMITH, GREENWOOD, NOWAK, AND HANNAH, JJ.\n\n<div></div>\n<br>596 KA 23-00096\n\n<br><br><div><b>[*1]THE PEOPLE',
+                {
+                    "Docket": {
+                        "docket_number": "596 KA 23-00096",
+                    },
+                },
+            )
         ],
         "juriscraper.opinions.united_states.federal_special.uscfc_vaccine": [
             (
@@ -727,10 +822,14 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.sc": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10744852/
-                "                   THE STATE OF SOUTH CAROLINA\n                        In The Supreme Court\n\n             In the Matter of Lawrence J. Purvis, Jr., Respondent.\n\n             Appellate Case No. 2024-000453\n\n\n                              Opinion No. 28244\n             Submitted October 30, 2024 – Filed November 20, 2024\n\n\n",
+                "\n                    THE STATE OF SOUTH CAROLINA\n                         In The Supreme Court\n\n            The State, Respondent,\n\n            v.\n\n            Thomas Charles Felton Jones, Appellant.\n\n            Appellate Case No. 2020-000108\n\n\n\n                        Appeal from Greenville County\n                      Robin B. Stilwell, Circuit Court Judge\n\n\n                              Opinion No. 28203\n                     Heard June 6, 2023 – Filed May 8, 2024\n\n\n                                  REVERSED\n\n\n            Assistant Public Defender Andre Ta Nguyen, Assistant\n            Public Defender Jacob Goldstein, and Assistant Public\n            Defender John Christopher Shipman, all of Greenville, for\n            Appellant.\n\n            Attorney General Alan McCrory Wilson and Assistant\n            Deputy Attorney General Mark Reynolds Farthing, both\n            of Columbia, for Respondent.\n",
                 {
                     "Docket": {
-                        "docket_number": "2024-000453",
+                        "appeal_from_str": "Greenville County",
+                        "docket_number": "2020-000108",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Robin B. Stilwell"
                     },
                 },
             )
@@ -741,7 +840,11 @@ class ScraperExtractFromText(unittest.TestCase):
                 "THIS OPINION HAS NO PRECEDENTIAL VALUE. IT SHOULD NOT BE\n   CITED OR RELIED ON AS PRECEDENT IN ANY PROCEEDING\n        EXCEPT AS PROVIDED BY RULE 268(d)(2), SCACR.\n\n                 THE STATE OF SOUTH CAROLINA\n                      In The Supreme Court\n\n        Robin Allen, Petitioner,\n\n        v.\n\n        Richard Winn Academy, Kristen Chaisson (in her\n        individual capacity and as Head of School), and John\n        Ryan II, Respondents.\n\n        Appellate Case No. 2023-000805\n\n\n\n     ON WRIT OF CERTIORARI TO THE COURT OF APPEALS\n\n\n                     Appeal from Fairfield County\n                Eugene C. Griffith, Jr., Circuit Court Judge\n\n\n                Memorandum Opinion No. 2024-MO-024\n       ",
                 {
                     "Docket": {
+                        "appeal_from_str": "Fairfield County",
                         "docket_number": "2023-000805",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Eugene C. Griffith, Jr."
                     },
                 },
             )
@@ -752,7 +855,11 @@ class ScraperExtractFromText(unittest.TestCase):
                 "THIS OPINION HAS NO PRECEDENTIAL VALUE. IT SHOULD NOT BE\n   CITED OR RELIED ON AS PRECEDENT IN ANY PROCEEDING\n        EXCEPT AS PROVIDED BY RULE 268(d)(2), SCACR.\n\n                THE STATE OF SOUTH CAROLINA\n                    In The Court of Appeals\n\n        South Carolina Department of Social Services,\n        Respondent,\n\n        v.\n\n        Corey M. Nelson, Appellant.\n\n        In the interest of a minor under the age of eighteen.\n\n        Appellate Case No. 2024-000816\n\n\n\n                     Appeal From Richland County\n                  M. Scott Rankin, Family Court Judge\n\n\n ",
                 {
                     "Docket": {
+                        "appeal_from_str": "Richland County",
                         "docket_number": "2024-000816",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "M. Scott Rankin"
                     },
                 },
             )
@@ -763,7 +870,11 @@ class ScraperExtractFromText(unittest.TestCase):
                 "                     THE STATE OF SOUTH CAROLINA\n                         In The Court of Appeals\n\n             Crescent Homes SC, LLC, Appellant,\n\n             v.\n\n             CJN, LLC, Respondent.\n\n             Appellate Case No. 2022-000897\n\n\n\n                        Appeal From Greenville County\n                    Charles B. Simmons, Jr., Master-in-Equity\n\n\n                               Opinion No. 6093\n                  Heard May 9, 2024 – Filed November 20, 2024\n\n\n                                   AFFIRMED\n\n\n             Ellis Reed-Hill Lesemann and Benjamin Houston Joyce,\n             both of Lesemann & Associates, LLC, of Charleston, for\n   ",
                 {
                     "Docket": {
+                        "appeal_from_str": "Greenville County",
                         "docket_number": "2022-000897",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Charles B. Simmons, Jr."
                     },
                 },
             )
@@ -783,9 +894,17 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.mont": [
             (
                 # https://www.courtlistener.com/api/rest/v4/opinions/10801442/
-                "'02/18/2025\n\n\n                                        DA 23-0746\n\n                IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                         2025 MT 35\n\n\n\nIN THE MATTER OF THE ESTATE OF:\n\nWARREN DAN EDDLEMAN,",
+                "\n                                                                                        08/26/2025\n\n\n                                         DA 23-0430\n                                                                                     Case Number: DA 23-0430\n\n\n              IN THE SUPREME COURT OF THE STATE OF MONTANA\n\n                                        2025 MT 189\n\n\n\nSTATE OF MONTANA,\n\n              Plaintiff and Appellee,\n\n         v.\n\nJEFFREY SCOTT ANDERSON,\n\n              Defendant and Appellant.\n\n\n\nAPPEAL FROM:          District Court of the Eighth Judicial District,\n                      In and For the County of Cascade, Cause No. CDC-22-346\n                      Honorable John A. Kutzman, Presiding Judge\n\n\nCOUNSEL OF RECORD:\n\n               For Appellant:\n\n                      James M. Siegman, Attorney at Law, Jackson, Mississippi\n\n               For Appellee:\n\n                      Austin Knudsen, Montana Attorney General, Katie F. Schulz,\n                      Assistant Attorney General, Helena, Montana\n\n                      Joshua A. Racki, Cascade County Attorney, Amanda Lofink, Deputy\n                      County Attorney, Great Falls, Montana\n",
                 {
-                    "Citation": "2025 MT 35",
+                    "Citation": "2025 MT 189",
+                    "Docket": {
+                        "appeal_from_str": "District Court of the Eighth Judicial District, In and For the County of Cascade",
+                        "docket_number": "DA 23-0430",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "John A. Kutzman",
+                        "docket_number": "CDC-22-346",
+                    },
                 },
             )
         ],
@@ -848,8 +967,11 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.or": [
             # https://www.courtlistener.com/opinion/10160687/mclaughlin-v-wilson/
             (
-                """"                                        535\n\n   Argued and submitted May 15, at Mt. Hood Community College, Gresham,\n    Oregon; decision of Court of Appeals affirmed, judgment of circuit court\n  reversed in part, and case remanded to circuit court for further proceedings\n                               September 12, 2019\n\n\n\n                    Nicole McLAUGHLIN,\n                    Respondent on Review,\n                               v.\n                   Kenneth WILSON, M.D.,\n                     Petitioner on Review.\n           (CC 13C21746) (CA A160000) (SC S066047)\n                                    449 P3d 492\n\n     Plaintiff filed complaint alleging """,
-                {"Citation": "449 P3d 492"},
+                "\n                                        535\n\n   Argued and submitted May 15, at Mt. Hood Community College, Gresham,\n    Oregon; decision of Court of Appeals affirmed, judgment of circuit court\n  reversed in part, and case remanded to circuit court for further proceedings\n                               September 12, 2019\n\n\n\n                    Nicole McLAUGHLIN,\n                    Respondent on Review,\n                               v.\n                   Kenneth WILSON, M.D.,\n                     Petitioner on Review.\n           (CC 13C21746) (CA A160000) (SC S066047)\n                                    449 P3d 492\n\n     Plaintiff filed complaint alleging that defendant had retaliated against her\nORS 659A.030(1)(f). Defendant moved to dismiss the claim, arguing that his\nactions were not retaliation prohibited by that statute. The trial court granted\nthe motion. The Court of Appeals reversed. Held: (1) As used in ORS 659A.030\n(1)(f), “any person” includes individuals who are not employers; (2) “otherwise dis-\ncriminate” in ORS 659A.030(1)(f) does not require an employment relationship;\n(3) defendant’s conduct “otherwise discriminate[d]” against plaintiff.\n    The decision of the Court of Appeals is affirmed. The judgment of the circuit\ncourt is reversed in part, and the case is remanded to the circuit court for further\nproceedings.\n\n\n\n    On review from the Court of Appeals.*\n   Thomas M. Christ, Sussman Shank LLP, Portland,\nargued the cause and filed the briefs for petitioner on review.\n   Andrew Altschul, Buchanan Angeli Altschul & Sullivan\nLLP, Portland, argued the cause and filed the brief for\nrespondent on review.\n",
+                {
+                    "Citation": "449 P3d 492",
+                    "Docket": {"appeal_from_str": "Oregon Court of Appeals"},
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.orctapp": [
@@ -940,15 +1062,31 @@ class ScraperExtractFromText(unittest.TestCase):
         # https://www.courtlistener.com/api/rest/v4/opinions/2684767/
         "juriscraper.opinions.united_states.state.neb": [
             (
-                "SYLISSA J.\t607\n\t                             Cite as 288 Neb. 607\n\namended ",
-                {"Citation": "288 Neb. 607"},
+                "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n09/01/2025 01:32 PM CDT\n\n\n\n\n                                                         - 182 -\n                               Nebraska Supreme Court Advance Sheets\n                                        319 Nebraska Reports\n                                                GENTELE V. GENTELE\n                                                 Cite as 319 Neb. 182\n\n\n\n\n                                         Tara Gentele, appellant, v.\n                                        Christopher Gentele, appellee.\n                                                     ___ N.W.3d ___\n\n                                           Filed June 13, 2025.    No. S-24-472.\n\n                 1. Waiver: Appeal and Error. Whether a party waived his or her right to\n                    appellate review is a question of law.\n                 2. Judgments: Appeal and Error. When reviewing questions of law, an\n                    appellate court resolves the questions independently of the lower court’s\n                    conclusions.\n                 3. ____: ____. Generally, under the acceptance of benefits rule, an appel-\n                    lant may not voluntarily accept the benefits of part of a judgment in the\n                    appellant’s favor and afterward prosecute an appeal or error proceeding\n                    from the part that is against the appellant.\n\n                 Appeal from the District Court for Lancaster County:\n               Andrew R. Jacobsen, Judge. Appeal dismissed.",
+                {
+                    "Citation": "319 Neb. 182",
+                    "Docket": {
+                        "appeal_from_str": "District Court for Lancaster County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Andrew R. Jacobsen"
+                    },
+                },
             )
         ],
         # https://www.courtlistener.com/api/rest/v4/opinions/2810802/
         "juriscraper.opinions.united_states.state.nebctapp": [
             (
-                "TRUST\t999\n\t                        Cite as 22 Neb. App. 999\n\nthe iss",
-                {"Citation": "22 Neb. App. 999"},
+                "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n09/01/2025 01:32 PM CDT\n\n\n\n\n                                                         - 182 -\n                               Nebraska Supreme Court Advance Sheets\n                                        319 Nebraska Reports\n                                                GENTELE V. GENTELE\n                                                 Cite as 319 Neb. 182\n\n\n\n\n                                         Tara Gentele, appellant, v.\n                                        Christopher Gentele, appellee.\n                                                     ___ N.W.3d ___\n\n                                           Filed June 13, 2025.    No. S-24-472.\n\n                 1. Waiver: Appeal and Error. Whether a party waived his or her right to\n                    appellate review is a question of law.\n                 2. Judgments: Appeal and Error. When reviewing questions of law, an\n                    appellate court resolves the questions independently of the lower court’s\n                    conclusions.\n                 3. ____: ____. Generally, under the acceptance of benefits rule, an appel-\n                    lant may not voluntarily accept the benefits of part of a judgment in the\n                    appellant’s favor and afterward prosecute an appeal or error proceeding\n                    from the part that is against the appellant.\n\n                 Appeal from the District Court for Lancaster County:\n               Andrew R. Jacobsen, Judge. Appeal dismissed.",
+                {
+                    "Citation": "319 Neb. 182",
+                    "Docket": {
+                        "appeal_from_str": "District Court for Lancaster County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Andrew R. Jacobsen"
+                    },
+                },
             )
         ],
         "juriscraper.opinions.united_states.state.texbizct": [
@@ -995,6 +1133,555 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                 },
             ),
+        ],
+        "juriscraper.opinions.united_states.state.wyo": [
+            (
+                "\n                 IN THE SUPREME COURT, STATE OF WYOMING\n\n                                            2025 WY 59\n\n                                                                      APRIL TERM, A.D. 2025\n\n                                                                            May 28, 2025\n\n RICK HOLLOWAY and JOHN HOSKIN,\n\n Appellants\n (Plaintiffs),\n\n v.\n                                                                 S-24-0271\n HIDDEN CREEK OUTFITTERS, LLC and\n PARK COUNTY TITLE COMPANY, LLC,\n\n Appellees\n (Defendants).\n\n                        Appeal from the District Court of Park County\n                        The Honorable Bobbi Dean Overfield, Judge\n\nRepresenting Appellants:\n      David Michael Hill and Larry B. Jones, Burg Simpson Eldredge Hersh & Jardine,\n      P.C, Cody, Wyoming. Argument by Mr. Jones.\n\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of Park County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Bobbi Dean Overfield"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.dc": [
+            (
+                "\nNotice: This opinion is subject to formal revision before publication in the Atlantic\nand Maryland Reporters. Users are requested to notify the Clerk of the Court of\nany formal errors so that corrections may be made before the bound volumes go\nto press.\n\n\n               DISTRICT OF COLUMBIA COURT OF APPEALS\n\n                                  No. 23-CV-0977\n\n                      TYROSHI INVESTMENTS, LLC, APPELLANT,\n\n                                          V.\n\n   U.S. BANK, N.A., SUCCESSOR TRUSTEE TO LASALLE BANK, N.A., APPELLEE.\n\n                           Appeal from the Superior Court\n                            of the District of Columbia\n                               (2020-CA-001727-B)\n\n                        (Hon. Robert R. Rigsby, Trial Judge)\n\n(Argued June 12, 2025                                Decided September 11, 2025)\n\n      Ian G. Thomas, with whom Tracy L. Buck was on the brief, for appellant.\n\n      Melissa O. Martinez for appellee.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the District of Columbia",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "2020-CA-001727-B"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.cal": [
+            (
+                "IN THE SUPREME COURT OF\n               CALIFORNIA\n\n                     TY WHITEHEAD,\n                  Plaintiff and Appellant,\n                              v.\n                   CITY OF OAKLAND,\n                 Defendant and Respondent.\n\n                           S284303\n\n            First Appellate District, Division Three\n                           A164483\n\n               Alameda County Superior Court\n                       RG18896233\n\n\n\n                         May 1, 2025\n\nJustice Evans authored the opinion of the Court, in which\nChief Justice Guerrero and Justices Corrigan, Liu, Kruger,\nGroban, and Jenkins concurred.\n\nJustice Kruger filed a concurring opinion.\n             WHITEHEAD v. CITY OF OAKLAND\n                            S284303\n\n\n               Opinion of the Court by Evans, J.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "First Appellate District, Division Three"
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "A164483"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_1st": [
+            (
+                "Filed 8/28/25\n                      CERTIFIED FOR PUBLICATION\n\n       IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                        FIRST APPELLATE DISTRICT\n\n                                DIVISION TWO\n\n\n THE PEOPLE,\n         Plaintiff and Respondent,\n                                              A168758\n v.\n ROBERT ALLEN MIDELL,                         (San Mateo County Super. Ct.\n                                               No. 20NF012926A)\n         Defendant and Appellant.\n\n\n       Robert Midell, who is Black, seeks reversal of his multiple felony\nconvictions including attempted premediated murder, torture, and assault\nbecause his attorney compared him to an animal, he contends, in violation of\nthe California Racial Justice Act of 2020 (RJA) (Pen. Code, 1 § 745, et seq.).\nBecause the comparisons made here were part of a tactically developed\ndefense theme designed to negate the intent elements of the most serious\noffenses charged, Midell is procedurally barred from now using them as a\nbasis for reversal on appeal. Midell's additional arguments challenging the\ncourt's evidentiary rulings and sentencing are also unpersuasive; thus, we\naffirm the judgment.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "San Mateo County Super. Ct.",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_2nd": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_3rd": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_4th_div1": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_4th_div2": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_4th_div3": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_5th": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_6th": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_app_div": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp_u": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.ariz": [
+            (
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Sigmund G. Popko",
+                        "docket_number": "JS520409",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arizctapp_div_1": [
+            (
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Sigmund G. Popko",
+                        "docket_number": "JS520409",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.arizctapp_div_2": [
+            (
+                "\n                               IN THE\n\n    SUPREME COURT OF THE STATE OF ARIZONA\n\n          IN RE TERMINATION OF PARENTAL RIGHTS AS TO B.W.\n\n\n\n                          No. CV-24-0079-PR\n                          Filed July 17, 2025\n\n\n         Appeal from the Superior Court in Maricopa County\n         The Sigmund G. Popko, Judge Pro Tempore\n                           No. JS520409\n                  REVERSED AND REMANDED\n\n     Memorandum Decision of the Court of Appeals, Division One\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court in Maricopa County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Sigmund G. Popko",
+                        "docket_number": "JS520409",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaska": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaskactapp": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.alaska_u": [
+            (
+                "NOTICE\n      Memorandum decisions of this court do not create legal precedent. A party wishing to cite\n      such a decision in a brief or at oral argument should review Alaska Appellate Rule 214(d).\n\n\n               THE SUPREME COURT OF THE STATE OF ALASKA\n\n\n TREVOR PAUL FAIRBANKS,                           )\n                                                  )     Supreme Court No. S-19193\n                       Appellant,                 )\n                                                  )     Superior Court No. 3AN-19-05436 CI\n          v.                                      )\n                                                  )     MEMORANDUM OPINION\n CARA EILEEN FOX, f/k/a Cara Fox                  )        AND JUDGMENT*\n Fairbanks,                                       )\n                                                  )     No. 2100 – August 13, 2025\n                       Appellee.                  )\n                                                  )\n\n               Appeal from the Superior Court of the State of Alaska, Third\n               Judicial District, Anchorage, Josie Garton, Judge.\n\n               Appearances: Trevor Paul Fairbanks, pro se, Anchorage,\n               Appellant. Notice of nonparticipation filed by Kara A.\n               Nyquist, Nyquist Law Group, Anchorage, for Appellee.\n\n               Before: Carney, Borghesan, Henderson, and Pate, Justices.\n               [Maassen, Chief Justice, not participating.]",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of the State of Alaska, Third Judicial District",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Josie Garton"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca5": [
+            (
+                "         United States Court of Appealsfor the Fifth Circuit____________United States Court of AppealsFifth CircuitNo. 25-30051Summary Calendar                                  FILED____________                                August 26, 2025Lyle W. CayceUnited States of America,                                                          ClerkPlaintiff—Appellee,versus Bobby Glenn Wall, Jr.,Defendant—Appellant.______________________________ Appeal from the United States District Court for the Middle District of Louisiana USDC No. 3:24-CR-20-2 ______________________________ Before Jones, Richman, and Duncan, Circuit Judges.Per Curiam: *Bobby Glenn Wall, Jr. pleaded guilty to the distribution of childpornography. He was sentenced above the advisory guidelines to 192 monthsof imprisonment and 15 years of supervised release. Wall challenges thesubstantive reasonableness of his sentence.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Louisiana",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca7": [
+            (
+                "                               In the\n\n    United States Court of Appeals\n                 For the Seventh Circuit\n                     ____________________\nNo. 24-2572\nCHRISTOPHER GEORGE PABLE,\n                                                  Plaintiff-Appellant,\n                                and\n\nTIMOTHY A. DUFFY,\n                                                            Appellant,\n\n                                 v.\n\nCHICAGO TRANSIT AUTHORITY\nand CLEVER DEVICES, LTD.,\n                                               Defendants-Appellees.\n                     ____________________\n\n         Appeal from the United States District Court for the\n           Northern District of Illinois, Eastern Division.\n          No. 1:19-cv-07868 — Robert W. Gettleman, Judge.\n                     ____________________\n\n      ARGUED APRIL 16, 2025 — DECIDED JULY 28, 2025\n                ____________________\n\n   Before SYKES, Chief Judge, and ST. EVE and JACKSON-\nAKIWUMI, Circuit Judges.\n   JACKSON-AKIWUMI, Circuit Judge. In this appeal, an attor-\ney and client seek review of the court order sanctioning both\n2                                                 No. 24-2572\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Northern District of Illinois, Eastern Division",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca11_p": [
+            (
+                "USCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025   Page: 1 of 17\n\n\n\n\n                                                                [PUBLISH]\n                                      In the\n                 United States Court of Appeals\n                           For the Eleventh Circuit\n\n                            ____________________\n\n                                   No. 23-12178\n                            ____________________\n\n        JEREMY JONES,\n                                                         Plaintiﬀ-Appellant,\n        versus\n        DAVID CEINSKI, JR.,\n        Oﬃcer, in his individual capacity,\n\n\n                                                       Defendant-Appellee.\n\n\n                            ____________________\n\n                  Appeal from the United States District Court\n                       for the Middle District of Florida\n                     D.C. Docket No. 8:22-cv-00231-AAS\n                           ____________________\nUSCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025     Page: 2 of 17",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Florida",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca11_u": [
+            (
+                "USCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025   Page: 1 of 17\n\n\n\n\n                                                                [PUBLISH]\n                                      In the\n                 United States Court of Appeals\n                           For the Eleventh Circuit\n\n                            ____________________\n\n                                   No. 23-12178\n                            ____________________\n\n        JEREMY JONES,\n                                                         Plaintiﬀ-Appellant,\n        versus\n        DAVID CEINSKI, JR.,\n        Oﬃcer, in his individual capacity,\n\n\n                                                       Defendant-Appellee.\n\n\n                            ____________________\n\n                  Appeal from the United States District Court\n                       for the Middle District of Florida\n                     D.C. Docket No. 8:22-cv-00231-AAS\n                           ____________________\nUSCA11 Case: 23-12178      Document: 72-1      Date Filed: 05/08/2025     Page: 2 of 17",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the Middle District of Florida",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cadc": [
+            (
+                "FOR THE DISTRICT OF COLUMBIA CIRCUIT\n\n\n\nArgued March 6, 2025               Decided August 19, 2025\n\n                       No. 24-7077\n\n                   EUGENE HUDSON, JR.,\n                       APPELLANT\n\n                             v.\n\n   AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES,\n                     APPELLEE\n\n\n        Appeal from the United States District Court\n                for the District of Columbia\n                    (No. 1:17-cv-01867)\n\n\n\n    Harold C. Bone II argued the cause for appellant.\nElizabeth Clark Bone and Kimberly S. Estelle entered\nappearances.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Columbia",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cadc_u": [
+            (
+                "United States Court of Appeals\n                             FOR THE DISTRICT OF COLUMBIA CIRCUIT\n                                      ____________\nNo. 25-5003                                                 September Term, 2024\n                                                                        1:24-cv-02139-UNA\n                                                        Filed On: July 28, 2025\nLori Ann Henriques,\n\n              Appellant\n\n       v.\n\nUnited States Government,\n\n              Appellee\n\n            ON APPEAL FROM THE UNITED STATES DISTRICT COURT\n                     FOR THE DISTRICT OF COLUMBIA\n\n       BEFORE:        Katsas, Rao, and Walker, Circuit Judges\n\n                                     JUDGMENT\n\n        This appeal was considered on the record from the United States District Court\nfor the District of Columbia and on the brief filed by appellant. See Fed. R. App. P.\n34(a)(2); D.C. Cir. Rule 34(j). It is",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Columbia",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca9_u": [
+            (
+                "NOT FOR PUBLICATION                          FILED\n                    UNITED STATES COURT OF APPEALS                       AUG 22 2025\n                                                                     MOLLY C. DWYER, CLERK\n                                                                       U.S. COURT OF APPEALS\n                            FOR THE NINTH CIRCUIT\n\nGRISEL PALLARES-MEDINA; L. A.                   No. 24-3184\nGUZMAN-PALLARES; G. G. GUZMAN-                  Agency Nos.\nPALLARES,                                       A246-597-420\n                                                A246-597-421\n             Petitioners,\n                                                A246-597-422\n v.\n                                                MEMORANDUM*\nPAMELA BONDI, Attorney General,\n\n             Respondent.\n\n                     On Petition for Review of an Order of the\n                         Board of Immigration Appeals\n\n                            Submitted August 13, 2025**\n                               Seattle, Washington\n\nBefore: HAWKINS, McKEOWN, and WARDLAW, Circuit Judges.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board of Immigration Appeals",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.ca9_p": [
+            (
+                "FILED\n                    UNITED STATES COURT OF APPEALS                       AUG 22 2025\n                                                                     MOLLY C. DWYER, CLERK\n                                                                       U.S. COURT OF APPEALS\n                            FOR THE NINTH CIRCUIT\n\nGRISEL PALLARES-MEDINA; L. A.                   No. 24-3184\nGUZMAN-PALLARES; G. G. GUZMAN-                  Agency Nos.\nPALLARES,                                       A246-597-420\n                                                A246-597-421\n             Petitioners,\n                                                A246-597-422\n v.\n                                                MEMORANDUM*\nPAMELA BONDI, Attorney General,\n\n             Respondent.\n\n                     On Petition for Review of an Order of the\n                         Board of Immigration Appeals\n\n                            Submitted August 13, 2025**\n                               Seattle, Washington\n\nBefore: HAWKINS, McKEOWN, and WARDLAW, Circuit Judges.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Board of Immigration Appeals",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.federal_appellate.cafc": [
+            (
+                "Case: 24-1479    Document: 50     Page: 1   Filed: 08/26/2025\n\n\n\n\n           NOTE: This order is nonprecedential.\n\n\n   United States Court of Appeals\n       for the Federal Circuit\n                  ______________________\n\n           PHILIPS NORTH AMERICA, LLC,\n                  Plaintiff-Appellant\n\n                             v.\n\n                      FITBIT LLC,\n                        Defendant\n                  ______________________\n\n                        2024-1479\n                  ______________________\n\n     Appeal from the United States District Court for the\n District of Massachusetts in No. 1:19-cv-11586-FDS, Judge\n F. Dennis Saylor, IV.\n                  ______________________\n\n                      ON MOTION\n                  ______________________\n\n                        ORDER\n     Upon consideration of ECF No. 49, which the court con-\n strues as a motion to dismiss the appeal under Federal\n Rule of Appellate Procedure 42(b),\nCase: 24-1479    Document: 50     Page: 2    Filed: 08/26/2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "United States District Court for the District of Massachusetts",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.delaware": [
+            (
+                "\n            IN THE SUPREME COURT OF THE STATE OF DELAWARE\n\n    IN THE MATTER OF ROLF D.                    §\n    BREWSTER, a person with a                   §\n    disability,1                                § No. 254, 2025\n                                                §\n                                                § Court Below—Court of Chancery\n                                                § of the State of Delaware\n                                                §\n                                                § C.M. No. CM20694-N\n                                                §\n\n                                Submitted: July 25, 2025\n                                Decided:   August 8, 2025\n\nBefore VALIHURA, TRAYNOR, and LEGROW, Justices.\n\n                                             ORDER\n\n          After consideration of the notice to show cause and the responses, it appears\n\nto the Court that:\n\n          (1)    On September 24, 2024, Christiana Care Health Systems filed a petition\n\nin the Court of Chancery seeking appointment of a guardian of the person and\n\nproperty of “Rolf D. Brewster” under Title 12, Chapter 39 of the Delaware Code.\n\nThe court appointed an attorney ad litem for Brewster. Brewster’s wife (“Wife”)\n\nobjected to the petition.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Court of Chancery of the State of Delaware",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "CM20694-N"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.idaho_civil": [
+            (
+                "\n           ACADEMY ASSOCIATION, INC.,          )\na North Carolina corporation; and   )\nSPOKANE TEACHERS CREDIT             )\nUNION, a Washington credit union,   )\n                                    )\n       Defendants.                  )\n____________________________________)\n\n\n      Appeal from the District Court of the First Judicial District of the State of Idaho,\n      Bonner County. Lamont C. Berecz, District Judge.\n\n      The district court’s judgment is affirmed.\n\n      Condon Tobin Sladek Thornton Nerenberg, PLLC, Dallas, TX and Parsons Behle &\n      Latimer, Boise, attorneys for Appellant, Global Growth Holdings, Inc. Jared T.S.\n      Pace submitted argument on the briefs.\n\n      Givens Pursley, LLP, Boise, attorneys for Respondent, Erie Properties, LLC.\n      Morgan D. Goodin submitted argument on the briefs.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.idaho_criminal": [
+            (
+                "\n           ACADEMY ASSOCIATION, INC.,          )\na North Carolina corporation; and   )\nSPOKANE TEACHERS CREDIT             )\nUNION, a Washington credit union,   )\n                                    )\n       Defendants.                  )\n____________________________________)\n\n\n      Appeal from the District Court of the First Judicial District of the State of Idaho,\n      Bonner County. Lamont C. Berecz, District Judge.\n\n      The district court’s judgment is affirmed.\n\n      Condon Tobin Sladek Thornton Nerenberg, PLLC, Dallas, TX and Parsons Behle &\n      Latimer, Boise, attorneys for Appellant, Global Growth Holdings, Inc. Jared T.S.\n      Pace submitted argument on the briefs.\n\n      Givens Pursley, LLP, Boise, attorneys for Respondent, Erie Properties, LLC.\n      Morgan D. Goodin submitted argument on the briefs.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.idahoctapp_civil": [
+            (
+                "\n           ACADEMY ASSOCIATION, INC.,          )\na North Carolina corporation; and   )\nSPOKANE TEACHERS CREDIT             )\nUNION, a Washington credit union,   )\n                                    )\n       Defendants.                  )\n____________________________________)\n\n\n      Appeal from the District Court of the First Judicial District of the State of Idaho,\n      Bonner County. Lamont C. Berecz, District Judge.\n\n      The district court’s judgment is affirmed.\n\n      Condon Tobin Sladek Thornton Nerenberg, PLLC, Dallas, TX and Parsons Behle &\n      Latimer, Boise, attorneys for Appellant, Global Growth Holdings, Inc. Jared T.S.\n      Pace submitted argument on the briefs.\n\n      Givens Pursley, LLP, Boise, attorneys for Respondent, Erie Properties, LLC.\n      Morgan D. Goodin submitted argument on the briefs.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.idahoctapp_criminal": [
+            (
+                "\n           ACADEMY ASSOCIATION, INC.,          )\na North Carolina corporation; and   )\nSPOKANE TEACHERS CREDIT             )\nUNION, a Washington credit union,   )\n                                    )\n       Defendants.                  )\n____________________________________)\n\n\n      Appeal from the District Court of the First Judicial District of the State of Idaho,\n      Bonner County. Lamont C. Berecz, District Judge.\n\n      The district court’s judgment is affirmed.\n\n      Condon Tobin Sladek Thornton Nerenberg, PLLC, Dallas, TX and Parsons Behle &\n      Latimer, Boise, attorneys for Appellant, Global Growth Holdings, Inc. Jared T.S.\n      Pace submitted argument on the briefs.\n\n      Givens Pursley, LLP, Boise, attorneys for Respondent, Erie Properties, LLC.\n      Morgan D. Goodin submitted argument on the briefs.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.idahoctapp_u": [
+            (
+                "\n           ACADEMY ASSOCIATION, INC.,          )\na North Carolina corporation; and   )\nSPOKANE TEACHERS CREDIT             )\nUNION, a Washington credit union,   )\n                                    )\n       Defendants.                  )\n____________________________________)\n\n\n      Appeal from the District Court of the First Judicial District of the State of Idaho,\n      Bonner County. Lamont C. Berecz, District Judge.\n\n      The district court’s judgment is affirmed.\n\n      Condon Tobin Sladek Thornton Nerenberg, PLLC, Dallas, TX and Parsons Behle &\n      Latimer, Boise, attorneys for Appellant, Global Growth Holdings, Inc. Jared T.S.\n      Pace submitted argument on the briefs.\n\n      Givens Pursley, LLP, Boise, attorneys for Respondent, Erie Properties, LLC.\n      Morgan D. Goodin submitted argument on the briefs.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.iowa": [
+            (
+                "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Iowa District Court for Jefferson County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Shawn Showers"
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.iowactapp": [
+            (
+                "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Iowa District Court for Jefferson County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Shawn Showers"
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.ky": [
+            (
+                "\n                                                   RENDERED: JUNE 20, 2025\n                                                             TO BE PUBLISHED\n\n\n                Supreme Court of Kentucky\n                                 2023-SC-0124-MR\n\n\nEARL K.JOHNSON                                                          APPELLANT\n\n\n                 ON APPEAL FROM LOGAN CIRCUIT COURT\nV.HONORABLE JOE W.HENDRICKS, JR., JUDGE\n                            NO.19-CR-00158\n\n\nCOMMONWEALTH OF KENTUCKY                                                   APPELLEE\n\n\n\n              OPINION OF THE COURT BY JUSTICE THOMPSON\n\n       AFFIRMING IN PART, REVERSING IN PART, AND REMANDING\n\n      Earl K.Johnson was convicted after a jury trial on four counts of\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Logan Circuit Court",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "19-CR-00158"
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.kyctapp": [
+            (
+                "\n                                                   RENDERED: JUNE 20, 2025\n                                                             TO BE PUBLISHED\n\n\n                Supreme Court of Kentucky\n                                 2023-SC-0124-MR\n\n\nEARL K.JOHNSON                                                          APPELLANT\n\n\n                 ON APPEAL FROM LOGAN CIRCUIT COURT\nV.HONORABLE JOE W.HENDRICKS, JR., JUDGE\n                            NO.19-CR-00158\n\n\nCOMMONWEALTH OF KENTUCKY                                                   APPELLEE\n\n\n\n              OPINION OF THE COURT BY JUSTICE THOMPSON\n\n       AFFIRMING IN PART, REVERSING IN PART, AND REMANDING\n\n      Earl K.Johnson was convicted after a jury trial on four counts of\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Logan Circuit Court",
+                    },
+                    "OriginatingCourtInformation": {
+                        "docket_number": "19-CR-00158"
+                    },
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.la": [
+            (
+                "\nFOR IMMEDIATE NEWS RELEASE                                                       NEWS RELEASE #031\n\n\nFROM: CLERK OF SUPREME COURT OF LOUISIANA\n\n\nThe Opinions handed down on the 27th day of June, 2025 are as follows:\n\nBY Hughes, J.:\n\n 2024-C-00676             KELLY O. ORGERON VS. EDWARD J. ORGERON, JR. (Parish of St.\n                          Tammany)\n\n                          JUDGMENT IN FAVOR OF DEFENDANT REVERSED; JUDGMENT\n                          RENDERED IN FAVOR OF PLAINTIFF. SEE OPINION.\n\n                          Retired Judge John Conery, appointed Justice ad hoc, sitting for Chief\n                          Justice Weimer, recused.\n\n                          Retired Judge E. Joseph Bleich, appointed Justice ad hoc, sitting for Justice\n                          Crain, recused.\n\n                          Retired Judge Martin E. Coady, appointed Justice ad hoc, sitting for Justice\n                          Guidry, recused.\n\n                          McCallum, J., dissents and assigns reasons.\n                          Cole, J., dissents for the reasons assigned by Justice McCallum.\n                          Bleich, A.H.J., additionally concurs and assigns reasons.\n SUPREME COURT OF LOUISIANA\n\n                                    NUMBER 2024-C-00676\n\n                                     KELLY O.ORGERON\n\n                                              VERSUS\n\n                                 EDWARD J.ORGERON, JR.\n\n\n              On Writ of Certiorari to the Court of Appeal, First Circuit, \n                               Parish of St.Tammany\n\n\nHUGHES, J.* \n\n          The plaintiff / ex-wife in this case contends the lower courts erred in failing to\n\naward her a community property share of the $16, 949, 000 in “liquidated damages”\n\npaid to her defendant / ex-husband, upon the termination of his employment as a\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Court of Appeal, First Circuit, Parish of St.Tammany",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.nj": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.njsuperctappdiv_p": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.njsuperctappdiv_u": [
+            (
+                "\n                                       3\n                SUPREME COURT OF NEW JERSEY\n              A-1 September Term 2024\n                       089673\n\n\n                        M.A., \n\n                Plaintiff-Respondent, \n\n                          v.\n\n                       J.H.M., \n\n                Defendant-Appellant.\n\n         On appeal from the Superior Court, \n                Appellate Division.\n\n       Argued                      Decided\n   January 7, 2025               May 27, 2025",
+                {
+                    "Docket": {
+                        "appeal_from_str": "New Jersey Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.mdag": [
+            (
+                "\nGen. 225 ]                                                    225\n\n                          TAXATION\nPROPERTY TAX – APPLICABILITY OF HOMESTEAD TAX CREDIT\n    TO SPECIAL BENEFIT DISTRICT TAXES\n\n                       December 19, 2014\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2014-12-19",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.pa": [
+            (
+                "\n                          [J-62-2024] [MO: McCaffery, J.]\n                   IN THE SUPREME COURT OF PENNSYLVANIA\n                               WESTERN DISTRICT\n\n\n IN THE INTEREST OF: S.W., A MINOR               :     No. 14 WAP 2024\n                                                 :\n                                                 :     Appeal from the Order of the\n APPEAL OF: S.W., MINOR, AND                     :     Superior Court entered March 13,\n ALLEGHENY COUNTY OFFICE OF                      :     2024, at No. 22 WDA 2023,\n CHILDREN, YOUTH AND FAMILIES                    :     Vacating and Remanding the\n                                                 :     Order of the Court of Common Pleas\n                                                 :     Allegheny County Juvenile Division\n                                                 :     entered November 8, 2022, at\n                                                 :     No. CP-02-DP-0000729-2020.\n                                                 :\n                                                 :     ARGUED: October 8, 2024\n\n\n                                CONCURRING OPINION\n\n\nJUSTICE BROBSON                                                DECIDED: APRIL 25, 2025\n       I agree with the Majority insofar as it concludes that the General Assembly’s\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Pennsylvania Superior Court",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.mich": [
+            # https://www.courtlistener.com/api/rest/v4/opinions/10771292/
+            (
+                "Kimberly K. Muschong\n\n\n\n       C-SPINE ORTHOPEDICS, PLLC v PROGRESSIVE MICHIGAN INSURANCE COMPANY\n               WALLACE v SUBURBAN MOBILITY AUTHORITY FOR REGIONAL\n                                  TRANSPORTATION\n\n           Docket Nos. 165537, 165538, and 165964. Argued on application for leave to appeal on\n      November 13, 2024. Decided July 3, 2025.\n\n  ",
+                {
+                    "Docket": {
+                        "docket_number": "165537, 165538, and 165964",
+                        "case_name": "C-Spine Orthopedics, Pllc v Progressive Michigan Insurance Company; Wallace v Suburban Mobility Authority for Regional; Transportation",
+                    },
+                    "OpinionCluster": {
+                        "case_name": "C-Spine Orthopedics, Pllc v Progressive Michigan Insurance Company; Wallace v Suburban Mobility Authority for Regional; Transportation"
+                    },
+                },
+            ),
+            #         https://www.courtlistener.com/opinion/10362821/d/
+            (
+                "Michigan Supreme Court\n               Lansing, Michigan\n\n\n\n\nSyllabus\n             Chief Justice:              Justices:\n                                                        Elizabeth T. Clement       Brian K. Zahra\n                                                                                   Richard H. Bernstein\n                                                                                   Megan K. Cavanagh\n                                                                                   Elizabeth M. Welch\n                                                                                   Kyra H. Bolden\n                                                                                   Kimberly A. Thomas\n\n             This syllabus constitutes no part of the opinion of the Court but has been\n             prepared by the Reporter of Decisions for the convenience of the reader.\n\n\n\n                         DINE BRANDS GLOBAL, INC v EUBANKS\n                        THE WALT DISNEY COMPANY v EUBANKS\n\n      Docket Nos. 165391 and 165392. Argued on application for leave to appeal October 10,",
+                {
+                    "Docket": {
+                        "docket_number": "165391 and 165392",
+                        "case_name": "Dine Brands Global, Inc v Eubanks; The Walt Disney Company v Eubanks",
+                    },
+                    "OpinionCluster": {
+                        "case_name": "Dine Brands Global, Inc v Eubanks; The Walt Disney Company v Eubanks",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.colo": [
+            (
+                "<b></b><p><span> Thomas Ray Collins, Petitioner <br> v.</span><span> <br> The People of the State of Colorado.</span> Respondent </p>\n<p>No. 25SC546</p>\n<p><span>Supreme Court of Colorado, En Banc.</span></p>",
+                {
+                    "Docket": {
+                        "docket_number": "25SC546",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.coloctapp": [
+            (
+                "25CA0167 Brauweiler v National Jewish 12-18-2025\nCOLORADO COURT OF APPEALS\n\nCourt of Appeals No. 25CA0167\nCity and County of Denver District Court No. 23CV31536\nHonorable Andrew J. Luxen, Judge",
+                {
+                    "Docket": {
+                        "docket_number": "25CA0167",
+                    }
+                },
+            )
         ],
     }
 

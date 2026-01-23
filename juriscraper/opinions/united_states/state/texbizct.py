@@ -33,7 +33,18 @@ class Site(OpinionSiteLinear):
             title = link.get("title")
             short_title = link.text_content()
 
-            name, citation = short_title.rsplit(", ", 1)
+            # Attempt to split the short_title by the last comma to extract name and citation.
+            # If that fails, try splitting the title instead.
+            # If both attempts fail, assign the entire title to name and leave citation empty.
+            try:
+                name, citation = short_title.rsplit(", ", 1)
+            except (ValueError, AttributeError):
+                try:
+                    citation = title.rsplit(", ", 1)[-1]
+                    name = short_title
+                except (ValueError, AttributeError):
+                    name, citation = short_title, ""
+
             url = link.get("href")
             date = self._get_approximate_date(url)
             raw_docket = title.split()[0]
@@ -45,8 +56,8 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "docket": docket,
-                    "name": name,
-                    "citation": citation,
+                    "name": name.split("(", 1)[0].strip(),
+                    "citation": citation.split("(", 1)[0].strip(),
                     "url": url,
                     "date": date,
                     "date_filed_is_approximate": True,

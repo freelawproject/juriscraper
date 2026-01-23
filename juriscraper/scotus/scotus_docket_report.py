@@ -3,7 +3,7 @@ import pprint
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any, Optional
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
@@ -31,6 +31,8 @@ class SCOTUSDocketReport:
             re.compile(r"^\d+-\d+-\d+-[A-Za-z]+$"),
         ],
     }
+
+    DOC_NUM_RE = r"DocketPDF/\d+/[^/]+/(\d+)/"
 
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
 
@@ -127,7 +129,7 @@ class SCOTUSDocketReport:
               "attachments":[
                  {
                     "document_url":"http://www.supremecourt.gov/DocketPDF/24/24A100/319653/20240723152722701_Johnson%20cert%20extension.pdf",
-                    "short_description":"Main Document"
+                    "description":"Main Document"
                  }
               ],
               "date_filed":"2024-07-30",
@@ -141,10 +143,18 @@ class SCOTUSDocketReport:
         entries = []
         for row in self._scotus_json.get("ProceedingsandOrder", []):
             links = row.get("Links", [])
+            document_number = None
+            if links and (
+                match := re.search(
+                    self.DOC_NUM_RE, links[0].get("DocumentUrl") or ""
+                )
+            ):
+                document_number = int(match.group(1))
             attachments = [
                 {
-                    "short_description": link.get("Description", "").strip(),
+                    "description": link.get("Description", "").strip(),
                     "document_url": link.get("DocumentUrl"),
+                    "document_number": document_number,
                 }
                 for link in links
             ]
@@ -153,6 +163,7 @@ class SCOTUSDocketReport:
             description = strip_bad_html_tags_insecure(description_html)
             de = {
                 "date_filed": self.normalize_date(row.get("Date")),
+                "document_number": document_number,
                 "description": description.text_content(),
                 "description_html": description_html,
                 "attachments": attachments,
@@ -245,9 +256,7 @@ class SCOTUSDocketReport:
         return parties
 
     @classmethod
-    def normalize_date(
-        cls, date_str: Optional[str]
-    ) -> Optional[datetime.date]:
+    def normalize_date(cls, date_str: Optional[str]) -> Optional[date]:
         """Convert a date string to YYYY-MM-DD using common SCOTUS formats.
 
         :param date_str: Raw date string (e.g., "July 3, 2024", "Jul 03 2024", "08/16/2024")

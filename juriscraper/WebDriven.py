@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
@@ -118,7 +119,7 @@ class WebDriven:
     def wait_for_id(self, id_attr):
         self.wait.until(EC.presence_of_element_located((By.ID, id_attr)))
 
-    def take_screenshot(self, name: str = None):
+    def take_screenshot(self, name: Optional[str] = None):
         """Use this method to snap screenshots during debugging"""
         name = name if name else f"screenshot.{self.__module__}.png"
         self.webdriver.save_screenshot(name)

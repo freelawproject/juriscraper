@@ -2,9 +2,43 @@ import datetime
 import hashlib
 import hmac
 import os
+import re
+from typing import Optional
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+
+
+def get_justice_dot_gov_auth_cookies(html_text: str) -> dict:
+    """Extract auth cookies values from challenge HTML page
+
+    This may happen when downloading a document from a justice.gov site
+
+    Currently used by `bia` and `olc` scrapers. See #1724
+
+    :param html_text: the HTML response
+    :return: a dict with to populate Site.cookies with
+    """
+    salt = re.search(r'let public_salt = "(?P<salt>.+)";', html_text).group(
+        "salt"
+    )
+    candidates = re.search(
+        r'candidates = "(?P<candidate1>.+)/(?P<candidate2>.+)"\.split',
+        html_text,
+    )
+    candidate1 = candidates.group("candidate1")
+    candidate2 = candidates.group("candidate2")
+    auth_1 = (
+        hashlib.sha256((salt + candidate1).encode("utf-8")).hexdigest().upper()
+    )
+    auth_2 = (
+        hashlib.sha256((salt + candidate2).encode("utf-8")).hexdigest().upper()
+    )
+
+    return {
+        "authorization_1": auth_1,
+        "authorization_2": auth_2,
+    }
 
 
 def set_api_token_header(site: OpinionSite) -> None:
@@ -31,8 +65,8 @@ def set_api_token_header(site: OpinionSite) -> None:
 
 def generate_aws_sigv4_headers(
     payload: str,
-    table_name: str = None,
-    creds: dict = None,
+    table_name: Optional[str] = None,
+    creds: Optional[dict] = None,
     signed_headers: str = "host;x-amz-date;x-amz-security-token;x-amz-target",
     target: str = "DynamoDB_20120810.Scan",
     service: str = "dynamodb",
