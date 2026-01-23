@@ -23,8 +23,8 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 class Site(OralArgumentSiteLinear):
     base_url = "http://ww3.ca2.uscourts.gov"
-    docket_regex = re.compile(r"\d{2}-\d{2,4}")
-    date_regex = re.compile(r"\d{1,2}-\d{1,2}-\d{2}")
+    docket_regex = re.compile(r"(?<!\d-)\d{2}-\d{2,4}(?!-\d)")
+    date_regex = re.compile(r"^\d{1,2}-\d{1,2}-\d{2}$")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -66,7 +66,7 @@ class Site(OralArgumentSiteLinear):
                     else datetime.now().strftime("%-m-%d-%y")
                 )  # use last case date
 
-            if not self.docket_regex.search(docket): # Row may have mixed columns
+            if not self.docket_regex.findall(docket):  # Row may have mixed columns
                 if self.date_regex.search(docket):
                     date = docket
                     docket = self.docket_regex.search(link).group(0)
