@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Revert Mass back to old for to collect PDF
 
 Fixes:
 -
