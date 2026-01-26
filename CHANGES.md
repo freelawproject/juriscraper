@@ -21,7 +21,7 @@ Changes:
 - Revert Mass back to old for to collect PDF
 
 Fixes:
-- Fix `texapp` URL assignment when no sub_opinions are available
+- Fix `texapp` check that opinion belongs to specific court #1781
 
 ## Current
 
