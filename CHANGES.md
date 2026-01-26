@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 -
+- fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 
 ## Current
 
