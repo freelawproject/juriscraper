@@ -166,8 +166,11 @@ class Site(ClusterSite):
             case_dict["judge"] = "; ".join(judges)
 
             if (
-                self.checkbox >= 2 #only checking for COA's not crim
-                and self.court_number != case_dict["docket"][:2] #first to docket numbers indicate the court (03-26-00075-CV)
+                self.checkbox >= 2  # only checking for COA's not crim
+                and self.court_number
+                != case_dict["docket"][
+                    :2
+                ]  # first to docket numbers indicate the court (03-26-00075-CV)
             ):
                 logger.warning(
                     "Skipping docket %s - belongs to court %s, not %s",
