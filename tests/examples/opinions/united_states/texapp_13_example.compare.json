@@ -1,52 +1,46 @@
 [
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14596&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Larry Mark Polsky v. Spring Mart Entertainment, LLC D/B/A Dog House Pub & Grub",
+    "nature_of_suit": "Miscellaneous/other civil",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=57afc55f-3370-4bab-be89-9354f1664fc8&coa=coa13&DT=Opinion&MediaID=c78cbab5-4027-49f8-8e35-c40cfe93d736",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "County Court at Law No. 1",
+    "lower_court_judges": "Honorable Arturo McDonald",
+    "lower_court_numbers": "2020-CCL-00391",
+    "court_reporter": "Irene Salazar",
+    "case_dates": "2024-03-07",
+    "docket_numbers": "13-22-00287-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00334-CV",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14574&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Genevie Nicole Lopez v. the State of Texas",
+    "nature_of_suit": "Assault",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=3d14aad3-f15d-4bfc-bcd3-0e0988d6a915&coa=coa13&DT=Opinion&MediaID=231f7f74-14af-4c99-9d5d-ae72468b502f",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Dismissed",
+    "lower_courts": "187th District Court",
+    "lower_court_judges": "Honorable Stephanie Boyd",
+    "lower_court_numbers": "2023CR5150",
+    "court_reporter": "Diana Guerrero",
+    "case_dates": "2024-03-07",
+    "docket_numbers": "13-23-00506-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00342-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14524&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00357-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14442&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00342-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=14427&Index=***coa13%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "13-14-00357-CR",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

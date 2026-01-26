@@ -1,122 +1,46 @@
 [
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7649&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "In the Interest of F. E. C., a Child v. the State of Texas",
+    "nature_of_suit": "Suit affecting parent child relationship",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=8448992e-e1ac-4405-b733-766b6b280058&coa=coa12&DT=Opinion&MediaID=ef354059-d6e2-48d4-8508-48bab0fad969",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Dismissed",
+    "lower_courts": "County Court at Law",
+    "lower_court_judges": "Honorable John A. Sinz",
+    "lower_court_numbers": "C1934782",
+    "court_reporter": "Leah Hale",
+    "case_dates": "2024-02-22",
+    "docket_numbers": "12-23-00146-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00329-CR",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7646&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Jeremy Christian Moffitt v. the State of Texas",
+    "nature_of_suit": "Evading Arrest",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=36e830b3-837d-4eca-b6df-dbc65aede36f&coa=coa12&DT=Opinion&MediaID=84c9c02b-d4e4-47bd-a0bf-682e10cc82b2",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "",
+    "lower_courts": "114th District Court",
+    "lower_court_judges": "Honorable Austin R. Jackson",
+    "lower_court_numbers": "114-0071-21",
+    "court_reporter": "Shawna Gauntt-Hicks",
+    "case_dates": "2024-02-14",
+    "docket_numbers": "12-23-00110-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00288-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7645&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00313-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7633&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00309-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7630&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00164-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7628&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00322-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7627&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00275-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7626&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00250-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7619&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00239-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7617&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00336-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7615&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00178-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-30",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=7609&Index=***coa12%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "12-13-00191-CR",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]
