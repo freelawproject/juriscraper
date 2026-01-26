@@ -18,13 +18,26 @@ Features:
 -
 
 Changes:
--
+- Revert Mass back to old for to collect PDF
 
 Fixes:
 -
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 
 ## Current
+
+**2.7.4 - 2026-01-22**
+
+Features:
+-
+
+Changes:
+- Update `haw` and `hawapp` to ClusterSite #1772
+- updates `texapp`, `texcrimapp` to ClusterSite #1767
+- update `michctapp` to ClusterSite #1652
+
+Fixes:
+-
 
 **2.7.3 - 2025-01-15**
 
