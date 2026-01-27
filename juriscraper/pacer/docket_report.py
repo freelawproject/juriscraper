@@ -1410,9 +1410,10 @@ class DocketReport(BaseDocketReport, BaseReport):
 
             number = de["document_number"]
             if number is not None and not number.isdigit():
-                # Some courts use the word "doc" instead of a docket number. We
-                # skip these for now.
-                continue
+                # Per b04951853, Some courts use the word "doc"
+                # instead of a docket number.
+                raise ValueError(f"Unexpected document number {number}")
+
             docket_entries.append(de)
 
         docket_entries = clean_court_object(docket_entries)
