@@ -1596,12 +1596,75 @@ class DocketReport(BaseDocketReport, BaseReport):
     def _get_document_number(self, cell):
         """Get the document number.
 
-        Some jurisdictions have the number as, "13 (5 pgs)" so some processing
-        is needed. See flsb, 09-02199-JKO.
+        CM/ECF can add things to this cell that are not numbers, in a
+        variety of ways:
+
+        . For filing users, the docket report has a "Links to Notices
+        of Electronic Filing" checkbox, which is on by default in some
+        districts. This produces an <a> linking to DisplayReceipt.pl,
+        which in CSS is rendered as a "silver ball" icon, and has a
+        text node of the value "view".
+
+        . For court users, a gavel icon is displayed for motions that
+        have not been resolved. We are unlikely to see this.
+
+        . Some jurisdictions have additional information, such as
+        "13 (5 pgs)". See flsb, 09-02199-JKO.
+
+        . Some jurisdictions, e.g. lawb, can have unnumbered PDF
+        attachments that appear as merely "doc" instead of a number.
+        We can't represent such non-unique non-numeric docket entry
+        numbers in our schema, so throw away the so-called "number"
+        ("doc"), and also throw away the doc1 link to the PDF.
         """
+
+        _ = """
+        # Examples of the HTML.
+        # A normal case, nysd:
+<a href="https://ecf.nysd.uscourts.gov/doc1/1270456659" onClick="goDLS('/doc1/1270456659','39589','2','','1','1','','');return(false);">1</a>&nbsp;
+
+        # An unnumbered entry, also nysd:
+1&nbsp;
+
+        # The flsb case, with pagecount parenthesis:
+<a href='/doc1/050010759404' onContextMenu='this.href="https://ecf.flsb.uscourts.gov/doc1/050010759404"'>13</a> <br><nobr>(5&nbsp;pgs)</nobr></nobr>
+
+        # With silver bells, from mnd:
+
+<span class="iconContainer"><a href="/cgi-bin/DisplayReceipt.pl?230820,8"><span class="receiptLink">view</span></a><a href="https://ecf.mnd.uscourts.gov/doc1/101011362785" onclick="goDLS('/doc1/101011362785','230820','8','','1','1','','','');return(false);">1</a></span>&nbsp;
+
+        # Or, if the RECAP extension has modified the ODM:
+
+<span class="iconContainer"><a href="/cgi-bin/DisplayReceipt.pl?230877,20"><span class="receiptLink">view</span></a><a href="https://ecf.mnd.uscourts.gov/doc1/101111365370" onclick="goDLS('/doc1/101111365370','230877','20','','1','1','','','');return(false);">3</a><a class="recap-inline" title="Available for free from the RECAP Archive." href="https://storage.courtlistener.com/recap/gov.uscourts.mnd.230877/gov.uscourts.mnd.230877.3.0.pdf"><img src="moz-extension://c2baafb3-8fb5-4cba-a00c-0947a021a9bf/assets/images/icon-16.png"></a></span>
+
+	# Or, in lawb, unnumbered document entries can have PDF
+	# document attachments.
+
+<a href="/doc1/0880393551" oncontextmenu="this.href=&quot;https://ecf.lawb.uscourts.gov/doc1/0880393551&quot;">doc</a>
+
+"""  # noqa
+
+        # Possible approaches to silver bell complexity:
+        # 1.   Look for the /doc1 href and take its contents
+        # 2.   Ignore the /cgi-bin/DisplayReceipt href and its contents
+        # 2(a) Ignore all /cgi-bin links hrefs?
+        # 3.   Ignore the <span class="receiptLink">
+        # 4.   Ignore "view" text nodes.
+        #
+        # Given that we use self._br_split() which only returns text nodes,
+        # only #4 is easy to do as the others require HTML tag processing.
+        # So we go with #4.
+
         words = [
             word for phrase in self._br_split(cell) for word in phrase.split()
         ]
+
+        for _ in ["view"]:
+            try:
+                words.remove(_)
+            except ValueError:
+                pass
+
         if words:
             first_word = re.sub(self.WHITESPACE_WITH_NBSP, "", words[0])
             if self.court_id != "txnb":
