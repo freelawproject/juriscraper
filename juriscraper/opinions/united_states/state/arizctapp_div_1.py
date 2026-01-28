@@ -14,6 +14,7 @@ class Site(ariz.Site):
     base_url = "https://coa1.azcourts.gov"
     court_param = "Division1"
     search_page_path = "/Decisions/Search-Decisions"
+    module_xp = "//*[@id='dnn_ContentPane']/div[2]/a/@name"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
