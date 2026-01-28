@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
 
 Fixes:
 -
