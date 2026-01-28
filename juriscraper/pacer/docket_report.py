@@ -1411,7 +1411,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             number = de["document_number"]
             if number is not None and not number.isdigit():
                 # Per b04951853, Some courts use the word "doc"
-                # instead of a docket number.
+                # instead of a docket number. See lawb_18072.
                 raise ValueError(f"Unexpected document number {number}")
 
             docket_entries.append(de)
@@ -1572,13 +1572,39 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     @staticmethod
     def _get_pacer_doc_id_and_seq_no(cell, document_number):
+        """Parse the first <a> tag that contains the document number in a text
+        node.
+
+        This code is somewhat fragile, as noted in commented examples below.
+        It would benefit from some assertions and checks.
+
+        It was written to handle the case of txnb, which combines the
+        second (entry number with pagecount) and third (docket entry
+        text) columns in its docket report."""
+
         if not document_number:
             return None, None
         else:
-            # We find the first link having the document number as text.
-            # This is needed because txnb combines the second and third
-            # column in their docket report.
             anchors = cell.xpath(".//a")
+            #
+            _ = """
+            # This code can go terribly wrong, resulting in things like:
+[ 'pacer_doc_id': 'Dis0layReceipt.pl' ]
+            # which occurred when this was invoked with document_number as 'view'.
+
+            # This happened when the anchors list began:
+(Pdb) tostring(anchors[0])
+b'<a href="https://ecf.mnd.uscourts.gov/cgi-bin/DisplayReceipt.pl?230820,26" rel="noopener noreferrer"><span class="receiptLink">view</span></a>'
+
+            # which came from this:
+(Pdb) tostring(cell)
+b'<td align="right"><span class="iconContainer"><a href="https://ecf.mnd.uscourts.gov/cgi-bin/DisplayReceipt.pl?230820,26" rel="noopener noreferrer"><span class="receiptLink">view</span></a><a href="https://ecf.mnd.uscourts.gov/doc1/101111363917" onclick="goDLS(\'/doc1/101111363917\',\'230820\',\'26\',\'\',\'1\',\'1\',\'\',\'\',\'\');return(false);" rel="noopener noreferrer">4</a></span>&#160;</td>'
+
+
+            # This code was designed to deal with txsb:
+<a href='/cgi-bin/show_doc.pl?caseid=322636&de_seq_num=2&dm_id=21705446&doc_num=1&pdf_header=0' id='documentKcaseidV322636Kde_seq_numV2Kdm_idV21705446Kdoc_numV1Kpdf_headerV0'>1</a><script>DocLink('documentKcaseidV322636Kde_seq_numV2Kdm_idV21705446Kdoc_numV1Kpdf_headerV0');</script>
+
+"""  # noqa
             if len(anchors) == 0:
                 # Docket entry exists, but cannot download document (it's
                 # sealed, a minute entry, or otherwise unavailable in PACER).
@@ -1633,7 +1659,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
 <span class="iconContainer"><a href="/cgi-bin/DisplayReceipt.pl?230820,8"><span class="receiptLink">view</span></a><a href="https://ecf.mnd.uscourts.gov/doc1/101011362785" onclick="goDLS('/doc1/101011362785','230820','8','','1','1','','','');return(false);">1</a></span>&nbsp;
 
-        # Or, if the RECAP extension has modified the ODM:
+        # Or, if the RECAP extension has modified the DOM:
 
 <span class="iconContainer"><a href="/cgi-bin/DisplayReceipt.pl?230877,20"><span class="receiptLink">view</span></a><a href="https://ecf.mnd.uscourts.gov/doc1/101111365370" onclick="goDLS('/doc1/101111365370','230877','20','','1','1','','','');return(false);">3</a><a class="recap-inline" title="Available for free from the RECAP Archive." href="https://storage.courtlistener.com/recap/gov.uscourts.mnd.230877/gov.uscourts.mnd.230877.3.0.pdf"><img src="moz-extension://c2baafb3-8fb5-4cba-a00c-0947a021a9bf/assets/images/icon-16.png"></a></span>
 
