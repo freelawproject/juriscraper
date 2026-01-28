@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime
 from typing import Union
+from urllib.parse import urlencode
 
 import certifi
 import requests
@@ -52,6 +53,7 @@ class AbstractSite:
         super().__init__()
 
         # Computed metadata
+        self.additional_params = None
         self.hash = None
         self.html = None
         self.method = "GET"
@@ -74,6 +76,9 @@ class AbstractSite:
             "status": None,
             "url": None,
         }
+        self.use_proxy = False
+        self.SCRAPINGBEE_API_KEY = os.environ.get("SCRAPINGBEE_API_KEY", None)
+        self.SCRAPINGBEE_API_URL = os.environ.get("SCRAPINGBEE_API_URL", None)
 
         # Attribute to reference a function passed by the caller,
         # which takes a single argument, the Site object, after
@@ -349,10 +354,10 @@ class AbstractSite:
 
         if self.test_mode_enabled():
             self._request_url_mock(self.url)
-        elif self.method == "GET":
-            self._request_url_get(self.url)
-        elif self.method == "POST":
-            self._request_url_post(self.url)
+        elif self.use_proxy:
+            self._request_url_via_proxy(self.url)
+        else:
+            self._request_url(self.url)
 
         self._post_process_response()
         return self._return_response_text_object()
@@ -398,13 +403,28 @@ class AbstractSite:
 
             # Note that we do a GET even if self.method is POST. This is
             # deliberate.
-            r = s.get(
-                download_url,
-                verify=has_cipher,  # WA has a certificate we don't understand
-                headers=headers,
-                cookies=self.cookies,
-                timeout=300,
-            )
+            if self.use_proxy:
+                params = {
+                    "api_key": self.SCRAPINGBEE_API_KEY,
+                    "url": download_url,
+                    "render_js": "false",
+                    "cookies": self.cookies,
+                    "country_code": "us",
+                    "premium_proxy": "true",
+                }
+
+                r = s.get(
+                    self.SCRAPINGBEE_API_URL,
+                    params=params,
+                )
+            else:
+                r = s.get(
+                    download_url,
+                    verify=has_cipher,  # WA has a certificate we don't understand
+                    headers=headers,
+                    cookies=self.cookies,
+                    timeout=300,
+                )
 
             # test for empty files (thank you CA1)
             if len(r.content) == 0:
@@ -458,32 +478,56 @@ class AbstractSite:
             del parameters["verify"]
         self.request["parameters"].update(parameters)
 
-    def _request_url_get(self, url):
-        """Execute GET request and assign appropriate request dictionary
-        values
-        """
+    def _request_url(self, url):
+        """Execute GET or POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
-        self.request["response"] = self.request["session"].get(
-            url,
+        session = self.request["session"]
+        request_args = dict(
+            url=url,
             headers=self.request["headers"],
             verify=self.request["verify"],
             timeout=60,
             **self.request["parameters"],
         )
+        if self.method == "POST":
+            request_args["data"] = self.parameters
+            self.request["response"] = session.post(**request_args)
+        else:
+            self.request["response"] = session.get(**request_args)
         if self.save_response:
             self.save_response(self)
 
-    def _request_url_post(self, url):
-        """Execute POST request and assign appropriate request dictionary values"""
-        self.request["url"] = url
-        self.request["response"] = self.request["session"].post(
-            url,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-            data=self.parameters,
-            timeout=60,
-            **self.request["parameters"],
-        )
+    def _request_url_via_proxy(self, url):
+        if not self.SCRAPINGBEE_API_KEY or not self.SCRAPINGBEE_API_URL:
+            raise RuntimeError(
+                "SCRAPINGBEE_API_KEY and SCRAPINGBEE_API_URL not set in environment."
+            )
+
+        if self.request["parameters"].get("params"):
+            self.url += "?" + urlencode(self.request["parameters"]["params"])
+
+        base_proxy_params = {
+            "api_key": self.SCRAPINGBEE_API_KEY,
+            "url": url,
+            "premium_proxy": "true",
+            "country_code": "us",
+            "block_resources": "false",
+        }
+        if self.additional_params:
+            base_proxy_params.update(self.additional_params)
+
+        if self.method == "POST":
+            self.request["response"] = self.request["session"].post(
+                self.SCRAPINGBEE_API_URL,
+                params=base_proxy_params,
+                data=self.parameters,
+            )
+        else:
+            self.request["response"] = self.request["session"].get(
+                self.SCRAPINGBEE_API_URL,
+                params=base_proxy_params,
+            )
+
         if self.save_response:
             self.save_response(self)
 
