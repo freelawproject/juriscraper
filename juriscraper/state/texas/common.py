@@ -30,24 +30,24 @@ class CourtID(Enum):
     that TAMES uses. Used by consumers to deterministically identify courts.
     """
 
-    UNKNOWN = "unknown"
-    SUPREME_COURT = "tex"
-    COURT_OF_CRIMINAL_APPEALS = "texcrimapp"
-    FIRST_COURT_OF_APPEALS = "texctapp1"
-    SECOND_COURT_OF_APPEALS = "texctapp2"
-    THIRD_COURT_OF_APPEALS = "texctapp3"
-    FOURTH_COURT_OF_APPEALS = "texctapp4"
-    FIFTH_COURT_OF_APPEALS = "texctapp5"
-    SIXTH_COURT_OF_APPEALS = "texctapp6"
-    SEVENTH_COURT_OF_APPEALS = "texctapp7"
-    EIGHTH_COURT_OF_APPEALS = "texctapp8"
-    NINTH_COURT_OF_APPEALS = "texctapp9"
-    TENTH_COURT_OF_APPEALS = "texctapp10"
-    ELEVENTH_COURT_OF_APPEALS = "texctapp11"
-    TWELFTH_COURT_OF_APPEALS = "texctapp12"
-    THIRTEENTH_COURT_OF_APPEALS = "texctapp13"
-    FOURTEENTH_COURT_OF_APPEALS = "texctapp14"
-    FIFTEENTH_COURT_OF_APPEALS = "texctapp15"
+    UNKNOWN = "texas_unknown"
+    SUPREME_COURT = "texas_cossup"
+    COURT_OF_CRIMINAL_APPEALS = "texas_coscca"
+    FIRST_COURT_OF_APPEALS = "texas_coa01"
+    SECOND_COURT_OF_APPEALS = "texas_coa02"
+    THIRD_COURT_OF_APPEALS = "texas_coa03"
+    FOURTH_COURT_OF_APPEALS = "texas_coa04"
+    FIFTH_COURT_OF_APPEALS = "texas_coa05"
+    SIXTH_COURT_OF_APPEALS = "texas_coa06"
+    SEVENTH_COURT_OF_APPEALS = "texas_coa07"
+    EIGHTH_COURT_OF_APPEALS = "texas_coa08"
+    NINTH_COURT_OF_APPEALS = "texas_coa09"
+    TENTH_COURT_OF_APPEALS = "texas_coa10"
+    ELEVENTH_COURT_OF_APPEALS = "texas_coa11"
+    TWELFTH_COURT_OF_APPEALS = "texas_coa12"
+    THIRTEENTH_COURT_OF_APPEALS = "texas_coa13"
+    FOURTEENTH_COURT_OF_APPEALS = "texas_coa14"
+    FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
 
 
 COA_ORDINAL_MAP = {
@@ -95,7 +95,7 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
     coa_name_parts = coa_name.split()
-    if len(coa_name_parts) == 0:
+    if coa_name_parts:
         return CourtID.UNKNOWN
     return COA_ORDINAL_MAP.get(coa_name_parts[0].lower(), CourtID.UNKNOWN)
 
