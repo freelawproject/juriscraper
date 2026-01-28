@@ -1603,15 +1603,18 @@ class DocketReport(BaseDocketReport, BaseReport):
         ]
         if words:
             first_word = re.sub(self.WHITESPACE_WITH_NBSP, "", words[0])
-            if self.court_id == "txnb":
+            if self.court_id != "txnb":
+                return first_word
+            else:
                 # txnb merges the second and third columns, so if the first
                 # word is a number, return it. Otherwise, assume doc number
                 # isn't listed for the item.
                 if first_word.isdigit():
                     return first_word
-            else:
-                return first_word
-        return None
+                else:
+                    return None
+        else:
+            return None
 
     def _get_description(self, cells):
         if self.court_id != "txnb":
