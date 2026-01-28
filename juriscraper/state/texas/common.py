@@ -95,7 +95,7 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
     coa_name_parts = coa_name.split()
-    if coa_name_parts:
+    if not coa_name_parts:
         return CourtID.UNKNOWN
     return COA_ORDINAL_MAP.get(coa_name_parts[0].lower(), CourtID.UNKNOWN)
 
