@@ -45,6 +45,8 @@ class BaseDocketReport:
     # (U+2013), and ASCII slashes.
     DATE_REGEX = r"[—\d\-–/]+"
 
+    WHITESPACE_WITH_NBSP = r"[\s\u00a0]"  # Whitespace including nbsp
+
     date_entered_regex = re.compile(r"Entered:\s+(%s)" % DATE_REGEX)
     date_terminated_regex = re.compile(
         r"[tT]erminated:\s+(%s)" % DATE_REGEX, flags=re.IGNORECASE
@@ -1600,7 +1602,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             word for phrase in self._br_split(cell) for word in phrase.split()
         ]
         if words:
-            first_word = re.sub("[\\s\u00a0]", "", words[0])
+            first_word = re.sub(self.WHITESPACE_WITH_NBSP, "", words[0])
             if self.court_id == "txnb":
                 # txnb merges the second and third columns, so if the first
                 # word is a number, return it. Otherwise, assume doc number
@@ -1620,7 +1622,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         # combined. The field can have one of four formats. Attempt the most
         # detailed first, then work our way down to just giving up and
         # capturing it all.
-        ws = "[\\s\u00a0]"  # Whitespace including nbsp
+        ws = self.WHITESPACE_WITH_NBSP
         regexes = [
             # 2 (23 pgs; 4 docs) Blab blah (happens when attachments exist and
             # page numbers are on)
