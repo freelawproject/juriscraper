@@ -1659,7 +1659,11 @@ class DocketReport(BaseDocketReport, BaseReport):
             word for phrase in self._br_split(cell) for word in phrase.split()
         ]
 
-        for _ in ["view"]:
+        # XXX: an unfortunately consequence of removing the word
+        # "doc" from the set of possible docket entry numbers is that
+        # we fail to capture the PDF attachment to this docket entry.
+        # But better that than not capturing the docket text at all.
+        for _ in ["view", "doc"]:
             try:
                 words.remove(_)
             except ValueError:
