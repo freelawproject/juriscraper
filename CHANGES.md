@@ -25,6 +25,33 @@ Fixes:
 
 ## Current
 
+**2.7.5 - 2026-01-28**
+
+Features:
+-
+
+Changes:
+- Revert Mass back to old for to collect PDF
+
+Fixes:
+- fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
+- Fix `texapp` check that opinion belongs to specific court #1781
+
+## Past
+
+**2.7.4 - 2026-01-22**
+
+Features:
+-
+
+Changes:
+- Update `haw` and `hawapp` to ClusterSite #1772
+- updates `texapp`, `texcrimapp` to ClusterSite #1767
+- update `michctapp` to ClusterSite #1652
+
+Fixes:
+-
+
 **2.7.3 - 2025-01-15**
 
 Features:
@@ -40,9 +67,6 @@ Fixes:
 - fix `tenn` miss adding opinion types #1749
 - add ADDENDUM to OpinionType enum #1754
 - update `lactapp_1` parameters for 2026 #1734
-
-
-## Past
 
 **2.7.2 - 2025-01-13**
 

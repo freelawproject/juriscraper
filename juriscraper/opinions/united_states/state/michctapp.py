@@ -12,11 +12,13 @@ import re
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(mich.Site):
+class Site(ClusterSite, mich.Site):
     court = "Court Of Appeals"
     extract_from_text = OpinionSite.extract_from_text
 
@@ -25,6 +27,35 @@ class Site(mich.Site):
         self.court_id = self.__module__
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
+
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
+
+        :return: None
+        """
+        for item in self.html["searchItems"]:
+            case_dict = self._extract_case_data_from_item(item)
+
+            # Use URL suffix to get the type. Other prefixes not used here
+            # "o.opn.pdf": "On Remand" opinions
+            # "a.opn.pdf": "After Second Remand"
+            url = case_dict.get("url", "")
+            lower_url = url.lower()
+            if lower_url.endswith("p.opn.pdf"):
+                case_dict["type"] = (
+                    OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
+                )
+            elif lower_url.endswith("d.opn.pdf"):
+                case_dict["type"] = OpinionType.DISSENT.value
+            elif lower_url.endswith("c.opn.pdf"):
+                case_dict["type"] = OpinionType.CONCURRENCE.value
+            else:
+                case_dict["type"] = OpinionType.MAJORITY.value
+
+            # If we can't cluster it, append it to self.cases
+            # if it was clustered, the data will already be in self.cases
+            if not self.cluster_opinions(case_dict, self.cases):
+                self.cases.append(case_dict)
 
     def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
         """Try to get the case name using a secondary request
