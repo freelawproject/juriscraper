@@ -20,8 +20,6 @@ Features:
 Changes:
 
 - Add `court_id` field to `TexasAppealsCourt` and `TexasTrialCourt`
-- Modify `state.texas.CourtID` enum to align values with CL court IDs
-- Change `CourtID.UNKNOWN` value to `unknown`
 - Update Texas case name shortening to be more robust
 
 Fixes:
@@ -29,8 +27,23 @@ Fixes:
 - Fix incorrectly shortened case names in Texas Court of Criminal Appeals scraper
 - Revert Mass back to old for to collect PDF
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
+-
 
 ## Current
+
+**2.7.5 - 2026-01-28**
+
+Features:
+-
+
+Changes:
+- Revert Mass back to old for to collect PDF
+
+Fixes:
+- fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
+- Fix `texapp` check that opinion belongs to specific court #1781
+
+## Past
 
 **2.7.4 - 2026-01-22**
 
@@ -63,8 +76,6 @@ Fixes:
 - fix `tenn` miss adding opinion types #1749
 - add ADDENDUM to OpinionType enum #1754
 - update `lactapp_1` parameters for 2026 #1734
-
-## Past
 
 **2.7.2 - 2025-01-13**
 

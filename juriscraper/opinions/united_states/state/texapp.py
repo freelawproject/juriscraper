@@ -61,6 +61,7 @@ class Site(ClusterSite):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.checkbox = 0
+        self.court_number = "0"
         self.status = "Published"
         self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.make_backscrape_iterable(kwargs)
@@ -164,6 +165,20 @@ class Site(ClusterSite):
             ]
             case_dict["judge"] = "; ".join(judges)
 
+            if (
+                self.checkbox >= 2  # only checking for COA's not crim
+                and self.court_number
+                != case_dict["docket"][
+                    :2
+                ]  # first to docket numbers indicate the court (03-26-00075-CV)
+            ):
+                logger.warning(
+                    "Skipping docket %s - belongs to court %s, not %s",
+                    case_dict["docket"],
+                    case_dict["docket"][:2],
+                    self.court_number,
+                )
+                continue
             self.cases.append(case_dict)
 
         # pagination

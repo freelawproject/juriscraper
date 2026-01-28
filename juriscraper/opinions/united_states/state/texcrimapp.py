@@ -15,7 +15,6 @@ class Site(texapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_name = "ccrimapp"
         self.checkbox = 1
 
     def get_opinions(self, html, _) -> tuple[list[dict], str]:
