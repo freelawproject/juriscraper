@@ -25,19 +25,21 @@
   "case_name_full": "In Re: Jeremy Wayne Atkins",
   "case_type": "Mandamus",
   "court_id": "texas_coa05",
+  "court_type": "texas_appellate",
   "date_filed": "2025-07-21",
   "docket_number": "05-25-00919-CV",
-  "parties": [],
-  "publication_service": "",
-  "transfer_from": null,
-  "transfer_to": null,
-  "trial_court": {
+  "originating_court": {
     "case": "93167",
     "county": "Hunt",
-    "court_id": "texdistct355",
+    "court_type": "texas_district",
+    "district": 354,
     "judge": "Honorable Judge Keli Aiken",
     "name": "354th Judicial District Court",
     "punishment": "",
     "reporter": "Shannon Sudderth"
-  }
+  },
+  "parties": [],
+  "publication_service": "",
+  "transfer_from": null,
+  "transfer_to": null
 }

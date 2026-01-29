@@ -132,8 +132,18 @@
   "case_name_full": "In Re Carl Williams, Relator",
   "case_type": "Mandamus/prohibition",
   "court_id": "texas_coa04",
+  "court_type": "texas_appellate",
   "date_filed": "1997-12-05",
   "docket_number": "04-97-00972-CV",
+  "originating_court": {
+    "case": "Unknown",
+    "county": "Bexar",
+    "court_type": "texas_unknown",
+    "judge": "",
+    "name": "Unknown Court",
+    "punishment": "unknown at this time.",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "District Clerk",
@@ -152,14 +162,5 @@
   ],
   "publication_service": "",
   "transfer_from": null,
-  "transfer_to": null,
-  "trial_court": {
-    "case": "Unknown",
-    "county": "Bexar",
-    "court_id": "unknown",
-    "judge": "",
-    "name": "Unknown Court",
-    "punishment": "unknown at this time.",
-    "reporter": ""
-  }
+  "transfer_to": null
 }

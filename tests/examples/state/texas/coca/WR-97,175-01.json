@@ -50,8 +50,19 @@
   "case_name_full": "HICKS, BLAZE DANIEL",
   "case_type": "Original Writ of Mandamus",
   "court_id": "texas_coscca",
+  "court_type": "texas_final",
   "date_filed": "2025-11-20",
   "docket_number": "WR-97,175-01",
+  "originating_court": {
+    "case": "13,654",
+    "county": "Tyler",
+    "court_type": "texas_district",
+    "district": 1,
+    "judge": "",
+    "name": "1A District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "HICKS, BLAZE DANIEL",
@@ -60,14 +71,5 @@
       ],
       "type": "Applicant"
     }
-  ],
-  "trial_court": {
-    "case": "13,654",
-    "county": "Tyler",
-    "court_id": "texdistct2",
-    "judge": "",
-    "name": "1A District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }

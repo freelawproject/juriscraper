@@ -254,8 +254,18 @@
   "case_name_full": "Panola Operating, LLC and AXE Directional Drilling, LLC v. Ironman Recycling, LLC; SWD East Texas, LLC; and GEP Haynesville II, LLC",
   "case_type": "Contract",
   "court_id": "texas_coa15",
+  "court_type": "texas_appellate",
   "date_filed": "2025-12-16",
   "docket_number": "15-25-00230-CV",
+  "originating_court": {
+    "case": "25-BC11A-0085",
+    "county": "Harris",
+    "court_type": "texas_business",
+    "judge": "Honorable Brian Stagner",
+    "name": "Business Court Division 11A",
+    "punishment": "",
+    "reporter": "Suzanne Kelly"
+  },
   "parties": [
     {
       "name": "Panola Operating, LLC",
@@ -286,14 +296,5 @@
   ],
   "publication_service": "",
   "transfer_from": null,
-  "transfer_to": null,
-  "trial_court": {
-    "case": "25-BC11A-0085",
-    "county": "Harris",
-    "court_id": "texbizct",
-    "judge": "Honorable Brian Stagner",
-    "name": "Business Court Division 11A",
-    "punishment": "",
-    "reporter": "Suzanne Kelly"
-  }
+  "transfer_to": null
 }

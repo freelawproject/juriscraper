@@ -5,8 +5,19 @@
   "case_name_full": "Gray, Sherry L. v. Metroplex Parachute Center, Inc.",
   "case_type": "Other Personal Injury",
   "court_id": "texas_coa02",
+  "court_type": "texas_appellate",
   "date_filed": "1982-05-17",
   "docket_number": "02-82-00084-CV",
+  "originating_court": {
+    "case": "236-69l666-8",
+    "county": "Tarrant",
+    "court_type": "texas_district",
+    "district": 236,
+    "judge": "Honorable Calvin Ashley",
+    "name": "236th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [],
   "publication_service": "",
   "transfer_from": {
@@ -14,14 +25,5 @@
     "date": null,
     "origin_docket": ""
   },
-  "transfer_to": null,
-  "trial_court": {
-    "case": "236-69l666-8",
-    "county": "Tarrant",
-    "court_id": "texdistct237",
-    "judge": "Honorable Calvin Ashley",
-    "name": "236th District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  "transfer_to": null
 }

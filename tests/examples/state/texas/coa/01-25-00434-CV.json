@@ -645,8 +645,18 @@
   "case_name_full": "Wells Fargo Bank, N.A. successor by merger to Wells Fargo Bank Minnesota, National Association, as Trustee for First Franklin Mortgage Loan Trust 2003-FF5 Asset-Backed Certificates Series 2003-FF5, (\"Wells Fargo\"), PHH Mortgage Corporation and Invum Three, LLC v. David Munson, Kenneth D. Eichner P.C. and KDEPC 1, LLC",
   "case_type": "Contract",
   "court_id": "texas_coa01",
+  "court_type": "texas_appellate",
   "date_filed": "2025-06-11",
   "docket_number": "01-25-00434-CV",
+  "originating_court": {
+    "case": "475381-401",
+    "county": "Harris",
+    "court_type": "texas_probate",
+    "judge": "Honorable Judge Probate Ct 3",
+    "name": "Probate Court No 3",
+    "punishment": "",
+    "reporter": "Robin Kulhanek-Day"
+  },
   "parties": [
     {
       "name": "Kenneth D. Eichner P.C. and KDEPC 1, LLC",
@@ -681,14 +691,5 @@
   ],
   "publication_service": "www.txcourts.gov/1stcoa",
   "transfer_from": null,
-  "transfer_to": null,
-  "trial_court": {
-    "case": "475381-401",
-    "county": "Harris",
-    "court_id": "texprobct",
-    "judge": "Honorable Judge Probate Ct 3",
-    "name": "Probate Court No 3",
-    "punishment": "",
-    "reporter": "Robin Kulhanek-Day"
-  }
+  "transfer_to": null
 }

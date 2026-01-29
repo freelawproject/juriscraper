@@ -52,8 +52,18 @@
   "case_name_full": "LIGHTBOURN, DAVID",
   "case_type": "PDR Case Type",
   "court_id": "texas_coscca",
+  "court_type": "texas_final",
   "date_filed": "1988-02-05",
   "docket_number": "PD-0123-88",
+  "originating_court": {
+    "case": "86-MCA-1755",
+    "county": "Matagorda",
+    "court_type": "texas_municipal",
+    "judge": "Honorable Odell Holmes, Jr.",
+    "name": "MUNICIPAL COURT NO 2",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "Lightbourn, David",
@@ -69,14 +79,5 @@
       ],
       "type": "State"
     }
-  ],
-  "trial_court": {
-    "case": "86-MCA-1755",
-    "county": "Matagorda",
-    "court_id": "texctyct",
-    "judge": "Honorable Odell Holmes, Jr.",
-    "name": "MUNICIPAL COURT NO 2",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }

@@ -19,7 +19,9 @@ Features:
 
 Changes:
 
-- Add `court_id` field to `TexasAppealsCourt` and `TexasTrialCourt`
+- Rename `trial_court` field to `originating_court` in Texas dockets
+- Add `court_type` field to Texas dockets, originating court info, and appellate court info
+- Add `district` field to Texas originating court info where relevant
 - Update Texas case name shortening to be more robust
 
 Fixes:
@@ -37,9 +39,11 @@ Features:
 -
 
 Changes:
+
 - Revert Mass back to old for to collect PDF
 
 Fixes:
+
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 - Fix `texapp` check that opinion belongs to specific court #1781
 
@@ -51,6 +55,7 @@ Features:
 -
 
 Changes:
+
 - Update `haw` and `hawapp` to ClusterSite #1772
 - updates `texapp`, `texcrimapp` to ClusterSite #1767
 - update `michctapp` to ClusterSite #1652

@@ -2,6 +2,7 @@ from functools import cached_property
 
 from juriscraper.state.texas.common import (
     CourtID,
+    CourtType,
     TexasAppealsCourt,
     TexasCommonData,
     TexasCommonScraper,
@@ -47,6 +48,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
 
         return TexasCourtOfCriminalAppealsDocket(
             court_id=CourtID.COURT_OF_CRIMINAL_APPEALS.value,
+            court_type=CourtType.SUPREME.value,
             appeals_court=_parse_appeals_court(self.tree),
             case_events=common_data["case_events"],
             appellate_briefs=common_data["appellate_briefs"],
@@ -54,7 +56,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
             date_filed=common_data["date_filed"],
             case_type=common_data["case_type"],
             parties=common_data["parties"],
-            trial_court=common_data["trial_court"],
+            originating_court=common_data["originating_court"],
             case_name=common_data["case_name"],
             case_name_full=common_data["case_name_full"],
         )

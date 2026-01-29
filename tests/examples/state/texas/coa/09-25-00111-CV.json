@@ -862,8 +862,19 @@
   "case_name_full": "Still American, LLC, Unio Global Trade, LLC, Adolfo Rafael Vivas, Marcela Vogel, Michael Vogel, and Adolfo Pedro Vivas v. Baron Global Distributors, LLC and Zinc Point Manufacturing, Inc.",
   "case_type": "Contract",
   "court_id": "texas_coa09",
+  "court_type": "texas_appellate",
   "date_filed": "2025-04-02",
   "docket_number": "09-25-00111-CV",
+  "originating_court": {
+    "case": "22-10-14637",
+    "county": "Montgomery",
+    "court_type": "texas_district",
+    "district": 284,
+    "judge": "Honorable Kristin L. Bays - DONT USE",
+    "name": "284th District Court",
+    "punishment": "",
+    "reporter": "Graciela Caka"
+  },
   "parties": [
     {
       "name": "Adolfo Rafael Vivas and Still American, LLC",
@@ -897,14 +908,5 @@
     "date": "2025-04-02T00:00:00",
     "origin_docket": "15-24-00126-CV"
   },
-  "transfer_to": null,
-  "trial_court": {
-    "case": "22-10-14637",
-    "county": "Montgomery",
-    "court_id": "texdistct285",
-    "judge": "Honorable Kristin L. Bays - DONT USE",
-    "name": "284th District Court",
-    "punishment": "",
-    "reporter": "Graciela Caka"
-  }
+  "transfer_to": null
 }
