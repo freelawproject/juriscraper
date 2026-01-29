@@ -8,6 +8,7 @@ History:
  - 2023-01-04: Created.
  - 2023-11-14: Alabama no longer uses page or use selenium.
  - 2026-01-12: fetch detailed publication data from new API endpoint.
+ - 2026-01-28: Add backscraper using pagination.
 """
 
 import re
@@ -26,10 +27,10 @@ class Site(OpinionSiteLinear):
         self.request["parameters"]["params"] = {
             "courtID": self.court_str,
             "page": 0,
-            "size": 25,
+            "size": 1,
             "sort": "publicationDate,desc",
         }
-        self.should_have_results = True
+        self.make_backscrape_iterable(kwargs)
 
     def _download(self, request_dict=None):
         """Download the publication list and then fetch detailed publication data.
@@ -59,11 +60,11 @@ class Site(OpinionSiteLinear):
             if not publicationItem.get("documents", []):
                 continue
 
-            name = publicationItem["title"]
-
-            # Skip petition cases
-            if "PETITION FOR WRIT" in name:
+            # Only process actual opinions, skip orders
+            if publicationItem["documents"][0]["documentName"] not in ["Opinion", "Decision"]:
                 continue
+
+            name = publicationItem["title"]
 
             url = "{}/courts/{}/cms/case/{}/docketentrydocuments/{}".format(
                 self.base_url,
@@ -85,6 +86,11 @@ class Site(OpinionSiteLinear):
                 lower_court = match.group("lower_court").strip()
                 lower_court_number = match.group("lower_court_number").strip()
                 name = name[: match.start()].rstrip()
+
+            # For "In re:" cases, extract the actual case name from parenthetical
+            in_re_match = re.search(r"\((In re: .*?)\)", name)
+            if in_re_match:
+                name = in_re_match.group(1).strip()
 
             judge = publicationItem["groupName"]
             if judge == "On Rehearing":
@@ -108,3 +114,27 @@ class Site(OpinionSiteLinear):
                     "lower_court_number": lower_court_number,
                 }
             )
+
+    def _download_backwards(self, d: int):
+        """Fetches a page of publications for backscraping."""
+        self.url = f"{self.base_url}/courts/cms/publications"
+        self.request["parameters"]["params"] = {
+            "courtID": self.court_str,
+            "page": d,
+            "size": 1,
+            "sort": "publicationDate,desc",
+        }
+        self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs: dict):
+        """Checks if backscrape start and end arguments have been passed"""
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        if start is None or not str(start).isdigit():
+            start = 0
+        if end is None or not str(end).isdigit():
+            end = 100  # good amount of pages
+
+        self.back_scrape_iterable = range(int(start), int(end))

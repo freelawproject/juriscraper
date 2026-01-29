@@ -1,22 +1,86 @@
 {
     "courtAbbreviation": "Alabama Supreme Court",
-    "publicationNumber": "SC-RELEASE-2026-01-09",
-    "publicationName": "Supreme Court Release List - January 9, 2026",
-    "publicationDate": "2026-01-09T14:06:10.066+00:00",
+    "publicationNumber": "SC-RELEASE-2026-01-23",
+    "publicationName": "Supreme Court Release List - January 23, 2026",
+    "publicationDate": "2026-01-23T14:20:37.335+00:00",
     "publicationItems": [
         {
-            "publicationItemUUID": "D77000A6-07EE-435E-8C6D-F5DEF1A66E93",
-            "caseInstanceUUID": "F96F8F21-B2A4-4B6E-8181-DD0667369590",
-            "caseNumber": "SC-2025-0265",
+            "publicationItemUUID": "BC827F4B-83FF-4EDE-BAD0-F3FE15AC735F",
+            "caseInstanceUUID": "270EE6FF-2418-4A4C-96A1-1669E71A081A",
+            "caseNumber": "SC-2024-0492",
             "groupName": "On Rehearing",
-            "groupOrderBy": 10,
-            "title": "Denzell Jenkins v. Brandon Blaze Everette (Appeal from Clarke Circuit Court: CV-23-900008).",
+            "groupOrderBy": 3,
+            "title": "Jeffrey Kolessar of BFAL Associates, LLC, as court-appointed receiver v. SJP Investment Partners, LLC, and Wells Fargo Bank, N.A., as trustee for the benefit of the holders of Benchmark 2019-B13 Mortgage Trust Commercial Mortgage Pass-Through Certificates Series, 2019-B13 (Appeal from Jefferson Circuit Court: CV-23-903546).",
             "decision": "Rehearing - Overruled - No Opinion.",
             "orderBy": 1,
             "documents": [
                 {
-                    "documentLinkUUID": "60853002-9870-4297-A35F-19575E4F209C",
-                    "documentName": "Decision - Distributed"
+                    "documentLinkUUID": "7A4902E2-F0C6-469B-ADDD-9651041BE48F",
+                    "documentName": "Order"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "71766666-94BE-4509-80F8-F772AA29FB83",
+            "caseInstanceUUID": "508CEE76-B83C-41A7-A81A-3836CC8527B8",
+            "caseNumber": "SC-2024-0222",
+            "groupName": "Per Curiam",
+            "groupOrderBy": 2,
+            "title": "Ex parte Jarrod Sessions PETITION FOR WRIT OF CERTIORARI TO THE COURT OF CIVIL APPEALS (In re: Jarrod Sessions v. Brittany Richey) (DeKalb Circuit Court: DR-22-900112; Civil Appeals: CL-2023-0432).",
+            "decision": "Decision - Affirmed.",
+            "orderBy": 1,
+            "documents": [
+                {
+                    "documentLinkUUID": "A2B3AE2B-40E9-4049-9622-B27188D40666",
+                    "documentName": "Opinion"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "7BE4C77F-613F-4266-921D-A1734EBA83B4",
+            "caseInstanceUUID": "083180C2-FA84-483B-868E-7DD32D84D3F0",
+            "caseNumber": "SC-2025-0862",
+            "groupName": "Wise, J.",
+            "groupOrderBy": 1,
+            "title": "Ex parte Jovon Dwayne Gaston PETITION FOR WRIT OF CERTIORARI TO THE COURT OF CRIMINAL APPEALS (In re: Jovon Dwayne Gaston v. State of Alabama) (Calhoun Circuit Court: CC-11-493.80; Criminal Appeals: CR-2022-1383).",
+            "decision": "Certiorari Pre Examination Decision - Writ Denied. No Opinion.",
+            "orderBy": 1,
+            "documents": [
+                {
+                    "documentLinkUUID": "B6768F81-6453-41C6-82A2-B8A35B291B5C",
+                    "documentName": "Order"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "C462E34A-5C4C-40D2-97DC-BAF7D107F776",
+            "caseInstanceUUID": "03433F50-011C-4E9F-8985-5A57F8EA2F1A",
+            "caseNumber": "SC-2025-0049",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 3,
+            "title": "Catherine Martha Evans v. William David Evans II (Appeal from Madison Circuit Court CV-22-123).",
+            "decision": "Rehearing - Overruled - No Opinion.",
+            "orderBy": 2,
+            "documents": [
+                {
+                    "documentLinkUUID": "1AC2B11A-8885-4C0E-A1D5-644E75789C73",
+                    "documentName": "Order"
+                }
+            ]
+        },
+        {
+            "publicationItemUUID": "857DF235-1FAC-41DF-93E2-A9A371880401",
+            "caseInstanceUUID": "5BF77657-F3E8-407A-9E7D-B99D10B3D6A4",
+            "caseNumber": "SC-2025-0259",
+            "groupName": "On Rehearing",
+            "groupOrderBy": 3,
+            "title": "Ex parte The Alabama-West Florida Conference of The United Methodist Church, Inc. PETITION FOR WRIT OF MANDAMUS (In re: Auburn Methodist Coalition, Inc. v. Alabama-West Florida Conference of the United Methodist Church, Inc.) (Lee Circuit Court: CV-23-900398).",
+            "decision": "Rehearing - Overruled - No Opinion.",
+            "orderBy": 3,
+            "documents": [
+                {
+                    "documentLinkUUID": "A555F6A4-AE94-449E-84DD-8FB3A058528A",
+                    "documentName": "Order"
                 }
             ]
         }
