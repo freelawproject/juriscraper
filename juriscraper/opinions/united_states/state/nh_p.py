@@ -66,7 +66,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.paginate = False
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         json_response = self.html
 
         for case in json_response["data"]:
@@ -147,8 +147,8 @@ class Site(OpinionSiteLinear):
         for page in range(2, json_response["last_page"] + 1):
             logger.info("Paginating to page %s", page)
             self.url = self.url.replace(f"page={page - 1}", f"page={page}")
-            self.html = self._download()
-            self._process_html()
+            self.html = await self._download()
+            await self._process_html()
 
     def set_request_parameters(
         self, year: int = datetime.today().year
@@ -180,11 +180,11 @@ class Site(OpinionSiteLinear):
             "X-Requested-With": "XMLHttpRequest",
         }
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         self.paginate = True
         self.set_request_parameters(year)
         logger.info("Backscraping year %s", year)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> list[int]:
