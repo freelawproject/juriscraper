@@ -61,7 +61,10 @@ class Site(OpinionSiteLinear):
                 continue
 
             # Only process actual opinions, skip orders
-            if publicationItem["documents"][0]["documentName"] not in ["Opinion", "Decision"]:
+            if publicationItem["documents"][0]["documentName"] not in [
+                "Opinion",
+                "Decision",
+            ]:
                 continue
 
             name = publicationItem["title"]
