@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
-from typing import TypedDict
+from typing import TypedDict, Union
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -796,11 +796,11 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
     def _parse_originating_court(
         self,
-    ) -> (
-        TexasOriginatingCourt
-        | TexasOriginatingAppellateCourt
-        | TexasOriginatingDistrictCourt
-    ):
+    ) -> Union[
+        TexasOriginatingCourt,
+        TexasOriginatingAppellateCourt,
+        TexasOriginatingDistrictCourt,
+    ]:
         """
         Extracts the trial court info from the HTML tree. Will fail if
         `_parse_text` has not yet been called.
