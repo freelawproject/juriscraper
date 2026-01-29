@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- fix `michctapp` captcha block by using new url #1677
 
 ## Current
 
