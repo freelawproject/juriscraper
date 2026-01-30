@@ -208,8 +208,6 @@ class TexasOriginatingCourt(TypedDict):
     the consumer to handle those cases.
 
     :ivar name: The name of the court.
-    :ivar court_id: The ID of the court. Only populated for appellate and
-    last resort courts.
     :ivar court_type: The type of the court.
     :ivar county: The county where the court is located.
     :ivar judge: The name of the presiding judge in the court.
@@ -253,7 +251,7 @@ class TexasOriginatingDistrictCourt(TexasOriginatingCourt):
 
 
 DISTRICT_COURT_RE = re.compile(
-    r"^(\d{1,3}(?:\w{2})?|1-?A)\s*(?:Judicial)?\s+District\s+Court$",
+    r"^(\d{1,3}(?:\w{2})?|1-?A)\s*(?:Judicial)?(?:\s+District)?(?:\s+Court)?$",
     re.IGNORECASE,
 )
 DISTRICT_COURT_DISTRICT_RE = re.compile(r"^(\d+)\w*$")
@@ -261,15 +259,11 @@ BUSINESS_COURT_RE = re.compile(r"^Business\s+Court", re.IGNORECASE)
 
 
 def _originating_court_name_to_type(name: str) -> CourtType:
-    """Takes in a trial court name from TAMES and returns the ID in
-    Courtlistener.
-
-    This is necessary because there are many interesting ways that trial court
-    names are formatted in TAMES. Additionally, it appears that the "Trial
-    Court" for a case can be a Court of Appeals.
+    """Takes in a normalized trial court name from TAMES and returns a
+    standardized type.
 
     :param name: The trial court name from TAMES.
-    :return: The CL ID of the trial court."""
+    :return: The type of the originating court."""
     name = name.lower().strip()
     if not name:
         return CourtType.UNKNOWN
@@ -284,11 +278,11 @@ def _originating_court_name_to_type(name: str) -> CourtType:
         return CourtType.BUSINESS
 
     # Probate courts
-    if name.find("probate") >= 0:
+    if "probate" in name:
         return CourtType.PROBATE
 
     # Unknown
-    if name.find("unknown court") >= 0:
+    if "unknown court" in name:
         return CourtType.UNKNOWN
 
     # County courts
@@ -304,8 +298,7 @@ def district_court_number_from_name(name: str) -> int:
     district = district_court_match.group(1)
     if district == "1-a" or district == "1a":
         return 1
-    else:
-        return int(DISTRICT_COURT_DISTRICT_RE.match(district).group(1))
+    return int(DISTRICT_COURT_DISTRICT_RE.match(district).group(1))
 
 
 class TexasCaseDocument(TypedDict):
