@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
-from typing import TypedDict, Union
+from typing import Optional, TypedDict, Union
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -34,6 +34,7 @@ class CourtType(Enum):
     BUSINESS = "texas_business"
     COUNTY = "texas_county"
     MUNICIPAL = "texas_municipal"
+    JUSTICE = "texas_justice"
     UNKNOWN = "texas_unknown"
 
 
@@ -244,18 +245,72 @@ class TexasOriginatingDistrictCourt(TexasOriginatingCourt):
     Schema for Texas Originating Court details when that court is a district
     court.
 
-    :ivar district: The district where the court is located.
+    :ivar district: The district where the court is located. Will be `None` if
+    the district could not be determined.
     """
 
-    district: int
+    district: Optional[int]
 
 
+SPACES_RE = re.compile(r"\s+")
 DISTRICT_COURT_RE = re.compile(
-    r"^(\d{1,3}(?:\w{2})?|1-?A)\s*(?:Judicial)?(?:\s+District)?(?:\s+Court)?$",
+    r"^(?:2nd\s|b-)?(\d{1,3}(?:\w{2})?|1-?A)\s?(?:Judicial)?(?:\sDistrict)?(?:\sCourt)?$",
     re.IGNORECASE,
 )
+BUSINESS_COURT_RE = re.compile(r"^Business\sCourt", re.IGNORECASE)
+APPELLATE_COURT_RE = re.compile(
+    r"\d{1,3}\w{2} Court of Appeals", re.IGNORECASE
+)
 DISTRICT_COURT_DISTRICT_RE = re.compile(r"^(\d+)\w*$")
-BUSINESS_COURT_RE = re.compile(r"^Business\s+Court", re.IGNORECASE)
+NUMBERED_COURT_RE = re.compile(r"(?:no\.?|number)\s?(\d+)", re.IGNORECASE)
+
+
+def _clean_court_name(name: str) -> str:
+    """Takes in a trial court name from TAMES and normalizes it by:
+
+    - Combining repeated whitespace characters into a single space,
+    - Correcting misspellings,
+    - Standardizing name variants, and
+    - Expanding abbreviations.
+
+    This dramatically reduces the number of variations that have to be handled
+    when attempting to determine the court type later on. In experimentation,
+    this method reduced the number of unique court names in TAMES from 1,123 to
+    810.
+
+    :param name: The court name from TAMES.
+    :return: The normalized court name.
+    """
+    name = (
+        SPACES_RE.sub(" ", name.replace(",", "").replace("#", " "))
+        .lower()
+        .strip()
+    )
+    # Terminate early if the name was only whitespace
+    if not name:
+        return name
+    # Typos
+    name = (
+        name.replace("distrct", "district")
+        .replace("judical", "judicial")
+        .replace("distric ", "district ")
+        .replace("disrict", "district")
+        .replace("cpurt", "court")
+    )
+    name = NUMBERED_COURT_RE.sub(r"\1", name)
+    # Abbreviations
+    name = re.compile(r"(^|\s)jp($|\s)").sub(r"\1justice of the peace\2", name)
+    name = re.compile(r"(^|\s)co\.?($|\s)").sub(r"\1county\2", name)
+    name = re.compile(r"(^|\s)pr?ct\.?($|\s)").sub(r"\1precinct\2", name)
+    name = re.compile(r"(^|\s)ct\.?($|\s)").sub(r"\1court\2", name)
+    name = re.compile(r"(^|\s)crim\.?($|\s)").sub(r"\1criminal\2", name)
+    name = re.compile(r"(^|\s)dist\.?($|\s)").sub(r"\1district\2", name)
+
+    name = DISTRICT_COURT_RE.sub(r"\1 district court", name)
+
+    name = name.replace("1-a", "1a")
+
+    return name
 
 
 def _originating_court_name_to_type(name: str) -> CourtType:
@@ -264,36 +319,45 @@ def _originating_court_name_to_type(name: str) -> CourtType:
 
     :param name: The trial court name from TAMES.
     :return: The type of the originating court."""
-    name = name.lower().strip()
+    name = _clean_court_name(name)
     if not name:
         return CourtType.UNKNOWN
-    # District courts
-    district_court_match = DISTRICT_COURT_RE.match(name)
-    if district_court_match is not None:
+    if DISTRICT_COURT_RE.match(name):
         return CourtType.DISTRICT
-
-    # Business court
-    business_court_match = BUSINESS_COURT_RE.match(name)
-    if business_court_match is not None:
+    if BUSINESS_COURT_RE.match(name):
         return CourtType.BUSINESS
-
-    # Probate courts
+    if APPELLATE_COURT_RE.match(name):
+        return CourtType.APPELLATE
+    if "county" in name:
+        return CourtType.COUNTY
     if "probate" in name:
         return CourtType.PROBATE
-
-    # Unknown
-    if "unknown court" in name:
+    if "justice" in name or "jp" in name:
+        return CourtType.JUSTICE
+    if "municipal" in name:
+        return CourtType.MUNICIPAL
+    if "dummy" in name or "unknown" in name:
         return CourtType.UNKNOWN
-
-    # County courts
-    if name.find("municipal") < 0:
-        return CourtType.COUNTY
-
-    # Assume anything left is a municipal court
-    return CourtType.MUNICIPAL
+    # Special cases :)
+    if name == "district court":
+        # Thank you, Harris County!
+        return CourtType.DISTRICT
+    if name == "274th/421st district court":
+        # All of these have trial court county set to Caldwell, which is in the jurisdiction of both the 274th and 421st district courts
+        return CourtType.DISTRICT
+    if name == "436th juvenile district court":
+        return CourtType.DISTRICT
+    if name == "437th criminal district court":
+        return CourtType.DISTRICT
+    if name == "100 n closner blvd 3rd fl":
+        # Thank you, Hidalgo County!
+        return CourtType.DISTRICT
+    # Everything left over should be a county-level court
+    return CourtType.COUNTY
 
 
 def district_court_number_from_name(name: str) -> int:
+    # TODO Handle edge-cases
     district_court_match = DISTRICT_COURT_RE.match(name)
     district = district_court_match.group(1)
     if district == "1-a" or district == "1a":
