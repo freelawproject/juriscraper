@@ -126,7 +126,7 @@ class Site(OpinionSiteLinear):
             return {"Docket": dockets.groupdict()}
         return {}
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -134,7 +134,7 @@ class Site(OpinionSiteLinear):
         """
         logger.info("Backscraping for range %s %s", *dates)
         self._set_parameters(*dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     @staticmethod
