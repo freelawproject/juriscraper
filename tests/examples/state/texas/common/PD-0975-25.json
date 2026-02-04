@@ -57,8 +57,19 @@
   "case_name_full": "VANZANDT, SCOTT EDWARD",
   "case_type": "PDR Case Type",
   "court_id": "texas_unknown",
+  "court_type": "texas_unknown",
   "date_filed": "2025-12-01",
   "docket_number": "PD-0975-25",
+  "originating_court": {
+    "case": "2020-953-C1",
+    "county": "McLennan",
+    "court_type": "texas_district",
+    "district": 19,
+    "judge": "",
+    "name": "19th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "VANZANDT, SCOTT EDWARD",
@@ -67,13 +78,5 @@
       ],
       "type": "Appellant"
     }
-  ],
-  "trial_court": {
-    "case": "2020-953-C1",
-    "county": "McLennan",
-    "judge": "",
-    "name": "19th District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }

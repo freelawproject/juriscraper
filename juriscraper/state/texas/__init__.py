@@ -5,7 +5,9 @@ from .common import (
     TexasCaseParty,
     TexasCommonData,
     TexasDocketEntry,
-    TexasTrialCourt,
+    TexasOriginatingAppellateCourt,
+    TexasOriginatingCourt,
+    TexasOriginatingDistrictCourt,
 )
 from .court_of_appeals import TexasCourtOfAppealsScraper
 from .court_of_criminal_appeals import (
@@ -23,7 +25,9 @@ from .tames import ALL_COURTS, TAMESScraper
 __all__ = [
     "TexasAppealsCourt",
     "TexasCaseParty",
-    "TexasTrialCourt",
+    "TexasOriginatingCourt",
+    "TexasOriginatingAppellateCourt",
+    "TexasOriginatingDistrictCourt",
     "TexasCaseDocument",
     "TexasDocketEntry",
     "TexasCaseEvent",
