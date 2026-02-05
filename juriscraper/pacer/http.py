@@ -11,16 +11,21 @@ import base64
 import gzip
 import json
 import re
-import time
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
 
+# nest_asyncio for prototype in notebook - can take away in prod
+import nest_asyncio
 import requests
+from playwright.async_api import (
+    BrowserContext,
+    Page,
+    async_playwright,
+)
+from playwright.async_api import TimeoutError as PlaywrightTimeout
 from requests.packages.urllib3 import exceptions
-
-
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
@@ -29,18 +34,8 @@ from juriscraper.lib.html_utils import (
     strip_bad_html_tags_insecure,
 )
 from juriscraper.lib.log_tools import make_default_logger
-
 from juriscraper.pacer.utils import is_pdf, is_text
 
-from playwright.async_api import (
-    async_playwright,
-    Page,
-    Browser,
-    BrowserContext,
-    TimeoutError as PlaywrightTimeout
-)
-#nest_asyncio for prototype in notebook - can take away in prod
-import nest_asyncio
 nest_asyncio.apply()
 
 logger = make_default_logger()
@@ -57,6 +52,7 @@ ACMS_URL_PATTERN = re.compile(
 # ============================================================================
 # Utility Functions
 # ============================================================================
+
 
 def check_if_logged_in_page(content: bytes) -> bool:
     """Is this a valid HTML page from PACER?
@@ -123,6 +119,7 @@ def check_if_logged_in_page(content: bytes) -> bool:
         ]
     )
 
+
 ### THE JWT Code/ACMS Token classes can be taken away; they are included here because I was trying to replicate the token-based auth flow, but instead have to use cookies. Maybe JWT will be helpful for sometime in the future.
 def decode_jwt_payload(token: str) -> dict:
     """Decode JWT payload without signature verification."""
@@ -152,9 +149,11 @@ def get_showdoc_url(court_id: str, case_number: Optional[str] = None) -> str:
 # Data Classes
 # ============================================================================
 
+
 @dataclass
 class ACMSCookies:
     """SAML session cookies from ACMS authentication."""
+
     cookies: list[dict]  # List of cookie dicts from Playwright
     court_id: str
     created_at: datetime = field(default_factory=datetime.utcnow)
@@ -164,11 +163,11 @@ class ACMSCookies:
         jar = requests.cookies.RequestsCookieJar()
         for cookie in self.cookies:
             jar.set(
-                cookie['name'],
-                cookie['value'],
-                domain=cookie.get('domain', ''),
-                path=cookie.get('path', '/'),
-                secure=cookie.get('secure', False),
+                cookie["name"],
+                cookie["value"],
+                domain=cookie.get("domain", ""),
+                path=cookie.get("path", "/"),
+                secure=cookie.get("secure", False),
             )
         return jar
 
@@ -176,8 +175,8 @@ class ACMSCookies:
         """Check if any session cookies have expired."""
         now = datetime.utcnow().timestamp()
         for cookie in self.cookies:
-            if '.AspNetCore.saml2' in cookie['name']:
-                expires = cookie.get('expires', -1)
+            if ".AspNetCore.saml2" in cookie["name"]:
+                expires = cookie.get("expires", -1)
                 if expires > 0 and expires < now:
                     return True
         return False
@@ -185,12 +184,12 @@ class ACMSCookies:
     def save(self, path: Path) -> None:
         """Save cookies to a JSON file."""
         data = {
-            'cookies': self.cookies,
-            'court_id': self.court_id,
-            'created_at': self.created_at.isoformat(),
+            "cookies": self.cookies,
+            "court_id": self.court_id,
+            "created_at": self.created_at.isoformat(),
         }
         path.parent.mkdir(parents=True, exist_ok=True)
-        with open(path, 'w') as f:
+        with open(path, "w") as f:
             json.dump(data, f, indent=2)
 
     @classmethod
@@ -202,9 +201,9 @@ class ACMSCookies:
             with open(path) as f:
                 data = json.load(f)
             return cls(
-                cookies=data['cookies'],
-                court_id=data['court_id'],
-                created_at=datetime.fromisoformat(data['created_at']),
+                cookies=data["cookies"],
+                court_id=data["court_id"],
+                created_at=datetime.fromisoformat(data["created_at"]),
             )
         except (json.JSONDecodeError, KeyError):
             return None
@@ -213,6 +212,7 @@ class ACMSCookies:
 @dataclass
 class ACMSToken:
     """ACMS authentication token with metadata."""
+
     token: str
     cso_id: str
     login_id: str
@@ -229,7 +229,9 @@ class ACMSToken:
 
         # Calculate expiry from JWT exp claim
         exp_timestamp = claims.get("exp")
-        expires_at = datetime.fromtimestamp(exp_timestamp) if exp_timestamp else None
+        expires_at = (
+            datetime.fromtimestamp(exp_timestamp) if exp_timestamp else None
+        )
 
         return cls(
             token=token,
@@ -237,14 +239,16 @@ class ACMSToken:
             login_id=show_doc_claims.get("LoginId", ""),
             exempt_flag=show_doc_claims.get("exemptFlag", False),
             user_ip_address=show_doc_claims.get("UserIPAddress", ""),
-            expires_at=expires_at
+            expires_at=expires_at,
         )
 
     def is_expired(self, buffer_minutes: int = 5) -> bool:
         """Check if token is expired or about to expire."""
         if not self.expires_at:
             return False
-        return datetime.utcnow() >= (self.expires_at - timedelta(minutes=buffer_minutes))
+        return datetime.utcnow() >= (
+            self.expires_at - timedelta(minutes=buffer_minutes)
+        )
 
     def to_juriscraper_format(self) -> tuple[dict, dict]:
         """
@@ -264,6 +268,7 @@ class ACMSToken:
 @dataclass
 class ACMSAuthResult:
     """Complete authentication result with both token and cookies."""
+
     token: ACMSToken
     cookies: ACMSCookies
 
@@ -271,6 +276,7 @@ class ACMSAuthResult:
 # ============================================================================
 # ACMS Authenticator (Async Playwright)
 # ============================================================================
+
 
 class ACMSAuthenticator:
     """
@@ -304,7 +310,7 @@ class ACMSAuthenticator:
         username: str,
         password: str,
         cache_dir: Optional[Path] = None,
-        headless: bool = True
+        headless: bool = True,
     ):
         """
         Initialize the authenticator.
@@ -354,10 +360,7 @@ class ACMSAuthenticator:
     # -------------------------------------------------------------------------
 
     def authenticate(
-        self,
-        court_id: str,
-        force_refresh: bool = False,
-        timeout: int = 60000
+        self, court_id: str, force_refresh: bool = False, timeout: int = 60000
     ) -> ACMSToken:
         """
         Authenticate to ACMS and return the token.
@@ -373,7 +376,9 @@ class ACMSAuthenticator:
             ACMSToken containing the authentication token and user data
         """
         if court_id not in self.SUPPORTED_COURTS:
-            raise ValueError(f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}")
+            raise ValueError(
+                f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}"
+            )
 
         # Check memory cache first
         if not force_refresh and court_id in self._tokens:
@@ -392,10 +397,7 @@ class ACMSAuthenticator:
         return result.token
 
     def authenticate_full(
-        self,
-        court_id: str,
-        force_refresh: bool = False,
-        timeout: int = 60000
+        self, court_id: str, force_refresh: bool = False, timeout: int = 60000
     ) -> ACMSAuthResult:
         """
         Authenticate and return both token and cookies.
@@ -412,10 +414,16 @@ class ACMSAuthenticator:
             ACMSAuthResult containing both ACMSToken and ACMSCookies
         """
         if court_id not in self.SUPPORTED_COURTS:
-            raise ValueError(f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}")
+            raise ValueError(
+                f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}"
+            )
 
         # Check memory cache
-        if not force_refresh and court_id in self._tokens and court_id in self._cookies:
+        if (
+            not force_refresh
+            and court_id in self._tokens
+            and court_id in self._cookies
+        ):
             token = self._tokens[court_id]
             cookies = self._cookies[court_id]
             if not token.is_expired() and not cookies.is_expired():
@@ -423,7 +431,9 @@ class ACMSAuthenticator:
 
         # Check disk cache for cookies
         if not force_refresh:
-            cached_cookies = ACMSCookies.load(self._get_cookie_cache_path(court_id))
+            cached_cookies = ACMSCookies.load(
+                self._get_cookie_cache_path(court_id)
+            )
             if cached_cookies and not cached_cookies.is_expired():
                 # We have valid cookies - could try to get token via cookies
                 # For now, just do full auth - can optimize later
@@ -464,7 +474,9 @@ class ACMSAuthenticator:
         token = self.authenticate(court_id)
         return token.token
 
-    def _authenticate_browser(self, court_id: str, timeout: int) -> ACMSAuthResult:
+    def _authenticate_browser(
+        self, court_id: str, timeout: int
+    ) -> ACMSAuthResult:
         """Perform browser-based authentication (sync wrapper for async method)."""
         logger.info(f"[ACMS] Starting browser authentication for {court_id}")
         return asyncio.get_event_loop().run_until_complete(
@@ -476,10 +488,7 @@ class ACMSAuthenticator:
     # -------------------------------------------------------------------------
 
     async def authenticate_async(
-        self,
-        court_id: str,
-        force_refresh: bool = False,
-        timeout: int = 60000
+        self, court_id: str, force_refresh: bool = False, timeout: int = 60000
     ) -> ACMSToken:
         """
         Authenticate to ACMS asynchronously and return the token.
@@ -493,7 +502,9 @@ class ACMSAuthenticator:
             ACMSToken containing the authentication token and user data
         """
         if court_id not in self.SUPPORTED_COURTS:
-            raise ValueError(f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}")
+            raise ValueError(
+                f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}"
+            )
 
         # Check memory cache first
         if not force_refresh and court_id in self._tokens:
@@ -512,10 +523,7 @@ class ACMSAuthenticator:
         return result.token
 
     async def authenticate_full_async(
-        self,
-        court_id: str,
-        force_refresh: bool = False,
-        timeout: int = 60000
+        self, court_id: str, force_refresh: bool = False, timeout: int = 60000
     ) -> ACMSAuthResult:
         """
         Authenticate asynchronously and return both token and cookies.
@@ -529,10 +537,16 @@ class ACMSAuthenticator:
             ACMSAuthResult containing both ACMSToken and ACMSCookies
         """
         if court_id not in self.SUPPORTED_COURTS:
-            raise ValueError(f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}")
+            raise ValueError(
+                f"Unsupported court: {court_id}. Supported: {self.SUPPORTED_COURTS}"
+            )
 
         # Check memory cache
-        if not force_refresh and court_id in self._tokens and court_id in self._cookies:
+        if (
+            not force_refresh
+            and court_id in self._tokens
+            and court_id in self._cookies
+        ):
             token = self._tokens[court_id]
             cookies = self._cookies[court_id]
             if not token.is_expired() and not cookies.is_expired():
@@ -540,7 +554,9 @@ class ACMSAuthenticator:
 
         # Check disk cache for cookies
         if not force_refresh:
-            cached_cookies = ACMSCookies.load(self._get_cookie_cache_path(court_id))
+            cached_cookies = ACMSCookies.load(
+                self._get_cookie_cache_path(court_id)
+            )
             if cached_cookies and not cached_cookies.is_expired():
                 pass  # Could optimize here
 
@@ -553,7 +569,9 @@ class ACMSAuthenticator:
 
         return result
 
-    async def _authenticate_browser_async(self, court_id: str, timeout: int) -> ACMSAuthResult:
+    async def _authenticate_browser_async(
+        self, court_id: str, timeout: int
+    ) -> ACMSAuthResult:
         """
         Perform browser-based authentication using async Playwright.
 
@@ -561,7 +579,9 @@ class ACMSAuthenticator:
             ACMSAuthResult containing both the token and cookies
         """
         url = self._get_docket_sheet_url(court_id) + self.DEFAULT_CASE
-        logger.info(f"[ACMS] Step 1: Launching Playwright browser (headless={self.headless})")
+        logger.info(
+            f"[ACMS] Step 1: Launching Playwright browser (headless={self.headless})"
+        )
 
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=self.headless)
@@ -573,47 +593,71 @@ class ACMSAuthenticator:
             try:
                 # Navigate to trigger SAML flow
                 await page.goto(url, wait_until="networkidle", timeout=timeout)
-                logger.info(f"[ACMS] Step 4: Page loaded, current URL: {page.url}")
+                logger.info(
+                    f"[ACMS] Step 4: Page loaded, current URL: {page.url}"
+                )
 
                 # Wait for login page
                 logger.info("[ACMS] Step 5: Waiting for login page...")
                 if not await self._wait_for_login_page_async(page, timeout):
-                    logger.info("[ACMS] Login page not found, checking if already authenticated...")
+                    logger.info(
+                        "[ACMS] Login page not found, checking if already authenticated..."
+                    )
                     # Check if already authenticated
                     token = await self._try_extract_token_async(page)
                     if token:
                         logger.info("[ACMS] Found existing session token!")
-                        cookies = await self._extract_cookies_async(context, court_id)
+                        cookies = await self._extract_cookies_async(
+                            context, court_id
+                        )
                         return ACMSAuthResult(token=token, cookies=cookies)
-                    raise RuntimeError("Login page did not appear and no existing session found")
+                    raise RuntimeError(
+                        "Login page did not appear and no existing session found"
+                    )
 
-                logger.info("[ACMS] Step 6: Login page found, filling credentials...")
+                logger.info(
+                    "[ACMS] Step 6: Login page found, filling credentials..."
+                )
                 # Fill and submit login
                 await self._fill_login_form_async(page)
-                logger.info("[ACMS] Step 7: Credentials filled, submitting login form...")
+                logger.info(
+                    "[ACMS] Step 7: Credentials filled, submitting login form..."
+                )
                 await self._submit_login_async(page)
 
                 # Handle redaction agreement if present
-                logger.info("[ACMS] Step 8: Waiting for post-login processing...")
+                logger.info(
+                    "[ACMS] Step 8: Waiting for post-login processing..."
+                )
                 await asyncio.sleep(2)  # Allow AJAX to process
-                logger.info("[ACMS] Step 9: Checking for redaction agreement dialog...")
+                logger.info(
+                    "[ACMS] Step 9: Checking for redaction agreement dialog..."
+                )
                 handled = await self._handle_redaction_agreement_async(page)
                 if handled:
                     logger.info("[ACMS] Redaction agreement accepted")
                 else:
-                    logger.info("[ACMS] No redaction agreement dialog found (OK)")
+                    logger.info(
+                        "[ACMS] No redaction agreement dialog found (OK)"
+                    )
 
                 # Wait for ACMS page with token
                 logger.info("[ACMS] Step 10: Waiting for page to stabilize...")
                 await page.wait_for_load_state("networkidle", timeout=timeout)
-                logger.info(f"[ACMS] Step 11: Current URL after login: {page.url}")
+                logger.info(
+                    f"[ACMS] Step 11: Current URL after login: {page.url}"
+                )
 
-                logger.info("[ACMS] Step 12: Waiting for ACMS token in page...")
+                logger.info(
+                    "[ACMS] Step 12: Waiting for ACMS token in page..."
+                )
                 if not await self._wait_for_token_async(page, timeout):
                     self.cache_dir.mkdir(parents=True, exist_ok=True)
                     screenshot_path = str(self.cache_dir / "auth_error.png")
                     await page.screenshot(path=screenshot_path)
-                    logger.error(f"[ACMS] FAILED: Token not found. Screenshot saved to {screenshot_path}")
+                    logger.error(
+                        f"[ACMS] FAILED: Token not found. Screenshot saved to {screenshot_path}"
+                    )
                     raise RuntimeError(
                         "Failed to complete authentication. "
                         f"Debug screenshot saved to {self.cache_dir / 'auth_error.png'}"
@@ -622,26 +666,33 @@ class ACMSAuthenticator:
                 logger.info("[ACMS] Step 13: Extracting token from page...")
                 token = await self._try_extract_token_async(page)
                 if not token:
-                    raise RuntimeError("Failed to extract token from authenticated page")
+                    raise RuntimeError(
+                        "Failed to extract token from authenticated page"
+                    )
 
                 # Extract cookies from context
-                logger.info("[ACMS] Step 14: Extracting cookies from browser context...")
+                logger.info(
+                    "[ACMS] Step 14: Extracting cookies from browser context..."
+                )
                 cookies = await self._extract_cookies_async(context, court_id)
 
-                logger.info(f"[ACMS] SUCCESS: Token obtained for {court_id} (expires: {token.expires_at})")
+                logger.info(
+                    f"[ACMS] SUCCESS: Token obtained for {court_id} (expires: {token.expires_at})"
+                )
                 return ACMSAuthResult(token=token, cookies=cookies)
 
             finally:
                 logger.info("[ACMS] Closing browser...")
                 await browser.close()
 
-    async def _extract_cookies_async(self, context: BrowserContext, court_id: str) -> ACMSCookies:
+    async def _extract_cookies_async(
+        self, context: BrowserContext, court_id: str
+    ) -> ACMSCookies:
         """Extract ACMS-related cookies from browser context."""
         all_cookies = await context.cookies()
         showdoc_domain = f"{court_id}-showdoc.azurewebsites.us"
         relevant_cookies = [
-            c for c in all_cookies
-            if showdoc_domain in c.get('domain', '')
+            c for c in all_cookies if showdoc_domain in c.get("domain", "")
         ]
 
         return ACMSCookies(
@@ -649,12 +700,13 @@ class ACMSAuthenticator:
             court_id=court_id,
         )
 
-    async def _wait_for_login_page_async(self, page: Page, timeout: int) -> bool:
+    async def _wait_for_login_page_async(
+        self, page: Page, timeout: int
+    ) -> bool:
         """Wait for PACER login page to appear."""
         try:
             await page.wait_for_selector(
-                'input[name="loginForm:loginName"]',
-                timeout=timeout
+                'input[name="loginForm:loginName"]', timeout=timeout
             )
             logger.debug("[ACMS] Login form selector found")
             return True
@@ -666,7 +718,9 @@ class ACMSAuthenticator:
         """Fill the PACER login form."""
         await page.fill('input[name="loginForm:loginName"]', self.username)
         await page.fill('input[name="loginForm:password"]', self.password)
-        logger.debug(f"[ACMS] Filled login form with username: {self.username[:3]}***")
+        logger.debug(
+            f"[ACMS] Filled login form with username: {self.username[:3]}***"
+        )
 
     async def _submit_login_async(self, page: Page) -> None:
         """Submit the login form."""
@@ -678,15 +732,19 @@ class ACMSAuthenticator:
         try:
             checkbox = await page.wait_for_selector(
                 'div[id="regmsg:redactionConfirmation"] input[type="checkbox"]',
-                timeout=5000
+                timeout=5000,
             )
             if checkbox:
                 await checkbox.click()
                 await page.click('button[id="regmsg:bpmConfirm"]')
-                logger.debug("[ACMS] Redaction agreement checkbox clicked and confirmed")
+                logger.debug(
+                    "[ACMS] Redaction agreement checkbox clicked and confirmed"
+                )
                 return True
         except PlaywrightTimeout:
-            logger.debug("[ACMS] No redaction agreement dialog (timeout - normal)")
+            logger.debug(
+                "[ACMS] No redaction agreement dialog (timeout - normal)"
+            )
             pass
         return False
 
@@ -696,19 +754,25 @@ class ACMSAuthenticator:
             # Wait for CM/ECF logo (indicates ACMS page)
             logger.debug("[ACMS] Waiting for CM/ECF logo...")
             await page.wait_for_selector('img[alt="CM/ECF"]', timeout=timeout)
-            logger.debug("[ACMS] CM/ECF logo found, waiting for authTokenResult in JS...")
+            logger.debug(
+                "[ACMS] CM/ECF logo found, waiting for authTokenResult in JS..."
+            )
             # Wait for token in JavaScript
             await page.wait_for_function(
                 "window.showDocViewModel && window.showDocViewModel.authTokenResult",
-                timeout=timeout
+                timeout=timeout,
             )
-            logger.debug("[ACMS] authTokenResult found in window.showDocViewModel")
+            logger.debug(
+                "[ACMS] authTokenResult found in window.showDocViewModel"
+            )
             return True
         except PlaywrightTimeout:
             logger.warning("[ACMS] Timeout waiting for token in page context")
             return False
 
-    async def _try_extract_token_async(self, page: Page) -> Optional[ACMSToken]:
+    async def _try_extract_token_async(
+        self, page: Page
+    ) -> Optional[ACMSToken]:
         """Extract token from page if available."""
         try:
             result = await page.evaluate("""
@@ -722,7 +786,9 @@ class ACMSAuthenticator:
 
             if result and result.get("token"):
                 token = ACMSToken.from_jwt(result["token"])
-                logger.debug(f"[ACMS] Token extracted: CSO ID={token.cso_id}, Login={token.login_id}")
+                logger.debug(
+                    f"[ACMS] Token extracted: CSO ID={token.cso_id}, Login={token.login_id}"
+                )
                 return token
             logger.debug("[ACMS] No token found in page evaluate result")
         except Exception as e:
@@ -734,6 +800,7 @@ class ACMSAuthenticator:
 # ============================================================================
 # PacerSession
 # ============================================================================
+
 
 class PacerSession(requests.Session):
     """
@@ -809,11 +876,15 @@ class PacerSession(requests.Session):
             cached_cookies = ACMSCookies.load(cookie_path)
 
             if cached_cookies and not cached_cookies.is_expired():
-                logger.info(f"[ACMS] Loaded cached cookies for {court_id} from disk")
+                logger.info(
+                    f"[ACMS] Loaded cached cookies for {court_id} from disk"
+                )
                 self.acms_cookies[court_id] = cached_cookies.cookies
 
                 # Try to get a fresh token using cached cookies
-                token = self._refresh_token_with_cookies(court_id, cached_cookies)
+                token = self._refresh_token_with_cookies(
+                    court_id, cached_cookies
+                )
                 if token:
                     token_dict, user_data = token.to_juriscraper_format()
                     self.acms_tokens[court_id] = token_dict
@@ -825,9 +896,13 @@ class PacerSession(requests.Session):
                     )
             else:
                 if cached_cookies:
-                    logger.debug(f"[ACMS] Cached cookies for {court_id} are expired")
+                    logger.debug(
+                        f"[ACMS] Cached cookies for {court_id} are expired"
+                    )
                 else:
-                    logger.debug(f"[ACMS] No cached cookies found for {court_id}")
+                    logger.debug(
+                        f"[ACMS] No cached cookies found for {court_id}"
+                    )
 
     def _check_url_and_retrieve_acms_token(self, url: str) -> str:
         """
@@ -866,7 +941,9 @@ class PacerSession(requests.Session):
         """
         self.acms_cookies[court_id] = cookies
 
-    def get_acms_cookies_jar(self, court_id: str) -> Optional[requests.cookies.RequestsCookieJar]:
+    def get_acms_cookies_jar(
+        self, court_id: str
+    ) -> Optional[requests.cookies.RequestsCookieJar]:
         """
         Get ACMS cookies for a court as a RequestsCookieJar.
 
@@ -879,11 +956,11 @@ class PacerSession(requests.Session):
         jar = requests.cookies.RequestsCookieJar()
         for cookie in self.acms_cookies[court_id]:
             jar.set(
-                cookie['name'],
-                cookie['value'],
-                domain=cookie.get('domain', ''),
-                path=cookie.get('path', '/'),
-                secure=cookie.get('secure', False),
+                cookie["name"],
+                cookie["value"],
+                domain=cookie.get("domain", ""),
+                path=cookie.get("path", "/"),
+                secure=cookie.get("secure", False),
             )
         return jar
 
@@ -1296,22 +1373,24 @@ class PacerSession(requests.Session):
         :return: ACMSAuthResult containing both the token and cookies.
         """
         if not self.username or not self.password:
-            raise ValueError("PacerSession must have username and password set for ACMS auth")
+            raise ValueError(
+                "PacerSession must have username and password set for ACMS auth"
+            )
 
-        auth = ACMSAuthenticator(
-            self.username,
-            self.password,
-            headless=True
-        )
+        auth = ACMSAuthenticator(self.username, self.password, headless=True)
 
         # Try to use cached cookies first (avoids browser launch)
         if not force_refresh:
             cached_cookies = auth.get_cached_cookies(court_id)
             if cached_cookies and not cached_cookies.is_expired():
-                logger.info(f"[ACMS] Found valid cached cookies for {court_id}, attempting token refresh...")
+                logger.info(
+                    f"[ACMS] Found valid cached cookies for {court_id}, attempting token refresh..."
+                )
 
                 # Try to get a fresh token using cached cookies
-                token = self._refresh_token_with_cookies(court_id, cached_cookies)
+                token = self._refresh_token_with_cookies(
+                    court_id, cached_cookies
+                )
                 if token:
                     token_dict, user_data = token.to_juriscraper_format()
                     self.acms_tokens[court_id] = token_dict
@@ -1325,7 +1404,9 @@ class PacerSession(requests.Session):
                     )
                     return ACMSAuthResult(token=token, cookies=cached_cookies)
                 else:
-                    logger.info("[ACMS] Cached cookies invalid, falling back to browser auth...")
+                    logger.info(
+                        "[ACMS] Cached cookies invalid, falling back to browser auth..."
+                    )
 
         # Full browser authentication
         result = auth.authenticate_full(court_id, force_refresh=force_refresh)
@@ -1378,18 +1459,18 @@ class PacerSession(requests.Session):
                 params=params,
                 headers=headers,
                 cookies=cookies.to_requests_cookies(),
-                timeout=30
+                timeout=30,
             )
 
             # Check if redirected to login (cookies expired)
-            if 'login.jsf' in response.url or 'loginForm' in response.text:
+            if "login.jsf" in response.url or "loginForm" in response.text:
                 return None
 
             # Extract token from JavaScript
             match = re.search(
-                r'window\.showDocViewModel\s*=\s*(\{.*?\});',
+                r"window\.showDocViewModel\s*=\s*(\{.*?\});",
                 response.text,
-                re.DOTALL
+                re.DOTALL,
             )
             if match:
                 view_model = json.loads(match.group(1))
@@ -1403,4 +1484,3 @@ class PacerSession(requests.Session):
         except Exception as e:
             logger.warning(f"[ACMS] Error refreshing token with cookies: {e}")
             return None
-

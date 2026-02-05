@@ -86,8 +86,9 @@ class ACMSDocketReport(AppellateDocketReport):
         :return: List of docket entry dicts with documents available.
         """
         return [
-            entry for entry in self.docket_entries
-            if entry.get('page_count', 0) > 0
+            entry
+            for entry in self.docket_entries
+            if entry.get("page_count", 0) > 0
         ]
 
     def get_entry_by_number(self, entry_number: int) -> Optional[dict]:
@@ -98,7 +99,7 @@ class ACMSDocketReport(AppellateDocketReport):
         :return: The docket entry dict, or None if not found.
         """
         for entry in self.docket_entries:
-            if entry.get('document_number') == entry_number:
+            if entry.get("document_number") == entry_number:
                 return entry
         return None
 
@@ -134,10 +135,16 @@ class ACMSDocketReport(AppellateDocketReport):
         if entry_number is not None:
             entry = self.get_entry_by_number(entry_number)
             if not entry:
-                return None, f"No docket entry found with number {entry_number}."
-            if entry.get('page_count', 0) == 0:
-                return None, f"Entry #{entry_number} has no downloadable documents (page_count=0)."
-            entry_id = entry.get('pacer_doc_id')
+                return (
+                    None,
+                    f"No docket entry found with number {entry_number}.",
+                )
+            if entry.get("page_count", 0) == 0:
+                return (
+                    None,
+                    f"Entry #{entry_number} has no downloadable documents (page_count=0).",
+                )
+            entry_id = entry.get("pacer_doc_id")
             if not entry_id:
                 return None, f"Entry #{entry_number} has no pacer_doc_id."
             logger.info(f"[ACMS] Resolved entry #{entry_number} -> {entry_id}")
@@ -451,8 +458,8 @@ class ACMSDocketReport(AppellateDocketReport):
         if not entries:
             return None
         return max(
-            (e['date_entered'] for e in entries if e.get('date_entered')),
-            default=None
+            (e["date_entered"] for e in entries if e.get("date_entered")),
+            default=None,
         )
 
     @property
