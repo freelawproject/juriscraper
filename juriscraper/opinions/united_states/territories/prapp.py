@@ -30,6 +30,7 @@ class Site(OpinionSiteLinear):
 
         self.url = self.base_url
         self.status = "Published"
+        self.request["verify"] = False
         self.make_backscrape_iterable(kwargs)
 
     def _download(self):
