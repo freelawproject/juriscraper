@@ -29,6 +29,7 @@ Fixes:
 - Fix incorrectly shortened case names in Texas Court of Criminal Appeals scraper
 - Revert Mass back to old for to collect PDF
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
+- Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
 -
 
 ## Current
