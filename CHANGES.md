@@ -99,6 +99,7 @@ Fixes:
 - fix `tenn` miss adding opinion types #1749
 - add ADDENDUM to OpinionType enum #1754
 - update `lactapp_1` parameters for 2026 #1734
+- fix `ala` by fetching detailed publication data from new API endpoint #1758
 
 **2.7.1 - 2025-01-07**
 
