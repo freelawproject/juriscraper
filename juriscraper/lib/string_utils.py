@@ -831,9 +831,6 @@ def clean_url(url: str) -> str:
     :return: The cleaned URL"""
     scheme, netloc, path, params, query, fragment = urlparse(url)
     query_dict = parse_qs(query)
-    query_dict_flat = {
-        k: v if type(v) is not list else ",".join(v)
-        for k, v in query_dict.items()
-    }
+    query_dict_flat = {k: ",".join(v) for k, v in query_dict.items()}
     clean_query = urlencode(query_dict_flat)
     return urlunparse((scheme, netloc, path, params, clean_query, fragment))
