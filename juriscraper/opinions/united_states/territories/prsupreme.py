@@ -12,6 +12,7 @@ from datetime import date, datetime
 from dateparser import parse
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -29,10 +30,12 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
-        # In 2023, the website changed from a horizontal table layout
-        # (one row per case, 6 TDs) to a vertical layout (6 rows per case,
-        # each with a label/value TD pair). We detect the format by counting
-        # sibling TDs: 5 siblings means old format, 0 means new format.
+        # The website has used 3 different HTML layouts over the years.
+        # We detect the format by counting sibling TDs of the TSPR link:
+        #   >=5 → middle format (2005-2022)
+        #   4   → oldest format (1998-2004)
+        #   0   → newest format (2023+)
+        #   1-3 → false positive (non-citation link containing "TSPR")
         cells_in_tr_xpath = (
             "ancestor::tr[1]/following-sibling::tr[position() <= 5]"
         )
@@ -41,16 +44,50 @@ class Site(OpinionSiteLinear):
         for link in self.html.xpath("//a[contains(string(.), 'TSPR')]"):
             url = link.xpath("@href")[0]
             citation = link.xpath("string(.)").strip()
+            sibling_td_count = len(link.xpath(cells_in_td_xpath))
 
-            if len(link.xpath(cells_in_td_xpath)) == 5:
-                # Old format (2022 and earlier): single row per case
+            if sibling_td_count >= 5:
+                # Middle format (2005-2022): single row per case
                 # TDs: [citation, materia, docket, name, date, ponente]
+                # >= 5 instead of == 5 because some rows on the source
+                # merge two cases into a single <tr> (e.g. 2013 TSPR 87)
                 cells = link.xpath(cells_in_td_xpath)
                 docket = cells[1].text_content().strip()
                 name = cells[2].text_content().strip()
                 date_str = cells[3].text_content().strip()
-            else:
-                # New format (2023+): vertical layout with labeled rows
+            elif sibling_td_count == 4:
+                # Oldest format (1998-2004): single row per case
+                # TDs: [citation, docket, name, day_or_date, type]
+                # The date column varies: sometimes just a day number
+                # (with month from a preceding <h3>), sometimes a
+                # day-month string like "21-Nov", "7/AGOSTO",
+                # "26 ABRIL", or even a full date
+                cells = link.xpath(cells_in_td_xpath)
+                docket = cells[0].text_content().strip()
+                name = cells[1].text_content().strip()
+                day_field = re.sub(
+                    r"\s+", " ", cells[2].text_content()
+                ).strip()
+                if day_field.isdigit():
+                    month_h3 = link.xpath(
+                        "ancestor::table[1]/preceding::h3[1]"
+                    )
+                    month_name = (
+                        month_h3[0].text_content().strip().lower()
+                        if month_h3
+                        else ""
+                    )
+                    date_str = f"{day_field} de {month_name} de {self.year}"
+                elif day_field:
+                    # Append the year if not already present, so
+                    # dateparser can resolve "21-Nov" → "21-Nov 2000"
+                    date_str = day_field
+                    if str(self.year) not in date_str:
+                        date_str = f"{date_str} {self.year}"
+                else:
+                    date_str = ""
+            elif sibling_td_count == 0:
+                # Newest format (2023+): vertical layout with labeled rows
                 # Rows: [Núm., Partes, Ponente, Fecha, Materia]
                 cells = link.xpath(cells_in_tr_xpath)
                 docket = cells[0].text_content().strip().split("\n")[1]
@@ -60,6 +97,11 @@ class Site(OpinionSiteLinear):
                     .split("\n")[1]
                 )
                 date_str = cells[3].xpath(".//td")[1].text_content().strip()
+            else:
+                # 1-3 siblings: false positive match — a link in a
+                # non-citation column whose text happens to contain
+                # "TSPR" (e.g. case name "ADOPCION CITA TSPR Y PRSC")
+                continue
 
             # "1ro" is Spanish for "primero" (first day of month),
             # which dateparser doesn't recognize
@@ -86,7 +128,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(
                 {
-                    "name": name,
+                    "name": titlecase(name),
                     "url": url,
                     "citation": citation.strip(),
                     "docket": docket,
@@ -108,6 +150,7 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = range(start_date.year, end_date.year + 1)
 
     def _download_backwards(self, year):
+        self.year = year
         self.url = f"{self.base_url}-{year}/"
         self.html = self._download()
         self._process_html()
