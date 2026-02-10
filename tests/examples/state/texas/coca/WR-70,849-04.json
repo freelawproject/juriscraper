@@ -1,0 +1,69 @@
+{
+  "appeals_court": {
+    "case_number": "",
+    "case_url": "",
+    "court_id": "texas_unknown",
+    "disposition": "",
+    "district": "",
+    "justice": "",
+    "opinion_cite": ""
+  },
+  "appellate_briefs": [],
+  "case_events": [
+    {
+      "attachments": [],
+      "date": "2025-12-17",
+      "disposition": "",
+      "type": "ADDRESS VERIFICATION-CLERK'S OFFICE"
+    },
+    {
+      "attachments": [
+        {
+          "description": "RECORD",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=4fa4f484-421d-4b8a-9918-78a39193a7bd&coa=coscca&DT=RECORD&MediaID=f283f65d-0da6-4792-b0a0-58b800c0b1fd",
+          "file_size_bytes": 84000,
+          "file_size_str": "84 KB",
+          "media_id": "f283f65d-0da6-4792-b0a0-58b800c0b1fd",
+          "media_version_id": "4fa4f484-421d-4b8a-9918-78a39193a7bd"
+        },
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=d8a41866-8e42-4c54-9838-b6728b571086&coa=coscca&DT=WRIT RECEIVED&MediaID=17c8575e-9a81-41e7-bea0-f78c47295a91",
+          "file_size_bytes": 97000,
+          "file_size_str": "97 KB",
+          "media_id": "17c8575e-9a81-41e7-bea0-f78c47295a91",
+          "media_version_id": "d8a41866-8e42-4c54-9838-b6728b571086"
+        }
+      ],
+      "date": "2025-12-05",
+      "disposition": "",
+      "type": "WRIT RECEIVED"
+    }
+  ],
+  "case_name": "MARTINEZ, FRANCISCO C. v. The State of Texas",
+  "case_name_full": "MARTINEZ, FRANCISCO C.",
+  "case_type": "Original Writ of Mandamus",
+  "court_id": "texas_coscca",
+  "court_type": "texas_final",
+  "date_filed": "2025-12-05",
+  "docket_number": "WR-70,849-04",
+  "originating_court": {
+    "case": "F02-72304-UM",
+    "county": "Dallas",
+    "court_type": "texas_district",
+    "district": 194,
+    "judge": "",
+    "name": "194th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
+  "parties": [
+    {
+      "name": "MARTINEZ, FRANCISCO C.",
+      "representatives": [
+        ""
+      ],
+      "type": "Applicant"
+    }
+  ]
+}

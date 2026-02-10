@@ -1,3 +1,7 @@
+from typing import Optional
+
+from dateutil import parser
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.utils import (
@@ -48,15 +52,17 @@ class ClusterSite(OpinionSiteLinear):
         "parallel_citation": "parallel_citations",
         "summary": "summaries",
         "child_courts": "child_courts",
-        "lower_court": "lower_courts",
-        "lower_court_id": "lower_court_ids",
-        "lower_court_judge": "lower_court_judges",
-        "lower_court_number": "lower_court_numbers",
         "disposition": "dispositions",
         "nature_of_suit": "nature_of_suit",
         "other_date": "other_dates",
         "attorney": "attorneys",
         "headnote": "headnotes",
+        # lower court info
+        "lower_court": "lower_courts",
+        "lower_court_id": "lower_court_ids",
+        "lower_court_judge": "lower_court_judges",
+        "lower_court_number": "lower_court_numbers",
+        "court_reporter": "court_reporter",
         # special field to hold the opinion list
         "sub_opinions": "sub_opinions",
         # opinion fields
@@ -78,6 +84,9 @@ class ClusterSite(OpinionSiteLinear):
         self.all_attributes = self._all_attrs
         # doing this will help us re-use `AbstractSite.parse``
         self._all_attrs = []
+
+        # if set,  allow clustering when dates are not exactly the same
+        self.cluster_by_date_max_days = 0
 
     def __iter__(self):
         yield from self.cases
@@ -105,7 +114,7 @@ class ClusterSite(OpinionSiteLinear):
         if self.short_to_full_attribute_name.get(name):
             return self.short_to_full_attribute_name[name]
 
-        raise ValueError("")
+        raise ValueError(f"Invalid normalized name '{name}'")
 
     def _clean_attributes(self):
         """Perform name normalization and standard attribute cleaning.
@@ -226,3 +235,85 @@ class ClusterSite(OpinionSiteLinear):
         logger.info(
             f"{self.court_id}: Successfully found {len(self.cases)} items."
         )
+
+    def validate_cluster_dates(
+        self, datestring1: str, datestring2: str
+    ) -> bool:
+        """Check that 2 dates are close enough to cluster the opinions
+
+        By default, it will check that the date strings are exactly the same
+
+        If the instance attribute `cluster_by_date_max_days` is set to a value
+        different from 0, it will try to parse the dates and check if the dates
+        are close enough
+
+        :param datestring1: a date string
+        :param datestring2: another date strin
+        :return: True if the datestrigs or their dates are close enough
+        """
+        if self.cluster_by_date_max_days:
+            dt1 = parser.parse(datestring1)
+            dt2 = parser.parse(datestring2)
+            return abs((dt1 - dt2).days) < self.cluster_by_date_max_days
+        else:
+            return datestring1 == datestring2
+
+    def cluster_opinions(
+        self, case_dict: dict, possible_clusters: list[dict]
+    ) -> Optional[dict]:
+        """Try to cluster current opinion with previous opinions.
+        To cluster, opinions should have the same
+        - date
+        - case name
+        - docket number
+
+        The caller should take care to propagate any metadata from the
+        `case_dict` to the cluster proper
+
+        :param case_dict: the case dict we will atempt to merge into any of the
+            possible clusters
+        :param possible_clusters: the existing clusters we will try to compare
+
+        :return: None if we couldn't find a cluster
+            the cluster dict if the current case dict was clustered
+        """
+        if not possible_clusters:
+            return
+
+        opinion_fields = ["type", "url", "per_curiam", "author", "joined_by"]
+
+        for candidate_cluster in possible_clusters:
+            # all of these should be the same for this to be considered a cluster
+            if (
+                case_dict["name"] != candidate_cluster["name"]
+                or case_dict["docket"] != candidate_cluster["docket"]
+                or not self.validate_cluster_dates(
+                    case_dict["date"], candidate_cluster["date"]
+                )
+            ):
+                continue
+
+            # if the sub_opinions list does not exist yet, build it from the
+            # existing candidate_cluster
+            sub_opinions = candidate_cluster.get("sub_opinions")
+            if not sub_opinions:
+                candidate_cluster["sub_opinions"] = [
+                    {
+                        key: candidate_cluster.pop(key)
+                        for key in opinion_fields
+                        if key in candidate_cluster
+                    }
+                ]
+
+            # add the new opinion to the cluster
+            candidate_cluster["sub_opinions"].append(
+                {
+                    key: case_dict.pop(key)
+                    for key in opinion_fields
+                    if key in case_dict
+                }
+            )
+
+            return candidate_cluster
+
+        return
