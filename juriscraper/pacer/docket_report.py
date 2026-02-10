@@ -1430,7 +1430,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._is_adversary_proceeding = adversary_proceeding
         return adversary_proceeding
 
-    def query(
+    async def query(
         self,
         pacer_case_id,
         date_range_type="Filed",
@@ -1543,7 +1543,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             % (pacer_case_id, query_params)
         )
 
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?1-L_1_0-1", data=query_params
         )
         self.parse()
