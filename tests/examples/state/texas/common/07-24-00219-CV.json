@@ -612,8 +612,19 @@
   "case_name_full": "Joel Hart, Advance Power LLC, and Hydro-Star Energy LLC v. Curt Besselman",
   "case_type": "Miscellaneous/other civil",
   "court_id": "texas_unknown",
+  "court_type": "texas_unknown",
   "date_filed": "2024-06-26",
   "docket_number": "07-24-00219-CV",
+  "originating_court": {
+    "case": "110942-A-CV",
+    "county": "Potter",
+    "court_type": "texas_district",
+    "district": 47,
+    "judge": "Honorable Dee Johnson",
+    "name": "47th District Court",
+    "punishment": "",
+    "reporter": "Holly Craven"
+  },
   "parties": [
     {
       "name": "Advance Power LLC",
@@ -646,13 +657,5 @@
       ],
       "type": "Appellant"
     }
-  ],
-  "trial_court": {
-    "case": "110942-A-CV",
-    "county": "Potter",
-    "judge": "Honorable Dee Johnson",
-    "name": "47th District Court",
-    "punishment": "",
-    "reporter": "Holly Craven"
-  }
+  ]
 }

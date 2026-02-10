@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "",
     "case_url": "",
+    "court_id": "texas_unknown",
     "disposition": "",
     "district": "",
     "justice": "",
@@ -30,8 +31,18 @@
   "case_name_full": "STATE OF TEXAS v. HON. RAYMOND GERHARDT",
   "case_type": "MISC PETITION",
   "court_id": "texas_cossup",
+  "court_type": "texas_final",
   "date_filed": "1953-10-02",
   "docket_number": "A-4369-A",
+  "originating_court": {
+    "case": "",
+    "county": "",
+    "court_type": "texas_unknown",
+    "judge": "",
+    "name": "",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "State of Texas, et al.",
@@ -47,13 +58,5 @@
       ],
       "type": "Respondent"
     }
-  ],
-  "trial_court": {
-    "case": "",
-    "county": "",
-    "judge": "",
-    "name": "",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }

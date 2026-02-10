@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "",
     "case_url": "",
+    "court_id": "texas_unknown",
     "disposition": "",
     "district": "",
     "justice": "",
@@ -259,8 +260,19 @@
   "case_name_full": "DAVIS, XAVIER",
   "case_type": "Appeal Case Type",
   "court_id": "texas_coscca",
+  "court_type": "texas_final",
   "date_filed": "2025-05-14",
   "docket_number": "AP-77,129",
+  "originating_court": {
+    "case": "183955001010",
+    "county": "Harris",
+    "court_type": "texas_district",
+    "district": 209,
+    "judge": "",
+    "name": "209th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "DAVIS, XAVIER",
@@ -269,13 +281,5 @@
       ],
       "type": "Appellant"
     }
-  ],
-  "trial_court": {
-    "case": "183955001010",
-    "county": "Harris",
-    "judge": "",
-    "name": "209th District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }

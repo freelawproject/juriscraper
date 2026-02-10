@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
-from typing import TypedDict
+from typing import Optional, TypedDict, Union
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -22,6 +22,20 @@ from juriscraper.lib.string_utils import (
     harmonize,
     size_string_to_bytes,
 )
+
+
+class CourtType(Enum):
+    """Standardized IDs for Texas court types."""
+
+    SUPREME = "texas_final"
+    APPELLATE = "texas_appellate"
+    DISTRICT = "texas_district"
+    PROBATE = "texas_probate"
+    BUSINESS = "texas_business"
+    COUNTY = "texas_county"
+    MUNICIPAL = "texas_municipal"
+    JUSTICE = "texas_justice"
+    UNKNOWN = "texas_unknown"
 
 
 class CourtID(Enum):
@@ -94,8 +108,10 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
 
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
-    ordinal = coa_name.split()[0]
-    return COA_ORDINAL_MAP.get(ordinal.lower(), CourtID.UNKNOWN)
+    coa_name_parts = coa_name.split()
+    if not coa_name_parts:
+        return CourtID.UNKNOWN
+    return COA_ORDINAL_MAP.get(coa_name_parts[0].lower(), CourtID.UNKNOWN)
 
 
 class TexasAppealsCourt(TypedDict):
@@ -115,6 +131,7 @@ class TexasAppealsCourt(TypedDict):
     disposition: str
     opinion_cite: str
     district: str
+    court_id: str
     justice: str
 
 
@@ -148,12 +165,14 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     case_url_node = case_info["COA Case"].find(".//a")
     if case_url_node is None:
         case_url_node = {}
+    district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
         case_url=case_url_node.get("href", ""),
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
-        district=clean_string(case_info["COA District"].text_content()),
+        district=district,
+        court_id=coa_name_to_court_id(district).value,
         justice=clean_string(
             justice_node.text_content() if justice_node is not None else ""
         ),
@@ -177,18 +196,20 @@ class TexasCaseParty(TypedDict):
     representatives: list[str]
 
 
-class TexasTrialCourt(TypedDict):
+class TexasOriginatingCourt(TypedDict):
     """
-    Schema for Texas Trial Court details.
+    Schema for Texas Originating Court details.
 
-    This class is a `TypedDict` that defines the schema for representing a
-    Texas Trial Court. It is used as a utility for safety and type hints.
+    This class is a `TypedDict` that defines the schema for representing the
+    original court to hear a case. This is typically a trial court, but in some
+    cases is an appellate or even last resort court.
 
     The `judge`, `reporter`, and `punishment` attributes may be empty (most
     often the `punishment` field will be empty in civil cases), and it is up to
     the consumer to handle those cases.
 
     :ivar name: The name of the court.
+    :ivar court_type: The type of the court.
     :ivar county: The county where the court is located.
     :ivar judge: The name of the presiding judge in the court.
     :ivar case: Specific case identification or name handled by this court.
@@ -198,11 +219,150 @@ class TexasTrialCourt(TypedDict):
     """
 
     name: str
+    court_type: str
     county: str
     judge: str
     case: str
     reporter: str
     punishment: str
+
+
+class TexasOriginatingAppellateCourt(TexasOriginatingCourt):
+    """
+    Schema for Texas Originating Court details when that court is an appellate
+    court.
+
+    Includes the court ID for convenience.
+
+    :ivar court_id: The ID of the appellate court.
+    """
+
+    court_id: str
+
+
+class TexasOriginatingDistrictCourt(TexasOriginatingCourt):
+    """
+    Schema for Texas Originating Court details when that court is a district
+    court.
+
+    :ivar district: The district where the court is located. Will be `None` if
+    the district could not be determined.
+    """
+
+    district: Optional[int]
+
+
+SPACES_RE = re.compile(r"\s+")
+DISTRICT_COURT_RE = re.compile(
+    r"^(?:2nd\s|b-)?(\d{1,3}(?:\w{2})?|1-?A)\s?(?:Judicial)?(?:\sDistrict)?(?:\sCourt)?$",
+    re.IGNORECASE,
+)
+BUSINESS_COURT_RE = re.compile(r"^Business\sCourt", re.IGNORECASE)
+APPELLATE_COURT_RE = re.compile(
+    r"\d{1,3}\w{2} Court of Appeals", re.IGNORECASE
+)
+DISTRICT_COURT_DISTRICT_RE = re.compile(r"^(\d+)\w*$")
+NUMBERED_COURT_RE = re.compile(r"(?:no\.?|number)\s?(\d+)", re.IGNORECASE)
+
+
+def _clean_court_name(name: str) -> str:
+    """Takes in a trial court name from TAMES and normalizes it by:
+
+    - Combining repeated whitespace characters into a single space,
+    - Correcting misspellings,
+    - Standardizing name variants, and
+    - Expanding abbreviations.
+
+    This dramatically reduces the number of variations that have to be handled
+    when attempting to determine the court type later on. In experimentation,
+    this method reduced the number of unique court names in TAMES from 1,123 to
+    810.
+
+    :param name: The court name from TAMES.
+    :return: The normalized court name.
+    """
+    name = (
+        SPACES_RE.sub(" ", name.replace(",", "").replace("#", " "))
+        .lower()
+        .strip()
+    )
+    # Terminate early if the name was only whitespace
+    if not name:
+        return name
+    # Typos
+    name = (
+        name.replace("distrct", "district")
+        .replace("judical", "judicial")
+        .replace("distric ", "district ")
+        .replace("disrict", "district")
+        .replace("cpurt", "court")
+    )
+    name = NUMBERED_COURT_RE.sub(r"\1", name)
+    # Abbreviations
+    name = re.compile(r"(^|\s)jp($|\s)").sub(r"\1justice of the peace\2", name)
+    name = re.compile(r"(^|\s)co\.?($|\s)").sub(r"\1county\2", name)
+    name = re.compile(r"(^|\s)pr?ct\.?($|\s)").sub(r"\1precinct\2", name)
+    name = re.compile(r"(^|\s)ct\.?($|\s)").sub(r"\1court\2", name)
+    name = re.compile(r"(^|\s)crim\.?($|\s)").sub(r"\1criminal\2", name)
+    name = re.compile(r"(^|\s)dist\.?($|\s)").sub(r"\1district\2", name)
+
+    name = DISTRICT_COURT_RE.sub(r"\1 district court", name)
+
+    name = name.replace("1-a", "1a")
+
+    return name
+
+
+def _originating_court_name_to_type(name: str) -> CourtType:
+    """Takes in a normalized trial court name from TAMES and returns a
+    standardized type.
+
+    :param name: The trial court name from TAMES.
+    :return: The type of the originating court."""
+    name = _clean_court_name(name)
+    if not name:
+        return CourtType.UNKNOWN
+    if DISTRICT_COURT_RE.match(name):
+        return CourtType.DISTRICT
+    if BUSINESS_COURT_RE.match(name):
+        return CourtType.BUSINESS
+    if APPELLATE_COURT_RE.match(name):
+        return CourtType.APPELLATE
+    if "county" in name:
+        return CourtType.COUNTY
+    if "probate" in name:
+        return CourtType.PROBATE
+    if "justice" in name or "jp" in name:
+        return CourtType.JUSTICE
+    if "municipal" in name:
+        return CourtType.MUNICIPAL
+    if "dummy" in name or "unknown" in name:
+        return CourtType.UNKNOWN
+    # Special cases :)
+    if name == "district court":
+        # Thank you, Harris County!
+        return CourtType.DISTRICT
+    if name == "274th/421st district court":
+        # All of these have trial court county set to Caldwell, which is in the jurisdiction of both the 274th and 421st district courts
+        return CourtType.DISTRICT
+    if name == "436th juvenile district court":
+        return CourtType.DISTRICT
+    if name == "437th criminal district court":
+        return CourtType.DISTRICT
+    if name == "100 n closner blvd 3rd fl":
+        # Thank you, Hidalgo County!
+        return CourtType.DISTRICT
+    # Everything left over should be a county-level court
+    return CourtType.COUNTY
+
+
+def district_court_number_from_name(name: str) -> int:
+    # TODO Handle edge-cases
+    district_court_match = DISTRICT_COURT_RE.match(name)
+    district = district_court_match.group(1)
+    if district == "1-a" or district == "1a":
+        return 1
+    return int(DISTRICT_COURT_DISTRICT_RE.match(district).group(1))
 
 
 class TexasCaseDocument(TypedDict):
@@ -271,6 +431,9 @@ class TexasCommonData(TypedDict):
     hints.
 
     :ivar court_id: The ID of the court this docket is from.
+    :ivar court_type: Indicates the type of court this docket is from. The
+    Supreme Court and Court of Criminal Appeals both have unique data and this
+    will indicate if that data is present.
     :ivar docket_number: The docket number of the case.
     :ivar case_name: The shortened and normalized name of the case.
     :ivar case_name_full: The full name of the case.
@@ -278,21 +441,21 @@ class TexasCommonData(TypedDict):
     :ivar case_type: The type of case.
     :ivar parties: A list of parties involved in the case and their associated
     representatives.
-    :ivar trial_court: Information about the trial court handling the case was
-    appealed from.
+    :ivar originating_court: Information about the court a case originated from.
     :ivar case_events: A list of case events (e.g., filing of the case, notice
     of appeal received).
     :ivar appellate_briefs: A list of briefs filed in the case.
     """
 
     court_id: str
+    court_type: str
     docket_number: str
     case_name: str
     case_name_full: str
     date_filed: date
     case_type: str
     parties: list[TexasCaseParty]
-    trial_court: TexasTrialCourt
+    originating_court: TexasOriginatingCourt
     case_events: list[TexasCaseEvent]
     appellate_briefs: list[TexasAppellateBrief]
 
@@ -392,11 +555,12 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
+            court_type=CourtType.UNKNOWN.value,
             docket_number=self.docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
             parties=self.parties,
-            trial_court=self._parse_trial_court(),
+            originating_court=self._parse_originating_court(),
             case_events=self._parse_case_events(),
             appellate_briefs=self._parse_appellate_briefs(),
             case_name=self.case_name,
@@ -546,11 +710,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         """
         if len(parties) == 0:
             return name_part
+        semi = name_part.find(";")
         if len(parties) == 1:
             if len(parties[0]["name"]) < len(name_part):
                 return parties[0]["name"]
+            if semi > 0:
+                return name_part[:semi]
             return name_part
-        semi = name_part.find(";")
         if semi > 0:
             return name_part[:semi]
         party_indices = [
@@ -685,7 +851,13 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             for i in range(n_parties)
         ]
 
-    def _parse_trial_court(self) -> TexasTrialCourt:
+    def _parse_originating_court(
+        self,
+    ) -> Union[
+        TexasOriginatingCourt,
+        TexasOriginatingAppellateCourt,
+        TexasOriginatingDistrictCourt,
+    ]:
         """
         Extracts the trial court info from the HTML tree. Will fail if
         `_parse_text` has not yet been called.
@@ -702,14 +874,35 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
             for child in info_panel.iterchildren()
         }
 
-        return TexasTrialCourt(
-            name=fields.get("Court", ""),
-            county=fields.get("County", ""),
+        court_name = fields.get("Court", "")
+        county = fields.get("County", "")
+        court_type = _originating_court_name_to_type(court_name)
+
+        court_details = TexasOriginatingCourt(
+            name=court_name,
+            court_type=court_type.value,
+            county=county,
             judge=fields.get("Court Judge", ""),
             case=fields.get("Court Case", ""),
             reporter=fields.get("Reporter", ""),
             punishment=fields.get("Punishment", ""),
         )
+
+        if court_type == CourtType.APPELLATE:
+            court_id = coa_name_to_court_id(court_name).value
+            originating_court_details = TexasOriginatingAppellateCourt(
+                **court_details,
+                court_id=court_id,
+            )
+        elif court_type == CourtType.DISTRICT:
+            district = district_court_number_from_name(court_name)
+            originating_court_details = TexasOriginatingDistrictCourt(
+                **court_details, district=district
+            )
+        else:
+            originating_court_details = court_details
+
+        return originating_court_details
 
     @staticmethod
     def _parse_case_documents(cell: HtmlElement) -> list[TexasCaseDocument]:
