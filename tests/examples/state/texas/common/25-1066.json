@@ -74,8 +74,19 @@
   "case_name_full": "IN RE CLIENT X",
   "case_type": "Petition for Writ of Mandamus",
   "court_id": "texas_unknown",
+  "court_type": "texas_unknown",
   "date_filed": "2025-12-01",
   "docket_number": "25-1066",
+  "originating_court": {
+    "case": "2024-56655",
+    "county": "Harris",
+    "court_type": "texas_district",
+    "district": 11,
+    "judge": "Honorable Kristen Brauchle Hawkins",
+    "name": "11th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "Hernandez , Laura",
@@ -102,13 +113,5 @@
       ],
       "type": "Real Party in Interest"
     }
-  ],
-  "trial_court": {
-    "case": "2024-56655",
-    "county": "Harris",
-    "judge": "Honorable Kristen Brauchle Hawkins",
-    "name": "11th District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }

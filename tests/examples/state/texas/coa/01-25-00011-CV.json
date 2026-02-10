@@ -510,8 +510,19 @@
   "case_name_full": "James Shaffer, CRNA and EPIX Medical Services of Houston, PLLC v. Marquita Jomes, as Power off Attorney for Shronda Jones",
   "case_type": "Interlocutory",
   "court_id": "texas_coa01",
+  "court_type": "texas_appellate",
   "date_filed": "2025-01-07",
   "docket_number": "01-25-00011-CV",
+  "originating_court": {
+    "case": "2024-34116",
+    "county": "Harris",
+    "court_type": "texas_district",
+    "district": 55,
+    "judge": "Honorable Judge 55th District Court",
+    "name": "55th District Court",
+    "punishment": "",
+    "reporter": "Court Reporter 55th District Court"
+  },
   "parties": [
     {
       "name": "Marquita Jomes, as Power off Attorney for Shronda Jones",
@@ -532,13 +543,5 @@
   ],
   "publication_service": "",
   "transfer_from": null,
-  "transfer_to": null,
-  "trial_court": {
-    "case": "2024-34116",
-    "county": "Harris",
-    "judge": "Honorable Judge 55th District Court",
-    "name": "55th District Court",
-    "punishment": "",
-    "reporter": "Court Reporter 55th District Court"
-  }
+  "transfer_to": null
 }

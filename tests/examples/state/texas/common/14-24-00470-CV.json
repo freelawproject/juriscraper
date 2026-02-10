@@ -462,8 +462,19 @@
   "case_name_full": "Raul Luna Academy, LLC and Raul Luna v. E&M Estates and Property Management, LLC, Eagleview Properties, LLC, Gonzalez Investor Brothers, LLC, Investors Success TA, LLC, LALO Properties, LLC, Miguel Gonzalez, Ochoa Real Estate Properties, LLC and Rocky Mountain Investing, LLC",
   "case_type": "Contract",
   "court_id": "texas_unknown",
+  "court_type": "texas_unknown",
   "date_filed": "2024-06-27",
   "docket_number": "14-24-00470-CV",
+  "originating_court": {
+    "case": "2023-17218",
+    "county": "Harris",
+    "court_type": "texas_district",
+    "district": 157,
+    "judge": "Honorable Judge, 157th District Court",
+    "name": "157th District Court",
+    "punishment": "",
+    "reporter": "Sheri M. Ullrich"
+  },
   "parties": [
     {
       "name": "E&M Estates and Property Management, LLC, Eagleview Properties, LLC, Gonzalez Investor Brothers, LLC, Investors Success TA, LLC, Lalo Properties, LLC, Miguel Gonzalez, Ochoa Real Estate Properties, LLC and Rocky Mountain Investing, LLC",
@@ -480,13 +491,5 @@
       ],
       "type": "Appellant"
     }
-  ],
-  "trial_court": {
-    "case": "2023-17218",
-    "county": "Harris",
-    "judge": "Honorable Judge, 157th District Court",
-    "name": "157th District Court",
-    "punishment": "",
-    "reporter": "Sheri M. Ullrich"
-  }
+  ]
 }

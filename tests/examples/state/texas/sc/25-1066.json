@@ -2,6 +2,7 @@
   "appeals_court": {
     "case_number": "14-25-00552-CV",
     "case_url": "https://search.txcourts.gov/Case.aspx?cn=14-25-00552-CV",
+    "court_id": "texas_coa14",
     "disposition": "Denied",
     "district": "14th Court of Appeals",
     "justice": "Honorable Per Curiam",
@@ -86,8 +87,19 @@
   "case_name_full": "IN RE CLIENT X",
   "case_type": "Petition for Writ of Mandamus",
   "court_id": "texas_cossup",
+  "court_type": "texas_final",
   "date_filed": "2025-12-01",
   "docket_number": "25-1066",
+  "originating_court": {
+    "case": "2024-56655",
+    "county": "Harris",
+    "court_type": "texas_district",
+    "district": 11,
+    "judge": "Honorable Kristen Brauchle Hawkins",
+    "name": "11th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "Hernandez , Laura",
@@ -114,13 +126,5 @@
       ],
       "type": "Real Party in Interest"
     }
-  ],
-  "trial_court": {
-    "case": "2024-56655",
-    "county": "Harris",
-    "judge": "Honorable Kristen Brauchle Hawkins",
-    "name": "11th District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }
