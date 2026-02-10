@@ -46,6 +46,7 @@ Fixes:
 
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 - Fix `texapp` check that opinion belongs to specific court #1781
+- Fix `prsupreme` and `prapp` SSL verification issues; Add backscraping to `prsupreme` #1763
 
 ## Past
 
