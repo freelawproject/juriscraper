@@ -1,0 +1,75 @@
+{
+  "appeals_court": {
+    "case_number": "",
+    "case_url": "",
+    "court_id": "texas_unknown",
+    "disposition": "",
+    "district": "",
+    "justice": "",
+    "opinion_cite": ""
+  },
+  "appellate_briefs": [],
+  "case_events": [
+    {
+      "attachments": [],
+      "date": "2025-12-31",
+      "disposition": "",
+      "type": "MISC DOCUMENT RECD"
+    },
+    {
+      "attachments": [],
+      "date": "2025-11-24",
+      "disposition": "",
+      "type": "ADDRESS VERIFICATION-CLERK'S OFFICE"
+    },
+    {
+      "attachments": [
+        {
+          "description": "RECORD",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=4cc9e852-fd28-467a-8d80-544db509ed45&coa=coscca&DT=RECORD&MediaID=e1e9b80c-4ca9-4272-ad0e-729d3f531653",
+          "file_size_bytes": 147000,
+          "file_size_str": "147 KB",
+          "media_id": "e1e9b80c-4ca9-4272-ad0e-729d3f531653",
+          "media_version_id": "4cc9e852-fd28-467a-8d80-544db509ed45"
+        },
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b77dbe6e-45d3-4de6-9ff7-a74abf3277a1&coa=coscca&DT=WRIT RECEIVED&MediaID=ea93399a-53b0-4fe3-9670-cbf03a0e9987",
+          "file_size_bytes": 98000,
+          "file_size_str": "98 KB",
+          "media_id": "ea93399a-53b0-4fe3-9670-cbf03a0e9987",
+          "media_version_id": "b77dbe6e-45d3-4de6-9ff7-a74abf3277a1"
+        }
+      ],
+      "date": "2025-11-20",
+      "disposition": "",
+      "type": "WRIT RECEIVED"
+    }
+  ],
+  "case_name": "HICKS, BLAZE DANIEL v. The State of Texas",
+  "case_name_full": "HICKS, BLAZE DANIEL",
+  "case_type": "Original Writ of Mandamus",
+  "court_id": "texas_coscca",
+  "court_type": "texas_final",
+  "date_filed": "2025-11-20",
+  "docket_number": "WR-97,175-01",
+  "originating_court": {
+    "case": "13,654",
+    "county": "Tyler",
+    "court_type": "texas_district",
+    "district": 1,
+    "judge": "",
+    "name": "1A District Court",
+    "punishment": "",
+    "reporter": ""
+  },
+  "parties": [
+    {
+      "name": "HICKS, BLAZE DANIEL",
+      "representatives": [
+        ""
+      ],
+      "type": "Applicant"
+    }
+  ]
+}
