@@ -42,7 +42,7 @@ Fixes:
 - Fix incorrectly shortened case names in Texas Court of Criminal Appeals scraper
 - Revert Mass back to old for to collect PDF
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
--
+- Clean Texas URLs while parsing so that they are valid
 
 ## Past
 
