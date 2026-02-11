@@ -18,6 +18,19 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.7.6 - 2026-02-10**
+
+Features:
+-
+
+Changes:
 
 - Rename `trial_court` field to `originating_court` in Texas dockets
 - Add `court_type` field to Texas dockets, originating court info, and appellate court info
@@ -32,7 +45,7 @@ Fixes:
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 -
 
-## Current
+## Past
 
 **2.7.5 - 2026-01-28**
 
@@ -47,8 +60,7 @@ Fixes:
 
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 - Fix `texapp` check that opinion belongs to specific court #1781
-
-## Past
+- Fix `prsupreme` and `prapp` SSL verification issues; Add backscraping to `prsupreme` #1763
 
 **2.7.4 - 2026-01-22**
 
