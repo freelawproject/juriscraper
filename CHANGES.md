@@ -36,6 +36,7 @@ Changes:
 - Add `court_type` field to Texas dockets, originating court info, and appellate court info
 - Add `district` field to Texas originating court info where relevant
 - Update Texas case name shortening to be more robust
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644  
 
 Fixes:
 
