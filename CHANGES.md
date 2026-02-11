@@ -18,6 +18,19 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## Current
+
+**2.7.6 - 2026-02-10**
+
+Features:
+-
+
+Changes:
 
 - Rename `trial_court` field to `originating_court` in Texas dockets
 - Add `court_type` field to Texas dockets, originating court info, and appellate court info
@@ -32,7 +45,7 @@ Fixes:
 - Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
 -
 
-## Current
+## Past
 
 **2.7.5 - 2026-01-28**
 
@@ -47,8 +60,7 @@ Fixes:
 
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 - Fix `texapp` check that opinion belongs to specific court #1781
-
-## Past
+- Fix `prsupreme` and `prapp` SSL verification issues; Add backscraping to `prsupreme` #1763
 
 **2.7.4 - 2026-01-22**
 
@@ -99,6 +111,7 @@ Fixes:
 - fix `tenn` miss adding opinion types #1749
 - add ADDENDUM to OpinionType enum #1754
 - update `lactapp_1` parameters for 2026 #1734
+- fix `ala` by fetching detailed publication data from new API endpoint #1758
 
 **2.7.1 - 2025-01-07**
 
