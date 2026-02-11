@@ -6,8 +6,6 @@ from typing import Union
 
 import certifi
 import requests
-from requests import ConnectionError as RequestsConnectionError
-from requests import Timeout
 
 from juriscraper.lib.date_utils import (
     json_date_handler,
@@ -465,45 +463,27 @@ class AbstractSite:
         values
         """
         self.request["url"] = url
-        try:
-            self.request["response"] = self.request["session"].get(
-                url,
-                headers=self.request["headers"],
-                verify=self.request["verify"],
-                timeout=60,
-                **self.request["parameters"],
-            )
-        except (Timeout, RequestsConnectionError) as e:
-            # Transient network issues - log as warning, not error
-            logger.warning(
-                "Timeout/connection error during GET request to %s: %s",
-                url,
-                e,
-            )
-            raise
+        self.request["response"] = self.request["session"].get(
+            url,
+            headers=self.request["headers"],
+            verify=self.request["verify"],
+            timeout=60,
+            **self.request["parameters"],
+        )
         if self.save_response:
             self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
-        try:
-            self.request["response"] = self.request["session"].post(
-                url,
-                headers=self.request["headers"],
-                verify=self.request["verify"],
-                data=self.parameters,
-                timeout=60,
-                **self.request["parameters"],
-            )
-        except (Timeout, RequestsConnectionError) as e:
-            # Transient network issues - log as warning, not error
-            logger.warning(
-                "Timeout/connection error during POST request to %s: %s",
-                url,
-                e,
-            )
-            raise
+        self.request["response"] = self.request["session"].post(
+            url,
+            headers=self.request["headers"],
+            verify=self.request["verify"],
+            data=self.parameters,
+            timeout=60,
+            **self.request["parameters"],
+        )
         if self.save_response:
             self.save_response(self)
 
