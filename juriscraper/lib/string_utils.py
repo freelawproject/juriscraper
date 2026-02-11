@@ -2,6 +2,7 @@ import calendar
 import re
 import string
 from datetime import timedelta
+from urllib.parse import parse_qs, quote_plus, urlencode, urlparse, urlunparse
 
 import geonamescache
 from dateutil import parser
@@ -818,3 +819,17 @@ def size_string_to_bytes(size: str) -> int:
     units = {"B": 1, "KB": 10**3, "MB": 10**6, "GB": 10**9, "TB": 10**12}
     size_unit = units.get(size_unit_group, 0)
     return int(round(n_bytes * size_unit))
+
+
+def clean_url(url: str) -> str:
+    """Turns invalid URLs into valid URLs pointing to the same resource.
+
+    Became necessary after discovering that Texas sometimes puts invalid URLs
+    as the `href` attribute on their `<a>` elements.
+
+    :param url: The URL to clean
+    :return: The cleaned URL"""
+    scheme, netloc, path, params, query, fragment = urlparse(url)
+    query_dict = parse_qs(query)
+    clean_query = urlencode(query_dict, doseq=True, quote_via=quote_plus)
+    return urlunparse((scheme, netloc, path, params, clean_query, fragment))
