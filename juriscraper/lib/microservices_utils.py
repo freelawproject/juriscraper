@@ -24,10 +24,10 @@ def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
     """
     try:
         extension = get_extension(r.content)
-    except (Timeout, ConnectionError) as e:
+    except Timeout as e:
         # Transient network issues - don't send to Sentry
         logger.warning(
-            "Timeout/connection error getting extension from microservice: %s",
+            "Timeout error getting extension from microservice: %s",
             e,
         )
         extension = ""
