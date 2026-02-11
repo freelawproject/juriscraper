@@ -5,7 +5,7 @@
       "attachments": [
         {
           "description": "Notice",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=23a37cee-d4a3-414a-9342-7fa3dc318a77&coa=coscca&DT=EXT PDR DISP/NFE&MediaID=2278fd4a-c0fd-41ec-819c-550b1a3e73de",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=23a37cee-d4a3-414a-9342-7fa3dc318a77&coa=coscca&DT=EXT+PDR+DISP%2FNFE&MediaID=2278fd4a-c0fd-41ec-819c-550b1a3e73de",
           "file_size_bytes": 108000,
           "file_size_str": "108 KB",
           "media_id": "2278fd4a-c0fd-41ec-819c-550b1a3e73de",
@@ -35,7 +35,7 @@
       "attachments": [
         {
           "description": "Notice",
-          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b29f96ef-db3b-4129-b337-97443be0fc6c&coa=coscca&DT=COA RECORD MISSING&MediaID=86facd47-6ba6-4a41-9bd4-88815890d482",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b29f96ef-db3b-4129-b337-97443be0fc6c&coa=coscca&DT=COA+RECORD+MISSING&MediaID=86facd47-6ba6-4a41-9bd4-88815890d482",
           "file_size_bytes": 110000,
           "file_size_str": "110 KB",
           "media_id": "86facd47-6ba6-4a41-9bd4-88815890d482",
@@ -57,8 +57,19 @@
   "case_name_full": "VANZANDT, SCOTT EDWARD",
   "case_type": "PDR Case Type",
   "court_id": "texas_unknown",
+  "court_type": "texas_unknown",
   "date_filed": "2025-12-01",
   "docket_number": "PD-0975-25",
+  "originating_court": {
+    "case": "2020-953-C1",
+    "county": "McLennan",
+    "court_type": "texas_district",
+    "district": 19,
+    "judge": "",
+    "name": "19th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
   "parties": [
     {
       "name": "VANZANDT, SCOTT EDWARD",
@@ -67,13 +78,5 @@
       ],
       "type": "Appellant"
     }
-  ],
-  "trial_court": {
-    "case": "2020-953-C1",
-    "county": "McLennan",
-    "judge": "",
-    "name": "19th District Court",
-    "punishment": "",
-    "reporter": ""
-  }
+  ]
 }
