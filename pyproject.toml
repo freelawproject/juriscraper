@@ -46,6 +46,7 @@ dependencies = [
   "html5lib",
   "lxml>=5.2",
   "nh3",
+  "pydantic>=2.12.5",
   "python-dateutil>=2.8.2",
   "requests>=2.20.0",
   "selenium>=4.9.1",
