@@ -2,7 +2,7 @@ import calendar
 import re
 import string
 from datetime import timedelta
-from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qs, quote_plus, urlencode, urlparse, urlunparse
 
 import geonamescache
 from dateutil import parser
@@ -831,6 +831,5 @@ def clean_url(url: str) -> str:
     :return: The cleaned URL"""
     scheme, netloc, path, params, query, fragment = urlparse(url)
     query_dict = parse_qs(query)
-    query_dict_flat = {k: ",".join(v) for k, v in query_dict.items()}
-    clean_query = urlencode(query_dict_flat)
+    clean_query = urlencode(query_dict, doseq=True, quote_via=quote_plus)
     return urlunparse((scheme, netloc, path, params, clean_query, fragment))
