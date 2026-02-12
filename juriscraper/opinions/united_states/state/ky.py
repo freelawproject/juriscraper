@@ -133,6 +133,13 @@ class Site(OpinionSiteLinear):
                 detail_url = self.docket_entry_url.format(row["docketEntryID"])
                 doc_json = self.get_json(detail_url)
 
+            if not doc_json:
+                logger.error(
+                    "ky: no document details returned for Docket %s",
+                    docket_number,
+                )
+                continue
+
             if not case_name:
                 case_name = doc_json[0]["caseHeader"].get("shortTitle")
             doc_id = doc_json[0].get("documentID")
@@ -172,7 +179,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 
         :param dates: (start_date, end_date) tuple

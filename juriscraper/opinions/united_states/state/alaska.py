@@ -65,7 +65,7 @@ class Site(OpinionSiteLinear):
                     continue
                 break
 
-            for row in table.xpath(".//tr"):
+            for row in table.xpath(".//tbody/tr"):
                 if row.text_content().strip():
                     case_number = get_row_column_text(row, 3)
                     name = get_row_column_text(row, 4)
@@ -171,7 +171,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
-    def _download_backwards(self, dates: tuple[date]) -> None:
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple

@@ -19,11 +19,12 @@ from datetime import date
 from dateutil.parser import parse
 
 from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.string_utils import clean_string
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+from juriscraper.lib.type_utils import OpinionType
 
 
-class Site(OpinionSiteLinear):
+class Site(ClusterSite):
     court_abbv = "sup"
     start_year = 2000
     base_url = "http://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
@@ -60,11 +61,11 @@ class Site(OpinionSiteLinear):
             return m.groups()[0] if m.groups()[0] else m.groups()[1]
         return ""
 
-    def extract_dockets_and_name(self, row) -> tuple[str, str]:
-        """Extract the docket and case name from each row
+    def extract_metadata(self, row) -> tuple[str, str, str]:
+        """Extract the docket, case name and opinion type from each row
 
         :param row: Row to process
-        :return: Docket(s) and Case Name
+        :return: Docket(s), Case Name, opinion type
         """
         text = " ".join(row.xpath("ancestor::li[1]//text()"))
         if not text:
@@ -75,22 +76,39 @@ class Site(OpinionSiteLinear):
             next = row.xpath("following-sibling::text()[1]")
             text = f"{prev[0] if prev else ''}{row.xpath('string(.)')}{next[0] if next else ''}"
 
-        clean_text = re.sub(r"[\n\r\t\s]+", " ", text)
-        m = re.match(
-            r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? - (?P<case_name>.*)",
-            clean_text,
-        )
-        if not m:
-            # Handle bad inputs
-            m = re.match(
-                r"(?P<dockets>[SAC0-9, ]+)(?P<op_type> [A-Z].*)? (?P<case_name>.*)",
+        clean_text = re.sub(r"[\n\r\t\s]+", " ", text).replace("–", "-")
+
+        is_concurrence = "concur" in clean_text.lower()
+        is_dissent = "dissent" in clean_text.lower()
+        is_appendix = "appendix" in clean_text.lower()
+
+        if is_concurrence and is_dissent:
+            op_type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+        elif is_concurrence:
+            op_type = OpinionType.CONCURRENCE
+        elif is_dissent:
+            op_type = OpinionType.DISSENT
+        elif is_appendix:
+            op_type = OpinionType.ADDENDUM
+        else:
+            op_type = OpinionType.MAJORITY
+
+        if op_type == OpinionType.MAJORITY:
+            # there is no type information in this row; the name is everything
+            # after the docket number
+            match = re.match(
+                r"\s*(?P<dockets>([SA]C\d+[, ]*)+)(?P<case_name>.*)",
                 clean_text,
             )
-        op_type = m.group("op_type")
-        name = m.group("case_name")
-        if op_type:
-            name = f"{name} ({op_type.strip()})"
-        return m.group("dockets"), name
+        else:
+            # there is type information, and the case name will be after the
+            # type or after the dash
+            match = re.match(
+                r"\s*(?P<dockets>([SA]C\d+[, ]*)+).*(Appendix|Concurrence|Dissent|in Part)[\s-]*(?P<case_name>.*)",
+                clean_text,
+            )
+
+        return match.group("dockets"), match.group("case_name"), op_type.value
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
@@ -110,16 +128,21 @@ class Site(OpinionSiteLinear):
                 # "Publication in the Connecticut Law Journal To Be Determined"
                 date_filed = f"{self.current_year}-07-01"
 
-            dockets, name = self.extract_dockets_and_name(row)
-            self.cases.append(
-                {
-                    "url": row.get("href"),
-                    "name": name,
-                    "docket": dockets,
-                    "date": date_filed,
-                    "date_filed_is_approximate": date_filed_is_approximate,
-                }
-            )
+            dockets, name, op_type = self.extract_metadata(row)
+            case_dict = {
+                "url": row.get("href"),
+                "name": name.strip("- "),
+                "docket": dockets.strip(),
+                "date": date_filed,
+                "date_filed_is_approximate": date_filed_is_approximate,
+                "type": op_type,
+            }
+
+            # try to cluster the current opinion with any of the previously
+            # seen cases
+            if not self.cluster_opinions(case_dict, self.cases):
+                # if we can't, append it as a standalone
+                self.cases.append(case_dict)
 
     def make_url(self, year: int) -> str:
         """Makes URL using year input
@@ -142,7 +165,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: Text extracted from the PDF
         :returns: metadata object expected by Courtlistener
         """
-        metadata = {"OpinionCluster": {}}
+        metadata: dict[str, dict] = {"OpinionCluster": {}}
 
         # initial value for end index for judges
         judges_end = 1_000_000

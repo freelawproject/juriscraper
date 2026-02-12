@@ -1,191 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="cache-control" content="no-cache" />
-	<meta http-equiv="pragma" content="no-cache" />
-	<meta http-equiv="expires" content="-1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
 
+    <!-- Header Include File -->
+    <!-- Favorites Icon -->
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- Bookmarklets Icon -->
+<!-- icons in IMG 2022 
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+-->
+
+
+<!-- ICONS in root -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#075192">
+<meta name="msapplication-TileColor" content="#1e89c3">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-96x96.png"> -->
+
+<!--
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon144.png" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon72.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon57.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon114.png" />-->
+
+<!-- For iPad with high-resolution Retina display running iOS greater than or equal to 7: 
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon-152.png">
+		<link rel="apple-touch-icon-precomposed" sizes="167x167" href="/img/favicon-167.png">
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/favicon-180.png">-->
+
+<!-- Google Translate Meta -->
+<meta name="google" content="43ec6db4277f1c9a-06e18d88e2e346a7-gd6c10ef7ddc37b03-10">
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="/css/bootstrap.css" type='text/css'>
+
+<!-- BOOTSTRAP CSS -->
+<!--<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' type='text/css' media='all' />-->
+<!-- END BOOTSTRAP CSS -->
+<!-- Custom Styles for Courts Header and Footer -->
+<link href="/css/courts_global_styles.css" rel="stylesheet" type='text/css'>
+
+<!-- Retina Display LESS Styles -->
+<link href="/css/retina.less" rel="stylesheet" type='text/css'>
+
+<!-- CSS Animations Styles -->
+<link href="/css/animate.min.css" rel="stylesheet" type='text/css'>
+
+<!-- FONT AWESOME SCRIPT 
+<script type="text/javascript" src="https://kit.fontawesome.com/bc37f64e9a.js" crossorigin="anonymous" async="async"></script>-->
+<!-- <script src="https://kit.fontawesome.com/71832a560f.js" crossorigin="anonymous"></script> - updated to v7 2025-09-15 -->
+<script src="https://kit.fontawesome.com/c823de1df6.js" crossorigin="anonymous"></script>
+<!-- END FONT AWESOME SCRIPT -->
+
+<!-- Font Styles (From Google.com/fonts) -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- Core JavaScript
+================================================== -->
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script async src="/js/jquery.easing-1.3.min.js"></script>
+<script src="/js/ready.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/fcdva.js"></script> <!--Family Court chat-->
+
+
+<!-- Funnelback INCLUDES -->
+<link rel="stylesheet" type="text/css" href="/funnelback/funnelback.autocompletion-2.6.0.css" />
+<link type="text/css" media="screen" rel="stylesheet" href="/funnelback/funnelback.css" />
+<script src="/funnelback/funnelbackConfig.js"></script>
+<script src="/funnelback/typeahead.bundle-0.11.1.min.js"></script>
+<script src="/funnelback/handlebars-4.0.5.min.js"></script>
+<script src="/funnelback/funnelback.autocompletion-2.6.0.js"></script>
+<!-- END FUNNELBACK INCLUDES -->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- Google Analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics (GA4) -added 12/8/2020 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6ZDX6K0QM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y6ZDX6K0QM');
+</script>
+
+<!-- Google Tag Manager (added 7/7/2021) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNRRBFW');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Search Console Schoenbeck Owner Verification (added 7/12/2022) -->
+
+<meta name="google-site-verification" content="BCIISAYS2wnMR3G0qYzm71hxr0aYDn4kSrzSfcbL318" />
+
+
+
+    <link rel="stylesheet" href="/css/courts-style.css" />
+    <link rel="stylesheet" href="/css/courts-datepicker.css" />
+    
 	<meta name="description" content="Court opinions from the Delaware Court system.">
+
 	<title>Opinions - Delaware Courts - State of Delaware</title>
 
+
 </head>
-
 <body>
+    <!-- EMERGENCY NOTIFICATION SYSTEM (ENS) AREA -->
+    <!-- Uncomment to use this section to use in emergency situations, when finished comment it out again to make it disappear -->
 
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<a href="#content" class="skip">Skip to Content</a>
-		<div class="menu-bg hidden-lg hidden-md"></div>
-		<button id="clickBlur" type="button" aria-label="Toggle Navigation" class="lines-button x2 hidden-lg hidden-md">
-			<span class="lines"></span>
-		</button>
+    <div id="ens" role="region" aria-label="Announcements">
+      <button type="button" class="pull-right" title="Close Notifications" style="background-color: #C2371f; border: none;" aria-label="Close Notifications" onclick="document.getElementById('ens').remove();">
+        <i class="fa-solid fa-circle-xmark fa-lg" aria-hidden="true"></i>
+      </button>
+      
+        <p>
+          <i class="fa-solid fa-triangle-exclamation fa-lg" aria-hidden="true"></i>
+          <strong>The Delaware State Courts will be closed Thursday, January 1, 2026 for New Year's Day. Justice of the Peace Court 11 (New Castle County) and Court 7 (Kent County) will remain open 24 hours and Justice of the Peace Court 3 (Sussex County) will be open from 6AM – 12AM (no new cases after 11:00PM).</strong>
+        </p>
+      
+    </div>
 
-		<!-- MOBILE -->
-		<div class="menu-items hidden-lg hidden-md">
-			<div><a data-toggle="collapse" class="dropdown-toggle" href="#CourtsMenu">Courts<i
-						class="fa fa-caret-down fa-fw global-caret"></i></a></div>
-			<ul id="CourtsMenu" class="panel-collapse collapse">
-				<li class="dropdown-header">Delaware Courts</li>
-				<li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
-				<li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
-				<li><a href="/superior/"><strong>Superior Court</strong></a></li>
-				<li><a href="/family/"><strong>Family Court</strong></a></li>
-				<li><a href="/commonpleas/"><strong>Court of Common Pleas</strong></a></li>
-				<li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
-				<li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
-				<li role="separator" class="divider"></li>
-				<li class="dropdown-header">Related Links</li>
-				<li><a href="/aoc/ada.aspx">Accessibility</a></li>
-				<li><a href="/aoc/communitycourt.aspx">Community Court</a></li>
-				<li><a href="/locations/">Hours and Locations</a></li>
-				<li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
-				<li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
-				<li><a href="/career/">Job Opportunities</a></li>
-				<li><a href="/lawlibraries/">Judicial Law Libraries</a></li>
-				<li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
-				<li><a href="/overview.aspx">Overview of the Courts</a></li>
-			</ul>
-			<div><a data-toggle="collapse" class="dropdown-toggle" href="#ServicesMenu">eServices<i
-						class="fa fa-caret-down fa-fw global-caret"></i></a></div>
-			<ul id="ServicesMenu" class="panel-collapse collapse">
-				<li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
-				<li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
-				<li><a href="/calendars/">Calendars</a></li>
-				<li><a href="/docket.aspx">Civil Case Search</a></li>
-				<li><a href="/family/support/supportcalculator.aspx">Child Support Calculator</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="/efiling/">eFiling</a></li>
-				<li><a href="/epayment.aspx">ePayment for Fines</a></li>
-				<li><a href="/forms/">Forms</a></li>
-				<li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
-				<li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="/opinions/">Opinions &amp; Orders</a></li>
-				<li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
-				<li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
-				<li><a href="/tradenames/">Trade Names Database</a></li>
-				<li><a href="/docs/WirelessFAQforCourtUsers.pdf" target="_blank"
-						aria-label="Wireless Service in Courthouse">Wireless Service in Courthouses<i
-							class="fa fa-file-pdf-o fa-fw"></i></a></li>
-			</ul>
-			<div><a href="/forms/">Forms</a></div>
-			<div><a href="/rules/" aria-label="Delaware Court Rules">Rules</a></div>
-			<div><a href="/calendars/">Calendars</a></div>
-			<div><a href="/opinions/">Opinions</a></div><br />
-			<div id="google_translate_element"></div>
+    <!-- END EMERGENCY NOTIFICATION AREA -->
 
-			<hr class="footer" />
-			<div class="col-xs-6">
-				<div>
-					<p><a href="/help/"><span class="label label-warning selfhelp"><i class="fa fa-info-circle fa-lg"
-									aria-hidden="true"></i>&nbsp;Self-Help</span></a></p>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div>
-					<p><a href="/feedback/">Feedback</a></p>
-				</div>
-			</div>
+    <!-- BEGIN Fixed Main Nav Bar -->
+    <!-- Fixed navbar -->
 
-		</div>
-		<!-- END MOBILE -->
-		<!-- DESKTOP -->
-		<div class="navbar-header">
-			<a href="../../"><img src="/img/delaware_courts_logo.jpg"
-					alt="Delaware Courts - The Offical Website of the Delaware Judiciary"
-					title="Delaware Courts - The Official Website of the Delaware Judiciary" class="img-responsive"
-					aria-label="Return to Delaware Courts home page" /></a>
-		</div>
-		<ul class="nav navbar-nav hidden-xs hidden-sm">
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Courts <i class="fa fa-caret-down fa-fw global-caret"></i></a>
-				<ul class="dropdown-menu">
-					<li class="dropdown-header">Delaware Courts</li>
-					<li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
-					<li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
-					<li><a href="/superior/"><strong>Superior Court</strong></a></li>
-					<li><a href="/family/"><strong>Family Court</strong></a></li>
-					<li><a href="/commonpleas"><strong>Court of Common Pleas</strong></a></li>
-					<li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
-					<li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
-					<li role="separator" class="divider"></li>
-					<li class="dropdown-header">Related Links</li>
-					<li><a href="/aoc/ada.aspx">Accessibility</a></li>
-					<li><a href="/aoc/communitycourt.aspx">Community Court</a></li>
-					<li><a href="/locations/">Hours and Locations</a></li>
-					<li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
-					<li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
-					<li><a href="/career/">Job Opportunities</a></li>
-					<li><a href="/lawlibraries/">Judicial Law Libraries</a></li>
-					<li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
-					<li><a href="/overview.aspx">Overview of the Courts</a></li>
-				</ul>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">eServices <i class="fa fa-caret-down fa-fw global-caret"></i></a>
-				<ul class="dropdown-menu">
-					<li class="dropdown-header">eServices</li>
-					<li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
-					<li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
-					<li><a href="/calendars/">Calendars</a></li>
-					<li><a href="/docket.aspx">Civil Case Search</a></li>
-					<li><a href="/family/support/supportcalculator.aspx">Child Support Calculator</a></li>
-					<li role="separator" class="divider"></li>
-					<li><a href="/efiling/">eFiling</a></li>
-					<li><a href="/epayment.aspx">ePayment for Fines</a></li>
-					<li><a href="/forms/">Forms</a></li>
-					<li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
-					<li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
-					<li role="separator" class="divider"></li>
-					<li><a href="/opinions/">Opinions &amp; Orders</a></li>
-					<li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
-					<li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
-					<li><a href="/tradenames/">Trade Names Database</a></li>
-					<li><a href="/forms/download.aspx?id=103848">Wireless Service in Courthouses<i
-								class="fa-light fa-file-pdf fa-fw"></i></a></li>
-				</ul>
-			</li>
-			<li><a href="/forms/" aria-label="Delaware Court Forms">Forms</a></li>
-			<li><a href="/rules/" aria-label="Delaware Court Rules">Rules</a></li>
-			<li><a href="/calendars/">Calendars</a></li>
-			<li><a href="/opinions/" aria-label="Court Opinions">Opinions</a></li>
-		</ul>
-		<!-- END DESKTOP -->
-		<!-- SEARCH BUTTON -->
-		<div id="sb-search" class="sb-search">
-			<form id="search-form" method="GET">
-				<input type="text" id="st-search-input" class="sb-search-input" placeholder="Enter your search term..."
-					aria-label="Search">
-				<input type="submit" id="sb-search-submit" class="sb-search-submit" aria-label="Search"><span
-					class="sb-icon-search"></span>
-			</form>
-		</div>
-		<!-- END SEARCH BUTTON -->
-		<!-- SELF-HELP BUTTON -->
-		<ul class="nav navbar-nav navbar-right">
-			<li class="hidden-xs hidden-sm">
-				<div id="google_translate_element"></div>
-			</li>
-			<li class="hidden-xs hidden-sm">
-				<a href="/help/">
-					<!--<span class="label label-warning selfhelp"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;Self-Help</span></a>-->
-					<span class="label label-warning selfhelp1">Self-Help</span>&nbsp;&nbsp;
-				</a>
-			</li>
-			<!-- <li class="hidden-xs hidden-sm"> <div id="google_translate_element"></div></li> -->
+<!-- GOOGLE TRANSLATE  
+<br />
+<div id="google_translate_element" class="pull-right googletranslate"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'es,ht', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-			<li class="hidden-xs hidden-sm">
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-		</ul>
-		<!-- END SELF-HELP BUTTON -->
+ 
+<div id="google_translate_element"></div>
+<!-- END GOOGLE TRANSLATE  -->
 
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <a href="#content" class="skip">Skip to Content</a>
+    <div class="menu-bg hidden-lg hidden-md"></div>
+    <button id="clickBlur" type="button" aria-label="Toggle Navigation" class="lines-button x2 hidden-lg hidden-md">
+        <span class="lines"></span>
+    </button>
 
-		<!--<script type="text/javascript" class="hidden-xs hidden-sm">
+    <!-- MOBILE -->
+    <div class="menu-items hidden-lg hidden-md">
+        <div><a data-toggle="collapse" class="dropdown-toggle" href="#CourtsMenu">Courts<i class="fa fa-caret-down fa-fw global-caret"></i></a></div>
+        <ul id="CourtsMenu" class="panel-collapse collapse">
+            <!--<li class="dropdown-header">Delaware Courts</li>-->
+            <li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
+            <li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
+            <li><a href="/superior/"><strong>Superior Court</strong></a></li>
+            <li><a href="/family/"><strong>Family Court</strong></a></li>
+            <li><a href="/commonpleas/"><strong>Court of Common Pleas</strong></a></li>
+            <li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
+            <li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
+            <li role="separator" class="divider"></li>
+            <!--<li class="dropdown-header">Related Links</li>-->
+            <li><a href="/aoc/ada.aspx">Accessibility</a></li>
+            <li><a href="/aoc/communitycourt.aspx">Community Court</a></li>
+            <li><a href="/locations/">Hours and Locations</a></li>
+            <li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
+            <li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
+            <li><a href="/career/">Job Opportunities</a></li>
+            <li><a href="/lawlibraries/">Judicial Law Libraries</a></li>
+            <li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
+            <li><a href="/overview.aspx">Overview of the Courts</a></li>
+        </ul>
+        <div><a data-toggle="collapse" class="dropdown-toggle" href="#ServicesMenu">eServices<i class="fa fa-caret-down fa-fw global-caret"></i></a></div>
+        <ul id="ServicesMenu" class="panel-collapse collapse">
+            <li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
+            <li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
+            <li><a href="/calendars/">Calendars</a></li>
+            <li><a href="/docket.aspx">Civil Case Search</a></li>
+            <li><a href="/family/support/supportcalculator.aspx">Child Support Calculator</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/efiling/">eFiling</a></li>
+            <li><a href="/epayment.aspx">ePayment for Fines</a></li>
+            <li><a href="/forms/">Forms</a></li>
+            <li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
+            <li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/opinions/">Opinions &amp; Orders</a></li>
+            <li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
+            <li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
+            <li><a href="/tradenames/">Trade Names Database</a></li>
+            <li><a href="/forms/download.aspx?id=103848">Wireless Service in Courthouses<i class="fa-light fa-file-pdf fa-fw"></i></a></li>
+        </ul>
+        <div><a href="/forms/">Forms</a></div>
+        <div><a href="/rules/" aria-label="Delaware Court Rules">Rules</a></div>
+        <div><a href="/calendars/">Calendars</a></div>
+        <div><a href="/opinions/">Opinions</a></div><br />
+        <div id="google_translate_element"></div> 
+         
+        <hr class="footer" />
+        <div class="col-xs-6">
+            <div><p><a href="/help/"><span class="label label-warning selfhelp"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;Self-Help</span></a></p></div>
+        </div>
+        <div class="col-xs-6">
+            <div><p><a href="/feedback/">Feedback</a></p></div>
+        </div>
+       
+    </div>
+    <!-- END MOBILE -->
+    <!-- DESKTOP -->
+    <div class="navbar-header">
+        <a href="../../"><img src="/img/delaware_courts_logo.jpg" alt="Delaware Courts - The Offical Website of the Delaware Judiciary" title="Delaware Courts - The Official Website of the Delaware Judiciary" class="img-responsive" aria-label="Return to Delaware Courts home page" /></a>
+    </div>
+    <ul class="nav navbar-nav hidden-xs hidden-sm">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courts <i class="fa-solid fa-caret-down fa-fw global-caret"></i></a>
+            <ul class="dropdown-menu">
+                <!--<li class="dropdown-header">Delaware Courts</li>-->
+                <li><a href="/supreme/"><strong>Supreme Court</strong></a></li>
+                <li><a href="/chancery/"><strong>Court of Chancery</strong></a></li>
+                <li><a href="/superior/"><strong>Superior Court</strong></a></li>
+                <li><a href="/family/"><strong>Family Court</strong></a></li>
+                <li><a href="/commonpleas"><strong>Court of Common Pleas</strong></a></li>
+                <li><a href="/jpcourt/"><strong>Justice of the Peace</strong></a></li>
+                <li><a href="/aoc/"><strong>Administrative Office of the Courts</strong></a></li>
+                <li role="separator" class="divider"></li>
+                <!--<li class="dropdown-header">Related Links</li>-->
+                <li><a href="/aoc/ada.aspx">Accessibility</a></li>
+                <li><a href="/aoc/communitycourt.aspx">Community Court</a></li>
+                <li><a href="/locations/">Hours and Locations</a></li>
+                <li><a href="/locations/holidays.aspx">Holidays and Closings</a></li>
+                <li><a href="/aoc/courtinterpreter/">Interpreter Services</a></li>
+                <li><a href="/career/">Job Opportunities</a></li>
+                <li><a href="/lawlibraries/">Judicial Law Libraries</a></li>
+                <li><a href="/agencies.aspx">Non-Judicial Agencies</a></li>
+                <li><a href="/overview.aspx">Overview of the Courts</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">eServices <i class="fa-solid fa-caret-down fa-fw global-caret"></i></a>
+            <ul class="dropdown-menu">
+                <!--<li class="dropdown-header">eServices</li>-->
+                <li><a href="/lawlibraries/chat.aspx">Ask a Law Librarian</a></li>
+                <li><a href="/help/licensesregistrations/">Business Licenses Search</a></li>
+                <li><a href="/calendars/">Calendars</a></li>
+                <li><a href="/docket.aspx">Civil Case Search</a></li>
+                <li><a href="/family/support/supportcalculator.aspx">Child Support Calculator</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/efiling/">eFiling</a></li>
+                <li><a href="/epayment.aspx">ePayment for Fines</a></li>
+                <li><a href="/forms/">Forms</a></li>
+                <li><a href="/JPCourt/jp_videos.aspx">JP Court Interactive Forms</a></li>
+                <li><a href="/superior/jury/jury_reporting.aspx">Jury Reporting</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/opinions/">Opinions &amp; Orders</a></li>
+                <li><a href="/help/traffic/">Pay Traffic Ticket</a></li>
+                <li><a href="/superior/rightfulowner/">Project Rightful Owner</a></li>
+                <li><a href="/tradenames/">Trade Names Database</a></li>
+                <li><a href="/forms/download.aspx?id=103848">Wireless Service in Courthouses<i class="fa-light fa-file-pdf fa-fw"></i></a></li>
+            </ul>
+        </li>
+        <li><a href="/forms/" aria-label="Delaware Court Forms">Forms</a></li>
+        <li><a href="/rules/" aria-label="Delaware Court Rules">Rules</a></li>
+        <li><a href="/calendars/">Calendars</a></li>
+        <li><a href="/opinions/" aria-label="Court Opinions">Opinions</a></li>
+    </ul>
+    <!-- END DESKTOP -->
+    <!-- SEARCH BUTTON -->
+    <div id="sb-search" class="sb-search">
+		<form id="search-form" method="GET">
+            <input type="text" id="st-search-input" class="sb-search-input" placeholder="Enter your search term..." aria-label="Search">
+            <input type="submit" id="sb-search-submit" class="sb-search-submit" aria-label="Search"><span class="sb-icon-search"></span>
+		</form>
+    </div>
+    <!-- END SEARCH BUTTON -->
+    <!-- SELF-HELP BUTTON -->
+    <ul class="nav navbar-nav navbar-right">
+        <li class="hidden-xs hidden-sm"> <div id="google_translate_element"></div></li>
+        <li class="hidden-xs hidden-sm">
+            <a href="/help/">
+                <!--<span class="label label-warning selfhelp"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;Self-Help</span></a>-->
+                <span class="label label-warning selfhelp1">Self-Help</span>&nbsp;&nbsp;
+            </a>
+        </li>
+      <!-- <li class="hidden-xs hidden-sm"> <div id="google_translate_element"></div></li> -->
+         
+        <li class="hidden-xs hidden-sm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    </ul>
+    <!-- END SELF-HELP BUTTON -->
+   
+
+ <!--<script type="text/javascript" class="hidden-xs hidden-sm">
   function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   }
@@ -193,1883 +340,2315 @@
 
 
 
-	</div>
-	<!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
-	<!-- END Fixed Main Nav Bar -->
+</div>
+<!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+    <!-- END Fixed Main Nav Bar -->
+
+    
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="main_content">
+                
+
+    <div id="content" role="main"> 
+
+        <form method="POST" action="./List.aspx?ag=Superior+Court" id="frmCourtOpinions" class="form-inline">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="QGRH+30u1+RIdtiSx46HS1faRPgEEQbCVfpX2i7HYZXVx4R+dpVd3rQNWJ4kfIlAWCt7YXOhpmgAE8ZO3gcf5Cs58KtiR6x4n5qOcQpGs7Q=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="785559C1" />
+
+            <div class="page-header">
+                <h1><span class="impressive">Opinions</span> and Orders</h1>
+            </div>
+
+            <p>Please note: These electronic orders may contain computer-generated errors or other deviations from the official printed versions. In case of discrepancies between the print and electronic versions of orders, the print version controls. In case of discrepancies between the print and electronic versions of orders and any later official version of them, the later version controls. </p><br />
+
+            
+
+<link rel="stylesheet"
+      href="/css/courtsCustomSpacing.css"
+      type="text/css">
+
+
+
+        <div class="col-md-1">
+            <div class="input-group">
+                <label
+                    for="selAgencies">
+                    Court:
+                </label>
+                <select
+                    id="selAgencies"
+                    name="ctlOpinions1selAgencies"
+                    class="form-control">
+                    
+                    <option value="All Courts" >All Courts</option>
+                    
+                    <option value="Court of Chancery" >Court of Chancery</option>
+                    
+                    <option value="Court of Common Pleas" >Court of Common Pleas</option>
+                    
+                    <option value="Family Court" >Family Court</option>
+                    
+                    <option value="Justice Of The Peace Court" >Justice Of The Peace Court</option>
+                    
+                    <option value="Superior Court" selected>Superior Court</option>
+                    
+                    <option value="Supreme Court" >Supreme Court</option>
+                    
+                </select>
+            </div>
+        </div>
+    
+        <div class="col-md-2">
+            <div class="input-group">
+                <label
+                    for="ctlOpinions1selperiods">
+                    Revision Date:
+                </label>
+                <select
+                    id="ctlOpinions1selperiods"
+                    name="ctlOpinions1selperiods"
+                    class="form-control">
+                    
+                    <option value="7" >Past 7 days</option>
+                    
+                    <option value="30" >Past 30 days</option>
+                    
+                    <option value="180" >Past 180 days</option>
+                    
+                    <option value="2025" selected>This year</option>
+                    
+                    <option value="year" >Custom year</option>
+                    
+                    <option value="date" >Custom dates</option>
+                    
+                </select>
+            </div>
+        </div>
+
+        
+        <div class="col-md-9">
+            <div class="input-group">
+                <label
+                    for="ctlOpinions1txtsearchtext">
+                    Search:
+                </label>
+                <input
+                    id="ctlOpinions1txtsearchtext"
+                    name="ctlOpinions1txtsearchtext"
+                    type="text"
+                    class="form-control"
+                    value=""
+                    placeholder="Search for..."
+                    size="40"
+                    maxlength="25"
+                    role="textbox"
+                    tabindex="0"
+                    onkeydown="if (event.keyCode === 13) { submitForm(true); return false; }" />
+                <span class="input-group-btn">
+                    <button
+                        class="btn searchButton"
+                        type="button"
+                        onclick="submitForm(true)"
+                        tabindex="0">
+                        <i class="fa-light fa-magnifying-glass" aria-hidden="true"></i>Search
+                    </button>
+                </span>
+            </div>
+        </div>
+    
+
+    <div class="clearfix" style="margin-bottom: 24px;" aria-hidden="true"></div>
+
+
+
+
+<script type="text/javascript" defer>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sel = document.getElementById('selAgencies');
+        if (sel) {
+            sel.addEventListener('change', function () {
+                submitForm(true);
+            });
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sel = document.getElementById('ctlOpinions1selperiods');
+        if (sel) {
+            sel.addEventListener('change', function () {
+                submitForm(true);
+            });
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sel = document.getElementById('ctlOpinions1selyears');
+        if (sel) {
+            sel.addEventListener('change', function () {
+                submitForm(true);
+            });
+        }
+    });
+
+</script>
+
+
+
+
+
+<ul class="nav nav-tabs courtsBR" role="tablist">
+    <li class="active" role="presentation">
+        <a href="#" role="tab" aria-selected="true" tabindex="0"
+           onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
+           All Cases
+        </a>
+    </li>
+    <li class="" role="presentation">
+        <a href="#" role="tab" aria-selected="false" tabindex="0"
+           onclick="document.getElementById('ctlOpinions1hdncasetype').value='Civil';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
+           Civil
+        </a>
+    </li>
+    <li class="" role="presentation">
+        <a href="#" role="tab" aria-selected="false" tabindex="0"
+           onclick="document.getElementById('ctlOpinions1hdncasetype').value='Criminal';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
+           Criminal
+        </a>
+    </li>
+    <li class="" role="presentation">
+        <a href="#" role="tab" aria-selected="false" tabindex="0"
+           onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='ccld';submitForm(true); return false;">
+           Complex Commercial Litigation Division
+        </a>
+    </li>
+</ul>
+
+
+
+<div class="row">
+    <div class="col-md-12 courtsBR" style="display: flex">
+        
+            <div class="col-md-8 totalcal" style="justify-content: flex-start;">
+                Superior Court Opinions and Orders
+                
+                    <span class="label label-default">
+                        612 Opinions
+                    </span>
+                
+            </div>
+        
+            <div class="col-md-4" style="justify-content: flex-end; text-align: right;">
+                <label for="ctlOpinions1selresults">
+                    Results per page
+                </label>
+                <select
+                    id="ctlOpinions1selresults"
+                    name="ctlOpinions1selresults"
+                    class="form-control"
+                    aria-label="Number of results shown per page">
+                    
+                    <option
+                        value="25" 
+                        selected>
+                        25
+                    </option>
+                    
+                    <option
+                        value="50" 
+                        >
+                        50
+                    </option>
+                    
+                    <option
+                        value="100" 
+                        >
+                        100
+                    </option>
+                    
+                </select>
+            </div>
+        
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sel = document.getElementById('ctlOpinions1selresults');
+        if (sel) {
+            sel.addEventListener('change', function () {
+                submitForm(false);
+            });
+        }
+    });
+
+</script>
+
+
+
+
+
+            <div class="table-responsive">
+
+                <table class="table table-responsive table-bordered table-striped courtsBR">
+                    <thead>
+                        <tr>
+                            
+                                <th class="col-md-2" scope="col">
+                                    
+                                        <button
+                                            class="sort-btn"
+                                            onclick="
+                                                document.getElementById('ctlOpinions1hdnsortbynew').value='parties';
+                                                submitForm(false)
+                                            "
+                                            aria-label="Sort by Parties/Caption"
+                                            title="Sort by Parties/Caption"
+                                            type="button">
+                                            <span>
+                                                Parties/Caption
+                                                <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    
+                                </th>
+                            
+                                <th class="col-md-1" scope="col">
+                                    
+                                        <button
+                                            class="sort-btn"
+                                            onclick="
+                                                document.getElementById('ctlOpinions1hdnsortbynew').value='date';
+                                                submitForm(false)
+                                            "
+                                            aria-label="Sort by Date"
+                                            title="Sort by Date"
+                                            type="button">
+                                            <span>
+                                                Date
+                                                <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    
+                                </th>
+                            
+                                <th class="col-md-2" scope="col">
+                                    
+                                        <button
+                                            class="sort-btn"
+                                            onclick="
+                                                document.getElementById('ctlOpinions1hdnsortbynew').value='number';
+                                                submitForm(false)
+                                            "
+                                            aria-label="Sort by File Number"
+                                            title="Sort by File Number"
+                                            type="button">
+                                            <span>
+                                                File Number
+                                                <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    
+                                </th>
+                            
+                                <th class="col-md-1" scope="col">
+                                    
+                                        <button
+                                            class="sort-btn"
+                                            onclick="
+                                                document.getElementById('ctlOpinions1hdnsortbynew').value='court';
+                                                submitForm(false)
+                                            "
+                                            aria-label="Sort by Court"
+                                            title="Sort by Court"
+                                            type="button">
+                                            <span>
+                                                Court
+                                                <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    
+                                </th>
+                            
+                                <th class="col-md-1" scope="col">
+                                    
+                                        <button
+                                            class="sort-btn"
+                                            onclick="
+                                                document.getElementById('ctlOpinions1hdnsortbynew').value='type';
+                                                submitForm(false)
+                                            "
+                                            aria-label="Sort by Type"
+                                            title="Sort by Type"
+                                            type="button">
+                                            <span>
+                                                Type
+                                                <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    
+                                </th>
+                            
+                                <th class="col-md-1" scope="col">
+                                    
+                                        <button
+                                            class="sort-btn"
+                                            onclick="
+                                                document.getElementById('ctlOpinions1hdnsortbynew').value='officer';
+                                                submitForm(false)
+                                            "
+                                            aria-label="Sort by Judicial Officer"
+                                            title="Sort by Judicial Officer"
+                                            type="button">
+                                            <span>
+                                                Judicial Officer
+                                                <i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    
+                                </th>
+                            
+                                <th class="col-md-4" scope="col">
+                                    Description
+                                    
+                                </th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389420"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                MSF Oakdale, LLC, et al. v. Transform Operating Stores, LLC
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/30/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N22C-06-216 MAA CCLD
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Adams<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Parties' Motions in Limine. 
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389430"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                State v. Saavedra
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/30/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                1705014681
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Criminal
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Adams<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Commissioner's Report and Recommendations - ADOPTED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389340"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                O'Kieffe, et al. v. Legacy Home LLC., et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/23/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                K23C-06-016 RLG
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Green-Streett<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Damages upon an Inquisition Hearing.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389300"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Blades v. Rosson, et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/22/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N25C-04-008 FWW
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wharton<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Defendant New Horizons Leasing, Inc.'s Motion to Dismiss - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389280"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Kelson v. Parker
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/22/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N25M-12-080 KMM
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Miller<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Petition for Writ of Habeas Corpus - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389310"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                State v. McGinnis
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/22/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                2409001184
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Criminal
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Conner<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Defendant's Motion for Judgment of Acquittal - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389290"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                State v. Stalczynski
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/22/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                2010013976
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Criminal
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wharton<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Defendant's Motion for Postconviction Relief - SUMMARILY DISMISSED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389160"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                TFI Tutti LLC, et al. v. Sono America, Inc., et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/19/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N23C-03-122 PRW CCLD
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wallace<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Letter Order. Plaintiffs' Motion for Reargument - GRANTED; Defendant's Motion to Dismiss - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389020"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Shaw-Hicks v. Bayada Home Health Care
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/16/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                K25A-06-001 JJC
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Clark<br/>
+R.J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Appeal from the Decision of the Industrial Accident Board - AFFIRMED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389040"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Fidelity National Information Services, Inc., et al. v. Rentner, et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/15/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N24C-09-089 SKR CCLD
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Rennie<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Letter Opinion.  Plaintiffs' Motion to Strike Defendants' Third and Fifth Affirmative Defenses - GRANTED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388950"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Sandonato v. Horsey, et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/15/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                K25C-05-023 NEP
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Primos<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Plaintiff's Motions to Disqualify Counsel - DENIED
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=389030"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                State v. Sample
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/15/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                2407015731
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Criminal
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wharton<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order.  Defendant's Motion for Postconviction Relief - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388830"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Carpenter v. Liberty Mutual Ins. Co., et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/12/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N23C-06-081 FJJ
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Jones<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Parties Respective Motions for Reargument and on Plaintiff’s Motion for Costs and Fees – DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388820"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                George X v. Morrill, et al. 
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/12/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N24C-10-237 FJJ
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Jones<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Opinion and Order. Parties' Cross-Motions - GRANTED in part, DENIED in part; Motion for Protective Order, Motion for Sanctions, and Motion for Transcripts as the Court's Expense - DENIED; Motion to Preserve and Clarify the Court's Ruling - DENIED, as Moot
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388850"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Higgin v. Diamond and Associates, LLC, et al. 
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/12/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N24C-12-046 FWW
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wharton<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Defendant's Motion to Dismiss – GRANTED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388740"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Cushing v. Holowaty, et al. 
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/11/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N25C-04-299 KMM CCLD
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Miller<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Memorandum Opinion and Order. Defendants’ Partial Motion to Dismiss- GRANTED, in part, DENIED, in part. 
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388720"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Murphy, et al. v. Delaware State Police, et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/11/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N25C-07-163 CEB
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Butler<br/>
+R.J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Application for Certification of Interlocutory Appeal - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388730"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Offit Kurman, P.A. v. Lillard, et al. 
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/11/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N25C-03-120 CLS 
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Scott<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Memorandum Opinion. Upon Defendant Mark Lillard’s Motion for Sanctions and Motion to Dismiss - DENIED. 
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388610"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Hartree Natural Gas Storage, LLC v. AIG Specialty Insurance Company
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/09/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N22C-05-081 PRW CCLD
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wallace<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Memorandum Opinion and Order. Defendant's Motion for Summary Judgment - DENIED. 
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388510"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Bovell v. Allstate Insurance, et al. 
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/08/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N24C-10-240 CLS
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Scott<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil Order. Defendant’s Motion to Dismiss - GRANTED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388480"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Masterworks, LLC v. John Doe
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/08/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N25C-06-243 FWW
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wharton<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Upon Defendant John Doe’s Motion to Dismiss - DENIED. Upon Defendant John Doe’s Motion for a Protective Order - DENIED. 
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388530"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                RGIS International Transition Holdco, LLC et al. v. Retail Services WIS Corporation et al
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/08/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N21C-12-077 PRW CCLD
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Wallace<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Letter Order. Plaintiffs’ Rule 59(e) Motion for Reargument - DENIED; Defendants’ Motion to Adjourn Trial Date and Partially Stay Discovery - DENIED AS MOOT; Plaintiffs’ Motion to Enter Case Schedule- DENIED AS MOOT.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388470"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Robinson v. Kelly Cable of N.M., LLC, et al.
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/08/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                N24C-11-037 CEB
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Butler<br/>
+R.J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Memorandum Opinion and Order. Upon Consideration of Plaintiff’s Motion for Summary Judgment - GRANTED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388490"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                State v. Miller 
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/08/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                1611008842A&B
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Criminal
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Jones<br/>
+J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order and Opinion. Defendant's Motion for Postconviction Relief - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <a href="/Opinions/Download.aspx?id=388420"
+                                               class="courtsWrapCell"
+                                               role="button">
+                                                Dyton v. Ahern, et al
+                                            </a>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                12/05/2025
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-2 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                K25C-06-023 JJC
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Superior Court
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Civil
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-1 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Clark<br/>
+R.J.
+                                            </span>
+                                        
+                                    </td>
+                                
+                                    <td class="col-md-4 container-fluid">
+                                        
+                                            <span class="courtsWrapCell">
+                                                Order. Defendants’ Motion for Reargument - DENIED.
+                                            </span>
+                                        
+                                    </td>
+                                
+                            </tr>
+                        
+                    </tbody>
+                </table>
+
+            </div>
+
+        
+            <nav class="text-center" aria-label="Index of pages">
+                <ul class="pagination" role="list">
+                    
+                        <li class="disabled" role="listitem">
+                            <button type="button" disabled aria-label="No previous page">
+                                <i class="fa-regular fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    
+                        <li class="active" role="listitem">
+                            <button type="button"
+                                onclick="document.getElementById('ctlOpinions1hdnpageno').value='1';submitForm(false)"
+                                aria-label="Page 1 of 25"
+                                aria-current='page'>
+                                1
+                            </button>
+                        </li>
+                    
+                        <li class="" role="listitem">
+                            <button type="button"
+                                onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"
+                                aria-label="Page 2 of 25"
+                                >
+                                2
+                            </button>
+                        </li>
+                    
+                        <li class="" role="listitem">
+                            <button type="button"
+                                onclick="document.getElementById('ctlOpinions1hdnpageno').value='3';submitForm(false)"
+                                aria-label="Page 3 of 25"
+                                >
+                                3
+                            </button>
+                        </li>
+                    
+                            <li role="listitem">
+                                <button type="button"
+                                    onclick="document.getElementById('ctlOpinions1hdnpageno').value='4';submitForm(false)"
+                                    aria-label="More next pages">
+                                    <span aria-hidden="true"><i class="fa-regular fa-ellipsis" aria-hidden="true"></i></span>
+                                </button>
+                            </li>
+                            <li role="listitem">
+                                <button type="button"
+                                    onclick="document.getElementById('ctlOpinions1hdnpageno').value='25';submitForm(false)"
+                                    aria-label="Page 25 of 25">
+                                    25
+                                </button>
+                            </li>
+                        
+                        <li role="listitem">
+                            <button type="button"
+                                onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"
+                                aria-label="Next page">
+                                <i class="fa-regular fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    
+                </ul>
+            </nav>
+        <style>
+    .judge-label {
+        background-color: unset;
+        color: unset;
+        font-size: unset;
+        font-weight: unset;
+        margin: 2px;
+        padding: 6px;
+        border-radius: 6px;
+        display: inline-block;
+        text-align: center;
+    }
+    .title-c  { color: black; background-color: #b3c6c6; }  
+    .title-cj { color: black; background-color: #c0d4b8; }  
+    .title-j  { color: black; background-color: #d9baa3; }  
+    .title-sm { color: black; background-color: #9ea4ba; }  
+    .title-m  { color: black; background-color: #a3c2d9; }  
+    .title-pj { color: black; background-color: #ccb8d4; }  
+    .title-rj { color: black; background-color: #88bdf2; } 
+    .title-vc { color: black; background-color: #BADBA2; }  
+</style>
+
+<div class="col-md-12 text-center courtsBR">
+    
+            
+    <span class="judge-label title-c">C.=Chancellor or Commissioner</span>
+    <span class="judge-label title-cj">C.J.=Chief Justice or Chief Judge</span>
+    <span class="judge-label title-j">J.=Justice or Judge</span>
+    <span class="judge-label title-sm">S.M.=Senior Magistrate</span>
+    <span class="judge-label title-m">M.=Magistrate in Chancery</span>
+    <span class="judge-label title-pj">P.J.=President Judge</span>
+    <span class="judge-label title-rj">R.J.=Resident Judge</span>
+    <span class="judge-label title-vc">V.C.=Vice Chancellor</span>
+</div>
+
+
+
+
+
+<input 
+    id="ctlOpinions1hdnagency" 
+    name="ctlOpinions1hdnagency" 
+    type="hidden"
+    value="Superior Court" />
+
+<input 
+    id="ctlOpinions1hdncasetype" 
+    name="ctlOpinions1hdncasetype" 
+    type="hidden"
+    value="" />
+
+<input 
+    id="ctlOpinions1hdndivision" 
+    name="ctlOpinions1hdndivision" 
+    type="hidden"
+    value="" />
+
+<input 
+    id="ctlOpinions1hdnsortby" 
+    name="ctlOpinions1hdnsortby" 
+    type="hidden"
+    value="" />
+
+<input 
+    id="ctlOpinions1hdnsortorder" 
+    name="ctlOpinions1hdnsortorder" 
+    type="hidden"
+    value="0" />
+
+<input 
+    id="ctlOpinions1hdnsortbynew" 
+    name="ctlOpinions1hdnsortbynew" 
+    type="hidden"
+    value="" />
+
+<input 
+    id="ctlOpinions1hdnpageno" 
+    name="ctlOpinions1hdnpageno" 
+    type="hidden"
+    value="" />
+
+
+<script type="text/javascript">
+    function submitForm(clear) {
+        if (clear) {
+            if (document.getElementById('ctlOpinions1hdnsortby')) {
+                document.getElementById('ctlOpinions1hdnsortby').value = '';
+            }
+            if (document.getElementById('ctlOpinions1hdnsortorder')) {
+                document.getElementById('ctlOpinions1hdnsortorder').value = '';
+            }
+            if (document.getElementById('ctlOpinions1hdnsortbynew')) {
+                document.getElementById('ctlOpinions1hdnsortbynew').value = '';
+            }
+            if (document.getElementById('ctlOpinions1hdnpageno')) {
+                document.getElementById('ctlOpinions1hdnpageno').value = '';
+            }
+        }
+        frmCourtOpinions.submit();
+    }
+
+    function submitFormGet(sortBy, sortOrder, page) {
+        var addYear = false;
+        var addDates = false;
+        var agency;
+        var period;
+        var year;
+        var fromDate;
+        var toDate;
+        var resultsPerPage;
+        var searchText;
+
+        if (document.getElementById("selAgencies")) {
+            agency = document.getElementById("selAgencies").value;
+        } else {
+            agency = 'Superior Court';
+        }
+
+        if (document.getElementById("selYears")) {
+            year = document.getElementById("selYears").value;
+        } else {
+            year = '0';
+        }
+
+        if (document.getElementById("selSearch")) {
+            period = document.getElementById("selSearch").value;
+            if (period === 'year') {
+                addYear = true;
+            }
+            if (period === 'range') {
+                addDates = true;
+            }
+        } else {
+        }
+
+        if (document.getElementById("txtFromDate")) {
+            fromDate = document.getElementById("txtFromDate").value;
+        } else {
+            fromDate = '01/01/2025';
+        }
+
+        if (document.getElementById("txtToDate")) {
+            toDate = document.getElementById("txtToDate").value;
+        } else {
+            toDate = '12/31/2025';
+        }
+
+        if (document.getElementById("selResults")) {
+            resultsPerPage = document.getElementById("selResults").value;
+        } else {
+            resultsPerPage = '25';
+        }
+
+        if (document.getElementById("txtSearch")) {
+            searchText = document.getElementById("txtSearch").value;
+        } else {
+            searchText = '';
+        }
+
+        document.location.href = encodeURI('/opinions/List.aspx' +
+            '?ag=' + agency +
+            '&typ=' + '' +
+            '&div=' + '' +
+            '&period=' + period +
+            (addYear ? ('&year=' + year) : '') +
+            (addDates ? ('&from=' + fromDate + '&to=' + toDate) : '') +
+            '&results=' + resultsPerPage +
+            '&ss=' + searchText +
+            '&srt=' + sortBy +
+            '&srtord=' + sortOrder +
+            '&page=' + page);
+    }
+
+</script>
+
+
+
+
+
+        </form>
+
+    </div> 
+
+
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <br />
+
+    <!-- BEGIN Courts Footer -->
+    <footer>
+<div id="footer">
+    <div id="txt_options">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="hidden-xs">The Official Website of the Delaware Judiciary</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="txt_size">
+                        Change Your Text Size: &nbsp; <a class="decreaseFont text_buttons" tabindex="0" role="button"><span class="wave_text">Make Text Size Smaller</span><i class="far fa-minus-square fa-fw fa-lg" aria-label="Make text size smaller" title="Make text size smaller"></i></a>
+                         <a class="resetFont text_buttons" role="button" tabindex="0"><span class="wave_text">Reset Text Size</span><i class="far fa-square fa-fw fa-lg" aria-label="Reset text size" title="Reset text size"></i></a> 
+                         <a class="increaseFont text_buttons" tabindex="0" role="button"><span class="wave_text" tabindex="0">Make Text Size Bigger</span><i class="far fa-plus-square fa-fw fa-lg" aria-label="Make text size larger" title="Make text size larger"></i></a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <br /><br />
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <p class="ft_subhead"><a href="/locations/" aria-label="Delaware Courts Hours & Locations">Hours &amp; Locations</a></p><br />
+
+                <!--<p class="ft_subhead"><a href="/locations/contacts.aspx">Court Contacts</a></p><br /> -->  
+                <p class="ft_subhead"><a href="/help/">Self-Help</a></p><br />                       
+                <p class="ft_subhead"><a href="/docket.aspx">Civil Case Search</a></p><br />
+                <p class="ft_subhead"><a href="/help/traffic/">Traffic</a></p><br />
+                 <p class="ft_subhead"><a href="/epayment.aspx" aria-label="Make an ePayment in the Delaware State Courts">EPayments</a></p><br />
+                      
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6">             
+                <p class="ft_subhead"><a href="/information_public.aspx" aria-label="Information about the Delaware Courts for the Public">For the Public</a></p><br />            
+                <p class="ft_subhead"><a href="/information_jurors.aspx" aria-label="Information about jury duty for Jurors">For Jurors</a></p><br />
+                <p class="ft_subhead"><a href="/information_attorneys.aspx" aria-label="Information about the Delaware Courts for Attorneys">For Attorneys</a></p><br />
+                <p class="ft_subhead"><a href="/information_media.aspx">For the Media</a></p><br /> 
+                <p class="ft_subhead"><a href="/topics.aspx">Topics</a></p><br /> 
+            </div>
+            
+            <div class="clearfix visible-sm"></div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6">             
+                <p class="ft_subhead"><a href="/aoc/ada.aspx">Accessibility</a></p><br />     
+                <p class="ft_subhead"><a href="/help/espanol.aspx">Material en español</a></p><br />
+                <p class="ft_subhead"><a href="/supreme/access.aspx">Access to Justice</a></p><br />
+                <p class="ft_subhead"><a href="/career/">Careers</a></p><br />                      
+                <p class="ft_subhead"><a href="/feedback/index.aspx/" aria-label="Feedback forms for Delaware State Courts">Feedback</a></p><br /><br />
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                
+                <br /><br />
+                <a href="../../index.aspx"><img src="/img/delaware_courts_logo_footer.png" alt="Delaware Courts logo" class="img-responsive foot-logo" /></a>
+                <br /><br />
+            </div>
+
+        </div>
+        <hr class="footer" />
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <p><a href="/">Delaware Courts Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../../../../../terms.aspx">Terms of Use</a>&nbsp;&nbsp;<!--|&nbsp;&nbsp;<a href="/feedback/">Feedback</a>&nbsp;&nbsp;-->|&nbsp;&nbsp;<a href="https://delaware.gov/">Delaware.gov</a></p>
+                <p><small>&copy; 2025 The Delaware Judiciary - <a href="/">courts.delaware.gov</a></small></p>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+
+<!-- Retina Display JS Files -->
+<script src="/js/retina.js"></script>
+<script src="/js/less.js"></script>
+
+<!-- Searchbar Files -->
+<script src="/js/uisearch.js"></script>
+<script src="/js/classie.js"></script>
+<script>
+	  new UISearch( document.getElementById( 'sb-search' ) );
+</script>
+
+    <!-- END Courts Footer -->
+    
+    <script src="/js/courts-scripts.js" defer></script>
 
-
-
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12" id="main_content">
-
-				<div id="content"><!-- for skip navigation -->
-					<form method="POST" action="./List.aspx?ag=Superior+Court" id="frmCourtOpinions"
-						class="form-inline">
-						<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
-							value="uXjlu0DwA8bhgaOwWCEys//GF4dpCq5/akrYDwWqME5MgYV0dR78uq7zQyzp5QDvhhwJpezvf7HozthqEK0KV5G8GUoC/Kkh7V0wjzoM2TM=" />
-
-						<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="785559C1" />
-
-						<div class="page-header">
-							<h1><span class="impressive">Opinions</span> and Orders</h1>
-						</div>
-
-						<p>Please note: These electronic orders may contain computer-generated errors or other
-							deviations from the official printed versions. In case of discrepancies between the print
-							and electronic versions of orders, the print version controls. In case of discrepancies
-							between the print and electronic versions of orders and any later official version of them,
-							the later version controls. </p><br />
-
-
-						<div class="col-md-1">
-							<div class="input-group">
-								<label id="selAgencies-Label" for="selAgencies">
-									Court:
-								</label>
-								<select id="selAgencies" name="ctlOpinions1selAgencies" class="form-control"
-									onchange="submitForm(true)">
-
-									<option value="All Courts">All Courts</option>
-
-									<option value="Court of Chancery">Court of Chancery</option>
-
-									<option value="Court of Common Pleas">Court of Common Pleas</option>
-
-									<option value="Family Court">Family Court</option>
-
-									<option value="Justice Of The Peace Court">Justice Of The Peace Court</option>
-
-									<option value="Superior Court" selected>Superior Court</option>
-
-									<option value="Supreme Court">Supreme Court</option>
-
-								</select>
-							</div>
-						</div>
-
-						<div class="col-md-2">
-							<div class="input-group">
-								<label id="ctlOpinions1selperiods-label" for="ctlOpinions1selperiods">
-									Revision Date:
-								</label>
-								<select id="ctlOpinions1selperiods" name="ctlOpinions1selperiods" class="form-control"
-									onchange="submitForm(true)">
-
-									<option value="7">Past 7 days</option>
-
-									<option value="30">Past 30 days</option>
-
-									<option value="180">Past 180 days</option>
-
-									<option value="2025" selected>This year</option>
-
-									<option value="year">Custom year</option>
-
-									<option value="date">Custom dates</option>
-
-								</select>
-							</div>
-						</div>
-
-
-						<div class="col-md-9">
-							<div class="input-group">
-								<label id="ctlOpinions1txtsearchtext-label" for="ctlOpinions1txtsearchtext">
-									Search:
-								</label>
-								<input id="ctlOpinions1txtsearchtext" name="ctlOpinions1txtsearchtext" type="text"
-									class="form-control" value="" placeholder="Search for..." size="40" maxlength="25"
-									role="textbox" tabindex="0"
-									onkeydown="if (event.keyCode === 13) { submitForm(true); return false; }" />
-								<span class="input-group-btn">
-									<button class="btn searchButton" type="button" onclick="submitForm(true)"
-										tabindex="0">
-										<i class="fa-light fa-magnifying-glass" aria-hidden="true"></i>Search
-									</button>
-								</span>
-							</div>
-						</div>
-
-
-						<div class="clearfix" style="margin-bottom: 24px;" aria-hidden="true"></div>
-
-
-
-						<ul class="nav nav-tabs" role="tablist">
-							<li class="active" role="presentation">
-								<a href="#" role="tab" aria-selected="true" tabindex="0"
-									onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
-									All Cases
-								</a>
-							</li>
-							<li class="" role="presentation">
-								<a href="#" role="tab" aria-selected="false" tabindex="0"
-									onclick="document.getElementById('ctlOpinions1hdncasetype').value='Civil';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
-									Civil
-								</a>
-							</li>
-							<li class="" role="presentation">
-								<a href="#" role="tab" aria-selected="false" tabindex="0"
-									onclick="document.getElementById('ctlOpinions1hdncasetype').value='Criminal';document.getElementById('ctlOpinions1hdndivision').value='';submitForm(true); return false;">
-									Criminal
-								</a>
-							</li>
-							<li class="" role="presentation">
-								<a href="#" role="tab" aria-selected="false" tabindex="0"
-									onclick="document.getElementById('ctlOpinions1hdncasetype').value='';document.getElementById('ctlOpinions1hdndivision').value='ccld';submitForm(true); return false;">
-									Complex Commercial Litigation Division
-								</a>
-							</li>
-						</ul>
-						<div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
-
-
-
-
-						<div class="col-md-12" style="display: flex; align-items: flex-end;">
-
-
-							<div class="col-md-8 noleftpadding totalcal">
-								Superior Court Opinions and Orders
-
-								<span class="label label-default">
-									529 Opinions
-								</span>
-
-							</div>
-
-							<div class="col-md-4 norightpadding" style="text-align: right; align-content: end;">
-								<label id="ctlOpinions1selresults-label" for="ctlOpinions1selresults">
-									Results per page
-								</label>
-								<select id="ctlOpinions1selresults" name="ctlOpinions1selresults" class="form-control"
-									onchange="submitForm(false)">
-
-									<option value="25" selected>
-										25
-									</option>
-
-									<option value="50">
-										50
-									</option>
-
-									<option value="100">
-										100
-									</option>
-
-								</select>
-							</div>
-
-
-						</div>
-
-						<div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
-
-
-						<table class="table table-responsive table-bordered table-striped">
-
-							<thead>
-								<tr>
-
-									<th class="col-md-2" scope="col">
-
-										<button type="button" class="sort-btn" onclick="
-                                            document.getElementById('ctlOpinions1hdnsortbynew').value='parties';
-                                            submitForm(false)
-                                            " aria-label="Sort by Parties/Caption">
-											Parties/Caption
-											<i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
-										</button>
-
-
-									</th>
-
-									<th class="col-md-1" scope="col">
-
-										<button type="button" class="sort-btn" onclick="
-                                            document.getElementById('ctlOpinions1hdnsortbynew').value='date';
-                                            submitForm(false)
-                                            " aria-label="Sort by Date">
-											Date
-											<i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
-										</button>
-
-
-									</th>
-
-									<th class="col-md-2" scope="col">
-
-										<button type="button" class="sort-btn" onclick="
-                                            document.getElementById('ctlOpinions1hdnsortbynew').value='number';
-                                            submitForm(false)
-                                            " aria-label="Sort by File Number">
-											File Number
-											<i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
-										</button>
-
-
-									</th>
-
-									<th class="col-md-1" scope="col">
-
-										<button type="button" class="sort-btn" onclick="
-                                            document.getElementById('ctlOpinions1hdnsortbynew').value='court';
-                                            submitForm(false)
-                                            " aria-label="Sort by Court">
-											Court
-											<i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
-										</button>
-
-
-									</th>
-
-									<th class="col-md-1" scope="col">
-
-										<button type="button" class="sort-btn" onclick="
-                                            document.getElementById('ctlOpinions1hdnsortbynew').value='type';
-                                            submitForm(false)
-                                            " aria-label="Sort by Type">
-											Type
-											<i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
-										</button>
-
-
-									</th>
-
-									<th class="col-md-1" scope="col">
-
-										<button type="button" class="sort-btn" onclick="
-                                            document.getElementById('ctlOpinions1hdnsortbynew').value='officer';
-                                            submitForm(false)
-                                            " aria-label="Sort by Judicial Officer">
-											Judicial Officer
-											<i class="fa-duotone fa-light fa-arrows-up-down" aria-hidden="true"></i>
-										</button>
-
-
-									</th>
-
-									<th class="col-md-4" scope="col">
-										Description
-
-									</th>
-
-								</tr>
-							</thead>
-
-							<tbody>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref1" href="/Opinions/Download.aspx?id=386550"
-											role="link">
-											<span id="ctlOpinions1LinkValue1">Hsu v. Trinidad Navarro, et al. </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/28/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref2" href="/Opinions/Download.aspx?id=386550"
-											role="link">
-											<span id="ctlOpinions1LinkValue2">N25C-03-083 PAW</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Winston<br />
-										J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion. Upon Consideration of Defendants’ Joint Motion for Summary
-										Judgment - GRANTED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref3" href="/Opinions/Download.aspx?id=386610"
-											role="link">
-											<span id="ctlOpinions1LinkValue3">M&B Enterprise, LLC, et al. v.
-												Klein</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/28/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref4" href="/Opinions/Download.aspx?id=386610"
-											role="link">
-											<span id="ctlOpinions1LinkValue4">N23C-10-044 EMD CCLD</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Davis<br />
-										P.J.
-
-									</td>
-
-									<td>
-										Opinion. Plaintiff's Motion for Judgment on Pleadings – GRANTED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref5" href="/Opinions/Download.aspx?id=386620"
-											role="link">
-											<span id="ctlOpinions1LinkValue5">State v. Norman</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/28/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref6" href="/Opinions/Download.aspx?id=386620"
-											role="link">
-											<span id="ctlOpinions1LinkValue6">2203010974</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										O'Connor<br />
-										C.
-
-									</td>
-
-									<td>
-										Report and Recommendation. Defendant’s Motion for Postconviction Relief - SHOULD
-										BE SUMMARILY DISMISSED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref7" href="/Opinions/Download.aspx?id=386580"
-											role="link">
-											<span id="ctlOpinions1LinkValue7">Superior Screen and Glass, Inc. v. Cahill
-												and Vandersal</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/28/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref8" href="/Opinions/Download.aspx?id=386580"
-											role="link">
-											<span id="ctlOpinions1LinkValue8">S25A-01-002 CAK</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Karsnitz<br />
-										R.J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion and Order. Upon Appeal from the Court of Common Pleas –
-										REVERSED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref9" href="/Opinions/Download.aspx?id=386540"
-											role="link">
-											<span id="ctlOpinions1LinkValue9">Kane v. Milford AID II OPCO LLC</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/27/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref10" href="/Opinions/Download.aspx?id=386540"
-											role="link">
-											<span id="ctlOpinions1LinkValue10">N25C-02-519 KMM</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Miller<br />
-										J.
-
-									</td>
-
-									<td>
-										Order. Plaintiff's Motion to Amend - GRANTED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref11" href="/Opinions/Download.aspx?id=386530"
-											role="link">
-											<span id="ctlOpinions1LinkValue11">Novak v. Regal Cinemas, Inc. et
-												al.</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/27/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref12" href="/Opinions/Download.aspx?id=386530"
-											role="link">
-											<span id="ctlOpinions1LinkValue12">N19C-11-137 SKR</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Rennie<br />
-										J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion. Defendant’s Motion for Summary Judgment – GRANTED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref13" href="/Opinions/Download.aspx?id=386600"
-											role="link">
-											<span id="ctlOpinions1LinkValue13">BMB-FJ, LLC v. Frontier Justice, LLC, et
-												al.</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/24/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref14" href="/Opinions/Download.aspx?id=386600"
-											role="link">
-											<span id="ctlOpinions1LinkValue14">N25C-03-188 CLS</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Scott<br />
-										J.
-
-									</td>
-
-									<td>
-										Order. Upon Defendant's Motion to Dismiss - GRANTED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref15" href="/Opinions/Download.aspx?id=386520"
-											role="link">
-											<span id="ctlOpinions1LinkValue15">In Re: 512 Main Street, Stanton, DE
-												19804</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/24/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref16" href="/Opinions/Download.aspx?id=386520"
-											role="link">
-											<span id="ctlOpinions1LinkValue16">N25M-04-017 DJB</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Brennan<br />
-										J.
-
-									</td>
-
-									<td>
-										Order. Petitioner's Petition for Access to Property - GRANTED; Petitioner's
-										Motion to Dismiss - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref17" href="/Opinions/Download.aspx?id=386430"
-											role="link">
-											<span id="ctlOpinions1LinkValue17">State v. Smith </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/24/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref18" href="/Opinions/Download.aspx?id=386430"
-											role="link">
-											<span id="ctlOpinions1LinkValue18">2401005854</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Jones<br />
-										J.
-
-									</td>
-
-									<td>
-										Order. Defendant’s Motion for Review of Sentence - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref19" href="/Opinions/Download.aspx?id=386390"
-											role="link">
-											<span id="ctlOpinions1LinkValue19">The Cigna Group v. XL Specialty Insurance
-												Co. et al.</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/24/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref20" href="/Opinions/Download.aspx?id=386390"
-											role="link">
-											<span id="ctlOpinions1LinkValue20">N23C-03-009 SKR CCLD</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Rennie<br />
-										J.
-
-									</td>
-
-									<td>
-										Letter Opinion. Defendant's Notice of Exception - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref21" href="/Opinions/Download.aspx?id=386400"
-											role="link">
-											<span id="ctlOpinions1LinkValue21">Monte vs. 24 Liquors, LLC</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/23/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref22" href="/Opinions/Download.aspx?id=386400"
-											role="link">
-											<span id="ctlOpinions1LinkValue22">S25C-03-006 RHR</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Robinson<br />
-										J.
-
-									</td>
-
-									<td>
-										Monte v. 24 Liquors, LLC
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref23" href="/Opinions/Download.aspx?id=386380"
-											role="link">
-											<span id="ctlOpinions1LinkValue23">State v. Mercer</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/23/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref24" href="/Opinions/Download.aspx?id=386380"
-											role="link">
-											<span id="ctlOpinions1LinkValue24">0804033000</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Miller<br />
-										J.
-
-									</td>
-
-									<td>
-										Order Denying Motion for Transcripts
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref25" href="/Opinions/Download.aspx?id=386420"
-											role="link">
-											<span id="ctlOpinions1LinkValue25">State v. Muhammad</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/23/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref26" href="/Opinions/Download.aspx?id=386420"
-											role="link">
-											<span id="ctlOpinions1LinkValue26">2007003170</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Butler<br />
-										R.J.
-
-									</td>
-
-									<td>
-										Order. Defendant’s Motion for Postconviction Relief - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref27" href="/Opinions/Download.aspx?id=386410"
-											role="link">
-											<span id="ctlOpinions1LinkValue27">State v. Richards</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/23/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref28" href="/Opinions/Download.aspx?id=386410"
-											role="link">
-											<span id="ctlOpinions1LinkValue28">2407016317A</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Butler<br />
-										R.J.
-
-									</td>
-
-									<td>
-										Order. Defendant’s Motion for Judgment of Acquittal - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref29" href="/Opinions/Download.aspx?id=386240"
-											role="link">
-											<span id="ctlOpinions1LinkValue29">Chrustowski v. Minuti, et al.</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/22/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref30" href="/Opinions/Download.aspx?id=386240"
-											role="link">
-											<span id="ctlOpinions1LinkValue30">K25C-09-021 NEP</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Primos<br />
-										J.
-
-									</td>
-
-									<td>
-										Order. Upon Plaintiff’s Application to Proceed in Forma Pauperis – GRANTED; Upon
-										Court’s Consideration of Complaint – DISMISSED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref31" href="/Opinions/Download.aspx?id=386180"
-											role="link">
-											<span id="ctlOpinions1LinkValue31">Katz v. Infusion Services Management,
-												LLC</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/22/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref32" href="/Opinions/Download.aspx?id=386180"
-											role="link">
-											<span id="ctlOpinions1LinkValue32">N25C-02-061 MAA CCLD </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Adams<br />
-										J.
-
-									</td>
-
-									<td>
-										Order resolving Defendant's Motion to Dismiss.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref33" href="/Opinions/Download.aspx?id=386210"
-											role="link">
-											<span id="ctlOpinions1LinkValue33">State v. Jackson</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/22/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref34" href="/Opinions/Download.aspx?id=386210"
-											role="link">
-											<span id="ctlOpinions1LinkValue34">0107004921A</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Karsnitz<br />
-										R.J.
-
-									</td>
-
-									<td>
-										Letter Order with Exhibits. On Remand from the Supreme Court of Delaware Motion
-										for Sentence Modification (Criminal Rule 35) - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref35" href="/Opinions/Download.aspx?id=386250"
-											role="link">
-											<span id="ctlOpinions1LinkValue35">State v. Kimbrough</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/22/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref36" href="/Opinions/Download.aspx?id=386250"
-											role="link">
-											<span id="ctlOpinions1LinkValue36">1904013731</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Primos<br />
-										J.
-
-									</td>
-
-									<td>
-										Order. Defendant’s Motion for Correction of an Illegal Sentence – DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref37" href="/Opinions/Download.aspx?id=386260"
-											role="link">
-											<span id="ctlOpinions1LinkValue37">State v. McCurdy</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/22/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref38" href="/Opinions/Download.aspx?id=386260"
-											role="link">
-											<span id="ctlOpinions1LinkValue38">2209000664</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Criminal
-
-									</td>
-
-									<td>
-										Jones<br />
-										J.
-
-									</td>
-
-									<td>
-										Opinion and Order. Defendant’s Motion for Post-Conviction Relief - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref39" href="/Opinions/Download.aspx?id=386270"
-											role="link">
-											<span id="ctlOpinions1LinkValue39">Unified Door & Hardware/Prevent Security
-												v. Logullo, Jr.</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/22/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref40" href="/Opinions/Download.aspx?id=386270"
-											role="link">
-											<span id="ctlOpinions1LinkValue40">N25A-04-001 CLS</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Scott<br />
-										J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion. On Appeal from the Industrial Accident Board - AFFIRMED, in
-										part; REVERSED, in part.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref41" href="/Opinions/Download.aspx?id=386190"
-											role="link">
-											<span id="ctlOpinions1LinkValue41">LeGrand, et al. v. Bayhealth Medical
-												Center, Inc., et al. </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/21/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref42" href="/Opinions/Download.aspx?id=386190"
-											role="link">
-											<span id="ctlOpinions1LinkValue42">N25C-04-301 KMM </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Miller<br />
-										J.
-
-									</td>
-
-									<td>
-										Order on Motion to Stay - DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref43" href="/Opinions/Download.aspx?id=386080"
-											role="link">
-											<span id="ctlOpinions1LinkValue43">Estate of Sybil Jayson v. U.S. Bank
-												National Association et al.</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/20/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref44" href="/Opinions/Download.aspx?id=386080"
-											role="link">
-											<span id="ctlOpinions1LinkValue44">N24C-12-216 PRW CCLD</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Wallace<br />
-										J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion and Order. Defendants' Motions to Dismiss- DENIED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref45" href="/Opinions/Download.aspx?id=386490"
-											role="link">
-											<span id="ctlOpinions1LinkValue45">Jackson v. Pep Boys </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/20/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref46" href="/Opinions/Download.aspx?id=386490"
-											role="link">
-											<span id="ctlOpinions1LinkValue46">N25A-03-003 FWW</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Wharton<br />
-										J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion. Appeal from the Industrial Accident Board – AFFIRMED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref47" href="/Opinions/Download.aspx?id=386010"
-											role="link">
-											<span id="ctlOpinions1LinkValue47">Lamark Media Group, LLC v. MPUSA,
-												LLC</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/17/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref48" href="/Opinions/Download.aspx?id=386010"
-											role="link">
-											<span id="ctlOpinions1LinkValue48">N24C-08-153 CEB</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Butler<br />
-										R.J.
-
-									</td>
-
-									<td>
-										Memorandum Opinion. Plaintiff’s Motion to Dismiss - DENIED; Defendant’s Motion
-										to Amend - GRANTED.
-
-									</td>
-
-								</tr>
-
-								<tr>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref49" href="/Opinions/Download.aspx?id=385960"
-											role="link">
-											<span id="ctlOpinions1LinkValue49">A-R Litigation Trust v. Evanston
-												Insurance Company, et al. </span>
-
-										</a>
-
-									</td>
-
-									<td>
-										10/16/2025
-
-									</td>
-
-									<td>
-
-										<a id="ctlOpinions1LinkHref50" href="/Opinions/Download.aspx?id=385960"
-											role="link">
-											<span id="ctlOpinions1LinkValue50">N24C-10-068 EMD CCLD</span>
-
-										</a>
-
-									</td>
-
-									<td>
-										Superior Court
-
-									</td>
-
-									<td>
-										Civil
-
-									</td>
-
-									<td>
-										Davis<br />
-										P.J.
-
-									</td>
-
-									<td>
-										Opinion. Defendant Evanston’s Motion To Dismiss/Stay – Granted as to request to
-										Stay; Denied as to request to Dismiss.
-
-									</td>
-
-								</tr>
-
-							</tbody>
-						</table>
-
-
-						<nav class="text-center" aria-label="Index of pages">
-							<ul class="pagination" role="list">
-
-								<li class="disabled" role="listitem">
-									<button type="button" disabled aria-label="No previous page">
-										<i class="fa-regular fa-chevron-left" aria-hidden="true"></i>
-									</button>
-								</li>
-
-								<li class="active" role="listitem">
-									<button type="button"
-										onclick="document.getElementById('ctlOpinions1hdnpageno').value='1';submitForm(false)"
-										aria-label="Page 1 of 22" aria-current='page'>
-										1
-									</button>
-								</li>
-
-								<li class="" role="listitem">
-									<button type="button"
-										onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"
-										aria-label="Page 2 of 22">
-										2
-									</button>
-								</li>
-
-								<li class="" role="listitem">
-									<button type="button"
-										onclick="document.getElementById('ctlOpinions1hdnpageno').value='3';submitForm(false)"
-										aria-label="Page 3 of 22">
-										3
-									</button>
-								</li>
-
-								<li role="listitem">
-									<button type="button"
-										onclick="document.getElementById('ctlOpinions1hdnpageno').value='4';submitForm(false)"
-										aria-label="More next pages">
-										<span aria-hidden="true"><i class="fa-regular fa-ellipsis"
-												aria-hidden="true"></i></span>
-									</button>
-								</li>
-								<li role="listitem">
-									<button type="button"
-										onclick="document.getElementById('ctlOpinions1hdnpageno').value='22';submitForm(false)"
-										aria-label="Page 22 of 22">
-										22
-									</button>
-								</li>
-
-								<li role="listitem">
-									<button type="button"
-										onclick="document.getElementById('ctlOpinions1hdnpageno').value='2';submitForm(false)"
-										aria-label="Next page">
-										<i class="fa-regular fa-chevron-right" aria-hidden="true"></i>
-									</button>
-								</li>
-
-							</ul>
-						</nav>
-						<style>
-							.judge-label {
-								background-color: unset;
-								color: unset;
-								font-size: unset;
-								font-weight: unset;
-								margin: 2px;
-								padding: 6px;
-								border-radius: 6px;
-								display: inline-block;
-								text-align: center;
-							}
-
-							.title-c {
-								color: black;
-								background-color: #b3c6c6;
-							}
-
-							.title-cj {
-								color: black;
-								background-color: #c0d4b8;
-							}
-
-							.title-j {
-								color: black;
-								background-color: #d9baa3;
-							}
-
-							.title-sm {
-								color: black;
-								background-color: #9ea4ba;
-							}
-
-							.title-m {
-								color: black;
-								background-color: #a3c2d9;
-							}
-
-							.title-pj {
-								color: black;
-								background-color: #ccb8d4;
-							}
-
-							.title-rj {
-								color: black;
-								background-color: #88bdf2;
-							}
-
-							.title-vc {
-								color: black;
-								background-color: #BADBA2;
-							}
-						</style>
-
-						<div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
-						<div class="col-md-12 text-center">
-
-
-							<span class="judge-label title-c">C.=Chancellor or Commissioner</span>
-							<span class="judge-label title-cj">C.J.=Chief Justice or Chief Judge</span>
-							<span class="judge-label title-j">J.=Justice or Judge</span>
-							<span class="judge-label title-sm">S.M.=Senior Magistrate</span>
-							<span class="judge-label title-m">M.=Magistrate in Chancery</span>
-							<span class="judge-label title-pj">P.J.=President Judge</span>
-							<span class="judge-label title-rj">R.J.=Resident Judge</span>
-							<span class="judge-label title-vc">V.C.=Vice Chancellor</span>
-						</div>
-						<div class="clearfix" style="margin-bottom: 12px;" aria-hidden="true"></div>
-
-
-
-
-						<input id="ctlOpinions1hdnagency" name="ctlOpinions1hdnagency" type="hidden"
-							value="Superior Court" />
-
-						<input id="ctlOpinions1hdncasetype" name="ctlOpinions1hdncasetype" type="hidden" value="" />
-
-						<input id="ctlOpinions1hdndivision" name="ctlOpinions1hdndivision" type="hidden" value="" />
-
-						<input id="ctlOpinions1hdnsortby" name="ctlOpinions1hdnsortby" type="hidden" value="" />
-
-						<input id="ctlOpinions1hdnsortorder" name="ctlOpinions1hdnsortorder" type="hidden" value="0" />
-
-						<input id="ctlOpinions1hdnsortbynew" name="ctlOpinions1hdnsortbynew" type="hidden" value="" />
-
-						<input id="ctlOpinions1hdnpageno" name="ctlOpinions1hdnpageno" type="hidden" value="" />
-
-
-						<script type="text/javascript">
-							function submitForm(clear) {
-								if (clear) {
-									if (document.getElementById('ctlOpinions1hdnsortby')) {
-										document.getElementById('ctlOpinions1hdnsortby').value = '';
-									}
-									if (document.getElementById('ctlOpinions1hdnsortorder')) {
-										document.getElementById('ctlOpinions1hdnsortorder').value = '';
-									}
-									if (document.getElementById('ctlOpinions1hdnsortbynew')) {
-										document.getElementById('ctlOpinions1hdnsortbynew').value = '';
-									}
-									if (document.getElementById('ctlOpinions1hdnpageno')) {
-										document.getElementById('ctlOpinions1hdnpageno').value = '';
-									}
-								}
-								frmCourtOpinions.submit();
-							}
-
-							function submitFormGet(sortBy, sortOrder, page) {
-								var addYear = false;
-								var addDates = false;
-								var agency;
-								var period;
-								var year;
-								var fromDate;
-								var toDate;
-								var resultsPerPage;
-								var searchText;
-
-								if (document.getElementById("selAgencies")) {
-									agency = document.getElementById("selAgencies").value;
-								} else {
-									agency = 'Superior Court';
-								}
-
-								if (document.getElementById("selYears")) {
-									year = document.getElementById("selYears").value;
-								} else {
-									year = '0';
-								}
-
-								if (document.getElementById("selSearch")) {
-									period = document.getElementById("selSearch").value;
-									if (period === 'year') {
-										addYear = true;
-									}
-									if (period === 'range') {
-										addDates = true;
-									}
-								} else {
-								}
-
-								if (document.getElementById("txtFromDate")) {
-									fromDate = document.getElementById("txtFromDate").value;
-								} else {
-									fromDate = '01/01/2025';
-								}
-
-								if (document.getElementById("txtToDate")) {
-									toDate = document.getElementById("txtToDate").value;
-								} else {
-									toDate = '10/28/2025';
-								}
-
-								if (document.getElementById("selResults")) {
-									resultsPerPage = document.getElementById("selResults").value;
-								} else {
-									resultsPerPage = '25';
-								}
-
-								if (document.getElementById("txtSearch")) {
-									searchText = document.getElementById("txtSearch").value;
-								} else {
-									searchText = '';
-								}
-
-								document.location.href = encodeURI('/opinions/List.aspx' +
-									'?ag=' + agency +
-									'&typ=' + '' +
-									'&div=' + '' +
-									'&period=' + period +
-									(addYear ? ('&year=' + year) : '') +
-									(addDates ? ('&from=' + fromDate + '&to=' + toDate) : '') +
-									'&results=' + resultsPerPage +
-									'&ss=' + searchText +
-									'&srt=' + sortBy +
-									'&srtord=' + sortOrder +
-									'&page=' + page);
-							}
-
-						</script>
-
-					</form>
-				</div><!-- end content -->
-
-			</div>
-		</div>
-	</div>
-	<!-- /container -->
-
-	<br />
-
-	<!-- BEGIN Courts Footer -->
-	<footer>
-		<div id="footer">
-			<div id="txt_options">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6">
-							<p class="hidden-xs">The Official Website of the Delaware Judiciary</p>
-						</div>
-						<div class="col-sm-6">
-							<p class="txt_size">
-								Change Your Text Size: &nbsp; <a class="decreaseFont text_buttons" tabindex="0"
-									role="button"><span class="wave_text">Make Text Size Smaller</span><i
-										class="far fa-minus-square fa-fw fa-lg" aria-label="Make text size smaller"
-										title="Make text size smaller"></i></a>
-								<a class="resetFont text_buttons" role="button" tabindex="0"><span
-										class="wave_text">Reset Text Size</span><i class="far fa-square fa-fw fa-lg"
-										aria-label="Reset text size" title="Reset text size"></i></a>
-								<a class="increaseFont text_buttons" tabindex="0" role="button"><span class="wave_text"
-										tabindex="0">Make Text Size Bigger</span><i
-										class="far fa-plus-square fa-fw fa-lg" aria-label="Make text size larger"
-										title="Make text size larger"></i></a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-
-				<div class="row">
-					<br /><br />
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<p class="ft_subhead"><a href="/locations/" aria-label="Delaware Courts Hours & Locations">Hours
-								&amp; Locations</a></p><br />
-
-						<!--<p class="ft_subhead"><a href="/locations/contacts.aspx">Court Contacts</a></p><br /> -->
-						<p class="ft_subhead"><a href="/help/">Self-Help</a></p><br />
-						<p class="ft_subhead"><a href="/docket.aspx">Civil Case Search</a></p><br />
-						<p class="ft_subhead"><a href="/help/traffic/">Traffic</a></p><br />
-						<p class="ft_subhead"><a href="/epayment.aspx">EPayments</a></p><br />
-
-					</div>
-
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<p class="ft_subhead"><a href="/information_public.aspx">For the Public</a></p><br />
-						<p class="ft_subhead"><a href="/information_jurors.aspx">For Jurors</a></p><br />
-						<p class="ft_subhead"><a href="/information_attorneys.aspx">For Attorneys</a></p><br />
-						<p class="ft_subhead"><a href="/information_media.aspx">For the Media</a></p><br />
-						<p class="ft_subhead"><a href="/topics.aspx">Topics</a></p><br />
-					</div>
-
-					<div class="clearfix visible-sm"></div>
-
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<p class="ft_subhead"><a href="/aoc/ada.aspx">Accessibility</a></p><br />
-						<p class="ft_subhead"><a href="/help/espanol.aspx">Material en español</a></p><br />
-						<p class="ft_subhead"><a href="/supreme/access.aspx">Access to Justice</a></p><br />
-						<p class="ft_subhead"><a href="/career/">Careers</a></p><br />
-						<p class="ft_subhead"><a href="/feedback/index.aspx/">Feedback</a></p><br /><br />
-					</div>
-
-					<div class="col-lg-3 col-md-3 col-sm-6">
-
-						<br /><br />
-						<a href="../../index.aspx"><img src="/img/delaware_courts_logo_footer.png"
-								alt="Delaware Courts logo" class="img-responsive foot-logo" /></a>
-						<br /><br />
-					</div>
-
-				</div>
-				<hr class="footer" />
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<p><a href="/">Delaware Courts Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
-								href="../../../../../terms.aspx">Terms of
-								Use</a>&nbsp;&nbsp;<!--|&nbsp;&nbsp;<a href="/feedback/">Feedback</a>&nbsp;&nbsp;-->|&nbsp;&nbsp;<a
-								href="https://delaware.gov/">Delaware.gov</a></p>
-						<p><small>&copy; 2025 The Delaware Judiciary - <a href="/">courts.delaware.gov</a></small></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
 
 </body>
-
 </html>

@@ -1,112 +1,46 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6207&Index=***coa05%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Vanessa Treviso v. Discover Bank",
+    "nature_of_suit": "Contract",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=2b84eefb-9432-4bfd-acc0-4b41c7beebda&coa=coa05&DT=Opinion&MediaID=bac41586-2d8b-45e0-b1d0-185b08e2aa28",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "134th Judicial District Court",
+    "lower_court_judges": "Honorable Dale B. Tillery",
+    "lower_court_numbers": "DC-20-17584",
+    "court_reporter": "Tina Thompson",
+    "case_dates": "2024-02-28",
+    "docket_numbers": "05-22-00834-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "05-14-00080-CV",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6054&Index=***coa05%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "In Re: Philip Floyd v. the State of Texas",
+    "nature_of_suit": "Mandamus",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=603f8742-8f0c-4801-8013-32399c65e27f&coa=coa05&DT=Opinion&MediaID=0bc17a91-d8f1-4ec1-b3ec-128faf7fc889",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Motion or Writ Denied",
+    "lower_courts": "471st Judicial District Court",
+    "lower_court_judges": "Honorable Andrea K. Bouressa",
+    "lower_court_numbers": "471-02423-2021",
+    "court_reporter": "Denise Carrillo",
+    "case_dates": "2024-02-27",
+    "docket_numbers": "05-24-00192-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "05-14-00782-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=6051&Index=***coa05%5cOrder",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-13-01665-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=5983&Index=***coa05%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-13-01666-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=5915&Index=***coa05%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-13-01594-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=5896&Index=***coa05%5cOrder",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-14-00340-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=3229&Index=***coa05%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-13-00074-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=3096&Index=***coa05%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-14-00340-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=3045&Index=***coa05%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-14-00173-CV",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=3029&Index=***coa05%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-13-01176-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=2949&Index=***coa05%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "05-13-01263-CV",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

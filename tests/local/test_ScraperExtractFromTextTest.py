@@ -160,14 +160,15 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nyappterm_1st": [
             (
-                """<br>PRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n\n <br>570410/22 \n and more and more """,
+                """<br>PRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n\n <br>570410/22 \n<br> and more and more """,
                 {"Docket": {"docket_number": "570410/22"}},
             ),
         ],
         "juriscraper.opinions.united_states.state.nyappterm_2nd": [
             (
-                """SUPREME COURT, APPELLATE TERM, FIRST DEPARTMENT \nPRESENT: Brigantti, J.P., Hagler, Tisch, JJ. \n 570613/17 """,
-                {"Docket": {"docket_number": "570613/17"}},
+                # https://www.courtlistener.com/opinion/10689722/xx/
+                """Prando v Kelly</b></td>\n</tr>\n<tr>\n<td align=\"center\">2021 NY Slip Op 51241(U) [73 Misc 3d 144(A)]</td>\n</tr>\n<tr>\n<td align=\"center\">Decided on December 16, 2021</td>\n</tr>\n<tr>\n<td align=\"center\">Appellate Term, Second Department</td>\n</tr>\n<tr>\n<td align=\"center\">Published by New York State Law Reporting Bureau\npursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align=\"center\">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</tbody></table>\n<br><br>\n\nDecided on December 16, 2021\n<br><div>SUPREME COURT, APPELLATE TERM, SECOND\nDEPARTMENT, 9th and 10th JUDICIAL DISTRICTS</div>\n<br>PRESENT: : TERRY JANE RUDERMAN, P.J., ELIZABETH H. EMERSON, TIMOTHY\nS. DRISCOLL, JJ\n\n\n\n<br>2020-989 D C\n\n<br><br><div><b>Gregory Prando, App""",
+                {"Docket": {"docket_number": "2020-989 D C"}},
             ),
         ],
         "juriscraper.opinions.united_states.state.sd": [
@@ -260,7 +261,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nysupct": [
             (
                 # https://www.nycourts.gov/reporter/pdfs/2019/2019_32654.pdf
-                """Deboer v Friedman\n2019 NY Slip Op 32654(U)\nSeptember 4, 2019\nSupreme Court, New York County\nDocket Number: 654329/2018\nJudge: Arthur F. Engoron""",
+                """Deboer v Friedman\n2019 NY Slip Op 32654(U)\nSeptember 4, 2019\nSupreme Court, New York County\nDocket Number: 654329/2018\nJudge: Arthur F. Engoron\n""",
                 {
                     "Docket": {"docket_number": "654329/2018"},
                     "Opinion": {"author_str": "Arthur F. Engoron"},
@@ -268,7 +269,7 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2019/2019_30152.pdf
-                """1809 Emns Ave Inc. v American Signcrafters LLC\n2019 NY Slip Op 30152(U)\nJanuary 10, 2019\nSupreme Court, Kings County\nDocket Number: 517955/18\nJudge: Leon Ruchelsman""",
+                """1809 Emns Ave Inc. v American Signcrafters LLC\n2019 NY Slip Op 30152(U)\nJanuary 10, 2019\nSupreme Court, Kings County\nDocket Number: 517955/18\nJudge: Leon Ruchelsman\n""",
                 {
                     "Docket": {"docket_number": "517955/18"},
                     "Opinion": {"author_str": "Leon Ruchelsman"},
@@ -276,7 +277,7 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2021/2021_33275.pdf
-                """Ciardiello v Village of New Paltz\n2021 NY Slip Op 33275(U)\nMarch 8, 2021\nSupreme Court, Ulster County\nDocket Number: Index No. EF18-3323\nJudge: Christopher E. Cahill""",
+                """Ciardiello v Village of New Paltz\n2021 NY Slip Op 33275(U)\nMarch 8, 2021\nSupreme Court, Ulster County\nDocket Number: Index No. EF18-3323\nJudge: Christopher E. Cahill\n""",
                 {
                     "Docket": {"docket_number": "Index No. EF18-3323"},
                     "Opinion": {"author_str": "Christopher E. Cahill"},
@@ -295,12 +296,12 @@ class ScraperExtractFromText(unittest.TestCase):
                 """Rothman v Puretz\n2023 NY Slip Op 32445(U)\nJuly 18, 2023\nSupreme Court, Monroe County\nDocket Number: Index No. E2023001856\nJudge: J. Scott Odorisi\nCases posted with a "30000" identifier, i""",
                 {
                     "Docket": {"docket_number": "Index No. E2023001856"},
-                    "Opinion": {"author_str": "Scott Odorisi"},
+                    "Opinion": {"author_str": "J. Scott Odorisi"},
                 },
             ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2021/2021_30613.pdf
-                """Dodaj v Lofti\n2021 NY Slip Op 30613(U)\nJanuary 13, 2021\nSupreme Court, Bronx County\nDocket Number: 20240/2019E\nJudge: Veronica G. Hummel""",
+                """Dodaj v Lofti\n2021 NY Slip Op 30613(U)\nJanuary 13, 2021\nSupreme Court, Bronx County\nDocket Number: 20240/2019E\nJudge: Veronica G. Hummel\n""",
                 {
                     "Docket": {"docket_number": "20240/2019E"},
                     "Opinion": {"author_str": "Veronica G. Hummel"},
@@ -310,7 +311,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nycountyct": [
             (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_33955.pdf
-                """People v Wiltshire\n2018 NY Slip Op 33955(U)\nAugust 15, 2018\nCounty Court, Westchester County\nDocket Number: 18-0465-01\nJudge: Larry J. Schwartz""",
+                """People v Wiltshire\n2018 NY Slip Op 33955(U)\nAugust 15, 2018\nCounty Court, Westchester County\nDocket Number: 18-0465-01\nJudge: Larry J. Schwartz\n""",
                 {
                     "Docket": {"docket_number": "18-0465-01"},
                     "Opinion": {"author_str": "Larry J. Schwartz"},
@@ -355,7 +356,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Index No. 11523/2020",
                         "case_name_full": '201 East 164th Street Associates, LLC, against Pastora Calderon & ROSA IDALIA ABDELNOUR, "JOHN DOE" & "JANE DOE" A/K/A DUNIA GOMEZ Respondents-Undertenants.',
                     },
-                    "Opinion": {"author_str": "Shorab Ibrahim"},
+                    "Opinion": {"author_str": "Ibrahim"},
                     "OpinionCluster": {
                         "case_name_full": '201 East 164th Street Associates, LLC, against Pastora Calderon & ROSA IDALIA ABDELNOUR, "JOHN DOE" & "JANE DOE" A/K/A DUNIA GOMEZ Respondents-Undertenants.'
                     },
@@ -372,7 +373,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "File No. 2021-31/C",
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON",
                     },
-                    "Opinion": {"author_str": "Peter J. Kelly"},
+                    "Opinion": {"author_str": "Kelly"},
                     "Citation": "78 Misc 3d 1203(A)",
                     "OpinionCluster": {
                         "case_name_full": "Probate Proceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON"
@@ -412,7 +413,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Docket No. F-30317/2004/19F",
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y.",
                     },
-                    "Opinion": {"author_str": "Javier E. Vargas"},
+                    "Opinion": {"author_str": "Vargas"},
                     "Citation": "73 Misc 3d 1238(A)",
                     "OpinionCluster": {
                         "case_name_full": "In the Matter of a Proceeding for Support Under Article 4 of the Family Court Act Michelle B., against Thomas Y."
@@ -429,7 +430,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "2017KN054132",
                         "case_name_full": "The People of the State of New York against Amela Hot",
                     },
-                    "Opinion": {"author_str": "Donald Leo"},
+                    "Opinion": {"author_str": "Leo"},
                     "Citation": "58 Misc 3d 1215(A)",
                     "OpinionCluster": {
                         "case_name_full": "The People of the State of New York against Amela Hot"
@@ -455,10 +456,10 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nyclaimsct": [
             (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_34469.pdf
-                """Lawrence v State of N.Y. Dept. of\nCommunity Supervision\n2018 NY Slip Op 34469(U)\nJanuary 10, 2018\nCourt of Claims\nDocket Number: Index No. 2010-038-505\nJudge: W. Brooks DeBow""",
+                """Lawrence v State of N.Y. Dept. of\nCommunity Supervision\n2018 NY Slip Op 34469(U)\nJanuary 10, 2018\nCourt of Claims\nDocket Number: Index No. 2010-038-505\nJudge: W. Brooks DeBow\n""",
                 {
                     "Docket": {"docket_number": "Index No. 2010-038-505"},
-                    "Opinion": {"author_str": "W. Brooks Debow"},
+                    "Opinion": {"author_str": "W. Brooks DeBow"},
                 },
             ),
             (
@@ -469,7 +470,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "docket_number": "Claim No. 136323-A",
                         "case_name_full": "Bernardo Martinaj, against State of New York",
                     },
-                    "Opinion": {"author_str": "Javier E. Vargas"},
+                    "Opinion": {"author_str": "Vargas"},
                     "OpinionCluster": {
                         "case_name_full": "Bernardo Martinaj, against State of New York"
                     },
@@ -480,7 +481,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nydistct": [
             (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51308.htm
-                """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Sims v Regis</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51308(U) [81 Misc 3d 1210(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on November 30, 2023</td>\n</tr>\n<tr>\n<td align="center">District Court Of Nassau County, Second District</td>\n</tr>\n<tr>\n<td align="center">Montesano, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on November 30, 2023\n<br><div align="center">District Court of Nassau County, Second District</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Alistair Sims,\nClaimant,\n\n<br><br>against<br><br>Lance Frantz Regis A/K/A LANCE REGIS A/K/A\nLANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ\nA/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ,\nDefendant(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. SC-000830-23/NA \n<<br><br>\n<br>Alistair Sims; Lance Regis<br>\n\n\n<br>Michael A. Montesano, J.\n\n<p class="auto-style1">Papers Considered:</p>""",
+                """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Sims v Regis</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51308(U) [81 Misc 3d 1210(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on November 30, 2023</td>\n</tr>\n<tr>\n<td align="center">District Court Of Nassau County, Second District</td>\n</tr>\n<tr>\n<td align="center">Montesano, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on November 30, 2023\n<br><div align="center">District Court of Nassau County, Second District</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Alistair Sims,\nClaimant,\n\n<br><br>against<br><br>Lance Frantz Regis A/K/A LANCE REGIS A/K/A\nLANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ\nA/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ,\nDefendant(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. SC-000830-23/NA \n<br><br>\n<br>Alistair Sims; Lance Regis<br>\n\n\n<br>Michael A. Montesano, J.\n\n<p class="auto-style1">Papers Considered:</p>""",
                 {
                     "Docket": {
                         "docket_number": "Index No. SC-000830-23/NA",
@@ -513,7 +514,7 @@ class ScraperExtractFromText(unittest.TestCase):
         "juriscraper.opinions.united_states.state.nycityct": [
             (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_23374.htm
-                """<div>\n\nPotentia Mgt. Group, LLC v D.W. (2023 NY Slip Op 23374)\n\n\n\n\n[*1]\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Potentia Mgt. Group, LLC v D.W.</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23374</td>\n</tr>\n<tr>\n<td align="center">Decided on December 1, 2023</td>\n</tr>\n<tr>\n<td align="center">Utica City Court</td>\n</tr>\n<tr>\n<td align="center">Giruzzi, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 1, 2023\n<br><div align="center">Utica City Court</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Potentia Management Group, LLC\n\n<br><br>against<br><br>D.W.</b></div><br><br>\n\n</td></tr></table><br><br>Docket No. CV-00357-23\n<<br><br>Ralph W. Fusco, Esq., for the Plaintiff<br><br>Benjamin M. Burdick, Esq., for the Defendant<p></p>\n\n\n<br>F. Christopher Giruzzi, J.\n\n<p class="auto-style1">Procedural History</p>\n<i>a. Initial Filings</i><p>On February 10, 2023, Potentia Management Group, LLC, (hereinafter referred to as Potentia Management and / o""",
+                """<div>\n\nPotentia Mgt. Group, LLC v D.W. (2023 NY Slip Op 23374)\n\n\n\n\n[*1]\n<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Potentia Mgt. Group, LLC v D.W.</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23374</td>\n</tr>\n<tr>\n<td align="center">Decided on December 1, 2023</td>\n</tr>\n<tr>\n<td align="center">Utica City Court</td>\n</tr>\n<tr>\n<td align="center">Giruzzi, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 1, 2023\n<br><div align="center">Utica City Court</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Potentia Management Group, LLC\n\n<br><br>against<br><br>D.W.</b></div><br><br>\n\n</td></tr></table><br><br>Docket No. CV-00357-23\n<br><br>Ralph W. Fusco, Esq., for the Plaintiff<br><br>Benjamin M. Burdick, Esq., for the Defendant<p></p>\n\n\n<br>F. Christopher Giruzzi, J.\n\n<p class="auto-style1">Procedural History</p>\n<i>a. Initial Filings</i><p>On February 10, 2023, Potentia Management Group, LLC, (hereinafter referred to as Potentia Management and / o""",
                 {
                     "Docket": {
                         "docket_number": "Docket No. CV-00357-23",
@@ -774,30 +775,40 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_1st": [
             (
-                # https://www.nycourts.gov/reporter/3dseries/2024/2024_04182.htm
-                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\n<br>Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
+                # https://www.courtlistener.com/opinion/10034744/matter-of-michael-f/
+                "Matter of Michael F.\n2024 NY Slip Op 04182\nDecided on August 08, 2024\nAppellate Division, First Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered: August 08, 2024\nBefore: Kern, J.P., Oing, Kapnick, Higgitt, Michael, JJ.\n\n<br>Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467\n<br>\n[*1]In the Matter of Michael F., A Person Alleged to be a Juvenile Delinquent, Appellant.",
                 {
                     "Docket": {
                         "docket_number": "Docket No. D-01854/23 Appeal No. 2333 Case No. 2023-05467",
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_2nd": [
             (
+                # https://www.courtlistener.com/opinion/10033897/awr-group-inc-v-240-echo-place-hous-dev-fund-corp/
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04118.htm
-                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n<br>2023-03266\n<br>(Index No. 705239/20)\n\n[*1]AWR Group, Inc., respondent,\n",
+                "\nAWR Group, Inc. v 240 Echo Place Hous. Dev. Fund Corp.\n2024 NY Slip Op 04118\nDecided on August 7, 2024\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided on August 7, 2024 SUPREME COURT OF THE STATE OF NEW YORK Appellate Division, Second Judicial Department\nMARK C. DILLON, J.P.\nCHERYL E. CHAMBERS\nLARA J. GENOVESI\nLOURDES M. VENTURA, JJ.\n\n<br>2023-03266\n<br>(Index No. 705239/20)\n<br>\n[*1]AWR Group, Inc., respondent,\n",
                 {
                     "Docket": {
-                        "docket_number": "2023-03266; Index No. 705239/20",
+                        "docket_number": "Index No. 705239/20",
                     },
                 },
-            )
+            ),
+            (
+                #  https://www.courtlistener.com/api/rest/v4/opinions/6342850/
+                'Judicial Department\n\n<br>COLLEEN D. DUFFY, J.P.\n<br>ANGELA G. IANNACCI\n<br>ROBERT J. MILLER\n<br>JOSEPH A. ZAYAS, JJ.\n\n<div align="center"></div>\n<br>2022-03440\tDECISION, ORDER &amp; JUDGMENT\n\n<br><br><div ',
+                {
+                    "Docket": {
+                        "docket_number": "2022-03440",
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyappdiv_3rd": [
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04173.htm
-                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>PM-154-24\n\n[*1]In the Matter of Att",
+                "\nMatter of Attorneys in Violation of Judiciary Law § 468-a (Miyazaki)\n2024 NY Slip Op 04173\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>PM-154-24\n<br>\n[*1]In the Matter of Att",
                 {
                     "Docket": {
                         "docket_number": "PM-154-24",
@@ -806,13 +817,24 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
             (
                 # https://www.nycourts.gov/reporter/3dseries/2024/2024_04171.htm
-                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>CV-23-1597\n\n",
+                "\nMatter of First United Methodist Church in Flushing v Assessor, Town of Callicoon\n2024 NY Slip Op 04171\nDecided on August 8, 2024\nAppellate Division, Third Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis opinion is uncorrected and subject to revision before publication in the Official Reports.\n\n\nDecided and Entered:August 8, 2024\n\n<br>CV-23-1597\n<br>\n",
                 {
                     "Docket": {
                         "docket_number": "CV-23-1597",
                     },
                 },
             ),
+        ],
+        "juriscraper.opinions.united_states.state.nyappdiv_4th": [
+            (
+                # https://www.courtlistener.com/opinion/10641306/xx/
+                '<div><p>People v Correia (2025 NY Slip Op 04433)\n\n\n\n</p><table align="center">\n<tbody><tr>\n<td align="center"><b>People v Correia</b></td>\n</tr>\n<tr>\n<td align="center">2025 NY Slip Op 04433</td>\n</tr>\n<tr>\n<td align="center">Decided on July 25, 2025</td>\n</tr>\n<tr>\n<td align="center">Appellate Division, Fourth Department</td>\n</tr>\n\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the Official Reports.</td>\n</tr>\n</tbody></table>\n<br><br>\nDecided on July 25, 2025\nSUPREME COURT OF THE STATE OF NEW YORK\nAppellate Division, Fourth Judicial Department\n\n<br>PRESENT: BANNISTER, J.P., SMITH, GREENWOOD, NOWAK, AND HANNAH, JJ.\n\n<div></div>\n<br>596 KA 23-00096\n\n<br><br><div><b>[*1]THE PEOPLE',
+                {
+                    "Docket": {
+                        "docket_number": "596 KA 23-00096",
+                    },
+                },
+            )
         ],
         "juriscraper.opinions.united_states.federal_special.uscfc_vaccine": [
             (
@@ -917,7 +939,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 {
                     "Citation": "2025 MT 189",
                     "Docket": {
-                        "appeal_from_str": "District Court of the Eighth Judicial District, In and For the County of Cascade"
+                        "appeal_from_str": "District Court of the Eighth Judicial District, In and For the County of Cascade",
+                        "docket_number": "DA 23-0430",
                     },
                     "OriginatingCourtInformation": {
                         "assigned_to_str": "John A. Kutzman",
@@ -1680,6 +1703,26 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                 },
             ),
+        ],
+        "juriscraper.opinions.united_states.state.colo": [
+            (
+                "<b></b><p><span> Thomas Ray Collins, Petitioner <br> v.</span><span> <br> The People of the State of Colorado.</span> Respondent </p>\n<p>No. 25SC546</p>\n<p><span>Supreme Court of Colorado, En Banc.</span></p>",
+                {
+                    "Docket": {
+                        "docket_number": "25SC546",
+                    }
+                },
+            )
+        ],
+        "juriscraper.opinions.united_states.state.coloctapp": [
+            (
+                "25CA0167 Brauweiler v National Jewish 12-18-2025\nCOLORADO COURT OF APPEALS\n\nCourt of Appeals No. 25CA0167\nCity and County of Denver District Court No. 23CV31536\nHonorable Andrew J. Luxen, Judge",
+                {
+                    "Docket": {
+                        "docket_number": "25CA0167",
+                    }
+                },
+            )
         ],
     }
 

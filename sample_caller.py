@@ -81,6 +81,9 @@ def log_dict(dic: dict) -> None:
     for k, v in dic.items():
         if isinstance(v, str):
             v = trunc(v, 200, ellipsis="...")
+        elif isinstance(v, dict):
+            log_dict(v)
+            continue
         logger.debug('    %s: "%s"', k, v)
 
 
@@ -188,6 +191,60 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
         logger.info("Same URL hashes are the same. It's OK")
 
 
+def process_an_opinion(
+    item: dict,
+    site,
+    binaries: bool,
+    extract_content: bool,
+    test_hashes: bool,
+    doctor_host: str,
+    is_cluster: bool = False,
+):
+    item_download_urls = item["download_urls"]
+    # Percent encode URLs (this is a Python wart)
+    download_url = parse.quote(item_download_urls, safe="%/:=&?~#+!$,;'@()*[]")
+
+    # Normally, you'd do your save routines here...
+    if not is_cluster:
+        logger.debug("\nAdding new item:")
+
+    log_dict(item)
+
+    if not binaries:
+        return
+
+    try:
+        data = site.download_content(
+            download_url, doctor_is_available=extract_content
+        )
+    except BadContentError:
+        return
+
+    if test_hashes:
+        check_hashes(data, download_url, site)
+
+    filename = item["case_names"].lower().replace(" ", "_")[:40]
+
+    data, metadata_from_text = extract_doc_content(
+        data, extract_content, site, doctor_host, filename
+    )
+    logger.log(
+        5, "\nShowing extracted document data (500 chars):\n%s", data[:500]
+    )
+
+    if metadata_from_text:
+        logger.debug("\nValues obtained by Site.extract_from_text:")
+        for object_type, value_dict in metadata_from_text.items():
+            logger.debug(object_type)
+            if object_type != "Citation":
+                log_dict(value_dict)
+            else:
+                logger.debug(value_dict)
+
+    # Separate cases for easier reading when verbosity=DEBUG
+    logger.debug("\n%s\n", "=" * 60)
+
+
 def scrape_court(
     site,
     binaries=False,
@@ -211,50 +268,27 @@ def scrape_court(
     for index, item in enumerate(site):
         if index == limit:
             break
-        # First turn the download urls into a utf-8 byte string
-        item_download_urls = item["download_urls"].encode("utf-8")
-        # Percent encode URLs (this is a Python wart)
-        download_url = parse.quote(
-            item_download_urls, safe="%/:=&?~#+!$,;'@()*[]"
-        )
 
-        # Normally, you'd do your save routines here...
-        logger.debug("\nAdding new item:")
-        log_dict(item)
-
-        if not binaries:
-            continue
-
-        try:
-            data = site.download_content(
-                download_url, doctor_is_available=extract_content
+        if item.get("download_urls"):
+            # OpinionSite case
+            process_an_opinion(
+                item, site, binaries, extract_content, test_hashes, doctor_host
             )
-        except BadContentError:
-            continue
-
-        if test_hashes:
-            check_hashes(data, download_url, site)
-
-        filename = item["case_names"].lower().replace(" ", "_")[:40]
-
-        data, metadata_from_text = extract_doc_content(
-            data, extract_content, site, doctor_host, filename
-        )
-        logger.log(
-            5, "\nShowing extracted document data (500 chars):\n%s", data[:500]
-        )
-
-        if metadata_from_text:
-            logger.debug("\nValues obtained by Site.extract_from_text:")
-            for object_type, value_dict in metadata_from_text.items():
-                logger.debug(object_type)
-                if object_type != "Citation":
-                    log_dict(value_dict)
-                else:
-                    logger.debug(value_dict)
-
-        # Separate cases for easier reading when verbosity=DEBUG
-        logger.debug("\n%s\n", "=" * 60)
+        else:
+            # ClusterSite case
+            logger.debug("\nAdding new cluster:")
+            log_dict(item)
+            for index, sub_opinion in enumerate(item["sub_opinions"]):
+                logger.info("\nAdding cluster entry %s", index)
+                process_an_opinion(
+                    sub_opinion,
+                    site,
+                    binaries,
+                    extract_content,
+                    test_hashes,
+                    doctor_host,
+                )
+            logger.debug("====End of cluster====")
 
     logger.info(
         "\n%s: Successfully crawled %s items.", site.court_id, len(site)

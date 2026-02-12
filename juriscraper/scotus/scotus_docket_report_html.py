@@ -190,6 +190,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         """
         description_html = ""
         attachments: list[dict[str, Any]] = []
+        document_number: Optional[int] = None
 
         if description_td is not None:
             # Select content up to first <br> and excluding .documentlinks;
@@ -204,6 +205,11 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 if not href:
                     continue
 
+                if document_number is None and "DocketPDF" in href:
+                    match = re.search(self.DOC_NUM_RE, href)
+                    if match:
+                        document_number = int(match.group(1))
+
                 if table_layout and href:
                     logger.error(
                         "Found a potential attachment in a table-layout docket. "
@@ -215,8 +221,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 )
                 attachments.append(
                     {
-                        "short_description": short_desc or "Document",
+                        "description": short_desc or "Document",
                         "document_url": href,
+                        "document_number": document_number,
                     }
                 )
 
@@ -225,6 +232,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         return {
             "date_filed": self.normalize_date(date_str),
+            "document_number": document_number,
             "description": description,
             "description_html": description_html,
             "attachments": attachments,
@@ -326,7 +334,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             ("Other Attorneys", "Other"),
         ]
 
-        parties = []
+        parties: list[dict] = []
 
         for heading_text, type_key in sections:
             section_root = self._section_by_heading(heading_text)
@@ -540,7 +548,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: A ContactAddress object.
         """
 
-        raw_lines = []
+        raw_lines: list[str] = []
         self._append_clean_text(td.text, raw_lines)
         for child in td:
             self._append_clean_text(child.text, raw_lines)
@@ -651,7 +659,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: A ContactAddress object.
         """
 
-        raw_lines = []
+        raw_lines: list[str] = []
         self._append_clean_text(node.text, raw_lines)
         for child in node:
             self._append_clean_text(child.text, raw_lines)
