@@ -1,6 +1,6 @@
-from typing import Generic, TypeAliasType, TypeVar
+from typing import Generic, TypeVar
 
-from pydantic import AliasPath, BaseModel, Field
+from pydantic import AliasPath, BaseModel, Field, validate_call
 
 ResultType = TypeVar("ResultType")
 
@@ -87,11 +87,6 @@ class FloridaCaseActor(BaseModel):
     )
 
 
-FloridaCaseParties = TypeAliasType(
-    "FloridaCaseParties", FloridaPaginatedResults[FloridaCaseParty]
-)
-
-
 class FloridaDocketEntry(BaseModel):
     uuid: str = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryUUID")
@@ -158,11 +153,6 @@ class FloridaDocketEntry(BaseModel):
     submitted_by: list[FloridaCaseActor] = Field(alias="submittedBy")
 
 
-FloridaDocketEntries = TypeAliasType(
-    "FloridaDocketEntries", FloridaPaginatedResults[FloridaDocketEntry]
-)
-
-
 class FloridaOriginatingCase(BaseModel):
     court_name: str = Field(alias="originatingCourtName")
     case_number: str = Field(alias="originatingCourtCaseNumber")
@@ -217,3 +207,158 @@ class FloridaCase(BaseModel):
     originating_cases: list[FloridaOriginatingCase] = Field(
         alias="originatingCases"
     )
+
+
+class FloridaCourtLocation(BaseModel):
+    calendar_event_flag: bool = Field(alias="calendarEventFlag")
+    case_location_flag: bool = Field(alias="caseLocationFlag")
+    location_comment: str = Field(alias="locationComment")
+    location_id: int = Field(alias="locationID")
+    location_name: str = Field(alias="locationName")
+
+
+class FloridaCourt(BaseModel):
+    active: bool = Field(alias="active")
+    display_name: bool = Field(alias="active")
+    external_identifier: bool = Field(alias="active")
+    modified_date: bool = Field(alias="active")
+    modified_user_id: bool = Field(alias="active")
+    note: bool = Field(alias="active")
+    resource_id: bool = Field(alias="active")
+    locations: list[FloridaCourtLocation]
+
+
+class FloridaCasePartyType(BaseModel):
+    id: int = Field(alias="participantTypeID")
+    name: str = Field(alias="participantTypeName")
+    comment: str = Field(alias="participantTypeComment")
+
+
+class FloridaCaseInvolvementType(BaseModel):
+    id: int = Field(alias="involvementTypeID")
+    name: str = Field(alias="involvementTypeName")
+    comment: str = Field(alias="involvementTypeComment")
+
+
+class FloridaCasePartySubType(BaseModel):
+    id: int = Field(alias="participantSubTypeID")
+    name: str = Field(alias="participantSubTypeName")
+    comment: str = Field(alias="participantSubTypeComment")
+    party_type: FloridaCasePartyType = Field(alias="participantType")
+    involvement_type: FloridaCaseInvolvementType = Field(
+        alias="involvementType"
+    )
+
+
+class FloridaDocketEntryType(BaseModel):
+    id: str = Field(alias="docketEntryTypeID")
+    name: str = Field(alias="docketEntryTypeName")
+    comment: str = Field(alias="docketEntryTypeComment")
+
+
+class FloridaDocketEntrySubType(BaseModel):
+    id: str = Field(alias="docketEntrySubTypeID")
+    name: str = Field(alias="docketEntrySubTypeName")
+    comment: str = Field(alias="docketEntrySubTypeComment")
+    docket_entry_type: FloridaDocketEntryType = Field(alias="docketEntryType")
+
+
+class FloridaCaseCategory(BaseModel):
+    id: str = Field(alias="caseCategoryID")
+    name: str = Field(alias="caseCategoryName")
+    comment: str = Field(alias="caseCategoryComment")
+
+
+class FloridaDocument(BaseModel):
+    docket_entry_uuid: str = Field(alias="docketEntryUUID")
+    document_link_uuid: str = Field(alias="documentLinkUUID")
+    document_name: str = Field(alias="documentName")
+    user_document_state: str = Field(alias="userDocumentState")
+    case_uuid: str = Field(
+        validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
+    )
+    case_number: str = Field(
+        validation_alias=AliasPath("caseHeader", "caseNumber")
+    )
+    case_title: str = Field(
+        validation_alias=AliasPath("caseHeader", "caseTitle")
+    )
+    court_id: str = Field(validation_alias=AliasPath("caseHeader", "courtID"))
+    document_type: str = Field(
+        validation_alias=AliasPath("documentInfo", "documentType")
+    )
+    content_type: str = Field(
+        validation_alias=AliasPath("documentInfo", "contentType")
+    )
+    file_extension: str = Field(
+        validation_alias=AliasPath("documentInfo", "fileExtension")
+    )
+    page_count: str = Field(
+        validation_alias=AliasPath("documentInfo", "pageCount")
+    )
+    file_size: str = Field(
+        validation_alias=AliasPath("documentInfo", "fileSize")
+    )
+
+
+EndpointParameters = TypeVar("EndpointParameters")
+EndpointReturn = TypeVar("EndpointReturn")
+
+
+class Endpoint(Generic[EndpointParameters, EndpointReturn]):
+    url: str
+
+    def __init__(self, url: str):
+        self.url = url
+
+    @validate_call
+    def request(self, **kwargs: EndpointParameters) -> EndpointReturn:
+        _url = self.url.format(**kwargs)
+        raise NotImplementedError()
+
+
+florida_courts = Endpoint[None, FloridaPaginatedResults[FloridaCourt]](
+    "/courts"
+)
+
+florida_case_party_sub_types = Endpoint[None, FloridaCasePartySubType](
+    "/courts/casepartysubtypes"
+)
+
+florida_cases = Endpoint[None, FloridaPaginatedResults[FloridaCase]](
+    "/courst/cms/cases"
+)
+
+florida_docket_entry_document_access = Endpoint[
+    None, FloridaPaginatedResults[FloridaDocument]
+]("/courts/cms/docketentrydocumentaccess")
+
+
+class FloridaCourtParameter(BaseModel):
+    court: str
+
+
+florida_court_case_categories = Endpoint[
+    FloridaCourtParameter, FloridaCaseCategory
+]("/courts/{court}/cms/casecategories")
+
+florida_court_docket_entry_sub_types = Endpoint[
+    FloridaCourtParameter, FloridaDocketEntrySubType
+]("/courts/{court}/docketentrysubtypes")
+
+
+class FloridaCourtCaseParameter(FloridaCourtParameter):
+    case: str
+
+
+florida_court_case_info = Endpoint[FloridaCourtCaseParameter, FloridaCase](
+    "/courts/{court}/cms/cases/{case}"
+)
+
+florida_court_case_parties = Endpoint[
+    FloridaCourtCaseParameter, FloridaPaginatedResults[FloridaCaseParty]
+]("/courts/{court}/cms/cases/{case}/parties")
+
+florida_court_case_docket_entries = Endpoint[
+    FloridaCourtCaseParameter, FloridaPaginatedResults[FloridaDocketEntry]
+]("/courts/{court}/cms/cases/{case}/docketentries")
