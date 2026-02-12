@@ -1,6 +1,7 @@
+from datetime import datetime
 from typing import Generic, TypeVar
 
-from pydantic import AliasPath, BaseModel, Field, validate_call
+from pydantic import UUID4, AliasPath, BaseModel, Field, validate_call
 
 ResultType = TypeVar("ResultType")
 
@@ -20,7 +21,7 @@ class FloridaPaginatedResults(BaseModel, Generic[ResultType]):
 
 
 class FloridaPartyRepresentative(BaseModel):
-    party_uuid: str = Field(
+    party_uuid: UUID4 = Field(
         validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID")
     )
     display_name: str = Field(
@@ -37,25 +38,25 @@ class FloridaPartyRepresentative(BaseModel):
 
 
 class FloridaCaseParty(BaseModel):
-    uuid: str = Field(
+    uuid: UUID4 = Field(
         validation_alias=AliasPath("partyHeader", "casePartyUUID")
     )
     party_type: str = Field(
         validation_alias=AliasPath("partyHeader", "partyType")
     )
-    party_type_id: str = Field(
+    party_type_id: int = Field(
         validation_alias=AliasPath("partyHeader", "partyTypeID")
     )
     party_subtype: str = Field(
         validation_alias=AliasPath("partyHeader", "partySubType")
     )
-    party_subtype_id: str = Field(
+    party_subtype_id: int = Field(
         validation_alias=AliasPath("partyHeader", "partySubTypeID")
     )
     status: str = Field(
         validation_alias=AliasPath("partyHeader", "partyStatus")
     )
-    status_id: str = Field(
+    status_id: int = Field(
         validation_alias=AliasPath("partyHeader", "partyStatusID")
     )
     display_name: str = Field(
@@ -75,7 +76,7 @@ class FloridaCaseParty(BaseModel):
     )
     non_public_flag: bool = Field(alias="nonPublicFlag")
     party_number: int = Field(alias="partyNumber")
-    involvement_type_id: str = Field(alias="involvementTypeID")
+    involvement_type_id: int = Field(alias="involvementTypeID")
 
 
 class FloridaCaseActor(BaseModel):
@@ -88,34 +89,34 @@ class FloridaCaseActor(BaseModel):
 
 
 class FloridaDocketEntry(BaseModel):
-    uuid: str = Field(
+    uuid: UUID4 = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryUUID")
     )
-    date_filed: str = Field(
+    date_filed: datetime = Field(
         validation_alias=AliasPath("docketEntryHeader", "filedDate")
     )
     entry_type: str = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryType")
     )
-    entry_type_id: str = Field(
+    entry_type_id: int = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryTypeID")
     )
     entry_subtype: str = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntrySubType")
     )
-    entry_subtype_id: str = Field(
+    entry_subtype_id: int = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntrySubTypeID")
     )
     entry_name: str = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryName")
     )
-    date_submitted: str = Field(
+    date_submitted: datetime = Field(
         validation_alias=AliasPath("docketEntryHeader", "submittedDate")
     )
     entry_status: str = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryStatus")
     )
-    entry_status_id: str = Field(
+    entry_status_id: int = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryStatusID")
     )
     entry_description: str = Field(
@@ -159,7 +160,7 @@ class FloridaOriginatingCase(BaseModel):
 
 
 class FloridaCase(BaseModel):
-    uuid: str = Field(
+    uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     case_number: str = Field(
@@ -177,25 +178,25 @@ class FloridaCase(BaseModel):
     class_group_type: str = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    class_group_type_id: str = Field(
+    class_group_type_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     classification: str = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    classification_id: str = Field(
+    classification_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    court_id: str = Field(
+    court_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     location: str = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    location_id: str = Field(
+    location_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    date_filed: str = Field(
+    date_filed: datetime = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     case_group_flag: bool = Field(
@@ -205,7 +206,7 @@ class FloridaCase(BaseModel):
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     originating_cases: list[FloridaOriginatingCase] = Field(
-        alias="originatingCases"
+        validation_alias=AliasPath("caseHeader", "originatingCases")
     )
 
 
@@ -220,11 +221,11 @@ class FloridaCourtLocation(BaseModel):
 class FloridaCourt(BaseModel):
     active: bool = Field(alias="active")
     display_name: bool = Field(alias="active")
-    external_identifier: bool = Field(alias="active")
-    modified_date: bool = Field(alias="active")
-    modified_user_id: bool = Field(alias="active")
-    note: bool = Field(alias="active")
-    resource_id: bool = Field(alias="active")
+    external_identifier: int = Field(alias="active")
+    modified_date: datetime = Field(alias="active")
+    modified_user_id: UUID4 = Field(alias="active")
+    note: str = Field(alias="active")
+    resource_id: UUID4 = Field(alias="active")
     locations: list[FloridaCourtLocation]
 
 
@@ -251,13 +252,13 @@ class FloridaCasePartySubType(BaseModel):
 
 
 class FloridaDocketEntryType(BaseModel):
-    id: str = Field(alias="docketEntryTypeID")
+    id: int = Field(alias="docketEntryTypeID")
     name: str = Field(alias="docketEntryTypeName")
     comment: str = Field(alias="docketEntryTypeComment")
 
 
 class FloridaDocketEntrySubType(BaseModel):
-    id: str = Field(alias="docketEntrySubTypeID")
+    id: int = Field(alias="docketEntrySubTypeID")
     name: str = Field(alias="docketEntrySubTypeName")
     comment: str = Field(alias="docketEntrySubTypeComment")
     docket_entry_type: FloridaDocketEntryType = Field(alias="docketEntryType")
@@ -265,16 +266,16 @@ class FloridaDocketEntrySubType(BaseModel):
 
 class FloridaCaseCategory(BaseModel):
     id: str = Field(alias="caseCategoryID")
-    name: str = Field(alias="caseCategoryName")
+    name: int = Field(alias="caseCategoryName")
     comment: str = Field(alias="caseCategoryComment")
 
 
 class FloridaDocument(BaseModel):
-    docket_entry_uuid: str = Field(alias="docketEntryUUID")
-    document_link_uuid: str = Field(alias="documentLinkUUID")
+    docket_entry_uuid: UUID4 = Field(alias="docketEntryUUID")
+    document_link_uuid: UUID4 = Field(alias="documentLinkUUID")
     document_name: str = Field(alias="documentName")
-    user_document_state: str = Field(alias="userDocumentState")
-    case_uuid: str = Field(
+    user_document_state: UUID4 = Field(alias="userDocumentState")
+    case_uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     case_number: str = Field(
@@ -283,7 +284,7 @@ class FloridaDocument(BaseModel):
     case_title: str = Field(
         validation_alias=AliasPath("caseHeader", "caseTitle")
     )
-    court_id: str = Field(validation_alias=AliasPath("caseHeader", "courtID"))
+    court_id: int = Field(validation_alias=AliasPath("caseHeader", "courtID"))
     document_type: str = Field(
         validation_alias=AliasPath("documentInfo", "documentType")
     )
@@ -293,10 +294,10 @@ class FloridaDocument(BaseModel):
     file_extension: str = Field(
         validation_alias=AliasPath("documentInfo", "fileExtension")
     )
-    page_count: str = Field(
+    page_count: int = Field(
         validation_alias=AliasPath("documentInfo", "pageCount")
     )
-    file_size: str = Field(
+    file_size: int = Field(
         validation_alias=AliasPath("documentInfo", "fileSize")
     )
 
