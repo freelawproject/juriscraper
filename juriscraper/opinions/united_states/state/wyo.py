@@ -21,7 +21,9 @@ class Site(OpinionSiteLinear):
     date_re = re.compile(r"^/Date\((\d+)\)/$")
     base_url = "http://www.courts.state.wy.us"
     api_url = "https://opinions.courts.state.wy.us/Home/GetOpinions"
-    document_url = "https://stwjbopinions.blob.core.usgovcloudapi.net/wsc-opinions"
+    document_url = (
+        "https://stwjbopinions.blob.core.usgovcloudapi.net/wsc-opinions"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
