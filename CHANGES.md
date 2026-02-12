@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `wyo` scraper to use updated document base URL
 
 ## Current
 
