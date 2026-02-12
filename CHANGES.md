@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Exclude legal role abbreviations from `pa` case names #1797
 
 ## Current
 
