@@ -150,8 +150,10 @@ def extract_doc_content(
 
     logger.info("\nOpen extracted content with 'file://%s'", filepath)
 
-    metadata_dict = site.extract_from_text(extracted_content)
-    return extracted_content, metadata_dict
+    cleaned_extracted_text = site.cleanup_extracted_text(extracted_content)
+
+    metadata_dict = site.extract_from_text(cleaned_extracted_text)
+    return cleaned_extracted_text, metadata_dict
 
 
 def check_hashes(data: bytes, download_url: str, site) -> None:
