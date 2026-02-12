@@ -137,6 +137,11 @@ class Site(ClusterSite):
         else:
             name = title
             docket = ""
+
+        # Remove legal role abbreviations (Aplt., Aplts) from case names
+        # These describe the parties' roles, not their names
+        name = re.sub(r",\s*Aplts?\.?", "", name)
+
         return name, docket
 
     def get_status(self, op: dict) -> str:
