@@ -577,7 +577,6 @@ class CaseNameTweaker:
             "a.g.p.",
             "c.d.c.",
             "c.i.a.",
-            "com.",
             "d.o.c.",
             "e.e.o.c.",
             "e.p.a.",
@@ -611,6 +610,7 @@ class CaseNameTweaker:
             "johnson",
             "commissioner",
             "commonwealth",
+            "com",
         ]
 
         ags = [

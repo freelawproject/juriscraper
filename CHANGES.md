@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
-- Exclude "Com." from case name shorts #1737
+- fix(pasuperct): Exclude "Com." from case name shorts #1737
 
 Fixes:
 -
