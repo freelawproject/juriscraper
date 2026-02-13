@@ -25,6 +25,19 @@ Fixes:
 
 ## Current
 
+**2.7.7 - 2026-02-13**
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `wyo` scraper to use updated document base URL
+
+## Past
+
 **2.7.6 - 2026-02-10**
 
 Features:
@@ -44,8 +57,6 @@ Fixes:
 - Revert Mass back to old for to collect PDF
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
 - Clean Texas URLs while parsing so that they are valid
-
-## Past
 
 **2.7.5 - 2026-01-28**
 
