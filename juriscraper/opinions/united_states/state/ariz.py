@@ -156,7 +156,7 @@ class Site(OpinionSiteLinear):
                     "name": titlecase(opinion["Title"]),
                     "docket": opinion["CaseNumber"],
                     "date": opinion["FilingDate"],
-                    "url": urljoin(self.base_url, quote(file_url, safe="/:@")),
+                    "url": urljoin(self.base_url, quote(file_url, safe="/:@?=&")),
                     "status": self.status_map.get(decision_type, "Unknown"),
                     "author": self._extract_author(
                         opinion.get("OpinionJudges", [])
