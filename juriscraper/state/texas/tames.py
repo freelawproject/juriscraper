@@ -110,9 +110,22 @@ class TAMESScraper(BaseStateScraper):
     # Oldest (inaccurately) dated records in TAMES
     FIRST_RECORD_DATE = date(1900, 1, 1)
 
-    # Additional headers for ASP.NET form submission
-    ADDITIONAL_HEADERS: Final[dict[str, str]] = {
-        "Content-Type": "application/x-www-form-urlencoded",
+    ADDITIONAL_HEADERS = None
+
+    # Splits GET and POST headers to bring them inline with what browsers send
+    _GET_HEADERS: dict[str, str] = {
+        "sec-fetch-site": "none",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-user": "?1",
+        "sec-fetch-dest": "document",
+    }
+    _POST_HEADERS: dict[str, str] = {
+        "Origin": "https://search.txcourts.gov",
+        "Referer": "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-user": "?1",
+        "sec-fetch-dest": "document",
     }
 
     COURT_IDS: Final[list[str]] = [c.value for c in CourtID]
@@ -167,7 +180,6 @@ class TAMESScraper(BaseStateScraper):
         start_date, end_date = date_range
         current_end = end_date
 
-        self._fetch_search_form()
         last_days_results = 0
         search_retries = 0
         prior_last_day_result = None
@@ -291,7 +303,9 @@ class TAMESScraper(BaseStateScraper):
 
     def _fetch_search_form(self) -> None:
         """Fetch the search form page and extract hidden fields."""
-        response = self.request_manager.get(self.SEARCH_URL)
+        response = self.request_manager.get(
+            self.SEARCH_URL, headers=self._GET_HEADERS
+        )
         response.raise_for_status()
 
         tree: html.HtmlElement = html.fromstring(response.content)
@@ -309,6 +323,10 @@ class TAMESScraper(BaseStateScraper):
             First yield: int - the total result count as reported by TAMES
             Subsequent yields: TamesSearchRow - individual search results
         """
+        # Re-fetch the form to get fresh hidden fields (__VIEWSTATE,
+        # __EVENTVALIDATION, etc.) and reset server-side session state.
+        self._fetch_search_form()
+
         # Format dates for the form (M/d/yyyy)
         start_str = start_date.strftime("%-m/%-d/%Y")
         end_str = end_date.strftime("%-m/%-d/%Y")
@@ -341,8 +359,9 @@ class TAMESScraper(BaseStateScraper):
             # default to all courts
             form_data["ctl00$ContentPlaceHolder1$chkAllCourts"] = "on"
 
-        # Submit the search
-        response = self.request_manager.post(self.SEARCH_URL, data=form_data)
+        response = self.request_manager.post(
+            self.SEARCH_URL, data=form_data, headers=self._POST_HEADERS
+        )
         response.raise_for_status()
 
         tree = html.fromstring(response.content)
@@ -420,21 +439,30 @@ class TAMESScraper(BaseStateScraper):
 
     def _fetch_next_page(self, tree, form_data):
         """Fetch the next page of results."""
+
         next_button = tree.xpath("//input[contains(@class, 'rgPageNext')]")[0]
         submit_name = next_button.get("name", "")
         submit_val = next_button.get("value", "")
 
         hidden_fields = self._extract_hidden_fields(tree)
-        # Hidden_fields contains some information about our current location
-        # in the search results, including the page. This merge order is important.
+
+        # Remove the search button — only the pagination button should be
+        # the submitter. ASP.NET uses the submitted button name to decide
+        # which server-side handler runs; sending both is invalid.
+        pagination_form_data = {
+            k: v
+            for k, v in form_data.items()
+            if k != "ctl00$ContentPlaceHolder1$btnSearch"
+        }
+
         next_form_data = {
-            **form_data,
+            **pagination_form_data,
             **hidden_fields,
             submit_name: submit_val,
         }
 
         response = self.request_manager.post(
-            self.SEARCH_URL, data=next_form_data
+            self.SEARCH_URL, data=next_form_data, headers=self._POST_HEADERS
         )
         response.raise_for_status()
 
