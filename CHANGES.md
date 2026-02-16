@@ -18,12 +18,25 @@ Features:
 -
 
 Changes:
+- Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
+
+Fixes:
+- Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
+
+## Current
+
+**2.7.7 - 2026-02-13**
+
+Features:
+-
+
+Changes:
 -
 
 Fixes:
--
+- Fix `wyo` scraper to use updated document base URL
 
-## Current
+## Past
 
 **2.7.6 - 2026-02-10**
 
@@ -36,16 +49,14 @@ Changes:
 - Add `court_type` field to Texas dockets, originating court info, and appellate court info
 - Add `district` field to Texas originating court info where relevant
 - Update Texas case name shortening to be more robust
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644  
 
 Fixes:
 
 - Fix incorrectly shortened case names in Texas Court of Criminal Appeals scraper
 - Revert Mass back to old for to collect PDF
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
-- Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
--
-
-## Past
+- Clean Texas URLs while parsing so that they are valid
 
 **2.7.5 - 2026-01-28**
 

@@ -19,6 +19,7 @@ from juriscraper.lib.html_utils import (
 from juriscraper.lib.string_utils import (
     FILE_SIZE_RE,
     clean_string,
+    clean_url,
     harmonize,
     size_string_to_bytes,
 )
@@ -168,7 +169,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
-        case_url=case_url_node.get("href", ""),
+        case_url=clean_url(case_url_node.get("href", "")),
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=district,
@@ -943,7 +944,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
         return [
             TexasCaseDocument(
-                document_url=url,
+                document_url=clean_url(url),
                 description=description,
                 media_id=media_id[0] if len(media_id) > 0 else "",
                 media_version_id=media_version_id[0]
