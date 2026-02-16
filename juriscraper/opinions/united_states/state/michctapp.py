@@ -90,13 +90,15 @@ class Site(ClusterSite, mich.Site):
         )
         if not search_items:
             logger.error(
-                f"michctapp: no results from search API for docket {docket_number}",
+                "michctapp: no results from search API for docket %s "
+                % docket_number,
                 extra={"search_items": search_items},
             )
             return "Placeholder name", docket_number
         elif len(search_items) > 1:
             logger.error(
-                f"michctapp: more than 1 from search API for docket {docket_number}",
+                "michctapp: more than 1 from search API for docket %s "
+                % docket_number,
                 extra={"search_items": search_items},
             )
             return "Placeholder name", docket_number
