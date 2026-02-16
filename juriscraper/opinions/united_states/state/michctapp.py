@@ -90,9 +90,17 @@ class Site(ClusterSite, mich.Site):
         )
         if not search_items:
             logger.error(
-                f"michctapp: no results from search API for docket {docket_number}"
+                f"michctapp: no results from search API for docket {docket_number}",
+                extra={"search_items": search_items},
             )
             return "Placeholder name", docket_number
+        elif len(search_items) > 1:
+            logger.error(
+                f"michctapp: more than 1 from search API for docket {docket_number}",
+                extra={"search_items": search_items},
+            )
+            return "Placeholder name", docket_number
+
         return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
     def get_disposition(self, item: dict) -> str:
