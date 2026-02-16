@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
 - fix `michctapp` captcha block by using new url #1677
+- fix `tex` add error handling for empty order list to prevent IndexError #1738
 
 ## Current
 
