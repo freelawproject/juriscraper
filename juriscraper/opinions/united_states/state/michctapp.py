@@ -6,17 +6,20 @@ Reviewer: mlr
 History:
     - 2014-09-19: Created by Jon Andersen
     - 2022-01-28: Updated for new web site, @satsuki-chan.
+    - 2026-01-14: Updated for new secondary request url
 """
 
 import re
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(mich.Site):
+class Site(ClusterSite, mich.Site):
     court = "Court Of Appeals"
     extract_from_text = OpinionSite.extract_from_text
 
@@ -26,11 +29,40 @@ class Site(mich.Site):
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
+    def _process_html(self) -> None:
+        """Process the html and extract out the opinions
+
+        :return: None
+        """
+        for item in self.html["searchItems"]:
+            case_dict = self._extract_case_data_from_item(item)
+
+            # Use URL suffix to get the type. Other prefixes not used here
+            # "o.opn.pdf": "On Remand" opinions
+            # "a.opn.pdf": "After Second Remand"
+            url = case_dict.get("url", "")
+            lower_url = url.lower()
+            if lower_url.endswith("p.opn.pdf"):
+                case_dict["type"] = (
+                    OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
+                )
+            elif lower_url.endswith("d.opn.pdf"):
+                case_dict["type"] = OpinionType.DISSENT.value
+            elif lower_url.endswith("c.opn.pdf"):
+                case_dict["type"] = OpinionType.CONCURRENCE.value
+            else:
+                case_dict["type"] = OpinionType.MAJORITY.value
+
+            # If we can't cluster it, append it to self.cases
+            # if it was clustered, the data will already be in self.cases
+            if not self.cluster_opinions(case_dict, self.cases):
+                self.cases.append(case_dict)
+
     def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
         """Try to get the case name using a secondary request
 
         Example of the content in the URL
-        https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/377920
+        https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery=371918
 
         :param item: the opinion item from the API
         :return: case name and docket number
@@ -39,7 +71,6 @@ class Site(mich.Site):
             return "Placeholder name", "Placeholder docket"
 
         logger.info("Getting case name from secondary request")
-        docket_number = ""
         if match := re.search(
             r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
         ):
@@ -51,10 +82,28 @@ class Site(mich.Site):
             logger.error("michctapp: could not get docket number", extra=item)
             return "Placeholder name", "Placeholder docket"
 
-        url = f"https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/{docket_number}"
+        url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
         self._request_url_get(url)
         response = self.request["response"].json()
-        return self.cleanup_case_name(response["title"]), docket_number
+        search_items = response.get("caseDetailResults", {}).get(
+            "searchItems", []
+        )
+        if not search_items:
+            logger.error(
+                "michctapp: no results from search API for docket %s "
+                % docket_number,
+                extra={"search_items": search_items},
+            )
+            return "Placeholder name", docket_number
+        elif len(search_items) > 1:
+            logger.error(
+                "michctapp: more than 1 from search API for docket %s "
+                % docket_number,
+                extra={"search_items": search_items},
+            )
+            return "Placeholder name", docket_number
+
+        return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
     def get_disposition(self, item: dict) -> str:
         """Get the disposition value

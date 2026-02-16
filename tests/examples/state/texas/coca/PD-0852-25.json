@@ -1,0 +1,117 @@
+{
+  "appeals_court": {
+    "case_number": "09-23-00371-CR",
+    "case_url": "https://search.txcourts.gov/Case.aspx?cn=09-23-00371-CR",
+    "court_id": "texas_coa09",
+    "disposition": "",
+    "district": "9th Court of Appeals",
+    "justice": "",
+    "opinion_cite": ""
+  },
+  "appellate_briefs": [],
+  "case_events": [
+    {
+      "attachments": [],
+      "date": "2026-01-15",
+      "disposition": "Refused",
+      "type": "PDR DISP"
+    },
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=c79d7519-c108-4914-a445-4f3334ba6914&coa=coscca&DT=MOT+SUSPEND+9.3&MediaID=25daafcc-6cbc-4b61-b727-967a582bf80f",
+          "file_size_bytes": 95000,
+          "file_size_str": "95 KB",
+          "media_id": "25daafcc-6cbc-4b61-b727-967a582bf80f",
+          "media_version_id": "c79d7519-c108-4914-a445-4f3334ba6914"
+        }
+      ],
+      "date": "2025-11-07",
+      "disposition": "Granted",
+      "type": "MOT SUSPEND 9.3"
+    },
+    {
+      "attachments": [],
+      "date": "2025-11-07",
+      "disposition": "",
+      "type": "MOT SUSPEND 9.3"
+    },
+    {
+      "attachments": [
+        {
+          "description": "PETITION",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=a3527779-0cc9-4714-83a4-ff8d78c35552&coa=coscca&DT=PETITION&MediaID=5d4cb34b-a3ed-4e0a-970b-01e09159df40",
+          "file_size_bytes": 1480000,
+          "file_size_str": "1.48 MB",
+          "media_id": "5d4cb34b-a3ed-4e0a-970b-01e09159df40",
+          "media_version_id": "a3527779-0cc9-4714-83a4-ff8d78c35552"
+        },
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=13dcffc8-8762-4be0-8fe0-0e98ff27c77d&coa=coscca&DT=PDR+FILED&MediaID=213a0d09-cd9b-4c33-8ecd-6ac6fbda4cb0",
+          "file_size_bytes": 104000,
+          "file_size_str": "104 KB",
+          "media_id": "213a0d09-cd9b-4c33-8ecd-6ac6fbda4cb0",
+          "media_version_id": "13dcffc8-8762-4be0-8fe0-0e98ff27c77d"
+        }
+      ],
+      "date": "2025-11-07",
+      "disposition": "",
+      "type": "PDR FILED"
+    },
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=6e367f1d-ce33-424c-a122-1fba3b8532b2&coa=coscca&DT=EXT+PDR+DISP%2FNFE&MediaID=b87010dd-520e-4c74-93e4-0d643c1cb8f0",
+          "file_size_bytes": 108000,
+          "file_size_str": "108 KB",
+          "media_id": "b87010dd-520e-4c74-93e4-0d643c1cb8f0",
+          "media_version_id": "6e367f1d-ce33-424c-a122-1fba3b8532b2"
+        }
+      ],
+      "date": "2025-10-02",
+      "disposition": "Granted",
+      "type": "EXT PDR DISP/NFE"
+    },
+    {
+      "attachments": [],
+      "date": "2025-10-02",
+      "disposition": "",
+      "type": "EXT PDR FILED"
+    },
+    {
+      "attachments": [],
+      "date": "2025-10-02",
+      "disposition": "",
+      "type": "COA RECORD RECEIVED"
+    }
+  ],
+  "case_name": "HAMEL, BRANDON MICHAEL v. The State of Texas",
+  "case_name_full": "HAMEL, BRANDON MICHAEL",
+  "case_type": "PDR Case Type",
+  "court_id": "texas_coscca",
+  "court_type": "texas_final",
+  "date_filed": "2025-10-02",
+  "docket_number": "PD-0852-25",
+  "originating_court": {
+    "case": "14683JD",
+    "county": "Jasper",
+    "court_type": "texas_district",
+    "district": 1,
+    "judge": "",
+    "name": "1st District Court",
+    "punishment": "",
+    "reporter": ""
+  },
+  "parties": [
+    {
+      "name": "HAMEL, BRANDON MICHAEL",
+      "representatives": [
+        "BRANDON MICHAEL HAMEL"
+      ],
+      "type": "Appellant"
+    }
+  ]
+}
