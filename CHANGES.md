@@ -21,7 +21,7 @@ Changes:
 - Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
 
 Fixes:
--
+- Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
 
 ## Current
 

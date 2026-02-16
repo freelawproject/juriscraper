@@ -375,9 +375,21 @@ class Site(ClusterSite):
 
             op["url"] = link[0].xpath("td/a/@href")[0]
 
+            # Check both document type (td[2]) and disposition (td[3]) for opinion type
             op_type = link[0].xpath("td[2]/text()")[0].strip().lower()
-            concur = "concur" in op_type
-            dissent = "dissent" in op_type
+
+            # Get disposition text
+            op_disposition_raw = (
+                opinion.xpath(".//td[3]/text()")[0].strip()
+                if opinion.xpath(".//td[3]/text()")
+                else ""
+            )
+            op_disposition_lower = op_disposition_raw.lower()
+
+            # Check for concurrence/dissent in both document type and disposition
+            concur = "concur" in op_type or "concur" in op_disposition_lower
+            dissent = "dissent" in op_type or "dissent" in op_disposition_lower
+
             if concur and dissent:
                 op["type"] = (
                     OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
@@ -389,7 +401,7 @@ class Site(ClusterSite):
             else:
                 op["type"] = OpinionType.MAJORITY.value
                 # use the 'main' opinion disposition as cluster disposition
-                disposition = opinion.xpath(".//td[3]/text()")[0]
+                disposition = op_disposition_raw
 
             opinions.append(op)
 
