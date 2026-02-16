@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 2.7.8 - 2026-02-16
+
+Features:
+-
+
+Changes:
 - Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
 
 Fixes:
