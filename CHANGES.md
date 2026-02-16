@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
+- fix `michctapp` captcha block by using new url #1677
 
 ## Current
 
@@ -83,9 +84,6 @@ Changes:
 - Update `haw` and `hawapp` to ClusterSite #1772
 - updates `texapp`, `texcrimapp` to ClusterSite #1767
 - update `michctapp` to ClusterSite #1652
-
-Fixes:
--
 
 **2.7.3 - 2025-01-15**
 

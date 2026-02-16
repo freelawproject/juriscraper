@@ -6,6 +6,7 @@ Reviewer: mlr
 History:
     - 2014-09-19: Created by Jon Andersen
     - 2022-01-28: Updated for new web site, @satsuki-chan.
+    - 2026-01-14: Updated for new secondary request url
 """
 
 import re
@@ -61,7 +62,7 @@ class Site(ClusterSite, mich.Site):
         """Try to get the case name using a secondary request
 
         Example of the content in the URL
-        https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/377920
+        https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery=371918
 
         :param item: the opinion item from the API
         :return: case name and docket number
@@ -70,7 +71,6 @@ class Site(ClusterSite, mich.Site):
             return "Placeholder name", "Placeholder docket"
 
         logger.info("Getting case name from secondary request")
-        docket_number = ""
         if match := re.search(
             r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
         ):
@@ -82,10 +82,28 @@ class Site(ClusterSite, mich.Site):
             logger.error("michctapp: could not get docket number", extra=item)
             return "Placeholder name", "Placeholder docket"
 
-        url = f"https://www.courts.michigan.gov/c/courts/getcourtofappealscasedetaildata/{docket_number}"
+        url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
         self._request_url_get(url)
         response = self.request["response"].json()
-        return self.cleanup_case_name(response["title"]), docket_number
+        search_items = response.get("caseDetailResults", {}).get(
+            "searchItems", []
+        )
+        if not search_items:
+            logger.error(
+                "michctapp: no results from search API for docket %s "
+                % docket_number,
+                extra={"search_items": search_items},
+            )
+            return "Placeholder name", docket_number
+        elif len(search_items) > 1:
+            logger.error(
+                "michctapp: more than 1 from search API for docket %s "
+                % docket_number,
+                extra={"search_items": search_items},
+            )
+            return "Placeholder name", docket_number
+
+        return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
     def get_disposition(self, item: dict) -> str:
         """Get the disposition value
