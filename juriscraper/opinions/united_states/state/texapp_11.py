@@ -14,4 +14,5 @@ class Site(texapp.Site):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_name = "capp_11"
+        self.court_number = "11"
         self.checkbox = 12

@@ -3,6 +3,7 @@ from typing import Optional, TypedDict
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
+    CourtType,
     TexasCommonData,
     TexasCommonScraper,
     coa_name_to_court_id,
@@ -69,13 +70,14 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
 
         return TexasCourtOfAppealsDocket(
             court_id=coa_name_to_court_id(court_name).value,
+            court_type=CourtType.APPELLATE.value,
             case_events=common_data["case_events"],
             appellate_briefs=common_data["appellate_briefs"],
             docket_number=common_data["docket_number"],
             date_filed=common_data["date_filed"],
             case_type=common_data["case_type"],
             parties=common_data["parties"],
-            trial_court=common_data["trial_court"],
+            originating_court=common_data["originating_court"],
             case_name=common_data["case_name"],
             case_name_full=common_data["case_name_full"],
             publication_service=self.case_data["pub service"],
