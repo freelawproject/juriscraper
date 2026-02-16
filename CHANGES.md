@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
 - fix `michctapp` captcha block by using new url #1677
+- fix `tex` add error handling for empty order list to prevent IndexError #1738
 
 ## Current
 
@@ -103,7 +104,6 @@ Fixes:
 - fix `tenn` miss adding opinion types #1749
 - add ADDENDUM to OpinionType enum #1754
 - update `lactapp_1` parameters for 2026 #1734
-- fix `tex` add error handling for empty order list to prevent IndexError #1738
 
 **2.7.2 - 2025-01-13**
 

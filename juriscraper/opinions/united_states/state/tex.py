@@ -62,6 +62,7 @@ class Site(ClusterSite):
             if not links:
                 # No orders posted yet (common in early January)
                 self.html = None
+                logger.error("tex: no date list on opinions page")
                 return None
             self.url = links[-1]
 
