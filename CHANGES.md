@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- Make tames scraper behave more like a browser for form submission.
+
 
 ## 2.7.8 - 2026-02-16
 
