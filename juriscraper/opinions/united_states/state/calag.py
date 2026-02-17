@@ -12,13 +12,14 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
+        cipher = "ECDHE-RSA-AES128-GCM-SHA256"
+        kwargs.setdefault("verify", self.set_custom_adapter(cipher))
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
         self.url = f"https://oag.ca.gov/opinions/yearly-index?conclusion-year[value][year]={self.year}"
         self.back_scrape_iterable = list(range(1985, self.year + 1))
-        self.cipher = "ECDHE-RSA-AES128-GCM-SHA256"
-        self.set_custom_adapter(self.cipher)
+        self.cipher = cipher
         self.status = "Published"
 
     def build_summaries(self, row: HtmlElement) -> str:

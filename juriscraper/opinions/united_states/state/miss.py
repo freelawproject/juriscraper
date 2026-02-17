@@ -29,10 +29,10 @@ class Site(OpinionSiteLinear):
     them.
     """
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
-        dates_page = super()._download(request_dict)
+        dates_page = await super()._download(request_dict)
         self.parse_date_pages(dates_page)
 
     """Keep track of the most recent N date pages.
