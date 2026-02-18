@@ -6,6 +6,7 @@ from typing import Union
 
 import certifi
 import requests
+from curl_cffi import requests as curl_requests
 
 from juriscraper.lib.date_utils import (
     json_date_handler,
@@ -74,6 +75,7 @@ class AbstractSite:
             "status": None,
             "url": None,
         }
+        self.impersonate = False
 
         # Attribute to reference a function passed by the caller,
         # which takes a single argument, the Site object, after
@@ -389,7 +391,10 @@ class AbstractSite:
             s = requests.Session()
         else:
             has_cipher = hasattr(self, "cipher")
-            s = self.request["session"] if has_cipher else requests.session()
+            if self.impersonate:
+                s = curl_requests.Session(impersonate="chrome")
+            else:
+                s = self.request["session"] if has_cipher else requests.session()
 
             if self.needs_special_headers:
                 headers = self.request["headers"]
@@ -463,13 +468,22 @@ class AbstractSite:
         values
         """
         self.request["url"] = url
-        self.request["response"] = self.request["session"].get(
-            url,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-            timeout=60,
-            **self.request["parameters"],
-        )
+        if self.impersonate:
+            self.request["response"] = curl_requests.get(
+                url,
+                impersonate="chrome",
+                timeout=60,
+                **self.request["parameters"],
+            )
+        else:
+            self.request["response"] = self.request["session"].get(
+                url,
+                headers=self.request["headers"],
+                verify=self.request["verify"],
+                timeout=60,
+                **self.request["parameters"],
+            )
+
         if self.save_response:
             self.save_response(self)
 

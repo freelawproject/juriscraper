@@ -29,25 +29,6 @@ class Site(OpinionSiteLinear):
         months=3
     )  # the site only have last 3 month available
 
-    def _request_url_get(self, url):
-        """Override to use curl_cffi to bypass Cloudflare protection
-
-        Execute GET request using curl_cffi with browser impersonation
-        to bypass Cloudflare's bot detection.
-        """
-        self.request["url"] = url
-
-        # Use curl_cffi to impersonate a real Chrome browser
-        self.request["response"] = curl_requests.get(
-            url,
-            impersonate="chrome",
-            timeout=60,
-            **self.request["parameters"],
-        )
-
-        if self.save_response:
-            self.save_response(self)
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.socialaw.com/services/slip-opinions/"
@@ -59,6 +40,7 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["text/html"]
         self.days_interval = 30
         self.make_backscrape_iterable(kwargs)
+        self.impersonate = True
 
     def _process_html(self):
         """Scrape and process the html
@@ -102,7 +84,7 @@ class Site(OpinionSiteLinear):
         content = content.decode("utf-8")
         tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
         content = tree.xpath(
-            "//div[@id='contentPlaceholder_ctl00_ctl00_ctl00_detailContainer']"
+            "//*[@id='slip-opinion-primary-content-9880']/div/div"
         )[0]
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
