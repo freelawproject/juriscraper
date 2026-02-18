@@ -14,4 +14,7 @@ from juriscraper.opinions.united_states.state import mass
 
 
 class Site(mass.Site):
-    court_name = "Appeals Court"
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.court_id = self.__module__
+        self.court_identifier = "AC"

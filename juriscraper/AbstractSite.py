@@ -1,14 +1,13 @@
 import hashlib
 import json
 import os
-from datetime import date, datetime, timedelta
+from datetime import datetime
 from typing import Union
 
 import certifi
 import requests
 
 from juriscraper.lib.date_utils import (
-    fix_future_year_typo,
     json_date_handler,
     make_date_range_tuples,
 )
@@ -30,11 +29,14 @@ from juriscraper.lib.microservices_utils import follow_redirections
 from juriscraper.lib.network_utils import SSLAdapter
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
-    clean_string,
-    harmonize,
     trunc,
 )
 from juriscraper.lib.test_utils import MockRequest
+from juriscraper.lib.utils import (
+    clean_attribute,
+    sanity_check_case_names,
+    sanity_check_dates,
+)
 
 logger = make_default_logger()
 
@@ -204,26 +206,28 @@ class AbstractSite:
         """Iterate over attribute values and clean them"""
         for attr in self._all_attrs:
             item = getattr(self, attr)
-            if item is not None:
-                cleaned_item = []
-                for sub_item in item:
-                    if attr == "download_urls":
-                        sub_item = sub_item.strip()
-                    else:
-                        if isinstance(sub_item, str):
-                            sub_item = clean_string(sub_item)
-                        elif isinstance(sub_item, datetime):
-                            sub_item = sub_item.date()
-                        if attr in ["case_names", "docket_numbers"]:
-                            sub_item = harmonize(sub_item)
-                    cleaned_item.append(sub_item)
-                self.__setattr__(attr, cleaned_item)
+            if item is None:
+                continue
+
+            cleaned_item = [
+                clean_attribute(attr, sub_item) for sub_item in item
+            ]
+
+            self.__setattr__(attr, cleaned_item)
 
     def _post_parse(self):
         """This provides an hook for subclasses to do custom work on the data
         after the parsing is complete.
         """
         pass
+
+    def no_results_warning(self) -> None:
+        if self.should_have_results:
+            logger.error(
+                f"{self.court_id}: Returned with zero items, but should have results."
+            )
+        else:
+            logger.warning(f"{self.court_id}: Returned with zero items.")
 
     def _check_sanity(self):
         """Check that the objects attributes make sense:
@@ -245,10 +249,12 @@ class AbstractSite:
         If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.
         """
+        # check that all attributes have the same length
         lengths = {}
         for attr in self._all_attrs:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
+
         values = list(lengths.values())
         if values.count(values[0]) != len(values):
             # Are all elements equal?
@@ -256,77 +262,35 @@ class AbstractSite:
                 "%s: Scraped meta data fields have differing"
                 " lengths: %s" % (self.court_id, lengths)
             )
-        if len(self.case_names) == 0:
-            if self.should_have_results:
-                logger.error(
-                    f"{self.court_id}: Returned with zero items, but should have results."
-                )
-            else:
-                logger.warning(f"{self.court_id}: Returned with zero items.")
-        else:
-            for field in self._req_attrs:
-                if self.__getattribute__(field) is None:
-                    raise InsanityException(
-                        "%s: Required fields do not contain any data: %s"
-                        % (self.court_id, field)
-                    )
-            prior_case_name = None
-            for i, name in enumerate(self.case_names):
-                if not name.strip():
-                    raise InsanityException(
-                        "Item with index %s has an empty case name. The prior "
-                        "item had case name of: %s" % (i, prior_case_name)
-                    )
-                prior_case_name = name
-
-        future_date_count = 0
-        for index, case_date in enumerate(self.case_dates):
-            if not isinstance(case_date, date):
-                raise InsanityException(
-                    "%s: member of case_dates list not a valid date object. "
-                    "Instead it is: %s with value: %s"
-                    % (self.court_id, type(case_date), case_date)
-                )
-            # Sanitize case date, fix typo of current year if present
-            fixed_date = fix_future_year_typo(case_date)
-            case_name = self.case_names[index]
-            if fixed_date != case_date:
-                logger.info(
-                    "Date year typo detected. Converting %s to %s "
-                    "for case '%s' in %s",
-                    case_date,
-                    fixed_date,
-                    case_name,
-                    self.court_id,
-                )
-                case_date = fixed_date
-                self.case_dates[index] = fixed_date
-
-            # If a date is approximate, then it may be set in the future until
-            # half of the year has passed. Ignore this case
-            if hasattr(self, "date_filed_is_approximate"):
-                date_is_approximate = self.date_filed_is_approximate[index]
-            else:
-                date_is_approximate = False
-
-            # dates should not be in the future. Tolerate a week
-            if not date_is_approximate and case_date > (
-                date.today() + timedelta(days=7)
-            ):
-                future_date_count += 1
-                error = f"{self.court_id}: {case_date} date is in the future. Case '{case_name}'"
-                logger.error(error)
-
-                # Interrupt data ingestion if more than 1 record has a bad date
-                if future_date_count > 1:
-                    raise InsanityException(
-                        f"More than 1 case has a date in the future. Last case: {error}"
-                    )
 
         if not isinstance(self.cookies, dict):
             raise InsanityException(
                 "self.cookies not set to be a dict by scraper."
             )
+
+        # check that we have data
+        if len(self.case_names) == 0:
+            self.no_results_warning()
+            return
+
+        # check that all require fields have data
+        for field in self._req_attrs:
+            if self.__getattribute__(field) is None:
+                raise InsanityException(
+                    "%s: Required fields do not contain any data: %s"
+                    % (self.court_id, field)
+                )
+
+        sanity_check_case_names(self.case_names)
+        date_filed_is_approximate = getattr(
+            self, "date_filed_is_approximate", [False for _ in self.case_names]
+        )
+
+        sanity_check_dates(
+            zip(self.case_dates, self.case_names, date_filed_is_approximate),
+            self.court_id,
+        )
+
         logger.info(
             "%s: Successfully found %s items."
             % (self.court_id, len(self.case_names))
@@ -463,7 +427,7 @@ class AbstractSite:
                     fingerprint = [f"{court_str}-unexpected-content-type"]
                     msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
                     raise UnexpectedContentTypeError(
-                        msg, fingerprint=fingerprint
+                        msg, fingerprint=fingerprint, data={"response": r}
                     )
 
             if doctor_is_available:

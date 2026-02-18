@@ -1,42 +1,50 @@
 [
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=21432&Index=***coa07%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Luis Miguel Aleman v. the State of Texas",
+    "nature_of_suit": "Aggravated Sexual Assault",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=82cd5258-9c15-4636-882c-511ad15bc02e&coa=coa07&DT=Opinion&MediaID=0a9c0994-3c7b-4da5-9468-d27689c4b802",
+        "types": "020lead"
+      }
+    ],
+    "dispositions": "Affirmed",
+    "lower_courts": "108th District Court",
+    "lower_court_judges": "Honorable Douglas R. Woodburn",
+    "lower_court_numbers": "076108-E-CR",
+    "court_reporter": "Jana Smith",
+    "case_dates": "2024-03-05",
+    "docket_numbers": "07-23-00142-CR",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "07-13-00182-CR",
-    "case_name_shorts": ""
+    "blocked_statuses": false,
+    "precedential_statuses": "Published"
   },
   {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=21407&Index=***coa07%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
+    "case_names": "Sunday Canyon Property Owners Association, Inc. v. Kathy Brorman, Creekwood Real Estate, LLC, Alyssa Heck, and David Wiggains",
+    "nature_of_suit": "Miscellaneous/other civil",
+    "sub_opinions": [
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=7c357eb5-f0da-4b9c-b7b9-f1199b3b3834&coa=coa07&DT=Opinion&MediaID=ba6d432e-7b14-4eff-b88e-4c5fd36f70ee",
+        "types": "020lead"
+      },
+      {
+        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=6be825af-c8fe-4e64-849d-e4ed1514c4ca&coa=coa07&DT=Opinion&MediaID=6c09c7cf-d1a1-4330-a3a0-7cadd86028c3",
+        "types": "030concurrence"
+      }
+    ],
+    "dispositions": "Affirmed in part, remanded in part",
+    "lower_courts": "251st District Court",
+    "lower_court_judges": "Honorable Ana Estevez",
+    "lower_court_numbers": "76535C",
+    "court_reporter": "Barbara Younger",
+    "case_dates": "2024-02-28",
+    "docket_numbers": "07-23-00195-CV",
+    "judges": "",
+    "case_name_shorts": "",
     "date_filed_is_approximate": false,
-    "docket_numbers": "07-13-00356-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=21370&Index=***coa07%5cOpinion",
-    "precedential_statuses": "Published",
     "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "07-13-00310-CR",
-    "case_name_shorts": ""
-  },
-  {
-    "case_dates": "2014-06-26",
-    "case_names": "No case names fetched during tests.",
-    "download_urls": "http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=21355&Index=***coa07%5cOpinion",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "07-14-00009-CR",
-    "case_name_shorts": ""
+    "precedential_statuses": "Published"
   }
 ]

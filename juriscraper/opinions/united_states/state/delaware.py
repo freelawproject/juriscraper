@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
             case = {
                 "name": row.xpath("td[1]/a/text()")[0].strip(),
                 "date": row.xpath("td[2]/span/text()")[0].strip(),
-                "docket": row.xpath("td[3]/a/text()")[0].strip(),
+                "docket": row.xpath("td[3]/span/text()")[0].strip(),
                 "url": urljoin(
                     self.url, row.xpath("td[1]/a/@href")[0].strip()
                 ),

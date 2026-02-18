@@ -1,54 +1,428 @@
 [
   {
-    "case_dates": "2024-08-29",
-    "case_names": "Velasquez, L., Aplt v. Miranda, L.",
-    "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-45-2024mo - 106055073279289388.pdf",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "108 MAP 2023",
-    "judges": "Dougherty, Kevin M.",
+    "case_dates": "2025-12-19",
+    "case_names": "Doubs-Clark, A., Aplt. v. PPB",
+    "docket_numbers": "29 MAP 2025",
     "citations": "",
-    "case_name_shorts": "",
-    "per_curiam": false
-  },
-  {
-    "case_dates": "2024-08-29",
-    "case_names": "Velasquez, L., Aplt v. Miranda, L.",
-    "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-45-2024do - 106055073279289763.pdf",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "108 MAP 2023",
-    "judges": "Brobson, P. Kevin",
-    "citations": "",
-    "case_name_shorts": "",
-    "per_curiam": false
-  },
-  {
-    "case_dates": "2024-08-29",
-    "case_names": "Velasquez, L., Aplt v. Miranda, L.",
-    "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-45-2024cdo - 106055073279289621.pdf",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "108 MAP 2023",
-    "judges": "Wecht, David N.",
-    "citations": "",
-    "case_name_shorts": "",
-    "per_curiam": false
-  },
-  {
-    "case_dates": "2024-08-28",
-    "case_names": "Commonwealth v. Becher, C.",
-    "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/212WAL2024 - 106052645279039768.pdf",
-    "precedential_statuses": "Published",
-    "blocked_statuses": false,
-    "date_filed_is_approximate": false,
-    "docket_numbers": "212 WAL 2024",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/29MAP2025pco - 106618624340649453.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
     "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "PPB",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-19",
+    "case_names": "Balfour Beatty v. Penn Patriot Ins., Aplt.",
+    "docket_numbers": "69 EAP 2024",
     "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-71-2025pco - 106618639340651201.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "020lead"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-71-2025cs - 106618639340651194.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-71-2025cs1 - 106618639340651167.pdf",
+        "authors": "Brobson, P. Kevin",
+        "per_curiam": false,
+        "types": "030concurrence"
+      }
+    ],
+    "judges": "Mundy, Sallie; Brobson, P. Kevin",
+    "precedential_statuses": "Published",
     "case_name_shorts": "",
-    "per_curiam": false
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-17",
+    "case_names": "Miron, T., Aplt. v. Delaware Cty. Tax Claim Bur",
+    "docket_numbers": "88 MAP 2024",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/Appeal Dismissed - Improvidently Granted.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "020lead"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/Concurring Statement (J. Wecht).pdf",
+        "authors": "Wecht, David N.",
+        "per_curiam": false,
+        "types": "030concurrence"
+      }
+    ],
+    "judges": "Wecht, David N.",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-17",
+    "case_names": "DiMeo v. Gross; Pet of: Gross, P.",
+    "docket_numbers": "150 EAL 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/150EAL2025cs - 106614885340312017.pdf",
+        "authors": "Wecht, David N.",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/150EAL2025 - 106614885340271495.pdf",
+        "authors": "",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Wecht, David N.",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "DiMeo",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Weatherholtz, K., Aplt. v. McKelvey, D.",
+    "docket_numbers": "57 MAP 2024",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-47-2025mo - 106611827340009757.pdf",
+        "authors": "Donohue, Christine",
+        "per_curiam": false,
+        "types": "020lead"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-47-2025cdo - 106611827340035876.pdf",
+        "authors": "Dougherty, Kevin M.",
+        "per_curiam": false,
+        "types": "035concurrenceinpart"
+      }
+    ],
+    "judges": "Donohue, Christine; Dougherty, Kevin M.",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "T.B. v. A.A-C., IV, Aplt.",
+    "docket_numbers": "30 WAP 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/30WAP2025pco - 106613476340155463.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "T.B.",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Consum Adv v. PUC; Apl of: East Whiteland Twp",
+    "docket_numbers": "48 MAP 2024",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-39B-2025mo - 106611744340002827.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Mundy, Sallie",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Consum Adv v. PUC; Apl of: Aqua PA Wastewater Inc",
+    "docket_numbers": "49 MAP 2024",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-39C-2025mo - 106611745340005328.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Mundy, Sallie",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Consum Adv v. PUC, Aplt.",
+    "docket_numbers": "47 MAP 2024",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-39A-2025mo - 106611743339999332.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Mundy, Sallie",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Commonwealth v. Kurtz, J., Aplt.",
+    "docket_numbers": "99 MAP 2023",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36B-2024co - 106611830340011923.pdf",
+        "authors": "Todd, Chief Justice Debra",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36B-2024co1 - 106611830340012208.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36B-2024do - 106611830340012217.pdf",
+        "authors": "Donohue, Christine",
+        "per_curiam": false,
+        "types": "040dissent"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36B-2024oajc - 106611830340012123.pdf",
+        "authors": "Wecht, David N.",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Todd, Chief Justice Debra; Mundy, Sallie; Donohue, Christine; Wecht, David N.",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Commonwealth v. Kurtz, J., Aplt.",
+    "docket_numbers": "100 MAP 2023",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36C-2024co - 106611831340013109.pdf",
+        "authors": "Todd, Chief Justice Debra",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36C-2024co1 - 106611831340013305.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36C-2024do - 106611831340013110.pdf",
+        "authors": "Donohue, Christine",
+        "per_curiam": false,
+        "types": "040dissent"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36C-2024oajc - 106611831340013115.pdf",
+        "authors": "Wecht, David N.",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Todd, Chief Justice Debra; Mundy, Sallie; Donohue, Christine; Wecht, David N.",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "Commonwealth v. Kurtz, J., Aplt.",
+    "docket_numbers": "98 MAP 2023",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36A-2024co - 106611829340009593.pdf",
+        "authors": "Todd, Chief Justice Debra",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36A-2024co1 - 106611829340009548.pdf",
+        "authors": "Mundy, Sallie",
+        "per_curiam": false,
+        "types": "030concurrence"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36A-2024do - 106611829340009663.pdf",
+        "authors": "Donohue, Christine",
+        "per_curiam": false,
+        "types": "040dissent"
+      },
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-36A-2024oajc - 106611829340009817.pdf",
+        "authors": "Wecht, David N.",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "Todd, Chief Justice Debra; Mundy, Sallie; Donohue, Christine; Wecht, David N.",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-16",
+    "case_names": "A.P. v. A.A-C., IV, Aplt.",
+    "docket_numbers": "31 WAP 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/31WAP2025pco - 106613509340157792.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "A.P.",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-15",
+    "case_names": "Duncan v. Chartiers Nature Conservancy, Aplt.",
+    "docket_numbers": "8 WAP 2024",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/J-21-2025mo - 106612158340037873.pdf",
+        "authors": "",
+        "per_curiam": false,
+        "types": "020lead"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "Duncan",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-09",
+    "case_names": "County of Fulton, Aplts v. Sec. of Com.",
+    "docket_numbers": "13 MAP 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/13MAP2025pco - 106606103339172275.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-02",
+    "case_names": "K. H., Aplt. v. PA State Police",
+    "docket_numbers": "53 MAP 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/53MAP2025pco - 106597064337886600.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-02",
+    "case_names": "Hahn, C., Aplt. v. OOR",
+    "docket_numbers": "27 WAP 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/27WAP2025pco - 106596901337862003.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "OOR",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
+  },
+  {
+    "case_dates": "2025-12-02",
+    "case_names": "Hahn, C., Aplt. v. Lawrence County",
+    "docket_numbers": "28 WAP 2025",
+    "citations": "",
+    "sub_opinions": [
+      {
+        "download_urls": "https://www.pacourts.us/assets/opinions/Supreme/out/28WAP2025pco - 106596926337862356.pdf",
+        "authors": "",
+        "per_curiam": true,
+        "types": "015unamimous"
+      }
+    ],
+    "judges": "",
+    "precedential_statuses": "Published",
+    "case_name_shorts": "",
+    "date_filed_is_approximate": false,
+    "blocked_statuses": false
   }
 ]

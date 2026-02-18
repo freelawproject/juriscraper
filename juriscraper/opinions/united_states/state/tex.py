@@ -24,16 +24,17 @@ from datetime import datetime as dt
 
 from lxml import etree
 
+from juriscraper.AbstractSite import logger
+from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.type_utils import OpinionType
-from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(ClusterSite):
     base_url = "https://www.txcourts.gov/supreme/orders-opinions/{}/"
     link_xp = '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
     date_xp = '//*[@id="MainContent"]/div/div[1]/div/text()'
-    judge_xp = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
+    judge_regex = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
     days_interval = 365
 
     def __init__(self, *args, **kwargs):
@@ -57,9 +58,15 @@ class Site(OpinionSiteLinear):
 
         if not self.is_backscrape and not self.test_mode_enabled():
             self.html = super()._download(request_dict)
-            self.url = self.html.xpath(self.link_xp)[-1]
-        self.html = super()._download(request_dict)
+            links = self.html.xpath(self.link_xp)
+            if not links:
+                # No orders posted yet (common in early January)
+                self.html = None
+                logger.error("tex: no date list on opinions page")
+                return None
+            self.url = links[-1]
 
+        self.html = super()._download(request_dict)
         return self.html
 
     def _process_html(self) -> None:
@@ -67,13 +74,20 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
+        if self.html is None:
+            return
+
         date = self.html.xpath(self.date_xp)[0].strip()
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
         for link in links:
             if link.getparent() is None or link.getparent().get(
                 "class"
             ) not in ["a79", "a70"]:
+                logger.info(
+                    "Skipping row with link %s", link.attrib.get("href")
+                )
                 continue
+
             precedingTRs = link.xpath(
                 'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
             ) or link.xpath(
@@ -108,13 +122,18 @@ class Site(OpinionSiteLinear):
                 else ""
             )
 
-            judges = re.findall(self.judge_xp, judge_str)
+            author = ""
+            joined_by = ""
+            judge = ""
+
+            judges = re.findall(self.judge_regex, judge_str)
             if judges:
                 author = judges[0]
-                per_curiam = False
-            else:
-                author = ""
-                per_curiam = True
+                judge = "; ".join(judges)
+            if len(judges) > 1:
+                joined_by = "; ".join(judges[1:])
+
+            per_curiam = "per curiam" in link.text_content().lower()
 
             lower_court, lower_court_number, lower_court_id = (
                 self.parse_lower_court_info(title)
@@ -122,25 +141,28 @@ class Site(OpinionSiteLinear):
 
             title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
             title_match = re.search(title_regex, title, flags=re.MULTILINE)
+            case_dict = {
+                "name": titlecase(
+                    title_match.group("name") if title_match else title
+                ),
+                "disposition": disposition,
+                "url": link.get("href"),
+                "docket": docket,
+                "date": date,
+                "type": self.extract_type(link),
+                "per_curiam": per_curiam,
+                "judge": judge,
+                "author": author,
+                "joined_by": joined_by,
+                "lower_court": lower_court,
+                "lower_court_number": lower_court_number,
+                "lower_court_id": lower_court_id,
+            }
 
-            self.cases.append(
-                {
-                    "name": titlecase(
-                        title_match.group("name") if title_match else title
-                    ),
-                    "disposition": disposition,
-                    "url": link.get("href"),
-                    "docket": docket,
-                    "date": date,
-                    "type": self.extract_type(link),
-                    "per_curiam": per_curiam,
-                    "judge": ", ".join(judges),
-                    "author": author,
-                    "lower_court": lower_court,
-                    "lower_court_number": lower_court_number,
-                    "lower_court_id": lower_court_id,
-                }
-            )
+            if cluster := self.cluster_opinions(case_dict, self.cases):
+                cluster["judge"] += f"; {case_dict['judge']}"
+            else:
+                self.cases.append(case_dict)
 
     @staticmethod
     def parse_lower_court_info(title: str) -> tuple[str, str, str]:
