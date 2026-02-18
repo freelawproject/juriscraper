@@ -415,7 +415,8 @@ class AbstractSite:
                 timeout=300,
             )
 
-            if self.impersonate and r.status_code == 403:
+            retries = 0
+            while self.impersonate and r.status_code == 403 and retries < 3:
                 logger.info(
                     "Got 403 with impersonate=True, retrying: %s",
                     download_url,
@@ -427,6 +428,7 @@ class AbstractSite:
                     cookies=self.cookies,
                     timeout=300,
                 )
+                retries += 1
 
             # test for empty files (thank you CA1)
             if len(r.content) == 0:
@@ -492,16 +494,16 @@ class AbstractSite:
                 timeout=60,
                 **self.request["parameters"],
             )
-            if self.request["response"].status_code == 403:
-                logger.info(
-                    "Got 403 with impersonate=True, retrying: %s", url
-                )
+            retries = 0
+            while self.request["response"].status_code == 403 and retries < 3:
+                logger.info("Got 403 with impersonate=True, retrying: %s", url)
                 self.request["response"] = curl_requests.get(
                     url,
                     impersonate="chrome",
                     timeout=60,
                     **self.request["parameters"],
                 )
+                retries += 1
         else:
             self.request["response"] = self.request["session"].get(
                 url,
@@ -525,10 +527,9 @@ class AbstractSite:
                 timeout=60,
                 **self.request["parameters"],
             )
-            if self.request["response"].status_code == 403:
-                logger.info(
-                    "Got 403 with impersonate=True, retrying: %s", url
-                )
+            retries = 0
+            while self.request["response"].status_code == 403 and retries < 3:
+                logger.info("Got 403 with impersonate=True, retrying: %s", url)
                 self.request["response"] = curl_requests.post(
                     url,
                     impersonate="chrome",
@@ -536,6 +537,7 @@ class AbstractSite:
                     timeout=60,
                     **self.request["parameters"],
                 )
+                retries += 1
         else:
             self.request["response"] = self.request["session"].post(
                 url,
