@@ -88,7 +88,7 @@ class Site(OpinionSiteLinear):
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
         body.append(content)
-        str_html =  html.tostring(new_tree).decode("utf-8")
+        str_html = html.tostring(new_tree).decode("utf-8")
         return f"<html>{str_html}</html>".encode("ISO-8859-1")
 
     def _download_backwards(self, search_date: date) -> None:
