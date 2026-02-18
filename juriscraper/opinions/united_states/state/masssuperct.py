@@ -12,7 +12,6 @@ History:
 import re
 from datetime import date, datetime
 
-from curl_cffi import requests as curl_requests
 from dateutil.relativedelta import relativedelta
 from lxml import etree, html
 
