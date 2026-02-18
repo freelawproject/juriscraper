@@ -1,5 +1,5 @@
-# Scraper for Texas 7th Court of Appeals
-# CourtID: texapp7
+# Scraper for Texas 11th Court of Appeals
+# CourtID: txctapp11
 # Court Short Name: TX
 # Author: Andrei Chelaru
 # Reviewer: mlr
@@ -13,6 +13,6 @@ class Site(texapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_name = "capp_7"
-        self.court_number = "07"
-        self.checkbox = 8
+        self.court_name = "capp_11"
+        self.court_number = "11"
+        self.checkbox = 12

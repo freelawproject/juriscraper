@@ -1,8 +1,8 @@
-# Scraper for Texas 15th Court of Appeals
-# CourtID: texapp15
+# Scraper for Texas 3rd Court of Appeals
+# CourtID: txctapp3
 # Court Short Name: TX
-# Author: Luis Manzur
-# Reviewer: grossir
+# Author: Andrei Chelaru
+# Reviewer: mlr
 # Date: 2014-07-10
 
 
@@ -13,6 +13,5 @@ class Site(texapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_name = "capp_15"
-        self.court_number = "15"
-        self.checkbox = 16
+        self.court_number = "03"
+        self.checkbox = 4
