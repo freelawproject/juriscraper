@@ -493,9 +493,7 @@ class AbstractSite:
                 **self.request["parameters"],
             )
             if self.request["response"].status_code == 403:
-                logger.info(
-                    "Got 403 with impersonate=True, retrying: %s", url
-                )
+                logger.info("Got 403 with impersonate=True, retrying: %s", url)
                 self.request["response"] = curl_requests.get(
                     url,
                     impersonate="chrome",
@@ -526,9 +524,7 @@ class AbstractSite:
                 **self.request["parameters"],
             )
             if self.request["response"].status_code == 403:
-                logger.info(
-                    "Got 403 with impersonate=True, retrying: %s", url
-                )
+                logger.info("Got 403 with impersonate=True, retrying: %s", url)
                 self.request["response"] = curl_requests.post(
                     url,
                     impersonate="chrome",
