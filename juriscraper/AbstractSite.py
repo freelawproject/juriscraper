@@ -394,7 +394,11 @@ class AbstractSite:
             if self.impersonate:
                 s = curl_requests.Session(impersonate="chrome")
             else:
-                s = self.request["session"] if has_cipher else requests.session()
+                s = (
+                    self.request["session"]
+                    if has_cipher
+                    else requests.session()
+                )
 
             if self.needs_special_headers:
                 headers = self.request["headers"]
