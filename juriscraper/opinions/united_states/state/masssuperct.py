@@ -84,12 +84,13 @@ class Site(OpinionSiteLinear):
         content = content.decode("utf-8")
         tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
         content = tree.xpath(
-            "//*[@id='slip-opinion-primary-content-9880']/div/div"
+            "//div[@class='slip-opinion-primary-content-layout']"
         )[0]
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
         body.append(content)
-        return html.tostring(new_tree).decode("utf-8")
+        str_html =  html.tostring(new_tree).decode("utf-8")
+        return f"<html>{str_html}</html>".encode("ISO-8859-1")
 
     def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
