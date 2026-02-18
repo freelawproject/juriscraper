@@ -1,6 +1,6 @@
 # Scraper for Texas Supreme Court
-# CourtID: tex
-# Court Short Name: TX
+# CourtID: texapp
+# Court Short Name: "Texas Court of Appeals"
 # Court Contacts:
 #  - http://www.txcourts.gov/contact-us/
 #  - Blake Hawthorne <Blake.Hawthorne@txcourts.gov>
@@ -330,11 +330,11 @@ class Site(ClusterSite):
         as having a 'Opinion' type. For example, texapp 4 and 6.
 
         On some case pages, the Court of Criminal Appeals opinion appears
-        in the lower court. See texapp_12_subexample_2
+        in the lower court. See txctapp12_subexample_2
 
         Some cases have been re-heard in the same court, or remanded,
         and their pages have multiple opinions that do not belong
-        to the same cluster. See texapp_10_subexample_3
+        to the same cluster. See txctapp10_subexample_3
 
         :param html: page's HTML object
         :return List of opinions

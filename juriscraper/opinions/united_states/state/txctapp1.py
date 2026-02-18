@@ -1,8 +1,8 @@
-# Scraper for Texas 6th Court of Appeals
-# CourtID: texapp6
+# Scraper for Texas 1st Court of Appeals
+# CourtID: txctapp1
 # Court Short Name: TX
 # Author: Andrei Chelaru
-# Reviewer: mlr
+# Reviewer:
 # Date: 2014-07-10
 
 
@@ -13,6 +13,5 @@ class Site(texapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_name = "capp_6"
-        self.court_number = "06"
-        self.checkbox = 7
+        self.court_number = "01"
+        self.checkbox = 2
