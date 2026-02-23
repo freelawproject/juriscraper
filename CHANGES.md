@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 2.8.0 - 2026-02-23
+
+Features:
+-
+
+Changes:
 - Rename all `texapp_*` scrapers to `txctapp*`
 
 Fixes:
