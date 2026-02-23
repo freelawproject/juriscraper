@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Rename all `texapp_*` scrapers to `txctapp*`
 
 Fixes:
 - Make tames scraper behave more like a browser for form submission.
