@@ -26,7 +26,7 @@ class Site(OpinionSiteLinear):
 
         # default most recent week
         self.url = (
-            "https://www.gaappeals.us/wp-content/themes/benjamin/docket/"
+            "https://www.gaappeals.gov/wp-content/themes/benjamin/docket/"
             f"docketdate/results_all.php?OPstartDate={last_week:%Y-%m-%d}&OPendDate={today:%Y-%m-%d}&submit=Start+Opinions+Search"
         )
 
@@ -53,7 +53,7 @@ class Site(OpinionSiteLinear):
         """Backscrape one weekly date range (start,end)."""
         start, end = date_range.split(",")
         self.url = (
-            "https://www.gaappeals.us/wp-content/themes/benjamin/docket/"
+            "https://www.gaappeals.gov/wp-content/themes/benjamin/docket/"
             f"docketdate/results_all.php?OPstartDate={start}&OPendDate={end}&submit=Start+Opinions+Search"
         )
 

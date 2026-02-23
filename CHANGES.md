@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Make tames scraper behave more like a browser for form submission.
+- Fix `gactapp` base URL from `gaappeals.us` to `gaappeals.gov` #1810
 
 
 ## 2.7.8 - 2026-02-16
