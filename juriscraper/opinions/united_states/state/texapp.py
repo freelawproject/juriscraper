@@ -341,9 +341,7 @@ class Site(ClusterSite):
         """
         opinions = []
         opinion_xpath = "//div[div[contains(text(), 'Case Events')]]//tr[td[contains(text(), 'pinion issued')]]"
-        link_xpath = ".//tr[td[1]/a and td[2][contains(text(), 'pinion') or normalize-space(text())='CCA']]"
-        disposition = ""
-
+        link_xpath = ".//tr[td[1]/a and td[2][contains(translate(text(), 'PINION', 'pinion'), 'pinion') or normalize-space(text())='CCA']]"
         try:
             search_date = datetime.strptime(op_date, "%m/%d/%Y").date()
         except ValueError:

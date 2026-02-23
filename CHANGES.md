@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Make tames scraper behave more like a browser for form submission.
+- Fix `texapp` download URL XPath to use case-insensitive matching for opinion type detection #1813
 
 
 ## 2.7.8 - 2026-02-16
