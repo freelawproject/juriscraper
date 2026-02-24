@@ -1,5 +1,5 @@
-# Scraper for Texas 9th Court of Appeals
-# CourtID: texapp9
+# Scraper for Texas 8th Court of Appeals
+# CourtID: txctapp8
 # Court Short Name: TX
 # Author: Andrei Chelaru
 # Reviewer: mlr
@@ -13,6 +13,6 @@ class Site(texapp.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.court_name = "capp_9"
-        self.court_number = "09"
-        self.checkbox = 10
+        self.court_name = "capp_8"
+        self.court_number = "08"
+        self.checkbox = 9

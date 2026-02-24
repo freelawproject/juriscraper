@@ -21,8 +21,19 @@ Changes:
 -
 
 Fixes:
-- Make tames scraper behave more like a browser for form submission.
 - Fix `gactapp` base URL from `gaappeals.us` to `gaappeals.gov` #1810
+
+## 2.8.0 - 2026-02-23
+
+Features:
+-
+
+Changes:
+- Rename all `texapp_*` scrapers to `txctapp*`
+
+Fixes:
+- Make tames scraper behave more like a browser for form submission.
+- Fix `texapp` download URL XPath to use case-insensitive matching for opinion type detection #1813
 
 
 ## 2.7.8 - 2026-02-16
