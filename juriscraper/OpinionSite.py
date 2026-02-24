@@ -41,6 +41,7 @@ class OpinionSite(AbstractSite):
             "other_dates",
             "attorneys",
             "headnotes",
+            "content",
         ]
         self._req_attrs = [
             "case_dates",
@@ -144,6 +145,9 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_headnotes(self):
+        return None
+
+    def _get_content(self):
         return None
 
     def extract_from_text(self, scraped_text: str) -> dict:
