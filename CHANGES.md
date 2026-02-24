@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `gactapp` base URL from `gaappeals.us` to `gaappeals.gov` #1810
 
 ## 2.8.0 - 2026-02-23
 
