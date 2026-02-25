@@ -1,4 +1,5 @@
 import copy
+import os
 import pprint
 import re
 import sys
@@ -22,6 +23,7 @@ from juriscraper.lib.utils import clean_court_object, previous_and_next
 from .docket_utils import normalize_party_types
 from .reports import BaseReport
 from .utils import (
+    get_doc_id_prefix_from_court_id,
     get_file_size_str_from_tr,
     get_input_value_from_tr,
     get_pacer_doc_id_from_doc1_url,
@@ -488,6 +490,34 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._metadata = None
         self._parties = None
         self._docket_entries = None
+
+    @classmethod
+    def from_html_file(cls, path):
+        """Run the docket parser on an HTML file.
+
+        This is invokved by by the test runner
+        (tests/local/test_DocketParseTest.py), as well as the __main__
+        of this file, as well juriscraper/pacerdocket.py.
+
+        Bring the common code in here.
+        """
+
+        dirname, filename = os.path.split(path)
+        filename_sans_ext = filename.split(".")[0]
+        court = filename_sans_ext.split("_")[0]
+        # If filename doesn't begin with a valid court, just use 'cand'
+        # (N.D. Cal.)  Historically the __main__ runner would default
+        # to 'cand' but the pacerdocket.py runner would default to
+        # 'psc', but the 'psc' fails some vaidations.
+        try:
+            _ = get_doc_id_prefix_from_court_id(court)
+        except KeyError:
+            court = "cand"
+
+        report = DocketReport(court)
+        with open(path, "rb") as f:
+            report._parse_text(f.read().decode("utf-8"))
+        return report
 
     @property
     def docket_report_has_content(self) -> bool:
@@ -1749,10 +1779,6 @@ if __name__ == "__main__":
         print("Usage: python -m juriscraper.pacer.docket_report filepath")
         print("Please provide a path to an HTML file to parse.")
         sys.exit(1)
-    report = DocketReport("cand")  # Court ID is only needed for querying.
-    filepath = sys.argv[1]
-    print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
-        text = f.read()
-    report._parse_text(text)
+
+    report = DocketReport.from_html_file(sys.argv[1])
     pprint.pprint(report.data, indent=2)
