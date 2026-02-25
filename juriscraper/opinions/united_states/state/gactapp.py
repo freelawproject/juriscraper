@@ -9,6 +9,7 @@ from datetime import date, datetime, timedelta
 
 from dateutil.relativedelta import relativedelta
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -26,7 +27,7 @@ class Site(OpinionSiteLinear):
 
         # default most recent week
         self.url = (
-            "https://www.gaappeals.us/wp-content/themes/benjamin/docket/"
+            "https://www.gaappeals.gov/wp-content/themes/benjamin/docket/"
             f"docketdate/results_all.php?OPstartDate={last_week:%Y-%m-%d}&OPendDate={today:%Y-%m-%d}&submit=Start+Opinions+Search"
         )
 
@@ -37,7 +38,8 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//tr")[::-1][:-1]:
             docket, name, date_el, disposition, _, url_el = row.xpath(".//td")
             url = url_el.xpath(".//a")[0].get("href")
-            if url == "https://efast.gaappeals.us/download?filingId=":
+            if url == "https://efast.gaappeals.gov/download?filingId=":
+                logger.error("Skipping doc with empty filingId: %s", url)
                 continue
             self.cases.append(
                 {
@@ -53,7 +55,7 @@ class Site(OpinionSiteLinear):
         """Backscrape one weekly date range (start,end)."""
         start, end = date_range.split(",")
         self.url = (
-            "https://www.gaappeals.us/wp-content/themes/benjamin/docket/"
+            "https://www.gaappeals.gov/wp-content/themes/benjamin/docket/"
             f"docketdate/results_all.php?OPstartDate={start}&OPendDate={end}&submit=Start+Opinions+Search"
         )
 
