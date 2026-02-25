@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `texapp` add disposition as a local variable #1817
 
 ## 2.8.0 - 2026-02-23
 
