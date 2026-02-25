@@ -593,6 +593,26 @@ class AbstractSite:
         """
         return content
 
+    @staticmethod
+    def cleanup_extracted_text(content: str) -> str:
+        """
+        Given the plain text content extracted from a PDF, HTML, DOCX, DOC, TXT
+        or similar document, perform any necessary post-extraction cleaning.
+
+        This method should be called after Doctor has extracted text from the
+        binary content and works to clean up extraction artifacts, formatting
+        issues, or unwanted text that appears in the extracted output. This is
+        typically needed when the extraction process introduces unwanted
+        characters, preserves headers/footers from the original document, or
+        includes metadata that should be removed from the final plain text.
+
+        Unlike cleanup_content(), which operates on binary data before
+        extraction, this method processes the text after extraction is complete,
+        allowing for text-specific sanitization without modifying the original
+        document.
+        """
+        return content
+
     def _get_cookies(self):
         """
         Some websites require cookies in order to be scraped. This method
