@@ -7,9 +7,11 @@ History:
     - 2014-09-19: Created by Jon Andersen
     - 2022-01-28: Updated for new web site, @satsuki-chan.
     - 2026-01-14: Updated for new secondary request url
+    - 2026-02-25: Added backscraping support going back to December 2000.
 """
 
 import re
+from datetime import datetime
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -21,6 +23,7 @@ from juriscraper.OpinionSite import OpinionSite
 
 class Site(ClusterSite, mich.Site):
     court = "Court Of Appeals"
+    first_opinion_date = datetime(1996, 4, 9)
     extract_from_text = OpinionSite.extract_from_text
 
     def __init__(self, *args, **kwargs):
@@ -42,6 +45,9 @@ class Site(ClusterSite, mich.Site):
             # "a.opn.pdf": "After Second Remand"
             url = case_dict.get("url", "")
             lower_url = url.lower()
+            # Skip Advance Sheets Version (ASV) — duplicate of the final opinion
+            if lower_url.endswith("asv.pdf"):
+                continue
             if lower_url.endswith("p.opn.pdf"):
                 case_dict["type"] = (
                     OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
