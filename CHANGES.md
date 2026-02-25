@@ -188,6 +188,7 @@ Fixes:
 - `tenn`: fix opinion type extraction #1704
 - `tenn`: fix docket number and judges extraction #1705
 - `delaware`: update XPath selectors for changed website structure #1713
+- `mass`: update scraper to use new HTML endpoint after URL change #1714
 
 **2.6.99 - 2025-12-10**
 

@@ -6,6 +6,7 @@ from typing import Union
 
 import certifi
 import requests
+from curl_cffi import requests as curl_requests
 
 from juriscraper.lib.date_utils import (
     json_date_handler,
@@ -74,6 +75,7 @@ class AbstractSite:
             "status": None,
             "url": None,
         }
+        self.impersonate = False
 
         # Attribute to reference a function passed by the caller,
         # which takes a single argument, the Site object, after
@@ -389,7 +391,14 @@ class AbstractSite:
             s = requests.Session()
         else:
             has_cipher = hasattr(self, "cipher")
-            s = self.request["session"] if has_cipher else requests.session()
+            if self.impersonate:
+                s = curl_requests.Session(impersonate="chrome")
+            else:
+                s = (
+                    self.request["session"]
+                    if has_cipher
+                    else requests.session()
+                )
 
             if self.needs_special_headers:
                 headers = self.request["headers"]
@@ -405,6 +414,21 @@ class AbstractSite:
                 cookies=self.cookies,
                 timeout=300,
             )
+
+            retries = 0
+            while self.impersonate and r.status_code == 403 and retries < 3:
+                logger.info(
+                    "Got 403 with impersonate=True, retrying: %s",
+                    download_url,
+                )
+                r = s.get(
+                    download_url,
+                    verify=has_cipher,
+                    headers=headers,
+                    cookies=self.cookies,
+                    timeout=300,
+                )
+                retries += 1
 
             # test for empty files (thank you CA1)
             if len(r.content) == 0:
@@ -463,27 +487,66 @@ class AbstractSite:
         values
         """
         self.request["url"] = url
-        self.request["response"] = self.request["session"].get(
-            url,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-            timeout=60,
-            **self.request["parameters"],
-        )
+        if self.impersonate:
+            self.request["response"] = curl_requests.get(
+                url,
+                impersonate="chrome",
+                timeout=60,
+                **self.request["parameters"],
+            )
+            retries = 0
+            while self.request["response"].status_code == 403 and retries < 3:
+                logger.info("Got 403 with impersonate=True, retrying: %s", url)
+                self.request["response"] = curl_requests.get(
+                    url,
+                    impersonate="chrome",
+                    timeout=60,
+                    **self.request["parameters"],
+                )
+                retries += 1
+        else:
+            self.request["response"] = self.request["session"].get(
+                url,
+                headers=self.request["headers"],
+                verify=self.request["verify"],
+                timeout=60,
+                **self.request["parameters"],
+            )
+
         if self.save_response:
             self.save_response(self)
 
     def _request_url_post(self, url):
         """Execute POST request and assign appropriate request dictionary values"""
         self.request["url"] = url
-        self.request["response"] = self.request["session"].post(
-            url,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-            data=self.parameters,
-            timeout=60,
-            **self.request["parameters"],
-        )
+        if self.impersonate:
+            self.request["response"] = curl_requests.post(
+                url,
+                impersonate="chrome",
+                data=self.parameters,
+                timeout=60,
+                **self.request["parameters"],
+            )
+            retries = 0
+            while self.request["response"].status_code == 403 and retries < 3:
+                logger.info("Got 403 with impersonate=True, retrying: %s", url)
+                self.request["response"] = curl_requests.post(
+                    url,
+                    impersonate="chrome",
+                    data=self.parameters,
+                    timeout=60,
+                    **self.request["parameters"],
+                )
+                retries += 1
+        else:
+            self.request["response"] = self.request["session"].post(
+                url,
+                headers=self.request["headers"],
+                verify=self.request["verify"],
+                data=self.parameters,
+                timeout=60,
+                **self.request["parameters"],
+            )
         if self.save_response:
             self.save_response(self)
 
