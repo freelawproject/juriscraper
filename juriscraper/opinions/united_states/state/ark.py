@@ -5,7 +5,7 @@
 import re
 from datetime import date, datetime, timedelta
 from typing import Any, Optional
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes, titlecase
@@ -13,7 +13,8 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    base_url = "https://opinions.arcourts.gov/ark/en/d/s/index.do"
+    base_url = "https://opinions.arcourts.gov"
+    base_endpoint = urljoin(base_url, "/ark/en/d/s/index.do")
     court_code = "144"
     cite_regex = re.compile(r"\d{2,4} Ark\. \d+", re.IGNORECASE)
     first_opinion_date = datetime(1979, 9, 3)
@@ -25,6 +26,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+        self.use_proxy = True
 
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
@@ -44,7 +46,7 @@ class Site(OpinionSiteLinear):
             per_curiam = False
 
             name = item.xpath(".//a/text()")[0]
-            url = item.xpath(".//a/@href")[1]
+            url = urljoin(self.base_url, item.xpath(".//a/@href")[1])
             if re.search(self.not_a_opinion_regex, name.upper()):
                 logger.info("Skipping %s %s, invalid document", name, url)
                 continue
@@ -96,7 +98,7 @@ class Site(OpinionSiteLinear):
             "or": "date",
             "iframe": "true",
         }
-        self.url = f"{self.base_url}?{urlencode(params)}"
+        self.url = urljoin(self.base_endpoint, f"?{urlencode(params)}")
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary

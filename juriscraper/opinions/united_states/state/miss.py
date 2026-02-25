@@ -1,102 +1,55 @@
 # Court Contact: bkraft@courts.ms.gov (see https://courts.ms.gov/aoc/aoc.php)
+from datetime import date, timedelta
+from urllib.parse import urljoin
 
-import datetime
-
-from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-# Landing page: https://courts.ms.gov/appellatecourts/sc/scdecisions.php
 class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.domain = "https://courts.ms.gov"
         self.court_id = self.__module__
-        self.method = "POST"
-        self.number_of_dates_to_process = 5
-        self.pages = {}
-        self.parameters = {"crt": self.get_court_parameter()}
+        self.method = "GET"
+        self.publish_date = "09/11/2025"
         self.status = "Published"
-        self.url = f"{self.domain}/appellatecourts/docket/gethddates.php"
+        self.url = f"https://courts.ms.gov/appellatecourts/sc/scdecisions.php?date={self.publish_date}"
+        self.use_proxy = True
+        self.additional_params = {
+            "wait_for": "#dispAreaHD > p:nth-child(2) > a"
+        }
 
-    def get_court_parameter(self):
-        return "SCT"
-
-    """Retrieve dates for which there are case listings.
-    This site's architecture is no bueno. We have to issue
-    a POST request to this page to get a array (in the form
-    of a string) or dates that have cases associated with
-    them.
-    """
-
-    def _download(self, request_dict=None):
-        if request_dict is None:
-            request_dict = {}
-        dates_page = super()._download(request_dict)
-        self.parse_date_pages(dates_page)
-
-    """Keep track of the most recent N date pages.
-    We dont want to crawl all the way back to 1996, so we only
-    parse the most recent [self.number_of_dates_to_process]
-    number of date pages.  Since cases are usually published
-    once a week, this means scraping about the most recent
-    months worth of cases.
-    """
-
-    def parse_date_pages(self, dates_page):
-        # For testing, each example file should be a specific sub-date page,
-        # like https://courts.ms.gov/Images/HDList/SCT02-27-2020.html
-        if self.test_mode_enabled():
-            # date below is arbitrary and doesnt matter, it just
-            # needs to be static for testing to work
-            self.pages["2020-02-28"] = dates_page
-            return
-        for date in self.get_dates_from_date_page(dates_page):
-            url = "{}/Images/HDList/SCT{}.html".format(
-                self.domain,
-                datetime.date.strftime(date, "%m-%d-%Y"),
-            )
-            page = self._get_html_tree_by_url(url)
-            self.pages[f"{date}"] = page
-
-    """Convert string of dates on page into list of date objects.
-    """
-
-    def get_dates_from_date_page(self, dates_page):
-        dates = []
-        substrings = dates_page.text_content().split('"')
-        for substring in substrings:
-            try:
-                dates.append(convert_date_string(substring))
-            except ValueError:
-                pass
-        dates.sort(reverse=True)
-        return dates[: self.number_of_dates_to_process]
+    @staticmethod
+    def most_recent_release_date(day: int):
+        """"""
+        delta = (date.today().weekday() - day) % 7
+        return (date.today() - timedelta(days=delta or 7)).strftime("%m/%d/%Y")
 
     def _process_html(self):
-        for date, page in self.pages.items():
-            for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):
-                parent = anchor.getparent()
+        """Process the html
 
-                # sometimes the first opinion on the pages is nested
-                # in a <p> tag for whatever reason.
-                while parent.getparent().tag != "body":
-                    parent = parent.getparent()
-
-                sections = parent.xpath("./following-sibling::ul")
-                if not sections:
-                    # the while loop above should mean we never fall in here
-                    continue
-
-                section = sections[0]
-                self.cases.append(
-                    {
-                        "date": date,
-                        "docket": anchor.text_content().strip(),
-                        "name": section.xpath(".//b")[0]
-                        .text_content()
-                        .strip(),
-                        "summary": section.text_content().strip(),
-                        "url": anchor.xpath("./@href")[0],
-                    }
+        :return: None
+        """
+        for link in self.html.xpath(
+            "//div[@id='dispAreaHD']//a[contains(@href, '.pdf')]"
+        ):
+            slug = link.xpath("./@href")[0]
+            if not slug.startswith("http"):
+                slug = urljoin(
+                    "https://courts.ms.gov/images/",
+                    slug[3:].replace("\\", "/"),
                 )
+            ul_nodes = link.xpath("./following::ul[1]")
+            if not ul_nodes:
+                continue
+            self.cases.append(
+                {
+                    "date": self.publish_date,
+                    "docket": link.text_content().strip(),
+                    "name": ul_nodes[0]
+                    .xpath(".//b")[0]
+                    .text_content()
+                    .strip(),
+                    "summary": ul_nodes[0].text_content().strip(),
+                    "url": slug,
+                }
+            )
