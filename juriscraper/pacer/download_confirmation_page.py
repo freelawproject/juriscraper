@@ -8,19 +8,21 @@ from juriscraper.lib.string_utils import (
     force_unicode,
 )
 
+from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import is_pdf, make_doc1_url, make_docs1_url
 
 logger = make_default_logger()
 
 
-class DownloadConfirmationPage(BaseReport):
+class DownloadConfirmationPage(BaseDocketReport, BaseReport):
     """An object for querying and parsing appellate PACER documents confirmation
     download page.
     """
 
     def __init__(self, court_id, pacer_session=None):
-        super().__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
 
         self.is_appellate = False
         if self.court_id[-1].isdigit() or self.court_id in [
@@ -70,6 +72,11 @@ class DownloadConfirmationPage(BaseReport):
             - billable_pages: The document billable pages we're working with
             - document_description: The document description we're working with
             - transaction_date: The document transaction date we're working with
+            - federal_dn_office_code: Office code from docket number
+            - federal_dn_case_type: Case type from docket number
+            - federal_dn_judge_initials_assigned: Assigned judge initials
+            - federal_dn_judge_initials_referred: Referred judge initials
+            - federal_defendant_number: Defendant number
 
         See the JSON objects in the tests for more examples.
         """
@@ -81,14 +88,27 @@ class DownloadConfirmationPage(BaseReport):
             # It's not a valid confirmation page.
             return {}
 
-        return {
+        docket_number = self._get_docket_number()
+
+        # Parse docket number components
+        # Appellate dockets have different format, return all None
+        if self.is_appellate:
+            docket_number_components = self._return_default_dn_components()
+        else:
+            docket_number_components = self._parse_dn_components(
+                docket_number or ""
+            )
+
+        result = {
             "document_number": self._get_document_number(),
-            "docket_number": self._get_docket_number(),
+            "docket_number": docket_number,
             "cost": self._get_document_cost(),
             "billable_pages": self._get_billable_pages(),
             "document_description": self._get_document_description(),
             "transaction_date": self._get_transaction_date(),
         }
+        result.update(docket_number_components)
+        return result
 
     def _is_a_receipt_page(self) -> bool:
         """Check if this is a valid download confirmation page for a district

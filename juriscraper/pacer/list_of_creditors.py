@@ -40,6 +40,20 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         data = self.metadata.copy()
         return data
 
+    def _get_docket_number(self):
+        """Extract docket number from the receipt table.
+
+        :return: The docket number string if available, otherwise None.
+        """
+        try:
+            # Look for "Case Number:" row in receipt table
+            docket_str = self.tree.xpath(
+                '//th[contains(., "Case Number:")]/following-sibling::td[1]//font/text()'
+            )[0].strip()
+            return docket_str
+        except IndexError:
+            return None
+
     @property
     def metadata(self):
         """Parse the raw data from the HTML file."""
@@ -55,10 +69,20 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             )[0]
         except IndexError:
             raw_data = None
+
+        # Extract docket number and parse components
+        docket_number = self._get_docket_number()
+        docket_number_components = self._parse_dn_components(
+            docket_number or ""
+        )
+
         meta_data = {
             "court_id": self.court_id,
+            "docket_number": docket_number,
             "data": raw_data,
         }
+        meta_data.update(docket_number_components)
+
         self._metadata = meta_data
         return meta_data
 
