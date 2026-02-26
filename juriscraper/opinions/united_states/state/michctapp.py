@@ -26,6 +26,40 @@ class Site(ClusterSite, mich.Site):
     first_opinion_date = datetime(1996, 4, 9)
     extract_from_text = OpinionSite.extract_from_text
 
+    def _check_sanity(self) -> None:
+        """Like ClusterSite._check_sanity, but allows two MAJORITY opinions
+        in a cluster.
+
+        Michigan courts occasionally issue a substituted majority opinion
+        alongside the original, both typed as MAJORITY. The substituted one
+        is identified by its 'asv.pdf' suffix.
+        """
+        reclassified = []
+        for case in self.cases:
+            sub_opinions = case.get("sub_opinions", [])
+            majority_ops = [
+                op
+                for op in sub_opinions
+                if op.get("types") == OpinionType.MAJORITY.value
+            ]
+
+            # there could be more than 1 Advance Sheets Version (ASV)
+            if len(majority_ops) >= 2:
+                for op in majority_ops:
+                    if (
+                        op.get("download_urls")
+                        .lower()
+                        .endswith("asv.pdf")
+                    ):
+                        op["types"] = OpinionType.ADDENDUM.value
+                        reclassified.append(op)
+
+        try:
+            super()._check_sanity()
+        finally:
+            for op in reclassified:
+                op["types"] = OpinionType.MAJORITY.value
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -45,9 +79,6 @@ class Site(ClusterSite, mich.Site):
             # "a.opn.pdf": "After Second Remand"
             url = case_dict.get("url", "")
             lower_url = url.lower()
-            # Skip Advance Sheets Version (ASV) — duplicate of the final opinion
-            if lower_url.endswith("asv.pdf"):
-                continue
             if lower_url.endswith("p.opn.pdf"):
                 case_dict["type"] = (
                     OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value

@@ -23,7 +23,7 @@ class Site(OpinionSiteLinear):
         r"(MSC|COA) (?P<docket>\d{6})\s+(?P<name>.+)\s+Opinion"
     )
     court = "Supreme Court"
-    days_interval = 30
+    days_interval = 10
     first_opinion_date = datetime(2000, 12, 12)
     filters = (
         ("releaseDate", "Past Year"),
