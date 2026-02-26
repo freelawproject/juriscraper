@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Fix `illappct` docket regex to match `ILL App` citations and normalize them to `IL App` #1726
 - Fix `gactapp` base URL from `gaappeals.us` to `gaappeals.gov` #1810
+- Fix `texapp` add disposition as a local variable #1817
 
 ## 2.8.0 - 2026-02-23
 
