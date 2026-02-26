@@ -46,11 +46,7 @@ class Site(ClusterSite, mich.Site):
             # there could be more than 1 Advance Sheets Version (ASV)
             if len(majority_ops) >= 2:
                 for op in majority_ops:
-                    if (
-                        op.get("download_urls")
-                        .lower()
-                        .endswith("asv.pdf")
-                    ):
+                    if op.get("download_urls").lower().endswith("asv.pdf"):
                         op["types"] = OpinionType.ADDENDUM.value
                         reclassified.append(op)
 
