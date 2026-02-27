@@ -6,9 +6,11 @@ History:
     - 2014-09-21: Updated by Jon Andersen to handle some fields being missing
     - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
     - 2022-01-28: Updated for new web site, @satsuki-chan.
+    - 2026-02-25: Added backscraping support going back to December 2000.
 """
 
 import re
+from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -21,6 +23,8 @@ class Site(OpinionSiteLinear):
         r"(MSC|COA) (?P<docket>\d{6})\s+(?P<name>.+)\s+Opinion"
     )
     court = "Supreme Court"
+    days_interval = 10
+    first_opinion_date = datetime(2000, 12, 12)
     filters = (
         ("releaseDate", "Past Year"),
         ("page", "1"),
@@ -40,6 +44,7 @@ class Site(OpinionSiteLinear):
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
         # Currently blocked from Michigan so we drop the user agent for now
         self.request["headers"] = {"User-Agent": ""}
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
@@ -111,6 +116,36 @@ class Site(OpinionSiteLinear):
     def get_disposition(self, item: dict) -> str:
         """To be overriden by michctapp"""
         return ""
+
+    def _build_backscrape_url(self, dates: tuple[date, date]) -> str:
+        """Build URL for backscraping with a custom date range.
+
+        :param dates: (start_date, end_date) tuple
+        :return: URL string
+        """
+        from_date = dates[0].strftime("%m/%d/%Y")
+        to_date = dates[1].strftime("%m/%d/%Y")
+        params = (
+            ("releaseDate", f"Custom Range:{from_date}:{to_date}"),
+            ("page", "1"),
+            ("sortOrder", "Newest"),
+            ("searchQuery", ""),
+            ("resultType", "opinions"),
+            ("pageSize", "100"),
+            ("aAppellateCourt", self.court),
+        )
+        return f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
+
+    def _download_backwards(self, dates: tuple[date, date]) -> None:
+        """Download opinions for a specific date range.
+
+        :param dates: (start_date, end_date) tuple from make_backscrape_iterable
+        :return: None
+        """
+        logger.info("Backscraping for range %s %s", *dates)
+        self.url = self._build_backscrape_url(dates)
+        self.html = self._download()
+        self._process_html()
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts case names and docket numbers from the document's text

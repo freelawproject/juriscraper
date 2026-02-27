@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add backscraping support to `mich` and `michctapp` going #1806
 
 Changes:
 - OpinionSite can now return a "content" key holding downloaded content #873
