@@ -1,100 +1,206 @@
 """Scraper for Board of Veterans' Appeals
 CourtID: bva
 Court Short Name: BVA
-Author: Jon Andersen
-Reviewer: mlr
 Type: Nonprecedential
 History:
     2014-09-09: Created by Jon Andersen
-    2016-05-14: Updated by arderyp, moved logic from _get_case_dates() to
-    standard download() override method.  Parsing information text from
-    unlinked text field, due to recent link text typos
+    2016-05-14: Updated by arderyp
+    2026-02-24: Rewritten by grossir to use VA sitemap after old
+                endpoint (index.va.gov) was taken down. See #873
+
+The VA publishes all BVA decisions as plain text files, indexed via
+per-year XML sitemaps at https://www.va.gov/vetapp{YY}/sitemap.xml
+(e.g. vetapp25 for 2025, vetapp92 for 1992).
+
+Each .txt file starts with a structured header:
+    Citation Nr: 25000001
+    Decision Date: 01/01/25    Archive Date: 12/11/24
+
+    DOCKET NO. 16-36 738
+
+The sitemaps and the .txt files are served with chunked
+transfer-encoding and no Accept-Ranges header, so HTTP range
+requests are not supported for either resource.  We must download
+each file in full.
+
+Sitemap entries are ordered chronologically: new decisions are
+appended at the end.  The regular scraper exploits this by
+processing only the tail of the current year's sitemap; the
+backscraper iterates over all years (1992-present).
 """
 
+import os
 import re
 from datetime import datetime
 
-from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSite):
+class Site(OpinionSiteLinear):
+    # Sitemaps available from 1992 to present
+    first_opinion_date = datetime(1992, 1, 1)
+    days_interval = 365
+
+    # check the latest 50 cases on a regular scrape
+    # the upload schedule and volume is unknown, so we will have to run a
+    # periodic backscraper for the active year
+    # limiting cases helps prevent hitting the servers too hard and helps the
+    # scraper exit fast enough. Even when the files are small, the servers
+    # are slow
+    cases_to_scrape = 50
+
+    sitemap_url = "https://www.va.gov/vetapp{yy:02d}/sitemap.xml"
+
+    # Some older decisions (pre-1997) lack a DOCKET NO. line.
+    citation_re = re.compile(r"Citation Nr:\s*(\S+)")
+    date_re = re.compile(r"Decision Date:\s*(\S+)")
+    docket_re = re.compile(r"DOCKET NO\.\s*(.+)")
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # Cases before 1997 do not have a docket number to parse.
-        url_query = "&DB=".join(
-            [str(n) for n in range(datetime.today().year, 1997 - 1, -1)]
-        )
-        self.url = (
-            "http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=%s"
-            % url_query
-        )
-        self.pager_stop = False
-        self.back_scrape_iterable = self.pager(50)
-        self.cases = []
 
-    def pager(self, incr):
-        startat = 1 + incr
-        while not self.pager_stop:
-            yield startat
-            startat += incr
+        self.status = "Unpublished"
+        self.expected_content_types = ["text/plain"]
+
+        current_yy = datetime.today().year % 100
+        self.url = self.sitemap_url.format(yy=current_yy)
+        self.is_backscrape = False
+        # supressing the save_response_fn, since the downloaded sitemaps are
+        # very big 15-20MB and would fill the CL S3 response bucket
+        self.save_response = None
 
     def _download(self, request_dict=None):
-        if request_dict is None:
-            request_dict = {}
-        html = super()._download(request_dict)
-        self._extract_case_data_from_html(html)
-        return html
+        """Fall back to the previous year's sitemap if the current
+        year's does not exist yet. Do not do this in a backscrape
+        """
+        if self.test_mode_enabled() or self.is_backscrape:
+            return super()._download(request_dict)
 
-    def _extract_case_data_from_html(self, html):
-        """Build list of data dictionaries, one dictionary per case."""
-        regex = re.compile(
-            r"^.*Citation Nr: (.*) Decision Date: (.*) Archive Date: (.*) DOCKET NO. ([-0-9 ]+)"
-        )
-
-        for result in html.xpath('//div[@id="results-area"]/div/a'):
-            text = result.text_content().strip()
-            try:
-                (citation, date, docket) = regex.match(text).group(1, 2, 4)
-            except Exception:
-                raise Exception(
-                    "regex failure in _extract_case_data_from_html method of bva scraper"
-                )
-
-            # There is a history to this, but the long story short is that we
-            # are using the docket number in the name field intentionally.
-            self.cases.append(
-                {
-                    "name": docket,
-                    "url": result.xpath(".//@href")[0],
-                    "date": convert_date_string(date),
-                    "status": "Unpublished",
-                    "docket": docket,
-                    "citation": citation.split()[0],
-                }
+        # Uses a HEAD request (headers only, no body) to cheaply check
+        # existence before committing to a full GET of the ~18 MB XML.
+        r = self.request["session"].head(self.url, timeout=10)
+        if r.status_code == 404:
+            # Current year's sitemap doesn't exist yet;
+            # try the previous year
+            prev_yy = (datetime.today().year - 1) % 100
+            self.url = self.sitemap_url.format(yy=prev_yy)
+            logger.info(
+                "Current year sitemap not found, falling back to %s",
+                self.url,
             )
 
-    def _get_case_dates(self):
-        return [case["date"] for case in self.cases]
+        return super()._download(request_dict)
 
-    def _get_download_urls(self):
-        return [case["url"] for case in self.cases]
+    def _process_html(self) -> None:
+        """Parse the sitemap XML and fetch individual decisions.
 
-    def _get_case_names(self):
-        return [case["name"] for case in self.cases]
+        Sitemap entries are appended chronologically, so the newest
+        decisions are at the end.  For regular runs we only process
+        the last `self.cases_to_scrape` entries to keep runtime reasonable.
+        """
+        # lxml's HTML parser can handle the sitemap XML; namespace
+        # prefixes are stripped so //loc works directly
+        locs = self.html.xpath("//loc/text()")
 
-    def _get_docket_numbers(self):
-        return [case["docket"] for case in self.cases]
+        for loc in reversed(locs):
+            if len(self.cases) >= self.cases_to_scrape:
+                logger.info("Reached case limit")
+                break
 
-    def _get_precedential_statuses(self):
-        return [case["status"] for case in self.cases]
+            self._fetch_and_parse_decision(loc)
 
-    def _download_backwards(self, startat):
-        base_url = (
-            "http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d"
-            % (startat,)
+    def _fetch_and_parse_decision(self, url: str) -> None:
+        """Download a single .txt decision and extract metadata.
+
+        Uses download_content to fetch the file.  In test mode,
+        resolves the URL relative to the example file's directory
+        (same pattern as texapp.py for sub-example pages).
+
+        :param url: Full URL to the .txt file, or a relative path
+            in test mode
+        """
+
+        if self.test_mode_enabled() and "http" in url:
+            # there is a single example with a valid sub example
+            self.cases.append(
+                {
+                    "name": "Placeholder",
+                    "url": url,
+                    "date": "2025/02/24",
+                    "docket": "Placeholder",
+                    "citation": "Placeholder",
+                    "content": "Placeholder",
+                }
+            )
+            return
+
+        # BVA .txt files use Windows-1252 encoding for special
+        # characters like § (section sign).  download_content
+        # returns bytes; we decode after.
+        raw = self.download_content(
+            url,
+            doctor_is_available=False,
+            media_root=os.path.dirname(self.url),
         )
-        date_range = list(range(datetime.today().year, 1997 - 1, -1))
-        self.url = f"{base_url}&DB={'&DB='.join([str(n) for n in date_range])}"
+
+        content = raw.decode("cp1252")
+
+        citation_match = self.citation_re.search(content)
+        date_match = self.date_re.search(content)
+
+        if not citation_match or not date_match:
+            logger.warning("Could not parse header from %s", url)
+            return
+
+        citation = citation_match.group(1)
+        date_str = date_match.group(1)
+        docket_match = self.docket_re.search(content)
+        docket = docket_match.group(1).strip() if docket_match else ""
+
+        self.cases.append(
+            {
+                # BVA decisions use the docket as the case name
+                # because veterans' names are not published
+                "name": docket or citation,
+                "url": url,
+                "date": date_str,
+                "docket": docket,
+                "citation": citation,
+                "content": content,
+            }
+        )
+
+    def _download_backwards(self, yy: int) -> None:
+        """Download and process all decisions from a given year's sitemap.
+
+        Called once per year by the backscrape caller.
+
+        :param yy: 2-digit year (e.g. 92 for 1992, 25 for 2025)
+        """
+        self.url = self.sitemap_url.format(yy=yy)
+        logger.info("Backscraping year %02d from %s", yy, self.url)
+        self.is_backscrape = True
+
+        # Process all entries for a backscrape
+        self.cases_to_scrape = 1_000_000
         self.html = self._download()
+        self._process_html()
+
+    def make_backscrape_iterable(self, kwargs):
+        """Convert the parent's date-range tuples into 2-digit year ints.
+
+        The parent creates (start_date, end_date) tuples based on
+        days_interval.  We only need the year boundaries, since
+        _download_backwards operates on one year's sitemap at a time.
+        """
+        super().make_backscrape_iterable(kwargs)
+
+        # back_scrape_iterable is a list of (start, end) date tuples
+        start_year = self.back_scrape_iterable[0][0].year
+        end_year = self.back_scrape_iterable[-1][-1].year
+
+        self.back_scrape_iterable = [
+            y % 100 for y in range(start_year, end_year + 1)
+        ]
