@@ -69,18 +69,18 @@ class Site(OpinionSiteLinear):
             }
         )
 
-    def _download(self):
+    async def _download(self):
         """Download data from DynamoDB for oral arguments.
 
         :return: The JSON response from DynamoDB containing oral argument records.
         """
         if self.test_mode_enabled():
-            return json.load(open(self.url))
+            return json.load(open(self.mock_url))
 
         sess = self.request["session"]
 
         # fetch for credentials
-        res = sess.post(self.url, headers=self.headers, json=self.params)
+        res = await sess.post(self.url, headers=self.headers, json=self.params)
         creds = res.json().get("Credentials")
 
         # fetch signed headers
@@ -92,7 +92,7 @@ class Site(OpinionSiteLinear):
         )
 
         # fetch bap table
-        self.request["response"] = sess.post(
+        self.request["response"] = await sess.post(
             self.query_url, headers=sig, data=self.payload
         )
 

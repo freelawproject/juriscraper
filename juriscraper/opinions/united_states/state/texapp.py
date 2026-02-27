@@ -17,8 +17,10 @@
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 
+import os
 import re
 from datetime import date, datetime, timedelta
+from urllib.parse import urlparse
 
 from dateutil import parser
 from lxml import html as lxmlHTML
@@ -133,7 +135,7 @@ class Site(ClusterSite):
         if self.next_page:
             self.parameters[self.next_page[0].xpath("@name")[0]] = ""
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process HTML and paginates if needed
 
         :return: None
@@ -142,7 +144,7 @@ class Site(ClusterSite):
             # Make our post request to get our data
             self.method = "POST"
             self._set_parameters()
-            self.html = super()._download()
+            self.html = await super()._download()
 
         for row in self.html.xpath(self.rows_xpath):
             # `Document search` page returns OpinionClusters separated,
@@ -154,7 +156,7 @@ class Site(ClusterSite):
             self.seen_case_urls.add(case_url)
 
             op_date = row.xpath("td[2]")[0].text_content()
-            case_dict = self.parse_case_page(case_url, op_date)
+            case_dict = await self.parse_case_page(case_url, op_date)
             case_dict["date"] = op_date
             case_dict["docket"] = row.xpath("td[5]")[0].text_content().strip()
 
@@ -189,9 +191,9 @@ class Site(ClusterSite):
         if self.next_page and not self.test_mode_enabled():
             self.current_page += 1
             logger.info(f"Paginating to page {self.current_page}")
-            self._process_html()
+            await self._process_html()
 
-    def parse_case_page(self, link: str, opinion_date: str) -> dict:
+    async def parse_case_page(self, link: str, opinion_date: str) -> dict:
         """Parses the case page
 
         Usually we would defer getting extra data until dup checking
@@ -205,11 +207,14 @@ class Site(ClusterSite):
         if self.test_mode_enabled():
             # Support "sub" pages on test_ScraperExampleTest by modifying
             # the href attribute of the case page, to point to the proper local file
-            self.url = link
-            self._request_url_mock(link)
+            self.mock_url = os.path.join(
+                os.path.dirname(self.mock_url),
+                os.path.basename(urlparse(link).path),
+            )
+            await self._request_url_mock(link)
             html = self._return_response_text_object()
         else:
-            html = self._get_html_tree_by_url(link)
+            html = await self._get_html_tree_by_url(link)
 
         parsed["name"] = self.get_name(html, link)
 

@@ -96,7 +96,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -108,5 +108,5 @@ class Site(OpinionSiteLinear):
             "end": dates[1].strftime("%Y-%m-%d"),
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

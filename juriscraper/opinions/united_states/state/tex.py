@@ -47,7 +47,7 @@ class Site(ClusterSite):
         self.make_backscrape_iterable(kwargs)
         self.is_backscrape = False
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         """Downloads the HTML content for the current opinion page.
 
         :param request_dict (dict, optional): Additional request parameters.
@@ -57,7 +57,7 @@ class Site(ClusterSite):
             request_dict = {}
 
         if not self.is_backscrape and not self.test_mode_enabled():
-            self.html = super()._download(request_dict)
+            self.html = await super()._download(request_dict)
             links = self.html.xpath(self.link_xp)
             if not links:
                 # No orders posted yet (common in early January)
@@ -66,10 +66,10 @@ class Site(ClusterSite):
                 return None
             self.url = links[-1]
 
-        self.html = super()._download(request_dict)
+        self.html = await super()._download(request_dict)
         return self.html
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parses the HTML content
 
         :return None
@@ -243,7 +243,7 @@ class Site(ClusterSite):
             dates.append((year, start, end))
         self.back_scrape_iterable = dates
 
-    def _download_backwards(
+    async def _download_backwards(
         self, analysis_window: tuple[int, date, date]
     ) -> None:
         """Downloads and processes opinions for a given year within a specified date range.
@@ -254,7 +254,7 @@ class Site(ClusterSite):
         self.is_backscrape = True
         year, start, end = analysis_window
         self.url = self.base_url.format(year)
-        self._download()
+        await self._download()
 
         for path in self.html.xpath(self.link_xp):
             if "historical" in path:
@@ -267,5 +267,5 @@ class Site(ClusterSite):
                 continue
 
             self.url = path
-            self._download()
-            self._process_html()
+            await self._download()
+            await self._process_html()

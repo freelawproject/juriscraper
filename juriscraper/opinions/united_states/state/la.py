@@ -23,10 +23,10 @@ class Site(OpinionSiteLinear):
         self.url = "http://www.lasc.org/CourtActions/%d" % self.year
         self.status = "Published"
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
-        landing_page = OpinionSiteLinear._download(self, request_dict)
+        landing_page = await OpinionSiteLinear._download(self, request_dict)
         if self.test_mode_enabled():
             return [self._get_subpage_html_by_page(landing_page)]
         path = (

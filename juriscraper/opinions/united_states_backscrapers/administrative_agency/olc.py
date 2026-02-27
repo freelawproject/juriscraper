@@ -15,12 +15,12 @@ class Site(olc.Site):
         self.court_id = self.__module__
         self.back_scrape_iterable = range(1, 36)
 
-    def _download_backwards(self, page: int) -> None:
+    async def _download_backwards(self, page: int) -> None:
         """Download backwards over the volume links in the DOJ OLC website.
 
         :param page: The page index for the URL
         :return: None
         """
         self.url = f"https://www.justice.gov/olc/opinions?items_per_page=40&page={page}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

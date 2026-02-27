@@ -19,12 +19,12 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         self.url = "http://media-oa.ca8.uscourts.gov/circ8rss.xml"
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         """Go through the items and filter out ones that aren't complete."""
         if request_dict is None:
             request_dict = {}
         self.items = []
-        html_tree = super()._download(request_dict=request_dict)
+        html_tree = await super()._download(request_dict=request_dict)
         for item in html_tree.xpath("//item"):
             case_name = item.xpath("./title/text()")[0].split(":", 1)[1]
             if case_name.strip():

@@ -32,18 +32,18 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         """Download the publication list and then fetch detailed publication data.
 
         The initial API returns a list of publications, but we need to fetch
         the detailed publication endpoint to get full case information.
         """
         if self.test_mode_enabled():
-            self.json = super()._download(request_dict)
+            self.json = await super()._download(request_dict)
             return
 
         # First, get the list of publications
-        resp = super()._download(request_dict)
+        resp = await super()._download(request_dict)
 
         # Get the publicationUUID from the initial response
         releases = resp["_embedded"]["results"]
@@ -52,7 +52,7 @@ class Site(OpinionSiteLinear):
         # Fetch detailed publication data (no params needed for this endpoint)
         self.url = f"{self.base_url}/courts/{self.court_str}/cms/publication/{publication_uuid}"
         self.request["parameters"]["params"] = {}
-        self.json = super()._download(request_dict)
+        self.json = await super()._download(request_dict)
 
     def _process_html(self):
         date_filed = self.json["publicationDate"][:10]
@@ -118,7 +118,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, d: int):
+    async def _download_backwards(self, d: int):
         """Fetches a page of publications for backscraping."""
         self.url = f"{self.base_url}/courts/cms/publications"
         self.request["parameters"]["params"] = {
@@ -127,7 +127,7 @@ class Site(OpinionSiteLinear):
             "size": 1,
             "sort": "publicationDate,desc",
         }
-        self._download()
+        await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict):

@@ -152,6 +152,8 @@ Changes:
 
 - `wva`, `wvactapp` now use ClusterSite #1748
 - `conn` and `connappct` now use ClusterSite #1733
+- Migrate from requests to httpx AsyncClient client. #739
+- Migrate sync calls to async. #739
 
 Fixes:
 

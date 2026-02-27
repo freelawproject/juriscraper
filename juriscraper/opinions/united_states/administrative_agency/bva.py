@@ -71,12 +71,12 @@ class Site(OpinionSiteLinear):
         # very big 15-20MB and would fill the CL S3 response bucket
         self.save_response = None
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         """Fall back to the previous year's sitemap if the current
         year's does not exist yet. Do not do this in a backscrape
         """
         if self.test_mode_enabled() or self.is_backscrape:
-            return super()._download(request_dict)
+            return await super()._download(request_dict)
 
         # Uses a HEAD request (headers only, no body) to cheaply check
         # existence before committing to a full GET of the ~18 MB XML.
@@ -93,7 +93,7 @@ class Site(OpinionSiteLinear):
 
         return super()._download(request_dict)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parse the sitemap XML and fetch individual decisions.
 
         Sitemap entries are appended chronologically, so the newest
@@ -109,9 +109,9 @@ class Site(OpinionSiteLinear):
                 logger.info("Reached case limit")
                 break
 
-            self._fetch_and_parse_decision(loc)
+            await self._fetch_and_parse_decision(loc)
 
-    def _fetch_and_parse_decision(self, url: str) -> None:
+    async def _fetch_and_parse_decision(self, url: str) -> None:
         """Download a single .txt decision and extract metadata.
 
         Uses download_content to fetch the file.  In test mode,
@@ -139,11 +139,10 @@ class Site(OpinionSiteLinear):
         # BVA .txt files use Windows-1252 encoding for special
         # characters like § (section sign).  download_content
         # returns bytes; we decode after.
-        raw = self.download_content(
-            url,
-            doctor_is_available=False,
-            media_root=os.path.dirname(self.url),
-        )
+        download_kwargs = {"doctor_is_available": False}
+        if self.test_mode_enabled():
+            download_kwargs["media_root"] = os.path.dirname(self.mock_url)
+        raw = await self.download_content(url, **download_kwargs)
 
         content = raw.decode("cp1252")
 
@@ -172,7 +171,7 @@ class Site(OpinionSiteLinear):
             }
         )
 
-    def _download_backwards(self, yy: int) -> None:
+    async def _download_backwards(self, yy: int) -> None:
         """Download and process all decisions from a given year's sitemap.
 
         Called once per year by the backscrape caller.
@@ -185,8 +184,8 @@ class Site(OpinionSiteLinear):
 
         # Process all entries for a backscrape
         self.cases_to_scrape = 1_000_000
-        self.html = self._download()
-        self._process_html()
+        self.html = await self._download()
+        await self._process_html()
 
     def make_backscrape_iterable(self, kwargs):
         """Convert the parent's date-range tuples into 2-digit year ints.

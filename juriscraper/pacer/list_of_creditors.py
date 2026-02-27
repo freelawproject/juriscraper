@@ -1,7 +1,6 @@
 from typing import Optional
 
-import requests
-from requests import Response
+from httpx import Request, Response, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.reports import BaseReport
@@ -73,7 +72,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         param = action_value.split("?")[1]
         return param
 
-    def download_file(self) -> Optional[Response]:
+    async def download_file(self) -> Optional[Response]:
         """Downloads the formated pipe-limited file using the
         FORMAT_RAW_DATA_SERVICE API.
 
@@ -86,15 +85,19 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             "useragentstring": "CM/ECF-BK V10.6.4",
             "data": self._metadata["data"],
         }
-        req_timeout = (60, 300)
-        r = requests.post(
-            self.FORMAT_RAW_DATA_SERVICE, params=params, timeout=req_timeout
+        req_timeout = Timeout(60, read=300)
+        request = Request(
+            "POST",
+            self.FORMAT_RAW_DATA_SERVICE,
+            params=params,
+            extensions={"timeout": req_timeout.as_dict()},
         )
+        r = await self.session.send(request)
         if "text/plain" in r.headers.get("content-type"):
             return r
         return None
 
-    def query_post_param(self) -> str:
+    async def query_post_param(self) -> str:
         """To query the report and ensure that the cost is the same as in the
         browser, obtain a valid POST param 'x-L_1_0-1' from the input form.
 
@@ -105,11 +108,11 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         )
 
         logger.info(f"Getting a valid POST param for '{self.court_id}'")
-        self.response = self.session.get(self.url)
+        self.response = await self.session.get(self.url)
         self.parse()
         return self._get_valid_post_param()
 
-    def query(
+    async def query(
         self,
         pacer_case_id: str,
         docket_number: str,
@@ -141,7 +144,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             self.court_id,
             params,
         )
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?{post_param}", data=params
         )
         self.parse()

@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         "6e61b248-ef67-423e-b321-f2ed8ad05728" seems to be the name
@@ -70,5 +70,5 @@ class Site(OpinionSiteLinear):
             "_": ts,
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

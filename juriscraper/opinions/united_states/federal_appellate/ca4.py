@@ -140,7 +140,7 @@ class Site(OpinionSiteLinear):
             "sortBy": "2",  # 2 -> newest to oldest
         }
 
-    def _download_backwards(self, date_range) -> None:
+    async def _download_backwards(self, date_range) -> None:
         """Download backward
 
         :param date_range: the date range as a string
@@ -148,5 +148,5 @@ class Site(OpinionSiteLinear):
         """
         self.date_range = date_range
         self.update_parameters()
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

@@ -32,7 +32,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.status = "Unknown"
 
-    def _process_html(self):
+    async def _process_html(self):
         # We need to do a plain GET to get hidden inputs
         # Then we can do our filtered request
         if not self.test_mode_enabled():
@@ -44,13 +44,13 @@ class Site(OpinionSiteLinear):
                 self.parameters["__EVENTTARGET"] = (
                     "ctl00$cntBody$ctlOpinionSearch_Toggle$ddlSearchOptions"
                 )
-                self.html = self._download()
+                self.html = await self._download()
                 self.search_is_configured = True
 
             # Set the proper filters to get the actual data we want
             self.update_date_filters()
             self.update_hidden_inputs()
-            self.html = self._download()
+            self.html = await self._download()
 
         count_xpath = "//*[@id='cntBody_ctlOpinionSearch_Toggle_lblRecordCnt']"
         logger.info(self.html.xpath(count_xpath)[0].text_content().strip())
@@ -121,9 +121,9 @@ class Site(OpinionSiteLinear):
             "ctl00$cntBody$ctlOpinionSearch_Toggle$btnSearch": "Search",
         }
 
-    def _download_backwards(self, target_date: date) -> None:
+    async def _download_backwards(self, target_date: date) -> None:
         self.target_date = target_date
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs):

@@ -7,7 +7,6 @@ History:
 
 from lxml.html import fromstring
 
-from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -63,7 +62,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def fetch_document_link(self, csNumber: str):
+    async def fetch_document_link(self, csNumber: str):
         """Fetch document url
 
         Using case number - make a request to return the case page and
@@ -85,20 +84,23 @@ class Site(OpinionSiteLinear):
             "href": "/public/caseView.do",
             "submitValue": "Search",
         }
-        self._request_url_post(self.search)
+        await self._request_url_post(self.search)
         content = self.request["response"].text
         slug = fromstring(content).xpath(self.xp)[-1]
         return f"https://caseinfo.nvsupremecourt.us{slug}"
 
-    def _get_download_urls(self):
+    async def _get_download_urls(self) -> list["str"]:
         """Get download urls
 
         :return: List URLs
         """
 
-        def fetcher(case):
+        async def fetcher(case):
             if self.test_mode_enabled():
                 return case["url"]
-            return self.fetch_document_link(case["docket"])
+            return await self.fetch_document_link(case["docket"])
 
-        return DeferringList(seed=self.cases, fetcher=fetcher)
+        case_names = []
+        for case in self.cases:
+            case_names.append(await fetcher(case))
+        return case_names

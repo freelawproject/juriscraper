@@ -55,7 +55,7 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Change URL to backscraping date range
 
         :param dates: tuple with date range to scrape
@@ -69,5 +69,5 @@ class Site(OpinionSiteLinear):
             "field_opn_issdate_value[max][date]": end.strftime("%m/%d/%Y"),
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

@@ -43,6 +43,8 @@ class OpinionSiteLinear(OpinionSite):
         "other_date",
         "attorney",
         "headnote",
+        "title",
+        "precedential_status",
         # the downloaded content from download_url
         # cl_scrape_opinions is ready to consume this if present
         "content",

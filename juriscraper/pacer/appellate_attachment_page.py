@@ -33,7 +33,7 @@ class AppellateAttachmentPage(BaseReport):
     def __init__(self, court_id, pacer_session=None):
         super().__init__(court_id, pacer_session)
 
-    def query(self, document_number):
+    async def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
 
         The appellate attachment page uses the a variable called dls_id
@@ -51,7 +51,7 @@ class AppellateAttachmentPage(BaseReport):
         document_number = f"{document_number[:3]}0{document_number[4:]}"
         url = self.url + document_number
         logger.info("Querying the attachment page endpoint at URL: %s", url)
-        self.response = self.session.get(url)
+        self.response = await self.session.get(url)
         self.parse()
 
     def _strip_bad_html_tags_insecure(self, text: str) -> None:

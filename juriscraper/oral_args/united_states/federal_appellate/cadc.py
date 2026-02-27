@@ -57,7 +57,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, target_date: date) -> None:
+    async def _download_backwards(self, target_date: date) -> None:
         """Download historical data
 
         Note that this URL will work:
@@ -69,7 +69,7 @@ class Site(OralArgumentSiteLinear):
         """
         self.url = self.base_url.format(target_date.strftime("%Y/%-m"))
         logger.info("Backscraping URL '%s'", self.url)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
