@@ -42,11 +42,13 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1992, 1, 1)
     days_interval = 365
 
-    # check the latest 100 cases on a regular scrape
-    # the upload schedule and amount is unknown, so we will have to run periodic
-    # backscraper for the active year
-    # limiting cases helps prevent hitting the servers too hard
-    cases_to_scrape = 100
+    # check the latest 50 cases on a regular scrape
+    # the upload schedule and volume is unknown, so we will have to run a
+    # periodic backscraper for the active year
+    # limiting cases helps prevent hitting the servers too hard and helps the
+    # scraper exit fast enough. Even when the files are small, the servers
+    # are slow
+    cases_to_scrape = 50
 
     sitemap_url = "https://www.va.gov/vetapp{yy:02d}/sitemap.xml"
 
@@ -64,16 +66,16 @@ class Site(OpinionSiteLinear):
 
         current_yy = datetime.today().year % 100
         self.url = self.sitemap_url.format(yy=current_yy)
-
+        self.is_backscrape = False
         # supressing the save_response_fn, since the downloaded sitemaps are
         # very big 15-20MB and would fill the CL S3 response bucket
         self.save_response = None
 
     def _download(self, request_dict=None):
         """Fall back to the previous year's sitemap if the current
-        year's does not exist yet.
+        year's does not exist yet. Do not do this in a backscrape
         """
-        if self.test_mode_enabled():
+        if self.test_mode_enabled() or self.is_backscrape:
             return super()._download(request_dict)
 
         # Uses a HEAD request (headers only, no body) to cheaply check
@@ -102,11 +104,12 @@ class Site(OpinionSiteLinear):
         # prefixes are stripped so //loc works directly
         locs = self.html.xpath("//loc/text()")
 
-        for index, loc in enumerate(reversed(locs)):
-            self._fetch_and_parse_decision(loc)
-
-            if index > self.cases_to_scrape:
+        for loc in reversed(locs):
+            if len(self.cases) >= self.cases_to_scrape:
+                logger.info("Reached case limit")
                 break
+
+            self._fetch_and_parse_decision(loc)
 
     def _fetch_and_parse_decision(self, url: str) -> None:
         """Download a single .txt decision and extract metadata.
@@ -178,6 +181,7 @@ class Site(OpinionSiteLinear):
         """
         self.url = self.sitemap_url.format(yy=yy)
         logger.info("Backscraping year %02d from %s", yy, self.url)
+        self.is_backscrape = True
 
         # Process all entries for a backscrape
         self.cases_to_scrape = 1_000_000
