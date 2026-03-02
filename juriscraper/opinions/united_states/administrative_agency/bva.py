@@ -70,6 +70,7 @@ class Site(OpinionSiteLinear):
         # supressing the save_response_fn, since the downloaded sitemaps are
         # very big 15-20MB and would fill the CL S3 response bucket
         self.save_response = None
+        self.make_backscrape_iterable(kwargs)
 
     def _download(self, request_dict=None):
         """Fall back to the previous year's sitemap if the current

@@ -21,7 +21,7 @@ Changes:
 - OpinionSite can now return a "content" key holding downloaded content #873
 
 Fixes:
-- Fix `bva` scraper #873
+- Fix `bva` scraper and backscraper #873
 
 ## 2.8.1 - 2026-02-26
 
