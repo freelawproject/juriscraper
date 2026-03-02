@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 2.8.2 - 2026-03-02
+
+Features:
+-
+
+Changes:
 - OpinionSite can now return a "content" key holding downloaded content #873
 
 Fixes:
