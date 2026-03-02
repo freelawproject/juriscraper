@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `bva` scraper and backscraper #873
+- Fix `prsupreme` empty case names caused by extra whitespace #1825
 
 ## 2.8.1 - 2026-02-26
 
