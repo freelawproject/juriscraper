@@ -462,7 +462,7 @@ class TexasCommonData(TypedDict):
 
 
 # Regex to recognize numbers with (optional) commas every 3 digits.
-NUMBER_RE_STR = r"[1-9]\d{0,2}(?:,\d{3})*"
+NUMBER_RE_STR = r"[1-9]\d{0,2}(?:,?\d{3})*"
 DOCKET_NUMBER_REGEXES = [
     re.compile(r"\d{1,2}[bB]?-\d{2,4}"),  # Supreme Court
     re.compile(r"\d{4,5}"),  # Supreme Court (older writs)
@@ -553,7 +553,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         self.is_valid = True
 
     @property
-    def data(self) -> TexasCommonData:
+    def data(self) -> Optional[TexasCommonData]:
         """
         Extract parsed data from an HTML tree. This property returns the
         `TexasCommonData`
@@ -567,10 +567,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         if not self.is_valid:
             raise ValueError("HTML tree has not been parsed yet.")
 
+        docket_number = self.docket_number
+        if docket_number is None:
+            return None
+
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
             court_type=CourtType.UNKNOWN.value,
-            docket_number=self.docket_number,
+            docket_number=docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
             parties=self.parties,
@@ -583,7 +587,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         return data
 
     @cached_property
-    def docket_number(self) -> str:
+    def docket_number(self) -> Optional[str]:
         """
         The docket number of the case.
         """
@@ -795,24 +799,38 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         )
         return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
 
-    def _parse_docket_number(self) -> str:
+    @staticmethod
+    def _validate_docket_number(docket_number: str) -> Optional[str]:
         """
-        Extracts the docket number from the HTML tree. Will fail if
-        `_parse_text` has not yet been called.
+        Validates a docket number, returning `None` if the docket number is one
+        we have manually ignored.
 
-        :raises ValueError: If the docket number format is not recognized.
+        :param docket_number: The docket number to validate.
 
-        :return: Docket number.
+        :return: The input docket number if it is valid or `None` if it is
+            ignored.
         """
-        docket_number = self.case_data["case"]
         if docket_number in IGNORED_DOCKET_NUMBERS:
-            raise ValueError(f'Known invalid docket number: "{docket_number}"')
+            return None
         for docket_number_regex in DOCKET_NUMBER_REGEXES:
             if docket_number_regex.fullmatch(docket_number):
                 return docket_number
         raise ValueError(
             f'Unrecognized docket number format: "{docket_number}"'
         )
+
+    def _parse_docket_number(self) -> Optional[str]:
+        """
+        Extracts and validates the docket number from the HTML tree. Will fail
+        if `_parse_text` has not yet been called.
+
+        :raises ValueError: If the docket number format is not recognized.
+
+        :return: Docket number or `None` if the docket number is one we
+            manually ignore.
+        """
+        docket_number = self.case_data["case"]
+        return self._validate_docket_number(docket_number)
 
     def _parse_date_filed(self) -> date:
         """

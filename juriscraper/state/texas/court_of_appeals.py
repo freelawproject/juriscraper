@@ -57,7 +57,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         super().__init__(court_id)
 
     @property
-    def data(self) -> TexasCourtOfAppealsDocket:
+    def data(self) -> Optional[TexasCourtOfAppealsDocket]:
         """
         Extract parsed data from a docket page.
 
@@ -65,6 +65,8 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         """
 
         common_data = super().data
+        if common_data is None:
+            return None
         court_name = clean_string(self.tree.find(".//h1").text_content())
         transfer_from, transfer_to = self._parse_transfers()
 

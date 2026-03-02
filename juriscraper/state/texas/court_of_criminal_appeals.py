@@ -1,4 +1,5 @@
 from functools import cached_property
+from typing import Optional
 
 from juriscraper.state.texas.common import (
     CourtID,
@@ -36,7 +37,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         super().__init__(court_id)
 
     @property
-    def data(self) -> TexasCourtOfCriminalAppealsDocket:
+    def data(self) -> Optional[TexasCourtOfCriminalAppealsDocket]:
         """
         Extract parsed data from an HTML tree. This property returns a
         `TexasCourtOfCriminalAppealsDocket`.
@@ -45,6 +46,8 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         """
 
         common_data = super().data
+        if common_data is None:
+            return None
 
         return TexasCourtOfCriminalAppealsDocket(
             court_id=CourtID.COURT_OF_CRIMINAL_APPEALS.value,
