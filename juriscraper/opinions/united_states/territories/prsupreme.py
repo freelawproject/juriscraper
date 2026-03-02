@@ -29,7 +29,11 @@ class Site(OpinionSiteLinear):
         self.request["verify"] = False
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
+    def _process_html(self) -> None:
+        """Process the HTML and extract opinions into self.cases
+
+        :return: None
+        """
         # The website has used 3 different HTML layouts over the years.
         # We detect the format by counting sibling TDs of the TSPR link:
         #   >=5 → middle format (2005-2022)
@@ -90,12 +94,8 @@ class Site(OpinionSiteLinear):
                 # Newest format (2023+): vertical layout with labeled rows
                 # Rows: [Núm., Partes, Ponente, Fecha, Materia]
                 cells = link.xpath(cells_in_tr_xpath)
-                docket = cells[0].text_content().strip().split("\n")[1]
-                name = (
-                    re.sub(r"\n+", "\n", cells[1].text_content())
-                    .strip()
-                    .split("\n")[1]
-                )
+                docket = self.extract_cell(cells, 0)
+                name = self.extract_cell(cells, 1)
                 date_str = cells[3].xpath(".//td")[1].text_content().strip()
             else:
                 # 1-3 siblings: false positive match — a link in a
@@ -137,7 +137,28 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    def extract_cell(self, cells, index) -> str:
+        """Extract the value from a labeled table cell in the newest layout
+
+        Each cell contains a label (e.g. "Núm.", "Partes") followed by the
+        actual value. The number of blank lines between them varies by year,
+        so blank lines are filtered out before indexing.
+
+        :param cells: List of table row elements
+        :param index: Index of the cell to extract the value from
+        :return: The cell value with whitespace stripped
+        """
+        lines = [l.strip() for l in cells[index].text_content().split("\n") if
+                 l.strip()]
+        return lines[1] if len(lines) > 1 else lines[0]
+
+    def make_backscrape_iterable(self, kwargs) -> None:
+        """Build the year range iterable used for back-scraping
+
+        :param kwargs: Keyword arguments optionally containing backscrape_start
+            and backscrape_end as "YYYY/MM/DD" strings
+        :return: None
+        """
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
@@ -149,7 +170,12 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start_date.year, end_date.year + 1)
 
-    def _download_backwards(self, year):
+    def _download_backwards(self, year) -> None:
+        """Download and parse opinions for a single back-scrape year
+
+        :param year: The year to scrape
+        :return: None
+        """
         self.year = year
         self.url = f"{self.base_url}-{year}/"
         self.html = self._download()
