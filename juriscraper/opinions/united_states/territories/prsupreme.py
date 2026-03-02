@@ -148,8 +148,11 @@ class Site(OpinionSiteLinear):
         :param index: Index of the cell to extract the value from
         :return: The cell value with whitespace stripped
         """
-        lines = [l.strip() for l in cells[index].text_content().split("\n") if
-                 l.strip()]
+        lines = [
+            l.strip()
+            for l in cells[index].text_content().split("\n")
+            if l.strip()
+        ]
         return lines[1] if len(lines) > 1 else lines[0]
 
     def make_backscrape_iterable(self, kwargs) -> None:
