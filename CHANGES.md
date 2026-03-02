@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `bva` scraper and backscraper #873
+- Fix `arizctapp_div_1` update module_xp xpath #1830
 
 ## 2.8.1 - 2026-02-26
 
