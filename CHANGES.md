@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add Claude Code skill for automating version releases #1826
 
 Changes:
 - OpinionSite can now return a "content" key holding downloaded content #873
