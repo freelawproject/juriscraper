@@ -18,10 +18,22 @@ Features:
 - Add backscraping support to `mich` and `michctapp` going #1806
 
 Changes:
+-
+
+Fixes:
+-
+
+## 2.8.2 - 2026-03-02
+
+Features:
+-
+
+Changes:
 - OpinionSite can now return a "content" key holding downloaded content #873
 
 Fixes:
 - Fix `bva` scraper and backscraper #873
+- Fix `arizctapp_div_1` update module_xp xpath #1830
 - Fix `prsupreme` empty case names caused by extra whitespace #1825
 - Fix `dc` update URL to include `-and-` segment #1832
 
