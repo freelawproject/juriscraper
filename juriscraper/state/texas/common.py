@@ -461,23 +461,36 @@ class TexasCommonData(TypedDict):
     appellate_briefs: list[TexasAppellateBrief]
 
 
+# Regex to recognize numbers with (optional) commas every 3 digits.
+NUMBER_RE_STR = r"[1-9]\d{0,2}(?:,\d{3})*"
 DOCKET_NUMBER_REGEXES = [
-    re.compile(r"\d{1,2}[bB]?-\d{4}"),  # Supreme Court
-    re.compile(r"\d{5}"),  # Supreme Court (older writs)
-    re.compile(r"[ABC]-\d+"),  # Supreme Court (older cases)
-    re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
-    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals (petitions)
-    re.compile(r"WR-[\d,]+-\d{2}"),  # Court of Criminal Appeals (writs)
-    re.compile(r"AP-[\d,]+"),  # Court of Criminal Appeals (Appeal Case Type)
+    re.compile(r"\d{1,2}[bB]?-\d{2,4}"),  # Supreme Court
+    re.compile(r"\d{4,5}"),  # Supreme Court (older writs)
+    re.compile(r"[ABCD]-\d+"),  # Supreme Court (older cases)
+    re.compile(r"\d{2}-\d{2}-(?:\d{5}|\d{4}[AB])-\w{2,3}"),  # Court of Appeals
+    re.compile(r"PD-\d{3,4}-\d{2}"),  # Court of Criminal Appeals (petitions)
     re.compile(
-        r"(B-3872A|D-0190|D-2169|D-4261|A-\d{4}-A)"
+        r"WR-" + NUMBER_RE_STR + r"(?:-\d{2,3})?"
+    ),  # Court of Criminal Appeals (writs)
+    re.compile(
+        r"AP-" + NUMBER_RE_STR
+    ),  # Court of Criminal Appeals (Appeal Case Type)
+    re.compile(
+        r"(B-3872A|A-\d{4}-A)"
     ),  # Oddly numbered cases that appear to be valid
 ]
-#  These exist, but look like bad data to me. It's fine if they're flagged
-#  as part of scraping.
-#    re.compile(
-#        r"(07-07-0MISC-CV|07-07-0SHEP-CV|100TH DAY = 10)"
-#    ),
+# Specific docket numbers that appear to be bad data and should be ignored.
+IGNORED_DOCKET_NUMBERS: set[str] = {
+    "01-23-",
+    "05-13-",
+    "07-07-0MISC-CV",
+    "07-07-0SHEP-CV",
+    "100th DAY = 10",
+    "14-95-01311-CR",
+    "PD-912-91",
+    "",
+    "20-",
+}
 
 
 class TexasCommonScraper(AbstractParser[TexasCommonData]):
@@ -792,10 +805,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         :return: Docket number.
         """
         docket_number = self.case_data["case"]
+        if docket_number in IGNORED_DOCKET_NUMBERS:
+            raise ValueError(f'Known invalid docket number: "{docket_number}"')
         for docket_number_regex in DOCKET_NUMBER_REGEXES:
             if docket_number_regex.fullmatch(docket_number):
                 return docket_number
-        raise ValueError(f"Unrecognized docket number format: {docket_number}")
+        raise ValueError(
+            f'Unrecognized docket number format: "{docket_number}"'
+        )
 
     def _parse_date_filed(self) -> date:
         """
