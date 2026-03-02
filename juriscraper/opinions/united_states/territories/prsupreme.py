@@ -149,9 +149,9 @@ class Site(OpinionSiteLinear):
         :return: The cell value with whitespace stripped
         """
         lines = [
-            l.strip()
-            for l in cells[index].text_content().split("\n")
-            if l.strip()
+            line.strip()
+            for line in cells[index].text_content().split("\n")
+            if line.strip()
         ]
         return lines[1] if len(lines) > 1 else lines[0]
 
