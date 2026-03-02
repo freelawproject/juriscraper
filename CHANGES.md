@@ -18,9 +18,13 @@ Features:
 -
 
 Changes:
+
 - OpinionSite can now return a "content" key holding downloaded content #873
+- Raise an exception during parsing for Texas docket numbers we know to be bad data
+- Update Texas docket number validation to handle all 6,401 valid cases that were failing
 
 Fixes:
+
 - Fix `bva` scraper and backscraper #873
 
 ## 2.8.1 - 2026-02-26
@@ -32,6 +36,7 @@ Changes:
 -
 
 Fixes:
+
 - Fix `illappct` docket regex to match `ILL App` citations and normalize them to `IL App` #1726
 - Fix `gactapp` base URL from `gaappeals.us` to `gaappeals.gov` #1810
 - Fix `texapp` add disposition as a local variable #1817
@@ -42,12 +47,13 @@ Features:
 -
 
 Changes:
+
 - Rename all `texapp_*` scrapers to `txctapp*`
 
 Fixes:
+
 - Make tames scraper behave more like a browser for form submission.
 - Fix `texapp` download URL XPath to use case-insensitive matching for opinion type detection #1813
-
 
 ## 2.7.8 - 2026-02-16
 
@@ -55,9 +61,11 @@ Features:
 -
 
 Changes:
+
 - Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
 
 Fixes:
+
 - Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
 - fix `michctapp` captcha block by using new url #1677
 - fix `tex` add error handling for empty order list to prevent IndexError #1738
@@ -73,6 +81,7 @@ Changes:
 -
 
 Fixes:
+
 - Fix `wyo` scraper to use updated document base URL
 
 ## Past
@@ -88,7 +97,7 @@ Changes:
 - Add `court_type` field to Texas dockets, originating court info, and appellate court info
 - Add `district` field to Texas originating court info where relevant
 - Update Texas case name shortening to be more robust
-- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644  
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644
 
 Fixes:
 
