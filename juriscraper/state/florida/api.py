@@ -265,7 +265,7 @@ class FloridaDocketEntrySubType(BaseModel):
 
 
 class FloridaCaseCategory(BaseModel):
-    id: str = Field(alias="caseCategoryID")
+    id: int = Field(alias="caseCategoryID")
     name: int = Field(alias="caseCategoryName")
     comment: str = Field(alias="caseCategoryComment")
 

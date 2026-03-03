@@ -6,6 +6,7 @@ here in this format.
 
 from datetime import date
 from enum import Enum
+from typing import Generic, TypeVar
 
 from attr import dataclass
 from pydantic import BaseModel
@@ -31,8 +32,11 @@ class DocketEntryType(Enum):
     """A docket entry whose type cannot be determined."""
 
 
+_DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)
+
+
 @dataclass
-class DocketEntry(BaseModel):
+class DocketEntry(BaseModel, Generic[_DocketEntryDocument]):
     """
     Represents a single docket entry.
 
@@ -42,7 +46,7 @@ class DocketEntry(BaseModel):
     """
 
     date_filed: date
-    attachments: list[Document]
+    attachments: list[_DocketEntryDocument]
     entry_type: DocketEntryType
 
 
@@ -108,8 +112,11 @@ class PartyType(Enum):
     """The party's type cannot be determined by the parser."""
 
 
+_PartyRepresentative = TypeVar("_PartyRepresentative", bound=Representative)
+
+
 @dataclass
-class Party(BaseModel):
+class Party(BaseModel, Generic[_PartyRepresentative]):
     """
     A party in a case.
 
@@ -120,7 +127,7 @@ class Party(BaseModel):
 
     name: str
     party_type: PartyType
-    representatives: list[Representative]
+    representatives: list[_PartyRepresentative]
 
 
 class DocketType:
@@ -132,8 +139,15 @@ class DocketType:
     """The docket type cannot be determined by the parser."""
 
 
+_DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
+_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry)
+_DocketParty = TypeVar("_DocketParty", bound=Party)
+
+
 @dataclass
-class Docket(BaseModel):
+class Docket(
+    BaseModel, Generic[_DocketDocketTransfer, _DocketDocketEntry, _DocketParty]
+):
     """
     Represents one docket in one court.
 
@@ -153,7 +167,10 @@ class Docket(BaseModel):
     case_name: str
     case_name_full: str
     date_filed: date
-    transfers: list[DocketTransfer]
-    entries: list[DocketEntry]
-    parties: list[Party]
+    transfers: list[_DocketDocketTransfer]
+    entries: list[_DocketDocketEntry]
+    parties: list[_DocketParty]
     docket_type: DocketType
+
+
+BaseDocket = TypeVar("BaseDocket", bound=Docket)
