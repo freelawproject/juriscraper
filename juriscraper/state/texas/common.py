@@ -493,7 +493,9 @@ IGNORED_DOCKET_NUMBERS: set[str] = {
 }
 
 
-class TexasCommonScraper(AbstractParser[TexasCommonData]):
+class TexasCommonScraper(
+    AbstractParser[Union[TexasCommonData, dict[str, None]]]
+):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court,
     Court of Criminal Appeals, and Court of Appeals).
@@ -553,7 +555,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         self.is_valid = True
 
     @property
-    def data(self) -> Optional[TexasCommonData]:
+    def data(self) -> Union[TexasCommonData, dict[str, None]]:
         """
         Extract parsed data from an HTML tree. This property returns the
         `TexasCommonData`
@@ -569,7 +571,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
         docket_number = self.docket_number
         if docket_number is None:
-            return None
+            return {}
 
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
