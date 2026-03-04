@@ -56,11 +56,16 @@ class Site(OpinionSiteLinear):
             self.status = "Unpublished"
 
     def _process_html(self):
-        xpath = ".//p[contains(@class, '{}')]/text()"
         for row in self.html.xpath("//div[contains(@class,'case-result')]"):
-            date_filed = row.xpath("preceding-sibling::div[h3]/h3/text()")[-1]
-            docket = row.xpath(xpath.format("case-number"))[0]
-            name = row.xpath(xpath.format("case-name"))[0]
+            date_filed = row.xpath(
+                "preceding-sibling::div[contains(@class,'result-heading')]/h3/text()"
+            )[-1]
+            docket = row.xpath(
+                ".//span[contains(@class, 'case-number')]/text()"
+            )[0]
+            name = row.xpath(
+                ".//span[contains(@class, 'case-name')]/text()"
+            )[0]
 
             summary = row.xpath(".//div[@class='result-info']/p/text()")
             if summary:
@@ -69,7 +74,9 @@ class Site(OpinionSiteLinear):
                 # Unpublished opinions don't have a summary
                 summary = ""
 
-            url = row.xpath(".//a/@href")[0]
+            url = row.xpath(
+                ".//a[contains(@class,'download-link')]/@href"
+            )[0]
             self.cases.append(
                 {
                     "docket": docket,

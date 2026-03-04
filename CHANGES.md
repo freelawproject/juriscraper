@@ -22,7 +22,7 @@ Changes:
 - Update Texas docket number validation to handle all 6,401 valid cases that were failing
 
 Fixes:
--
+- Fix `sc`, `sc_u`, `scctapp`, `scctapp_u` update XPath selectors for redesigned SC courts website
 
 ## 2.8.2 - 2026-03-02
 
