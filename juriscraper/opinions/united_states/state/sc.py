@@ -63,9 +63,9 @@ class Site(OpinionSiteLinear):
             docket = row.xpath(
                 ".//span[contains(@class, 'case-number')]/text()"
             )[0]
-            name = row.xpath(
-                ".//span[contains(@class, 'case-name')]/text()"
-            )[0]
+            name = row.xpath(".//span[contains(@class, 'case-name')]/text()")[
+                0
+            ]
 
             summary = row.xpath(".//div[@class='result-info']/p/text()")
             if summary:
@@ -74,9 +74,7 @@ class Site(OpinionSiteLinear):
                 # Unpublished opinions don't have a summary
                 summary = ""
 
-            url = row.xpath(
-                ".//a[contains(@class,'download-link')]/@href"
-            )[0]
+            url = row.xpath(".//a[contains(@class,'download-link')]/@href")[0]
             self.cases.append(
                 {
                     "docket": docket,
