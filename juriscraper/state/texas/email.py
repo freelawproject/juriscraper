@@ -1,42 +1,83 @@
-import re
+from typing import Optional, TypedDict
 from urllib.parse import parse_qs, urlparse
 
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.email_utils import EmailParser
 from juriscraper.state.texas.common import CourtID
 
+COURT_NAME_TO_ID = {
+    "First Court of Appeals": CourtID.FIRST_COURT_OF_APPEALS.value,
+    "Second Court of Appeals": CourtID.SECOND_COURT_OF_APPEALS.value,
+    "Third Court of Appeals": CourtID.THIRD_COURT_OF_APPEALS.value,
+    "Fourth Court of Appeals": CourtID.FOURTH_COURT_OF_APPEALS.value,
+    "Fifth Court of Appeals": CourtID.FIFTH_COURT_OF_APPEALS.value,
+    "Sixth Court of Appeals": CourtID.SIXTH_COURT_OF_APPEALS.value,
+    "Seventh Court of Appeals": CourtID.SEVENTH_COURT_OF_APPEALS.value,
+    "Eighth Court of Appeals": CourtID.EIGHTH_COURT_OF_APPEALS.value,
+    "Ninth Court of Appeals": CourtID.NINTH_COURT_OF_APPEALS.value,
+    "Tenth Court of Appeals": CourtID.TENTH_COURT_OF_APPEALS.value,
+    "Eleventh Court of Appeals": CourtID.ELEVENTH_COURT_OF_APPEALS.value,
+    "Twelfth Court of Appeals": CourtID.TWELFTH_COURT_OF_APPEALS.value,
+    "Thirteenth Court of Appeals": CourtID.THIRTEENTH_COURT_OF_APPEALS.value,
+    "Fourteenth Court of Appeals": CourtID.FOURTEENTH_COURT_OF_APPEALS.value,
+    "Fifteenth Court of Appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS.value,
+    "Court of Criminal Appeals": CourtID.COURT_OF_CRIMINAL_APPEALS.value,
+    "Supreme Court": CourtID.SUPREME_COURT.value,
+}
 
-def get_tames_court_from_subject(subject: str, default=None):
-    if not subject.startswith("Automated Case Update from"):
-        return default
-    return {
-        "First Court of Appeals": CourtID.FIRST_COURT_OF_APPEALS.value,
-        "Second Court of Appeals": CourtID.SECOND_COURT_OF_APPEALS.value,
-        "Third Court of Appeals": CourtID.THIRD_COURT_OF_APPEALS.value,
-        "Fourth Court of Appeals": CourtID.FOURTH_COURT_OF_APPEALS.value,
-        "Fifth Court of Appeals": CourtID.FIFTH_COURT_OF_APPEALS.value,
-        "Sixth Court of Appeals": CourtID.SIXTH_COURT_OF_APPEALS.value,
-        "Seventh Court of Appeals": CourtID.SEVENTH_COURT_OF_APPEALS.value,
-        "Eighth Court of Appeals": CourtID.EIGHTH_COURT_OF_APPEALS.value,
-        "Ninth Court of Appeals": CourtID.NINTH_COURT_OF_APPEALS.value,
-        "Tenth Court of Appeals": CourtID.TENTH_COURT_OF_APPEALS.value,
-        "Eleventh Court of Appeals": CourtID.ELEVENTH_COURT_OF_APPEALS.value,
-        "Twelfth Court of Appeals": CourtID.TWELFTH_COURT_OF_APPEALS.value,
-        "Thirteenth Court of Appeals": CourtID.THIRTEENTH_COURT_OF_APPEALS.value,
-        "Fourteenth Court of Appeals": CourtID.FOURTEENTH_COURT_OF_APPEALS.value,
-        "Fifteenth Court of Appeals": CourtID.FIFTEENTH_COURT_OF_APPEALS.value,
-        "Court of Criminal Appeals": CourtID.COURT_OF_CRIMINAL_APPEALS.value,
-        "Supreme Court": CourtID.SUPREME_COURT.value,
-    }.get(subject[27:], default)
+SUBJECT_PREFIX = "Automated Case Update from "
 
 
-link_href = re.compile('<a href="([^"]*)">')
+class TamesEmailData(TypedDict):
+    court_id: str
+    case_number: str
+    url: str
 
 
-def get_tames_case_from_email_body(body: str, default=None):
-    match = re.search(link_href, body)
-    if not match:
-        return default
-    link = match.group(1)
-    if not link:
-        return default
-    case_number = parse_qs(urlparse(link).query)["cn"][0]
-    return {"url": link, "case_number": case_number}
+class TamesEmail(EmailParser):
+    """Parse TAMES case notification emails from Texas courts."""
+
+    def __init__(self, court_id: str = "") -> None:
+        super().__init__(court_id)
+        self._court_id: Optional[str] = None
+
+    @property
+    def data(self) -> Optional[TamesEmailData]:
+        if self._court_id is None or self.tree is None:
+            return None
+
+        url = self._parse_case_url()
+        if url is None:
+            return None
+
+        case_number = parse_qs(urlparse(url).query).get("cn", [None])[0]
+        if case_number is None:
+            logger.error("Unable to extract case number from URL: %s", url)
+            return None
+
+        return TamesEmailData(
+            court_id=self._court_id,
+            url=url,
+            case_number=case_number,
+        )
+
+    def _parse_subject(self, subject: str) -> bool:
+        if not subject.startswith(SUBJECT_PREFIX):
+            logger.error(
+                "Email subject did not match expected prefix. Subject: %s",
+                subject,
+            )
+            return False
+        court_name = subject[len(SUBJECT_PREFIX) :]
+        self._court_id = COURT_NAME_TO_ID.get(court_name)
+        if self._court_id is None:
+            logger.error("Unknown court name in subject: %s", court_name)
+            return False
+        return True
+
+    def _parse_case_url(self) -> Optional[str]:
+        anchor = self.tree.find(".//a")
+        if anchor is None:
+            logger.error("Unable to find link in email body")
+            return None
+        return anchor.get("href")
