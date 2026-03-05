@@ -1,10 +1,11 @@
+import inspect
 import re
 import traceback
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
 from typing import Any, Callable, Optional
 
-from requests.exceptions import HTTPError
+from httpx import HTTPError
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
@@ -185,7 +186,7 @@ def clean_court_object(obj):
         return obj
 
 
-def backscrape_over_paginated_results(
+async def backscrape_over_paginated_results(
     first_page: int,
     last_page: int,
     start_date: date,
@@ -231,8 +232,11 @@ def backscrape_over_paginated_results(
             site.url = url_template.format(page)
 
         try:
-            site.html = site._download()
-            site._process_html()
+            site.html = await site._download()
+            if inspect.iscoroutinefunction(site._process_html):
+                await site._process_html()
+            else:
+                site._process_html()
         except HTTPError:
             # if the request returned and error, take advantage of the cases
             # already downloaded. This may also be a case when the last page

@@ -51,7 +51,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, date_range: str) -> None:
+    async def _download_backwards(self, date_range: str) -> None:
         """Backscrape one weekly date range (start,end)."""
         start, end = date_range.split(",")
         self.url = (
@@ -59,7 +59,7 @@ class Site(OpinionSiteLinear):
             f"docketdate/results_all.php?OPstartDate={start}&OPendDate={end}&submit=Start+Opinions+Search"
         )
 
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:

@@ -67,6 +67,7 @@ class Site(ClusterSite):
     author_and_type_regex = re.compile(r"\((?P<author_and_type>.+)\)\s*$")
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.url = "https://www.courtswv.gov/appellate-courts/supreme-court-of-appeals/opinions/prior-terms"
         self.court_id = self.__module__

@@ -23,7 +23,7 @@ class Site(OpinionSiteLinear):
 
     def _process_html(self):
         if self.test_mode_enabled():
-            with open(self.url) as file:
+            with open(self.mock_url) as file:
                 self.html = json.load(file)
         for row in self.html["data"]:
             url = row["FILE_NAME"]
