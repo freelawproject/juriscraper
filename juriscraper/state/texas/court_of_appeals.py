@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional, TypedDict
+from typing import Optional, TypedDict, Union
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
@@ -57,7 +57,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         super().__init__(court_id)
 
     @property
-    def data(self) -> TexasCourtOfAppealsDocket:
+    def data(self) -> Union[TexasCourtOfAppealsDocket, dict[str, None]]:
         """
         Extract parsed data from a docket page.
 
@@ -65,6 +65,8 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         """
 
         common_data = super().data
+        if not common_data:
+            return {}
         court_name = clean_string(self.tree.find(".//h1").text_content())
         transfer_from, transfer_to = self._parse_transfers()
 
