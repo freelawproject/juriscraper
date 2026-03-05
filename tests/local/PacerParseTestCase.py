@@ -49,9 +49,9 @@ class PacerParseTestCase(unittest.TestCase):
                 # Some reports don't have this method.
                 pass
             data = report.data
-            if (
-                isinstance(data, BaseModel)
-                or isinstance(data, list)
+            if isinstance(data, BaseModel) or (
+                isinstance(data, list)
+                and data
                 and isinstance(data[0], BaseModel)
             ):
                 data = pydantic_core.to_jsonable_python(data)

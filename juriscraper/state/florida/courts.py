@@ -17,10 +17,10 @@ class FloridaCourtLocation(BaseModel):
 
 class FloridaCourt(BaseModel):
     active: bool = Field(validation_alias="active")
-    display_name: bool = Field(validation_alias="displayName")
+    display_name: str = Field(validation_alias="displayName")
     external_identifier: int = Field(validation_alias="externalIdentifier")
     modified_date: datetime = Field(validation_alias="modifiedDate")
-    modified_user_id: UUID4 = Field(validation_alias="modifiedUserId")
+    modified_user_id: UUID4 = Field(validation_alias="modifiedUserID")
     note: str = Field(validation_alias="note")
     resource_id: UUID4 = Field(validation_alias="resourceID")
     locations: list[FloridaCourtLocation] = Field(validation_alias="locations")

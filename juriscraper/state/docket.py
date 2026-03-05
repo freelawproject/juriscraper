@@ -28,6 +28,8 @@ class DocketEntryType(Enum):
 
     UNKNOWN = "unknown"
     """A docket entry whose type cannot be determined."""
+    NOTICE = "notice"
+    """Notice entry type"""
 
 
 _DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)

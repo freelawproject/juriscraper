@@ -14,7 +14,7 @@ class FloridaPaginatedResultsMeta(BaseModel):
 
 class FloridaPaginatedResults(BaseModel, Generic[ResultType]):
     results: list[ResultType] = Field(
-        validation_alias=AliasPath("_embedded", "results")
+        validation_alias=AliasPath("_embedded", "results"), default=[]
     )
     page: FloridaPaginatedResultsMeta
 

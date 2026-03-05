@@ -3,36 +3,42 @@ from typing import ClassVar
 
 from pydantic import UUID4, AliasPath, BaseModel, Field
 
+from juriscraper.state.docket import Docket, DocketTransfer, DocketType
 from juriscraper.state.florida.api import FloridaPaginatedResults
+from juriscraper.state.florida.docket_entries import FloridaDocketEntry
+from juriscraper.state.florida.parties import FloridaParty
 from juriscraper.state.parser import LegacyParser
 
 
 class FloridaOriginatingCase(BaseModel):
     court_name: str = Field(alias="originatingCourtName")
-    case_number: str = Field(alias="originatingCourtCaseNumber")
+    case_number: str = Field(alias="originatingCaseNumber")
 
 
-class FloridaCase(BaseModel):
+class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    case_number: str = Field(
+    docket_number: str = Field(
         validation_alias=AliasPath("caseHeader", "caseNumber")
     )
-    case_title: str = Field(
+    case_name: str = Field(
         validation_alias=AliasPath("caseHeader", "caseTitle")
     )
+    case_name_full: str = ""
     case_caption: str = Field(
-        validation_alias=AliasPath("caseHeader", "caseCaption")
+        validation_alias=AliasPath("caseHeader", "caseCaption"), default=""
     )
     closed_flag: bool = Field(
         validation_alias=AliasPath("caseHeader", "closedFlag")
     )
     class_group_type: str = Field(
-        validation_alias=AliasPath("caseHeader", "caseClassGroupType")
+        validation_alias=AliasPath("caseHeader", "caseClassGroupType"),
+        default="",
     )
     class_group_type_id: int = Field(
-        validation_alias=AliasPath("caseHeader", "caseClassGroupTypeID")
+        validation_alias=AliasPath("caseHeader", "caseClassGroupTypeID"),
+        default=0,
     )
     classification: str = Field(
         validation_alias=AliasPath("caseHeader", "caseClassification")
@@ -41,22 +47,29 @@ class FloridaCase(BaseModel):
         validation_alias=AliasPath("caseHeader", "caseClassificationID")
     )
     court_id: int = Field(validation_alias=AliasPath("caseHeader", "courtID"))
-    location: str = Field(validation_alias=AliasPath("caseHeader", "location"))
+    location: str = Field(
+        validation_alias=AliasPath("caseHeader", "location"), default=""
+    )
     location_id: int = Field(
-        validation_alias=AliasPath("caseHeader", "locationID")
+        validation_alias=AliasPath("caseHeader", "locationID"), default=0
     )
     date_filed: datetime = Field(
         validation_alias=AliasPath("caseHeader", "filedDate")
     )
     case_group_flag: bool = Field(
-        validation_alias=AliasPath("caseHeader", "caseGroupFlag")
+        validation_alias=AliasPath("caseHeader", "caseGroupFlag"),
+        default=False,
     )
     panel_flag: bool = Field(
-        validation_alias=AliasPath("caseHeader", "panelFlag")
+        validation_alias=AliasPath("caseHeader", "panelFlag"), default=False
     )
     originating_cases: list[FloridaOriginatingCase] = Field(
         validation_alias=AliasPath("caseHeader", "originatingCourtCases")
     )
+    transfers: list[DocketTransfer] = []
+    entries: list[FloridaDocketEntry] = []
+    parties: list[FloridaParty] = []
+    docket_type: DocketType = DocketType.UNKNOWN
 
 
 class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):

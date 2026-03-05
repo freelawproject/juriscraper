@@ -1,12 +1,35 @@
 from datetime import datetime
-from typing import ClassVar
+from typing import Annotated, Any, ClassVar
 
-from pydantic import UUID4, AliasPath, BaseModel, Field
+from pydantic import (
+    UUID4,
+    AliasPath,
+    BaseModel,
+    BeforeValidator,
+    Field,
+)
+from pydantic_core import PydanticCustomError
 
-from juriscraper.state.docket import DocketEntry
+from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.api import FloridaPaginatedResults
 from juriscraper.state.florida.documents import FloridaDocument
 from juriscraper.state.parser import LegacyParser
+
+FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
+    "letter": DocketEntryType.UNKNOWN,
+    "notice": DocketEntryType.NOTICE,
+}
+
+
+def florida_entry_type_validator(value: Any) -> DocketEntryType:
+    s = str(value).lower()
+    if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
+        raise PydanticCustomError(
+            "florida_docket_entry_type",
+            "Unrecognized Florida docket entry type value: {type}.",
+            {"type": s},
+        )
+    return FLORIDA_DOCKET_ENTRY_TYPE_MAP[s]
 
 
 class FloridaCaseActor(BaseModel):
@@ -25,8 +48,13 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     date_filed: datetime = Field(
         validation_alias=AliasPath("docketEntryHeader", "filedDate")
     )
-    entry_type: str = Field(
-        validation_alias=AliasPath("docketEntryHeader", "docketEntryType")
+    entry_type: Annotated[
+        DocketEntryType,
+        BeforeValidator(
+            florida_entry_type_validator, json_schema_input_type=str
+        ),
+    ] = Field(
+        validation_alias=AliasPath("docketEntryHeader", "docketEntryType"),
     )
     entry_type_id: int = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryTypeID")

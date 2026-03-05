@@ -40,11 +40,11 @@ class FloridaDocument(Document):
     url: str = ""
 
 
-class FloridaDocumentAccessParser(LegacyParser[FloridaDocument]):
+class FloridaDocumentAccessParser(LegacyParser[list[FloridaDocument]]):
     endpoint: ClassVar[str] = "/courts/cms/docketentrydocumentaccess"
 
-    def _parse(self, i: str) -> FloridaDocument:
+    def _parse(self, i: str) -> list[FloridaDocument]:
         results = FloridaPaginatedResults[FloridaDocument].model_validate_json(
             i
         )
-        return results.results[0]
+        return results.results
