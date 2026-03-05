@@ -1,6 +1,8 @@
+import re
 from typing import Generic, TypeVar
 
 from pydantic import AliasPath, BaseModel, Field
+from pydantic_core import PydanticCustomError
 
 ResultType = TypeVar("ResultType")
 
@@ -58,3 +60,28 @@ class FloridaCaseCategory(BaseModel):
     id: int = Field(alias="caseCategoryID")
     name: int = Field(alias="caseCategoryName")
     comment: str = Field(alias="caseCategoryComment")
+
+
+FLORIDA_DN_RE = re.compile(r"(?:[1-6]D|SC)\d{4}-\d{4,5}")
+
+
+def florida_docket_number_validator(dn: str) -> str:
+    """
+    Validates that Florida docket numbers are a recognized format, raising
+    an exception if they are not.
+
+    :param dn: Florida docket number
+
+    :return: Florida docket number unchanged
+
+    :raise: PydanticCustomError
+    """
+
+    if not FLORIDA_DN_RE.fullmatch(dn):
+        raise PydanticCustomError(
+            "florida_docket_number_validator",
+            "Unrecognized Florida docket number format: {dn}.",
+            {"dn": dn},
+        )
+
+    return dn

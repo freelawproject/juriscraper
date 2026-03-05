@@ -1,10 +1,13 @@
 from datetime import datetime
-from typing import ClassVar
+from typing import Annotated, ClassVar
 
-from pydantic import UUID4, AliasPath, BaseModel, Field
+from pydantic import UUID4, AfterValidator, AliasPath, BaseModel, Field
 
 from juriscraper.state.docket import Docket, DocketTransfer, DocketType
-from juriscraper.state.florida.common import FloridaPaginatedResults
+from juriscraper.state.florida.common import (
+    FloridaPaginatedResults,
+    florida_docket_number_validator,
+)
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
 from juriscraper.state.parser import LegacyParser
@@ -19,9 +22,9 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    docket_number: str = Field(
-        validation_alias=AliasPath("caseHeader", "caseNumber")
-    )
+    docket_number: Annotated[
+        str, AfterValidator(florida_docket_number_validator)
+    ] = Field(validation_alias=AliasPath("caseHeader", "caseNumber"))
     case_name: str = Field(
         validation_alias=AliasPath("caseHeader", "caseTitle")
     )
@@ -74,9 +77,6 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
 
 class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
     endpoint: ClassVar[str] = "/courts/cms/cases/{case}"
-
-    def validate(self, _output: list[FloridaCase]) -> bool:
-        return True
 
     def _parse(self, i: str) -> list[FloridaCase]:
         results = FloridaPaginatedResults[FloridaCase].model_validate_json(i)
