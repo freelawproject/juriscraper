@@ -1,7 +1,9 @@
+import email
 import pprint
 import re
 import sys
 from datetime import datetime
+from email.message import EmailMessage
 from enum import Enum
 from pathlib import Path
 from typing import Optional, TypedDict, Union
@@ -12,7 +14,7 @@ from lxml import html
 from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.email_utils import EmailParser
+from juriscraper.lib.email_utils import parse_email_html
 from juriscraper.lib.html_utils import clean_html
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReportHTML
@@ -174,7 +176,7 @@ class _SCOTUSConfirmationPageScraper:
         self.tree = html.fromstring(clean_html(text))
 
 
-class SCOTUSEmail(EmailParser):
+class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(r"^A new docket entry, \"(.+?)\" has been added")
@@ -186,7 +188,9 @@ class SCOTUSEmail(EmailParser):
     )
 
     def __init__(self, court_id: str = "scotus"):
-        super().__init__(court_id)
+        self.court_id: str = court_id
+        self.tree: Optional[HtmlElement] = None
+        self.message: Optional[EmailMessage] = None
         self.email_type: SCOTUSEmailType = SCOTUSEmailType.INVALID
 
     @property
@@ -264,25 +268,47 @@ class SCOTUSEmail(EmailParser):
             data=scotus_confirmation_page_scraper.data,
         )
 
-    def _parse_subject(self, subject: str) -> bool:
+    def _determine_email_type(self) -> SCOTUSEmailType:
+        """Determine the type of the email (docket update/confirmation) based
+        on the subject line. If the subject line does not match any known
+        patterns, return `EmailType.INVALID`."""
+        subject = self.message.get("Subject", failobj="")
+
         if self.DOCKET_ENTRY_SUBJECT_REGEX.match(subject) is not None:
-            self.email_type = SCOTUSEmailType.DOCKET_ENTRY
-            return True
-        if self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
-            self.email_type = SCOTUSEmailType.CONFIRMATION
-            return True
+            return SCOTUSEmailType.DOCKET_ENTRY
+        elif self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
+            return SCOTUSEmailType.CONFIRMATION
         logger.error(
             "Email subject did not match known patterns. Subject: %s", subject
         )
-        return False
+        return SCOTUSEmailType.INVALID
 
-    def _parse_body(self, tree: HtmlElement) -> None:
-        n_anchors = sum(1 for _ in tree.iterfind(".//a"))
+    def _parse_text(self, text: str) -> None:
+        """Extract and store the first part of the email with the
+        "Content-Type" header set to "text/html" and store a parsed HTML
+        tree. Assumes that there will always be an email part with this
+        content type. If lxml parsing fails, return `None` and log an
+        appropriate error.
 
-        if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
+        :param text: The raw email text.
+
+        :return: None
+        """
+        self.message = email.message_from_string(text)
+        email_type = self._determine_email_type()
+
+        if email_type == SCOTUSEmailType.INVALID:
+            return
+
+        self.tree = parse_email_html(text)
+        if self.tree is None:
+            return
+
+        n_anchors = sum(1 for _ in self.tree.iterfind(".//a"))
+
+        if email_type == SCOTUSEmailType.DOCKET_ENTRY:
             if self.message.get("Date") is None:
                 logger.error("Unable to find 'Date' header in email")
-                self.email_type = SCOTUSEmailType.INVALID
                 return
 
             if n_anchors < 2:
@@ -291,25 +317,26 @@ class SCOTUSEmail(EmailParser):
                     "be case link and unsubscribe link); found %d",
                     n_anchors,
                 )
-                self.email_type = SCOTUSEmailType.INVALID
                 return
 
-            text = tree.text_content()
+            text = self.tree.text_content()
             if self.TITLE_REGEX.match(text) is None:
                 logger.error(
                     "Unable to find match for docket entry title regex in "
                     "email"
                 )
-                self.email_type = SCOTUSEmailType.INVALID
                 return
-        elif self.email_type == SCOTUSEmailType.CONFIRMATION:
+
+            self.email_type = email_type
+        elif email_type == SCOTUSEmailType.CONFIRMATION:
             if n_anchors != 1:
                 logger.error(
                     "Incorrect number of links in email body. Should be "
                     "exactly one (confirmation link); found %d",
                     n_anchors,
                 )
-                self.email_type = SCOTUSEmailType.INVALID
+                return
+            self.email_type = email_type
 
     def _parse_datetime(self) -> Optional[datetime]:
         """Extract the "Date" header in the notification email message into a

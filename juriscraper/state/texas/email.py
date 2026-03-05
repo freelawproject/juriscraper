@@ -1,8 +1,11 @@
+import email
 from typing import Optional, TypedDict
 from urllib.parse import parse_qs, urlparse
 
+from lxml.html import HtmlElement
+
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.email_utils import EmailParser
+from juriscraper.lib.email_utils import parse_email_html
 from juriscraper.state.texas.common import CourtID
 
 COURT_NAME_TO_ID = {
@@ -34,11 +37,13 @@ class TamesEmailData(TypedDict):
     url: str
 
 
-class TamesEmail(EmailParser):
+class TamesEmail:
     """Parse TAMES case notification emails from Texas courts."""
 
     def __init__(self, court_id: str = "") -> None:
-        super().__init__(court_id)
+        self.court_id: str = court_id
+        self.tree: Optional[HtmlElement] = None
+        self.message: Optional[email.message.Message] = None
         self._court_id: Optional[str] = None
 
     @property
@@ -61,19 +66,24 @@ class TamesEmail(EmailParser):
             case_number=case_number,
         )
 
-    def _parse_subject(self, subject: str) -> bool:
+    def _parse_text(self, text: str) -> None:
+        self.message = email.message_from_string(text)
+        subject = self.message.get("Subject", failobj="")
+
         if not subject.startswith(SUBJECT_PREFIX):
             logger.error(
                 "Email subject did not match expected prefix. Subject: %s",
                 subject,
             )
-            return False
+            return
+
         court_name = subject[len(SUBJECT_PREFIX) :]
         self._court_id = COURT_NAME_TO_ID.get(court_name)
         if self._court_id is None:
             logger.error("Unknown court name in subject: %s", court_name)
-            return False
-        return True
+            return
+
+        self.tree = parse_email_html(text)
 
     def _parse_case_url(self) -> Optional[str]:
         anchor = self.tree.find(".//a")
