@@ -8,11 +8,9 @@ from datetime import date
 from enum import Enum
 from typing import Generic, TypeVar
 
-from attr import dataclass
 from pydantic import BaseModel
 
 
-@dataclass
 class Document(BaseModel):
     """
     Represents a docket entry attachment.
@@ -35,7 +33,6 @@ class DocketEntryType(Enum):
 _DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)
 
 
-@dataclass
 class DocketEntry(BaseModel, Generic[_DocketEntryDocument]):
     """
     Represents a single docket entry.
@@ -76,7 +73,6 @@ class TransferReason(Enum):
     """A transfer reason could not be determined by the parser."""
 
 
-@dataclass
 class DocketTransfer(BaseModel):
     """
     Represents a transfer of a docket from one court to another.
@@ -115,7 +111,6 @@ class PartyType(Enum):
 _PartyRepresentative = TypeVar("_PartyRepresentative", bound=Representative)
 
 
-@dataclass
 class Party(BaseModel, Generic[_PartyRepresentative]):
     """
     A party in a case.
@@ -130,7 +125,7 @@ class Party(BaseModel, Generic[_PartyRepresentative]):
     representatives: list[_PartyRepresentative]
 
 
-class DocketType:
+class DocketType(Enum):
     """
     The type of docket.
     """
@@ -144,7 +139,6 @@ _DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry)
 _DocketParty = TypeVar("_DocketParty", bound=Party)
 
 
-@dataclass
 class Docket(
     BaseModel, Generic[_DocketDocketTransfer, _DocketDocketEntry, _DocketParty]
 ):

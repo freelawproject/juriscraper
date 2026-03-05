@@ -20,65 +20,6 @@ class FloridaPaginatedResults(BaseModel, Generic[ResultType]):
     page: FloridaPaginatedResultsMeta
 
 
-class FloridaPartyRepresentative(BaseModel):
-    party_uuid: UUID4 = Field(
-        validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID")
-    )
-    display_name: str = Field(
-        validation_alias=AliasPath(
-            "attorneyPartyHeader", "partyActorInstance", "displayName"
-        )
-    )
-    sort_name: str = Field(
-        validation_alias=AliasPath(
-            "attorneyPartyHeader", "partyActorInstance", "sortName"
-        )
-    )
-    primary_flag: bool = Field(alias="primaryFlag")
-
-
-class FloridaCaseParty(BaseModel):
-    uuid: UUID4 = Field(
-        validation_alias=AliasPath("partyHeader", "casePartyUUID")
-    )
-    party_type: str = Field(
-        validation_alias=AliasPath("partyHeader", "partyType")
-    )
-    party_type_id: int = Field(
-        validation_alias=AliasPath("partyHeader", "partyTypeID")
-    )
-    party_subtype: str = Field(
-        validation_alias=AliasPath("partyHeader", "partySubType")
-    )
-    party_subtype_id: int = Field(
-        validation_alias=AliasPath("partyHeader", "partySubTypeID")
-    )
-    status: str = Field(
-        validation_alias=AliasPath("partyHeader", "partyStatus")
-    )
-    status_id: int = Field(
-        validation_alias=AliasPath("partyHeader", "partyStatusID")
-    )
-    display_name: str = Field(
-        validation_alias=AliasPath(
-            "partyHeader", "partyActorInstance", "displayName"
-        )
-    )
-    sort_name: str = Field(
-        validation_alias=AliasPath(
-            "partyHeader", "partyActorInstance", "sortName"
-        )
-    )
-    pro_se_flag: bool = Field(alias="proSeFlag")
-    order_by: int = Field(alias="orderBy")
-    representatives: list[FloridaPartyRepresentative] = Field(
-        alias="legalRepresentations"
-    )
-    non_public_flag: bool = Field(alias="nonPublicFlag")
-    party_number: int = Field(alias="partyNumber")
-    involvement_type_id: int = Field(alias="involvementTypeID")
-
-
 class FloridaCaseActor(BaseModel):
     display_name: str = Field(
         validation_alias=AliasPath("partyActorInstance", "displayName")
@@ -355,10 +296,6 @@ class FloridaCourtCaseParameter(FloridaCourtParameter):
 florida_court_case_info = Endpoint[FloridaCourtCaseParameter, FloridaCase](
     "/courts/{court}/cms/cases/{case}"
 )
-
-florida_court_case_parties = Endpoint[
-    FloridaCourtCaseParameter, FloridaPaginatedResults[FloridaCaseParty]
-]("/courts/{court}/cms/cases/{case}/parties")
 
 florida_court_case_docket_entries = Endpoint[
     FloridaCourtCaseParameter, FloridaPaginatedResults[FloridaDocketEntry]
