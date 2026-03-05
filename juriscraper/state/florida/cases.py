@@ -1,7 +1,15 @@
 from datetime import datetime
 from typing import Annotated, ClassVar
 
-from pydantic import UUID4, AfterValidator, AliasPath, BaseModel, Field
+from pydantic import (
+    UUID4,
+    AfterValidator,
+    AliasPath,
+    BaseModel,
+    BeforeValidator,
+    Field,
+)
+from pydantic_core import PydanticCustomError
 
 from juriscraper.state.docket import Docket, DocketTransfer, DocketType
 from juriscraper.state.florida.common import (
@@ -12,10 +20,62 @@ from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
 from juriscraper.state.parser import LegacyParser
 
+# Values retrieved 2026-03-05
+FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
+    "notice of appeal": DocketType.UNKNOWN,
+    "notice to invoke": DocketType.UNKNOWN,
+    "death penalty appeal": DocketType.DEATH_APPEAL,
+    "death penalty petition": DocketType.UNKNOWN,
+    "death penalty writ": DocketType.UNKNOWN,
+    "petition for review": DocketType.UNKNOWN,
+    "administrative": DocketType.ADMINISTRATIVE,
+    "circuit civil": DocketType.CIVIL,
+    "circuit criminal": DocketType.CRIMINAL,
+    "circuit family": DocketType.FAMILY,
+    "circuit guardianship": DocketType.FAMILY,
+    "circuit juvenile": DocketType.JUVENILE,
+    "circuit probate": DocketType.PROBATE,
+    "county administrative": DocketType.ADMINISTRATIVE,
+    "county civil": DocketType.CIVIL,
+    "county criminal misdemeanor": DocketType.CRIMINAL,
+    "county criminal traffic": DocketType.CRIMINAL,
+    "county family": DocketType.FAMILY,
+    "county small claims": DocketType.UNKNOWN,
+    "workers compensation": DocketType.UNKNOWN,
+    "advisory opinion": DocketType.UNKNOWN,
+    "county misdemeanor": DocketType.CRIMINAL,
+    "florida bar": DocketType.UNKNOWN,
+    "florida board of bar examiners": DocketType.UNKNOWN,
+    "judicial qualifications commission (jqc)": DocketType.UNKNOWN,
+    "rules": DocketType.UNKNOWN,
+    "writ": DocketType.UNKNOWN,
+}
+
+
+def florida_docket_type_validator(i: str) -> DocketType:
+    parts = [p.strip().lower() for p in i.split("-")]
+    if len(parts) != 3:
+        raise PydanticCustomError(
+            "florida_docket_type",
+            "Invalid Florida docket type format: {dt}",
+            {"dt": i},
+        )
+
+    case_category, case_type, case_sub_type = parts
+
+    if case_type not in FLORIDA_DOCKET_TYPE_MAP:
+        raise PydanticCustomError(
+            "florida_docket_type",
+            "Unrecognized Florida docket type: {dt}",
+            {"dt": i},
+        )
+
+    return FLORIDA_DOCKET_TYPE_MAP[case_type]
+
 
 class FloridaOriginatingCase(BaseModel):
-    court_name: str = Field(alias="originatingCourtName")
-    case_number: str = Field(alias="originatingCaseNumber")
+    court_name: str = Field(validation_alias="originatingCourtName")
+    case_number: str = Field(validation_alias="originatingCaseNumber")
 
 
 class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
@@ -43,9 +103,12 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
         validation_alias=AliasPath("caseHeader", "caseClassGroupTypeID"),
         default=0,
     )
-    classification: str = Field(
-        validation_alias=AliasPath("caseHeader", "caseClassification")
-    )
+    docket_type: Annotated[
+        DocketType,
+        BeforeValidator(
+            florida_docket_type_validator, json_schema_input_type=str
+        ),
+    ] = Field(validation_alias=AliasPath("caseHeader", "caseClassification"))
     classification_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseClassificationID")
     )
@@ -72,7 +135,6 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     transfers: list[DocketTransfer] = []
     entries: list[FloridaDocketEntry] = []
     parties: list[FloridaParty] = []
-    docket_type: DocketType = DocketType.UNKNOWN
 
 
 class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):

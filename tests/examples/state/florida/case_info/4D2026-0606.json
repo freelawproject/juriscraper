@@ -5,20 +5,19 @@
   "case_name_full": "",
   "class_group_type": "Appeal",
   "class_group_type_id": 10008,
-  "classification": "NOA Final - Circuit Criminal - Habeas Corpus Denial",
   "classification_id": 1000116,
   "closed_flag": false,
   "court_id": 5,
   "date_filed": "2026-03-05T16:17:00Z",
   "docket_number": "4D2026-0606",
-  "docket_type": "unknown",
+  "docket_type": "criminal",
   "entries": [],
   "location": "4th District Court of Appeal",
   "location_id": 1000004,
   "originating_cases": [
     {
-      "originatingCaseNumber": "062016CF013112A88810",
-      "originatingCourtName": "Circuit Court for the Seventeenth Judicial Circuit, Broward County"
+      "case_number": "062016CF013112A88810",
+      "court_name": "Circuit Court for the Seventeenth Judicial Circuit, Broward County"
     }
   ],
   "panel_flag": true,

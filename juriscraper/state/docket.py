@@ -134,6 +134,20 @@ class DocketType(Enum):
 
     UNKNOWN = "unknown"
     """The docket type cannot be determined by the parser."""
+    CIVIL = "civil"
+    """Civil cases"""
+    CRIMINAL = "criminal"
+    """Criminal cases"""
+    FAMILY = "family"
+    """Family cases"""
+    JUVENILE = "juvenile"
+    """Juvenile cases"""
+    PROBATE = "probate"
+    """Probate cases"""
+    ADMINISTRATIVE = "administrative"
+    """Administrative cases"""
+    DEATH_APPEAL = "death_appeal"
+    """Death penalty appeal cases"""
 
 
 _DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
