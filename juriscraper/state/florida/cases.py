@@ -11,6 +11,7 @@ from pydantic import (
 )
 from pydantic_core import PydanticCustomError
 
+from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.state.docket import Docket, DocketTransfer, DocketType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
@@ -85,11 +86,13 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     docket_number: Annotated[
         str, AfterValidator(florida_docket_number_validator)
     ] = Field(validation_alias=AliasPath("caseHeader", "caseNumber"))
-    case_name: str = Field(
+    case_name: Annotated[str, AfterValidator(harmonize)] = Field(
         validation_alias=AliasPath("caseHeader", "caseTitle")
     )
-    case_name_full: str = ""
-    case_caption: str = Field(
+    case_name_full: Annotated[str, AfterValidator(clean_string)] = Field(
+        validation_alias=AliasPath("caseHeader", "caseTitle")
+    )
+    case_caption: Annotated[str, AfterValidator(clean_string)] = Field(
         validation_alias=AliasPath("caseHeader", "caseCaption"), default=""
     )
     closed_flag: bool = Field(
