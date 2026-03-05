@@ -29,7 +29,6 @@ class Parser(ABC, Generic[_ParserInput, _ParserOutput]):
         self.output = output
         return output
 
-    @abstractmethod
     def validate(self, _output: _ParserOutput) -> bool:
         return True
 

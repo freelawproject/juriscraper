@@ -69,9 +69,6 @@ class FloridaParty(Party):
 class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/parties"
 
-    def validate(self, _output: list[FloridaParty]) -> bool:
-        return True
-
     def _parse(self, i: str) -> list[FloridaParty]:
         party_results = FloridaPaginatedResults[
             FloridaParty
