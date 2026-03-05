@@ -4,7 +4,7 @@ from typing import ClassVar
 from pydantic import UUID4, AliasPath, BaseModel, Field
 
 from juriscraper.state.docket import Docket, DocketTransfer, DocketType
-from juriscraper.state.florida.api import FloridaPaginatedResults
+from juriscraper.state.florida.common import FloridaPaginatedResults
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
 from juriscraper.state.parser import LegacyParser

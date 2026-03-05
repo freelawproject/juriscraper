@@ -11,7 +11,7 @@ from pydantic import (
 from pydantic_core import PydanticCustomError
 
 from juriscraper.state.docket import DocketEntry, DocketEntryType
-from juriscraper.state.florida.api import FloridaPaginatedResults
+from juriscraper.state.florida.common import FloridaPaginatedResults
 from juriscraper.state.florida.documents import FloridaDocument
 from juriscraper.state.parser import LegacyParser
 

@@ -3,7 +3,7 @@ from typing import ClassVar
 
 from pydantic import UUID4, BaseModel, Field
 
-from juriscraper.state.florida.api import FloridaPaginatedResults
+from juriscraper.state.florida.common import FloridaPaginatedResults
 from juriscraper.state.parser import LegacyParser
 
 
