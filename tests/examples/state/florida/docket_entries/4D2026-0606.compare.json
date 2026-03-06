@@ -1,0 +1,60 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "docketEntryHeader": {
+          "filedDate": "2026-03-05T16:57:55.000+00:00",
+          "docketEntryType": "Notice",
+          "docketEntryTypeID": "1000008",
+          "docketEntrySubType": "Notice of Appeal",
+          "docketEntrySubTypeID": "1000074",
+          "docketEntryName": "Notice - Notice of Appeal",
+          "submittedDate": "2026-03-04T19:51:04.000+00:00",
+          "docketEntryStatusID": "1000000",
+          "docketEntryStatus": "Docketed",
+          "docketEntryDescription": "Notice of Appeal",
+          "official": true,
+          "documentCount": "1",
+          "securedDocument": true,
+          "security1": false,
+          "security2": false,
+          "security3": false,
+          "security4": false,
+          "security5": false,
+          "compositeSecurity": false,
+          "docketEntryUUID": "f09f8909-75f8-427d-a45f-6cdb34182943"
+        }
+      },
+      {
+        "docketEntryHeader": {
+          "filedDate": "2026-03-05T16:43:31.474+00:00",
+          "docketEntryType": "Letter",
+          "docketEntryTypeID": "1000003",
+          "docketEntrySubType": "Acknowledgment Letter",
+          "docketEntrySubTypeID": "1000015",
+          "docketEntryName": "Letter - Acknowledgment Letter",
+          "submittedDate": "2026-03-05T16:31:18.000+00:00",
+          "docketEntryStatusID": "1000000",
+          "docketEntryStatus": "Docketed",
+          "docketEntryDescription": "Acknowledgment Letter",
+          "official": true,
+          "documentCount": "1",
+          "securedDocument": false,
+          "security1": false,
+          "security2": false,
+          "security3": false,
+          "security4": false,
+          "security5": false,
+          "compositeSecurity": false,
+          "docketEntryUUID": "5a045473-7a03-4f35-b9ff-f7c0a29f55e8"
+        }
+      }
+    ]
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 2,
+    "totalPages": 1,
+    "number": 0
+  }
+}
