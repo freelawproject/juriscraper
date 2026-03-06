@@ -41,8 +41,6 @@ class Parser(ABC, Generic[_ParserInput, _ParserOutput]):
         if self.output is not None:
             return self.output
         output = self._parse(i)
-        if output is None:
-            raise ParserValidationError("Parser output cannot be None")
         if not self.validate(output):
             raise ParserValidationError("Parser output failed validation.")
         self.output = output

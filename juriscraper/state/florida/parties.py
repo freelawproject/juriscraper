@@ -59,7 +59,7 @@ def florida_party_type_validator(value: Any) -> PartyType:
     s = str(value).lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
         raise PydanticCustomError(
-            "florida_docket_entry_type",
+            "florida_party_type",
             "Unrecognized Florida party type value: {type}.",
             {"type": s},
         )
@@ -75,7 +75,8 @@ class FloridaPartyRepresentative(Representative):
         requests.
     :ivar name: The name of the representative.
     :ivar sort_name: The name used to sort this representative in lists.
-    :ivar primary_flag: Whether this is the primary party in the case.
+    :ivar primary_flag: Whether this is the primary representative of this
+        party.
     """
 
     party_uuid: UUID4 = Field(
@@ -106,6 +107,7 @@ class FloridaParty(Party):
     :ivar party_type_id: Florida internal integer ID of the party type.
     :ivar party_subtype: The name of the party subtype.
     :ivar party_subtype_id: Florida internal integer ID of the party subtype.
+    :ivar status: The status of the party.
     :ivar status_id: Florida internal integer ID of the party status.
     :ivar name: The name of the party.
     :ivar sort_name: Value used to sort this party in lists.

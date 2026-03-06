@@ -203,6 +203,3 @@ class Docket(
     entries: list[_DocketDocketEntry]
     parties: list[_DocketParty]
     docket_type: DocketType
-
-
-BaseDocket = TypeVar("BaseDocket", bound=Docket)

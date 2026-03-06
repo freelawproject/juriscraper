@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from typing import Annotated, ClassVar
 
 from pydantic import (
@@ -15,6 +15,7 @@ from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.state.docket import Docket, DocketTransfer, DocketType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
+    datetime_str_to_date_validator,
     florida_docket_number_validator,
 )
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
@@ -69,7 +70,7 @@ def florida_docket_type_validator(i: str) -> DocketType:
     :raise PydanticCustomError: If the string does not have exactly three
         dash-separated parts or if the type is not in the map.
     """
-    parts = [p.strip().lower() for p in i.split("-")]
+    parts = [p.strip().lower() for p in i.split(" - ")]
     if len(parts) != 3:
         raise PydanticCustomError(
             "florida_docket_type",
@@ -77,7 +78,7 @@ def florida_docket_type_validator(i: str) -> DocketType:
             {"dt": i},
         )
 
-    case_category, case_type, case_sub_type = parts
+    _case_category, case_type, _case_sub_type = parts
 
     if case_type not in FLORIDA_DOCKET_TYPE_MAP:
         raise PydanticCustomError(
@@ -117,10 +118,12 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar docket_type: The DocketType derived from the case classification.
     :ivar classification_id: Florida internal integer ID of the case
         classification.
-    :ivar court_id: Florida internal integer ID of the court.
+    :ivar court_id: Florida internal ID of the court.
     :ivar location: The location name within the court.
     :ivar location_id: Florida internal integer ID of the location.
     :ivar date_filed: The date this case was filed.
+    :ivar datetime_filed: The date and time this case was filed according to
+        the API.
     :ivar case_group_flag: Whether this case is part of a case group.
     :ivar panel_flag: Whether a panel has been assigned to this case.
     :ivar originating_cases: Lower court cases from which this case originated.
@@ -164,14 +167,20 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     classification_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseClassificationID")
     )
-    court_id: int = Field(validation_alias=AliasPath("caseHeader", "courtID"))
+    court_id: str = Field(validation_alias=AliasPath("caseHeader", "courtID"))
     location: str = Field(
         validation_alias=AliasPath("caseHeader", "location"), default=""
     )
     location_id: int = Field(
         validation_alias=AliasPath("caseHeader", "locationID"), default=0
     )
-    date_filed: datetime = Field(
+    date_filed: Annotated[
+        date,
+        BeforeValidator(
+            datetime_str_to_date_validator, json_schema_input_type=str
+        ),
+    ] = Field(validation_alias=AliasPath("caseHeader", "filedDate"))
+    datetime_filed: datetime = Field(
         validation_alias=AliasPath("caseHeader", "filedDate")
     )
     case_group_flag: bool = Field(

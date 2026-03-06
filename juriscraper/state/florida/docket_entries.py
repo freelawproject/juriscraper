@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from typing import Annotated, Any, ClassVar
 
 from pydantic import (
@@ -11,7 +11,10 @@ from pydantic import (
 from pydantic_core import PydanticCustomError
 
 from juriscraper.state.docket import DocketEntry, DocketEntryType
-from juriscraper.state.florida.common import FloridaPaginatedResults
+from juriscraper.state.florida.common import (
+    FloridaPaginatedResults,
+    datetime_str_to_date_validator,
+)
 from juriscraper.state.florida.documents import FloridaDocument
 from juriscraper.state.parser import LegacyParser
 
@@ -99,6 +102,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
 
     :ivar uuid: The UUID of this docket entry for use in API requests.
     :ivar date_filed: The date this entry was filed.
+    :ivar datetime_filed: The date and time this entry was filed according to
+        the Florida API.
     :ivar entry_type: The DocketEntryType derived from the entry type string.
     :ivar entry_type_raw: The entry type string as it appears in the API
         response.
@@ -126,7 +131,13 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     uuid: UUID4 = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryUUID")
     )
-    date_filed: datetime = Field(
+    date_filed: Annotated[
+        date,
+        BeforeValidator(
+            datetime_str_to_date_validator, json_schema_input_type=str
+        ),
+    ] = Field(validation_alias=AliasPath("docketEntryHeader", "filedDate"))
+    datetime_filed: datetime = Field(
         validation_alias=AliasPath("docketEntryHeader", "filedDate")
     )
     entry_type: Annotated[

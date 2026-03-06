@@ -1,4 +1,5 @@
 import re
+from datetime import date, datetime
 from typing import Generic, TypeVar
 
 from pydantic import AliasPath, BaseModel, Field
@@ -63,3 +64,14 @@ def florida_docket_number_validator(dn: str) -> str:
         )
 
     return dn
+
+
+def datetime_str_to_date_validator(i: str) -> date:
+    """
+    Pydantic validator to extract the date component of a datetime string,
+    discarding the time because Pydantic refuses to do that.
+
+    :param i: The datetime string.
+    :return: The date component.
+    """
+    return datetime.fromisoformat(i).date()
