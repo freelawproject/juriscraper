@@ -56,6 +56,17 @@ FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
 
 
 def florida_entry_type_validator(value: Any) -> DocketEntryType:
+    """
+    Validates and converts a Florida docket entry type string to a
+    DocketEntryType enum value.
+
+    :param value: The docket entry type string from the API response.
+
+    :return: The corresponding DocketEntryType enum value.
+
+    :raise PydanticCustomError: If the value is not in
+        FLORIDA_DOCKET_ENTRY_TYPE_MAP.
+    """
     s = str(value).lower()
     if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
         raise PydanticCustomError(
@@ -67,6 +78,13 @@ def florida_entry_type_validator(value: Any) -> DocketEntryType:
 
 
 class FloridaCaseActor(BaseModel):
+    """
+    A party or actor associated with a docket entry submission.
+
+    :ivar display_name: The display name of the actor.
+    :ivar sort_name: The name used to sort this actor in lists.
+    """
+
     display_name: str = Field(
         validation_alias=AliasPath("partyActorInstance", "displayName")
     )
@@ -76,6 +94,35 @@ class FloridaCaseActor(BaseModel):
 
 
 class FloridaDocketEntry(DocketEntry[FloridaDocument]):
+    """
+    Extension of the DocketEntry data structure with Florida-specific fields.
+
+    :ivar uuid: The UUID of this docket entry for use in API requests.
+    :ivar date_filed: The date this entry was filed.
+    :ivar entry_type: The DocketEntryType derived from the entry type string.
+    :ivar entry_type_raw: The entry type string as it appears in the API
+        response.
+    :ivar entry_type_id: Florida internal integer ID of the entry type.
+    :ivar entry_subtype: The name of the entry subtype.
+    :ivar entry_subtype_id: Florida internal integer ID of the entry subtype.
+    :ivar entry_name: The name of the docket entry.
+    :ivar date_submitted: The date this entry was submitted.
+    :ivar entry_status: The status of this docket entry.
+    :ivar entry_status_id: Florida internal integer ID of the entry status.
+    :ivar entry_description: A description of the docket entry.
+    :ivar official: Purpose unclear. Whether this is an official court entry?
+    :ivar document_count: The number of documents attached to this entry.
+    :ivar secured_document: Whether the documents are secured.
+    :ivar security_1: Security flag 1.
+    :ivar security_2: Security flag 2.
+    :ivar security_3: Security flag 3.
+    :ivar security_4: Security flag 4.
+    :ivar security_5: Security flag 5.
+    :ivar composite_security: Unclear. Whether any security flags are active?
+    :ivar submitted_by: The actors who submitted this entry.
+    :ivar attachments: Documents attached to this entry.
+    """
+
     uuid: UUID4 = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryUUID")
     )
@@ -153,6 +200,12 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
 
 
 class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
+    """
+    Parser for Florida docket entry list API results.
+
+    :cvar endpoint: The API endpoint for fetching a case's docket entries.
+    """
+
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/docketentries"
 
     def _parse(self, i: str) -> list[FloridaDocketEntry]:

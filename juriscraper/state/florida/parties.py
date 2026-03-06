@@ -46,6 +46,16 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
 
 
 def florida_party_type_validator(value: Any) -> PartyType:
+    """Validates and converts a Florida party type string to a PartyType
+    enum value.
+
+    :param value: The party type string from the API response.
+
+    :return: The corresponding PartyType enum value.
+
+    :raise PydanticCustomError: If the value is not in
+        FLORIDA_PARTY_TYPE_MAP.
+    """
     s = str(value).lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
         raise PydanticCustomError(
@@ -57,6 +67,17 @@ def florida_party_type_validator(value: Any) -> PartyType:
 
 
 class FloridaPartyRepresentative(Representative):
+    """
+    Extension of the Representative data structure with Florida-specific
+    fields.
+
+    :ivar party_uuid: The UUID of the represented party for use in API
+        requests.
+    :ivar name: The name of the representative.
+    :ivar sort_name: The name used to sort this representative in lists.
+    :ivar primary_flag: Whether this is the primary party in the case.
+    """
+
     party_uuid: UUID4 = Field(
         validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID")
     )
@@ -74,6 +95,30 @@ class FloridaPartyRepresentative(Representative):
 
 
 class FloridaParty(Party):
+    """
+    Extension of the Party data structure with Florida-specific fields.
+
+    :ivar uuid: The UUID of this party for use in API requests.
+    :ivar party_type_raw: The party type field as it appears in the API
+        response.
+    :ivar party_type: Conversion of the party subtype field to the PartyType
+        enum.
+    :ivar party_type_id: Florida internal integer ID of the party type.
+    :ivar party_subtype: The name of the party subtype.
+    :ivar party_subtype_id: Florida internal integer ID of the party subtype.
+    :ivar status_id: Florida internal integer ID of the party status.
+    :ivar name: The name of the party.
+    :ivar sort_name: Value used to sort this party in lists.
+    :ivar pro_se_flag: Whether this party is self-represented.
+    :ivar order_by: Unclear what this field represents.
+    :ivar representatives: This party's legal representation.
+    :ivar non_public_flag: Unclear what this field represents. Should always be
+        false.
+    :ivar party_number: Unclear what this field represents.
+    :ivar involvement_type_id: Florida internal integer ID of this party's type
+        of involvement in the case.
+    """
+
     uuid: UUID4 = Field(
         validation_alias=AliasPath("partyHeader", "casePartyUUID")
     )
@@ -122,6 +167,12 @@ class FloridaParty(Party):
 
 
 class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
+    """
+    Parser for Florida party list API results.
+
+    :cvar endpoint: The API endpoint for fetching a case's party list.
+    """
+
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/parties"
 
     def _parse(self, i: str) -> list[FloridaParty]:

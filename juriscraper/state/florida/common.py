@@ -8,6 +8,17 @@ ResultType = TypeVar("ResultType")
 
 
 class FloridaPaginatedResultsMeta(BaseModel):
+    """
+    Metadata about Florida paginated API results.
+
+    :ivar page_size: The number of results per page. This should be greater
+        than or equal to the length of the results list in
+        FloridaPaginatedResults.
+    :ivar total_elements: The total number of elements in the results list.
+    :ivar total_pages: The total number of pages in the results list.
+    :ivar page_number: The page number of the current results list.
+    """
+
     page_size: int = Field(validation_alias="size")
     total_elements: int = Field(validation_alias="totalElements")
     total_pages: int = Field(validation_alias="totalPages")
@@ -15,49 +26,18 @@ class FloridaPaginatedResultsMeta(BaseModel):
 
 
 class FloridaPaginatedResults(BaseModel, Generic[ResultType]):
+    """
+    Helper model for parsing Florida paginated API results.
+
+    :ivar results: One page of entries matching the API query.
+    :ivar page: Information about the total number of results and the
+        pagination state.
+    """
+
     results: list[ResultType] = Field(
         validation_alias=AliasPath("_embedded", "results"), default=[]
     )
     page: FloridaPaginatedResultsMeta
-
-
-class FloridaCasePartyType(BaseModel):
-    id: int = Field(validation_alias="participantTypeID")
-    name: str = Field(validation_alias="participantTypeName")
-    comment: str = Field(validation_alias="participantTypeComment")
-
-
-class FloridaCaseInvolvementType(BaseModel):
-    id: int = Field(validation_alias="involvementTypeID")
-    name: str = Field(validation_alias="involvementTypeName")
-    comment: str = Field(validation_alias="involvementTypeComment")
-
-
-class FloridaCasePartySubType(BaseModel):
-    id: int = Field(validation_alias="participantSubTypeID")
-    name: str = Field(validation_alias="participantSubTypeName")
-    comment: str = Field(validation_alias="participantSubTypeComment")
-    party_type: FloridaCasePartyType = Field(
-        validation_alias="participantType"
-    )
-    involvement_type: FloridaCaseInvolvementType = Field(
-        validation_alias="involvementType"
-    )
-
-
-class FloridaDocketEntryType(BaseModel):
-    id: int = Field(validation_alias="docketEntryTypeID")
-    name: str = Field(validation_alias="docketEntryTypeName")
-    comment: str = Field(validation_alias="docketEntryTypeComment")
-
-
-class FloridaDocketEntrySubType(BaseModel):
-    id: int = Field(validation_alias="docketEntrySubTypeID")
-    name: str = Field(validation_alias="docketEntrySubTypeName")
-    comment: str = Field(validation_alias="docketEntrySubTypeComment")
-    docket_entry_type: FloridaDocketEntryType = Field(
-        validation_alias="docketEntryType"
-    )
 
 
 FLORIDA_DN_RE = re.compile(r"(?:[1-6]D|SC)\d{4}-\d{4,5}")

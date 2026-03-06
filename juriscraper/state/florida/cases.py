@@ -54,6 +54,21 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
 
 
 def florida_docket_type_validator(i: str) -> DocketType:
+    """
+    Validates and converts a Florida case classification string to a
+    DocketType enum value.
+
+    The classification string is expected in the format
+    "Category - Type - SubType", where the type component is looked up in
+    FLORIDA_DOCKET_TYPE_MAP.
+
+    :param i: Florida case classification string.
+
+    :return: The corresponding DocketType enum value.
+
+    :raise PydanticCustomError: If the string does not have exactly three
+        dash-separated parts or if the type is not in the map.
+    """
     parts = [p.strip().lower() for p in i.split("-")]
     if len(parts) != 3:
         raise PydanticCustomError(
@@ -75,11 +90,45 @@ def florida_docket_type_validator(i: str) -> DocketType:
 
 
 class FloridaOriginatingCase(BaseModel):
+    """
+    A lower court case from which a Florida appellate case originated.
+
+    :ivar court_name: The name of the originating court.
+    :ivar case_number: The case number in the originating court.
+    """
+
     court_name: str = Field(validation_alias="originatingCourtName")
     case_number: str = Field(validation_alias="originatingCaseNumber")
 
 
 class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
+    """
+    Extension of the Docket data structure with Florida-specific fields.
+
+    :ivar uuid: The UUID of this case for use in API requests.
+    :ivar docket_number: The case number assigned by the court.
+    :ivar case_name: The case title, cleaned and harmonized.
+    :ivar case_name_full: The case title with minimal cleaning.
+    :ivar case_caption: The case caption, if available.
+    :ivar closed_flag: Whether this case is closed.
+    :ivar class_group_type: The case class group type name.
+    :ivar class_group_type_id: Florida internal integer ID of the case class
+        group type.
+    :ivar docket_type: The DocketType derived from the case classification.
+    :ivar classification_id: Florida internal integer ID of the case
+        classification.
+    :ivar court_id: Florida internal integer ID of the court.
+    :ivar location: The location name within the court.
+    :ivar location_id: Florida internal integer ID of the location.
+    :ivar date_filed: The date this case was filed.
+    :ivar case_group_flag: Whether this case is part of a case group.
+    :ivar panel_flag: Whether a panel has been assigned to this case.
+    :ivar originating_cases: Lower court cases from which this case originated.
+    :ivar transfers: Transfers of this case between courts.
+    :ivar entries: Docket entries filed in this case.
+    :ivar parties: Parties in this case.
+    """
+
     uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
@@ -141,7 +190,13 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
 
 
 class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
-    endpoint: ClassVar[str] = "/courts/cms/cases/{case}"
+    """
+    Parser for Florida case list API results.
+
+    :cvar endpoint: The API endpoint for fetching cases from a given court.
+    """
+
+    endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}"
 
     def _parse(self, i: str) -> list[FloridaCase]:
         results = FloridaPaginatedResults[FloridaCase].model_validate_json(i)
@@ -149,7 +204,13 @@ class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
 
 
 class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
-    endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}"
+    """
+    Parser for Florida case info API results.
+
+    :cvar endpoint: The API endpoint for fetching info about a specific case.
+    """
+
+    endpoint: ClassVar[str] = "/courts/cms/cases/{case}"
 
     def _parse(self, i: str) -> FloridaCase:
         return FloridaCase.model_validate_json(i)
