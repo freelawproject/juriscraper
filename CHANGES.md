@@ -75,6 +75,7 @@ Features:
 Changes:
 
 - Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
+- fix(pasuperct): Exclude "Com." from case name shorts #1737
 
 Fixes:
 
