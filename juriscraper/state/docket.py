@@ -28,8 +28,22 @@ class DocketEntryType(Enum):
 
     UNKNOWN = "unknown"
     """A docket entry whose type cannot be determined."""
+    BRIEF = "brief"
+    """Brief entry type"""
+    DISPOSITION = "disposition"
+    """Disposition entry type"""
+    EVENT = "event"
+    """Event entry type"""
+    LETTER = "letter"
+    """Letter entry type"""
+    MOTION = "motion"
+    """Motion entry type"""
     NOTICE = "notice"
     """Notice entry type"""
+    ORDER = "order"
+    """Order entry type"""
+    PETITION = "petition"
+    """Petition entry type"""
 
 
 _DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)

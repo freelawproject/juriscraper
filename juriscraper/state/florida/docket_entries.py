@@ -15,9 +15,43 @@ from juriscraper.state.florida.common import FloridaPaginatedResults
 from juriscraper.state.florida.documents import FloridaDocument
 from juriscraper.state.parser import LegacyParser
 
+# Retrieved 2026-03-06
 FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
-    "letter": DocketEntryType.UNKNOWN,
+    "bar discipline (before a referee) (sc)": DocketEntryType.UNKNOWN,
+    "brief": DocketEntryType.BRIEF,
+    "disposition (sc)": DocketEntryType.DISPOSITION,
+    "disposition by opinion": DocketEntryType.DISPOSITION,
+    "disposition by order": DocketEntryType.DISPOSITION,
+    "disposition by pca": DocketEntryType.DISPOSITION,
+    "disposition by pcd": DocketEntryType.DISPOSITION,
+    "event": DocketEntryType.EVENT,
+    "fsc to ussc roa (sc)": DocketEntryType.UNKNOWN,
+    "letter": DocketEntryType.LETTER,
+    "letter-case (sc)": DocketEntryType.LETTER,
+    "mandate": DocketEntryType.UNKNOWN,
+    "mediation": DocketEntryType.UNKNOWN,
+    "misc. events": DocketEntryType.EVENT,
+    "miscellaneous document": DocketEntryType.UNKNOWN,
+    "motion (sc)": DocketEntryType.MOTION,
+    "motions extensions": DocketEntryType.MOTION,
+    "motions other": DocketEntryType.MOTION,
+    "motions relating to attorney fees/costs": DocketEntryType.MOTION,
+    "motions relating to briefs": DocketEntryType.MOTION,
+    "motions relating to oral argument": DocketEntryType.MOTION,
+    "motions relating to parties and counsel": DocketEntryType.MOTION,
+    "motions relating to records": DocketEntryType.MOTION,
     "notice": DocketEntryType.NOTICE,
+    "opinion": DocketEntryType.UNKNOWN,
+    "order": DocketEntryType.ORDER,
+    "petition": DocketEntryType.PETITION,
+    "post-disposition motions": DocketEntryType.MOTION,
+    "post-disposition responses": DocketEntryType.UNKNOWN,
+    "recognizing agreed extension": DocketEntryType.UNKNOWN,
+    "record": DocketEntryType.UNKNOWN,
+    "record sent to supreme court": DocketEntryType.UNKNOWN,
+    "response": DocketEntryType.UNKNOWN,
+    "supreme court": DocketEntryType.UNKNOWN,
+    "tpr/dependency": DocketEntryType.UNKNOWN,
 }
 
 
@@ -56,6 +90,9 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     ] = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryType"),
     )
+    entry_type_raw: str = Field(
+        validation_alias=AliasPath("docketEntryHeader", "docketEntryType"),
+    )
     entry_type_id: int = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryTypeID")
     )
@@ -85,7 +122,7 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     official: bool = Field(
         validation_alias=AliasPath("docketEntryHeader", "official")
     )
-    document_count: str = Field(
+    document_count: int = Field(
         validation_alias=AliasPath("docketEntryHeader", "documentCount")
     )
     secured_document: bool = Field(
