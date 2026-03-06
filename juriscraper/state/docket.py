@@ -122,6 +122,14 @@ class PartyType(Enum):
 
     UNKNOWN = "unknown"
     """The party's type cannot be determined by the parser."""
+    APPELLANT = "appellant"
+    """Appellant party type"""
+    PETITIONER = "petitioner"
+    """Petitioner party type"""
+    APPELLEE = "appellee"
+    """Appellee party type"""
+    RESPONDENT = "respondent"
+    """Respondent party type"""
 
 
 _PartyRepresentative = TypeVar("_PartyRepresentative", bound=Representative)
