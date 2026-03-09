@@ -5,6 +5,7 @@ from juriscraper.state.texas.court_of_appeals import TexasCourtOfAppealsScraper
 from juriscraper.state.texas.court_of_criminal_appeals import (
     TexasCourtOfCriminalAppealsScraper,
 )
+from juriscraper.state.texas.email import TamesEmail
 from juriscraper.state.texas.supreme_court import TexasSupremeCourtScraper
 from tests import TESTS_ROOT_EXAMPLES_STATES
 from tests.local.PacerParseTestCase import PacerParseTestCase
@@ -58,3 +59,14 @@ class TexasParseCommonDataTest(PacerParseTestCase):
                 self.assertEqual(
                     TexasCommonScraper._validate_docket_number(dn), expected
                 )
+
+
+class TamesEmailParsingTest(PacerParseTestCase):
+    """Tests for parsing TAMES notification emails."""
+
+    def setUp(self):
+        self.maxDiff = 200000
+
+    def test_email(self):
+        path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "email"
+        self.parse_files(path_root, "*.txt", TamesEmail)
