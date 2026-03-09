@@ -45,6 +45,8 @@ Features:
 Changes:
 - Raise an exception during parsing for Texas docket numbers we know to be bad data
 - Update Texas docket number validation to handle all 6,401 valid cases that were failing
+- Migrate from `requests` to `httpx.AsyncClient` for scraper HTTP workflows #1843
+- Migrate scraper sync call paths to async #1843
 
 Fixes:
 - Fix `sc`, `sc_u`, `scctapp`, `scctapp_u` update XPath selectors for redesigned SC courts website

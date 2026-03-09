@@ -94,7 +94,7 @@ class Site(OpinionSiteLinear):
         body.append(content)
         return html.tostring(new_tree).decode("utf-8")
 
-    def _download_backwards(self, search_date: date) -> None:
+    async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
@@ -106,7 +106,7 @@ class Site(OpinionSiteLinear):
             "SectionName": self.court_name,
             "ArchiveDate": self.search_date.strftime("%B %Y"),
         }
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs) -> None:
