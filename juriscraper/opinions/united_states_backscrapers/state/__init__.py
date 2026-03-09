@@ -10,6 +10,5 @@ __all__ = [
     "massappct",
     "me_2013",
     "nd",
-    "sd",
     "utahctapp",
 ]

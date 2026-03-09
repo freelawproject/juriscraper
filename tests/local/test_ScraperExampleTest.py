@@ -17,7 +17,7 @@ from juriscraper.lib.test_utils import (
 )
 
 
-class ScraperExampleTest(unittest.TestCase):
+class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
         self.maxDiff = 1000
         # Disable logging
@@ -27,7 +27,7 @@ class ScraperExampleTest(unittest.TestCase):
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
-    def run_tests_on_module_str(self, module_str: str) -> None:
+    async def run_tests_on_module_str(self, module_str: str) -> None:
         """Finds all the $module_example* files and tests them with the sample
         scraper.
         """
@@ -90,10 +90,10 @@ class ScraperExampleTest(unittest.TestCase):
                     # Text editor backup: Not interesting.
                     continue
                 site = mod.Site(cnt=cnt)
-                site.url = path
+                site.mock_url = path
                 # Forces a local GET
                 site.enable_test_mode()
-                site.parse()
+                await site.parse()
                 # Now validate that the parsed result is as we expect
                 json_path = f"{path.rsplit('.', 1)[0]}{json_compare_extension}"
                 json_data = json.loads(site.to_json())
@@ -171,40 +171,40 @@ class ScraperExampleTest(unittest.TestCase):
                 "good work!"
             )
 
-    def test_scrape_opinion_admin_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_admin_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.administrative_agency"
         )
 
-    def test_scrape_opinion_fed_app_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_fed_app_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_appellate"
         )
 
-    def test_scrape_opinion_fed_bankr_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_fed_bankr_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_bankruptcy"
         )
 
-    def test_scrape_opinion_fed_dist_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_fed_dist_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_district"
         )
 
-    def test_scrape_opinion_fed_special_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_fed_special_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_special"
         )
 
-    def test_scrape_opinion_state_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_state_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.state"
         )
 
-    def test_scrape_oral_arg_example_files(self):
-        self.run_tests_on_module_str("juriscraper.oral_args")
+    async def test_scrape_oral_arg_example_files(self):
+        await self.run_tests_on_module_str("juriscraper.oral_args")
 
-    def test_scrape_opinion_territories_example_files(self):
-        self.run_tests_on_module_str(
+    async def test_scrape_opinion_territories_example_files(self):
+        await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.territories"
         )
