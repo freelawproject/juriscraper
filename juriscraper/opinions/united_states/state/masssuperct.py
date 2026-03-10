@@ -11,10 +11,11 @@ History:
 
 import re
 from datetime import date, datetime
-from urllib.parse import urljoin
 
+from dateutil.relativedelta import relativedelta
 from lxml import etree, html
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.string_utils import titlecase
@@ -22,56 +23,51 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    court_name = "Superior Court"
-    first_opinion_date = datetime(2017, 6, 20)
+    court_name = "Appeals Court"
+    first_opinion_date = datetime.now() - relativedelta(
+        months=3
+    )  # the site only have last 3 month available
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.socialaw.com/customapi/slips/getopinions"
-        self.court_id = self.__module__
-        self.search_date = datetime.today()
-        self.parameters = {
-            "SectionName": self.court_name,
-            "ArchiveDate": self.search_date.strftime("%B %Y"),
+        self.url = "https://www.socialaw.com/services/slip-opinions/"
+        self.request["parameters"]["params"] = {
+            "Court": self.court_name,
         }
-        self.method = "POST"
+        self.court_id = self.__module__
         self.status = "Published"
         self.expected_content_types = ["text/html"]
         self.days_interval = 30
         self.make_backscrape_iterable(kwargs)
+        self.impersonate = True
 
     def _process_html(self):
-        """Scrape and process the JSON endpoint
+        """Scrape and process the html
 
         :return: None
         """
-        for row in self.html:
-            url = urljoin(
-                "https://www.socialaw.com/services/slip-opinions/",
-                row["UrlName"],
-            )
-            details = row["Details"]
-            caption = titlecase(row.get("Parties"))
-            caption = re.sub(r"(\[\d{1,2}\])", "", caption)
+        rows = self.html.xpath(
+            "//div[@id='slip-opinion-list-accordion']//div[@class='accordion-item']"
+        )
 
-            judge_str = details.get("Present", "")
-            judge_str = re.sub(r"(\[\d{1,2}\])", "", judge_str)
-            judge_str = re.sub(r"\, JJ\.", "", judge_str)
-            judge_str = re.sub(
-                r"(Associate\s+)?Justice*|of the Superior Court", "", judge_str
-            )
+        for row in rows:
+            name = row.xpath(".//strong[@class='title sh2']")[0].text.strip()
 
-            # Clear judge_str if it matches a date like 'July 16, 2024'
-            if re.match(r"^[A-Za-z]+\s+\d{1,2},\s+\d{4}$", judge_str.strip()):
-                judge_str = ""
+            # clean name participants enum
+            name = titlecase(re.sub(r"\[\d\]", "", name))
+
+            date = row.xpath(".//span[@class='date sh3']")[0].text.strip()
+            docket = row.xpath(
+                ".//div[@class='section-header']/div[@class='rich-text rich-text-sm']"
+            )[0].text.strip()
+            url = row.xpath(".//a")[0].get("href")
 
             self.cases.append(
                 {
-                    "name": caption,
-                    "judge": judge_str,
-                    "date": row["Date"],
+                    "name": name,
+                    "date": date,
+                    "docket": docket,
                     "url": url,
-                    "docket": details["Docket"],
                 }
             )
 
@@ -87,12 +83,13 @@ class Site(OpinionSiteLinear):
         content = content.decode("utf-8")
         tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
         content = tree.xpath(
-            "//div[@id='contentPlaceholder_ctl00_ctl00_ctl00_detailContainer']"
+            "//div[@class='slip-opinion-primary-content-layout']"
         )[0]
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
         body.append(content)
-        return html.tostring(new_tree).decode("utf-8")
+        str_html = html.tostring(new_tree).decode("utf-8")
+        return f"<html>{str_html}</html>".encode("ISO-8859-1")
 
     def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
@@ -101,10 +98,11 @@ class Site(OpinionSiteLinear):
         :return None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
-        self.search_date = search_date
-        self.parameters = {
-            "SectionName": self.court_name,
-            "ArchiveDate": self.search_date.strftime("%B %Y"),
+
+        logger.info("Backscraping for %s", search_date.strftime("%B %Y"))
+        self.request["parameters"]["params"] = {
+            "Court": self.court_name,
+            "Month": search_date.strftime("%B %Y"),
         }
         self.html = self._download()
         self._process_html()
@@ -115,6 +113,7 @@ class Site(OpinionSiteLinear):
         :param kwargs: the back scraping params
         :return: None
         """
+
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(
             self.back_scrape_iterable
