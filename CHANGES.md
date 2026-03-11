@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Add backscraping support to `mich` and `michctapp` going #1806
 - Add parsing for Texas email notifications.
+- Add `curl_cffi` browser impersonation support to `AbstractSite` via `impersonate` attribute #1845
 
 Changes:
 - Raise an exception during parsing for Texas docket numbers we know to be bad data
