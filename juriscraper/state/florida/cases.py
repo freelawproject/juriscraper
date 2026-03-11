@@ -11,6 +11,7 @@ from pydantic import (
 )
 from pydantic_core import PydanticCustomError
 
+from juriscraper.abstract_parser import AbstractParser
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.state.docket import Docket, DocketTransfer, DocketType
 from juriscraper.state.florida.common import (
@@ -20,7 +21,6 @@ from juriscraper.state.florida.common import (
 )
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
-from juriscraper.state.parser import LegacyParser
 
 # Values retrieved 2026-03-05
 FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
@@ -198,28 +198,28 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     parties: list[FloridaParty] = []
 
 
-class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
+class FloridaCaseListParser(AbstractParser[list[FloridaCase]]):
     """
     Parser for Florida case list API results.
 
     :cvar endpoint: The API endpoint for fetching cases from a given court.
     """
 
-    endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}"
+    endpoint: ClassVar[str] = "/courts/cms/cases/{case}"
 
     def _parse(self, i: str) -> list[FloridaCase]:
         results = FloridaPaginatedResults[FloridaCase].model_validate_json(i)
         return results.results
 
 
-class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
+class FloridaCaseInfoParser(AbstractParser[FloridaCase]):
     """
     Parser for Florida case info API results.
 
     :cvar endpoint: The API endpoint for fetching info about a specific case.
     """
 
-    endpoint: ClassVar[str] = "/courts/cms/cases/{case}"
+    endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}"
 
     def _parse(self, i: str) -> FloridaCase:
         return FloridaCase.model_validate_json(i)

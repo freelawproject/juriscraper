@@ -3,8 +3,8 @@ from typing import ClassVar
 
 from pydantic import UUID4, BaseModel, Field
 
+from juriscraper.abstract_parser import AbstractParser
 from juriscraper.state.florida.common import FloridaPaginatedResults
-from juriscraper.state.parser import LegacyParser
 
 
 class FloridaCourtLocation(BaseModel):
@@ -50,7 +50,7 @@ class FloridaCourt(BaseModel):
     locations: list[FloridaCourtLocation] = Field(validation_alias="locations")
 
 
-class FloridaCourtsParser(LegacyParser[list[FloridaCourt]]):
+class FloridaCourtsParser(AbstractParser[list[FloridaCourt]]):
     """
     Parser for Florida court list API results including court IDs needed to
     access other API endpoints.

@@ -2,9 +2,9 @@ from typing import ClassVar
 
 from pydantic import UUID4, AliasPath, Field
 
+from juriscraper.abstract_parser import AbstractParser
 from juriscraper.state.docket import Document
 from juriscraper.state.florida.common import FloridaPaginatedResults
-from juriscraper.state.parser import LegacyParser
 
 
 class FloridaDocument(Document):
@@ -60,7 +60,7 @@ class FloridaDocument(Document):
     url: str = ""
 
 
-class FloridaDocumentAccessParser(LegacyParser[list[FloridaDocument]]):
+class FloridaDocumentAccessParser(AbstractParser[list[FloridaDocument]]):
     """
     Parser for Florida document list API results.
 

@@ -10,13 +10,13 @@ from pydantic import (
 )
 from pydantic_core import PydanticCustomError
 
+from juriscraper.abstract_parser import AbstractParser
 from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     datetime_str_to_date_validator,
 )
 from juriscraper.state.florida.documents import FloridaDocument
-from juriscraper.state.parser import LegacyParser
 
 # Retrieved 2026-03-06
 FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
@@ -123,6 +123,10 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     :ivar security_3: Security flag 3.
     :ivar security_4: Security flag 4.
     :ivar security_5: Security flag 5.
+    :ivar outcome_status: The outcome status of this docket entry (e.g.
+        "Granted"). Only present for entries involving judicial determinations.
+    :ivar outcome_status_id: Florida internal integer ID of the outcome
+        status.
     :ivar composite_security: Unclear. Whether any security flags are active?
     :ivar submitted_by: The actors who submitted this entry.
     :ivar attachments: Documents attached to this entry.
@@ -181,7 +185,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
         validation_alias=AliasPath("docketEntryHeader", "official")
     )
     document_count: int = Field(
-        validation_alias=AliasPath("docketEntryHeader", "documentCount")
+        validation_alias=AliasPath("docketEntryHeader", "documentCount"),
+        default=0,
     )
     secured_document: bool = Field(
         validation_alias=AliasPath("docketEntryHeader", "securedDocument")
@@ -201,6 +206,14 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     security_5: bool = Field(
         validation_alias=AliasPath("docketEntryHeader", "security5")
     )
+    outcome_status: str = Field(
+        validation_alias=AliasPath("docketEntryHeader", "outcomeStatus"),
+        default="",
+    )
+    outcome_status_id: int = Field(
+        validation_alias=AliasPath("docketEntryHeader", "outcomeStatusID"),
+        default=0,
+    )
     composite_security: bool = Field(
         validation_alias=AliasPath("docketEntryHeader", "compositeSecurity")
     )
@@ -210,7 +223,7 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     attachments: list[FloridaDocument] = []
 
 
-class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
+class FloridaDocketEntryListParser(AbstractParser[list[FloridaDocketEntry]]):
     """
     Parser for Florida docket entry list API results.
 
