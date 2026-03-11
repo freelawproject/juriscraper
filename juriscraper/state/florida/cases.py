@@ -19,6 +19,7 @@ from juriscraper.state.florida.common import (
     datetime_str_to_date_validator,
     florida_docket_number_validator,
 )
+from juriscraper.state.florida.courts import FloridaCourtID
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
 
@@ -90,6 +91,33 @@ def florida_docket_type_validator(i: str) -> DocketType:
     return FLORIDA_DOCKET_TYPE_MAP[case_type]
 
 
+def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
+    """
+    Validates and converts a Florida originating court name to a standardized
+    Florida court ID.
+
+    :param i: Florida originating court name.
+
+    :return: The corresponding CourtID enum value.
+
+    :raise PydanticCustomError: If the court name is not recognized.
+    """
+    court_name = i.lower().strip()
+    if court_name.startswith("circuit court"):
+        return FloridaCourtID.CIRCUIT
+    if court_name.startswith("county court"):
+        return FloridaCourtID.COUNTY
+    if court_name == "administrative agency":
+        return FloridaCourtID.ADMINISTRATIVE_AGENCY
+    if court_name == "office of the judges of compensation claims":
+        return FloridaCourtID.COMPENSATION_CLAIMS
+    raise PydanticCustomError(
+        "florida_court_name",
+        "Unrecognized Florida court name: {cn}",
+        {"cn": i},
+    )
+
+
 class FloridaOriginatingCase(BaseModel):
     """
     A lower court case from which a Florida appellate case originated.
@@ -99,7 +127,43 @@ class FloridaOriginatingCase(BaseModel):
     """
 
     court_name: str = Field(validation_alias="originatingCourtName")
+    court_id: Annotated[
+        FloridaCourtID,
+        BeforeValidator(
+            florida_originating_court_id_validator, json_schema_input_type=str
+        ),
+    ] = Field(validation_alias="originatingCourtName")
     case_number: str = Field(validation_alias="originatingCaseNumber")
+
+
+FLORIDA_COURT_EXTERNAL_ID_MAP: dict[str, FloridaCourtID] = {
+    "1": FloridaCourtID.SUPREME_COURT,
+    "2": FloridaCourtID.FIRST_COA,
+    "3": FloridaCourtID.SECOND_COA,
+    "4": FloridaCourtID.THIRD_COA,
+    "5": FloridaCourtID.FOURTH_COA,
+    "6": FloridaCourtID.FIFTH_COA,
+    "7": FloridaCourtID.SIXTH_COA,
+}
+
+
+def florida_internal_id_to_js_id_validator(i: str) -> str:
+    """
+    Maps Florida's external court ID to a value on the FloridaCourtID enum.
+
+    :param i: Florida external court ID as a string.
+
+    :return: Value on the FloridaCourtID enum.
+
+    :raise PydanticCustomError: If the court ID is not recognized.
+    """
+    if i not in FLORIDA_COURT_EXTERNAL_ID_MAP:
+        raise PydanticCustomError(
+            "florida_court_id",
+            "Unrecognized Florida court ID: {id}",
+            {"id": i},
+        )
+    return FLORIDA_COURT_EXTERNAL_ID_MAP[i].value
 
 
 class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
@@ -167,7 +231,12 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     classification_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseClassificationID")
     )
-    court_id: str = Field(validation_alias=AliasPath("caseHeader", "courtID"))
+    court_id: Annotated[
+        str,
+        BeforeValidator(
+            florida_internal_id_to_js_id_validator, json_schema_input_type=str
+        ),
+    ] = Field(validation_alias=AliasPath("caseHeader", "courtID"))
     location: str = Field(
         validation_alias=AliasPath("caseHeader", "location"), default=""
     )

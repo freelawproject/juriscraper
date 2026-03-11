@@ -1,10 +1,42 @@
 from datetime import datetime
+from enum import Enum
 from typing import ClassVar
 
 from pydantic import UUID4, BaseModel, Field
 
 from juriscraper.abstract_parser import AbstractParser
 from juriscraper.state.florida.common import FloridaPaginatedResults
+
+
+class FloridaCourtID(Enum):
+    """
+    Standardized IDs for Florida courts.
+    """
+
+    SUPREME_COURT = "flsc"
+    """Florida Supreme Court"""
+    FIRST_COA = "flca01"
+    """Florida First Court of Appeals"""
+    SECOND_COA = "flca02"
+    """Florida Second Court of Appeals"""
+    THIRD_COA = "flca03"
+    """Florida Third Court of Appeals"""
+    FOURTH_COA = "flca04"
+    """Florida Fourth Court of Appeals"""
+    FIFTH_COA = "flca05"
+    """Florida Fifth Court of Appeals"""
+    SIXTH_COA = "flca06"
+    """Florida Sixth Court of Appeals"""
+    CIRCUIT = "flcrct"
+    """Florida circuit courts"""
+    COUNTY = "flcnty"
+    """Florida county courts"""
+    ADMINISTRATIVE_AGENCY = "fladma"
+    """Florida administrative agencies (used as a value in the originating court info)."""
+    COMPENSATION_CLAIMS = "flcomp"
+    """Florida Office of the Judges of Compensation Claims"""
+    UNKNOWN = "flunknown"
+    """Unknown Florida court"""
 
 
 class FloridaCourtLocation(BaseModel):
