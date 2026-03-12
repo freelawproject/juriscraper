@@ -5,6 +5,7 @@ Author: V. David Zvenyach
 Date created:2014-02-21
 History:
     - 2025-08-29: Update to OpinionSiteLinear and added extract_from_text method to get lower court info, Luis Manzur
+    - 2026-03-02: Update url, Luis Manzur
 """
 
 import re
@@ -16,7 +17,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.dccourts.gov/court-of-appeals/opinions-memorandum-of-judgments"
+        self.url = "https://www.dccourts.gov/court-of-appeals/opinions-and-memorandum-of-judgments"
         qualifier_no_opinions = (
             'not(contains(td[2]/span/text(), "NO OPINIONS"))'
         )
