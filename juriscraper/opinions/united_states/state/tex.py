@@ -58,9 +58,15 @@ class Site(ClusterSite):
 
         if not self.is_backscrape and not self.test_mode_enabled():
             self.html = super()._download(request_dict)
-            self.url = self.html.xpath(self.link_xp)[-1]
-        self.html = super()._download(request_dict)
+            links = self.html.xpath(self.link_xp)
+            if not links:
+                # No orders posted yet (common in early January)
+                self.html = None
+                logger.error("tex: no date list on opinions page")
+                return None
+            self.url = links[-1]
 
+        self.html = super()._download(request_dict)
         return self.html
 
     def _process_html(self) -> None:
@@ -68,6 +74,9 @@ class Site(ClusterSite):
 
         :return None
         """
+        if self.html is None:
+            return
+
         date = self.html.xpath(self.date_xp)[0].strip()
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
         for link in links:

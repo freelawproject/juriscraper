@@ -1,6 +1,6 @@
 # Scraper for Texas Supreme Court
-# CourtID: tex
-# Court Short Name: TX
+# CourtID: texapp
+# Court Short Name: "Texas Court of Appeals"
 # Court Contacts:
 #  - http://www.txcourts.gov/contact-us/
 #  - Blake Hawthorne <Blake.Hawthorne@txcourts.gov>
@@ -330,20 +330,19 @@ class Site(ClusterSite):
         as having a 'Opinion' type. For example, texapp 4 and 6.
 
         On some case pages, the Court of Criminal Appeals opinion appears
-        in the lower court. See texapp_12_subexample_2
+        in the lower court. See txctapp12_subexample_2
 
         Some cases have been re-heard in the same court, or remanded,
         and their pages have multiple opinions that do not belong
-        to the same cluster. See texapp_10_subexample_3
+        to the same cluster. See txctapp10_subexample_3
 
         :param html: page's HTML object
         :return List of opinions
         """
         opinions = []
-        opinion_xpath = "//div[div[contains(text(), 'Case Events')]]//tr[td[contains(text(), 'pinion issued')]]"
-        link_xpath = ".//tr[td[1]/a and td[2][contains(text(), 'pinion') or normalize-space(text())='CCA']]"
         disposition = ""
-
+        opinion_xpath = "//div[div[contains(text(), 'Case Events')]]//tr[td[contains(text(), 'pinion issued')]]"
+        link_xpath = ".//tr[td[1]/a and td[2][contains(translate(text(), 'PINION', 'pinion'), 'pinion') or normalize-space(text())='CCA']]"
         try:
             search_date = datetime.strptime(op_date, "%m/%d/%Y").date()
         except ValueError:
@@ -375,9 +374,21 @@ class Site(ClusterSite):
 
             op["url"] = link[0].xpath("td/a/@href")[0]
 
+            # Check both document type (td[2]) and disposition (td[3]) for opinion type
             op_type = link[0].xpath("td[2]/text()")[0].strip().lower()
-            concur = "concur" in op_type
-            dissent = "dissent" in op_type
+
+            # Get disposition text
+            op_disposition_raw = (
+                opinion.xpath(".//td[3]/text()")[0].strip()
+                if opinion.xpath(".//td[3]/text()")
+                else ""
+            )
+            op_disposition_lower = op_disposition_raw.lower()
+
+            # Check for concurrence/dissent in both document type and disposition
+            concur = "concur" in op_type or "concur" in op_disposition_lower
+            dissent = "dissent" in op_type or "dissent" in op_disposition_lower
+
             if concur and dissent:
                 op["type"] = (
                     OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
@@ -389,7 +400,7 @@ class Site(ClusterSite):
             else:
                 op["type"] = OpinionType.MAJORITY.value
                 # use the 'main' opinion disposition as cluster disposition
-                disposition = opinion.xpath(".//td[3]/text()")[0]
+                disposition = op_disposition_raw
 
             opinions.append(op)
 

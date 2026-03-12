@@ -43,6 +43,9 @@ class OpinionSiteLinear(OpinionSite):
         "other_date",
         "attorney",
         "headnote",
+        # the downloaded content from download_url
+        # cl_scrape_opinions is ready to consume this if present
+        "content",
     }
 
     def __init__(self, *args, **kwargs):
@@ -166,6 +169,10 @@ class OpinionSiteLinear(OpinionSite):
     def _get_headnotes(self):
         """Goes into OpinionCluster.headnotes, type: string"""
         return self._get_optional_field_by_id("headnote")
+
+    def _get_content(self):
+        """Goes into Opinion.html or Opinion.plain_text"""
+        return self._get_optional_field_by_id("content")
 
     def _check_sanity(self):
         super()._check_sanity()
