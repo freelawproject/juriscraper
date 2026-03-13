@@ -4,11 +4,11 @@
     "nature_of_suit": "Injunction",
     "sub_opinions": [
       {
-        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=b70d924f-45ba-4b08-9a57-e49bac3903a0&coa=coa15&DT=Opinion&MediaID=c906c934-ea71-4c72-8a48-5f3628ef31fa",
+        "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b70d924f-45ba-4b08-9a57-e49bac3903a0&coa=coa15&DT=Opinion&MediaID=c906c934-ea71-4c72-8a48-5f3628ef31fa",
         "types": "030concurrence"
       },
       {
-        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=40808f49-0c30-4374-b60f-96796950cc09&coa=coa15&DT=Opinion&MediaID=0c39e998-4180-43e5-9521-95492047c6e2",
+        "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=40808f49-0c30-4374-b60f-96796950cc09&coa=coa15&DT=Opinion&MediaID=0c39e998-4180-43e5-9521-95492047c6e2",
         "types": "020lead"
       }
     ],
@@ -30,7 +30,7 @@
     "nature_of_suit": "Restricted Appeal",
     "sub_opinions": [
       {
-        "download_urls": "tests/examples/opinions/united_states/SearchMedia.aspx?MediaVersionID=b43d8604-5bf3-4276-930b-2f26ccfeb788&coa=coa15&DT=Opinion&MediaID=aa53a5af-7ad5-49a6-847c-0d67584c77c6",
+        "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=b43d8604-5bf3-4276-930b-2f26ccfeb788&coa=coa15&DT=Opinion&MediaID=aa53a5af-7ad5-49a6-847c-0d67584c77c6",
         "types": "020lead"
       }
     ],

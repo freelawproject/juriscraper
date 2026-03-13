@@ -105,7 +105,7 @@ class Site(OpinionSiteLinear):
 
         return case_name, citation
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Build URL with year input and scrape
 
         :param dates: (start_date, end_date) tuple
@@ -116,5 +116,5 @@ class Site(OpinionSiteLinear):
             "field_publish_date_value_1": dates[1].strftime("%m/%d/%Y"),
         }
         self.url = f"{self.url}?{urlencode(params)}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

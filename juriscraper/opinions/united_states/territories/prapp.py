@@ -23,6 +23,7 @@ class Site(OpinionSiteLinear):
     is_backscrape = False
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = date.today().year
@@ -30,10 +31,9 @@ class Site(OpinionSiteLinear):
 
         self.url = self.base_url
         self.status = "Published"
-        self.request["verify"] = False
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self):
+    async def _download(self):
         """Download case pages
 
         If a backscrape ignore the need to find the correct page
@@ -42,9 +42,9 @@ class Site(OpinionSiteLinear):
         :return: HTML object
         """
         if self.test_mode_enabled():
-            return super()._download()
+            return await super()._download()
         if not self.html:
-            self.html = super()._download()
+            self.html = await super()._download()
 
         if not self.is_backscrape:
             latest_url = self.html.xpath(
@@ -61,7 +61,7 @@ class Site(OpinionSiteLinear):
                 f"No opinions yet posted for current month {self.current_month}, moving to most recent month."
             )
 
-        return super()._download()
+        return await super()._download()
 
     def _process_html(self):
         """Process the html
@@ -112,7 +112,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = months
 
-    def _download_backwards(self, year_month: str):
+    async def _download_backwards(self, year_month: str):
         """Download backwards
 
         :param year_month: spanish year month used to generate url
@@ -121,7 +121,7 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = True
         logger.info("Backscraping for %s", year_month)
         self.url = f"{self.base_url}/decisiones-del-tribunal-de-apelaciones-{year_month}/"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def format_spanish_month_year(self, datetime_obj: datetime) -> str:
