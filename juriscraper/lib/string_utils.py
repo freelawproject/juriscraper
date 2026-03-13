@@ -610,6 +610,7 @@ class CaseNameTweaker:
             "johnson",
             "commissioner",
             "commonwealth",
+            "com",
         ]
 
         ags = [

@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Add backscraping support to `mich` and `michctapp` going #1806
 - Add parsing for Texas email notifications.
+- Add Claude Code skill for automating version releases #1826
 
 Changes:
 - Raise an exception during parsing for Texas docket numbers we know to be bad data
@@ -77,6 +78,7 @@ Features:
 Changes:
 
 - Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
+- fix(pasuperct): Exclude "Com." from case name shorts #1737
 
 Fixes:
 
