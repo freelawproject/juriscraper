@@ -13,7 +13,13 @@ from pydantic_core import PydanticCustomError
 
 from juriscraper.abstract_parser import AbstractParser
 from juriscraper.lib.string_utils import clean_string, harmonize
-from juriscraper.state.docket import Docket, DocketTransfer, DocketType
+from juriscraper.state.docket import (
+    Docket,
+    DocketTransfer,
+    DocketType,
+    TransferDirection,
+    TransferReason,
+)
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     datetime_str_to_date_validator,
@@ -123,6 +129,9 @@ class FloridaOriginatingCase(BaseModel):
     A lower court case from which a Florida appellate case originated.
 
     :ivar court_name: The name of the originating court.
+    :ivar court_id: Juriscraper court identifier. Will be aggregated in most
+        cases due to the impracticality of creating an enum entry for every
+        circuit and county court.
     :ivar case_number: The case number in the originating court.
     """
 
@@ -147,7 +156,7 @@ FLORIDA_COURT_EXTERNAL_ID_MAP: dict[str, FloridaCourtID] = {
 }
 
 
-def florida_internal_id_to_js_id_validator(i: str) -> str:
+def florida_external_id_to_js_id_validator(i: str) -> str:
     """
     Maps Florida's external court ID to a value on the FloridaCourtID enum.
 
@@ -182,7 +191,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar docket_type: The DocketType derived from the case classification.
     :ivar classification_id: Florida internal integer ID of the case
         classification.
-    :ivar court_id: Florida internal ID of the court.
+    :ivar court_id: Juriscraper court ID.
     :ivar location: The location name within the court.
     :ivar location_id: Florida internal integer ID of the location.
     :ivar date_filed: The date this case was filed.
@@ -234,7 +243,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     court_id: Annotated[
         str,
         BeforeValidator(
-            florida_internal_id_to_js_id_validator, json_schema_input_type=str
+            florida_external_id_to_js_id_validator, json_schema_input_type=str
         ),
     ] = Field(validation_alias=AliasPath("caseHeader", "courtID"))
     location: str = Field(
@@ -274,7 +283,7 @@ class FloridaCaseListParser(AbstractParser[list[FloridaCase]]):
     :cvar endpoint: The API endpoint for fetching cases from a given court.
     """
 
-    endpoint: ClassVar[str] = "/courts/cms/cases/{case}"
+    endpoint: ClassVar[str] = "/courts/cms/cases/"
 
     def _parse(self, i: str) -> list[FloridaCase]:
         results = FloridaPaginatedResults[FloridaCase].model_validate_json(i)
@@ -291,4 +300,16 @@ class FloridaCaseInfoParser(AbstractParser[FloridaCase]):
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}"
 
     def _parse(self, i: str) -> FloridaCase:
-        return FloridaCase.model_validate_json(i)
+        flc = FloridaCase.model_validate_json(i)
+        # I would prefer to use Pydantic's computed_field decorator for this,
+        # but type checkers complain if I do so alas.
+        flc.transfers = [
+            DocketTransfer(
+                direction=TransferDirection.INBOUND,
+                reason=TransferReason.APPEAL,
+                court_id=oc.court_id.value,
+                docket_number=oc.case_number,
+            )
+            for oc in flc.originating_cases
+        ]
+        return flc

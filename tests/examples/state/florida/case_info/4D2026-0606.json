@@ -24,6 +24,13 @@
   ],
   "panel_flag": true,
   "parties": [],
-  "transfers": [],
+  "transfers": [
+    {
+      "court_id": "flcrct",
+      "direction": "inbound",
+      "docket_number": "062016CF013112A88810",
+      "reason": "appeal"
+    }
+  ],
   "uuid": "562e4de3-c5ea-4e8d-a87f-3c80c4693c70"
 }
