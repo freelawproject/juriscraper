@@ -24,6 +24,7 @@ Changes:
 
 Fixes:
 - Fix `sc`, `sc_u`, `scctapp`, `scctapp_u` update XPath selectors for redesigned SC courts website
+- Map unmapped PA opinion types and disable `logger.error` #1847
 
 ## 2.8.2 - 2026-03-02
 
