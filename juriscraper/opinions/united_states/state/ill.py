@@ -59,6 +59,14 @@ class Site(OpinionSiteLinear):
             return "Unpublished"
         return "Published"
 
+    def _get_citation(self, citation: str) -> str:
+        """Return the citation string; can be overridden for normalization.
+
+        :param citation: raw citation string from HTML
+        :return: citation string
+        """
+        return citation
+
     def _process_html(self) -> None:
         """Process HTML
 
@@ -101,7 +109,7 @@ class Site(OpinionSiteLinear):
                 {
                     "date": date_filed,
                     "name": name,
-                    "citation": citation,
+                    "citation": self._get_citation(citation),
                     "url": url,
                     "docket": docket,
                     "status": status,

@@ -14,6 +14,7 @@ from lxml import html
 from lxml.html import HtmlElement
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.email_utils import parse_email_html
 from juriscraper.lib.html_utils import clean_html
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReportHTML
@@ -299,35 +300,9 @@ class SCOTUSEmail:
         if email_type == SCOTUSEmailType.INVALID:
             return
 
-        content_part = next(
-            (
-                part
-                for part in self.message.walk()
-                if part.get_content_type() == "text/html"
-                and not part.is_multipart()
-            ),
-            None,
-        )
-
-        if content_part is None:
-            logger.error(
-                "Unable to find non-multipart content part with 'text/html' "
-                "content type in email"
-            )
+        self.tree = parse_email_html(text)
+        if self.tree is None:
             return
-
-        payload = content_part.get_payload(decode=True)
-        charset = content_part.get_content_charset(content_part.get_charset())
-
-        try:
-            body = payload.decode(charset)
-        except UnicodeDecodeError:
-            logger.error(
-                "Unable to decode email payload with charset '%s'", charset
-            )
-            return
-
-        self.tree = html.fromstring(clean_html(body))
 
         n_anchors = sum(1 for _ in self.tree.iterfind(".//a"))
 

@@ -19,20 +19,119 @@ Features:
 - Add parsers for Florida court API endpoints.
 
 Changes:
+-
+
+Fixes:
+-
+
+## 2.8.3 - 2026-03-13
+
+Features:
+- Add backscraping support to `mich` and `michctapp` going #1806
+- Add parsing for Texas email notifications.
+- Add Claude Code skill for automating version releases #1826
+
+Changes:
+- Raise an exception during parsing for Texas docket numbers we know to be bad data
+- Update Texas docket number validation to handle all 6,401 valid cases that were failing
+
+Fixes:
+- Fix `sc`, `sc_u`, `scctapp`, `scctapp_u` update XPath selectors for redesigned SC courts website
+
+## 2.8.2 - 2026-03-02
+
+Features:
+-
+
+Changes:
+- OpinionSite can now return a "content" key holding downloaded content #873
+
+Fixes:
+
+- Fix `bva` scraper and backscraper #873
+- Fix `arizctapp_div_1` update module_xp xpath #1830
+- Fix `prsupreme` empty case names caused by extra whitespace #1825
+- Fix `dc` update URL to include `-and-` segment #1832
+
+## 2.8.1 - 2026-02-26
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+
+- Fix `illappct` docket regex to match `ILL App` citations and normalize them to `IL App` #1726
+- Fix `gactapp` base URL from `gaappeals.us` to `gaappeals.gov` #1810
+- Fix `texapp` add disposition as a local variable #1817
+
+## 2.8.0 - 2026-02-23
+
+Features:
+-
+
+Changes:
+
+- Rename all `texapp_*` scrapers to `txctapp*`
+
+Fixes:
+
+- Make tames scraper behave more like a browser for form submission.
+- Fix `texapp` download URL XPath to use case-insensitive matching for opinion type detection #1813
+
+## 2.7.8 - 2026-02-16
+
+Features:
+-
+
+Changes:
+
+- Rewrite `ariz` and `arizctapp_div_1` to use new API #1707
+- fix(pasuperct): Exclude "Com." from case name shorts #1737
+
+Fixes:
+
+- Fix `texapp` opinion type detection to check disposition text for concurrence/dissent #1791
+- fix `michctapp` captcha block by using new url #1677
+- fix `tex` add error handling for empty order list to prevent IndexError #1738
+
+## Current
+
+**2.7.7 - 2026-02-13**
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+
+- Fix `wyo` scraper to use updated document base URL
+
+## Past
+
+**2.7.6 - 2026-02-10**
+
+Features:
+-
+
+Changes:
 
 - Rename `trial_court` field to `originating_court` in Texas dockets
 - Add `court_type` field to Texas dockets, originating court info, and appellate court info
 - Add `district` field to Texas originating court info where relevant
 - Update Texas case name shortening to be more robust
+- Handle `get_extension` errors: log timeout/connection errors as warnings instead of errors #1644
 
 Fixes:
 
 - Fix incorrectly shortened case names in Texas Court of Criminal Appeals scraper
 - Revert Mass back to old for to collect PDF
 - fix `ca2` oral arguments scraper to handle mixed columns and missing dates #1775
--
-
-## Current
+- Clean Texas URLs while parsing so that they are valid
 
 **2.7.5 - 2026-01-28**
 
@@ -49,8 +148,6 @@ Fixes:
 - Fix `texapp` check that opinion belongs to specific court #1781
 - Fix `prsupreme` and `prapp` SSL verification issues; Add backscraping to `prsupreme` #1763
 
-## Past
-
 **2.7.4 - 2026-01-22**
 
 Features:
@@ -61,9 +158,6 @@ Changes:
 - Update `haw` and `hawapp` to ClusterSite #1772
 - updates `texapp`, `texcrimapp` to ClusterSite #1767
 - update `michctapp` to ClusterSite #1652
-
-Fixes:
--
 
 **2.7.3 - 2025-01-15**
 

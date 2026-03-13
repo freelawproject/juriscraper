@@ -26,7 +26,15 @@ class Site(ill.Site):
         self.url = (
             "https://www.illinoiscourts.gov/top-level-opinions?type=appellate"
         )
-        self.docket_re = r"(?P<citation>\d{4}\s+IL App\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?)"
+        self.docket_re = r"(?P<citation>\d{4}\s+ILL?\s+App\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?)"
+
+    def _get_citation(self, citation: str) -> str:
+        """Normalize citation; replace 'ILL App' with 'IL App'.
+
+        :param citation: raw citation string from HTML
+        :return: normalized citation string
+        """
+        return re.sub(r"ILL App", "IL App", citation)
 
     def _get_docket(self, match: re.Match) -> str:
         """Builds docket_number from a regex match

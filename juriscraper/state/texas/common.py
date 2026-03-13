@@ -19,6 +19,7 @@ from juriscraper.lib.html_utils import (
 from juriscraper.lib.string_utils import (
     FILE_SIZE_RE,
     clean_string,
+    clean_url,
     harmonize,
     size_string_to_bytes,
 )
@@ -168,7 +169,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
         case_number=clean_string(case_info["COA Case"].text_content()),
-        case_url=case_url_node.get("href", ""),
+        case_url=clean_url(case_url_node.get("href", "")),
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=district,
@@ -460,26 +461,41 @@ class TexasCommonData(TypedDict):
     appellate_briefs: list[TexasAppellateBrief]
 
 
+# Regex to recognize numbers with (optional) commas every 3 digits.
+NUMBER_RE_STR = r"[1-9]\d{0,2}(?:,?\d{3})*"
 DOCKET_NUMBER_REGEXES = [
-    re.compile(r"\d{1,2}[bB]?-\d{4}"),  # Supreme Court
-    re.compile(r"\d{5}"),  # Supreme Court (older writs)
-    re.compile(r"[ABC]-\d+"),  # Supreme Court (older cases)
-    re.compile(r"\d{2}-\d{2}-\d{5}-\w{2}"),  # Court of Appeals
-    re.compile(r"\w{2}-\d{4}-\d{2}"),  # Court of Criminal Appeals (petitions)
-    re.compile(r"WR-[\d,]+-\d{2}"),  # Court of Criminal Appeals (writs)
-    re.compile(r"AP-[\d,]+"),  # Court of Criminal Appeals (Appeal Case Type)
+    re.compile(r"\d{1,2}[bB]?-\d{2,4}"),  # Supreme Court
+    re.compile(r"\d{4,5}"),  # Supreme Court (older writs)
+    re.compile(r"[ABCD]-\d+"),  # Supreme Court (older cases)
+    re.compile(r"\d{2}-\d{2}-(?:\d{5}|\d{4}[AB])-\w{2,3}"),  # Court of Appeals
+    re.compile(r"PD-\d{3,4}-\d{2}"),  # Court of Criminal Appeals (petitions)
     re.compile(
-        r"(B-3872A|D-0190|D-2169|D-4261|A-\d{4}-A)"
+        r"WR-" + NUMBER_RE_STR + r"(?:-\d{2,3})?"
+    ),  # Court of Criminal Appeals (writs)
+    re.compile(
+        r"AP-" + NUMBER_RE_STR
+    ),  # Court of Criminal Appeals (Appeal Case Type)
+    re.compile(
+        r"(B-3872A|A-\d{4}-A)"
     ),  # Oddly numbered cases that appear to be valid
 ]
-#  These exist, but look like bad data to me. It's fine if they're flagged
-#  as part of scraping.
-#    re.compile(
-#        r"(07-07-0MISC-CV|07-07-0SHEP-CV|100TH DAY = 10)"
-#    ),
+# Specific docket numbers that appear to be bad data and should be ignored.
+IGNORED_DOCKET_NUMBERS: set[str] = {
+    "01-23-",
+    "05-13-",
+    "07-07-0MISC-CV",
+    "07-07-0SHEP-CV",
+    "100th DAY = 10",
+    "14-95-01311-CR",
+    "PD-912-91",
+    "",
+    "20-",
+}
 
 
-class TexasCommonScraper(AbstractParser[TexasCommonData]):
+class TexasCommonScraper(
+    AbstractParser[Union[TexasCommonData, dict[str, None]]]
+):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court,
     Court of Criminal Appeals, and Court of Appeals).
@@ -539,7 +555,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         self.is_valid = True
 
     @property
-    def data(self) -> TexasCommonData:
+    def data(self) -> Union[TexasCommonData, dict[str, None]]:
         """
         Extract parsed data from an HTML tree. This property returns the
         `TexasCommonData`
@@ -553,10 +569,14 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         if not self.is_valid:
             raise ValueError("HTML tree has not been parsed yet.")
 
+        docket_number = self.docket_number
+        if docket_number is None:
+            return {}
+
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
             court_type=CourtType.UNKNOWN.value,
-            docket_number=self.docket_number,
+            docket_number=docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
             parties=self.parties,
@@ -569,7 +589,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         return data
 
     @cached_property
-    def docket_number(self) -> str:
+    def docket_number(self) -> Optional[str]:
         """
         The docket number of the case.
         """
@@ -781,20 +801,38 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
         )
         return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
 
-    def _parse_docket_number(self) -> str:
+    @staticmethod
+    def _validate_docket_number(docket_number: str) -> Optional[str]:
         """
-        Extracts the docket number from the HTML tree. Will fail if
-        `_parse_text` has not yet been called.
+        Validates a docket number, returning `None` if the docket number is one
+        we have manually ignored.
 
-        :raises ValueError: If the docket number format is not recognized.
+        :param docket_number: The docket number to validate.
 
-        :return: Docket number.
+        :return: The input docket number if it is valid or `None` if it is
+            ignored.
         """
-        docket_number = self.case_data["case"]
+        if docket_number in IGNORED_DOCKET_NUMBERS:
+            return None
         for docket_number_regex in DOCKET_NUMBER_REGEXES:
             if docket_number_regex.fullmatch(docket_number):
                 return docket_number
-        raise ValueError(f"Unrecognized docket number format: {docket_number}")
+        raise ValueError(
+            f'Unrecognized docket number format: "{docket_number}"'
+        )
+
+    def _parse_docket_number(self) -> Optional[str]:
+        """
+        Extracts and validates the docket number from the HTML tree. Will fail
+        if `_parse_text` has not yet been called.
+
+        :raises ValueError: If the docket number format is not recognized.
+
+        :return: Docket number or `None` if the docket number is one we
+            manually ignore.
+        """
+        docket_number = self.case_data["case"]
+        return self._validate_docket_number(docket_number)
 
     def _parse_date_filed(self) -> date:
         """
@@ -943,7 +981,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData]):
 
         return [
             TexasCaseDocument(
-                document_url=url,
+                document_url=clean_url(url),
                 description=description,
                 media_id=media_id[0] if len(media_id) > 0 else "",
                 media_version_id=media_version_id[0]

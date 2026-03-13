@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 
 import requests
 from lxml import html
-from requests import Response, Session
+from requests import Response, Session, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -24,6 +24,13 @@ def test_for_meta_redirections(r: Response) -> tuple[bool, Optional[str]]:
     """
     try:
         extension = get_extension(r.content)
+    except Timeout as e:
+        # Transient network issues - don't send to Sentry
+        logger.warning(
+            "Timeout error getting extension from microservice: %s",
+            e,
+        )
+        extension = ""
     except Exception:
         # blanket exception until we get more error information
         logger.error("Error getting extension on juriscraper", exc_info=True)
