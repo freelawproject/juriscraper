@@ -89,7 +89,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
-    def _download_backwards(self, dates):
+    async def _download_backwards(self, dates):
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple
@@ -104,7 +104,7 @@ class Site(OpinionSiteLinear):
         self.year = self.start_date.year
         params = {"opinion_year": self.year}
         self.url = urljoin(self.base_url, f"?{urlencode(params)}")
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def date_is_in_backscrape_range(self, case_date):

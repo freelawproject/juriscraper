@@ -88,11 +88,11 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         # This backscraper is hardcoded, but it will
         # work for the set number of pages
         self.method = "GET"
         for i in range(1, 33):
             self.url = f"{self.base_url}/decisions/isysquery/19342efa-bb49-4684-a054-875324b58eb9/{(i * 10) - 9}-{i * 10}/list/"
-            self.html = self._download()
+            self.html = await self._download()
             self._process_html()

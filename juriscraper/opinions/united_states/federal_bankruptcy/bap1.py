@@ -53,7 +53,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.should_have_results = True
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Method used by backscraper to download historical records
 
         :param dates: (start_date, end_date) tuple
