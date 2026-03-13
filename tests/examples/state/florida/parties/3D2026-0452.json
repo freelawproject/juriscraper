@@ -1,0 +1,111 @@
+[
+  {
+    "involvement_type_id": 10360,
+    "name": "HWP 6494 Allison, LLC",
+    "non_public_flag": false,
+    "order_by": 1,
+    "party_number": 1,
+    "party_subtype": "Appellant",
+    "party_subtype_id": 1000005,
+    "party_type": "appellant",
+    "party_type_id": 10002,
+    "party_type_raw": "Party",
+    "pro_se_flag": false,
+    "representatives": [
+      {
+        "name": "Abbey L Kaplan",
+        "party_uuid": "af4d7990-ca98-4840-9bb4-1332862214f0",
+        "primary_flag": true,
+        "sort_name": "Kaplan, Abbey L"
+      },
+      {
+        "name": "Lauren Sara Fallick",
+        "party_uuid": "c29a4160-5f35-48a9-a032-f794b990f53f",
+        "primary_flag": false,
+        "sort_name": "Fallick, Lauren Sara"
+      },
+      {
+        "name": "Madison Dara Hauser",
+        "party_uuid": "0c209461-5700-4d97-bb68-caaf3c585776",
+        "primary_flag": false,
+        "sort_name": "Hauser, Madison Dara"
+      }
+    ],
+    "sort_name": "HWP 6494 Allison, LLC",
+    "status": "Active",
+    "status_id": 10001,
+    "uuid": "954dcbec-aa08-48bd-bf00-9d41a76e7400"
+  },
+  {
+    "involvement_type_id": 10361,
+    "name": "Windows by Modern, LLC",
+    "non_public_flag": false,
+    "order_by": 3,
+    "party_number": 1,
+    "party_subtype": "Appellee",
+    "party_subtype_id": 1000006,
+    "party_type": "appellee",
+    "party_type_id": 10002,
+    "party_type_raw": "Party",
+    "pro_se_flag": false,
+    "representatives": [],
+    "sort_name": "Windows by Modern, LLC",
+    "status": "Active",
+    "status_id": 10001,
+    "uuid": "0b3b2df9-4767-4926-8510-e27df5482fd3"
+  },
+  {
+    "involvement_type_id": 10361,
+    "name": "Linea Rossa, LLC",
+    "non_public_flag": false,
+    "order_by": 3,
+    "party_number": 2,
+    "party_subtype": "Appellee",
+    "party_subtype_id": 1000006,
+    "party_type": "appellee",
+    "party_type_id": 10002,
+    "party_type_raw": "Party",
+    "pro_se_flag": false,
+    "representatives": [],
+    "sort_name": "Linea Rossa, LLC",
+    "status": "Active",
+    "status_id": 10001,
+    "uuid": "ae4278fb-2c93-4398-85a8-e98972223031"
+  },
+  {
+    "involvement_type_id": 10362,
+    "name": "Hon. Lisa S. Walsh",
+    "non_public_flag": false,
+    "order_by": 270,
+    "party_number": 1,
+    "party_subtype": "Judge/Judicial Officer",
+    "party_subtype_id": 1000042,
+    "party_type": "unknown",
+    "party_type_id": 10003,
+    "party_type_raw": "Participant",
+    "pro_se_flag": false,
+    "representatives": [],
+    "sort_name": "Walsh, Lisa S., Hon.",
+    "status": "Active",
+    "status_id": 10001,
+    "uuid": "2ca9f652-af4c-4380-b2b1-f5f69266a089"
+  },
+  {
+    "involvement_type_id": 10362,
+    "name": "Miami-Dade Clerk",
+    "non_public_flag": false,
+    "order_by": 290,
+    "party_number": 1,
+    "party_subtype": "Lower Tribunal Clerk",
+    "party_subtype_id": 1000013,
+    "party_type": "unknown",
+    "party_type_id": 10003,
+    "party_type_raw": "Participant",
+    "pro_se_flag": false,
+    "representatives": [],
+    "sort_name": "Clerk, Miami-Dade",
+    "status": "Active",
+    "status_id": 10001,
+    "uuid": "857bec3e-0333-4d43-9e6d-af5ae95d3e52"
+  }
+]
