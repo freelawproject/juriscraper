@@ -59,11 +59,11 @@ class Parser(ABC, Generic[_ParserInput, _ParserOutput]):
         raise NotImplementedError
 
 
-T = TypeVar("T")
-
-
-class AbstractParser(Generic[_ParserOutput], Parser[str, _ParserOutput], ABC):
-    """Abstract base class, which all scrapers should inherit from."""
+class LegacyParser(Generic[_ParserOutput], Parser[str, _ParserOutput], ABC):
+    """
+    Compatibility ABC providing methods used by existing parsers to parsers
+    inheriting from the Parser ABC (i.e. _parse_text and data).
+    """
 
     def __init__(self, court_id: str):
         self.court_id: str = court_id
@@ -79,3 +79,19 @@ class AbstractParser(Generic[_ParserOutput], Parser[str, _ParserOutput], ABC):
         if self.output is None:
             raise ParserValidationError("Input has not been parsed yet.")
         return self.output
+
+
+class AbstractParser(Generic[_ParserOutput], ABC):
+    """Abstract base class, which all scrapers should inherit from."""
+
+    def __init__(self, court_id: str):
+        self.court_id: str = court_id
+
+    def _parse_text(self, text: str) -> None:
+        """Ingest some arbitrary text and prepare it to be parsed by the data() method."""
+        raise NotImplementedError
+
+    @property
+    def data(self) -> _ParserOutput:
+        """Parse the last text ingested by _parse_text()."""
+        raise NotImplementedError

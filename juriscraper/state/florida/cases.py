@@ -11,7 +11,7 @@ from pydantic import (
 )
 from pydantic_core import PydanticCustomError
 
-from juriscraper.abstract_parser import AbstractParser
+from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.state.docket import (
     Docket,
@@ -276,7 +276,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     parties: list[FloridaParty] = []
 
 
-class FloridaCaseListParser(AbstractParser[list[FloridaCase]]):
+class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
     """
     Parser for Florida case list API results.
 
@@ -290,7 +290,7 @@ class FloridaCaseListParser(AbstractParser[list[FloridaCase]]):
         return results.results
 
 
-class FloridaCaseInfoParser(AbstractParser[FloridaCase]):
+class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
     """
     Parser for Florida case info API results.
 

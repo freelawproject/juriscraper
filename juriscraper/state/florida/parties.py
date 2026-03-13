@@ -3,7 +3,7 @@ from typing import Annotated, Any, ClassVar
 from pydantic import UUID4, AliasPath, BeforeValidator, Field
 from pydantic_core import PydanticCustomError
 
-from juriscraper.abstract_parser import AbstractParser
+from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.docket import Party, PartyType, Representative
 from juriscraper.state.florida.common import FloridaPaginatedResults
 
@@ -168,7 +168,7 @@ class FloridaParty(Party):
     involvement_type_id: int = Field(validation_alias="involvementTypeID")
 
 
-class FloridaPartyListParser(AbstractParser[list[FloridaParty]]):
+class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
     """
     Parser for Florida party list API results.
 

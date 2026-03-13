@@ -10,7 +10,7 @@ from pydantic import (
 )
 from pydantic_core import PydanticCustomError
 
-from juriscraper.abstract_parser import AbstractParser
+from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
@@ -223,7 +223,7 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     attachments: list[FloridaDocument] = []
 
 
-class FloridaDocketEntryListParser(AbstractParser[list[FloridaDocketEntry]]):
+class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
     """
     Parser for Florida docket entry list API results.
 
