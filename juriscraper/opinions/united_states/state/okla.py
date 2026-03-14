@@ -22,6 +22,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.expected_content_types = ["text/html"]
         self.should_have_results = True
+        self.use_proxy = True
 
     def _process_html(self):
         for row in self.html.xpath(".//li[@class='decision']"):
