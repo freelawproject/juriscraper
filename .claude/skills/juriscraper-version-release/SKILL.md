@@ -28,7 +28,8 @@ You are an expert at managing the juriscraper release process. When this skill i
      ```
 5. **Quality Check**: Run `pre-commit run --all-files`. If it fails, attempt to fix and re-run once.
 6. **Git Operations**:
-   - Commit all changes as `version bump v{version_number}`.
+   - Stage `pyproject.toml`, `CHANGES.md`, and `uv.lock`.
+   - Commit as `version bump v{version_number}`.
    - Create a local tag: `v{version_number}`.
 7. **Delivery**: Push the branch and open a Pull Request using the GitHub CLI (`gh pr create`). Use the user signature; do not co-author the commits. Use the following PR format:
    - Title: `version bump v{version_number}`

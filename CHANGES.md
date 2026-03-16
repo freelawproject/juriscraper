@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 2.8.3 - 2026-03-13
+
+Features:
 - Add backscraping support to `mich` and `michctapp` going #1806
 - Add parsing for Texas email notifications.
 - Add Claude Code skill for automating version releases #1826
