@@ -15,7 +15,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1986, 12, 23)
-    days_interval = 365
+    days_interval = 30
     TTAB_RR_BASE = "https://ttab-reading-room.uspto.gov"
     TTAB_RR_API = urljoin(TTAB_RR_BASE, "ttab-efoia-api/decision/search")
     TTAB_RR_PDF_BASE = urljoin(TTAB_RR_BASE, "/cms/rest/")
