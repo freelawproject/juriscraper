@@ -5,10 +5,11 @@ Author: Ansel Halliburton
 Type: Precedential
 """
 
-import json
 from datetime import date, datetime
+from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -16,8 +17,8 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1986, 12, 23)
     days_interval = 365
     TTAB_RR_BASE = "https://ttab-reading-room.uspto.gov"
-    TTAB_RR_API = f"{TTAB_RR_BASE}/ttab-efoia-api/decision/search"
-    TTAB_RR_PDF_BASE = f"{TTAB_RR_BASE}/cms/rest"
+    TTAB_RR_API = urljoin(TTAB_RR_BASE, "ttab-efoia-api/decision/search")
+    TTAB_RR_PDF_BASE = urljoin(TTAB_RR_BASE, "/cms/rest/")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -34,43 +35,29 @@ class Site(OpinionSiteLinear):
             "sortDataBag": [{"issueDate": "desc"}],
             "recordStartNumber": 0,
         }
+        self.parameters = {}
+        self.request["parameters"] = {"json": self._search_payload}
         self.make_backscrape_iterable(kwargs)
 
-    def _download(self, request_dict=None):
-        if self.test_mode_enabled():
-            return super()._download(request_dict)
-        self.downloader_executed = True
-        response = self.request["session"].post(
-            self.TTAB_RR_API,
-            json=self._search_payload,
-            headers=self.request["headers"],
-            verify=self.request["verify"],
-        )
-        response.raise_for_status()
-        self.request["response"] = response
-        return response.json()
-
     def _process_html(self):
-        if self.test_mode_enabled():
-            with open(self.url) as f:
-                data = json.load(f)
-        else:
-            data = self.html
-
-        results = data.get("results", [])
+        results = self.html.get("results", [])
         seen_docs = set()
         for r in results:
             doc_id = r.get("documentId", "")
-            if not doc_id or doc_id in seen_docs:
-                continue
+            if not doc_id:
+                logger.warning("Skipping result: no doc_id")
+            if doc_id in seen_docs:
+                logger.warning(f"Skipping result: duplicate doc_id = {doc_id}")
             seen_docs.add(doc_id)
             self.cases.append(
                 {
                     "name": r.get("partyName", "").strip(),
-                    "url": f"{self.TTAB_RR_PDF_BASE}{doc_id}",
+                    "url": urljoin(self.TTAB_RR_PDF_BASE, doc_id.lstrip("/")),
                     "date": r.get("issueDateStr", ""),
                     "docket": r.get("proceedingNumberDisplay", ""),
-                    "judge": r.get("panelMember", "").replace(";", ", "),
+                    "judge": ", ".join(
+                        map(titlecase, r.get("panelMember", "").split(";"))
+                    ),  # "LYKOS;ENGLISH;COHEN" -> "Lykos, English, Cohen"
                     "disposition": r.get("decision", ""),
                     "summary": r.get("issue", ""),
                     "status": "Published",
