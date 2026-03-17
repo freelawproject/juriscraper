@@ -100,11 +100,10 @@ class Site(ClusterSite):
                     else:
                         if author_str not in parsed_cluster["judge"]:
                             parsed_cluster["judge"] += f"; {author_str}"
-                elif "per curiam" in post_type.lower():
-                    per_curiam = True
 
                 if opinion_type == OpinionType.UNANIMOUS:
                     per_curiam = True
+                    author_str = ""
 
                 url = self.document_url.format(self.court, op["FileName"])
                 parsed_cluster["sub_opinions"].append(
