@@ -60,7 +60,6 @@ class Site(OpinionSiteLinear):
                     ),  # "LYKOS;ENGLISH;COHEN" -> "Lykos, English, Cohen"
                     "disposition": r.get("decision", ""),
                     "summary": r.get("issue", ""),
-                    "status": "Published",
                 }
             )
 
