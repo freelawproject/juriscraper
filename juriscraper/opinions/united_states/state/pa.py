@@ -103,6 +103,9 @@ class Site(ClusterSite):
                 elif "per curiam" in post_type.lower():
                     per_curiam = True
 
+                if opinion_type == OpinionType.UNANIMOUS:
+                    per_curiam = True
+
                 url = self.document_url.format(self.court, op["FileName"])
                 parsed_cluster["sub_opinions"].append(
                     {
