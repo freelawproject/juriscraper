@@ -190,22 +190,20 @@ class Site(ClusterSite):
             "Concurring and Dissenting Memorandum Statement",
         ]:
             type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+        elif post_type == "Complete Opinion":
+            type = OpinionType.COMBINED
         elif (
             post_type
             in [
                 "Majority Opinion",
                 "Opinion Announcing the Judgment of the Court",
                 "Opinion",
+                "Memorandum",
             ]
             or not is_single_opinion
         ):
             type = OpinionType.MAJORITY
         else:
-            logger.error(
-                "`pa`: unmapped opinion type %s",
-                post_type,
-                extra={"scraped_cluster": cluster},
-            )
             # default value in CL
             type = OpinionType.COMBINED
 
