@@ -179,6 +179,12 @@ class Site(ClusterSite):
                     self.court_number,
                 )
                 continue
+            if not case_dict["sub_opinions"]:
+                logger.warning(
+                    "Skipping docket %s - no opinion documents found",
+                    case_dict["docket"],
+                )
+                continue
             self.cases.append(case_dict)
 
         # pagination
