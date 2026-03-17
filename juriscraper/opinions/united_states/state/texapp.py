@@ -184,7 +184,7 @@ class Site(ClusterSite):
                 # court website (e.g. labeled as "Notice" or "Judgment"
                 # instead of "Opinion"), so get_opinions() returns an
                 # empty list.  Skip to avoid an InsanityException
-                # downstream when download_urls is missing.
+                # downstream when download_urls is missing. #1852
                 logger.warning(
                     "Skipping docket %s - no opinion documents found",
                     case_dict["docket"],
