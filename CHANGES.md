@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `texapp` skip cases with no opinion documents to prevent empty sub_opinions #1852
+- Fix `pa` UNANIMOUS opinions not setting `per_curiam=True`, causing InsanityException #1854
 
 ## 2.8.3 - 2026-03-13
 
