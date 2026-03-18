@@ -46,8 +46,10 @@ class Site(OpinionSiteLinear):
             doc_id = r.get("documentId", "")
             if not doc_id:
                 logger.warning("Skipping result: no doc_id")
+                continue
             if doc_id in seen_docs:
                 logger.warning(f"Skipping result: duplicate doc_id = {doc_id}")
+                continue
             seen_docs.add(doc_id)
             self.cases.append(
                 {
@@ -58,6 +60,7 @@ class Site(OpinionSiteLinear):
                     "judge": ", ".join(
                         map(titlecase, r.get("panelMember", "").split(";"))
                     ),  # "LYKOS;ENGLISH;COHEN" -> "Lykos, English, Cohen"
+                    "author": titlecase(r.get("decisionWriter", "")),
                     "disposition": r.get("decision", ""),
                     "summary": r.get("issue", ""),
                 }
