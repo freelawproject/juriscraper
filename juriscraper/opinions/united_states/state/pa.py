@@ -56,7 +56,7 @@ class Site(ClusterSite):
         self.url = f"{self.base_url}{urlencode(self.params)}"
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parses data into case dictionaries
 
         Note that pages returned have no pagination
@@ -100,8 +100,10 @@ class Site(ClusterSite):
                     else:
                         if author_str not in parsed_cluster["judge"]:
                             parsed_cluster["judge"] += f"; {author_str}"
-                elif "per curiam" in post_type.lower():
+
+                if opinion_type == OpinionType.UNANIMOUS:
                     per_curiam = True
+                    author_str = ""
 
                 url = self.document_url.format(self.court, op["FileName"])
                 parsed_cluster["sub_opinions"].append(
@@ -120,8 +122,8 @@ class Site(ClusterSite):
             logger.info("Paginating to page %s", next_page)
             self.params["pageNumber"] = next_page
             self.url = f"{self.base_url}{urlencode(self.params)}"
-            self.html = self._download()
-            self._process_html()
+            self.html = await self._download()
+            await self._process_html()
 
     def parse_case_title(self, title: str) -> tuple[str, str]:
         """Separates case_name and docket_number from case string
@@ -190,22 +192,20 @@ class Site(ClusterSite):
             "Concurring and Dissenting Memorandum Statement",
         ]:
             type = OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART
+        elif post_type == "Complete Opinion":
+            type = OpinionType.COMBINED
         elif (
             post_type
             in [
                 "Majority Opinion",
                 "Opinion Announcing the Judgment of the Court",
                 "Opinion",
+                "Memorandum",
             ]
             or not is_single_opinion
         ):
             type = OpinionType.MAJORITY
         else:
-            logger.error(
-                "`pa`: unmapped opinion type %s",
-                post_type,
-                extra={"scraped_cluster": cluster},
-            )
             # default value in CL
             type = OpinionType.COMBINED
 
@@ -250,7 +250,7 @@ class Site(ClusterSite):
 
         return result
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Modify GET querystring for desired date range
 
         :param dates: (start_date, end_date) tuple
@@ -261,5 +261,5 @@ class Site(ClusterSite):
         self.params["endDate"] = end.strftime(self.api_dt_format)
         self.url = f"{self.base_url}{urlencode(self.params)}"
         logger.info("Backscraping for range %s %s", *dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

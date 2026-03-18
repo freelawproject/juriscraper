@@ -203,7 +203,7 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -215,6 +215,6 @@ class Site(OpinionSiteLinear):
         last_page = 130
         base_url = self.url
         url_template = f"{base_url}&page={{}}"
-        self.cases = backscrape_over_paginated_results(
+        self.cases = await backscrape_over_paginated_results(
             2, last_page, start, end, "%m/%d/%Y", self, None, url_template
         )
