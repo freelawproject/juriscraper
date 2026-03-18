@@ -1,0 +1,149 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "partyHeader": {
+          "casePartyUUID": "954dcbec-aa08-48bd-bf00-9d41a76e7400",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellant",
+          "partySubTypeID": "1000005",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "HWP 6494 Allison, LLC",
+            "sortName": "HWP 6494 Allison, LLC"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 1,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "AF4D7990-CA98-4840-9BB4-1332862214F0",
+              "partyActorInstance": {
+                "displayName": "Abbey L Kaplan",
+                "sortName": "Kaplan, Abbey L"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "C29A4160-5F35-48A9-A032-F794B990F53F",
+              "partyActorInstance": {
+                "displayName": "Lauren Sara Fallick",
+                "sortName": "Fallick, Lauren Sara"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "0C209461-5700-4D97-BB68-CAAF3C585776",
+              "partyActorInstance": {
+                "displayName": "Madison Dara Hauser",
+                "sortName": "Hauser, Madison Dara"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 1,
+        "involvementTypeID": "10360",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "0b3b2df9-4767-4926-8510-e27df5482fd3",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Windows by Modern, LLC",
+            "sortName": "Windows by Modern, LLC"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 1,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "ae4278fb-2c93-4398-85a8-e98972223031",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Linea Rossa, LLC",
+            "sortName": "Linea Rossa, LLC"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 2,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "2ca9f652-af4c-4380-b2b1-f5f69266a089",
+          "partyType": "Participant",
+          "partyTypeID": "10003",
+          "partySubType": "Judge/Judicial Officer",
+          "partySubTypeID": "1000042",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Hon. Lisa S. Walsh",
+            "sortName": "Walsh, Lisa S., Hon."
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 270,
+        "caseHeader": {},
+        "partyNumber": 1,
+        "involvementTypeID": "10362",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "857bec3e-0333-4d43-9e6d-af5ae95d3e52",
+          "partyType": "Participant",
+          "partyTypeID": "10003",
+          "partySubType": "Lower Tribunal Clerk",
+          "partySubTypeID": "1000013",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Miami-Dade Clerk",
+            "sortName": "Clerk, Miami-Dade"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 290,
+        "caseHeader": {},
+        "partyNumber": 1,
+        "involvementTypeID": "10362",
+        "nonPublicFlag": false
+      }
+    ]
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 5,
+    "totalPages": 1,
+    "number": 0
+  }
+}

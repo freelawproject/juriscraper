@@ -1,0 +1,327 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "resourceID": "68f021c4-6a44-4735-9a76-5360b2e8af13",
+        "modifiedDate": "2023-03-04T15:16:42.101246Z",
+        "modifiedUserID": "4f34989a-a619-4f1f-a628-f434a093d38c",
+        "active": true,
+        "displayName": "Supreme Court of Florida",
+        "note": "Florida Supreme Court",
+        "externalIdentifier": "1",
+        "locations": [
+          {
+            "locationID": 1000000,
+            "locationName": "Supreme Court of Florida",
+            "locationComment": "Supreme Court of Florida",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/68f021c4-6a44-4735-9a76-5360b2e8af13"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/4f34989a-a619-4f1f-a628-f434a093d38c"
+          }
+        }
+      },
+      {
+        "resourceID": "b82b30d5-bd3c-46d7-9451-1cb05e470873",
+        "modifiedDate": "2024-05-14T19:00:49.8485114Z",
+        "modifiedUserID": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+        "active": true,
+        "displayName": "1st District Court of Appeal",
+        "note": "1st District Court of Appeal",
+        "externalIdentifier": "2",
+        "locations": [
+          {
+            "locationID": 1000001,
+            "locationName": "1st District Court of Appeal",
+            "locationComment": "First District Court of Appeal",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/b82b30d5-bd3c-46d7-9451-1cb05e470873"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/61ce960d-9810-48b1-8a6c-e7c74b4e7f1e"
+          }
+        }
+      },
+      {
+        "resourceID": "8f454fb9-4c7f-43df-856b-ab373e71c27f",
+        "modifiedDate": "2024-05-14T19:00:49.8679373Z",
+        "modifiedUserID": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+        "active": true,
+        "displayName": "2nd District Court of Appeal",
+        "note": "2nd District Court of Appeal",
+        "externalIdentifier": "3",
+        "locations": [
+          {
+            "locationID": 1000002,
+            "locationName": "2nd District Court of Appeal",
+            "locationComment": "Second District Court of Appeal",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/8f454fb9-4c7f-43df-856b-ab373e71c27f"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/61ce960d-9810-48b1-8a6c-e7c74b4e7f1e"
+          }
+        }
+      },
+      {
+        "resourceID": "8a73be7f-864b-42a9-b8ad-1ec0a3e890b4",
+        "modifiedDate": "2024-05-14T19:00:49.871025Z",
+        "modifiedUserID": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+        "active": true,
+        "displayName": "3rd District Court of Appeal",
+        "note": "3rd District Court of Appeal",
+        "externalIdentifier": "4",
+        "locations": [
+          {
+            "locationID": 1000003,
+            "locationName": "3rd District Court of Appeal",
+            "locationComment": "Third District Court of Appeal",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000009,
+            "locationName": "Fla. International Univ. College of Law",
+            "locationComment": "Fla. International Univ. College of Law",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000011,
+            "locationName": "Key West Courthouse",
+            "locationComment": "Key West Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000010,
+            "locationName": "St. Thomas Univ. College of Law",
+            "locationComment": "St. Thomas Univ. College of Law",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000006,
+            "locationName": "University of Miami School of Law",
+            "locationComment": "University of Miami School of Law",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/8a73be7f-864b-42a9-b8ad-1ec0a3e890b4"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/61ce960d-9810-48b1-8a6c-e7c74b4e7f1e"
+          }
+        }
+      },
+      {
+        "resourceID": "cdc2beb5-919b-4198-a731-7b253b7119cc",
+        "modifiedDate": "2024-05-14T19:00:49.8734453Z",
+        "modifiedUserID": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+        "active": true,
+        "displayName": "4th District Court of Appeal",
+        "note": "4th District Court of Appeal",
+        "externalIdentifier": "5",
+        "locations": [
+          {
+            "locationID": 1000004,
+            "locationName": "4th District Court of Appeal",
+            "locationComment": "Fourth District Court of Appeal",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000013,
+            "locationName": "Martin County Courthouse",
+            "locationComment": "Martin County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/cdc2beb5-919b-4198-a731-7b253b7119cc"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/61ce960d-9810-48b1-8a6c-e7c74b4e7f1e"
+          }
+        }
+      },
+      {
+        "resourceID": "d818ccfa-0288-4e77-9f0f-daa6a4999a3a",
+        "modifiedDate": "2024-05-14T19:00:49.8761378Z",
+        "modifiedUserID": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+        "active": true,
+        "displayName": "5th District Court of Appeal",
+        "note": "5th District Court of Appeal",
+        "externalIdentifier": "6",
+        "locations": [
+          {
+            "locationID": 1000005,
+            "locationName": "5th District Court of Appeal",
+            "locationComment": "Fifth District Court of Appeal",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/d818ccfa-0288-4e77-9f0f-daa6a4999a3a"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/61ce960d-9810-48b1-8a6c-e7c74b4e7f1e"
+          }
+        }
+      },
+      {
+        "resourceID": "082fc14d-02f3-4240-a353-241b8c0d9a8f",
+        "modifiedDate": "2024-05-14T19:00:49.878631Z",
+        "modifiedUserID": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+        "active": true,
+        "displayName": "6th District Court of Appeal",
+        "note": "6th District Court of Appeal",
+        "externalIdentifier": "7",
+        "locations": [
+          {
+            "locationID": 1000012,
+            "locationName": "6th District Court of Appeal",
+            "locationComment": "Sixth District Court of Appeal",
+            "caseLocationFlag": true,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000024,
+            "locationName": "Barry University",
+            "locationComment": "Barry University",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000015,
+            "locationName": "Charlotte County Courthouse",
+            "locationComment": "Charlotte County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000016,
+            "locationName": "Collier County Courthouse",
+            "locationComment": "Collier County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000025,
+            "locationName": "Florida Southern College",
+            "locationComment": "Florida Southern College",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000017,
+            "locationName": "Glades County Courthouse",
+            "locationComment": "Glades County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000018,
+            "locationName": "Hardee County Courthouse",
+            "locationComment": "Hardee County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000019,
+            "locationName": "Hendry County Courthouse",
+            "locationComment": "Hendry County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000020,
+            "locationName": "Highlands County Courthouse",
+            "locationComment": "Highlands County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000021,
+            "locationName": "Lee County Justice Center",
+            "locationComment": "Lee County Justice Center",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000014,
+            "locationName": "Orange County Courthouse",
+            "locationComment": "Orange County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000022,
+            "locationName": "Osceola County Courthouse",
+            "locationComment": "Osceola County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000023,
+            "locationName": "Polk County Courthouse",
+            "locationComment": "Polk County Courthouse",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000027,
+            "locationName": "TBD",
+            "locationComment": "TBD",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          },
+          {
+            "locationID": 1000026,
+            "locationName": "University of Central Florida",
+            "locationComment": "University of Central Florida",
+            "caseLocationFlag": false,
+            "calendarEventFlag": true
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://acis-api.flcourts.gov/courts/082fc14d-02f3-4240-a353-241b8c0d9a8f"
+          },
+          "modifiedUser": {
+            "href": "https://acis-api.flcourts.gov/users/61ce960d-9810-48b1-8a6c-e7c74b4e7f1e"
+          }
+        }
+      }
+    ]
+  },
+  "page": {
+    "size": 500,
+    "totalElements": 7,
+    "totalPages": 1,
+    "number": 0
+  }
+}

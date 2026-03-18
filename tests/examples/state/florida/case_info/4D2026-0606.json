@@ -1,0 +1,36 @@
+{
+  "case_caption": "ISAIAH HARGRETT, Appellant(s), v. STATE OF FLORIDA, Appellee(s).",
+  "case_group_flag": true,
+  "case_name": "Isaiah Hargrett v. State of Florida",
+  "case_name_full": "Isaiah Hargrett v. State of Florida",
+  "class_group_type": "Appeal",
+  "class_group_type_id": 10008,
+  "classification_id": 1000116,
+  "closed_flag": false,
+  "court_id": "flca04",
+  "date_filed": "2026-03-05",
+  "datetime_filed": "2026-03-05T16:17:00Z",
+  "docket_number": "4D2026-0606",
+  "docket_type": "criminal",
+  "entries": [],
+  "location": "4th District Court of Appeal",
+  "location_id": 1000004,
+  "originating_cases": [
+    {
+      "case_number": "062016CF013112A88810",
+      "court_id": "flcrct",
+      "court_name": "Circuit Court for the Seventeenth Judicial Circuit, Broward County"
+    }
+  ],
+  "panel_flag": true,
+  "parties": [],
+  "transfers": [
+    {
+      "court_id": "flcrct",
+      "direction": "inbound",
+      "docket_number": "062016CF013112A88810",
+      "reason": "appeal"
+    }
+  ],
+  "uuid": "562e4de3-c5ea-4e8d-a87f-3c80c4693c70"
+}
