@@ -84,7 +84,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-    def _download_backwards(self, n):
+    async def _download_backwards(self, n):
         self.url = f"http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={n}&num={n / 20 - 1}&numBegin=1"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

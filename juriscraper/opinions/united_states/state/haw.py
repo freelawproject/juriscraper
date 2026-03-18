@@ -161,7 +161,7 @@ class Site(ClusterSite):
 
             self.cases.append(case_dict)
 
-    def _download_backwards(self, search_date: date) -> None:
+    async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
@@ -177,7 +177,7 @@ class Site(ClusterSite):
             "Now downloading case page at: %s (params: %s)"
             % (self.url, self.request["parameters"]["params"])
         )
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs) -> None:

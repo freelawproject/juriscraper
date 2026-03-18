@@ -62,18 +62,18 @@ class Site(OralArgumentSiteLinear):
             }
         )
 
-    def _download(self):
+    async def _download(self):
         """Build and download the table to parse
 
         :return: json data
         """
         if self.test_mode_enabled():
-            return json.load(open(self.url))
+            return json.load(open(self.mock_url))
 
         sess = self.request["session"]
 
         # fetch for credentials
-        res = sess.post(self.url, headers=self.headers, json=self.params)
+        res = await sess.post(self.url, headers=self.headers, json=self.params)
         creds = res.json().get("Credentials")
 
         # fetch signed headers
@@ -84,7 +84,7 @@ class Site(OralArgumentSiteLinear):
             % (self.url, self.payload)
         )
         # Fetch media table
-        self.request["response"] = sess.post(
+        self.request["response"] = await sess.post(
             self.query_url, headers=sig, data=self.payload
         )
 
@@ -122,7 +122,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[str, str]) -> None:
+    async def _download_backwards(self, dates: tuple[str, str]) -> None:
         """Download backwards
 
         :param dates: (start_str, end_str) in "%Y/%m/%d" or empty.
@@ -144,7 +144,7 @@ class Site(OralArgumentSiteLinear):
 
         # Rebuild payload for this slice
         self.build_payload()
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:

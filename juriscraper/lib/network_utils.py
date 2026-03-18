@@ -1,34 +1,16 @@
+import asyncio
 import random
-import ssl
-import time
 from datetime import datetime
 from typing import Any
 
-from requests import Session
-from requests.adapters import HTTPAdapter
-from urllib3.util import create_urllib3_context
+from httpx import AsyncClient
 
 from juriscraper.lib.log_tools import make_default_logger
 
 logger = make_default_logger()
 
 
-class SSLAdapter(HTTPAdapter):
-    def __init__(
-        self, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers=None, **kwargs
-    ):
-        self.ssl_version = ssl_version or ssl.PROTOCOL_TLS
-        self.ssl_context = create_urllib3_context(
-            ssl_version=self.ssl_version, ciphers=ciphers
-        )
-        super().__init__(**kwargs)
-
-    def init_poolmanager(self, *args, **kwargs):
-        kwargs["ssl_context"] = self.ssl_context
-        return super().init_poolmanager(*args, **kwargs)
-
-
-def add_delay(delay=0, deviation=0):
+async def add_delay(delay=0, deviation=0):
     """Create a semi-random delay.
 
     Delay is the number of seconds your program will be stopped for, and
@@ -38,7 +20,7 @@ def add_delay(delay=0, deviation=0):
 
     duration = random.randrange(delay - deviation, delay + deviation)
     logger.info(f"Adding a delay of {duration} seconds. Please wait.")
-    time.sleep(duration)
+    await asyncio.sleep(duration)
 
 
 class AcmsApiClient:
@@ -56,7 +38,7 @@ class AcmsApiClient:
     MERGE_PDF_ENDPOINT = "MergePDFFiles/"
     GET_PDF_ENDPOINT = "GetMergedFile/"
 
-    def __init__(self, session: Session, court_id: str):
+    def __init__(self, session: AsyncClient, court_id: str):
         self.session = session
         self.court_id = court_id
         self.base_url = self.BASE_URL_TEMPLATE.format(court_id=self.court_id)
@@ -214,7 +196,7 @@ class AcmsApiClient:
             "searchTransaction": raw_doc_data.get("searchTransaction"),
         }
 
-    def get_case_details(self, case_id: str) -> dict[str, Any]:
+    async def get_case_details(self, case_id: str) -> dict[str, Any]:
         """
         Fetches and maps case details for a given case ID.
 
@@ -224,11 +206,11 @@ class AcmsApiClient:
         path = self.CASE_DETAILS_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching case details from: {url}")
-        response = self.session.get(url)
+        response = await self.session.get(url)
         response.raise_for_status()
         return self._map_case_details_response(response.json())
 
-    def get_docket_entries(self, case_id: str) -> dict[str, Any]:
+    async def get_docket_entries(self, case_id: str) -> dict[str, Any]:
         """
         Fetches and maps docket entry details for a given case ID.
 
@@ -238,7 +220,7 @@ class AcmsApiClient:
         path = self.DOCKET_ENTRIES_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching docket entries from: {url}")
-        response = self.session.post(
+        response = await self.session.post(
             url,
             json={
                 "csoId": self.session.acms_user_data["CsoId"],
@@ -248,7 +230,7 @@ class AcmsApiClient:
         response.raise_for_status()
         return self._map_docket_entries_response(response.json())
 
-    def get_attachments(
+    async def get_attachments(
         self,
         docket_entry_id: str,
         is_case_participant: bool,
@@ -269,7 +251,7 @@ class AcmsApiClient:
         path = self.ATTACHMENTS_ENDPOINT.format(entry_id=docket_entry_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching attachment from: {url}")
-        response = self.session.post(
+        response = await self.session.post(
             url,
             json={
                 "isUserCaseParticipant": is_case_participant,
@@ -286,7 +268,7 @@ class AcmsApiClient:
             for attachment in raw_attachments
         ]
 
-    def download_pdf(
+    async def download_pdf(
         self,
         document_id: str,
         page_count: int,
@@ -326,7 +308,7 @@ class AcmsApiClient:
             ],
         }
         # Step 1: Request PDF merge operation
-        response = self.session.post(merge_pdf_path, json=body)
+        response = await self.session.post(merge_pdf_path, json=body)
         response.raise_for_status()
         data = response.json()
 
@@ -335,7 +317,7 @@ class AcmsApiClient:
 
         # Step 2: Poll until the merge job is completed or timeout
         for _ in range(max_attempts):
-            response = self.session.get(status_url)
+            response = await self.session.get(status_url)
             response.raise_for_status()
             data = response.json()
             status = data["runtimeStatus"].lower()
@@ -344,7 +326,7 @@ class AcmsApiClient:
                 pdf_id = data["output"]
                 break
 
-            time.sleep(poll_interval)
+            await asyncio.sleep(poll_interval)
         else:
             # If loop completes without break
             raise TimeoutError(
@@ -352,6 +334,6 @@ class AcmsApiClient:
             )
 
         # Step 3: Retrieve the merged PDF by its file ID
-        response = self.session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
+        response = await self.session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
         response.raise_for_status()
         return response
