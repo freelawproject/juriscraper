@@ -23,6 +23,18 @@ Changes:
 Fixes:
 -
 
+## 3.0.0 - 2026-03-18
+
+Features:
+-
+
+Changes:
+- Migrate from `requests` to `httpx.AsyncClient` for AbstractSite children scrapers HTTP workflows #1843
+- Migrate scraper sync call paths to async #1843
+
+Fixes:
+-
+
 ## 2.8.4 - 2026-03-17
 
 Features:
@@ -45,8 +57,6 @@ Features:
 Changes:
 - Raise an exception during parsing for Texas docket numbers we know to be bad data
 - Update Texas docket number validation to handle all 6,401 valid cases that were failing
-- Migrate from `requests` to `httpx.AsyncClient` for scraper HTTP workflows #1843
-- Migrate scraper sync call paths to async #1843
 
 Fixes:
 - Fix `sc`, `sc_u`, `scctapp`, `scctapp_u` update XPath selectors for redesigned SC courts website
