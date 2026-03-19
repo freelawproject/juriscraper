@@ -27,7 +27,9 @@ class Site(iowa.Site):
         path = f"//a[{path_filter_class}][{path_filter_text}]/@href"
         for archive_page_url in landing_page_html.xpath(path):
             logger.info(f"Back scraping archive page: {archive_page_url}")
-            archive_page_html = self._get_html_tree_by_url(archive_page_url)
+            archive_page_html = await self._get_html_tree_by_url(
+                archive_page_url
+            )
             self.extract_archive_cases(archive_page_html)
 
     def extract_archive_cases(self, html):
