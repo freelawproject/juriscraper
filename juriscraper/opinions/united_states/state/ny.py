@@ -81,7 +81,10 @@ class Site(OpinionSiteLinear):
         }
 
     def _process_html(self):
-        for row in self.html.xpath(".//table")[-1].xpath(".//tr")[1:]:
+        tables = self.html.xpath(".//table")
+        if not tables:
+            return
+        for row in tables[-1].xpath(".//tr")[1:]:
             slip_cite = " ".join(row.xpath("./td[5]//text()"))
             official_citation = " ".join(row.xpath("./td[4]//text()"))
             url = row.xpath(".//a")[0].get("href")
