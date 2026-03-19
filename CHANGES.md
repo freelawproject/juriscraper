@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.1 - 2026-03-18
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Added missing `await` to `la`, `iowactapp` and `miss` scrapers #1860
 - Catch correct `httpx.TimeoutException` in `get_extension` #1860
 
