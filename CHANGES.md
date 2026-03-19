@@ -15,13 +15,15 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Implements `kan` and `kanctapp` backscraper #1316
 
 Changes:
--
+- `kan` back to OpinionSiteLinear
+
 
 Fixes:
--
+- Fixes `kan` and `kanctapp` by using urllib requests #1316
+- Fixes the sample caller to download documents
 
 ## 3.0.1 - 2026-03-18
 
