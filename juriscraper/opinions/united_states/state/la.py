@@ -37,7 +37,7 @@ class Site(OpinionSiteLinear):
         )
         # parse 2 most recent Opinon/PerCuriam sub-pages
         urls = landing_page.xpath(path)[:2]
-        return [self._get_subpage_html_by_url(url) for url in urls]
+        return [await self._get_subpage_html_by_url(url) for url in urls]
 
     def _process_html(self):
         xpath = "//a[contains(@href, 'opinions') and contains(@href, 'pdf')]"
@@ -87,8 +87,8 @@ class Site(OpinionSiteLinear):
             return None
         return text.rstrip(":").lstrip("BY").strip()
 
-    def _get_subpage_html_by_url(self, url):
-        page = self._get_html_tree_by_url(url)
+    async def _get_subpage_html_by_url(self, url):
+        page = await self._get_html_tree_by_url(url)
         return self._get_subpage_html_by_page(page)
 
     def _get_subpage_html_by_page(self, page):
