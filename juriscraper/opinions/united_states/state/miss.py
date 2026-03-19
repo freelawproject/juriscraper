@@ -33,7 +33,7 @@ class Site(OpinionSiteLinear):
         if request_dict is None:
             request_dict = {}
         dates_page = await super()._download(request_dict)
-        self.parse_date_pages(dates_page)
+        await self.parse_date_pages(dates_page)
 
     """Keep track of the most recent N date pages.
     We dont want to crawl all the way back to 1996, so we only
@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
     months worth of cases.
     """
 
-    def parse_date_pages(self, dates_page):
+    async def parse_date_pages(self, dates_page):
         # For testing, each example file should be a specific sub-date page,
         # like https://courts.ms.gov/Images/HDList/SCT02-27-2020.html
         if self.test_mode_enabled():
@@ -56,7 +56,7 @@ class Site(OpinionSiteLinear):
                 self.domain,
                 datetime.date.strftime(date, "%m-%d-%Y"),
             )
-            page = self._get_html_tree_by_url(url)
+            page = await self._get_html_tree_by_url(url)
             self.pages[f"{date}"] = page
 
     """Convert string of dates on page into list of date objects.
