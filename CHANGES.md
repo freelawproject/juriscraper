@@ -24,6 +24,7 @@ Changes:
 Fixes:
 - Fixes `kan` and `kanctapp` by using urllib requests #1316
 - Fixes the sample caller to download documents
+- Fixed the `nh_p` and `nh_u` scrapers #1663
 
 ## 3.0.1 - 2026-03-18
 

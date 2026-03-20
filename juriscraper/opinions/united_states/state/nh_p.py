@@ -35,6 +35,8 @@ class Site(OpinionSiteLinear):
     # document_purpose = 1331 -> Supreme Court Opinion
     base_filter = "{}@field_document_purpose|=|1331"
     year_to_filter = {
+        2026: "@field_document_subcategory|=|2721",
+        2025: "@field_document_subcategory|=|2616",
         2024: "@field_document_subcategory|=|2316",
         2023: "@field_document_subcategory|=|2256",
         2022: "@field_document_subcategory|=|2091",
@@ -175,7 +177,12 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.request["headers"] = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
-            "Sec-Ch-Ua": '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
             "Referer": f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/{self.document_type}/{year}",
             "X-Requested-With": "XMLHttpRequest",
         }
