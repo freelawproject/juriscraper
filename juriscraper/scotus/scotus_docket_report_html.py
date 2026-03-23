@@ -3,6 +3,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Optional
 
+import lxml.html
 from lxml import html
 from lxml.html import HtmlElement
 
@@ -36,7 +37,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
         super().__init__(court_id=court_id)
-        self.tree = None
+        self.tree: lxml.html.HtmlElement | None = None
 
     def _parse_text(self, text: str) -> None:
         """Parse raw HTML and store a lxml tree.

@@ -1,17 +1,27 @@
 import re
 from collections import defaultdict
+from datetime import date
+from enum import Enum
 from typing import Any, Optional
 
 from lxml import html
 from lxml.html import HtmlElement
 
-from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.html_utils import (
+    strip_bad_html_tags_insecure,
+    table_to_array2d,
+)
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
 
 from .scotus_docket_report_html import SCOTUSDocketReportHTML
 
 logger = make_default_logger()
+
+
+class HTMPageFormat(Enum):
+    Old = 1
+    New = 2
 
 
 class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
@@ -35,6 +45,9 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         :return: None.
         """
         super().__init__(court_id=court_id)
+        self._case_data_table: Optional[list[list[HtmlElement]]] = None
+        self._docket_entry_table: Optional[list[list[HtmlElement]]] = None
+        self._page_format: Optional[HTMPageFormat] = None
 
     @property
     def metadata(self) -> dict[str, Any]:
@@ -43,6 +56,44 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         :return: A dict with the SCOTUS docket metadata.
         """
         if self.tree is None:
+            return {}
+
+        case_data_table_element = self.tree.find(".//td[title]/table")
+        if case_data_table_element is None:
+            logger.error("Could not find case metadata table.")
+            return {}
+        self._case_data_table = table_to_array2d(case_data_table_element)
+        docket_entry_table_elements = self.tree.xpath(
+            ".//td[title]/table[.//tr[contains(normalize-space(.), '~~Date~~')]]"
+        )
+        if len(docket_entry_table_elements) == 0:
+            logger.error("Could not find docket entry table.")
+            return {}
+        if len(docket_entry_table_elements) > 1:
+            logger.error(
+                "Found multiple tables matching docket entry table XPath."
+            )
+            return {}
+        self._docket_entry_table = table_to_array2d(
+            docket_entry_table_elements[0]
+        )
+
+        docket_title_cell = next(
+            (
+                (i, j)
+                for i, row in enumerate(self._case_data_table)
+                for j, e in enumerate(row)
+                if e.text and e.text.startswith("Title:")
+            ),
+            None,
+        )
+
+        if docket_title_cell == (1, 0):
+            self._page_format = HTMPageFormat.New
+        elif docket_title_cell == (1, 1):
+            self._page_format = HTMPageFormat.Old
+        else:
+            logger.error("Unrecognized docket page format.")
             return {}
 
         docket_number = None
@@ -55,59 +106,96 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             )
             docket_number = m.group(1).strip() if m else None
 
-        # Case name
-        title_tr = self._htm_row_for_label("Title:")
-        title_td = (
-            next(iter(title_tr.xpath("./td[2]")), None)
-            if title_tr is not None
-            else None
-        )
-        case_name = (
-            harmonize(clean_string(self._join_nodes_content([title_td])))
-            if title_td is not None
-            else ""
-        )
-
-        # Dates and lower court info
-        date_filed = self.normalize_date(self._htm_value_by_label("Docketed:"))
-        lower_court = self._htm_value_by_label("Lower Ct:")
-
         # Lower court data
-        lower_court_raw = self._htm_value_by_label(
-            "Case Nos.:", allow_indent=True
-        )
-        lower_court_raw = (lower_court_raw or "").strip()
+        lower_court_raw = (self.lower_court_case_numbers_raw or "").strip()
         lower_court_cleaned = None
         if lower_court_raw:
             lower_court_cleaned = self.clean_lower_court_cases(
                 lower_court_raw.strip("()")
             )
-        lower_court_decision_date = self.normalize_date(
-            self._htm_value_by_label("Decision Date:", allow_indent=True)
-        )
-        lower_court_rehearing_denied_date = self.normalize_date(
-            self._htm_value_by_label("Rehearing Denied:", allow_indent=True)
-        )
+
+        if self._page_format == HTMPageFormat.New:
+            lower_court_decision_date = self.normalize_date(
+                self._htm_value_by_label("Decision Date:", allow_indent=True)
+            )
+            lower_court_rehearing_denied_date = self.normalize_date(
+                self._htm_value_by_label(
+                    "Rehearing Denied:", allow_indent=True
+                )
+            )
+        else:
+            lower_court_decision_date = None
+            lower_court_rehearing_denied_date = None
 
         linked_with_label = "string(//tr[td[1][starts-with(normalize-space(.), 'Linked with')]])"
         linked_with_val = self.tree.xpath(linked_with_label).replace(
             "Linked with", ""
         )
         links = (linked_with_val or "").strip()
+
         return {
             "docket_number": docket_number,
             "capital_case": None,
-            "date_filed": date_filed,
-            "case_name": case_name or None,
+            "date_filed": self.date_filed,
+            "case_name": self.case_name,
             "links": links,
-            "lower_court": lower_court or None,
-            "lower_court_case_numbers_raw": lower_court_raw or None,
+            "lower_court": self.lower_court or None,
+            "lower_court_case_numbers_raw": lower_court_raw,
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied_date,
             "questions_presented": None,  # HTM version doesn’t have this link.
             "discretionary_court_decision": None,
         }
+
+    def _get_case_data_text(self, i: int, j: int) -> str:
+        """
+        Get the text content of an element of the case data table, cleaning
+        whitespace. Does not perform bounds checks.
+
+        :param i: The row of the element.
+        :param j: The column of the element.
+
+        :return: The text content of the element.
+        """
+        return self._clean_whitespace(
+            self._case_data_table[i][j].text_content()
+        )
+
+    @property
+    def date_filed(self) -> Optional[date]:
+        if self._page_format == HTMPageFormat.New:
+            return self.normalize_date(self._get_case_data_text(2, 1))
+        return self.normalize_date(self._get_case_data_text(5, 0))
+
+    @property
+    def lower_court(self) -> Optional[str]:
+        if self._page_format == HTMPageFormat.New:
+            return self._get_case_data_text(3, 1)
+        return self._clean_whitespace(self._get_case_data_text(4, 2))
+
+    @property
+    def lower_court_case_numbers_raw(self) -> Optional[str]:
+        if self._page_format == HTMPageFormat.New:
+            return self._clean_whitespace(
+                self.tree.find(".//td[title]/table[2]//td[2]").text_content()
+            )
+        return self._get_case_data_text(5, 2)
+
+    @property
+    def case_name(self) -> Optional[str]:
+        if self._page_format == HTMPageFormat.New:
+            title_parts = [
+                self._clean_whitespace(node.text_content())
+                for node in self._case_data_table[1][1].findall(".//td")
+            ]
+        else:
+            title_parts = [
+                self._get_case_data_text(1, 2),
+                self._get_case_data_text(2, 2),
+                self._get_case_data_text(3, 2),
+            ]
+        return harmonize(clean_string(" ".join(title_parts)))
 
     def _build_docket_entry(
         self,
