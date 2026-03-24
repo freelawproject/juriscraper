@@ -12,4 +12,3 @@ class Site(nyappterm_1st.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court = "Appellate Term, 2d Dept"
-        self._set_parameters()
