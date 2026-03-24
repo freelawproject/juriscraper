@@ -385,15 +385,13 @@ class AbstractSite:
         if self.use_urllib:
             data = None
             if self.method == "POST":
-                data = urllib.parse.urlencode(self.parameters).encode(
-                    "utf-8"
-                )
+                data = urllib.parse.urlencode(self.parameters).encode("utf-8")
             raw = self._urllib_fetch(self.url, data=data)
             text = raw.decode("utf-8")
             content_type = ""
             if hasattr(self.request["response"], "getheader"):
-                content_type = (
-                    self.request["response"].getheader("Content-Type", "")
+                content_type = self.request["response"].getheader(
+                    "Content-Type", ""
                 )
             if "json" in content_type:
                 return json.loads(text)
@@ -536,7 +534,9 @@ class AbstractSite:
         if data:
             headers["Content-Type"] = "application/x-www-form-urlencoded"
             headers["Accept-Encoding"] = "gzip, deflate"
-        req = urllib.request.Request(url, data=data, headers=headers, method=self.method)
+        req = urllib.request.Request(
+            url, data=data, headers=headers, method=self.method
+        )
         response = self.urllib_opener.open(req, timeout=60)
         raw = response.read()
         if raw[:2] == b"\x1f\x8b":
