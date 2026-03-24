@@ -21,6 +21,30 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.2 - 2026-03-20
+
+Features:
+- Implements `kan` and `kanctapp` backscraper #1316
+
+Changes:
+- `kan` back to OpinionSiteLinear
+
+Fixes:
+- Fixes `kan` and `kanctapp` by using urllib requests #1316
+- Fixes the sample caller to download documents
+- Fixed the `nh_p` and `nh_u` scrapers #1663
+
+## 3.0.1 - 2026-03-18
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Added missing `await` to `la`, `iowactapp` and `miss` scrapers #1860
 - Catch correct `httpx.TimeoutException` in `get_extension` #1860
 
