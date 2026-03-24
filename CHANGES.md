@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
-- Fix `ny` IndexError when court returns no results table #1862
+- Fix `ny` update all NY scrapers for redesigned court website #1862
 
 ## 3.0.1 - 2026-03-18
 
