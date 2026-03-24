@@ -4,12 +4,12 @@ Court Short Name: La. Ct. App. 3d Cir.
 Author: grossir
 History:
   2026-03-19: Created by grossir
+  2026-03-24: Switched from calendar navigation to month/year search
 Notes:
   The site uses Cloudflare which blocks httpx via TLS fingerprinting.
-  We use urllib.request which is not blocked. The site is an ASP.NET
-  app with a calendar control. To get opinions, we navigate the
-  calendar to a month, find highlighted dates (opinion dates), then
-  click each date to get the opinion list.
+  We use urllib.request which is not blocked.The site is an ASP.NET
+  app. We search opinions by
+  month and year using the site's search form.
 """
 
 import re
@@ -23,9 +23,6 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
-# Days from Jan 1, 2000 (epoch for ASP.NET calendar serial numbers)
-CALENDAR_EPOCH = date(2000, 1, 1)
 
 
 class Site(OpinionSiteLinear):
@@ -42,21 +39,6 @@ class Site(OpinionSiteLinear):
         self.needs_special_headers = True
         self.target_date = datetime.today()
         self.make_backscrape_iterable(kwargs)
-
-    def _post_calendar(self, tree, event_argument):
-        """POST to the calendar control
-
-        :param tree: current page lxml tree (for extracting form params)
-        :param event_argument: calendar event argument (date serial or
-            V{serial} for navigation)
-        :return: lxml HTML tree of response
-        """
-        params = self._get_form_params(tree)
-        params["__EVENTTARGET"] = "ctl00$opiCalendar"
-        params["__EVENTARGUMENT"] = str(event_argument)
-        data = urllib.parse.urlencode(params).encode("utf-8")
-        raw = self._urllib_fetch(self.url, data=data)
-        return lxml_html.fromstring(raw.decode("utf-8"))
 
     @staticmethod
     def _get_form_params(tree):
@@ -84,46 +66,21 @@ class Site(OpinionSiteLinear):
                     )
         return params
 
-    @staticmethod
-    def _get_opinion_date_serials(tree):
-        """Find calendar dates that have opinions (highlighted yellow)
+    def _search_by_month_year(self, tree, month_name, year):
+        """POST the month/year search form
 
-        :param tree: lxml HTML tree with calendar
-        :return: list of date serial numbers with opinions
+        :param tree: lxml HTML tree with the search form
+        :param month_name: full month name (e.g. "March")
+        :param year: year as string (e.g. "2026")
+        :return: lxml HTML tree of response
         """
-        serials = []
-        for td in tree.xpath('//table[@id="opiCalendar"]//td'):
-            style = td.get("style", "")
-            if "background-color:#fffde7" not in style:
-                continue
-            a = td.xpath(".//a")
-            if not a:
-                continue
-            href = a[0].get("href", "")
-            m = re.search(r"'(\d+)'\)", href)
-            if m:
-                serials.append(int(m.group(1)))
-        return serials
-
-    @staticmethod
-    def _get_displayed_month(tree):
-        """Get the month currently shown in the calendar
-
-        :param tree: lxml HTML tree
-        :return: (year, month) tuple or None
-        """
-        title = tree.xpath(
-            '//table[@id="opiCalendar"]'
-            "//td[@align='center' and @width='70%']"
-        )
-        if title:
-            text = title[0].text_content().strip()
-            try:
-                dt = datetime.strptime(text, "%B %Y")
-                return (dt.year, dt.month)
-            except ValueError:
-                return None
-        return None
+        params = self._get_form_params(tree)
+        params["ctl00$MainContent$ddlSearchOpinions2_Month"] = month_name
+        params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(year)
+        params["ctl00$MainContent$btnSearchOpinionsByMonthYear"] = "Search"
+        data = urllib.parse.urlencode(params).encode("utf-8")
+        raw = self._urllib_fetch(self.url, data=data)
+        return lxml_html.fromstring(raw.decode("utf-8"))
 
     async def _process_html(self):
         if self.test_mode_enabled():
@@ -131,49 +88,26 @@ class Site(OpinionSiteLinear):
             return
 
         target = self.target_date
-        first_of_month = date(target.year, target.month, 1)
-        first_serial = (first_of_month - CALENDAR_EPOCH).days
-
-        # Check if calendar is already showing the target month
-        displayed = self._get_displayed_month(self.html)
-        if displayed == (target.year, target.month):
-            # Already on the target month, use current page
-            tree = self.html
-        else:
-            # Navigate calendar to the target month
-            tree = self._post_calendar(self.html, f"V{first_serial}")
-
-        # Find which dates have opinions
-        opinion_serials = self._get_opinion_date_serials(tree)
-        if not opinion_serials:
-            logger.warning(
-                "No opinion dates found for %s/%s. "
-                "The calendar highlight color may have changed.",
-                target.month,
-                target.year,
-            )
-            return
-
-        logger.info(
-            "Found %d opinion dates for %s/%s",
-            len(opinion_serials),
-            target.month,
-            target.year,
+        month_name = target.strftime("%B")
+        tree = self._search_by_month_year(
+            self.html, month_name, target.year
         )
-
-        # Click each opinion date to get the opinion list
-        for serial in opinion_serials:
-            tree = self._post_calendar(tree, serial)
-            self._extract_opinions(tree)
+        self._extract_opinions(tree)
 
     def _extract_opinions(self, tree):
-        """Extract opinion data from the results div
+        """Extract opinion data from search results
 
         :param tree: lxml HTML tree containing opinion results
         """
         rows = tree.xpath(
-            '//div[@id="divOpinionSearchByDate"]//tbody/tr[.//a]'
+            '//table[.//strong[contains(text(),"Opinion Search by")]]'
+            "//tbody/tr[.//a]"
         )
+        if not rows:
+            # Fallback for test mode (example uses divOpinionSearchByDate)
+            rows = tree.xpath(
+                '//div[@id="divOpinionSearchByDate"]//tbody/tr[.//a]'
+            )
         for row in rows:
             td = row.xpath(".//td")[0]
             link = td.xpath(".//h4/a/@href")

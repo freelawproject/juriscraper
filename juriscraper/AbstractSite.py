@@ -536,7 +536,7 @@ class AbstractSite:
         if data:
             headers["Content-Type"] = "application/x-www-form-urlencoded"
             headers["Accept-Encoding"] = "gzip, deflate"
-        req = urllib.request.Request(url, data=data, headers=headers, method=self.method)
+        req = urllib.request.Request(url, data=data, headers=headers)
         response = self.urllib_opener.open(req, timeout=60)
         raw = response.read()
         if raw[:2] == b"\x1f\x8b":
