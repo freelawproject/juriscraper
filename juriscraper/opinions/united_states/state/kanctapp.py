@@ -6,16 +6,13 @@ Author: William Palin
 Court Contact:
 History:
  - 2023-01-04: Created.
-Notes:
- - selenium
+ - 2026-03-19: Refactored from WebDriven to OpinionSiteLinear. Added backscraper. grossir
 """
 
 from juriscraper.opinions.united_states.state import kan
 
 
 class Site(kan.Site):
-    link_xp = '//div[@class="col-md-6"][2]/ul/li'
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
+    court_string = "Court of Appeals"
+    court_filter = "20"
+    days_interval = 15
