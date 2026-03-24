@@ -27,6 +27,8 @@ Fixes:
 
 Features:
 - Implements `kan` and `kanctapp` backscraper #1316
+- Implements `lactapp_3` using urllib #1455
+- Abstract `urllib` implementation #1455
 
 Changes:
 - `kan` back to OpinionSiteLinear

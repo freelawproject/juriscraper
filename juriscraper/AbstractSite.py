@@ -1,8 +1,12 @@
+import gzip
 import hashlib
+import http.cookiejar
 import inspect
 import json
 import os
 import ssl
+import urllib.parse
+import urllib.request
 from datetime import datetime
 from typing import Union
 
@@ -48,6 +52,10 @@ class AbstractSite:
 
     Should not contain lists that can't be sorted by the _date_sort function.
     """
+
+    # Set to True in subclasses to use urllib instead of httpx.
+    # Useful for sites that block httpx via TLS fingerprinting.
+    use_urllib = False
 
     def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
@@ -95,6 +103,13 @@ class AbstractSite:
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
         self.needs_special_headers = False
+
+        # urllib opener for sites that need TLS fingerprint bypass
+        if self.use_urllib:
+            cookie_jar = http.cookiejar.CookieJar()
+            self.urllib_opener = urllib.request.build_opener(
+                urllib.request.HTTPCookieProcessor(cookie_jar)
+            )
 
         # indicates whether the scraper should have results or not to raise an error
         self.should_have_results = False
@@ -364,7 +379,29 @@ class AbstractSite:
 
         if self.test_mode_enabled():
             await self._request_url_mock(self.url)
-        elif self.method == "GET":
+            self._post_process_response()
+            return self._return_response_text_object()
+
+        if self.use_urllib:
+            data = None
+            if self.method == "POST":
+                data = urllib.parse.urlencode(self.parameters).encode(
+                    "utf-8"
+                )
+            raw = self._urllib_fetch(self.url, data=data)
+            text = raw.decode("utf-8")
+            content_type = ""
+            if hasattr(self.request["response"], "getheader"):
+                content_type = (
+                    self.request["response"].getheader("Content-Type", "")
+                )
+            if "json" in content_type:
+                return json.loads(text)
+            text = self._clean_text(text)
+            html_tree = self._make_html_tree(text)
+            return html_tree
+
+        if self.method == "GET":
             await self._request_url_get(self.url)
         elif self.method == "POST":
             await self._request_url_post(self.url)
@@ -483,6 +520,38 @@ class AbstractSite:
         if parameters is None:
             parameters = {}
         self.request["parameters"].update(parameters)
+
+    def _urllib_fetch(self, url, data=None):
+        """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
+
+        httpx gets blocked by Cloudflare due to its TLS fingerprint
+        (httpcore). Python's stdlib urllib uses a different TLS stack
+        that Cloudflare does not block.
+
+        :param url: URL to fetch
+        :param data: POST data as bytes, or None for GET
+        :return: raw response bytes
+        """
+        headers = dict(self.request["headers"])
+        if data:
+            headers["Content-Type"] = "application/x-www-form-urlencoded"
+            headers["Accept-Encoding"] = "gzip, deflate"
+        req = urllib.request.Request(url, data=data, headers=headers, method=self.method)
+        response = self.urllib_opener.open(req, timeout=60)
+        raw = response.read()
+        if raw[:2] == b"\x1f\x8b":
+            raw = gzip.decompress(raw)
+
+        # Populate request dict for save_response compatibility
+        self.request["url"] = url
+        self.request["response"] = response
+        if self.save_response:
+            response.text = raw.decode("utf-8")
+            response.content = raw
+            response.history = []
+            self.save_response(self)
+
+        return raw
 
     async def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary

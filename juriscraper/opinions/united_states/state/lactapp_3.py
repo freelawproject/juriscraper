@@ -12,12 +12,8 @@ Notes:
   click each date to get the opinion list.
 """
 
-import calendar
-import gzip
-import http.cookiejar
 import re
 import urllib.parse
-import urllib.request
 from datetime import date, datetime
 from urllib.parse import urljoin
 
@@ -36,6 +32,7 @@ class Site(OpinionSiteLinear):
     base_url = "https://www.la3circuit.org"
     first_opinion_date = datetime(1992, 1, 1)
     days_interval = 28
+    use_urllib = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -45,39 +42,6 @@ class Site(OpinionSiteLinear):
         self.needs_special_headers = True
         self.target_date = datetime.today()
         self.make_backscrape_iterable(kwargs)
-
-        # urllib opener for bypassing Cloudflare TLS fingerprinting
-        self.cookie_jar = http.cookiejar.CookieJar()
-        self.opener = urllib.request.build_opener(
-            urllib.request.HTTPCookieProcessor(self.cookie_jar)
-        )
-
-    def _urllib_request(self, url, data=None):
-        """Make a request using urllib.request
-
-        httpx is blocked by Cloudflare TLS fingerprinting on this
-        site, but urllib.request works fine.
-
-        :param url: URL to request
-        :param data: POST data bytes, or None for GET
-        :return: lxml HTML tree
-        """
-        headers = {"User-Agent": "Juriscraper"}
-        if data:
-            headers.update(
-                {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "Accept-Encoding": "gzip, deflate",
-                    "Origin": self.base_url,
-                    "Referer": self.url,
-                }
-            )
-        req = urllib.request.Request(url, data=data, headers=headers)
-        resp = self.opener.open(req, timeout=60)
-        raw = resp.read()
-        if raw[:2] == b"\x1f\x8b":
-            raw = gzip.decompress(raw)
-        return lxml_html.fromstring(raw.decode("utf-8"))
 
     def _post_calendar(self, tree, event_argument):
         """POST to the calendar control
@@ -91,7 +55,8 @@ class Site(OpinionSiteLinear):
         params["__EVENTTARGET"] = "ctl00$opiCalendar"
         params["__EVENTARGUMENT"] = str(event_argument)
         data = urllib.parse.urlencode(params).encode("utf-8")
-        return self._urllib_request(self.url, data=data)
+        raw = self._urllib_fetch(self.url, data=data)
+        return lxml_html.fromstring(raw.decode("utf-8"))
 
     @staticmethod
     def _get_form_params(tree):
@@ -140,11 +105,6 @@ class Site(OpinionSiteLinear):
                 serials.append(int(m.group(1)))
         return serials
 
-    async def _download(self, request_dict=None):
-        if self.test_mode_enabled():
-            return await super()._download(request_dict)
-        return self._urllib_request(self.url)
-
     @staticmethod
     def _get_displayed_month(tree):
         """Get the month currently shown in the calendar
@@ -158,10 +118,11 @@ class Site(OpinionSiteLinear):
         )
         if title:
             text = title[0].text_content().strip()
-            for i, name in enumerate(calendar.month_name):
-                if name and name in text:
-                    year = int(text.split()[-1])
-                    return (year, i)
+            try:
+                dt = datetime.strptime(text, "%B %Y")
+                return (dt.year, dt.month)
+            except ValueError:
+                return None
         return None
 
     async def _process_html(self):
@@ -184,6 +145,15 @@ class Site(OpinionSiteLinear):
 
         # Find which dates have opinions
         opinion_serials = self._get_opinion_date_serials(tree)
+        if not opinion_serials:
+            logger.warning(
+                "No opinion dates found for %s/%s. "
+                "The calendar highlight color may have changed.",
+                target.month,
+                target.year,
+            )
+            return
+
         logger.info(
             "Found %d opinion dates for %s/%s",
             len(opinion_serials),
