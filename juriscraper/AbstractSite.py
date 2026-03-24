@@ -385,15 +385,13 @@ class AbstractSite:
         if self.use_urllib:
             data = None
             if self.method == "POST":
-                data = urllib.parse.urlencode(self.parameters).encode(
-                    "utf-8"
-                )
+                data = urllib.parse.urlencode(self.parameters).encode("utf-8")
             raw = self._urllib_fetch(self.url, data=data)
             text = raw.decode("utf-8")
             content_type = ""
             if hasattr(self.request["response"], "getheader"):
-                content_type = (
-                    self.request["response"].getheader("Content-Type", "")
+                content_type = self.request["response"].getheader(
+                    "Content-Type", ""
                 )
             if "json" in content_type:
                 return json.loads(text)

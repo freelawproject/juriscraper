@@ -19,7 +19,6 @@ from urllib.parse import urljoin
 
 from lxml import html as lxml_html
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -89,9 +88,7 @@ class Site(OpinionSiteLinear):
 
         target = self.target_date
         month_name = target.strftime("%B")
-        tree = self._search_by_month_year(
-            self.html, month_name, target.year
-        )
+        tree = self._search_by_month_year(self.html, month_name, target.year)
         self._extract_opinions(tree)
 
     def _extract_opinions(self, tree):
