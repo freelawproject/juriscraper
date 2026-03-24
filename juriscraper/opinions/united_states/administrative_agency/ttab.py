@@ -66,7 +66,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         logger.info("Backscraping for range %s %s", *dates)
         self._search_payload["dateRangeData"] = {
             "decisionDate": {
@@ -75,7 +75,7 @@ class Site(OpinionSiteLinear):
             }
         }
         self._search_payload["recordStartNumber"] = 0
-        self.html = self._download()
+        self.html = await self._download()
         total = self.html.get("recordTotalQuantity", 0)
         self._process_html()
 
@@ -83,6 +83,6 @@ class Site(OpinionSiteLinear):
         start = page_size
         while start < total:
             self._search_payload["recordStartNumber"] = start
-            self.html = self._download()
+            self.html = await self._download()
             self._process_html()
             start += page_size
