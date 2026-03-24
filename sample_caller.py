@@ -156,7 +156,7 @@ async def extract_doc_content(
     return extracted_content, metadata_dict
 
 
-def check_hashes(data: bytes, download_url: str, site) -> None:
+async def check_hashes(data: bytes, download_url: str, site) -> None:
     """Detect timestamped content by downloading the same URL twice and
     comparing hashes
 
@@ -164,7 +164,7 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
     :param download_url: the URL to get the same data as in the first argument
     :param site: the site object
     """
-    datas = [data, site.download_content(download_url)]
+    datas = [data, await site.download_content(download_url)]
     hashes = []
 
     for data in datas:
@@ -191,7 +191,7 @@ def check_hashes(data: bytes, download_url: str, site) -> None:
         logger.info("Same URL hashes are the same. It's OK")
 
 
-def process_an_opinion(
+async def process_an_opinion(
     item: dict,
     site,
     binaries: bool,
@@ -214,18 +214,18 @@ def process_an_opinion(
         return
 
     try:
-        data = site.download_content(
+        data = await site.download_content(
             download_url, doctor_is_available=extract_content
         )
     except BadContentError:
         return
 
     if test_hashes:
-        check_hashes(data, download_url, site)
+        await check_hashes(data, download_url, site)
 
     filename = item["case_names"].lower().replace(" ", "_")[:40]
 
-    data, metadata_from_text = extract_doc_content(
+    data, metadata_from_text = await extract_doc_content(
         data, extract_content, site, doctor_host, filename
     )
     logger.log(
@@ -271,7 +271,7 @@ async def scrape_court(
 
         if item.get("download_urls"):
             # OpinionSite case
-            process_an_opinion(
+            await process_an_opinion(
                 item, site, binaries, extract_content, test_hashes, doctor_host
             )
         else:
@@ -280,7 +280,7 @@ async def scrape_court(
             log_dict(item)
             for index, sub_opinion in enumerate(item["sub_opinions"]):
                 logger.info("\nAdding cluster entry %s", index)
-                process_an_opinion(
+                await process_an_opinion(
                     sub_opinion,
                     site,
                     binaries,
