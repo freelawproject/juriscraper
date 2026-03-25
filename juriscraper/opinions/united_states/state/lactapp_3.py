@@ -82,9 +82,7 @@ class Site(OpinionSiteLinear):
         month_name = target.strftime("%B")
         params = self._get_form_params(tree)
         params["ctl00$MainContent$ddlSearchOpinions2_Month"] = month_name
-        params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(
-            target.year
-        )
+        params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(target.year)
         params["ctl00$MainContent$btnSearchOpinionsByMonthYear"] = "Search"
         data = urllib.parse.urlencode(params).encode("utf-8")
         headers = dict(self.request["headers"])
@@ -115,9 +113,7 @@ class Site(OpinionSiteLinear):
             link = td.xpath(".//h4/a/@href")
             if not link:
                 text = td.text_content().strip()[:100]
-                logger.warning(
-                    "No link found in row, skipping: %s", text
-                )
+                logger.warning("No link found in row, skipping: %s", text)
                 continue
 
             url = urljoin(f"{self.base_url}/", link[0])
