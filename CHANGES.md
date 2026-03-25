@@ -58,7 +58,7 @@ Changes:
 - Migrate scraper sync call paths to async #1843
 
 Fixes:
--
+- Fix `nm` 1    Zxc vbnm,./00-p;[][ ] #1874
 
 ## 2.8.4 - 2026-03-17
 

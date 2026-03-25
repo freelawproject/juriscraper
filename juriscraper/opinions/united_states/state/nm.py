@@ -57,13 +57,10 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
             metadata = row.xpath(".//div[@class='subMetadata']/span/text()")
             if metadata:
-                status = (
-                    "Published"
-                    if "Reported" in metadata[-1]
-                    else "Unpublished"
-                )
-            else:
-                status = "Unknown"
+                if "Reported" in metadata[-1] or "Slip" in metadata[-1]:
+                    status = "Published"
+                elif "Unreported" in metadata[-1]:
+                    status = "Unpublished"
 
             self.cases.append(
                 {
