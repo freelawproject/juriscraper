@@ -19,10 +19,7 @@ from juriscraper.lib.date_utils import (
     make_date_range_tuples,
 )
 from juriscraper.lib.exceptions import (
-    EmptyFileError,
     InsanityException,
-    NoDownloadUrlError,
-    UnexpectedContentTypeError,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -37,9 +34,10 @@ from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     trunc,
 )
-from juriscraper.lib.utils import check_expected_content_types, check_download_url, check_empty_downloaded_file
-
 from juriscraper.lib.utils import (
+    check_download_url,
+    check_empty_downloaded_file,
+    check_expected_content_types,
     clean_attribute,
     sanity_check_case_names,
     sanity_check_dates,
@@ -455,7 +453,7 @@ class AbstractSite:
             timeout=300,
         )
 
-        check_empty_downloaded_file(r, download_url)        
+        check_empty_downloaded_file(r, download_url)
         check_expected_content_types(self, r, download_url)
 
         if doctor_is_available:
