@@ -61,6 +61,8 @@ class Site(OpinionSiteLinear):
                     status = "Published"
                 elif "Unreported" in metadata[-1]:
                     status = "Unpublished"
+                else:
+                    status = "Unknown"
 
             self.cases.append(
                 {

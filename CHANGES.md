@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
+- Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874        
 
 ## 3.0.2 - 2026-03-20
 
@@ -58,7 +59,7 @@ Changes:
 - Migrate scraper sync call paths to async #1843
 
 Fixes:
-- Fix `nm` 1    Zxc vbnm,./00-p;[][ ] #1874
+- 
 
 ## 2.8.4 - 2026-03-17
 
