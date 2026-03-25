@@ -291,14 +291,12 @@ def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
     :return: A 2D array of <td> elements with the same layout as the table.
     """
 
-    tbody = table.find(".//tbody")
-    rows = table.findall(".//tr")
-    if tbody:
-        rows = rows + tbody.findall(".//tr")
+    # Use direct children only to avoid picking up nested tables.
+    rows = table.findall("./tr") or table.findall("./tbody/tr")
 
     out = []
     for row in rows:
-        out.append(list(row.findall(".//td")))
+        out.append(list(row.findall("./td")))
 
     return out
 

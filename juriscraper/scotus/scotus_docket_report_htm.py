@@ -146,7 +146,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             "case_name": case_name,
             "links": links,
             "lower_court": self.lower_court or None,
-            "lower_court_case_numbers_raw": lower_court_raw,
+            "lower_court_case_numbers_raw": lower_court_raw or None,
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied_date,
@@ -157,13 +157,17 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     def _get_case_data_text(self, i: int, j: int) -> str:
         """
         Get the text content of an element of the case data table, cleaning
-        whitespace. Does not perform bounds checks.
+        whitespace.
 
         :param i: The row of the element.
         :param j: The column of the element.
 
-        :return: The text content of the element.
+        :return: The text content of the element, or empty string if out of bounds.
         """
+        if i >= len(self._case_data_table) or j >= len(
+            self._case_data_table[i]
+        ):
+            return ""
         return self._clean_whitespace(
             self._case_data_table[i][j].text_content()
         )
@@ -191,15 +195,21 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     @property
     def lower_court(self) -> Optional[str]:
         if self._page_format == HTMPageFormat.New:
-            return self._get_case_data_text(3, 1)
+            return self._htm_value_by_label(
+                "Lower Ct:"
+            ) or self._get_case_data_text(3, 1)
         return self._clean_whitespace(self._get_case_data_text(4, 2))
 
     @property
     def lower_court_case_numbers_raw(self) -> Optional[str]:
         if self._page_format == HTMPageFormat.New:
-            return self._clean_whitespace(
-                self.tree.find(".//td[title]/table[2]//td[2]").text_content()
-            )
+            result = self._htm_value_by_label("Case Nos.:", allow_indent=True)
+            if result:
+                return result
+            el = self.tree.find(".//td[title]/table[2]//td[2]")
+            if el is not None:
+                return self._clean_whitespace(el.text_content())
+            return None
         return self._get_case_data_text(5, 2)
 
     @property
@@ -215,7 +225,10 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 self._get_case_data_text(2, 2),
                 self._get_case_data_text(3, 2),
             ]
-        return harmonize(clean_string(" ".join(title_parts)))
+        name = harmonize(clean_string(" ".join(p for p in title_parts if p)))
+        # Strip trailing dangling "v." when there is no respondent name.
+        name = re.sub(r",?\s*v\.\s*$", "", name).strip()
+        return name
 
     def _build_docket_entry(
         self,
@@ -236,19 +249,18 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         description_html = ""
         if description_tds:
             # Select content up to first <br> and excluding .documentlinks;
-            # fallback to whole cell.
-            fragment = "\n".join(
-                self._parse_description_html(dtd).strip()
-                or html.tostring(dtd, encoding="unicode").strip()
-                for dtd in description_tds
-            )
-            # Skip empty tds like <td ...></td>
-            if not fragment or re.fullmatch(
-                r"<td\b[^>]*>\s*</td>", fragment, flags=re.I
-            ):
-                description_html = ""
-            else:
-                description_html = fragment
+            # fallback to whole cell. Filter out empty tds.
+            parts = []
+            for dtd in description_tds:
+                part = self._parse_description_html(dtd).strip()
+                if not part:
+                    raw = html.tostring(dtd, encoding="unicode").strip()
+                    if re.fullmatch(r"<td\b[^>]*>\s*</td>", raw, flags=re.I):
+                        continue
+                    part = raw
+                parts.append(part)
+            fragment = "\n".join(parts)
+            description_html = fragment if fragment else ""
 
             # If attachments with links are found in HTM dockets. Log an error
             # This is an opportunity to add support for it.
@@ -329,35 +341,60 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         lines = current_attorney.pop("_raw_lines", [])
         email = current_attorney.pop("_email", None)
 
-        # Filter lines: remove lines with IDs like "#1098260" and inline email if present.
-        filtered_lines = []
-        for ln in lines:
-            if email is None:
-                m = self.EMAIL_RE.search(ln)
-                if m:
-                    email = m.group(0)
+        if self._page_format == HTMPageFormat.Old:
+            # Old format: keep all lines as-is (no ID filtering, no title).
+            filtered_lines = []
+            for ln in lines:
+                if email is None:
+                    m = self.EMAIL_RE.search(ln)
+                    if m:
+                        email = m.group(0)
+                        continue
+                if ln:
+                    filtered_lines.append(ln)
+
+            partial_address = self._parse_address_lines(filtered_lines, 0)
+            addr_lines = partial_address.address_lines
+            current_attorney.update(
+                {
+                    "title": None,
+                    "address": "\n".join(addr_lines) if addr_lines else None,
+                    "city": partial_address.city,
+                    "state": partial_address.state,
+                    "zip": partial_address.zip_code,
+                    "email": email,
+                }
+            )
+        else:
+            # New format: filter IDs, extract title, join with ", ".
+            filtered_lines = []
+            for ln in lines:
+                if email is None:
+                    m = self.EMAIL_RE.search(ln)
+                    if m:
+                        email = m.group(0)
+                        continue
+                if self.ID_RE.search(ln):
                     continue
-            if self.ID_RE.search(ln):
-                continue
-            if ln:
-                filtered_lines.append(ln)
+                if ln:
+                    filtered_lines.append(ln)
 
-        title, start_add_idx = self._parse_address_title(filtered_lines)
-        partial_address = self._parse_address_lines(
-            filtered_lines, start_add_idx
-        )
+            title, start_add_idx = self._parse_address_title(filtered_lines)
+            partial_address = self._parse_address_lines(
+                filtered_lines, start_add_idx
+            )
+            addr_lines = partial_address.address_lines
+            current_attorney.update(
+                {
+                    "title": title,
+                    "address": ", ".join(addr_lines) if addr_lines else None,
+                    "city": partial_address.city,
+                    "state": partial_address.state,
+                    "zip": partial_address.zip_code,
+                    "email": email,
+                }
+            )
 
-        addr_lines = partial_address.address_lines
-        current_attorney.update(
-            {
-                "title": title,
-                "address": ", ".join(addr_lines) if addr_lines else None,
-                "city": partial_address.city,
-                "state": partial_address.state,
-                "zip": partial_address.zip_code,
-                "email": email,
-            }
-        )
         return current_attorney
 
     @property
@@ -384,15 +421,37 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         current_type = None
         current_attorney = None
 
+        def _flush_attorney(party_name: str = "") -> None:
+            """Finalize current_attorney and add to parties_by_key."""
+            nonlocal current_attorney
+            if current_attorney:
+                current_attorney = self._build_htm_attorney(current_attorney)
+                type_key = (current_type or "Other", party_name)
+                parties_by_key[type_key].append(current_attorney)
+                current_attorney = None
+
         for tr in header_tr.itersiblings(tag="tr"):
+            tds = tr.xpath("./td")
+            if not tds:
+                continue
+
             # Match table header e.g: "Attorneys for Petitioner:"
+            # New format wraps in <B>; old format uses plain text.
+            first_td_text = self._clean_whitespace(tds[0].text_content())
             header_text = self._clean_whitespace(
                 "".join(tr.xpath("./td[1]//b/text()"))
             )
+            if not header_text and re.match(
+                r"Attorneys for \w+", first_td_text
+            ):
+                header_text = first_td_text
             if header_text:
-                # Inside Petitioner, Respondent or Other parties.
-                current_type = self._map_contacts_header_to_type(header_text)
-                continue
+                mapped = self._map_contacts_header_to_type(header_text)
+                if mapped:
+                    # Flush any pending attorney without a "Party name:" row.
+                    _flush_attorney()
+                    current_type = mapped
+                    continue
 
             # Party name row. Finish previous attorney.
             party_name_re = r"^Party name:\s*"
@@ -401,16 +460,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 current_party_name = re.sub(
                     party_name_re, "", party_line, flags=re.I
                 ).strip()
-                if current_attorney:
-                    current_attorney = self._build_htm_attorney(
-                        current_attorney
-                    )
-                    type_key = (current_type or "Other", current_party_name)
-                    parties_by_key[type_key].append(current_attorney)
-                continue
-
-            tds = tr.xpath("./td")
-            if not tds:
+                _flush_attorney(current_party_name)
                 continue
 
             # Extract normalized columns.
@@ -429,6 +479,11 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 if len(tds) >= 3
                 else None
             )
+
+            # Skip spacing rows (only &nbsp; / whitespace).
+            if not name_col and not address_col:
+                _flush_attorney()
+                continue
 
             # Email-only row appears in the address column.
             if (
@@ -469,6 +524,9 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             if not name_col and address_col and current_attorney:
                 current_attorney["_raw_lines"].append(address_col)
                 continue
+
+        # Flush any trailing attorney without a "Party name:" row.
+        _flush_attorney()
 
         return [
             {"type": party_type, "name": name, "attorneys": attorneys}
