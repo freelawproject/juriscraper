@@ -136,7 +136,9 @@ class Site(OpinionSiteLinear):
                 text,
                 re.DOTALL,
             )
-            parish_match = re.search(r"Parish:\s*(.+?)(?:\s*Lower Court:|$)", text)
+            parish_match = re.search(
+                r"Parish:\s*(.+?)(?:\s*Lower Court:|$)", text
+            )
             lower_court_match = re.search(r"Lower Court:\s*(.+)", text)
 
             case_date = ""
