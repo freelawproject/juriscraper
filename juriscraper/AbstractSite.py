@@ -383,21 +383,7 @@ class AbstractSite:
             return self._return_response_text_object()
 
         if self.use_urllib:
-            data = None
-            if self.method == "POST":
-                data = urllib.parse.urlencode(self.parameters).encode("utf-8")
-            raw = self._urllib_fetch(self.url, data=data)
-            text = raw.decode("utf-8")
-            content_type = ""
-            if hasattr(self.request["response"], "getheader"):
-                content_type = self.request["response"].getheader(
-                    "Content-Type", ""
-                )
-            if "json" in content_type:
-                return json.loads(text)
-            text = self._clean_text(text)
-            html_tree = self._make_html_tree(text)
-            return html_tree
+            return self._download_urllib()
 
         if self.method == "GET":
             await self._request_url_get(self.url)
@@ -519,7 +505,28 @@ class AbstractSite:
             parameters = {}
         self.request["parameters"].update(parameters)
 
-    def _urllib_fetch(self, url, data=None):
+    def _download_urllib(self):
+        """Handle download using urllib backend.
+
+        :return: parsed HTML tree or JSON object
+        """
+        data = None
+        if self.method == "POST":
+            data = urllib.parse.urlencode(self.parameters).encode("utf-8")
+        raw = self._urllib_fetch(self.url, data=data)
+        text = raw.decode("utf-8")
+        content_type = ""
+        if hasattr(self.request["response"], "getheader"):
+            content_type = self.request["response"].getheader(
+                "Content-Type", ""
+            )
+        if "json" in content_type:
+            return json.loads(text)
+        text = self._clean_text(text)
+        html_tree = self._make_html_tree(text)
+        return html_tree
+
+    def _urllib_fetch(self, url, data=None, headers=None):
         """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
 
         httpx gets blocked by Cloudflare due to its TLS fingerprint
@@ -528,12 +535,11 @@ class AbstractSite:
 
         :param url: URL to fetch
         :param data: POST data as bytes, or None for GET
+        :param headers: optional dict of headers to use instead of defaults
         :return: raw response bytes
         """
-        headers = dict(self.request["headers"])
-        if data:
-            headers["Content-Type"] = "application/x-www-form-urlencoded"
-            headers["Accept-Encoding"] = "gzip, deflate"
+        if headers is None:
+            headers = dict(self.request["headers"])
         req = urllib.request.Request(url, data=data, headers=headers)
         response = self.urllib_opener.open(req, timeout=60)
         raw = response.read()

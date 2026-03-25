@@ -20,8 +20,11 @@ from urllib.parse import urljoin
 from lxml import html as lxml_html
 
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):
@@ -65,31 +68,33 @@ class Site(OpinionSiteLinear):
                     )
         return params
 
-    def _search_by_month_year(self, tree, month_name, year):
-        """POST the month/year search form
+    async def _download(self, request_dict=None):
+        """Override to perform the month/year search POST after initial load
 
-        :param tree: lxml HTML tree with the search form
-        :param month_name: full month name (e.g. "March")
-        :param year: year as string (e.g. "2026")
-        :return: lxml HTML tree of response
+        :param request_dict: optional request parameters
+        :return: lxml HTML tree of search results
         """
-        params = self._get_form_params(tree)
-        params["ctl00$MainContent$ddlSearchOpinions2_Month"] = month_name
-        params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(year)
-        params["ctl00$MainContent$btnSearchOpinionsByMonthYear"] = "Search"
-        data = urllib.parse.urlencode(params).encode("utf-8")
-        raw = self._urllib_fetch(self.url, data=data)
-        return lxml_html.fromstring(raw.decode("utf-8"))
-
-    async def _process_html(self):
+        tree = await super()._download(request_dict)
         if self.test_mode_enabled():
-            self._extract_opinions(self.html)
-            return
+            return tree
 
         target = self.target_date
         month_name = target.strftime("%B")
-        tree = self._search_by_month_year(self.html, month_name, target.year)
-        self._extract_opinions(tree)
+        params = self._get_form_params(tree)
+        params["ctl00$MainContent$ddlSearchOpinions2_Month"] = month_name
+        params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(
+            target.year
+        )
+        params["ctl00$MainContent$btnSearchOpinionsByMonthYear"] = "Search"
+        data = urllib.parse.urlencode(params).encode("utf-8")
+        headers = dict(self.request["headers"])
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
+        headers["Accept-Encoding"] = "gzip, deflate"
+        raw = self._urllib_fetch(self.url, data=data, headers=headers)
+        return lxml_html.fromstring(raw.decode("utf-8"))
+
+    def _process_html(self):
+        self._extract_opinions(self.html)
 
     def _extract_opinions(self, tree):
         """Extract opinion data from search results
@@ -109,6 +114,10 @@ class Site(OpinionSiteLinear):
             td = row.xpath(".//td")[0]
             link = td.xpath(".//h4/a/@href")
             if not link:
+                text = td.text_content().strip()[:100]
+                logger.warning(
+                    "No link found in row, skipping: %s", text
+                )
                 continue
 
             url = urljoin(f"{self.base_url}/", link[0])
@@ -156,7 +165,7 @@ class Site(OpinionSiteLinear):
     async def _download_backwards(self, target_date: date) -> None:
         self.target_date = target_date
         self.html = await self._download()
-        await self._process_html()
+        self._process_html()
 
     def make_backscrape_iterable(self, kwargs):
         super().make_backscrape_iterable(kwargs)
