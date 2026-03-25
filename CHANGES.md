@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
+- Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874  
 
 ## 3.0.2 - 2026-03-20
 
