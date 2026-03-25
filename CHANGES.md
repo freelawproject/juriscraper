@@ -15,13 +15,13 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add Trademark Trial and Appeal Board scraper #1851
 
 Changes:
 -
 
 Fixes:
--
+- Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
 
 ## 3.0.2 - 2026-03-20
 
