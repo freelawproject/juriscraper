@@ -37,6 +37,8 @@ from juriscraper.lib.string_utils import (
     CaseNameTweaker,
     trunc,
 )
+from juriscraper.lib.utils import check_expected_content_types, check_download_url, check_empty_downloaded_file
+
 from juriscraper.lib.utils import (
     clean_attribute,
     sanity_check_case_names,
@@ -411,13 +413,11 @@ class AbstractSite:
         :return: The downloaded and cleaned content
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
         """
-
-        if not download_url:
-            raise NoDownloadUrlError(download_url)
+        check_download_url(download_url)
 
         # noinspection PyBroadException
         if self.test_mode_enabled():
-
+            # this is useful for CL integration tests
             def handler(request: httpx.Request):
                 r = httpx.Response(status_code=404, request=request)
                 try:
@@ -437,52 +437,32 @@ class AbstractSite:
             transport = httpx.MockTransport(handler)
             s = httpx.AsyncClient(transport=transport)
             r = await s.get(url=self.url)
+            return self.cleanup_content(r.content)
+
+        s = self.request["session"]
+
+        if self.needs_special_headers:
+            headers = self.request["headers"]
         else:
-            s = self.request["session"]
+            headers = {"User-Agent": "CourtListener"}
 
-            if self.needs_special_headers:
-                headers = self.request["headers"]
-            else:
-                headers = {"User-Agent": "CourtListener"}
+        # Note that we do a GET even if self.method is POST. This is
+        # deliberate.
+        r = await s.get(
+            download_url,
+            headers=headers,
+            cookies=self.cookies,
+            timeout=300,
+        )
 
-            # Note that we do a GET even if self.method is POST. This is
-            # deliberate.
-            r = await s.get(
-                download_url,
-                headers=headers,
-                cookies=self.cookies,
-                timeout=300,
-            )
+        check_empty_downloaded_file(r, download_url)        
+        check_expected_content_types(self, r, download_url)
 
-            # test for empty files (thank you CA1)
-            if len(r.content) == 0:
-                raise EmptyFileError(f"EmptyFileError: '{download_url}'")
-
-            # test for expected content type (thanks mont for nil)
-            if self.expected_content_types:
-                # Clean up content types like "application/pdf;charset=utf-8"
-                # and 'application/octet-stream; charset=UTF-8'
-                content_type = (
-                    r.headers.get("Content-Type").lower().split(";")[0].strip()
-                )
-                m = any(
-                    content_type in mime.lower()
-                    for mime in self.expected_content_types
-                )
-
-                if not m:
-                    court_str = self.court_id.split(".")[-1].split("_")[0]
-                    fingerprint = [f"{court_str}-unexpected-content-type"]
-                    msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
-                    raise UnexpectedContentTypeError(
-                        msg, fingerprint=fingerprint, data={"response": r}
-                    )
-
-            if doctor_is_available:
-                # test for and follow meta redirects, uses doctor get_extension
-                # service
-                r = await follow_redirections(r, s)
-                r.raise_for_status()
+        if doctor_is_available:
+            # test for and follow meta redirects, uses doctor get_extension
+            # service
+            r = await follow_redirections(r, s)
+            r.raise_for_status()
 
         content = self.cleanup_content(r.content)
 
