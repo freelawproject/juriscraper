@@ -295,7 +295,10 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             desc_tds = [
                 row[1] for row in self._docket_entry_table[row_i:end_row]
             ]
-            if "*****" in desc_tds[-1].text_content():
+            while (
+                not desc_tds[-1].text_content()
+                or "*****" in desc_tds[-1].text_content()
+            ):
                 desc_tds = desc_tds[:-1]
 
             # Build the entry
