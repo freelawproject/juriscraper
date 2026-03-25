@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.3 - 2026-03-25
+
+Features:
 - Add Trademark Trial and Appeal Board scraper #1851
 
 Changes:
@@ -22,7 +33,7 @@ Changes:
 
 Fixes:
 - Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
-- Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874  
+- Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874
 
 ## 3.0.2 - 2026-03-20
 
