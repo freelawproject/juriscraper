@@ -96,15 +96,15 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             logger.error("Unrecognized docket page format.")
             return {}
 
-        docket_number = None
-        docket_title_text = self.tree.xpath(
-            "(//table//tr/td[1][starts-with(normalize-space(.), 'No.')])[1]"
+        # The check above also coincidentally guarantees that self._case_data_table
+        # is at least 2x1 so this doesn't need bounds checks.
+        m = re.search(
+            self.DOCKET_NUMBER_RE, self._case_data_table[0][0].text_content()
         )
-        if docket_title_text:
-            m = re.search(
-                self.DOCKET_NUMBER_RE, docket_title_text[0].text_content()
-            )
-            docket_number = m.group(1).strip() if m else None
+        docket_number = m.group(1).strip() if m else None
+        if not docket_number:
+            logger.error("Failed to extract SCOTUS docket number.")
+            return {}
 
         # Lower court data
         lower_court_raw = (self.lower_court_case_numbers_raw or "").strip()
@@ -124,6 +124,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 )
             )
         else:
+            # Does not appear to be available in older cases.
             lower_court_decision_date = None
             lower_court_rehearing_denied_date = None
 
@@ -133,11 +134,16 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         )
         links = (linked_with_val or "").strip()
 
+        case_name = self.case_name
+        if not case_name:
+            logger.error("Failed to extract SCOTUS docket name.")
+            return {}
+
         return {
             "docket_number": docket_number,
             "capital_case": None,
             "date_filed": self.date_filed,
-            "case_name": self.case_name,
+            "case_name": case_name,
             "links": links,
             "lower_court": self.lower_court or None,
             "lower_court_case_numbers_raw": lower_court_raw,
@@ -160,6 +166,20 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         """
         return self._clean_whitespace(
             self._case_data_table[i][j].text_content()
+        )
+
+    def _get_docket_entry_table_text(self, i: int, j: int) -> str:
+        """
+        Get the text content of an element of the docket entry table, cleaning
+        whitespace. Does not perform bounds checks.
+
+        :param i: The row of the element.
+        :param j: The column of the element.
+
+        :return: The text content of the element.
+        """
+        return self._clean_whitespace(
+            self._docket_entry_table[i][j].text_content()
         )
 
     @property
@@ -200,26 +220,27 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     def _build_docket_entry(
         self,
         date_str: str,
-        description_td: Optional[HtmlElement],
+        description_tds: list[HtmlElement],
         attachment_path: str,
         table_layout: bool = False,
     ) -> dict[str, Any]:
         """Build a normalized docket entry dict.
 
         :param date_str: Raw date string from the date cell.
-        :param description_td: The <td> element containing the description.
+        :param description_tds: The <td> elements containing the description.
         :param attachment_path: the path to select attachment anchors inside the
         description cell.
         :return: A dict containing the normalized docket entry.
         """
 
         description_html = ""
-        if description_td is not None:
+        if description_tds:
             # Select content up to first <br> and excluding .documentlinks;
             # fallback to whole cell.
-            fragment = (
-                self._parse_description_html(description_td).strip()
-                or html.tostring(description_td, encoding="unicode").strip()
+            fragment = "\n".join(
+                self._parse_description_html(dtd).strip()
+                or html.tostring(dtd, encoding="unicode").strip()
+                for dtd in description_tds
             )
             # Skip empty tds like <td ...></td>
             if not fragment or re.fullmatch(
@@ -231,9 +252,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
             # If attachments with links are found in HTM dockets. Log an error
             # This is an opportunity to add support for it.
-            if description_td is not None and description_td.xpath(
-                attachment_path
-            ):
+            if any(dtd.xpath(attachment_path) for dtd in description_tds):
                 logger.error("SCOTUS HTM docket entry contains attachments.")
 
         description = ""
@@ -256,46 +275,39 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
         :return: List of dicts with date_filed, description, description_html, attachments.
         """
-        if self.tree is None:
-            return []
-
-        tables = self.tree.xpath(
-            "//table[.//tr[td[1][contains(normalize-space(.), '~~~Date~~~')] "
-            "and td[2][contains(normalize-space(.), 'Proceedings')]]]"
-        )
-        if not tables:
-            return []
-
-        header_tr = next(
-            iter(
-                tables[0].xpath(
-                    ".//tr[td[1][contains(normalize-space(.), '~~~Date~~~')] "
-                    "and td[2][contains(normalize-space(.), 'Proceedings')]]"
-                )
-            ),
-            None,
-        )
-        if header_tr is None:
+        if self._docket_entry_table is None:
             return []
 
         entries = []
+        row_i = 1
 
-        # Only iterate rows after the header within the same table
-        for tr in header_tr.itersiblings(tag="tr"):
-            tds = tr.xpath("./td")
-            if not tds:
+        while row_i < len(self._docket_entry_table):
+            if not self._docket_entry_table[row_i]:
                 continue
-            date_str = self._clean_whitespace(tds[0].text_content())
-            desc_td = tds[1]
+            date_str = self._clean_whitespace(
+                self._docket_entry_table[row_i][0].text_content()
+            )
+            end_row = row_i + 1
+            while end_row < len(
+                self._docket_entry_table
+            ) and not self._get_docket_entry_table_text(end_row, 0):
+                end_row += 1
+            desc_tds = [
+                row[1] for row in self._docket_entry_table[row_i:end_row]
+            ]
+            if "*****" in desc_tds[-1].text_content():
+                desc_tds = desc_tds[:-1]
 
             # Build the entry
             entries.append(
                 self._build_docket_entry(
                     date_str=date_str,
-                    description_td=desc_td,
+                    description_tds=desc_tds,
                     attachment_path=".//a[@href]",
                 )
             )
+
+            row_i = end_row
 
         return entries
 
