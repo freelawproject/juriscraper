@@ -381,11 +381,9 @@ class AbstractSite:
             await self._request_url_mock(self.url)
             self._post_process_response()
             return self._return_response_text_object()
-
-        if self.use_urllib:
+        elif self.use_urllib:
             return self._download_urllib()
-
-        if self.method == "GET":
+        elif self.method == "GET":
             await self._request_url_get(self.url)
         elif self.method == "POST":
             await self._request_url_post(self.url)
@@ -543,10 +541,13 @@ class AbstractSite:
         req = urllib.request.Request(url, data=data, headers=headers)
         response = self.urllib_opener.open(req, timeout=60)
         raw = response.read()
+        # Gzip decompression - currently only needed for lactapp_3
+        # whose server returns gzip-encoded responses
         if raw[:2] == b"\x1f\x8b":
             raw = gzip.decompress(raw)
 
-        # Populate request dict for save_response compatibility
+        # Populate request dict for save_response compatibility.
+        # Currently only needed for lactapp_3 which uses urllib
         self.request["url"] = url
         self.request["response"] = response
         if self.save_response:

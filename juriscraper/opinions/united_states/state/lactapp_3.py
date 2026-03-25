@@ -99,6 +99,7 @@ class Site(OpinionSiteLinear):
 
         :param tree: lxml HTML tree containing opinion results
         """
+        seen_urls = {case["url"] for case in self.cases}
         rows = tree.xpath(
             '//table[.//strong[contains(text(),"Opinion Search by")]]'
             "//tbody/tr[.//a]"
@@ -112,8 +113,12 @@ class Site(OpinionSiteLinear):
             td = row.xpath(".//td")[0]
             link = td.xpath(".//h4/a/@href")
             if not link:
-                text = td.text_content().strip()[:100]
-                logger.warning("No link found in row, skipping: %s", text)
+                strongs_text = td.xpath(".//strong/text()")
+                docket_hint = strongs_text[0].strip() if strongs_text else "?"
+                logger.warning(
+                    "No link found in row (docket: %s), skipping",
+                    docket_hint,
+                )
                 continue
 
             url = urljoin(f"{self.base_url}/", link[0])
@@ -131,6 +136,8 @@ class Site(OpinionSiteLinear):
                 text,
                 re.DOTALL,
             )
+            parish_match = re.search(r"Parish:\s*(.+?)(?:\s*Lower Court:|$)", text)
+            lower_court_match = re.search(r"Lower Court:\s*(.+)", text)
 
             case_date = ""
             if date_match:
@@ -148,13 +155,33 @@ class Site(OpinionSiteLinear):
                 # Normalize "Versus" to "v."
                 name = re.sub(r"\bVersus\b", "v.", name)
 
+            parish = ""
+            if parish_match:
+                parish = parish_match.group(1).strip()
+
+            lower_court = ""
+            if lower_court_match:
+                lower_court = lower_court_match.group(1).strip()
+                if parish:
+                    lower_court = f"{lower_court}, {parish} Parish"
+
+            # Deduplicate by URL
+            if url in seen_urls:
+                logger.info(
+                    "Skipping duplicate URL for docket %s: %s",
+                    docket,
+                    url,
+                )
+                continue
+            seen_urls.add(url)
+
             self.cases.append(
                 {
                     "name": name,
                     "docket": docket,
                     "date": case_date,
                     "url": url,
-                    "status": self.status,
+                    "lower_court": lower_court,
                 }
             )
 
