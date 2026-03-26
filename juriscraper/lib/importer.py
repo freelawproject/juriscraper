@@ -79,6 +79,7 @@ def get_module_by_name(name):
 async def site_yielder(iterable, mod, save_response_fn=None):
     for i in iterable:
         site = mod.Site(save_response_fn=save_response_fn)
+        site.is_backscrape = True
         try:
             await site._download_backwards(i)
             yield site
