@@ -109,7 +109,9 @@ class Site(OralArgumentSiteLinear):
                 break
 
             payload["ExclusiveStartKey"] = last_key
-            logger.info("Paginating DynamoDB scan (%d items so far)", len(all_items))
+            logger.info(
+                "Paginating DynamoDB scan (%d items so far)", len(all_items)
+            )
 
         return all_items
 
