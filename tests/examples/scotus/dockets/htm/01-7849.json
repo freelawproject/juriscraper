@@ -46,7 +46,7 @@
     {
       "attorneys": [
         {
-          "address": "#330930-048, FPC Nellis\nC.S. 4500",
+          "address": "C.S. 4500",
           "city": "Las Vegas",
           "email": null,
           "is_counsel_of_record": false,
@@ -63,14 +63,14 @@
     {
       "attorneys": [
         {
-          "address": "U.S. Department of Justice",
+          "address": null,
           "city": "Washington",
           "email": null,
           "is_counsel_of_record": false,
           "name": "Solicitor General",
           "phone": null,
           "state": "DC",
-          "title": null,
+          "title": "U.S. Department of Justice",
           "zip": "20530"
         }
       ],

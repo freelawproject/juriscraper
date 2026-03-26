@@ -195,21 +195,13 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     @property
     def lower_court(self) -> Optional[str]:
         if self._page_format == HTMPageFormat.New:
-            return self._htm_value_by_label(
-                "Lower Ct:"
-            ) or self._get_case_data_text(3, 1)
+            return self._htm_value_by_label("Lower Ct:")
         return self._clean_whitespace(self._get_case_data_text(4, 2))
 
     @property
     def lower_court_case_numbers_raw(self) -> Optional[str]:
         if self._page_format == HTMPageFormat.New:
-            result = self._htm_value_by_label("Case Nos.:", allow_indent=True)
-            if result:
-                return result
-            el = self.tree.find(".//td[title]/table[2]//td[2]")
-            if el is not None:
-                return self._clean_whitespace(el.text_content())
-            return None
+            return self._htm_value_by_label("Case Nos.:", allow_indent=True)
         return self._get_case_data_text(5, 2)
 
     @property
@@ -245,27 +237,25 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         description cell.
         :return: A dict containing the normalized docket entry.
         """
+        # Select content up to first <br> and excluding .documentlinks;
+        # fallback to whole cell. Filter out empty tds.
+        all_fragments = [
+            self._parse_description_html(dtd).strip()
+            or html.tostring(dtd, encoding="unicode").strip()
+            for dtd in description_tds
+        ]
+        fragments = [
+            fragment
+            for fragment in all_fragments
+            if fragment
+            and not re.fullmatch(r"<td\b[^>]*>\s*</td>", fragment, flags=re.I)
+        ]
+        description_html = "\n".join(fragments)
 
-        description_html = ""
-        if description_tds:
-            # Select content up to first <br> and excluding .documentlinks;
-            # fallback to whole cell. Filter out empty tds.
-            parts = []
-            for dtd in description_tds:
-                part = self._parse_description_html(dtd).strip()
-                if not part:
-                    raw = html.tostring(dtd, encoding="unicode").strip()
-                    if re.fullmatch(r"<td\b[^>]*>\s*</td>", raw, flags=re.I):
-                        continue
-                    part = raw
-                parts.append(part)
-            fragment = "\n".join(parts)
-            description_html = fragment if fragment else ""
-
-            # If attachments with links are found in HTM dockets. Log an error
-            # This is an opportunity to add support for it.
-            if any(dtd.xpath(attachment_path) for dtd in description_tds):
-                logger.error("SCOTUS HTM docket entry contains attachments.")
+        # If attachments with links are found in HTM dockets. Log an error
+        # This is an opportunity to add support for it.
+        if any(dtd.xpath(attachment_path) for dtd in description_tds):
+            logger.error("SCOTUS HTM docket entry contains attachments.")
 
         description = ""
         raw = (description_html or "").strip()
@@ -341,60 +331,35 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         lines = current_attorney.pop("_raw_lines", [])
         email = current_attorney.pop("_email", None)
 
-        if self._page_format == HTMPageFormat.Old:
-            # Old format: keep all lines as-is (no ID filtering, no title).
-            filtered_lines = []
-            for ln in lines:
-                if email is None:
-                    m = self.EMAIL_RE.search(ln)
-                    if m:
-                        email = m.group(0)
-                        continue
-                if ln:
-                    filtered_lines.append(ln)
-
-            partial_address = self._parse_address_lines(filtered_lines, 0)
-            addr_lines = partial_address.address_lines
-            current_attorney.update(
-                {
-                    "title": None,
-                    "address": "\n".join(addr_lines) if addr_lines else None,
-                    "city": partial_address.city,
-                    "state": partial_address.state,
-                    "zip": partial_address.zip_code,
-                    "email": email,
-                }
-            )
-        else:
-            # New format: filter IDs, extract title, join with ", ".
-            filtered_lines = []
-            for ln in lines:
-                if email is None:
-                    m = self.EMAIL_RE.search(ln)
-                    if m:
-                        email = m.group(0)
-                        continue
-                if self.ID_RE.search(ln):
+        # Filter lines: remove lines with IDs like "#1098260" and inline email if present.
+        filtered_lines = []
+        for ln in lines:
+            if email is None:
+                m = self.EMAIL_RE.search(ln)
+                if m:
+                    email = m.group(0)
                     continue
-                if ln:
-                    filtered_lines.append(ln)
+            if self.ID_RE.search(ln):
+                continue
+            if ln:
+                filtered_lines.append(ln)
 
-            title, start_add_idx = self._parse_address_title(filtered_lines)
-            partial_address = self._parse_address_lines(
-                filtered_lines, start_add_idx
-            )
-            addr_lines = partial_address.address_lines
-            current_attorney.update(
-                {
-                    "title": title,
-                    "address": ", ".join(addr_lines) if addr_lines else None,
-                    "city": partial_address.city,
-                    "state": partial_address.state,
-                    "zip": partial_address.zip_code,
-                    "email": email,
-                }
-            )
+        title, start_add_idx = self._parse_address_title(filtered_lines)
+        partial_address = self._parse_address_lines(
+            filtered_lines, start_add_idx
+        )
 
+        addr_lines = partial_address.address_lines
+        current_attorney.update(
+            {
+                "title": title,
+                "address": ", ".join(addr_lines) if addr_lines else None,
+                "city": partial_address.city,
+                "state": partial_address.state,
+                "zip": partial_address.zip_code,
+                "email": email,
+            }
+        )
         return current_attorney
 
     @property
