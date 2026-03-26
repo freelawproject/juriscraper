@@ -215,6 +215,12 @@ class Site(OpinionSiteLinear):
         since this won't be used in CL testing and we won't follow
         redirection due to the content being PDF
         """
+
+        # the test_mode_is_enabled() conditional is not implemented
+        # because it is only used for integration tests with CL
+        # and won't touch this child scraper. Copying the code would
+        # just introduce boilerplate
+
         check_download_url(download_url)
 
         headers = {"User-Agent": "CourtListener"}
