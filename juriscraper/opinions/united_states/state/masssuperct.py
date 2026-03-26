@@ -12,7 +12,6 @@ Notes:
     Cloudflare blocks GET requests via TLS fingerprinting.
     We use POST with an empty body to bypass this.
 """
-
 from datetime import date, datetime
 from urllib.parse import quote, urljoin
 
@@ -118,11 +117,11 @@ class Site(OpinionSiteLinear):
                 "//div[contains(@class, 'primary-content-body')]"
             )
         if not content:
-            return ""
+            return b""
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
         body.append(content[0])
-        return html.tostring(new_tree).decode("utf-8")
+        return html.tostring(new_tree)
 
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.

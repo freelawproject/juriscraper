@@ -391,6 +391,31 @@ class AbstractSite:
         self._post_process_response()
         return self._return_response_text_object()
 
+    def _download_content_urllib(self, download_url: str) -> bytes:
+        """Download content using urllib to bypass Cloudflare
+
+        Uses urllib instead of httpx because Cloudflare blocks httpx
+        via TLS fingerprinting. Used by scrapers with `use_urllib = True`.
+
+        :param download_url: The URL for the item you wish to download.
+        :return: The downloaded and cleaned content
+        """
+
+        # the test_mode_is_enabled() conditional is not implemented
+        # because it is only used for integration tests with CL
+        # and won't touch this child scraper. Copying the code would
+        # just introduce boilerplate
+
+        headers = {"User-Agent": "CourtListener"}
+        req = urllib.request.Request(download_url, headers=headers)
+        response = self.urllib_opener.open(req, timeout=90)
+        content = response.read()
+
+        check_empty_downloaded_file(content, download_url)
+        check_expected_content_types(self, response, download_url)
+
+        return self.cleanup_content(content)
+
     async def download_content(
         self,
         download_url: str,
@@ -412,6 +437,9 @@ class AbstractSite:
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
         """
         check_download_url(download_url)
+
+        if self.use_urllib:
+            return self._download_content_urllib(download_url)
 
         # noinspection PyBroadException
         if self.test_mode_enabled():
