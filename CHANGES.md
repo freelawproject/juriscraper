@@ -18,11 +18,23 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.4 - 2026-03-26
+
+Features:
+-
+
+Changes:
 - Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
 - Skip `should_have_results` error during backscraping #1886
 
 Fixes:
 - Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
+- Fix `mich` scraper failing when API returns null courts #1885
 
 ## 3.0.3 - 2026-03-25
 
