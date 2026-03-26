@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.4 - 2026-03-26
+
+Features:
+-
+
+Changes:
 - Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
 
 Fixes:
