@@ -252,7 +252,8 @@ class AbstractSite:
         pass
 
     def no_results_warning(self) -> None:
-        if self.should_have_results:
+        # Allow no results while backscraping
+        if self.should_have_results and self.back_scrape_iterable is None:
             logger.error(
                 f"{self.court_id}: Returned with zero items, but should have results."
             )
