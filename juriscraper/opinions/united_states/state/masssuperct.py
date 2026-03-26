@@ -12,6 +12,7 @@ Notes:
     Cloudflare blocks GET requests via TLS fingerprinting.
     We use POST with an empty body to bypass this.
 """
+
 from datetime import date, datetime
 from urllib.parse import quote, urljoin
 
@@ -59,9 +60,7 @@ class Site(OpinionSiteLinear):
             "//div[contains(@class, 'slip-opinions-list')]"
             "//div[@class='accordion-item']"
         ):
-            name = item.xpath(
-                ".//strong[contains(@class, 'title')]//text()"
-            )
+            name = item.xpath(".//strong[contains(@class, 'title')]//text()")
             name = name[0].strip() if name else ""
 
             date_str = item.xpath(
@@ -81,9 +80,7 @@ class Site(OpinionSiteLinear):
                 ".//div[contains(@class, 'docket-section')]"
                 "//a[contains(@class, 'btn')]/@href"
             )
-            url = (
-                urljoin("https://www.socialaw.com", url[0]) if url else ""
-            )
+            url = urljoin("https://www.socialaw.com", url[0]) if url else ""
 
             if not name or not url:
                 continue

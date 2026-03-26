@@ -193,4 +193,3 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = unique_year_month(
             self.back_scrape_iterable
         )
-
