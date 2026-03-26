@@ -23,10 +23,24 @@ Changes:
 Fixes:
 - Fix `ny` update all NY scrapers for redesigned court website #1862
 
+## 3.0.3 - 2026-03-25
+
+Features:
+- Add Trademark Trial and Appeal Board scraper #1851
+
+Changes:
+-
+
+Fixes:
+- Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
+- Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874
+
 ## 3.0.2 - 2026-03-20
 
 Features:
 - Implements `kan` and `kanctapp` backscraper #1316
+- Implements `lactapp_3` using urllib #1455
+- Abstract `urllib` implementation #1455
 
 Changes:
 - `kan` back to OpinionSiteLinear
