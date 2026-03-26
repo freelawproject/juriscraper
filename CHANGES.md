@@ -21,6 +21,7 @@ Changes:
 - Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
 
 Fixes:
+- Fix `masssuperct` by switching from JSON API to HTML scraping with urllib #1714
 - Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
 
 ## 3.0.3 - 2026-03-25
