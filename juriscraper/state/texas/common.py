@@ -359,6 +359,7 @@ def _originating_court_name_to_type(name: str) -> CourtType:
 
 def district_court_number_from_name(name: str) -> int:
     # TODO Handle edge-cases
+    name = _clean_court_name(name)
     district_court_match = DISTRICT_COURT_RE.match(name)
     district = district_court_match.group(1)
     if district == "1-a" or district == "1a":
@@ -462,7 +463,7 @@ class TexasCommonData(TypedDict):
 
 
 # Regex to recognize numbers with (optional) commas every 3 digits.
-NUMBER_RE_STR = r"[1-9]\d{0,2}(?:,?\d{3})*"
+NUMBER_RE_STR = r"\d{1,3}(?:,?\d{3})*"
 DOCKET_NUMBER_REGEXES = [
     re.compile(r"\d{1,2}[bB]?-\d{2,4}"),  # Supreme Court
     re.compile(r"\d{4,5}"),  # Supreme Court (older writs)
@@ -693,6 +694,10 @@ class TexasCommonScraper(
         party_name_parts = [
             part.removeprefix("the ").strip() for part in party_name_parts
         ]
+        if not party_name_parts:
+            start = self.case_name_full.lower().find(party_name.lower())
+            end = start + len(party_name) if start >= 0 else len(party_name)
+            return start, end
         party_name_parts_indexed = [
             (self.case_name_full.lower().find(part), part)
             for part in party_name_parts

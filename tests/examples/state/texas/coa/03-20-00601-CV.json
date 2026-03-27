@@ -1,0 +1,127 @@
+{
+  "appellate_briefs": [],
+  "case_events": [
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=0281d7e1-83c0-498c-b6c4-22226563f2f1&coa=coa03&DT=TRANSFER+OUT&MediaID=bb74c966-8623-4bd3-8185-65ce44de7b22",
+          "file_size_bytes": 84000,
+          "file_size_str": "84 KB",
+          "media_id": "bb74c966-8623-4bd3-8185-65ce44de7b22",
+          "media_version_id": "0281d7e1-83c0-498c-b6c4-22226563f2f1"
+        }
+      ],
+      "date": "2021-01-13",
+      "disposition": "",
+      "type": "Case transferred from this court to another court of appeals"
+    },
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=1fc6cf05-39cc-4c05-a2a3-c453996977c8&coa=coa03&DT=RPT+RECORD+FLD&MediaID=6c7f865e-a21c-4888-836a-5c5f759e3428",
+          "file_size_bytes": 86000,
+          "file_size_str": "86 KB",
+          "media_id": "6c7f865e-a21c-4888-836a-5c5f759e3428",
+          "media_version_id": "1fc6cf05-39cc-4c05-a2a3-c453996977c8"
+        }
+      ],
+      "date": "2021-01-04",
+      "disposition": "",
+      "type": "Reporters record filed"
+    },
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=e23f1efb-8ecf-43fc-bd90-85d9b1138cb2&coa=coa03&DT=CLK+RECORD+FLD&MediaID=7d33f3c1-b5ea-456e-a349-787f4fbdbcba",
+          "file_size_bytes": 81000,
+          "file_size_str": "81 KB",
+          "media_id": "7d33f3c1-b5ea-456e-a349-787f4fbdbcba",
+          "media_version_id": "e23f1efb-8ecf-43fc-bd90-85d9b1138cb2"
+        }
+      ],
+      "date": "2020-12-30",
+      "disposition": "",
+      "type": "Clerks record filed"
+    },
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=dbb9efd3-d763-4f7e-b07c-c5cd73982e0b&coa=coa03&DT=NOA+FLD%2FCOA&MediaID=738b81a1-f5b9-48e6-9e94-86fcea754ac6",
+          "file_size_bytes": 130000,
+          "file_size_str": "130 KB",
+          "media_id": "738b81a1-f5b9-48e6-9e94-86fcea754ac6",
+          "media_version_id": "dbb9efd3-d763-4f7e-b07c-c5cd73982e0b"
+        }
+      ],
+      "date": "2020-12-18",
+      "disposition": "",
+      "type": "Notice of appeal filed in court of appeals"
+    }
+  ],
+  "case_name": "L.L.C., Inc. v. Glenn Hegar, Comptroller of Public Accounts of The State of Texas",
+  "case_name_full": "L.L.C., Inc. and Fun Holdings, LLC v. Glenn Hegar, Comptroller of Public Accounts of The State of Texas; and Ken Paxton, Attorney General of the State of Texas",
+  "case_type": "Miscellaneous/other civil",
+  "court_id": "texas_coa03",
+  "court_type": "texas_appellate",
+  "date_filed": "2020-12-18",
+  "docket_number": "03-20-00601-CV",
+  "originating_court": {
+    "case": "D-1-GN-20-002585",
+    "county": "Travis",
+    "court_type": "texas_district",
+    "district": 53,
+    "judge": "Honorable Karin Crump",
+    "name": "53rd District Court",
+    "punishment": "",
+    "reporter": "Jamie Foley"
+  },
+  "parties": [
+    {
+      "name": "Glenn Hegar, Comptroller of Public Accounts of The State of Texas",
+      "representatives": [
+        "Mr. Matthew T. Kennedy",
+        "Ms. Angela Angotti",
+        "Ms. Melissa L. Hargis"
+      ],
+      "type": "Appellee"
+    },
+    {
+      "name": "L.L.C., Inc.",
+      "representatives": [
+        "Mr. Brian W. Bishop",
+        "Mr. J. Steve Britt",
+        "Mr. Curtis J. Osterloh"
+      ],
+      "type": "Appellant"
+    },
+    {
+      "name": "Fun Holdings, LLC",
+      "representatives": [
+        "Mr. J. Steve Britt",
+        "Mr. Curtis J. Osterloh",
+        "Mr. Brian W. Bishop"
+      ],
+      "type": "Appellant"
+    },
+    {
+      "name": "Ken Paxton, Attorney General of the State of Texas",
+      "representatives": [
+        "Ms. Angela Angotti",
+        "Mr. Matthew T. Kennedy",
+        "Ms. Melissa L. Hargis"
+      ],
+      "type": "Appellee"
+    }
+  ],
+  "publication_service": "",
+  "transfer_from": null,
+  "transfer_to": {
+    "court_id": "texas_coa13",
+    "date": "2021-01-13T00:00:00",
+    "origin_docket": "03-20-00601-CV"
+  }
+}
