@@ -84,7 +84,7 @@ class Site(OralArgumentSiteLinear):
         payload = json.loads(self.payload)
         max_pages = 100
 
-        for page in range(max_pages):
+        for _page in range(max_pages):
             encoded_payload = json.dumps(payload)
             sig = generate_aws_sigv4_headers(
                 encoded_payload, self.table, creds
@@ -110,7 +110,9 @@ class Site(OralArgumentSiteLinear):
                 break
 
             payload["ExclusiveStartKey"] = last_key
-            logger.info("Paginating DynamoDB scan (%d items so far)", len(all_items))
+            logger.info(
+                "Paginating DynamoDB scan (%d items so far)", len(all_items)
+            )
         else:
             logger.warning(
                 "Reached max pagination limit of %d pages (%d items)",
