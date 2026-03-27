@@ -65,6 +65,7 @@ class AbstractSite:
         self.html = None
         self.method = "GET"
         self.back_scrape_iterable = None
+        self.is_backscrape = False
         self.downloader_executed = False
         self.cookies = {}
         self.cnt = cnt or CaseNameTweaker()
@@ -252,7 +253,7 @@ class AbstractSite:
         pass
 
     def no_results_warning(self) -> None:
-        if self.should_have_results:
+        if self.should_have_results and not self.is_backscrape:
             logger.error(
                 f"{self.court_id}: Returned with zero items, but should have results."
             )
