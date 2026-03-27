@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.5 - 2026-03-27
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Fix `ca9` oral argument scraper to paginate DynamoDB scans #1877
 
 ## 3.0.4 - 2026-03-26
