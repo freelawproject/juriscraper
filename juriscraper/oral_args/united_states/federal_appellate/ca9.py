@@ -26,8 +26,6 @@ class Site(OralArgumentSiteLinear):
         self.expected_content_types = [
             "application/octet-stream; charset=UTF-8"
         ]
-        self.status = "Published"
-
         # AWS Cognito creds step:
         self.headers = {
             "Content-Type": "application/x-amz-json-1.1",
@@ -71,6 +69,8 @@ class Site(OralArgumentSiteLinear):
 
         :return: list of DynamoDB item dicts
         """
+        self.downloader_executed = True
+
         if self.test_mode_enabled():
             return json.load(open(self.mock_url))
 
@@ -82,8 +82,9 @@ class Site(OralArgumentSiteLinear):
 
         all_items = []
         payload = json.loads(self.payload)
+        max_pages = 100
 
-        while True:
+        for page in range(max_pages):
             encoded_payload = json.dumps(payload)
             sig = generate_aws_sigv4_headers(
                 encoded_payload, self.table, creds
@@ -110,6 +111,12 @@ class Site(OralArgumentSiteLinear):
 
             payload["ExclusiveStartKey"] = last_key
             logger.info("Paginating DynamoDB scan (%d items so far)", len(all_items))
+        else:
+            logger.warning(
+                "Reached max pagination limit of %d pages (%d items)",
+                max_pages,
+                len(all_items),
+            )
 
         return all_items
 
