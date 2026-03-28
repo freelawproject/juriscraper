@@ -26,12 +26,23 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
+    court_id_map = {
+        "Court of Appeals": "1",
+        "App Div, 1st Dept": "3",
+        "App Div, 2d Dept": "4",
+        "App Div, 3d Dept": "5",
+        "App Div, 4th Dept": "6",
+        "Appellate Term, 1st Dept": "7",
+        "Appellate Term, 2d Dept": "8",
+    }
+
+    base_url = "https://iapps.courts.state.ny.us/lawReporting/Search"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court = "Court of Appeals"
         self.court_id = self.__module__
-        self.url = "https://iapps.courts.state.ny.us/lawReporting/Search?searchType=opinion"
+        self.url = self.base_url
         self._set_parameters()
         self.expected_content_types = ["application/pdf", "text/html"]
         self.make_backscrape_iterable(kwargs)
@@ -59,46 +70,84 @@ class Site(OpinionSiteLinear):
             start_date = end_date - timedelta(days=30)
 
         self.parameters = {
-            "rbOpinionMotion": "opinion",
-            "Pty": "",
-            "and_or": "and",
-            "dtStartDate": start_date.strftime("%m/%d/%Y"),
-            "dtEndDate": end_date.strftime("%m/%d/%Y"),
-            "court": self.court,
-            "docket": "",
-            "judge": "",
-            "slipYear": "",
-            "slipNo": "",
-            "OffVol": "",
-            "Rptr": "",
-            "OffPage": "",
-            "fullText": "",
-            "and_or2": "and",
-            "Order_By": "Party Name",
-            "Submit": "Find",
-            "hidden1": "",
-            "hidden2": "",
+            "eSearchType": "0",
+            "strPartyNames": "",
+            "ePartyNameType": "0",
+            "oStartDate": start_date.strftime("%m/%d/%Y"),
+            "oEndDate": end_date.strftime("%m/%d/%Y"),
+            "oCourt": self.court_id_map[self.court],
+            "strDocketNumber": "",
+            "wmcJudge:strJudge": "",
+            "strSlipYear": "",
+            "strSlipNumber": "",
+            "wmcCitation:strVolume": "",
+            "wmcCitation:eReporter": "",
+            "wmcCitation:strPage": "",
+            "strFullText": "",
+            "eFullTextType": "0",
+            "btnSubmit": "",
         }
 
+    async def _download(self, request_dict=None):
+        """Override to handle Wicket's session-based form submission.
+
+        Wicket requires a GET to the search page first to establish a
+        session and obtain the dynamic form action URL, then POST to it.
+        """
+        if self.test_mode_enabled():
+            return await super()._download(request_dict)
+
+        # Step 1: GET the search page to establish session
+        self.method = "GET"
+        await super()._download(request_dict)
+        html = self._return_response_text_object()
+
+        # Step 2: Extract the form action URL
+        form_action = html.xpath("//form/@action")
+        if not form_action:
+            logger.warning("Could not find form action URL")
+            return html
+
+        action_url = form_action[0]
+        if action_url.startswith("./"):
+            action_url = f"{self.base_url.rsplit('/', 1)[0]}/{action_url[2:]}"
+
+        # Step 3: POST to the form action URL
+        self.method = "POST"
+        self.url = action_url
+        return await super()._download(request_dict)
+
     def _process_html(self):
-        for row in self.html.xpath(".//table")[-1].xpath(".//tr")[1:]:
-            slip_cite = " ".join(row.xpath("./td[5]//text()"))
-            official_citation = " ".join(row.xpath("./td[4]//text()"))
-            url = row.xpath(".//a")[0].get("href")
-            url = re.findall(r"(http.*htm)", url)[0]
+        table = self.html.xpath('.//table[contains(@class, "table")]')
+        if not table:
+            logger.info("No results table found.")
+            return
+        for row in table[0].xpath(".//tbody/tr"):
+            cells = row.xpath("./td")
+            if len(cells) < 9:
+                continue
+            url = cells[6].xpath(".//a/@href")
+            if not url:
+                continue
+            slip_cite = cells[6].xpath(
+                './/a/span[not(contains(@class, "visually-hidden"))]/text()'
+            )
+            slip_cite = slip_cite[0].strip() if slip_cite else ""
+            official_citation = cells[4].text_content().strip()
             status = "Unpublished" if "(U)" in slip_cite else "Published"
+            docket = cells[2].text_content().strip()
+            author = cells[7].text_content().strip()
             case = {
-                "name": row.xpath(".//td")[0].text_content(),
-                "date": row.xpath(".//td")[1].text_content(),
-                "url": url,
+                "name": cells[0].text_content().strip(),
+                "date": cells[1].text_content().strip(),
+                "url": url[0],
                 "status": status,
-                "docket": "",
+                "docket": docket,
                 "citation": official_citation,
                 "parallel_citation": slip_cite,
                 "author": "",
                 "per_curiam": False,
             }
-            author = row.xpath("./td")[-2].text_content()
 
             # Because P E R C U R I A M, PER CURIAM, and Per Curiam
             pc = re.sub(r"\s", "", author.lower())
