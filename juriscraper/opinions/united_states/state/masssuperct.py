@@ -7,11 +7,14 @@ Court Contact: SJCReporter@sjc.state.ma.us (617) 557-1030
 Date: 2025-07-16
 History:
     - Created by luism
+    - 2026-03-25: Switched from JSON API to HTML page scraping
+Notes:
+    Cloudflare blocks GET requests via TLS fingerprinting.
+    We use POST with an empty body to bypass this.
 """
 
-import re
 from datetime import date, datetime
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 
 from lxml import etree, html
 
@@ -24,54 +27,70 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     court_name = "Superior Court"
     first_opinion_date = datetime(2017, 6, 20)
+    use_urllib = True
+    base_url = "https://www.socialaw.com/services/slip-opinions/"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.socialaw.com/customapi/slips/getopinions"
         self.court_id = self.__module__
         self.search_date = datetime.today()
-        self.parameters = {
-            "SectionName": self.court_name,
-            "ArchiveDate": self.search_date.strftime("%B %Y"),
-        }
+        self.url = self._build_url()
         self.method = "POST"
+        self.parameters = {}
         self.status = "Published"
         self.expected_content_types = ["text/html"]
         self.days_interval = 30
         self.make_backscrape_iterable(kwargs)
 
+    def _build_url(self) -> str:
+        """Build the listing URL with court and month query parameters.
+
+        :return: Full URL with encoded query parameters
+        """
+        month_str = quote(self.search_date.strftime("%B %Y"))
+        court_str = quote(self.court_name)
+        return f"{self.base_url}?Court={court_str}&Month={month_str}"
+
     def _process_html(self):
-        """Scrape and process the JSON endpoint
+        """Parse opinion listing from HTML accordion items.
 
         :return: None
         """
-        for row in self.html:
-            url = urljoin(
-                "https://www.socialaw.com/services/slip-opinions/",
-                row["UrlName"],
-            )
-            details = row["Details"]
-            caption = titlecase(row.get("Parties"))
-            caption = re.sub(r"(\[\d{1,2}\])", "", caption)
+        for item in self.html.xpath(
+            "//div[contains(@class, 'slip-opinions-list')]"
+            "//div[@class='accordion-item']"
+        ):
+            name = item.xpath(".//strong[contains(@class, 'title')]//text()")
+            name = name[0].strip() if name else ""
 
-            judge_str = details.get("Present", "")
-            judge_str = re.sub(r"(\[\d{1,2}\])", "", judge_str)
-            judge_str = re.sub(r"\, JJ\.", "", judge_str)
-            judge_str = re.sub(
-                r"(Associate\s+)?Justice*|of the Superior Court", "", judge_str
+            date_str = item.xpath(
+                ".//div[contains(@class, 'dates-section')]"
+                "//div[@class='rich-text rich-text-sm']//text()"
             )
+            date_str = date_str[0].strip() if date_str else ""
 
-            # Clear judge_str if it matches a date like 'July 16, 2024'
-            if re.match(r"^[A-Za-z]+\s+\d{1,2},\s+\d{4}$", judge_str.strip()):
-                judge_str = ""
+            docket = item.xpath(
+                ".//div[contains(@class, 'docket-section')]"
+                "//div[@class='section-header']"
+                "//div[@class='rich-text rich-text-sm']//text()"
+            )
+            docket = docket[0].strip() if docket else ""
+
+            url = item.xpath(
+                ".//div[contains(@class, 'docket-section')]"
+                "//a[contains(@class, 'btn')]/@href"
+            )
+            url = urljoin("https://www.socialaw.com", url[0]) if url else ""
+
+            if not name or not url:
+                continue
 
             self.cases.append(
                 {
-                    "name": caption,
-                    "judge": judge_str,
-                    "date": row["Date"],
+                    "name": titlecase(name),
+                    "date": date_str,
                     "url": url,
-                    "docket": details["Docket"],
+                    "docket": docket,
                 }
             )
 
@@ -79,7 +98,8 @@ class Site(OpinionSiteLinear):
     def cleanup_content(content):
         """Remove non-opinion HTML
 
-        Cleanup HMTL from Social Law page so we can properly display the content
+        Cleanup HTML from Social Law page so we can properly display
+        the content.
 
         :param content: The scraped HTML
         :return: Cleaner HTML
@@ -87,25 +107,28 @@ class Site(OpinionSiteLinear):
         content = content.decode("utf-8")
         tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
         content = tree.xpath(
-            "//div[@id='contentPlaceholder_ctl00_ctl00_ctl00_detailContainer']"
-        )[0]
+            "//div[contains(@class, 'primary-content-rich-text')]"
+        )
+        if not content:
+            content = tree.xpath(
+                "//div[contains(@class, 'primary-content-body')]"
+            )
+        if not content:
+            return b""
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
-        body.append(content)
-        return html.tostring(new_tree).decode("utf-8")
+        body.append(content[0])
+        return html.tostring(new_tree)
 
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
-        :param search_date (date): The date for which to download and process opinions.
-        :return None; sets the target date, downloads the corresponding HTML
-        and processes the HTML to extract case details.
+        :param search_date: The date for which to download and process
+            opinions.
+        :return: None
         """
         self.search_date = search_date
-        self.parameters = {
-            "SectionName": self.court_name,
-            "ArchiveDate": self.search_date.strftime("%B %Y"),
-        }
+        self.url = self._build_url()
         self.html = await self._download()
         self._process_html()
 

@@ -14,7 +14,6 @@ Notes:
 
 import re
 import urllib.parse
-import urllib.request
 from datetime import date, datetime
 from urllib.parse import urljoin
 
@@ -23,11 +22,6 @@ from lxml import html as lxml_html
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.utils import (
-    check_download_url,
-    check_empty_downloaded_file,
-    check_expected_content_types,
-)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 logger = make_default_logger()
@@ -199,37 +193,3 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = unique_year_month(
             self.back_scrape_iterable
         )
-
-    async def download_content(
-        self,
-        download_url: str,
-        doctor_is_available: bool = False,
-        media_root: str = "",
-    ) -> bytes:
-        """Download opinion content using urllib to bypass Cloudflare
-
-        Uses urllib instead of httpx because Cloudflare blocks httpx
-        via TLS fingerprinting.
-
-        Note that we don't need `media_root` or `doctor_is_available`
-        since this won't be used in CL testing and we won't follow
-        redirection due to the content being PDF
-        """
-
-        # the test_mode_is_enabled() conditional is not implemented
-        # because it is only used for integration tests with CL
-        # and won't touch this child scraper. Copying the code would
-        # just introduce boilerplate
-
-        check_download_url(download_url)
-
-        headers = {"User-Agent": "CourtListener"}
-        req = urllib.request.Request(download_url, headers=headers)
-        response = self.urllib_opener.open(req, timeout=90)
-        pdf_content = response.read()
-
-        check_empty_downloaded_file(pdf_content, download_url)
-        check_expected_content_types(self, response, download_url)
-
-        # cleanup_content is not implemented, just for compatibility
-        return self.cleanup_content(pdf_content)
