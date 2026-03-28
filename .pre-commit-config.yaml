@@ -3,7 +3,7 @@ ci:
 exclude: '^tests/examples/.*\.html$'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
      - id: check-added-large-files
      - id: check-ast
@@ -21,7 +21,7 @@ repos:
        exclude: ^tests/examples/pacer/nef/s3/.*\.txt$
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.8
+    rev: v0.14.10
     hooks:
       - id: ruff
         args: [ --fix ]
