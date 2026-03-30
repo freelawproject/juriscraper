@@ -11,12 +11,8 @@ History:
     Added backscraper
 """
 
-import urllib.request
 from datetime import date, timedelta
-from typing import Any, Optional
 from urllib.parse import urlencode, urljoin
-
-from lxml.html import HtmlElement, fromstring
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -28,6 +24,7 @@ class Site(OpinionSiteLinear):
     court_filter = "10"
     first_opinion_date = date(2015, 1, 1)
     days_interval = 30
+    use_urllib = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -45,62 +42,6 @@ class Site(OpinionSiteLinear):
             "Keyword": "",
         }
         return urljoin(self.base_url, f"/Documents/Search?{urlencode(params)}")
-
-    def _fetch_url(self, url: str) -> bytes:
-        """Fetch a URL using urllib to bypass Cloudflare's TLS
-        fingerprinting. httpx gets 403'd due to its TLS fingerprint
-        (httpcore). Python's stdlib urllib uses a different TLS stack
-        that Cloudflare does not block.
-
-        :param url: URL to fetch
-        :return: response content (not decoded)
-        """
-        req = urllib.request.Request(
-            url,
-            headers=self.request["headers"],
-        )
-        response = urllib.request.urlopen(req, timeout=90)
-        response_content = response.read()
-        self.do_save_response(response, response_content)
-
-        return response_content
-
-    def do_save_response(self, response: Any, response_content: bytes) -> None:
-        """Call `save_response` over non standard urllib responses
-
-        Prepare urllib (not standard) response objects to
-        behave have httpx / requests response attributes
-
-        This must work both with `sample_caller` and
-        Courtlistener's save_response (that saves to S3)
-
-        :param response: a urllib response
-        :param response_content: bytes of the response
-        :return None
-        """
-        self.request["response"] = response
-
-        if not self.save_response:
-            return
-
-        response.text = response_content.decode("utf-8")
-        response.content = response_content
-        response.history = []
-        self.save_response(self)
-
-    async def _download(
-        self, request_dict: Optional[dict] = None
-    ) -> HtmlElement:
-        if self.test_mode_enabled():
-            with open(self.mock_url, mode="rb") as f:
-                response_text = f.read().decode("utf-8")
-        else:
-            response_content = self._fetch_url(self.url)
-            response_text = response_content.decode("utf-8")
-
-        self.downloader_executed = True
-        self.html = fromstring(response_text)
-        return self.html
 
     def _process_html(self) -> None:
         """Parse the /Documents/Search results table.

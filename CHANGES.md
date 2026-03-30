@@ -24,11 +24,48 @@ Fixes:
 
 - Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
 
+## 3.0.5 - 2026-03-27
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `ca9` oral argument scraper to paginate DynamoDB scans #1877
+
+## 3.0.4 - 2026-03-26
+
+Features:
+-
+
+Changes:
+- Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
+
+Fixes:
+- Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
+- Fix `mich` scraper failing when API returns null courts #1885
+
+## 3.0.3 - 2026-03-25
+
+Features:
+- Add Trademark Trial and Appeal Board scraper #1851
+
+Changes:
+-
+
+Fixes:
+- Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
+- Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874
+
 ## 3.0.2 - 2026-03-20
 
 Features:
 
 - Implements `kan` and `kanctapp` backscraper #1316
+- Implements `lactapp_3` using urllib #1455
+- Abstract `urllib` implementation #1455
 
 Changes:
 

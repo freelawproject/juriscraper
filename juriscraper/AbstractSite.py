@@ -1,8 +1,12 @@
+import gzip
 import hashlib
+import http.cookiejar
 import inspect
 import json
 import os
 import ssl
+import urllib.parse
+import urllib.request
 from datetime import datetime
 from typing import Union
 
@@ -15,10 +19,7 @@ from juriscraper.lib.date_utils import (
     make_date_range_tuples,
 )
 from juriscraper.lib.exceptions import (
-    EmptyFileError,
     InsanityException,
-    NoDownloadUrlError,
-    UnexpectedContentTypeError,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -34,6 +35,9 @@ from juriscraper.lib.string_utils import (
     trunc,
 )
 from juriscraper.lib.utils import (
+    check_download_url,
+    check_empty_downloaded_file,
+    check_expected_content_types,
     clean_attribute,
     sanity_check_case_names,
     sanity_check_dates,
@@ -48,6 +52,10 @@ class AbstractSite:
 
     Should not contain lists that can't be sorted by the _date_sort function.
     """
+
+    # Set to True in subclasses to use urllib instead of httpx.
+    # Useful for sites that block httpx via TLS fingerprinting.
+    use_urllib = False
 
     def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
@@ -95,6 +103,13 @@ class AbstractSite:
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
         self.needs_special_headers = False
+
+        # urllib opener for sites that need TLS fingerprint bypass
+        if self.use_urllib:
+            cookie_jar = http.cookiejar.CookieJar()
+            self.urllib_opener = urllib.request.build_opener(
+                urllib.request.HTTPCookieProcessor(cookie_jar)
+            )
 
         # indicates whether the scraper should have results or not to raise an error
         self.should_have_results = False
@@ -364,6 +379,10 @@ class AbstractSite:
 
         if self.test_mode_enabled():
             await self._request_url_mock(self.url)
+            self._post_process_response()
+            return self._return_response_text_object()
+        elif self.use_urllib:
+            return self._download_urllib()
         elif self.method == "GET":
             await self._request_url_get(self.url)
         elif self.method == "POST":
@@ -392,13 +411,11 @@ class AbstractSite:
         :return: The downloaded and cleaned content
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
         """
-
-        if not download_url:
-            raise NoDownloadUrlError(download_url)
+        check_download_url(download_url)
 
         # noinspection PyBroadException
         if self.test_mode_enabled():
-
+            # this is useful for CL integration tests
             def handler(request: httpx.Request):
                 r = httpx.Response(status_code=404, request=request)
                 try:
@@ -418,52 +435,32 @@ class AbstractSite:
             transport = httpx.MockTransport(handler)
             s = httpx.AsyncClient(transport=transport)
             r = await s.get(url=self.url)
+            return self.cleanup_content(r.content)
+
+        s = self.request["session"]
+
+        if self.needs_special_headers:
+            headers = self.request["headers"]
         else:
-            s = self.request["session"]
+            headers = {"User-Agent": "CourtListener"}
 
-            if self.needs_special_headers:
-                headers = self.request["headers"]
-            else:
-                headers = {"User-Agent": "CourtListener"}
+        # Note that we do a GET even if self.method is POST. This is
+        # deliberate.
+        r = await s.get(
+            download_url,
+            headers=headers,
+            cookies=self.cookies,
+            timeout=300,
+        )
 
-            # Note that we do a GET even if self.method is POST. This is
-            # deliberate.
-            r = await s.get(
-                download_url,
-                headers=headers,
-                cookies=self.cookies,
-                timeout=300,
-            )
+        check_empty_downloaded_file(r, download_url)
+        check_expected_content_types(self, r, download_url)
 
-            # test for empty files (thank you CA1)
-            if len(r.content) == 0:
-                raise EmptyFileError(f"EmptyFileError: '{download_url}'")
-
-            # test for expected content type (thanks mont for nil)
-            if self.expected_content_types:
-                # Clean up content types like "application/pdf;charset=utf-8"
-                # and 'application/octet-stream; charset=UTF-8'
-                content_type = (
-                    r.headers.get("Content-Type").lower().split(";")[0].strip()
-                )
-                m = any(
-                    content_type in mime.lower()
-                    for mime in self.expected_content_types
-                )
-
-                if not m:
-                    court_str = self.court_id.split(".")[-1].split("_")[0]
-                    fingerprint = [f"{court_str}-unexpected-content-type"]
-                    msg = f"'{download_url}' '{content_type}' not in {self.expected_content_types}"
-                    raise UnexpectedContentTypeError(
-                        msg, fingerprint=fingerprint, data={"response": r}
-                    )
-
-            if doctor_is_available:
-                # test for and follow meta redirects, uses doctor get_extension
-                # service
-                r = await follow_redirections(r, s)
-                r.raise_for_status()
+        if doctor_is_available:
+            # test for and follow meta redirects, uses doctor get_extension
+            # service
+            r = await follow_redirections(r, s)
+            r.raise_for_status()
 
         content = self.cleanup_content(r.content)
 
@@ -483,6 +480,61 @@ class AbstractSite:
         if parameters is None:
             parameters = {}
         self.request["parameters"].update(parameters)
+
+    def _download_urllib(self):
+        """Handle download using urllib backend.
+
+        :return: parsed HTML tree or JSON object
+        """
+        data = None
+        if self.method == "POST":
+            data = urllib.parse.urlencode(self.parameters).encode("utf-8")
+        raw = self._urllib_fetch(self.url, data=data)
+        text = raw.decode("utf-8")
+        content_type = ""
+        if hasattr(self.request["response"], "getheader"):
+            content_type = self.request["response"].getheader(
+                "Content-Type", ""
+            )
+        if "json" in content_type:
+            return json.loads(text)
+        text = self._clean_text(text)
+        html_tree = self._make_html_tree(text)
+        return html_tree
+
+    def _urllib_fetch(self, url, data=None, headers=None):
+        """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
+
+        httpx gets blocked by Cloudflare due to its TLS fingerprint
+        (httpcore). Python's stdlib urllib uses a different TLS stack
+        that Cloudflare does not block.
+
+        :param url: URL to fetch
+        :param data: POST data as bytes, or None for GET
+        :param headers: optional dict of headers to use instead of defaults
+        :return: raw response bytes
+        """
+        if headers is None:
+            headers = dict(self.request["headers"])
+        req = urllib.request.Request(url, data=data, headers=headers)
+        response = self.urllib_opener.open(req, timeout=60)
+        raw = response.read()
+        # Gzip decompression - currently only needed for lactapp_3
+        # whose server returns gzip-encoded responses
+        if raw[:2] == b"\x1f\x8b":
+            raw = gzip.decompress(raw)
+
+        # Populate request dict for save_response compatibility.
+        # Currently only needed for lactapp_3 which uses urllib
+        self.request["url"] = url
+        self.request["response"] = response
+        if self.save_response:
+            response.text = raw.decode("utf-8")
+            response.content = raw
+            response.history = []
+            self.save_response(self)
+
+        return raw
 
     async def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
