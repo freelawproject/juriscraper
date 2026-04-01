@@ -26,8 +26,6 @@ class Site(OralArgumentSiteLinear):
         self.expected_content_types = [
             "application/octet-stream; charset=UTF-8"
         ]
-        self.status = "Published"
-
         # AWS Cognito creds step:
         self.headers = {
             "Content-Type": "application/x-amz-json-1.1",
@@ -65,8 +63,14 @@ class Site(OralArgumentSiteLinear):
     async def _download(self):
         """Build and download the table to parse
 
-        :return: json data
+        DynamoDB Scan returns at most 1MB per request. If the response
+        contains a ``LastEvaluatedKey``, we must paginate by feeding it
+        back as ``ExclusiveStartKey`` in subsequent requests.
+
+        :return: list of DynamoDB item dicts
         """
+        self.downloader_executed = True
+
         if self.test_mode_enabled():
             return json.load(open(self.mock_url))
 
@@ -76,23 +80,47 @@ class Site(OralArgumentSiteLinear):
         res = await sess.post(self.url, headers=self.headers, json=self.params)
         creds = res.json().get("Credentials")
 
-        # fetch signed headers
-        sig = generate_aws_sigv4_headers(self.payload, self.table, creds)
+        all_items = []
+        payload = json.loads(self.payload)
+        max_pages = 100
 
-        logger.info(
-            "Now downloading case page at: %s (params: %s)"
-            % (self.url, self.payload)
-        )
-        # Fetch media table
-        self.request["response"] = await sess.post(
-            self.query_url, headers=sig, data=self.payload
-        )
+        for _page in range(max_pages):
+            encoded_payload = json.dumps(payload)
+            sig = generate_aws_sigv4_headers(
+                encoded_payload, self.table, creds
+            )
 
-        if self.save_response:
-            self.save_response(self)
+            logger.info(
+                "Now downloading case page at: %s (params: %s)"
+                % (self.url, encoded_payload)
+            )
+            self.request["response"] = await sess.post(
+                self.query_url, headers=sig, data=encoded_payload
+            )
 
-        self._post_process_response()
-        return self._return_response_text_object()["Items"]
+            if self.save_response:
+                self.save_response(self)
+
+            self._post_process_response()
+            data = self._return_response_text_object()
+            all_items.extend(data.get("Items", []))
+
+            last_key = data.get("LastEvaluatedKey")
+            if not last_key:
+                break
+
+            payload["ExclusiveStartKey"] = last_key
+            logger.info(
+                "Paginating DynamoDB scan (%d items so far)", len(all_items)
+            )
+        else:
+            logger.warning(
+                "Reached max pagination limit of %d pages (%d items)",
+                max_pages,
+                len(all_items),
+            )
+
+        return all_items
 
     def _process_html(self):
         """Process the json response"""
