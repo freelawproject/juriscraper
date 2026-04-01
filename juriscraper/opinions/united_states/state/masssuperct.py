@@ -19,9 +19,13 @@ from urllib.parse import quote, urljoin
 from lxml import etree, html
 
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):
@@ -83,6 +87,10 @@ class Site(OpinionSiteLinear):
             url = urljoin("https://www.socialaw.com", url[0]) if url else ""
 
             if not name or not url:
+                logger.warning(
+                    "masssuperct: missing name or URL for docket '%s', skipping",
+                    docket,
+                )
                 continue
 
             self.cases.append(
@@ -109,12 +117,16 @@ class Site(OpinionSiteLinear):
         content = tree.xpath(
             "//div[contains(@class, 'primary-content-rich-text')]"
         )
+
         if not content:
             content = tree.xpath(
                 "//div[contains(@class, 'primary-content-body')]"
             )
         if not content:
-            return b""
+            raise InvalidDocumentError(
+                "masssuperct: no opinion content found in page"
+            )
+
         new_tree = etree.Element("html")
         body = etree.SubElement(new_tree, "body")
         body.append(content[0])

@@ -391,30 +391,21 @@ class AbstractSite:
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_content_urllib(self, download_url: str) -> bytes:
+    def _download_content_urllib(self, download_url: str, headers: dict):
         """Download content using urllib to bypass Cloudflare
 
         Uses urllib instead of httpx because Cloudflare blocks httpx
         via TLS fingerprinting. Used by scrapers with `use_urllib = True`.
 
         :param download_url: The URL for the item you wish to download.
-        :return: The downloaded and cleaned content
+        :param headers: headers dict
+        :return: A response object with a `content` field
         """
-
-        # the test_mode_is_enabled() conditional is not implemented
-        # because it is only used for integration tests with CL
-        # and won't touch this child scraper. Copying the code would
-        # just introduce boilerplate
-
-        headers = {"User-Agent": "CourtListener"}
         req = urllib.request.Request(download_url, headers=headers)
         response = self.urllib_opener.open(req, timeout=90)
-        content = response.read()
+        response.content = response.read()
 
-        check_empty_downloaded_file(content, download_url)
-        check_expected_content_types(self, response, download_url)
-
-        return self.cleanup_content(content)
+        return response
 
     async def download_content(
         self,
@@ -437,9 +428,6 @@ class AbstractSite:
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
         """
         check_download_url(download_url)
-
-        if self.use_urllib:
-            return self._download_content_urllib(download_url)
 
         # noinspection PyBroadException
         if self.test_mode_enabled():
@@ -465,26 +453,28 @@ class AbstractSite:
             r = await s.get(url=self.url)
             return self.cleanup_content(r.content)
 
-        s = self.request["session"]
-
         if self.needs_special_headers:
             headers = self.request["headers"]
         else:
             headers = {"User-Agent": "CourtListener"}
 
-        # Note that we do a GET even if self.method is POST. This is
-        # deliberate.
-        r = await s.get(
-            download_url,
-            headers=headers,
-            cookies=self.cookies,
-            timeout=300,
-        )
+        if self.use_urllib:
+            r = self._download_content_urllib(download_url, headers)
+        else:
+            s = self.request["session"]
+            # Note that we do a GET even if self.method is POST. This is
+            # deliberate.
+            r = await s.get(
+                download_url,
+                headers=headers,
+                cookies=self.cookies,
+                timeout=300,
+            )
 
         check_empty_downloaded_file(r, download_url)
         check_expected_content_types(self, r, download_url)
 
-        if doctor_is_available:
+        if doctor_is_available and not self.use_urllib:
             # test for and follow meta redirects, uses doctor get_extension
             # service
             r = await follow_redirections(r, s)
@@ -517,8 +507,10 @@ class AbstractSite:
         data = None
         if self.method == "POST":
             data = urllib.parse.urlencode(self.parameters).encode("utf-8")
+
         raw = self._urllib_fetch(self.url, data=data)
         text = raw.decode("utf-8")
+
         content_type = ""
         if hasattr(self.request["response"], "getheader"):
             content_type = self.request["response"].getheader(
@@ -526,6 +518,7 @@ class AbstractSite:
             )
         if "json" in content_type:
             return json.loads(text)
+
         text = self._clean_text(text)
         html_tree = self._make_html_tree(text)
         return html_tree
