@@ -119,16 +119,16 @@ class TexasAppealsCourt(TypedDict):
     """
     Schema for Texas appeals court details.
 
-    :ivar case_number: The case number of the appeals court case.
-    :ivar case_url: The URL to the appeals court case.
+    :ivar case_number: The case number(s) of the appeals court case(s).
+    :ivar case_url: The URL(s) to the appeals court case(s).
     :ivar disposition: The disposition of the appeals court case.
     :ivar opinion_cite: The opinion citation.
     :ivar district: The appeals court district.
     :ivar justice: The name of the appeals court judge.
     """
 
-    case_number: str
-    case_url: str
+    case_number: list[str]
+    case_url: list[str]
     disposition: str
     opinion_cite: str
     district: str
@@ -163,13 +163,17 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     }
     justice_node = case_info.get("COA Justice")
 
-    case_url_node = case_info["COA Case"].find(".//a")
-    if case_url_node is None:
-        case_url_node = {}
+    case_url_nodes = case_info["COA Case"].findall(".//a")
+    case_numbers = [clean_string(a.text_content()) for a in case_url_nodes]
+    case_urls = [clean_url(a.get("href", "")) for a in case_url_nodes]
+    if not case_numbers:
+        fallback = clean_string(case_info["COA Case"].text_content())
+        case_numbers = [fallback] if fallback else []
+        case_urls = [""] if fallback else []
     district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
-        case_number=clean_string(case_info["COA Case"].text_content()),
-        case_url=clean_url(case_url_node.get("href", "")),
+        case_number=case_numbers,
+        case_url=case_urls,
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=district,
