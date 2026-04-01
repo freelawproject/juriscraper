@@ -1,7 +1,11 @@
 {
   "appeals_court": {
-    "case_number": "09-23-00371-CR",
-    "case_url": "https://search.txcourts.gov/Case.aspx?cn=09-23-00371-CR",
+    "case_number": [
+      "09-23-00371-CR"
+    ],
+    "case_url": [
+      "https://search.txcourts.gov/Case.aspx?cn=09-23-00371-CR"
+    ],
     "court_id": "texas_coa09",
     "disposition": "",
     "district": "9th Court of Appeals",
