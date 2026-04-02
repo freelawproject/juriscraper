@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Split `kan` and `kanctapp` scrapers by status into `kan_p`, `kan_u`, `kanctapp_p`, `kanctapp_u` (#1262)
 
 Fixes:
 -
