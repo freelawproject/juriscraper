@@ -488,6 +488,51 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._metadata = None
         self._parties = None
         self._docket_entries = None
+        self._description_column_index = None
+
+    def _detect_description_column_index(self) -> int:
+        """Detect the column index for the 'Description' or 'Docket Text' column.
+
+        This method examines the table headers to find which column contains
+        the description text. This makes the parser more robust to variations
+        in table structure across different courts (2-column vs 3-column layouts).
+
+        :return: The 0-based index of the description column, or 2 as a fallback
+        """
+        if self._description_column_index is not None:
+            return self._description_column_index
+
+        # Try to find the header row in the docket entry table
+        docket_header = './/text()[contains(., "Docket Text")]'
+        header_rows = self.tree.xpath(
+            f"//table[{docket_header}]/tbody/tr[1]/th"
+        )
+
+        if not header_rows:
+            # Try alternative header patterns
+            header_rows = self.tree.xpath(
+                '//table[.//th[contains(text(), "Description") or '
+                'contains(text(), "Docket Text")]]/tbody/tr[1]/th'
+            )
+
+        # Search for "Description" or "Docket Text" in the headers
+        for idx, header in enumerate(header_rows):
+            header_text = header.text_content().strip().lower()
+            if "description" in header_text or "docket text" in header_text:
+                self._description_column_index = idx
+                logger.debug(
+                    f"Detected description column at index {idx} "
+                    f"for court {self.court_id}"
+                )
+                return idx
+
+        # Fallback to index 2 (the traditional assumption)
+        logger.warning(
+            f"Could not detect description column for court {self.court_id}, "
+            f"falling back to index 2"
+        )
+        self._description_column_index = 2
+        return 2
 
     @property
     def docket_report_has_content(self) -> bool:
