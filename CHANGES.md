@@ -24,6 +24,17 @@ Fixes:
 
 - Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
 
+## 3.0.6 - 2026-04-02
+
+Features:
+-
+
+Changes:
+- Split `kan` and `kanctapp` scrapers by status into `kan_p`, `kan_u`, `kanctapp_p`, `kanctapp_u` (#1262)
+
+Fixes:
+-
+
 ## 3.0.5 - 2026-03-27
 
 Features:
@@ -42,8 +53,10 @@ Features:
 
 Changes:
 - Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
+- Abstract urllib `download_content` into `AbstractSite` for scrapers with `use_urllib = True` #1714
 
 Fixes:
+- Fix `masssuperct` by switching from JSON API to HTML scraping with urllib to bypass Cloudflare TLS fingerprinting #1714
 - Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
 - Fix `mich` scraper failing when API returns null courts #1885
 
