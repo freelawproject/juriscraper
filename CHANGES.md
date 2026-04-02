@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix several errors found when importing Texas dockets #1890
 
 ## 3.0.5 - 2026-03-27
 
