@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Search Kansas</title>
+    <link href="https://kscourts.gov/KSCourts/media/KsCourts/assets/image/favicon/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link href="/assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/site.css?v=c7IrY3KRQmmgk2bhYuBcVmfFvNY8FFC2Y9SSKDP1lKo" />
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/js/site.js?v=y96Fq27KbKgClDKqUp6PhJZgZS_KLMo-nuntQwDf2mw"></script>
+    <!-- jQuery -->
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <!-- DataTables Buttons Extension -->
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
+
+    <!-- Required for Excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+
+</head>
+<body>
+    <header b-zlz4q0gjtp id="main-header" class="header-section" tabindex="0">
+        <div b-zlz4q0gjtp class="container">
+            <nav b-zlz4q0gjtp class="navbar navbar-expand-sm navbar-dark">
+                <div b-zlz4q0gjtp class="container-fluid d-flex justify-content-between align-items-center">
+                    <!-- Left-aligned logo and heading (60% width on small screens) -->
+                    <div b-zlz4q0gjtp class="d-flex align-items-center flex-column flex-sm-row logo-heading-container">
+                        <a b-zlz4q0gjtp class="navbar-brand" href="https://kscourts.gov/" target="_blank">
+                            <img src="/assets/images/logo/kscourts_logoseal_white_350px.png" alt="Kansas Judicial Branch" />
+                        </a>
+                        <h1 b-zlz4q0gjtp>
+                            <a b-zlz4q0gjtp class="cl-white" href="/">Decisions</a>
+                        </h1>
+                    </div>
+                    <button b-zlz4q0gjtp onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+                        <i b-zlz4q0gjtp class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main b-zlz4q0gjtp id="main-content" tabindex="0">
+
+        
+<div id="Index">
+    <!--============= Banner Section Starts Here =============-->
+    <section class="banner-2" onload="checkButtons()">
+        <div class="container">
+            <h1 class="title" style="padding-bottom:15px;">Search Decisions</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="top-action-bar" role="group" aria-label="Top action buttons">
+                        <div class="left-group">
+                            <a href="/Documents/Anticipated" target="_blank" class="btn btn-primary" id="advanceButton" aria-label="Anticipated Decisions">
+                                Anticipated Decisions
+                            </a>
+                            <a href="/Documents/Released" target="_blank" class="btn btn-primary" id="upcomingButton" aria-label="Published Decisions">
+                                Released Decisions
+                            </a>
+                        </div>
+
+                        <div class="right-group">
+                            <a href="/Data/decisionsList" class="btn btn-secondary" id="decisionsButton" aria-label="Decisions by Release Date">
+                                Decisions by Release Date
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!--============= Question Section Starts Here =============-->
+    <section class="pb-65 mt-20">
+        <div class="container" role="region">
+
+            <!-- Search form -->
+            <form method="get" id="filterForm" action="/Documents/Search">
+                <div class="row">
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="StartDate" class="form-label">Start Date</label>
+                        <input type="date" id="StartDate" name="StartDate" class="form-control" value="2026-03-03" />
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="EndDate" class="form-label">End Date</label>
+                        <input type="date" id="EndDate" name="EndDate" class="form-control" value="2026-04-02" />
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="statusFilter" class="form-label">Status</label>
+                        <select class="form-select" id="statusFilter" name="statusFilter">
+                            <option value="-1">Published & Unpublished</option>
+                            <option value="1" selected="selected">Published</option>
+                            <option value="0">Unpublished</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="courtFilter" class="form-label">Court</label>
+                        <select class="form-select" id="courtFilter" name="courtFilter">
+                            <option value="">Both Courts</option>
+                            <option value="10" selected="selected">Supreme Court</option>
+                            <option value="20">Court of Appeals</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-6 col-lg-12  col-md-12">
+                        <input type="text" id="Keyword" name="Keyword" placeholder="Keyword Search..." class="form-control" />
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <button type="button" id="clearFiltersButton" class="btn btn-primary">Reset</button>
+                    </div>
+                    
+                </div>
+            </form>
+
+            <script>
+                document.getElementById("clearFiltersButton").addEventListener("click", function () {
+                    window.location.href = '/';
+                });
+            </script>
+            <hr />
+
+
+            <h2 class="pb-20 results">Search Results</h2>
+                <p class="results">
+                    By default, the table displays data from the past three months. To view results beyond this period, select a <b>Start Date</b> and an <b>End Date</b> and select <b>Search</b>.
+                    <br /><span style="color:#555251;">You can sort columns for data currently displayed. Use <b>Keyword Search</b> to search the entire database and return the top 500 records.</span>
+                </p>
+                <div id="tableLoading" class="text-center mb-3">
+                    <span class="spinner-border" role="status" aria-hidden="true"></span>
+                    <span>Loading results...</span>
+                </div>
+                <div class="table-responsive" id="searchResultsWrapper" style="display:none;">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="searchResultsTable">
+                    <thead>
+                        <tr>
+                            <th>Release Date</th>
+                            <th>Case Number</th>
+                            <th class="case-title">Case Title</th>
+                            <th>Court</th>
+                            <th>Status</th>
+                            <th>PDF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>129788</td>
+                            <td class="case-title">
+                                Kelly v. Kobach
+                            </td>
+                            <td>Supreme Court</td>
+                            <td>Published</td>
+                                <td><a href="/documents/pdf/caseDecisions/58e71642-22ed-49ee-96c1-5c930cc0ecbc_129788.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129788  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>127070</td>
+                            <td class="case-title">
+                                State v. Craig
+                            </td>
+                            <td>Supreme Court</td>
+                            <td>Published</td>
+                                <td><a href="/documents/pdf/caseDecisions/fa32e579-d978-4c1e-8132-f5be61e2ea31_127070.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127070  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>127179</td>
+                            <td class="case-title">
+                                State v. Manzano-Legarda
+                            </td>
+                            <td>Supreme Court</td>
+                            <td>Published</td>
+                                <td><a href="/documents/pdf/caseDecisions/170ea8a2-9a26-484f-bc95-d04191ca7755_127179.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127179  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>127537</td>
+                            <td class="case-title">
+                                State v. Bey
+                            </td>
+                            <td>Supreme Court</td>
+                            <td>Published</td>
+                                <td><a href="/documents/pdf/caseDecisions/5e01ee1a-785d-4d0c-9fd0-fff62c85b842_127537.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127537  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128381</td>
+                            <td class="case-title">
+                                State v. Lopez
+                            </td>
+                            <td>Supreme Court</td>
+                            <td>Published</td>
+                                <td><a href="/documents/pdf/caseDecisions/16b58e4f-aa0a-4859-9c4b-25ab54eacf5d_128381.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128381  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127467</td>
+                            <td class="case-title">
+                                State v. Evans
+                            </td>
+                            <td>Supreme Court</td>
+                            <td>Published</td>
+                                <td><a href="/documents/pdf/caseDecisions/a37e67ce-68a1-40bd-bca3-1550130db8f8_127467.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127467  (Opens in a new window)"></i></a></td>
+                            </tr>
+                    </tbody>
+                        </table>
+                    </div>
+                </div>
+
+        </div>
+        
+    </section>
+    <!--============= Scripts =============-->
+    <script type="text/javascript">
+        console.log("Current Environment: ''");
+
+        $(document).ready(function () {
+            if ($.fn.DataTable.isDataTable('#searchResultsTable')) {
+                $('#searchResultsTable').DataTable().clear().destroy();
+            }
+
+            const table = $('#searchResultsTable').DataTable({
+                responsive: true,
+                autoWidth: false,
+                pageLength: 10,
+                order: [],           // don't override server-rendered row order
+                stateSave: false,    // don't remember previous sort/filter
+                columnDefs: [
+                    { orderable: false, targets: 5 },
+                    { type: "date", targets: 0 },
+                    { type: "num", targets: 1 }
+                ],
+                language: {
+                    search: "Filter:"
+                },
+                initComplete: function () {
+                    $('#tableLoading').remove(); // Remove spinner
+                    $('#searchResultsWrapper').fadeIn(200); // Reveal table wrapper
+                }
+            });
+
+            //gray out the anticipated and published opinion buttons if there are no available files
+            var advanceButton = document.getElementById("advanceButton");
+            var upcomingButton = document.getElementById("upcomingButton");
+            $.ajax({
+            type: "GET",
+            url: '/Documents/FileIsAvailable',
+            dataType: "json",
+            cache: false
+        })
+        .done(function (data) {
+            // data = { anticipated: true|false, published: true|false }
+            if (advanceButton) {
+                if (data.anticipatedAvailable) {
+                    advanceButton.classList.remove('disabled');
+                    advanceButton.setAttribute('aria-disabled', 'false');
+                } else {
+                    advanceButton.classList.add('disabled');
+                    advanceButton.setAttribute('aria-disabled', 'true');
+                }
+            }
+
+            if (upcomingButton) {
+                if (data.publishedAvailable){
+                    upcomingButton.classList.remove('disabled');
+                    upcomingButton.setAttribute('aria-disabled', 'false');
+                } else {
+                    upcomingButton.classList.add('disabled');
+                    upcomingButton.setAttribute('aria-disabled', 'true');
+                }
+            }
+        })
+        });
+
+    </script>
+</div>
+<style>
+    /* Top action buttons:
+                               - stacked and full-width on small screens
+                               - left two inline on the left and one on the right on md+ screens */
+    .top-action-bar {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+        .top-action-bar .left-group,
+        .top-action-bar .right-group {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .top-action-bar .btn {
+            width: 100%;
+        }
+
+    @media (min-width: 768px) {
+        .top-action-bar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .top-action-bar .left-group {
+                flex-direction: row;
+                gap: .5rem;
+            }
+
+                .top-action-bar .left-group .btn,
+                .top-action-bar .right-group .btn {
+                    width: auto;
+                }
+                /* optional: keep a little more breathing room on larger screens */
+                .top-action-bar .left-group .btn {
+                    min-width: 10rem;
+                }
+    }
+</style>
+
+
+        <!--============= Have Questions Section Starts Here =============-->
+        <div b-zlz4q0gjtp class="have-questions-section mb--70--145" tabindex="100">
+            <div b-zlz4q0gjtp class="container">
+                <div b-zlz4q0gjtp class="have-question-wrapper">
+                    <div b-zlz4q0gjtp class="row">
+                        <div b-zlz4q0gjtp class="col-lg-12">
+                            <div b-zlz4q0gjtp class="have-question-content">
+                                <ul b-zlz4q0gjtp>
+                                    <li b-zlz4q0gjtp>
+                                        <h3 b-zlz4q0gjtp>Published Decisions</h3>
+                                        <ul b-zlz4q0gjtp>
+                                            <li b-zlz4q0gjtp>The Kansas Supreme Court and the Kansas Court of Appeals usually release published decisions around 9:30 a.m. on Fridays. These decisions are posted as soon as possible after they are released.</li>
+                                            <li b-zlz4q0gjtp>Decisions posted online may not be final. A party may request a rehearing, modification, or further review, or the court may determine a change is needed. Final decisions are published in the Kansas Reports and the Kansas Court of Appeals Reports.</li>
+                                            <li b-zlz4q0gjtp><a b-zlz4q0gjtp href="https://kscourts.gov/Cases-Opinions/Citing-Opinions" target="_blank">Citing Decisions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li b-zlz4q0gjtp>
+                                        <h3 b-zlz4q0gjtp>Unpublished Decisions</h3>
+                                        <ul b-zlz4q0gjtp>
+                                            <li b-zlz4q0gjtp>The Kansas Supreme Court and the Kansas Court of Appeals usually release unpublished decisions around 9:30 a.m. on Fridays. These unpublished decisions are posted online the same day they are released.</li>
+                                            <li b-zlz4q0gjtp>Unpublished decisions posted online may not be final. A party may request a rehearing, modification, or further review. Unpublished decisions do not get published in the Kansas Reports or in the Kansas Court of Appeals Reports.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============= Have Questions Section Ends Here =============-->
+    </main>
+    <!--============= Footer Section Starts Here =============-->
+    <footer b-zlz4q0gjtp class="footer-section pt-70-145" tabindex="101">
+        <div b-zlz4q0gjtp class="container">
+            <div b-zlz4q0gjtp class="footer-top pb-50 pt-50">
+                <div b-zlz4q0gjtp class="row mb--50 justify-content-between">
+                    <div b-zlz4q0gjtp class="col-sm-12 col-lg-12">
+                        <div b-zlz4q0gjtp class="footer-widget widget-about">
+                            <p b-zlz4q0gjtp class="cl-white">The Supreme Court and Court of Appeals make their decisions available online as soon as they are filed. <a b-zlz4q0gjtp href="https://kscourts.gov/Cases-Decisions" target="_blank" style="text-decoration:underline !important;">Visit the Cases-Decisions page for additional information.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div b-zlz4q0gjtp class="bottom-area cl-white" style="border-top: solid 2px #fff;">
+                <div b-zlz4q0gjtp class="copyright-area">
+                    <a b-zlz4q0gjtp href="https://kscourts.gov/" target="_blank"><img src="/assets/images/logo/kscourts_seal_supremecourt_white_8july19_350px.png" class="footer-logo" alt="Seal" /></a>
+                    <span b-zlz4q0gjtp class="text"> Copyright © 2024 Kansas Judicial Branch. All Rights Reserved.</span>
+
+                </div>
+                <ul b-zlz4q0gjtp class="social-icons">
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp href="https://www.linkedin.com/company/kansas-office-of-judicial-administration" class="external-link" target="_blank" aria-label="Visit our LinkedIn page">
+                            <i b-zlz4q0gjtp class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="https://www.facebook.com/KSCourts" class="external-link" aria-label="Visit our Facebook page">
+                            <i b-zlz4q0gjtp class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="https://www.instagram.com/kscourts" aria-label="Visit our Instagram page">
+                            <i b-zlz4q0gjtp class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="https://x.com/KSCourts" class="external-link" aria-label="Visit our Twitter page">
+                            <i b-zlz4q0gjtp class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="http://www.flickr.com/photos/kscourts" class="external-link" aria-label="Visit our Flickr page">
+                            <i b-zlz4q0gjtp class="fab fa-flickr" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--============= Footer Section Ends Here =============-->
+    
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5d1653a7115844e68bf8fb700609ffde","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e615e6cbeae586b',t:'MTc3NTE0OTAwNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
