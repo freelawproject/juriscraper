@@ -830,6 +830,12 @@ def clean_url(url: str) -> str:
 
     :param url: The URL to clean
     :return: The cleaned URL"""
+    # Escape '#' in the query string before parsing, so urlparse doesn't
+    # treat it as a fragment delimiter (Texas URLs sometimes contain
+    # unescaped '#' in query parameter values like "DT=53.7(F) FILED #2").
+    qmark = url.find("?")
+    if qmark != -1:
+        url = url[: qmark + 1] + url[qmark + 1 :].replace("#", "%23")
     scheme, netloc, path, params, query, fragment = urlparse(url)
     query_dict = parse_qs(query)
     clean_query = urlencode(query_dict, doseq=True, quote_via=quote_plus)
