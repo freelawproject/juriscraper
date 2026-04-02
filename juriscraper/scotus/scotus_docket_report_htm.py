@@ -45,8 +45,8 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         :return: None.
         """
         super().__init__(court_id=court_id)
-        self._case_data_table: Optional[list[list[HtmlElement]]] = None
-        self._docket_entry_table: Optional[list[list[HtmlElement]]] = None
+        self._case_data_table: list[list[HtmlElement]] = []
+        self._docket_entry_table: list[list[HtmlElement]] = []
         self._page_format: Optional[HTMPageFormat] = None
 
     @property
@@ -102,9 +102,6 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             self.DOCKET_NUMBER_RE, self._case_data_table[0][0].text_content()
         )
         docket_number = m.group(1).strip() if m else None
-        if not docket_number:
-            logger.error("Failed to extract SCOTUS docket number.")
-            return {}
 
         # Lower court data
         lower_court_raw = (self.lower_court_case_numbers_raw or "").strip()
@@ -135,9 +132,6 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         links = (linked_with_val or "").strip()
 
         case_name = self.case_name
-        if not case_name:
-            logger.error("Failed to extract SCOTUS docket name.")
-            return {}
 
         return {
             "docket_number": docket_number,
@@ -225,14 +219,14 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     def _build_docket_entry(
         self,
         date_str: str,
-        description_tds: list[HtmlElement],
+        description_td: list[HtmlElement],
         attachment_path: str,
         table_layout: bool = False,
     ) -> dict[str, Any]:
         """Build a normalized docket entry dict.
 
         :param date_str: Raw date string from the date cell.
-        :param description_tds: The <td> elements containing the description.
+        :param description_td: The <td> elements containing the description.
         :param attachment_path: the path to select attachment anchors inside the
         description cell.
         :return: A dict containing the normalized docket entry.
@@ -242,7 +236,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         all_fragments = [
             self._parse_description_html(dtd).strip()
             or html.tostring(dtd, encoding="unicode").strip()
-            for dtd in description_tds
+            for dtd in description_td
         ]
         fragments = [
             fragment
@@ -254,7 +248,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
         # If attachments with links are found in HTM dockets. Log an error
         # This is an opportunity to add support for it.
-        if any(dtd.xpath(attachment_path) for dtd in description_tds):
+        if any(dtd.xpath(attachment_path) for dtd in description_td):
             logger.error("SCOTUS HTM docket entry contains attachments.")
 
         description = ""
@@ -285,6 +279,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
         while row_i < len(self._docket_entry_table):
             if not self._docket_entry_table[row_i]:
+                row_i += 1
                 continue
             date_str = self._clean_whitespace(
                 self._docket_entry_table[row_i][0].text_content()
@@ -307,7 +302,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             entries.append(
                 self._build_docket_entry(
                     date_str=date_str,
-                    description_tds=desc_tds,
+                    description_td=desc_tds,
                     attachment_path=".//a[@href]",
                 )
             )
@@ -457,9 +452,9 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 and self.EMAIL_RE.search(address_col)
             ):
                 if current_attorney:
-                    current_attorney["_email"] = self.EMAIL_RE.search(
-                        address_col
-                    ).group(0)
+                    email_search = self.EMAIL_RE.search(address_col)
+                    if email_search:
+                        current_attorney["_email"] = email_search.group(0)
                 continue
 
             # "Counsel of Record" marker row.
