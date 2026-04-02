@@ -968,7 +968,7 @@ class TexasCommonScraper(
             return []
         documents = parse_table(table)
         anchors = [parent.find(".//a") for parent in documents["0"]]
-        urls: list[str] = [anchor.get("href") for anchor in anchors]
+        urls: list[str] = [clean_url(anchor.get("href")) for anchor in anchors]
         query_dicts: list[dict[str, list[str]]] = [
             parse_qs(urlparse(url).query) for url in urls
         ]
