@@ -119,16 +119,16 @@ class TexasAppealsCourt(TypedDict):
     """
     Schema for Texas appeals court details.
 
-    :ivar case_number: The case number of the appeals court case.
-    :ivar case_url: The URL to the appeals court case.
+    :ivar case_number: The case number(s) of the appeals court case(s).
+    :ivar case_url: The URL(s) to the appeals court case(s).
     :ivar disposition: The disposition of the appeals court case.
     :ivar opinion_cite: The opinion citation.
     :ivar district: The appeals court district.
     :ivar justice: The name of the appeals court judge.
     """
 
-    case_number: str
-    case_url: str
+    case_number: list[str]
+    case_url: list[str]
     disposition: str
     opinion_cite: str
     district: str
@@ -163,13 +163,17 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     }
     justice_node = case_info.get("COA Justice")
 
-    case_url_node = case_info["COA Case"].find(".//a")
-    if case_url_node is None:
-        case_url_node = {}
+    case_url_nodes = case_info["COA Case"].findall(".//a")
+    case_numbers = [clean_string(a.text_content()) for a in case_url_nodes]
+    case_urls = [clean_url(a.get("href", "")) for a in case_url_nodes]
+    if not case_numbers:
+        fallback = clean_string(case_info["COA Case"].text_content())
+        case_numbers = [fallback] if fallback else []
+        case_urls = [""] if fallback else []
     district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
-        case_number=clean_string(case_info["COA Case"].text_content()),
-        case_url=clean_url(case_url_node.get("href", "")),
+        case_number=case_numbers,
+        case_url=case_urls,
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=district,
@@ -359,6 +363,7 @@ def _originating_court_name_to_type(name: str) -> CourtType:
 
 def district_court_number_from_name(name: str) -> int:
     # TODO Handle edge-cases
+    name = _clean_court_name(name)
     district_court_match = DISTRICT_COURT_RE.match(name)
     district = district_court_match.group(1)
     if district == "1-a" or district == "1a":
@@ -462,7 +467,7 @@ class TexasCommonData(TypedDict):
 
 
 # Regex to recognize numbers with (optional) commas every 3 digits.
-NUMBER_RE_STR = r"[1-9]\d{0,2}(?:,?\d{3})*"
+NUMBER_RE_STR = r"\d{1,3}(?:,?\d{3})*"
 DOCKET_NUMBER_REGEXES = [
     re.compile(r"\d{1,2}[bB]?-\d{2,4}"),  # Supreme Court
     re.compile(r"\d{4,5}"),  # Supreme Court (older writs)
@@ -693,6 +698,10 @@ class TexasCommonScraper(
         party_name_parts = [
             part.removeprefix("the ").strip() for part in party_name_parts
         ]
+        if not party_name_parts:
+            start = self.case_name_full.lower().find(party_name.lower())
+            end = start + len(party_name) if start >= 0 else len(party_name)
+            return start, end
         party_name_parts_indexed = [
             (self.case_name_full.lower().find(part), part)
             for part in party_name_parts
@@ -959,7 +968,7 @@ class TexasCommonScraper(
             return []
         documents = parse_table(table)
         anchors = [parent.find(".//a") for parent in documents["0"]]
-        urls: list[str] = [anchor.get("href") for anchor in anchors]
+        urls: list[str] = [clean_url(anchor.get("href")) for anchor in anchors]
         query_dicts: list[dict[str, list[str]]] = [
             parse_qs(urlparse(url).query) for url in urls
         ]
