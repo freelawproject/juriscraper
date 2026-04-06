@@ -29,7 +29,7 @@ Features:
 -
 
 Changes:
-- 
+-
 
 Fixes:
 - Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
