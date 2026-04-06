@@ -22,6 +22,9 @@ Changes:
 
 Fixes:
 - Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
+- Expand permissable TAMES docket numbers
+- More gracefully handle empty event tables in Tames
+- Improved TAMES Download URL escaping
 
 ## 3.0.6 - 2026-04-02
 
