@@ -55,14 +55,12 @@ class Site(OpinionSiteLinear):
             if name and "btn" not in name.lower():
                 params[name] = inp.get("value", "")
         for sel in tree.xpath("//form//select[@name]"):
-            selected = sel.xpath(".//option[@selected]")
-            if selected:
+            if selected := sel.xpath(".//option[@selected]"):
                 params[sel.get("name")] = selected[0].get(
                     "value", selected[0].text_content()
                 )
             else:
-                first = sel.xpath(".//option")
-                if first:
+                if first := sel.xpath(".//option"):
                     params[sel.get("name")] = first[0].get(
                         "value", first[0].text_content()
                     )
@@ -80,25 +78,23 @@ class Site(OpinionSiteLinear):
 
         target = self.target_date
         month_name = target.strftime("%B")
+
         params = self._get_form_params(tree)
         params["ctl00$MainContent$ddlSearchOpinions2_Month"] = month_name
         params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(target.year)
         params["ctl00$MainContent$btnSearchOpinionsByMonthYear"] = "Search"
         data = urllib.parse.urlencode(params).encode("utf-8")
+
         headers = dict(self.request["headers"])
         headers["Content-Type"] = "application/x-www-form-urlencoded"
         headers["Accept-Encoding"] = "gzip, deflate"
+
         raw = self._urllib_fetch(self.url, data=data, headers=headers)
+
         return lxml_html.fromstring(raw.decode("utf-8"))
 
     def _process_html(self):
-        self._extract_opinions(self.html)
-
-    def _extract_opinions(self, tree):
-        """Extract opinion data from search results
-
-        :param tree: lxml HTML tree containing opinion results
-        """
+        tree = self.html
         seen_urls = {case["url"] for case in self.cases}
         rows = tree.xpath(
             '//table[.//strong[contains(text(),"Opinion Search by")]]'

@@ -1,7 +1,11 @@
 {
   "appeals_court": {
-    "case_number": "08-87-00036-CR",
-    "case_url": "https://search.txcourts.gov/Case.aspx?cn=08-87-00036-CR",
+    "case_number": [
+      "08-87-00036-CR"
+    ],
+    "case_url": [
+      "https://search.txcourts.gov/Case.aspx?cn=08-87-00036-CR"
+    ],
     "court_id": "texas_coa08",
     "disposition": "",
     "district": "8th Court of Appeals",
