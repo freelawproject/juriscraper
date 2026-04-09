@@ -16,12 +16,7 @@ class Site(ny.Site):
     # If more than 500 results are found, no results will be shown
     days_interval = 30
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court = "Appellate Term, 1st Dept"
-        self.court_id = self.__module__
-        self._set_parameters()
-        self.make_backscrape_iterable(kwargs)
+    court = "Appellate Term, 1st Dept"
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
