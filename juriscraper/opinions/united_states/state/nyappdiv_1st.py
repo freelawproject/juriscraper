@@ -15,13 +15,7 @@ from juriscraper.opinions.united_states.state import ny
 class Site(ny.Site):
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
-        self.court = "App Div, 1st Dept"
-        self.make_backscrape_iterable(kwargs)
-        self._set_parameters()
+    court = "App Div, 1st Dept"
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?

@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
-- Fix `ny` update all NY scrapers for redesigned court website #1862
+- Fix `ny` update all NY scrapers for redesigned court website #1864
 
 ## 3.0.3 - 2026-03-25
 

@@ -13,6 +13,7 @@ History:
 import re
 from datetime import date, timedelta
 from typing import Any, Optional
+from urllib.parse import urljoin
 
 import nh3
 from lxml.html import fromstring, tostring
@@ -37,10 +38,10 @@ class Site(OpinionSiteLinear):
     }
 
     base_url = "https://iapps.courts.state.ny.us/lawReporting/Search"
+    court = "Court of Appeals"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.court = "Court of Appeals"
         self.court_id = self.__module__
         self.url = self.base_url
         self._set_parameters()
@@ -99,8 +100,7 @@ class Site(OpinionSiteLinear):
 
         # Step 1: GET the search page to establish session
         self.method = "GET"
-        await super()._download(request_dict)
-        html = self._return_response_text_object()
+        html = await super()._download(request_dict)
 
         # Step 2: Extract the form action URL
         form_action = html.xpath("//form/@action")
@@ -108,9 +108,7 @@ class Site(OpinionSiteLinear):
             logger.warning("Could not find form action URL")
             return html
 
-        action_url = form_action[0]
-        if action_url.startswith("./"):
-            action_url = f"{self.base_url.rsplit('/', 1)[0]}/{action_url[2:]}"
+        action_url = urljoin(self.base_url, form_action[0])
 
         # Step 3: POST to the form action URL
         self.method = "POST"
@@ -120,7 +118,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         table = self.html.xpath('.//table[contains(@class, "table")]')
         if not table:
-            logger.info("No results table found.")
+            logger.warning("No results table found.")
             return
         for row in table[0].xpath(".//tbody/tr"):
             cells = row.xpath("./td")
