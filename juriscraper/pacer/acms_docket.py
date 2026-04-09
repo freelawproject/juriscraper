@@ -9,7 +9,7 @@ from requests import Response
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.network_utils import AcmsApiClient
+from juriscraper.lib.network_utils import AcmsApiClient, is_guid
 from juriscraper.lib.string_utils import convert_date_string
 
 from .appellate_docket import AppellateDocketReport
@@ -41,11 +41,32 @@ class ACMSDocketReport(AppellateDocketReport):
         """
         Queries the court API for case and docket details for a given case ID.
 
-        :param case_id: The unique identifier of the case to query.
+        Accepts either a case GUID (e.g., 'ca316d25-86f8-f011-ad8f-001dd80c20ec')
+        or a docket number (e.g., '26-508'). If a docket number is provided,
+        it will be automatically resolved to a GUID using the session's
+        SAML cookies.
+
+        :param case_id: The case GUID or docket number to query.
+        :raises ValueError: If docket number cannot be resolved to a GUID.
         """
         assert self.session is not None, (
             "session attribute of AppellateDocketReport cannot be None."
         )
+
+        # Check if case_id is a GUID or docket number
+        if not is_guid(case_id):
+            logger.info(
+                f"[ACMS] '{case_id}' appears to be a docket number, "
+                "resolving to GUID..."
+            )
+            resolved_guid = self.api_client.resolve_docket_to_guid(case_id)
+            if not resolved_guid:
+                raise ValueError(
+                    f"Could not resolve docket number '{case_id}' to a case GUID. "
+                    "Ensure the session has valid ACMS cookies for this court."
+                )
+            case_id = resolved_guid
+
         # Fetch Case Details
         case_data = self.api_client.get_case_details(case_id)
 
@@ -58,38 +79,95 @@ class ACMSDocketReport(AppellateDocketReport):
             "docketInfo": entry_details,
         }
 
+    def get_entries_with_documents(self) -> list[dict]:
+        """
+        Return docket entries that have downloadable documents (page_count > 0).
+
+        :return: List of docket entry dicts with documents available.
+        """
+        return [
+            entry
+            for entry in self.docket_entries
+            if entry.get("page_count", 0) > 0
+        ]
+
+    def get_entry_by_number(self, entry_number: int) -> Optional[dict]:
+        """
+        Get a docket entry by its entry number.
+
+        :param entry_number: The docket entry number (e.g., 1, 2, 3)
+        :return: The docket entry dict, or None if not found.
+        """
+        for entry in self.docket_entries:
+            if entry.get("document_number") == entry_number:
+                return entry
+        return None
+
     def download_pdf(
-        self, entry_id: str, doc_id: str
+        self,
+        entry_number: Optional[int] = None,
+        entry_id: Optional[str] = None,
+        doc_id: Optional[str] = None,
     ) -> tuple[Optional[Response], str]:
         """
-        Downloads a PDF for a given docket entry and document ID.
+        Downloads a PDF for a given docket entry.
 
-        This method retrieves the list of documents associated with the given
-        entry, validates the provided document ID, and then requests the PDF
-        download from the API client.
+        You can specify the entry either by:
+        - entry_number: The docket entry number (e.g., 1, 3, 6) - RECOMMENDED
+        - entry_id: The raw docket entry ID (GUID)
 
-        :param entry_id: The identifier of the docket entry.
-        :param doc_id: The identifier of the document within the entry.
-                    If not provided and only one document exists,
-                    that document is used by default.
+        :param entry_number: The docket entry number (1, 2, 3, etc.)
+        :param entry_id: The docket entry ID (GUID). Use entry_number instead.
+        :param doc_id: The document ID within the entry (optional, uses first
+                      document if not specified and only one exists).
         :return: A tuple containing:
-                - Response object if the PDF download was successful, otherwise
-                 None.
-                - An error message string if an issue occurred, otherwise an
-                 empty string.
+                - Response object if the PDF download was successful, otherwise None.
+                - An error message string if an issue occurred, otherwise empty string.
+
+        Example:
+            # Download PDF for entry #1
+            response, error = report.download_pdf(entry_number=1)
+            if response:
+                with open('document.pdf', 'wb') as f:
+                    f.write(response.content)
         """
+        # Resolve entry_number to entry_id if provided
+        if entry_number is not None:
+            entry = self.get_entry_by_number(entry_number)
+            if not entry:
+                return (
+                    None,
+                    f"No docket entry found with number {entry_number}.",
+                )
+            if entry.get("page_count", 0) == 0:
+                return (
+                    None,
+                    f"Entry #{entry_number} has no downloadable documents (page_count=0).",
+                )
+            entry_id = entry.get("pacer_doc_id")
+            if not entry_id:
+                return None, f"Entry #{entry_number} has no pacer_doc_id."
+            logger.info(f"[ACMS] Resolved entry #{entry_number} -> {entry_id}")
+
+        if not entry_id:
+            return None, "Must provide either entry_number or entry_id."
+
         # Fetch all documents for given entry
         attachment_list = self.api_client.get_attachments(
             entry_id, False, False
         )
         if not attachment_list:
-            return None, "No documents found for the given entry."
+            return None, f"No documents found for entry_id '{entry_id}'."
 
         # Case: multiple documents found but no document ID provided
         if not doc_id and len(attachment_list) > 1:
+            doc_list = ", ".join(
+                f"{d.get('documentNumber', '?')}: {d.get('name', 'unnamed')}"
+                for d in attachment_list
+            )
             error_message = (
-                "Multiple documents found for this entry. Please "
-                "provide a document ID."
+                f"Multiple documents found for this entry ({len(attachment_list)}). "
+                f"Please provide a doc_id. Available: {doc_list}"
             )
             return None, error_message
 
@@ -99,7 +177,7 @@ class ACMSDocketReport(AppellateDocketReport):
         else:
             doc_data = next(
                 filter(
-                    lambda v: v["docketDocumentDetailsId"] == doc_id,
+                    lambda v: v["acms_docketdocumentdetailsid"] == doc_id,
                     attachment_list,
                 ),
                 None,
@@ -107,10 +185,15 @@ class ACMSDocketReport(AppellateDocketReport):
             if not doc_data:
                 return None, f"Document ID '{doc_id}' not found in this entry."
 
+        logger.info(
+            f"[ACMS] Downloading PDF: {doc_data.get('name', 'unnamed')} "
+            f"({doc_data.get('pageCount', '?')} pages)"
+        )
+
         r = self.api_client.download_pdf(
-            doc_data["docketDocumentDetailsId"],
-            doc_data["pageCount"],
-            doc_data["documentUrl"],
+            doc_data["acms_docketdocumentdetailsid"],
+            doc_data["acms_pagecount"],
+            doc_data["acms_documenturl"],
         )
         return r, ""
 
@@ -367,6 +450,17 @@ class ACMSDocketReport(AppellateDocketReport):
                     assert "Unexpected SEE ABOVE found in ACMS attorney list"
 
         return parties
+
+    @property
+    def latest_entry_date(self):
+        """Return the most recent date_entered from docket entries."""
+        entries = self.docket_entries
+        if not entries:
+            return None
+        return max(
+            (e["date_entered"] for e in entries if e.get("date_entered")),
+            default=None,
+        )
 
     @property
     def docket_entries(self):
