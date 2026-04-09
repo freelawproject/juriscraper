@@ -23,6 +23,56 @@ Changes:
 Fixes:
 - Fix `ny` update all NY scrapers for redesigned court website #1864
 
+## 3.0.7 - 2026-04-06
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
+- Expand permissable TAMES docket numbers
+- More gracefully handle empty event tables in Tames
+- Improved TAMES Download URL escaping
+
+## 3.0.6 - 2026-04-02
+
+Features:
+-
+
+Changes:
+- Split `kan` and `kanctapp` scrapers by status into `kan_p`, `kan_u`, `kanctapp_p`, `kanctapp_u` (#1262)
+
+Fixes:
+-
+
+## 3.0.5 - 2026-03-27
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `ca9` oral argument scraper to paginate DynamoDB scans #1877
+
+## 3.0.4 - 2026-03-26
+
+Features:
+-
+
+Changes:
+- Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
+- Abstract urllib `download_content` into `AbstractSite` for scrapers with `use_urllib = True` #1714
+
+Fixes:
+- Fix `masssuperct` by switching from JSON API to HTML scraping with urllib to bypass Cloudflare TLS fingerprinting #1714
+- Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
+- Fix `mich` scraper failing when API returns null courts #1885
+
 ## 3.0.3 - 2026-03-25
 
 Features:
@@ -38,14 +88,17 @@ Fixes:
 ## 3.0.2 - 2026-03-20
 
 Features:
+
 - Implements `kan` and `kanctapp` backscraper #1316
 - Implements `lactapp_3` using urllib #1455
 - Abstract `urllib` implementation #1455
 
 Changes:
+
 - `kan` back to OpinionSiteLinear
 
 Fixes:
+
 - Fixes `kan` and `kanctapp` by using urllib requests #1316
 - Fixes the sample caller to download documents
 - Fixed the `nh_p` and `nh_u` scrapers #1663
@@ -59,6 +112,7 @@ Changes:
 -
 
 Fixes:
+
 - Added missing `await` to `la`, `iowactapp` and `miss` scrapers #1860
 - Catch correct `httpx.TimeoutException` in `get_extension` #1860
 
@@ -68,6 +122,7 @@ Features:
 -
 
 Changes:
+
 - Migrate from `requests` to `httpx.AsyncClient` for AbstractSite children scrapers HTTP workflows #1843
 - Migrate scraper sync call paths to async #1843
 
@@ -83,21 +138,25 @@ Changes:
 -
 
 Fixes:
+
 - Fix `texapp` skip cases with no opinion documents to prevent empty sub_opinions #1852
 - Fix `pa` UNANIMOUS opinions not setting `per_curiam=True`, causing InsanityException #1854
 
 ## 2.8.3 - 2026-03-13
 
 Features:
+
 - Add backscraping support to `mich` and `michctapp` going #1806
 - Add parsing for Texas email notifications.
 - Add Claude Code skill for automating version releases #1826
 
 Changes:
+
 - Raise an exception during parsing for Texas docket numbers we know to be bad data
 - Update Texas docket number validation to handle all 6,401 valid cases that were failing
 
 Fixes:
+
 - Fix `sc`, `sc_u`, `scctapp`, `scctapp_u` update XPath selectors for redesigned SC courts website
 - Map unmapped PA opinion types and disable `logger.error` #1847
 
@@ -107,6 +166,7 @@ Features:
 -
 
 Changes:
+
 - OpinionSite can now return a "content" key holding downloaded content #873
 
 Fixes:

@@ -3,11 +3,16 @@ import re
 import traceback
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Any, Callable, Optional
+from typing import Any, Callable, Optional, Union
 
 from httpx import HTTPError
 
-from juriscraper.lib.exceptions import InsanityException
+from juriscraper.lib.exceptions import (
+    EmptyFileError,
+    InsanityException,
+    NoDownloadUrlError,
+    UnexpectedContentTypeError,
+)
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.type_utils import OpinionType
 
@@ -279,3 +284,59 @@ async def backscrape_over_paginated_results(
                 cases.append(case)
 
     return cases
+
+
+def check_expected_content_types(
+    site: Any, response: Any, download_url: str
+) -> None:
+    """Raise UnexpectedContentTypeError if response Content-Type is not allowed.
+
+    :param site: scraper instance
+    :param response: httpx Response or urllib HTTPResponse
+    :param download_url: URL that was fetched
+    """
+    expected_content_types = site.expected_content_types
+    court_id = site.court_id
+
+    # test for expected content type (thanks mont for nil)
+    if not expected_content_types:
+        return
+
+    # Support both httpx (headers.get) and urllib (getheader) responses
+    if hasattr(response, "getheader"):
+        raw_ct = response.getheader("Content-Type", "")
+    else:
+        raw_ct = response.headers.get("Content-Type", "")
+
+    # Clean up content types like "application/pdf;charset=utf-8"
+    # and 'application/octet-stream; charset=UTF-8'
+    content_type = raw_ct.lower().split(";")[0].strip()
+    m = any(content_type in mime.lower() for mime in expected_content_types)
+
+    if not m:
+        court_str = court_id.split(".")[-1].split("_")[0]
+        fingerprint = [f"{court_str}-unexpected-content-type"]
+        msg = f"'{download_url}' '{content_type}' not in {expected_content_types}"
+        raise UnexpectedContentTypeError(
+            msg, fingerprint=fingerprint, data={"response": response}
+        )
+
+
+def check_download_url(download_url: str) -> None:
+    """Raise NoDownloadUrlError if download_url is empty or falsy."""
+    if not download_url:
+        raise NoDownloadUrlError(download_url)
+
+
+def check_empty_downloaded_file(
+    response: Union[bytes, Any], download_url: str
+) -> None:
+    """Raise EmptyFileError if the downloaded content is empty.
+
+    :param response: raw bytes or httpx Response with .content attribute
+    :param download_url: URL that was fetched
+    """
+    # Support both httpx responses (.content) and raw bytes from urllib
+    content = response if isinstance(response, bytes) else response.content
+    if len(content) == 0:
+        raise EmptyFileError(f"EmptyFileError: '{download_url}'")

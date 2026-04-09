@@ -1,6 +1,6 @@
 """
-Scraper for Kansas Supreme Court
-CourtID: kan
+Scraper for Kansas Supreme Court - Published
+CourtID: kan_p
 Court Short Name: Kansas
 Author: William Palin
 Court Contact:
@@ -9,6 +9,7 @@ History:
  - 2026-03-19: Refactored from WebDriven to OpinionSiteLinear. grossir
     Use urllib to fix block
     Added backscraper
+ - 2026-04-02: Split into kan_p and kan_u by status. grossir
 """
 
 from datetime import date, timedelta
@@ -22,6 +23,8 @@ class Site(OpinionSiteLinear):
     base_url = "https://searchdro.kscourts.gov"
     court_string = "Supreme Court"
     court_filter = "10"
+    status_filter = "1"
+    status = "Published"
     first_opinion_date = date(2015, 1, 1)
     days_interval = 30
     use_urllib = True
@@ -37,7 +40,7 @@ class Site(OpinionSiteLinear):
         params = {
             "StartDate": start.strftime("%Y-%m-%d"),
             "EndDate": end.strftime("%Y-%m-%d"),
-            "statusFilter": "-1",
+            "statusFilter": self.status_filter,
             "courtFilter": self.court_filter,
             "Keyword": "",
         }
