@@ -120,13 +120,20 @@ class Site(OpinionSiteLinear):
         if not table:
             logger.warning("No results table found.")
             return
+
         for row in table[0].xpath(".//tbody/tr"):
             cells = row.xpath("./td")
             if len(cells) < 9:
+                logger.error(
+                    "%s: expected 9 cells, got %s", self.court_id, len(cells)
+                )
                 continue
+
             url = cells[6].xpath(".//a/@href")
             if not url:
+                logger.error("%s: no url found for row", self.court_id)
                 continue
+
             slip_cite = cells[6].xpath(
                 './/a/span[not(contains(@class, "visually-hidden"))]/text()'
             )
