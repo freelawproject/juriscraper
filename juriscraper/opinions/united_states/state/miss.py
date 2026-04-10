@@ -64,7 +64,7 @@ class Site(OpinionSiteLinear):
         all_dates = self.get_dates_from_response(dates_response)
         for date in all_dates:
             if not (self.start_date <= date <= self.end_date):
-                logger.info("Skipping date out of range")
+                logger.info("Skipping date out of range %s", date)
                 continue
 
             date_str = datetime.date.strftime(date, "%m-%d-%Y")
