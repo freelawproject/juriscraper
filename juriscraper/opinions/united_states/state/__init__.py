@@ -91,9 +91,9 @@ __all__ = [
     "minnag",
     "minnctapp_p",
     "minnctapp_u",
+    "miss",
+    "missctapp",
     # These courts are uploaded via portal by amazing volunteers.
-    # "miss",
-    # "missctapp",
     # "mo",
     # "moctapp_eastern",
     # "moctapp_southern",
