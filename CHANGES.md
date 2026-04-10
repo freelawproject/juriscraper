@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.9 - 2026-04-10
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Fix `miss` and `missctapp` scrapers: migrate to new `getHanddown.php` API, handle new table HTML layout, normalize PDF URLs, add backscraper support (#1765)
 
 ## 3.0.8 - 2026-04-09
