@@ -139,9 +139,7 @@ class Site(OpinionSiteLinear):
                 # Replace backslashes and resolve the ".." path segments.
                 raw_url = anchor.xpath("./@href")[0].replace("\\", "/")
                 parsed = urlparse(raw_url)
-                url = urlunparse(
-                    parsed._replace(path=normpath(parsed.path))
-                )
+                url = urlunparse(parsed._replace(path=normpath(parsed.path)))
                 self.cases.append(
                     {
                         "date": date,
@@ -175,8 +173,7 @@ class Site(OpinionSiteLinear):
             end = datetime.date.today()
 
         self.back_scrape_iterable = [
-            (year, start, end)
-            for year in range(start.year, end.year + 1)
+            (year, start, end) for year in range(start.year, end.year + 1)
         ]
 
     async def _download_backwards(self, params: tuple) -> None:
