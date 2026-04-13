@@ -1,4 +1,7 @@
+import datetime
+import math
 import re
+from urllib.parse import urljoin
 
 from dateutil import parser
 
@@ -66,24 +69,53 @@ class Site(ClusterSite):
 
     author_and_type_regex = re.compile(r"\((?P<author_and_type>.+)\)\s*$")
 
+    # 10 results per page, server ignores items_per_page
+    results_per_page = 10
+    first_opinion_date = datetime.date(1991, 1, 1)
+    prior_terms_path = (
+        "/appellate-courts/supreme-court-of-appeals/opinions/prior-terms"
+    )
+    year_param = "field_sca_opinion_year_value"
+
+    base_url = "https://www.courtswv.gov"
+    opinions_path = "/appellate-courts/supreme-court-of-appeals/opinions"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.courtswv.gov/appellate-courts/supreme-court-of-appeals/opinions/prior-terms"
+        self.url = urljoin(self.base_url, self.opinions_path)
         self.court_id = self.__module__
         self.cluster_by_date_max_days = 15
+        self.seen_urls = set()
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
         for row in self.html.xpath("//tr[td[@headers]]"):
-            name = row.xpath("string(td[3])").strip()
+            name_cell = row.xpath("td[3]")[0]
+            # Replace <br> with space to avoid merged words
+            for br in name_cell.iter("br"):
+                br.tail = " " + (br.tail or "")
+            name = name_cell.text_content().strip()
+            # Strip "et al." early so names match for clustering
+            name = re.sub(r",?\s+et\.?\s*al\.?", "", name)
+
+            # Strip "(Separate Included)" from case name
+            name = name.replace("(Separate Included)", "").strip()
+
             decision_type = row.xpath("td[5]/text()")[0]
             case_dict = self.get_metadata(name, decision_type)
+
+            url = row.xpath("td[3]/a/@href")[0]
+            # Skip duplicates from pagination overlap
+            if url in self.seen_urls:
+                continue
+            self.seen_urls.add(url)
 
             case_type = row.xpath("td[4]/text()")[0].strip()
             case_dict.update(
                 {
                     "date": row.xpath("td[1]/text()")[0].strip(),
                     "docket": row.xpath("td[2]/text()")[0].strip(),
-                    "url": row.xpath("td[3]/a/@href")[0],
+                    "url": url,
                     "nature_of_suit": self.codes.get(case_type, ""),
                 }
             )
@@ -181,3 +213,56 @@ class Site(ClusterSite):
             "judge": judge,
             "name": name,
         }
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """The prior-terms page only filters by year. We iterate
+        by year and paginate through all pages for each year.
+
+        Accepts backscrape_start/end in "%Y/%m/%d" format.
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        if start:
+            start = datetime.datetime.strptime(start, "%Y/%m/%d").date()
+        else:
+            start = self.first_opinion_date
+
+        if end:
+            end = datetime.datetime.strptime(end, "%Y/%m/%d").date()
+        else:
+            end = datetime.date.today()
+
+        self.back_scrape_iterable = list(range(start.year, end.year + 1))
+
+    async def _download_backwards(self, year: int) -> None:
+        logger.info("Backscraping %s for year %s", self.court_id, year)
+        self.url = urljoin(self.base_url, self.prior_terms_path)
+        self.request["parameters"]["params"] = {
+            self.year_param: year,
+        }
+
+        self.html = await self._download()
+
+        # Get total opinion count to compute page count
+        total_text = self.html.xpath(
+            "string(//div[contains(@class, 'view-header')]//h5)"
+        )
+        if match := re.search(r"Total Opinions:\s*(\d+)", total_text):
+            total = int(match.group(1))
+        else:
+            logger.warning(
+                "%s: could not find total opinions for year %s",
+                self.court_id,
+                year,
+            )
+            total = 0
+
+        self._process_html()
+
+        # Paginate through remaining pages
+        total_pages = math.ceil(total / self.results_per_page)
+        for page in range(1, total_pages):
+            self.request["parameters"]["params"]["page"] = page
+            self.html = await self._download()
+            self._process_html()
