@@ -78,6 +78,19 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             docket_entry_table_elements[0]
         )
 
+        vide_cell = next(
+            (
+                (i, j)
+                for i, row in enumerate(self._case_data_table)
+                for j, e in enumerate(row)
+                if e.text and e.text.strip().lower().startswith("vide")
+            ),
+            None,
+        )
+        if vide_cell:
+            logger.info("Found vide field. Ignoring.")
+            self._case_data_table.pop(vide_cell[0])
+
         docket_title_cell = next(
             (
                 (i, j)
@@ -97,7 +110,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             return {}
 
         # The check above also coincidentally guarantees that self._case_data_table
-        # is at least 2x1 so this doesn't need bounds checks.
+        # is at least 2x1, so this doesn't need bounds checks.
         m = re.search(
             self.DOCKET_NUMBER_RE, self._case_data_table[0][0].text_content()
         )
