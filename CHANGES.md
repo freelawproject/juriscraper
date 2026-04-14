@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.10 - 2026-04-14
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Fix `wva` and `wvactapp` scrapers pointing to archived prior-terms URL instead of current opinions page. Add backscraper support. Fixes #1907.
 
 ## 3.0.9 - 2026-04-10
