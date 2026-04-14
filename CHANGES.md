@@ -21,8 +21,65 @@ Changes:
 -
 
 Fixes:
+-
 
+## 3.0.10 - 2026-04-14
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `wva` and `wvactapp` scrapers pointing to archived prior-terms URL instead of current opinions page. Add backscraper support. Fixes #1907.
+
+## 3.0.9 - 2026-04-10
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `miss` and `missctapp` scrapers: migrate to new `getHanddown.php` API, handle new table HTML layout, normalize PDF URLs, add backscraper support (#1765)
+
+## 3.0.8 - 2026-04-09
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `ny` update all NY scrapers for redesigned court website #1864
+
+## 3.0.7 - 2026-04-06
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
+- Expand permissable TAMES docket numbers
+- More gracefully handle empty event tables in Tames
+- Improved TAMES Download URL escaping
+
+## 3.0.6 - 2026-04-02
+
+Features:
+-
+
+Changes:
+- Split `kan` and `kanctapp` scrapers by status into `kan_p`, `kan_u`, `kanctapp_p`, `kanctapp_u` (#1262)
+
+Fixes:
+-
 
 ## 3.0.5 - 2026-03-27
 
@@ -42,8 +99,10 @@ Features:
 
 Changes:
 - Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
+- Abstract urllib `download_content` into `AbstractSite` for scrapers with `use_urllib = True` #1714
 
 Fixes:
+- Fix `masssuperct` by switching from JSON API to HTML scraping with urllib to bypass Cloudflare TLS fingerprinting #1714
 - Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
 - Fix `mich` scraper failing when API returns null courts #1885
 

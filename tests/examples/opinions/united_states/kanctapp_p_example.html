@@ -102,25 +102,27 @@
             <form method="get" id="filterForm" action="/Documents/Search">
                 <div class="row">
                     <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <label for="StartDate">Start Date:</label>
-                        <input type="date" id="StartDate" name="StartDate" value="2026-02-17" />
+                        <label for="StartDate" class="form-label">Start Date</label>
+                        <input type="date" id="StartDate" name="StartDate" class="form-control" value="2026-03-03" />
                     </div>
                     <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <label for="EndDate">End Date:</label>
-                        <input type="date" id="EndDate" name="EndDate" value="2026-03-19" />
+                        <label for="EndDate" class="form-label">End Date</label>
+                        <input type="date" id="EndDate" name="EndDate" class="form-control" value="2026-04-02" />
                     </div>
                     <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="statusFilter" class="form-label">Status</label>
                         <select class="form-select" id="statusFilter" name="statusFilter">
-                            <option value="-1" selected="selected">Published & Unpublished</option>
-                            <option value="1">Published</option>
+                            <option value="-1">Published & Unpublished</option>
+                            <option value="1" selected="selected">Published</option>
                             <option value="0">Unpublished</option>
                         </select>
                     </div>
                     <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="courtFilter" class="form-label">Court</label>
                         <select class="form-select" id="courtFilter" name="courtFilter">
                             <option value="">Both Courts</option>
-                            <option value="10" selected="selected">Supreme Court</option>
-                            <option value="20">Court of Appeals</option>
+                            <option value="10">Supreme Court</option>
+                            <option value="20" selected="selected">Court of Appeals</option>
                         </select>
                     </div>
                     <div class="mb-3 mt-3 col-xl-6 col-lg-12  col-md-12">
@@ -168,74 +170,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>3/13/2026</td>
-                            <td>127537</td>
+                            <td>3/27/2026</td>
+                            <td>128841</td>
                             <td class="case-title">
-                                State v. Bey
+                                In re I.H.
                             </td>
-                            <td>Supreme Court</td>
+                            <td>Court of Appeals</td>
                             <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/5e01ee1a-785d-4d0c-9fd0-fff62c85b842_127537.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127537  (Opens in a new window)"></i></a></td>
+                                <td><a href="/documents/pdf/caseDecisions/3c7c2f59-9291-4919-9c4c-8026968f8150_128841.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128841  (Opens in a new window)"></i></a></td>
                             </tr>
                         <tr>
-                            <td>3/13/2026</td>
-                            <td>128381</td>
+                            <td>3/27/2026</td>
+                            <td>129437</td>
                             <td class="case-title">
-                                State v. Lopez
+                                In re K.S.
                             </td>
-                            <td>Supreme Court</td>
+                            <td>Court of Appeals</td>
                             <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/16b58e4f-aa0a-4859-9c4b-25ab54eacf5d_128381.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128381  (Opens in a new window)"></i></a></td>
-                            </tr>
-                        <tr>
-                            <td>3/6/2026</td>
-                            <td>127467</td>
-                            <td class="case-title">
-                                State v. Evans
-                            </td>
-                            <td>Supreme Court</td>
-                            <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/a37e67ce-68a1-40bd-bca3-1550130db8f8_127467.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127467  (Opens in a new window)"></i></a></td>
-                            </tr>
-                        <tr>
-                            <td>2/27/2026</td>
-                            <td>128007</td>
-                            <td class="case-title">
-                                In re Stewart
-                            </td>
-                            <td>Supreme Court</td>
-                            <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/38392695-d16a-4bc0-95a2-860b0bf7664e_128007.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128007  (Opens in a new window)"></i></a></td>
-                            </tr>
-                        <tr>
-                            <td>2/27/2026</td>
-                            <td>129332</td>
-                            <td class="case-title">
-                                In re Common-Law Marriage of Kelley
-                            </td>
-                            <td>Supreme Court</td>
-                            <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/7e538ad0-2a9f-44ea-9567-6f5c8b7764bf_129332.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129332  (Opens in a new window)"></i></a></td>
-                            </tr>
-                        <tr>
-                            <td>2/26/2026</td>
-                            <td>12723</td>
-                            <td class="case-title">
-                                In re Edwards
-                            </td>
-                            <td>Supreme Court</td>
-                            <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/741799af-7c2a-4c83-8402-f33bededc6b4_12723.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 12723  (Opens in a new window)"></i></a></td>
-                            </tr>
-                        <tr>
-                            <td>2/26/2026</td>
-                            <td>10386</td>
-                            <td class="case-title">
-                                In re Schneider
-                            </td>
-                            <td>Supreme Court</td>
-                            <td>Published</td>
-                                <td><a href="/documents/pdf/caseDecisions/ecd4e2f7-a8cb-4ddc-9bac-552c240541cb_10386.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 10386  (Opens in a new window)"></i></a></td>
+                                <td><a href="/documents/pdf/caseDecisions/86a142cb-060d-4281-8412-875efb7279ce_129437.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129437  (Opens in a new window)"></i></a></td>
                             </tr>
                     </tbody>
                         </table>
@@ -440,5 +392,5 @@
     
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5d1653a7115844e68bf8fb700609ffde","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9defc9293f918bf2',t:'MTc3Mzk1ODAwMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e615e9ef88cc30b',t:'MTc3NTE0OTAxNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

@@ -1,0 +1,70 @@
+{
+  "appeals_court": {
+    "case_number": [],
+    "case_url": [],
+    "court_id": "texas_unknown",
+    "disposition": "",
+    "district": "",
+    "justice": "",
+    "opinion_cite": ""
+  },
+  "appellate_briefs": [],
+  "case_events": [
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=ba4cd333-d17c-42aa-b23b-41d790ebd1d4&coa=coscca&DT=ACTION+TAKEN&MediaID=3ced44c1-5d17-40a1-aa6c-f79b70ced62e",
+          "file_size_bytes": 96000,
+          "file_size_str": "96 KB",
+          "media_id": "3ced44c1-5d17-40a1-aa6c-f79b70ced62e",
+          "media_version_id": "ba4cd333-d17c-42aa-b23b-41d790ebd1d4"
+        }
+      ],
+      "date": "2016-08-10",
+      "disposition": "Dismissed -- Non-compliance",
+      "type": "ACTION TAKEN"
+    },
+    {
+      "attachments": [
+        {
+          "description": "Notice",
+          "document_url": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=3318b2f3-8d80-4e22-b36e-dda136419417&coa=coscca&DT=WRIT+RECEIVED&MediaID=f85e1c78-ed00-47bb-9efc-f55bc1f9a533",
+          "file_size_bytes": 93000,
+          "file_size_str": "93 KB",
+          "media_id": "f85e1c78-ed00-47bb-9efc-f55bc1f9a533",
+          "media_version_id": "3318b2f3-8d80-4e22-b36e-dda136419417"
+        }
+      ],
+      "date": "2016-07-25",
+      "disposition": "",
+      "type": "WRIT RECEIVED"
+    }
+  ],
+  "case_name": "DRUMMER, SAMUEL GLENN v. The State of Texas",
+  "case_name_full": "DRUMMER, SAMUEL GLENN",
+  "case_type": "11.07 HC",
+  "court_id": "texas_coscca",
+  "court_type": "texas_final",
+  "date_filed": "2016-07-25",
+  "docket_number": "WR-09,671-03",
+  "originating_court": {
+    "case": "1989CR0305-W2",
+    "county": "Bexar",
+    "court_type": "texas_district",
+    "district": 175,
+    "judge": "",
+    "name": "175th District Court",
+    "punishment": "",
+    "reporter": ""
+  },
+  "parties": [
+    {
+      "name": "DRUMMER, SAMUEL GLENN",
+      "representatives": [
+        ""
+      ],
+      "type": "Applicant"
+    }
+  ]
+}
