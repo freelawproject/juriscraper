@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+
+- Ignore "Vide" field when parsing SCOTUS HTM dockets
 
 ## 3.0.10 - 2026-04-14
 
@@ -32,7 +33,9 @@ Changes:
 -
 
 Fixes:
-- Fix `wva` and `wvactapp` scrapers pointing to archived prior-terms URL instead of current opinions page. Add backscraper support. Fixes #1907.
+
+- Fix `wva` and `wvactapp` scrapers pointing to archived prior-terms URL instead of current opinions page. Add
+  backscraper support. Fixes #1907.
 
 ## 3.0.9 - 2026-04-10
 
@@ -43,7 +46,9 @@ Changes:
 -
 
 Fixes:
-- Fix `miss` and `missctapp` scrapers: migrate to new `getHanddown.php` API, handle new table HTML layout, normalize PDF URLs, add backscraper support (#1765)
+
+- Fix `miss` and `missctapp` scrapers: migrate to new `getHanddown.php` API, handle new table HTML layout, normalize PDF
+  URLs, add backscraper support (#1765)
 
 ## 3.0.8 - 2026-04-09
 
@@ -54,6 +59,7 @@ Changes:
 -
 
 Fixes:
+
 - Fix `ny` update all NY scrapers for redesigned court website #1864
 
 ## 3.0.7 - 2026-04-06
@@ -65,6 +71,7 @@ Changes:
 -
 
 Fixes:
+
 - Fix SCOTUS parsing issues identified in [#1848](https://github.com/freelawproject/juriscraper/issues/1848).
 - Expand permissable TAMES docket numbers
 - More gracefully handle empty event tables in Tames
@@ -76,6 +83,7 @@ Features:
 -
 
 Changes:
+
 - Split `kan` and `kanctapp` scrapers by status into `kan_p`, `kan_u`, `kanctapp_p`, `kanctapp_u` (#1262)
 
 Fixes:
@@ -90,6 +98,7 @@ Changes:
 -
 
 Fixes:
+
 - Fix `ca9` oral argument scraper to paginate DynamoDB scans #1877
 
 ## 3.0.4 - 2026-03-26
@@ -98,23 +107,28 @@ Features:
 -
 
 Changes:
+
 - Abstract validation functions out of `AbstractSite.download_content` into reusable utils #1882
 - Abstract urllib `download_content` into `AbstractSite` for scrapers with `use_urllib = True` #1714
 
 Fixes:
-- Fix `masssuperct` by switching from JSON API to HTML scraping with urllib to bypass Cloudflare TLS fingerprinting #1714
+
+- Fix `masssuperct` by switching from JSON API to HTML scraping with urllib to bypass Cloudflare TLS fingerprinting
+  #1714
 - Fix `lactapp_3` opinion download by using urllib instead of httpx to bypass Cloudflare TLS fingerprinting #1882
 - Fix `mich` scraper failing when API returns null courts #1885
 
 ## 3.0.3 - 2026-03-25
 
 Features:
+
 - Add Trademark Trial and Appeal Board scraper #1851
 
 Changes:
 -
 
 Fixes:
+
 - Fix `nd` scraper crashing on rows without a 'View Opinion' button #1872
 - Fix `nm` slip opinions incorrectly marked as "Unpublished" #1874
 
