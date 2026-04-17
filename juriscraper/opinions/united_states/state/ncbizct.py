@@ -8,7 +8,7 @@ History:
 
 import re
 from datetime import date
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -16,6 +16,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     days_interval = 7
+    use_urllib = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -24,6 +25,10 @@ class Site(OpinionSiteLinear):
         self.first_opinion_date = date(1996, 10, 24)
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
+        self.needs_special_headers = True
+        self.request["headers"] = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+        }
 
     def _process_html(self):
         for row in self.html.xpath(
@@ -75,7 +80,7 @@ class Site(OpinionSiteLinear):
                 {
                     "name": titlecase(case_name),
                     "docket": docket_number,
-                    "url": download_url,
+                    "url": urljoin(self.url, download_url),
                     "date": date_filed,
                     "citation": citation,
                     "status": status,
