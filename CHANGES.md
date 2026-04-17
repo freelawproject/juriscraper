@@ -23,6 +23,7 @@ Changes:
 Fixes:
 
 - Ignore "Vide" field when parsing SCOTUS HTM dockets
+- Fix `ncbizct` cloudfront block using `use_urllib` #1916
 
 ## 3.0.10 - 2026-04-14
 
