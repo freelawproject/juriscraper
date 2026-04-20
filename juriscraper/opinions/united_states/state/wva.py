@@ -81,6 +81,7 @@ class Site(ClusterSite):
     opinions_path = "/appellate-courts/supreme-court-of-appeals/opinions"
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.url = urljoin(self.base_url, self.opinions_path)
         self.court_id = self.__module__

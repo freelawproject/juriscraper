@@ -11,14 +11,14 @@ from tests.network import (
 )
 
 
-class PacerShowCaseDocApiTest(unittest.TestCase):
+class PacerShowCaseDocApiTest(unittest.IsolatedAsyncioTestCase):
     @classmethod
     def setUpClass(cls):
         if pacer_credentials_are_defined():
             cls.report = ShowCaseDocApi("dcd", get_pacer_session())
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_queries(self):
+    async def test_queries(self):
         """Can we do basic queries?"""
         tests = (
             # A regular document
@@ -41,7 +41,7 @@ class PacerShowCaseDocApiTest(unittest.TestCase):
             ),
         )
         for test, expected in tests:
-            self.report.query(**test)
+            await self.report.query(**test)
             got = self.report.data
             self.assertEqual(
                 got,
