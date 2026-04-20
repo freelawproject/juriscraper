@@ -40,11 +40,10 @@ class DocketParseTest(unittest.TestCase):
                 dirname, filename = os.path.split(path)
                 filename_sans_ext = filename.split(".")[0]
                 json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
-                court = filename_sans_ext.split("_")[0]
 
-                report = DocketReport(court)
-                with open(path, "rb") as f:
-                    report._parse_text(f.read().decode("utf-8"))
+                court = filename_sans_ext.split("_")[0]
+                report = DocketReport.from_html_file(path)
+
                 data = report.data
 
                 if data != {}:
