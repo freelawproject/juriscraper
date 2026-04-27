@@ -21,7 +21,11 @@ Changes:
 -
 
 Fixes:
+<<<<<<< 1921-fix-asbca
 - Fix `asbca` URL pattern after site migration #1921
+=======
+- Fix `ca2_p` and `ca2_u` scrapers after site search migrated to a new endpoint #1919.
+>>>>>>> main
 
 ## 3.0.11 - 2026-04-17
 
