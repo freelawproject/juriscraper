@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `asbca` URL pattern after site migration #1921
 
 ## 3.0.11 - 2026-04-17
 
