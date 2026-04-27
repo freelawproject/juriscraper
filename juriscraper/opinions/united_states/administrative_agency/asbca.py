@@ -9,17 +9,20 @@ History:
 """
 
 from datetime import datetime
+from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    base_url = "https://www.asbca.mil/"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = str(datetime.today().year)
-        self.url = f"https://www.asbca.mil/Decisions/decisions{self.year}.html"
+        self.url = urljoin(self.base_url, f"Decisions/{self.year}/")
         self.status = "Published"
         # Outdated headers may cause 403 responses. See #1693
         self.request["headers"] = {
@@ -42,7 +45,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self):
         # Exclude headers and rows that only have the month name
         if self.test_mode_enabled():
-            self.year = "2024"
+            self.year = "2026"
 
         rows = self.html.xpath(
             "//tr[not(th) and not(.//span[@style='background-color:#F8C100;']) and descendant::a]"
