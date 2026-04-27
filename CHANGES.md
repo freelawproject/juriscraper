@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `ca2_p` and `ca2_u` scrapers after site search migrated to a new endpoint #1919.
 
 ## 3.0.11 - 2026-04-17
 
