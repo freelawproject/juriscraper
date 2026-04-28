@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         ):
             # Extract case name and citation
             case_string = (
-                row.xpath(".//h5[contains(@class,'list__title')]/a")[0]
+                row.xpath(".//*[contains(@class,'list__title')]/a")[0]
                 .text_content()
                 .strip()
             )
