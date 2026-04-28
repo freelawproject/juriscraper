@@ -39,6 +39,7 @@ class Site(OpinionSiteLinear):
 
     base_url = "https://iapps.courts.state.ny.us/lawReporting/Search"
     court = "Court of Appeals"
+    empty_result_messages = {"No results found."}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -121,7 +122,21 @@ class Site(OpinionSiteLinear):
             logger.warning("No results table found.")
             return
 
-        for row in table[0].xpath(".//tbody/tr"):
+        rows = table[0].xpath(".//tbody/tr")
+        # Empty-result responses render a single placeholder row whose only
+        # cell contains one of the strings below. Treat as normal empty
+        # result rather than logging an error per row. Wording is shared
+        # across all NY courts using this backend; extend the set if the
+        # site ever introduces a new variant.
+        if len(rows) == 1:
+            only_cells = rows[0].xpath("./td")
+            if len(only_cells) == 1:
+                placeholder = only_cells[0].text_content().strip()
+                if placeholder in self.empty_result_messages:
+                    logger.info("%s: no results in date range", self.court_id)
+                    return
+
+        for row in rows:
             cells = row.xpath("./td")
             if len(cells) < 9:
                 logger.error(
