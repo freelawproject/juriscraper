@@ -1,4 +1,4 @@
-"""Scraper for Second Circuit
+"""Scraper for Second Circuit Oral Arguments
 CourtID: ca2
 Author: MLR
 Reviewer: MLR
@@ -10,89 +10,108 @@ History:
   2016-09-09: Created by MLR
   2023-11-21: Fixed by flooie
   2023-12-11: Fixed by quevon24
-  2026-01-21:Fixed by Luis-manzur
+  2026-01-21: Fixed by Luis-manzur
+  2026-04-28: site migrated from the IsysWeb endpoint to a dtSearch
+    POST endpoint #1926.
 """
 
-import re
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.string_utils import titlecase
+from juriscraper.opinions.united_states.federal_appellate.ca2_p import (
+    Site as Ca2OpinionSite,
+)
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    base_url = "http://ww3.ca2.uscourts.gov"
-    docket_regex = re.compile(r"(?<!\d-)\d{2}-\d{2,4}(?!-\d)")
-    date_regex = re.compile(r"^\d{1,2}-\d{1,2}-\d{2}$")
+    base_url = "https://ww3.ca2.uscourts.gov"
+    search_url = urljoin(base_url, "/dtSearch/dtisapi6.dll")
+    # The dtSearch index ID for Oral Argument audio (see ca2_p for the
+    # opinion / summary order indexes).
+    index = "*{aaa02d786aee6c9336b7efb2e231863a} audio"
+    # `make_backscrape_iterable` looks for `first_opinion_date` regardless
+    # of whether this is an opinion or oral-argument scraper, so reuse
+    # that attribute name even though semantically it's the first oral arg.
+    first_opinion_date = datetime(2016, 1, 1)
+    days_interval = 15
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"{self.base_url}/decisions"
-
+        self.url = self.search_url
         self.method = "POST"
-        self.expected_content_types = ["audio/mpeg3"]
-        self.parameters = self.request["parameters"]["params"] = {
-            "IW_SORT": "-DATE",
-            "IW_BATCHSIZE": "50",
-            "IW_FILTER_DATE_BEFORE": "",
-            "IW_FILTER_DATE_AFTER": "NaNNaNNaN",
-            "IW_FIELD_TEXT": "*",
-            "IW_DATABASE": "Oral Args",
-            "opinion": "*",
+
+        self.end_date = date.today()
+        self.start_date = self.end_date - timedelta(days=self.days_interval)
+        self._update_parameters()
+        self.make_backscrape_iterable(kwargs)
+
+    def _update_parameters(self) -> None:
+        """Build the POST body matching the form on /oral_arguments.html.
+
+        Mirrors the opinion form (`ca2_p`): the dtSearch engine wants the
+        date range both as StartDate/EndDate and embedded in the
+        `fileConditions` xfilter expression.
+        """
+        date_filter = (
+            f'xfilter(date "{self.start_date:%Y/%m/%d}'
+            f'~~{self.end_date:%Y/%m/%d}")'
+        )
+        self.parameters = {
+            "index": self.index,
+            "request": "",
+            "searchType": "allwords",
+            "cmd": "search",
+            "SearchForm": "%%SearchForm%%",
+            "dtsPdfWh": "*",
+            "OrigSearchForm": "/oral_arguments.html",
+            "autoStopLimit": "5000",
+            "pageSize": "1000",
+            "sort": "Date",
+            "StartDate": self.start_date.strftime("%Y-%m-%d"),
+            "EndDate": self.end_date.strftime("%Y-%m-%d"),
+            "fileConditions": date_filter,
+            "booleanConditions": "",
         }
 
-        self.back_scrape_iterable = ["placeholder"]
+    def _process_html(self) -> None:
+        for row in self.html.xpath('//table[@class="ResultsTable"]/tr'):
+            anchor = row.xpath('.//td[@class="ResultsItemLeft"]/a')
+            if not anchor:
+                logger.warning("ca2: row without anchor, skipping")
+                continue
+            url = urljoin(self.base_url, anchor[0].get("href", "").strip())
+            docket = Ca2OpinionSite._clean(anchor[0].text_content())
 
-    def _process_html(self):
-        for row in self.html.xpath("//table[@border='1']"):
-            link = row.xpath(".//a")[0].get("href")
-
-            if ".mp3" not in link:
-                logger.info("Skipping row without mp3 link: %s", link)
-                continue  # skip bad data
-            url = urljoin(self.base_url, link)
-
-            docket = row.xpath(".//a/nobr/text()")[0]
-
-            try:  # Row may have empty date column
-                name, date = row.xpath(".//td/text()")
-            except ValueError:
-                name = row.xpath(".//td/text()")[0]
-                date = (
-                    self.cases[-1]["date"]
-                    if self.cases
-                    else datetime.now().strftime("%-m-%d-%y")
-                )  # use last case date
-
-            if not self.docket_regex.search(
-                docket
-            ):  # Row may have mixed columns
-                if self.date_regex.search(docket):
-                    date = docket
-                    docket = self.docket_regex.search(link).group(0)
-                else:
-                    docket = name
-                    name = row.xpath(".//a/nobr/text()")[0]
-
-            if docket == "GMT20230614-175136_Recording":
-                continue  # skip bad data
+            right = row.xpath('.//td[@class="ResultsItemRight"]')[0]
+            fields = Ca2OpinionSite._parse_right_cell(right)
+            argued = fields.get("Date Argued")
+            caption = fields.get("Caption")
+            if not (url and docket and argued and caption):
+                logger.warning(
+                    "ca2: incomplete row docket=%r url=%r argued=%r caption=%r",
+                    docket,
+                    url,
+                    argued,
+                    caption,
+                )
+                continue
 
             self.cases.append(
                 {
-                    "docket": docket,
                     "url": url,
-                    "name": name,
-                    "date": date,
+                    "docket": docket,
+                    "name": titlecase(caption),
+                    "date": argued,
                 }
             )
 
-    async def _download_backwards(self, d):
-        # This backscraper is hardcoded, but it will
-        # work for the set number of pages
-        self.method = "GET"
-        for i in range(1, 33):
-            self.url = f"{self.base_url}/decisions/isysquery/19342efa-bb49-4684-a054-875324b58eb9/{(i * 10) - 9}-{i * 10}/list/"
-            self.html = await self._download()
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
+        self.start_date, self.end_date = dates
+        self._update_parameters()
+        self.html = await self._download()
+        if self.html is not None:
             self._process_html()
