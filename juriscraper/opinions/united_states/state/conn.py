@@ -27,7 +27,7 @@ from juriscraper.lib.type_utils import OpinionType
 class Site(ClusterSite):
     court_abbv = "sup"
     start_year = 2000
-    base_url = "http://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
+    base_url = "https://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
     date_filed_regex = re.compile(
         r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)"
     )

@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Switch `conn` and `connappct` to HTTPS; the source no longer accepts plain HTTP, causing `ConnectTimeout` #1924
 
 ## 3.0.12 - 2026-04-27
 
