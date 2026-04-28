@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Switch `conn` and `connappct` to HTTPS; the source no longer accepts plain HTTP, causing `ConnectTimeout` #1924
+- Fix `ca2` oral argument scraper after site search migrated to the dtSearch endpoint #1926
 
 ## 3.0.12 - 2026-04-27
 

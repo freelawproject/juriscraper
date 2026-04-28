@@ -100,19 +100,29 @@ class Site(OpinionSiteLinear):
             )
 
     @staticmethod
-    def _parse_right_cell(cell) -> dict:
-        """Pull `Date Posted` and `Caption` from the right TD.
+    def _clean(text: str) -> str:
+        """Strip whitespace and the U+FEFF BOM that the dtSearch oral-arg
+        endpoint prefixes to every text node. `str.strip()` does not
+        remove U+FEFF, so handle it explicitly. Safe to use on opinion
+        text too (no BOM there, just a no-op).
+        """
+        return (text or "").strip().lstrip("﻿").strip()
 
-        The cell looks like:
+    @classmethod
+    def _parse_right_cell(cls, cell) -> dict:
+        """Pull labelled values out of a dtSearch result's right TD.
+
+        Opinion cells look like:
             <B>Date Posted: </B>4/23/2026<BR>
             <B>Caption: </B>Richardson v. ...<BR>
             <B>Type: </B>/decisions/OPN<BR>
-        Each <b> label's value lives in its `.tail`.
+        Oral-arg cells use `Caption` / `Date Argued` labels instead. Each
+        <b> label's value lives in its `.tail`.
         """
         out: dict[str, str] = {}
         for b in cell.iter("b"):
-            label = (b.text or "").strip().rstrip(":").strip()
-            value = (b.tail or "").strip()
+            label = cls._clean(b.text or "").rstrip(":").strip()
+            value = cls._clean(b.tail or "")
             if label:
                 out[label] = value
         return out
