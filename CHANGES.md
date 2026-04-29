@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.13 - 2026-04-29
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Switch `conn` and `connappct` to HTTPS; the source no longer accepts plain HTTP, causing `ConnectTimeout` #1924
 - Fix `ncbizct` scraper failing with `IndexError`, HTML had changed #1928
 - Fix `ca2` oral argument scraper after site search migrated to the dtSearch endpoint #1926
