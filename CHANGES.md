@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `alaska` (and inheriting `alaskactapp`, `alaska_slip`, `alaska_u`) scrapers failing with HTTP 400 "Invalid Header" and `RemoteProtocolError`. Switch to `use_urllib = True` to handle the proxy's duplicate `Transfer-Encoding` headers, and fix duplicate `User-Agent` header that the server rejected. #1932
 
 ## 3.0.13 - 2026-04-29
 
