@@ -3,7 +3,6 @@ from datetime import date, datetime, timedelta
 from urllib.parse import urlencode, urljoin
 
 from dateutil import parser
-from httpx import HTTPStatusError
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
@@ -21,6 +20,10 @@ class Site(OpinionSiteLinear):
     is_coa = False
     search_parameter = "Opinions"
     document_type = "OP"
+    # The NetScaler proxy in front of the site returns responses with
+    # duplicate Transfer-Encoding headers, which httpx rejects with
+    # RemoteProtocolError. urllib is lenient and handles them.
+    use_urllib = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -31,22 +34,11 @@ class Site(OpinionSiteLinear):
             self.base_url, f"Home/{self.search_parameter}?isCOA={self.is_coa}"
         )
         self.status = "Published"
-        # juriscraper in the user agent crashes it
-        # it appears to be just straight up blocked.
-        self.request["headers"]["user-agent"] = "Free Law Project"
+        # "Juriscraper" in the user agent is blocked by the site
+        self.request["headers"]["User-Agent"] = "Free Law Project"
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=30)
         self.is_citation_visible = True
-
-    async def _download(self, request_dict=None):
-        # Unfortunately, about 2/3 of calls are rejected by alaska but
-        # if we just ignore those encoding errors we can live with it
-        if request_dict is None:
-            request_dict = {}
-        try:
-            return await super()._download(request_dict)
-        except HTTPStatusError:
-            return None
 
     def _process_html(self) -> None:
         if not self.html:
