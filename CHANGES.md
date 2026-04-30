@@ -15,10 +15,10 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- New `idahoctapp_u_per_curiam` scraper for the Idaho Court of Appeals "Unpublished Per Curiam" category (sets `per_curiam=True`). #1914
 
 Changes:
--
+- Rewrite all Idaho opinion scrapers (`idaho_civil`, `idaho_criminal`, `idahoctapp_civil`, `idahoctapp_criminal`, `idahoctapp_u`) for the new `isc.idaho.gov` SPA backed by a JSON API. The old `www.isc.idaho.gov/appeals-court/...` URLs no longer resolve. #1914
 
 Fixes:
 -

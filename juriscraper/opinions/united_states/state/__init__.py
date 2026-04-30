@@ -48,6 +48,7 @@ __all__ = [
     "idahoctapp_civil",
     "idahoctapp_criminal",
     "idahoctapp_u",
+    "idahoctapp_u_per_curiam",
     "ill",
     "illappct",
     "ind",
