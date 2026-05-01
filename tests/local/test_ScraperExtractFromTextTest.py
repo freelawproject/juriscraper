@@ -1522,6 +1522,19 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.idahoctapp_u_per_curiam": [
+            (
+                "\n           ACADEMY ASSOCIATION, INC.,          )\na North Carolina corporation; and   )\nSPOKANE TEACHERS CREDIT             )\nUNION, a Washington credit union,   )\n                                    )\n       Defendants.                  )\n____________________________________)\n\n\n      Appeal from the District Court of the First Judicial District of the State of Idaho,\n      Bonner County. Lamont C. Berecz, District Judge.\n\n      The district court’s judgment is affirmed.\n",
+                {
+                    "Docket": {
+                        "appeal_from_str": "District Court of the First Judicial District of the State of Idaho, Bonner County",
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Lamont C. Berecz"
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.iowa": [
             (
                 "                          In the Iowa Supreme Court\n\n                                     No. 23–1122\n\n              Submitted September 11, 2024—Filed October 11, 2024\n                             Amended April 17, 2025\n\n                                    State of Iowa,\n\n                                       Appellee,\n\n                                          vs.\n\n                           Willard Noble Chaiden Miller,\n\n                                      Appellant.\n\n\n         Appeal from the Iowa District Court for Jefferson County, Shawn Showers,\n\njudge.\n\n         A defendant convicted of first-degree murder as a juvenile appeals his\n\nsentence of life imprisonment with the possibility of parole after serving\n\nthirty-five years. Affirmed.\n\n         Christensen, C.J., delivered the opinion of the court, in which all justices\n\njoined.",
