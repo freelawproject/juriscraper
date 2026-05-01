@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.15 - 2026-04-30
+
+Features:
 - New `idahoctapp_u_per_curiam` scraper for the Idaho Court of Appeals "Unpublished Per Curiam" category (sets `per_curiam=True`). #1914
 
 Changes:
