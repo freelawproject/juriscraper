@@ -21,6 +21,11 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.16 - 2026-05-04
+
+Fixes:
 
 - SCOTUS email type detection
 
