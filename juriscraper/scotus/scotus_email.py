@@ -179,7 +179,9 @@ class _SCOTUSConfirmationPageScraper:
 class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
-    TITLE_REGEX = re.compile(r"^A new docket entry, \"(.+?)\" has been added")
+    TITLE_REGEX = re.compile(
+        r"^A new docket entry(?:, \"(.+?)\")? has been added"
+    )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
     )
@@ -366,7 +368,7 @@ class SCOTUSEmail:
         text = self.tree.text_content()
         match = self.TITLE_REGEX.match(text)
 
-        return clean_string(match.group(1))
+        return clean_string(match.group(1) or "")
 
     def _parse_case_name(self) -> str:
         """Extract the case name from the first `<a>` tag in the email body
