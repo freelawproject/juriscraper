@@ -22,6 +22,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = date(1998, 1, 1)
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
 
@@ -35,7 +36,6 @@ class Site(OpinionSiteLinear):
             "query": f" (url:/archive/{self.court_query}) ",
             "sortby": "date",
         }
-        self.request["verify"] = False
         self.request["headers"] = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Sec-Fetch-Site": "same-origin",
@@ -50,12 +50,12 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.needs_special_headers = True
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
-        self.html = self._download({"params": self.params})
+        self.html = await self._download({"params": self.params})
 
         # This warning is useful for backscraping
         results_number = self.html.xpath(
@@ -121,7 +121,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def _download_backwards(self, dates: tuple[date, date]):
+    async def _download_backwards(self, dates: tuple[date, date]):
         logger.info("Backscraping for range %s - %s", *dates)
         params = {**self.base_params}
         params.update(

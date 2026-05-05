@@ -1,0 +1,75 @@
+{
+  "recordTotalQuantity": 2,
+  "results": [
+    {
+      "_class": "gov.uspto.trademark.efoia.model.opensearch.TrademarkAppealDecision",
+      "id": "15518",
+      "panelMember": "LYKOS;ENGLISH;COHEN",
+      "panelId": 47006,
+      "issue": "2(d)",
+      "proceedingNumber": 91277224,
+      "proceedingNumberDisplay": "91277224",
+      "appealDecisionId": 15518,
+      "issueDate": 1769490000000,
+      "precedentCitableIndicator": "Y",
+      "opposerMarkGoodService": "MERCI \n(and variations including THANK YOU MEANS MERCI)\n\n(English translation: \u201cTHANK YOU\u201d) \n\n[Inter alia, chocolate, in Class 30] \n\nMERCI (and variations including DANKE HEI\u00dfT MERCI)\n\n(Claim of common law rights in chocolate bars and candies)",
+      "partyName": "August Storck KG v. Florend Ind\u00fastria e Com\u00e9rcio de Chocolates LTDA",
+      "proceedingTypeCd": "OPP",
+      "applicantMarkGoodService": " \n(with color claim) \n(English translation: \u201cTHANK YOU\u201d) \n\n[Chocolate; Chocolate bars, in Class 30]",
+      "decision": "Opposition Dismissed (based on registration for MERCI mark)",
+      "documentImageId": "26027ESWM00029A",
+      "decisionTypeCd": "F",
+      "documentId": "/legal-proceeding/91277224/decision/OPP_40.pdf",
+      "issueDateStr": "27-JAN-2026",
+      "indexComplete": "ic",
+      "decisionIssues": "5, 6f",
+      "decisionWriter": "COHEN",
+      "decisionTypeCategory": "Final Decision",
+      "groundsForRefusalCategory": [
+        "Likelihood of Confusion"
+      ],
+      "issueTypeCategory": [
+        "TTAB General \ufffd Additional Claims, Issues, Procedures"
+      ],
+      "issueTypeSubCategory": [
+        "Doctrine of Foreign Equivalents"
+      ]
+    },
+    {
+      "_class": "gov.uspto.trademark.efoia.model.opensearch.TrademarkAppealDecision",
+      "id": "22068",
+      "panelMember": "ENGLISH;COHEN;CASAGRANDE",
+      "panelId": 46130,
+      "issue": "2(d) ",
+      "proceedingNumber": 91289595,
+      "proceedingNumberDisplay": "91289595",
+      "appealDecisionId": 22068,
+      "issueDate": 1763960400000,
+      "precedentCitableIndicator": "Y",
+      "opposerMarkGoodService": "CANDYVERSE \n\nand\n \n[Pending applications for, inter alia, candy, chocolate and confectionary products, in Class 30; retail store services featuring, inter alia, candy, ice cream, clothing, and gift items, in Class 35; educational and entertainment programs about candy and confections, in Class 41]\n(Common law claim of rights in both marks for same goods and services)",
+      "partyName": "CandyVerse, LLC v. Zeeth Ltd.",
+      "proceedingTypeCd": "OPP",
+      "applicantMarkGoodService": "CANDYVERSE\n[Inter alia, confectionery made of sugar, dessert puddings and bakery desserts, in Class 30; \nflavoured frozen soft drinks; iced soft drinks; part frozen slush fruit drinks; slush fruit drinks, in Class 32; retail store services featuring food and drink products, in Class 35]\n",
+      "decision": "Final Decision on SJ: Opposition Dismissed",
+      "documentImageId": "25328ESWM000125",
+      "decisionTypeCd": "M",
+      "documentId": "/legal-proceeding/91289595/decision/OPP_27.pdf",
+      "issueDateStr": "24-NOV-2025",
+      "indexComplete": "ic",
+      "decisionIssues": "5j, 8b, 13c\n",
+      "decisionWriter": "VIGIL",
+      "decisionTypeCategory": "Decision on Motion",
+      "motionTypeCategory": [
+        "Motion for Summary Judgment"
+      ],
+      "groundsForRefusalCategory": [
+        "Likelihood of Confusion",
+        "Requirements"
+      ],
+      "groundsForRefusalSubCategory": [
+        "Priority of use",
+        "Section 44(d) / 44(e) Requirements"
+      ]
+    }
+ ]
+}

@@ -21,11 +21,11 @@ class Site(OralArgumentSiteLinear):
     base_url = "https://media.cadc.uscourts.gov/recordings/bydate/{}"
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         self.url = self.base_url.format(today.strftime("%Y/%-m"))
-        self.request["verify"] = False
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self):
@@ -57,7 +57,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    def _download_backwards(self, target_date: date) -> None:
+    async def _download_backwards(self, target_date: date) -> None:
         """Download historical data
 
         Note that this URL will work:
@@ -69,7 +69,7 @@ class Site(OralArgumentSiteLinear):
         """
         self.url = self.base_url.format(target_date.strftime("%Y/%-m"))
         logger.info("Backscraping URL '%s'", self.url)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:

@@ -121,7 +121,7 @@ class Site(OpinionSiteLinear):
                 "This source paginates at 150 results. There are 150 results for this page. Some opinions may be lost"
             )
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range POST request
 
         :param dates: (start_date, end_date) tuple
@@ -129,14 +129,14 @@ class Site(OpinionSiteLinear):
         """
         # Make first request to get hidden input values
         self.method = "GET"
-        self.html = self._download()
+        self.html = await self._download()
 
         self.method = "POST"
         logger.info("Backscraping for range %s %s", *dates)
-        self.get_target_page(dates)
+        await self.get_target_page(dates)
         self._process_html()
 
-    def get_target_page(self, dates: tuple[date, date]) -> None:
+    async def get_target_page(self, dates: tuple[date, date]) -> None:
         """Makes requests until target page is loaded
         The number of requests is variable on the "__VIEWSTATE"
 
@@ -163,4 +163,4 @@ class Site(OpinionSiteLinear):
         for _ in range(2):
             vs = self.html.xpath("//input[@name='__VIEWSTATE']/@value")[0]
             self.parameters["__VIEWSTATE"] = vs
-            self.html = self._download()
+            self.html = await self._download()

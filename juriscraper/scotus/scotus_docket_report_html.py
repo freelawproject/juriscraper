@@ -3,6 +3,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Optional
 
+import lxml.html
 from lxml import html
 from lxml.html import HtmlElement
 
@@ -26,7 +27,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     """Parse SCOTUS docket HTML."""
 
     EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
-    ID_RE = re.compile(r"#\s*[A-Za-z0-9-]+\b")
+    ID_RE = re.compile(r"(?:^|[^,]\s+)#\s*[A-Za-z0-9-]+\b")
     ADDRESS_NUMBER = re.compile(
         r"\b(\d{1,6}(?:-\d{1,6})?(?:\s+\d+\/\d+)?[A-Za-z]?)\b"
     )
@@ -36,7 +37,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
         super().__init__(court_id=court_id)
-        self.tree = None
+        self.tree: lxml.html.HtmlElement | None = None
 
     def _parse_text(self, text: str) -> None:
         """Parse raw HTML and store a lxml tree.

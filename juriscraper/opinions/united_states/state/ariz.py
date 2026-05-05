@@ -99,7 +99,7 @@ class Site(OpinionSiteLinear):
             }
         )
 
-    def _download(self, request_dict=None):
+    async def _download(self, request_dict=None):
         """Override download to add authentication headers.
 
         First fetches the search page to get the verification token,
@@ -110,17 +110,17 @@ class Site(OpinionSiteLinear):
         """
         # In test mode, use the parent _download method which handles mock requests
         if self.test_mode_enabled():
-            return super()._download(request_dict)
+            return await super()._download(request_dict)
 
         # Fetch search page and extract auth headers
-        self.html = super()._download()
+        self.html = await super()._download()
         self._set_auth_headers()
 
         # Build API URL and fetch JSON
         self.url = self._build_api_url(self.start_date, self.end_date)
-        return super()._download(request_dict)
+        return await super()._download(request_dict)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parse API JSON response into case dictionaries.
 
         :return: None
@@ -171,7 +171,7 @@ class Site(OpinionSiteLinear):
         if not self.test_mode_enabled():
             total_pages = (total_count + page_size - 1) // page_size
             if page_index + 1 < total_pages:
-                self._fetch_next_page(page_index + 1)
+                await self._fetch_next_page(page_index + 1)
 
     def _extract_author(self, judges: list) -> str:
         """Extract the author judge from the list of opinion judges.
@@ -195,7 +195,7 @@ class Site(OpinionSiteLinear):
             name = f"{name}, {author['Suffix']}"
         return name
 
-    def _fetch_next_page(self, page: int) -> None:
+    async def _fetch_next_page(self, page: int) -> None:
         """Fetch next page of results.
 
         Auth headers are already set from the initial download.
@@ -204,10 +204,10 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         self.url = self._build_api_url(self.start_date, self.end_date, page)
-        self.html = super()._download()
-        self._process_html()
+        self.html = await super()._download()
+        await self._process_html()
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request for backscraping.
 
         :param dates: (start_date, end_date) tuple
@@ -220,8 +220,8 @@ class Site(OpinionSiteLinear):
 
         # Reset URL to search page so _download fetches fresh auth tokens
         self.url = urljoin(self.base_url, self.search_page_path)
-        self.html = self._download()
-        self._process_html()
+        self.html = await self._download()
+        await self._process_html()
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court and judge from the scraped text.

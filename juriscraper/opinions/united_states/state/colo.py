@@ -142,7 +142,7 @@ class Site(OpinionSiteLinear):
         case["status"] = "Published" if case["citation"] else "Unpublished"
         return case
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         search_json = self.html
         total_count = search_json["count"]
         results_in_page = len(search_json["results"])
@@ -155,7 +155,7 @@ class Site(OpinionSiteLinear):
 
         # If we didn't get all results, try increasing per_page
         if results_in_page < total_count and not self.test_mode_enabled():
-            search_json = self.update_page_size(
+            search_json = await self.update_page_size(
                 total_count, results_in_page, self.dates
             )
 
@@ -170,7 +170,7 @@ class Site(OpinionSiteLinear):
             else:
                 # Full case name and docket number are only available
                 # on the detail page
-                self._request_url_get(url)
+                await self._request_url_get(url)
                 detail_json = self.request["response"].json()
 
             if (
@@ -211,7 +211,7 @@ class Site(OpinionSiteLinear):
                 case["docket"] = ""
             self.cases.append(case)
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -219,8 +219,8 @@ class Site(OpinionSiteLinear):
         """
         logger.info("Backscraping for range %s %s", *dates)
         self.dates = self.update_url(dates)
-        self.html = self._download()
-        self._process_html()
+        self.html = await self._download()
+        await self._process_html()
 
     def update_url(self, dates: Optional[tuple[date]] = None) -> tuple[date]:
         """
@@ -266,7 +266,7 @@ class Site(OpinionSiteLinear):
 
         return content.encode("utf-8")
 
-    def update_page_size(
+    async def update_page_size(
         self, total_count: int, results_in_page: int, dates: tuple[date]
     ) -> dict:
         new_per_page = min(
@@ -281,7 +281,7 @@ class Site(OpinionSiteLinear):
         )
         self.params["per_page"] = str(new_per_page)
         self.update_url(dates)  # Rebuild URL with new per_page
-        self.html = self._download()  # Re-download with larger page size
+        self.html = await self._download()  # Re-download with larger page size
         search_json = self.html
         logger.info(
             "After retry: got %s of %s results",

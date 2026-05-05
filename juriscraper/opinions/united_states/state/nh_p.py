@@ -35,6 +35,8 @@ class Site(OpinionSiteLinear):
     # document_purpose = 1331 -> Supreme Court Opinion
     base_filter = "{}@field_document_purpose|=|1331"
     year_to_filter = {
+        2026: "@field_document_subcategory|=|2721",
+        2025: "@field_document_subcategory|=|2616",
         2024: "@field_document_subcategory|=|2316",
         2023: "@field_document_subcategory|=|2256",
         2022: "@field_document_subcategory|=|2091",
@@ -66,7 +68,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.paginate = False
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         json_response = self.html
 
         for case in json_response["data"]:
@@ -147,8 +149,8 @@ class Site(OpinionSiteLinear):
         for page in range(2, json_response["last_page"] + 1):
             logger.info("Paginating to page %s", page)
             self.url = self.url.replace(f"page={page - 1}", f"page={page}")
-            self.html = self._download()
-            self._process_html()
+            self.html = await self._download()
+            await self._process_html()
 
     def set_request_parameters(
         self, year: int = datetime.today().year
@@ -175,17 +177,22 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.request["headers"] = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
-            "Sec-Ch-Ua": '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
             "Referer": f"https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/{self.document_type}/{year}",
             "X-Requested-With": "XMLHttpRequest",
         }
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         self.paginate = True
         self.set_request_parameters(year)
         logger.info("Backscraping year %s", year)
-        self.html = self._download()
-        self._process_html()
+        self.html = await self._download()
+        await self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> list[int]:
         """The API exposes no date filter, so we must query a year

@@ -96,8 +96,8 @@ class Site(OpinionSiteLinear):
                 f"{self.base_url}/{yy}" for yy in range(start, end)
             ]
 
-    def _download_backwards(self, d: str):
-        self.url = d
+    async def _download_backwards(self, d: str):
+        self.url = f"{self.base_url}/{d}"
         logger.info("Backscraping %s", self.url)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

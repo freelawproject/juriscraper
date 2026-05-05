@@ -207,7 +207,7 @@ class Site(ClusterSite):
 
         return raw_name, op_type.value
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         r"""Download cases within a given date range.
 
         :param dates: Tuple containing the start and end dates \(`date`, `date`\) for the query.
@@ -218,7 +218,7 @@ class Site(ClusterSite):
             self.url,
             f"?field_opinions_date_filed={start.strftime('%Y-%m-%d')}&field_opinions_date_filed_1={end.strftime('%Y-%m-%d')}",
         )
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def get_summary(self, section: HtmlElement) -> str:

@@ -83,14 +83,14 @@ class Site(OpinionSiteLinear):
         # Second pattern for ncctapp unpublished opinions
         return self.coa_rgx.search(date_block).group("date")
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         """Build year URL and scrape
 
         :param year: year to scrape
         :return None
         """
         self.url = self.base_url.format(self.court, year)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:

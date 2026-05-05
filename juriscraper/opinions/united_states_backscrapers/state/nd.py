@@ -4,9 +4,6 @@
 import re
 from datetime import date, datetime
 
-import requests
-
-from juriscraper.DeferringList import DeferringList
 from juriscraper.opinions.united_states.state import nd
 
 
@@ -19,19 +16,19 @@ class Site(nd.Site):
             today.strftime("%b%Y")
         )
 
-    def _get_download_urls(self):
+    async def _get_download_urls(self) -> list[str]:
         """We use a fetcher and a DeferringList object and a HEAD request
         to test whether the wpd exists for a case"""
 
-        def fetcher(html_link):
+        async def fetcher(html_link):
             if self.test_mode_enabled():
                 return html_link  # Can't fetch remote during tests
             case_number = re.search(r"(\d+)", html_link).group(0)
             wpd_link = f"http://www.ndcourts.gov/wp/{case_number}.wpd"
-            r = requests.head(
+            r = await self.request["session"].head(
                 wpd_link,
-                allow_redirects=False,
-                headers={"User-Agent": "Juriscraper"},
+                follow_redirects=False,
+                headers={"User-Agent": self.user_agent},
             )
             if r.status_code == 200:
                 return wpd_link
@@ -44,7 +41,10 @@ class Site(nd.Site):
         else:
             path = "//ul//a[text()]/@href"
             seed = list(self.html.xpath(path))
-        return DeferringList(seed=seed, fetcher=fetcher)
+        case_names = []
+        for case in seed:
+            case_names.append(await fetcher(case))
+        return case_names
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
@@ -156,9 +156,9 @@ class Site(nd.Site):
             # When there aren't any neutral cites that means they're all supreme court cases.
             pass
 
-    def _download_backwards(self, d):
+    async def _download_backwards(self, d):
         self.crawl_date = d
         self.url = "http://www.ndcourts.gov/opinions/month/%s.htm" % (
             d.strftime("%b%Y")
         )
-        self.html = self._download()
+        self.html = await self._download()

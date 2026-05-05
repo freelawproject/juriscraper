@@ -1,7 +1,11 @@
 {
   "appeals_court": {
-    "case_number": "14-25-00552-CV",
-    "case_url": "https://search.txcourts.gov/Case.aspx?cn=14-25-00552-CV",
+    "case_number": [
+      "14-25-00552-CV"
+    ],
+    "case_url": [
+      "https://search.txcourts.gov/Case.aspx?cn=14-25-00552-CV"
+    ],
     "court_id": "texas_coa14",
     "disposition": "Denied",
     "district": "14th Court of Appeals",

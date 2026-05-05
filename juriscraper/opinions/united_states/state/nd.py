@@ -52,6 +52,11 @@ class Site(OpinionSiteLinear):
         seen_urls = set()
 
         for row in self.html.xpath('//table//div[@class="row"]'):
+            onclick = row.xpath(".//button[@onclick]/@onclick")
+            if not onclick:
+                logger.info("Skipping row without a 'View Opinion' button")
+                continue
+
             raw_name, *values = list(
                 map(str.strip, row.xpath("./div[1]/p[1]/text()"))
             )
@@ -59,7 +64,7 @@ class Site(OpinionSiteLinear):
             # Do the URL check
             url = urljoin(
                 self.base_url,
-                row.xpath(".//button[@onclick]/@onclick")[0].split("'")[1],
+                onclick[0].split("'")[1],
             )
             if url in seen_urls:
                 logger.info(
@@ -203,7 +208,7 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -215,6 +220,6 @@ class Site(OpinionSiteLinear):
         last_page = 130
         base_url = self.url
         url_template = f"{base_url}&page={{}}"
-        self.cases = backscrape_over_paginated_results(
+        self.cases = await backscrape_over_paginated_results(
             2, last_page, start, end, "%m/%d/%Y", self, None, url_template
         )

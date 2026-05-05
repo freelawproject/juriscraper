@@ -1,0 +1,956 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Search Kansas</title>
+    <link href="https://kscourts.gov/KSCourts/media/KsCourts/assets/image/favicon/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link href="/assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/site.css?v=c7IrY3KRQmmgk2bhYuBcVmfFvNY8FFC2Y9SSKDP1lKo" />
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/js/site.js?v=y96Fq27KbKgClDKqUp6PhJZgZS_KLMo-nuntQwDf2mw"></script>
+    <!-- jQuery -->
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <!-- DataTables Buttons Extension -->
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
+
+    <!-- Required for Excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+
+</head>
+<body>
+    <header b-zlz4q0gjtp id="main-header" class="header-section" tabindex="0">
+        <div b-zlz4q0gjtp class="container">
+            <nav b-zlz4q0gjtp class="navbar navbar-expand-sm navbar-dark">
+                <div b-zlz4q0gjtp class="container-fluid d-flex justify-content-between align-items-center">
+                    <!-- Left-aligned logo and heading (60% width on small screens) -->
+                    <div b-zlz4q0gjtp class="d-flex align-items-center flex-column flex-sm-row logo-heading-container">
+                        <a b-zlz4q0gjtp class="navbar-brand" href="https://kscourts.gov/" target="_blank">
+                            <img src="/assets/images/logo/kscourts_logoseal_white_350px.png" alt="Kansas Judicial Branch" />
+                        </a>
+                        <h1 b-zlz4q0gjtp>
+                            <a b-zlz4q0gjtp class="cl-white" href="/">Decisions</a>
+                        </h1>
+                    </div>
+                    <button b-zlz4q0gjtp onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+                        <i b-zlz4q0gjtp class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main b-zlz4q0gjtp id="main-content" tabindex="0">
+
+        
+<div id="Index">
+    <!--============= Banner Section Starts Here =============-->
+    <section class="banner-2" onload="checkButtons()">
+        <div class="container">
+            <h1 class="title" style="padding-bottom:15px;">Search Decisions</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="top-action-bar" role="group" aria-label="Top action buttons">
+                        <div class="left-group">
+                            <a href="/Documents/Anticipated" target="_blank" class="btn btn-primary" id="advanceButton" aria-label="Anticipated Decisions">
+                                Anticipated Decisions
+                            </a>
+                            <a href="/Documents/Released" target="_blank" class="btn btn-primary" id="upcomingButton" aria-label="Published Decisions">
+                                Released Decisions
+                            </a>
+                        </div>
+
+                        <div class="right-group">
+                            <a href="/Data/decisionsList" class="btn btn-secondary" id="decisionsButton" aria-label="Decisions by Release Date">
+                                Decisions by Release Date
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!--============= Question Section Starts Here =============-->
+    <section class="pb-65 mt-20">
+        <div class="container" role="region">
+
+            <!-- Search form -->
+            <form method="get" id="filterForm" action="/Documents/Search">
+                <div class="row">
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="StartDate" class="form-label">Start Date</label>
+                        <input type="date" id="StartDate" name="StartDate" class="form-control" value="2026-03-03" />
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="EndDate" class="form-label">End Date</label>
+                        <input type="date" id="EndDate" name="EndDate" class="form-control" value="2026-04-02" />
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="statusFilter" class="form-label">Status</label>
+                        <select class="form-select" id="statusFilter" name="statusFilter">
+                            <option value="-1">Published & Unpublished</option>
+                            <option value="1">Published</option>
+                            <option value="0" selected="selected">Unpublished</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <label for="courtFilter" class="form-label">Court</label>
+                        <select class="form-select" id="courtFilter" name="courtFilter">
+                            <option value="">Both Courts</option>
+                            <option value="10">Supreme Court</option>
+                            <option value="20" selected="selected">Court of Appeals</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-6 col-lg-12  col-md-12">
+                        <input type="text" id="Keyword" name="Keyword" placeholder="Keyword Search..." class="form-control" />
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                    <div class="mb-3 mt-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <button type="button" id="clearFiltersButton" class="btn btn-primary">Reset</button>
+                    </div>
+                    
+                </div>
+            </form>
+
+            <script>
+                document.getElementById("clearFiltersButton").addEventListener("click", function () {
+                    window.location.href = '/';
+                });
+            </script>
+            <hr />
+
+
+            <h2 class="pb-20 results">Search Results</h2>
+                <p class="results">
+                    By default, the table displays data from the past three months. To view results beyond this period, select a <b>Start Date</b> and an <b>End Date</b> and select <b>Search</b>.
+                    <br /><span style="color:#555251;">You can sort columns for data currently displayed. Use <b>Keyword Search</b> to search the entire database and return the top 500 records.</span>
+                </p>
+                <div id="tableLoading" class="text-center mb-3">
+                    <span class="spinner-border" role="status" aria-hidden="true"></span>
+                    <span>Loading results...</span>
+                </div>
+                <div class="table-responsive" id="searchResultsWrapper" style="display:none;">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="searchResultsTable">
+                    <thead>
+                        <tr>
+                            <th>Release Date</th>
+                            <th>Case Number</th>
+                            <th class="case-title">Case Title</th>
+                            <th>Court</th>
+                            <th>Status</th>
+                            <th>PDF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>126290</td>
+                            <td class="case-title">
+                                In re Equalization Appeal of City of Council Grove
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/369a8677-16b4-406a-b3f0-a958d0c2fb40_126290.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 126290  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>127643</td>
+                            <td class="case-title">
+                                State v. Batts
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/1b0b12d5-5ce6-45d9-962c-06ade561f090_127643.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127643  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>127644</td>
+                            <td class="case-title">
+                                State v. Hane
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/6b2f9d74-08f9-4594-903a-d416715ea15c_127644.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127644  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>127709</td>
+                            <td class="case-title">
+                                State v. Calderon-Mendoza
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/33d698c7-5bd4-4d41-9d58-b2a5f388dd60_127709.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127709  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>127772</td>
+                            <td class="case-title">
+                                Cook v. State
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/a240c54c-162f-4cbb-93a4-78a3b1d92c90_127772.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127772  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128059</td>
+                            <td class="case-title">
+                                State v. Owens
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/bc35bf81-a3b2-451d-8482-1780aa5a9c67_128059.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128059  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128231</td>
+                            <td class="case-title">
+                                State v. Wente
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/72d6ba55-b917-479b-8be0-776c79206a9d_128231.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128231  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128448</td>
+                            <td class="case-title">
+                                State v. Clay
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/4e0e9ea1-4ba2-4222-a5ce-8bca975c0ed6_128448.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128448  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128612</td>
+                            <td class="case-title">
+                                Crawford v. Spirit Aerosystems
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/146fd4e5-d0ee-4d39-ae9f-d9d9b3de99d9_128612.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128612  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128850</td>
+                            <td class="case-title">
+                                State v. Martinez
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/f00ac084-0f11-409b-b72b-fa58cb05d3cb_128850.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128850  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128970</td>
+                            <td class="case-title">
+                                In re Marriage of Rawlings
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/5ec5716e-47cb-47f3-88fc-8ae218a224a1_128970.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128970  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>128994</td>
+                            <td class="case-title">
+                                Short v. Costco Wholesale Corp.
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/f265b14e-ea58-42c6-8e1b-873d27423aa4_128994.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128994  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/27/2026</td>
+                            <td>129065</td>
+                            <td class="case-title">
+                                State v. Otano
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/0f6ab7cb-3392-4c8b-af22-2e75635ec406_129065.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129065  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>125356</td>
+                            <td class="case-title">
+                                State v. Dehart
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/0ebfb336-6414-4e73-bf7d-d60bd232c13a_125356.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 125356  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>126710</td>
+                            <td class="case-title">
+                                Buehne v. Kansas Dept. for Children and Families
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/d774d81d-7295-41f9-b0fd-6219dd68cf3f_126710.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 126710  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>126745</td>
+                            <td class="case-title">
+                                State v. Aguilar
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/ac84b2e6-9eea-40c1-bbb2-c8ee421848e8_126745.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 126745  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>128025</td>
+                            <td class="case-title">
+                                State v. Elam
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/36692335-3227-482c-8387-6d83ce9f09d9_128025.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128025  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>128238</td>
+                            <td class="case-title">
+                                State v. Groshong
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/4ba9abda-6a50-4991-8612-1588b1df4a5f_128238.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128238  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>128365</td>
+                            <td class="case-title">
+                                Gordon v. State
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/07b194cc-4fcc-48e5-885f-7a61eb752273_128365.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128365  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>128380</td>
+                            <td class="case-title">
+                                State v. Moreno
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/024489c8-9595-4065-bf8a-4698e85ad332_128380.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128380  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>128624</td>
+                            <td class="case-title">
+                                State v. Knox
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/7b373c3d-c885-4673-81b0-dfce9148afc3_128624.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128624  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>128853</td>
+                            <td class="case-title">
+                                State v. Van-Royen
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/98cd0e6a-96df-4362-9b61-3b8a1e96d487_128853.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128853  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/20/2026</td>
+                            <td>129464</td>
+                            <td class="case-title">
+                                In re S.J.
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/40ec5b9f-24a1-497b-9c47-cb17b2160893_129464.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129464  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>126678</td>
+                            <td class="case-title">
+                                State v. Kipers
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/02d213d2-d808-43b1-b1d4-76d64194d28e_126678.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 126678  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>127227</td>
+                            <td class="case-title">
+                                State v. Westgate
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/55bde335-4ac7-4905-af82-14da2fa30afd_127227.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127227  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>127257</td>
+                            <td class="case-title">
+                                State v. Bermudez
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/dc82d7eb-2871-4240-81ea-f390250b7415_127257.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127257  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>127469</td>
+                            <td class="case-title">
+                                State v. Denney
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/d4dbeeb2-e78b-4031-bb7d-c63fe8f66aa8_127469.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127469  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>127671</td>
+                            <td class="case-title">
+                                State v. Turner
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/dc37bdb4-3e9e-4c29-8f6e-1d963c96ce2d_127671.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127671  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>127924</td>
+                            <td class="case-title">
+                                McKnight v. Schnurr, Warden
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/a3587397-e423-4417-8496-74f457484560_127924.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127924  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128031</td>
+                            <td class="case-title">
+                                State v. Sanchez
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/972d7337-b3b0-4492-955f-14477bdf14b0_128031.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128031  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128077</td>
+                            <td class="case-title">
+                                State v. Salinas
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/f2a18a63-bf64-4f33-ae77-c0021043bb63_128077.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128077  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128320</td>
+                            <td class="case-title">
+                                Denney v. State
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/841f77dc-620a-49e9-839c-fb21f75fb8de_128320.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128320  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128339</td>
+                            <td class="case-title">
+                                State v. Abell
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/9f4ed6ac-61e2-4da9-bf8c-f97d0828c234_128339.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128339  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128358</td>
+                            <td class="case-title">
+                                State v. Ekdahl
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/447004f9-9a88-4cbd-9179-834183457043_128358.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128358  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128392</td>
+                            <td class="case-title">
+                                Hornbaker v. Brown
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/33bb90da-f52e-4fba-ba6a-5e80e5d432f6_128392.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128392  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128518</td>
+                            <td class="case-title">
+                                State v. Jeffrey
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/735e3771-68cc-455c-97a5-bd4159dba398_128518.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128518  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128578</td>
+                            <td class="case-title">
+                                State v. Pagel
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/4b6c438d-7dba-400f-8268-3f12bf64e5b2_128578.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128578  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128621</td>
+                            <td class="case-title">
+                                State v. Parra
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/3dfc631c-636e-4c84-bb35-0ab7d4d16383_128621.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128621  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128673</td>
+                            <td class="case-title">
+                                Snyder v. Kansas Dept. of Revenue
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/e312fc1e-8c5a-4d1a-bf7b-0a26da37a86a_128673.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128673  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128744</td>
+                            <td class="case-title">
+                                State v. Griffin
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/b6a690ee-882e-465a-8166-79313a450b2c_128744.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128744  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128892</td>
+                            <td class="case-title">
+                                In re A.W.
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/be0d8a56-94c1-4682-8418-7dbb80e30e10_128892.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128892  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>128984</td>
+                            <td class="case-title">
+                                Reed v. Kansas Dept. of Corrections
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/7e7e8789-2ea5-46a1-b9e2-4e6632b03fc6_128984.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128984  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>129082</td>
+                            <td class="case-title">
+                                State v. Spencer
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/9cd9cf12-dde8-4209-b7ef-762fcf31ab47_129082.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129082  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>129338</td>
+                            <td class="case-title">
+                                In re Care and Treatment of Delimont
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/f519d561-72bd-4ccf-897c-b21bdea60b58_129338.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129338  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/13/2026</td>
+                            <td>129512</td>
+                            <td class="case-title">
+                                T.M. v. B.M.
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/aec091f3-1282-43b3-808d-17b5b7f2ca4d_129512.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129512  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>126882</td>
+                            <td class="case-title">
+                                State v. Schwindt
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/6d112bd2-36e5-4b4a-8460-e67e742c25f9_126882.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 126882  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127083</td>
+                            <td class="case-title">
+                                Pfannenstiel v. Pfannenstiel
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/9b490289-57de-410c-88db-cbfc3568af0e_127083.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127083  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127141</td>
+                            <td class="case-title">
+                                Merced v. State
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/0d92c88a-bf14-48ab-87cc-3ab5e3fe0080_127141.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127141  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127218</td>
+                            <td class="case-title">
+                                Sheppard v. State
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/235912fb-b3e9-4c86-a541-5f4725fe3eef_127218.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127218  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127235</td>
+                            <td class="case-title">
+                                State v. Thomas
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/65c8976f-e197-43d8-9245-785f312dc388_127235.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127235  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127349</td>
+                            <td class="case-title">
+                                State v. Scott
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/7176d504-dca5-4fbd-a898-56e4d6a39ea4_127349.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127349  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127383</td>
+                            <td class="case-title">
+                                State v. Heider
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/7f1a3d08-db23-47fc-9222-2e19f4098fc7_127383.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127383  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127664</td>
+                            <td class="case-title">
+                                State v. Jamil
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/82cb122d-00e7-43c7-a7e0-fb7d57d1bc6a_127664.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127664  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>127812</td>
+                            <td class="case-title">
+                                State v. Colon
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/da649e24-5f88-41d5-9192-ed3e4004b1e9_127812.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 127812  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>128128</td>
+                            <td class="case-title">
+                                State v. Powell
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/89f6919c-1532-437e-a092-95f131518ccf_128128.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128128  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>128718</td>
+                            <td class="case-title">
+                                State v. Jaramillo
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/7b5f1579-9485-4649-bce3-0fca4faaeb50_128718.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128718  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>128981</td>
+                            <td class="case-title">
+                                State v. Adachi
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/2a3d698e-96d9-466b-838d-3cfe6a5b15a9_128981.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 128981  (Opens in a new window)"></i></a></td>
+                            </tr>
+                        <tr>
+                            <td>3/6/2026</td>
+                            <td>129363</td>
+                            <td class="case-title">
+                                In re S.D.
+                            </td>
+                            <td>Court of Appeals</td>
+                            <td>Unpublished</td>
+                                <td><a href="/documents/pdf/caseDecisions/5048c305-efcb-4b39-8efa-3f865019ac2d_129363.pdf" target="_blank"><i class="fas fa-file-pdf" aria-label="PDF link for Case Number 129363  (Opens in a new window)"></i></a></td>
+                            </tr>
+                    </tbody>
+                        </table>
+                    </div>
+                </div>
+
+        </div>
+        
+    </section>
+    <!--============= Scripts =============-->
+    <script type="text/javascript">
+        console.log("Current Environment: ''");
+
+        $(document).ready(function () {
+            if ($.fn.DataTable.isDataTable('#searchResultsTable')) {
+                $('#searchResultsTable').DataTable().clear().destroy();
+            }
+
+            const table = $('#searchResultsTable').DataTable({
+                responsive: true,
+                autoWidth: false,
+                pageLength: 10,
+                order: [],           // don't override server-rendered row order
+                stateSave: false,    // don't remember previous sort/filter
+                columnDefs: [
+                    { orderable: false, targets: 5 },
+                    { type: "date", targets: 0 },
+                    { type: "num", targets: 1 }
+                ],
+                language: {
+                    search: "Filter:"
+                },
+                initComplete: function () {
+                    $('#tableLoading').remove(); // Remove spinner
+                    $('#searchResultsWrapper').fadeIn(200); // Reveal table wrapper
+                }
+            });
+
+            //gray out the anticipated and published opinion buttons if there are no available files
+            var advanceButton = document.getElementById("advanceButton");
+            var upcomingButton = document.getElementById("upcomingButton");
+            $.ajax({
+            type: "GET",
+            url: '/Documents/FileIsAvailable',
+            dataType: "json",
+            cache: false
+        })
+        .done(function (data) {
+            // data = { anticipated: true|false, published: true|false }
+            if (advanceButton) {
+                if (data.anticipatedAvailable) {
+                    advanceButton.classList.remove('disabled');
+                    advanceButton.setAttribute('aria-disabled', 'false');
+                } else {
+                    advanceButton.classList.add('disabled');
+                    advanceButton.setAttribute('aria-disabled', 'true');
+                }
+            }
+
+            if (upcomingButton) {
+                if (data.publishedAvailable){
+                    upcomingButton.classList.remove('disabled');
+                    upcomingButton.setAttribute('aria-disabled', 'false');
+                } else {
+                    upcomingButton.classList.add('disabled');
+                    upcomingButton.setAttribute('aria-disabled', 'true');
+                }
+            }
+        })
+        });
+
+    </script>
+</div>
+<style>
+    /* Top action buttons:
+                               - stacked and full-width on small screens
+                               - left two inline on the left and one on the right on md+ screens */
+    .top-action-bar {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+        .top-action-bar .left-group,
+        .top-action-bar .right-group {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .top-action-bar .btn {
+            width: 100%;
+        }
+
+    @media (min-width: 768px) {
+        .top-action-bar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .top-action-bar .left-group {
+                flex-direction: row;
+                gap: .5rem;
+            }
+
+                .top-action-bar .left-group .btn,
+                .top-action-bar .right-group .btn {
+                    width: auto;
+                }
+                /* optional: keep a little more breathing room on larger screens */
+                .top-action-bar .left-group .btn {
+                    min-width: 10rem;
+                }
+    }
+</style>
+
+
+        <!--============= Have Questions Section Starts Here =============-->
+        <div b-zlz4q0gjtp class="have-questions-section mb--70--145" tabindex="100">
+            <div b-zlz4q0gjtp class="container">
+                <div b-zlz4q0gjtp class="have-question-wrapper">
+                    <div b-zlz4q0gjtp class="row">
+                        <div b-zlz4q0gjtp class="col-lg-12">
+                            <div b-zlz4q0gjtp class="have-question-content">
+                                <ul b-zlz4q0gjtp>
+                                    <li b-zlz4q0gjtp>
+                                        <h3 b-zlz4q0gjtp>Published Decisions</h3>
+                                        <ul b-zlz4q0gjtp>
+                                            <li b-zlz4q0gjtp>The Kansas Supreme Court and the Kansas Court of Appeals usually release published decisions around 9:30 a.m. on Fridays. These decisions are posted as soon as possible after they are released.</li>
+                                            <li b-zlz4q0gjtp>Decisions posted online may not be final. A party may request a rehearing, modification, or further review, or the court may determine a change is needed. Final decisions are published in the Kansas Reports and the Kansas Court of Appeals Reports.</li>
+                                            <li b-zlz4q0gjtp><a b-zlz4q0gjtp href="https://kscourts.gov/Cases-Opinions/Citing-Opinions" target="_blank">Citing Decisions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li b-zlz4q0gjtp>
+                                        <h3 b-zlz4q0gjtp>Unpublished Decisions</h3>
+                                        <ul b-zlz4q0gjtp>
+                                            <li b-zlz4q0gjtp>The Kansas Supreme Court and the Kansas Court of Appeals usually release unpublished decisions around 9:30 a.m. on Fridays. These unpublished decisions are posted online the same day they are released.</li>
+                                            <li b-zlz4q0gjtp>Unpublished decisions posted online may not be final. A party may request a rehearing, modification, or further review. Unpublished decisions do not get published in the Kansas Reports or in the Kansas Court of Appeals Reports.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============= Have Questions Section Ends Here =============-->
+    </main>
+    <!--============= Footer Section Starts Here =============-->
+    <footer b-zlz4q0gjtp class="footer-section pt-70-145" tabindex="101">
+        <div b-zlz4q0gjtp class="container">
+            <div b-zlz4q0gjtp class="footer-top pb-50 pt-50">
+                <div b-zlz4q0gjtp class="row mb--50 justify-content-between">
+                    <div b-zlz4q0gjtp class="col-sm-12 col-lg-12">
+                        <div b-zlz4q0gjtp class="footer-widget widget-about">
+                            <p b-zlz4q0gjtp class="cl-white">The Supreme Court and Court of Appeals make their decisions available online as soon as they are filed. <a b-zlz4q0gjtp href="https://kscourts.gov/Cases-Decisions" target="_blank" style="text-decoration:underline !important;">Visit the Cases-Decisions page for additional information.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div b-zlz4q0gjtp class="bottom-area cl-white" style="border-top: solid 2px #fff;">
+                <div b-zlz4q0gjtp class="copyright-area">
+                    <a b-zlz4q0gjtp href="https://kscourts.gov/" target="_blank"><img src="/assets/images/logo/kscourts_seal_supremecourt_white_8july19_350px.png" class="footer-logo" alt="Seal" /></a>
+                    <span b-zlz4q0gjtp class="text"> Copyright © 2024 Kansas Judicial Branch. All Rights Reserved.</span>
+
+                </div>
+                <ul b-zlz4q0gjtp class="social-icons">
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp href="https://www.linkedin.com/company/kansas-office-of-judicial-administration" class="external-link" target="_blank" aria-label="Visit our LinkedIn page">
+                            <i b-zlz4q0gjtp class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="https://www.facebook.com/KSCourts" class="external-link" aria-label="Visit our Facebook page">
+                            <i b-zlz4q0gjtp class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="https://www.instagram.com/kscourts" aria-label="Visit our Instagram page">
+                            <i b-zlz4q0gjtp class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="https://x.com/KSCourts" class="external-link" aria-label="Visit our Twitter page">
+                            <i b-zlz4q0gjtp class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li b-zlz4q0gjtp>
+                        <a b-zlz4q0gjtp target="_blank" href="http://www.flickr.com/photos/kscourts" class="external-link" aria-label="Visit our Flickr page">
+                            <i b-zlz4q0gjtp class="fab fa-flickr" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--============= Footer Section Ends Here =============-->
+    
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e615eaacc38b079',t:'MTc3NTE0OTAxNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5d1653a7115844e68bf8fb700609ffde","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

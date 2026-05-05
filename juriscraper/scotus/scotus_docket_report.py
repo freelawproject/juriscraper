@@ -7,6 +7,9 @@ from datetime import date, datetime
 from typing import Any, Optional
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
+
+logger = make_default_logger()
 
 
 class SCOTUSDocketReport:
@@ -42,8 +45,19 @@ class SCOTUSDocketReport:
     @property
     def data(self) -> dict:
         """Get all the data back from this endpoint."""
+        metadata = self.metadata or {}
+        if not metadata:
+            return {}
+        case_name = metadata.get("case_name")
+        if not case_name:
+            logger.error("Failed to extract SCOTUS docket number.")
+            return {}
+        docket_number = metadata.get("docket_number")
+        if not docket_number:
+            logger.error("Failed to extract SCOTUS docket number.")
+            return {}
         return {
-            **(self.metadata or {}),
+            **metadata,
             "parties": self.parties,
             "docket_entries": self.docket_entries,
         }
@@ -63,6 +77,9 @@ class SCOTUSDocketReport:
 
         :return: Dict with case_number, docket_date, case_title, lower_court, etc.
         """
+        if not self._scotus_json:
+            logger.error("_parse_text() must be called first.")
+            return {}
 
         scotus_data = self._scotus_json
         docket_number = (scotus_data.get("CaseNumber", "")).strip()

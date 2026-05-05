@@ -13,13 +13,13 @@ class Site(iowa.Site):
         self.court_id = self.__module__
         self.url = "https://www.iowacourts.gov/iowa-courts/court-of-appeals/court-of-appeals-court-opinions/"
 
-    def _download_backwards(self, _):
+    async def _download_backwards(self, _):
         """Overriding this method from parent iowa class because the
         site link/page structure for archived Court of Appeals opinions
         is different than that of Archived Supreme Court opinions
         """
         self.archive = True
-        landing_page_html = self._download()
+        landing_page_html = await self._download()
         path_filter_class = 'contains(./@class, "nav-link")'
         path_filter_text = (
             'contains(./text(), "Archived Court of Appeals Opinions")'
@@ -27,7 +27,9 @@ class Site(iowa.Site):
         path = f"//a[{path_filter_class}][{path_filter_text}]/@href"
         for archive_page_url in landing_page_html.xpath(path):
             logger.info(f"Back scraping archive page: {archive_page_url}")
-            archive_page_html = self._get_html_tree_by_url(archive_page_url)
+            archive_page_html = await self._get_html_tree_by_url(
+                archive_page_url
+            )
             self.extract_archive_cases(archive_page_html)
 
     def extract_archive_cases(self, html):

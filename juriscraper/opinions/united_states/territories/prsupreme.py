@@ -21,12 +21,12 @@ class Site(OpinionSiteLinear):
     base_url = "https://poderjudicial.pr/index.php/tribunal-supremo/decisiones-del-tribunal-supremo/decisiones-del-tribunal-supremo"
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = date.today().year
         self.url = f"{self.base_url}-{self.year}/"
         self.status = "Published"
-        self.request["verify"] = False
         self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
@@ -173,7 +173,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start_date.year, end_date.year + 1)
 
-    def _download_backwards(self, year) -> None:
+    async def _download_backwards(self, year) -> None:
         """Download and parse opinions for a single back-scrape year
 
         :param year: The year to scrape
@@ -181,5 +181,5 @@ class Site(OpinionSiteLinear):
         """
         self.year = year
         self.url = f"{self.base_url}-{year}/"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()

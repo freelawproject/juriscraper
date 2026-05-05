@@ -96,7 +96,7 @@ class Site(OpinionSiteLinear):
             except ParserError:
                 pass
 
-    def _download_backwards(self, year: int) -> None:
+    async def _download_backwards(self, year: int) -> None:
         """Sets up the download of past records
 
         :param year: search filter for the page

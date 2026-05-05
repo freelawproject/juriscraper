@@ -9,11 +9,11 @@ class Site(OpinionSiteLinear):
     date_regex = re.compile(r" \d\d?/\d\d?/\d\d| filed")
 
     def __init__(self, *args, **kwargs):
+        kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"https://www.courts.ca.gov/cms/opinions.htm?Courts={self.court_code}"
         self.status = "Published"
-        self.request["verify"] = False
         self.should_have_results = True
 
     def _process_html(self) -> None:

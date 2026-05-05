@@ -1,7 +1,11 @@
 {
   "appeals_court": {
-    "case_number": "10-24-00237-CR",
-    "case_url": "https://search.txcourts.gov/Case.aspx?cn=10-24-00237-CR",
+    "case_number": [
+      "10-24-00237-CR"
+    ],
+    "case_url": [
+      "https://search.txcourts.gov/Case.aspx?cn=10-24-00237-CR"
+    ],
     "court_id": "texas_coa10",
     "disposition": "",
     "district": "10th Court of Appeals",

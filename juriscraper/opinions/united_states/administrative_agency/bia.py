@@ -30,7 +30,7 @@ class Site(OpinionSiteLinear):
         self.urls = None
         self.status = "Published"
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         if not self.test_mode_enabled():
             # Get last volume URL
             if not self.urls:
@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
 
                 self.urls = sorted(urls, key=get_text, reverse=True)
             self.url = self.urls[self.volume].get("href")
-            self.html = super()._download()
+            self.html = await super()._download()
 
         for row in self.html.xpath("//table"):
             summary = row.xpath("string(following-sibling::p[1])")

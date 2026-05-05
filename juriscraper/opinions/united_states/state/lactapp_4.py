@@ -90,7 +90,7 @@ class Site(OpinionSiteLinear):
 
             self.parameters[name] = value
 
-    def _download_backwards(self, search_date: date) -> None:
+    async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
@@ -98,7 +98,7 @@ class Site(OpinionSiteLinear):
         and processes the HTML to extract case details.
         """
         self.search_date = search_date
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs) -> None:
@@ -112,7 +112,7 @@ class Site(OpinionSiteLinear):
             self.back_scrape_iterable
         )
 
-    def _download(self, request_dict=None) -> HtmlElement:
+    async def _download(self, request_dict=None) -> HtmlElement:
         """Download the HTML content for the current search state.
 
         :param request_dict (dict, optional): Additional request parameters.
@@ -120,11 +120,11 @@ class Site(OpinionSiteLinear):
         """
         if not self.test_mode_enabled():
             if not self.html:
-                self.html = super()._download()
+                self.html = await super()._download()
 
             self.update_parameters()
             self.method = "POST"
-        return super()._download()
+        return await super()._download()
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts structured metadata from the provided opinion text.

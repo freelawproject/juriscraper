@@ -5,9 +5,9 @@ from typing import Optional
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
+from httpx import Response
 from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
-from requests import Response
 
 from juriscraper.lib.string_utils import clean_string
 
@@ -280,6 +280,25 @@ def is_html(response: Response) -> bool:
     """Determines whether the item downloaded is an HTML document or something
     else."""
     return "text/html" in response.headers.get("content-type", "")
+
+
+def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
+    """
+    Extracts <td> elements from a table into a 2D array with the same layout as
+    they have in the markup.
+
+    :param table: The <table> element to parse.
+    :return: A 2D array of <td> elements with the same layout as the table.
+    """
+
+    # Use direct children only to avoid picking up nested tables.
+    rows = table.findall("./tr") or table.findall("./tbody/tr")
+
+    out = []
+    for row in rows:
+        out.append(list(row.findall("./td")))
+
+    return out
 
 
 def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:

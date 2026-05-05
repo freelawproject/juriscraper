@@ -5,6 +5,7 @@
 #  - 2025-07-29: Created by Luis Manzur
 import re
 from typing import Optional
+from urllib.parse import urljoin
 
 from dateutil import parser
 
@@ -22,7 +23,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parses the HTML content
 
         :return None
@@ -45,8 +46,8 @@ class Site(OpinionSiteLinear):
                 except (ValueError, AttributeError):
                     name, citation = short_title, ""
 
-            url = link.get("href")
-            date = self._get_approximate_date(url)
+            url = urljoin(self.url, link.get("href"))
+            date = await self._get_approximate_date(url)
             raw_docket = title.split()[0]
             docket = raw_docket.strip(",").replace("--", "-")
 
@@ -98,7 +99,7 @@ class Site(OpinionSiteLinear):
             }
         return {}
 
-    def _get_approximate_date(self, url: str) -> Optional[str]:
+    async def _get_approximate_date(self, url: str) -> Optional[str]:
         """Get Approximate date from head request
 
         :param url: The pdf url
@@ -106,8 +107,8 @@ class Site(OpinionSiteLinear):
         """
         if self.test_mode_enabled():
             return "2025-01-01"
-        resp = self.request["session"].head(
-            url, allow_redirects=True, timeout=30
+        resp = await self.request["session"].head(
+            url, follow_redirects=True, timeout=30
         )
         lm = resp.headers.get("Last-Modified")
         dt = parser.parse(lm)
