@@ -100,7 +100,7 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     """
     Extension of the DocketEntry data structure with Florida-specific fields.
 
-    :ivar uuid: The UUID of this docket entry for use in API requests.
+    :ivar docket_entry_uuid: The UUID of this docket entry for use in API requests.
     :ivar date_filed: The date this entry was filed.
     :ivar datetime_filed: The date and time this entry was filed according to
         the Florida API.
@@ -132,7 +132,7 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     :ivar attachments: Documents attached to this entry.
     """
 
-    uuid: UUID4 = Field(
+    docket_entry_uuid: UUID4 = Field(
         validation_alias=AliasPath("docketEntryHeader", "docketEntryUUID")
     )
     date_filed: Annotated[

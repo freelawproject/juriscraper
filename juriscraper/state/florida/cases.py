@@ -109,19 +109,21 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
     :raise PydanticCustomError: If the court name is not recognized.
     """
     court_name = i.lower().strip()
-    if court_name.startswith("circuit court"):
-        return FloridaCourtID.CIRCUIT
-    if court_name.startswith("county court"):
-        return FloridaCourtID.COUNTY
-    if court_name == "administrative agency":
-        return FloridaCourtID.ADMINISTRATIVE_AGENCY
-    if court_name == "office of the judges of compensation claims":
-        return FloridaCourtID.COMPENSATION_CLAIMS
-    raise PydanticCustomError(
-        "florida_court_name",
-        "Unrecognized Florida court name: {cn}",
-        {"cn": i},
-    )
+    match court_name:
+        case name if name.startswith("circuit court"):
+            return FloridaCourtID.CIRCUIT
+        case name if name.startswith("county court"):
+            return FloridaCourtID.COUNTY
+        case "administrative agency":
+            return FloridaCourtID.ADMINISTRATIVE_AGENCY
+        case "office of the judges of compensation claims":
+            return FloridaCourtID.COMPENSATION_CLAIMS
+        case _:
+            raise PydanticCustomError(
+                "florida_court_name",
+                "Unrecognized Florida court name: {cn}",
+                {"cn": i},
+            )
 
 
 class FloridaOriginatingCase(BaseModel):
@@ -179,7 +181,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     """
     Extension of the Docket data structure with Florida-specific fields.
 
-    :ivar uuid: The UUID of this case for use in API requests.
+    :ivar case_uuid: The UUID of this case for use in API requests.
     :ivar docket_number: The case number assigned by the court.
     :ivar case_name: The case title, cleaned and harmonized.
     :ivar case_name_full: The case title with minimal cleaning.
@@ -192,20 +194,24 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar classification_id: Florida internal integer ID of the case
         classification.
     :ivar court_id: Juriscraper court ID.
+    :ivar court_abbreviation: The Florida abbreviation for the court (e.g.
+        "1DCA").
     :ivar location: The location name within the court.
     :ivar location_id: Florida internal integer ID of the location.
     :ivar date_filed: The date this case was filed.
     :ivar datetime_filed: The date and time this case was filed according to
         the API.
-    :ivar case_group_flag: Whether this case is part of a case group.
-    :ivar panel_flag: Whether a panel has been assigned to this case.
+    :ivar case_group_flag: Whether this case is part of a case group. ``None``
+        if the API did not return a value.
+    :ivar panel_flag: Whether a panel has been assigned to this case. ``None``
+        if the API did not return a value.
     :ivar originating_cases: Lower court cases from which this case originated.
     :ivar transfers: Transfers of this case between courts.
     :ivar entries: Docket entries filed in this case.
     :ivar parties: Parties in this case.
     """
 
-    uuid: UUID4 = Field(
+    case_uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
     docket_number: Annotated[
@@ -246,6 +252,10 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
             florida_external_id_to_js_id_validator, json_schema_input_type=str
         ),
     ] = Field(validation_alias=AliasPath("caseHeader", "courtID"))
+    court_abbreviation: str = Field(
+        validation_alias=AliasPath("caseHeader", "courtAbbreviation"),
+        default="",
+    )
     location: str = Field(
         validation_alias=AliasPath("caseHeader", "location"), default=""
     )
@@ -261,12 +271,12 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     datetime_filed: datetime = Field(
         validation_alias=AliasPath("caseHeader", "filedDate")
     )
-    case_group_flag: bool = Field(
+    case_group_flag: bool | None = Field(
         validation_alias=AliasPath("caseHeader", "caseGroupFlag"),
-        default=False,
+        default=None,
     )
-    panel_flag: bool = Field(
-        validation_alias=AliasPath("caseHeader", "panelFlag"), default=False
+    panel_flag: bool | None = Field(
+        validation_alias=AliasPath("caseHeader", "panelFlag"), default=None
     )
     originating_cases: list[FloridaOriginatingCase] = Field(
         validation_alias=AliasPath("caseHeader", "originatingCourtCases")

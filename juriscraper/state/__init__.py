@@ -2,4 +2,4 @@
 The home of all state scrapers and parsers.
 """
 
-__all__ = ["texas", "florida", "docket", "parser"]
+__all__ = ["texas", "florida", "docket"]

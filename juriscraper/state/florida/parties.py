@@ -99,7 +99,7 @@ class FloridaParty(Party):
     """
     Extension of the Party data structure with Florida-specific fields.
 
-    :ivar uuid: The UUID of this party for use in API requests.
+    :ivar party_uuid: The UUID of this party for use in API requests.
     :ivar party_type_raw: The party type field as it appears in the API
         response.
     :ivar party_type: Conversion of the party subtype field to the PartyType
@@ -121,7 +121,7 @@ class FloridaParty(Party):
         of involvement in the case.
     """
 
-    uuid: UUID4 = Field(
+    party_uuid: UUID4 = Field(
         validation_alias=AliasPath("partyHeader", "casePartyUUID")
     )
     party_type_raw: str = Field(
