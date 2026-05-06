@@ -1,0 +1,261 @@
+[
+  {
+    "active": true,
+    "display_name": "Supreme Court of Florida",
+    "external_identifier": 1,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "Supreme Court of Florida",
+        "location_id": 1000000,
+        "location_name": "Supreme Court of Florida"
+      }
+    ],
+    "modified_date": "2023-03-04T15:16:42.101246Z",
+    "modified_user_id": "4f34989a-a619-4f1f-a628-f434a093d38c",
+    "note": "Florida Supreme Court",
+    "resource_id": "68f021c4-6a44-4735-9a76-5360b2e8af13"
+  },
+  {
+    "active": true,
+    "display_name": "1st District Court of Appeal",
+    "external_identifier": 2,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "First District Court of Appeal",
+        "location_id": 1000001,
+        "location_name": "1st District Court of Appeal"
+      }
+    ],
+    "modified_date": "2024-05-14T19:00:49.848511Z",
+    "modified_user_id": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+    "note": "1st District Court of Appeal",
+    "resource_id": "b82b30d5-bd3c-46d7-9451-1cb05e470873"
+  },
+  {
+    "active": true,
+    "display_name": "2nd District Court of Appeal",
+    "external_identifier": 3,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "Second District Court of Appeal",
+        "location_id": 1000002,
+        "location_name": "2nd District Court of Appeal"
+      }
+    ],
+    "modified_date": "2024-05-14T19:00:49.867937Z",
+    "modified_user_id": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+    "note": "2nd District Court of Appeal",
+    "resource_id": "8f454fb9-4c7f-43df-856b-ab373e71c27f"
+  },
+  {
+    "active": true,
+    "display_name": "3rd District Court of Appeal",
+    "external_identifier": 4,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "Third District Court of Appeal",
+        "location_id": 1000003,
+        "location_name": "3rd District Court of Appeal"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Fla. International Univ. College of Law",
+        "location_id": 1000009,
+        "location_name": "Fla. International Univ. College of Law"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Key West Courthouse",
+        "location_id": 1000011,
+        "location_name": "Key West Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "St. Thomas Univ. College of Law",
+        "location_id": 1000010,
+        "location_name": "St. Thomas Univ. College of Law"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "University of Miami School of Law",
+        "location_id": 1000006,
+        "location_name": "University of Miami School of Law"
+      }
+    ],
+    "modified_date": "2024-05-14T19:00:49.871025Z",
+    "modified_user_id": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+    "note": "3rd District Court of Appeal",
+    "resource_id": "8a73be7f-864b-42a9-b8ad-1ec0a3e890b4"
+  },
+  {
+    "active": true,
+    "display_name": "4th District Court of Appeal",
+    "external_identifier": 5,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "Fourth District Court of Appeal",
+        "location_id": 1000004,
+        "location_name": "4th District Court of Appeal"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Martin County Courthouse",
+        "location_id": 1000013,
+        "location_name": "Martin County Courthouse"
+      }
+    ],
+    "modified_date": "2024-05-14T19:00:49.873445Z",
+    "modified_user_id": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+    "note": "4th District Court of Appeal",
+    "resource_id": "cdc2beb5-919b-4198-a731-7b253b7119cc"
+  },
+  {
+    "active": true,
+    "display_name": "5th District Court of Appeal",
+    "external_identifier": 6,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "Fifth District Court of Appeal",
+        "location_id": 1000005,
+        "location_name": "5th District Court of Appeal"
+      }
+    ],
+    "modified_date": "2024-05-14T19:00:49.876137Z",
+    "modified_user_id": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+    "note": "5th District Court of Appeal",
+    "resource_id": "d818ccfa-0288-4e77-9f0f-daa6a4999a3a"
+  },
+  {
+    "active": true,
+    "display_name": "6th District Court of Appeal",
+    "external_identifier": 7,
+    "locations": [
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": true,
+        "location_comment": "Sixth District Court of Appeal",
+        "location_id": 1000012,
+        "location_name": "6th District Court of Appeal"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Barry University",
+        "location_id": 1000024,
+        "location_name": "Barry University"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Charlotte County Courthouse",
+        "location_id": 1000015,
+        "location_name": "Charlotte County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Collier County Courthouse",
+        "location_id": 1000016,
+        "location_name": "Collier County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Florida Southern College",
+        "location_id": 1000025,
+        "location_name": "Florida Southern College"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Glades County Courthouse",
+        "location_id": 1000017,
+        "location_name": "Glades County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Hardee County Courthouse",
+        "location_id": 1000018,
+        "location_name": "Hardee County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Hendry County Courthouse",
+        "location_id": 1000019,
+        "location_name": "Hendry County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Highlands County Courthouse",
+        "location_id": 1000020,
+        "location_name": "Highlands County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Lee County Justice Center",
+        "location_id": 1000021,
+        "location_name": "Lee County Justice Center"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Orange County Courthouse",
+        "location_id": 1000014,
+        "location_name": "Orange County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Osceola County Courthouse",
+        "location_id": 1000022,
+        "location_name": "Osceola County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "Polk County Courthouse",
+        "location_id": 1000023,
+        "location_name": "Polk County Courthouse"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "TBD",
+        "location_id": 1000027,
+        "location_name": "TBD"
+      },
+      {
+        "calendar_event_flag": true,
+        "case_location_flag": false,
+        "location_comment": "University of Central Florida",
+        "location_id": 1000026,
+        "location_name": "University of Central Florida"
+      }
+    ],
+    "modified_date": "2024-05-14T19:00:49.878631Z",
+    "modified_user_id": "61ce960d-9810-48b1-8a6c-e7c74b4e7f1e",
+    "note": "6th District Court of Appeal",
+    "resource_id": "082fc14d-02f3-4240-a353-241b8c0d9a8f"
+  }
+]
