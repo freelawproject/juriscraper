@@ -24,6 +24,12 @@ Changes:
 Fixes:
 -
 
+## 3.0.17 - 2026-05-06
+
+Fixes:
+- Fix `nmariana` neutral citations to use spaces instead of dashes (e.g. `2022 MP 09` instead of `2022-MP-09`) so eyecite/reporters-db can parse them. #1947
+- Fix `idaho` scrapers expected_content_types attribute and reduce regular scrape page_size #1949
+
 ## 3.0.16 - 2026-05-04
 
 Fixes:

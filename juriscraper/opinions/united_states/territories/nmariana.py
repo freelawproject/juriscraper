@@ -59,7 +59,9 @@ class Site(OpinionSiteLinear):
             self.cases.append(
                 {
                     "name": cells[0].text_content(),
-                    "citation": cells[1].text_content(),
+                    # Source renders neutral cites as "YYYY-MP-NN"; eyecite/
+                    # reporters-db expect spaces (e.g. "2022 MP 09"). #1947
+                    "citation": cells[1].text_content().replace("-", " "),
                     "date": cells[2].text_content(),
                     "judge": ", ".join(self._cleanup_judge_names(judge_text)),
                     "author": author,
