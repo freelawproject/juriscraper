@@ -109,21 +109,19 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
     :raise PydanticCustomError: If the court name is not recognized.
     """
     court_name = i.lower().strip()
-    match court_name:
-        case name if name.startswith("circuit court"):
-            return FloridaCourtID.CIRCUIT
-        case name if name.startswith("county court"):
-            return FloridaCourtID.COUNTY
-        case "administrative agency":
-            return FloridaCourtID.ADMINISTRATIVE_AGENCY
-        case "office of the judges of compensation claims":
-            return FloridaCourtID.COMPENSATION_CLAIMS
-        case _:
-            raise PydanticCustomError(
-                "florida_court_name",
-                "Unrecognized Florida court name: {cn}",
-                {"cn": i},
-            )
+    if court_name.startswith("circuit court"):
+        return FloridaCourtID.CIRCUIT
+    if court_name.startswith("county court"):
+        return FloridaCourtID.COUNTY
+    if court_name == "administrative agency":
+        return FloridaCourtID.ADMINISTRATIVE_AGENCY
+    if court_name == "office of the judges of compensation claims":
+        return FloridaCourtID.COMPENSATION_CLAIMS
+    raise PydanticCustomError(
+        "florida_court_name",
+        "Unrecognized Florida court name: {cn}",
+        {"cn": i},
+    )
 
 
 class FloridaOriginatingCase(BaseModel):
