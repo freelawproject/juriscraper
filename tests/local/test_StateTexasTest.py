@@ -1,5 +1,3 @@
-from typing import Optional
-
 from juriscraper.state.texas.common import TexasCommonScraper
 from juriscraper.state.texas.court_of_appeals import TexasCourtOfAppealsScraper
 from juriscraper.state.texas.court_of_criminal_appeals import (
@@ -36,7 +34,7 @@ class TexasParseCommonDataTest(PacerParseTestCase):
         self.parse_files(path_root, "*.html", TexasCourtOfAppealsScraper)
 
     def test_docket_number_validation(self):
-        cases: dict[str, Optional[str]] = {
+        cases: dict[str, str | None] = {
             "01-23-": None,
             "05-13-": None,
             "07-07-0MISC-CV": None,

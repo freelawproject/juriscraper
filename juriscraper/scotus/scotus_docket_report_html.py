@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import Any, Optional
+from typing import Any
 
 import lxml.html
 from lxml import html
@@ -15,12 +15,12 @@ from juriscraper.scotus import SCOTUSDocketReport
 
 @dataclass
 class ContactAddress:
-    title: Optional[str]
+    title: str | None
     address_lines: list[str]
-    city: Optional[str]
-    state: Optional[str]
-    zip_code: Optional[str]
-    email: Optional[str]
+    city: str | None
+    state: str | None
+    zip_code: str | None
+    email: str | None
 
 
 class SCOTUSDocketReportHTML(SCOTUSDocketReport):
@@ -176,7 +176,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     def _build_docket_entry(
         self,
         date_str: str,
-        description_td: Optional[HtmlElement],
+        description_td: HtmlElement | None,
         attachment_path: str,
         table_layout: bool = False,
     ) -> dict[str, Any]:
@@ -191,7 +191,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         """
         description_html = ""
         attachments: list[dict[str, Any]] = []
-        document_number: Optional[int] = None
+        document_number: int | None = None
 
         if description_td is not None:
             # Select content up to first <br> and excluding .documentlinks;
@@ -461,7 +461,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         ]
 
     @staticmethod
-    def _map_contacts_header_to_type(header_text: str) -> Optional[str]:
+    def _map_contacts_header_to_type(header_text: str) -> str | None:
         """Map table section headers to normalized types.
 
         :param header_text: Text to be mapped.
@@ -476,15 +476,13 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             return "Other"
         return None
 
-    def _append_clean_text(
-        self, text: Optional[str], lines: list[str]
-    ) -> None:
+    def _append_clean_text(self, text: str | None, lines: list[str]) -> None:
         """Clean the given text and append it to the list of lines if not empty."""
         cleaned = self._clean_whitespace(text)
         if cleaned:
             lines.append(cleaned)
 
-    def _parse_address_title(self, lines) -> tuple[Optional[str], int]:
+    def _parse_address_title(self, lines) -> tuple[str | None, int]:
         """Extract the party title from address lines and determine where the address begins.
 
         :param lines: A list of text lines containing the party title and address.
@@ -579,7 +577,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             email=email,
         )
 
-    def _section_by_heading(self, heading_text: str) -> Optional[HtmlElement]:
+    def _section_by_heading(self, heading_text: str) -> HtmlElement | None:
         """Return the "card-body" node for a given Contacts
         section heading.
 
@@ -598,7 +596,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         return next(iter(self.tree.xpath(xpath_query)), None)
 
     def _build_attorney_from_contact(
-        self, name_div: HtmlElement, data_div: Optional[HtmlElement]
+        self, name_div: HtmlElement, data_div: HtmlElement | None
     ) -> dict[str, Any]:
         """Build an attorney dict from ContactName/ContactData2 pair.
 
@@ -699,7 +697,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
     def _td_value_by_label(
         self, label: str, allow_indent: bool = False
-    ) -> Optional[str]:
+    ) -> str | None:
         """Fetch the value from the docketinfo table whose first TD label matches.
 
         :param label: The label text in the first TD.
@@ -723,7 +721,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         )
 
     @staticmethod
-    def _clean_whitespace(text: Optional[str]) -> str:
+    def _clean_whitespace(text: str | None) -> str:
         """Collapse whitespace to single spaces.
 
         :param text: Raw text.

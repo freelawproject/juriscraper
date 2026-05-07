@@ -4,7 +4,6 @@ import datetime
 from datetime import date
 from itertools import zip_longest
 from math import ceil
-from typing import Union
 
 from dateutil.parser import parser, parserinfo
 from dateutil.rrule import DAILY, rrule
@@ -21,7 +20,7 @@ MISSPELLINGS = {
 def json_date_handler(obj):
     return (
         obj.isoformat()
-        if isinstance(obj, (datetime.datetime, datetime.date))
+        if isinstance(obj, datetime.datetime | datetime.date)
         else None
     )
 
@@ -156,8 +155,8 @@ def make_date_range_tuples(start, end, gap):
 
 
 def unique_year_month(
-    date_list: list[Union[date, datetime.datetime, tuple[date]]],
-) -> list[Union[date, datetime.datetime]]:
+    date_list: list[date | datetime.datetime | tuple[date]],
+) -> list[date | datetime.datetime]:
     """Takes a list of dates or date tuples, and reduces it
     to date objects with unique year-months pairs
 
@@ -169,7 +168,7 @@ def unique_year_month(
     seen_year_months = set()
 
     for obj in date_list:
-        if isinstance(obj, (date, datetime.datetime)):
+        if isinstance(obj, date | datetime.datetime):
             obj = [obj]
 
         for date_obj in obj:

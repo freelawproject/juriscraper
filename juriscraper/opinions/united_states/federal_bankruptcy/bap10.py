@@ -12,7 +12,6 @@ History:
 """
 
 from datetime import date, datetime, timedelta
-from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -48,7 +47,7 @@ class Site(OpinionSiteLinear):
             )
 
     def set_url(
-        self, start: Optional[date] = None, end: Optional[date] = None
+        self, start: date | None = None, end: date | None = None
     ) -> None:
         """Sets URL with date filters in query string
 

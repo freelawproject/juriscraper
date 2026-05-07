@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Generic, Optional, TypeVar, final
+from typing import Generic, TypeVar, final
 
 
 class ParserValidationError(Exception):
@@ -15,7 +15,7 @@ _ParserOutput = TypeVar("_ParserOutput")
 class Parser(ABC, Generic[_ParserInput, _ParserOutput]):
     """Abstract parser class with a nicer interface than existing parsers."""
 
-    output: Optional[_ParserOutput]
+    output: _ParserOutput | None
 
     def __init__(self):
         self.output = None

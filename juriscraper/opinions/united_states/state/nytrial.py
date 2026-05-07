@@ -9,7 +9,7 @@ History:
 
 import re
 from datetime import date
-from typing import Any, Optional
+from typing import Any
 
 from lxml.html import fromstring
 
@@ -38,7 +38,7 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["application/pdf", "text/html"]
         set_api_token_header(self)
 
-    def build_url(self, target_date: Optional[date] = None) -> str:
+    def build_url(self, target_date: date | None = None) -> str:
         """URL as is loads most recent month page
         There is an URL for each month of each year back to Dec 2003
 

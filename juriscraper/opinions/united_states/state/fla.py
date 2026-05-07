@@ -3,7 +3,6 @@
 # Court Short Name: fla
 
 from datetime import date, datetime, timedelta
-from typing import Optional
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -87,7 +86,7 @@ class Site(OpinionSiteLinear):
         return titlecase(raw_disposition)
 
     def set_url(
-        self, start: Optional[date] = None, end: Optional[date] = None
+        self, start: date | None = None, end: date | None = None
     ) -> None:
         """Sets URL using date arguments
 

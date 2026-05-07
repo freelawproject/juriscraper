@@ -1,7 +1,6 @@
 import pprint
 import re
 import sys
-from typing import Optional
 
 from lxml import html
 
@@ -157,7 +156,7 @@ class AppellateAttachmentPage(BaseReport):
         return ""
 
     @staticmethod
-    def _get_page_count_from_tr(row: html.HtmlElement) -> Optional[int]:
+    def _get_page_count_from_tr(row: html.HtmlElement) -> int | None:
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
 
@@ -174,7 +173,7 @@ class AppellateAttachmentPage(BaseReport):
         return int(description_text_nodes[-1].strip())
 
     @staticmethod
-    def _get_file_size_bytes_from_tr(row: html.HtmlElement) -> Optional[int]:
+    def _get_file_size_bytes_from_tr(row: html.HtmlElement) -> int | None:
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
@@ -187,7 +186,7 @@ class AppellateAttachmentPage(BaseReport):
         return None
 
     @staticmethod
-    def _get_pacer_doc_id(row: html.HtmlElement) -> Optional[str]:
+    def _get_pacer_doc_id(row: html.HtmlElement) -> str | None:
         """Take in a row from the attachment table and return the pacer_doc_id
         for the item in that row. Return None if the ID cannot be found.
 

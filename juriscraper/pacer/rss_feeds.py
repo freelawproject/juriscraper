@@ -4,7 +4,6 @@ import pprint
 import re
 import sys
 from html import unescape
-from typing import Optional, Union
 
 import feedparser
 from requests import Session
@@ -342,8 +341,8 @@ class PacerRssFeed(DocketReport):
         }
 
     def _parse_docket_number(
-        self, title_text: Optional[str] = None
-    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
+        self, title_text: str | None = None
+    ) -> tuple[str | None, dict[str, str | None]]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
