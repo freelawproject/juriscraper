@@ -15,11 +15,19 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-
-- Add parsers for Florida court API endpoints.
+-
 
 Changes:
 -
+
+Fixes:
+-
+
+## 3.0.18 - 2026-05-06
+
+Features:
+
+- Add parsers for Florida court API endpoints.
 
 Fixes:
 - Fix `idaho` scrapers expected_content_types attribute #1949
