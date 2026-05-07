@@ -18,7 +18,8 @@ Features:
 -
 
 Changes:
--
+- Drop Python 3.9 support
+- Add Python 3.14 support
 
 Fixes:
 -
