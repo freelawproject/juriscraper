@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional, TypedDict, Union
+from typing import TypedDict
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
@@ -22,8 +22,8 @@ class TexasAppealsCourtTransfer(TypedDict):
     """
 
     court_id: str
-    date: Optional[datetime]
-    origin_docket: Optional[str]
+    date: datetime | None
+    origin_docket: str | None
 
 
 class TexasCourtOfAppealsDocket(TexasCommonData):
@@ -39,9 +39,9 @@ class TexasCourtOfAppealsDocket(TexasCommonData):
     if available.
     """
 
-    publication_service: Optional[str]
-    transfer_from: Optional[TexasAppealsCourtTransfer]
-    transfer_to: Optional[TexasAppealsCourtTransfer]
+    publication_service: str | None
+    transfer_from: TexasAppealsCourtTransfer | None
+    transfer_to: TexasAppealsCourtTransfer | None
 
 
 class TexasCourtOfAppealsScraper(TexasCommonScraper):
@@ -57,7 +57,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         super().__init__(court_id)
 
     @property
-    def data(self) -> Union[TexasCourtOfAppealsDocket, dict[str, None]]:
+    def data(self) -> TexasCourtOfAppealsDocket | dict[str, None]:
         """
         Extract parsed data from a docket page.
 
@@ -90,8 +90,8 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
     def _parse_transfers(
         self,
     ) -> tuple[
-        Optional[TexasAppealsCourtTransfer],
-        Optional[TexasAppealsCourtTransfer],
+        TexasAppealsCourtTransfer | None,
+        TexasAppealsCourtTransfer | None,
     ]:
         """
         Parses transfer information from the provided case data and returns

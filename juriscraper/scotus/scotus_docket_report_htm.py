@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from datetime import date
 from enum import Enum
-from typing import Any, Optional
+from typing import Any
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -47,7 +47,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         super().__init__(court_id=court_id)
         self._case_data_table: list[list[HtmlElement]] = []
         self._docket_entry_table: list[list[HtmlElement]] = []
-        self._page_format: Optional[HTMPageFormat] = None
+        self._page_format: HTMPageFormat | None = None
 
     @property
     def metadata(self) -> dict[str, Any]:
@@ -194,25 +194,25 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         )
 
     @property
-    def date_filed(self) -> Optional[date]:
+    def date_filed(self) -> date | None:
         if self._page_format == HTMPageFormat.New:
             return self.normalize_date(self._get_case_data_text(2, 1))
         return self.normalize_date(self._get_case_data_text(5, 0))
 
     @property
-    def lower_court(self) -> Optional[str]:
+    def lower_court(self) -> str | None:
         if self._page_format == HTMPageFormat.New:
             return self._htm_value_by_label("Lower Ct:")
         return self._clean_whitespace(self._get_case_data_text(4, 2))
 
     @property
-    def lower_court_case_numbers_raw(self) -> Optional[str]:
+    def lower_court_case_numbers_raw(self) -> str | None:
         if self._page_format == HTMPageFormat.New:
             return self._htm_value_by_label("Case Nos.:", allow_indent=True)
         return self._get_case_data_text(5, 2)
 
     @property
-    def case_name(self) -> Optional[str]:
+    def case_name(self) -> str | None:
         if self._page_format == HTMPageFormat.New:
             title_parts = [
                 self._clean_whitespace(node.text_content())
@@ -326,8 +326,8 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     def _build_htm_attorney(
         self,
-        current_attorney: Optional[dict[str, Any]],
-    ) -> Optional[dict[str, Any]]:
+        current_attorney: dict[str, Any] | None,
+    ) -> dict[str, Any] | None:
         """Complete an attorney dict from the HTM Contacts table.
 
         :param current_attorney: The in-progress attorney dict with initial values.
@@ -508,7 +508,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     def _htm_row_for_label(
         self, label: str, allow_indent: bool = False
-    ) -> Optional[HtmlElement]:
+    ) -> HtmlElement | None:
         """Return the <tr> whose first <td> equals the given label.
 
         :param label: The exact label text, e.g. "Docketed:" or "Case Nos.:".
@@ -530,7 +530,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     def _htm_value_by_label(
         self, label: str, allow_indent: bool = False
-    ) -> Optional[str]:
+    ) -> str | None:
         """Get the value text in td[2] for a labeled row.
 
         :param label: The label text in td[1].

@@ -1,5 +1,4 @@
 import re
-from typing import Optional
 from urllib.parse import urljoin
 
 import requests
@@ -139,9 +138,9 @@ class BaseReport:
         self,
         pacer_case_id: str,
         pacer_doc_id: str,
-        pacer_magic_num: Optional[str],
+        pacer_magic_num: str | None,
         got_receipt: str,
-        de_seq_num: Optional[str] = None,
+        de_seq_num: str | None = None,
     ) -> tuple[Response, str]:
         """Query the doc1 download URL.
 
@@ -193,13 +192,13 @@ class BaseReport:
 
     def download_pdf(
         self,
-        pacer_case_id: Optional[str] = None,
-        pacer_doc_id: Optional[int] = None,
-        pacer_magic_num: Optional[str] = None,
+        pacer_case_id: str | None = None,
+        pacer_doc_id: int | None = None,
+        pacer_magic_num: str | None = None,
         appellate: bool = False,
-        de_seq_num: Optional[str] = None,
+        de_seq_num: str | None = None,
         acms: bool = False,
-    ) -> tuple[Optional[Response], str]:
+    ) -> tuple[Response | None, str]:
         """Download a PDF from PACER.
 
         Note that this doesn't support attachments yet.
@@ -428,7 +427,7 @@ class BaseReport:
         self,
         pacer_case_id: str,
         pacer_doc_id: str,
-        pacer_magic_num: Optional[str] = None,
+        pacer_magic_num: str | None = None,
     ):
         """Check if a docket entry is sealed without trying to actually download
         it.

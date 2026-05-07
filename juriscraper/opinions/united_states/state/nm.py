@@ -1,6 +1,6 @@
 import re
 from datetime import date, datetime, timedelta
-from typing import Any, Optional
+from typing import Any
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -76,7 +76,7 @@ class Site(OpinionSiteLinear):
             )
 
     def set_url(
-        self, start: Optional[date] = None, end: Optional[date] = None
+        self, start: date | None = None, end: date | None = None
     ) -> None:
         """Formats and sets `self.url` with date inputs
 

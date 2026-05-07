@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Annotated, ClassVar, Optional
+from typing import Annotated, ClassVar
 
 from pydantic import (
     UUID4,
@@ -269,11 +269,11 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     datetime_filed: datetime = Field(
         validation_alias=AliasPath("caseHeader", "filedDate")
     )
-    case_group_flag: Optional[bool] = Field(
+    case_group_flag: bool | None = Field(
         validation_alias=AliasPath("caseHeader", "caseGroupFlag"),
         default=None,
     )
-    panel_flag: Optional[bool] = Field(
+    panel_flag: bool | None = Field(
         validation_alias=AliasPath("caseHeader", "panelFlag"), default=None
     )
     originating_cases: list[FloridaOriginatingCase] = Field(

@@ -1,5 +1,3 @@
-from typing import Union
-
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
     CourtID,
@@ -68,7 +66,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         super().__init__(court_id)
 
     @property
-    def data(self) -> Union[TexasSupremeCourtDocket, dict[str, None]]:
+    def data(self) -> TexasSupremeCourtDocket | dict[str, None]:
         """
         Extract parsed data from an HTML tree. This property returns a
         `TexasSupremeCourtDocket`.

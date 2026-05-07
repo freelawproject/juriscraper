@@ -1,5 +1,5 @@
 import email
-from typing import Optional, TypedDict
+from typing import TypedDict
 from urllib.parse import parse_qs, urlparse
 
 from lxml.html import HtmlElement
@@ -43,12 +43,12 @@ class TamesEmail(AbstractParser):
 
     def __init__(self, court_id: str = "") -> None:
         self.court_id: str = court_id
-        self.tree: Optional[HtmlElement] = None
-        self.message: Optional[email.message.Message] = None
-        self._court_id: Optional[str] = None
+        self.tree: HtmlElement | None = None
+        self.message: email.message.Message | None = None
+        self._court_id: str | None = None
 
     @property
-    def data(self) -> Optional[TamesEmailData]:
+    def data(self) -> TamesEmailData | None:
         if self._court_id is None or self.tree is None:
             raise ValueError("Unable to parse email")
 
@@ -86,7 +86,7 @@ class TamesEmail(AbstractParser):
 
         self.tree = parse_email_html(text)
 
-    def _parse_case_url(self) -> Optional[str]:
+    def _parse_case_url(self) -> str | None:
         anchor = self.tree.find(".//a")
         if anchor is None:
             logger.error("Unable to find link in email body")

@@ -2,7 +2,6 @@ import copy
 import pprint
 import re
 import sys
-from typing import Optional, Union
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -162,7 +161,7 @@ class BaseDocketReport:
             return s
 
     @staticmethod
-    def _return_default_dn_components() -> dict[str, Union[str, None]]:
+    def _return_default_dn_components() -> dict[str, str | None]:
         """Return a dictionary with default values for the docket_number
         components to return on non-valid docket_numbers.
 
@@ -179,7 +178,7 @@ class BaseDocketReport:
 
     def _parse_dn_components(
         self, potential_docket_number
-    ) -> dict[str, Union[str, None]]:
+    ) -> dict[str, str | None]:
         """Parse the potential docket number into its components.
 
         :param potential_docket_number: The docket number string to be parsed.
@@ -258,7 +257,7 @@ class BaseDocketReport:
 
     def _parse_docket_number_strs(
         self, potential_docket_numbers: list[_ElementUnicodeResult]
-    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
+    ) -> tuple[str | None, dict[str, str | None]]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -1069,7 +1068,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         return attorneys
 
-    def _get_docket_entries_order(self) -> Optional[str]:
+    def _get_docket_entries_order(self) -> str | None:
         """Get the order of entries in the docket sheet."""
 
         docket_entry_all_rows = self._get_docket_entry_rows()
@@ -1696,7 +1695,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self,
-    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
+    ) -> tuple[str | None, dict[str, str | None]]:
         """Parse a valid docket number and its components.
 
         :return: A two-tuple: the docket_number and a dict containing the

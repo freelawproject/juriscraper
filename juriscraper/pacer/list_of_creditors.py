@@ -1,5 +1,3 @@
-from typing import Optional
-
 import requests
 from requests import Response
 
@@ -73,7 +71,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         param = action_value.split("?")[1]
         return param
 
-    def download_file(self) -> Optional[Response]:
+    def download_file(self) -> Response | None:
         """Downloads the formated pipe-limited file using the
         FORMAT_RAW_DATA_SERVICE API.
 

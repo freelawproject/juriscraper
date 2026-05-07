@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import re
 from copy import deepcopy
-from typing import Optional
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
@@ -76,7 +75,7 @@ def get_html5_parsed_text(text: str) -> HtmlElement:
 def get_table_column_text(
     html: HtmlElement,
     cell_num: int,
-    path_base: Optional[str] = None,
+    path_base: str | None = None,
     table_id: str = "",
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"
@@ -88,7 +87,7 @@ def get_table_column_text(
 def get_table_column_links(
     html: HtmlElement,
     cell_num: int,
-    path_base: Optional[str] = None,
+    path_base: str | None = None,
     table_id: str = "",
 ) -> list:
     table = f"table[@id='{table_id}']" if table_id else "table"

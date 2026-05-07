@@ -8,7 +8,6 @@ import ssl
 import urllib.parse
 import urllib.request
 from datetime import datetime
-from typing import Union
 
 import certifi
 import httpx
@@ -412,7 +411,7 @@ class AbstractSite:
         download_url: str,
         doctor_is_available: bool = True,
         media_root: str = "",
-    ) -> Union[str, bytes]:
+    ) -> str | bytes:
         """Download the URL and return the cleaned content
 
         Downloads the file, covering a few special cases such as invalid SSL

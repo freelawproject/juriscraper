@@ -3,7 +3,6 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 from datetime import date, datetime
-from typing import Union
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -43,7 +42,7 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def get_term(
-        date_of_interest: Union[date, datetime, None] = None,
+        date_of_interest: date | datetime | None = None,
     ) -> int:
         """The URLs for SCOTUS correspond to the term, not the calendar.
 

@@ -3,7 +3,6 @@
 # Date updated: 2020-02-25
 
 import re
-from typing import Union
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InvalidDocumentError
@@ -119,7 +118,7 @@ class Site(OpinionSiteLinear):
         return result
 
     @staticmethod
-    def cleanup_content(content: Union[str, bytes]) -> str:
+    def cleanup_content(content: str | bytes) -> str:
         """Raise an error if the content is invalid; otherwise just return it
 
         Not cleaning up in the common sense; but avoids ingesting error

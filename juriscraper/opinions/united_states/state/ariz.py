@@ -11,7 +11,6 @@ History:
 
 import re
 from datetime import date, datetime, timedelta
-from typing import Optional
 from urllib.parse import quote, urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -63,8 +62,8 @@ class Site(OpinionSiteLinear):
 
     def _build_api_url(
         self,
-        start_date: Optional[date],
-        end_date: Optional[date],
+        start_date: date | None,
+        end_date: date | None,
         page: int = 0,
     ) -> str:
         """Build the API URL with query parameters.

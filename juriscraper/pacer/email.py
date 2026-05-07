@@ -1,7 +1,7 @@
 import email
 import re
 from datetime import date
-from typing import Optional, TypedDict, Union
+from typing import TypedDict
 
 from lxml.html import HtmlElement
 
@@ -27,12 +27,12 @@ from .utils import (
 class DocketEntryType(TypedDict):
     date_filed: date
     description: str
-    document_number: Optional[str]
-    document_url: Optional[str]
-    pacer_case_id: Optional[str]
-    pacer_doc_id: Optional[str]
-    pacer_magic_num: Optional[str]
-    pacer_seq_no: Optional[str]
+    document_number: str | None
+    document_url: str | None
+    pacer_case_id: str | None
+    pacer_doc_id: str | None
+    pacer_magic_num: str | None
+    pacer_seq_no: str | None
 
 
 class DocketType(TypedDict):
@@ -224,7 +224,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, current_node: HtmlElement
-    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
+    ) -> tuple[str | None, dict[str, str | None]]:
         """Gets a docket number from the email text and also parse the docket
         number components.
 
@@ -261,7 +261,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number_plain(
         self,
-    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
+    ) -> tuple[str | None, dict[str, str | None]]:
         """Gets a docket number from the plain email text and also parse the
         docket number components.
 
@@ -335,7 +335,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         except IndexError:
             return None
 
-    def _get_case_anchor(self, current_node: HtmlElement) -> Optional[str]:
+    def _get_case_anchor(self, current_node: HtmlElement) -> str | None:
         """Safely retrieves the anchor tag for a case.
 
         :param current_node: The relative lxml.HtmlElement
@@ -347,7 +347,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         except IndexError:
             return None
 
-    def _get_case_id_from_case_url(self, case_url) -> Optional[str]:
+    def _get_case_id_from_case_url(self, case_url) -> str | None:
         """Extract the caseid from the case anchor.
 
         :param case_url: The case_url where to look for the case_id.
@@ -550,7 +550,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         return dockets
 
     def _get_docket_entries(
-        self, current_node: Optional[HtmlElement] = None
+        self, current_node: HtmlElement | None = None
     ) -> list[DocketEntryType]:
         """Gets the full list of docket entries with document and sequence numbers
 
@@ -756,7 +756,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
     @staticmethod
     def _parse_acms_subject(
         subject: str, docket_number: str
-    ) -> Optional[tuple[Optional[str], str]]:
+    ) -> tuple[str | None, str] | None:
         """Match on the docket_number, an optional document number, then
         potential short description.
 
@@ -771,7 +771,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_acms_document_number(
         self, subject: str, docket_number: str
-    ) -> Optional[str]:
+    ) -> str | None:
         """Extract the document number if exists immediately following the
         docket_number.
 
@@ -936,7 +936,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
         )
 
-    def _get_email_recipients(self) -> list[dict[str, Union[str, list[str]]]]:
+    def _get_email_recipients(self) -> list[dict[str, str | list[str]]]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
@@ -962,7 +962,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _get_email_recipients_plain(
         self,
-    ) -> list[dict[str, Union[str, list[str]]]]:
+    ) -> list[dict[str, str | list[str]]]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses

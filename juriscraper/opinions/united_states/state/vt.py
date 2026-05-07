@@ -13,7 +13,6 @@ She's very responsive.
 
 import re
 from datetime import date, datetime
-from typing import Optional
 from urllib.parse import urlencode
 
 from juriscraper.AbstractSite import logger
@@ -87,7 +86,7 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     def set_url(
-        self, start: Optional[date] = None, end: Optional[date] = None
+        self, start: date | None = None, end: date | None = None
     ) -> None:
         """Formats and sets `self.url` with date inputs
         If no start or end dates are given, scrape without date filter values

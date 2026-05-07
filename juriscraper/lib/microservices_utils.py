@@ -1,5 +1,4 @@
 import os
-from typing import Optional
 from urllib.parse import urljoin
 
 import httpx
@@ -18,7 +17,7 @@ logger = make_default_logger()
 
 async def test_for_meta_redirections(
     r: Response,
-) -> tuple[bool, Optional[str]]:
+) -> tuple[bool, str | None]:
     """Test for meta data redirections
 
     :param r: A response object

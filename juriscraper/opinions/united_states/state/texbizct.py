@@ -4,7 +4,6 @@
 # History:
 #  - 2025-07-29: Created by Luis Manzur
 import re
-from typing import Optional
 from urllib.parse import urljoin
 
 from dateutil import parser
@@ -99,7 +98,7 @@ class Site(OpinionSiteLinear):
             }
         return {}
 
-    async def _get_approximate_date(self, url: str) -> Optional[str]:
+    async def _get_approximate_date(self, url: str) -> str | None:
         """Get Approximate date from head request
 
         :param url: The pdf url
