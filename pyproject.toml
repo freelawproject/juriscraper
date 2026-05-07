@@ -44,7 +44,7 @@ dependencies = [
   "feedparser>=6.0.11",
   "geonamescache>=2.0.0",
   "html5lib",
-  "lxml>=5.2",
+  "lxml>=6.1",
   "nh3",
   "pydantic>=2.12.5",
   "python-dateutil>=2.8.2",
