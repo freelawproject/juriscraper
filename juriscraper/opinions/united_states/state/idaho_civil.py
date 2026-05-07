@@ -47,7 +47,6 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.status = self.default_status
         self.url = self._build_list_url("DESC")
-        self.expected_content_types = ["application/json"]
         self.should_have_results = True
         self._back_start: date | None = None
         self._back_done = False
