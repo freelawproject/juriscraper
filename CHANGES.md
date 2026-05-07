@@ -22,7 +22,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `idaho` scrapers expected_content_types attribute #1949
 
 ## 3.0.17 - 2026-05-06
 
