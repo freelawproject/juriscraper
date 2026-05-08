@@ -6,12 +6,10 @@ BaseStateScraper is designed for discovering and listing dockets.
 """
 
 from abc import ABC, abstractmethod
-from collections.abc import Generator
+from collections.abc import Callable, Generator
 from datetime import date
 from typing import (
     Any,
-    Callable,
-    Optional,
     TypedDict,
     TypeVar,
 )
@@ -43,8 +41,8 @@ class ScraperRequestManager:
 
     def __init__(
         self,
-        session: Optional[requests.Session] = None,
-        all_response_fn: Optional[ResponseCallback] = None,
+        session: requests.Session | None = None,
+        all_response_fn: ResponseCallback | None = None,
     ) -> None:
         """Initialize the request manager.
 
@@ -140,12 +138,12 @@ class BaseStateScraper(ABC):
     """
 
     # Override in subclasses to add custom headers to all requests
-    ADDITIONAL_HEADERS: Optional[dict[str, str]] = None
+    ADDITIONAL_HEADERS: dict[str, str] | None = None
     COURT_IDS: list[str] = []
 
     def __init__(
         self,
-        request_manager: Optional[ScraperRequestManager] = None,
+        request_manager: ScraperRequestManager | None = None,
         **kwargs: Any,
     ) -> None:
         """Initialize the scraper.

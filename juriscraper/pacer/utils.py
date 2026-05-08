@@ -1,6 +1,5 @@
 import re
 from datetime import date, datetime
-from typing import Optional, Union
 
 import requests
 import tldextract
@@ -487,7 +486,7 @@ def get_pacer_case_id_from_doc1_url(url):
 def get_pacer_magic_num_from_doc1_url(
     url: str,
     appellate: bool = False,
-) -> Optional[str]:
+) -> str | None:
     """Extract the magic number from the doc1 URL."""
     if appellate:
         # NDA free look link format is:
@@ -505,7 +504,7 @@ def get_pacer_magic_num_from_doc1_url(
 
 def get_pacer_magic_num_from_acms_url(
     url: str,
-) -> Optional[str]:
+) -> str | None:
     """Extract the magic number from the NDA ACMS free look URL."""
     match = re.search(r"(?<=/NDA/)[^/]+", url)
     if match:
@@ -608,7 +607,7 @@ def reverse_goDLS_function(s):
     return parts
 
 
-def reverse_sumDocSelected_function(s) -> Optional[dict[str, int]]:
+def reverse_sumDocSelected_function(s) -> dict[str, int] | None:
     """Extract the arguments from the sumDocSelected JavaScript function.
 
     In: sumDocSelected(this,1,13481, 7548050)
@@ -665,7 +664,7 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
 
 
 def make_docs1_url(
-    court_id: Optional[str], pacer_doc_id: str, skip_attachment_page
+    court_id: str | None, pacer_doc_id: str, skip_attachment_page
 ) -> str:
     """Make a docs1 URL for NDAs free look downloads.
 
@@ -794,7 +793,7 @@ def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
 
 
 def set_pacer_doc_id_as_appellate_document_number(
-    de: dict[str, Union[str, date, datetime]],
+    de: dict[str, str | date | datetime],
 ) -> None:
     """For appellate courts that don't use numbers, if available set the
     pacer_doc_id as document number.
@@ -849,7 +848,7 @@ def parse_datetime_for_us_timezone(datetime_str: str) -> datetime:
 
 def parse_sumDocSelected_from_row(
     row: html.HtmlElement,
-) -> Optional[dict[str, int]]:
+) -> dict[str, int] | None:
     """Parse the arguments from the sumDocSelected function call parts from a
     given table row.
 
@@ -868,7 +867,7 @@ def parse_sumDocSelected_from_row(
 
 def get_input_value_from_tr(
     tr: html.HtmlElement, idx: int, expected_values: int, split_value: str
-) -> Optional[str]:
+) -> str | None:
     """Take a row from the attachment table and return the input value by
     index.
 

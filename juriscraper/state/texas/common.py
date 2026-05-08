@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain, groupby
-from typing import Optional, TypedDict, Union
+from typing import TypedDict
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -254,7 +254,7 @@ class TexasOriginatingDistrictCourt(TexasOriginatingCourt):
     the district could not be determined.
     """
 
-    district: Optional[int]
+    district: int | None
 
 
 SPACES_RE = re.compile(r"\s+")
@@ -498,9 +498,7 @@ IGNORED_DOCKET_NUMBERS: set[str] = {
 }
 
 
-class TexasCommonScraper(
-    AbstractParser[Union[TexasCommonData, dict[str, None]]]
-):
+class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court,
     Court of Criminal Appeals, and Court of Appeals).
@@ -560,7 +558,7 @@ class TexasCommonScraper(
         self.is_valid = True
 
     @property
-    def data(self) -> Union[TexasCommonData, dict[str, None]]:
+    def data(self) -> TexasCommonData | dict[str, None]:
         """
         Extract parsed data from an HTML tree. This property returns the
         `TexasCommonData`
@@ -594,7 +592,7 @@ class TexasCommonScraper(
         return data
 
     @cached_property
-    def docket_number(self) -> Optional[str]:
+    def docket_number(self) -> str | None:
         """
         The docket number of the case.
         """
@@ -811,7 +809,7 @@ class TexasCommonScraper(
         return harmonize(f"{name_short_part_1} v. {name_short_part_2}")
 
     @staticmethod
-    def _validate_docket_number(docket_number: str) -> Optional[str]:
+    def _validate_docket_number(docket_number: str) -> str | None:
         """
         Validates a docket number, returning `None` if the docket number is one
         we have manually ignored.
@@ -830,7 +828,7 @@ class TexasCommonScraper(
             f'Unrecognized docket number format: "{docket_number}"'
         )
 
-    def _parse_docket_number(self) -> Optional[str]:
+    def _parse_docket_number(self) -> str | None:
         """
         Extracts and validates the docket number from the HTML tree. Will fail
         if `_parse_text` has not yet been called.
@@ -900,11 +898,11 @@ class TexasCommonScraper(
 
     def _parse_originating_court(
         self,
-    ) -> Union[
-        TexasOriginatingCourt,
-        TexasOriginatingAppellateCourt,
-        TexasOriginatingDistrictCourt,
-    ]:
+    ) -> (
+        TexasOriginatingCourt
+        | TexasOriginatingAppellateCourt
+        | TexasOriginatingDistrictCourt
+    ):
         """
         Extracts the trial court info from the HTML tree. Will fail if
         `_parse_text` has not yet been called.

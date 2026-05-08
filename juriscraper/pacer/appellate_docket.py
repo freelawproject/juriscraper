@@ -2,7 +2,7 @@ import pprint
 import re
 import sys
 from collections import OrderedDict
-from typing import Any, Optional
+from typing import Any
 
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
@@ -263,7 +263,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     def download_pdf(
         self, pacer_doc_id, pacer_case_id=None
-    ) -> tuple[Optional[Response], str]:
+    ) -> tuple[Response | None, str]:
         """Download a PDF from an appellate court.
 
         :param pacer_case_id: The case ID for the docket
@@ -627,7 +627,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_page_count_from_tr(tr: html.HtmlElement) -> Optional[int]:
+    def _get_page_count_from_tr(tr: html.HtmlElement) -> int | None:
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
@@ -636,7 +636,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             return int(count)
 
     @staticmethod
-    def _get_file_size_bytes_from_tr(tr: html.HtmlElement) -> Optional[int]:
+    def _get_file_size_bytes_from_tr(tr: html.HtmlElement) -> int | None:
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
@@ -653,7 +653,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return row.xpath(".//a/@data-pacer-doc-id")
 
     @staticmethod
-    def _get_pacer_seq_no_from_tr(row: html.HtmlElement) -> Optional[str]:
+    def _get_pacer_seq_no_from_tr(row: html.HtmlElement) -> str | None:
         """Take a row of the attachment table, and return the sequence number
         from the name attribute.
         """
@@ -788,7 +788,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     @staticmethod
     def _get_pacer_seq_no(
         cell: html.HtmlElement,
-    ) -> Optional[_ElementUnicodeResult]:
+    ) -> _ElementUnicodeResult | None:
         """Take a row from the attachment table and return the input value by
         index.
         """

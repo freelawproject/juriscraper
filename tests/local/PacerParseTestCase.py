@@ -5,6 +5,8 @@ import time
 import unittest
 
 import jsondate3 as json
+import pydantic_core
+from pydantic import BaseModel
 
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 
@@ -47,6 +49,12 @@ class PacerParseTestCase(unittest.TestCase):
                 # Some reports don't have this method.
                 pass
             data = report.data
+            if isinstance(data, BaseModel) or (
+                isinstance(data, list)
+                and data
+                and isinstance(data[0], BaseModel)
+            ):
+                data = pydantic_core.to_jsonable_python(data)
             if not os.path.exists(json_path):
                 with open(json_path, "w") as f:
                     print(f"Creating new file at {json_path}")

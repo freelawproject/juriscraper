@@ -1,5 +1,4 @@
 import re
-from typing import Union
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -268,7 +267,7 @@ class DocketHistoryReport(DocketReport):
 
     def _parse_docket_number(
         self,
-    ) -> tuple[Union[str, None], dict[str, Union[str, None]]]:
+    ) -> tuple[str | None, dict[str, str | None]]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.

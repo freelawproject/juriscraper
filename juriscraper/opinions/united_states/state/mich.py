@@ -11,7 +11,6 @@ History:
 
 import re
 from datetime import date, datetime
-from typing import Optional
 from urllib.parse import urlencode, urljoin
 
 from juriscraper.AbstractSite import logger
@@ -97,7 +96,7 @@ class Site(OpinionSiteLinear):
         name = titlecase(re.sub(r"\s+", " ", name_raw.strip()))
         return name.replace("People of Mi ", "People of Michigan ")
 
-    def parse_lower_courts(self, courts: Optional[list]) -> str:
+    def parse_lower_courts(self, courts: list | None) -> str:
         """Get the lower courts
 
         :param courts: Court names as an array

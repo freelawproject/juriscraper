@@ -1,5 +1,4 @@
 import logging
-from typing import Optional
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -79,10 +78,10 @@ class AutoLoggingException(Exception):
     def __init__(
         self,
         message: str = "",
-        logger: Optional[logging.Logger] = None,
-        logging_level: Optional[int] = None,
-        fingerprint: Optional[list[str]] = None,
-        data: Optional[dict] = None,
+        logger: logging.Logger | None = None,
+        logging_level: int | None = None,
+        fingerprint: list[str] | None = None,
+        data: dict | None = None,
     ):
         if not message:
             message = self.message

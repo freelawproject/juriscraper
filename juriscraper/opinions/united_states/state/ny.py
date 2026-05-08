@@ -12,7 +12,7 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any, Optional
+from typing import Any
 from urllib.parse import urljoin
 
 import nh3
@@ -52,8 +52,8 @@ class Site(OpinionSiteLinear):
 
     def _set_parameters(
         self,
-        start_date: Optional[date] = None,
-        end_date: Optional[date] = None,
+        start_date: date | None = None,
+        end_date: date | None = None,
     ) -> None:
         """Set the parameters for the POST request.
 

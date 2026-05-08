@@ -14,7 +14,7 @@ import re
 import time
 from collections.abc import Generator
 from datetime import date, datetime
-from typing import Final, Optional, Union
+from typing import Final
 from urllib.parse import urljoin
 
 from lxml import html
@@ -134,7 +134,7 @@ class TAMESScraper(BaseStateScraper):
 
     def __init__(
         self,
-        request_manager: Optional[ScraperRequestManager] = None,
+        request_manager: ScraperRequestManager | None = None,
         **kwargs,
     ) -> None:
         """Initialize the TAMES scraper.
@@ -315,8 +315,8 @@ class TAMESScraper(BaseStateScraper):
         self,
         start_date: date,
         end_date: date,
-        court_ids: Optional[list[str]] = None,
-    ) -> Generator[Union[int, TamesSearchRow], None, None]:
+        court_ids: list[str] | None = None,
+    ) -> Generator[int | TamesSearchRow, None, None]:
         """Submit a search and yield results one at a time.
 
         Yields:

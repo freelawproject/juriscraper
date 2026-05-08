@@ -35,7 +35,10 @@ class Site(OpinionSiteLinear):
     is_per_curiam = False
 
     # API caps server-side at 100; daily scrape only needs the first page
-    page_size = 100
+    # Since every scrape makes `page_size` secondary requests, let's limit
+    # this value according to the expected volume. Published opinions will
+    # have a smaller volume
+    page_size = 10
     days_interval = 30
     first_opinion_date = datetime(2010, 1, 1)
 
@@ -44,7 +47,6 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.status = self.default_status
         self.url = self._build_list_url("DESC")
-        self.expected_content_types = ["application/json"]
         self.should_have_results = True
         self._back_start: date | None = None
         self._back_done = False
@@ -169,6 +171,7 @@ class Site(OpinionSiteLinear):
         self._back_start = start
         self._back_done = False
         cursor = ""
+        self.page_size = 100  # set page size to max
 
         while not self._back_done:
             self.url = self._build_list_url("DESC", cursor)

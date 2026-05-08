@@ -1,5 +1,4 @@
 import email
-from typing import Optional
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -8,7 +7,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html
 
 
-def parse_email_html(text: str) -> Optional[HtmlElement]:
+def parse_email_html(text: str) -> HtmlElement | None:
     """Parse raw email text and return an lxml tree of the HTML body.
 
     Finds the first text/html content part, decodes the payload, and

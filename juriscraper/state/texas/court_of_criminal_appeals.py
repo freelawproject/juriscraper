@@ -1,5 +1,4 @@
 from functools import cached_property
-from typing import Union
 
 from juriscraper.state.texas.common import (
     CourtID,
@@ -39,7 +38,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     @property
     def data(
         self,
-    ) -> Union[TexasCourtOfCriminalAppealsDocket, dict[str, None]]:
+    ) -> TexasCourtOfCriminalAppealsDocket | dict[str, None]:
         """
         Extract parsed data from an HTML tree. This property returns a
         `TexasCourtOfCriminalAppealsDocket`.

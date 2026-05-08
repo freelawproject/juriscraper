@@ -1,0 +1,44 @@
+Return-Path: <0100019df37ec519-2f50be5a-293f-4fdd-994b-188d4462e3ca-000000@mail.sc-us.gov>
+Received: from a65-140.smtp-out.amazonses.com (a65-140.smtp-out.amazonses.com [54.240.65.140])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id r6l9tstitgta4o86oabgvq75aqrhcqmv0u016b81
+ for notifications@scotus.recap.email;
+ Mon, 04 May 2026 14:57:45 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mail.sc-us.gov designates 54.240.65.140 as permitted sender) client-ip=54.240.65.140; envelope-from=0100019df37ec519-2f50be5a-293f-4fdd-994b-188d4462e3ca-000000@mail.sc-us.gov; helo=a65-140.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mail.sc-us.gov designates 54.240.65.140 as permitted sender) client-ip=54.240.65.140; envelope-from=0100019df37ec519-2f50be5a-293f-4fdd-994b-188d4462e3ca-000000@mail.sc-us.gov; helo=a65-140.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@sc-us.gov;
+ dmarc=pass header.from=sc-us.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHaFVrbkJCYmQ1dE1lUUR4SUxKOTVmbEU0TVE2c1RKQnM4WmR1aEo3a3dCbnJ1U0gzeFdEY0I2R2xVQ2h5ZThocnNwbnZaVTB5ZHN2Wk9hR2dPSm16R0lGOTVTL21FT2gyT0lvZlZBT2x5UDFRb1B6TmdUMnNoU3E3SDVMMTdnMzlhUXR4MjlmblRuS1pqd3NiZ29rdnRjSUR2a0MwM1NHM2FUU0JBR3dsU0VaRi9PdTFPNk54REtYdG9OcEpTdmVXR0tUWXN4MW1YQm1FMkt2cld4cnNZNW5vV2hxMmRmZy9BbmduSnZ3Y2NtNGxQU3QyMDg4ZENhQUR6UGRwVFhaUkVXUkJmTlMvcXU0WThQU24rMFYzelNYYUZxRTJlcTA4ODQyZVdDQ3MybkpvbnJvSHBSTXFnalFpYkRQZUl6WE5hVWU4bFNkcmgvcGJqMFNiMnNQVXlwVlVCOGFpME5HY2ZET244ZkdjODF3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=16zHMfTApUjsq2x2rnldBcmeFeglSp+6dSuoLVR96qZjN88V18Ls1pBnUYyMHnkv0aBckP8seMqdsh39hSRUZt3CaJZkO+N3lbI6vfVBMNaF4N6PTBT5fb3rnmQkVYwDvlsuA9VqPA0DUX7yE58IQy8CJ0nkS+WtTCu8sX/WdLs=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1777906666; v=1; bh=DuBKOIxXmwSo5mhz55xgVWuHHa763FtLGJ6Z3ir2HUs=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy; d=sc-us.gov; t=1777906664;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=DuBKOIxXmwSo5mhz55xgVWuHHa763FtLGJ6Z3ir2HUs=;
+	b=Yf5WKrPVq0UoN75bEOxXsqTd3I/FkFvOFRJ2toL5+OGBt97Rj0AdnmGtPH8xwy20
+	+BsmSKaWRZQ6w42BWeteVJduO0EWopg9/C8dCFdP6m+oqJHKMHR/RmGUkMC+QZGDaR2
+	1UzlVuLMr8fWhBPDFlmOcA2uvNfJ/+eKvsW/f0KE=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1777906664;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=DuBKOIxXmwSo5mhz55xgVWuHHa763FtLGJ6Z3ir2HUs=;
+	b=TKYMEQCpoT94kG35IalBRlsyrmFxFfOV+HTf0zkGGDqaOi+2SycS4laqY71A7ThZ
+	FDVQvqQvnByzVrhTm7VxyBUO+IGtx4UOSoAklkLkINYS8F8GsMdo3FJ/6SBe+u1+FwB
+	dIAehWlmbhNEUBIgEqU6V0A+SFZnr6An0KvE7IQg=
+From: no-reply@sc-us.gov
+To: notifications@scotus.recap.email
+Subject: Supreme Court Electronic Filing System
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <0100019df37ec519-2f50be5a-293f-4fdd-994b-188d4462e3ca-000000@email.amazonses.com>
+Date: Mon, 4 May 2026 14:57:44 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2026.05.04-54.240.65.140
+
+A new docket entry has been added for <a href='https://www.supremecourt.gov/search.aspx?filename=/docket/DocketFiles/html/Public/25A1208.html'>GenBioPro, Inc., Applicant v. Louisiana, et al.</a>. You have been signed up to receive email notifications for No. 25A1208. <br><br> If you no longer wish to receive email notifications on this case, please
+
+<a href='https://file.supremecourt.gov/Request/NotificationOptOutGet?id=CfDJ8LWjh78o-U5EigyPTWy9Bmc7VIlp4Ku-2ZBE1AHSMPXw2fMd4JQ_zmXRan9a0hGbg5UaEpdUBfpb6sIhwcKQX-BH7If5F8ZClSvYVlXUVOlkoNqcFOkgIUPM5j8a0KttnptRIk34OKzTLLMkkDEbI8OuuH-BoqpLirTWxyHE62B-'>click here</a>.
+

@@ -1,5 +1,3 @@
-from typing import Optional
-
 from dateutil import parser
 
 from juriscraper.AbstractSite import logger
@@ -260,7 +258,7 @@ class ClusterSite(OpinionSiteLinear):
 
     def cluster_opinions(
         self, case_dict: dict, possible_clusters: list[dict]
-    ) -> Optional[dict]:
+    ) -> dict | None:
         """Try to cluster current opinion with previous opinions.
         To cluster, opinions should have the same
         - date

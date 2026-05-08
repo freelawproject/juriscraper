@@ -6,7 +6,7 @@ from datetime import datetime
 from email.message import EmailMessage
 from enum import Enum
 from pathlib import Path
-from typing import Optional, TypedDict, Union
+from typing import TypedDict
 from urllib.parse import parse_qs, urlparse
 
 import requests
@@ -64,7 +64,7 @@ class SCOTUSEmailData(TypedDict):
     email_type: str
     followup_url: str
     email_datetime: datetime
-    data: Optional[SCOTUSNotificationEmail]
+    data: SCOTUSNotificationEmail | None
 
 
 class SCOTUSEmailHandlingResult(TypedDict):
@@ -73,7 +73,7 @@ class SCOTUSEmailHandlingResult(TypedDict):
     """
 
     email_type: str
-    data: Union[dict[str, str], str]
+    data: dict[str, str] | str
 
 
 class SCOTUSConfirmationResult(Enum):
@@ -119,7 +119,7 @@ class _SCOTUSConfirmationPageScraper:
 
     def __init__(self, court_id: str = "scotus"):
         self.court_id = court_id
-        self.tree: Optional[HtmlElement] = None
+        self.tree: HtmlElement | None = None
 
     @property
     def data(self) -> str:
@@ -179,7 +179,9 @@ class _SCOTUSConfirmationPageScraper:
 class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
-    TITLE_REGEX = re.compile(r"^A new docket entry, \"(.+?)\" has been added")
+    TITLE_REGEX = re.compile(
+        r"^A new docket entry(?:, \"(.+?)\")? has been added"
+    )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
     )
@@ -189,8 +191,8 @@ class SCOTUSEmail:
 
     def __init__(self, court_id: str = "scotus"):
         self.court_id: str = court_id
-        self.tree: Optional[HtmlElement] = None
-        self.message: Optional[EmailMessage] = None
+        self.tree: HtmlElement | None = None
+        self.message: EmailMessage | None = None
         self.email_type: SCOTUSEmailType = SCOTUSEmailType.INVALID
 
     @property
@@ -338,7 +340,7 @@ class SCOTUSEmail:
                 return
             self.email_type = email_type
 
-    def _parse_datetime(self) -> Optional[datetime]:
+    def _parse_datetime(self) -> datetime | None:
         """Extract the "Date" header in the notification email message into a
         `datetime`, returning `None` if the header is absent or parsing fails
         and logging an appropriate error.
@@ -366,7 +368,7 @@ class SCOTUSEmail:
         text = self.tree.text_content()
         match = self.TITLE_REGEX.match(text)
 
-        return clean_string(match.group(1))
+        return clean_string(match.group(1) or "")
 
     def _parse_case_name(self) -> str:
         """Extract the case name from the first `<a>` tag in the email body

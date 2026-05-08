@@ -1,0 +1,31 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "docketEntryUUID": "5a045473-7a03-4f35-b9ff-f7c0a29f55e8",
+        "documentLinkUUID": "1b6a8f72-d404-44e4-8742-5b7e7d38e096",
+        "documentName": "Letter - Acknowledgement Letter",
+        "caseHeader": {
+          "caseInstanceUUID": "562e4de3-c5ea-4e8d-a87f-3c80c4693c70",
+          "caseNumber": "4D2026-0606",
+          "caseTitle": "Isaiah Hargrett v. State of Florida",
+          "courtID": "5"
+        },
+        "documentInfo": {
+          "documentType": "Docket Entry",
+          "contentType": "application/pdf",
+          "fileExtension": "pdf",
+          "pageCount": 6,
+          "fileSize": 177522
+        },
+        "userDocumentState": "b64d1d1e-f926-4c87-ab6b-df5c96d3b186"
+      }
+    ]
+  },
+  "page": {
+    "size": 10,
+    "totalElements": 1,
+    "totalPages": 1,
+    "number": 0
+  }
+}

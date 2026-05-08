@@ -1,6 +1,5 @@
 import re
 import urllib.parse
-from typing import Union
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -122,7 +121,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, docket_number
-    ) -> tuple[str, dict[str, Union[str, None]]]:
+    ) -> tuple[str, dict[str, str | None]]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.

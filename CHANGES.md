@@ -18,18 +18,45 @@ Features:
 -
 
 Changes:
--
+- Drop Python 3.9 support
+- Add Python 3.14 support
 
 Fixes:
 - `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938
 
+## 3.0.18 - 2026-05-06
+
+Features:
+
+- Add parsers for Florida court API endpoints.
+
+Fixes:
+- Fix `idaho` scrapers expected_content_types attribute #1949
+
+## 3.0.17 - 2026-05-06
+
+Fixes:
+- Fix `nmariana` neutral citations to use spaces instead of dashes (e.g. `2022 MP 09` instead of `2022-MP-09`) so eyecite/reporters-db can parse them. #1947
+- Fix `idaho` scrapers expected_content_types attribute and reduce regular scrape page_size #1949
+
+## 3.0.16 - 2026-05-04
+
+Fixes:
+
+- SCOTUS email type detection
+
 ## 3.0.15 - 2026-04-30
 
 Features:
-- New `idahoctapp_u_per_curiam` scraper for the Idaho Court of Appeals "Unpublished Per Curiam" category (sets `per_curiam=True`). #1914
+
+- New `idahoctapp_u_per_curiam` scraper for the Idaho Court of Appeals "Unpublished Per Curiam" category (sets
+  `per_curiam=True`). #1914
 
 Changes:
-- Rewrite all Idaho opinion scrapers (`idaho_civil`, `idaho_criminal`, `idahoctapp_civil`, `idahoctapp_criminal`, `idahoctapp_u`) for the new `isc.idaho.gov` SPA backed by a JSON API. The old `www.isc.idaho.gov/appeals-court/...` URLs no longer resolve. #1914
+
+- Rewrite all Idaho opinion scrapers (`idaho_civil`, `idaho_criminal`, `idahoctapp_civil`, `idahoctapp_criminal`,
+  `idahoctapp_u`) for the new `isc.idaho.gov` SPA backed by a JSON API. The old `www.isc.idaho.gov/appeals-court/...`
+  URLs no longer resolve. #1914
 
 Fixes:
 -
@@ -43,7 +70,10 @@ Changes:
 -
 
 Fixes:
-- Fix `alaska` (and inheriting `alaskactapp`, `alaska_slip`, `alaska_u`) scrapers failing with HTTP 400 "Invalid Header" and `RemoteProtocolError`. Switch to `use_urllib = True` to handle the proxy's duplicate `Transfer-Encoding` headers, and fix duplicate `User-Agent` header that the server rejected. #1932
+
+- Fix `alaska` (and inheriting `alaskactapp`, `alaska_slip`, `alaska_u`) scrapers failing with HTTP 400 "Invalid Header"
+  and `RemoteProtocolError`. Switch to `use_urllib = True` to handle the proxy's duplicate `Transfer-Encoding` headers,
+  and fix duplicate `User-Agent` header that the server rejected. #1932
 
 ## 3.0.13 - 2026-04-29
 
@@ -54,10 +84,12 @@ Changes:
 -
 
 Fixes:
+
 - Switch `conn` and `connappct` to HTTPS; the source no longer accepts plain HTTP, causing `ConnectTimeout` #1924
 - Fix `ncbizct` scraper failing with `IndexError`, HTML had changed #1928
 - Fix `ca2` oral argument scraper after site search migrated to the dtSearch endpoint #1926
-- Fix `ny` (and inheriting NY scrapers) to treat the "No results found." placeholder row as a normal empty result instead of logging an error per row
+- Fix `ny` (and inheriting NY scrapers) to treat the "No results found." placeholder row as a normal empty result
+  instead of logging an error per row
 
 ## 3.0.12 - 2026-04-27
 
