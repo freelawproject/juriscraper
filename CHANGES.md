@@ -22,7 +22,7 @@ Changes:
 - Add Python 3.14 support
 
 Fixes:
--
+- `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938
 
 ## 3.0.18 - 2026-05-06
 
