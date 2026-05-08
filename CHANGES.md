@@ -22,7 +22,7 @@ Changes:
 - Add Python 3.14 support
 
 Fixes:
--
+- visuper: migrated to new public portal API; merged visuper_p and visuper_u #1945
 
 ## 3.0.18 - 2026-05-06
 

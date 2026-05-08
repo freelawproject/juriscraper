@@ -1,0 +1,556 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "publicationUUID": "56c39756-fd72-4210-ac08-8157a2d02287",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00014",
+        "publicationName": "2026 VI Super 15U- In the Matter of the Estate of Nydia Hess, deceased",
+        "publicationDate": "2026-04-21T18:18:03.815+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "SX-2018-PB-00007"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00014",
+          "publicationName": "2026 VI Super 15U- In the Matter of the Estate of Nydia Hess, deceased",
+          "publicationNote": "SX-2018-PB-00007 - In the Matter of the Estate of Nydia Hess, deceased - Unpublished Memorandum Opinion Signed by Christopher Timmons on April 20, 2026",
+          "publicationDate": "2026-04-21T18:18:03.815+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "3CC20CD4-34DC-4C38-92E6-76A54BC928FD",
+              "caseInstanceUUID": "4F22DBA9-6647-4BE3-8376-2C65C9DACF41",
+              "caseNumber": "SX-2018-PB-00007",
+              "groupName": "Hon. Christopher M. Timmons",
+              "groupOrderBy": 1,
+              "title": "In the Matter of the Estate of Nydia Hess, deceased",
+              "decision": "Administratively Closed, Disposition Order",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "3374F58E-46B2-4BE6-B5FB-F9A65B155E3C",
+                  "documentName": "Opinion - Memorandum and Order"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "95f1ed10-1cfe-46d6-a338-6d2b9b210ff2",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00013",
+        "publicationName": "2026 VI Super 14 - People of the Virgin Islands v. Roy Hendrickson & Shamoi Bell",
+        "publicationDate": "2026-04-17T19:58:49.138+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "SX-2024-CR-00375"
+          },
+          {
+            "caseNumber": "SX-2025-CR-00008"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00013",
+          "publicationName": "2026 VI Super 14 - People of the Virgin Islands v. Roy Hendrickson & Shamoi Bell",
+          "publicationNote": "SX-2025-CR-00008 & SX-2024-CR-00375  - People of the Virgin Islands v. Roy Hendrickson & Shamoi Bell - Published Memorandum Opinion signed by Judge Yvette Ross-Edwards on April 10, 2026",
+          "publicationDate": "2026-04-17T19:58:49.138+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "40F3AE2B-90E1-4BD4-AD57-C73D120D2CC6",
+              "caseInstanceUUID": "E0A65449-D073-46D7-9F48-7E11265A166D",
+              "caseNumber": "SX-2024-CR-00375",
+              "groupName": "Hon. Yvette Ross-Edwards",
+              "groupOrderBy": 1,
+              "title": "People of the Virgin Islands v. Shamoi Cirgie Bell",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "B4EA8950-1CD6-4ECD-A353-27992FA46816",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            },
+            {
+              "publicationItemUUID": "24F3CBD6-B7E4-4912-9AA2-C44F0022309D",
+              "caseInstanceUUID": "9C736464-5908-4982-8192-80B56172A87B",
+              "caseNumber": "SX-2025-CR-00008",
+              "groupName": "Hon. Yvette Ross-Edwards",
+              "groupOrderBy": 1,
+              "title": "People of the Virgin Islands v.  Roy Hendrickson",
+              "decision": ",",
+              "orderBy": 2,
+              "documents": [
+                {
+                  "documentLinkUUID": "B4EA8950-1CD6-4ECD-A353-27992FA46816",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "54086ff6-2bfb-4999-bf2d-eed4e0ac7c54",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00012",
+        "publicationName": "2026 VI Super 13 U - John Green v. The Government of the Virgin Islands et al",
+        "publicationDate": "2026-04-07T14:29:42.380+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2024-CV-00313"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00012",
+          "publicationName": "2026 VI Super 13 U - John Green v. The Government of the Virgin Islands et al",
+          "publicationNote": "ST-2024-CV-00313 - John Green v. The Government of the Virgin Islands et al - Unpublished Memorandum Opinion signed by Judge Denise M. Francois on March 24, 2026",
+          "publicationDate": "2026-04-07T14:29:42.380+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "DD7724D3-B790-45B3-A2EA-BB571711E4C3",
+              "caseInstanceUUID": "A553BD45-A851-4031-9D0B-CF0AE6131D1A",
+              "caseNumber": "ST-2024-CV-00313",
+              "groupName": "Hon. Denise M. Francois",
+              "groupOrderBy": 1,
+              "title": "John Green v. The Government of the Virgin Islands et al",
+              "decision": "Opinion Issued, Memorandum Opinion",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "1A93AC63-15F9-4D99-9AD4-82F8886786D2",
+                  "documentName": "Order - Memorandum Opinion And Order"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "31b10803-b3ef-46e6-877f-cf493c6c1c08",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00011",
+        "publicationName": "2026 VI Super 12 - Milton A. Burt v. Lockheed Martin Corp, et al",
+        "publicationDate": "2026-04-07T14:25:07.156+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "SX-2021-CV-00548"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00011",
+          "publicationName": "2026 VI Super 12 - Milton A. Burt v. Lockheed Martin Corp, et al",
+          "publicationNote": "SX-2021-CV-00548 - Milton A. Burt v. Lockheed Martin Corp, et al - Published Memorandum Opinion signed by Judge Alphonso G. Andrews on March 24, 2026",
+          "publicationDate": "2026-04-07T14:25:07.156+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "9EFC57AE-9EB7-4E8D-8C8A-12EE5C1021C7",
+              "caseInstanceUUID": "6137EFDE-6914-42E1-A828-936C48D060B0",
+              "caseNumber": "SX-2021-CV-00548",
+              "groupName": "Hon. Alphonso G. Andrews, Jr.",
+              "groupOrderBy": 1,
+              "title": "Milton A. Burt v. Lockheed Martin Corp., et al.",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "21A9D230-7B15-4C34-9544-DFB4ECC433C9",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "70720ff8-3fb4-4423-a4fc-87ea88e63c94",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00010",
+        "publicationName": "2026 VI Super 10U - People of the Virgin Islands v. Daryl Earnest Jean Baptiste",
+        "publicationDate": "2026-04-07T14:20:27.197+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "SX-2019-CR-00303"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00010",
+          "publicationName": "2026 VI Super 10U - People of the Virgin Islands v. Daryl Earnest Jean Baptiste",
+          "publicationNote": "SX-2019-CR-00303 - People of the Virgin Islands v. Daryl Earnest Jean Baptiste - Unpublished Memorandum Opinion signed by Judge Denise M. Francois on March 19, 2026",
+          "publicationDate": "2026-04-07T14:20:27.197+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "AA551A17-1C7B-4BAE-B040-3926F955915C",
+              "caseInstanceUUID": "AAA7D5D3-1595-4620-986A-69B1B57ABD5C",
+              "caseNumber": "SX-2019-CR-00303",
+              "groupName": "Hon. Denise M. Francois",
+              "groupOrderBy": 1,
+              "title": "People of the Virgin Islands v. Daryl Earnest Jean Baptiste",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "E33E5B9B-38B6-45C6-A05D-3C88AF89A318",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "c269bf43-1109-48ff-a997-8d622e6cf840",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00009",
+        "publicationName": "2026 VI Super 8U - Dr. Tylur Arvidson et al. v. Dr. William L. Buchar",
+        "publicationDate": "2026-03-23T20:41:51.207+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2016-CV-00410"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00009",
+          "publicationName": "2026 VI Super 8U - Dr. Tylur Arvidson et al. v. Dr. William L. Buchar",
+          "publicationNote": "ST-2016-CV-00410 - Dr. Tylur Arvidson et al. v. Dr. William L. Buchar - UNPUBLISHED MEMORANDUM OPINION signed by Judge Denise M. Francois on March 17, 2026",
+          "publicationDate": "2026-03-23T20:41:51.207+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "A3DDE1EC-BBDA-4820-AA73-E7AD4C3BE931",
+              "caseInstanceUUID": "7432A3F8-AD71-45C5-B028-B4471D746A4E",
+              "caseNumber": "ST-2016-CV-00410",
+              "groupName": "Hon. Denise M. Francois",
+              "groupOrderBy": 1,
+              "title": "DR. Tylur Arvidson et al v. DR. William L. Buchar",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "0F7A39C9-FCC5-4A1D-9C1E-84DB7BB281BA",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "d1859f4e-0965-4fd0-ac32-8e2f5efb2a3a",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00008",
+        "publicationName": "2026 VI Super 11U - Department of Licensing and Consumer Affairs v. Elgadi Enterprises, LLC d/b/a Ali Baba Gas Station & Grocery",
+        "publicationDate": "2026-03-23T20:23:08.041+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2026-MC-00008"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00008",
+          "publicationName": "2026 VI Super 11U - Department of Licensing and Consumer Affairs v. Elgadi Enterprises, LLC d/b/a Ali Baba Gas Station & Grocery",
+          "publicationNote": "ST-2026-MC-00008 - Department of Licensing and Consumer Affairs v. Elgadi Enterprises, LLC d/b/a Ali Baba Gas Station & Grocery - UNPUBLISHED MEMORANDUM OPINION signed by Judge Denise M. Francois on March 23, 2026",
+          "publicationDate": "2026-03-23T20:23:08.041+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "B4EFF78D-940B-4517-AE75-C093D61FA325",
+              "caseInstanceUUID": "D59774EB-6E60-4B86-BBDA-D3C95BCD5AD6",
+              "caseNumber": "ST-2026-MC-00008",
+              "groupName": "Hon. Denise M. Francois",
+              "groupOrderBy": 1,
+              "title": "Department of Licensing and Consumer Affairs v. Elgadi Enterprises, LLC d/b/a Ali Baba Gas Station & Grocery",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "BE5A39B9-C7E1-4240-A65A-C18439EC8E2C",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "27e5cdfb-8ef0-4e41-bbd9-7ef1d39a740d",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00007",
+        "publicationName": "2026 VI Super 9U - Vanessa Williams-Mactavious in her capacity as Administrator of the Estate of Pauline Lornette Sharry, f/k/a Pauline L. Sharry, f/k/a Pauline Sharry v. Keith A. Williams",
+        "publicationDate": "2026-03-04T13:23:09.123+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2025-CV-00376"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00007",
+          "publicationName": "2026 VI Super 9U - Vanessa Williams-Mactavious in her capacity as Administrator of the Estate of Pauline Lornette Sharry, f/k/a Pauline L. Sharry, f/k/a Pauline Sharry v. Keith A. Williams",
+          "publicationNote": "ST-2025-CV-00376 - Vanessa Williams-Mactavious in her capacity as Administrator of the Estate of Pauline Lornette  Sharry, f/k/a Pauline L. Sharry, f/k/a Pauline Sharry v. Keith A. Williams UNPUBLISHED MEMORANDUM OPINION signed by Judge Sigrid M. Tejo on February 27, 2026",
+          "publicationDate": "2026-03-04T13:23:09.123+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "3A2881DD-DFA9-430F-9466-E73C93C2DC74",
+              "caseInstanceUUID": "45104A5E-BBCD-4B72-815C-7C9FE31E1A3D",
+              "caseNumber": "ST-2025-CV-00376",
+              "groupName": "Hon. Sigrid M. Tejo",
+              "groupOrderBy": 1,
+              "title": "Vanessa Williams-Mactavious in her capacity as Administratrix of the Estate of Pauline Lornette Sharry a/k/a Pauline L. Sharry a/k/a Pauline Sharry v. Keith A. Williams",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "157531B7-6AC8-4225-AC67-2ADD9B59566B",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "143475d8-4ebb-4ead-98b2-ddaceb48bdda",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00006",
+        "publicationName": "2026 V.I. Super 7U - Sergio Laplante v. Glenville Thompson et al",
+        "publicationDate": "2026-02-17T15:06:00.320+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2025-CV-00250"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00006",
+          "publicationName": "2026 V.I. Super 7U - Sergio Laplante v. Glenville Thompson et al",
+          "publicationNote": "ST-2025-CV-00250 - Sergio Laplante v. Glenville Thompson et al - UNPUBLISHED MEMORANDUM OPINION signed by Judge Sigrid M. Tejo on February 10, 2026",
+          "publicationDate": "2026-02-17T15:06:00.320+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "A23728C5-3676-46C1-874A-339CFFADE025",
+              "caseInstanceUUID": "79DA9EEA-6049-4A65-A277-6AC24AC5DDE7",
+              "caseNumber": "ST-2025-CV-00250",
+              "groupName": "Hon. Sigrid M. Tejo",
+              "groupOrderBy": 1,
+              "title": "Sergio Laplante v. Glenville Thompson et al",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "C56E3FEC-4B84-40CD-B7F9-F124497C6567",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "974b3ecf-d00f-4b16-9b66-2f4eb95ed407",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00005",
+        "publicationName": "2026 V.I. Super 6U -  St. Clair Magras Sr. v. Bernard Gibs and Paula Henderson",
+        "publicationDate": "2026-02-09T14:00:24.420+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2025-CV-00378"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00005",
+          "publicationName": "2026 V.I. Super 6U -  St. Clair Magras Sr. v. Bernard Gibs and Paula Henderson",
+          "publicationNote": "ST-2025-CV-00378 - St. Clair Magras Sr. v. Bernard Gibs and Paula Henderson - UNPUBLISHED MEMORANDUM OPINION signed by Judge Sigrid M. Tejo on February 3, 2026",
+          "publicationDate": "2026-02-09T14:00:24.420+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "7CF827F9-7373-4296-818C-3185BC649813",
+              "caseInstanceUUID": "22B6FE1B-14EE-466B-90B7-3A6AB368252F",
+              "caseNumber": "ST-2025-CV-00378",
+              "groupName": "Hon. Sigrid M. Tejo",
+              "groupOrderBy": 1,
+              "title": "St. Clair Magras Sr. v. Bernard Gibs and Paula Henderson",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "C9E52C2A-0382-4827-8398-D8AB4DE3CF3D",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "c40ff8fd-0aad-468b-bdfb-767f4a918618",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00004",
+        "publicationName": "2026 V.I. Super 4 -  In re: Hurricane Maria Insurance Cases",
+        "publicationDate": "2026-02-09T13:48:13.701+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "SX-2019-MC-00069"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00004",
+          "publicationName": "2026 V.I. Super 4 -  In re: Hurricane Maria Insurance Cases",
+          "publicationNote": "SX-2019-MC 00069 - In re: Hurricane Maria Insurance Cases - PUBLISHED MEMORANDUM OPINION signed by Judge Alphonso G. Andrews, Jr. on February 6, 2026",
+          "publicationDate": "2026-02-09T13:48:13.701+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "0FBC9080-86D8-4D35-A7F9-10A1AD158412",
+              "caseInstanceUUID": "3AF36F02-57D5-441F-8526-36D85BF9DDC4",
+              "caseNumber": "SX-2019-MC-00069",
+              "groupName": "Hon. Alphonso G. Andrews, Jr.",
+              "groupOrderBy": 1,
+              "title": "In re: Hurricane Maria Insurance Cases",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "0EC1685F-94FA-4E3A-83C5-AA3640EE3242",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "d070c04a-8892-4ccc-8200-437c7552764d",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00003",
+        "publicationName": "2026 V.I. Super 3U - Government of the V.I. ex Rel., Sheila Morris v. Richard Halliday",
+        "publicationDate": "2026-02-09T13:35:54.164+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2015-SP-00008"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00003",
+          "publicationName": "2026 V.I. Super 3U - Government of the V.I. ex Rel., Sheila Morris v. Richard Halliday",
+          "publicationNote": "ST-2015-SP-00008 Government of the V.I. ex Rel., Sheila Morris v. Richard Halliday - UNPUBLISHED MEMORANUM OPINION signed by Judge Melanie L. Turnbull on January 27, 2026",
+          "publicationDate": "2026-02-09T13:35:54.164+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "F4676408-D1BC-4F91-9C03-CB10F56A1EBC",
+              "caseInstanceUUID": "FF76FBCB-3B9B-4874-984E-A6BA26DEDC2F",
+              "caseNumber": "ST-2015-SP-00008",
+              "groupName": "Hon. Melanie L. Turnbull",
+              "groupOrderBy": 1,
+              "title": "Government of the V.I. ex Rel., Sheila Morris Vs Richard Halliday",
+              "decision": "Opinion Issued, Memorandum Opinion",
+              "orderBy": 1
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "f2ab1c2a-b980-45f8-aff0-a23d8bc0b4b0",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00002",
+        "publicationName": "2026 V.I. Super 2 - Bloch vs. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant",
+        "publicationDate": "2026-01-16T17:25:03.996+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2024-CV-00251"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00002",
+          "publicationName": "2026 V.I. Super 2 - Bloch vs. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant",
+          "publicationNote": "ST-2024-CV-00251 Bloch vs. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant - PUBLISHED MEMORANDUM OPINION signed by Judge Carol Thomas-Jacobs on January 15, 2026",
+          "publicationDate": "2026-01-16T17:25:03.996+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "E6F7A349-6D3D-4A09-921A-C6308D057D91",
+              "caseInstanceUUID": "482FCAEC-5B46-40B1-A834-5CF96561B9FA",
+              "caseNumber": "ST-2024-CV-00251",
+              "groupName": "Hon. Carol Thomas-Jacobs",
+              "groupOrderBy": 1,
+              "title": "Peter Bloch v. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant",
+              "decision": ",",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "6DD67B95-AC83-4DF7-B230-046B0ACA479C",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "publicationUUID": "3e562ee9-add8-40c0-8af1-91caa2cf7884",
+        "courtID": "1",
+        "courtAbbreviation": "USVI Superior Court",
+        "publicationNumber": "PB-2026-00001",
+        "publicationName": "2026 V.I. Super 1 - Bloch vs. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant",
+        "publicationDate": "2026-01-16T17:17:59.949+00:00",
+        "publicationItems": [
+          {
+            "caseNumber": "ST-2024-CV-00251"
+          }
+        ],
+        "detailJson": {
+          "courtAbbreviation": "USVI Superior Court",
+          "publicationNumber": "PB-2026-00001",
+          "publicationName": "2026 V.I. Super 1 - Bloch vs. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant",
+          "publicationNote": "ST-2024-CV-00251 Bloch vs. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant - PUBLISHED MEMORANDUM OPINION - Signed by Judge Carol Thomas-Jacobs on January 13, 2026",
+          "publicationDate": "2026-01-16T17:17:59.949+00:00",
+          "publicationItems": [
+            {
+              "publicationItemUUID": "FF2E9644-DA60-4D1D-873A-66470F323C29",
+              "caseInstanceUUID": "482FCAEC-5B46-40B1-A834-5CF96561B9FA",
+              "caseNumber": "ST-2024-CV-00251",
+              "groupName": "Hon. Carol Thomas-Jacobs",
+              "groupOrderBy": 1,
+              "title": "Peter Bloch v. Bowline Hospitality III, LLC, d/b/a Mafolie Hotel and Restaurant",
+              "orderBy": 1,
+              "documents": [
+                {
+                  "documentLinkUUID": "E2E3991F-574D-4FAC-8409-9DE6415DDB90",
+                  "documentName": "Order - Doc - Distribution Queue Template"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "page": {
+    "size": 50,
+    "totalElements": 14,
+    "totalPages": 1,
+    "number": 0
+  }
+}
