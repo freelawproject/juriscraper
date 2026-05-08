@@ -5,6 +5,7 @@ Author: mmantel
 History:
   2019-12-09: Created by mmantel
   2024-01-25: updated by grossir
+  2026-05-04: updated for new legacydata endpoint by grossir (#1938)
 """
 
 import re
@@ -13,24 +14,32 @@ from datetime import date
 from dateutil import parser
 from dateutil.parser import ParserError
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    base_url = "https://www.guamcourts.gov/legacydata/supreme-court-opinions"
+
+    # The year dropdown goes back to 1990, but the Court wasn't
+    # created until 1996 and there are no opinions posted for
+    # prior years.
+    first_opinion_date = date(1996, 1, 1)
+    days_interval = 365
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://guamcourts.gov/Supreme-Court-Opinions/Supreme-Court-Opinions.asp"
+        self.url = self.base_url
         self.status = "Published"
 
         self._year = date.today().year
-        self.parameters = {"Year": str(self._year)}
-        self.method = "POST"
-
-        # The year dropdown goes back to 1990, but the Court wasn't
-        # created until 1996 and there are no opinions posted for
-        # prior years.
-        self.back_scrape_iterable = range(1996, self._year)
+        self.request["parameters"]["params"] = {
+            "action": "get_items",
+            "type": "SPRMOP",
+            "year": str(self._year),
+        }
+        self.make_backscrape_iterable(kwargs)
 
     def _process_html(self) -> None:
         """Process HTML into case objects
@@ -44,33 +53,41 @@ class Site(OpinionSiteLinear):
         """
         middle_of_the_year = f"{self._year}/07/13"
 
-        row_xpath = '//a[@id="Opinion"]/following-sibling::table'
-        for table in self.html.xpath(row_xpath):
-            text = table.xpath(".//td/text()")[0]
+        for item in self.html.xpath(
+            '//div[contains(@class, "item_for_list")]'
+        ):
+            anchor = item.xpath(".//h4/a")[0]
+            name = anchor.text_content().strip()
+            url = anchor.get("href")
+            text = " ".join(item.xpath(".//p//text()")).strip()
+            # Some entries arrive double-encoded; \xc2\xa0 is mojibake for
+            # a non-breaking space and breaks both the citation and date
+            # regexes when it sits between tokens
+            text = re.sub(r"[\xa0\xc2]+", " ", text)
 
-            # Seen formats: 2021-Guam 3, 2021 Guam 29, 2020 Guam15,
-            # Edge cases which will be left empty: "Guam 7", "014 Guam 31"
+            # Seen formats: 2021-Guam 3, 2021 Guam 29, 2020 Guam15
+            # Edge cases left empty: "Guam 7", "014 Guam 31"
             citation = ""
-            citation_match = re.search(r"\d{4}[\s-]*Guam[\s-]*\d{1,2}", text)
-            if citation_match:
+            if citation_match := re.search(
+                r"\d{4}[\s-]*Guam[\s-]*\d{1,2}", text
+            ):
                 text = text.replace(citation_match.group(0), " ")
                 citation = citation_match.group(0)
 
             row_date = self.find_date(text)
-            name = table.xpath(".//a/text()")[0]
             docket = text.replace(row_date, "") if row_date else text
             docket = docket.replace(" filed ", "").strip(" .,\r\n")
 
             # If the docket is not in the free text, sometimes it is at the end
             # of the case name. Sometimes, it does not exist
-            if not docket:
-                docket_match = re.search(r"[A-Z]{3}\d{2}-\d{3}", name)
-                if docket_match:
-                    docket = docket_match.group(0)
+            if not docket and (
+                docket_match := re.search(r"[A-Z]{3}\d{2}-\d{3}", name)
+            ):
+                docket = docket_match.group(0)
 
             self.cases.append(
                 {
-                    "url": table.xpath(".//a/@href")[0],
+                    "url": url,
                     "name": name,
                     "docket": docket,
                     "date": row_date or middle_of_the_year,
@@ -93,7 +110,19 @@ class Site(OpinionSiteLinear):
                 parser.parse(date_match.group())
                 return date_match.group()
             except ParserError:
+                logger.warning("Unable to find date %s", text)
                 pass
+
+    def make_backscrape_iterable(self, kwargs):
+        super().make_backscrape_iterable(kwargs)
+
+        # keep unique years
+        iterable = []
+        for d, _ in self.back_scrape_iterable:
+            if d.year not in iterable:
+                iterable.append(d.year)
+
+        self.back_scrape_iterable = iterable
 
     async def _download_backwards(self, year: int) -> None:
         """Sets up the download of past records
@@ -102,4 +131,4 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         self._year = year
-        self.parameters = {"Year": str(year)}
+        self.request["parameters"]["params"]["year"] = str(year)
