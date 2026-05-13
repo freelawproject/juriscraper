@@ -1,4 +1,5 @@
 import asyncio
+import threading
 import time
 from collections.abc import (
     AsyncIterable,
@@ -6,10 +7,22 @@ from collections.abc import (
     Iterable,
     Mapping,
     Sequence,
+    Coroutine,
 )
-from dataclasses import dataclass
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import dataclass, field
 from http.cookiejar import CookieJar
-from typing import Any, Literal, NotRequired, Self, TypedDict, override
+from tracemalloc import stop
+from turtle import st
+from typing import (
+    Any,
+    Generic,
+    Literal,
+    NotRequired,
+    TypedDict,
+    TypeVar,
+    override,
+)
 
 import httpx
 from httpx import Auth, Cookies, Request, Response
@@ -21,115 +34,80 @@ class UseClientDefault: ...
 USE_CLIENT_DEFAULT = UseClientDefault()
 
 
-class ManagedRequest:
-    def __init__(
-        self,
-        request: Request,
-        follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
-    ):
-        self.httpx_request: Request = request
-        self.follow_redirects: bool | UseClientDefault = follow_redirects
+T = TypeVar("T")
 
 
-@dataclass(frozen=True)
-class MiddlewareHandles:
-    before: bool
-    after: bool
-    error: bool
+# https://stackoverflow.com/a/78911765
+def run_coroutine_sync(
+    coroutine: Coroutine[Any, Any, T], timeout: float = 30
+) -> T:
+    def run_in_new_loop():
+        new_loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(new_loop)
+        try:
+            return new_loop.run_until_complete(coroutine)
+        finally:
+            new_loop.close()
+
+    try:
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        return asyncio.run(coroutine)
+
+    if threading.current_thread() is threading.main_thread():
+        if not loop.is_running():
+            return loop.run_until_complete(coroutine)
+        else:
+            with ThreadPoolExecutor() as pool:
+                future = pool.submit(run_in_new_loop)
+                return future.result(timeout=timeout)
+    else:
+        return asyncio.run_coroutine_threadsafe(coroutine, loop).result()
+
+
+@dataclass
+class AsyncAttribute(Generic[T]):
+    _event: asyncio.Event = field(default_factory=asyncio.Event)
+    _value: T | None = None
+
+    async def get(self) -> T | None:
+        _ = await self._event.wait()
+        return self._value
+
+    async def set(self, value: T) -> None:
+        self._value = value
+        self._event.set()
+
+    def clear(self):
+        self._value = None
+        self._event.clear()
+
+
+@dataclass
+class ScheduledRequest:
+    httpx_request: Request
+    ready: asyncio.Event = field(default_factory=asyncio.Event)
+    follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT
+    response: AsyncAttribute[Response | None] = AsyncAttribute()
+    error: AsyncAttribute[Exception | None] = AsyncAttribute()
+
+    async def mark_ready(self):
+        self.ready.set()
+
+    def clear(self):
+        self.ready.clear()
+        self.response.clear()
+        self.error.clear()
+
+    @override
+    def __hash__(self):
+        return hash((self.httpx_request, self.follow_redirects))
 
 
 class RequestHandler:
-    handles: MiddlewareHandles = MiddlewareHandles(
-        before=False, after=False, error=False
-    )
-
-    async def before(
-        self, manager: "RequestManager", request: ManagedRequest
-    ): ...
-
-    async def after(
-        self,
-        manager: "RequestManager",
-        request: ManagedRequest,
-        response: Response,
-    ): ...
-
-    async def error(
-        self,
-        manager: "RequestManager",
-        request: ManagedRequest,
-        response: Response | None,
-        error: Exception,
-    ): ...
-
-
-def middleware(cls: type) -> type:
-    before = hasattr(cls, "before") and callable(cls.before)
-    after = hasattr(cls, "after") and callable(cls.after)
-    error = hasattr(cls, "error") and callable(cls.error)
-
-    if not issubclass(cls, RequestHandler):
-        cls.__bases__ = (RequestHandler,) + cls.__bases__
-
-    cls.handles = MiddlewareHandles(before=before, after=after, error=error)
-
-    return cls
-
-
-@middleware
-class RateLimit(RequestHandler):
-    def __init__(self, rps: float = 10):
-        self.rp_ns: float = 1e9 / rps
-        self._next_time: float = time.monotonic_ns() - self.rp_ns
-
-    @override
-    async def before(self, manager: "RequestManager", request: ManagedRequest):
-        t = time.monotonic_ns()
-        if t < self._next_time:
-            self._next_time += self.rp_ns
-            await asyncio.sleep((self._next_time - t) / 1e9)
-
-    @override
-    async def after(
-        self,
-        manager: "RequestManager",
-        request: ManagedRequest,
-        response: Response,
-    ):
-        self._next_time = max(
-            self._next_time, time.monotonic_ns() + self.rp_ns
-        )
-
-
-@middleware
-class Retry(RequestHandler):
-    def __init__(self, max_retries: int = 3):
-        self.max_retries: int = max_retries
-        self.tries: dict[int, int] = {}
-
-    @override
-    async def before(self, manager: "RequestManager", request: ManagedRequest):
-        self.tries[hash(request)] = self.tries.get(hash(request), 0) + 1
-
-    @override
-    async def error(
-        self,
-        manager: "RequestManager",
-        request: ManagedRequest,
-        response: Response | None,
-        error: Exception,
-    ):
-        if self.tries[hash(request)] < self.max_retries:
-            _ = manager.send(request)
-
-    @override
-    async def after(
-        self,
-        manager: "RequestManager",
-        request: ManagedRequest,
-        response: Response,
-    ):
-        _ = self.tries.pop(hash(request), None)
+    async def listen(
+        self, manager: "RequestManager", request: ScheduledRequest
+    ) -> None: ...
 
 
 HTTPMethod = Literal[
@@ -175,13 +153,6 @@ class RequestArguments(TypedDict):
     timeout: NotRequired[float]
 
 
-@dataclass
-class PartitionedHandlers:
-    before: list[RequestHandler]
-    after: list[RequestHandler]
-    error: list[RequestHandler]
-
-
 class RequestManager:
     """Configurable request manager."""
 
@@ -199,11 +170,15 @@ class RequestManager:
     ) -> None:
         if handlers is None:
             handlers = []
+        self.stop: asyncio.Event = asyncio.Event()
+        self.queue: asyncio.Queue[ScheduledRequest] = asyncio.Queue[
+            ScheduledRequest
+        ]()
         self.client: httpx.AsyncClient = httpx.AsyncClient(
             auth=auth,
             params=params,
             headers={
-                "User Agent": "Free Law Project",
+                "User-Agent": "Free Law Project",
                 "Cache-Control": "no-cache, max-age=0, must-revalidate",
                 "Pragma": "no-cache",
             },
@@ -212,12 +187,39 @@ class RequestManager:
             follow_redirects=follow_redirects,
             default_encoding=default_encoding,
         )
-        self.client.headers.update(headers)
-        self.handlers: PartitionedHandlers = PartitionedHandlers(
-            before=[h for h in handlers if h.handles.before],
-            after=[h for h in handlers if h.handles.after],
-            error=[h for h in handlers if h.handles.error],
-        )
+        self.client.headers.update(headers or {})
+        self.handlers: list[RequestHandler] = handlers
+
+        _ = asyncio.create_task(self.loop(self.queue))
+
+    async def loop(self, queue: asyncio.Queue[ScheduledRequest]):
+        while not self.stop.is_set():
+            first = await (
+                await anext(
+                    asyncio.as_completed([self.stop.wait(), queue.get()])
+                )
+            )
+
+            if not isinstance(first, ScheduledRequest):
+                return
+            request = first
+
+            try:
+                async with asyncio.timeout(60):
+                    _ = await request.ready.wait()
+                _ = await self.send(request)
+            except TimeoutError:
+                await self.enqueue_request(request)
+            finally:
+                queue.task_done()
+
+    async def enqueue_request(
+        self, request: ScheduledRequest, ready: bool = True
+    ):
+        request.clear()
+        if ready:
+            _ = await request.mark_ready()
+        await self.queue.put(request)
 
     async def request(
         self,
@@ -232,7 +234,7 @@ class RequestManager:
         cookies: CookieType | None = None,
         follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
         timeout: float | UseClientDefault | None = USE_CLIENT_DEFAULT,
-    ) -> httpx.Response | None:
+    ) -> httpx.Response:
         request_kwargs = RequestArguments()
         if content is not None:
             request_kwargs["content"] = content
@@ -249,18 +251,31 @@ class RequestManager:
         if timeout is not None and not isinstance(timeout, UseClientDefault):
             request_kwargs["timeout"] = timeout
 
-        request = ManagedRequest(
+        request = ScheduledRequest(
             self.client.build_request(method, url, **request_kwargs),
             follow_redirects=follow_redirects,
         )
 
-        return await self.send(request)
-
-    async def send(self, request: ManagedRequest) -> Response | None:
+        await self.enqueue_request(request, ready=False)
         _ = await asyncio.gather(
-            *[h.before(self, request) for h in self.handlers.before]
+            *(
+                [h.listen(self, request) for h in self.handlers]
+                + [request.mark_ready()]
+            )
         )
 
+        response = await request.response.get()
+        error = await request.error.get()
+
+        if error:
+            raise error
+
+        if response is None:
+            raise RuntimeError("Response is None")
+
+        return response
+
+    async def send(self, request: ScheduledRequest) -> Response | None:
         response = None
         try:
             if isinstance(request.follow_redirects, UseClientDefault):
@@ -274,19 +289,11 @@ class RequestManager:
                 )
             _ = response.raise_for_status()
         except Exception as e:
-            _ = await asyncio.gather(
-                *[
-                    h.error(self, request, response, e)
-                    for h in self.handlers.error
-                ]
-            )
+            await request.error.set(e)
+            await request.response.set(None)
         else:
-            _ = await asyncio.gather(
-                *[
-                    h.after(self, request, response)
-                    for h in self.handlers.after
-                ]
-            )
+            await request.error.set(None)
+            await request.response.set(response)
 
         return response
 
@@ -394,7 +401,44 @@ class RequestManager:
             timeout=timeout,
         )
 
+    def __del__(self):
+        if hasattr(self, "stop"):
+            self.stop.set()
+        if hasattr(self, "client"):
+            run_coroutine_sync(self.client.aclose())
+
+
+class RateLimit(RequestHandler):
+    def __init__(self, rps: float = 10):
+        self.rp_ns: float = 1e9 / rps
+        self._next_time: float = time.monotonic_ns() - self.rp_ns
+
+    @override
+    async def listen(
+        self, manager: RequestManager, request: ScheduledRequest
+    ) -> None: ...
+
+
+class Retry(RequestHandler):
+    def __init__(self, max_retries: int = 3):
+        self.max_retries: int = max_retries
+        self.tries: dict[int, int] = {}
+
+    @override
+    async def listen(
+        self, manager: RequestManager, request: ScheduledRequest
+    ) -> None:
+        remaining_tries = self.max_retries
+        while remaining_tries > 0:
+            error = await request.error.get()
+            if error is None:
+                return
+            remaining_tries -= 1
+            await manager.enqueue_request(request)
+
 
 class FloridaScraper:
     def __init__(self):
-        self.manager = RequestManager(handlers=[RateLimit(), Retry()])
+        self.manager: RequestManager = RequestManager(
+            handlers=[RateLimit(), Retry()]
+        )
