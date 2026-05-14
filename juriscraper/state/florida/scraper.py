@@ -88,6 +88,7 @@ class RequestManager:
         timeout: float = 30.0,
         follow_redirects: bool = True,
         default_encoding: str = "utf-8",
+        rps: float = 2.0,
     ) -> None:
         """Initialize the request manager.
 
@@ -104,6 +105,7 @@ class RequestManager:
             follow_redirects: Whether to follow redirects (httpx AsyncClient passthrough)
             default_encoding: Default encoding for responses if not specified by `Content-Type`
                 header (httpx AsyncClient passthrough)
+            rps: Request rate limit in requests/second.
         """
         logger.info("Creating request manager.")
         if handlers is None:
@@ -138,20 +140,31 @@ class RequestManager:
             default_encoding=default_encoding,
         )
         self.handlers: list[RequestHandler] = list(handlers)
+        self.rps: float = rps
+        self._spr: float = 1.0 / self.rps
+        self._last_request: float = 0
         self._loop_future: asyncio.Task[None] | None = None
 
     async def _loop(self, queue: asyncio.Queue[ScheduledRequest]) -> None:
-        """Pull requests from the queue and handle them.
+        """Pull requests from the queue and handles them.
 
         Args:
             queue: The queue to pull requests from. Should be `self._queue`"""
         while True:
             logger.info("Waiting for request.")
             request = await queue.get()
+            elapsed = time.time() - self._last_request
+            if elapsed < self._spr:
+                logger.info(
+                    "Request rate limit exceeded. Waiting %s seconds.",
+                    self._spr - elapsed,
+                )
+                await asyncio.sleep(self._spr - elapsed)
             logger.info(
                 "Got request: %s. Sending.",
                 request.httpx_request.url,
             )
+            self._last_request = time.time()
             _ = await self.send(request)
             logger.info(
                 "Request sent: %s. Marking task as done.",
