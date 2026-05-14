@@ -1,13 +1,12 @@
 import asyncio
 import time
-from abc import ABC, abstractmethod
 from collections.abc import (
     AsyncIterable,
     Iterable,
     Mapping,
     Sequence,
 )
-from dataclasses import dataclass, field
+from dataclasses import InitVar, dataclass, field
 from http.cookiejar import CookieJar
 from typing import (
     Any,
@@ -51,13 +50,39 @@ class ScheduledRequest:
         return await self.response_future
 
 
-class RequestHandler(ABC):
+class RequestHandler:
     """Base class for request handlers."""
 
-    @abstractmethod
+    async def before_queue(
+        self, manager: "RequestManager", request: ScheduledRequest
+    ) -> None:
+        """The RequestManager awaits this method before queueing the request.
+
+        Args:
+            manager: The request manager sending the request
+            request: The request being sent"""
+        return
+
+    async def before_send(
+        self, manager: "RequestManager", request: ScheduledRequest
+    ) -> None:
+        """The RequestManager awaits this method before sending the request.
+
+        Args:
+            manager: The request manager sending the request
+            request: The request being sent"""
+        return
+
     async def listen(
         self, manager: "RequestManager", request: ScheduledRequest
-    ) -> None: ...
+    ) -> None:
+        """The RequestManager spawns this method in a TaskGroup to listen to the
+        request concurrently.
+
+        Args:
+            manager: The request manager sending the request
+            request: The request being sent"""
+        return
 
 
 PrimitiveData = str | int | float | bool | None
@@ -88,7 +113,6 @@ class RequestManager:
         timeout: float = 30.0,
         follow_redirects: bool = True,
         default_encoding: str = "utf-8",
-        rps: float = 2.0,
     ) -> None:
         """Initialize the request manager.
 
@@ -105,7 +129,6 @@ class RequestManager:
             follow_redirects: Whether to follow redirects (httpx AsyncClient passthrough)
             default_encoding: Default encoding for responses if not specified by `Content-Type`
                 header (httpx AsyncClient passthrough)
-            rps: Request rate limit in requests/second.
         """
         logger.info("Creating request manager.")
         if handlers is None:
@@ -117,13 +140,9 @@ class RequestManager:
         if "User-Agent" not in headers:
             headers.update({"User-Agent": USER_AGENT})
         else:
-            if "Juriscraper" not in headers.get("User-Agent", ""):
-                headers.update(
-                    {
-                        "User-Agent": headers.get("User-Agent", "")
-                        + f" {USER_AGENT}"
-                    }
-                )
+            ua_header = headers.get("User-Agent", "")
+            if "Juriscraper" not in ua_header:
+                headers.update({"User-Agent": ua_header + f" {USER_AGENT}"})
         headers.update(
             {
                 "Cache-Control": "no-cache, max-age=0, must-revalidate",
@@ -140,9 +159,6 @@ class RequestManager:
             default_encoding=default_encoding,
         )
         self.handlers: list[RequestHandler] = list(handlers)
-        self.rps: float = rps
-        self._spr: float = 1.0 / self.rps
-        self._last_request: float = 0
         self._loop_future: asyncio.Task[None] | None = None
 
     async def _loop(self, queue: asyncio.Queue[ScheduledRequest]) -> None:
@@ -153,18 +169,17 @@ class RequestManager:
         while True:
             logger.info("Waiting for request.")
             request = await queue.get()
-            elapsed = time.time() - self._last_request
-            if elapsed < self._spr:
-                logger.info(
-                    "Request rate limit exceeded. Waiting %s seconds.",
-                    self._spr - elapsed,
-                )
-                await asyncio.sleep(self._spr - elapsed)
             logger.info(
-                "Got request: %s. Sending.",
+                "Got request: %s. Waiting for before_send to complete.",
                 request.httpx_request.url,
             )
-            self._last_request = time.time()
+            async with asyncio.TaskGroup() as tg:
+                for handler in self.handlers:
+                    _ = tg.create_task(handler.before_send(self, request))
+            logger.info(
+                "Handlers finished. Sending request: %s",
+                request.httpx_request.url,
+            )
             _ = await self.send(request)
             logger.info(
                 "Request sent: %s. Marking task as done.",
@@ -187,12 +202,24 @@ class RequestManager:
     async def enqueue_request(self, request: ScheduledRequest) -> None:
         """Push a request onto the queue to be processed.
 
-        Resets the request's state before queueing.
+        Resets the request's state and awaits the `before_queue` methods of any
+        handlers before queueing.
 
         Args:
             request: The request to schedule."""
         await self._ensure_loop()
         request.reset()
+        logger.info(
+            "Awaiting before_queue handlers for request: %s.",
+            request.httpx_request.url,
+        )
+        async with asyncio.TaskGroup() as tg:
+            for handler in self.handlers:
+                _ = tg.create_task(handler.before_queue(self, request))
+        logger.info(
+            "Handlers finished. Queueing request: %s",
+            request.httpx_request.url,
+        )
         await self._queue.put(request)
 
     async def request(
@@ -214,8 +241,9 @@ class RequestManager:
 
         Parameters are passed directly to `httpx.AsyncClient.send`.
 
-        Responses will not be returned until the `listen` method has exited on
-        all handlers.
+        Requests will not be sent until the `before_queue` method has exited on
+        all handlers, and Responses will not be returned until the `listen`
+        method has exited on all handlers.
 
         Args:
             method: The HTTP method for this request
@@ -247,15 +275,17 @@ class RequestManager:
             follow_redirects=follow_redirects,
         )
 
-        handler_tasks = {
-            asyncio.ensure_future(h.listen(self, request))
-            for h in self.handlers
-        }
-        logger.info("Handlers listening: %s", request.httpx_request.url)
-        await self.enqueue_request(request)
-        logger.info("Request queued: %s", request.httpx_request.url)
-        _ = await asyncio.gather(*handler_tasks)
-        logger.info("Handlers finished. Waiting for response: %s", url)
+        async with asyncio.TaskGroup() as tg:
+            for handler in self.handlers:
+                _ = tg.create_task(handler.listen(self, request))
+            logger.info("Handlers listening: %s", request.httpx_request.url)
+            logger.info("Queueing request: %s", request.httpx_request.url)
+            _ = tg.create_task(self.enqueue_request(request))
+
+        logger.info(
+            "Request queued and handlers finished. Waiting for response: %s",
+            url,
+        )
 
         return await request.response()
 
@@ -418,24 +448,36 @@ class RequestManager:
             _ = loop.create_task(client.aclose())
 
 
+@dataclass
 class RateLimit(RequestHandler):
     """Handler to enforce a rate limit on requests.
 
     Attributes:
-        rp_ns: The maximum number of requests per nanosecond (lol). Used to simplify rate checks."""
+        rps: The maximum number of requests to allow per second."""
 
-    def __init__(self, rps: float = 2.0) -> None:
-        """Initialize the rate limit handler.
+    rps: InitVar[float] = 2.0
+    _last_request_time: float = 0.0
+    _lock: asyncio.Lock = field(default_factory=asyncio.Lock)
+    _request_spacing: float = 1.0
 
-        Args:
-            rps: The maximum number of requests to send per second."""
-        self.rp_ns: float = 1e9 / rps
-        self._next_time: float = time.monotonic_ns() - self.rp_ns
+    def __post_init__(self, rps: float) -> None:
+        if rps <= 0.0:
+            raise ValueError(
+                "Request/second ratelimit must be greater than 0.0"
+            )
+        self._request_spacing = 1.0 / rps
 
     @override
-    async def listen(
-        self, manager: RequestManager, request: ScheduledRequest
-    ) -> None: ...
+    async def before_send(
+        self, manager: "RequestManager", request: ScheduledRequest
+    ) -> None:
+        """Ensure that requests aren't sent faster than the rate limit."""
+        _ = await self._lock.acquire()
+        elapsed = time.time() - self._last_request_time
+        sleep_time = max(0.0, self._request_spacing - elapsed)
+        self._last_request_time = time.time() + sleep_time
+        self._lock.release()
+        await asyncio.sleep(sleep_time)
 
 
 @dataclass
@@ -452,15 +494,9 @@ class Retry(RequestHandler):
     async def listen(
         self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
-        """Listen for events on a request.
-
-        Awaits the response in a try-except block and retries the request if
+        """Awaits the response in a try-except block and re-queues the request if
         the `except` block is triggered and the maximum number of retries hasn't
-        been hit yet.
-
-        Args:
-            manager: The `RequestManager` that called this handler.
-            request: The request to listen to."""
+        been hit yet."""
         remaining_tries = self.max_retries
         while remaining_tries > 0:
             try:
