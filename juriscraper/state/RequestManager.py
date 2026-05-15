@@ -3,7 +3,7 @@ import time
 from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from dataclasses import InitVar, dataclass, field
 from http.cookiejar import CookieJar
-from typing import Any, override
+from typing import Any
 
 import httpx
 from httpx import USE_CLIENT_DEFAULT, Auth, Cookies, Request, Response
@@ -11,7 +11,7 @@ from httpx._client import UseClientDefault
 
 from juriscraper.lib.log_tools import make_default_logger
 
-logger = make_default_logger(__name__)
+logger = make_default_logger()
 
 USER_AGENT: str = "Juriscraper (Free Law Project)"
 
@@ -39,8 +39,11 @@ class ScheduledRequest:
     def reset(self) -> None:
         """Reset the request to its initial state.
 
-        Used when queueing a request to ensure that the response is unset."""
-        _ = self.response_future.cancel("Request reset.")
+        Used when re-queueing a request to ensure that the response is unset.
+        No-op when the future is still pending — otherwise we would cancel a
+        future that listen handlers are already awaiting on the first attempt."""
+        if not self.response_future.done():
+            return
         self.response_future = asyncio.Future()
 
     async def response(self) -> Response:
@@ -74,7 +77,7 @@ class RequestHandler:
     async def listen(
         self, manager: "RequestManager", request: ScheduledRequest
     ) -> None:
-        """The RequestManager spawns this method in a TaskGroup to listen to the
+        """The RequestManager spawns this method in a Task to listen to the
         request concurrently.
 
         Args:
@@ -163,9 +166,12 @@ class RequestManager:
                 "Got request: %s. Waiting for before_send to complete.",
                 request.httpx_request.url,
             )
-            async with asyncio.TaskGroup() as tg:
-                for handler in self.handlers:
-                    _ = tg.create_task(handler.before_send(self, request))
+            _ = await asyncio.gather(
+                *[
+                    handler.before_send(self, request)
+                    for handler in self.handlers
+                ]
+            )
             logger.info(
                 "Handlers finished. Sending request: %s",
                 request.httpx_request.url,
@@ -203,9 +209,10 @@ class RequestManager:
             "Awaiting before_queue handlers for request: %s.",
             request.httpx_request.url,
         )
-        async with asyncio.TaskGroup() as tg:
-            for handler in self.handlers:
-                _ = tg.create_task(handler.before_queue(self, request))
+        # We stil have to support 3.10 so no asyncio.TaskGroup :(
+        _ = await asyncio.gather(
+            *[handler.before_queue(self, request) for handler in self.handlers]
+        )
         logger.info(
             "Handlers finished. Queueing request: %s",
             request.httpx_request.url,
@@ -265,12 +272,14 @@ class RequestManager:
             follow_redirects=follow_redirects,
         )
 
-        async with asyncio.TaskGroup() as tg:
-            for handler in self.handlers:
-                _ = tg.create_task(handler.listen(self, request))
-            logger.info("Handlers listening: %s", request.httpx_request.url)
-            logger.info("Queueing request: %s", request.httpx_request.url)
-            _ = tg.create_task(self.enqueue_request(request))
+        listen_tasks = {
+            asyncio.create_task(h.listen(self, request)) for h in self.handlers
+        }
+        logger.info("Handlers listening: %s", request.httpx_request.url)
+        logger.info("Queueing request: %s", request.httpx_request.url)
+        _ = await self.enqueue_request(request)
+
+        _ = await asyncio.gather(*listen_tasks)
 
         logger.info(
             "Request queued and handlers finished. Waiting for response: %s",
@@ -457,7 +466,6 @@ class RateLimit(RequestHandler):
             )
         self._request_spacing = 1.0 / rps
 
-    @override
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
     ) -> None:
@@ -480,7 +488,6 @@ class Retry(RequestHandler):
 
     max_retries: int = 3
 
-    @override
     async def listen(
         self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
