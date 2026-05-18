@@ -1,10 +1,12 @@
-from typing import ClassVar
+from typing import ClassVar, override
 
 from pydantic import UUID4, AliasPath, Field
 
-from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.docket import Document
-from juriscraper.state.florida.common import FloridaPaginatedResults
+from juriscraper.state.florida.common import (
+    FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
+)
 
 
 class FloridaDocument(Document):
@@ -60,7 +62,9 @@ class FloridaDocument(Document):
     url: str = ""
 
 
-class FloridaDocumentAccessParser(LegacyParser[list[FloridaDocument]]):
+class FloridaDocumentAccessParser(
+    FloridaPaginatedResultsParser[FloridaDocument]
+):
     """
     Parser for Florida document list API results.
 
@@ -69,8 +73,6 @@ class FloridaDocumentAccessParser(LegacyParser[list[FloridaDocument]]):
 
     endpoint: ClassVar[str] = "/courts/cms/docketentrydocumentaccess"
 
-    def _parse(self, i: str) -> list[FloridaDocument]:
-        results = FloridaPaginatedResults[FloridaDocument].model_validate_json(
-            i
-        )
-        return results.results
+    @override
+    def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaDocument]:
+        return FloridaPaginatedResults[FloridaDocument].model_validate_json(i)

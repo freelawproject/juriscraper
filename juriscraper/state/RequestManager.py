@@ -6,7 +6,7 @@ from http.cookiejar import CookieJar
 from typing import Any
 
 import httpx
-from httpx import USE_CLIENT_DEFAULT, Auth, Cookies, Request, Response
+from httpx import USE_CLIENT_DEFAULT, Auth, Cookies, Request, Response, URL
 from httpx._client import UseClientDefault
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -105,6 +105,7 @@ class RequestManager:
         cookies: CookieType | None = None,
         timeout: float = 30.0,
         follow_redirects: bool = True,
+        base_url: URL | str = "",
         default_encoding: str = "utf-8",
     ) -> None:
         """Initialize the request manager.
@@ -120,6 +121,7 @@ class RequestManager:
             cookies: Cookies to include in every request (httpx AsyncClient passthrough)
             timeout: Timeout for every request (httpx AsyncClient passthrough)
             follow_redirects: Whether to follow redirects (httpx AsyncClient passthrough)
+            base_url: Base URL for every request (httpx AsyncClient passthrough)
             default_encoding: Default encoding for responses if not specified by `Content-Type`
                 header (httpx AsyncClient passthrough)
         """
@@ -149,6 +151,7 @@ class RequestManager:
             cookies=cookies,
             timeout=timeout,
             follow_redirects=follow_redirects,
+            base_url=base_url,
             default_encoding=default_encoding,
         )
         self.handlers: list[RequestHandler] = list(handlers)

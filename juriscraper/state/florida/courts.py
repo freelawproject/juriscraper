@@ -39,6 +39,17 @@ class FloridaCourtID(Enum):
     """Unknown Florida court"""
 
 
+FLORIDA_COURT_EXTERNAL_ID_MAP: dict[str, FloridaCourtID] = {
+    "1": FloridaCourtID.SUPREME_COURT,
+    "2": FloridaCourtID.FIRST_COA,
+    "3": FloridaCourtID.SECOND_COA,
+    "4": FloridaCourtID.THIRD_COA,
+    "5": FloridaCourtID.FOURTH_COA,
+    "6": FloridaCourtID.FIFTH_COA,
+    "7": FloridaCourtID.SIXTH_COA,
+}
+
+
 class FloridaCourtLocation(BaseModel):
     """
     A location within a Florida court.

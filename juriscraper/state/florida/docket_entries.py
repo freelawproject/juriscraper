@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, Any, ClassVar, override
 
 from pydantic import (
     UUID4,
@@ -10,10 +10,10 @@ from pydantic import (
 )
 from pydantic_core import PydanticCustomError
 
-from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
     datetime_str_to_date_validator,
 )
 from juriscraper.state.florida.documents import FloridaDocument
@@ -223,7 +223,9 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     attachments: list[FloridaDocument] = []
 
 
-class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
+class FloridaDocketEntryListParser(
+    FloridaPaginatedResultsParser[FloridaDocketEntry]
+):
     """
     Parser for Florida docket entry list API results.
 
@@ -232,8 +234,10 @@ class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
 
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/docketentries"
 
-    def _parse(self, i: str) -> list[FloridaDocketEntry]:
-        results = FloridaPaginatedResults[
-            FloridaDocketEntry
-        ].model_validate_json(i)
-        return results.results
+    @override
+    def parse_full(
+        self, i: str
+    ) -> FloridaPaginatedResults[FloridaDocketEntry]:
+        return FloridaPaginatedResults[FloridaDocketEntry].model_validate_json(
+            i
+        )
