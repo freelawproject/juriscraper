@@ -8,12 +8,9 @@ tests deterministic without needing a recording layer.
 
 from __future__ import annotations
 
-import json
 import unittest
 from collections.abc import Callable
 from datetime import date
-from pathlib import Path
-from tempfile import TemporaryDirectory
 from typing import Any
 
 import httpx
@@ -24,7 +21,6 @@ from juriscraper.state.florida.scraper import (
     PAGE_SIZE,
     CaseRef,
     FloridaScraper,
-    _fs_safe,
 )
 
 # ---------------------------------------------------------------------------
@@ -143,14 +139,12 @@ class _Recorder:
         )
 
 
-def _make_scraper(
-    output_root: Path, recorder: _Recorder, *, rps: float = 1000.0
-) -> FloridaScraper:
+def _make_scraper(recorder: _Recorder, *, rps: float = 1000.0) -> FloridaScraper:
     """Build a scraper whose request manager talks to ``recorder``.
 
     ``rps`` defaults very high so tests don't pay for rate limiting.
     """
-    scraper = FloridaScraper(output_root=output_root, rps=rps)
+    scraper = FloridaScraper(rps=rps)
     scraper.manager.client._transport = httpx.MockTransport(recorder)
     return scraper
 
@@ -160,46 +154,50 @@ def _make_scraper(
 # ---------------------------------------------------------------------------
 
 
-class FsSafeTest(unittest.TestCase):
-    def test_passthrough_for_safe_names(self):
-        self.assertEqual(_fs_safe("4D2026-0606"), "4D2026-0606")
-        self.assertEqual(_fs_safe("abc.def_ghi-jkl"), "abc.def_ghi-jkl")
-
-    def test_replaces_path_separators(self):
-        self.assertEqual(_fs_safe("a/b\\c"), "a_b_c")
-
-    def test_collapses_runs_of_unsafe_chars(self):
-        self.assertEqual(_fs_safe("a   b!!c"), "a_b_c")
-
-
 class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
-    async def test_fetches_saves_and_caches(self):
+    async def test_fetches_and_caches(self):
         recorder = _Recorder()
         recorder.register(
             lambda r: r.url.path == "/courts",
             lambda r: httpx.Response(200, json=_courts_body()),
         )
 
-        with TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            scraper = _make_scraper(root, recorder)
-            try:
-                courts = await scraper.fetch_courts()
-            finally:
-                await scraper.close()
+        scraper = _make_scraper(recorder)
+        try:
+            courts = await scraper.fetch_courts()
+        finally:
+            await scraper.close()
 
-            self.assertEqual(len(courts), 2)
-            self.assertIn("1", scraper.courts_by_external_id)
-            self.assertIn("5", scraper.courts_by_external_id)
+        self.assertEqual(len(courts), 2)
+        self.assertIn("1", scraper.courts_by_external_id)
+        self.assertIn("5", scraper.courts_by_external_id)
 
-            saved = json.loads((root / "courts.json").read_text())
-            self.assertEqual(
-                saved["_embedded"]["results"][0]["externalIdentifier"], 1
-            )
+    async def test_repeated_calls_hit_api_once(self):
+        """fetch_courts should cache for the scraper's lifetime."""
+        recorder = _Recorder()
+        recorder.register(
+            lambda r: r.url.path == "/courts",
+            lambda r: httpx.Response(200, json=_courts_body()),
+        )
+
+        scraper = _make_scraper(recorder)
+        try:
+            first = await scraper.fetch_courts()
+            second = await scraper.fetch_courts()
+            third = await scraper.fetch_courts()
+        finally:
+            await scraper.close()
+
+        # Same object, populated from cache on the second and third calls.
+        self.assertIs(first, second)
+        self.assertIs(second, third)
+        # Exactly one outgoing request to /courts.
+        court_calls = [c for c in recorder.calls if c[0] == "/courts"]
+        self.assertEqual(len(court_calls), 1)
 
 
 class FetchMetadataTest(unittest.IsolatedAsyncioTestCase):
-    async def test_writes_per_court_and_global_files(self):
+    async def test_returns_per_court_and_global_payloads(self):
         recorder = _Recorder()
         recorder.register(
             lambda r: r.url.path == "/courts",
@@ -218,23 +216,57 @@ class FetchMetadataTest(unittest.IsolatedAsyncioTestCase):
             lambda r: httpx.Response(200, json=[{"sub": True}]),
         )
 
-        with TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            scraper = _make_scraper(root, recorder)
-            try:
-                await scraper.fetch_courts()
-                await scraper.fetch_metadata("5")
-            finally:
-                await scraper.close()
+        scraper = _make_scraper(recorder)
+        try:
+            await scraper.fetch_courts()
+            metadata = await scraper.fetch_metadata("5")
+        finally:
+            await scraper.close()
 
-            self.assertTrue(
-                (root / "metadata" / "casepartysubtypes.json").exists()
-            )
-            self.assertTrue(
-                (root / "metadata" / "5" / "casecategories.json").exists()
-            )
-            self.assertTrue(
-                (root / "metadata" / "5" / "docketentrysubtypes.json").exists()
+        self.assertEqual(metadata.casepartysubtypes, [{"a": 1}])
+        self.assertEqual(metadata.casecategories, [{"cat": True}])
+        self.assertEqual(metadata.docketentrysubtypes, [{"sub": True}])
+
+    async def test_repeated_calls_hit_api_once_per_court(self):
+        """fetch_metadata should cache per-court for the scraper's lifetime."""
+        recorder = _Recorder()
+        recorder.register(
+            lambda r: r.url.path == "/courts",
+            lambda r: httpx.Response(200, json=_courts_body()),
+        )
+        recorder.register(
+            lambda r: r.url.path == "/courts/casepartysubtypes",
+            lambda r: httpx.Response(200, json=[{"a": 1}]),
+        )
+        recorder.register(
+            lambda r: r.url.path.endswith("/cms/casecategories"),
+            lambda r: httpx.Response(200, json=[{"cat": True}]),
+        )
+        recorder.register(
+            lambda r: r.url.path.endswith("/cms/docketentrysubtypes"),
+            lambda r: httpx.Response(200, json=[{"sub": True}]),
+        )
+
+        scraper = _make_scraper(recorder)
+        try:
+            await scraper.fetch_courts()
+            first = await scraper.fetch_metadata("5")
+            second = await scraper.fetch_metadata("5")
+        finally:
+            await scraper.close()
+
+        self.assertIs(first, second)
+        meta_paths = (
+            "/courts/casepartysubtypes",
+            f"/courts/{COURT_5_UUID}/cms/casecategories",
+            f"/courts/{COURT_5_UUID}/cms/docketentrysubtypes",
+        )
+        for path in meta_paths:
+            matching = [c for c in recorder.calls if c[0] == path]
+            self.assertEqual(
+                len(matching),
+                1,
+                f"Expected exactly one request to {path}, got {len(matching)}",
             )
 
     async def test_unknown_court_raises(self):
@@ -243,14 +275,13 @@ class FetchMetadataTest(unittest.IsolatedAsyncioTestCase):
             lambda r: r.url.path == "/courts",
             lambda r: httpx.Response(200, json=_courts_body()),
         )
-        with TemporaryDirectory() as tmp:
-            scraper = _make_scraper(Path(tmp), recorder)
-            try:
-                await scraper.fetch_courts()
-                with self.assertRaises(ValueError):
-                    await scraper.fetch_metadata("999")
-            finally:
-                await scraper.close()
+        scraper = _make_scraper(recorder)
+        try:
+            await scraper.fetch_courts()
+            with self.assertRaises(ValueError):
+                await scraper.fetch_metadata("999")
+        finally:
+            await scraper.close()
 
 
 class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
@@ -294,29 +325,28 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             case_handler,
         )
 
-        with TemporaryDirectory() as tmp:
-            scraper = _make_scraper(Path(tmp), recorder)
-            try:
-                await scraper.fetch_courts()
-                refs = [
-                    ref
-                    async for ref in scraper.enumerate_cases(
-                        "5", (date(2026, 3, 1), date(2026, 3, 31))
-                    )
-                ]
-            finally:
-                await scraper.close()
+        scraper = _make_scraper(recorder)
+        try:
+            await scraper.fetch_courts()
+            refs = [
+                ref
+                async for ref in scraper.enumerate_cases(
+                    "5", (date(2026, 3, 1), date(2026, 3, 31))
+                )
+            ]
+        finally:
+            await scraper.close()
 
-            self.assertEqual(len(refs), 4)
-            self.assertEqual(
-                [r.case_number for r in refs],
-                [
-                    "4D2026-0001",
-                    "4D2026-0002",
-                    "4D2026-0003",
-                    "4D2026-0004",
-                ],
-            )
+        self.assertEqual(len(refs), 4)
+        self.assertEqual(
+            [r.case_number for r in refs],
+            [
+                "4D2026-0001",
+                "4D2026-0002",
+                "4D2026-0003",
+                "4D2026-0004",
+            ],
+        )
 
     async def test_splits_range_when_total_hits_cap(self):
         recorder = _Recorder()
@@ -374,40 +404,47 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             case_handler,
         )
 
-        with TemporaryDirectory() as tmp:
-            scraper = _make_scraper(Path(tmp), recorder)
-            try:
-                await scraper.fetch_courts()
-                refs = [
-                    ref
-                    async for ref in scraper.enumerate_cases(
-                        "5", (date(2026, 3, 1), date(2026, 3, 31))
-                    )
-                ]
-            finally:
-                await scraper.close()
+        scraper = _make_scraper(recorder)
+        try:
+            await scraper.fetch_courts()
+            refs = [
+                ref
+                async for ref in scraper.enumerate_cases(
+                    "5", (date(2026, 3, 1), date(2026, 3, 31))
+                )
+            ]
+        finally:
+            await scraper.close()
 
-            self.assertEqual(
-                sorted(r.case_number for r in refs),
-                ["4D2026-HI", "4D2026-LO"],
-            )
-            # Three first-page queries should have been issued: the full
-            # month, then each half.
-            self.assertEqual(len(seen_ranges), 3)
+        self.assertEqual(
+            sorted(r.case_number for r in refs),
+            ["4D2026-HI", "4D2026-LO"],
+        )
+        # Three first-page queries should have been issued: the full
+        # month, then each half.
+        self.assertEqual(len(seen_ranges), 3)
 
 
 class FetchCaseTest(unittest.IsolatedAsyncioTestCase):
-    async def test_writes_every_payload_for_a_case(self):
+    async def test_returns_every_payload_for_a_case(self):
         recorder = _Recorder()
 
         def case_handler(request: httpx.Request) -> httpx.Response:
             path = request.url.path
             if path.endswith("/cms/cases/CASEUUID"):
-                return httpx.Response(200, json={"caseHeader": {}})
+                return httpx.Response(
+                    200, json={"caseHeader": {"caseNumber": "4D2026-0606"}}
+                )
             if path.endswith("/hearings"):
-                return httpx.Response(200, json=_paginated_body([]))
+                return httpx.Response(
+                    200,
+                    json=_paginated_body([{"hearingUUID": "h1"}]),
+                )
             if path.endswith("/parties"):
-                return httpx.Response(200, json=_paginated_body([]))
+                return httpx.Response(
+                    200,
+                    json=_paginated_body([{"partyUUID": "p1"}]),
+                )
             if path.endswith("/docketentries"):
                 return httpx.Response(
                     200,
@@ -423,43 +460,60 @@ class FetchCaseTest(unittest.IsolatedAsyncioTestCase):
                     ),
                 )
             if path == "/courts/cms/docketentrydocumentsaccess":
+                entry_uuid = request.url.params.get(
+                    "docketEntryHeader.docketEntryUUID", ""
+                )
                 return httpx.Response(
                     200,
                     json=_paginated_body(
-                        [{"documentLinkUUID": "x", "documentName": "doc"}]
+                        [
+                            {
+                                "documentLinkUUID": f"link-{entry_uuid}",
+                                "documentName": "doc",
+                            }
+                        ]
                     ),
                 )
             return httpx.Response(404)
 
         recorder.register(lambda r: True, case_handler)
 
-        with TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            scraper = _make_scraper(root, recorder)
-            try:
-                await scraper.fetch_case(
-                    CaseRef(
-                        court_external_id="5",
-                        court_uuid=COURT_5_UUID,
-                        case_uuid="CASEUUID",
-                        case_number="4D2026-0606",
-                    )
+        scraper = _make_scraper(recorder)
+        try:
+            data = await scraper.fetch_case(
+                CaseRef(
+                    court_external_id="5",
+                    court_uuid=COURT_5_UUID,
+                    case_uuid="CASEUUID",
+                    case_number="4D2026-0606",
                 )
-            finally:
-                await scraper.close()
+            )
+        finally:
+            await scraper.close()
 
-            case_dir = root / "5" / "4D2026-0606"
-            self.assertTrue((case_dir / "case.json").exists())
-            self.assertTrue((case_dir / "hearings.json").exists())
-            self.assertTrue((case_dir / "parties.json").exists())
-            self.assertTrue((case_dir / "docketentries.json").exists())
-            attachments_dir = case_dir / "docketentrydocuments"
-            self.assertTrue(attachments_dir.exists())
+        self.assertEqual(data.ref.case_number, "4D2026-0606")
+        self.assertEqual(
+            data.case, {"caseHeader": {"caseNumber": "4D2026-0606"}}
+        )
+        self.assertEqual(data.hearings, [{"hearingUUID": "h1"}])
+        self.assertEqual(data.parties, [{"partyUUID": "p1"}])
+        self.assertEqual(len(data.docket_entries), 2)
+        self.assertEqual(
+            sorted(data.docket_entry_documents),
+            [
+                "deadbeef-0001-0000-0000-000000000000",
+                "deadbeef-0002-0000-0000-000000000000",
+            ],
+        )
+        # Each entry's document-access payload was preserved as a list.
+        for entry_uuid, results in data.docket_entry_documents.items():
             self.assertEqual(
-                sorted(p.name for p in attachments_dir.iterdir()),
+                results,
                 [
-                    "deadbeef-0001-0000-0000-000000000000.json",
-                    "deadbeef-0002-0000-0000-000000000000.json",
+                    {
+                        "documentLinkUUID": f"link-{entry_uuid}",
+                        "documentName": "doc",
+                    }
                 ],
             )
 
@@ -487,29 +541,24 @@ class FetchCaseTest(unittest.IsolatedAsyncioTestCase):
 
         recorder.register(lambda r: True, case_handler)
 
-        with TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            scraper = _make_scraper(root, recorder)
-            try:
-                await scraper.fetch_case(
-                    CaseRef(
-                        court_external_id="5",
-                        court_uuid=COURT_5_UUID,
-                        case_uuid="CASEUUID",
-                        case_number="4D2026-MISSING",
-                    )
+        scraper = _make_scraper(recorder)
+        try:
+            data = await scraper.fetch_case(
+                CaseRef(
+                    court_external_id="5",
+                    court_uuid=COURT_5_UUID,
+                    case_uuid="CASEUUID",
+                    case_number="4D2026-MISSING",
                 )
-            finally:
-                await scraper.close()
-
-            attachments_dir = (
-                root / "5" / "4D2026-MISSING" / "docketentrydocuments"
             )
-            self.assertFalse(attachments_dir.exists())
+        finally:
+            await scraper.close()
+
+        self.assertEqual(data.docket_entry_documents, {})
 
 
 class BackfillTest(unittest.IsolatedAsyncioTestCase):
-    async def test_end_to_end_yields_case_refs(self):
+    async def test_end_to_end_yields_case_data(self):
         recorder = _Recorder()
 
         def handler(request: httpx.Request) -> httpx.Response:
@@ -537,7 +586,10 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
             if path.endswith(
                 "/cms/cases/11111111-2222-3333-4444-555555555555"
             ):
-                return httpx.Response(200, json={"caseHeader": {}})
+                return httpx.Response(
+                    200,
+                    json={"caseHeader": {"caseNumber": "4D2026-0001"}},
+                )
             if path.endswith("/hearings"):
                 return httpx.Response(200, json=_paginated_body([]))
             if path.endswith("/parties"):
@@ -548,21 +600,25 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
 
         recorder.register(lambda r: True, handler)
 
-        with TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            scraper = _make_scraper(root, recorder)
-            try:
-                refs = []
-                async for ref in scraper.backfill(
-                    ["5"], (date(2026, 3, 1), date(2026, 3, 31))
-                ):
-                    refs.append(ref)
-            finally:
-                await scraper.close()
+        scraper = _make_scraper(recorder)
+        try:
+            cases = []
+            async for case_data in scraper.backfill(
+                ["5"], (date(2026, 3, 1), date(2026, 3, 31))
+            ):
+                cases.append(case_data)
+        finally:
+            await scraper.close()
 
-            self.assertEqual(len(refs), 1)
-            self.assertEqual(refs[0].case_number, "4D2026-0001")
-            self.assertTrue((root / "5" / "4D2026-0001" / "case.json").exists())
+        self.assertEqual(len(cases), 1)
+        self.assertEqual(cases[0].ref.case_number, "4D2026-0001")
+        self.assertEqual(
+            cases[0].case, {"caseHeader": {"caseNumber": "4D2026-0001"}}
+        )
+        self.assertEqual(cases[0].hearings, [])
+        self.assertEqual(cases[0].parties, [])
+        self.assertEqual(cases[0].docket_entries, [])
+        self.assertEqual(cases[0].docket_entry_documents, {})
 
 
 class FormatDatetimeTest(unittest.TestCase):
@@ -575,19 +631,18 @@ class FormatDatetimeTest(unittest.TestCase):
 
 class UrlTest(unittest.IsolatedAsyncioTestCase):
     async def test_url_join_handles_missing_slash(self):
-        with TemporaryDirectory() as tmp:
-            scraper = FloridaScraper(output_root=Path(tmp))
-            try:
-                self.assertEqual(
-                    scraper._url("courts"),
-                    f"{FLORIDA_API_BASE}/courts",
-                )
-                self.assertEqual(
-                    scraper._url("/courts"),
-                    f"{FLORIDA_API_BASE}/courts",
-                )
-            finally:
-                await scraper.close()
+        scraper = FloridaScraper()
+        try:
+            self.assertEqual(
+                scraper._url("courts"),
+                f"{FLORIDA_API_BASE}/courts",
+            )
+            self.assertEqual(
+                scraper._url("/courts"),
+                f"{FLORIDA_API_BASE}/courts",
+            )
+        finally:
+            await scraper.close()
 
 
 if __name__ == "__main__":

@@ -3,51 +3,32 @@ Scraper for the Florida unified court API.
 
 Drives :class:`juriscraper.state.RequestManager.RequestManager` against the
 public Florida case management API at ``https://acis-api.flcourts.gov`` and
-saves raw JSON responses for later parsing/ingestion. Design notes live in
+yields parsed JSON responses for downstream ingestion. Design notes live in
 https://github.com/freelawproject/courtlistener/issues/6831.
 
 The scraper is organized around a few concerns:
 
 - Pulling the list of courts at startup and caching their UUIDs in memory so
-  later calls can build per-court URLs.
+  later calls can build per-court URLs. The courts list and per-court
+  reference metadata are cached on the instance and hit at most once each
+  per scraper lifetime.
 - Paging through ``/courts/cms/cases`` to enumerate cases for a court and date
   range, recursively splitting the range whenever the API reports it has more
   than ``MAX_RESULTS`` matches (the cap is 10,000).
 - For each case, pulling case metadata, hearings, parties, and docket entries,
   then pulling the document access record for every docket entry.
 
-Raw responses are written under an output root directory using a layout the
-parsers can navigate without round-tripping back to the API:
-
-::
-
-    {output_root}/
-        courts.json
-        metadata/
-            casepartysubtypes.json
-            {court_id}/
-                casecategories.json
-                docketentrysubtypes.json
-        {court_id}/
-            {case_number}/
-                case.json
-                hearings.json
-                parties.json
-                docketentries.json
-                docketentrydocuments/
-                    {docket_entry_uuid}.json
+This module does not persist any data — case-list and per-case payloads are
+yielded to the caller (CourtListener) which is responsible for storage.
 """
 
 from __future__ import annotations
 
 import asyncio
-import json
-import re
 from collections.abc import AsyncGenerator
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from enum import IntEnum
-from pathlib import Path
 from typing import Any
 
 import httpx
@@ -78,6 +59,7 @@ MAX_RESULTS: int = 10_000
 # roughly five JSON requests, so 2.5 rps is the conservative starting point
 # agreed on in the design issue.
 DEFAULT_RPS: float = 2.5
+
 
 class ScrapedCourtExternalID(IntEnum):
     """Courts we actively scrape, by ``externalIdentifier`` on ``/courts``.
@@ -110,15 +92,6 @@ SCRAPED_COURT_EXTERNAL_IDS: frozenset[int] = frozenset(
     int(m) for m in ScrapedCourtExternalID
 )
 
-# Filename-safe pattern. The API uses case numbers like "4D2026-0606" which
-# are already filesystem-friendly, but be defensive about unusual inputs.
-_FS_UNSAFE_RE = re.compile(r"[^A-Za-z0-9._-]+")
-
-
-def _fs_safe(name: str) -> str:
-    """Replace filesystem-hostile characters with underscores."""
-    return _FS_UNSAFE_RE.sub("_", name)
-
 
 @dataclass
 class CaseRef:
@@ -143,11 +116,61 @@ class CaseRef:
 
 
 @dataclass
+class CaseData:
+    """Full payload for a scraped case, ready for downstream persistence.
+
+    Bundles the discovery :class:`CaseRef` with every parsed JSON body the
+    scraper pulled for it. CourtListener decides how to persist these; the
+    scraper just hands them over.
+
+    Attributes:
+        ref: The :class:`CaseRef` used to fetch this case.
+        case: Parsed ``/courts/{court}/cms/cases/{case}`` response body.
+        hearings: Concatenated ``_embedded.results`` from the hearings
+            endpoint.
+        parties: Concatenated ``_embedded.results`` from the parties
+            endpoint.
+        docket_entries: Concatenated ``_embedded.results`` from the
+            docketentries endpoint.
+        docket_entry_documents: Mapping of ``docketEntryUUID`` to the
+            concatenated ``_embedded.results`` returned by the
+            ``/courts/cms/docketentrydocumentsaccess`` endpoint for that
+            entry. Entries without a UUID are skipped during the fetch and
+            don't appear here.
+    """
+
+    ref: CaseRef
+    case: dict[str, Any]
+    hearings: list[dict[str, Any]]
+    parties: list[dict[str, Any]]
+    docket_entries: list[dict[str, Any]]
+    docket_entry_documents: dict[str, list[dict[str, Any]]]
+
+
+@dataclass
+class CourtMetadata:
+    """Reference metadata payloads for a single court.
+
+    Attributes:
+        casepartysubtypes: Parsed body of ``/courts/casepartysubtypes`` (this
+            is a global endpoint, but we surface it alongside the per-court
+            metadata for convenience).
+        casecategories: Parsed body of
+            ``/courts/{court}/cms/casecategories``.
+        docketentrysubtypes: Parsed body of
+            ``/courts/{court}/cms/docketentrysubtypes``.
+    """
+
+    casepartysubtypes: Any
+    casecategories: Any
+    docketentrysubtypes: Any
+
+
+@dataclass
 class FloridaScraper:
     """Async scraper for the Florida court API.
 
     Attributes:
-        output_root: Directory under which raw JSON responses are written.
         base_url: API base URL, defaults to the production endpoint.
         rps: Requests per second. Defaults to :data:`DEFAULT_RPS`.
         max_retries: Number of times the :class:`Retry` handler will requeue
@@ -156,19 +179,26 @@ class FloridaScraper:
             ``__post_init__``.
         courts_by_external_id: Cache of court metadata keyed by the string
             form of ``externalIdentifier``. Populated by
-            :meth:`fetch_courts`.
+            :meth:`fetch_courts` and reused on subsequent calls.
     """
 
-    output_root: Path = field(default_factory=lambda: Path("florida"))
     base_url: str = FLORIDA_API_BASE
     rps: float = DEFAULT_RPS
     max_retries: int = 3
     manager: RequestManager = field(init=False)
     courts_by_external_id: dict[str, FloridaCourt] = field(default_factory=dict)
+    # Single-slot lifetime caches. ``_courts_cache`` holds the parsed list
+    # returned by ``fetch_courts``; ``_metadata_cache`` maps a court external
+    # id to its :class:`CourtMetadata`. Both are populated lazily and never
+    # invalidated within a scraper instance.
+    _courts_cache: list[FloridaCourt] | None = field(
+        default=None, init=False, repr=False
+    )
+    _metadata_cache: dict[str, CourtMetadata] = field(
+        default_factory=dict, init=False, repr=False
+    )
 
     def __post_init__(self) -> None:
-        # Coerce strings/relative paths so callers don't have to.
-        self.output_root = Path(self.output_root)
         self.manager = RequestManager(
             handlers=[
                 RateLimit(rps=self.rps),
@@ -218,27 +248,6 @@ class FloridaScraper:
         return response.json()
 
     @staticmethod
-    def _write_json(target: Path, payload: Any) -> None:
-        """Write ``payload`` to ``target`` as compact JSON.
-
-        Creates parent directories as needed. The output uses no indent and
-        the tightest JSON separators we can — the scraper produces a lot of
-        small files (one per docket entry, etc.), so storage size wins out
-        over diff legibility. Non-ASCII is preserved verbatim.
-        """
-        target.parent.mkdir(parents=True, exist_ok=True)
-        with target.open("w", encoding="utf-8") as f:
-            json.dump(payload, f, separators=(",", ":"), ensure_ascii=False)
-
-    def _case_dir(self, court_external_id: str, case_number: str) -> Path:
-        """Resolve the on-disk directory for ``case_number`` in a court."""
-        return (
-            self.output_root
-            / _fs_safe(court_external_id)
-            / _fs_safe(case_number)
-        )
-
-    @staticmethod
     def _format_datetime(d: date) -> str:
         """Format a date for the API's range filters.
 
@@ -256,17 +265,20 @@ class FloridaScraper:
     # ------------------------------------------------------------------
 
     async def fetch_courts(self) -> list[FloridaCourt]:
-        """Fetch ``/courts``, save the raw response, and cache the result.
+        """Fetch ``/courts`` once per scraper lifetime, returning the cached
+        list on subsequent calls.
 
         Returns:
             The parsed list of :class:`FloridaCourt`.
         """
+        if self._courts_cache is not None:
+            return self._courts_cache
+
         logger.info("Fetching Florida courts list.")
         # The courts endpoint is paginated like everything else, but the
         # current size of the result set (well under 50) lets us request a
         # single page.
         raw = await self._get_json("/courts", params={"size": PAGE_SIZE})
-        self._write_json(self.output_root / "courts.json", raw)
 
         # Validate via the Pydantic model directly. Using the LegacyParser
         # wrapper is overkill here — we already have a parsed dict and don't
@@ -276,18 +288,26 @@ class FloridaScraper:
         self.courts_by_external_id = {
             str(c.external_identifier): c for c in courts
         }
+        self._courts_cache = courts
         logger.info("Fetched %d Florida courts.", len(courts))
         return courts
 
-    async def fetch_metadata(self, court_external_id: str) -> None:
-        """Fetch reference metadata for ``court_external_id`` and save it.
+    async def fetch_metadata(self, court_external_id: str) -> CourtMetadata:
+        """Fetch reference metadata for ``court_external_id``, caching it.
 
-        Pulls the global ``/courts/casepartysubtypes`` once per call and the
-        per-court ``casecategories`` and ``docketentrysubtypes`` endpoints.
+        Pulls the global ``/courts/casepartysubtypes`` and the per-court
+        ``casecategories`` and ``docketentrysubtypes`` endpoints. Repeated
+        calls for the same court return the cached value without hitting the
+        API again.
 
-        The data is stored as raw JSON; we don't validate it because parsers
-        for these endpoints don't exist yet (and may never need to).
+        The data is returned as raw parsed JSON; we don't validate it
+        because parsers for these endpoints don't exist yet (and may never
+        need to).
         """
+        cached = self._metadata_cache.get(court_external_id)
+        if cached is not None:
+            return cached
+
         court = self.courts_by_external_id.get(court_external_id)
         if court is None:
             raise ValueError(
@@ -295,28 +315,23 @@ class FloridaScraper:
                 % court_external_id
             )
 
-        meta_dir = (
-            self.output_root / "metadata" / _fs_safe(court_external_id)
-        )
-
         casepartysubtypes = await self._get_json("/courts/casepartysubtypes")
-        self._write_json(
-            self.output_root / "metadata" / "casepartysubtypes.json",
-            casepartysubtypes,
-        )
 
         court_uuid = str(court.resource_id)
         casecategories = await self._get_json(
             f"/courts/{court_uuid}/cms/casecategories"
         )
-        self._write_json(meta_dir / "casecategories.json", casecategories)
-
         docketentrysubtypes = await self._get_json(
             f"/courts/{court_uuid}/cms/docketentrysubtypes"
         )
-        self._write_json(
-            meta_dir / "docketentrysubtypes.json", docketentrysubtypes
+
+        metadata = CourtMetadata(
+            casepartysubtypes=casepartysubtypes,
+            casecategories=casecategories,
+            docketentrysubtypes=docketentrysubtypes,
         )
+        self._metadata_cache[court_external_id] = metadata
+        return metadata
 
     # ------------------------------------------------------------------
     # Case enumeration
@@ -496,44 +511,33 @@ class FloridaScraper:
     # Single case fetch
     # ------------------------------------------------------------------
 
-    async def fetch_case(self, ref: CaseRef) -> None:
-        """Fetch and save everything we want for a single case.
+    async def fetch_case(self, ref: CaseRef) -> CaseData:
+        """Fetch everything we want for a single case and return it.
 
         Pulls the case detail endpoint plus paginated hearings, parties, and
-        docketentries. For each docket entry, also fetches the document
-        access record so we can build download URLs later.
-        """
-        case_dir = self._case_dir(ref.court_external_id, ref.case_number)
+        docket entries. For each docket entry, also fetches the document
+        access record so callers can build download URLs later.
 
+        Returns:
+            A :class:`CaseData` bundling every parsed payload alongside the
+            originating :class:`CaseRef`.
+        """
         case_path = f"/courts/{ref.court_uuid}/cms/cases/{ref.case_uuid}"
         case_body = await self._get_json(case_path)
-        self._write_json(case_dir / "case.json", case_body)
 
-        # Hearings, parties, and docket entries are all paginated. We save
-        # the full ``_embedded.results`` array plus the latest ``page``
-        # object so consumers can spot truncation.
-        docket_entries: list[dict[str, Any]] = []
+        # Hearings, parties, and docket entries are all paginated. We keep
+        # only the concatenated results arrays — the original pagination
+        # metadata isn't useful to consumers once we've drained every page.
+        endpoint_results: dict[str, list[dict[str, Any]]] = {}
         for endpoint in ("hearings", "parties", "docketentries"):
-            results, total_elements = await self._fetch_paginated(
+            results, _ = await self._fetch_paginated(
                 f"{case_path}/{endpoint}",
                 params={},
             )
-            self._write_json(
-                case_dir / f"{endpoint}.json",
-                {
-                    "_embedded": {"results": results},
-                    "page": {
-                        "size": PAGE_SIZE,
-                        "totalElements": total_elements,
-                        "totalPages": 1 if results else 0,
-                        "number": 0,
-                    },
-                },
-            )
+            endpoint_results[endpoint] = results
 
-            if endpoint == "docketentries":
-                docket_entries = results
-
+        docket_entries = endpoint_results["docketentries"]
+        docket_entry_documents: dict[str, list[dict[str, Any]]] = {}
         for entry in docket_entries:
             header = entry.get("docketEntryHeader") or {}
             entry_uuid = header.get("docketEntryUUID")
@@ -544,17 +548,31 @@ class FloridaScraper:
                     entry,
                 )
                 continue
-            await self.fetch_docket_entry_documents(ref, entry_uuid)
+            docket_entry_documents[entry_uuid] = (
+                await self.fetch_docket_entry_documents(ref, entry_uuid)
+            )
+
+        return CaseData(
+            ref=ref,
+            case=case_body,
+            hearings=endpoint_results["hearings"],
+            parties=endpoint_results["parties"],
+            docket_entries=docket_entries,
+            docket_entry_documents=docket_entry_documents,
+        )
 
     async def fetch_docket_entry_documents(
         self, ref: CaseRef, docket_entry_uuid: str
-    ) -> None:
-        """Fetch the document-access record for a docket entry and save it.
+    ) -> list[dict[str, Any]]:
+        """Fetch the document-access records for a docket entry.
 
         The response contains the ``documentLinkUUID`` and ``documentInfo``
         needed to build per-document download URLs in CourtListener.
+
+        Returns:
+            The concatenated ``_embedded.results`` array across every page.
         """
-        results, total_elements = await self._fetch_paginated(
+        results, _ = await self._fetch_paginated(
             "/courts/cms/docketentrydocumentsaccess",
             params={
                 "caseHeader.courtID": ref.court_external_id,
@@ -562,23 +580,7 @@ class FloridaScraper:
                 "caseHeader.caseInstanceUUID": ref.case_uuid,
             },
         )
-        target = (
-            self._case_dir(ref.court_external_id, ref.case_number)
-            / "docketentrydocuments"
-            / f"{_fs_safe(docket_entry_uuid)}.json"
-        )
-        self._write_json(
-            target,
-            {
-                "_embedded": {"results": results},
-                "page": {
-                    "size": PAGE_SIZE,
-                    "totalElements": total_elements,
-                    "totalPages": 1 if results else 0,
-                    "number": 0,
-                },
-            },
-        )
+        return results
 
     # ------------------------------------------------------------------
     # High-level entry point
@@ -588,12 +590,12 @@ class FloridaScraper:
         self,
         court_external_ids: list[str] | None,
         date_range: tuple[date, date],
-    ) -> AsyncGenerator[CaseRef, None]:
+    ) -> AsyncGenerator[CaseData, None]:
         """Run the full scrape for ``court_external_ids`` over ``date_range``.
 
         Fetches courts, then for each court fetches its reference metadata,
-        enumerates cases, fetches each one in full, and yields the
-        :class:`CaseRef` as a progress signal.
+        enumerates cases, fetches each one in full, and yields a
+        :class:`CaseData` for every case.
 
         Args:
             court_external_ids: Subset of courts to scrape, given as the
@@ -602,8 +604,7 @@ class FloridaScraper:
                 that the API actually returns is scraped.
             date_range: Inclusive ``(start, end)`` date pair.
         """
-        if not self.courts_by_external_id:
-            await self.fetch_courts()
+        await self.fetch_courts()
 
         if court_external_ids is None:
             target_ids = [
@@ -625,12 +626,10 @@ class FloridaScraper:
             async for ref in self.enumerate_cases(
                 court_external_id, date_range
             ):
-                await self.fetch_case(ref)
-                yield ref
+                yield await self.fetch_case(ref)
 
 
 def run_backfill(
-    output_root: str | Path,
     date_range: tuple[date, date],
     court_external_ids: list[str] | None = None,
     rps: float = DEFAULT_RPS,
@@ -639,14 +638,13 @@ def run_backfill(
 
     Returns the number of cases fetched. Intended to be wrapped by a Django
     management command in CourtListener (see CL#7057), but usable standalone
-    for local runs.
+    for local runs. Yielded :class:`CaseData` is discarded; callers that
+    want the payloads should drive :class:`FloridaScraper` directly.
     """
 
     async def _drive() -> int:
         count = 0
-        async with FloridaScraper(
-            output_root=Path(output_root), rps=rps
-        ) as scraper:
+        async with FloridaScraper(rps=rps) as scraper:
             async for _ in scraper.backfill(court_external_ids, date_range):
                 count += 1
         return count

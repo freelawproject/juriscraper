@@ -21,10 +21,18 @@ from .parties import (
     FloridaPartyListParser,
     FloridaPartyRepresentative,
 )
-from .scraper import CaseRef, FloridaScraper, run_backfill
+from .scraper import (
+    CaseData,
+    CaseRef,
+    CourtMetadata,
+    FloridaScraper,
+    run_backfill,
+)
 
 __all__ = [
+    "CaseData",
     "CaseRef",
+    "CourtMetadata",
     "FloridaCase",
     "FloridaCaseActor",
     "FloridaCaseInfoParser",
