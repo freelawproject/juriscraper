@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Annotated, Any, ClassVar, override
+from typing import Annotated, Any, ClassVar
 
 from pydantic import (
     UUID4,
@@ -9,6 +9,7 @@ from pydantic import (
     Field,
 )
 from pydantic_core import PydanticCustomError
+from typing_extensions import override
 
 from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.common import (

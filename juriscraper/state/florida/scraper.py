@@ -24,7 +24,7 @@ yielded to the caller which is responsible for storage.
 from __future__ import annotations
 
 from collections.abc import AsyncGenerator
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from itertools import chain
 from typing import Any, TypeVar
@@ -36,7 +36,6 @@ from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.florida.cases import (
     FloridaCase,
     FloridaCaseInfoParser,
-    FloridaCaseListParser,
 )
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
@@ -253,17 +252,16 @@ class FloridaScraper:
         """
         if params is None:
             params = {}
-        page = 0
         results: list[FloridaPaginatedResults[ResultType]] = []
         page_params = {"size": PAGE_SIZE, **params}
 
-        next_page = 0
+        next_page: int | None = 0
         while next_page is not None:
-            page_params["page"] = page
+            page_params["page"] = next_page
             body = (await self.manager.get(endpoint, params=page_params)).text
             r = parser.parse_full(body)
             results.append(r)
-            if r.page.page_number + 1 < r.page.total_pages:
+            if next_page + 1 < r.page.total_pages:
                 next_page += 1
             else:
                 next_page = None
@@ -365,7 +363,7 @@ class FloridaScraper:
             while True:
                 for entry in response.results:
                     yield entry
-                if response.page.page_number >= response.page.total_pages:
+                if response.page.page_number + 1 >= response.page.total_pages:
                     break
                 response = (
                     RootModel[FloridaPaginatedResults[FloridaCase]]
@@ -396,13 +394,12 @@ class FloridaScraper:
         Returns:
             A populated :class:`FloridaCase` object
         """
-        court_external_id = str(case.court_id)
-        if court_external_id not in FLORIDA_COURT_EXTERNAL_ID_MAP:
+        court_id = FloridaCourtID(case.court_id)
+        court_data = self.courts.get(court_id)
+        if court_data is None:
             raise ValueError(
-                f"Case has unrecognized court external id {court_external_id}"
+                f"Court {court_id!r} not cached. Call fetch_courts() first."
             )
-        court_id = FLORIDA_COURT_EXTERNAL_ID_MAP[court_external_id]
-        court_data = self.courts[court_id]
         court_uuid = court_data.court.resource_id
 
         output_case = case.model_copy()

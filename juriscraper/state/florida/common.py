@@ -1,10 +1,11 @@
-from abc import ABC, abstractmethod, abstractproperty
 import re
+from abc import ABC, abstractmethod
 from datetime import date, datetime
-from typing import ClassVar, Generic, TypeVar, final, override
+from typing import ClassVar, Generic, TypeVar, final
 
 from pydantic import AliasPath, BaseModel, Field
 from pydantic_core import PydanticCustomError
+from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
 

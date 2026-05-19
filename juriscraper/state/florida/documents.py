@@ -1,6 +1,7 @@
-from typing import ClassVar, override
+from typing import ClassVar
 
 from pydantic import UUID4, AliasPath, Field
+from typing_extensions import override
 
 from juriscraper.state.docket import Document
 from juriscraper.state.florida.common import (

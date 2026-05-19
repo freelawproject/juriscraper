@@ -1,7 +1,8 @@
-from typing import Annotated, Any, ClassVar, override
+from typing import Annotated, Any, ClassVar
 
 from pydantic import UUID4, AliasPath, BeforeValidator, Field
 from pydantic_core import PydanticCustomError
+from typing_extensions import override
 
 from juriscraper.state.docket import Party, PartyType, Representative
 from juriscraper.state.florida.common import (
