@@ -384,10 +384,28 @@ class SCOTUSEmail:
 
         :return: Docket number.
         """
-        file = parse_qs(urlparse(self.tree.find(".//a").get("href")).query)[
-            "filename"
-        ][0]
-        docket_number = Path(file).stem
+        if self.tree is None:
+            raise ValueError("self.tree is None")
+        links = list(self.tree.iterfind(".//a"))
+        if not links:
+            raise ValueError("No links found in SCOTUS email body")
+        hrefs = [link.get("href") for link in links]
+        urls = [urlparse(href) for href in hrefs if href is not None]
+        if not urls:
+            raise ValueError("No valid URLs found in SCOTUS email body")
+        queries = [parse_qs(url.query) for url in urls]
+        filenames = [
+            query["filename"][0] for query in queries if "filename" in query
+        ]
+        if not filenames:
+            raise ValueError(
+                'No URLs with "filename" query parameter found in SCOTUS email body'
+            )
+        if len(set(filenames)) > 1:
+            logger.error(
+                f'Multiple URLs with unique "filename" query parameter found in SCOTUS email body ({set(filenames)}). Using first.'
+            )
+        docket_number = Path(filenames[0]).stem
         return clean_string(docket_number)
 
     def _parse_first_link(self) -> str:
