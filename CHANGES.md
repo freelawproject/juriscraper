@@ -18,6 +18,14 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.19 - 2026-05-19
+
+Changes:
 
 - Drop Python 3.9 support
 - Add Python 3.14 support
