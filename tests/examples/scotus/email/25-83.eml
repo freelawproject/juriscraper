@@ -1,0 +1,44 @@
+Return-Path: <0100019e2707063f-df52bd9f-dd4a-4515-971b-a046c20ecbbd-000000@mail.sc-us.gov>
+Received: from a65-137.smtp-out.amazonses.com (a65-137.smtp-out.amazonses.com [54.240.65.137])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 61t5s7g3hlfmadii7215uckfgdhc0q54nqg36381
+ for notifications@scotus.recap.email;
+ Thu, 14 May 2026 15:07:13 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mail.sc-us.gov designates 54.240.65.137 as permitted sender) client-ip=54.240.65.137; envelope-from=0100019e2707063f-df52bd9f-dd4a-4515-971b-a046c20ecbbd-000000@mail.sc-us.gov; helo=a65-137.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mail.sc-us.gov designates 54.240.65.137 as permitted sender) client-ip=54.240.65.137; envelope-from=0100019e2707063f-df52bd9f-dd4a-4515-971b-a046c20ecbbd-000000@mail.sc-us.gov; helo=a65-137.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@sc-us.gov;
+ dmarc=pass header.from=sc-us.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHbXhmVHRvUldpZko4ajMxNHdjODNVcFU1NzFqRmtRd2xPL010N3BXUEk3TTNnRkpUUmtkT2d1K1U5bUpPYlFwTUNQTGV3SFk3aE9sckNNdEc1TmZLREZIajJ4MlJkZjBtSyt6MGd4VFFEb2tUaG9PdEk5dkVoVFBoWkRZc3pCc0dyYmlmNnRwYXJuWUkzVFNJTmdTVGJBOCtpYUd6VHRSM2E5UDV3a3RDUHNWUHFsMXk5SXBvZ0hjNU4rbEl4M3hndVI5T09IZTk4L2VYV1IvSkJtRE40Vk5jbmJhd0h6RDJ3bEhlNFNraGF0MjdkYWNqOEFHbU92YTZTdjBnRUJCeWYrTXFXUktBdjJxdDl3ajJqK0FWaGdiSm9hTkxOa3ZxYVNoRkJrQmJXQy9sejVrN0dRVHZxUzQvRk9XelhHd2daekNQNmRybjN0akpFTS9JZnBIUElPM1EzT0dUUVQ1RzR2STVGcE0xZkxRPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Gi/3wfvcg1//9sIUDyKafARmRjaiK9Td2SAykZMFwjVGivQxoN74TUhBKZDUq+l6oVhUIqz55BrmM0dxezj86Mj5h2OWqky2NZca9OrmKL3O1KDd2fLfNb4yol7ikEnwMGazl9LtT9VcUmDmxCiPtMeChvban2Xk/wWHJfqzAKA=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1778771233; v=1; bh=XUQYEOGH7ciMnuMBpHFDS3Hz3NVh3Gy+05FKpspzLr8=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy; d=sc-us.gov; t=1778771232;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=XUQYEOGH7ciMnuMBpHFDS3Hz3NVh3Gy+05FKpspzLr8=;
+	b=gUG3ZAdSE7vQtUzZVFx2vTYAwJIsk+60VU7KfTR2kus7sICMYFA4T7hq4xxb5kqj
+	bphrPKy1mVG6K0M2cUsjMl21acRESFzn9GAlQoLvo4PBjtg4DlLk/Gorngulh9EjA0T
+	8JzX63RwEy8qxeDvEpf6EVaAhqscJC4vPiWnwNHI=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1778771232;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=XUQYEOGH7ciMnuMBpHFDS3Hz3NVh3Gy+05FKpspzLr8=;
+	b=V47CXJsMC2nBnrOeLRHvMa/46CsuNHcpfjqPLbs4JwHJ3z5pJ9i5PyqFJ9GHwYK/
+	ITTZp9FWKtKscAI5IeQBGABbatkW1iKOFmORWoVtkYAdjFlM1jObtl+TujpB/R+CGsU
+	xQAGBv0M6/Azj3Ew8qjCxjRZZD/glurkk3dGrODQ=
+From: no-reply@sc-us.gov
+To: notifications@scotus.recap.email
+Subject: Supreme Court Electronic Filing System
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <0100019e2707063f-df52bd9f-dd4a-4515-971b-a046c20ecbbd-000000@email.amazonses.com>
+Date: Thu, 14 May 2026 15:07:12 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2026.05.14-54.240.65.137
+
+A new docket entry, "Adjudged to be AFFIRMED.  Sotomayor, J., delivered the <a href = 'https://www.supremecourt.gov/opinions/25pdf/25-83_3e04.pdf'>opinion</a> for a unanimous Court." has been added for <a href='https://www.supremecourt.gov/search.aspx?filename=/docket/DocketFiles/html/Public/25-83.html'>Adrian Jules, Petitioner v. Andre Balazs Properties, et al.</a>. You have been signed up to receive email notifications for No. 25-83. <br><br> If you no longer wish to receive email notifications on this case, please
+
+<a href='https://file.supremecourt.gov/Request/NotificationOptOutGet?id=CfDJ8LWjh78o-U5EigyPTWy9BmepMvklRNW5HdjALOLFaFXTkuRYmgfcNElSNulF7f8mdhGU54NlKo_Zo9b266CG16lwpOHfks23PlbTxMNL_O_V2bV-EW03EHWlOHjtf88pDb9n9OXTpmTJ9ni6t5G8J5Vj8CJB4SVOfwk-m0xtdHAe'>click here</a>.
+

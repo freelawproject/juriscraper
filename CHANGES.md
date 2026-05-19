@@ -18,12 +18,15 @@ Features:
 -
 
 Changes:
+
 - Drop Python 3.9 support
 - Add Python 3.14 support
 
 Fixes:
 - visuper: migrated to new public portal API; merged visuper_p and visuper_u #1945
-- `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938
+- `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old
+  `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938
+- Supreme court update email docket number extraction broken if docket link was not the first.
 
 ## 3.0.18 - 2026-05-06
 
@@ -32,12 +35,15 @@ Features:
 - Add parsers for Florida court API endpoints.
 
 Fixes:
+
 - Fix `idaho` scrapers expected_content_types attribute #1949
 
 ## 3.0.17 - 2026-05-06
 
 Fixes:
-- Fix `nmariana` neutral citations to use spaces instead of dashes (e.g. `2022 MP 09` instead of `2022-MP-09`) so eyecite/reporters-db can parse them. #1947
+
+- Fix `nmariana` neutral citations to use spaces instead of dashes (e.g. `2022 MP 09` instead of `2022-MP-09`) so
+  eyecite/reporters-db can parse them. #1947
 - Fix `idaho` scrapers expected_content_types attribute and reduce regular scrape page_size #1949
 
 ## 3.0.16 - 2026-05-04
