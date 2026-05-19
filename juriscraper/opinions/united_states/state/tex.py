@@ -32,6 +32,9 @@ from juriscraper.lib.type_utils import OpinionType
 
 class Site(ClusterSite):
     base_url = "https://www.txcourts.gov/supreme/orders-opinions/{}/"
+    # link_xp targets the year-index page's bullet list of dated order
+    # subpages (one <li><a> per date); date_xp targets the "Orders
+    # Pronounced …" header on a single day's order page.
     link_xp = '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
     date_xp = '//*[@id="MainContent"]/div/div[1]/div/text()'
     judge_regex = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
@@ -78,6 +81,11 @@ class Site(ClusterSite):
             return
 
         date = self.html.xpath(self.date_xp)[0].strip()
+        # Each day's page contains many PDF links; only those inside a
+        # <span class="a70"> (court opinion + disposition cell) or
+        # <span class="a79"> (separate opinion cell — concurrence /
+        # dissent) belong to an opinion. Everything else (orders PDF,
+        # case summaries, admin docs) gets filtered out below.
         links = self.html.xpath('//a[contains(@href, ".pdf")]')
         for link in links:
             if link.getparent() is None or link.getparent().get(
@@ -88,6 +96,11 @@ class Site(ClusterSite):
                 )
                 continue
 
+            # The page's table interleaves header rows with cells of
+            # class "a50cl" (docket number) and "a54cl" (case title)
+            # before each opinion row. Walk back from the opinion's row
+            # to find the most recent header row — its last entry is
+            # the docket+title pair belonging to this opinion.
             precedingTRs = link.xpath(
                 'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
             ) or link.xpath(
@@ -100,25 +113,25 @@ class Site(ClusterSite):
                 if tr_text.strip()
             ]
 
+            parent = link.getparent()
+            # When the first element under <span class="a70"> is the
+            # link itself, the cell has no disposition prose — the
+            # parent's .text is the judge intro, not the disposition.
+            has_disposition = (
+                parent.get("class") == "a70" and parent[0].tag != "a"
+            )
             disposition = (
-                link.getparent().xpath(".//text()")[0]
-                if link.getparent().get("class") == "a70"
-                else ""
+                parent.xpath(".//text()")[0] if has_disposition else ""
             )
 
+            # Judge intro text sits on the preceding sibling's tail when
+            # a <br> separates entries, but on the parent's own .text
+            # when this is the first link in the cell.
+            previous = link.getprevious()
+            leading = previous.tail if previous is not None else parent.text
             judge_str = (
-                "".join(
-                    [
-                        x
-                        for x in [
-                            link.getprevious().tail,
-                            link.text,
-                            link.tail,
-                        ]
-                        if x
-                    ]
-                )
-                if disposition
+                "".join(x for x in [leading, link.text, link.tail] if x)
+                if parent.get("class") == "a70"
                 else ""
             )
 

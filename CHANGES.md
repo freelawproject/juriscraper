@@ -27,6 +27,7 @@ Fixes:
 - `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old
   `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938
 - Supreme court update email docket number extraction broken if docket link was not the first.
+- Fix `tex` html parsing and disposition extraction. #1962
 
 ## 3.0.18 - 2026-05-06
 
