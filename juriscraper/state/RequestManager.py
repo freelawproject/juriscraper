@@ -6,7 +6,7 @@ from http.cookiejar import CookieJar
 from typing import Any
 
 import httpx
-from httpx import USE_CLIENT_DEFAULT, Auth, Cookies, Request, Response, URL
+from httpx import URL, USE_CLIENT_DEFAULT, Auth, Cookies, Request, Response
 from httpx._client import UseClientDefault
 
 from juriscraper.lib.log_tools import make_default_logger
