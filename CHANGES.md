@@ -25,6 +25,7 @@ Fixes:
   `njtaxct_p`, `njtaxct_u`) were 403'd by the Imperva WAF on njcourts.gov.
   Set a browser User-Agent and `needs_special_headers = True` so both the
   index pages and the opinion PDFs download. #1965
+- Add a sleep to fullfil Oregon courts required crawl delay #1968
 
 ## 3.0.19 - 2026-05-19
 

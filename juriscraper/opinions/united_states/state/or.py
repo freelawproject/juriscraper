@@ -6,6 +6,7 @@ History:
  - 2025-09-23: add lower court extraction, luism
 """
 
+import asyncio
 import re
 from datetime import datetime, timedelta
 
@@ -28,7 +29,12 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     async def _process_html(self):
-        for row in self.html["items"]:
+        for i, row in enumerate(self.html["items"]):
+            # Honor robots.txt Crawl-Delay: 1 advertised by
+            # cdm17027.contentdm.oclc.org. # 1968
+            if i and not self.test_mode_enabled():
+                await asyncio.sleep(1)
+
             docket, name, citation, date = (
                 x["value"] for x in row["metadataFields"]
             )
