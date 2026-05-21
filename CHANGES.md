@@ -21,7 +21,10 @@ Changes:
 -
 
 Fixes:
--
+- New Jersey opinion scrapers (`nj`, `njsuperctappdiv_p`, `njsuperctappdiv_u`,
+  `njtaxct_p`, `njtaxct_u`) were 403'd by the Imperva WAF on njcourts.gov.
+  Set a browser User-Agent and `needs_special_headers = True` so both the
+  index pages and the opinion PDFs download. #1965
 
 ## 3.0.19 - 2026-05-19
 
