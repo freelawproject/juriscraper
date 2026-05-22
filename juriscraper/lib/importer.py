@@ -79,6 +79,9 @@ def get_module_by_name(name):
 async def site_yielder(iterable, mod, save_response_fn=None):
     for i in iterable:
         site = mod.Site(save_response_fn=save_response_fn)
+        # Empty pages are expected during historical backscrapes, so don't
+        # let no_results_warning log an error for this court.
+        site.should_have_results = False
         try:
             await site._download_backwards(i)
             yield site
