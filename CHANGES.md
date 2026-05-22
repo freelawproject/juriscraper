@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Skip the `should_have_results` error during historical backscrapes #1886
 
 ## 3.0.20 - 2026-05-21
 
