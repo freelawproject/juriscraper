@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- `ny.Site.cleanup_content` wraps output in an html document envelope so
+  doctor doesn't misclassify cleaned pages as `text/plain`. #1971
 
 ## 3.0.20 - 2026-05-21
 
