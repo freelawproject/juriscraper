@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add CLAUDE.md files to opinions and oral_args submodules #1793
 
 Changes:
 -
