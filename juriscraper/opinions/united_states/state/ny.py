@@ -232,9 +232,16 @@ class Site(OpinionSiteLinear):
         cleaned = nh3.clean(html_str, tags=allowed)
 
         tree = fromstring(cleaned)
-        normalized_html = tostring(tree, encoding="unicode", method="html")
+        normalized_html = str(
+            tostring(tree, encoding="unicode", method="html")
+        )
 
-        return normalized_html.encode()
+        # nh3.clean strips <!DOCTYPE>/<html>/<body> (not in nh3.ALLOWED_TAGS),
+        # which makes downstream content-based detectors (magika via doctor)
+        # misclassify the result as text/plain and skip the HTML extractor.
+        return (
+            f"<!DOCTYPE html><html><body>{normalized_html}</body></html>"
+        ).encode()
 
     @staticmethod
     def clean_docket_match(match: re.Match) -> str:

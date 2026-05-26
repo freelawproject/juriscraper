@@ -360,7 +360,7 @@ wheels = [
 
 [[package]]
 name = "juriscraper"
-version = "3.0.18"
+version = "3.0.20"
 source = { editable = "." }
 dependencies = [
     { name = "certifi" },
@@ -404,7 +404,7 @@ requires-dist = [
     { name = "geonamescache", specifier = ">=2.0.0" },
     { name = "html5lib" },
     { name = "httpx", extras = ["http2"], specifier = ">=0.28.1" },
-    { name = "lxml", specifier = ">=6.1.0" },
+    { name = "lxml", specifier = ">=6.1" },
     { name = "nh3" },
     { name = "pydantic", specifier = ">=2.12.5" },
     { name = "python-dateutil", specifier = ">=2.8.2" },

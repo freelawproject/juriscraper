@@ -19,15 +19,35 @@ Features:
 - Add Florida scraper
 
 Changes:
+-
+
+Fixes:
+- `ny.Site.cleanup_content` wraps output in an html document envelope so
+  doctor doesn't misclassify cleaned pages as `text/plain`. #1971
+- Skip the `should_have_results` error during historical backscrapes #1886
+
+## 3.0.20 - 2026-05-21
+
+Fixes:
+- New Jersey opinion scrapers (`nj`, `njsuperctappdiv_p`, `njsuperctappdiv_u`,
+  `njtaxct_p`, `njtaxct_u`) were 403'd by the Imperva WAF on njcourts.gov.
+  Set a browser User-Agent and `needs_special_headers = True` so both the
+  index pages and the opinion PDFs download. #1965
+- Add a sleep to fullfil Oregon courts required crawl delay #1968
+
+## 3.0.19 - 2026-05-19
+
+Changes:
 
 - Drop Python 3.9 support
 - Add Python 3.14 support
 
 Fixes:
-
+- visuper: migrated to new public portal API; merged visuper_p and visuper_u #1945
 - `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old
   `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938
 - Supreme court update email docket number extraction broken if docket link was not the first.
+- Fix `tex` html parsing and disposition extraction. #1962
 
 ## 3.0.18 - 2026-05-06
 
