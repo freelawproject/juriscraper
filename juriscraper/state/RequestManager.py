@@ -3,10 +3,18 @@ import time
 from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from dataclasses import InitVar, dataclass, field
 from http.cookiejar import CookieJar
-from typing import Any
+from typing import Any, override
 
 import httpx
-from httpx import URL, USE_CLIENT_DEFAULT, Auth, Cookies, Request, Response
+from httpx import (
+    URL,
+    USE_CLIENT_DEFAULT,
+    Auth,
+    Cookies,
+    HTTPStatusError,
+    Request,
+    Response,
+)
 from httpx._client import UseClientDefault
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -433,21 +441,13 @@ class RequestManager:
     def __del__(self) -> None:
         """Clean up allocated resources. Cancels the request loop if it's running
         and closes the client if it's open."""
-        if hasattr(self, "loop_future") and self._loop_future:
+        if hasattr(self, "_loop_future") and self._loop_future:
             _ = self._loop_future.cancel()
-        client = getattr(self, "client", None)
-        if client is None or client.is_closed:
+        if not hasattr(self, "client"):
+            logger.info("Client was not initialized.")
             return
-        # Best-effort async cleanup; callers should prefer `await close()`.
-        try:
-            loop = asyncio.get_running_loop()
-        except RuntimeError:
-            try:
-                asyncio.run(client.aclose())
-            except Exception:
-                pass
-        else:
-            _ = loop.create_task(client.aclose())
+        if not self.client.is_closed:
+            logger.error("Client not closed.")
 
 
 @dataclass
@@ -459,7 +459,6 @@ class RateLimit(RequestHandler):
 
     rps: InitVar[float] = 2.0
     _last_request_time: float = 0.0
-    _lock: asyncio.Lock = field(default_factory=asyncio.Lock)
     _request_spacing: float = 1.0
 
     def __post_init__(self, rps: float) -> None:
@@ -469,15 +468,14 @@ class RateLimit(RequestHandler):
             )
         self._request_spacing = 1.0 / rps
 
+    @override
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
     ) -> None:
         """Ensure that requests aren't sent faster than the rate limit."""
-        _ = await self._lock.acquire()
         elapsed = time.time() - self._last_request_time
         sleep_time = max(0.0, self._request_spacing - elapsed)
         self._last_request_time = time.time() + sleep_time
-        self._lock.release()
         await asyncio.sleep(sleep_time)
 
 
@@ -491,18 +489,29 @@ class Retry(RequestHandler):
 
     max_retries: int = 3
 
+    @override
     async def listen(
         self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """Awaits the response in a try-except block and re-queues the request if
         the `except` block is triggered and the maximum number of retries hasn't
-        been hit yet."""
+        been hit yet. Only retries on non-4xx HTTPStatusErrors."""
         remaining_tries = self.max_retries
         while remaining_tries > 0:
             try:
                 _ = await request.response()
-            except Exception:
+            except HTTPStatusError as e:
+                if e.response.status_code // 100 == 4:
+                    logger.error(
+                        f"Received {e.response.status_code} from {e.request.url}\nResponse: {e.response.text}"
+                    )
+                    return
                 remaining_tries -= 1
                 await manager.enqueue_request(request)
+            except Exception as e:
+                logger.error(
+                    f"Unexpected error while processing request {request.httpx_request.url}: {e}"
+                )
+                return
             else:
                 return

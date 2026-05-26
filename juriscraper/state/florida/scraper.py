@@ -33,6 +33,7 @@ from pydantic import BaseModel, RootModel
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.state.florida import FloridaCaseListParser
 from juriscraper.state.florida.cases import (
     FloridaCase,
     FloridaCaseInfoParser,
@@ -169,7 +170,9 @@ class FloridaScraper:
         # single page.
         courts_parser = FloridaCourtsParser(court_id="fl")
         raw = (
-            await self.manager.get("/courts", params={"size": PAGE_SIZE})
+            await self.manager.get(
+                courts_parser.endpoint, params={"size": PAGE_SIZE}
+            )
         ).text
         court_results = courts_parser.parse(raw)
 
@@ -274,7 +277,7 @@ class FloridaScraper:
         total_elements = totals.pop()
         actual_total = sum(len(r.results) for r in results)
         if actual_total != total_elements:
-            logger.warning(
+            logger.error(
                 f"Actual number of elements returned ({actual_total}) does not match totalElements ({total_elements}) for {parser.endpoint} with params={params}"
             )
 
@@ -307,7 +310,7 @@ class FloridaScraper:
             raise ValueError(
                 "Unknown court id %r. Call fetch_courts() first." % court_id
             )
-        court_external_id = str(court_metadata.court.external_identifier)
+        court_external_id = court_metadata.court.external_identifier
         params = {
             "size": PAGE_SIZE,
             "caseHeader.courtID": court_external_id,
@@ -327,19 +330,15 @@ class FloridaScraper:
                 "page": 0,
             }
 
-            response = (
-                RootModel[FloridaPaginatedResults[FloridaCase]]
-                .model_validate(
-                    (
-                        await self.manager.get(
-                            "/courts/cms/cases", params=params
-                        )
-                    ).json()
-                )
-                .root
+            cl_parser = FloridaCaseListParser(court_id=court_id.value)
+
+            response = await self.manager.get(
+                cl_parser.endpoint, params=params
             )
 
-            if response.page.total_elements >= MAX_RESULTS:
+            response_page = cl_parser.parse_full(response.text)
+
+            if response_page.page.total_elements >= MAX_RESULTS:
                 if start < end:
                     # Split the range in half and re-queue.
                     mid = start + (end - start) // 2
@@ -348,7 +347,7 @@ class FloridaScraper:
                         court_external_id,
                         start,
                         end,
-                        response.page.total_elements,
+                        response_page.page.total_elements,
                     )
                     stack.append((start, mid))
                     stack.append((mid + timedelta(days=1), end))
@@ -361,23 +360,19 @@ class FloridaScraper:
 
             # Walk every page, starting from the first body we already have.
             while True:
-                for entry in response.results:
+                for entry in response_page.results:
                     yield entry
-                if response.page.page_number + 1 >= response.page.total_pages:
+                if (
+                    response_page.page.page_number + 1
+                    >= response_page.page.total_pages
+                ):
                     break
-                response = (
-                    RootModel[FloridaPaginatedResults[FloridaCase]]
-                    .model_validate(
-                        (
-                            await self.manager.get(
-                                "/courts/cms/cases",
-                                params=params
-                                | {"page": response.page.page_number + 1},
-                            )
-                        ).json()
-                    )
-                    .root
+                response = await self.manager.get(
+                    cl_parser.endpoint,
+                    params=params
+                    | {"page": response_page.page.page_number + 1},
                 )
+                response_page = cl_parser.parse_full(response.text)
 
     # ------------------------------------------------------------------
     # Single case fetch
@@ -401,15 +396,19 @@ class FloridaScraper:
                 f"Court {court_id!r} not cached. Call fetch_courts() first."
             )
         court_uuid = court_data.court.resource_id
+        case_uuid = case.case_uuid
 
-        output_case = case.model_copy()
-
-        case_uuid = output_case.case_uuid
-
-        FloridaCaseInfoParser.populate_transfers(output_case)
-
+        ci_parser = FloridaCaseInfoParser(court_id=court_id.value)
         de_parser = FloridaDocketEntryListParser(court_id=court_id.value)
         parties_parser = FloridaPartyListParser(court_id=court_id.value)
+
+        case_response = await self.manager.get(
+            FloridaCaseInfoParser.endpoint.format(
+                court=court_uuid, case=case_uuid
+            )
+        )
+
+        output_case = ci_parser.parse(case_response.text)
 
         docket_entry_pages = await self._fetch_paginated(
             de_parser.endpoint.format(court=court_uuid, case=case_uuid),
