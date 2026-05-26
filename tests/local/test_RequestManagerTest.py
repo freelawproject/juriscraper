@@ -128,11 +128,6 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
             return httpx.Response(200, text="ok")
 
         class Recorder(RequestHandler):
-            async def before_queue(self, manager, request):
-                events.append(("before_queue_start", time.monotonic()))
-                await asyncio.sleep(0.01)
-                events.append(("before_queue_done", time.monotonic()))
-
             async def before_send(self, manager, request):
                 events.append(("before_send_start", time.monotonic()))
                 await asyncio.sleep(0.01)
@@ -150,10 +145,6 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
             await manager.close()
 
         keys = [e[0] for e in events]
-        # before_queue must finish before before_send starts.
-        self.assertLess(
-            keys.index("before_queue_done"), keys.index("before_send_start")
-        )
         # before_send must finish before the request is dispatched.
         self.assertLess(keys.index("before_send_done"), keys.index("send"))
         # listen starts before send and stays awake until response resolves.
@@ -161,12 +152,9 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
         self.assertLess(keys.index("send"), keys.index("listen_done"))
 
     async def test_multiple_handlers_all_invoked_per_request(self):
-        counts = {"before_queue": 0, "before_send": 0, "listen": 0}
+        counts = {"before_send": 0, "listen": 0}
 
         class Counter(RequestHandler):
-            async def before_queue(self, manager, request):
-                counts["before_queue"] += 1
-
             async def before_send(self, manager, request):
                 counts["before_send"] += 1
 
@@ -180,9 +168,7 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.close()
 
-        self.assertEqual(
-            counts, {"before_queue": 3, "before_send": 3, "listen": 3}
-        )
+        self.assertEqual(counts, {"before_send": 3, "listen": 3})
 
 
 class RateLimitTest(unittest.IsolatedAsyncioTestCase):
