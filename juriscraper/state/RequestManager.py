@@ -3,7 +3,7 @@ import time
 from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from dataclasses import InitVar, dataclass, field
 from http.cookiejar import CookieJar
-from typing import Any, override
+from typing import Any
 
 import httpx
 from httpx import (
@@ -61,16 +61,6 @@ class ScheduledRequest:
 
 class RequestHandler:
     """Base class for request handlers."""
-
-    async def before_queue(
-        self, manager: "RequestManager", request: ScheduledRequest
-    ) -> None:
-        """The RequestManager awaits this method before queueing the request.
-
-        Args:
-            manager: The request manager sending the request
-            request: The request being sent"""
-        return
 
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
@@ -219,10 +209,6 @@ class RequestManager:
         logger.info(
             "Awaiting before_queue handlers for request: %s.",
             request.httpx_request.url,
-        )
-        # We stil have to support 3.10 so no asyncio.TaskGroup :(
-        _ = await asyncio.gather(
-            *[handler.before_queue(self, request) for handler in self.handlers]
         )
         logger.info(
             "Handlers finished. Queueing request: %s",
@@ -468,7 +454,6 @@ class RateLimit(RequestHandler):
             )
         self._request_spacing = 1.0 / rps
 
-    @override
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
     ) -> None:
@@ -489,7 +474,6 @@ class Retry(RequestHandler):
 
     max_retries: int = 3
 
-    @override
     async def listen(
         self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
