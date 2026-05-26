@@ -473,7 +473,7 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             )
 
         recorder.register(
-            lambda r: r.url.path == "/courts/cms/cases",
+            lambda r: r.url.path == "/courts/cms/cases/",
             case_handler,
         )
 
@@ -546,7 +546,7 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             )
 
         recorder.register(
-            lambda r: r.url.path == "/courts/cms/cases",
+            lambda r: r.url.path == "/courts/cms/cases/",
             case_handler,
         )
 
@@ -584,7 +584,7 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             )
 
         recorder.register(
-            lambda r: r.url.path == "/courts/cms/cases",
+            lambda r: r.url.path == "/courts/cms/cases/",
             case_handler,
         )
 
@@ -642,6 +642,14 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
     async def test_populates_parties_entries_and_attachments(self):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
+
+        recorder.register(
+            lambda r: r.url.path.endswith(f"/cases/{CASE_UUID}"),
+            lambda r: httpx.Response(
+                200,
+                json=_case_listing_entry(CASE_UUID, "4D2026-0606"),
+            ),
+        )
 
         recorder.register(
             lambda r: r.url.path.endswith("/docketentries"),
@@ -759,7 +767,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
             )
 
         recorder.register(
-            lambda r: r.url.path == "/courts/cms/cases",
+            lambda r: r.url.path == "/courts/cms/cases/",
             case_listing_handler,
         )
 
@@ -804,7 +812,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
             )
 
         recorder.register(
-            lambda r: r.url.path == "/courts/cms/cases",
+            lambda r: r.url.path == "/courts/cms/cases/",
             case_listing_handler,
         )
         # Loud failures if we hit per-case endpoints.
