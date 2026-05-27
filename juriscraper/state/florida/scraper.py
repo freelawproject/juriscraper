@@ -23,10 +23,10 @@ yielded to the caller which is responsible for storage.
 
 from __future__ import annotations
 
-from collections.abc import AsyncGenerator
+import asyncio
+from collections.abc import AsyncGenerator, Awaitable
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
-from functools import cached_property
 from itertools import chain
 from typing import TypeVar
 
@@ -136,6 +136,9 @@ class FloridaScraper:
             + (handlers or []),
             base_url=FLORIDA_API_BASE,
         )
+        self._courts_future: (
+            asyncio.Future[dict[FloridaCourtID, CourtMetadata]] | None
+        ) = None
 
     async def __aenter__(self) -> FloridaScraper:
         return self
@@ -143,14 +146,23 @@ class FloridaScraper:
     async def __aexit__(self, *_exc_info: object) -> None:
         await self.manager.aclose()
 
-    @cached_property
-    async def courts(self) -> dict[FloridaCourtID, CourtMetadata]:
-        """Fetch court and metadata endpoints once per scraper lifetime,
-        returning the cached list on subsequent calls.
+    @property
+    def courts(
+        self,
+    ) -> Awaitable[dict[FloridaCourtID, CourtMetadata]]:
+        """Awaitable resolving to the cached courts dict.
 
-        Returns:
-            The parsed list of :class:`FloridaCourt`.
+        The first ``await`` triggers the fetch; concurrent and subsequent
+        awaits share the same in-flight task and resolve to the same dict.
         """
+        if self._courts_future is None:
+            self._courts_future = asyncio.ensure_future(self._fetch_courts())
+        return self._courts_future
+
+    async def _fetch_courts(
+        self,
+    ) -> dict[FloridaCourtID, CourtMetadata]:
+        """Fetch court and metadata endpoints once per scraper lifetime."""
         logger.info("Fetching Florida courts list.")
         # The courts endpoint is paginated like everything else, but the
         # current size of the result set (well under 50) lets us request a

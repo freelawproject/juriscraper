@@ -69,6 +69,25 @@ class ScheduledRequest(Request):
         self.follow_redirects: bool | UseClientDefault = follow_redirects
         self.response: asyncio.Future[Response] = asyncio.Future()
 
+    @classmethod
+    def from_httpx_request(
+        cls,
+        request: Request,
+        *,
+        follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
+    ) -> "ScheduledRequest":
+        """Wrap a pre-built :class:`httpx.Request` as a :class:`ScheduledRequest`.
+
+        Use this when the request has already been produced via
+        :meth:`httpx.AsyncClient.build_request`, so client-level configuration
+        (``base_url``, default headers/cookies/params, timeout) is preserved.
+        """
+        instance = cls.__new__(cls)
+        instance.__dict__.update(request.__dict__)
+        instance.follow_redirects = follow_redirects
+        instance.response = asyncio.Future()
+        return instance
+
 
 class RequestHandler:
     """Base class for request handlers."""
@@ -258,7 +277,10 @@ class RequestManager(AsyncClient):
         Return:
             The response to the dispatched request after handler interference."""
         logger.info("Requesting %s %s", method, url)
-        request = ScheduledRequest(
+        # Use AsyncClient.build_request so the client's base_url and default
+        # headers/cookies/params/timeout get merged in. httpx's send() sends
+        # the request as-is, so those have to be on the request already.
+        httpx_request = self.build_request(
             method,
             url,
             content=content,
@@ -267,8 +289,10 @@ class RequestManager(AsyncClient):
             params=params,
             headers=headers,
             cookies=cookies,
-            follow_redirects=follow_redirects,
             timeout=timeout,
+        )
+        request = ScheduledRequest.from_httpx_request(
+            httpx_request, follow_redirects=follow_redirects
         )
 
         listen_tasks = {
