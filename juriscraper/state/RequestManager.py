@@ -399,7 +399,7 @@ class Retry(RequestHandler):
                 await manager.enqueue_request(request)
             except Exception as e:
                 logger.error(
-                    f"Unexpected error while processing request {request.url}: {e}"
+                    f"Unexpected error while processing request {request.url}: {e}",
                 )
                 return
             else:

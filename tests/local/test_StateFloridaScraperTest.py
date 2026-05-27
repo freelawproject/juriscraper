@@ -292,7 +292,7 @@ def _make_scraper(
     ``rps`` defaults very high so tests don't pay for rate limiting.
     """
     scraper = FloridaScraper(rps=rps)
-    scraper.manager.client._transport = httpx.MockTransport(recorder)
+    scraper.manager._transport = httpx.MockTransport(recorder)
     return scraper
 
 
@@ -326,11 +326,8 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        scraper = _make_scraper(recorder)
-        try:
-            courts = await scraper.fetch_courts()
-        finally:
-            await scraper.close()
+        async with _make_scraper(recorder) as scraper:
+            courts = await scraper.courts
 
         # Two known courts mapped through FLORIDA_COURT_EXTERNAL_ID_MAP.
         self.assertEqual(len(courts), 2)
@@ -355,13 +352,10 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        scraper = _make_scraper(recorder)
-        try:
-            first = await scraper.fetch_courts()
-            second = await scraper.fetch_courts()
-            third = await scraper.fetch_courts()
-        finally:
-            await scraper.close()
+        async with _make_scraper(recorder) as scraper:
+            first = await scraper.courts
+            second = await scraper.courts
+            third = await scraper.courts
 
         # Same cache object returned on every call.
         self.assertIs(first, second)
@@ -438,11 +432,8 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
             lambda r: httpx.Response(200, json=_docket_entry_subtypes_body()),
         )
 
-        scraper = _make_scraper(recorder)
-        try:
-            courts = await scraper.fetch_courts()
-        finally:
-            await scraper.close()
+        async with _make_scraper(recorder) as scraper:
+            courts = await scraper.courts
 
         # Only the recognized court is cached.
         self.assertEqual(list(courts), [FloridaCourtID.FOURTH_COA])
@@ -477,9 +468,8 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             case_handler,
         )
 
-        scraper = _make_scraper(recorder)
-        try:
-            await scraper.fetch_courts()
+        async with _make_scraper(recorder) as scraper:
+            await scraper.courts
             cases = [
                 c
                 async for c in scraper.enumerate_cases(
@@ -488,8 +478,6 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                     date(2026, 3, 31),
                 )
             ]
-        finally:
-            await scraper.close()
 
         self.assertEqual(len(cases), 2)
         self.assertIsInstance(cases[0], FloridaCase)
@@ -550,9 +538,8 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             case_handler,
         )
 
-        scraper = _make_scraper(recorder)
-        try:
-            await scraper.fetch_courts()
+        async with _make_scraper(recorder) as scraper:
+            await scraper.courts
             cases = [
                 c
                 async for c in scraper.enumerate_cases(
@@ -561,8 +548,6 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                     date(2026, 3, 31),
                 )
             ]
-        finally:
-            await scraper.close()
 
         self.assertEqual(
             sorted(c.docket_number for c in cases),
@@ -588,9 +573,8 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             case_handler,
         )
 
-        scraper = _make_scraper(recorder)
-        try:
-            await scraper.fetch_courts()
+        async with _make_scraper(recorder) as scraper:
+            await scraper.courts
             with self.assertRaises(InsanityException):
                 _ = [
                     c
@@ -600,17 +584,14 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                         date(2026, 3, 15),
                     )
                 ]
-        finally:
-            await scraper.close()
 
     async def test_unknown_court_raises(self):
         """Calling enumerate_cases for a court not in the cache raises."""
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        scraper = _make_scraper(recorder)
-        try:
-            await scraper.fetch_courts()
+        async with _make_scraper(recorder) as scraper:
+            await scraper.courts
             with self.assertRaises(ValueError):
                 _ = [
                     c
@@ -620,8 +601,6 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                         date(2026, 3, 31),
                     )
                 ]
-        finally:
-            await scraper.close()
 
 
 class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
@@ -690,13 +669,10 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
             docs_handler,
         )
 
-        scraper = _make_scraper(recorder)
-        try:
-            await scraper.fetch_courts()
+        async with _make_scraper(recorder) as scraper:
+            await scraper.courts
             case = self._parse_case(CASE_UUID, "4D2026-0606")
             populated = await scraper.fetch_case_data(case)
-        finally:
-            await scraper.close()
 
         # Returned object is a populated copy of the case we passed in.
         self.assertIsInstance(populated, FloridaCase)
@@ -724,17 +700,14 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        scraper = _make_scraper(recorder)
-        try:
-            await scraper.fetch_courts()
+        async with _make_scraper(recorder) as scraper:
+            await scraper.courts
             case = FloridaCase.model_validate(
                 _case_listing_entry(CASE_UUID, "4D2026-0606")
             )
             case.court_id = "flunknown"
             with self.assertRaises(ValueError):
                 await scraper.fetch_case_data(case)
-        finally:
-            await scraper.close()
 
 
 class BackfillTest(unittest.IsolatedAsyncioTestCase):
@@ -771,8 +744,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
             case_listing_handler,
         )
 
-        scraper = _make_scraper(recorder)
-        try:
+        async with _make_scraper(recorder) as scraper:
             cases = []
             async for case in scraper.backfill(
                 date(2026, 3, 1),
@@ -781,8 +753,6 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
                 full_scrape=False,
             ):
                 cases.append(case)
-        finally:
-            await scraper.close()
 
         self.assertEqual(len(cases), 1)
         self.assertIsInstance(cases[0], FloridaCase)
@@ -825,8 +795,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
             lambda r: httpx.Response(500, text="should not be called"),
         )
 
-        scraper = _make_scraper(recorder)
-        try:
+        async with _make_scraper(recorder) as scraper:
             cases = []
             async for case in scraper.backfill(
                 date(2026, 3, 1),
@@ -835,8 +804,6 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
                 full_scrape=False,
             ):
                 cases.append(case)
-        finally:
-            await scraper.close()
 
         self.assertEqual(len(cases), 1)
         self.assertEqual(cases[0].docket_number, "4D2026-0606")
@@ -857,13 +824,11 @@ class LifecycleTest(unittest.IsolatedAsyncioTestCase):
             lambda r: httpx.Response(200, text="ok"),
         )
         async with FloridaScraper(rps=1000.0) as scraper:
-            scraper.manager.client._transport = httpx.MockTransport(recorder)
-            self.assertFalse(scraper.manager.client.is_closed)
-        self.assertTrue(scraper.manager.client.is_closed)
+            scraper.manager._transport = httpx.MockTransport(recorder)
+            self.assertFalse(scraper.manager.is_closed)
+        self.assertTrue(scraper.manager.is_closed)
 
     async def test_close_is_idempotent(self):
-        scraper = FloridaScraper(rps=1000.0)
-        await scraper.close()
-        # Calling close again should not raise.
-        await scraper.close()
-        self.assertTrue(scraper.manager.client.is_closed)
+        async with FloridaScraper(rps=1000.0) as scraper:
+            self.assertFalse(scraper.manager.is_closed)
+        self.assertTrue(scraper.manager.is_closed)

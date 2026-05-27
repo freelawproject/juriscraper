@@ -26,8 +26,9 @@ from __future__ import annotations
 from collections.abc import AsyncGenerator
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
+from functools import cached_property
 from itertools import chain
-from typing import Any, TypeVar
+from typing import TypeVar
 
 from pydantic import BaseModel, RootModel
 
@@ -59,6 +60,7 @@ from juriscraper.state.florida.metadata import (
 )
 from juriscraper.state.florida.parties import FloridaPartyListParser
 from juriscraper.state.RequestManager import (
+    PrimitiveData,
     RateLimit,
     RequestHandler,
     RequestManager,
@@ -134,36 +136,21 @@ class FloridaScraper:
             + (handlers or []),
             base_url=FLORIDA_API_BASE,
         )
-        self.courts: dict[FloridaCourtID, CourtMetadata] = {}
-
-    # ------------------------------------------------------------------
-    # Lifecycle
-    # ------------------------------------------------------------------
-
-    async def close(self) -> None:
-        """Tear down the request manager. Safe to call more than once."""
-        await self.manager.close()
 
     async def __aenter__(self) -> FloridaScraper:
         return self
 
     async def __aexit__(self, *_exc_info: object) -> None:
-        await self.close()
+        await self.manager.aclose()
 
-    # ------------------------------------------------------------------
-    # Courts and metadata
-    # ------------------------------------------------------------------
-
-    async def fetch_courts(self) -> dict[FloridaCourtID, CourtMetadata]:
+    @cached_property
+    async def courts(self) -> dict[FloridaCourtID, CourtMetadata]:
         """Fetch court and metadata endpoints once per scraper lifetime,
         returning the cached list on subsequent calls.
 
         Returns:
             The parsed list of :class:`FloridaCourt`.
         """
-        if self.courts:
-            return self.courts
-
         logger.info("Fetching Florida courts list.")
         # The courts endpoint is paginated like everything else, but the
         # current size of the result set (well under 50) lets us request a
@@ -183,6 +170,8 @@ class FloridaScraper:
             )
             .root
         )
+
+        courts: dict[FloridaCourtID, CourtMetadata] = {}
 
         for court in court_results:
             e_id = str(court.external_identifier)
@@ -217,7 +206,7 @@ class FloridaScraper:
                 )
                 .root
             )
-            self.courts[court_id] = CourtMetadata(
+            courts[court_id] = CourtMetadata(
                 court=court,
                 case_party_subtypes=case_party_subtypes,
                 case_categories=case_categories,
@@ -225,17 +214,13 @@ class FloridaScraper:
             )
             logger.info("Metadata for %s cached.", court_id)
         logger.info("Fetched %d Florida courts.", len(court_results))
-        return self.courts
-
-    # ------------------------------------------------------------------
-    # Case enumeration
-    # ------------------------------------------------------------------
+        return courts
 
     async def _fetch_paginated(
         self,
         endpoint: str,
         parser: FloridaPaginatedResultsParser[ResultType],
-        params: dict[str, Any] | None = None,
+        params: dict[str, PrimitiveData] | None = None,
     ) -> list[FloridaPaginatedResults[ResultType]]:
         """Walk every page of a paginated endpoint and combine results.
 
@@ -305,11 +290,9 @@ class FloridaScraper:
         Raises:
             InsanityException: A single-day query hit :data:`MAX_RESULTS`.
         """
-        court_metadata = self.courts.get(court_id)
+        court_metadata = (await self.courts).get(court_id)
         if court_metadata is None:
-            raise ValueError(
-                "Unknown court id %r. Call fetch_courts() first." % court_id
-            )
+            raise ValueError(f"Unknown court id %r {court_id}")
         court_external_id = court_metadata.court.external_identifier
         params = {
             "size": PAGE_SIZE,
@@ -374,10 +357,6 @@ class FloridaScraper:
                 )
                 response_page = cl_parser.parse_full(response.text)
 
-    # ------------------------------------------------------------------
-    # Single case fetch
-    # ------------------------------------------------------------------
-
     async def fetch_case_data(self, case: FloridaCase) -> FloridaCase:
         """Fetch unpopulated fields for a :class:`FloridaCase` object and return
         a populated copy.
@@ -390,11 +369,9 @@ class FloridaScraper:
             A populated :class:`FloridaCase` object
         """
         court_id = FloridaCourtID(case.court_id)
-        court_data = self.courts.get(court_id)
+        court_data = (await self.courts).get(court_id, None)
         if court_data is None:
-            raise ValueError(
-                f"Court {court_id!r} not cached. Call fetch_courts() first."
-            )
+            raise ValueError(f"{case.court_id} is not a valid court ID.")
         court_uuid = court_data.court.resource_id
         case_uuid = case.case_uuid
 
@@ -446,10 +423,6 @@ class FloridaScraper:
 
         return output_case
 
-    # ------------------------------------------------------------------
-    # High-level entry point
-    # ------------------------------------------------------------------
-
     async def backfill(
         self,
         start: date,
@@ -473,10 +446,10 @@ class FloridaScraper:
                 for every case in every court in the date range. Otherwise, only
                 fetches the case list.
         """
-        _ = await self.fetch_courts()
+        _ = await self.courts
 
         if court_ids is None:
-            court_ids = list((self.courts or {}).keys())
+            court_ids = list((await self.courts or {}).keys())
 
         for court_id in court_ids:
             logger.info(
