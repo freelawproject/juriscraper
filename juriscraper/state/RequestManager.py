@@ -70,7 +70,7 @@ class ScheduledRequest(Request):
         self.response: asyncio.Future[Response] = asyncio.Future()
 
     @classmethod
-    def from_httpx_request(
+    def _from_httpx_request(
         cls,
         request: Request,
         *,
@@ -277,10 +277,7 @@ class RequestManager(AsyncClient):
         Return:
             The response to the dispatched request after handler interference."""
         logger.info("Requesting %s %s", method, url)
-        # Use AsyncClient.build_request so the client's base_url and default
-        # headers/cookies/params/timeout get merged in. httpx's send() sends
-        # the request as-is, so those have to be on the request already.
-        httpx_request = self.build_request(
+        request = self.build_request(
             method,
             url,
             content=content,
@@ -289,10 +286,8 @@ class RequestManager(AsyncClient):
             params=params,
             headers=headers,
             cookies=cookies,
+            follow_redirects=follow_redirects,
             timeout=timeout,
-        )
-        request = ScheduledRequest.from_httpx_request(
-            httpx_request, follow_redirects=follow_redirects
         )
 
         listen_tasks = {
@@ -339,6 +334,18 @@ class RequestManager(AsyncClient):
             request.response.set_result(response)
 
         return response
+
+    def build_request(
+        self,
+        *args: Any,
+        follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
+        **kwargs: Any,
+    ) -> ScheduledRequest:
+        """Build a `ScheduledRequest` from the arguments passed to `request`."""
+        return ScheduledRequest._from_httpx_request(
+            super().build_request(*args, **kwargs),
+            follow_redirects=follow_redirects,
+        )
 
     async def __aenter__(self) -> "RequestManager":
         """Allows the client to be used as an async context manager."""
