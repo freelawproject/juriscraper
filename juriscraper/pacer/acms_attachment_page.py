@@ -107,7 +107,7 @@ class ACMSAttachmentPage(BaseReport):
             return
         self.is_valid = True
 
-    def query(self, case_id: str, entry_id: str):
+    async def query(self, case_id: str, entry_id: str):
         """
         Retrieves details for a specific docket entry and its attachments.
 
@@ -124,10 +124,10 @@ class ACMSAttachmentPage(BaseReport):
         # so the session must have the necessary authentication data
         # initialized beforehand.
         if not self.session.acms_user_data:
-            self.session.get_acms_auth_object(self.court_id)
+            await self.session.get_acms_auth_object(self.court_id)
 
         # Fetch Docket Entry Details
-        docket_info = self.api_client.get_docket_entries(case_id)
+        docket_info = await self.api_client.get_docket_entries(case_id)
 
         # Find the specific docket entry by its ID.
         # If the entry is not found, 'entry_data' will be None.
@@ -152,7 +152,7 @@ class ACMSAttachmentPage(BaseReport):
             "restrictedPartyFilingDocketEntry"
         ]
 
-        attachment_list = self.api_client.get_attachments(
+        attachment_list = await self.api_client.get_attachments(
             entry_id, is_case_participant, is_restricted_party_filing_entry
         )
 
