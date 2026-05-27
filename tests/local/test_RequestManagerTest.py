@@ -22,7 +22,7 @@ def _make_manager(transport_handler=_ok_handler, **kwargs) -> RequestManager:
     manager = RequestManager(**kwargs)
     # Swap the transport so requests still travel the full httpx build/send
     # path but resolve against an in-process handler.
-    manager.client._transport = httpx.MockTransport(transport_handler)
+    manager._transport = httpx.MockTransport(transport_handler)
     return manager
 
 
@@ -31,12 +31,10 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         self.manager = _make_manager()
 
     async def asyncTearDown(self):
-        await self.manager.close()
+        await self.manager.aclose()
 
     async def test_default_user_agent(self):
-        self.assertEqual(
-            self.manager.client.headers.get("User-Agent"), USER_AGENT
-        )
+        self.assertEqual(self.manager.headers.get("User-Agent"), USER_AGENT)
 
     async def test_user_agent_already_contains_juriscraper_left_alone(self):
         manager = _make_manager(
@@ -44,33 +42,33 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         )
         try:
             self.assertEqual(
-                manager.client.headers.get("User-Agent"),
+                manager.headers.get("User-Agent"),
                 "Custom Juriscraper Build/1.0",
             )
         finally:
-            await manager.close()
+            await manager.aclose()
 
     async def test_user_agent_missing_juriscraper_gets_appended(self):
         manager = _make_manager(headers={"User-Agent": "CustomAgent/1.0"})
         try:
-            ua = manager.client.headers.get("User-Agent")
+            ua = manager.headers.get("User-Agent")
             self.assertIn("CustomAgent/1.0", ua)
             self.assertIn(USER_AGENT, ua)
         finally:
-            await manager.close()
+            await manager.aclose()
 
     async def test_cache_control_and_pragma_headers_set(self):
         self.assertEqual(
-            self.manager.client.headers.get("Cache-Control"),
+            self.manager.headers.get("Cache-Control"),
             "no-cache, max-age=0, must-revalidate",
         )
-        self.assertEqual(self.manager.client.headers.get("Pragma"), "no-cache")
+        self.assertEqual(self.manager.headers.get("Pragma"), "no-cache")
 
     async def test_loop_started_lazily_on_first_enqueue(self):
-        self.assertIsNone(self.manager._loop_future)
+        self.assertIsNone(self.manager._loop_task)
         response = await self.manager.get("https://example.com/")
         self.assertEqual(response.status_code, 200)
-        self.assertIsNotNone(self.manager._loop_future)
+        self.assertIsNotNone(self.manager._loop_task)
 
     async def test_get_post_put_delete_round_trip(self):
         seen: list[str] = []
@@ -90,16 +88,16 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
             )
             self.assertEqual(seen, ["GET", "POST", "PUT", "DELETE"])
         finally:
-            await manager.close()
+            await manager.aclose()
 
     async def test_close_cancels_loop_and_closes_client(self):
         await self.manager.get("https://example.com/")
-        loop_future = self.manager._loop_future
-        await self.manager.close()
+        loop_future = self.manager._loop_task
+        await self.manager.aclose()
         # Yield once so the cancellation can propagate.
         await asyncio.sleep(0)
         self.assertTrue(loop_future.cancelled() or loop_future.done())
-        self.assertTrue(self.manager.client.is_closed)
+        self.assertTrue(self.manager.is_closed)
 
     async def test_follow_redirects_propagated_per_request(self):
         captured: list[object] = []
@@ -114,7 +112,7 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
             await manager.get("https://example.com/", follow_redirects=True)
             self.assertEqual(captured, [False, True])
         finally:
-            await manager.close()
+            await manager.aclose()
 
 
 class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
@@ -135,14 +133,14 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
 
             async def listen(self, manager, request):
                 events.append(("listen_start", time.monotonic()))
-                _ = await request.response()
+                _ = await request.response
                 events.append(("listen_done", time.monotonic()))
 
         manager = _make_manager(handler, handlers=[Recorder()])
         try:
             await manager.get("https://example.com/")
         finally:
-            await manager.close()
+            await manager.aclose()
 
         keys = [e[0] for e in events]
         # before_send must finish before the request is dispatched.
@@ -160,13 +158,13 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
 
             async def listen(self, manager, request):
                 counts["listen"] += 1
-                _ = await request.response()
+                _ = await request.response
 
         manager = _make_manager(handlers=[Counter(), Counter(), Counter()])
         try:
             await manager.get("https://example.com/")
         finally:
-            await manager.close()
+            await manager.aclose()
 
         self.assertEqual(counts, {"before_send": 3, "listen": 3})
 
@@ -190,7 +188,7 @@ class RateLimitTest(unittest.IsolatedAsyncioTestCase):
             elapsed = time.monotonic() - start
             self.assertGreaterEqual(elapsed, 0.1)
         finally:
-            await manager.close()
+            await manager.aclose()
 
     async def test_concurrent_before_send_calls_are_serialized(self):
         # The lock around _last_request_time should serialize *reservations*
@@ -202,7 +200,7 @@ class RateLimitTest(unittest.IsolatedAsyncioTestCase):
         n = 5
 
         async def reserve():
-            req = ScheduledRequest(httpx.Request("GET", "https://x/"))
+            req = ScheduledRequest("GET", "https://x/")
             await rate.before_send(None, req)
 
         start = time.monotonic()
@@ -231,13 +229,14 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(response.status_code, 200)
             self.assertEqual(attempts["n"], 3)
         finally:
-            await manager.close()
+            await manager.aclose()
 
     async def test_exhausting_retries_surfaces_last_exception(self):
-        attempts = {"n": 0}
+        attempts = 0
 
         def handler(request: httpx.Request) -> httpx.Response:
-            attempts["n"] += 1
+            nonlocal attempts
+            attempts += 1
             return httpx.Response(500, text="fail")
 
         manager = _make_manager(handler, handlers=[Retry(max_retries=2)])
@@ -246,9 +245,9 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
                 await manager.get("https://example.com/")
             # max_retries=2 means at least 3 attempts should have been made
             # (initial + 2 retries). Without retries actually firing this is 1.
-            self.assertGreaterEqual(attempts["n"], 3)
+            self.assertGreaterEqual(attempts, 3)
         finally:
-            await manager.close()
+            await manager.aclose()
 
 
 if __name__ == "__main__":
