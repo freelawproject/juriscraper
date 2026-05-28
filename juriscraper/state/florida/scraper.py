@@ -35,6 +35,7 @@ from pydantic import BaseModel, RootModel
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.florida import FloridaCaseListParser
+from juriscraper.state.florida.arguments import FloridaCaseArgumentsParser
 from juriscraper.state.florida.cases import (
     FloridaCase,
     FloridaCaseInfoParser,
@@ -390,6 +391,7 @@ class FloridaScraper:
         ci_parser = FloridaCaseInfoParser(court_id=court_id.value)
         de_parser = FloridaDocketEntryListParser(court_id=court_id.value)
         parties_parser = FloridaPartyListParser(court_id=court_id.value)
+        arguments_parser = FloridaCaseArgumentsParser(court_id=court_id.value)
 
         case_response = await self.manager.get(
             FloridaCaseInfoParser.endpoint.format(
@@ -409,12 +411,22 @@ class FloridaScraper:
             parties_parser,
         )
 
+        arguments_pages = await self._fetch_paginated(
+            arguments_parser.endpoint.format(court=court_uuid, case=case_uuid),
+            arguments_parser,
+        )
+
         output_case.parties = list(
             chain.from_iterable(p.results for p in parties_pages)
         )
         output_case.entries = list(
             chain.from_iterable(p.results for p in docket_entry_pages)
         )
+        output_case.arguments = list(
+            chain.from_iterable(p.results for p in arguments_pages)
+        )
+
+        court_external_id = court_data.court.external_identifier
 
         da_parser = FloridaDocumentAccessParser(court_id=court_id.value)
 
@@ -423,9 +435,11 @@ class FloridaScraper:
                 da_parser.endpoint,
                 da_parser,
                 params={
-                    "caseHeader.courtID": court_data.court.external_identifier,
-                    "docketEntryHeader.docketEntryUUID": entry.docket_entry_uuid,
-                    "caseHeader.caseInstanceUUID": case_uuid,
+                    "caseHeader.courtID": court_external_id,
+                    "docketEntryHeader.docketEntryUUID": str(
+                        entry.docket_entry_uuid
+                    ),
+                    "caseHeader.caseInstanceUUID": str(case_uuid),
                 },
             )
 

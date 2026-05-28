@@ -21,6 +21,7 @@ from juriscraper.state.docket import (
     TransferDirection,
     TransferReason,
 )
+from juriscraper.state.florida.arguments import FloridaArgument
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     FloridaPaginatedResultsParser,
@@ -201,6 +202,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar transfers: Transfers of this case between courts.
     :ivar entries: Docket entries filed in this case.
     :ivar parties: Parties in this case.
+    :ivar arguments: Oral arguments associated with this case.
     """
 
     case_uuid: UUID4 = Field(
@@ -276,6 +278,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     transfers: list[DocketTransfer] = []
     entries: list[FloridaDocketEntry] = []
     parties: list[FloridaParty] = []
+    arguments: list[FloridaArgument] = []
 
 
 class FloridaCaseListParser(FloridaPaginatedResultsParser[FloridaCase]):
