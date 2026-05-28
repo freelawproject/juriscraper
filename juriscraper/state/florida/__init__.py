@@ -2,6 +2,7 @@
 Florida parsers, scrapers, and data structures.
 """
 
+from .arguments import FloridaArgument, FloridaCaseArgumentsParser
 from .cases import (
     FloridaCase,
     FloridaCaseInfoParser,
@@ -28,7 +29,9 @@ from .scraper import (
 
 __all__ = [
     "CourtMetadata",
+    "FloridaArgument",
     "FloridaCase",
+    "FloridaCaseArgumentsParser",
     "FloridaCaseActor",
     "FloridaCaseInfoParser",
     "FloridaCaseListParser",
