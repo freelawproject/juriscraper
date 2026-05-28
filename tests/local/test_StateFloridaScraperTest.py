@@ -245,6 +245,19 @@ def _document_body(docket_entry_uuid: str) -> dict[str, Any]:
     }
 
 
+def _hearings_body() -> dict[str, Any]:
+    return _paginated_body(
+        [
+            {
+                "startDate": "2023-04-11T18:01:00.000+00:00",
+                "hearingType": "Oral Argument",
+                "hearingStatus": "Scheduled",
+                "event": {"panelFlag": True},
+            }
+        ]
+    )
+
+
 # ---------------------------------------------------------------------------
 # A scriptable transport
 # ---------------------------------------------------------------------------
@@ -313,6 +326,10 @@ def _register_court_and_metadata_handlers(recorder: _Recorder) -> None:
     recorder.register(
         lambda r: r.url.path.endswith("/cms/docketentrysubtypes"),
         lambda r: httpx.Response(200, json=_docket_entry_subtypes_body()),
+    )
+    recorder.register(
+        lambda r: r.url.path.endswith("/hearings"),
+        lambda r: httpx.Response(200, json=_hearings_body()),
     )
 
 
@@ -618,7 +635,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
             )
         )
 
-    async def test_populates_parties_entries_and_attachments(self):
+    async def test_populates_extra(self):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
