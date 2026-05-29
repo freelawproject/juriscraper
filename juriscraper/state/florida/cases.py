@@ -10,6 +10,7 @@ from pydantic import (
     Field,
 )
 from pydantic_core import PydanticCustomError
+from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -20,12 +21,17 @@ from juriscraper.state.docket import (
     TransferDirection,
     TransferReason,
 )
+from juriscraper.state.florida.arguments import FloridaArgument
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
     datetime_str_to_date_validator,
     florida_docket_number_validator,
 )
-from juriscraper.state.florida.courts import FloridaCourtID
+from juriscraper.state.florida.courts import (
+    FLORIDA_COURT_EXTERNAL_ID_MAP,
+    FloridaCourtID,
+)
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
 
@@ -145,17 +151,6 @@ class FloridaOriginatingCase(BaseModel):
     case_number: str = Field(validation_alias="originatingCaseNumber")
 
 
-FLORIDA_COURT_EXTERNAL_ID_MAP: dict[str, FloridaCourtID] = {
-    "1": FloridaCourtID.SUPREME_COURT,
-    "2": FloridaCourtID.FIRST_COA,
-    "3": FloridaCourtID.SECOND_COA,
-    "4": FloridaCourtID.THIRD_COA,
-    "5": FloridaCourtID.FOURTH_COA,
-    "6": FloridaCourtID.FIFTH_COA,
-    "7": FloridaCourtID.SIXTH_COA,
-}
-
-
 def florida_external_id_to_js_id_validator(i: str) -> str:
     """
     Maps Florida's external court ID to a value on the FloridaCourtID enum.
@@ -207,6 +202,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar transfers: Transfers of this case between courts.
     :ivar entries: Docket entries filed in this case.
     :ivar parties: Parties in this case.
+    :ivar arguments: Oral arguments associated with this case.
     """
 
     case_uuid: UUID4 = Field(
@@ -282,9 +278,10 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     transfers: list[DocketTransfer] = []
     entries: list[FloridaDocketEntry] = []
     parties: list[FloridaParty] = []
+    arguments: list[FloridaArgument] = []
 
 
-class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
+class FloridaCaseListParser(FloridaPaginatedResultsParser[FloridaCase]):
     """
     Parser for Florida case list API results.
 
@@ -293,9 +290,9 @@ class FloridaCaseListParser(LegacyParser[list[FloridaCase]]):
 
     endpoint: ClassVar[str] = "/courts/cms/cases/"
 
-    def _parse(self, i: str) -> list[FloridaCase]:
-        results = FloridaPaginatedResults[FloridaCase].model_validate_json(i)
-        return results.results
+    @override
+    def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaCase]:
+        return FloridaPaginatedResults[FloridaCase].model_validate_json(i)
 
 
 class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
@@ -307,17 +304,22 @@ class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
 
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}"
 
-    def _parse(self, i: str) -> FloridaCase:
-        flc = FloridaCase.model_validate_json(i)
-        # I would prefer to use Pydantic's computed_field decorator for this,
-        # but type checkers complain if I do so alas.
-        flc.transfers = [
+    @staticmethod
+    def populate_transfers(case: FloridaCase) -> None:
+        """Populates the ``transfers`` field of a case inplace."""
+        case.transfers = [
             DocketTransfer(
                 direction=TransferDirection.INBOUND,
                 reason=TransferReason.APPEAL,
                 court_id=oc.court_id.value,
                 docket_number=oc.case_number,
             )
-            for oc in flc.originating_cases
+            for oc in case.originating_cases
         ]
+
+    def _parse(self, i: str) -> FloridaCase:
+        flc = FloridaCase.model_validate_json(i)
+        # I would prefer to use Pydantic's computed_field decorator for this,
+        # but type checkers complain if I do so alas.
+        self.populate_transfers(flc)
         return flc

@@ -2,10 +2,13 @@ from typing import Annotated, Any, ClassVar
 
 from pydantic import UUID4, AliasPath, BeforeValidator, Field
 from pydantic_core import PydanticCustomError
+from typing_extensions import override
 
-from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.docket import Party, PartyType, Representative
-from juriscraper.state.florida.common import FloridaPaginatedResults
+from juriscraper.state.florida.common import (
+    FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
+)
 
 FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
     "appellant": PartyType.APPELLANT,
@@ -95,7 +98,7 @@ class FloridaPartyRepresentative(Representative):
     primary_flag: bool = Field(validation_alias="primaryFlag")
 
 
-class FloridaParty(Party):
+class FloridaParty(Party[FloridaPartyRepresentative]):
     """
     Extension of the Party data structure with Florida-specific fields.
 
@@ -168,7 +171,7 @@ class FloridaParty(Party):
     involvement_type_id: int = Field(validation_alias="involvementTypeID")
 
 
-class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
+class FloridaPartyListParser(FloridaPaginatedResultsParser[FloridaParty]):
     """
     Parser for Florida party list API results.
 
@@ -177,8 +180,6 @@ class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
 
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/parties"
 
-    def _parse(self, i: str) -> list[FloridaParty]:
-        party_results = FloridaPaginatedResults[
-            FloridaParty
-        ].model_validate_json(i)
-        return party_results.results
+    @override
+    def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaParty]:
+        return FloridaPaginatedResults[FloridaParty].model_validate_json(i)
