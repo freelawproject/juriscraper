@@ -21,9 +21,19 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.21 - 2026-05-29
+
+Fixes:
 - `ny.Site.cleanup_content` wraps output in an html document envelope so
   doctor doesn't misclassify cleaned pages as `text/plain`. #1971
 - Skip the  `should_have_results`  error during historical backscrapes #1886
+- Updated `ca9_p` and `ca9_u` opinion feed URLs (#1976)
+- `ariz` was failing with a 401 from the opinions API: a new DNN module was
+  added to the search page, so the positional ModuleId xpath picked the wrong
+  module. Target the opinions module by its `DnnModule-AzcourtsOpinions` class
+  instead. #1978
 
 ## 3.0.20 - 2026-05-21
 

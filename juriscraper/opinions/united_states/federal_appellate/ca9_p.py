@@ -6,6 +6,7 @@ History:
       the scraper started working without my fixing it. Very odd.
     - 2023-01-13: Update to use RSS Feed
     - 2025-08-27: Added extract_from_text and avoid duplicates.
+    - 2026-05-29: Updated URL after site moved feeds under /decisions/.
 """
 
 import re
@@ -21,7 +22,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = "https://www.ca9.uscourts.gov/opinions/index.xml"
+        self.url = "https://www.ca9.uscourts.gov/decisions/opinions/index.xml"
         self.status = "Published"
         self.should_have_results = True
 
