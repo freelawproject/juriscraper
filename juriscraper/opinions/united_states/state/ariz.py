@@ -26,8 +26,12 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1998, 1, 1)
     days_interval = 30
 
-    # XPaths for extracting authentication values
-    module_xp = "//div[@id='dnn_ContentPane']/div/a/@name"
+    # XPaths for extracting authentication values.
+    # The search page hosts several DNN modules; target the opinions module by
+    # its stable class instead of by position. Selecting positionally broke
+    # when a generic HTML module was added ahead of it, so the API rejected the
+    # wrong ModuleId with a 401. See #1978
+    module_xp = "//div[contains(@class, 'DnnModule-AzcourtsOpinions')]/a/@name"
     tab_xp = "//script[contains(text(), 'g_dnnsfState')]/text()"
     token_xp = "//input[@name='__RequestVerificationToken']/@value"
 
