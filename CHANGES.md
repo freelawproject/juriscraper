@@ -24,6 +24,7 @@ Fixes:
 - `ny.Site.cleanup_content` wraps output in an html document envelope so
   doctor doesn't misclassify cleaned pages as `text/plain`. #1971
 - Skip the  `should_have_results`  error during historical backscrapes #1886
+- Updated `ca9_p` and `ca9_u` opinion feed URLs (#1976)
 
 ## 3.0.20 - 2026-05-21
 
