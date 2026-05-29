@@ -21,6 +21,11 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.21 - 2026-05-29
+
+Fixes:
 - `ny.Site.cleanup_content` wraps output in an html document envelope so
   doctor doesn't misclassify cleaned pages as `text/plain`. #1971
 - Skip the  `should_have_results`  error during historical backscrapes #1886
