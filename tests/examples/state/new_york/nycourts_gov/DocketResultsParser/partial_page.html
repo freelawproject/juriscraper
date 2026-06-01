@@ -1,0 +1,1076 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>
+	NYS Court-PASS Counsel Filing
+</title><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="stylesheet" type="text/css" href="css/Hide.css"><link rel="stylesheet" href="css/corners.css"><link rel="stylesheet" href="css/colorbox.css">
+<script type="text/javascript" src="jscript/jquery-1.12.0.min.js"></script>
+<!--<script type="text/javascript" src="jscript/jquery.colorbox-min.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".ajax").colorbox({opacity:0.7});
+	});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<style type="text/css">
+
+/* =========================
+   Theme variables
+   ========================= */
+:root {
+  --brand-blue: #255b73;
+  --brand-tan: #f4d585;
+  --brand-tan-hover: #f7e5b7;
+  --skip-bg: #f7d385;
+  --panel-title-bg: #dfe7ea;
+  --footer-bg: #dfe7ea;
+  --white: #ffffff;
+}
+
+/* =========================
+   Global / utilities
+   ========================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { max-width: 100%; }
+
+img, table, input { max-width: 100%; }
+
+/* If you keep this, make sure nothing gets clipped at 400% zoom */
+body { overflow-x: hidden; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--skip-bg);
+  color: var(--brand-blue);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--brand-blue);
+}
+.skip-link:focus { top: 0; }
+
+.results-title { margin: 1rem 0; }
+.results-actions { text-align: center; margin-top: 1rem; }
+
+.results-wrap {
+  margin-bottom: 2rem;
+}
+
+.page-actions { text-align: center; margin: 1rem 0 2rem; }
+
+.banner { text-align: center; }
+
+#casesHeading { margin: 2rem 0 2rem; }
+.results-wrap { margin: 1rem 0 2rem; }
+
+/* =========================
+   Header: topbar + nav + search
+   ========================= */
+.topbar {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* prevents overflow at 400% zoom */
+}
+
+.topbar-left {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.topbar-right {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+@media (min-width: 941px) {
+  .topbar-right { flex: 0 0 auto; }
+}
+
+/* Nav bar */
+.navbar {
+  background-color: var(--brand-tan);
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar a {
+  color: var(--brand-blue);
+  font-weight: bolder;
+  text-align: center;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.subnav:hover .subnavbtn {
+  background-color: var(--brand-tan-hover);
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+.dropdown .dropbtn {
+  font-size: 12px;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  color: var(--brand-blue);
+  padding: 4px 8px 0;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--brand-tan);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--brand-blue);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: var(--brand-tan-hover);
+}
+
+.dropdown.open .dropdown-content,
+.subnav.open .subnav-content {
+  display: block;
+}
+
+/* Focus styles */
+.navbar a:focus,
+.dropbtn:focus,
+.subnavbtn:focus,
+.dropdown-content a:focus,
+.subnav-content a:focus {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Search form */
+#suggestion_form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#suggestion_form input[type="text"] {
+  width: 8rem;
+  min-width: 6rem;
+  max-width: 100%;
+}
+
+.topbar-search-button { background-color: var(--brand-tan); }
+
+/* =========================
+   Page layout: main + sidebar
+   ========================= */
+.page {
+  max-width: 940px;
+  width: 100%;
+  margin: 6px auto 0;
+  background: var(--white);
+  padding: 0 12px;
+  overflow-x: clip;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+  gap: 16px;
+  align-items: start;
+}
+
+.main {
+  min-width: 0;
+  padding: 0 6px 0 0;
+}
+
+.sidebar {
+  min-width: 0;
+  border-left: 1px solid var(--brand-tan);
+  padding-left: 12px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-left: none; padding-left: 0; }
+}
+
+/* Headings inside main */
+.main h1 { font-size: 1.2em; }
+.main h2 { font-size: 1.2em; }
+
+/* =========================
+   CTA buttons
+   ========================= */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 16px;
+  background: var(--brand-tan);
+  color: var(--brand-blue);
+  font-weight: bold;
+  border: 6px solid var(--brand-blue);
+  text-decoration: none;
+}
+
+.cta:hover,
+.cta:focus {
+  background: var(--brand-tan-hover);
+  outline: 6px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.section-rule {
+  height: 2px;
+  background-color: var(--brand-tan);
+  border: 0;
+  margin: 12px 0;
+}
+
+/* match original table look */
+.bttm {
+  background-color: #dfe7ea;
+  width: 694px;
+  max-width: 100%;
+  border: thin solid #255b73;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bttm a:link,
+.bttm a:visited { color: #255b73; text-decoration: none; }
+.bttm a:hover,
+.bttm a:active { color: Red; text-decoration: none; }
+
+.bttm-grid {
+  display: grid;
+  grid-template-columns: 200px 115px minmax(0, 2fr) minmax(0, 200px);
+  column-gap: 0;
+  row-gap: 0;
+  align-items: start;
+}
+
+/* Place each block in the grid */
+.bttm-col1block { grid-column: 1; grid-row: 1 / 5; padding-left: 28px; }
+.bttm-col2block { grid-column: 2; grid-row: 1 / 5; }
+
+.bttm-helphead  { grid-column: 3 / 5; grid-row: 1; }
+
+.bttm-col3block { grid-column: 3; grid-row: 2 / 5; }
+.bttm-col4block { grid-column: 4; grid-row: 2 / 5; }
+
+/* Your existing header style */
+.bttm-h {
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 2px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+/* Keep these */
+.bttm-last { padding-bottom: 5px; }
+
+/* Reflow */
+@media (max-width: 900px) {
+  .bttm-grid { grid-template-columns: 1fr; }
+  .bttm-col1block,
+  .bttm-col2block,
+  .bttm-helphead,
+  .bttm-col3block,
+  .bttm-col4block {
+    grid-column: 1;
+    grid-row: auto;
+    padding-left: 0;
+  }
+}
+
+/* =========================
+   Search panel (table-to-grid conversion)
+   ========================= */
+.search-panel {
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px ridge var(--brand-blue);
+  background: var(--white);
+}
+
+.search-panel-inner {
+  width: 100%;
+  max-width: 684px;
+  margin: 0 auto;
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px 12px;
+}
+
+/* allow grid children to shrink (prevents overflow) */
+.search-panel-inner > * { min-width: 0; }
+
+/* Prevent any control inside the search panel from forcing horizontal overflow */
+.search-panel,
+.search-panel-inner,
+.search-panel * {
+  min-width: 0;
+}
+
+.search-panel select,
+.search-panel input[type="text"],
+.search-panel input[type="search"],
+.search-panel textarea {
+  max-width: 100% !important;
+}
+
+/* If any ASP.NET control renders an inline width, override it */
+.search-panel select,
+.search-panel input,
+.search-panel textarea {
+  box-sizing: border-box;
+}
+
+.form-full,
+.search-title,
+.caption,
+.form-actions {
+  grid-column: 1 / -1;
+}
+
+.search-title,
+.caption {
+  background: var(--panel-title-bg);
+  padding: 6px;
+}
+
+.form-row {
+  background: var(--white);
+  padding: 6px;
+}
+
+.form-label {
+  display: block;
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-fieldset {
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+  text-align: center;
+}
+
+.form-fieldset legend { text-align: left; }
+
+.form-actions {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* inline controls (citation row) */
+.inline-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.form-control--slipyear { width: clamp(5.5rem, 18vw, 7rem); }
+.form-control--slipno   { width: clamp(6rem, 22vw, 9rem); }
+
+.form-control--small { width: 120px; }
+.form-control--xs { width: 80px; }
+
+/* Match-type inline row */
+.form-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.form-label-inline {
+  display: inline;
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-control--matchtype {
+  width: auto;
+  max-width: 100%;
+}
+
+/* two-column caption line (Judge / Decision No, etc.) */
+.caption-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+}
+
+/* Reflow: collapse panel to 1 column earlier for 400% zoom */
+@media (max-width: 1100px) {
+  .search-panel-inner { grid-template-columns: 1fr; }
+  .caption-2col { grid-template-columns: 1fr; row-gap: 6px; }
+}
+
+.results-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.results-wrap:focus {
+  outline: 3px solid #255b73;
+  outline-offset: 2px;
+}
+
+.results-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Make long text wrap instead of forcing width */
+.results-wrap table,
+.results-wrap th,
+.results-wrap td {
+  white-space: normal;
+}
+
+.results-wrap th,
+.results-wrap td {
+  overflow-wrap: anywhere;   /* best for very long strings */
+  word-break: normal;
+  hyphens: auto;
+}
+
+.results-wrap caption {
+  position: absolute;
+  left: -9999px;
+}
+
+.grid-btn {
+  appearance: none;
+  background: #255B73;
+  color: #fff;
+
+  border: 2px solid #255B73;  /* base border */
+  border-radius: 4px;
+
+  padding: 10px 16px;
+  cursor: pointer;
+
+  /* sizing: don’t force 100px wide unless this class is ONLY for tiny buttons */
+  /* width: 100px;  <-- remove this */
+  min-height: 44px;           /* better target size */
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.grid-btn:hover {
+  background: #1f4a5d;
+  border: 4px solid #000;          /* force visible border */
+  box-shadow: 0 0 0 1px #fff inset; /* optional “edge” on dark bg */
+}
+
+/* Keyboard focus: strong border + strong ring */
+.grid-btn:focus,
+.grid-btn:focus-visible {
+  outline: none;              /* replace with box-shadow ring */
+  border-color: #000;         /* border highlight for focus */
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585; /* crisp on white */
+}
+
+/* Pressed */
+.grid-btn:active {
+  background: #163a4a;
+  border-color: #000;
+}
+
+/* Disabled */
+.grid-btn:disabled,
+.grid-btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* If focused AND hovered/clicked, keep the focus ring */
+.grid-btn:hover:focus,
+.grid-btn:hover:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585;
+}
+
+.grid-btn--small { width: 100px; padding: 6px 10px; min-height: 36px; }
+.grid-btn--wide  { width: 60%; }
+
+/* Optional: show focus when any control inside a row is focused */
+.results-table tr:focus-within {
+  background: #f7e5b7;
+}
+
+.return-to-search {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.case-caption {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.case-caption-line {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.case-caption-party {
+  font-size: 1.125rem; /* similar to font size=3 */
+}
+
+.case-caption-v {
+  font-size: 1rem;     /* similar to font size=2 */
+}
+
+.case-details {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: .5rem 1rem;
+  margin: 1rem 0;
+}
+
+.case-details dt {
+  font-weight: 700;
+}
+
+.case-details dd {
+  margin: 0;
+}
+
+.case-section-title {
+  font-size: 1.25rem;  /* similar to your size=4 */
+  font-weight: 700;
+  margin: 1rem 0 .25rem;
+}
+
+.case-issues-category {
+  font-weight: 700;
+  margin: 0 0 .5rem;
+}
+
+.case-issues-text {
+  font-size: 1rem;  /* replaces size=2 */
+  margin: 0 0 1rem;
+}
+
+/* Focus ring for pager links and other interactive controls */
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.details-dl { margin: 0; }
+
+.details-row{
+  display: grid;
+  grid-template-columns: clamp(7rem, 18vw, 10rem) minmax(0, 1fr);
+  gap: 6px 12px;
+}
+
+.details-row dt { font-weight: 700; }
+
+.details-row dd{
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: normal;   /* undo 'anywhere' */
+  word-break: normal;      /* undo 'break-all' */
+}
+
+.details-help { display: inline-block; margin-left: .5rem; }
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #0b63ce;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.link-button:focus,
+.link-button:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.case-details{
+  width: 100%;
+  max-width: none;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">function killerrors(){return true;}window.onerror = killerrors;</script>
+
+</head>
+<body>
+<a href="#maincontent" class="skip-link">Skip to main content</a>
+
+<div style="max-width: 940px; width: 100%; min-height: 172px; margin: 0 auto; position: relative; display: flex; flex-direction: column;" role="banner">
+
+	<div style="max-width: 940px; width: 100%; margin: 4px auto 0; position: relative;">
+        <a href="http://www.nycourts.gov/ctapps/">
+          <img src="images/coatitlesm.png" width="70%" height="129" alt="New York Court of Appeals" style="margin-left:auto;margin-right:auto;display:block;">
+        </a>
+	</div>
+
+<div class="topbar" style="margin-top: 10px;">
+  <div class="topbar-left" id="menu" style="background-color: #f4d585;">
+    <div class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="default.aspx">Home</a>
+      <a href="Public_search.aspx">Search PASS</a>
+      <a href="Public_Browse.aspx">Browse PASS</a>
+      <a href="Docket.aspx">Docket</a>
+      <a href="Login.aspx">Filer Access</a>
+
+      <div class="dropdown">
+        <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="rules-menu">
+          Help and Information
+        </button>
+
+        <div id="rules-menu" class="dropdown-content" aria-hidden="true">
+          <a href="Public_Faq.htm">Public Search Help</a>
+          <a href="Counsel_Faq.htm">Filer Help</a>
+          <a href="https://www.nycourts.gov/ctapps/500rules.htm">Court Rules</a>
+          <a href="TechSpecsCFUP.htm">Technical Specifications and Instructions for Submission</a>
+        </div>
+      </div>
+
+      <a href="mailto:cpsupport@nycourts.gov">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <form id="suggestion_form" name="gs" method="GET" action="http://search.nycourts.gov/search" onsubmit="return (this.q.value == '') ? false : true;">
+
+      <label class="sr-only" for="siteSearch">Search</label>
+      <input id="siteSearch" type="text" name="q" maxlength="256" autocomplete="off" onkeyup="ss_handleKey(event)">
+
+      <input type="submit" name="btnG" value="Search" class="topbar-search-button">
+
+      <!-- keep your hidden fields exactly as-is -->
+      <input type="hidden" name="ud" value="1">
+      <input type="hidden" name="sort" value="date:D:L:d1">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="client" value="court_pass_frontend">
+      <input type="hidden" name="proxystylesheet" value="court_pass_frontend">
+      <input type="hidden" name="btnG.x" value="11">
+      <input type="hidden" name="btnG.y" value="16">
+      <input type="hidden" name="exclude_apps" value="1">
+      <input type="hidden" name="site" value="court_pass">
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="page">
+  <!-- Breadcrumbs row -->
+    <div style="border-bottom: medium solid #F4D585; padding-bottom: 4px;">
+      <div role="navigation" aria-label="Breadcrumb">
+        <span class="BCrumbs">
+          
+    <span class="BCrumbs"><img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle"><a href="Default.aspx">Home</a> <img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle">Court Docket</span>
+
+        </span>
+      </div>
+    </div>
+
+  <div class="layout">
+    <div id="maincontent" class="main" role="main" tabindex="-1">
+      <div style="text-align:center;">
+        <img src="images/Court-PASS_Banner.png" width="315" height="62" alt="Court-PASS">
+      </div>
+
+      
+    <script language="javascript" type="text/javascript">
+
+        function CallDetails() {
+            var bttnCAllDetailsId = 'cphMain_bttnDetails';
+            document.getElementById(bttnCAllDetailsId).style.visibility = 'inherit';
+            document.getElementById(bttnCAllDetailsId).click();
+        }
+
+    </script>
+
+    <div align="center">
+        <img src="images/Docket_Banner.png" alt="" aria-hidden="true" width="90%" height="47" border="0">
+	</div>	
+    
+    <!-- CONTENT TABLE -->
+    <form method="post" action="./Docket" id="Form2">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZN1YE5nSVrl8mXRDFN0-6ZVrRvBLdkMWZWwyorP1Ct3oDv2vun9mT3FDtccYjdWEfw2&amp;t=638901382312636832" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="153FDA1C">
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="y/skiRJWqMt7OH+pOnQf4z/+wUFFp4XetewnvbUr5+Apy2AeMSasShuOdagYwF6IX+qMItV2/CIfVAH62cOX353aq2NjZejqGuhqedxXUcCBPONwCg0/5m/2hMQEJdgyX9pOzXlARxZ+ZUjb//4sethBabu5Qs4efhTG+uyKkl2VC9qCvJV7rfPPUmWiEYmRrVcXIOw7GdKzPXwiP7JNfpvghT3/f1HHs9/9ljm15bZLhqREYCmRD7hWyQTHvDSzE4mQiL5oOey/2Vs4TF/8CjPQmnV6tnz+qmkRtEXqe3CVyWg0/qjrzXNIgC6Hzwhql1cttIlS3L9slBCuOrUkaS9IlpmfoLv/1cMGVV1kdRZfhuOHtdxFQCcyQ8fNMeCfMx9q0wXxeqGHrQbwuPwu14HFhvM/I+sXQ+6a6mPKzt0kl1qDjy0Ju6USrnB+rbRc1FNdQe62flIa4SjYSKu8OGm+h1ERSr0XzBxTEIErI6edttrXmijioNZ6TUAcrDeND7IOMN1NbdPmLeDom+tjUw==">
+</div>
+    
+
+                <h1 id="resultsHeading" class="results-title">Search Results:</h1>
+
+                <div class="results-wrap" role="region" aria-labelledby="resultsHeading" aria-describedby="resultsHelp" tabindex="0">
+                  <div id="resultsHelp" class="sr-only">
+                    This table may scroll horizontally to show additional columns.
+                  </div>
+                    <div>
+	<table cellspacing="0" rules="all" border="1" id="cphMain_gvResults" style="width:100%;border-collapse:collapse;">
+		<caption align="Top">
+			Search Results
+		</caption><thead>
+			<tr style="color:White;background-color:#255B73;">
+				<th scope="col">Select</th><th align="center" scope="col">Title</th><th align="center" scope="col">Argument Date</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl02$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_0" class="grid-btn grid-btn--small" aria-label="Select: Zelichenko v 301 Oriental. Argument date 09/17/2015.">
+                                </td><td style="width:65%;">Zelichenko v 301 Oriental</td><td align="center" style="width:15%;">09/17/2015</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl03$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_1" class="grid-btn grid-btn--small" aria-label="Select: Zelig v SNY Div. of Housing &amp;amp; Community Renewal. Argument date &amp;nbsp;.">
+                                </td><td style="width:65%;">Zelig v SNY Div. of Housing &amp; Community Renewal</td><td align="center" style="width:15%;">&nbsp;</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl04$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_2" class="grid-btn grid-btn--small" aria-label="Select: Zelig v SNY Div. of Housing &amp;amp; Community Renewal. Argument date &amp;nbsp;.">
+                                </td><td style="width:65%;">Zelig v SNY Div. of Housing &amp; Community Renewal</td><td align="center" style="width:15%;">&nbsp;</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl05$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_3" class="grid-btn grid-btn--small" aria-label="Select: Zervos v Trump. Argument date &amp;nbsp;.">
+                                </td><td style="width:65%;">Zervos v Trump</td><td align="center" style="width:15%;">&nbsp;</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl06$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_4" class="grid-btn grid-btn--small" aria-label="Select: Zervos v Trump. Argument date &amp;nbsp;.">
+                                </td><td style="width:65%;">Zervos v Trump</td><td align="center" style="width:15%;">&nbsp;</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl07$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_5" class="grid-btn grid-btn--small" aria-label="Select: Zhai v Chemical Bank. Argument date &amp;nbsp;.">
+                                </td><td style="width:65%;">Zhai v Chemical Bank</td><td align="center" style="width:15%;">&nbsp;</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl08$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_6" class="grid-btn grid-btn--small" aria-label="Select: Zheng v City of New York. Argument date 05/31/2012.">
+                                </td><td style="width:65%;">Zheng v City of New York</td><td align="center" style="width:15%;">05/31/2012</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl09$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_7" class="grid-btn grid-btn--small" aria-label="Select: Zhong v Matranga. Argument date 02/07/2023.">
+                                </td><td style="width:65%;">Zhong v Matranga</td><td align="center" style="width:15%;">02/07/2023</td>
+			</tr><tr>
+				<td align="center" style="width:20%;">
+                                  <input type="submit" name="ctl00$cphMain$gvResults$ctl10$btnSelect" value="Select" id="cphMain_gvResults_btnSelect_8" class="grid-btn grid-btn--small" aria-label="Select: Zito v NYC Office of Payroll Administration. Argument date &amp;nbsp;.">
+                                </td><td style="width:65%;">Zito v NYC Office of Payroll Administration</td><td align="center" style="width:15%;">&nbsp;</td>
+			</tr><tr>
+				<td role="navigation" aria-label="Search results pagination" colspan="3"><table role="presentation">
+					<tbody><tr>
+						<td><a aria-label="... More pages" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$494')">...</a></td><td><a aria-label="Go to page 495" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$495')">495</a></td><td><a aria-label="Go to page 496" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$496')">496</a></td><td><a aria-label="Go to page 497" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$497')">497</a></td><td><a aria-label="Go to page 498" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$498')">498</a></td><td><a aria-label="Go to page 499" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$499')">499</a></td><td><a aria-label="Go to page 500" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$500')">500</a></td><td><a aria-label="Go to page 501" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$501')">501</a></td><td><a aria-label="Go to page 502" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$502')">502</a></td><td><a aria-label="Go to page 503" href="javascript:__doPostBack('ctl00$cphMain$gvResults','Page$503')">503</a></td><td><span aria-current="page" aria-label="Current page, 504">504</span></td>
+					</tr>
+				</tbody></table></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+                    <br>
+                    
+                    <div class="results-actions">
+                                    <input type="submit" name="ctl00$cphMain$bttnSearch2" value="Return to Docket" id="cphMain_bttnSearch2" class="grid-btn">
+                    </div>
+
+                </div>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+//]]>
+</script>
+</form>
+
+
+<div class="bttm" aria-label="Footer links">
+  <div class="bttm-grid" aria-label="Footer links">
+
+    <!-- Column 1 -->
+    <div class="bttm-col bttm-col1block">
+      <div class="bttm-h">Public Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_search">Record &amp; Document Search</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Browse">Record &amp; Document Browse</a></div>
+      <div class="bttm-item bttm-last"><a href="https://courtpass.nycourts.gov/Docket" target="_blank" rel="noopener">Docket Search</a></div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="bttm-col bttm-col2block">
+      <div class="bttm-h">Filer Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Login.aspx">Filer Login</a></div>
+    </div>
+
+    <!-- Help header spanning cols 3-4 -->
+    <div class="bttm-h bttm-helphead">Help and Information</div>
+
+    <!-- Column 3 (help links) -->
+    <div class="bttm-col bttm-col3block">
+      <div class="bttm-item"><a href="Counsel_Faq.htm" target="_blank" rel="noopener">Filer Help</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Faq.htm" target="_blank" rel="noopener">Public Access Help</a></div>
+      <div class="bttm-item bttm-last"><a href="mailto:cpsupport@nycourts.gov">Contact Us</a></div>
+    </div>
+
+    <!-- Column 4 (tech/rules) -->
+    <div class="bttm-col bttm-col4block">
+      <div class="bttm-item">
+        <a href="TechSpecsCFUP.htm">Technical Specifications and<br>Instructions for Submission</a>
+      </div>
+      <div class="bttm-item bttm-last">
+        <a href="https://www.nycourts.gov/ctapps/500rules.htm">Rules of the Court of Appeals</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <p style="line-height: 1.2; text-align:center;">
+        New York State Court of Appeals<br>
+        20 Eagle Street<br>
+        Albany, New York 12207<br>
+        Phone: (518) 455-7701 or 7702<br>
+      </p>
+    </div>
+
+    <div class="sidebar" role="complementary" aria-label="Help and side navigation">
+      <div style="margin-top: 6px; text-align:center;">
+        <img src="images/Help_Banner.png" width="230" height="60" alt="Help">
+      </div>
+
+      <br>
+
+      
+
+<div class="curvescorners_t">
+<div class="curvescorners_l">
+<div class="curvescorners_r">
+<div class="curvescorners_b">
+<div class="curvescorners_tl">
+<div class="curvescorners_tr">
+<div class="curvescorners_bl">
+<div class="curvescorners_br">
+<div class="curvescorners">
+<div class="helphead">INFORMATION FOR THE PUBLIC</div>
+
+<table class="boxlist"><tbody><tr><th style="display: none">Main Page</th><td>
+<a href="CasesandDocs.htm" class="ajax">Cases and Documents Available</a><br>
+Search &amp; Download Guide
+<ul style="list-style-position: outside; list-style-type: disc; margin-top: -2px; margin-bottom: -1px; font-variant: normal;">
+	<li><a href="ConductingSearch.htm" class="ajax">How to Search</a></li>
+	<li><a href="Browsing.htm" class="ajax">How to Browse</a></li>
+	<li><a href="Docket.htm" class="ajax">How to Use Docket</a></li>	
+	<li><a href="ViewDownload.htm" class="ajax">Viewing or Downloading Documents</a></li>
+
+</ul>
+<a href="FAQsPublic.htm" class="ajax">Frequently Asked Questions</a></td></tr></tbody></table>
+
+</div></div></div></div></div></div></div></div></div>
+
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    const menus = document.querySelectorAll('.dropdown, .subnav');
+
+    menus.forEach(menu => {
+        const button = menu.querySelector('button');
+        if (!button) return;
+
+        const content =
+            menu.querySelector('.dropdown-content') ||
+            menu.querySelector('.subnav-content');
+
+        if (!content) return;
+
+        const items = Array.from(content.querySelectorAll('a, button'));
+
+        function openMenu() {
+            menu.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+            content.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+            menu.classList.remove('open');
+            button.setAttribute('aria-expanded', 'false');
+            content.setAttribute('aria-hidden', 'true');
+        }
+
+        // toggle on click
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            expanded ? closeMenu() : openMenu();
+        });
+
+        // hover behavior (keep if you want it)
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', closeMenu);
+
+        // close when focus leaves the menu container
+        menu.addEventListener('focusout', e => {
+            if (!menu.contains(e.relatedTarget)) closeMenu();
+        });
+
+        // keyboard: open and move into items
+        button.addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown') {
+                openMenu();
+                if (items[0]) items[0].focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowUp') {
+                openMenu();
+                if (items[items.length - 1]) items[items.length - 1].focus();
+                e.preventDefault();
+            } else if (e.key === 'Escape') {
+                closeMenu();
+                button.focus();
+            }
+        });
+
+        // optional: arrow-key movement inside menu
+        items.forEach((item, i) => {
+            item.addEventListener('keydown', e => {
+                if (e.key === 'ArrowDown') {
+                    items[(i + 1) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'ArrowUp') {
+                    items[(i - 1 + items.length) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'Escape') {
+                    closeMenu();
+                    button.focus();
+                }
+            });
+        });
+    });
+</script>
+
+
+
+</body></html>
