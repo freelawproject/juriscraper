@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>
+	NYS Court-PASS Counsel Filing
+</title><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="stylesheet" type="text/css" href="css/Hide.css"><link rel="stylesheet" href="css/corners.css"><link rel="stylesheet" href="css/colorbox.css">
+<script type="text/javascript" src="jscript/jquery-1.12.0.min.js"></script>
+<!--<script type="text/javascript" src="jscript/jquery.colorbox-min.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".ajax").colorbox({opacity:0.7});
+	});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<style type="text/css">
+
+/* =========================
+   Theme variables
+   ========================= */
+:root {
+  --brand-blue: #255b73;
+  --brand-tan: #f4d585;
+  --brand-tan-hover: #f7e5b7;
+  --skip-bg: #f7d385;
+  --panel-title-bg: #dfe7ea;
+  --footer-bg: #dfe7ea;
+  --white: #ffffff;
+}
+
+/* =========================
+   Global / utilities
+   ========================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { max-width: 100%; }
+
+img, table, input { max-width: 100%; }
+
+/* If you keep this, make sure nothing gets clipped at 400% zoom */
+body { overflow-x: hidden; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--skip-bg);
+  color: var(--brand-blue);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--brand-blue);
+}
+.skip-link:focus { top: 0; }
+
+.results-title { margin: 1rem 0; }
+.results-actions { text-align: center; margin-top: 1rem; }
+
+.results-wrap {
+  margin-bottom: 2rem;
+}
+
+.page-actions { text-align: center; margin: 1rem 0 2rem; }
+
+.banner { text-align: center; }
+
+#casesHeading { margin: 2rem 0 2rem; }
+.results-wrap { margin: 1rem 0 2rem; }
+
+/* =========================
+   Header: topbar + nav + search
+   ========================= */
+.topbar {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* prevents overflow at 400% zoom */
+}
+
+.topbar-left {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.topbar-right {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+@media (min-width: 941px) {
+  .topbar-right { flex: 0 0 auto; }
+}
+
+/* Nav bar */
+.navbar {
+  background-color: var(--brand-tan);
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar a {
+  color: var(--brand-blue);
+  font-weight: bolder;
+  text-align: center;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.subnav:hover .subnavbtn {
+  background-color: var(--brand-tan-hover);
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+.dropdown .dropbtn {
+  font-size: 12px;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  color: var(--brand-blue);
+  padding: 4px 8px 0;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--brand-tan);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--brand-blue);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: var(--brand-tan-hover);
+}
+
+.dropdown.open .dropdown-content,
+.subnav.open .subnav-content {
+  display: block;
+}
+
+/* Focus styles */
+.navbar a:focus,
+.dropbtn:focus,
+.subnavbtn:focus,
+.dropdown-content a:focus,
+.subnav-content a:focus {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Search form */
+#suggestion_form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#suggestion_form input[type="text"] {
+  width: 8rem;
+  min-width: 6rem;
+  max-width: 100%;
+}
+
+.topbar-search-button { background-color: var(--brand-tan); }
+
+/* =========================
+   Page layout: main + sidebar
+   ========================= */
+.page {
+  max-width: 940px;
+  width: 100%;
+  margin: 6px auto 0;
+  background: var(--white);
+  padding: 0 12px;
+  overflow-x: clip;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+  gap: 16px;
+  align-items: start;
+}
+
+.main {
+  min-width: 0;
+  padding: 0 6px 0 0;
+}
+
+.sidebar {
+  min-width: 0;
+  border-left: 1px solid var(--brand-tan);
+  padding-left: 12px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-left: none; padding-left: 0; }
+}
+
+/* Headings inside main */
+.main h1 { font-size: 1.2em; }
+.main h2 { font-size: 1.2em; }
+
+/* =========================
+   CTA buttons
+   ========================= */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 16px;
+  background: var(--brand-tan);
+  color: var(--brand-blue);
+  font-weight: bold;
+  border: 6px solid var(--brand-blue);
+  text-decoration: none;
+}
+
+.cta:hover,
+.cta:focus {
+  background: var(--brand-tan-hover);
+  outline: 6px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.section-rule {
+  height: 2px;
+  background-color: var(--brand-tan);
+  border: 0;
+  margin: 12px 0;
+}
+
+/* match original table look */
+.bttm {
+  background-color: #dfe7ea;
+  width: 694px;
+  max-width: 100%;
+  border: thin solid #255b73;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bttm a:link,
+.bttm a:visited { color: #255b73; text-decoration: none; }
+.bttm a:hover,
+.bttm a:active { color: Red; text-decoration: none; }
+
+.bttm-grid {
+  display: grid;
+  grid-template-columns: 200px 115px minmax(0, 2fr) minmax(0, 200px);
+  column-gap: 0;
+  row-gap: 0;
+  align-items: start;
+}
+
+/* Place each block in the grid */
+.bttm-col1block { grid-column: 1; grid-row: 1 / 5; padding-left: 28px; }
+.bttm-col2block { grid-column: 2; grid-row: 1 / 5; }
+
+.bttm-helphead  { grid-column: 3 / 5; grid-row: 1; }
+
+.bttm-col3block { grid-column: 3; grid-row: 2 / 5; }
+.bttm-col4block { grid-column: 4; grid-row: 2 / 5; }
+
+/* Your existing header style */
+.bttm-h {
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 2px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+/* Keep these */
+.bttm-last { padding-bottom: 5px; }
+
+/* Reflow */
+@media (max-width: 900px) {
+  .bttm-grid { grid-template-columns: 1fr; }
+  .bttm-col1block,
+  .bttm-col2block,
+  .bttm-helphead,
+  .bttm-col3block,
+  .bttm-col4block {
+    grid-column: 1;
+    grid-row: auto;
+    padding-left: 0;
+  }
+}
+
+/* =========================
+   Search panel (table-to-grid conversion)
+   ========================= */
+.search-panel {
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px ridge var(--brand-blue);
+  background: var(--white);
+}
+
+.search-panel-inner {
+  width: 100%;
+  max-width: 684px;
+  margin: 0 auto;
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px 12px;
+}
+
+/* allow grid children to shrink (prevents overflow) */
+.search-panel-inner > * { min-width: 0; }
+
+/* Prevent any control inside the search panel from forcing horizontal overflow */
+.search-panel,
+.search-panel-inner,
+.search-panel * {
+  min-width: 0;
+}
+
+.search-panel select,
+.search-panel input[type="text"],
+.search-panel input[type="search"],
+.search-panel textarea {
+  max-width: 100% !important;
+}
+
+/* If any ASP.NET control renders an inline width, override it */
+.search-panel select,
+.search-panel input,
+.search-panel textarea {
+  box-sizing: border-box;
+}
+
+.form-full,
+.search-title,
+.caption,
+.form-actions {
+  grid-column: 1 / -1;
+}
+
+.search-title,
+.caption {
+  background: var(--panel-title-bg);
+  padding: 6px;
+}
+
+.form-row {
+  background: var(--white);
+  padding: 6px;
+}
+
+.form-label {
+  display: block;
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-fieldset {
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+  text-align: center;
+}
+
+.form-fieldset legend { text-align: left; }
+
+.form-actions {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* inline controls (citation row) */
+.inline-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.form-control--slipyear { width: clamp(5.5rem, 18vw, 7rem); }
+.form-control--slipno   { width: clamp(6rem, 22vw, 9rem); }
+
+.form-control--small { width: 120px; }
+.form-control--xs { width: 80px; }
+
+/* Match-type inline row */
+.form-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.form-label-inline {
+  display: inline;
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-control--matchtype {
+  width: auto;
+  max-width: 100%;
+}
+
+/* two-column caption line (Judge / Decision No, etc.) */
+.caption-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+}
+
+/* Reflow: collapse panel to 1 column earlier for 400% zoom */
+@media (max-width: 1100px) {
+  .search-panel-inner { grid-template-columns: 1fr; }
+  .caption-2col { grid-template-columns: 1fr; row-gap: 6px; }
+}
+
+.results-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.results-wrap:focus {
+  outline: 3px solid #255b73;
+  outline-offset: 2px;
+}
+
+.results-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Make long text wrap instead of forcing width */
+.results-wrap table,
+.results-wrap th,
+.results-wrap td {
+  white-space: normal;
+}
+
+.results-wrap th,
+.results-wrap td {
+  overflow-wrap: anywhere;   /* best for very long strings */
+  word-break: normal;
+  hyphens: auto;
+}
+
+.results-wrap caption {
+  position: absolute;
+  left: -9999px;
+}
+
+.grid-btn {
+  appearance: none;
+  background: #255B73;
+  color: #fff;
+
+  border: 2px solid #255B73;  /* base border */
+  border-radius: 4px;
+
+  padding: 10px 16px;
+  cursor: pointer;
+
+  /* sizing: don’t force 100px wide unless this class is ONLY for tiny buttons */
+  /* width: 100px;  <-- remove this */
+  min-height: 44px;           /* better target size */
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.grid-btn:hover {
+  background: #1f4a5d;
+  border: 4px solid #000;          /* force visible border */
+  box-shadow: 0 0 0 1px #fff inset; /* optional “edge” on dark bg */
+}
+
+/* Keyboard focus: strong border + strong ring */
+.grid-btn:focus,
+.grid-btn:focus-visible {
+  outline: none;              /* replace with box-shadow ring */
+  border-color: #000;         /* border highlight for focus */
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585; /* crisp on white */
+}
+
+/* Pressed */
+.grid-btn:active {
+  background: #163a4a;
+  border-color: #000;
+}
+
+/* Disabled */
+.grid-btn:disabled,
+.grid-btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* If focused AND hovered/clicked, keep the focus ring */
+.grid-btn:hover:focus,
+.grid-btn:hover:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585;
+}
+
+.grid-btn--small { width: 100px; padding: 6px 10px; min-height: 36px; }
+.grid-btn--wide  { width: 60%; }
+
+/* Optional: show focus when any control inside a row is focused */
+.results-table tr:focus-within {
+  background: #f7e5b7;
+}
+
+.return-to-search {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.case-caption {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.case-caption-line {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.case-caption-party {
+  font-size: 1.125rem; /* similar to font size=3 */
+}
+
+.case-caption-v {
+  font-size: 1rem;     /* similar to font size=2 */
+}
+
+.case-details {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: .5rem 1rem;
+  margin: 1rem 0;
+}
+
+.case-details dt {
+  font-weight: 700;
+}
+
+.case-details dd {
+  margin: 0;
+}
+
+.case-section-title {
+  font-size: 1.25rem;  /* similar to your size=4 */
+  font-weight: 700;
+  margin: 1rem 0 .25rem;
+}
+
+.case-issues-category {
+  font-weight: 700;
+  margin: 0 0 .5rem;
+}
+
+.case-issues-text {
+  font-size: 1rem;  /* replaces size=2 */
+  margin: 0 0 1rem;
+}
+
+/* Focus ring for pager links and other interactive controls */
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.details-dl { margin: 0; }
+
+.details-row{
+  display: grid;
+  grid-template-columns: clamp(7rem, 18vw, 10rem) minmax(0, 1fr);
+  gap: 6px 12px;
+}
+
+.details-row dt { font-weight: 700; }
+
+.details-row dd{
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: normal;   /* undo 'anywhere' */
+  word-break: normal;      /* undo 'break-all' */
+}
+
+.details-help { display: inline-block; margin-left: .5rem; }
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #0b63ce;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.link-button:focus,
+.link-button:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.case-details{
+  width: 100%;
+  max-width: none;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">function killerrors(){return true;}window.onerror = killerrors;</script>
+
+</head>
+<body>
+<a href="#maincontent" class="skip-link">Skip to main content</a>
+
+<div style="max-width: 940px; width: 100%; min-height: 172px; margin: 0 auto; position: relative; display: flex; flex-direction: column;" role="banner">
+
+	<div style="max-width: 940px; width: 100%; margin: 4px auto 0; position: relative;">
+        <a href="http://www.nycourts.gov/ctapps/">
+          <img src="images/coatitlesm.png" width="70%" height="129" alt="New York Court of Appeals" style="margin-left:auto;margin-right:auto;display:block;">
+        </a>
+	</div>
+
+<div class="topbar" style="margin-top: 10px;">
+  <div class="topbar-left" id="menu" style="background-color: #f4d585;">
+    <div class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="default.aspx">Home</a>
+      <a href="Public_search.aspx">Search PASS</a>
+      <a href="Public_Browse.aspx">Browse PASS</a>
+      <a href="Docket.aspx">Docket</a>
+      <a href="Login.aspx">Filer Access</a>
+
+      <div class="dropdown">
+        <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="rules-menu">
+          Help and Information
+        </button>
+
+        <div id="rules-menu" class="dropdown-content" aria-hidden="true">
+          <a href="Public_Faq.htm">Public Search Help</a>
+          <a href="Counsel_Faq.htm">Filer Help</a>
+          <a href="https://www.nycourts.gov/ctapps/500rules.htm">Court Rules</a>
+          <a href="TechSpecsCFUP.htm">Technical Specifications and Instructions for Submission</a>
+        </div>
+      </div>
+
+      <a href="mailto:cpsupport@nycourts.gov">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <form id="suggestion_form" name="gs" method="GET" action="http://search.nycourts.gov/search" onsubmit="return (this.q.value == '') ? false : true;">
+
+      <label class="sr-only" for="siteSearch">Search</label>
+      <input id="siteSearch" type="text" name="q" maxlength="256" autocomplete="off" onkeyup="ss_handleKey(event)">
+
+      <input type="submit" name="btnG" value="Search" class="topbar-search-button">
+
+      <!-- keep your hidden fields exactly as-is -->
+      <input type="hidden" name="ud" value="1">
+      <input type="hidden" name="sort" value="date:D:L:d1">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="client" value="court_pass_frontend">
+      <input type="hidden" name="proxystylesheet" value="court_pass_frontend">
+      <input type="hidden" name="btnG.x" value="11">
+      <input type="hidden" name="btnG.y" value="16">
+      <input type="hidden" name="exclude_apps" value="1">
+      <input type="hidden" name="site" value="court_pass">
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="page">
+  <!-- Breadcrumbs row -->
+    <div style="border-bottom: medium solid #F4D585; padding-bottom: 4px;">
+      <div role="navigation" aria-label="Breadcrumb">
+        <span class="BCrumbs">
+          
+    <span class="BCrumbs"><img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle"><a href="Default.aspx">Home</a> <img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle">Court Docket</span>
+
+        </span>
+      </div>
+    </div>
+
+  <div class="layout">
+    <div id="maincontent" class="main" role="main" tabindex="-1">
+      <div style="text-align:center;">
+        <img src="images/Court-PASS_Banner.png" width="315" height="62" alt="Court-PASS">
+      </div>
+
+      
+    <script language="javascript" type="text/javascript">
+
+        function CallDetails() {
+            var bttnCAllDetailsId = 'cphMain_bttnDetails';
+            document.getElementById(bttnCAllDetailsId).style.visibility = 'inherit';
+            document.getElementById(bttnCAllDetailsId).click();
+        }
+
+    </script>
+
+    <div align="center">
+        <img src="images/Docket_Banner.png" alt="" aria-hidden="true" width="90%" height="47" border="0">
+	</div>	
+    
+    <!-- CONTENT TABLE -->
+    <form method="post" action="./Docket" id="Form2">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZN1YE5nSVrl8mXRDFN0-6ZVrRvBLdkMWZWwyorP1Ct3oDv2vun9mT3FDtccYjdWEfw2&amp;t=638901382312636832" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="153FDA1C">
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0">
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="5sdz2mTw9VYKE/lCa8+0JwC/I4OcDmnGYJzK9PQgrh7pPficWTCiIrjrPzGxRu/xPOZmtwHL/RrAFw7uM/T7T9LP0WI67hdt0mh0NKRDOnDKereqoC3w3JxfTbsVLoNc8184IDPk1dASX57bOWiTOXbaT3JwGfgPr1MJ2J0CpEk=">
+</div>
+    
+            <div class="results-wrap">
+                      <div id="detailsRegion" role="status" aria-live="polite" aria-atomic="true">
+                        <span id="cphMain_lbDetails" style="color:Black;"><dl class="case-details"><dt>Title</dt><dd>ACE Securities Corp.,,
+            Appellant,
+        v.
+DB Structured Products, Inc.,
+            Respondent.</dd><dt>No.</dt><dd><button type="button" class="link-button" onclick="CallDetails()" aria-label="APL-2014-00156 - View filed documents">APL-2014-00156</button> (Click on the number to view filed documents. Documents are not available for viewing until they are processed by the Clerk's Office.)</dd><dt>Argument Date</dt><dd>04/30/2015</dd></dl><hr><table width="100%"><caption>Filings</caption><thead><tr><td colspan="4" align="center" style="background-color: #dfe7ea;"><font size="4"><strong>FILINGS</strong></font></td></tr><tr><th width="40%">Type</th><th width="30%">Party</th><th width="15%">Date Due</th><th width="15%">Date Rec'd</th></tr></thead><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Association of Financial Guaranty Insurers </td><td></td><td>03/26/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Association of Mortgage Investors </td><td></td><td>03/26/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Appellant Brief</td><td>ACE Securities Corp. (A)</td><td>08/26/2014</td><td>08/26/2014</td></tr></tbody><tbody><tr><td style="vertical-align: top">Appellant COA Record</td><td>ACE Securities Corp. (A)</td><td>08/26/2014</td><td>08/26/2014</td></tr></tbody><tbody><tr><td style="vertical-align: top">Respondent Brief</td><td>DB Structured Products, Inc. (R)</td><td>10/10/2014</td><td>10/10/2014</td></tr></tbody><tbody><tr><td style="vertical-align: top">Appellant Reply Brief</td><td>ACE Securities Corp. (A)</td><td>10/28/2014</td><td>10/28/2014</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>CXA-13 Corporation </td><td>12/23/2014</td><td>12/22/2014</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Chamber of Commerce of the United States of America </td><td>04/02/2015</td><td>03/30/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Mortgage Bankers Association </td><td>04/02/2015</td><td>03/30/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>LNR Partners </td><td>04/02/2015</td><td>03/31/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>National Credit Union Administration Board </td><td>04/02/2015</td><td>03/31/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Securities Industry and Financial Markets Association </td><td>04/02/2015</td><td>04/01/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Ethan J. Leib </td><td>04/02/2015</td><td>04/01/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Federal Home Loan Bank of Boston </td><td>04/02/2015</td><td>04/02/2015</td></tr></tbody><tbody><tr><td style="vertical-align: top">Amicus Brief</td><td>Steven L. Schwarcz </td><td>04/02/2015</td><td>04/06/2015</td></tr></tbody></table><br><hr><table width="100%"><caption>Attorney Details</caption><thead><tr><td colspan="2" align="center" style="background-color: #dfe7ea;"><font size="4"><strong>ATTORNEY DETAILS</strong></font></td></tr></thead><tbody><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Ethan J. Leib</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Fordham Law School</td></tr><tr><td><b>Attorney:</b></td><td>Ethan  Leib Esq.</td></tr><tr><td><b>Address:</b></td><td>150 West 62nd Street, Room 7-177</td></tr><tr><td></td><td>New York NY 10023-7407</td></tr><tr><td><b>Phone:</b></td><td>(212) 636-7490 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Mortgage Bankers Association</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Jenner &amp; Block, Esqs.</td></tr><tr><td><b>Attorney:</b></td><td>Matthew S. Hellman Esq.</td></tr><tr><td><b>Address:</b></td><td>1099 New York Avenue NW</td></tr><tr><td></td><td>Suite 900</td></tr><tr><td></td><td>Washington DC 20001-4412</td></tr><tr><td><b>Phone:</b></td><td>(202) 639-6000 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">CXA-13 Corporation</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Jones &amp; Keller, P.C.</td></tr><tr><td><b>Attorney:</b></td><td>Martiza Dominguez Braswell Esq.</td></tr><tr><td><b>Address:</b></td><td>1999 Broadway, Suite 3150</td></tr><tr><td></td><td>Denver CO 80202</td></tr><tr><td><b>Phone:</b></td><td>(303) 573-1600 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">ACE Securities Corp.</td></tr><tr><td><b>Party Role:</b></td><td>Appellant</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Kasowitz Benson Torres &amp; Friedman, LLP</td></tr><tr><td><b>Attorney:</b></td><td>Zachary W. Mazin Esq.</td></tr><tr><td><b>Address:</b></td><td>1633 Broadway</td></tr><tr><td></td><td>New York NY 10019-6708</td></tr><tr><td><b>Phone:</b></td><td>(212) 506-1971 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Federal Home Loan Bank of Boston</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Keller Rohrback, LLP</td></tr><tr><td><b>Attorney:</b></td><td>David S. Preminger Esq.</td></tr><tr><td><b>Address:</b></td><td>1140 Avenue of the Americas - 9th Floor</td></tr><tr><td></td><td>New York NY 10036-5803</td></tr><tr><td><b>Phone:</b></td><td>(646) 380-6690 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">National Credit Union Administration Board</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Kellogg Huber Hausen Todd Evans &amp; Figel, Esqs.</td></tr><tr><td><b>Attorney:</b></td><td>Andrew C. Shen Esq.</td></tr><tr><td><b>Address:</b></td><td>1615 M St NW</td></tr><tr><td></td><td>Washington DC 20036-3209</td></tr><tr><td><b>Phone:</b></td><td>(202) 326-7900 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Association of Mortgage Investors</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>McKool Smith, Esqs.</td></tr><tr><td><b>Attorney:</b></td><td>Gayle  Klein Esq.</td></tr><tr><td><b>Address:</b></td><td>One Bryant Park, 47th Floor</td></tr><tr><td></td><td>New York NY 10036-6729</td></tr><tr><td><b>Phone:</b></td><td>(212) 402-9405 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Association of Financial Guaranty Insurers</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Patterson Belknap Webb &amp; Tyler, LLP</td></tr><tr><td><b>Attorney:</b></td><td>Erik  Haas Esq.</td></tr><tr><td><b>Address:</b></td><td>1133 Avenue of the Americas</td></tr><tr><td></td><td>New York NY 10036-6710</td></tr><tr><td><b>Phone:</b></td><td>(212) 336-2117 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">DB Structured Products, Inc.</td></tr><tr><td><b>Party Role:</b></td><td>Respondent</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Simpson Thacher &amp; Bartlett, LLP</td></tr><tr><td><b>Attorney:</b></td><td>David J. Woll Esq.</td></tr><tr><td><b>Address:</b></td><td>425 Lexington Avenue</td></tr><tr><td></td><td>New York NY 10017-3903</td></tr><tr><td><b>Phone:</b></td><td>(212) 455-2000 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Chamber of Commerce of the United States of America</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Sullivan &amp; Cromwell, LLP</td></tr><tr><td><b>Attorney:</b></td><td>Brent J. McIntosh Esq.</td></tr><tr><td><b>Address:</b></td><td>1700 New York Ave, N.W. Suite 700</td></tr><tr><td></td><td>Washington DC 20006-5805</td></tr><tr><td><b>Phone:</b></td><td>(202) 956-6930 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">LNR Partners</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Venable, LLP</td></tr><tr><td><b>Attorney:</b></td><td>Gregory A. Cross Esq.</td></tr><tr><td><b>Address:</b></td><td>750 East Pratt Street</td></tr><tr><td></td><td>Suite 900</td></tr><tr><td></td><td>Baltimore MD 21202</td></tr><tr><td><b>Phone:</b></td><td>(410) 244-7400 </td></tr><tr><td colspan="2" style="background: #255b73; line-height: 2px;">&nbsp;</td></tr><tr><td width="20%" style="vertical-align: top"><b>Party Name:</b></td><td width="80%">Securities Industry and Financial Markets Association</td></tr><tr><td><b>Party Role:</b></td><td>Amicus Curiae</td></tr><tr><td style="vertical-align: top"><b>Firm:</b></td><td>Wachtell Lipton Rosen &amp; Katz, Esqs.</td></tr><tr><td><b>Attorney:</b></td><td>George T. Conway Esq.</td></tr><tr><td><b>Address:</b></td><td>51 West 52nd Street</td></tr><tr><td></td><td>New York NY 10019-6119</td></tr><tr><td><b>Phone:</b></td><td>(212) 403-1000 </td></tr></tbody></table></span>
+                      </div>
+
+                        <input type="submit" name="ctl00$cphMain$bttnDetails" value="Button" id="cphMain_bttnDetails" class="HideControl" style="display:none;">
+
+
+            <div class="results-actions" role="group" aria-lable="Results Navigation">
+                <input type="submit" name="ctl00$cphMain$bttnSearch" value="Return to Docket" id="cphMain_bttnSearch" class="grid-btn">&nbsp;&nbsp;
+                <input type="submit" name="ctl00$cphMain$bttnResults" value="Return to Results" id="cphMain_bttnResults" class="grid-btn">
+                    
+            </div>
+            </div>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+//]]>
+</script>
+</form>
+
+
+<div class="bttm" aria-label="Footer links">
+  <div class="bttm-grid" aria-label="Footer links">
+
+    <!-- Column 1 -->
+    <div class="bttm-col bttm-col1block">
+      <div class="bttm-h">Public Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_search">Record &amp; Document Search</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Browse">Record &amp; Document Browse</a></div>
+      <div class="bttm-item bttm-last"><a href="https://courtpass.nycourts.gov/Docket" target="_blank" rel="noopener">Docket Search</a></div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="bttm-col bttm-col2block">
+      <div class="bttm-h">Filer Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Login.aspx">Filer Login</a></div>
+    </div>
+
+    <!-- Help header spanning cols 3-4 -->
+    <div class="bttm-h bttm-helphead">Help and Information</div>
+
+    <!-- Column 3 (help links) -->
+    <div class="bttm-col bttm-col3block">
+      <div class="bttm-item"><a href="Counsel_Faq.htm" target="_blank" rel="noopener">Filer Help</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Faq.htm" target="_blank" rel="noopener">Public Access Help</a></div>
+      <div class="bttm-item bttm-last"><a href="mailto:cpsupport@nycourts.gov">Contact Us</a></div>
+    </div>
+
+    <!-- Column 4 (tech/rules) -->
+    <div class="bttm-col bttm-col4block">
+      <div class="bttm-item">
+        <a href="TechSpecsCFUP.htm">Technical Specifications and<br>Instructions for Submission</a>
+      </div>
+      <div class="bttm-item bttm-last">
+        <a href="https://www.nycourts.gov/ctapps/500rules.htm">Rules of the Court of Appeals</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <p style="line-height: 1.2; text-align:center;">
+        New York State Court of Appeals<br>
+        20 Eagle Street<br>
+        Albany, New York 12207<br>
+        Phone: (518) 455-7701 or 7702<br>
+      </p>
+    </div>
+
+    <div class="sidebar" role="complementary" aria-label="Help and side navigation">
+      <div style="margin-top: 6px; text-align:center;">
+        <img src="images/Help_Banner.png" width="230" height="60" alt="Help">
+      </div>
+
+      <br>
+
+      
+
+<div class="curvescorners_t">
+<div class="curvescorners_l">
+<div class="curvescorners_r">
+<div class="curvescorners_b">
+<div class="curvescorners_tl">
+<div class="curvescorners_tr">
+<div class="curvescorners_bl">
+<div class="curvescorners_br">
+<div class="curvescorners">
+<div class="helphead">INFORMATION FOR THE PUBLIC</div>
+
+<table class="boxlist"><tbody><tr><th style="display: none">Main Page</th><td>
+<a href="CasesandDocs.htm" class="ajax">Cases and Documents Available</a><br>
+Search &amp; Download Guide
+<ul style="list-style-position: outside; list-style-type: disc; margin-top: -2px; margin-bottom: -1px; font-variant: normal;">
+	<li><a href="ConductingSearch.htm" class="ajax">How to Search</a></li>
+	<li><a href="Browsing.htm" class="ajax">How to Browse</a></li>
+	<li><a href="Docket.htm" class="ajax">How to Use Docket</a></li>	
+	<li><a href="ViewDownload.htm" class="ajax">Viewing or Downloading Documents</a></li>
+
+</ul>
+<a href="FAQsPublic.htm" class="ajax">Frequently Asked Questions</a></td></tr></tbody></table>
+
+</div></div></div></div></div></div></div></div></div>
+
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    const menus = document.querySelectorAll('.dropdown, .subnav');
+
+    menus.forEach(menu => {
+        const button = menu.querySelector('button');
+        if (!button) return;
+
+        const content =
+            menu.querySelector('.dropdown-content') ||
+            menu.querySelector('.subnav-content');
+
+        if (!content) return;
+
+        const items = Array.from(content.querySelectorAll('a, button'));
+
+        function openMenu() {
+            menu.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+            content.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+            menu.classList.remove('open');
+            button.setAttribute('aria-expanded', 'false');
+            content.setAttribute('aria-hidden', 'true');
+        }
+
+        // toggle on click
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            expanded ? closeMenu() : openMenu();
+        });
+
+        // hover behavior (keep if you want it)
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', closeMenu);
+
+        // close when focus leaves the menu container
+        menu.addEventListener('focusout', e => {
+            if (!menu.contains(e.relatedTarget)) closeMenu();
+        });
+
+        // keyboard: open and move into items
+        button.addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown') {
+                openMenu();
+                if (items[0]) items[0].focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowUp') {
+                openMenu();
+                if (items[items.length - 1]) items[items.length - 1].focus();
+                e.preventDefault();
+            } else if (e.key === 'Escape') {
+                closeMenu();
+                button.focus();
+            }
+        });
+
+        // optional: arrow-key movement inside menu
+        items.forEach((item, i) => {
+            item.addEventListener('keydown', e => {
+                if (e.key === 'ArrowDown') {
+                    items[(i + 1) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'ArrowUp') {
+                    items[(i - 1 + items.length) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'Escape') {
+                    closeMenu();
+                    button.focus();
+                }
+            });
+        });
+    });
+</script>
+
+
+
+</body></html>
