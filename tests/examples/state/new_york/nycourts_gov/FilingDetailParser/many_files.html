@@ -1,0 +1,1503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>
+	NYS Court-PASS Counsel Filing
+</title><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="stylesheet" type="text/css" href="css/Hide.css"><link rel="stylesheet" href="css/corners.css"><link rel="stylesheet" href="css/colorbox.css">
+<script type="text/javascript" src="jscript/jquery-1.12.0.min.js"></script>
+<!--<script type="text/javascript" src="jscript/jquery.colorbox-min.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".ajax").colorbox({opacity:0.7});
+	});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<style type="text/css">
+
+/* =========================
+   Theme variables
+   ========================= */
+:root {
+  --brand-blue: #255b73;
+  --brand-tan: #f4d585;
+  --brand-tan-hover: #f7e5b7;
+  --skip-bg: #f7d385;
+  --panel-title-bg: #dfe7ea;
+  --footer-bg: #dfe7ea;
+  --white: #ffffff;
+}
+
+/* =========================
+   Global / utilities
+   ========================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { max-width: 100%; }
+
+img, table, input { max-width: 100%; }
+
+/* If you keep this, make sure nothing gets clipped at 400% zoom */
+body { overflow-x: hidden; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--skip-bg);
+  color: var(--brand-blue);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--brand-blue);
+}
+.skip-link:focus { top: 0; }
+
+.results-title { margin: 1rem 0; }
+.results-actions { text-align: center; margin-top: 1rem; }
+
+.results-wrap {
+  margin-bottom: 2rem;
+}
+
+.page-actions { text-align: center; margin: 1rem 0 2rem; }
+
+.banner { text-align: center; }
+
+#casesHeading { margin: 2rem 0 2rem; }
+.results-wrap { margin: 1rem 0 2rem; }
+
+/* =========================
+   Header: topbar + nav + search
+   ========================= */
+.topbar {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* prevents overflow at 400% zoom */
+}
+
+.topbar-left {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.topbar-right {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+@media (min-width: 941px) {
+  .topbar-right { flex: 0 0 auto; }
+}
+
+/* Nav bar */
+.navbar {
+  background-color: var(--brand-tan);
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar a {
+  color: var(--brand-blue);
+  font-weight: bolder;
+  text-align: center;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.subnav:hover .subnavbtn {
+  background-color: var(--brand-tan-hover);
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+.dropdown .dropbtn {
+  font-size: 12px;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  color: var(--brand-blue);
+  padding: 4px 8px 0;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--brand-tan);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--brand-blue);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: var(--brand-tan-hover);
+}
+
+.dropdown.open .dropdown-content,
+.subnav.open .subnav-content {
+  display: block;
+}
+
+/* Focus styles */
+.navbar a:focus,
+.dropbtn:focus,
+.subnavbtn:focus,
+.dropdown-content a:focus,
+.subnav-content a:focus {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Search form */
+#suggestion_form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#suggestion_form input[type="text"] {
+  width: 8rem;
+  min-width: 6rem;
+  max-width: 100%;
+}
+
+.topbar-search-button { background-color: var(--brand-tan); }
+
+/* =========================
+   Page layout: main + sidebar
+   ========================= */
+.page {
+  max-width: 940px;
+  width: 100%;
+  margin: 6px auto 0;
+  background: var(--white);
+  padding: 0 12px;
+  overflow-x: clip;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+  gap: 16px;
+  align-items: start;
+}
+
+.main {
+  min-width: 0;
+  padding: 0 6px 0 0;
+}
+
+.sidebar {
+  min-width: 0;
+  border-left: 1px solid var(--brand-tan);
+  padding-left: 12px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-left: none; padding-left: 0; }
+}
+
+/* Headings inside main */
+.main h1 { font-size: 1.2em; }
+.main h2 { font-size: 1.2em; }
+
+/* =========================
+   CTA buttons
+   ========================= */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 16px;
+  background: var(--brand-tan);
+  color: var(--brand-blue);
+  font-weight: bold;
+  border: 6px solid var(--brand-blue);
+  text-decoration: none;
+}
+
+.cta:hover,
+.cta:focus {
+  background: var(--brand-tan-hover);
+  outline: 6px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.section-rule {
+  height: 2px;
+  background-color: var(--brand-tan);
+  border: 0;
+  margin: 12px 0;
+}
+
+/* match original table look */
+.bttm {
+  background-color: #dfe7ea;
+  width: 694px;
+  max-width: 100%;
+  border: thin solid #255b73;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bttm a:link,
+.bttm a:visited { color: #255b73; text-decoration: none; }
+.bttm a:hover,
+.bttm a:active { color: Red; text-decoration: none; }
+
+.bttm-grid {
+  display: grid;
+  grid-template-columns: 200px 115px minmax(0, 2fr) minmax(0, 200px);
+  column-gap: 0;
+  row-gap: 0;
+  align-items: start;
+}
+
+/* Place each block in the grid */
+.bttm-col1block { grid-column: 1; grid-row: 1 / 5; padding-left: 28px; }
+.bttm-col2block { grid-column: 2; grid-row: 1 / 5; }
+
+.bttm-helphead  { grid-column: 3 / 5; grid-row: 1; }
+
+.bttm-col3block { grid-column: 3; grid-row: 2 / 5; }
+.bttm-col4block { grid-column: 4; grid-row: 2 / 5; }
+
+/* Your existing header style */
+.bttm-h {
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 2px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+/* Keep these */
+.bttm-last { padding-bottom: 5px; }
+
+/* Reflow */
+@media (max-width: 900px) {
+  .bttm-grid { grid-template-columns: 1fr; }
+  .bttm-col1block,
+  .bttm-col2block,
+  .bttm-helphead,
+  .bttm-col3block,
+  .bttm-col4block {
+    grid-column: 1;
+    grid-row: auto;
+    padding-left: 0;
+  }
+}
+
+/* =========================
+   Search panel (table-to-grid conversion)
+   ========================= */
+.search-panel {
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px ridge var(--brand-blue);
+  background: var(--white);
+}
+
+.search-panel-inner {
+  width: 100%;
+  max-width: 684px;
+  margin: 0 auto;
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px 12px;
+}
+
+/* allow grid children to shrink (prevents overflow) */
+.search-panel-inner > * { min-width: 0; }
+
+/* Prevent any control inside the search panel from forcing horizontal overflow */
+.search-panel,
+.search-panel-inner,
+.search-panel * {
+  min-width: 0;
+}
+
+.search-panel select,
+.search-panel input[type="text"],
+.search-panel input[type="search"],
+.search-panel textarea {
+  max-width: 100% !important;
+}
+
+/* If any ASP.NET control renders an inline width, override it */
+.search-panel select,
+.search-panel input,
+.search-panel textarea {
+  box-sizing: border-box;
+}
+
+.form-full,
+.search-title,
+.caption,
+.form-actions {
+  grid-column: 1 / -1;
+}
+
+.search-title,
+.caption {
+  background: var(--panel-title-bg);
+  padding: 6px;
+}
+
+.form-row {
+  background: var(--white);
+  padding: 6px;
+}
+
+.form-label {
+  display: block;
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-fieldset {
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+  text-align: center;
+}
+
+.form-fieldset legend { text-align: left; }
+
+.form-actions {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* inline controls (citation row) */
+.inline-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.form-control--slipyear { width: clamp(5.5rem, 18vw, 7rem); }
+.form-control--slipno   { width: clamp(6rem, 22vw, 9rem); }
+
+.form-control--small { width: 120px; }
+.form-control--xs { width: 80px; }
+
+/* Match-type inline row */
+.form-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.form-label-inline {
+  display: inline;
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-control--matchtype {
+  width: auto;
+  max-width: 100%;
+}
+
+/* two-column caption line (Judge / Decision No, etc.) */
+.caption-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+}
+
+/* Reflow: collapse panel to 1 column earlier for 400% zoom */
+@media (max-width: 1100px) {
+  .search-panel-inner { grid-template-columns: 1fr; }
+  .caption-2col { grid-template-columns: 1fr; row-gap: 6px; }
+}
+
+.results-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.results-wrap:focus {
+  outline: 3px solid #255b73;
+  outline-offset: 2px;
+}
+
+.results-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Make long text wrap instead of forcing width */
+.results-wrap table,
+.results-wrap th,
+.results-wrap td {
+  white-space: normal;
+}
+
+.results-wrap th,
+.results-wrap td {
+  overflow-wrap: anywhere;   /* best for very long strings */
+  word-break: normal;
+  hyphens: auto;
+}
+
+.results-wrap caption {
+  position: absolute;
+  left: -9999px;
+}
+
+.grid-btn {
+  appearance: none;
+  background: #255B73;
+  color: #fff;
+
+  border: 2px solid #255B73;  /* base border */
+  border-radius: 4px;
+
+  padding: 10px 16px;
+  cursor: pointer;
+
+  /* sizing: don’t force 100px wide unless this class is ONLY for tiny buttons */
+  /* width: 100px;  <-- remove this */
+  min-height: 44px;           /* better target size */
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.grid-btn:hover {
+  background: #1f4a5d;
+  border: 4px solid #000;          /* force visible border */
+  box-shadow: 0 0 0 1px #fff inset; /* optional “edge” on dark bg */
+}
+
+/* Keyboard focus: strong border + strong ring */
+.grid-btn:focus,
+.grid-btn:focus-visible {
+  outline: none;              /* replace with box-shadow ring */
+  border-color: #000;         /* border highlight for focus */
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585; /* crisp on white */
+}
+
+/* Pressed */
+.grid-btn:active {
+  background: #163a4a;
+  border-color: #000;
+}
+
+/* Disabled */
+.grid-btn:disabled,
+.grid-btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* If focused AND hovered/clicked, keep the focus ring */
+.grid-btn:hover:focus,
+.grid-btn:hover:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585;
+}
+
+.grid-btn--small { width: 100px; padding: 6px 10px; min-height: 36px; }
+.grid-btn--wide  { width: 60%; }
+
+/* Optional: show focus when any control inside a row is focused */
+.results-table tr:focus-within {
+  background: #f7e5b7;
+}
+
+.return-to-search {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.case-caption {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.case-caption-line {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.case-caption-party {
+  font-size: 1.125rem; /* similar to font size=3 */
+}
+
+.case-caption-v {
+  font-size: 1rem;     /* similar to font size=2 */
+}
+
+.case-details {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: .5rem 1rem;
+  margin: 1rem 0;
+}
+
+.case-details dt {
+  font-weight: 700;
+}
+
+.case-details dd {
+  margin: 0;
+}
+
+.case-section-title {
+  font-size: 1.25rem;  /* similar to your size=4 */
+  font-weight: 700;
+  margin: 1rem 0 .25rem;
+}
+
+.case-issues-category {
+  font-weight: 700;
+  margin: 0 0 .5rem;
+}
+
+.case-issues-text {
+  font-size: 1rem;  /* replaces size=2 */
+  margin: 0 0 1rem;
+}
+
+/* Focus ring for pager links and other interactive controls */
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.details-dl { margin: 0; }
+
+.details-row{
+  display: grid;
+  grid-template-columns: clamp(7rem, 18vw, 10rem) minmax(0, 1fr);
+  gap: 6px 12px;
+}
+
+.details-row dt { font-weight: 700; }
+
+.details-row dd{
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: normal;   /* undo 'anywhere' */
+  word-break: normal;      /* undo 'break-all' */
+}
+
+.details-help { display: inline-block; margin-left: .5rem; }
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #0b63ce;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.link-button:focus,
+.link-button:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.case-details{
+  width: 100%;
+  max-width: none;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">function killerrors(){return true;}window.onerror = killerrors;</script>
+
+</head>
+<body>
+<a href="#maincontent" class="skip-link">Skip to main content</a>
+
+<div style="max-width: 940px; width: 100%; min-height: 172px; margin: 0 auto; position: relative; display: flex; flex-direction: column;" role="banner">
+
+	<div style="max-width: 940px; width: 100%; margin: 4px auto 0; position: relative;">
+        <a href="http://www.nycourts.gov/ctapps/">
+          <img src="images/coatitlesm.png" width="70%" height="129" alt="New York Court of Appeals" style="margin-left:auto;margin-right:auto;display:block;">
+        </a>
+	</div>
+
+<div class="topbar" style="margin-top: 10px;">
+  <div class="topbar-left" id="menu" style="background-color: #f4d585;">
+    <div class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="default.aspx">Home</a>
+      <a href="Public_search.aspx">Search PASS</a>
+      <a href="Public_Browse.aspx">Browse PASS</a>
+      <a href="Docket.aspx">Docket</a>
+      <a href="Login.aspx">Filer Access</a>
+
+      <div class="dropdown">
+        <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="rules-menu">
+          Help and Information
+        </button>
+
+        <div id="rules-menu" class="dropdown-content" aria-hidden="true">
+          <a href="Public_Faq.htm">Public Search Help</a>
+          <a href="Counsel_Faq.htm">Filer Help</a>
+          <a href="https://www.nycourts.gov/ctapps/500rules.htm">Court Rules</a>
+          <a href="TechSpecsCFUP.htm">Technical Specifications and Instructions for Submission</a>
+        </div>
+      </div>
+
+      <a href="mailto:cpsupport@nycourts.gov">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <form id="suggestion_form" name="gs" method="GET" action="http://search.nycourts.gov/search" onsubmit="return (this.q.value == '') ? false : true;">
+
+      <label class="sr-only" for="siteSearch">Search</label>
+      <input id="siteSearch" type="text" name="q" maxlength="256" autocomplete="off" onkeyup="ss_handleKey(event)">
+
+      <input type="submit" name="btnG" value="Search" class="topbar-search-button">
+
+      <!-- keep your hidden fields exactly as-is -->
+      <input type="hidden" name="ud" value="1">
+      <input type="hidden" name="sort" value="date:D:L:d1">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="client" value="court_pass_frontend">
+      <input type="hidden" name="proxystylesheet" value="court_pass_frontend">
+      <input type="hidden" name="btnG.x" value="11">
+      <input type="hidden" name="btnG.y" value="16">
+      <input type="hidden" name="exclude_apps" value="1">
+      <input type="hidden" name="site" value="court_pass">
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="page">
+  <!-- Breadcrumbs row -->
+    <div style="border-bottom: medium solid #F4D585; padding-bottom: 4px;">
+      <div role="navigation" aria-label="Breadcrumb">
+        <span class="BCrumbs">
+          
+    <span class="BCrumbs"><img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle"><a href="Default.aspx">Home</a> <img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle">Court Docket</span>
+
+        </span>
+      </div>
+    </div>
+
+  <div class="layout">
+    <div id="maincontent" class="main" role="main" tabindex="-1">
+      <div style="text-align:center;">
+        <img src="images/Court-PASS_Banner.png" width="315" height="62" alt="Court-PASS">
+      </div>
+
+      
+    <script language="javascript" type="text/javascript">
+
+        function CallDetails() {
+            var bttnCAllDetailsId = 'cphMain_bttnDetails';
+            document.getElementById(bttnCAllDetailsId).style.visibility = 'inherit';
+            document.getElementById(bttnCAllDetailsId).click();
+        }
+
+    </script>
+
+    <div align="center">
+        <img src="images/Docket_Banner.png" alt="" aria-hidden="true" width="90%" height="47" border="0">
+	</div>	
+    
+    <!-- CONTENT TABLE -->
+    <form method="post" action="./Docket" id="Form2">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZN1YE5nSVrl8mXRDFN0-6ZVrRvBLdkMWZWwyorP1Ct3oDv2vun9mT3FDtccYjdWEfw2&amp;t=638901382312636832" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="153FDA1C">
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0">
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="IJw/mgL3Ge2ZCqmEsuN/HGhiIIpZY7yjXzRw94ssp9jWZ/RKwAWBBP+GdvUR1PDxPREKwKxXaV3h6jaoktWEXu1DqVabb9AtYjySUSJ/kom/BWorz+IvR/4Gir6nz6mOTpKtr9KZ8vXAXbfMvZ1gBzT/oMQwmsG8d3jfPjL6GWbKI/Jmx+xuBZ1BTzAvz7VsuoxGfrY6KPZ6az3TSlJmwrbOyYsNwwJ/ULnTmKKH9yOPtIslWQj03EDeC4P9h29CdfN/Vwwmws8dwo+hi5a1h5p/uI+ageekxn5+FqvGrdAzGckCG6TJZlq0dcY1419zdjIKE8Qi8VOIlmnsFG7YNwGKCYugfZlfur9dWmMFbWKCWm83JNwggKya0cZQ3h0CUSqvLsBPq0uy8BS5N8aT2AEaqdLO4spjuhTzIJpOpE1QvSLFmo1q6JFOSBI3trW6ur2KyG6oh9yQJtV/pSvKNBotYDGsJF3OvWcabmc0Gjv9mMhiOnhZ4Z1wqqAegO5Y3agzxlFK2WCB7zubFGmWsTEfD7CVj0A1A2Krd1Z0tzTZdiFbOfJzc/SgOXy1P5MlrBxzWPnOdR2F2QsiIvej4YwUQ2PHX9wdsNUvWzq+Kx6UmNOaMM36tPhG9VdCkuLQxwgu1fn28FF08+kMjkjOJFLmLoUZaGKZwGFExdIP5tBl7Qed5LBoOUzIGxuPKT0B4j3qlVkuFm0h6f1IaupSdqTMWX1XmxJ8VQmj2oiA5gG9qr+b7IBojLfdeP11Fuf0BKcG7qwvQ31UEHRycAY+eCB7XXyPAnVUjMN8WbFlKwSuhFHiictab9yunlPMy16WL/WOx8fWTUM0FBPRDxDnrfpyErxDpKiSZ8xgUzfRxPqN7uowyElXqJLsGCe8ilqn395fkjgGSVvLnrzIv45h9juTd0zR9+zv2D3RHgnitCjRl4X1OfE1Dt6DZtlqtWrLNNvhqWjOGobBvqH0ayD70eo1JWezgk6SWvhXDjBU9TszAuqe+jrZw/iMAihLH9Lw1MT4QgSUCH9BWqmyGHz2dMmrJMpAgklpBf8Vi/DY/QM06hZvqt91kbQVHPGj3RlmVRa1Dmxl2VuuqOnLOv9MhxN9ThozkvrT2xxbl/fzZJsCwjUYcK5cgmj/JmRUkJvjKmnmPiMyaLuqlQBMydhg0Y+nrRj8W1lvUxeEH3LPJE4aBaBv8gKyBGCI712KzzjrYrE8qfxcpjebQvMeMBh6+v7LQx+cd/oHR2q24N0HY/aGysT1kRRFWPNigfLM9XaYuzNMTh/BldnVskULTspc7W+awiAPCFHp5RPoixcN73INDw0SSPugR0n9/6iiWbg6xC/Q6KFnSWl3zoXbbFN85o5eVSifd82L7XZc1xlK9GEUvAs9LlnzJgtzlHnFvXhToB6AmIqe6fK9Vuri1jA0JUL8eoEMzj1T8KEA6Sbv6G6sXf15dR92+O/wfxpwxTNFonAc5e7qmrmHsrilHzsA28QxlFE8I/G54d2wivVRmYDXMU1eRYpZucNh34J9x32faCxnvuv35wEUT63KPJQpEg==">
+</div>
+    
+                <div class="results-wrap">
+
+                    <div id="details2Region" role="status" aria-live="polite" aria-atomic="true">
+                      <span id="cphMain_lbDetails2" style="color:Black;"><hr><div class="case-caption" role="group" aria-label="Case caption"><div class="case-caption-line case-caption-party">IKB International, S.A.,, et al.,
+            Respondents,
+        </div><div class="case-caption-line case-caption-v">v.</div><div class="case-caption-line case-caption-party">Wells Fargo Bank, N.A.,, et al.,
+            Appellants,
+ABFC 2006-OPT1 Trust, et al.,
+         Nominal Defendants.
+(And Three Other Actions.)
+</div></div><hr><dl class="case-details"><dt>Argument Date</dt><dd>05/18/2023</dd><dt>Decision Date</dt><dd>06/15/2023</dd><dt>Official Citation</dt><dd>40 NY3d 277</dd></dl><section class="case-issues" aria-label="Issues"><h2 class="case-section-title">Issues</h2><p class="case-issues-category">Contracts--Construction</p><p class="case-issues-text">Whether provision in agreement governing residential mortgage backed securities trusts, which stated that trustee agreed to exercise rights for benefit of present and future certificate holders, imposed an express duty on the trustees to enforce repurchase protocol for the benefit of investors</p><p class="case-issues-category">Contracts--Breach or Performance of Contract</p><p class="case-issues-text">Whether plaintiffs sufficiently alleged that trustees had actual knowledge or written notice of event of default; whether economic loss doctrine barred claims for breach of conflict of interest and post-event of default breach of fiduciary duty</p><p class="case-issues-category">Limitation of Actions--When Cause of Action Accrues</p><p class="case-issues-text">Whether plaintiffs’ pre-event of default document defect repurchase claims are time-barred.</p></section><br><br>The following documents are currently available for download. <br>Additional documents may be available at a later date.</span>
+                    </div>
+                <br>
+                <br>
+                <div>
+	<table cellspacing="0" cellpadding="4" id="cphMain_gvFiles" style="width:100%;border-collapse:collapse;">
+		<caption align="Top">
+			File Available for Download
+		</caption><tbody><tr>
+			<th scope="col" style="width:55%;">File</th><th scope="col">Download</th>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_0">051823-51-Oral-Argument-Transcript</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl02$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_0" class="grid-btn grid-btn--small" aria-label="Download PDF: 051823-51-Oral-Argument-Transcript.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_1">51opn23-Decision</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl03$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_1" class="grid-btn grid-btn--small" aria-label="Download PDF: 51opn23-Decision.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_2">IKB International SA v. Wells Fargo_Resp_IKB_Brf</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl04$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_2" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB International SA v. Wells Fargo_Resp_IKB_Brf.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_3">IKB v. Wells Fargo-app-Wells Fargo-brf</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl05$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_3" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-brf.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_4">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume1</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl06$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_4" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume1.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_5">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume10</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl07$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_5" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume10.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_6">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume11</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl08$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_6" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume11.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_7">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume12</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl09$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_7" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume12.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_8">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume13</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl10$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_8" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume13.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_9">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume14</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl11$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_9" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume14.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_10">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume15</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl12$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_10" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume15.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_11">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume16</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl13$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_11" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume16.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_12">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume17</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl14$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_12" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume17.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_13">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume18</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl15$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_13" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume18.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_14">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume19</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl16$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_14" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume19.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_15">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume2</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl17$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_15" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume2.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_16">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume20</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl18$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_16" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume20.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_17">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume21</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl19$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_17" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume21.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_18">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume22</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl20$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_18" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume22.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_19">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume23</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl21$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_19" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume23.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_20">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume24</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl22$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_20" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume24.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_21">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume25</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl23$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_21" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume25.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_22">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume26</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl24$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_22" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume26.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_23">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume27</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl25$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_23" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume27.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_24">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume28</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl26$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_24" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume28.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_25">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume29</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl27$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_25" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume29.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_26">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume3</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl28$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_26" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume3.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_27">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume30</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl29$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_27" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume30.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_28">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume31</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl30$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_28" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume31.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_29">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume32</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl31$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_29" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume32.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_30">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume33</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl32$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_30" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume33.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_31">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume34</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl33$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_31" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume34.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_32">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume35</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl34$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_32" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume35.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_33">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume36</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl35$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_33" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume36.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_34">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume37</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl36$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_34" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume37.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_35">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume38</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl37$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_35" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume38.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_36">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume39</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl38$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_36" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume39.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_37">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume4</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl39$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_37" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume4.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_38">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume40</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl40$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_38" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume40.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_39">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume41</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl41$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_39" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume41.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_40">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume42</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl42$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_40" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume42.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_41">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume43</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl43$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_41" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume43.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_42">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume44</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl44$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_42" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume44.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_43">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume45</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl45$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_43" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume45.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_44">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume46</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl46$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_44" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume46.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_45">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume47</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl47$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_45" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume47.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_46">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume48</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl48$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_46" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume48.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_47">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume49</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl49$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_47" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume49.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_48">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume5</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl50$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_48" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume5.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_49">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume50</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl51$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_49" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume50.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_50">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume51</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl52$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_50" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume51.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_51">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume52</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl53$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_51" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume52.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_52">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume53</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl54$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_52" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume53.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_53">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume54</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl55$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_53" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume54.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_54">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume55</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl56$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_54" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume55.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_55">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume56</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl57$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_55" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume56.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_56">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume57</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl58$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_56" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume57.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_57">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume58</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl59$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_57" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume58.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_58">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume59</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl60$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_58" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume59.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_59">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume6</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl61$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_59" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume6.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_60">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume60</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl62$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_60" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume60.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_61">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume7</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl63$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_61" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume7.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_62">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume8</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl64$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_62" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume8.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_63">IKB v. Wells Fargo-app-Wells Fargo-rec-Volume9</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl65$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_63" class="grid-btn grid-btn--small" aria-label="Download PDF: IKB v. Wells Fargo-app-Wells Fargo-rec-Volume9.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_64">IKBInternationalvWellsFargo-amic-AmericanBankersAssociation-amicbrf</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl66$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_64" class="grid-btn grid-btn--small" aria-label="Download PDF: IKBInternationalvWellsFargo-amic-AmericanBankersAssociation-amicbrf.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr><tr>
+			<td style="width:55%;">
+                                <span id="cphMain_gvFiles_lbFileName_65">IKBvWells Fargo-app-Wells Fargo-replybrf</span>
+                                
+                            </td><td align="center" style="width:45%;">
+                                <input type="submit" name="ctl00$cphMain$gvFiles$ctl67$bttnDownload" value="Download PDF" id="cphMain_gvFiles_bttnDownload_65" class="grid-btn grid-btn--small" aria-label="Download PDF: IKBvWells Fargo-app-Wells Fargo-replybrf.pdf" style="color:White;background-color:#255B73;width:45%;">
+                            </td>
+		</tr>
+	</tbody></table>
+</div>
+                <br>
+                <br>
+                <center>
+                    <input type="submit" name="ctl00$cphMain$bttnDocketDetails" value="Return to Docket" id="cphMain_bttnDocketDetails" class="grid-btn">&nbsp;&nbsp;
+                    <input type="submit" name="ctl00$cphMain$bttnResultsDetails" value="Return to Results" id="cphMain_bttnResultsDetails" class="grid-btn">
+                    <br><br>
+                </center>
+                <br>
+                <div style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;"><b>Note: Material is posted as it becomes available to the Court of Appeals and the postings are not complete until after the case is decided. Consequently, a case may not be searchable in certain fields (e.g., citation, decision date, authoring Judge) until after it is decided.</b>
+</div>
+                    </div>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+//]]>
+</script>
+</form>
+
+
+<div class="bttm" aria-label="Footer links">
+  <div class="bttm-grid" aria-label="Footer links">
+
+    <!-- Column 1 -->
+    <div class="bttm-col bttm-col1block">
+      <div class="bttm-h">Public Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_search">Record &amp; Document Search</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Browse">Record &amp; Document Browse</a></div>
+      <div class="bttm-item bttm-last"><a href="https://courtpass.nycourts.gov/Docket" target="_blank" rel="noopener">Docket Search</a></div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="bttm-col bttm-col2block">
+      <div class="bttm-h">Filer Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Login.aspx">Filer Login</a></div>
+    </div>
+
+    <!-- Help header spanning cols 3-4 -->
+    <div class="bttm-h bttm-helphead">Help and Information</div>
+
+    <!-- Column 3 (help links) -->
+    <div class="bttm-col bttm-col3block">
+      <div class="bttm-item"><a href="Counsel_Faq.htm" target="_blank" rel="noopener">Filer Help</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Faq.htm" target="_blank" rel="noopener">Public Access Help</a></div>
+      <div class="bttm-item bttm-last"><a href="mailto:cpsupport@nycourts.gov">Contact Us</a></div>
+    </div>
+
+    <!-- Column 4 (tech/rules) -->
+    <div class="bttm-col bttm-col4block">
+      <div class="bttm-item">
+        <a href="TechSpecsCFUP.htm">Technical Specifications and<br>Instructions for Submission</a>
+      </div>
+      <div class="bttm-item bttm-last">
+        <a href="https://www.nycourts.gov/ctapps/500rules.htm">Rules of the Court of Appeals</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <p style="line-height: 1.2; text-align:center;">
+        New York State Court of Appeals<br>
+        20 Eagle Street<br>
+        Albany, New York 12207<br>
+        Phone: (518) 455-7701 or 7702<br>
+      </p>
+    </div>
+
+    <div class="sidebar" role="complementary" aria-label="Help and side navigation">
+      <div style="margin-top: 6px; text-align:center;">
+        <img src="images/Help_Banner.png" width="230" height="60" alt="Help">
+      </div>
+
+      <br>
+
+      
+
+<div class="curvescorners_t">
+<div class="curvescorners_l">
+<div class="curvescorners_r">
+<div class="curvescorners_b">
+<div class="curvescorners_tl">
+<div class="curvescorners_tr">
+<div class="curvescorners_bl">
+<div class="curvescorners_br">
+<div class="curvescorners">
+<div class="helphead">INFORMATION FOR THE PUBLIC</div>
+
+<table class="boxlist"><tbody><tr><th style="display: none">Main Page</th><td>
+<a href="CasesandDocs.htm" class="ajax">Cases and Documents Available</a><br>
+Search &amp; Download Guide
+<ul style="list-style-position: outside; list-style-type: disc; margin-top: -2px; margin-bottom: -1px; font-variant: normal;">
+	<li><a href="ConductingSearch.htm" class="ajax">How to Search</a></li>
+	<li><a href="Browsing.htm" class="ajax">How to Browse</a></li>
+	<li><a href="Docket.htm" class="ajax">How to Use Docket</a></li>	
+	<li><a href="ViewDownload.htm" class="ajax">Viewing or Downloading Documents</a></li>
+
+</ul>
+<a href="FAQsPublic.htm" class="ajax">Frequently Asked Questions</a></td></tr></tbody></table>
+
+</div></div></div></div></div></div></div></div></div>
+
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    const menus = document.querySelectorAll('.dropdown, .subnav');
+
+    menus.forEach(menu => {
+        const button = menu.querySelector('button');
+        if (!button) return;
+
+        const content =
+            menu.querySelector('.dropdown-content') ||
+            menu.querySelector('.subnav-content');
+
+        if (!content) return;
+
+        const items = Array.from(content.querySelectorAll('a, button'));
+
+        function openMenu() {
+            menu.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+            content.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+            menu.classList.remove('open');
+            button.setAttribute('aria-expanded', 'false');
+            content.setAttribute('aria-hidden', 'true');
+        }
+
+        // toggle on click
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            expanded ? closeMenu() : openMenu();
+        });
+
+        // hover behavior (keep if you want it)
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', closeMenu);
+
+        // close when focus leaves the menu container
+        menu.addEventListener('focusout', e => {
+            if (!menu.contains(e.relatedTarget)) closeMenu();
+        });
+
+        // keyboard: open and move into items
+        button.addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown') {
+                openMenu();
+                if (items[0]) items[0].focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowUp') {
+                openMenu();
+                if (items[items.length - 1]) items[items.length - 1].focus();
+                e.preventDefault();
+            } else if (e.key === 'Escape') {
+                closeMenu();
+                button.focus();
+            }
+        });
+
+        // optional: arrow-key movement inside menu
+        items.forEach((item, i) => {
+            item.addEventListener('keydown', e => {
+                if (e.key === 'ArrowDown') {
+                    items[(i + 1) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'ArrowUp') {
+                    items[(i - 1 + items.length) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'Escape') {
+                    closeMenu();
+                    button.focus();
+                }
+            });
+        });
+    });
+</script>
+
+
+
+</body></html>
