@@ -1,0 +1,1036 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>
+	NYS Court-PASS Counsel Filing
+</title><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="stylesheet" type="text/css" href="css/Hide.css"><link rel="stylesheet" href="css/corners.css"><link rel="stylesheet" href="css/colorbox.css">
+<script type="text/javascript" src="jscript/jquery-1.12.0.min.js"></script>
+<!--<script type="text/javascript" src="jscript/jquery.colorbox-min.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".ajax").colorbox({opacity:0.7});
+	});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<style type="text/css">
+
+/* =========================
+   Theme variables
+   ========================= */
+:root {
+  --brand-blue: #255b73;
+  --brand-tan: #f4d585;
+  --brand-tan-hover: #f7e5b7;
+  --skip-bg: #f7d385;
+  --panel-title-bg: #dfe7ea;
+  --footer-bg: #dfe7ea;
+  --white: #ffffff;
+}
+
+/* =========================
+   Global / utilities
+   ========================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { max-width: 100%; }
+
+img, table, input { max-width: 100%; }
+
+/* If you keep this, make sure nothing gets clipped at 400% zoom */
+body { overflow-x: hidden; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--skip-bg);
+  color: var(--brand-blue);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--brand-blue);
+}
+.skip-link:focus { top: 0; }
+
+.results-title { margin: 1rem 0; }
+.results-actions { text-align: center; margin-top: 1rem; }
+
+.results-wrap {
+  margin-bottom: 2rem;
+}
+
+.page-actions { text-align: center; margin: 1rem 0 2rem; }
+
+.banner { text-align: center; }
+
+#casesHeading { margin: 2rem 0 2rem; }
+.results-wrap { margin: 1rem 0 2rem; }
+
+/* =========================
+   Header: topbar + nav + search
+   ========================= */
+.topbar {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* prevents overflow at 400% zoom */
+}
+
+.topbar-left {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.topbar-right {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+@media (min-width: 941px) {
+  .topbar-right { flex: 0 0 auto; }
+}
+
+/* Nav bar */
+.navbar {
+  background-color: var(--brand-tan);
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar a {
+  color: var(--brand-blue);
+  font-weight: bolder;
+  text-align: center;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.subnav:hover .subnavbtn {
+  background-color: var(--brand-tan-hover);
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+.dropdown .dropbtn {
+  font-size: 12px;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  color: var(--brand-blue);
+  padding: 4px 8px 0;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--brand-tan);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--brand-blue);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: var(--brand-tan-hover);
+}
+
+.dropdown.open .dropdown-content,
+.subnav.open .subnav-content {
+  display: block;
+}
+
+/* Focus styles */
+.navbar a:focus,
+.dropbtn:focus,
+.subnavbtn:focus,
+.dropdown-content a:focus,
+.subnav-content a:focus {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Search form */
+#suggestion_form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#suggestion_form input[type="text"] {
+  width: 8rem;
+  min-width: 6rem;
+  max-width: 100%;
+}
+
+.topbar-search-button { background-color: var(--brand-tan); }
+
+/* =========================
+   Page layout: main + sidebar
+   ========================= */
+.page {
+  max-width: 940px;
+  width: 100%;
+  margin: 6px auto 0;
+  background: var(--white);
+  padding: 0 12px;
+  overflow-x: clip;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+  gap: 16px;
+  align-items: start;
+}
+
+.main {
+  min-width: 0;
+  padding: 0 6px 0 0;
+}
+
+.sidebar {
+  min-width: 0;
+  border-left: 1px solid var(--brand-tan);
+  padding-left: 12px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-left: none; padding-left: 0; }
+}
+
+/* Headings inside main */
+.main h1 { font-size: 1.2em; }
+.main h2 { font-size: 1.2em; }
+
+/* =========================
+   CTA buttons
+   ========================= */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 16px;
+  background: var(--brand-tan);
+  color: var(--brand-blue);
+  font-weight: bold;
+  border: 6px solid var(--brand-blue);
+  text-decoration: none;
+}
+
+.cta:hover,
+.cta:focus {
+  background: var(--brand-tan-hover);
+  outline: 6px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.section-rule {
+  height: 2px;
+  background-color: var(--brand-tan);
+  border: 0;
+  margin: 12px 0;
+}
+
+/* match original table look */
+.bttm {
+  background-color: #dfe7ea;
+  width: 694px;
+  max-width: 100%;
+  border: thin solid #255b73;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bttm a:link,
+.bttm a:visited { color: #255b73; text-decoration: none; }
+.bttm a:hover,
+.bttm a:active { color: Red; text-decoration: none; }
+
+.bttm-grid {
+  display: grid;
+  grid-template-columns: 200px 115px minmax(0, 2fr) minmax(0, 200px);
+  column-gap: 0;
+  row-gap: 0;
+  align-items: start;
+}
+
+/* Place each block in the grid */
+.bttm-col1block { grid-column: 1; grid-row: 1 / 5; padding-left: 28px; }
+.bttm-col2block { grid-column: 2; grid-row: 1 / 5; }
+
+.bttm-helphead  { grid-column: 3 / 5; grid-row: 1; }
+
+.bttm-col3block { grid-column: 3; grid-row: 2 / 5; }
+.bttm-col4block { grid-column: 4; grid-row: 2 / 5; }
+
+/* Your existing header style */
+.bttm-h {
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 2px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+/* Keep these */
+.bttm-last { padding-bottom: 5px; }
+
+/* Reflow */
+@media (max-width: 900px) {
+  .bttm-grid { grid-template-columns: 1fr; }
+  .bttm-col1block,
+  .bttm-col2block,
+  .bttm-helphead,
+  .bttm-col3block,
+  .bttm-col4block {
+    grid-column: 1;
+    grid-row: auto;
+    padding-left: 0;
+  }
+}
+
+/* =========================
+   Search panel (table-to-grid conversion)
+   ========================= */
+.search-panel {
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px ridge var(--brand-blue);
+  background: var(--white);
+}
+
+.search-panel-inner {
+  width: 100%;
+  max-width: 684px;
+  margin: 0 auto;
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px 12px;
+}
+
+/* allow grid children to shrink (prevents overflow) */
+.search-panel-inner > * { min-width: 0; }
+
+/* Prevent any control inside the search panel from forcing horizontal overflow */
+.search-panel,
+.search-panel-inner,
+.search-panel * {
+  min-width: 0;
+}
+
+.search-panel select,
+.search-panel input[type="text"],
+.search-panel input[type="search"],
+.search-panel textarea {
+  max-width: 100% !important;
+}
+
+/* If any ASP.NET control renders an inline width, override it */
+.search-panel select,
+.search-panel input,
+.search-panel textarea {
+  box-sizing: border-box;
+}
+
+.form-full,
+.search-title,
+.caption,
+.form-actions {
+  grid-column: 1 / -1;
+}
+
+.search-title,
+.caption {
+  background: var(--panel-title-bg);
+  padding: 6px;
+}
+
+.form-row {
+  background: var(--white);
+  padding: 6px;
+}
+
+.form-label {
+  display: block;
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-fieldset {
+  border: 1px solid var(--brand-blue);
+  padding: 8px;
+  text-align: center;
+}
+
+.form-fieldset legend { text-align: left; }
+
+.form-actions {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* inline controls (citation row) */
+.inline-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.form-control--slipyear { width: clamp(5.5rem, 18vw, 7rem); }
+.form-control--slipno   { width: clamp(6rem, 22vw, 9rem); }
+
+.form-control--small { width: 120px; }
+.form-control--xs { width: 80px; }
+
+/* Match-type inline row */
+.form-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.form-label-inline {
+  display: inline;
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-control--matchtype {
+  width: auto;
+  max-width: 100%;
+}
+
+/* two-column caption line (Judge / Decision No, etc.) */
+.caption-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+}
+
+/* Reflow: collapse panel to 1 column earlier for 400% zoom */
+@media (max-width: 1100px) {
+  .search-panel-inner { grid-template-columns: 1fr; }
+  .caption-2col { grid-template-columns: 1fr; row-gap: 6px; }
+}
+
+.results-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.results-wrap:focus {
+  outline: 3px solid #255b73;
+  outline-offset: 2px;
+}
+
+.results-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Make long text wrap instead of forcing width */
+.results-wrap table,
+.results-wrap th,
+.results-wrap td {
+  white-space: normal;
+}
+
+.results-wrap th,
+.results-wrap td {
+  overflow-wrap: anywhere;   /* best for very long strings */
+  word-break: normal;
+  hyphens: auto;
+}
+
+.results-wrap caption {
+  position: absolute;
+  left: -9999px;
+}
+
+.grid-btn {
+  appearance: none;
+  background: #255B73;
+  color: #fff;
+
+  border: 2px solid #255B73;  /* base border */
+  border-radius: 4px;
+
+  padding: 10px 16px;
+  cursor: pointer;
+
+  /* sizing: don’t force 100px wide unless this class is ONLY for tiny buttons */
+  /* width: 100px;  <-- remove this */
+  min-height: 44px;           /* better target size */
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.grid-btn:hover {
+  background: #1f4a5d;
+  border: 4px solid #000;          /* force visible border */
+  box-shadow: 0 0 0 1px #fff inset; /* optional “edge” on dark bg */
+}
+
+/* Keyboard focus: strong border + strong ring */
+.grid-btn:focus,
+.grid-btn:focus-visible {
+  outline: none;              /* replace with box-shadow ring */
+  border-color: #000;         /* border highlight for focus */
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585; /* crisp on white */
+}
+
+/* Pressed */
+.grid-btn:active {
+  background: #163a4a;
+  border-color: #000;
+}
+
+/* Disabled */
+.grid-btn:disabled,
+.grid-btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* If focused AND hovered/clicked, keep the focus ring */
+.grid-btn:hover:focus,
+.grid-btn:hover:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f4d585;
+}
+
+.grid-btn--small { width: 100px; padding: 6px 10px; min-height: 36px; }
+.grid-btn--wide  { width: 60%; }
+
+/* Optional: show focus when any control inside a row is focused */
+.results-table tr:focus-within {
+  background: #f7e5b7;
+}
+
+.return-to-search {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.case-caption {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.case-caption-line {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.case-caption-party {
+  font-size: 1.125rem; /* similar to font size=3 */
+}
+
+.case-caption-v {
+  font-size: 1rem;     /* similar to font size=2 */
+}
+
+.case-details {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: .5rem 1rem;
+  margin: 1rem 0;
+}
+
+.case-details dt {
+  font-weight: 700;
+}
+
+.case-details dd {
+  margin: 0;
+}
+
+.case-section-title {
+  font-size: 1.25rem;  /* similar to your size=4 */
+  font-weight: 700;
+  margin: 1rem 0 .25rem;
+}
+
+.case-issues-category {
+  font-weight: 700;
+  margin: 0 0 .5rem;
+}
+
+.case-issues-text {
+  font-size: 1rem;  /* replaces size=2 */
+  margin: 0 0 1rem;
+}
+
+/* Focus ring for pager links and other interactive controls */
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.details-dl { margin: 0; }
+
+.details-row{
+  display: grid;
+  grid-template-columns: clamp(7rem, 18vw, 10rem) minmax(0, 1fr);
+  gap: 6px 12px;
+}
+
+.details-row dt { font-weight: 700; }
+
+.details-row dd{
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: normal;   /* undo 'anywhere' */
+  word-break: normal;      /* undo 'break-all' */
+}
+
+.details-help { display: inline-block; margin-left: .5rem; }
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #0b63ce;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.link-button:focus,
+.link-button:focus-visible {
+  outline: 4px solid #f4d585;
+  outline-offset: 2px;
+}
+
+.case-details{
+  width: 100%;
+  max-width: none;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">function killerrors(){return true;}window.onerror = killerrors;</script>
+
+</head>
+<body>
+<a href="#maincontent" class="skip-link">Skip to main content</a>
+
+<div style="max-width: 940px; width: 100%; min-height: 172px; margin: 0 auto; position: relative; display: flex; flex-direction: column;" role="banner">
+
+	<div style="max-width: 940px; width: 100%; margin: 4px auto 0; position: relative;">
+        <a href="http://www.nycourts.gov/ctapps/">
+          <img src="images/coatitlesm.png" width="70%" height="129" alt="New York Court of Appeals" style="margin-left:auto;margin-right:auto;display:block;">
+        </a>
+	</div>
+
+<div class="topbar" style="margin-top: 10px;">
+  <div class="topbar-left" id="menu" style="background-color: #f4d585;">
+    <div class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="default.aspx">Home</a>
+      <a href="Public_search.aspx">Search PASS</a>
+      <a href="Public_Browse.aspx">Browse PASS</a>
+      <a href="Docket.aspx">Docket</a>
+      <a href="Login.aspx">Filer Access</a>
+
+      <div class="dropdown">
+        <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-controls="rules-menu">
+          Help and Information
+        </button>
+
+        <div id="rules-menu" class="dropdown-content" aria-hidden="true">
+          <a href="Public_Faq.htm">Public Search Help</a>
+          <a href="Counsel_Faq.htm">Filer Help</a>
+          <a href="https://www.nycourts.gov/ctapps/500rules.htm">Court Rules</a>
+          <a href="TechSpecsCFUP.htm">Technical Specifications and Instructions for Submission</a>
+        </div>
+      </div>
+
+      <a href="mailto:cpsupport@nycourts.gov">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <form id="suggestion_form" name="gs" method="GET" action="http://search.nycourts.gov/search" onsubmit="return (this.q.value == '') ? false : true;">
+
+      <label class="sr-only" for="siteSearch">Search</label>
+      <input id="siteSearch" type="text" name="q" maxlength="256" autocomplete="off" onkeyup="ss_handleKey(event)">
+
+      <input type="submit" name="btnG" value="Search" class="topbar-search-button">
+
+      <!-- keep your hidden fields exactly as-is -->
+      <input type="hidden" name="ud" value="1">
+      <input type="hidden" name="sort" value="date:D:L:d1">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="client" value="court_pass_frontend">
+      <input type="hidden" name="proxystylesheet" value="court_pass_frontend">
+      <input type="hidden" name="btnG.x" value="11">
+      <input type="hidden" name="btnG.y" value="16">
+      <input type="hidden" name="exclude_apps" value="1">
+      <input type="hidden" name="site" value="court_pass">
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="page">
+  <!-- Breadcrumbs row -->
+    <div style="border-bottom: medium solid #F4D585; padding-bottom: 4px;">
+      <div role="navigation" aria-label="Breadcrumb">
+        <span class="BCrumbs">
+          
+    <span class="BCrumbs"><img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle"><a href="Default.aspx">Home</a> <img src="images/arrow.gif" alt="" aria-hidden="true" width="16" height="18" align="absmiddle">Court Docket</span>
+
+        </span>
+      </div>
+    </div>
+
+  <div class="layout">
+    <div id="maincontent" class="main" role="main" tabindex="-1">
+      <div style="text-align:center;">
+        <img src="images/Court-PASS_Banner.png" width="315" height="62" alt="Court-PASS">
+      </div>
+
+      
+    <script language="javascript" type="text/javascript">
+
+        function CallDetails() {
+            var bttnCAllDetailsId = 'cphMain_bttnDetails';
+            document.getElementById(bttnCAllDetailsId).style.visibility = 'inherit';
+            document.getElementById(bttnCAllDetailsId).click();
+        }
+
+    </script>
+
+    <div align="center">
+        <img src="images/Docket_Banner.png" alt="" aria-hidden="true" width="90%" height="47" border="0">
+	</div>	
+    
+    <!-- CONTENT TABLE -->
+    <form method="post" action="./Docket" id="Form2">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZN1YE5nSVrl8mXRDFN0-6ZVrRvBLdkMWZWwyorP1Ct3oDv2vun9mT3FDtccYjdWEfw2&amp;t=638901382312636832" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="153FDA1C">
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="327">
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="4HXHiLm2ZfsKP7dOsaZOaNRpwdsbEr1OzWpjkjNvWuxCL1yw2QkC7FQyuNavtN22Jl/nnlDS58s7LV614n1X9E4AIXJmZVjBtqlb1qHqmN5w6psAQFejyJnvXYy1PaMYEspsL8P1O/spAvYG22+wtg==">
+</div>
+    
+                <div class="results-wrap">
+
+                    <div id="details2Region" role="status" aria-live="polite" aria-atomic="true">
+                      <span id="cphMain_lbDetails2" style="color:Black;"><hr><div class="case-caption" role="group" aria-label="Case caption"><div class="case-caption-line case-caption-party">James Acevedo, et al.,
+            Plaintiffs,
+Steve Rosenthal,
+            Respondent,
+        </div><div class="case-caption-line case-caption-v">v.</div><div class="case-caption-line case-caption-party">The Piano Building LLC,,
+            Appellant,
+JEM Realty Associates LLC,,
+            Defendant.
+</div></div><hr><dl class="case-details"><dt>Decision Date</dt><dd>05/12/2010</dd></dl><section class="case-issues" aria-label="Issues"><h2 class="case-section-title">Issues</h2><p class="case-issues-category">Landlord and Tenant--Rent Regulation</p><p class="case-issues-text">Whether an apartment covered by the Loft Law may revert to rent stabilization after the landlord purchased the prior occupant's rights under Multiple Dwelling Law § 286 (12) in a pre-1974 building containing six or more residential units--Wolinsky v Kee Yip Realty Corp. (2 NY3d 487 [2004]).</p></section><br /><br />There are no files available for this case</span>
+                    </div>
+                <br />
+                <br />
+                <div>
+
+</div>
+                <br />
+                <br />
+                <center>
+                    <input type="submit" name="ctl00$cphMain$bttnDocketDetails" value="Return to Docket" id="cphMain_bttnDocketDetails" class="grid-btn" />&nbsp;&nbsp;
+                    <input type="submit" name="ctl00$cphMain$bttnResultsDetails" value="Return to Results" id="cphMain_bttnResultsDetails" class="grid-btn" />
+                    <br /><br />
+                </center>
+                <br />
+                <div style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;"><b>Note: Material is posted as it becomes available to the Court of Appeals and the postings are not complete until after the case is decided. Consequently, a case may not be searchable in certain fields (e.g., citation, decision date, authoring Judge) until after it is decided.</b>
+</div>
+                    </div>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+//]]>
+</script>
+</form>
+
+
+<div class="bttm" aria-label="Footer links">
+  <div class="bttm-grid" aria-label="Footer links">
+
+    <!-- Column 1 -->
+    <div class="bttm-col bttm-col1block">
+      <div class="bttm-h">Public Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_search">Record &amp; Document Search</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Browse">Record &amp; Document Browse</a></div>
+      <div class="bttm-item bttm-last"><a href="https://courtpass.nycourts.gov/Docket" target="_blank" rel="noopener">Docket Search</a></div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="bttm-col bttm-col2block">
+      <div class="bttm-h">Filer Access</div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Login.aspx">Filer Login</a></div>
+    </div>
+
+    <!-- Help header spanning cols 3-4 -->
+    <div class="bttm-h bttm-helphead">Help and Information</div>
+
+    <!-- Column 3 (help links) -->
+    <div class="bttm-col bttm-col3block">
+      <div class="bttm-item"><a href="Counsel_Faq.htm" target="_blank" rel="noopener">Filer Help</a></div>
+      <div class="bttm-item"><a href="https://courtpass.nycourts.gov/Public_Faq.htm" target="_blank" rel="noopener">Public Access Help</a></div>
+      <div class="bttm-item bttm-last"><a href="mailto:cpsupport@nycourts.gov">Contact Us</a></div>
+    </div>
+
+    <!-- Column 4 (tech/rules) -->
+    <div class="bttm-col bttm-col4block">
+      <div class="bttm-item">
+        <a href="TechSpecsCFUP.htm">Technical Specifications and<br />Instructions for Submission</a>
+      </div>
+      <div class="bttm-item bttm-last">
+        <a href="https://www.nycourts.gov/ctapps/500rules.htm">Rules of the Court of Appeals</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <p style="line-height: 1.2; text-align:center;">
+        New York State Court of Appeals<br />
+        20 Eagle Street<br />
+        Albany, New York 12207<br />
+        Phone: (518) 455-7701 or 7702<br />
+      </p>
+    </div>
+
+    <div class="sidebar" role="complementary" aria-label="Help and side navigation">
+      <div style="margin-top: 6px; text-align:center;">
+        <img src="images/Help_Banner.png" width="230" height="60" alt="Help" />
+      </div>
+
+      <br />
+
+      
+
+<div class="curvescorners_t">
+<div class="curvescorners_l">
+<div class="curvescorners_r">
+<div class="curvescorners_b">
+<div class="curvescorners_tl">
+<div class="curvescorners_tr">
+<div class="curvescorners_bl">
+<div class="curvescorners_br">
+<div class="curvescorners">
+<div class="helphead">INFORMATION FOR THE PUBLIC</div>
+
+<table class="boxlist"><tr><th style="display: none">Main Page</th><td>
+<a href="CasesandDocs.htm" class="ajax">Cases and Documents Available</a><br />
+Search &amp; Download Guide
+<ul style="list-style-position: outside; list-style-type: disc; margin-top: -2px; margin-bottom: -1px; font-variant: normal;">
+	<li><a href="ConductingSearch.htm" class="ajax">How to Search</a></li>
+	<li><a href="Browsing.htm" class="ajax">How to Browse</a></li>
+	<li><a href="Docket.htm" class="ajax">How to Use Docket</a></li>	
+	<li><a href="ViewDownload.htm" class="ajax">Viewing or Downloading Documents</a></li>
+
+</ul>
+<a href="FAQsPublic.htm" class="ajax">Frequently Asked Questions</a></td></tr></table>
+
+</div></div></div></div></div></div></div></div></div>
+
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    const menus = document.querySelectorAll('.dropdown, .subnav');
+
+    menus.forEach(menu => {
+        const button = menu.querySelector('button');
+        if (!button) return;
+
+        const content =
+            menu.querySelector('.dropdown-content') ||
+            menu.querySelector('.subnav-content');
+
+        if (!content) return;
+
+        const items = Array.from(content.querySelectorAll('a, button'));
+
+        function openMenu() {
+            menu.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+            content.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+            menu.classList.remove('open');
+            button.setAttribute('aria-expanded', 'false');
+            content.setAttribute('aria-hidden', 'true');
+        }
+
+        // toggle on click
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            expanded ? closeMenu() : openMenu();
+        });
+
+        // hover behavior (keep if you want it)
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', closeMenu);
+
+        // close when focus leaves the menu container
+        menu.addEventListener('focusout', e => {
+            if (!menu.contains(e.relatedTarget)) closeMenu();
+        });
+
+        // keyboard: open and move into items
+        button.addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown') {
+                openMenu();
+                if (items[0]) items[0].focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowUp') {
+                openMenu();
+                if (items[items.length - 1]) items[items.length - 1].focus();
+                e.preventDefault();
+            } else if (e.key === 'Escape') {
+                closeMenu();
+                button.focus();
+            }
+        });
+
+        // optional: arrow-key movement inside menu
+        items.forEach((item, i) => {
+            item.addEventListener('keydown', e => {
+                if (e.key === 'ArrowDown') {
+                    items[(i + 1) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'ArrowUp') {
+                    items[(i - 1 + items.length) % items.length].focus();
+                    e.preventDefault();
+                } else if (e.key === 'Escape') {
+                    closeMenu();
+                    button.focus();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html></style></p></section></span></div></div></form></div></div></div></body></html>
