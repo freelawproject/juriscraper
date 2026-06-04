@@ -6,6 +6,7 @@
 #          504-310-2592
 #          rgunn@lasc.org
 
+import asyncio
 import json
 import re
 from urllib.parse import urljoin
@@ -165,17 +166,41 @@ class Site(OpinionSiteLinear):
             <link>https://www.lasc.org/Opinions?p=2026-025</link>
 
         :return: list of absolute sub-page URLs, most recent first
+        :raises ParsingException: if the feed has no ``<item>`` entries at
+            all, which means its format changed and the scrape should fail
+            rather than silently yield no opinions
         """
         raw = await self._get_with_retries(self.rss_url)
-        urls = []
+        if "<item>" not in raw:
+            raise ParsingException(
+                f"la: no <item> entries in RSS feed {self.rss_url}; "
+                "the feed format may have changed"
+            )
+
         item_re = re.compile(
             r"<item>.*?<title>(?P<title>.*?)</title>.*?"
             r"<link>(?P<link>.*?)</link>",
             re.S,
         )
-        for match in item_re.finditer(raw):
-            if match.group("title").strip().startswith("Opinions"):
-                urls.append(match.group("link").strip())
+        matches = list(item_re.finditer(raw))
+        if not matches:
+            # <item> entries exist but the title/link layout changed
+            raise ParsingException(
+                f"la: RSS feed {self.rss_url} has <item> entries but none "
+                "matched the expected title/link format"
+            )
+
+        urls = [
+            match.group("link").strip()
+            for match in matches
+            if match.group("title").strip().startswith("Opinions")
+        ]
+        if not urls:
+            # Could be a quiet stretch with only non-opinion news, so warn
+            # rather than crash; recurring warnings mean the titles changed
+            logger.warning(
+                "la: no 'Opinions' items in RSS feed %s", self.rss_url
+            )
         return urls[: self.max_subpages]
 
     async def _render_blazor_page(self, url: str) -> str:
@@ -200,6 +225,8 @@ class Site(OpinionSiteLinear):
             content=b"",
             headers=self.request["headers"],
         )
+        # Surface a clear HTTP error instead of a JSONDecodeError below
+        negotiate.raise_for_status()
         token = negotiate.json()["connectionToken"]
         conn_url = urljoin(self.base_url, f"/_blazor?id={token}")
 
@@ -260,6 +287,9 @@ class Site(OpinionSiteLinear):
     async def _get_with_retries(self, url: str, retries: int = 8) -> str:
         """GET a URL, retrying through lasc.org's intermittent 521 errors.
 
+        Backs off exponentially between attempts (1, 2, 4 ... capped at 16
+        seconds), since the 521s do not clear immediately.
+
         :param url: the URL to fetch
         :param retries: number of attempts
         :return: the response text
@@ -268,7 +298,7 @@ class Site(OpinionSiteLinear):
         """
         session = self.request["session"]
         error = httpx.HTTPError(f"la: no response from {url}")
-        for _ in range(retries):
+        for attempt in range(retries):
             try:
                 response = await session.get(
                     url, headers=self.request["headers"], timeout=30
@@ -277,6 +307,8 @@ class Site(OpinionSiteLinear):
                 return response.text
             except httpx.HTTPError as exc:
                 error = exc
+                if attempt < retries - 1:
+                    await asyncio.sleep(min(2**attempt, 16))
         raise error
 
     @staticmethod
