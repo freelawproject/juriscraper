@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- `ca9` oral argument audio URLs now point to `cdn.ca9.uscourts.gov`; the old
+  `www` host started returning 404 pages after the site redesign (#1987)
 
 ## 3.0.21 - 2026-05-29
 
