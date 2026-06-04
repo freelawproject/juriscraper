@@ -1,6 +1,10 @@
 """Scraper for Ninth Circuit of Appeals
 CourtID: ca9
 Court Short Name: ca9
+History:
+    - 2026-06-04: Audio files moved from www.ca9.uscourts.gov to
+      cdn.ca9.uscourts.gov after the site redesign; same migration that
+      moved the opinion feeds (#1987).
 """
 
 import json
@@ -22,9 +26,15 @@ class Site(OralArgumentSiteLinear):
 
         self.court_id = self.__module__
         self.table = "media"
-        self.base_url = "https://www.ca9.uscourts.gov/datastore/media/"
+        self.base_url = "https://cdn.ca9.uscourts.gov/datastore/media/"
+        # Recent files are served as "application/octet-stream; charset=UTF-8";
+        # older files (relevant for backscrapes) as "binary/octet-stream",
+        # "audio/mpeg" or "audio/x-ms-wma" depending on the year
         self.expected_content_types = [
-            "application/octet-stream; charset=UTF-8"
+            "application/octet-stream; charset=UTF-8",
+            "binary/octet-stream",
+            "audio/mpeg",
+            "audio/x-ms-wma",
         ]
         # AWS Cognito creds step:
         self.headers = {
