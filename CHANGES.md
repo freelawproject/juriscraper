@@ -21,6 +21,8 @@ Changes:
 -
 
 Fixes:
+- `ca9` oral argument audio URLs now point to `cdn.ca9.uscourts.gov`; the old
+  `www` host started returning 404 pages after the site redesign (#1987)
 - `uscfc` was crashing ingestion because some opinions (attorney discipline
   orders) now have relative download links. Resolve them with `urljoin` #1986
 
