@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- `uscfc` was crashing ingestion because some opinions (attorney discipline
+  orders) now have relative download links. Resolve them with `urljoin` #1986
 
 ## 3.0.21 - 2026-05-29
 
