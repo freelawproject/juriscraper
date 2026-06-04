@@ -9,6 +9,7 @@ Notes:
 
 import json
 import re
+from urllib.parse import urljoin
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -68,7 +69,9 @@ class Site(OpinionSiteLinear):
                 status = "Unknown"
 
             parsed_case = {
-                "url": opinion["link"],
+                # Some opinions have relative links,
+                # e.g. "/cofc/opinions/25-11281-parks-....pdf"
+                "url": urljoin(self.url, opinion["link"]),
                 "date": opinion["date"],
                 "other_date": other_date,
                 "status": status,
