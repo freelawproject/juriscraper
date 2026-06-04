@@ -21,7 +21,11 @@ Changes:
 -
 
 Fixes:
--
+- `la` (Louisiana Supreme Court) was failing because lasc.org was rebuilt as a
+  Blazor Server app: a plain GET returns only the JavaScript shell with no
+  opinions, and the legacy http:// host now returns 521. The scraper now reads
+  the RSS feed for recent Opinions sub-pages and drives the Blazor SignalR
+  circuit to retrieve the server-rendered news release. #1983
 
 ## 3.0.21 - 2026-05-29
 
