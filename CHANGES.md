@@ -21,6 +21,11 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.22 - 2026-06-04
+
+Fixes:
 - `la` (Louisiana Supreme Court) was failing because lasc.org was rebuilt as a
   Blazor Server app: a plain GET returns only the JavaScript shell with no
   opinions, and the legacy http:// host now returns 521. The scraper now reads
