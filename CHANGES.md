@@ -21,7 +21,11 @@ Changes:
 -
 
 Fixes:
--
+- `texbizct` was crashing on every run because the site's WAF may block the
+  per-document HEAD requests used to approximate `date_filed` from the
+  `Last-Modified` header. Drop the HEAD requests entirely and assign
+  approximate mid-year dates offset by row index to keep the source ordering;
+  `extract_from_text` recovers the exact date from the document. #1992
 
 ## 3.0.22 - 2026-06-04
 

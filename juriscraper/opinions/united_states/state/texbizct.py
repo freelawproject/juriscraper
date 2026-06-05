@@ -4,14 +4,12 @@
 # History:
 #  - 2025-07-29: Created by Luis Manzur
 import re
+from datetime import date, timedelta
 from urllib.parse import urljoin
 
 from dateutil import parser
 
-from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
-logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):
@@ -29,7 +27,7 @@ class Site(OpinionSiteLinear):
         """
 
         links = self.html.xpath('//div[@class="panel-content"]//a')
-        for link in links:
+        for index, link in enumerate(links):
             title = link.get("title")
             short_title = link.text_content()
 
@@ -46,7 +44,16 @@ class Site(OpinionSiteLinear):
                     name, citation = short_title, ""
 
             url = urljoin(self.url, link.get("href"))
-            date = await self._get_approximate_date(url)
+
+            # The source doesn't publish dates, and HEAD requests for the
+            # documents' Last-Modified header may be blocked by the site's
+            # WAF. Assign a mid-year date offset by the row index so cases
+            # keep the source ordering when sorted by date; this prevents
+            # a dup checker false positive in CL. `extract_from_text` will
+            # get the exact date from the document. #1992
+            year = 2025 if self.test_mode_enabled() else date.today().year
+            case_date = date(year, 7, 1) - timedelta(days=index)
+
             raw_docket = title.split()[0]
             docket = raw_docket.strip(",").replace("--", "-")
 
@@ -59,7 +66,7 @@ class Site(OpinionSiteLinear):
                     "name": name.split("(", 1)[0].strip(),
                     "citation": citation.split("(", 1)[0].strip(),
                     "url": url,
-                    "date": date,
+                    "date": case_date.strftime("%Y-%m-%d"),
                     "date_filed_is_approximate": True,
                     "summary": summary,
                 }
@@ -97,18 +104,3 @@ class Site(OpinionSiteLinear):
                 }
             }
         return {}
-
-    async def _get_approximate_date(self, url: str) -> str | None:
-        """Get Approximate date from head request
-
-        :param url: The pdf url
-        :return: The date the file was last touched
-        """
-        if self.test_mode_enabled():
-            return "2025-01-01"
-        resp = await self.request["session"].head(
-            url, follow_redirects=True, timeout=30
-        )
-        lm = resp.headers.get("Last-Modified")
-        dt = parser.parse(lm)
-        return dt.strftime("%Y-%m-%d")
