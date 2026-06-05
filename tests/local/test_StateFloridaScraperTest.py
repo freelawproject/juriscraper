@@ -107,9 +107,9 @@ def _case_party_subtypes_body() -> list[dict[str, Any]]:
                 "participantTypeComment": "Party",
             },
             "involvementType": {
-                "involvementTypeID": 10360,
-                "involvementTypeValue": "Active",
-                "involvementTypeComment": "Active involvement",
+                "casePartyInvolvementTypeID": 10360,
+                "casePartyInvolvementTypeValue": "Active",
+                "casePartyInvolvementTypeComment": "Active involvement",
             },
         },
     ]
@@ -682,7 +682,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
             )
 
         recorder.register(
-            lambda r: r.url.path == "/courts/cms/docketentrydocumentaccess",
+            lambda r: r.url.path == "/courts/cms/docketentrydocumentsaccess",
             docs_handler,
         )
 
@@ -807,7 +807,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
             lambda r: (
                 r.url.path.endswith("/docketentries")
                 or r.url.path.endswith("/parties")
-                or r.url.path == "/courts/cms/docketentrydocumentaccess"
+                or r.url.path == "/courts/cms/docketentrydocumentsaccess"
             ),
             lambda r: httpx.Response(500, text="should not be called"),
         )
