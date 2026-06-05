@@ -28,6 +28,11 @@ Fixes:
   exact date and the authoring judge from the byline instead. Also fix the
   summary xpath, which was concatenating the summaries of all following
   cases. #1992
+- `ca2_p` and `ca2_u` were silently returning zero results since 2026-05-04:
+  the dtSearch results page now wraps the Caption value in an anchor instead
+  of plain text, so every row was skipped as incomplete. The label parser now
+  falls back to the anchor's text when the label has no plain-text value.
+  Oral arguments (`ca2`) share the parser but were unaffected. #1991
 
 ## 3.0.22 - 2026-06-04
 
