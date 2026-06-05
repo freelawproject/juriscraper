@@ -21,6 +21,13 @@ Changes:
 -
 
 Fixes:
+- `texbizct` was crashing on every run: the site's WAF blocks the per-document
+  HEAD requests that were used to approximate `date_filed` from the
+  `Last-Modified` header. The source now publishes a byline per opinion
+  ("Whitehill, J. | June 3, 2026"), so drop the HEAD requests and parse the
+  exact date and the authoring judge from the byline instead. Also fix the
+  summary xpath, which was concatenating the summaries of all following
+  cases. #1992
 - `ca2_p` and `ca2_u` were silently returning zero results since 2026-05-04:
   the dtSearch results page now wraps the Caption value in an anchor instead
   of plain text, so every row was skipped as incomplete. The label parser now
