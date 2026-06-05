@@ -3,13 +3,23 @@
 # Author: Luis Manzur
 # History:
 #  - 2025-07-29: Created by Luis Manzur
+#  - 2026-06-05: Parse judge and date from the byline; the source now
+#    publishes them. #1992
 import re
-from datetime import date, timedelta
 from urllib.parse import urljoin
 
 from dateutil import parser
 
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+logger = make_default_logger()
+
+# e.g. "Whitehill, J. | June 3, 2026"; the source has typos like
+# "Stagner, J," and "January 26. 2026", so be lenient about punctuation
+byline_regex = re.compile(
+    r"(?P<judge>.*?)[,.]?\s*J[.,]?\s*\|\s*(?P<date>[A-Za-z]+ \d{1,2}[.,]? \d{4})"
+)
 
 
 class Site(OpinionSiteLinear):
@@ -26,8 +36,11 @@ class Site(OpinionSiteLinear):
         :return None
         """
 
-        links = self.html.xpath('//div[@class="panel-content"]//a')
-        for index, link in enumerate(links):
+        # The example saved in 2025 had the whole panel repeated 7 times;
+        # track seen URLs in case the source ever duplicates content again
+        seen_urls = set()
+        links = self.html.xpath('//div[@class="panel-content"]//h2/a')
+        for link in links:
             title = link.get("title")
             short_title = link.text_content()
 
@@ -44,20 +57,38 @@ class Site(OpinionSiteLinear):
                     name, citation = short_title, ""
 
             url = urljoin(self.url, link.get("href"))
+            if url in seen_urls:
+                continue
+            seen_urls.add(url)
 
-            # The source doesn't publish dates, and HEAD requests for the
-            # documents' Last-Modified header may be blocked by the site's
-            # WAF. Assign a mid-year date offset by the row index so cases
-            # keep the source ordering when sorted by date; this prevents
-            # a dup checker false positive in CL. `extract_from_text` will
-            # get the exact date from the document. #1992
-            year = 2025 if self.test_mode_enabled() else date.today().year
-            case_date = date(year, 7, 1) - timedelta(days=index)
+            # A byline paragraph follows each opinion's h2 heading, e.g.
+            # "Whitehill, J. | June 3, 2026" #1992
+            judge, case_date = "", ""
+            date_filed_is_approximate = False
+            byline = link.xpath("../following-sibling::*[1][self::p]")
+            byline_text = byline[0].text_content().strip() if byline else ""
+            if match := byline_regex.search(byline_text):
+                judge = match.group("judge")
+                case_date = match.group("date")
+            else:
+                # `extract_from_text` will get the exact date from the
+                # document
+                logger.warning(
+                    "texbizct: no judge/date byline for %s; got %r",
+                    url,
+                    byline_text,
+                )
+                # Use a mid-year date on the citation's year; if there is
+                # no citation either, dateutil defaults to the current year
+                year_match = re.search(r"\d{4}", citation)
+                year = year_match.group(0) if year_match else ""
+                case_date = f"July 1, {year}".strip(" ,")
+                date_filed_is_approximate = True
 
             raw_docket = title.split()[0]
             docket = raw_docket.strip(",").replace("--", "-")
 
-            summary = link.xpath("../following-sibling::ul/li/text()")
+            summary = link.xpath("../following-sibling::ul[1]/li/text()")
             summary = " ".join(summary)
 
             self.cases.append(
@@ -66,8 +97,9 @@ class Site(OpinionSiteLinear):
                     "name": name.split("(", 1)[0].strip(),
                     "citation": citation.split("(", 1)[0].strip(),
                     "url": url,
-                    "date": case_date.strftime("%Y-%m-%d"),
-                    "date_filed_is_approximate": True,
+                    "date": case_date,
+                    "date_filed_is_approximate": date_filed_is_approximate,
+                    "judge": judge,
                     "summary": summary,
                 }
             )

@@ -21,11 +21,13 @@ Changes:
 -
 
 Fixes:
-- `texbizct` was crashing on every run because the site's WAF may block the
-  per-document HEAD requests used to approximate `date_filed` from the
-  `Last-Modified` header. Drop the HEAD requests entirely and assign
-  approximate mid-year dates offset by row index to keep the source ordering;
-  `extract_from_text` recovers the exact date from the document. #1992
+- `texbizct` was crashing on every run: the site's WAF blocks the per-document
+  HEAD requests that were used to approximate `date_filed` from the
+  `Last-Modified` header. The source now publishes a byline per opinion
+  ("Whitehill, J. | June 3, 2026"), so drop the HEAD requests and parse the
+  exact date and the authoring judge from the byline instead. Also fix the
+  summary xpath, which was concatenating the summaries of all following
+  cases. #1992
 
 ## 3.0.22 - 2026-06-04
 
