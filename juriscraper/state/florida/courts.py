@@ -105,6 +105,7 @@ class FloridaCourtsParser(LegacyParser[list[FloridaCourt]]):
     """
 
     endpoint: ClassVar[str] = "/courts"
+    params: ClassVar[dict[str, str]] = {"fields": "*,locations(*)"}
 
     def _parse(self, i: str) -> list[FloridaCourt]:
         results = FloridaPaginatedResults[FloridaCourt].model_validate_json(i)

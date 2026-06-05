@@ -72,7 +72,7 @@ class FloridaDocumentAccessParser(
     :cvar endpoint: The API endpoint for fetching a document's data.
     """
 
-    endpoint: ClassVar[str] = "/courts/cms/docketentrydocumentaccess"
+    endpoint: ClassVar[str] = "/courts/cms/docketentrydocumentsaccess"
 
     @override
     def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaDocument]:

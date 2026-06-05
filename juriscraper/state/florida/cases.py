@@ -84,14 +84,14 @@ def florida_docket_type_validator(i: str) -> DocketType:
         dash-separated parts or if the type is not in the map.
     """
     parts = [p.strip().lower() for p in i.split(" - ")]
-    if len(parts) != 3:
+    if len(parts) < 3:
         raise PydanticCustomError(
             "florida_docket_type",
             "Invalid Florida docket type format: {dt}",
             {"dt": i},
         )
 
-    _case_category, case_type, _case_sub_type = parts
+    _case_category, case_type, _case_sub_type = parts[:3]
 
     if case_type not in FLORIDA_DOCKET_TYPE_MAP:
         raise PydanticCustomError(
@@ -119,10 +119,23 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
         return FloridaCourtID.CIRCUIT
     if court_name.startswith("county court"):
         return FloridaCourtID.COUNTY
-    if court_name == "administrative agency":
-        return FloridaCourtID.ADMINISTRATIVE_AGENCY
-    if court_name == "office of the judges of compensation claims":
-        return FloridaCourtID.COMPENSATION_CLAIMS
+    match court_name:
+        case "administrative agency":
+            return FloridaCourtID.ADMINISTRATIVE_AGENCY
+        case "office of the judges of compensation claims":
+            return FloridaCourtID.COMPENSATION_CLAIMS
+        case "1st district court of appeal":
+            return FloridaCourtID.FIRST_COA
+        case "2nd district court of appeal":
+            return FloridaCourtID.SECOND_COA
+        case "3rd district court of appeal":
+            return FloridaCourtID.THIRD_COA
+        case "4th district court of appeal":
+            return FloridaCourtID.FOURTH_COA
+        case "5th district court of appeal":
+            return FloridaCourtID.FIFTH_COA
+        case "6th district court of appeal":
+            return FloridaCourtID.SIXTH_COA
     raise PydanticCustomError(
         "florida_court_name",
         "Unrecognized Florida court name: {cn}",
@@ -273,7 +286,8 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
         validation_alias=AliasPath("caseHeader", "panelFlag"), default=None
     )
     originating_cases: list[FloridaOriginatingCase] = Field(
-        validation_alias=AliasPath("caseHeader", "originatingCourtCases")
+        validation_alias=AliasPath("caseHeader", "originatingCourtCases"),
+        default=[],
     )
     transfers: list[DocketTransfer] = []
     entries: list[FloridaDocketEntry] = []

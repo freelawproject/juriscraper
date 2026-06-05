@@ -171,7 +171,8 @@ class FloridaScraper:
         courts_parser = FloridaCourtsParser(court_id="fl")
         raw = (
             await self.manager.get(
-                courts_parser.endpoint, params={"size": PAGE_SIZE}
+                courts_parser.endpoint,
+                params=courts_parser.params | {"size": PAGE_SIZE},
             )
         ).text
         court_results = courts_parser.parse(raw)
@@ -309,7 +310,7 @@ class FloridaScraper:
         court_external_id = court_metadata.court.external_identifier
         params = {
             "size": PAGE_SIZE,
-            "caseHeader.courtID": court_external_id,
+            "caseHeader.courtID": court_metadata.court.resource_id,
             "sort": "caseHeader.filedDate,asc",
         }
 
@@ -426,26 +427,29 @@ class FloridaScraper:
             chain.from_iterable(p.results for p in arguments_pages)
         )
 
-        court_external_id = court_data.court.external_identifier
-
         da_parser = FloridaDocumentAccessParser(court_id=court_id.value)
 
         for entry in output_case.entries:
-            document_pages = await self._fetch_paginated(
-                da_parser.endpoint,
-                da_parser,
-                params={
-                    "caseHeader.courtID": court_external_id,
-                    "docketEntryHeader.docketEntryUUID": str(
-                        entry.docket_entry_uuid
-                    ),
-                    "caseHeader.caseInstanceUUID": str(case_uuid),
-                },
-            )
+            if entry.document_count > 0:
+                print(entry.document_count)
+                document_pages = await self._fetch_paginated(
+                    da_parser.endpoint,
+                    da_parser,
+                    params={
+                        "sort": "documentName,asc",
+                        "caseHeader.courtID": str(
+                            court_data.court.resource_id
+                        ),
+                        "docketEntryHeader.docketEntryUUID": str(
+                            entry.docket_entry_uuid
+                        ),
+                        "caseHeader.caseInstanceUUID": str(case_uuid),
+                    },
+                )
 
-            entry.attachments = list(
-                chain.from_iterable(p.results for p in document_pages)
-            )
+                entry.attachments = list(
+                    chain.from_iterable(p.results for p in document_pages)
+                )
 
         return output_case
 

@@ -8,9 +8,9 @@ class ParticipantType(BaseModel):
 
 
 class InvolvementType(BaseModel):
-    id: int = Field(validation_alias="involvementTypeID")
-    value: str = Field(validation_alias="involvementTypeValue")
-    comment: str = Field(validation_alias="involvementTypeComment")
+    id: int = Field(validation_alias="casePartyInvolvementTypeID")
+    value: str = Field(validation_alias="casePartyInvolvementTypeValue")
+    comment: str = Field(validation_alias="casePartyInvolvementTypeComment")
 
 
 class CasePartySubType(BaseModel):
