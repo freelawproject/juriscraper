@@ -260,13 +260,20 @@ class FloridaScraper:
         next_page: int | None = 0
         while next_page is not None:
             page_params["page"] = next_page
-            body = (await self.manager.get(endpoint, params=page_params)).text
-            r = parser.parse_full(body)
-            results.append(r)
-            if next_page + 1 < r.page.total_pages:
-                next_page += 1
+            try:
+                body = (
+                    await self.manager.get(endpoint, params=page_params)
+                ).text
+                r = parser.parse_full(body)
+                results.append(r)
+            except Exception:
+                logger.exception("Error occurred while fetching %s", endpoint)
+                break
             else:
-                next_page = None
+                if next_page + 1 < r.page.total_pages:
+                    next_page += 1
+                else:
+                    next_page = None
 
         totals = {r.page.total_elements for r in results}
         if len(totals) > 1:
@@ -364,12 +371,15 @@ class FloridaScraper:
                     >= response_page.page.total_pages
                 ):
                     break
-                response = await self.manager.get(
-                    cl_parser.endpoint,
-                    params=params
-                    | {"page": response_page.page.page_number + 1},
-                )
-                response_page = cl_parser.parse_full(response.text)
+                try:
+                    response = await self.manager.get(
+                        cl_parser.endpoint,
+                        params=params
+                        | {"page": response_page.page.page_number + 1},
+                    )
+                    response_page = cl_parser.parse_full(response.text)
+                except Exception:
+                    logger.exception("Error occured while enumerating cases")
 
     async def fetch_case_data(self, case: FloridaCase) -> FloridaCase:
         """Fetch unpopulated fields for a :class:`FloridaCase` object and return
@@ -431,7 +441,6 @@ class FloridaScraper:
 
         for entry in output_case.entries:
             if entry.document_count > 0:
-                print(entry.document_count)
                 document_pages = await self._fetch_paginated(
                     da_parser.endpoint,
                     da_parser,
