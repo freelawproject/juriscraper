@@ -1,6 +1,7 @@
 from typing import Annotated, Any, ClassVar
+from uuid import UUID
 
-from pydantic import UUID4, AliasPath, BeforeValidator, Field
+from pydantic import UUID4, AfterValidator, AliasPath, BeforeValidator, Field
 from pydantic_core import PydanticCustomError
 from typing_extensions import override
 
@@ -83,19 +84,22 @@ class FloridaPartyRepresentative(Representative):
     """
 
     party_uuid: UUID4 = Field(
-        validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID")
+        validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID"),
+        default=UUID(int=0),
     )
     name: str = Field(
         validation_alias=AliasPath(
             "attorneyPartyHeader", "partyActorInstance", "displayName"
-        )
+        ),
+        default="",
     )
     sort_name: str = Field(
         validation_alias=AliasPath(
             "attorneyPartyHeader", "partyActorInstance", "sortName"
-        )
+        ),
+        default="",
     )
-    primary_flag: bool = Field(validation_alias="primaryFlag")
+    primary_flag: bool = Field(validation_alias="primaryFlag", default=False)
 
 
 class FloridaParty(Party[FloridaPartyRepresentative]):
@@ -163,9 +167,10 @@ class FloridaParty(Party[FloridaPartyRepresentative]):
     )
     pro_se_flag: bool = Field(validation_alias="proSeFlag")
     order_by: int = Field(validation_alias="orderBy")
-    representatives: list[FloridaPartyRepresentative] = Field(
-        validation_alias="legalRepresentations", default=[]
-    )
+    representatives: Annotated[
+        list[FloridaPartyRepresentative],
+        AfterValidator(lambda rs: [r for r in rs if r.name and r.party_uuid]),
+    ] = Field(validation_alias="legalRepresentations", default=[])
     non_public_flag: bool = Field(validation_alias="nonPublicFlag")
     party_number: int = Field(validation_alias="partyNumber")
     involvement_type_id: int = Field(validation_alias="involvementTypeID")
