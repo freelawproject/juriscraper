@@ -689,7 +689,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
         async with _make_scraper(recorder) as scraper:
             await scraper.courts
             case = self._parse_case(CASE_UUID, "4D2026-0606")
-            populated = await scraper.fetch_case_data(case)
+            populated = await scraper.fetch_case_data(str(case.case_uuid), case.court_id)
 
         # Returned object is a populated copy of the case we passed in.
         self.assertIsInstance(populated, FloridaCase)
@@ -724,7 +724,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
             )
             case.court_id = "flunknown"
             with self.assertRaises(ValueError):
-                await scraper.fetch_case_data(case)
+                await scraper.fetch_case_data(str(case.case_uuid), case.court_id)
 
 
 class BackfillTest(unittest.IsolatedAsyncioTestCase):

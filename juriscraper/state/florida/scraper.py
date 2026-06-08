@@ -381,9 +381,9 @@ class FloridaScraper:
                 except Exception:
                     logger.exception("Error occured while enumerating cases")
 
-    async def fetch_case_data(self, case: FloridaCase) -> FloridaCase:
-        """Fetch unpopulated fields for a :class:`FloridaCase` object and return
-        a populated copy.
+    async def fetch_case_data(self, case_uuid: str, court_id: str) -> FloridaCase:
+        """Fetch unpopulated fields for a Florida case in a given court and return
+        a fully populated :class:`FloridaCase` object.
 
         Pulls the case detail endpoint plus paginated parties and docket
         entries. Also fetches the document access record for each docket entry
@@ -392,12 +392,11 @@ class FloridaScraper:
         Returns:
             A populated :class:`FloridaCase` object
         """
-        court_id = FloridaCourtID(case.court_id)
+        court_id = FloridaCourtID(court_id)
         court_data = (await self.courts).get(court_id, None)
         if court_data is None:
-            raise ValueError(f"{case.court_id} is not a valid court ID.")
+            raise ValueError(f"{court_id} is not a valid court ID.")
         court_uuid = court_data.court.resource_id
-        case_uuid = case.case_uuid
 
         ci_parser = FloridaCaseInfoParser(court_id=court_id.value)
         de_parser = FloridaDocketEntryListParser(court_id=court_id.value)
@@ -496,5 +495,5 @@ class FloridaScraper:
             )
             async for case in self.enumerate_cases(court_id, start, end):
                 if full_scrape:
-                    case = await self.fetch_case_data(case)
+                    case = await self.fetch_case_data(str(case.case_uuid), case.court_id)
                 yield case
