@@ -21,6 +21,11 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.23 - 2026-06-08
+
+Fixes:
 - `texbizct` was crashing on every run: the site's WAF blocks the per-document
   HEAD requests that were used to approximate `date_filed` from the
   `Last-Modified` header. The source now publishes a byline per opinion
