@@ -381,7 +381,9 @@ class FloridaScraper:
                 except Exception:
                     logger.exception("Error occured while enumerating cases")
 
-    async def fetch_case_data(self, case_uuid: str, court_id: str) -> FloridaCase:
+    async def fetch_case_data(
+        self, case_uuid: str, court_id: str
+    ) -> FloridaCase:
         """Fetch unpopulated fields for a Florida case in a given court and return
         a fully populated :class:`FloridaCase` object.
 
@@ -495,5 +497,7 @@ class FloridaScraper:
             )
             async for case in self.enumerate_cases(court_id, start, end):
                 if full_scrape:
-                    case = await self.fetch_case_data(str(case.case_uuid), case.court_id)
+                    case = await self.fetch_case_data(
+                        str(case.case_uuid), case.court_id
+                    )
                 yield case
