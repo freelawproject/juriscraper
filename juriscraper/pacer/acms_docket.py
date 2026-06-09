@@ -4,7 +4,7 @@ import re
 import sys
 from collections import OrderedDict
 
-from requests import Response
+from httpx import Response
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -36,7 +36,7 @@ class ACMSDocketReport(AppellateDocketReport):
         """
         self._acms_json = json.loads(text)
 
-    def query(self, case_id: str):
+    async def query(self, case_id: str):
         """
         Queries the court API for case and docket details for a given case ID.
 
@@ -46,10 +46,10 @@ class ACMSDocketReport(AppellateDocketReport):
             "session attribute of AppellateDocketReport cannot be None."
         )
         # Fetch Case Details
-        case_data = self.api_client.get_case_details(case_id)
+        case_data = await self.api_client.get_case_details(case_id)
 
         # Fetch Docket Entry Details
-        entry_details = self.api_client.get_docket_entries(case_id)
+        entry_details = await self.api_client.get_docket_entries(case_id)
 
         # Combine and store results
         self._acms_json = {
@@ -57,7 +57,7 @@ class ACMSDocketReport(AppellateDocketReport):
             "docketInfo": entry_details,
         }
 
-    def download_pdf(
+    async def download_pdf(
         self, entry_id: str, doc_id: str
     ) -> tuple[Response | None, str]:
         """
@@ -78,7 +78,7 @@ class ACMSDocketReport(AppellateDocketReport):
                  empty string.
         """
         # Fetch all documents for given entry
-        attachment_list = self.api_client.get_attachments(
+        attachment_list = await self.api_client.get_attachments(
             entry_id, False, False
         )
         if not attachment_list:
@@ -106,7 +106,7 @@ class ACMSDocketReport(AppellateDocketReport):
             if not doc_data:
                 return None, f"Document ID '{doc_id}' not found in this entry."
 
-        r = self.api_client.download_pdf(
+        r = await self.api_client.download_pdf(
             doc_data["docketDocumentDetailsId"],
             doc_data["pageCount"],
             doc_data["documentUrl"],
