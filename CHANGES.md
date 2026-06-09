@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- `dc` now collects the authoring judge, disposition, and per curiam status #1134
 
 Fixes:
 - `dc` now uses a browser user agent. It  was failing with 403 Forbidden #1996

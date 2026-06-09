@@ -43,12 +43,23 @@ class Site(OpinionSiteLinear):
             url = row.xpath("./td[1]/a/@href")[0].strip()
             name = row.xpath("./td[2]/text()")[0].strip()
             date = row.xpath("./td[3]/text()")[0].strip()
+            disposition = "".join(row.xpath("./td[4]//text()")).strip()
+            judge = "".join(row.xpath("./td[5]//text()")).strip()
+
+            # "Per Curiam" appears in the Judge column instead of an author
+            per_curiam = "per curiam" in judge.lower()
+            if per_curiam:
+                judge = ""
+
             self.cases.append(
                 {
                     "name": name,
                     "date": date,
                     "docket": docket,
                     "url": url,
+                    "disposition": disposition,
+                    "judge": judge,
+                    "per_curiam": per_curiam,
                 }
             )
 
