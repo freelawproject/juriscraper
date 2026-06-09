@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- `dc` now uses a browser user agent. It  was failing with 403 Forbidden #1996
 
 ## 3.0.23 - 2026-06-08
 
