@@ -18,9 +18,10 @@ Features:
 -
 
 Changes:
--
+- `dc` now collects the authoring judge, disposition, and per curiam status #1134
 
 Fixes:
+- `dc` now uses a browser user agent. It was failing with 403 Forbidden #1996
 - `bia`: assign a descending approximate `date_filed` (one day apart per row, starting from the middle of the year) so records preserve the source's date-descending order. Previously every record shared the same approximate date, so CL ordered them by case name and its DupChecker could stop before reaching newer opinions. #1934
 
 ## 3.0.23 - 2026-06-08

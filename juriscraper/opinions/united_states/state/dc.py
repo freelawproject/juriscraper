@@ -26,6 +26,12 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
+        self.needs_special_headers = True
+        self.request["headers"]["User-Agent"] = (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        )
+
     def _process_html(self):
         """Process the html and extract out the opinions
 
@@ -37,12 +43,23 @@ class Site(OpinionSiteLinear):
             url = row.xpath("./td[1]/a/@href")[0].strip()
             name = row.xpath("./td[2]/text()")[0].strip()
             date = row.xpath("./td[3]/text()")[0].strip()
+            disposition = "".join(row.xpath("./td[4]//text()")).strip()
+            judge = "".join(row.xpath("./td[5]//text()")).strip()
+
+            # "Per Curiam" appears in the Judge column instead of an author
+            per_curiam = "per curiam" in judge.lower()
+            if per_curiam:
+                judge = ""
+
             self.cases.append(
                 {
                     "name": name,
                     "date": date,
                     "docket": docket,
                     "url": url,
+                    "disposition": disposition,
+                    "judge": judge,
+                    "per_curiam": per_curiam,
                 }
             )
 
