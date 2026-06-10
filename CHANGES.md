@@ -19,10 +19,27 @@ Features:
 - Add Florida scraper
 
 Changes:
--
+- `dc` now collects the authoring judge, disposition, and per curiam status #1134
 
 Fixes:
--
+- `dc` now uses a browser user agent. It was failing with 403 Forbidden #1996
+- `bia`: assign a descending approximate `date_filed` (one day apart per row, starting from the middle of the year) so records preserve the source's date-descending order. Previously every record shared the same approximate date, so CL ordered them by case name and its DupChecker could stop before reaching newer opinions. #1934
+
+## 3.0.23 - 2026-06-08
+
+Fixes:
+- `texbizct` was crashing on every run: the site's WAF blocks the per-document
+  HEAD requests that were used to approximate `date_filed` from the
+  `Last-Modified` header. The source now publishes a byline per opinion
+  ("Whitehill, J. | June 3, 2026"), so drop the HEAD requests and parse the
+  exact date and the authoring judge from the byline instead. Also fix the
+  summary xpath, which was concatenating the summaries of all following
+  cases. #1992
+- `ca2_p` and `ca2_u` were silently returning zero results since 2026-05-04:
+  the dtSearch results page now wraps the Caption value in an anchor instead
+  of plain text, so every row was skipped as incomplete. The label parser now
+  falls back to the anchor's text when the label has no plain-text value.
+  Oral arguments (`ca2`) share the parser but were unaffected. #1991
 
 ## 3.0.22 - 2026-06-04
 
