@@ -18,6 +18,14 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.24 - 2026-06-10
+
+Changes:
 - `dc` now collects the authoring judge, disposition, and per curiam status #1134
 
 Fixes:
