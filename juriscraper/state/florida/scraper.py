@@ -270,10 +270,11 @@ class FloridaScraper:
                 logger.exception("Error occurred while fetching %s", endpoint)
                 break
             else:
-                if next_page + 1 < r.page.total_pages:
-                    next_page += 1
-                else:
-                    next_page = None
+                next_page = (
+                    next_page + 1
+                    if next_page + 1 < r.page.total_pages
+                    else None
+                )
 
         totals = {r.page.total_elements for r in results}
         if len(totals) > 1:
