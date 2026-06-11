@@ -35,6 +35,8 @@ class FloridaCourtID(Enum):
     """Florida administrative agencies (used as a value in the originating court info)."""
     COMPENSATION_CLAIMS = "flcomp"
     """Florida Office of the Judges of Compensation Claims"""
+    US_COA = "uscoa"
+    """United States Court of Appeals"""
     UNKNOWN = "flunknown"
     """Unknown Florida court"""
 

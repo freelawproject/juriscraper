@@ -513,14 +513,29 @@ class FloridaScraper:
         if court_ids is None:
             court_ids = list((await self.courts or {}).keys())
 
+        timespan = end - start
+
         for court_id in court_ids:
             logger.info(
                 "Scraping Florida court %s for %s..%s", court_id, start, end
             )
+            i = 0
             async for case in self.enumerate_cases(court_id, start, end):
                 if full_scrape:
                     case = await self.fetch_case_data(
                         str(case.case_uuid), case.court_id
+                    )
+                i += 1
+                if i % 100 == 0:
+                    d = case.date_filed
+                    logger.info(
+                        "Scraped %d cases from %s-%s for court %s. Last date_filed: %s (%.2f%% through date range).",
+                        i,
+                        start.isoformat(),
+                        end.isoformat(),
+                        court_id,
+                        d.isoformat(),
+                        (d - start) / timespan * 100,
                     )
                 yield case
 

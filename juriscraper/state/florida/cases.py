@@ -138,11 +138,14 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
             return FloridaCourtID.FIFTH_COA
         case "6th district court of appeal":
             return FloridaCourtID.SIXTH_COA
-    raise PydanticCustomError(
-        "florida_court_name",
-        "Unrecognized Florida court name: {cn}",
-        {"cn": i},
-    )
+        case "USCOA":
+            return FloridaCourtID.US_COA
+        case _:
+            raise PydanticCustomError(
+                "florida_court_name",
+                "Unrecognized Florida court name: {cn}",
+                {"cn": i},
+            )
 
 
 class FloridaOriginatingCase(BaseModel):
