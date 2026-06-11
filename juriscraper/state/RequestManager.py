@@ -320,6 +320,17 @@ class RequestManager(AsyncClient):
 
         Returns:
             The `httpx.Response` or `None` if an error occurred."""
+        if request.response.cancelled():
+            logger.warning("Request cancelled: %s", request.url)
+            return None
+        if request.response.done():
+            logger.info(
+                "Request intercepted and response set (%s).", request.url
+            )
+            exc = request.response.exception()
+            if exc:
+                return None
+            return request.response.result()
         response = None
         logger.info("Sending request: %s", request.url)
         try:
