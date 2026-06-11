@@ -445,3 +445,5 @@ class Retry(RequestHandler):
                 await asyncio.sleep(backoff)
                 backoff *= self.backoff_growth
                 await manager.enqueue_request(request)
+            else:
+                return
