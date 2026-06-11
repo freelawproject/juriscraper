@@ -284,18 +284,25 @@ class FloridaScraper:
         totals = {r.page.total_elements for r in results}
         if len(totals) > 1:
             logger.error(
-                f"Paginated fetch returned different totalElements across fetches ({totals})."
+                "Paginated fetch returned different totalElements across fetches (%s).",
+                totals,
             )
         if len(totals) == 0:
             logger.error(
-                f"Paginated fetch returned no totalElements for {parser.endpoint} with params={params}"
+                "Paginated fetch returned no totalElements for %s with params=%s",
+                parser.endpoint,
+                params,
             )
             return results
         total_elements = totals.pop()
         actual_total = sum(len(r.results) for r in results)
         if actual_total != total_elements:
             logger.error(
-                f"Actual number of elements returned ({actual_total}) does not match totalElements ({total_elements}) for {parser.endpoint} with params={params}"
+                "Actual number of elements returned (%s) does not match totalElements (%s) for %s with params=%s",
+                actual_total,
+                total_elements,
+                parser.endpoint,
+                params,
             )
 
         return results
@@ -390,7 +397,7 @@ class FloridaScraper:
                     )
                     response_page = cl_parser.parse_full(response.text)
                 except Exception:
-                    logger.exception("Error occured while enumerating cases")
+                    logger.exception("Error occurred while enumerating cases")
 
     async def fetch_case_data(
         self, case_uuid: str, court_id: str
@@ -508,7 +515,7 @@ class FloridaScraper:
 
         for court_id in court_ids:
             logger.info(
-                f"Scraping Florida court {court_id} for {start}..{end}"
+                "Scraping Florida court %s for %s..%s", court_id, start, end
             )
             async for case in self.enumerate_cases(court_id, start, end):
                 if full_scrape:

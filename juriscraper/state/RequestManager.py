@@ -425,7 +425,10 @@ class Retry(RequestHandler):
                     case HTTPStatusError():
                         if e.response.status_code not in self.retry_codes:
                             logger.error(
-                                f"Received {e.response.status_code} from {e.request.url}\nResponse: {e.response.text}"
+                                "Received %s from %s\nResponse: %s",
+                                e.response.status_code,
+                                e.request.url,
+                                e.response.text,
                             )
                             return
                     case TimeoutException():
@@ -434,7 +437,8 @@ class Retry(RequestHandler):
                         logger.error("Network error from %s", e.request.url)
                     case _:
                         logger.exception(
-                            f"Unexpected error while processing request {request.url}",
+                            "Unexpected error while processing request %s",
+                            request.url,
                         )
                         return
                 remaining_tries -= 1
