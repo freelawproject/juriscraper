@@ -228,10 +228,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
         validation_alias=AliasPath("caseHeader", "caseTitle")
     )
     case_name_full: Annotated[str, AfterValidator(clean_string)] = Field(
-        validation_alias=AliasPath("caseHeader", "caseTitle")
-    )
-    case_caption: Annotated[str, AfterValidator(clean_string)] = Field(
-        validation_alias=AliasPath("caseHeader", "caseCaption"), default=""
+        validation_alias=AliasPath("caseHeader", "caseCaption"), default_factory=lambda d: d["case_name"]
     )
     closed_flag: bool = Field(
         validation_alias=AliasPath("caseHeader", "closedFlag")

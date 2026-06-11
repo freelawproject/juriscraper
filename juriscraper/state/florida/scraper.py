@@ -31,6 +31,7 @@ from itertools import chain
 from typing import TypeVar
 
 from pydantic import BaseModel, RootModel
+import pydantic_core
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
@@ -132,7 +133,11 @@ class FloridaScraper:
         self.manager: RequestManager = RequestManager(
             handlers=[
                 RateLimit(rps=rps or 2.5),
-                Retry(max_retries=max_retries or 3),
+                Retry(
+                    max_retries=max_retries or 3,
+                    backoff=2.0,
+                    backoff_growth=2.0,
+                ),
             ]
             + (handlers or []),
             base_url=FLORIDA_API_BASE,
