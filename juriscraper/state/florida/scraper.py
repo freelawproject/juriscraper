@@ -556,9 +556,9 @@ async def get_cases(
 def _main():
     """Run the scraper on a given date range"""
 
-    from datetime import date
     import argparse
     import sys
+    from datetime import date
 
     parser = argparse.ArgumentParser(
         prog="Florida Scraper",
