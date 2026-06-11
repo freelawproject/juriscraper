@@ -122,6 +122,8 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
     match court_name:
         case "administrative agency":
             return FloridaCourtID.ADMINISTRATIVE_AGENCY
+        case "state agency":
+            return FloridaCourtID.ADMINISTRATIVE_AGENCY
         case "office of the judges of compensation claims":
             return FloridaCourtID.COMPENSATION_CLAIMS
         case "1st district court of appeal":
@@ -228,7 +230,8 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
         validation_alias=AliasPath("caseHeader", "caseTitle")
     )
     case_name_full: Annotated[str, AfterValidator(clean_string)] = Field(
-        validation_alias=AliasPath("caseHeader", "caseCaption"), default_factory=lambda d: d["case_name"]
+        validation_alias=AliasPath("caseHeader", "caseCaption"),
+        default_factory=lambda d: d["case_name"],
     )
     closed_flag: bool = Field(
         validation_alias=AliasPath("caseHeader", "closedFlag")

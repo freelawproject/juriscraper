@@ -16,8 +16,10 @@ from httpx import (
     Auth,
     Cookies,
     HTTPStatusError,
+    NetworkError,
     Request,
     Response,
+    TimeoutException,
 )
 from httpx._client import UseClientDefault
 
@@ -418,20 +420,24 @@ class Retry(RequestHandler):
         while remaining_tries > 0:
             try:
                 _ = await request.response
-            except HTTPStatusError as e:
-                if e.response.status_code not in self.retry_codes:
-                    logger.error(
-                        f"Received {e.response.status_code} from {e.request.url}\nResponse: {e.response.text}"
-                    )
-                    return
+            except Exception as e:
+                match e:
+                    case HTTPStatusError():
+                        if e.response.status_code not in self.retry_codes:
+                            logger.error(
+                                f"Received {e.response.status_code} from {e.request.url}\nResponse: {e.response.text}"
+                            )
+                            return
+                    case TimeoutException():
+                        logger.error("Read timeout from %s", e.request.url)
+                    case NetworkError():
+                        logger.error("Network error from %s", e.request.url)
+                    case _:
+                        logger.exception(
+                            f"Unexpected error while processing request {request.url}",
+                        )
+                        return
                 remaining_tries -= 1
                 await asyncio.sleep(backoff)
                 backoff *= self.backoff_growth
                 await manager.enqueue_request(request)
-            except Exception as e:
-                logger.error(
-                    f"Unexpected error while processing request {request.url}: {e}",
-                )
-                return
-            else:
-                return

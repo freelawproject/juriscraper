@@ -30,8 +30,8 @@ from datetime import date, datetime, timedelta
 from itertools import chain
 from typing import TypeVar
 
-from pydantic import BaseModel, RootModel
 import pydantic_core
+from pydantic import BaseModel, RootModel
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
@@ -286,6 +286,11 @@ class FloridaScraper:
             logger.error(
                 f"Paginated fetch returned different totalElements across fetches ({totals})."
             )
+        if len(totals) == 0:
+            logger.error(
+                f"Paginated fetch returned no totalElements for {parser.endpoint} with params={params}"
+            )
+            return results
         total_elements = totals.pop()
         actual_total = sum(len(r.results) for r in results)
         if actual_total != total_elements:
@@ -467,6 +472,10 @@ class FloridaScraper:
                     chain.from_iterable(p.results for p in document_pages)
                 )
 
+                # We have to compute this here instead of in the parser because it requires the court UUID, which the parser can't access.
+                for attachment in entry.attachments:
+                    attachment.url = f"{FLORIDA_API_BASE}/courts/{court_uuid}/cms/case/{case_uuid}/docketentrydocuments/{attachment.document_link_uuid}"
+
         return output_case
 
     async def backfill(
@@ -507,3 +516,55 @@ class FloridaScraper:
                         str(case.case_uuid), case.court_id
                     )
                 yield case
+
+
+async def get_cases(
+    start: date, end: date
+) -> tuple[dict[FloridaCourtID, CourtMetadata], list[FloridaCase]]:
+    """Run the scraper on a given date range"""
+    scraper = FloridaScraper(rps=2.5)
+    cases = []
+
+    async for case in scraper.backfill(start, end):
+        cases.append(case)
+
+    return (await scraper.courts), cases
+
+
+def _main():
+    """Run the scraper on a given date range"""
+
+    from datetime import date
+    import argparse
+    import sys
+
+    parser = argparse.ArgumentParser(
+        prog="Florida Scraper",
+        description="Scrape the Florida Supreme Court website for cases in a given date range.",
+    )
+
+    parser.add_argument("--start", type=date.fromisoformat, required=True)
+    parser.add_argument(
+        "--end", default=date.today().isoformat(), type=date.fromisoformat
+    )
+    parser.add_argument("--output")
+
+    args = parser.parse_args(sys.argv[1:])
+
+    courts, cases = asyncio.run(get_cases(args.start, args.end))
+
+    if args.output:
+        with open(args.output, "wb") as f:
+            f.write(
+                pydantic_core.to_json(
+                    {
+                        "courts": courts,
+                        "cases": cases,
+                    },
+                    indent=4,
+                )
+            )
+
+
+if __name__ == "__main__":
+    _main()
