@@ -158,7 +158,7 @@ class RequestManager(AsyncClient):
             "Cache-Control": "no-cache, max-age=0, must-revalidate",
             "Pragma": "no-cache",
         }
-        logger.info("Creating request manager.")
+        logger.debug("Creating request manager.")
         headers = httpx.Headers(headers)
         ua_header = headers.setdefault("User-Agent", USER_AGENT)
         if "Juriscraper" not in ua_header:
@@ -188,9 +188,9 @@ class RequestManager(AsyncClient):
         Args:
             queue: The queue to pull requests from. Should be `self._queue`"""
         while True:
-            logger.info("Waiting for request.")
+            logger.debug("Waiting for request.")
             request = await queue.get()
-            logger.info(
+            logger.debug(
                 "Got request: %s. Waiting for before_send to complete.",
                 request.url,
             )
@@ -200,12 +200,12 @@ class RequestManager(AsyncClient):
                     for handler in self.handlers
                 ]
             )
-            logger.info(
+            logger.debug(
                 "Handlers finished. Sending request: %s",
                 request.url,
             )
             _ = await self.send(request)
-            logger.info(
+            logger.debug(
                 "Request sent: %s. Marking task as done.",
                 request.url,
             )
@@ -220,7 +220,7 @@ class RequestManager(AsyncClient):
     async def _ensure_loop(self) -> None:
         """Start the request loop if it's not already running."""
         if not self._loop_task or self._loop_task.done():
-            logger.info("Request loop not running. Starting.")
+            logger.debug("Request loop not running. Starting.")
             self._loop_task = asyncio.create_task(self._loop(self._queue))
 
     async def enqueue_request(self, request: ScheduledRequest) -> None:
@@ -234,7 +234,7 @@ class RequestManager(AsyncClient):
         await self._ensure_loop()
         if request.response.done():
             request.response = asyncio.Future()
-        logger.info(
+        logger.debug(
             "Queueing request: %s",
             request.url,
         )
@@ -278,7 +278,7 @@ class RequestManager(AsyncClient):
 
         Return:
             The response to the dispatched request after handler interference."""
-        logger.info("Requesting %s %s", method, url)
+        logger.debug("Requesting %s %s", method, url)
         request = self.build_request(
             method,
             url,
@@ -295,15 +295,15 @@ class RequestManager(AsyncClient):
         listen_tasks = {
             asyncio.create_task(h.listen(self, request)) for h in self.handlers
         }
-        logger.info("Handlers listening: %s", request.url)
+        logger.debug("Handlers listening: %s", request.url)
         _ = await self.enqueue_request(request)
 
-        logger.info(
+        logger.debug(
             "Request %s queued. Waiting for listen handlers to finish.",
             request.url,
         )
         _ = await asyncio.gather(*listen_tasks)
-        logger.info(
+        logger.debug(
             "Request queued and handlers finished. Waiting for response: %s",
             request.url,
         )
@@ -324,7 +324,7 @@ class RequestManager(AsyncClient):
             logger.warning("Request cancelled: %s", request.url)
             return None
         if request.response.done():
-            logger.info(
+            logger.debug(
                 "Request intercepted and response set (%s).", request.url
             )
             exc = request.response.exception()
@@ -332,7 +332,7 @@ class RequestManager(AsyncClient):
                 return None
             return request.response.result()
         response = None
-        logger.info("Sending request: %s", request.url)
+        logger.debug("Sending request: %s", request.url)
         try:
             response = await super().send(
                 request,
@@ -343,7 +343,7 @@ class RequestManager(AsyncClient):
             logger.warning("Request failed: %s (%s)", request.url, str(e))
             request.response.set_exception(e)
         else:
-            logger.info("Request succeeded: %s", request.url)
+            logger.debug("Request succeeded: %s", request.url)
             request.response.set_result(response)
 
         return response

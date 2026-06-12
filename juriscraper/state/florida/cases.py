@@ -138,7 +138,7 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
             return FloridaCourtID.FIFTH_COA
         case "6th district court of appeal":
             return FloridaCourtID.SIXTH_COA
-        case "USCOA":
+        case "uscoa":
             return FloridaCourtID.US_COA
         case _:
             raise PydanticCustomError(
