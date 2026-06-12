@@ -37,12 +37,12 @@ from juriscraper.state.florida.parties import FloridaParty
 
 # Values retrieved 2026-03-05
 FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
-    "notice of appeal": DocketType.UNKNOWN,
-    "notice to invoke": DocketType.UNKNOWN,
+    "notice of appeal": DocketType.NOTICE,
+    "notice to invoke": DocketType.NOTICE,
     "death penalty appeal": DocketType.DEATH_APPEAL,
-    "death penalty petition": DocketType.UNKNOWN,
-    "death penalty writ": DocketType.UNKNOWN,
-    "petition for review": DocketType.UNKNOWN,
+    "death penalty petition": DocketType.PETITION,
+    "death penalty writ": DocketType.ORDER,
+    "petition for review": DocketType.PETITION,
     "administrative": DocketType.ADMINISTRATIVE,
     "circuit civil": DocketType.CIVIL,
     "circuit criminal": DocketType.CRIMINAL,
@@ -55,7 +55,7 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
     "county criminal misdemeanor": DocketType.CRIMINAL,
     "county criminal traffic": DocketType.CRIMINAL,
     "county family": DocketType.FAMILY,
-    "county small claims": DocketType.UNKNOWN,
+    "county small claims": DocketType.CIVIL,
     "workers compensation": DocketType.UNKNOWN,
     "advisory opinion": DocketType.UNKNOWN,
     "county misdemeanor": DocketType.CRIMINAL,
@@ -63,7 +63,7 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
     "florida board of bar examiners": DocketType.UNKNOWN,
     "judicial qualifications commission (jqc)": DocketType.UNKNOWN,
     "rules": DocketType.UNKNOWN,
-    "writ": DocketType.UNKNOWN,
+    "writ": DocketType.ORDER,
 }
 
 
@@ -195,13 +195,13 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar case_uuid: The UUID of this case for use in API requests.
     :ivar docket_number: The case number assigned by the court.
     :ivar case_name: The case title, cleaned and harmonized.
-    :ivar case_name_full: The case title with minimal cleaning.
-    :ivar case_caption: The case caption, if available.
+    :ivar case_name_full: The case title derived from "caseCaption".
     :ivar closed_flag: Whether this case is closed.
     :ivar class_group_type: The case class group type name.
     :ivar class_group_type_id: Florida internal integer ID of the case class
         group type.
     :ivar docket_type: The DocketType derived from the case classification.
+    :ivar docket_type_raw: The docket type string as it appears in the "caseHeader.caseClassification" field.
     :ivar classification_id: Florida internal integer ID of the case
         classification.
     :ivar court_id: Juriscraper court ID.
@@ -253,6 +253,10 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
             florida_docket_type_validator, json_schema_input_type=str
         ),
     ] = Field(validation_alias=AliasPath("caseHeader", "caseClassification"))
+    docket_type_raw: str = Field(
+        validation_alias=AliasPath("caseHeader", "caseClassification"),
+        default="",
+    )
     classification_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseClassificationID")
     )

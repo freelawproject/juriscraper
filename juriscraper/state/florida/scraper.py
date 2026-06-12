@@ -427,7 +427,7 @@ class FloridaScraper:
                     # Should be unreachable but who knows.
                     raise InsanityException(
                         "Single-day query for court %s on %s hit the %d-result cap."
-                        % (court_external_id, start, MAX_RESULTS)
+                        % (court_id, start, MAX_RESULTS)
                     )
 
             i = 0

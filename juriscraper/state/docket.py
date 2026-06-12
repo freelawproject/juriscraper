@@ -170,6 +170,12 @@ class DocketType(Enum):
     """Administrative cases"""
     DEATH_APPEAL = "death_appeal"
     """Death penalty appeal cases"""
+    NOTICE = "notice"
+    """Dockets which are just notices"""
+    ORDER = "order"
+    """Orders by the court (e.g. writs)"""
+    PETITION = "petition"
+    """Dockets which are petitions to the court"""
 
 
 _DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
