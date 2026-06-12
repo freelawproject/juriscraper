@@ -1,3 +1,4 @@
+from juriscraper.state.florida.arguments import FloridaCaseArgumentsParser
 from juriscraper.state.florida.cases import (
     FloridaCaseInfoParser,
     FloridaCaseListParser,
@@ -46,4 +47,10 @@ class FloridaParseTest(PacerParseTestCase):
         path_root = FLORIDA_ROOT / "documents"
         self.parse_files(
             path_root, "*.compare.json", FloridaDocumentAccessParser
+        )
+
+    def test_hearings(self):
+        path_root = FLORIDA_ROOT / "hearings"
+        self.parse_files(
+            path_root, "*.compare.json", FloridaCaseArgumentsParser
         )

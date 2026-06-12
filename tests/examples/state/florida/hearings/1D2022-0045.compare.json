@@ -1,0 +1,20 @@
+{
+    "_embedded": {
+        "results": [
+            {
+                "startDate": "2023-04-11T18:01:00.000+00:00",
+                "hearingType": "Oral Argument",
+                "hearingStatus": "Scheduled",
+                "event": {
+                    "panelFlag": true
+                }
+            }
+        ]
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
+}

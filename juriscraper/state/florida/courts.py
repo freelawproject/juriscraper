@@ -35,8 +35,21 @@ class FloridaCourtID(Enum):
     """Florida administrative agencies (used as a value in the originating court info)."""
     COMPENSATION_CLAIMS = "flcomp"
     """Florida Office of the Judges of Compensation Claims"""
+    US_COA = "uscoa"
+    """United States Court of Appeals"""
     UNKNOWN = "flunknown"
     """Unknown Florida court"""
+
+
+FLORIDA_COURT_EXTERNAL_ID_MAP: dict[str, FloridaCourtID] = {
+    "1": FloridaCourtID.SUPREME_COURT,
+    "2": FloridaCourtID.FIRST_COA,
+    "3": FloridaCourtID.SECOND_COA,
+    "4": FloridaCourtID.THIRD_COA,
+    "5": FloridaCourtID.FOURTH_COA,
+    "6": FloridaCourtID.FIFTH_COA,
+    "7": FloridaCourtID.SIXTH_COA,
+}
 
 
 class FloridaCourtLocation(BaseModel):
@@ -94,6 +107,7 @@ class FloridaCourtsParser(LegacyParser[list[FloridaCourt]]):
     """
 
     endpoint: ClassVar[str] = "/courts"
+    params: ClassVar[dict[str, str]] = {"fields": "*,locations(*)"}
 
     def _parse(self, i: str) -> list[FloridaCourt]:
         results = FloridaPaginatedResults[FloridaCourt].model_validate_json(i)
