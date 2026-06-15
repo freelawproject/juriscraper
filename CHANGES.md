@@ -21,6 +21,11 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.25 - 2026-06-15
+
+Fixes:
 - `ca2` update HTML parsers since the site changed again #2001
 
 ## 3.0.24 - 2026-06-10
