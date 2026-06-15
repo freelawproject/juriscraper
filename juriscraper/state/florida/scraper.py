@@ -31,7 +31,8 @@ from typing import Literal, TypeVar
 
 import httpx
 import pydantic_core
-from pydantic import BaseModel, RootModel
+from pydantic import BaseModel, RootModel, ValidationError
+from pydantic_core import PydanticCustomError
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
@@ -121,14 +122,14 @@ class PaginationFailed(Exception):
     def __init__(
         self,
         page: int,
-        cause: Literal["network"] | Literal["parsing"],
+        cause: Literal["network"] | Literal["parsing"] | Literal["unknown"],
         url: str,
         params: Mapping[str, PrimitiveData],
         exc: Exception | None = None,
     ) -> None:
         super().__init__(
-            "Paginated fetch of %s with params=%s failed on page %d: %s (%s)"
-            % (url, params, page, cause, exc)
+            "[%s] Paginated fetch of %s with params=%s failed on page %d: %r"
+            % (cause.upper(), url, params, page, exc)
         )
         self.cause: str = cause
         self.page: int = page
@@ -293,6 +294,7 @@ class FloridaScraper:
         page_params = {"size": PAGE_SIZE, **params}
         totals: set[int] = set()
         actual_total = 0
+        errors = 0
         total_pages = 1
 
         next_page: int = 0
@@ -312,33 +314,41 @@ class FloridaScraper:
                 yield PaginationFailed(
                     next_page, "network", endpoint, page_params, e
                 )
-            except Exception as e:
+                errors += 1
+            except (ValidationError, PydanticCustomError, ValueError) as e:
                 yield PaginationFailed(
                     next_page, "parsing", endpoint, page_params, e
                 )
+                errors += 1
+            except Exception as e:
+                yield PaginationFailed(
+                    next_page, "unknown", endpoint, page_params, e
+                )
+                errors += 1
             next_page += 1
 
         if len(totals) > 1:
             logger.error(
                 "Paginated fetch returned different totalElements across fetches (%s) for %s with params=%s.",
                 totals,
-                parser.endpoint,
+                endpoint,
                 params,
             )
-        if not totals:
+        if not totals and errors == 0:
             logger.error(
-                "Paginated fetch returned no totalElements for %s with params=%s",
-                parser.endpoint,
+                "Paginated fetch returned no pages for %s with params=%s",
+                endpoint,
                 params,
             )
             return
         total_elements = totals.pop()
-        if actual_total != total_elements:
+        # Assume every failed page was full to try and avoid noisy logs
+        if actual_total + errors * PAGE_SIZE != total_elements:
             logger.error(
                 "Actual number of elements returned (%s) does not match totalElements (%s) for %s with params=%s",
                 actual_total,
                 total_elements,
-                parser.endpoint,
+                endpoint,
                 params,
             )
 
@@ -559,17 +569,22 @@ class FloridaScraper:
 
                 if attachment_errors:
                     logger.error(
-                        "Failed to fetch document access records for docket entry %s: %s",
+                        "Failed to fetch document access records for docket entry %s: %r",
                         entry.docket_entry_uuid,
                         attachment_errors,
                     )
                     continue
 
-                # We have to compute this here instead of in the parser because it requires the court UUID, which the parser can't access.
-                for attachment in attachments:
-                    attachment.url = f"{FLORIDA_API_BASE}/courts/{court_uuid}/cms/case/{case_uuid}/docketentrydocuments/{attachment.document_link_uuid}"
+                # Sometimes Florida returns "attachments" which have no file we can access and return a 500 if we try to access them
+                entry.attachments = [
+                    attachment
+                    for attachment in attachments
+                    if attachment.file_size is not None
+                ]
 
-                entry.attachments = attachments
+                # We have to compute this here instead of in the parser because it requires the court UUID, which the parser can't access.
+                for attachment in entry.attachments:
+                    attachment.url = f"{FLORIDA_API_BASE}/courts/{court_uuid}/cms/case/{case_uuid}/docketentrydocuments/{attachment.document_link_uuid}"
 
         return output_case, party_errors + entry_errors + argument_errors
 
@@ -624,7 +639,7 @@ class FloridaScraper:
                     )
                     if errors:
                         logger.error(
-                            "Failed to fetch full case data for %s: %s",
+                            "Failed to fetch full case data for %s: %r",
                             case.case_uuid,
                             errors,
                         )

@@ -166,7 +166,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
         validation_alias=AliasPath("docketEntryHeader", "docketEntrySubTypeID")
     )
     entry_name: str = Field(
-        validation_alias=AliasPath("docketEntryHeader", "docketEntryName")
+        validation_alias=AliasPath("docketEntryHeader", "docketEntryName"),
+        default="",
     )
     date_submitted: datetime = Field(
         validation_alias=AliasPath("docketEntryHeader", "submittedDate")
@@ -180,7 +181,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     entry_description: str = Field(
         validation_alias=AliasPath(
             "docketEntryHeader", "docketEntryDescription"
-        )
+        ),
+        default="",
     )
     official: bool = Field(
         validation_alias=AliasPath("docketEntryHeader", "official")

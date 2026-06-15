@@ -33,6 +33,8 @@ class FloridaCourtID(Enum):
     """Florida county courts"""
     ADMINISTRATIVE_AGENCY = "fladma"
     """Florida administrative agencies (used as a value in the originating court info)."""
+    DOAH = "fldoah"
+    """Florida Division of Administrative Hearings"""
     COMPENSATION_CLAIMS = "flcomp"
     """Florida Office of the Judges of Compensation Claims"""
     US_COA = "uscoa"

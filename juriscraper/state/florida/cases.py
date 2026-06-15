@@ -13,7 +13,7 @@ from pydantic_core import PydanticCustomError
 from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
-from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.string_utils import harmonize
 from juriscraper.state.docket import (
     Docket,
     DocketTransfer,
@@ -140,6 +140,8 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
             return FloridaCourtID.SIXTH_COA
         case "uscoa":
             return FloridaCourtID.US_COA
+        case "division of administrative hearings":
+            return FloridaCourtID.DOAH
         case _:
             raise PydanticCustomError(
                 "florida_court_name",
@@ -229,10 +231,11 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     docket_number: Annotated[
         str, AfterValidator(florida_docket_number_validator)
     ] = Field(validation_alias=AliasPath("caseHeader", "caseNumber"))
+    # Florida API omits empty values from results, so we have to include a default here
     case_name: Annotated[str, AfterValidator(harmonize)] = Field(
-        validation_alias=AliasPath("caseHeader", "caseTitle")
+        validation_alias=AliasPath("caseHeader", "caseTitle"), default=""
     )
-    case_name_full: Annotated[str, AfterValidator(clean_string)] = Field(
+    case_name_full: Annotated[str, AfterValidator(harmonize)] = Field(
         validation_alias=AliasPath("caseHeader", "caseCaption"),
         default_factory=lambda d: d["case_name"],
     )

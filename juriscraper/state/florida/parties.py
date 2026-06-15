@@ -28,6 +28,7 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
     "receiver": PartyType.UNKNOWN,
     "complainant": PartyType.UNKNOWN,
     "amicus - appellant": PartyType.APPELLANT,
+    "amicus - appellee": PartyType.APPELLEE,
     "amicus - no position": PartyType.UNKNOWN,
     "amicus - petitioner": PartyType.PETITIONER,
     "amicus - respondent": PartyType.RESPONDENT,
@@ -150,7 +151,7 @@ class FloridaParty(Party[FloridaPartyRepresentative]):
         validation_alias=AliasPath("partyHeader", "partySubTypeID")
     )
     status: str = Field(
-        validation_alias=AliasPath("partyHeader", "partyStatus")
+        validation_alias=AliasPath("partyHeader", "partyStatus"), default=""
     )
     status_id: int = Field(
         validation_alias=AliasPath("partyHeader", "partyStatusID")
@@ -158,12 +159,14 @@ class FloridaParty(Party[FloridaPartyRepresentative]):
     name: str = Field(
         validation_alias=AliasPath(
             "partyHeader", "partyActorInstance", "displayName"
-        )
+        ),
+        default="",
     )
     sort_name: str = Field(
         validation_alias=AliasPath(
             "partyHeader", "partyActorInstance", "sortName"
-        )
+        ),
+        default="",
     )
     pro_se_flag: bool = Field(validation_alias="proSeFlag")
     order_by: int = Field(validation_alias="orderBy")
@@ -172,7 +175,7 @@ class FloridaParty(Party[FloridaPartyRepresentative]):
         AfterValidator(lambda rs: [r for r in rs if r.name and r.party_uuid]),
     ] = Field(validation_alias="legalRepresentations", default=[])
     non_public_flag: bool = Field(validation_alias="nonPublicFlag")
-    party_number: int = Field(validation_alias="partyNumber")
+    party_number: int = Field(validation_alias="partyNumber", default=0)
     involvement_type_id: int = Field(validation_alias="involvementTypeID")
 
 
