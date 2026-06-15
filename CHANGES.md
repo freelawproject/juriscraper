@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- `guam`: scrape current-year opinions from the new page; the legacy endpoint stopped getting updated mid-year and missed the newest opinions. Backscraping still uses the legacy endpoint for 2025 and prior #2004
+
 
 ## 3.0.25 - 2026-06-15
 
