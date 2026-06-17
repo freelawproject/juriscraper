@@ -15,7 +15,11 @@
     "datetime_filed": "2026-03-05T16:17:00Z",
     "docket_number": "4D2026-0606",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - Habeas Corpus Denial",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "Habeas Corpus Denial"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -46,7 +50,11 @@
     "datetime_filed": "2026-03-05T15:52:00Z",
     "docket_number": "4D2026-0605",
     "docket_type": "administrative",
-    "docket_type_raw": "NOA Final - Administrative - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Administrative",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -77,7 +85,11 @@
     "datetime_filed": "2026-03-05T15:49:00Z",
     "docket_number": "6D2026-0550",
     "docket_type": "civil",
-    "docket_type_raw": "NOA Final - Circuit Civil - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Civil",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -108,7 +120,11 @@
     "datetime_filed": "2026-03-05T15:41:00Z",
     "docket_number": "3D2026-0463",
     "docket_type": "civil",
-    "docket_type_raw": "NOA Final - Circuit Civil - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Civil",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -139,7 +155,11 @@
     "datetime_filed": "2026-03-05T15:39:00Z",
     "docket_number": "3D2026-0462",
     "docket_type": "civil",
-    "docket_type_raw": "NOA Final - Circuit Civil - Foreclosure",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Civil",
+      "Foreclosure"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -170,7 +190,11 @@
     "datetime_filed": "2026-03-05T15:33:00Z",
     "docket_number": "4D2026-0604",
     "docket_type": "family",
-    "docket_type_raw": "NOA Final - Circuit Family - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Family",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -201,7 +225,11 @@
     "datetime_filed": "2026-03-05T15:20:00Z",
     "docket_number": "6D2026-0549",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - Judgment and Sentence",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "Judgment and Sentence"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -232,7 +260,11 @@
     "datetime_filed": "2026-03-05T15:10:00Z",
     "docket_number": "4D2026-0603",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - 3.850 Summary",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "3.850 Summary"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -263,7 +295,11 @@
     "datetime_filed": "2026-03-05T14:48:00Z",
     "docket_number": "5D2026-0622",
     "docket_type": "civil",
-    "docket_type_raw": "NOA Non Final - Circuit Civil - Other",
+    "docket_type_raw": [
+      "NOA Non Final",
+      "Circuit Civil",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -294,7 +330,11 @@
     "datetime_filed": "2026-03-05T14:42:00Z",
     "docket_number": "2D2026-0566",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - Judgment and Sentence",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "Judgment and Sentence"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -325,7 +365,11 @@
     "datetime_filed": "2026-03-05T14:34:00Z",
     "docket_number": "5D2026-0621",
     "docket_type": "civil",
-    "docket_type_raw": "NOA Final - County Civil - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "County Civil",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -356,7 +400,11 @@
     "datetime_filed": "2026-03-05T14:33:00Z",
     "docket_number": "2D2026-0565",
     "docket_type": "civil",
-    "docket_type_raw": "Original Proceedings - Circuit Civil - Prohibition",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Circuit Civil",
+      "Prohibition"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -387,7 +435,11 @@
     "datetime_filed": "2026-03-05T14:32:00Z",
     "docket_number": "3D2026-0461",
     "docket_type": "civil",
-    "docket_type_raw": "Original Proceedings - Circuit Civil - Certiorari",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Circuit Civil",
+      "Certiorari"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -418,7 +470,11 @@
     "datetime_filed": "2026-03-05T14:22:00Z",
     "docket_number": "6D2026-0548",
     "docket_type": "family",
-    "docket_type_raw": "NOA Final - Circuit Family - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Family",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -449,7 +505,11 @@
     "datetime_filed": "2026-03-05T14:21:00Z",
     "docket_number": "5D2026-0620",
     "docket_type": "family",
-    "docket_type_raw": "NOA Final - Circuit Family - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Family",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -480,7 +540,11 @@
     "datetime_filed": "2026-03-05T14:17:00Z",
     "docket_number": "4D2026-0602",
     "docket_type": "administrative",
-    "docket_type_raw": "Original Proceedings - County Administrative - Certiorari",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "County Administrative",
+      "Certiorari"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -511,7 +575,11 @@
     "datetime_filed": "2026-03-05T14:07:00Z",
     "docket_number": "SC2026-0364",
     "docket_type": "unknown",
-    "docket_type_raw": "Original Proceedings - Florida Bar - Disciplinary Revocation without Leave to Seek Readmission",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Florida Bar",
+      "Disciplinary Revocation without Leave to Seek Readmission"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -542,7 +610,11 @@
     "datetime_filed": "2026-03-05T14:07:00Z",
     "docket_number": "2D2026-0564",
     "docket_type": "family",
-    "docket_type_raw": "Original Proceedings - Circuit Family - Prohibition",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Circuit Family",
+      "Prohibition"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -573,7 +645,11 @@
     "datetime_filed": "2026-03-05T13:52:00Z",
     "docket_number": "2D2026-0563",
     "docket_type": "civil",
-    "docket_type_raw": "NOA Final - Circuit Civil - Other",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Civil",
+      "Other"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -604,7 +680,11 @@
     "datetime_filed": "2026-03-05T13:40:00Z",
     "docket_number": "5D2026-0618",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - Habeas Corpus Denial",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "Habeas Corpus Denial"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -635,7 +715,11 @@
     "datetime_filed": "2026-03-05T13:39:00Z",
     "docket_number": "4D2026-0601",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - Judgment and Sentence",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "Judgment and Sentence"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -666,7 +750,11 @@
     "datetime_filed": "2026-03-05T13:34:00Z",
     "docket_number": "6D2026-0546",
     "docket_type": "civil",
-    "docket_type_raw": "Original Proceedings - Circuit Civil - Certiorari",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Circuit Civil",
+      "Certiorari"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -697,7 +785,11 @@
     "datetime_filed": "2026-03-05T13:34:00Z",
     "docket_number": "1D2026-0627",
     "docket_type": "unknown",
-    "docket_type_raw": "NOA Final - Workers Compensation - Workers Compensation",
+    "docket_type_raw": [
+      "NOA Final",
+      "Workers Compensation",
+      "Workers Compensation"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -728,7 +820,11 @@
     "datetime_filed": "2026-03-05T13:32:00Z",
     "docket_number": "3D2026-0458",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - Habeas Corpus Denial",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "Habeas Corpus Denial"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,
@@ -759,7 +855,11 @@
     "datetime_filed": "2026-03-05T13:28:00Z",
     "docket_number": "5D2026-0617",
     "docket_type": "criminal",
-    "docket_type_raw": "NOA Final - Circuit Criminal - 3.850 Non Summary",
+    "docket_type_raw": [
+      "NOA Final",
+      "Circuit Criminal",
+      "3.850 Non Summary"
+    ],
     "entries": [],
     "location": "",
     "location_id": 0,

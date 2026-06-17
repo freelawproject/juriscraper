@@ -99,6 +99,23 @@ def florida_docket_type_validator(i: str) -> DocketType:
     return FLORIDA_DOCKET_TYPE_MAP[case_type]
 
 
+def florida_docket_type_raw_validator(i: str) -> tuple[str, str, str]:
+    """
+    Splits a Florida "caseClassification" string into a category, type, sub type
+    tuple. Missing components will be filled with empty strings.
+
+    :param i: Florida "caseClassification" string.
+
+    :return: The split tuple.
+    """
+    parts = i.split(" - ", maxsplit=2)
+    # No need to log error here because `florida_docket_type_validator` already
+    # does.
+    while len(parts) < 3:
+        parts.append("")
+    return parts[0], parts[1], parts[2]
+
+
 def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
     """
     Validates and converts a Florida originating court name to a standardized
@@ -192,7 +209,9 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     :ivar class_group_type_id: Florida internal integer ID of the case class
         group type.
     :ivar docket_type: The DocketType derived from the case classification.
-    :ivar docket_type_raw: The docket type string as it appears in the "caseHeader.caseClassification" field.
+    :ivar docket_type_raw: The docket type string as it appears in the
+        "caseHeader.caseClassification" field, split into three parts (category,
+        type, subtype) on the first two occurrences of " - ".
     :ivar classification_id: Florida internal integer ID of the case
         classification.
     :ivar court_id: Juriscraper court ID.
@@ -245,7 +264,12 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
             florida_docket_type_validator, json_schema_input_type=str
         ),
     ] = Field(validation_alias=AliasPath("caseHeader", "caseClassification"))
-    docket_type_raw: str = Field(
+    docket_type_raw: Annotated[
+        tuple[str, str, str],
+        BeforeValidator(
+            florida_docket_type_raw_validator, json_schema_input_type=str
+        ),
+    ] = Field(
         validation_alias=AliasPath("caseHeader", "caseClassification"),
         default="",
     )
