@@ -9,9 +9,13 @@ History:
   2026-04-27: site migrated from the IsysWeb endpoint to a dtSearch
   POST endpoint #1919.
   2026-06-05: caption moved from plain text into an anchor element #1991.
+  2026-06-12: the decisions endpoint renamed the `Date Posted` label to
+  `Date` and moved the caption into a client-side <script> #2001.
 """
 
+import re
 from datetime import date, datetime, timedelta
+from html import unescape
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -79,7 +83,8 @@ class Site(OpinionSiteLinear):
 
             right = row.xpath('.//td[@class="ResultsItemRight"]')[0]
             fields = self._parse_right_cell(right)
-            posted = fields.get("Date Posted")
+            # label renamed `Date Posted` -> `Date` on 2026-06-12 #2001
+            posted = fields.get("Date Posted") or fields.get("Date")
             caption = fields.get("Caption")
             if not (url and docket and posted and caption):
                 logger.error(
@@ -121,6 +126,12 @@ class Site(OpinionSiteLinear):
         <b> label's value lives in its `.tail`, except the opinion Caption,
         which since 2026-06 is wrapped in an anchor that follows the label
         (#1991). Oral-arg captions are still plain text in the tail.
+
+        As of 2026-06-12 the decisions endpoint no longer emits a
+        `<b>Caption:</b>` element at all: it writes the caption from a
+        client-side <script> via `document.write`, so lxml only sees the
+        `Date` and `Type` labels. Recover the caption from the script's
+        `captionStr` JS variable as a fallback #2001.
         """
         out: dict[str, str] = {}
         for b in cell.iter("b"):
@@ -134,6 +145,19 @@ class Site(OpinionSiteLinear):
                     value = cls._clean(sibling.text_content())
             if label:
                 out[label] = value
+
+        if not out.get("Caption"):
+            for script in cell.iter("script"):
+                if match := re.search(
+                    r'captionStr\s*=\s*"(.*?)"', script.text or ""
+                ):
+                    # script text is CDATA, so HTML entities (&amp;) are
+                    # not decoded by lxml: unescape them ourselves
+                    caption = cls._clean(unescape(match.group(1)))
+                    if caption:
+                        out["Caption"] = caption
+                        break
+
         return out
 
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
