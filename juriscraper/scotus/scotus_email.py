@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import TypedDict
 from urllib.parse import parse_qs, urlparse
 
-import requests
+import httpx
 from lxml import html
 from lxml.html import HtmlElement
 
@@ -226,7 +226,9 @@ class SCOTUSEmail:
             data=data,
         )
 
-    def handle_email(self, timeout: float = 10.0) -> SCOTUSEmailHandlingResult:
+    async def handle_email(
+        self, timeout: float = 10.0
+    ) -> SCOTUSEmailHandlingResult:
         """
         Handle next steps in email processing.
 
@@ -245,11 +247,12 @@ class SCOTUSEmail:
 
         # The `followup_url` property is guaranteed to be present if the
         # email type is valid.
-        response = requests.get(
-            self.data["followup_url"],
-            headers={"User-Agent": "Free Law Project"},
-            timeout=timeout,
-        )
+        async with httpx.AsyncClient(http2=True) as client:
+            response = await client.get(
+                self.data["followup_url"],
+                headers={"User-Agent": "Free Law Project"},
+                timeout=timeout,
+            )
         response.raise_for_status()
 
         if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:

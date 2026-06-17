@@ -151,7 +151,7 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         self._metadata = data
         return data
 
-    def query(
+    async def query(
         self,
         name_last="",
         name_first="",
@@ -242,7 +242,9 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             }
         )
         logger.info("Running advanced case query with params '%s'", params)
-        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
+        self.response = await self.session.post(
+            f"{self.url}?1-L_1_0-1", data=params
+        )
         self.parse()
 
 
@@ -257,7 +259,7 @@ class CaseQueryAdvancedDistrict(BaseCaseQueryAdvanced):
     def __init__(self):
         raise NotImplementedError("This object is a stub.")
 
-    def query(self, *args, **kwargs):
+    async def query(self, *args, **kwargs):
         raise NotImplementedError("This object is a stub")
 
 

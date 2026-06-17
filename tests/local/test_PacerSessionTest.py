@@ -5,7 +5,7 @@ from juriscraper.pacer import CaseQuery, PacerSession
 from tests.network import get_pacer_session
 
 
-class PacerSessionTest(unittest.TestCase):
+class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
     """Test the PacerSession wrapper class"""
 
     def setUp(self):
@@ -20,15 +20,17 @@ class PacerSessionTest(unittest.TestCase):
         output = self.session._prepare_multipart_form_data(data)
         self.assertEqual(output, expected)
 
-    @mock.patch("juriscraper.pacer.http.requests.Session.post")
-    def test_ignores_non_data_posts(self, mock_post):
+    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
+    async def test_ignores_non_data_posts(self, mock_post):
         """Test that POSTs without a data parameter just pass through as normal.
 
         :param mock_post: mocked Session.post method
         """
         data = {"name": ("filename", "junk")}
 
-        self.session.post("https://free.law", files=data, auto_login=False)
+        await self.session.post(
+            "https://free.law", files=data, auto_login=False
+        )
 
         self.assertTrue(
             mock_post.called, "request.Session.post should be called"
@@ -39,8 +41,8 @@ class PacerSessionTest(unittest.TestCase):
             "the data should not be changed if using a files call",
         )
 
-    @mock.patch("juriscraper.pacer.http.requests.Session.post")
-    def test_transforms_data_on_post(self, mock_post):
+    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
+    async def test_transforms_data_on_post(self, mock_post):
         """Test that POSTs using the data parameter get transformed into PACER's
         delightfully odd multi-part form data.
 
@@ -49,7 +51,9 @@ class PacerSessionTest(unittest.TestCase):
         data = {"name": "dave", "age": 33}
         expected = {"name": (None, "dave"), "age": (None, 33)}
 
-        self.session.post("https://free.law", data=data, auto_login=False)
+        await self.session.post(
+            "https://free.law", data=data, auto_login=False
+        )
 
         self.assertTrue(
             mock_post.called, "request.Session.post should be called"
@@ -65,9 +69,9 @@ class PacerSessionTest(unittest.TestCase):
             "we should transform and populate the files argument",
         )
 
-    @mock.patch("juriscraper.pacer.http.requests.Session.post")
-    def test_sets_default_timeout(self, mock_post):
-        self.session.post("https://free.law", data={}, auto_login=False)
+    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
+    async def test_sets_default_timeout(self, mock_post):
+        await self.session.post("https://free.law", data={}, auto_login=False)
 
         self.assertTrue(
             mock_post.called, "request.Session.post should be called"
