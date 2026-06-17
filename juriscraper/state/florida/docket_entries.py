@@ -8,9 +8,9 @@ from pydantic import (
     BeforeValidator,
     Field,
 )
-from pydantic_core import PydanticCustomError
 from typing_extensions import override
 
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
@@ -18,6 +18,8 @@ from juriscraper.state.florida.common import (
     datetime_str_to_date_validator,
 )
 from juriscraper.state.florida.documents import FloridaDocument
+
+logger = make_default_logger()
 
 # Retrieved 2026-03-06
 FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
@@ -67,17 +69,11 @@ def florida_entry_type_validator(value: Any) -> DocketEntryType:
     :param value: The docket entry type string from the API response.
 
     :return: The corresponding DocketEntryType enum value.
-
-    :raise PydanticCustomError: If the value is not in
-        FLORIDA_DOCKET_ENTRY_TYPE_MAP.
     """
     s = str(value).lower()
     if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
-        raise PydanticCustomError(
-            "florida_docket_entry_type",
-            "Unrecognized Florida docket entry type value: {type}.",
-            {"type": s},
-        )
+        logger.error("Unrecognized Florida docket entry type: %s", s)
+        return DocketEntryType.UNASSIGNED
     return FLORIDA_DOCKET_ENTRY_TYPE_MAP[s]
 
 

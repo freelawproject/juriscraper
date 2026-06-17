@@ -13,6 +13,7 @@ from pydantic_core import PydanticCustomError
 from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.state.docket import (
     Docket,
@@ -34,6 +35,8 @@ from juriscraper.state.florida.courts import (
 )
 from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
+
+logger = make_default_logger()
 
 # Values retrieved 2026-03-05
 FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
@@ -79,26 +82,19 @@ def florida_docket_type_validator(i: str) -> DocketType:
     :param i: Florida case classification string.
 
     :return: The corresponding DocketType enum value.
-
-    :raise PydanticCustomError: If the string does not have exactly three
-        dash-separated parts or if the type is not in the map.
     """
-    parts = [p.strip().lower() for p in i.split(" - ")]
+    # None of the middle components in classification strings contained dashes
+    # when this scraper was created.
+    parts = [p.strip().lower() for p in i.split(" - ", maxsplit=2)]
     if len(parts) < 3:
-        raise PydanticCustomError(
-            "florida_docket_type",
-            "Invalid Florida docket type format: {dt}",
-            {"dt": i},
-        )
+        logger.error("Invalid Florida docket type format: %s", i)
+        return DocketType.UNASSIGNED
 
     _case_category, case_type, _case_sub_type = parts[:3]
 
     if case_type not in FLORIDA_DOCKET_TYPE_MAP:
-        raise PydanticCustomError(
-            "florida_docket_type",
-            "Unrecognized Florida docket type: {dt}",
-            {"dt": i},
-        )
+        logger.error("Unrecognized Florida docket type: %s", case_type)
+        return DocketType.UNASSIGNED
 
     return FLORIDA_DOCKET_TYPE_MAP[case_type]
 
@@ -111,8 +107,6 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
     :param i: Florida originating court name.
 
     :return: The corresponding CourtID enum value.
-
-    :raise PydanticCustomError: If the court name is not recognized.
     """
     court_name = i.lower().strip()
     if court_name.startswith("circuit court"):
@@ -143,11 +137,8 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
         case "division of administrative hearings":
             return FloridaCourtID.DOAH
         case _:
-            raise PydanticCustomError(
-                "florida_court_name",
-                "Unrecognized Florida court name: {cn}",
-                {"cn": i},
-            )
+            logger.error("Unrecognized Florida court name: %s", court_name)
+            return FloridaCourtID.UNASSIGNED
 
 
 class FloridaOriginatingCase(BaseModel):
@@ -178,8 +169,6 @@ def florida_external_id_to_js_id_validator(i: str) -> str:
     :param i: Florida external court ID as a string.
 
     :return: Value on the FloridaCourtID enum.
-
-    :raise PydanticCustomError: If the court ID is not recognized.
     """
     if i not in FLORIDA_COURT_EXTERNAL_ID_MAP:
         raise PydanticCustomError(

@@ -41,6 +41,8 @@ class FloridaCourtID(Enum):
     """United States Court of Appeals"""
     UNKNOWN = "flunknown"
     """Unknown Florida court"""
+    UNASSIGNED = "unassigned"
+    """Unassigned court. Indicates parser needs to be updated."""
 
 
 FLORIDA_COURT_EXTERNAL_ID_MAP: dict[str, FloridaCourtID] = {

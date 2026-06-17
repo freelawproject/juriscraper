@@ -2,14 +2,16 @@ from typing import Annotated, Any, ClassVar
 from uuid import UUID
 
 from pydantic import UUID4, AfterValidator, AliasPath, BeforeValidator, Field
-from pydantic_core import PydanticCustomError
 from typing_extensions import override
 
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.docket import Party, PartyType, Representative
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     FloridaPaginatedResultsParser,
 )
+
+logger = make_default_logger()
 
 FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
     "appellant": PartyType.APPELLANT,
@@ -57,17 +59,11 @@ def florida_party_type_validator(value: Any) -> PartyType:
     :param value: The party type string from the API response.
 
     :return: The corresponding PartyType enum value.
-
-    :raise PydanticCustomError: If the value is not in
-        FLORIDA_PARTY_TYPE_MAP.
     """
     s = str(value).lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
-        raise PydanticCustomError(
-            "florida_party_type",
-            "Unrecognized Florida party type value: {type}.",
-            {"type": s},
-        )
+        logger.error("Unrecognized Florida party type: %s", s)
+        return PartyType.UNASSIGNED
     return FLORIDA_PARTY_TYPE_MAP[s]
 
 
