@@ -180,6 +180,8 @@ class DocketType(Enum):
     """Orders by the court (e.g. writs)"""
     PETITION = "petition"
     """Dockets which are petitions to the court"""
+    BAR = "bar"
+    """Bar proceedings including investigations and discipline"""
     UNASSIGNED = "unassigned"
     """Unassigned entry type. Indicates parser needs to be updated."""
 

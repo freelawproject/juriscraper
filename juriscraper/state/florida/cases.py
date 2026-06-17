@@ -62,9 +62,9 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
     "workers compensation": DocketType.UNKNOWN,
     "advisory opinion": DocketType.UNKNOWN,
     "county misdemeanor": DocketType.CRIMINAL,
-    "florida bar": DocketType.UNKNOWN,
-    "florida board of bar examiners": DocketType.UNKNOWN,
-    "judicial qualifications commission (jqc)": DocketType.UNKNOWN,
+    "florida bar": DocketType.BAR,
+    "florida board of bar examiners": DocketType.BAR,
+    "judicial qualifications commission (jqc)": DocketType.BAR,
     "rules": DocketType.UNKNOWN,
     "writ": DocketType.ORDER,
 }
