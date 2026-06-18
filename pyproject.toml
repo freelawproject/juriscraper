@@ -44,6 +44,7 @@ dependencies = [
   "feedparser>=6.0.11",
   "geonamescache>=2.0.0",
   "html5lib",
+  "jkent",
   "lxml>=6.1",
   "nh3",
   "pydantic>=2.12.5",
@@ -110,3 +111,5 @@ lint.ignore = [
   # printf-string-formatting
   "UP031",
 ]
+[tool.uv.sources]
+jkent = { path = "../jkent", editable = true }
