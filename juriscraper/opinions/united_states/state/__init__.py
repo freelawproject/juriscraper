@@ -86,14 +86,14 @@ __all__ = [
     # court's website.
     "me",
     "mesuperct",
-    # separting minn scrapers to prevent hitting rate limits
+    # separating minn scrapers to prevent hitting rate limits
     "minn",
     "mich",
     "michctapp",
     "minnag",
     "miss",
     "missctapp",
-    # separting minn scrapers to prevent hitting rate limits
+    # separating minn scrapers to prevent hitting rate limits
     "minnctapp_p",
     # These courts are uploaded via portal by amazing volunteers.
     # "mo",
@@ -104,7 +104,7 @@ __all__ = [
     "nc",
     "ncbizct",
     "ncctapp",
-    # separting minn scrapers to prevent hitting rate limits
+    # separating minn scrapers to prevent hitting rate limits
     "minnctapp_u",
     "neb",
     "nebctapp",
