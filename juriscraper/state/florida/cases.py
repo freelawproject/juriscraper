@@ -271,7 +271,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
         ),
     ] = Field(
         validation_alias=AliasPath("caseHeader", "caseClassification"),
-        default="",
+        default=("", "", ""),
     )
     classification_id: int = Field(
         validation_alias=AliasPath("caseHeader", "caseClassificationID")
