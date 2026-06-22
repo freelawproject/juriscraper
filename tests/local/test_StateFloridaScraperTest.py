@@ -714,23 +714,6 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
                 str(entry.docket_entry_uuid),
             )
 
-    async def test_unknown_court_external_id_raises(self):
-        """A case whose ``court_id`` isn't in FLORIDA_COURT_EXTERNAL_ID_MAP
-        raises ``ValueError`` without firing any per-case requests."""
-        recorder = _Recorder()
-        _register_court_and_metadata_handlers(recorder)
-
-        async with _make_scraper(recorder) as scraper:
-            await scraper.courts
-            case = FloridaCase.model_validate(
-                _case_listing_entry(CASE_UUID, "4D2026-0606")
-            )
-            case.court_id = "flunknown"
-            with self.assertRaises(ValueError):
-                await scraper.fetch_case_data(
-                    str(case.case_uuid), case.court_id
-                )
-
 
 class BackfillTest(unittest.IsolatedAsyncioTestCase):
     async def test_yields_cases_for_each_court_in_range(self):

@@ -427,34 +427,36 @@ class Retry(RequestHandler):
         the `except` block is triggered by an HTTP error in `retry_codes` and the
         maximum number of retries hasn't been hit yet."""
         backoff = self.backoff
-        remaining_tries = self.max_retries
-        while remaining_tries > 0:
+        last_exc = None
+        for _ in range(self.max_retries):
             try:
                 _ = await request.response
+            except HTTPStatusError as e:
+                if e.response.status_code not in self.retry_codes:
+                    logger.error(
+                        "Received %s from %s\nResponse: %s",
+                        e.response.status_code,
+                        e.request.url,
+                        e.response.text,
+                    )
+                    return
+                last_exc = e
+            except TimeoutException as e:
+                last_exc = e
+            except NetworkError as e:
+                last_exc = e
             except Exception as e:
-                match e:
-                    case HTTPStatusError():
-                        if e.response.status_code not in self.retry_codes:
-                            logger.error(
-                                "Received %s from %s\nResponse: %s",
-                                e.response.status_code,
-                                e.request.url,
-                                e.response.text,
-                            )
-                            return
-                    case TimeoutException():
-                        logger.error("Read timeout from %s", e.request.url)
-                    case NetworkError():
-                        logger.error("Network error from %s", e.request.url)
-                    case _:
-                        logger.exception(
-                            "Unexpected error while processing request %s",
-                            request.url,
-                        )
-                        return
-                remaining_tries -= 1
-                await asyncio.sleep(backoff)
-                backoff *= self.backoff_growth
-                await manager.enqueue_request(request)
+                logger.exception(
+                    "Unexpected error while processing request %s: %r",
+                    request.url,
+                    e,
+                )
+                return
             else:
                 return
+
+            await asyncio.sleep(backoff)
+            backoff *= self.backoff_growth
+            await manager.enqueue_request(request)
+
+        logger.error("Max retries exceeded for %s: %r", request.url, last_exc)

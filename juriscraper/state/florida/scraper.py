@@ -152,8 +152,10 @@ class FloridaScraper:
     def __init__(
         self,
         *,
-        rps: float | None = None,
-        max_retries: int | None = None,
+        rps: float = 2.5,
+        max_retries: int = 3,
+        backoff: float = 2.0,
+        backoff_growth: float = 2.0,
         handlers: list[RequestHandler] | None = None,
     ) -> None:
         """Create a new :class:`FloridaScraper` instance.
@@ -162,11 +164,11 @@ class FloridaScraper:
             handlers: Supplementary request handlers to pass to the :class:`RequestManager` instance."""
         self.manager: RequestManager = RequestManager(
             handlers=[
-                RateLimit(rps=rps or 2.5),
+                RateLimit(rps=rps),
                 Retry(
-                    max_retries=max_retries or 3,
-                    backoff=2.0,
-                    backoff_growth=2.0,
+                    max_retries=max_retries,
+                    backoff=backoff,
+                    backoff_growth=backoff_growth,
                 ),
             ]
             + (handlers or []),
@@ -334,12 +336,13 @@ class FloridaScraper:
                 endpoint,
                 params,
             )
-        if not totals and errors == 0:
-            logger.error(
-                "Paginated fetch returned no pages for %s with params=%s",
-                endpoint,
-                params,
-            )
+        if not totals:
+            if errors == 0:
+                logger.error(
+                    "Paginated fetch returned no pages for %s with params=%s",
+                    endpoint,
+                    params,
+                )
             return
         total_elements = totals.pop()
         # Assume every failed page was full to try and avoid noisy logs
@@ -379,7 +382,7 @@ class FloridaScraper:
         """
         court_metadata = (await self.courts).get(court_id)
         if court_metadata is None:
-            raise ValueError(f"Unknown court id %r {court_id}")
+            raise ValueError(f"Unknown court id {court_id:r}")
         court_external_id = court_metadata.court.external_identifier
         params = {
             "caseHeader.courtID": str(court_metadata.court.resource_id),
@@ -488,7 +491,7 @@ class FloridaScraper:
 
     async def fetch_case_data(
         self, case_uuid: str, court_id: str
-    ) -> tuple[FloridaCase, list[PaginationFailed]]:
+    ) -> tuple[FloridaCase, list[PaginationFailed]] | Exception:
         """Fetch unpopulated fields for a Florida case in a given court and return
         a fully populated :class:`FloridaCase` object.
 
@@ -498,12 +501,13 @@ class FloridaScraper:
 
         Returns:
             Tuple of a populated :class:`FloridaCase` object (if there were no failures) and a list of failures that
-            occurred. Errors which occur while populating attachments will be logged but will not be propagated.
+            occurred. Errors which occur while populating attachments will be logged but will not be propagated. If
+            an error occurs while fetching the case details, the return will simply be the exception that occurred.
         """
         fl_court_id = FloridaCourtID(court_id)
         court_data = (await self.courts).get(fl_court_id, None)
         if court_data is None:
-            raise ValueError(f"{court_id} is not a valid court ID.")
+            return ValueError(f"{court_id} is not a valid court ID.")
         court_uuid = str(court_data.court.resource_id)
 
         ci_parser = FloridaCaseInfoParser(court_id=court_id)
@@ -513,11 +517,14 @@ class FloridaScraper:
             court_id=fl_court_id.value
         )
 
-        case_response = await self.manager.get(
-            FloridaCaseInfoParser.endpoint.format(
-                court=court_uuid, case=case_uuid
+        try:
+            case_response = await self.manager.get(
+                FloridaCaseInfoParser.endpoint.format(
+                    court=court_uuid, case=case_uuid
+                )
             )
-        )
+        except Exception as e:
+            return e
 
         output_case = ci_parser.parse(case_response.text)
 
@@ -634,17 +641,23 @@ class FloridaScraper:
                 i += 1
 
                 if full_scrape:
-                    full_case, errors = await self.fetch_case_data(
+                    match await self.fetch_case_data(
                         str(case.case_uuid), case.court_id
-                    )
-                    if errors:
-                        logger.error(
-                            "Failed to fetch full case data for %s: %r",
-                            case.case_uuid,
-                            errors,
-                        )
-                    else:
-                        case = full_case
+                    ):
+                        case Exception() as e:
+                            logger.error(
+                                "Failed to fetch full case data for %s: %s",
+                                case.case_uuid,
+                                e,
+                            )
+                        case (_, errors) if errors:
+                            logger.error(
+                                "Failed to fetch full case data for %s: %r",
+                                case.case_uuid,
+                                errors,
+                            )
+                        case (full_case, _):
+                            case = full_case
 
                 if i % 1000 == 0:
                     d = case.date_filed
