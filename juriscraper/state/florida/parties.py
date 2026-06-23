@@ -1,11 +1,17 @@
 from typing import Annotated, Any, ClassVar
+from uuid import UUID
 
-from pydantic import UUID4, AliasPath, BeforeValidator, Field
-from pydantic_core import PydanticCustomError
+from pydantic import UUID4, AfterValidator, AliasPath, BeforeValidator, Field
+from typing_extensions import override
 
-from juriscraper.abstract_parser import LegacyParser
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.docket import Party, PartyType, Representative
-from juriscraper.state.florida.common import FloridaPaginatedResults
+from juriscraper.state.florida.common import (
+    FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
+)
+
+logger = make_default_logger()
 
 FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
     "appellant": PartyType.APPELLANT,
@@ -24,6 +30,7 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
     "receiver": PartyType.UNKNOWN,
     "complainant": PartyType.UNKNOWN,
     "amicus - appellant": PartyType.APPELLANT,
+    "amicus - appellee": PartyType.APPELLEE,
     "amicus - no position": PartyType.UNKNOWN,
     "amicus - petitioner": PartyType.PETITIONER,
     "amicus - respondent": PartyType.RESPONDENT,
@@ -52,17 +59,11 @@ def florida_party_type_validator(value: Any) -> PartyType:
     :param value: The party type string from the API response.
 
     :return: The corresponding PartyType enum value.
-
-    :raise PydanticCustomError: If the value is not in
-        FLORIDA_PARTY_TYPE_MAP.
     """
     s = str(value).lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
-        raise PydanticCustomError(
-            "florida_party_type",
-            "Unrecognized Florida party type value: {type}.",
-            {"type": s},
-        )
+        logger.error("Unrecognized Florida party type: %s", s)
+        return PartyType.UNASSIGNED
     return FLORIDA_PARTY_TYPE_MAP[s]
 
 
@@ -80,22 +81,25 @@ class FloridaPartyRepresentative(Representative):
     """
 
     party_uuid: UUID4 = Field(
-        validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID")
+        validation_alias=AliasPath("attorneyPartyHeader", "casePartyUUID"),
+        default=UUID(int=0),
     )
     name: str = Field(
         validation_alias=AliasPath(
             "attorneyPartyHeader", "partyActorInstance", "displayName"
-        )
+        ),
+        default="",
     )
     sort_name: str = Field(
         validation_alias=AliasPath(
             "attorneyPartyHeader", "partyActorInstance", "sortName"
-        )
+        ),
+        default="",
     )
-    primary_flag: bool = Field(validation_alias="primaryFlag")
+    primary_flag: bool = Field(validation_alias="primaryFlag", default=False)
 
 
-class FloridaParty(Party):
+class FloridaParty(Party[FloridaPartyRepresentative]):
     """
     Extension of the Party data structure with Florida-specific fields.
 
@@ -143,7 +147,7 @@ class FloridaParty(Party):
         validation_alias=AliasPath("partyHeader", "partySubTypeID")
     )
     status: str = Field(
-        validation_alias=AliasPath("partyHeader", "partyStatus")
+        validation_alias=AliasPath("partyHeader", "partyStatus"), default=""
     )
     status_id: int = Field(
         validation_alias=AliasPath("partyHeader", "partyStatusID")
@@ -151,24 +155,27 @@ class FloridaParty(Party):
     name: str = Field(
         validation_alias=AliasPath(
             "partyHeader", "partyActorInstance", "displayName"
-        )
+        ),
+        default="",
     )
     sort_name: str = Field(
         validation_alias=AliasPath(
             "partyHeader", "partyActorInstance", "sortName"
-        )
+        ),
+        default="",
     )
     pro_se_flag: bool = Field(validation_alias="proSeFlag")
     order_by: int = Field(validation_alias="orderBy")
-    representatives: list[FloridaPartyRepresentative] = Field(
-        validation_alias="legalRepresentations", default=[]
-    )
+    representatives: Annotated[
+        list[FloridaPartyRepresentative],
+        AfterValidator(lambda rs: [r for r in rs if r.name and r.party_uuid]),
+    ] = Field(validation_alias="legalRepresentations", default=[])
     non_public_flag: bool = Field(validation_alias="nonPublicFlag")
-    party_number: int = Field(validation_alias="partyNumber")
+    party_number: int = Field(validation_alias="partyNumber", default=0)
     involvement_type_id: int = Field(validation_alias="involvementTypeID")
 
 
-class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
+class FloridaPartyListParser(FloridaPaginatedResultsParser[FloridaParty]):
     """
     Parser for Florida party list API results.
 
@@ -177,8 +184,6 @@ class FloridaPartyListParser(LegacyParser[list[FloridaParty]]):
 
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/parties"
 
-    def _parse(self, i: str) -> list[FloridaParty]:
-        party_results = FloridaPaginatedResults[
-            FloridaParty
-        ].model_validate_json(i)
-        return party_results.results
+    @override
+    def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaParty]:
+        return FloridaPaginatedResults[FloridaParty].model_validate_json(i)

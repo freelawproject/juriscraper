@@ -8,15 +8,18 @@ from pydantic import (
     BeforeValidator,
     Field,
 )
-from pydantic_core import PydanticCustomError
+from typing_extensions import override
 
-from juriscraper.abstract_parser import LegacyParser
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.docket import DocketEntry, DocketEntryType
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
     datetime_str_to_date_validator,
 )
 from juriscraper.state.florida.documents import FloridaDocument
+
+logger = make_default_logger()
 
 # Retrieved 2026-03-06
 FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
@@ -66,17 +69,11 @@ def florida_entry_type_validator(value: Any) -> DocketEntryType:
     :param value: The docket entry type string from the API response.
 
     :return: The corresponding DocketEntryType enum value.
-
-    :raise PydanticCustomError: If the value is not in
-        FLORIDA_DOCKET_ENTRY_TYPE_MAP.
     """
     s = str(value).lower()
     if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
-        raise PydanticCustomError(
-            "florida_docket_entry_type",
-            "Unrecognized Florida docket entry type value: {type}.",
-            {"type": s},
-        )
+        logger.error("Unrecognized Florida docket entry type: %s", s)
+        return DocketEntryType.UNASSIGNED
     return FLORIDA_DOCKET_ENTRY_TYPE_MAP[s]
 
 
@@ -165,7 +162,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
         validation_alias=AliasPath("docketEntryHeader", "docketEntrySubTypeID")
     )
     entry_name: str = Field(
-        validation_alias=AliasPath("docketEntryHeader", "docketEntryName")
+        validation_alias=AliasPath("docketEntryHeader", "docketEntryName"),
+        default="",
     )
     date_submitted: datetime = Field(
         validation_alias=AliasPath("docketEntryHeader", "submittedDate")
@@ -179,7 +177,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     entry_description: str = Field(
         validation_alias=AliasPath(
             "docketEntryHeader", "docketEntryDescription"
-        )
+        ),
+        default="",
     )
     official: bool = Field(
         validation_alias=AliasPath("docketEntryHeader", "official")
@@ -223,7 +222,9 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
     attachments: list[FloridaDocument] = []
 
 
-class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
+class FloridaDocketEntryListParser(
+    FloridaPaginatedResultsParser[FloridaDocketEntry]
+):
     """
     Parser for Florida docket entry list API results.
 
@@ -232,8 +233,10 @@ class FloridaDocketEntryListParser(LegacyParser[list[FloridaDocketEntry]]):
 
     endpoint: ClassVar[str] = "/courts/{court}/cms/cases/{case}/docketentries"
 
-    def _parse(self, i: str) -> list[FloridaDocketEntry]:
-        results = FloridaPaginatedResults[
-            FloridaDocketEntry
-        ].model_validate_json(i)
-        return results.results
+    @override
+    def parse_full(
+        self, i: str
+    ) -> FloridaPaginatedResults[FloridaDocketEntry]:
+        return FloridaPaginatedResults[FloridaDocketEntry].model_validate_json(
+            i
+        )

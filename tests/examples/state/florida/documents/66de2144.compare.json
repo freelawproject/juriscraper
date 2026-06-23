@@ -1,0 +1,43 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "docketEntryUUID": "66de2144-f455-487d-ad9c-cc5db77962b0",
+        "documentLinkUUID": "de358ec1-e226-4e43-a471-6e93793964ea",
+        "documentName": "Lower tribunal docket",
+        "caseHeader": {
+          "caseInstanceUUID": "950a4c81-2dc1-4283-8918-8ca39aa7d748",
+          "caseNumber": "3D2026-0198",
+          "caseTitle": "Gerardo Padron v. State of Florida",
+          "courtID": "4"
+        },
+        "userDocumentState": "b64d1d1e-f926-4c87-ab6b-df5c96d3b186"
+      },
+      {
+        "docketEntryUUID": "66de2144-f455-487d-ad9c-cc5db77962b0",
+        "documentLinkUUID": "7742384a-6b58-41ee-a558-d1d98f3faa52",
+        "documentName": "Notice - Notice of Appeal",
+        "caseHeader": {
+          "caseInstanceUUID": "950a4c81-2dc1-4283-8918-8ca39aa7d748",
+          "caseNumber": "3D2026-0198",
+          "caseTitle": "Gerardo Padron v. State of Florida",
+          "courtID": "4"
+        },
+        "documentInfo": {
+          "documentType": "Docket Entry",
+          "contentType": "application/pdf",
+          "fileExtension": "pdf",
+          "pageCount": 1,
+          "fileSize": 45346
+        },
+        "userDocumentState": "b64d1d1e-f926-4c87-ab6b-df5c96d3b186"
+      }
+    ]
+  },
+  "page": {
+    "size": 50,
+    "totalElements": 2,
+    "totalPages": 1,
+    "number": 0
+  }
+}

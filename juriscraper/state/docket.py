@@ -44,6 +44,8 @@ class DocketEntryType(Enum):
     """Order entry type"""
     PETITION = "petition"
     """Petition entry type"""
+    UNASSIGNED = "unassigned"
+    """Unassigned entry type. Indicates parser needs to be updated."""
 
 
 _DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)
@@ -130,6 +132,8 @@ class PartyType(Enum):
     """Appellee party type"""
     RESPONDENT = "respondent"
     """Respondent party type"""
+    UNASSIGNED = "unassigned"
+    """Unassigned entry type. Indicates parser needs to be updated."""
 
 
 _PartyRepresentative = TypeVar("_PartyRepresentative", bound=Representative)
@@ -170,6 +174,16 @@ class DocketType(Enum):
     """Administrative cases"""
     DEATH_APPEAL = "death_appeal"
     """Death penalty appeal cases"""
+    NOTICE = "notice"
+    """Dockets which are just notices"""
+    ORDER = "order"
+    """Orders by the court (e.g. writs)"""
+    PETITION = "petition"
+    """Dockets which are petitions to the court"""
+    BAR = "bar"
+    """Bar proceedings including investigations and discipline"""
+    UNASSIGNED = "unassigned"
+    """Unassigned entry type. Indicates parser needs to be updated."""
 
 
 _DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
