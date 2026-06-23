@@ -1,0 +1,1728 @@
+[
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "The Florida Bar v. Joshua Mark Silverman",
+    "case_name_full": "The Florida Bar v. Joshua Mark Silverman",
+    "case_uuid": "f1f7f12e-593c-4210-b060-cfbe023b704a",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000050,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T15:00:00Z",
+    "docket_number": "SC2026-0703",
+    "docket_type": "bar",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Florida Bar",
+      "Complaint"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2026-00,169(8B)",
+        "court_id": "fladma",
+        "court_name": "Administrative Agency"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Shelby Nealy v. State of Florida",
+    "case_name_full": "Shelby Nealy v. State of Florida",
+    "case_uuid": "56976b0a-7ea9-49da-8283-5077e12050e7",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000000,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T15:01:00Z",
+    "docket_number": "SC2026-0704",
+    "docket_type": "death_appeal",
+    "docket_type_raw": [
+      "Mandatory Review",
+      "Death Penalty Appeal",
+      "Initial"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "522019CF000140000APC",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Sixth Judicial Circuit, Pinellas County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Terren Posey v. State of Florida",
+    "case_name_full": "Terren Posey v. State of Florida",
+    "case_uuid": "91f1f444-0aff-413b-b08c-87c1e28630b4",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T15:25:00Z",
+    "docket_number": "SC2026-0705",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "482025CF003406000AOX",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Ninth Judicial Circuit, Orange County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "James D. Gordon v. State of Florida",
+    "case_name_full": "James D. Gordon v. State of Florida",
+    "case_uuid": "78ac62b8-e055-41c9-b956-386b864ca49c",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000045,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T15:47:00Z",
+    "docket_number": "SC2026-0706",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Prohibition"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "192024CF000281CFBXMX;",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Second Judicial Circuit, Franklin County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Larry D. Richardson v. Ricky Dixon, Department of Corrections Secretary",
+    "case_name_full": "Larry D. Richardson v. Ricky Dixon, Department of Corrections Secretary",
+    "case_uuid": "ec3d052f-c75a-41f9-b204-62df38aa49b8",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T16:15:00Z",
+    "docket_number": "SC2026-0707",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "6D2025-0731;",
+        "court_id": "flca06",
+        "court_name": "6th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Global Hookah Distributors, Inc. v. Department of Business and Professional Regulation, Division of Alcoholic Beverages and Tobacco",
+    "case_name_full": "Global Hookah Distributors, Inc. v. Department of Business and Professional Regulation, Division of Alcoholic Beverages and Tobacco",
+    "case_uuid": "a840dd09-f526-4903-8bc4-b56cbd17399c",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T19:09:00Z",
+    "docket_number": "SC2026-0708",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "1D2023-3308;",
+        "court_id": "flca01",
+        "court_name": "1st District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "In re: Petition for Disciplinary Revocation of Michael Paul Brundage",
+    "case_name_full": "In re: Petition for Disciplinary Revocation of Michael Paul Brundage",
+    "case_uuid": "7ea1349f-a972-4462-8442-dc8ad049f553",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000056,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T19:54:00Z",
+    "docket_number": "SC2026-0709",
+    "docket_type": "bar",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Florida Bar",
+      "Disciplinary Revocation without Leave to Seek Readmission"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2026-10,770(13B)(HDR)",
+        "court_id": "fladma",
+        "court_name": "Administrative Agency"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Global Hookah Distributors, Inc. v. Department of Business and Professional Regulation, Division of Alcoholic Beverages and Tobacco",
+    "case_name_full": "Global Hookah Distributors, Inc. v. Department of Business and Professional Regulation, Division of Alcoholic Beverages and Tobacco",
+    "case_uuid": "82b80627-afaf-4e64-a040-a1e7c79a9d8b",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T19:57:00Z",
+    "docket_number": "SC2026-0710",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "1D2023-2608;",
+        "court_id": "flca01",
+        "court_name": "1st District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "The Florida Bar v. William Andrew Jones",
+    "case_name_full": "The Florida Bar v. William Andrew Jones",
+    "case_uuid": "0a761108-02c1-4b3d-8ec6-ee3b75440abf",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000054,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-05",
+    "datetime_filed": "2026-05-05T21:56:00Z",
+    "docket_number": "SC2026-0711",
+    "docket_type": "bar",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Florida Bar",
+      "Determination or Judgment of Guilt (Felony Conviction)"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2026-10,449(13A)",
+        "court_id": "fladma",
+        "court_name": "Administrative Agency"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Kevin Beach v. Christina Matias",
+    "case_name_full": "Kevin Beach v. Christina Matias",
+    "case_uuid": "3b9fc06c-da8c-432b-bc51-0c97a4a4659a",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-06",
+    "datetime_filed": "2026-05-06T03:16:00Z",
+    "docket_number": "SC2026-0713",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "132026DR000569A00104",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Eleventh Judicial Circuit, Miami-Dade County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Michelle Maupin v. Manny Diaz, Jr., Florida Commissioner of Education",
+    "case_name_full": "Michelle Maupin v. Manny Diaz, Jr., Florida Commissioner of Education",
+    "case_uuid": "706c3df4-393d-4672-ad96-cf00fca5bbae",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-06",
+    "datetime_filed": "2026-05-06T13:18:00Z",
+    "docket_number": "SC2026-0712",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "1D2025-0121;",
+        "court_id": "flca01",
+        "court_name": "1st District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Ashley Jenkins v. State of Florida",
+    "case_name_full": "Ashley Jenkins v. State of Florida",
+    "case_uuid": "7169c462-5f1a-42d0-a188-25bc15a593a3",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-07",
+    "datetime_filed": "2026-05-07T03:26:00Z",
+    "docket_number": "SC2026-0717",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "6D2026-0846;",
+        "court_id": "flca06",
+        "court_name": "6th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Richard Farina v. Navy Federal Credit Union",
+    "case_name_full": "Richard Farina v. Navy Federal Credit Union",
+    "case_uuid": "a41647ec-3fb1-479d-8e84-315286fbb85f",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-07",
+    "datetime_filed": "2026-05-07T13:49:00Z",
+    "docket_number": "SC2026-0714",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "1D2026-0266;",
+        "court_id": "flca01",
+        "court_name": "1st District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "In Re: Amendments to Florida Rules of General Practice and Judicial Administration",
+    "case_name_full": "In Re: Amendments to Florida Rules of General Practice and Judicial Administration",
+    "case_uuid": "aecf6a0d-2294-4893-8644-d94f34535233",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000291,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-07",
+    "datetime_filed": "2026-05-07T13:49:00Z",
+    "docket_number": "SC2026-0716",
+    "docket_type": "unknown",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Rules",
+      "Amendment to Rules - General Practice and Judicial Administration"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Orlando Castillo v. State of Florida",
+    "case_name_full": "Orlando Castillo v. State of Florida",
+    "case_uuid": "1a07f932-1ca6-4d51-b873-ddcfeb5a1cbf",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-07",
+    "datetime_filed": "2026-05-07T17:18:00Z",
+    "docket_number": "SC2026-0715",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "4D2019-1882;",
+        "court_id": "flca04",
+        "court_name": "4th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Merlin Chester Warner v. Della Ann Burton Warner",
+    "case_name_full": "Merlin Chester Warner v. Della Ann Burton Warner",
+    "case_uuid": "89bf8848-1bd8-442c-9d9d-184a60717b55",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-08",
+    "datetime_filed": "2026-05-08T12:38:00Z",
+    "docket_number": "SC2026-0722",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "6D2026-0041;",
+        "court_id": "flca06",
+        "court_name": "6th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "In re Guardianship of Theresa Marie Schiavo, Mary Schindler; Bobby Schindler; and Terri Schiavo Life & Hope Network v. Michael Schiavo",
+    "case_name_full": "In re Guardianship of Theresa Marie Schiavo, Mary Schindler; Bobby Schindler; and Terri Schiavo Life & Hope Network v. Michael Schiavo",
+    "case_uuid": "64450734-61b7-4549-91f3-0abc51988f1d",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-08",
+    "datetime_filed": "2026-05-08T13:14:00Z",
+    "docket_number": "SC2026-0723",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2D2025-0671;",
+        "court_id": "flca02",
+        "court_name": "2nd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Richard Knight v. State of Florida",
+    "case_name_full": "Richard Knight v. State of Florida",
+    "case_uuid": "e9939e0d-61ca-4c98-82c2-6c6c0b630be2",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000010,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-08",
+    "datetime_filed": "2026-05-08T13:23:00Z",
+    "docket_number": "SC2026-0718",
+    "docket_type": "death_appeal",
+    "docket_type_raw": [
+      "Mandatory Review",
+      "Death Penalty Appeal",
+      "3.851 Successor"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "062001CF014055A88810",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Seventeenth Judicial Circuit, Broward County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Tirza Diaz de Villegas v. Ulysses Diaz de Villegas",
+    "case_name_full": "Tirza Diaz de Villegas v. Ulysses Diaz de Villegas",
+    "case_uuid": "e6faa0f1-91ff-4acf-b14f-4110d8f31800",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000033,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-08",
+    "datetime_filed": "2026-05-08T14:32:00Z",
+    "docket_number": "SC2026-0719",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Constitutional Construction"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "3D2024-1369;",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Albert Olegovich Boyarkin v. State of Florida",
+    "case_name_full": "Albert Olegovich Boyarkin v. State of Florida",
+    "case_uuid": "457fac30-5872-4acc-b7bd-7f2ee6f332ba",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-08",
+    "datetime_filed": "2026-05-08T16:35:00Z",
+    "docket_number": "SC2026-0720",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "582024CF003152XXXANC",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Charles J. Clark v. State of Florida",
+    "case_name_full": "Charles J. Clark v. State of Florida",
+    "case_uuid": "73e0989f-1839-47d2-8fe6-d631baafc0da",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-08",
+    "datetime_filed": "2026-05-08T16:47:00Z",
+    "docket_number": "SC2026-0721",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2D2025-1827;",
+        "court_id": "flca02",
+        "court_name": "2nd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "David Aubel v. State of Florida",
+    "case_name_full": "David Aubel v. State of Florida",
+    "case_uuid": "59ea96d8-bedd-4547-81a6-c7b5621794b9",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-11",
+    "datetime_filed": "2026-05-11T14:11:00Z",
+    "docket_number": "SC2026-0724",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "4D2025-0620;",
+        "court_id": "flca04",
+        "court_name": "4th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Albert Dennis v. State of Florida",
+    "case_name_full": "Albert Dennis v. State of Florida",
+    "case_uuid": "a331e6ec-ef0b-4de5-afc7-8e7038d13688",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-11",
+    "datetime_filed": "2026-05-11T16:24:00Z",
+    "docket_number": "SC2026-0725",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "502001CF008512AXXXMB",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Fifteenth Judicial Circuit, Palm Beach County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Thomas Robert Teixeira v. Sheriff, Suwannee County",
+    "case_name_full": "Thomas Robert Teixeira v. Sheriff, Suwannee County",
+    "case_uuid": "a474f223-c3b6-4402-a162-502de87b1a73",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-11",
+    "datetime_filed": "2026-05-11T18:03:00Z",
+    "docket_number": "SC2026-0726",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Rodney Lockett v. The Florida Bar",
+    "case_name_full": "Rodney Lockett v. The Florida Bar",
+    "case_uuid": "78bd72a8-b70d-4479-a5e2-7436c1e7ba57",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T13:49:00Z",
+    "docket_number": "SC2026-0737",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "The Florida Bar v. Grant A. Baros, Jr.",
+    "case_name_full": "The Florida Bar v. Grant A. Baros, Jr.",
+    "case_uuid": "f2390af3-543f-4609-9461-bab914667ab2",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000061,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T14:08:00Z",
+    "docket_number": "SC2026-0727",
+    "docket_type": "bar",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Florida Bar",
+      "Order to Show Cause"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2026-50,851(15A)OSC",
+        "court_id": "fladma",
+        "court_name": "Administrative Agency"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "N.C. v. F.F.",
+    "case_name_full": "N.C. v. F.F.",
+    "case_uuid": "7498fd4f-3844-4d33-85e8-d08fad7c705c",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T14:56:00Z",
+    "docket_number": "SC2026-0728",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "6D2026-0711;",
+        "court_id": "flca06",
+        "court_name": "6th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Jose Mateo v. State of Florida",
+    "case_name_full": "Jose Mateo v. State of Florida",
+    "case_uuid": "72c9ede8-d5b5-4089-bd6e-69883f40c868",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T15:09:00Z",
+    "docket_number": "SC2026-0729",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "3D2026-0270;",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Junior Simon v. State of Florida",
+    "case_name_full": "Junior Simon v. State of Florida",
+    "case_uuid": "69a03d8c-4d18-446c-b447-878bd6524dba",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T15:19:00Z",
+    "docket_number": "SC2026-0730",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "062023CF005070A8881",
+        "court_id": "flca04",
+        "court_name": "4th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Joel Barcelona v. State of Florida",
+    "case_name_full": "Joel Barcelona v. State of Florida",
+    "case_uuid": "fa9671a6-7d7d-42b0-a4bf-b7940b25becf",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T15:23:00Z",
+    "docket_number": "SC2026-0731",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "132003CF0037930001XX",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Bradley Dorman v. State of Florida",
+    "case_name_full": "Bradley Dorman v. State of Florida",
+    "case_uuid": "37877fa3-33b4-45c0-87a3-b6f81612d4c8",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T15:31:00Z",
+    "docket_number": "SC2026-0732",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "4D2025-2394;",
+        "court_id": "flca04",
+        "court_name": "4th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Nathaniel Brown v. State of Florida",
+    "case_name_full": "Nathaniel Brown v. State of Florida",
+    "case_uuid": "4af6f19d-8011-483d-9f84-1f25a4365954",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T15:39:00Z",
+    "docket_number": "SC2026-0733",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "3D2025-0399;",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Rodrick Johnson Sams v. State of Florida",
+    "case_name_full": "Rodrick Johnson Sams v. State of Florida",
+    "case_uuid": "e2eb797a-cb0a-4bba-8436-b4788f9ce6c1",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T15:41:00Z",
+    "docket_number": "SC2026-0734",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "132000CF0215460001XX",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "",
+    "case_name_full": "",
+    "case_uuid": "6bda1492-b774-4445-acd1-28718d610a63",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-12",
+    "datetime_filed": "2026-05-12T19:18:00Z",
+    "docket_number": "SC2026-0735",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "4D2025-2661;",
+        "court_id": "flca04",
+        "court_name": "4th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Andrew Richard Lukehart v. State of Florida",
+    "case_name_full": "Andrew Richard Lukehart v. State of Florida",
+    "case_uuid": "54ae5aa2-bab7-4950-84c4-4b89005e83dc",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000010,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T13:42:00Z",
+    "docket_number": "SC2026-0736",
+    "docket_type": "death_appeal",
+    "docket_type_raw": [
+      "Mandatory Review",
+      "Death Penalty Appeal",
+      "3.851 Successor"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "161996CF002645AXXXMA",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Fourth Judicial Circuit, Duval County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Cynthia Sanders-Bey v. Ariel Conde",
+    "case_name_full": "Cynthia Sanders-Bey v. Ariel Conde",
+    "case_uuid": "fd14298a-b887-439e-8019-2291fdd19b45",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000040,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T14:13:00Z",
+    "docket_number": "SC2026-0738",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Dual Basis Combination"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "3D2026-0611;",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "K & M Electric Supply, Inc. v. Brown Electrical Solutions, LLC",
+    "case_name_full": "K & M Electric Supply, Inc. v. Brown Electrical Solutions, LLC",
+    "case_uuid": "6f46e002-ae24-4fb2-8029-6ea2e8e346c0",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T16:28:00Z",
+    "docket_number": "SC2026-0739",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "4D2025-1740;",
+        "court_id": "flca04",
+        "court_name": "4th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Luther R. Woods v. State of Florida",
+    "case_name_full": "Luther R. Woods v. State of Florida",
+    "case_uuid": "0aa601b1-71be-4029-a884-205a00c331f8",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T16:59:00Z",
+    "docket_number": "SC2026-0740",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "482011CF003731000AOX",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Ninth Judicial Circuit, Orange County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "McArthur Helm v. Aramark Food Service",
+    "case_name_full": "McArthur Helm v. Aramark Food Service",
+    "case_uuid": "602f6b95-60cf-4fc3-8270-1c2ba122d9f5",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T17:14:00Z",
+    "docket_number": "SC2026-0741",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "612025CA000129CAAXMX",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Third Judicial Circuit, Suwannee County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Neelam Uppal v. Las Palmas Condominium Association Inc.",
+    "case_name_full": "Neelam Uppal v. Las Palmas Condominium Association Inc.",
+    "case_uuid": "ea2f9e64-adbb-4f78-adc4-c442d889d10a",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T17:18:00Z",
+    "docket_number": "SC2026-0742",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "2D2025-2440;",
+        "court_id": "flca02",
+        "court_name": "2nd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Rosa Valdes v. Clerk of Hillsborough County",
+    "case_name_full": "Rosa Valdes v. Clerk of Hillsborough County",
+    "case_uuid": "eb621164-4134-4a6b-9992-c86d16937728",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-13",
+    "datetime_filed": "2026-05-13T17:44:00Z",
+    "docket_number": "SC2026-0745",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Nicholas James Albrecht v. State of Florida",
+    "case_name_full": "Nicholas James Albrecht v. State of Florida",
+    "case_uuid": "c678edc1-1456-4a97-864c-666dbcbbb936",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000044,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T14:07:00Z",
+    "docket_number": "SC2026-0756",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Mandamus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "1D2024-2794",
+        "court_id": "flca01",
+        "court_name": "1st District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Joe Hunter, IV v. State of Florida",
+    "case_name_full": "Joe Hunter, IV v. State of Florida",
+    "case_uuid": "9bafde97-6eb0-41fd-9764-aafd9462306c",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T15:10:00Z",
+    "docket_number": "SC2026-0746",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "1D2025-0794;",
+        "court_id": "flca01",
+        "court_name": "1st District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Jessie Joseph v. State of Florida",
+    "case_name_full": "Jessie Joseph v. State of Florida",
+    "case_uuid": "6e4aed1e-9c0f-4cbf-a0b3-6a770eaa1cb6",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T15:19:00Z",
+    "docket_number": "SC2026-0747",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "062015CF003888A88810",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Seventeenth Judicial Circuit, Broward County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Antonio T. Martin v. State of Florida",
+    "case_name_full": "Antonio T. Martin v. State of Florida",
+    "case_uuid": "8da48acd-fd5d-4d7a-bd21-7cd28e352593",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T15:20:00Z",
+    "docket_number": "SC2026-0748",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "372021CF002412AXXXXX",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Second Judicial Circuit, Leon County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "David C. Myers v. State of Florida",
+    "case_name_full": "David C. Myers v. State of Florida",
+    "case_uuid": "47463d9b-cfbd-47c3-868e-f571a0008ab4",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000043,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T15:23:00Z",
+    "docket_number": "SC2026-0749",
+    "docket_type": "order",
+    "docket_type_raw": [
+      "Original Proceedings",
+      "Writ",
+      "Habeas Corpus"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "582009CF009442XXXANC",
+        "court_id": "flcrct",
+        "court_name": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Sekwanna Victor v. Julio M. Quadros",
+    "case_name_full": "Sekwanna Victor v. Julio M. Quadros",
+    "case_uuid": "6b04b5e9-7a87-4a6f-b93f-d07ecee7a232",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T16:22:00Z",
+    "docket_number": "SC2026-0744",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "3D2025-1417;",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Will Oscar Edwards, Jr. v. State of Florida",
+    "case_name_full": "Will Oscar Edwards, Jr. v. State of Florida",
+    "case_uuid": "04b4a487-ad9c-4f16-b2dd-e944e2df6e99",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T16:48:00Z",
+    "docket_number": "SC2026-0750",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "5D2025-3383;",
+        "court_id": "flca05",
+        "court_name": "5th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Timmothy A. Zeigler v. State of Florida",
+    "case_name_full": "Timmothy A. Zeigler v. State of Florida",
+    "case_uuid": "bba99621-be76-4884-95b0-834462d0c62a",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": true,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T16:55:00Z",
+    "docket_number": "SC2026-0751",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "5D2023-3340;",
+        "court_id": "flca05",
+        "court_name": "5th District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  },
+  {
+    "arguments": [],
+    "case_group_flag": null,
+    "case_name": "Hencile Dorsey v. State of Florida",
+    "case_name_full": "Hencile Dorsey v. State of Florida",
+    "case_uuid": "7040398f-31da-4704-9227-85ae461832d3",
+    "class_group_type": "",
+    "class_group_type_id": 0,
+    "classification_id": 1000035,
+    "closed_flag": false,
+    "court_abbreviation": "Supreme Court of Florida",
+    "court_id": "flsc",
+    "date_filed": "2026-05-14",
+    "datetime_filed": "2026-05-14T16:59:00Z",
+    "docket_number": "SC2026-0752",
+    "docket_type": "notice",
+    "docket_type_raw": [
+      "Discretionary Review",
+      "Notice to Invoke",
+      "Direct Conflict of Decisions"
+    ],
+    "entries": [],
+    "location": "",
+    "location_id": 0,
+    "originating_cases": [
+      {
+        "case_number": "3D2025-1325;",
+        "court_id": "flca03",
+        "court_name": "3rd District Court of Appeal"
+      }
+    ],
+    "panel_flag": null,
+    "parties": [],
+    "transfers": []
+  }
+]

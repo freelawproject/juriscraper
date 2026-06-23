@@ -1,9 +1,13 @@
 import re
+from abc import ABC, abstractmethod
 from datetime import date, datetime
-from typing import Generic, TypeVar
+from typing import ClassVar, Generic, TypeVar, final
 
 from pydantic import AliasPath, BaseModel, Field
 from pydantic_core import PydanticCustomError
+from typing_extensions import override
+
+from juriscraper.abstract_parser import LegacyParser
 
 ResultType = TypeVar("ResultType")
 
@@ -52,8 +56,6 @@ def florida_docket_number_validator(dn: str) -> str:
     :param dn: Florida docket number
 
     :return: Florida docket number unchanged
-
-    :raise: PydanticCustomError
     """
 
     if not FLORIDA_DN_RE.fullmatch(dn):
@@ -75,3 +77,20 @@ def datetime_str_to_date_validator(i: str) -> date:
     :return: The date component.
     """
     return datetime.fromisoformat(i).date()
+
+
+class FloridaPaginatedResultsParser(
+    LegacyParser[list[ResultType]], ABC, Generic[ResultType]
+):
+    endpoint: ClassVar[str] = ""
+
+    # Unfortunately, since generics in Python are weird, we have to reimplement
+    # this for each deriving class instead of just doing it once with the
+    # generic type.
+    @abstractmethod
+    def parse_full(self, i: str) -> FloridaPaginatedResults[ResultType]: ...
+
+    @override
+    @final
+    def _parse(self, i: str) -> list[ResultType]:
+        return self.parse_full(i).results
