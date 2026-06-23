@@ -130,3 +130,14 @@ class MergingError(AutoLoggingException):
     """Raised when metadata merging finds different values"""
 
     logging_level = logging.ERROR
+
+
+class BotChallengeError(AutoLoggingException):
+    """Raised when the source serves a bot/captcha challenge page instead
+    of the expected content (e.g. Radware Bot Manager, Cloudflare).
+
+    Raising loudly prevents silently ingesting zero results, which would
+    otherwise look like a successful scrape with no new opinions.
+    """
+
+    logging_level = logging.ERROR
