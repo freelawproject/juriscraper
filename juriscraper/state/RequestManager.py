@@ -70,6 +70,17 @@ class ScheduledRequest(Request):
         )
         self.follow_redirects: bool | UseClientDefault = follow_redirects
         self.response: asyncio.Future[Response] = asyncio.Future()
+        self.attempt: asyncio.Future[Response] = asyncio.Future()
+        self.allow_finalization: asyncio.Lock = asyncio.Lock()
+
+    async def finalize(self):
+        async with self.allow_finalization:
+            try:
+                response = await self.attempt
+            except Exception as e:
+                self.response.set_exception(e)
+            else:
+                self.response.set_result(response)
 
     @classmethod
     def _from_httpx_request(
@@ -88,6 +99,8 @@ class ScheduledRequest(Request):
         instance.__dict__.update(request.__dict__)
         instance.follow_redirects = follow_redirects
         instance.response = asyncio.Future()
+        instance.attempt = asyncio.Future()
+        instance.allow_finalization = asyncio.Lock()
         return instance
 
 
@@ -232,8 +245,8 @@ class RequestManager(AsyncClient):
         Args:
             request: The request to schedule."""
         await self._ensure_loop()
-        if request.response.done():
-            request.response = asyncio.Future()
+        if request.attempt.done():
+            request.attempt = asyncio.Future()
         logger.debug(
             "Queueing request: %s",
             request.url,
@@ -292,9 +305,9 @@ class RequestManager(AsyncClient):
             timeout=timeout,
         )
 
-        listen_tasks = {
+        tasks = {
             asyncio.create_task(h.listen(self, request)) for h in self.handlers
-        }
+        } | {asyncio.create_task(request.finalize())}
         logger.debug("Handlers listening: %s", request.url)
         _ = await self.enqueue_request(request)
 
@@ -302,12 +315,11 @@ class RequestManager(AsyncClient):
             "Request %s queued. Waiting for listen handlers to finish.",
             request.url,
         )
-        _ = await asyncio.gather(*listen_tasks)
+        _ = await asyncio.gather(*tasks)
         logger.debug(
             "Request queued and handlers finished. Waiting for response: %s",
             request.url,
         )
-
         return await request.response
 
     async def send(
@@ -341,10 +353,10 @@ class RequestManager(AsyncClient):
             _ = response.raise_for_status()
         except Exception as e:
             logger.warning("Request failed: %s (%s)", request.url, str(e))
-            request.response.set_exception(e)
+            request.attempt.set_exception(e)
         else:
             logger.debug("Request succeeded: %s", request.url)
-            request.response.set_result(response)
+            request.attempt.set_result(response)
 
         return response
 
@@ -428,35 +440,36 @@ class Retry(RequestHandler):
         maximum number of retries hasn't been hit yet."""
         backoff = self.backoff
         last_exc = None
-        for _ in range(self.max_retries):
-            try:
-                _ = await request.response
-            except HTTPStatusError as e:
-                if e.response.status_code not in self.retry_codes:
-                    logger.error(
-                        "Received %s from %s\nResponse: %s",
-                        e.response.status_code,
-                        e.request.url,
-                        e.response.text,
+        async with request.allow_finalization:
+            for _ in range(self.max_retries):
+                try:
+                    _ = await request.attempt
+                except HTTPStatusError as e:
+                    if e.response.status_code not in self.retry_codes:
+                        logger.error(
+                            "Received %s from %s\nResponse: %s",
+                            e.response.status_code,
+                            e.request.url,
+                            e.response.text,
+                        )
+                        return
+                    last_exc = e
+                except TimeoutException as e:
+                    last_exc = e
+                except NetworkError as e:
+                    last_exc = e
+                except Exception as e:
+                    logger.exception(
+                        "Unexpected error while processing request %s: %r",
+                        request.url,
+                        e,
                     )
                     return
-                last_exc = e
-            except TimeoutException as e:
-                last_exc = e
-            except NetworkError as e:
-                last_exc = e
-            except Exception as e:
-                logger.exception(
-                    "Unexpected error while processing request %s: %r",
-                    request.url,
-                    e,
-                )
-                return
-            else:
-                return
+                else:
+                    return
 
-            await asyncio.sleep(backoff)
-            backoff *= self.backoff_growth
-            await manager.enqueue_request(request)
+                await asyncio.sleep(backoff)
+                backoff *= self.backoff_growth
+                await manager.enqueue_request(request)
 
         logger.error("Max retries exceeded for %s: %r", request.url, last_exc)

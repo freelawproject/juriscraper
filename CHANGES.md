@@ -22,27 +22,35 @@ Changes:
 -
 
 Fixes:
-- `guam`: scrape current-year opinions from the new page; the legacy endpoint stopped getting updated mid-year and missed the newest opinions. Backscraping still uses the legacy endpoint for 2025 and prior #2004
 
+- `guam`: scrape current-year opinions from the new page; the legacy endpoint stopped getting updated mid-year and
+  missed the newest opinions. Backscraping still uses the legacy endpoint for 2025 and prior #2004
+- `Retry` request handler preventing other handlers from awaiting responses
 
 ## 3.0.25 - 2026-06-15
 
 Fixes:
+
 - `ca2` update HTML parsers since the site changed again #2001
 
 ## 3.0.24 - 2026-06-10
 
 Changes:
+
 - `dc` now collects the authoring judge, disposition, and per curiam status #1134
 
 Fixes:
+
 - `dc` now uses a browser user agent. It was failing with 403 Forbidden #1996
-- `bia`: assign a descending approximate `date_filed` (one day apart per row, starting from the middle of the year) so records preserve the source's date-descending order. Previously every record shared the same approximate date, so CL ordered them by case name and its DupChecker could stop before reaching newer opinions. #1934
+- `bia`: assign a descending approximate `date_filed` (one day apart per row, starting from the middle of the year) so
+  records preserve the source's date-descending order. Previously every record shared the same approximate date, so CL
+  ordered them by case name and its DupChecker could stop before reaching newer opinions. #1934
 - `miss`: fix an invalid UTF-8 byte in the example file and normalize its line endings to LF
 
 ## 3.0.23 - 2026-06-08
 
 Fixes:
+
 - `texbizct` was crashing on every run: the site's WAF blocks the per-document
   HEAD requests that were used to approximate `date_filed` from the
   `Last-Modified` header. The source now publishes a byline per opinion
@@ -59,6 +67,7 @@ Fixes:
 ## 3.0.22 - 2026-06-04
 
 Fixes:
+
 - `la` (Louisiana Supreme Court) was failing because lasc.org was rebuilt as a
   Blazor Server app: a plain GET returns only the JavaScript shell with no
   opinions, and the legacy http:// host now returns 521. The scraper now reads
@@ -72,6 +81,7 @@ Fixes:
 ## 3.0.21 - 2026-05-29
 
 Fixes:
+
 - `ny.Site.cleanup_content` wraps output in an html document envelope so
   doctor doesn't misclassify cleaned pages as `text/plain`. #1971
 - Skip the  `should_have_results`  error during historical backscrapes #1886
@@ -84,6 +94,7 @@ Fixes:
 ## 3.0.20 - 2026-05-21
 
 Fixes:
+
 - New Jersey opinion scrapers (`nj`, `njsuperctappdiv_p`, `njsuperctappdiv_u`,
   `njtaxct_p`, `njtaxct_u`) were 403'd by the Imperva WAF on njcourts.gov.
   Set a browser User-Agent and `needs_special_headers = True` so both the
@@ -98,6 +109,7 @@ Changes:
 - Add Python 3.14 support
 
 Fixes:
+
 - visuper: migrated to new public portal API; merged visuper_p and visuper_u #1945
 - `guam` opinions scraper now fetches from the new `legacydata/supreme-court-opinions` AJAX endpoint. The old
   `Supreme-Court-Opinions/Supreme-Court-Opinions.asp` page returns 404. #1938

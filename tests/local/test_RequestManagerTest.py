@@ -249,6 +249,34 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
+    async def test_last_try_is_response(self):
+        n = 0
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            nonlocal n
+            n += 1
+            if n == 2:
+                return httpx.Response(200, text="ok")
+            return httpx.Response(500, text="fail")
+
+        response = None
+
+        class Recorder(RequestHandler):
+            async def listen(self, manager, request):
+                nonlocal response
+                response = await request.response
+
+        manager = _make_manager(
+            handler, handlers=[Recorder(), Retry(max_retries=2)]
+        )
+        try:
+            _ = await manager.get("https://example.com/")
+            self.assertIsNotNone(response)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.text, "ok")
+        finally:
+            await manager.aclose()
+
 
 if __name__ == "__main__":
     unittest.main()
