@@ -22,10 +22,17 @@ Changes:
 -
 
 Fixes:
+- `nev`/`nevapp`: Nevada's appellate courts moved off their self-hosted C-Track CMS onto Thomson Reuters' cloud "ACIS" portal (`acis.nvcourts.gov`) around June 10, breaking the old `AdvanceOpinions` API. Reworked both scrapers to use the new portal's document-search API, parsing the citation, disposition, author/per curiam and panel out of each docket entry, and building the opinion PDF link directly from the response. Case names are cleaned (case-type parentheticals like "(CIVIL)" dropped, party parentheticals kept) and consolidated "C/W" dockets are appended to the docket number. Adds a paginated backscraper #2010
+- `Retry` request handler preventing other handlers from awaiting responses
+
+## 3.0.26 - 2026-06-17
+
+Fixes:
+- `guam`: scrape current-year opinions from the new page; the legacy endpoint stopped getting updated mid-year and missed the newest opinions. Backscraping still uses the legacy endpoint for 2025 and prior #2004
+- `minn`/`minnctapp_p`/`minnctapp_u`: mn.gov is fronted by Radware Bot Manager, which served a captcha page when the back-to-back scrapers tripped its rate limit. The captcha page has no results, so opinions were silently dropped (`minnctapp` stuck since April 7). Now adds a pre-request delay to respect the site's rate limit, only scrapes within the `Visit-time: 0000-1200` GMT window allowed by robots.txt (aborts the run otherwise), and raises `BotChallengeError` if a captcha page is still served instead of failing silently. Also, scrapers are no longer listed one after the other in `state.__init__.__all__` which will make them execute separately #2006
 
 - `guam`: scrape current-year opinions from the new page; the legacy endpoint stopped getting updated mid-year and
   missed the newest opinions. Backscraping still uses the legacy endpoint for 2025 and prior #2004
-- `Retry` request handler preventing other handlers from awaiting responses
 
 ## 3.0.25 - 2026-06-15
 
