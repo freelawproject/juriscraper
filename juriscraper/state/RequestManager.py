@@ -2,6 +2,7 @@
 
 import asyncio
 import time
+from abc import ABC, abstractmethod
 from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from dataclasses import dataclass, field
 from http.cookiejar import CookieJar
@@ -21,7 +22,6 @@ from httpx import (
     Response,
     TimeoutException,
 )
-from abc import ABC, abstractmethod
 from httpx._client import UseClientDefault
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -121,7 +121,9 @@ class RequestHandler:
 
 class RetryHandler(ABC):
     @abstractmethod
-    async def should_retry(self, request: ScheduledRequest, exc: Exception) -> bool:
+    async def should_retry(
+        self, request: ScheduledRequest, exc: Exception
+    ) -> bool:
         """Whether or not a request should be retried based on the exception it raised. Once `True` is
         returned, the request will be immediately re-queued so handlers wishing to implement backoff
         logic should call `asyncio.sleep`.
@@ -131,9 +133,13 @@ class RetryHandler(ABC):
             exc: The exception raised by this request"""
         ...
 
+
 class NoRetry(RetryHandler):
-    async def should_retry(self, request: ScheduledRequest, exc: Exception) -> bool:
+    async def should_retry(
+        self, request: ScheduledRequest, exc: Exception
+    ) -> bool:
         return False
+
 
 @dataclass
 class ExponentialBackoff(RetryHandler):
@@ -154,19 +160,24 @@ class ExponentialBackoff(RetryHandler):
         default_factory=lambda: {500, 502, 503, 504, 506, 507, 508}
     )
 
-    async def should_retry(self, request: ScheduledRequest, exc: Exception) -> bool:
+    async def should_retry(
+        self, request: ScheduledRequest, exc: Exception
+    ) -> bool:
         if request.attempt > self.max_retries:
             return False
 
         match exc:
-            case HTTPStatusError() as e if e.response.status_code not in self.retry_codes:
+            case HTTPStatusError() as e if (
+                e.response.status_code not in self.retry_codes
+            ):
                 return False
             case HTTPStatusError() | TimeoutException() | NetworkError():
-                await asyncio.sleep(self.backoff * (self.backoff_growth ** request.attempt))
+                await asyncio.sleep(
+                    self.backoff * (self.backoff_growth**request.attempt)
+                )
                 return True
 
         return False
-
 
 
 class RequestManager(AsyncClient):

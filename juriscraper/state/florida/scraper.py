@@ -165,9 +165,7 @@ class FloridaScraper:
             handlers: Supplementary request handlers to pass to the :class:`RequestManager` instance."""
         if retry is None:
             retry = ExponentialBackoff(
-                max_retries=3,
-                backoff=2.0,
-                backoff_growth=2.0
+                max_retries=3, backoff=2.0, backoff_growth=2.0
             )
         self.manager: RequestManager = RequestManager(
             handlers=[
