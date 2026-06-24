@@ -191,7 +191,7 @@ class RequestManager(AsyncClient):
         self,
         handlers: Sequence[RequestHandler] | None = None,
         *,
-        retry: RetryHandler = NoRetry(),
+        retry: RetryHandler | None = None,
         auth: tuple[str | bytes, str | bytes] | Auth | None = None,
         params: Mapping[str, PrimitiveData | Sequence[PrimitiveData]]
         | None = None,
@@ -220,6 +220,8 @@ class RequestManager(AsyncClient):
             default_encoding: Default encoding for responses if not specified by `Content-Type`
                 header (httpx AsyncClient passthrough)
         """
+        if retry is None:
+            retry = NoRetry()
         extra_headers = {
             "Cache-Control": "no-cache, max-age=0, must-revalidate",
             "Pragma": "no-cache",
