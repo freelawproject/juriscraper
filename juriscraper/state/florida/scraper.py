@@ -63,11 +63,12 @@ from juriscraper.state.florida.metadata import (
 )
 from juriscraper.state.florida.parties import FloridaPartyListParser
 from juriscraper.state.RequestManager import (
+    ExponentialBackoff,
     PrimitiveData,
     RateLimit,
     RequestHandler,
     RequestManager,
-    Retry,
+    RetryHandler,
 )
 
 logger = make_default_logger()
@@ -153,25 +154,27 @@ class FloridaScraper:
         self,
         *,
         rps: float = 2.5,
-        max_retries: int = 3,
-        backoff: float = 2.0,
-        backoff_growth: float = 2.0,
+        retry: RetryHandler | None = None,
         handlers: list[RequestHandler] | None = None,
     ) -> None:
         """Create a new :class:`FloridaScraper` instance.
 
         Args:
+            rps: Rate-limit for requests
+            retry: Retry specification for requests. Defaults to maximum 3 retries with a base sleep of 2 seconds and a growth factor of 2x per retry.
             handlers: Supplementary request handlers to pass to the :class:`RequestManager` instance."""
+        if retry is None:
+            retry = ExponentialBackoff(
+                max_retries=3,
+                backoff=2.0,
+                backoff_growth=2.0
+            )
         self.manager: RequestManager = RequestManager(
             handlers=[
                 RateLimit(rps=rps),
-                Retry(
-                    max_retries=max_retries,
-                    backoff=backoff,
-                    backoff_growth=backoff_growth,
-                ),
             ]
             + (handlers or []),
+            retry=retry,
             base_url=FLORIDA_API_BASE,
         )
         self._courts_future: (

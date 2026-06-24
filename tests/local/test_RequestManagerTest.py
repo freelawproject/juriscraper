@@ -6,10 +6,10 @@ import httpx
 
 from juriscraper.state.RequestManager import (
     USER_AGENT,
+    ExponentialBackoff,
     RateLimit,
     RequestHandler,
     RequestManager,
-    Retry,
     ScheduledRequest,
 )
 
@@ -223,7 +223,7 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
                 return httpx.Response(500, text="fail")
             return httpx.Response(200, text="ok")
 
-        manager = _make_manager(handler, handlers=[Retry(max_retries=3)])
+        manager = _make_manager(handler, retry=ExponentialBackoff(max_retries=3))
         try:
             response = await manager.get("https://example.com/")
             self.assertEqual(response.status_code, 200)
@@ -239,7 +239,7 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
             attempts += 1
             return httpx.Response(500, text="fail")
 
-        manager = _make_manager(handler, handlers=[Retry(max_retries=2)])
+        manager = _make_manager(handler, retry=ExponentialBackoff(max_retries=3))
         try:
             with self.assertRaises(httpx.HTTPStatusError):
                 await manager.get("https://example.com/")
@@ -267,7 +267,7 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
                 response = await request.response
 
         manager = _make_manager(
-            handler, handlers=[Recorder(), Retry(max_retries=2)]
+            handler, handlers=[Recorder()], retry=ExponentialBackoff(max_retries=3)
         )
         try:
             _ = await manager.get("https://example.com/")
