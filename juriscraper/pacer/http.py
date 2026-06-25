@@ -209,6 +209,11 @@ class PacerSession(requests.Session):
         """
         if court_id:
             self.acms_cookies[court_id].update(response.cookies)
+            # clear Secure: the server re-issues cookies (e.g. Azure's
+            # ARRAffinity) with Secure=True on most responses, which would
+            # overwrite our desecured copies and break the webhook-sentry
+            # https->http workaround.
+            self._desecure_acms_cookies(self.acms_cookies[court_id])
 
     def store_acms_token(
         self, court_id: str, token: dict, user_data: dict | None = None
