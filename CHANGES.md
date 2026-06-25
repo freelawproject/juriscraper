@@ -19,7 +19,12 @@ Features:
 - Add Florida scraper
 
 Changes:
--
+- `alaska` and `alaskactapp`: migrated to the Westlaw-hosted "Alaska Case Law
+  Service" (https://govt.westlaw.com/akcases), where the court now publishes
+  its opinions. Both courts share one search feed and are split by court label.
+  Precedential status is parsed per opinion. Retired the `alaska_slip` and
+  `alaska_u` scrapers, whose document-type distinctions the new source does not
+  expose; their opinions are now covered by `alaska`/`alaskactapp` #2009
 
 Fixes:
 - `nev`/`nevapp`: Nevada's appellate courts moved off their self-hosted C-Track CMS onto Thomson Reuters' cloud "ACIS" portal (`acis.nvcourts.gov`) around June 10, breaking the old `AdvanceOpinions` API. Reworked both scrapers to use the new portal's document-search API, parsing the citation, disposition, author/per curiam and panel out of each docket entry, and building the opinion PDF link directly from the response. Case names are cleaned (case-type parentheticals like "(CIVIL)" dropped, party parentheticals kept) and consolidated "C/W" dockets are appended to the docket number. Adds a paginated backscraper #2010
