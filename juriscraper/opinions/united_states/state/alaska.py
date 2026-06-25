@@ -23,6 +23,7 @@ from urllib.parse import urlencode, urljoin
 from lxml import html
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -105,6 +106,9 @@ class Site(OpinionSiteLinear):
     )
     # Split the panel into individual judges on commas and "and"
     panel_split_regex = re.compile(r",|\s+and\s+")
+    # Name suffixes that the comma split separates from their judge, e.g.
+    # "Moore, Jr." -> ["Moore", "Jr"]; reattached during panel parsing
+    judge_suffixes = ("Jr", "Sr", "II", "III", "IV")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -116,6 +120,10 @@ class Site(OpinionSiteLinear):
             "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
             "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
+        # Tell the caller (CourtListener) to download opinions with the same
+        # browser headers, otherwise the per-document fetch goes out as
+        # "CourtListener" and trips the bot management we just bypassed
+        self.needs_special_headers = True
         # Opinions are served as HTML documents, not PDFs
         self.expected_content_types = ["text/html"]
         self.make_backscrape_iterable(kwargs)
@@ -195,6 +203,14 @@ class Site(OpinionSiteLinear):
 
             # Build a clean, downloadable document URL from the result link
             doc_id = self.document_id_regex.search(anchor[0].get("href"))
+            if not doc_id:
+                logger.error(
+                    "%s: could not extract document id from result link, "
+                    "skipping row '%s'",
+                    self.court_id,
+                    description,
+                )
+                continue
             url = urljoin(
                 self.base_url,
                 f"Document/{doc_id.group(1)}?"
@@ -213,19 +229,24 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def cleanup_content(self, content: bytes) -> str | bytes:
+    def cleanup_content(self, content: bytes) -> str:
         """Isolate the opinion from the surrounding Westlaw site chrome.
 
-        Deletes hash altering content
+        Also deletes hash-altering per-request tokens.
 
         :param content: the raw document page bytes
-        :return: the opinion document HTML, or the original content if the
-            expected container is missing
+        :return: the opinion document HTML
+        :raises InvalidDocumentError: if the opinion container is missing,
+            e.g. the request was served a bot-block / captcha page; raising
+            here skips just this document instead of ingesting the junk page
         """
         tree = html.fromstring(content)
         nodes = tree.xpath("//*[@id='co_document']")
         if not nodes:
-            return content
+            raise InvalidDocumentError(
+                f"{self.court_id}: opinion container '#co_document' missing; "
+                "the document request was likely blocked"
+            )
         cleaned = html.tostring(nodes[0], encoding="unicode")
 
         # Strip per-request tokens from embedded image/link URLs so the
@@ -281,6 +302,10 @@ class Site(OpinionSiteLinear):
         """
         if self.test_mode_enabled():
             return await super()._download(request_dict)
+
+        # Mark the download as done so parse() does not re-run it (and
+        # re-append every case) after `_download_backwards` does the work
+        self.downloader_executed = True
 
         await self._request_url_get(urljoin(self.base_url, "Index"))
         self.request["session"].cookies.set(
@@ -365,11 +390,17 @@ class Site(OpinionSiteLinear):
         # The panel of judges from the "Before:" line
         if panel_match := self.panel_regex.search(scraped_text):
             panel = self.panel_title_regex.sub("", panel_match.group("panel"))
-            judges = [
-                judge.strip(" .,")
-                for judge in self.panel_split_regex.split(panel)
-                if judge.strip(" .,")
-            ]
+            judges = []
+            for judge in self.panel_split_regex.split(panel):
+                judge = judge.strip(" .,")
+                if not judge:
+                    continue
+                # Reattach a suffix the comma split off, e.g. "Moore, Jr."
+                if judge in self.judge_suffixes and judges:
+                    suffix = f"{judge}." if judge in ("Jr", "Sr") else judge
+                    judges[-1] = f"{judges[-1]} {suffix}"
+                else:
+                    judges.append(judge)
             if judges:
                 metadata.setdefault("OpinionCluster", {})["judges"] = (
                     ", ".join(judges)
