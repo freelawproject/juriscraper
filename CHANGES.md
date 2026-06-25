@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+
+- Add Florida scraper
 
 Changes:
 - `PacerSession` now authenticates ACMS requests with per-court cookie sessions
@@ -23,7 +24,59 @@ Changes:
   freelawproject/courtlistener#5921
 
 Fixes:
--
+- `nev`/`nevapp`: Nevada's appellate courts moved off their self-hosted C-Track CMS onto Thomson Reuters' cloud "ACIS" portal (`acis.nvcourts.gov`) around June 10, breaking the old `AdvanceOpinions` API. Reworked both scrapers to use the new portal's document-search API, parsing the citation, disposition, author/per curiam and panel out of each docket entry, and building the opinion PDF link directly from the response. Case names are cleaned (case-type parentheticals like "(CIVIL)" dropped, party parentheticals kept) and consolidated "C/W" dockets are appended to the docket number. Adds a paginated backscraper #2010
+
+
+## 3.0.26 - 2026-06-17
+
+Fixes:
+- `guam`: scrape current-year opinions from the new page; the legacy endpoint stopped getting updated mid-year and missed the newest opinions. Backscraping still uses the legacy endpoint for 2025 and prior #2004
+- `minn`/`minnctapp_p`/`minnctapp_u`: mn.gov is fronted by Radware Bot Manager, which served a captcha page when the back-to-back scrapers tripped its rate limit. The captcha page has no results, so opinions were silently dropped (`minnctapp` stuck since April 7). Now adds a pre-request delay to respect the site's rate limit, only scrapes within the `Visit-time: 0000-1200` GMT window allowed by robots.txt (aborts the run otherwise), and raises `BotChallengeError` if a captcha page is still served instead of failing silently. Also, scrapers are no longer listed one after the other in `state.__init__.__all__` which will make them execute separately #2006
+
+
+## 3.0.25 - 2026-06-15
+
+Fixes:
+- `ca2` update HTML parsers since the site changed again #2001
+
+## 3.0.24 - 2026-06-10
+
+Changes:
+- `dc` now collects the authoring judge, disposition, and per curiam status #1134
+
+Fixes:
+- `dc` now uses a browser user agent. It was failing with 403 Forbidden #1996
+- `bia`: assign a descending approximate `date_filed` (one day apart per row, starting from the middle of the year) so records preserve the source's date-descending order. Previously every record shared the same approximate date, so CL ordered them by case name and its DupChecker could stop before reaching newer opinions. #1934
+- `miss`: fix an invalid UTF-8 byte in the example file and normalize its line endings to LF
+
+## 3.0.23 - 2026-06-08
+
+Fixes:
+- `texbizct` was crashing on every run: the site's WAF blocks the per-document
+  HEAD requests that were used to approximate `date_filed` from the
+  `Last-Modified` header. The source now publishes a byline per opinion
+  ("Whitehill, J. | June 3, 2026"), so drop the HEAD requests and parse the
+  exact date and the authoring judge from the byline instead. Also fix the
+  summary xpath, which was concatenating the summaries of all following
+  cases. #1992
+- `ca2_p` and `ca2_u` were silently returning zero results since 2026-05-04:
+  the dtSearch results page now wraps the Caption value in an anchor instead
+  of plain text, so every row was skipped as incomplete. The label parser now
+  falls back to the anchor's text when the label has no plain-text value.
+  Oral arguments (`ca2`) share the parser but were unaffected. #1991
+
+## 3.0.22 - 2026-06-04
+
+Fixes:
+- `la` (Louisiana Supreme Court) was failing because lasc.org was rebuilt as a
+  Blazor Server app: a plain GET returns only the JavaScript shell with no
+  opinions, and the legacy http:// host now returns 521. The scraper now reads
+  the RSS feed for recent Opinions sub-pages and drives the Blazor SignalR
+  circuit to retrieve the server-rendered news release. #1983
+- `ca9` oral argument audio URLs now point to `cdn.ca9.uscourts.gov`; the old
+  `www` host started returning 404 pages after the site redesign (#1987)
+- `uscfc` was crashing ingestion because some opinions (attorney discipline
+  orders) now have relative download links. Resolve them with `urljoin` #1986
 
 ## 3.0.21 - 2026-05-29
 

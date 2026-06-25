@@ -1,0 +1,937 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "f1f7f12e-593c-4210-b060-cfbe023b704a",
+          "caseNumber": "SC2026-0703",
+          "caseTitle": "The Florida Bar v. Joshua Mark Silverman",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Florida Bar - Complaint",
+          "caseClassificationID": "1000050",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T15:00:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Administrative Agency",
+              "originatingCaseNumber": "2026-00,169(8B)"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "56976b0a-7ea9-49da-8283-5077e12050e7",
+          "caseNumber": "SC2026-0704",
+          "caseTitle": "Shelby Nealy v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Mandatory Review - Death Penalty Appeal - Initial",
+          "caseClassificationID": "1000000",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T15:01:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522019CF000140000APC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "91f1f444-0aff-413b-b08c-87c1e28630b4",
+          "caseNumber": "SC2026-0705",
+          "caseTitle": "Terren Posey v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T15:25:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Ninth Judicial Circuit, Orange County",
+              "originatingCaseNumber": "482025CF003406000AOX"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "78ac62b8-e055-41c9-b956-386b864ca49c",
+          "caseNumber": "SC2026-0706",
+          "caseTitle": "James D. Gordon v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Prohibition",
+          "caseClassificationID": "1000045",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T15:47:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Second Judicial Circuit, Franklin County",
+              "originatingCaseNumber": "192024CF000281CFBXMX;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "ec3d052f-c75a-41f9-b204-62df38aa49b8",
+          "caseNumber": "SC2026-0707",
+          "caseTitle": "Larry D. Richardson v. Ricky Dixon, Department of Corrections Secretary, et al.,",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T16:15:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "6th District Court of Appeal",
+              "originatingCaseNumber": "6D2025-0731;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "a840dd09-f526-4903-8bc4-b56cbd17399c",
+          "caseNumber": "SC2026-0708",
+          "caseTitle": "Global Hookah Distributors, Inc. v. Department of Business and Professional Regulation, Division of Alcoholic Beverages and Tobacco",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T19:09:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "1st District Court of Appeal",
+              "originatingCaseNumber": "1D2023-3308;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "7ea1349f-a972-4462-8442-dc8ad049f553",
+          "caseNumber": "SC2026-0709",
+          "caseTitle": "In re: Petition for Disciplinary Revocation of Michael Paul Brundage",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Florida Bar - Disciplinary Revocation without Leave to Seek Readmission",
+          "caseClassificationID": "1000056",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T19:54:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Administrative Agency",
+              "originatingCaseNumber": "2026-10,770(13B)(HDR)"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "82b80627-afaf-4e64-a040-a1e7c79a9d8b",
+          "caseNumber": "SC2026-0710",
+          "caseTitle": "Global Hookah Distributors, Inc. v. Department of Business and Professional Regulation, Division of Alcoholic Beverages and Tobacco",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T19:57:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "1st District Court of Appeal",
+              "originatingCaseNumber": "1D2023-2608;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "0a761108-02c1-4b3d-8ec6-ee3b75440abf",
+          "caseNumber": "SC2026-0711",
+          "caseTitle": "The Florida Bar v. William Andrew Jones",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Florida Bar - Determination or Judgment of Guilt (Felony Conviction)",
+          "caseClassificationID": "1000054",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-05T21:56:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Administrative Agency",
+              "originatingCaseNumber": "2026-10,449(13A)"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "3b9fc06c-da8c-432b-bc51-0c97a4a4659a",
+          "caseNumber": "SC2026-0713",
+          "caseTitle": "Kevin  Beach v. Christina Matias",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-06T03:16:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Eleventh Judicial Circuit, Miami-Dade County",
+              "originatingCaseNumber": "132026DR000569A00104"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "706c3df4-393d-4672-ad96-cf00fca5bbae",
+          "caseNumber": "SC2026-0712",
+          "caseTitle": "Michelle Maupin v. Manny Diaz, Jr., Florida Commissioner of Education",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-06T13:18:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "1st District Court of Appeal",
+              "originatingCaseNumber": "1D2025-0121;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "7169c462-5f1a-42d0-a188-25bc15a593a3",
+          "caseNumber": "SC2026-0717",
+          "caseTitle": "Ashley Jenkins v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-07T03:26:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "6th District Court of Appeal",
+              "originatingCaseNumber": "6D2026-0846;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "a41647ec-3fb1-479d-8e84-315286fbb85f",
+          "caseNumber": "SC2026-0714",
+          "caseTitle": "Richard Farina v. Navy Federal Credit Union, et al.",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-07T13:49:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "1st District Court of Appeal",
+              "originatingCaseNumber": "1D2026-0266;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "aecf6a0d-2294-4893-8644-d94f34535233",
+          "caseNumber": "SC2026-0716",
+          "caseTitle": "In Re: Amendments to Florida Rules of General Practice and Judicial Administration",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Rules - Amendment to Rules - General Practice and Judicial Administration",
+          "caseClassificationID": "1000291",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-07T13:49:00.000+00:00"
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "1a07f932-1ca6-4d51-b873-ddcfeb5a1cbf",
+          "caseNumber": "SC2026-0715",
+          "caseTitle": "Orlando Castillo v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-07T17:18:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "4th District Court of Appeal",
+              "originatingCaseNumber": "4D2019-1882;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "89bf8848-1bd8-442c-9d9d-184a60717b55",
+          "caseNumber": "SC2026-0722",
+          "caseTitle": "Merlin Chester Warner v. Della Ann Burton Warner",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-08T12:38:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "6th District Court of Appeal",
+              "originatingCaseNumber": "6D2026-0041;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "64450734-61b7-4549-91f3-0abc51988f1d",
+          "caseNumber": "SC2026-0723",
+          "caseTitle": "In re Guardianship of Theresa Marie Schiavo, Mary Schindler; Bobby Schindler; and Terri Schiavo Life & Hope Network v. Michael Schiavo",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-08T13:14:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "2nd District Court of Appeal",
+              "originatingCaseNumber": "2D2025-0671;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e9939e0d-61ca-4c98-82c2-6c6c0b630be2",
+          "caseNumber": "SC2026-0718",
+          "caseTitle": "Richard Knight v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Mandatory Review - Death Penalty Appeal - 3.851 Successor",
+          "caseClassificationID": "1000010",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-08T13:23:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Seventeenth Judicial Circuit, Broward County",
+              "originatingCaseNumber": "062001CF014055A88810"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e6faa0f1-91ff-4acf-b14f-4110d8f31800",
+          "caseNumber": "SC2026-0719",
+          "caseTitle": "Tirza Diaz de Villegas v. Ulysses Diaz de Villegas",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Constitutional Construction",
+          "caseClassificationID": "1000033",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-08T14:32:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "3D2024-1369;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "457fac30-5872-4acc-b7bd-7f2ee6f332ba",
+          "caseNumber": "SC2026-0720",
+          "caseTitle": "Albert Olegovich Boyarkin v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-08T16:35:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County",
+              "originatingCaseNumber": "582024CF003152XXXANC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "73e0989f-1839-47d2-8fe6-d631baafc0da",
+          "caseNumber": "SC2026-0721",
+          "caseTitle": "Charles J. Clark v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-08T16:47:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "2nd District Court of Appeal",
+              "originatingCaseNumber": "2D2025-1827;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "59ea96d8-bedd-4547-81a6-c7b5621794b9",
+          "caseNumber": "SC2026-0724",
+          "caseTitle": "David Aubel v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-11T14:11:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "4th District Court of Appeal",
+              "originatingCaseNumber": "4D2025-0620;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "a331e6ec-ef0b-4de5-afc7-8e7038d13688",
+          "caseNumber": "SC2026-0725",
+          "caseTitle": "Albert Dennis v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-11T16:24:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Fifteenth Judicial Circuit, Palm Beach County",
+              "originatingCaseNumber": "502001CF008512AXXXMB"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "a474f223-c3b6-4402-a162-502de87b1a73",
+          "caseNumber": "SC2026-0726",
+          "caseTitle": "Thomas Robert Teixeira v. Sheriff, Suwannee County",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-11T18:03:00.000+00:00"
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "78bd72a8-b70d-4479-a5e2-7436c1e7ba57",
+          "caseNumber": "SC2026-0737",
+          "caseTitle": "Rodney Lockett v. The Florida Bar",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T13:49:00.000+00:00"
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "f2390af3-543f-4609-9461-bab914667ab2",
+          "caseNumber": "SC2026-0727",
+          "caseTitle": "The Florida Bar v. Grant A. Baros, Jr.,",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Florida Bar - Order to Show Cause",
+          "caseClassificationID": "1000061",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T14:08:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Administrative Agency",
+              "originatingCaseNumber": "2026-50,851(15A)OSC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "7498fd4f-3844-4d33-85e8-d08fad7c705c",
+          "caseNumber": "SC2026-0728",
+          "caseTitle": "N.C. v. F.F.",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T14:56:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "6th District Court of Appeal",
+              "originatingCaseNumber": "6D2026-0711;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "72c9ede8-d5b5-4089-bd6e-69883f40c868",
+          "caseNumber": "SC2026-0729",
+          "caseTitle": "Jose Mateo v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T15:09:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "3D2026-0270;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "69a03d8c-4d18-446c-b447-878bd6524dba",
+          "caseNumber": "SC2026-0730",
+          "caseTitle": "Junior Simon v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T15:19:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "4th District Court of Appeal",
+              "originatingCaseNumber": "062023CF005070A8881"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "fa9671a6-7d7d-42b0-a4bf-b7940b25becf",
+          "caseNumber": "SC2026-0731",
+          "caseTitle": "Joel Barcelona v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T15:23:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "132003CF0037930001XX"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "37877fa3-33b4-45c0-87a3-b6f81612d4c8",
+          "caseNumber": "SC2026-0732",
+          "caseTitle": "Bradley Dorman v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T15:31:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "4th District Court of Appeal",
+              "originatingCaseNumber": "4D2025-2394;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "4af6f19d-8011-483d-9f84-1f25a4365954",
+          "caseNumber": "SC2026-0733",
+          "caseTitle": "Nathaniel Brown v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T15:39:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "3D2025-0399;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e2eb797a-cb0a-4bba-8436-b4788f9ce6c1",
+          "caseNumber": "SC2026-0734",
+          "caseTitle": "Rodrick Johnson Sams v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T15:41:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "132000CF0215460001XX"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "6bda1492-b774-4445-acd1-28718d610a63",
+          "caseNumber": "SC2026-0735",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-12T19:18:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "4th District Court of Appeal",
+              "originatingCaseNumber": "4D2025-2661;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "54ae5aa2-bab7-4950-84c4-4b89005e83dc",
+          "caseNumber": "SC2026-0736",
+          "caseTitle": "Andrew Richard Lukehart v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Mandatory Review - Death Penalty Appeal - 3.851 Successor",
+          "caseClassificationID": "1000010",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T13:42:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Fourth Judicial Circuit, Duval County",
+              "originatingCaseNumber": "161996CF002645AXXXMA"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "fd14298a-b887-439e-8019-2291fdd19b45",
+          "caseNumber": "SC2026-0738",
+          "caseTitle": "Cynthia Sanders-Bey v. Ariel Conde, et al.",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Dual Basis Combination",
+          "caseClassificationID": "1000040",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T14:13:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "3D2026-0611;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "6f46e002-ae24-4fb2-8029-6ea2e8e346c0",
+          "caseNumber": "SC2026-0739",
+          "caseTitle": "K & M Electric Supply, Inc. v. Brown Electrical Solutions, LLC, et al.",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T16:28:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "4th District Court of Appeal",
+              "originatingCaseNumber": "4D2025-1740;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "0aa601b1-71be-4029-a884-205a00c331f8",
+          "caseNumber": "SC2026-0740",
+          "caseTitle": "Luther R. Woods v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T16:59:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Ninth Judicial Circuit, Orange County",
+              "originatingCaseNumber": "482011CF003731000AOX"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "602f6b95-60cf-4fc3-8270-1c2ba122d9f5",
+          "caseNumber": "SC2026-0741",
+          "caseTitle": "McArthur Helm v. Aramark Food Service",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T17:14:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Third Judicial Circuit, Suwannee County",
+              "originatingCaseNumber": "612025CA000129CAAXMX"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "ea2f9e64-adbb-4f78-adc4-c442d889d10a",
+          "caseNumber": "SC2026-0742",
+          "caseTitle": "Neelam Uppal v. Las Palmas Condominium Association Inc., et al.,",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T17:18:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "2nd District Court of Appeal",
+              "originatingCaseNumber": "2D2025-2440;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "eb621164-4134-4a6b-9992-c86d16937728",
+          "caseNumber": "SC2026-0745",
+          "caseTitle": "Rosa Valdes v. Clerk of Hillsborough County",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-13T17:44:00.000+00:00"
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "c678edc1-1456-4a97-864c-666dbcbbb936",
+          "caseNumber": "SC2026-0756",
+          "caseTitle": "Nicholas James Albrecht v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Mandamus",
+          "caseClassificationID": "1000044",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T14:07:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "1st District Court of Appeal",
+              "originatingCaseNumber": "1D2024-2794"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "9bafde97-6eb0-41fd-9764-aafd9462306c",
+          "caseNumber": "SC2026-0746",
+          "caseTitle": "Joe Hunter, IV v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T15:10:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "1st District Court of Appeal",
+              "originatingCaseNumber": "1D2025-0794;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "6e4aed1e-9c0f-4cbf-a0b3-6a770eaa1cb6",
+          "caseNumber": "SC2026-0747",
+          "caseTitle": "Jessie Joseph v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T15:19:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Seventeenth Judicial Circuit, Broward County",
+              "originatingCaseNumber": "062015CF003888A88810"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "8da48acd-fd5d-4d7a-bd21-7cd28e352593",
+          "caseNumber": "SC2026-0748",
+          "caseTitle": "Antonio T. Martin v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T15:20:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Second Judicial Circuit, Leon County",
+              "originatingCaseNumber": "372021CF002412AXXXXX"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "47463d9b-cfbd-47c3-868e-f571a0008ab4",
+          "caseNumber": "SC2026-0749",
+          "caseTitle": "David C. Myers v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Original Proceedings - Writ - Habeas Corpus",
+          "caseClassificationID": "1000043",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T15:23:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County",
+              "originatingCaseNumber": "582009CF009442XXXANC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "6b04b5e9-7a87-4a6f-b93f-d07ecee7a232",
+          "caseNumber": "SC2026-0744",
+          "caseTitle": "Sekwanna Victor v. Julio M. Quadros",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T16:22:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "3D2025-1417;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "04b4a487-ad9c-4f16-b2dd-e944e2df6e99",
+          "caseNumber": "SC2026-0750",
+          "caseTitle": "Will Oscar Edwards, Jr. v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T16:48:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "5th District Court of Appeal",
+              "originatingCaseNumber": "5D2025-3383;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "bba99621-be76-4884-95b0-834462d0c62a",
+          "caseNumber": "SC2026-0751",
+          "caseTitle": "Timmothy A. Zeigler v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T16:55:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "5th District Court of Appeal",
+              "originatingCaseNumber": "5D2023-3340;"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "7040398f-31da-4704-9227-85ae461832d3",
+          "caseNumber": "SC2026-0752",
+          "caseTitle": "Hencile Dorsey v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "Discretionary Review - Notice to Invoke - Direct Conflict of Decisions",
+          "caseClassificationID": "1000035",
+          "courtID": "1",
+          "courtAbbreviation": "Supreme Court of Florida",
+          "filedDate": "2026-05-14T16:59:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "3rd District Court of Appeal",
+              "originatingCaseNumber": "3D2025-1325;"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "page": {
+    "size": 50,
+    "totalElements": 2156,
+    "totalPages": 44,
+    "number": 39
+  }
+}

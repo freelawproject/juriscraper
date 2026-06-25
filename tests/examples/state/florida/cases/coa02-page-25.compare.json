@@ -1,0 +1,962 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "04f4c71a-2e31-4994-8f12-6c16b3147afe",
+          "caseNumber": "2D2025-2797",
+          "caseTitle": "Olivo v. Department of Revenue, Tejeda",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Administrative - Other",
+          "caseClassificationID": "1000101",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-17T19:42:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Administrative Agency",
+              "originatingCaseNumber": "2001990833"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "32e1b9d9-6b06-40ff-b016-93350b27831d",
+          "caseNumber": "2D2025-2799",
+          "caseTitle": "Narragansett Bay Insurance Company v. Kakareka, Kakareka",
+          "closedFlag": true,
+          "caseClassification": "NOA Non Final - Circuit Civil - Other",
+          "caseClassificationID": "1000169",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-17T20:28:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522025CA003442XXCICI"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "611472ea-a995-427f-ba69-11d638d6c94f",
+          "caseNumber": "2D2025-2800",
+          "caseTitle": "Robinson v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T12:26:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County",
+              "originatingCaseNumber": "2013 CF 003648 NC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "cdd9b6b0-a61c-466b-a56f-9a61e82c6330",
+          "caseNumber": "2D2025-2801",
+          "caseTitle": "Nadig v. Nadig",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Family - Other",
+          "caseClassificationID": "1000122",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T12:44:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522022DR006237XXFDFD"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "2c2a6e18-6dda-48d6-9355-bf1be0e94541",
+          "caseNumber": "2D2025-2802",
+          "caseTitle": "Beckford v. Beckford",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Civil - Other",
+          "caseClassificationID": "1000104",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T14:37:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522023CA009307XXCICI"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "3d418d0c-09e7-4b2e-b896-65b891c9b381",
+          "caseNumber": "2D2025-2803",
+          "caseTitle": "Howard v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.850 Summary",
+          "caseClassificationID": "1000113",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T14:50:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "97-CF-013675-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e4abe14b-abe7-4c0b-bd90-6dddb2835d31",
+          "caseNumber": "2D2025-2804",
+          "caseTitle": "Byrd v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - County Criminal Traffic - Prohibition",
+          "caseClassificationID": "1000258",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T17:50:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "25-CM-3740-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "47e2b0d8-d3f7-4858-b6ae-518caf6daef1",
+          "caseNumber": "2D2025-2805",
+          "caseTitle": "LaGasse v. Feher, State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Criminal - Certiorari",
+          "caseClassificationID": "1000210",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T18:27:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County",
+              "originatingCaseNumber": "2022-CF-005879, 2022-CF-005880"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e56ca568-0728-4a65-8dbc-31c54e5f93b7",
+          "caseNumber": "2D2025-2806",
+          "caseTitle": "Morett v. Morett",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Family - Other",
+          "caseClassificationID": "1000122",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-20T19:21:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522016DR007996XXFDFD"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "97cecc42-1335-4006-a3e1-5126c6366dbc",
+          "caseNumber": "2D2025-2808",
+          "caseTitle": "Miele, Trustee of the Joseph R. Miele Revocable Trust v. Miele, Miele, et al",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Civil - Other",
+          "caseClassificationID": "1000104",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-21T14:23:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522017CA004657XXCICI"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "77c16378-0b6f-4ef6-ae39-4ce7d6d2017b",
+          "caseNumber": "2D2025-2809",
+          "caseTitle": "Bey v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Criminal - Prohibition",
+          "caseClassificationID": "1000216",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-21T14:46:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "21-CF-014072-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "979277b5-2263-4db0-b6fd-259b6c7ef313",
+          "caseNumber": "2D2025-2811",
+          "caseTitle": "Wilson v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.850 Summary",
+          "caseClassificationID": "1000113",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-21T18:33:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "99-CF-018481-A, 00-CF-012480-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "4052eacd-5622-41f3-bf8e-ecfba5e4b467",
+          "caseNumber": "2D2025-2812",
+          "caseTitle": "Blaisdell v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-21T18:48:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "22-CF-010394-B"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "320b7f67-255c-4bb4-9a3b-f83a70c437bf",
+          "caseNumber": "2D2025-2813",
+          "caseTitle": "Mathis, Mathis v. AML Services Corp.",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - County Civil - Landlord/Tenant/Eviction (Residential)",
+          "caseClassificationID": "1000132",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-21T18:57:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "25-CC-040428"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "cd46eaac-f2eb-4296-a131-b7cb73bf5ac1",
+          "caseNumber": "2D2025-2814",
+          "caseTitle": "Trump Media & Technology Group Corp., TMTG Sub, Inc. v. Orlando, Arc Global Investments, II, LLC, et al",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Civil - Mandamus",
+          "caseClassificationID": "1000204",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T11:29:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County",
+              "originatingCaseNumber": "2024-CA-1061"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "180f9215-dacf-4cf7-8ba1-a1b91eeed5fd",
+          "caseNumber": "2D2025-2815",
+          "caseTitle": "Benning v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T12:09:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "23-10576-CF, 24-09662-CF"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "64bd69ad-c4d5-4757-b30a-3c8578aae27f",
+          "caseNumber": "2D2025-2817",
+          "caseTitle": "Anderson v. Anderson",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Family - Prohibition",
+          "caseClassificationID": "1000222",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T12:55:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "22-DR-017288"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "eaea28ab-162a-413f-9c2d-a0c90ce29a31",
+          "caseNumber": "2D2025-2818",
+          "caseTitle": "Citizens Property Insurance Corporation v. Zengotita, Zengotita",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Civil - Other",
+          "caseClassificationID": "1000104",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T13:03:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "20-005183-CI"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e6dc28f1-9bfe-438c-ac6a-9c46fd3a7f52",
+          "caseNumber": "2D2025-2819",
+          "caseTitle": "Holmes v. Dollar General Store",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Civil - Other",
+          "caseClassificationID": "1000104",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T13:05:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "25-CA-001087, 24-057392-CC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "1066b38e-1e6a-45c0-b8cc-9f2a672f797a",
+          "caseNumber": "2D2025-2820",
+          "caseTitle": "Lane v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - County Criminal Misdemeanor - Judgment and Sentence (Other)",
+          "caseClassificationID": "1000147",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T13:23:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Sixth Judicial Circuit, Pasco County",
+              "originatingCaseNumber": "25-CO-1937, 25-CO-1946, 25-CO-1947, 25-CO-1955"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "a34d2b4a-9337-4f31-95f4-fce12b0e3954",
+          "caseNumber": "2D2025-2821",
+          "caseTitle": "JenKings v. White-Jenkins",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Family - Other",
+          "caseClassificationID": "1000122",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T14:09:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "19-DR-018205"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "bb7c0216-7cc8-46f8-afd1-1a2d8d298d5b",
+          "caseNumber": "2D2025-2822",
+          "caseTitle": "Muratori v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T15:09:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "24-01473-CF"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "3f6fac06-19f6-4f0f-812a-4295d5faf5ba",
+          "caseNumber": "2D2025-2823",
+          "caseTitle": "Davis v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.853 Summary",
+          "caseClassificationID": "1000115",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T15:27:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "21-03970-CF"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "29df632a-8a7c-4e9e-b631-2227093d4881",
+          "caseNumber": "2D2025-2824",
+          "caseTitle": "Gelb v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Criminal - Habeas Corpus",
+          "caseClassificationID": "1000212",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T17:19:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pasco County",
+              "originatingCaseNumber": "08-6906-CFAWS"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "320d4d0a-bb0a-4f4e-9976-a47259ea5b39",
+          "caseNumber": "2D2025-2825",
+          "caseTitle": "Reid v. Wilmington Savings Fund Society",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Civil - Mandamus",
+          "caseClassificationID": "1000204",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T17:34:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "25-CA-004731"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "2246b6d2-3afa-4c0b-af24-a628c6c4293e",
+          "caseNumber": "2D2025-2826",
+          "caseTitle": "Jackson v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.850 Non Summary",
+          "caseClassificationID": "1000112",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T17:38:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "15-CF-003433-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "ee94b8b2-03ef-4db0-a020-a795ab600593",
+          "caseNumber": "2D2025-2827",
+          "caseTitle": "Kendrick v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.850 Summary",
+          "caseClassificationID": "1000113",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T17:59:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "86-CF-4290"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "19ad0c61-07ad-4861-8894-b2b59b4b0eef",
+          "caseNumber": "2D2025-2828",
+          "caseTitle": "Kendrick v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Criminal - Prohibition",
+          "caseClassificationID": "1000216",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T18:10:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "86-CF-4290"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "1fd0f9fd-1184-44c9-b04e-9c314df0e9fd",
+          "caseNumber": "2D2025-2829",
+          "caseTitle": "Kurtz v. Roaderick",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Probate - Probate",
+          "caseClassificationID": "1000128",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T18:50:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "24-CP-004016"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "d8ad09bb-cd73-4498-a62f-6595f00da29e",
+          "caseNumber": "2D2025-2830",
+          "caseTitle": "Wolfington v. Bank Of America",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Civil - Foreclosure",
+          "caseClassificationID": "1000103",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-22T18:53:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "2009-CA-029098"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "9a68ee26-966b-4951-968d-332a232c76fd",
+          "caseNumber": "2D2025-2831",
+          "caseTitle": "Davis, Davis v. PRCP-Tampa Arbor, LLC",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - County Civil - Landlord/Tenant/Eviction (Residential)",
+          "caseClassificationID": "1000132",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T11:34:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "25-CC-009701"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "22b7c95e-d7d6-4850-b4cc-04c1a6b5ff5e",
+          "caseNumber": "2D2025-2832",
+          "caseTitle": "Beougher v. Healy, Regenerative Medicine International, LLC",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Civil - Other",
+          "caseClassificationID": "1000104",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T12:14:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "522023CA008254XXCICI"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "8e7860f8-d866-44ea-8045-bc6da9ce2b3c",
+          "caseNumber": "2D2025-2833",
+          "caseTitle": "Holmes v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - Other",
+          "caseClassificationID": "1000118",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T12:24:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "21-02976-CF"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "683b5fbf-55eb-4340-9d22-c102ff99d376",
+          "caseNumber": "2D2025-2834",
+          "caseTitle": "Williams v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T12:47:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "2nd District Court of Appeal",
+              "originatingCaseNumber": "51-2023-CF-003350-CFAXWS, 51-2024-CF-1854"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "d137fe88-b011-494c-9222-7226380e2c31",
+          "caseNumber": "2D2025-2835",
+          "caseTitle": "Encarnacion v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T13:01:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "21-CF-004381-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e67df69d-471a-4951-bd80-38d52bf9d090",
+          "caseNumber": "2D2025-2836",
+          "caseTitle": "Crafton v. G'S Retirement, LLC.",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - County Civil - Prohibition",
+          "caseClassificationID": "1000252",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T13:18:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "2025-CC-035570"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "fdfd2350-08d6-4e96-8cbd-fe9cc23a3acf",
+          "caseNumber": "2D2025-2837",
+          "caseTitle": "Ellis v. G'S Retirement, LLC.",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - County Civil - Prohibition",
+          "caseClassificationID": "1000252",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T13:53:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "2025-CC-035570"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "1a6d2569-079d-4433-9745-6f13139e3306",
+          "caseNumber": "2D2025-2838",
+          "caseTitle": "Monfort v. Sozev FL, LLC",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Civil - Other",
+          "caseClassificationID": "1000104",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T14:24:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "2023-CA-8340"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "387acc27-2bf3-47d0-8840-3e99c71d08d4",
+          "caseNumber": "2D2025-2839",
+          "caseTitle": "Woody v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - Judgment and Sentence",
+          "caseClassificationID": "1000117",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T14:53:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pasco County",
+              "originatingCaseNumber": "2019-CF-003603"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "58aa2ebc-13dd-435c-ac51-1fbd265588e6",
+          "caseNumber": "2D2025-2840",
+          "caseTitle": "Hobbs v. Hobbs",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - Circuit Family - Other",
+          "caseClassificationID": "1000122",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T14:57:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "23-DR-000960"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "c396cb22-1b18-4764-a1db-1a713507968c",
+          "caseNumber": "2D2025-2841",
+          "caseTitle": "Schermick v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.800 Summary",
+          "caseClassificationID": "1000107",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T15:06:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Twelfth Judicial Circuit, Sarasota County",
+              "originatingCaseNumber": "2007-CF-12825-NC"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "90c0a7ce-00c2-4da4-a9ff-4c66bb35069e",
+          "caseNumber": "2D2025-2842",
+          "caseTitle": "Troxler v. Department of Revenue, Phaengpheng",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Administrative - Other",
+          "caseClassificationID": "1000101",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T15:55:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Division of Administrative Hearings",
+              "originatingCaseNumber": "2002034213"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "670ff6b2-a569-43db-8bba-f16937189e45",
+          "caseNumber": "2D2025-2843",
+          "caseTitle": "Grant v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.850 Summary",
+          "caseClassificationID": "1000113",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T16:06:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "11-CF-006411-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "d8a4ee36-19ab-4891-9074-6426b731eb1b",
+          "caseNumber": "2D2025-2844",
+          "caseTitle": "Leonardo v. State of Florida",
+          "closedFlag": false,
+          "caseClassification": "NOA Final - County Criminal Traffic - Judgment and Sentence (DUI)",
+          "caseClassificationID": "1000160",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T16:22:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "24-036159-TR"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "1cb8d6f1-fde5-4797-af21-58432c167039",
+          "caseNumber": "2D2025-2845",
+          "caseTitle": "Saif v. Bahiaoui",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Family - Prohibition",
+          "caseClassificationID": "1000222",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T16:31:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "21-000899-FD-09"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "01922c81-623d-432e-a34d-2d157ac6eee9",
+          "caseNumber": "2D2025-2846",
+          "caseTitle": "Parker v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - County Criminal Traffic - Habeas Corpus",
+          "caseClassificationID": "1000255",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T18:40:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "County Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "24-CT-4263, 24-CF-3577"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "fb6c4602-0090-482a-8eef-9db2c719590b",
+          "caseNumber": "2D2025-2847",
+          "caseTitle": "Hamlett v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Criminal - Habeas Corpus",
+          "caseClassificationID": "1000212",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T18:44:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Sixth Judicial Circuit, Pinellas County",
+              "originatingCaseNumber": "CRC05-06364-CFANO"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "ba646b5d-f5b3-43d3-8b48-fed0077c3da8",
+          "caseNumber": "2D2025-2848",
+          "caseTitle": "Haggins v. State of Florida",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Circuit Criminal - 3.850 Summary",
+          "caseClassificationID": "1000113",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T18:53:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "09-CF-011375-A"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "5bc0a186-6ee9-44e8-9ecf-3b4f4661fa21",
+          "caseNumber": "2D2025-2849",
+          "caseTitle": "Brewster v. AT & T",
+          "closedFlag": true,
+          "caseClassification": "Original Proceedings - Circuit Civil - Prohibition",
+          "caseClassificationID": "1000206",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-23T19:30:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Circuit Court for the Thirteenth Judicial Circuit, Hillsborough County",
+              "originatingCaseNumber": "25-CA-000745"
+            }
+          ]
+        }
+      },
+      {
+        "caseHeader": {
+          "caseInstanceUUID": "e542b5fd-63ce-4112-9584-69a98347ebf0",
+          "caseNumber": "2D2025-2850",
+          "caseTitle": "Selvera v. City of Temple Terrace",
+          "closedFlag": true,
+          "caseClassification": "NOA Final - Administrative - Other",
+          "caseClassificationID": "1000101",
+          "courtID": "3",
+          "courtAbbreviation": "2nd District Court of Appeal",
+          "filedDate": "2025-10-24T12:23:00.000+00:00",
+          "originatingCourtCases": [
+            {
+              "originatingCourtName": "Administrative Agency",
+              "originatingCaseNumber": "25-3664"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "page": {
+    "size": 50,
+    "totalElements": 3411,
+    "totalPages": 69,
+    "number": 25
+  }
+}

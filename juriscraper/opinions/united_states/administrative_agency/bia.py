@@ -11,7 +11,7 @@ History:
 """
 
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any
 
 from juriscraper.AbstractSite import logger
@@ -45,7 +45,15 @@ class Site(OpinionSiteLinear):
             self.url = self.urls[self.volume].get("href")
             self.html = await super()._download()
 
-        for row in self.html.xpath("//table"):
+        # Rows are sorted by date_filed descending on the source, but the
+        # source only provides the year. We use date_filed_is_approximate
+        # with the same year for every record, so without a tie-breaker CL
+        # orders them by case name. If the first few names happen to already
+        # exist, CL's DupChecker stops and never reaches newer opinions (#1934).
+        # Assign a descending approximate date starting from the middle of the
+        # year (one day apart per row) to preserve the source order and force
+        # the dup check to see newer records first.
+        for index, row in enumerate(self.html.xpath("//table")):
             summary = row.xpath("string(following-sibling::p[1])")
             name = row.xpath(".//td[1]//*[self::strong or self::b]/text()")[0]
 
@@ -57,6 +65,7 @@ class Site(OpinionSiteLinear):
             citation, year = row_text.split("(", 1)
 
             year = re.search(r"\d{4}", year).group(0)
+            date = datetime(int(year), 7, 1) - timedelta(days=index)
             url = row.xpath(".//td[2]//a/@href")
             docket = row.xpath("string(.//td[2]//a)")
             self.cases.append(
@@ -65,7 +74,7 @@ class Site(OpinionSiteLinear):
                     "citation": citation.strip(", "),
                     "url": url[0],
                     "docket": docket,
-                    "date": f"{year}-07-01",
+                    "date": date.strftime("%Y-%m-%d"),
                     "date_filed_is_approximate": True,
                     "summary": summary,
                 }

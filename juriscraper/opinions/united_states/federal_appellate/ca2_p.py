@@ -8,9 +8,14 @@ Contact:
 History:
   2026-04-27: site migrated from the IsysWeb endpoint to a dtSearch
   POST endpoint #1919.
+  2026-06-05: caption moved from plain text into an anchor element #1991.
+  2026-06-12: the decisions endpoint renamed the `Date Posted` label to
+  `Date` and moved the caption into a client-side <script> #2001.
 """
 
+import re
 from datetime import date, datetime, timedelta
+from html import unescape
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -78,10 +83,11 @@ class Site(OpinionSiteLinear):
 
             right = row.xpath('.//td[@class="ResultsItemRight"]')[0]
             fields = self._parse_right_cell(right)
-            posted = fields.get("Date Posted")
+            # label renamed `Date Posted` -> `Date` on 2026-06-12 #2001
+            posted = fields.get("Date Posted") or fields.get("Date")
             caption = fields.get("Caption")
             if not (url and docket and posted and caption):
-                logger.warning(
+                logger.error(
                     "ca2: incomplete row docket=%r url=%r posted=%r caption=%r",
                     docket,
                     url,
@@ -114,17 +120,44 @@ class Site(OpinionSiteLinear):
 
         Opinion cells look like:
             <B>Date Posted: </B>4/23/2026<BR>
-            <B>Caption: </B>Richardson v. ...<BR>
+            <B>Caption: </B><a href="..._opn.pdf" ...>Richardson v. ...</a><BR>
             <B>Type: </B>/decisions/OPN<BR>
         Oral-arg cells use `Caption` / `Date Argued` labels instead. Each
-        <b> label's value lives in its `.tail`.
+        <b> label's value lives in its `.tail`, except the opinion Caption,
+        which since 2026-06 is wrapped in an anchor that follows the label
+        (#1991). Oral-arg captions are still plain text in the tail.
+
+        As of 2026-06-12 the decisions endpoint no longer emits a
+        `<b>Caption:</b>` element at all: it writes the caption from a
+        client-side <script> via `document.write`, so lxml only sees the
+        `Date` and `Type` labels. Recover the caption from the script's
+        `captionStr` JS variable as a fallback #2001.
         """
         out: dict[str, str] = {}
         for b in cell.iter("b"):
             label = cls._clean(b.text or "").rstrip(":").strip()
             value = cls._clean(b.tail or "")
+            if not value:
+                # value may be wrapped in an element following the label,
+                # e.g. the Caption anchor #1991
+                sibling = b.getnext()
+                if sibling is not None and sibling.tag == "a":
+                    value = cls._clean(sibling.text_content())
             if label:
                 out[label] = value
+
+        if not out.get("Caption"):
+            for script in cell.iter("script"):
+                if match := re.search(
+                    r'captionStr\s*=\s*"(.*?)"', script.text or ""
+                ):
+                    # script text is CDATA, so HTML entities (&amp;) are
+                    # not decoded by lxml: unescape them ourselves
+                    caption = cls._clean(unescape(match.group(1)))
+                    if caption:
+                        out["Caption"] = caption
+                        break
+
         return out
 
     async def _download_backwards(self, dates: tuple[date, date]) -> None:

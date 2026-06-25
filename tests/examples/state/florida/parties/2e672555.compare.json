@@ -1,0 +1,1490 @@
+{
+  "_embedded": {
+    "results": [
+      {
+        "partyHeader": {
+          "casePartyUUID": "b84cb6c6-1a08-4e43-9c3c-fa68b59ccd63",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Collier County, Florida",
+            "sortName": "Collier County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "6FF07881-2EB1-40E4-A9CB-82F3C534E50A",
+              "partyActorInstance": {
+                "displayName": "Jeffrey A. Klatzkow",
+                "sortName": "Klatzkow, Jeffrey A."
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 62,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "35f3c8f2-a430-4522-a6b5-6c3068d35a2f",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Hendry County, Florida",
+            "sortName": "Hendry County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "5E1D6AD3-169A-46C6-A82B-7BB2A3741661",
+              "partyActorInstance": {
+                "displayName": "David Matthew Raulerson",
+                "sortName": "Raulerson, David Matthew"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 34,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "0e73e9e0-5291-4aab-b70c-3d427831734a",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Santa Rosa County Tax Collector",
+            "sortName": "Santa Rosa County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 39,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "ed9df3d7-d68c-4e68-8636-8a967f420ea4",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Hendry County Tax Collector",
+            "sortName": "Hendry County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 18,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "8a86d856-b8d3-447d-9dfe-7969078c5931",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Hamilton County Tax Collector",
+            "sortName": "Hamilton County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 16,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "69368f82-c472-40f4-a51f-c33fa2369dc3",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Franklin County Tax Collector",
+            "sortName": "Franklin County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 11,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "619d07df-6f5c-44c0-bd49-5b62aca94e24",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Escambia County Tax Collector",
+            "sortName": "Escambia County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 10,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "ddf72ca5-948b-42d6-8288-0b784936ec3e",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "St. Lucie County",
+            "sortName": "St. Lucie County"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "2E62C1E4-8284-4705-A50B-591ECF47C87F",
+              "partyActorInstance": {
+                "displayName": "Kenneth Bradley Bell",
+                "sortName": "Bell, Kenneth Bradley"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "CA26B060-47B1-4902-BDFE-5F516553A0D8",
+              "partyActorInstance": {
+                "displayName": "Jounice Nealy-Brown",
+                "sortName": "Nealy-Brown, Jounice"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "C9657973-CB35-46F9-9FBE-9C77EB0EB960",
+              "partyActorInstance": {
+                "displayName": "Joseph A Brown",
+                "sortName": "Brown, Joseph A"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "32CEA32F-3B1C-4A0D-8CCD-F0D3B22BC73C",
+              "partyActorInstance": {
+                "displayName": "Elizabeth Fite",
+                "sortName": "Fite, Elizabeth"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "5620A078-1810-41B6-A187-9A9860BCC23E",
+              "partyActorInstance": {
+                "displayName": "Caleb Sugg",
+                "sortName": "Sugg, Caleb"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "C8EEDCA0-F61C-4357-B156-29F0FC9B9C8C",
+              "partyActorInstance": {
+                "displayName": "Chasity Hope O'Steen",
+                "sortName": "O'Steen, Chasity Hope"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "8E1C32BC-4EFE-49CF-939D-965C815BB7C3",
+              "partyActorInstance": {
+                "displayName": "Edward George Guedes",
+                "sortName": "Guedes, Edward George"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "5D1EE57D-F054-4107-8113-67F9314EB589",
+              "partyActorInstance": {
+                "displayName": "Matthew Mandel",
+                "sortName": "Mandel, Matthew"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 2,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "50dee561-bc28-4941-96fa-d051265a1932",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Duval County Tax Collector",
+            "sortName": "Duval County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "48F7E8EB-E4D5-45B9-9C0B-2B5F8CC02D1C",
+              "partyActorInstance": {
+                "displayName": "Tiffiny Douglas Pinkstaff",
+                "sortName": "Pinkstaff, Tiffiny Douglas"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "4815E7B4-914D-45A2-AF6C-658A920E4A32",
+              "partyActorInstance": {
+                "displayName": "Laura Boeckman",
+                "sortName": "Boeckman, Laura"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 53,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "842163b2-53d3-4351-b40b-6147e23cab6e",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Sumter County Tax Collector",
+            "sortName": "Sumter County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "2EB48FAB-AB5E-4F60-8C85-AA2231C446BD",
+              "partyActorInstance": {
+                "displayName": "Jennifer Rey",
+                "sortName": "Rey, Jennifer"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 54,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "1f7397e9-61ac-4175-8955-44fba48df9da",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Pasco County Tax Collector",
+            "sortName": "Pasco County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 32,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "5e2b5c64-5867-432a-807f-4f6410b57a23",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Monroe County Tax Collector",
+            "sortName": "Monroe County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 27,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "0c28730f-58df-407d-8577-ee961e89d57a",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Jackson County Tax Collector",
+            "sortName": "Jackson County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 22,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "1b04c91e-b379-4fec-b527-2dc315de67f7",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Office of the State Attorney, 6th Judicial Circuit",
+            "sortName": "Office of the State Attorney, 6th Judicial Circuit"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "DDFEA282-9264-46FF-A149-96644C152CE4",
+              "partyActorInstance": {
+                "displayName": "Hon. Bruce L. Bartlett",
+                "sortName": "Bartlett, Bruce L., Hon."
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 64,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "e2cafde9-fc7a-4e6d-83bc-80bc23ae7b75",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Hernando County Tax Collector",
+            "sortName": "Hernando County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 19,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "790654cc-c95d-4b7e-a193-98d085886735",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Alachua County",
+            "sortName": "Alachua County"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "D2FEB7D4-6577-49BA-8219-3D5624AFDC6D",
+              "partyActorInstance": {
+                "displayName": "John Tucker",
+                "sortName": "Tucker, John"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "4DAB40A5-209A-4EB8-AD32-D73ACBA2789E",
+              "partyActorInstance": {
+                "displayName": "Robert Hillard Hosay",
+                "sortName": "Hosay, Robert Hillard"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "EA9BF777-C0FA-486B-8AC2-6780547AB94A",
+              "partyActorInstance": {
+                "displayName": "Benjamin Grossman",
+                "sortName": "Grossman, Benjamin"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "196DF410-6DB7-4246-827C-BEF4ED288185",
+              "partyActorInstance": {
+                "displayName": "Mallory Alyssa Neumann",
+                "sortName": "Neumann, Mallory Alyssa"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 12,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "afc5ac66-d404-4dd4-84db-e2fed2b7442e",
+          "partyType": "Participant",
+          "partyTypeID": "10003",
+          "partySubType": "Amicus - Appellee",
+          "partySubTypeID": "1000062",
+          "partyStatus": "Interim",
+          "partyStatusID": "1000004",
+          "partyActorInstance": {
+            "displayName": "Florida Tax Collectors Association",
+            "sortName": "Florida Tax Collectors Association"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 30,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "1A90BADF-28D3-4E71-AB61-C41BAC5E168B",
+              "partyActorInstance": {
+                "displayName": "Timothy Richard Qualls",
+                "sortName": "Qualls, Timothy Richard"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "9EAE2EB9-766A-400F-96BB-BDEF7DE65E6C",
+              "partyActorInstance": {
+                "displayName": "Stephen G. Webster",
+                "sortName": "Webster, Stephen G."
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 1,
+        "involvementTypeID": "10362",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "025f1cc5-ff32-489a-a797-22e8d7e6e750",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Lake County Tax Collector",
+            "sortName": "Lake County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "FB630D96-08AC-47F8-8E7C-110D38FE110B",
+              "partyActorInstance": {
+                "displayName": "Stephanie Brionez",
+                "sortName": "Brionez, Stephanie"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "D1F7EE1F-95DC-4F97-91C1-7B1A50A6B9C3",
+              "partyActorInstance": {
+                "displayName": "Mark Brionez",
+                "sortName": "Brionez, Mark"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 24,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "b7d922dd-ee16-4c23-abef-db4c3602a1ef",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellant",
+          "partySubTypeID": "1000005",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Florida Pace Funding Agency",
+            "sortName": "Florida Pace Funding Agency"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 1,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "255A2A3C-FF43-4B5D-B87B-D480277F05EA",
+              "partyActorInstance": {
+                "displayName": "Charles Alan Lawson",
+                "sortName": "Lawson, Charles Alan"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "8A5D16CE-365E-47DC-B853-9ACE7517813B",
+              "partyActorInstance": {
+                "displayName": "Paul Courtney Huck, Jr.",
+                "sortName": "Huck, Paul Courtney, Jr."
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "C96985C8-9EE5-4072-ADDD-1828D17AE03F",
+              "partyActorInstance": {
+                "displayName": "Jessica Leighann Slatten",
+                "sortName": "Slatten, Jessica Leighann"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "9F69004C-0920-4FD3-BAB8-1DDB4846A82C",
+              "partyActorInstance": {
+                "displayName": "James Dinkins",
+                "sortName": "Dinkins, James"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "B69EE13C-15DF-4CAB-8245-F3105259B776",
+              "partyActorInstance": {
+                "displayName": "Robert Edward Minchin, III",
+                "sortName": "Minchin, Robert Edward, III"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 1,
+        "involvementTypeID": "10360",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "d5efb432-1605-4341-9643-d523f45e9122",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Washington County Tax Collector",
+            "sortName": "Washington County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 48,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "184517ee-d086-400c-b9cd-00d46f684488",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Walton County Tax Collector",
+            "sortName": "Walton County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 47,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "fb305674-6e99-4276-ae4b-c20afed0cb48",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Volusia County Tax Collector",
+            "sortName": "Volusia County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 45,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "dcea5518-0d78-46c6-8a83-77e2f5176c9e",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Taylor County Tax Collector",
+            "sortName": "Taylor County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 43,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "62f15ca7-960e-4033-b90a-a3c635eaee28",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Suwannee County Tax Collector",
+            "sortName": "Suwannee County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 42,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "7c42206a-55ed-4620-8508-d1203b0f29ab",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Seminole County Tax Collector",
+            "sortName": "Seminole County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 41,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "e1d75bfe-8512-4ffd-97a5-83e2117a9f5b",
+          "partyType": "Participant",
+          "partyTypeID": "10003",
+          "partySubType": "Lower Tribunal Clerk",
+          "partySubTypeID": "1000013",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Leon Clerk",
+            "sortName": "Clerk, Leon"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 290,
+        "caseHeader": {},
+        "partyNumber": 1,
+        "involvementTypeID": "10362",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "ea783f80-b248-48e4-b469-69b6359407a1",
+          "partyType": "Participant",
+          "partyTypeID": "10003",
+          "partySubType": "Judge/Judicial Officer",
+          "partySubTypeID": "1000042",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Hon. Jonathan Eric Sjostrom",
+            "sortName": "Sjostrom, Jonathan Eric, Hon."
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 270,
+        "caseHeader": {},
+        "partyNumber": 1,
+        "involvementTypeID": "10362",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "75ce0f01-9ef6-46ef-8a31-8f2b1751639d",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Gilchrist County Tax Collector",
+            "sortName": "Gilchrist County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 14,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "e8ea66e4-297e-4fe5-aa73-1700337be24a",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Gadsden County Tax Collector",
+            "sortName": "Gadsden County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 13,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "f5723225-11a0-4aa7-b1b3-508bf73f4398",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Indian River County Tax Collector",
+            "sortName": "Indian River County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "0CB5BCAA-BCAF-43C4-B17D-FBCCEFAE001F",
+              "partyActorInstance": {
+                "displayName": "Robert Carlton Nall",
+                "sortName": "Nall, Robert Carlton"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 55,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "ede16fb4-a78a-49bf-90b8-9f95c9352407",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Bradford County Tax Collector",
+            "sortName": "Bradford County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 5,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "593307d7-8519-4a13-b27f-58ae03f8eb68",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Baker County Tax Collector",
+            "sortName": "Baker County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 4,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "4a57f508-ad4f-4169-a075-3b41b949f933",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Collier County Tax Collector",
+            "sortName": "Collier County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 6,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "146ee556-a782-491c-87c0-111350376ca9",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "DeSoto County Tax Collector",
+            "sortName": "DeSoto County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 8,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "e6def71e-75b3-4732-9f4a-5905013afa48",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Pinellas County, Florida",
+            "sortName": "Pinellas County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "239CD28C-5703-4991-B6D3-7503A41B4716",
+              "partyActorInstance": {
+                "displayName": "Kelly Lynn Vicari",
+                "sortName": "Vicari, Kelly Lynn"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 63,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "fcf2552d-abe3-49ab-8f6a-3e3fd9c4da03",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Okeechobee County Tax Collector",
+            "sortName": "Okeechobee County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 30,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "48102168-db33-4c1c-b1e8-e263cfbd567f",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Madison County Tax Collector",
+            "sortName": "Madison County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 26,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "0500ccf6-a544-49e5-8195-97cf6aa72340",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Okaloosa County Tax Collector",
+            "sortName": "Okaloosa County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 29,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "7c2f1191-e3af-4df4-b03a-e172c92e1afb",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "St. Lucie County, Florida",
+            "sortName": "St. Lucie County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "CC2E8ED7-B866-4655-858B-6065DC7B87E2",
+              "partyActorInstance": {
+                "displayName": "Daniel Scott McIntyre",
+                "sortName": "McIntyre, Daniel Scott"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 60,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "35a47716-3826-4fea-a655-76421fec360c",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Lee County Tax Collector",
+            "sortName": "Lee County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "47D90F62-BCC8-4137-B74D-A3F3A7448356",
+              "partyActorInstance": {
+                "displayName": "Orfelia Maria Mayor",
+                "sortName": "Mayor, Orfelia Maria"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 51,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "770926f9-bbe7-4c6a-9cd9-a8d74d45cac0",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Leon County, Florida",
+            "sortName": "Leon County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "4DAB40A5-209A-4EB8-AD32-D73ACBA2789E",
+              "partyActorInstance": {
+                "displayName": "Robert Hillard Hosay",
+                "sortName": "Hosay, Robert Hillard"
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "EA9BF777-C0FA-486B-8AC2-6780547AB94A",
+              "partyActorInstance": {
+                "displayName": "Benjamin Grossman",
+                "sortName": "Grossman, Benjamin"
+              }
+            },
+            "primaryFlag": false
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "196DF410-6DB7-4246-827C-BEF4ED288185",
+              "partyActorInstance": {
+                "displayName": "Mallory Alyssa Neumann",
+                "sortName": "Neumann, Mallory Alyssa"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 59,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "e7f745a7-ba0b-4f51-a5e6-1d2194cfb84d",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Orange County, Florida",
+            "sortName": "Orange County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "B2FF50AB-366E-4FA0-B532-3B861639593D",
+              "partyActorInstance": {
+                "displayName": "Jeffrey Jay Newton",
+                "sortName": "Newton, Jeffrey Jay"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 49,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "918204fb-d45e-4d22-8042-4f94a2cbe636",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Brevard County, Florida",
+            "sortName": "Brevard County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "0CF15614-79C4-4847-B0CC-DCDB83076A13",
+              "partyActorInstance": {
+                "displayName": "Cecil Morris Richardson",
+                "sortName": "Richardson, Cecil Morris"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 61,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "5d98372f-2a35-464e-a00a-f56529b3c395",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Union County Tax Collector",
+            "sortName": "Union County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 44,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "f83a2370-cd0e-434e-91db-0bf549a78b25",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Sarasota County Tax Collector",
+            "sortName": "Sarasota County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 40,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "21e009d2-1bea-4e02-b321-87e16bddb44d",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Wakulla County Tax Collector",
+            "sortName": "Wakulla County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 46,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "2f90456a-d85f-4ebc-856b-217104100d92",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "St. Johns County Tax Collect",
+            "sortName": "St. Johns County Tax Collect"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 38,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "4d5266cf-bfb0-4ad0-ba8b-a66efef9cc8c",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Putnam County Tax Collector",
+            "sortName": "Putnam County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "partyNumber": 36,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "903d9203-3337-436a-9cd2-079c7760956c",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Lake County, Florida",
+            "sortName": "Lake County, Florida"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "AEE2581C-CF0E-40E6-B499-4F271C53FE9E",
+              "partyActorInstance": {
+                "displayName": "Alexis M. Clark",
+                "sortName": "Clark, Alexis M."
+              }
+            },
+            "primaryFlag": true
+          },
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "A863AD2B-D7BF-403A-8DE9-F1E6CC3B1D10",
+              "partyActorInstance": {
+                "displayName": "Melanie Ann Marsh",
+                "sortName": "Marsh, Melanie Ann"
+              }
+            },
+            "primaryFlag": false
+          }
+        ],
+        "partyNumber": 37,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      },
+      {
+        "partyHeader": {
+          "casePartyUUID": "a49f7154-da0d-4a40-beb3-f004534a2258",
+          "partyType": "Party",
+          "partyTypeID": "10002",
+          "partySubType": "Appellee",
+          "partySubTypeID": "1000006",
+          "partyStatus": "Active",
+          "partyStatusID": "10001",
+          "partyActorInstance": {
+            "displayName": "Pinellas County Tax Collector",
+            "sortName": "Pinellas County Tax Collector"
+          }
+        },
+        "proSeFlag": false,
+        "orderBy": 3,
+        "caseHeader": {},
+        "legalRepresentations": [
+          {
+            "attorneyPartyHeader": {
+              "casePartyUUID": "7240C057-C9FD-4E9F-A81D-A2F2CD5D6DE7",
+              "partyActorInstance": {
+                "displayName": "Jason Charles Ester",
+                "sortName": "Ester, Jason Charles"
+              }
+            },
+            "primaryFlag": true
+          }
+        ],
+        "partyNumber": 35,
+        "involvementTypeID": "10361",
+        "nonPublicFlag": false
+      }
+    ]
+  },
+  "page": {
+    "size": 50,
+    "totalElements": 68,
+    "totalPages": 2,
+    "number": 0
+  }
+}

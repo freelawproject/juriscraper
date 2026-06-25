@@ -1,10 +1,14 @@
-from typing import ClassVar
+from typing import Annotated, ClassVar
 
-from pydantic import UUID4, AliasPath, Field
+from pydantic import UUID4, AfterValidator, AliasPath, Field
+from typing_extensions import override
 
-from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.docket import Document
-from juriscraper.state.florida.common import FloridaPaginatedResults
+from juriscraper.state.florida.common import (
+    FloridaPaginatedResults,
+    FloridaPaginatedResultsParser,
+    florida_docket_number_validator,
+)
 
 
 class FloridaDocument(Document):
@@ -30,47 +34,56 @@ class FloridaDocument(Document):
 
     docket_entry_uuid: UUID4 = Field(validation_alias="docketEntryUUID")
     document_link_uuid: UUID4 = Field(validation_alias="documentLinkUUID")
-    document_name: str = Field(validation_alias="documentName")
+    document_name: str = Field(
+        validation_alias="documentName",
+        default="",
+    )
     user_document_state: UUID4 = Field(validation_alias="userDocumentState")
     case_uuid: UUID4 = Field(
         validation_alias=AliasPath("caseHeader", "caseInstanceUUID")
     )
-    case_number: str = Field(
-        validation_alias=AliasPath("caseHeader", "caseNumber")
-    )
+    case_number: Annotated[
+        str, AfterValidator(florida_docket_number_validator)
+    ] = Field(validation_alias=AliasPath("caseHeader", "caseNumber"))
     case_title: str = Field(
-        validation_alias=AliasPath("caseHeader", "caseTitle")
+        validation_alias=AliasPath("caseHeader", "caseTitle"),
+        default="",
     )
     court_id: int = Field(validation_alias=AliasPath("caseHeader", "courtID"))
-    document_type: str = Field(
-        validation_alias=AliasPath("documentInfo", "documentType")
+    document_type: str | None = Field(
+        validation_alias=AliasPath("documentInfo", "documentType"),
+        default=None,
     )
-    content_type: str = Field(
-        validation_alias=AliasPath("documentInfo", "contentType")
+    content_type: str | None = Field(
+        validation_alias=AliasPath("documentInfo", "contentType"),
+        default=None,
     )
-    file_extension: str = Field(
-        validation_alias=AliasPath("documentInfo", "fileExtension")
+    file_extension: str | None = Field(
+        validation_alias=AliasPath("documentInfo", "fileExtension"),
+        default=None,
     )
-    page_count: int = Field(
-        validation_alias=AliasPath("documentInfo", "pageCount")
+    page_count: int | None = Field(
+        validation_alias=AliasPath("documentInfo", "pageCount"),
+        default=None,
     )
-    file_size: int = Field(
-        validation_alias=AliasPath("documentInfo", "fileSize")
+    file_size: int | None = Field(
+        validation_alias=AliasPath("documentInfo", "fileSize"),
+        default=None,
     )
     url: str = ""
 
 
-class FloridaDocumentAccessParser(LegacyParser[list[FloridaDocument]]):
+class FloridaDocumentAccessParser(
+    FloridaPaginatedResultsParser[FloridaDocument]
+):
     """
     Parser for Florida document list API results.
 
     :cvar endpoint: The API endpoint for fetching a document's data.
     """
 
-    endpoint: ClassVar[str] = "/courts/cms/docketentrydocumentaccess"
+    endpoint: ClassVar[str] = "/courts/cms/docketentrydocumentsaccess"
 
-    def _parse(self, i: str) -> list[FloridaDocument]:
-        results = FloridaPaginatedResults[FloridaDocument].model_validate_json(
-            i
-        )
-        return results.results
+    @override
+    def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaDocument]:
+        return FloridaPaginatedResults[FloridaDocument].model_validate_json(i)

@@ -9,10 +9,12 @@
 # 2024-08-09: update and implement backscraper, grossir
 
 import re
-from datetime import date
+from datetime import date, datetime, timezone
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import BotChallengeError
+from juriscraper.lib.network_utils import add_delay
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -20,6 +22,11 @@ class Site(OpinionSiteLinear):
     court_query = "supct"
     days_interval = 7
     first_opinion_date = date(1998, 1, 1)
+
+    base_url = "https://mn.gov/law-library/search/"
+    # Seconds to wait before querying, to space out the shared-source scrapers
+    # and respect the site's `Request-rate` (see robots.txt). See #2006
+    request_delay = 5
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault("verify", False)
@@ -30,12 +37,13 @@ class Site(OpinionSiteLinear):
         if self.court_query == "ctapun":
             self.status = "Unpublished"
 
-        self.url = "https://mn.gov/law-library/search/"
+        self.url = self.base_url
         self.params = self.base_params = {
             "v:sources": "mn-law-library-opinions",
             "query": f" (url:/archive/{self.court_query}) ",
             "sortby": "date",
         }
+
         self.request["headers"] = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Sec-Fetch-Site": "same-origin",
@@ -55,7 +63,21 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
+        # parse() issues an initial _download() (no query params). If that was
+        # skipped because we are out of the visit window, self.html is None and
+        # we abort without issuing the query.
+        if self.html is None:
+            return
+
+        # Pause before the actual query to respect the site's rate limit.
+        if not self.test_mode_enabled():
+            await add_delay(self.request_delay, deviation=2)
         self.html = await self._download({"params": self.params})
+
+        if self.html is None:
+            return
+
+        self._check_for_bot_challenge()
 
         # This warning is useful for backscraping
         results_number = self.html.xpath(
@@ -132,3 +154,55 @@ class Site(OpinionSiteLinear):
             }
         )
         self.params = params
+        self.html = await self._download()
+        await self._process_html()
+
+    def _within_visit_window(self) -> bool:
+        """Whether we are inside the crawl window the site's robots.txt allows.
+
+        mn.gov's robots.txt declares ``Visit-time: 0000-1200`` (in GMT), i.e.
+        crawling is only welcome between midnight and noon UTC. Scraping
+        outside that window is part of what gets us flagged by the bot
+        manager. Always True in test mode. See #2006.
+
+        :return: True if the current UTC time is within the allowed window
+        """
+        if self.test_mode_enabled():
+            return True
+        return datetime.now(timezone.utc).hour < 12
+
+    async def _download(self, request_dict=None):
+        """Skip the request entirely when outside the robots.txt visit window.
+
+        Returning None aborts the scrape gracefully: ``parse()`` leaves
+        ``self.html`` as None, ``_process_html`` bails out early, and the run
+        ends with zero results (a warning, not an error) instead of querying
+        the bot-managed endpoint at a disallowed time. See #2006.
+
+        :param request_dict: passed through to the parent downloader
+        :return: the parsed response, or None when outside the visit window
+        """
+        if not self._within_visit_window():
+            logger.warning(
+                "%s: outside the robots.txt visit window (0000-1200 GMT); "
+                "skipping this run",
+                self.court_id,
+            )
+            return None
+        return await super()._download(request_dict)
+
+    def _check_for_bot_challenge(self) -> None:
+        """Raise if the source served a Radware Bot Manager captcha page
+        instead of the search results, so the block surfaces in Sentry
+        rather than being ingested as a successful zero-result scrape.
+
+        :raises BotChallengeError: when a captcha challenge is detected
+        """
+        title = " ".join(self.html.xpath("//title//text()"))
+        if "Bot Manager Captcha" in title or self.html.xpath(
+            "//div[contains(@class, 'h-captcha')]"
+        ):
+            raise BotChallengeError(
+                f"{self.court_id}: blocked by Radware Bot Manager captcha",
+                fingerprint=[f"{self.court_id}-bot-challenge"],
+            )
