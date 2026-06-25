@@ -15,6 +15,18 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+
+## 3.0.27 - 2026-06-25
+
+Features:
 
 - Add Florida scraper
 
