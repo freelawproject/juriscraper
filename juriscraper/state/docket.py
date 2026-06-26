@@ -201,6 +201,7 @@ class Docket(
     :ivar docket_number: The docket number assigned by the court.
     :ivar case_name: A (potentially) shortened version of the full case name.
     :ivar case_name_full: The full case name with minimal modifications.
+    :ivar case_name_short: The case name after being processed by `CaseNameTweaker`
     :ivar date_filed: The date this docket was filed with the court.
     :ivar transfers: Transfers of this docket to and from the court.
     :ivar entries: Docket entries that have been filed in this case.
@@ -212,6 +213,7 @@ class Docket(
     docket_number: str
     case_name: str
     case_name_full: str
+    case_name_short: str
     date_filed: date
     transfers: list[_DocketDocketTransfer]
     entries: list[_DocketDocketEntry]
