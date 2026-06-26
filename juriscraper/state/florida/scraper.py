@@ -362,7 +362,7 @@ class FloridaScraper:
         start_date: date,
         end_date: date,
     ) -> AsyncGenerator[FloridaCase | PaginationFailed, None]:
-        """Yield :class:`FloridaCase` for every case filed in ``date_range``.
+        """Yield :class:`FloridaCase` for every case filed in ``date_range`` in chronological order by ``date_filed``.
 
         Splits the date range recursively whenever the API reports that the
         query would hit :data:`MAX_RESULTS`. The split is binary on the date
@@ -435,8 +435,9 @@ class FloridaScraper:
                             end,
                             response.page.total_elements,
                         )
-                        stack.append((start, mid))
+                        # Date ranges here should stay in reverse chronological order to ensure results are scraped in _chronological_ order
                         stack.append((mid + timedelta(days=1), end))
+                        stack.append((start, mid))
                         continue
                     # Should be unreachable but who knows.
                     raise InsanityException(
