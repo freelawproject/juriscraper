@@ -18,7 +18,9 @@ Features:
 -
 
 Changes:
--
+- `PacerSession` now authenticates ACMS requests with per-court cookie sessions
+  instead of a bearer token, restoring ACMS auth after their HTMX refactor.
+  freelawproject/courtlistener#5921
 
 Fixes:
 -
