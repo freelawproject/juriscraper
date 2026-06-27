@@ -172,7 +172,9 @@ class ExponentialBackoff(RetryHandler):
             ):
                 return False
             case HTTPStatusError() | TimeoutException() | NetworkError() as e:
-                logger.info("Retrying request to %s (%r)", request.url, e)
+                logger.info(
+                    "Attempt %s for %s (%r)", request.attempt, request.url, e
+                )
                 await asyncio.sleep(
                     self.backoff
                     * (self.backoff_growth ** (request.attempt - 1))
