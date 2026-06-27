@@ -14,7 +14,7 @@ from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import harmonize
+from juriscraper.lib.string_utils import CaseNameTweaker, harmonize
 from juriscraper.state.docket import (
     Docket,
     DocketTransfer,
@@ -37,6 +37,8 @@ from juriscraper.state.florida.docket_entries import FloridaDocketEntry
 from juriscraper.state.florida.parties import FloridaParty
 
 logger = make_default_logger()
+
+cnt = CaseNameTweaker()
 
 # Values retrieved 2026-03-05
 FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
@@ -246,6 +248,11 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     case_name_full: Annotated[str, AfterValidator(harmonize)] = Field(
         validation_alias=AliasPath("caseHeader", "caseCaption"),
         default_factory=lambda d: d["case_name"],
+    )
+    case_name_short: Annotated[
+        str, AfterValidator(lambda s: cnt.make_case_name_short(s))
+    ] = Field(
+        validation_alias=AliasPath("caseHeader", "caseTitle"), default=""
     )
     closed_flag: bool = Field(
         validation_alias=AliasPath("caseHeader", "closedFlag")
