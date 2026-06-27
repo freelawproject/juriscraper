@@ -24,6 +24,18 @@ Fixes:
 -
 
 
+## 3.0.29 - 2026-06-26
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- `Retry` request handler preventing other handlers from awaiting responses
+
+
 ## 3.0.28 - 2026-06-25
 
 Features:
@@ -40,7 +52,6 @@ Changes:
 
 Fixes:
 - `nev`/`nevapp`: Nevada's appellate courts moved off their self-hosted C-Track CMS onto Thomson Reuters' cloud "ACIS" portal (`acis.nvcourts.gov`) around June 10, breaking the old `AdvanceOpinions` API. Reworked both scrapers to use the new portal's document-search API, parsing the citation, disposition, author/per curiam and panel out of each docket entry, and building the opinion PDF link directly from the response. Case names are cleaned (case-type parentheticals like "(CIVIL)" dropped, party parentheticals kept) and consolidated "C/W" dockets are appended to the docket number. Adds a paginated backscraper #2010
-- `Retry` request handler preventing other handlers from awaiting responses
 
 ## 3.0.26 - 2026-06-17
 
