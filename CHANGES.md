@@ -18,7 +18,7 @@ Features:
 - Add new scraper `superctguam` for Superior Court of Guam [#1939](https://github.com/freelawproject/juriscraper/issues/1939)
 
 Changes:
-- `guam`: move legacy `get_items` type to a class attribute for subclass reuse. Did this for `superctguam` 
+- `guam`: move legacy `get_items` type to a class attribute for subclass reuse. Did this for `superctguam`
 
 Fixes:
 -
