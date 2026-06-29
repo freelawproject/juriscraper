@@ -3,7 +3,7 @@ import pprint
 import re
 import sys
 from datetime import datetime
-from email.message import EmailMessage
+from email.message import Message
 from enum import Enum
 from pathlib import Path
 from typing import TypedDict
@@ -180,7 +180,7 @@ class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(
-        r"^A new docket entry(?:, \"(.+?)\")? has been added"
+        r"^A new docket entry(?:, \"([^\"]+)\")? has been added"
     )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
@@ -192,7 +192,7 @@ class SCOTUSEmail:
     def __init__(self, court_id: str = "scotus"):
         self.court_id: str = court_id
         self.tree: HtmlElement | None = None
-        self.message: EmailMessage | None = None
+        self.message: Message | None = None
         self.email_type: SCOTUSEmailType = SCOTUSEmailType.INVALID
 
     @property
