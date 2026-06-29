@@ -155,8 +155,10 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
             return FloridaCourtID.US_COA
         case "division of administrative hearings":
             return FloridaCourtID.DOAH
+        case "unknown court":
+            return FloridaCourtID.UNKNOWN
         case _:
-            logger.error("Unrecognized Florida court name: %s", court_name)
+            logger.warning("Unrecognized Florida court name: %s", court_name)
             return FloridaCourtID.UNASSIGNED
 
 
