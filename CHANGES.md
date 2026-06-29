@@ -34,6 +34,7 @@ Changes:
 
 Fixes:
 - `Retry` request handler preventing other handlers from awaiting responses
+- Use make_case_name_short for Florida’s case_name_short field
 
 
 ## 3.0.28 - 2026-06-25
