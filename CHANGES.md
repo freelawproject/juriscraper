@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.30 - 2026-06-29
+
+Features:
+-
+
+Changes:
 
 - Map "Unknown court" from Florida ACIS to `FloridaCourtID.UNKNOWN`
 - Downgrade unrecognized court name log from error to warning
