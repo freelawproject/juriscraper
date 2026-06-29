@@ -379,9 +379,6 @@ def clean_string(s):
     # Get rid of weird punctuation
     s = s.replace("*", "").replace("#", "")
 
-    # Convert to ASCII if we can
-    s = s.replace("\u2013", "-")
-
     # Strip bad stuff from the end of lines. Python's strip fails here because
     # we don't know the order of the various punctuation items to be stripped.
     # We split on the v., and handle fixes at either end of plaintiff or
