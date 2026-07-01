@@ -34,7 +34,7 @@ Changes:
 - Downgrade unrecognized court name log from error to warning
 
 Fixes:
--
+- Remove `miwb` from free documents excluded courts #2029
 
 ## 3.0.29 - 2026-06-26
 
