@@ -4,9 +4,28 @@ import os
 import sys
 import traceback
 
-LOG_FILENAME = os.environ.get(
-    "JURISCRAPER_LOG", "/var/log/juriscraper/debug.log"
-)
+SYSTEM_LOG_DIR = "/var/log/juriscraper"
+
+
+def default_log_location():
+    """Pick a log path that is likely to be writable.
+
+    Order of preference: the JURISCRAPER_LOG environment variable, the
+    traditional /var/log/juriscraper location when that directory is
+    writable (typical on provisioned servers), and finally a per-user
+    cache directory that make_default_logger can create.
+    """
+    env_path = os.environ.get("JURISCRAPER_LOG")
+    if env_path:
+        return env_path
+    if os.access(SYSTEM_LOG_DIR, os.W_OK):
+        return os.path.join(SYSTEM_LOG_DIR, "debug.log")
+    return os.path.join(
+        os.path.expanduser("~"), ".cache", "juriscraper", "debug.log"
+    )
+
+
+LOG_FILENAME = default_log_location()
 
 
 def errprint(*args, **kwargs):
@@ -25,6 +44,9 @@ def make_default_logger(file_path=LOG_FILENAME):
         logger.setLevel(logging.DEBUG)
         # Create a handler and attach it to the logger
         try:
+            log_dir = os.path.dirname(file_path)
+            if log_dir and not os.path.isdir(log_dir):
+                os.makedirs(log_dir, exist_ok=True)
             handler = logging.handlers.RotatingFileHandler(
                 file_path, maxBytes=5120000, backupCount=7
             )
