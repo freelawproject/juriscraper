@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 
+- `lib.log_tools`: the default log location now falls back to `~/.cache/juriscraper/debug.log` (created on demand) when `/var/log/juriscraper` is not writable, so importing a scraper no longer prints a warning and drops to stderr on machines without that directory. Honors `JURISCRAPER_LOG` and the writable `/var/log/juriscraper` path unchanged.
 - Minor Florida parsing issues found during scraper run
 
 ## 3.0.30 - 2026-06-29
