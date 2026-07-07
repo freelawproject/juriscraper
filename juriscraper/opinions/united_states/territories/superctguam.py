@@ -14,13 +14,18 @@ from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.territories import guam
 
 
-# Most of this site is the same as guam.py
 class Site(guam.Site):
     base_url = "https://guamcourts.gov/courts-council/superior-court/decisions-and-orders"
     legacy_url = "https://guamcourts.gov/legacydata/superior-court-decisions"
     legacy_get_items_type = "SUPDO"
 
     first_opinion_date = date(2009, 1, 1)
+    # Normalize mojibake whitespace before parsing
+    mojibake_re = re.compile(r"[\xa0\xc2]+")
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.status = "Unknown"
 
     def _process_html(self) -> None:
         """Process the current-year decisions and orders page
@@ -57,8 +62,7 @@ class Site(guam.Site):
                 './/span[contains(@class, "CaseNumber")]'
             )
             docket = docket_spans[0].text_content() if docket_spans else ""
-            # \xc2\xa0 is mojibake, breaks the date regex, same as in guam.py
-            docket = re.sub(r"[\xa0\xc2]+", " ", docket).strip()
+            docket = self.mojibake_re.sub(" ", docket).strip()
 
             posted_spans = paragraph.xpath(
                 './/span[contains(@class, "juryNote")]'
@@ -73,8 +77,8 @@ class Site(guam.Site):
                     description_parts.append(sibling.tail.strip())
                 elif sibling.tag != "br":
                     description_parts.append(sibling.text_content().strip())
-            description = re.sub(
-                r"[\xa0\xc2]+", " ", " ".join(description_parts)
+            description = self.mojibake_re.sub(
+                " ", " ".join(description_parts)
             ).strip(" .,\r\n")
 
             row_date = self.find_date(description) or self.find_date(
@@ -117,6 +121,9 @@ class Site(guam.Site):
         ):
             anchors = item.xpath(".//h4/a")
             if not anchors:
+                logger.warning(
+                    "superctguam: legacy row without PDF link, skipping"
+                )
                 continue
 
             anchor = anchors[0]
@@ -127,12 +134,10 @@ class Site(guam.Site):
                 './/div[contains(@style, "font-weight: bold")]'
             )
             docket = docket_divs[0].text_content() if docket_divs else ""
-            docket = re.sub(r"[\xa0\xc2]+", " ", docket).strip()
+            docket = self.mojibake_re.sub(" ", docket).strip()
 
-            description = re.sub(
-                r"[\xa0\xc2]+",
-                " ",
-                " ".join(item.xpath(".//p//text()")).strip(),
+            description = self.mojibake_re.sub(
+                " ", " ".join(item.xpath(".//p//text()")).strip()
             )
             row_date = self.find_date(description)
 
