@@ -388,7 +388,7 @@ class SCOTUSEmail:
     # The way things are currently set up, the parser will never be in memory long enough to have a leak worth caring about
     @functools.cached_property
     def _first_link_with_filename(
-            self,
+        self,
     ) -> tuple[HtmlElement, ParseResult, dict[str, list[str]]]:
         if self.tree is None:
             raise ValueError("self.tree is None")
