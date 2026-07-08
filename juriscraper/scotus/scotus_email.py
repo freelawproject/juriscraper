@@ -211,7 +211,7 @@ class SCOTUSEmail:
         """
 
         if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
-            _, followup_parse_result, __ = self._get_first_link_with_filename()
+            _, followup_parse_result, __ = self._first_link_with_filename
             followup_url = followup_parse_result.geturl()
             data = SCOTUSNotificationEmail(
                 docket_number=self._parse_docket_number(),
@@ -382,13 +382,13 @@ class SCOTUSEmail:
 
         :return: Cleaned case name.
         """
-        link, _, __ = self._get_first_link_with_filename()
+        link, _, __ = self._first_link_with_filename
         return harmonize(link.text_content())
 
     # The way things are currently set up, the parser will never be in memory long enough to have a leak worth caring about
-    @functools.cache  # noqa: B019
-    def _get_first_link_with_filename(
-        self,
+    @functools.cached_property
+    def _first_link_with_filename(
+            self,
     ) -> tuple[HtmlElement, ParseResult, dict[str, list[str]]]:
         if self.tree is None:
             raise ValueError("self.tree is None")
@@ -430,7 +430,7 @@ class SCOTUSEmail:
 
         :return: Docket number.
         """
-        _, __, query = self._get_first_link_with_filename()
+        _, __, query = self._first_link_with_filename
         docket_number = Path(query["filename"][0]).stem
         return clean_string(docket_number)
 
