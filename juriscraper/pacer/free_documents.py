@@ -34,7 +34,7 @@ logger = make_default_logger()
 class FreeOpinionReport(BaseReport):
     """An object for querying and parsing the free opinion report."""
 
-    EXCLUDED_COURT_IDS = ["casb", "innb", "miwb", "ohsb"]
+    EXCLUDED_COURT_IDS = ["casb", "innb", "ohsb"]
     VALID_SORT_PARAMS = ("date_filed", "case_number")
 
     def __init__(self, court_id, pacer_session=None):

@@ -151,12 +151,16 @@ def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
             return FloridaCourtID.FIFTH_COA
         case "6th district court of appeal":
             return FloridaCourtID.SIXTH_COA
+        case "supreme court of florida":
+            return FloridaCourtID.SUPREME_COURT
         case "uscoa":
             return FloridaCourtID.US_COA
         case "division of administrative hearings":
             return FloridaCourtID.DOAH
+        case "unknown court":
+            return FloridaCourtID.UNKNOWN
         case _:
-            logger.error("Unrecognized Florida court name: %s", court_name)
+            logger.warning("Unrecognized Florida court name: %s", court_name)
             return FloridaCourtID.UNASSIGNED
 
 
@@ -178,7 +182,9 @@ class FloridaOriginatingCase(BaseModel):
             florida_originating_court_id_validator, json_schema_input_type=str
         ),
     ] = Field(validation_alias="originatingCourtName")
-    case_number: str = Field(validation_alias="originatingCaseNumber")
+    case_number: str = Field(
+        validation_alias="originatingCaseNumber", default=""
+    )
 
 
 def florida_external_id_to_js_id_validator(i: str) -> str:
