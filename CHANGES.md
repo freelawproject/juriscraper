@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.31 - 2026-07-09
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 
 - SCOTUS email docket entry title extraction failure on line breaks in title.
 - Minor Florida parsing issues found during scraper run
