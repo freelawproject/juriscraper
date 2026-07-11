@@ -9,6 +9,7 @@ History:
  - 2015-07-31: Redone by mlr to use ghost driver. Alas, their site used to be
                great, but now it's terribly frustrating.
  - 2021-12-28: Remove selenium by flooie
+ - 2026-07-11: Make __EVENTVALIDATION optional; site stopped emitting it
 """
 
 from datetime import date
@@ -104,7 +105,6 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
         view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
         self.parameters = {
             "__VIEWSTATEENCRYPTED": "",
@@ -113,9 +113,16 @@ class Site(OpinionSiteLinear):
             "ctl00$MainContent$ddlDecidedYearMax": f"{self.year}",
             "ctl00$MainContent$ddlCounty": "0",
             "ctl00$MainContent$ddlRowsPerPage": self.rows_per_page,
-            "__EVENTVALIDATION": event_validation[0].get("value"),
             "__VIEWSTATE": view_state[0].get("value"),
         }
+
+        # The site stopped emitting __EVENTVALIDATION around 2026-06-29;
+        # send it only when present so both variants work
+        event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
+        if event_validation:
+            self.parameters["__EVENTVALIDATION"] = event_validation[0].get(
+                "value"
+            )
 
         if page_number:
             self.parameters.update(
