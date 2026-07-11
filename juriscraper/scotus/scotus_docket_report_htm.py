@@ -37,6 +37,15 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         "and td[2][contains(normalize-space(.), '~~~~~~~Address')] "
         "and td[3][contains(normalize-space(.), '~~Phone')]]"
     )
+    # Fallbacks for bare docket files saved without the search-page
+    # wrapper, whose stray <title> tag is what makes the td[title]
+    # anchors below work. Seen on old M, O and D (disbarment) dockets
+    BARE_CASE_DATA_TABLE_XPATH = (
+        "//table[tr/td[starts-with(normalize-space(text()), 'No.')]]"
+    )
+    BARE_DOCKET_ENTRY_TABLE_XPATH = (
+        "//table[.//tr[contains(normalize-space(.), '~~Date~~')]]"
+    )
 
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTM report parser.
@@ -60,11 +69,18 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
         case_data_table_element = self.tree.find(".//td[title]/table")
         if case_data_table_element is None:
+            case_data_table_element = next(
+                iter(self.tree.xpath(self.BARE_CASE_DATA_TABLE_XPATH)), None
+            )
+        if case_data_table_element is None:
             logger.error("Could not find case metadata table.")
             return {}
         self._case_data_table = table_to_array2d(case_data_table_element)
-        docket_entry_table_elements = self.tree.xpath(
-            ".//td[title]/table[.//tr[contains(normalize-space(.), '~~Date~~')]]"
+        docket_entry_table_elements = (
+            self.tree.xpath(
+                ".//td[title]/table[.//tr[contains(normalize-space(.), '~~Date~~')]]"
+            )
+            or self._find_bare_docket_entry_tables()
         )
         if len(docket_entry_table_elements) == 0:
             logger.error("Could not find docket entry table.")
@@ -178,6 +194,25 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         return self._clean_whitespace(
             self._case_data_table[i][j].text_content()
         )
+
+    def _find_bare_docket_entry_tables(self) -> list[HtmlElement]:
+        """Find the docket entry table on bare docket pages.
+
+        Wrapper rows also contain the '~~Date~~' marker text
+        transitively, so keep only the innermost matching tables.
+
+        :return: A list of candidate docket entry table elements.
+        """
+        candidates = self.tree.xpath(self.BARE_DOCKET_ENTRY_TABLE_XPATH)
+        return [
+            table
+            for table in candidates
+            if not [
+                nested
+                for nested in table.iterdescendants("table")
+                if nested in candidates
+            ]
+        ]
 
     def _get_docket_entry_table_text(self, i: int, j: int) -> str:
         """
