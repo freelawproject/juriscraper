@@ -27,6 +27,7 @@ class Site(OpinionSiteLinear):
     # Holds 2025 and prior; serves them through a `get_items` API used for
     # backscraping
     legacy_url = "https://www.guamcourts.gov/legacydata/supreme-court-opinions"
+    legacy_get_items_type = "SPRMOP"
 
     # The year dropdown goes back to 1990, but the Court wasn't
     # created until 1996 and there are no opinions posted for
@@ -188,7 +189,7 @@ class Site(OpinionSiteLinear):
         self.url = self.legacy_url
         self.request["parameters"]["params"] = {
             "action": "get_items",
-            "type": "SPRMOP",
+            "type": self.legacy_get_items_type,
             "year": str(year),
         }
         self.html = await self._download()
