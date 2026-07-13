@@ -21,7 +21,8 @@ Changes:
 - `guam`: move legacy `get_items` type to a class attribute for subclass reuse. Did this for `superctguam`
 
 Fixes:
--
+
+- Fix Ohio scrapers by making `__EVENTVALIDATION` optional #2032
 
 ## 3.0.31 - 2026-07-09
 
