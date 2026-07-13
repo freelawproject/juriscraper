@@ -1,5 +1,6 @@
 __all__ = [
     "guam",
+    "superctguam",
     "nmariana",
     "prsupreme",
     "prapp",
