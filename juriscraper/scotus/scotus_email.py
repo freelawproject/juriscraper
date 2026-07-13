@@ -1,13 +1,14 @@
 import email
+import functools
 import pprint
 import re
 import sys
 from datetime import datetime
-from email.message import EmailMessage
+from email.message import Message
 from enum import Enum
 from pathlib import Path
 from typing import TypedDict
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import ParseResult, parse_qs, urlparse
 
 import requests
 from lxml import html
@@ -16,7 +17,11 @@ from lxml.html import HtmlElement
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.email_utils import parse_email_html
 from juriscraper.lib.html_utils import clean_html
-from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.string_utils import (
+    clean_string,
+    harmonize,
+    normalize_dashes,
+)
 from juriscraper.scotus import SCOTUSDocketReportHTML
 
 
@@ -180,7 +185,7 @@ class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(
-        r"^A new docket entry(?:, \"(.+?)\")? has been added"
+        r"^A new docket entry(?:, \"([^\"]+)\")? has been added"
     )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
@@ -192,7 +197,7 @@ class SCOTUSEmail:
     def __init__(self, court_id: str = "scotus"):
         self.court_id: str = court_id
         self.tree: HtmlElement | None = None
-        self.message: EmailMessage | None = None
+        self.message: Message | None = None
         self.email_type: SCOTUSEmailType = SCOTUSEmailType.INVALID
 
     @property
@@ -206,7 +211,8 @@ class SCOTUSEmail:
         """
 
         if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
-            followup_url = self._parse_first_link()
+            _, followup_parse_result, __ = self._first_link_with_filename
+            followup_url = followup_parse_result.geturl()
             data = SCOTUSNotificationEmail(
                 docket_number=self._parse_docket_number(),
                 case_name=self._parse_case_name(),
@@ -368,7 +374,7 @@ class SCOTUSEmail:
         text = self.tree.text_content()
         match = self.TITLE_REGEX.match(text)
 
-        return clean_string(match.group(1) or "")
+        return normalize_dashes(clean_string(match.group(1) or ""))
 
     def _parse_case_name(self) -> str:
         """Extract the case name from the first `<a>` tag in the email body
@@ -376,36 +382,56 @@ class SCOTUSEmail:
 
         :return: Cleaned case name.
         """
-        return harmonize(self.tree.findtext(".//a"))
+        link, _, __ = self._first_link_with_filename
+        return harmonize(link.text_content())
+
+    # The way things are currently set up, the parser will never be in memory long enough to have a leak worth caring about
+    @functools.cached_property
+    def _first_link_with_filename(
+        self,
+    ) -> tuple[HtmlElement, ParseResult, dict[str, list[str]]]:
+        if self.tree is None:
+            raise ValueError("self.tree is None")
+        links = [
+            link
+            for link in self.tree.iterfind(".//a")
+            if link.get("href") is not None
+        ]
+        if not links:
+            raise ValueError("No links found in SCOTUS email body")
+        links_with_url = ((link, urlparse(link.get("href"))) for link in links)
+        links_with_query = (
+            (link, url, parse_qs(url.query)) for link, url in links_with_url
+        )
+
+        links_with_filenames = [
+            (link, url, query)
+            for (link, url, query) in links_with_query
+            if "filename" in query
+        ]
+        if not links_with_filenames:
+            raise ValueError(
+                "No URLs with 'filename' query parameter found in SCOTUS email body"
+            )
+        filenames = {
+            query["filename"][0] for (_, _, query) in links_with_filenames
+        }
+        if len(filenames) > 1:
+            logger.error(
+                'Multiple URLs with unique "filename" query parameter found in SCOTUS email body (%s). Using first.',
+                filenames,
+            )
+        return links_with_filenames[0]
 
     def _parse_docket_number(self) -> str:
-        """Extract the docket number using the `href` attribute from the first
-        `<a>` tag in the email body.
+        """Extract the docket number using the `filename` query parameter of the
+        first `<a>` tag in the email body with an `href` attribute that includes
+        that parameter.
 
         :return: Docket number.
         """
-        if self.tree is None:
-            raise ValueError("self.tree is None")
-        links = list(self.tree.iterfind(".//a"))
-        if not links:
-            raise ValueError("No links found in SCOTUS email body")
-        hrefs = [link.get("href") for link in links]
-        urls = [urlparse(href) for href in hrefs if href is not None]
-        if not urls:
-            raise ValueError("No valid URLs found in SCOTUS email body")
-        queries = [parse_qs(url.query) for url in urls]
-        filenames = [
-            query["filename"][0] for query in queries if "filename" in query
-        ]
-        if not filenames:
-            raise ValueError(
-                'No URLs with "filename" query parameter found in SCOTUS email body'
-            )
-        if len(set(filenames)) > 1:
-            logger.error(
-                f'Multiple URLs with unique "filename" query parameter found in SCOTUS email body ({set(filenames)}). Using first.'
-            )
-        docket_number = Path(filenames[0]).stem
+        _, __, query = self._first_link_with_filename
+        docket_number = Path(query["filename"][0]).stem
         return clean_string(docket_number)
 
     def _parse_first_link(self) -> str:
