@@ -23,6 +23,8 @@ Changes:
 Fixes:
 
 - Fix Ohio scrapers by making `__EVENTVALIDATION` optional #2032
+- Rewrite the `ca3` oral argument scraper for the court's new HTML file
+  lists, which replaced the removed RSS feed and .aspx pages #2019
 
 ## 3.0.31 - 2026-07-09
 
