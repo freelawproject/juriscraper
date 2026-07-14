@@ -11,6 +11,7 @@
 import re
 from urllib.parse import unquote
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
@@ -38,13 +39,19 @@ class Site(OralArgumentSiteLinear):
             links = row.xpath(".//a/@href")
             dates = row.xpath("./td[2]/text()")
             if not links or not dates:
+                logger.warning(
+                    "ca3: skipping row without link or date: %s",
+                    " ".join(row.text_content().split()),
+                )
                 continue
 
             url = links[0]
             stem = unquote(url.split("/")[-1]).rsplit(".", 1)[0]
-            # Drop trailing part-file markers, e.g.
-            # '24-3226_USAvHodges_a.mp3' is a second file for the same
-            # argument as '24-3226_USAvHodges.mp3'
+            # Drop trailing re-upload markers, e.g.
+            # '24-3226_USAvHodges_a.mp3' is a re-upload of the same audio
+            # as '24-3226_USAvHodges.mp3' (see #2019). Both entries are
+            # ingested; stripping the marker keeps the case name clean
+            # and makes the duplicates easy to spot upstream
             stem = re.sub(r"_[a-z]$", "", stem)
 
             # Dockets are packed at the front of the name, usually
