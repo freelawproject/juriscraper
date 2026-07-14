@@ -15,14 +15,16 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add new scraper `superctguam` for Superior Court of Guam [#1939](https://github.com/freelawproject/juriscraper/issues/1939)
 
 Changes:
--
+- `guam`: move legacy `get_items` type to a class attribute for subclass reuse. Did this for `superctguam`
 
 Fixes:
+
+- Fix Ohio scrapers by making `__EVENTVALIDATION` optional #2032
 - Rewrite the `ca3` oral argument scraper for the court's new HTML file
-  lists, which replaced the removed RSS feed and .aspx pages (#2019)
+  lists, which replaced the removed RSS feed and .aspx pages #2019
 
 ## 3.0.31 - 2026-07-09
 
