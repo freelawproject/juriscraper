@@ -15,14 +15,16 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add new scraper `superctguam` for Superior Court of Guam [#1939](https://github.com/freelawproject/juriscraper/issues/1939)
 - Add `nev_u` and `nevapp_u` scrapers for unpublished dispositions of the
-  Nevada Supreme Court and Court of Appeals (#2011)
+  Nevada Supreme Court and Court of Appeals #2011
 
 Changes:
--
+- `guam`: move legacy `get_items` type to a class attribute for subclass reuse. Did this for `superctguam`
 
 Fixes:
--
+
+- Fix Ohio scrapers by making `__EVENTVALIDATION` optional #2032
 
 ## 3.0.31 - 2026-07-09
 
