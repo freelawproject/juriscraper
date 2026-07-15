@@ -4,57 +4,76 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # Date created: 18 July 2014
+# History:
+#  - 2026-07-11: The court replaced its RSS feed and .aspx file lists
+#    with plain HTML file lists; rewritten to parse those.
 
 import re
-from datetime import datetime
+from urllib.parse import unquote
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import fix_camel_case
-from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSite):
+class Site(OralArgumentSiteLinear):
+    docket_regex = r"\d{2}-\d{3,4}"
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = (
-            "http://www2.ca3.uscourts.gov/oralargument/OralArguments.xml"
-        )
-        self.regex = r"(\d{2}-\d{3,4})?(.+)\.(:?(wma)|(mp3)|(m4a))"
+        # Files posted in the last 30 days. OralArgContents7.html and
+        # OralArgContentsAll.html list the last 7 days and everything
+        self.url = "https://www2.ca3.uscourts.gov/OralArgContents30.html"
 
-    def _get_download_urls(self):
-        path = "//item/link"
-        return list(map(self._return_download_url, self.html.xpath(path)))
+    def _process_html(self) -> None:
+        """Parse the file-list table
 
-    @staticmethod
-    def _return_download_url(e):
-        return f"http://www2.ca3.uscourts.gov{e.tail}"
+        Each row holds a link to an audio file and the datetime it was
+        posted. Dockets and the case name are packed into the file name,
+        e.g. '20-3216_20-3242_25-2003_USAvMiner_Wootton_Miner.mp3'
 
-    def _get_case_names(self):
-        path = "//item/title/text()"
-        case_names = []
-        for s in self.html.xpath(path):
-            case_name = re.search(self.regex, s).group(2)
-            case_names.append(fix_camel_case(case_name))
-        return case_names
+        :return None
+        """
+        for row in self.html.xpath("//table//tr[td]"):
+            links = row.xpath(".//a/@href")
+            dates = row.xpath("./td[2]/text()")
+            if not links or not dates:
+                logger.warning(
+                    "ca3: skipping row without link or date: %s",
+                    " ".join(row.text_content().split()),
+                )
+                continue
 
-    def _get_case_dates(self):
-        path = "//item/description/text()"
-        return list(map(self._return_case_date, self.html.xpath(path)))
+            url = links[0]
+            stem = unquote(url.split("/")[-1]).rsplit(".", 1)[0]
+            # Drop trailing re-upload markers, e.g.
+            # '24-3226_USAvHodges_a.mp3' is a re-upload of the same audio
+            # as '24-3226_USAvHodges.mp3' (see #2019). Both entries are
+            # ingested; stripping the marker keeps the case name clean
+            # and makes the duplicates easy to spot upstream
+            stem = re.sub(r"_[a-z]$", "", stem)
 
-    @staticmethod
-    def _return_case_date(e):
-        return datetime.strptime(e, "%m/%d/%Y").date()
+            # Dockets are packed at the front of the name, usually
+            # underscore-separated, sometimes glued to the case name
+            leading_dockets = re.match(rf"(?:{self.docket_regex}[_&]*)+", stem)
+            if leading_dockets:
+                dockets = re.findall(
+                    self.docket_regex, leading_dockets.group(0)
+                )
+                name_str = stem[leading_dockets.end() :].strip("_ ")
+            else:
+                dockets = []
+                name_str = stem
 
-    def _get_docket_numbers(self):
-        path = "//item/title/text()"
-        return list(map(self._return_docket_number, self.html.xpath(path)))
+            name = " ".join(fix_camel_case(name_str).replace("_", " ").split())
 
-    def _return_docket_number(self, e):
-        case_name = re.search(self.regex, e)
-        docket_number = case_name.group(1)
-        if docket_number:
-            # Surround ampersands with spaces and remove dup spaces if created
-            docket_number = " ".join(re.sub("&", " & ", docket_number).split())
-            return docket_number
-        else:
-            return ""
+            self.cases.append(
+                {
+                    "url": url,
+                    "docket": ", ".join(dockets),
+                    "name": name,
+                    # e.g. '6/26/2026 9:37:40 AM'; keep the date only
+                    "date": dates[0].split()[0],
+                }
+            )
