@@ -53,6 +53,8 @@ class Site(ClusterSite):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
         self.is_backscrape = False
+        # Cases eligible as clustering candidates; excludes statements
+        self.clusterable_cases = []
 
     async def _download(self, request_dict=None):
         """Downloads the HTML content for the current opinion page.
@@ -186,10 +188,25 @@ class Site(ClusterSite):
                 "lower_court_id": lower_court_id,
             }
 
-            if cluster := self.cluster_opinions(case_dict, self.cases):
+            # "Statement of Justice ..." documents are kept out of
+            # clustering: they carry the default (majority) type, so a
+            # day with two statements on one case (e.g. 24-1042 on
+            # 2026-06-26) would otherwise form a cluster with two lead
+            # opinions and fail the cluster sanity check. See the
+            # discussion in
+            # https://github.com/freelawproject/juriscraper/pull/2038
+            is_statement = "statement" in link.text_content().lower()
+
+            if not is_statement and (
+                cluster := self.cluster_opinions(
+                    case_dict, self.clusterable_cases
+                )
+            ):
                 cluster["judge"] += f"; {case_dict['judge']}"
             else:
                 self.cases.append(case_dict)
+                if not is_statement:
+                    self.clusterable_cases.append(case_dict)
 
     @staticmethod
     def parse_lower_court_info(title: str) -> tuple[str, str, str]:
@@ -247,13 +264,12 @@ class Site(ClusterSite):
             op_type = OpinionType.DISSENT
         elif "concurring" in text or url.endswith("c.pdf"):
             op_type = OpinionType.CONCURRENCE
-        elif "statement" in text:
-            # e.g. "Statement of Justice Devine respecting the denial of
-            # the petition for writ of mandamus". CourtListener has no
-            # statement type; a non-dissenting separate writing is
-            # closest to a concurrence
-            op_type = OpinionType.CONCURRENCE
         else:
+            # "Statement of Justice ..." documents also land here and are
+            # deliberately ingested with the default type; the right type
+            # for statements is tracked outside this PR, see the
+            # discussion in
+            # https://github.com/freelawproject/juriscraper/pull/2038
             op_type = OpinionType.MAJORITY
         return str(op_type.value)
 
