@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `asbca` and `uscgcoca` headers (Chrome 149) #2043
 
 ## 3.0.32 - 2026-07-14
 
