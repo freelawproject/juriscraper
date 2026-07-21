@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `asbca` and `uscgcoca` headers (Chrome 149) #2043
+- Fix `indctapp_reclassified` crash on rows with `<span>`-wrapped cells; also fixes case names being truncated at `<br>` tags #2050
 
 ## 3.0.32 - 2026-07-14
 
