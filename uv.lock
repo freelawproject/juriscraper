@@ -360,7 +360,7 @@ wheels = [
 
 [[package]]
 name = "juriscraper"
-version = "3.0.32"
+version = "3.0.33"
 source = { editable = "." }
 dependencies = [
     { name = "certifi" },
