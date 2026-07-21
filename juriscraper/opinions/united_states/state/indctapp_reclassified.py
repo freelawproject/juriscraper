@@ -47,11 +47,13 @@ class Site(OpinionSiteLinear):
                     p.text_content().strip() for p in lower_court_parts
                 )
             else:
+                # Strip commas per part: a text node may already end in a
+                # comma before a <br>, which would double up with the join
                 lower_court = ", ".join(
-                    part.replace(",", ", ").strip()
+                    part.replace(",", ", ").strip(" ,")
                     for part in cells[3].xpath(".//text()[normalize-space()]")
-                    if part.strip()
-                ).strip(", ")
+                    if part.strip(" ,")
+                )
 
             docket_parts = cells[4].xpath(".//p")
             docket = (
