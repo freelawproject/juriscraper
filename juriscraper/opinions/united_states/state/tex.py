@@ -17,6 +17,7 @@
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 #  - 2025-05-30; Updated by lmanzur: get opinions from the orders on causes page
+#  - 2026-07-11; Fix date extraction after order page layout change
 
 import re
 from datetime import date
@@ -34,9 +35,12 @@ class Site(ClusterSite):
     base_url = "https://www.txcourts.gov/supreme/orders-opinions/{}/"
     # link_xp targets the year-index page's bullet list of dated order
     # subpages (one <li><a> per date); date_xp targets the "Orders
-    # Pronounced …" header on a single day's order page.
+    # Pronounced …" header on a single day's order page. It is anchored
+    # on that text rather than the page layout, which changed in
+    # June 2026.
     link_xp = '//*[@id="MainContent"]/div/div/div/ul/li/a/@href'
-    date_xp = '//*[@id="MainContent"]/div/div[1]/div/text()'
+    date_xp = '//div[contains(text(), "Orders Pronounced")]/text()'
+    date_regex = r"Orders Pronounced\s+(?P<date>.+)"
     judge_regex = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
     days_interval = 365
 
@@ -80,7 +84,17 @@ class Site(ClusterSite):
         if self.html is None:
             return
 
-        date = self.html.xpath(self.date_xp)[0].strip()
+        date_strings = self.html.xpath(self.date_xp)
+        if not date_strings:
+            logger.error("tex: no 'Orders Pronounced' header on order page")
+            return
+        date_match = re.search(self.date_regex, date_strings[0])
+        if not date_match:
+            logger.error(
+                "tex: unable to parse date from 'Orders Pronounced' header"
+            )
+            return
+        date = date_match.group("date").strip()
         # Each day's page contains many PDF links; only those inside a
         # <span class="a70"> (court opinion + disposition cell) or
         # <span class="a79"> (separate opinion cell — concurrence /
@@ -197,7 +211,12 @@ class Site(ClusterSite):
 
         if match := re.search(texapp_regex, title):
             lower_court = match.group("lower_court")
-            lower_court_number = title[match.end() :].split(",")[0]
+            # When the parenthetical holds only the case number, e.g.
+            # "(15-25-00231-CV)", there is no comma to split on and the
+            # closing parenthesis must be stripped
+            lower_court_number = (
+                title[match.end() :].split(",")[0].rstrip(")").strip()
+            )
             return lower_court, lower_court_number, "texapp"
 
         elif match := re.search(other_courts_regex, title):
@@ -232,6 +251,13 @@ class Site(ClusterSite):
         elif "dissenting" in text or url.endswith("d.pdf"):
             op_type = OpinionType.DISSENT
         elif "concurring" in text or url.endswith("c.pdf"):
+            op_type = OpinionType.CONCURRENCE
+        elif "statement" in text:
+            # Provisional type for "Statement of Justice ..." documents,
+            # chosen so same-day statements on one case can cluster
+            # without tripping the one-lead-per-cluster sanity check.
+            # The right type for statements is tracked outside this PR,
+            # see https://github.com/freelawproject/juriscraper/pull/2038
             op_type = OpinionType.CONCURRENCE
         else:
             op_type = OpinionType.MAJORITY
