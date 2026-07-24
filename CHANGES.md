@@ -24,7 +24,7 @@ Changes:
 -
 
 Fixes:
--
+- `FreeOpinionReport`: a single unparsable opinion row (e.g. one whose "Doc. #" cell has no link) no longer aborts the whole report — the row is skipped and logged, and its `pacer_doc_id` is `None`. Also, a page missing the "Total number of opinions reported" banner now raises `ParsingException` instead of a bare `IndexError`, so genuine truncation stops being confused with parse bugs. #2053
 
 ## 3.0.33 - 2026-07-21
 

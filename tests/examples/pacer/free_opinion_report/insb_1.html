@@ -1,0 +1,112 @@
+<html><head><link rel="shortcut icon"  href="/favicon.ico"/><title>CM/ECF - U.S. Bankruptcy Court:insb</title>
+<script type="text/javascript">document.cookie = "PRTYPE=web; path=/;"</script> <script>var default_base_path = "/"; </script> <link rel="stylesheet" type="text/css" href="/css/default.css"><script type="text/javascript" src="/lib/core.js"></script><script type="text/javascript" src="/lib/DisableAJTALinks.js"></script><script type="text/javascript">if (top!=self) {top.location.replace(location.href);}</script><script>var default_base_path = "/"; </script>
+<SCRIPT LANGUAGE="JavaScript">
+/********************************************************************************************
+  Purpose: To open Procedures Manual page in a new window
+
+  Parameters:
+    tcPmLink: URL of Procedures Manual page
+
+  Return: Always false
+ ********************************************************************************************/
+
+function VisitPmLink(tcPmLink) {
+// Pull up Procedures Manual page in a new window
+
+  if (typeof(oPmWindow) == 'undefined' || oPmWindow.closed ||
+      typeof(cPmLink) == 'undefined' || cPmLink != tcPmLink) {
+                                                 // If window/link have never been activated...
+    cPmLink = tcPmLink;                          // Save URL to prevent duplicate windows
+    oPmWindow = window.open(cPmLink, 'PmLink', 'location=yes,resizable=yes,scrollbars=yes');
+                                                 // Open window with Procedures Manual page
+  }
+  oPmWindow.focus();                             // Make sure Procedures Manual window is on top
+
+// Exit method
+
+  return false;                                  // Prevent processing of HREF from onClick
+}
+</SCRIPT><script type="text/javascript" src="/cgi-bin/menu.pl?id=-1"></script></head><body BGCOLOR=F9F9F9 TEXT=000000 onLoad='SetFocus()'>
+        <div class="noprint">
+        <div id="topmenu" class="yuimenubar"><div class="bd">
+        <img id="cmecfLogo" class="cmecfLogo" src="/graphics/logo-cmecf-sm.png" alt="CM/ECF" title="" onClick="CMECF.MainMenu.showCourtInformation(); return false" />
+        <ul class="first-of-type">
+      
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/iquery.pl'><u>Q</u>uery</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Reports&id=-1'><u>R</u>eports <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/DisplayMenu.pl?Utilities&id=-1'><u>U</u>tilities <div class='spritedownarrow'></div></a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" onClick="CMECF.MainMenu.showHelpPage(''); return false">Help</a></li>
+<li class="yuimenubaritem"><a class="yuimenubaritemlabel" href='/cgi-bin/login.pl?logout'>Log Out</a></li><li class='yuimenubaritem' id='placeholderForAlertsIcon'></li>
+        </ul></div>
+        <hr class="hrmenuseparator"></div></div>
+        
+      <script type="text/javascript">
+callCreateMenu=function(){
+        var fn = "CMECF.MainMenu.createMenu";
+        if(typeof CMECF.MainMenu.createMenu == 'function') {
+          CMECF.MainMenu.createMenu();
+        }
+                        }
+if (navigator.appVersion.indexOf("MSIE")==-1){window.setTimeout( function(){ callCreateMenu(); }, 1);}else{CMECF.util.Event.addListener(window, "load",  callCreateMenu());}</script> <div id="cmecfMainContent"><input STYLE="display:none" id="cmecfMainContentScroll" value="0"><SCRIPT LANGUAGE="JavaScript">
+		var IsForm = false;
+		var FirstField;
+		function SetFocus() {
+			if(IsForm) {
+				if(FirstField) {
+					var ind = FirstField.indexOf('document.',0);
+					if(ind == 0)
+					{
+						eval(FirstField);
+					}
+					else
+					{
+						var Code = "document.forms[0]."+FirstField+".focus();";
+						eval(Code);
+					}
+				} else {
+					var Cnt = 0;
+					while(document.forms[0].elements[Cnt] != null) {
+						try {
+							if(document.forms[0].elements[Cnt].type != "hidden" &&
+									!document.forms[0].elements[Cnt].disabled &&
+									!document.forms[0].elements[Cnt].readOnly) {
+								document.forms[0].elements[Cnt].focus();
+								break;
+							}
+						}
+						catch(e) {}
+						Cnt += 1;
+					}
+				}
+			}
+			return(true);
+		}
+		</SCRIPT>
+<center><h2>Written Opinions Report</h2>
+<h3 style='margin-top:0;margin-bottom:0'>U.S. Bankruptcy Court -- Southern District of Indiana</h3>
+<h3 style='margin-top:0;margin-bottom:0'>Filed Report Period: 8/20/2009 - 8/20/2009</h3>
+
+        <table border=1 rules=all cellpadding=3  style='margin-left:3px;margin-right:3px'>
+          <tr align=center>
+            <th>Case Number & Name:</th>
+            <th>Date Filed:</th>
+            <th>Doc. #</th>
+            <th>Description:</th></tr>
+<tr valign=top>
+	<td><A HREF='/cgi-bin/DktRpt.pl?500739'>08-50533 French Design Jewelry, Inc. et al v. Downey Creations, LLC et al</A></td>
+	<td>08/20/2009</td>
+	<td align=center>40</td>
+	<td>Findings of Fact and Conclusions of Law on Downey Creations, LLC'S Motion for Partial Summary Judgment(re: Doc # <a href='https://ecf.insb.uscourts.gov/doc1/072012916914'>25</a>). (jhw) Additional attachment(s) added on 8/21/2009 (Davidson, Cathy).</td>
+</tr>
+</table>
+</center>
+<br>&nbsp; <B>Total number of opinions reported:</B> 1<br>
+<center><h3 style='margin-bottom:0'>Selection Criteria for Report</h3>
+<table border=1 rules=all cellpadding=3>
+<tr><td class='label'>Case Number</td><td class='info'>All</td></tr>
+<tr><td class='label'>Office</td><td class='info'>All</td></tr>
+<tr><td class='label'>Filed date</td><td class='info'>8/20/2009 - 8/20/2009</td></tr>
+<tr><td><b>Sort by</b></td><td>Case Number</td></tr>
+</table>
+</center>
+</div></body></html>
