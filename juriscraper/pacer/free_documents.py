@@ -5,7 +5,10 @@ which is free.
 import pprint
 import sys
 
+from lxml.html import tostring
+
 from juriscraper.lib.date_utils import make_date_range_tuples
+from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.html_utils import (
     clean_html,
     fix_links_in_lxml_tree,
@@ -154,12 +157,18 @@ class FreeOpinionReport(BaseReport):
 
         :param tree: a parsed lxml tree for a single result page.
         :return: the reported opinion count as an int.
+        :raises ParsingException: if the banner is missing, which usually means
+            the page was truncated (e.g. proxy timeout) or is an unknown layout.
         """
-        return int(
-            tree.xpath(
-                '//b[contains(text(), "Total number of opinions reported")]'
-            )[0].tail
+        banner = tree.xpath(
+            '//b[contains(text(), "Total number of opinions reported")]'
         )
+        if not banner:
+            raise ParsingException(
+                "'Total number of opinions reported' banner not found — page "
+                "truncated or unknown layout."
+            )
+        return int(banner[0].tail)
 
     @property
     def reported_opinion_count(self):
@@ -181,14 +190,28 @@ class FreeOpinionReport(BaseReport):
             if opinion_count == 0:
                 continue
             rows = tree.xpath("(//table)[1]//tr[position() > 1]")
-            for row in rows:
-                if results:
+            for i, row_el in enumerate(rows):
+                try:
                     # If we have results already, pass the previous result to
-                    # the FreeOpinionRow object.
-                    row = FreeOpinionRow(row, results[-1], self.court_id)
-                else:
-                    row = FreeOpinionRow(row, {}, self.court_id)
-                results.append(row.data)
+                    # the FreeOpinionRow object so it can fill in cells the
+                    # report leaves blank when repeated.
+                    last_good_row = results[-1] if results else {}
+                    row = FreeOpinionRow(row_el, last_good_row, self.court_id)
+                    results.append(row.data)
+                except Exception:
+                    # One malformed or unknown-layout row must not abort the
+                    # whole report. Log loudly (with just the offending row,
+                    # not the whole page) so the failure stays diagnosable
+                    # rather than masked as a truncation. See issue #2053.
+                    logger.error(
+                        "Skipping unparsable row %s in %s's written opinion "
+                        "report:\n%s",
+                        i,
+                        self.court_id,
+                        tostring(row_el).decode("utf-8"),
+                        exc_info=True,
+                    )
+                    continue
         logger.info(
             "Parsed %s results from written opinions report at %s",
             len(results),
@@ -411,11 +434,20 @@ class FreeOpinionRow(BaseDocketReport):
             return convert_date_string(s)
 
     def get_pacer_doc_id(self):
-        doc1_url = self.element.xpath("./td[3]//@href")[0]
-        return get_pacer_doc_id_from_doc1_url(doc1_url)
+        hrefs = self.element.xpath("./td[3]//@href")
+        if not hrefs:
+            # e.g. insb: the opinion's own Doc. # cell is plain text; the only
+            # doc1 link in the row lives in the description, for a different
+            # document. There's no doc id to extract, so return None rather
+            # than aborting the whole report.
+            return None
+        return get_pacer_doc_id_from_doc1_url(hrefs[0])
 
     def get_document_number(self):
-        return self.element.xpath("./td[3]//text()")[0]
+        text = self.element.xpath("./td[3]//text()")
+        if not text:
+            return None
+        return text[0]
 
     def get_description(self):
         return self.element.xpath("./td[4]")[0].text_content()
