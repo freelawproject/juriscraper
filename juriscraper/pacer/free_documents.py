@@ -185,6 +185,12 @@ class FreeOpinionReport(BaseReport):
     @property
     def data(self):
         results = []
+        # The row immediately above the current one, used to fill in cells the
+        # report leaves blank when a case repeats across consecutive rows. This
+        # must track the *adjacent* row, not results[-1]: after a row is
+        # skipped, results[-1] is an earlier, non-adjacent row, and a blank
+        # continuation row would silently inherit its (wrong) case identity.
+        last_good_row = {}
         for tree in self.trees:
             opinion_count = self._get_reported_opinion_count(tree)
             if opinion_count == 0:
@@ -192,12 +198,8 @@ class FreeOpinionReport(BaseReport):
             rows = tree.xpath("(//table)[1]//tr[position() > 1]")
             for i, row_el in enumerate(rows):
                 try:
-                    # If we have results already, pass the previous result to
-                    # the FreeOpinionRow object so it can fill in cells the
-                    # report leaves blank when repeated.
-                    last_good_row = results[-1] if results else {}
                     row = FreeOpinionRow(row_el, last_good_row, self.court_id)
-                    results.append(row.data)
+                    row_data = row.data
                 except Exception:
                     # One malformed or unknown-layout row must not abort the
                     # whole report. Log loudly (with just the offending row,
@@ -211,7 +213,13 @@ class FreeOpinionReport(BaseReport):
                         tostring(row_el).decode("utf-8"),
                         exc_info=True,
                     )
+                    # Invalidate last_good_row so a blank continuation row that
+                    # follows this skipped row fails loudly (and is skipped too)
+                    # rather than inheriting an unrelated case's identity.
+                    last_good_row = {}
                     continue
+                results.append(row_data)
+                last_good_row = row_data
         logger.info(
             "Parsed %s results from written opinions report at %s",
             len(results),

@@ -95,3 +95,53 @@ class PacerFreeOpinionReportTest(PacerParseTestCase):
         log_text = "\n".join(cm.output)
         self.assertIn("Skipping unparsable row", log_text)
         self.assertIn("malformed row with no date cell", log_text)
+
+    def test_skipped_row_does_not_misattribute_continuation(self):
+        """When a case-establishing row is skipped, a following blank
+        continuation row must not silently inherit an earlier, unrelated
+        case's identity. It should be skipped too rather than misattributed.
+        See issue #2053 review.
+        """
+        # Row 1: Case A, complete. Row 2: Case B's establishing row, but with
+        # an empty date cell so get_date_filed raises and it is skipped. Row 3:
+        # Case B's continuation — a blank *case* cell (PACER omits the case name
+        # for consecutive docs of the same case) but a real date, so it depends
+        # entirely on last_good_row for its docket/case identity. Without
+        # invalidating last_good_row on the skip, row 3 would successfully parse
+        # and inherit Case A's identity — a silent misattribution.
+        html = """
+        <html><body>
+        <b>Total number of opinions reported:</b> 3<br>
+        <table>
+          <tr><th>Case</th><th>Date</th><th>Doc</th><th>Description</th></tr>
+          <tr valign=top>
+            <td><a href='/cgi-bin/DktRpt.pl?111'>08-11111 Case A v. Foo</a></td>
+            <td>08/20/2009</td>
+            <td align=center>10</td>
+            <td>Case A description</td>
+          </tr>
+          <tr valign=top>
+            <td><a href='/cgi-bin/DktRpt.pl?222'>08-22222 Case B v. Bar</a></td>
+            <td></td>
+            <td align=center>20</td>
+            <td>Case B first document</td>
+          </tr>
+          <tr valign=top>
+            <td></td>
+            <td>08/21/2009</td>
+            <td align=center>21</td>
+            <td>Case B second document</td>
+          </tr>
+        </table>
+        </body></html>
+        """
+        report = FreeOpinionReport("insb")
+        report._parse_text(html)
+        with self.assertLogs("juriscraper.lib.log_tools", level="ERROR"):
+            data = report.data
+        # Only Case A survives; both Case B rows are skipped (the establishing
+        # row raises, and the continuation row can no longer borrow an identity).
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]["docket_number"], "08-11111")
+        # Critically, no row was misattributed to Case A.
+        self.assertEqual([row["docket_number"] for row in data], ["08-11111"])
