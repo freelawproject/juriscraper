@@ -148,16 +148,36 @@ class FreeOpinionReport(BaseReport):
         self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
         self.trees.append(self.tree)
 
+    @staticmethod
+    def _get_reported_opinion_count(tree):
+        """PACER's "Total number of opinions reported" value for one page.
+
+        :param tree: a parsed lxml tree for a single result page.
+        :return: the reported opinion count as an int.
+        """
+        return int(
+            tree.xpath(
+                '//b[contains(text(), "Total number of opinions reported")]'
+            )[0].tail
+        )
+
+    @property
+    def reported_opinion_count(self):
+        """Total opinions PACER reported across all queried pages for this scrape.
+
+        This is PACER's own count, independent of how many rows we successfully
+        parsed. Comparing it against ``len(self.data)`` surfaces silent parse
+        gaps.
+        """
+        return sum(
+            self._get_reported_opinion_count(tree) for tree in self.trees
+        )
+
     @property
     def data(self):
         results = []
         for tree in self.trees:
-            opinion_count = int(
-                tree.xpath(
-                    '//b[contains(text(), "Total number of '
-                    'opinions reported")]'
-                )[0].tail
-            )
+            opinion_count = self._get_reported_opinion_count(tree)
             if opinion_count == 0:
                 continue
             rows = tree.xpath("(//table)[1]//tr[position() > 1]")
