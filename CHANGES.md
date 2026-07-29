@@ -24,7 +24,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `ca3` oral arguments: file names containing an apostrophe yielded a truncated download URL and case name (the court's single-quoted `href` closes early), and underscore-separated dockets (`25_1497...`) were dropped from the docket number and leaked into the case name
 
 ## 3.0.33 - 2026-07-21
 
