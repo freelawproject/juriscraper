@@ -1,79 +1,88 @@
-#  Scraper for Third Circuit of Appeals
-# CourtID: ca3
-# Court Short Name: ca3
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date created: 18 July 2014
-# History:
-#  - 2026-07-11: The court replaced its RSS feed and .aspx file lists
-#    with plain HTML file lists; rewritten to parse those.
+"""Scraper for Third Circuit of Appeals
+CourtID: ca3
+Court Short Name: ca3
+Author: Andrei Chelaru
+Reviewer: mlr
+Date created: 18 July 2014
+History:
+    - 2026-07-29: The RSS/podcast feed at
+      /oralargument/OralArguments.xml was retired (404); switched to the
+      "Oral Argument Files within last 30 days" HTML listing, which only
+      exposes the audio file name and its upload timestamp.
+"""
 
 import re
-from urllib.parse import unquote
+from urllib.parse import quote
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    docket_regex = r"\d{2}-\d{3,4}"
+    base_url = "https://www2.ca3.uscourts.gov/oralarg/"
+    # Audio file names bundle the docket number(s) and the case name
+    # together, in a handful of shapes:
+    #   14-2042_USAv.Noel.mp3
+    #   10-4188USAv.Swan.mp3
+    #   25_1497USAv.KevinChristmas.mp3
+    #   26-1444_26-1445_InReLigadoNetworks.mp3
+    #   26-2184 Mejia-Henriquez v. Attorney General USA.mp3
+    docket_prefix_regex = re.compile(r"^\s*((?:\d{2}[-_]+\d{3,4}[-_ ]*)+)")
+    docket_regex = re.compile(r"\d{2}[-_]+\d{3,4}")
+    # Multi part arguments get a "_a", "_b", ... suffix
+    part_regex = re.compile(r"_[a-z0-9]$", re.I)
+    et_al_regex = re.compile(r"[,\s]*et\.?\s?al\.?", re.I)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        # Files posted in the last 30 days. OralArgContents7.html and
-        # OralArgContentsAll.html list the last 7 days and everything
         self.url = "https://www2.ca3.uscourts.gov/OralArgContents30.html"
 
-    def _process_html(self) -> None:
-        """Parse the file-list table
-
-        Each row holds a link to an audio file and the datetime it was
-        posted. Dockets and the case name are packed into the file name,
-        e.g. '20-3216_20-3242_25-2003_USAvMiner_Wootton_Miner.mp3'
-
-        :return None
-        """
+    def _process_html(self):
         for row in self.html.xpath("//table//tr[td]"):
-            links = row.xpath(".//a/@href")
-            dates = row.xpath("./td[2]/text()")
-            if not links or not dates:
-                logger.warning(
-                    "ca3: skipping row without link or date: %s",
-                    " ".join(row.text_content().split()),
-                )
+            # Build the URL from the file name rather than the anchor's
+            # href: names containing an apostrophe ("Kelleyv.O'Malley.mp3")
+            # close the court's single quoted href early, so lxml sees a
+            # truncated URL. The cell's text is intact either way.
+            file_name = row.xpath("td[1]")[0].text_content().strip()
+            docket, name = self.parse_file_name(file_name)
+            if not name:
                 continue
-
-            url = links[0]
-            stem = unquote(url.split("/")[-1]).rsplit(".", 1)[0]
-            # Drop trailing re-upload markers, e.g.
-            # '24-3226_USAvHodges_a.mp3' is a re-upload of the same audio
-            # as '24-3226_USAvHodges.mp3' (see #2019). Both entries are
-            # ingested; stripping the marker keeps the case name clean
-            # and makes the duplicates easy to spot upstream
-            stem = re.sub(r"_[a-z]$", "", stem)
-
-            # Dockets are packed at the front of the name, usually
-            # underscore-separated, sometimes glued to the case name
-            leading_dockets = re.match(rf"(?:{self.docket_regex}[_&]*)+", stem)
-            if leading_dockets:
-                dockets = re.findall(
-                    self.docket_regex, leading_dockets.group(0)
-                )
-                name_str = stem[leading_dockets.end() :].strip("_ ")
-            else:
-                dockets = []
-                name_str = stem
-
-            name = " ".join(fix_camel_case(name_str).replace("_", " ").split())
-
             self.cases.append(
                 {
-                    "url": url,
-                    "docket": ", ".join(dockets),
+                    "url": self.base_url + quote(file_name),
+                    "docket": docket,
                     "name": name,
-                    # e.g. '6/26/2026 9:37:40 AM'; keep the date only
-                    "date": dates[0].split()[0],
+                    # The listing's second column is the file's upload
+                    # timestamp; it is the only date the court exposes here
+                    "date": row.xpath("td[2]/text()")[0].split()[0],
                 }
             )
+
+    def parse_file_name(self, file_name: str) -> tuple[str, str]:
+        """Extract the docket number(s) and case name from an audio file name
+
+        :param file_name: the audio file's name, extension included
+        :return: a (docket numbers, case name) tuple
+        """
+        file_name = file_name.removesuffix(".mp3")
+
+        match = self.docket_prefix_regex.match(file_name)
+        if match:
+            docket = ", ".join(
+                re.sub(r"[-_]+", "-", d)
+                for d in self.docket_regex.findall(match.group(1))
+            )
+            name = file_name[match.end() :]
+        else:
+            docket, name = "", file_name
+
+        name = self.et_al_regex.sub(" ", self.part_regex.sub("", name))
+        # `fix_camel_case` is a no-op on strings that already contain a
+        # space, so feed it each underscore delimited chunk separately
+        name = " ".join(
+            fix_camel_case(chunk)
+            for chunk in re.split(r"[_\s]+", name)
+            if chunk
+        )
+        return docket, re.sub(r"\s*,\s*", ", ", name).strip(" .,;-")
