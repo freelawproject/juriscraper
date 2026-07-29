@@ -24,7 +24,7 @@ Changes:
 -
 
 Fixes:
--
+- `ny.Site.cleanup_content` extracts only the opinion container from the new LRB page template, so site chrome ("disable Adblock" banner, header menus, footer) no longer pollutes opinion content. Covers all NY scrapers. #2058
 
 ## 3.0.33 - 2026-07-21
 
