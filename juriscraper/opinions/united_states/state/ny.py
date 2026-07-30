@@ -8,6 +8,7 @@ History:
  2016-05-04: Updated by arderyp to handle typos in docket string format
  2024-09-05: Updated by flooie to deal with block from main website
  2025-10-27: Updated by quevon24 to fix content cleanup
+ 2026-07-29: Updated by grossir to strip site chrome from the new LRB template
 """
 
 import re
@@ -208,14 +209,16 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def cleanup_content(content: bytes) -> bytes:
-        """Remove hash altering timestamps to prevent duplicates
+        """Keep only the opinion content, without hash altering elements
 
+        On new-template pages, extracts the opinion container and discards
+        the surrounding site chrome (adblock banner, header, footer).
         Previously we've been more targeted about removing a href's but
         doctor will strip them out anyway so we should just clean our html
         content here.
 
         :param content: downloaded content `r.content`
-        :return: content without hash altering elements
+        :return: opinion content without hash altering elements
         """
         try:
             html_str = content.decode("utf-8")
@@ -224,6 +227,25 @@ class Site(OpinionSiteLinear):
 
         if not nh3.is_html(html_str):
             return content
+
+        # The Law Reporting Bureau page template (since ~April 2026) wraps
+        # the opinion in site chrome: a "disable Adblock" banner that is
+        # hidden client-side but always present in the HTML, header menus,
+        # breadcrumbs and a footer. Keep only the opinion container; older
+        # permanent-format pages have no such container and are cleaned
+        # whole. This must run before nh3, which strips the id attribute.
+        # #2058
+        tree = fromstring(html_str)
+        if opinion_container := tree.xpath('//main[@id="main"]'):
+            html_str = tostring(
+                opinion_container[0], encoding="unicode", with_tail=False
+            )
+        elif "adblock" in html_str[:5000].lower():
+            logger.warning(
+                "ny: page has new-template site chrome but the "
+                '//main[@id="main"] opinion container was not found; '
+                "chrome will not be stripped"
+            )
 
         # remove a tags
         allowed = set(nh3.ALLOWED_TAGS)

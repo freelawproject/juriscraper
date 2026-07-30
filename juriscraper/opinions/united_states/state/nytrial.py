@@ -230,7 +230,7 @@ class Site(OpinionSiteLinear):
         return {k: v for k, v in metadata.items() if v}
 
     @staticmethod
-    def cleanup_content(content: str) -> str:
+    def cleanup_content(content: bytes) -> bytes:
         return ny.Site.cleanup_content(content)
 
     def make_backscrape_iterable(self, kwargs) -> None:
