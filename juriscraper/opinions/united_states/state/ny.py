@@ -237,7 +237,15 @@ class Site(OpinionSiteLinear):
         # #2058
         tree = fromstring(html_str)
         if opinion_container := tree.xpath('//main[@id="main"]'):
-            html_str = tostring(opinion_container[0], encoding="unicode")
+            html_str = tostring(
+                opinion_container[0], encoding="unicode", with_tail=False
+            )
+        elif "adblock" in html_str[:5000].lower():
+            logger.warning(
+                "ny: page has new-template site chrome but the "
+                '//main[@id="main"] opinion container was not found; '
+                "chrome will not be stripped"
+            )
 
         # remove a tags
         allowed = set(nh3.ALLOWED_TAGS)
