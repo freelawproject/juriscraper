@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.34 - 2026-07-30
+
+Features:
 - `FreeOpinionReport`: expose a `reported_opinion_count` property with PACER's
   own "Total number of opinions reported" total (summed across queried pages).
   It's independent of `len(report.data)`, so comparing the two surfaces silent
