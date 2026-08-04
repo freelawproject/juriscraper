@@ -13,7 +13,7 @@ def _errprint(message: str) -> None:
     print(message, file=sys.stderr)
 
 
-def make_default_logger(file_path=LOG_FILENAME):
+def make_default_logger(file_path: str = LOG_FILENAME) -> logging.Logger:
     """Boilerplate and testing code to create a logger. If we run into an
     IOError, issue a warning and use the NullHandler so things work without
     functional logging.
