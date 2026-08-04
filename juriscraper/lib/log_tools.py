@@ -9,8 +9,8 @@ LOG_FILENAME = os.environ.get(
 )
 
 
-def errprint(*args, **kwargs):
-    print(*args, file=sys.stderr, **kwargs)
+def _errprint(message: str) -> None:
+    print(message, file=sys.stderr)
 
 
 def make_default_logger(file_path=LOG_FILENAME):
@@ -30,7 +30,7 @@ def make_default_logger(file_path=LOG_FILENAME):
             )
         except OSError as e:
             if e.errno == 2:
-                errprint(
+                _errprint(
                     "\nWarning: %s: %s. "
                     "Have you created the directory for the log?"
                     % (
@@ -39,7 +39,7 @@ def make_default_logger(file_path=LOG_FILENAME):
                     )
                 )
             elif e.errno == 13:
-                errprint(
+                _errprint(
                     "\nWarning: %s: %s. "
                     "Cannot access file as user: %s"
                     % (
@@ -49,11 +49,11 @@ def make_default_logger(file_path=LOG_FILENAME):
                     )
                 )
             else:
-                errprint(
+                _errprint(
                     "\nIOError [%s]: %s\n%s"
                     % (e.errno, e.strerror, traceback.format_exc())
                 )
-            errprint(
+            _errprint(
                 "Juriscraper will continue to run, and all logs will be "
                 "sent to stderr."
             )
