@@ -21,7 +21,7 @@ class WebDriven:
         self.url = False
         self.uses_selenium = True
         self.wait = False  # type: WebDriverWait
-        self.webdriver = False  # type: webdriver
+        self.webdriver = False  # type: WebDriver
 
     def __del__(self):
         self.close_webdriver_session()
