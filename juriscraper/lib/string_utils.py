@@ -31,7 +31,11 @@ SUBPHRASE = re.compile(r"([:;?!][ ])(%s)" % SMALL)
 APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
 ALL_CAPS = re.compile(rf"^[A-Z\s{PUNCT}{WEIRD_CHARS}{NUMS}]+$")
 UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
-MAC_MC = re.compile(r"^([Mm]a?c)(\w+.*)")
+# Mc-only on purpose: Mc- words in case names are nearly always surnames,
+# while Mac- words usually are not (Machine, Mack, Macon, ...), so
+# capitalizing after "Mac" corrupts them. Mixed-case Mac-surnames
+# (MacDonald) pass through unchanged via UC_ELSEWHERE. See #2048.
+MAC_MC = re.compile(r"^([Mm]c)(\w+.*)")
 
 
 def titlecase(text, DEBUG=False):
@@ -153,7 +157,7 @@ def titlecase(text, DEBUG=False):
                 continue
 
             match = MAC_MC.match(word)
-            if match and (word not in ["mack", "machine"]):
+            if match:
                 if DEBUG:
                     print(f"  MAC_MAC matched. Capitalizing: {word}")
                 tc_line.append(

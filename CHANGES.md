@@ -23,6 +23,7 @@ Changes:
 
 Fixes:
 - `ca5` opinion and oral argument scrapers: fixed for the court's website redesign. #2062
+- `titlecase()` no longer corrupts ordinary Mac- words. #2048
 
 ## 3.0.34 - 2026-07-30
 

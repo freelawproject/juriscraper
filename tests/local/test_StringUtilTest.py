@@ -491,6 +491,39 @@ class StringUtilTest(unittest.TestCase):
                 "United States 07-693l And",
             ],
             ["CARVER v. US", "Carver v. US"],
+            # Mac- words that are not surnames must not be corrupted (#2048)
+            [
+                "International Business Machine Corp. v. Seagate Technology,"
+                " Inc.",
+                "International Business Machine Corp. v. Seagate Technology,"
+                " Inc.",
+            ],
+            [
+                "Robinson v. Mack Trucks, Inc.",
+                "Robinson v. Mack Trucks, Inc.",
+            ],
+            ["Macon v. City of Anniston", "Macon v. City of Anniston"],
+            [
+                "In Re Machinists Local 701",
+                "In Re Machinists Local 701",
+            ],
+            # Mixed-case Mac- surnames must pass through unchanged
+            ["MacDonald v. State", "MacDonald v. State"],
+            ["Estate of MacArthur", "Estate of MacArthur"],
+            # Mc- surnames must still be capitalized after the "Mc"
+            [
+                "estate of mcdonald v. mcdonald's corp.",
+                "Estate of McDonald v. McDonald's Corp.",
+            ],
+            ["mccarthy v. mcmillan", "McCarthy v. McMillan"],
+            # All-caps input: Mc- surnames are still capitalized
+            ["MCDONALD V. STATE", "McDonald v. State"],
+            # All-caps Mac- surnames are no longer auto-capitalized after
+            # "Mac" -- the trade-off accepted in #2048
+            [
+                "MACALLISTER v. UNITED STATES",
+                "Macallister v. United States",
+            ],
         ]
 
         for pair in test_pairs:
