@@ -516,6 +516,14 @@ class StringUtilTest(unittest.TestCase):
                 "Estate of McDonald v. McDonald's Corp.",
             ],
             ["mccarthy v. mcmillan", "McCarthy v. McMillan"],
+            # All-caps input: Mc- surnames are still capitalized
+            ["MCDONALD V. STATE", "McDonald v. State"],
+            # All-caps Mac- surnames are no longer auto-capitalized after
+            # "Mac" -- the trade-off accepted in #2048
+            [
+                "MACALLISTER v. UNITED STATES",
+                "Macallister v. United States",
+            ],
         ]
 
         for pair in test_pairs:
