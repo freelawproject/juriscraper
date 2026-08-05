@@ -85,9 +85,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(
-        self, kwargs: dict
-    ) -> list[tuple[date, date]]:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
         and replace the self.back_scrape_iterable
