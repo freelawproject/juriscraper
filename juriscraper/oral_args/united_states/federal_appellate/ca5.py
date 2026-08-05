@@ -8,6 +8,8 @@ History:
  - 2026-08-05: Updated by grossir for the website redesign, see #2062
 """
 
+from html import unescape
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
@@ -32,7 +34,12 @@ class Site(OralArgumentSiteLinear):
                 logger.error("ca5: item with no description")
                 continue
 
-            fields = [f.strip() for f in description[0].split("<br/>")]
+            # Entities inside the description are escaped twice, so the
+            # parser's own pass leaves them half decoded. Ex: the raw
+            # "Mahoney&amp;#39;s" reaches us as "Mahoney&#39;s"
+            fields = [
+                f.strip() for f in unescape(description[0]).split("<br/>")
+            ]
             if len(fields) < 3 or not fields[2].startswith("Argued"):
                 logger.error(
                     "ca5: unexpected description '%s'", description[0]
