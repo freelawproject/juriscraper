@@ -367,7 +367,7 @@ class RequestManager(AsyncClient):
             asyncio.create_task(h.listen(self, request)) for h in self.handlers
         }
         logger.debug("Handlers listening: %s", request.url)
-        _ = await self.enqueue_request(request)
+        await self.enqueue_request(request)
 
         logger.debug(
             "Request %s queued. Waiting for listen handlers to finish.",
