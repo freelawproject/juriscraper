@@ -25,6 +25,7 @@ Fixes:
   "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
   applies only to Mc- words, matching python-titlecase's fix for the same
   bug. Affected example fixtures regenerated. Fixes #2048.
+- Make Tames search more resilient against injected Bar numbers.
 
 ## 3.0.34 - 2026-07-30
 
