@@ -1,5 +1,8 @@
+import json
+
 from juriscraper.state.florida.arguments import FloridaCaseArgumentsParser
 from juriscraper.state.florida.cases import (
+    FloridaCase,
     FloridaCaseInfoParser,
     FloridaCaseListParser,
 )
@@ -54,3 +57,17 @@ class FloridaParseTest(PacerParseTestCase):
         self.parse_files(
             path_root, "*.compare.json", FloridaCaseArgumentsParser
         )
+
+    def test_deserialization_idempotency(self):
+        path_root = FLORIDA_ROOT / "serialized"
+        for file in path_root.glob("*.json"):
+            with self.subTest(file=file):
+                text = file.read_text()
+                serialized = json.loads(text)
+                deserialized = FloridaCase.model_validate_json(
+                    text,
+                    context={"deserialize": True},
+                    by_name=True,
+                )
+                output = json.loads(deserialized.model_dump_json())
+                self.assertEqual(serialized, output)
