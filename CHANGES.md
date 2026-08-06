@@ -25,6 +25,8 @@ Fixes:
   "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
   applies only to Mc- words, matching python-titlecase's fix for the same
   bug. Affected example fixtures regenerated. Fixes #2048.
+- Fix `pa` data race in page processing that may lead to empty pages
+- Fix `sd` data race in page processing that may limit ingestion to a single page
 
 ## 3.0.34 - 2026-07-30
 
