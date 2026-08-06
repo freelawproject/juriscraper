@@ -21,10 +21,8 @@ Changes:
 -
 
 Fixes:
-- `titlecase()` no longer corrupts ordinary Mac- words ("Machine" →
-  "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
-  applies only to Mc- words, matching python-titlecase's fix for the same
-  bug. Affected example fixtures regenerated. Fixes #2048.
+- fladistctapp was crashing when disposition was null
+
 
 ## 3.0.34 - 2026-07-30
 

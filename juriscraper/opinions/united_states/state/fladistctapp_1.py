@@ -3,6 +3,7 @@ Scraper for Florida 1st District Court of Appeals
 CourtID: fladistctapp1
 """
 
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.opinions.united_states.state import fla
 
 
@@ -31,10 +32,22 @@ class Site(fla.Site):
     def get_disposition(self, raw_disposition: str, note: str) -> str:
         """Get a valid disposition value from raw values
 
+        The source has used two schemas over time. Currently, `disposition`
+        describes the document ("Appeal - Per Curiam Affirmed") and `note`
+        holds the disposition proper ("Affirmed"). In older records the roles
+        are reversed: `disposition` holds the disposition ("Reversed") and
+        `note` is a continuation clause ("and remanded.") or null. Try the
+        modern shape first, then fall back to the older one
+
         :param raw_disposition: the raw disposition in the returned json
         :param note: a value in the return json that may contain a disposition
         return: A clean disposition value
         """
+        # Both fields may come back as JSON null, in which case
+        # `fields.get(..., "")` returns None instead of the default
+        raw_disposition = raw_disposition or ""
+        note = note or ""
+
         valid_dispositions = ("Denied", "Affirmed", "Dismissed", "Reversed")
         if raw_disposition == "Appeal - Per Curiam Affirmed":
             return "Affirmed"
@@ -44,5 +57,10 @@ class Site(fla.Site):
             or note.split(" ")[0] in valid_dispositions
         ):
             return note.split(" ")[0]
+
+        # Older schema. Keep the whole value, to preserve compound
+        # dispositions such as "Affirmed in Part/Reversed in Part"
+        if raw_disposition.split(" ")[0] in valid_dispositions:
+            return titlecase(raw_disposition)
 
         return ""
