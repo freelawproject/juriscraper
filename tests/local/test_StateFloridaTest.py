@@ -64,10 +64,6 @@ class FloridaParseTest(PacerParseTestCase):
             with self.subTest(file=file):
                 text = file.read_text()
                 serialized = json.loads(text)
-                deserialized = FloridaCase.model_validate_json(
-                    text,
-                    context={"deserialize": True},
-                    by_name=True,
-                )
+                deserialized = FloridaCase.deserialize(text)
                 output = json.loads(deserialized.model_dump_json())
                 self.assertEqual(serialized, output)
