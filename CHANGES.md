@@ -21,10 +21,20 @@ Changes:
 -
 
 Fixes:
-- `titlecase()` no longer corrupts ordinary Mac- words ("Machine" →
-  "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
-  applies only to Mc- words, matching python-titlecase's fix for the same
-  bug. Affected example fixtures regenerated. Fixes #2048.
+-
+
+## 3.0.35 - 2026-08-06
+
+Features:
+-
+
+Changes:
+- `ca5` opinions: scrape the court's opinion browser instead of the RSS feed, which adds `--backscrape` support and replaces the now deleted `united_states_backscrapers.federal_appellate.ca5` module. #2062
+- `ca5` oral arguments: ported to `OralArgumentSiteLinear`; now collects attorneys. #2062
+
+Fixes:
+- `ca5` opinion and oral argument scrapers: fixed for the court's website redesign. #2062
+- `titlecase()` no longer corrupts ordinary Mac- words. #2048
 
 ## 3.0.34 - 2026-07-30
 
