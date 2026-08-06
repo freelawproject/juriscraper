@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.35 - 2026-08-06
+
+Features:
+-
+
+Changes:
 - `ca5` opinions: scrape the court's opinion browser instead of the RSS feed, which adds `--backscrape` support and replaces the now deleted `united_states_backscrapers.federal_appellate.ca5` module. #2062
 - `ca5` oral arguments: ported to `OralArgumentSiteLinear`; now collects attorneys. #2062
 
