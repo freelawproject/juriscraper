@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- `ca9` oral arguments: query and order the `media` table by the court's upload timestamp instead of the hearing date, so arguments uploaded late in the day, or long after the hearing, are no longer hidden behind items already in CourtListener. #2111
 
 ## 3.0.35 - 2026-08-06
 

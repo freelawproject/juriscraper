@@ -18,7 +18,11 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 class Site(OralArgumentSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
-    days_interval = 30
+    # Lookback for the regular scrape, in `created_date` terms. The cron runs
+    # hourly, so this only needs to cover a scraper outage. Widening it is
+    # free: DynamoDB applies a FilterExpression after the scan, so the same
+    # pages are read either way. #2111
+    upload_window_days = 7
     first_opinion_date = datetime(2000, 10, 16)
 
     def __init__(self, *args, **kwargs):
@@ -46,27 +50,55 @@ class Site(OralArgumentSiteLinear):
         }
 
         self.end_date = datetime.now()
-        self.start_date = self.end_date - timedelta(days=self.days_interval)
+        self.start_date = self.end_date - timedelta(
+            days=self.upload_window_days
+        )
         self.build_payload()
 
         self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
         self.make_backscrape_iterable(kwargs)
 
-    def build_payload(self):
-        """Build the DynamoDB query for the current start_date/end_date
+    def build_payload(self, backscrape: bool = False) -> None:
+        """Build the DynamoDB scan for the current start_date/end_date
 
+        The regular scrape filters on `created_date`, the timestamp the court
+        wrote the row, because ordering the crawl by upload time is what keeps
+        us from missing arguments; see `_process_html`. Backscrapes filter on
+        `publish`, the hearing date, because the court only started recording
+        `created_date` in mid 2021 and historical rows would otherwise be
+        invisible. #2111
+
+        :param backscrape: filter by hearing date instead of upload time
         :return: None
         """
+        if backscrape:
+            # `publish` is a number, e.g. 20260605
+            column = "publish"
+            expression = "#COLUMN >= :from_date AND #COLUMN <= :to_date"
+            values = {
+                ":from_date": {"N": self.start_date.strftime("%Y%m%d")},
+                ":to_date": {"N": self.end_date.strftime("%Y%m%d")},
+            }
+        else:
+            # `created_date` is a court-local "%Y-%m-%d %H:%M:%S" string.
+            # Truncating to the day absorbs the offset against our own clock,
+            # and there is deliberately no upper bound, so that clock skew can
+            # never hide the court's newest uploads
+            column = "created_date"
+            expression = "#COLUMN >= :from_date"
+            values = {
+                ":from_date": {
+                    "S": self.start_date.strftime("%Y-%m-%d 00:00:00")
+                }
+            }
+
         self.payload = json.dumps(
             {
                 "TableName": self.table,
                 "ReturnConsumedCapacity": "TOTAL",
-                "FilterExpression": "#PUBLISH >= :from_date AND #PUBLISH <= :to_date",
-                "ExpressionAttributeNames": {"#PUBLISH": "publish"},
-                "ExpressionAttributeValues": {
-                    ":from_date": {"N": self.start_date.strftime("%Y%m%d")},
-                    ":to_date": {"N": self.end_date.strftime("%Y%m%d")},
-                },
+                "FilterExpression": expression,
+                "ExpressionAttributeNames": {"#COLUMN": column},
+                "ExpressionAttributeValues": values,
             }
         )
 
@@ -137,28 +169,66 @@ class Site(OralArgumentSiteLinear):
 
         for record in self.html:
             date_str = record.get("hearing_date", {}).get("S")
+            docket = record.get("case_num", {}).get("S")
             try:
                 # validate ISO date
                 datetime.strptime(date_str, "%Y-%m-%d")
             except Exception:
-                logger.debug(f"Skipping row with bad hearing_date: {date_str}")
+                logger.warning(
+                    "ca9: skipping row with bad hearing_date %s for docket %s",
+                    date_str,
+                    docket,
+                )
                 continue
 
             try:
                 audio = record["audio_file_name"]["S"]
             except KeyError:
-                logger.debug("Skipping row with no audio_file_name")
+                logger.warning(
+                    "ca9: skipping row with no audio_file_name for docket %s",
+                    docket,
+                )
                 continue
 
             self.cases.append(
                 {
                     "date": date_str,
-                    "docket": record["case_num"]["S"],
+                    "docket": docket,
                     "judge": record["case_panel"]["S"],
                     "name": record["case_name"]["S"],
                     "url": urljoin(self.base_url, audio),
+                    # Only used for ordering below; it has no getter, so it
+                    # never reaches the scraped output
+                    "created_date": record.get("created_date", {}).get(
+                        "S", ""
+                    ),
                 }
             )
+
+        # CourtListener walks these cases top down and stops at the first
+        # duplicate, so the newest uploads have to come first: that guarantees
+        # every new row is seen before the first row we already have. Ordering
+        # by hearing date instead left arguments the court uploaded later in the
+        # day sitting behind rows already in CL, where nothing ever reached
+        # them again. Rows older than mid 2021 have no `created_date` and fall
+        # back to hearing date order. #2111
+        self.cases.sort(
+            key=lambda case: (
+                case["created_date"],
+                case["date"],
+                case["docket"],
+            ),
+            reverse=True,
+        )
+
+    def _date_sort(self) -> None:
+        """Preserve the upload time ordering applied by `_process_html`
+
+        `AbstractSite._date_sort` would reorder the cases by hearing date, which
+        is the ordering that made us miss arguments. #2111
+
+        :return: None
+        """
 
     async def _download_backwards(self, dates: tuple[str, str]) -> None:
         """Download backwards
@@ -181,7 +251,7 @@ class Site(OralArgumentSiteLinear):
             self.end_date = datetime.now()
 
         # Rebuild payload for this slice
-        self.build_payload()
+        self.build_payload(backscrape=True)
         self.html = await self._download()
         self._process_html()
 
@@ -189,6 +259,11 @@ class Site(OralArgumentSiteLinear):
         """
         Prepare a single (start, end) tuple, defaulting to __init__’s range
         or overridden via backscrape_start / backscrape_end in kwargs.
+
+        A single tuple on purpose: each DynamoDB scan reads the whole table
+        regardless of the FilterExpression, so splitting a backscrape into
+        `days_interval` chunks would multiply the cost by the number of chunks
+        and return nothing extra.
         """
         start = kwargs.get("backscrape_start", self.start_date)
         end = kwargs.get("backscrape_end", self.end_date)
