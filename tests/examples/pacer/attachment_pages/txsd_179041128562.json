@@ -1,34 +1,40 @@
 {
-  "document_number":32,
-  "page_count":19,
-  "file_size_str":"258 kb",
-  "pacer_doc_id":"179041128562",
-  "pacer_case_id":"1263056",
-  "pacer_seq_no":"81",
-  "attachments":[
-     {
-        "attachment_number":1,
-        "description":"Exhibit 1",
-        "page_count":7,
-        "file_size_str":"196 kb",
-        "pacer_doc_id":"179041128563",
-        "pacer_seq_no":"81"
-     },
-     {
-        "attachment_number":2,
-        "description":"Exhibit 2",
-        "page_count":4,
-        "file_size_str":"90 kb",
-        "pacer_doc_id":"179041128564",
-        "pacer_seq_no":"81"
-     },
-     {
-        "attachment_number":3,
-        "description":"Proposed Order Proposed Order",
-        "page_count":3,
-        "file_size_str":"161 kb",
-        "pacer_doc_id":"179041128565",
-        "pacer_seq_no":"81"
-     }
-  ]
+  "document_number": 32,
+  "page_count": 19,
+  "file_size_str": "258 kb",
+  "pacer_doc_id": "179041128562",
+  "pacer_case_id": "1263056",
+  "pacer_seq_no": "81",
+  "attachments": [
+    {
+      "attachment_number": 1,
+      "description": "Exhibit 1",
+      "page_count": 7,
+      "file_size_str": "196 kb",
+      "pacer_doc_id": "179041128563",
+      "pacer_seq_no": "81"
+    },
+    {
+      "attachment_number": 2,
+      "description": "Exhibit 2",
+      "page_count": 4,
+      "file_size_str": "90 kb",
+      "pacer_doc_id": "179041128564",
+      "pacer_seq_no": "81"
+    },
+    {
+      "attachment_number": 3,
+      "description": "Proposed Order Proposed Order",
+      "page_count": 3,
+      "file_size_str": "161 kb",
+      "pacer_doc_id": "179041128565",
+      "pacer_seq_no": "81"
+    }
+  ],
+  "docket_number": null,
+  "federal_dn_office_code": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_defendant_number": null
 }
