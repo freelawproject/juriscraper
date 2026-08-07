@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.36 - 2026-08-07
+
+Features:
 - Allow deserializing output of `model_dump_json` for Florida models.
 
 Changes:
