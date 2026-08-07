@@ -8,19 +8,19 @@ from juriscraper.pacer import CaseQuery
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
 
-class PacerCaseQueryTest(unittest.TestCase):
+class PacerCaseQueryTest(unittest.IsolatedAsyncioTestCase):
     """A test of basic info for the Case Query"""
 
-    def setUp(self):
+    async def asyncSetUp(self):
         self.session = get_pacer_session()
-        self.session.login()
+        await self.session.login()
         self.report = CaseQuery("cand", self.session)
         self.pacer_case_id = "186730"  # 4:06-cv-07294 Foley v. Bates
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_query(self):
+    async def test_query(self):
         """Can we get the basic info?"""
-        self.report.query(self.pacer_case_id)
+        await self.report.query(self.pacer_case_id)
         self.assertIn(
             "Foley v. Bates",
             self.report.response.text,

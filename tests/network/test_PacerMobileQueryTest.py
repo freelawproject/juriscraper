@@ -7,18 +7,18 @@ from juriscraper.pacer.mobile_query import MobileQuery
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
 
-class PacerMobileQueryTest(unittest.TestCase):
+class PacerMobileQueryTest(unittest.IsolatedAsyncioTestCase):
     """A test of basic info for the Mobile Query"""
 
-    def setUp(self):
+    async def asyncSetUp(self):
         self.session = get_pacer_session()
-        self.session.login()
+        await self.session.login()
         self.report = MobileQuery("cand", self.session)
         self.pacer_case_id = "186730"  # Foley v. Bates
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_query(self):
-        self.report.query(self.pacer_case_id)
+    async def test_query(self):
+        await self.report.query(self.pacer_case_id)
 
         # Can we get the docket entry count
         metadata = self.report.metadata

@@ -9,12 +9,12 @@ from juriscraper.pacer import DocketReport
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
 
-class PacerDocketReportTest(unittest.TestCase):
+class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests for the docket report"""
 
-    def setUp(self):
+    async def asyncSetUp(self):
         self.session = get_pacer_session()
-        self.session.login()
+        await self.session.login()
         self.report = DocketReport("cand", self.session)
         self.pacer_case_id = "186730"  # 4:06-cv-07294 Foley v. Bates
 
@@ -29,16 +29,18 @@ class PacerDocketReportTest(unittest.TestCase):
         return len(tree.xpath("//table[./tr/td[3]]/tr")) - 1  # No header row
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_queries(self):
+    async def test_queries(self):
         """Do a variety of queries work?"""
-        self.report.query(self.pacer_case_id)
+        await self.report.query(self.pacer_case_id)
         self.assertIn(
             "Foley v. Bates",
             self.report.response.text,
             msg="Super basic query failed",
         )
 
-        self.report.query(self.pacer_case_id, date_start=date(2007, 11, 1))
+        await self.report.query(
+            self.pacer_case_id, date_start=date(2007, 11, 1)
+        )
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(
             2,
@@ -48,7 +50,7 @@ class PacerDocketReportTest(unittest.TestCase):
             "date. Got %s." % row_count,
         )
 
-        self.report.query(
+        await self.report.query(
             self.pacer_case_id,
             date_start=date(2007, 11, 1),
             date_end=date(2007, 11, 28),
@@ -62,7 +64,9 @@ class PacerDocketReportTest(unittest.TestCase):
             "end dates. Got %s." % row_count,
         )
 
-        self.report.query(self.pacer_case_id, doc_num_start=5, doc_num_end=5)
+        await self.report.query(
+            self.pacer_case_id, doc_num_start=5, doc_num_end=5
+        )
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(
             1,
@@ -72,7 +76,7 @@ class PacerDocketReportTest(unittest.TestCase):
             "%s" % row_count,
         )
 
-        self.report.query(
+        await self.report.query(
             self.pacer_case_id,
             date_start=date(2007, 11, 1),
             date_end=date(2007, 11, 28),
@@ -88,7 +92,7 @@ class PacerDocketReportTest(unittest.TestCase):
             "Entered. Got %s" % row_count,
         )
 
-        self.report.query(
+        await self.report.query(
             self.pacer_case_id,
             doc_num_start=500,
             show_parties_and_counsel=True,
@@ -98,7 +102,7 @@ class PacerDocketReportTest(unittest.TestCase):
             self.report.response.text,
             msg="Didn't find party info when it was explicitly requested.",
         )
-        self.report.query(
+        await self.report.query(
             self.pacer_case_id,
             doc_num_start=500,
             show_parties_and_counsel=False,
@@ -110,18 +114,18 @@ class PacerDocketReportTest(unittest.TestCase):
         )
 
     @SKIP_IF_NO_PACER_LOGIN
-    def test_using_same_report_twice(self):
+    async def test_using_same_report_twice(self):
         """Do the caches get properly nuked between runs?
 
         See issue #187.
         """
         # Query the first one...
-        self.report.query(self.pacer_case_id)
+        await self.report.query(self.pacer_case_id)
         d = self.report.data.copy()
 
         # Then the second one...
         second_pacer_case_id = "63111"  # 1:07-cv-00035-RJA-HKS Anson v. USA
-        self.report.query(second_pacer_case_id)
+        await self.report.query(second_pacer_case_id)
         d2 = self.report.data.copy()
         self.assertNotEqual(
             d,
