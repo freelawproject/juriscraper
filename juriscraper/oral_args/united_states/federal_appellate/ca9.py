@@ -193,7 +193,7 @@ class Site(OralArgumentSiteLinear):
             self.cases.append(
                 {
                     "date": date_str,
-                    "docket": record["case_num"]["S"],
+                    "docket": docket,
                     "judge": record["case_panel"]["S"],
                     "name": record["case_name"]["S"],
                     "url": urljoin(self.base_url, audio),
