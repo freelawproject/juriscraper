@@ -930,8 +930,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     last_recipient["name"] += f" {recipient_part}"
         return list(
             filter(
-                lambda recipient: recipient.get("email_addresses", False)
-                and len(recipient.get("email_addresses")) > 0,
+                lambda recipient: (
+                    recipient.get("email_addresses", False)
+                    and len(recipient.get("email_addresses")) > 0
+                ),
                 email_recipients,
             )
         )
