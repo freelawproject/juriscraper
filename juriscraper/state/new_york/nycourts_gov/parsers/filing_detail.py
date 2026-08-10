@@ -12,9 +12,11 @@ from jkent.data_types import XPath
 from juriscraper.state.new_york.nycourts_gov.models import (
     NYCourtPassDocket,
     NYCourtPassFile,
+    NYCourtPassIssue,
 )
+from juriscraper.state.new_york.nycourts_gov.vocabularies import classify_issue
 
-from ._common import _parse_date_mdy
+from ._common import _parse_date_mdy, clean_case_title
 
 if TYPE_CHECKING:
     from jkent.common.page_element import PageElement
@@ -45,7 +47,7 @@ class FilingDetailParser(JKentParser[NYCourtPassDocket]):
             "case caption text",
             min_count=0,
         )
-        case_name = " ".join(t.strip() for t in caption_parts if t.strip())
+        case_name = clean_case_title(caption_parts)
 
         detail_map: dict[str, str] = {}
         dt_elements = page.query(
@@ -83,12 +85,7 @@ class FilingDetailParser(JKentParser[NYCourtPassDocket]):
         ):
             decision_date_str = None
 
-        issues = self._extract_issue_strings(
-            page, f"{span_xpath}//p[contains(@class, 'case-issues-category')]"
-        )
-        issue_details = self._extract_issue_strings(
-            page, f"{span_xpath}//p[contains(@class, 'case-issues-text')]"
-        )
+        issues = self._parse_issues(page, span_xpath)
 
         detail_texts = page.query_strings(
             XPath(f"{span_xpath}//text()"), "filing detail text", min_count=0
@@ -109,11 +106,41 @@ class FilingDetailParser(JKentParser[NYCourtPassDocket]):
                 official_citation=official_citation,
                 lower_court_citation=lower_court_citation,
                 issues=issues,
-                issue_details=issue_details,
                 no_files_for_case=no_files_for_case,
                 files=files,
             )
         ]
+
+    @classmethod
+    def _parse_issues(
+        cls, page: PageElement, span_xpath: str
+    ) -> list[NYCourtPassIssue]:
+        """The case's issues, classified and paired with their details.
+
+        The page states the two in separate lists of ``<p>`` elements, in the
+        same order, and the detail list is sometimes shorter -- it runs out on
+        the cases where the Court published a category and nothing more -- so
+        the pairing is positional and tolerates a short tail.
+        """
+        categories = cls._extract_issue_strings(
+            page, f"{span_xpath}//p[contains(@class, 'case-issues-category')]"
+        )
+        details = cls._extract_issue_strings(
+            page, f"{span_xpath}//p[contains(@class, 'case-issues-text')]"
+        )
+        issues = []
+        for index, raw in enumerate(categories):
+            classification = classify_issue(raw)
+            issues.append(
+                NYCourtPassIssue.raw(
+                    category_raw=raw,
+                    category=classification.category,
+                    subcategory=classification.subcategory,
+                    detail=details[index] if index < len(details) else None,
+                    recognized=classification.recognized,
+                )
+            )
+        return issues
 
     @staticmethod
     def _extract_issue_strings(page: PageElement, xpath: str) -> list[str]:

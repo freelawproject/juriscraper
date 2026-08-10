@@ -76,8 +76,6 @@ Design decisions:
 
 from __future__ import annotations
 
-import base64
-import hashlib
 import logging
 import re
 from datetime import date
@@ -105,6 +103,10 @@ from pyrate_limiter import Duration, Rate
 
 from juriscraper.state.common.params import InferrableDateRange
 
+from .filename_convention import (
+    archive_dedup_keys,
+    reconcile_files_and_entries,
+)
 from .models import (
     NYCourtPassDocket,
     NYCourtPassFile,
@@ -185,13 +187,16 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
         * ``fields`` — a dict (case_name, argument_date_str,
           decision_date_str, official_citation, lower_court_citation,
-          issues, issue_details, no_files_for_case) with dates
+          issues, no_files_for_case) with dates
           reshaped back to
           ``MM/DD/YYYY`` strings so the existing fallback chains
           (``deferred_docket`` / grid argument date) compose uniformly.
+          ``issues`` are the parser's deferred issue rows flattened to
+          plain dicts, since a ``DeferredValidation`` cannot nest inside
+          another one's ``confirm()``.
         * ``files`` — the parser's file rows as plain dicts for emission.
           ``docket_number`` is not on the page; the caller stamps it
-          before emitting (see :meth:`_stamp_files`). The file
+          before emitting (see :meth:`_stamp_and_reconcile`). The file
           *download* buttons are a separate, live-form concern handled by
           :meth:`_extract_file_download_buttons`.
         """
@@ -208,20 +213,82 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
             ),
             "official_citation": raw.get("official_citation"),
             "lower_court_citation": raw.get("lower_court_citation"),
-            "issues": raw.get("issues") or [],
-            "issue_details": raw.get("issue_details") or [],
+            "issues": [i.raw_data for i in raw.get("issues") or []],
             "no_files_for_case": raw.get("no_files_for_case", False),
         }
         return fields, [f.raw_data for f in raw.get("files") or []]
 
     @staticmethod
-    def _stamp_files(
+    def _archive_keys(
+        docket_number: str | None, files: list[dict]
+    ) -> tuple[dict[int, str], dict[int, str | None]]:
+        """Archive keys and entry ids for a docket's files, by gvFiles row.
+
+        Both are computed over *every* reconciled row rather than only the
+        fetchable ones, so a file that becomes downloadable in a later run keeps
+        the key it would have had all along.
+        """
+        keys = archive_dedup_keys(docket_number, files)
+        rows = [
+            file_row.get("file_index", position)
+            for position, file_row in enumerate(files)
+        ]
+        return (
+            dict(zip(rows, keys, strict=True)),
+            {
+                row: file_row.get("docket_entry_id")
+                for row, file_row in zip(rows, files, strict=True)
+            },
+        )
+
+    @staticmethod
+    def _archive_key_for_row(
+        keys_by_row: dict[int, str],
+        docket_number: str | None,
+        button: dict,
+    ) -> str:
+        """The archive key for one download button.
+
+        Falls back to the file name when the button has no reconciled row --
+        only reachable if the parser dropped a gvFiles row the live form still
+        carries. The key must stay unique either way, because
+        ``requests.deduplication_key`` is ``UNIQUE ON CONFLICT IGNORE`` and a
+        repeat is dropped rather than reported.
+        """
+        key = keys_by_row.get(button["row_index"])
+        if key is not None:
+            return key
+        return archive_dedup_keys(
+            docket_number,
+            [{"file_name": button["file_name"], "docket_entry_id": None}],
+        )[0]
+
+    @staticmethod
+    def _stamp_and_reconcile(
         files: list[dict],
         *,
         docket_number: str | None,
-    ) -> list[dict]:
-        """Attach the cross-page join key to parser-produced file rows."""
-        return [{**f, "docket_number": docket_number or None} for f in files]
+        docket_entries: list[dict],
+    ) -> tuple[list[dict], list[dict]]:
+        """Attach the cross-page join key, then reconcile files against FILINGS.
+
+        ``gvFiles`` gives a file name but no dates; the FILINGS table gives
+        dates but no file. Court-PASS file names follow the Court's published
+        convention (``title of action-role-name-doctype``), which encodes
+        enough to join the two — see
+        :mod:`~juriscraper.state.new_york.nycourts_gov.filename_convention`.
+
+        Returns ``(files, docket_entries)``. Files that match a row carry
+        ``docket_entry_index`` and inherit its ``date_received`` /
+        ``date_due``; documents the FILINGS table never listed get a
+        synthesized entry appended with ``inferred_from_file=True``, so the
+        emitted ``docket_entries`` covers every filed document rather than
+        only the ones the table happened to register.
+        """
+        stamped = [
+            {**f, "docket_number": docket_number or None} for f in files
+        ]
+        return reconcile_files_and_entries(stamped, docket_entries)
 
     @staticmethod
     def _extract_file_download_buttons(
@@ -440,6 +507,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
                     argument_date, decision_date
                 ),
             },
+            reseedable=True,
             deduplication_key=f"fill_docket_search:{argument_date}:{decision_date}",
         )
 
@@ -449,8 +517,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=60000),
-            WaitForSelector("#Form2", timeout=30000),
+            WaitForSelector("#cphMain_btnFind", timeout=60000),
         ],
         priority=6,
     )
@@ -481,8 +548,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=30000),
-            WaitForSelector("#Form2", timeout=15000),
+            WaitForSelector("#cphMain_gvResults", timeout=30000),
         ],
         priority=5,
     )
@@ -584,8 +650,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=30000),
-            WaitForSelector("#Form2", timeout=15000),
+            WaitForSelector("#cphMain_lbDetails", timeout=30000),
         ],
         priority=4,
     )
@@ -657,8 +722,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=30000),
-            WaitForSelector("#cphMain_lbDetails2", timeout=15000),
+            WaitForSelector("#cphMain_lbDetails2", timeout=30000),
         ],
         priority=3,
         preprocess=repair_pdffont_leakage,
@@ -714,11 +778,12 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
             "docket_number", ""
         )
 
-        # FilingDetailParser produced the file rows; stamp
-        # them with the cross-page join key for emission.
-        files = self._stamp_files(
+        # FilingDetailParser produced the file rows; stamp them with the
+        # cross-page join key and link each to its FILINGS row.
+        files, docket_entries = self._stamp_and_reconcile(
             parser_files,
             docket_number=docket_number,
+            docket_entries=deferred.get("docket_entries") or [],
         )
         document_numbers_by_row = {
             f["file_index"]: f["document_number"] for f in files
@@ -736,11 +801,10 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
                 argument_date=argument_date,
                 decision_date=decision_date,
                 issues=fields["issues"],
-                issue_details=fields["issue_details"],
                 official_citation=fields["official_citation"],
                 lower_court_citation=fields["lower_court_citation"],
                 no_files_for_case=fields["no_files_for_case"],
-                docket_entries=(deferred.get("docket_entries") or []),
+                docket_entries=docket_entries,
                 attorneys=(deferred.get("attorneys") or []),
                 files=files,
                 source_url=response.url,
@@ -751,9 +815,9 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
             )
         )
 
-        file_name_prefix = base64.b64encode(
-            f"{case_name}-{argument_date}-{decision_date}".encode()
-        ).decode()
+        archive_keys_by_row, entry_ids_by_row = self._archive_keys(
+            docket_number, files
+        )
 
         # Download available files. Button names come from the form
         # (FilingDetailParser doesn't carry them); document_number comes
@@ -766,27 +830,23 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
             else None
         )
         for button in download_buttons:
-            file_suffix = base64.b64encode(
-                f"{button['file_name']}".encode()
-            ).decode()
-            name_sha = hashlib.sha1(
-                f"{file_name_prefix}-{button['row_index']}-{file_suffix}".encode()
-            ).hexdigest()
+            row = button["row_index"]
             yield form.submit(
                 submit_selector=CSS(f"input[name='{button['button_name']}']"),
                 continuation=self.handle_file_download,
                 accumulated_data={
                     "docket_number": docket_number,
                     "file_name": button["file_name"],
-                    "file_index": button["row_index"],
-                    "document_number": document_numbers_by_row.get(
-                        button["row_index"]
-                    ),
+                    "file_index": row,
+                    "document_number": document_numbers_by_row.get(row),
+                    "docket_entry_id": entry_ids_by_row.get(row),
                 },
                 bypass_rate_limit=True,
                 priority=0,
                 archive=True,
-                deduplication_key=name_sha,
+                deduplication_key=self._archive_key_for_row(
+                    archive_keys_by_row, docket_number, button
+                ),
                 request_params={"timeout": 600},
             )
 
@@ -815,6 +875,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
                 local_path=local_filepath,
                 available=True,
                 docket_number=accumulated_data.get("docket_number"),
+                docket_entry_id=accumulated_data.get("docket_entry_id"),
             )
         )
 
@@ -824,8 +885,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=60000),
-            WaitForSelector("#Form2", timeout=30000),
+            WaitForSelector("#cphMain_btnFind", timeout=60000),
         ],
     )
     def parse_docket_page(
@@ -934,8 +994,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=30000),
-            WaitForSelector("#Form2", timeout=15000),
+            WaitForSelector("#cphMain_lbDetails", timeout=30000),
         ],
     )
     def parse_docket_detail_for_entry(
@@ -999,8 +1058,7 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
 
     @step(
         await_list=[
-            WaitForLoadState("networkidle", timeout=30000),
-            WaitForSelector("#cphMain_lbDetails2", timeout=15000),
+            WaitForSelector("#cphMain_lbDetails2", timeout=30000),
         ],
         preprocess=repair_pdffont_leakage,
     )
@@ -1040,11 +1098,12 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
         )
         decision_date = _parse_date_mdy(fields["decision_date_str"] or "")
 
-        # FilingDetailParser produced the file rows; stamp
-        # them with the cross-page join key for emission.
-        files = self._stamp_files(
+        # FilingDetailParser produced the file rows; stamp them with the
+        # cross-page join key and link each to its FILINGS row.
+        files, docket_entries = self._stamp_and_reconcile(
             parser_files,
             docket_number=docket_number,
+            docket_entries=deferred.get("docket_entries") or [],
         )
         document_numbers_by_row = {
             f["file_index"]: f["document_number"] for f in files
@@ -1057,20 +1116,19 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
                 argument_date=argument_date,
                 decision_date=decision_date,
                 issues=fields["issues"],
-                issue_details=fields["issue_details"],
                 official_citation=fields["official_citation"],
                 lower_court_citation=fields["lower_court_citation"],
                 no_files_for_case=fields["no_files_for_case"],
-                docket_entries=(deferred.get("docket_entries") or []),
+                docket_entries=docket_entries,
                 attorneys=(deferred.get("attorneys") or []),
                 files=files,
                 source_url=response.url,
                 source_entry_point=accumulated_data.get("entry_point"),
             )
         )
-        file_name_prefix = base64.b64encode(
-            f"{case_name}-{argument_date}-{decision_date}".encode()
-        ).decode()
+        archive_keys_by_row, entry_ids_by_row = self._archive_keys(
+            docket_number, files
+        )
         # Download available files. Button names come from the form
         # (FilingDetailParser doesn't carry them); document_number comes
         # from the parser's file rows, keyed by row index. The form is
@@ -1082,25 +1140,21 @@ class NYCourtPassScraper(BaseScraper[_Yield]):
             else None
         )
         for button in download_buttons:
-            file_suffix = base64.b64encode(
-                f"{button['file_name']}".encode()
-            ).decode()
-            name_sha = hashlib.sha1(
-                f"{file_name_prefix}-{file_suffix}".encode()
-            ).hexdigest()
+            row = button["row_index"]
             yield form.submit(
                 submit_selector=CSS(f"input[name='{button['button_name']}']"),
                 continuation=self.handle_file_download,
                 accumulated_data={
                     "docket_number": docket_number,
                     "file_name": button["file_name"],
-                    "file_index": button["row_index"],
-                    "document_number": document_numbers_by_row.get(
-                        button["row_index"]
-                    ),
+                    "file_index": row,
+                    "document_number": document_numbers_by_row.get(row),
+                    "docket_entry_id": entry_ids_by_row.get(row),
                 },
                 archive=True,
-                deduplication_key=name_sha,
+                deduplication_key=self._archive_key_for_row(
+                    archive_keys_by_row, docket_number, button
+                ),
                 request_params={"timeout": 600},
             )
 

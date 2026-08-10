@@ -15,7 +15,7 @@ from juriscraper.state.new_york.nycourts_gov.models import (
     NYCourtPassDocketEntry,
 )
 
-from ._common import _parse_date_mdy
+from ._common import _parse_date_mdy, clean_case_title
 
 if TYPE_CHECKING:
     from jkent.common.page_element import PageElement
@@ -74,7 +74,7 @@ class DocketDetailParser(JKentParser[NYCourtPassDocket]):
             "case title",
             min_count=0,
         )
-        case_name = " ".join(t.strip() for t in title_texts if t.strip())
+        case_name = clean_case_title(title_texts)
 
         docket_entries = self._parse_filings(page)
         attorneys = self._parse_attorneys(page)
