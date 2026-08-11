@@ -21,6 +21,12 @@ Changes:
 -
 
 Fixes:
+- `titlecase()` no longer corrupts ordinary Mac- words ("Machine" →
+  "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
+  applies only to Mc- words, matching python-titlecase's fix for the same
+  bug. Affected example fixtures regenerated. Fixes #2048.
+- Fix `pa` backscraper: fixed a missing `await` that made them return zero results. #1860
+- Fix `sd` backscraper: fixed a missing `await` that made pagination recurse until `RecursionError`. #1860
 -
 
 ## 3.0.36 - 2026-08-07
