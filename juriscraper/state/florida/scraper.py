@@ -544,7 +544,9 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             de_parser.endpoint.format(court=court_uuid, case=case_uuid),
             de_parser,
-            params={"sort": "docketEntryHeader.filedDate,desc"},
+            params={
+                "sort": "docketEntryHeader.filedDate,desc,docketEntryHeader.docketEntryUUID,asc"
+            },
         )
         (
             output_case.arguments,
