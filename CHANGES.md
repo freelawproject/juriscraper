@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.37 - 2026-08-13
+
+Features:
+-
+
+Changes:
 - Add a PR template with an AI Disclosure section.
 
 Fixes:
@@ -28,7 +39,6 @@ Fixes:
 - Fix `pa` backscraper: fixed a missing `await` that made them return zero results. #1860
 - Fix `sd` backscraper: fixed a missing `await` that made pagination recurse until `RecursionError`. #1860
 - Add sorting to FL paginated case detail endpoints (matching the values on the ACIS site) to prevent unstable results.
--
 
 ## 3.0.36 - 2026-08-07
 
