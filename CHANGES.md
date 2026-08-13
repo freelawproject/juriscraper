@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Add a PR template with an AI Disclosure section.
 
 Fixes:
 - `titlecase()` no longer corrupts ordinary Mac- words ("Machine" →
