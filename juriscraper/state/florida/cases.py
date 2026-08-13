@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Annotated, ClassVar
+from typing import Annotated, Any, ClassVar
 
 from pydantic import (
     UUID4,
@@ -10,6 +10,7 @@ from pydantic import (
     Field,
 )
 from pydantic_core import PydanticCustomError
+from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
@@ -72,7 +73,7 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
 }
 
 
-def florida_docket_type_validator(i: str) -> DocketType:
+def florida_docket_type_validator(i: str, info: ValidationInfo) -> DocketType:
     """
     Validates and converts a Florida case classification string to a
     DocketType enum value.
@@ -82,9 +83,12 @@ def florida_docket_type_validator(i: str) -> DocketType:
     FLORIDA_DOCKET_TYPE_MAP.
 
     :param i: Florida case classification string.
+    :param info: Pydantic validation info.
 
     :return: The corresponding DocketType enum value.
     """
+    if info.context and info.context.get("deserialize"):
+        return DocketType(i)
     # None of the middle components in classification strings contained dashes
     # when this scraper was created.
     parts = [p.strip().lower() for p in i.split(" - ", maxsplit=2)]
@@ -101,15 +105,20 @@ def florida_docket_type_validator(i: str) -> DocketType:
     return FLORIDA_DOCKET_TYPE_MAP[case_type]
 
 
-def florida_docket_type_raw_validator(i: str) -> tuple[str, str, str]:
+def florida_docket_type_raw_validator(
+    i: Any, info: ValidationInfo
+) -> tuple[str, str, str]:
     """
     Splits a Florida "caseClassification" string into a category, type, sub type
     tuple. Missing components will be filled with empty strings.
 
     :param i: Florida "caseClassification" string.
+    :param info: Pydantic validation info.
 
     :return: The split tuple.
     """
+    if info.context and info.context.get("deserialize"):
+        return tuple(i)
     parts = i.split(" - ", maxsplit=2)
     # No need to log error here because `florida_docket_type_validator` already
     # does.
@@ -118,15 +127,20 @@ def florida_docket_type_raw_validator(i: str) -> tuple[str, str, str]:
     return parts[0], parts[1], parts[2]
 
 
-def florida_originating_court_id_validator(i: str) -> FloridaCourtID:
+def florida_originating_court_id_validator(
+    i: str, info: ValidationInfo
+) -> FloridaCourtID:
     """
     Validates and converts a Florida originating court name to a standardized
     Florida court ID.
 
     :param i: Florida originating court name.
+    :param info: Pydantic validation info.
 
     :return: The corresponding CourtID enum value.
     """
+    if info.context and info.context.get("deserialize"):
+        return FloridaCourtID(i)
     court_name = i.lower().strip()
     if court_name.startswith("circuit court"):
         return FloridaCourtID.CIRCUIT
@@ -187,14 +201,19 @@ class FloridaOriginatingCase(BaseModel):
     )
 
 
-def florida_external_id_to_js_id_validator(i: str) -> str:
+def florida_external_id_to_js_id_validator(
+    i: str, info: ValidationInfo
+) -> str:
     """
     Maps Florida's external court ID to a value on the FloridaCourtID enum.
 
     :param i: Florida external court ID as a string.
+    :param info: Pydantic validation info.
 
     :return: Value on the FloridaCourtID enum.
     """
+    if info.context and info.context.get("deserialize"):
+        return i
     if i not in FLORIDA_COURT_EXTERNAL_ID_MAP:
         raise PydanticCustomError(
             "florida_court_id",

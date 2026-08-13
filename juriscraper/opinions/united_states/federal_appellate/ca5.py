@@ -2,47 +2,110 @@
 # - Long ago: Created by mlr
 # - 2014-11-07: Updated by mlr to use new website.
 # - 2025-08-26: Updated by lmanzur to use OpinionSiteLinear and extract lower court
+# - 2026-08-05: Updated by grossir for the website redesign, see #2062
 
 import re
+from datetime import date, datetime
+from urllib.parse import urlencode, urljoin
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    # https://www.ca5.uscourts.gov/opinions?group=flat&pageSize=1000&quick=30
+    base_url = "https://www.ca5.uscourts.gov/opinions/results"
+    # Oldest opinion available on the court's search
+    first_opinion_date = datetime(1992, 3, 19)
+    days_interval = 90
+    # Biggest page the endpoint will render. The court's busiest year had
+    # ~3,200 opinions, so a `days_interval` sized range fits in a single
+    # page; `_download_backwards` still follows the pager if it doesn't
+    page_size = 1000
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "http://www.ca5.uscourts.gov/rss.aspx?Feed=Opinions&Which=All&Style=Detail"
         self.court_id = self.__module__
+        # `quick=30` selects the last 30 days of opinions and orders
+        self.url = self.build_url({"quick": 30})
+        self.should_have_results = True
+        self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
-        for item in self.html.xpath("//item"):
-            case_name = item.xpath("description/text()[2]")[0]
-            download_url = item.xpath("link")[0].tail
-            case_date = item.xpath("description/text()[5]")[0]
-            docket_number = item.xpath("description/text()[1]")[0]
-            status_raw = item.xpath("description/text()[3]")[0]
-            nature_of_suit = item.xpath("description/text()[4]")[0]
+    def build_url(self, params: dict) -> str:
+        """Build a results URL, keeping the shared parameters in one place
 
-            if status_raw == "pub":
-                status = "Published"
-            elif status_raw == "unpub":
-                status = "Unpublished"
-            else:
-                status = "Unknown"
+        :param params: filters particular to this query, such as the `quick`
+            shorthand or a `from` / `to` date range
+        :return: the full URL
+        """
+        params = {"group": "flat", "pageSize": self.page_size, **params}
+        return f"{self.base_url}?{urlencode(params)}"
 
-            # Ensure date is a string, and clean up if needed
-            case_date_cleaned = case_date.strip()
+    def _process_html(self) -> None:
+        for row in self.html.xpath("//a[contains(@class, 'oprow')]"):
+            docket = row.xpath("span[@class='oprow__docket']/text()")
+            name = row.xpath("span[@class='oprow__caption']/text()")
+            date_filed = row.xpath("span[@class='oprow__date']/text()")
+            url = row.xpath("@href")
+
+            if not (docket and name and date_filed and url):
+                logger.error(
+                    "ca5: incomplete opinion row '%s'",
+                    " ".join(row.text_content().split()),
+                )
+                continue
+
+            # Ex: "Published Opinion", "Unpublished Order"
+            label = row.xpath(".//span[contains(@class, 'tag')]/text()")
 
             self.cases.append(
                 {
-                    "name": case_name,
-                    "url": download_url,
-                    "date": case_date_cleaned,  # Now always a string
-                    "docket": docket_number,
-                    "status": status,
-                    "nature_of_suit": nature_of_suit,
+                    "name": name[0].strip(),
+                    "url": urljoin(self.base_url, url[0]),
+                    "date": date_filed[0].strip(),
+                    "docket": docket[0].strip(),
+                    "status": self.get_status(
+                        label[0].strip() if label else ""
+                    ),
                 }
             )
+
+    def get_status(self, label: str) -> str:
+        """Get the precedential status from the row's document type tag
+
+        :param label: the document type. Ex: "Unpublished Opinion"
+        :return: the precedential status
+        """
+        if label.startswith("Unpublished"):
+            return "Unpublished"
+        if label.startswith("Published"):
+            return "Published"
+
+        logger.error("ca5: unknown document type '%s'", label)
+        return "Unknown"
+
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
+        """Scrape a date range, following the pager when the range is big
+
+        :param dates: tuple with the date range to scrape
+        :return: None
+        """
+        start, end = dates
+        logger.info("Backscraping for range %s %s", *dates)
+        params = {
+            "from": start.strftime("%Y-%m-%d"),
+            "to": end.strftime("%Y-%m-%d"),
+        }
+
+        page = 1
+        while True:
+            self.url = self.build_url({**params, "page": page})
+            self.html = await self._download()
+            self._process_html()
+
+            if not self.html.xpath("//a[@rel='next']"):
+                break
+            page += 1
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
