@@ -1,26 +1,32 @@
 {
-  "document_number":136,
-  "page_count":2,
-  "file_size_str":"459 kb",
-  "pacer_doc_id":"04305714362",
-  "pacer_case_id":"76834",
-  "pacer_seq_no":"529",
-  "attachments":[
-     {
-        "attachment_number":1,
-        "description":"Exhibit A",
-        "page_count":3,
-        "file_size_str":"436 kb",
-        "pacer_doc_id":"04305714363",
-        "pacer_seq_no":"529"
-     },
-     {
-        "attachment_number":2,
-        "description":"Exhibit B",
-        "page_count":14,
-        "file_size_str":"505 kb",
-        "pacer_doc_id":"04305714364",
-        "pacer_seq_no":"529"
-     }
-  ]
+  "document_number": 136,
+  "page_count": 2,
+  "file_size_str": "459 kb",
+  "pacer_doc_id": "04305714362",
+  "pacer_case_id": "76834",
+  "pacer_seq_no": "529",
+  "attachments": [
+    {
+      "attachment_number": 1,
+      "description": "Exhibit A",
+      "page_count": 3,
+      "file_size_str": "436 kb",
+      "pacer_doc_id": "04305714363",
+      "pacer_seq_no": "529"
+    },
+    {
+      "attachment_number": 2,
+      "description": "Exhibit B",
+      "page_count": 14,
+      "file_size_str": "505 kb",
+      "pacer_doc_id": "04305714364",
+      "pacer_seq_no": "529"
+    }
+  ],
+  "docket_number": null,
+  "federal_dn_office_code": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_defendant_number": null
 }

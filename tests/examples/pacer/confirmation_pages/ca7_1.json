@@ -1,8 +1,13 @@
 {
-    "document_number":"41-2",
-    "cost":"0.10",
-    "docket_number":"21-2796",
-    "billable_pages":"1",
-    "document_description":"PDF Document",
-    "transaction_date": "2022-08-30 14:09:11"
- }
+  "billable_pages": "1",
+  "cost": "0.10",
+  "docket_number": "21-2796",
+  "document_description": "PDF Document",
+  "document_number": "41-2",
+  "federal_defendant_number": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_dn_office_code": null,
+  "transaction_date": "2022-08-30T14:09:11Z"
+}
