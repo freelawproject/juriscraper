@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.37 - 2026-08-13
+
+Features:
+-
+
+Changes:
 - Add a PR template with an AI Disclosure section.
 
 Fixes:
@@ -29,7 +40,6 @@ Fixes:
 - Fix `pa` backscraper: fixed a missing `await` that made them return zero results. #1860
 - Fix `sd` backscraper: fixed a missing `await` that made pagination recurse until `RecursionError`. #1860
 - Add sorting to FL paginated case detail endpoints (matching the values on the ACIS site) to prevent unstable results.
--
 
 ## 3.0.36 - 2026-08-07
 
@@ -40,7 +50,7 @@ Changes:
 -
 
 Fixes:
--
+- `ca9` oral arguments: query and order the `media` table by the court's upload timestamp instead of the hearing date, so arguments uploaded late in the day, or long after the hearing, are no longer hidden behind items already in CourtListener. #2111
 
 ## 3.0.35 - 2026-08-06
 
