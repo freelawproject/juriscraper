@@ -21,6 +21,17 @@ Changes:
 -
 
 Fixes:
+-
+
+## 3.0.38 - 2026-08-14
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
 - Fix `miss` and `missctapp`, blocked by the source's WAF (#2129)
 
 ## 3.0.37 - 2026-08-13
