@@ -116,10 +116,7 @@ class Site(OpinionSiteLinear):
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=self.days_interval)
         # A browser User-Agent is required to pass the site's bot management
-        self.request["headers"]["User-Agent"] = (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
+        self.request["headers"]["User-Agent"] = self.chrome_user_agent
         # Tell the caller (CourtListener) to download opinions with the same
         # browser headers, otherwise the per-document fetch goes out as
         # "CourtListener" and trips the bot management we just bypassed
