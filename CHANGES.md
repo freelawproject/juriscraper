@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `miss` and `missctapp`, blocked by the source's WAF (#2129)
 
 ## 3.0.37 - 2026-08-13
 
