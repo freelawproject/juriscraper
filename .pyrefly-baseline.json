@@ -649,18 +649,6 @@
       "severity": "error"
     },
     {
-      "line": 165,
-      "column": 9,
-      "stop_line": 165,
-      "stop_column": 30,
-      "path": "juriscraper/opinions/united_states/federal_bankruptcy/bap9.py",
-      "code": -2,
-      "name": "not-iterable",
-      "description": "Type `date` is not iterable",
-      "concise_description": "Type `date` is not iterable",
-      "severity": "error"
-    },
-    {
       "line": 74,
       "column": 16,
       "stop_line": 74,
@@ -1630,30 +1618,6 @@
       "name": "bad-override",
       "description": "Class member `Site._download` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner\n  `Site._download` has type `(self: Site) -> Unknown`, which is not assignable to `(self: Site, request_dict: Unknown | None = None) -> Unknown`, the type of `OralArgumentSiteLinear._download`\n  Signature mismatch:\n  expected: def _download(self: Site, request_dict: Unknown | None = None) -> Unknown: ...\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  found:    def _download(self: Site) -> Unknown: ...\n                                    ^ parameters",
       "concise_description": "Class member `Site._download` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 81,
-      "column": 9,
-      "stop_line": 81,
-      "stop_column": 39,
-      "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
-      "code": -2,
-      "name": "not-iterable",
-      "description": "Type `date` is not iterable",
-      "concise_description": "Type `date` is not iterable",
-      "severity": "error"
-    },
-    {
-      "line": 82,
-      "column": 53,
-      "stop_line": 82,
-      "stop_column": 55,
-      "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
-      "code": -2,
-      "name": "not-iterable",
-      "description": "Type `date` is not iterable",
-      "concise_description": "Type `date` is not iterable",
       "severity": "error"
     },
     {

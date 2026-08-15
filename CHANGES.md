@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Update `.pyrefly-baseline.json`
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
 -
 
 ## 3.0.41 - 2026-09-14

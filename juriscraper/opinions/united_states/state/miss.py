@@ -181,7 +181,9 @@ class Site(OpinionSiteLinear):
             (year, start, end) for year in range(start.year, end.year + 1)
         ]
 
-    async def _download_backwards(self, params: tuple) -> None:
+    async def _download_backwards(
+        self, params: tuple[int, datetime.date, datetime.date]
+    ) -> None:
         year, start, end = params
         logger.info("Backscraping %s for year %s", self.court_id, year)
 
