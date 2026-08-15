@@ -229,7 +229,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def cleanup_content(self, content: bytes) -> str:
+    @staticmethod
+    def cleanup_content(content: bytes) -> str:
         """Isolate the opinion from the surrounding Westlaw site chrome.
 
         Also deletes hash-altering per-request tokens.
@@ -244,14 +245,14 @@ class Site(OpinionSiteLinear):
         nodes = tree.xpath("//*[@id='co_document']")
         if not nodes:
             raise InvalidDocumentError(
-                f"{self.court_id}: opinion container '#co_document' missing; "
+                "alaska: opinion container '#co_document' missing; "
                 "the document request was likely blocked"
             )
         cleaned = html.tostring(nodes[0], encoding="unicode")
 
         # Strip per-request tokens from embedded image/link URLs so the
         # content hash is stable across downloads (CL dedupes on hash) #2009
-        return self.volatile_token_regex.sub("", cleaned)
+        return Site.volatile_token_regex.sub("", cleaned)
 
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Configure the date window for a historical range and download.
