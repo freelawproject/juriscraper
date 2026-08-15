@@ -138,7 +138,7 @@ class Site(OpinionSiteLinear):
         )
         return f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
-    def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download opinions for a specific date range.
 
         :param dates: (start_date, end_date) tuple from make_backscrape_iterable
@@ -146,7 +146,7 @@ class Site(OpinionSiteLinear):
         """
         logger.info("Backscraping for range %s %s", *dates)
         self.url = self._build_backscrape_url(dates)
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def extract_from_text(self, scraped_text: str) -> dict:
