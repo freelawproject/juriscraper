@@ -76,6 +76,22 @@ COURT_CHECKBOX_MAPPING: dict[str, str] = {
     "texas_coa15": "ctl00$ContentPlaceHolder1$chkListCourts$16",
 }
 
+# TAMES intermittently serves the search form with the attorney field already
+# filled in with a bar number. This value is injected when search results
+# are returned, so we can check for it then.
+ATTORNEY_BAR_FIELD = "ctl00$ContentPlaceHolder1$txtAttorneyNameOrBarNumber"
+BLANK_CRITERIA_FIELDS: dict[str, str] = {
+    ATTORNEY_BAR_FIELD: "",
+    "ctl00$ContentPlaceHolder1$txtCaseNumber": "",
+    "ctl00$ContentPlaceHolder1$txtPartialCaseNumber": "",
+    "ctl00$ContentPlaceHolder1$txtStyle1": "",
+    "ctl00$ContentPlaceHolder1$txtStyle2": "",
+    "ctl00$ContentPlaceHolder1$txtTrialCourtCaseNumber": "",
+    "ctl00$ContentPlaceHolder1$ddlOriginateCOA": "",
+    "ctl00$ContentPlaceHolder1$ddCounty": "",
+    "ctl00$ContentPlaceHolder1$ddlTrialCourt": "",
+}
+
 
 class TamesSearchRow(HasCaseUrl):
     """Data extracted from a TAMES search result row."""
@@ -147,6 +163,11 @@ class TAMESScraper(BaseStateScraper):
         super().__init__(request_manager=request_manager, **kwargs)
         # Cache for the search form's hidden fields
         self._hidden_fields: dict[str, str] = {}
+        # Bar numbers TAMES pre-filled into the form we last fetched and into
+        # the results page it last returned ("" when clean). See
+        # ATTORNEY_BAR_FIELD.
+        self._form_bar_number: str = ""
+        self._result_bar_number: str = ""
 
     def scrape(self):
         pass
@@ -161,7 +182,8 @@ class TAMESScraper(BaseStateScraper):
         1. TAMES caps results at 1000 of the most recent cases for a given search
            This means we can't just submit one big search and page through it.
         2. TAMES will, very occassionally return 0 search results for an interval
-           that definitely contains some cases.
+           that definitely contains some cases. One known cause is the injected
+           attorney bar number.
         3. The search results pages are fairly rate limited, with notification via 403
            Forbidden responses for too many requests in succession.
 
@@ -310,23 +332,21 @@ class TAMESScraper(BaseStateScraper):
 
         tree: html.HtmlElement = html.fromstring(response.content)
         self._hidden_fields = self._extract_hidden_fields(tree)
+        self._form_bar_number = self._bar_number_value(tree)
+        if self._form_bar_number:
+            logger.warning(
+                "Search form arrived with bar number %s pre-filled; "
+                "posting it blank.",
+                self._form_bar_number,
+            )
 
-    def _submit_search(
+    def _build_form_data(
         self,
         start_date: date,
         end_date: date,
         court_ids: list[str] | None = None,
-    ) -> Generator[int | TamesSearchRow, None, None]:
-        """Submit a search and yield results one at a time.
-
-        Yields:
-            First yield: int - the total result count as reported by TAMES
-            Subsequent yields: TamesSearchRow - individual search results
-        """
-        # Re-fetch the form to get fresh hidden fields (__VIEWSTATE,
-        # __EVENTVALIDATION, etc.) and reset server-side session state.
-        self._fetch_search_form()
-
+    ) -> dict[str, str]:
+        """Build the search POST body for a date range and set of courts."""
         # Format dates for the form (M/d/yyyy)
         start_str = start_date.strftime("%-m/%-d/%Y")
         end_str = end_date.strftime("%-m/%-d/%Y")
@@ -334,6 +354,9 @@ class TAMESScraper(BaseStateScraper):
         # Build form data
         form_data = {
             **self._hidden_fields,
+            # Criteria we never search on, blanked so that a value TAMES
+            # pre-filled can't survive in __VIEWSTATE and filter the search
+            **BLANK_CRITERIA_FIELDS,
             # Date range fields
             "ctl00$ContentPlaceHolder1$txtDateFiledStart": start_str,
             "ctl00$ContentPlaceHolder1$txtDateFiledStart$dateInput": start_str,
@@ -359,15 +382,82 @@ class TAMESScraper(BaseStateScraper):
             # default to all courts
             form_data["ctl00$ContentPlaceHolder1$chkAllCourts"] = "on"
 
+        return form_data
+
+    def _search_once(
+        self,
+        start_date: date,
+        end_date: date,
+        court_ids: list[str] | None = None,
+    ) -> tuple[html.HtmlElement, int, dict[str, str]]:
+        """Fetch a fresh form and post one search.
+
+        Returns:
+            The parsed results page, the result count TAMES reported, and the
+            form data that produced it (needed to page through the results).
+        """
+        # Re-fetch the form to get fresh hidden fields (__VIEWSTATE,
+        # __EVENTVALIDATION, etc.)
+        self._fetch_search_form()
+        form_data = self._build_form_data(start_date, end_date, court_ids)
+
         response = self.request_manager.post(
             self.SEARCH_URL, data=form_data, headers=self._POST_HEADERS
         )
         response.raise_for_status()
 
         tree = html.fromstring(response.content)
+        # What the results page echoes back is what the server actually
+        # searched on, so anything but blank means our blank didn't take.
+        self._result_bar_number = self._bar_number_value(tree)
+
+        return tree, self._get_result_count(tree), form_data
+
+    def _submit_search(
+        self,
+        start_date: date,
+        end_date: date,
+        court_ids: list[str] | None = None,
+    ) -> Generator[int | TamesSearchRow, None, None]:
+        """Submit a search and yield results one at a time.
+
+        Yields:
+            First yield: int - the total result count as reported by TAMES
+            Subsequent yields: TamesSearchRow - individual search results
+        """
+        tree, result_count, form_data = self._search_once(
+            start_date, end_date, court_ids
+        )
+
+        # A bar number anywhere in the exchange means the search was probably
+        # filtered down to one attorney, whether that left us with zero rows or
+        # with that attorney's handful, so take one more run at it with a fresh
+        # form. Row count says nothing about whether the filter applied.
+        stray_bar = self._form_bar_number or self._result_bar_number
+        if stray_bar:
+            logger.warning(
+                "%d results for %s to %s with bar number %s on the search "
+                "form; resubmitting with a blank bar number.",
+                result_count,
+                start_date,
+                end_date,
+                stray_bar,
+            )
+            tree, result_count, form_data = self._search_once(
+                start_date, end_date, court_ids
+            )
+            if self._result_bar_number:
+                logger.error(
+                    "Results page still reports bar number %s; the %d results "
+                    "for %s to %s are filtered by attorney and can't be "
+                    "trusted.",
+                    self._result_bar_number,
+                    result_count,
+                    start_date,
+                    end_date,
+                )
 
         # Yield the result count first
-        result_count = self._get_result_count(tree)
         yield result_count
 
         # Yield results from first page
@@ -478,6 +568,17 @@ class TAMESScraper(BaseStateScraper):
             if name:
                 hidden_fields[name] = value
         return hidden_fields
+
+    @staticmethod
+    def _bar_number_value(tree) -> str:
+        """Value TAMES rendered into the attorney/bar number box.
+
+        Empty string when the box came back clean, which is the normal case.
+        """
+        field = tree.xpath(f"//input[@name='{ATTORNEY_BAR_FIELD}']")
+        if not field:
+            return ""
+        return field[0].get("value", "").strip()
 
     @staticmethod
     def _make_date_client_state(date_obj: date, date_str: str) -> str:
