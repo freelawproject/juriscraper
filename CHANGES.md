@@ -33,6 +33,7 @@ Changes:
 
 Fixes:
 - Fix `miss` and `missctapp`, blocked by the source's WAF (#2129)
+- Fix `bia` and `olc` implementations of `download_content()`
 
 ## 3.0.37 - 2026-08-13
 
