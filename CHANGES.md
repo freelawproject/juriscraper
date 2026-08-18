@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
 
 Fixes:
 -
