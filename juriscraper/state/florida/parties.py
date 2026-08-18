@@ -2,6 +2,7 @@ from typing import Annotated, Any, ClassVar
 from uuid import UUID
 
 from pydantic import UUID4, AfterValidator, AliasPath, BeforeValidator, Field
+from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -52,14 +53,19 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
 }
 
 
-def florida_party_type_validator(value: Any) -> PartyType:
+def florida_party_type_validator(
+    value: Any, info: ValidationInfo
+) -> PartyType:
     """Validates and converts a Florida party type string to a PartyType
     enum value.
 
     :param value: The party type string from the API response.
+    :param info: Pydantic validation info.
 
     :return: The corresponding PartyType enum value.
     """
+    if info.context and info.context.get("deserialize"):
+        return value
     s = str(value).lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
         logger.error("Unrecognized Florida party type: %s", s)
