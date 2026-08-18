@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
 
 Fixes:
 - `fladistctapp` scrapers no longer crash when the source JSON returns null
