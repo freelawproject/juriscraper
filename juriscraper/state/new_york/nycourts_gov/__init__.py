@@ -9,7 +9,7 @@ from .vocabularies import (
 )
 
 __all__ = [
-    COURT_GENERATED_DOCTYPES,
-    DOCTYPE_LABELS,
-    CourtVocabulary,
+    "COURT_GENERATED_DOCTYPES",
+    "DOCTYPE_LABELS",
+    "CourtVocabulary",
 ]
