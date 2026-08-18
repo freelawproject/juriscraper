@@ -43,11 +43,6 @@ class Site(fla.Site):
         :param note: a value in the return json that may contain a disposition
         return: A clean disposition value
         """
-        # Both fields may come back as JSON null, in which case
-        # `fields.get(..., "")` returns None instead of the default
-        raw_disposition = raw_disposition or ""
-        note = note or ""
-
         valid_dispositions = ("Denied", "Affirmed", "Dismissed", "Reversed")
         if raw_disposition == "Appeal - Per Curiam Affirmed":
             return "Affirmed"
