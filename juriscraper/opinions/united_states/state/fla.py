@@ -37,7 +37,10 @@ class Site(OpinionSiteLinear):
         json = self.html
         for row in json["searchResults"]:
             fields = row["content"]["fields"]
-            if (fields.get("note", "") or "") in ("Notice of Correction",):
+            # `note` and `disposition` may come back as JSON null, in which
+            # case `fields.get(..., "")` returns None instead of the default
+            note = fields.get("note", "") or ""
+            if note in ("Notice of Correction",):
                 logger.info("Skipping non-opinion document %s", fields)
                 continue
 
@@ -58,9 +61,7 @@ class Site(OpinionSiteLinear):
                     "date": fields["disposition_date"]["date"]["date"].split(
                         " "
                     )[0],
-                    "disposition": self.get_disposition(
-                        disposition, fields.get("note", "")
-                    ),
+                    "disposition": self.get_disposition(disposition, note),
                     "status": self.status,
                     "per_curiam": "per curiam" in disposition.lower(),
                 }

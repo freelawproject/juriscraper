@@ -21,7 +21,8 @@ Changes:
 -
 
 Fixes:
--
+- `fladistctapp` scrapers no longer crash when the source JSON returns null
+  for `note` or `disposition`. #2112
 
 ## 3.0.38 - 2026-08-14
 
