@@ -21,7 +21,8 @@ Changes:
 - Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
 
 Fixes:
--
+- `fladistctapp` scrapers no longer crash when the source JSON returns null
+  for `note` or `disposition`. #2112
 
 ## 3.0.38 - 2026-08-14
 
@@ -33,6 +34,7 @@ Changes:
 
 Fixes:
 - Fix `miss` and `missctapp`, blocked by the source's WAF (#2129)
+- Fix `bia` and `olc` implementations of `download_content()`
 
 ## 3.0.37 - 2026-08-13
 
@@ -47,6 +49,7 @@ Fixes:
   "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
   applies only to Mc- words, matching python-titlecase's fix for the same
   bug. Affected example fixtures regenerated. Fixes #2048.
+- Make Tames search more resilient against injected Bar numbers.
 - Fix `pa` backscraper: fixed a missing `await` that made them return zero results. #1860
 - Fix `sd` backscraper: fixed a missing `await` that made pagination recurse until `RecursionError`. #1860
 - Add sorting to FL paginated case detail endpoints (matching the values on the ACIS site) to prevent unstable results.
