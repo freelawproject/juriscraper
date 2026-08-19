@@ -166,7 +166,7 @@ class Site(OpinionSiteLinear):
         doc = self._return_response_text_object()
         return doc or {}
 
-    async def _download_backwards(self, d: tuple) -> None:
+    async def _download_backwards(self, d: tuple[date, date]) -> None:
         start, _ = d
         self._back_start = start
         self._back_done = False
