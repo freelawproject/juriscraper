@@ -46,15 +46,15 @@ class Site(OpinionSiteLinear):
         self.request["headers"] = {"User-Agent": ""}
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
         for item in self.html["searchItems"]:
-            self.cases.append(self._extract_case_data_from_item(item))
+            self.cases.append(await self._extract_case_data_from_item(item))
 
-    def _extract_case_data_from_item(self, item: dict) -> dict:
+    async def _extract_case_data_from_item(self, item: dict) -> dict:
         """Extract the case data from the item
 
         :param item: The item from the API
@@ -64,7 +64,7 @@ class Site(OpinionSiteLinear):
             docket = match.group("docket")
             name = self.cleanup_case_name(match.group("name"))
         else:
-            name, docket = self.get_missing_name_and_docket(item)
+            name, docket = await self.get_missing_name_and_docket(item)
 
         disposition = self.get_disposition(item)
 
@@ -107,7 +107,7 @@ class Site(OpinionSiteLinear):
         lower_courts = re.sub(r"\s+", " ", ", ".join(courts).lstrip(", "))
         return titlecase(lower_courts)
 
-    def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
+    async def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
         """
         Return 2 placeholders. We can get the values via `extract_from_text`
         To be overriden in `michctapp`
@@ -147,7 +147,7 @@ class Site(OpinionSiteLinear):
         logger.info("Backscraping for range %s %s", *dates)
         self.url = self._build_backscrape_url(dates)
         self.html = await self._download()
-        self._process_html()
+        await self._process_html()
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts case names and docket numbers from the document's text

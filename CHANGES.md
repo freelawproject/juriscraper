@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
+- Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
 
 ## 3.0.40 - 2026-08-19
 

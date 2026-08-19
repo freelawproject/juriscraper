@@ -32,13 +32,13 @@ class Site(ClusterSite, mich.Site):
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
         """
         for item in self.html["searchItems"]:
-            case_dict = self._extract_case_data_from_item(item)
+            case_dict = await self._extract_case_data_from_item(item)
 
             # Use URL suffix to get the type. Other prefixes not used here
             # "o.opn.pdf": "On Remand" opinions
@@ -61,7 +61,7 @@ class Site(ClusterSite, mich.Site):
             if not self.cluster_opinions(case_dict, self.cases):
                 self.cases.append(case_dict)
 
-    def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
+    async def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
         """Try to get the case name using a secondary request
 
         Example of the content in the URL
@@ -86,7 +86,7 @@ class Site(ClusterSite, mich.Site):
             return "Placeholder name", "Placeholder docket"
 
         url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
-        self._request_url_get(url)
+        await self._request_url_get(url)
         response = self.request["response"].json()
         search_items = response.get("caseDetailResults", {}).get(
             "searchItems", []
