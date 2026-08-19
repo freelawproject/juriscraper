@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.40 - 2026-08-19
+
+Features:
 - NYCoA enums
 
 Changes:
