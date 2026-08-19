@@ -72,7 +72,7 @@ class Site(OpinionSiteLinear):
         }
 
         self.url = f"{self.url}?{urlencode(params)}"
-        self.html = self._download()
+        self.html = await self._download()
         self._process_html()
 
     def _process_html(self) -> None:
