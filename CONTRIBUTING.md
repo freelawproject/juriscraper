@@ -60,8 +60,8 @@ Reach out to us so we can find a scraper that you can work on and that nobody el
 
 Templates for scrapers:
 
-- [Opinion scraper template](https://github.com/freelawproject/juriscraper/blob/master/juriscraper/opinions/opinion_template.py)
-- [Oral argument scraper template](https://github.com/freelawproject/juriscraper/blob/master/juriscraper/oral_args/oral_argument_template.py)
+- [Opinion scraper template](https://github.com/freelawproject/juriscraper/blob/main/juriscraper/opinions/opinion_template.py)
+- [Oral argument scraper template](https://github.com/freelawproject/juriscraper/blob/main/juriscraper/oral_args/oral_argument_template.py)
 
 ### Contributing Workflow
 
@@ -81,7 +81,7 @@ Before we can accept your contribution, you must sign the Contributor License Ag
 
 ### Requirements
 
-- Python 3.9+
+- Python 3.10+
 - [`uv`](https://github.com/astral-sh/uv): modern Python package manager
 - Git
 - (Optional) Docker for running Selenium tests
@@ -140,7 +140,7 @@ Run tests for a single Python version, such as for Python 3.13:
 tox -e py313
 ```
 
-Add extra args to `pytest`, add them after a ``--`` separator,:
+Add extra args to `pytest` after a ``--`` separator:
 
 ```bash
 tox -e py313 -- --pdb
@@ -175,7 +175,7 @@ uv run sample_caller.py
 For example, to test `ca1`, run:
 
 ```bash
-uv run sample_caller.py -c juriscraper.opinions.united_states.state.kan_p
+uv run sample_caller.py -c juriscraper.opinions.united_states.federal_appellate.ca1
 ```
 
 ---
@@ -287,18 +287,18 @@ Individual tests can be run with:
 tox -e py -- tests/local/test_DateTest.py::DateTest::test_date_range_creation
 ```
 
-To run and drop to the Python debugger if it fails, but you must install `nost` to have `nosetests`:
+To drop into the Python debugger if a test fails, pass `--pdb` through tox to pytest:
 
 ```bash
-uv run nosetests -v --pdb tests/local/test_DateTest.py:DateTest.test_date_range_creation
+tox -e py313 -- --pdb tests/local/test_DateTest.py::DateTest::test_date_range_creation
 ```
 
 ---
 
 ## Future Goals
 -  Support for additional PACER pages and utilities
--  Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
--  Support opinions from for all federal district courts with non-PACER opinion listings
+-  Support opinions from all courts of U.S. territories (Guam, American Samoa, etc.)
+-  Support opinions from all federal district courts with non-PACER opinion listings
 -  For every court above where a backscraper is possible, it is implemented.
 -  Support video, additional oral argument audio, and transcripts everywhere available
 

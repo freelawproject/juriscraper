@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
 
 Fixes:
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
