@@ -392,14 +392,16 @@ class SCOTUSEmail:
     ) -> tuple[HtmlElement, ParseResult, dict[str, list[str]]]:
         if self.tree is None:
             raise ValueError("self.tree is None")
-        links = [
-            link
-            for link in self.tree.iterfind(".//a")
-            if link.get("href") is not None
-        ]
-        if not links:
+        links_with_href = (
+            (link, link.get("href")) for link in self.tree.iterfind(".//a")
+        )
+        links_with_url = (
+            (link, urlparse(href))
+            for link, href in links_with_href
+            if href is not None
+        )
+        if not links_with_url:
             raise ValueError("No links found in SCOTUS email body")
-        links_with_url = ((link, urlparse(link.get("href"))) for link in links)
         links_with_query = (
             (link, url, parse_qs(url.query)) for link, url in links_with_url
         )

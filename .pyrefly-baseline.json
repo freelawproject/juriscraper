@@ -2317,45 +2317,9 @@
       "severity": "error"
     },
     {
-      "line": 404,
-      "column": 34,
-      "stop_line": 404,
-      "stop_column": 43,
-      "path": "juriscraper/scotus/scotus_email.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `bytes | str` is not assignable to parameter `qs` with type `bytes | None` in function `urllib.parse.parse_qs`",
-      "concise_description": "Argument `bytes | str` is not assignable to parameter `qs` with type `bytes | None` in function `urllib.parse.parse_qs`",
-      "severity": "error"
-    },
-    {
-      "line": 417,
-      "column": 19,
-      "stop_line": 417,
-      "stop_column": 29,
-      "path": "juriscraper/scotus/scotus_email.py",
-      "code": -2,
-      "name": "bad-index",
-      "description": "Cannot index into `dict[bytes, list[bytes]]`\n  Argument `Literal['filename']` is not assignable to parameter `key` with type `bytes` in function `dict.__getitem__`",
-      "concise_description": "Cannot index into `dict[bytes, list[bytes]]`",
-      "severity": "error"
-    },
-    {
-      "line": 424,
+      "line": 443,
       "column": 16,
-      "stop_line": 424,
-      "stop_column": 39,
-      "path": "juriscraper/scotus/scotus_email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `tuple[HtmlElement, ParseResult | ParseResultBytes, dict[bytes, list[bytes]]]` is not assignable to declared return type `tuple[HtmlElement, ParseResult, dict[str, list[str]]]`",
-      "concise_description": "Returned type `tuple[HtmlElement, ParseResult | ParseResultBytes, dict[bytes, list[bytes]]]` is not assignable to declared return type `tuple[HtmlElement, ParseResult, dict[str, list[str]]]`",
-      "severity": "error"
-    },
-    {
-      "line": 441,
-      "column": 16,
-      "stop_line": 441,
+      "stop_line": 443,
       "stop_column": 30,
       "path": "juriscraper/scotus/scotus_email.py",
       "code": -2,
