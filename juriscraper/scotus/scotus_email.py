@@ -385,6 +385,8 @@ class SCOTUSEmail:
             raise ValueError("No tree is present")
         text = self.tree.text_content()
         match = self.TITLE_REGEX.match(text)
+        if match is None:
+            return ""
 
         return normalize_dashes(clean_string(match.group(1) or ""))
 

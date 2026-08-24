@@ -2257,18 +2257,6 @@
       "severity": "error"
     },
     {
-      "line": 389,
-      "column": 46,
-      "stop_line": 389,
-      "stop_column": 57,
-      "path": "juriscraper/scotus/scotus_email.py",
-      "code": -2,
-      "name": "missing-attribute",
-      "description": "Object of class `NoneType` has no attribute `group`",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
       "line": 319,
       "column": 15,
       "stop_line": 319,
