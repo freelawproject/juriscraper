@@ -162,5 +162,5 @@ missing-override-decorator = true
 no-any-return-explicit = false
 no-any-return-implicit = false
 unknown-argument-type = false
-unknown-variable-type = false
+unknown-variable-type = true
 unused-call-result = false

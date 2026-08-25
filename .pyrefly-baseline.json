@@ -2389,6 +2389,18 @@
       "severity": "error"
     },
     {
+      "line": 122,
+      "column": 13,
+      "stop_line": 122,
+      "stop_column": 39,
+      "path": "juriscraper/state/florida/cases.py",
+      "code": -2,
+      "name": "unknown-variable-type",
+      "description": "The type of `parts` is unknown; it is inferred as an implicit `Any`",
+      "concise_description": "The type of `parts` is unknown; it is inferred as an implicit `Any`",
+      "severity": "error"
+    },
+    {
       "line": 452,
       "column": 21,
       "stop_line": 453,
