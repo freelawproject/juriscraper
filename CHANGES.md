@@ -34,6 +34,7 @@ Fixes:
 - Correct the return types of various `pacer` methods that may return `None`.
 - Corrections to docstrings across files.
 - Address outstanding type errors in `scotus_email`
+- Annotate for `lib.html_utils`
 - Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
 -
 
