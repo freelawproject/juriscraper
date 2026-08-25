@@ -28,7 +28,9 @@ from .string_utils import (
 logger = make_default_logger()
 
 
-def sanity_check_dates(dates_and_names: list[tuple], court_id: str) -> None:
+def sanity_check_dates(
+    dates_and_names: list[tuple[object, object, object]], court_id: str
+) -> None:
     """Checks that dates are datetime.date objects and that they are not in the future
 
     :param dates_and_names: a 3 member tuple (case_date, case_name, date_is_approximate)
@@ -75,7 +77,9 @@ def sanity_check_case_names(case_names: list[str]) -> None:
         prior_case_name = name
 
 
-def sanity_check_opinion_types(sub_opinions: list[dict]) -> None:
+def sanity_check_opinion_types(
+    sub_opinions: list[dict[Hashable, object]],
+) -> None:
     """Check opinion type assignment rules within a cluster
 
     :param sub_opinions: list of sub_opinion dictionaries
