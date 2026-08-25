@@ -2402,20 +2402,6 @@
       "severity": "warn"
     },
     {
-      "column": 22,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
-      "severity": "error"
-    },
-    {
       "column": 16,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",

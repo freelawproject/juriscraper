@@ -151,19 +151,28 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     container = tree.find(
         './/*[@id="ctl00_ContentPlaceHolder1_divCOAInfo"]/div/div/div[2]'
     )
-    info_container = container.find(
-        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
-    )
-    # Texas gives the judge their own child element all to themselves for some
-    # reason.
-    judge_container = container.find(
-        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
-    )
-    if judge_container is None:
-        judge_container: list[HtmlElement] = []
+    if container:
+        info_container = container.find(
+            './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
+        )
+        # Texas gives the judge their own child element all to themselves for some
+        # reason.
+        judge_container = container.find(
+            './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
+        )
+    else:
+        info_container = None
+        judge_container = None
+
+    case_info_elements = [
+        (row.find(".//*[1]"), row.find(".//*[2]"))
+        for row in (list(info_container or ()) + list(judge_container or ()))
+        if row is not None
+    ]
     case_info = {
-        clean_string(row.find(".//*[1]").text_content()): row.find(".//*[2]")
-        for row in (list(info_container) + list(judge_container))
+        clean_string(k.text_content()): v
+        for k, v in case_info_elements
+        if k is not None and v is not None
     }
     justice_node = case_info.get("COA Justice")
 
