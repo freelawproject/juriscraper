@@ -1,6 +1,6 @@
 import re
 from datetime import datetime
-from typing import Any
+from typing import Any, TypedDict
 
 from dateutil import parser
 from lxml.html import fromstring
@@ -10,11 +10,17 @@ from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+class _BackscrapeDateRange(TypedDict):
+    start: datetime
+    end: datetime | None
+    url: str
+
+
 class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1931, 2, 26)
     docket_number_regex = r"SJC-\d+"
     # This mapper is missing older volumes
-    backscrape_date_range_mapper = [
+    backscrape_date_range_mapper: list[_BackscrapeDateRange] = [
         {
             "start": datetime(2016, 7, 25),
             "end": None,
