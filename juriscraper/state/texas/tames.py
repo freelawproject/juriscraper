@@ -14,10 +14,11 @@ import re
 import time
 from collections.abc import Generator
 from datetime import date, datetime
-from typing import Final
+from typing import Any, Final
 from urllib.parse import urljoin
 
 from lxml import html
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.lib.exceptions import InsanityException
@@ -152,7 +153,7 @@ class TAMESScraper(BaseStateScraper):
     def __init__(
         self,
         request_manager: ScraperRequestManager | None = None,
-        **kwargs,
+        **kwargs: Any,
     ) -> None:
         """Initialize the TAMES scraper.
 
@@ -332,7 +333,7 @@ class TAMESScraper(BaseStateScraper):
         )
         response.raise_for_status()
 
-        tree: html.HtmlElement = html.fromstring(response.content)
+        tree: HtmlElement = html.fromstring(response.content)
         self._hidden_fields = self._extract_hidden_fields(tree)
         self._form_bar_number = self._bar_number_value(tree)
         if self._form_bar_number:
@@ -391,7 +392,7 @@ class TAMESScraper(BaseStateScraper):
         start_date: date,
         end_date: date,
         court_ids: list[str] | None = None,
-    ) -> tuple[html.HtmlElement, int, dict[str, str]]:
+    ) -> tuple[HtmlElement, int, dict[str, str]]:
         """Fetch a fresh form and post one search.
 
         Returns:
@@ -473,7 +474,7 @@ class TAMESScraper(BaseStateScraper):
                 yield search_row
 
     @staticmethod
-    def _get_cell_text(cell: html.HtmlElement) -> str:
+    def _get_cell_text(cell: HtmlElement) -> str:
         text = cell.text_content().strip()
         # Replace non-breaking space with empty string
         if text == "\xa0" or text == "&nbsp;":
@@ -481,7 +482,7 @@ class TAMESScraper(BaseStateScraper):
         return text
 
     def _parse_search_results(
-        self, tree
+        self, tree: HtmlElement
     ) -> Generator[TamesSearchRow, None, None]:
         """Parse search results and yield TamesSearchRow objects."""
         # Find result rows
@@ -523,13 +524,13 @@ class TAMESScraper(BaseStateScraper):
                 court_code=self._get_cell_text(cells[10]),
             )
 
-    def _has_next_page(self, tree) -> bool:
+    def _has_next_page(self, tree: HtmlElement) -> bool:
         """Check if there are more result pages."""
         next_button = tree.xpath("//input[contains(@class, 'rgPageNext')]")
         current_page_has_next = tree.cssselect(".rgCurrentPage + a")
         return bool(next_button and current_page_has_next)
 
-    def _fetch_next_page(self, tree, form_data):
+    def _fetch_next_page(self, tree: HtmlElement, form_data: dict[str, str]):
         """Fetch the next page of results."""
 
         next_button = tree.xpath("//input[contains(@class, 'rgPageNext')]")[0]
@@ -561,7 +562,7 @@ class TAMESScraper(BaseStateScraper):
         return html.fromstring(response.content)
 
     @staticmethod
-    def _extract_hidden_fields(tree) -> dict[str, str]:
+    def _extract_hidden_fields(tree: HtmlElement) -> dict[str, str]:
         """Form submission relies on some hidden fields."""
         hidden_fields = {}
         for input_elem in tree.xpath("//input[@type='hidden']"):
@@ -572,7 +573,7 @@ class TAMESScraper(BaseStateScraper):
         return hidden_fields
 
     @staticmethod
-    def _bar_number_value(tree) -> str:
+    def _bar_number_value(tree: HtmlElement) -> str:
         """Value TAMES rendered into the attorney/bar number box.
 
         Empty string when the box came back clean, which is the normal case.
@@ -597,7 +598,7 @@ class TAMESScraper(BaseStateScraper):
         )
 
     @staticmethod
-    def _get_result_count(tree) -> int:
+    def _get_result_count(tree: HtmlElement) -> int:
         """Extract result count from search results."""
         info_div = tree.xpath(
             "//div[contains(@class, 'rgWrap') and contains(@class, 'rgInfoPart')]"
