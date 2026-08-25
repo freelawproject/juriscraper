@@ -3452,34 +3452,6 @@
       "severity": "error"
     },
     {
-      "column": 13,
-      "path": "juriscraper/state/florida/cases.py",
-      "name": "unknown-variable-type",
-      "concise_description": "The type of `parts` is unknown; it is inferred as an implicit `Any`",
-      "severity": "error"
-    },
-    {
-      "column": 15,
-      "path": "juriscraper/state/florida/cases.py",
-      "name": "unknown-argument-type",
-      "concise_description": "The type of this argument is unknown",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/florida/docket_entries.py",
-      "name": "no-any-return-explicit",
-      "concise_description": "Returning Any from function declared to return \"DocketEntryType\"",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/florida/parties.py",
-      "name": "no-any-return-explicit",
-      "concise_description": "Returning Any from function declared to return \"PartyType\"",
-      "severity": "error"
-    },
-    {
       "column": 21,
       "path": "juriscraper/state/florida/scraper.py",
       "name": "unreachable-match-case",

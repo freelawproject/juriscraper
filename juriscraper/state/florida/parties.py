@@ -1,4 +1,4 @@
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, ClassVar
 from uuid import UUID
 
 from pydantic import UUID4, AfterValidator, AliasPath, BeforeValidator, Field
@@ -54,7 +54,7 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
 
 
 def florida_party_type_validator(
-    value: Any, info: ValidationInfo
+    value: object, info: ValidationInfo
 ) -> PartyType:
     """Validates and converts a Florida party type string to a PartyType
     enum value.
@@ -65,8 +65,11 @@ def florida_party_type_validator(
     :return: The corresponding PartyType enum value.
     """
     if info.context and info.context.get("deserialize"):
-        return value
-    s = str(value).lower()
+        return PartyType(value)
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected str, but got {type(value).__name__}.")
+    s = value.lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
         logger.error("Unrecognized Florida party type: %s", s)
         return PartyType.UNASSIGNED
