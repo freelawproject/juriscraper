@@ -165,7 +165,7 @@ class Site(ClusterSite):
         """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
-        :return None; sets the target date, downloads the corresponding HTML
+        :return: None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
 

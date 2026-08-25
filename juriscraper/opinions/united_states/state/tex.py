@@ -239,8 +239,8 @@ class Site(ClusterSite):
     def extract_type(link: etree.Element) -> str:
         """Determines the opinion type
 
-        :param link (etree.Element) The anchor element containing the PDF link.
-        :return str The opinion type as a string.
+        :param link: (etree.Element) The anchor element containing the PDF link.
+        :return str: The opinion type as a string.
         """
         text = link.text.lower()
         url = link.get("href")
