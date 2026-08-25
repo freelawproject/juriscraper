@@ -211,6 +211,13 @@
       "severity": "error"
     },
     {
+      "column": 22,
+      "path": "juriscraper/lib/utils.py",
+      "name": "implicit-any-empty-container",
+      "concise_description": "Cannot infer type of empty container; it will be treated as containing `Any`",
+      "severity": "error"
+    },
+    {
       "column": 20,
       "path": "juriscraper/opinions/united_states/administrative_agency/bia.py",
       "name": "missing-attribute",
