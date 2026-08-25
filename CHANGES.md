@@ -18,6 +18,7 @@ Features:
 -
 
 Changes:
+- Adopt explicit `@override` decorator in `/state/`.
 -
 
 Fixes:
