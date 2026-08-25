@@ -357,7 +357,8 @@ class Site(ClusterSite):
         to the same cluster. See txctapp10_subexample_3
 
         :param html: page's HTML object
-        :return List of opinions
+        :param op_date: date to identify related opinions of a case
+        :return: List of opinions
         """
         opinions = []
         disposition = ""
