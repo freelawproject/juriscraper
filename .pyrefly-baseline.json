@@ -134,10 +134,52 @@
       "severity": "error"
     },
     {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-explicit",
+      "concise_description": "Returning Any from function declared to return \"list[str]\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"bool\"",
+      "severity": "error"
+    },
+    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `findall`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
       "severity": "error"
     },
     {
