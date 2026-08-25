@@ -346,6 +346,7 @@ class RequestManager(AsyncClient):
             cookies: The cookies to send with the request
             follow_redirects: Whether to follow redirect responses
             timeout: Response timeout
+            **kwargs: Arbitrary keyword arguments.
 
         Return:
             The response to the dispatched request after handler interference."""
@@ -387,6 +388,7 @@ class RequestManager(AsyncClient):
 
         Args:
             request: The request to send.
+            **kwargs: Arbitrary keyword arguments.
 
         Returns:
             The `httpx.Response` or `None` if an error occurred."""
@@ -456,7 +458,7 @@ class RateLimit(RequestHandler):
     def __init__(self, rps: float = 2.0) -> None:
         """Initialize the rate limit handler.
 
-        Parameters:
+        Args:
             rps: The maximum number of requests to allow per second."""
         if rps <= 0.0:
             raise ValueError(

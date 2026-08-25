@@ -46,7 +46,7 @@ def set_api_token_header(site: OpinionSite) -> None:
     Creates the Site.headers attribute, copying the
     scraper_site.request[headers]
 
-    :param scraper_site: a Site Object
+    :param site: a Site Object
     :returns: None
     """
     if site.test_mode_enabled():
