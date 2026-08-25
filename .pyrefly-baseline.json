@@ -148,13 +148,6 @@
       "severity": "error"
     },
     {
-      "column": 30,
-      "path": "juriscraper/lib/microservices_utils.py",
-      "name": "bad-specialization",
-      "concise_description": "`URL` is not assignable to any of constraints `str`, `bytes` of type variable `AnyStr`",
-      "severity": "error"
-    },
-    {
       "column": 57,
       "path": "juriscraper/lib/microservices_utils.py",
       "name": "missing-attribute",
