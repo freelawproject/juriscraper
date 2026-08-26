@@ -9,6 +9,8 @@ import urllib.parse
 import urllib.request
 from collections.abc import Awaitable
 from datetime import datetime
+from http.client import HTTPResponse
+from typing import TypedDict
 
 import certifi
 import httpx
@@ -44,6 +46,16 @@ from juriscraper.lib.utils import (
 )
 
 logger = make_default_logger()
+
+
+class SiteRequest(TypedDict):
+    session: httpx.AsyncClient
+    headers: dict[str, str]
+    parameters: dict  # TODO: use a stricter type.
+    request: None  # TODO: Probably unused; remove
+    response: httpx.Response | HTTPResponse | None
+    status: None  # TODO: Probably unused; remove
+    url: str | None
 
 
 class AbstractSite:
@@ -105,7 +117,7 @@ class AbstractSite:
         kwargs.setdefault("follow_redirects", True)
         kwargs.setdefault("http2", True)
         kwargs.setdefault("verify", True)
-        self.request = {
+        self.request: SiteRequest = {
             "session": httpx.AsyncClient(**kwargs),
             "headers": {
                 "User-Agent": self.user_agent,
@@ -116,6 +128,7 @@ class AbstractSite:
             },
             "parameters": {},
             "request": None,
+            "response": None,
             "status": None,
             "url": None,
         }
