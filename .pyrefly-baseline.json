@@ -418,7 +418,7 @@
       "column": 33,
       "path": "juriscraper/opinions/united_states/federal_appellate/ca7.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `content`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -460,7 +460,7 @@
       "column": 33,
       "path": "juriscraper/opinions/united_states/federal_appellate/cafc.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `content`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -768,7 +768,7 @@
       "column": 31,
       "path": "juriscraper/opinions/united_states/state/colo.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -944,13 +944,6 @@
       "path": "juriscraper/opinions/united_states/state/la.py",
       "name": "not-iterable",
       "concise_description": "Type `None` is not iterable",
-      "severity": "error"
-    },
-    {
-      "column": 36,
-      "path": "juriscraper/opinions/united_states/state/la.py",
-      "name": "bad-assignment",
-      "concise_description": "`Response` is not assignable to dict key `response` with type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None`",
       "severity": "error"
     },
     {
@@ -1160,7 +1153,7 @@
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/michctapp.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1454,7 +1447,7 @@
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/or.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1489,7 +1482,7 @@
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/ri.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1867,7 +1860,7 @@
       "column": 33,
       "path": "juriscraper/oral_args/united_states/federal_appellate/ca1.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `content`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -1930,7 +1923,7 @@
       "column": 20,
       "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
+      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
       "severity": "error"
     },
     {
