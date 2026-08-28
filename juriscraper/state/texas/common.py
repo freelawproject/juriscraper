@@ -157,7 +157,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
         './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
     )
     if judge_container is None:
-        judge_container = []
+        judge_container: list[HtmlElement] = []
     case_info = {
         clean_string(row.find(".//*[1]").text_content()): row.find(".//*[2]")
         for row in (list(info_container) + list(judge_container))
@@ -169,8 +169,8 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     case_urls = [clean_url(a.get("href", "")) for a in case_url_nodes]
     if not case_numbers:
         fallback = clean_string(case_info["COA Case"].text_content())
-        case_numbers = [fallback] if fallback else []
-        case_urls = [""] if fallback else []
+        case_numbers: list[str] = [fallback] if fallback else []
+        case_urls: list[str] = [""] if fallback else []
     district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
         case_number=case_numbers,
