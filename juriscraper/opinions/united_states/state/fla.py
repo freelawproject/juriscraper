@@ -4,6 +4,7 @@
 
 from datetime import date, datetime, timedelta
 from math import ceil
+from typing import Any
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -24,19 +25,20 @@ class Site(OpinionSiteLinear):
     # Example built URL
     # "https://flcourts-media.flcourts.gov/_search/opinions/?limit=100&offset=0&query=&scopes[]=supreme_court&searchtype=opinions&siteaccess=supreme2&startdate=2025-07-01&enddate=2026-01-01"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
 
-    async def _download(self, request_dict=None):
+    async def _download(
+        self, request_dict: dict | None = None
+    ) -> dict[str, Any]:
         """Download every page of results for the current date range
 
-        The source returns at most `page_size` results per request, sorted
-        by `disposition_date desc, case_number asc`. Without pagination,
-        every opinion past the first page is silently dropped. See #2150
+        The source returns results sorted by
+        `disposition_date desc, case_number asc`.
 
         :param request_dict: passed through to the parent downloader
         :return: the first page's JSON, with all the pages' `searchResults`
@@ -57,7 +59,7 @@ class Site(OpinionSiteLinear):
             results.extend(page_results)
 
             if len(page_results) < self.page_size:
-                # Last page of results; a further offset would 404
+                # Last page of results; a further offset returns 404
                 break
 
         if len(results) < total_count:
@@ -136,14 +138,14 @@ class Site(OpinionSiteLinear):
     ) -> None:
         """Sets the first page URL using date arguments
 
-        If no dates are passed, use the last `scrape_interval` days
-
-        :param start: start date
-        :param end: end date
+        :param start: start date; defaults to `scrape_interval` days before
+            the end date
+        :param end: end date; defaults to today
         :return: none
         """
-        if not start:
+        if not end:
             end = datetime.today()
+        if not start:
             start = end - timedelta(days=self.scrape_interval)
 
         self.start_date = start
@@ -153,9 +155,7 @@ class Site(OpinionSiteLinear):
     def build_url(self, offset: int = 0) -> str:
         """Builds the URL of a single results page
 
-        :param offset: index of the first result to return. The source 404s
-            on offsets at or near the end of the results, so callers must keep
-            it inside a page that `totalCount` covers
+        :param offset: index of the first result to return.
         :return: the page URL
         """
         fmt = "%Y-%m-%d"
