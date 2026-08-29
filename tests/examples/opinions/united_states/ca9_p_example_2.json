@@ -1,0 +1,302 @@
+[
+  {
+    "case_name": {
+      "S": "SMITH V. JONES"
+    },
+    "case_num": {
+      "S": "25-1000"
+    },
+    "case_type": {
+      "S": "Civil"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1000.pdf"
+    },
+    "judge": {
+      "S": "WARDLAW"
+    },
+    "last_updated": {
+      "S": "2026-06-01 09:00:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "DELETED STRING FLAG V. ROW"
+    },
+    "case_num": {
+      "S": "25-1001"
+    },
+    "case_type": {
+      "S": "Civil"
+    },
+    "deleted": {
+      "S": "1"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1001.pdf"
+    },
+    "judge": {
+      "S": "CLIFTON"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:50:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "DELETED BOOL FLAG V. ROW"
+    },
+    "case_num": {
+      "S": "25-1002"
+    },
+    "case_type": {
+      "S": "Civil"
+    },
+    "deleted": {
+      "BOOL": true
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1002.pdf"
+    },
+    "judge": {
+      "S": "CLIFTON"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:45:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "DELETED NUMBER FLAG V. ROW"
+    },
+    "case_num": {
+      "S": "25-1003"
+    },
+    "case_type": {
+      "S": "Civil"
+    },
+    "deleted": {
+      "N": "1"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1003.pdf"
+    },
+    "judge": {
+      "S": "CLIFTON"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:40:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "   "
+    },
+    "case_num": {
+      "S": "25-1004"
+    },
+    "case_type": {
+      "S": "Civil"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1004.pdf"
+    },
+    "judge": {
+      "S": "FRIEDLAND"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:30:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_num": {
+      "S": "25-1005"
+    },
+    "case_type": {
+      "S": "Civil"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1005.pdf"
+    },
+    "judge": {
+      "S": "FRIEDLAND"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:20:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "BAD PUBLISH V. ROW"
+    },
+    "case_num": {
+      "S": "25-1006"
+    },
+    "case_type": {
+      "S": "Criminal"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/06/01/25-1006.pdf"
+    },
+    "judge": {
+      "S": "MILLER"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:10:00"
+    },
+    "publish": {
+      "N": "0"
+    }
+  },
+  {
+    "case_name": {
+      "S": "NO FILE NAME V. ROW"
+    },
+    "case_num": {
+      "S": "25-1007"
+    },
+    "case_type": {
+      "S": "Criminal"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "judge": {
+      "S": "MILLER"
+    },
+    "last_updated": {
+      "S": "2026-06-01 08:00:00"
+    },
+    "publish": {
+      "N": "20260601000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "ROE V. DOE"
+    },
+    "case_num": {
+      "S": "25-1008"
+    },
+    "case_type": {
+      "S": "Criminal"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/05/30/25-1008.pdf"
+    },
+    "judge": {
+      "S": "Per Curiam"
+    },
+    "last_updated": {
+      "S": "2026-05-30 10:00:00"
+    },
+    "publish": {
+      "N": "20260530000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "ROE V. DOE"
+    },
+    "case_num": {
+      "S": "25-1008"
+    },
+    "case_type": {
+      "S": "Criminal"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/05/30/25-1008.pdf"
+    },
+    "judge": {
+      "S": "BENNETT"
+    },
+    "last_updated": {
+      "S": "2026-05-30 08:00:00"
+    },
+    "publish": {
+      "N": "20260530000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "GARCIA V. UNITED STATES"
+    },
+    "case_num": {
+      "S": "24-9002"
+    },
+    "case_type": {
+      "S": "Prisoner"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/04/20/24-9002.pdf"
+    },
+    "judge": {
+      "S": "MILLER"
+    },
+    "publish": {
+      "N": "20260420000000"
+    }
+  },
+  {
+    "case_name": {
+      "S": "LEE V. WONG"
+    },
+    "case_num": {
+      "S": "24-9001"
+    },
+    "case_type": {
+      "S": "Prisoner"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/04/15/24-9001.pdf"
+    },
+    "judge": {
+      "S": "OWENS"
+    },
+    "publish": {
+      "N": "20260415000000"
+    }
+  }
+]

@@ -21,7 +21,7 @@ class Site(ca9_p.Site):
         """Map the table's judge column onto case keys
 
         `memoranda` names the whole panel in `case_panel` and has no `judge`
-        or `other_judges`, so there is no author to report
+        column, so there is no author to report
 
         :param record: a DynamoDB row
         :return: the judge related part of the case dict

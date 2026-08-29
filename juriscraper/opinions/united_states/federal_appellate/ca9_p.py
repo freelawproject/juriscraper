@@ -192,10 +192,22 @@ class Site(OpinionSiteLinear):
             reverse=True,
         )
 
+        seen_urls = set()
         for record in records:
             docket = get_attribute(record, "case_num")
 
             if get_attribute(record, "deleted").lower() in {"1", "true"}:
+                continue
+
+            # An empty name would abort the whole scrape in `_check_sanity`,
+            # so drop the row instead.
+            case_name = get_attribute(record, "case_name")
+            if not case_name:
+                logger.warning(
+                    "%s: skipping row with no `case_name` for docket %s",
+                    self.court_id,
+                    docket,
+                )
                 continue
 
             date_filed = self.get_date_filed(record)
@@ -217,10 +229,15 @@ class Site(OpinionSiteLinear):
                 )
                 continue
 
+            url = urljoin(self.base_url, file_name)
+            if url in seen_urls:
+                continue
+            seen_urls.add(url)
+
             self.cases.append(
                 {
-                    "name": titlecase(get_attribute(record, "case_name")),
-                    "url": urljoin(self.base_url, file_name),
+                    "name": titlecase(case_name),
+                    "url": url,
                     "date": date_filed,
                     "status": self.status,
                     "docket": docket,
@@ -238,8 +255,8 @@ class Site(OpinionSiteLinear):
         publish = get_attribute(record, "publish")
 
         try:
-            return (
-                datetime.strptime(publish[:8], "%Y%m%d").strftime("%Y-%m-%d")
+            return datetime.strptime(publish[:8], "%Y%m%d").strftime(
+                "%Y-%m-%d"
             )
         except ValueError:
             return ""
@@ -263,7 +280,7 @@ class Site(OpinionSiteLinear):
         """Preserve the upload time ordering applied by `_process_html`
 
         `AbstractSite._date_sort` would reorder the cases by filing date,
-        which can lead to miss opinions.
+        which can lead to missing opinions.
 
         :return: None
         """
