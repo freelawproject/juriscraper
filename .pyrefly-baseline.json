@@ -2401,6 +2401,18 @@
       "severity": "error"
     },
     {
+      "line": 125,
+      "column": 15,
+      "stop_line": 125,
+      "stop_column": 20,
+      "path": "juriscraper/state/florida/cases.py",
+      "code": -2,
+      "name": "unknown-argument-type",
+      "description": "The type of this argument is unknown",
+      "concise_description": "The type of this argument is unknown",
+      "severity": "error"
+    },
+    {
       "line": 452,
       "column": 21,
       "stop_line": 453,
@@ -2497,9 +2509,9 @@
       "severity": "error"
     },
     {
-      "line": 883,
+      "line": 884,
       "column": 31,
-      "stop_line": 883,
+      "stop_line": 884,
       "stop_column": 36,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2509,9 +2521,9 @@
       "severity": "error"
     },
     {
-      "line": 915,
+      "line": 916,
       "column": 35,
-      "stop_line": 917,
+      "stop_line": 918,
       "stop_column": 10,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2521,9 +2533,9 @@
       "severity": "error"
     },
     {
-      "line": 919,
+      "line": 920,
       "column": 26,
-      "stop_line": 919,
+      "stop_line": 920,
       "stop_column": 60,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2533,9 +2545,9 @@
       "severity": "error"
     },
     {
-      "line": 920,
+      "line": 921,
       "column": 17,
-      "stop_line": 920,
+      "stop_line": 921,
       "stop_column": 51,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2545,9 +2557,9 @@
       "severity": "error"
     },
     {
-      "line": 972,
+      "line": 973,
       "column": 38,
-      "stop_line": 972,
+      "stop_line": 973,
       "stop_column": 48,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2557,9 +2569,9 @@
       "severity": "error"
     },
     {
-      "line": 985,
+      "line": 986,
       "column": 33,
-      "stop_line": 985,
+      "stop_line": 986,
       "stop_column": 52,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,

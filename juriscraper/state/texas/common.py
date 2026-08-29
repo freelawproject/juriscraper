@@ -2,7 +2,7 @@ import re
 from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
-from itertools import chain, groupby
+from itertools import chain
 from typing import TypedDict
 from urllib.parse import parse_qs, urlparse
 
@@ -692,10 +692,11 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
             )
         party_name_parts = expanded_parts
         # Strip out acronyms like LLC, MD, and PA so they don't clutter things
-        party_name_parts = filter(
-            lambda part: not self.BUSINESS_AND_TITLE_STRIP_RE.fullmatch(part),
-            party_name_parts,
-        )
+        party_name_parts = [
+            part
+            for part in party_name_parts
+            if not self.BUSINESS_AND_TITLE_STRIP_RE.fullmatch(part)
+        ]
         party_name_parts = [
             part.removeprefix("the ").strip() for part in party_name_parts
         ]
@@ -783,12 +784,12 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
         if len(name_part_2) == 0:
             return harmonize(name_part_1)
 
-        grouped_parties = {}
-        for k, g in groupby(self.parties, lambda party: party["type"]):
+        grouped_parties: dict[str, list[TexasCaseParty]] = {}
+        for k, g in ((p["type"], p) for p in self.parties):
             if k in grouped_parties:
-                grouped_parties[k].extend(list(g))
+                grouped_parties[k].append(g)
             else:
-                grouped_parties[k] = list(g)
+                grouped_parties[k] = [g]
 
         first_parties = list(
             chain(

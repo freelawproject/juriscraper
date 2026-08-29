@@ -161,6 +161,6 @@ implicit-bool = false
 missing-override-decorator = true
 no-any-return-explicit = false
 no-any-return-implicit = false
-unknown-argument-type = false
+unknown-argument-type = true
 unknown-variable-type = true
 unused-call-result = false
