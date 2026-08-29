@@ -2413,6 +2413,30 @@
       "severity": "error"
     },
     {
+      "line": 78,
+      "column": 16,
+      "stop_line": 78,
+      "stop_column": 21,
+      "path": "juriscraper/state/florida/docket_entries.py",
+      "code": -2,
+      "name": "no-any-return-explicit",
+      "description": "Returning Any from function declared to return \"DocketEntryType\"",
+      "concise_description": "Returning Any from function declared to return \"DocketEntryType\"",
+      "severity": "error"
+    },
+    {
+      "line": 68,
+      "column": 16,
+      "stop_line": 68,
+      "stop_column": 21,
+      "path": "juriscraper/state/florida/parties.py",
+      "code": -2,
+      "name": "no-any-return-explicit",
+      "description": "Returning Any from function declared to return \"PartyType\"",
+      "concise_description": "Returning Any from function declared to return \"PartyType\"",
+      "severity": "error"
+    },
+    {
       "line": 452,
       "column": 21,
       "stop_line": 453,
