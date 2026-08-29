@@ -6,7 +6,12 @@ from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.state.docket import Party, PartyType, Representative
+from juriscraper.state.docket import (
+    DeserializableContext,
+    Party,
+    PartyType,
+    Representative,
+)
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     FloridaPaginatedResultsParser,
@@ -54,7 +59,7 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
 
 
 def florida_party_type_validator(
-    value: object, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> PartyType:
     """Validates and converts a Florida party type string to a PartyType
     enum value.
@@ -64,7 +69,7 @@ def florida_party_type_validator(
 
     :return: The corresponding PartyType enum value.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, DeserializableContext):
         return PartyType(value)
 
     if not isinstance(value, str):

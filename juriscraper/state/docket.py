@@ -6,11 +6,21 @@ here in this format.
 
 from datetime import date
 from enum import Enum
-from typing import Generic, TypeVar
+from typing import Generic, TypeVar, final
 
 from pydantic import BaseModel
 
 _DeserializableT = TypeVar("_DeserializableT", bound="Deserializable")
+
+
+@final
+class DeserializableContext:
+    """
+    This is validation context provided by `Deserializable.deserialize()`.
+    Roughly, this signifies that the data being parsed has been serialized
+    previously by `model_dump_json()`. Validators may use this to vary their
+    behavior. The class is empty, because its presence is a sufficient signal.
+    """
 
 
 class Deserializable(BaseModel):
@@ -24,7 +34,7 @@ class Deserializable(BaseModel):
         """Deserialize a JSON string into an instance of this model."""
         return cls.model_validate_json(
             text,
-            context={"deserialize": True},
+            context=DeserializableContext(),
             by_name=True,
         )
 

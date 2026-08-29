@@ -18,6 +18,7 @@ from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import CaseNameTweaker, harmonize
 from juriscraper.state.docket import (
+    DeserializableContext,
     Docket,
     DocketTransfer,
     DocketType,
@@ -75,7 +76,7 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
 
 
 def florida_docket_type_validator(
-    value: object, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> DocketType:
     """
     Validates and converts a Florida case classification string to a
@@ -90,7 +91,7 @@ def florida_docket_type_validator(
 
     :return: The corresponding DocketType enum value.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, DeserializableContext):
         return DocketType(value)
 
     if not isinstance(value, str):
@@ -112,7 +113,7 @@ def florida_docket_type_validator(
 
 
 def florida_docket_type_raw_validator(
-    value: object, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> tuple[str, str, str]:
     """
     Splits a Florida "caseClassification" string into a category, type, sub type
@@ -123,7 +124,7 @@ def florida_docket_type_raw_validator(
 
     :return: The split tuple.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, DeserializableContext):
         if not isinstance(value, list):
             raise ValueError(f"expected list, but got {type(value).__name__}.")
         if not all(isinstance(e, str) for e in value):
@@ -150,7 +151,7 @@ def florida_docket_type_raw_validator(
 
 
 def florida_originating_court_id_validator(
-    value: object, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> FloridaCourtID:
     """
     Validates and converts a Florida originating court name to a standardized
@@ -161,7 +162,7 @@ def florida_originating_court_id_validator(
 
     :return: The corresponding CourtID enum value.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, DeserializableContext):
         return FloridaCourtID(value)
 
     if not isinstance(value, str):
@@ -227,7 +228,7 @@ class FloridaOriginatingCase(BaseModel):
 
 
 def florida_external_id_to_js_id_validator(
-    value: object, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> str:
     """
     Maps Florida's external court ID to a value on the FloridaCourtID enum.
@@ -237,7 +238,7 @@ def florida_external_id_to_js_id_validator(
 
     :return: Value on the FloridaCourtID enum.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, DeserializableContext):
         if not isinstance(value, str):
             raise ValueError(f"expected str, but got {type(value).__name__}.")
         return value

@@ -12,7 +12,11 @@ from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.state.docket import DocketEntry, DocketEntryType
+from juriscraper.state.docket import (
+    DeserializableContext,
+    DocketEntry,
+    DocketEntryType,
+)
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     FloridaPaginatedResultsParser,
@@ -63,7 +67,7 @@ FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
 
 
 def florida_entry_type_validator(
-    value: object, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> DocketEntryType:
     """
     Validates and converts a Florida docket entry type string to a
@@ -74,7 +78,7 @@ def florida_entry_type_validator(
 
     :return: The corresponding DocketEntryType enum value.
     """
-    if info.context is not None and info.context.get("deserialize"):
+    if isinstance(info.context, DeserializableContext):
         return DocketEntryType(value)
 
     if not isinstance(value, str):
