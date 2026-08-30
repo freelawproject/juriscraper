@@ -13,13 +13,17 @@ History:
 """
 
 from datetime import date
+from typing import Any
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.utils import backscrape_over_paginated_results
+from juriscraper.lib.utils import (
+    PaginatedHtmlBackscrapeSite,
+    backscrape_over_paginated_results,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
     days_interval = 50 * 365  # get the formatted input dates
     first_opinion_date = date(1992, 1, 1)
 
@@ -166,8 +170,9 @@ class Site(OpinionSiteLinear):
         )
         self.cases = cases
 
+    # TODO[Python3.11]: Use `Self`
     @staticmethod
-    def set_parameters_by_page(page: int, site) -> None:
+    def set_parameters_by_page(page: int, site: "Site") -> None:
         """Function to set the page number inside
         `backscrape_over_paginated_results`
 
