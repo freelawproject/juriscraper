@@ -156,7 +156,7 @@ class Site(ClusterSite):
         return self.base_url.format(self.court_abbv, year_str)
 
     @override
-    def extract_from_text(self, scraped_text: str):
+    def extract_from_text(self, scraped_text: str) -> dict:
         """
         If possible, extract Opinion Cluster values:
             - date_filed

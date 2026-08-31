@@ -120,7 +120,7 @@ class Site(OpinionSiteLinear):
         return self.start_date <= case_date <= self.end_date
 
     @override
-    def extract_from_text(self, scraped_text):
+    def extract_from_text(self, scraped_text: str) -> dict:
         """Extract the following values from the opinion's pdf text. The information we need is in the first page
             - appeal_from_str
             - judges

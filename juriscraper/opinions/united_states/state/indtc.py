@@ -25,7 +25,7 @@ class Site(ind.Site):
         self.status = "Unknown"
 
     @override
-    def extract_from_text(self, scraped_text: str):
+    def extract_from_text(self, scraped_text: str) -> dict:
         """Extract publication status
 
         :param scraped_text: Text of scraped content
