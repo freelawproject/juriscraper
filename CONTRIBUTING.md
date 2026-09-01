@@ -77,6 +77,51 @@ Before we can accept your contribution, you must sign the Contributor License Ag
 
 ---
 
+## Ordering: check it, or documents go missing
+
+Before you write a scraper, answer one question about your source: **does it tell you when each document was published?**
+
+CourtListener walks your case list from the top and stops at the first document it already has. That early exit is only safe when every new document sits above every document already ingested. If a new document lands below one CourtListener has seen, the crawl stops before reaching it, and the document is never scraped. Nothing errors. Nothing reaches Sentry. The log says the court is up to date.
+
+By default `AbstractSite._date_sort` orders by filing date, then breaks ties by case name. That is the trap. Courts routinely release a day's documents in batches through the morning, all stamped with the same filing date, so the alphabetical tiebreak scatters new documents among ones already ingested. Four courts have lost documents this way, one of them twice. See [#2152](https://github.com/freelawproject/juriscraper/issues/2152).
+
+### If your source exposes a publication or upload time
+
+Give each case a `sort_key` and declare the ordering. The key can be any comparable value, including a tuple:
+
+```python
+class Site(OpinionSiteLinear):
+    # `_process_html` orders by the court's own upload timestamp
+    is_recency_ordered = True
+
+    def _process_html(self):
+        for row in self.html["results"]:
+            self.cases.append(
+                {
+                    "name": row["title"],
+                    "url": row["pdf"],
+                    "date": row["filed"],
+                    "docket": row["docket"],
+                    # orders the crawl, never reaches the output
+                    "sort_key": row["published_at"],
+                }
+            )
+```
+
+`sort_key` has no getter, so it stays out of the scraped data and out of your `.compare.json`. Prefer a real upload or publication timestamp. A filing date is not one, and neither is a record id, which usually reflects when a record was created in the court's CMS rather than when it went live.
+
+### If your source exposes no such field
+
+Leave `is_recency_ordered` at its default of `False`. That is the honest answer for most courts, and it is not a failure. CourtListener reads the flag and walks the whole list instead of stopping early.
+
+Do **not** invent an ordering to work around the problem. Fabricating descending filing dates, for instance, writes wrong data into the database to steer a downstream consumer, and it breaks as soon as the court changes how it publishes.
+
+### Checking your work
+
+`tests/local/test_OrderingContractTest.py` reports which scrapers return cases that share a date, and enforces the contract on any scraper that sets `is_recency_ordered = True`.
+
+---
+
 ## Development Setup
 
 ### Requirements

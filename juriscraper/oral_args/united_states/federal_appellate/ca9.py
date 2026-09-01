@@ -17,6 +17,9 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
+    # `_process_html` gives every case a `sort_key` built on the court's own
+    # `created_date`, so the list runs newest upload first. #2111
+    is_recency_ordered = True
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     # Lookback for the regular scrape, in `created_date` terms. The cron runs
     # hourly, so this only needs to cover a scraper outage. Widening it is
@@ -190,6 +193,16 @@ class Site(OralArgumentSiteLinear):
                 )
                 continue
 
+            # `created_date` is when the court wrote the row. Ordering the
+            # crawl by it is what keeps us from missing arguments: it puts
+            # every new row above every row CourtListener already has, so the
+            # crawl cannot stop before it reaches them. Ordering by hearing
+            # date instead left arguments the court uploaded later in the day
+            # sitting behind rows already in CL, where nothing reached them
+            # again. Rows older than mid 2021 have no `created_date` and fall
+            # back to hearing date order. #2111
+            created_date = record.get("created_date", {}).get("S", "")
+
             self.cases.append(
                 {
                     "date": date_str,
@@ -197,38 +210,9 @@ class Site(OralArgumentSiteLinear):
                     "judge": record["case_panel"]["S"],
                     "name": record["case_name"]["S"],
                     "url": urljoin(self.base_url, audio),
-                    # Only used for ordering below; it has no getter, so it
-                    # never reaches the scraped output
-                    "created_date": record.get("created_date", {}).get(
-                        "S", ""
-                    ),
+                    "sort_key": (created_date, date_str, docket),
                 }
             )
-
-        # CourtListener walks these cases top down and stops at the first
-        # duplicate, so the newest uploads have to come first: that guarantees
-        # every new row is seen before the first row we already have. Ordering
-        # by hearing date instead left arguments the court uploaded later in the
-        # day sitting behind rows already in CL, where nothing ever reached
-        # them again. Rows older than mid 2021 have no `created_date` and fall
-        # back to hearing date order. #2111
-        self.cases.sort(
-            key=lambda case: (
-                case["created_date"],
-                case["date"],
-                case["docket"],
-            ),
-            reverse=True,
-        )
-
-    def _date_sort(self) -> None:
-        """Preserve the upload time ordering applied by `_process_html`
-
-        `AbstractSite._date_sort` would reorder the cases by hearing date, which
-        is the ordering that made us miss arguments. #2111
-
-        :return: None
-        """
 
     async def _download_backwards(self, dates: tuple[str, str]) -> None:
         """Download backwards

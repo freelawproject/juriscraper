@@ -83,6 +83,10 @@ class ClusterSite(OpinionSiteLinear):
         # doing this will help us re-use `AbstractSite.parse``
         self._all_attrs = []
 
+        # holds the `sort_key` of each case, once `_clean_attributes` has
+        # taken them out of the case dicts. See #2152
+        self._sort_keys = []
+
         # if set,  allow clustering when dates are not exactly the same
         self.cluster_by_date_max_days = 0
 
@@ -120,6 +124,10 @@ class ClusterSite(OpinionSiteLinear):
         """
         cases = []
         for case in self.cases:
+            # `sort_key` orders the crawl, it is not case data, so it must not
+            # reach name normalization or the output. See #2152
+            self._sort_keys.append(case.pop("sort_key", None))
+
             cleaned_case = {}
             for key, value in case.items():
                 normalized_name = self.normalize_attribute_name(key)
@@ -149,7 +157,20 @@ class ClusterSite(OpinionSiteLinear):
         self.cases = cases
 
     def _date_sort(self):
-        """Orders cases by values of _req_attributes, beggining with date and name"""
+        """Orders cases by their `sort_key` when the scraper sets one, and by
+        values of _req_attributes, beggining with date and name, otherwise
+        """
+        if any(key is not None for key in self._sort_keys):
+            self.cases = [
+                case
+                for _, case in sorted(
+                    zip(self._sort_keys, self.cases),
+                    key=lambda pair: pair[0],
+                    reverse=True,
+                )
+            ]
+            return
+
         self.cases.sort(
             key=lambda case: tuple(
                 case.get(attr, "") for attr in self._req_attrs

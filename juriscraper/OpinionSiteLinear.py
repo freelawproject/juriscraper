@@ -1,4 +1,5 @@
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.utils import get_sort_keys_from_cases
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -46,6 +47,9 @@ class OpinionSiteLinear(OpinionSite):
         # the downloaded content from download_url
         # cl_scrape_opinions is ready to consume this if present
         "content",
+        # orders the crawl, highest first. Has no getter, so it never reaches
+        # the scraped output. See `AbstractSite.is_recency_ordered` and #2152
+        "sort_key",
     }
 
     def __init__(self, *args, **kwargs):
@@ -91,6 +95,9 @@ class OpinionSiteLinear(OpinionSite):
 
     def _get_docket_numbers(self):
         return [case["docket"] for case in self.cases]
+
+    def _get_sort_keys(self):
+        return get_sort_keys_from_cases(self.cases, self.court_id)
 
     # optional getters below
 

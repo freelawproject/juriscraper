@@ -75,6 +75,57 @@ def sanity_check_case_names(case_names: list[str]) -> None:
         prior_case_name = name
 
 
+def get_sort_keys_from_cases(
+    cases: list[dict], court_id: str
+) -> list | None:
+    """Collect the `sort_key` each case carries, for scrapers built on a
+    `self.cases` list of dicts
+
+    :param cases: the parsed cases
+    :param court_id: for error reporting
+    :return: one key per case, or None when the scraper sets no `sort_key`
+    :raises InsanityException: if only some of the cases carry a `sort_key`
+    """
+    if not cases or "sort_key" not in cases[0]:
+        return None
+
+    try:
+        return [case["sort_key"] for case in cases]
+    except KeyError as error:
+        raise InsanityException(
+            f"{court_id}: once one case has a `sort_key`, all of them need "
+            "one, otherwise the ordering of the crawl is undefined"
+        ) from error
+
+
+def check_recency_ordering_claim(case_dates: list[date], court_id: str) -> None:
+    """Warn when a site claims recency ordering that its sort cannot deliver
+
+    A site ordered by filing date alone is only ordered as far as its dates
+    are distinct. Repeated dates fall through to a case name tiebreak, which
+    says nothing about when the court published a document. See #2152.
+
+    :param case_dates: the sorted case dates
+    :param court_id: for logging purposes
+    :return: None
+    """
+    repeated = len(case_dates) - len(set(case_dates))
+    if not repeated:
+        return
+
+    logger.warning(
+        "%s: declares is_recency_ordered, but sorts by filing date and %s of "
+        "%s cases share a date with another case. Those ties break by case "
+        "name, so the list is not ordered by recency and CourtListener may "
+        "stop the crawl before it reaches new documents. Either give each "
+        "case a `sort_key` taken from a source publication timestamp, or set "
+        "is_recency_ordered = False.",
+        court_id,
+        repeated,
+        len(case_dates),
+    )
+
+
 def sanity_check_opinion_types(sub_opinions: list[dict]) -> None:
     """Check opinion type assignment rules within a cluster
 

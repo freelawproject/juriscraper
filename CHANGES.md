@@ -15,10 +15,11 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add an ordering contract for CourtListener's crawl abort. `AbstractSite.is_recency_ordered` states whether a site returns its cases newest published first, and a per-case `sort_key` lets a scraper order by a source publication time instead of the filing date. `sort_key` has no getter, so it never reaches the scraped output. Scrapers that leave `is_recency_ordered` at its default of `False` are unaffected. #2152
 
 Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- `ca9` oral arguments: order through `sort_key` rather than a no-op `_date_sort` override. The output is unchanged. #2152
 
 Fixes:
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136

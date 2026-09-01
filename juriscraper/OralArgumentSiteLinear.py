@@ -1,4 +1,5 @@
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.utils import get_sort_keys_from_cases
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -30,6 +31,9 @@ class OralArgumentSiteLinear(OralArgumentSite):
 
     def _get_docket_numbers(self):
         return [case["docket"] for case in self.cases]
+
+    def _get_sort_keys(self):
+        return get_sort_keys_from_cases(self.cases, self.court_id)
 
     # optional getters below
 

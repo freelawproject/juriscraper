@@ -37,6 +37,7 @@ from juriscraper.lib.utils import (
     check_download_url,
     check_empty_downloaded_file,
     check_expected_content_types,
+    check_recency_ordering_claim,
     clean_attribute,
     sanity_check_case_names,
     sanity_check_dates,
@@ -55,6 +56,23 @@ class AbstractSite:
     # Set to True in subclasses to use urllib instead of httpx.
     # Useful for sites that block httpx via TLS fingerprinting.
     use_urllib = False
+
+    # Does this site return its cases from most recently published to least,
+    # using a publication or upload time from the source?
+    #
+    # CourtListener walks the list from the top and stops the crawl at the
+    # first document it already has. That early exit is only safe when every
+    # unseen document sits above every seen one. Ordering by filing date does
+    # not give that guarantee. Courts release a day's documents in batches
+    # through the morning, all carrying the same date, and `_date_sort` breaks
+    # those ties by case name. New documents then land below ones already
+    # ingested, the crawl stops short, and they are never scraped.
+    #
+    # Set this True only when the source exposes a publication or upload time
+    # and the scraper orders by it, through `sort_key`. Leave it False when
+    # the source exposes no such field; CourtListener then walks the whole
+    # list instead of stopping early. See #2152.
+    is_recency_ordered = False
 
     def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
@@ -325,22 +343,57 @@ class AbstractSite:
             % (self.court_id, len(self.case_names))
         )
 
+    def _get_sort_keys(self) -> list | None:
+        """The per case key used to order the list, highest first
+
+        Return None to order by filing date, which is the default. Override
+        this, or give each case a `sort_key`, to order by a publication or
+        upload time from the source instead. A site that does so should also
+        set `is_recency_ordered`. See #2152.
+
+        :return: one key per case, in the order the cases were parsed
+        """
+        return None
+
     def _date_sort(self):
-        """Sort the object by date."""
-        if len(self.case_names) > 0:
-            obj_list_attrs = [
-                self.__getattribute__(attr)
-                for attr in self._all_attrs
-                if isinstance(self.__getattribute__(attr), list)
+        """Sort the object, most recent first.
+
+        Orders by `_get_sort_keys` when the scraper declares one, and by
+        filing date otherwise. The sort is stable, so cases sharing a key keep
+        the order the source gave them.
+        """
+        if len(self.case_names) == 0:
+            return
+
+        obj_list_attrs = [
+            self.__getattribute__(attr)
+            for attr in self._all_attrs
+            if isinstance(self.__getattribute__(attr), list)
+        ]
+        zipped = list(zip(*obj_list_attrs))
+
+        sort_keys = self._get_sort_keys()
+        if sort_keys:
+            zipped = [
+                row
+                for _, row in sorted(
+                    zip(sort_keys, zipped),
+                    key=lambda pair: pair[0],
+                    reverse=True,
+                )
             ]
-            zipped = list(zip(*obj_list_attrs))
+        else:
             zipped.sort(reverse=True)
-            i = 0
-            obj_list_attrs = list(zip(*zipped))
-            for attr in self._all_attrs:
-                if isinstance(self.__getattribute__(attr), list):
-                    self.__setattr__(attr, obj_list_attrs[i][:])
-                    i += 1
+
+        i = 0
+        obj_list_attrs = list(zip(*zipped))
+        for attr in self._all_attrs:
+            if isinstance(self.__getattribute__(attr), list):
+                self.__setattr__(attr, obj_list_attrs[i][:])
+                i += 1
+
+        if self.is_recency_ordered and not sort_keys:
+            check_recency_ordering_claim(self.case_dates, self.court_id)
 
     def _make_hash(self):
         """Make a unique ID. ETag and Last-Modified from courts cannot be

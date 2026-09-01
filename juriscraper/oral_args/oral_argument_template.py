@@ -14,6 +14,14 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
+    # Does this source tell you when each recording was published, and does
+    # this scraper order by it? If so, set this True and give each case a
+    # `sort_key`. If the source has no such field, leave it False; that is
+    # the honest answer for most courts. Read the "Ordering" section of
+    # CONTRIBUTING.md before you decide, because getting this wrong loses
+    # recordings silently. See #2152
+    is_recency_ordered = False
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
