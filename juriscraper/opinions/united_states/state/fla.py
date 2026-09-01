@@ -11,12 +11,23 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    # make a backscrape request every `days_interval` range, to avoid pagination
+    # The source exposes no publication time. `publish_date` is null on every
+    # district court row, `modified` moves whenever the CMS touches a record,
+    # and `content.id` is a bulk creation sequence that tracks the case
+    # number. So there is no key that puts newly posted opinions above ones
+    # already ingested, and CourtListener has to walk the whole list. #2152
+    is_recency_ordered = False
     days_interval = 20
     first_opinion_date = datetime(1999, 9, 23)
-    # even though you can put whatever number you want as limit, 50 seems to be
-    # the max
-    base_url = "https://flcourts-media.flcourts.gov/_search/opinions/?limit=50&offset=0&query=&scopes[]={}&searchtype=opinions&siteaccess={}&startdate={}&enddate={}"
+    # The source caps a page at 50 results, whatever `limit` asks for
+    page_size = 50
+    # A `totalCount` the source cannot deliver must not spin forever
+    max_pages = 20
+    # A regular scrape only needs to cover a scraper outage. The old 365 day
+    # window was meaningless anyway: it always returned the newest page and
+    # dropped the rest. #2150
+    lookback_days = 15
+    base_url = "https://flcourts-media.flcourts.gov/_search/opinions/?limit={}&offset={}&query=&scopes[]={}&searchtype=opinions&siteaccess={}&startdate={}&enddate={}"
     scopes = "supreme_court"
     site_access = "supreme2"
     # Example built URL
@@ -26,8 +37,62 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
+        self.start_date = None
+        self.end_date = None
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+
+    async def _download(self, request_dict=None):
+        """Download every page of the result set
+
+        The source caps a page at 50 results and reports the size of the whole
+        set in `totalCount`, so anything past the first page needs another
+        request. Without this, a day with more than 50 opinions silently loses
+        its tail, and a busy backscrape window loses about half of it. #2150
+
+        :param request_dict: passed through to the base downloader
+        :return: the first page, holding the results of every page
+        """
+        response = await super()._download(request_dict)
+        if self.test_mode_enabled():
+            return response
+
+        results = response["searchResults"]
+        total = response.get("totalCount", len(results))
+
+        pages = 1
+        while len(results) < total:
+            if pages >= self.max_pages:
+                logger.error(
+                    "%s: stopped after %s pages holding %s of %s results. "
+                    "The rest of this window was not scraped",
+                    self.court_id,
+                    pages,
+                    len(results),
+                    total,
+                )
+                break
+
+            self.set_url(self.start_date, self.end_date, offset=len(results))
+            page = await super()._download(request_dict)
+            page_results = page["searchResults"]
+            if not page_results:
+                logger.error(
+                    "%s: the page at offset %s came back empty, holding %s "
+                    "of %s results. The rest was not scraped",
+                    self.court_id,
+                    len(results),
+                    len(results),
+                    total,
+                )
+                break
+
+            results.extend(page_results)
+            pages += 1
+
+        # leave `self.url` describing the query, not the last offset fetched
+        self.set_url(self.start_date, self.end_date)
+        return response
 
     def _process_html(self) -> None:
         """Parses HTML into case dictionaries
@@ -87,22 +152,33 @@ class Site(OpinionSiteLinear):
         return titlecase(raw_disposition)
 
     def set_url(
-        self, start: date | None = None, end: date | None = None
+        self,
+        start: date | None = None,
+        end: date | None = None,
+        offset: int = 0,
     ) -> None:
         """Sets URL using date arguments
 
-        If not dates are passed, get 50 most recent opinions
+        If no dates are passed, cover the last `lookback_days`. The window is
+        kept on the instance so `_download` can ask for further pages of the
+        same query.
 
         :param start: start date
         :param end: end date
+        :param offset: how many results to skip, for pagination
         :return: none
         """
         if not start:
             end = datetime.today()
-            start = end - timedelta(days=365)
+            start = end - timedelta(days=self.lookback_days)
+
+        self.start_date = start
+        self.end_date = end
 
         fmt = "%Y-%m-%d"
         self.url = self.base_url.format(
+            self.page_size,
+            offset,
             self.scopes,
             self.site_access,
             start.strftime(fmt),

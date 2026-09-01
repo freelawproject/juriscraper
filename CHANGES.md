@@ -22,6 +22,7 @@ Changes:
 - `ca9` oral arguments: order through `sort_key` rather than a no-op `_date_sort` override. The output is unchanged. #2152
 
 Fixes:
+- `fla`, `fladistctapp_1`-`_6`: follow the result set past the source's 50 row page cap, so days and backscrape windows holding more than 50 opinions no longer lose their tail. Shrinks the regular scrape window from 365 days to 15, which pagination makes meaningful. Declares `is_recency_ordered = False`, because the source exposes no publication time. #2150, #2152
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
