@@ -75,9 +75,7 @@ def sanity_check_case_names(case_names: list[str]) -> None:
         prior_case_name = name
 
 
-def get_sort_keys_from_cases(
-    cases: list[dict], court_id: str
-) -> list | None:
+def get_sort_keys_from_cases(cases: list[dict], court_id: str) -> list | None:
     """Collect the `sort_key` each case carries, for scrapers built on a
     `self.cases` list of dicts
 
@@ -98,7 +96,9 @@ def get_sort_keys_from_cases(
         ) from error
 
 
-def check_recency_ordering_claim(case_dates: list[date], court_id: str) -> None:
+def check_recency_ordering_claim(
+    case_dates: list[date], court_id: str
+) -> None:
     """Warn when a site claims recency ordering that its sort cannot deliver
 
     A site ordered by filing date alone is only ordered as far as its dates
