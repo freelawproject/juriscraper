@@ -85,7 +85,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         if kwargs.get("backscrape_start"):
             start = int(kwargs["backscrape_start"])
         else:

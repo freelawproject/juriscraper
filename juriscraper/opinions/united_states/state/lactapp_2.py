@@ -70,7 +70,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    def make_backscrape_iterable(self, kwargs) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 

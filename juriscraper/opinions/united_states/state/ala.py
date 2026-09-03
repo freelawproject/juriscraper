@@ -136,7 +136,7 @@ class Site(OpinionSiteLinear):
         await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed"""
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
