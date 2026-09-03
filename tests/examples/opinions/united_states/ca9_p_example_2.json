@@ -1,302 +1,564 @@
 [
   {
-    "case_name": {
-      "S": "SMITH V. JONES"
-    },
-    "case_num": {
-      "S": "25-1000"
+    "last_updated": {
+      "S": "2026-09-02 10:40:04"
     },
     "case_type": {
       "S": "Civil"
+    },
+    "data_source_id": {
+      "S": "12956892"
+    },
+    "short_date": {
+      "S": "09/02/2026"
+    },
+    "case_origin": {
+      "S": "San Diego District Court"
+    },
+    "pk_id": {
+      "S": "16002934505794"
+    },
+    "case_origin_lc": {
+      "S": "san diego district court"
+    },
+    "case_name_lc": {
+      "S": "usa v. younes  nasri, et al"
     },
     "deleted": {
       "S": "0"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1000.pdf"
+    "case_num": {
+      "S": "22-55685"
     },
     "judge": {
-      "S": "WARDLAW"
-    },
-    "last_updated": {
-      "S": "2026-06-01 09:00:00"
+      "S": "DESAI"
     },
     "publish": {
-      "N": "20260601000000"
+      "N": "20260902000000"
+    },
+    "judge_lc": {
+      "S": "desai"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/09/02/22-55685.pdf"
+    },
+    "case_name": {
+      "S": "USA V. YOUNES  NASRI, ET AL"
+    },
+    "data_source": {
+      "S": "CMECF"
     }
   },
   {
-    "case_name": {
-      "S": "DELETED STRING FLAG V. ROW"
+    "last_updated": {
+      "S": "2026-09-02 10:10:33"
+    },
+    "case_type": {
+      "S": "Agency"
+    },
+    "data_source_id": {
+      "S": "100816005"
+    },
+    "short_date": {
+      "S": "09/02/2026"
+    },
+    "case_origin": {
+      "S": "Board of Immigration Appeals"
+    },
+    "case_origin_lc": {
+      "S": "board of immigration appeals"
+    },
+    "pk_id": {
+      "S": "16002876473464"
+    },
+    "case_name_lc": {
+      "S": "urias-gaxiola v. blanche"
+    },
+    "deleted": {
+      "S": "0"
     },
     "case_num": {
-      "S": "25-1001"
+      "S": "22-1474"
+    },
+    "publish": {
+      "N": "20260902000000"
+    },
+    "judge": {
+      "S": "BERZON"
+    },
+    "judge_lc": {
+      "S": "berzon"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/09/02/22-1474.pdf"
+    },
+    "data_source": {
+      "S": "ACMS"
+    },
+    "case_name": {
+      "S": "URIAS-GAXIOLA V. BLANCHE"
+    }
+  },
+  {
+    "last_updated": {
+      "S": "2026-09-02 10:05:06"
     },
     "case_type": {
       "S": "Civil"
+    },
+    "data_source_id": {
+      "S": "100816029"
+    },
+    "short_date": {
+      "S": "09/02/2026"
+    },
+    "case_origin": {
+      "S": "Seattle, Western Washington"
+    },
+    "case_origin_lc": {
+      "S": "seattle, western washington"
+    },
+    "pk_id": {
+      "S": "16002865758347"
+    },
+    "case_name_lc": {
+      "S": "construction laborers pension trust of greater st. louis, et al. v. funko inc, et al."
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "case_num": {
+      "S": "24-4909"
+    },
+    "publish": {
+      "N": "20260902000000"
+    },
+    "judge": {
+      "S": "MENDOZA"
+    },
+    "judge_lc": {
+      "S": "mendoza"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/09/02/24-4909.pdf"
+    },
+    "case_name": {
+      "S": "CONSTRUCTION LABORERS PENSION TRUST OF GREATER ST. LOUIS, ET AL. V. FUNKO INC, ET AL."
+    },
+    "data_source": {
+      "S": "ACMS"
+    }
+  },
+  {
+    "last_updated": {
+      "S": "2026-08-31 09:15:10"
+    },
+    "case_type": {
+      "S": "Agency"
+    },
+    "data_source_id": {
+      "S": "100814110"
+    },
+    "short_date": {
+      "S": "08/31/2026"
+    },
+    "case_origin": {
+      "S": "Board of Immigration Appeals"
+    },
+    "case_origin_lc": {
+      "S": "board of immigration appeals"
+    },
+    "pk_id": {
+      "S": "15997105275120"
+    },
+    "case_name_lc": {
+      "S": "garcia morales, et al. v. blanche"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "case_num": {
+      "S": "25-1760"
+    },
+    "publish": {
+      "N": "20260831000000"
+    },
+    "judge": {
+      "S": "PAEZ"
+    },
+    "judge_lc": {
+      "S": "paez"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/08/31/25-1760.pdf"
+    },
+    "case_name": {
+      "S": "GARCIA MORALES, ET AL. V. BLANCHE"
+    },
+    "data_source": {
+      "S": "ACMS"
+    }
+  },
+  {
+    "last_updated": {
+      "S": "2025-01-21 10:00:05"
+    },
+    "case_type": {
+      "S": "Agency"
+    },
+    "data_source_id": {
+      "S": "100432808"
+    },
+    "short_date": {
+      "S": "01/21/2025"
+    },
+    "case_origin": {
+      "S": "National Labor Relations Board"
+    },
+    "pk_id": {
+      "S": "14335423447115"
+    },
+    "case_origin_lc": {
+      "S": "national labor relations board"
+    },
+    "case_name_lc": {
+      "S": "macy's inc. v. national labor relations board"
     },
     "deleted": {
       "S": "1"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1001.pdf"
-    },
-    "judge": {
-      "S": "CLIFTON"
-    },
-    "last_updated": {
-      "S": "2026-06-01 08:50:00"
+    "case_num": {
+      "S": "23-150"
     },
     "publish": {
-      "N": "20260601000000"
+      "N": "20250121000000"
+    },
+    "judge": {
+      "S": "Wallach, Evan J."
+    },
+    "judge_lc": {
+      "S": "wallach, evan j."
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2025/01/21/23-150.pdf"
+    },
+    "case_name": {
+      "S": "MACY'S INC. V. NATIONAL LABOR RELATIONS BOARD"
+    },
+    "data_source": {
+      "S": "ACMS"
     }
   },
   {
-    "case_name": {
-      "S": "DELETED BOOL FLAG V. ROW"
-    },
-    "case_num": {
-      "S": "25-1002"
+    "last_updated": {
+      "S": "2026-08-31 09:10:06"
     },
     "case_type": {
       "S": "Civil"
     },
-    "deleted": {
-      "BOOL": true
+    "data_source_id": {
+      "S": "100814097"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1002.pdf"
+    "short_date": {
+      "S": "08/31/2026"
+    },
+    "case_origin": {
+      "S": "Seattle, Western Washington"
+    },
+    "case_origin_lc": {
+      "S": "seattle, western washington"
+    },
+    "pk_id": {
+      "S": "15997095313604"
+    },
+    "case_name_lc": {
+      "S": "sauk-suiattle indian tribe, et al. v. state of washington, et al."
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "case_num": {
+      "S": "25-1391"
     },
     "judge": {
-      "S": "CLIFTON"
-    },
-    "last_updated": {
-      "S": "2026-06-01 08:45:00"
+      "S": "McKEOWN"
     },
     "publish": {
-      "N": "20260601000000"
+      "N": "20260831000000"
+    },
+    "judge_lc": {
+      "S": "mckeown"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/08/31/25-1391.pdf"
+    },
+    "case_name": {
+      "S": "SAUK-SUIATTLE INDIAN TRIBE, ET AL. V. STATE OF WASHINGTON, ET AL."
+    },
+    "data_source": {
+      "S": "ACMS"
     }
   },
   {
-    "case_name": {
-      "S": "DELETED NUMBER FLAG V. ROW"
-    },
-    "case_num": {
-      "S": "25-1003"
+    "last_updated": {
+      "S": "2026-08-31 09:00:07"
     },
     "case_type": {
       "S": "Civil"
     },
-    "deleted": {
-      "N": "1"
+    "data_source_id": {
+      "S": "100814087"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1003.pdf"
+    "short_date": {
+      "S": "08/31/2026"
     },
-    "judge": {
-      "S": "CLIFTON"
+    "case_origin": {
+      "S": "San Francisco, Northern California"
     },
-    "last_updated": {
-      "S": "2026-06-01 08:40:00"
+    "pk_id": {
+      "S": "15997075685538"
     },
-    "publish": {
-      "N": "20260601000000"
-    }
-  },
-  {
-    "case_name": {
-      "S": "   "
+    "case_origin_lc": {
+      "S": "san francisco, northern california"
     },
-    "case_num": {
-      "S": "25-1004"
-    },
-    "case_type": {
-      "S": "Civil"
+    "case_name_lc": {
+      "S": "liu v. kaiser permanente employees pension plan for the permanente medical group, inc., et al."
     },
     "deleted": {
       "S": "0"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1004.pdf"
+    "case_num": {
+      "S": "24-4303"
     },
     "judge": {
-      "S": "FRIEDLAND"
-    },
-    "last_updated": {
-      "S": "2026-06-01 08:30:00"
+      "S": "PAEZ"
     },
     "publish": {
-      "N": "20260601000000"
-    }
-  },
-  {
-    "case_num": {
-      "S": "25-1005"
+      "N": "20260831000000"
     },
-    "case_type": {
-      "S": "Civil"
-    },
-    "deleted": {
-      "S": "0"
+    "judge_lc": {
+      "S": "paez"
     },
     "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1005.pdf"
+      "S": "/datastore/opinions/2026/08/31/24-4303.pdf"
     },
-    "judge": {
-      "S": "FRIEDLAND"
+    "case_name": {
+      "S": "LIU V. KAISER PERMANENTE EMPLOYEES PENSION PLAN FOR THE PERMANENTE MEDICAL GROUP, INC., ET AL."
     },
-    "last_updated": {
-      "S": "2026-06-01 08:20:00"
-    },
-    "publish": {
-      "N": "20260601000000"
+    "data_source": {
+      "S": "ACMS"
     }
   },
   {
-    "case_name": {
-      "S": "BAD PUBLISH V. ROW"
-    },
-    "case_num": {
-      "S": "25-1006"
-    },
-    "case_type": {
-      "S": "Criminal"
-    },
-    "deleted": {
-      "S": "0"
-    },
-    "file_name": {
-      "S": "/datastore/opinions/2026/06/01/25-1006.pdf"
-    },
-    "judge": {
-      "S": "MILLER"
-    },
     "last_updated": {
-      "S": "2026-06-01 08:10:00"
-    },
-    "publish": {
-      "N": "0"
-    }
-  },
-  {
-    "case_name": {
-      "S": "NO FILE NAME V. ROW"
-    },
-    "case_num": {
-      "S": "25-1007"
-    },
-    "case_type": {
-      "S": "Criminal"
-    },
-    "deleted": {
-      "S": "0"
-    },
-    "judge": {
-      "S": "MILLER"
-    },
-    "last_updated": {
-      "S": "2026-06-01 08:00:00"
-    },
-    "publish": {
-      "N": "20260601000000"
-    }
-  },
-  {
-    "case_name": {
-      "S": "ROE V. DOE"
-    },
-    "case_num": {
-      "S": "25-1008"
-    },
-    "case_type": {
-      "S": "Criminal"
-    },
-    "deleted": {
-      "S": "0"
-    },
-    "file_name": {
-      "S": "/datastore/opinions/2026/05/30/25-1008.pdf"
-    },
-    "judge": {
-      "S": "Per Curiam"
-    },
-    "last_updated": {
-      "S": "2026-05-30 10:00:00"
-    },
-    "publish": {
-      "N": "20260530000000"
-    }
-  },
-  {
-    "case_name": {
-      "S": "ROE V. DOE"
-    },
-    "case_num": {
-      "S": "25-1008"
-    },
-    "case_type": {
-      "S": "Criminal"
-    },
-    "deleted": {
-      "S": "0"
-    },
-    "file_name": {
-      "S": "/datastore/opinions/2026/05/30/25-1008.pdf"
-    },
-    "judge": {
-      "S": "BENNETT"
-    },
-    "last_updated": {
-      "S": "2026-05-30 08:00:00"
-    },
-    "publish": {
-      "N": "20260530000000"
-    }
-  },
-  {
-    "case_name": {
-      "S": "GARCIA V. UNITED STATES"
-    },
-    "case_num": {
-      "S": "24-9002"
+      "S": "2026-08-31 08:55:06"
     },
     "case_type": {
       "S": "Prisoner"
     },
+    "data_source_id": {
+      "S": "100814075"
+    },
+    "short_date": {
+      "S": "08/31/2026"
+    },
+    "case_origin": {
+      "S": "San Francisco, Northern California"
+    },
+    "case_origin_lc": {
+      "S": "san francisco, northern california"
+    },
+    "pk_id": {
+      "S": "15997065822671"
+    },
+    "case_name_lc": {
+      "S": "usa v. morgovsky"
+    },
     "deleted": {
       "S": "0"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/04/20/24-9002.pdf"
+    "case_num": {
+      "S": "23-2847"
     },
     "judge": {
-      "S": "MILLER"
+      "S": "BEA"
     },
     "publish": {
-      "N": "20260420000000"
+      "N": "20260831000000"
+    },
+    "judge_lc": {
+      "S": "bea"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/08/31/23-2847.pdf"
+    },
+    "data_source": {
+      "S": "ACMS"
+    },
+    "case_name": {
+      "S": "USA V. MORGOVSKY"
     }
   },
   {
-    "case_name": {
-      "S": "LEE V. WONG"
-    },
-    "case_num": {
-      "S": "24-9001"
+    "last_updated": {
+      "S": "2026-08-28 09:20:14"
     },
     "case_type": {
-      "S": "Prisoner"
+      "S": "Civil"
+    },
+    "data_source_id": {
+      "S": "100813177"
+    },
+    "short_date": {
+      "S": "08/28/2026"
+    },
+    "case_origin": {
+      "S": "Los Angeles, Central California"
+    },
+    "pk_id": {
+      "S": "15988621738145"
+    },
+    "case_origin_lc": {
+      "S": "los angeles, central california"
+    },
+    "case_name_lc": {
+      "S": "la international corp., et al. v. prestige brands holdings, inc., et al."
     },
     "deleted": {
       "S": "0"
     },
-    "file_name": {
-      "S": "/datastore/opinions/2026/04/15/24-9001.pdf"
-    },
-    "judge": {
-      "S": "OWENS"
+    "case_num": {
+      "S": "24-5227"
     },
     "publish": {
-      "N": "20260415000000"
+      "N": "20260828000000"
+    },
+    "judge": {
+      "S": " "
+    },
+    "judge_lc": {
+      "S": " "
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2026/08/28/24-5227.pdf"
+    },
+    "data_source": {
+      "S": "ACMS"
+    },
+    "case_name": {
+      "S": "LA INTERNATIONAL CORP., ET AL. V. PRESTIGE BRANDS HOLDINGS, INC., ET AL."
+    }
+  },
+  {
+    "case_type": {
+      "S": "Civil"
+    },
+    "data_source_id": {
+      "S": "0"
+    },
+    "short_date": {
+      "S": "09/02/2022"
+    },
+    "case_origin": {
+      "S": "Riverside District Court"
+    },
+    "case_origin_lc": {
+      "S": "riverside district court"
+    },
+    "pk_id": {
+      "S": "18820"
+    },
+    "case_name_lc": {
+      "S": "kui myles v. usa"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "case_code_lc": {
+      "S": "  "
+    },
+    "case_num": {
+      "S": "20-55910"
+    },
+    "judge": {
+      "S": "BERZON, Marsha"
+    },
+    "publish": {
+      "N": "20220902100000"
+    },
+    "judge_lc": {
+      "S": "berzon, marsha"
+    },
+    "case_code": {
+      "S": "  "
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2022/09/02/20-55910.pdf"
+    },
+    "case_name": {
+      "S": "KUI MYLES V. USA"
+    },
+    "data_source": {
+      "S": "CMECF"
+    }
+  },
+  {
+    "case_type": {
+      "S": "Civil"
+    },
+    "data_source_id": {
+      "S": "0"
+    },
+    "short_date": {
+      "S": "08/31/2022"
+    },
+    "case_origin": {
+      "S": "Los Angeles District Court"
+    },
+    "case_origin_lc": {
+      "S": "los angeles district court"
+    },
+    "pk_id": {
+      "S": "18814"
+    },
+    "case_name_lc": {
+      "S": "javier vanegas v. city of pasadena"
+    },
+    "deleted": {
+      "S": "0"
+    },
+    "case_code_lc": {
+      "S": "  "
+    },
+    "case_num": {
+      "S": "21-55478"
+    },
+    "judge": {
+      "S": "BUMATAY, Patrick J."
+    },
+    "publish": {
+      "N": "20220831100000"
+    },
+    "judge_lc": {
+      "S": "bumatay, patrick j."
+    },
+    "case_code": {
+      "S": "  "
+    },
+    "other_judges": {
+      "S": "BRESS, Daniel Aaron"
+    },
+    "file_name": {
+      "S": "/datastore/opinions/2022/08/31/21-55478.pdf"
+    },
+    "other_judges_lc": {
+      "S": "bress, daniel aaron"
+    },
+    "case_name": {
+      "S": "JAVIER VANEGAS V. CITY OF PASADENA"
+    },
+    "data_source": {
+      "S": "CMECF"
     }
   }
 ]

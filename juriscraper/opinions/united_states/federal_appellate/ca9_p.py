@@ -17,6 +17,7 @@ from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
+from juriscraper.lib.exceptions import JuriscraperException
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -132,7 +133,12 @@ class Site(OpinionSiteLinear):
 
         # fetch for credentials
         res = await sess.post(self.url, headers=self.headers, json=self.params)
+        res.raise_for_status()
         creds = res.json().get("Credentials")
+        if not creds:
+            raise JuriscraperException(
+                f"{self.court_id}: Cognito returned no credentials: {res.text[:200]}"
+            )
 
         all_items = []
         payload = json.loads(self.payload)
@@ -241,6 +247,7 @@ class Site(OpinionSiteLinear):
                     "date": date_filed,
                     "status": self.status,
                     "docket": docket,
+                    "lower_court": get_attribute(record, "case_origin"),
                     "nature_of_suit": get_attribute(record, "case_type"),
                     **self.get_judge_fields(record),
                 }
