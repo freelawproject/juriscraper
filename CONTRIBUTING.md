@@ -63,6 +63,14 @@ Templates for scrapers:
 - [Opinion scraper template](https://github.com/freelawproject/juriscraper/blob/master/juriscraper/opinions/opinion_template.py)
 - [Oral argument scraper template](https://github.com/freelawproject/juriscraper/blob/master/juriscraper/oral_args/oral_argument_template.py)
 
+### Result ordering
+
+Consumers such as CourtListener walk a scraper's results top down and stop at the first run of items they already have. That only works when new items always come first, so every scraper must follow one of these rules:
+
+1. If the source exposes an upload or last-updated timestamp, sort `self.cases` by it, newest first, and override `_date_sort` as a no-op so the base class does not re-sort by filing date.
+2. If the source lists items newest first and never publishes a day's batch in several steps, the default ordering (`case_dates` descending, then `case_names` descending) is enough.
+3. Otherwise set `is_recency_ordered = False` on the `Site` class. Consumers will then walk the whole list and skip known items by URL before downloading them. Note that this also means a document re-uploaded at the same URL is not ingested again.
+
 ### Contributing Workflow
 
 1. Fork this repository.

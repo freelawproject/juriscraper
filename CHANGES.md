@@ -15,10 +15,11 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add the `is_recency_ordered` class attribute to `AbstractSite` (default `True`). A scraper sets it to `False` to declare that its results are not ordered newest first. #2152
 
 Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- `fla`, `fladistctapp_1`-`6`, `bia`, `mich` and `michctapp` set `is_recency_ordered = False`.
 
 Fixes:
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136

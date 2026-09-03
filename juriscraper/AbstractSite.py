@@ -49,12 +49,31 @@ class AbstractSite:
     """Contains generic methods for scraping data. Should be extended by all
     scrapers.
 
+    Ordering contract
+    -----------------
+    After `parse()`, `OpinionSite` and `OralArgumentSite` items are ordered
+    by `case_dates` descending, then by `case_names` descending (see
+    `_date_sort`). Consumers such as CourtListener walk the items top down and
+    stop at the first run of items they already have, so they rely on new
+    items always coming first.
+
+    Set `is_recency_ordered = False` when the source cannot guarantee that:
+    same-date batches published incrementally with no upload timestamp,
+    approximate dates, or dates that are not publication dates. Consumers will
+    then walk the whole list, and will skip items by URL before downloading
+    them, which means a document re-uploaded at the same URL is not ingested
+    again for these scrapers.
+
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
     # Set to True in subclasses to use urllib instead of httpx.
     # Useful for sites that block httpx via TLS fingerprinting.
     use_urllib = False
+
+    # Set to False in subclasses whose items are not guaranteed to come newest
+    # first. When true consumers stop crawling at the first run of known items
+    is_recency_ordered = True
 
     def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()

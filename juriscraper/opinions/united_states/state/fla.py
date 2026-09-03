@@ -13,6 +13,9 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    # A day's batch is released in several steps and the source has no
+    # upload timestamp to sort by. #2152
+    is_recency_ordered = False
     days_interval = 20
     # Days to look back on a regular scrape, kept short to bound pagination
     scrape_interval = 30
