@@ -247,11 +247,23 @@ class Site(OpinionSiteLinear):
                     "date": date_filed,
                     "status": self.status,
                     "docket": docket,
-                    "lower_court": get_attribute(record, "case_origin"),
+                    "lower_court": self.get_lower_court(record),
                     "nature_of_suit": get_attribute(record, "case_type"),
                     **self.get_judge_fields(record),
                 }
             )
+
+    def get_lower_court(self, record: dict) -> str:
+        """Read the lower court out of the row's `case_origin` column
+
+        :param record: a DynamoDB row
+        :return: the lower court name, or "" if the column names no court
+        """
+        case_origin = get_attribute(record, "case_origin")
+        if "court" not in case_origin.lower():
+            return ""
+
+        return case_origin
 
     def get_date_filed(self, record: dict) -> str:
         """Read the filing date out of the row's `publish` column
