@@ -21,6 +21,7 @@ Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
 
 Fixes:
+- `ca9_p` and `ca9_u`: read the court's `opinions` and `memoranda` tables instead of the 25 item RSS feeds, and order them by the court's upload timestamp instead of the filing date. Adds backscraping. #2120
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
