@@ -260,10 +260,11 @@ class Site(OpinionSiteLinear):
         :return: the lower court name, or "" if the column names no court
         """
         case_origin = get_attribute(record, "case_origin")
-        if "court" not in case_origin.lower():
-            return ""
+        lookup_terms = ("court", "board", "appeals")
+        if any(term in case_origin.lower() for term in lookup_terms):
+            return case_origin
 
-        return case_origin
+        return ""
 
     def get_date_filed(self, record: dict) -> str:
         """Read the filing date out of the row's `publish` column
