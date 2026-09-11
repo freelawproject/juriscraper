@@ -440,8 +440,8 @@ class AbstractSite:
         too, since a blocking WAF often drops the connection instead of
         answering. By default `retry_codes` is empty and nothing is retried.
         The last response is returned rather than raised, so that the caller
-        reports the failure as a `BadContentError`. 
-        
+        reports the failure as a `BadContentError`.
+
         Current limitation: the urllib downloader raises on error statuses by
         itself, so only the httpx path supports retry.
 
