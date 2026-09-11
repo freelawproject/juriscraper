@@ -129,9 +129,7 @@ class Site(OpinionSiteLinear):
             html_text = exc.data["response"].text
             cookies = get_justice_dot_gov_auth_cookies(html_text)
             if cookies is None:
-                # Not the challenge page, so the original error stands. It
-                # must reach the caller as a BadContentError, which skips
-                # this document instead of the whole court
+                # Not the challenge page, so the original error stands.
                 raise
             self.cookies = cookies
             return await super().download_content(

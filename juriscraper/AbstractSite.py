@@ -463,8 +463,8 @@ class AbstractSite:
                 r = await self._get_download_url(download_url, headers)
                 if r.status_code not in self.retry_codes:
                     return r
-                # Keep it: if a later attempt fails at transport level, this
-                # response still tells the caller what the server answered.
+                # If a later attempt fails at transport level, this response
+                # still tells the caller what the server answered.
                 response = r
                 reason = f"HTTP {r.status_code}"
             except httpx.HTTPError as exc:
