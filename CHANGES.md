@@ -15,12 +15,19 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- `AbstractSite.download_content` now checks the response status before the
+  content type, and raises the new `DownloadStatusError` (a `BadContentError`)
+  when the server answers with an error status so blocks or removed pages
+  are no longer reported as an unexpected content type. #2169
+- Scrapers can list statuses worth another attempt in `retry_codes`, tuned
+  by `max_retries`, `backoff`, `backoff_growth` and `backoff_max`. The names
+  follow `state.RequestManager.ExponentialBackoff`. #2169
 
 Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
 
 Fixes:
+- Fix `mass` and `massappct`: retry the transient 403 that mass.gov's WAF serves for a share of the document downloads. #2169
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".

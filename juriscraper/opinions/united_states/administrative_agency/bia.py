@@ -18,7 +18,10 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import get_justice_dot_gov_auth_cookies
-from juriscraper.lib.exceptions import UnexpectedContentTypeError
+from juriscraper.lib.exceptions import (
+    DownloadStatusError,
+    UnexpectedContentTypeError,
+)
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -121,10 +124,16 @@ class Site(OpinionSiteLinear):
             return await super().download_content(
                 download_url, doctor_is_available, media_root
             )
-        except UnexpectedContentTypeError as exc:
+        except (UnexpectedContentTypeError, DownloadStatusError) as exc:
             # access HTML with JS variables to populate cookies
             html_text = exc.data["response"].text
-            self.cookies = get_justice_dot_gov_auth_cookies(html_text)
+            cookies = get_justice_dot_gov_auth_cookies(html_text)
+            if cookies is None:
+                # Not the challenge page, so the original error stands. It
+                # must reach the caller as a BadContentError, which skips
+                # this document instead of the whole court
+                raise
+            self.cookies = cookies
             return await super().download_content(
                 download_url, doctor_is_available, media_root
             )

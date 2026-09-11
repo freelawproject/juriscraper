@@ -8,7 +8,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 
 
-def get_justice_dot_gov_auth_cookies(html_text: str) -> dict:
+def get_justice_dot_gov_auth_cookies(html_text: str) -> dict | None:
     """Extract auth cookies values from challenge HTML page
 
     This may happen when downloading a document from a justice.gov site
@@ -16,15 +16,18 @@ def get_justice_dot_gov_auth_cookies(html_text: str) -> dict:
     Currently used by `bia` and `olc` scrapers. See #1724
 
     :param html_text: the HTML response
-    :return: a dict with to populate Site.cookies with
+    :return: a dict with to populate Site.cookies with, or None if the page
+        is not a challenge, such as an error page
     """
-    salt = re.search(r'let public_salt = "(?P<salt>.+)";', html_text).group(
-        "salt"
-    )
+    salt_match = re.search(r'let public_salt = "(?P<salt>.+)";', html_text)
     candidates = re.search(
         r'candidates = "(?P<candidate1>.+)/(?P<candidate2>.+)"\.split',
         html_text,
     )
+    if not salt_match or not candidates:
+        return None
+
+    salt = salt_match.group("salt")
     candidate1 = candidates.group("candidate1")
     candidate2 = candidates.group("candidate2")
     auth_1 = (

@@ -1,3 +1,4 @@
+import asyncio
 import gzip
 import hashlib
 import http.cookiejar
@@ -37,6 +38,7 @@ from juriscraper.lib.utils import (
     check_download_url,
     check_empty_downloaded_file,
     check_expected_content_types,
+    check_response_status,
     clean_attribute,
     sanity_check_case_names,
     sanity_check_dates,
@@ -55,6 +57,14 @@ class AbstractSite:
     # Set to True in subclasses to use urllib instead of httpx.
     # Useful for sites that block httpx via TLS fingerprinting.
     use_urllib = False
+
+    # Retry for document downloads, for the statuses named in `retry_codes`.
+    # An empty `retry_codes` disables the retry, which is the default.
+    retry_codes: frozenset[int] = frozenset()
+    max_retries = 2
+    backoff = 2.0
+    backoff_growth = 2.0
+    backoff_max = 16.0
 
     def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
@@ -406,6 +416,79 @@ class AbstractSite:
 
         return response
 
+    async def _get_download_url(self, download_url: str, headers: dict):
+        """GET a document
+
+        Note that we do a GET even if self.method is POST. This is
+        deliberate.
+
+        :param download_url: The URL for the item you wish to download.
+        :param headers: headers dict
+        :return: the response
+        """
+        return await self.request["session"].get(
+            download_url,
+            headers=headers,
+            cookies=self.cookies,
+            timeout=300,
+        )
+
+    async def _fetch_download_url(self, download_url: str, headers: dict):
+        """GET a document, retrying the statuses named in `retry_codes`
+
+        Once `retry_codes` turns the retry on, a transport failure is retried
+        too, since a blocking WAF often drops the connection instead of
+        answering. By default `retry_codes` is empty and nothing is retried.
+        The last response is returned rather than raised, so that the caller
+        reports the failure as a `BadContentError`. 
+        
+        Current limitation: the urllib downloader raises on error statuses by
+        itself, so only the httpx path supports retry.
+
+        :param download_url: The URL for the item you wish to download.
+        :param headers: headers dict
+        :return: the last response received
+        :raises httpx.HTTPError: if no attempt got a response
+        """
+        if self.use_urllib:
+            return self._download_content_urllib(download_url, headers)
+
+        if not self.retry_codes:
+            return await self._get_download_url(download_url, headers)
+
+        error = None
+        response = None
+        for attempt in range(max(self.max_retries, 0) + 1):
+            try:
+                r = await self._get_download_url(download_url, headers)
+                if r.status_code not in self.retry_codes:
+                    return r
+                # Keep it: if a later attempt fails at transport level, this
+                # response still tells the caller what the server answered.
+                response = r
+                reason = f"HTTP {r.status_code}"
+            except httpx.HTTPError as exc:
+                error = exc
+                reason = repr(exc)
+
+            if attempt < self.max_retries:
+                wait = min(
+                    self.backoff * self.backoff_growth**attempt,
+                    self.backoff_max,
+                )
+                logger.info(
+                    "%s: %s for %s, retrying in %ss",
+                    self.court_id,
+                    reason,
+                    download_url,
+                    wait,
+                )
+                await asyncio.sleep(wait)
+
+        if response is not None:
+            return response
+        raise error
+
     async def download_content(
         self,
         download_url: str,
@@ -424,7 +507,8 @@ class AbstractSite:
             used in test mode
 
         :return: The downloaded and cleaned content
-        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
+        :raises: NoDownloadUrlError, DownloadStatusError,
+            UnexpectedContentTypeError, EmptyFileError
         """
         check_download_url(download_url)
 
@@ -457,19 +541,10 @@ class AbstractSite:
         else:
             headers = {"User-Agent": "CourtListener"}
 
-        if self.use_urllib:
-            r = self._download_content_urllib(download_url, headers)
-        else:
-            s = self.request["session"]
-            # Note that we do a GET even if self.method is POST. This is
-            # deliberate.
-            r = await s.get(
-                download_url,
-                headers=headers,
-                cookies=self.cookies,
-                timeout=300,
-            )
+        s = self.request["session"]
+        r = await self._fetch_download_url(download_url, headers)
 
+        check_response_status(self, r, download_url)
         check_empty_downloaded_file(r, download_url)
         check_expected_content_types(self, r, download_url)
 
