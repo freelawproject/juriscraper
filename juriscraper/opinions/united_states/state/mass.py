@@ -25,6 +25,9 @@ class Site(OpinionSiteLinear):
     Backscraper is implemented on `united_states_backscrapers.state.mass.py`
     """
 
+    # mass.gov's WAF blocks a small share of our requests with a 403
+    retry_codes = frozenset({403})
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://www.mass.gov/info-details/new-opinions"

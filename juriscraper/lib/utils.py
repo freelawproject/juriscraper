@@ -9,6 +9,7 @@ from typing import Any
 from httpx import HTTPError
 
 from juriscraper.lib.exceptions import (
+    DownloadStatusError,
     EmptyFileError,
     InsanityException,
     NoDownloadUrlError,
@@ -285,6 +286,42 @@ async def backscrape_over_paginated_results(
                 cases.append(case)
 
     return cases
+
+
+def get_response_status(response: Any) -> int | None:
+    """Return the HTTP status of a response, or None if it has none.
+
+    :param response: httpx Response or urllib HTTPResponse
+    :return: the status code
+    """
+    # Support both httpx (status_code) and urllib (status) responses
+    status = getattr(response, "status_code", None)
+    if status is None:
+        status = getattr(response, "status", None)
+    return status
+
+
+def check_response_status(site: Any, response: Any, download_url: str) -> None:
+    """Raise DownloadStatusError if the server answered with an error status.
+
+    Runs before the content type check, so that a WAF block page or a removed
+    document is reported as the HTTP error, instead of an unexpected content type.
+
+    :param site: scraper instance
+    :param response: httpx Response or urllib HTTPResponse
+    :param download_url: URL that was fetched
+    """
+    status = get_response_status(response)
+    if status is None or status < 400:
+        return
+
+    court_str = (site.court_id or "").split(".")[-1].split("_")[0]
+    raise DownloadStatusError(
+        f"'{download_url}' returned HTTP {status}",
+        fingerprint=[f"{court_str}-download-status-{status}"],
+        status_code=status,
+        data={"response": response},
+    )
 
 
 def check_expected_content_types(

@@ -114,6 +114,16 @@ class UnexpectedContentTypeError(BadContentError):
     logging_level = logging.ERROR
 
 
+class DownloadStatusError(BadContentError):
+    """Occurs when the server answers a download with an error status."""
+
+    logging_level = logging.ERROR
+
+    def __init__(self, *args, status_code: int | None = None, **kwargs):
+        self.status_code = status_code
+        super().__init__(*args, **kwargs)
+
+
 class NoDownloadUrlError(BadContentError):
     """Occurs when a DeferredList fetcher fails."""
 
