@@ -1,13 +1,11 @@
 import requests
 import urllib3
-from urllib3.exceptions import InsecureRequestWarning
 from lxml.html import fromstring
+from urllib3.exceptions import InsecureRequestWarning
 
 from juriscraper.lib.log_tools import make_default_logger
 
-urllib3.disable_warnings(
-    InsecureRequestWarning
-)
+urllib3.disable_warnings(InsecureRequestWarning)
 
 logger = make_default_logger()
 
