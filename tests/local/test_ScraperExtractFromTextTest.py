@@ -1622,7 +1622,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
-        "juriscraper.opinions.united_states.state.mdag": [
+        "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
                 "\nGen. 225 ]                                                    225\n\n                          TAXATION\nPROPERTY TAX – APPLICABILITY OF HOMESTEAD TAX CREDIT\n    TO SPECIAL BENEFIT DISTRICT TAXES\n\n                       December 19, 2014\n",
                 {

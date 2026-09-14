@@ -19,6 +19,11 @@ Features:
 
 Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- Move the six attorney general scrapers (`calag`, `mdag`, `minnag`, `nyag`,
+  `oklaag`, `texag`) from `opinions.united_states.state` into a new
+  `opinions.united_states.attorney_general` package. Court IDs are unchanged,
+  but crawls invoked with the `state` package path must add the
+  `attorney_general` package path to keep covering them. #168
 
 Fixes:
 - Accept `audio/mp3` content type for ca9 scraper. #2168
