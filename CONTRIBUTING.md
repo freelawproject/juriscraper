@@ -33,7 +33,7 @@ pre-commit run ruff
 
 You can also [integrate Ruff into your editor](https://docs.astral.sh/ruff/editors/setup/) for automatic formatting and diagnostics.
 
-It is a goal of this project to get mypy type checking as part of our list of pre-commit hooks. It will take us a bit of work to get there, but we ask that until that time if you touch a file, fix any type errors in it that you can. You can verify your changes against mypy with `uv run mypy path/to/my/code.py`.
+It is a goal of this project to use static type checking throughout the library. It will take us a bit of work to get there, but we ask that until that time if you touch a file, fix any type errors in it that you can. You can verify your changes against with `uv run pyrefly check`.
 
 ### Formatting Guidelines
 
