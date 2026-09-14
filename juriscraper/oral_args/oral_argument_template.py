@@ -14,6 +14,10 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
+    # Uncomment if the source does not list items newest first, for example
+    # when it publishes a day's batch in several steps. See `AbstractSite`.
+    # is_recency_ordered = False
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

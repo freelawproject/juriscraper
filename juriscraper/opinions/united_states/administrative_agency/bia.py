@@ -24,6 +24,10 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    # The source only gives the year, so every row shares an approximate date
+    # and nothing places new rows first. #1934 #2152
+    is_recency_ordered = False
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -47,14 +51,9 @@ class Site(OpinionSiteLinear):
             self.url = self.urls[self.volume].get("href")
             self.html = await super()._download()
 
-        # Rows are sorted by date_filed descending on the source, but the
-        # source only provides the year. We use date_filed_is_approximate
-        # with the same year for every record, so without a tie-breaker CL
-        # orders them by case name. If the first few names happen to already
-        # exist, CL's DupChecker stops and never reaches newer opinions (#1934).
-        # Assign a descending approximate date starting from the middle of the
-        # year (one day apart per row) to preserve the source order and force
-        # the dup check to see newer records first.
+        # The source only gives the year. A descending approximate date, one
+        # day apart per row, keeps the source order for consumers that don't
+        # honour `is_recency_ordered` yet. #1934
         for index, row in enumerate(self.html.xpath("//table")):
             summary = row.xpath("string(following-sibling::p[1])")
             name = row.xpath(".//td[1]//*[self::strong or self::b]/text()")[0]

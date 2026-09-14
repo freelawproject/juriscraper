@@ -23,6 +23,10 @@ class Site(OpinionSiteLinear):
         r"(MSC|COA) (?P<docket>\d{6})\s+(?P<name>.+)\s+Opinion"
     )
     court = "Supreme Court"
+    # The API sorts by `releaseDate`, but items only carry `filingDate`, which
+    # is the date we report. A late release keeps its old filing date and
+    # sorts below items already ingested; #2152
+    is_recency_ordered = False
     days_interval = 10
     first_opinion_date = datetime(2000, 12, 12)
     filters = (
