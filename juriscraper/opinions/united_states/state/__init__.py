@@ -111,8 +111,11 @@ __all__ = [
     "nevapp",
     "nh_p",
     "nh_u",
+    # separating the nevada ACIS scrapers to prevent hitting rate limits
+    "nev_u",
     "nm",
     "nmctapp",
+    "nevapp_u",
     "nj",
     "njsuperctappdiv_p",
     "njsuperctappdiv_u",
