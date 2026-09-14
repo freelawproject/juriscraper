@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- Update `.pyrefly-baseline.json`
 -
 
 ## 3.0.41 - 2026-09-14
