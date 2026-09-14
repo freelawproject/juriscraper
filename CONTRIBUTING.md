@@ -84,7 +84,6 @@ Before we can accept your contribution, you must sign the Contributor License Ag
 - Python 3.9+
 - [`uv`](https://github.com/astral-sh/uv): modern Python package manager
 - Git
-- (Optional) Docker for running Selenium tests
 
 ### Installing `uv`
 
