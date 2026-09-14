@@ -22,9 +22,11 @@ Changes:
 - Introduce Phyrefly static type checking configuration for all files outside of tests.
 
 Fixes:
+- Accept `audio/mp3` content type for ca9 scraper. #2168
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
+- Fix `fla` (and the inheriting `fladistctapp_*` scrapers) now paginate the search results. #2150
 
 ## 3.0.40 - 2026-08-19
 
