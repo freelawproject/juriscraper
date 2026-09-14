@@ -19,6 +19,16 @@ Features:
 
 Changes:
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+
+Fixes:
+-
+
+## 3.0.41 - 2026-09-14
+
+Features:
+-
+
+Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
 - Introduce Phyrefly static type checking configuration for all files outside of tests.
 
