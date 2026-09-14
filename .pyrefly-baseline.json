@@ -685,9 +685,9 @@
       "severity": "error"
     },
     {
-      "line": 82,
+      "line": 86,
       "column": 26,
-      "stop_line": 82,
+      "stop_line": 86,
       "stop_column": 45,
       "path": "juriscraper/opinions/united_states/state/ariz.py",
       "code": -2,
@@ -697,9 +697,9 @@
       "severity": "error"
     },
     {
-      "line": 83,
+      "line": 87,
       "column": 24,
-      "stop_line": 83,
+      "stop_line": 87,
       "stop_column": 41,
       "path": "juriscraper/opinions/united_states/state/ariz.py",
       "code": -2,
@@ -709,9 +709,9 @@
       "severity": "error"
     },
     {
-      "line": 95,
+      "line": 99,
       "column": 18,
-      "stop_line": 95,
+      "stop_line": 99,
       "stop_column": 63,
       "path": "juriscraper/opinions/united_states/state/ariz.py",
       "code": -2,
@@ -838,18 +838,6 @@
       "name": "unbound-name",
       "description": "`date_filed` may be uninitialized",
       "concise_description": "`date_filed` may be uninitialized",
-      "severity": "error"
-    },
-    {
-      "line": 109,
-      "column": 13,
-      "stop_line": 109,
-      "stop_column": 25,
-      "path": "juriscraper/opinions/united_states/state/fla.py",
-      "code": -2,
-      "name": "missing-attribute",
-      "description": "Object of class `NoneType` has no attribute `strftime`",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
       "severity": "error"
     },
     {
@@ -1633,9 +1621,9 @@
       "severity": "error"
     },
     {
-      "line": 105,
+      "line": 106,
       "column": 15,
-      "stop_line": 105,
+      "stop_line": 106,
       "stop_column": 24,
       "path": "juriscraper/oral_args/united_states/federal_appellate/ca9.py",
       "code": -2,

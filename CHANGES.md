@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- Update `.pyrefly-baseline.json`
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 -
 
