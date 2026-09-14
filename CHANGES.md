@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.41 - 2026-09-14
+
+Features:
+-
+
+Changes:
 - Improve type of `Deserializable.deserialize()` to conserve the subject type.
 - Introduce Phyrefly static type checking configuration for all files outside of tests.
 
