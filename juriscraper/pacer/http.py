@@ -1,8 +1,10 @@
 import gzip
 import json
 import re
+from typing import Any
 
 import requests
+from requests.cookies import RequestsCookieJar
 from requests.packages.urllib3 import exceptions
 
 from juriscraper.lib.exceptions import PacerLoginException
@@ -134,57 +136,118 @@ class PacerSession(requests.Session):
         self.password = password
         self.client_code = client_code
         self.additional_request_done = False
+        # Historical name. This now controls eager ACMS session initialization;
+        # bearer tokens are fetched later during case requests.
         self.get_acms_tokens = get_acms_tokens
         self.acms_user_data = {}
         self.acms_tokens = {}
+        # Per-court ACMS auth cookies
+        self.acms_cookies: dict[str, RequestsCookieJar] = {}
 
-    def _check_url_and_retrieve_acms_token(self, url: str) -> str:
-        """
-        Checks if the provided URL is an ACMS URL and, if so, ensures the
-        ACMS bearer token is available for that court ID.
-
-        If the ACMS bearer token for the detected court ID is not already
-        in the session's `acms_tokens`, this method will trigger the
-        `get_acms_auth_object()` method to perform authentication and
-        retrieve the token.
-
-        :param url: The URL of the request to check.
-        :return: The ACMS bearer token if the URL is an ACMS URL and a token
-                 is available. Returns an empty string otherwise
-        """
-        # Check if the URL matches the ACMS pattern
+    def _acms_court_for_url(self, url: str) -> str | None:
+        """Return the ACMS court_id if `url` targets an ACMS host, else None."""
         match = ACMS_URL_PATTERN.match(url)
-        if not match:
-            return ""
+        return match.group(1) if match else None
 
-        acms_court_id = match.group(1)
-        logger.debug(f"Detected ACMS request for court: {acms_court_id}")
+    def _ensure_acms_session(self, court_id: str) -> None:
+        """
+        Ensure an authenticated ACMS cookie session exists for the given court.
 
-        if acms_court_id not in self.acms_tokens:
-            self.get_acms_auth_object(acms_court_id)
+        Creates the session on first use and reuses it thereafter. This method
+        establishes ACMS authentication cookies only.
+        """
+        if court_id not in self.acms_cookies:
+            self.establish_acms_session(court_id)
 
-        return self.acms_tokens[acms_court_id]["Token"]
+    def _acms_bearer_headers(self, court_id: str) -> dict[str, str]:
+        """
+        Return an Authorization header for the given ACMS court.
+
+        Returns an empty dictionary when no bearer token has been established.
+        """
+        token = self.acms_tokens.get(court_id)
+        if not token:
+            return {}
+        return {"Authorization": f"Bearer {token['Token']}"}
+
+    def _prepare_acms_request(
+        self,
+        url: str,
+        kwargs: dict[str, Any],
+    ) -> str | None:
+        """
+        Attach ACMS authentication state to the request.
+
+        For ACMS endpoints, this method ensures a court-specific session
+        exists and mutates ``kwargs`` in place to attach the appropriate
+        cookies and authorization headers.
+
+        Returns the court_id if the URL targets an ACMS endpoint,
+        otherwise None.
+        """
+        court_id = self._acms_court_for_url(url)
+        if not court_id:
+            return None
+
+        self._ensure_acms_session(court_id)
+
+        kwargs.setdefault("cookies", self.acms_cookies[court_id])
+
+        bearer = self._acms_bearer_headers(court_id)
+        if bearer:
+            kwargs.setdefault("headers", {}).update(bearer)
+
+        return court_id
+
+    def _update_acms_cookies(
+        self,
+        court_id: str | None,
+        response: requests.Response,
+    ) -> None:
+        """
+        Persist any updated ACMS cookies returned by the server.
+        """
+        if court_id:
+            self.acms_cookies[court_id].update(response.cookies)
+            # clear Secure: the server re-issues cookies (e.g. Azure's
+            # ARRAffinity) with Secure=True on most responses, which would
+            # overwrite our desecured copies and break the webhook-sentry
+            # https->http workaround.
+            self._desecure_acms_cookies(self.acms_cookies[court_id])
+
+    def store_acms_token(
+        self, court_id: str, token: dict, user_data: dict | None = None
+    ) -> None:
+        """Persist a bearer token (and optional CsoId/ContactType) extracted
+        from an IndexContent response, for reuse on showdocservices/api calls.
+
+        :param court_id: ACMS court the token belongs to.
+        :param token: the AuthToken object; must contain a "Token" key.
+        :param user_data: optional {"CsoId", "ContactType"} for API bodies.
+        """
+        self.acms_tokens[court_id] = token
+        if user_data:
+            self.acms_user_data = user_data
 
     def get(self, url, auto_login=True, **kwargs):
         """Overrides request.Session.get with session retry logic.
+
+        For ACMS endpoints, this method automatically establishes and reuses
+        court-specific authentication cookies. For PACER endpoints, it can
+        transparently re-authenticate and retry requests when a session has
+        expired.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
         :return: requests.Response
         """
-        # Check if the URL matches the ACMS pattern
-        acms_token = self._check_url_and_retrieve_acms_token(url)
-        # If it's an ACMS request, add the bearer token to the headers
-        if acms_token:
-            # Ensure 'headers' key exists in kwargs as a dictionary.
-            # If it doesn't exist, it's created as an empty dict.
-            kwargs.setdefault("headers", {})
-            kwargs["headers"].update({"Authorization": f"Bearer {acms_token}"})
+        court_id = self._prepare_acms_request(url, kwargs)
 
         if "timeout" not in kwargs:
             kwargs.setdefault("timeout", 300)
 
         r = super().get(url, **kwargs)
+        self._update_acms_cookies(court_id, r)
 
         if b"This user has no access privileges defined." in r.content:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
@@ -195,7 +258,7 @@ class PacerSession(requests.Session):
             # request, so that's what we do here. PACER needs some frustrating
             # and inelegant hacks sometimes.
             r = super().get(url, **kwargs)
-        if auto_login and not acms_token:
+        if auto_login and not court_id:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
@@ -207,6 +270,11 @@ class PacerSession(requests.Session):
     def post(self, url, data=None, json=None, auto_login=True, **kwargs):
         """
         Overrides requests.Session.post with PACER-specific fun.
+
+        For ACMS endpoints, this method automatically establishes and reuses
+        court-specific authentication cookies. For PACER endpoints, it can
+        transparently re-authenticate and retry requests when a session has
+        expired.
 
         Will automatically convert data dict into proper multi-part form data
         and pass to the files parameter instead.
@@ -221,14 +289,7 @@ class PacerSession(requests.Session):
         :param kwargs: assorted keyword arguments
         :return: requests.Response
         """
-        # Check if the URL matches the ACMS pattern
-        acms_token = self._check_url_and_retrieve_acms_token(url)
-        # If it's an ACMS request, add the bearer token to the headers
-        if acms_token:
-            # Ensure 'headers' key exists in kwargs as a dictionary.
-            # If it doesn't exist, it's created as an empty dict.
-            kwargs.setdefault("headers", {})
-            kwargs["headers"].update({"Authorization": f"Bearer {acms_token}"})
+        court_id = self._prepare_acms_request(url, kwargs)
 
         kwargs.setdefault("timeout", 300)
 
@@ -239,7 +300,9 @@ class PacerSession(requests.Session):
             kwargs.update({"data": data, "json": json})
 
         r = super().post(url, **kwargs)
-        if auto_login and not acms_token:
+        self._update_acms_cookies(court_id, r)
+
+        if auto_login and not court_id:
             updated = self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
@@ -269,6 +332,13 @@ class PacerSession(requests.Session):
         for key in data:
             output[key] = (None, data[key])
         return output
+
+    @staticmethod
+    def _desecure_acms_cookies(jar: RequestsCookieJar) -> None:
+        """Clear Secure on ACMS cookies so webhook-sentry's https->http downgrade
+        doesn't strip them. See freelawproject/courtlistener#5921."""
+        for cookie in jar:
+            cookie.secure = False
 
     @staticmethod
     def _get_view_state(r):
@@ -365,6 +435,10 @@ class PacerSession(requests.Session):
         # Clear any remaining cookies. This is important because sometimes we
         # want to login before an old session has entirely died.
         self.cookies.clear()
+        # ACMS cookies are downstream of the PACER SAML assertion, so a fresh
+        # PACER login invalidates them; drop them to force re-establishment on
+        # the next ACMS request.
+        self.acms_cookies = {}
         if url is None:
             url = self.LOGIN_URL
         # By default, it's assumed that the user is a filer. Redaction flag is set to 1
@@ -440,8 +514,11 @@ class PacerSession(requests.Session):
         logger.info("New PACER session established.")
 
         if self.get_acms_tokens:
+            # Warm ACMS sessions for supported courts. Authentication tokens are
+            # obtained later as part of the ACMS request flow and are not fetched
+            # during session initialization.
             for court_id in ["ca2", "ca9"]:
-                self.get_acms_auth_object(court_id)
+                self.establish_acms_session(court_id)
 
     def _do_additional_request(self, r: requests.Response) -> bool:
         """Check if we should do an additional request to PACER, sometimes
@@ -508,7 +585,7 @@ class PacerSession(requests.Session):
             )
 
     def _get_saml_auth_request_parameters(
-        self, court_id: str
+        self, court_id: str, session: requests.Session | None = None
     ) -> dict[str, str]:
         """
         Retrieves SAML authentication request parameters by initiating a request
@@ -517,6 +594,7 @@ class PacerSession(requests.Session):
         response.
 
         :param court_id: The court identifier.
+        :param session: Authenticated session used to perform the request.
         :return: A dictionary where keys are the 'name' attributes and values are
             the 'value' attributes of hidden input elements found in the SAML
             authentication request form.
@@ -528,7 +606,16 @@ class PacerSession(requests.Session):
         logger.info(f"Attempting to get SAML credentials for {court_id}")
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
-        response = self._prepare_login_request(url, data={}, headers=headers)
+        # Route the GET through the caller's session when provided (the
+        # isolated ACMS handshake) so the SAML/IdP redirect cookies land in
+        # that jar; fall back to self for legacy callers. Using self.post here
+        # would recurse, since the docket-sheet URL is itself an ACMS URL.
+        if session is None:
+            response = self._prepare_login_request(
+                url, data={}, headers=headers
+            )
+        else:
+            response = session.post(url, data={}, headers=headers, timeout=60)
         result_parts = response.text.split("\r\n")
         # Handle gzip decoding
         js_screen = result_parts[-1]
@@ -550,48 +637,57 @@ class PacerSession(requests.Session):
             for input_element in hidden_inputs
         }
 
-    def get_acms_auth_object(self, court_id: str):
-        """
-        Retrieves the ACMS authentication object by submitting SAML parameters
-        to the SAML_URL. This object typically contains the authentication token
-        and other session-related data.
+    def establish_acms_session(self, court_id: str) -> None:
+        """Establish ACMS auth cookies for `court_id` via the SAML flow.
 
-        This method parses the HTML response to extract a JavaScript  variable
-        named 'model', which contains the authentication data. This is
-        necessary because the authentication data is embedded directly within
-        a script tag in the response HTML.
+        This method reuses the authenticated PACER session established by
+        ``login()`` to obtain ACMS-specific authentication cookies, which are
+        stored separately in ``self.acms_cookies``.
 
-        :param court_id: The court identifier.
-        :return: A dictionary representing the ACMS authentication object if
-            successfully extracted and parsed from the response.
+        Requires:
+            ``login()`` has already been called and ``self.cookies`` contains a
+            valid PACER session.
         """
-        auth_params = self._get_saml_auth_request_parameters(court_id)
+        if not self.cookies:
+            raise PacerLoginException(
+                "Cannot establish an ACMS session before login(): no PACER cookies."
+            )
+
+        acms_session = requests.Session()
+        acms_session.verify = False
+        acms_session.headers["User-Agent"] = "Juriscraper"
+        # Reuse the PACER session so the identity provider recognizes the
+        # authenticated user during the SAML handshake.
+        acms_session.cookies.update(self.cookies)
+
+        auth_params = self._get_saml_auth_request_parameters(
+            court_id, session=acms_session
+        )
         if not auth_params:
             raise PacerLoginException(
                 "Failed to extract ACMS authentication data from SAML response."
             )
 
-        headers = {"Content-Type": "application/x-www-form-urlencoded"}
-        logger.info("Attempting to retrieve ACMS authentication token")
+        logger.info(f"Establishing ACMS session for {court_id}")
         saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
-        response = self._prepare_login_request(
-            saml_url, data=auth_params, headers=headers
+        acms_session.post(
+            saml_url,
+            data=auth_params,
+            headers={"Content-Type": "application/x-www-form-urlencoded"},
+            timeout=60,
         )
-        match = re.search(r"var model = '(.*?)';", response.text)
-        if not match:
-            raise PacerLoginException(
-                "Failed to extract ACMS authentication data from SAML response."
-            )
 
-        model_value = match.group(1)
-        model_string = re.sub("&quot;", '"', model_value)
-        model_json = json.loads(model_string)
+        # Persist only ACMS application cookies. PACER and IdP cookies are
+        # managed by the main session. We also keep a separate ACMS cookie jar
+        # per court so that broadly scoped cookies from one court cannot
+        # override another court's session state.
+        acms_jar = RequestsCookieJar()
+        for cookie in acms_session.cookies:
+            if cookie.domain.endswith("azurewebsites.us"):
+                acms_jar.set_cookie(cookie)
+        self._desecure_acms_cookies(acms_jar)
+        self.acms_cookies[court_id] = acms_jar
+        logger.info(f"ACMS session established for {court_id}")
 
-        if not self.acms_user_data:
-            data = model_json["PacerUser"]
-            self.acms_user_data = {
-                "CsoId": data["CsoId"],
-                "ContactType": data["ContactType"],
-            }
-
-        self.acms_tokens[court_id] = model_json["AuthToken"]
+    # Backwards-compatible alias for existing callers (e.g. acms_attachment_page).
+    get_acms_auth_object = establish_acms_session
