@@ -11,13 +11,13 @@ History:
 
 import re
 from datetime import date
-from typing import Any
 from urllib.parse import urljoin
 
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes, titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -137,7 +137,7 @@ class Site(OpinionSiteLinear):
         return authors[-1].strip("*")
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
@@ -145,7 +145,7 @@ class Site(OpinionSiteLinear):
             curiam status, only for the values found in the text. A per
             curiam opinion also clears the author from the listing table
         """
-        metadata: dict[str, dict[str, Any]] = {}
+        metadata: ExtractedMetaData = {}
         if docket := self._extract_docket(scraped_text):
             metadata["Docket"] = docket
         if self._is_per_curiam(scraped_text):

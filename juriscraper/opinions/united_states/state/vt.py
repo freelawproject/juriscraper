@@ -19,6 +19,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -117,7 +118,7 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract a neutral citation if it exists, and update court and status
 
         Some documents have this heading:
@@ -133,7 +134,7 @@ class Site(OpinionSiteLinear):
         > This opinion is subject to motions for reargument under V.R.A.P. 40
         > as well as formal revision before publication in the Vermont Reports.
         """
-        metadata = {}
+        metadata: ExtractedMetaData = {}
         cite_regex = r"\n\s*\d{4} VT \d+\s*\n"
         match = re.search(cite_regex, scraped_text[:1000])
         if match:

@@ -27,6 +27,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -134,13 +135,13 @@ class Site(OpinionSiteLinear):
         )
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract docket number from the scraped text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        results: dict[str, dict] = {}
+        results: ExtractedMetaData = {}
         if match := self.lower_court_regex.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")

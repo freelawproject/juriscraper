@@ -6,12 +6,12 @@
 # Date: 2014-07-04
 import re
 from datetime import date
-from typing import Any
 
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.opinions.united_states.state import ny
+from juriscraper.OpinionSite import ExtractedMetaData
 
 
 class Site(ny.Site):
@@ -20,7 +20,7 @@ class Site(ny.Site):
     court = "App Div, 1st Dept"
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the docket number from the text?
 
         First group: explicitly named number (group).

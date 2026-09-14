@@ -10,11 +10,11 @@ History:
 import datetime
 import re
 from datetime import date
-from typing import Any
 
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -54,7 +54,7 @@ class Site(OpinionSiteLinear):
                 continue
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the case name and clean it up?
 
         This method is a bit ... ugly.  Mostly due to bad PDFs that occur
@@ -84,7 +84,7 @@ class Site(OpinionSiteLinear):
             else:
                 keepers.append(row[: row.index("JR.") + 3].strip())
         case_name = titlecase(" ".join(keepers))
-        metadata = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {
                 "case_name": case_name,
             },

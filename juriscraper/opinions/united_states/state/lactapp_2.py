@@ -19,6 +19,7 @@ from juriscraper.lib.html_utils import (
     get_row_column_text,
 )
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -120,7 +121,7 @@ class Site(OpinionSiteLinear):
         return self.start_date <= case_date <= self.end_date
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract the following values from the opinion's pdf text. The information we need is in the first page
             - appeal_from_str
             - judges
@@ -128,7 +129,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text content of the pdf
         :return: Dictionary containing the extracted values that matches the courtlistener model objects
         """
-        metadata = {"Docket": {}}
+        metadata: ExtractedMetaData = {"Docket": {}}
 
         appeal_from_match = re.search(
             r"Appealed from the\s*(.*?\s*),\s*Louisiana",

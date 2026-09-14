@@ -13,7 +13,6 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any
 from urllib.parse import urljoin
 
 import nh3
@@ -23,6 +22,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -184,7 +184,7 @@ class Site(OpinionSiteLinear):
             self.cases.append(case)
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the docket number from the text?
 
         :param scraped_text: The content of the document downloaded

@@ -13,7 +13,6 @@ History:
 import calendar
 import re
 from datetime import date
-from typing import Any
 from urllib.parse import urlencode
 
 from lxml.html import HtmlElement
@@ -22,6 +21,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import SkipRowError
 from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -164,7 +164,7 @@ class Site(OpinionSiteLinear):
         return html_element.xpath(xpath)[0].text_content().strip()
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract Date Filed from text
 
         :param scraped_text: Text of scraped content
@@ -178,7 +178,7 @@ class Site(OpinionSiteLinear):
         else:
             return {}
 
-        metadata = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {
                 "date_filed": convert_date_string(date_filed),
             },

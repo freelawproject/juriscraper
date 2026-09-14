@@ -9,13 +9,13 @@
 
 import re
 from datetime import datetime
-from typing import Any
 
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_row_column_text
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -165,7 +165,7 @@ class Site(OpinionSiteLinear):
         self.back_scrape_iterable = range(start, end)
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the date filed from the text?
 
         Some edge cases:
@@ -176,7 +176,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-        metadata = {}
+        metadata: ExtractedMetaData = {}
         target_text = scraped_text[:100]
 
         dockets = re.findall(r"(?<=#)\d+", target_text)

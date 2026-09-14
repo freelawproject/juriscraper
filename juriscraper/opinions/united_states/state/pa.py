@@ -13,6 +13,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
+from juriscraper.OpinionSite import ExtractedMetaData
 
 
 class Site(ClusterSite):
@@ -215,7 +216,7 @@ class Site(ClusterSite):
         return type
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract citations from text
 
         Be careful with citations referring to other opinions that are
@@ -241,7 +242,7 @@ class Site(ClusterSite):
                     """,
             re.X | re.DOTALL,
         )
-        result = {}
+        result: ExtractedMetaData = {}
         if match := pattern.search(cleaned_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")

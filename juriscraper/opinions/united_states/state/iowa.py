@@ -7,7 +7,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSite import ExtractedMetaData, OpinionSite
 
 
 class Site(OpinionSite):
@@ -131,7 +131,7 @@ class Site(OpinionSite):
         return elements[0] if elements else False
 
     @override
-    def extract_from_text(self, scraped_text: str) -> dict:
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -155,7 +155,7 @@ class Site(OpinionSite):
             re.X | re.IGNORECASE,
         )
 
-        result = {}
+        result: ExtractedMetaData = {}
         if match := pattern.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
