@@ -110,6 +110,7 @@ class Site(OpinionSiteLinear):
                 break
             page += 1
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

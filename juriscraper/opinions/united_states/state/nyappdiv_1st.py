@@ -8,6 +8,8 @@ import re
 from datetime import date
 from typing import Any
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.opinions.united_states.state import ny
 
@@ -17,6 +19,7 @@ class Site(ny.Site):
     days_interval = 30
     court = "App Div, 1st Dept"
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 

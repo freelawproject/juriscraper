@@ -140,6 +140,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         return name.strip(), other_dockets
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract model fields from opinion's document text
 

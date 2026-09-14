@@ -64,6 +64,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract out lots of data from Maine
 

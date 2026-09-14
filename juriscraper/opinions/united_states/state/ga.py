@@ -100,6 +100,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract the state citation from the document's text
 

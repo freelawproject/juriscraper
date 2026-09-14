@@ -214,6 +214,7 @@ class Site(ClusterSite):
 
         return type
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract citations from text
 

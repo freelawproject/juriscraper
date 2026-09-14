@@ -133,6 +133,7 @@ class Site(OpinionSiteLinear):
             str(date_obj.month).zfill(2),
         )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract docket number from the scraped text.
 

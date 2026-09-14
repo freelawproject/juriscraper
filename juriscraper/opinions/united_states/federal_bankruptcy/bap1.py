@@ -163,6 +163,7 @@ class Site(OpinionSiteLinear):
         """
         return html_element.xpath(xpath)[0].text_content().strip()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract Date Filed from text
 

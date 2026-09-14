@@ -128,6 +128,7 @@ class Site(OpinionSiteLinear):
             self.method = "POST"
         return await super()._download()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts structured metadata from the provided opinion text.
 

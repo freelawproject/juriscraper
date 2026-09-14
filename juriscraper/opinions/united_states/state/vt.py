@@ -116,6 +116,7 @@ class Site(OpinionSiteLinear):
 
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     def extract_from_text(self, scraped_text: str):
         """Extract a neutral citation if it exists, and update court and status
 

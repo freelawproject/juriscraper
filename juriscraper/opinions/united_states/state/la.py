@@ -411,6 +411,7 @@ class Site(OpinionSiteLinear):
             return None
         return text.rstrip(":").lstrip("BY").strip()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

@@ -56,6 +56,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract the exact date(s) from the scraped text."""
         pattern = r"([A-Z][a-z]+ \d{1,2}, \d{4})"

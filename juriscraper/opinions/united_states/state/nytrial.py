@@ -247,6 +247,7 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = True
         self.url = self.build_url(target_date)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract values from opinion's text
 

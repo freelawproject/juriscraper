@@ -53,6 +53,7 @@ class Site(OpinionSiteLinear):
                 # The table has a malformed row
                 continue
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the case name and clean it up?
 

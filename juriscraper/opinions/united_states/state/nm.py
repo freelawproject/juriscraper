@@ -121,6 +121,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 

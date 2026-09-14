@@ -113,6 +113,7 @@ class Site(ClusterSite):
 
             self.cases.append(case_dict)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.
 

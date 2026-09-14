@@ -3,6 +3,8 @@
 # Court Short Name: iowa
 import re
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
@@ -128,6 +130,7 @@ class Site(OpinionSite):
         elements = html.xpath(path)
         return elements[0] if elements else False
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

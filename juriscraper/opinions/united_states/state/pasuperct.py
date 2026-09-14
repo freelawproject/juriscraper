@@ -11,6 +11,8 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import pa
 
 
@@ -85,6 +87,7 @@ class Site(pa.Site):
             )
         return author_str
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Get neutral citation from the first lines in the first page
 

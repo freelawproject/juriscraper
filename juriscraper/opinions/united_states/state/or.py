@@ -156,6 +156,7 @@ class Site(OpinionSiteLinear):
         end = datetime.strftime(end_date, "%Y%m%d")
         return self.base_url.format(self.court_code, start, end)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract citations from text
 

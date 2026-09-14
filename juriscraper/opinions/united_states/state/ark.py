@@ -101,6 +101,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 

@@ -345,6 +345,7 @@ class Site(OpinionSiteLinear):
         )
         return links[0] if links else None
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract the lower court (and its judge) from the opinion text.
 

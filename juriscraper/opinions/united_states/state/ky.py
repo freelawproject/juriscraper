@@ -192,6 +192,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

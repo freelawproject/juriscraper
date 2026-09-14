@@ -183,6 +183,7 @@ class Site(OpinionSiteLinear):
                 case["author"] = cleaned_author
             self.cases.append(case)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 

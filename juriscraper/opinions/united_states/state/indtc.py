@@ -10,6 +10,8 @@ History:
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import ind
 
 
@@ -22,6 +24,7 @@ class Site(ind.Site):
         self.court_name = "Tax Court"
         self.status = "Unknown"
 
+    @override
     def extract_from_text(self, scraped_text: str):
         """Extract publication status
 

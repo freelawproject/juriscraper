@@ -291,6 +291,7 @@ class Site(OpinionSiteLinear):
         )
         return search_json
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         docket_pattern = re.compile(self.docket_number_regex)
         metadata = {}

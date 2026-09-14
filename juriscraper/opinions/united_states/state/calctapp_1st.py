@@ -4,6 +4,8 @@
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import cal
 
 
@@ -11,6 +13,7 @@ class Site(cal.Site):
     court_code = "A"
     division = "1st App. Dist."
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 
