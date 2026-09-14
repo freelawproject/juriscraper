@@ -19,9 +19,38 @@ Features:
 
 Changes:
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- Introduce Phyrefly static type checking configuration for all files outside of tests.
+
+Fixes:
+- Accept `audio/mp3` content type for ca9 scraper. #2168
+- Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
+- Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
+- Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
+- Fix `fla` (and the inheriting `fladistctapp_*` scrapers) now paginate the search results. #2150
+
+## 3.0.40 - 2026-08-19
+
+Features:
+- NYCoA enums
+
+Changes:
+-
 
 Fixes:
 -
+
+## 3.0.39 - 2026-08-18
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- `fladistctapp` scrapers no longer crash when the source JSON returns null
+  for `note` or `disposition`. #2112
 
 ## 3.0.38 - 2026-08-14
 
