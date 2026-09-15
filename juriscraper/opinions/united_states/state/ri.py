@@ -15,6 +15,7 @@ from urllib.parse import quote
 from lxml import html
 from typing_extensions import override
 
+from juriscraper.AbstractSite import MissingRequestResponseException
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -69,6 +70,8 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         await self.fetch_json()
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
         rows = self.request["response"].json()[-3][self.search_key][
             "ResultTables"
         ][0]["ResultRows"]
