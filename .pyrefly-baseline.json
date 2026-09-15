@@ -1561,30 +1561,6 @@
       "severity": "error"
     },
     {
-      "line": 208,
-      "column": 37,
-      "stop_line": 208,
-      "stop_column": 40,
-      "path": "juriscraper/pacer/appellate_attachment_page.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "concise_description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "severity": "error"
-    },
-    {
-      "line": 218,
-      "column": 36,
-      "stop_line": 218,
-      "stop_column": 39,
-      "path": "juriscraper/pacer/appellate_attachment_page.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "concise_description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "severity": "error"
-    },
-    {
       "line": 91,
       "column": 9,
       "stop_line": 91,
@@ -1846,42 +1822,6 @@
       "name": "unsupported-operation",
       "description": "`None` is not subscriptable",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "line": 301,
-      "column": 20,
-      "stop_line": 301,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "line": 316,
-      "column": 20,
-      "stop_line": 316,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "line": 336,
-      "column": 20,
-      "stop_line": 336,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
