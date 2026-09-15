@@ -7,7 +7,7 @@ import re
 import feedparser
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import MissingRequestResponseException, logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -22,6 +22,8 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         if self.test_mode_enabled():
             self.year = 2022
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             if item.get("published_parsed", None) is None:

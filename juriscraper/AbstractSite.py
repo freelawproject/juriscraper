@@ -22,6 +22,7 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.exceptions import (
     InsanityException,
+    JuriscraperException,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -56,6 +57,10 @@ class SiteRequest(TypedDict):
     response: httpx.Response | HTTPResponse | None
     status: None  # TODO: Probably unused; remove
     url: str | None
+
+
+class MissingRequestResponseException(JuriscraperException):
+    """Raised when `request["response"]` is needed but unavailable."""
 
 
 class AbstractSite:
@@ -648,6 +653,8 @@ class AbstractSite:
     def _post_process_response(self):
         """Cleanup to response object"""
         self.tweak_response_object()
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
         self.request["response"].raise_for_status()
         set_response_encoding(self.request["response"])
 

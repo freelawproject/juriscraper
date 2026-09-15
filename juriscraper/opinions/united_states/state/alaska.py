@@ -23,7 +23,7 @@ from urllib.parse import urlencode, urljoin
 from lxml import html
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import MissingRequestResponseException, logger
 from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -317,6 +317,8 @@ class Site(OpinionSiteLinear):
 
         self.url = self._build_search_url()
         await self._request_url_get(self.url)
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
         if "click here to continue" in self.request["response"].text.lower():
             self.url = self._follow_interstitial(self.request["response"].text)
             await self._request_url_get(self.url)

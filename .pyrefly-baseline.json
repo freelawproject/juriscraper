@@ -396,7 +396,7 @@
       "column": 33,
       "path": "juriscraper/opinions/united_states/federal_appellate/ca7.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `content`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -438,7 +438,7 @@
       "column": 33,
       "path": "juriscraper/opinions/united_states/federal_appellate/cafc.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `content`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -760,7 +760,7 @@
       "column": 31,
       "path": "juriscraper/opinions/united_states/state/colo.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1145,7 +1145,7 @@
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/michctapp.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1530,7 +1530,7 @@
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/or.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1572,7 +1572,7 @@
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/ri.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1964,7 +1964,7 @@
       "column": 33,
       "path": "juriscraper/oral_args/united_states/federal_appellate/ca1.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `content`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -2027,7 +2027,7 @@
       "column": 20,
       "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
       "name": "missing-attribute",
-      "concise_description": "Object of type `HTTPResponse | Response | None` has no attribute `json`",
+      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {

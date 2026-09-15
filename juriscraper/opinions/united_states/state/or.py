@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import MissingRequestResponseException, logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -108,6 +108,8 @@ class Site(OpinionSiteLinear):
             url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{item_id}/false"
             logger.debug("Getting detail JSON from %s", url)
             await self._request_url_get(url)
+            if self.request["response"] is None:
+                raise MissingRequestResponseException
             json = self.request["response"].json()
 
         if len(json["fields"]) == 1:
