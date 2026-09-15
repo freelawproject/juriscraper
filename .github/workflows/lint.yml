@@ -10,8 +10,8 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
       - uses: pre-commit/action@v3.0.1
         env:
           SKIP: "pyrefly" # This will be handled by a job of its own.
@@ -19,8 +19,8 @@ jobs:
   static-analyzer:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
       - name: Install uv # this is for the benefit of pyrefly, which is invoked locally, by pre-commit.
         uses: astral-sh/setup-uv@v7
         with:
