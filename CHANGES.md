@@ -21,6 +21,8 @@ Changes:
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
 
 Fixes:
+- Update `.pyrefly-baseline.json`
+- Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 -
 
 ## 3.0.41 - 2026-09-14
@@ -38,6 +40,7 @@ Fixes:
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
 - Fix `fla` (and the inheriting `fladistctapp_*` scrapers) now paginate the search results. #2150
+- Fix `ariz` (and the inheriting `arizctapp_div_1` scraper) now accept Word documents, which the court publishes for some decisions. #2167
 
 ## 3.0.40 - 2026-08-19
 
