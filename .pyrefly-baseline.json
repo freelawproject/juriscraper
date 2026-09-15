@@ -1914,27 +1914,6 @@
     {
       "column": 18,
       "path": "juriscraper/opinions/united_states/territories/nmariana.py",
-      "name": "bad-assignment",
-      "concise_description": "`list[str]` is not assignable to variable `judges` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
-      "name": "bad-assignment",
-      "concise_description": "`list[str]` is not assignable to variable `judges` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `str` is not assignable to declared return type `list[str]`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
