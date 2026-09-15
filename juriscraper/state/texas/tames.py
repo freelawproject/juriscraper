@@ -18,6 +18,7 @@ from typing import Final
 from urllib.parse import urljoin
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
@@ -172,6 +173,7 @@ class TAMESScraper(BaseStateScraper):
     def scrape(self):
         pass
 
+    @override
     def backfill(
         self,
         courts: list[str],

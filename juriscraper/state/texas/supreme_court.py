@@ -1,3 +1,5 @@
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
     CourtID,
@@ -65,6 +67,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
     def __init__(self, court_id: str = "texas_sc"):
         super().__init__(court_id)
 
+    @override
     @property
     def data(self) -> TexasSupremeCourtDocket | dict[str, None]:
         """
