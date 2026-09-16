@@ -649,10 +649,6 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return file_size
 
     @staticmethod
-    def _get_pacer_doc_id(row: html.HtmlElement) -> str:
-        return row.xpath(".//a/@data-pacer-doc-id")
-
-    @staticmethod
     def _get_pacer_seq_no_from_tr(row: html.HtmlElement) -> str | None:
         """Take a row of the attachment table, and return the sequence number
         from the name attribute.
