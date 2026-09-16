@@ -51,7 +51,7 @@ Changes:
 -
 
 Fixes:
--
+- Improve HTML entity sanitization to remove all invalid XML character entities (Issue #348)
 
 ## 3.0.39 - 2026-08-18
 
