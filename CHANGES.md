@@ -19,11 +19,13 @@ Features:
 
 Changes:
 - Adopt explicit `@override` decorator in `/state/`.
--
+- Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- 
 
 Fixes:
 - Update `.pyrefly-baseline.json`
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Corrections to docstrings across files.
 -
 
 ## 3.0.41 - 2026-09-14

@@ -52,9 +52,6 @@ class ScraperRequestManager:
             all_response_fn: Optional callback function invoked after every
                 HTTP response (both request and archived_request). Receives
                 the request manager instance and the response object.
-            archive_response_fn: Optional callback function invoked only after
-                archived_request calls. Receives the request manager instance
-                and the response object.
         """
         if session is not None:
             self.session = session
