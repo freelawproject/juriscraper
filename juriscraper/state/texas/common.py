@@ -374,14 +374,19 @@ def _originating_court_name_to_type(name: str) -> CourtType:
     return CourtType.COUNTY
 
 
-def district_court_number_from_name(name: str) -> int:
+def district_court_number_from_name(name: str) -> int | None:
     # TODO Handle edge-cases
     name = _clean_court_name(name)
     district_court_match = DISTRICT_COURT_RE.match(name)
+    if district_court_match is None:
+        return None
     district = district_court_match.group(1)
     if district == "1-a" or district == "1a":
         return 1
-    return int(DISTRICT_COURT_DISTRICT_RE.match(district).group(1))
+    district_court_district_match = DISTRICT_COURT_DISTRICT_RE.match(district)
+    if district_court_district_match is None:
+        return None
+    return int(district_court_district_match.group(1))
 
 
 class TexasCaseDocument(TypedDict):
@@ -999,6 +1004,10 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             )
         elif court_type == CourtType.DISTRICT:
             district = district_court_number_from_name(court_name)
+            if district is None:
+                logger.error(
+                    "[court=%s] Unable to find district number", self.court_id
+                )
             originating_court_details = TexasOriginatingDistrictCourt(
                 name=court_details["name"],
                 court_type=court_details["court_type"],

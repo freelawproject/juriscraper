@@ -2402,20 +2402,6 @@
       "severity": "warn"
     },
     {
-      "column": 16,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
       "column": 38,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",
