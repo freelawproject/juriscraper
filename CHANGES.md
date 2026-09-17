@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Update `.pyrefly-baseline.json`
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- `ca7`: take `date_filed` from the opinion URL instead of the RSS `pubDate`, and order the feed by entry time so new opinions are not hidden behind the duplicate abort. Fixes #2123
 -
 
 ## 3.0.41 - 2026-09-14
