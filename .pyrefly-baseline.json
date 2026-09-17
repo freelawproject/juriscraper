@@ -2416,20 +2416,6 @@
       "severity": "error"
     },
     {
-      "column": 42,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `name_element` with type `HtmlElement` in function `TexasCommonScraper._extract_case_data_name`",
-      "severity": "error"
-    },
-    {
-      "column": 30,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `element` with type `HtmlElement` in function `juriscraper.lib.html_utils.get_all_text`",
-      "severity": "error"
-    },
-    {
       "column": 26,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",

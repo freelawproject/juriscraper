@@ -661,11 +661,15 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
                 children, coa_parent.iterfind('.//*[@class="row-fluid"]')
             )
 
-        return {
-            self._extract_case_data_name(child.find(".//*[1]")): clean_string(
-                get_all_text(child.find(".//*[2]"))
-            )
+        children_elements = [
+            (child.find(".//*[1]"), child.find(".//*[2]"))
             for child in children
+        ]
+
+        return {
+            self._extract_case_data_name(k): clean_string(get_all_text(v))
+            for k, v in children_elements
+            if k is not None and v is not None
         }
 
     BUSINESS_AND_TITLE_STRIP_RE = re.compile(
