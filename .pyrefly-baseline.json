@@ -1237,42 +1237,6 @@
       "severity": "error"
     },
     {
-      "line": 266,
-      "column": 21,
-      "stop_line": 266,
-      "stop_column": 29,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "severity": "error"
-    },
-    {
-      "line": 320,
-      "column": 30,
-      "stop_line": 320,
-      "stop_column": 38,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "severity": "error"
-    },
-    {
-      "line": 340,
-      "column": 21,
-      "stop_line": 340,
-      "stop_column": 29,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "severity": "error"
-    },
-    {
       "line": 382,
       "column": 61,
       "stop_line": 382,
@@ -1294,18 +1258,6 @@
       "name": "unsupported-operation",
       "description": "`-` is not supported between `datetime` and `date`\n  No matching overload found for function `datetime.datetime.__sub__` called with arguments: (date)\n  Possible overloads:\n    (value: datetime, /) -> timedelta [closest match]\n    (value: timedelta, /) -> datetime\n  Argument `date` is not assignable to parameter `value` with type `datetime` in function `datetime.datetime.__sub__`",
       "concise_description": "`-` is not supported between `datetime` and `date`",
-      "severity": "error"
-    },
-    {
-      "line": 427,
-      "column": 49,
-      "stop_line": 427,
-      "stop_column": 57,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
       "severity": "error"
     },
     {
@@ -1609,30 +1561,6 @@
       "severity": "error"
     },
     {
-      "line": 208,
-      "column": 37,
-      "stop_line": 208,
-      "stop_column": 40,
-      "path": "juriscraper/pacer/appellate_attachment_page.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "concise_description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "severity": "error"
-    },
-    {
-      "line": 218,
-      "column": 36,
-      "stop_line": 218,
-      "stop_column": 39,
-      "path": "juriscraper/pacer/appellate_attachment_page.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "concise_description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "severity": "error"
-    },
-    {
       "line": 91,
       "column": 9,
       "stop_line": 91,
@@ -1894,42 +1822,6 @@
       "name": "unsupported-operation",
       "description": "`None` is not subscriptable",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "line": 301,
-      "column": 20,
-      "stop_line": 301,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "line": 316,
-      "column": 20,
-      "stop_line": 316,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "line": 336,
-      "column": 20,
-      "stop_line": 336,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
