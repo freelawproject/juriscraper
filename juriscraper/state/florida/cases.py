@@ -386,6 +386,7 @@ class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
             for oc in case.originating_cases
         ]
 
+    @override
     def _parse(self, i: str) -> FloridaCase:
         flc = FloridaCase.model_validate_json(i)
         # I would prefer to use Pydantic's computed_field decorator for this,
