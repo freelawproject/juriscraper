@@ -562,7 +562,10 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             raise ValueError("Appellate briefs table not found.")
         self.events = parse_table(events_table)
         self.briefs = parse_table(briefs_table)
-        self.case_data = self._extract_case_data()
+        case_data = self._extract_case_data()
+        if case_data is None:
+            raise ValueError("Case data not found.")
+        self.case_data = case_data if case_data is not None else {}
         self.is_valid = True
 
     @final
@@ -622,7 +625,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         name = "".join(get_all_text(name_element))
         return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
 
-    def _extract_case_data(self) -> dict[str, str]:
+    def _extract_case_data(self) -> dict[str, str] | None:
         """
         Helper method to extract the case information at the top of the page
         into a dictionary. After cleaning text, the keys are the text on the
@@ -634,6 +637,11 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if self.tree is None:
             raise ValueError("_parse_text() must called first.")
         parent = self.tree.find('.//*[@id="case"]/..')
+        if parent is None:
+            logger.error(
+                "[court=%s] Unable to find case data", self.court_id
+            )
+            return None
         coa_parent = parent.find(
             './/*[@id="ctl00_ContentPlaceHolder1_COAOnly"]'
         )
