@@ -2416,20 +2416,6 @@
       "severity": "error"
     },
     {
-      "column": 26,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
-      "severity": "error"
-    },
-    {
       "column": 38,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",

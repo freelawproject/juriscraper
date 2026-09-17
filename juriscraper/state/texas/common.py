@@ -961,11 +961,14 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             )
             return None
 
-        fields: dict[str, str] = {
-            clean_string(child.find(".//*[1]").text_content()): clean_string(
-                child.find(".//*[2]").text_content()
-            )
+        fields_elements = [
+            (child.find(".//*[1]"), child.find(".//*[2]"))
             for child in info_panel.iterchildren()
+        ]
+        fields = {
+            clean_string(k.text_content()): clean_string(v.text_content())
+            for k, v in fields_elements
+            if k is not None and v is not None
         }
 
         court_name = fields.get("Court", "")
