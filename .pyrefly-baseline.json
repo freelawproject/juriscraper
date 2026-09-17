@@ -1,99 +1,15 @@
 {
   "errors": [
     {
-      "line": 479,
+      "line": 478,
       "column": 46,
-      "stop_line": 479,
+      "stop_line": 478,
       "stop_column": 47,
       "path": "juriscraper/AbstractSite.py",
       "code": -2,
       "name": "unbound-name",
       "description": "`s` may be uninitialized",
       "concise_description": "`s` may be uninitialized",
-      "severity": "error"
-    },
-    {
-      "line": 10,
-      "column": 15,
-      "stop_line": 10,
-      "stop_column": 24,
-      "path": "juriscraper/OpinionSiteLinearWebDriven.py",
-      "code": -2,
-      "name": "bad-override",
-      "description": "Class member `OpinionSiteLinearWebDriven.__aexit__` overrides parent class `OpinionSiteLinear` in an inconsistent manner\n  `OpinionSiteLinearWebDriven.__aexit__` has type `(self: OpinionSiteLinearWebDriven) -> Unknown`, which is not assignable to `(self: OpinionSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown`, the type of `OpinionSiteLinear.__aexit__`\n  Signature mismatch:\n  expected: def __aexit__(self: OpinionSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown: ...\n                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  found:    def __aexit__(self: OpinionSiteLinearWebDriven) -> Unknown: ...\n                                                          ^ parameters",
-      "concise_description": "Class member `OpinionSiteLinearWebDriven.__aexit__` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 10,
-      "column": 15,
-      "stop_line": 10,
-      "stop_column": 24,
-      "path": "juriscraper/OpinionSiteWebDriven.py",
-      "code": -2,
-      "name": "bad-override",
-      "description": "Class member `OpinionSiteWebDriven.__aexit__` overrides parent class `OpinionSite` in an inconsistent manner\n  `OpinionSiteWebDriven.__aexit__` has type `(self: OpinionSiteWebDriven) -> Unknown`, which is not assignable to `(self: OpinionSiteWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown`, the type of `OpinionSite.__aexit__`\n  Signature mismatch:\n  expected: def __aexit__(self: OpinionSiteWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown: ...\n                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  found:    def __aexit__(self: OpinionSiteWebDriven) -> Unknown: ...\n                                                    ^ parameters",
-      "concise_description": "Class member `OpinionSiteWebDriven.__aexit__` overrides parent class `OpinionSite` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 10,
-      "column": 15,
-      "stop_line": 10,
-      "stop_column": 24,
-      "path": "juriscraper/OralArgumentSiteLinearWebDriven.py",
-      "code": -2,
-      "name": "bad-override",
-      "description": "Class member `OralArgumentSiteLinearWebDriven.__aexit__` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner\n  `OralArgumentSiteLinearWebDriven.__aexit__` has type `(self: OralArgumentSiteLinearWebDriven) -> Unknown`, which is not assignable to `(self: OralArgumentSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown`, the type of `OralArgumentSiteLinear.__aexit__`\n  Signature mismatch:\n  ...ralArgumentSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown: ...\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  ...ralArgumentSiteLinearWebDriven) -> Unknown: ...\n                                   ^ parameters",
-      "concise_description": "Class member `OralArgumentSiteLinearWebDriven.__aexit__` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 65,
-      "column": 28,
-      "stop_line": 65,
-      "stop_column": 54,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
-      "concise_description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
-      "severity": "error"
-    },
-    {
-      "line": 66,
-      "column": 16,
-      "stop_line": 66,
-      "stop_column": 20,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `HtmlElement` is not assignable to declared return type `WebElement`",
-      "concise_description": "Returned type `HtmlElement` is not assignable to declared return type `WebElement`",
-      "severity": "error"
-    },
-    {
-      "line": 98,
-      "column": 42,
-      "stop_line": 98,
-      "stop_column": 48,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `Literal['arguments[0].click();']` is not assignable to parameter `self` with type `WebDriver` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
-      "concise_description": "Argument `Literal['arguments[0].click();']` is not assignable to parameter `self` with type `WebDriver` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
-      "severity": "error"
-    },
-    {
-      "line": 98,
-      "column": 50,
-      "stop_line": 98,
-      "stop_column": 57,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `WebElement` is not assignable to parameter `script` with type `str` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
-      "concise_description": "Argument `WebElement` is not assignable to parameter `script` with type `str` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
       "severity": "error"
     },
     {
