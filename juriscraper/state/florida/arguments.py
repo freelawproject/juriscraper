@@ -2,6 +2,7 @@ from datetime import datetime
 from typing import ClassVar
 
 from pydantic import AliasPath, BaseModel, Field
+from typing_extensions import override
 
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
@@ -40,5 +41,6 @@ class FloridaCaseArgumentsParser(
 
     endpoint: ClassVar[str] = "courts/{court}/cms/cases/{case}/hearings"
 
+    @override
     def parse_full(self, i: str) -> FloridaPaginatedResults[FloridaArgument]:
         return FloridaPaginatedResults[FloridaArgument].model_validate_json(i)
