@@ -2444,13 +2444,6 @@
       "severity": "error"
     },
     {
-      "column": 35,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-assignment",
-      "concise_description": "`HtmlElement | None` is not assignable to `HtmlElement`",
-      "severity": "error"
-    },
-    {
       "column": 26,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",

@@ -585,6 +585,10 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if docket_number is None:
             return None
 
+        originating_court = self._parse_originating_court()
+        if originating_court is None:
+            return None
+
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
             court_type=CourtType.UNKNOWN.value,
@@ -592,7 +596,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
             parties=self.parties,
-            originating_court=self._parse_originating_court(),
+            originating_court=originating_court,
             case_events=self._parse_case_events(),
             appellate_briefs=self._parse_appellate_briefs(),
             case_name=self.case_name,
@@ -919,6 +923,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         TexasOriginatingCourt
         | TexasOriginatingAppellateCourt
         | TexasOriginatingDistrictCourt
+        | None
     ):
         """
         Extracts the trial court info from the HTML tree. Will fail if
@@ -928,9 +933,13 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         """
         if self.tree is None:
             raise ValueError("_parse_text() must called first.")
-        info_panel: HtmlElement = self.tree.find(
-            './/*[@id="panelTrialCourtInfo"]/div[2]'
-        )
+        info_panel = self.tree.find('.//*[@id="panelTrialCourtInfo"]/div[2]')
+        if info_panel is None:
+            logger.error(
+                "[court=%s] Unable to find info panel", self.court_id
+            )
+            return None
+
         fields: dict[str, str] = {
             clean_string(child.find(".//*[1]").text_content()): clean_string(
                 child.find(".//*[2]").text_content()
