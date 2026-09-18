@@ -366,6 +366,8 @@ class SCOTUSEmail:
         message_date = self.message.get("Date")
 
         try:
+            if message_date is None:
+                raise ValueError("No date is present")
             return datetime.strptime(message_date, "%a, %d %b %Y %H:%M:%S %z")
         except ValueError:
             logger.error(

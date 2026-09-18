@@ -2245,18 +2245,6 @@
       "severity": "error"
     },
     {
-      "line": 369,
-      "column": 38,
-      "stop_line": 369,
-      "stop_column": 50,
-      "path": "juriscraper/scotus/scotus_email.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `str | None` is not assignable to parameter `date_string` with type `str` in function `datetime.datetime.strptime`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
-      "concise_description": "Argument `str | None` is not assignable to parameter `date_string` with type `str` in function `datetime.datetime.strptime`",
-      "severity": "error"
-    },
-    {
       "line": 319,
       "column": 15,
       "stop_line": 319,
