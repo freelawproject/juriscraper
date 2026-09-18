@@ -23,6 +23,7 @@ from httpx import (
     TimeoutException,
 )
 from httpx._client import UseClientDefault
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -135,6 +136,7 @@ class RetryHandler(ABC):
 
 
 class NoRetry(RetryHandler):
+    @override
     async def should_retry(
         self, request: ScheduledRequest, exc: Exception
     ) -> bool:
@@ -160,6 +162,7 @@ class ExponentialBackoff(RetryHandler):
         default_factory=lambda: {500, 502, 503, 504, 506, 507, 508}
     )
 
+    @override
     async def should_retry(
         self, request: ScheduledRequest, exc: Exception
     ) -> bool:
@@ -284,6 +287,7 @@ class RequestManager(AsyncClient):
             )
             queue.task_done()
 
+    @override
     async def aclose(self) -> None:
         """Close the request manager and its underlying client."""
         if self._loop_task:
@@ -311,6 +315,7 @@ class RequestManager(AsyncClient):
         )
         await self._queue.put(request)
 
+    @override
     async def request(
         self,
         method: str,
@@ -346,6 +351,7 @@ class RequestManager(AsyncClient):
             cookies: The cookies to send with the request
             follow_redirects: Whether to follow redirect responses
             timeout: Response timeout
+            **kwargs: Arbitrary keyword arguments.
 
         Return:
             The response to the dispatched request after handler interference."""
@@ -380,6 +386,7 @@ class RequestManager(AsyncClient):
         )
         return await request.response
 
+    @override
     async def send(
         self, request: ScheduledRequest, **kwargs: Any
     ) -> Response | None:
@@ -387,6 +394,7 @@ class RequestManager(AsyncClient):
 
         Args:
             request: The request to send.
+            **kwargs: Arbitrary keyword arguments.
 
         Returns:
             The `httpx.Response` or `None` if an error occurred."""
@@ -421,6 +429,7 @@ class RequestManager(AsyncClient):
 
         return response
 
+    @override
     def build_request(
         self,
         *args: Any,
@@ -433,12 +442,14 @@ class RequestManager(AsyncClient):
             follow_redirects=follow_redirects,
         )
 
+    @override
     async def __aenter__(self) -> "RequestManager":
         """Allows the client to be used as an async context manager."""
         _ = await super().__aenter__()
         await self._ensure_loop()
         return self
 
+    @override
     async def __aexit__(
         self,
         exc_type: type[BaseException] | None = None,
@@ -456,7 +467,7 @@ class RateLimit(RequestHandler):
     def __init__(self, rps: float = 2.0) -> None:
         """Initialize the rate limit handler.
 
-        Parameters:
+        Args:
             rps: The maximum number of requests to allow per second."""
         if rps <= 0.0:
             raise ValueError(
@@ -465,6 +476,7 @@ class RateLimit(RequestHandler):
         self._last_request_time: float = 0.0
         self._request_spacing: float = 1.0 / rps
 
+    @override
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
     ) -> None:

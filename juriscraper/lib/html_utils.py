@@ -238,8 +238,9 @@ def fix_links_but_keep_anchors(link):
 
 
 def fix_links_in_lxml_tree(link, keep_anchors=False):
-    """Fix links in an lxml tree.
+    """Fix links in a lxml tree.
 
+    :param link: the link to rewrite
     :param keep_anchors: Whether to nuke anchors at the ends of links.
 
     This function is called by the rewrite_links method of an lxml tree, and is

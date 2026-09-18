@@ -13,3 +13,20 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
       - uses: pre-commit/action@v3.0.1
+        env:
+          SKIP: "pyrefly" # This will be handled by a job of its own.
+
+  static-analyzer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Install uv # this is for the benefit of pyrefly, which is invoked locally, by pre-commit.
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          version: "0.9.x"
+      - name: Install dependencies # eager synchronization keeps the output of subsequent `uv` usage by pre-commit clean.
+        run: uv sync
+      - name: pyrefly Static Type Checker
+        run: uv run pyrefly check --output-format full-text-with-github

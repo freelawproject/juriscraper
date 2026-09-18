@@ -77,53 +77,6 @@ default if it exists on the filesystem)::
 
     export JURISCRAPER_LOG=/path/to/your/log.txt
 
-Finally, do your WebDriver
---------------------------
-Some websites are too difficult to crawl without some sort of automated
-WebDriver. For these, Juriscraper either uses a locally-installed copy of
-geckodriver or can be configured to connect to a remote webdriver. If you prefer
-the local installation, you can download Selenium FireFox Geckodriver::
-
-    # choose OS compatible package from:
-    #   https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
-    # un-tar/zip your download
-    sudo mv geckodriver /usr/local/bin
-
-If you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox>`__, you can
-configure it with the following variables:
-
-``WEBDRIVER_CONN``: Use this to set the connection string to your remote
-webdriver. By default, this is ``local``, meaning it will look for a local
-installation of geckodriver. Instead, you can set this to something like,
-``'http://YOUR_DOCKER_IP:4444/wd/hub'``, which will switch it to using a remote
-driver and connect it to that location.
-
-``SELENIUM_VISIBLE``: Set this to any value to disable headless mode in your
-selenium driver, if it supports it. Otherwise, it defaults to headless.
-
-For example, if you want to watch a headless browser run, you can do so by
-starting selenium with::
-
-    docker run \
-        -p 4444:4444 \
-        -p 5900:5900 \
-        -v /dev/shm:/dev/shm \
-        selenium/standalone-firefox-debug
-
-That'll launch it on your local machine with two open ports. 4444 is the
-default on the image for accessing the webdriver. 5900 can be used to connect
-via a VNC viewer, and can be used to watch progress if the ``SELENIUM_VISIBLE``
-variable is set.
-
-Once you have selenium running like that, you can do a test like::
-
-    WEBDRIVER_CONN='http://localhost:4444/wd/hub' \
-        SELENIUM_VISIBLE=yes \
-        python sample_caller.py -c juriscraper.opinions.united_states.state.kan_p
-
-Kansas's precedential scraper uses a webdriver. If you do this and watch
-selenium, you should see it in action.
-
 Contributing
 ============
 

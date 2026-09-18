@@ -8,6 +8,7 @@ from urllib.parse import parse_qs, urlparse
 
 from lxml import html
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.abstract_parser import AbstractParser
 from juriscraper.lib.html_utils import (
@@ -530,6 +531,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
         self.case_data: dict[str, str] = {}
         self.is_valid: bool = False
 
+    @override
     def _parse_text(self, text: str) -> None:
         """
         Takes in a string, cleans it, and parses it into an HTML tree. If the
@@ -557,6 +559,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
         self.case_data = self._extract_case_data()
         self.is_valid = True
 
+    @override
     @property
     def data(self) -> TexasCommonData | dict[str, None]:
         """

@@ -1,5 +1,7 @@
 from functools import cached_property
 
+from typing_extensions import override
+
 from juriscraper.state.texas.common import (
     CourtID,
     CourtType,
@@ -35,6 +37,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
     ):
         super().__init__(court_id)
 
+    @override
     @property
     def data(
         self,
@@ -65,6 +68,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
             case_name_full=common_data["case_name_full"],
         )
 
+    @override
     @cached_property
     def case_name(self) -> str:
         """
