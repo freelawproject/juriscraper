@@ -1,99 +1,15 @@
 {
   "errors": [
     {
-      "line": 479,
+      "line": 478,
       "column": 46,
-      "stop_line": 479,
+      "stop_line": 478,
       "stop_column": 47,
       "path": "juriscraper/AbstractSite.py",
       "code": -2,
       "name": "unbound-name",
       "description": "`s` may be uninitialized",
       "concise_description": "`s` may be uninitialized",
-      "severity": "error"
-    },
-    {
-      "line": 10,
-      "column": 15,
-      "stop_line": 10,
-      "stop_column": 24,
-      "path": "juriscraper/OpinionSiteLinearWebDriven.py",
-      "code": -2,
-      "name": "bad-override",
-      "description": "Class member `OpinionSiteLinearWebDriven.__aexit__` overrides parent class `OpinionSiteLinear` in an inconsistent manner\n  `OpinionSiteLinearWebDriven.__aexit__` has type `(self: OpinionSiteLinearWebDriven) -> Unknown`, which is not assignable to `(self: OpinionSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown`, the type of `OpinionSiteLinear.__aexit__`\n  Signature mismatch:\n  expected: def __aexit__(self: OpinionSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown: ...\n                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  found:    def __aexit__(self: OpinionSiteLinearWebDriven) -> Unknown: ...\n                                                          ^ parameters",
-      "concise_description": "Class member `OpinionSiteLinearWebDriven.__aexit__` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 10,
-      "column": 15,
-      "stop_line": 10,
-      "stop_column": 24,
-      "path": "juriscraper/OpinionSiteWebDriven.py",
-      "code": -2,
-      "name": "bad-override",
-      "description": "Class member `OpinionSiteWebDriven.__aexit__` overrides parent class `OpinionSite` in an inconsistent manner\n  `OpinionSiteWebDriven.__aexit__` has type `(self: OpinionSiteWebDriven) -> Unknown`, which is not assignable to `(self: OpinionSiteWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown`, the type of `OpinionSite.__aexit__`\n  Signature mismatch:\n  expected: def __aexit__(self: OpinionSiteWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown: ...\n                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  found:    def __aexit__(self: OpinionSiteWebDriven) -> Unknown: ...\n                                                    ^ parameters",
-      "concise_description": "Class member `OpinionSiteWebDriven.__aexit__` overrides parent class `OpinionSite` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 10,
-      "column": 15,
-      "stop_line": 10,
-      "stop_column": 24,
-      "path": "juriscraper/OralArgumentSiteLinearWebDriven.py",
-      "code": -2,
-      "name": "bad-override",
-      "description": "Class member `OralArgumentSiteLinearWebDriven.__aexit__` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner\n  `OralArgumentSiteLinearWebDriven.__aexit__` has type `(self: OralArgumentSiteLinearWebDriven) -> Unknown`, which is not assignable to `(self: OralArgumentSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown`, the type of `OralArgumentSiteLinear.__aexit__`\n  Signature mismatch:\n  ...ralArgumentSiteLinearWebDriven, exc_type: Unknown, exc_value: Unknown, traceback: Unknown) -> Unknown: ...\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ parameters\n  ...ralArgumentSiteLinearWebDriven) -> Unknown: ...\n                                   ^ parameters",
-      "concise_description": "Class member `OralArgumentSiteLinearWebDriven.__aexit__` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "line": 65,
-      "column": 28,
-      "stop_line": 65,
-      "stop_column": 54,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
-      "concise_description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
-      "severity": "error"
-    },
-    {
-      "line": 66,
-      "column": 16,
-      "stop_line": 66,
-      "stop_column": 20,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `HtmlElement` is not assignable to declared return type `WebElement`",
-      "concise_description": "Returned type `HtmlElement` is not assignable to declared return type `WebElement`",
-      "severity": "error"
-    },
-    {
-      "line": 98,
-      "column": 42,
-      "stop_line": 98,
-      "stop_column": 48,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `Literal['arguments[0].click();']` is not assignable to parameter `self` with type `WebDriver` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
-      "concise_description": "Argument `Literal['arguments[0].click();']` is not assignable to parameter `self` with type `WebDriver` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
-      "severity": "error"
-    },
-    {
-      "line": 98,
-      "column": 50,
-      "stop_line": 98,
-      "stop_column": 57,
-      "path": "juriscraper/WebDriven.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `WebElement` is not assignable to parameter `script` with type `str` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
-      "concise_description": "Argument `WebElement` is not assignable to parameter `script` with type `str` in function `selenium.webdriver.remote.webdriver.WebDriver.execute_script`",
       "severity": "error"
     },
     {
@@ -109,9 +25,9 @@
       "severity": "error"
     },
     {
-      "line": 75,
+      "line": 73,
       "column": 9,
-      "stop_line": 75,
+      "stop_line": 73,
       "stop_column": 13,
       "path": "juriscraper/lasc/http.py",
       "code": -2,
@@ -289,9 +205,9 @@
       "severity": "error"
     },
     {
-      "line": 275,
+      "line": 276,
       "column": 26,
-      "stop_line": 275,
+      "stop_line": 276,
       "stop_column": 29,
       "path": "juriscraper/lib/html_utils.py",
       "code": -2,
@@ -301,9 +217,9 @@
       "severity": "error"
     },
     {
-      "line": 320,
+      "line": 321,
       "column": 32,
-      "stop_line": 320,
+      "stop_line": 321,
       "stop_column": 59,
       "path": "juriscraper/lib/html_utils.py",
       "code": -2,
@@ -1309,42 +1225,6 @@
       "severity": "error"
     },
     {
-      "line": 266,
-      "column": 21,
-      "stop_line": 266,
-      "stop_column": 29,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "severity": "error"
-    },
-    {
-      "line": 320,
-      "column": 30,
-      "stop_line": 320,
-      "stop_column": 38,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "severity": "error"
-    },
-    {
-      "line": 340,
-      "column": 21,
-      "stop_line": 340,
-      "stop_column": 29,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "severity": "error"
-    },
-    {
       "line": 382,
       "column": 61,
       "stop_line": 382,
@@ -1366,18 +1246,6 @@
       "name": "unsupported-operation",
       "description": "`-` is not supported between `datetime` and `date`\n  No matching overload found for function `datetime.datetime.__sub__` called with arguments: (date)\n  Possible overloads:\n    (value: datetime, /) -> timedelta [closest match]\n    (value: timedelta, /) -> datetime\n  Argument `date` is not assignable to parameter `value` with type `datetime` in function `datetime.datetime.__sub__`",
       "concise_description": "`-` is not supported between `datetime` and `date`",
-      "severity": "error"
-    },
-    {
-      "line": 427,
-      "column": 49,
-      "stop_line": 427,
-      "stop_column": 57,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "code": -2,
-      "name": "not-a-type",
-      "description": "Expected a type form, got instance of `Module[lxml.html]`",
-      "concise_description": "Expected a type form, got instance of `Module[lxml.html]`",
       "severity": "error"
     },
     {
@@ -1657,30 +1525,6 @@
       "severity": "error"
     },
     {
-      "line": 208,
-      "column": 37,
-      "stop_line": 208,
-      "stop_column": 40,
-      "path": "juriscraper/pacer/appellate_attachment_page.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "concise_description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "severity": "error"
-    },
-    {
-      "line": 218,
-      "column": 36,
-      "stop_line": 218,
-      "stop_column": 39,
-      "path": "juriscraper/pacer/appellate_attachment_page.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "concise_description": "Function declared to return `str`, but one or more paths are missing an explicit `return`",
-      "severity": "error"
-    },
-    {
       "line": 91,
       "column": 9,
       "stop_line": 91,
@@ -1942,42 +1786,6 @@
       "name": "unsupported-operation",
       "description": "`None` is not subscriptable",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "line": 301,
-      "column": 20,
-      "stop_line": 301,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "line": 316,
-      "column": 20,
-      "stop_line": 316,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "line": 336,
-      "column": 20,
-      "stop_line": 336,
-      "stop_column": 24,
-      "path": "juriscraper/pacer/email.py",
-      "code": -2,
-      "name": "bad-return",
-      "description": "Returned type `None` is not assignable to declared return type `str`\n  The declared type does not allow `None`. Consider changing the declared type to `str | None`.",
-      "concise_description": "Returned type `None` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
@@ -2557,9 +2365,9 @@
       "severity": "error"
     },
     {
-      "line": 314,
+      "line": 318,
       "column": 15,
-      "stop_line": 314,
+      "stop_line": 318,
       "stop_column": 22,
       "path": "juriscraper/state/RequestManager.py",
       "code": -2,
@@ -2569,9 +2377,9 @@
       "severity": "error"
     },
     {
-      "line": 383,
+      "line": 388,
       "column": 15,
-      "stop_line": 383,
+      "stop_line": 388,
       "stop_column": 19,
       "path": "juriscraper/state/RequestManager.py",
       "code": -2,
@@ -2641,9 +2449,9 @@
       "severity": "error"
     },
     {
-      "line": 543,
+      "line": 544,
       "column": 13,
-      "stop_line": 543,
+      "stop_line": 544,
       "stop_column": 39,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2653,9 +2461,9 @@
       "severity": "error"
     },
     {
-      "line": 622,
+      "line": 624,
       "column": 22,
-      "stop_line": 622,
+      "stop_line": 624,
       "stop_column": 33,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2665,9 +2473,9 @@
       "severity": "error"
     },
     {
-      "line": 625,
+      "line": 627,
       "column": 20,
-      "stop_line": 625,
+      "stop_line": 627,
       "stop_column": 35,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2677,9 +2485,9 @@
       "severity": "error"
     },
     {
-      "line": 880,
+      "line": 882,
       "column": 31,
-      "stop_line": 880,
+      "stop_line": 882,
       "stop_column": 36,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2689,9 +2497,9 @@
       "severity": "error"
     },
     {
-      "line": 912,
+      "line": 914,
       "column": 35,
-      "stop_line": 914,
+      "stop_line": 916,
       "stop_column": 10,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2701,9 +2509,9 @@
       "severity": "error"
     },
     {
-      "line": 916,
+      "line": 918,
       "column": 26,
-      "stop_line": 916,
+      "stop_line": 918,
       "stop_column": 60,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2713,9 +2521,9 @@
       "severity": "error"
     },
     {
-      "line": 917,
+      "line": 919,
       "column": 17,
-      "stop_line": 917,
+      "stop_line": 919,
       "stop_column": 51,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2725,9 +2533,9 @@
       "severity": "error"
     },
     {
-      "line": 969,
+      "line": 971,
       "column": 38,
-      "stop_line": 969,
+      "stop_line": 971,
       "stop_column": 48,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2737,9 +2545,9 @@
       "severity": "error"
     },
     {
-      "line": 982,
+      "line": 984,
       "column": 33,
-      "stop_line": 982,
+      "stop_line": 984,
       "stop_column": 52,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2749,9 +2557,9 @@
       "severity": "error"
     },
     {
-      "line": 70,
+      "line": 71,
       "column": 35,
-      "stop_line": 70,
+      "stop_line": 71,
       "stop_column": 71,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2761,9 +2569,9 @@
       "severity": "error"
     },
     {
-      "line": 76,
+      "line": 77,
       "column": 25,
-      "stop_line": 76,
+      "stop_line": 77,
       "stop_column": 51,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2773,9 +2581,9 @@
       "severity": "error"
     },
     {
-      "line": 77,
+      "line": 78,
       "column": 30,
-      "stop_line": 77,
+      "stop_line": 78,
       "stop_column": 61,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2785,9 +2593,9 @@
       "severity": "error"
     },
     {
-      "line": 78,
+      "line": 79,
       "column": 27,
-      "stop_line": 78,
+      "stop_line": 79,
       "stop_column": 55,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2797,9 +2605,9 @@
       "severity": "error"
     },
     {
-      "line": 79,
+      "line": 80,
       "column": 24,
-      "stop_line": 79,
+      "stop_line": 80,
       "stop_column": 49,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2809,9 +2617,9 @@
       "severity": "error"
     },
     {
-      "line": 80,
+      "line": 81,
       "column": 23,
-      "stop_line": 80,
+      "stop_line": 81,
       "stop_column": 47,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2821,9 +2629,9 @@
       "severity": "error"
     },
     {
-      "line": 81,
+      "line": 82,
       "column": 21,
-      "stop_line": 81,
+      "stop_line": 82,
       "stop_column": 43,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2833,9 +2641,9 @@
       "severity": "error"
     },
     {
-      "line": 82,
+      "line": 83,
       "column": 31,
-      "stop_line": 82,
+      "stop_line": 83,
       "stop_column": 63,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2845,9 +2653,9 @@
       "severity": "error"
     },
     {
-      "line": 83,
+      "line": 84,
       "column": 23,
-      "stop_line": 83,
+      "stop_line": 84,
       "stop_column": 47,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2857,9 +2665,9 @@
       "severity": "error"
     },
     {
-      "line": 84,
+      "line": 85,
       "column": 28,
-      "stop_line": 84,
+      "stop_line": 85,
       "stop_column": 57,
       "path": "juriscraper/state/texas/court_of_appeals.py",
       "code": -2,
@@ -2869,9 +2677,9 @@
       "severity": "error"
     },
     {
-      "line": 57,
+      "line": 59,
       "column": 25,
-      "stop_line": 57,
+      "stop_line": 59,
       "stop_column": 51,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2881,9 +2689,9 @@
       "severity": "error"
     },
     {
-      "line": 58,
+      "line": 60,
       "column": 30,
-      "stop_line": 58,
+      "stop_line": 60,
       "stop_column": 61,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2893,9 +2701,9 @@
       "severity": "error"
     },
     {
-      "line": 59,
+      "line": 61,
       "column": 27,
-      "stop_line": 59,
+      "stop_line": 61,
       "stop_column": 55,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2905,9 +2713,9 @@
       "severity": "error"
     },
     {
-      "line": 60,
+      "line": 62,
       "column": 24,
-      "stop_line": 60,
+      "stop_line": 62,
       "stop_column": 49,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2917,9 +2725,9 @@
       "severity": "error"
     },
     {
-      "line": 61,
+      "line": 63,
       "column": 23,
-      "stop_line": 61,
+      "stop_line": 63,
       "stop_column": 47,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2929,9 +2737,9 @@
       "severity": "error"
     },
     {
-      "line": 62,
+      "line": 64,
       "column": 21,
-      "stop_line": 62,
+      "stop_line": 64,
       "stop_column": 43,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2941,9 +2749,9 @@
       "severity": "error"
     },
     {
-      "line": 63,
+      "line": 65,
       "column": 31,
-      "stop_line": 63,
+      "stop_line": 65,
       "stop_column": 63,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2953,9 +2761,9 @@
       "severity": "error"
     },
     {
-      "line": 64,
+      "line": 66,
       "column": 23,
-      "stop_line": 64,
+      "stop_line": 66,
       "stop_column": 47,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2965,9 +2773,9 @@
       "severity": "error"
     },
     {
-      "line": 65,
+      "line": 67,
       "column": 28,
-      "stop_line": 65,
+      "stop_line": 67,
       "stop_column": 57,
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "code": -2,
@@ -2977,9 +2785,9 @@
       "severity": "error"
     },
     {
-      "line": 90,
+      "line": 92,
       "column": 18,
-      "stop_line": 90,
+      "stop_line": 92,
       "stop_column": 32,
       "path": "juriscraper/state/texas/email.py",
       "code": -2,
@@ -2989,9 +2797,9 @@
       "severity": "error"
     },
     {
-      "line": 52,
+      "line": 54,
       "column": 5,
-      "stop_line": 52,
+      "stop_line": 54,
       "stop_column": 16,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -3001,9 +2809,9 @@
       "severity": "error"
     },
     {
-      "line": 53,
+      "line": 55,
       "column": 5,
-      "stop_line": 53,
+      "stop_line": 55,
       "stop_column": 21,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -3013,9 +2821,9 @@
       "severity": "error"
     },
     {
-      "line": 69,
+      "line": 72,
       "column": 9,
-      "stop_line": 69,
+      "stop_line": 72,
       "stop_column": 13,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -3025,9 +2833,9 @@
       "severity": "error"
     },
     {
-      "line": 87,
+      "line": 90,
       "column": 41,
-      "stop_line": 87,
+      "stop_line": 90,
       "stop_column": 67,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -3037,9 +2845,9 @@
       "severity": "error"
     },
     {
-      "line": 96,
+      "line": 99,
       "column": 41,
-      "stop_line": 96,
+      "stop_line": 99,
       "stop_column": 72,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -3049,9 +2857,9 @@
       "severity": "error"
     },
     {
-      "line": 106,
+      "line": 109,
       "column": 27,
-      "stop_line": 106,
+      "stop_line": 109,
       "stop_column": 55,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -3061,51 +2869,15 @@
       "severity": "error"
     },
     {
-      "line": 107,
+      "line": 110,
       "column": 24,
-      "stop_line": 107,
+      "stop_line": 110,
       "stop_column": 49,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
       "name": "bad-argument-type",
       "description": "Argument `date | None` is not assignable to parameter `date_filed` with type `date` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
       "concise_description": "Argument `date | None` is not assignable to parameter `date_filed` with type `date` in function `TexasSupremeCourtDocket.__init__`",
-      "severity": "error"
-    },
-    {
-      "line": 108,
-      "column": 23,
-      "stop_line": 108,
-      "stop_column": 47,
-      "path": "juriscraper/state/texas/supreme_court.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
-      "concise_description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasSupremeCourtDocket.__init__`",
-      "severity": "error"
-    },
-    {
-      "line": 109,
-      "column": 21,
-      "stop_line": 109,
-      "stop_column": 43,
-      "path": "juriscraper/state/texas/supreme_court.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
-      "concise_description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasSupremeCourtDocket.__init__`",
-      "severity": "error"
-    },
-    {
-      "line": 110,
-      "column": 31,
-      "stop_line": 110,
-      "stop_column": 63,
-      "path": "juriscraper/state/texas/supreme_court.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
-      "concise_description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasSupremeCourtDocket.__init__`",
       "severity": "error"
     },
     {
@@ -3116,14 +2888,50 @@
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
       "name": "bad-argument-type",
+      "description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "line": 112,
+      "column": 21,
+      "stop_line": 112,
+      "stop_column": 43,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "code": -2,
+      "name": "bad-argument-type",
+      "description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
+      "concise_description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "line": 113,
+      "column": 31,
+      "stop_line": 113,
+      "stop_column": 63,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "code": -2,
+      "name": "bad-argument-type",
+      "description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
+      "concise_description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "line": 114,
+      "column": 23,
+      "stop_line": 114,
+      "stop_column": 47,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "code": -2,
+      "name": "bad-argument-type",
       "description": "Argument `str | None` is not assignable to parameter `case_name` with type `str` in function `TexasSupremeCourtDocket.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
       "concise_description": "Argument `str | None` is not assignable to parameter `case_name` with type `str` in function `TexasSupremeCourtDocket.__init__`",
       "severity": "error"
     },
     {
-      "line": 112,
+      "line": 115,
       "column": 28,
-      "stop_line": 112,
+      "stop_line": 115,
       "stop_column": 57,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
