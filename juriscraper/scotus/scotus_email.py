@@ -225,12 +225,12 @@ class SCOTUSEmail:
             followup_url = self._parse_first_link()
             data = None
         else:
-            followup_url = ""
+            followup_url = None
             data = None
 
         return SCOTUSEmailData(
             email_type=self.email_type.value,
-            followup_url=followup_url,
+            followup_url=followup_url if followup_url is not None else "",
             email_datetime=self._parse_datetime(),
             data=data,
         )
@@ -439,11 +439,15 @@ class SCOTUSEmail:
         docket_number = Path(query["filename"][0]).stem
         return clean_string(docket_number)
 
-    def _parse_first_link(self) -> str:
+    def _parse_first_link(self) -> str | None:
         """Extract the `href` attribute from the first `<a>` tag in the email
         body.
         """
-        return self.tree.find(".//a").get("href")
+        anchor = self.tree.find(".//a")
+        if anchor is None:
+            return None
+
+        return anchor.get("href")
 
 
 def _main():
