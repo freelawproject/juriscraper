@@ -133,6 +133,9 @@ class _SCOTUSConfirmationPageScraper:
 
         :return: Result of the confirmation attempt.
         """
+        if self.tree is None:
+            raise ValueError("No tree is present")
+
         body_content = self.tree.find(".//div[@class='body-content']")
         # The confirmation page by default displays all response messages
         # and uses a (presumably) server-generated if/else chain with
@@ -283,6 +286,8 @@ class SCOTUSEmail:
         """Determine the type of the email (docket update/confirmation) based
         on the subject line. If the subject line does not match any known
         patterns, return `EmailType.INVALID`."""
+        if self.message is None:
+            raise ValueError("No message is present")
         subject = self.message.get("Subject", failobj="")
 
         if self.DOCKET_ENTRY_SUBJECT_REGEX.match(subject) is not None:
@@ -356,6 +361,8 @@ class SCOTUSEmail:
 
         :return: `datetime` or `None` if unable to parse the "Date" header.
         """
+        if self.message is None:
+            raise ValueError("No message is present")
         message_date = self.message.get("Date")
 
         try:
@@ -374,6 +381,8 @@ class SCOTUSEmail:
 
         :return: Clean docket entry title.
         """
+        if self.tree is None:
+            raise ValueError("No tree is present")
         text = self.tree.text_content()
         match = self.TITLE_REGEX.match(text)
 
@@ -443,6 +452,8 @@ class SCOTUSEmail:
         """Extract the `href` attribute from the first `<a>` tag in the email
         body.
         """
+        if self.tree is None:
+            raise ValueError("No tree is present")
         anchor = self.tree.find(".//a")
         if anchor is None:
             return None
