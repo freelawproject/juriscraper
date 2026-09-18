@@ -2245,18 +2245,6 @@
       "severity": "error"
     },
     {
-      "line": 237,
-      "column": 28,
-      "stop_line": 237,
-      "stop_column": 50,
-      "path": "juriscraper/scotus/scotus_email.py",
-      "code": -2,
-      "name": "bad-argument-type",
-      "description": "Argument `datetime | None` is not assignable to parameter `email_datetime` with type `datetime` in function `SCOTUSEmailData.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
-      "concise_description": "Argument `datetime | None` is not assignable to parameter `email_datetime` with type `datetime` in function `SCOTUSEmailData.__init__`",
-      "severity": "error"
-    },
-    {
       "line": 369,
       "column": 38,
       "stop_line": 369,

@@ -68,7 +68,7 @@ class SCOTUSEmailData(TypedDict):
 
     email_type: str
     followup_url: str
-    email_datetime: datetime
+    email_datetime: datetime | None
     data: SCOTUSNotificationEmail | None
 
 
