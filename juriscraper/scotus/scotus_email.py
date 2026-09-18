@@ -134,17 +134,20 @@ class _SCOTUSConfirmationPageScraper:
         :return: Result of the confirmation attempt.
         """
         body_content = self.tree.find(".//div[@class='body-content']")
-        script_tag = body_content.find(".//script")
-        script = script_tag.text_content()
         # The confirmation page by default displays all response messages
         # and uses a (presumably) server-generated if/else chain with
         # conditions set to `true` or `false` to determine which message to
         # display. A better solution would be to either render the page with
         # JS enabled or to parse the script tag into an AST, but this works
         # for now.
-        match = re.search(r"true\)\s\{([^}]+)", script)
-        if match is None:
+        if (
+            body_content is None
+            or (script_tag := body_content.find(".//script")) is None
+            or (script := script_tag.text_content()) is None
+            or (match := re.search(r"true\)\s\{([^}]+)", script)) is None
+        ):
             return SCOTUSConfirmationResult.NoVerify.value
+
         statement_body = match.group(1)
         visibility_calls = [
             line.strip() for line in statement_body.split("\n")[1:-1]
