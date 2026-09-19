@@ -1,5 +1,5 @@
 import re
-from datetime import date, datetime
+from datetime import datetime
 from typing import Any
 
 from dateutil import parser

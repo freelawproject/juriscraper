@@ -423,7 +423,7 @@ class FloridaScraper:
                     )
                     continue
                 case FloridaPaginatedResults(page=page):
-                    if (page.total_elements >= MAX_RESULTS):
+                    if page.total_elements >= MAX_RESULTS:
                         if start < end:
                             # Split the range in half and re-queue.
                             mid = start + (end - start) // 2
