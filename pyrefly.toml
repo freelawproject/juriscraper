@@ -147,6 +147,29 @@ unknown-argument-type = false
 unknown-variable-type = false
 unused-call-result = false
 
+[[sub-config]]
+matches = "juriscraper/scotus/**"
+
+# Opt in
+check-unannotated-defs = true
+infer-return-types = "checked"
+
+[sub-config.errors]
+# Opt in
+bad-override-param-name = true
+explicit-any = false
+implicit-any-attribute = false
+implicit-any-empty-container = false
+implicit-any-lambda = false
+implicit-any-parameter = false
+implicit-any-type-argument = false
+implicit-bool = false
+missing-override-decorator = false
+no-any-return-explicit = false
+no-any-return-implicit = false
+unknown-argument-type = false
+unknown-variable-type = false
+unused-call-result = false
 
 [[sub-config]]
 matches = "juriscraper/state/**"
