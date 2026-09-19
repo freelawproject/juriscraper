@@ -16,8 +16,9 @@ logger = make_default_logger()
 class ACMSAttachmentPage(BaseReport):
     """Parse ACMS attachment pages' JSON."""
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
+        self._acms_json: dict = {}
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
     def _parse_text(self, text):
