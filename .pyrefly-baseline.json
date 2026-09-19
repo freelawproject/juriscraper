@@ -493,10 +493,10 @@
       "severity": "error"
     },
     {
-      "line": 145,
-      "column": 61,
-      "stop_line": 145,
-      "stop_column": 74,
+      "line": 147,
+      "column": 44,
+      "stop_line": 147,
+      "stop_column": 57,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "code": -2,
       "name": "missing-attribute",
@@ -505,9 +505,9 @@
       "severity": "error"
     },
     {
-      "line": 148,
+      "line": 155,
       "column": 19,
-      "stop_line": 148,
+      "stop_line": 155,
       "stop_column": 29,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "code": -2,
