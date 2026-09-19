@@ -158,7 +158,7 @@ infer-return-types = "checked"
 # Opt in
 bad-override-param-name = true
 explicit-any = false
-implicit-any-attribute = false
+implicit-any-attribute = true
 implicit-any-empty-container = false
 implicit-any-lambda = false
 implicit-any-parameter = false
