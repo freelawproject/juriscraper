@@ -148,7 +148,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         }
 
     @staticmethod
-    def _parse_description_html(td) -> str:
+    def _parse_description_html(td: HtmlElement) -> str:
         """Parse the cell content up to the first <br>, excluding
         .documentlinks.
 
@@ -490,7 +490,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         if cleaned:
             lines.append(cleaned)
 
-    def _parse_address_title(self, lines) -> tuple[str | None, int]:
+    def _parse_address_title(self, lines: list[str]) -> tuple[str | None, int]:
         """Extract the party title from address lines and determine where the address begins.
 
         :param lines: A list of text lines containing the party title and address.
@@ -513,7 +513,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         title = ", ".join(title_parts) or None
         return title, start_add_idx
 
-    def _parse_address_lines(self, lines, start_add_idx) -> ContactAddress:
+    def _parse_address_lines(
+        self, lines: list[str], start_add_idx: int
+    ) -> ContactAddress:
         """Parse the address components starting from a given index.
 
         :param lines: A list of text lines containing the address data.
