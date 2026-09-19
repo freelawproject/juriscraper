@@ -193,18 +193,6 @@
       "severity": "error"
     },
     {
-      "line": 17,
-      "column": 1,
-      "stop_line": 17,
-      "stop_column": 2,
-      "path": "juriscraper/lib/html_utils.py",
-      "code": -2,
-      "name": "unused-type-ignore",
-      "description": "Unused `# type: ignore` comment",
-      "concise_description": "Unused `# type: ignore` comment",
-      "severity": "error"
-    },
-    {
       "line": 276,
       "column": 26,
       "stop_line": 276,

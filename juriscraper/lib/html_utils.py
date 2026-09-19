@@ -14,7 +14,7 @@ try:
     # Use charset-normalizer for performance to detect the character encoding.
     import charset_normalizer as chardet
 except ImportError:
-    import chardet  # type: ignore
+    import chardet
 
 ALLOWED_ATTRIBUTES = deepcopy(nh3.ALLOWED_ATTRIBUTES)
 ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
