@@ -123,7 +123,7 @@ class Site(OpinionSiteLinear):
         }
 
     async def _download_backwards(
-        self, dates_and_url: tuple[date, date, str]
+        self, dates_and_url: tuple[datetime, datetime, str]
     ) -> None:
         """Set proper `masscases.com` url as self.url, and parse content
 
