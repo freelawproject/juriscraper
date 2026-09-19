@@ -183,8 +183,8 @@ class ExponentialBackoff(RetryHandler):
                     * (self.backoff_growth ** (request.attempt - 1))
                 )
                 return True
-
-        return False
+            case _:
+                return False
 
 
 class RequestManager(AsyncClient):

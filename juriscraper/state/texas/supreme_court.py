@@ -83,8 +83,11 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
 
         case_events = [
             TexasSupremeCourtCaseEvent(
+                date=event_data["date"],
+                type=event_data["type"],
+                attachments=event_data["attachments"],
+                disposition=event_data["disposition"],
                 remarks=clean_string(remarks_element.text_content()),
-                **event_data,
             )
             for remarks_element, event_data in zip(
                 self.events["Remarks"], common_data["case_events"]
@@ -92,10 +95,13 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         ]
         appellate_briefs = [
             TexasSupremeCourtAppellateBrief(
+                date=brief_data["date"],
+                type=brief_data["type"],
+                attachments=brief_data["attachments"],
+                description=brief_data["description"],
                 remarks=clean_string(remarks_element.text_content()),
-                **event_data,
             )
-            for remarks_element, event_data in zip(
+            for remarks_element, brief_data in zip(
                 self.briefs["Remarks"], common_data["appellate_briefs"]
             )
         ]
