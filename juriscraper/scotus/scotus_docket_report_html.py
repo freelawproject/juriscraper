@@ -5,6 +5,7 @@ from typing import Any
 
 from lxml import html
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -40,6 +41,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         super().__init__(court_id=court_id)
         self.tree: HtmlElement | None = None
 
+    @override
     def _parse_text(self, text: str) -> None:
         """Parse raw HTML and store a lxml tree.
 
@@ -49,6 +51,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         text = clean_html(text)
         self.tree = html.fromstring(text or "")
 
+    @override
     @property
     def metadata(self) -> dict[str, Any]:
         """Return normalized docket metadata extracted from HTML.
@@ -240,6 +243,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             "attachments": attachments,
         }
 
+    @override
     @property
     def docket_entries(self) -> list[dict[str, Any]]:
         """Return docket entries from 'Proceedings and Orders'.
@@ -309,6 +313,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         return entries
 
+    @override
     @property
     def parties(self) -> list[dict[str, Any]]:
         """Return parties grouped under Contacts (Petitioner/Respondent/Other).
