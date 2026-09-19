@@ -2,9 +2,9 @@ import os
 import unittest
 
 from juriscraper.scotus import (
-    SCOTUSDocketReport,
     SCOTUSDocketReportHTM,
     SCOTUSDocketReportHTML,
+    SCOTUSDocketReportJSON,
 )
 from juriscraper.scotus._scotus_docket_report_parsing import (
     clean_lower_court_cases,
@@ -21,7 +21,7 @@ class ScotusParseDocketTest(PacerParseTestCase):
 
     def test_parsing_scotus_json_dockets(self):
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "json")
-        self.parse_files(path_root, "*.compare.json", SCOTUSDocketReport)
+        self.parse_files(path_root, "*.compare.json", SCOTUSDocketReportJSON)
 
     def test_parsing_scotus_html_dockets(self):
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "html")

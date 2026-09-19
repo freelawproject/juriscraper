@@ -9,7 +9,6 @@ from typing_extensions import override
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
-from juriscraper.scotus import SCOTUSDocketReport
 
 from ._scotus_docket_report_parsing import (
     DOC_NUM_RE,
@@ -24,17 +23,17 @@ from ._scotus_docket_report_parsing import (
     parse_address_title,
     parse_description_html,
 )
+from .scotus_docket_report_base import SCOTUSDocketReportBase
 
 logger = make_default_logger()
 
 
 @final
-class SCOTUSDocketReportHTML(SCOTUSDocketReport):
+class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
     """Parse SCOTUS docket HTML."""
 
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
-        super().__init__(court_id=court_id)
         self.tree: HtmlElement | None = None
 
     @override

@@ -28,7 +28,7 @@ from ._scotus_docket_report_parsing import (
     parse_address_title,
     parse_description_html,
 )
-from .scotus_docket_report import SCOTUSDocketReport
+from .scotus_docket_report_base import SCOTUSDocketReportBase
 
 logger = make_default_logger()
 
@@ -59,7 +59,7 @@ class _Attorney(TypedDict):
 
 
 @final
-class SCOTUSDocketReportHTM(SCOTUSDocketReport):
+class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
     """Parse SCOTUS docket HTM pages."""
 
     CONTACTS_TABLE_XPATH = (
@@ -79,7 +79,6 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReport):
         :param court_id: The court ID.
         :return: None.
         """
-        super().__init__(court_id=court_id)
         self.tree: HtmlElement | None = None
         self._case_data_table: list[list[HtmlElement]] = []
         self._docket_entry_table: list[list[HtmlElement]] = []

@@ -4,7 +4,9 @@ import re
 import sys
 from collections import defaultdict
 from collections.abc import Hashable
-from typing import Any
+from typing import Any, final
+
+from typing_extensions import override
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -14,11 +16,13 @@ from ._scotus_docket_report_parsing import (
     clean_lower_court_cases,
     normalize_date,
 )
+from .scotus_docket_report_base import SCOTUSDocketReportBase
 
 logger = make_default_logger()
 
 
-class SCOTUSDocketReport:
+@final
+class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
     """Parse SCOTUS docket JSON"""
 
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
@@ -26,26 +30,7 @@ class SCOTUSDocketReport:
     def __init__(self, court_id: str = "scotus"):
         self._scotus_json: dict[Hashable, Any] | None = None
 
-    @property
-    def data(self) -> dict[str, Any]:
-        """Get all the data back from this endpoint."""
-        metadata = self.metadata or {}
-        if not metadata:
-            return {}
-        case_name = metadata.get("case_name")
-        if not case_name:
-            logger.error("Failed to extract SCOTUS docket number.")
-            return {}
-        docket_number = metadata.get("docket_number")
-        if not docket_number:
-            logger.error("Failed to extract SCOTUS docket number.")
-            return {}
-        return {
-            **metadata,
-            "parties": self.parties,
-            "docket_entries": self.docket_entries,
-        }
-
+    @override
     def _parse_text(self, text: str) -> None:
         """Load and store the JSON object.
 
@@ -58,6 +43,7 @@ class SCOTUSDocketReport:
             raise ValueError("`text` is not a JSON object.")
         self._scotus_json = json_object
 
+    @override
     @property
     def metadata(self) -> dict[str, Any]:
         """Return normalized docket metadata.
@@ -125,6 +111,7 @@ class SCOTUSDocketReport:
             ),
         }
 
+    @override
     @property
     def docket_entries(self) -> list[dict[str, Any]]:
         """Return a dictionary of docket entries from ProceedingsandOrder
@@ -235,6 +222,7 @@ class SCOTUSDocketReport:
             for party_name, attorneys in grouped.items()
         ]
 
+    @override
     @property
     def parties(self) -> list[dict[str, Any]]:
         """Return parties with their attorneys from Petitioner/Respondent arrays.
@@ -274,7 +262,7 @@ def _main():
         print("Please provide a path to a JSON file to parse.")
         sys.exit(1)
 
-    report = SCOTUSDocketReport()
+    report = SCOTUSDocketReportJSON()
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
     with open(filepath, encoding="utf-8") as f:
