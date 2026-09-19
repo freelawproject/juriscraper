@@ -30,6 +30,7 @@ Fixes:
 - Fix invalid type annotations for `texapp`.
 - Correct the return types of various `pacer` methods that may return `None`.
 - Corrections to docstrings across files.
+- Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
 -
 
 ## 3.0.41 - 2026-09-14
