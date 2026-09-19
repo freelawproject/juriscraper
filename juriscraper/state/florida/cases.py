@@ -342,7 +342,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     )
     originating_cases: list[FloridaOriginatingCase] = Field(
         validation_alias=AliasPath("caseHeader", "originatingCourtCases"),
-        default=[],
+        default_factory=list,
     )
     transfers: list[DocketTransfer] = []
     entries: list[FloridaDocketEntry] = []
