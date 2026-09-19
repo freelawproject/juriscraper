@@ -939,13 +939,26 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
         if court_type == CourtType.APPELLATE:
             court_id = coa_name_to_court_id(court_name).value
             originating_court_details = TexasOriginatingAppellateCourt(
-                **court_details,
+                name=court_details["name"],
+                court_type=court_details["court_type"],
+                county=court_details["county"],
+                judge=court_details["judge"],
+                case=court_details["case"],
+                reporter=court_details["reporter"],
+                punishment=court_details["punishment"],
                 court_id=court_id,
             )
         elif court_type == CourtType.DISTRICT:
             district = district_court_number_from_name(court_name)
             originating_court_details = TexasOriginatingDistrictCourt(
-                **court_details, district=district
+                name=court_details["name"],
+                court_type=court_details["court_type"],
+                county=court_details["county"],
+                judge=court_details["judge"],
+                case=court_details["case"],
+                reporter=court_details["reporter"],
+                punishment=court_details["punishment"],
+                district=district,
             )
         else:
             originating_court_details = court_details
