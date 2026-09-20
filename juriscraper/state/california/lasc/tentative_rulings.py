@@ -13,14 +13,16 @@ capture every listed option at least daily.
 
 import html
 import re
-from datetime import date, datetime
+from datetime import date
 
 from lxml import html as lxml_html
 from pydantic import BaseModel
 from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
+from juriscraper.lib.html_utils import hidden_input_fields
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.state.california.lasc.common import parse_date
 
 logger = make_default_logger()
 
@@ -385,15 +387,9 @@ def build_department_form_data(
     selects = tree.xpath(DEPARTMENT_SELECT_XPATH)
     if not selects:
         raise ValueError("The search page has no courtroom list.")
-    # The page nests its forms improperly, so the courtroom list can be
-    # parsed into a different form than the one holding ASP.NET's state
-    # fields. Those are the hidden inputs named with a leading double
-    # underscore, so they are gathered from the whole page.
-    data = {
-        name: field.get("value", "")
-        for field in tree.xpath("//input[@type='hidden']")
-        if (name := field.get("name", "")).startswith("__")
-    }
+    # This site needs only ASP.NET's own state, which is the hidden fields
+    # named with a leading double underscore.
+    data = hidden_input_fields(tree, prefix="__")
     data[selects[0].get("name")] = option_value
     return data
 
@@ -420,7 +416,7 @@ class TentativeRulingOptionsParser(LegacyParser[list[TentativeRulingOption]]):
             courthouse = COURTHOUSE_RE.match(label)
             try:
                 location_code, department, hearing_date = parts
-                parsed_date = datetime.strptime(hearing_date, "%m/%d/%Y")
+                parsed_date = parse_date(hearing_date)
             except ValueError:
                 logger.warning(
                     "Skipping unreadable tentative ruling option %r", value
@@ -434,7 +430,7 @@ class TentativeRulingOptionsParser(LegacyParser[list[TentativeRulingOption]]):
                     if courthouse
                     else "",
                     department=department,
-                    hearing_date=parsed_date.date(),
+                    hearing_date=parsed_date,
                 )
             )
         return options
@@ -482,15 +478,13 @@ class TentativeRulingsParser(LegacyParser[list[TentativeRuling]]):
                 case_name, typed_calendar_number = _typed_case_name(body)
                 calendar_number = calendar_number or typed_calendar_number
 
-            hearing_date = " ".join(header.group("hearing_date").split())
+            hearing_date = header.group("hearing_date")
             rulings.append(
                 TentativeRuling(
                     case_number=_case_number(
                         header.group("case_number"), body
                     ),
-                    hearing_date=datetime.strptime(
-                        hearing_date, "%B %d, %Y"
-                    ).date(),
+                    hearing_date=parse_date(hearing_date),
                     department=_clean_text(header.group("department")),
                     calendar_number=calendar_number,
                     case_name=case_name,

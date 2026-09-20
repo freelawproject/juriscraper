@@ -13,7 +13,7 @@ Both pages must be requested on the ``www`` host: the bare
 
 import re
 from collections import defaultdict
-from datetime import date, datetime
+from datetime import date
 from enum import Enum
 
 from lxml import html as lxml_html
@@ -22,7 +22,9 @@ from pydantic import BaseModel
 from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser, ParserValidationError
+from juriscraper.lib.html_utils import table_to_array2d
 from juriscraper.lib.string_utils import CaseNameTweaker, harmonize
+from juriscraper.state.california.lasc.common import parse_date
 from juriscraper.state.docket import (
     Docket,
     DocketEntry,
@@ -200,15 +202,6 @@ def _text(element: HtmlElement) -> str:
     return " ".join(element.text_content().split())
 
 
-def _parse_date(value: str) -> date:
-    """Parse a date the case summary prints, e.g. ``7/9/2025``.
-
-    :param value: The date as printed.
-    :return: The date.
-    """
-    return datetime.strptime(value.strip(), "%m/%d/%Y").date()
-
-
 def _department(value: str) -> str:
     """Reduce ``Department  514`` to ``514``.
 
@@ -250,9 +243,7 @@ def _section_rows(tree: HtmlElement) -> dict[str, list[list[HtmlElement]]]:
         classes = (element.get("class") or "").split()
         if current is None or current in rows or "dataTable" not in classes:
             continue
-        rows[current] = [
-            row.xpath("./td") for row in element.xpath("./tr|./tbody/tr")
-        ]
+        rows[current] = table_to_array2d(element)
     return rows
 
 
@@ -372,7 +363,7 @@ class CaseSummaryParser(LegacyParser[LASCCaseSummary]):
             case_name=case_name,
             case_name_full=title,
             case_name_short=cnt.make_case_name_short(case_name),
-            date_filed=_parse_date(filed),
+            date_filed=parse_date(filed),
             transfers=[],
             entries=self._entries(sections.get(DOCUMENTS_FILED, [])),
             parties=parties,
@@ -387,7 +378,7 @@ class CaseSummaryParser(LegacyParser[LASCCaseSummary]):
             ),
             actions=[
                 LASCAction(
-                    date_of_action=_parse_date(_text(cells[0])),
+                    date_of_action=parse_date(_text(cells[0])),
                     text=_text(cells[1]),
                 )
                 for cells in sections.get(REGISTER_OF_ACTIONS, [])
@@ -458,7 +449,7 @@ class CaseSummaryParser(LegacyParser[LASCCaseSummary]):
                 filed_by, filed_by_role = match["name"], match["role"]
             entries.append(
                 LASCDocketEntry(
-                    date_filed=_parse_date(_text(cells[0])),
+                    date_filed=parse_date(_text(cells[0])),
                     attachments=[],
                     entry_type=_entry_type(document_type),
                     document_type=document_type,
@@ -484,7 +475,7 @@ class CaseSummaryParser(LegacyParser[LASCCaseSummary]):
         """
         hearings = [
             LASCHearing(
-                hearing_date=_parse_date(_text(cells[0])),
+                hearing_date=parse_date(_text(cells[0])),
                 time=_text(cells[1]),
                 department=_department(_text(cells[2])),
                 address=_text(cells[3]),
@@ -501,7 +492,7 @@ class CaseSummaryParser(LegacyParser[LASCCaseSummary]):
             day, _, time = _text(cells[0]).partition(" ")
             hearings.append(
                 LASCHearing(
-                    hearing_date=_parse_date(day),
+                    hearing_date=parse_date(day),
                     time=time,
                     department=_department(_text(cells[1])),
                     address="",

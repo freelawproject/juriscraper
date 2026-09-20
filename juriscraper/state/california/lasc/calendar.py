@@ -32,14 +32,17 @@ disclaimer, courthouse, then search.
 """
 
 import re
-from datetime import date, datetime
+from datetime import date
+from functools import lru_cache
 
 from lxml import html as lxml_html
 from pydantic import BaseModel
 from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
+from juriscraper.lib.html_utils import hidden_input_fields, table_to_array2d
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.state.california.lasc.common import parse_date
 
 logger = make_default_logger()
 
@@ -114,28 +117,6 @@ class CalendarEvent(BaseModel):
     date_filed: date | None
 
 
-def _hidden_state(tree: lxml_html.HtmlElement) -> dict[str, str]:
-    """Collect the hidden fields a post has to echo back.
-
-    Every hidden input is echoed, not just ASP.NET's ``__``-prefixed state:
-    the site keeps the chosen courthouse in hidden fields of its own
-    (``Loc``, ``LocName``, ``DivCode`` and companions) and answers "Missing
-    search criteria or session expired" to a post that drops them.
-
-    The site also nests its forms improperly, so a control can parse into a
-    different form than the one holding the state, which is why these are
-    gathered from the whole page rather than from one form.
-
-    :param tree: The parsed page the post is being built from.
-    :return: The hidden fields to post back.
-    """
-    return {
-        name: field.get("value", "")
-        for field in tree.xpath("//input[@type='hidden']")
-        if (name := field.get("name", ""))
-    }
-
-
 def _control(
     tree: lxml_html.HtmlElement, xpath: str, label: str
 ) -> lxml_html.HtmlElement:
@@ -165,7 +146,11 @@ def build_disclaimer_form_data(page_html: str) -> dict[str, str]:
     """
     tree = lxml_html.fromstring(page_html)
     button = _control(tree, DISCLAIMER_XPATH, "disclaimer button")
-    data = _hidden_state(tree)
+    # Every hidden field, not just ASP.NET's own: the site keeps the chosen
+    # courthouse in fields of its own (`Loc`, `LocName`, `DivCode` and
+    # companions) and answers "Missing search criteria or session expired"
+    # to a post that drops them.
+    data = hidden_input_fields(tree)
     data[button.get("name", "")] = button.get("value", "I Agree")
     return data
 
@@ -189,7 +174,7 @@ def build_department_list_form_data(
     location_field = _control(
         tree, LOCATION_SELECT_XPATH, COURTHOUSE_LIST
     ).get("name", "")
-    data = _hidden_state(tree)
+    data = hidden_input_fields(tree)
     data["__EVENTTARGET"] = location_field
     data["__EVENTARGUMENT"] = ""
     data[location_field] = location_value
@@ -217,7 +202,7 @@ def build_calendar_form_data(
     :raises ValueError: If the page is missing one of the search controls.
     """
     tree = lxml_html.fromstring(page_html)
-    data = _hidden_state(tree)
+    data = hidden_input_fields(tree)
     searched = (
         (LOCATION_SELECT_XPATH, COURTHOUSE_LIST, location_value),
         (DEPARTMENT_SELECT_XPATH, "department list", department),
@@ -239,14 +224,18 @@ def _text(element: lxml_html.HtmlElement) -> str:
     return " ".join(element.text_content().split())
 
 
+@lru_cache(maxsize=512)
 def _parse_date(value: str) -> date | None:
     """Read one of the calendar's dates.
+
+    A courtroom's calendar runs to hundreds of rows naming a handful of
+    dates between them, so the reading of one is kept.
 
     :param value: The date as the calendar prints it, e.g. ``09/21/2026``.
     :return: The date, or `None` if the cell held something else.
     """
     try:
-        return datetime.strptime(value.strip(), DATE_FORMAT).date()
+        return parse_date(value)
     except ValueError:
         return None
 
@@ -333,8 +322,7 @@ class CalendarParser(LegacyParser[list[CalendarEvent]]):
         if not tables:
             return []
         events: list[CalendarEvent] = []
-        for row in tables[0].iter("tr"):
-            cells = row.findall("td")
+        for cells in table_to_array2d(tables[0]):
             # The table opens with a header row, which has no `td` cells.
             if len(cells) < 6:
                 continue
@@ -347,7 +335,8 @@ class CalendarParser(LegacyParser[list[CalendarEvent]]):
             )
             if hearing_date is None or number is None:
                 logger.warning(
-                    "Skipping unreadable calendar row %r", _text(row)
+                    "Skipping unreadable calendar row %r",
+                    " | ".join(_text(cell) for cell in cells),
                 )
                 continue
             events.append(
