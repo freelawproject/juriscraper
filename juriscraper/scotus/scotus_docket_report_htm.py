@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from datetime import date
 from enum import Enum
-from typing import Any
+from typing import Any, TypedDict
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -23,6 +23,26 @@ logger = make_default_logger()
 class HTMPageFormat(Enum):
     Old = 1
     New = 2
+
+
+class _CurrentAttorney(TypedDict):
+    name: str | None
+    is_counsel_of_record: bool
+    phone: str | None
+    _raw_lines: list[str]
+    _email: str | None
+
+
+class _Attorney(TypedDict):
+    name: str | None
+    is_counsel_of_record: bool
+    phone: str | None
+    title: str | None
+    address: str | None
+    city: str | None
+    state: str | None
+    zip: str | None
+    email: str | None
 
 
 class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
@@ -330,18 +350,16 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     def _build_htm_attorney(
         self,
-        current_attorney: dict[str, Any] | None,
-    ) -> dict[str, Any] | None:
+        current_attorney: _CurrentAttorney,
+    ) -> _Attorney:
         """Complete an attorney dict from the HTM Contacts table.
 
         :param current_attorney: The in-progress attorney dict with initial values.
         :return: The current_attorney dict.
         """
-        if current_attorney is None:
-            return None
 
-        lines = current_attorney.pop("_raw_lines", [])
-        email = current_attorney.pop("_email", None)
+        lines = current_attorney["_raw_lines"]
+        email = current_attorney["_email"]
 
         # Filter lines: remove lines with IDs like "#1098260" and inline email if present.
         filtered_lines = []
@@ -362,17 +380,17 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         )
 
         addr_lines = partial_address.address_lines
-        current_attorney.update(
-            {
-                "title": title,
-                "address": ", ".join(addr_lines) if addr_lines else None,
-                "city": partial_address.city,
-                "state": partial_address.state,
-                "zip": partial_address.zip_code,
-                "email": email,
-            }
-        )
-        return current_attorney
+        return {
+            "name": current_attorney["name"],
+            "is_counsel_of_record": current_attorney["is_counsel_of_record"],
+            "phone": current_attorney["phone"],
+            "title": title,
+            "address": ", ".join(addr_lines) if addr_lines else None,
+            "city": partial_address.city,
+            "state": partial_address.state,
+            "zip": partial_address.zip_code,
+            "email": email,
+        }
 
     @override
     @property
@@ -395,17 +413,17 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         if header_tr is None:
             return []
 
-        parties_by_key = defaultdict(list)
+        parties_by_key: dict[tuple[str, str], list[_Attorney]] = defaultdict(list)
         current_type = None
-        current_attorney = None
+        current_attorney: _CurrentAttorney | None = None
 
         def _flush_attorney(party_name: str = "") -> None:
             """Finalize current_attorney and add to parties_by_key."""
             nonlocal current_attorney
             if current_attorney:
-                current_attorney = self._build_htm_attorney(current_attorney)
+                attorney = self._build_htm_attorney(current_attorney)
                 type_key = (current_type or "Other", party_name)
-                parties_by_key[type_key].append(current_attorney)
+                parties_by_key[type_key].append(attorney)
                 current_attorney = None
 
         for tr in header_tr.itersiblings(tag="tr"):
@@ -480,7 +498,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 if current_attorney:
                     current_attorney["is_counsel_of_record"] = True
                     if address_col:
-                        current_attorney.setdefault("_raw_lines", []).append(
+                        current_attorney["_raw_lines"].append(
                             address_col
                         )
                 continue
