@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from datetime import date
 from typing import Any, TypedDict, final
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -22,6 +23,20 @@ class Party(TypedDict):
     type: str
     name: str
     attorneys: list[Attorney]
+
+
+class Attachment(TypedDict):
+    description: str
+    document_url: str
+    document_number: int | None
+
+
+class DocketEntry(TypedDict):
+    date_filed: date | None
+    document_number: int | None
+    description: str
+    description_html: str
+    attachments: list[Attachment] | None
 
 
 class SCOTUSDocketReportBase(ABC):
@@ -61,4 +76,4 @@ class SCOTUSDocketReportBase(ABC):
 
     @property
     @abstractmethod
-    def docket_entries(self) -> list[dict[str, Any]]: ...
+    def docket_entries(self) -> list[DocketEntry]: ...

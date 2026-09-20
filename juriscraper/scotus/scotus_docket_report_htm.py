@@ -30,6 +30,7 @@ from ._scotus_docket_report_parsing import (
 )
 from .scotus_docket_report_base import (
     Attorney,
+    DocketEntry,
     Party,
     SCOTUSDocketReportBase,
 )
@@ -269,7 +270,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
         description_td: list[HtmlElement],
         attachment_path: str,
         table_layout: bool = False,
-    ) -> dict[str, Any]:
+    ) -> DocketEntry:
         """Build a normalized docket entry dict.
 
         :param date_str: Raw date string from the date cell.
@@ -314,7 +315,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
 
     @override
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[DocketEntry]:
         """Return docket entries from the HTM 'Proceedings and Orders' table.
 
         :return: List of dicts with date_filed, description, description_html, attachments.

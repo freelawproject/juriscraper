@@ -24,7 +24,9 @@ from ._scotus_docket_report_parsing import (
     parse_description_html,
 )
 from .scotus_docket_report_base import (
+    Attachment,
     Attorney,
+    DocketEntry,
     Party,
     SCOTUSDocketReportBase,
 )
@@ -150,7 +152,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
         description_td: HtmlElement | None,
         attachment_path: str,
         table_layout: bool = False,
-    ) -> dict[str, Any]:
+    ) -> DocketEntry:
         """Build a normalized docket entry dict.
 
         :param date_str: Raw date string from the date cell.
@@ -161,7 +163,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
         :return: Dict with date_filed, description, description_html, attachments.
         """
         description_html = ""
-        attachments: list[dict[str, Any]] = []
+        attachments: list[Attachment] = []
         document_number: int | None = None
 
         if description_td is not None:
@@ -212,7 +214,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
 
     @override
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[DocketEntry]:
         """Return docket entries from 'Proceedings and Orders'.
 
         :return: List of dicts with date_filed, description, description_html,
@@ -222,7 +224,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
             return []
 
         # Div-based layout
-        entries: list[dict[str, Any]] = []
+        entries: list[DocketEntry] = []
         rows = self.tree.xpath(
             "//div[@id='proceedings']//div[contains(@class,'card')]"
             "//table[contains(@class,'ProceedingItem')]//tr"

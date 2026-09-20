@@ -17,7 +17,9 @@ from ._scotus_docket_report_parsing import (
     normalize_date,
 )
 from .scotus_docket_report_base import (
+    Attachment,
     Attorney,
+    DocketEntry,
     Party,
     SCOTUSDocketReportBase,
 )
@@ -117,7 +119,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
     @override
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[DocketEntry]:
         """Return a dictionary of docket entries from ProceedingsandOrder
 
         [
@@ -150,7 +152,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
                 )
             ):
                 document_number = int(match.group(1))
-            attachments = [
+            attachments: list[Attachment] = [
                 {
                     "description": link.get("Description", "").strip(),
                     "document_url": link.get("DocumentUrl"),
@@ -161,7 +163,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
             description_html = row.get("Text", "")
             description = strip_bad_html_tags_insecure(description_html)
-            de = {
+            de: DocketEntry = {
                 "date_filed": normalize_date(row.get("Date")),
                 "document_number": document_number,
                 "description": description.text_content(),
