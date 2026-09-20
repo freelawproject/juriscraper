@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from datetime import date
-from typing import Any, Never, TypedDict, cast, final
+from typing import Never, TypedDict, cast, final
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -54,12 +54,29 @@ class Metadata(TypedDict):
     discretionary_court_decision: date | None
 
 
+class Docket(TypedDict):
+    docket_number: str
+    capital_case: bool | None
+    date_filed: date | None
+    case_name: str
+    links: str | None
+    lower_court: str | None
+    lower_court_case_numbers_raw: str | None
+    lower_court_case_numbers: list[str] | None
+    lower_court_decision_date: date | None
+    lower_court_rehearing_denied_date: date | None
+    questions_presented: str | None
+    discretionary_court_decision: date | None
+    parties: list[Party]
+    docket_entries: list[DocketEntry]
+
+
 class SCOTUSDocketReportBase(ABC):
     """Parse SCOTUS docket"""
 
     @property
     @final
-    def data(self) -> dict[str, Any]:
+    def data(self) -> Docket | dict[Never, Never]:
         """Get all the data back from this endpoint."""
         metadata = self.metadata
         if not metadata:
@@ -74,7 +91,24 @@ class SCOTUSDocketReportBase(ABC):
             logger.error("Failed to extract SCOTUS docket number.")
             return {}
         return {
-            **metadata,
+            "docket_number": docket_number,
+            "capital_case": metadata["capital_case"],
+            "date_filed": metadata["date_filed"],
+            "case_name": case_name,
+            "links": metadata["links"],
+            "lower_court": metadata["lower_court"],
+            "lower_court_case_numbers_raw": metadata[
+                "lower_court_case_numbers_raw"
+            ],
+            "lower_court_case_numbers": metadata["lower_court_case_numbers"],
+            "lower_court_decision_date": metadata["lower_court_decision_date"],
+            "lower_court_rehearing_denied_date": metadata[
+                "lower_court_rehearing_denied_date"
+            ],
+            "questions_presented": metadata["questions_presented"],
+            "discretionary_court_decision": metadata[
+                "discretionary_court_decision"
+            ],
             "parties": self.parties,
             "docket_entries": self.docket_entries,
         }
