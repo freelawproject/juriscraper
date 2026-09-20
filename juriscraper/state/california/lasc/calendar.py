@@ -36,6 +36,7 @@ from datetime import date, datetime
 
 from lxml import html as lxml_html
 from pydantic import BaseModel
+from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.log_tools import make_default_logger
@@ -247,6 +248,7 @@ def _parse_date(value: str) -> date | None:
 class CalendarLocationsParser(LegacyParser[list[CalendarLocation]]):
     """Parse the courthouses the calendar search page lists."""
 
+    @override
     def _parse(self, i: str) -> list[CalendarLocation]:
         """Parse the search page's courthouse list.
 
@@ -273,6 +275,7 @@ class CalendarLocationsParser(LegacyParser[list[CalendarLocation]]):
             )
         return locations
 
+    @override
     def validate(self, _output: list[CalendarLocation]) -> bool:
         """Reject a page that lists no courthouse.
 
@@ -288,6 +291,7 @@ class CalendarLocationsParser(LegacyParser[list[CalendarLocation]]):
 class CalendarDepartmentsParser(LegacyParser[list[str]]):
     """Parse the departments a courthouse's calendar can be searched by."""
 
+    @override
     def _parse(self, i: str) -> list[str]:
         """Parse the search page's department list.
 
@@ -306,6 +310,7 @@ class CalendarDepartmentsParser(LegacyParser[list[str]]):
 class CalendarParser(LegacyParser[list[CalendarEvent]]):
     """Parse the events on one courtroom's calendar."""
 
+    @override
     def _parse(self, i: str) -> list[CalendarEvent]:
         """Parse a calendar result page.
 

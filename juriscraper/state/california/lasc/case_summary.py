@@ -18,6 +18,7 @@ from datetime import date, datetime
 from lxml import html as lxml_html
 from lxml.html import HtmlElement
 from pydantic import BaseModel
+from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser, ParserValidationError
 from juriscraper.lib.string_utils import CaseNameTweaker, harmonize
@@ -333,6 +334,7 @@ def restricted_case_message(page_html: str) -> str | None:
 class CaseSummaryParser(LegacyParser[LASCCaseSummary]):
     """Parse a case summary page."""
 
+    @override
     def _parse(self, i: str) -> LASCCaseSummary:
         """Parse the case summary.
 

@@ -17,6 +17,7 @@ from datetime import date, datetime
 
 from lxml import html as lxml_html
 from pydantic import BaseModel
+from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.log_tools import make_default_logger
@@ -392,6 +393,7 @@ def build_department_form_data(
 class TentativeRulingOptionsParser(LegacyParser[list[TentativeRulingOption]]):
     """Parse the courtrooms the search page lists rulings for."""
 
+    @override
     def _parse(self, i: str) -> list[TentativeRulingOption]:
         """Parse the search page's courtroom list.
 
@@ -433,6 +435,7 @@ class TentativeRulingOptionsParser(LegacyParser[list[TentativeRulingOption]]):
 class TentativeRulingsParser(LegacyParser[list[TentativeRuling]]):
     """Parse the rulings on one courtroom's tentative rulings page."""
 
+    @override
     def _parse(self, i: str) -> list[TentativeRuling]:
         """Split the page into rulings.
 
@@ -488,6 +491,7 @@ class TentativeRulingsParser(LegacyParser[list[TentativeRuling]]):
             )
         return rulings
 
+    @override
     def validate(self, _output: list[TentativeRuling]) -> bool:
         """Reject output with a ruling that has no text.
 
