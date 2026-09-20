@@ -57,6 +57,7 @@ DEPARTMENT_SELECT_XPATH = "//select[contains(@id, 'ddlDept')]"
 DATE_FROM_XPATH = "//input[contains(@id, 'dateFrom')]"
 DATE_TO_XPATH = "//input[contains(@id, 'dateTo')]"
 RESULTS_TABLE_XPATH = "//table[contains(@id, 'tblResults')]"
+COURTHOUSE_LIST = "courthouse list"
 
 # The hidden input the page's own Javascript sets to say which of the
 # searches the form is being posted for. It is named plainly, not through a
@@ -102,7 +103,7 @@ class CalendarEvent(BaseModel):
     :ivar hearing_time: The time as the calendar prints it, e.g. ``8:30 AM``.
         Empty when the courtroom gives no time.
     :ivar event: What the event is, e.g. ``Jury Trial``.
-    :ivar date_filed: The date the case was filed.
+    :ivar date_filed: The date the case was filed, when the row gives it.
     """
 
     case_number: str
@@ -135,19 +136,21 @@ def _hidden_state(tree: lxml_html.HtmlElement) -> dict[str, str]:
     }
 
 
-def _control_name(tree: lxml_html.HtmlElement, xpath: str, label: str) -> str:
-    """Find the posted name of one of the search form's controls.
+def _control(
+    tree: lxml_html.HtmlElement, xpath: str, label: str
+) -> lxml_html.HtmlElement:
+    """Find one of the search form's controls.
 
     :param tree: The parsed page the post is being built from.
     :param xpath: The xpath locating the control.
     :param label: What the control is, for the error message.
-    :return: The control's `name`.
+    :return: The control.
     :raises ValueError: If the page has no such control.
     """
     controls = tree.xpath(xpath)
     if not controls:
         raise ValueError(f"The calendar page has no {label}.")
-    return controls[0].get("name", "")
+    return controls[0]
 
 
 def build_disclaimer_form_data(page_html: str) -> dict[str, str]:
@@ -161,11 +164,9 @@ def build_disclaimer_form_data(page_html: str) -> dict[str, str]:
     :raises ValueError: If the page has no disclaimer button.
     """
     tree = lxml_html.fromstring(page_html)
-    button = tree.xpath(DISCLAIMER_XPATH)
-    if not button:
-        raise ValueError("The calendar page has no disclaimer button.")
+    button = _control(tree, DISCLAIMER_XPATH, "disclaimer button")
     data = _hidden_state(tree)
-    data[button[0].get("name", "")] = button[0].get("value", "I Agree")
+    data[button.get("name", "")] = button.get("value", "I Agree")
     return data
 
 
@@ -185,9 +186,9 @@ def build_department_list_form_data(
     :raises ValueError: If the page has no courthouse list.
     """
     tree = lxml_html.fromstring(page_html)
-    location_field = _control_name(
-        tree, LOCATION_SELECT_XPATH, "courthouse list"
-    )
+    location_field = _control(
+        tree, LOCATION_SELECT_XPATH, COURTHOUSE_LIST
+    ).get("name", "")
     data = _hidden_state(tree)
     data["__EVENTTARGET"] = location_field
     data["__EVENTARGUMENT"] = ""
@@ -217,20 +218,25 @@ def build_calendar_form_data(
     """
     tree = lxml_html.fromstring(page_html)
     data = _hidden_state(tree)
-    data[_control_name(tree, LOCATION_SELECT_XPATH, "courthouse list")] = (
-        location_value
+    searched = (
+        (LOCATION_SELECT_XPATH, COURTHOUSE_LIST, location_value),
+        (DEPARTMENT_SELECT_XPATH, "department list", department),
+        (DATE_FROM_XPATH, "start date", date_from.strftime(DATE_FORMAT)),
+        (DATE_TO_XPATH, "end date", date_to.strftime(DATE_FORMAT)),
     )
-    data[_control_name(tree, DEPARTMENT_SELECT_XPATH, "department list")] = (
-        department
-    )
-    data[_control_name(tree, DATE_FROM_XPATH, "start date")] = (
-        date_from.strftime(DATE_FORMAT)
-    )
-    data[_control_name(tree, DATE_TO_XPATH, "end date")] = date_to.strftime(
-        DATE_FORMAT
-    )
+    for xpath, label, value in searched:
+        data[_control(tree, xpath, label).get("name", "")] = value
     data[SEARCH_TYPE_FIELD] = DEPARTMENT_SEARCH
     return data
+
+
+def _text(element: lxml_html.HtmlElement) -> str:
+    """The element's text on one line.
+
+    :param element: The element.
+    :return: Its text, with runs of whitespace collapsed to single spaces.
+    """
+    return " ".join(element.text_content().split())
 
 
 def _parse_date(value: str) -> date | None:
@@ -327,27 +333,30 @@ class CalendarParser(LegacyParser[list[CalendarEvent]]):
         if not tables:
             return []
         events: list[CalendarEvent] = []
-        for row in tables[0].xpath(".//tr"):
-            cells = row.xpath("./td")
+        for row in tables[0].iter("tr"):
+            cells = row.findall("td")
             # The table opens with a header row, which has no `td` cells.
             if len(cells) < 6:
                 continue
             hearing_date = _parse_date(cells[0].text_content())
-            links = cells[3].xpath(".//a/@href")
-            number = CASE_NUMBER_RE.search(links[0]) if links else None
+            link = cells[3].find(".//a")
+            number = (
+                CASE_NUMBER_RE.search(link.get("href", ""))
+                if link is not None
+                else None
+            )
             if hearing_date is None or number is None:
                 logger.warning(
-                    "Skipping unreadable calendar row %r",
-                    " ".join(row.text_content().split()),
+                    "Skipping unreadable calendar row %r", _text(row)
                 )
                 continue
             events.append(
                 CalendarEvent(
                     case_number=number.group("case_number").strip(),
-                    case_name=" ".join(cells[4].text_content().split()),
+                    case_name=_text(cells[4]),
                     hearing_date=hearing_date,
-                    hearing_time=" ".join(cells[1].text_content().split()),
-                    event=" ".join(cells[2].text_content().split()),
+                    hearing_time=_text(cells[1]),
+                    event=_text(cells[2]),
                     date_filed=_parse_date(cells[5].text_content()),
                 )
             )

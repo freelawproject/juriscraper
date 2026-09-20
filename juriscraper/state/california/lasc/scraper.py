@@ -62,9 +62,9 @@ from juriscraper.state.california.lasc.case_summary import (
     CASE_SUMMARY_SEARCH_URL,
     CaseSummaryParser,
     LASCCaseSummary,
+    Refusal,
     build_case_search_form_data,
-    restricted_case_message,
-    search_result_message,
+    search_refusal,
 )
 from juriscraper.state.california.lasc.tentative_rulings import (
     TENTATIVE_RULINGS_URL,
@@ -225,14 +225,10 @@ class LASCScraper(BaseStateScraper):
         :raises requests.Timeout: If it never answers.
         :raises requests.ConnectionError: If the connection can't be made.
         """
-        kwargs = {} if data is None else {"data": data}
-        for attempt in range(1, MAX_ATTEMPTS + 1):
+        for attempt in range(1, MAX_ATTEMPTS):
             try:
-                response = self.request_manager.request(method, url, **kwargs)
-                response.raise_for_status()
+                return self._attempt(method, url, data)
             except (requests.Timeout, requests.ConnectionError):
-                if attempt == MAX_ATTEMPTS:
-                    raise
                 logger.warning(
                     "%s %s didn't answer on attempt %s of %s; trying again.",
                     method,
@@ -241,17 +237,27 @@ class LASCScraper(BaseStateScraper):
                     MAX_ATTEMPTS,
                 )
                 time.sleep(RETRY_WAIT_SECONDS * attempt)
-            else:
-                return self._decode(response)
-        # Unreachable: the last attempt either returns or re-raises.
-        raise AssertionError("The retry loop ended without an answer.")
+        return self._attempt(method, url, data)
+
+    def _attempt(
+        self, method: str, url: str, data: dict[str, str] | None
+    ) -> str:
+        """Make one request and read what comes back.
+
+        :param method: The HTTP method.
+        :param url: The URL to request.
+        :param data: The form fields to post, if any.
+        :return: The page the court answered with.
+        """
+        response = self.request_manager.request(method, url, data=data)
+        response.raise_for_status()
+        return self._decode(response)
 
     def _get(self, url: str) -> str:
         """Fetch a page.
 
         :param url: The URL to fetch.
         :return: The page.
-        :raises requests.HTTPError: If the court answers with an error status.
         """
         return self._request("GET", url)
 
@@ -262,7 +268,6 @@ class LASCScraper(BaseStateScraper):
         :param data: The form fields, as one of the parsers' `build_*` helpers
             built them.
         :return: The page the court answered with.
-        :raises requests.HTTPError: If the court answers with an error status.
         """
         return self._request("POST", url, data)
 
@@ -284,11 +289,10 @@ class LASCScraper(BaseStateScraper):
             CASE_SUMMARY_SEARCH_URL,
             build_case_search_form_data(search_page, case_number),
         )
-        # A restricted case is a notice with a message of its own, so it is
-        # recognized before the search page's message.
-        if notice := restricted_case_message(page):
-            raise LASCRestrictedCase(case_number, notice)
-        if message := search_result_message(page):
+        if refusal := search_refusal(page):
+            reason, message = refusal
+            if reason is Refusal.RESTRICTED:
+                raise LASCRestrictedCase(case_number, message)
             raise LASCCaseNotFound(case_number, message)
         return CaseSummaryParser(COURT_ID).parse(page)
 
@@ -450,20 +454,26 @@ class LASCScraper(BaseStateScraper):
             lists them. Empty when the courtroom has nothing scheduled in the
             range.
         """
-        page = self._select_courthouse(location)
-        self._calendar_page = self._post(
+        result = self._post(
             CIVIL_CALENDAR_URL,
             build_calendar_form_data(
-                page, location.value, department, date_from, date_to
+                self._select_courthouse(location),
+                location.value,
+                department,
+                date_from,
+                date_to,
             ),
         )
-        return CalendarParser(COURT_ID).parse(self._calendar_page)
+        # Kept because the next department's post is built from it.
+        self._calendar_page = result
+        return CalendarParser(COURT_ID).parse(result)
 
     @override
     def backfill(
         self,
         courts: list[str],
         date_range: tuple[date, date],
+        courthouses: list[str] | None = None,
     ) -> Generator[LASCCalendarRow, None, None]:
         """Name every case the court has scheduled, courtroom by courtroom.
 
@@ -481,9 +491,14 @@ class LASCScraper(BaseStateScraper):
         that names a case and its later events are dropped. A department whose
         calendar can't be read is logged and skipped.
 
-        :param courts: The courthouses to sweep, by the court's code, e.g.
-            ``LAM``. Empty sweeps every courthouse the calendar publishes.
+        :param courts: The court ids to sweep, as the base class means them.
+            This court is one court, `COURT_ID`, sitting in many courthouses,
+            so the only useful values are that id and an empty list, both of
+            which sweep the whole county. Pass `courthouses` to narrow it.
         :param date_range: The first and last day of hearings to include.
+        :param courthouses: The courthouses to sweep, by the court's code,
+            e.g. ``LAM``. `None` sweeps every courthouse the calendar
+            publishes.
         :return: One row per case.
         :raises ValueError: If the calendar no longer holds the controls its
             posts are built from.
@@ -496,7 +511,22 @@ class LASCScraper(BaseStateScraper):
                 date_to,
             )
 
-        wanted = {court.strip().upper() for court in courts if court.strip()}
+        if courts and COURT_ID not in {
+            court.strip().lower() for court in courts
+        }:
+            logger.warning(
+                "Not sweeping: %s is the only court here, and %s was asked "
+                "for.",
+                COURT_ID,
+                ", ".join(courts),
+            )
+            return
+
+        wanted = {
+            courthouse.strip().upper()
+            for courthouse in courthouses or []
+            if courthouse.strip()
+        }
         locations = [
             location
             for location in self.calendar_locations()
@@ -538,16 +568,11 @@ class LASCScraper(BaseStateScraper):
                         continue
                     seen.add(event.case_number)
                     yield LASCCalendarRow(
+                        **event.model_dump(),
                         case_url=urljoin(
                             CALENDAR_CASE_URL,
                             f"?caseNumber={event.case_number}",
                         ),
-                        case_number=event.case_number,
-                        case_name=event.case_name,
-                        hearing_date=event.hearing_date,
-                        hearing_time=event.hearing_time,
-                        event=event.event,
-                        date_filed=event.date_filed,
                         location_code=location.location_code,
                         courthouse=location.courthouse,
                         department=department,

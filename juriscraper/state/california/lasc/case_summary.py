@@ -4,7 +4,7 @@ The case summary search at `CASE_SUMMARY_SEARCH_URL` takes one case number at
 a time. Posting a number the court knows redirects to `CASE_SUMMARY_URL`,
 which shows that case to the same session; posting one it doesn't know
 returns the search page with a message instead (see
-`search_result_message`). It covers civil, small claims, family law and
+`search_refusal`). It covers civil, small claims, family law and
 probate cases.
 
 Both pages must be requested on the ``www`` host: the bare
@@ -14,6 +14,7 @@ Both pages must be requested on the ``www`` host: the bare
 import re
 from collections import defaultdict
 from datetime import date, datetime
+from enum import Enum
 
 from lxml import html as lxml_html
 from lxml.html import HtmlElement
@@ -295,40 +296,43 @@ def _messages(tree: HtmlElement) -> list[str]:
     return [text for message in messages if (text := _text(message))]
 
 
-def search_result_message(page_html: str) -> str | None:
-    """Read the message the search page shows when it doesn't redirect.
+class Refusal(Enum):
+    """Why a search gave back something other than a case summary."""
 
-    :param page_html: The response to a search post.
-    :return: The message, e.g. ``No match found for case number
-        25STCV99998.``, or `None` when the page shows none.
-    """
-    messages = _messages(lxml_html.fromstring(page_html))
-    return messages[0] if messages else None
+    NOT_FOUND = "not found"
+    """The court has no case with that number, or won't answer for it."""
+    RESTRICTED = "restricted"
+    """The case may only be viewed by its parties."""
 
 
-def restricted_case_message(page_html: str) -> str | None:
-    """Recognize the notice shown in place of a restricted case summary.
+def search_refusal(page_html: str) -> tuple[Refusal, str] | None:
+    """Recognize a page the search gave back in place of a case summary.
 
-    Some cases, such as confidential unlawful detainers, can only be viewed
-    with a court-issued access code or the parties' details, even when
-    their case number's litigation type is civil. The case summary redirects
-    to a notice and an access form for these instead of the summary.
+    A number the court knows redirects to the summary. One it doesn't comes
+    back as the search page with a message; a case only its parties may view
+    — a confidential unlawful detainer, say, which needs a court-issued
+    access code even though its number's litigation type is civil — comes
+    back as a notice and an access form. A restricted case carries a message
+    of its own, so it is recognized first.
 
-    :param page_html: The page the case summary redirected to.
-    :return: The court's explanation, e.g. ``Case Number 26STCV00002 is a
-        confidential Unlawful Detainer case.``, or its generic notice when it
-        gives none. `None` when the page isn't a restricted case notice.
+    :param page_html: The page the search post ended at.
+    :return: Why the court refused and what it said about it, e.g.
+        ``(Refusal.NOT_FOUND, "No match found for case number
+        25STCV99998.")``. `None` when the page is a case summary.
     """
     tree = lxml_html.fromstring(page_html)
+    messages = _messages(tree)
     notices = [
         message
-        for message in _messages(tree)
+        for message in messages
         if RESTRICTED_CASE_MARKER in message.lower()
     ]
-    if not notices:
-        return None
-    explanation = RESTRICTED_CASE_RE.search(_text(tree))
-    return explanation.group(0) if explanation else notices[0]
+    if notices:
+        explanation = RESTRICTED_CASE_RE.search(_text(tree))
+        return Refusal.RESTRICTED, (
+            explanation.group(0) if explanation else notices[0]
+        )
+    return (Refusal.NOT_FOUND, messages[0]) if messages else None
 
 
 class CaseSummaryParser(LegacyParser[LASCCaseSummary]):

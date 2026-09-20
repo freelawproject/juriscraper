@@ -63,9 +63,13 @@ CASE_NAME_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 CALENDAR_NUMBER_RE = re.compile(r"^#\s*(?P<number>\w+)\s*-\s*(?P<rest>.*)$")
-LEADING_CASE_NUMBER_RE = re.compile(
-    r"^(?:\d{2}[A-Z]{4}\d{5}|[A-Z]{2}\d{6})\s*[:\-–—]?\s+"
-)
+# A Los Angeles case number and the label courtrooms type in front of one.
+# Both are spelled once here and composed into the patterns below, so that a
+# court that starts writing them differently is one edit rather than five.
+LASC_CASE_NUMBER = r"\d{2}[A-Z]{4}\d{5}|[A-Z]{2}\d{6}"
+LASC_CASE_NUMBER_RE = re.compile(rf"^(?:{LASC_CASE_NUMBER})$")
+CASE_NUMBER_LABEL = r"Case\s*(?:No\.?|Number|#)"
+LEADING_CASE_NUMBER_RE = re.compile(rf"^(?:{LASC_CASE_NUMBER})\s*[:\-–—]?\s+")
 LEADING_BREAKS_RE = re.compile(r"^(?:\s|<br\b[^>]*>)+", re.IGNORECASE)
 TAG_RE = re.compile(r"<[^>]+>")
 COURTHOUSE_RE = re.compile(r"^\((?P<courthouse>.+?):\s+Dept\.")
@@ -82,39 +86,41 @@ LINE_BREAK_RE = re.compile(
     re.IGNORECASE,
 )
 HEADING_LINES = 25
-LASC_CASE_NUMBER = r"\d{2}[A-Z]{4}\d{5}|[A-Z]{2}\d{6}"
-LASC_CASE_NUMBER_RE = re.compile(rf"^(?:{LASC_CASE_NUMBER})$")
 LABELED_CASE_NUMBER_RE = re.compile(
-    r"\bCase\s*(?:No\.?|Number|#)\s*:?\s*#?\s*"
+    rf"\b{CASE_NUMBER_LABEL}\s*:?\s*#?\s*"
     rf"(?P<number>{LASC_CASE_NUMBER})\b",
     re.IGNORECASE,
 )
-# "CASE NAME: Chavez v. City of Rosemead", or the label alone on its line with
-# the name on the next.
+# "CASE NAME: Chavez v. City of Rosemead", or the label alone on its line
+# with the name on the next, which matches with an empty name.
 NAME_LABEL_RE = re.compile(
-    r"^(?:(?:Case\s*Name|Case|Caption)\s*:\s*(?P<name>.*)|Case\s+Name)$",
+    r"^(?:Case\s*Name\s*(?::|$)|(?:Case|Caption)\s*:)\s*(?P<name>.*)$",
     re.IGNORECASE,
 )
 LABEL_RE = re.compile(r"^[A-Za-z][A-Za-z .#/]{1,30}:")
 # Labels that some courtrooms type after the name on the same line.
 TRAILING_LABEL_RE = re.compile(
-    r"\s+(?:(?:COMPL?|PET)\.?\s+FILED|CASE\s*(?:NO\.?|NUMBER|#)|TRIAL\s+DATE"
+    rf"\s+(?:(?:COMPL?|PET)\.?\s+FILED|{CASE_NUMBER_LABEL}|TRIAL\s+DATE"
     r"|HEARING\s+DATE|DEPT\.?|JUDGE|MOVING\s+PART(?:Y|IES)"
     r"|RESPONDING\s+PART(?:Y|IES))\s*:.*$",
     re.IGNORECASE,
 )
 TRAILING_CASE_NUMBER_LABEL_RE = re.compile(
-    r"[\s,;]*Case\s*(?:No\.?|Number|#)\s*:?$", re.IGNORECASE
+    rf"[\s,;]*{CASE_NUMBER_LABEL}\s*:?$", re.IGNORECASE
 )
-# A lone capital "V" is left out: it is far more often a middle initial.
-VERSUS = r"\s(?:v|vs|v\.|vs\.|V\.|VS\.?|Vs\.?)\s"
+# What a case name is never: a case number, or a line with no letters in it.
+NOT_A_NAME_RE = re.compile(rf"(?:{LASC_CASE_NUMBER})|[\d\W]+")
+# A lone capital "V" is left out of the case-sensitive patterns below: it is
+# far more often a middle initial. `MATTER_SENTENCE_RE` folds case, so it
+# admits one.
+VERSUS = r"\s(?:vs?\.?|V\.|VS\.?|Vs\.?)\s"
 # "#4 - HERNANDEZ vs GM LLC", "25STCV15519 Jae Ho Son v. Cenocore, Inc." or
 # "LAKE HUGHES RECOVERY v. COUNTY OF LOS ANGELES [25STCV05368]".
 VERSUS_LINE_RE = re.compile(
     r"^(?:(?:No\.|#)\s*(?P<calendar_number>\d+)\s*[-–—:.]?\s*)?"
     rf"(?:(?:{LASC_CASE_NUMBER})\s*[:\-–—]?\s*)?"
     rf"(?P<name>\S.{{0,200}}?{VERSUS}.{{1,200}}?)"
-    r"(?:[\s,]*[\[(]?\s*(?:Case\s*(?:No\.?|Number|#)\s*:?\s*)?"
+    rf"(?:[\s,]*[\[(]?\s*(?:{CASE_NUMBER_LABEL}\s*:?\s*)?"
     rf"(?:{LASC_CASE_NUMBER})\s*[\])]?)?[\s,.;]*$"
 )
 # Lines that cite other cases, which name parties the same way.
@@ -139,7 +145,7 @@ CAPTION_NOISE_RE = re.compile(
     r"^(?:[\W_]+"
     r"|(?:Plaintiffs?|Petitioners?|Defendants?|Respondents?"
     r"|Cross-(?:Complainants?|Defendants?))\b.{0,40}"
-    rf"|Case\s*(?:No\.?|Number|#).*|{LASC_CASE_NUMBER}"
+    rf"|{CASE_NUMBER_LABEL}.*|{LASC_CASE_NUMBER}"
     r"|(?:Hearing|Trial)\s+(?:Date|Time).*|Dept\..*|Department\b.*)$",
     re.IGNORECASE,
 )
@@ -184,9 +190,11 @@ class TentativeRuling(BaseModel):
     :ivar department: The department that issued the ruling.
     :ivar calendar_number: The matter's position on the day's calendar, when
         the courtroom numbers its matters.
-    :ivar case_name: The case name as the courtroom typed it. Courtrooms lay
-        out their rulings in many ways, so this is a best effort, empty when
-        no name was found.
+    :ivar case_name: The case name, as close to how the courtroom gave it as
+        the layout allows. A courtroom that marks the name up as a name, or
+        labels it, is quoted; one that only prints a pleading caption has a
+        name built from it, shortened to the first party on each side. This
+        is a best effort, empty when no name was found.
     :ivar ruling_html: The ruling as the courtroom published it. This is
         unsanitized third-party HTML and must be cleaned before display.
     """
@@ -250,7 +258,7 @@ def _labeled_name(lines: list[str]) -> str:
             name = lines[index + 1]
         name = _tidy_name(TRAILING_LABEL_RE.sub("", name))
         # "Case: 24STCV01234" labels a number, not a name.
-        if name and not re.fullmatch(rf"(?:{LASC_CASE_NUMBER})|[\d\W]+", name):
+        if name and not NOT_A_NAME_RE.fullmatch(name):
             return name
     return ""
 

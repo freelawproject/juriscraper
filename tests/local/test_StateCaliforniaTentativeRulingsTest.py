@@ -11,38 +11,16 @@ from juriscraper.state.california.lasc.tentative_rulings import (
     build_department_form_data,
 )
 from tests import TESTS_ROOT_EXAMPLES_STATES
+from tests.local.lasc_pages import (
+    CASE_NAME_STYLE,
+    ruling_header,
+    rulings_page,
+)
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
 EXAMPLES = (
     TESTS_ROOT_EXAMPLES_STATES / "california" / "lasc" / "tentative_rulings"
 )
-
-CASE_NAME_STYLE = 'style="text-decoration: underline; font-weight: bold;"'
-
-
-def _header(
-    case_number: str = "24NNCV01819",
-    hearing_date: str = "September 14, 2026",
-    department: str = "X",
-) -> str:
-    """Build a ruling header the way the court prints one."""
-    return (
-        f"<B> Case Number: </B> {case_number}&nbsp;&nbsp;&nbsp;"
-        f"<B> Hearing Date: </B>  {hearing_date}&nbsp;&nbsp;&nbsp;"
-        f"<B> Dept: </B> {department}<P> "
-    )
-
-
-def _ruling_page(*rulings: str) -> str:
-    """Wrap rulings in the markup of a courtroom's rulings page."""
-    blocks = "".join(
-        f'<HR SIZE = 4 NOSHADE > <P>{ruling}<SPAN name="wp">'
-        for ruling in rulings
-    )
-    return (
-        '<html><body><div>Notice to litigants.<span name="wp"></span><BR>'
-        f"{blocks}<HR></div><p>Footer</p></body></html>"
-    )
 
 
 class LASCTentativeRulingsExampleTest(PacerParseTestCase):
@@ -70,8 +48,9 @@ class LASCTentativeRulingsParserTest(unittest.TestCase):
 
     def test_header_fields(self) -> None:
         [ruling] = self.parse(
-            _ruling_page(
-                _header("24nncv01819", "September  4, 2026", "309") + "Ruling."
+            rulings_page(
+                ruling_header("24nncv01819", "September  4, 2026", "309")
+                + "Ruling."
             )
         )
         self.assertEqual(ruling.case_number, "24NNCV01819")
@@ -109,10 +88,18 @@ class LASCTentativeRulingsParserTest(unittest.TestCase):
         for opening, (calendar_number, case_name) in cases.items():
             with self.subTest(opening=opening):
                 [ruling] = self.parse(
-                    _ruling_page(_header() + opening + "<br><br>Ruling.")
+                    rulings_page(ruling_header() + opening + "<br><br>Ruling.")
                 )
                 self.assertEqual(ruling.calendar_number, calendar_number)
                 self.assertEqual(ruling.case_name, case_name)
+
+    def test_a_label_with_nothing_after_it(self) -> None:
+        """A heading that ends on the bare label has no name to read, and
+        failing to read one mustn't cost the page every ruling on it."""
+        [ruling] = self.parse(rulings_page(ruling_header() + "Case Name"))
+
+        self.assertEqual(ruling.case_name, "")
+        self.assertEqual(ruling.case_number, "24NNCV01819")
 
     def test_typed_case_name_variants(self) -> None:
         """Courtrooms that don't underline the name type it into the ruling
@@ -173,7 +160,7 @@ class LASCTentativeRulingsParserTest(unittest.TestCase):
         for opening, (calendar_number, case_name) in cases.items():
             with self.subTest(opening=opening):
                 [ruling] = self.parse(
-                    _ruling_page(_header() + opening + "<p>Ruling.</p>")
+                    rulings_page(ruling_header() + opening + "<p>Ruling.</p>")
                 )
                 self.assertEqual(ruling.calendar_number, calendar_number)
                 self.assertEqual(ruling.case_name, case_name)
@@ -197,7 +184,7 @@ class LASCTentativeRulingsParserTest(unittest.TestCase):
         for (header_number, ruling), case_number in cases.items():
             with self.subTest(header_number=header_number, ruling=ruling):
                 [parsed] = self.parse(
-                    _ruling_page(_header(header_number) + ruling)
+                    rulings_page(ruling_header(header_number) + ruling)
                 )
                 self.assertEqual(parsed.case_number, case_number)
 
@@ -205,22 +192,22 @@ class LASCTentativeRulingsParserTest(unittest.TestCase):
         """A ruling ends at the site's separator, not at a rule inside it."""
         footnotes = '<hr align="left" size="1" width="33%"><p>[1] Note.</p>'
         first, last = self.parse(
-            _ruling_page(
-                _header("24NNCV01819")
+            rulings_page(
+                ruling_header("24NNCV01819")
                 + f"<span {CASE_NAME_STYLE}>#1 - A vs B</span><br><br>First."
                 + footnotes,
-                _header("26NNCV05273") + "<p>Last.</p>",
+                ruling_header("26NNCV05273") + "<p>Last.</p>",
             )
         )
         self.assertEqual(first.ruling_html, f"First.{footnotes}")
         self.assertEqual(last.ruling_html, "<p>Last.</p>")
 
     def test_page_without_rulings(self) -> None:
-        self.assertEqual(self.parse(_ruling_page()), [])
+        self.assertEqual(self.parse(rulings_page()), [])
 
     def test_empty_ruling_fails_validation(self) -> None:
-        page = _ruling_page(
-            _header() + f"<span {CASE_NAME_STYLE}>#1 - A vs B</span><br>"
+        page = rulings_page(
+            ruling_header() + f"<span {CASE_NAME_STYLE}>#1 - A vs B</span><br>"
         )
         with self.assertRaises(ParserValidationError):
             self.parse(page)

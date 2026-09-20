@@ -7,9 +7,9 @@ from juriscraper.abstract_parser import ParserValidationError
 from juriscraper.state.california.lasc.case_summary import (
     CaseSummaryParser,
     LASCCaseSummary,
+    Refusal,
     build_case_search_form_data,
-    restricted_case_message,
-    search_result_message,
+    search_refusal,
 )
 from juriscraper.state.docket import DocketEntryType
 from tests import TESTS_ROOT_EXAMPLES_STATES
@@ -194,12 +194,14 @@ class LASCCaseSummarySearchTest(unittest.TestCase):
             self.not_found = f.read()
 
     def test_not_found_message(self) -> None:
+        """A number the court doesn't know comes back as the search page and
+        a message rather than as a redirect."""
         self.assertEqual(
-            search_result_message(self.not_found),
-            "No match found for case number 25STCV99998.",
+            search_refusal(self.not_found),
+            (Refusal.NOT_FOUND, "No match found for case number 25STCV99998."),
         )
         with open(EXAMPLES / "lasc_case_summary_25STCV20242.html") as f:
-            self.assertIsNone(search_result_message(f.read()))
+            self.assertIsNone(search_refusal(f.read()))
 
     def test_search_form_data(self) -> None:
         data = build_case_search_form_data(self.not_found, "25STCV20242")
@@ -212,18 +214,20 @@ class LASCCaseSummarySearchTest(unittest.TestCase):
             build_case_search_form_data("<html><body></body></html>", "x")
 
     def test_restricted_case_notice(self) -> None:
-        """A confidential case's notice is recognized; a summary isn't."""
+        """A confidential case carries a message of its own, so it has to be
+        told apart from a case the court simply doesn't know."""
         with open(EXAMPLES / "restricted_26STCV00002.html") as f:
             restricted = f.read()
+
         self.assertEqual(
-            restricted_case_message(restricted),
-            "Case Number 26STCV00002 is a confidential Unlawful Detainer case.",
+            search_refusal(restricted),
+            (
+                Refusal.RESTRICTED,
+                "Case Number 26STCV00002 is a confidential Unlawful "
+                "Detainer case.",
+            ),
         )
         self.assertEqual(
-            search_result_message(restricted),
-            "You are not authorized to view this case. Please validate your "
-            "authorization.",
+            search_refusal(self.not_found)[0],  # type: ignore[index]
+            Refusal.NOT_FOUND,
         )
-        with open(EXAMPLES / "lasc_case_summary_25STCV20242.html") as f:
-            self.assertIsNone(restricted_case_message(f.read()))
-        self.assertIsNone(restricted_case_message(self.not_found))

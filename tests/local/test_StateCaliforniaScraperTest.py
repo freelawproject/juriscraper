@@ -15,10 +15,7 @@ from typing_extensions import override
 
 from juriscraper.state.BaseStateScraper import ScraperRequestManager
 from juriscraper.state.california.lasc import scraper as scraper_module
-from juriscraper.state.california.lasc.calendar import (
-    CIVIL_CALENDAR_URL,
-    CalendarLocation,
-)
+from juriscraper.state.california.lasc.calendar import CIVIL_CALENDAR_URL
 from juriscraper.state.california.lasc.case_summary import (
     CASE_SUMMARY_SEARCH_URL,
 )
@@ -31,14 +28,17 @@ from juriscraper.state.california.lasc.tentative_rulings import (
     TENTATIVE_RULINGS_URL,
 )
 from tests import TESTS_ROOT_EXAMPLES_STATES
+from tests.local.lasc_pages import (
+    DISCLAIMER_PAGE,
+    LOCATION,
+    calendar_page,
+    calendar_row,
+    ruling,
+    rulings_page,
+    rulings_search_page,
+)
 
 EXAMPLES = TESTS_ROOT_EXAMPLES_STATES / "california" / "lasc"
-
-LOCATION = CalendarLocation(
-    value="LAM;LA;Stanley Mosk Courthouse;111 North Hill Street",
-    location_code="LAM",
-    courthouse="Stanley Mosk Courthouse",
-)
 
 
 def _example(*parts: str) -> str:
@@ -92,112 +92,6 @@ def _scraper(*pages: str) -> tuple[LASCScraper, FakeRequestManager]:
     return LASCScraper(request_manager=manager), manager
 
 
-# -- The tentative rulings site ------------------------------------------
-
-
-def _ruling(
-    case_number: str = "24NNCV01819",
-    text: str = "Motion to compel is granted.",
-) -> str:
-    """One ruling as a courtroom publishes it."""
-    return (
-        f"<B> Case Number: </B> {case_number}&nbsp;&nbsp;&nbsp;"
-        "<B> Hearing Date: </B>  September 14, 2026&nbsp;&nbsp;&nbsp;"
-        f"<B> Dept: </B> X<P> {text}"
-    )
-
-
-def _rulings_page(*rulings: str) -> str:
-    """A courtroom's rulings page, which drops the courtroom list."""
-    blocks = "".join(
-        f'<HR SIZE = 4 NOSHADE > <P>{ruling}<SPAN name="wp">'
-        for ruling in rulings
-    )
-    return (
-        '<html><body><input type="hidden" name="__VIEWSTATE" value="state">'
-        f"<div>Notice to litigants.{blocks}<HR></div></body></html>"
-    )
-
-
-def _rulings_search_page(*options: str) -> str:
-    """The rulings search page, which lists every publishing courtroom."""
-    listed = "".join(
-        f'<option value="{value}">(Courthouse: Dept. {value})</option>'
-        for value in options
-    )
-    return f"""
-    <html><body><form>
-      <input type="hidden" name="__VIEWSTATE" value="state">
-      <select name="ctl00$body$List2DeptDate" id="body_List2DeptDate">
-        {listed}
-      </select>
-    </form></body></html>
-    """
-
-
-# -- The calendar site ---------------------------------------------------
-
-DISCLAIMER_PAGE = """
-<html><body><form>
-  <input type="hidden" name="__VIEWSTATE" value="first">
-  <input type="submit" name="ctl00$body$butDisclaimer"
-         id="body_butDisclaimer" value="I Agree">
-</form></body></html>
-"""
-
-
-def _calendar_row(
-    case_number: str = "23STCV04845",
-    event: str = "Jury Trial",
-) -> str:
-    """One row of a courtroom's calendar."""
-    return (
-        '<tr><td valign="top">09/21/2026</td><td valign="top">8:30 AM</td>'
-        f'<td valign="top">{event}</td><td valign="top">'
-        f'<a href="CalendarCase.aspx?caseNumber={case_number}">'
-        f"{case_number}</a></td>"
-        '<td valign="top">MOSLEY VS LA MONARCA BAKERY</td>'
-        '<td valign="top">03/06/2023</td></tr>'
-    )
-
-
-def _calendar_page(
-    *rows: str,
-    departments: tuple[str, ...] = (),
-    locations: tuple[CalendarLocation, ...] = (LOCATION,),
-) -> str:
-    """The calendar's search form, and whatever the last post returned.
-
-    Every page the site serves after the disclaimer carries the whole form,
-    which is what lets a courthouse's departments be swept from each result.
-    """
-    listed = "".join(
-        f'<option value="{location.value}">{location.courthouse}</option>'
-        for location in locations
-    )
-    options = "".join(f'<option value="{d}">{d}</option>' for d in departments)
-    results = (
-        f'<table id="body_calendarDeptDate_tblResults"><tr><th>Date</th></tr>'
-        f"{''.join(rows)}</table>"
-        if rows
-        else "There is no calendar for that department."
-    )
-    return f"""
-    <html><body><form id="lascwebform">
-      <input type="hidden" name="__VIEWSTATE" value="state">
-      <input type="hidden" name="Loc" value="LAM">
-      <input type="hidden" name="hdnType" value="">
-      <select name="ctl00$body$ddlLocation2" id="body_ddlLocation2">
-        <option value="">Select</option>{listed}
-      </select>
-      <select name="ctl00$body$ddlDept" id="body_ddlDept">{options}</select>
-      <input name="ctl00$body$dateFrom" id="body_dateFrom" value="">
-      <input name="ctl00$body$dateTo" id="body_dateTo" value="">
-      {results}
-    </form></body></html>
-    """
-
-
 class LASCRequestTest(unittest.TestCase):
     """Getting an answer out of sites that intermittently hang."""
 
@@ -205,7 +99,7 @@ class LASCRequestTest(unittest.TestCase):
         """The court's sites hang on a request they answer a moment later, and
         giving up on the first one would lose a whole courtroom's cases."""
         scraper, manager = _scraper(
-            _rulings_search_page("ALH,X,09/14/2026"),
+            rulings_search_page("ALH,X,09/14/2026"),
         )
         manager.failures = [requests.Timeout("hung")]
 
@@ -309,18 +203,18 @@ class LASCTentativeRulingsScraperTest(unittest.TestCase):
         """A rulings page carries ASP.NET's state but not the courtroom list,
         so the post can't be built from the page the last fetch returned."""
         scraper, manager = _scraper(
-            _rulings_search_page("ALH,X,09/14/2026"),
-            _rulings_page(_ruling()),
+            rulings_search_page("ALH,X,09/14/2026"),
+            rulings_page(ruling()),
         )
         [option] = scraper.tentative_ruling_options()
         manager.pages = [
-            _rulings_search_page("ALH,X,09/14/2026"),
-            _rulings_page(_ruling()),
+            rulings_search_page("ALH,X,09/14/2026"),
+            rulings_page(ruling()),
         ]
 
-        [ruling] = scraper.tentative_rulings(option)
+        [found] = scraper.tentative_rulings(option)
 
-        self.assertEqual(ruling.case_number, "24NNCV01819")
+        self.assertEqual(found.case_number, "24NNCV01819")
         self.assertEqual(
             manager.sequence[-2:],
             [
@@ -336,16 +230,16 @@ class LASCTentativeRulingsScraperTest(unittest.TestCase):
     def test_a_courtroom_whose_page_cant_be_read_is_skipped(self) -> None:
         """One courtroom's malformed rulings shouldn't cost a sweep the
         others, so a page that won't parse is logged and passed over."""
-        search_page = _rulings_search_page(
+        search_page = rulings_search_page(
             "ALH,X,09/14/2026", "LAM,534,09/15/2026"
         )
         scraper, _ = _scraper(
             search_page,
             # The first courtroom's ruling has a header but no text.
             search_page,
-            _rulings_page(_ruling(text="")),
+            rulings_page(ruling(text="")),
             search_page,
-            _rulings_page(_ruling(case_number="24STCV00001")),
+            rulings_page(ruling(case_number="24STCV00001")),
         )
 
         with self.assertLogs(level="WARNING"):
@@ -369,9 +263,9 @@ class LASCCalendarScraperTest(unittest.TestCase):
         the first thing asked of it."""
         scraper, manager = _scraper(
             DISCLAIMER_PAGE,
-            _calendar_page(),
-            _calendar_page(departments=("310",)),
-            _calendar_page(_calendar_row(), departments=("310",)),
+            calendar_page(departments=()),
+            calendar_page(departments=("310",)),
+            calendar_page(calendar_row(), departments=("310",)),
         )
 
         events = scraper.calendar(
@@ -400,10 +294,10 @@ class LASCCalendarScraperTest(unittest.TestCase):
         costs one post per department rather than a new session."""
         scraper, manager = _scraper(
             DISCLAIMER_PAGE,
-            _calendar_page(),
-            _calendar_page(departments=("310", "311")),
-            _calendar_page(_calendar_row(), departments=("310", "311")),
-            _calendar_page(_calendar_row(), departments=("310", "311")),
+            calendar_page(departments=()),
+            calendar_page(departments=("310", "311")),
+            calendar_page(calendar_row(), departments=("310", "311")),
+            calendar_page(calendar_row(), departments=("310", "311")),
         )
         scraper.calendar(LOCATION, "310", date(2026, 9, 21), date(2026, 9, 21))
 
@@ -417,18 +311,22 @@ class LASCCalendarScraperTest(unittest.TestCase):
         the cases, so its later events are dropped."""
         scraper, _ = _scraper(
             DISCLAIMER_PAGE,
-            _calendar_page(),
-            _calendar_page(departments=("310",)),
-            _calendar_page(
-                _calendar_row(event="Jury Trial"),
-                _calendar_row(event="Status Conference"),
-                _calendar_row(case_number="22STCV19043"),
+            calendar_page(departments=()),
+            calendar_page(departments=("310",)),
+            calendar_page(
+                calendar_row(event="Jury Trial"),
+                calendar_row(event="Status Conference"),
+                calendar_row(case_number="22STCV19043"),
                 departments=("310",),
             ),
         )
 
         rows = list(
-            scraper.backfill(["LAM"], (date(2026, 9, 21), date(2027, 9, 21)))
+            scraper.backfill(
+                LASCScraper.COURT_IDS,
+                (date(2026, 9, 21), date(2027, 9, 21)),
+                courthouses=["LAM"],
+            )
         )
 
         self.assertEqual(
@@ -450,17 +348,36 @@ class LASCCalendarScraperTest(unittest.TestCase):
     ) -> None:
         """A courthouse code that names nothing is worth saying out loud
         rather than quietly sweeping nothing."""
-        scraper, _ = _scraper(DISCLAIMER_PAGE, _calendar_page())
+        scraper, _ = _scraper(DISCLAIMER_PAGE, calendar_page())
 
         with self.assertLogs(level="WARNING") as logs:
             rows = list(
                 scraper.backfill(
-                    ["ZZZ"], (date(2026, 9, 21), date(2027, 9, 21))
+                    [],
+                    (date(2026, 9, 21), date(2027, 9, 21)),
+                    courthouses=["ZZZ"],
                 )
             )
 
         self.assertEqual(rows, [])
         self.assertIn("ZZZ", "\n".join(logs.output))
+
+    def test_backfill_takes_court_ids_like_its_base_class(self) -> None:
+        """`courts` means court ids, as it does for every other state
+        scraper, so sweeping this court's one id sweeps the county. A court
+        this scraper doesn't handle sweeps nothing, and says so."""
+        scraper, manager = _scraper()
+
+        with self.assertLogs(level="WARNING") as logs:
+            rows = list(
+                scraper.backfill(
+                    ["texas_cossup"], (date(2026, 9, 21), date(2027, 9, 21))
+                )
+            )
+
+        self.assertEqual(rows, [])
+        self.assertEqual(manager.calls, [])
+        self.assertIn("lasc is the only court", "\n".join(logs.output))
 
     def test_backfill_warns_that_a_past_range_names_nothing(self) -> None:
         """The calendar only covers hearings from today on, so a range that
@@ -468,7 +385,9 @@ class LASCCalendarScraperTest(unittest.TestCase):
         # The courthouse comes back with no departments, so the sweep of it
         # ends there.
         scraper, _ = _scraper(
-            DISCLAIMER_PAGE, _calendar_page(), _calendar_page()
+            DISCLAIMER_PAGE,
+            calendar_page(departments=()),
+            calendar_page(departments=()),
         )
 
         with self.assertLogs(level="WARNING") as logs:

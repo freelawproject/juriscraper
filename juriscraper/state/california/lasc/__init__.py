@@ -14,6 +14,8 @@ from .case_summary import (
     LASCHearing,
     LASCParty,
     LASCRepresentative,
+    Refusal,
+    search_refusal,
 )
 from .scraper import (
     COURT_ID,
@@ -47,9 +49,11 @@ __all__ = [
     "LASCParty",
     "LASCRepresentative",
     "LASCRestrictedCase",
+    "Refusal",
     "LASCScraper",
     "TentativeRuling",
     "TentativeRulingOption",
     "TentativeRulingOptionsParser",
     "TentativeRulingsParser",
+    "search_refusal",
 ]
