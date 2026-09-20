@@ -1,10 +1,10 @@
 import inspect
 import re
 import traceback
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Any
+from typing import Any, TypeVar
 
 from httpx import HTTPError
 
@@ -143,7 +143,15 @@ def clean_attribute(name: str, value: Any) -> Any:
     return value
 
 
-def previous_and_next(some_iterable):
+# TODO[Python3.12]: Replace with use of nice synta
+_IterableObjectT = TypeVar("_IterableObjectT")
+
+
+def previous_and_next(
+    some_iterable: Iterable[_IterableObjectT],
+) -> Iterable[
+    tuple[_IterableObjectT | None, _IterableObjectT, _IterableObjectT | None]
+]:
     """Provide previous and next values while iterating a list.
 
     This is from: http://stackoverflow.com/a/1012089/64911
@@ -151,6 +159,10 @@ def previous_and_next(some_iterable):
     This will allow you to lazily iterate a list such that as you iterate, you
     get a tuple containing the previous, current, and next value.
     """
+    prevs: Iterable[_IterableObjectT | None]
+    items: Iterable[_IterableObjectT]
+    nexts: Iterable[_IterableObjectT | None]
+
     prevs, items, nexts = tee(some_iterable, 3)
     prevs = chain([None], prevs)
     nexts = chain(islice(nexts, 1, None), [None])
