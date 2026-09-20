@@ -3431,13 +3431,6 @@
       "severity": "error"
     },
     {
-      "column": 9,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "bad-override",
-      "concise_description": "Class member `SCOTUSDocketReportHTM._build_docket_entry` overrides parent class `SCOTUSDocketReportHTML` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/state/RequestManager.py",
       "name": "bad-override",

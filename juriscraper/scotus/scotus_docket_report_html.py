@@ -1,6 +1,6 @@
 import re
 from collections import defaultdict
-from typing import Any
+from typing import Any, final
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -28,6 +28,7 @@ from ._scotus_docket_report_parsing import (
 logger = make_default_logger()
 
 
+@final
 class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     """Parse SCOTUS docket HTML."""
 

@@ -2,13 +2,14 @@ import re
 from collections import defaultdict
 from datetime import date
 from enum import Enum
-from typing import Any, TypedDict
+from typing import Any, TypedDict, final
 
 from lxml import html
 from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.lib.html_utils import (
+    clean_html,
     strip_bad_html_tags_insecure,
     table_to_array2d,
 )
@@ -27,7 +28,7 @@ from ._scotus_docket_report_parsing import (
     parse_address_title,
     parse_description_html,
 )
-from .scotus_docket_report_html import SCOTUSDocketReportHTML
+from .scotus_docket_report import SCOTUSDocketReport
 
 logger = make_default_logger()
 
@@ -57,7 +58,8 @@ class _Attorney(TypedDict):
     email: str | None
 
 
-class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
+@final
+class SCOTUSDocketReportHTM(SCOTUSDocketReport):
     """Parse SCOTUS docket HTM pages."""
 
     CONTACTS_TABLE_XPATH = (
@@ -78,9 +80,20 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         :return: None.
         """
         super().__init__(court_id=court_id)
+        self.tree: HtmlElement | None = None
         self._case_data_table: list[list[HtmlElement]] = []
         self._docket_entry_table: list[list[HtmlElement]] = []
         self._page_format: HTMPageFormat | None = None
+
+    @override
+    def _parse_text(self, text: str) -> None:
+        """Parse raw HTML and store a lxml tree.
+
+        :param text: The raw HTML unicode object.
+        :return: None
+        """
+        text = clean_html(text)
+        self.tree = html.fromstring(text or "")
 
     @override
     @property
@@ -259,7 +272,6 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         name = re.sub(r",?\s*v\.\s*$", "", name).strip()
         return name
 
-    @override
     def _build_docket_entry(
         self,
         date_str: str,
