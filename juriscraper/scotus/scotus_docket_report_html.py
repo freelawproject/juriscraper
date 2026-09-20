@@ -378,6 +378,8 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         :return: List of dicts containing parties data.
         """
+        if self.tree is None:
+            return []
         table = next(iter(self.tree.xpath("//table[@id='Contacts']")), None)
         if table is None:
             return []

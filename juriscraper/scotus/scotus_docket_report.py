@@ -161,6 +161,10 @@ class SCOTUSDocketReport:
 
         :return: List of docket entry dicts
         """
+        if not self._scotus_json:
+            logger.error("_parse_text() must be called first.")
+            return []
+
         entries = []
         for row in self._scotus_json.get("ProceedingsandOrder", []):
             links = row.get("Links", [])
@@ -225,6 +229,9 @@ class SCOTUSDocketReport:
             - name: Party name (from `PartyName`)
             - attorneys: List of attorney dictionaries.
         """
+        if not self._scotus_json:
+            logger.error("_parse_text() must be called first.")
+            return []
 
         type_parties = self._scotus_json.get(type_key, [])
         if not type_parties:
