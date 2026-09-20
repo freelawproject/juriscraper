@@ -30,7 +30,6 @@ The Media Access Portal, which needs credentials and covers far more, is a
 separate client in `juriscraper.lasc`.
 """
 
-import time
 from collections.abc import Generator
 from datetime import date
 from typing import Final
@@ -86,12 +85,18 @@ CALENDAR_CASE_URL: Final[str] = (
     "https://www.lacourt.ca.gov/CivilCalendar/ui/CalendarCase.aspx"
 )
 
-# How often a request that times out is tried again, and how long to wait
-# between tries. The court's sites are quick when they answer at all, so a
-# request that hangs for the full timeout has gone wrong rather than gotten
-# slow, and repeating it usually works.
+# How often a request that times out or is refused is made again. The
+# court's sites are quick when they answer at all, so a request that hangs
+# for the full timeout has gone wrong rather than gotten slow, and repeating
+# it usually works.
 MAX_ATTEMPTS: Final[int] = 3
-RETRY_WAIT_SECONDS: Final[float] = 2.0
+
+# Seconds to leave between requests. Sweeping the calendar is one request per
+# courtroom across some forty courthouses, and this is a county court's own
+# website rather than a state API built for bulk access, so it is swept at
+# walking pace. A caller who has agreed something else with the court passes
+# its own request manager.
+MIN_REQUEST_INTERVAL: Final[float] = 0.5
 
 
 class LASCCaseNotFound(JuriscraperException):
@@ -158,6 +163,32 @@ class LASCCalendarRow(HasCaseUrl):
     department: str
 
 
+class _CalendarSession:
+    """The calendar pages a courthouse's departments are searched from.
+
+    The site gates its search behind a disclaimer and fills its department
+    list from the chosen courthouse by postback, so reaching a courtroom's
+    calendar takes three posts before the search itself. Those pages are what
+    this holds: the search form once the disclaimer is accepted, and, once a
+    courthouse is chosen, that courthouse's page with its departments loaded.
+
+    Every department is then searched from that one page, rather than from
+    the calendar the last department returned. Both work — the result pages
+    carry the whole form too — but a result page runs to hundreds of rows and
+    re-reading one to build the next post costs more than the search does,
+    and searching from a fixed page leaves each department independent of the
+    one before it.
+
+    :ivar form: The search page, with the disclaimer accepted.
+    :ivar courthouse: The courthouse whose departments `form` has loaded, or
+        `None` before one is chosen.
+    """
+
+    def __init__(self, form: str) -> None:
+        self.form = form
+        self.courthouse: str | None = None
+
+
 class LASCScraper(BaseStateScraper):
     """Reads the Los Angeles Superior Court's three free sites.
 
@@ -170,6 +201,10 @@ class LASCScraper(BaseStateScraper):
 
     COURT_IDS: list[str] = [COURT_ID]
 
+    # The calendar names what is scheduled ahead, so there is no reaching
+    # back through it. See `backfill`.
+    BACKFILLS_HISTORY: bool = False
+
     def __init__(
         self,
         request_manager: ScraperRequestManager | None = None,
@@ -178,13 +213,23 @@ class LASCScraper(BaseStateScraper):
         """Initialize the scraper.
 
         :param request_manager: Optional `ScraperRequestManager` instance.
+            One is built paced and retrying if this is left out.
         :param kwargs: Additional arguments passed to the parent.
         """
-        super().__init__(request_manager=request_manager, **kwargs)
-        # The most recent calendar page, which the next calendar post is built
-        # from, and the courthouse whose departments it has loaded.
-        self._calendar_page: str | None = None
-        self._calendar_location: str | None = None
+        super().__init__(
+            request_manager=request_manager
+            or ScraperRequestManager(
+                min_request_interval=MIN_REQUEST_INTERVAL,
+                max_attempts=MAX_ATTEMPTS,
+            ),
+            **kwargs,
+        )
+        # Each site's session, built on the first request that needs it so
+        # that a scraper only ever asked for a case summary never loads the
+        # calendar.
+        self._case_search: str | None = None
+        self._rulings_search: str | None = None
+        self._calendar: _CalendarSession | None = None
 
     # -- Requests ---------------------------------------------------------
 
@@ -209,13 +254,10 @@ class LASCScraper(BaseStateScraper):
     def _request(
         self, method: str, url: str, data: dict[str, str] | None = None
     ) -> str:
-        """Make one request, trying again if the connection times out.
+        """Make one request and read the page it answers with.
 
-        The court's sites intermittently hang on a request they answer without
-        complaint a moment later. Every request made here reads a page or runs
-        a search, so repeating one changes nothing on the court's side, and a
-        calendar sweep that gave up on the first timeout would quietly lose a
-        whole courtroom's cases.
+        Pacing the request and repeating one the court doesn't answer are the
+        request manager's business; what is left here is reading the body.
 
         :param method: The HTTP method.
         :param url: The URL to request.
@@ -224,30 +266,6 @@ class LASCScraper(BaseStateScraper):
         :raises requests.HTTPError: If the court answers with an error status.
         :raises requests.Timeout: If it never answers.
         :raises requests.ConnectionError: If the connection can't be made.
-        """
-        for attempt in range(1, MAX_ATTEMPTS):
-            try:
-                return self._attempt(method, url, data)
-            except (requests.Timeout, requests.ConnectionError):
-                logger.warning(
-                    "%s %s didn't answer on attempt %s of %s; trying again.",
-                    method,
-                    url,
-                    attempt,
-                    MAX_ATTEMPTS,
-                )
-                time.sleep(RETRY_WAIT_SECONDS * attempt)
-        return self._attempt(method, url, data)
-
-    def _attempt(
-        self, method: str, url: str, data: dict[str, str] | None
-    ) -> str:
-        """Make one request and read what comes back.
-
-        :param method: The HTTP method.
-        :param url: The URL to request.
-        :param data: The form fields to post, if any.
-        :return: The page the court answered with.
         """
         response = self.request_manager.request(method, url, data=data)
         response.raise_for_status()
@@ -284,17 +302,39 @@ class LASCScraper(BaseStateScraper):
         :raises LASCRestrictedCase: If the case may only be viewed by its
             parties.
         """
-        search_page = self._get(CASE_SUMMARY_SEARCH_URL)
-        page = self._post(
-            CASE_SUMMARY_SEARCH_URL,
-            build_case_search_form_data(search_page, case_number),
-        )
+        try:
+            page = self._search_for_case(case_number)
+        except (requests.HTTPError, ValueError):
+            # The form's token outlives many searches but not the session it
+            # belongs to, and a page kept from a session the court has since
+            # forgotten is refused rather than answered.
+            logger.info("Renewing the case summary's search form.")
+            self._case_search = None
+            page = self._search_for_case(case_number)
         if refusal := search_refusal(page):
             reason, message = refusal
             if reason is Refusal.RESTRICTED:
                 raise LASCRestrictedCase(case_number, message)
             raise LASCCaseNotFound(case_number, message)
         return CaseSummaryParser(COURT_ID).parse(page)
+
+    def _search_for_case(self, case_number: str) -> str:
+        """Post one case number to the search form.
+
+        The form carries an anti-forgery token, which the court checks against
+        the session it was served to. One token covers as many searches as the
+        session lasts, so the page it came on is kept rather than fetched
+        again for every case.
+
+        :param case_number: The case number to look up.
+        :return: The page the search ended at.
+        """
+        if self._case_search is None:
+            self._case_search = self._get(CASE_SUMMARY_SEARCH_URL)
+        return self._post(
+            CASE_SUMMARY_SEARCH_URL,
+            build_case_search_form_data(self._case_search, case_number),
+        )
 
     # -- Tentative rulings ------------------------------------------------
 
@@ -307,8 +347,11 @@ class LASCScraper(BaseStateScraper):
 
         :return: One option per courtroom and hearing date.
         """
+        # Always fresh: which courtrooms are publishing is the thing being
+        # asked, and it changes through the day.
+        self._rulings_search = self._get(TENTATIVE_RULINGS_URL)
         return TentativeRulingOptionsParser(COURT_ID).parse(
-            self._get(TENTATIVE_RULINGS_URL)
+            self._rulings_search
         )
 
     def tentative_rulings(
@@ -316,18 +359,36 @@ class LASCScraper(BaseStateScraper):
     ) -> list[TentativeRuling]:
         """Fetch the rulings one courtroom published for one hearing date.
 
-        The rulings page carries ASP.NET's state but not the courtroom list,
-        so the post can't be built from the page a previous fetch returned and
-        the search page is loaded again here for each courtroom.
+        A rulings page carries ASP.NET's state but not the courtroom list, so
+        the next courtroom can't be asked for from the page this one returned.
+        The search page can, though: the court answers a postback built from
+        it for as long as the session lasts, so it is kept and posted from
+        again rather than fetched once per courtroom.
 
         :param option: The option to fetch, from `tentative_ruling_options`.
         :return: The courtroom's rulings for that date, in the order it
             published them. Empty when it published none.
         """
-        search_page = self._get(TENTATIVE_RULINGS_URL)
+        try:
+            return self._fetch_rulings(option)
+        except (requests.HTTPError, ValueError):
+            logger.info("Renewing the tentative rulings search page.")
+            self._rulings_search = None
+            return self._fetch_rulings(option)
+
+    def _fetch_rulings(
+        self, option: TentativeRulingOption
+    ) -> list[TentativeRuling]:
+        """Post one courtroom's option back to the search page.
+
+        :param option: The option to fetch.
+        :return: The courtroom's rulings for that date.
+        """
+        if self._rulings_search is None:
+            self._rulings_search = self._get(TENTATIVE_RULINGS_URL)
         page = self._post(
             TENTATIVE_RULINGS_URL,
-            build_department_form_data(search_page, option.value),
+            build_department_form_data(self._rulings_search, option.value),
         )
         return TentativeRulingsParser(COURT_ID).parse(page)
 
@@ -371,17 +432,15 @@ class LASCScraper(BaseStateScraper):
 
     # -- Calendar ---------------------------------------------------------
 
-    def _calendar_search_page(self) -> str:
+    def _calendar_session(self) -> _CalendarSession:
         """Open the calendar's search form, accepting its disclaimer.
 
-        The site shows the form only once the disclaimer is accepted. The page
-        that comes back is kept, because every later calendar post is built
-        from the last page the site returned.
+        The site shows the form only once the disclaimer is accepted.
 
-        :return: The search page.
+        :return: The session, ready for a courthouse to be chosen.
         """
-        if self._calendar_page is not None:
-            return self._calendar_page
+        if self._calendar is not None:
+            return self._calendar
         page = self._get(CIVIL_CALENDAR_URL)
         try:
             disclaimer = build_disclaimer_form_data(page)
@@ -391,8 +450,8 @@ class LASCScraper(BaseStateScraper):
             logger.debug("The calendar was served without its disclaimer.")
         else:
             page = self._post(CIVIL_CALENDAR_URL, disclaimer)
-        self._calendar_page = page
-        return page
+        self._calendar = _CalendarSession(page)
+        return self._calendar
 
     def _select_courthouse(self, location: CalendarLocation) -> str:
         """Choose a courthouse, which is what fills its department list.
@@ -400,16 +459,14 @@ class LASCScraper(BaseStateScraper):
         :param location: The courthouse to choose.
         :return: The search page, with the courthouse's departments loaded.
         """
-        page = self._calendar_search_page()
-        if self._calendar_location == location.value:
-            return page
-        page = self._post(
-            CIVIL_CALENDAR_URL,
-            build_department_list_form_data(page, location.value),
-        )
-        self._calendar_page = page
-        self._calendar_location = location.value
-        return page
+        session = self._calendar_session()
+        if session.courthouse != location.value:
+            session.form = self._post(
+                CIVIL_CALENDAR_URL,
+                build_department_list_form_data(session.form, location.value),
+            )
+            session.courthouse = location.value
+        return session.form
 
     def calendar_locations(self) -> list[CalendarLocation]:
         """List the courthouses whose calendars the site publishes.
@@ -419,7 +476,7 @@ class LASCScraper(BaseStateScraper):
             means the disclaimer wasn't accepted or the site changed.
         """
         return CalendarLocationsParser(COURT_ID).parse(
-            self._calendar_search_page()
+            self._calendar_session().form
         )
 
     def calendar_departments(self, location: CalendarLocation) -> list[str]:
@@ -464,8 +521,6 @@ class LASCScraper(BaseStateScraper):
                 date_to,
             ),
         )
-        # Kept because the next department's post is built from it.
-        self._calendar_page = result
         return CalendarParser(COURT_ID).parse(result)
 
     @override

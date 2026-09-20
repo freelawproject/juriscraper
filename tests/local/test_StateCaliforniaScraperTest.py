@@ -13,13 +13,15 @@ from unittest import mock
 import requests
 from typing_extensions import override
 
+from juriscraper.state import BaseStateScraper as base_module
 from juriscraper.state.BaseStateScraper import ScraperRequestManager
-from juriscraper.state.california.lasc import scraper as scraper_module
 from juriscraper.state.california.lasc.calendar import CIVIL_CALENDAR_URL
 from juriscraper.state.california.lasc.case_summary import (
     CASE_SUMMARY_SEARCH_URL,
 )
 from juriscraper.state.california.lasc.scraper import (
+    MAX_ATTEMPTS,
+    MIN_REQUEST_INTERVAL,
     LASCCaseNotFound,
     LASCRestrictedCase,
     LASCScraper,
@@ -51,6 +53,7 @@ class FakeResponse:
 
     def __init__(self, text: str) -> None:
         self.text = text
+        self.status_code = 200
         self.encoding = "utf-8"
         self.headers = {"Content-Type": "text/html; charset=utf-8"}
 
@@ -60,19 +63,21 @@ class FakeResponse:
 
 
 class FakeRequestManager(ScraperRequestManager):
-    """Answers requests from canned pages, in order, and records them."""
+    """Answers requests from canned pages, in order, and records them.
+
+    This replaces `_send`, the one place a request is really made, so the
+    pacing and retrying the manager does around it are still in play.
+    """
 
     def __init__(self, *pages: str) -> None:
-        super().__init__()
+        super().__init__(max_attempts=MAX_ATTEMPTS)
         self.pages = list(pages)
         self.calls: list[tuple[str, str, dict[str, str]]] = []
         # Exceptions to raise, one per request, before answering with a page.
         self.failures: list[Exception] = []
 
     @override
-    def request(
-        self, method: str, url: str, **kwargs: Any
-    ) -> requests.Response:
+    def _send(self, method: str, url: str, **kwargs: Any) -> requests.Response:
         self.calls.append((method, url, kwargs.get("data") or {}))
         if self.failures:
             raise self.failures.pop(0)
@@ -93,18 +98,31 @@ def _scraper(*pages: str) -> tuple[LASCScraper, FakeRequestManager]:
 
 
 class LASCRequestTest(unittest.TestCase):
-    """Getting an answer out of sites that intermittently hang."""
+    """Getting an answer out of sites that hang, without leaning on them."""
+
+    def test_the_scraper_paces_itself_and_tries_again(self) -> None:
+        """A sweep is a thousand requests to a county court's own website, so
+        the scraper it builds for itself waits between them and repeats one
+        the court doesn't answer."""
+        manager = LASCScraper().request_manager
+
+        self.assertEqual(manager.min_request_interval, MIN_REQUEST_INTERVAL)
+        self.assertEqual(manager.max_attempts, MAX_ATTEMPTS)
+
+    def test_a_caller_can_set_its_own_pace(self) -> None:
+        """A caller who has agreed something else with the court says so by
+        passing its own request manager."""
+        manager = ScraperRequestManager(min_request_interval=0)
+
+        self.assertIs(LASCScraper(manager).request_manager, manager)
 
     def test_a_request_that_times_out_is_made_again(self) -> None:
-        """The court's sites hang on a request they answer a moment later, and
-        giving up on the first one would lose a whole courtroom's cases."""
-        scraper, manager = _scraper(
-            rulings_search_page("ALH,X,09/14/2026"),
-        )
+        """A hang costs one request, not a courtroom's rulings."""
+        scraper, manager = _scraper(rulings_search_page("ALH,X,09/14/2026"))
         manager.failures = [requests.Timeout("hung")]
 
         with (
-            mock.patch.object(scraper_module.time, "sleep") as slept,
+            mock.patch.object(base_module.time, "sleep") as slept,
             self.assertLogs(level="WARNING"),
         ):
             options = scraper.tentative_ruling_options()
@@ -112,20 +130,6 @@ class LASCRequestTest(unittest.TestCase):
         self.assertEqual(len(options), 1)
         self.assertEqual(len(manager.calls), 2)
         slept.assert_called_once()
-
-    def test_a_site_that_never_answers_raises(self) -> None:
-        """Three hangs in a row is the site being down, not a hiccup."""
-        scraper, manager = _scraper()
-        manager.failures = [requests.Timeout("hung")] * 3
-
-        with (
-            mock.patch.object(scraper_module.time, "sleep"),
-            self.assertLogs(level="WARNING"),
-            self.assertRaises(requests.Timeout),
-        ):
-            scraper.tentative_ruling_options()
-
-        self.assertEqual(len(manager.calls), 3)
 
 
 class LASCCaseSummaryScraperTest(unittest.TestCase):
@@ -154,6 +158,57 @@ class LASCCaseSummaryScraperTest(unittest.TestCase):
         posted = manager.calls[1][2]
         self.assertEqual(posted["txtCaseNumber"], "25STCV20242")
         self.assertTrue(posted["__RequestVerificationToken"])
+
+    def test_one_token_serves_many_lookups(self) -> None:
+        """The token the form carries is good for as long as the session is,
+        so looking up a second case is one request, not two. At a case per
+        row of a county-wide calendar sweep, the saved request is the larger
+        half of the work."""
+        scraper, manager = _scraper(
+            self.SEARCH_PAGE,
+            _example("case_summary", "lasc_case_summary_25STCV20242.html"),
+            _example("case_summary", "lasc_case_summary_24STLC08093.html"),
+        )
+
+        first = scraper.case_summary("25STCV20242")
+        second = scraper.case_summary("24STLC08093")
+
+        self.assertEqual(first.docket_number, "25STCV20242")
+        self.assertEqual(second.docket_number, "24STLC08093")
+        self.assertEqual(
+            manager.sequence,
+            [
+                ("GET", CASE_SUMMARY_SEARCH_URL),
+                ("POST", CASE_SUMMARY_SEARCH_URL),
+                ("POST", CASE_SUMMARY_SEARCH_URL),
+            ],
+        )
+
+    def test_a_form_the_court_has_forgotten_is_fetched_again(self) -> None:
+        """A token outlives many searches but not its session, and a search
+        the court refuses is worth one more try with a fresh form."""
+        scraper, manager = _scraper(
+            self.SEARCH_PAGE,
+            _example("case_summary", "lasc_case_summary_24STLC08093.html"),
+            self.SEARCH_PAGE,
+            _example("case_summary", "lasc_case_summary_25STCV20242.html"),
+        )
+        scraper.case_summary("24STLC08093")
+        # The session lapses between one lookup and the next.
+        manager.failures = [requests.HTTPError("500 from a lost session")]
+
+        with self.assertLogs(level="INFO"):
+            case = scraper.case_summary("25STCV20242")
+
+        self.assertEqual(case.docket_number, "25STCV20242")
+        self.assertEqual(
+            manager.sequence[-3:],
+            [
+                ("POST", CASE_SUMMARY_SEARCH_URL),
+                ("GET", CASE_SUMMARY_SEARCH_URL),
+                ("POST", CASE_SUMMARY_SEARCH_URL),
+            ],
+        )
 
     def test_a_number_the_court_doesnt_know(self) -> None:
         """The court answers with the search page and a message instead of
@@ -199,32 +254,67 @@ class LASCTentativeRulingsScraperTest(unittest.TestCase):
         self.assertTrue(options)
         self.assertEqual(manager.sequence, [("GET", TENTATIVE_RULINGS_URL)])
 
-    def test_a_fetch_starts_from_a_freshly_loaded_search_page(self) -> None:
+    def test_every_courtroom_is_asked_for_from_the_one_search_page(
+        self,
+    ) -> None:
         """A rulings page carries ASP.NET's state but not the courtroom list,
-        so the post can't be built from the page the last fetch returned."""
+        so the next courtroom can't be asked for from the last one's page.
+        The search page can be posted from as often as the session lasts,
+        which is one request per courtroom rather than two."""
         scraper, manager = _scraper(
-            rulings_search_page("ALH,X,09/14/2026"),
+            rulings_search_page("ALH,X,09/14/2026", "LAM,534,09/15/2026"),
             rulings_page(ruling()),
+            rulings_page(ruling(case_number="24STCV00001")),
         )
-        [option] = scraper.tentative_ruling_options()
-        manager.pages = [
-            rulings_search_page("ALH,X,09/14/2026"),
-            rulings_page(ruling()),
-        ]
+        first, second = scraper.tentative_ruling_options()
 
-        [found] = scraper.tentative_rulings(option)
+        [one] = scraper.tentative_rulings(first)
+        [two] = scraper.tentative_rulings(second)
 
-        self.assertEqual(found.case_number, "24NNCV01819")
+        self.assertEqual(one.case_number, "24NNCV01819")
+        self.assertEqual(two.case_number, "24STCV00001")
         self.assertEqual(
-            manager.sequence[-2:],
+            manager.sequence,
             [
                 ("GET", TENTATIVE_RULINGS_URL),
+                ("POST", TENTATIVE_RULINGS_URL),
                 ("POST", TENTATIVE_RULINGS_URL),
             ],
         )
         self.assertEqual(
-            manager.calls[-1][2]["ctl00$body$List2DeptDate"],
-            "ALH,X,09/14/2026",
+            [
+                call[2]["ctl00$body$List2DeptDate"]
+                for call in manager.calls[1:]
+            ],
+            ["ALH,X,09/14/2026", "LAM,534,09/15/2026"],
+        )
+
+    def test_a_search_page_the_court_has_forgotten_is_fetched_again(
+        self,
+    ) -> None:
+        """A kept page outlives many posts but not the session it belongs to.
+        When the court refuses one built from a page it has forgotten, the
+        page is fetched again and the courtroom asked for once more."""
+        scraper, manager = _scraper(
+            rulings_search_page("ALH,X,09/14/2026"),
+            rulings_search_page("ALH,X,09/14/2026"),
+            rulings_page(ruling()),
+        )
+        [option] = scraper.tentative_ruling_options()
+        manager.failures = [requests.HTTPError("500 from a lost session")]
+
+        with self.assertLogs(level="INFO"):
+            [found] = scraper.tentative_rulings(option)
+
+        self.assertEqual(found.case_number, "24NNCV01819")
+        self.assertEqual(
+            manager.sequence,
+            [
+                ("GET", TENTATIVE_RULINGS_URL),
+                ("POST", TENTATIVE_RULINGS_URL),
+                ("GET", TENTATIVE_RULINGS_URL),
+                ("POST", TENTATIVE_RULINGS_URL),
+            ],
         )
 
     def test_a_courtroom_whose_page_cant_be_read_is_skipped(self) -> None:
@@ -236,9 +326,7 @@ class LASCTentativeRulingsScraperTest(unittest.TestCase):
         scraper, _ = _scraper(
             search_page,
             # The first courtroom's ruling has a header but no text.
-            search_page,
             rulings_page(ruling(text="")),
-            search_page,
             rulings_page(ruling(case_number="24STCV00001")),
         )
 
