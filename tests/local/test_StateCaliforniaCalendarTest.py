@@ -76,7 +76,9 @@ class LASCCalendarExampleTest(PacerParseTestCase):
         self.parse_files(EXAMPLES, "calendar_*.html", CalendarParser)
 
     def test_search_page(self) -> None:
-        self.parse_files(EXAMPLES, "search_form*.html", CalendarLocationsParser)
+        self.parse_files(
+            EXAMPLES, "search_form*.html", CalendarLocationsParser
+        )
 
 
 class LASCCalendarParserTest(unittest.TestCase):
@@ -104,12 +106,16 @@ class LASCCalendarParserTest(unittest.TestCase):
             _page(_row(event="Jury Trial"), _row(event="Status Conference"))
         )
 
-        self.assertEqual([e.event for e in events], ["Jury Trial", "Status Conference"])
+        self.assertEqual(
+            [e.event for e in events], ["Jury Trial", "Status Conference"]
+        )
         self.assertEqual({e.case_number for e in events}, {"23STCV04845"})
 
     def test_a_courtroom_with_nothing_scheduled(self) -> None:
         """The court answers an empty calendar with a message, not a table."""
-        page = "<html><body>There is no calendar for Department 20</body></html>"
+        page = (
+            "<html><body>There is no calendar for Department 20</body></html>"
+        )
 
         self.assertEqual(self.parse(page), [])
 
