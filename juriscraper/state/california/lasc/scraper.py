@@ -30,6 +30,7 @@ The Media Access Portal, which needs credentials and covers far more, is a
 separate client in `juriscraper.lasc`.
 """
 
+import time
 from collections.abc import Generator
 from datetime import date
 from typing import Final
@@ -84,6 +85,13 @@ COURT_ID: Final[str] = "lasc"
 CALENDAR_CASE_URL: Final[str] = (
     "https://www.lacourt.ca.gov/CivilCalendar/ui/CalendarCase.aspx"
 )
+
+# How often a request that times out is tried again, and how long to wait
+# between tries. The court's sites are quick when they answer at all, so a
+# request that hangs for the full timeout has gone wrong rather than gotten
+# slow, and repeating it usually works.
+MAX_ATTEMPTS: Final[int] = 3
+RETRY_WAIT_SECONDS: Final[float] = 2.0
 
 
 class LASCCaseNotFound(JuriscraperException):
@@ -198,6 +206,46 @@ class LASCScraper(BaseStateScraper):
             response.encoding = response.apparent_encoding
         return response.text
 
+    def _request(
+        self, method: str, url: str, data: dict[str, str] | None = None
+    ) -> str:
+        """Make one request, trying again if the connection times out.
+
+        The court's sites intermittently hang on a request they answer without
+        complaint a moment later. Every request made here reads a page or runs
+        a search, so repeating one changes nothing on the court's side, and a
+        calendar sweep that gave up on the first timeout would quietly lose a
+        whole courtroom's cases.
+
+        :param method: The HTTP method.
+        :param url: The URL to request.
+        :param data: The form fields to post, if any.
+        :return: The page the court answered with.
+        :raises requests.HTTPError: If the court answers with an error status.
+        :raises requests.Timeout: If it never answers.
+        :raises requests.ConnectionError: If the connection can't be made.
+        """
+        kwargs = {} if data is None else {"data": data}
+        for attempt in range(1, MAX_ATTEMPTS + 1):
+            try:
+                response = self.request_manager.request(method, url, **kwargs)
+                response.raise_for_status()
+            except (requests.Timeout, requests.ConnectionError):
+                if attempt == MAX_ATTEMPTS:
+                    raise
+                logger.warning(
+                    "%s %s didn't answer on attempt %s of %s; trying again.",
+                    method,
+                    url,
+                    attempt,
+                    MAX_ATTEMPTS,
+                )
+                time.sleep(RETRY_WAIT_SECONDS * attempt)
+            else:
+                return self._decode(response)
+        # Unreachable: the last attempt either returns or re-raises.
+        raise AssertionError("The retry loop ended without an answer.")
+
     def _get(self, url: str) -> str:
         """Fetch a page.
 
@@ -205,9 +253,7 @@ class LASCScraper(BaseStateScraper):
         :return: The page.
         :raises requests.HTTPError: If the court answers with an error status.
         """
-        response = self.request_manager.get(url)
-        response.raise_for_status()
-        return self._decode(response)
+        return self._request("GET", url)
 
     def _post(self, url: str, data: dict[str, str]) -> str:
         """Post a form and return the page it answers with.
@@ -218,9 +264,7 @@ class LASCScraper(BaseStateScraper):
         :return: The page the court answered with.
         :raises requests.HTTPError: If the court answers with an error status.
         """
-        response = self.request_manager.post(url, data=data)
-        response.raise_for_status()
-        return self._decode(response)
+        return self._request("POST", url, data)
 
     # -- Case summary -----------------------------------------------------
 

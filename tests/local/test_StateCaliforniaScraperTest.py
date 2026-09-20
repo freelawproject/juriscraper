@@ -8,11 +8,13 @@ insists on, and what it does with the pages they answer with.
 import unittest
 from datetime import date
 from typing import Any
+from unittest import mock
 
 import requests
 from typing_extensions import override
 
 from juriscraper.state.BaseStateScraper import ScraperRequestManager
+from juriscraper.state.california.lasc import scraper as scraper_module
 from juriscraper.state.california.lasc.calendar import (
     CIVIL_CALENDAR_URL,
     CalendarLocation,
@@ -64,12 +66,16 @@ class FakeRequestManager(ScraperRequestManager):
         super().__init__()
         self.pages = list(pages)
         self.calls: list[tuple[str, str, dict[str, str]]] = []
+        # Exceptions to raise, one per request, before answering with a page.
+        self.failures: list[Exception] = []
 
     @override
     def request(
         self, method: str, url: str, **kwargs: Any
     ) -> requests.Response:
         self.calls.append((method, url, kwargs.get("data") or {}))
+        if self.failures:
+            raise self.failures.pop(0)
         if not self.pages:
             raise AssertionError(f"Nothing left to answer {method} {url}.")
         return FakeResponse(self.pages.pop(0))  # type: ignore[return-value]
@@ -190,6 +196,42 @@ def _calendar_page(
       {results}
     </form></body></html>
     """
+
+
+class LASCRequestTest(unittest.TestCase):
+    """Getting an answer out of sites that intermittently hang."""
+
+    def test_a_request_that_times_out_is_made_again(self) -> None:
+        """The court's sites hang on a request they answer a moment later, and
+        giving up on the first one would lose a whole courtroom's cases."""
+        scraper, manager = _scraper(
+            _rulings_search_page("ALH,X,09/14/2026"),
+        )
+        manager.failures = [requests.Timeout("hung")]
+
+        with (
+            mock.patch.object(scraper_module.time, "sleep") as slept,
+            self.assertLogs(level="WARNING"),
+        ):
+            options = scraper.tentative_ruling_options()
+
+        self.assertEqual(len(options), 1)
+        self.assertEqual(len(manager.calls), 2)
+        slept.assert_called_once()
+
+    def test_a_site_that_never_answers_raises(self) -> None:
+        """Three hangs in a row is the site being down, not a hiccup."""
+        scraper, manager = _scraper()
+        manager.failures = [requests.Timeout("hung")] * 3
+
+        with (
+            mock.patch.object(scraper_module.time, "sleep"),
+            self.assertLogs(level="WARNING"),
+            self.assertRaises(requests.Timeout),
+        ):
+            scraper.tentative_ruling_options()
+
+        self.assertEqual(len(manager.calls), 3)
 
 
 class LASCCaseSummaryScraperTest(unittest.TestCase):
