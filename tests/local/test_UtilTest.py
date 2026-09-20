@@ -3,7 +3,7 @@
 
 import unittest
 
-from juriscraper.lib.utils import clean_court_object
+from juriscraper.lib.utils import clean_court_object, previous_and_next
 
 
 class UtilTest(unittest.TestCase):
@@ -64,3 +64,21 @@ class UtilTest(unittest.TestCase):
         self.assertEqual(clean_court_object(unclean_dict), clean_dict)
         self.assertEqual(clean_court_object(unclean_list), clean_list)
         self.assertEqual(clean_court_object(1234), 1234)
+
+    def test_previous_and_next(self):
+        input = [
+            1,
+            2,
+            3,
+            4
+        ]
+
+        expected = [
+            (None, 1, 2),
+            (1, 2, 3),
+            (2, 3, 4),
+            (3, 4, None),
+        ]
+
+        self.assertEqual(list(previous_and_next(input)), expected)
+
