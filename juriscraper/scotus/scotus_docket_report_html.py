@@ -7,10 +7,12 @@ import lxml.html
 from lxml import html
 from lxml.html import HtmlElement
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReport
+
+logger = make_default_logger()
 
 
 @dataclass

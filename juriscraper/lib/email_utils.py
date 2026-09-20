@@ -3,8 +3,10 @@ import email
 from lxml import html
 from lxml.html import HtmlElement
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html
+from juriscraper.lib.log_tools import make_default_logger
+
+logger = make_default_logger()
 
 
 def parse_email_html(text: str) -> HtmlElement | None:

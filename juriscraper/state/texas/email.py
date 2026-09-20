@@ -6,9 +6,11 @@ from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.abstract_parser import AbstractParser
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.email_utils import parse_email_html
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.texas.common import CourtID
+
+logger = make_default_logger()
 
 COURT_NAME_TO_ID = {
     "first court of appeals": CourtID.FIRST_COURT_OF_APPEALS.value,

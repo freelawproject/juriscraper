@@ -18,14 +18,12 @@ from urllib.parse import quote, urljoin
 
 from lxml import etree, html
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
-from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
-logger = make_default_logger()
 
 
 class Site(OpinionSiteLinear):

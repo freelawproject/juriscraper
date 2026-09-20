@@ -14,15 +14,17 @@ import requests
 from lxml import html
 from lxml.html import HtmlElement
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.email_utils import parse_email_html
 from juriscraper.lib.html_utils import clean_html
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     clean_string,
     harmonize,
     normalize_dashes,
 )
 from juriscraper.scotus import SCOTUSDocketReportHTML
+
+logger = make_default_logger()
 
 
 class SCOTUSEmailType(Enum):

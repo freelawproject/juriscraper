@@ -4,12 +4,10 @@
 import re
 from datetime import date, datetime
 
+from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.date_utils import unique_year_month
-from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.type_utils import OpinionType
-
-logger = make_default_logger()
 
 
 class Site(ClusterSite):
