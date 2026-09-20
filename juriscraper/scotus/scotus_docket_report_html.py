@@ -1,6 +1,6 @@
 import re
 from collections import defaultdict
-from typing import Any, final
+from typing import Never, final
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -27,6 +27,7 @@ from .scotus_docket_report_base import (
     Attachment,
     Attorney,
     DocketEntry,
+    Metadata,
     Party,
     SCOTUSDocketReportBase,
 )
@@ -54,7 +55,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
 
     @override
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> Metadata | dict[Never, Never]:
         """Return normalized docket metadata extracted from HTML.
 
         :return: A dict with the SCOTUS docket metadata.

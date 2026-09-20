@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from datetime import date
 from enum import Enum
-from typing import Any, TypedDict, final
+from typing import Never, TypedDict, final
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -31,6 +31,7 @@ from ._scotus_docket_report_parsing import (
 from .scotus_docket_report_base import (
     Attorney,
     DocketEntry,
+    Metadata,
     Party,
     SCOTUSDocketReportBase,
 )
@@ -89,7 +90,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
 
     @override
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> Metadata | dict[Never, Never]:
         """Return normalized metadata extracted from the HTM docket.
 
         :return: A dict with the SCOTUS docket metadata.

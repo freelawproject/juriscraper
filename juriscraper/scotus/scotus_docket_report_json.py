@@ -4,7 +4,7 @@ import re
 import sys
 from collections import defaultdict
 from collections.abc import Hashable
-from typing import Any, final
+from typing import Any, Never, final
 
 from typing_extensions import override
 
@@ -20,6 +20,7 @@ from .scotus_docket_report_base import (
     Attachment,
     Attorney,
     DocketEntry,
+    Metadata,
     Party,
     SCOTUSDocketReportBase,
 )
@@ -51,7 +52,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
     @override
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> Metadata | dict[Never, Never]:
         """Return normalized docket metadata.
         That function then supplements it with parties and docket entries.
 
