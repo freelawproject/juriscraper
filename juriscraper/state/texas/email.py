@@ -39,7 +39,7 @@ class TamesEmailData(TypedDict):
     url: str
 
 
-class TamesEmail(AbstractParser):
+class TamesEmail(AbstractParser[TamesEmailData | None]):
     """Parse TAMES case notification emails from Texas courts."""
 
     def __init__(self, court_id: str = "") -> None:
