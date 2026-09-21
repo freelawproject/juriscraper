@@ -1,0 +1,1698 @@
+{
+  "errors": [
+    {
+      "column": 46,
+      "path": "juriscraper/AbstractSite.py",
+      "name": "unbound-name",
+      "concise_description": "`s` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/fdsys/utils/get_xpath_results.py",
+      "name": "missing-module-attribute",
+      "concise_description": "Could not import `_ElementStringResult` from `lxml.etree`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/lasc/http.py",
+      "name": "bad-override",
+      "concise_description": "Class member `LASCSession.post` overrides parent class `Session` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 11,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "deprecated",
+      "concise_description": "`datetime.datetime.utcnow` is deprecated",
+      "severity": "warn"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 39,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/lib/date_utils.py",
+      "name": "unnecessary-type-conversion",
+      "concise_description": "Unnecessary `int()` call; argument is already of type `int`",
+      "severity": "warn"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/lib/email_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `Message` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 44,
+      "path": "juriscraper/lib/exceptions.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `exc_info` with type `BaseException | bool | tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None] | None` in function `logging.Logger.log`",
+      "severity": "error"
+    },
+    {
+      "column": 44,
+      "path": "juriscraper/lib/exceptions.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `stack_info` with type `bool` in function `logging.Logger.log`",
+      "severity": "error"
+    },
+    {
+      "column": 44,
+      "path": "juriscraper/lib/exceptions.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `stacklevel` with type `int` in function `logging.Logger.log`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal['#']` is not assignable to parameter `sep` with type `Buffer | None` in function `bytes.split`",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `findall`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/lib/microservices_utils.py",
+      "name": "bad-specialization",
+      "concise_description": "`URL` is not assignable to any of constraints `str`, `bytes` of type variable `AnyStr`",
+      "severity": "error"
+    },
+    {
+      "column": 57,
+      "path": "juriscraper/lib/microservices_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `encode`",
+      "severity": "error"
+    },
+    {
+      "column": 51,
+      "path": "juriscraper/lib/microservices_utils.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `url` with type `URL | str` in function `httpx._client.AsyncClient.get`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/lib/network_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "juriscraper/lib/network_utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
+      "severity": "error"
+    },
+    {
+      "column": 40,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unbound-name",
+      "concise_description": "`mac_or_mc` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unnecessary-type-conversion",
+      "concise_description": "Unnecessary `str()` call; argument is already of type `str`",
+      "severity": "warn"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str` is not assignable to parameter `object` with type `Buffer` in function `str.__new__`",
+      "severity": "error"
+    },
+    {
+      "column": 40,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "not-iterable",
+      "concise_description": "Type `Exception` is not iterable",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "not-iterable",
+      "concise_description": "Type `Exception` is not iterable",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `date` and `None`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `datetime` and `date`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `datetime` and `None`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `None` and `date`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `None` and `datetime`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `None` and `None`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unsupported-operation",
+      "concise_description": "`+` is not supported between `None` and `timedelta`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/lib/string_utils.py",
+      "name": "unnecessary-type-conversion",
+      "concise_description": "Unnecessary `int()` call; argument is already of type `int`",
+      "severity": "warn"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/lib/test_utils.py",
+      "name": "bad-assignment",
+      "concise_description": "`Unknown | None` is not assignable to attribute `_content` with type `bytes`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/lib/test_utils.py",
+      "name": "bad-assignment",
+      "concise_description": "`Unknown | None` is not assignable to attribute `headers` with type `Headers`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/lib/test_utils.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `value` with type `Request` in function `httpx._models.Response.request`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bia.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bia.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 44,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `Site` has no attribute `mock_url`",
+      "severity": "error"
+    },
+    {
+      "column": 19,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/opinions/united_states/administrative_agency/olc.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 52,
+      "path": "juriscraper/opinions/united_states/federal_bankruptcy/bap10.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/opinions/united_states/federal_bankruptcy/bap9.py",
+      "name": "bad-override",
+      "concise_description": "Class member `Site._download` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/federal_district/dcd.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `str | Any` is not assignable to declared return type `tuple[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/federal_special/tax.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/opinions/united_states/state/ariz.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/opinions/united_states/state/ariz.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/opinions/united_states/state/ariz.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 19,
+      "path": "juriscraper/opinions/united_states/state/ark.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/opinions/united_states/state/colo.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `tuple[date, date]` is not assignable to parameter `dates` with type `tuple[date] | None` in function `Site.update_url`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/state/colo.py",
+      "name": "bad-assignment",
+      "concise_description": "`tuple[datetime, datetime]` is not assignable to variable `dates` with type `tuple[date] | None`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/state/colo.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/opinions/united_states/state/colo.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/state/colo.py",
+      "name": "bad-index",
+      "concise_description": "Index 1 out of range for tuple with 1 elements",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/colo.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `tuple[date] | None` is not assignable to declared return type `tuple[date]`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/conn.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 40,
+      "path": "juriscraper/opinions/united_states/state/conn.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/opinions/united_states/state/conn.py",
+      "name": "unbound-name",
+      "concise_description": "`date_filed` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 42,
+      "path": "juriscraper/opinions/united_states/state/ky.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/masslandct.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `list[date | datetime | None]` is not assignable to declared return type `list[date]`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/state/masslandct.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `Site` has no attribute `download_urls`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/opinions/united_states/state/me.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/opinions/united_states/state/mont.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.setdefault` called with arguments: (Literal['Docket'], dict[@_, @_])",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/opinions/united_states/state/mont.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.setdefault` called with arguments: (Literal['OriginatingCourtInformation'], dict[@_, @_])",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/opinions/united_states/state/mont.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.setdefault` called with arguments: (Literal['OriginatingCourtInformation'], dict[@_, @_])",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/opinions/united_states/state/mont.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.setdefault` called with arguments: (Literal['Docket'], dict[@_, @_])",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/mont.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `bytes | str` is not assignable to declared return type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/nc.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, dict[@_, @_]])",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, dict[@_, @_]])",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/nd.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/opinions/united_states/state/nh_p.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/opinions/united_states/state/nh_p.py",
+      "name": "bad-override",
+      "concise_description": "Class member `Site.make_backscrape_iterable` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 57,
+      "path": "juriscraper/opinions/united_states/state/nh_p.py",
+      "name": "bad-return",
+      "concise_description": "Function declared to return `list[int]` but is missing an explicit `return`",
+      "severity": "error"
+    },
+    {
+      "column": 19,
+      "path": "juriscraper/opinions/united_states/state/nm.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/opinions/united_states/state/ny.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/opinions/united_states/state/ny.py",
+      "name": "unnecessary-type-conversion",
+      "concise_description": "Unnecessary `str()` call; argument is already of type `str`",
+      "severity": "warn"
+    },
+    {
+      "column": 36,
+      "path": "juriscraper/opinions/united_states/state/nytrial.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, dict[Unknown, Unknown]]`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/nytrial.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 51,
+      "path": "juriscraper/opinions/united_states/state/nytrial.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/opinions/united_states/state/nytrial.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/opinions/united_states/state/nytrial.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/state/nytrial.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/opinions/united_states/state/or.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, dict[str, str]]`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/opinions/united_states/state/pa.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `value`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/pa.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `Literal[OpinionType.COMBINED, OpinionType.CONCURRENCE, OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART, OpinionType.DISSENT, OpinionType.MAJORITY, OpinionType.UNANIMOUS]` is not assignable to declared return type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/opinions/united_states/state/sc.py",
+      "name": "bad-override",
+      "concise_description": "Class member `Site.make_backscrape_iterable` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 10,
+      "path": "juriscraper/opinions/united_states/state/sc.py",
+      "name": "bad-return",
+      "concise_description": "Function declared to return `list[tuple[date, date]]` but is missing an explicit `return`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/state/tex.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `lower`",
+      "severity": "error"
+    },
+    {
+      "column": 36,
+      "path": "juriscraper/opinions/united_states/state/tex.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `endswith`",
+      "severity": "error"
+    },
+    {
+      "column": 35,
+      "path": "juriscraper/opinions/united_states/state/tex.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `endswith`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/opinions/united_states/state/tex.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `endswith`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/opinions/united_states/state/tex.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `endswith`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/opinions/united_states/state/texapp.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 61,
+      "path": "juriscraper/opinions/united_states/state/texapp.py",
+      "name": "unbound-name",
+      "concise_description": "`date_string` is uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/opinions/united_states/state/texapp.py",
+      "name": "unsupported-operation",
+      "concise_description": "`-` is not supported between `datetime` and `date`",
+      "severity": "error"
+    },
+    {
+      "column": 39,
+      "path": "juriscraper/opinions/united_states/state/vt.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/state/vt.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/state/vt.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/state/vt.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/state/vt.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `str`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/state/wis.py",
+      "name": "bad-assignment",
+      "concise_description": "`str` is not assignable to variable `start` with type `date | None`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/opinions/united_states/state/wis.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/opinions/united_states/state/wva.py",
+      "name": "bad-assignment",
+      "concise_description": "`bool` is not assignable to dict value type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/state/wyo.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/opinions/united_states/state/wyo.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
+      "name": "bad-assignment",
+      "concise_description": "`list[str]` is not assignable to variable `judges` with type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
+      "name": "bad-assignment",
+      "concise_description": "`list[str]` is not assignable to variable `judges` with type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `str` is not assignable to declared return type `list[str]`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/opinions/united_states/territories/prapp.py",
+      "name": "bad-override",
+      "concise_description": "Class member `Site._download` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states_backscrapers/state/mass.py",
+      "name": "unsupported-operation",
+      "concise_description": "`<` is not supported between `datetime` and `str`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states_backscrapers/state/mass.py",
+      "name": "unsupported-operation",
+      "concise_description": "`<` is not supported between `str` and `datetime`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states_backscrapers/state/mass.py",
+      "name": "unsupported-operation",
+      "concise_description": "`<` is not supported between `None` and `datetime`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/opinions/united_states_backscrapers/state/mass.py",
+      "name": "unsupported-operation",
+      "concise_description": "`<` is not supported between `None` and `str`",
+      "severity": "error"
+    },
+    {
+      "column": 19,
+      "path": "juriscraper/opinions/united_states_backscrapers/state/mass.py",
+      "name": "bad-specialization",
+      "concise_description": "`datetime | str | None` is not assignable to upper bound `SupportsDunderGT[Any] | SupportsDunderLT[Any]` of type variable `SupportsRichComparisonT`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/oral_args/united_states/federal_appellate/ca9.py",
+      "name": "bad-override",
+      "concise_description": "Class member `Site._download` overrides parent class `OralArgumentSiteLinear` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 41,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "bad-override",
+      "concise_description": "Class member `ACMSAttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "bad-index",
+      "concise_description": "Cannot index into `Coroutine[Unknown, Unknown, dict[str, Any]]`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "bad-index",
+      "concise_description": "Cannot index into `Coroutine[Unknown, Unknown, dict[str, Any]]`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "bad-override",
+      "concise_description": "Class member `ACMSDocketReport.query` overrides parent class `AppellateDocketReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/appellate_attachment_page.py",
+      "name": "bad-override",
+      "concise_description": "Class member `AppellateAttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-override",
+      "concise_description": "Class member `AppellateDocketReport.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-override",
+      "concise_description": "Class member `AppellateDocketReport.download_pdf` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "bad-override",
+      "concise_description": "Class member `AttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "bad-override",
+      "concise_description": "Class member `CaseQuery.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/case_query_advanced.py",
+      "name": "bad-override",
+      "concise_description": "Class member `CaseQueryAdvancedBankruptcy.query` overrides parent class `BaseCaseQueryAdvanced` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 43,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | list[dict[str, str]] | str` is not assignable to parameter `docket_number` with type `str` in function `ClaimsActivity._parse_docket_number`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_pacer_claim_id_from_claim_url`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_number_from_claim_url`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_pacer_claim_id_from_claim_url`",
+      "severity": "error"
+    },
+    {
+      "column": 58,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_number_from_claim_url`",
+      "severity": "error"
+    },
+    {
+      "column": 59,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_doc_seq_from_claim_url`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `dict[str, date | datetime | None] | dict[str, str] | dict[str, None]` is not assignable to declared return type `dict[str, date | str | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-override",
+      "concise_description": "Class member `ClaimsActivity.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "bad-override",
+      "concise_description": "Class member `ClaimsRegister.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "bad-override",
+      "concise_description": "Class member `DocketHistoryReport.query` overrides parent class `DocketReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "bad-override",
+      "concise_description": "Class member `DocketReport.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "bad-override",
+      "concise_description": "Class member `DownloadConfirmationPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 47,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "unbound-name",
+      "concise_description": "`document_and_case_number` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "unbound-name",
+      "concise_description": "`docket_number` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `date | datetime` is not assignable to declared return type `str | None`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `date | datetime | None` is not assignable to declared return type `date`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/pacer/email.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 53,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-typed-dict-key",
+      "concise_description": "TypedDict `DocketEntryType` does not have key `short_description`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `list[dict[str, list[DocketEntryType] | str | None]]` is not assignable to declared return type `DocketType`",
+      "severity": "error"
+    },
+    {
+      "column": 49,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._get_description`",
+      "severity": "error"
+    },
+    {
+      "column": 48,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._get_doc1_anchor`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 65,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._get_document_number`",
+      "severity": "error"
+    },
+    {
+      "column": 50,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._get_case_anchor`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`str | None` is not assignable to dict key `pacer_doc_id` with type `None`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`str | None` is not assignable to dict key `pacer_magic_num` with type `None`",
+      "severity": "error"
+    },
+    {
+      "column": 47,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`str | None` is not assignable to dict key `pacer_case_id` with type `None`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `list[dict[str, date | str | Unknown | None]]` is not assignable to declared return type `list[DocketEntryType]`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `tuple[str | Any, ...] | None` is not assignable to declared return type `tuple[str | None, str] | None`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "bad-override",
+      "concise_description": "Class member `FreeOpinionReport.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "bad-override",
+      "concise_description": "Class member `PossibleCaseNumberApi.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "bad-override",
+      "concise_description": "Class member `ShowCaseDocApi.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "bad-override",
+      "concise_description": "Class member `AcmsCaseSearch.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/pacer/list_of_creditors.py",
+      "name": "not-iterable",
+      "concise_description": "`in` is not supported between `Literal['text/plain']` and `None`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/list_of_creditors.py",
+      "name": "bad-override",
+      "concise_description": "Class member `ListOfCreditors.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/mobile_query.py",
+      "name": "bad-override",
+      "concise_description": "Class member `MobileQuery.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `requests.models.Response` is not assignable to parameter `response` with type `httpx._models.Response` in function `juriscraper.lib.html_utils.is_html`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `pacer_case_id` with type `str` in function `BaseReport._query_pdf_download`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `int | None` is not assignable to parameter `pacer_doc_id` with type `str` in function `BaseReport._query_pdf_download`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `None` is not assignable to parameter `pacer_case_id` with type `str` in function `BaseReport._query_pdf_download`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `int | None` is not assignable to parameter `pacer_doc_id` with type `str` in function `BaseReport._query_pdf_download`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `(link: Unknown, keep_anchors: bool | Unknown = False) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
+      "severity": "error"
+    },
+    {
+      "column": 50,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "unbound-name",
+      "concise_description": "`req_timeout` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "bad-override",
+      "concise_description": "Class member `PacerRssFeed.query` overrides parent class `DocketReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `re.Pattern.search` called with arguments: (str | None)",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "bad-override",
+      "concise_description": "Class member `PacerRssFeed._get_case_name` overrides parent class `DocketReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 36,
+      "path": "juriscraper/pacer/utils.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 37,
+      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `groups`",
+      "severity": "error"
+    },
+    {
+      "column": 35,
+      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `groups`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
+      "name": "bad-override",
+      "concise_description": "Class member `SCOTUSDocketReportHTM._build_docket_entry` overrides parent class `SCOTUSDocketReportHTML` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/scotus/scotus_docket_report_html.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/state/RequestManager.py",
+      "name": "bad-override",
+      "concise_description": "Class member `RequestManager.request` overrides parent class `AsyncClient` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/state/RequestManager.py",
+      "name": "bad-override",
+      "concise_description": "Class member `RequestManager.send` overrides parent class `AsyncClient` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/state/florida/cases.py",
+      "name": "unknown-variable-type",
+      "concise_description": "The type of `parts` is unknown; it is inferred as an implicit `Any`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/state/florida/cases.py",
+      "name": "unknown-argument-type",
+      "concise_description": "The type of this argument is unknown",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/state/florida/docket_entries.py",
+      "name": "no-any-return-explicit",
+      "concise_description": "Returning Any from function declared to return \"DocketEntryType\"",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/state/florida/parties.py",
+      "name": "no-any-return-explicit",
+      "concise_description": "Returning Any from function declared to return \"PartyType\"",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/state/florida/scraper.py",
+      "name": "unreachable-match-case",
+      "concise_description": "Case pattern can never match subject of type `FloridaPaginatedResults[FloridaCase]`",
+      "severity": "warn"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `find`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `find`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `find`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `iterfind`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `table` with type `HtmlElement` in function `juriscraper.lib.html_utils.parse_table`",
+      "severity": "error"
+    },
+    {
+      "column": 35,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "bad-assignment",
+      "concise_description": "`HtmlElement | None` is not assignable to `HtmlElement`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 35,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasCaseEvent] | None` is not assignable to parameter `case_events` with type `list[TexasCaseEvent]` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasAppellateBrief] | None` is not assignable to parameter `appellate_briefs` with type `list[TexasAppellateBrief]` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `docket_number` with type `str` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | None` is not assignable to parameter `date_filed` with type `date` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_name` with type `str` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/state/texas/court_of_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_name_full` with type `str` in function `TexasCourtOfAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasCaseEvent] | None` is not assignable to parameter `case_events` with type `list[TexasCaseEvent]` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasAppellateBrief] | None` is not assignable to parameter `appellate_briefs` with type `list[TexasAppellateBrief]` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `docket_number` with type `str` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | None` is not assignable to parameter `date_filed` with type `date` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_name` with type `str` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_name_full` with type `str` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/state/texas/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `find`",
+      "severity": "error"
+    },
+    {
+      "column": 5,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-override-mutable-attribute",
+      "concise_description": "Class member `TexasSupremeCourtDocket.case_events` overrides parent class `TexasCommonData` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 5,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-override-mutable-attribute",
+      "concise_description": "Class member `TexasSupremeCourtDocket.appellate_briefs` overrides parent class `TexasCommonData` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-override",
+      "concise_description": "Class member `TexasSupremeCourtScraper.data` overrides parent class `TexasCommonScraper` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 41,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasCaseEvent] | None` is not assignable to parameter `iter2` with type `Iterable[TexasCaseEvent]` in function `zip.__new__`",
+      "severity": "error"
+    },
+    {
+      "column": 41,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasAppellateBrief] | None` is not assignable to parameter `iter2` with type `Iterable[TexasAppellateBrief]` in function `zip.__new__`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `docket_number` with type `str` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | None` is not assignable to parameter `date_filed` with type `date` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_type` with type `str` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[TexasCaseParty] | None` is not assignable to parameter `parties` with type `list[TexasCaseParty]` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `TexasOriginatingCourt | None` is not assignable to parameter `originating_court` with type `TexasOriginatingCourt` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_name` with type `str` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/state/texas/supreme_court.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `case_name_full` with type `str` in function `TexasSupremeCourtDocket.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 5,
+      "path": "juriscraper/state/texas/tames.py",
+      "name": "bad-override",
+      "concise_description": "Class member `TAMESScraper.COURT_IDS` overrides parent class `BaseStateScraper` in an inconsistent manner",
+      "severity": "error"
+    }
+  ]
+}

@@ -18,13 +18,42 @@ Features:
 -
 
 Changes:
-- Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
+- Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
+- Adopt explicit `@override` decorator in `/state/`.
+- Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- Tighten static type checking applied to `/state/`
+- Upgrade Pyrefly to v1.3.1
+-
 
 Fixes:
+- Updates to `.pyrefly-baseline.json` (2)
+- Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
+- Fix invalid type annotations for `texapp`.
+- Correct the return types of various `pacer` methods that may return `None`.
+- Corrections to docstrings across files.
+- Address outstanding type errors in `scotus_email`
+- Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
+- Fix handling of meta redirects with url-relative destinations
+-
+
+## 3.0.41 - 2026-09-14
+
+Features:
+-
+
+Changes:
+- Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- Introduce Phyrefly static type checking configuration for all files outside of tests.
+
+Fixes:
+- Accept `audio/mp3` content type for ca9 scraper. #2168
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
-- Fix handling of meta redirects with url-relative destinations
+- Fix `fla` (and the inheriting `fladistctapp_*` scrapers) now paginate the search results. #2150
+- Fix `ariz` (and the inheriting `arizctapp_div_1` scraper) now accept Word documents, which the court publishes for some decisions. #2167
 
 ## 3.0.40 - 2026-08-19
 

@@ -31,9 +31,7 @@ class Site(OralArgumentSiteLinear):
         self.needs_special_headers = True
         self.request.update(
             {
-                "headers": {
-                    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
-                },
+                "headers": {"User-Agent": self.chrome_user_agent},
             }
         )
 
@@ -72,14 +70,14 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
-    async def _download_backwards(self, d: date) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download a months' worth of oral arguments.
 
-        :param d: Date to download arguments starting from
+        :param dates: (start_date, end_date) tuple
         :return: None
         """
-        self.start_date, self.end_date = d
-        logger.info("Backscraping for range %s %s", *d)
+        self.start_date, self.end_date = dates
+        logger.info("Backscraping for range %s %s", *dates)
         self.html = await self._download()
         await self._process_html()
 
