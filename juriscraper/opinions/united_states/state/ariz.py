@@ -63,6 +63,10 @@ class Site(OpinionSiteLinear):
         self.opinions_url = (
             f"{self.base_url}/API/Azcourts/Opinions/GetOpinions"
         )
+        self.expected_content_types = [
+            "application/pdf",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ]
 
     def _build_api_url(
         self,

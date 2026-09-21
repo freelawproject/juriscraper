@@ -111,7 +111,7 @@ class Site(OpinionSiteLinear):
         """When backscraping, check if the case date is in
         the backscraping range
 
-        :param date_str: string date from the HTML source
+        :param case_date: string date from the HTML source
         :return: True if date is in backscrape range
         """
         return self.start_date <= case_date <= self.end_date

@@ -10,13 +10,17 @@ from typing import Generic, TypeVar
 
 from pydantic import BaseModel
 
+_DeserializableT = TypeVar("_DeserializableT", bound="Deserializable")
+
 
 class Deserializable(BaseModel):
     """Indicates a Pydantic model which can be deserialized from the output of
     a `model_dump` method."""
 
     @classmethod
-    def deserialize(cls, text: str) -> "Deserializable":
+    def deserialize(
+        cls: type[_DeserializableT], text: str
+    ) -> _DeserializableT:
         """Deserialize a JSON string into an instance of this model."""
         return cls.model_validate_json(
             text,

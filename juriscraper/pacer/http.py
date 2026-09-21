@@ -3,7 +3,8 @@ import json
 import re
 
 import requests
-from requests.packages.urllib3 import exceptions
+import urllib3
+from urllib3 import exceptions
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
@@ -16,7 +17,7 @@ from juriscraper.pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
 
-requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
+urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 # Compile the regex pattern once for efficiency.
 # This pattern captures the court_id (e.g., 'ca9', 'ca2') from the URL.

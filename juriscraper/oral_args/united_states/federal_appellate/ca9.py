@@ -38,6 +38,7 @@ class Site(OralArgumentSiteLinear):
             "application/octet-stream; charset=UTF-8",
             "binary/octet-stream",
             "audio/mpeg",
+            "audio/mp3",
             "audio/x-ms-wma",
         ]
         # AWS Cognito creds step:
