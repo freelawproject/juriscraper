@@ -52,7 +52,7 @@ async def test_for_meta_redirections(
             url = text[4:]
             if not url.startswith("http"):
                 # Relative URL, adapt
-                url = urljoin(r.url, url)
+                url = urljoin(str(r.url), url)
             return True, url
     except IndexError:
         return False, None
