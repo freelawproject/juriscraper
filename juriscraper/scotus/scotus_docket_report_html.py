@@ -525,7 +525,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: A ContactAddress object.
         """
 
-        address_lines = (
+        address_lines: list[str] = (
             lines[start_add_idx:] if start_add_idx < len(lines) else []
         )
 
