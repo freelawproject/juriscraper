@@ -193,18 +193,6 @@
       "severity": "error"
     },
     {
-      "line": 17,
-      "column": 1,
-      "stop_line": 17,
-      "stop_column": 2,
-      "path": "juriscraper/lib/html_utils.py",
-      "code": -2,
-      "name": "unused-type-ignore",
-      "description": "Unused `# type: ignore` comment",
-      "concise_description": "Unused `# type: ignore` comment",
-      "severity": "error"
-    },
-    {
       "line": 276,
       "column": 26,
       "stop_line": 276,
@@ -505,10 +493,10 @@
       "severity": "error"
     },
     {
-      "line": 145,
-      "column": 61,
-      "stop_line": 145,
-      "stop_column": 74,
+      "line": 147,
+      "column": 44,
+      "stop_line": 147,
+      "stop_column": 57,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "code": -2,
       "name": "missing-attribute",
@@ -517,9 +505,9 @@
       "severity": "error"
     },
     {
-      "line": 148,
+      "line": 155,
       "column": 19,
-      "stop_line": 148,
+      "stop_line": 155,
       "stop_column": 29,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "code": -2,
@@ -1489,15 +1477,51 @@
       "severity": "error"
     },
     {
-      "line": 110,
+      "line": 22,
+      "column": 41,
+      "stop_line": 22,
+      "stop_column": 54,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "code": -2,
+      "name": "bad-argument-type",
+      "description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`\n  The declared type does not allow `None`. Consider narrowing the value with an `is not None` check.",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
+      "severity": "error"
+    },
+    {
+      "line": 111,
       "column": 9,
-      "stop_line": 110,
+      "stop_line": 111,
       "stop_column": 14,
       "path": "juriscraper/pacer/acms_attachment_page.py",
       "code": -2,
       "name": "bad-override",
       "description": "Class member `ACMSAttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner\n  `ACMSAttachmentPage.query` has type `(self: ACMSAttachmentPage, case_id: str, entry_id: str) -> None`, which is not assignable to `(self: ACMSAttachmentPage, *args: Unknown, **kwargs: Unknown) -> Unknown`, the type of `BaseReport.query`\n  Signature mismatch:\n  expected: def query(self: ACMSAttachmentPage, *args: Unknown, **kwargs: Unknown) -> Unknown: ...\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^     ^^^^^^^ return type\n                                                |\n                                                parameters\n  found:    def query(self: ACMSAttachmentPage, case_id: str, entry_id: str) -> None: ...\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^     ^^^^ return type\n                                                |\n                                                parameters",
       "concise_description": "Class member `ACMSAttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "line": 138,
+      "column": 17,
+      "stop_line": 138,
+      "stop_column": 45,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "code": -2,
+      "name": "bad-index",
+      "description": "Cannot index into `Coroutine[Unknown, Unknown, dict[str, Any]]`\n  Object of class `Coroutine` has no attribute `__getitem__`",
+      "concise_description": "Cannot index into `Coroutine[Unknown, Unknown, dict[str, Any]]`",
+      "severity": "error"
+    },
+    {
+      "line": 151,
+      "column": 31,
+      "stop_line": 151,
+      "stop_column": 67,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "code": -2,
+      "name": "bad-index",
+      "description": "Cannot index into `Coroutine[Unknown, Unknown, dict[str, Any]]`\n  Object of class `Coroutine` has no attribute `__getitem__`",
+      "concise_description": "Cannot index into `Coroutine[Unknown, Unknown, dict[str, Any]]`",
       "severity": "error"
     },
     {
@@ -2389,9 +2413,9 @@
       "severity": "error"
     },
     {
-      "line": 452,
+      "line": 451,
       "column": 21,
-      "stop_line": 453,
+      "stop_line": 452,
       "stop_column": 39,
       "path": "juriscraper/state/florida/scraper.py",
       "code": -2,
@@ -2533,9 +2557,9 @@
       "severity": "error"
     },
     {
-      "line": 972,
+      "line": 985,
       "column": 38,
-      "stop_line": 972,
+      "stop_line": 985,
       "stop_column": 48,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2545,9 +2569,9 @@
       "severity": "error"
     },
     {
-      "line": 985,
+      "line": 998,
       "column": 33,
-      "stop_line": 985,
+      "stop_line": 998,
       "stop_column": 52,
       "path": "juriscraper/state/texas/common.py",
       "code": -2,
@@ -2833,9 +2857,9 @@
       "severity": "error"
     },
     {
-      "line": 90,
+      "line": 93,
       "column": 41,
-      "stop_line": 90,
+      "stop_line": 93,
       "stop_column": 67,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2845,9 +2869,9 @@
       "severity": "error"
     },
     {
-      "line": 99,
+      "line": 105,
       "column": 41,
-      "stop_line": 99,
+      "stop_line": 105,
       "stop_column": 72,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2857,9 +2881,9 @@
       "severity": "error"
     },
     {
-      "line": 109,
+      "line": 115,
       "column": 27,
-      "stop_line": 109,
+      "stop_line": 115,
       "stop_column": 55,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2869,9 +2893,9 @@
       "severity": "error"
     },
     {
-      "line": 110,
+      "line": 116,
       "column": 24,
-      "stop_line": 110,
+      "stop_line": 116,
       "stop_column": 49,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2881,9 +2905,9 @@
       "severity": "error"
     },
     {
-      "line": 111,
+      "line": 117,
       "column": 23,
-      "stop_line": 111,
+      "stop_line": 117,
       "stop_column": 47,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2893,9 +2917,9 @@
       "severity": "error"
     },
     {
-      "line": 112,
+      "line": 118,
       "column": 21,
-      "stop_line": 112,
+      "stop_line": 118,
       "stop_column": 43,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2905,9 +2929,9 @@
       "severity": "error"
     },
     {
-      "line": 113,
+      "line": 119,
       "column": 31,
-      "stop_line": 113,
+      "stop_line": 119,
       "stop_column": 63,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2917,9 +2941,9 @@
       "severity": "error"
     },
     {
-      "line": 114,
+      "line": 120,
       "column": 23,
-      "stop_line": 114,
+      "stop_line": 120,
       "stop_column": 47,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
@@ -2929,9 +2953,9 @@
       "severity": "error"
     },
     {
-      "line": 115,
+      "line": 121,
       "column": 28,
-      "stop_line": 115,
+      "stop_line": 121,
       "stop_column": 57,
       "path": "juriscraper/state/texas/supreme_court.py",
       "code": -2,
