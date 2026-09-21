@@ -28,10 +28,11 @@ class Site(OpinionSiteLinear):
             "court": self.court_parameter,
             "year": str(datetime.date.today().year),
         }
-        self.request["headers"]["User-Agent"] = (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
-            " (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
+        # The site's WAF answers 500 with a "Website Maintenance" page to
+        # user agents on its bot list, which includes "Juriscraper" and
+        # outdated browser versions, so `AbstractSite.chrome_version` needs
+        # to be bumped when the court starts failing again. See #2129
+        self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
         self.status = "Published"
         self.pages = {}
@@ -176,7 +177,9 @@ class Site(OpinionSiteLinear):
             (year, start, end) for year in range(start.year, end.year + 1)
         ]
 
-    async def _download_backwards(self, params: tuple) -> None:
+    async def _download_backwards(
+        self, params: tuple[int, datetime.date, datetime.date]
+    ) -> None:
         year, start, end = params
         logger.info("Backscraping %s for year %s", self.court_id, year)
 

@@ -149,7 +149,7 @@ class Site(ClusterSite):
         Gets opinion type, status, per curiam, author, judges, joined by, and may modify the name
 
         :param name: raw name
-        :param decision type: the source decision type
+        :param decision_type: the source decision type
         :return a parsed case dict
         """
         # defaults

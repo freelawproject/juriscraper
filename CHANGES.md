@@ -18,13 +18,118 @@ Features:
 -
 
 Changes:
+- Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
+- Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
+- Adopt explicit `@override` decorator in `/state/`.
+- Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- Tighten static type checking applied to `/state/`
+- Upgrade Pyrefly to v1.3.1
 -
+
+Fixes:
+- Updates to `.pyrefly-baseline.json` (2)
+- Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
+- Fix invalid type annotations for `texapp`.
+- Correct the return types of various `pacer` methods that may return `None`.
+- Corrections to docstrings across files.
+- Address outstanding type errors in `scotus_email`
+- Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
+-
+
+## 3.0.41 - 2026-09-14
+
+Features:
+-
+
+Changes:
+- Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- Introduce Phyrefly static type checking configuration for all files outside of tests.
+
+Fixes:
+- Accept `audio/mp3` content type for ca9 scraper. #2168
+- Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
+- Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
+- Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
+- Fix `fla` (and the inheriting `fladistctapp_*` scrapers) now paginate the search results. #2150
+- Fix `ariz` (and the inheriting `arizctapp_div_1` scraper) now accept Word documents, which the court publishes for some decisions. #2167
+
+## 3.0.40 - 2026-08-19
+
+Features:
+- NYCoA enums
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.39 - 2026-08-18
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- `fladistctapp` scrapers no longer crash when the source JSON returns null
+  for `note` or `disposition`. #2112
+
+## 3.0.38 - 2026-08-14
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Fix `miss` and `missctapp`, blocked by the source's WAF (#2129)
+- Fix `bia` and `olc` implementations of `download_content()`
+
+## 3.0.37 - 2026-08-13
+
+Features:
+-
+
+Changes:
+- Add a PR template with an AI Disclosure section.
 
 Fixes:
 - `titlecase()` no longer corrupts ordinary Mac- words ("Machine" →
   "MacHine", "Mack" → "MacK", "Macon" → "MacOn"): the surname rule now
   applies only to Mc- words, matching python-titlecase's fix for the same
   bug. Affected example fixtures regenerated. Fixes #2048.
+- Make Tames search more resilient against injected Bar numbers.
+- Fix `pa` backscraper: fixed a missing `await` that made them return zero results. #1860
+- Fix `sd` backscraper: fixed a missing `await` that made pagination recurse until `RecursionError`. #1860
+- Add sorting to FL paginated case detail endpoints (matching the values on the ACIS site) to prevent unstable results.
+
+## 3.0.36 - 2026-08-07
+
+Features:
+- Allow deserializing output of `model_dump_json` for Florida models.
+
+Changes:
+-
+
+Fixes:
+- `ca9` oral arguments: query and order the `media` table by the court's upload timestamp instead of the hearing date, so arguments uploaded late in the day, or long after the hearing, are no longer hidden behind items already in CourtListener. #2111
+
+## 3.0.35 - 2026-08-06
+
+Features:
+-
+
+Changes:
+- `ca5` opinions: scrape the court's opinion browser instead of the RSS feed, which adds `--backscrape` support and replaces the now deleted `united_states_backscrapers.federal_appellate.ca5` module. #2062
+- `ca5` oral arguments: ported to `OralArgumentSiteLinear`; now collects attorneys. #2062
+
+Fixes:
+- `ca5` opinion and oral argument scrapers: fixed for the court's website redesign. #2062
+- `titlecase()` no longer corrupts ordinary Mac- words. #2048
 
 ## 3.0.34 - 2026-07-30
 

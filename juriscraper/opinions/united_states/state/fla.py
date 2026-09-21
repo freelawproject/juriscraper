@@ -3,6 +3,8 @@
 # Court Short Name: fla
 
 from datetime import date, datetime, timedelta
+from math import ceil
+from typing import Any
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -11,23 +13,68 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    # make a backscrape request every `days_interval` range, to avoid pagination
     days_interval = 20
+    # Days to look back on a regular scrape, kept short to bound pagination
+    scrape_interval = 30
     first_opinion_date = datetime(1999, 9, 23)
-    # even though you can put whatever number you want as limit, 50 seems to be
-    # the max
-    base_url = "https://flcourts-media.flcourts.gov/_search/opinions/?limit=50&offset=0&query=&scopes[]={}&searchtype=opinions&siteaccess={}&startdate={}&enddate={}"
+    # you can put whatever number you want as limit, 100 seems to be the max
+    page_size = 100
+    base_url = "https://flcourts-media.flcourts.gov/_search/opinions/?limit={}&offset={}&query=&scopes[]={}&searchtype=opinions&siteaccess={}&startdate={}&enddate={}"
     scopes = "supreme_court"
     site_access = "supreme2"
     # Example built URL
-    # "https://flcourts-media.flcourts.gov/_search/opinions/?startdate=2025-07-01&limit=50&offset=0&query=&scopes[]=supreme_court&searchtype=opinions&siteaccess=supreme2&enddate=2026-01-01"
+    # "https://flcourts-media.flcourts.gov/_search/opinions/?limit=100&offset=0&query=&scopes[]=supreme_court&searchtype=opinions&siteaccess=supreme2&startdate=2025-07-01&enddate=2026-01-01"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
+
+    async def _download(
+        self, request_dict: dict | None = None
+    ) -> dict[str, Any]:
+        """Download every page of results for the current date range
+
+        The source returns results sorted by
+        `disposition_date desc, case_number asc`.
+
+        :param request_dict: passed through to the parent downloader
+        :return: the first page's JSON, with all the pages' `searchResults`
+        """
+        first_page = await super()._download(request_dict)
+        if self.test_mode_enabled():
+            return first_page
+
+        total_count = first_page["totalCount"]
+        results = first_page["searchResults"]
+        first_page_url = self.url
+
+        for page in range(1, ceil(total_count / self.page_size)):
+            self.url = self.build_url(page * self.page_size)
+            page_results = (await super()._download(request_dict))[
+                "searchResults"
+            ]
+            results.extend(page_results)
+
+            if len(page_results) < self.page_size:
+                # Last page of results; a further offset returns 404
+                break
+
+        if len(results) < total_count:
+            logger.error(
+                "%s: got %s of %s results reported by the source for %s. Some opinions were not scraped",
+                self.court_id,
+                len(results),
+                total_count,
+                first_page_url,
+            )
+
+        self.url = first_page_url
+        first_page["searchResults"] = results
+
+        return first_page
 
     def _process_html(self) -> None:
         """Parses HTML into case dictionaries
@@ -37,7 +84,10 @@ class Site(OpinionSiteLinear):
         json = self.html
         for row in json["searchResults"]:
             fields = row["content"]["fields"]
-            if (fields.get("note", "") or "") in ("Notice of Correction",):
+            # `note` and `disposition` may come back as JSON null, in which
+            # case `fields.get(..., "")` returns None instead of the default
+            note = fields.get("note", "") or ""
+            if note in ("Notice of Correction",):
                 logger.info("Skipping non-opinion document %s", fields)
                 continue
 
@@ -58,9 +108,7 @@ class Site(OpinionSiteLinear):
                     "date": fields["disposition_date"]["date"]["date"].split(
                         " "
                     )[0],
-                    "disposition": self.get_disposition(
-                        disposition, fields.get("note", "")
-                    ),
+                    "disposition": self.get_disposition(disposition, note),
                     "status": self.status,
                     "per_curiam": "per curiam" in disposition.lower(),
                 }
@@ -88,24 +136,36 @@ class Site(OpinionSiteLinear):
     def set_url(
         self, start: date | None = None, end: date | None = None
     ) -> None:
-        """Sets URL using date arguments
+        """Sets the first page URL using date arguments
 
-        If not dates are passed, get 50 most recent opinions
-
-        :param start: start date
-        :param end: end date
+        :param start: start date; defaults to `scrape_interval` days before
+            the end date
+        :param end: end date; defaults to today
         :return: none
         """
-        if not start:
+        if not end:
             end = datetime.today()
-            start = end - timedelta(days=365)
+        if not start:
+            start = end - timedelta(days=self.scrape_interval)
 
+        self.start_date = start
+        self.end_date = end
+        self.url = self.build_url()
+
+    def build_url(self, offset: int = 0) -> str:
+        """Builds the URL of a single results page
+
+        :param offset: index of the first result to return.
+        :return: the page URL
+        """
         fmt = "%Y-%m-%d"
-        self.url = self.base_url.format(
+        return self.base_url.format(
+            self.page_size,
+            offset,
             self.scopes,
             self.site_access,
-            start.strftime(fmt),
-            end.strftime(fmt),
+            self.start_date.strftime(fmt),
+            self.end_date.strftime(fmt),
         )
 
     async def _download_backwards(self, dates: tuple[date, date]) -> None:

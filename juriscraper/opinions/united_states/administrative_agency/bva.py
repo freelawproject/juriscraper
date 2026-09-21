@@ -140,10 +140,17 @@ class Site(OpinionSiteLinear):
         # BVA .txt files use Windows-1252 encoding for special
         # characters like § (section sign).  download_content
         # returns bytes; we decode after.
-        download_kwargs = {"doctor_is_available": False}
         if self.test_mode_enabled():
-            download_kwargs["media_root"] = os.path.dirname(self.mock_url)
-        raw = await self.download_content(url, **download_kwargs)
+            raw = await self.download_content(
+                download_url=url,
+                doctor_is_available=False,
+                media_root=os.path.dirname(self.mock_url),
+            )
+        else:
+            raw = await self.download_content(
+                download_url=url,
+                doctor_is_available=False,
+            )
 
         content = raw.decode("cp1252")
 

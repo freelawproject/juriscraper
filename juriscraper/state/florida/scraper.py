@@ -422,28 +422,27 @@ class FloridaScraper:
                         end,
                     )
                     continue
-                case FloridaPaginatedResults(page=page) if (
-                    page.total_elements >= MAX_RESULTS
-                ):
-                    if start < end:
-                        # Split the range in half and re-queue.
-                        mid = start + (end - start) // 2
-                        logger.info(
-                            "Splitting court %s range %s..%s (totalElements=%d)",
-                            court_external_id,
-                            start,
-                            end,
-                            response.page.total_elements,
+                case FloridaPaginatedResults(page=page):
+                    if page.total_elements >= MAX_RESULTS:
+                        if start < end:
+                            # Split the range in half and re-queue.
+                            mid = start + (end - start) // 2
+                            logger.info(
+                                "Splitting court %s range %s..%s (totalElements=%d)",
+                                court_external_id,
+                                start,
+                                end,
+                                response.page.total_elements,
+                            )
+                            # Date ranges here should stay in reverse chronological order to ensure results are scraped in _chronological_ order
+                            stack.append((mid + timedelta(days=1), end))
+                            stack.append((start, mid))
+                            continue
+                        # Should be unreachable but who knows.
+                        raise InsanityException(
+                            "Single-day query for court %s on %s hit the %d-result cap."
+                            % (court_id, start, MAX_RESULTS)
                         )
-                        # Date ranges here should stay in reverse chronological order to ensure results are scraped in _chronological_ order
-                        stack.append((mid + timedelta(days=1), end))
-                        stack.append((start, mid))
-                        continue
-                    # Should be unreachable but who knows.
-                    raise InsanityException(
-                        "Single-day query for court %s on %s hit the %d-result cap."
-                        % (court_id, start, MAX_RESULTS)
-                    )
 
             i = 0
             total = max(response.page.total_elements, 1)
@@ -536,6 +535,7 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             parties_parser.endpoint.format(court=court_uuid, case=case_uuid),
             parties_parser,
+            params={"sort": "partyNumber,asc"},
         )
         (
             output_case.entries,
@@ -543,6 +543,9 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             de_parser.endpoint.format(court=court_uuid, case=case_uuid),
             de_parser,
+            params={
+                "sort": "docketEntryHeader.filedDate,desc,docketEntryHeader.docketEntryUUID,asc"
+            },
         )
         (
             output_case.arguments,
@@ -550,6 +553,7 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             arguments_parser.endpoint.format(court=court_uuid, case=case_uuid),
             arguments_parser,
+            params={"sort": "startDate,asc"},
         )
 
         da_parser = FloridaDocumentAccessParser(court_id=court_id)

@@ -8,6 +8,7 @@ from pydantic import (
     BeforeValidator,
     Field,
 )
+from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -61,15 +62,20 @@ FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
 }
 
 
-def florida_entry_type_validator(value: Any) -> DocketEntryType:
+def florida_entry_type_validator(
+    value: Any, info: ValidationInfo
+) -> DocketEntryType:
     """
     Validates and converts a Florida docket entry type string to a
     DocketEntryType enum value.
 
     :param value: The docket entry type string from the API response.
+    :param info: Pydantic validation info.
 
     :return: The corresponding DocketEntryType enum value.
     """
+    if info.context and info.context.get("deserialize"):
+        return value
     s = str(value).lower()
     if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
         logger.error("Unrecognized Florida docket entry type: %s", s)
@@ -217,7 +223,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
         validation_alias=AliasPath("docketEntryHeader", "compositeSecurity")
     )
     submitted_by: list[FloridaCaseActor] = Field(
-        validation_alias="submittedBy", default=[]
+        validation_alias="submittedBy",
+        default_factory=list,
     )
     attachments: list[FloridaDocument] = []
 

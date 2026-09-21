@@ -262,4 +262,4 @@ class Site(ClusterSite):
         self.url = f"{self.base_url}{urlencode(self.params)}"
         logger.info("Backscraping for range %s %s", *dates)
         self.html = await self._download()
-        self._process_html()
+        await self._process_html()

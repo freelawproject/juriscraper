@@ -26,9 +26,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
         self.needs_special_headers = True
-        self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
-        }
+        self.request["headers"] = {"User-Agent": self.chrome_user_agent}
 
     def _process_html(self):
         for row in self.html.xpath(
