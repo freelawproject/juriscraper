@@ -341,7 +341,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             ("Other Attorneys", "Other"),
         ]
 
-        parties: list[dict] = []
+        parties: list[dict[str, Any]] = []
 
         for heading_text, type_key in sections:
             section_root = self._section_by_heading(heading_text)
@@ -390,7 +390,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         if table is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list] = defaultdict(list)
+        parties_by_key: dict[tuple[str, str], list[dict[str, Any]]] = (
+            defaultdict(list)
+        )
         current_type = None
         rows = table.xpath(".//tr[td]")
         for i, tr in enumerate(rows):
