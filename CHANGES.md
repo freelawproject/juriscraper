@@ -26,6 +26,7 @@ Changes:
 -
 
 Fixes:
+- Fix TAMES (Texas). Remove WAF poison string.
 - Updates to `.pyrefly-baseline.json` (2)
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 - Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
