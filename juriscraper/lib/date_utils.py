@@ -94,7 +94,7 @@ def timetoken(token):
 
 def quarter(month):
     """
-    :int month: Any month, as an int.
+    :param month: Any month, as an int.
     :return: The quarter of the year during which that month occurs (1-4)
     """
     return int(ceil(float(month) / 3))
@@ -103,7 +103,7 @@ def quarter(month):
 def is_first_month_in_quarter(month):
     """
 
-    :int month: Any month as an int.
+    :param month: Any month as an int.
     :return: Whether that month is the first month in a quarter
     """
     return month in [1, 4, 7, 10]
@@ -137,7 +137,7 @@ def make_date_range_tuples(start, end, gap):
     :param gap: the number of days, inclusive, that a query should span at a
     time.
 
-    :rtype list(tuple)
+    :rtype: list(tuple)
     :returns: list of start, end tuples
     """
     # We create a list of start dates and a list of end dates, then zip them

@@ -76,7 +76,7 @@ async def get_extension(content: bytes) -> str:
     """
     Get the extension of a file using a microservice.
 
-    :param r: The item to get the extension for
+    :param content: The item to get the extension for
     :return extension: The extension of the file, e.g. ".pdf", ".html", etc.
     """
     # Get the file type from the document's raw content

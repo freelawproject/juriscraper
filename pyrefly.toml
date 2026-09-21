@@ -1,0 +1,173 @@
+project-includes = [
+    "juriscraper",
+    # TODO: add tests
+]
+
+# Pre-existing errors are grandfathered here; only new errors fail the check.
+baseline = ".pyrefly-baseline.json"
+baseline-error-level = "info"
+baseline-format = "full"
+baseline-matching-mode = "column"
+min-severity = "warn"
+
+# These options are "good", but sub-configs may opt out.
+permissive-ignores = false
+strict-callable-subtyping = true
+ignore-missing-imports = []
+
+# These options are accomodations for the codebase as-is. Sub-configs should opt into stricter behavior.
+check-unannotated-defs = false # TODO: move to true
+infer-return-types = "annotated" # TODO: move to "checked"
+
+[errors]
+# The following errors are a baseline that sub configs can opt out of. Unfortunately, knowing what is and is not enabled
+# by default isn't terribly clear. This is big chunk of options copied from the documentation, where the criteria are
+# "sounds reasonable" and where violations are not pervasive.
+abstract-method-call = true
+assert-type = true
+bad-argument-count = true
+bad-argument-type = true
+bad-assignment = true
+bad-class-definition = true
+bad-context-manager = true
+bad-dataclass-descriptor = true
+bad-dunder-all = true
+bad-function-definition = true
+bad-index = true
+bad-instantiation = true
+bad-keyword-argument = true
+bad-match = true
+bad-override = true
+bad-override-mutable-attribute = true
+bad-raise = true
+bad-return = true
+bad-specialization = true
+bad-typed-dict = true
+bad-typed-dict-key = true
+bad-unpacking = true
+deprecated = true
+direct-abstract-base-instantiation = true
+incompatible-comparison = true
+incompatible-overload-residual = true
+inconsistent-inheritance = true
+inconsistent-overload = true
+inconsistent-overload-default = true
+internal-error = true
+invalid-abstract-method = true
+invalid-annotation = true
+invalid-argument = true
+invalid-cast = true
+invalid-decorator = true
+invalid-inheritance = true
+invalid-literal = true
+invalid-overload = true
+invalid-param-spec = true
+invalid-pattern = true
+invalid-self-type = true
+invalid-sentinel = true
+invalid-super-call = true
+invalid-syntax = true
+invalid-type-alias = true
+invalid-type-checking-constant = true
+invalid-type-var = true
+invalid-type-var-tuple = true
+invalid-variance = true
+invalid-yield = true
+implicit-abstract-class = true
+implicit-any = true
+misplaced-ignore = true
+missing-argument = true
+missing-attribute = true
+missing-attribute-patch-target = true
+missing-import = true
+missing-module-attribute = true
+missing-source = true
+missing-source-for-stubs = true
+name-mismatch = true
+no-access = true
+no-matching-overload = true
+non-exhaustive-match = true
+non-exhaustive-match-open-type = true
+not-a-type = true
+not-async = true
+not-callable = true
+not-iterable = true
+not-required-key-access = true
+open-unpacking = true
+potential-bad-keyword-argument = true
+regex = true
+unbound-name = true
+unknown-attribute-type = true
+unknown-name = true
+unknown-column = true
+unused-coroutine = true
+unused-ignore = true
+unused-type-ignore = true
+
+# The following errors that are disabled as a general matter. They come largely from the "strict" preset.
+# Sub-configs should copy and opt-in to some number of these. Once the error rate comes down enough, it should be
+# enabled here, moved to the section above and opted-out by select modules.
+bad-override-param-name = false
+explicit-any = false
+implicit-any-attribute = false
+implicit-any-empty-container = false
+implicit-any-lambda = false
+implicit-any-parameter = false
+implicit-any-type-argument = false
+implicit-bool = false
+missing-override-decorator = false
+no-any-return-explicit = false
+no-any-return-implicit = false
+unknown-argument-type = false
+unknown-variable-type = false
+unused-call-result = false
+
+# Modules to hold to a stricter standard. Ideally the whole codebase will be held to these standards eventually.
+[[sub-config]]
+matches = "juriscraper/lib/**"
+
+# Opt in
+check-unannotated-defs = true
+infer-return-types = "checked"
+
+[sub-config.errors]
+# Opt in
+bad-override-param-name = true
+explicit-any = false
+implicit-any-attribute = false
+implicit-any-empty-container = false
+implicit-any-lambda = false
+implicit-any-parameter = false
+implicit-any-type-argument = false
+implicit-bool = false
+missing-override-decorator = true
+no-any-return-explicit = false
+no-any-return-implicit = false
+unknown-argument-type = false
+unknown-variable-type = false
+unused-call-result = false
+
+
+[[sub-config]]
+matches = "juriscraper/state/**"
+
+# Opt in
+check-unannotated-defs = true
+infer-return-types = "checked"
+
+[sub-config.errors]
+# Opt in
+bad-override-param-name = true
+explicit-any = false
+implicit-any-attribute = true
+implicit-any-empty-container = true
+implicit-any-lambda = false
+implicit-any-parameter = true
+implicit-any-type-argument = true
+implicit-bool = false
+missing-override-decorator = true
+no-any-return-explicit = true
+no-any-return-implicit = true
+unknown-argument-type = true
+unknown-variable-type = true
+unused-call-result = false
