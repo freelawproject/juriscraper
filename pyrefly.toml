@@ -5,6 +5,9 @@ project-includes = [
 
 # Pre-existing errors are grandfathered here; only new errors fail the check.
 baseline = ".pyrefly-baseline.json"
+baseline-error-level = "info"
+baseline-format = "full"
+baseline-matching-mode = "column"
 min-severity = "warn"
 
 # These options are "good", but sub-configs may opt out.
@@ -27,6 +30,7 @@ bad-argument-type = true
 bad-assignment = true
 bad-class-definition = true
 bad-context-manager = true
+bad-dataclass-descriptor = true
 bad-dunder-all = true
 bad-function-definition = true
 bad-index = true
@@ -74,6 +78,7 @@ implicit-any = true
 misplaced-ignore = true
 missing-argument = true
 missing-attribute = true
+missing-attribute-patch-target = true
 missing-import = true
 missing-module-attribute = true
 missing-source = true
@@ -82,6 +87,7 @@ name-mismatch = true
 no-access = true
 no-matching-overload = true
 non-exhaustive-match = true
+non-exhaustive-match-open-type = true
 not-a-type = true
 not-async = true
 not-callable = true
@@ -89,6 +95,7 @@ not-iterable = true
 not-required-key-access = true
 open-unpacking = true
 potential-bad-keyword-argument = true
+regex = true
 unbound-name = true
 unknown-attribute-type = true
 unknown-name = true
