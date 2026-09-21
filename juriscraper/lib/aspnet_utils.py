@@ -14,6 +14,11 @@ BASE64_STATE_FIELDS = ("__VIEWSTATE", "__EVENTVALIDATION")
 def defang_waf_sqli_signature(form_data: dict[str, str]) -> dict[str, str]:
     """Rewrite a postback body so a WAF's SQLi rules won't reject it.
 
+    An Azure Application Gateway rejects a postback whenever the ViewState it
+    echoes back happens to contain an MSSQL hex literal, which it does most of
+    the time. A 403 served by "Microsoft-Azure-Application-Gateway/v2" rather
+    than by the origin server is that rule firing, not rate limiting.
+
     Splits the "0x" of every hex-literal run in the Base64 state fields with a
     newline. Base64 decoding ignores whitespace, so the server decodes exactly
     the same bytes and the ViewState MAC still validates, but the signature no

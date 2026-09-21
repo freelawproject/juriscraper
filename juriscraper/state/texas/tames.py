@@ -17,7 +17,6 @@ from datetime import date, datetime
 from typing import Any, Final, cast
 from urllib.parse import urljoin
 
-import requests
 from lxml import html
 from lxml.html import HtmlElement
 from typing_extensions import override
@@ -328,21 +327,6 @@ class TAMESScraper(BaseStateScraper):
                     )
                 )
 
-    def _post_form(self, form_data: dict[str, str]) -> requests.Response:
-        """Post a search form, keeping the WAF in front of TAMES happy.
-
-        TAMES sits behind an Azure Application Gateway whose SQL-injection
-        rules reject a postback whenever the ViewState it echoes back happens
-        to contain an MSSQL hex literal, which it does most of the time. A 403
-        served by "Microsoft-Azure-Application-Gateway/v2" rather than by IIS
-        is that rule firing, not rate limiting. See defang_waf_sqli_signature.
-        """
-        return self.request_manager.post(
-            self.SEARCH_URL,
-            data=defang_waf_sqli_signature(form_data),
-            headers=self._POST_HEADERS,
-        )
-
     def _fetch_search_form(self) -> None:
         """Fetch the search form page and extract hidden fields."""
         response = self.request_manager.get(
@@ -421,7 +405,11 @@ class TAMESScraper(BaseStateScraper):
         self._fetch_search_form()
         form_data = self._build_form_data(start_date, end_date, court_ids)
 
-        response = self._post_form(form_data)
+        response = self.request_manager.post(
+            self.SEARCH_URL,
+            data=defang_waf_sqli_signature(form_data),
+            headers=self._POST_HEADERS,
+        )
         response.raise_for_status()
 
         tree = html.fromstring(response.content)
@@ -581,7 +569,11 @@ class TAMESScraper(BaseStateScraper):
             submit_name: submit_val,
         }
 
-        response = self._post_form(next_form_data)
+        response = self.request_manager.post(
+            self.SEARCH_URL,
+            data=defang_waf_sqli_signature(next_form_data),
+            headers=self._POST_HEADERS,
+        )
         response.raise_for_status()
 
         return html.fromstring(response.content)
