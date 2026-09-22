@@ -38,6 +38,7 @@ Fixes:
 - Annotate for `lib.html_utils`
 - Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
 - Add generics and test utility functions in `lib`
+- Annotate `lib` functions related to `date`
 -
 
 ## 3.0.41 - 2026-09-14
