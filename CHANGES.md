@@ -24,6 +24,7 @@ Changes:
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
 - Tighten static type checking applied to `/state/`
 - Upgrade Pyrefly to v1.3.1
+- Refactor `lactapp_5` to scrape the latest decisions window. #1390
 -
 
 Fixes:
