@@ -68,7 +68,7 @@ class SCOTUSEmailData(TypedDict):
 
     email_type: str
     followup_url: str
-    email_datetime: datetime
+    email_datetime: datetime | None
     data: SCOTUSNotificationEmail | None
 
 
@@ -133,18 +133,24 @@ class _SCOTUSConfirmationPageScraper:
 
         :return: Result of the confirmation attempt.
         """
+        if self.tree is None:
+            raise ValueError("No tree is present")
+
         body_content = self.tree.find(".//div[@class='body-content']")
-        script_tag = body_content.find(".//script")
-        script = script_tag.text_content()
         # The confirmation page by default displays all response messages
         # and uses a (presumably) server-generated if/else chain with
         # conditions set to `true` or `false` to determine which message to
         # display. A better solution would be to either render the page with
         # JS enabled or to parse the script tag into an AST, but this works
         # for now.
-        match = re.search(r"true\)\s\{([^}]+)", script)
-        if match is None:
+        if (
+            body_content is None
+            or (script_tag := body_content.find(".//script")) is None
+            or (script := script_tag.text_content()) is None
+            or (match := re.search(r"true\)\s\{([^}]+)", script)) is None
+        ):
             return SCOTUSConfirmationResult.NoVerify.value
+
         statement_body = match.group(1)
         visibility_calls = [
             line.strip() for line in statement_body.split("\n")[1:-1]
@@ -222,12 +228,12 @@ class SCOTUSEmail:
             followup_url = self._parse_first_link()
             data = None
         else:
-            followup_url = ""
+            followup_url = None
             data = None
 
         return SCOTUSEmailData(
             email_type=self.email_type.value,
-            followup_url=followup_url,
+            followup_url=followup_url if followup_url is not None else "",
             email_datetime=self._parse_datetime(),
             data=data,
         )
@@ -280,6 +286,8 @@ class SCOTUSEmail:
         """Determine the type of the email (docket update/confirmation) based
         on the subject line. If the subject line does not match any known
         patterns, return `EmailType.INVALID`."""
+        if self.message is None:
+            raise ValueError("No message is present")
         subject = self.message.get("Subject", failobj="")
 
         if self.DOCKET_ENTRY_SUBJECT_REGEX.match(subject) is not None:
@@ -353,9 +361,13 @@ class SCOTUSEmail:
 
         :return: `datetime` or `None` if unable to parse the "Date" header.
         """
+        if self.message is None:
+            raise ValueError("No message is present")
         message_date = self.message.get("Date")
 
         try:
+            if message_date is None:
+                raise ValueError("No date is present")
             return datetime.strptime(message_date, "%a, %d %b %Y %H:%M:%S %z")
         except ValueError:
             logger.error(
@@ -371,8 +383,12 @@ class SCOTUSEmail:
 
         :return: Clean docket entry title.
         """
+        if self.tree is None:
+            raise ValueError("No tree is present")
         text = self.tree.text_content()
         match = self.TITLE_REGEX.match(text)
+        if match is None:
+            return ""
 
         return normalize_dashes(clean_string(match.group(1) or ""))
 
@@ -392,14 +408,16 @@ class SCOTUSEmail:
     ) -> tuple[HtmlElement, ParseResult, dict[str, list[str]]]:
         if self.tree is None:
             raise ValueError("self.tree is None")
-        links = [
-            link
-            for link in self.tree.iterfind(".//a")
-            if link.get("href") is not None
-        ]
-        if not links:
+        links_with_href = (
+            (link, link.get("href")) for link in self.tree.iterfind(".//a")
+        )
+        links_with_url = (
+            (link, urlparse(href))
+            for link, href in links_with_href
+            if href is not None
+        )
+        if not links_with_url:
             raise ValueError("No links found in SCOTUS email body")
-        links_with_url = ((link, urlparse(link.get("href"))) for link in links)
         links_with_query = (
             (link, url, parse_qs(url.query)) for link, url in links_with_url
         )
@@ -434,11 +452,17 @@ class SCOTUSEmail:
         docket_number = Path(query["filename"][0]).stem
         return clean_string(docket_number)
 
-    def _parse_first_link(self) -> str:
+    def _parse_first_link(self) -> str | None:
         """Extract the `href` attribute from the first `<a>` tag in the email
         body.
         """
-        return self.tree.find(".//a").get("href")
+        if self.tree is None:
+            raise ValueError("No tree is present")
+        anchor = self.tree.find(".//a")
+        if anchor is None:
+            return None
+
+        return anchor.get("href")
 
 
 def _main():

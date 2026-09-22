@@ -1,6 +1,8 @@
 from datetime import datetime
 from typing import TypedDict
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
     CourtType,
@@ -56,6 +58,7 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
     def __init__(self, court_id: str):
         super().__init__(court_id)
 
+    @override
     @property
     def data(self) -> TexasCourtOfAppealsDocket | dict[str, None]:
         """

@@ -18,12 +18,24 @@ Features:
 -
 
 Changes:
+- Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
+- Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
+- Adopt explicit `@override` decorator in `/state/`.
+- Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- Tighten static type checking applied to `/state/`
+- Upgrade Pyrefly to v1.3.1
 -
 
 Fixes:
-- Update `.pyrefly-baseline.json`
+- Updates to `.pyrefly-baseline.json` (2)
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 - Update GitHub actions with deprecation warnings.
+- Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
+- Fix invalid type annotations for `texapp`.
+- Correct the return types of various `pacer` methods that may return `None`.
+- Corrections to docstrings across files.
+- Address outstanding type errors in `scotus_email`
+- Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
 -
 
 ## 3.0.41 - 2026-09-14

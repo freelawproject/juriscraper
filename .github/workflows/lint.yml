@@ -29,4 +29,4 @@ jobs:
       - name: Install dependencies # eager synchronization keeps the output of subsequent `uv` usage by pre-commit clean.
         run: uv sync
       - name: pyrefly Static Type Checker
-        run: uv run pyrefly check --output-format full-text-with-github
+        run: uv run pyrefly check --error-stale-baseline --output-format full-text-with-github
