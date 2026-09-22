@@ -11,7 +11,7 @@ WAF_SQLI_HEX_LITERAL_RE = re.compile(r"0(?=[xX][0-9a-fA-F]{3})")
 BASE64_STATE_FIELDS = ("__VIEWSTATE", "__EVENTVALIDATION")
 
 
-def defang_waf_sqli_signature(form_data: dict[str, str]) -> dict[str, str]:
+def breakup_hex_substrings(form_data: dict[str, str]) -> dict[str, str]:
     """Rewrite a postback body so a WAF's SQLi rules won't reject it.
 
     An Azure Application Gateway rejects a postback whenever the ViewState it
@@ -24,9 +24,6 @@ def defang_waf_sqli_signature(form_data: dict[str, str]) -> dict[str, str]:
     the same bytes and the ViewState MAC still validates, but the signature no
     longer matches.
 
-    >>> defang_waf_sqli_signature({"__VIEWSTATE": "AAA0x1a2AAAA"})
-    {'__VIEWSTATE': 'AAA0\nx1a2AAAA'}
-
     Args:
         form_data: The postback body, as a field name -> value mapping.
 
@@ -34,17 +31,13 @@ def defang_waf_sqli_signature(form_data: dict[str, str]) -> dict[str, str]:
         A copy of form_data, safe to post.
     """
     defanged = dict(form_data)
-    for name in BASE64_STATE_FIELDS:
-        value = defanged.get(name)
-        if value:
-            defanged[name] = WAF_SQLI_HEX_LITERAL_RE.sub("0\n", value)
-
-    # A match in any other field is something we can't rewrite without
-    # corrupting it. Log it so that an otherwise baffling 403 has a trail.
     for name, value in defanged.items():
-        if name not in BASE64_STATE_FIELDS and WAF_SQLI_HEX_LITERAL_RE.search(
-            value
-        ):
+        if name in BASE64_STATE_FIELDS:
+            defanged[name] = WAF_SQLI_HEX_LITERAL_RE.sub("0\n", value)
+        elif WAF_SQLI_HEX_LITERAL_RE.search(value):
+            # A match in any other field is something we can't rewrite
+            # without corrupting it. Log it so that an otherwise baffling
+            # 403 has a trail.
             logger.warning(
                 "Field %s carries a hex literal a WAF may reject: %.80r",
                 name,

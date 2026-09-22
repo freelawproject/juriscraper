@@ -6,7 +6,7 @@ import unittest
 
 from juriscraper.lib.aspnet_utils import (
     WAF_SQLI_HEX_LITERAL_RE,
-    defang_waf_sqli_signature,
+    breakup_hex_substrings,
 )
 
 # What a WAF's SQLi rule matches: "0x", either case, plus three or more hex
@@ -19,7 +19,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
     def test_hex_literal_runs_are_split(self):
         form = {"__VIEWSTATE": "abc0x1a2def"}
 
-        defanged = defang_waf_sqli_signature(form)
+        defanged = breakup_hex_substrings(form)
 
         self.assertEqual(defanged["__VIEWSTATE"], "abc0\nx1a2def")
         self.assertIsNone(SIGNATURE_RE.search(defanged["__VIEWSTATE"]))
@@ -27,7 +27,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
     def test_every_run_is_split(self):
         form = {"__VIEWSTATE": "0xdeadbeef mid 0XABC tail 0x123"}
 
-        defanged = defang_waf_sqli_signature(form)
+        defanged = breakup_hex_substrings(form)
 
         self.assertIsNone(SIGNATURE_RE.search(defanged["__VIEWSTATE"]))
 
@@ -36,7 +36,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         form = {"__VIEWSTATE": "0x1 and 0xab and 0xgg"}
 
         self.assertEqual(
-            defang_waf_sqli_signature(form)["__VIEWSTATE"],
+            breakup_hex_substrings(form)["__VIEWSTATE"],
             "0x1 and 0xab and 0xgg",
         )
 
@@ -44,7 +44,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         form = {"__EVENTVALIDATION": "0x1a2"}
 
         self.assertEqual(
-            defang_waf_sqli_signature(form)["__EVENTVALIDATION"], "0\nx1a2"
+            breakup_hex_substrings(form)["__EVENTVALIDATION"], "0\nx1a2"
         )
 
     def test_decoded_viewstate_is_unchanged(self):
@@ -56,7 +56,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         view_state = "AAA0x1a2AAAA"
         self.assertIsNotNone(SIGNATURE_RE.search(view_state))
 
-        defanged = defang_waf_sqli_signature({"__VIEWSTATE": view_state})
+        defanged = breakup_hex_substrings({"__VIEWSTATE": view_state})
 
         self.assertIsNone(SIGNATURE_RE.search(defanged["__VIEWSTATE"]))
         self.assertEqual(
@@ -68,25 +68,25 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         """Non-Base64 fields can't take whitespace, so they're only logged."""
         form = {"__VIEWSTATE": "0x1a2", "ctl00$q": "0xdeadbeef"}
 
-        defanged = defang_waf_sqli_signature(form)
+        defanged = breakup_hex_substrings(form)
 
         self.assertEqual(defanged["ctl00$q"], "0xdeadbeef")
 
     def test_input_is_not_mutated(self):
         form = {"__VIEWSTATE": "0x1a2"}
 
-        defang_waf_sqli_signature(form)
+        breakup_hex_substrings(form)
 
         self.assertEqual(form["__VIEWSTATE"], "0x1a2")
 
     def test_clean_and_empty_bodies_survive(self):
-        self.assertEqual(defang_waf_sqli_signature({}), {})
+        self.assertEqual(breakup_hex_substrings({}), {})
         self.assertEqual(
-            defang_waf_sqli_signature({"__VIEWSTATE": "", "a": "b"}),
+            breakup_hex_substrings({"__VIEWSTATE": "", "a": "b"}),
             {"__VIEWSTATE": "", "a": "b"},
         )
         clean = {"__VIEWSTATE": "no hex literals here"}
-        self.assertEqual(defang_waf_sqli_signature(clean), clean)
+        self.assertEqual(breakup_hex_substrings(clean), clean)
 
     def test_regex_boundaries(self):
         self.assertIsNone(WAF_SQLI_HEX_LITERAL_RE.search("0x1a"))
@@ -98,7 +98,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         form = {"__VIEWSTATE": "0X1a2"}
 
         self.assertEqual(
-            defang_waf_sqli_signature(form)["__VIEWSTATE"], "0\nX1a2"
+            breakup_hex_substrings(form)["__VIEWSTATE"], "0\nX1a2"
         )
 
 
