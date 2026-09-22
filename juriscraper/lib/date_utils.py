@@ -1,9 +1,10 @@
 # We import the entire datetime library because otherwise we run into
 # conflicts in our isinstance statements.
 import datetime
-from datetime import date
+from collections.abc import Iterable
 from itertools import zip_longest
 from math import ceil
+from typing import TypeVar
 
 from dateutil.parser import parser, parserinfo
 from dateutil.rrule import DAILY, rrule
@@ -154,11 +155,20 @@ def make_date_range_tuples(start, end, gap):
     return list(zip_longest(start_dates, end_dates, fillvalue=end))
 
 
+_AnyDateT = TypeVar("_AnyDateT", datetime.datetime, datetime.date)
+
+
 def unique_year_month(
-    date_list: list[date | datetime.datetime | tuple[date]],
-) -> list[date | datetime.datetime]:
+    date_list: list[_AnyDateT] | list[tuple[_AnyDateT]],
+) -> list[_AnyDateT]:
     """Takes a list of dates or date tuples, and reduces it
     to date objects with unique year-months pairs
+    TODO: 1-tuple input is not correct; it should change to reflect usage.
+    TODO: A `NamedTuple` may be the most appropriate return type. Setting aside
+     `datetime.date` and `datetime.datetime` inheritance trouble, consumers are
+     do not appear to use the day of the returned values - only year and month
+     are used …for URL construction and not calendar math.
+
 
     :param date_list: a list containing dates or tuples of dates
         default make_backscrape_iterable returns date tuples
@@ -168,10 +178,13 @@ def unique_year_month(
     seen_year_months = set()
 
     for obj in date_list:
-        if isinstance(obj, date | datetime.datetime):
-            obj = [obj]
+        iterable: Iterable[_AnyDateT]
+        if isinstance(obj, datetime.datetime | datetime.date):
+            iterable = (obj,)
+        else:
+            iterable = obj
 
-        for date_obj in obj:
+        for date_obj in iterable:
             ym = date_obj.strftime("%Y%m")
             if ym in seen_year_months:
                 continue
