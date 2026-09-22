@@ -66,12 +66,7 @@ class UtilTest(unittest.TestCase):
         self.assertEqual(clean_court_object(1234), 1234)
 
     def test_previous_and_next(self):
-        input = [
-            1,
-            2,
-            3,
-            4
-        ]
+        input = [1, 2, 3, 4]
 
         expected = [
             (None, 1, 2),
@@ -81,4 +76,3 @@ class UtilTest(unittest.TestCase):
         ]
 
         self.assertEqual(list(previous_and_next(input)), expected)
-
