@@ -89,7 +89,7 @@ def append_or_merge_entry(docket_list, new_docket):
     docket entries
     :param new_docket: A new docket-like dictionary that can be appended or
     merged into the docket_list.
-    :return None
+    :return: None
     """
     for docket in docket_list:
         entry = docket["docket_entries"][0]
@@ -207,7 +207,7 @@ class PacerRssFeed(DocketReport):
         """Parse the feed and set self.feed
 
         :param text: The text of the RSS feed.
-        :return None
+        :return: None
         """
         self.feed = feedparser.parse(text)
 

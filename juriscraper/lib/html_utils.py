@@ -14,7 +14,7 @@ try:
     # Use charset-normalizer for performance to detect the character encoding.
     import charset_normalizer as chardet
 except ImportError:
-    import chardet  # type: ignore
+    import chardet
 
 ALLOWED_ATTRIBUTES = deepcopy(nh3.ALLOWED_ATTRIBUTES)
 ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
@@ -77,7 +77,7 @@ def get_table_column_text(
     cell_num: int,
     path_base: str | None = None,
     table_id: str = "",
-) -> list:
+) -> list[str]:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]" % (table, cell_num)
     path = path_base + path_cell if path_base is not None else path_cell
@@ -89,14 +89,14 @@ def get_table_column_links(
     cell_num: int,
     path_base: str | None = None,
     table_id: str = "",
-) -> list:
+) -> list[str]:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]//a/@href" % (table, cell_num)
     path = path_base + path_cell if path_base else path_cell
     return html.xpath(path)
 
 
-def get_row_column_text(row, cell_num):
+def get_row_column_text(row: HtmlElement, cell_num: int) -> str:
     """Return string cell value for specified column.
 
     :param row: HtmlElement
@@ -106,7 +106,7 @@ def get_row_column_text(row, cell_num):
     return row.xpath(".//td[%d]" % cell_num)[0].text_content().strip()
 
 
-def get_row_column_links(row, cell_num):
+def get_row_column_links(row: HtmlElement, cell_num: int) -> str:
     """Return string href value for link in specified column.
 
     NOTE: if there are multiple links in the column, you might
@@ -120,7 +120,7 @@ def get_row_column_links(row, cell_num):
 
 
 def strip_bad_html_tags_insecure(
-    text: str, remove_scripts=True
+    text: str, remove_scripts: bool = True
 ) -> HtmlElement:
     """Remove bad HTML that isn't used by our parsers.
 
@@ -157,7 +157,7 @@ def strip_bad_html_tags_insecure(
     )
 
 
-def get_visible_text(html_content):
+def get_visible_text(html_content: str) -> str:
     html_tree = html.fromstring(html_content)
     text = html_tree.xpath(
         """//text()[normalize-space() and not(parent::style |
@@ -231,15 +231,16 @@ def clean_html(text: str) -> str:
     return text
 
 
-def fix_links_but_keep_anchors(link):
+def fix_links_but_keep_anchors(link: str) -> str:
     # Wrap the function below so that we have one that can be passed to
     # lxml's rewrite_links method, which doesn't accept any parameters.
     return fix_links_in_lxml_tree(link, keep_anchors=True)
 
 
-def fix_links_in_lxml_tree(link, keep_anchors=False):
-    """Fix links in an lxml tree.
+def fix_links_in_lxml_tree(link: str, keep_anchors: bool = False) -> str:
+    """Fix links in a lxml tree.
 
+    :param link: the link to rewrite
     :param keep_anchors: Whether to nuke anchors at the ends of links.
 
     This function is called by the rewrite_links method of an lxml tree, and is

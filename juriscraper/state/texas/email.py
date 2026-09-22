@@ -3,6 +3,7 @@ from typing import TypedDict
 from urllib.parse import parse_qs, urlparse
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.abstract_parser import AbstractParser
 from juriscraper.AbstractSite import logger
@@ -38,7 +39,7 @@ class TamesEmailData(TypedDict):
     url: str
 
 
-class TamesEmail(AbstractParser):
+class TamesEmail(AbstractParser[TamesEmailData | None]):
     """Parse TAMES case notification emails from Texas courts."""
 
     def __init__(self, court_id: str = "") -> None:
@@ -47,6 +48,7 @@ class TamesEmail(AbstractParser):
         self.message: email.message.Message | None = None
         self._court_id: str | None = None
 
+    @override
     @property
     def data(self) -> TamesEmailData | None:
         if self._court_id is None or self.tree is None:
@@ -67,6 +69,7 @@ class TamesEmail(AbstractParser):
             case_number=case_number,
         )
 
+    @override
     def _parse_text(self, text: str) -> None:
         self.message = email.message_from_string(text)
         subject = self.message.get("Subject", failobj="")
