@@ -29,6 +29,7 @@ Changes:
 Fixes:
 - Updates to `.pyrefly-baseline.json` (2)
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Update GitHub actions with deprecation warnings.
 - Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
 - Fix invalid type annotations for `texapp`.
 - Correct the return types of various `pacer` methods that may return `None`.
