@@ -24,7 +24,9 @@ class TexasCourtOfCriminalAppealsDocket(TexasCommonData):
     appeals_court: TexasAppealsCourt
 
 
-class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
+class TexasCourtOfCriminalAppealsScraper(
+    TexasCommonScraper[TexasCourtOfCriminalAppealsDocket]
+):
     """
     Extends the `TexasCommonScraper` class to extract data specific to Texas
     Court of Criminal Appeals dockets. Unique data extracted is:
@@ -49,7 +51,7 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         :return: Parsed data.
         """
 
-        common_data = super().data
+        common_data = self._common_data
         if not common_data:
             return {}
         if self.tree is None:

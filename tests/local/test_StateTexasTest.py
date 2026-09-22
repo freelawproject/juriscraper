@@ -1,4 +1,6 @@
-from juriscraper.state.texas.common import TexasCommonScraper
+from typing_extensions import override
+
+from juriscraper.state.texas.common import TexasCommonScraper, TexasCommonData
 from juriscraper.state.texas.court_of_appeals import TexasCourtOfAppealsScraper
 from juriscraper.state.texas.court_of_criminal_appeals import (
     TexasCourtOfCriminalAppealsScraper,
@@ -9,6 +11,18 @@ from tests import TESTS_ROOT_EXAMPLES_STATES
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
 
+class _TexasCommonTestScraper(TexasCommonScraper[TexasCommonData]):
+    """
+    `TexasCommonScraper` is an abstract base class. To test `common_data` using
+    the `parse_files()` mechanism we create a shim implementation.
+    """
+
+    @override
+    @property
+    def data(self) -> TexasCommonData | dict[str, None]:
+        return self._common_data
+
+
 class TexasParseCommonDataTest(PacerParseTestCase):
     """Test parsing of data common to all Texas dockets"""
 
@@ -17,7 +31,7 @@ class TexasParseCommonDataTest(PacerParseTestCase):
 
     def test_common(self):
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "common"
-        self.parse_files(path_root, "*.html", TexasCommonScraper)
+        self.parse_files(path_root, "*.html", _TexasCommonTestScraper)
 
     def test_supreme(self):
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "sc"

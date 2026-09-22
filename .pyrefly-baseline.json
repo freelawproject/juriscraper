@@ -2976,13 +2976,6 @@
       "severity": "error"
     },
     {
-      "column": 9,
-      "path": "juriscraper/state/texas/supreme_court.py",
-      "name": "bad-override",
-      "concise_description": "Class member `TexasSupremeCourtScraper.data` overrides parent class `TexasCommonScraper` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
       "column": 41,
       "path": "juriscraper/state/texas/supreme_court.py",
       "name": "bad-argument-type",
