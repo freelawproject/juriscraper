@@ -7,6 +7,7 @@ import unittest
 from juriscraper.lib.date_utils import (
     fix_future_year_typo,
     make_date_range_tuples,
+    unique_year_month,
 )
 from juriscraper.lib.string_utils import convert_date_string
 
@@ -79,5 +80,52 @@ class DateTest(unittest.TestCase):
         )
         for test in q_a:
             result = make_date_range_tuples(**test["q"])
+            with self.subTest("Checking dates", test=test["q"]):
+                self.assertEqual(result, test["a"])
+
+    def test_unique_year_month(self):
+        q_a = (
+            {
+                # base case
+                "q": [
+                    datetime.date(2017, 1, 1),
+                    datetime.date(2017, 2, 2),
+                    datetime.date(2017, 3, 3),
+                ],
+                "a": [
+                    datetime.date(2017, 1, 1),
+                    datetime.date(2017, 2, 2),
+                    datetime.date(2017, 3, 3),
+                ],
+            },
+            {
+                # same month
+                "q": [
+                    datetime.date(2017, 1, 1),
+                    datetime.date(2017, 1, 2),
+                    datetime.date(2017, 3, 3),
+                ],
+                "a": [
+                    datetime.date(2017, 1, 1),
+                    datetime.date(2017, 3, 3),
+                ],
+            },
+            {
+                # tuple spanning several months
+                "q": [
+                    (datetime.date(2017, 1, 1), datetime.date(2017, 1, 31)),
+                    (datetime.date(2017, 2, 1), datetime.date(2017, 2, 28)),
+                    (datetime.date(2017, 3, 1), datetime.date(2017, 5, 31)),
+                ],
+                "a": [
+                    datetime.date(2017, 1, 1),
+                    datetime.date(2017, 2, 1),
+                    datetime.date(2017, 3, 1),
+                    datetime.date(2017, 5, 31),
+                ],
+            },
+        )
+        for test in q_a:
+            result = unique_year_month(test["q"])
             with self.subTest("Checking dates", test=test["q"]):
                 self.assertEqual(result, test["a"])
