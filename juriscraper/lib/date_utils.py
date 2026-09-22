@@ -72,7 +72,7 @@ p = parser(info=BetterInfo())
 info = p.info
 
 
-def timetoken(token):
+def timetoken(token: str) -> bool:
     try:
         float(token)
         return True
@@ -93,7 +93,7 @@ def timetoken(token):
     )
 
 
-def quarter(month):
+def quarter(month: int) -> int:
     """
     :param month: Any month, as an int.
     :return: The quarter of the year during which that month occurs (1-4)
@@ -101,7 +101,7 @@ def quarter(month):
     return int(ceil(float(month) / 3))
 
 
-def is_first_month_in_quarter(month):
+def is_first_month_in_quarter(month: int) -> int:
     """
 
     :param month: Any month as an int.
