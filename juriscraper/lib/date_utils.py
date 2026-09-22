@@ -110,16 +110,17 @@ def is_first_month_in_quarter(month: int) -> int:
     return month in [1, 4, 7, 10]
 
 
-def fix_future_year_typo(future_date):
+_AnyDateT = TypeVar("_AnyDateT", datetime.datetime, datetime.date)
+
+
+def fix_future_year_typo(future_date: _AnyDateT) -> _AnyDateT:
     """Fix current year typo, convert 2106 to 2016 in year 2016"""
     current_year = str(datetime.date.today().year)
     transposed_year = (
         current_year[0] + current_year[2] + current_year[1] + current_year[3]
     )
     if transposed_year == str(future_date.year):
-        return datetime.date(
-            int(current_year), future_date.month, future_date.day
-        )
+        return future_date.replace(year=int(current_year))
     return future_date
 
 
@@ -153,9 +154,6 @@ def make_date_range_tuples(start, end, gap):
         for d in rrule(DAILY, interval=gap, dtstart=end_start, until=end)
     ]
     return list(zip_longest(start_dates, end_dates, fillvalue=end))
-
-
-_AnyDateT = TypeVar("_AnyDateT", datetime.datetime, datetime.date)
 
 
 def unique_year_month(
