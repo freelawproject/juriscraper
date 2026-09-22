@@ -113,13 +113,6 @@
       "severity": "error"
     },
     {
-      "column": 26,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Literal['#']` is not assignable to parameter `sep` with type `Buffer | None` in function `bytes.split`",
-      "severity": "error"
-    },
-    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
@@ -1226,13 +1219,6 @@
       "severity": "error"
     },
     {
-      "column": 28,
-      "path": "juriscraper/pacer/reports.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `(link: Unknown, keep_anchors: bool | Unknown = False) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
-      "severity": "error"
-    },
-    {
       "column": 50,
       "path": "juriscraper/pacer/reports.py",
       "name": "unbound-name",
@@ -1398,13 +1384,6 @@
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
       "severity": "error"
     },
     {
