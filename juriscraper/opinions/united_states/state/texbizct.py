@@ -10,10 +10,8 @@ from urllib.parse import urljoin
 
 from dateutil import parser
 
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
-logger = make_default_logger()
 
 # e.g. "Whitehill, J. | June 3, 2026"; the source has typos like
 # "Stagner, J," and "January 26. 2026", so be lenient about punctuation

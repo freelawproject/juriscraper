@@ -4,8 +4,10 @@ import hmac
 import os
 import re
 
-from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.OpinionSite import OpinionSite
+
+logger = make_default_logger()
 
 
 def get_justice_dot_gov_auth_cookies(html_text: str) -> dict:

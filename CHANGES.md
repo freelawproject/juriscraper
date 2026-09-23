@@ -27,6 +27,7 @@ Changes:
 -
 
 Fixes:
+- Strengthen logging approach convention amonst top-level modules
 - Updates to `.pyrefly-baseline.json` (2)
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 - Update GitHub actions with deprecation warnings.

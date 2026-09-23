@@ -5,7 +5,7 @@ from typing import TypedDict
 
 from lxml.html import HtmlElement
 
-from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
@@ -22,6 +22,8 @@ from .utils import (
     get_pacer_magic_num_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
 )
+
+logger = make_default_logger()
 
 
 class DocketEntryType(TypedDict):

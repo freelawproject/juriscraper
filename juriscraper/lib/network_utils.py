@@ -16,8 +16,6 @@ async def add_delay(delay: int = 0, deviation: int = 0) -> None:
     Delay is the number of seconds your program will be stopped for, and
     deviation is the number of seconds that the delay can vary.
     """
-    from juriscraper.AbstractSite import logger
-
     duration = random.randrange(delay - deviation, delay + deviation)
     logger.info(f"Adding a delay of {duration} seconds. Please wait.")
     await asyncio.sleep(duration)
