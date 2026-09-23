@@ -31,6 +31,7 @@ Fixes:
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 - Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
 - Fix invalid type annotations for `texapp`.
+- Fix invalid definition of `cleanup_content()` in `alaska`
 - Correct the return types of various `pacer` methods that may return `None`.
 - Corrections to docstrings across files.
 - Address outstanding type errors in `scotus_email`
