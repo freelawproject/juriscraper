@@ -1961,45 +1961,10 @@
       "severity": "error"
     },
     {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",
       "concise_description": "Class member `ACMSDocketReport.query` overrides parent class `AppellateDocketReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -2014,13 +1979,6 @@
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `str` has no attribute `get`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {

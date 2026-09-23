@@ -126,6 +126,8 @@ class ACMSDocketReport(AppellateDocketReport):
 
         That function then supplements it with parties and docket entries.
         """
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         caseDetails = self._acms_json["caseDetails"]
 
@@ -341,6 +343,8 @@ class ACMSDocketReport(AppellateDocketReport):
         # Within that, the first <td> is the party name.
         # The second <td> is the atty list.
         # Within the atty list, there is one <div> per attorney.
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         parties_html = self._acms_json["caseDetails"]["partyAttorneyList"]
         tree = strip_bad_html_tags_insecure(parties_html)
@@ -393,6 +397,8 @@ class ACMSDocketReport(AppellateDocketReport):
         to the HTML markup we would otherwise lose.
 
         """
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         docket_entries = []
         for row in self._acms_json["docketInfo"]["docketEntries"]:

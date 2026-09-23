@@ -192,6 +192,8 @@ class ACMSAttachmentPage(BaseReport):
         """
         if not self.is_valid:
             return {}
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]
