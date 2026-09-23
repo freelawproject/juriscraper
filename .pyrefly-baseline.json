@@ -204,34 +204,6 @@
       "severity": "error"
     },
     {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `date` and `None`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `None` and `date`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `None` and `None`",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`+` is not supported between `None` and `timedelta`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/lib/string_utils.py",
       "name": "unnecessary-type-conversion",

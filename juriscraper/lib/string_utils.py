@@ -530,7 +530,7 @@ def convert_date_string(
         return dt.date()
 
 
-def split_date_range_string(date_range_string):
+def split_date_range_string(date_range_string: str) -> date:
     """This function requires a string in 'January - March 2016' format"""
     date_range_string = normalize_dashes(date_range_string)
     parts = date_range_string.split()
@@ -541,6 +541,8 @@ def split_date_range_string(date_range_string):
     last_day = calendar.monthrange(int(year), months[month2])[1]
     start_date = convert_date_string(f"{month1} 1, {year}")
     end_date = convert_date_string("%s %d, %s" % (month2, last_day, year))
+    if start_date is None or end_date is None:
+        raise Exception("Could not produce start and end date from string")
     delta = end_date - start_date
     dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
     return dates_in_range[int(len(dates_in_range) / 2)]
