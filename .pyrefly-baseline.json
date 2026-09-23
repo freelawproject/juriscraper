@@ -8,6 +8,20 @@
       "severity": "error"
     },
     {
+      "column": 59,
+      "path": "juriscraper/AbstractSite.py",
+      "name": "bad-specialization",
+      "concise_description": "`date | Unknown | None` is not assignable to any of constraints `datetime`, `date` of type variable `_AnyDateT`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/AbstractSite.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `gap` with type `int` in function `juriscraper.lib.date_utils.make_date_range_tuples`",
+      "severity": "error"
+    },
+    {
       "column": 24,
       "path": "juriscraper/fdsys/utils/get_xpath_results.py",
       "name": "missing-module-attribute",

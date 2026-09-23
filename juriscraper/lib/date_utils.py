@@ -4,7 +4,7 @@ import datetime
 from collections.abc import Iterable
 from itertools import zip_longest
 from math import ceil
-from typing import TypeVar
+from typing import TypeVar, cast
 
 from dateutil.parser import parser, parserinfo
 from dateutil.rrule import DAILY, rrule
@@ -124,7 +124,9 @@ def fix_future_year_typo(future_date: _AnyDateT) -> _AnyDateT:
     return future_date
 
 
-def make_date_range_tuples(start, end, gap):
+def make_date_range_tuples(
+    start: _AnyDateT, end: _AnyDateT, gap: int
+) -> list[tuple[_AnyDateT, _AnyDateT]]:
     """Make an iterable of date tuples for use in iterating forms
 
     For example, a form might allow start and end dates and you want to iterate
@@ -142,18 +144,33 @@ def make_date_range_tuples(start, end, gap):
     :rtype: list(tuple)
     :returns: list of start, end tuples
     """
+
+    def to_any_date(dt: datetime.datetime) -> _AnyDateT:
+        # Python generics can't be reified; we must key off the input values
+        # and to infer the type manually.
+        if all(isinstance(d, datetime.datetime) for d in (start, end)):
+            # both start and end are `datetime`-> `_AnyDateT` is `datetime`
+            return cast(_AnyDateT, dt)
+        else:
+            return cast(_AnyDateT, dt.date())
+
     # We create a list of start dates and a list of end dates, then zip them
     # together. If end_dates is shorter than start_dates, fill the last value
     # with the original end date.
     start_dates = [
-        d.date() for d in rrule(DAILY, interval=gap, dtstart=start, until=end)
+        to_any_date(d)
+        for d in rrule(DAILY, interval=gap, dtstart=start, until=end)
     ]
     end_start = start + datetime.timedelta(days=gap - 1)
     end_dates = [
-        d.date()
+        to_any_date(d)
         for d in rrule(DAILY, interval=gap, dtstart=end_start, until=end)
     ]
-    return list(zip_longest(start_dates, end_dates, fillvalue=end))
+    if isinstance(end, datetime.datetime):
+        end_date = to_any_date(end)
+    else:
+        end_date = end
+    return list(zip_longest(start_dates, end_dates, fillvalue=end_date))
 
 
 def unique_year_month(
