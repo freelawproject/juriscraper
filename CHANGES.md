@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add docket number component parsing to PACER parsers (download_confirmation_page, mobile_query, list_of_creditors, attachment_page) to extract office code, case type, judge initials, and defendant number #1093
 
 Changes:
 - Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
