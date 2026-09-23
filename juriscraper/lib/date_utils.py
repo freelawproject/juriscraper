@@ -18,7 +18,7 @@ MISSPELLINGS = {
 }
 
 
-def json_date_handler(obj):
+def json_date_handler(obj: object) -> str | None:
     return (
         obj.isoformat()
         if isinstance(obj, datetime.datetime | datetime.date)
