@@ -1,7 +1,8 @@
 import calendar
 import re
 import string
-from datetime import timedelta
+from datetime import date, datetime, timedelta
+from typing import Literal, overload
 from urllib.parse import parse_qs, quote_plus, urlencode, urlparse, urlunparse
 
 import geonamescache
@@ -492,7 +493,17 @@ def trunc(s, length, ellipsis=None):
         return s
 
 
-def convert_date_string(date_string, fuzzy=False, datetime=False):
+@overload
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = ..., datetime: Literal[True]
+) -> datetime | None: ...
+@overload
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = ..., datetime: Literal[False] = False
+) -> date | None: ...
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = False, datetime: bool = False
+) -> date | datetime | None:
     """Sanitize date string and convert into standard date object
 
     :param date_string: A string to convert to a datetime object.

@@ -214,28 +214,7 @@
       "column": 13,
       "path": "juriscraper/lib/string_utils.py",
       "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `datetime` and `date`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `datetime` and `None`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
       "concise_description": "`-` is not supported between `None` and `date`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `None` and `datetime`",
       "severity": "error"
     },
     {
@@ -445,7 +424,7 @@
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/masslandct.py",
       "name": "bad-return",
-      "concise_description": "Returned type `list[date | datetime | None]` is not assignable to declared return type `list[date]`",
+      "concise_description": "Returned type `list[date | None]` is not assignable to declared return type `list[date]`",
       "severity": "error"
     },
     {
@@ -991,7 +970,7 @@
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
-      "concise_description": "Returned type `dict[str, date | datetime | None] | dict[str, str] | dict[str, None]` is not assignable to declared return type `dict[str, date | str | None]`",
+      "concise_description": "Returned type `dict[str, date | None] | dict[str, str] | dict[str, None]` is not assignable to declared return type `dict[str, date | str | None]`",
       "severity": "error"
     },
     {
@@ -1047,14 +1026,14 @@
       "column": 20,
       "path": "juriscraper/pacer/download_confirmation_page.py",
       "name": "bad-return",
-      "concise_description": "Returned type `date | datetime` is not assignable to declared return type `str | None`",
+      "concise_description": "Returned type `datetime` is not assignable to declared return type `str | None`",
       "severity": "error"
     },
     {
       "column": 16,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-return",
-      "concise_description": "Returned type `date | datetime | None` is not assignable to declared return type `date`",
+      "concise_description": "Returned type `date | None` is not assignable to declared return type `date`",
       "severity": "error"
     },
     {
