@@ -36,6 +36,7 @@ Fixes:
 - Corrections to docstrings across files.
 - Address outstanding type errors in `scotus_email`
 - Annotate for `lib.html_utils`
+- Annotate miscellaneous functions in `lib`
 - Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
 - Add generics and test utility functions in `lib`
 - Annotate `lib` functions related to `date`
