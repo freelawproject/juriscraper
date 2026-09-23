@@ -315,7 +315,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_doc1_anchor(self, current_node: HtmlElement) -> str | None:
+    def _get_doc1_anchor(
+        self, current_node: HtmlElement
+    ) -> HtmlElement | None:
         """Safely retrieves the anchor tag for the document
 
         :param  current_node: The relative lxml.HtmlElement

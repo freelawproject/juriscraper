@@ -2094,13 +2094,6 @@
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "juriscraper/pacer/email.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
       "column": 25,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-argument-type",
