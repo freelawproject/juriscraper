@@ -92,27 +92,6 @@
       "severity": "error"
     },
     {
-      "column": 44,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `exc_info` with type `BaseException | bool | tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None] | None` in function `logging.Logger.log`",
-      "severity": "error"
-    },
-    {
-      "column": 44,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `stack_info` with type `bool` in function `logging.Logger.log`",
-      "severity": "error"
-    },
-    {
-      "column": 44,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `stacklevel` with type `int` in function `logging.Logger.log`",
-      "severity": "error"
-    },
-    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
