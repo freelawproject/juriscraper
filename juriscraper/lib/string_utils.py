@@ -1,7 +1,8 @@
 import calendar
 import re
 import string
-from datetime import timedelta
+from datetime import date, datetime, timedelta
+from typing import Literal, overload
 from urllib.parse import parse_qs, quote_plus, urlencode, urlparse, urlunparse
 
 import geonamescache
@@ -492,7 +493,17 @@ def trunc(s, length, ellipsis=None):
         return s
 
 
-def convert_date_string(date_string, fuzzy=False, datetime=False):
+@overload
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = ..., datetime: Literal[True]
+) -> datetime | None: ...
+@overload
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = ..., datetime: Literal[False] = False
+) -> date | None: ...
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = False, datetime: bool = False
+) -> date | datetime | None:
     """Sanitize date string and convert into standard date object
 
     :param date_string: A string to convert to a datetime object.
@@ -519,7 +530,7 @@ def convert_date_string(date_string, fuzzy=False, datetime=False):
         return dt.date()
 
 
-def split_date_range_string(date_range_string):
+def split_date_range_string(date_range_string: str) -> date:
     """This function requires a string in 'January - March 2016' format"""
     date_range_string = normalize_dashes(date_range_string)
     parts = date_range_string.split()
@@ -530,6 +541,8 @@ def split_date_range_string(date_range_string):
     last_day = calendar.monthrange(int(year), months[month2])[1]
     start_date = convert_date_string(f"{month1} 1, {year}")
     end_date = convert_date_string("%s %d, %s" % (month2, last_day, year))
+    if start_date is None or end_date is None:
+        raise Exception("Could not produce start and end date from string")
     delta = end_date - start_date
     dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
     return dates_in_range[int(len(dates_in_range) / 2)]
