@@ -70,6 +70,8 @@ class TexasCourtOfAppealsScraper(TexasCommonScraper):
         common_data = super().data
         if not common_data:
             return {}
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
         court_name = clean_string(self.tree.find(".//h1").text_content())
         transfer_from, transfer_to = self._parse_transfers()
 
