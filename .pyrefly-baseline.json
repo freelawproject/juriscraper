@@ -1198,20 +1198,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get`",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get`",
-      "severity": "error"
-    },
-    {
       "column": 37,
       "path": "juriscraper/scotus/scotus_docket_report.py",
       "name": "missing-attribute",
@@ -1244,13 +1230,6 @@
       "path": "juriscraper/scotus/scotus_docket_report_htm.py",
       "name": "missing-attribute",
       "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
-      "severity": "error"
-    },
-    {
-      "column": 27,
-      "path": "juriscraper/scotus/scotus_docket_report_html.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
