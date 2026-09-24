@@ -1,4 +1,5 @@
 import re
+from datetime import datetime
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import BotChallengeError, ParsingException
@@ -62,6 +63,9 @@ class Site(OpinionSiteLinear):
                     r"Hon\.[\s\n]+", "", fixed_values["judge"]
                 )
 
+            hearing = self.get_hearing_info(row)
+            rehearing_application = self.get_rehearing_application(row)
+
             # Cases can have more than 1 opinion document
             for anchor in row.xpath(".//a[contains(@id, 'HyperLink_')]"):
                 disposition = ""
@@ -86,15 +90,68 @@ class Site(OpinionSiteLinear):
                     )
                     continue
 
+                other_dates = [hearing]
+                label = anchor.xpath("preceding-sibling::b[1]/text()")
+                if label and label[0].strip().startswith("Rehearing"):
+                    other_dates.append(rehearing_application)
+
                 case = {
                     "url": anchor.get("href"),
                     "disposition": disposition,
                     "date": case_date,
-                    "date_filed_is_approximate": False,
+                    "other_date": "; ".join(filter(None, other_dates)),
                     **fixed_values,
                 }
 
                 self.cases.append(case)
+
+    def is_valid_date(self, text: str) -> bool:
+        """Check that `text` holds a real MM/DD/YYYY date
+
+        :param text: the text to search
+        :return: True if the first date-like string parses
+        """
+        if not (match := self.date_regex.search(text)):
+            return False
+        try:
+            datetime.strptime(match.group(0), "%m/%d/%Y")
+        except ValueError:
+            return False
+        return True
+
+    def get_hearing_info(self, row) -> str:
+        """Get the "Court Hearing Info" of a case row
+
+        :param row: the case row element
+        :return: the hearing info, or an empty string if it has no valid date
+        """
+        element = row.xpath(".//span[contains(@id, '_Label2_')]")
+        if not element:
+            return ""
+        text = re.sub(r"\s+", " ", element[0].text_content()).strip()
+        if not self.is_valid_date(text):
+            return ""
+        # "Oral Argument: No" means the case was submitted on briefs, so the
+        # flag is kept to avoid reading the date as an argument date
+        text = re.sub(r"\s*Oral Argument:", ", Oral Argument:", text)
+        return f"Court Hearing Info: {text}"
+
+    def get_rehearing_application(self, row) -> str:
+        """Get the "Application for Rehearing" date of a case row
+
+        :param row: the case row element
+        :return: the application text, or an empty string if it has no
+            valid date
+        """
+        label = row.xpath(
+            ".//b[starts-with(normalize-space(), 'Application for Rehearing')]"
+        )
+        if not label:
+            return ""
+        text = f"{label[0].text_content().strip()} {(label[0].tail or '').strip()}"
+        if not self.is_valid_date(text):
+            return ""
+        return text
 
     def check_panel_is_present(self) -> None:
         """Check that the "Latest Decisions" panel returned decisions.
