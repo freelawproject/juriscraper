@@ -42,6 +42,7 @@ Fixes:
 - Add generics and test utility functions in `lib`
 - Annotate `lib` functions related to `date`
 - Take consistent approach to unparsed data in `texas`
+- Housekeeping in `scotus`
 -
 
 ## 3.0.41 - 2026-09-14
