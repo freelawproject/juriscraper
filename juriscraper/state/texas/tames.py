@@ -21,6 +21,7 @@ from lxml import html
 from lxml.html import HtmlElement
 from typing_extensions import override
 
+from juriscraper.lib.aspnet_utils import breakup_hex_substrings
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.state.BaseStateScraper import (
@@ -404,8 +405,13 @@ class TAMESScraper(BaseStateScraper):
         self._fetch_search_form()
         form_data = self._build_form_data(start_date, end_date, court_ids)
 
+        # The WAF in front of TAMES reads the hex literals in the
+        # ViewState as SQLi and 403s the postback; see
+        # breakup_hex_substrings.
         response = self.request_manager.post(
-            self.SEARCH_URL, data=form_data, headers=self._POST_HEADERS
+            self.SEARCH_URL,
+            data=breakup_hex_substrings(form_data),
+            headers=self._POST_HEADERS,
         )
         response.raise_for_status()
 
@@ -566,8 +572,13 @@ class TAMESScraper(BaseStateScraper):
             submit_name: submit_val,
         }
 
+        # The WAF in front of TAMES reads the hex literals in the
+        # ViewState as SQLi and 403s the postback; see
+        # breakup_hex_substrings.
         response = self.request_manager.post(
-            self.SEARCH_URL, data=next_form_data, headers=self._POST_HEADERS
+            self.SEARCH_URL,
+            data=breakup_hex_substrings(next_form_data),
+            headers=self._POST_HEADERS,
         )
         response.raise_for_status()
 
