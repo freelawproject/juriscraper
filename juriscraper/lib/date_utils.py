@@ -1,9 +1,10 @@
 # We import the entire datetime library because otherwise we run into
 # conflicts in our isinstance statements.
 import datetime
-from datetime import date
+from collections.abc import Iterable
 from itertools import zip_longest
 from math import ceil
+from typing import TypeVar, cast
 
 from dateutil.parser import parser, parserinfo
 from dateutil.rrule import DAILY, rrule
@@ -17,7 +18,7 @@ MISSPELLINGS = {
 }
 
 
-def json_date_handler(obj):
+def json_date_handler(obj: object) -> str | None:
     return (
         obj.isoformat()
         if isinstance(obj, datetime.datetime | datetime.date)
@@ -71,7 +72,7 @@ p = parser(info=BetterInfo())
 info = p.info
 
 
-def timetoken(token):
+def timetoken(token: str) -> bool:
     try:
         float(token)
         return True
@@ -92,7 +93,7 @@ def timetoken(token):
     )
 
 
-def quarter(month):
+def quarter(month: int) -> int:
     """
     :param month: Any month, as an int.
     :return: The quarter of the year during which that month occurs (1-4)
@@ -100,7 +101,7 @@ def quarter(month):
     return int(ceil(float(month) / 3))
 
 
-def is_first_month_in_quarter(month):
+def is_first_month_in_quarter(month: int) -> int:
     """
 
     :param month: Any month as an int.
@@ -109,20 +110,23 @@ def is_first_month_in_quarter(month):
     return month in [1, 4, 7, 10]
 
 
-def fix_future_year_typo(future_date):
+_AnyDateT = TypeVar("_AnyDateT", datetime.datetime, datetime.date)
+
+
+def fix_future_year_typo(future_date: _AnyDateT) -> _AnyDateT:
     """Fix current year typo, convert 2106 to 2016 in year 2016"""
     current_year = str(datetime.date.today().year)
     transposed_year = (
         current_year[0] + current_year[2] + current_year[1] + current_year[3]
     )
     if transposed_year == str(future_date.year):
-        return datetime.date(
-            int(current_year), future_date.month, future_date.day
-        )
+        return future_date.replace(year=int(current_year))
     return future_date
 
 
-def make_date_range_tuples(start, end, gap):
+def make_date_range_tuples(
+    start: _AnyDateT, end: _AnyDateT, gap: int
+) -> list[tuple[_AnyDateT, _AnyDateT]]:
     """Make an iterable of date tuples for use in iterating forms
 
     For example, a form might allow start and end dates and you want to iterate
@@ -140,25 +144,46 @@ def make_date_range_tuples(start, end, gap):
     :rtype: list(tuple)
     :returns: list of start, end tuples
     """
+
+    def to_any_date(dt: datetime.datetime) -> _AnyDateT:
+        # Python generics can't be reified; we must key off the input values
+        # and to infer the type manually.
+        if all(isinstance(d, datetime.datetime) for d in (start, end)):
+            # both start and end are `datetime`-> `_AnyDateT` is `datetime`
+            return cast(_AnyDateT, dt)
+        else:
+            return cast(_AnyDateT, dt.date())
+
     # We create a list of start dates and a list of end dates, then zip them
     # together. If end_dates is shorter than start_dates, fill the last value
     # with the original end date.
     start_dates = [
-        d.date() for d in rrule(DAILY, interval=gap, dtstart=start, until=end)
+        to_any_date(d)
+        for d in rrule(DAILY, interval=gap, dtstart=start, until=end)
     ]
     end_start = start + datetime.timedelta(days=gap - 1)
     end_dates = [
-        d.date()
+        to_any_date(d)
         for d in rrule(DAILY, interval=gap, dtstart=end_start, until=end)
     ]
-    return list(zip_longest(start_dates, end_dates, fillvalue=end))
+    if isinstance(end, datetime.datetime):
+        end_date = to_any_date(end)
+    else:
+        end_date = end
+    return list(zip_longest(start_dates, end_dates, fillvalue=end_date))
 
 
 def unique_year_month(
-    date_list: list[date | datetime.datetime | tuple[date]],
-) -> list[date | datetime.datetime]:
+    date_list: list[_AnyDateT] | list[tuple[_AnyDateT]],
+) -> list[_AnyDateT]:
     """Takes a list of dates or date tuples, and reduces it
     to date objects with unique year-months pairs
+    TODO: 1-tuple input is not correct; it should change to reflect usage.
+    TODO: A `NamedTuple` may be the most appropriate return type. Setting aside
+     `datetime.date` and `datetime.datetime` inheritance trouble, consumers are
+     do not appear to use the day of the returned values - only year and month
+     are used …for URL construction and not calendar math.
+
 
     :param date_list: a list containing dates or tuples of dates
         default make_backscrape_iterable returns date tuples
@@ -168,10 +193,13 @@ def unique_year_month(
     seen_year_months = set()
 
     for obj in date_list:
-        if isinstance(obj, date | datetime.datetime):
-            obj = [obj]
+        iterable: Iterable[_AnyDateT]
+        if isinstance(obj, datetime.datetime | datetime.date):
+            iterable = (obj,)
+        else:
+            iterable = obj
 
-        for date_obj in obj:
+        for date_obj in iterable:
             ym = date_obj.strftime("%Y%m")
             if ym in seen_year_months:
                 continue

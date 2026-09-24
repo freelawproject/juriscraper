@@ -8,6 +8,20 @@
       "severity": "error"
     },
     {
+      "column": 59,
+      "path": "juriscraper/AbstractSite.py",
+      "name": "bad-specialization",
+      "concise_description": "`date | Unknown | None` is not assignable to any of constraints `datetime`, `date` of type variable `_AnyDateT`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/AbstractSite.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `gap` with type `int` in function `juriscraper.lib.date_utils.make_date_range_tuples`",
+      "severity": "error"
+    },
+    {
       "column": 24,
       "path": "juriscraper/fdsys/utils/get_xpath_results.py",
       "name": "missing-module-attribute",
@@ -92,34 +106,6 @@
       "severity": "error"
     },
     {
-      "column": 44,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `exc_info` with type `BaseException | bool | tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None] | None` in function `logging.Logger.log`",
-      "severity": "error"
-    },
-    {
-      "column": 44,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `stack_info` with type `bool` in function `logging.Logger.log`",
-      "severity": "error"
-    },
-    {
-      "column": 44,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `dict[str, list[str]]` is not assignable to parameter `stacklevel` with type `int` in function `logging.Logger.log`",
-      "severity": "error"
-    },
-    {
-      "column": 26,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Literal['#']` is not assignable to parameter `sep` with type `Buffer | None` in function `bytes.split`",
-      "severity": "error"
-    },
-    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
@@ -194,55 +180,6 @@
       "path": "juriscraper/lib/string_utils.py",
       "name": "not-iterable",
       "concise_description": "Type `Exception` is not iterable",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `date` and `None`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `datetime` and `date`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `datetime` and `None`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `None` and `date`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `None` and `datetime`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `None` and `None`",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/lib/string_utils.py",
-      "name": "unsupported-operation",
-      "concise_description": "`+` is not supported between `None` and `timedelta`",
       "severity": "error"
     },
     {
@@ -438,7 +375,7 @@
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/masslandct.py",
       "name": "bad-return",
-      "concise_description": "Returned type `list[date | datetime | None]` is not assignable to declared return type `list[date]`",
+      "concise_description": "Returned type `list[date | None]` is not assignable to declared return type `list[date]`",
       "severity": "error"
     },
     {
@@ -984,7 +921,7 @@
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
-      "concise_description": "Returned type `dict[str, date | datetime | None] | dict[str, str] | dict[str, None]` is not assignable to declared return type `dict[str, date | str | None]`",
+      "concise_description": "Returned type `dict[str, date | None] | dict[str, str] | dict[str, None]` is not assignable to declared return type `dict[str, date | str | None]`",
       "severity": "error"
     },
     {
@@ -1040,14 +977,14 @@
       "column": 20,
       "path": "juriscraper/pacer/download_confirmation_page.py",
       "name": "bad-return",
-      "concise_description": "Returned type `date | datetime` is not assignable to declared return type `str | None`",
+      "concise_description": "Returned type `datetime` is not assignable to declared return type `str | None`",
       "severity": "error"
     },
     {
       "column": 16,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-return",
-      "concise_description": "Returned type `date | datetime | None` is not assignable to declared return type `date`",
+      "concise_description": "Returned type `date | None` is not assignable to declared return type `date`",
       "severity": "error"
     },
     {
@@ -1226,13 +1163,6 @@
       "severity": "error"
     },
     {
-      "column": 28,
-      "path": "juriscraper/pacer/reports.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `(link: Unknown, keep_anchors: bool | Unknown = False) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
-      "severity": "error"
-    },
-    {
       "column": 50,
       "path": "juriscraper/pacer/reports.py",
       "name": "unbound-name",
@@ -1398,13 +1328,6 @@
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `(link: Unknown) -> bytes` is not assignable to parameter `link_repl_func` with type `(str) -> str | None` in function `lxml.html._element.HtmlElement.rewrite_links`",
       "severity": "error"
     },
     {

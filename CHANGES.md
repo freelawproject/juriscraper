@@ -29,13 +29,19 @@ Changes:
 Fixes:
 - Updates to `.pyrefly-baseline.json` (2)
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Update GitHub actions with deprecation warnings.
 - Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
 - Fix invalid type annotations for `texapp`.
 - Fix invalid definition of `cleanup_content()` in `alaska`
 - Correct the return types of various `pacer` methods that may return `None`.
 - Corrections to docstrings across files.
 - Address outstanding type errors in `scotus_email`
+- Annotate for `lib.html_utils`
+- Annotate for `lib.string_utils`
+- Annotate miscellaneous functions in `lib`
 - Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
+- Add generics and test utility functions in `lib`
+- Annotate `lib` functions related to `date`
 -
 
 ## 3.0.41 - 2026-09-14
