@@ -3,14 +3,15 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any
 
-import lxml.html
 from lxml import html
 from lxml.html import HtmlElement
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReport
+
+logger = make_default_logger()
 
 
 @dataclass
@@ -37,7 +38,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
         super().__init__(court_id=court_id)
-        self.tree: lxml.html.HtmlElement | None = None
+        self.tree: HtmlElement | None = None
 
     def _parse_text(self, text: str) -> None:
         """Parse raw HTML and store a lxml tree.
@@ -378,6 +379,8 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         :return: List of dicts containing parties data.
         """
+        if self.tree is None:
+            return []
         table = next(iter(self.tree.xpath("//table[@id='Contacts']")), None)
         if table is None:
             return []

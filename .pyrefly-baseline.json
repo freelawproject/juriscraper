@@ -1198,20 +1198,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get`",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get`",
-      "severity": "error"
-    },
-    {
       "column": 37,
       "path": "juriscraper/scotus/scotus_docket_report.py",
       "name": "missing-attribute",
@@ -1244,13 +1230,6 @@
       "path": "juriscraper/scotus/scotus_docket_report_htm.py",
       "name": "missing-attribute",
       "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
-      "severity": "error"
-    },
-    {
-      "column": 27,
-      "path": "juriscraper/scotus/scotus_docket_report_html.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
@@ -1517,13 +1496,6 @@
       "path": "juriscraper/state/texas/court_of_criminal_appeals.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `str | None` is not assignable to parameter `case_name_full` with type `str` in function `TexasCourtOfCriminalAppealsDocket.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/state/texas/email.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
       "severity": "error"
     },
     {

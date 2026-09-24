@@ -40,7 +40,7 @@ class SCOTUSDocketReport:
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
 
     def __init__(self, court_id: str = "scotus"):
-        self._scotus_json = None
+        self._scotus_json: dict | None = None
 
     @property
     def data(self) -> dict:
@@ -68,7 +68,11 @@ class SCOTUSDocketReport:
         :param text: The raw JSON unicode object
         :return: None
         """
-        self._scotus_json = json.loads(text or "{}")
+        json_object = json.loads(text or "{}")
+        # Perform minimal validation to guarantee dictionary type.
+        if not isinstance(json_object, dict):
+            raise ValueError("`text` is not a JSON object.")
+        self._scotus_json = json_object
 
     @property
     def metadata(self) -> dict[str, Any]:
@@ -157,6 +161,10 @@ class SCOTUSDocketReport:
 
         :return: List of docket entry dicts
         """
+        if not self._scotus_json:
+            logger.error("_parse_text() must be called first.")
+            return []
+
         entries = []
         for row in self._scotus_json.get("ProceedingsandOrder", []):
             links = row.get("Links", [])
@@ -221,6 +229,9 @@ class SCOTUSDocketReport:
             - name: Party name (from `PartyName`)
             - attorneys: List of attorney dictionaries.
         """
+        if not self._scotus_json:
+            logger.error("_parse_text() must be called first.")
+            return []
 
         type_parties = self._scotus_json.get(type_key, [])
         if not type_parties:
