@@ -1520,13 +1520,6 @@
       "severity": "error"
     },
     {
-      "column": 18,
-      "path": "juriscraper/state/texas/email.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
-      "severity": "error"
-    },
-    {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
       "name": "bad-override-mutable-attribute",
