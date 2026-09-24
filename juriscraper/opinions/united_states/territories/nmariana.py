@@ -4,18 +4,21 @@ Court Short Name: NMI
 Author: William Edward Palin
 History:
   2023-01-21: Created by William Palin
-  2026-09-24: Site moved to cnmilaw.gov
+  2026-09-24: Site moved to cnmilaw.gov; use urllib to pass Cloudflare
 """
 
 import re
 from datetime import date
 from typing import Any
+from urllib.parse import urljoin
 
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    use_urllib = True  # Use urllib to pass Cloudflare
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -67,7 +70,9 @@ class Site(OpinionSiteLinear):
                     "judge": ", ".join(self._cleanup_judge_names(judge_text)),
                     "author": author,
                     "per_curiam": not author,
-                    "url": s.xpath(".//a[@class='pdf-link']/@href")[0],
+                    "url": urljoin(
+                        self.url, s.xpath(".//a[@class='pdf-link']/@href")[0]
+                    ),
                     "docket": "",
                 }
             )
