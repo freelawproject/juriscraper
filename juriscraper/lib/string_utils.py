@@ -1,7 +1,8 @@
 import calendar
 import re
 import string
-from datetime import timedelta
+from datetime import date, datetime, timedelta
+from typing import Literal, overload
 from urllib.parse import parse_qs, quote_plus, urlencode, urlparse, urlunparse
 
 import geonamescache
@@ -38,7 +39,7 @@ UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
 MAC_MC = re.compile(r"^([Mm]c)(\w+.*)")
 
 
-def titlecase(text, DEBUG=False):
+def titlecase(text: str, DEBUG: bool = False) -> str:
     """Titlecases input text
 
     This filter changes all words to Title Caps, and attempts to be clever
@@ -196,7 +197,7 @@ def titlecase(text, DEBUG=False):
     return text
 
 
-def _uppercase_word(word):
+def _uppercase_word(word: str) -> str:
     """
     Helper function for uppercasing a word if it doesn't begin with Unicode characters.
 
@@ -210,7 +211,7 @@ def _uppercase_word(word):
     return CAPFIRST.sub(lambda m: m.group(0).upper(), word)
 
 
-def fix_camel_case(s):
+def fix_camel_case(s: str) -> str:
     """Sometimes courts provide nasty camel-cased content instead of real
     words. This code attempts to fix that."""
     if " " in s:
@@ -289,7 +290,7 @@ BW = (
 BAD_WORDS = re.compile(r"^(%s)(,|\.)?$" % BW, re.I)
 
 
-def harmonize(text):
+def harmonize(text) -> str:
     """Fixes case names so they are cleaner.
 
     Using a bunch of regex's, this function cleans up common data problems in
@@ -348,7 +349,7 @@ def harmonize(text):
     return clean_string(result)
 
 
-def clean_string(s):
+def clean_string(s) -> str:
     """Clean up strings.
 
     Accomplishes the following:
@@ -408,7 +409,9 @@ def clean_string(s):
     return s
 
 
-def force_unicode(s, encoding="utf-8", strings_only=False, errors="strict"):
+def force_unicode(
+    s, encoding="utf-8", strings_only=False, errors="strict"
+) -> str:
     # Borrows heavily from django.utils.encoding.force_unicode.
     # This should be applied to *input* not *output*!
     # Handle the common case first, saves 30-40% in performance when s
@@ -461,7 +464,7 @@ def force_unicode(s, encoding="utf-8", strings_only=False, errors="strict"):
     return s
 
 
-def trunc(s, length, ellipsis=None):
+def trunc(s: str, length: int, ellipsis: str | None = None) -> str:
     """Truncates a string at a good length.
 
     Finds the rightmost space in a string, and truncates there. Lacking such
@@ -492,7 +495,17 @@ def trunc(s, length, ellipsis=None):
         return s
 
 
-def convert_date_string(date_string, fuzzy=False, datetime=False):
+@overload
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = ..., datetime: Literal[True]
+) -> datetime | None: ...
+@overload
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = ..., datetime: Literal[False] = False
+) -> date | None: ...
+def convert_date_string(
+    date_string: str, *, fuzzy: bool = False, datetime: bool = False
+) -> date | datetime | None:
     """Sanitize date string and convert into standard date object
 
     :param date_string: A string to convert to a datetime object.
@@ -519,7 +532,7 @@ def convert_date_string(date_string, fuzzy=False, datetime=False):
         return dt.date()
 
 
-def split_date_range_string(date_range_string):
+def split_date_range_string(date_range_string: str) -> date:
     """This function requires a string in 'January - March 2016' format"""
     date_range_string = normalize_dashes(date_range_string)
     parts = date_range_string.split()
@@ -530,12 +543,14 @@ def split_date_range_string(date_range_string):
     last_day = calendar.monthrange(int(year), months[month2])[1]
     start_date = convert_date_string(f"{month1} 1, {year}")
     end_date = convert_date_string("%s %d, %s" % (month2, last_day, year))
+    if start_date is None or end_date is None:
+        raise Exception("Could not produce start and end date from string")
     delta = end_date - start_date
     dates_in_range = [start_date + timedelta(d) for d in range(delta.days + 1)]
     return dates_in_range[int(len(dates_in_range) / 2)]
 
 
-def normalize_dashes(raw_string):
+def normalize_dashes(raw_string: str) -> str:
     """Replace various dash formats with normal dash"""
     dashes = [
         # copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
@@ -729,7 +744,7 @@ class CaseNameTweaker:
         return bad_words
 
     @staticmethod
-    def make_geographies_list():
+    def make_geographies_list() -> list[str]:
         """Make a flat list of cities, counties and states that we can exclude
         from short names.
         """
@@ -745,7 +760,7 @@ class CaseNameTweaker:
         states = [v["name"] for v in geonames.get_us_states().values()]
         return cities + counties + states
 
-    def make_case_name_short(self, s):
+    def make_case_name_short(self, s: str) -> str:
         """Creates short case names where obvious ones can easily be made."""
         parts = [part.strip().split() for part in s.split(" v. ")]
         if len(parts) == 1:
@@ -786,7 +801,7 @@ class CaseNameTweaker:
         return ""
 
 
-def clean_if_py3(s):
+def clean_if_py3(s: str) -> str:
     """
     Cleans up text if using Python 3
 
