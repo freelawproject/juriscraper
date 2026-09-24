@@ -2,14 +2,6 @@
 import re
 import unittest
 
-import lxml.html
-
-from juriscraper.lib.exceptions import (
-    BotChallengeError,
-    ParsingException,
-)
-from juriscraper.opinions.united_states.state import lactapp_5
-
 
 class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested
