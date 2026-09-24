@@ -42,6 +42,7 @@ Fixes:
 - Changes in `state`, `pacer`, `opinions`, and `lib` ahead of Pyrefly 1.3.0
 - Add generics and test utility functions in `lib`
 - Annotate `lib` functions related to `date`
+- Take consistent approach to unparsed data in `texas`
 - Take consistent approach to unparsed data in `scotus`
 - Housekeeping in `scotus`
 -

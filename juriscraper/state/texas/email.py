@@ -90,6 +90,8 @@ class TamesEmail(AbstractParser[TamesEmailData | None]):
         self.tree = parse_email_html(text)
 
     def _parse_case_url(self) -> str | None:
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
         anchor = self.tree.find(".//a")
         if anchor is None:
             logger.error("Unable to find link in email body")

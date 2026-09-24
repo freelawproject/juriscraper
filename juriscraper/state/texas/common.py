@@ -525,7 +525,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
 
     def __init__(self, court_id: str = CourtID.UNKNOWN.value) -> None:
         super().__init__(court_id)
-        self.tree: HtmlElement = HtmlElement()
+        self.tree: HtmlElement | None = None
         self.events: dict[str, list[HtmlElement]] = {}
         self.briefs: dict[str, list[HtmlElement]] = {}
         self.case_data: dict[str, str] = {}
@@ -621,6 +621,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
 
         :return: Dictionary containing the case information.
         """
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
         parent = self.tree.find('.//*[@id="case"]/..')
         coa_parent = parent.find(
             './/*[@id="ctl00_ContentPlaceHolder1_COAOnly"]'
@@ -878,6 +880,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
 
         :return: Parties
         """
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
         table = self.tree.find(
             './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
         )
@@ -913,6 +917,8 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
 
         :return: Trial court info.
         """
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
         info_panel: HtmlElement = self.tree.find(
             './/*[@id="panelTrialCourtInfo"]/div[2]'
         )

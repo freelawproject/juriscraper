@@ -52,6 +52,8 @@ class TexasCourtOfCriminalAppealsScraper(TexasCommonScraper):
         common_data = super().data
         if not common_data:
             return {}
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
 
         return TexasCourtOfCriminalAppealsDocket(
             court_id=CourtID.COURT_OF_CRIMINAL_APPEALS.value,

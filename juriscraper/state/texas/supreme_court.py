@@ -80,6 +80,8 @@ class TexasSupremeCourtScraper(TexasCommonScraper):
         common_data = super().data
         if not common_data:
             return {}
+        if self.tree is None:
+            raise ValueError("_parse_text() must called first.")
 
         case_events = [
             TexasSupremeCourtCaseEvent(
