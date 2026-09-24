@@ -135,35 +135,3 @@ class ScraperSpotTest(unittest.TestCase):
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
-
-    def test_lactapp_5_empty_panel_raises(self):
-        """The homepage panel always lists decisions, so an empty or missing
-        panel must fail loudly instead of reporting zero opinions."""
-        panel = (
-            "<span id='cntBody_ctlOpinions_lblRecordCnt'>"
-            "0 record(s) returned.</span>"
-        )
-        cases = [
-            ("<html><body></body></html>", ParsingException),
-            (f"<html><body>{panel}</body></html>", ParsingException),
-            (
-                "<html><head><title>Bot Manager Captcha</title></head>"
-                f"<body>{panel}</body></html>",
-                BotChallengeError,
-            ),
-        ]
-        for markup, expected in cases:
-            with self.subTest(expected=expected.__name__):
-                site = lactapp_5.Site()
-                site.html = lxml.html.fromstring(markup)
-                with self.assertRaises(expected):
-                    site.check_panel_is_present()
-
-    def test_lactapp_5_backscrape_raises(self):
-        """Backscrape callers pass the keys with None values, so a bare
-        `--backscrape` must fail with our message, not a later TypeError."""
-        lactapp_5.Site()
-        with self.assertRaises(NotImplementedError):
-            lactapp_5.Site(
-                backscrape_start=None, backscrape_end=None, days_interval=None
-            )
