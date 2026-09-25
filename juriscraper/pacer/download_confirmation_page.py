@@ -35,7 +35,8 @@ class DownloadConfirmationPage(BaseReport):
         to self.response.
 
         :param pacer_doc_id: The internal PACER document ID for the item.
-        :return: a request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
 
         assert self.session is not None, (

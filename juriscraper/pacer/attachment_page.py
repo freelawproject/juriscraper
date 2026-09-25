@@ -32,7 +32,8 @@ class AttachmentPage(BaseReport):
         """Query the "attachment page" endpoint and set the results to self.response.
 
         :param document_number: The internal PACER document ID for the item.
-        :return: a request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of DocketReport cannot be None."
