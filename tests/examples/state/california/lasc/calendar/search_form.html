@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="head1"><title>
+	Case Calendar - Online Services - LA Court
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="icon" type="image/png" href="../commonv4/images/favicon-16x16.png" sizes="16x16" /><link rel="icon" type="image/png" href="../commonv4/images/favicon-32x32.png" sizes="32x32" />
+
+<!-- Stylesheet -->
+<link id="Link5" rel="stylesheet" type="text/css" href="../commonv4/styles/sitemaster.css" media="all" /><link id="Link4" rel="stylesheet" type="text/css" href="../commonv4/styles/fonts.css" media="all" /><link id="Link3" rel="stylesheet" type="text/css" href="../commonv4/styles/common.css" media="all" /><link id="Link10" rel="stylesheet" type="text/css" href="../commonv4/styles/home.css" media="all" /><link id="Link6" rel="stylesheet" type="text/css" href="../commonv4/styles/wrapper.css" media="all" /><link id="Link7" rel="stylesheet" type="text/css" href="../commonv4/styles/breadcrumb.css" media="all" /><link id="Link8" rel="stylesheet" type="text/css" href="../commonv4/styles/screen.css" media="all" /><link id="Link9" rel="stylesheet" type="text/css" href="../commonv4/styles/pending.css" media="all" /><link rel="stylesheet" type="text/css" href="../commonv4/styles/styles3.css" media="all" /><link rel="stylesheet" type="text/css" href="../commonv4/styles/template.css" media="all" /><link href="../commonv4/styles/jquery-ui.css" rel="stylesheet" /><link href="../commonv4/styles/jquery-ui-smoothness.css" rel="stylesheet" /><link id="Link1" rel="stylesheet" type="text/css" href="../commonv4/styles/tooltip.css" media="all" /><link id="Link2" rel="stylesheet" type="text/css" href="../commonv4/styles/global508.css" media="all" />
+    
+    <link rel="stylesheet" type="text/css" href="../commonv4/Styles/datepicker.css" /> 
+    <script type="text/javascript" src="../commonv4/Scripts/datepicker.js"></script>
+    <script lang="javascript" type="text/javascript" src="../Common/CivilCalendar.js"></script>
+    <script lang="javascript" src="../Commonv4/scripts/temporarymessage.js"></script>
+
+
+
+    <script lang="javascript">
+        function disableDept() {
+            getObj('ddlDept').disabled = true;
+            document.getElementById('butSearchByType').disabled = true;
+            document.getElementById('gifWaiting').style.display = "inline-block";
+            return true;
+        }
+    </script>
+    <style>
+    input {
+    	padding:  5px;
+    }
+
+    </style>
+
+</head>
+
+
+<body>
+    <!--JQuery-->
+    <script src="/CivilCalendar/commonv4/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+ 
+
+    <div id="mainContainer">
+
+        <div id="headerWrap" style="display:none">
+            <!-- Start Translate -->
+            <!-- End Translate -->
+
+            
+            
+
+            <!-- Font Size -->
+            
+
+            <!-- Start Logo -->
+            <div class="logo">
+                <a href="/page/HO0000" onclick="return processLink(this)"><img src="../commonv4/images/logo.gif" id="Img1" alt="Banner Image - The Superior Court of California County of Los Angeles " /></a>
+            </div>
+            <!-- End Logo -->
+
+   	        <!-- Start Search -->
+            <div class="searchWrap"  role="search" >
+            <form name="searchForm" method="get" onsubmit="doSearch(); return false;">
+    
+    	        <div id="searchfieldWrap">
+    		        <input aria-label="Enter Search Criteria" id="searchfield" type="text" name="search" value="Search" onclick="selectSearchText()" onkeydown=""/>
+    	        </div>
+        
+            <div id="btngoWrap">
+                    <a id="searchLink" href="#" onclick="return doSearch(this)"><img src="../commonv4/images/blank.gif" id="Img2" style="margin-left:1px;margin-top:1px" alt="Start Site Search" width="33" height="33" /></a>
+            </div>
+        
+            </form>
+	        </div> 
+            
+            <!-- Survey -->
+              
+        </div>
+
+        <!-- Start MainMenu -->
+        <!---#include virtual="includes/menu2aa.html" --->
+        <!-- End MainMenu -->
+
+        <form method="post" action="./mainpanel.aspx?CaseType=general" id="lascwebform">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ0NjUwOTc1OQ9kFgJmD2QWAmYPZBYCAgQPZBYCAgEPZBYEAgEPZBYCAgEPZBYEZg8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTtkAgYPFgIeBFRleHQFXTxzY3JpcHQgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz4kKCIjbmF2QmFyVGFiMiIpLmFkZENsYXNzKCJuYXZXaGl0ZUJveCBzZWxlY3RlZFRhYiIpOzwvc2NyaXB0PmQCBw9kFgQCAQ8PFgIeB1Zpc2libGVoZGQCAw8PFgIfAmdkFghmDxYCHwJoZAIBD2QWAgIBDxBkZBYAZAIEDxAPZBYCHghvbmNoYW5nZQUOZGlzYWJsZURlcHQoKTsQFRYGU2VsZWN0E0FsaGFtYnJhIENvdXJ0aG91c2UYQmV2ZXJseSBIaWxscyBDb3VydGhvdXNlEkJ1cmJhbmsgQ291cnRob3VzZRVDaGF0c3dvcnRoIENvdXJ0aG91c2USQ29tcHRvbiBDb3VydGhvdXNlE0dsZW5kYWxlIENvdXJ0aG91c2UlR292ZXJub3IgR2VvcmdlIERldWttZWppYW4gQ291cnRob3VzZRRJbmdsZXdvb2QgQ291cnRob3VzZRdNZXRyb3BvbGl0YW4gQ291cnRob3VzZS1NaWNoYWVsIEFudG9ub3ZpY2ggQW50ZWxvcGUgVmFsbGV5IENvdXJ0aG91c2USTm9yd2FsayBDb3VydGhvdXNlE1Bhc2FkZW5hIENvdXJ0aG91c2UXUG9tb25hIENvdXJ0aG91c2UgU291dGgXU2FuIEZlcm5hbmRvIENvdXJ0aG91c2UXU2FudGEgTW9uaWNhIENvdXJ0aG91c2UYU3ByaW5nIFN0cmVldCBDb3VydGhvdXNlF1N0YW5sZXkgTW9zayBDb3VydGhvdXNlE1RvcnJhbmNlIENvdXJ0aG91c2UYVmFuIE51eXMgQ291cnRob3VzZSBFYXN0GFZhbiBOdXlzIENvdXJ0aG91c2UgV2VzdBZXZXN0IENvdmluYSBDb3VydGhvdXNlFRYAQkFMSDs7QWxoYW1icmEgQ291cnRob3VzZTsxNTAgV2VzdCBDb21tb253ZWFsdGgsIEFsaGFtYnJhLCBDQSA5MTgwMUZCSCA7O0JldmVybHkgSGlsbHMgQ291cnRob3VzZTs5MzU1IEJ1cnRvbiBXYXksIEJldmVybHkgSGlsbHMsIENBIDkwMjEwPEJVUjtOQ0I7QnVyYmFuayBDb3VydGhvdXNlOzMwMCBFYXN0IE9saXZlLCBCdXJiYW5rLCBDQSA5MTUwMkNDSEE7O0NoYXRzd29ydGggQ291cnRob3VzZTs5NDI1IFBlbmZpZWxkIEF2ZS4sIENoYXRzd29ydGgsIENBIDkxMzExQ0NPTTtTQztDb21wdG9uIENvdXJ0aG91c2U7MjAwIFdlc3QgQ29tcHRvbiBCbHZkLiwgQ29tcHRvbiwgQ0EgOTAyMjBBR0xOO05DRztHbGVuZGFsZSBDb3VydGhvdXNlOzYwMCBFYXN0IEJyb2Fkd2F5LCBHbGVuZGFsZSwgQ0EgOTEyMDZPTEIgO1NPO0dvdmVybm9yIEdlb3JnZSBEZXVrbWVqaWFuIENvdXJ0aG91c2U7Mjc1IE1hZ25vbGlhLCBMb25nIEJlYWNoLCBDQSA5MDgwMj5JTkc7O0luZ2xld29vZCBDb3VydGhvdXNlOzEgUmVnZW50IFN0cmVldCwgSW5nbGV3b29kLCBDQSA5MDMwMUpNRVQ7O01ldHJvcG9saXRhbiBDb3VydGhvdXNlOzE5NDUgU291dGggSGlsbCBTdHJlZXQsIExvcyBBbmdlbGVzLCBDQSA5MDAwN19BVFA7Tk87TWljaGFlbCBBbnRvbm92aWNoIEFudGVsb3BlIFZhbGxleSBDb3VydGhvdXNlOzQyMDExIDR0aCBTdHJlZXQgV2VzdCwgTGFuY2FzdGVyLCBDQSA5MzUzNDdTRSA7Tk9SO05vcndhbGsgQ291cnRob3VzZTsxMjcyMCBOb3J3YWxrIEJsdmQuLCBOb3J3YWxrQlBBUztORTtQYXNhZGVuYSBDb3VydGhvdXNlOzMwMCBFYXN0IFdhbG51dCBTdC4sIFBhc2FkZW5hLCBDQSA5MTEwMTtFQSA7O1BvbW9uYSBDb3VydGhvdXNlIFNvdXRoOzQwMCBDaXZpYyBDZW50ZXIgUGxhemEsIFBvbW9uYUdMQVM7TlY7U2FuIEZlcm5hbmRvIENvdXJ0aG91c2U7OTAwIFRoaXJkIFN0cmVldCwgU2FuIEZlcm5hbmRvLCBDQSA5MTM0MEdTTSA7V0U7U2FudGEgTW9uaWNhIENvdXJ0aG91c2U7MTcyNSBNYWluIFN0cmVldCwgU2FudGEgTW9uaWNhLCBDQSA5MDQwMU1TUyA7U1M7U3ByaW5nIFN0cmVldCBDb3VydGhvdXNlOzMxMiBOb3J0aCBTcHJpbmcgU3RyZWV0IExvcyBBbmdlbGVzLCBDQSA5MDAxMktMQU07TEE7U3RhbmxleSBNb3NrIENvdXJ0aG91c2U7MTExIE5vcnRoIEhpbGwgU3RyZWV0LCBMb3MgQW5nZWxlcywgQ0EgOTAwMTI9U0JBO1NXO1RvcnJhbmNlIENvdXJ0aG91c2U7ODI1IE1hcGxlIEF2ZS4sIFRvcnJhbmNlLCBDQSA5MDUwM0JOVyA7O1ZhbiBOdXlzIENvdXJ0aG91c2UgRWFzdDs2MjMwIFN5bG1hciBBdmUuLCBWYW4gTnV5cywgQ0EgOTE0MDFJTEFWOztWYW4gTnV5cyBDb3VydGhvdXNlIFdlc3Q7MTQ0MDAgRXJ3aW4gU3RyZWV0IE1hbGwsIFZhbiBOdXlzLCBDQSA5MTQwMUtDSVQ7O1dlc3QgQ292aW5hIENvdXJ0aG91c2U7MTQyNyBXZXN0IENvdmluYSBQYXJrd2F5LCBXZXN0IENvdmluYSwgQ0EgOTE3OTAUKwMWZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgcPZBYEAgMPFgIfAmhkAgkPD2QWAh4FY2xhc3MFC2NvbW1vbnRhYmxlZGR1qIWipfqOqrkzw/1JZ19dAAVZvSh88+VldBq9K3KFJg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['lascwebform'];
+if (!theForm) {
+    theForm = document.lascwebform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2AD3A5A0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABmUgNhuqocUkRZgu+zrXThtTYuj29o6CQ27WM2Q395rCGII3v9yap/RfNYyDNlwdy5M8rGXQO13y4oa+rbI4KT9sc1WpDWTkVyzblkuu2S0E7iqZTwzY3f0HBAUAQ05kN6z00G3Ei6AoTE7An1Ozf8SsrDFWzJZiZAFwyi4HADTPajOJlFrGvia9sZixyW8PoeRTYSE0ZjqBePPlPv6QOTAey5iiHb1PFes7SdOSfGrEgDkxr/RI/JmKK6LHAmr6ljH3HsBXPNGpvoOsID78oNWXkB/h5v9a+wdjGR9doPutn8a7LXKSKmltkH7ld9nnNd/T2zBUaurKKrnpn9xmqoqt6FxKx/C3C/qNKUozF27UKn8ZfRZIrC9GlZ6mfe63bR5+vJUU3Uhv8E3ESTxymuHkuAT6ilBCesi1lsyFcwN27MIN1MuosLauhx3ASopXSKaqIAGyo5n+MlI1K8baRWbkB2RgcuKA5Ff6Yzau8eG7lCF31J/3HTt6v6Uhw2mrzWTYNpBN5XIWlJKjYf7BPobvII+f7duX+UUlVR23GsupwsU76l92+mQCasCXBjs4Vc=" />
+</div>
+            <!--<h1><span style="display:none" role="heading">Main Content</span></h1>-->
+            <div class="pageWrap">
+                
+    <div style="display:none">
+    
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_breadcrumbBarContainer" class="breadcrumbBarContainer" display="none" style="display:none;">
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_enabledLink" display="none" class="breadcrumbBar">
+        <a href="#" class="topBreadcrumb" onclick="return processLink(this)"><span class="glyphicon glyphicon-menu-right"></span></a>
+    </div>    
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_disabledLink" class="breadcrumbBar">
+        <div class="topBreadcrumb"><span class="glyphicon glyphicon-menu-right"></span></div>
+    </div>
+</div>
+<div style="height:30px">
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_returnLinkContainer" style="text-align:right; display:none">
+        <a type="button" class="btn btn-default btn-sm" href="#" onclick="return processLink(this);">
+            <span class="glyphicon glyphicon-screenshot"></span>  Home </a>
+    </div>
+</div>
+
+<script type='text/javascript'>$("#navBarTab2").addClass("navWhiteBox selectedTab");</script>
+                
+            
+
+
+    </div>
+    
+    <div class="mainContentWrap" id="divMainContent">
+        <div class="basicWrap">
+            <div class="contentCategory" style="padding-top: 28px; padding-bottom: 10px; display:none">
+                
+    Online Services
+
+            </div>
+            <div class="contentTitle" style="display:none">
+                
+    Civil Case Calendar
+
+            </div>
+            <div class="contentText">
+                
+
+    <!-- main content -->
+     <a name="Top"></a> 
+    
+    <div id="siteMasterHolder_basicBodyHolder_panForm">
+	
+        View a list of future cases/calendar hearings. Confidential hearings will not be displayed. Search results will show available hearings up to 269 days (180 business days) in advance.
+        <table class="commontable" style="padding: 10px 10px 10px 10px; margin: 20px 20px 0px 0px; width:auto;">
+             <tr>
+            <!-- left box -->
+            <td style="width: 35%; vertical-align: top; padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px;">
+                <div class="contentHeading">search by case number</div>
+         
+                Enter a case number and click search.
+                 <br />   <br />   
+                CASE NUMBER: <br />  
+                 <input id="casenumber" type="text" aria-label="Case Number" class="textInput" name="CaseNumber" maxlength="30">
+                   <br />   <br /> 
+      
+                  <input class="button" type="button" value="Search" onclick="return searchYou('NUMBER');" style="MARGIN-TOP: 3px; MARGIN-LEFT: 5px">&nbsp;&nbsp;&nbsp;
+                   <input type="button" class="button" value="Clear" onclick="return clearFields('NUMBER');">
+                  
+                <br /><br /><br />
+                  
+            </td>
+             <!-- right box -->
+            <td style="width:65%; vertical-align: top; padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px;">
+                <div class="contentHeading">search by location</div>
+
+                Select a location then click search.<br />
+			     <br />
+                <div>
+                    <div style="column-width:70px; float:left;">Date:&nbsp;&nbsp;&nbsp;<br /></div>
+			        <div style="column-width:auto; float:left;">From:  <input name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$dateFrom" type="text" value="9/18/2026" id="siteMasterHolder_basicBodyHolder_dateFrom" aria-label="Date From" name="dateFrom" class="datepicker" /> 
+                    <br /> 
+                    To:&nbsp; &nbsp;&nbsp;&nbsp;   <input name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$dateTo" type="text" value="9/18/2026" id="siteMasterHolder_basicBodyHolder_dateTo" aria-label="Date To" name="dateTo" class="datepicker" />
+                    </div>
+                </div>
+                <br />&nbsp;<br /><br /> <br />                                                                        
+                Courthouse:<br />
+			    <select name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$ddlLocation2" onchange="disableDept();setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$siteMasterHolder$basicBodyHolder$ddlLocation2\&#39;,\&#39;\&#39;)&#39;, 0)" id="siteMasterHolder_basicBodyHolder_ddlLocation2" aria-label="Courthouse">
+		<option selected="selected" value="">Select</option>
+		<option value="ALH;;Alhambra Courthouse;150 West Commonwealth, Alhambra, CA 91801">Alhambra Courthouse</option>
+		<option value="BH ;;Beverly Hills Courthouse;9355 Burton Way, Beverly Hills, CA 90210">Beverly Hills Courthouse</option>
+		<option value="BUR;NCB;Burbank Courthouse;300 East Olive, Burbank, CA 91502">Burbank Courthouse</option>
+		<option value="CHA;;Chatsworth Courthouse;9425 Penfield Ave., Chatsworth, CA 91311">Chatsworth Courthouse</option>
+		<option value="COM;SC;Compton Courthouse;200 West Compton Blvd., Compton, CA 90220">Compton Courthouse</option>
+		<option value="GLN;NCG;Glendale Courthouse;600 East Broadway, Glendale, CA 91206">Glendale Courthouse</option>
+		<option value="LB ;SO;Governor George Deukmejian Courthouse;275 Magnolia, Long Beach, CA 90802">Governor George Deukmejian Courthouse</option>
+		<option value="ING;;Inglewood Courthouse;1 Regent Street, Inglewood, CA 90301">Inglewood Courthouse</option>
+		<option value="MET;;Metropolitan Courthouse;1945 South Hill Street, Los Angeles, CA 90007">Metropolitan Courthouse</option>
+		<option value="ATP;NO;Michael Antonovich Antelope Valley Courthouse;42011 4th Street West, Lancaster, CA 93534">Michael Antonovich Antelope Valley Courthouse</option>
+		<option value="SE ;NOR;Norwalk Courthouse;12720 Norwalk Blvd., Norwalk">Norwalk Courthouse</option>
+		<option value="PAS;NE;Pasadena Courthouse;300 East Walnut St., Pasadena, CA 91101">Pasadena Courthouse</option>
+		<option value="EA ;;Pomona Courthouse South;400 Civic Center Plaza, Pomona">Pomona Courthouse South</option>
+		<option value="LAS;NV;San Fernando Courthouse;900 Third Street, San Fernando, CA 91340">San Fernando Courthouse</option>
+		<option value="SM ;WE;Santa Monica Courthouse;1725 Main Street, Santa Monica, CA 90401">Santa Monica Courthouse</option>
+		<option value="SS ;SS;Spring Street Courthouse;312 North Spring Street Los Angeles, CA 90012">Spring Street Courthouse</option>
+		<option value="LAM;LA;Stanley Mosk Courthouse;111 North Hill Street, Los Angeles, CA 90012">Stanley Mosk Courthouse</option>
+		<option value="SBA;SW;Torrance Courthouse;825 Maple Ave., Torrance, CA 90503">Torrance Courthouse</option>
+		<option value="NW ;;Van Nuys Courthouse East;6230 Sylmar Ave., Van Nuys, CA 91401">Van Nuys Courthouse East</option>
+		<option value="LAV;;Van Nuys Courthouse West;14400 Erwin Street Mall, Van Nuys, CA 91401">Van Nuys Courthouse West</option>
+		<option value="CIT;;West Covina Courthouse;1427 West Covina Parkway, West Covina, CA 91790">West Covina Courthouse</option>
+
+	</select>
+                <br /><br /> 
+                 Department: <br />
+			    <select name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$ddlDept" id="siteMasterHolder_basicBodyHolder_ddlDept" aria-label="Department">
+
+	</select>&nbsp;&nbsp;<span id="gifWaiting" style="display: none ">Updating...</span>
+                 <br />
+                 <br />
+			    <input class="button" type="button" value="Search" id="butSearchByType" onclick="return searchYou('TYPE');" style="MARGIN-TOP: 3px">&nbsp;&nbsp;&nbsp;
+                 <input class="button" onclick="return clearFields('TYPE'); return false;" type="button" value="Clear">
+																				
+
+            </td>
+            </tr>
+             <!-- bottom box -->
+            <tr>
+            <td colspan="2" style="padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px;">
+            <a name="ResultTop"></a>    
+                
+
+                
+
+            <input type="hidden" name="hdnType" id="hdnType" value="">
+            
+             </td>
+            </tr>
+        </table>
+    
+</div>
+
+
+            </div>
+        </div>
+        <script>var contentArea = "#divMainContent";</script>
+    </div>
+    <div class="moreContentWrap" style="display:none">
+        <div class="moreLeftWrap">
+            
+            
+        </div>
+        <div class="moreMidWrap">
+            
+            
+        </div>
+        <div class="moreRightWrap">
+            
+                <!--<div id="siteMasterHolder_rightMoreHolder_returnLink_returnLinkContainer" style="text-align:right; display:none">
+    <a href="../commonv4/source/uc/x" id="siteMasterHolder_rightMoreHolder_returnLink_homeButtonLink" type="button" class="btn btn-default btn-sm" onclick="return processLink(this);">
+        <span class="glyphicon glyphicon-screenshot"></span>  Home
+    </a>
+
+</div>
+-->
+            
+        </div>
+    </div>
+
+    <div class="lastContentWrap" style="display:none">
+        <div class="lastLeftWrap">
+            
+
+        </div>
+        <div class="lastRightWrap">
+
+            
+
+        </div>
+    </div>
+    
+
+            </div>
+        </form>
+        <div id="footerWrap" style="display:none">
+                <!-- Start MainMenu -->
+                <!-- End MainMenu -->
+        </div>
+    </div>
+
+    <!-- Scripts Loaded at End -->
+    <!-- Provides performance benefit. Also fix for Asp.Net error, "The Controls collection cannot be modified because the control contains code blocks (i.e. < % ... % >)" -->
+    <!-- See http://www.aspdotnet-suresh.com/2011/12/aspnet-controls-collection-cannot-be.html -->
+
+    <!--JQuery-->
+    
+    <script src="/CivilCalendar/commonv4/scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/CivilCalendar/commonv4/scripts/jquery.cookie.js" type="text/javascript"></script>
+
+    <!--Google Analytics-->
+    <script src="/CivilCalendar/commonv4/scripts/analytics.js" type="text/javascript"></script>
+
+    <!-- lascweb -->   
+    <script src="/CivilCalendar/commonv4/scripts/config.js" type="text/javascript" ></script>
+    <script src="/CivilCalendar/commonv4/scripts/common.js" type="text/javascript" ></script>
+    <script src="/CivilCalendar/commonv4/scripts/tooltip.js" type="text/javascript"></script>
+    <script src="/CivilCalendar/commonv4/scripts/linkredirect.js" type="text/javascript"></script>
+    <script src="/CivilCalendar/commonv4/scripts/globaljs.js" type="text/javascript" ></script>  <!-- Nav Menu -->
+
+    <!-- text-2-speech -->
+    <!--script src="/CivilCalendar/commonv4/scripts/text2speech.js" type="text/javascript" ></!--script-->
+
+    <!-- ajax control toolkit extension -->
+    <script src="/CivilCalendar/commonv4/scripts/ajaxcontroltoolkit.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        <!-- Executes OnFocus. Highlights the text in the search box. -->
+        function selectSearchText() {
+            $("#searchfield").select();
+        }
+        function doSearch() {
+            $("#searchLink").attr("href", "/page/ho0100/" + escape($("#searchfield").val().trim()));
+            return processLink($("#searchLink"));
+        }
+    </script>
+    <!-- End Lascweb -->
+
+    
+    
+    
+            
+</body>
+</html>
+

@@ -282,6 +282,28 @@ def is_html(response: Response) -> bool:
     return "text/html" in response.headers.get("content-type", "")
 
 
+def hidden_input_fields(tree: HtmlElement, prefix: str = "") -> dict[str, str]:
+    """Collect a page's hidden inputs, to post back with a form.
+
+    ASP.NET WebForms sites keep the state of the page a post is coming from
+    in hidden inputs — ``__VIEWSTATE`` and its companions, and often fields
+    of the site's own — and answer a post that drops them with an error
+    rather than a result. Sites also nest their forms improperly often
+    enough that a control can parse into a different form than the one
+    holding the state, so these are gathered from the whole page.
+
+    :param tree: The parsed page the post is being built from.
+    :param prefix: Only collect fields whose name starts with this, e.g.
+        ``__`` for ASP.NET's own state. Empty collects every hidden field.
+    :return: The hidden fields, by name.
+    """
+    return {
+        name: field.get("value", "")
+        for field in tree.xpath("//input[@type='hidden']")
+        if (name := field.get("name", "")) and name.startswith(prefix)
+    }
+
+
 def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
     """
     Extracts <td> elements from a table into a 2D array with the same layout as
