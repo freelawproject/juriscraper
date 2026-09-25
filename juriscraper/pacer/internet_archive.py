@@ -24,7 +24,7 @@ class InternetArchive(BaseDocketReport):
 
     CACHE_ATTRS = ["metadata", "parties", "docket_entries"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(self, court_id: str, **kwargs):
         super().__init__(court_id)
 
         # Initialize the empty cache properties.

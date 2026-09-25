@@ -2304,13 +2304,6 @@
       "severity": "error"
     },
     {
-      "column": 30,
-      "path": "juriscraper/pacer/attachment_page.py",
-      "name": "unknown-attribute-type",
-      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "bad-override",
@@ -2581,13 +2574,6 @@
       "path": "juriscraper/pacer/docket_history_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "unknown-attribute-type",
-      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
       "severity": "error"
     },
     {
@@ -3295,13 +3281,6 @@
       "path": "juriscraper/pacer/mobile_query.py",
       "name": "bad-override",
       "concise_description": "Class member `MobileQuery.query` overrides parent class `BaseReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/pacer/reports.py",
-      "name": "unknown-attribute-type",
-      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
       "severity": "error"
     },
     {

@@ -79,7 +79,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         "vaeb",
     ]
 
-    def __init__(self, court_id):
+    def __init__(self, court_id: str):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None

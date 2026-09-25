@@ -51,7 +51,7 @@ class BaseReport:
         "Drumpf",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         self.court_id = court_id
         self.session = pacer_session
         self.tree = None

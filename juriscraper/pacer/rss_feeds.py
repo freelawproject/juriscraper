@@ -133,7 +133,7 @@ class PacerRssFeed(DocketReport):
 
     CACHE_ATTRS = ["data"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(self, court_id: str, **kwargs):
         super().__init__(court_id)
         self._clear_caches()
         self._data = None

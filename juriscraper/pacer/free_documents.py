@@ -37,7 +37,7 @@ class FreeOpinionReport(BaseReport):
     EXCLUDED_COURT_IDS = ["casb", "innb", "ohsb"]
     VALID_SORT_PARAMS = ("date_filed", "case_number")
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         self.responses = []
         self.responses_with_params = []
         self.trees = []

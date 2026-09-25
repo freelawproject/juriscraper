@@ -19,7 +19,7 @@ logger = make_default_logger()
 class ACMSDocketReport(AppellateDocketReport):
     """Parse ACMS docket JSON."""
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
         self._acms_json = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
