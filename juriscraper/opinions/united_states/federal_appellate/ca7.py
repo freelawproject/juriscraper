@@ -11,6 +11,10 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    filing_date_re = re.compile(
+        r"Path=Y(?P<year>\d{4})/D(?P<month>\d{2})-(?P<day>\d{2})"
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://media.ca7.uscourts.gov/cgi-bin/OpinionsWeb/processWebInputExternal.pl?Time=month&startDate=&endDate=&Author=any&AuthorName=&Case=any&CaseYear=&CaseNum=&Rubmit=RssRecent&RssJudgeName=Sykes&OpsOnly=yes"
@@ -29,7 +33,11 @@ class Site(OpinionSiteLinear):
             docket = parts[parts.index("case#") + 1]
             name = item["summary"].split(docket)[1].split("(")[0]
             author = item["summary"].split("{")[1].split("}")[0]
-            date = item["published"]
+            date_match = self.filing_date_re.search(item["link"])
+            if date_match is None:
+                logger.warning("Skipping item with no filing date in link")
+                continue
+            date = "-".join(date_match.group("year", "month", "day"))
             per_curiam = False
             if "curiam" in author.lower():
                 per_curiam = True
@@ -45,8 +53,16 @@ class Site(OpinionSiteLinear):
                     "judge": author,
                     "author": author,
                     "per_curiam": per_curiam,
+                    "feed_timestamp": item["published_parsed"],
                 }
             )
+
+        self.cases.sort(key=lambda case: case["feed_timestamp"], reverse=True)
+        for case in self.cases:
+            del case["feed_timestamp"]
+
+    def _date_sort(self) -> None:
+        """Preserve the feed timestamp order applied by `_process_html`."""
 
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
