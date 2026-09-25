@@ -116,7 +116,26 @@ class BaseDocketReport:
                     atty_cache[atty["name"]] = atty["contact"]
         return parties
 
-    def _get_value(self, regex, query_strings, cast_to_date=False):
+    @overload
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: Literal[True],
+    ) -> date | None: ...
+    @overload
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: Literal[False] = ...,
+    ) -> str: ...  # Note: empty string is sent instead of `None`
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: bool = False,
+    ) -> str | date | None:
         """Find the matching value for a regex.
 
         Iterate over a list of values and return group(1) for the first that

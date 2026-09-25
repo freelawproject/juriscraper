@@ -2559,7 +2559,7 @@
       "column": 59,
       "path": "juriscraper/pacer/rss_feeds.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `dict[str, datetime | str | Unknown | None]` is not assignable to parameter `de` with type `dict[str, date | datetime | str]` in function `juriscraper.pacer.utils.set_pacer_doc_id_as_appellate_document_number`",
+      "concise_description": "Argument `dict[str, datetime | str | None]` is not assignable to parameter `de` with type `dict[str, date | datetime | str]` in function `juriscraper.pacer.utils.set_pacer_doc_id_as_appellate_document_number`",
       "severity": "error"
     },
     {
