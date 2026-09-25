@@ -2,6 +2,8 @@ import copy
 import pprint
 import re
 import sys
+from datetime import date, datetime
+from typing import Literal, overload
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -289,7 +291,17 @@ class BaseDocketReport:
 
         return None, self._return_default_dn_components()
 
-    def get_datetime_from_tree(self, path, cast_to_date=False):
+    @overload
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: Literal[True]
+    ) -> date | None: ...
+    @overload
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: Literal[False] = ...
+    ) -> datetime | None: ...
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: bool = False
+    ) -> datetime | date | None:
         """Parse a datetime from the XML located at node.
 
         If cast_to_date is true, the datetime object will be converted to a
