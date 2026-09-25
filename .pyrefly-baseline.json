@@ -911,6 +911,20 @@
       "severity": "error"
     },
     {
+      "column": 16,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `acms_user_data`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get_acms_auth_object`",
+      "severity": "error"
+    },
+    {
       "column": 17,
       "path": "juriscraper/pacer/acms_attachment_page.py",
       "name": "bad-index",
@@ -925,6 +939,13 @@
       "severity": "error"
     },
     {
+      "column": 41,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",
@@ -932,10 +953,115 @@
       "severity": "error"
     },
     {
+      "column": 31,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Coroutine[Unknown, Unknown, list[dict[str, Any]]]` is not assignable to parameter `obj` with type `Sized` in function `len`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "bad-index",
+      "concise_description": "Cannot index into `Coroutine[Unknown, Unknown, list[dict[str, Any]]]`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `filter.__new__` called with arguments: (type[filter[_T]], (v: Unknown) -> Unknown, Coroutine[Unknown, Unknown, list[dict[str, Any]]])",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `tuple[Coroutine[Unknown, Unknown, httpx._models.Response], Literal['']]` is not assignable to declared return type `tuple[requests.models.Response | None, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `OrderedDict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 46,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "redundant-condition",
+      "concise_description": "String literal used as condition. It's equivalent to `True`",
+      "severity": "warn"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/acms_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/appellate_attachment_page.py",
       "name": "bad-override",
       "concise_description": "Class member `AppellateAttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/appellate_attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/appellate_attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 37,
+      "path": "juriscraper/pacer/appellate_attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 37,
+      "path": "juriscraper/pacer/appellate_attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 7,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "inconsistent-inheritance",
+      "concise_description": "Field `data` has inconsistent types inherited from multiple base classes",
       "severity": "error"
     },
     {
@@ -953,10 +1079,290 @@
       "severity": "error"
     },
     {
+      "column": 17,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | str | None` is not assignable to parameter `appeal_from` with type `str` in function `AppellateDocketReport._get_appeal_from`",
+      "severity": "error"
+    },
+    {
+      "column": 49,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `date_string` with type `str` in function `juriscraper.lib.string_utils.convert_date_string`",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `OrderedDict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-return",
+      "concise_description": "Returned type `date | str` is not assignable to declared return type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 37,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 45,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of type `date | str | None` has no attribute `split`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 62,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | str` is not assignable to parameter `judge` with type `str` in function `juriscraper.lib.judge_parsers.normalize_judge_string`",
+      "severity": "error"
+    },
+    {
+      "column": 58,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | str | None` is not assignable to parameter `judge` with type `str` in function `juriscraper.lib.judge_parsers.normalize_judge_string`",
+      "severity": "error"
+    },
+    {
+      "column": 61,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date | str | None` is not assignable to parameter `judge` with type `str` in function `juriscraper.lib.judge_parsers.normalize_judge_string`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/appellate_docket.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "bad-override",
       "concise_description": "Class member `AttachmentPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 52,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/attachment_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 18,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 39,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `tail`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, str | Unknown | None])",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, str | None])",
       "severity": "error"
     },
     {
@@ -967,10 +1373,66 @@
       "severity": "error"
     },
     {
+      "column": 16,
+      "path": "juriscraper/pacer/case_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/case_query_advanced.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseCaseQueryAdvanced` has no attribute `metadata`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/case_query_advanced.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/case_query_advanced.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `list[str]` is not assignable to parameter `potential_docket_numbers` with type `list[_ElementUnicodeResult]` in function `juriscraper.pacer.docket_report.BaseDocketReport._parse_docket_number_strs`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "bad-override",
       "concise_description": "Class member `CaseQueryAdvancedBankruptcy.query` overrides parent class `BaseCaseQueryAdvanced` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/case_query_advanced.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, list[dict[str, str]] | str])",
+      "severity": "error"
+    },
+    {
+      "column": 39,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `dict[str, date | str | None]` is not assignable to parameter `meta_data` with type `dict[str, date | list[dict[str, str]] | str | None]` in function `ClaimsActivity._fill_non_present_values_as_empty`",
       "severity": "error"
     },
     {
@@ -1019,6 +1481,13 @@
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
+      "concise_description": "Returned type `dict[str, str | Any | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "bad-return",
       "concise_description": "Returned type `dict[str, date | None] | dict[str, str] | dict[str, None]` is not assignable to declared return type `dict[str, date | str | None]`",
       "severity": "error"
     },
@@ -1027,6 +1496,83 @@
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-override",
       "concise_description": "Class member `ClaimsActivity.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 46,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, int]`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, int]`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, int]`",
+      "severity": "error"
+    },
+    {
+      "column": 43,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, int]`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, int]`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/claims_register.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, int]`",
       "severity": "error"
     },
     {
@@ -1044,6 +1590,216 @@
       "severity": "error"
     },
     {
+      "column": 29,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 45,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 42,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 42,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 42,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 36,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str]`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_history_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `CACHE_ATTRS`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `is_valid`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `metadata`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `parties`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `docket_entries`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `tree`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `BaseDocketReport` has no attribute `tree`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `replace`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `tzinfo`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, list[Unknown] | str]`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `append`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `append`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 37,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, date | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 41,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "bad-assignment",
+      "concise_description": "`bool` is not assignable to attribute `_is_adversary_proceeding` with type `Never`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "bad-override",
@@ -1051,10 +1807,94 @@
       "severity": "error"
     },
     {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "unbound-name",
+      "concise_description": "`desc` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/download_confirmation_page.py",
       "name": "bad-override",
       "concise_description": "Class member `DownloadConfirmationPage.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 40,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 44,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
       "severity": "error"
     },
     {
@@ -1072,10 +1912,87 @@
       "severity": "error"
     },
     {
+      "column": 34,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 40,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 36,
+      "path": "juriscraper/pacer/download_confirmation_page.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "severity": "error"
+    },
+    {
       "column": 20,
       "path": "juriscraper/pacer/download_confirmation_page.py",
       "name": "bad-return",
       "concise_description": "Returned type `datetime` is not assignable to declared return type `str | None`",
+      "severity": "error"
+    },
+    {
+      "column": 42,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | DocketType`",
+      "severity": "error"
+    },
+    {
+      "column": 42,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | DocketType`",
+      "severity": "error"
+    },
+    {
+      "column": 47,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 52,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
       "severity": "error"
     },
     {
@@ -1093,6 +2010,55 @@
       "severity": "error"
     },
     {
+      "column": 22,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 43,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._parse_docket_number`",
+      "severity": "error"
+    },
+    {
+      "column": 50,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._get_case_name`",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
       "column": 53,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-typed-dict-key",
@@ -1104,6 +2070,13 @@
       "path": "juriscraper/pacer/email.py",
       "name": "bad-return",
       "concise_description": "Returned type `list[dict[str, list[DocketEntryType] | str | None]]` is not assignable to declared return type `DocketType`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
       "severity": "error"
     },
     {
@@ -1125,6 +2098,13 @@
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `str` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `subject` with type `str` in function `NotificationEmail._parse_acms_document_number`",
       "severity": "error"
     },
     {
@@ -1156,6 +2136,27 @@
       "severity": "error"
     },
     {
+      "column": 39,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `appellate` with type `bool` in function `juriscraper.pacer.utils.get_pacer_magic_num_from_doc1_url`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`str | Any | None` is not assignable to dict key `pacer_case_id` with type `None`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/email.py",
+      "name": "bad-assignment",
+      "concise_description": "`str | Any | None` is not assignable to dict key `pacer_seq_no` with type `None`",
+      "severity": "error"
+    },
+    {
       "column": 47,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
@@ -1170,10 +2171,87 @@
       "severity": "error"
     },
     {
+      "column": 40,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
       "column": 16,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-return",
       "concise_description": "Returned type `tuple[str | Any, ...] | None` is not assignable to declared return type `tuple[str | None, str] | None`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/email.py",
+      "name": "unbound-name",
+      "concise_description": "`body` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `Message` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/email.py",
+      "name": "unbound-name",
+      "concise_description": "`body` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/email.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `Message` has no attribute `decode`",
       "severity": "error"
     },
     {
@@ -1184,10 +2262,80 @@
       "severity": "error"
     },
     {
+      "column": 24,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `post`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 49,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "unbound-name",
+      "concise_description": "`href` may be uninitialized",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "juriscraper/pacer/free_documents.py",
+      "name": "unbound-name",
+      "concise_description": "`path` may be uninitialized",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "bad-override",
       "concise_description": "Class member `PossibleCaseNumberApi.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 29,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
@@ -1198,10 +2346,80 @@
       "severity": "error"
     },
     {
+      "column": 15,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `url`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "bad-override",
       "concise_description": "Class member `AcmsCaseSearch.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/hidden_api.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `json`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "juriscraper/pacer/http.py",
+      "name": "implicit-import",
+      "concise_description": "Module `requests.cookies` exists, but was not imported explicitly. You are relying on other modules to load it.",
+      "severity": "warn"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `raise_for_status`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/list_of_creditors.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/list_of_creditors.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/list_of_creditors.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -1219,10 +2437,66 @@
       "severity": "error"
     },
     {
+      "column": 20,
+      "path": "juriscraper/pacer/mobile_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/mobile_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/mobile_query.py",
       "name": "bad-override",
       "concise_description": "Class member `MobileQuery.query` overrides parent class `BaseReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/mobile_query.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `decode`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `raise_for_status`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `rewrite_links`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `post`",
       "severity": "error"
     },
     {
@@ -1261,6 +2535,13 @@
       "severity": "error"
     },
     {
+      "column": 21,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
       "column": 50,
       "path": "juriscraper/pacer/reports.py",
       "name": "unbound-name",
@@ -1268,10 +2549,87 @@
       "severity": "error"
     },
     {
+      "column": 17,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "juriscraper/pacer/reports.py",
+      "name": "unsupported-operation",
+      "concise_description": "`in` is not supported between `Literal['You do not have permission to view this document.']` and `bytes`",
+      "severity": "error"
+    },
+    {
       "column": 9,
       "path": "juriscraper/pacer/rss_feeds.py",
       "name": "bad-override",
       "concise_description": "Class member `PacerRssFeed.query` overrides parent class `DocketReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `get`",
+      "severity": "error"
+    },
+    {
+      "column": 9,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `raise_for_status`",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `text`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "unknown-attribute-type",
+      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 59,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `dict[str, datetime | str | Unknown | None]` is not assignable to parameter `de` with type `dict[str, date | datetime | str]` in function `juriscraper.pacer.utils.set_pacer_doc_id_as_appellate_document_number`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `group`",
       "severity": "error"
     },
     {
@@ -1286,6 +2644,13 @@
       "path": "juriscraper/pacer/rss_feeds.py",
       "name": "bad-override",
       "concise_description": "Class member `PacerRssFeed._get_case_name` overrides parent class `DocketReport` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `str` has no attribute `decode`",
       "severity": "error"
     },
     {

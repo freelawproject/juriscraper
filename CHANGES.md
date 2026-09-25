@@ -22,6 +22,7 @@ Changes:
 - Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
 - Adopt strict type checks in `lib`, `scotus`, `state`.
+- Adopt comprehensive checking in `pacer`.
 - Upgrade Pyrefly to v1.3.1
 - Upgrade GitHub Actions (and also pin versions).
 -
