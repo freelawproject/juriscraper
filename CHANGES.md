@@ -24,6 +24,7 @@ Changes:
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
 - Tighten static type checking applied to `/state/`
 - Tighten static type checking applied to `/lib/`
+- Tighten static type checking applied to `/scotus/`
 - Upgrade Pyrefly to v1.3.1
 -
 
@@ -47,7 +48,7 @@ Fixes:
 - Take consistent approach to unparsed data in `texas`
 - Take consistent approach to unparsed data in `scotus`
 - Housekeeping in `scotus`
--
+- Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
 
 ## 3.0.41 - 2026-09-14
 

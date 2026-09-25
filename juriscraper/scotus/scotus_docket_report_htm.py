@@ -6,6 +6,7 @@ from typing import Any
 
 from lxml import html
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.html_utils import (
     strip_bad_html_tags_insecure,
@@ -49,6 +50,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         self._docket_entry_table: list[list[HtmlElement]] = []
         self._page_format: HTMPageFormat | None = None
 
+    @override
     @property
     def metadata(self) -> dict[str, Any]:
         """Return normalized metadata extracted from the HTM docket.
@@ -229,6 +231,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         name = re.sub(r",?\s*v\.\s*$", "", name).strip()
         return name
 
+    @override
     def _build_docket_entry(
         self,
         date_str: str,
@@ -278,6 +281,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             "attachments": [],
         }
 
+    @override
     @property
     def docket_entries(self) -> list[dict[str, Any]]:
         """Return docket entries from the HTM 'Proceedings and Orders' table.
@@ -370,6 +374,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         )
         return current_attorney
 
+    @override
     @property
     def parties(self) -> list[dict[str, Any]]:
         """Return parties grouped by type for HTM pages.

@@ -3,6 +3,7 @@ import pprint
 import re
 import sys
 from collections import defaultdict
+from collections.abc import Hashable
 from datetime import date, datetime
 from typing import Any
 
@@ -40,10 +41,10 @@ class SCOTUSDocketReport:
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
 
     def __init__(self, court_id: str = "scotus"):
-        self._scotus_json: dict | None = None
+        self._scotus_json: dict[Hashable, Any] | None = None
 
     @property
-    def data(self) -> dict:
+    def data(self) -> dict[str, Any]:
         """Get all the data back from this endpoint."""
         metadata = self.metadata or {}
         if not metadata:
