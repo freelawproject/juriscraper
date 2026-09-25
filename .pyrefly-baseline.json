@@ -57,6 +57,20 @@
       "severity": "error"
     },
     {
+      "column": 12,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter `_KT` for generic class `dict[_KT, _VT]`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/auth_utils.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter `_VT` for generic class `dict[_KT, _VT]`",
+      "severity": "error"
+    },
+    {
       "column": 11,
       "path": "juriscraper/lib/auth_utils.py",
       "name": "deprecated",
@@ -106,10 +120,66 @@
       "severity": "error"
     },
     {
+      "column": 15,
+      "path": "juriscraper/lib/exceptions.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter `_KT` for generic class `dict[_KT, _VT]`",
+      "severity": "error"
+    },
+    {
+      "column": 15,
+      "path": "juriscraper/lib/exceptions.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter `_VT` for generic class `dict[_KT, _VT]`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-explicit",
+      "concise_description": "Returning Any from function declared to return \"list[str]\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"bool\"",
+      "severity": "error"
+    },
+    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `findall`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "juriscraper/lib/html_utils.py",
+      "name": "no-any-return-implicit",
+      "concise_description": "Returning implicit Any from function declared to return \"str\"",
       "severity": "error"
     },
     {
@@ -208,6 +278,34 @@
       "path": "juriscraper/lib/test_utils.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `Unknown | None` is not assignable to parameter `value` with type `Request` in function `httpx._models.Response.request`",
+      "severity": "error"
+    },
+    {
+      "column": 25,
+      "path": "juriscraper/lib/utils.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter for generic class `Callable`",
+      "severity": "error"
+    },
+    {
+      "column": 11,
+      "path": "juriscraper/lib/utils.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter `_KT` for generic class `dict[_KT, _VT]`",
+      "severity": "error"
+    },
+    {
+      "column": 11,
+      "path": "juriscraper/lib/utils.py",
+      "name": "implicit-any-type-argument",
+      "concise_description": "Cannot determine the type parameter `_VT` for generic class `dict[_KT, _VT]`",
+      "severity": "error"
+    },
+    {
+      "column": 22,
+      "path": "juriscraper/lib/utils.py",
+      "name": "implicit-any-empty-container",
+      "concise_description": "Cannot infer type of empty container; it will be treated as containing `Any`",
       "severity": "error"
     },
     {

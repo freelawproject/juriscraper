@@ -23,6 +23,7 @@ Changes:
 - Adopt explicit `@override` decorator in `/state/`.
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
 - Tighten static type checking applied to `/state/`
+- Tighten static type checking applied to `/lib/`
 - Tighten static type checking applied to `/scotus/`
 - Upgrade Pyrefly to v1.3.1
 -

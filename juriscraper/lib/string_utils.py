@@ -569,11 +569,11 @@ def normalize_dashes(raw_string: str) -> str:
 
 class CaseNameTweaker:
     def __init__(self):
-        self._bad_words = None
+        self._bad_words: list[str] | None = None
         super().__init__()
 
     @property
-    def bad_words(self):
+    def bad_words(self) -> list[str]:
         """A list of words that shouldn't be in small case names according to
         Blue Book rules.
 
