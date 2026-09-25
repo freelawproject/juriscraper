@@ -47,7 +47,7 @@ Fixes:
 - Take consistent approach to unparsed data in `texas`
 - Take consistent approach to unparsed data in `scotus`
 - Housekeeping in `scotus`
--
+- Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
 
 ## 3.0.41 - 2026-09-14
 
