@@ -25,6 +25,7 @@ Changes:
 - Adopt comprehensive checking in `pacer`.
 - Upgrade Pyrefly to v1.3.1
 - Upgrade GitHub Actions (and also pin versions).
+- Improve typing in `pacer` with `@overload`.
 -
 
 Fixes:
