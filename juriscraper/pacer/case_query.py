@@ -169,7 +169,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   Mark L. Wolf, presiding
         #   <B>Date filed:</B> 02/10/2011
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
-        data = {}
+        data: dict = {}
         field_names = {
             "date_of_last_filing": "date_last_filing",
             "judge": "assigned_to_str",

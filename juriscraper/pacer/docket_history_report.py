@@ -163,7 +163,7 @@ class DocketHistoryReport(DocketReport):
             cells = row.xpath("./td")
             if len(cells) == 3:
                 # Normal row, parse the document_number, date, etc.
-                de = {}
+                de: dict = {}
                 de["document_number"] = clean_string(cells[0].text_content())
                 if de["document_number"] == "":
                     de["document_number"] = None
