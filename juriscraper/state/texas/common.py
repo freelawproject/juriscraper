@@ -564,7 +564,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
 
     @final
     @property
-    def _common_data(self) -> TexasCommonData | dict[str, None]:
+    def _common_data(self) -> TexasCommonData | None:
         """
         Extract parsed data from an HTML tree. This property returns the
         `TexasCommonData`
@@ -580,7 +580,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
 
         docket_number = self.docket_number
         if docket_number is None:
-            return {}
+            return None
 
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,

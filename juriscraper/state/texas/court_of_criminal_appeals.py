@@ -52,7 +52,7 @@ class TexasCourtOfCriminalAppealsScraper(
         """
 
         common_data = self._common_data
-        if not common_data:
+        if common_data is None:
             return {}
         if self.tree is None:
             raise ValueError("_parse_text() must called first.")

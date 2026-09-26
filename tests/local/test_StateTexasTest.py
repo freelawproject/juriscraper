@@ -20,7 +20,10 @@ class _TexasCommonTestScraper(TexasCommonScraper[TexasCommonData]):
     @override
     @property
     def data(self) -> TexasCommonData | dict[str, None]:
-        return self._common_data
+        commmon_data = self._common_data
+        if commmon_data is None:
+            return {}
+        return commmon_data
 
 
 class TexasParseCommonDataTest(PacerParseTestCase):
