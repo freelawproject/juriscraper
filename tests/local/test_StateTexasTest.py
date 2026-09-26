@@ -1,6 +1,6 @@
 from typing_extensions import override
 
-from juriscraper.state.texas.common import TexasCommonScraper, TexasCommonData
+from juriscraper.state.texas.common import TexasCommonData, TexasCommonScraper
 from juriscraper.state.texas.court_of_appeals import TexasCourtOfAppealsScraper
 from juriscraper.state.texas.court_of_criminal_appeals import (
     TexasCourtOfCriminalAppealsScraper,
