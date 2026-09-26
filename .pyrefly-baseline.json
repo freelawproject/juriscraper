@@ -1943,14 +1943,14 @@
       "column": 42,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
-      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | DocketType`",
+      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | list[DocketType]`",
       "severity": "error"
     },
     {
       "column": 42,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
-      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | DocketType`",
+      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | list[DocketType]`",
       "severity": "error"
     },
     {
@@ -2062,7 +2062,7 @@
       "column": 16,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-return",
-      "concise_description": "Returned type `list[dict[str, list[DocketEntryType] | str | None]]` is not assignable to declared return type `DocketType`",
+      "concise_description": "Returned type `list[dict[str, list[DocketEntryType] | str | None]]` is not assignable to declared return type `list[DocketType]`",
       "severity": "error"
     },
     {

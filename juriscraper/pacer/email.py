@@ -472,7 +472,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return associated_documents > 1
 
-    def _get_dockets(self) -> DocketType:
+    def _get_dockets(self) -> list[DocketType]:
         """Get all the dockets mentioned in the notification.
 
         Right now multiple docket notifications are only supported for text/html
