@@ -515,7 +515,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
-            docket = {
+            docket: DocketType = {
                 "case_name": self._get_case_name_plain(),
                 "docket_number": docket_number,
                 "date_filed": None,
@@ -530,7 +530,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
             # Cache the docket number and case name for its later use.
             self.docket_numbers.append(docket_number)
-            docket = {
+            docket: DocketType = {
                 "case_name": self._get_case_name(self.tree),
                 "docket_number": docket_number,
                 "date_filed": None,
@@ -556,7 +556,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 docket_number = docket_number
                 # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
-                docket = {
+                docket: DocketType = {
                     "case_name": self._get_case_name(docket_table),
                     "docket_number": docket_number,
                     "date_filed": None,
