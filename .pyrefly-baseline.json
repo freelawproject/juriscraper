@@ -1933,13 +1933,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/pacer/download_confirmation_page.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `datetime` is not assignable to declared return type `str | None`",
-      "severity": "error"
-    },
-    {
       "column": 42,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
