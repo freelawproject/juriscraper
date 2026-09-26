@@ -2857,17 +2857,17 @@
       "severity": "error"
     },
     {
-      "column": 21,
+      "column": 35,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
-      "concise_description": "`str | None` is not assignable to dict key `pacer_doc_id` with type `None`",
+      "concise_description": "`date | None` is not assignable to TypedDict key `date_filed` with type `date`",
       "severity": "error"
     },
     {
       "column": 21,
       "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | None` is not assignable to dict key `pacer_magic_num` with type `None`",
+      "name": "bad-typed-dict-key",
+      "concise_description": "Key `short_description` is not defined in TypedDict `DocketEntryType`",
       "severity": "error"
     },
     {
@@ -2875,34 +2875,6 @@
       "path": "juriscraper/pacer/email.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `Unknown | None` is not assignable to parameter `appellate` with type `bool` in function `juriscraper.pacer.utils.get_pacer_magic_num_from_doc1_url`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | Any | None` is not assignable to dict key `pacer_case_id` with type `None`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | Any | None` is not assignable to dict key `pacer_seq_no` with type `None`",
-      "severity": "error"
-    },
-    {
-      "column": 47,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | None` is not assignable to dict key `pacer_case_id` with type `None`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `list[dict[str, date | str | Unknown | None]]` is not assignable to declared return type `list[DocketEntryType]`",
       "severity": "error"
     },
     {

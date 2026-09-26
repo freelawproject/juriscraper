@@ -630,7 +630,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if document_number and document_number == "doc":
                 document_number = None
 
-            entries = [
+            entries: list[DocketEntryType] = [
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
