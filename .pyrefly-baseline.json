@@ -1996,13 +1996,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `date | None` is not assignable to declared return type `date`",
-      "severity": "error"
-    },
-    {
       "column": 13,
       "path": "juriscraper/pacer/email.py",
       "name": "unsupported-operation",

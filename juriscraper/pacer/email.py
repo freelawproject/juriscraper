@@ -276,7 +276,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
-    def _get_date_filed(self) -> date:
+    def _get_date_filed(self) -> date | None:
         """Gets the filing date from the email text
 
         :returns: Date filed as date object
