@@ -3,7 +3,7 @@ import pprint
 import re
 import sys
 from datetime import date, datetime
-from typing import Literal, overload
+from typing import Literal, TypedDict, overload
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -30,6 +30,14 @@ from .utils import (
 )
 
 logger = make_default_logger()
+
+
+class DocketNumberComponents(TypedDict):
+    federal_dn_office_code: str | None
+    federal_dn_case_type: str | None
+    federal_dn_judge_initials_assigned: str | None
+    federal_dn_judge_initials_referred: str | None
+    federal_defendant_number: str | None
 
 
 class BaseDocketReport:
@@ -182,7 +190,7 @@ class BaseDocketReport:
             return s
 
     @staticmethod
-    def _return_default_dn_components() -> dict[str, str | None]:
+    def _return_default_dn_components() -> DocketNumberComponents:
         """Return a dictionary with default values for the docket_number
         components to return on non-valid docket_numbers.
 
@@ -199,7 +207,7 @@ class BaseDocketReport:
 
     def _parse_dn_components(
         self, potential_docket_number
-    ) -> dict[str, str | None]:
+    ) -> DocketNumberComponents:
         """Parse the potential docket number into its components.
 
         :param potential_docket_number: The docket number string to be parsed.
@@ -278,7 +286,7 @@ class BaseDocketReport:
 
     def _parse_docket_number_strs(
         self, potential_docket_numbers: list[_ElementUnicodeResult]
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -1728,7 +1736,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :return: A two-tuple: the docket_number and a dict containing the

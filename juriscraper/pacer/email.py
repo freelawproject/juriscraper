@@ -12,6 +12,7 @@ from juriscraper.lib.string_utils import (
     convert_date_string,
     harmonize,
 )
+from juriscraper.pacer.docket_report import DocketNumberComponents
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
@@ -42,6 +43,11 @@ class DocketType(TypedDict):
     date_filed: date | None
     docket_entries: list[DocketEntryType]
     docket_number: str
+    federal_dn_office_code: str | None
+    federal_dn_case_type: str | None
+    federal_dn_judge_initials_assigned: str | None
+    federal_dn_judge_initials_referred: str | None
+    federal_defendant_number: str | None
 
 
 class EmailRecipient(TypedDict):
@@ -250,7 +256,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, current_node: HtmlElement
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Gets a docket number from the email text and also parse the docket
         number components.
 
@@ -287,7 +293,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number_plain(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Gets a docket number from the plain email text and also parse the
         docket number components.
 
@@ -508,6 +514,40 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :return: DocketType Dict
         """
+
+        def create_docket_entry(
+            case_name: str,
+            date_filed: date | None,
+            docket_entries: list[DocketEntryType],
+            docket_number: str,
+            docket_number_components: DocketNumberComponents,
+        ) -> DocketType:
+            return {
+                "case_name": case_name,
+                "docket_number": docket_number,
+                "date_filed": date_filed,
+                "docket_entries": docket_entries,
+                "federal_dn_office_code": (
+                    docket_number_components["federal_dn_office_code"]
+                ),
+                "federal_dn_case_type": (
+                    docket_number_components["federal_dn_case_type"]
+                ),
+                "federal_dn_judge_initials_assigned": (
+                    docket_number_components[
+                        "federal_dn_judge_initials_assigned"
+                    ]
+                ),
+                "federal_dn_judge_initials_referred": (
+                    docket_number_components[
+                        "federal_dn_judge_initials_referred"
+                    ]
+                ),
+                "federal_defendant_number": (
+                    docket_number_components["federal_defendant_number"]
+                ),
+            }
+
         dockets = []
         if self.content_type == "text/plain":
             docket_number, docket_number_components = (
@@ -516,14 +556,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
-            docket: DocketType = {
-                "case_name": self._get_case_name_plain(),
-                "docket_number": docket_number,
-                "date_filed": None,
-                "docket_entries": self._get_docket_entries(),
-            }
-            # Include the docket_number components.
-            docket.update(docket_number_components)
+            docket = create_docket_entry(
+                case_name=self._get_case_name_plain(),
+                docket_number=docket_number,
+                date_filed=None,
+                docket_entries=self._get_docket_entries(),
+                docket_number_components=docket_number_components,
+            )
             dockets.append(docket)
         elif self._is_acms():
             docket_number, docket_number_components = (
@@ -531,14 +570,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
             # Cache the docket number and case name for its later use.
             self.docket_numbers.append(docket_number)
-            docket: DocketType = {
-                "case_name": self._get_case_name(self.tree),
-                "docket_number": docket_number,
-                "date_filed": None,
-                "docket_entries": self._get_docket_entries(self.tree),
-            }
-            # Include the docket_number components.
-            docket.update(docket_number_components)
+            docket = create_docket_entry(
+                case_name=self._get_case_name(self.tree),
+                docket_number=docket_number,
+                date_filed=None,
+                docket_entries=self._get_docket_entries(self.tree),
+                docket_number_components=docket_number_components,
+            )
             dockets.append(docket)
         else:
             dockets_table = self.tree.xpath(
@@ -557,14 +595,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 docket_number = docket_number
                 # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
-                docket: DocketType = {
-                    "case_name": self._get_case_name(docket_table),
-                    "docket_number": docket_number,
-                    "date_filed": None,
-                    "docket_entries": self._get_docket_entries(docket_table),
-                }
-                # Include the docket_number components.
-                docket.update(docket_number_components)
+                docket = create_docket_entry(
+                    case_name=self._get_case_name(docket_table),
+                    docket_number=docket_number,
+                    date_filed=None,
+                    docket_entries=self._get_docket_entries(docket_table),
+                    docket_number_components=docket_number_components,
+                )
                 dockets.append(docket)
 
             if len(dockets) > 1:
