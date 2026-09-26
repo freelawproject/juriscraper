@@ -162,12 +162,15 @@ def strip_bad_html_tags_insecure(
 
 def get_visible_text(html_content: str) -> str:
     html_tree = html.fromstring(html_content)
-    text = cast(list[str], html_tree.xpath(
-        """//text()[normalize-space() and not(parent::style |
+    text = cast(
+        list[str],
+        html_tree.xpath(
+            """//text()[normalize-space() and not(parent::style |
                                                                  parent::link |
                                                                  parent::head |
                                                                  parent::script)]"""
-    ))
+        ),
+    )
     return " ".join(text)
 
 
