@@ -36,6 +36,7 @@ Fixes:
 - Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
 - Add generics and test utility functions in `lib`.
 - Take consistent approach to unparsed data in `state` and `scotus`.
+- Correct more type annotations in `pacer`
 -
 
 ## 3.0.41 - 2026-09-14
