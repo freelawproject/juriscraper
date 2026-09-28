@@ -37,6 +37,7 @@ Fixes:
 - Add generics and test utility functions in `lib`.
 - Take consistent approach to unparsed data in `state` and `scotus`.
 - Address `no-any-return-*` in `lib.html_utils`.
+- Fix "no changes" label handling for `CHANGES.md`
 -
 
 ## 3.0.41 - 2026-09-14
