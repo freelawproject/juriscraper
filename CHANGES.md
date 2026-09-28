@@ -18,18 +18,29 @@ Features:
 -
 
 Changes:
+- Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
 - Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
-- Adopt explicit `@override` decorator in `/state/`.
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- Adopt strict type checks in `lib`, `scotus`, `state`.
+- Adopt comprehensive checking in `pacer`.
+- Upgrade Pyrefly to v1.3.1
+- Upgrade GitHub Actions (and also pin versions).
+- Improve typing in `pacer` with `@overload`.
 -
 
 Fixes:
-- Updates to `.pyrefly-baseline.json` (2)
+- Fix TAMES (Texas). Remove WAF poison string.
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
-- Correct parameter types of `_download_backwards()` in `bap9`, `idaho_civil`, `miss`, `wyo`, and `cafc`
-- Fix invalid type annotations for `texapp`.
-- Correct the return types of various `pacer` methods that may return `None`.
+- Correct type annotations in `alaska`, `bap9`, `cafc`, `idaho_civil`, `miss`, `texapp`, and `wyo`.
+- Correct type annotations in `lib`, `pacer`, `scotus` and `state`. All internal, but for `SCOTUSEmailData.email_datetime`, which could be none but was not marked as optional. #2210
 - Corrections to docstrings across files.
+- Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
+- Add generics and test utility functions in `lib`.
+- Take consistent approach to unparsed data in `state` and `scotus`.
+- Correct more type annotations in `pacer`
+- Fix inheritance in the `TexasCommonScraper` cluster.
+- Address `no-any-return-*` in `lib.html_utils`.
+- Fix "no changes" label handling for `CHANGES.md`
 -
 
 ## 3.0.41 - 2026-09-14

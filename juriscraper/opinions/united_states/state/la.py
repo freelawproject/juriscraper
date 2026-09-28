@@ -58,10 +58,7 @@ class Site(OpinionSiteLinear):
         self.rendered_pages: list[tuple[str, str]] = []
         # lasc.org sits behind Cloudflare and serves the default httpx
         # User-Agent the 521/empty shell more often; a browser UA is stabler.
-        self.request["headers"]["User-Agent"] = (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-        )
+        self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
     async def _download(self, request_dict=None):
         if self.test_mode_enabled():

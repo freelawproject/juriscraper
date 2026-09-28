@@ -175,7 +175,10 @@ class FloridaParty(Party[FloridaPartyRepresentative]):
     representatives: Annotated[
         list[FloridaPartyRepresentative],
         AfterValidator(lambda rs: [r for r in rs if r.name and r.party_uuid]),
-    ] = Field(validation_alias="legalRepresentations", default=[])
+    ] = Field(
+        validation_alias="legalRepresentations",
+        default_factory=list,
+    )
     non_public_flag: bool = Field(validation_alias="nonPublicFlag")
     party_number: int = Field(validation_alias="partyNumber", default=0)
     involvement_type_id: int = Field(validation_alias="involvementTypeID")

@@ -56,6 +56,22 @@ class AbstractSite:
     # Useful for sites that block httpx via TLS fingerprinting.
     use_urllib = False
 
+    # Some courts' bot management blocks the "Juriscraper" User-Agent, and
+    # some also block browser User-Agents that have gone stale. Scrapers that
+    # need to look like a browser should use `self.chrome_user_agent` instead
+    # of hardcoding a string, so a single bump here updates all of them.
+    # Keep in sync with the current stable Chrome release.
+    chrome_version = "151"
+    chrome_user_agent = (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        f"(KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36"
+    )
+    # Client hints matching `chrome_user_agent`, for sites that check them
+    chrome_sec_ch_ua = (
+        f'"Google Chrome";v="{chrome_version}", '
+        f'"Chromium";v="{chrome_version}", "Not)A;Brand";v="24"'
+    )
+
     def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
         super().__init__()
 

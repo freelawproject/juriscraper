@@ -1,10 +1,10 @@
 import inspect
 import re
 import traceback
-from collections.abc import Callable
+from collections.abc import Callable, Hashable, Iterable
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Any
+from typing import Any, TypeVar, cast
 
 from httpx import HTTPError
 
@@ -28,7 +28,9 @@ from .string_utils import (
 logger = make_default_logger()
 
 
-def sanity_check_dates(dates_and_names: list[tuple], court_id: str) -> None:
+def sanity_check_dates(
+    dates_and_names: list[tuple[object, object, object]], court_id: str
+) -> None:
     """Checks that dates are datetime.date objects and that they are not in the future
 
     :param dates_and_names: a 3 member tuple (case_date, case_name, date_is_approximate)
@@ -75,7 +77,9 @@ def sanity_check_case_names(case_names: list[str]) -> None:
         prior_case_name = name
 
 
-def sanity_check_opinion_types(sub_opinions: list[dict]) -> None:
+def sanity_check_opinion_types(
+    sub_opinions: list[dict[Hashable, object]],
+) -> None:
     """Check opinion type assignment rules within a cluster
 
     :param sub_opinions: list of sub_opinion dictionaries
@@ -143,7 +147,15 @@ def clean_attribute(name: str, value: Any) -> Any:
     return value
 
 
-def previous_and_next(some_iterable):
+# TODO[Python3.12]: Replace with use of nice synta
+_IterableObjectT = TypeVar("_IterableObjectT")
+
+
+def previous_and_next(
+    some_iterable: Iterable[_IterableObjectT],
+) -> Iterable[
+    tuple[_IterableObjectT | None, _IterableObjectT, _IterableObjectT | None]
+]:
     """Provide previous and next values while iterating a list.
 
     This is from: http://stackoverflow.com/a/1012089/64911
@@ -151,13 +163,21 @@ def previous_and_next(some_iterable):
     This will allow you to lazily iterate a list such that as you iterate, you
     get a tuple containing the previous, current, and next value.
     """
+    prevs: Iterable[_IterableObjectT | None]
+    items: Iterable[_IterableObjectT]
+    nexts: Iterable[_IterableObjectT | None]
+
     prevs, items, nexts = tee(some_iterable, 3)
     prevs = chain([None], prevs)
     nexts = chain(islice(nexts, 1, None), [None])
     return zip(prevs, items, nexts)
 
 
-def clean_court_object(obj):
+# TODO[Python3.12]: Replace with use of nice syntax
+_CourtObjectT = TypeVar("_CourtObjectT")
+
+
+def clean_court_object(obj: _CourtObjectT) -> _CourtObjectT:
     """Clean a list or dict that is part of a scraping response.
 
     Court data is notoriously horrible, so this function attempts to clean up
@@ -175,19 +195,24 @@ def clean_court_object(obj):
     :return: A dict or list with the string values cleaned.
     """
     if isinstance(obj, list):
-        items = []
-        for i in obj:
-            items.append(clean_court_object(i))
-        return items
+        # type checker cannot infer correctness, so we help it along with
+        # erasure here and a `cast` below
+        obj_list: list[object] = obj
+        cleaned_list = [clean_court_object(i) for i in obj_list]
+        return cast(_CourtObjectT, cleaned_list)
     elif isinstance(obj, dict):
-        d = {}
-        for k, v in obj.items():
-            d[k] = clean_court_object(v)
-        return d
+        # type checker cannot infer correctness, so we help it along with
+        # erasure here and a `cast` below
+        obj_dict: dict[Hashable, object] = obj
+        cleaned_dict = {k: clean_court_object(v) for k, v in obj_dict.items()}
+        return cast(_CourtObjectT, cleaned_dict)
     elif isinstance(obj, str):
         s = " ".join(obj.strip().split())
         s = force_unicode(s)
-        return re.sub(r"\s+,", ",", s)
+        s = re.sub(r"\s+,", ",", s)
+        # type checker cannot infer correctness, so we help it along with
+        # this `cast`.
+        return cast(_CourtObjectT, s)
     else:
         return obj
 

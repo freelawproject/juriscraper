@@ -10,7 +10,7 @@ from juriscraper.lib.log_tools import make_default_logger
 logger = make_default_logger()
 
 
-async def add_delay(delay=0, deviation=0):
+async def add_delay(delay: int = 0, deviation: int = 0) -> None:
     """Create a semi-random delay.
 
     Delay is the number of seconds your program will be stopped for, and

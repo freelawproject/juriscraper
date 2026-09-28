@@ -2,6 +2,8 @@ import copy
 import pprint
 import re
 import sys
+from datetime import date, datetime
+from typing import Literal, overload
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -114,7 +116,26 @@ class BaseDocketReport:
                     atty_cache[atty["name"]] = atty["contact"]
         return parties
 
-    def _get_value(self, regex, query_strings, cast_to_date=False):
+    @overload
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: Literal[True],
+    ) -> date | None: ...
+    @overload
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: Literal[False] = ...,
+    ) -> str: ...  # Note: empty string is sent instead of `None`
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: bool = False,
+    ) -> str | date | None:
         """Find the matching value for a regex.
 
         Iterate over a list of values and return group(1) for the first that
@@ -289,7 +310,17 @@ class BaseDocketReport:
 
         return None, self._return_default_dn_components()
 
-    def get_datetime_from_tree(self, path, cast_to_date=False):
+    @overload
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: Literal[True]
+    ) -> date | None: ...
+    @overload
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: Literal[False] = ...
+    ) -> datetime | None: ...
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: bool = False
+    ) -> datetime | date | None:
         """Parse a datetime from the XML located at node.
 
         If cast_to_date is true, the datetime object will be converted to a

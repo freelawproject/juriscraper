@@ -1,5 +1,7 @@
 """Tests for TAMES search result parsing."""
 
+import base64
+import re
 import unittest
 from datetime import date
 
@@ -12,8 +14,16 @@ from juriscraper.state.texas.tames import (
 )
 from tests import TESTS_ROOT_EXAMPLES_STATES
 
+# The signature the gateway rejects: "0x", either case, plus three hex digits.
+SIGNATURE_RE = re.compile(r"0[xX][0-9a-fA-F]{3}")
 
-def _search_page(bar_value: str = "", rows: int = 0, items: int = 0) -> bytes:
+
+def _search_page(
+    bar_value: str = "",
+    rows: int = 0,
+    items: int = 0,
+    view_state: str = "vs",
+) -> bytes:
     """Minimal stand-in for a TAMES search/results page."""
     info = (
         f'<div class="rgWrap rgInfoPart">{items} items in 1 pages</div>'
@@ -28,7 +38,7 @@ def _search_page(bar_value: str = "", rows: int = 0, items: int = 0) -> bytes:
     )
     return (
         "<html><body><form>"
-        '<input type="hidden" name="__VIEWSTATE" value="vs" />'
+        f'<input type="hidden" name="__VIEWSTATE" value="{view_state}" />'
         f'<input name="{ATTORNEY_BAR_FIELD}" type="text" value="{bar_value}" />'
         f"{info}"
         f'<table id="ctl00_ContentPlaceHolder1_grdCases_ctl00">{body}</table>'
@@ -335,6 +345,64 @@ class TamesSearchParseTest(unittest.TestCase):
 
         # This fixture is page 9 of 40 (middle page)
         self.assertTrue(self.scraper._has_next_page(tree))
+
+
+class TamesWafSignatureTest(unittest.TestCase):
+    """TAMES sits behind an Azure Application Gateway running the OWASP rules.
+
+    One SQL-injection rule matches an MSSQL hex literal anywhere in the body,
+    which a Base64 __VIEWSTATE hits by coincidence most of the time. Every
+    postback has to leave here with that signature broken, or the gateway 403s
+    it before TAMES sees it.
+    """
+
+    # Valid Base64 that happens to carry the signature, as a real ViewState
+    # does roughly nine times in ten.
+    TRIPWIRE_VIEW_STATE = "AAA0x1a2AAAA"
+
+    def _scraper(self, form_pages, result_pages):
+        rm = FakeRequestManager(form_pages, result_pages)
+        scraper = TAMESScraper()
+        scraper.request_manager = rm
+        return scraper, rm
+
+    def test_search_postback_has_no_hex_literal(self):
+        scraper, rm = self._scraper(
+            [_search_page(view_state=self.TRIPWIRE_VIEW_STATE)],
+            [_search_page(rows=1, items=1)],
+        )
+
+        list(scraper._submit_search(date(2026, 6, 1), date(2026, 6, 2)))
+
+        posted = rm.posted_bodies[0]["__VIEWSTATE"]
+        self.assertIsNone(SIGNATURE_RE.search(posted))
+        self.assertEqual(
+            base64.b64decode(posted),
+            base64.b64decode(self.TRIPWIRE_VIEW_STATE),
+        )
+
+    def test_pagination_postback_has_no_hex_literal(self):
+        """Page 2 is where this bites: the results ViewState is the big one."""
+        scraper, rm = self._scraper([_search_page()], [_search_page()])
+        form_data = scraper._build_form_data(
+            date(2026, 6, 1), date(2026, 6, 2)
+        )
+
+        tree = html.fromstring(
+            "<html><body>"
+            f'<input type="hidden" name="__VIEWSTATE" '
+            f'value="{self.TRIPWIRE_VIEW_STATE}" />'
+            '<input class="rgPageNext" name="next" value="1" />'
+            "</body></html>"
+        )
+        scraper._fetch_next_page(tree, form_data)
+
+        posted = rm.posted_bodies[-1]["__VIEWSTATE"]
+        self.assertIsNone(SIGNATURE_RE.search(posted))
+        self.assertEqual(
+            base64.b64decode(posted),
+            base64.b64decode(self.TRIPWIRE_VIEW_STATE),
+        )
 
 
 if __name__ == "__main__":
