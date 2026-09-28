@@ -37,6 +37,7 @@ Fixes:
 - Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
 - Add generics and test utility functions in `lib`.
 - Take consistent approach to unparsed data in `state` and `scotus`.
+- Correct more type annotations in `pacer`
 - Fix inheritance in the `TexasCommonScraper` cluster.
 - Address `no-any-return-*` in `lib.html_utils`.
 - Fix "no changes" label handling for `CHANGES.md`

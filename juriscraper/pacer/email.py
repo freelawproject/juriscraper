@@ -276,7 +276,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
-    def _get_date_filed(self) -> date:
+    def _get_date_filed(self) -> date | None:
         """Gets the filing date from the email text
 
         :returns: Date filed as date object
@@ -315,7 +315,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_doc1_anchor(self, current_node: HtmlElement) -> str | None:
+    def _get_doc1_anchor(
+        self, current_node: HtmlElement
+    ) -> HtmlElement | None:
         """Safely retrieves the anchor tag for the document
 
         :param  current_node: The relative lxml.HtmlElement
@@ -470,7 +472,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return associated_documents > 1
 
-    def _get_dockets(self) -> DocketType:
+    def _get_dockets(self) -> list[DocketType]:
         """Get all the dockets mentioned in the notification.
 
         Right now multiple docket notifications are only supported for text/html
