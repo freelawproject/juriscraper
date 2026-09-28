@@ -39,6 +39,7 @@ Fixes:
 - Take consistent approach to unparsed data in `state` and `scotus`.
 - Correct more type annotations in `pacer`
 - Fix inheritance in the `TexasCommonScraper` cluster.
+- Fix handling of meta redirects with url-relative destinations
 - Address `no-any-return-*` in `lib.html_utils`.
 - Fix "no changes" label handling for `CHANGES.md`
 -
