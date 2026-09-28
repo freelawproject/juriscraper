@@ -1562,13 +1562,6 @@
       "severity": "error"
     },
     {
-      "column": 33,
-      "path": "juriscraper/opinions/united_states/state/pa.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `value`",
-      "severity": "error"
-    },
-    {
       "column": 45,
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "missing-attribute",
@@ -1580,13 +1573,6 @@
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/pa.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `Literal[OpinionType.COMBINED, OpinionType.CONCURRENCE, OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART, OpinionType.DISSENT, OpinionType.MAJORITY, OpinionType.UNANIMOUS]` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
