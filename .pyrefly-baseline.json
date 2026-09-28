@@ -136,34 +136,6 @@
     {
       "column": 12,
       "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-explicit",
-      "concise_description": "Returning Any from function declared to return \"list[str]\"",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-implicit",
-      "concise_description": "Returning implicit Any from function declared to return \"str\"",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-implicit",
-      "concise_description": "Returning implicit Any from function declared to return \"str\"",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-implicit",
-      "concise_description": "Returning implicit Any from function declared to return \"str\"",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
       "name": "no-any-return-implicit",
       "concise_description": "Returning implicit Any from function declared to return \"bool\"",
       "severity": "error"
@@ -173,13 +145,6 @@
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `findall`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-implicit",
-      "concise_description": "Returning implicit Any from function declared to return \"str\"",
       "severity": "error"
     },
     {
@@ -1079,13 +1044,6 @@
       "severity": "error"
     },
     {
-      "column": 17,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `date | str | None` is not assignable to parameter `appeal_from` with type `str` in function `AppellateDocketReport._get_appeal_from`",
-      "severity": "error"
-    },
-    {
       "column": 49,
       "path": "juriscraper/pacer/appellate_docket.py",
       "name": "bad-argument-type",
@@ -1111,13 +1069,6 @@
       "path": "juriscraper/pacer/appellate_docket.py",
       "name": "unsupported-operation",
       "concise_description": "Cannot set item in `OrderedDict[str, str]`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `date | str` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
@@ -1205,13 +1156,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `date | str | None` has no attribute `split`",
-      "severity": "error"
-    },
-    {
       "column": 22,
       "path": "juriscraper/pacer/appellate_docket.py",
       "name": "missing-attribute",
@@ -1226,31 +1170,10 @@
       "severity": "error"
     },
     {
-      "column": 62,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `date | str` is not assignable to parameter `judge` with type `str` in function `juriscraper.lib.judge_parsers.normalize_judge_string`",
-      "severity": "error"
-    },
-    {
-      "column": 58,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `date | str | None` is not assignable to parameter `judge` with type `str` in function `juriscraper.lib.judge_parsers.normalize_judge_string`",
-      "severity": "error"
-    },
-    {
-      "column": 61,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `date | str | None` is not assignable to parameter `judge` with type `str` in function `juriscraper.lib.judge_parsers.normalize_judge_string`",
-      "severity": "error"
-    },
-    {
       "column": 17,
       "path": "juriscraper/pacer/appellate_docket.py",
       "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
+      "concise_description": "Object of type `HtmlElement | Unknown | None` has no attribute `re_xpath`",
       "severity": "error"
     },
     {
@@ -2601,7 +2524,7 @@
       "column": 59,
       "path": "juriscraper/pacer/rss_feeds.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `dict[str, datetime | str | Unknown | None]` is not assignable to parameter `de` with type `dict[str, date | datetime | str]` in function `juriscraper.pacer.utils.set_pacer_doc_id_as_appellate_document_number`",
+      "concise_description": "Argument `dict[str, datetime | str | None]` is not assignable to parameter `de` with type `dict[str, date | datetime | str]` in function `juriscraper.pacer.utils.set_pacer_doc_id_as_appellate_document_number`",
       "severity": "error"
     },
     {

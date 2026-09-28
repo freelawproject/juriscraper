@@ -25,6 +25,7 @@ Changes:
 - Adopt comprehensive checking in `pacer`.
 - Upgrade Pyrefly to v1.3.1
 - Upgrade GitHub Actions (and also pin versions).
+- Improve typing in `pacer` with `@overload`.
 -
 
 Fixes:
@@ -37,6 +38,8 @@ Fixes:
 - Add generics and test utility functions in `lib`.
 - Take consistent approach to unparsed data in `state` and `scotus`.
 - Fix inheritance in the `TexasCommonScraper` cluster.
+- Address `no-any-return-*` in `lib.html_utils`.
+- Fix "no changes" label handling for `CHANGES.md`
 -
 
 ## 3.0.41 - 2026-09-14
