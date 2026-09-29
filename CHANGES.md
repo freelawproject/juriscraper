@@ -30,6 +30,7 @@ Changes:
 -
 
 Fixes:
+- Fix `nytrial` scrapers and `nysupct_commercial`: use the new `current/index` pages, parse the new opinion template, and raise on the "404 ERROR" page. #2243, #2242
 - Fix TAMES (Texas). Remove WAF poison string.
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 - Correct type annotations in `alaska`, `bap9`, `cafc`, `idaho_civil`, `miss`, `texapp`, and `wyo`.

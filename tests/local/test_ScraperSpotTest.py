@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import re
 import unittest
+from datetime import date
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -127,3 +128,54 @@ class ScraperSpotTest(unittest.TestCase):
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
+
+    def test_nytrial_build_url(self):
+        from juriscraper.opinions.united_states.state import (
+            nysupct,
+            nysupct_commercial,
+        )
+
+        root = "https://nycourts.gov/reporter"
+        expected = [
+            (nysupct, date(2026, 4, 10), "slipidx/miscolo_2026_april"),
+            (nysupct, date(2026, 5, 10), "current/index/miscolo_2026_may"),
+            (
+                nysupct_commercial,
+                date(2026, 3, 10),
+                "slipidx/com_div_idxtable_2026_march",
+            ),
+            (
+                nysupct_commercial,
+                date(2026, 4, 10),
+                "current/index/com_div_idxtable_2026_april",
+            ),
+            (nysupct, date.today(), "current/index/miscolo"),
+            (nysupct, None, "current/index/miscolo"),
+        ]
+        for module, target_date, path in expected:
+            site = module.Site()
+            self.assertEqual(
+                site.build_url(target_date), f"{root}/{path}.shtml"
+            )
+
+    def test_nytrial_page_not_found(self):
+        from lxml.html import fromstring
+
+        from juriscraper.lib.exceptions import ParsingException
+        from juriscraper.opinions.united_states.state import nysupct
+
+        site = nysupct.Site()
+        # minimal copy of the page served, with a 200 status code, for
+        # https://nycourts.gov/reporter/slipidx/miscolo_2026_may.shtml
+        site.html = fromstring(
+            b'<?xml version="1.0" encoding="utf-8"?>\n'
+            b'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" '
+            b'"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">\n'
+            b'<html xmlns="http://www.w3.org/1999/xhtml"><head>'
+            b"<title>404 ERROR - N.Y. State Courts</title></head><body><main>"
+            b"<h2>404 ERROR - File Not Found</h2>"
+            b"<h1>Sorry, but the page you requested cannot be found.</h1>"
+            b"</main></body></html>"
+        )
+        with self.assertRaises(ParsingException):
+            site._process_html()

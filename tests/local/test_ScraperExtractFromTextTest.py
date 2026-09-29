@@ -202,6 +202,20 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nysupct_commercial": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50461.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Greason v Nahmad</h1>\n<p>2026 NY Slip Op 50461(U)</p>\n<p>April 3, 2026</p>\n<p>Supreme Court, New York County</p>\n<p>Joel M. Cohen, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Replevin—Stolen Chattel—Action to Recover Painting Seized during Nazi Era</div>\n<div>\n<p>Edward W. Greason, Plaintiff,</p>\n<p>v</p>\n<p>David Nahmad, INTERNATIONAL ART CENTER, S.A., Defendants.</p>\n</div>\n<p>Supreme Court, New York County</p>\n<p>Decided on April 3, 2026</p>\n<p>Index No. 650646/2014</p>\n<div>\n<p>Counsel for Plaintiff:</p>\n<p>PHILLIP C LANDRIGAN </p>\n<p>Landrigan &amp; Aurnou LLP </p>\n<p>235 Mamaroneck Avenue Suite 201, </p>\n<p>White Plains, NY 10605 </p>\n<p>Counsel for Defendants:</p>\n<p>Aaron Richard Golub </p>\n<p>Aaron Richard Golub, Esquire, P.C.</p>\n<p>42 E 64th Street </p>\n<p>New York, NY 10065</p>\n</div>\n<p>Joel M. Cohen, J.</p>\n",
+                {
+                    "Docket": {
+                        "docket_number": "Index No. 650646/2014",
+                        "case_name_full": "Edward W. Greason v. David Nahmad, INTERNATIONAL ART CENTER, S.A.",
+                    },
+                    "Opinion": {"author_str": "Joel M. Cohen"},
+                    "OpinionCluster": {
+                        "case_name_full": "Edward W. Greason v. David Nahmad, INTERNATIONAL ART CENTER, S.A."
+                    },
+                },
+            ),
+            (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51345.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5">\n<tbody><tr>\n<td align="center"><b>1125 Morris Ave. Realty LLC v Title Issues Agency\nLLC</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51345(U) [81 Misc 3d 1215(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on December 12, 2023</td>\n</tr>\n<tr>\n<td align="center">Supreme Court, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Gomez, J.</td>\n</tr>\n<tr>\n<td align="center"><font color="#FF0000">Published by <a href="https://www.courts.state.ny.us/reporter/">New York State Law Reporting\nBureau</a> pursuant to Judiciary Law § 431.</font></td>\n</tr>\n<tr>\n<td align="center"><font color="#FF0000">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</font></td></tr>\n</tbody></table><br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tbody><tr><td><br><div align="center"><b><font size="+1">1125 Morris\nAvenue Realty LLC, Plaintiff(s),\n\n<br><br>against<br><br>Title Issues Agency LLC, MARTIN E. KOFMAN,\nSTEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE,"\n"ABC CORPORATION," AND "XYZ CORPORATION,"\nDefendant(s).</font></b></div><br><br>\n\n</td></tr></tbody></table><br><br>Index No. 809156/23E\n<br><br><br>\n<br>Counsel for plaintiff: Law Office of Jan V Farensbach<br><br>Counsel for\ndefendants: Rosenberg &amp; Steinmetz PC<br>\n<br>\n\n\n<br>Fidel E. Gomez, J.\n\n<p>In this action for, <i>inter alia</i>, breach of contract, defendants TITLE ISSUES""",
                 {
@@ -215,9 +229,19 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": '1125 Morris Avenue Realty LLC, Plaintiff(s), against Title Issues Agency LLC, MARTIN E. KOFMAN, STEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE," "ABC CORPORATION," AND "XYZ CORPORATION," Defendant(s).'
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nysupct": [
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51324.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>MJ v MJ</h1>\n<p>2026 NY Slip Op 51324(U) [89 Misc 3d 1248(A)]</p>\n<p>August 18, 2026</p>\n<p>Supreme Court, Nassau County</p>\n<p>Edmund M. Dane, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Dismissal and Nonsuit—Failure to Appear—Deliberate Violation of Court Rules. Husband and Wife and Other Domestic Relationships—Counsel Fees—Party's Obstructionist Tactics</div>\n<div>\n<p>MJ, Plaintiff,</p>\n<p>v</p>\n<p>MJ, Defendant.</p>\n</div>\n<p>Supreme Court, Nassau County</p>\n<p>Decided on August 18, 2026</p>\n<p>Index No. XXXXXX/2020</p>\n<p>Edmund M. Dane, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1248(A)",
+                    "Docket": {"case_name_full": "MJ v. MJ"},
+                    "Opinion": {"author_str": "Edmund M. Dane"},
+                    "OpinionCluster": {"case_name_full": "MJ v. MJ"},
+                },
+            ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2019/2019_32654.pdf
                 """Deboer v Friedman\n2019 NY Slip Op 32654(U)\nSeptember 4, 2019\nSupreme Court, New York County\nDocket Number: 654329/2018\nJudge: Arthur F. Engoron\n""",
@@ -294,6 +318,21 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nycivct": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51343.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>State Farm Mut. Auto. Ins. Co. v Diallo</h1>\n<p>2026 NY Slip Op 51343(U) [89 Misc 3d 1250(A)]</p>\n<p>August 20, 2026</p>\n<p>Civil Court of the City of New York, Queens County</p>\n<p>Mark Kagan, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Employment Relationships—Respondeat Superior—Vicarious Liability—Independent Contract—Uber Driver</div>\n<div>\n<p>State Farm Mutual Automobile Insurance Company, As Subrogee of VICTOR GREENE, Plaintiff,</p>\n<p>v</p>\n<p>Amadou Oury Diallo A/K/A OURY DIALLO, AHMAD TURAY A/K/A SITTA TURAY, UBER USA LLC, RASIER NY LLC, RASIER CA LLC &amp; UBER TECHNOLOGIES INC., Defendants,</p>\n</div>\n<p>Civil Court of the City of New York, Queens County</p>\n<p>Decided on August 20, 2026</p>\n<p>Index No. CV-018973-24/QU</p>\n<div>\n<p>Plaintiff - </p>\n<p>Nicolini, Paradise, Ferretti &amp; Sabella </p>\n<p>114 Old Country Road, Suite 500</p>\n<p>Mineola, New York 11501 </p>\n<p>Tel (516) 741-6355</p>\n<p>Defendant —</p>\n<p>Baker, McEvoy &amp; Moskovits Firm</p>\n<p>5 Broadway, Suite 3</p>\n<p>Freeport, New York 11520 </p>\n<p>Tel (212) 857-8230 </p>\n<p>and</p>\n<p>Wilson Elser Moskowitz Edelson &amp; Dieker </p>\n<p>150 East 42 Street </p>\n<p>New York, New York 10017 </p>\n<p>Tel (212) 490-3000</p>\n</div>\n<p>Mark Kagan, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1250(A)",
+                    "Docket": {
+                        "docket_number": "Index No. CV-018973-24/QU",
+                        "case_name_full": "State Farm Mutual Automobile Insurance Company, As Subrogee of VICTOR GREENE v. Amadou Oury Diallo A/K/A OURY DIALLO, AHMAD TURAY A/K/A SITTA TURAY, UBER USA LLC, RASIER NY LLC, RASIER CA LLC & UBER TECHNOLOGIES INC.",
+                    },
+                    "Opinion": {"author_str": "Mark Kagan"},
+                    "OpinionCluster": {
+                        "case_name_full": "State Farm Mutual Automobile Insurance Company, As Subrogee of VICTOR GREENE v. Amadou Oury Diallo A/K/A OURY DIALLO, AHMAD TURAY A/K/A SITTA TURAY, UBER USA LLC, RASIER NY LLC, RASIER CA LLC & UBER TECHNOLOGIES INC."
+                    },
+                },
+            ),
+            (
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_23397.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>City of New York v "Doe"</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23397</td>\n</tr>\n<tr>\n<td align="center">Decided on December 18, 2023</td>\n</tr>\n<tr>\n<td align="center">Civil Court Of The City Of New York, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Zellan, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 18, 2023\n<br><div align="center">Civil Court of the City of New York, Bronx County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>City \n\tof New York, Petitioner(s),\n\n<br><br>against<br><br>"John" "Doe" et al., Respondents.</b></div><br><br>\n\n</td></tr></table><br><br>Index No. LT-300755-22/BX\n<br><br><br>Maurice Dobson, Special Assistant Corporation Counsel, New York City Department of Housing Preservation &amp; Development (Isidore Scipio, of counsel), New York, NY, for petitioner.<br><br>April Whitehead, Irvington, NY, for respondents Alexander Aqel and Aqel Sheet Metal Inc.<p></p><br>Jeffrey S. Zellan, J. <p>Recitation, as required by CPLR 2219(a), of the papers considered in the review of this motion:</p>""",
                 {
@@ -324,6 +363,21 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.nysurct": [
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51243.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Matter of McWilliams</h1>\n<p>2026 NY Slip Op 51243(U) [89 Misc 3d 1243(A)]</p>\n<p>August 10, 2026</p>\n<p>Surrogate's Court, Richmond County</p>\n<p>Matthew J. Titone, S.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Executors and Administrators—Appointment of Administrator—Objections to Appointment-Admissible Evidence Regarding Fitness</div>\n<div>\n<p>In the Matter of the Estate of Swithin McWilliams, a/k/a SWITHIN MCWILLIAMS, SR., Deceased.</p>\n</div>\n<p>Surrogate's Court, Richmond County</p>\n<p>Decided on August 10, 2026</p>\n<p>File No. 2024-1165</p>\n<p>Matthew J. Titone, S.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1243(A)",
+                    "Docket": {
+                        "docket_number": "File No. 2024-1165",
+                        "case_name_full": "In the Matter of the Estate of Swithin McWilliams, a/k/a SWITHIN MCWILLIAMS, SR.",
+                    },
+                    "Opinion": {"author_str": "Matthew J. Titone"},
+                    "OpinionCluster": {
+                        "case_name_full": "In the Matter of the Estate of Swithin McWilliams, a/k/a SWITHIN MCWILLIAMS, SR."
+                    },
+                },
+            ),
             (
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_50144.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Matter of Pia Jeong Yoon</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 50144(U) [78 Misc 3d 1203(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on February 28, 2023</td>\n</tr>\n<tr>\n<td align="center">Surrogate\'s Court, Queens County</td>\n</tr>\n<tr>\n<td align="center">Kelly, S.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on February 28, 2023\n<br><div align="center">Surrogate\'s Court, Queens County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Probate\nProceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, \n     <br>a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON,\nDeceased.\n</b></div><br><br>\n</td></tr></table><br><br>File No. 2021-31/C\n<br><br>\n<br>Petitioner\'s Attorney: J. John Kim. Esq<br><br>\n<br>Petitioner's Attorney: J. John Kim. Esq.<br>Pashman Stein Walder Hayden,\nPC<br>2900 Westchester Avenue, Suite 204, Purchase, New York 10577<br>(201)\n270-5470<br><br>Respondent's Attorney: Charlotte C. Lee, Esq.<br>277\nBroadway, Suite 400<br>New York, NY 10007<br>(212) 732-3366<p></p>\n\n\nPeter J. Kelly, S.\n\n<p>Petitioner moves for summary judgment in this proceeding which seeks leave to""",
@@ -382,6 +436,36 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nycrimct": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51274.shtml with the docket changed to a bare number
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>People v Vega</h1>\n<p>2026 NY Slip Op 51274(U) [89 Misc 3d 1246(A)]</p>\n<p>August 14, 2026</p>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Ilona B. Coleman, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Crimes—Disclosure—Automatic Discovery-Good Faith and Due Diligence</div>\n<div>\n<p>The People of the State of New York, Plaintiff,</p>\n<p>v</p>\n<p>Orlando Vega, Defendant.</p>\n</div>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Decided on August 14, 2026</p>\n<p>2017KN054132</p>\n<div>\n<p>Alvin L. Bragg, Jr., District Attorney, New York County (Hannah Hicks of counsel), for plaintiff. </p>\n<p>Twyla Carter, The Legal Aid Society, New York City (Tracey Tae, of counsel), for defendant.</p>\n</div>\n<p>Ilona B. Coleman, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1246(A)",
+                    "Docket": {
+                        "docket_number": "2017KN054132",
+                        "case_name_full": "The People of the State of New York v. Orlando Vega",
+                    },
+                    "Opinion": {"author_str": "Ilona B. Coleman"},
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York v. Orlando Vega"
+                    },
+                },
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51274.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>People v Vega</h1>\n<p>2026 NY Slip Op 51274(U) [89 Misc 3d 1246(A)]</p>\n<p>August 14, 2026</p>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Ilona B. Coleman, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Crimes—Disclosure—Automatic Discovery-Good Faith and Due Diligence</div>\n<div>\n<p>The People of the State of New York, Plaintiff,</p>\n<p>v</p>\n<p>Orlando Vega, Defendant.</p>\n</div>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Decided on August 14, 2026</p>\n<p>CR-004361-26NY</p>\n<div>\n<p>Alvin L. Bragg, Jr., District Attorney, New York County (Hannah Hicks of counsel), for plaintiff. </p>\n<p>Twyla Carter, The Legal Aid Society, New York City (Tracey Tae, of counsel), for defendant.</p>\n</div>\n<p>Ilona B. Coleman, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1246(A)",
+                    "Docket": {
+                        "docket_number": "CR-004361-26NY",
+                        "case_name_full": "The People of the State of New York v. Orlando Vega",
+                    },
+                    "Opinion": {"author_str": "Ilona B. Coleman"},
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York v. Orlando Vega"
+                    },
+                },
+            ),
+            (
                 # https://www.nycourts.gov/reporter/3dseries/2018/2018_50128.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>People v Hot</b></td>\n</tr>\n<tr>\n<td align="center">2018 NY Slip Op 50128(U) [58 Misc 3d 1215(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on January 18, 2018</td>\n</tr>\n<tr>\n<td align="center">Criminal Court Of The City Of New York, Kings County</td>\n</tr>\n<tr>\n<td align="center">Leo, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau\npursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on January 18, 2018\n<br><div align="center">Criminal Court of the City of New York, Kings County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>The People of the\nState of New York\n\n<br><br>against<br><br>Amela Hot, Defendant.</b></div><br><br>\n\n</td></tr></table><br><br>2017KN054132\n<br><br><br>Labe M. Richman, 305 Broadway, Suite 100, New York, New York, 10007, attorney\nfor defendant Amela Hot<br><br>Eric Gonzalez, District Attorney, Kings County, by Sapna\nKishnani Esq., Assistant District Attorney, Brooklyn, of Counsel for the People<p></p>\n\n\n<br>Donald Leo, J.\n""",
                 {
@@ -413,6 +497,20 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.nyclaimsct": [
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51095.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Bishop v State of New York</h1>\n<p>2026 NY Slip Op 51095(U) [89 Misc 3d 1228(A)]</p>\n<p>July 10, 2026</p>\n<p>Court of Claims</p>\n<p>Linda K. Mejias-Glover, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>State—Claim against State—Permission to File Late Claim—Court of Claims Act Substantive Pleading Requirements</div>\n<div>\n<p>Lance R. Bishop, Sr, Claimant,</p>\n<p>v</p>\n<p>State of New York, Defendant.</p>\n</div>\n<p>Court of Claims</p>\n<p>Decided on July 10, 2026</p>\n<p>Claim No. NONE</p>\n<div>\n<p>For Claimant:</p>\n<p>LANCE R. BISHOP, SR, Pro Se</p>\n<p>For Defendant:</p>\n<p>HON. LETITIA JAMES, NYS ATTORNEY GENERAL</p>\n<p>By: Noah T. Seabrook, Esq.</p>\n</div>\n<p>Linda K. Mejias-Glover, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1228(A)",
+                    "Docket": {
+                        "case_name_full": "Lance R. Bishop, Sr v. State of New York"
+                    },
+                    "Opinion": {"author_str": "Linda K. Mejias-Glover"},
+                    "OpinionCluster": {
+                        "case_name_full": "Lance R. Bishop, Sr v. State of New York"
+                    },
+                },
+            ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_34469.pdf
                 """Lawrence v State of N.Y. Dept. of\nCommunity Supervision\n2018 NY Slip Op 34469(U)\nJanuary 10, 2018\nCourt of Claims\nDocket Number: Index No. 2010-038-505\nJudge: W. Brooks DeBow\n""",
