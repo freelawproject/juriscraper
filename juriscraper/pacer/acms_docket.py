@@ -363,7 +363,9 @@ class ACMSDocketReport(AppellateDocketReport):
         for party in parties:
             for attorney in party.get("attorneys", []):
                 if re.search(r"see\s+above", attorney.get("attorneys", "")):
-                    assert "Unexpected SEE ABOVE found in ACMS attorney list"
+                    raise AssertionError(
+                        "Unexpected SEE ABOVE found in ACMS attorney list"
+                    )
 
         return parties
 
