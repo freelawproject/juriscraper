@@ -156,7 +156,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         claim_tables = self.tree.xpath('//table[@class="complexReport"]')
         claims = []
         for claim_table in claim_tables:
-            claim = {}
+            claim: dict = {}
 
             # Identify and parse each cell.
             creditor_td = claim_table.xpath("(.//tr)[1]/td[1]")[0]
@@ -201,7 +201,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
     def _parse_creditor_cell(self, td):
         """Get creditor_id, creditor_details"""
         credit_label = td.xpath(".//i")[0]
-        info = self._get_label_value_pair(
+        info: dict = self._get_label_value_pair(
             credit_label, True, {"creditor": "creditor_id"}
         )
         info["creditor_id"] = info["creditor_id"].strip("()")
@@ -216,7 +216,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
     def _parse_claim_number_cell(self, td):
         """Get the claim_number and date fields"""
-        data = {}
+        data: dict = {}
         claim_number_text = td.xpath(".//b")[0].text_content()
         claim_number = int(re.search(r"\d+", claim_number_text).group(0))
         data["claim_number"] = claim_number
@@ -281,7 +281,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         history_rows = []
         entry_trs = td.xpath(".//tr")
         for entry_tr in entry_trs:
-            row = {}
+            row: dict = {}
             number_cell = entry_tr.xpath("./td[3]")[0]
             number = number_cell.text_content().strip()
 
