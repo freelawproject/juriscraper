@@ -24,7 +24,9 @@ Changes:
 - Adopt strict type checks in `lib`, `scotus`, `state`.
 - Adopt comprehensive checking in `pacer`.
 - Upgrade Pyrefly to v1.3.1
+- Refactor `lactapp_5` to scrape the latest decisions window. #1390
 - Upgrade GitHub Actions (and also pin versions).
+- Improve typing in `pacer` with `@overload`.
 -
 
 Fixes:
@@ -36,6 +38,11 @@ Fixes:
 - Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
 - Add generics and test utility functions in `lib`.
 - Take consistent approach to unparsed data in `state` and `scotus`.
+- Correct more type annotations in `pacer`
+- Fix inheritance in the `TexasCommonScraper` cluster.
+- Fix handling of meta redirects with url-relative destinations
+- Address `no-any-return-*` in `lib.html_utils`.
+- Fix "no changes" label handling for `CHANGES.md`
 -
 
 ## 3.0.41 - 2026-09-14

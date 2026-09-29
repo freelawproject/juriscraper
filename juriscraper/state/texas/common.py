@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain
-from typing import TypedDict
+from typing import TypedDict, TypeVar, final
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -499,7 +499,10 @@ IGNORED_DOCKET_NUMBERS: set[str] = {
 }
 
 
-class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
+_CommonDataT = TypeVar("_CommonDataT")
+
+
+class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court,
     Court of Criminal Appeals, and Court of Appeals).
@@ -559,9 +562,9 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
         self.case_data = self._extract_case_data()
         self.is_valid = True
 
-    @override
+    @final
     @property
-    def data(self) -> TexasCommonData | dict[str, None]:
+    def _common_data(self) -> TexasCommonData | None:
         """
         Extract parsed data from an HTML tree. This property returns the
         `TexasCommonData`
@@ -577,7 +580,7 @@ class TexasCommonScraper(AbstractParser[TexasCommonData | dict[str, None]]):
 
         docket_number = self.docket_number
         if docket_number is None:
-            return {}
+            return None
 
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
