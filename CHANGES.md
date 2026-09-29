@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
 
 ## 3.0.43 - 2026-09-29
 
