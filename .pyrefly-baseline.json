@@ -2486,13 +2486,6 @@
       "severity": "error"
     },
     {
-      "column": 35,
-      "path": "juriscraper/state/texas/court_of_appeals.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
-      "severity": "error"
-    },
-    {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
       "name": "bad-override-mutable-attribute",
