@@ -61,7 +61,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict = {
             "court_id": self.court_id,
         }
         field_mappings = {

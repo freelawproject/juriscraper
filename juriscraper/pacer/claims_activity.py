@@ -102,7 +102,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         claim_tables = self.tree.xpath('//table[@class="complexReport"]')
         for claim_table in claim_tables:
-            meta_data = {
+            meta_data: dict = {
                 "court_id": self.court_id,
             }
             claim = {}
