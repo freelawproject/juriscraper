@@ -2444,13 +2444,6 @@
       "severity": "error"
     },
     {
-      "column": 31,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `table` with type `HtmlElement` in function `juriscraper.lib.html_utils.parse_table`",
-      "severity": "error"
-    },
-    {
       "column": 35,
       "path": "juriscraper/state/texas/common.py",
       "name": "bad-assignment",

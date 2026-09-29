@@ -17,6 +17,7 @@ from juriscraper.lib.html_utils import (
     get_all_text,
     parse_table,
 )
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     FILE_SIZE_RE,
     clean_string,
@@ -24,6 +25,8 @@ from juriscraper.lib.string_utils import (
     harmonize,
     size_string_to_bytes,
 )
+
+logger = make_default_logger()
 
 
 class CourtType(Enum):
@@ -888,6 +891,9 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         table = self.tree.find(
             './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
         )
+        if table is None:
+            logger.error("[court=%s] Unable to find parties table", self.court_id)
+            return []
         parties = parse_table(table)
         # Handle "no records" case where Party column has a placeholder but
         # other columns are empty
