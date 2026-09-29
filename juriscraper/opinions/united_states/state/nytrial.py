@@ -15,6 +15,7 @@ from typing import Any
 from urllib.parse import urljoin
 
 import httpx
+from lxml.etree import ParserError
 from lxml.html import fromstring
 
 from juriscraper.AbstractSite import logger
@@ -39,6 +40,7 @@ class Site(OpinionSiteLinear):
     # "slipidx"
     current_index_start = date(2026, 5, 1)
     first_opinion_date = date(2003, 12, 1)
+    is_backscrape = False
     days_interval = 30
 
     def __init__(self, *args, **kwargs):
@@ -98,6 +100,11 @@ class Site(OpinionSiteLinear):
         if "404 ERROR" in title:
             raise ParsingException(f"nytrial: page not found {self.url}")
 
+        # the first table holds the newest posting day. Daily scrapes only
+        # fetch its stub pages, older days were fetched on previous runs
+        tables = self.html.xpath("//table[caption]")
+        newest_rows = set(tables[0].xpath(".//tr")) if tables else set()
+
         row_xpath = "//table[caption]//tr[position()>1 and td]"
         for row in self.html.xpath(row_xpath):
             court = re.sub(
@@ -115,7 +122,9 @@ class Site(OpinionSiteLinear):
             judge = ""
             stub_regex = r"/current/3dseries/(\d{4})/(\d{4}_3\d{4})\.shtml$"
             if re.search(stub_regex, url):
-                if not self.test_mode_enabled():
+                if not self.test_mode_enabled() and (
+                    self.is_backscrape or row in newest_rows
+                ):
                     judge = await self.get_judge_from_stub(url)
                 url = re.sub(stub_regex, r"/pdfs/\1/\2.pdf", url)
             name = harmonize(row.xpath("td[1]/a")[0].text_content())
@@ -144,7 +153,7 @@ class Site(OpinionSiteLinear):
         """
         try:
             html = await self._get_html_tree_by_url(urljoin(self.url, url))
-        except httpx.HTTPError as e:
+        except (httpx.HTTPError, ParserError) as e:
             logger.warning("nytrial: could not get stub %s: %s", url, e)
             return ""
         return self.get_judge_from_header(html.xpath("//h1/parent::div")[:1])
@@ -172,6 +181,7 @@ class Site(OpinionSiteLinear):
         :param target_date: an element of self.back_scrape_iterable
         :return: None
         """
+        self.is_backscrape = True
         self.url = self.build_url(target_date)
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
