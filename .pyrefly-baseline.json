@@ -22,13 +22,6 @@
       "severity": "error"
     },
     {
-      "column": 24,
-      "path": "juriscraper/fdsys/utils/get_xpath_results.py",
-      "name": "missing-module-attribute",
-      "concise_description": "Could not import `_ElementStringResult` from `lxml.etree`",
-      "severity": "error"
-    },
-    {
       "column": 9,
       "path": "juriscraper/lasc/http.py",
       "name": "bad-override",
