@@ -2542,20 +2542,6 @@
       "severity": "error"
     },
     {
-      "column": 25,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/state/RequestManager.py",
       "name": "bad-override",
