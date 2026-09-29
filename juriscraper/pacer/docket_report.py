@@ -855,13 +855,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         # Because criminal data spans multiple trs, the way we do this is by
         # keeping track of which party we're currently working on. Then, when
         # we get useful criminal data, we add it to that party.
-        empty_criminal_data = {
+        empty_criminal_data: dict = {
             "counts": [],
             "complaints": [],
             "highest_offense_level_opening": "",
             "highest_offense_level_terminated": "",
         }
-        section_info = {
+        section_info: dict = {
             "current_section": None,
             "header_info": None,
             "changed": False,
@@ -1372,7 +1372,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
-            de = {}
+            de: dict = {}
             cells = row.xpath("./td[not(./input)]")
 
             # If view_multiple_documents report, remove the "checkbox" cell on

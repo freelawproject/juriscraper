@@ -22,13 +22,6 @@
       "severity": "error"
     },
     {
-      "column": 24,
-      "path": "juriscraper/fdsys/utils/get_xpath_results.py",
-      "name": "missing-module-attribute",
-      "concise_description": "Could not import `_ElementStringResult` from `lxml.etree`",
-      "severity": "error"
-    },
-    {
       "column": 9,
       "path": "juriscraper/lasc/http.py",
       "name": "bad-override",
@@ -1100,41 +1093,6 @@
       "severity": "error"
     },
     {
-      "column": 37,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
-      "column": 34,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
-      "column": 38,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
-      "column": 45,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "juriscraper/pacer/appellate_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
       "column": 21,
       "path": "juriscraper/pacer/appellate_docket.py",
       "name": "missing-attribute",
@@ -1240,13 +1198,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
       "column": 22,
       "path": "juriscraper/pacer/case_query.py",
       "name": "missing-attribute",
@@ -1268,31 +1219,10 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/pacer/case_query.py",
-      "name": "no-matching-overload",
-      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, str | Unknown | None])",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/case_query.py",
-      "name": "no-matching-overload",
-      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (dict[str, str | None])",
-      "severity": "error"
-    },
-    {
       "column": 9,
       "path": "juriscraper/pacer/case_query.py",
       "name": "bad-override",
       "concise_description": "Class member `CaseQuery.query` overrides parent class `BaseReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/pacer/case_query.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
       "severity": "error"
     },
     {
@@ -1321,13 +1251,6 @@
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "bad-override",
       "concise_description": "Class member `CaseQueryAdvancedBankruptcy.query` overrides parent class `BaseCaseQueryAdvanced` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/pacer/case_query_advanced.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
       "severity": "error"
     },
     {
@@ -1450,48 +1373,6 @@
       "severity": "error"
     },
     {
-      "column": 46,
-      "path": "juriscraper/pacer/claims_register.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, int]`",
-      "severity": "error"
-    },
-    {
-      "column": 31,
-      "path": "juriscraper/pacer/claims_register.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, int]`",
-      "severity": "error"
-    },
-    {
-      "column": 31,
-      "path": "juriscraper/pacer/claims_register.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, int]`",
-      "severity": "error"
-    },
-    {
-      "column": 43,
-      "path": "juriscraper/pacer/claims_register.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, int]`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "juriscraper/pacer/claims_register.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, int]`",
-      "severity": "error"
-    },
-    {
-      "column": 34,
-      "path": "juriscraper/pacer/claims_register.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, int]`",
-      "severity": "error"
-    },
-    {
       "column": 9,
       "path": "juriscraper/pacer/claims_register.py",
       "name": "bad-override",
@@ -1510,48 +1391,6 @@
       "path": "juriscraper/pacer/docket_history_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 45,
-      "path": "juriscraper/pacer/docket_history_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, str]`",
-      "severity": "error"
-    },
-    {
-      "column": 42,
-      "path": "juriscraper/pacer/docket_history_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, str]`",
-      "severity": "error"
-    },
-    {
-      "column": 42,
-      "path": "juriscraper/pacer/docket_history_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, str]`",
-      "severity": "error"
-    },
-    {
-      "column": 42,
-      "path": "juriscraper/pacer/docket_history_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, str]`",
-      "severity": "error"
-    },
-    {
-      "column": 36,
-      "path": "juriscraper/pacer/docket_history_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, str]`",
-      "severity": "error"
-    },
-    {
-      "column": 38,
-      "path": "juriscraper/pacer/docket_history_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, str]`",
       "severity": "error"
     },
     {
@@ -1653,27 +1492,6 @@
       "severity": "error"
     },
     {
-      "column": 31,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, list[Unknown] | str]`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `append`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `append`",
-      "severity": "error"
-    },
-    {
       "column": 33,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
@@ -1685,27 +1503,6 @@
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 37,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
-      "column": 34,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "juriscraper/pacer/docket_report.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, date | None]`",
       "severity": "error"
     },
     {
@@ -1846,20 +1643,6 @@
       "path": "juriscraper/pacer/download_confirmation_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `re_xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 42,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | list[DocketType]`",
-      "severity": "error"
-    },
-    {
-      "column": 42,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`list[dict[str, list[str] | str]]` is not assignable to dict key `email_recipients` with type `bool | list[DocketType]`",
       "severity": "error"
     },
     {
@@ -2353,13 +2136,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/mobile_query.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
       "column": 25,
       "path": "juriscraper/pacer/reports.py",
       "name": "unknown-attribute-type",
@@ -2574,20 +2350,6 @@
       "path": "juriscraper/scotus/scotus_docket_report_htm.py",
       "name": "bad-override",
       "concise_description": "Class member `SCOTUSDocketReportHTM._build_docket_entry` overrides parent class `SCOTUSDocketReportHTML` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
       "severity": "error"
     },
     {
