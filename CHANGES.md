@@ -24,6 +24,7 @@ Changes:
 - Adopt strict type checks in `lib`, `scotus`, `state`.
 - Adopt comprehensive checking in `pacer`.
 - Upgrade Pyrefly to v1.3.1
+- Refactor `lactapp_5` to scrape the latest decisions window. #1390
 - Upgrade GitHub Actions (and also pin versions).
 - Improve typing in `pacer` with `@overload`.
 -

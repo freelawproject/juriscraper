@@ -22,13 +22,6 @@
       "severity": "error"
     },
     {
-      "column": 24,
-      "path": "juriscraper/fdsys/utils/get_xpath_results.py",
-      "name": "missing-module-attribute",
-      "concise_description": "Could not import `_ElementStringResult` from `lxml.etree`",
-      "severity": "error"
-    },
-    {
       "column": 9,
       "path": "juriscraper/lasc/http.py",
       "name": "bad-override",
@@ -1205,13 +1198,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
       "column": 22,
       "path": "juriscraper/pacer/case_query.py",
       "name": "missing-attribute",
@@ -1241,13 +1227,6 @@
     },
     {
       "column": 16,
-      "path": "juriscraper/pacer/case_query.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `BaseCaseQueryAdvanced` has no attribute `metadata`",
@@ -1272,13 +1251,6 @@
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "bad-override",
       "concise_description": "Class member `CaseQueryAdvancedBankruptcy.query` overrides parent class `BaseCaseQueryAdvanced` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/pacer/case_query_advanced.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
       "severity": "error"
     },
     {
@@ -2164,13 +2136,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/mobile_query.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
       "column": 25,
       "path": "juriscraper/pacer/reports.py",
       "name": "unknown-attribute-type",
@@ -2385,20 +2350,6 @@
       "path": "juriscraper/scotus/scotus_docket_report_htm.py",
       "name": "bad-override",
       "concise_description": "Class member `SCOTUSDocketReportHTM._build_docket_entry` overrides parent class `SCOTUSDocketReportHTML` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `bool | list[str] | str | None` has no attribute `append`",
       "severity": "error"
     },
     {
