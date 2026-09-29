@@ -102,10 +102,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
 
-        base = {
+        base: dict = {
             "court_id": self.court_id,
         }
-        parsed = {
+        parsed: dict = {
             "appellate": self._is_appellate(),
             "acms": self._is_acms(),
             "dockets": self._get_dockets(),

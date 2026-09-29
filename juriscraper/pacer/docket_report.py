@@ -786,7 +786,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return True
         return False
 
-    def _get_party_type(self, row, cells, party):
+    def _get_party_type(self, row, cells, party: dict) -> tuple[dict, bool]:
         """Get the party type info and return it as a dict.
 
         :param row: The tr we're currently processing.
@@ -811,6 +811,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             elif len(cells) == 3:
                 # Some courts have malformed HTML that requires extra work.
                 return {"type": re.split("----*", s)[0]}, False
+            else:
+                raise ValueError("Unrecognizable party row")
         elif all(
             [self.is_bankruptcy, len(cells) == 3, cells[0].xpath(".//i/b")]
         ):
@@ -853,13 +855,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         # Because criminal data spans multiple trs, the way we do this is by
         # keeping track of which party we're currently working on. Then, when
         # we get useful criminal data, we add it to that party.
-        empty_criminal_data = {
+        empty_criminal_data: dict = {
             "counts": [],
             "complaints": [],
             "highest_offense_level_opening": "",
             "highest_offense_level_terminated": "",
         }
-        section_info = {
+        section_info: dict = {
             "current_section": None,
             "header_info": None,
             "changed": False,
@@ -1370,7 +1372,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
-            de = {}
+            de: dict = {}
             cells = row.xpath("./td[not(./input)]")
 
             # If view_multiple_documents report, remove the "checkbox" cell on
