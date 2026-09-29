@@ -1233,13 +1233,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
       "column": 22,
       "path": "juriscraper/pacer/case_query.py",
       "name": "missing-attribute",
@@ -1283,13 +1276,6 @@
     },
     {
       "column": 16,
-      "path": "juriscraper/pacer/case_query.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `BaseCaseQueryAdvanced` has no attribute `metadata`",
@@ -1314,13 +1300,6 @@
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "bad-override",
       "concise_description": "Class member `CaseQueryAdvancedBankruptcy.query` overrides parent class `BaseCaseQueryAdvanced` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/pacer/case_query_advanced.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
       "severity": "error"
     },
     {
@@ -2343,13 +2322,6 @@
       "path": "juriscraper/pacer/mobile_query.py",
       "name": "bad-override",
       "concise_description": "Class member `MobileQuery.query` overrides parent class `BaseReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/pacer/mobile_query.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `decode`",
       "severity": "error"
     },
     {

@@ -402,7 +402,7 @@ def _main():
     report = AttachmentPage("cand")  # Court ID is only needed for querying.
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with open(filepath, "rb") as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
