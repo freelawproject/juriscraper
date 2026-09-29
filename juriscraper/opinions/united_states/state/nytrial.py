@@ -12,7 +12,9 @@ History:
 import re
 from datetime import date
 from typing import Any
+from urllib.parse import urljoin
 
+import httpx
 from lxml.html import fromstring
 
 from juriscraper.AbstractSite import logger
@@ -25,6 +27,9 @@ from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 citation_regex = r"(?<=\[)\d+ Misc 3d\s+[\S]+(?=\])"
+judge_regex = re.compile(
+    r"(?P<judge>[^,]+(, (Jr|Sr|II|III)\.?)?), (J|S|C\.?J|A\.?J|J\.H\.O|J\.S\.C|Ref)\.?(\s*\(.*\))?"
+)
 
 
 class Site(OpinionSiteLinear):
@@ -83,7 +88,7 @@ class Site(OpinionSiteLinear):
         """
         return bool(re.search(self.court_regex, court))
 
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Parses a page's HTML into opinion dictionaries
 
         :return: None
@@ -104,13 +109,15 @@ class Site(OpinionSiteLinear):
                 continue
 
             url = row.xpath("td[1]/a/@href")[0]
-            # republished decisions ("30000" slip op numbers) link to a stub
-            # page that only links to the PDF
-            url = re.sub(
-                r"/current/3dseries/(\d{4})/(\d{4}_3\d{4})\.shtml$",
-                r"/pdfs/\1/\2.pdf",
-                url,
-            )
+            # decisions with "30000" slip op numbers link to a stub page that
+            # links to the PDF. Some PDFs lack the cover page with the judge
+            # so we get it from the stub page
+            judge = ""
+            stub_regex = r"/current/3dseries/(\d{4})/(\d{4}_3\d{4})\.shtml$"
+            if re.search(stub_regex, url):
+                if not self.test_mode_enabled():
+                    judge = await self.get_judge_from_stub(url)
+                url = re.sub(stub_regex, r"/pdfs/\1/\2.pdf", url)
             name = harmonize(row.xpath("td[1]/a")[0].text_content())
             opinion_date = row.xpath("td[3]")[0].text_content()
             slip_cite = row.xpath("td[4]")[0].text_content()
@@ -125,8 +132,39 @@ class Site(OpinionSiteLinear):
                     "citation": slip_cite,
                     "child_court": court,
                     "docket": "",
+                    "judge": judge,
                 }
             )
+
+    async def get_judge_from_stub(self, url: str) -> str:
+        """Get the judge from the header of a republished decision stub page
+
+        :param url: stub page url, may be relative to the index page
+        :return: the judge name, or an empty string if not found
+        """
+        try:
+            html = await self._get_html_tree_by_url(urljoin(self.url, url))
+        except httpx.HTTPError as e:
+            logger.warning("nytrial: could not get stub %s: %s", url, e)
+            return ""
+        return self.get_judge_from_header(html.xpath("//h1/parent::div")[:1])
+
+    @staticmethod
+    def get_judge_from_header(header: list) -> str:
+        """Find the judge line, such as "Charles D. Wood, J.", in the header
+        <div> that holds the <h1> case name
+
+        :param header: a list with the header element, or an empty list
+        :return: the judge name, or an empty string if not found
+        """
+        if not header:
+            return ""
+        for p in header[0].xpath("./p"):
+            if judge_match := judge_regex.fullmatch(
+                clean_string(p.text_content())
+            ):
+                return normalize_judge_string(judge_match.group("judge"))[0]
+        return ""
 
     async def _download_backwards(self, target_date: date) -> None:
         """Method used by backscraper to download historical records
@@ -286,15 +324,8 @@ class Site(OpinionSiteLinear):
         if cite_match := re.search(citation_regex, " ".join(header_lines)):
             metadata["Citation"] = cite_match.group(0)
 
-        judge_regex = re.compile(
-            r"(?P<judge>[^,]+(, (Jr|Sr|II|III)\.?)?), (J|S|C\.?J|A\.?J|J\.H\.O|J\.S\.C|Ref)\.?(\s*\(.*\))?"
-        )
-        for line in header_lines:
-            if judge_match := judge_regex.fullmatch(line):
-                metadata["Opinion"]["author_str"] = normalize_judge_string(
-                    judge_match.group("judge")
-                )[0]
-                break
+        if judge := Site.get_judge_from_header(header):
+            metadata["Opinion"]["author_str"] = judge
 
         decided = tree.xpath(
             "//p[starts-with(normalize-space(), 'Decided on')]"

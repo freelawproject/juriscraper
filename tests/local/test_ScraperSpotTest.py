@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import asyncio
 import re
 import unittest
 from datetime import date
@@ -178,4 +179,28 @@ class ScraperSpotTest(unittest.TestCase):
             b"</main></body></html>"
         )
         with self.assertRaises(ParsingException):
-            site._process_html()
+            asyncio.run(site._process_html())
+
+    def test_nytrial_judge_from_stub(self):
+        from lxml.html import fromstring
+
+        from juriscraper.opinions.united_states.state import nytrial
+
+        # minimal copy of the stub page header of
+        # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32223.shtml
+        html = fromstring(
+            '<main id="main"><div class="current-legal-document">'
+            '<div class="case-info"><h1>Harbour v Acme Mkts. Inc.</h1>'
+            "<p>2026 NY Slip Op 32223(U)</p><p>September 9, 2026</p>"
+            "<p>Supreme Court, Westchester County</p>"
+            "<p>Index No. 56892/2026</p><p>Charles D. Wood, J.</p>"
+            "<p>Published by New York State Law Reporting Bureau pursuant "
+            "to Judiciary Law &sect; 431.</p></div>"
+            '<h2 class="center"><a href="https://www.nycourts.gov/reporter/'
+            'pdfs/2026/2026_32223.pdf">Full Decision: 2026 NY Slip Op '
+            "32223(U) (PDF)</a></h2></div></main>"
+        )
+        header = html.xpath("//h1/parent::div")
+        self.assertEqual(
+            nytrial.Site.get_judge_from_header(header), "Charles D. Wood"
+        )
