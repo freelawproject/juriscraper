@@ -786,7 +786,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return True
         return False
 
-    def _get_party_type(self, row, cells, party):
+    def _get_party_type(self, row, cells, party: dict) -> tuple[dict, bool]:
         """Get the party type info and return it as a dict.
 
         :param row: The tr we're currently processing.
@@ -811,6 +811,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             elif len(cells) == 3:
                 # Some courts have malformed HTML that requires extra work.
                 return {"type": re.split("----*", s)[0]}, False
+            else:
+                raise ValueError("Unrecognizable party row")
         elif all(
             [self.is_bankruptcy, len(cells) == 3, cells[0].xpath(".//i/b")]
         ):
