@@ -1,4 +1,5 @@
 import re
+from datetime import datetime
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -202,7 +203,7 @@ class DownloadConfirmationPage(BaseReport):
             return clean_string(document_description_str)
         return None
 
-    def _get_transaction_date(self) -> str | None:
+    def _get_transaction_date(self) -> datetime | None:
         """Get the PACER transaction date.
 
         :return: The PACER transaction date if available, otherwise None.
@@ -224,10 +225,8 @@ class DownloadConfirmationPage(BaseReport):
             transaction_date_str = transaction_date_str.split("-")[-1]
 
         transaction_date_str = force_unicode(transaction_date_str)
-        transaction_date_str = convert_date_string(
+        transaction_date = convert_date_string(
             transaction_date_str, datetime=True
         )
 
-        if transaction_date_str:
-            return transaction_date_str
-        return None
+        return transaction_date

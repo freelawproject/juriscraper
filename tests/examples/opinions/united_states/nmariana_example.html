@@ -1,890 +1,276 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Supreme 2022</title>
-	<script src="js/jquery.min.js"></script>
-	<!-- MDB icon -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-	<!-- Google Fonts Roboto -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Material Design Bootstrap -->
-	<link rel="stylesheet" href="css/mdb.min.css">
-	<!-- Your custom styles (optional) -->
-	<link rel="stylesheet" href="css/style-4.13.0.css">
-	<!-- MDBootstrap Datatables  -->
-	<link href="css/addons/datatables.min.css" rel="stylesheet">
-</head>
-
-<body>
-<html>
-
-<head>
-    <title>CNMILRC | Home</title>
-    <!--//Meta//-->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!--//Meta//-->
-
-    <!--//CSS//-->
-<!--//homepage//-->
-    <link rel="stylesheet" href="css/assets/header-fixed.css">
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-<!--//homepage//-->
-
-
-<!--//this is my header//-->
-    <link rel="stylesheet" href="css/alstyle.css"/>
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
-<!--//this is my header//-->
-
-
-<!--//judiciary page//-->
-    <link rel="stylesheet" href="css/style_jud.css"/>
-<!--//judiciary page//-->
-<!--//<link rel="stylesheet" href="css/style_cmc.css"/>//-->
-    <link rel="Stylesheet" href="text/css" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://css/styles/BootStrap.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <!--//CSS//-->
-
-    <!--//JSScript//-->
-    <script type="text/javascript" src="https://js/collapseALL.js"></script>
-    <script src="/js/jquery.min.js"></script>
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<!--// Bootstrap menu //-->
-    <!--//JSScript//-->
-<!--//admindcode Accordion start//-->
-
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judiciary - CNMI Law</title>
+<meta name="description" content="Official legal resources of the Commonwealth of the Northern Mariana Islands: public laws, the Commonwealth Code, the NMI Administrative Code, judicial decisions, court rules, and the Commonwealth Register.">
+<meta name="theme-color" content="#0b3a5b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Judiciary - CNMI Law">
+<meta property="og:description" content="Official legal resources of the Commonwealth of the Northern Mariana Islands.">
+<link rel="icon" type="image/jpeg" href="/images/cnmi-seal.jpg">
+<link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-datatables/9.0.3/style.css" integrity="sha384-xnK68E/OAsSGcbvbeWEOyhjix2K7rBxt8Eytj/Ow9zuPG7WwFGGqMPQ8SbexlsL0" crossorigin="anonymous">
+<style>
+/* ---- shared data-grid (simple-datatables) ---- */
+.datatable-wrapper{font-size:1rem}
+.datatable-top,.datatable-bottom{padding:10px 0;font-size:.92em;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.datatable-bottom{justify-content:space-between}
+.datatable-input,.datatable-selector{padding:7px 11px;border:1px solid var(--line,#d8d8d8);border-radius:8px;font-size:.95rem;background:#fff}
+.datatable-table th{cursor:pointer;white-space:nowrap}
+.datatable-table td,.datatable-table th{padding:9px 12px;vertical-align:top}
+.datatable-pagination ul{display:flex;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.datatable-pagination li{list-style:none}
+.datatable-pagination a,.datatable-pagination button{font-size:.9rem;line-height:1.15;padding:6px 11px;min-width:34px;text-align:center;color:#d1202f;border-radius:6px;text-decoration:none;background:none;border:1px solid transparent;cursor:pointer}
+.datatable-pagination a:hover,.datatable-pagination .datatable-active a{background:#d1202f;color:#fff;border-color:#d1202f}
+.datatable-pagination .datatable-disabled a,.datatable-pagination .datatable-disabled button{color:#bbb;cursor:default}
+/* helpers */
+.cite{color:var(--muted,#555);font-size:.9em;white-space:nowrap}
+.pdf-link{color:#d1202f;text-decoration:none;font-weight:600;white-space:nowrap}
+.cr-sub{color:var(--muted,#888);margin:0 0 14px;font-size:.9em}
+.cr-section-h{margin:0 0 6px}
+.muted{color:var(--muted,#888)}
+</style>
 </head>
 <body>
-<header class="header-fixed">
-    <div class="header-limiter">
-    <h2>
-        <a href="index.php"><img src="images/35x29.jpg">Commonwealth Law Revision Commission</a>
-        </h2>
-        <nav><ul class="list-inline">
-            <a href="index.php" data-toggle="tooltip" data-placement="top" title="Home"><i class="fa fa-home"></i> </a>
-            <a href="tel:1-670-236-9820"><i class="fa fa-phone aria-hidden="true" data-toggle="tooltip" data-placement="top" title="+1-670-236-9820"></i>
-            <a href="product.php" data-toggle="tooltip" data-placement="top" title="Cart"><i class="fa">&#xf218;</i></a>
-            <a href="mailto:cnmilaw@nmijudiciary.com" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope"></i> </a>
-            <!--//<a href="login.php"><i class="fa">&#xf2bd;</i></a>//-->
-            <a href="announcement.php" data-toggle="tooltip" data-placement="top" title="Announcement"><i class="fa fa">&#xf1ea;</i> </a>
-    <!--//<a><div id="google_translate_element"></div></a>//-->
-            </ul>
-            </div>
-        </nav>
-        </div>
-</header>
+<a class="skip" href="#main">Skip to main content</a>
+ <div class="util"><div class="wrap">
+<span class="off">An official website of the CNMI Law Revision Commission</span>
 
-<script>
-    $(document).ready(function(){
-
-        var showHeaderAt = 150;
-
-        var win = $(window),
-                body = $('body');
-
-        // Show the fixed header only on larger screen devices
-
-        if(win.width() > 400){
-
-            // When we scroll more than 150px down, we set the
-            // "fixed" class on the body element.
-
-            win.on('scroll', function(e){
-
-                if(win.scrollTop() > showHeaderAt) {
-                    body.addClass('fixed');
-                }
-                else {
-                    body.removeClass('fixed');
-                }
-            });
-
-        }
-
-    });
-</script>
-<!--CSS SCRIPT-->
-
-<!--//css menu//-->
-
-<!--Style Script-->
+</div></div>
+<header class="site"><div class="wrap">
+<a class="sealwrap" href="/" aria-label="Home"><img src="/images/cnmi-seal.jpg" alt="Seal of the CNMI"></a>
+<div class="brand"><h1><a href="/"><span class="bfull">Law Revision Commission</span><span class="bshort">LRC</span></a></h1><p>Commonwealth of the Northern Mariana Islands &middot; cnmilaw.gov</p></div>
+</div></header>
+<nav class="main" aria-label="Primary"><div class="wrap">
+<button class="navtoggle" aria-expanded="false" aria-controls="navlist" onclick="var u=this.nextElementSibling;this.setAttribute('aria-expanded',u.classList.toggle('open'))">Menu &#9776;</button>
+<ul id="navlist">
+<li><a href="/covenant" class="">Covenant</a></li>
+<li><a href="/constitution" class="">Constitution</a></li>
+<li class="has-menu"><a href="/commonwealth-code" class="">Commonwealth Code <span class="caret" aria-hidden="true">&#9662;</span></a>
+  <ul class="submenu">
+    <li><a href="/commonwealth-code">Browse the Code</a></li>
+    <li><a href="/update-table">Update Table</a></li>
+  </ul></li>
+<li><a href="/documents?type=admin_code" class="">Administrative Code</a></li>
+<li class="has-menu"><a href="/documents?type=public_law" class="">Legislature <span class="caret" aria-hidden="true">&#9662;</span></a>
+  <ul class="submenu">
+    <li><a href="/documents?type=public_law">Public Laws</a></li>
+    <li><a href="/documents?type=local_law">Local Laws</a></li>
+    <li><a href="/ordinance">Ordinance</a></li>
+    <li><a href="https://cnmileg.net/" target="_blank" rel="noopener">Legislature Website &#8599;</a></li>
+  </ul></li>
+<li class="has-menu"><a href="/documents?type=register" class="">Register <span class="caret" aria-hidden="true">&#9662;</span></a>
+  <ul class="submenu">
+    <li><a href="/documents?type=register">By Year</a></li>
+    <li><a href="/register-index">Register Index</a></li>
+  </ul></li>
+<li class="has-menu"><a href="/documents?type=case" class="active">Judiciary <span class="caret" aria-hidden="true">&#9662;</span></a>
+  <ul class="submenu">
+    <li><a href="/court-rules">Court Rules</a></li>
+    <li><a href="/documents?type=case&court=Superior">Superior Court</a></li>
+    <li><a href="/documents?type=case&court=Supreme">Supreme Court</a></li>
+    <li><a href="/documents?type=general_order">General Orders</a></li>
+    <li><a href="/documents?type=admin_order">Admin Orders</a></li>
+    <li><a href="/documents?type=reporter">Reporters</a></li>
+    <li><a href="/documents?type=digest">Family Court Digest</a></li>
+    <li><a href="https://www.nmijudiciary.gov" target="_blank" rel="noopener">Judiciary Website &#8599;</a></li>
+  </ul></li>
+<li class="has-menu"><a href="/documents?type=ttr" class="">Resources <span class="caret" aria-hidden="true">&#9662;</span></a>
+  <ul class="submenu">
+    <li><a href="/documents?type=ttr">Trust Territory</a></li>
+    <li><a href="https://governor.cnmi.gov/" target="_blank" rel="noopener">Governor's Office Website &#8599;</a></li>
+  </ul></li>
+<li class="has-menu"><a href="/about" class="">About <span class="caret" aria-hidden="true">&#9662;</span></a>
+  <ul class="submenu">
+    <li><a href="/about">About the Commission</a></li>
+    <li><a href="/docs/LRCBylaw.pdf" target="_blank" rel="noopener">Bylaws (PDF)</a></li>
+    <li><a href="/coming-soon?s=History+of+the+Commission">History</a></li>
+    <li><a href="/social">Social Media</a></li>
+  </ul></li>
+<li><a href="/search" class="">Search</a></li>
+</ul></div></nav>
+<main id="main">
 <style>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,800);
-
-*,html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,label,fieldset,input,p,blockquote,th,td {
-    margin: 0;
-    padding: 0;
-}
-
-article,aside,figure,footer,header,hgroup,nav,section {
-    display: block;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html {
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    color: #078eba;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #078eba;
-}
-
-body {
-    background: #e5e5e5;
-    color: #374147;
-    font: 14px "Open Sans",Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1;
-    width: 100%;
-}
-
-nav {
-    display: block;
-    background: #374147;
-}
-
-.menu {
-    display: block;
-}
-
-.menu li {
-    display: inline-block;
-    position: relative;
-    z-index: 100;
-}
-
-.menu li:first-child {
-    margin-left: 0;
-}
-
-.menu li a {
-    font-weight: 600;
-    text-decoration: none;
-    padding: 20px 15px;
-    display: block;
-    color: #fff;
-    transition: all 0.2s ease-in-out 0s;
-}
-
-.menu li a:hover,.menu li:hover>a {
-    color: #fff;
-    background: #3758c4;
-}
-
-.menu ul {
-    visibility: hidden;
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-    width: 170px;
-    position: absolute;
-    left: 0px;
-    background: #fff;
-    z-index: 99;
-    transform: translate(0,20px);
-    transition: all 0.2s ease-out;
-}
-
-.menu ul:after {
-    bottom: 100%;
-    left: 20%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #fff;
-    border-width: 6px;
-    margin-left: -6px;
-}
-
-.menu ul li {
-    display: block;
-    float: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu ul li a {
-    font-size: 12px;
-    font-weight: normal;
-    display: block;
-    color: #797979;
-    background: #fff;
-}
-
-.menu ul li a:hover,.menu ul li:hover>a {
-    background: #3758c4;
-    color: #fff;
-}
-
-.menu li:hover>ul {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0,0);
-}
-
-.menu ul ul {
-    left: 169px;
-    top: 0px;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(20px,20px);
-    transition: all 0.2s ease-out;
-}
-
-.menu ul ul:after {
-    left: -6px;
-    top: 10%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(255, 255, 255, 0);
-    border-right-color: #fff;
-    border-width: 6px;
-    margin-top: -6px;
-}
-
-.menu li>ul ul:hover {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0,0);
-}
-
-.responsive-menu {
-    display: none;
-    width: 100%;
-    padding: 20px 15px;
-    background: #374147;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.responsive-menu:hover {
-    background: #3758c4;
-    color: #fff;
-    text-decoration: none;
-}
-
-a.homer {
-    background: #3758c4;
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-    .mainWrap {
-        width: 768px;
-    }
-
-    .menu ul {
-        top: 37px;
-    }
-
-    .menu li a {
-        font-size: 12px;
-    }
-
-    a.homer {
-        background: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .mainWrap {
-        width: auto;
-        padding: 50px 20px;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .responsive-menu {
-        display: block;
-    }
-
-    nav {
-        margin: 0;
-        background: none;
-    }
-
-    .menu li {
-        display: block;
-        margin: 0;
-    }
-
-    .menu li a {
-        background: #fff;
-        color: #797979;
-    }
-
-    .menu li a:hover,.menu li:hover>a {
-        background: #3758c4;
-        color: #fff;
-    }
-
-    .menu ul {
-        visibility: hidden;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        transform: initial;
-    }
-
-    .menu li:hover>ul {
-        visibility: visible;
-        opacity: 1;
-        position: relative;
-        transform: initial;
-    }
-
-    .menu ul ul {
-        left: 0;
-        transform: initial;
-    }
-
-    .menu li>ul ul:hover {
-        transform: initial;
-    }
-}
-
-@media (max-width: 480px) {
-}
-
-@media (max-width: 320px) {
-}
+.court-tabs{display:flex;gap:8px;margin:0 0 16px;flex-wrap:wrap}
+.court-tab{display:inline-flex;padding:8px 22px;border:1px solid var(--line,#d8d8d8);border-radius:999px;text-decoration:none;color:#333;background:#fff;font-weight:600;transition:.12s}
+.court-tab:hover{border-color:#9aa;background:#fafafa}
+.court-tab.on{background:#0b3a5b;border-color:#0b3a5b;color:#fff}
+.court-note{background:#f4f6f8;border-left:3px solid #0b3a5b;padding:10px 14px;margin:0 0 16px;font-size:.86em;color:#444;border-radius:0 8px 8px 0}
+.order-cell{font-size:.92em}
 </style>
+<section class="sec"><div class="wrap">
 
-<!--//css menu//-->
-<!--//NavMenu Start//-->
-<nav>
-<a id="resp-menu" class="responsive-menu" href="#"> Menu</a>
-    <ul class="menu">
-    <li><a class="homer" href="index.php"> HOME</a>
+<h3 class="cr-section-h">Judiciary &mdash; Court Decisions</h3>
+<p class="cr-sub">Choose a court and a year, then browse, sort, or search decisions. Click a case to view the PDF on-site.</p>
 
-    <li><a  href="cov.php"> Covenant</a></li>
+<div class="court-tabs">
+      <a href="/documents?type=case&court=Supreme" class="court-tab on">Supreme Court</a>
+      <a href="/documents?type=case&court=Superior" class="court-tab">Superior Court</a>
+  </div>
 
-    <li><a  href="cons.php"> Constitution</a></li>
+<p class="court-note"><strong>Notice (Slip Opinions):</strong> These opinions have not been certified by the Clerk of the Supreme Court for publication in the permanent law reports. Until certified, they are subject to revision or withdrawal. Where an online opinion and the opinion certified for publication differ, the certified opinion controls. Please report errors to the Clerk of the Supreme Court &mdash; P.O. Box 502165, Saipan, MP 96950 &middot; (670) 236-9715 &middot; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb888e8b899e969ed598948e898fbb959692918e9f9298929a8982d59c948d">[email&#160;protected]</a>.</p>
 
-    <li><a  href="cmc.php"> Commonwealth Code</a></li>
+<form method="get" action="/documents" style="margin:0 0 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+  <input type="hidden" name="type" value="case">
+  <input type="hidden" name="court" value="Supreme">
+  <label for="yrsel" style="font-weight:600;color:#0b3a5b">Year:</label>
+  <select id="yrsel" name="year" onchange="this.form.submit()" style="padding:9px 14px;border:1px solid var(--line,#cfd6dd);border-radius:8px;font-size:1em;min-width:130px;background:#fff">
+          <option value="2026" selected>2026</option>
+          <option value="2025" >2025</option>
+          <option value="2024" >2024</option>
+          <option value="2023" >2023</option>
+          <option value="2022" >2022</option>
+          <option value="2021" >2021</option>
+          <option value="2020" >2020</option>
+          <option value="2019" >2019</option>
+          <option value="2018" >2018</option>
+          <option value="2017" >2017</option>
+          <option value="2016" >2016</option>
+          <option value="2015" >2015</option>
+          <option value="2014" >2014</option>
+          <option value="2013" >2013</option>
+          <option value="2012" >2012</option>
+          <option value="2011" >2011</option>
+          <option value="2010" >2010</option>
+          <option value="2009" >2009</option>
+          <option value="2008" >2008</option>
+          <option value="2007" >2007</option>
+          <option value="2006" >2006</option>
+          <option value="2005" >2005</option>
+          <option value="2004" >2004</option>
+          <option value="2003" >2003</option>
+          <option value="2002" >2002</option>
+          <option value="2001" >2001</option>
+          <option value="2000" >2000</option>
+          <option value="1999" >1999</option>
+          <option value="1998" >1998</option>
+          <option value="1997" >1997</option>
+          <option value="1996" >1996</option>
+          <option value="1995" >1995</option>
+          <option value="1994" >1994</option>
+          <option value="1993" >1993</option>
+          <option value="1992" >1992</option>
+          <option value="1991" >1991</option>
+          <option value="1990" >1990</option>
+          <option value="1989" >1989</option>
+      </select>
+</form>
 
-    <li><a  href="admin.php"> Administrative Code</a></li>
+<h3 style="margin:0 0 6px;color:#0b3a5b">Supreme Court &middot; 2026 <span class="muted" style="font-weight:400;font-size:14px">(9 opinions)</span></h3>
 
-    <li><a  href="leg.php"> Legislative</a>
-        <ul class="sub-menu">
-            <li><a href="public.php">Public Laws</a></li>
-            <li><a href="local.php">Local Laws</a></li>
-            <li><a href="ord.php">Local Ordinance</a></li>
-            <li><a href="/pdf/sourcetble.pdf">Update Table</a></li>
-        </ul>
-    </li>
+<table class="doctable js-grid" data-perpage="50"><thead><tr>
+  <th style="width:18%">Case Name</th>
+  <th style="width:118px">Citation</th>
+    <th style="width:106px">Case Date</th>
+  <th style="width:140px">Justices</th>
+  <th data-sortable="false" style="width:56px">PDF</th>
+</tr></thead><tbody>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28485">Deleon Guerrero v. St. Jude Renal Care</a></td>
+    <td>2026 MP 9</td>
+        <td data-sort="2026-09-09">2026-09-09</td>
+    <td>*Manglona, Inos, Torres Jr.</td>
+    <td><a class="pdf-link" href="/docs/lrc-uploads/2026/case-2026-mp-9-u52.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28478">In re Commonwealth</a></td>
+    <td>2026 MP 8</td>
+        <td data-sort="2026-08-18">2026-08-18</td>
+    <td>*Castro, Manglona, Maraman</td>
+    <td><a class="pdf-link" href="/docs/lrc-uploads/2026/case-2026-mp-8-u45.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28470">In re Estate of Magofna</a></td>
+    <td>2026 MP 7</td>
+        <td data-sort="2026-07-28">2026-07-28</td>
+    <td>Torres Jr., Maraman, Ada-Tenorio</td>
+    <td><a class="pdf-link" href="/docs/lrc-uploads/2026/case-2026-mp-7-u37.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28460">In re Myers</a></td>
+    <td>2026 MP 6</td>
+        <td data-sort="2026-07-15">2026-07-15</td>
+    <td>*Castro, Manglona, Torres Jr.</td>
+    <td><a class="pdf-link" href="/docs/lrc-uploads/2026/case-2026-mp-6-u27.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28454">Sablan v. CUC</a></td>
+    <td>2026 MP 5</td>
+        <td data-sort="2026-06-30">2026-06-30</td>
+    <td>*Castro, Manglona, Naraja</td>
+    <td><a class="pdf-link" href="/docs/lrc-uploads/2026/case-2026-mp-5-u19.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28451">Telesource v. SSFM</a></td>
+    <td>2026 MP 4</td>
+        <td data-sort="2026-06-11">2026-06-11</td>
+    <td>Castro, *Manglona, Torres Jr.</td>
+    <td><a class="pdf-link" href="/docs/lrc-uploads/2026/case-2026-mp-04-u10.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28161">Commonwealth v. Rangamar</a></td>
+    <td>2026 MP 3</td>
+        <td data-sort="2026-03-16">2026-03-16</td>
+    <td>*Castro, Manglona, Inos</td>
+    <td><a class="pdf-link" href="/docs/supreme/2026-MP-03.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28159">ANAKS v. Atkins Kroll Saipan</a></td>
+    <td>2026 MP 1</td>
+        <td data-sort="2026-03-13">2026-03-13</td>
+    <td>*Castro, Torres Jr., Carbullido</td>
+    <td><a class="pdf-link" href="/docs/supreme/2026-MP-01.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://cnmilaw.gov/document/28160">In re Estate of Kapileo</a></td>
+    <td>2026 MP 2</td>
+        <td data-sort="2026-03-13">2026-03-13</td>
+    <td>*Castro, Manglona, Inos</td>
+    <td><a class="pdf-link" href="/docs/supreme/2026-MP-02.pdf" target="_blank" rel="noopener" title="Open PDF">PDF &#8595;</a></td>
+  </tr>
+</tbody></table>
 
-    <li><a  href="exec.php"> Executive</a>
-        <ul class="sub-menu">
-            <li><a href="reg.php">Commonwealth Register</a></li>
-        <!--<li><a href="adopted.php">Adopted Regulations</a></li>
-			<li><a href="prop.php">Proposed Regulations</a></li>
-            <li><a href="ao.php">Agency Order</a></li>
-            <li><a href="ahc.php">Agency History Chart</a></li>
-            <li><a href="ereg.php">Emergency Regulations</a></li>
-            <li><a href="oa.php">Other Agency Rules</a></li>
-            <li><a href="noe.php">Notice of Expire</a></li>  -->
-            <li><a href="reg_index.php">Register Index</a></li>
-        </ul>
-    </li>
-    <li><a  href="jud.php"> Judiciary</a>
-        <ul class="sub-menu">
-            <li><a href="spm.php">Supreme Court</a></li>
-            <li><a href="sup.php">Superior Court</a></li>
-            <li><a href="courtrule.php">Court Rules</a></li>
-            <li><a href="courtforms.php">Court Forms</a></li>
-            <li><a href="jao.php">Judicial Administrative Orders</a></li>
-            <li><a href="go.php">General Orders</a></li>
-            <li><a href="cr.php">Commonwealth Reporter</a></li>
-            <li><a href="ttr.php">Trust Territory Reporter</a></li>
-        </ul>
-    </li>
-    <li><a  href="product.php"> Products</a></li>
-    </li>
-    </ul>
-
-</nav>
-
-<!--//NavMenu End//-->
-
- <!--//JS Start//-->
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><div class="cols">
+<div><h5>CNMI Law Revision Commission</h5><p>Operating pursuant to 1 CMC &sect;&sect; 3801&ndash;3810. We codify and publish the laws, rules, cases, and other authority of the Commonwealth.</p><p><a href="/cdn-cgi/l/email-protection#e2818c8f8b8e8395a28c8f8b8897868b818b83909bcc858d94"><span class="__cf_email__" data-cfemail="dfbcb1b2b6b3bea89fb1b2b6b5aabbb6bcb6beada6f1b8b0a9">[email&#160;protected]</span></a> &middot; (670) 236-9820</p><p class="foot-social" style="margin-top:8px;display:flex;gap:14px;align-items:center"><span class="muted" style="font-size:.85em">Follow us:</span><a href="https://www.instagram.com/cnmilawrevisioncommission/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="display:inline-flex;color:inherit"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 3.6a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.4a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z"/></svg></a><a href="https://www.facebook.com/commonwealthlrc" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="display:inline-flex;color:inherit"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg></a></p></div>
+<div><h5>Collections</h5>
+<a href="/documents?type=public_law">Public Laws</a>
+<a href="/commonwealth-code">Commonwealth Code</a>
+<a href="/documents?type=admin_code">Administrative Code</a>
+<a href="/documents?type=case">Judiciary</a>
+<a href="/documents?type=register">Register</a><a href="/documents?type=ttr">Trust Territory</a><a href="/court-rules">Court Rules</a></div>
+<div><h5>Site</h5>
+<a href="/about">About the Commission</a>
+<a href="/search">Search</a>
+<a href="/documents">All Documents</a>
+<a href="/announcements">Announcements</a>
+<a href="/login" rel="nofollow">Sign in</a><a href="/commonwealth-code">Browse the Code</a>
+<a href="/cdn-cgi/l/email-protection#d2b1bcbfbbbeb3a592bcbfbbb8a7b6bbb1bbb3a0abfcb5bda4">Contact</a></div>
+</div><p class="disclaimer"><strong>Disclaimer:</strong> The information, documents, and publications available on this website are provided by the Commonwealth Law Revision Commission as a public service. While the Commission strives, within its limited staffing and budget, to maintain accurate and timely content, some materials may not be current between updates and may be incomplete, outdated, or contain errors. The Commission makes no warranties regarding the accuracy, reliability, completeness, or timeliness of any content on this website. Users rely on such content at their own risk. The Commission shall not be liable for any loss or damage resulting from reliance on information made available through this website.</p><div class="legal">&copy; 2026 CNMI Law Revision Commission &middot; An official website of the Commonwealth of the Northern Mariana Islands</div></div></footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/simple-datatables/9.0.3/simple-datatables.min.js" integrity="sha384-RwezHidMSVCO+wlu/hSxStVlTwx2aN4RD3kF1EseSBW6Fd4D6eLKWyPGAyFLqGBA" crossorigin="anonymous"></script>
 <script>
-$(document).ready(function(){
-    var touch   = $('#resp-menu');
-    var menu    = $('.menu');
-
-    $(touch).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle();
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("table.doctable:not(.js-grid)").forEach(function (t) {
+    if (t.parentElement && t.parentElement.classList.contains("table-scroll")) { return; }
+    var w = document.createElement("div"); w.className = "table-scroll";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+  if (typeof simpleDatatables === "undefined") { return; }
+  document.querySelectorAll("table.js-grid").forEach(function (el) {
+    var d = el.dataset;
+    new simpleDatatables.DataTable(el, {
+      searchable: d.search !== "false",
+      sortable: true,
+      paging: d.paging !== "false",
+      perPage: parseInt(d.perpage || "25", 10),
+      perPageSelect: [10, 25, 50, 100],
+      labels: { placeholder: "Search…", perPage: "per page", noRows: "No matching records", info: "{start}–{end} of {rows}" }
     });
-
-    $(window).resize(function(){
-        var w = $(window).width();
-        if(w > 767 && menu.is(':hidden')) {
-            menu.removeAttr('style');
-        }
-    });
-
+  });
 });
 </script>
-<!--//JS End//-->
-
-
-<script>
-  (function() {
-    var cx = '017497310548655158352:pojzxgqvuto';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-
-<gcse:search></gcse:search>
-
-<!--//header//-->
-
-<style>
-        .css-treeview ul,
-        .css-treeview li
-        {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        .css-treeview input
-        {
-            position: absolute;
-            opacity: 0;
-        }
-
-        .css-treeview
-        {
-            font: normal 15px "Segoe UI", Arial, Sans-serif;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .css-treeview a
-        {
-            color: #00f;
-            text-decoration: none;
-        }
-
-        .css-treeview a:hover
-        {
-            text-decoration: underline;
-        }
-
-        .css-treeview input + label + ul
-        {
-            margin: 0 0 0 22px;
-        }
-
-        .css-treeview input ~ ul
-        {
-            display: none;
-        }
-
-        .css-treeview label,
-        .css-treeview label::before
-        {
-            cursor: pointer;
-        }
-
-        .css-treeview input:disabled + label
-        {
-            cursor: default;
-            opacity: .6;
-        }
-
-        .css-treeview input:checked:not(:disabled) ~ ul
-        {
-            display: block;
-        }
-
-        .css-treeview label,
-        .css-treeview label::before
-        {
-            background: url("icons.png") no-repeat;
-        }
-
-        .css-treeview label,
-        .css-treeview a,
-        .css-treeview label::before
-        {
-            display: inline-block;
-            height: 16px;
-            line-height: 16px;,
-            vertical-align: middle;
-        }
-
-        .css-treeview label
-        {
-            background-position: 18px 0;
-        }
-
-        .css-treeview label::before
-        {
-            content: "";
-            width: 16px;
-            margin: 0 22px 0 0;
-            vertical-align: middle;
-            background-position: 0 -32px;
-        }
-
-        .css-treeview input:checked + label::before
-        {
-            background-position: 0 -16px;
-        }
-
-        /* webkit adjacent element selector bugfix */
-        @media screen and (-webkit-min-device-pixel-ratio:0)
-        {
-            .css-treeview
-            {
-                -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
-            }
-
-            @-webkit-keyframes webkit-adjacent-element-selector-bugfix
-            {
-                from
-                {
-                    padding: 0;
-                }
-                to
-                {
-                    padding: 0;
-                }
-            }
-        }f
-</style>
-
-
-
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <script src="js/jquery.min.js"></script>
-<!--//homepage//-->
-<!-- news -->
-<div class="banner-1"></div>
-<div class="main">
-		<div class="container">
-		<!-- news -->
-		<div class="news">
-			<h3>Supreme Court 2022</h3><br>
-			<div align="justify">Notice: These opinions has not been certified by the Clerk of the Supreme Court for publication in the permanent law reports. Until certified, it is subject to revision or withdrawal. In any event of discrepancies between this opinion and the opinion certified for publication, the certified opinion controls. Readers are requested to bring errors to the attention of the Clerk of the Supreme Court, P.O. Box 502165 Saipan, MP 96950, Phone Number (670) 236-9715, Fax Number (670) 236-9702 or E-Mail supreme.court@nmijudiciary.com</div>
-		</div>
-
-
-<div style="overflow-x:auto;">
-<table id="customers">
-<div class="table-responsive-xl">
-<style>
-    .table td, .table th {
-        font-size: 12px;
-
-	}
-
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border: 1px solid #ddd;
-
-	}
-
-	th, td {
-	text-align: left;
-	padding: 8px;
-
-	}
-
-	tr:nth-child(even){background-color: #f2f2f2}
-
-	th {
-
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: center;
-	background-color: #422133;
-	color: white;
-
-	}
-</style>
-<table id="dtBasicExample" class="table table-striped table-bordered table-xl" cellspacing="0" width="100%">
-  <thead>
-	<tr>
-		<th>Case Name:</th>
-		<th>Case File:</th>
-		<th>Case Date:</th>
-		<th>Justice:</th>
-		<th>Download:</th>
-	</tr>
-	</thead>
-
-	<tbody>
-  	<tr>
-		<td>Commonwealth v. Kaipat</td>
-		<td>2022-MP-09</td>
-		<td>2022-12-31</td>
-		<td>Castro, Manglona, *Inos</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-09.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>Commonwealth Casino Commission v. Imperial Pacific International </td>
-		<td>2022-MP-08</td>
-		<td>2022-12-02</td>
-		<td>Castro, Manglona, Inos </td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-08.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>Castro v. Telesource</td>
-		<td>2022-MP-07</td>
-		<td>2022-11-29</td>
-		<td>*Manglona, Carbullido, Torres</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-07.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>Crisostomo v. Commonwealth</td>
-		<td>2022-MP-06</td>
-		<td>2022-09-02</td>
-		<td>Castro, *Manglona, Inos</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-06.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>In re Commonwealth</td>
-		<td>2022-MP-05</td>
-		<td>2022-08-22</td>
-		<td>Castro, Manglona, *Inos</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-05.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>White v. Camacho</td>
-		<td>2022-MP-04</td>
-		<td>2022-06-06</td>
-		<td>*Castro, Manglona, Inos</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-04.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>Albia v. Duenas</td>
-		<td>2022-MP-03</td>
-		<td>2022-04-18</td>
-		<td>*Manglona, Inos, Carbullido</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-03.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>Rios v. Commonwealth Dept. of Corrections</td>
-		<td>2022-MP-02</td>
-		<td>2022-04-01</td>
-		<td>*Castro, Manglona, Inos</td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-02.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		<tr>
-		<td>Takasi v. Yoshizawa</td>
-		<td>2022-MP-01</td>
-		<td>2022-02-12</td>
-		<td>*Castro, Manglona, Inos </td>
-		<td align="center"><a href="/pdf/supreme/2022-MP-01.pdf" target="_blank"><img src="images/adobe_logo.gif"></td>
-	</tr>
-
-		</tbody>
-
-	<tfoot>
-		<tr>
-			<th>Case Name:</th>
-			<th>Case File:</th>
-			<th>Case Date:</th>
-			<th>Justice:</th>
-			<th class="th-sm">Download:</th>
-		</tr>
-	</tfoot>
-</table>
-</div>
-
-<script>
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min-4.13.0.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
-  <!-- MDBootstrap Datatables  -->
-  <script type="text/javascript" src="js/addons/datatables.min.js"></script>
-</script>
-<script>$(document).ready(function () {
-$('#dtBasicExample').DataTable();
-$('.dataTables_length').addClass('bs-select');
-});
-</script>
-<!-- news -->
-</div>
-</div>
-</body>
-<!--content-->
-<!-- footer -->
-<div class="footer-bottom" class="footer-left">
-	<div class="container">
-		<div class="col-md-6 col-sm-12 col-xs-12 nopadding">
-			<div class="col-sm-4 col-xs-12">
-				<p><a href="cov.php"><b>Covenant</b></a></p>
-                <p><a href="cons.php"><b>Constitution</b></a></p>
-
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <p><a href="leg.php"><b>Legislature</b></a></p>
-                <p><a href="public.php">Public Laws</a></p>
-                <p><a href="local.php">Local Laws</a></p>
-                <p><a href="ord.php">Local Ordinance</a></p>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <p><a href="exec.php"><b>Executive</b></a></p>
-                <p><a href="reg.php">Commonwealth Register & Territory</a></p>
-                <p><a href="adopted.php">Adopted Regulations</a></p>
-                <p><a href="prop.php">Proposed Regulations</a></p>
-                <p><a href="ao.php">Agency Order</a></p>
-                <p><a href="ahc.php">Commonwealth Agency History Chart</a></p>
-				<p><a href="ereg.php">Emergency Regulations</a></p>
-				<p><a href="oa.php">Other Agency Rules</a></p>
-				<p><a href="noe.php">Notice of Expire</a></p>
-            </div>
-		</div>
-		<div class="col-md-6 col-sm-12 col-xs-12 nopadding">
-            <div class="col-sm-4 col-xs-12">
-                <p><a href="jud.php"><b>Judiciary</b></a></p>
-                <p><a href="spm.php">Slip Opinions</a></p>
-                <p><a href="sup20.php">Court Orders</a></p>
-				<p><a href="courtrule.php">Court Rules</a></p>
-				<p><a href="courtforms.php">Court Forms</a></p>
-                <p><a href="jao.php">Judicial Administrative Orders</a></p>
-                <p><a href="go.php">General Orders</a></p>
-                <p><a href="https://cnmilaw.org/pdf/FLD.pdf">Family Law Digest</a></p>
-				<p><a href="cr.php">Commonwealth Reporter</a></p>
-            </div>
-			<div class="col-sm-4 col-xs-12">
-		<!--//	<p><a href="media.php">News Media</a></p>
-				<p><a href="press.php">Press Releases</a></p>//-->
-				<p><a href="tt.php"><b>Trust Territory</b></a></p>
-                <p><a href="ttc.php">TT Code</a></p>
-				<p><a href="ttr.php">TT Reporter</a></p>
-				<p><a href="reg.php">TT Register</a></p>
-
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <p><a href="about.php">About Us</a><p>
-                <p><a href="history.php">LRC History</a></p>
-		<!--//  <p><a href="courtatwork.php">Outreach</a></p>
-                <p><a href="minutes.php">Meeting Minutes</a></p>//-->
-                <p><a href="https://cnmilaw.org/pdf/LRCBylaw.pdf">Bylaws</a></p>
-                <p><a href="contact.php"><i class="top"> </i></p>
-				<p align="left"><a href="https://www.facebook.com/Commonwealth-Law-Revision-Commission-264664080773569/?modal=admin_todo_tour" target="_blank"><i class="fb"> </i></a></p>
-			</div>
-
-		</div>
-	</div>
-</div>
-<!-- footer -->
-<!-- disclaimer -->
-<div class="footer-bottom3">
-	<div class="container">
-		<div class="footer3 noindex">
-			<div class="welcome">
-				<div>
-					<p align="justify">Disclaimer - The information, documents, and publications that are made available over this website by the Commonwealth Law Revision Commission are done as a public service. While the Commission makes every attempt, within its limited staffing and budget, to ensure the accuracy and timeliness of the content of its website, there will be times between updates when content will not be current. Also due to the large volume of material, and the technical and manpower demands of converting this material into a form usable over the Internet, portions of such material may be incorrectly inputted, converted, reproduced or transmitted. The Commission, its members, agents, contractors, and employees do not warrant the accuracy, reliability, completeness or timeliness of the content on its website and each user of its website relies upon it at their own risk. The Commission, its members, agents, contractors, and employees may not be held liable for any losses caused by any person's reliance on any of the content made available on its website.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- disclaimer -->
-<!-- quicklink-bottom -->
-<div class="footer-bottom">
-	<div class="container">
-		<div class="footer2 noindex">
-			<div class="container">
-				<span><a href="contact.php">Contact Us</a></span>
-				<span class="pipespacer">|</span>
-				<span><a href="/jobs.php">Jobs</a></span>
-				<span class="pipespacer">|</span>
-				<!--//<span><a href="/pdf/source/ITB2022-LRC-01.pdf">BIDS</a></span>
-				<span class="pipespacer">|</span>
-			<span><a href="/help.php">Help</a></span>
-				<span class="pipespacer">|</span>
-				<span><a href="/jobs.php">Jobs</a></span>
-				<span class="pipespacer">|</span>
-				<span><a href="/link.php">Links</a></span>
-				<span class="pipespacer">|</span>//-->
-			    <span><a href="/sitemap.xml">Site Map</a></span>
-				<span class="pipespacer">|</span>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- quicklink-bottom -->
-<div class="footer-bottom4">
-	<div class="container">
-		<div>
-<div align="center"><h4>&#169; CNMILRC | All Rights Reserved 2022</h4></div>
-		</div>
-
-	</div>
-</div>
-</body>
+<script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#d1202f&token=ADAAIOA-88B259486A4F15B6AD6DA5EFC6BC846D&position=bottom_right"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a403ca3f4c66f247',t:'MTc5MDI3Mzg4OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
