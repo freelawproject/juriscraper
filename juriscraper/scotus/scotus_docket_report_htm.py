@@ -413,7 +413,9 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         if header_tr is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list[_Attorney]] = defaultdict(list)
+        parties_by_key: dict[tuple[str, str], list[_Attorney]] = defaultdict(
+            list
+        )
         current_type = None
         current_attorney: _CurrentAttorney | None = None
 
@@ -498,9 +500,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 if current_attorney:
                     current_attorney["is_counsel_of_record"] = True
                     if address_col:
-                        current_attorney["_raw_lines"].append(
-                            address_col
-                        )
+                        current_attorney["_raw_lines"].append(address_col)
                 continue
 
             # Beginning of a new attorney row.
