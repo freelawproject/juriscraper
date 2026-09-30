@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Strip the "(PDF)" suffix from `nytrial` case names of rows that link directly to a PDF. #2243
 
 ## 3.0.43 - 2026-09-29
 

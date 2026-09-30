@@ -145,7 +145,11 @@ class Site(OpinionSiteLinear):
                 ):
                     judge, docket = await self.get_stub_metadata(url)
                 url = stub_regex.sub(r"/pdfs/\1/\2.pdf", url)
-            name = harmonize(row.xpath("td[1]/a")[0].text_content())
+            # rows linking directly to a PDF have a "(PDF)" suffix
+            name = re.sub(
+                r"\s*\(PDF\)\s*$", "", row.xpath("td[1]/a")[0].text_content()
+            )
+            name = harmonize(name)
             opinion_date = row.xpath("td[3]")[0].text_content()
             slip_cite = row.xpath("td[4]")[0].text_content()
             status = "Unpublished" if "(U)" in slip_cite else "Published"
