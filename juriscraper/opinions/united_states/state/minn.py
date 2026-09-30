@@ -9,7 +9,7 @@
 # 2024-08-09: update and implement backscraper, grossir
 
 import re
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from urllib.parse import urljoin
 
 from juriscraper.AbstractSite import logger
@@ -173,7 +173,7 @@ class Site(OpinionSiteLinear):
         """
         if self.test_mode_enabled():
             return True
-        return datetime.now(timezone.utc).hour < 12
+        return datetime.now(UTC).hour < 12
 
     async def _download(self, request_dict=None):
         """Skip the request entirely when outside the robots.txt visit window.

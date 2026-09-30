@@ -15,7 +15,7 @@ license-files = [ "LICENSE" ]
 authors = [
   { name = "Free Law Project", email = "info@free.law" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
@@ -23,11 +23,11 @@ classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
   "Topic :: Software Development :: Libraries :: Python Modules",
@@ -36,7 +36,7 @@ classifiers = [
 urls.Repository = "https://github.com/freelawproject/juriscraper"
 
 dependencies = [
-  "certifi>=2017.4.17",
+  "certifi>=2023.5.7",
   "chardet>=3.0.2",
   "charset-normalizer>=3.1.0",
   "cssselect",
@@ -46,10 +46,10 @@ dependencies = [
   "html5lib",
   "lxml>=6.1",
   "nh3",
-  "pydantic>=2.12.5",
+  "pydantic>=2.13.5",
   "python-dateutil>=2.8.2",
   "httpx[http2]>=0.28.1",
-  "requests>=2.20.0",
+  "requests>=2.34.2",
   "tldextract",
 ]
 
@@ -59,10 +59,9 @@ dev = [
   "jinja2",
   "pytest",
   "types-python-dateutil>=2.9.0.20251115",
-  "types-requests>=2.32.4.20250913",
   "types-lxml>=2025.11.25",
   "responses>=0.25.8",
-  "pyrefly>=1.2.0",
+  "pyrefly>=1.3.2",
   "types-dateparser>=1.4.2.20260813",
 ]
 
