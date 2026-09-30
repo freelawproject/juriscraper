@@ -23,6 +23,17 @@ Changes:
 Fixes:
 -
 
+## 3.0.43 - 2026-09-29
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
 ## 3.0.42 - 2026-09-29
 
 Features:
