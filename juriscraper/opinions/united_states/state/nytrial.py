@@ -27,9 +27,28 @@ from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
-citation_regex = r"(?<=\[)\d+ Misc 3d\s+[\S]+(?=\])"
+# "[111 Misc 3d 222]"; corrected, officially reported opinions use
+# "[89 Misc3d 908]"
+citation_regex = r"(?<=\[)\d+ Misc ?3d\s+[\S]+(?=\])"
 judge_regex = re.compile(
     r"(?P<judge>[^,]+(, (Jr|Sr|II|III)\.?)?), (J|S|C\.?J|A\.?J|J\.H\.O|J\.S\.C|Ref)\.?(\s*\(.*\))?"
+)
+# decisions with "30000" slip op numbers link to a stub page
+stub_regex = re.compile(r"/current/3dseries/(\d{4})/(\d{4}_3\d{4})\.shtml$")
+# Index No. L&T 305703/25, L&T Index No. 316192-25/QU, FYC No. 70542-26/001,
+# CR-004361-26NY, IND 70036-25, 2017KN054132, 00452-04
+docket_regex = re.compile(
+    r".{0,12}\b(Case|Claim|Docket|Index|File|Indictment|Ind\.?|IND|[A-Z]{2,5} No)\b.*|[A-Z]{1,4}[- ]?[\dX][\w/&. -]*|[A-Z/0-9-]*\d[A-Z/0-9-]*"
+)
+# NYSCEF stamp on top of each PDF page: "INDEX NO. 2023-50982",
+# "INDEX NO. E2020010270", "CLAIM NO. 136668". The PDF layout may split it,
+# as in "INDEX\n PM NO. LT-000568-26/QU"
+pdf_stamp_regex = re.compile(
+    r"\b(?P<kind>INDEX|CLAIM)\s+([AP]M\s+)?NO\.\s*(?P<number>[A-Z]*-?\d[\w/-]*)"
+)
+# docket in the PDF caption, used when there is no NYSCEF stamp
+pdf_caption_regex = re.compile(
+    r"\b(Index|Claim|File|Docket) No\.:?\s*(L&T )?[A-Z]*-?\d[\w/-]*"
 )
 
 
@@ -116,17 +135,16 @@ class Site(OpinionSiteLinear):
                 continue
 
             url = row.xpath("td[1]/a/@href")[0]
-            # decisions with "30000" slip op numbers link to a stub page that
-            # links to the PDF. Some PDFs lack the cover page with the judge
-            # so we get it from the stub page
-            judge = ""
-            stub_regex = r"/current/3dseries/(\d{4})/(\d{4}_3\d{4})\.shtml$"
-            if re.search(stub_regex, url):
+            # the stub page of "30000" decisions links to the PDF. These PDFs
+            # lack the cover page with the judge and docket number, so we get
+            # them from the stub page
+            judge = docket = ""
+            if stub_regex.search(url):
                 if not self.test_mode_enabled() and (
                     self.is_backscrape or row in newest_rows
                 ):
-                    judge = await self.get_judge_from_stub(url)
-                url = re.sub(stub_regex, r"/pdfs/\1/\2.pdf", url)
+                    judge, docket = await self.get_stub_metadata(url)
+                url = stub_regex.sub(r"/pdfs/\1/\2.pdf", url)
             name = harmonize(row.xpath("td[1]/a")[0].text_content())
             opinion_date = row.xpath("td[3]")[0].text_content()
             slip_cite = row.xpath("td[4]")[0].text_content()
@@ -140,23 +158,62 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "citation": slip_cite,
                     "child_court": court,
-                    "docket": "",
+                    "docket": docket,
                     "judge": judge,
+                    "author": judge,
                 }
             )
 
-    async def get_judge_from_stub(self, url: str) -> str:
-        """Get the judge from the header of a republished decision stub page
+    async def get_stub_metadata(self, url: str) -> tuple[str, str]:
+        """Get the judge and docket number from the header of a republished
+        decision stub page
 
         :param url: stub page url, may be relative to the index page
-        :return: the judge name, or an empty string if not found
+        :return: the judge name and the docket number, empty strings if not
+            found
         """
         try:
             html = await self._get_html_tree_by_url(urljoin(self.url, url))
         except (httpx.HTTPError, ParserError) as e:
             logger.warning("nytrial: could not get stub %s: %s", url, e)
+            return "", ""
+        header = html.xpath("//h1/parent::div")[:1]
+        return (
+            self.get_judge_from_header(header),
+            self.get_docket_from_header(header),
+        )
+
+    @staticmethod
+    def get_docket_from_header(header: list) -> str:
+        """Find the docket line, such as "Index No. 300468-26", in the
+        header <div> of a stub page
+
+        :param header: a list with the header element, or an empty list
+        :return: the docket number, or an empty string if not found
+        """
+        if not header:
             return ""
-        return self.get_judge_from_header(html.xpath("//h1/parent::div")[:1])
+        for p in header[0].xpath("./p"):
+            docket = clean_string(p.text_content())
+            if re.match(
+                r"(Index|Claim|File|Docket|Case|Indictment) No", docket
+            ) and Site.is_valid_docket(docket):
+                return docket
+        return ""
+
+    @staticmethod
+    def is_valid_docket(docket: str) -> bool:
+        """Check that a docket line holds a docket number. Avoids censored
+        or missing values, such as "Case No. XXXXX" or "Claim No. NONE"
+
+        :param docket: the cleaned docket line
+        :return: True if it looks like a docket number
+        """
+        return bool(
+            docket_regex.fullmatch(docket)
+            and "XXX" not in docket
+            and re.search(r"\d", docket)
+        )
 
     @staticmethod
     def get_judge_from_header(header: list) -> str:
@@ -212,12 +269,14 @@ class Site(OpinionSiteLinear):
                 metadata["Docket"]["docket_number"] = pdf_docket.group(
                     "docket_number"
                 ).strip()
-            elif pdf_docket := re.search(r"INDEX NO\. \d+/\d+", target_text):
-                # fallback to docket number at the start of the second page
-                # sometimes the header table does not exist
-                metadata["Docket"]["docket_number"] = (
-                    pdf_docket.group().strip()
-                )
+            elif pdf_docket := pdf_stamp_regex.search(target_text):
+                # fallback to the NYSCEF stamp when the cover page does not
+                # exist, as in most "30000" decisions
+                kind = pdf_docket.group("kind").title()
+                number = pdf_docket.group("number")
+                metadata["Docket"]["docket_number"] = f"{kind} No. {number}"
+            elif pdf_docket := pdf_caption_regex.search(target_text):
+                metadata["Docket"]["docket_number"] = pdf_docket.group()
             else:
                 logger.error(
                     "nytrial: unable to extract_from_text docket number",
@@ -314,6 +373,9 @@ class Site(OpinionSiteLinear):
         Misc 3d citations, the court and the judge. It is followed by the
         parties <div>, the court <p>, the "Decided on" <p> and the docket <p>
 
+        Corrected, officially reported opinions have no "Decided on" nor
+        docket <p>, and the parties <div> follows the header
+
         :param scraped_text: html string contents, after cleanup_content
         :return: dict where keys match courtlistener model objects
         """
@@ -340,34 +402,32 @@ class Site(OpinionSiteLinear):
         decided = tree.xpath(
             "//p[starts-with(normalize-space(), 'Decided on')]"
         )
-        if not decided:
-            return {k: v for k, v in metadata.items() if v}
+        if decided:
+            docket_p = decided[0].getnext()
+            if docket_p is not None and docket_p.tag == "p":
+                docket = clean_string(docket_p.text_content())
+                if Site.is_valid_docket(docket):
+                    metadata["Docket"]["docket_number"] = docket
 
-        # Index No. L&T 305703/25, L&T Index No. 316192-25/QU,
-        # CR-004361-26NY, IND 70036-25, 2017KN054132, 00452-04
-        docket_regex = re.compile(
-            r".{0,12}\b(Case|Claim|Docket|Index|File|Indictment|Ind\.?|IND)\b.*|[A-Z]{1,4}[- ]?[\dX][\w/&. -]*|[A-Z/0-9-]*\d[A-Z/0-9-]*"
-        )
-        docket_p = decided[0].getnext()
-        if docket_p is not None and docket_p.tag == "p":
-            docket = clean_string(docket_p.text_content())
-            # avoid censored or missing docket numbers, such as
-            # "Case No. XXXXX" or "Claim No. NONE"
-            if (
-                docket_regex.fullmatch(docket)
-                and "XXX" not in docket
-                and re.search(r"\d", docket)
-            ):
-                metadata["Docket"]["docket_number"] = docket
+            court_p = decided[0].getprevious()
+            parties = court_p.getprevious() if court_p is not None else None
+        else:
+            parties = header[0].getnext()
 
-        court_p = decided[0].getprevious()
-        parties = court_p.getprevious() if court_p is not None else None
         if parties is not None and parties.tag == "div":
-            full_case = harmonize(
-                " ".join(p.text_content() for p in parties.xpath("./p"))
-            )
-            metadata["Docket"]["case_name_full"] = full_case
-            metadata["OpinionCluster"]["case_name_full"] = full_case
+            # drop footnote markers, such as "The State of New York,<sup>FN1
+            # </sup>"
+            for sup in parties.xpath(".//sup"):
+                sup.drop_tree()
+            # drop leftovers of the caption box border, such as
+            # "People of the State of New York, X"
+            lines = [
+                re.sub(r",\s*X$", "", clean_string(p.text_content()))
+                for p in parties.xpath("./p")
+            ]
+            if full_case := harmonize(" ".join(lines)):
+                metadata["Docket"]["case_name_full"] = full_case
+                metadata["OpinionCluster"]["case_name_full"] = full_case
 
         return {k: v for k, v in metadata.items() if v}
 

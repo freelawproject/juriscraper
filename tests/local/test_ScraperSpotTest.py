@@ -181,26 +181,66 @@ class ScraperSpotTest(unittest.TestCase):
         with self.assertRaises(ParsingException):
             asyncio.run(site._process_html())
 
-    def test_nytrial_judge_from_stub(self):
+    def test_nytrial_metadata_from_stub(self):
         from lxml.html import fromstring
 
         from juriscraper.opinions.united_states.state import nytrial
 
-        # minimal copy of the stub page header of
+        # minimal copies of the stub page headers of
         # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32223.shtml
-        html = fromstring(
+        # https://www.nycourts.gov/reporter/current/3dseries/2023/2023_35460.shtml
+        # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32204.shtml
+        stub = (
             '<main id="main"><div class="current-legal-document">'
-            '<div class="case-info"><h1>Harbour v Acme Mkts. Inc.</h1>'
-            "<p>2026 NY Slip Op 32223(U)</p><p>September 9, 2026</p>"
-            "<p>Supreme Court, Westchester County</p>"
-            "<p>Index No. 56892/2026</p><p>Charles D. Wood, J.</p>"
+            '<div class="case-info"><h1>{name}</h1>'
+            "<p>{slip}</p><p>{date}</p><p>{court}</p>"
+            "<p>{docket}</p><p>{judge}</p>"
             "<p>Published by New York State Law Reporting Bureau pursuant "
             "to Judiciary Law &sect; 431.</p></div>"
             '<h2 class="center"><a href="https://www.nycourts.gov/reporter/'
-            'pdfs/2026/2026_32223.pdf">Full Decision: 2026 NY Slip Op '
-            "32223(U) (PDF)</a></h2></div></main>"
+            'pdfs/2026/2026_32223.pdf">Full Decision: {slip} (PDF)</a></h2>'
+            "</div></main>"
         )
-        header = html.xpath("//h1/parent::div")
-        self.assertEqual(
-            nytrial.Site.get_judge_from_header(header), "Charles D. Wood"
-        )
+        expected = [
+            (
+                {
+                    "name": "Harbour v Acme Mkts. Inc.",
+                    "slip": "2026 NY Slip Op 32223(U)",
+                    "date": "September 9, 2026",
+                    "court": "Supreme Court, Westchester County",
+                    "docket": "Index No. 56892/2026",
+                    "judge": "Charles D. Wood, J.",
+                },
+                ("Charles D. Wood", "Index No. 56892/2026"),
+            ),
+            (
+                {
+                    "name": "Telfair v State of New York",
+                    "slip": "2023 NY Slip Op 35460(U)",
+                    "date": "August 24, 2023",
+                    "court": "Court of Claims",
+                    "docket": "Claim No. 136668",
+                    "judge": "Catherine E. Leahy-Scott, J.",
+                },
+                ("Catherine E. Leahy-Scott", "Claim No. 136668"),
+            ),
+            (
+                {
+                    "name": "Matter of Dinshaw",
+                    "slip": "2026 NY Slip Op 32204(U)",
+                    "date": "August 31, 2026",
+                    "court": "Surrogate's Court, New York County",
+                    "docket": "Index No. 1970-1950/B",
+                    "judge": "Rita Mella, J.",
+                },
+                ("Rita Mella", "Index No. 1970-1950/B"),
+            ),
+        ]
+        for values, (judge, docket) in expected:
+            header = fromstring(stub.format(**values)).xpath(
+                "//h1/parent::div"
+            )
+            self.assertEqual(nytrial.Site.get_judge_from_header(header), judge)
+            self.assertEqual(
+                nytrial.Site.get_docket_from_header(header), docket
+            )

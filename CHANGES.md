@@ -30,7 +30,7 @@ Changes:
 -
 
 Fixes:
-- Fix `nytrial` scrapers and `nysupct_commercial`: use the new `current/index` pages, parse the new opinion template, raise on the "404 ERROR" page, and handle the edge case of missing judge on "30000"-type decisions from their stub pages. #2243, #2242
+- Fix `nytrial` scrapers and `nysupct_commercial`: use the new `current/index` pages, parse the new opinion template, raise on the "404 ERROR" page, get the judge and docket number of "30000"-type decisions from their stub pages, parse NYSCEF stamp and caption docket numbers from PDFs, and the Misc3d citation and full case name of corrected, officially reported opinions. #2243, #2242
 - Fix TAMES (Texas). Remove WAF poison string.
 - Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
 - Correct type annotations in `alaska`, `bap9`, `cafc`, `idaho_civil`, `miss`, `texapp`, and `wyo`.
