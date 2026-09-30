@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 3.0.42 - 2026-09-29
+
+Features:
+-
+
+Changes:
 - Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
 - Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
 - Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
@@ -27,7 +38,6 @@ Changes:
 - Refactor `lactapp_5` to scrape the latest decisions window. #1390
 - Upgrade GitHub Actions (and also pin versions).
 - Improve typing in `pacer` with `@overload`.
--
 
 Fixes:
 - Fix `nytrial` scrapers and `nysupct_commercial`: use the new `current/index` pages, parse the new opinion template, raise on the "404 ERROR" page, get the judge and docket number of "30000"-type decisions from their stub pages, parse NYSCEF stamp and caption docket numbers from PDFs, and the Misc3d citation and full case name of corrected, officially reported opinions. #2243, #2242
@@ -44,7 +54,6 @@ Fixes:
 - Fix handling of meta redirects with url-relative destinations
 - Address `no-any-return-*` in `lib.html_utils`.
 - Fix "no changes" label handling for `CHANGES.md`
--
 
 ## 3.0.41 - 2026-09-14
 
