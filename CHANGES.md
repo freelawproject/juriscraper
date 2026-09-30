@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
 -
 
 ## 3.0.43 - 2026-09-29
