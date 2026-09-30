@@ -1,3 +1,7 @@
+from collections.abc import Awaitable
+
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OralArgumentSite import OralArgumentSite
 
@@ -14,7 +18,8 @@ class OralArgumentSiteLinear(OralArgumentSite):
         self.cases = []
         self.status = None
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None | Awaitable[None]:
         raise Exception(
             "Must implement _process_html() on OralArgumentSiteLinear child"
         )
