@@ -5,6 +5,7 @@
 import re
 
 import feedparser
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -17,6 +18,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.court_id = self.__module__
 
+    @override
     def _process_html(self):
         if self.test_mode_enabled():
             self.year = 2022

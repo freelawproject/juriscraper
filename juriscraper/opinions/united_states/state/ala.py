@@ -13,6 +13,8 @@ History:
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -54,6 +56,7 @@ class Site(OpinionSiteLinear):
         self.request["parameters"]["params"] = {}
         self.json = await super()._download(request_dict)
 
+    @override
     def _process_html(self):
         date_filed = self.json["publicationDate"][:10]
         for publicationItem in self.json["publicationItems"]:

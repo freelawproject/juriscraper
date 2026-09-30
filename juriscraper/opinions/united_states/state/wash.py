@@ -1,5 +1,7 @@
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -27,6 +29,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         anchor_xpath = "a[contains(@href, '/opinions/pdf/')]"
 

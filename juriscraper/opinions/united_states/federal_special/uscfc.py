@@ -11,6 +11,8 @@ import json
 import re
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -25,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.is_vaccine = "uscfc_vaccine" in self.court_id
 
+    @override
     def _process_html(self):
         """The site returns a page with all opinions for this time period
         The opinions are inside a <script> tag, as a Javascript constant

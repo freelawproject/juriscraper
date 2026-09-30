@@ -13,6 +13,8 @@ History:
 import re
 from datetime import date, datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
@@ -32,6 +34,7 @@ class Site(OralArgumentSiteLinear):
         )
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """All parsable fields are contained in the URL
 

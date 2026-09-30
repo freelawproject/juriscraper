@@ -1,4 +1,5 @@
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -12,6 +13,7 @@ class Site(OpinionSiteLinear):
         )
         self.court_id = self.__module__
 
+    @override
     def _process_html(self):
         for item in self.html.xpath(".//item"):
             for e in item.xpath(

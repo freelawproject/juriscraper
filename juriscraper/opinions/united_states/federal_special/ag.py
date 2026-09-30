@@ -3,6 +3,8 @@ CourtID: ag
 Court Short Name: United States Attorney General
 """
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -14,6 +16,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         for row in self.html.xpath(".//article"):
             name = row.xpath(".//h2")[0].text_content().strip()

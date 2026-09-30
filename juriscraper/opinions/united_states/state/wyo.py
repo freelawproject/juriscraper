@@ -12,6 +12,8 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -31,6 +33,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
 
+    @override
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
 

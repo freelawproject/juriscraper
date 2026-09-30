@@ -7,6 +7,8 @@
 import asyncio
 from datetime import date, datetime, timedelta
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -60,6 +62,7 @@ class Site(OpinionSiteLinear):
 
         return await super()._download()
 
+    @override
     async def _process_html(self) -> None:
         """Process the JSON response
 

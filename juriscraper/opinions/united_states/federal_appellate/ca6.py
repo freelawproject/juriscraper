@@ -5,6 +5,8 @@ Court Contact:	WebSupport@ca6.uscourts.gov
 
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -53,6 +55,7 @@ class Site(OpinionSiteLinear):
         self.url = "http://www.opn.ca6.uscourts.gov/opinions/opinions.php"
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         for row in self.html.xpath("//table/tr[not(th)]"):
             filename = row.xpath("td[1]/a/text()")[0].lower()

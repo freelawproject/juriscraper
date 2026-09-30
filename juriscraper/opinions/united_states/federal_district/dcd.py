@@ -11,6 +11,7 @@ import re
 from datetime import date, datetime
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -27,6 +28,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         """
         Some rows have mutliple documents and hence urls for each case.

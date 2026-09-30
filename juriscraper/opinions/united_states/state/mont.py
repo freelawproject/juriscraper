@@ -4,6 +4,8 @@
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -22,6 +24,7 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = None
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         for row in self.html:
             description = row["documentDescription"]

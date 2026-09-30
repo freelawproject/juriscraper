@@ -17,6 +17,7 @@ from datetime import date, datetime
 from urllib.parse import quote, urljoin
 
 from lxml import etree, html
+from typing_extensions import override
 
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.exceptions import InvalidDocumentError
@@ -55,6 +56,7 @@ class Site(OpinionSiteLinear):
         court_str = quote(self.court_name)
         return f"{self.base_url}?Court={court_str}&Month={month_str}"
 
+    @override
     def _process_html(self):
         """Parse opinion listing from HTML accordion items.
 

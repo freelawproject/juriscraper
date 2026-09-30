@@ -5,6 +5,7 @@ from posixpath import normpath
 from urllib.parse import urljoin, urlparse, urlunparse
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
@@ -106,6 +107,7 @@ class Site(OpinionSiteLinear):
         dates.sort(reverse=True)
         return dates
 
+    @override
     def _process_html(self):
         for date, page in self.pages.items():
             for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):

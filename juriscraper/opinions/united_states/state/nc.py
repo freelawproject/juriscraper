@@ -12,6 +12,7 @@ import re
 from datetime import datetime
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -39,6 +40,7 @@ class Site(OpinionSiteLinear):
         self.url = self.base_url.format(self.court, self.current_year)
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         """Process the html
 

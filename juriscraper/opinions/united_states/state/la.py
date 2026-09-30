@@ -12,6 +12,7 @@ import re
 from urllib.parse import urljoin
 
 import httpx
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import ParsingException
@@ -71,6 +72,7 @@ class Site(OpinionSiteLinear):
             self.rendered_pages.append((url, fragment))
         return [get_html_parsed_text(html) for _, html in self.rendered_pages]
 
+    @override
     def _process_html(self):
         xpath = "//a[contains(@href, 'opinions') and contains(@href, 'pdf')]"
         for html in self.html:

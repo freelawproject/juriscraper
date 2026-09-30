@@ -18,6 +18,7 @@ from urllib.parse import urljoin
 
 import nh3
 from lxml.html import fromstring, tostring
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -117,6 +118,7 @@ class Site(OpinionSiteLinear):
         self.url = action_url
         return await super()._download(request_dict)
 
+    @override
     def _process_html(self):
         table = self.html.xpath('.//table[contains(@class, "table")]')
         if not table:

@@ -1,6 +1,8 @@
 import re
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import BotChallengeError, ParsingException
 from juriscraper.lib.string_utils import titlecase
@@ -39,6 +41,7 @@ class Site(OpinionSiteLinear):
                 "protected search form can filter opinions by date"
             )
 
+    @override
     async def _process_html(self):
         self.check_panel_is_present()
 

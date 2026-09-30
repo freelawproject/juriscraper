@@ -11,6 +11,8 @@ import json
 import re
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -74,6 +76,7 @@ class Site(OpinionSiteLinear):
             return match.group(1), match.group(2).strip()
         return None, case_name  # Return original name if no docket found
 
+    @override
     def _process_html(self):
         json_data = self.html
         for item in json_data["d"]["DataObject"]:

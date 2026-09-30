@@ -2,6 +2,8 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -44,6 +46,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     def _process_html(self) -> None:
         """Process the HTML from wisconsin
 

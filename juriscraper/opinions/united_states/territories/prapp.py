@@ -10,6 +10,7 @@ from datetime import date, datetime
 
 from dateparser import parse
 from dateutil.relativedelta import relativedelta
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
@@ -63,6 +64,7 @@ class Site(OpinionSiteLinear):
 
         return await super()._download()
 
+    @override
     def _process_html(self):
         """Process the html
 

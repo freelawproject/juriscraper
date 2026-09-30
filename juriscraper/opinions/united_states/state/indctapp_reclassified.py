@@ -7,6 +7,8 @@ History:
     2025-07-29: Created by Luis Manzur
 """
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -20,6 +22,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.expected_content_types = ["application/pdf"]
 
+    @override
     def _process_html(self):
         """Process the HTML to extract case details.
 

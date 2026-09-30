@@ -9,6 +9,8 @@ Type: Precedential
 
 import json
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -21,6 +23,7 @@ class Site(OpinionSiteLinear):
         self.base = "https://www.mspb.gov/decisions/precedential"
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         if self.test_mode_enabled():
             with open(self.mock_url) as file:

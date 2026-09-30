@@ -10,6 +10,8 @@ import re
 from datetime import date
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -28,6 +30,7 @@ class Site(OpinionSiteLinear):
         self.needs_special_headers = True
         self.request["headers"] = {"User-Agent": self.chrome_user_agent}
 
+    @override
     def _process_html(self):
         for row in self.html.xpath(
             ".//div[contains(@class,'list__items')]/article"

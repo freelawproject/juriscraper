@@ -10,6 +10,8 @@ History:
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -22,6 +24,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://media.cadc.uscourts.gov/opinions/bydate/recent"
         self.status = "Published"
 
+    @override
     def _process_html(self):
         link_xpath = "a[contains(@href, '.pdf')]"
         for row in self.html.xpath(f"//div[div[div[div[{link_xpath}]]]]"):

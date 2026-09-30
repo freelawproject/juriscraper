@@ -1,5 +1,7 @@
 import re
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -16,6 +18,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.should_have_results = True
 
+    @override
     def _process_html(self) -> None:
         for row in self.html.xpath("//table/tr[not(th)]"):
             name = row.xpath(".//*[@class='op-title']/text()")[0]

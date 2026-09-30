@@ -1,6 +1,8 @@
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -18,6 +20,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         for row in self.html.xpath("//tr[not(th)]"):
             title = row.xpath("td[2]/a/text()")[0]

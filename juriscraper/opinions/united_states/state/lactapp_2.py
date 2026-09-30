@@ -11,6 +11,8 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
     get_row_column_links,
@@ -32,6 +34,7 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         """Process the HTML and extract case information"""
         rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')

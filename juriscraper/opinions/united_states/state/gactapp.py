@@ -8,6 +8,7 @@
 from datetime import date, datetime, timedelta
 
 from dateutil.relativedelta import relativedelta
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
@@ -34,6 +35,7 @@ class Site(OpinionSiteLinear):
         # build backscrape iterable
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         for row in self.html.xpath("//tr")[::-1][:-1]:
             docket, name, date_el, disposition, _, url_el = row.xpath(".//td")

@@ -9,6 +9,7 @@ from datetime import date, datetime
 from urllib.parse import urljoin
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
@@ -35,6 +36,7 @@ class Site(ClusterSite):
         # the docket will be the first no empty floating text in the "section"
         self.docket_xpath = ".//p/text()[normalize-space()]"
 
+    @override
     def _process_html(self):
         """
         Parse the HTML table rows and extract case details.

@@ -22,6 +22,8 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -68,6 +70,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.paginate = False
 
+    @override
     async def _process_html(self) -> None:
         json_response = self.html
 

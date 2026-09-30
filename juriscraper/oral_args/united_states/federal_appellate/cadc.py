@@ -10,6 +10,8 @@ Updated: 2024-10-10
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
@@ -28,6 +30,7 @@ class Site(OralArgumentSiteLinear):
         self.url = self.base_url.format(today.strftime("%Y/%-m"))
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         anchor_xpath = "a[contains(@href, '/recordings/docs/') and contains(@href, '.mp3')]"
         for row in self.html.xpath(f"//div[div[div[div[{anchor_xpath}]]]]"):

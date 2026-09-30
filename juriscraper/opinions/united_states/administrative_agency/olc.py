@@ -33,6 +33,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         for row in self.html.xpath(".//article"):
             name = row.xpath(".//h2")[0].text_content().strip()

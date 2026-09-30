@@ -4,6 +4,8 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 
 from datetime import date, datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -58,6 +60,7 @@ class Site(OpinionSiteLinear):
         # Return the previous year if we haven't reached the cutoff
         return year - 1 if date_of_interest < term_cutoff else year
 
+    @override
     def _process_html(self):
         for row in self.html.xpath("//tr"):
             cells = row.xpath(".//td")

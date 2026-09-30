@@ -9,6 +9,8 @@ History:
     2025-07-09: Updated bt luism add new fields for lower court details and judge names
 """
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -23,6 +25,7 @@ class Site(OpinionSiteLinear):
         self.url = f"https://public.courts.in.gov/Decisions/api/Search?courtId={self.page_court_id}"
         self.should_have_results = True
 
+    @override
     def _process_html(self):
         """Process the HTML to extract case details.
 

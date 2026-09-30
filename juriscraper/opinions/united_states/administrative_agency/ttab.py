@@ -8,6 +8,8 @@ Type: Precedential
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -39,6 +41,7 @@ class Site(OpinionSiteLinear):
         self.request["parameters"] = {"json": self._search_payload}
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         results = self.html.get("results", [])
         seen_docs = set()

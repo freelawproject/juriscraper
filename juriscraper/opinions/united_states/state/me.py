@@ -20,6 +20,8 @@ History:
 import re
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_names
 from juriscraper.lib.string_utils import convert_date_string, titlecase
@@ -40,6 +42,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self):
         for row in self.html.xpath(self.path_root):
             cite, name, date = row.xpath("./td")

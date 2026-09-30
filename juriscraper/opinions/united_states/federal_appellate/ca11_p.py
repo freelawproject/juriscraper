@@ -7,6 +7,8 @@
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -20,6 +22,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
+    @override
     def _process_html(self):
         rows = self.html.xpath("//tr")
         for row in rows:
