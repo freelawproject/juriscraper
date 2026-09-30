@@ -37,7 +37,7 @@ class Site(ClusterSite):
         self.docket_xpath = ".//p/text()[normalize-space()]"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """
         Parse the HTML table rows and extract case details.
 

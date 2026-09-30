@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")
         for case in cases:
             docket = case.xpath(".//h4")[0].text_content().strip()

@@ -19,7 +19,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         if self.test_mode_enabled():
             self.year = 2022
         feed = feedparser.parse(self.request["response"].content)

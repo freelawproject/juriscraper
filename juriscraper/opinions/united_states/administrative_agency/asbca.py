@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
         self.needs_special_headers = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         # Exclude headers and rows that only have the month name
         if self.test_mode_enabled():
             self.year = "2026"

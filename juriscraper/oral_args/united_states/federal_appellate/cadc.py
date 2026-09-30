@@ -31,7 +31,7 @@ class Site(OralArgumentSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         anchor_xpath = "a[contains(@href, '/recordings/docs/') and contains(@href, '.mp3')]"
         for row in self.html.xpath(f"//div[div[div[div[{anchor_xpath}]]]]"):
             ahref = row.xpath(f".//{anchor_xpath}")

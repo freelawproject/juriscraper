@@ -168,7 +168,7 @@ class Site(OralArgumentSiteLinear):
         return all_items
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the json response"""
 
         for record in self.html:

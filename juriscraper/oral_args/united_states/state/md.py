@@ -32,7 +32,7 @@ class Site(OralArgumentSiteLinear):
         self.url = "http://www.courts.state.md.us/coappeals/webcasts/webcastarchive.html"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         # Find rows that contain valid, non-"Bar Admissions", link
         path = (
             "//tr[.//td[2]//a/@href][not(contains(.//@href, 'baradmission'))]"

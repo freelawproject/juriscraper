@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None

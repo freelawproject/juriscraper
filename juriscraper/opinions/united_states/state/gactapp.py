@@ -36,7 +36,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr")[::-1][:-1]:
             docket, name, date_el, disposition, _, url_el = row.xpath(".//td")
             url = url_el.xpath(".//a")[0].get("href")

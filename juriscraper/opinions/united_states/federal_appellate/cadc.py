@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         link_xpath = "a[contains(@href, '.pdf')]"
         for row in self.html.xpath(f"//div[div[div[div[{link_xpath}]]]]"):
             self.cases.append(

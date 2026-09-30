@@ -23,7 +23,7 @@ class Site(okla.Site):
         self.expected_content_types = ["text/html"]
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div/p['@class=document']")[::-1]:
             if "OK" not in row.text_content() or "EMAIL" in row.text_content():
                 continue

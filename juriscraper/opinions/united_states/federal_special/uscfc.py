@@ -28,7 +28,7 @@ class Site(OpinionSiteLinear):
         self.is_vaccine = "uscfc_vaccine" in self.court_id
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """The site returns a page with all opinions for this time period
         The opinions are inside a <script> tag, as a Javascript constant
         that will be parsed using json.loads

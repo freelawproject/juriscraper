@@ -28,7 +28,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         if self.test_mode_enabled():
             self.previous_date = datetime(2023, 9, 21).date()
 

@@ -57,7 +57,7 @@ class Site(OpinionSiteLinear):
         self.json = await super()._download(request_dict)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         date_filed = self.json["publicationDate"][:10]
         for publicationItem in self.json["publicationItems"]:
             if not publicationItem.get("documents", []):

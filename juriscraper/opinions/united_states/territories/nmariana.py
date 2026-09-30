@@ -58,7 +58,7 @@ class Site(OpinionSiteLinear):
         return author
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for s in self.html.xpath(".//a[@class='pdf-link']/ancestor::tr"):
             cells = s.xpath(".//td")
             judge_text = cells[3].text_content()

@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
         self.request["headers"] = {"User-Agent": self.chrome_user_agent}
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(
             ".//div[contains(@class,'list__items')]/article"
         ):

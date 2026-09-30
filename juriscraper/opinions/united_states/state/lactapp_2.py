@@ -35,7 +35,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the HTML and extract case information"""
         rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')
 

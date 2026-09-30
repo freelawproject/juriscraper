@@ -73,7 +73,7 @@ class Site(OpinionSiteLinear):
         return [get_html_parsed_text(html) for _, html in self.rendered_pages]
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         xpath = "//a[contains(@href, 'opinions') and contains(@href, 'pdf')]"
         for html in self.html:
             date_string = self._get_date_for_opinions(html)

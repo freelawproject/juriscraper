@@ -32,7 +32,7 @@ class Site(OpinionSiteLinear):
         self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None

@@ -108,7 +108,7 @@ class Site(OpinionSiteLinear):
         return dates
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for date, page in self.pages.items():
             for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):
                 # Walk up to the containing <td> (table layout)

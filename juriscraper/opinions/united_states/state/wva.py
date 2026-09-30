@@ -90,7 +90,7 @@ class Site(ClusterSite):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr[td[@headers]]"):
             name_cell = row.xpath("td[3]")[0]
             # Replace <br> with space to avoid merged words

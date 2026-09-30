@@ -61,7 +61,7 @@ class Site(OpinionSiteLinear):
         return year - 1 if date_of_interest < term_cutoff else year
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr"):
             cells = row.xpath(".//td")
             if len(cells) != 6:

@@ -41,7 +41,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the html
 
         :return: None

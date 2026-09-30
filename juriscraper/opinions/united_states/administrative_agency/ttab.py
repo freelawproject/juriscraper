@@ -42,7 +42,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         results = self.html.get("results", [])
         seen_docs = set()
         for r in results:

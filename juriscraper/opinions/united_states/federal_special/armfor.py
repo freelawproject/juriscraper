@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(self.row_base_path):
             case_name, docket, date, cite = row.xpath(".//td")
             cite = "" if "xx" in cite.text_content() else cite.text_content()

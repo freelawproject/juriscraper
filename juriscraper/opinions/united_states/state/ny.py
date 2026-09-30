@@ -119,7 +119,7 @@ class Site(OpinionSiteLinear):
         return await super()._download(request_dict)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         table = self.html.xpath('.//table[contains(@class, "table")]')
         if not table:
             logger.warning("No results table found.")

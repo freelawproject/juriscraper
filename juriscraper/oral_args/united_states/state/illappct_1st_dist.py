@@ -45,7 +45,7 @@ class Site(OralArgumentSiteLinear):
         }
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(
             './/table[@id="ctl04_gvArguments"]/tr[not(th)]'
         ):

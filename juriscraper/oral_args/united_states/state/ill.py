@@ -44,7 +44,7 @@ class Site(OralArgumentSiteLinear):
         }
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(".//tr")[1:]:
             audio_anchor = row.xpath(".//a/@data-audio")
             if not audio_anchor:

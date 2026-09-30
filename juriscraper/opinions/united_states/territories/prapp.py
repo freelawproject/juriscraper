@@ -65,7 +65,7 @@ class Site(OpinionSiteLinear):
         return await super()._download()
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the html
 
         Long delays between posting necessitate a few extra warnings around

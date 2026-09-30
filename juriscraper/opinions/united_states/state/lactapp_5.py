@@ -42,7 +42,7 @@ class Site(OpinionSiteLinear):
             )
 
     @override
-    async def _process_html(self):
+    async def _process_html(self) -> None:
         self.check_panel_is_present()
 
         for row in self.html.xpath(self.row_xpath):

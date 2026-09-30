@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(
             '//*[@id="Opinions_ResizeContainer"]/table/tbody/tr'
         ):

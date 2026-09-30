@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(".//li[@class='decision']"):
             name, citation = row.xpath(".//a/text()")
             url = row.xpath(".//a/@href")[0]

@@ -26,7 +26,7 @@ class Site(OralArgumentSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for item in self.html.xpath("//item"):
             # The feed escapes the `<br/>` separators, so the whole record
             # reaches us as a single text node. Ex:

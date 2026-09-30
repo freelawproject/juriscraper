@@ -30,7 +30,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         anchor_xpath = "a[contains(@href, '/opinions/pdf/')]"
 
         for row in self.html.xpath(f"//tr[td[{anchor_xpath}]]"):

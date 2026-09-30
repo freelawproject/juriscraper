@@ -95,7 +95,7 @@ class Site(OpinionSiteLinear):
         return lxml_html.fromstring(raw.decode("utf-8"))
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         tree = self.html
         seen_urls = {case["url"] for case in self.cases}
         rows = tree.xpath(

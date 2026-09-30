@@ -27,7 +27,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         self.json = self.html
         for row in self.json["d"]["results"]:
             docket_number = row["Title"]

@@ -20,7 +20,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div[@class='views-row']"):
             docket, _, _, summary, *_ = row.xpath(".//div/text()")
             url = row.xpath(".//div/span/p/a")[0].get("href")

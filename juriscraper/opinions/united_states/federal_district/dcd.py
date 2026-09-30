@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """
         Some rows have mutliple documents and hence urls for each case.
         We will "pad" every other metadata field to match the urls

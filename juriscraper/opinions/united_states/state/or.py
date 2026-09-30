@@ -32,7 +32,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    async def _process_html(self):
+    async def _process_html(self) -> None:
         for i, row in enumerate(self.html["items"]):
             # Honor robots.txt Crawl-Delay: 1 advertised by
             # cdm17027.contentdm.oclc.org. # 1968

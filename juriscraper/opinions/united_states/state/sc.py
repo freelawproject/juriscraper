@@ -58,7 +58,7 @@ class Site(OpinionSiteLinear):
             self.status = "Unpublished"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div[contains(@class,'case-result')]"):
             date_filed = row.xpath(
                 "preceding-sibling::div[contains(@class,'result-heading')]/h3/text()"

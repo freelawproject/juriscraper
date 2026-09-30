@@ -57,7 +57,7 @@ class Site(OpinionSiteLinear):
         return f"{self.base_url}?Court={court_str}&Month={month_str}"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Parse opinion listing from HTML accordion items.
 
         :return: None

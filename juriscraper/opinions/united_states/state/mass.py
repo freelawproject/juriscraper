@@ -37,7 +37,7 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["application/pdf"]
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(".//a/@href[contains(.,'download')]/.."):
             url = row.get("href")
             content = row.text_content()

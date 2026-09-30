@@ -26,7 +26,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the HTML to extract case details.
 
         :return None

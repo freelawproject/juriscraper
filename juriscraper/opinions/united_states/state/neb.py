@@ -61,7 +61,7 @@ class Site(OpinionSiteLinear):
             return html_tree
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for table in self.html.xpath(".//table"):
             date_tags = table.xpath("preceding::time[1]/text()")
             if not date_tags:

@@ -31,7 +31,7 @@ class Site(wis.Site):
         return False
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process Wisconsin Ct of Appeals rows
 
         :return: None

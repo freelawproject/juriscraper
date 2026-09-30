@@ -77,7 +77,7 @@ class Site(OpinionSiteLinear):
         return None, case_name  # Return original name if no docket found
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         json_data = self.html
         for item in json_data["d"]["DataObject"]:
             docket, clean_name = self.extract_case_name_info(item["Name"])

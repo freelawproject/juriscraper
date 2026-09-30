@@ -105,7 +105,7 @@ class Site(OpinionSiteLinear):
         return self._return_response_text_object()["Items"]
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the HTML response and extract case details.
 
         Iterates over the items in the HTML response, extracts relevant

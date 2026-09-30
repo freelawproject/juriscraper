@@ -23,7 +23,7 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["application/pdf"]
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the HTML to extract case details.
 
         :return None

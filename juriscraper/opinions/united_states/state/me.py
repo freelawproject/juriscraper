@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath(self.path_root):
             cite, name, date = row.xpath("./td")
 

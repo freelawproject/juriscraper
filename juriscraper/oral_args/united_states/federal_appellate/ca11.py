@@ -21,7 +21,7 @@ class Site(OralArgumentSiteLinear):
         self.back_scrape_iterable = list(range(0, 52))
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr[not(th)]"):
             # normalize docket numbers
             # get rid of "consolidated with" text

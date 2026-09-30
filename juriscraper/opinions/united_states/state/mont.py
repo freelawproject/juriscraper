@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html:
             description = row["documentDescription"]
             if not description.startswith("Opinion"):

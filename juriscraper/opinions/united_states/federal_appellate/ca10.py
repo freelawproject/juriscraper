@@ -14,7 +14,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for item in self.html.xpath(".//item"):
             for e in item.xpath(
                 ".//description/text()",

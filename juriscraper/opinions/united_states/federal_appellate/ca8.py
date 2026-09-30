@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for link in self.html.xpath('//a[contains(@href, "opndir")]'):
             url = link.get("href")
             text = link.xpath("following-sibling::text()")[0].strip()

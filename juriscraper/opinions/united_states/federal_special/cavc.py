@@ -27,7 +27,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         """Process the CAVC website and collect new opinions
 
         :return: None

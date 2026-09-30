@@ -56,7 +56,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
     @override
-    def _process_html(self):
+    def _process_html(self) -> None:
         for row in self.html.xpath("//table/tr[not(th)]"):
             filename = row.xpath("td[1]/a/text()")[0].lower()
             lower_court = row.xpath("td[4]/font/text()")[0]
