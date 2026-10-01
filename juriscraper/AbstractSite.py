@@ -72,7 +72,12 @@ class AbstractSite:
         f'"Chromium";v="{chrome_version}", "Not)A;Brand";v="24"'
     )
 
-    def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs,
+    ):
         super().__init__()
 
         # Computed metadata
