@@ -721,7 +721,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
-            de = {}
+            de: dict = {}
             cells = row.xpath("./td")
             if len(cells) == 0:
                 continue

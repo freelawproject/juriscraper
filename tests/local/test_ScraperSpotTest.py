@@ -1,6 +1,8 @@
 #!/usr/bin/env python
+import asyncio
 import re
 import unittest
+from datetime import date
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -127,3 +129,118 @@ class ScraperSpotTest(unittest.TestCase):
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
+
+    def test_nytrial_build_url(self):
+        from juriscraper.opinions.united_states.state import (
+            nysupct,
+            nysupct_commercial,
+        )
+
+        root = "https://nycourts.gov/reporter"
+        expected = [
+            (nysupct, date(2026, 4, 10), "slipidx/miscolo_2026_april"),
+            (nysupct, date(2026, 5, 10), "current/index/miscolo_2026_may"),
+            (
+                nysupct_commercial,
+                date(2026, 3, 10),
+                "slipidx/com_div_idxtable_2026_march",
+            ),
+            (
+                nysupct_commercial,
+                date(2026, 4, 10),
+                "current/index/com_div_idxtable_2026_april",
+            ),
+            (nysupct, date.today(), "current/index/miscolo"),
+            (nysupct, None, "current/index/miscolo"),
+        ]
+        for module, target_date, path in expected:
+            site = module.Site()
+            self.assertEqual(
+                site.build_url(target_date), f"{root}/{path}.shtml"
+            )
+
+    def test_nytrial_page_not_found(self):
+        from lxml.html import fromstring
+
+        from juriscraper.lib.exceptions import ParsingException
+        from juriscraper.opinions.united_states.state import nysupct
+
+        site = nysupct.Site()
+        # minimal copy of the page served, with a 200 status code, for
+        # https://nycourts.gov/reporter/slipidx/miscolo_2026_may.shtml
+        site.html = fromstring(
+            b'<?xml version="1.0" encoding="utf-8"?>\n'
+            b'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" '
+            b'"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">\n'
+            b'<html xmlns="http://www.w3.org/1999/xhtml"><head>'
+            b"<title>404 ERROR - N.Y. State Courts</title></head><body><main>"
+            b"<h2>404 ERROR - File Not Found</h2>"
+            b"<h1>Sorry, but the page you requested cannot be found.</h1>"
+            b"</main></body></html>"
+        )
+        with self.assertRaises(ParsingException):
+            asyncio.run(site._process_html())
+
+    def test_nytrial_metadata_from_stub(self):
+        from lxml.html import fromstring
+
+        from juriscraper.opinions.united_states.state import nytrial
+
+        # minimal copies of the stub page headers of
+        # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32223.shtml
+        # https://www.nycourts.gov/reporter/current/3dseries/2023/2023_35460.shtml
+        # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32204.shtml
+        stub = (
+            '<main id="main"><div class="current-legal-document">'
+            '<div class="case-info"><h1>{name}</h1>'
+            "<p>{slip}</p><p>{date}</p><p>{court}</p>"
+            "<p>{docket}</p><p>{judge}</p>"
+            "<p>Published by New York State Law Reporting Bureau pursuant "
+            "to Judiciary Law &sect; 431.</p></div>"
+            '<h2 class="center"><a href="https://www.nycourts.gov/reporter/'
+            'pdfs/2026/2026_32223.pdf">Full Decision: {slip} (PDF)</a></h2>'
+            "</div></main>"
+        )
+        expected = [
+            (
+                {
+                    "name": "Harbour v Acme Mkts. Inc.",
+                    "slip": "2026 NY Slip Op 32223(U)",
+                    "date": "September 9, 2026",
+                    "court": "Supreme Court, Westchester County",
+                    "docket": "Index No. 56892/2026",
+                    "judge": "Charles D. Wood, J.",
+                },
+                ("Charles D. Wood", "Index No. 56892/2026"),
+            ),
+            (
+                {
+                    "name": "Telfair v State of New York",
+                    "slip": "2023 NY Slip Op 35460(U)",
+                    "date": "August 24, 2023",
+                    "court": "Court of Claims",
+                    "docket": "Claim No. 136668",
+                    "judge": "Catherine E. Leahy-Scott, J.",
+                },
+                ("Catherine E. Leahy-Scott", "Claim No. 136668"),
+            ),
+            (
+                {
+                    "name": "Matter of Dinshaw",
+                    "slip": "2026 NY Slip Op 32204(U)",
+                    "date": "August 31, 2026",
+                    "court": "Surrogate's Court, New York County",
+                    "docket": "Index No. 1970-1950/B",
+                    "judge": "Rita Mella, J.",
+                },
+                ("Rita Mella", "Index No. 1970-1950/B"),
+            ),
+        ]
+        for values, (judge, docket) in expected:
+            header = fromstring(stub.format(**values)).xpath(
+                "//h1/parent::div"
+            )
+            self.assertEqual(nytrial.Site.get_judge_from_header(header), judge)
+            self.assertEqual(
+                nytrial.Site.get_docket_from_header(header), docket
+            )
