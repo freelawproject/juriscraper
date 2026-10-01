@@ -1,10 +1,9 @@
-import inspect
 import re
 import traceback
 from collections.abc import Callable, Hashable, Iterable
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Any, TypeVar, cast
+from typing import Any, Protocol, TypeVar, cast
 
 from httpx import HTTPError
 
@@ -217,16 +216,36 @@ def clean_court_object(obj: _CourtObjectT) -> _CourtObjectT:
         return obj
 
 
+_DownloadT = TypeVar("_DownloadT")
+
+
+class PaginatedHtmlBackscrapeSite(Protocol[_DownloadT]):
+    court_id: str
+    url: str
+    cases: list[dict[str, Any]]
+    html: _DownloadT | None  # TODO: Fix this to `HtmlElement`
+
+    async def _download(self) -> _DownloadT: ...
+
+    async def _process_html(self) -> None: ...
+
+
+_PaginatedHtmlBackscrapeSiteT = TypeVar(
+    "_PaginatedHtmlBackscrapeSiteT", bound=PaginatedHtmlBackscrapeSite[Any]
+)
+
+
 async def backscrape_over_paginated_results(
     first_page: int,
     last_page: int,
     start_date: date,
     end_date: date,
     date_fmt: str,
-    site,
-    prepare_request_fn: Callable | None = None,
+    site: _PaginatedHtmlBackscrapeSiteT,
+    prepare_request_fn: Callable[[int, _PaginatedHtmlBackscrapeSiteT], None]
+    | None = None,
     url_template: str = "",
-) -> list[dict]:
+) -> list[dict[str, Any]]:
     """
     Iterates over consecutive pages, looking for cases in a specific date range
     Of use when the page offers no date filters, so one must look through all
@@ -238,7 +257,7 @@ async def backscrape_over_paginated_results(
     :param end_date: cases with a date lesses than this value will be collected
     :param date_fmt: date format to parse case dates
     :param site: the site object
-    :prepare_request_fn: a function that takes as arguments the page number
+    :param prepare_request_fn: a function that takes as arguments the page number
         and the site object, and modifies the site's attribute to prepare
         the request before `site._download()` is called.
         If not passed, it will try to use the url_template argument
@@ -264,10 +283,7 @@ async def backscrape_over_paginated_results(
 
         try:
             site.html = await site._download()
-            if inspect.iscoroutinefunction(site._process_html):
-                await site._process_html()
-            else:
-                site._process_html()
+            await site._process_html()
         except HTTPError:
             # if the request returned and error, take advantage of the cases
             # already downloaded. This may also be a case when the last page
