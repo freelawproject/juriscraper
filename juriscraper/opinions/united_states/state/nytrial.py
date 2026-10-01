@@ -335,9 +335,9 @@ class Site(OpinionSiteLinear):
             ),
         ]
         judge_matches = [
-            regex.search(target_text)
+            match
             for regex in judge_regexes
-            if regex.search(target_text)
+            if (match := regex.search(target_text)) is not None
         ]
         if len(judge_matches) == 2:
             # last name is in full name
