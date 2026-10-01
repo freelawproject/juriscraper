@@ -145,7 +145,11 @@ class Site(OpinionSiteLinear):
                 ):
                     judge, docket = await self.get_stub_metadata(url)
                 url = stub_regex.sub(r"/pdfs/\1/\2.pdf", url)
-            name = harmonize(row.xpath("td[1]/a")[0].text_content())
+            # rows linking directly to a PDF have a "(PDF)" suffix
+            name = re.sub(
+                r"\s*\(PDF\)\s*$", "", row.xpath("td[1]/a")[0].text_content()
+            )
+            name = harmonize(name)
             opinion_date = row.xpath("td[3]")[0].text_content()
             slip_cite = row.xpath("td[4]")[0].text_content()
             status = "Unpublished" if "(U)" in slip_cite else "Published"
@@ -249,7 +253,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: pdf or html string contents
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, dict] = {
+        metadata: dict[str, Any] = {
             "Citation": {},
             "Docket": {},
             "Opinion": {},
@@ -331,9 +335,9 @@ class Site(OpinionSiteLinear):
             ),
         ]
         judge_matches = [
-            regex.search(target_text)
+            match
             for regex in judge_regexes
-            if regex.search(target_text)
+            if (match := regex.search(target_text)) is not None
         ]
         if len(judge_matches) == 2:
             # last name is in full name
@@ -379,7 +383,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: html string contents, after cleanup_content
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, dict] = {
+        metadata: dict[str, Any] = {
             "Citation": {},
             "Docket": {},
             "Opinion": {},

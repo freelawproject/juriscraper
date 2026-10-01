@@ -540,20 +540,6 @@
       "severity": "error"
     },
     {
-      "column": 9,
-      "path": "juriscraper/opinions/united_states/state/nh_p.py",
-      "name": "bad-override",
-      "concise_description": "Class member `Site.make_backscrape_iterable` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 57,
-      "path": "juriscraper/opinions/united_states/state/nh_p.py",
-      "name": "bad-return",
-      "concise_description": "Function declared to return `list[int]` but is missing an explicit `return`",
-      "severity": "error"
-    },
-    {
       "column": 19,
       "path": "juriscraper/opinions/united_states/state/nm.py",
       "name": "missing-attribute",
@@ -575,48 +561,6 @@
       "severity": "warn"
     },
     {
-      "column": 36,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, dict[Unknown, Unknown]]`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 51,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
       "column": 34,
       "path": "juriscraper/opinions/united_states/state/or.py",
       "name": "unsupported-operation",
@@ -635,20 +579,6 @@
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "bad-return",
       "concise_description": "Returned type `Literal[OpinionType.COMBINED, OpinionType.CONCURRENCE, OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART, OpinionType.DISSENT, OpinionType.MAJORITY, OpinionType.UNANIMOUS]` is not assignable to declared return type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 9,
-      "path": "juriscraper/opinions/united_states/state/sc.py",
-      "name": "bad-override",
-      "concise_description": "Class member `Site.make_backscrape_iterable` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 10,
-      "path": "juriscraper/opinions/united_states/state/sc.py",
-      "name": "bad-return",
-      "concise_description": "Function declared to return `list[tuple[date, date]]` but is missing an explicit `return`",
       "severity": "error"
     },
     {

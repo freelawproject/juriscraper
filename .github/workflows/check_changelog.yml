@@ -2,8 +2,8 @@ name: Check release notes
 
 on:
   pull_request:
-      types: [ opened, synchronize, reopened, labeled, unlabeled ]
-      branches:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+    branches:
       - 'main'
 
 jobs:

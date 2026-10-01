@@ -24,6 +24,17 @@ Fixes:
 - `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
 -
 
+## 3.0.44 - 2026-09-30
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Strip the "(PDF)" suffix from `nytrial` case names of rows that link directly to a PDF. #2243
+
 ## 3.0.43 - 2026-09-29
 
 Features:
