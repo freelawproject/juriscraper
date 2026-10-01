@@ -533,48 +533,6 @@
       "severity": "warn"
     },
     {
-      "column": 36,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, dict[Unknown, Unknown]]`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 51,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 25,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/ohio.py",
       "name": "missing-attribute",
