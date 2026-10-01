@@ -561,13 +561,6 @@
       "severity": "warn"
     },
     {
-      "column": 36,
-      "path": "juriscraper/opinions/united_states/state/nytrial.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `dict[str, dict[Unknown, Unknown]]`",
-      "severity": "error"
-    },
-    {
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/nytrial.py",
       "name": "missing-attribute",
