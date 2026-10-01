@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
 -
 
 ## 3.0.44 - 2026-09-30
