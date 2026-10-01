@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
 - `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
 -
 
