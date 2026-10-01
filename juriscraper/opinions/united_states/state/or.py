@@ -16,6 +16,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     court_code = "p17027coll3"
+    citation_field = "cita"
     base_url = "https://cdm17027.contentdm.oclc.org/digital/api/search/collection/{}/searchterm/{}-{}/field/dated/mode/exact/conn/and/maxRecords/200"
     # technically they have an 1870 case but just one
     first_opinion_date = datetime(1997, 8, 12)
@@ -35,10 +36,17 @@ class Site(OpinionSiteLinear):
             if i and not self.test_mode_enabled():
                 await asyncio.sleep(1)
 
-            docket, name, citation, date = (
-                x["value"] for x in row["metadataFields"]
-            )
-            if not name:
+            fields = {
+                metadata_row["field"]: metadata_row["value"]
+                for metadata_row in row["metadataFields"]
+            }
+            docket = fields.get("title")
+            date = fields.get("dated")
+            if not docket or not date:
+                logger.warning("Skipping row with no docket or date: %s", row)
+                continue
+
+            if not (name := fields.get("subjec")):
                 # Happens on rows like:
                 # "Miscellaneous Supreme Court dispositions, June 10 and 13, 2024"
                 logger.info("Skipping row '%s'", docket)
@@ -61,7 +69,7 @@ class Site(OpinionSiteLinear):
                     "date": date,
                     "docket": docket.split(",")[0],
                     "url": f"https://ojd.contentdm.oclc.org/digital/api/collection/{row['collectionAlias']}/id/{row['itemId']}/download",
-                    "citation": citation,
+                    "citation": fields.get(self.citation_field, ""),
                     "judge": judge,
                     "per_curiam": per_curiam,
                     "status": status,
