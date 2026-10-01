@@ -12,11 +12,15 @@ from datetime import date, datetime
 
 from lxml import html
 
+from juriscraper.Backscraper import DateBackscraper
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear, DateBackscraper):
+    # Oldest opinion listed in https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl
+    first_opinion_date = date(2005, 1, 3)
+    date_format = "%m/%d/%Y"
     docket_document_number_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
     nature_of_suit_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
 
@@ -84,25 +88,14 @@ class Site(OpinionSiteLinear):
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Checks if backscrape start and end arguments have been passed
-        by caller, and parses them accordingly
+        """Build the years to backscrape, both ends inclusive
 
-        :param kwargs: passed when initializing the scraper, may or
-            may not contain backscrape controlling arguments
+        :param kwargs: passed when initializing the scraper; may contain
+            backscrape_start and backscrape_end as "%m/%d/%Y" strings.
+            Default: from `first_opinion_date` to today
         :return None
         """
-        start_date = kwargs.get("backscrape_start")
-        end_date = kwargs.get("backscrape_end")
-
-        start = (
-            datetime.strptime(start_date, "%m/%d/%Y").year
-            if start_date
-            else date.today().year
+        start, end = self.get_backscrape_date_range(kwargs)
+        self.back_scrape_iterable = range(
+            max(self.first_opinion_date.year, start.year), end.year + 1
         )
-        end = (
-            datetime.strptime(end_date, "%m/%d/%Y").year + 1
-            if end_date
-            else date.today().year
-        )
-
-        self.back_scrape_iterable = range(max(2005, start), end)

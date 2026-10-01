@@ -8,6 +8,7 @@ import ssl
 import urllib.parse
 import urllib.request
 from datetime import datetime
+from typing import Any
 
 import certifi
 import httpx
@@ -662,17 +663,25 @@ class AbstractSite:
         tree.make_links_absolute(url)
         return tree
 
-    async def _download_backwards(self, d):
+    async def _download_backwards(self, iterable_item: Any, /) -> None:
+        """No-op default for Sites without backscraping capabilities
+
+        Backscrapers override it; new ones should inherit a
+        `juriscraper.Backscraper` family instead of relying on this.
+        """
         # methods for downloading the entire Site
         pass
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Creates back_scrape_iterable in the most common variation,
         a list of tuples containing (start, end) date pairs, each of
-        `days_interval` size
+        `days_interval` size.
 
         Uses default attributes of the scrapers as a fallback, if
-        expected keyword arguments are not passed in the kwargs input
+        expected keyword arguments are not passed in the kwargs input.
+
+        New backscrapers should inherit a `juriscraper.Backscraper` family,
+        such as `DateBackscraper`, instead of relying on this default.
 
         :param kwargs: if the following keys are present, use them
             backscrape_start: str in "%Y/%m/%d" format ;
