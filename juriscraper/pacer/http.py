@@ -212,21 +212,20 @@ class PacerSession(requests.Session):
 
         return court_id
 
-    def _update_acms_cookies(
-        self,
-        court_id: str | None,
-        response: requests.Response,
-    ) -> None:
+    def _update_acms_cookies(self, court_id: str | None) -> None:
         """
-        Persist any updated ACMS cookies returned by the server.
+        Move ACMS cookies set by the last request (including any redirects)
+        into the court's jar.
         """
-        if court_id:
-            self.acms_cookies[court_id].update(response.cookies)
-            # clear Secure: the server re-issues cookies (e.g. Azure's
-            # ARRAffinity) with Secure=True on most responses, which would
-            # overwrite our desecured copies and break the webhook-sentry
-            # https->http workaround.
-            self._desecure_acms_cookies(self.acms_cookies[court_id])
+        if not court_id:
+            return
+        jar = self.acms_cookies[court_id]
+        jar.update(self._take_acms_cookies())
+        # clear Secure: the server re-issues cookies (e.g. Azure's
+        # ARRAffinity) with Secure=True on most responses, which would
+        # overwrite our desecured copies and break the webhook-sentry
+        # https->http workaround.
+        self._desecure_acms_cookies(jar)
 
     def store_acms_token(
         self, court_id: str, token: dict, user_data: dict | None = None
@@ -260,7 +259,7 @@ class PacerSession(requests.Session):
             kwargs.setdefault("timeout", 300)
 
         r = super().get(url, **kwargs)
-        self._update_acms_cookies(court_id, r)
+        self._update_acms_cookies(court_id)
 
         if b"This user has no access privileges defined." in r.content:
             # This is a strange error that we began seeing in CM/ECF 6.3.1 at
@@ -313,7 +312,7 @@ class PacerSession(requests.Session):
             kwargs.update({"data": data, "json": json})
 
         r = super().post(url, **kwargs)
-        self._update_acms_cookies(court_id, r)
+        self._update_acms_cookies(court_id)
 
         if auto_login and not court_id:
             updated = self._login_again(r)
@@ -352,6 +351,21 @@ class PacerSession(requests.Session):
         doesn't strip them. See freelawproject/courtlistener#5921."""
         for cookie in _iter_cookies(jar):
             cookie.secure = False
+
+    def _take_acms_cookies(self) -> RequestsCookieJar:
+        """Move ACMS cookies out of the main PACER jar into a new jar.
+
+        requests stores every response's cookies (redirects included) in
+        self.cookies. ACMS cookies are pulled out right away so they live only
+        in the per-court jars and can't leak between courts.
+        """
+        jar = RequestsCookieJar()
+        # Copy to a list first: we remove cookies from the jar while iterating.
+        for cookie in list(_iter_cookies(self.cookies)):
+            if cookie.domain.endswith("azurewebsites.us"):
+                jar.set_cookie(cookie)
+                self.cookies.clear(cookie.domain, cookie.path, cookie.name)
+        return jar
 
     @staticmethod
     def _get_view_state(r):
@@ -598,7 +612,7 @@ class PacerSession(requests.Session):
             )
 
     def _get_saml_auth_request_parameters(
-        self, court_id: str, session: requests.Session | None = None
+        self, court_id: str
     ) -> dict[str, str]:
         """
         Retrieves SAML authentication request parameters by initiating a request
@@ -607,7 +621,6 @@ class PacerSession(requests.Session):
         response.
 
         :param court_id: The court identifier.
-        :param session: Authenticated session used to perform the request.
         :return: A dictionary where keys are the 'name' attributes and values are
             the 'value' attributes of hidden input elements found in the SAML
             authentication request form.
@@ -619,16 +632,7 @@ class PacerSession(requests.Session):
         logger.info(f"Attempting to get SAML credentials for {court_id}")
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
-        # Route the GET through the caller's session when provided (the
-        # isolated ACMS handshake) so the SAML/IdP redirect cookies land in
-        # that jar; fall back to self for legacy callers. Using self.post here
-        # would recurse, since the docket-sheet URL is itself an ACMS URL.
-        if session is None:
-            response = self._prepare_login_request(
-                url, data={}, headers=headers
-            )
-        else:
-            response = session.post(url, data={}, headers=headers, timeout=60)
+        response = self._prepare_login_request(url, data={}, headers=headers)
         result_parts = response.text.split("\r\n")
         # Handle gzip decoding
         js_screen = result_parts[-1]
@@ -653,9 +657,8 @@ class PacerSession(requests.Session):
     def establish_acms_session(self, court_id: str) -> None:
         """Establish ACMS auth cookies for `court_id` via the SAML flow.
 
-        This method reuses the authenticated PACER session established by
-        ``login()`` to obtain ACMS-specific authentication cookies, which are
-        stored separately in ``self.acms_cookies``.
+        The handshake runs on this session through ``_prepare_login_request``
+        The resulting ACMS cookies are moved into ``self.acms_cookies[court_id]``.
 
         Requires:
             ``login()`` has already been called and ``self.cookies`` contains a
@@ -666,16 +669,10 @@ class PacerSession(requests.Session):
                 "Cannot establish an ACMS session before login(): no PACER cookies."
             )
 
-        acms_session = requests.Session()
-        acms_session.verify = False
-        acms_session.headers["User-Agent"] = "Juriscraper"
-        # Reuse the PACER session so the identity provider recognizes the
-        # authenticated user during the SAML handshake.
-        acms_session.cookies.update(self.cookies)
+        # Discard leftover ACMS cookies so they don't end up in this court's jar.
+        self._take_acms_cookies()
 
-        auth_params = self._get_saml_auth_request_parameters(
-            court_id, session=acms_session
-        )
+        auth_params = self._get_saml_auth_request_parameters(court_id)
         if not auth_params:
             raise PacerLoginException(
                 "Failed to extract ACMS authentication data from SAML response."
@@ -683,21 +680,20 @@ class PacerSession(requests.Session):
 
         logger.info(f"Establishing ACMS session for {court_id}")
         saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
-        acms_session.post(
+        response = self._prepare_login_request(
             saml_url,
             data=auth_params,
             headers={"Content-Type": "application/x-www-form-urlencoded"},
-            timeout=60,
         )
+        response.raise_for_status()
 
-        # Persist only ACMS application cookies. PACER and IdP cookies are
-        # managed by the main session. We also keep a separate ACMS cookie jar
-        # per court so that broadly scoped cookies from one court cannot
-        # override another court's session state.
-        acms_jar = RequestsCookieJar()
-        for cookie in _iter_cookies(acms_session.cookies):
-            if cookie.domain.endswith("azurewebsites.us"):
-                acms_jar.set_cookie(cookie)
+        # Keep a separate ACMS cookie jar per court so that broadly scoped
+        # cookies from one court cannot override another court's session state.
+        acms_jar = self._take_acms_cookies()
+        if not acms_jar:
+            raise PacerLoginException(
+                f"ACMS handshake for {court_id} returned no session cookies."
+            )
         self._desecure_acms_cookies(acms_jar)
         self.acms_cookies[court_id] = acms_jar
         logger.info(f"ACMS session established for {court_id}")
