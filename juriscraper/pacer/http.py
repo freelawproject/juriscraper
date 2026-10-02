@@ -698,5 +698,8 @@ class PacerSession(requests.Session):
         self.acms_cookies[court_id] = acms_jar
         logger.info(f"ACMS session established for {court_id}")
 
-    # Backwards-compatible alias for existing callers (e.g. acms_attachment_page).
+    # Kept so existing callers don't break on the old name. Unlike the old
+    # method, this no longer sets acms_tokens or acms_user_data: ACMS doesn't
+    # return them in the SAML response anymore. They're populated via
+    # store_acms_token() from IndexContent responses instead.
     get_acms_auth_object = establish_acms_session
