@@ -4,4 +4,5 @@ __all__ = [
     "bap8",
     "bap9",
     "bap10",
+    "ohsb",
 ]
