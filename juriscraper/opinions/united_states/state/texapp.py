@@ -367,7 +367,7 @@ class Site(ClusterSite):
         try:
             search_date = datetime.strptime(op_date, "%m/%d/%Y").date()
         except ValueError:
-            search_date = parser.parse(op_date)
+            search_date = parser.parse(op_date).date()
 
         for opinion in html.xpath(opinion_xpath):
             op = {}

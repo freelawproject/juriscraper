@@ -1744,13 +1744,6 @@
       "severity": "error"
     },
     {
-      "column": 22,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `datetime` and `date`",
-      "severity": "error"
-    },
-    {
       "column": 17,
       "path": "juriscraper/opinions/united_states/state/texbizct.py",
       "name": "missing-attribute",
