@@ -5,6 +5,7 @@ Court Short Name: Nev.
 History:
     - 2023-12-13: Updated by William E. Palin
     - 2026-06-22: Reworked for the new Thomson Reuters ACIS portal, #2010
+    - 2026-10-01: Resolve judge initials to full names, #2049
 """
 
 import re
@@ -30,6 +31,31 @@ class Site(OpinionSiteLinear):
     # published advance opinions
     opinion_type_id = "1000014"
 
+    # Panel initials to (name, took office, left office), complete since 2009
+    # See https://nvcourts.gov/aoc/judicialhistory
+    initials_to_judges: dict[str, list[tuple[str, date, date | None]]] = {
+        # Seat A
+        "JH": [("James W. Hardesty", date(2005, 1, 3), date(2023, 1, 2))],
+        "LB": [("Linda Marie Bell", date(2023, 1, 2), None)],
+        # Seat B
+        "KP": [("Kristina Pickering", date(2009, 1, 5), None)],
+        # Seat C
+        "MC": [("Michael A. Cherry", date(2007, 1, 1), date(2019, 1, 7))],
+        "EC": [("Elissa F. Cadish", date(2019, 1, 7), None)],
+        # Seat D
+        "MG": [("Mark Gibbons", date(2003, 1, 6), date(2021, 1, 4))],
+        "DH": [("Douglas Herndon", date(2021, 1, 4), None)],
+        # Seat E
+        "RP": [("Ron D. Parraguirre", date(2005, 1, 3), None)],
+        # Seat F
+        "MD": [("Michael Douglas", date(2004, 4, 19), date(2019, 1, 7))],
+        "AS": [("Abbi Silver", date(2019, 1, 7), date(2022, 12, 21))],
+        "PL": [("Patricia Lee", date(2022, 12, 21), None)],
+        # Seat G
+        "NS": [("Nancy M. Saitta", date(2007, 1, 1), date(2016, 12, 5))],
+        "LS": [("Lidia S. Stiglich", date(2016, 12, 5), None)],
+    }
+
     # Advance opinion citation, e.g. "142 Nev. Adv. Opn. No. 45". The "No."
     # is occasionally dropped in the source text, hence optional.
     citation_regex = re.compile(
@@ -42,8 +68,12 @@ class Site(OpinionSiteLinear):
     )
     # Disposition is quoted, e.g. '"Vacated and remanded."'
     disposition_regex = re.compile(r'"\s*([^"]+?)\s*"')
-    # Panel, e.g. "Majority: Stiglich/Cadish/Lee"
-    majority_regex = re.compile(r"Majority:\s*([A-Za-z/]+)")
+    # Panel, e.g. "Majority: Stiglich/Cadish/Lee", "Majority: Before: Lee/ Bell"
+    majority_regex = re.compile(
+        r"Majority:\s*(?:Before:\s*)?([A-Za-z]+(?:\s*/[\s/]*[A-Za-z]+)*)"
+    )
+    # Judge initials in a panel, e.g. "Majority: MG/BB/DW"
+    initials_regex = re.compile(r"[A-Z]{2,3}")
     # Consolidated cases, e.g. "... C/W 85175" or "... C/W 88016/88190"
     consolidated_regex = re.compile(r"\s*\bC/W\s+([\d/,\s]+)")
     # Parentheticals that mark the case type rather than a party; these are
@@ -138,7 +168,9 @@ class Site(OpinionSiteLinear):
                 ),
             }
             case.update(
-                self.parse_description(entry.get("docketEntryDescription", ""))
+                self.parse_description(
+                    entry.get("docketEntryDescription", ""), date_filed
+                )
             )
             self.cases.append(case)
 
@@ -160,13 +192,14 @@ class Site(OpinionSiteLinear):
         title = self.case_type_regex.sub("", title)
         return titlecase(title.strip()), consolidated
 
-    def parse_description(self, description: str) -> dict:
+    def parse_description(self, description: str, date_filed: str) -> dict:
         """Extract opinion metadata from the docket entry description
 
         Always returns the same keys (with empty/False defaults) so every
         case dict is consistent, which the OpinionSiteLinear getters require.
 
         :param description: the free-text docketEntryDescription
+        :param date_filed: the filed date, to resolve judge initials
         :return: dict with citation, disposition, author, per_curiam and judge
         """
         metadata = {
@@ -192,17 +225,43 @@ class Site(OpinionSiteLinear):
             metadata["author"] = match.group(1)
 
         if match := self.majority_regex.search(description):
-            # Some entries list clerk initials (e.g. "MG/BB/DW") instead of
-            # justice surnames; keep only the surnames
-            judges = [
-                name
-                for name in match.group(1).split("/")
-                if len(name) >= 3 and not name.isupper()
-            ]
+            # Some entries list judge initials, e.g. "MG/BB/DW"
+            judges = []
+            for name in re.split(r"[\s/]+", match.group(1)):
+                if self.initials_regex.fullmatch(name):
+                    if judge := self.resolve_initials(name, date_filed):
+                        judges.append(judge)
+                elif len(name) >= 3:
+                    judges.append(name)
             if judges:
                 metadata["judge"] = ", ".join(judges)
 
         return metadata
+
+    def resolve_initials(self, initials: str, date_filed: str) -> str:
+        """Get the judge with these initials in office on the filed date
+
+        :param initials: e.g. "MG"
+        :param date_filed: "YYYY-MM-DD"
+        :return: the judge's full name, or "" if not found
+        """
+        filed = date.fromisoformat(date_filed)
+        for name, took_office, left_office in self.initials_to_judges.get(
+            initials, []
+        ):
+            if took_office <= filed and (
+                left_office is None or filed < left_office
+            ):
+                return name
+
+        # Catch updates
+        logger.error(
+            "%s: judge initials not mapped to full name %s on %s",
+            self.court_id,
+            initials,
+            date_filed,
+        )
+        return ""
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Collapse the default per-interval windows into a single range
