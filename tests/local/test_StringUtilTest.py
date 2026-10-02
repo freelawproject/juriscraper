@@ -272,6 +272,17 @@ class StringUtilTest(unittest.TestCase):
             ["Lissner et. al", "Lissner"],
             ["Lissner et al.", "Lissner"],
             ["Lissner et al", "Lissner"],
+            ["Lissner, et als.", "Lissner"],
+            ["Lissner et alii", "Lissner"],
+            ["Lissner et aliae", "Lissner"],
+            ["Lissner et alia", "Lissner"],
+            ["Lissner, et al., Appellants", "Lissner"],
+            ["Lissner ET AL. v. White et al.", "Lissner v. White"],
+            [
+                "Fox v. Mohammed Mat Et Aliasing",
+                "Fox v. Mohammed Mat Et Aliasing",
+            ],
+            ["Lissner et Albert v. White", "Lissner et Albert v. White"],
             # US --> United States
             ["US v. Lissner, Plaintiff", "United States v. Lissner"],
             [
