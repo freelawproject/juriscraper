@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- New `bap9` oral argument scraper #2113
 -
 
 Changes:
@@ -24,6 +25,8 @@ Fixes:
 - Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
 - `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
+- Fix `ca9` oral argument backscraper `TypeError` when called with no dates
+- Stop `ca9` oral argument scraper from ingesting Bankruptcy Appellate Panel arguments #2113
 -
 
 ## 3.0.44 - 2026-09-30

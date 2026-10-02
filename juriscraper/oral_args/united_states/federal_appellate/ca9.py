@@ -5,9 +5,13 @@ History:
     - 2026-06-04: Audio files moved from www.ca9.uscourts.gov to
       cdn.ca9.uscourts.gov after the site redesign; same migration that
       moved the opinion feeds (#1987).
+    - 2026-09-21: Skip Bankruptcy Appellate Panel rows, scraped by `bap9`
+      (#2113).
 """
 
 import json
+import re
+from collections import Counter
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
@@ -17,8 +21,38 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
+RECORD_TYPE_COURTS = {"ora": "ca9", "bap": "bap9"}
+BAP_LEGACY_DOCKET = re.compile(r"\d{2}-\d{4}")
+
+
+def get_record_court(record: dict) -> str:
+    """Get the court of a `media` table row
+
+    Rows from before mid 2021 have no `record_type`; back then, only BAP
+    dockets had 4 digits after the dash
+
+    :param record: a DynamoDB item
+    :return: "ca9" or "bap9"
+    """
+    record_type = record.get("record_type", {}).get("S")
+    if not record_type:
+        docket = record.get("case_num", {}).get("S") or ""
+        return "bap9" if BAP_LEGACY_DOCKET.fullmatch(docket.strip()) else "ca9"
+
+    court = RECORD_TYPE_COURTS.get(record_type)
+    if not court:
+        logger.warning(
+            "ca9 media table: assuming 'ca9' for unknown record_type %r "
+            "and docket %s",
+            record_type,
+            record.get("case_num", {}).get("S"),
+        )
+        court = "ca9"
+    return court
+
 
 class Site(OralArgumentSiteLinear):
+    record_court = "ca9"
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     # Lookback for the regular scrape, in `created_date` terms. The cron runs
     # hourly, so this only needs to cover a scraper outage. Widening it is
@@ -170,16 +204,24 @@ class Site(OralArgumentSiteLinear):
     @override
     def _process_html(self) -> None:
         """Process the json response"""
+        skipped = Counter()
 
         for record in self.html:
             date_str = record.get("hearing_date", {}).get("S")
             docket = record.get("case_num", {}).get("S")
+
+            court = get_record_court(record)
+            if court != self.record_court:
+                skipped[court] += 1
+                continue
+
             try:
                 # validate ISO date
                 datetime.strptime(date_str, "%Y-%m-%d")
             except Exception:
                 logger.warning(
-                    "ca9: skipping row with bad hearing_date %s for docket %s",
+                    "%s: skipping row with bad hearing_date %s for docket %s",
+                    self.record_court,
                     date_str,
                     docket,
                 )
@@ -189,7 +231,8 @@ class Site(OralArgumentSiteLinear):
                 audio = record["audio_file_name"]["S"]
             except KeyError:
                 logger.warning(
-                    "ca9: skipping row with no audio_file_name for docket %s",
+                    "%s: skipping row with no audio_file_name for docket %s",
+                    self.record_court,
                     docket,
                 )
                 continue
@@ -207,6 +250,16 @@ class Site(OralArgumentSiteLinear):
                         "S", ""
                     ),
                 }
+            )
+
+        if skipped:
+            logger.info(
+                "%s: skipped %s",
+                self.record_court,
+                ", ".join(
+                    f"{count} {court} rows"
+                    for court, count in sorted(skipped.items())
+                ),
             )
 
         # CourtListener walks these cases top down and stops at the first
@@ -234,25 +287,15 @@ class Site(OralArgumentSiteLinear):
         :return: None
         """
 
-    async def _download_backwards(self, dates: tuple[str, str]) -> None:
-        """Download backwards
+    async def _download_backwards(
+        self, dates: tuple[datetime, datetime]
+    ) -> None:
+        """Download one backscrape window
 
-        :param dates: (start_str, end_str) in "%Y/%m/%d" or empty.
+        :param dates: a (start, end) pair from `make_backscrape_iterable`
         :return: None
         """
-        start_str, end_str = dates
-
-        # Parse start date or fall back to first_opinion_date
-        if start_str:
-            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
-        else:
-            self.start_date = self.first_opinion_date
-
-        # Parse end date or fall back to now
-        if end_str:
-            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
-        else:
-            self.end_date = datetime.now()
+        self.start_date, self.end_date = dates
 
         # Rebuild payload for this slice
         self.build_payload(backscrape=True)
@@ -260,15 +303,24 @@ class Site(OralArgumentSiteLinear):
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """
-        Prepare a single (start, end) tuple, defaulting to __init__’s range
-        or overridden via backscrape_start / backscrape_end in kwargs.
+        """Prepare a single (start, end) tuple
 
         A single tuple on purpose: each DynamoDB scan reads the whole table
         regardless of the FilterExpression, so splitting a backscrape into
         `days_interval` chunks would multiply the cost by the number of chunks
         and return nothing extra.
+
+        :param kwargs: may have backscrape_start and backscrape_end, as
+            "%Y/%m/%d" strings
+        :return: None
         """
-        start = kwargs.get("backscrape_start", self.start_date)
-        end = kwargs.get("backscrape_end", self.end_date)
-        self.back_scrape_iterable = [(start, end)]
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+        self.back_scrape_iterable = [
+            (
+                datetime.strptime(start, "%Y/%m/%d")
+                if start
+                else self.first_opinion_date,
+                datetime.strptime(end, "%Y/%m/%d") if end else datetime.now(),
+            )
+        ]
