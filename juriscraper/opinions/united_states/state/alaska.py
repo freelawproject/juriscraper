@@ -21,6 +21,7 @@ from html import unescape
 from urllib.parse import urlencode, urljoin
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InvalidDocumentError
@@ -126,6 +127,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.url = self._build_search_url()
 
+    @override
     async def _process_html(self) -> None:
         self._parse_results_page(self.html)
         if self.test_mode_enabled():

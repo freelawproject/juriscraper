@@ -18,6 +18,8 @@ History:
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.opinions.united_states.federal_appellate.ca2_p import (
@@ -77,6 +79,7 @@ class Site(OralArgumentSiteLinear):
             "booleanConditions": "",
         }
 
+    @override
     def _process_html(self) -> None:
         for row in self.html.xpath('//table[@class="ResultsTable"]/tr'):
             anchor = row.xpath('.//td[@class="ResultsItemLeft"]/a')

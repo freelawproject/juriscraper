@@ -11,6 +11,8 @@ import json
 from datetime import date, datetime, time, timedelta
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.Backscraper import DateBackscraper
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
@@ -166,7 +168,8 @@ class Site(OralArgumentSiteLinear, DateBackscraper):
 
         return all_items
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the json response"""
 
         for record in self.html:

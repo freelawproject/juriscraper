@@ -24,6 +24,7 @@ from urllib.parse import urlparse
 
 from dateutil import parser
 from lxml import html as lxmlHTML
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
@@ -135,6 +136,7 @@ class Site(ClusterSite):
         if self.next_page:
             self.parameters[self.next_page[0].xpath("@name")[0]] = ""
 
+    @override
     async def _process_html(self) -> None:
         """Process HTML and paginates if needed
 

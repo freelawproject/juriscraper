@@ -23,6 +23,8 @@ Contact information:
 import re
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -55,7 +57,8 @@ class Site(OpinionSiteLinear):
         else:
             self.status = "Unpublished"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div[contains(@class,'case-result')]"):
             date_filed = row.xpath(
                 "preceding-sibling::div[contains(@class,'result-heading')]/h3/text()"

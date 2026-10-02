@@ -17,6 +17,7 @@ from urllib.parse import urljoin
 import httpx
 from lxml.etree import ParserError
 from lxml.html import fromstring
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -109,6 +110,7 @@ class Site(OpinionSiteLinear):
         """
         return bool(re.search(self.court_regex, court))
 
+    @override
     async def _process_html(self) -> None:
         """Parses a page's HTML into opinion dictionaries
 
@@ -253,7 +255,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: pdf or html string contents
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, dict] = {
+        metadata: dict[str, Any] = {
             "Citation": {},
             "Docket": {},
             "Opinion": {},
@@ -335,9 +337,9 @@ class Site(OpinionSiteLinear):
             ),
         ]
         judge_matches = [
-            regex.search(target_text)
+            match
             for regex in judge_regexes
-            if regex.search(target_text)
+            if (match := regex.search(target_text)) is not None
         ]
         if len(judge_matches) == 2:
             # last name is in full name
@@ -383,7 +385,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: html string contents, after cleanup_content
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, dict] = {
+        metadata: dict[str, Any] = {
             "Citation": {},
             "Docket": {},
             "Opinion": {},

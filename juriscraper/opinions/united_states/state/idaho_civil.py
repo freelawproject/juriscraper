@@ -19,6 +19,8 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -69,6 +71,7 @@ class Site(OpinionSiteLinear):
 
         return urljoin(self.base_url, f"{self.list_path}?{urlencode(params)}")
 
+    @override
     async def _process_html(self) -> None:
         if not isinstance(self.html, dict):
             logger.info("Unexpected response type %s", self.html)

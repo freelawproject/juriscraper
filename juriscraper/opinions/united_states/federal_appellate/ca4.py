@@ -2,6 +2,7 @@ import re
 from datetime import date
 
 from dateutil.relativedelta import relativedelta
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.Backscraper import DateBackscraper
@@ -31,6 +32,7 @@ class Site(OpinionSiteLinear, DateBackscraper):
         self.update_parameters()
         DateBackscraper.make_backscrape_iterable(self, kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Process CA4 Opinions
 

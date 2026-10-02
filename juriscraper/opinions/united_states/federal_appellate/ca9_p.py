@@ -13,6 +13,7 @@ import re
 
 import feedparser
 from lxml.html import tostring
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -26,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.should_have_results = True
 
+    @override
     def _process_html(self) -> None:
         feed = feedparser.parse(tostring(self.html))
         for item in feed["entries"]:

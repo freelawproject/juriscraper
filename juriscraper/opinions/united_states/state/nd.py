@@ -8,15 +8,21 @@
 
 import re
 from datetime import date, datetime
+from typing import Any
 from urllib.parse import urljoin
+
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes
-from juriscraper.lib.utils import backscrape_over_paginated_results
+from juriscraper.lib.utils import (
+    PaginatedHtmlBackscrapeSite,
+    backscrape_over_paginated_results,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
     base_url = "https://www.ndcourts.gov/"
     ordered_fields = [
         "citation",
@@ -39,7 +45,8 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
 
-    def _process_html(self) -> None:
+    @override
+    async def _process_html(self) -> None:
         """Most values are inside a <p>: whitespace and
         field names need to be cleaned
 

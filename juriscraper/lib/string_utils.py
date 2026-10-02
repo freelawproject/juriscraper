@@ -279,7 +279,7 @@ def fix_camel_case(s: str) -> str:
 # More details: http://www.law.cornell.edu/citation/4-300.htm
 US = r"USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States"
 UNITED_STATES = re.compile(r"^(%s)(,|\.)?$" % US, re.I)
-ET_AL = re.compile(r",?\set\.?\sal\.?", re.I)
+ET_AL = re.compile(r",?\set\.?\sal(?:s|ii|iae|ia)?\b\.?", re.I)
 BW = (
     "appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)appell(ee|ant)s?"
     + r"|devisee|executor|executrix|pet(\.|itioner)s?|petitioners?(--?|/)appell(ee|ant)s?"

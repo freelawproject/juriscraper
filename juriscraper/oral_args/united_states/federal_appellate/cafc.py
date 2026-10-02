@@ -13,6 +13,8 @@ History:
 from datetime import date, timedelta
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
@@ -39,6 +41,7 @@ class Site(OralArgumentSiteLinear):
         self.end_date = None
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _process_html(self) -> None:
         """Extract content from JSON response
 

@@ -7,6 +7,8 @@ History:
   2019-09-11: Rewritten by arderyp to user Linear pattern
 """
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -19,7 +21,8 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["application/octet-stream"]
         self.should_have_results = True
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath(
             '//*[@id="Opinions_ResizeContainer"]/table/tbody/tr'
         ):

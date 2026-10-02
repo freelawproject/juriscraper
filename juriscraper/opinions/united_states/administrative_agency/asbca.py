@@ -11,6 +11,8 @@ History:
 from datetime import datetime
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -42,7 +44,8 @@ class Site(OpinionSiteLinear):
         }
         self.needs_special_headers = True
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         # Exclude headers and rows that only have the month name
         if self.test_mode_enabled():
             self.year = "2026"
