@@ -2,6 +2,8 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -25,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.needs_special_headers = True
         self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
+    @override
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 

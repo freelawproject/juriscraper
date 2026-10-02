@@ -10,6 +10,8 @@ import asyncio
 import re
 from datetime import datetime, timedelta
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -29,7 +31,8 @@ class Site(OpinionSiteLinear):
         self.url = self.format_url(today - timedelta(15), today)
         self.make_backscrape_iterable(kwargs)
 
-    async def _process_html(self):
+    @override
+    async def _process_html(self) -> None:
         for i, row in enumerate(self.html["items"]):
             # Honor robots.txt Crawl-Delay: 1 advertised by
             # cdm17027.contentdm.oclc.org. # 1968

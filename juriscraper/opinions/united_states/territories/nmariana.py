@@ -12,6 +12,8 @@ from datetime import date
 from typing import Any
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -55,7 +57,8 @@ class Site(OpinionSiteLinear):
             author = [j for j in judges.split(",") if "*" in j][0].strip("*")
         return author
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for s in self.html.xpath(".//a[@class='pdf-link']/ancestor::tr"):
             cells = s.xpath(".//td")
             judge_text = cells[3].text_content()

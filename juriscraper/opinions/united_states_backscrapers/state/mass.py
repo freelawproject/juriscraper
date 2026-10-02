@@ -4,6 +4,7 @@ from typing import Any
 
 from dateutil import parser
 from lxml.html import fromstring
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -50,6 +51,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.expected_content_types = ["text/html"]
 
+    @override
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
 

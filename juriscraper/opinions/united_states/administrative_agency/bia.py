@@ -32,6 +32,7 @@ class Site(OpinionSiteLinear):
         self.urls = None
         self.status = "Published"
 
+    @override
     async def _process_html(self) -> None:
         if not self.test_mode_enabled():
             # Get last volume URL

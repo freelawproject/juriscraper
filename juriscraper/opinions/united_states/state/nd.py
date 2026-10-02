@@ -11,6 +11,8 @@ from datetime import date, datetime
 from typing import Any
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.lib.utils import (
@@ -43,6 +45,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
 
+    @override
     async def _process_html(self) -> None:
         """Most values are inside a <p>: whitespace and
         field names need to be cleaned

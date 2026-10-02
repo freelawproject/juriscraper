@@ -17,6 +17,7 @@ import re
 from datetime import date
 
 from dateutil.parser import parse
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
@@ -109,6 +110,7 @@ class Site(ClusterSite):
 
         return match.group("dockets"), match.group("case_name"), op_type.value
 
+    @override
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 

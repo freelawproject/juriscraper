@@ -9,6 +9,8 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -102,7 +104,8 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()["Items"]
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the HTML response and extract case details.
 
         Iterates over the items in the HTML response, extracts relevant

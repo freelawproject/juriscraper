@@ -4,6 +4,7 @@ import re
 from urllib.parse import urljoin
 
 from dateutil import parser
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
@@ -88,7 +89,8 @@ class Site(ClusterSite):
         self.seen_urls = set()
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr[td[@headers]]"):
             name_cell = row.xpath("td[3]")[0]
             # Replace <br> with space to avoid merged words

@@ -7,6 +7,7 @@ import os
 import ssl
 import urllib.parse
 import urllib.request
+from collections.abc import Awaitable
 from datetime import datetime
 
 import certifi
@@ -214,10 +215,9 @@ class AbstractSite:
             self.html = await self._download()
 
             # Process the available html (optional)
-            if inspect.iscoroutinefunction(self._process_html):
-                await self._process_html()
-            else:
-                self._process_html()
+            maybe_awaitable = self._process_html()
+            if isinstance(maybe_awaitable, Awaitable):
+                await maybe_awaitable
 
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
@@ -503,7 +503,7 @@ class AbstractSite:
 
         return content
 
-    def _process_html(self):
+    def _process_html(self) -> None | Awaitable[None]:
         """Hook for processing available self.html after it's been downloaded.
         This step is completely optional, but is useful if you want to transform
         the html before running the data getters (_get_*), or if its easier to

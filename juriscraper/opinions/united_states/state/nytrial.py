@@ -17,6 +17,7 @@ from urllib.parse import urljoin
 import httpx
 from lxml.etree import ParserError
 from lxml.html import fromstring
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
@@ -109,6 +110,7 @@ class Site(OpinionSiteLinear):
         """
         return bool(re.search(self.court_regex, court))
 
+    @override
     async def _process_html(self) -> None:
         """Parses a page's HTML into opinion dictionaries
 
