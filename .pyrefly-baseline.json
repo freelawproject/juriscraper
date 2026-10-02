@@ -491,13 +491,6 @@
       "severity": "error"
     },
     {
-      "column": 52,
-      "path": "juriscraper/opinions/united_states/federal_bankruptcy/bap10.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/opinions/united_states/federal_bankruptcy/bap9.py",
       "name": "bad-override",
@@ -722,13 +715,6 @@
       "severity": "error"
     },
     {
-      "column": 19,
-      "path": "juriscraper/opinions/united_states/state/ark.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/cal.py",
       "name": "missing-attribute",
@@ -922,13 +908,6 @@
       "path": "juriscraper/opinions/united_states/state/kan_p.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 42,
-      "path": "juriscraper/opinions/united_states/state/ky.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
       "severity": "error"
     },
     {
@@ -1408,13 +1387,6 @@
       "severity": "error"
     },
     {
-      "column": 19,
-      "path": "juriscraper/opinions/united_states/state/nm.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
       "column": 27,
       "path": "juriscraper/opinions/united_states/state/ny.py",
       "name": "missing-attribute",
@@ -1800,13 +1772,6 @@
       "severity": "error"
     },
     {
-      "column": 39,
-      "path": "juriscraper/opinions/united_states/state/vt.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
       "column": 17,
       "path": "juriscraper/opinions/united_states/state/vt.py",
       "name": "unsupported-operation",
@@ -1839,20 +1804,6 @@
       "path": "juriscraper/opinions/united_states/state/wash.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/opinions/united_states/state/wis.py",
-      "name": "bad-assignment",
-      "concise_description": "`str` is not assignable to variable `start` with type `date | None`",
-      "severity": "error"
-    },
-    {
-      "column": 15,
-      "path": "juriscraper/opinions/united_states/state/wis.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
       "severity": "error"
     },
     {

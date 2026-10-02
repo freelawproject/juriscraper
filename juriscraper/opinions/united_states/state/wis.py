@@ -21,26 +21,25 @@ class Site(OpinionSiteLinear):
         self.cite_regex = r"20\d{2}\sWI\s\d+"
         self.make_backscrape_iterable(kwargs)
 
-    def set_url(
-        self, start: date | None = None, end: date | None = None
-    ) -> None:
+    def set_url(self, dates: tuple[date, date] | None = None) -> None:
         """Sets URL with appropriate query parameters
 
-        :param start: start date
-        :param end: end date
-        :return None
+        :param dates: optional start and end date
+        :return: None
         """
-        if not start:
+        if dates is None:
             start = datetime.today() - timedelta(days=15)
             end = datetime.today()
+        else:
+            start, end = dates
 
-        start = start.strftime("%m-%d-%Y")
-        end = end.strftime("%m-%d-%Y")
+        start_str = start.strftime("%m-%d-%Y")
+        end_str = end.strftime("%m-%d-%Y")
 
         params = {
             "range": "None",
-            "begin_date": start,
-            "end_date": end,
+            "begin_date": start_str,
+            "end_date": end_str,
             "sortBy": "date",
             "Submit": "Search",
         }
@@ -85,6 +84,6 @@ class Site(OpinionSiteLinear):
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
-        self.set_url(*dates)
+        self.set_url(dates)
         self.html = await self._download()
         self._process_html()

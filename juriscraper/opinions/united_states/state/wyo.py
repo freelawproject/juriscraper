@@ -29,7 +29,7 @@ class Site(OpinionSiteLinear):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.set_url(datetime(datetime.today().year, 1, 1))
+        self.set_url()
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
 
@@ -61,21 +61,23 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def set_url(
-        self, start: date | None = None, end: date | None = None
-    ) -> None:
+    def set_url(self, dates: tuple[date | None, date] | None = None) -> None:
         """Sets self.url
 
-        If neither StartDate or EndDate query string parameters
+        If neither `StartDate` nor `EndDate` query string parameters
         are passed, the API returns all the dataset
 
-        :param start: start date
-        :param end: end date
-
+        :param dates: start and end date
         :return: None
         """
-        params = {}
 
+        if dates is None:
+            start = datetime(datetime.today().year, 1, 1)
+            end = None
+        else:
+            start, end = dates
+
+        params = {}
         if start:
             params["StartDate"] = start.strftime("%m/%d/%Y")
         if end:
@@ -95,7 +97,7 @@ class Site(OpinionSiteLinear):
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
-        self.set_url(*dates)
+        self.set_url(dates)
         self.html = await self._download()
         self._process_html()
 
