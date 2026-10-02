@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="_ctl0__ctl0_head1">
+    <title>
+        LASC - Case Summary
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="/casesummary/v2web3/commonv4/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/casesummary/v2web3/commonv4/images/favicon-32x32.png" sizes="32x32" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/sitemaster.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/fonts.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/home.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/wrapper.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/breadcrumb.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/screen.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/pending.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/styles3.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/template.css" media="all" />
+    <link href="/casesummary/v2web3/commonv4/styles/jquery-ui.css" rel="stylesheet" />
+    <link href="/casesummary/v2web3/commonv4/styles/jquery-ui-smoothness.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/tooltip.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/global508.css" media="all" />
+    <link rel="stylesheet" href="/casesummary/v2web3/css/site.css?v=fgGL4FVxR-atsz68LEZTIwMS0GtTlrPYdgOgpuDdwgs" />
+    <link rel="stylesheet" href="/casesummary/v2web3/css/AOC.css" />
+</head>
+
+
+<body style="background-color: #ffffff;">
+    <!--JQuery-->
+    <script src="/casesummary/v2web3/commonv4/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+    <div id="mainContainer">
+        <div style="background-color: white;">
+            <div class="pageWrap"></div>
+            <div class="mainContentWrap" id="divMainContent">
+                <div class="basicWrap">
+                    <!--<div class="contentCategory" style="padding-top: 28px; padding-bottom: 10px;">
+                        <a href="../page/ON0001">Online Services</a>
+                    </div>
+                    -->
+                    <div id="top"></div>
+                    <div class="contentTitleWrapper"  style="display:none">
+                        <div class="contentTitle" >
+                            <!-- Case Access Title -->
+                            <div class="contentTitle">
+                                
+                        <span>Civil Case Access</span>
+    
+                            </div>
+                         
+                        </div>
+                    </div>
+                        <div style="text-align: right; padding-bottom: 20px;">
+                        <!-- Language Dropdown (Using Partial View) -->
+                        
+
+<div class="multiLngPosition">
+    <div class="divLangImg">
+        <img src="/casesummary/v2web3/img/translate.gif" class="langImg" alt="Language Icon" style="height: 48px;width: 68px;">
+    </div>
+    <div class="divLangWrapper">
+        <div class="divLangText">
+            <b>Language Access</b>
+        </div>
+        <div class="divLangDdl">
+            <select id="languageDropdown" onchange="changeLanguage(this.value)" aria-label="Language Dropdown">
+                        <option value="en-us">English</option>
+                        <option value="es">Espa&#xF1;ol</option>
+                        <option value="vi">Ti&#x1EBF;ng Vi&#x1EC7;t</option>
+                        <option value="ko">&#xD55C;&#xAD6D;&#xC5B4;</option>
+                        <option value="zh">&#x4E2D;&#x6587;</option>
+                        <option value="hy">&#x570;&#x561;&#x575;&#x565;&#x580;&#x565;&#x576;</option>
+            </select>
+        </div>
+    </div>
+</div>
+<style>
+
+    .contentTitleWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .contentTitle {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    .multiLngPosition {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap; 
+    }
+    .multiLngPosition {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+    }
+
+    .divLangWrapper {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+</style>
+
+<script>
+    const challengeUrl = "https://www.lacourt.ca.gov/casesummary/v2web3,https://www.lacourt.ca.gov/casesummary/blue/ChangeLanguage";
+
+    document.getElementById("languageDropdown").addEventListener("change", function () {
+        const language = this.value;
+        fetch(challengeUrl + "/" + language, {
+            method: 'GET'
+        }).then(() => {
+            window.location.reload();
+        });
+        /*        fetch(challengeUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ language: language })
+        }).then(() => {
+            alert("reloading");
+            window.location.reload();
+
+        });
+        */
+    });
+</script>
+                        </div>
+
+                    <!--stuff-->
+                    
+
+<script>
+    // This will remove the hash from the address bar without reloading the page
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+</script>
+    <div class="message">No match found for case number 25STCV99998.</div>
+    <br />
+
+    <div class="important">
+        Attorneys, You may also use the <a href="{attorneyPortalUrl}" onclick="return displayNewWindow(this);">Attorney Portal</a> to access your cases.
+    </div>
+        <p>
+            The Los Angeles Superior Court declares that information provided by and obtained from this site, intended for use on a case-by-case basis and typically by parties of record and participants, does not constitute the official record of the court. Any user of the information is hereby advised that it is being provided as is and that it may be subject to error or omission. The user acknowledges and agrees that the Los Angeles Superior Court is not liable in any way whatsoever for the accuracy or validity of the information provided.
+        </p>
+        <p>
+            This site includes case information for Civil, Small Claims, Family Law, and Probate.
+        </p>
+        <p>
+            Limited jurisdiction cases are cases in which the dollar amount or value of property in dispute does not exceed $35,000.00. This includes Small Claims and most Unlawful Detainers. General jurisdiction cases include all other matters.
+        </p>
+        <p>
+            View important information about unavailability of certain case types and unavailability of some&#xD;&#xA;case information.
+        </p>
+        <p>
+            Your Landlord Tenant (eviction) case may have been relocated. For more information, click <a href="https://www.lacourt.org/newsmedia/uploads/142017101314373817NTAUDExpansion10-6-17.pdf">here</a>
+        </p>
+    <form id="caseSummaryForm" method="post">
+
+        <table class="emptyTable" style="width: 700px;">
+            <tr>
+                <td colspan="2">
+                    <span style="height: 5px;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="inputFieldDescription" align="right">
+                    CASE NUMBER
+                </td>
+                <td>
+                    <input class="textInput" type="text" maxLength="30" size="16" name="txtCaseNumber" aria-label="Input your case number." id="txtCaseNumber" value="">
+                </td>
+            </tr>
+                <tr>
+                    <td class="inputFieldDescription" align="right">
+                        FILING COURTHOUSE :
+                    </td>
+                    <td>
+                            <select name="ddlCourthouse" id="ddlCourthouse" class="ddl" aria-label="Filing Courthouse Dropdown">
+                                <option value="">
+                                    Select a Courthouse (Optional)</option>
+                                    <option value="ALH;Alhambra Courthouse" >Alhambra Courthouse</option>
+                                    <option value="BH;Beverly Hills Courthouse" >Beverly Hills Courthouse</option>
+                                    <option value="BUR;Burbank Courthouse" >Burbank Courthouse</option>
+                                    <option value="CHA;Chatsworth Courthouse" >Chatsworth Courthouse</option>
+                                    <option value="COM;Compton Courthouse" >Compton Courthouse</option>
+                                    <option value="GLN;Glendale Courthouse" >Glendale Courthouse</option>
+                                    <option value="LB;Governor George Deukmejian Courthouse" >Governor George Deukmejian Courthouse</option>
+                                    <option value="ING;Inglewood Courthouse" >Inglewood Courthouse</option>
+                                    <option value="ATP;Michael Antonovich Antelope Valley Courthouse" >Michael Antonovich Antelope Valley Courthouse</option>
+                                    <option value="SE;Norwalk Courthouse" >Norwalk Courthouse</option>
+                                    <option value="PAS;Pasadena Courthouse" >Pasadena Courthouse</option>
+                                    <option value="EA;Pomona Courthouse South" >Pomona Courthouse South</option>
+                                    <option value="SM;Santa Monica Courthouse" >Santa Monica Courthouse</option>
+                                    <option value="SS;Spring Street Courthouse" >Spring Street Courthouse</option>
+                                    <option value="LA;Stanley Mosk Courthouse" >Stanley Mosk Courthouse</option>
+                                    <option value="SBA;Torrance Courthouse" >Torrance Courthouse</option>
+                                    <option value="NW;Van Nuys Courthouse East" >Van Nuys Courthouse East</option>
+                                    <option value="CIT;West Covina Courthouse" >West Covina Courthouse</option>
+                            </select>
+                    </td>
+                </tr>
+            <tr>
+                <td width="150px"></td>
+                <td height="30px" valign=bottom>
+                    <input id="submit1" class="btn success-btn" type="submit" value="Search" name="action" onclick="showWaitSpinner('waitSpinner');">&nbsp;&nbsp; <input id="reset1" class="btn warning-btn" type="reset" value="CLEAR" name="reset1">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span style="height: 10px;"></span>
+                </td>
+            </tr>
+        </table>
+        <div id="waitSpinner" class="waitSpinner">
+            <div style="float: left; width: 100px;"><img src="/casesummary/v2web3/img/waiting.gif" style="width: 25px;" aria-label="Please Wait Spinner Image" /></div>
+            <div>Loading, please wait...</div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AoiDyHwbJdNhBVYWHo9tmccy900zCe9S33ZOPka3bC-6Fqz-2b-gDfZp3JO6dJnVrTG4B4oTDouTmCwfubpND3oYSE2kf1NQO7gw6-zHfx9_c59dUu7PgCRO_R-axcOSMEuFmr7H5An3rcHgkYZo4E" /></form>
+
+                    <!--stuff end-->
+
+                </div>
+                <script>var contentArea = "#divMainContent";</script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Loaded at End -->
+    <!-- Provides performance benefit. Also fix for Asp.Net error, "The Controls collection cannot be modified because the control contains code blocks (i.e. < % ... % >)" -->
+    <!-- See http://www.aspdotnet-suresh.com/2011/12/aspnet-controls-collection-cannot-be.html -->
+    <!--JQuery-->
+
+    <script src="/casesummary/v2web3/js/site.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/js/validation.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/jquery.cookie.js" type="text/javascript"></script>
+
+    <!--Google Analytics-->
+    <script src="/casesummary/v2web3/commonv4/scripts/analytics.js" type="text/javascript"></script>
+
+    <!-- lascweb -->
+    <script src="/casesummary/v2web3/commonv4/scripts/config.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/common.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/tooltip.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/linkredirect.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/globaljs.js" type="text/javascript"></script>  <!-- Nav Menu -->
+    <!-- ajax control toolkit extension -->
+    <script src="/casesummary/v2web3/commonv4/scripts/ajaxcontroltoolkit.js" type="text/javascript"></script>
+
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/0218f99cfe.js" crossorigin="anonymous"></script>
+
+    <!-- End Lascweb -->
+    
+
+</body>
+</html>
+

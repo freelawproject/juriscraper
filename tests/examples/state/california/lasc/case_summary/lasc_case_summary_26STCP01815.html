@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="_ctl0__ctl0_head1">
+    <title>
+        LASC - Case Summary
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="/casesummary/v2web3/commonv4/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/casesummary/v2web3/commonv4/images/favicon-32x32.png" sizes="32x32" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/sitemaster.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/fonts.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/home.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/wrapper.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/breadcrumb.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/screen.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/pending.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/styles3.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/template.css" media="all" />
+    <link href="/casesummary/v2web3/commonv4/styles/jquery-ui.css" rel="stylesheet" />
+    <link href="/casesummary/v2web3/commonv4/styles/jquery-ui-smoothness.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/tooltip.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/casesummary/v2web3/commonv4/styles/global508.css" media="all" />
+    <link rel="stylesheet" href="/casesummary/v2web3/css/site.css?v=fgGL4FVxR-atsz68LEZTIwMS0GtTlrPYdgOgpuDdwgs" />
+    <link rel="stylesheet" href="/casesummary/v2web3/css/AOC.css" />
+</head>
+
+
+<body style="background-color: #ffffff;">
+    <!--JQuery-->
+    <script src="/casesummary/v2web3/commonv4/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+    <div id="mainContainer">
+        <div style="background-color: white;">
+            <div class="pageWrap"></div>
+            <div class="mainContentWrap" id="divMainContent">
+                <div class="basicWrap">
+                    <!--<div class="contentCategory" style="padding-top: 28px; padding-bottom: 10px;">
+                        <a href="../page/ON0001">Online Services</a>
+                    </div>
+                    -->
+                    <div id="top"></div>
+                    <div class="contentTitleWrapper"  style="display:none">
+                        <div class="contentTitle" >
+                            <!-- Case Access Title -->
+                            <div class="contentTitle">
+                                
+        <span>Civil Case Access </span>
+
+                            </div>
+                         
+                        </div>
+                    </div>
+                        <div style="text-align: right; padding-bottom: 20px;">
+                        <!-- Language Dropdown (Using Partial View) -->
+                        
+
+<div class="multiLngPosition">
+    <div class="divLangImg">
+        <img src="/casesummary/v2web3/img/translate.gif" class="langImg" alt="Language Icon" style="height: 48px;width: 68px;">
+    </div>
+    <div class="divLangWrapper">
+        <div class="divLangText">
+            <b>Language Access</b>
+        </div>
+        <div class="divLangDdl">
+            <select id="languageDropdown" onchange="changeLanguage(this.value)" aria-label="Language Dropdown">
+                        <option value="en-us" selected>English</option>
+                        <option value="es">Espa&#xF1;ol</option>
+                        <option value="vi">Ti&#x1EBF;ng Vi&#x1EC7;t</option>
+                        <option value="ko">&#xD55C;&#xAD6D;&#xC5B4;</option>
+                        <option value="zh">&#x4E2D;&#x6587;</option>
+                        <option value="hy">&#x570;&#x561;&#x575;&#x565;&#x580;&#x565;&#x576;</option>
+            </select>
+        </div>
+    </div>
+</div>
+<style>
+
+    .contentTitleWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .contentTitle {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    .multiLngPosition {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap; 
+    }
+    .multiLngPosition {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+    }
+
+    .divLangWrapper {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+</style>
+
+<script>
+    const challengeUrl = "https://www.lacourt.ca.gov/casesummary/v2web3,https://www.lacourt.ca.gov/casesummary/blue/ChangeLanguage";
+
+    document.getElementById("languageDropdown").addEventListener("change", function () {
+        const language = this.value;
+        fetch(challengeUrl + "/" + language, {
+            method: 'GET'
+        }).then(() => {
+            window.location.reload();
+        });
+        /*        fetch(challengeUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ language: language })
+        }).then(() => {
+            alert("reloading");
+            window.location.reload();
+
+        });
+        */
+    });
+</script>
+                        </div>
+
+                    <!--stuff-->
+                    
+
+
+    <a name="CaseInformation"></a>
+    <hr class="headerDivider" />
+<div class="quickNavigation"><span class="currentNavSection">Case Information</span> | <a href="#RegisterOfAction">Register Of Actions</a> | <a href="#FutureHearings">FUTURE HEARINGS</a> | <a href="#Parties">PARTY INFORMATION</a> | <a href="#DocumentsFiled">Documents Filed</a></div>    <span></span>
+    <table class="dataTable">
+        <tr>
+            <td class="KeyField">  CASE INFORMATION: </td>
+            <td>26STCP01815</td>
+        </tr>
+        <tr>
+            <td class="KeyField"> Case Title: </td>
+            <td>COUNTS LAW FIRM, PC VS MICHELLE SWITZER</td>
+        </tr>
+        <tr>
+            <td class="KeyField">Filing Courthouse:  </td>
+            <td>Spring Street Courthouse</td>
+        </tr>
+        <tr>
+            <td class="KeyField">Filing Date: </td>
+            <td>5/11/2026</td>
+        </tr>
+        <tr>
+            <td class="KeyField">Case Type: </td>
+            <td>Petition to Compel/Confirm/Vacate Arbitration (General Jurisdiction)</td>
+        </tr>
+        <tr>
+            <td class="KeyField">Status: </td>
+          <td>Arbitration Award on 9/14/2026</td>
+        </tr>
+    </table>
+        <p>
+            <a onclick="return displayNewWindow(this);" href="https://www.lacourt.ca.gov/paos/v2web3/DocumentImages/SearchCaseNumber?casenumber=26STCP01815">Click here to access document images for this case.</a>
+        <br />
+            If this link fails, you may go to the Case Document Images site and search using the case number&#xD;&#xA;displayed on this page
+    </p>
+        <form id="caseSummaryForm" method="post">
+
+            <table width="100%">
+                <tr>
+                    <td align="right"><input type="button" class="btn primary-btn btn-small" value="🖶 Print" onclick="window.print();" /> <input type="submit" class="btn success-btn" value="New Search" /></td>
+                </tr>
+            </table>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AoiDyHwbJdNhBVYWHo9tme5UfIlP5cpsKmBnQXAxqg6X9bKbA0U0eeuKUHj9AIUJLgoeWy1BmcfU2USMT0g08GmHwSkxq5kvIp5hlvPEpOH7RkctBYcQSeiaMUcAeHs8mz5pQGKZ0ap1n_uxH-c0os" /></form>
+    <div class="bottomSpacer"></div>
+    <a name="FutureHearings"></a>
+    <div class="caseInfoHeader">Future Hearings</div>
+    <hr class="headerDivider" />
+<div class="quickNavigation"><a href="#CaseInformation">Case Information</a> | <a href="#RegisterOfAction">Register Of Actions</a> | <span class="currentNavSection">FUTURE HEARINGS</span> | <a href="#Parties">PARTY INFORMATION</a> | <a href="#DocumentsFiled">Documents Filed</a></div>        <table class="dataTable">
+    </table>
+    <div class="bottomSpacer"></div>
+    <a name="Parties"></a>
+    <div class="caseInfoHeader">PARTY INFORMATION </div>
+    <hr class="headerDivider" />
+<div class="quickNavigation"><a href="#CaseInformation">Case Information</a> | <a href="#RegisterOfAction">Register Of Actions</a> | <a href="#FutureHearings">FUTURE HEARINGS</a> | <span class="currentNavSection">PARTY INFORMATION</span> | <a href="#DocumentsFiled">Documents Filed</a></div>        <table class="dataTable">
+            <tr>
+                <td class="KeyField">COUNTS LAW FIRM PC</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td class="KeyField">SWITZER MICHELLE</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td class="KeyField">COUNTS EMAHN ESQ.</td>
+                <td>Attorney for Petitioner</td>
+            </tr>
+    </table>
+    <div class="bottomSpacer"></div>
+        <a name="DocumentsFiled"></a>
+        <div class="caseInfoHeader">Documents Filed </div>
+        <hr class="headerDivider" />
+<div class="quickNavigation"><a href="#CaseInformation">Case Information</a> | <a href="#RegisterOfAction">Register Of Actions</a> | <a href="#FutureHearings">FUTURE HEARINGS</a> | <a href="#Parties">PARTY INFORMATION</a> | <span class="currentNavSection">Documents Filed</span></div>                    <table class="dataTable">
+                                        <tr>
+                                            <td class="KeyField">9/14/2026</td>
+                                            <td>
+                                                Clerks Certificate of Service By Electronic Service 
+                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">9/14/2026</td>
+                                            <td>
+                                                Judgment 
+[Re: Confirming Arbitration Award]                                            </td>
+                                            <td>Filed by Counts Law Firm, PC (Petitioner)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">9/14/2026</td>
+                                            <td>
+                                                Minute Order 
+ (Hearing on Petition to Confirm Attorney-Client Fee  Arbitrati...)                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">9/14/2026</td>
+                                            <td>
+                                                Notice of Entry of Judgment / Dismissal / Other Order 
+                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">8/13/2026</td>
+                                            <td>
+                                                Memorandum of Costs (Summary) 
+                                            </td>
+                                            <td>Filed by Counts Law Firm, PC (Petitioner)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/20/2026</td>
+                                            <td>
+                                                Proof of Personal Service 
+                                            </td>
+                                            <td>Filed by Counts Law Firm, PC (Petitioner)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                Civil Case Cover Sheet 
+                                            </td>
+                                            <td>Filed by Counts Law Firm, PC (Petitioner)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                General Order RE Limited Jurisdiction Civil Procedure: Notice of Web Portal Availability for Interpreter Requests 
+                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                Notice of Availability of Limited Civil Jurisdiction Web Portal for Interpreter Requests 
+                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                Notice of Case Assignment - Limited Civil Case 
+                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                Notice of Hearing on Petition 
+                                            </td>
+                                            <td>Filed by Clerk</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                Petition to Confirm Attorney-Client Fee Arbitration Award 
+                                            </td>
+                                            <td>Filed by Counts Law Firm, PC (Petitioner)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="KeyField">5/11/2026</td>
+                                            <td>
+                                                Summons 
+on Petition                                            </td>
+                                            <td>Filed by Counts Law Firm, PC (Petitioner)</td>
+                                        </tr>
+                    </table>
+        <div class="bottomSpacer"></div>
+        <a name="PastProceedings"></a>
+        <div class="caseInfoHeader">Proceedings Held </div>
+        <hr class="headerDivider" />
+<div class="quickNavigation"><a href="#CaseInformation">Case Information</a> | <a href="#RegisterOfAction">Register Of Actions</a> | <a href="#FutureHearings">FUTURE HEARINGS</a> | <a href="#Parties">PARTY INFORMATION</a> | <a href="#DocumentsFiled">Documents Filed</a></div>                    <table class="dataTable">
+                    </table>
+        <div class="bottomSpacer"></div>
+    <a name="RegisterOfAction"></a>
+    <div class="caseInfoHeader">Register Of Actions </div>
+    <hr class="headerDivider" />
+<div class="quickNavigation"><a href="#CaseInformation">Case Information</a> | <span class="currentNavSection">Register Of Actions</span> | <a href="#FutureHearings">FUTURE HEARINGS</a> | <a href="#Parties">PARTY INFORMATION</a> | <a href="#DocumentsFiled">Documents Filed</a></div>        <table class="dataTable">
+            <tr>
+                <td class="KeyField">9/14/2026</td>
+                <td>Minute Order</td>
+            </tr>
+            <tr>
+                <td class="KeyField">9/14/2026</td>
+                <td>Judgment</td>
+            </tr>
+            <tr>
+                <td class="KeyField">9/14/2026</td>
+                <td>Notice of Entry of Judgment / Dismissal / Other Order</td>
+            </tr>
+            <tr>
+                <td class="KeyField">9/14/2026</td>
+                <td>Clerks Certificate of Service By Electronic Service</td>
+            </tr>
+            <tr>
+                <td class="KeyField">8/13/2026</td>
+                <td>Memorandum of Costs (Summary)</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/20/2026</td>
+                <td>Proof of Personal Service</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>Summons</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>General Order RE Limited Jurisdiction Civil Procedure: Notice of Web Portal Availability for Interpreter Requests</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>Notice of Case Assignment - Limited Civil Case</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>Notice of Hearing on Petition</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>Civil Case Cover Sheet</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>Petition to Confirm Attorney-Client Fee Arbitration Award</td>
+            </tr>
+            <tr>
+                <td class="KeyField">5/11/2026</td>
+                <td>Notice of Availability of Limited Civil Jurisdiction Web Portal for Interpreter Requests</td>
+            </tr>
+    </table>
+    <div class="bottomSpacer"></div>
+    <div class="bottomSpacer"></div>
+            <table width="100%">
+                <tr>
+            <td align="right"><a href="#top">Back To Top </a></td>
+                </tr>
+            </table>
+
+                    <!--stuff end-->
+
+                </div>
+                <script>var contentArea = "#divMainContent";</script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Loaded at End -->
+    <!-- Provides performance benefit. Also fix for Asp.Net error, "The Controls collection cannot be modified because the control contains code blocks (i.e. < % ... % >)" -->
+    <!-- See http://www.aspdotnet-suresh.com/2011/12/aspnet-controls-collection-cannot-be.html -->
+    <!--JQuery-->
+
+    <script src="/casesummary/v2web3/js/site.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/js/validation.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/jquery.cookie.js" type="text/javascript"></script>
+
+    <!--Google Analytics-->
+    <script src="/casesummary/v2web3/commonv4/scripts/analytics.js" type="text/javascript"></script>
+
+    <!-- lascweb -->
+    <script src="/casesummary/v2web3/commonv4/scripts/config.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/common.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/tooltip.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/linkredirect.js" type="text/javascript"></script>
+    <script src="/casesummary/v2web3/commonv4/scripts/globaljs.js" type="text/javascript"></script>  <!-- Nav Menu -->
+    <!-- ajax control toolkit extension -->
+    <script src="/casesummary/v2web3/commonv4/scripts/ajaxcontroltoolkit.js" type="text/javascript"></script>
+
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/0218f99cfe.js" crossorigin="anonymous"></script>
+
+    <!-- End Lascweb -->
+    
+
+</body>
+</html>
+

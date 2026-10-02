@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="head1"><title>
+	Case Calendar - Online Services - LA Court
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="icon" type="image/png" href="../commonv4/images/favicon-16x16.png" sizes="16x16" /><link rel="icon" type="image/png" href="../commonv4/images/favicon-32x32.png" sizes="32x32" />
+
+<!-- Stylesheet -->
+<link id="Link5" rel="stylesheet" type="text/css" href="../commonv4/styles/sitemaster.css" media="all" /><link id="Link4" rel="stylesheet" type="text/css" href="../commonv4/styles/fonts.css" media="all" /><link id="Link3" rel="stylesheet" type="text/css" href="../commonv4/styles/common.css" media="all" /><link id="Link10" rel="stylesheet" type="text/css" href="../commonv4/styles/home.css" media="all" /><link id="Link6" rel="stylesheet" type="text/css" href="../commonv4/styles/wrapper.css" media="all" /><link id="Link7" rel="stylesheet" type="text/css" href="../commonv4/styles/breadcrumb.css" media="all" /><link id="Link8" rel="stylesheet" type="text/css" href="../commonv4/styles/screen.css" media="all" /><link id="Link9" rel="stylesheet" type="text/css" href="../commonv4/styles/pending.css" media="all" /><link rel="stylesheet" type="text/css" href="../commonv4/styles/styles3.css" media="all" /><link rel="stylesheet" type="text/css" href="../commonv4/styles/template.css" media="all" /><link href="../commonv4/styles/jquery-ui.css" rel="stylesheet" /><link href="../commonv4/styles/jquery-ui-smoothness.css" rel="stylesheet" /><link id="Link1" rel="stylesheet" type="text/css" href="../commonv4/styles/tooltip.css" media="all" /><link id="Link2" rel="stylesheet" type="text/css" href="../commonv4/styles/global508.css" media="all" />
+    
+    <link rel="stylesheet" type="text/css" href="../commonv4/Styles/datepicker.css" /> 
+    <script type="text/javascript" src="../commonv4/Scripts/datepicker.js"></script>
+    <script lang="javascript" type="text/javascript" src="../Common/CivilCalendar.js"></script>
+    <script lang="javascript" src="../Commonv4/scripts/temporarymessage.js"></script>
+
+
+
+    <script lang="javascript">
+        function disableDept() {
+            getObj('ddlDept').disabled = true;
+            document.getElementById('butSearchByType').disabled = true;
+            document.getElementById('gifWaiting').style.display = "inline-block";
+            return true;
+        }
+    </script>
+    <style>
+    input {
+    	padding:  5px;
+    }
+
+    </style>
+
+</head>
+
+
+<body>
+    <!--JQuery-->
+    <script src="/CivilCalendar/commonv4/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+ 
+
+    <div id="mainContainer">
+
+        <div id="headerWrap" style="display:none">
+            <!-- Start Translate -->
+            <!-- End Translate -->
+
+            
+            
+
+            <!-- Font Size -->
+            
+
+            <!-- Start Logo -->
+            <div class="logo">
+                <a href="/page/HO0000" onclick="return processLink(this)"><img src="../commonv4/images/logo.gif" id="Img1" alt="Banner Image - The Superior Court of California County of Los Angeles " /></a>
+            </div>
+            <!-- End Logo -->
+
+   	        <!-- Start Search -->
+            <div class="searchWrap"  role="search" >
+            <form name="searchForm" method="get" onsubmit="doSearch(); return false;">
+    
+    	        <div id="searchfieldWrap">
+    		        <input aria-label="Enter Search Criteria" id="searchfield" type="text" name="search" value="Search" onclick="selectSearchText()" onkeydown=""/>
+    	        </div>
+        
+            <div id="btngoWrap">
+                    <a id="searchLink" href="#" onclick="return doSearch(this)"><img src="../commonv4/images/blank.gif" id="Img2" style="margin-left:1px;margin-top:1px" alt="Start Site Search" width="33" height="33" /></a>
+            </div>
+        
+            </form>
+	        </div> 
+            
+            <!-- Survey -->
+              
+        </div>
+
+        <!-- Start MainMenu -->
+        <!---#include virtual="includes/menu2aa.html" --->
+        <!-- End MainMenu -->
+
+        <form method="post" action="./mainpanel.aspx?CaseType=general" id="lascwebform">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ0NjUwOTc1OQ9kFgJmD2QWAmYPZBYCAgQPZBYCAgEPZBYEAgEPZBYCAgEPZBYEZg8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTtkAgYPFgIeBFRleHQFXTxzY3JpcHQgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz4kKCIjbmF2QmFyVGFiMiIpLmFkZENsYXNzKCJuYXZXaGl0ZUJveCBzZWxlY3RlZFRhYiIpOzwvc2NyaXB0PmQCBw9kFgQCAQ8PFgIeB1Zpc2libGVoZGQCAw8PFgIfAmdkFg5mDxYCHwJoZAIBD2QWAgIBDxBkZBYAZAIEDxAPZBYCHghvbmNoYW5nZQUOZGlzYWJsZURlcHQoKTsQFRYGU2VsZWN0E0FsaGFtYnJhIENvdXJ0aG91c2UYQmV2ZXJseSBIaWxscyBDb3VydGhvdXNlEkJ1cmJhbmsgQ291cnRob3VzZRVDaGF0c3dvcnRoIENvdXJ0aG91c2USQ29tcHRvbiBDb3VydGhvdXNlE0dsZW5kYWxlIENvdXJ0aG91c2UlR292ZXJub3IgR2VvcmdlIERldWttZWppYW4gQ291cnRob3VzZRRJbmdsZXdvb2QgQ291cnRob3VzZRdNZXRyb3BvbGl0YW4gQ291cnRob3VzZS1NaWNoYWVsIEFudG9ub3ZpY2ggQW50ZWxvcGUgVmFsbGV5IENvdXJ0aG91c2USTm9yd2FsayBDb3VydGhvdXNlE1Bhc2FkZW5hIENvdXJ0aG91c2UXUG9tb25hIENvdXJ0aG91c2UgU291dGgXU2FuIEZlcm5hbmRvIENvdXJ0aG91c2UXU2FudGEgTW9uaWNhIENvdXJ0aG91c2UYU3ByaW5nIFN0cmVldCBDb3VydGhvdXNlF1N0YW5sZXkgTW9zayBDb3VydGhvdXNlE1RvcnJhbmNlIENvdXJ0aG91c2UYVmFuIE51eXMgQ291cnRob3VzZSBFYXN0GFZhbiBOdXlzIENvdXJ0aG91c2UgV2VzdBZXZXN0IENvdmluYSBDb3VydGhvdXNlFRYAQkFMSDs7QWxoYW1icmEgQ291cnRob3VzZTsxNTAgV2VzdCBDb21tb253ZWFsdGgsIEFsaGFtYnJhLCBDQSA5MTgwMUZCSCA7O0JldmVybHkgSGlsbHMgQ291cnRob3VzZTs5MzU1IEJ1cnRvbiBXYXksIEJldmVybHkgSGlsbHMsIENBIDkwMjEwPEJVUjtOQ0I7QnVyYmFuayBDb3VydGhvdXNlOzMwMCBFYXN0IE9saXZlLCBCdXJiYW5rLCBDQSA5MTUwMkNDSEE7O0NoYXRzd29ydGggQ291cnRob3VzZTs5NDI1IFBlbmZpZWxkIEF2ZS4sIENoYXRzd29ydGgsIENBIDkxMzExQ0NPTTtTQztDb21wdG9uIENvdXJ0aG91c2U7MjAwIFdlc3QgQ29tcHRvbiBCbHZkLiwgQ29tcHRvbiwgQ0EgOTAyMjBBR0xOO05DRztHbGVuZGFsZSBDb3VydGhvdXNlOzYwMCBFYXN0IEJyb2Fkd2F5LCBHbGVuZGFsZSwgQ0EgOTEyMDZPTEIgO1NPO0dvdmVybm9yIEdlb3JnZSBEZXVrbWVqaWFuIENvdXJ0aG91c2U7Mjc1IE1hZ25vbGlhLCBMb25nIEJlYWNoLCBDQSA5MDgwMj5JTkc7O0luZ2xld29vZCBDb3VydGhvdXNlOzEgUmVnZW50IFN0cmVldCwgSW5nbGV3b29kLCBDQSA5MDMwMUpNRVQ7O01ldHJvcG9saXRhbiBDb3VydGhvdXNlOzE5NDUgU291dGggSGlsbCBTdHJlZXQsIExvcyBBbmdlbGVzLCBDQSA5MDAwN19BVFA7Tk87TWljaGFlbCBBbnRvbm92aWNoIEFudGVsb3BlIFZhbGxleSBDb3VydGhvdXNlOzQyMDExIDR0aCBTdHJlZXQgV2VzdCwgTGFuY2FzdGVyLCBDQSA5MzUzNDdTRSA7Tk9SO05vcndhbGsgQ291cnRob3VzZTsxMjcyMCBOb3J3YWxrIEJsdmQuLCBOb3J3YWxrQlBBUztORTtQYXNhZGVuYSBDb3VydGhvdXNlOzMwMCBFYXN0IFdhbG51dCBTdC4sIFBhc2FkZW5hLCBDQSA5MTEwMTtFQSA7O1BvbW9uYSBDb3VydGhvdXNlIFNvdXRoOzQwMCBDaXZpYyBDZW50ZXIgUGxhemEsIFBvbW9uYUdMQVM7TlY7U2FuIEZlcm5hbmRvIENvdXJ0aG91c2U7OTAwIFRoaXJkIFN0cmVldCwgU2FuIEZlcm5hbmRvLCBDQSA5MTM0MEdTTSA7V0U7U2FudGEgTW9uaWNhIENvdXJ0aG91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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['lascwebform'];
+if (!theForm) {
+    theForm = document.lascwebform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2AD3A5A0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+            <!--<h1><span style="display:none" role="heading">Main Content</span></h1>-->
+            <div class="pageWrap">
+                
+    <div style="display:none">
+    
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_breadcrumbBarContainer" class="breadcrumbBarContainer" display="none" style="display:none;">
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_enabledLink" display="none" class="breadcrumbBar">
+        <a href="#" class="topBreadcrumb" onclick="return processLink(this)"><span class="glyphicon glyphicon-menu-right"></span></a>
+    </div>    
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_disabledLink" class="breadcrumbBar">
+        <div class="topBreadcrumb"><span class="glyphicon glyphicon-menu-right"></span></div>
+    </div>
+</div>
+<div style="height:30px">
+    <div id="siteMasterHolder_breadcrumbHolder_breadcrumb_returnLinkContainer" style="text-align:right; display:none">
+        <a type="button" class="btn btn-default btn-sm" href="#" onclick="return processLink(this);">
+            <span class="glyphicon glyphicon-screenshot"></span>  Home </a>
+    </div>
+</div>
+
+<script type='text/javascript'>$("#navBarTab2").addClass("navWhiteBox selectedTab");</script>
+                
+            
+
+
+    </div>
+    
+    <div class="mainContentWrap" id="divMainContent">
+        <div class="basicWrap">
+            <div class="contentCategory" style="padding-top: 28px; padding-bottom: 10px; display:none">
+                
+    Online Services
+
+            </div>
+            <div class="contentTitle" style="display:none">
+                
+    Civil Case Calendar
+
+            </div>
+            <div class="contentText">
+                
+
+    <!-- main content -->
+     <a name="Top"></a> 
+    
+    <div id="siteMasterHolder_basicBodyHolder_panForm">
+	
+        View a list of future cases/calendar hearings. Confidential hearings will not be displayed. Search results will show available hearings up to 269 days (180 business days) in advance.
+        <table class="commontable" style="padding: 10px 10px 10px 10px; margin: 20px 20px 0px 0px; width:auto;">
+             <tr>
+            <!-- left box -->
+            <td style="width: 35%; vertical-align: top; padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px;">
+                <div class="contentHeading">search by case number</div>
+         
+                Enter a case number and click search.
+                 <br />   <br />   
+                CASE NUMBER: <br />  
+                 <input id="casenumber" type="text" aria-label="Case Number" class="textInput" name="CaseNumber" maxlength="30">
+                   <br />   <br /> 
+      
+                  <input class="button" type="button" value="Search" onclick="return searchYou('NUMBER');" style="MARGIN-TOP: 3px; MARGIN-LEFT: 5px">&nbsp;&nbsp;&nbsp;
+                   <input type="button" class="button" value="Clear" onclick="return clearFields('NUMBER');">
+                  
+                <br /><br /><br />
+                  
+            </td>
+             <!-- right box -->
+            <td style="width:65%; vertical-align: top; padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px;">
+                <div class="contentHeading">search by location</div>
+
+                Select a location then click search.<br />
+			     <br />
+                <div>
+                    <div style="column-width:70px; float:left;">Date:&nbsp;&nbsp;&nbsp;<br /></div>
+			        <div style="column-width:auto; float:left;">From:  <input name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$dateFrom" type="text" value="9/21/2026" id="siteMasterHolder_basicBodyHolder_dateFrom" aria-label="Date From" name="dateFrom" class="datepicker" /> 
+                    <br /> 
+                    To:&nbsp; &nbsp;&nbsp;&nbsp;   <input name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$dateTo" type="text" value="9/25/2026" id="siteMasterHolder_basicBodyHolder_dateTo" aria-label="Date To" name="dateTo" class="datepicker" />
+                    </div>
+                </div>
+                <br />&nbsp;<br /><br /> <br />                                                                        
+                Courthouse:<br />
+			    <select name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$ddlLocation2" onchange="disableDept();setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$siteMasterHolder$basicBodyHolder$ddlLocation2\&#39;,\&#39;\&#39;)&#39;, 0)" id="siteMasterHolder_basicBodyHolder_ddlLocation2" aria-label="Courthouse">
+		<option value="">Select</option>
+		<option value="ALH;;Alhambra Courthouse;150 West Commonwealth, Alhambra, CA 91801">Alhambra Courthouse</option>
+		<option value="BH ;;Beverly Hills Courthouse;9355 Burton Way, Beverly Hills, CA 90210">Beverly Hills Courthouse</option>
+		<option value="BUR;NCB;Burbank Courthouse;300 East Olive, Burbank, CA 91502">Burbank Courthouse</option>
+		<option value="CHA;;Chatsworth Courthouse;9425 Penfield Ave., Chatsworth, CA 91311">Chatsworth Courthouse</option>
+		<option value="COM;SC;Compton Courthouse;200 West Compton Blvd., Compton, CA 90220">Compton Courthouse</option>
+		<option value="GLN;NCG;Glendale Courthouse;600 East Broadway, Glendale, CA 91206">Glendale Courthouse</option>
+		<option value="LB ;SO;Governor George Deukmejian Courthouse;275 Magnolia, Long Beach, CA 90802">Governor George Deukmejian Courthouse</option>
+		<option value="ING;;Inglewood Courthouse;1 Regent Street, Inglewood, CA 90301">Inglewood Courthouse</option>
+		<option value="MET;;Metropolitan Courthouse;1945 South Hill Street, Los Angeles, CA 90007">Metropolitan Courthouse</option>
+		<option value="ATP;NO;Michael Antonovich Antelope Valley Courthouse;42011 4th Street West, Lancaster, CA 93534">Michael Antonovich Antelope Valley Courthouse</option>
+		<option value="SE ;NOR;Norwalk Courthouse;12720 Norwalk Blvd., Norwalk">Norwalk Courthouse</option>
+		<option value="PAS;NE;Pasadena Courthouse;300 East Walnut St., Pasadena, CA 91101">Pasadena Courthouse</option>
+		<option value="EA ;;Pomona Courthouse South;400 Civic Center Plaza, Pomona">Pomona Courthouse South</option>
+		<option value="LAS;NV;San Fernando Courthouse;900 Third Street, San Fernando, CA 91340">San Fernando Courthouse</option>
+		<option value="SM ;WE;Santa Monica Courthouse;1725 Main Street, Santa Monica, CA 90401">Santa Monica Courthouse</option>
+		<option value="SS ;SS;Spring Street Courthouse;312 North Spring Street Los Angeles, CA 90012">Spring Street Courthouse</option>
+		<option selected="selected" value="LAM;LA;Stanley Mosk Courthouse;111 North Hill Street, Los Angeles, CA 90012">Stanley Mosk Courthouse</option>
+		<option value="SBA;SW;Torrance Courthouse;825 Maple Ave., Torrance, CA 90503">Torrance Courthouse</option>
+		<option value="NW ;;Van Nuys Courthouse East;6230 Sylmar Ave., Van Nuys, CA 91401">Van Nuys Courthouse East</option>
+		<option value="LAV;;Van Nuys Courthouse West;14400 Erwin Street Mall, Van Nuys, CA 91401">Van Nuys Courthouse West</option>
+		<option value="CIT;;West Covina Courthouse;1427 West Covina Parkway, West Covina, CA 91790">West Covina Courthouse</option>
+
+	</select>
+                <br /><br /> 
+                 Department: <br />
+			    <select name="ctl00$ctl00$siteMasterHolder$basicBodyHolder$ddlDept" id="siteMasterHolder_basicBodyHolder_ddlDept" aria-label="Department" class="ddl">
+		<option value="20">20</option>
+		<option value="217">217</option>
+		<option value="224">224</option>
+		<option value="236">236</option>
+		<option value="240">240</option>
+		<option value="244">244</option>
+		<option value="246">246</option>
+		<option value="28">28</option>
+		<option value="30">30</option>
+		<option value="300">300</option>
+		<option value="306">306</option>
+		<option value="307">307</option>
+		<option value="309">309</option>
+		<option selected="selected" value="310">310</option>
+		<option value="311">311</option>
+		<option value="316">316</option>
+		<option value="318">318</option>
+		<option value="34">34</option>
+		<option value="400">400</option>
+		<option value="406">406</option>
+		<option value="407">407</option>
+		<option value="408">408</option>
+		<option value="410">410</option>
+		<option value="412">412</option>
+		<option value="413">413</option>
+		<option value="414">414</option>
+		<option value="415">415</option>
+		<option value="416">416</option>
+		<option value="418">418</option>
+		<option value="500">500</option>
+		<option value="506">506</option>
+		<option value="507">507</option>
+		<option value="508">508</option>
+		<option value="509">509</option>
+		<option value="510">510</option>
+		<option value="511">511</option>
+		<option value="512">512</option>
+		<option value="513">513</option>
+		<option value="514">514</option>
+		<option value="515">515</option>
+		<option value="516">516</option>
+		<option value="517">517</option>
+		<option value="529">529</option>
+		<option value="531">531</option>
+		<option value="534">534</option>
+		<option value="541">541</option>
+		<option value="56">56</option>
+		<option value="58">58</option>
+		<option value="600">600</option>
+		<option value="610">610</option>
+		<option value="614">614</option>
+		<option value="615B">615B</option>
+		<option value="617">617</option>
+		<option value="621">621</option>
+		<option value="629">629</option>
+		<option value="630">630</option>
+		<option value="631">631</option>
+		<option value="632">632</option>
+		<option value="633">633</option>
+		<option value="636">636</option>
+		<option value="729">729</option>
+		<option value="730">730</option>
+		<option value="731">731</option>
+		<option value="732">732</option>
+		<option value="733">733</option>
+		<option value="734">734</option>
+		<option value="735">735</option>
+		<option value="74">74</option>
+		<option value="76">76</option>
+		<option value="833">833</option>
+		<option value="834">834</option>
+		<option value="836">836</option>
+		<option value="90">90</option>
+		<option value="Civil Cler">Civil Cler</option>
+
+	</select>&nbsp;&nbsp;<span id="gifWaiting" style="display: none ">Updating...</span>
+                 <br />
+                 <br />
+			    <input class="button" type="button" value="Search" id="butSearchByType" onclick="return searchYou('TYPE');" style="MARGIN-TOP: 3px">&nbsp;&nbsp;&nbsp;
+                 <input class="button" onclick="return clearFields('TYPE'); return false;" type="button" value="Clear">
+																				
+
+            </td>
+            </tr>
+             <!-- bottom box -->
+            <tr>
+            <td colspan="2" style="padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px;">
+            <a name="ResultTop"></a>    
+                
+
+                
+
+<div>
+    <div class="contentHeading" style="float:left;">Search Result:&nbsp;&nbsp;</div>
+    <div style="float:right; padding-right:20px;"><a href="#Top">Top</a></div>
+    <div style="clear: both;"></div>
+</div>
+<div class="noPrint" align="right" valign="top">
+&nbsp;
+ 
+
+</div>
+<br />
+
+
+<table id="siteMasterHolder_basicBodyHolder_calendarDeptDate_tblResults" class="commontable" width="100%">
+		<tr>
+			<th>Date</th><th width="55">Time</th><th>Event</th><th>Case</th><th>Title</th><th>File Date</th>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Status Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=19STCV21210" >19STCV21210</a></td><td valign="top">JANE DOE VS CHURCH OF SCIENTOLOGY INTERNATIONAL, ET AL.</td><td valign="top">06/18/2019</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Status Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=22STCV19043" >22STCV19043</a></td><td valign="top">NANCY SALINAS VS HOF'S HUT RESTAURANTS, INC., A CALIFORNIA CORPORATION</td><td valign="top">06/10/2022</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Dismissal (Settlement)</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=22STCV19043" >22STCV19043</a></td><td valign="top">NANCY SALINAS VS HOF'S HUT RESTAURANTS, INC., A CALIFORNIA CORPORATION</td><td valign="top">06/10/2022</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Jury Trial</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=23STCV26736" >23STCV26736</a></td><td valign="top">XCELLENCE, INC. VS TRILLER PLATFORM CO.</td><td valign="top">11/01/2023</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12390" >26STCV12390</a></td><td valign="top">BLANCA A MIER PENA, Y VS HYUNDAI MOTOR AMERICA, INC.</td><td valign="top">04/16/2026</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12390" >26STCV12390</a></td><td valign="top">BLANCA A MIER PENA, Y VS HYUNDAI MOTOR AMERICA, INC.</td><td valign="top">04/16/2026</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12930" >26STCV12930</a></td><td valign="top">ANDREA NICOLE TAPIA VS LOS ANGELES UNIFIED SCHOOL DISTRICT, A CALIFORNIA PUBLIC SCHOOL DISTRICT</td><td valign="top">04/22/2026</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12930" >26STCV12930</a></td><td valign="top">ANDREA NICOLE TAPIA VS LOS ANGELES UNIFIED SCHOOL DISTRICT, A CALIFORNIA PUBLIC SCHOOL DISTRICT</td><td valign="top">04/22/2026</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13539" >26STCV13539</a></td><td valign="top">BRADLEY JAKEL VS IMMACULATE HEART HIGH SCHOOL AND MIDDLE SCHOOL, ET AL.</td><td valign="top">04/27/2026</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13539" >26STCV13539</a></td><td valign="top">BRADLEY JAKEL VS IMMACULATE HEART HIGH SCHOOL AND MIDDLE SCHOOL, ET AL.</td><td valign="top">04/27/2026</td>
+		</tr><tr>
+			<td valign="top">09/21/2026</td><td valign="top">8:31 AM</td><td valign="top">Order to Show Cause Re: Dismissal (Settlement)</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV09264" >26STCV09264</a></td><td valign="top">PATRICK CLYDE EVINGER VS FCA US LLC</td><td valign="top">03/23/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion for Summary Judgment</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=23STCV12017" >23STCV12017</a></td><td valign="top">NEIL DORVAL VS SHERMAN LLOYD RICHARD, ET AL.</td><td valign="top">05/26/2023</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Petition to Confirm Minor's Compromise</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV13544" >24STCV13544</a></td><td valign="top">SAVANNA LEIGH DELOS REYES, A MINOR, BY AND THROUGH HER GUARDIAN AD LITEM,  DARREN EARL ARISTON DELOS  REYES VS MANALI TOWN HOMES, L.P. A LIMITED PARTNERSHIP, ET AL.</td><td valign="top">05/30/2024</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Post-Arbitration Status Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV21242" >25STCV21242</a></td><td valign="top">RIPSIME OVSEPYAN VS JLR LOS ANGELES LLC, ET AL.</td><td valign="top">07/18/2025</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion to Compel   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV23946" >25STCV23946</a></td><td valign="top">JANE DOE D.H., AN INDIVIDUAL VS LOS ANGELES UNIFIED SCHOOL DISTRICT, A PUBLIC ENTITY, ET AL.</td><td valign="top">08/14/2025</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV34460" >25STCV34460</a></td><td valign="top">MOHSEN JAFARI, ET AL. VS OMID GHAELI, ET AL.</td><td valign="top">11/25/2025</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV38194" >25STCV38194</a></td><td valign="top">ROBERTA WILLIAMS VS BERNARDO ESCALERA</td><td valign="top">12/31/2025</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV08544" >26STCV08544</a></td><td valign="top">NATIONAL COMMERCIAL RECOVERY, INC., A CALIFORNIA CORPORATION VS MICHAEL FALLAS</td><td valign="top">03/17/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV08544" >26STCV08544</a></td><td valign="top">NATIONAL COMMERCIAL RECOVERY, INC., A CALIFORNIA CORPORATION VS MICHAEL FALLAS</td><td valign="top">03/17/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV08935" >26STCV08935</a></td><td valign="top">DAPHNEY LYS VS YOUTUBE, LLC, ET AL.</td><td valign="top">03/19/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV08935" >26STCV08935</a></td><td valign="top">DAPHNEY LYS VS YOUTUBE, LLC, ET AL.</td><td valign="top">03/19/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion for Reconsideration</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV09776" >26STCV09776</a></td><td valign="top">JEHAN SEMPER VS COUNTY OF LOS ANGELES, ET AL.</td><td valign="top">03/26/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV11765" >26STCV11765</a></td><td valign="top">MICHAEL ALBERT SANDOVAL VS SAUL LUCERO, ET AL.</td><td valign="top">04/13/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV11765" >26STCV11765</a></td><td valign="top">MICHAEL ALBERT SANDOVAL VS SAUL LUCERO, ET AL.</td><td valign="top">04/13/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV11916" >26STCV11916</a></td><td valign="top">LUSABER TATEVOSYAN VS SUPER CENTER CONCEPTS, INC.</td><td valign="top">04/14/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV11916" >26STCV11916</a></td><td valign="top">LUSABER TATEVOSYAN VS SUPER CENTER CONCEPTS, INC.</td><td valign="top">04/14/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12391" >26STCV12391</a></td><td valign="top">MAHKYI M. TUTT, ET AL. VS ABEL MAXIMO, ET AL.</td><td valign="top">04/17/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12391" >26STCV12391</a></td><td valign="top">MAHKYI M. TUTT, ET AL. VS ABEL MAXIMO, ET AL.</td><td valign="top">04/17/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">8:30 AM</td><td valign="top">Status Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV24864" >26STCV24864</a></td><td valign="top">TWILA S. WHITE, ET AL. VS CICELY FLEMING</td><td valign="top">08/04/2026</td>
+		</tr><tr>
+			<td valign="top">09/22/2026</td><td valign="top">3:00 PM</td><td valign="top">Non-Appearance Case Review</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=21STCV27600" >21STCV27600</a></td><td valign="top">ADELA CEBREROS VS JUPITER INDUSTRIES, INC., A CALIFORNIA CORPORATION, ET AL.</td><td valign="top">07/27/2021</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Dismissal (Settlement)</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=21STCV24637" >21STCV24637</a></td><td valign="top">CITY OF LOS ANGELES, ACTING BY AND THROUGH THE LOS ANGELES DEPARTMENT OF WATER AND POWER VS RICARDO J. BRISENO RAMIREZ, ET AL.</td><td valign="top">07/02/2021</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re:   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV14193" >24STCV14193</a></td><td valign="top">LIDIA CORNELIO VS LES SISTERS ENTERPRISES, INC., ET AL.</td><td valign="top">06/05/2024</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV19368" >24STCV19368</a></td><td valign="top">RAKESH DUBEY VS JACK BLOWER</td><td valign="top">08/02/2024</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV23292" >24STCV23292</a></td><td valign="top">DAVID TRACY VS THE AEROSPACE CORPORATION</td><td valign="top">09/10/2024</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV23292" >24STCV23292</a></td><td valign="top">DAVID TRACY VS THE AEROSPACE CORPORATION</td><td valign="top">09/10/2024</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re:   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV23292" >24STCV23292</a></td><td valign="top">DAVID TRACY VS THE AEROSPACE CORPORATION</td><td valign="top">09/10/2024</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Post-Arbitration Status Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV12615" >25STCV12615</a></td><td valign="top">HARDIMAN TREVIA VS COSM HOLLYWOOD PARK LLC</td><td valign="top">04/29/2025</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV17812" >25STCV17812</a></td><td valign="top">RACHEL GETACHEW VS ALTA VISTA SUNSET LLC</td><td valign="top">06/20/2025</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion to Compel   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV27140" >25STCV27140</a></td><td valign="top">ARNULFO BARAJAS VS HYDRO SYSTEMS, INC., A CALIFORNIA  CORPORATION AND DOES 1 THROUGH 50,  INCLUSIVE,</td><td valign="top">09/16/2025</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV28721" >25STCV28721</a></td><td valign="top">SAMUEL BLAIR VS AMCAL HOLLENBECK FUND LP, A LIMITED PARTNERSHIP</td><td valign="top">10/01/2025</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV37456" >25STCV37456</a></td><td valign="top">ANA BARBARA ROSABAL VS DAVIT SAAGSYAN</td><td valign="top">12/26/2025</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re:   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV37456" >25STCV37456</a></td><td valign="top">ANA BARBARA ROSABAL VS DAVIT SAAGSYAN</td><td valign="top">12/26/2025</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Demurrer - with Motion to Strike (CCP 430.10)</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12044" >26STCV12044</a></td><td valign="top">ERICK SALAS, AN INDIVIDUAL VS RALPHS GROCERY COMPANY, A OHIO CORPORATION, ET AL.</td><td valign="top">04/15/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13285" >26STCV13285</a></td><td valign="top">MICHAEL SANDOVAL VS HAIR FAIRIES, INC, A DELAWARE CORPORATION</td><td valign="top">04/24/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13588" >26STCV13588</a></td><td valign="top">CHARISE HENRY VS LOS ANGELES BROTHERHOOD CRUSADE-BLACK UNITED FUND, INC.</td><td valign="top">04/28/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13588" >26STCV13588</a></td><td valign="top">CHARISE HENRY VS LOS ANGELES BROTHERHOOD CRUSADE-BLACK UNITED FUND, INC.</td><td valign="top">04/28/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV14381" >26STCV14381</a></td><td valign="top">KE KANG VS OMNI LOS ANGELES LLC, ET AL.</td><td valign="top">05/05/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV14381" >26STCV14381</a></td><td valign="top">KE KANG VS OMNI LOS ANGELES LLC, ET AL.</td><td valign="top">05/05/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion to Strike   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV15296" >26STCV15296</a></td><td valign="top">STEVE MENESES VS EMCOR FACILITIES SERVICES, INC., AN OHIO CORPORATION;</td><td valign="top">05/13/2026</td>
+		</tr><tr>
+			<td valign="top">09/23/2026</td><td valign="top">3:00 PM</td><td valign="top">Non-Appearance Case Review</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=22STCV40809" >22STCV40809</a></td><td valign="top">GREAT DANE LLC VS MURCHISON & CUMMING, LLP, ET AL.</td><td valign="top">12/29/2022</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Final Status Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=23STCV30569" >23STCV30569</a></td><td valign="top">IRENE C. RODRIGUEZ DE RUIZ VS GENERAL MOTORS LLC</td><td valign="top">12/14/2023</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion for Terminating Sanctions</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV22842" >24STCV22842</a></td><td valign="top">VICTOR CHEN, AN INDIVIDUAL VS DIANA ELIZABETH CALDERON, AN INDIVIDUAL</td><td valign="top">09/05/2024</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Hearing on Motion for Attorney Fees</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV29686" >24STCV29686</a></td><td valign="top">MARIO TOVAR VELAZQUEZ VS GENERAL MOTORS LLC</td><td valign="top">11/12/2024</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Dismissal (Settlement)</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=24STCV29686" >24STCV29686</a></td><td valign="top">MARIO TOVAR VELAZQUEZ VS GENERAL MOTORS LLC</td><td valign="top">11/12/2024</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV16817" >25STCV16817</a></td><td valign="top">EDGARDO G RIVAS VS AFTON PROPERTY MANAGEMENT</td><td valign="top">06/11/2025</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re:   </td><td valign="top"><a href="CalendarCase.aspx?caseNumber=25STCV16817" >25STCV16817</a></td><td valign="top">EDGARDO G RIVAS VS AFTON PROPERTY MANAGEMENT</td><td valign="top">06/11/2025</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV06861" >26STCV06861</a></td><td valign="top">MONE SHAW VS THE CHICAGO SCHOOL</td><td valign="top">03/03/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV06861" >26STCV06861</a></td><td valign="top">MONE SHAW VS THE CHICAGO SCHOOL</td><td valign="top">03/03/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12828" >26STCV12828</a></td><td valign="top">MORGAN M. CRAVEN VS WOUND CARE ADVANTAGE, LLC, ET AL.</td><td valign="top">04/21/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV12828" >26STCV12828</a></td><td valign="top">MORGAN M. CRAVEN VS WOUND CARE ADVANTAGE, LLC, ET AL.</td><td valign="top">04/21/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13593" >26STCV13593</a></td><td valign="top">NICHOLAS ALDEN SILENE VS ESTATE OF RAUL VILLAREAL</td><td valign="top">04/28/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV13593" >26STCV13593</a></td><td valign="top">NICHOLAS ALDEN SILENE VS ESTATE OF RAUL VILLAREAL</td><td valign="top">04/28/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Order to Show Cause Re: Failure to File Proof of Service</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV14629" >26STCV14629</a></td><td valign="top">TIFFANI MARIE BATE VS KENNETH BERRY, ET AL.</td><td valign="top">05/07/2026</td>
+		</tr><tr>
+			<td valign="top">09/24/2026</td><td valign="top">8:30 AM</td><td valign="top">Case Management Conference</td><td valign="top"><a href="CalendarCase.aspx?caseNumber=26STCV14629" >26STCV14629</a></td><td valign="top">TIFFANI MARIE BATE VS KENNETH BERRY, ET AL.</td><td valign="top">05/07/2026</td>
+		</tr>
+	</table>
+
+
+
+<script lang="javascript">
+    window.location = '#ResultTop';
+</script>
+
+            <input type="hidden" name="hdnType" id="hdnType" value="">
+            <input type="hidden" value="LAM" name="Loc"><input type="hidden" value="LA" name="Loc2"><input type="hidden" value="Stanley Mosk Courthouse" name="LocName"><input type="hidden" value="111 North Hill Street, Los Angeles, CA 90012" name="LocAddress"><input type="hidden" value="General Jurisdiction Civil Calendar" name="Calendar"><input type="hidden" value="CV" name="DivCode">
+             </td>
+            </tr>
+        </table>
+    
+</div>
+
+
+            </div>
+        </div>
+        <script>var contentArea = "#divMainContent";</script>
+    </div>
+    <div class="moreContentWrap" style="display:none">
+        <div class="moreLeftWrap">
+            
+            
+        </div>
+        <div class="moreMidWrap">
+            
+            
+        </div>
+        <div class="moreRightWrap">
+            
+                <!--<div id="siteMasterHolder_rightMoreHolder_returnLink_returnLinkContainer" style="text-align:right; display:none">
+    <a href="../commonv4/source/uc/x" id="siteMasterHolder_rightMoreHolder_returnLink_homeButtonLink" type="button" class="btn btn-default btn-sm" onclick="return processLink(this);">
+        <span class="glyphicon glyphicon-screenshot"></span>  Home
+    </a>
+
+</div>
+-->
+            
+        </div>
+    </div>
+
+    <div class="lastContentWrap" style="display:none">
+        <div class="lastLeftWrap">
+            
+
+        </div>
+        <div class="lastRightWrap">
+
+            
+
+        </div>
+    </div>
+    
+
+            </div>
+        </form>
+        <div id="footerWrap" style="display:none">
+                <!-- Start MainMenu -->
+                <!-- End MainMenu -->
+        </div>
+    </div>
+
+    <!-- Scripts Loaded at End -->
+    <!-- Provides performance benefit. Also fix for Asp.Net error, "The Controls collection cannot be modified because the control contains code blocks (i.e. < % ... % >)" -->
+    <!-- See http://www.aspdotnet-suresh.com/2011/12/aspnet-controls-collection-cannot-be.html -->
+
+    <!--JQuery-->
+    
+    <script src="/CivilCalendar/commonv4/scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/CivilCalendar/commonv4/scripts/jquery.cookie.js" type="text/javascript"></script>
+
+    <!--Google Analytics-->
+    <script src="/CivilCalendar/commonv4/scripts/analytics.js" type="text/javascript"></script>
+
+    <!-- lascweb -->   
+    <script src="/CivilCalendar/commonv4/scripts/config.js" type="text/javascript" ></script>
+    <script src="/CivilCalendar/commonv4/scripts/common.js" type="text/javascript" ></script>
+    <script src="/CivilCalendar/commonv4/scripts/tooltip.js" type="text/javascript"></script>
+    <script src="/CivilCalendar/commonv4/scripts/linkredirect.js" type="text/javascript"></script>
+    <script src="/CivilCalendar/commonv4/scripts/globaljs.js" type="text/javascript" ></script>  <!-- Nav Menu -->
+
+    <!-- text-2-speech -->
+    <!--script src="/CivilCalendar/commonv4/scripts/text2speech.js" type="text/javascript" ></!--script-->
+
+    <!-- ajax control toolkit extension -->
+    <script src="/CivilCalendar/commonv4/scripts/ajaxcontroltoolkit.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        <!-- Executes OnFocus. Highlights the text in the search box. -->
+        function selectSearchText() {
+            $("#searchfield").select();
+        }
+        function doSearch() {
+            $("#searchLink").attr("href", "/page/ho0100/" + escape($("#searchfield").val().trim()));
+            return processLink($("#searchLink"));
+        }
+    </script>
+    <!-- End Lascweb -->
+
+    
+    
+    
+            
+</body>
+</html>
+
