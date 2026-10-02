@@ -74,7 +74,7 @@ class Site(OpinionSiteLinear, DateBackscraper):
             }
         )
 
-    async def _download(self, request_dict=None):
+    async def _download(self):
         """Download data from DynamoDB for oral arguments.
 
         :return: The JSON response from DynamoDB containing oral argument records.

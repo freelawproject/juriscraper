@@ -247,7 +247,7 @@ class Site(OralArgumentSiteLinear, DateBackscraper):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """
         Prepare a single (start, end) tuple, from `first_opinion_date` to
         today, or overridden via backscrape_start / backscrape_end in kwargs.

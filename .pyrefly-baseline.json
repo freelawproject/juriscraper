@@ -302,6 +302,13 @@
       "severity": "error"
     },
     {
+      "column": 15,
+      "path": "juriscraper/opinions/united_states/federal_bankruptcy/bap9.py",
+      "name": "bad-override",
+      "concise_description": "Class member `Site._download` overrides parent class `OpinionSiteLinear` in an inconsistent manner",
+      "severity": "error"
+    },
+    {
       "column": 16,
       "path": "juriscraper/opinions/united_states/federal_district/dcd.py",
       "name": "bad-return",
