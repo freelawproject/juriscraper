@@ -15,6 +15,40 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add `juriscraper.Backscraper` with `DateBackscraper` and `YearBackscraper` mixins that parse and validate backscraper arguments in one place. Applied the mixins to the backscrapers that most needed them. #1900
+- Add `tests/local/test_BackscrapeTest.py`, testing every `Backscraper` offline. #1900
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.44 - 2026-09-30
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Strip the "(PDF)" suffix from `nytrial` case names of rows that link directly to a PDF. #2243
+
+## 3.0.43 - 2026-09-29
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.42 - 2026-09-29
+
+Features:
 -
 
 Changes:

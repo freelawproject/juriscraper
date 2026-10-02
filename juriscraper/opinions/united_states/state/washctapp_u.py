@@ -1,7 +1,11 @@
+from datetime import date
+
 from juriscraper.opinions.united_states.state import wash
 
 
 class Site(wash.Site):
+    # Oldest opinion listed in the "byYear" pages; earlier years are empty
+    first_opinion_date = date(2013, 2, 25)
     crt_level = "C"
     pub_status = "UNP"
     name_td_index = 4
