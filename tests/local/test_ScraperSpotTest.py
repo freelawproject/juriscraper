@@ -297,3 +297,32 @@ class ScraperSpotTest(unittest.TestCase):
             with self.subTest(description=description):
                 metadata = site.parse_description(description, "2026-06-18")
                 self.assertEqual(metadata["judge"], judges)
+
+    def test_nev_backscrape_past_last_page(self):
+        """A backscrape stops on the empty page after the last one"""
+        result = {
+            "docketEntryHeader": {
+                "filedDate": "2000-05-08T07:00:00.000+00:00",
+                "docketEntryDescription": "Majority: Rose/Young/Maupin.",
+            },
+            "caseHeader": {
+                "caseNumber": "33018",
+                "caseTitle": "STATE VS. DOE",
+                "caseInstanceUUID": "case-uuid",
+            },
+            "documentLinkUUID": "document-uuid",
+        }
+        pages = [
+            {"_embedded": {"results": [result]}},
+            # The API leaves out "_embedded" past the last page
+            {"page": {"size": 100, "totalElements": 1, "number": 1}},
+        ]
+
+        async def download():
+            return pages.pop(0)
+
+        site = nev.Site(backscrape_start="2000/01/01")
+        site._download = download
+        asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+        self.assertEqual(len(site.cases), 1)
+        self.assertEqual(pages, [])

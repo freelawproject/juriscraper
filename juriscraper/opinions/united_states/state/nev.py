@@ -295,7 +295,8 @@ class Site(OpinionSiteLinear):
         while True:
             self.set_url(page)
             self.html = await self._download()
-            results = self.html["_embedded"]["results"]
+            # Pages past the last one have no "_embedded" key
+            results = self.html.get("_embedded", {}).get("results", [])
             if not results:
                 break
 

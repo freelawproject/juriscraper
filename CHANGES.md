@@ -25,6 +25,7 @@ Fixes:
 - `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
+- Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
 -
 
 ## 3.0.44 - 2026-09-30
