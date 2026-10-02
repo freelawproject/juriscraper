@@ -237,12 +237,21 @@ class Site(OralArgumentSiteLinear):
                 )
                 continue
 
+            name = record.get("case_name", {}).get("S")
+            if not name:
+                logger.warning(
+                    "%s: skipping row with no case_name for docket %s",
+                    self.record_court,
+                    docket,
+                )
+                continue
+
             self.cases.append(
                 {
                     "date": date_str,
                     "docket": docket,
-                    "judge": record["case_panel"]["S"],
-                    "name": record["case_name"]["S"],
+                    "judge": record.get("case_panel", {}).get("S", ""),
+                    "name": name,
                     "url": urljoin(self.base_url, audio),
                     # Only used for ordering below; it has no getter, so it
                     # never reaches the scraped output

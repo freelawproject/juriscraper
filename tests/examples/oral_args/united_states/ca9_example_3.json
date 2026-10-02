@@ -263,5 +263,63 @@
     "record_type": {
       "S": "ora"
     }
+  },
+  {
+    "case_name_lc": {
+      "S": "aloe vera of america, et al. v. united states"
+    },
+    "hearing_location_lc": {
+      "S": "san francisco, ca                       "
+    },
+    "hearing_date": {
+      "S": "2011-10-24"
+    },
+    "active": {
+      "S": "1"
+    },
+    "hearing_location": {
+      "S": "San Francisco, CA                       "
+    },
+    "audio_file_name": {
+      "S": "2011/10/24/10-17136.wma"
+    },
+    "case_num": {
+      "S": "10-17136"
+    },
+    "publish": {
+      "N": "20111024"
+    },
+    "case_name": {
+      "S": "Aloe Vera of America, et al. V. United States"
+    },
+    "expire": {
+      "N": "20311024160007"
+    },
+    "pk_id": {
+      "S": "8228"
+    }
+  },
+  {
+    "hearing_date": {
+      "S": "2007-07-10"
+    },
+    "active": {
+      "S": "1"
+    },
+    "audio_file_name": {
+      "S": "2011/04/01/06-56211.wma"
+    },
+    "case_num": {
+      "S": "06-56211"
+    },
+    "publish": {
+      "N": "20070710"
+    },
+    "expire": {
+      "N": "20310401120000"
+    },
+    "pk_id": {
+      "S": "7229"
+    }
   }
 ]
