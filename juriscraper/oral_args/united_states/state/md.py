@@ -20,6 +20,8 @@ CourtID: md
 Court Short Name: Md.
 """
 
+from typing_extensions import override
+
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -29,7 +31,8 @@ class Site(OralArgumentSiteLinear):
         self.court_id = self.__module__
         self.url = "http://www.courts.state.md.us/coappeals/webcasts/webcastarchive.html"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         # Find rows that contain valid, non-"Bar Admissions", link
         path = (
             "//tr[.//td[2]//a/@href][not(contains(.//@href, 'baradmission'))]"

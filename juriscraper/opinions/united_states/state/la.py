@@ -12,6 +12,7 @@ import re
 from urllib.parse import urljoin
 
 import httpx
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import ParsingException
@@ -58,10 +59,7 @@ class Site(OpinionSiteLinear):
         self.rendered_pages: list[tuple[str, str]] = []
         # lasc.org sits behind Cloudflare and serves the default httpx
         # User-Agent the 521/empty shell more often; a browser UA is stabler.
-        self.request["headers"]["User-Agent"] = (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-        )
+        self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
     async def _download(self, request_dict=None):
         if self.test_mode_enabled():
@@ -74,7 +72,8 @@ class Site(OpinionSiteLinear):
             self.rendered_pages.append((url, fragment))
         return [get_html_parsed_text(html) for _, html in self.rendered_pages]
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         xpath = "//a[contains(@href, 'opinions') and contains(@href, 'pdf')]"
         for html in self.html:
             date_string = self._get_date_for_opinions(html)

@@ -2,6 +2,7 @@
 
 import asyncio
 import time
+from abc import ABC, abstractmethod
 from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from dataclasses import dataclass, field
 from http.cookiejar import CookieJar
@@ -22,6 +23,7 @@ from httpx import (
     TimeoutException,
 )
 from httpx._client import UseClientDefault
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -70,6 +72,7 @@ class ScheduledRequest(Request):
         )
         self.follow_redirects: bool | UseClientDefault = follow_redirects
         self.response: asyncio.Future[Response] = asyncio.Future()
+        self.attempt = 0
 
     @classmethod
     def _from_httpx_request(
@@ -88,6 +91,7 @@ class ScheduledRequest(Request):
         instance.__dict__.update(request.__dict__)
         instance.follow_redirects = follow_redirects
         instance.response = asyncio.Future()
+        instance.attempt = 0
         return instance
 
 
@@ -116,6 +120,73 @@ class RequestHandler:
         return
 
 
+class RetryHandler(ABC):
+    @abstractmethod
+    async def should_retry(
+        self, request: ScheduledRequest, exc: Exception
+    ) -> bool:
+        """Whether or not a request should be retried based on the exception it raised. Once `True` is
+        returned, the request will be immediately re-queued so handlers wishing to implement backoff
+        logic should call `asyncio.sleep`.
+
+        Args:
+            request: The request instance
+            exc: The exception raised by this request"""
+        ...
+
+
+class NoRetry(RetryHandler):
+    @override
+    async def should_retry(
+        self, request: ScheduledRequest, exc: Exception
+    ) -> bool:
+        return False
+
+
+@dataclass
+class ExponentialBackoff(RetryHandler):
+    """Retry handler with exponential backoff.
+
+    Attributes:
+        max_retries: The maximum number of times to retry a given request before
+            admitting failure.
+        backoff: The initial sleep time between retries.
+        backoff_growth: The factor by which to increase the sleep time between
+            retries.
+        retry_codes: The HTTP status codes to retry on."""
+
+    max_retries: int = 3
+    backoff: float = 0.0
+    backoff_growth: float = 1.0
+    retry_codes: set[int] = field(
+        default_factory=lambda: {500, 502, 503, 504, 506, 507, 508}
+    )
+
+    @override
+    async def should_retry(
+        self, request: ScheduledRequest, exc: Exception
+    ) -> bool:
+        if request.attempt > self.max_retries:
+            return False
+
+        match exc:
+            case HTTPStatusError() as e if (
+                e.response.status_code not in self.retry_codes
+            ):
+                return False
+            case HTTPStatusError() | TimeoutException() | NetworkError() as e:
+                logger.info(
+                    "Attempt %s for %s (%r)", request.attempt, request.url, e
+                )
+                await asyncio.sleep(
+                    self.backoff
+                    * (self.backoff_growth ** (request.attempt - 1))
+                )
+                return True
+            case _:
+                return False
+
+
 class RequestManager(AsyncClient):
     """Wrapper around httpx.AsyncClient allowing configurable request
     handlers for retries, rate-limiting, logging, and more.
@@ -127,6 +198,7 @@ class RequestManager(AsyncClient):
         self,
         handlers: Sequence[RequestHandler] | None = None,
         *,
+        retry: RetryHandler | None = None,
         auth: tuple[str | bytes, str | bytes] | Auth | None = None,
         params: Mapping[str, PrimitiveData | Sequence[PrimitiveData]]
         | None = None,
@@ -141,6 +213,7 @@ class RequestManager(AsyncClient):
 
         Args:
             handlers: Handlers to run on every request
+            retry: Handler specifying when requests should be retried.
             auth: Authentication to use when sending requests (httpx AsyncClient passthrough)
             params: Query parameters (httpx AsyncClient passthrough)
             headers: Headers to include in every request (httpx AsyncClient passthrough). If
@@ -154,6 +227,8 @@ class RequestManager(AsyncClient):
             default_encoding: Default encoding for responses if not specified by `Content-Type`
                 header (httpx AsyncClient passthrough)
         """
+        if retry is None:
+            retry = NoRetry()
         extra_headers = {
             "Cache-Control": "no-cache, max-age=0, must-revalidate",
             "Pragma": "no-cache",
@@ -176,6 +251,7 @@ class RequestManager(AsyncClient):
         )
         if handlers is None:
             handlers = []
+        self._retry_handler: RetryHandler = retry
         self._queue: asyncio.Queue[ScheduledRequest] = asyncio.Queue[
             ScheduledRequest
         ]()
@@ -211,6 +287,7 @@ class RequestManager(AsyncClient):
             )
             queue.task_done()
 
+    @override
     async def aclose(self) -> None:
         """Close the request manager and its underlying client."""
         if self._loop_task:
@@ -226,20 +303,19 @@ class RequestManager(AsyncClient):
     async def enqueue_request(self, request: ScheduledRequest) -> None:
         """Push a request onto the queue to be processed.
 
-        Resets the request's state and awaits the `before_queue` methods of any
-        handlers before queueing.
+        Increments the request's attempt count and adds it to the queue.
 
         Args:
             request: The request to schedule."""
         await self._ensure_loop()
-        if request.response.done():
-            request.response = asyncio.Future()
+        request.attempt += 1
         logger.debug(
             "Queueing request: %s",
             request.url,
         )
         await self._queue.put(request)
 
+    @override
     async def request(
         self,
         method: str,
@@ -275,6 +351,7 @@ class RequestManager(AsyncClient):
             cookies: The cookies to send with the request
             follow_redirects: Whether to follow redirect responses
             timeout: Response timeout
+            **kwargs: Arbitrary keyword arguments.
 
         Return:
             The response to the dispatched request after handler interference."""
@@ -292,7 +369,7 @@ class RequestManager(AsyncClient):
             timeout=timeout,
         )
 
-        listen_tasks = {
+        tasks = {
             asyncio.create_task(h.listen(self, request)) for h in self.handlers
         }
         logger.debug("Handlers listening: %s", request.url)
@@ -302,14 +379,14 @@ class RequestManager(AsyncClient):
             "Request %s queued. Waiting for listen handlers to finish.",
             request.url,
         )
-        _ = await asyncio.gather(*listen_tasks)
+        _ = await asyncio.gather(*tasks)
         logger.debug(
             "Request queued and handlers finished. Waiting for response: %s",
             request.url,
         )
-
         return await request.response
 
+    @override
     async def send(
         self, request: ScheduledRequest, **kwargs: Any
     ) -> Response | None:
@@ -317,6 +394,7 @@ class RequestManager(AsyncClient):
 
         Args:
             request: The request to send.
+            **kwargs: Arbitrary keyword arguments.
 
         Returns:
             The `httpx.Response` or `None` if an error occurred."""
@@ -340,7 +418,10 @@ class RequestManager(AsyncClient):
             )
             _ = response.raise_for_status()
         except Exception as e:
-            logger.warning("Request failed: %s (%s)", request.url, str(e))
+            if await self._retry_handler.should_retry(request, e):
+                await self.enqueue_request(request)
+                return None
+            logger.warning("Request failed: %s (%s)", request.url, repr(e))
             request.response.set_exception(e)
         else:
             logger.debug("Request succeeded: %s", request.url)
@@ -348,6 +429,7 @@ class RequestManager(AsyncClient):
 
         return response
 
+    @override
     def build_request(
         self,
         *args: Any,
@@ -360,12 +442,14 @@ class RequestManager(AsyncClient):
             follow_redirects=follow_redirects,
         )
 
+    @override
     async def __aenter__(self) -> "RequestManager":
         """Allows the client to be used as an async context manager."""
         _ = await super().__aenter__()
         await self._ensure_loop()
         return self
 
+    @override
     async def __aexit__(
         self,
         exc_type: type[BaseException] | None = None,
@@ -383,7 +467,7 @@ class RateLimit(RequestHandler):
     def __init__(self, rps: float = 2.0) -> None:
         """Initialize the rate limit handler.
 
-        Parameters:
+        Args:
             rps: The maximum number of requests to allow per second."""
         if rps <= 0.0:
             raise ValueError(
@@ -392,6 +476,7 @@ class RateLimit(RequestHandler):
         self._last_request_time: float = 0.0
         self._request_spacing: float = 1.0 / rps
 
+    @override
     async def before_send(
         self, manager: "RequestManager", request: ScheduledRequest
     ) -> None:
@@ -400,63 +485,3 @@ class RateLimit(RequestHandler):
         sleep_time = max(0.0, self._request_spacing - elapsed)
         self._last_request_time = time.time() + sleep_time
         await asyncio.sleep(sleep_time)
-
-
-@dataclass
-class Retry(RequestHandler):
-    """Handler to retry failed requests with exponential backoff.
-
-    Attributes:
-        max_retries: The maximum number of times to retry a given request
-            before admitting failure.
-        backoff: The initial sleep time between retries.
-        backoff_growth: The factor by which to increase the sleep time between retries.
-        retry_codes: The HTTP status codes to retry on."""
-
-    max_retries: int = 3
-    backoff: float = 0.0
-    backoff_growth: float = 1.0
-    retry_codes: set[int] = field(
-        default_factory=lambda: {500, 502, 503, 504, 506, 507, 508}
-    )
-
-    async def listen(
-        self, manager: RequestManager, request: ScheduledRequest
-    ) -> None:
-        """Awaits the response in a try-except block and re-queues the request if
-        the `except` block is triggered by an HTTP error in `retry_codes` and the
-        maximum number of retries hasn't been hit yet."""
-        backoff = self.backoff
-        last_exc = None
-        for _ in range(self.max_retries):
-            try:
-                _ = await request.response
-            except HTTPStatusError as e:
-                if e.response.status_code not in self.retry_codes:
-                    logger.error(
-                        "Received %s from %s\nResponse: %s",
-                        e.response.status_code,
-                        e.request.url,
-                        e.response.text,
-                    )
-                    return
-                last_exc = e
-            except TimeoutException as e:
-                last_exc = e
-            except NetworkError as e:
-                last_exc = e
-            except Exception as e:
-                logger.exception(
-                    "Unexpected error while processing request %s: %r",
-                    request.url,
-                    e,
-                )
-                return
-            else:
-                return
-
-            await asyncio.sleep(backoff)
-            backoff *= self.backoff_growth
-            await manager.enqueue_request(request)
-
-        logger.error("Max retries exceeded for %s: %r", request.url, last_exc)

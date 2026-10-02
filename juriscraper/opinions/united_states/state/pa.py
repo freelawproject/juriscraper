@@ -8,6 +8,8 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
@@ -56,6 +58,7 @@ class Site(ClusterSite):
         self.url = f"{self.base_url}{urlencode(self.params)}"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _process_html(self) -> None:
         """Parses data into case dictionaries
 
@@ -262,4 +265,4 @@ class Site(ClusterSite):
         self.url = f"{self.base_url}{urlencode(self.params)}"
         logger.info("Backscraping for range %s %s", *dates)
         self.html = await self._download()
-        self._process_html()
+        await self._process_html()

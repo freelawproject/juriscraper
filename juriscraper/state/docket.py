@@ -10,6 +10,24 @@ from typing import Generic, TypeVar
 
 from pydantic import BaseModel
 
+_DeserializableT = TypeVar("_DeserializableT", bound="Deserializable")
+
+
+class Deserializable(BaseModel):
+    """Indicates a Pydantic model which can be deserialized from the output of
+    a `model_dump` method."""
+
+    @classmethod
+    def deserialize(
+        cls: type[_DeserializableT], text: str
+    ) -> _DeserializableT:
+        """Deserialize a JSON string into an instance of this model."""
+        return cls.model_validate_json(
+            text,
+            context={"deserialize": True},
+            by_name=True,
+        )
+
 
 class Document(BaseModel):
     """
@@ -51,7 +69,7 @@ class DocketEntryType(Enum):
 _DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)
 
 
-class DocketEntry(BaseModel, Generic[_DocketEntryDocument]):
+class DocketEntry(Deserializable, Generic[_DocketEntryDocument]):
     """
     Represents a single docket entry.
 
@@ -91,7 +109,7 @@ class TransferReason(Enum):
     """A transfer reason could not be determined by the parser."""
 
 
-class DocketTransfer(BaseModel):
+class DocketTransfer(Deserializable):
     """
     Represents a transfer of a docket from one court to another.
 
@@ -107,7 +125,7 @@ class DocketTransfer(BaseModel):
     docket_number: str
 
 
-class Representative(BaseModel):
+class Representative(Deserializable):
     """
     Someone representing a party in a case (e.g. an attorney).
 
@@ -139,7 +157,7 @@ class PartyType(Enum):
 _PartyRepresentative = TypeVar("_PartyRepresentative", bound=Representative)
 
 
-class Party(BaseModel, Generic[_PartyRepresentative]):
+class Party(Deserializable, Generic[_PartyRepresentative]):
     """
     A party in a case.
 
@@ -187,12 +205,13 @@ class DocketType(Enum):
 
 
 _DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
-_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry)
-_DocketParty = TypeVar("_DocketParty", bound=Party)
+_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry[Document])
+_DocketParty = TypeVar("_DocketParty", bound=Party[Representative])
 
 
 class Docket(
-    BaseModel, Generic[_DocketDocketTransfer, _DocketDocketEntry, _DocketParty]
+    Deserializable,
+    Generic[_DocketDocketTransfer, _DocketDocketEntry, _DocketParty],
 ):
     """
     Represents one docket in one court.
@@ -201,6 +220,7 @@ class Docket(
     :ivar docket_number: The docket number assigned by the court.
     :ivar case_name: A (potentially) shortened version of the full case name.
     :ivar case_name_full: The full case name with minimal modifications.
+    :ivar case_name_short: The case name after being processed by `CaseNameTweaker`
     :ivar date_filed: The date this docket was filed with the court.
     :ivar transfers: Transfers of this docket to and from the court.
     :ivar entries: Docket entries that have been filed in this case.
@@ -212,6 +232,7 @@ class Docket(
     docket_number: str
     case_name: str
     case_name_full: str
+    case_name_short: str
     date_filed: date
     transfers: list[_DocketDocketTransfer]
     entries: list[_DocketDocketEntry]

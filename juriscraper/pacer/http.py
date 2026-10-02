@@ -1,11 +1,14 @@
 import gzip
 import json
 import re
+from collections.abc import Iterator
+from http.cookiejar import Cookie, CookieJar
 from typing import Any
 
 import requests
+import urllib3
 from requests.cookies import RequestsCookieJar
-from requests.packages.urllib3 import exceptions
+from urllib3 import exceptions
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
@@ -18,13 +21,23 @@ from juriscraper.pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
 
-requests.packages.urllib3.disable_warnings(exceptions.InsecureRequestWarning)
+urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 # Compile the regex pattern once for efficiency.
 # This pattern captures the court_id (e.g., 'ca9', 'ca2') from the URL.
 ACMS_URL_PATTERN = re.compile(
     r"https?://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
 )
+
+
+def _iter_cookies(jar: CookieJar) -> Iterator[Cookie]:
+    """Iterate over the Cookie objects in a jar.
+
+    RequestsCookieJar's stubs type it as MutableMapping[str, str], so plain
+    iteration looks like it yields names. At runtime it uses
+    CookieJar.__iter__, which yields Cookie objects.
+    """
+    return CookieJar.__iter__(jar)
 
 
 def check_if_logged_in_page(content: bytes) -> bool:
@@ -337,7 +350,7 @@ class PacerSession(requests.Session):
     def _desecure_acms_cookies(jar: RequestsCookieJar) -> None:
         """Clear Secure on ACMS cookies so webhook-sentry's https->http downgrade
         doesn't strip them. See freelawproject/courtlistener#5921."""
-        for cookie in jar:
+        for cookie in _iter_cookies(jar):
             cookie.secure = False
 
     @staticmethod
@@ -682,7 +695,7 @@ class PacerSession(requests.Session):
         # per court so that broadly scoped cookies from one court cannot
         # override another court's session state.
         acms_jar = RequestsCookieJar()
-        for cookie in acms_session.cookies:
+        for cookie in _iter_cookies(acms_session.cookies):
             if cookie.domain.endswith("azurewebsites.us"):
                 acms_jar.set_cookie(cookie)
         self._desecure_acms_cookies(acms_jar)

@@ -14,6 +14,8 @@ History:
 import re
 from datetime import date, datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
     get_row_column_links,
@@ -67,6 +69,7 @@ class Site(OpinionSiteLinear):
         """
         return citation
 
+    @override
     def _process_html(self) -> None:
         """Process HTML
 

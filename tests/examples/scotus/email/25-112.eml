@@ -1,0 +1,60 @@
+Return-Path: <0100019f13f8f478-96d2e88f-f1dd-4415-9c00-75e6102d1b59-000000@mail.sc-us.gov>
+Received: from a65-134.smtp-out.amazonses.com (a65-134.smtp-out.amazonses.com [54.240.65.134])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id a7bi7gr3jd4b1eqqhg87k1uldq7ipc43dd2dfq81
+ for notifications@scotus.recap.email;
+ Mon, 29 Jun 2026 15:21:51 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mail.sc-us.gov designates 54.240.65.134 as permitted sender) client-ip=54.240.65.134; envelope-from=0100019f13f8f478-96d2e88f-f1dd-4415-9c00-75e6102d1b59-000000@mail.sc-us.gov; helo=a65-134.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mail.sc-us.gov designates 54.240.65.134 as permitted sender) client-ip=54.240.65.134; envelope-from=0100019f13f8f478-96d2e88f-f1dd-4415-9c00-75e6102d1b59-000000@mail.sc-us.gov; helo=a65-134.smtp-out.amazonses.com;
+ dkim=pass header.i=@sc-us.gov;
+ dkim=pass header.i=@amazonses.com;
+ dmarc=pass header.from=sc-us.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFU2NHMlJaMlRxNXlLdlFWVkxPNmE5TkVSUEt3YXdtWEthbTNCeUYrNkRYcjZxK0ExbUtuZ2VlZTN5WjhNNjE0K1h6VnZlWTdGZnhnRjhqTGJxN0J2eTZKTkY2Q0ZiaXdNOW9QTVdVNGZSNUxSbmt6eGozcWN3SWFLUDNLTlo4VytEQjJqYmE5eEMyKzhTQURqTGs4TDgrRnNaa0ZrU1Fabkc4M3FFaURUQTkvQU15dHVMWDBtekcwY3JFcVNnSHczSjdYdHIwcmVRaHNaNkpheEN4YUZOaVJwQUpESjd3bVJjbDhKb3JlM0poLzlGRXQ4MVlvT1dJQTR0cUFGTjErWS9MNnhYS0x2YWk2MDMzUi9iYmoxcVhwaHdmK2NNTlRXbGtsL21mZloxUTJHMjlDaE5MK3hLd2I1d01LdWR0b3dwbnZzamVrUk54MHMyRnI4aElxZFgveWVOVUNIQWRsb01pYU1iUG9hb0FRPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=MNCzidVORNrBJ/1ks6AUPWFHg90EqOwQ6kQ4irypR/I0/xqkDd2pqPhCTeVFr8XF4AZP6HiPiKz8rg0tc6m9gHxvdr2mFE8QEs8EgEp0g3lXtgcF0EsZ48UnuApYNEg8yA7LFm0+QVaAVEC24UbwPTlD/o/vLcnq5GhlfE7XOtI=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1782746512; v=1; bh=7DGkKTwjIpfiC6nPEby0drVYXM2l1mOMhNI+sHyNyM4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsnogt5xw3m26s33m3kr6e3qw2bkxxzy; d=sc-us.gov; t=1782746510;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=7DGkKTwjIpfiC6nPEby0drVYXM2l1mOMhNI+sHyNyM4=;
+	b=RuUUB1hkVkPr7o2h0P8CIV0f9kR+bgXOOihIVmRCrAOWWmi0Y+AtLp8lybkhZgdf
+	Gw6rsxCUUH8LZmAmZCa1j4OEI+HXrCiQNuxYweysZIn01i/eqN+/AzEk5ZJvrGvr+0k
+	Yw+WS8W16YrHStlHMnGqLvQPSteLINPnCZX96tZo=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1782746510;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=7DGkKTwjIpfiC6nPEby0drVYXM2l1mOMhNI+sHyNyM4=;
+	b=YvE6PBfwrl4kd9nYnYqABarQN0nfEyg/QsOMTSc/WoOV7zd0qNaaA9bVUlTU2Zdy
+	ZRsw4izXcCKyfYOh7ujKNWb6Qex3Q7lgFL+L+nl2W33a1kw68ZXbWUOYZCzATZHVI8I
+	dhxjIZcHXCgw8YmVcXMAQxOf5h0CzsvGh0Yl5AQI=
+From: no-reply@sc-us.gov
+To: notifications@scotus.recap.email
+Subject: Supreme Court Electronic Filing System
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <0100019f13f8f478-96d2e88f-f1dd-4415-9c00-75e6102d1b59-000000@email.amazonses.com>
+Date: Mon, 29 Jun 2026 15:21:50 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2026.06.29-54.240.65.134
+
+A new docket entry, "Judgment VACATED and case REMANDED.  Kagan, J., delive=
+red the <a href =3D 'https://www.supremecourt.gov/opinions/25pdf/25-112_0am=
+4.pdf'>opinion</a> of the Court, in which Roberts, C. J., and Sotomayor, Ka=
+vanaugh, and Jackson, JJ., joined. Jackson, J., filed a concurring opinion,=
+ in which Sotomayor, J., joined. Gorsuch, J., filed an opinion concurring i=
+n the judgment. Alito, J., filed a dissenting opinion, in which Thomas, J.,=
+ joined as to Part I, and in which Barrett,
+J., joined as to Parts II=E2=80=93B, II=E2=80=93C=E2=80=931, and II=E2=80=
+=93C=E2=80=932. Barrett, J., filed a dissenting opinion." has been added fo=
+r <a href=3D'https://www.supremecourt.gov/search.aspx?filename=3D/docket/Do=
+cketFiles/html/Public/25-112.html'>Okello T. Chatrie, Petitioner v. United =
+States</a>. You have been signed up to receive email notifications for No. =
+25-112. <br><br> If you no longer wish to receive email notifications on th=
+is case, please=20
+
+<a href=3D'https://file.supremecourt.gov/Request/NotificationOptOutGet?id=
+=3DCfDJ8LWjh78o-U5EigyPTWy9Bmdq_T3ta4jHn3xafXXPTWzg-EPMPvgtwQSY0S5koyVnW12Y=
+QuBIXjqPtVVbtxBTv-urW89AYOaC-FHaJv0GYPF4ved9kSqI5E_0M4g6q378qmdZVlgcirGiLab=
+PiFAm99TTI6Dn5FRVGt1ecIO5-LGN'>click here</a>.
+

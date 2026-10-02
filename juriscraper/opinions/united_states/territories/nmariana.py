@@ -4,22 +4,28 @@ Court Short Name: NMI
 Author: William Edward Palin
 History:
   2023-01-21: Created by William Palin
+  2026-09-24: Site moved to cnmilaw.gov; use urllib to pass Cloudflare
 """
 
 import re
 from datetime import date
 from typing import Any
+from urllib.parse import urljoin
+
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
+    use_urllib = True  # Use urllib to pass Cloudflare
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = date.today().strftime("%Y")[-2:]
-        self.url = f"https://www.cnmilaw.org/spm{year}.php#gsc.tab=0"
+        year = date.today().year
+        self.url = f"https://cnmilaw.gov/documents?type=case&court=Supreme&year={year}"
         self.status = "Published"
 
     def _cleanup_judge_names(self, judges: str) -> list[str]:
@@ -51,8 +57,9 @@ class Site(OpinionSiteLinear):
             author = [j for j in judges.split(",") if "*" in j][0].strip("*")
         return author
 
-    def _process_html(self):
-        for s in self.html.xpath(".//td/a/@href[contains(., 'pdf')]/../../.."):
+    @override
+    def _process_html(self) -> None:
+        for s in self.html.xpath(".//a[@class='pdf-link']/ancestor::tr"):
             cells = s.xpath(".//td")
             judge_text = cells[3].text_content()
             author = self._fetch_author(judge_text)
@@ -66,7 +73,9 @@ class Site(OpinionSiteLinear):
                     "judge": ", ".join(self._cleanup_judge_names(judge_text)),
                     "author": author,
                     "per_curiam": not author,
-                    "url": s.xpath(".//td/a/@href")[0],
+                    "url": urljoin(
+                        self.url, s.xpath(".//a[@class='pdf-link']/@href")[0]
+                    ),
                     "docket": "",
                 }
             )

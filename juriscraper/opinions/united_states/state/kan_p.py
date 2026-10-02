@@ -15,6 +15,8 @@ History:
 from datetime import date, timedelta
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -46,6 +48,7 @@ class Site(OpinionSiteLinear):
         }
         return urljoin(self.base_url, f"/Documents/Search?{urlencode(params)}")
 
+    @override
     def _process_html(self) -> None:
         """Parse the /Documents/Search results table.
 

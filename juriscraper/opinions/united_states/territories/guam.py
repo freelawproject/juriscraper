@@ -15,6 +15,7 @@ from urllib.parse import urljoin
 
 from dateutil import parser
 from dateutil.parser import ParserError
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -27,6 +28,7 @@ class Site(OpinionSiteLinear):
     # Holds 2025 and prior; serves them through a `get_items` API used for
     # backscraping
     legacy_url = "https://www.guamcourts.gov/legacydata/supreme-court-opinions"
+    legacy_get_items_type = "SPRMOP"
 
     # The year dropdown goes back to 1990, but the Court wasn't
     # created until 1996 and there are no opinions posted for
@@ -43,6 +45,7 @@ class Site(OpinionSiteLinear):
         self._year = date.today().year
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Process the current-year opinions page (#2004)
 
@@ -188,7 +191,7 @@ class Site(OpinionSiteLinear):
         self.url = self.legacy_url
         self.request["parameters"]["params"] = {
             "action": "get_items",
-            "type": "SPRMOP",
+            "type": self.legacy_get_items_type,
             "year": str(year),
         }
         self.html = await self._download()

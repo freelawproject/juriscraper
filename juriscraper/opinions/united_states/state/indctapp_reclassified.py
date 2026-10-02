@@ -7,6 +7,8 @@ History:
     2025-07-29: Created by Luis Manzur
 """
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -20,7 +22,8 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.expected_content_types = ["application/pdf"]
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the HTML to extract case details.
 
         :return None
@@ -33,36 +36,39 @@ class Site(OpinionSiteLinear):
             if not link:
                 continue
 
-            name_parts = link[0].xpath(".//p")
-            if name_parts:
-                name = titlecase(" ".join(p.text.strip() for p in name_parts))
-            else:
-                name = titlecase(link[0].text.strip())
+            # Cell text may be direct, or split across <p>, <span> or <br>
+            # tags (e.g. rows pasted from Outlook). Avoid .text, which is
+            # None or truncated when a child tag comes first. #2050
+            name = titlecase(
+                " ".join(t.strip() for t in link[0].itertext() if t.strip())
+            )
             url = link[0].get("href")
 
             lower_court_parts = cells[3].xpath(".//p")
             if lower_court_parts:
                 lower_court = ", ".join(
-                    p.text.strip() for p in lower_court_parts
+                    p.text_content().strip() for p in lower_court_parts
                 )
             else:
+                # Strip commas per part: a text node may already end in a
+                # comma before a <br>, which would double up with the join
                 lower_court = ", ".join(
-                    part.replace(",", ", ").strip()
+                    part.replace(",", ", ").strip(" ,")
                     for part in cells[3].xpath(".//text()[normalize-space()]")
-                    if part.strip()
-                ).strip(", ")
+                    if part.strip(" ,")
+                )
 
             docket_parts = cells[4].xpath(".//p")
             docket = (
-                docket_parts[0].text.strip()
+                docket_parts[0].text_content().strip()
                 if docket_parts
-                else cells[4].text.strip()
+                else cells[4].text_content().strip()
             )
 
             self.cases.append(
                 {
-                    "date": cells[1].text.strip(),
-                    "other_date": f"Date opinion was reclassified as published: {cells[0].text.strip()}",
+                    "date": cells[1].text_content().strip(),
+                    "other_date": f"Date opinion was reclassified as published: {cells[0].text_content().strip()}",
                     "name": name,
                     "url": url,
                     "lower_court_number": lower_court,

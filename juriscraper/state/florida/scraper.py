@@ -63,11 +63,12 @@ from juriscraper.state.florida.metadata import (
 )
 from juriscraper.state.florida.parties import FloridaPartyListParser
 from juriscraper.state.RequestManager import (
+    ExponentialBackoff,
     PrimitiveData,
     RateLimit,
     RequestHandler,
     RequestManager,
-    Retry,
+    RetryHandler,
 )
 
 logger = make_default_logger()
@@ -153,25 +154,25 @@ class FloridaScraper:
         self,
         *,
         rps: float = 2.5,
-        max_retries: int = 3,
-        backoff: float = 2.0,
-        backoff_growth: float = 2.0,
+        retry: RetryHandler | None = None,
         handlers: list[RequestHandler] | None = None,
     ) -> None:
         """Create a new :class:`FloridaScraper` instance.
 
         Args:
+            rps: Rate-limit for requests
+            retry: Retry specification for requests. Defaults to maximum 3 retries with a base sleep of 2 seconds and a growth factor of 2x per retry.
             handlers: Supplementary request handlers to pass to the :class:`RequestManager` instance."""
+        if retry is None:
+            retry = ExponentialBackoff(
+                max_retries=3, backoff=2.0, backoff_growth=2.0
+            )
         self.manager: RequestManager = RequestManager(
             handlers=[
                 RateLimit(rps=rps),
-                Retry(
-                    max_retries=max_retries,
-                    backoff=backoff,
-                    backoff_growth=backoff_growth,
-                ),
             ]
             + (handlers or []),
+            retry=retry,
             base_url=FLORIDA_API_BASE,
         )
         self._courts_future: (
@@ -361,7 +362,7 @@ class FloridaScraper:
         start_date: date,
         end_date: date,
     ) -> AsyncGenerator[FloridaCase | PaginationFailed, None]:
-        """Yield :class:`FloridaCase` for every case filed in ``date_range``.
+        """Yield :class:`FloridaCase` for every case filed in ``date_range`` in chronological order by ``date_filed``.
 
         Splits the date range recursively whenever the API reports that the
         query would hit :data:`MAX_RESULTS`. The split is binary on the date
@@ -421,27 +422,27 @@ class FloridaScraper:
                         end,
                     )
                     continue
-                case FloridaPaginatedResults(page=page) if (
-                    page.total_elements >= MAX_RESULTS
-                ):
-                    if start < end:
-                        # Split the range in half and re-queue.
-                        mid = start + (end - start) // 2
-                        logger.info(
-                            "Splitting court %s range %s..%s (totalElements=%d)",
-                            court_external_id,
-                            start,
-                            end,
-                            response.page.total_elements,
+                case FloridaPaginatedResults(page=page):
+                    if page.total_elements >= MAX_RESULTS:
+                        if start < end:
+                            # Split the range in half and re-queue.
+                            mid = start + (end - start) // 2
+                            logger.info(
+                                "Splitting court %s range %s..%s (totalElements=%d)",
+                                court_external_id,
+                                start,
+                                end,
+                                response.page.total_elements,
+                            )
+                            # Date ranges here should stay in reverse chronological order to ensure results are scraped in _chronological_ order
+                            stack.append((mid + timedelta(days=1), end))
+                            stack.append((start, mid))
+                            continue
+                        # Should be unreachable but who knows.
+                        raise InsanityException(
+                            "Single-day query for court %s on %s hit the %d-result cap."
+                            % (court_id, start, MAX_RESULTS)
                         )
-                        stack.append((start, mid))
-                        stack.append((mid + timedelta(days=1), end))
-                        continue
-                    # Should be unreachable but who knows.
-                    raise InsanityException(
-                        "Single-day query for court %s on %s hit the %d-result cap."
-                        % (court_id, start, MAX_RESULTS)
-                    )
 
             i = 0
             total = max(response.page.total_elements, 1)
@@ -534,6 +535,7 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             parties_parser.endpoint.format(court=court_uuid, case=case_uuid),
             parties_parser,
+            params={"sort": "partyNumber,asc"},
         )
         (
             output_case.entries,
@@ -541,6 +543,9 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             de_parser.endpoint.format(court=court_uuid, case=case_uuid),
             de_parser,
+            params={
+                "sort": "docketEntryHeader.filedDate,desc,docketEntryHeader.docketEntryUUID,asc"
+            },
         )
         (
             output_case.arguments,
@@ -548,6 +553,7 @@ class FloridaScraper:
         ) = await self._flatten_enumerate_pages(
             arguments_parser.endpoint.format(court=court_uuid, case=case_uuid),
             arguments_parser,
+            params={"sort": "startDate,asc"},
         )
 
         da_parser = FloridaDocumentAccessParser(court_id=court_id)

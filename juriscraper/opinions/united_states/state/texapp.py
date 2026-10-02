@@ -24,6 +24,7 @@ from urllib.parse import urlparse
 
 from dateutil import parser
 from lxml import html as lxmlHTML
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
@@ -135,6 +136,7 @@ class Site(ClusterSite):
         if self.next_page:
             self.parameters[self.next_page[0].xpath("@name")[0]] = ""
 
+    @override
     async def _process_html(self) -> None:
         """Process HTML and paginates if needed
 
@@ -263,7 +265,7 @@ class Site(ClusterSite):
         return parsed
 
     def parse_originating_court_info(
-        self, html: lxmlHTML, table_id: str
+        self, html: lxmlHTML.HtmlElement, table_id: str
     ) -> dict:
         """Parses Originating Court Information section
 
@@ -317,7 +319,7 @@ class Site(ClusterSite):
 
         return data
 
-    def get_name(self, html: lxmlHTML, link: str) -> str:
+    def get_name(self, html: lxmlHTML.HtmlElement, link: str) -> str:
         """Abstract out the case name from the case page."""
         try:
             plaintiff = self.get_by_label_from_case_page(html, "Style:")
@@ -337,7 +339,7 @@ class Site(ClusterSite):
             return ""
 
     def get_opinions(
-        self, html: lxmlHTML, op_date: str
+        self, html: lxmlHTML.HtmlElement, op_date: str
     ) -> tuple[list[dict], str]:
         """Get opinions belonging to this cluster from the case page
 
@@ -424,7 +426,9 @@ class Site(ClusterSite):
 
         return opinions, disposition
 
-    def get_by_label_from_case_page(self, html: lxmlHTML, label: str) -> str:
+    def get_by_label_from_case_page(
+        self, html: lxmlHTML.HtmlElement, label: str
+    ) -> str:
         """Helper to get text following a label on the case page"""
         try:
             return html.xpath(

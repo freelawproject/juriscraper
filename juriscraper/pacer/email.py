@@ -102,10 +102,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
 
-        base = {
+        base: dict = {
             "court_id": self.court_id,
         }
-        parsed = {
+        parsed: dict = {
             "appellate": self._is_appellate(),
             "acms": self._is_acms(),
             "dockets": self._get_dockets(),
@@ -276,7 +276,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
-    def _get_date_filed(self) -> date:
+    def _get_date_filed(self) -> date | None:
         """Gets the filing date from the email text
 
         :returns: Date filed as date object
@@ -288,7 +288,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             date_filed[0].lower().replace("filed on ", "")
         )
 
-    def _get_document_number(self, current_node: HtmlElement) -> str:
+    def _get_document_number(self, current_node: HtmlElement) -> str | None:
         """Gets the specific document number the notification is referring to
 
         :param  current_node: The relative lxml.HtmlElement
@@ -302,7 +302,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         words = re.split(r"\(|\s", text_number)
         return words[0]
 
-    def _get_document_number_plain(self) -> str:
+    def _get_document_number_plain(self) -> str | None:
         """Gets the specific document number the notification is referring to
 
         :returns: Document number, cleaned
@@ -315,7 +315,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_doc1_anchor(self, current_node: HtmlElement) -> str:
+    def _get_doc1_anchor(
+        self, current_node: HtmlElement
+    ) -> HtmlElement | None:
         """Safely retrieves the anchor tag for the document
 
         :param  current_node: The relative lxml.HtmlElement
@@ -470,7 +472,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return associated_documents > 1
 
-    def _get_dockets(self) -> DocketType:
+    def _get_dockets(self) -> list[DocketType]:
         """Get all the dockets mentioned in the notification.
 
         Right now multiple docket notifications are only supported for text/html
@@ -930,8 +932,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     last_recipient["name"] += f" {recipient_part}"
         return list(
             filter(
-                lambda recipient: recipient.get("email_addresses", False)
-                and len(recipient.get("email_addresses")) > 0,
+                lambda recipient: (
+                    recipient.get("email_addresses", False)
+                    and len(recipient.get("email_addresses")) > 0
+                ),
                 email_recipients,
             )
         )
