@@ -3459,6 +3459,13 @@
       "severity": "error"
     },
     {
+      "column": 24,
+      "path": "juriscraper/state/texas/common.py",
+      "name": "string-as-iterable",
+      "concise_description": "Passing `str` to `Iterable[str]` treats the string as an iterable of characters",
+      "severity": "error"
+    },
+    {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
       "name": "bad-override-mutable-attribute",
