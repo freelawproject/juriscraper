@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import StrEnum
 from functools import cached_property
 from itertools import chain
-from typing import Never, TypedDict, TypeVar, final
+from typing import Literal, Never, TypedDict, TypeVar, final
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -214,7 +214,7 @@ class TexasCaseParty(TypedDict):
     representatives: list[str]
 
 
-class TexasOriginatingCourt(TypedDict):
+class _TexasOriginatingCourtBase(TypedDict):
     """
     Schema for Texas Originating Court details.
 
@@ -227,7 +227,6 @@ class TexasOriginatingCourt(TypedDict):
     the consumer to handle those cases.
 
     :ivar name: The name of the court.
-    :ivar court_type: The type of the court.
     :ivar county: The county where the court is located.
     :ivar judge: The name of the presiding judge in the court.
     :ivar case: Specific case identification or name handled by this court.
@@ -237,7 +236,6 @@ class TexasOriginatingCourt(TypedDict):
     """
 
     name: str
-    court_type: str
     county: str
     judge: str
     case: str
@@ -245,29 +243,56 @@ class TexasOriginatingCourt(TypedDict):
     punishment: str
 
 
-class TexasOriginatingAppellateCourt(TexasOriginatingCourt):
+class TexasOriginatingAppellateCourt(_TexasOriginatingCourtBase):
     """
     Schema for Texas Originating Court details when that court is an appellate
     court.
 
     Includes the court ID for convenience.
 
+    :ivar court_type: The type of court.
     :ivar court_id: The ID of the appellate court.
     """
 
+    court_type: Literal[CourtType.APPELLATE]
     court_id: str
 
 
-class TexasOriginatingDistrictCourt(TexasOriginatingCourt):
+class TexasOriginatingDistrictCourt(_TexasOriginatingCourtBase):
     """
     Schema for Texas Originating Court details when that court is a district
     court.
 
+    :ivar court_type: The type of court.
     :ivar district: The district where the court is located. Will be `None` if
     the district could not be determined.
     """
 
+    court_type: Literal[CourtType.DISTRICT]
     district: int | None
+
+
+class TexasOriginatingOtherCourt(_TexasOriginatingCourtBase):
+    """
+    :ivar court_type: The type of court.
+    """
+
+    court_type: Literal[
+        CourtType.SUPREME,
+        CourtType.PROBATE,
+        CourtType.BUSINESS,
+        CourtType.COUNTY,
+        CourtType.MUNICIPAL,
+        CourtType.JUSTICE,
+        CourtType.UNKNOWN,
+    ]
+
+
+TexasOriginatingCourt = (
+    TexasOriginatingAppellateCourt
+    | TexasOriginatingDistrictCourt
+    | TexasOriginatingOtherCourt
+)
 
 
 SPACES_RE = re.compile(r"\s+")
@@ -943,14 +968,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
             for i in range(n_parties)
         ]
 
-    def _parse_originating_court(
-        self,
-    ) -> (
-        TexasOriginatingCourt
-        | TexasOriginatingAppellateCourt
-        | TexasOriginatingDistrictCourt
-        | None
-    ):
+    def _parse_originating_court(self) -> TexasOriginatingCourt | None:
         """
         Extracts the trial court info from the HTML tree. Will fail if
         `_parse_text` has not yet been called.
@@ -978,9 +996,8 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
         county = fields.get("County", "")
         court_type = _originating_court_name_to_type(court_name)
 
-        court_details = TexasOriginatingCourt(
+        court_details = _TexasOriginatingCourtBase(
             name=court_name,
-            court_type=court_type.value,
             county=county,
             judge=fields.get("Court Judge", ""),
             case=fields.get("Court Case", ""),
@@ -993,7 +1010,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
                 court_id = coa_name_to_court_id(court_name).value
                 return TexasOriginatingAppellateCourt(
                     name=court_details["name"],
-                    court_type=court_details["court_type"],
+                    court_type=court_type,
                     county=court_details["county"],
                     judge=court_details["judge"],
                     case=court_details["case"],
@@ -1010,7 +1027,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
                     )
                 return TexasOriginatingDistrictCourt(
                     name=court_details["name"],
-                    court_type=court_details["court_type"],
+                    court_type=court_type,
                     county=court_details["county"],
                     judge=court_details["judge"],
                     case=court_details["case"],
@@ -1027,7 +1044,15 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
                 | CourtType.JUSTICE
                 | CourtType.UNKNOWN
             ):
-                return court_details
+                return TexasOriginatingOtherCourt(
+                    name=court_details["name"],
+                    court_type=court_type,
+                    county=court_details["county"],
+                    judge=court_details["judge"],
+                    case=court_details["case"],
+                    reporter=court_details["reporter"],
+                    punishment=court_details["punishment"],
+                )
 
     @staticmethod
     def _parse_case_documents(cell: HtmlElement) -> list[TexasCaseDocument]:
