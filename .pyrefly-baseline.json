@@ -3704,76 +3704,6 @@
       "severity": "warn"
     },
     {
-      "column": 22,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 22,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `find`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `iterfind`",
-      "severity": "error"
-    },
-    {
-      "column": 31,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `HtmlElement | None` is not assignable to parameter `table` with type `HtmlElement` in function `juriscraper.lib.html_utils.parse_table`",
-      "severity": "error"
-    },
-    {
-      "column": 35,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "bad-assignment",
-      "concise_description": "`HtmlElement | None` is not assignable to `HtmlElement`",
-      "severity": "error"
-    },
-    {
-      "column": 26,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
-      "severity": "error"
-    },
-    {
       "column": 38,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",
@@ -3783,13 +3713,6 @@
     {
       "column": 33,
       "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
-      "severity": "error"
-    },
-    {
-      "column": 35,
-      "path": "juriscraper/state/texas/court_of_appeals.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `text_content`",
       "severity": "error"

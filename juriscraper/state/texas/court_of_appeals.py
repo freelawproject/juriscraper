@@ -74,7 +74,12 @@ class TexasCourtOfAppealsScraper(
             return {}
         if self.tree is None:
             raise ValueError("_parse_text() must called first.")
-        court_name = clean_string(self.tree.find(".//h1").text_content())
+        court_name_heading = self.tree.find(".//h1")
+        if court_name_heading is None:
+            court_name = ""  # defer handling to `coa_name_to_court_id()`
+        else:
+            court_name = clean_string(court_name_heading.text_content())
+
         transfer_from, transfer_to = self._parse_transfers()
 
         return TexasCourtOfAppealsDocket(
