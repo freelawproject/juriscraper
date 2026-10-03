@@ -652,9 +652,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             raise ValueError("_parse_text() must called first.")
         parent = self.tree.find('.//*[@id="case"]/..')
         if parent is None:
-            logger.error(
-                "[court=%s] Unable to find case data", self.court_id
-            )
+            logger.error("[court=%s] Unable to find case data", self.court_id)
             return None
         coa_parent = parent.find(
             './/*[@id="ctl00_ContentPlaceHolder1_COAOnly"]'
@@ -922,7 +920,9 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
         )
         if table is None:
-            logger.error("[court=%s] Unable to find parties table", self.court_id)
+            logger.error(
+                "[court=%s] Unable to find parties table", self.court_id
+            )
             return []
         parties = parse_table(table)
         # Handle "no records" case where Party column has a placeholder but
@@ -961,9 +961,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             raise ValueError("_parse_text() must called first.")
         info_panel = self.tree.find('.//*[@id="panelTrialCourtInfo"]/div[2]')
         if info_panel is None:
-            logger.error(
-                "[court=%s] Unable to find info panel", self.court_id
-            )
+            logger.error("[court=%s] Unable to find info panel", self.court_id)
             return None
 
         fields_elements = [
