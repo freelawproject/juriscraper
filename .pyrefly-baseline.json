@@ -25,7 +25,7 @@
       "column": 59,
       "path": "juriscraper/AbstractSite.py",
       "name": "bad-specialization",
-      "concise_description": "`date | Unknown | None` is not assignable to any of constraints `datetime`, `date` of type variable `_AnyDateT`",
+      "concise_description": "`date | Unknown | None` is not assignable to any of constraints `datetime`, `date` of type variable `_SomeDateT`",
       "severity": "error"
     },
     {
