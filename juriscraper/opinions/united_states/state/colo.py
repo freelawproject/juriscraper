@@ -18,6 +18,7 @@ from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
 from lxml import etree, html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
@@ -141,6 +142,7 @@ class Site(OpinionSiteLinear):
         case["status"] = "Published" if case["citation"] else "Unpublished"
         return case
 
+    @override
     async def _process_html(self) -> None:
         search_json = self.html
         total_count = search_json["count"]

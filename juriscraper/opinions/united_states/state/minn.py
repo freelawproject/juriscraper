@@ -12,6 +12,8 @@ import re
 from datetime import date, datetime, timezone
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import BotChallengeError
 from juriscraper.lib.network_utils import add_delay
@@ -62,6 +64,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.needs_special_headers = True
 
+    @override
     async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 

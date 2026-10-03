@@ -33,6 +33,8 @@ import os
 import re
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -94,6 +96,7 @@ class Site(OpinionSiteLinear):
 
         return await super()._download(request_dict)
 
+    @override
     async def _process_html(self) -> None:
         """Parse the sitemap XML and fetch individual decisions.
 

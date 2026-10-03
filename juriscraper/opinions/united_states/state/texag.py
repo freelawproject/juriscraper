@@ -7,6 +7,8 @@ History:
     2023-01-28: Updated by William E. Palin
 """
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -18,7 +20,8 @@ class Site(OpinionSiteLinear):
         self.expected_content_types = ["application/pdf"]
         self.should_have_results = True
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")
         for case in cases:
             docket = case.xpath(".//h4")[0].text_content().strip()

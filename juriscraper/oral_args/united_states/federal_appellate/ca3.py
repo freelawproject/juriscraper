@@ -11,6 +11,8 @@
 import re
 from urllib.parse import unquote
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
@@ -26,6 +28,7 @@ class Site(OralArgumentSiteLinear):
         # OralArgContentsAll.html list the last 7 days and everything
         self.url = "https://www2.ca3.uscourts.gov/OralArgContents30.html"
 
+    @override
     def _process_html(self) -> None:
         """Parse the file-list table
 

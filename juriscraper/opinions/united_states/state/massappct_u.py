@@ -11,6 +11,8 @@ Date: 2020-02-27
 from datetime import date, timedelta
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -54,6 +56,7 @@ class Site(OpinionSiteLinear):
         )
         return f"{self.base}/?{urlencode(self.parameters)}"
 
+    @override
     def _process_html(self) -> None:
         """Process the data
 

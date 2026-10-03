@@ -12,6 +12,8 @@ import re
 from datetime import date
 from typing import Any
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -24,7 +26,8 @@ class Site(OpinionSiteLinear):
         self.last_month = date.today() - datetime.timedelta(weeks=4)
         self.status = "Published"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the CAVC website and collect new opinions
 
         :return: None

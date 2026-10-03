@@ -7,6 +7,8 @@ from datetime import date, datetime, timedelta
 from typing import Any
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -26,6 +28,7 @@ class Site(OpinionSiteLinear):
         self.set_url()
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
 

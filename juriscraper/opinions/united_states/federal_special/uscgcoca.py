@@ -13,6 +13,8 @@ History:
 import re
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -45,6 +47,7 @@ class Site(OpinionSiteLinear):
 
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Process the HTML
 

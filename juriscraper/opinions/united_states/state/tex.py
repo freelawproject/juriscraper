@@ -24,6 +24,7 @@ from datetime import date
 from datetime import datetime as dt
 
 from lxml import etree
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
@@ -76,6 +77,7 @@ class Site(ClusterSite):
         self.html = await super()._download(request_dict)
         return self.html
 
+    @override
     async def _process_html(self) -> None:
         """Parses the HTML content
 

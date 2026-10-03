@@ -9,6 +9,7 @@ import re
 from urllib.parse import urljoin
 
 from dateutil import parser
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -30,6 +31,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
+    @override
     async def _process_html(self) -> None:
         """Parses the HTML content
 
