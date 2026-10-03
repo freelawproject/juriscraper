@@ -136,20 +136,18 @@ class Site(OpinionSiteLinear):
         """
         return titlecase(raw_disposition)
 
-    def set_url(
-        self, start: date | None = None, end: date | None = None
-    ) -> None:
+    def set_url(self, dates: tuple[date, date] | None = None) -> None:
         """Sets the first page URL using date arguments
 
-        :param start: start date; defaults to `scrape_interval` days before
-            the end date
-        :param end: end date; defaults to today
+        :param dates: optional start and end date; defaults to `scrape_interval`
+            days before today
         :return: none
         """
-        if not end:
+        if dates is None:
             end = datetime.today()
-        if not start:
             start = end - timedelta(days=self.scrape_interval)
+        else:
+            start, end = dates
 
         self.start_date = start
         self.end_date = end
@@ -177,5 +175,5 @@ class Site(OpinionSiteLinear):
         :param dates: (start_date, end_date) tuple
         :return None
         """
-        self.set_url(*dates)
+        self.set_url(dates)
         logger.info("Backscraping for range %s %s", *dates)

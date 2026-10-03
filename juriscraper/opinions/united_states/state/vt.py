@@ -82,13 +82,11 @@ class Site(OpinionSiteLinear):
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
-        self.set_url(*dates)
+        self.set_url(dates)
         self.html = await self._download()
         self._process_html()
 
-    def set_url(
-        self, start: date | None = None, end: date | None = None
-    ) -> None:
+    def set_url(self, dates: tuple[date, date] | None = None) -> None:
         """Formats and sets `self.url` with date inputs
         If no start or end dates are given, scrape without date filter values
 
@@ -101,16 +99,16 @@ class Site(OpinionSiteLinear):
         titled "Opinion and Order on Cross-Motions for Summary Judgment"
         has 8 pages, most of which are argumentation
 
-        :param start: start date
-        :param end: end date
-        :return None
+        :param dates: start and end date
+        :return: None
         """
         params = {
             "facet_from_date": "",
             "facet_to_date": "",
             "f[0]": f"court_division_opinions_library_:{self.division}",  # filter by court
         }
-        if start:
+        if dates is not None:
+            start, end = dates
             params["facet_from_date"] = start.strftime("%m/%d/%Y")
             params["facet_to_date"] = end.strftime("%m/%d/%Y")
 
