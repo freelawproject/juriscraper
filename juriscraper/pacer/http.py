@@ -29,6 +29,11 @@ ACMS_URL_PATTERN = re.compile(
     r"https?://(ca\d+)-showdoc(services)?\.azurewebsites\.us/.*"
 )
 
+# ACMS sets this cookie (plus chunked `...C1`, `...C2` variants) only after a
+# successful SAML login. Azure's ARRAffinity cookies arrive on every response,
+# so they can't tell a successful login from a rejected one.
+ACMS_AUTH_COOKIE_PREFIX = ".AspNetCore.saml2"
+
 
 def _iter_cookies(jar: CookieJar) -> Iterator[Cookie]:
     """Iterate over the Cookie objects in a jar.
@@ -673,9 +678,12 @@ class PacerSession(requests.Session):
         self._take_acms_cookies()
 
         auth_params = self._get_saml_auth_request_parameters(court_id)
-        if not auth_params:
+        # An expired PACER session lands on PACER's login form instead of the
+        # SAML form. Its hidden inputs would pass a plain emptiness check.
+        if not auth_params.get("SAMLResponse"):
             raise PacerLoginException(
-                "Failed to extract ACMS authentication data from SAML response."
+                f"No SAMLResponse for {court_id}. The PACER session is "
+                "probably invalid."
             )
 
         logger.info(f"Establishing ACMS session for {court_id}")
@@ -690,9 +698,15 @@ class PacerSession(requests.Session):
         # Keep a separate ACMS cookie jar per court so that broadly scoped
         # cookies from one court cannot override another court's session state.
         acms_jar = self._take_acms_cookies()
-        if not acms_jar:
+        # A rejected login still answers 200 (ACMS redirects to its own login
+        # page) and still carries Azure's affinity cookies, so check for the
+        # auth cookie itself.
+        if not any(
+            c.name.startswith(ACMS_AUTH_COOKIE_PREFIX)
+            for c in _iter_cookies(acms_jar)
+        ):
             raise PacerLoginException(
-                f"ACMS handshake for {court_id} returned no session cookies."
+                f"ACMS rejected the SAML login for {court_id}."
             )
         self._desecure_acms_cookies(acms_jar)
         self.acms_cookies[court_id] = acms_jar
