@@ -110,10 +110,10 @@ def is_first_month_in_quarter(month: int) -> int:
     return month in [1, 4, 7, 10]
 
 
-_AnyDateT = TypeVar("_AnyDateT", datetime.datetime, datetime.date)
+_SomeDateT = TypeVar("_SomeDateT", datetime.datetime, datetime.date)
 
 
-def fix_future_year_typo(future_date: _AnyDateT) -> _AnyDateT:
+def fix_future_year_typo(future_date: _SomeDateT) -> _SomeDateT:
     """Fix current year typo, convert 2106 to 2016 in year 2016"""
     current_year = str(datetime.date.today().year)
     transposed_year = (
@@ -125,8 +125,8 @@ def fix_future_year_typo(future_date: _AnyDateT) -> _AnyDateT:
 
 
 def make_date_range_tuples(
-    start: _AnyDateT, end: _AnyDateT, gap: int
-) -> list[tuple[_AnyDateT, _AnyDateT]]:
+    start: _SomeDateT, end: _SomeDateT, gap: int
+) -> list[tuple[_SomeDateT, _SomeDateT]]:
     """Make an iterable of date tuples for use in iterating forms
 
     For example, a form might allow start and end dates and you want to iterate
@@ -145,14 +145,14 @@ def make_date_range_tuples(
     :returns: list of start, end tuples
     """
 
-    def to_any_date(dt: datetime.datetime) -> _AnyDateT:
+    def to_any_date(dt: datetime.datetime) -> _SomeDateT:
         # Python generics can't be reified; we must key off the input values
         # and to infer the type manually.
         if all(isinstance(d, datetime.datetime) for d in (start, end)):
-            # both start and end are `datetime`-> `_AnyDateT` is `datetime`
-            return cast(_AnyDateT, dt)
+            # both start and end are `datetime`-> `_SomeDateT` is `datetime`
+            return cast(_SomeDateT, dt)
         else:
-            return cast(_AnyDateT, dt.date())
+            return cast(_SomeDateT, dt.date())
 
     # We create a list of start dates and a list of end dates, then zip them
     # together. If end_dates is shorter than start_dates, fill the last value
@@ -174,8 +174,8 @@ def make_date_range_tuples(
 
 
 def unique_year_month(
-    date_list: list[_AnyDateT] | list[tuple[_AnyDateT]],
-) -> list[_AnyDateT]:
+    date_list: list[_SomeDateT] | list[tuple[_SomeDateT]],
+) -> list[_SomeDateT]:
     """Takes a list of dates or date tuples, and reduces it
     to date objects with unique year-months pairs
     TODO: 1-tuple input is not correct; it should change to reflect usage.
@@ -193,7 +193,7 @@ def unique_year_month(
     seen_year_months = set()
 
     for obj in date_list:
-        iterable: Iterable[_AnyDateT]
+        iterable: Iterable[_SomeDateT]
         if isinstance(obj, datetime.datetime | datetime.date):
             iterable = (obj,)
         else:
