@@ -357,7 +357,8 @@ class Site(ClusterSite):
         to the same cluster. See txctapp10_subexample_3
 
         :param html: page's HTML object
-        :return List of opinions
+        :param op_date: date to identify related opinions of a case
+        :return: List of opinions
         """
         opinions = []
         disposition = ""
@@ -366,7 +367,7 @@ class Site(ClusterSite):
         try:
             search_date = datetime.strptime(op_date, "%m/%d/%Y").date()
         except ValueError:
-            search_date = parser.parse(op_date)
+            search_date = parser.parse(op_date).date()
 
         for opinion in html.xpath(opinion_xpath):
             op = {}

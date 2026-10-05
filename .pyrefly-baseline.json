@@ -25,7 +25,7 @@
       "column": 59,
       "path": "juriscraper/AbstractSite.py",
       "name": "bad-specialization",
-      "concise_description": "`date | Unknown | None` is not assignable to any of constraints `datetime`, `date` of type variable `_AnyDateT`",
+      "concise_description": "`date | Unknown | None` is not assignable to any of constraints `datetime`, `date` of type variable `_SomeDateT`",
       "severity": "error"
     },
     {
@@ -1562,13 +1562,6 @@
       "severity": "error"
     },
     {
-      "column": 33,
-      "path": "juriscraper/opinions/united_states/state/pa.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `str` has no attribute `value`",
-      "severity": "error"
-    },
-    {
       "column": 45,
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "missing-attribute",
@@ -1580,13 +1573,6 @@
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/pa.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `Literal[OpinionType.COMBINED, OpinionType.CONCURRENCE, OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART, OpinionType.DISSENT, OpinionType.MAJORITY, OpinionType.UNANIMOUS]` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
@@ -1741,13 +1727,6 @@
       "path": "juriscraper/opinions/united_states/state/texapp.py",
       "name": "unbound-name",
       "concise_description": "`date_string` is uninitialized",
-      "severity": "error"
-    },
-    {
-      "column": 22,
-      "path": "juriscraper/opinions/united_states/state/texapp.py",
-      "name": "unsupported-operation",
-      "concise_description": "`-` is not supported between `datetime` and `date`",
       "severity": "error"
     },
     {
@@ -1909,27 +1888,6 @@
       "path": "juriscraper/opinions/united_states/territories/guam.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
-      "name": "bad-assignment",
-      "concise_description": "`list[str]` is not assignable to variable `judges` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
-      "name": "bad-assignment",
-      "concise_description": "`list[str]` is not assignable to variable `judges` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/territories/nmariana.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `str` is not assignable to declared return type `list[str]`",
       "severity": "error"
     },
     {
