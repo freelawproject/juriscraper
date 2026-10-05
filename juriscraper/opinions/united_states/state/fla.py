@@ -102,6 +102,11 @@ class Site(OpinionSiteLinear):
                 logger.info("Skipping case with no name %s", fields)
                 continue
 
+            if not fields.get("opinion"):
+                # E.g 2DCA 2024-0481
+                logger.warning("Skipping case with no opinion file %s", fields)
+                continue
+
             disposition = fields.get("disposition", "") or ""
             self.cases.append(
                 {
