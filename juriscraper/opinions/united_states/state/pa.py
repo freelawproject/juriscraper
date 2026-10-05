@@ -159,7 +159,7 @@ class Site(ClusterSite):
         """
         return author_str
 
-    def get_type(self, post_type: str, cluster: dict) -> str:
+    def get_type(self, post_type: str, cluster: dict) -> OpinionType:
         """Parse the PostingType into one of our Opinion.type values
 
         :param post_type: type as returned by the source
