@@ -17,6 +17,7 @@ from juriscraper.lib.html_utils import (
     get_all_text,
     parse_table,
 )
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     FILE_SIZE_RE,
     clean_string,
@@ -24,6 +25,8 @@ from juriscraper.lib.string_utils import (
     harmonize,
     size_string_to_bytes,
 )
+
+logger = make_default_logger()
 
 
 class CourtType(Enum):
@@ -148,19 +151,28 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     container = tree.find(
         './/*[@id="ctl00_ContentPlaceHolder1_divCOAInfo"]/div/div/div[2]'
     )
-    info_container = container.find(
-        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
-    )
-    # Texas gives the judge their own child element all to themselves for some
-    # reason.
-    judge_container = container.find(
-        './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
-    )
-    if judge_container is None:
-        judge_container: list[HtmlElement] = []
+    if container:
+        info_container = container.find(
+            './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
+        )
+        # Texas gives the judge their own child element all to themselves for some
+        # reason.
+        judge_container = container.find(
+            './/*[@id="ctl00_ContentPlaceHolder1_pnlCOAJudge"]'
+        )
+    else:
+        info_container = None
+        judge_container = None
+
+    case_info_elements = [
+        (row.find(".//*[1]"), row.find(".//*[2]"))
+        for row in (list(info_container or ()) + list(judge_container or ()))
+        if row is not None
+    ]
     case_info = {
-        clean_string(row.find(".//*[1]").text_content()): row.find(".//*[2]")
-        for row in (list(info_container) + list(judge_container))
+        clean_string(k.text_content()): v
+        for k, v in case_info_elements
+        if k is not None and v is not None
     }
     justice_node = case_info.get("COA Justice")
 
@@ -362,14 +374,19 @@ def _originating_court_name_to_type(name: str) -> CourtType:
     return CourtType.COUNTY
 
 
-def district_court_number_from_name(name: str) -> int:
+def district_court_number_from_name(name: str) -> int | None:
     # TODO Handle edge-cases
     name = _clean_court_name(name)
     district_court_match = DISTRICT_COURT_RE.match(name)
+    if district_court_match is None:
+        return None
     district = district_court_match.group(1)
     if district == "1-a" or district == "1a":
         return 1
-    return int(DISTRICT_COURT_DISTRICT_RE.match(district).group(1))
+    district_court_district_match = DISTRICT_COURT_DISTRICT_RE.match(district)
+    if district_court_district_match is None:
+        return None
+    return int(district_court_district_match.group(1))
 
 
 class TexasCaseDocument(TypedDict):
@@ -559,7 +576,10 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             raise ValueError("Appellate briefs table not found.")
         self.events = parse_table(events_table)
         self.briefs = parse_table(briefs_table)
-        self.case_data = self._extract_case_data()
+        case_data = self._extract_case_data()
+        if case_data is None:
+            raise ValueError("Case data not found.")
+        self.case_data = case_data if case_data is not None else {}
         self.is_valid = True
 
     @final
@@ -582,6 +602,10 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if docket_number is None:
             return None
 
+        originating_court = self._parse_originating_court()
+        if originating_court is None:
+            return None
+
         data = TexasCommonData(
             court_id=CourtID.UNKNOWN.value,
             court_type=CourtType.UNKNOWN.value,
@@ -589,7 +613,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
             parties=self.parties,
-            originating_court=self._parse_originating_court(),
+            originating_court=originating_court,
             case_events=self._parse_case_events(),
             appellate_briefs=self._parse_appellate_briefs(),
             case_name=self.case_name,
@@ -615,7 +639,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         name = "".join(get_all_text(name_element))
         return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
 
-    def _extract_case_data(self) -> dict[str, str]:
+    def _extract_case_data(self) -> dict[str, str] | None:
         """
         Helper method to extract the case information at the top of the page
         into a dictionary. After cleaning text, the keys are the text on the
@@ -627,6 +651,9 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if self.tree is None:
             raise ValueError("_parse_text() must called first.")
         parent = self.tree.find('.//*[@id="case"]/..')
+        if parent is None:
+            logger.error("[court=%s] Unable to find case data", self.court_id)
+            return None
         coa_parent = parent.find(
             './/*[@id="ctl00_ContentPlaceHolder1_COAOnly"]'
         )
@@ -637,11 +664,15 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
                 children, coa_parent.iterfind('.//*[@class="row-fluid"]')
             )
 
-        return {
-            self._extract_case_data_name(child.find(".//*[1]")): clean_string(
-                get_all_text(child.find(".//*[2]"))
-            )
+        children_elements = [
+            (child.find(".//*[1]"), child.find(".//*[2]"))
             for child in children
+        ]
+
+        return {
+            self._extract_case_data_name(k): clean_string(get_all_text(v))
+            for k, v in children_elements
+            if k is not None and v is not None
         }
 
     BUSINESS_AND_TITLE_STRIP_RE = re.compile(
@@ -888,6 +919,11 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         table = self.tree.find(
             './/table[@id="ctl00_ContentPlaceHolder1_grdParty_ctl00"]'
         )
+        if table is None:
+            logger.error(
+                "[court=%s] Unable to find parties table", self.court_id
+            )
+            return []
         parties = parse_table(table)
         # Handle "no records" case where Party column has a placeholder but
         # other columns are empty
@@ -913,6 +949,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         TexasOriginatingCourt
         | TexasOriginatingAppellateCourt
         | TexasOriginatingDistrictCourt
+        | None
     ):
         """
         Extracts the trial court info from the HTML tree. Will fail if
@@ -922,14 +959,19 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         """
         if self.tree is None:
             raise ValueError("_parse_text() must called first.")
-        info_panel: HtmlElement = self.tree.find(
-            './/*[@id="panelTrialCourtInfo"]/div[2]'
-        )
-        fields: dict[str, str] = {
-            clean_string(child.find(".//*[1]").text_content()): clean_string(
-                child.find(".//*[2]").text_content()
-            )
+        info_panel = self.tree.find('.//*[@id="panelTrialCourtInfo"]/div[2]')
+        if info_panel is None:
+            logger.error("[court=%s] Unable to find info panel", self.court_id)
+            return None
+
+        fields_elements = [
+            (child.find(".//*[1]"), child.find(".//*[2]"))
             for child in info_panel.iterchildren()
+        ]
+        fields = {
+            clean_string(k.text_content()): clean_string(v.text_content())
+            for k, v in fields_elements
+            if k is not None and v is not None
         }
 
         court_name = fields.get("Court", "")
@@ -960,6 +1002,10 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
             )
         elif court_type == CourtType.DISTRICT:
             district = district_court_number_from_name(court_name)
+            if district is None:
+                logger.error(
+                    "[court=%s] Unable to find district number", self.court_id
+                )
             originating_court_details = TexasOriginatingDistrictCourt(
                 name=court_details["name"],
                 court_type=court_details["court_type"],
