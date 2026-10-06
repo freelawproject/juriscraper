@@ -1,4 +1,4 @@
-from httpx import Request, Response, Timeout
+from httpx2 import Request, Response, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.reports import BaseReport

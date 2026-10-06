@@ -4,7 +4,7 @@ import re
 import sys
 from collections import OrderedDict
 
-from httpx import Response
+from httpx2 import Response
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger

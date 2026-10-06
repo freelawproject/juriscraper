@@ -3,7 +3,7 @@ import random
 from datetime import datetime
 from typing import Any
 
-from httpx import AsyncClient
+from httpx2 import AsyncClient
 
 from juriscraper.lib.log_tools import make_default_logger
 

@@ -1,7 +1,7 @@
 import re
 from datetime import date, datetime
 
-import httpx
+import httpx2
 from dateutil import parser
 from dateutil.tz import gettz
 from lxml import html
@@ -433,7 +433,7 @@ def get_doc_id_prefix_from_court_id(court_id):
 async def get_pacer_court_info(**kwargs):
     kwargs.setdefault("http2", True)
     kwargs.setdefault("follow_redirects", True)
-    async with httpx.AsyncClient(**kwargs) as client:
+    async with httpx2.AsyncClient(**kwargs) as client:
         r = await client.get(
             "https://court-version-scraper.fly.dev/courts.json"
         )
@@ -451,7 +451,7 @@ def get_courts_from_json(j):
 
 def get_court_id_from_url(url):
     """Extract the court ID from the URL."""
-    host = httpx.URL(url).host
+    host = httpx2.URL(url).host
     return host.split(".")[1]
 
 

@@ -1,4 +1,4 @@
-import httpx
+import httpx2
 from lxml.html import fromstring
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -6,9 +6,9 @@ from juriscraper.lib.log_tools import make_default_logger
 logger = make_default_logger()
 
 
-class LASCSession(httpx.AsyncClient):
+class LASCSession(httpx2.AsyncClient):
     """
-    A httpx.AsyncClient object with special tooling to handle the Los Angeles
+    A httpx2.AsyncClient object with special tooling to handle the Los Angeles
     Superior Court Media Access portal.
     """
 
@@ -60,11 +60,11 @@ class LASCSession(httpx.AsyncClient):
         }
 
     async def get(self, url, auto_login=False, **kwargs):
-        """Overrides httpx.AsyncClient.get with session retry logic.
+        """Overrides httpx2.AsyncClient.get with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: httpx.Response
+        :return: httpx2.Response
         """
         kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
@@ -72,11 +72,11 @@ class LASCSession(httpx.AsyncClient):
         return await super().get(url, **kwargs)
 
     async def post(self, url, auto_login=False, **kwargs):
-        """Overrides httpx.AsyncClient.post with session retry logic.
+        """Overrides httpx2.AsyncClient.post with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: httpx.Response
+        :return: httpx2.Response
         """
         kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
@@ -90,7 +90,7 @@ class LASCSession(httpx.AsyncClient):
         This method parses the HTML after the first login page and identifies
         the parameter values required for the next step.
 
-        :param r: A httpx.Response object
+        :param r: A httpx2.Response object
         :return: A dict containing the needed keys
         """
         html = fromstring(r.text)
@@ -104,7 +104,7 @@ class LASCSession(httpx.AsyncClient):
     def _check_login(r):
         """Check that the login succeeded
 
-        :param r: A httpx.Response object
+        :param r: A httpx2.Response object
         :return: None
         :raises LASCLoginException
         """

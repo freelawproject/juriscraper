@@ -6,7 +6,7 @@ from datetime import date, timedelta
 from unittest import mock
 
 import jsondate3 as json
-from httpx import ConnectError
+from httpx2 import ConnectError
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DownloadConfirmationPage, FreeOpinionReport

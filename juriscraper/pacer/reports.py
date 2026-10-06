@@ -1,7 +1,7 @@
 import re
 from urllib.parse import urljoin
 
-from httpx import Response, Timeout
+from httpx2 import Response, Timeout
 from lxml.html import HtmlElement
 
 from juriscraper.lib.html_utils import (
@@ -74,7 +74,7 @@ class BaseReport:
         raise NotImplementedError(".query() must be overridden")
 
     def parse(self):
-        """Parse the data provided in a httpx.Response object and set
+        """Parse the data provided in a httpx2.Response object and set
         self.tree to be an lxml etree. In most cases, you won't need to call
         this since it will be automatically called by self.query, if needed.
 

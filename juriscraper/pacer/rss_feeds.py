@@ -7,7 +7,7 @@ import sys
 from html import unescape
 
 import feedparser
-from httpx import AsyncClient, Timeout
+from httpx2 import AsyncClient, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -185,7 +185,7 @@ class PacerRssFeed(DocketReport):
     async def query(self):
         """Query the RSS feed for a given court ID
 
-        Note that we use httpx here, and so we forgo some of the
+        Note that we use httpx2 here, and so we forgo some of the
         useful features that feedparser offers around the Etags and
         Last-Modified headers. This is fine for now because no PACER
         site seems to support these headers, but eventually we'll
