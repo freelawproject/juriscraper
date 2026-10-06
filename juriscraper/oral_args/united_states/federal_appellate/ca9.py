@@ -19,7 +19,7 @@ from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSiteLinear, DateBackscraper):
+class Site(DateBackscraper, OralArgumentSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     # Lookback for the regular scrape, in `created_date` terms. The cron runs
     # hourly, so this only needs to cover a scraper outage. Widening it is

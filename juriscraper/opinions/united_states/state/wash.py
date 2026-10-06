@@ -8,7 +8,7 @@ from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear, YearBackscraper):
+class Site(YearBackscraper, OpinionSiteLinear):
     # Oldest opinion listed in the "byYear" pages; earlier years are empty
     first_opinion_date = date(2013, 2, 28)
     # Example URL:
@@ -30,7 +30,7 @@ class Site(OpinionSiteLinear, YearBackscraper):
             year, self.crt_level, self.pub_status
         )
         self.status = "Published"
-        YearBackscraper.make_backscrape_iterable(self, kwargs)
+        self.make_backscrape_iterable(kwargs)
 
     @override
     def _process_html(self) -> None:

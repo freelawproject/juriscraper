@@ -11,10 +11,10 @@ class Backscraper(ABC, Generic[IterableItemT]):
     """Mixin for Sites that download their historical records
 
     The Site builds `back_scrape_iterable` in `__init__`, and
-    `_download_backwards` receives one of its items at a time. Use it next
-    to the Site's base class, e.g. `class Site(OpinionSiteLinear,
-    DateBackscraper)`; since `AbstractSite` comes first in the MRO, call the
-    family's `make_backscrape_iterable` explicitly, or override it.
+    `_download_backwards` receives one of its items at a time. List the
+    family before the Site's base class, e.g. `class Site(DateBackscraper,
+    OpinionSiteLinear)`, so its methods take precedence over `AbstractSite`'s
+    backscrape defaults.
     """
 
     # Any iterable: scrapers assign and post-process it in many ways
@@ -25,9 +25,6 @@ class Backscraper(ABC, Generic[IterableItemT]):
         self, iterable_item: IterableItemT, /
     ) -> None:
         """Download and process the records for one iterable item
-
-        Not enforced on Sites (`AbstractSite`'s no-op comes first in the
-        MRO); test_BackscrapeTest.py checks every Backscraper overrides it.
 
         :param iterable_item: an item of `self.back_scrape_iterable`
         """

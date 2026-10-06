@@ -9,7 +9,7 @@ from juriscraper.Backscraper import DateBackscraper
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear, DateBackscraper):
+class Site(DateBackscraper, OpinionSiteLinear):
     first_opinion_date = date(2002, 3, 20)
     days_interval = 8
     # This scraper's backscrape_start / backscrape_end format
@@ -30,7 +30,7 @@ class Site(OpinionSiteLinear, DateBackscraper):
         self.date_range = f"{self.start},{self.end}"
         self.parameters = {}
         self.update_parameters()
-        DateBackscraper.make_backscrape_iterable(self, kwargs)
+        self.make_backscrape_iterable(kwargs)
 
     @override
     def _process_html(self) -> None:

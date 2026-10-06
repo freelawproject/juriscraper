@@ -17,7 +17,7 @@ from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear, DateBackscraper):
+class Site(DateBackscraper, OpinionSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     days_interval = 31
     first_opinion_date = datetime(2005, 1, 6)

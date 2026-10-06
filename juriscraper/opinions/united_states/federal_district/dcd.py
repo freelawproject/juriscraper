@@ -18,7 +18,7 @@ from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear, DateBackscraper):
+class Site(DateBackscraper, OpinionSiteLinear):
     # Oldest opinion listed in https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl
     first_opinion_date = date(2005, 1, 3)
     date_format = "%m/%d/%Y"
