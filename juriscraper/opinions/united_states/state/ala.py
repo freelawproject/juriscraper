@@ -63,11 +63,12 @@ class Site(OpinionSiteLinear):
             if not publicationItem.get("documents", []):
                 continue
 
-            # Only process actual opinions, skip orders
-            if publicationItem["documents"][0]["documentName"] not in [
-                "Opinion",
-                "Decision",
-            ]:
+            # Only process actual opinions, skip orders. The court renamed
+            # "Opinion" to "Published Opinion" in Sept 2026
+            if not re.search(
+                r"\b(Opinion|Decision)\b",
+                publicationItem["documents"][0]["documentName"],
+            ):
                 continue
 
             name = publicationItem["title"]
