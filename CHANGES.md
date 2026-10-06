@@ -26,6 +26,8 @@ Fixes:
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
+- Fix `ga`: read the release date from the `<h3>` heading the 2026 opinions page now uses; opinions since 2026-06-30 were all dated 2026-06-16 and dropped
+- Fix `ala`: accept the renamed "Published Opinion" document type; opinions after 2026-08-21 were dropped (also `alacivapp`, `alacrimapp`)
 -
 
 ## 3.0.44 - 2026-09-30
