@@ -1,26 +1,32 @@
 {
-  "document_number":251,
-  "page_count":5,
-  "file_size_str":"111 kb",
-  "pacer_doc_id":"085013034901",
-  "pacer_case_id":"195449",
-  "pacer_seq_no":"837",
-  "attachments":[
-     {
-        "attachment_number":1,
-        "description":"Pretrial Notice Form",
-        "page_count":8,
-        "file_size_str":"117 kb",
-        "pacer_doc_id":"085013034902",
-        "pacer_seq_no":"837"
-     },
-     {
-        "attachment_number":2,
-        "description":"Standing Order",
-        "page_count":2,
-        "file_size_str":"20 kb",
-        "pacer_doc_id":"085013034903",
-        "pacer_seq_no":"837"
-     }
-  ]
+  "document_number": 251,
+  "page_count": 5,
+  "file_size_str": "111 kb",
+  "pacer_doc_id": "085013034901",
+  "pacer_case_id": "195449",
+  "pacer_seq_no": "837",
+  "attachments": [
+    {
+      "attachment_number": 1,
+      "description": "Pretrial Notice Form",
+      "page_count": 8,
+      "file_size_str": "117 kb",
+      "pacer_doc_id": "085013034902",
+      "pacer_seq_no": "837"
+    },
+    {
+      "attachment_number": 2,
+      "description": "Standing Order",
+      "page_count": 2,
+      "file_size_str": "20 kb",
+      "pacer_doc_id": "085013034903",
+      "pacer_seq_no": "837"
+    }
+  ],
+  "docket_number": null,
+  "federal_dn_office_code": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_defendant_number": null
 }

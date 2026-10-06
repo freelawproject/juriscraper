@@ -1,8 +1,13 @@
 {
-    "document_number":"00516435537",
-    "cost":"0.20",
-    "docket_number":"22-30371",
-    "billable_pages":"2",
-    "document_description":"PDF Document",
-    "transaction_date": "2022-08-30 13:48:21"
- }
+  "billable_pages": "2",
+  "cost": "0.20",
+  "docket_number": "22-30371",
+  "document_description": "PDF Document",
+  "document_number": "00516435537",
+  "federal_defendant_number": null,
+  "federal_dn_case_type": null,
+  "federal_dn_judge_initials_assigned": null,
+  "federal_dn_judge_initials_referred": null,
+  "federal_dn_office_code": null,
+  "transaction_date": "2022-08-30T13:48:21Z"
+}

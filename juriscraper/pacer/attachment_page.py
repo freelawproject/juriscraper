@@ -5,6 +5,7 @@ import sys
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import force_unicode
 
+from .docket_report import BaseDocketReport
 from .reports import BaseReport
 from .utils import (
     get_court_id_from_doc_id_prefix,
@@ -17,13 +18,14 @@ from .utils import (
 logger = make_default_logger()
 
 
-class AttachmentPage(BaseReport):
+class AttachmentPage(BaseDocketReport, BaseReport):
     """An object for querying and parsing the attachment page report."""
 
     PATH = "doc1/"
 
     def __init__(self, court_id, pacer_session=None):
-        super().__init__(court_id, pacer_session)
+        BaseDocketReport.__init__(self, court_id)
+        BaseReport.__init__(self, court_id, pacer_session)
         # Note that parsing bankruptcy attachment pages does not reveal the
         # document number, only the attachment numbers.
         self.is_bankruptcy = self.court_id.endswith("b")
@@ -44,6 +46,13 @@ class AttachmentPage(BaseReport):
         logger.info("Querying the attachment page endpoint at URL: %s", url)
         self.response = self.session.get(url)
         self.parse()
+
+    def _get_docket_number(self):
+        """Attachment pages do not contain docket numbers.
+
+        :return: None
+        """
+        return None
 
     @property
     def data(self):
@@ -113,6 +122,12 @@ class AttachmentPage(BaseReport):
             if file_size_bytes is not None:
                 attachment["file_size_bytes"] = file_size_bytes
             result["attachments"].append(attachment)
+
+        # Add docket number fields (all None for attachment pages)
+        docket_number = self._get_docket_number()
+        docket_number_components = self._return_default_dn_components()
+        result["docket_number"] = docket_number
+        result.update(docket_number_components)
 
         return result
 
