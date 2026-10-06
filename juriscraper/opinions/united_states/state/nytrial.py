@@ -14,7 +14,7 @@ from datetime import date
 from typing import Any
 from urllib.parse import urljoin
 
-import httpx
+import httpx2
 from lxml.etree import ParserError
 from lxml.html import fromstring
 from typing_extensions import override
@@ -180,7 +180,7 @@ class Site(OpinionSiteLinear):
         """
         try:
             html = await self._get_html_tree_by_url(urljoin(self.url, url))
-        except (httpx.HTTPError, ParserError) as e:
+        except (httpx2.HTTPError, ParserError) as e:
             logger.warning("nytrial: could not get stub %s: %s", url, e)
             return "", ""
         header = html.xpath("//h1/parent::div")[:1]

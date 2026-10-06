@@ -29,7 +29,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from typing import Literal, TypeVar
 
-import httpx
+import httpx2
 import pydantic_core
 from pydantic import BaseModel, RootModel, ValidationError
 from pydantic_core import PydanticCustomError
@@ -313,7 +313,7 @@ class FloridaScraper:
                 totals.add(r.page.total_elements)
                 actual_total += len(r.results)
                 total_pages = r.page.total_pages
-            except httpx.HTTPError as e:
+            except httpx2.HTTPError as e:
                 yield PaginationFailed(
                     next_page, "network", endpoint, page_params, e
                 )

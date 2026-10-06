@@ -141,13 +141,6 @@
       "severity": "error"
     },
     {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-implicit",
-      "concise_description": "Returning implicit Any from function declared to return \"bool\"",
-      "severity": "error"
-    },
-    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",

@@ -1,8 +1,8 @@
 import os
 from urllib.parse import urljoin
 
-import httpx
-from httpx import AsyncClient, Response, TimeoutException
+import httpx2
+from httpx2 import AsyncClient, Response, TimeoutException
 from lxml import html
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -82,7 +82,7 @@ async def get_extension(content: bytes) -> str:
     # Get the file type from the document's raw content
     doctor_host = os.environ.get("DOCTOR_HOST", "http://cl-doctor:5050")
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
-    async with httpx.AsyncClient() as client:
+    async with httpx2.AsyncClient() as client:
         extension_response = await client.post(
             extension_url, files={"file": ("filename", content)}, timeout=30
         )
