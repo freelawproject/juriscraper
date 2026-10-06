@@ -1,7 +1,7 @@
 """Tests for the Florida scraper driver in ``juriscraper.state.florida.scraper``.
 
 The strategy is the same as the RequestManager tests — swap the client's
-transport for an ``httpx.MockTransport`` so requests still travel the real
+transport for an ``httpx2.MockTransport`` so requests still travel the real
 build/send code path but resolve against an in-process handler. This keeps
 tests deterministic without needing a recording layer.
 """
@@ -13,7 +13,7 @@ from collections.abc import Callable
 from datetime import date
 from typing import Any
 
-import httpx
+import httpx2
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.state.florida.cases import FloridaCase
@@ -275,24 +275,24 @@ class _Recorder:
         self.calls: list[tuple[str, dict[str, str]]] = []
         self._handlers: list[
             tuple[
-                Callable[[httpx.Request], bool],
-                Callable[[httpx.Request], httpx.Response],
+                Callable[[httpx2.Request], bool],
+                Callable[[httpx2.Request], httpx2.Response],
             ]
         ] = []
 
     def register(
         self,
-        predicate: Callable[[httpx.Request], bool],
-        handler: Callable[[httpx.Request], httpx.Response],
+        predicate: Callable[[httpx2.Request], bool],
+        handler: Callable[[httpx2.Request], httpx2.Response],
     ) -> None:
         self._handlers.append((predicate, handler))
 
-    def __call__(self, request: httpx.Request) -> httpx.Response:
+    def __call__(self, request: httpx2.Request) -> httpx2.Response:
         self.calls.append((request.url.path, dict(request.url.params)))
         for predicate, handler in self._handlers:
             if predicate(request):
                 return handler(request)
-        return httpx.Response(
+        return httpx2.Response(
             404, json={"error": "no handler", "path": request.url.path}
         )
 
@@ -305,7 +305,7 @@ def _make_scraper(
     ``rps`` defaults very high so tests don't pay for rate limiting.
     """
     scraper = FloridaScraper(rps=rps)
-    scraper.manager._transport = httpx.MockTransport(recorder)
+    scraper.manager._transport = httpx2.MockTransport(recorder)
     return scraper
 
 
@@ -313,23 +313,23 @@ def _register_court_and_metadata_handlers(recorder: _Recorder) -> None:
     """Wire up the four endpoints ``fetch_courts`` reaches for."""
     recorder.register(
         lambda r: r.url.path == "/courts",
-        lambda r: httpx.Response(200, json=_courts_body()),
+        lambda r: httpx2.Response(200, json=_courts_body()),
     )
     recorder.register(
         lambda r: r.url.path == "/courts/casepartysubtypes",
-        lambda r: httpx.Response(200, json=_case_party_subtypes_body()),
+        lambda r: httpx2.Response(200, json=_case_party_subtypes_body()),
     )
     recorder.register(
         lambda r: r.url.path.endswith("/cms/casecategories"),
-        lambda r: httpx.Response(200, json=_case_categories_body()),
+        lambda r: httpx2.Response(200, json=_case_categories_body()),
     )
     recorder.register(
         lambda r: r.url.path.endswith("/cms/docketentrysubtypes"),
-        lambda r: httpx.Response(200, json=_docket_entry_subtypes_body()),
+        lambda r: httpx2.Response(200, json=_docket_entry_subtypes_body()),
     )
     recorder.register(
         lambda r: r.url.path.endswith("/hearings"),
-        lambda r: httpx.Response(200, json=_hearings_body()),
+        lambda r: httpx2.Response(200, json=_hearings_body()),
     )
 
 
@@ -402,10 +402,10 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
         skipped instead of raising."""
         recorder = _Recorder()
 
-        def courts_handler(_request: httpx.Request) -> httpx.Response:
+        def courts_handler(_request: httpx2.Request) -> httpx2.Response:
             # Two courts: one known (5) and one with an external id that
             # isn't in FLORIDA_COURT_EXTERNAL_ID_MAP.
-            return httpx.Response(
+            return httpx2.Response(
                 200,
                 json=_paginated_body(
                     [
@@ -438,15 +438,15 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
         recorder.register(lambda r: r.url.path == "/courts", courts_handler)
         recorder.register(
             lambda r: r.url.path == "/courts/casepartysubtypes",
-            lambda r: httpx.Response(200, json=_case_party_subtypes_body()),
+            lambda r: httpx2.Response(200, json=_case_party_subtypes_body()),
         )
         recorder.register(
             lambda r: r.url.path.endswith("/cms/casecategories"),
-            lambda r: httpx.Response(200, json=_case_categories_body()),
+            lambda r: httpx2.Response(200, json=_case_categories_body()),
         )
         recorder.register(
             lambda r: r.url.path.endswith("/cms/docketentrysubtypes"),
-            lambda r: httpx.Response(200, json=_docket_entry_subtypes_body()),
+            lambda r: httpx2.Response(200, json=_docket_entry_subtypes_body()),
         )
 
         async with _make_scraper(recorder) as scraper:
@@ -461,8 +461,8 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        def case_handler(_: httpx.Request) -> httpx.Response:
-            return httpx.Response(
+        def case_handler(_: httpx2.Request) -> httpx2.Response:
+            return httpx2.Response(
                 200,
                 json=_paginated_body(
                     [
@@ -509,7 +509,7 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
 
         page_zero_ranges: list[tuple[str, str]] = []
 
-        def case_handler(request: httpx.Request) -> httpx.Response:
+        def case_handler(request: httpx2.Request) -> httpx2.Response:
             params = request.url.params
             page = int(params.get("page", "0"))
             from_param = params.get("caseHeader.filedDateFrom", "")
@@ -521,7 +521,7 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
             if from_param.startswith("2026-03-01") and to_param.startswith(
                 "2026-03-31"
             ):
-                return httpx.Response(
+                return httpx2.Response(
                     200,
                     json=_paginated_body(
                         [], page=0, total_elements=MAX_RESULTS
@@ -537,11 +537,11 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                 case_number = "4D2026-0002"
 
             if page > 0:
-                return httpx.Response(
+                return httpx2.Response(
                     200,
                     json=_paginated_body([], page=page, total_elements=1),
                 )
-            return httpx.Response(
+            return httpx2.Response(
                 200,
                 json=_paginated_body(
                     [_case_listing_entry(case_uuid, case_number)],
@@ -578,9 +578,9 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        def case_handler(_request: httpx.Request) -> httpx.Response:
+        def case_handler(_request: httpx2.Request) -> httpx2.Response:
             # Every query reports cap; with start == end, no further split.
-            return httpx.Response(
+            return httpx2.Response(
                 200,
                 json=_paginated_body([], page=0, total_elements=MAX_RESULTS),
             )
@@ -641,7 +641,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
 
         recorder.register(
             lambda r: r.url.path.endswith(f"/cases/{CASE_UUID}"),
-            lambda r: httpx.Response(
+            lambda r: httpx2.Response(
                 200,
                 json=_case_listing_entry(CASE_UUID, "4D2026-0606"),
             ),
@@ -649,7 +649,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
 
         recorder.register(
             lambda r: r.url.path.endswith("/docketentries"),
-            lambda r: httpx.Response(
+            lambda r: httpx2.Response(
                 200,
                 json=_paginated_body(
                     [
@@ -663,17 +663,17 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
 
         recorder.register(
             lambda r: r.url.path.endswith(f"/cases/{CASE_UUID}/parties"),
-            lambda r: httpx.Response(
+            lambda r: httpx2.Response(
                 200,
                 json=_paginated_body([_party_body()], total_elements=1),
             ),
         )
 
-        def docs_handler(request: httpx.Request) -> httpx.Response:
+        def docs_handler(request: httpx2.Request) -> httpx2.Response:
             entry_uuid = request.url.params.get(
                 "docketEntryHeader.docketEntryUUID", ""
             )
-            return httpx.Response(
+            return httpx2.Response(
                 200,
                 json=_paginated_body(
                     [_document_body(entry_uuid)],
@@ -727,16 +727,16 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        def case_listing_handler(request: httpx.Request) -> httpx.Response:
+        def case_listing_handler(request: httpx2.Request) -> httpx2.Response:
             page = int(request.url.params.get("page", "0"))
             if page > 0:
-                return httpx.Response(
+                return httpx2.Response(
                     200,
                     json=_paginated_body(
                         [], page=page, total_elements=1, page_size=PAGE_SIZE
                     ),
                 )
-            return httpx.Response(
+            return httpx2.Response(
                 200,
                 json=_paginated_body(
                     [_case_listing_entry(CASE_UUID, "4D2026-0606")],
@@ -769,16 +769,16 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
-        def case_listing_handler(request: httpx.Request) -> httpx.Response:
+        def case_listing_handler(request: httpx2.Request) -> httpx2.Response:
             page = int(request.url.params.get("page", "0"))
             if page > 0:
-                return httpx.Response(
+                return httpx2.Response(
                     200,
                     json=_paginated_body(
                         [], page=page, total_elements=1, page_size=PAGE_SIZE
                     ),
                 )
-            return httpx.Response(
+            return httpx2.Response(
                 200,
                 json=_paginated_body(
                     [_case_listing_entry(CASE_UUID, "4D2026-0606")],
@@ -797,7 +797,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
                 or r.url.path.endswith("/parties")
                 or r.url.path == "/courts/cms/docketentrydocumentsaccess"
             ),
-            lambda r: httpx.Response(500, text="should not be called"),
+            lambda r: httpx2.Response(500, text="should not be called"),
         )
 
         async with _make_scraper(recorder) as scraper:
@@ -826,10 +826,10 @@ class LifecycleTest(unittest.IsolatedAsyncioTestCase):
         recorder = _Recorder()
         recorder.register(
             lambda r: True,
-            lambda r: httpx.Response(200, text="ok"),
+            lambda r: httpx2.Response(200, text="ok"),
         )
         async with FloridaScraper(rps=1000.0) as scraper:
-            scraper.manager._transport = httpx.MockTransport(recorder)
+            scraper.manager._transport = httpx2.MockTransport(recorder)
             self.assertFalse(scraper.manager.is_closed)
         self.assertTrue(scraper.manager.is_closed)
 

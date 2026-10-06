@@ -16,7 +16,7 @@ from typing import (
     TypeVar,
 )
 
-import httpx
+import httpx2
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -26,7 +26,7 @@ T = TypeVar("T")
 
 # Type alias for response callback functions
 # Callback receives the request manager and the response
-ResponseCallback = Callable[["ScraperRequestManager", httpx.Response], None]
+ResponseCallback = Callable[["ScraperRequestManager", httpx2.Response], None]
 
 
 class ScraperRequestManager:
@@ -37,19 +37,19 @@ class ScraperRequestManager:
     - Response callbacks for logging/debugging
 
     Attributes:
-        session: The httpx AsyncClient used for HTTP requests
+        session: The httpx2 AsyncClient used for HTTP requests
         all_response_fn: Optional callback invoked after every HTTP response
     """
 
     def __init__(
         self,
-        session: httpx.AsyncClient | None = None,
+        session: httpx2.AsyncClient | None = None,
         all_response_fn: ResponseCallback | None = None,
     ) -> None:
         """Initialize the request manager.
 
         Args:
-            session: Optional httpx AsyncClient. If not provided, a new session
+            session: Optional httpx2 AsyncClient. If not provided, a new session
                 will be created with default Juriscraper headers. Closing the
                 manager also closes a supplied session.
             all_response_fn: Optional callback function invoked after every
@@ -59,7 +59,9 @@ class ScraperRequestManager:
         if session is not None:
             self.session = session
         else:
-            self.session = httpx.AsyncClient(http2=True, follow_redirects=True)
+            self.session = httpx2.AsyncClient(
+                http2=True, follow_redirects=True
+            )
             self.session.headers.update(
                 {
                     "User-Agent": "Juriscraper",
@@ -90,10 +92,10 @@ class ScraperRequestManager:
         method: str,
         url: str,
         **kwargs: Any,
-    ) -> httpx.Response:
+    ) -> httpx2.Response:
         """Make an HTTP request using the internal session.
 
-        This method mirrors the httpx library's request method signature.
+        This method mirrors the httpx2 library's request method signature.
         The all_response_fn callback (if set) will be invoked after the
         request completes.
 
@@ -104,7 +106,7 @@ class ScraperRequestManager:
                 (params, data, json, headers, timeout, etc.)
 
         Returns:
-            The httpx Response object
+            The httpx2 Response object
         """
         kwargs.setdefault("timeout", 60)
 
@@ -125,11 +127,11 @@ class ScraperRequestManager:
         self.session.headers.update(headers)
 
     # Convenience methods that mirror requests library
-    async def get(self, url: str, **kwargs: Any) -> httpx.Response:
+    async def get(self, url: str, **kwargs: Any) -> httpx2.Response:
         """Make a GET request. See request() for details."""
         return await self.request("GET", url, **kwargs)
 
-    async def post(self, url: str, **kwargs: Any) -> httpx.Response:
+    async def post(self, url: str, **kwargs: Any) -> httpx2.Response:
         """Make a POST request. See request() for details."""
         return await self.request("POST", url, **kwargs)
 

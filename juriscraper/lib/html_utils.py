@@ -5,7 +5,7 @@ from typing import cast
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
-from httpx import Response
+from httpx2 import Response
 from lxml import etree, html
 from lxml.html import HtmlElement, fromstring, tostring
 

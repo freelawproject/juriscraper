@@ -6,8 +6,8 @@ from contextvars import ContextVar
 from http.cookiejar import Cookie
 from typing import Any
 
-import httpx
-from httpx import Cookies
+import httpx2
+from httpx2 import Cookies
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
@@ -107,9 +107,9 @@ def check_if_logged_in_page(content: bytes) -> bool:
     )
 
 
-class PacerSession(httpx.AsyncClient):
+class PacerSession(httpx2.AsyncClient):
     """
-    Extension of httpx.AsyncClient to handle PACER oddities making it easier
+    Extension of httpx2.AsyncClient to handle PACER oddities making it easier
     for folks to just POST data to PACER endpoints/apis.
 
     Also includes utilities for logging into PACER and re-logging in when
@@ -130,7 +130,7 @@ class PacerSession(httpx.AsyncClient):
     ):
         """
         Instantiate a new PACER API Session with some Juriscraper defaults
-        :param cookies: an optional httpx.Cookies object with cookies for the session
+        :param cookies: an optional httpx2.Cookies object with cookies for the session
         :param username: a PACER account username
         :param password: a PACER account password
         :param client_code: an optional PACER client code for the session
@@ -174,28 +174,28 @@ class PacerSession(httpx.AsyncClient):
     @cookies.setter
     def cookies(self, cookies) -> None:
         if self._anonymous_cookies.get() is None:
-            httpx.AsyncClient.cookies.__set__(self, cookies)
+            httpx2.AsyncClient.cookies.__set__(self, cookies)
         else:
             self._anonymous_cookies.set(Cookies(cookies))
 
     async def get_anonymous(
-        self, url: str | httpx.URL, *, params=None, timeout=300
-    ) -> httpx.Response:
+        self, url: str | httpx2.URL, *, params=None, timeout=300
+    ) -> httpx2.Response:
         """GET without session headers, cookies, HTTP auth, or PACER login.
 
         Reuse this client's transport with fresh cookies for each call.
         Cookies set during redirects stay local to that call.
         """
-        request = httpx.Request(
+        request = httpx2.Request(
             "GET",
             url,
             params=params,
-            extensions={"timeout": httpx.Timeout(timeout).as_dict()},
+            extensions={"timeout": httpx2.Timeout(timeout).as_dict()},
         )
         # HTTPX reads and updates self.cookies throughout the redirect chain.
         token = self._anonymous_cookies.set(Cookies())
         try:
-            return await self.send(request, auth=httpx.Auth())
+            return await self.send(request, auth=httpx2.Auth())
         finally:
             self._anonymous_cookies.reset(token)
 
@@ -284,7 +284,7 @@ class PacerSession(httpx.AsyncClient):
             self.acms_user_data = user_data
 
     async def get(self, url, auto_login=True, **kwargs):
-        """Overrides httpx.AsyncClient.get with session retry logic.
+        """Overrides httpx2.AsyncClient.get with session retry logic.
 
         For ACMS endpoints, this method automatically establishes and reuses
         court-specific authentication cookies. For PACER endpoints, it can
@@ -293,7 +293,7 @@ class PacerSession(httpx.AsyncClient):
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: httpx.Response
+        :return: httpx2.Response
         """
         court_id = await self._prepare_acms_request(url, kwargs)
 
@@ -323,7 +323,7 @@ class PacerSession(httpx.AsyncClient):
 
     async def post(self, url, data=None, json=None, auto_login=True, **kwargs):
         """
-        Overrides httpx.AsyncClient.post with PACER-specific fun.
+        Overrides httpx2.AsyncClient.post with PACER-specific fun.
 
         For ACMS endpoints, this method automatically establishes and reuses
         court-specific authentication cookies. For PACER endpoints, it can
@@ -341,7 +341,7 @@ class PacerSession(httpx.AsyncClient):
         :param json: json object to post
         :param auto_login: Whether the auto-login procedure should happen.
         :param kwargs: assorted keyword arguments
-        :return: httpx.Response
+        :return: httpx2.Response
         """
         court_id = await self._prepare_acms_request(url, kwargs)
 
@@ -365,11 +365,11 @@ class PacerSession(httpx.AsyncClient):
 
     async def head(self, url, **kwargs):
         """
-        Overrides httpx.AsyncClient.head with a default timeout parameter.
+        Overrides httpx2.AsyncClient.head with a default timeout parameter.
 
         :param url: url string upon which to do a HEAD request
         :param kwargs: assorted keyword arguments
-        :return: httpx.Response
+        :return: httpx2.Response
         """
         kwargs.setdefault("timeout", 300)
         return await super().head(url, **kwargs)
@@ -435,7 +435,7 @@ class PacerSession(httpx.AsyncClient):
                id="j_id1:javax.faces.ViewState:0"
                value="some-long-value-here">
 
-        :param r: A httpx.Response object
+        :param r: A httpx2.Response object
         :return The value of the "value" attribute of the ViewState input
         element.
         """
@@ -488,7 +488,7 @@ class PacerSession(httpx.AsyncClient):
                request.
         :param **kwargs: Additional keyword arguments to be passed to the
                underlying POST request.
-        :return: httpx.Response: The response object from the login request.
+        :return: httpx2.Response: The response object from the login request.
         """
         return await super().post(
             url,
@@ -544,7 +544,7 @@ class PacerSession(httpx.AsyncClient):
             url, content=json.dumps(data), headers=headers
         )
 
-        if login_post_r.status_code != httpx.codes.OK:
+        if login_post_r.status_code != httpx2.codes.OK:
             message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason_phrase}'"
             logger.warning(message)
             raise PacerLoginException(message)
@@ -604,13 +604,13 @@ class PacerSession(httpx.AsyncClient):
             for court_id in ["ca2", "ca9"]:
                 await self.establish_acms_session(court_id)
 
-    def _do_additional_request(self, r: httpx.Response) -> bool:
+    def _do_additional_request(self, r: httpx2.Response) -> bool:
         """Check if we should do an additional request to PACER, sometimes
         PACER returns the login page even though cookies are still valid.
         Do an additional GET request if we haven't done it previously.
         See https://github.com/freelawproject/courtlistener/issues/2160.
 
-        :param r: The httpx Response object.
+        :param r: The httpx2 Response object.
         :return: True if an additional request should be done, otherwise False.
         """
         if r.request.method == "GET" and self.additional_request_done is False:
