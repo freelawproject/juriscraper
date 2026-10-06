@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add `juriscraper.Backscraper` with `DateBackscraper` and `YearBackscraper` mixins that parse and validate backscraper arguments in one place. Applied the mixins to the backscrapers that most needed them. #1900
+- Add `juriscraper.Backscraper` with `DateBackscraper`, `YearBackscraper` and `PageIndexBackscraper` mixins that parse and validate backscraper arguments in one place. Applied the mixins to the backscrapers that most needed them. #1900
 - Add `tests/local/test_BackscrapeTest.py`, testing every `Backscraper` offline. #1900
 
 Changes:

@@ -11,10 +11,15 @@ class Backscraper(ABC, Generic[IterableItemT]):
     """Mixin for Sites that download their historical records
 
     The Site builds `back_scrape_iterable` in `__init__`, and
-    `_download_backwards` receives one of its items at a time. List the
-    family before the Site's base class, e.g. `class Site(DateBackscraper,
-    OpinionSiteLinear)`, so its methods take precedence over `AbstractSite`'s
+    `_download_backwards` receives one of its items at a time.
+
+    List the family before the Site's base class, e.g.
+    `class Site(DateBackscraper, OpinionSiteLinear)`,
+    so its methods take precedence over `AbstractSite`'s
     backscrape defaults.
+
+    Add it to the class that defines `_download_backwards`: on a subclass,
+    the family's abstract method would shadow the parent Site's implementation.
     """
 
     # Any iterable: scrapers assign and post-process it in many ways
@@ -188,3 +193,78 @@ class YearBackscraper(Backscraper[IterableItemT], ABC):
         """
         start, end = self.get_backscrape_year_range(kwargs)
         self.back_scrape_iterable = list(range(start, end + 1))
+
+
+class PageIndexBackscraper(Backscraper[IterableItemT], ABC):
+    """Backscraper whose `backscrape_start` and `backscrape_end` are page
+    indexes, for sources that only paginate their archive (no dates or
+    years to filter by)
+
+    Builds one `int` per page, both ends inclusive, from `first_page_index`
+    to `last_page_index` by default. Set `reverse_page_order` to walk from
+    the last page to the first, e.g. to scrape the oldest pages first.
+    """
+
+    first_page_index: int
+    last_page_index: int
+    reverse_page_order: bool = False
+
+    @staticmethod
+    def parse_backscrape_page_index(value: object, name: str) -> int | None:
+        """Parse a page index string; None if the value isn't given
+
+        :param value: the kwarg value
+        :param name: the kwarg name, for error messages
+        """
+        if not value:
+            return None
+        if not isinstance(value, str):
+            raise TypeError(f"{name}={value!r} must be a page index string")
+        if not value.isdigit():
+            raise ValueError(f"{name}={value!r} must be a page index")
+        return int(value)
+
+    def get_backscrape_page_range(self, kwargs: dict) -> tuple[int, int]:
+        """Parse the (start, end) page indexes, both inclusive; defaults to
+        `first_page_index` and `last_page_index`
+
+        :param kwargs: the kwargs passed to `Site.__init__`
+        """
+        start = self.parse_backscrape_page_index(
+            kwargs.get("backscrape_start"), "backscrape_start"
+        )
+        end = self.parse_backscrape_page_index(
+            kwargs.get("backscrape_end"), "backscrape_end"
+        )
+
+        if start is None:
+            start = self._page_index_default("first_page_index")
+        if end is None:
+            end = self._page_index_default("last_page_index")
+
+        if start > end:
+            raise ValueError(
+                f"backscrape_start {start} is after backscrape_end {end}"
+            )
+        return start, end
+
+    def _page_index_default(self, attribute: str) -> int:
+        """The class attribute used when a page index kwarg isn't given"""
+        if not hasattr(self, attribute):
+            # A scraper misconfiguration, not a bad kwarg
+            raise AttributeError(
+                f"{type(self).__name__} has no `{attribute}` default"
+            )
+        return getattr(self, attribute)
+
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Set `back_scrape_iterable` to every page index of the range, in
+        `reverse_page_order` if set
+
+        :param kwargs: the kwargs passed to `Site.__init__`
+        """
+        start, end = self.get_backscrape_page_range(kwargs)
+        pages = list(range(start, end + 1))
+        self.back_scrape_iterable = (
+            pages[::-1] if self.reverse_page_order else pages
+        )

@@ -11,6 +11,7 @@ from juriscraper.AbstractSite import AbstractSite
 from juriscraper.Backscraper import (
     Backscraper,
     DateBackscraper,
+    PageIndexBackscraper,
     YearBackscraper,
 )
 
@@ -25,6 +26,9 @@ NOT_A_DATE = ("not a date", "2024", "2024/13/45", "2024-01-31T00:00:00")
 
 # Non-empty strings that aren't a "YYYY" year
 WRONG_YEARS = ("2024/01/31", "24", "20245", " 2024", "2024.0", "year")
+
+# Non-empty strings that aren't a page index
+WRONG_PAGES = ("page 2", "-1", "1.5", "first")
 
 # Non-empty values that aren't strings, e.g. already parsed by a caller
 NOT_STRINGS = (date(2024, 1, 31), datetime(2024, 1, 31), 2024)
@@ -238,3 +242,22 @@ class YearBackscraperTest(unittest.IsolatedAsyncioTestCase):
                     site_class, items[-1]
                 )
                 self.assertTrue(downloaded or url, f"last item {items[-1]}")
+
+
+class PageIndexBackscraperTest(YearBackscraperTest):
+    """Same tests as YearBackscraperTest, with page indexes"""
+
+    WRONG_KWARGS = (
+        [(backscrape_kwargs(start=v), ValueError) for v in WRONG_PAGES]
+        + [(backscrape_kwargs(end=v), ValueError) for v in WRONG_PAGES]
+        + [(backscrape_kwargs(start=v), TypeError) for v in NOT_STRINGS]
+        + [(backscrape_kwargs(end=v), TypeError) for v in NOT_STRINGS]
+        + [(backscrape_kwargs(start="5", end="2"), ValueError)]
+    )
+    VALID_KWARGS = ({}, backscrape_kwargs(start="2", end="5"))
+
+    def setUp(self):
+        logging.disable(logging.CRITICAL)
+        self.addCleanup(logging.disable, logging.NOTSET)
+        self.backscrapers = find_backscrapers(PageIndexBackscraper)
+        self.assertTrue(self.backscrapers, "No PageIndexBackscraper found")
