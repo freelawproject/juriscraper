@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Migrate HTTPX integrations to `httpx2`. Callers supplying HTTP clients, responses, or transports must use `httpx2` types, and exception handlers and logging configuration must use the new module names. #2288
 
 Fixes:
 - Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.

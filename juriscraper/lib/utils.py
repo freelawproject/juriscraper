@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
 from typing import Any, Protocol, TypeVar, cast
 
-from httpx import HTTPError
+from httpx2 import HTTPError
 
 from juriscraper.lib.exceptions import (
     EmptyFileError,
@@ -334,7 +334,7 @@ def check_expected_content_types(
     """Raise UnexpectedContentTypeError if response Content-Type is not allowed.
 
     :param site: scraper instance
-    :param response: httpx Response or urllib HTTPResponse
+    :param response: httpx2 Response or urllib HTTPResponse
     :param download_url: URL that was fetched
     """
     expected_content_types = site.expected_content_types
@@ -344,7 +344,7 @@ def check_expected_content_types(
     if not expected_content_types:
         return
 
-    # Support both httpx (headers.get) and urllib (getheader) responses
+    # Support both httpx2 (headers.get) and urllib (getheader) responses
     if hasattr(response, "getheader"):
         raw_ct = response.getheader("Content-Type", "")
     else:
@@ -375,10 +375,10 @@ def check_empty_downloaded_file(
 ) -> None:
     """Raise EmptyFileError if the downloaded content is empty.
 
-    :param response: raw bytes or httpx Response with .content attribute
+    :param response: raw bytes or httpx2 Response with .content attribute
     :param download_url: URL that was fetched
     """
-    # Support both httpx responses (.content) and raw bytes from urllib
+    # Support both httpx2 responses (.content) and raw bytes from urllib
     content = response if isinstance(response, bytes) else response.content
     if len(content) == 0:
         raise EmptyFileError(f"EmptyFileError: '{download_url}'")

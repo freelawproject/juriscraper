@@ -13,7 +13,7 @@ from optparse import OptionParser
 from typing import cast
 from urllib import parse
 
-import httpx
+import httpx2
 
 from juriscraper.AbstractSite import AbstractSite
 from juriscraper.lib.exceptions import BadContentError
@@ -121,7 +121,7 @@ async def extract_doc_content(
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    async with httpx.AsyncClient() as client:
+    async with httpx2.AsyncClient() as client:
         extraction__response = await client.post(url, files=files, timeout=120)
     extraction__response.raise_for_status()
     extracted_content = extraction__response.json()["content"]

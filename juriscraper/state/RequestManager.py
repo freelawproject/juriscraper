@@ -1,4 +1,4 @@
-"""Classes and utilities for an async httpx-based request manager for scrapers."""
+"""Classes and utilities for an async httpx2-based request manager for scrapers."""
 
 import asyncio
 import time
@@ -9,8 +9,8 @@ from http.cookiejar import CookieJar
 from types import TracebackType
 from typing import Any
 
-import httpx
-from httpx import (
+import httpx2
+from httpx2 import (
     URL,
     USE_CLIENT_DEFAULT,
     AsyncClient,
@@ -22,7 +22,7 @@ from httpx import (
     Response,
     TimeoutException,
 )
-from httpx._client import UseClientDefault
+from httpx2._client import UseClientDefault
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
@@ -37,7 +37,7 @@ RequestContentType = str | bytes | Iterable[bytes] | AsyncIterable[bytes]
 
 
 class ScheduledRequest(Request):
-    """Wrapper around httpx.Request that keeps track of the `follow_redirects`
+    """Wrapper around httpx2.Request that keeps track of the `follow_redirects`
     parameter and response or errors.
 
     Attributes:
@@ -81,10 +81,10 @@ class ScheduledRequest(Request):
         *,
         follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
     ) -> "ScheduledRequest":
-        """Wrap a pre-built :class:`httpx.Request` as a :class:`ScheduledRequest`.
+        """Wrap a pre-built :class:`httpx2.Request` as a :class:`ScheduledRequest`.
 
         Use this when the request has already been produced via
-        :meth:`httpx.AsyncClient.build_request`, so client-level configuration
+        :meth:`httpx2.AsyncClient.build_request`, so client-level configuration
         (``base_url``, default headers/cookies/params, timeout) is preserved.
         """
         instance = cls.__new__(cls)
@@ -188,7 +188,7 @@ class ExponentialBackoff(RetryHandler):
 
 
 class RequestManager(AsyncClient):
-    """Wrapper around httpx.AsyncClient allowing configurable request
+    """Wrapper around httpx2.AsyncClient allowing configurable request
     handlers for retries, rate-limiting, logging, and more.
 
     Attributes:
@@ -214,18 +214,18 @@ class RequestManager(AsyncClient):
         Args:
             handlers: Handlers to run on every request
             retry: Handler specifying when requests should be retried.
-            auth: Authentication to use when sending requests (httpx AsyncClient passthrough)
-            params: Query parameters (httpx AsyncClient passthrough)
-            headers: Headers to include in every request (httpx AsyncClient passthrough). If
+            auth: Authentication to use when sending requests (httpx2 AsyncClient passthrough)
+            params: Query parameters (httpx2 AsyncClient passthrough)
+            headers: Headers to include in every request (httpx2 AsyncClient passthrough). If
                 there is no "User-Agent" header specified, it will be added with the
                 value "Juriscraper (Free Law Project)". If a value is specified, it will be
                 forced to contain the Juriscraper user agent string (case-sensitive).
-            cookies: Cookies to include in every request (httpx AsyncClient passthrough)
-            timeout: Timeout for every request (httpx AsyncClient passthrough)
-            follow_redirects: Whether to follow redirects (httpx AsyncClient passthrough)
-            base_url: Base URL for every request (httpx AsyncClient passthrough)
+            cookies: Cookies to include in every request (httpx2 AsyncClient passthrough)
+            timeout: Timeout for every request (httpx2 AsyncClient passthrough)
+            follow_redirects: Whether to follow redirects (httpx2 AsyncClient passthrough)
+            base_url: Base URL for every request (httpx2 AsyncClient passthrough)
             default_encoding: Default encoding for responses if not specified by `Content-Type`
-                header (httpx AsyncClient passthrough)
+                header (httpx2 AsyncClient passthrough)
         """
         if retry is None:
             retry = NoRetry()
@@ -234,7 +234,7 @@ class RequestManager(AsyncClient):
             "Pragma": "no-cache",
         }
         logger.debug("Creating request manager.")
-        headers = httpx.Headers(headers)
+        headers = httpx2.Headers(headers)
         ua_header = headers.setdefault("User-Agent", USER_AGENT)
         if "Juriscraper" not in ua_header:
             extra_headers |= {"User-Agent": ua_header + f" {USER_AGENT}"}
@@ -334,7 +334,7 @@ class RequestManager(AsyncClient):
     ) -> Response:
         """Send a request and set all handlers to listen to it.
 
-        Parameters are passed directly to `httpx.AsyncClient.send`.
+        Parameters are passed directly to `httpx2.AsyncClient.send`.
 
         Requests will not be sent until the `before_queue` method has exited on
         all handlers, and Responses will not be returned until the `listen`
@@ -397,7 +397,7 @@ class RequestManager(AsyncClient):
             **kwargs: Arbitrary keyword arguments.
 
         Returns:
-            The `httpx.Response` or `None` if an error occurred."""
+            The `httpx2.Response` or `None` if an error occurred."""
         if request.response.cancelled():
             logger.warning("Request cancelled: %s", request.url)
             return None

@@ -48,7 +48,7 @@ dependencies = [
   "nh3",
   "pydantic>=2.12.5",
   "python-dateutil>=2.8.2",
-  "httpx[http2]>=0.28.1",
+  "httpx2[http2]>=2.13.1",
   "requests>=2.20.0",
   "tldextract",
 ]

@@ -2,7 +2,7 @@ import asyncio
 import time
 import unittest
 
-import httpx
+import httpx2
 
 from juriscraper.state.RequestManager import (
     USER_AGENT,
@@ -14,15 +14,15 @@ from juriscraper.state.RequestManager import (
 )
 
 
-def _ok_handler(request: httpx.Request) -> httpx.Response:
-    return httpx.Response(200, text="ok")
+def _ok_handler(request: httpx2.Request) -> httpx2.Response:
+    return httpx2.Response(200, text="ok")
 
 
 def _make_manager(transport_handler=_ok_handler, **kwargs) -> RequestManager:
     manager = RequestManager(**kwargs)
-    # Swap the transport so requests still travel the full httpx build/send
+    # Swap the transport so requests still travel the full httpx2 build/send
     # path but resolve against an in-process handler.
-    manager._transport = httpx.MockTransport(transport_handler)
+    manager._transport = httpx2.MockTransport(transport_handler)
     return manager
 
 
@@ -73,9 +73,9 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
     async def test_get_post_put_delete_round_trip(self):
         seen: list[str] = []
 
-        def handler(request: httpx.Request) -> httpx.Response:
+        def handler(request: httpx2.Request) -> httpx2.Response:
             seen.append(request.method)
-            return httpx.Response(200, text="ok")
+            return httpx2.Response(200, text="ok")
 
         manager = _make_manager(handler)
         try:
@@ -120,10 +120,10 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
         events: list[tuple[str, float]] = []
         send_called = asyncio.Event()
 
-        def handler(request: httpx.Request) -> httpx.Response:
+        def handler(request: httpx2.Request) -> httpx2.Response:
             events.append(("send", time.monotonic()))
             send_called.set()
-            return httpx.Response(200, text="ok")
+            return httpx2.Response(200, text="ok")
 
         class Recorder(RequestHandler):
             async def before_send(self, manager, request):
@@ -217,11 +217,11 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
     async def test_retries_until_success(self):
         attempts = {"n": 0}
 
-        def handler(request: httpx.Request) -> httpx.Response:
+        def handler(request: httpx2.Request) -> httpx2.Response:
             attempts["n"] += 1
             if attempts["n"] < 3:
-                return httpx.Response(500, text="fail")
-            return httpx.Response(200, text="ok")
+                return httpx2.Response(500, text="fail")
+            return httpx2.Response(200, text="ok")
 
         manager = _make_manager(
             handler, retry=ExponentialBackoff(max_retries=3)
@@ -236,16 +236,16 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
     async def test_exhausting_retries_surfaces_last_exception(self):
         attempts = 0
 
-        def handler(request: httpx.Request) -> httpx.Response:
+        def handler(request: httpx2.Request) -> httpx2.Response:
             nonlocal attempts
             attempts += 1
-            return httpx.Response(500, text="fail")
+            return httpx2.Response(500, text="fail")
 
         manager = _make_manager(
             handler, retry=ExponentialBackoff(max_retries=3)
         )
         try:
-            with self.assertRaises(httpx.HTTPStatusError):
+            with self.assertRaises(httpx2.HTTPStatusError):
                 await manager.get("https://example.com/")
             # max_retries=2 means at least 3 attempts should have been made
             # (initial + 2 retries). Without retries actually firing this is 1.
@@ -256,12 +256,12 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
     async def test_last_try_is_response(self):
         n = 0
 
-        def handler(request: httpx.Request) -> httpx.Response:
+        def handler(request: httpx2.Request) -> httpx2.Response:
             nonlocal n
             n += 1
             if n == 2:
-                return httpx.Response(200, text="ok")
-            return httpx.Response(500, text="fail")
+                return httpx2.Response(200, text="ok")
+            return httpx2.Response(500, text="fail")
 
         response = None
 

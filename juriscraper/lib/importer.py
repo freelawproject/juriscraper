@@ -5,7 +5,7 @@ from logging import getLogger
 from types import ModuleType
 from typing import cast
 
-from httpx import HTTPError
+from httpx2 import HTTPError
 
 from juriscraper.AbstractSite import AbstractSite
 

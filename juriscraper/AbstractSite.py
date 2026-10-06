@@ -11,7 +11,7 @@ from collections.abc import Awaitable
 from datetime import datetime
 
 import certifi
-import httpx
+import httpx2
 from charset_normalizer import from_bytes
 
 from juriscraper.lib.date_utils import (
@@ -53,8 +53,8 @@ class AbstractSite:
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    # Set to True in subclasses to use urllib instead of httpx.
-    # Useful for sites that block httpx via TLS fingerprinting.
+    # Set to True in subclasses to use urllib instead of httpx2.
+    # Useful for sites that block httpx2 via TLS fingerprinting.
     use_urllib = False
 
     # Some courts' bot management blocks the "Juriscraper" User-Agent, and
@@ -98,7 +98,7 @@ class AbstractSite:
         self.save_response = kwargs.pop("save_response_fn", None)
 
         # Won't affect the values of the child scraper as these only get
-        # passed to httpx at this stage.
+        # passed to httpx2 at this stage.
         kwargs.pop("backscrape_start", None)
         kwargs.pop("backscrape_end", None)
         kwargs.pop("days_interval", None)
@@ -106,7 +106,7 @@ class AbstractSite:
         kwargs.setdefault("http2", True)
         kwargs.setdefault("verify", True)
         self.request = {
-            "session": httpx.AsyncClient(**kwargs),
+            "session": httpx2.AsyncClient(**kwargs),
             "headers": {
                 "User-Agent": self.user_agent,
                 # Disable CDN caching on sites like SCOTUS (ahem)
@@ -413,7 +413,7 @@ class AbstractSite:
     def _download_content_urllib(self, download_url: str, headers: dict):
         """Download content using urllib to bypass Cloudflare
 
-        Uses urllib instead of httpx because Cloudflare blocks httpx
+        Uses urllib instead of httpx2 because Cloudflare blocks httpx2
         via TLS fingerprinting. Used by scrapers with `use_urllib = True`.
 
         :param download_url: The URL for the item you wish to download.
@@ -451,12 +451,12 @@ class AbstractSite:
         # noinspection PyBroadException
         if self.test_mode_enabled():
             # this is useful for CL integration tests
-            def handler(request: httpx.Request):
-                r = httpx.Response(status_code=404, request=request)
+            def handler(request: httpx2.Request):
+                r = httpx2.Response(status_code=404, request=request)
                 try:
                     url = os.path.join(media_root, download_url)
                     with open(url, mode="rb") as stream:
-                        r = httpx.Response(
+                        r = httpx2.Response(
                             status_code=200,
                             request=request,
                             content=stream.read(),
@@ -464,11 +464,11 @@ class AbstractSite:
                         if url.endswith("json"):
                             r.headers["content-type"] = "application/json"
                 except OSError as e:
-                    raise httpx.ConnectError(message=str(e), request=request)
+                    raise httpx2.ConnectError(message=str(e), request=request)
                 return r
 
-            transport = httpx.MockTransport(handler)
-            s = httpx.AsyncClient(transport=transport)
+            transport = httpx2.MockTransport(handler)
+            s = httpx2.AsyncClient(transport=transport)
             r = await s.get(url=self.url)
             return self.cleanup_content(r.content)
 
@@ -545,8 +545,8 @@ class AbstractSite:
     def _urllib_fetch(self, url, data=None, headers=None):
         """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
 
-        httpx gets blocked by Cloudflare due to its TLS fingerprint
-        (httpcore). Python's stdlib urllib uses a different TLS stack
+        httpx2 gets blocked by Cloudflare due to its TLS fingerprint
+        (httpcore2). Python's stdlib urllib uses a different TLS stack
         that Cloudflare does not block.
 
         :param url: URL to fetch
@@ -607,7 +607,7 @@ class AbstractSite:
         """Execute mock request, used for testing"""
         self.request["url"] = url
 
-        def handler(request: httpx.Request):
+        def handler(request: httpx2.Request):
             try:
                 with open(self.mock_url, mode="rb") as stream:
                     content = stream.read()
@@ -615,7 +615,7 @@ class AbstractSite:
                         text = content.decode("utf-8")
                     except UnicodeDecodeError:
                         text = str(from_bytes(content).best())
-                    r = httpx.Response(
+                    r = httpx2.Response(
                         status_code=200,
                         request=request,
                         text=text,
@@ -623,11 +623,11 @@ class AbstractSite:
                     if self.mock_url.endswith("json"):
                         r.headers["content-type"] = "application/json"
             except OSError as e:
-                raise httpx.RequestError(message=str(e), request=request)
+                raise httpx2.RequestError(message=str(e), request=request)
             return r
 
-        transport = httpx.MockTransport(handler)
-        mock_client = httpx.AsyncClient(transport=transport)
+        transport = httpx2.MockTransport(handler)
+        mock_client = httpx2.AsyncClient(transport=transport)
         self.request["response"] = await mock_client.get(url=self.url)
         return self.request["response"]
 

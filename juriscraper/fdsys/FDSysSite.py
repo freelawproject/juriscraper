@@ -4,8 +4,8 @@ import re
 from collections import defaultdict
 from datetime import date
 
-import httpx
-from httpx import InvalidURL
+import httpx2
+from httpx2 import InvalidURL
 from lxml import etree
 
 from juriscraper.AbstractSite import AbstractSite
@@ -14,7 +14,7 @@ from juriscraper.AbstractSite import AbstractSite
 async def get_tree(url, **kwargs):
     try:
         kwargs.setdefault("http2", True)
-        async with httpx.AsyncClient(**kwargs) as client:
+        async with httpx2.AsyncClient(**kwargs) as client:
             response = await client.get(url)
             return etree.parse(await response.aread())
     except InvalidURL:
@@ -166,7 +166,7 @@ class FDSysSite(AbstractSite):
         with open(f"./examples/2006/{name}.xml", "wb") as handle:
             kwargs.setdefault("http2", True)
             async with (
-                httpx.AsyncClient(**kwargs) as client,
+                httpx2.AsyncClient(**kwargs) as client,
                 client.stream("GET", mods_url) as response,
             ):
                 async for block in response.aiter_bytes():
