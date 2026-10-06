@@ -1,13 +1,13 @@
 import asyncio
 import json
 
-import httpx
+import httpx2
 from lxml import etree, html
 
 
 async def get_court_names(**kwargs):
     kwargs.setdefault("http2", True)
-    async with httpx.AsyncClient(**kwargs) as client:
+    async with httpx2.AsyncClient(**kwargs) as client:
         response = await client.get(
             "https://www.courtlistener.com/api/jurisdictions/"
         )
@@ -27,7 +27,7 @@ async def get_court_names(**kwargs):
 
 async def get_fdsys_court_names(**kwargs):
     kwargs.setdefault("http2", True)
-    async with httpx.AsyncClient(**kwargs) as client:
+    async with httpx2.AsyncClient(**kwargs) as client:
         response = await client.get(
             "https://www.gpo.gov/smap/fdsys/sitemap_2014/2014_USCOURTS_sitemap.xml",
         )

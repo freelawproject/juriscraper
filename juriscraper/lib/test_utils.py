@@ -2,7 +2,7 @@ import os
 import sys
 import warnings
 
-from httpx import Response
+from httpx2 import Response
 
 from .exceptions import SlownessException
 

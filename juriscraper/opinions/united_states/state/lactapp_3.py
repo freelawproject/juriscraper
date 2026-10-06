@@ -6,7 +6,7 @@ History:
   2026-03-19: Created by grossir
   2026-03-24: Switched from calendar navigation to month/year search
 Notes:
-  The site uses Cloudflare which blocks httpx via TLS fingerprinting.
+  The site uses Cloudflare which blocks httpx2 via TLS fingerprinting.
   We use urllib.request which is not blocked.The site is an ASP.NET
   app. We search opinions by
   month and year using the site's search form.
