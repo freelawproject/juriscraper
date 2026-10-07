@@ -18,7 +18,9 @@ Features:
 -
 
 Changes:
--
+- `PacerSession` now authenticates ACMS requests with per-court cookie sessions
+  instead of a bearer token, restoring ACMS auth after their HTMX refactor.
+  freelawproject/courtlistener#5921
 
 Fixes:
 - Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
