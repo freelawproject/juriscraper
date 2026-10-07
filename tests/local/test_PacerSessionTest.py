@@ -1,7 +1,11 @@
 import unittest
 from unittest import mock
 
+import requests
+
+from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.pacer import CaseQuery, PacerSession
+from juriscraper.pacer.http import _iter_cookies
 from tests.network import get_pacer_session
 
 
@@ -87,3 +91,100 @@ class PacerSessionTest(unittest.TestCase):
             report.session  # noqa: B018
         except AttributeError:
             self.fail("Did not have session attribute on CaseQuery object.")
+
+
+class PacerSessionAcmsTest(unittest.TestCase):
+    """Test the ACMS SAML handshake in PacerSession."""
+
+    ACMS_DOMAIN = "ca9-showdoc.azurewebsites.us"
+    SAML_PARAMS = {"SAMLResponse": "assertion", "RelayState": "state"}
+
+    def setUp(self):
+        self.session = PacerSession(username="user", password="pass")
+        # establish_acms_session() refuses to run without a PACER session.
+        self.session.cookies.set(
+            "NextGenCSO", "token", domain="pacer.uscourts.gov"
+        )
+        # Stand-ins for the handshake's two network steps: the hidden inputs
+        # scraped from the docket sheet, and the Saml2/Acs POST.
+        self.saml_params = mock.patch.object(
+            self.session,
+            "_get_saml_auth_request_parameters",
+            return_value=self.SAML_PARAMS,
+        ).start()
+        self.acs_post = mock.patch.object(
+            self.session, "_prepare_login_request"
+        ).start()
+        self.addCleanup(mock.patch.stopall)
+
+    def _acs_sets_cookies(self, cookie_names):
+        """Make the Saml2/Acs stand-in behave like ACMS: answer 200 whether or
+        not the login worked, and leave `cookie_names` in the session jar,
+        Secure like the real ones.
+        """
+
+        def post(url, data, headers, *args, **kwargs):
+            for name in cookie_names:
+                self.session.cookies.set(
+                    name, "value", domain=self.ACMS_DOMAIN, secure=True
+                )
+            response = requests.Response()
+            response.status_code = 200
+            return response
+
+        self.acs_post.side_effect = post
+
+    def test_requires_saml_response(self):
+        """An expired PACER session lands on PACER's login form, whose hidden
+        inputs are not SAML parameters. The handshake must stop there.
+        """
+        self.saml_params.return_value = {
+            "loginForm": "loginForm",
+            "javax.faces.ViewState": "-1",
+        }
+        with self.assertRaisesRegex(PacerLoginException, "No SAMLResponse"):
+            self.session.establish_acms_session("ca9")
+        self.acs_post.assert_not_called()
+        self.assertNotIn("ca9", self.session.acms_cookies)
+
+    def test_rejected_login_is_not_a_session(self):
+        """A rejected SAML login answers 200 and still sets Azure's affinity
+        cookies, but never the ASP.NET auth cookie.
+        """
+        self._acs_sets_cookies(["ARRAffinity", "ARRAffinitySameSite"])
+        with self.assertRaisesRegex(PacerLoginException, "rejected"):
+            self.session.establish_acms_session("ca9")
+        self.assertNotIn("ca9", self.session.acms_cookies)
+        # The affinity cookies must not linger in the PACER jar either.
+        self.assertEqual(
+            self.session.cookies.get_dict(domain=self.ACMS_DOMAIN), {}
+        )
+
+    def test_successful_login_moves_cookies_to_court_jar(self):
+        """A successful login sets the (possibly chunked) auth cookie. All ACMS
+        cookies move to the court's jar, desecured.
+        """
+        cookie_names = [
+            "ARRAffinity",
+            ".AspNetCore.saml2",
+            ".AspNetCore.saml2C1",
+        ]
+        self._acs_sets_cookies(cookie_names)
+        self.session.establish_acms_session("ca9")
+
+        self.acs_post.assert_called_once()
+        self.assertEqual(
+            self.acs_post.call_args[0][0],
+            f"https://{self.ACMS_DOMAIN}/Saml2/Acs",
+        )
+        self.assertEqual(self.acs_post.call_args[1]["data"], self.SAML_PARAMS)
+
+        jar = self.session.acms_cookies["ca9"]
+        cookies = list(_iter_cookies(jar))
+        self.assertEqual(sorted(c.name for c in cookies), sorted(cookie_names))
+        self.assertFalse(
+            any(c.secure for c in cookies), "ACMS cookies must be desecured"
+        )
+        self.assertEqual(
+            self.session.cookies.get_dict(domain=self.ACMS_DOMAIN), {}
+        )

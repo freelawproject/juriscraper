@@ -4,6 +4,9 @@ import re
 import unittest
 from datetime import date
 
+from juriscraper.AbstractSite import logger
+from juriscraper.opinions.united_states.state import nev, nevapp
+
 
 class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested
@@ -244,3 +247,82 @@ class ScraperSpotTest(unittest.TestCase):
             self.assertEqual(
                 nytrial.Site.get_docket_from_header(header), docket
             )
+
+    def test_nev_judge_initials(self):
+        """Panel initials resolve by court and filed date"""
+        supreme, appeals = nev.Site(), nevapp.Site()
+
+        self.assertEqual(
+            supreme.resolve_initials("MG", "2018-05-01"), "Mark Gibbons"
+        )
+        self.assertEqual(
+            appeals.resolve_initials("MG", "2018-05-01"), "Michael P. Gibbons"
+        )
+
+        with self.assertLogs(logger, level="ERROR"):
+            self.assertEqual(supreme.resolve_initials("MG", "2022-05-01"), "")
+        with self.assertLogs(logger, level="ERROR"):
+            metadata = supreme.parse_description(
+                "Majority: Stiglich/ZZ/Lee.", "2026-06-18"
+            )
+        self.assertEqual(metadata["judge"], "Stiglich, Lee")
+
+    def test_nev_majority_panel(self):
+        """Panel parsing tolerates a "Before:" prefix and spaced slashes"""
+        site = nev.Site()
+        tests = [
+            (
+                "Majority: Before: Parraguirre/Bell/Stiglich. 141 Nev.",
+                "Parraguirre, Bell, Stiglich",
+            ),
+            (
+                "Majority:  Parraguirre/Hardesty/ Cadish.  136 Nev.",
+                "Parraguirre, Hardesty, Cadish",
+            ),
+            (
+                "Majority: Hardesty/Parraguirre /Douglas. 124 Nev.",
+                "Hardesty, Parraguirre, Douglas",
+            ),
+            (
+                "Majority: Pickering/Gibbons/ /Hardesty. 129 Nev.",
+                "Pickering, Gibbons, Hardesty",
+            ),
+            (
+                "Majority: Herndon/Lee/Parraguirre 139 Nev. SNP23-DH/PL/RP.",
+                "Herndon, Lee, Parraguirre",
+            ),
+            ("Majority: En Banc. 141 Nev.", ""),
+        ]
+        for description, judges in tests:
+            with self.subTest(description=description):
+                metadata = site.parse_description(description, "2026-06-18")
+                self.assertEqual(metadata["judge"], judges)
+
+    def test_nev_backscrape_past_last_page(self):
+        """A backscrape stops on the empty page after the last one"""
+        result = {
+            "docketEntryHeader": {
+                "filedDate": "2000-05-08T07:00:00.000+00:00",
+                "docketEntryDescription": "Majority: Rose/Young/Maupin.",
+            },
+            "caseHeader": {
+                "caseNumber": "33018",
+                "caseTitle": "STATE VS. DOE",
+                "caseInstanceUUID": "case-uuid",
+            },
+            "documentLinkUUID": "document-uuid",
+        }
+        pages = [
+            {"_embedded": {"results": [result]}},
+            # The API leaves out "_embedded" past the last page
+            {"page": {"size": 100, "totalElements": 1, "number": 1}},
+        ]
+
+        async def download():
+            return pages.pop(0)
+
+        site = nev.Site(backscrape_start="2000/01/01")
+        site._download = download
+        asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+        self.assertEqual(len(site.cases), 1)
+        self.assertEqual(pages, [])
