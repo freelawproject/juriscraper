@@ -15,11 +15,9 @@ from juriscraper.Backscraper import (
     YearBackscraper,
 )
 
-# Formats seen across scrapers, to write a valid date in a format that
-# doesn't match the scraper's `date_format`. Jan 31 can't be read with the
-# day and month swapped, so these never parse by accident
-DATE_FORMATS = ("%Y/%m/%d", "%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y", "%Y%m%d")
-SAMPLE_DATE = date(2024, 1, 31)
+# Valid dates in formats other than BACKSCRAPE_DATE_FORMAT. Jan 31 can't be
+# read with the day and month swapped, so these never parse by accident
+OTHER_DATE_FORMATS = ("2024-01-31", "01/31/2024", "31/01/2024", "20240131")
 
 # Non-empty strings that aren't a date in any format
 NOT_A_DATE = ("not a date", "2024", "2024/13/45", "2024-01-31T00:00:00")
@@ -110,6 +108,24 @@ async def run_download_backwards(
 
 
 class DateBackscraperTest(unittest.IsolatedAsyncioTestCase):
+    WRONG_DATES = OTHER_DATE_FORMATS + NOT_A_DATE
+    WRONG_KWARGS = (
+        [(backscrape_kwargs(start=v), ValueError) for v in WRONG_DATES]
+        + [(backscrape_kwargs(end=v), ValueError) for v in WRONG_DATES]
+        + [(backscrape_kwargs(start=v), TypeError) for v in NOT_STRINGS]
+        + [(backscrape_kwargs(end=v), TypeError) for v in NOT_STRINGS]
+        + [
+            (
+                backscrape_kwargs(start="2022/06/20", end="2020/01/15"),
+                ValueError,
+            )
+        ]
+    )
+    VALID_KWARGS = (
+        {},
+        backscrape_kwargs(start="2020/01/15", end="2022/06/20"),
+    )
+
     def setUp(self):
         logging.disable(logging.CRITICAL)
         self.addCleanup(logging.disable, logging.NOTSET)
@@ -119,35 +135,11 @@ class DateBackscraperTest(unittest.IsolatedAsyncioTestCase):
 
         self.assertTrue(self.backscrapers, "No DateBackscraper found")
 
-    @staticmethod
-    def wrong_kwargs(date_format: str) -> list[tuple[dict, type[Exception]]]:
-        """Backscrape kwargs that must be rejected, and the expected error
-
-        :param date_format: the scraper's `date_format`
-        :return: (kwargs, exception) pairs
-        """
-        wrong_dates = [
-            SAMPLE_DATE.strftime(f) for f in DATE_FORMATS if f != date_format
-        ] + list(NOT_A_DATE)
-        later = date(2022, 6, 20).strftime(date_format)
-        earlier = date(2020, 1, 15).strftime(date_format)
-        return (
-            [(backscrape_kwargs(start=v), ValueError) for v in wrong_dates]
-            + [(backscrape_kwargs(end=v), ValueError) for v in wrong_dates]
-            + [(backscrape_kwargs(start=v), TypeError) for v in NOT_STRINGS]
-            + [(backscrape_kwargs(end=v), TypeError) for v in NOT_STRINGS]
-            + [(backscrape_kwargs(start=later, end=earlier), ValueError)]
-        )
-
     def test_wrong_kwargs_raise(self) -> None:
-        """A wrong format raises ValueError, a non-string TypeError, and a
-        start after the end ValueError"""
-        cases = [
-            (module, site_class, kwargs, error)
-            for module, site_class in self.backscrapers
-            for kwargs, error in self.wrong_kwargs(site_class.date_format)
-        ]
-        for module, site_class, kwargs, error in cases:
+        """A date that isn't in BACKSCRAPE_DATE_FORMAT raises ValueError, a
+        non-string TypeError, and a start after the end ValueError"""
+        cases = product(self.backscrapers, self.WRONG_KWARGS)
+        for (module, site_class), (kwargs, error) in cases:
             with (
                 self.subTest(module=module, kwargs=kwargs),
                 self.assertRaises(error),
@@ -158,18 +150,8 @@ class DateBackscraperTest(unittest.IsolatedAsyncioTestCase):
         """Without kwargs and with a valid range, `back_scrape_iterable`
         isn't empty, and `_download_backwards` accepts its first and last
         items"""
-        cases = [
-            (module, site_class, kwargs)
-            for module, site_class in self.backscrapers
-            for kwargs in (
-                {},
-                backscrape_kwargs(
-                    start=date(2020, 1, 15).strftime(site_class.date_format),
-                    end=date(2022, 6, 20).strftime(site_class.date_format),
-                ),
-            )
-        ]
-        for module, site_class, kwargs in cases:
+        cases = product(self.backscrapers, self.VALID_KWARGS)
+        for (module, site_class), kwargs in cases:
             with self.subTest(module=module, kwargs=kwargs):
                 self.assertIsNot(
                     site_class._download_backwards,

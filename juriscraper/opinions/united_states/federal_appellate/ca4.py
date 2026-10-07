@@ -12,8 +12,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(DateBackscraper, OpinionSiteLinear):
     first_opinion_date = date(2002, 3, 20)
     days_interval = 8
-    # This scraper's backscrape_start / backscrape_end format
-    date_format = "%Y-%m-%d"
     court_name = "United States Court of Appeals for the Fourth Circuit"
 
     def __init__(self, *args, **kwargs):

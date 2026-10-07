@@ -6,6 +6,10 @@ from juriscraper.lib.date_utils import make_date_range_tuples
 
 IterableItemT = TypeVar("IterableItemT")
 
+# The only accepted format for `DateBackscraper`'s `backscrape_start` and
+# `backscrape_end`, for a consistent experience across backscrapers
+BACKSCRAPE_DATE_FORMAT = "%Y/%m/%d"
+
 
 class Backscraper(ABC, Generic[IterableItemT]):
     """Mixin for Sites that download their historical records
@@ -43,16 +47,14 @@ class DateBackscraper(Backscraper[IterableItemT], ABC):
     `first_opinion_date` until today by default. Sites needing other items
     override `make_backscrape_iterable` and reuse
     `get_backscrape_date_range`, e.g. `bap9` (one window), `dcd` (years).
-    Set `date_format` when the Site's callers use another format.
+    Dates must be in `BACKSCRAPE_DATE_FORMAT` ("%Y/%m/%d").
     """
 
     first_opinion_date: date
     days_interval: int
-    # A few scrapers override it; move them to the default and remove it
-    date_format: str = "%Y/%m/%d"
 
     def parse_backscrape_date(self, value: object, name: str) -> date | None:
-        """Parse a `date_format` string; None if the value isn't given
+        """Parse a `BACKSCRAPE_DATE_FORMAT` string; None if not given
 
         :param value: the kwarg value
         :param name: the kwarg name, for error messages
@@ -62,14 +64,14 @@ class DateBackscraper(Backscraper[IterableItemT], ABC):
         if not isinstance(value, str):
             raise TypeError(
                 f"{name}={value!r} must be a string in "
-                f"{self.date_format!r} format"
+                f"{BACKSCRAPE_DATE_FORMAT!r} format"
             )
         try:
-            return datetime.strptime(value, self.date_format).date()
+            return datetime.strptime(value, BACKSCRAPE_DATE_FORMAT).date()
         except ValueError as e:
             raise ValueError(
                 f"{name}={value!r} must be a date in "
-                f"{self.date_format!r} format"
+                f"{BACKSCRAPE_DATE_FORMAT!r} format"
             ) from e
 
     def get_backscrape_date_range(self, kwargs: dict) -> tuple[date, date]:

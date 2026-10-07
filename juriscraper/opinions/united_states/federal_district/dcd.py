@@ -21,7 +21,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(DateBackscraper, OpinionSiteLinear):
     # Oldest opinion listed in https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl
     first_opinion_date = date(2005, 1, 3)
-    date_format = "%m/%d/%Y"
     docket_document_number_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
     nature_of_suit_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
 
@@ -93,7 +92,7 @@ class Site(DateBackscraper, OpinionSiteLinear):
         """Build the years to backscrape, both ends inclusive
 
         :param kwargs: passed when initializing the scraper; may contain
-            backscrape_start and backscrape_end as "%m/%d/%Y" strings.
+            backscrape_start and backscrape_end as "%Y/%m/%d" strings.
             Default: from `first_opinion_date` to today
         :return None
         """
