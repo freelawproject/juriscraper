@@ -17,6 +17,7 @@ The following changes are not yet released, but are code complete:
 Features:
 - Add `juriscraper.Backscraper` with `DateBackscraper`, `YearBackscraper` and `PageIndexBackscraper` mixins that parse and validate backscraper arguments in one place. Applied the mixins to the backscrapers that most needed them. #1900
 - Add `tests/local/test_BackscrapeTest.py`, testing every `Backscraper` offline. #1900
+- Add a `YearBackscraper` to `nmariana`, to back scrape its citations from 1989 onward. #1946
 
 Changes:
 -
