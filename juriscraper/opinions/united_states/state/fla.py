@@ -103,8 +103,11 @@ class Site(OpinionSiteLinear):
                 continue
 
             if not fields.get("opinion"):
-                # E.g 2DCA 2024-0481
-                logger.warning("Skipping case with no opinion file %s", fields)
+                # Orders by a clerk / judge have no document to download, 2DCA 2024-0481
+                logger.warning(
+                    "Skipping case with no opinion file %s",
+                    fields["case_number"],
+                )
                 continue
 
             disposition = fields.get("disposition", "") or ""
