@@ -2,7 +2,7 @@
 Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
-from datetime import date
+from datetime import date, timedelta
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
@@ -55,8 +55,9 @@ class Site(OpinionSite):
         as our cut off date.
         """
         today = date.today()
-        term_cutoff = date(today.year, 10, 1)
-        if today < term_cutoff:
+        oct_1 = date(today.year, 10, 1)
+        first_monday = oct_1 + timedelta(days=(7 - oct_1.weekday()) % 7)
+        if today < first_monday:
             # Haven't hit the cutoff, return previous year.
             return int(today.strftime("%y")) - 1  # y3k bug!
         else:
