@@ -64,11 +64,12 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         )
         self.assertEqual(self.manager.headers.get("Pragma"), "no-cache")
 
-    async def test_loop_started_lazily_on_first_enqueue(self):
-        self.assertIsNone(self.manager._loop_task)
+    async def test_request_leaves_no_background_tasks(self):
+        self.assertFalse(self.manager._requests)
         response = await self.manager.get("https://example.com/")
         self.assertEqual(response.status_code, 200)
-        self.assertIsNotNone(self.manager._loop_task)
+        self.assertFalse(self.manager._requests)
+        self.assertFalse(self.manager._send_lock.locked())
 
     async def test_get_post_put_delete_round_trip(self):
         seen: list[str] = []
@@ -90,13 +91,11 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_close_cancels_loop_and_closes_client(self):
+    async def test_close_finishes_cleanup_and_closes_client(self):
         await self.manager.get("https://example.com/")
-        loop_future = self.manager._loop_task
         await self.manager.aclose()
-        # Yield once so the cancellation can propagate.
-        await asyncio.sleep(0)
-        self.assertTrue(loop_future.cancelled() or loop_future.done())
+        self.assertTrue(self.manager._close_task.done())
+        self.assertFalse(self.manager._requests)
         self.assertTrue(self.manager.is_closed)
 
     async def test_follow_redirects_propagated_per_request(self):

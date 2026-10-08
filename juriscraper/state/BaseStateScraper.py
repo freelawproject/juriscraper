@@ -6,15 +6,17 @@ BaseStateScraper is designed for discovering and listing dockets.
 """
 
 from abc import ABC, abstractmethod
-from collections.abc import Callable, Generator
+from collections.abc import AsyncGenerator, Callable
 from datetime import date
+from types import TracebackType
 from typing import (
     Any,
     TypedDict,
     TypeVar,
 )
 
-import requests
+import httpx
+from typing_extensions import Self
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -24,7 +26,7 @@ T = TypeVar("T")
 
 # Type alias for response callback functions
 # Callback receives the request manager and the response
-ResponseCallback = Callable[["ScraperRequestManager", requests.Response], None]
+ResponseCallback = Callable[["ScraperRequestManager", httpx.Response], None]
 
 
 class ScraperRequestManager:
@@ -35,20 +37,21 @@ class ScraperRequestManager:
     - Response callbacks for logging/debugging
 
     Attributes:
-        session: The requests Session used for HTTP requests
+        session: The httpx AsyncClient used for HTTP requests
         all_response_fn: Optional callback invoked after every HTTP response
     """
 
     def __init__(
         self,
-        session: requests.Session | None = None,
+        session: httpx.AsyncClient | None = None,
         all_response_fn: ResponseCallback | None = None,
     ) -> None:
         """Initialize the request manager.
 
         Args:
-            session: Optional requests Session. If not provided, a new session
-                will be created with default Juriscraper headers.
+            session: Optional httpx AsyncClient. If not provided, a new session
+                will be created with default Juriscraper headers. Closing the
+                manager also closes a supplied session.
             all_response_fn: Optional callback function invoked after every
                 HTTP response (both request and archived_request). Receives
                 the request manager instance and the response object.
@@ -56,7 +59,7 @@ class ScraperRequestManager:
         if session is not None:
             self.session = session
         else:
-            self.session = requests.Session()
+            self.session = httpx.AsyncClient(http2=True, follow_redirects=True)
             self.session.headers.update(
                 {
                     "User-Agent": "Juriscraper",
@@ -67,15 +70,30 @@ class ScraperRequestManager:
 
         self.all_response_fn = all_response_fn
 
-    def request(
+    async def aclose(self) -> None:
+        """Close the HTTP session."""
+        await self.session.aclose()
+
+    async def __aenter__(self) -> Self:
+        return self
+
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
+        await self.aclose()
+
+    async def request(
         self,
         method: str,
         url: str,
         **kwargs: Any,
-    ) -> requests.Response:
+    ) -> httpx.Response:
         """Make an HTTP request using the internal session.
 
-        This method mirrors the requests library's request method signature.
+        This method mirrors the httpx library's request method signature.
         The all_response_fn callback (if set) will be invoked after the
         request completes.
 
@@ -86,11 +104,11 @@ class ScraperRequestManager:
                 (params, data, json, headers, timeout, etc.)
 
         Returns:
-            The requests Response object
+            The httpx Response object
         """
         kwargs.setdefault("timeout", 60)
 
-        response = self.session.request(method, url, **kwargs)
+        response = await self.session.request(method, url, **kwargs)
 
         if self.all_response_fn:
             self.all_response_fn(self, response)
@@ -107,13 +125,13 @@ class ScraperRequestManager:
         self.session.headers.update(headers)
 
     # Convenience methods that mirror requests library
-    def get(self, url: str, **kwargs: Any) -> requests.Response:
+    async def get(self, url: str, **kwargs: Any) -> httpx.Response:
         """Make a GET request. See request() for details."""
-        return self.request("GET", url, **kwargs)
+        return await self.request("GET", url, **kwargs)
 
-    def post(self, url: str, **kwargs: Any) -> requests.Response:
+    async def post(self, url: str, **kwargs: Any) -> httpx.Response:
         """Make a POST request. See request() for details."""
-        return self.request("POST", url, **kwargs)
+        return await self.request("POST", url, **kwargs)
 
 
 class HasCaseUrl(TypedDict):
@@ -148,10 +166,12 @@ class BaseStateScraper(ABC):
         Args:
             request_manager: Optional ScraperRequestManager instance. If not
                 provided, a new one will be created with default settings.
+                Supplied managers remain caller-managed.
             **kwargs: Additional keyword arguments for subclass customization.
         """
         super().__init__()
 
+        self._owns_request_manager = request_manager is None
         if request_manager is not None:
             self.request_manager = request_manager
         else:
@@ -161,12 +181,28 @@ class BaseStateScraper(ABC):
         if self.ADDITIONAL_HEADERS is not None:
             self.request_manager.merge_headers(self.ADDITIONAL_HEADERS)
 
+    async def aclose(self) -> None:
+        """Close the request manager only if this scraper created it."""
+        if self._owns_request_manager:
+            await self.request_manager.aclose()
+
+    async def __aenter__(self) -> Self:
+        return self
+
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
+        await self.aclose()
+
     @abstractmethod
     def backfill(
         self,
         courts: list[str],
         date_range: tuple[date, date],
-    ) -> Generator[HasCaseUrl, None, None]:
+    ) -> AsyncGenerator[HasCaseUrl, None]:
         """Backfill dockets for multiple courts over a date range.
 
         Subclasses must implement this method to enumerate historical dockets.
