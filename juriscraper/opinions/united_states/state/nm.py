@@ -78,21 +78,19 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def set_url(
-        self, start: date | None = None, end: date | None = None
-    ) -> None:
+    def set_url(self, dates: tuple[date, date] | None = None) -> None:
         """Formats and sets `self.url` with date inputs
 
         If no start or end dates are given, scrape last 7 days.
 
-        :param start: start date
-        :param end: end date
-
-        :return None
+        :param dates: optional start and end date
+        :return: None
         """
-        if not start:
+        if dates is None:
             end = datetime.now() + timedelta(1)
             start = end - timedelta(7)
+        else:
+            start, end = dates
 
         params = {
             "cont": "",
@@ -117,7 +115,7 @@ class Site(OpinionSiteLinear):
         :return None
         """
         logger.info("Backscraping for range %s %s", *dates)
-        self.set_url(*dates)
+        self.set_url(dates)
         self.html = await self._download()
         self._process_html()
 
