@@ -50,7 +50,7 @@ Changes:
 -
 
 Fixes:
--
+- `ca7` opinions: use filing dates from opinion links and retain feed timestamp ordering. #2123
 
 ## 3.0.42 - 2026-09-29
 
