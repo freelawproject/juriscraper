@@ -7,18 +7,19 @@ Court Short Name: Puerto Rico
 """
 
 import re
-from datetime import date, datetime
+from datetime import date
 
 from dateparser import parse
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.Backscraper import DateBackscraper
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
-    first_opinion_date = "1998/01/01"
+class Site(DateBackscraper, OpinionSiteLinear):
+    first_opinion_date = date(1998, 1, 1)
     base_url = "https://poderjudicial.pr/index.php/tribunal-supremo/decisiones-del-tribunal-supremo/decisiones-del-tribunal-supremo"
 
     def __init__(self, *args, **kwargs):
@@ -157,25 +158,18 @@ class Site(OpinionSiteLinear):
         ]
         return lines[1] if len(lines) > 1 else lines[0]
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Build the year range iterable used for back-scraping
 
         :param kwargs: Keyword arguments optionally containing backscrape_start
-            and backscrape_end as "YYYY/MM/DD" strings
+            and backscrape_end as "YYYY/MM/DD" strings; default from
+            `first_opinion_date` to today
         :return: None
         """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
+        start, end = self.get_backscrape_date_range(kwargs)
+        self.back_scrape_iterable = range(start.year, end.year + 1)
 
-        if not start:
-            return
-
-        start_date = datetime.strptime(start, "%Y/%m/%d")
-        end_date = datetime.strptime(end, "%Y/%m/%d")
-
-        self.back_scrape_iterable = range(start_date.year, end_date.year + 1)
-
-    async def _download_backwards(self, year) -> None:
+    async def _download_backwards(self, year: int) -> None:
         """Download and parse opinions for a single back-scrape year
 
         :param year: The year to scrape

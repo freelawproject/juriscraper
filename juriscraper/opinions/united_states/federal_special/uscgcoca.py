@@ -15,11 +15,16 @@ from urllib.parse import urljoin
 
 from typing_extensions import override
 
+from juriscraper.Backscraper import PageIndexBackscraper
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(PageIndexBackscraper, OpinionSiteLinear):
+    first_page_index = 1
+    last_page_index = 35
+    reverse_page_order = True
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -138,17 +143,3 @@ class Site(OpinionSiteLinear):
 
         case["name"] = titlecase(name.strip(" -:"))
         return case
-
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Checks if backscrape start and end arguments have been passed"""
-
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if start is None or not str(start).isdigit():
-            start = 1
-        if end is None or not str(end).isdigit():
-            # There are 34 historical pages as of development in Jun 2025
-            end = 34
-
-        self.back_scrape_iterable = range(int(end), int(start) - 1, -1)

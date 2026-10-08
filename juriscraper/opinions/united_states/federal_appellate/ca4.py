@@ -1,15 +1,17 @@
 import re
-from datetime import date, datetime
+from datetime import date
 
 from dateutil.relativedelta import relativedelta
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.Backscraper import DateBackscraper
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
-    oldest_opinion = "2002-03-20"
+class Site(DateBackscraper, OpinionSiteLinear):
+    first_opinion_date = date(2002, 3, 20)
+    days_interval = 8
     court_name = "United States Court of Appeals for the Fourth Circuit"
 
     def __init__(self, *args, **kwargs):
@@ -27,28 +29,6 @@ class Site(OpinionSiteLinear):
         self.parameters = {}
         self.update_parameters()
         self.make_backscrape_iterable(kwargs)
-
-    def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
-        """Make back scrape iterable
-
-        :param kwargs: the back scraping params
-        :return: None
-        """
-        start_str = kwargs.get("backscrape_start", self.oldest_opinion)
-        end_str = kwargs.get("backscrape_end", self.end)
-
-        start_date = datetime.strptime(start_str, "%Y-%m-%d").date()
-        end_date = datetime.strptime(end_str, "%Y-%m-%d").date()
-
-        date_ranges: list[str] = []
-        current = start_date
-
-        while current <= end_date:
-            week_end = min(current + relativedelta(days=7), end_date)
-            date_ranges.append(f"{current:%Y-%m-%d},{week_end:%Y-%m-%d}")
-            current = week_end + relativedelta(days=1)
-
-        self.back_scrape_iterable = date_ranges
 
     @override
     def _process_html(self) -> None:
@@ -142,13 +122,14 @@ class Site(OpinionSiteLinear):
             "sortBy": "2",  # 2 -> newest to oldest
         }
 
-    async def _download_backwards(self, date_range) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download backward
 
-        :param date_range: the date range as a string
+        :param dates: the (start, end) range, both ends inclusive
         :return: None
         """
-        self.date_range = date_range
+        start, end = dates
+        self.date_range = f"{start:%Y-%m-%d},{end:%Y-%m-%d}"
         self.update_parameters()
         self.html = await self._download()
         self._process_html()

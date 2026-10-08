@@ -1,13 +1,16 @@
-from datetime import datetime
+from datetime import date, datetime
 
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.Backscraper import YearBackscraper
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(YearBackscraper, OpinionSiteLinear):
+    # Oldest opinion listed in the "byYear" pages; earlier years are empty
+    first_opinion_date = date(2013, 2, 28)
     # Example URL:
     # https://www.courts.wa.gov/opinions/index.cfm?fa=opinions.byYear&fileYear=2025&crtLevel=S&pubStatus=PUB
     # crtLevel = S; is the Supreme Court
@@ -59,19 +62,10 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs: dict):
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-
-        if not start or not end:
-            self.back_scrape_iterable = []
-        elif start == end:
-            self.back_scrape_iterable = [int(start)]
-        else:
-            self.back_scrape_iterable = list(range(int(start), int(end)))
-
-    async def _download_backwards(self, d: int):
-        logger.info("Backscraping for year %s", d)
-        self.url = self.url_template.format(d, self.crt_level, self.pub_status)
+    async def _download_backwards(self, year: int) -> None:
+        logger.info("Backscraping for year %s", year)
+        self.url = self.url_template.format(
+            year, self.crt_level, self.pub_status
+        )
         self.html = await self._download()
         self._process_html()

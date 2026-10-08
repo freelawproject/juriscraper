@@ -6,17 +6,18 @@ Court Short Name: 9th Cir. BAP
 
 import json
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, time, timedelta
 from urllib.parse import urljoin
 
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.Backscraper import DateBackscraper
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(DateBackscraper, OpinionSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     days_interval = 31
     first_opinion_date = datetime(2005, 1, 6)
@@ -37,28 +38,32 @@ class Site(OpinionSiteLinear):
         self.params = {
             "IdentityId": "us-west-2:8d780f3b-d79c-c6c8-1125-e7a905da6b9b"
         }
-        self.end_date = datetime.now()
-        self.start_date = self.end_date - timedelta(days=self.days_interval)
-        self.build_payload()
+        now = datetime.now()
+        self.build_payload(now - timedelta(days=self.days_interval), now)
+        # The payload already filters by month; don't filter out anything
+        # else in `_process_html`. This used to be a side effect of the old
+        # `make_backscrape_iterable` override (see #2139)
+        self.start_date = self.first_opinion_date
+        self.end_date = now
         self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
         self.make_backscrape_iterable(kwargs)
 
-    def build_payload(self):
-        """Build query
+    def build_payload(self, start: datetime, end: datetime) -> None:
+        """Build the query for the regular scrape; sets `self.payload`
 
-        :return: query dict
+        :param start: start of the requested window
+        :param end: end of the requested window
+        :return: None
         """
         expression_values = {
-            ":start_date": {"S": self.start_date.strftime("%m")},
-            ":year": {"S": self.start_date.strftime("%Y")},
+            ":start_date": {"S": start.strftime("%m")},
+            ":year": {"S": start.strftime("%Y")},
         }
         filter_expression = (
             "#date_filed > :start_date and contains(#date_filed, :year)"
         )
         if date.month != 12:
-            expression_values[":end_date"] = {
-                "S": self.end_date.strftime("%m")
-            }
+            expression_values[":end_date"] = {"S": end.strftime("%m")}
             filter_expression = "#date_filed > :start_date and #date_filed < :end_date and contains(#date_filed, :year)"
 
         self.payload = json.dumps(
@@ -159,29 +164,16 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-    # TODO: the type of `dates` needs a reevaluation. If `backscrape_start` is
-    #  not given, `start_date` will be a datetime and `strptime` will raise an
-    #  exception. A 3-tuple is given, but there's no indication that the third
-    #  thing serves a purpose. See #2139
-    async def _download_backwards(self, dates) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download cases for a specific date range.
 
-        :param dates: A tuple containing start and end dates.
+        :param dates: the (start, end) range, both ends inclusive
         :return: None; updates self.cases with cases from the specified date range.
         """
-        start_str, end_str, _ = dates
-
-        # Parse start date or fall back to first_opinion_date
-        if start_str:
-            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
-        else:
-            self.start_date = self.first_opinion_date
-
-        # Parse end date or fall back to now
-        if end_str:
-            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
-        else:
-            self.end_date = datetime.now()
+        # `_process_html` compares these with datetimes
+        start, end = dates
+        self.start_date = datetime.combine(start, time.min)
+        self.end_date = datetime.combine(end, time.max)
 
         self.payload = json.dumps(
             {"TableName": self.table, "ReturnConsumedCapacity": "TOTAL"}
@@ -189,14 +181,11 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
-        """Make back scrape iterable
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """A single range: a backscrape request returns the whole table,
+        which is then filtered by date in `_process_html`
 
-        :param kwargs: the back scraping params
-        :return: None
+        :param kwargs: the kwargs passed to `Site.__init__`
+        :return: None; sets self.back_scrape_iterable in place
         """
-        self.start_date = kwargs.get(
-            "backscrape_start", self.first_opinion_date
-        )
-        self.end_date = kwargs.get("backscrape_end", datetime.now())
-        self.back_scrape_iterable = [(self.start_date, self.end_date, None)]
+        self.back_scrape_iterable = [self.get_backscrape_date_range(kwargs)]

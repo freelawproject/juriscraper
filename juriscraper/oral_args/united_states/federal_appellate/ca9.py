@@ -8,17 +8,18 @@ History:
 """
 
 import json
-from datetime import datetime, timedelta
+from datetime import date, datetime, time, timedelta
 from urllib.parse import urljoin
 
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.Backscraper import DateBackscraper
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSiteLinear):
+class Site(DateBackscraper, OralArgumentSiteLinear):
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     # Lookback for the regular scrape, in `created_date` terms. The cron runs
     # hourly, so this only needs to cover a scraper outage. Widening it is
@@ -234,25 +235,15 @@ class Site(OralArgumentSiteLinear):
         :return: None
         """
 
-    async def _download_backwards(self, dates: tuple[str, str]) -> None:
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download backwards
 
-        :param dates: (start_str, end_str) in "%Y/%m/%d" or empty.
+        :param dates: the (start, end) range, both ends inclusive
         :return: None
         """
-        start_str, end_str = dates
-
-        # Parse start date or fall back to first_opinion_date
-        if start_str:
-            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
-        else:
-            self.start_date = self.first_opinion_date
-
-        # Parse end date or fall back to now
-        if end_str:
-            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
-        else:
-            self.end_date = datetime.now()
+        start, end = dates
+        self.start_date = datetime.combine(start, time.min)
+        self.end_date = datetime.combine(end, time.max)
 
         # Rebuild payload for this slice
         self.build_payload(backscrape=True)
@@ -261,14 +252,12 @@ class Site(OralArgumentSiteLinear):
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """
-        Prepare a single (start, end) tuple, defaulting to __init__’s range
-        or overridden via backscrape_start / backscrape_end in kwargs.
+        Prepare a single (start, end) tuple, from `first_opinion_date` to
+        today, or overridden via backscrape_start / backscrape_end in kwargs.
 
         A single tuple on purpose: each DynamoDB scan reads the whole table
         regardless of the FilterExpression, so splitting a backscrape into
         `days_interval` chunks would multiply the cost by the number of chunks
         and return nothing extra.
         """
-        start = kwargs.get("backscrape_start", self.start_date)
-        end = kwargs.get("backscrape_end", self.end_date)
-        self.back_scrape_iterable = [(start, end)]
+        self.back_scrape_iterable = [self.get_backscrape_date_range(kwargs)]
