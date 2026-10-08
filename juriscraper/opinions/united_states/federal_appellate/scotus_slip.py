@@ -3,7 +3,7 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
 import re
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 from typing_extensions import override
 
@@ -54,12 +54,13 @@ class Site(OpinionSiteLinear):
         """
         if date_of_interest is None:
             date_of_interest = date.today()
-        term_cutoff = date(date_of_interest.year, 10, 1)
+        oct_1 = date(date_of_interest.year, 10, 1)
+        first_monday = oct_1 + timedelta(days=(7 - oct_1.weekday()) % 7)
         if isinstance(date_of_interest, datetime):
             date_of_interest = date_of_interest.date()
         year = int(date_of_interest.strftime("%y"))
         # Return the previous year if we haven't reached the cutoff
-        return year - 1 if date_of_interest < term_cutoff else year
+        return year - 1 if date_of_interest < first_monday else year
 
     @override
     def _process_html(self) -> None:
