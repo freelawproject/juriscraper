@@ -32,40 +32,12 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
-    def _cleanup_judge_names(self, judges: str) -> list[str]:
-        """Extract judge panel
-
-        Because of a judge Torres,Jr. - and the various permutations of his
-        Jr with and without commas and spacing we do a bit of cleanup to
-        get his and the other judges corretly.  Additionally the author is
-        sometimes denoted by a *.  This is cleaned up.
-
-        :param judges: Content of the panel as a string
-        :return: Judges as a string list
-        """
-        judge_list = judges.split(",")
-        judge_list = [j.replace(" Jr.", "Jr.").strip(" *") for j in judge_list]
-        judge_list = [j.replace("Jr.", " Jr.") for j in judge_list]
-        return judge_list
-
-    def _fetch_author(self, judges: str) -> str:
-        """Parse the author from the judge text
-
-        :param judges: Cell content
-        :return: The author
-        """
-        if "*" not in judges:
-            author = ""
-        else:
-            author = [j for j in judges.split(",") if "*" in j][0].strip("*")
-        return author
-
     @override
     def _process_html(self) -> None:
         for s in self.html.xpath(".//a[@class='pdf-link']/ancestor::tr"):
             cells = s.xpath(".//td")
-            judge_text = cells[3].text_content()
-            author = self._fetch_author(judge_text)
+            judge_list = self._cleanup_judge_names(cells[3].text_content())
+            author = self._fetch_author(judge_list)
             self.cases.append(
                 {
                     "name": cells[0].text_content(),
@@ -73,7 +45,7 @@ class Site(OpinionSiteLinear):
                     # reporters-db expect spaces (e.g. "2022 MP 09"). #1947
                     "citation": cells[1].text_content().replace("-", " "),
                     "date": cells[2].text_content(),
-                    "judge": ", ".join(self._cleanup_judge_names(judge_text)),
+                    "judge": ", ".join(judge_list),
                     "author": author,
                     "per_curiam": not author,
                     "url": urljoin(
@@ -82,6 +54,37 @@ class Site(OpinionSiteLinear):
                     "docket": "",
                 }
             )
+
+    @staticmethod
+    def _cleanup_judge_names(judges: str) -> list[str]:
+        """Clean up the judge panel
+
+        Joins "Jr." to the name it belongs to ("Torres,Jr." -> "Torres Jr."),
+        so it isn't split into its own judge, and removes the "?" characters
+        the source renders in place of unknown ones. The "*" marking the
+        author is kept.
+
+        :param judges: Content of the panel cell
+        :return: Judge names list
+        """
+        judges = re.sub(r"\s*,\s*Jr\.", " Jr.", judges.replace("?", ""))
+        return [j.strip() for j in judges.split(",") if j.strip()]
+
+    @staticmethod
+    def _fetch_author(judge_names: list[str]) -> str:
+        """Parse the author from judge names list
+
+        :param judge_names: Judge names list
+        :return: The author, or empty string if no author was found
+        """
+        authors = [name for name in judge_names if "*" in name]
+        if len(authors) > 1:
+            logger.warning(
+                "nmariana: multiple opinion authors found in %s", judge_names
+            )
+        if not authors:
+            return ""
+        return authors[-1]
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
