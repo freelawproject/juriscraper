@@ -5,6 +5,7 @@ Author: William Edward Palin
 History:
   2023-01-21: Created by William Palin
   2026-09-24: Site moved to cnmilaw.gov; use urllib to pass Cloudflare
+  2026-10-08: Implement backscraper (#1946)
 """
 
 import re
@@ -14,19 +15,22 @@ from urllib.parse import urljoin
 
 from typing_extensions import override
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     use_urllib = True  # Use urllib to pass Cloudflare
+    base_url = "https://cnmilaw.gov/documents?type=case&court=Supreme"
+    first_opinion_date = date(1989, 11, 14)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        year = date.today().year
-        self.url = f"https://cnmilaw.gov/documents?type=case&court=Supreme&year={year}"
+        self.url = f"{self.base_url}&year={date.today().year}"
         self.status = "Published"
+        self.make_backscrape_iterable(kwargs)
 
     def _cleanup_judge_names(self, judges: str) -> list[str]:
         """Extract judge panel
@@ -94,3 +98,23 @@ class Site(OpinionSiteLinear):
             },
         }
         return metadata
+
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Build the list of years to backscrape, both ends inclusive
+
+        :param kwargs: passed when initializing the scraper; may contain
+            `backscrape_start` and `backscrape_end` as "YYYY" strings
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+        start = int(start) if start else self.first_opinion_date.year
+        end = int(end) if end else date.today().year
+        self.back_scrape_iterable = list(range(start, end + 1))
+
+    @override
+    async def _download_backwards(self, year: int) -> None:
+        logger.info("Backscraping for year %s", year)
+        self.url = f"{self.base_url}&year={year}"
+        self.html = await self._download()
+        self._process_html()
