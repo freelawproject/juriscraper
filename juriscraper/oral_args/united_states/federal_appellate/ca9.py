@@ -25,14 +25,14 @@ RECORD_TYPE_COURTS = {"ora": "ca9", "bap": "bap9"}
 BAP_LEGACY_DOCKET = re.compile(r"\d{2}-\d{4}")
 
 
-def get_record_court(record: dict) -> str:
+def get_record_court(record: dict) -> str | None:
     """Get the court of a `media` table row
 
     Rows from before mid 2021 have no `record_type`; back then, only BAP
     dockets had 4 digits after the dash
 
     :param record: a DynamoDB item
-    :return: "ca9" or "bap9"
+    :return: "ca9", "bap9", or None for an unknown `record_type`
     """
     record_type = record.get("record_type", {}).get("S")
     if not record_type:
@@ -41,13 +41,12 @@ def get_record_court(record: dict) -> str:
 
     court = RECORD_TYPE_COURTS.get(record_type)
     if not court:
-        logger.warning(
-            "ca9 media table: assuming 'ca9' for unknown record_type %r "
-            "and docket %s",
+        logger.error(
+            "ca9 media table: skipping row with unknown record_type %r "
+            "for docket %s",
             record_type,
             record.get("case_num", {}).get("S"),
         )
-        court = "ca9"
     return court
 
 
@@ -212,7 +211,8 @@ class Site(OralArgumentSiteLinear):
 
             court = get_record_court(record)
             if court != self.record_court:
-                skipped[court] += 1
+                if court:
+                    skipped[court] += 1
                 continue
 
             try:
@@ -296,15 +296,25 @@ class Site(OralArgumentSiteLinear):
         :return: None
         """
 
-    async def _download_backwards(
-        self, dates: tuple[datetime, datetime]
-    ) -> None:
-        """Download one backscrape window
+    async def _download_backwards(self, dates: tuple[str, str]) -> None:
+        """Download backwards
 
-        :param dates: a (start, end) pair from `make_backscrape_iterable`
+        :param dates: (start_str, end_str) in "%Y/%m/%d" or empty.
         :return: None
         """
-        self.start_date, self.end_date = dates
+        start_str, end_str = dates
+
+        # Parse start date or fall back to first_opinion_date
+        if start_str:
+            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
+        else:
+            self.start_date = self.first_opinion_date
+
+        # Parse end date or fall back to now
+        if end_str:
+            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
+        else:
+            self.end_date = datetime.now()
 
         # Rebuild payload for this slice
         self.build_payload(backscrape=True)
@@ -312,24 +322,15 @@ class Site(OralArgumentSiteLinear):
         self._process_html()
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
-        """Prepare a single (start, end) tuple
+        """
+        Prepare a single (start, end) tuple, defaulting to __init__’s range
+        or overridden via backscrape_start / backscrape_end in kwargs.
 
         A single tuple on purpose: each DynamoDB scan reads the whole table
         regardless of the FilterExpression, so splitting a backscrape into
         `days_interval` chunks would multiply the cost by the number of chunks
         and return nothing extra.
-
-        :param kwargs: may have backscrape_start and backscrape_end, as
-            "%Y/%m/%d" strings
-        :return: None
         """
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
-        self.back_scrape_iterable = [
-            (
-                datetime.strptime(start, "%Y/%m/%d")
-                if start
-                else self.first_opinion_date,
-                datetime.strptime(end, "%Y/%m/%d") if end else datetime.now(),
-            )
-        ]
+        start = kwargs.get("backscrape_start", self.start_date)
+        end = kwargs.get("backscrape_end", self.end_date)
+        self.back_scrape_iterable = [(start, end)]

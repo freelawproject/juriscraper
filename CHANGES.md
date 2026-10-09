@@ -27,7 +27,6 @@ Fixes:
 - Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
 - `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
-- Fix `ca9` oral argument backscraper `TypeError` when called with no dates
 - Fix `ca9` oral argument backscraper crash on rows with no case name or panel
 - Stop `ca9` oral argument scraper from ingesting Bankruptcy Appellate Panel arguments #2113
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
