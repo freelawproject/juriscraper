@@ -428,13 +428,6 @@
       "severity": "error"
     },
     {
-      "column": 42,
-      "path": "juriscraper/opinions/united_states/federal_appellate/ca9_p.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `doc` with type `HtmlElement | _ElementTree[HtmlElement]` in function `lxml.html._funcs.tostring`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/opinions/united_states/federal_appellate/cadc.py",
       "name": "missing-attribute",
