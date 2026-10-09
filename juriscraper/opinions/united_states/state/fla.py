@@ -102,9 +102,12 @@ class Site(OpinionSiteLinear):
                 logger.info("Skipping case with no name %s", fields)
                 continue
 
-            if not fields.get("opinion"):
-                # Orders by a clerk / judge have no document to download, 2DCA 2024-0481
-                logger.warning(
+            opinion = fields.get("opinion")
+            if not opinion:
+                # Some rows are orders by a clerk / judge, which have no
+                # opinion doc (3DCA 2022-0306). Others are opinions whose file
+                # is missing (2DCA 2024-0481)
+                logger.info(
                     "Skipping case with no opinion file %s",
                     fields["case_number"],
                 )
@@ -113,7 +116,7 @@ class Site(OpinionSiteLinear):
             disposition = fields.get("disposition", "") or ""
             self.cases.append(
                 {
-                    "url": urljoin(self.base_url, fields["opinion"]["uri"]),
+                    "url": urljoin(self.base_url, opinion["uri"]),
                     "docket": self.get_docket_number(fields["case_number"]),
                     "name": titlecase(name),
                     "date": fields["disposition_date"]["date"]["date"].split(
