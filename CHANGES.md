@@ -19,7 +19,9 @@ Features:
 -
 
 Changes:
--
+- `PacerSession` now authenticates ACMS requests with per-court cookie sessions
+  instead of a bearer token, restoring ACMS auth after their HTMX refactor.
+  freelawproject/courtlistener#5921
 
 Fixes:
 - Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
@@ -28,6 +30,8 @@ Fixes:
 - Fix `ca9` oral argument backscraper `TypeError` when called with no dates
 - Fix `ca9` oral argument backscraper crash on rows with no case name or panel
 - Stop `ca9` oral argument scraper from ingesting Bankruptcy Appellate Panel arguments #2113
+- `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
+- Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
 -
 
 ## 3.0.44 - 2026-09-30
